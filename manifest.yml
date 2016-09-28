@@ -1,3 +1,4 @@
 ---
 applications:
 - name: documentation-accp
+  path: ./_site/

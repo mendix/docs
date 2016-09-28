@@ -1,7 +1,6 @@
 ---
 title: "Expose a Web Service"
 category: "Integration"
-tags: []
 redirect_from:
 - "howto6/Exposing+a+web+service"
 ---
@@ -112,48 +111,54 @@ To publish a microflow, follow these steps:
 5. Select the members you want to expose and click **OK**. Only the selected members will be returned by the web service.
 6. Click **OK** to save the operation.
 
-## 7 WSDL
+## 7 Getting a WSDL
 
-You need a WSDL to allow others to interact with the web service you just created. The WSDL describes how to call the operations in the web service.
+You need a Web Services Description Language (WSDL) to allow others to interact with the web service you just created. The WSDL describes how to call the operations in the web service.
 
-1.  Run the application locally or in a sandbox.
-2.  View the application in your browser.
-    If you run the application locally, the application url should look like this: `http://localhost:8080/index.html`.
-    If you run the application in a sandbox, the application url should look like this: `https://myfirstapp.mendixcloud.com/index.html`.
-3.  In both cases you can replace _/index.html_ with _/ws-doc/_ to open the web service documentation page.
+To get a WSDL, follow these steps:
+
+1. Run the application locally or in a sandbox.
+2. View the application in your browser:
+    * If you run the application locally, the application URL should look like this: `http://localhost:8080/index.html`
+    * If you run the application in a sandbox, the application URL should look like this: `https://myfirstapp.mendixcloud.com/index.html`
+3. In both of the above cases, you can replace `/index.html` with `/ws-doc/` to open the web service documentation page:
     ![](attachments/18448728/18581703.png)
     You should see the name of your web service in the list.
-4.  Click the upper URL to open the WSDL. This WSDL can be given to others so that they interact with your web service.
+4. Click the upper URL to open the WSDL. This WSDL can be given to others so that they can interact with your web service.
 
 ## 8 Authentication and Users
 
-1.  Double click the published web service in the project explorer to open it.
-2.  Open the **Settings** tab.
+To change the user authentication, follow these steps:
+
+1. Double-click the published web service in the project explorer to open it.
+2. In the **Published Web Service** properties window, open the **Settings** tab. Because **No Authentication** is set, currently users of the web service do not need to authenticate:
+
     ![](attachments/18448728/18581702.png)
-    Currently users of the web service don't need to authenticate.
-3.  Switch **Authentication** to **Username** **and password**.
-    ![](attachments/18448728/18581701.png) 
-4.  Click **OK** and re-run the application. Users now need to authenticate before they can use the web service.
-    <div class="alert alert-info">
-    IconMendix allows you to create your own user management functionality as long as your own user object inherits from 'System.User'. The 'User' entity in the 'System' module contains a boolean attribute 'WebServiceUser'. This attribute determines if an user is able to interact with web services. If you want a certain user to be able to interact with web services, the value of this attribute must be 'true'.
-    </div>
+
+3. Change **Authentication** to **Username and password**:
+
+    ![](attachments/18448728/18581701.png)
+
+4. Click **OK** and re-run the application. Users now need to authenticate before they can use the web service.
+
+Mendix enables creating your own user management functionality as long as your own user object inherits from `System.User`. The `User` entity in the `System` module contains the `WebServiceUser` Boolean attribute. This attribute determines if an user is able to interact with web services. If you want a certain user to be able to interact with web services, the value of this attribute must be *true*.
 
 ## 9 Considerations
 
-In the modeler some words are reserved, such as the words: type, enum, etc.
+When exposing a web service, consider the following things:
 
-Sometimes you don't wont to publishe a _type attribute with the _ character infront of it. You can change the wsdl name by changing the last column in the select attribute popup.
-
-If an attribute is renamed after it is published, the name in the wsdl does not automatically change (that would break a customer's implementation).
+* In the Modeler some words are reserved for Mendix use (for example, type, enum)
+* Because you may not want to publish a "_type" attribute with an underscore ("`_`") in front of it, you can change the WSDL name by changing the last column in the selected attribute window
+* If an attribute is renamed after it is published, the name in the WSDL does not automatically change (because that would break the customer's implementation)
 
 ## 10 Related Content
 
-*   [Consuming a complex web service](Consume+a+Complex+Web+Service)
-*   [Consuming a simple Web Service](Consume+a+Simple+Web+Service)
-*   [Exporting XML documents](Export+XML+Documents)
-*   [Importing Excel Documents](Importing+Excel+Documents)
-*   [Selenium Support](Selenium+Support)
-*   [Synchronizing user accounts using the LDAP module](Synchronizing+user+accounts+using+the+LDAP+module)
-*   [Importing XML documents](Importing+XML+documents)
-*   [Consuming a REST Service](Consume+a+REST+Service)
-*   [Exposing data to BI tools using OData](Exposing+data+to+BI+tools+using+OData)
+* [How to Consume a Complex Web Service](Consume+a+Complex+Web+Service)
+* [How to Consume a Simple Web Service](Consume+a+Simple+Web+Service)
+* [How to Export XML Documents](Export+XML+Documents)
+* [How to Import Excel Documents](Importing+Excel+Documents)
+* [How to Enable Selenium Support](Selenium+Support)
+* [How to Synchronize User Accounts Using the LDAP Module](Synchronizing+user+accounts+using+the+LDAP+module)
+* [How to Import XML Documents](Importing+XML+documents)
+* [How to Consume a REST Service](Consume+a+REST+Service)
+* [How to Expose Data to BI Tools Using OData](Exposing+data+to+BI+tools+using+OData)

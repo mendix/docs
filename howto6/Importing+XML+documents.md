@@ -159,12 +159,11 @@ In this section you will create logic to import customers stored in a [XML docum
 ## 6\. Related content
 
 *   [Consuming a complex web service](Consume+a+Complex+Web+Service)
-*   [Consuming a simple Web Service](Consume+a+simple+Web+Service)
+*   [Consuming a simple Web Service](Consume+a+Simple+Web+Service)
 *   [Exporting XML documents](Export+XML+Documents)
 *   [Importing Excel Documents](Importing+Excel+Documents)
 *   [Exposing a web service](Expose+a+web+service)
 *   [Selenium Support](Selenium+Support)
 *   [Synchronizing user accounts using the LDAP module](Synchronizing+user+accounts+using+the+LDAP+module)
-*   [Importing XML documents](Importing+XML+Documents)
 *   [Consuming a REST Service](Consume+a+REST+Service)
 *   [Exposing data to BI tools using OData](Exposing+data+to+BI+tools+using+OData)

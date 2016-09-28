@@ -7,7 +7,7 @@ Learn how to do this by following these how-to's. We also want to create a large
 
 **How-to's**:
 
-*   [Consuming a simple Web Service](Consume+a+simple+Web+Service)
+*   [Consuming a simple Web Service](Consume+a+Simple+Web+Service)
 *   [Importing and Exporting Objects](Importing+and+Exporting+Objects)
 *   [Consuming a complex web service](Consume+a+Complex+Web+Service)
 *   [Consuming a REST Service](Consume+a+REST+Service)

@@ -29,7 +29,7 @@ Before you continue, make sure that you
 3.  Start the app and navigate to the Interface Definition Overview page.
 4.  Select 'New' to create the Interface Definition
     ![](attachments/18448737/18582053.png)
-5.  Select the **Product Entity** from the dropdown. 
+5.  Select the **Product Entity** from the dropdown.
 
     If this dropdown is empty, then it is likely that **Model Reflection** has been synced yet.  If you do not know how to execute this, please see instructions [here](Importing+Excel+Documents).
 
@@ -51,7 +51,7 @@ Before you continue, make sure that you
 11.  To schedule regular ingestion of a flat file, you can use the scheduling tab of the **InterfaceDefinition_NewEdit** page
     ![](attachments/18448737/18582045.png)
 
-        Scheduling your file for regular ingestion will allow you to ingest files dropped by your legacy system at a regular interval.  If the **existing system** receives data updates during the day and produces a **batch export** at night, then the Mendix app can ingest this file every evening as scheduled and the data will be ready for users the following morning. 
+        Scheduling your file for regular ingestion will allow you to ingest files dropped by your legacy system at a regular interval.  If the **existing system** receives data updates during the day and produces a **batch export** at night, then the Mendix app can ingest this file every evening as scheduled and the data will be ready for users the following morning.
 
 **Considerations for extending this:**
 
@@ -66,7 +66,7 @@ If your legacy system produces data in an **Excel File** format, integration can
 
 ## 2\. Interacting with a legacy system using REST
 
-If the legacy system has the ability to expose its data to web services, integration can be accomplished using the **Mendix REST module**.  This technique will allow your to preserve a **system of record** while accessing data only as you need it. 
+If the legacy system has the ability to expose its data to web services, integration can be accomplished using the **Mendix REST module**.  This technique will allow your to preserve a **system of record** while accessing data only as you need it.
 
 Here are some situations in which to consider this technique.
 
@@ -104,7 +104,7 @@ Before you continue, make sure that you
 4.  Create a **Page** that contains a **Data View** that will allow users to enter search terms.  The data source for this **Data View** should be a new microflow that generates a new search object and returns it as below.![](attachments/18448737/18582041.png)
 5.  Upon Completion, the **Page** should look as follows:
 
-    Create a **Microflow button** and corresponding **Microflow** that will perform your search.  This microflow will use the REST GET java action included in the app store REST module. 
+    Create a **Microflow button** and corresponding **Microflow** that will perform your search.  This microflow will use the REST GET java action included in the app store REST module.
     ![](attachments/18448737/18582030.png)
     The **Microflow activities** for this flow are:
 
@@ -116,7 +116,7 @@ Before you continue, make sure that you
     d.  Iterate through the VolumeList and make a new BookResult object to display our search results.
         ![](attachments/18448737/18582037.png) <br>
     e.  Retrieve the author list **Over Association** for each volume. <br>
-    f.  Iterate through the list of Author names and use a **Change** activity to add the author name.  This is done to accommodate a situation 
+    f.  Iterate through the list of Author names and use a **Change** activity to add the author name.  This is done to accommodate a situation
         ![](attachments/18448737/18582036.png)
 
 6.  When a user logs into the application and enters a search term, results are successfully populated via the REST calls
@@ -130,7 +130,7 @@ The above example demonstrates how a Mendix Application can quickly integrate da
 
 ## 3\. Related content
 
-*   [Consuming a complex web service](Consume+aCcomplex+Web+Service)
+*   [Consuming a complex web service](Consume+a+Complex+Web+Service)
 *   [Consuming a simple Web Service](Consume+a+Simple+Web+Service)
 *   [Exporting XML documents](Export+XML+Documents)
 *   [Importing Excel Documents](Importing+Excel+Documents)

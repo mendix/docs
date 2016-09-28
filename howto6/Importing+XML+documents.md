@@ -21,7 +21,7 @@ Before you continue, make sure that you know how to create:
 
 2.  Create overview and detail pages to manage objects of type **Customer**.
 3.  Create a menu item to access the customer overview page.
-4.  Create an entity called **XMLDocument** that inherits all properties from **System.FileDocument**. 
+4.  Create an entity called **XMLDocument** that inherits all properties from **System.FileDocument**.
     ![](attachments/18448727/18581650.png)
 5.  Create overview and detail pages to manage objects of type **XMLDocument**.
 6.  Create a menu item to access the XML document overview page. If you don't know how to create menu items, take a look at this [how-to](Setting+Up+the+Navigation+Structure).
@@ -68,7 +68,7 @@ The XML Schema describes what the possible contents of an XML file are, but we n
 
 5\. Select the **CustomerXSD** as schema.
 
-6\. Click the **Expand all** button. You should now see the following tree with elements: 
+6\. Click the **Expand all** button. You should now see the following tree with elements:
 
 ![](attachments/18448727/18581656.png)
 
@@ -82,15 +82,15 @@ The XML Schema describes what the possible contents of an XML file are, but we n
 
 ![](attachments/18448727/18581683.png)  
 
-10\. If you can't find the connector, you can re-open it from the view menu. 
+10\. If you can't find the connector, you can re-open it from the view menu.
 
 ![](attachments/18448727/18581682.png)  
 
-11\. Drag the entity **Customer** from the connector to place holder in the mapping editor. 
+11\. Drag the entity **Customer** from the connector to place holder in the mapping editor.
 
 ![](attachments/18448727/18581681.png)  
 
-The mapping editor for this element will open automatically. 
+The mapping editor for this element will open automatically.
 
 ![](attachments/18448727/18581654.png)  
 
@@ -100,7 +100,7 @@ The mapping editor for this element will open automatically.
 
 14\. Select attributes for all 5 value to attribute mappings.
 
-15\. Select **CustomerID** as key, you should have to following mapping: 
+15\. Select **CustomerID** as key, you should have to following mapping:
 
 ![](attachments/18448727/18581653.png)  
 
@@ -158,13 +158,13 @@ In this section you will create logic to import customers stored in a [XML docum
 
 ## 6\. Related content
 
-*   [Consuming a complex web service](Consume+a+complex+web+service)
+*   [Consuming a complex web service](Consume+a+Complex+Web+Service)
 *   [Consuming a simple Web Service](Consume+a+simple+Web+Service)
-*   [Exporting XML documents](Export+XML+documents)
+*   [Exporting XML documents](Export+XML+Documents)
 *   [Importing Excel Documents](Importing+Excel+Documents)
 *   [Exposing a web service](Expose+a+web+service)
 *   [Selenium Support](Selenium+Support)
 *   [Synchronizing user accounts using the LDAP module](Synchronizing+user+accounts+using+the+LDAP+module)
-*   [Importing XML documents](Importing+XML+documents)
+*   [Importing XML documents](Importing+XML+Documents)
 *   [Consuming a REST Service](Consume+a+REST+Service)
 *   [Exposing data to BI tools using OData](Exposing+data+to+BI+tools+using+OData)

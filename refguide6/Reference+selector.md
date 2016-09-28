@@ -15,7 +15,7 @@ To use a reference selector you need a many-to-one association in the domain mod
 
 {% endmarkdown %}</div>
 
-The reference selector is similar to a [drop-down](Drop+down) except that it allows users to choose from a list of objects with which to fill an association rather than items listed in an enumeration. The selector requires you to choose an entity with which the parent object shares a reference. It will also require you to choose which attribute from that referenced entity you wish to display in the selector.
+The reference selector is similar to a [drop-down](Drop+Down) except that it allows users to choose from a list of objects with which to fill an association rather than items listed in an enumeration. The selector requires you to choose an entity with which the parent object shares a reference. It will also require you to choose which attribute from that referenced entity you wish to display in the selector.
 
 <div class="alert alert-success">{% markdown %}
 

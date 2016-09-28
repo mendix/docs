@@ -10,7 +10,7 @@ Input widgets need to be linked to an attribute in order to function. As such, t
 
 *   [Check box](Check+box)
 *   [Date picker](Date+picker)
-*   [Drop down](Drop+down)
+*   [Drop down](Drop+Down)
 *   [Input reference set selector](Input+reference+set+selector)
 *   [Radio buttons](Radio+buttons)
 *   [Reference selector](Reference+selector)

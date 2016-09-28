@@ -62,7 +62,7 @@ END;
 
 ## 3\. Related content
 
-*   [Activating a Mendix license on Microsoft Windows](Activate+a+Mendix+license+on+Microsoft+Windows)
+*   [Activating a Mendix license on Microsoft Windows](Activate+a+Mendix+License+on+Microsoft+Windows)
 *   [Setting up the database user](Setting+up+the+database+user)
 *   [Troubleshooting](Troubleshooting)
 *   [Sharing the Development Database](Sharing+the+Development+Database)

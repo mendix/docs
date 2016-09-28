@@ -243,7 +243,7 @@ Now the test steps will have 'mx-name-' CSS selectors rather than the Selenium d
 *   [Clearing Warning Messages in Mendix](Clear+Warning+Messages)
 *   [Testing web services using SoapUI](Testing+web+services+using+SoapUI)
 *   [Monitoring Mendix using JMX](Monitoring+Mendix+using+JMX)
-*   [Debugging Java actions remotely](Debug+Java+actions+remotely)
+*   [Debugging Java actions remotely](Debug+Java+Actions+Remotely)
 *   [Log Levels](Log+Levels)
 *   [Debugging Java Actions](Debug+Java+Actions)
 

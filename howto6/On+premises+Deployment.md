@@ -9,7 +9,7 @@ Learn how to deploy your app on your own hardware.
 *   [Installing Mendix on Debian GNU Linux](Installing+Mendix+on+Debian+GNU+Linux)
 *   [Installing Mendix on RedHat and CentOS](Installing+Mendix+on+RedHat+and+CentOS)
 *   [Deploying Mendix on Microsoft Windows](Deploy+Mendix+on+Microsoft+Windows)
-    *   [Activating a Mendix license on Microsoft Windows](Activate+a+Mendix+license+on+Microsoft+Windows)
+    *   [Activating a Mendix license on Microsoft Windows](Activate+a+Mendix+License+on+Microsoft+Windows)
 *   [Updating a Mendix Application](Updating+a+Mendix+Application)
 *   [Troubleshooting](Troubleshooting)
 *   [Architecture Options](Architecture+Options)

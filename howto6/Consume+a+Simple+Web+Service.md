@@ -85,7 +85,7 @@ To create logic to call the web service, follow these steps:
 * [Create a Secure App](Create+a+Secure+App)
 * [Security](Security)
 * [Consuming a Complex Web Service](Consume+a+Complex+Web+Service)
-* [Exporting XML Documents](Export+XML+documents)
+* [Exporting XML Documents](Export+XML+Documents)
 * [Importing Excel Documents](Importing+Excel+Documents)
 * [Exposing a Web Service](Expose+a+web+service)
 * [Selenium Support](Selenium+Support)

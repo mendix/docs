@@ -277,10 +277,6 @@ To make sure the correct application root URL is used within your web services, 
 
 ## 7 Related Content
 
-* [How to Build a Simple HRM App 1: Create, Manage, and Deploy the App](Build+a+Simple+HRM+App+1+Create+Manage+and+Deploy+the+App)
-* [How to Build a Simple HRM App 2: First Steps in Building a Rich GUI](Build+a+Simple+HRM+App+2+First+Steps+in+Building+a+Rich+GUI)
-* [How to Build a Simple HRM App 3: Show Related Data in the GUI](Build+a+Simple+HRM+App+3+Show+Related+Data+in+the+GUI)
-* [How to Build a Simple HRM App 4: Enrich the GUI with Filter Options](Build+a+Simple+HRM+App+4+Enrich+the+GUI+with+Filter+Options)
-* [How to Build a Simple HRM App 5: Smarten Up Your App with Business Logic](Build+a+Simple+HRM+App+5+Smarten+Up+Your+App+with+Business+Logic)
+* [How to Build a Simple HRM App](Build+a+Simple+HRM+App)
 * [How to Create and Deploy Your First App](Create+and+Deploy+Your+First+App)
 * [How to Test Microflows Using the UnitTesting Module](Testing+microflows+using+the+UnitTesting+module)

@@ -183,7 +183,7 @@ The EntityConstraint lets you put a constraint on either the entity you specify 
 
 The enumeration property has an extra required child element: a list of enumerationValues. An enumerationValue contains a **key** attribute and a **caption** within their tag.
 
-This presents the user with a dropdown list of options, based on the **captions** in the Mendix Modeler. The **keys** will reach your widget's JavaScript as an enumeration. 
+This presents the user with a dropdown list of options, based on the **captions** in the Mendix Modeler. The **keys** will reach your widget's JavaScript as an enumeration.
 
 It requires a default value to be set, which should correspond with one of the enumerationValue keys.
 
@@ -346,7 +346,7 @@ The translatableString property is similar to a normal string property, except y
 </property>
 ```
 
-What it looks like in the Mendix Modeler: 
+What it looks like in the Mendix Modeler:
 
 ![](attachments/16714046/16844045.png)
 
@@ -356,7 +356,7 @@ Remember to use the correct language notation according to the [Java supported l
 
 # Related content
 
-*   [Creating a chainable Custom Widget](/howto6/Create+a+chainable+Custom+Widget)
+*   [Creating a chainable Custom Widget](/howto6/Create+a+Chainable+Custom+Widget)
 *   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto6/Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
 *   [Creating a Basic Hello World Custom Widget](/howto6/Create+a+Basic+Hello+World+Custom+Widget)
 *   [The Mobile Slider Custom Widget](/howto6/The+Mobile+Slider+Custom+Widget)

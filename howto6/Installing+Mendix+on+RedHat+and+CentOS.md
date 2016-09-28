@@ -11,7 +11,7 @@ The documentation which describes the installation and basic configuration of th
 
 ## 9\. Related content
 
-*   [How to build a simple HRM app](Build+a+Simple+HRM+app)
+*   [How to build a simple HRM app](Build+a+Simple+HRM+App)
 *   [Build a simple HRM app 5: Smarten up your app with business logic](Build+a+simple+HRM+app+5+Smarten+up+your+app+with+business+logic)
 *   [Build a simple HRM app 4: Enrich the GUI with Filter Options](Build+a+simple+HRM+app+4+Enrich+the+GUI+with+Filter+Options)
 *   [Build a simple HRM app 2: First steps in building a rich GUI](Build+a+simple+HRM+app+2+First+steps+in+building+a+rich+GUI)

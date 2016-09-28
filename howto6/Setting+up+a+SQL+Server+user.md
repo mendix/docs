@@ -31,7 +31,7 @@ On this page you can find a step by step instruction on how to: [Set up the data
 
 ## 3. Related content
 
-*   [Activating a Mendix license on Microsoft Windows](Activate+a+Mendix+license+on+Microsoft+Windows)
+*   [Activating a Mendix license on Microsoft Windows](Activate+a+Mendix+License+on+Microsoft+Windows)
 *   [Setting up the database user](Setting+up+the+database+user)
 *   [Troubleshooting](Troubleshooting)
 *   [Restoring a SQL Server database](Restoring+a+SQL+Server+database)

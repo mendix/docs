@@ -20,7 +20,7 @@ Before you continue, make sure that you
 *   **Have downloaded the Flat & Delimited File Importer App Store Module and all prerequisites**
 *   **Know how to create Domain models** ([Creating a basic data layer](Create+a+Basic+Data+Layer)).
 *   **Know how to create Overview and detail pages** ([Creating your first two overview and detail pages](Create+Your+First+Two+Overview+and+Detail+Pages)).
-*   **Know how to create****Microflows** ([Build your first Microflow: Hello world!](Create+Your+First+Microflow+Hello+World)).
+*   **Know how to create****Microflows** ([Build your first Microflow: Hello world!](Create+your+first+Microflow+Hello+World)).
 *   **Save the sample data file to your computer for use in this exercize ([SampleFlatfile.txt](attachments/18448737/18582047.txt))**
 
 1.  Create a **Mendix object** that matches the data you want to input.  For the example provided, this **entity** is a 'Product' has two **attributes**, Value 1 and Value 2.
@@ -81,7 +81,7 @@ Before you continue, make sure that you
 *   **Know how to create Domain models **([Creating a basic data layer](Create+a+Basic+Data+Layer)).
 *   **Know how to create Overview and detail pages **([Create+Your+First+Two+Overview+and+Detail+Pages](Create+Your+First+Two+Overview+and+Detail+Pages)).
 *   **Know how to create** **Microflows and SubMicroflows** ([Build your first Microflow: Hello world!](Create+your+first+Microflow+Hello+World)).
-*   **Understand the concepts behind REST and web Services** ([Consuming Your First REST Service](http://www.mendix.com/blog/consuming-first-rest-service/)[, Consume a complex web service](Consume+a+complex+web+service))
+*   **Understand the concepts behind REST and web Services** ([Consuming Your First REST Service](http://www.mendix.com/blog/consuming-first-rest-service/)[, Consume a complex web service](Consume+a+Complex+Web+Service))
 
     <div class="alert alert-warning">
 

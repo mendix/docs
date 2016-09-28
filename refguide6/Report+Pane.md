@@ -16,7 +16,7 @@ Each report retrieves its data from a [data set](Data+Sets).
 
 ## Top Section with parameter widgets
 
-If a data set of a report has parameters, the values for those parameters are supplied by the parameter widgets ([drop downs](Drop+down) and/or [date range selectors](Date+Range+Selector)) in the top section of the report pane. Through these parameter widgets the end user can filter for which data reports should be displayed.
+If a data set of a report has parameters, the values for those parameters are supplied by the parameter widgets ([drop downs](Drop+Down) and/or [date range selectors](Date+Range+Selector)) in the top section of the report pane. Through these parameter widgets the end user can filter for which data reports should be displayed.
 
 ## Behavior Property
 

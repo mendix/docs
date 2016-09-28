@@ -35,7 +35,7 @@ We recommend the use of the following tools for contributing to the Mendix docum
 * For writing and editing documentation – Visual Studio Code (with which you can preview your Markdown styling)
 * For commiting your documentation – SourceTree or GitHub for Windows
 
-## 3 Editing the Existing Documentation 
+## 3 Editing the Existing Documentation
 
 To edit the existing documentation (for example, the reference guide or a how-to), follow these steps:
 
@@ -48,7 +48,7 @@ To edit the existing documentation (for example, the reference guide or a how-to
 To add a new how-to to our documentation and submit it to our documentation, follow these steps:
 
 1. Click **Write a new how-to** on the Mendix documentation homepage.
-2. From the repository, save a copy of the [How-To Template](The+How+To+Template+Page) locally in order to use it.
+2. From the repository, save a copy of the [How-To Template](The+How+to+Template+Page) locally in order to use it.
 3. Follow the guidelines in the template for writing your how-to, and make sure the text aligns with our [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines).
 4. Take screenshots for the how-to and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [4.1 Naming New Files and Images](#NamingNewFilesandImages).
 5. To merge your new how-to files, fork the GitHub repository, and add your files.
@@ -70,5 +70,5 @@ The following image file types are allowed: .jpg, .png, .gif.
 
 ## 6 Related Content
 
-* [How-to Template](The+How+To+Template+Page)
+* [How-to Template](The+How+to+Template+Page)
 * [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines)

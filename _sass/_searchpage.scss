@@ -1,0 +1,33 @@
+.search {
+  &-header {
+    .stats {
+      font-size: 35px;
+      letter-spacing: -0.75px;
+      line-height: 1;
+      font-weight: 300;
+      margin: 1em 0;
+      padding-bottom: 0.5em;
+
+      &_time {
+        color: #CCC;
+        font-size: 0.6em;
+        display: inline-block;
+      }
+    }
+  }
+  &_hit {
+    .media-heading {
+      font-size: 16px;
+    }
+    .text {
+      font-size: 13px;
+      border-bottom: 1px solid $border-color;
+      margin-bottom: 1em;
+      padding-bottom: 1em;
+    }
+  }
+}
+
+.algolia__result-highlight {
+  font-weight: bold;
+}

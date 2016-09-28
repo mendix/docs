@@ -1,0 +1,10 @@
+_site
+node_modules
+*DS_Store*
+.jekyll-metadata
+
+Gemfile.lock
+.sass-cache/
+.ruby-version
+
+_algolia_api_key_

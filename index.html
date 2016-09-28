@@ -1,0 +1,28 @@
+---
+title: 'Mendix Documentation'
+layout: mxoverview
+redirect_from:
+  - '/docs/Overview'
+---
+{% assign howto = "/howtoX/" | replace: "X", site.latest_major_version %}
+{% assign refguide = "/refguideX/" | replace: "X", site.latest_major_version %}
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="header-link"><a href="{{ "/howtoX/" | replace: "X", site.latest_major_version }}">Mendix {{ site.latest_major_version}} How-to's</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/howto-general.html dir=howto %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="header-link"><a href="{{ "/refguideX/" | replace: "X", site.latest_major_version }}">Reference Guide {{ site.latest_major_version }}</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/refguide-general.html dir=refguide %}
+  </div>
+</div>

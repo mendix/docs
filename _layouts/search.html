@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+    <body>
+    {% include header.html %}
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 col-xs-12">
+            <ol class="breadcrumb">
+                <li><a href="/">Docs</a></li>
+              {% if page.space %}
+                <li><a href="{{ page.dir }}">{{ page.space }}</a></li>
+              {% endif %}
+            </ol>
+          </div>
+          <div class="col-lg-4 col-md-4 col-xs-12">
+            {% include search.html %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row main">
+        <div class="col-md-9">
+            <header class="search-header" id="stats"></header>
+            <section class="">
+                <div id="hits"></div>
+                <div id="pagination" class="text-center"></div>
+            </section>
+        </div>
+        <div class="col-md-3">
+          <div class="search-filters">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+    <script src={{ "/public/js/searchpage.js" | prepend: site.baseurl }}></script>
+    {% include footer.html %}
+    </body>
+</html>

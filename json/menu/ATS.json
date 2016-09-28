@@ -1,0 +1,16 @@
+---
+layout: json
+---
+{
+  "categories": [
+    "General",
+    "Introduction",
+    "Projects",
+    "Test Development",
+    "Data Management",
+    "Scheduling",
+    "Configuration",
+    "Monitoring"
+  ],
+  "pages": {% include json-snippets/get_pages.inc dir="/ATS/" %}
+}

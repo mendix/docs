@@ -38,9 +38,15 @@ ATS version: 1.5
 | Chrome 50 | Yes |   |
 | Chrome >= 51 | - | recent versions of Chrome usually work (unsupported) |
 
-### Internet Explorer
+### Internet Explorer & Edge
 
-Internet Explorer is not supported at the moment. While most tests actually work in IE11 it is not 100% stable.
+The Application Test Suite (ATS) does currently not support testing in Internet Explorer 11, the only left supported version of this browser.
+
+Due to its nature, Internet Explorer is very cumbersome to automate compared to other browsers. Browsers like Chrome or Firefox have vendor support for automation while Internet Explorer's support for Selenium automation hasn't been touched since 2014 ([source](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)).  Without proper vendor support it's difficult and sometimes impossible to work around or fix certain issues.
+
+Nonetheless, we are continuing our efforts to bring support for Internet Explorer 11 into ATS if possible.
+
+At the same time we are planning to support Internet Explorer's successor, Edge. As soon as it's built-in automation support is feature complete we will add support to ATS. You can check the official documentation for the current status [here](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/webdriver-commands/).
 
 ### Other Browsers
 

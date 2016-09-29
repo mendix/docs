@@ -3,6 +3,8 @@ title: "Content Writing and Formatting Guidelines"
 category: "Community"
 ---
 
+# 1 Introduction
+
 This document presents guidelines for creating a common voice, style, and structure for every piece of content we write. The goal of our documentation is to attract and teach new Community developers. With that in mind, please read these guidelines carefully to help us keep the documentation consistent.
 
 # 1 Types of Documentation

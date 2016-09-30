@@ -1,5 +1,6 @@
 ---
 title: "Custom Actions"
+space: "ATS (Application Test Suite)"
 category: "Test Development"
 ---
 Based on the existing actions, you can build up your own actions (custom action). Also if you are fluent in JavaScript, you can add a whole variety of functionalities by using the generic “Execute JavaScript” action.

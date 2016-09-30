@@ -1,5 +1,6 @@
 ---
 title: "How to incorporate Mendix application with Amazon Machine Learning"
+space: "Mendix 6 How-to's"
 category: "Extendability"
 ---
 We live in a world of digital innovations, where many applications help us to make better decisions in our daily life. Since Mendix World 2016 you have great opportunity to move your innovated business into new frontiers. Mendix applications are now not only capable of storing data, but also of making accurate predictions using the data based on the currently best known machine learning algorithms. With the brand new AwsMLConnector module, it becomes feasible to incorporate a Mendix application with the Amazon ML service, which opens up new opportunities to make a Mendix application smart like never before. You can always refer to the [Amazon ML tutorial](https://aws.amazon.com/machine-learning/) for more information about regression models and machine learning in general.

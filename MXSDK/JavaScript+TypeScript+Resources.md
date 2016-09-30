@@ -1,5 +1,6 @@
 ---
 title: "JavaScript & TypeScript resources"
+space: "Mendix Platform SDK"
 category: "Reference Documentation"
 ---
 # So what is this TypeScript thing?

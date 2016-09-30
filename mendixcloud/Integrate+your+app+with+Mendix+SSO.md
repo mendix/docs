@@ -1,5 +1,6 @@
 ---
 title: "Integrate your app with Mendix SSO"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
 

@@ -23,6 +23,7 @@ algolia:
     - index.html
     - howto6/index.html
     - refguide6/index.html
+    - search/index.html
 
 ####################################
 ######        SPACES         #######
@@ -39,7 +40,6 @@ defaults:
       path: 'howto6'
       type: pages
     values:
-      space: "Mendix 6 How-to's"
       menus:
         - "howto6"
         - "tips"
@@ -50,7 +50,6 @@ defaults:
       path: 'refguide6'
       type: pages
     values:
-      space: "Reference Guide 6"
       menus:
         - "refguide6"
         - "community"
@@ -68,42 +67,36 @@ defaults:
       path: 'apidocs'
       type: pages
     values:
-      space: "API documentation"
       menus:
         - "apidocs"
   - scope:
       path: 'ATS'
       type: pages
     values:
-      space: "ATS (Application Test Suite)"
       menus:
         - "ATS"
   - scope:
       path: 'APM'
       type: pages
     values:
-      space: "Application Performance Monitor"
       menus:
         - "APM"
   - scope:
       path: 'MXSDK'
       type: pages
     values:
-      space: "Mendix Platform SDK"
       menus:
         - "MXSDK"
   - scope:
       path: 'mxsupport'
       type: pages
     values:
-      space: "Mendix Support"
       menus:
         - "mxsupport"
   - scope:
       path: 'tips'
       type: pages
     values:
-      space: "Tips and Tricks"
       menus:
         - "howto6"
         - "tips"
@@ -114,7 +107,6 @@ defaults:
       path: 'bestpractices'
       type: pages
     values:
-      space: "Best Practices"
       menus:
         - "howto6"
         - "tips"
@@ -125,7 +117,6 @@ defaults:
       path: 'appstore'
       type: pages
     values:
-      space: "App Store"
       menus:
         - "howto6"
         - "tips"
@@ -136,7 +127,6 @@ defaults:
       path: 'mendixcloud'
       type: pages
     values:
-      space: "Mendix Cloud"
       menus:
         - "howto6"
         - "tips"
@@ -158,6 +148,8 @@ exclude:
   - package.json
   - test.txt
   - run.bat
+  - manifest.yml
+  - community/The+How+to+Template.md
 
 markdown: kramdown
 kramdown:

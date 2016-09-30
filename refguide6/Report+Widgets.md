@@ -1,5 +1,6 @@
 ---
 title: "Report Widgets"
+space: "Reference Guide 6"
 parent: "Pages"
 ---
 With reporting you can create reports over the database data. Reporting is used for creating aggregated information, e.g. total sales per customer.

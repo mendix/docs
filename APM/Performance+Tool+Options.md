@@ -1,5 +1,6 @@
 ---
 title: "Performance Tool Options"
+space: "Application Performance Monitor"
 parent: "Performance+Tool"
 ---
 The following screenshot shows the options of the Performance Tool:

@@ -1,5 +1,6 @@
 ---
 title: "App Store Approval Guidelines"
+space: "App Store"
 category: "App Store"
 ---
 

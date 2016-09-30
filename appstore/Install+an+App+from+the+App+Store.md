@@ -1,5 +1,6 @@
 ---
 title: "Install an App from the App Store"
+space: "App Store"
 category: "App Store"
 ---
 

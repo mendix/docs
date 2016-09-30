@@ -1,5 +1,6 @@
 ---
 title: "Edit Cloud Foundry Settings Dialog"
+space: "Reference Guide 6"
 parent: "Dialogs"
 ---
 Use this dialog to specify the information necessary for deploying your app to a Cloud Foundry instance.

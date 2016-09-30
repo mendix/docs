@@ -1,5 +1,6 @@
 ---
 title: "How to set up your partner profile"
+space: "Community"
 category: "Community"
 ---
 

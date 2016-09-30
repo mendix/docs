@@ -1,5 +1,6 @@
 ---
 title: "How to deploy a Mendix app on Amazon Web Services"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
 

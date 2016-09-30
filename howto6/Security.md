@@ -1,5 +1,6 @@
 ---
 title: "Security"
+space: "Mendix 6 How-to's"
 ---
 How to secure your data and make sure that the right user is actually seeing the data that they're allowed to see.
 

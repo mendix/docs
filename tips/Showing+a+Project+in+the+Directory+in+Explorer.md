@@ -1,5 +1,6 @@
 ---
 title: "Showing a Project in the Directory in Explorer"
+space: "Tips and Tricks"
 category: "Tips and Tricks"
 ---
 

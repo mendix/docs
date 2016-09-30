@@ -1,5 +1,6 @@
 ---
 title: "Java security settings"
+space: "Application Performance Monitor"
 parent: "Pre+requisites"
 ---
 This appendix describes how to simulate security in the modeler and what permissions to request from Mendix support for a cloud slot. Experience learns that in the Modeler the emulated cloud security is a lot more restricting than the real cloud slots. Only the heap dump does not work by default in cloud slots.

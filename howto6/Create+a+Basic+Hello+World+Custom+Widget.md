@@ -1,5 +1,6 @@
 ---
 title: "Create a Basic Hello World Custom Widget"
+space: "Mendix 6 How-to's"
 category: "Custom Widget Development"
 tags: []
 ---

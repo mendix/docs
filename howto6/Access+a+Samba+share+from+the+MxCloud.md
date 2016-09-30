@@ -1,5 +1,6 @@
 ---
 title: "Access a Samba Share from the MxCloud"
+space: "Mendix 6 How-to's"
 category: "Extendability"
 tags: []
 ---

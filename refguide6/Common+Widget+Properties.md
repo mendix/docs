@@ -1,5 +1,6 @@
 ---
 title: "Common Widget Properties"
+space: "Reference Guide 6"
 category: "refguide6"
 ---
 # Common Widget Properties

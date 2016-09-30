@@ -1,5 +1,6 @@
 ---
 title: "Query Tool"
+space: "Application Performance Monitor"
 category: "User Manual"
 ---
 To collect database or application information the Query Tool has been introduced. 

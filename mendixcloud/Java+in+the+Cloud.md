@@ -1,5 +1,6 @@
 ---
 title: "Java in the Cloud"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
 

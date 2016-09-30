@@ -1,5 +1,6 @@
 ---
 title: "Deploying to a Free App"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
 

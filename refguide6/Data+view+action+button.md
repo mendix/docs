@@ -1,5 +1,6 @@
 ---
 title: "Data view action button"
+space: "Reference Guide 6"
 parent: "Data+view+control+bar"
 ---
 

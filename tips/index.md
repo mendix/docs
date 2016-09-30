@@ -1,5 +1,6 @@
 ---
 title: "Tips and Tricks"
+space: "Tips and Tricks"
 category: "tips"
 redirect_from: "/tips/Tips+and+Tricks"
 ---

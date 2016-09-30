@@ -1,5 +1,6 @@
 ---
 title: "Best Practices for Component Based Development"
+space: "Best Practices"
 category: "Best Practices"
 ---
 

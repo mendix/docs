@@ -1,5 +1,6 @@
 ---
 title: "Published OData resource"
+space: "Reference Guide 6"
 parent: "Published+OData+Services"
 ---
 <div class="alert alert-warning">{% markdown %}

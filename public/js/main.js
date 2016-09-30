@@ -2,7 +2,8 @@
   /*
     @author: J.W. Lagendijk <jelte.lagendijk@mendix.com>
 
-    This provides the basic functionality in the docs.mendix.com site. This will eventually be replaced with proper scripts, most likely React
+    This provides the basic functionality in the docs.mendix.com site.
+    This will be replaced later
 
     Work-in-progress
   */
@@ -196,5 +197,19 @@
             }, 700);
         });
     }
+
+    /*****************
+      Clear buttons
+    ******************/
+    $('.has-clear input[type="text"]').on('input propertychange', function() {
+        var $this = $(this);
+        var visible = Boolean($this.val());
+        $this.siblings('.form-control-clear').toggleClass('hidden', !visible);
+    }).trigger('propertychange');
+
+    $('.form-control-clear').click(function() {
+        $(this).parent().find('input[type="text"]').val('')
+          .trigger('propertychange').focus();
+    });
   });
 })(jQuery);

@@ -1,5 +1,6 @@
 ---
 title: "Monitoring application health"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
 

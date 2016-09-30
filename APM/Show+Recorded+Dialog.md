@@ -1,5 +1,6 @@
 ---
 title: "Show Recorded Dialog"
+space: "Application Performance Monitor"
 parent: "Performance+Tool+Filter"
 ---
 You can look at what is being recorded in the [Recorded] dialog:

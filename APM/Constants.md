@@ -1,5 +1,6 @@
 ---
 title: "Constants"
+space: "Application Performance Monitor"
 parent: "Installation+steps"
 ---
 This appendix describes the constants used in the APMAgent. You are advised to use the defaults with the exception of the CompanyName constant.

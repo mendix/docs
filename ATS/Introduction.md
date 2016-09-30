@@ -11,11 +11,34 @@ If you already have active projects you can see directly how many test cases hav
 
 ![My Projects overview page](attachments/20644051/21168194.png)
 
+## Dashboard
+When you open an empty project for the first time, the _Dashboard_ will look like this:
+
+![ATS empty project dashboard](attachments/Introduction/dashboardEmpty.png)
+
+If you already have some active test cases in your **ATS project**, the _Dashboard_ will give you a summarized overview of the current state of your project at a glance.
+
+![ATS project dashboard](attachments/Introduction/dashboard.png)
+
+The _Dashboard_ can be devided into four parts:
+* Current state chart
+* 7-Day history
+* Test case treeview
+* PDF export
+
+The **current state chart** will show you the total number of test cases in your project. Furthermore it will present you the state of your test cases as numeral and as percentage.
+
+![current state chart](attachments/Introduction/doughnutChart.png)
+
+The **7-Day history**
+
+![7day history chart](attachments/Introduction/7dayhistory.png)
+
+![Testcase treeview](attachments/Introduction/treeview.png)
+
+![Testcase treeview expanded](attachments/Introduction/treeviewExpanded.png)
+
 ## Navigation
-
-When opening a project in the ATS you are shown the _Dashboard_ page which gives you an overview over the current project.
-
-![ATS project dashboard](attachments/20644051/21168195.png)
 
 You can navigate your project using the navigation sidebar to the left of the screen.
 
@@ -23,9 +46,13 @@ You can navigate your project using the navigation sidebar to the left of the sc
 
 Over the sidebar you can navigate to different pages of the ATS:
 
-Change current Project
+**Change current Project**
 
 At the top of the sidebar you can switch between projects which are available on your account
+
+**My Projects**
+
+This button will bring you back to the startpage.
 
 **Dashboard**
 
@@ -33,7 +60,7 @@ Gives an overview over the selected project
 
 **User Stories**
 
-Shows the user stories of the Mendix sprintr project connencted to your ATS project
+Shows the user stories of the Mendix sprintr project connected to your ATS project
 
 **Monitoring / Results**
 

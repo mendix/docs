@@ -13,6 +13,11 @@ The Reference Guide is divided in different sections, each describing a certain 
 *   #### [ARS Compatibility](General)
 *   #### [Browser Support](General)
 
+## [Introduction](Introduction)
+
+*   #### [Startpage](Introduction)
+*   #### [Navigation](Introduction)
+
 ## [Projects](Projects)
 
 *   #### [Action Libraries](Projects)
@@ -23,7 +28,7 @@ The Reference Guide is divided in different sections, each describing a certain 
 ## [Data Management](Data+Management)
 
 *   #### [Repository](Data+Management)
-*   #### [Import/Export](Data+Management) 
+*   #### [Import/Export](Data+Management)
 *   #### [Test Data](Data+Management)
 
 ## [Monitoring](Monitoring)
@@ -31,18 +36,13 @@ The Reference Guide is divided in different sections, each describing a certain 
 *   #### [Test Results](Monitoring)
 *   #### [Running Tests](Monitoring)
 
-## [Introduction](Introduction)
-
-*   #### [Startpage](Introduction) 
-*   #### [Navigation](Introduction)
-
 ## [Test Development](Test+Development)
 
 *   #### [Object Types in ATS](Test+Development)
 *   #### [Recorder](Test+Development)
-*   #### [Manual Test Steps](Test+Development) 
-*   #### [Standard Actions Overview](Test+Development) 
-*   #### [Custom Actions](Test+Development) 
+*   #### [Manual Test Steps](Test+Development)
+*   #### [Standard Actions Overview](Test+Development)
+*   #### [Custom Actions](Test+Development)
 *   #### [Data Driven Testing](Test+Development)
 
 ## [Configuration](Configuration)

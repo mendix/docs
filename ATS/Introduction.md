@@ -54,7 +54,7 @@ You can export the current results of your test cases by pressing the *PDF*-butt
 
 You can navigate your project using the navigation sidebar to the left of the screen.
 
-![Navigation sidebar](attachments/20644051/21168196.png)
+![Navigation sidebar](attachments/Introduction/navigation.png)
 
 Over the sidebar you can navigate to different pages of the ATS:
 

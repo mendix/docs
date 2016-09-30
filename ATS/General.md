@@ -28,7 +28,7 @@ Mendix platform and browsers.
 | --- | --- | --- |
 | 1.5, 1.6 | 46-50 |  |
 | 1.7 | 51-53 |   |
-|  | 54+ |recent versions of Chrome usually work (unsupported) |
+|  | 54+ | Recent versions of Chrome usually work (unsupported). |
 
 ### Internet Explorer and Edge
 

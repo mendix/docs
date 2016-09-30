@@ -42,7 +42,11 @@ search.addWidget(
     sortBy: ['isRefined', 'count:desc', 'name:asc'],
     limit: 10,
     templates: {
-      header: '<h5>Main categories</h5>'
+      header: '<h5 class="search_filters_block_title">Main categories</h5>'
+    },
+    transformData: function (hit) {
+      console.log(hit);
+      return hit;
     }
   })
 );

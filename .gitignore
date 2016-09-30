@@ -8,3 +8,5 @@ Gemfile.lock
 .ruby-version
 
 _algolia_api_key_
+
+_config_test.yml

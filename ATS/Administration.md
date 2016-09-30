@@ -12,7 +12,7 @@ As an administrator in the ATS you have access to additional functionality:
 
 When you log in as an administrator the _Projects_ page is shown:
 
-![Projects page when logged in as administrator](attachments/Administration/startpage.PNG)
+![Projects page when logged in as administrator](attachments/Administration/startpage.png)
 
 On this page you can see all the projects that exist on this ATS instance. Here you can create new _Projects_ and _Action Libraries_. Also as an admin user you have the rights to delete projects and libraries from the system. When creating a new library you can choose to _Include by default in new projects_ , so this library is included by default in any project that is created on the system. For more information on project/library creation see the ReferenceGuide_Projects page of the reference guide.
 

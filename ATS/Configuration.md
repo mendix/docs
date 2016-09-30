@@ -2,7 +2,6 @@
 title: "Configuration"
 ---
 <div class="alert alert-info">{% markdown %}
-
 Only a user with the _Project Administrator_ role in the current project can access the configuration page.
 
 {% endmarkdown %}</div>
@@ -11,11 +10,11 @@ On the configuration page under the _Project_ tab you can see the current projec
 
 ![Configuration Page Project Tab](attachments/20644064/21168209.png)
 
-## Configure Selenium hubs
+## Configure Selenium hubs <a name="SeleniumHub"></a>
 
 Under the _Selenium_ tab you can see a list of Selenium hubs that are configured for this project. Project users can run tests on the listed hubs.
 
-![Configuration Selenium Tab](attachments/20644064/21168210.png)
+![Configuration Selenium Tab ](attachments/20644064/21168210.png)
 
 To add a new Selenium hub click the _New_ button in the top bar.
 
@@ -43,7 +42,7 @@ URL of an optional proxy server. Normally there should be no need to use a proxy
 
 Set Selenium DesiredCapabilities, see Selenium documentation for mor info
 
-## Configure Test Applications
+## Configure Test Applications <a name="Applications"></a>
 
 Under the _Applications_ tab you see a list of test applications that are configured for the current project.
 

@@ -1,14 +1,27 @@
+::-ms-clear {
+  display: none;
+}
+
+.form-control-clear {
+  z-index: 10;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
 .topbar {
   border-bottom: $border-color 1px solid;
   background: $color-lightgrey;
 
   .search {
     margin: 1em 0.1em;
-
+    width: 100%;
     .input-group-addon {
       background: #FFF;
       padding-right: $padding-search;
       border-radius: 0px;
+      float: left;
+      width: 35px;
+      line-height: 1.45em;
     }
     input {
       border-left: 0px;
@@ -16,6 +29,8 @@
       padding: $padding-search;
       -webkit-box-shadow: none;
               box-shadow: none;
+      width: calc(100% - 35px);
+      float: left;
       &.form-control:focus {
         border-color: #ccc;
         -webkit-box-shadow: none;

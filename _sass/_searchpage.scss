@@ -36,8 +36,6 @@
     }
   }
   &_filters {
-    margin-top: 3em;
-    padding-right: 0.5em;
     &_block {
       background: $color-lightgrey;
       padding: 1em;
@@ -95,6 +93,12 @@
       &--body {}
     }
   }
+
+  &-sidebar {
+    padding-top: 3em;
+    padding-right: 1.2em;
+  }
+
 }
 .algolia_notfound_results {
   @extend .search_stats;

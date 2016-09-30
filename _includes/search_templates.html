@@ -1,0 +1,27 @@
+{% raw %}
+<!-- TEMPLATES -->
+
+<script type="text/html" id="stats-template">
+  <div class="stats">
+    {{#nonEmptyQuery}}Found {{{nbHits}}} results for search: &quot;{{{query}}}&quot;{{/nonEmptyQuery}}
+    {{#emptyQuery}}There are {{{nbHits}}} pages, specify a search{{/emptyQuery}}
+    <div class="stats_time">{{{processingTimeMS}}} ms</div>
+  </div>
+</script>
+
+<script type="text/html" id="hit-template">
+  <div class="search_hit hit media">
+    <div class="media-body">
+      <h4 class="media-heading"><a href="{{{url}}}">{{{_highlightResult.title.value}}}</a></h4>
+      <p class="text">{{{_highlightResult.text.value}}}</p>
+      <span class="space">{{{space}}}</span>
+    </div>
+  </div>
+</script>
+
+<script type="text/html" id="no-results-template">
+  <div class="text-center">No results found matching <strong>{{query}}</strong>.</div>
+</script>
+
+<!-- /TEMPLATES -->
+{% endraw %}

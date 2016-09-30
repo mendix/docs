@@ -31,11 +31,12 @@
         </div>
         <div class="col-md-3">
           <div class="search-filters">
-
+            <div id="space"></div>
           </div>
         </div>
       </div>
     </div>
+    {% include search_templates.html %}
     <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
     <script src={{ "/public/js/searchpage.js" | prepend: site.baseurl }}></script>
     {% include footer.html %}

@@ -19,11 +19,34 @@
     .media-heading {
       font-size: 16px;
     }
+    .media-body {
+      border-bottom: 1px solid $border-color;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+    }
     .text {
       font-size: 13px;
-      border-bottom: 1px solid $border-color;
-      margin-bottom: 1em;
-      padding-bottom: 1em;
+    }
+    .space {
+      float: right;
+      font-size: 12px;
+      font-style: italic;
+    }
+  }
+  &-filters {
+    .ais-refinement-list {
+      &--list {}
+      &--label {}
+      &--item {
+        &__active {}
+      }
+      &--header {}
+      &--footer {}
+      &--count {
+        display: none;
+      }
+      &--checkbox {}
+      &--body {}
     }
   }
 }

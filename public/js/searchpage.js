@@ -1,24 +1,27 @@
 /* global instantsearch */
+function getTemplate(templateName) {
+  return document.getElementById(templateName + '-template').innerHTML;
+}
 
 var search = instantsearch(ALGOLIA_CONFIG);
 
+/*
+  SEARCHBOX
+*/
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#mendix_search'
   })
 );
 
+/*
+  STATS
+*/
 search.addWidget(
   instantsearch.widgets.stats({
     container: '#stats',
     templates: {
-      body: [
-        '<div class="stats">',
-        '{{#nonEmptyQuery}}Found {{{nbHits}}} results for search: &quot;{{{query}}}&quot;{{/nonEmptyQuery}}',
-        '{{#emptyQuery}}There are {{{nbHits}}} pages, specify a search{{/emptyQuery}}',
-        ' <div class="stats_time">{{{processingTimeMS}}} ms</div>',
-        '</div>'
-      ].join('')
+      body: getTemplate('stats')
     },
     transformData: function(result) {
       result.emptyQuery = result.query === "";
@@ -28,26 +31,35 @@ search.addWidget(
   })
 );
 
-var hitTemplate =
-  '<div class="search_hit hit media">' +
-    '<div class="media-body">' +
-      '<h4 class="media-heading"><a href="{{{url}}}">{{{_highlightResult.title.value}}}</a></h4>' +
-      '<p class="text">{{{_highlightResult.text.value}}}</p>' +
-    '</div>' +
-  '</div>';
+/*
+  FILTER (SPACES)
+*/
+search.addWidget(
+  instantsearch.widgets.refinementList({
+    container: '#space',
+    attributeName: 'space',
+    operator: 'or',
+    sortBy: ['isRefined', 'count:desc', 'name:asc'],
+    limit: 10,
+    templates: {
+      header: '<h5>Main categories</h5>'
+    }
+  })
+);
 
-var noResultsTemplate =
-  '<div class="text-center">No results found matching <strong>{{query}}</strong>.</div>';
-
+/*
+  RESULTS
+*/
 search.addWidget(
   instantsearch.widgets.hits({
     container: '#hits',
     hitsPerPage: 10,
     templates: {
-      empty: noResultsTemplate,
-      item: hitTemplate
+      empty: getTemplate('no-results'),
+      item: getTemplate('hit')
     },
     transformData: function(hit) {
+      //console.log(hit);
       if (hit && hit.url)
         hit.url = hit.url.replace('.html', '');
       return hit;
@@ -55,6 +67,9 @@ search.addWidget(
   })
 );
 
+/*
+  PAGINATION
+*/
 search.addWidget(
   instantsearch.widgets.pagination({
     container: '#pagination',

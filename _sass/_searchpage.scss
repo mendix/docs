@@ -1,13 +1,15 @@
 .search {
+  &_stats {
+    font-size: 35px;
+    letter-spacing: -0.75px;
+    line-height: 1;
+    font-weight: 300;
+    margin: 1em 0;
+    padding-bottom: 0.5em;
+  }
   &-header {
     .stats {
-      font-size: 35px;
-      letter-spacing: -0.75px;
-      line-height: 1;
-      font-weight: 300;
-      margin: 1em 0;
-      padding-bottom: 0.5em;
-
+      @extend .search_stats;
       &_time {
         color: #CCC;
         font-size: 0.6em;
@@ -93,6 +95,10 @@
       &--body {}
     }
   }
+}
+.algolia_notfound_results {
+  @extend .search_stats;
+  margin-bottom: 11em;
 }
 
 .algolia__result-highlight {

@@ -3,7 +3,7 @@
 
 <script type="text/html" id="stats-template">
   <div class="stats">
-    {{#nonEmptyQuery}}Found {{{nbHits}}} results for search: &quot;{{{query}}}&quot;{{/nonEmptyQuery}}
+    {{#nonEmptyQuery}}Found {{{nbHits}}} results for search: &quot;{{query}}&quot;{{/nonEmptyQuery}}
     {{#emptyQuery}}There are {{{nbHits}}} pages, specify a search{{/emptyQuery}}
     <div class="stats_time">{{{processingTimeMS}}} ms</div>
   </div>
@@ -20,7 +20,7 @@
 </script>
 
 <script type="text/html" id="no-results-template">
-  <div class="text-center">No results found matching <strong>{{query}}</strong>.</div>
+  <div class="algolia_notfound_results">No results found for search: &quot;{{query}}&quot;, try again</div>
 </script>
 
 <!-- /TEMPLATES -->

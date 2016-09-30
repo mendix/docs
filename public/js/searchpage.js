@@ -19,7 +19,7 @@ search.addWidget(
 */
 search.addWidget(
   instantsearch.widgets.stats({
-    container: '#stats',
+    container: '.search-header',
     templates: {
       body: getTemplate('stats')
     },
@@ -43,10 +43,6 @@ search.addWidget(
     limit: 50,
     templates: {
       header: '<h5 class="search_filters_block_title">Main categories</h5>'
-    },
-    transformData: function (hit) {
-      console.log(hit);
-      return hit;
     }
   })
 );
@@ -62,10 +58,19 @@ search.addWidget(
       empty: getTemplate('no-results'),
       item: getTemplate('hit')
     },
-    transformData: function(hit) {
-      //console.log(hit);
-      if (hit && hit.url)
+    transformData : function(hit) {
+      if (hit && hit.url) {
+        $('.search-main').toggleClass('col-md-12', false);
+        $('.search-main').toggleClass('no-results', false);
+        $('.search-main').toggleClass('col-md-9', true);
+        $('.search-sidebar').toggleClass('hidden', false);
         hit.url = hit.url.replace('.html', '');
+      } else {
+        $('.search-main').toggleClass('col-md-12', true);
+        $('.search-main').toggleClass('no-results', true);
+        $('.search-main').toggleClass('col-md-9', false);
+        $('.search-sidebar').toggleClass('hidden', true);
+      }
       return hit;
     }
   })

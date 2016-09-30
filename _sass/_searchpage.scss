@@ -35,6 +35,7 @@
   }
   &_filters {
     margin-top: 3em;
+    padding-right: 0.5em;
     &_block {
       background: $color-lightgrey;
       padding: 1em;
@@ -56,7 +57,7 @@
         @include border-radius(3px);
         color: $base-text-color;
         cursor: pointer;
-        padding: 0.2em 0.3em 0 0.3em;
+        padding: 0.2em 0.6em 0 0.6em;
         margin-bottom: 0.3em;
         &:hover {
           background-color: $link-color;
@@ -66,11 +67,19 @@
           background-color: $link-color;
           color: $white;
         }
+        // &:after {
+        //   content: ' ';
+        //   display: block;
+        //   width: 100%;
+        //   height: 1px;
+        //   border-bottom: 1px solid;
+        // }
       }
       &--header {}
       &--footer {}
       &--count {
         font-size: 0.9em;
+        color: #CCC;
         &:before {
           content: '(';
         }

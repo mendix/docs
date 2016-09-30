@@ -40,7 +40,7 @@ search.addWidget(
     attributeName: 'space',
     operator: 'or',
     sortBy: ['isRefined', 'count:desc', 'name:asc'],
-    limit: 10,
+    limit: 50,
     templates: {
       header: '<h5 class="search_filters_block_title">Main categories</h5>'
     },

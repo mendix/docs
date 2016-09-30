@@ -1,18 +1,19 @@
 ---
 title: "General"
 ---
-ATS version: 1.5
 
-## Mendix compatibility
+# ATS version: 1.5
 
-| Mendix version | Supported | Tested |
+## Mendix Compatibility
+
+| Mendix Version | Supported | Tested |
 | --- | --- | --- |
 | 3.x | - | - |
 | 4.x | - | - |
 | >5.14.1 | Yes | 5.17.0, 5.21.1 |
 | 6.0 - 6.7.1 | Yes | 6.4.1, 6.7.1 |
 
-## Browser support
+## Browser Support
 
 ### Firefox
 
@@ -38,15 +39,15 @@ ATS version: 1.5
 | Chrome 50 | Yes |   |
 | Chrome >= 51 | - | recent versions of Chrome usually work (unsupported) |
 
-### Internet Explorer & Edge
+### Internet Explorer and Edge
 
-The Application Test Suite (ATS) does currently not support testing in Internet Explorer 11, the only left supported version of this browser.
+The Application Test Suite (ATS) does currently not support testing in Internet Explorer 11 (the only remaining supported version of this browser).
 
-Due to its nature, Internet Explorer is very cumbersome to automate compared to other browsers. Browsers like Chrome or Firefox have vendor support for automation while Internet Explorer's support for Selenium automation hasn't been touched since 2014 ([source](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)).  Without proper vendor support it's difficult and sometimes impossible to work around or fix certain issues.
+Due to its nature, Internet Explorer is very cumbersome to automate compared to other browsers. Browsers like Chrome or Firefox have vendor support for automation, while Internet Explorer's support for Selenium automation hasn't been touched since 2014 (for details, see [https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)). Without proper vendor support, it's difficult and sometimes impossible to work around or fix certain issues.
 
 Nonetheless, we are continuing our efforts to bring support for Internet Explorer 11 into ATS if possible.
 
-At the same time we are planning to support Internet Explorer's successor, Edge. As soon as it's built-in automation support is feature complete we will add support to ATS. You can check the official documentation for the current status [here](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/webdriver-commands/).
+At the same time, we are planning to support Internet Explorer's successor, Edge. As soon as it's built-in automation support is feature-complete, we will add support to ATS. For details, check the [official documentation for the current status](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/webdriver-commands/).
 
 ### Other Browsers
 

@@ -10,7 +10,7 @@ On the configuration page under the _Project_ tab you can see the current projec
 
 ![Configuration Page Project Tab](attachments/20644064/21168209.png)
 
-## Configure Selenium hubs <a name="SeleniumHub"></a>
+## Configure Selenium hubs
 
 Under the _Selenium_ tab you can see a list of Selenium hubs that are configured for this project. Project users can run tests on the listed hubs.
 

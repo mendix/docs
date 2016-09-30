@@ -1,37 +1,38 @@
 ---
-title: "Exposing data to BI tools using OData"
+title: "Expose Data to BI Tools Using OData"
 category: "Integration"
 tags: []
 ---
-**Introduction**
 
-Mendix applications, like many other applications, encourage the application of a services oriented architecture: multiple smaller services providing APIs and user interfaces for a specific set of data and logic. Enterprises build up complete solutions by assembling these services.
+## 1 Introduction
 
-One important aspect of services is that all access to data and logic is handled by service operations. Direct access to databases used for storing the service data is discouraged, because this would bypass business rules and security handled by the service. This creates a challenge for generic reporting, data warehousing and ETL tooling.
+Mendix apps, like many other apps, encourage the application of a services-oriented architecture: multiple smaller services providing APIs and user interfaces for a specific set of data and logic. Enterprises build complete solutions by assembling these services.
 
-**OData**
+One important aspect of services is that all access to data and logic is handled by the service operations. Direct access to the databases used for storing the service data is discouraged, because this would bypass the business rules and security handled by the service. This creates a challenge for generic reporting, data warehousing, and ETL tooling.
 
-A new standard called oData is currently seeing growing adoption as this enables generic data access within a services oriented architecture. oData is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way” ([www.odata.org](http://www.odata.org)). In other words, it enables tools to use any REST/OData service by providing metadata describing the data provided, and standardizing the messages exchanged with the oData services.
+### 1.1 OData
+
+A new standard called OData is seeing increased popularity, as it enables generic data access within a services-oriented architecture. According to [www.odata.org](http://www.odata.org), OData is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way.” In other words, it enables tools to use any REST/OData service by providing metadata describing the data provided and standardizing the messages exchanged with the OData services.
 
 A reporting tool like Tableau or Excel can discover what data and functionality is available in an oData service and provide a generic way for users to build new queries for the data.
 
-**After completing this how-to you will know:**
+**This how-to will teach you how to do the following:**
 
 *   How to create a Published OData service with Resources
 *   How to add the OData server to Tableau and Excel
 *   How to combine resources in Tableau
 *   How to create custom queries
 
-## 1. Preparation
+## 2 Prerequisites
 
-Before you can start with this how-to, make sure you have completed the following prerequisites.
+Before starting this how-to, make sure you have completed the following prerequisites:
 
 *   Get the **Company Expenses Demo** app from the **Mendix AppStore**.
 *   Add some expense reports to it so you have data to work with in the how-to.
 *   Install Excel 2013.
 *   Download and install [Tableau](http://www.tableau.com/). You can use a trial version for 14 days.
 
-## 2\. Creating a Published OData Service
+## 3 Creating a Published OData Service
 
 A Published OData service can be used by third-party applications to read data from a Mendix application. In this chapter you will create and configure such a service.
 
@@ -60,7 +61,7 @@ A Published OData service can be used by third-party applications to read data f
 
 Restart the application, the OData service is now ready to be consumed.
 
-## 3\. Working with Mendix Data in Excel 2013
+## 4 Working with Mendix Data in Excel 2013
 
 1.  Open Excel and create a new blank workbook.
     ![](attachments/18448736/18581995.png)
@@ -77,7 +78,7 @@ Restart the application, the OData service is now ready to be consumed.
 8.  The data of the Mendix application should now be imported in Excel.
     ![](attachments/18448736/18581987.png)
 
-## 4\. Working with Mendix Data in Tableau
+## 5 Working with Mendix Data in Tableau
 
 In this exercise you will visualize data from the Company Expenses app in Tableau.
 
@@ -124,7 +125,7 @@ In this exercise you will visualize data from the Company Expenses app in Tablea
 You should now see a stacked bar chart with data combined over multiple data sources.
 ![](attachments/18448736/18582003.png)
 
-## 5\. Filtering Data With Query Parameters
+## 6 Filtering Data With Query Parameters
 
 By default all expenses are retrieved by Tableau, but Mendix allows you to add filters to the query so only the desired data is being retrieved.
 
@@ -148,7 +149,7 @@ Other query examples are:
 * `http://localhost:8080/odata/ Expenses/Expenses ?$ filter=DateOfBirth+gt+datetime'1995-01-01T00:00:00'`
 * `http ://localhost:8080/odata/ Expenses/Expenses ?$ filter=DateOfBirth+gt+datetime'2005-01-01T00:00:00 '&$ orderby=DateOfBirth`
 
-## 6\. Related content
+## 7 Related content
 
 *   [Consuming a complex web service](Consume+a+Complex+Web+Service)
 *   [Consuming a simple Web Service](Consume+a+Simple+Web+Service)

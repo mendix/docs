@@ -50,7 +50,7 @@ To add a new how-to to our documentation and submit it to our documentation, fol
 1. Click **Write a new how-to** on the Mendix documentation homepage.
 2. From the repository, save a copy of the [How-To Template](The+How+to+Template+Page) locally in order to use it.
 3. Follow the guidelines in the template for writing your how-to, and make sure the text aligns with our [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines).
-4. Take screenshots for the how-to and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [4.1 Naming New Files and Images](#NamingNewFilesandImages).
+4. Take screenshots for the how-to and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [5 Naming New Files and Images](#NamingNewFilesandImages).
 5. To merge your new how-to files, fork the GitHub repository, and add your files.
 6. Create a pull request.
 

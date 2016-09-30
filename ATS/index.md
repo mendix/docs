@@ -7,52 +7,52 @@ redirect_from:
 
 The Reference Guide is divided in different sections, each describing a certain feature of the ATS.
 
-## [General](General)
+## [General](General.md)
 
-*   #### [Mendix Compatibility](General)
-*   #### [ARS Compatibility](General)
-*   #### [Browser Support](General)
+*   #### [Mendix Compatibility](General.md#mendix-compatibility)
+*   #### [ARS Compatibility](General.md#ars-compatibility)
+*   #### [Browser Support](General.md#browser-support)
 
-## [Introduction](Introduction)
+## [Introduction](Introduction.md)
 
-*   #### [Startpage](Introduction)
-*   #### [Dashboard](Introduction)
-*   #### [Navigation](Introduction)
+*   #### [Startpage](Introduction.md#startpage)
+*   #### [Dashboard](Introduction.md#dashboard)
+*   #### [Navigation](Introduction.md#navigation)
 
-## [Projects](Projects)
+## [Projects](Projects.md)
 
-*   #### [Action Libraries](Projects)
-*   #### [Creation and Setup](Projects)
-*   #### [Switching Projects](Projects)
-*   #### [Project Dashboard](Projects)
+*   #### [Action Libraries](Projects.md#action-libraries)
+*   #### [Creation and Setup](Projects.md#creation-and-setup)
+*   #### [Switching Projects](Projects.md#switching-projects)
+*   #### [Project Dashboard](Projects.md#project-dashboard)
 
-## [Data Management](Data+Management)
+## [Data Management](Data+Management.md)
 
-*   #### [Repository](Data+Management)
-*   #### [Import/Export](Data+Management)
-*   #### [Test Data](Data+Management)
+*   #### [Repository](Data+Management.md#repository)
+*   #### [Import/Export](Data+Management.md#importexport)
+*   #### [Test Data](Data+Management.md#test-data)
 
-## [Monitoring](Monitoring)
+## [Monitoring](Monitoring.md)
 
-*   #### [Test Results](Monitoring)
-*   #### [Running Tests](Monitoring)
+*   #### [Test Results](Monitoring.md#test-results)
+*   #### [Running Tests](Monitoring.md#running-tests)
 
-## [Test Development](Test+Development)
+## [Test Development](Test+Development.md)
 
-*   #### [Object Types in ATS](Test+Development)
-*   #### [Recorder](Test+Development)
-*   #### [Manual Test Steps](Test+Development)
-*   #### [Standard Actions Overview](Test+Development)
-*   #### [Custom Actions](Test+Development)
-*   #### [Data Driven Testing](Test+Development)
+*   #### [Object Types in ATS](Test+Development.md#object-types-in-ats)
+*   #### [Recorder](Test+Development.md#recorder)
+*   #### [Manual Test Steps](Test+Development.md#manual-test-steps)
+*   #### [Standard Actions Overview](Test+Development.md#standard-actions-overview)
+*   #### [Custom Actions](Test+Development.md#custom-actions)
+*   #### [Data Driven Testing](Test+Development.md#data-driven-testing)
 
-## [Configuration](Configuration)
+## [Configuration](Configuration.md)
 
-*   #### [Configure Selenium hubs](Configuration)
-*   #### [Configure Test Applications](Configuration)
+*   #### [Configure Selenium hubs](Configuration.md#configure-selenium-hubs)
+*   #### [Configure Test Applications](Configuration.md#configure-test-applications-)
 
-## [Administration](Administration)
+## [Administration](Administration.md)
 
-*   #### [Manage Projects](Administration)
-*   #### [Create Accounts](Administration)
-*   #### [Configure Selenium Hubs](Administration)
+*   #### [Manage Projects](Administration.md#manage-projects)
+*   #### [Create Accounts](Administration.md#create-accounts)
+*   #### [Configure Selenium Hubs](Administration.md#configure-selenium-hubs)

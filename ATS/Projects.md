@@ -49,9 +49,9 @@ Since data is separated into projects, your work always happens inside a project
 
 The project dashboard is the first page you see when you open a project.
 
-![The project dashboard](attachments/20644054/21168216.png)
+![The project dashboard](attachments/Projects/dashboard.png)
 
-There are three blocks on the dashboard. The top left box (1) shows you the 5 most recent test runs. The top right box (2) shows a condensed view of all test results of the last 7 days. The bottom box shows you all stories of the current sprint including the accumulated result of all related test cases (column 'Success').
+There are three blocks on the dashboard. The top left box (1) shows you the number of all test cases and their result. The lower left box (2) shows a condensed view of test results of the last 7 days. The right box (3) shows you a detailed view of all test cases and test suites. For more informations read the [Introduction](Introduction.md#dashboard).
 
 ## Sprintr integration
 

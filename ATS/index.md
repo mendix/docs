@@ -14,7 +14,7 @@ The Reference Guide is divided in different sections, each describing a certain 
 
 ## [Introduction](Introduction.md)
 
-*   [Startpage](Introduction.md#startpage)
+*   [Start Page](Introduction.md#startpage)
 *   [Dashboard](Introduction.md#dashboard)
 *   [Navigation](Introduction.md#navigation)
 *   [User Roles](Introduction.md#different-user-roles)

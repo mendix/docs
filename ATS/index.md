@@ -16,6 +16,7 @@ The Reference Guide is divided in different sections, each describing a certain 
 ## [Introduction](Introduction)
 
 *   #### [Startpage](Introduction)
+*   #### [Dashboard](Introduction)
 *   #### [Navigation](Introduction)
 
 ## [Projects](Projects)

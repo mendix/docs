@@ -7,6 +7,8 @@ encoding: utf-8
 
 # Base variables
 latest_major_version: "6"
+github_repo: "https://github.com/mendix/docs"
+github_branch: "development"
 
 timezone: Netherlands/Amsterdam
 permalink: ordinal

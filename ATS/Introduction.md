@@ -12,15 +12,15 @@ If you already have active projects you can see directly how many test cases hav
 ![My Projects overview page](attachments/20644051/21168194.png)
 
 ## Dashboard
-When you open an empty project for the first time, the _Dashboard_ will look like this:
+When you open an empty project for the first time, the dashboard will look like this:
 
 ![ATS empty project dashboard](attachments/Introduction/dashboardEmpty.png)
 
-If you already have some active test cases in your **ATS project**, the _Dashboard_ will give you a summarized overview of the current state of your project at a glance.
+If you already have some active test cases in your **ATS project**, the dashboard will give you a summarized overview of the current state of your project at a glance.
 
 ![ATS project dashboard](attachments/Introduction/dashboard.png)
 
-The _Dashboard_ can be devided into four parts:
+The dashboard can be devided into four parts:
 * Current state chart
 * 7-Day history
 * Test case treeview

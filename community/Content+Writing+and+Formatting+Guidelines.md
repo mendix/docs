@@ -4,11 +4,13 @@ space: "Community"
 category: "Community"
 ---
 
+# 1 Introduction
+
 This document presents guidelines for creating a common voice, style, and structure for every piece of content we write. The goal of our documentation is to attract and teach new Community developers. With that in mind, please read these guidelines carefully to help us keep the documentation consistent.
 
-# 1 Types of Documentation
+# 2 Types of Documentation
 
-## 1.1 The How-to's
+## 2.1 The How-to's
 
 The how-to's are contextual and version-specific guides on Mendix topics that take you through the necessary steps to achieve a goal, whether it's adding a Google Maps widget to your UI, importing Excel files, or consuming a web service. The how-to's use relevant information on Mendix components to create realistic scenarios with specific contexts, and they should deliver functionalities.
 
@@ -17,7 +19,7 @@ Here are some more important details on the how-to's:
 * This documentation should provide solutions and insights to common scenarios, business cases, and frequently asked questions
 * At the end of each how-to, the reader should have increased knowledge about Mendix functionality and should know how to apply it in relevant situations
 
-## 1.2 The Mendix Reference Guide
+## 2.2 The Mendix Reference Guide
 
 The Mendix Reference Guide contains abstract factual data about the various Mendix components. Each component has its own page or section that explains what the component does and the methods and parameters for using it. The reference guide also presents useful examples that make it easy to use the specific component in Mendix projects. The guide does not contain detailed sections on how to use Mendix in various ways or in specific situations in projects.
 
@@ -27,7 +29,7 @@ Here are some more important details on the reference guide:
 * Each reference guide topic should contain descriptions of the feature's screens, properties, and possible values
 * Each feature should contain at least one relevant example (the more examples the better!)
 
-## 1.3 The API Documentation
+## 2.3 The API Documentation
 
 The API documentation provides clear, abstract, factual information about the various public APIs available in Mendix. The documentation explains the function of the API and gives clear examples of the methods that can easily be used and adjusted in projects.
 
@@ -36,7 +38,7 @@ Here are some more important details on the API documentation:
 * Each part of the API documentation should contain an introduction that explains what API is being described and what its purpose is
 * Each method should have a description (including its properties and functions) and at least one relevant example (the more examples the better!)
 
-# 2 General Style Guidelines
+# 3 General Style Guidelines
 
 When contributing to the Mendix documentation, consider these style guidelines:
 
@@ -53,19 +55,19 @@ When contributing to the Mendix documentation, consider these style guidelines:
 
 Need an extra hand with spelling and grammar? Load your article into [Hemmingway](http://www.hemingwayapp.com/) to spot any potential errors.
 
-# 3 General Formatting Guidelines for Markdown
+# 4 General Formatting Guidelines for Markdown
 
-## 3.1 Reference for Formatting
+## 4.1 Reference for Formatting
 
 For details on the Markdown syntax, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
-## 3.2 Text Styling
+## 4.2 Text Styling
 
 Use **bold** when identifying buttons, windows, fields, and other entities that appear in the UI. For example: "Add a **Retrieve** activity to the Microflow."
 
 Use *italics* when the user needs to enter text. For example: "In the **Name** field, enter *Customer_NewEdit_Commit*."
 
-## 3.3 Embedding a Modelshare
+## 4.3 Embedding a Modelshare
 
 To embed a modelshare in the documentation, paste the `iframe`. For example:
 
@@ -73,7 +75,7 @@ To embed a modelshare in the documentation, paste the `iframe`. For example:
 <iframe width=='1oo%' height='491px' frameborder='0' src=https://modleshare.mendix.com/models/a0e6fba1-aa44-4d95-ac06-3f9fc`cca082/new-car-rental-validation?embed=true'></iframe>
 ```
 
-## 3.4 Specific Formatting Tips
+## 4.4 Specific Formatting Tips
 
 These are some tips to consider when formatting Markdown:
 
@@ -83,13 +85,13 @@ These are some tips to consider when formatting Markdown:
 * To underline text, use: `<u>`[text]`</u>`
 * If you add an image link in Markdown and then edit that image, you have to referesh the preview in your Markdown editor to see the refreshed image
 
-# 4 Guidelines for Writing and Formatting the How-To's
+# 5 Guidelines for Writing and Formatting the How-To's
 
 This section presents detailed guidlines for writing a how-to. Read this section while referencing the [How-to Template](The+How+to+Template+Page).
 
-## 4.1 How-to Sections
+## 5.1 How-to Sections
 
-### 4.1.1 Title
+### 5.1.1 Title
 
 Write the title of the how-to so that it's clear and attractive to people not familiar with Mendix.
 
@@ -99,7 +101,7 @@ Use an infinitive verb (without "to") at the beginning of your title (for exampl
 
 You can use this title structure: "[goal/problem to be solved] + [Mendix terminology]" (for example,"Work with Object Events").
 
-### 4.1.2 Introduction
+### 5.1.2 Introduction
 
 The introduction should explain the business case of the how-to, what problems the document solves, and why end-users should read it. 
 
@@ -113,7 +115,7 @@ For example:
 * Deploy an app with Mendix
 * Create overview and detail pages"
 
-### 4.1.3 Prerequisites Section
+### 5.1.3 Prerequisites Section
 
 Use the prerequisites section to let end-users know what they should have completed before starting the how-to. This prevents having to explain certain steps in detail. 
 
@@ -127,11 +129,11 @@ For example:
 * Fork the repository on GitHub
 * Create a Basic Data Layer"
 
-### 4.1.4 Exercises
+### 5.1.4 Exercises
 
 When writing exercise steps, it is especially important to focus on the styling and formatting so that the reader is clear on what is being done in the exercise.
 
-#### 4.1.4.1 Numbered Lists
+#### 5.1.4.1 Numbered Lists
 
 Start each exercise with an introductory sentence about what the goal is (for example, "To enable batch translation, follow these steps").
 
@@ -145,7 +147,7 @@ For example:
 
 If you want to use an image in your numbered list, add it after the related exercise step.
 
-#### 4.1.4.2 Images
+#### 5.1.4.2 Images
 
 Add images that clearly show the specific functionality of the related step (so the reader can check that the image matches what they see on their screen). For example:
 
@@ -157,15 +159,15 @@ Add boxes, indicators, arrows, and other information to an image only if it make
 
 Keep the images as simple as possible, because having too many arrows on an image can make it confusing!
 
-## 4.2 How-to Content
+## 5.2 How-to Content
 
-### 4.2.1 Documenting Microflows
+### 5.2.1 Documenting Microflows
 
 When documenting microflows, explain how to drag actions from the Modeler Toolbox to the microflow. This is one complete step and it saves time compared to clicking the toolbar, adding an activity, etc.
 
 Always show the result of a microflow assignment so that the user knows what it should look like.
 
-### 4.2.2 Using Beta Content Warning
+### 5.2.2 Using Beta Content Warning
 
 Provide a warning note when you are releasing documentation about a feature that is in beta. 
 
@@ -177,7 +179,7 @@ For example:
 
 </div>
 
-### 4.2.3 Using International Test Data
+### 5.2.3 Using International Test Data
 
 Use English-language and international test data if applicable. Think big! 
 
@@ -187,7 +189,7 @@ For example:
 * dollars, $
 * Mike, Henry"
 
-### 4.2.4 Writing Detailed and Short Explanations
+### 5.2.4 Writing Detailed and Short Explanations
 
 Explain something in detail once, and use the short version after that. 
 
@@ -202,7 +204,7 @@ This could be the "short version" explanation:
 1. "Add a data grid to the page.
 2. ..."
 
-# 5 Guidelines for Writing and Formatting the Mendix Reference Guide
+# 6 Guidelines for Writing and Formatting the Mendix Reference Guide
 
 When writing for the Mendix Reference Guide, consider these guidelines: 
 

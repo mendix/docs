@@ -1,5 +1,6 @@
 ---
 title: "Deploying a Mendix App to Pivotal"
+space: "Mendix 6 How-to's"
 category: "Cloud Foundry"
 tags: []
 ---

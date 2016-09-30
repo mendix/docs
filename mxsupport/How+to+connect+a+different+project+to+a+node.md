@@ -1,5 +1,6 @@
 ---
 title: "How to connect a different project to a node"
+space: "Mendix Support"
 category: "Mendix Support"
 ---
 # How to connect a different project to a node

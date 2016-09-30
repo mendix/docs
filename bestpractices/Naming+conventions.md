@@ -1,5 +1,6 @@
 ---
 title: "Naming Conventions"
+space: "Best Practices"
 category: "Best Practices"
 ---
 # Naming conventions in Mendix 5

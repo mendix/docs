@@ -1,5 +1,6 @@
 ---
 title: "Denormalize Data to Improve Performance"
+space: "Mendix 6 How-to's"
 category: "Data Models"
 tags: []
 ---

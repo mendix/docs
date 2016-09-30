@@ -1,5 +1,6 @@
 ---
 title: "File manager"
+space: "Reference Guide 6"
 parent: "File+Widgets"
 ---
 

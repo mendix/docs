@@ -1,5 +1,6 @@
 ---
 title: "Create a Basic Data Layer"
+space: "Mendix 6 How-to's"
 category: "Data Models"
 tags: []
 ---

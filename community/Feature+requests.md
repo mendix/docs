@@ -1,5 +1,6 @@
 ---
 title: "Feature requests"
+space: "Community"
 category: "Community"
 ---
 This page describes how we handle feature requests. In general, we process **all** feature requests through the IdeaForum. The one exception is when the implementation of your requested feature is already committed by our Sales and/or Customer Success Management teams, AND approved by our product managers. In that case you should use our support portal.

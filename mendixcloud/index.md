@@ -1,5 +1,6 @@
 ---
 title: "Mendix Cloud"
+space: "Mendix Cloud"
 redirect_from:
   - "/mendixcloud/Mendix+Cloud"
   - "/mendixcloud/Mendix+Cloud+Home"

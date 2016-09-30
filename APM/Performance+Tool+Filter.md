@@ -1,5 +1,6 @@
 ---
 title: "Performance Tool Filter"
+space: "Application Performance Monitor"
 parent: "Performance+Tool"
 ---
 The following screenshot shows the filter options of the Performance Tool when the performance tool is not running:

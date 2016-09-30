@@ -1,5 +1,6 @@
 ---
 title: "Sending Email"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
 

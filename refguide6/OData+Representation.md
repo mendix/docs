@@ -1,5 +1,6 @@
 ---
 title: "OData Representation"
+space: "Reference Guide 6"
 parent: "Published+OData+Services"
 ---
 

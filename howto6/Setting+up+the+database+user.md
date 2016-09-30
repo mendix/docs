@@ -1,5 +1,6 @@
 ---
 title: "Setting up the database user"
+space: "Mendix 6 How-to's"
 parent: "Setting+up+a+SQL+Server+user"
 ---
 ## 1\. General

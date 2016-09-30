@@ -1,5 +1,6 @@
 ---
 title: "Projects (metamodel)"
+space: "Mendix Platform SDK"
 parent: "Understanding+the+metamodel"
 ---
 ## Overview

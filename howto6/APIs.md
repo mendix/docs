@@ -1,5 +1,6 @@
 ---
 title: "APIs"
+space: "Mendix 6 How-to's"
 parent: "Push+Notifications"
 ---
 This is a list of microflow actions that can be called by your application to send push notifications. They are located in the **Toolbox** under the **Push notifications** category.

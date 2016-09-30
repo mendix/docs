@@ -1,5 +1,6 @@
 ---
 title: "Mendix Support"
+space: "Mendix Support"
 redirect_from:
   - "/mxsupport/Mendix+Support+Home"
 ---

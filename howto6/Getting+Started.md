@@ -1,5 +1,6 @@
 ---
 title: "Getting Started"
+space: "Mendix 6 How-to's"
 ---
 Get off to a flying start with these introductory how-to's.
 

@@ -1,5 +1,6 @@
 ---
 title: "Integrating a Legacy System into a Mendix App"
+space: "Mendix 6 How-to's"
 category: "Integration"
 tags: []
 ---

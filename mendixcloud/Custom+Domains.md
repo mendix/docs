@@ -1,5 +1,6 @@
 ---
 title: "Custom Domains"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
 # How to configure Custom Domains

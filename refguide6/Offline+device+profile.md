@@ -1,5 +1,6 @@
 ---
 title: "Offline device profile"
+space: "Reference Guide 6"
 parent: "Navigation"
 ---
 <div class="alert alert-warning">{% markdown %}

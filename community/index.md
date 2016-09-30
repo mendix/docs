@@ -1,5 +1,6 @@
 ---
 title: "Community"
+space: "Community"
 redirect_from: "/community/Community"
 ---
 The Mendix Community team is responsible for the mendix [App Store](http://appstore.home.mendix.com), the [developers website](http://developers.mendix.com), the [documentation](/), [webinars](https://developers.mendix.com/training/webinars/), and [much,](https://world.mendix.com/www.meetup.com/Mendix-Netherlands) [much more](https://mxforum.mendix.com).

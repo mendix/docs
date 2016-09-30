@@ -1,5 +1,6 @@
 ---
 title: "XPath sum"
+space: "Reference Guide 6"
 parent: "XPath+Query+Functions"
 ---
 

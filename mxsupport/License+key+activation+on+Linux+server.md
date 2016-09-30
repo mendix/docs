@@ -1,5 +1,6 @@
 ---
 title: "License key activation on Linux server"
+space: "Mendix Support"
 category: "Mendix Support"
 ---
 **After completing this how-to you will know:**

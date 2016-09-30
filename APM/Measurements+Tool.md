@@ -1,5 +1,6 @@
 ---
 title: "Measurements Tool"
+space: "Application Performance Monitor"
 category: "User Manual"
 ---
 This chapter describes the measurements tool. Measurements are created via a [Collect] button in the JVM Browser or in the query tool. The collected measurements can be stored in the database and used for generating graphs or for triggering events.

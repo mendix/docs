@@ -1,5 +1,6 @@
 ---
 title: "Reference Documentation"
+space: "Mendix Platform SDK"
 ---
 On this page, you will find a collection of links to documentation about the Mendix Metamodel, as well as external resources you can use as a reference for programming with the Mendix SDK.
 

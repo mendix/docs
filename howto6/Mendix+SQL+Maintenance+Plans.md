@@ -1,5 +1,6 @@
 ---
 title: "Mendix SQL Maintenance Plans"
+space: "Mendix 6 How-to's"
 category: "Deployment"
 ---
 *   For the purpose of this document, the following Mendix SQL data structure will be used. Please adapt the folder tree according to your organization's data structure:

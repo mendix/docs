@@ -1,5 +1,6 @@
 ---
 title: "Object Types in the ATS"
+space: "ATS (Application Test Suite)"
 category: "Test Development"
 ---
 In ATS, a test can consist of test cases, test suites and actions. There are also folders in the _Repository_ to order objects.

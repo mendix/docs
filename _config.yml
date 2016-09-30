@@ -23,6 +23,7 @@ algolia:
     - index.html
     - howto6/index.html
     - refguide6/index.html
+    - search/index.html
 
 ####################################
 ######        SPACES         #######
@@ -158,6 +159,7 @@ exclude:
   - package.json
   - test.txt
   - run.bat
+  - manifest.yml
 
 markdown: kramdown
 kramdown:

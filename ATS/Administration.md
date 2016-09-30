@@ -1,7 +1,8 @@
 ---
 title: "Administration"
 ---
-As an administrator in the ATS you have access to additional functionality:
+
+As an administrator in the ATS, you have access to additional functionality:
 
 *   Manage Projects system wide
 *   Create new user/administrator accounts
@@ -29,24 +30,26 @@ If you create a new Project/Action Library or you want to edit an existing one, 
 ![New/Edit Project or Action Library](attachments/Administration/newEditProject.png)
 
 You can edit the name, the Mendix Project ID and the Mendix API key. Furthermore you can add users to the project by selecting the appropriate user roles.
+
 You can also add existing Action Libraries.
+
 ## Add Selenium Configurations
 
-As an admin user you can configure Selenium hubs as you normally would, see [SeleniumHub](Configuration.md#configure-test-applications-) for more information.
+As an admin user you can configure Selenium hubs as you normally would. For more information, see [SeleniumHub](Configuration.md#configure-test-applications-).
 
 ![Selenium Overview](attachments/Administration/selenium.png)
 
-Additionally as an administrator you can assign a Selenium hub to a specific project or make the hub available for all projects on the ATS instance. You can do this by creating a new or editing an existing Selenium hub.
+Additionally, as an administrator, you can assign a Selenium hub to a specific project, or you can make the hub available for all projects on the ATS instance. You can do this by creating a new Selenium hub or editing an existing one.
 
 ![Edit Selenium hub dialog as admin](attachments/20644068/21168202.png)
 
 ## Add Applications
 
-As an admin user you can add and configure applications to test.
+As an admin user, you can add and configure applications to test.
 
 ![Add Test Applications](attachments/Administration/applications.png)
 
-For more informations read the [Configure Test Applications](Configuration.md#Applications) section.
+For more information, see [Configure Test Applications](Configuration.md#Applications).
 
 ## Create Accounts
 
@@ -58,46 +61,19 @@ When editing accounts you can set accounts to inactive or block them, which will
 
 ![Create new account dialog](attachments/Administration/newUser.png)
 
-It doesn't matter if you create an administrator or a normal user the options for both are the same:
+It doesn't matter if you create an administrator or a normal user, as the options described below are the same for both:
 
-**Full Name**
-
-The full name of the user
-
-**Name**
-
-The name the user logs in with
-
-**Email**
-
-Email adress of the user
-
-**Blocked**
-
-Mark the account as un-/blocked
-
-**Active**
-
-Set the account to active/inactive
-
-**Time Zone**
-
-Set the timezone the user works in
-
-**Tester**
-
-Adds the tester user role
-
-**Tenant Administrator**
-
-Adds the tenant administrator role
-
-**Password**
-
-The initial password of the user
-
-The initial password of the user should be changed by the user when logging in.
-
+Field | Description
+--- | ---
+Full Name | The full name of the user.
+Name | The name the user logs in with.
+Email | The e-mail address of the user.
+Blocked | Mark the account as unblocked/blocked.
+Active | Set the account to active/inactive.
+Time Zone | Set the timezone the user works in.
+Tester | Adds the tester user role.
+Tenant Administrator | Adds the tenant administrator role.
+Password | The initial password of the user (which should be changed by the user when logging in).
 
 ## Recorder Config
 

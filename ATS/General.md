@@ -10,7 +10,7 @@ ATS version: 1.5
 | 3.x | - | - |
 | 4.x | - | - |
 | >5.14.1 | Yes | 5.17.0, 5.21.1 |
-| 6.0 - 6.7.1 | Yes | 6.4.1, 6.7.1 |
+| 6.0 - 6.9.0 | Yes | 6.4.1, 6.7.1, 6.9.0 |
 
 ## Browser support
 
@@ -28,15 +28,13 @@ ATS version: 1.5
 
 ### Chrome
 
-| Version |   |   |
+| Version | Supported | Notes |
 | --- | --- | --- |
-| Chrome <= 45 | - |   |
-| Chrome 46 | Yes |   |
-| Chrome 47 | Yes |   |
-| Chrome 48 | Yes |   |
-| Chrome 49 | Yes |   |
-| Chrome 50 | Yes |   |
-| Chrome >= 51 | - | recent versions of Chrome usually work (unsupported) |
+| Chrome <= 50 | - |   |
+| Chrome 51 | Yes |   |
+| Chrome 52 | Yes |   |
+| Chrome 53 | Yes |   |
+| Chrome >= 54 | - | recent versions of Chrome usually work (unsupported) |
 
 ### Internet Explorer & Edge
 

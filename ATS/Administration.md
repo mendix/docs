@@ -32,7 +32,7 @@ You can edit the name, the Mendix Project ID and the Mendix API key. Furthermore
 You can also add existing Action Libraries.
 ## Add Selenium Configurations
 
-As an admin user you can configure Selenium hubs as you normally would, see [SeleniumHub](Configuration.md#configure-selenium-hubs-) for more information.
+As an admin user you can configure Selenium hubs as you normally would, see [SeleniumHub](Configuration.md#configure-test-applications-) for more information.
 
 ![Selenium Overview](attachments/Administration/selenium.png)
 

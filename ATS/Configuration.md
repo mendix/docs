@@ -1,10 +1,9 @@
 ---
 title: "Configuration"
 ---
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 Only a user with the _Project Administrator_ role in the current project can access the configuration page.
-
-{% endmarkdown %}</div>
+</div>
 
 On the configuration page under the _Project_ tab you can see the current project settings. You can change the settings and add users or libraries to your project by clicking the _Edit Project Settings_ button.
 

@@ -104,10 +104,10 @@ Set if parameter is required to be set
 
 After an output parameter has been set, this parameter needs to be returned manually by using the _Set Return Value_ action.
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
 To return a value from an action you need use the _Set Return Value in a test step._
 
-{% endmarkdown %}</div>
+</div>
 
 ![Set return Value action to return output parameter](attachments/20644057/21168189.png)

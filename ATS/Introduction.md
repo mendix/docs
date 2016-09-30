@@ -58,45 +58,18 @@ You can navigate your project using the navigation sidebar to the left of the sc
 
 Over the sidebar you can navigate to different pages of the ATS:
 
-**Change current Project**
-
-At the top of the sidebar you can switch between projects which are available on your account
-
-**My Projects**
-
-This button will bring you back to the startpage.
-
-**Dashboard**
-
-Gives an overview over the selected project
-
-**User Stories**
-
-Shows the user stories of the Mendix sprintr project connected to your ATS project
-
-**Monitoring / Results**
-
-Gives an overview over recent test runs and shows results
-
-**Repository**
-
-In the _Repository_ you can create new test cases, test suites and organize your objects in folders
-
-**Scheduler**
-
-On the _Scheduler_ page you can schedule test cases to run in regular intervals
-
-**Configuration**
-
-Change project settings, add Selenium hubs and add applications to test
-
-**Import**
-
-Import new/updated actions, test cases or test suites into your project
-
-**My Account**
-
-Change your username, email and password
+| Navigation Item             | Explanation                                                                                          |
+| :-------------------------- | :----------------------------------------------------------------------------------------------------|
+| **Change current Project**  | At the top of the sidebar you can switch between projects which are available on your account        |
+| **My Projects**             | This button will bring you back to the startpage.                                                    |
+| **Dashboard**               | Gives an overview over the selected project                                                          |
+| **User Stories**            | Shows the user stories of the Mendix sprintr project connected to your ATS project                   |
+| **Monitoring / Results**    | Gives an overview over recent test runs and shows results                                            |
+| **Repository**              | In the _Repository_ you can create new test cases, test suites and organize your objects in folders  |
+| **Scheduler**               | On the _Scheduler_ page you can schedule test cases to run in regular intervals                      |
+| **Configuration**           | Change project settings, add Selenium hubs and add applications to test                              |
+| **Import**                  | Import new/updated actions, test cases or test suites into your project                              |
+| **My Account**              | Change your username, email and password                                                             | 
 
 ## Different User Roles
 

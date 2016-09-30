@@ -1,5 +1,6 @@
 ---
 title: "Different user logins when integrated with Mendix SSO"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Installation"
+space: "Application Performance Monitor"
 category: "APM"
 ---
 This document describes the installation and uninstallation of the APM tool. The intended audience are Mendix advanced application developers who work with the Mendix Modeler and develop, install and support Mendix applications.

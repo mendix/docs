@@ -1,5 +1,6 @@
 ---
 title: "Generating code from the model"
+space: "Mendix Platform SDK"
 category: "Your learning path for the Mendix SDK"
 ---
 ## Introduction

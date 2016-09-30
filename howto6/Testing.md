@@ -1,5 +1,6 @@
 ---
 title: "Testing"
+space: "Mendix 6 How-to's"
 ---
 Testing is a vital component when creating a Mendix application. On this page you can find all the test-related how-to's and blogs written by experienced Mendix professionals.
 

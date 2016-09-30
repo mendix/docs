@@ -1,5 +1,6 @@
 ---
 title: "Project Settings"
+space: "Reference Guide 6"
 parent: "Project"
 ---
 

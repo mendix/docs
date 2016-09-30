@@ -1,5 +1,6 @@
 ---
 title: "Scaffold a widget with the Yeoman Widget generator"
+space: "Mendix 6 How-to's"
 category: "Custom Widget Development"
 tags: []
 ---

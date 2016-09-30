@@ -1,5 +1,6 @@
 ---
 title: "Security constraints in the Mendix Cloud"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
 

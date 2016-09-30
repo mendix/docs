@@ -1,5 +1,6 @@
 ---
 title: "Content Writing and Formatting Guidelines"
+space: "Community"
 category: "Community"
 ---
 

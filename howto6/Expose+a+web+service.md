@@ -1,5 +1,6 @@
 ---
 title: "Expose a Web Service"
+space: "Mendix 6 How-to's"
 category: "Integration"
 redirect_from:
 - "howto6/Exposing+a+web+service"

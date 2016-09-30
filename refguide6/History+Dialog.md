@@ -1,5 +1,6 @@
 ---
 title: "History Dialog"
+space: "Reference Guide 6"
 parent: "Dialogs"
 ---
 Use this dialog to look at all the changes that have been committed to a development line of a project. The form is also used when selecting a revision: to merge from, to create a branch line of or to create a deployment archive of.

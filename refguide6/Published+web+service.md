@@ -1,5 +1,6 @@
 ---
 title: "Published web service"
+space: "Reference Guide 6"
 parent: "Published+Web+Services"
 ---
 

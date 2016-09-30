@@ -1,5 +1,6 @@
 ---
 title: "Customizing PhoneGap Build packages"
+space: "Reference Guide 6"
 category: "Mobile"
 ---
 

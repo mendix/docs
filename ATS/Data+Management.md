@@ -1,5 +1,6 @@
 ---
 title: "Data Management"
+space: "ATS (Application Test Suite)"
 ---
 ## Repository
 
@@ -74,22 +75,22 @@ Line in the data table containing an integer or string value of the data
 
 When creating/editing a data set you can choose to _Create/Update fields from file_ option to provide a template Excel file to create or update fields and records of your data set. The first row of your sheet will be considered the header and will be used to determine the field names. All additional rows will be considered records and will be used to determine the fields data type.
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
 When updating an existing data set all existing fields and data records will be removed
 
-{% endmarkdown %}</div>
+</div>
 
 You can also only import data records into you data set by clicking the 'Import from Excel' button. The first row of your Excel sheet must contain the the field names of the data set into which you want to import the records.
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
 When importing data records all existing records in the data set will be removed
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+</div><div class="alert alert-info">
 
 When importing data from from Excel, ATS will try to convert data that doesn't match the expected data type. In case a conversion is not possible (e.g. from a string to an integer) the resulting value will be empty. Always check your data after import to be sure all data was completely imported.
 
-{% endmarkdown %}</div>
+</div>
 
 You can simply export a data set by clicking the _Export to Excel_ button.

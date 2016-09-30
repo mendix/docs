@@ -1,5 +1,6 @@
 ---
 title: "App Store"
+space: "App Store"
 redirect_from:
   - "/appstore/App+Store"
   - "/appstore/App+Store+Home"

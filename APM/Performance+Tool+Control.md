@@ -1,5 +1,6 @@
 ---
 title: "Performance Tool Control"
+space: "Application Performance Monitor"
 parent: "Performance+Tool"
 ---
 The Performance Tool can be enabled/disabled by using the Start/Stop buttons.

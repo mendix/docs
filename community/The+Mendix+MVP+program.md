@@ -1,5 +1,6 @@
 ---
 title: "The Mendix MVP program"
+space: "Community"
 category: "Community"
 ---
 At Mendix we know that the impact of our community is huge. It is a vibrant and crucial part of the success of Mendix. With the Most Valuable Professional (MVP) program we want to recognize the loyal group of developers in the Mendix developer community for the ongoing contributions they deliver on the forum, to the App Store, the blog sites, etc.

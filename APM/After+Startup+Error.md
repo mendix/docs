@@ -1,5 +1,6 @@
 ---
 title: "After startup error?"
+space: "Application Performance Monitor"
 parent: "Installation+steps"
 ---
 Sometimes after startup an error in java occurs when Mendix generates a different parameter name in a different Mendix version. If this happens, let me know via apmtool@mansystems.nl, so Mansystems can rename the java action parameter that causes this.

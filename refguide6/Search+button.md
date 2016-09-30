@@ -1,5 +1,6 @@
 ---
 title: "Search button"
+space: "Reference Guide 6"
 parent: "Control+Bar"
 ---
 

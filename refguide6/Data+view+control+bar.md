@@ -1,5 +1,6 @@
 ---
 title: "Data view control bar"
+space: "Reference Guide 6"
 parent: "Data+view"
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Console"
+space: "Application Performance Monitor"
 category: "User Manual"
 ---
 This chapter describes the APM Tool console. This is the home screen of the APM tool. The following screenshot shows the APM Tool Console.

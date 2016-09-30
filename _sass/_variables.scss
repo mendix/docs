@@ -7,15 +7,16 @@ $color-lightgrey: #f9f9fa;
 $color-blue: #0195db;
 
 $link-color: #0496da;
+$white: #FFF;
 
 $padding-search: 6px;
 
 $border-color: #d7d7d7;
 
 @mixin border-radius($radius) {
-  border-radius: $radius;
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   -ms-border-radius: $radius;
   -o-border-radius: $radius;
+  border-radius: $radius;
 }

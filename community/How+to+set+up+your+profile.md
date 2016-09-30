@@ -1,5 +1,6 @@
 ---
 title: "How to set up your profile"
+space: "Community"
 category: "Community"
 ---
 How to set up your profile

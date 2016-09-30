@@ -1,5 +1,6 @@
 ---
 title: "Managing your Application Requirements with Mendix"
+space: "Mendix 6 How-to's"
 category: "Collaboration & Project Management"
 tags: []
 ---

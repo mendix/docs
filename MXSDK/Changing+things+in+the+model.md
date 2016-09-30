@@ -1,5 +1,6 @@
 ---
 title: "Changing things in the model"
+space: "Mendix Platform SDK"
 parent: "Manipulating+existing+models"
 ---
 All units and elements can be freely altered after loading as long as you adhere to the type system. The properties `id`, `container`, `typeName`, `isLoaded` and `unit`, as defined on the [IStructure](https://apidocs.mendix.com/modelsdk/latest/interfaces/istructure.html) object, should not be used: these are (mostly) for internal purposes.

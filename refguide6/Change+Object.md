@@ -1,5 +1,6 @@
 ---
 title: "Change Object"
+space: "Reference Guide 6"
 parent: "Object+Activities"
 ---
 

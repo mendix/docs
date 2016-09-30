@@ -1,5 +1,6 @@
 ---
 title: "Deploying to the cloud"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
 

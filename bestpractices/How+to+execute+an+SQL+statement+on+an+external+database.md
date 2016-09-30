@@ -1,5 +1,6 @@
 ---
 title: "How to execute an SQL statement on an external database"
+space: "Best Practices"
 category: "Best Practices"
 ---
 # How to execute an SQL statement on an external database

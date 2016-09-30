@@ -1,5 +1,6 @@
 ---
 title: "Development Workflow"
+space: "Mendix Platform SDK"
 category: "Your learning path for the Mendix SDK"
 ---
 A script that makes use of the Mendix Model SDK may contain one or more of the following activities:

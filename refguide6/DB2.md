@@ -1,5 +1,6 @@
 ---
 title: "DB2"
+space: "Reference Guide 6"
 parent: "Data+Storage"
 ---
 Mendix supports running on IBM DB2 databases since Mendix 6.8.

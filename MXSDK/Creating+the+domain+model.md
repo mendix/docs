@@ -1,5 +1,6 @@
 ---
 title: "Creating the domain model"
+space: "Mendix Platform SDK"
 category: "Your learning path for the Mendix SDK"
 ---
 In this tutorial you will learn:

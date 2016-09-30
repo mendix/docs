@@ -1,5 +1,6 @@
 ---
 title: "Testing Mendix applications using Selenium IDE"
+space: "Mendix 6 How-to's"
 category: "Testing"
 tags: []
 ---

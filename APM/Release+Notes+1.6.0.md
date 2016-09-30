@@ -1,5 +1,6 @@
 ---
 title: "Release Notes 1.6.0"
+space: "Application Performance Monitor"
 category: "Release Notes"
 ---
 The theme for this version is Mendix 6 and a visual trend on microflow statistics to show at Mendix World.

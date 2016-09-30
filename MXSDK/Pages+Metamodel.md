@@ -1,5 +1,6 @@
 ---
 title: "Pages (metamodel)"
+space: "Mendix Platform SDK"
 parent: "Understanding+the+metamodel"
 ---
 This page contains detailed explanations on how pages, layouts, and page content is structured. You can use this as reference when you are creating scripts for the SDK, for creating or analyzing models.

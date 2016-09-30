@@ -1,5 +1,6 @@
 ---
 title: "Importing XML documents"
+space: "Mendix 6 How-to's"
 category: "Integration"
 tags: []
 ---

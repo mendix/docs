@@ -1,5 +1,6 @@
 ---
 title: "Required Network Access for connecting to the Mendix Platform"
+space: "Mendix Support"
 category: "Mendix Support"
 ---
 # Required Network Access for connecting to the Mendix Platform

@@ -1,5 +1,6 @@
 ---
 title: "Pre-requisites"
+space: "Application Performance Monitor"
 category: "Installation"
 ---
 The APM Tool (version 1.6.0 and 1.7.0) is available for Mendix 6.2 and above and in java 8.

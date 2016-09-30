@@ -1,5 +1,6 @@
 ---
 title: "Setting up Google Cloud Messaging Server"
+space: "Mendix 6 How-to's"
 parent: "Push+Notifications"
 ---
 In order to send Google push notifications from this module you need to have set up a Google account with Google Cloud Messaging enabled. To register for Google Cloud Messaging and configure the service in the app, you will need to perform the following steps.

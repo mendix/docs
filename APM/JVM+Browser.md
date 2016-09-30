@@ -1,5 +1,6 @@
 ---
 title: "JVM Browser"
+space: "Application Performance Monitor"
 category: "User Manual"
 ---
 A JVM Browser shows information similar to JConsole or JVisualVM tools provided with the Java JDK. Using the [Refresh] button refreshes an individual item.

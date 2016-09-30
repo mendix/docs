@@ -1,5 +1,6 @@
 ---
 title: "Manipulating existing models"
+space: "Mendix Platform SDK"
 category: "Your learning path for the Mendix SDK"
 ---
 Please choose one of the following subjects:

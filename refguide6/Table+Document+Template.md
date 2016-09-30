@@ -1,5 +1,6 @@
 ---
 title: "Table (document template)"
+space: "Reference Guide 6"
 category: "refguide6"
 ---
 

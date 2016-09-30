@@ -1,5 +1,6 @@
 ---
 title: "Data Driven Tests"
+space: "ATS (Application Test Suite)"
 category: "Test Development"
 ---
 Data Driven Testing in ATS allows you to run tests using tables of data directly as test inputs. This way you can test an array of different input values without having to write additional tests. Data sets are easy to create and maintain, so you can add additional data records later on without changing your test cases.
@@ -36,11 +37,11 @@ Shows parameters that require a different data type than the datatype of the fie
 
 For each error the test step and parameter are listed so they can be easily identified.
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
 If you change the selected data set the system will remember your set parameters and will match them again if you select a data set containing the same field names.
 
-{% endmarkdown %}</div>
+</div>
 
 When you have selected a master data set you can use the the contained field as input values for your test steps.
 

@@ -1,5 +1,6 @@
 ---
 title: "Basic Reports"
+space: "Reference Guide 6"
 parent: "Report+Widgets"
 ---
 

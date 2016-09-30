@@ -1,5 +1,6 @@
 ---
 title: "Creating your first script"
+space: "Mendix Platform SDK"
 category: "Your learning path for the Mendix SDK"
 ---
 This tutorial will guide you through the process of setting up everything you need to start working with the Mendix Platform SDK. In [the previous part](Setting+up+your+development+environment) you set up all the development tools. Let's create an SDK script that automatically bootstraps a new Mendix app.

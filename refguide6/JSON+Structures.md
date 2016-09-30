@@ -1,5 +1,6 @@
 ---
 title: "JSON Structures"
+space: "Reference Guide 6"
 parent: "Integration"
 ---
 

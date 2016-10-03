@@ -16,22 +16,18 @@ If you don't have installed an SVN client like Tortoise SVN make a copy of the w
 Import the module APMAgent in the modeler.
 ![](attachments/Uninstall_steps/Commit.png)
 
-# Optional: revert overwritten widgets
-
-If you want your original widgets back either take them from a backup.
-AppStore widgets used by APM Tool:
-\widgets\CustomString.mpk
-\widgets\ChartJS.mpk
-\widgets\BootstrapTreeViewWidget.mpk
-\widgets\BooleanSlider.mpk
-
 # Delete Mansystems customized widgets
 
 Mansystems customized versions of AppStore widgets
-\widgets\ManTooltip.mpk
-\widgets\StringFormatter.mpk
-\widgets\ CssSelectorHelperBoolean.mpk
-\widgets\StyleSheetSwap
+* ManTooltip.mpk
+* StringFormatter.mpk
+* CssSelectorHelperBoolean.mpk
+* StyleSheetSwap.mpk
+* MicroflowTimer_APM.mpk
+* FormatString_APM.mpk 
+* ChartJS_APM.mpk 
+* BootstrapTreeViewWidget_APM.mpk
+* BooleanSlider_APM.mpk  
 
 # Delete permissions
 
@@ -58,15 +54,17 @@ You can find the AfterStartup and BeforeShutdown microflows in the project setti
 
 For a Mendix Cloud slot you send an email to Mendix support requesting to undo the added permissions
 
-# Remove JDBC user libraries
+# Remove user libraries
 
-Remove the library in the project folder 'userlib':
+Remove the APMAgent libraries in the project folder 'userlib':
 
+*   apm
 *   com.mendix.ojdbc6.jar
 *   com.mendix.postgresql.jdbc4.jar
 *   com.mendix.sqljdbc4.jar
 *   org.hsqldb.hsqldb.jar
 *   org.mariadb.jdbc.jar
+*   log4j
 
 # Start the Modeler or the Runtime
 

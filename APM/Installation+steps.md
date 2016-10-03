@@ -18,20 +18,11 @@ Import the module APMAgent in the modeler.
 
 Write down the widgets in the warning dialog that are overwritten to be able to revert these changes.
 
-# Optional: revert overwritten widgets
-
-If you don't want your widgets replaced with the widgets in the APM Tool module use the Tortoise SVN revert function on the widgets folder. Or copy the backup widgets from the first step back to the widgets folder.
-Unmodified AppStore widgets:
-\widgets\CustomString.mpk
-\widgets\ChartJS.mpk
-\widgets\BootstrapTreeViewWidget.mpk
-Mansystems also added some widgets that are not in the AppStore.
-
 # Copy Language if other than English US is used
 
 If you are not using only English, United States copy the English, United States language for the APMAgent module to all the languages using Tools\Language Operations in the modeller:
-![](attachments/Installation_steps/Language_Operations_Header.png)
 
+![](attachments/Installation_steps/Language_Operations_Header.png)
 ![](attachments/Installation_steps/Language_Operations_APM.png)
 ![](attachments/Installation_steps/Language_Operations_Footer.png)
 
@@ -61,12 +52,6 @@ Call APMAgent\USE_ME\BeforeShutdown from a before shutdown microflow.
 
 You can find the AfterStartup and BeforeShutdown microflows in the project settings.
 ![](attachments/Installation_steps/Project_Settings_After_Startup.png)
-
-# Fix error(s)
-
-The following error is known to appear:
-
-1.  An error that you have to update widgets because a different version is used in the project
 
 # Start the Modeler or the Runtime
 

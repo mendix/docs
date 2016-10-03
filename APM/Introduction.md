@@ -20,7 +20,7 @@ The APMx Statistics tool collects statistical data on microflows and client API 
 
 _Screenshot of the statistics tool. For load balanced environments you see the server where the microflow runs. _
 
-_![](attachments/Introduction/Measurements_Tool.png)_
+_![](attachments/Introduction/Statistics_Tool.png)_
 
 # The Performance Tool to record microflows
 

@@ -21,7 +21,7 @@ The APMx Statistics tool collects statistical data on microflows and client API 
 
 _Screenshot of the statistics tool. For load balanced environments you see the server where the microflow runs. _
 
-_![](attachments/19956139/21725185.png)_
+_![](attachments/Introduction/Statistics_Tool.png)_
 
 # The Performance Tool to record microflows
 
@@ -29,14 +29,14 @@ When our support wants to investigate a performance issue, either pro-actively c
 
 _Screenshot of call tree. Gives you an overview of what happens, showing called microflows and 1 iteration of a loop, filtering by duration._
 
-![](attachments/19956139/21725186.png)
+![](attachments/Introduction/Performance_Tool_Tree.png)
 _Screenshot of the performance tool output. You can double click on all actions and in the case of microflow call, you browse to the next microflow and in the case of loops you will see the individual iterations._
 
- ![](attachments/19956139/21725187.png)
+ ![](attachments/Introduction/Performance_Tool_Browse.png)
 
 _Screenshot of SQL statements during an action._
 
-![](attachments/19956139/21725188.png)
+![](attachments/Introduction/Performance_Tool_Action_SQL.png)
 
 # The Measurements Tool to collect even more information and trigger an alarm when needed
 
@@ -46,7 +46,7 @@ The measurements can be used to trigger events on thresholds. For example if mor
 
 The trigger can be to trap logging, to execute a microflow, for example to send an email or to make a heap dump.
 
-![](attachments/19956139/21725189.png)
+![](attachments/Introduction/Measurements_Tool.png)
 
 # The Trap Tool is your flight data recorder
 

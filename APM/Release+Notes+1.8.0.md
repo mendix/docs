@@ -42,7 +42,7 @@ The statistics tool now gathers statistics over different time periods:
 
 * We replaced the Mansystems customized String Formatter widget with the AppStore FormatString widget in order to reduce the number of custom widget and keep the APM tool maintainable.
 * We made custom APM versions of the standard AppStore widgets in order to prevent conflicts with other versions of the widget for customers.
-* WE moved the JDBC settings from the query tool to the global settings in order to simplify and separate the configuration from usage.
+* We moved the JDBC settings from the query tool to the global settings in order to simplify and separate the configuration from usage.
 * The ChartJS has been customized to show the horizontal scale of the type time and to auto-refresh so that it looks better and automatically updates the screen.
 * The expiry date is now automatically populated so that the user can see the duration of the license and does not have to manually enter it.
 * The trap tool exclusions are now also tested against log messages. This to verify existing exclusions. In addition, when configuring the trap tool, it can help to run the log tool for a day and exclude any know error before starting the trap tool.

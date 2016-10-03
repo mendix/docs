@@ -8,7 +8,7 @@ The theme for this version is a tool summary on a dashboard and improved styling
 
 The new console is more about presenting information instead of more stop/start buttons and navigation.
 
-## ![](attachments/Release_Notes/Release_Notes_1.8.0/Console.png)
+## ![](attachments/Release_Notes_1.8.0/Console.png)
 
 The new console has four parts:
 
@@ -21,9 +21,9 @@ The new console has four parts:
 
 The trap tool separartes the trap and the messages so that it is clearer which messages belong to which trap and in order to show a list of traps without messages in the GUI.
 
-## ![](attachments/Release_Notes/Release_Notes_1.8.0/Traps.png)
+## ![](attachments/Release_Notes_1.8.0/Trap_View.png)
 
-## ![](attachments/Release_Notes/Release_Notes_1.8.0/View+Trap.png)
+## ![](attachments/Release_Notes_1.8.0/Statistics_Tool.png)
 
 ## 3 Gathering Statistics Over More Periods
 
@@ -36,7 +36,7 @@ The statistics tool now gathers statistics over different time periods:
 * For measurement triggers (between once and twice according to the console frequency in order to prevent the statistics from just being reset when a trigger fires)
   * These statistics are saved in the stored statistics when a trigger fires and is configured to store statistics
 
-## ![](attachments/Release_Notes/Release_Notes_1.8.0/Statistics.png)
+## ![](attachments/Release_Notes_1.8.0/Traps.png)
 
 ## 4 Bug Fixes and Minor Changes
 

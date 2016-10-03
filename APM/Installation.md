@@ -18,7 +18,6 @@ For the experienced user quick outline of the installation:
 
 *   Backup (commit in Modeler, backup database, copy project folder?)
 *   Import APM Agent module
-*   Optionally revert widgets
 *   Copy language if other than English US is used
 *   Configure to use USE_ME/AfterStartup and USE_ME/BeforeShutdown
 *   Add permission(s) to your Administrator role

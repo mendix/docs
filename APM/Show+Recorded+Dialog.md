@@ -5,7 +5,7 @@ parent: "Performance+Tool+Filter"
 ---
 You can look at what is being recorded in the [Recorded] dialog:
 
- ![](attachments/19956261/20218000.png)
+ ![](attachments/Show_Recorded_Dialog/Recorded_Microflows.png)
 
 Here the running and finished microflow grids are loaded per 10 records. Using the [Refresh & Next Chunk] button refreshes existing records that are not finished. An additional 10 records are loaded. If microflows have finished in the meantime those records move from running to finished. If filtering is applied finished running microflows can disappear. Running microflows are sorted by start date, oldest first. Finished microflows are sorted by duration, longest first.
 

@@ -7,13 +7,13 @@ This chapter gives an overview of the load test recorder. Mansystems has a load 
 
 The APM Tool includes the load test recorder, so APM Tool users are immediately ready for a load test and need not again add a module to their App. Load test customers will need the APM Tool for measurements and hence also benefit from the addition. 
 
-![](attachments/20644530/21168288.png)
+![](attachments/Load_Test_Recorder/Overview.png)
 
 ## Load Test Recorder Control
 
 You can start and stop the Load Test Recorder. The followingscreenshot below shows the Log Tool when started:
 
-![](attachments/20644530/21168289.png)
+![](attachments/Load_Test_Recorder/Control.png)
 
 You can Start and stop timers to mark individual functionality in the session. This helps the load tool to measure those functions.
 
@@ -21,7 +21,7 @@ You can Start and stop timers to mark individual functionality in the session. T
 
 The following screenshot shows the Load Test Recorder Options:
 
-![](attachments/20644530/21168291.png)
+![](attachments/Load_Test_Recorder/Options.png)
 
 The [Max messages to record] can limit the amount of records in memory. The recording stops when the maximum is reached.
 

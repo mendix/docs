@@ -1,6 +1,5 @@
 ---
 title: "Introduction"
-space: "Application Performance Monitor"
 category: "APM"
 ---
 This introduction gives an explanation in short what APM is, which tools are in the APM suite and what they are used for. After that some use cases are presented.
@@ -29,14 +28,14 @@ When our support wants to investigate a performance issue, either pro-actively c
 
 _Screenshot of call tree. Gives you an overview of what happens, showing called microflows and 1 iteration of a loop, filtering by duration._
 
-![](attachments/Introduction/Performance_Tool_Tree.png)
+![](attachments/Introduction/Performance_Tool_Browse_Actions.png)
 _Screenshot of the performance tool output. You can double click on all actions and in the case of microflow call, you browse to the next microflow and in the case of loops you will see the individual iterations._
 
- ![](attachments/Introduction/Performance_Tool_Browse.png)
+ ![](attachments/Introduction/Performance_Tool_Browse_Microflow.png)
 
 _Screenshot of SQL statements during an action._
 
-![](attachments/Introduction/Performance_Tool_Action_SQL.png)
+![](attachments/Introduction/Performance_Tool_Tree_View.png)
 
 # The Measurements Tool to collect even more information and trigger an alarm when needed
 

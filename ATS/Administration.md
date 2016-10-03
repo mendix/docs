@@ -36,7 +36,7 @@ You can also add existing Action Libraries.
 
 ## Add Selenium Configurations
 
-As an admin user you can configure Selenium hubs as you normally would. For more information, see [SeleniumHub](Configuration.md#configure-test-applications-).
+As an admin user you can configure Selenium hubs as you normally would. For more information, see [SeleniumHub](Configuration#configure-test-applications-).
 
 ![Selenium Overview](attachments/Administration/selenium.png)
 
@@ -50,7 +50,7 @@ As an admin user, you can add and configure applications to test.
 
 ![Add Test Applications](attachments/Administration/applications.png)
 
-For more information, see [Configure Test Applications](Configuration.md#Applications).
+For more information, see [Configure Test Applications](Configuration#Applications).
 
 ## Create Accounts
 

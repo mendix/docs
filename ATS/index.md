@@ -10,7 +10,7 @@ The Reference Guide is divided in different sections, each describing a certain 
 
 ## [General](General)
 
-*   [Mendix Compatibility](General#mendix)
+*   [Mendix Compatibility](General)
 *   [Browser Support](General#browser-support)
 
 ## [Introduction](Introduction)
@@ -50,12 +50,12 @@ The Reference Guide is divided in different sections, each describing a certain 
 
 ## [Configuration](Configuration)
 
-*   [Configure Selenium hubs](Configuration#configure-selenium-hubs)
-*   [Configure Test Applications](Configuration#configure-test-applications-)
+*   [Configure Selenium hubs](Configuration)
+*   [Configure Test Applications](Configuration)
 
 ## [Administration](Administration)
 
-*   [Manage Projects](Administration#manage-projects)
-*   [Add Selenium Configurations](Administration#add-selenium-hubs)
-*   [Add Applications](Administration#add-addplications)
-*   [Create Accounts](Administration#create-accounts)
+*   [Manage Projects](Administration)
+*   [Add Selenium Configurations](Administration)
+*   [Add Applications](Administration)
+*   [Create Accounts](Administration)

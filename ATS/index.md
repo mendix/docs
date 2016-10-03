@@ -46,7 +46,7 @@ The Reference Guide is divided in different sections, each describing a certain 
 *   [Standard Action Overview](Standard+Action+Overview)
 *   [Custom Actions](Custom+Actions)
 *   [Data Driven Tests](Data+Driven+Tests)
-*   [Test Case Documentation](Test+Case+documentation)
+*   [Test Case Documentation](Test+Case+Documentation)
 
 ## [Configuration](Configuration)
 

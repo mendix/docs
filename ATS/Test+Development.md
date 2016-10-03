@@ -8,4 +8,4 @@ space: "ATS (Application Test Suite)"
 *   [Standard Action Overview](Standard+Action+Overview)
 *   [Custom Actions](Custom+Actions)
 *   [Data Driven Tests](Data+Driven+Tests)
-*   [Test Case Documentation](Test+Case+documentation)
+*   [Test Case Documentation](Test+Case+Documentation)

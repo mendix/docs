@@ -4,11 +4,11 @@ category: "User Manual"
 ---
 A JVM Browser shows information similar to JConsole or JVisualVM tools provided with the Java JDK. Using the [Refresh] button refreshes an individual item.
 
- ![](attachments/19956346/20218035.png)                
+ ![](attachments/JVM_Browser/Overview.png)                
 
 Double clicking an items drills down shows its details.
 
- ![](attachments/19956346/20218036.png)
+ ![](attachments/JVM_Browser/Details.png)
 
 You can start collecting statistics on individual items using the [Collect] button. These statistics can be viewed in the Measurements Tool.
 
@@ -18,4 +18,4 @@ The statistics of the tools, measurements as well as Mendix statistics are made 
 
 An example of Mendix runtime statistics is show in the image below
 
- ![](attachments/19956346/21725216.png)
+ ![](attachments/JVM_Browser/Additional_JMX.png)

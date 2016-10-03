@@ -4,7 +4,7 @@ parent: "Performance+Tool"
 ---
 The following screenshot shows the options of the Performance Tool:
 
- ![](attachments/19956265/21168249.png)
+ ![](attachments/Performance_Tool_Options/Options.png)
 
  The Marker is used to mark microflows with a certain label. This is useful for example when analysing a specific functionality before and after making changes. This way its possible to quickly see to which recording a microflow belongs.
 

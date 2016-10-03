@@ -18,7 +18,7 @@ The installation has been simplified by removing the layout linking step and by 
 *   Use button to send mail with license request
 *   Upon receiving the license, copy-paste and save
 
-## ![](attachments/20644387/21168252.png)
+## ![](attachments/Release_Notes_1.7.0/Welcome.png)
 
 ## Upgrades
 
@@ -32,12 +32,12 @@ Upgrades have been simplified to:
 ## GUI
 
 The GUI is simplified by removing the configuration menu items and reducing this to 1 settings item. By removing the dependency of the enclosing App style, by removing counters, by adding tool info buttons.
-![](attachments/20644387/21168253.png)
+![](attachments/Release_Notes_1.7.0/Console.png)
 
 The GUI now uses it's own style and is no longer dependent on the style of the App/Project where it is placed in.
 
 All options dialogs are redesigned to show advised production/non-production settings besides the custom settings.
-![](attachments/20644387/21168254.png)
+![](attachments/Release_Notes_1.7.0/Settings.png)
 
 ## Simplified licensing
 

@@ -8,7 +8,7 @@ The theme for this version is a tool summary on dashboard and improved styling.
 ## GUI Makeover to match style with Mansystems ATS
 The new console is more about presenting information and no more stop/start buttons or navigation.
 
-## ![](attachments/Release_Notes/Release_Notes_1.8.0/Console.png)
+## ![](attachments/Release_Notes_1.8.0/Console.png)
 
 The new console has 4 parts:
 * For the console the statistics of the last 10 minutes are taken. Off course this is configurable.
@@ -19,9 +19,9 @@ The new console has 4 parts:
 ## Traptool separation of trap and messages
 So it is more clear which messages belong the which trap and to show a list of traps without messages in the GUI.
 
-## ![](attachments/Release_Notes/Release_Notes_1.8.0/Traps.png)
+## ![](attachments/Release_Notes_1.8.0/Trap_View.png)
 
-## ![](attachments/Release_Notes/Release_Notes_1.8.0/View+Trap.png)
+## ![](attachments/Release_Notes_1.8.0/Statistics_Tool.png)
 
 ## Gathering statistics over more periods
 The statistics tool now gathers statistics over different time periods:
@@ -31,7 +31,7 @@ The statistics tool now gathers statistics over different time periods:
 * Last 10 minutes for the console. Configurable off course.
 * For measurement triggers (between once and twice the console frequency to prevent that the statistics are just reset when a trigger fires). These statistics are saved in the stored statistics when a trigger fires and is configured to store statistics.
 
-## ![](attachments/Release_Notes/Release_Notes_1.8.0/Statistics.png)
+## ![](attachments/Release_Notes_1.8.0/Traps.png)
 
 ## Bug fixes and minor changes
 * Replaced Mansystems customized String Formatter widget by AppStore FormatString widget to reduce the number of custom widget and keep the APM tool maintainable.

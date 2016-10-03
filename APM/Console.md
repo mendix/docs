@@ -4,7 +4,7 @@ category: "User Manual"
 ---
 This chapter describes the APM Tool console. This is the home screen of the APM tool. The following screenshot shows the APM Tool Console.
 
- ![](attachments/19956212/21168246.png)
+ ![](attachments/Console/Overview.png)
 
 The console shows the primary APM tools, allows you to start and stop them and shows counters to see what these tools are currently doing. You also see some badges indicating if additional tools are running. These badges can be clicked to jump directly to their respective tools. You can refresh counters on the console to keep track of what is happening by clicking the [Refresh All Counters] button.
 
@@ -14,7 +14,7 @@ All tools, including those under the tools menu are described in a separate chap
 
 From the console, you can change the application wide settings:
 
- ![](attachments/19956212/21725190.png)
+ ![](attachments/Console/Settings_After_Startup.png)
 
 Here you determine which tools should run _after startup_. There is also a safety constant (in the Mendix Modeler) which overrules these after startup settings and enables the admin to take control of these settings.
 
@@ -32,7 +32,7 @@ A license is required per App. Every license has an end date.
 
 The license code goes in the license field. The _Expiry date_ field can be used to store the license expiration date.
 
-![](attachments/19956212/21725191.png)
+![](attachments/Console/Settings_License.png)
 
 ## Advanced Configuration
 
@@ -44,7 +44,7 @@ This URL is used for explain plan and in the query tool. You can use $HostName, 
 
 The search menu allows you to search through data- and statistics recorded by the different tools provided by APM.
 
- ![](attachments/19956212/21725192.png)
+ ![](attachments/Console/Search_Menu.png)
 
 _Search Microflows_ allows you to browse through microflows including the calling tree (microflow > microflow) which can help find bottlenecks in long running microflows/actions.
 
@@ -56,6 +56,6 @@ The Java standard output(system.out) and standard error(system.err) messages, th
 
 The dialog to manage these options can be opened from the console rerouting button and looks like this:
 
-![](attachments/19956212/21725193.png)                       
+![](attachments/Console/Log_Rerouting.png)                       
 
 An example: javax.mail sends debug output to the console(system.out). With the [Java Console Rerouting] option enabled the debug output is catched and provided to the Mendix logging mechanism and as such made available to the Log Tool and Trap Tool.

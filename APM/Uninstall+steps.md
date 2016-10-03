@@ -7,14 +7,14 @@ This chapter describes the uninstallation of the APM tool. The optional in this 
 # Backup
 
 Did you commit your work to the team server? And did you make a database backup?
-![](attachments/20644418/21168270.png)
+![](attachments/Uninstall_steps/Delete_Module.png)
 
 If you don't have installed an SVN client like Tortoise SVN make a copy of the widgets folder in your project.
 
 # Delete Module APMAgent
 
 Import the module APMAgent in the modeler.
-![](attachments/20644418/21168265.png)
+![](attachments/Uninstall_steps/Commit.png)
 
 # Optional: revert overwritten widgets
 
@@ -36,7 +36,7 @@ Mansystems customized versions of AppStore widgets
 # Delete permissions
 
 Delete permissions APMAgent.Admin from project security / user roles tab to a selected administrator role. On Edit of the last dialog Mendix will remove the permissions for you.
-![](attachments/20644418/21168271.png)
+![](attachments/Uninstall_steps/Delete_Permissions.png)
 
 **_Note._** _If you added the Debug role, remove it now._
 
@@ -44,7 +44,7 @@ Delete permissions APMAgent.Admin from project security / user roles tab to a se
 
 Delete the APM Tools item that calls "APMAgent/USE_ME/IVK_OpenConsole" from navigation.
 
-![](attachments/20644418/21168272.png)
+![](attachments/Uninstall_steps/Delete_From_Navigation.png)
 
 # Optional: Revert After startup and before shutdown
 
@@ -52,7 +52,7 @@ Remove the call microflow action to APMAgent\USE_ME\AfterStartup from an after s
 Remove the call microflow action to APMAgent\USE_ME\BeforeShutdown from a before shutdown microflow.
 You can find the AfterStartup and BeforeShutdown microflows in the project settings.
 
-![](attachments/20644418/21168273.png)
+![](attachments/Uninstall_steps/Revert_After_Startup.png)
 
 # Optional: Undo request permissions for the Mendix cloud or on premise runtime
 

@@ -5,11 +5,11 @@ parent: "Performance+Tool"
 ---
 The following screenshot shows the filter options of the Performance Tool when the performance tool is not running:
 
- ![](attachments/19956263/21168251.png)
+ ![](attachments/Performance_Tool_Filter/Filter_Running.png)
 
  And when the performance tool is running:
 
- ![](attachments/19956263/21168250.png)
+ ![](attachments/Performance_Tool_Filter/Filter_NotRunning.png)
 
 The thresholds are used to filter recorded microflows, actions or SQL statements and not store them in/remove them from memory if they have an execution duration less than the threshold.
 

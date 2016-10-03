@@ -7,7 +7,7 @@ This chapter gives an overview of the Performance Tool. Use the Performance Tool
 
 The screenshot below shows the Performance Tool in a running state.
 
- ![](attachments/19956257/20217996.png)
+ ![](attachments/Performance_Tool/Overview.png)
 
 The [Recorded] button is used to see what has been recorded to assist in filtering and also to allow you to store individually recorded microflows. This button is also visible in the filter dialog and not visible on the console.
 

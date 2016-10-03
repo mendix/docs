@@ -32,13 +32,13 @@ The following tables list all standard actions for Mendix. There's one table per
 | Find/Assert Dialog | Window, DialogMessage, ConfirmationDialog | Find/Assert a Dialog by Title or Type |
 | Get Dialog Message Text | ConfirmationDialog, DialogMessage | Get the text from message and confirmation dialogs |
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
 A _Window_ is rendered when a page is opened as a popup.
 
 A _ConfirmationDialog_ is shown when a delete or microflow action requires a confirmation. Show message actions in microflows result in _DialogMessage_ widgets.
 
-{% endmarkdown %}</div>
+</div>
 
 ### FileManager
 

@@ -11,9 +11,9 @@ The Mendix Modeler supports Windows 7, 8 and 10\. It supports both 32-bit and 64
 
 The following frameworks are automatically installed (if necessary):
 
-*   Microsoft .NET Framework 4.5
-*   Microsoft Visual C++ 2010 SP1 Redistributable Package
-*   Java Development Kit 1.8
+* Microsoft .NET Framework 4.5
+* Microsoft Visual C++ 2010 SP1 Redistributable Package
+* Java Development Kit 1.8
 
 <div class="alert alert-warning">{% markdown %}
 
@@ -27,31 +27,33 @@ If you want to use TortoiseSVN in combination with the Modeler, download the lat
 
 The Team Server is implemented using Subversion and the Modeler uses the HTTPS protocol to communicate with that server. To access the Team Server from within the Modeler, the network at your location needs the following settings:
 
-*   The HTTPS port (TCP 443) needs to be open.
-*   The HTTP port (TCP 80) needs to be open.
-*   WebDAV - verbs within the HTTP protocol - needs to be enabled on the proxy server (if any).
+* The HTTPS port (TCP 443) needs to be open.
+* The HTTP port (TCP 80) needs to be open.
+* WebDAV - verbs within the HTTP protocol - needs to be enabled on the proxy server (if any).
 
 ## Server
 
 ### Operating system
 
-*   Microsoft Windows Server 2008 SP2 or newer
-*   Debian 8 (Jessie) or newer
-*   Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
-*   CentOS 6, CentOS 7
+* Microsoft Windows Server 2008 SP2 or newer
+* Debian 8 (Jessie) or newer
+* Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
+* CentOS 6, CentOS 7
 
 ### Web server
 
-*   Microsoft Internet Information Services 7 or newer
-*   Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
-*   Apache
+* Microsoft Internet Information Services 7 or newer
+* Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
+* Apache
 
 ### Database server
 
-*   [Microsoft SQL Server 2008 or newer](/howto6/Mendix+on+Windows+-+Microsoft+SQL+Server)
-*   [MySQL 5.5](MySQL) / [MariaDB 5.5](MySQL)
-*   [Oracle Database 11_g_ Release 2 or newer](Oracle)
-*   PostgreSQL 9.1 or newer
+* [IBM DB2](DB2) 11.1
+* [MariaDB](MySQL) 5.5, 10.0
+* [Microsoft SQL Server](/howto6/Mendix+on+Windows+-+Microsoft+SQL+Server) 2008, 2008 R2, 2012, 2014, 2016
+* [MySQL](MySQL) 5.5, 5.6
+* [Oracle Database](Oracle) 11g Release 2, 12c Release 1
+* PostgreSQL 9.1, 9.2, 9.3, 9.4, 9.5
 
 ### Java
 
@@ -71,16 +73,14 @@ Jetty is built into the Mendix Business Server, an application server is not req
 
 ## Desktop Browsers
 
-*   Mozilla Firefox 
-
-*   Google Chrome
-
-*   Apple Safari
-*   Microsoft Edge
-*   Microsoft Internet Explorer 10 - 11
+* Mozilla Firefox 
+* Google Chrome
+* Apple Safari
+* Microsoft Edge
+* Microsoft Internet Explorer 10 - 11
 
 ## Mobile Browsers
 
-*   iOS 9 and newer (Safari)
-*   Android 4.4 and newer
-*   Windows Phone 8 and newer
+* iOS 9 and newer (Safari)
+* Android 4.4 and newer
+* Windows Phone 8 and newer

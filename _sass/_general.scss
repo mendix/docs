@@ -99,6 +99,26 @@
   }
 }
 
+.post {
+  position: relative;
+  .github-edit-button {
+    margin-top: -30px;
+    float: right;
+    background-color: $white-smoke;
+    border-color: $white-smoke;
+    color: $link-color;
+    font-weight: 100;
+    @include border-radius(2em);
+    font-size: 12px;
+    i {
+      top: 0.1em;
+    }
+    span {
+      padding-left: 0.5em;
+    }
+  }
+}
+
 .header-link {
   font-size: 29px;
   font-weight: 100;

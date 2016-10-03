@@ -30,7 +30,7 @@ space: "ATS (Application Test Suite)"
 
 ### Chrome
 
-| Version |   |   |
+| Version | Supported  | Notes   |
 | --- | --- | --- |
 | Chrome <= 45 | - |   |
 | Chrome 46 | Yes |   |
@@ -38,7 +38,7 @@ space: "ATS (Application Test Suite)"
 | Chrome 48 | Yes |   |
 | Chrome 49 | Yes |   |
 | Chrome 50 | Yes |   |
-| Chrome >= 51 | - | recent versions of Chrome usually work (unsupported) |
+| Chrome >= 51 | - | Recent versions of Chrome usually work (unsupported). |
 
 ### Internet Explorer and Edge
 

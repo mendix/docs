@@ -7,17 +7,17 @@ The Performance Tool can be enabled/disabled by using the Start/Stop buttons.
 
 The following screenshot shows the Performance Tool when stopped:
 
- ![](attachments/19956259/21168281.png)
+ ![](attachments/Performance_Tool_Control/Control_NotRunning.png)
 
  The [Process Trap memory] button is not on the console. If the trap tool is running and the performance tool is not you can process the recorded microflow messages that are memory. In a development environment you can configure the Trap Tool to record for example the last 5 minutes. Then its possible to use the Performance Tool on data recorded by the Trap Tool in memory while using a specific function in the application where APM was integrated.
 
 The following screenshot shows the Performance Tool when started:
 
-![](attachments/19956259/21168282.png)
+![](attachments/Performance_Tool_Control/Control_Running_Recording.png)
 
 The following screenshot shows the Performance Tool when recording has been stopped:
 
-![](attachments/19956259/21168283.png)
+![](attachments/Performance_Tool_Control/Control_Running_NotRecording.png)
 
  Tool specific counters:
 

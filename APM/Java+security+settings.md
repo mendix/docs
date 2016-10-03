@@ -12,7 +12,7 @@ Procedure to simulate cloud security plus APMAgent permissions:
 
 1.  Turn off the emulate cloud security option in project settings, active configuration, server tab
 
-![](attachments/20644421/21168269.png)
+![](attachments/Java_security_settings/Java_Command_Line_Options.png)
 
 1.  Copy file =<project-folder>\resources\apmtool\mx5\apm_cloud_template_mx5.policy to a **<new file>**. Change the file replacing <project-folder> with your actual project folder path.
 

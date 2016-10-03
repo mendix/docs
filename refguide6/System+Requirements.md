@@ -48,10 +48,12 @@ The Team Server is implemented using Subversion and the Modeler uses the HTTPS p
 
 ### Database server
 
-*   [Microsoft SQL Server 2008 or newer](/howto6/Mendix+on+Windows+-+Microsoft+SQL+Server)
-*   [MySQL 5.5](MySQL) / [MariaDB 5.5](MySQL)
-*   [Oracle Database 11_g_ Release 2 or newer](Oracle)
-*   PostgreSQL 9.1 or newer
+*   [IBM DB2](DB2) 11.1
+*   [MariaDB](MySQL) 5.5, 10.0
+*   [Microsoft SQL Server](/howto6/Mendix+on+Windows+-+Microsoft+SQL+Server) 2008, 2008 R2, 2012, 2014, 2016
+*   [MySQL](MySQL) 5.5, 5.6
+*   [Oracle Database](Oracle) 11g Release 2, 12c Release 1
+*   PostgreSQL 9.1, 9.2, 9.3, 9.4, 9.5
 
 ### Java
 

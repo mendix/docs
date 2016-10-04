@@ -73,63 +73,80 @@ Restart the application, the OData service is now ready to be consumed.
 
 ## 4 Working with Mendix Data in Excel 2013
 
-1.  Open Excel and create a new blank workbook.
+1. Open Excel and create a new blank workbook:
+
     ![](attachments/18448736/18581995.png)
-2.  Open the **DATA** tab page and select **OData Feed** from the **Other Sources** menu.
+
+2. Open the **DATA** tab and select **From Other Sources** > **From OData Data Feed**:
+
     ![](attachments/18448736/18581994.png)
-3.  Enter `http://localhost:8080/odata/Published_OData_service/Expenses` as **Location** of the data feed.
-4.  Select **Use this name and password** and enter the **MxAdmin** credentials.
+
+3. On the **Data Connection Wizard** dialog box, do the following:
+    * Enter `http://localhost:8080/odata/Published_OData_service/Expenses` for the **Location of the data feed**
+    * Select **Use this name and password** and enter the *MxAdmin* credentials
+    * Click **Next**
+
     ![](attachments/18448736/18581993.png)
-5.  Click **Next**.
-6.  Select **Expenses** in the tables selector and click **Finish**.
+
+4. Select **Expenses** in the tables selector and click **Finish**:
+
     ![](attachments/18448736/18581990.png)
-7.  Select **Table** as Import method and click **OK**.
+
+5. On the **Import Data** dialog box, select **Table** as the import method and then click **OK**:
+
     ![](attachments/18448736/18581988.png)
-8.  The data of the Mendix application should now be imported in Excel.
+
+6. The data of the Mendix application should now be imported in Excel:
+
     ![](attachments/18448736/18581987.png)
 
 ## 5 Working with Mendix Data in Tableau
 
-In this exercise you will visualize data from the Company Expenses app in Tableau.
+To visualize data from the Company Expenses app in Tableau, follow these steps:
 
-1.  Open **Tableau**.
-2.  Go to **More Servers > OData**.
+1. Open **Tableau** and select **More Servers...** > **OData**:
+
     ![](attachments/18448736/18582022.png)
-3.  Enter `http://localhost:8080/odata/Published_OData_service/Expenses` as **Server** address.
-4.  Select **Use a specific username and password** and enter the **MxAdmin** credentials.
+
+2. On the **Server Connection** dialog box, do the following:
+    * Enter `http://localhost:8080/odata/Published_OData_service/Expenses` for the **Server** address
+    * Select **Use a specific username and password** and enter the *MxAdmin* credentials
+    * Click **OK** to save the server connection
+
     ![](attachments/18448736/18582020.png)
-5.  Click **OK** to save the Server Connection. You should see the data source details:
+
+5. Click **OK** to save the Server Connection. You should see the data source details:
     ![](attachments/18448736/18582016.png)
-6.  Click the name of the server connection and change it to **Expenses** for readability.
+6. Click the name of the server connection and change it to **Expenses** for readability.
     ![](attachments/18448736/18582015.png)
-7.  Repeat step 2 - 6 to add a server connection for `http://localhost:8080/odata/Published_OData_service/Expenses`.
-8.  Repeat step 2 - 6 to add a server connection for `http://localhost:8080/odata/Published_OData_service/Expenses`.)
-9.  **Open** Sheet1.
-10.  Drag **Expense_Employee** and **Expense_ExpenseType** from **Measures** to **Dimensions**
+7. Repeat step 2 - 6 to add a server connection for `http://localhost:8080/odata/Published_OData_service/Expenses`.
+8. Repeat step 2 - 6 to add a server connection for `http://localhost:8080/odata/Published_OData_service/Expenses`.)
+9. **Open** Sheet1.
+10. Drag **Expense_Employee** and **Expense_ExpenseType** from **Measures** to **Dimensions**
     ![](attachments/18448736/18582012.png)
-11.  Click **Edit Relationships...** to define the relation between the different data sources.
+11. Click **Edit Relationships...** to define the relation between the different data sources.
     ![](attachments/18448736/18582014.png)
-12.  Select **Expenses** as **Primary data source** and select **Employee** as **Secondary data source**.
+12. Select **Expenses** as **Primary data source** and select **Employee** as **Secondary data source**.
     ![](attachments/18448736/18582013.png)
-13.  Switch from **Automatic** to **Custom** mapping and **remove** any default mappings.
-14.  Click **Add...** to configure a field mapping.
+13. Switch from **Automatic** to **Custom** mapping and **remove** any default mappings.
+14. Click **Add...** to configure a field mapping.
     ![](attachments/18448736/18582011.png)
-15.  Select **Expense_Employee** as primary data source field and **ID** as secondary field.
-16.  Click **OK** to save the field mapping.
-17.  Keep **Expenses** as **Primary data source** and select **ExpenseTypes** as **Secondary data source**.![](attachments/18448736/18582010.png)
-18.  Switch from **Automatic** to **Custom** mapping and **remove** any default mappings.
-19.  Click **Add...** to configure a field mapping
+15. Select **Expense_Employee** as primary data source field and **ID** as secondary field.
+16. Click **OK** to save the field mapping.
+17. Keep **Expenses** as **Primary data source** and select **ExpenseTypes** as **Secondary data source**.![](attachments/18448736/18582010.png)
+18. Switch from **Automatic** to **Custom** mapping and **remove** any default mappings.
+19. Click **Add...** to configure a field mapping
     ![](attachments/18448736/18582008.png)
-20.  Select **Expense_ExpenseType** as primary data source field and **ID** as secondary field.
-21.  Click **OK** to save the field mapping.
+20. Select **Expense_ExpenseType** as primary data source field and **ID** as secondary field.
+21. Click **OK** to save the field mapping.
     ![](attachments/18448736/18582007.png)
-22.  Click **OK** to save the Relationships.
-23.  Select **Expenses** as data source and drag the **Amount** attribute from the **Measures** section to **Rows**.![](attachments/18448736/18582006.png)
-24.  Select **Employees** as data source and drag the **FullName** attribute from the **Dimensions** section to **Columns**.
-25.  Click the icon next to the ID attribute to use ID as linking field.
+22. Click **OK** to save the Relationships.
+23. Select **Expenses** as data source and drag the **Amount** attribute from the **Measures** section to **Rows**.![](attachments/18448736/18582006.png)
+24. Select **Employees** as data source and drag the **FullName** attribute from the **Dimensions** section to **Columns**.
+25. Click the icon next to the ID attribute to use ID as linking field.
     ![](attachments/18448736/18582005.png)
-26.  Select **ExpenseTypes** as data source and drag the **Name** attribute from the **Dimensions** section to **Color**.
-27.  Click the icon next to the ID attribute to use ID as linking field.
+26. Select **ExpenseTypes** as data source and drag the **Name** attribute from the **Dimensions** section to **Color**.
+27. Click the icon next to the ID attribute to use ID as linking field.
     ![](attachments/18448736/18582002.png)
 
 You should now see a stacked bar chart with data combined over multiple data sources.

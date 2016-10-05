@@ -1,5 +1,5 @@
 ---
-title: "How to set up your profile"
+title: "How to Set Up Your Profile"
 space: "Community"
 category: "Community"
 ---

@@ -9,7 +9,7 @@ This guide will walk you through the steps needed to implement push notification
 *   Importing the `PushNotifications` module.
 *   Adding the Push Notification widget and administrator pages.
 *   Updating several project files with the necessary dependencies.
-*   Obtaining GCM/APNs access/credentials and configuring them to your application.
+*   Obtaining FCM/APNs access/credentials and configuring them to your application.
 *   Building the hybrid mobile package.
 
 ### Step 1 - Import the `PushNotifications` module from the App Store
@@ -34,7 +34,7 @@ After importing the module and the dependencies, your error dock will inform you
 
 ###  Step 3 - Include the push notifications snippet in the application's layouts
 
-To properly register your device with a third party remote push service (GCM or APNs) and display in-app notifications, the widget should be put on the pages of your app. One way to accomplish this is by
+To properly register your device with a third party remote push service (FCM or APNs) and display in-app notifications, the widget should be put on the pages of your app. One way to accomplish this is by
 drag-and-dropping the snippet called PushNotification_Snippet (located in _USE ME folder in the PushNotifications module) into the layouts used by your app. Note that push notifications are currently not working on 
 the desktop. 
 
@@ -51,14 +51,14 @@ invisible to the user.
 
 ### Step 4 - Start connectors from your After Startup microflow
 
-The PushNotifications module contains a microflow named `AfterStartup_PushNotifications` which will start the connectors for GCM and APNs for you. Call this microflow from your AfterStartup microflow.
+The PushNotifications module contains a microflow named `AfterStartup_PushNotifications` which will start the connectors for FCM and APNs for you. Call this microflow from your AfterStartup microflow.
 
 If your project uses Mendix SSO, most likely the `AppCloudServices.StartAppCloudServices` microflow is set to execute after startup. Please refer to the [reference guide](/mendixcloud/Integrate+your+app+with+Mendix+SSO) for details. We suggest to change your startup microflow to a new microflow, from where you call both after startup microflows.
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
 
 ### Step 5 - Set up the administration pages
 
-Add the `PushNotifications_Administration` page to the project navigation, so it can be reached after you deploy your app. This page contains three tabs: _`Pending Messages`_, _`Devices`_, and _Configuration_. The _Pending Messages_ tab shows all the messages that are queued either because they were sent using the `QueueMessage` action or because previous attempts to send them failed. The _Devices_ tab contains a list of all devices registered with the application and is useful for testing purposes. The _Configuration_ tab is used to configure your application to be able to reach the respective services (APNs and GCM) later on.
+Add the `PushNotifications_Administration` page to the project navigation, so it can be reached after you deploy your app. This page contains three tabs: _`Pending Messages`_, _`Devices`_, and _Configuration_. The _Pending Messages_ tab shows all the messages that are queued either because they were sent using the `QueueMessage` action or because previous attempts to send them failed. The _Devices_ tab contains a list of all devices registered with the application and is useful for testing purposes. The _Configuration_ tab is used to configure your application to be able to reach the respective services (APNs and FCM) later on.
 
 <div class="alert alert-warning">
 
@@ -84,11 +84,11 @@ If you are using a Free App, you should set a default value for the constant in 
 
 </div>
 
-### Step 8 - Set up access to APNs and GCM
+### Step 8 - Set up access to APNs and FCM
 
-Set up access to APNs and GCM and configure them in your application. Note that starting with GCM is recommended because it is significantly less complicated than setting up APNs. You can return to this step later on to set up APNs.
+Set up access to APNs and FCM and configure them in your application. Note that starting with FCM is recommended because it is significantly less complicated than setting up APNs. You can return to this step later on to set up APNs.
 
-See [Setting up Apple Push Notification Server](Setting+up+Apple+Push+Notification+Server) and [Setting up Google Cloud Messaging Server](Setting+up+Google+Cloud+Messaging+Server) for the details.
+See [Setting up Apple Push Notification Server](Setting+up+Apple+Push+Notification+Server) and [Setting up Firebase Cloud Messaging Server](Setting+up+Firebase+Cloud+Messaging+Server) for the details.
 
 ### Step 9 - Build the hybrid mobile application
 

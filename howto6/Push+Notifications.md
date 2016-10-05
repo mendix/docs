@@ -8,7 +8,7 @@ tags: []
 *   [Testing the Implementation](Testing+the+Implementation)
 *   [APIs](APIs)
 *   [Setting up Apple Push Notification Server](Setting+up+Apple+Push+Notification+Server)
-*   [Setting up Google Cloud Messaging Server](Setting+up+Google+Cloud+Messaging+Server)
+*   [Setting up Firebase Cloud Messaging Server](Setting+up+Firebase+Cloud+Messaging+Server)
 
 Push Notifications let your application notify a user of events even when the user is not actively using the application. This is a native capability available on both Android and iOS devices, and controlled via Google Cloud Messaging (GCM) and Apple Push Notifications service (APNs). This project is meant to make it easy for Mendix developers who want to include Push Notification capabilities in their Mendix hybrid mobile application.
 
@@ -38,6 +38,9 @@ An example implementation of the Push Notifications Connector module [can be fou
 
 The current version of the PushNotifications Connector assumes that the mobile app and the "back-end" part will reside in the same project.
 
+### GCM vs FCM
+
+*   Google is replacing GCM with FCM (Firebase Cloud Messaging). This has impact on how Google projects need to be set up and on how credentials can be obtained. The PushNotifications module will occasionally refer to GCM. We'll replace these references in the near future.
 ### APNs
 
 *   From the Admin pages you currently cannot disable the APNs service completely. We will address this in a later release.

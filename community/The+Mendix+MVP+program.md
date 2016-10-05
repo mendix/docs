@@ -1,5 +1,5 @@
 ---
-title: "The Mendix MVP program"
+title: "The Mendix MVP Program"
 space: "Community"
 category: "Community"
 ---

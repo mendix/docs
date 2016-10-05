@@ -1,5 +1,5 @@
 ---
-title: "Feature requests"
+title: "Feature Requests"
 space: "Community"
 category: "Community"
 ---

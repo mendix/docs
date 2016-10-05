@@ -115,7 +115,7 @@ To visualize data from the Company Expenses app in Tableau, follow these steps:
 
     ![](attachments/18448736/18582020.png)
 
-5. Click **OK** to save the Server Connection. You should see the data source details:
+4. Click **OK** to save the Server Connection. You should see the data source details:
     ![](attachments/18448736/18582016.png)
 6. Click the name of the server connection and change it to **Expenses** for readability.
     ![](attachments/18448736/18582015.png)

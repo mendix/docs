@@ -30,4 +30,4 @@ These pages provide details on how you can contribute to the Mendix documentatio
 
 ## More Information
 
-Questions about the team or what we do can be sent to [community@mendix.com](community@mendix.com).
+Questions about the team or what we do can be sent to [community@mendix.com](mailto://community@mendix.com).

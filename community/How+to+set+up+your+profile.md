@@ -1,7 +1,7 @@
 ---
-title: "How to set up your profile"
+title: "How to Set Up Your Community Profile"
 space: "Community"
-category: "Community"
+parent: "Community+Projects"
 ---
 How to set up your profile
 

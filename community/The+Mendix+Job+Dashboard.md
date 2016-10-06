@@ -1,7 +1,7 @@
 ---
 title: "The Mendix Job Dashboard"
 space: "Community"
-category: "Community"
+parent: "Community+Projects"
 ---
 Next to posting jobs on the [Mendix job board](https://developers.mendix.com/jobs/), you can now request an account to manage your job postings. This has several benefits:
 

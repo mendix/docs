@@ -1,4 +1,4 @@
-(function($) {
+((function($) {
   /*
     @author: J.W. Lagendijk <jelte.lagendijk@mendix.com>
 
@@ -212,4 +212,4 @@
           .trigger('propertychange').focus();
     });
   });
-})(jQuery);
+})(jQuery));

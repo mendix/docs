@@ -1,5 +1,5 @@
 /* global instantsearch */
-(function($) {
+((function($) {
     function getTemplate(templateName) {
       return document.getElementById(templateName + '-template').innerHTML;
     }
@@ -105,4 +105,4 @@
 
 
     search.start();
-})(jQuery);
+})(jQuery));

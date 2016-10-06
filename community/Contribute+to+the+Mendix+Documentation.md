@@ -1,5 +1,5 @@
 ---
-title: "Contribute to the Mendix Documentation"
+title: "How to Contribute to the Mendix Documentation"
 space: "Community"
 parent: "Community+Documentation"
 ---

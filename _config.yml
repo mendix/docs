@@ -152,6 +152,7 @@ exclude:
   - run.bat
   - manifest.yml
   - community/The+How+to+Template.md
+  - CONTRIBUTING.md
 
 markdown: kramdown
 kramdown:

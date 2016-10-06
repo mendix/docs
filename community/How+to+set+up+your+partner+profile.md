@@ -1,7 +1,7 @@
 ---
 title: "How to Set Up Your Partner Profile"
 space: "Community"
-category: "Community"
+parent: "Community+Projects"
 ---
 
 The purpose of the Partner Profile is to give our community and customers a good overview and transparency of our partner’s knowledge, skills, experience, reviews, culture, etc. With the Partner Profile we want to give our partners a simple and clear way to present themselves. The Partner Profile gives an aggregated view of the developers within your organization, including the number of certified developers and their average Mendix level. Next to that we offer the possibility to add projects, customer reviews, contact information, a corporate video and a description.
@@ -22,7 +22,7 @@ In this chapter we will explain how to log in to your partner profile, how to ed
 2.  Then you need to navigate to the [partner overview page](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview). Your company will be shown at the top of the partner overview list.
     ![](attachments/19203677/20217909.png)
 3.  Click on your partner profile. This will show the public view of your company. Click on the blue '**Edit Partner Profile**' button to edit your profile. In the next chapter we will explain which fields you can add and how to edit them.
-    ![](attachments/19203677/20217910.png) 
+    ![](attachments/19203677/20217910.png)
 4.  Once you're done editing your profile, you're ready to set your profile to public so that the rest of the community and customers can check it. To do so, simply click **Make this profile public**.
     ![](attachments/19203677/20217911.png)
 
@@ -56,7 +56,7 @@ These fields are required before you can set your profile to public: address, em
 In this chapter we will show how to add the biggest asset of your company: your employees. Before you can add a developer to your partner profile, you need to make sure their profile is set to public. Learn [how to set up your Community Profile](How+to+set+up+your+profile) and set it to public.
 
 1.  Go to the Developers tab to add the developers to your profile. All the employees attached to your company are shown in this overview.
-    ![](attachments/19203677/20217919.png) 
+    ![](attachments/19203677/20217919.png)
 
     Make sure you off-board the developers through the Company Admin in our platform who are no longer working at your company. These former employees will still be visible in the overview. It is important that you deactivate these in the Dev Portal, so that they don’t have access to projects etc. anymore.
 
@@ -70,7 +70,7 @@ In this chapter we will show how to add the biggest asset of your company: your 
 ## 4\. Reference cases
 
 In this chapter we will explain how to add reference cases to your partner profile and how to boost your overall rating. Go to the reference tab and click **Add Project**. This is where you can add all the details of your reference case.
-![](attachments/19203677/20217920.png) 
+![](attachments/19203677/20217920.png)
 
 *   The customer is an open text field, so if this customer needs to stay anonymous you could also add 'bank in the US'.
 *   The industry will be used in the overview page, the number next to the label will show the number of projects you've added to your profile.
@@ -111,7 +111,7 @@ Example: you have 14 certified developers (CD). The biggest company has 40 certi
 * KPI value CD smallest company = 0
 * KPI value CD your company = 0,33 = (14 - 1) / (40-1)
 
-The sum of the normalised KPI values of your company (PR+CD+ML+RP) defines the sorting order between the partners. 
+The sum of the normalised KPI values of your company (PR+CD+ML+RP) defines the sorting order between the partners.
 
 ## 6\. Related content
 

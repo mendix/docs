@@ -1,7 +1,7 @@
 ---
 title: "Contribute to the Mendix Documentation"
 space: "Community"
-category: "Community"
+parent: "Community+Documentation"
 ---
 
 ## 1 Introduction

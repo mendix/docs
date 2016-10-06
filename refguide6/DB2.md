@@ -20,6 +20,28 @@ For user-created indexes, if the combined length of the specified columns in the
 
 For more detailed information, see the [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.messages.sql.doc/doc/msql00614n.html).
 
+## Transaction Log Size
+
+### Exception with SQL Code -964
+
+If the transaction log space is depleted or because of a temporary increase in the number of active transactions, DB2 will throw an exception:
+
+`com.ibm.db2.jcc.am.SqlException: DB2 SQL Error: SQLCODE=-964, SQLSTATE=57011, SQLERRMC=null`
+
+In this case the size of "LOGPRIMARY" must be increased. 
+
+For more detailed information, see the [IBM Support](http://www-01.ibm.com/support/docview.wss?uid=swg21298630) and 
+[IBM Knowledge Center] (http://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.messages.sql.doc/doc/msql00964c.html).
+
+## Making DB2 Case-Insensitive
+
+When applying sort on string column values having mixed letter cases, DB2 will also take into account the letter cases.
+However, such situations can be avoided if the DB2 database is created with a collation that is case insensitive.
+
+For more detailed information, see the [IBM Developer Works]
+(http://www.ibm.com/developerworks/data/library/techarticle/0203adamache/0203adamache.html).
+
+
 ## Known Issues
 
 ### Sorting on Very Long Strings

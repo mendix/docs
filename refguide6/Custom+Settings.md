@@ -116,6 +116,28 @@ The following settings influence the behavior of the Amazon S3 Storage Service m
 | com.mendix.storage.s3.UseV2Auth | Let the authentication policy use 'Signature Version 2' instead of the default 'Signature Version 4'. Set this setting to 'true' when the endpoint does not support 'Signature Version 4'. | false |
 | com.mendix.storage.s3.EncryptionKeys | List of keys which can be used to encrypt and decrypt data at rest in S3\. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: ![](attachments/Custom+Settings/code_snippet_2.png) |   |
 
+
+## Microsoft Azure SQL
+
+<div class="alert alert-info">{% markdown %}
+
+Supported since Mendix 6.9
+
+{% endmarkdown %}</div>
+
+These settings can be changed to use Microsoft Azure SQL database for your Mendix application.
+You need to create an Azure SQL database (see  [https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/))
+Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall doesn't allow external connections).
+
+| Name | Description | Default value |
+| --- | --- | --- |
+| DatabaseType | SQLSERVER |   |
+| DatabaseHost | "your-database-host.database.windows.net:1433" |   |
+| DatabaseName | your-databasename |   |
+| DatabaseUserName | your-username |   |
+| DatabasePassword | your-password |   |
+
+
 ## Microsoft Azure blob storage settings
 
 <div class="alert alert-info">{% markdown %}

@@ -5,7 +5,7 @@ parent: "Container+Widgets"
 ---
 
 
-A scroll container is used to divide the layout in regions such as a header, sidebar or footer. A scroll container must be the only top-level widget. Apart from that, a scroll container can only be placed directly in another scroll container.
+A scroll container is used to divide the layout in [region](Scroll+Container+Region)s such as a header, sidebar or footer. A scroll container must be the only top-level widget. Apart from that, a scroll container can only be placed directly in another scroll container.
 
 Scroll containers may be placed on navigation layouts as well as on pages.
 
@@ -68,16 +68,16 @@ _Default value:_ Center
 
 ### Enable top
 
-Whether the scroll container should contain a top region.
+Whether the scroll container should contain a top [region](Scroll+Container+Region).
 
 ### Enable bottom
 
-Whether the scroll container should contain a bottom region.
+Whether the scroll container should contain a bottom [region](Scroll+Container+Region).
 
 ### Enable left
 
-Whether the scroll container should contain a left region.
+Whether the scroll container should contain a left [region](Scroll+Container+Region).
 
 ### Enable right
 
-Whether the scroll container should contain a right region.
+Whether the scroll container should contain a right [region](Scroll+Container+Region).

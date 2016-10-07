@@ -3,9 +3,8 @@ title: "Custom Settings"
 space: "Reference Guide 6"
 category: "Runtime"
 ---
+
 ## Custom Settings
-
-
 
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by the Modeler.
 
@@ -116,18 +115,17 @@ The following settings influence the behavior of the Amazon S3 Storage Service m
 | com.mendix.storage.s3.UseV2Auth | Let the authentication policy use 'Signature Version 2' instead of the default 'Signature Version 4'. Set this setting to 'true' when the endpoint does not support 'Signature Version 4'. | false |
 | com.mendix.storage.s3.EncryptionKeys | List of keys which can be used to encrypt and decrypt data at rest in S3\. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: ![](attachments/Custom+Settings/code_snippet_2.png) |   |
 
-
 ## Microsoft Azure SQL
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
-Supported since Mendix 6.9
+This is supported from Mendix version 6.9.
 
-{% endmarkdown %}</div>
+</div>
 
-These settings can be changed to use Microsoft Azure SQL database for your Mendix application.
-You need to create an Azure SQL database (see  [https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/))
-Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall doesn't allow external connections).
+These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
+
+First you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall doesn't allow external connections).
 
 | Name | Description | Default value |
 | --- | --- | --- |
@@ -137,14 +135,13 @@ Make sure your Azure firewall settings allow your Mendix application to reach th
 | DatabaseUserName | your-username |   |
 | DatabasePassword | your-password |   |
 
+## Microsoft Azure Blob Storage Settings
 
-## Microsoft Azure blob storage settings
+<div class="alert alert-info">
 
-<div class="alert alert-info">{% markdown %}
+This is supported from Mendix version 6.6
 
-Available since Mendix 6.6
-
-{% endmarkdown %}</div>
+</div>
 
 These settings can be used to store files using the Microsoft Azure blob storage service. Server side encryption can be configured through the Azure Portal (see [https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
 
@@ -156,11 +153,11 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created in case it does not exist yet. |   |
 | com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
 
-## IBM Bluemix Object Storage settings
+## IBM Bluemix Object Storage Settings
 
 <div class="alert alert-info">{% markdown %}
 
-Available since Mendix 6.7
+This is supported from Mendix version 6.7.
 
 {% endmarkdown %}</div>
 

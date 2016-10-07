@@ -115,26 +115,43 @@ To visualize data from the Company Expenses app in Tableau, follow these steps:
 
     ![](attachments/18448736/18582020.png)
 
-4. Click **OK** to save the Server Connection. You should see the data source details:
+3. Click **OK** to save the server connection. You should now see the data source details:
+
     ![](attachments/18448736/18582016.png)
-6. Click the name of the server connection and change it to **Expenses** for readability.
+
+4. Click the name of the server connection and change it to *Expenses* for readability:
+
     ![](attachments/18448736/18582015.png)
-7. Repeat step 2 - 6 to add a server connection for `http://localhost:8080/odata/Published_OData_service/Expenses`.
-8. Repeat step 2 - 6 to add a server connection for `http://localhost:8080/odata/Published_OData_service/Expenses`.)
-9. **Open** Sheet1.
-10. Drag **Expense_Employee** and **Expense_ExpenseType** from **Measures** to **Dimensions**
+
+5. Repeat step 1–4 to add a server connection for `http://localhost:8080/odata/Published_OData_service/Expenses`.
+6. Open Sheet1 and drag **Expense_Employee** and **Expense_ExpenseType** from **Measures** to **Dimensions**:
+
     ![](attachments/18448736/18582012.png)
-11. Click **Edit Relationships...** to define the relation between the different data sources.
+
+7. Click **Edit Relationships...** to define the relation between the different data sources:
+
     ![](attachments/18448736/18582014.png)
-12. Select **Expenses** as **Primary data source** and select **Employee** as **Secondary data source**.
+
+8. On the **Relationships** window, do the following:
+    * Select **Expenses** for the **Primary data source** (1)
+    * Select **Employees** for the **Secondary data source** (2)
+    * Switch to **Custom** mapping (3)
+    * Remove any default mappings (4)
+    * Click **Add...** to configure a field mapping (5)
+
     ![](attachments/18448736/18582013.png)
-13. Switch from **Automatic** to **Custom** mapping and **remove** any default mappings.
-14. Click **Add...** to configure a field mapping.
+
+9. In the **Add/Edit Field Mapping** window, select **Expense_Employee** for the **Primary data source field** and **ID** for the **Secondary data source field**, then click **OK** to save the field mapping:
+
     ![](attachments/18448736/18582011.png)
-15. Select **Expense_Employee** as primary data source field and **ID** as secondary field.
-16. Click **OK** to save the field mapping.
-17. Keep **Expenses** as **Primary data source** and select **ExpenseTypes** as **Secondary data source**.![](attachments/18448736/18582010.png)
-18. Switch from **Automatic** to **Custom** mapping and **remove** any default mappings.
+
+10. In the **Relationships** window, do the following:
+    * Select **ExpenseTypes** for the **Secondary data source**
+    * Switch to **Custom** mapping
+    * Remove the default mappings
+
+    ![](attachments/18448736/18582010.png)
+
 19. Click **Add...** to configure a field mapping
     ![](attachments/18448736/18582008.png)
 20. Select **Expense_ExpenseType** as primary data source field and **ID** as secondary field.

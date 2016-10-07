@@ -4,8 +4,7 @@ space: "Reference Guide 6"
 parent: "Container+Widgets"
 ---
 
-
-A scroll container is used to divide the layout in [region](Scroll+Container+Region)s such as a header, sidebar or footer. A scroll container must be the only top-level widget. Apart from that, a scroll container can only be placed directly in another scroll container.
+A scroll container is used to divide the layout in regions (for details on regions, see [Scroll Container Region](Scroll+Container+Region) in the Mendix Reference Guide) such as the header, sidebar, or footer. A scroll container must be the only top-level widget. Apart from that, a scroll container can only be placed directly in another scroll container.
 
 Scroll containers may be placed on navigation layouts as well as on pages.
 
@@ -26,7 +25,7 @@ The scroll container splits the layout in three parts: a header containing a log
 
 ## General Properties
 
-### Layout mode
+### Layout Mode
 
 This property determines in which mode the scroll container operates.
 
@@ -37,7 +36,7 @@ This property determines in which mode the scroll container operates.
 
 _Default value:_ Headline
 
-### Scroll behavior
+### Scroll Behavior
 
 This property determines what happens when the content of a region does not fit in the region.
 
@@ -54,11 +53,11 @@ By default the scroll container will extend the full width of its parent widget.
 
 _Default value:_ Full width
 
-### Width value (for width set to 'pixels' or 'percentage')
+### Width Value (for Width Set to 'pixels' or 'percentage')
 
 The width of the scroll container, either in pixels or a percentage, depending on the value of the width property.
 
-### Alignment (for width set to 'pixels' or 'percentage')
+### Alignment (for Width Set to 'pixels' or 'percentage')
 
 The scroll container can be aligned to the left, to the right or in the middle of its parent widget.
 
@@ -66,18 +65,18 @@ _Default value:_ Center
 
 ## Regions
 
-### Enable top
+### Enable Top
 
-Whether the scroll container should contain a top [region](Scroll+Container+Region).
+Determines whether the scroll container should contain a top region (for details on regions, see [Scroll Container Region](Scroll+Container+Region) in the Mendix Reference Guide).
 
-### Enable bottom
+### Enable Bottom
 
-Whether the scroll container should contain a bottom [region](Scroll+Container+Region).
+Determines whether the scroll container should contain a bottom region (for details on regions, see [Scroll Container Region](Scroll+Container+Region) in the Mendix Reference Guide).
 
-### Enable left
+### Enable Left
 
-Whether the scroll container should contain a left [region](Scroll+Container+Region).
+Determines whether the scroll container should contain a left region (for details on regions, see [Scroll Container Region](Scroll+Container+Region) in the Mendix Reference Guide).
 
-### Enable right
+### Enable Right
 
-Whether the scroll container should contain a right [region](Scroll+Container+Region).
+Determines whether the scroll container should contain a right region (for details on regions, see [Scroll Container Region](Scroll+Container+Region) in the Mendix Reference Guide).

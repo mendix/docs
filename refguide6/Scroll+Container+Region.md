@@ -14,19 +14,19 @@ A scroll container region is part of a [Scroll Container](Scroll+Container), and
 
 ## General Properties
 
-### Width (only for left and right region)
+### Width (Only for Left and Right Regions)
 
 Whether the width value of the region is defined in pixels or as a percentage of its parent's width.
 
-### Width Value (Only for Left and Right Region)
+### Width Value (Only for Left and Right Regions)
 
 The width of the region, either in pixels or a percentage, depending on the value of the width property.
 
-### Height (Only for Top and Bottom Region)
+### Height (Only for Top and Bottom Regions)
 
 Whether the height value of the region is defined in pixels or as a percentage of its parent's height.
 
-### Height Value (Only for Top and Bottom Region)
+### Height Value (Only for Top and Bottom Regions)
 
 The height of the region, either in pixels or a percentage, depending on the value of the height property.
 

@@ -1,5 +1,5 @@
 ---
-title: "Exposing data to BI tools using OData"
+title: "Expose Data to BI Tools Using OData"
 space: "Mendix 6 How-to's"
 category: "Integration"
 ---
@@ -55,11 +55,13 @@ A published OData service can be used by third-party applications to read data f
 
     ![](attachments/18448736/18582024.png)
 
-7. Change the **Exposed entity name** to *Expenses*:
+7. In the **Edit published resource** window, do the following:
+    * Change the **Exposed entity name** to *Expenses*:
+    * Click **Select** for **Exposed attributes and associations**
 
     ![](attachments/18448736/18581977.png)
 
-8. Click **Select** for **Exposed attributes and associations** to select what values are exposed in the OData service, then click **OK** to save the resource:
+8. In the **Select members for entity** window, select what values are exposed in the OData service, then click **OK** to save the resource:
 
     ![](attachments/18448736/18581982.png)
 
@@ -69,7 +71,7 @@ A published OData service can be used by third-party applications to read data f
 
 10. Click **OK** to save the OData service.
 
-Restart the application, the OData service is now ready to be consumed.
+Restart the application. The OData service is now ready to be consumed.
 
 ## 4 Working with Mendix Data in Excel 2013
 
@@ -128,7 +130,7 @@ To visualize data from the Company Expenses app in Tableau, follow these steps:
 
     ![](attachments/18448736/18582012.png)
 
-7. Click **Edit Relationships...** to define the relation between the different data sources:
+7. Select **Data** > **Edit Relationships...** in order to define the relation between the different data sources:
 
     ![](attachments/18448736/18582014.png)
 
@@ -149,40 +151,59 @@ To visualize data from the Company Expenses app in Tableau, follow these steps:
     * Select **ExpenseTypes** for the **Secondary data source**
     * Switch to **Custom** mapping
     * Remove the default mappings
+    * Click **Add...** to configure a field mapping
 
     ![](attachments/18448736/18582010.png)
 
-19. Click **Add...** to configure a field mapping
+11. In the **Add/Edit Field Mapping** window, select **Expense_ExpenseType** for the **Primary data source field** and **ID** for the **Secondary data source field**, then click **OK** to save the field mapping:
+
     ![](attachments/18448736/18582008.png)
-20. Select **Expense_ExpenseType** as primary data source field and **ID** as secondary field.
-21. Click **OK** to save the field mapping.
+
+12. In the **Relationships** window, click **OK** to save the relationships:
+
     ![](attachments/18448736/18582007.png)
-22. Click **OK** to save the Relationships.
-23. Select **Expenses** as data source and drag the **Amount** attribute from the **Measures** section to **Rows**.![](attachments/18448736/18582006.png)
-24. Select **Employees** as data source and drag the **FullName** attribute from the **Dimensions** section to **Columns**.
-25. Click the icon next to the ID attribute to use ID as linking field.
+
+13. Select **Expenses** for the data source and drag the **Amount** attribute from the **Measures** section to **Rows**:
+
+    ![](attachments/18448736/18582006.png)
+
+14. Select **Employees** for the data source, drag the **FullName** attribute from the **Dimensions** section to **Columns**, and click the icon next to the **ID** attribute to use ID as the linking field:
+
     ![](attachments/18448736/18582005.png)
-26. Select **ExpenseTypes** as data source and drag the **Name** attribute from the **Dimensions** section to **Color**.
-27. Click the icon next to the ID attribute to use ID as linking field.
+
+15. Select **ExpenseTypes** for the data source, drag the **Name** attribute from the **Dimensions** section to **Color**, and click the icon next to the **ID** attribute to use ID as the linking field:
+
     ![](attachments/18448736/18582002.png)
 
-You should now see a stacked bar chart with data combined over multiple data sources.
+You should now see a stacked bar chart with data combined over multiple data sources:
+
 ![](attachments/18448736/18582003.png)
 
 ## 6 Filtering Data With Query Parameters
 
-By default all expenses are retrieved by Tableau, but Mendix allows you to add filters to the query so only the desired data is being retrieved.
+By default all the expenses are retrieved by Tableau, but Mendix allows you to add filters to the query so only the desired data is being retrieved.
 
-1.  Right click data source **Expenses** and click **Edit Data Source...** ![](attachments/18448736/18582001.png)
-2.  Click the OData url to change the connection settings.
+To filter data with query parameters, follow these steps:
+
+1. Right-click the **Expenses** data source and select **Edit Data Source...**:
+
+    ![](attachments/18448736/18582001.png)
+
+2. Click the OData URL to change the connection settings:
+
     ![](attachments/18448736/18582000.png)
-3.  Add **?$top=3** to server url to only retrieve the first 3 expenses and click **OK**.
-    ![](attachments/18448736/18581998.png)
-4.  Open sheet1, you should now only see a stacked bar chart with only the data of 3 expenses.
-    ![](attachments/18448736/18581997.png)
-5.  You can combine filters by using the **&** character. Repeat steps 1 - 4 but now use `http://localhost:8080/odata/Expenses/Expenses?$skip=3&$top=3` as Server Url. You should now see a stacked bar chart showing data of expenses 4 to 6.
 
-Other query examples are:
+3. Add `?$top=3` to the server URL (in order to only retrieve the first three expenses) and click **OK**:
+
+    ![](attachments/18448736/18581998.png)
+
+4. Open sheet1, where you should now see a stacked bar chart with only the data of the three expenses:
+
+    ![](attachments/18448736/18581997.png)
+
+5. You can combine filters by using the `&` character. Repeat steps 1–4, but now use `http://localhost:8080/odata/Expenses/Expenses?$skip=3&$top=3` as the server URL. You should now see a stacked bar chart showing the data of expenses four to six.
+
+These are some other query examples:
 
 * `http:// localhost:8080/odata/Expenses/Expenses(1688849860265137)`
 * `http ://localhost:8080/odata/Expenses/Expenses?$ top=100`
@@ -193,18 +214,18 @@ Other query examples are:
 * `http://localhost:8080/odata/ Expenses/Expenses ?$ filter=DateOfBirth+gt+datetime'1995-01-01T00:00:00'`
 * `http ://localhost:8080/odata/ Expenses/Expenses ?$ filter=DateOfBirth+gt+datetime'2005-01-01T00:00:00 '&$ orderby=DateOfBirth`
 
-## 7 Related content
+## 7 Related Content
 
-*   [Consuming a complex web service](Consume+a+Complex+Web+Service)
-*   [Consuming a simple Web Service](Consume+a+Simple+Web+Service)
-*   [Exporting XML documents](Export+XML+Documents)
-*   [Importing Excel Documents](Importing+Excel+Documents)
-*   [Exposing a web service](Expose+a+web+service)
-*   [Selenium Support](Selenium+Support)
-*   [Synchronizing user accounts using the LDAP module](Synchronizing+user+accounts+using+the+LDAP+module)
-*   [Importing XML documents](Importing+XML+documents)
-*   [Consuming a REST Service](Consume+a+REST+Service)
-*   [Exposing data to BI tools using OData](Exposing+data+to+BI+tools+using+OData)
-*   [Published OData Services](/refguide6/Published+OData+Services)
-*   [OData Representation](/refguide6/OData+Representation)
-*   [OData Query Options](/refguide6/OData+Query+Options)
+* [How to Consume a Complex Web Service](Consume+a+Complex+Web+Service)
+* [How to Consume a Simple Web Service](Consume+a+Simple+Web+Service)
+* [How to Export XML Documents](Export+XML+Documents)
+* [How to Import Excel Documents](Importing+Excel+Documents)
+* [How to Expose a Web Service](Expose+a+web+service)
+* [How to Enable Selenium Support](Selenium+Support)
+* [How to Synchronize User Accounts Using the LDAP Module](Synchronizing+user+accounts+using+the+LDAP+module)
+* [How to Import XML Documents](Importing+XML+documents)
+* [How to Consume a REST Service](Consume+a+REST+Service)
+* [How to Expose Data to BI Tools Using OData](Exposing+data+to+BI+tools+using+OData)
+* [Publishing OData Services](/refguide6/Published+OData+Services)
+* [OData Representation](/refguide6/OData+Representation)
+* [OData Query Options](/refguide6/OData+Query+Options)

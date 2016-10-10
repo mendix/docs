@@ -33,8 +33,8 @@ Before starting with this how-to, make sure you have completed the following pre
 
 We recommend the use of the following tools for contributing to the Mendix documentation:
 
-* For writing and editing documentation – Visual Studio Code (with which you can preview your Markdown styling)
-* For commiting your documentation – SourceTree or GitHub for Windows
+* For writing and editing documentation – [Visual Studio Code](https://code.visualstudio.com) (with which you can preview your Markdown styling)
+* For commiting your documentation – [SourceTree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
 
 ## 3 Editing the Existing Documentation
 
@@ -71,5 +71,5 @@ The following image file types are allowed: .jpg, .png, .gif.
 
 ## 6 Related Content
 
-* [How-to Template](The+How+to+Template+Page)
+* [How-To Template](The+How+to+Template+Page)
 * [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines)

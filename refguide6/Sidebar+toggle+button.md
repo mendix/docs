@@ -1,20 +1,15 @@
 ---
-title: "Sidebar Toggle Button"
+title: "Sidebar toggle button"
 space: "Reference Guide 6"
 parent: "Layout+Widgets"
 ---
 
-When you press the sidebar toggle button, a region of a [scroll container](Scroll+Container) will appear or disappear. This makes it possible to create sidebars (for example, a menu on a mobile phone that is hidden by default and can be shown by clicking the button). See the image below for an example layout that uses the sidebar toggle button.
 
-<div class="alert alert-info">{% markdown %}
-
-The sidebar toggle used to include settings that governed which layout region was toggled and how the transition was visualized. These configuration options were moved to the [scroll container region](Scroll+Container+Region) to improve transparency in Mendix 6.10.
-
-{% endmarkdown %}</div>
+The sidebar toggle is a button that when pressed will make a region of a [scroll container](Scroll+Container) appear or disappear. This makes it possible to create sidebars, for instance a menu on a mobile phone that is hidden by default and can be shown by clicking the button. See the picture for an example layout that used the sidebar toggle. 
 
 ![](attachments/16713866/16843980.png)
 
-## General Properties
+## Button properties
 
 {% snippet Caption+Property.md %}
 
@@ -24,7 +19,7 @@ The sidebar toggle used to include settings that governed which layout region wa
 
 {% snippet Button+Style+Property.md %}
 
-## Common Properties
+## Common properties
 
 {% snippet Name+Property.md %}
 
@@ -34,6 +29,39 @@ The sidebar toggle used to include settings that governed which layout region wa
 
 {% snippet Tab+index+Property.md %}
 
-## Visibility Properties
+## General properties
+
+### Region
+
+Choose the region that should be collapsed/expanded by clicking this button.
+
+| Region | Effect |
+| --- | --- |
+| Left | The left region of the layout container will be toggled. |
+| Right | The right region of the layout container will be toggled. |
+
+<div class="alert alert-info">{% markdown %}
+
+The sidebar toggle is right-to-left-aware (RTL) which means that in RTL languages the sidebar will slide in from the right if you choose 'Left'.}
+
+{% endmarkdown %}</div>
+
+_Default value:_ Left
+
+### Mode
+
+Determines how the region will be toggled.
+
+| Mode | Effect |
+| --- | --- |
+| Push content aside | The sidebar moves the rest of the content off-screen (only available mode in Mendix 5.17 and older). |
+| Slide over content | The sidebar moves over the content. |
+| Shrink content | The content shrinks to make space for the sidebar. |
+
+### Initially open
+
+Only applicable if the mode is "Shrink content".
+
+## Visibility properties
 
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

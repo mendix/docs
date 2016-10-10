@@ -5,6 +5,8 @@ parent: "Push+Notifications"
 ---
 In order to send Android push notifications from this module you need to have set up a Firebase account with Firebase Cloud Messaging enabled. To register for Firebase Cloud Messaging and configure the service in the app, you will need to perform the steps below.
 
+There are two possible scenarios: you can create a new FCM project, or you can update your existing GCM project to FCM. Both scenarios are described below.
+
 ## Migrating a GCM project to Firebase Cloud Messaging
 
 To prevent degraded reliability of push notifications delivery, you should migrate existing GCM projects to Firebase Cloud Messaging and upgrade credentials if needed.

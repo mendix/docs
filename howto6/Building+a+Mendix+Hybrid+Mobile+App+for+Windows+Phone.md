@@ -1,36 +1,38 @@
 ---
-title: "Building a Mendix Hybrid Mobile App for Windows Phone"
+title: "How to Build a Mendix Hybrid Mobile App for Windows Phone"
 space: "Mendix 6 How-to's"
 category: "Mobile"
 tags: []
 ---
 
 ## 1 Introduction
-When you want to build a hybrid app package for Windows Phone you probably 
-noted this cannot be done in the cloud portal. It can be done by building the
-Phonegap Build package yourself.
+You may have tried to build a hybrid app package for Windows Phone, and found out this is not possible in the cloud portal. You can do this by building the Phonegap Build package yourself.
 
 This how-to will teach you step-by-step how to create a Windows Phone app package.
 
 ## 2 Prerequisites
-Before starting this how-to, make sure you have the following prerequisites:
+Before starting this how-to, make sure you have completed the following prerequisites:
 
 * A Mendix App with mobile support running in the Mendix Cloud, either in a Free App or on a licensed cloud node.
 * An account for Adobe PhoneGap Build. You can sign up for an account [here](https://build.phonegap.com/plans).
 
+
 ## 3 Building the Windows Phone package
 
 ### 3.1 Creating the Phonegap Build package
-The template for Phonegap Build can be downloaded [here](./attachments/WP8_Phonegap_Build_Template.zip). We need to change 
-some files within the archive, so begin by extracting the archive. There are two files where variables need to be replaced. 
-First open the `config.xml` and replace the following variables:
+In this assignment you will create a Phonegap Build packahge using a provided template.
+1. Download the Phonegap Build template [here (55KB)](./attachments/WP8_Phonegap_Build_Template.zip).
+2. Extract the archive so you can change some files within it.
+
+There are two files with variables that need to be replaced.
+
+3. Open the `config.xml` and replace the following variables:
+  * {{identifier}} - The app identifier. Must be unique for your application and must be reverse-domain name style (e.g. com.yourcompany.yourapp)
+  * {{version}} - A major/minor/patch style version for the app with three numbers. For example 0.0.1
+  * {{name}} - The name of your app
+  * {{description}} - The description of your app
   
-  1. {{identifier}} The app identifier which must be unique for you application and this must be reverse-domain name style (e.g. com.yourcompany.yourapp)
-  2. {{version}} a major/minor/patch style version for the app, with three numbers, such as 0.0.1
-  3. {{name}} The name of the app
-  4. {{description}} Description for your app
-  
-After changing these files the `config.xml` will be something like:
+After changing these files, the `config.xml` will look something like this:
 ```
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
@@ -45,8 +47,12 @@ After changing these files the `config.xml` will be something like:
     .....
 ```
   
-After changing the variables save the file and open the `index.html` file, in this file change the `{{url}}` to the address where your application is
-running, e.g. `https://com.mendixcloud.myapp`, and save the file. The part where the url is used will now look something like:
+4. Save the file and open the `index.html` file.
+5. Change the `{{url}}` to the address where your application is
+running, e.g. `https://com.mendixcloud.myapp`.
+6. Save the file.
+
+The part where the url is used will now look something like:
 
 ```
 ... 
@@ -57,16 +63,23 @@ document.addEventListener("deviceready", function() {
 
 ...
 ```
-We are done replacing variables, now we only need to make sure we create an archive with these changes. This can be done by selecting all the files and
-directories you extract, right click it, and choose the `Send to compressed folder` option. This will result in a new archive file, ready for Phonegap Build.
+You are done replacing variables. Now you only need to make sure you create an archive with these changes.
+
+7. Select all the files and directories you extracted.
+8. Right click the selection and select `Send to compressed folder`. This will create a new archive file that is ready for Phonegap Build.
 
 ### 3.2 Build the Windows Phone App
-After building the Phonegap Build archive we are ready to build the app. Just log in to [Phonegap Build](https://build.phonegap.com/) and upload the archive
-we created in the previous section. This will trigger a build for Windows Phone, so relax and wait for the build to finish.
+After building the Phonegap Build archive you are ready to build the app.
+1. Log in to [Phonegap Build](https://build.phonegap.com/) and upload the archive you created in the previous section.
 
-When the build is finished you can download the Windows Phone app by clicking the `xap` button. Now you can use this app this xap file to deploy it to 
-the Windows store, or to test it on a device.
+This will trigger a build for Windows Phone, so sit bad back and relax while your build archive is being created.
+
+2. When the build is finished download the Windows Phone app by clicking the `xap` button.
+
+You can deploy this xap file to the Windows store, or use it to test the app on a device.
 
 ## 4 Related Content
-
-[Do not enter anything here, this will be generated by Mendix]
+* [Deploy Your First Hybrid Mobile App](Deploy+your+first+Hybrid+Mobile+App.md)
+* [Publishing a Mendix Hybrid Mobile App in Mobile App Stores](Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores.md)
+* [How to Debug a Hybrid Mobile Application](Debug+a+Hybrid+Mobile+Application)
+* [Push Notifications](Push+Notifications)

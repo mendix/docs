@@ -1,5 +1,5 @@
 ---
-title: "Implementation Guide"
+title: "How to Implement Push Notifications"
 space: "Mendix 6 How-to's"
 parent: "Push+Notifications"
 tags: []

@@ -1,21 +1,33 @@
 ---
-title: "Setting up Google Firebase Cloud Messaging Server"
+title: "How to Set Up the Google Firebase Cloud Messaging Server"
 space: "Mendix 6 How-to's"
 parent: "Push+Notifications"
 ---
-In order to send Android push notifications from this module you need to have set up a Firebase account with Firebase Cloud Messaging enabled. To register for Firebase Cloud Messaging and configure the service in the app, you will need to perform the steps below.
+
+## 1 Introduction
+
+In order to send Android push notifications from this module, you need to set up a Firebase account with Firebase Cloud Messaging enabled. To register for Firebase Cloud Messaging and configure the service in the app, you need to perform the steps below.
 
 There are two possible scenarios: you can create a new FCM project, or you can update your existing GCM project to FCM. Both scenarios are described below.
 
-## Migrating a GCM project to Firebase Cloud Messaging
+**This how-to will teach you how to do the following:**
 
-To prevent degraded reliability of push notifications delivery, you should migrate existing GCM projects to Firebase Cloud Messaging and upgrade credentials if needed.
+* Create a new FCM project
+* Update an existing GCM project to FCM
 
-### Step 1 - Log in to developers console
+## 2 Prerequisites
+
+* Have a Firebase account
+
+## 3 Migrating a GCM project to Firebase Cloud Messaging
+
+To prevent the degraded reliability of push notifications delivery, you should migrate existing GCM projects to Firebase Cloud Messaging and upgrade credentials if needed.
+
+### 3.1 Step 1 – Log In to the Developers Console
 
 Open up the Firebase [developers console](https://console.firebase.google.com/) and log in with your Google id.
 
-### Step 2 - Import project
+### 3.2 Step 2 – Import the Project
 
 In the Firebase console, select `Import Google Project`. Select your GCM project from the list of existing projects, select a region, and click on `Add Firebase`.
 
@@ -23,19 +35,19 @@ In the Firebase console, select `Import Google Project`. Select your GCM project
 
 From here, continue with step 3, below.
 
-## Creating a new Firebase Cloud Messaging project
+## 4 Creating a New Firebase Cloud Messaging Project
 
-### Step 1 - Log in to developers console
+### 4.1 Step 1 – Log In to the Developers Console
 
 Open up the Firebase [developers console](https://console.firebase.google.com/) and log in with your Google id.
 
-### Step 2 - Create project
+### 4.2 Step 2 – Create Project
 
 Click `Create new project` and fill in the project name and region for your application. Then click `Create`.
 
 ![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Create_Firebase_Project.png)
 
-### Step 3 - Look up the Cloud Messaging credentials
+### 4.3 Step 3 – Look Up the Cloud Messaging Credentials
 
 In the top left corner of the screen, click on the little cogwheel and select `Project settings`.
 
@@ -45,7 +57,7 @@ On the new page, go to the `Cloud Messaging` tab. Your _Sender ID_ and _Server k
 
 ![](attachments/Setting+up+Google+Firebase+Cloud+Messaging+Server/Open_Cloud_Messaging_Settings.png)
 
-### Step 4 - Configure FCM in your application
+### 4.4 Step 4 – Configure FCM in Your Application
 
 Open your Mendix application, log in as an Admin, and open the `PushNotifications_Administration` page. In this page, navigate to `Configurations` tab. Select the configuration object and click on the `Edit` button if it already exists, or on the `New` button if it does not. For the `DTAP mode` field, choose the option which corresponds to your environment. The `XMPP server` field should have the value `gcm.googleapis.com` whereas the `XMPP Port` field should be `5235`. Enter the **sender id** into the `Sender id` field and the **server key** into the `API Key` field.
 

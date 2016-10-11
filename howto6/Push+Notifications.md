@@ -45,11 +45,11 @@ The current version of the PushNotifications Connector assumes that the mobile a
 
 ### GCM vs FCM
 
-* Google is replacing GCM with FCM (Firebase Cloud Messaging). This has impact on how Google projects need to be set up and on how credentials can be obtained. The PushNotifications module will occasionally refer to GCM. We'll replace these references in the near future.
+Google is replacing GCM with FCM (Firebase Cloud Messaging). This impacts how Google projects need to be set up and how credentials can be obtained. The PushNotifications module will occasionally refer to GCM. We'll replace these references in the near future.
 
 ### APNs
 
-* From the Admin pages you currently cannot disable the APNs service completely. We will address this in a later release.
+From the Admin pages, you currently cannot disable the APNs service completely. We will address this in a later release.
 
 ## Dependencies
 

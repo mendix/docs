@@ -4,11 +4,16 @@ space: "Mendix 6 How-to's"
 category: "Mobile"
 tags: []
 ---
-*   [Implementation Guide](Implementation+Guide)
-*   [Testing the Implementation](Testing+the+Implementation)
-*   [APIs](APIs)
-*   [Setting up Apple Push Notification Server](Setting+up+Apple+Push+Notification+Server)
-*   [Setting up Firebase Cloud Messaging Server](Setting+up+Firebase+Cloud+Messaging+Server)
+
+## How-To's
+
+These are the how-to's for push notifications:
+
+* [How to Implement Push Notifications](Implementation+Guide)
+* [How to Test the Push Notifications Implementation](Testing+the+Implementation)
+* [How to Set Up the Apple Push Notification Server](Setting+up+Apple+Push+Notification+Server)
+* [How to Set Up the Firebase Cloud Messaging Server](Setting+up+Firebase+Cloud+Messaging+Server)
+* [How to Use the Push Notification APIs](APIs)
 
 Push Notifications let your application notify a user of events even when the user is not actively using the application. This is a native capability available on both Android and iOS devices, and controlled via Google Cloud Messaging (GCM) and Apple Push Notifications service (APNs). This project is meant to make it easy for Mendix developers who want to include Push Notification capabilities in their Mendix hybrid mobile application.
 
@@ -18,46 +23,45 @@ In general, the Mendix Push Notifications solution consists of two parts: the `P
 
 ![](attachments/19203424/20217881.png)
 
-## Pre-requisites
+## Prerequisites
 
-*   Mendix platform account (You can sign up [here](https://www.mendix.com/try-now/))
-*   Mendix Modeler version 6.8.1 or newer (You can download it [here](https://appstore.home.mendix.com/link/modeler))
-*   Mobile device (To get started, we recommend an Android device connected to your development machine by data cable)
-*   [PhoneGap Build](https://build.phonegap.com/) account
+* Mendix platform account (You can sign up [here](https://www.mendix.com/try-now/))
+* Mendix Modeler version 6.8.1 or newer (You can download it [here](https://appstore.home.mendix.com/link/modeler))
+* Mobile device (To get started, we recommend an Android device connected to your development machine by data cable)
+* [PhoneGap Build](https://build.phonegap.com/) account
 
 ## Supported Platforms
 
-*   Android 4.4 and newer
-*   iOS 9.0 and newer
+* Android 4.4 and newer
+* iOS 9.0 and newer
 
 ## Demo
 
 An example implementation of the Push Notifications Connector module [can be found in the AppStore](https://appstore.home.mendix.com/link/app/3020/Mendix/Push-Notifications-Connector-Demo). To start sending push notifications to your Android or iOS device, you just need to download the project, deploy it to a Free App and follow the on-screen instructions.
 
-## Limitations and known issues
+## Limitations and Known Issues
 
 The current version of the PushNotifications Connector assumes that the mobile app and the "back-end" part will reside in the same project.
 
 ### GCM vs FCM
 
-*   Google is replacing GCM with FCM (Firebase Cloud Messaging). This has impact on how Google projects need to be set up and on how credentials can be obtained. The PushNotifications module will occasionally refer to GCM. We'll replace these references in the near future.
+* Google is replacing GCM with FCM (Firebase Cloud Messaging). This has impact on how Google projects need to be set up and on how credentials can be obtained. The PushNotifications module will occasionally refer to GCM. We'll replace these references in the near future.
+
 ### APNs
 
-*   From the Admin pages you currently cannot disable the APNs service completely. We will address this in a later release.
+* From the Admin pages you currently cannot disable the APNs service completely. We will address this in a later release.
 
 ## Dependencies
 
-*   Java Apple Push Notification Service Library: BSD 3-clause
-*   Apache ServiceMix - Commons Codec: Apache 2.0
-*   Apache Commons IO: Apache 2.0
-*   Jackson (core+databind+annotations): Apache 2.0
-*   JSON.simple: Apache 2.0
-*   Smack (core+tcp): Apache 2.0 
-*   XmlPull: Public domain
-*   XmlPull XPP3: Indiana University Extreme! Lab Software License
+* Java Apple Push Notification Service Library: BSD 3-clause
+* Apache ServiceMix - Commons Codec: Apache 2.0
+* Apache Commons IO: Apache 2.0
+* Jackson (core+databind+annotations): Apache 2.0
+* JSON.simple: Apache 2.0
+* Smack (core+tcp): Apache 2.0 
+* XmlPull: Public domain
+* XmlPull XPP3: Indiana University Extreme! Lab Software License
 
 ## Contributing
 
-For more information on contributing to this repository visit [Contributing to a GitHub repository](Contribute+to+a+GitHub+Repository)!
-
-[Implementation Guide >](Implementation+Guide)
+For more information on contributing to this repository, see [How to Contribute to a GitHub repository](Contribute+to+a+GitHub+Repository).

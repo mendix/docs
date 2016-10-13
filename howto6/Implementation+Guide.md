@@ -46,15 +46,15 @@ After importing the module and the dependencies, your error dock will inform you
 ### 3.3 Step 3 – Include the Push Notifications Snippet in the Application's Layouts
 
 To properly register your device with a third party remote push service (FCM or APNs) and display in-app notifications, the widget should be put on the pages of your app. One way to accomplish this is by
-drag-and-dropping the snippet called PushNotification_Snippet (located in _USE ME folder in the PushNotifications module) into the layouts used by your app. Note that push notifications are currently not working on 
-the desktop. 
+drag-and-dropping the snippet called PushNotification_Snippet (located in _USE ME folder in the PushNotifications module) into the layouts used by your app. Note that push notifications are currently not working on
+the desktop.
 
-If your app is offline-compatible, please ensure that a sync button is available to the user, so that device registration requests will be synchronized with the server. Also, make sure your app has an [offline device profile](/refguide6/Offline+device+profile). 
+If your app is offline-compatible, please ensure that a sync button is available to the user, so that device registration requests will be synchronized with the server. Also, make sure your app has an [offline device profile](/refguide6/Offline+device+profile).
 
 <div class="alert alert-warning">
 
 Please do not remove the buttons with the caption "GCM Settings reference" and "Device Registration reference" from the PushNotification_Snippet; they are necessary to make the widget offline-compatible. Note that both buttons are
-invisible to the user. 
+invisible to the user.
 
 </div>
 
@@ -73,7 +73,7 @@ Add the `PushNotifications_Administration` page to the project navigation, so it
 
 <div class="alert alert-warning">
 
-Do not add the administration pages to the navigation layout of offline devices; the administration pages are not offline compatible. 
+Do not add the administration pages to the navigation layout of offline devices; the administration pages are not offline compatible.
 
 </div>
 
@@ -99,11 +99,11 @@ If you are using a Free App, you should set a default value for the constant in 
 
 Set up access to APNs and FCM and configure them in your application. Note that starting with FCM is recommended because it is significantly less complicated than setting up APNs. You can return to this step later on to set up APNs.
 
-See [Setting up Apple Push Notification Server](Setting+up+Apple+Push+Notification+Server) and [Setting up Firebase Cloud Messaging Server](Setting+up+Firebase+Cloud+Messaging+Server) for the details.
+See [Setting up Apple Push Notification Server](Setting+up+Apple+Push+Notification+Server) and [Setting up Firebase Cloud Messaging Server](Setting+up+Google+Firebase+Cloud+Messaging+Server) for the details.
 
 ### 3.9 Step 9 – Build the Hybrid Mobile Application
 
-You will need to build the hybrid mobile application. Refer to the [Publishing a Mendix Hybrid Mobile App how-to](Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores) to get the explanation on how to do this. 
+You will need to build the hybrid mobile application. Refer to the [Publishing a Mendix Hybrid Mobile App how-to](Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores) to get the explanation on how to do this.
 
 For more information about PhoneGap Build, you can refer to their [documentation](http://docs.build.phonegap.com/en_US/index.html).
 

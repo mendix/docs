@@ -33,7 +33,7 @@ To create a Phonegap Build package using a provided template, follow these steps
     * {{version}} - A major/minor/patch style version for the app with three numbers. For example 0.0.1
     * {{name}} - The name of your app
     * {{description}} - The description of your app
-    
+
     After changing these variables, the `config.xml` will look similar to this:
     ```
     <?xml version="1.0" encoding="UTF-8" ?>
@@ -53,8 +53,8 @@ To create a Phonegap Build package using a provided template, follow these steps
 running (for example, `https://com.mendixcloud.myapp`).
 6. Save the file. The part where the URL is used will now look similar to this:
     ```
-    ... 
-    
+    ...
+
     document.addEventListener("deviceready", function() {
         mxapp.initialize("https://com.mendixcloud.myapp", enableOffline, requirePin);
     });
@@ -76,7 +76,7 @@ To build the Windows Phone app, follow these steps:
 You can deploy this xap file to the Windows store, or use it to test the app on a device.
 
 ## 4 Related Content
-* [How to Deploy Your First Hybrid Mobile App](Deploy+your+first+Hybrid+Mobile+App.md)
-* [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores.md)
+* [How to Deploy Your First Hybrid Mobile App](Deploy+your+first+Hybrid+Mobile+App)
+* [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores)
 * [How to Debug a Hybrid Mobile Application](Debug+a+Hybrid+Mobile+Application)
 * [Push Notifications](Push+Notifications)

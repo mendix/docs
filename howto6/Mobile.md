@@ -16,4 +16,4 @@ These are the mobile how-to's:
     * [Testing the Implementation](Testing+the+Implementation)
     * [APIs](APIs)
     * [Setting up Apple Push Notification Server](Setting+up+Apple+Push+Notification+Server)
-    * [Setting up Google Cloud Messaging Server](Setting+up+Google+Cloud+Messaging+Server)
+    * [Setting up Google Cloud Messaging Server](Setting+up+Google+Firebase+Cloud+Messaging+Server)

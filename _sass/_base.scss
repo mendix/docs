@@ -52,6 +52,10 @@ a {
         }
       }
     }
+
+    > thead {
+      background-color: $color-lightgrey;
+    }
   }
 
   img:not(.overview-block-icon) {

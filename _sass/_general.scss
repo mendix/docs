@@ -40,6 +40,25 @@
   }
 }
 
+.footer {
+  border-top: $border-color 1px solid;
+  background: $color-lightgrey;
+
+  a {
+    color: $goldfish-orange;
+    &:hover {
+      color: $link-color;
+    }
+  }
+
+  &_text {
+    padding: 0.5em;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 2;
+  }
+}
+
 .breadcrumb {
 
   margin-bottom: 0;

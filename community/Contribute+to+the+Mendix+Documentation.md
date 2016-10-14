@@ -66,7 +66,7 @@ When writing a new how-to, make sure the Markdown file name is the same as the t
 
 When adding new image files, make sure the image file name describes what the image shows (meaning, labels on the UI and any specific data). Use underscores ("`_`") between each word of your image file name (for example, "New_App_Starting_Screen").
 
-The following image file types are allowed: .jpg, .png, .gif.
+The following image file types are allowed: *.jpg*, *.png*, *.gif*.
 
 ## 6 Related Content
 

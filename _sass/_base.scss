@@ -140,7 +140,10 @@ a {
 .post-content {
   margin: 0 0 30px;
 
-  > * { margin: 20px 0; }
+  > * {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
   blockquote {
     border-left: 4px solid #e8e8e8;

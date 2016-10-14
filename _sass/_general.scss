@@ -121,7 +121,6 @@
 .post {
   position: relative;
   .github-edit-button {
-    margin-top: -30px;
     float: right;
     background-color: $white-smoke;
     border-color: $white-smoke;
@@ -134,6 +133,30 @@
     }
     span {
       padding-left: 0.5em;
+    }
+  }
+
+  .toc {
+    display: none;
+    border: $border-color 1px solid;
+    background: $color-lightgrey;
+    padding: 1em;
+    &_title {
+      width: 100%;
+      border-bottom: 1px solid $border-color;
+      display: block;
+      padding-bottom: 0.5em;
+      margin-bottom: 0.5em;
+    }
+    > ul {
+      padding-left: 0;
+    }
+    &_list {
+      list-style-type: none;
+      margin-left: 0;
+      &_item {
+
+      }
     }
   }
 }

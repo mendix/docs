@@ -4,9 +4,7 @@ space: "Mendix 6 How-to's"
 category: "Custom Widget Development"
 tags: []
 ---
-This How-To will teach you how to use the Widget Development Plugin for Adobe Brackets. The Widget Development Plugin for Adobe Brackets is a plugin for Adobe Brackets that allows a Mendix Developer to quickly create a Custom Widget project. Adobe Brackets is a code editor for HTML / JavaScript and CSS. The Widget Development Plugin for Adobe Brackets will turn Brackets into an IDE (_Integrated Developement Environment)_ for creating Custom Widgets for the Mendix platform. 
-
-# Table of contents
+This How-To will teach you how to use the Widget Development Plugin for Adobe Brackets. The Widget Development Plugin for Adobe Brackets is a plugin for Adobe Brackets that allows a Mendix Developer to quickly create a Custom Widget project. Adobe Brackets is a code editor for HTML / JavaScript and CSS. The Widget Development Plugin for Adobe Brackets will turn Brackets into an IDE (_Integrated Developement Environment)_ for creating Custom Widgets for the Mendix platform.
 
 ## 1\. Preparations
 
@@ -27,7 +25,7 @@ Please follow these preparations before continuing with this how to.
     ![](attachments/18448565/18579912.png)
 3.  Click **Install** for the **Widget Development Plugin for Adobe Brackets** extension:
     ![](attachments/18448565/18579911.png)
-    The Widget Development Plugin is now available in Adobe Brackets. 
+    The Widget Development Plugin is now available in Adobe Brackets.
 
 ## 3\. Creating a new widget
 
@@ -38,7 +36,7 @@ The plugin adds menu options to Brackets. One of them is to start a new Custom W
 
 The name of the widget is very important, this name is the name used in Mendix. It is strongly recommended to use [CamelCase](http://en.wikipedia.org/wiki/CamelCase) naming convention. Each new widget should at have an author, version number, copyright, license, package name, widget name and path defined before you can click OK. The location directory must alsoexist.
 
-Information about the settings: 
+Information about the settings:
 
 *   The author should only contain a-z and A-Z characters
 *   The license should only contain a-z and A-Z characters
@@ -72,7 +70,7 @@ Information about the settings:
 
 <div class="alert alert-info">
 
-Because the boilerplate is used you will have a widget that is compliant with the standards we have defined for a GitHub Custom Widget repository. 
+Because the boilerplate is used you will have a widget that is compliant with the standards we have defined for a GitHub Custom Widget repository.
 
 </div>
 

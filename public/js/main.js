@@ -2,10 +2,7 @@
   /*
     @author: J.W. Lagendijk <jelte.lagendijk@mendix.com>
 
-    This provides the basic functionality in the docs.mendix.com site.
-    This will be replaced later
-
-    Work-in-progress
+    This provides the basic functionality in the docs.mendix.com site. Work-in-progress
   */
   $(function() {
 
@@ -210,6 +207,86 @@
     $('.form-control-clear').click(function() {
         $(this).parent().find('input[type="text"]').val('')
           .trigger('propertychange').focus();
+    });
+
+    /*****************
+      Image lightbox
+    ******************/
+    $('.mxdefault').find('img').each(function () {
+      var $img = $(this),
+          src = $img.attr('src');
+      if (src && src.indexOf('attachments') !== -1) {
+        $img.wrap('<a href="' + src + '" rel="lightbox[mxdefault]"></a>');
+      }
+    })
+
+    /*****************
+      Table of contents
+    ******************/
+    $('#toc').toc({
+      noBackToTopLinks: true,
+      title: '<span class="toc_title">Table of contents</span>',
+      showEffect: 'slideDown',
+      showSpeed: '250',
+      listType: 'ul',
+      headers: [
+        '.post-content h1',
+        '.post-content h2',
+        '.post-content h3',
+        '.post-content h4',
+        '.post-content h5',
+        '.post-content h6'
+      ].join(','),
+      classes: {
+          list: 'toc_list',
+          item: 'toc_list_item'
+      }
+    });
+
+    /*****************
+      Github file info
+    ******************/
+    $('.github_file_info').each(function () {
+      $this = $(this), path = $this.data('path');
+      if (path) {
+        $.get('https://api.github.com/repos/mendix/docs/commits?sha=master&path=' + encodeURIComponent(path), {}, function (data) {
+          if (data.length === 0) { return; }
+          var first = data[0];
+          $this.find('.link').attr('href', first.html_url);
+          if (first.committer) {
+            if (first.committer.html_url) {
+              $this.find('.author').attr('href', first.committer.html_url);
+            }
+          }
+          if (first.commit && first.commit.author) {
+            if (first.commit.author.name) {
+              $this.find('.author').text(first.commit.author.name);
+            }
+            if (first.commit.author.date) {
+              var m = moment(first.commit.author.date);
+              $this.find('.datetime').text(m.fromNow());
+            }
+          }
+
+          var committers = {},
+              contributors = 0;
+          $.each(data, function (i, d) {
+            var author = d.author;
+            if (author && author.login && author.url && author.avatar_url) {
+              if (!committers[author.login]) {
+                committers[author.login] = true; contributors++;
+                $('<img src="' + author.avatar_url + '" alt="' + author.login + '" />').appendTo($this.find('.github_file_info_contributors'));
+              }
+            }
+          });
+          if (contributors == 0) {
+            $this.find('.github_file_info_contributors').hide();
+          } else {
+            $this.find('.github_file_info_count').text(contributors + ' contributor' + (contributors > 1 ? 's' : ''));
+          }
+          $this.show();
+        }, 'json');
+      }
     });
   });
 })(jQuery));

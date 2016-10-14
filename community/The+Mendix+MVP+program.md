@@ -7,8 +7,6 @@ At Mendix we know that the impact of our community is huge. It is a vibrant and 
 
 With the MVP program we want to empower our MVPs and make them even more important and visible in the community by retaining the high level of knowledge of our top contributors and give them a closer view on the roadmap of Mendix.
 
-# Table of contents
-
 ## 1. Selection
 
 Mendix will select a limited number of people who will receive the year-long MVP status, which will be awarded after a thorough review of their online and offline contributions to the Mendix developer community in the past year. There are a few simple rules:

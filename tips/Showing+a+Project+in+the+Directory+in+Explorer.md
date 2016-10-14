@@ -6,8 +6,6 @@ category: "Tips and Tricks"
 
 Mendix applications are by default stored on the local hard drive of the computer on which it is being developed. Sometimes it is needed to go to this project directory to amend or add files. Therefore this How-to will teach you how to open the project directory.  
 
-# Table of contents
-
 ## 1\. Open the project directory
 
 The project directory can be opened from the Windows file explorer and in  the Mendix Business Modeler. The quickest way to open the project directory is in the Mendix Business Modeler and can be done via the menu bar:

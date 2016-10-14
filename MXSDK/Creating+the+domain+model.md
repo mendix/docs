@@ -8,8 +8,6 @@ In this tutorial you will learn:
 *   how to create a domain model with inheritance
 *   how to explain the relation between the Meta Model and the SDK
 
-## Table of Contents
-
 ## Introduction
 
 You now have your first script up and running, which creates a new app with a single entity. This tutorial guides you through the process of creating a more extensive domain model. At the end of this tutorial you will have a domain model with two entities: `Customer` and `Invoice`. These entities should be associated with a one-to-many association. The `Customer` entity should become a specialization of the `Administration.Account` entity (and indirectly `System.User`), so that customers can log into the app.

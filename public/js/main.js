@@ -211,5 +211,16 @@
         $(this).parent().find('input[type="text"]').val('')
           .trigger('propertychange').focus();
     });
+
+    /*****************
+      Image lightbox
+    ******************/
+    $('.mxdefault').find('img').each(function () {
+      var $img = $(this),
+          src = $img.attr('src');
+      if (src && src.indexOf('attachments') !== -1) {
+        $img.wrap('<a href="' + src + '" rel="lightbox[mxdefault]"></a>');
+      }
+    })
   });
 })(jQuery));

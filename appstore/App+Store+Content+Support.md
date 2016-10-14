@@ -3,8 +3,6 @@ title: "App Store Content Support"
 space: "App Store"
 category: "App Store"
 ---
-# Table of contents
-
 ## 1. App Store Content Support
 
 Support on App Store content is determined by its content support category and the Service Level Agreement (SLA) one posesses. We distinguish the following content support categories:
@@ -15,7 +13,7 @@ Mendix supports all content in this category when you are equipped with a SLA (*
 
 _Mendix Extended content_
 
-Though developed by the community, Mendix supports all content in this category when you are equipped with a **gold** or **platinum** SLA. Content in this category will be proactively tested on compatibility with every Mendix Modeler release. 
+Though developed by the community, Mendix supports all content in this category when you are equipped with a **gold** or **platinum** SLA. Content in this category will be proactively tested on compatibility with every Mendix Modeler release.
 
 _Community content_
 

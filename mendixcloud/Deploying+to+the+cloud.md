@@ -6,8 +6,6 @@ category: "Mendix Cloud"
 
 It has never been easier to deploy a Mendix application to the cloud. This How-to will explain the options a developer has to deploy applications to a connected cloud node.
 
-# Table of contents
-
 ## 1\. Preparation
 
 Before you can deploy an app to the cloud, make sure you meet the following requirements:

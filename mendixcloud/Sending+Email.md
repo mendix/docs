@@ -17,8 +17,6 @@ You may want to send email in the Mendix Cloud via, for instance, the [Email Mod
 
 In our paid plans we include a local mail server for convenience and backwards compatibility. For new applications, or applications that send large amounts of e-mail we recommend using an external e-mail service.
 
-# Table of contents
-
 ## 1. External Email Providers
 
 In general we recommend external services as these offer specialized tools for sending e-mail, working with spam filters, keeping track of sent e-mail and giving insights into your target reach via analytics tools. The [Email Module](https://appstore.home.mendix.com/link/app/259/Mendix/E-mail-module-with-templates) from the AppStore is compatible with all providers that offer an SMTP interface. If you want to use other ways of sending e-mail using an external service, such as REST APIs, you can use the [REST Services Module](https://appstore.home.mendix.com/link/app/997/Mendix/Rest-Services) from the AppStore or create your own Java actions for sending e-mail.

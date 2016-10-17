@@ -3,20 +3,23 @@ title: "Feature Requests"
 space: "Community"
 parent: "Community+Projects"
 ---
-This page describes how we handle feature requests. In general, we process **all** feature requests through the IdeaForum. The one exception is when the implementation of your requested feature is already committed by our Sales and/or Customer Success Management teams, AND approved by our product managers. In that case you should use our support portal.
+This page describes how we handle feature requests. In general, we process **all** feature requests through the Idea Forum. The one exception is when the implementation of your requested feature is already committed by our Sales and/or Customer Success Management teams, and approved by our product managers. In that case you should use our support portal.
 
-Using the IdeaForum we collect all the ideas from our community on a quarterly basis. Together with the MVPs these ideas will be prioritized, and every quarter the top ideas will be added to the platform.
+Using the Idea Forum we collect all the ideas from our community on a quarterly basis. Together with the MVPs these ideas will be prioritized, and every quarter the top ideas will be added to the platform.
 
 ## Add an idea
 
-Adding an idea to the IdeaForum is quite simple:
+Make sure you search the Idea Forum for your idea before submitting a new idea. There may be someone else who posted the same idea! Add a new idea using the following steps: 
 
-1.  Go to ???
-2.  Add an answer to the open IdeaForum topic
+1.  Go to **[The Mendix forum](http://forum.mendix.com)**.
+2.  Go to the **Ideas** tab.
+3. Click **Submit idea**.
+4. Explain as clearly as possible what your idea is, and what its benefit would be once implemented.
+
 
 ## Upvotes
 
-All the ideas will be publicly visible. By adding upvotes to ideas you can show the community and our product management what you would like to see added to the Mendix platform. The upvotes will be used as input for the MVPs and our Product Management Team to decide which features will be nominated for implementation.
+All the ideas will be publicly visible. By upvoting ideas you can show the community and our product management what you would like to see added to the Mendix platform. The upvotes will be used as input for the MVPs and our Product Management Team to decide which features will be nominated for implementation.
 
 ## Prioritization
 

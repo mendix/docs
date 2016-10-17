@@ -9,10 +9,16 @@ Using the IdeaForum we collect all the ideas from our community on a quarterly b
 
 ## Add an idea
 
-Adding an idea to the IdeaForum is quite simple:
+Adding an idea to the Idea Forum is really simple. However, make sure to search the forum first. There may be someone else who posted the same idea! If you do want to add a new idea, you can do the following: 
 
-1.  Go to ???
-2.  Add an answer to the open IdeaForum topic
+1.  Go to [The Mendix forum](http://forum.mendix.com)
+2.  Select the 'Idea' tab at the top
+
+![idea_tab_mendix_forum](https://cloud.githubusercontent.com/assets/2244753/19437634/8ad7f46a-9476-11e6-8ee6-273a196bfbfa.png)
+
+3. Click the 'Submit Idea' button
+4. Explain as clearly as possible what your idea is, and what the benefit of the implemented idea would be.
+
 
 ## Upvotes
 

@@ -1,5 +1,5 @@
 ---
-title: "How to Extend Your Application with Custom Java"
+title: "Extend Your Application with Custom Java"
 space: "Mendix 6 How-to's"
 category: "Logic & Business Rules"
 tags: []
@@ -36,7 +36,7 @@ You can use any text editor to create custom Java actions, but we highly recomme
 
     ![](attachments/18448685/18581052.png)
 
-3. Click **Add **to add a parameter:
+3. Click **Add** to add a parameter:
 
     ![](attachments/18448685/18581050.png)
 
@@ -78,7 +78,7 @@ To edit the Java action in Eclipse, follow these steps:
 
     ![](attachments/18448685/18581026.png)
 
-5. Double-click the **ReverseCustomerName.java** in the **Package Explorer** of Eclipse:
+5. Double-click **ReverseCustomerName.java** in the **Package Explorer** of Eclipse:
 
     ![](attachments/18448685/18581041.png)
 
@@ -89,8 +89,8 @@ To edit the Java action in Eclipse, follow these steps:
     As you can see, the Modeler generated a variable for the input customer object name `inputCustomer`. You can use that variable to get the name of the customer and reverse it like this:
 
     ```java
-    		String customerName = this.inputCustomer.getName(this.getContext());
-    		return new StringBuilder(customerName).reverse().toString();
+    String customerName = this.inputCustomer.getName(this.getContext());
+    return new StringBuilder(customerName).reverse().toString();
     ```
 
 6. Insert the above code between the `//BEGIN USER CODE` and `//END USER CODE` comment statements. It should look like this:
@@ -116,34 +116,33 @@ To edit the Java action in Eclipse, follow these steps:
 
     ![](attachments/18448685/18581036.png)
 
-5. Open the new Microflow, which should look like this:
+5. Open the new microflow, which should look like this:
 
     ![](attachments/18448685/18581035.png)
 
-6. Drag the **Java action** from the **Project Explorer** onto the line between the green start event and red end event. This generates a Java action activity:
+6. Drag the **ReverseCustomerName** Java action from the **Project Explorer** onto the line between the green start event and red end event. This generates a Java action activity:
 
     ![](attachments/18448685/18581034.png)
 
-7. Double-click the generated activity to open the **Call Java Action** properties editor.
-8. Double click the first argument to open the **expression editor**:
+7. Double-click the generated activity to open the **Call Java Action** properties editor, and then double-click the first argument to open the expression editor:
 
     ![](attachments/18448685/18581033.png)
 
-9. Press and hold the **Ctrl** key and press the spacebar, which will open the code completion.
-10. Select **$Customer (MyFirstModule.Customer)**:
+8. Press and hold the **Ctrl** key and press the spacebar to open the code completion editor.
+9. Select **$Customer (MyFirstModule.Customer)**:
 
     ![](attachments/18448685/18581032.png)
 
-11. Click **OK** to save the expression.
-12. In the **Call Java Action** window, change the output **Variable** to **ReversedName**:
+10. Click **OK** to save the expression.
+11. In the **Call Java Action** window, change the output **Variable** to *ReversedName*:
 
     ![](attachments/18448685/18581031.png)
 
-13. Click **OK** to save the properties. The microflow should now look like this:
+12. Click **OK** to save the properties. The microflow should now look like this:
 
     ![](attachments/18448685/18581023.png)
 
-14. Open the **Toolbox** from the bottom-right corner of the Modeler:
+13. Open the **Toolbox** from the bottom-right corner of the Modeler:
 
     ![](attachments/2949137/3080422.png)
 
@@ -151,37 +150,45 @@ To edit the Java action in Eclipse, follow these steps:
 
     ![](attachments/2949137/3080419.png)
 
-15. Drag a show message activity from the **Toolbox** to the line between the green start and red end event.
-16. Double-click the activity to open the **Show Message** properties editor, and do the following:
-17. Fill in **Reversed name: {1}** as Template. 
+14. Drag a show message activity from the **Toolbox** to the line between the green start and red end event.
+15. Double-click the activity to open the **Show Message** properties editor.
+16. Enter *Reversed name: {1}* for **Template**:
+
     ![](attachments/18448685/18581030.png)
-18. Add a new parameter by clicking the **New** button. This opens the expression editor.
-19. Press and hold the **Ctrl** button and press **space.** This opens code completion.
-20. Select **$ReversedName.** This is the output variable of the Java action.
+
+17. Click the **New** button to add a new parameter to open the expression editor.
+18. Press and hold the **Ctrl** button and press the spacebar to open the code completion editor.
+19. Select **$ReversedName (String)**, which is the output variable of the Java action:
 
     ![](attachments/18448685/18581028.png)
 
-21. Click **OK** to save the parameter. The show message properties should now look like this:![](attachments/18448685/18581027.png)
+20. Click **OK** to save the parameter. The show message activity properties should now look like this:
 
-23. Click **OK** to save the show message activity. This Microflow should now look like this:
+    ![](attachments/18448685/18581027.png)
+
+21. Click **OK** to save the show message activity. The microflow should now look like this:
+
     ![](attachments/18448685/18581022.png)
 
-## 6 Deploy and See the Results
+## 6 Deploying and Seeing the Results
 
-1.  Click **Run in Sandbox** to deploy the application to the cloud. The Business Modeler automatically commits the changes to TeamServer (version control).
+1. Click **Run** to deploy the application to the cloud. The Modeler automatically commits the changes to Team Server for version control.
+
     ![](attachments/8784287/8946349.png)
-2.  As soon as the deployment process is complete, click **View App** to open the application in your browser.
+
+2.  As soon as the deployment process is completed, click **View App** to open the application in your browser:
+
     ![](attachments/8784287/8946352.png)
-3.  Open the customers overview, select a row and click the **Reverse Name** button. You should now see a message pop-up with the reversed customer name.
 
-## 7 Related content
+3.  Open the customers overview, select a row, and click **Reverse Name**. You should now see a message pop-up window with the reversed customer name.
 
-* [Define access rules using XPath](Define+Access+Rules+Using+XPath)
-* [Triggering Logic using Microflows](Triggering+Logic+using+Microflows)
-* [Creating a Custom Save Button](Create+a+Custom+Save+Button)
-* [Extending Your Application with Custom Java](Extending+Your+Application+with+Custom+Java)
-* [Working With Lists in a Microflow](Working+With+Lists+in+a+Microflow)
-* [Optimizing Retrieve Activities](Optimizing+Retrieve+Activities)
-* [Error Handling](Set+Up+Error+Handling)
-* [Optimizing Microflow Aggregates](Optimizing+Microflow+Aggregates)
-* [Extract and use sub microflows](Extract+and+use+sub+microflows)
+## 7 Related Content
+
+* [How to Define Access Rules Using XPath](Define+Access+Rules+Using+XPath)
+* [How to Trigger Logic Using Microflows](Triggering+Logic+using+Microflows)
+* [How to Create a Custom Save Button](Create+a+Custom+Save+Button)
+* [How to Work with Lists in a Microflow](Working+With+Lists+in+a+Microflow)
+* [How to Optimize Retrieve Activities](Optimizing+Retrieve+Activities)
+* [How to Set Up Error Handling](Set+Up+Error+Handling)
+* [How to Optimize Microflow Aggregates](Optimizing+Microflow+Aggregates)
+* [How to Extract and Use Sub Microflows](Extract+and+use+sub+microflows)

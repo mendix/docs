@@ -1,0 +1,3 @@
+exportfromconfluence5:
+  type: 'warning'
+  text: 'This space has recently been converted from Confluence. It might contain errors, we are working on fixing them'

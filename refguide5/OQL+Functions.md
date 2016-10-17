@@ -1,0 +1,15 @@
+---
+title: "OQL Functions"
+category: "refguide5"
+space: "Reference Guide 5"
+---
+
+
+*   [OQL CAST](OQL+CAST)
+*   [OQL COALESCE](OQL+COALESCE)
+*   [OQL DATEDIFF](OQL+DATEDIFF)
+*   [OQL DATEPART](OQL+DATEPART)
+*   [OQL LENGTH](OQL+LENGTH)
+*   [OQL RANGEBEGIN](OQL+RANGEBEGIN)
+*   [OQL RANGEEND](OQL+RANGEEND)
+*   [OQL ROUND](OQL+ROUND)

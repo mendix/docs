@@ -6,6 +6,7 @@ Set the cell value in a DataGrid row
 
 ## Usage
 
+## Input Parameters
 Name | Datatype | Description
 ---- | --------- | ---------------
 DataGrid Row | WebElement | The DataGrid row to insert the value into

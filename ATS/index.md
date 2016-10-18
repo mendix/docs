@@ -50,12 +50,12 @@ The Reference Guide is divided in different sections, each describing a certain 
 
 ## [Configuration](Configuration)
 
-*   [Configure Selenium hubs](Configuration)
-*   [Configure Test Applications](Configuration)
+*   [Configure Selenium hubs](Configuration#configure-the-selenium-hubs)
+*   [Configure Test Applications](Configuration#configure-test-applications)
 
 ## [Administration](Administration)
 
-*   [Manage Projects](Administration)
-*   [Add Selenium Configurations](Administration)
-*   [Add Applications](Administration)
-*   [Create Accounts](Administration)
+*   [Manage Projects](Administration#manage-projects)
+*   [Add Selenium Configurations](Administration#add-selenium-configurations)
+*   [Add Applications](Administration#add-applications)
+*   [Create Accounts](Administration#create-accounts)

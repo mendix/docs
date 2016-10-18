@@ -50,7 +50,7 @@ As an admin user, you can add and configure applications to test.
 
 ![Add Test Applications](attachments/Administration/applications.png)
 
-For more information, see [Configure Test Applications](Configuration#Applications).
+For more information, see [Configure Test Applications](Configuration#configure-test-applications).
 
 ## Create Accounts
 

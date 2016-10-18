@@ -153,18 +153,10 @@ Click [here](14091768) to go the fourth how-to on how to create a simple HRM ap
 
 ## 4\. Related content
 
-*   [Build a simple HRM app 1: Create, manage and deploy the app](/howto50/Build+a+simple+HRM+app+1%3A+Create%2C+manage+and+deploy+the+app)
-*   [Build a simple HRM app 1: Create, manage and deploy the app](/howto6/Build+a+simple+HRM+app+1%3A+Create%2C+manage+and+deploy+the+app)
-*   [Build a simple HRM app 2: First steps in building a rich GUI](/howto50/Build+a+simple+HRM+app+2%3A+First+steps+in+building+a+rich+GUI)
-*   [Build a simple HRM app 2: First steps in building a rich GUI](/howto6/Build+a+simple+HRM+app+2%3A+First+steps+in+building+a+rich+GUI)
-*   [Build a simple HRM app 3: Show related data in the GUI](/howto50/Build+a+simple+HRM+app+3%3A+Show+related+data+in+the+GUI)
-*   [Build a simple HRM app 3: Show related data in the GUI](/howto6/Build+a+simple+HRM+app+3%3A+Show+related+data+in+the+GUI)
-*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](/howto50/Build+a+simple+HRM+app+4%3A+Enrich+the+GUI+with+Filter+Options)
-*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](/howto6/Build+a+simple+HRM+app+4%3A+Enrich+the+GUI+with+Filter+Options)
-*   [Build a simple HRM app 5: Smarten up your app with business logic](/howto50/Build+a+simple+HRM+app+5%3A+Smarten+up+your+app+with+business+logic)
-*   [Build a simple HRM app 5: Smarten up your app with business logic](/howto6/Build+a+simple+HRM+app+5%3A+Smarten+up+your+app+with+business+logic)
-
-
+*   [Build a simple HRM app 1: Create, manage and deploy the app](Build+a+simple+HRM+app+1+Create+manage+and+deploy+the+app)
+*   [Build a simple HRM app 2: First steps in building a rich GUI](Build+a+simple+HRM+app+2+First+steps+in+building+a+rich+GUI)
+*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](Build+a+simple+HRM+app+4+Enrich+the+GUI+with+Filter+Options)
+*   [Build a simple HRM app 5: Smarten up your app with business logic](Build+a+simple+HRM+app+5+Smarten+up+your+app+with+business+logic)
 
 Learn more about this topic using the following helpful links:
 

@@ -92,7 +92,7 @@ You can also browse ourÂ <u>[reference guide](/refguide5/Reference+Guide+5)</u>Â
 *   [Finding Unused Items](/howto50/Finding+Unused+Items)
 *   [Finding Object Activities](/howto50/Finding+Object+Activities)
 *   [Translatable Validation Messages](/howto50/Translatable+Validation+Messages)
-*   [Querying over self-references](/howto50/Querying+over+self-references)
+*   [Querying over self-references](Querying+over+self+references)
 
 ## **![](attachments/2949310/9273461.png) Monitoring &Troubleshooting**
 
@@ -137,7 +137,7 @@ You can also browse ourÂ <u>[reference guide](/refguide5/Reference+Guide+5)</u>Â
 
 ## **![](attachments/8783265/13402518.png) On-premises Deployment**
 
-*   [Security checklist for your on-premises installation](/howto50/Security+checklist+for+your+on-premises+installation)
+*   [Security checklist for your on-premises installation](Security+checklist+for+your+on+premises+installation)
 *   [Troubleshooting](/howto50/Troubleshooting)
 *   [Mendix on Windows - Microsoft SQL Server](/howto50/Mendix+on+Windows+-+Microsoft+SQL+Server)
 *   [Updating a Mendix Application](/howto50/Updating+a+Mendix+Application)
@@ -155,7 +155,5 @@ You can also browse ourÂ <u>[reference guide](/refguide5/Reference+Guide+5)</u>Â
 *   [App Store Content Support](/appstore/App+Store+Content+Support)
 
 <div class="alert alert-info">{% markdown %}
-
-You can find the How-to section for Mendix 4 [here](/howto40/How-to+4+Home).
 
 {% endmarkdown %}</div>

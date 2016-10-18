@@ -183,7 +183,7 @@ kramdown:
 
 sass:
   sass_dir: _sass
-  style: :expanded
+  style: compressed
 
 gems:
   - jekyll-redirect-from

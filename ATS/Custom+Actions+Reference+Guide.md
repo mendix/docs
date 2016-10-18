@@ -16,7 +16,7 @@ This sections provides you with an overview of the most common used, predefined 
 
 #### Dialog
 
-+ [Cancel Dialog](Mendix+Actions/Dialog/)
++ [Cancel Dialog](Mendix+Actions/Dialog/Cancel+Dialog.md)
 + [Close Dialog](Mendix+Actions/Dialog/)
 + [Confirm Dialog](Mendix+Actions/Dialog/)
 + [Find/Assert Dialog](Mendix+Actions/Dialog/)

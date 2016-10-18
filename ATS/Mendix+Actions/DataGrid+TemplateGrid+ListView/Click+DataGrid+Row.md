@@ -1,7 +1,12 @@
+---
+title: "Click DataGrid Row"
+---
+## Description
 Click a DataGrid Row by a given column value
 
-**Input Parameters**
+## Usage
 
+## Input Parameters
 Name | Datatype | Description
 ---- | --------- | ---------------
 Widget Name | String | The name of the DataGrid

@@ -1,10 +1,17 @@
-#### Set Row Cell Value
-Set the cell value in a DataGrid row
+---
+title: "Find Item/Row (by child element)"
+---
+## Description
+Finds Item or Row of a TemplateGrid, DataGrid or ListView containing a specified element.
 
-**Input Parameters**
+## Usage
 
+## Input Parameters
 Name | Datatype | Description
 ---- | --------- | ---------------
-DataGrid Row | WebElement | The DataGrid row to insert the value into
-Value | String | The value to insert into the Cell
-Column Name | String | The column name to define the cell in which the value gets inserted
+Child Element | WebElement | The WebElement in the Item/Row
+
+## Return Value
+Name | Datatype | Description
+---- | --------- | ---------------
+Item/Row | WebElement | The DataGrid Row or TemplateGrid/ListView Item.

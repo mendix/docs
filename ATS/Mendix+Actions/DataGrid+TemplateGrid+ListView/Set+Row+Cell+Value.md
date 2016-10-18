@@ -1,6 +1,10 @@
+---
+title: "Set Row Cell Value"
+---
+## Description
 Set the cell value in a DataGrid row
 
-**Input Parameters**
+## Usage
 
 Name | Datatype | Description
 ---- | --------- | ---------------

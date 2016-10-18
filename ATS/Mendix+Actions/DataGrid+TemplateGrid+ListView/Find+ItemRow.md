@@ -1,14 +1,19 @@
-#### Find Item/Row
+---
+title: "Find Item/Row"
+---
+## Description
 Find a Row/Item in a DataGrid, TemplateGrid or ListView by Index
 
-**Input Parameters**
+## Usage
+
+## Input Parameters
 
 Name | Datatype | Description
 ---- | --------- | ---------------
 Widget Name | String | The name of the DataGrid, TemplateGrid or Listview
 Index | Integer | The index of the Item/Row to find
 
-**Return Value**
+## Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

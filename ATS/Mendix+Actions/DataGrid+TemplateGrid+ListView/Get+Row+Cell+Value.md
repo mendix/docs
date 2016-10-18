@@ -1,6 +1,12 @@
+---
+title: "Get Row Cell Value"
+---
+## Description
 Get the Cell Value of a DataGrid row
 
-**Input Parameters**
+## Usage
+
+## Input Parameters
 
 Name | Datatype | Description
 ---- | --------- | ---------------

@@ -4,6 +4,7 @@ layout: json
 {
   "categories": [
     "General",
+    "Administration",
     "Introduction",
     "Projects",
     "Test Development",

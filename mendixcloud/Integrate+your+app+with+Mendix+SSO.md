@@ -9,8 +9,6 @@ Do you want to know more about all the possibilities this opens up? Take a look 
 
 In this how-to we will explain how you can incorporate the AppCloudServices module into your existing app.
 
-# Table of contents
-
 ## 1\. Read More
 
 The AppCloudServices module requires version 5.3.2 of the Business Modeler. If your app was not created with Mendix 5.3.2 or newer, you need to convert it first. For more information about converting apps, see [this page](/refguide6/Moving+from+5+to+6).

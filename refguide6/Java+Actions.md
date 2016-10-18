@@ -56,6 +56,8 @@ As with parameters, the return type can also be an object or a list of some type
 
 The description is meant to provide additional information about a parameter which will be displayed to the user of the Java action, when it is called in a microflow.
 
+The description was added in version 6.10.0.
+
 ## Type parameters
 
 A type parameter is a placeholder for an entity type which will be filled in with a specific entity when it is called in a microflow. Type parameters can be used when configuring the data type of a parameter, to allow users to pass an Object or a List of an arbitrary entity type.

@@ -4,75 +4,94 @@ space: "Mendix 6 How-to's"
 category: "Logic & Business Rules"
 tags: []
 ---
-When you are building large microflows that span multiple functions, it is a good practice to break the large microflow down into more manageable parts, based on those functions. To better manage your logic, you can create sub microflows. 
 
-## 1. Preparation
+## 1 Introduction
+
+When you are building large microflows that span multiple functions, the best practice is to break down the large microflow into more manageable parts based on those functions. To better manage your logic, you can create sub microflows. 
+
+**This how-to will teach you how to do the following:**
+
+* Extract sub microflows
+* Use sub microflows
+* Troubleshoot extractions of sub microflows
+
+## 2 Prerequisites
 
 None.
 
-## 2\. When to Use Sub Microflows
+## 3 When to Use Sub Microflows
 
-First example of using sub microflows is when you are doing a large data import. If you are creating a microflow that imports data into the system, there are usually different parts to the process. The first part can be data validation. An example of data validation is checking if values are empty. If the values are empty, then you might not want to import the data or we might want the application to throw an error.
+### 3.1 First Example
 
-Once the data is validated you import and map it into your Mendix domain model. This is a separate action within the data import. It is ideal to do all the validations at the beginning of the import microflow and all the mapping at the end.
+The first example of using sub microflows is when you are doing a large data import. If you are creating a microflow that imports data into the system, there are usually different parts to the process. The first part can be data validation. An example of data validation is checking if the values are empty. If the values are empty, then you might not want to import the data, or you might want the application to throw an error.
 
-You can break down the validation and mapping into sub microflows to manage the logic better. Furthermore, if you are need to reuse the validation during import at other steps in the application, you can reuse the sub microflow.
+Once the data is validated, you import and map it into your Mendix domain model. This is a separate action within the data import. It is ideal to do all the validations at the beginning of the imported microflow and to do all the mapping at the end.
 
-Second example of when you want to use sub microflows is when you are doing data validation when you save an object to the database. The following example with cover in detail how to use a sub microflow for validation.
+You can break down the validation and mapping into sub microflows to better manage the logic. Furthermore, if you need to reuse the validation during the import at other steps in the application, you can reuse the sub microflow.
 
-There are other examples of when it will be useful to create sub microflows. The goal is to reuse them to condense your logic. Feel free to use sub microflows whenever you see the need for it.
+### 3.2 Second Example
 
-## 3\. How to Use Sub Microflows 
+The second example of using sub microflows is when you are doing data validation and saving an object to the database. The example in [4 How to Use Sub Microflows](#HowtoUseSubMicroflows) will cover in detail how to use a sub microflow for validation.
 
-The following microflow checks to see if a registration has a trainee assigned and a registration date. If the registration passes both of these checks the registration is committed to the database.
+### 3.3 Other Examples
+
+There are many other examples of when it is useful to create sub microflows. The goal is to reuse sub microflows to condense your logic. Feel free to use sub microflows whenever you see the need for it.
+
+## 4 How to Use Sub Microflows<a name="HowtoUseSubMicroflows"></a>
+
+The following example microflow checks to see if a registration has a trainee assigned and a registration date. If the registration passes both of these checks, the registration is committed to the database.
 
 ![](attachments/18448683/18581021.png)
 
-In this scenario it makes sense to create a sub microflow of the validation steps. If you create a sub microflow of the validation, it can be reused in other microflows where you need to validate a registration again.
+In this scenario, it makes sense to create a sub microflow for the validation steps. If you do this, you can reuse this sub microflow in other microflows where you need to validate a registration again.
 
-1.  First step in extracting a sub microflow is to highlight the area you want to use as sub microflow. Select the area you want to capture, like in the image.
+To create a sub microflow for the validation steps, follow these steps:
+
+1. Select the area you want to capture and use as a sub microflow:
+
     ![](attachments/18448683/18581020.png)
-2.  Right click an item in the selection.
+
+2. Right-click an item in the selection and select **Extract sub microflow...**:
+
     ![](attachments/18448683/18581018.png)
-3.  Select **Extract sub microflow...** and enter a name for the sub microflow
+
+3. Enter a name for the sub microflow:
+
     ![](attachments/18448683/18581017.png)
 
     <div class="alert alert-warning">
 
-    Sub microflow naming convention
-
-    It is best practice to identify sub microflows by their name. You can use the Sub_MicroflowDescriptionHere notation, or Subflow_MicroclowDescriptionHere or any other notation that you feel comfortable with. The key is to be consistent when you name your microflows. If you are consistent, it is easy for other team members to understand and find the microflows they need.
+    The best practice is to identify sub microflows by their name. You can use "Sub_MicroflowDescriptionHere", "Subflow_MicrocflowDescriptionHere", or any other notation you feel works best. The key is to be consistent when you name your microflows so that it is easy for other team members to understand and find the microflows they need.
 
     </div>
-4.  Click **OK** to create your first sub microflow.
+4. Click **OK** to create your first sub microflow:
+
     ![](attachments/18448683/18581016.png)
 
-5.  Open the sub microflow by right clicking on the **Sub_RegistrationValidation** microflow and selecting **Go To microflow**.
+5. Open the sub microflow by right-clicking the **Sub_RegistrationValidation** microflow and selecting **Go To microflow**:
+
     ![](attachments/18448683/18581015.png)
 
-The new sub microflow does the Registration validation. You can now reuse this sub microflow whenever you need to do a registration validation. 
+The new sub microflow wil do the registration validation. You can reuse this sub microflow whenever you need to do a registration validation. 
 
-## 4\. Troubleshooting Extractions of Sub Microflows 
+## 5 Troubleshooting Extractions of Sub Microflows
 
-If you get any errors, it usually means that you have not provided the right input or output parameters. Double check your parameters and make sure that they are configured properly. Furthermore, make sure you highlight the correct activities that you want to turn into a sub microflow.
+If you get errors, this usually means you have not provided the right input or output parameters. Check your parameters and make sure that they are configured properly. 
 
-## 5\. Conclusion
+In addition, make sure you have highlighted the correct activities that you want to turn into a sub microflow.
 
-The extra sub microflow option is based on the Mendix reusability principle. You can reuse any sub microflows at other parts in the application. Furthermore, when you have very complex and large microflows, using sub microflows can help you break down and better manage your logic and business processes. 
+## 6 Conclusion
 
-## 6\. Related content
+The extra sub microflow option is based on the Mendix reusability principle. You can reuse any sub microflows in other parts in the application. Furthermore, when you have very large and complex microflows, using sub microflows can help you break down and better manage your logic and business processes. 
 
-*   [Defining access rules using XPath](Define+Access+Rules+Using+XPath)
-*   [Triggering Logic using Microflows](Triggering+Logic+using+Microflows)
-*   [Creating a Custom Save Button](Create+a+Custom+Save+Button)
-*   [Extending Your Application with Custom Java](Extending+Your+Application+with+Custom+Java)
+## 7 Related Content
 
-*   [Working With Lists in a Microflow](Working+With+Lists+in+a+Microflow)
-*   [Optimizing Retrieve Activities](Optimizing+Retrieve+Activities)
-*   [Error Handling](Set+Up+Error+Handling)
-*   [Optimizing Microflow Aggregates](Optimizing+Microflow+Aggregates)
-*   [Extract and use sub microflows](Extract+and+use+sub+microflows)
-
-
-
-*   [Microflows](/refguide6/Microflows)
+* [How to Define Access Rules Using XPath](Define+Access+Rules+Using+XPath)
+* [How to Trigger Logic Using Microflows](Triggering+Logic+using+Microflows)
+* [How to Create a Custom Save Button](Create+a+Custom+Save+Button)
+* [How to Extend Your Application with Custom Java](Extending+Your+Application+with+Custom+Java)
+* [How to Work with Lists in a Microflow](Working+With+Lists+in+a+Microflow)
+* [How to Optimize Retrieve Activities](Optimizing+Retrieve+Activities)
+* [How to Set Up Error Handling](Set+Up+Error+Handling)
+* [How to Optimize Microflow Aggregates](Optimizing+Microflow+Aggregates)
+* [Microflows](/refguide6/Microflows)

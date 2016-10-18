@@ -69,9 +69,6 @@ Once you have the unique URL and password, there are two ways to connect the mod
 
 *   [Finding the Root Cause of Runtime Errors](/howto50/Finding+the+Root+Cause+of+Runtime+Errors)
 *   [Clearing Warning Messages in Mendix](/howto50/Clearing+Warning+Messages+in+Mendix)
-*   [Finding the Root Cause of Runtime Errors](/howto6/Finding+the+Root+Cause+of+Runtime+Errors)
-*   [Clearing Warning Messages in Mendix](/howto6/Clearing+Warning+Messages+in+Mendix)
-*   [Testing web services using SoapUI](/howto6/Testing+web+services+using+SoapUI)
 *   [Testing web services using SoapUI](/howto50/Testing+web+services+using+SoapUI)
 *   [Debugging Microflows](/howto50/Debugging+Microflows)
 *   [Common Mendix SSO Errors](/howto50/Common+Mendix+SSO+Errors)

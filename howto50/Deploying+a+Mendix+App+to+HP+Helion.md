@@ -11,10 +11,6 @@ This how-to will focus on deploying to the HP Helion Development Platform. Note 
 
 To follow this guide you will need to have access to an [HP Helion Development Platform](http://www8.hp.com/us/en/cloud/helion-devplatform-overview.html) instance with MySQL or PostgreSQL. You should also have a user account with the rights to create new applications and services. Furthermore you should have an S3 or S3 compatible object store with user credentials, a bucket and rights to create and delete objects. To scale your app to more than one instance you will need to enable sticky sessions on the Cloud Foundry router.
 
-
-
-
-
 ## 1. Preparation
 
 *   Download the [latest version of the Mendix Business Modeler](https://appstore.home.mendix.com/link/modelers) from the Mendix App Store.
@@ -161,12 +157,9 @@ If you encounter any problems you should consult the application logs.
 
 ## 8\. Read More
 
-*   [Deploying a Mendix App to Pivotal](/howto6/Deploying+a+Mendix+App+to+Pivotal)
-*   [Deploying a Mendix App to HP Helion](/howto6/Deploying+a+Mendix+App+to+HP+Helion)
-*   [Deploying a Mendix App to Cloud Foundry](/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry)
-*   [Deploying a Mendix App to IBM Bluemix](/howto6/Deploying+a+Mendix+App+to+IBM+Bluemix)
-
-
-
+*   [Deploying a Mendix App to Pivotal](Deploying+a+Mendix+App+to+Pivotal)
+*   [Deploying a Mendix App to HP Helion](Deploying+a+Mendix+App+to+HP+Helion)
+*   [Deploying a Mendix App to Cloud Foundry](Deploying+a+Mendix+App+to+Cloud+Foundry)
+*   [Deploying a Mendix App to IBM Bluemix](howto6/Deploying+a+Mendix+App+to+IBM+Bluemix)
 *   [HP Helion Development Platform ALS Documentation](http://docs.hpcloud.com/als/v1/)
 *   [HP Helion Development Platform Documentation](http://docs.hpcloud.com/helion/devplatform/1.1/)

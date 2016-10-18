@@ -36,13 +36,8 @@ We like to work with our community and encourage you to create and contribute us
 ## 4\. Related content
 
 *   [Managing your Application Requirements with Mendix](/howto50/Managing+your+Application+Requirements+with+Mendix)
-*   [Managing your Application Requirements with Mendix](/howto6/Managing+your+Application+Requirements+with+Mendix)
 *   [Starting your own repository](/howto50/Starting+your+own+repository)
 *   [Contributing to a GitHub repository](/howto50/Contributing+to+a+GitHub+repository)
-*   [Contributing to a GitHub repository](/howto6/Contributing+to+a+GitHub+repository)
-*   [Starting your own repository](/howto6/Starting+your+own+repository)
 *   [Using Team Server - Version Control](/howto50/Using+Team+Server+-+Version+Control)
 *   [Gathering user feedback](/howto50/Gathering+user+feedback)
-*   [Using Team Server - Version Control](/howto6/Using+Team+Server+-+Version+Control)
-*   [Gathering user feedback](/howto6/Gathering+user+feedback)
 

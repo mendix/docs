@@ -5,10 +5,6 @@ space: "Mendix 5 How-to's"
 ---
 # Clearing Warning Messages in Mendix
 
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Author</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Last Modified By</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd"><a href="    /~adam.fothergill
-" class="url fn confluence-userlink" data-username="adam.fothergill" rel="nofollow">Adam Fothergill</a></td><td class="confluenceTd">Mar 11, 2015 23:46</td><td colspan="1" class="confluenceTd"><a href="    /~jan
-" class="url fn confluence-userlink" data-username="jan" rel="nofollow">Jan de Vries</a></td><td colspan="1" class="confluenceTd">Sep 03, 2015 13:54</td></tr></tbody></table>
-
 This how-to explains how to eliminate design time warnings.  While these warnings will not cause the application to break, it is important to fix them to keep a clean project.
 
 # Table of contents
@@ -166,8 +162,6 @@ The warning can be double clicked or right-clicked to get more information.
 *   [Finding the Root Cause of Runtime Errors](/howto50/Finding+the+Root+Cause+of+Runtime+Errors)
 *   [Clearing Warning Messages in Mendix](/howto50/Clearing+Warning+Messages+in+Mendix)
 *   [Finding the Root Cause of Runtime Errors](/howto6/Finding+the+Root+Cause+of+Runtime+Errors)
-*   [Clearing Warning Messages in Mendix](/howto6/Clearing+Warning+Messages+in+Mendix)
-*   [Testing web services using SoapUI](/howto6/Testing+web+services+using+SoapUI)
 *   [Testing web services using SoapUI](/howto50/Testing+web+services+using+SoapUI)
 *   [Debugging Microflows](/howto50/Debugging+Microflows)
 *   [Common Mendix SSO Errors](/howto50/Common+Mendix+SSO+Errors)

@@ -23,7 +23,7 @@ In order to call a microflow from our widget, we first need to assign it to the 
 
 ```
 
-In this example, our microflow will use the entity context from the Dataview our widget is in and return a string variable. To learn how to retrieve the context object in JavaScript, read this How To: [Use the Data View context object](/howto25/Use+the+Data+View+context+object).
+In this example, our microflow will use the entity context from the Dataview our widget is in and return a string variable. To learn how to retrieve the context object in JavaScript, read this How To: [Use the Data View context object](Use+the+Data+View+context+object).
 
 <div class="alert alert-info">{% markdown %}
 

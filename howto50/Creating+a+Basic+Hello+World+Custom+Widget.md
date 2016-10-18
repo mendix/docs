@@ -297,7 +297,7 @@ The AppStoreWidgetBoilerplate also comes with a pre- configured widget xml file.
     _<name>Hello world</name>_
 *   **description** -> This element  is used to add a brief description of the widget. What is the widget for?
     _<description>This is my new fancy Hello World widget and it does really cool stuff! (like printing a sentence on the screen, woo!)</description>_
-*   **icon** -> This element is used to define the widget's icon. Every element or widget in the Mendix Business Modeler has its own icon. It is a [Base64](http://en.wikipedia.org/wiki/Base64) representation of the image, so that it can be used in an XML file. To encode your own icon, read this how-to: [Encode an icon with Base64](/Howto/Encode+an+icon+with+Base64 "Encode an icon with Base64").
+*   **icon** -> This element is used to define the widget's icon. Every element or widget in the Mendix Business Modeler has its own icon. It is a [Base64](http://en.wikipedia.org/wiki/Base64) representation of the image, so that it can be used in an XML file.
     _<icon>*add the Base64 string here*</icon>
 
     _Next you will define the widget properties. Any properties you define in your widget XML file can be set using the Mendix Business Modeler and they will be passed to your JavaScript file, so you can use them in your widget. To define properties in XML you will have to use the “property” element. Since you’re making a list, the individual property elements will be grouped inside a “properties” element, like this:
@@ -775,11 +775,9 @@ A very nice book that helps you understand what JavaScript is all about.
 *   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto50/Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
 *   [Creating a chainable Custom Widget](/howto50/Creating+a+chainable+Custom+Widget)
 *   [XML Reference Guide](/refguide5/XML+Reference+Guide)
-*   [Creating a chainable Custom Widget](/howto6/Creating+a+chainable+Custom+Widget)
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto6/Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
+
 *   [Creating a Basic Hello World Custom Widget](/howto50/Creating+a+Basic+Hello+World+Custom+Widget)
 *   [XML Reference Guide](/refguide6/XML+Reference+Guide)
-*   [Creating a Basic Hello World Custom Widget](/howto6/Creating+a+Basic+Hello+World+Custom+Widget)
 *   [The Mobile Slider Custom Widget](/howto50/The+Mobile+Slider+Custom+Widget)
-*   [The Mobile Slider Custom Widget](/howto6/The+Mobile+Slider+Custom+Widget)
+
 

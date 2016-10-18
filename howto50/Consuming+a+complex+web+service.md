@@ -41,9 +41,9 @@ When finished the wizard will add to your model, based upon the options selected
 
 ## 2\. Importing a webservice directly
 
-An alternative to using the described Wizard is importing a web service document directly into your project. The related reference guide article can be found [here](/NRG/Imported+Web+Services).
+An alternative to using the described Wizard is importing a web service document directly into your project.
 
-1.  Add an **Imported web service** to your project. If you do not know how to add documents to your project, please refer to [this](/howto25/Add+documents+to+a+module) article.
+1.  Add an **Imported web service** to your project.
 2.  Double-click on the imported web service in the Project Explorer to start configuring it.
 3.  You can change the name of the published web service at **Name**, whereas **Documentation** allows input of text describing the design purpose of the web service.
     ![](attachments/2949201/8946297.png)
@@ -61,7 +61,7 @@ An alternative to using the described Wizard is importing a web service document
     Make sure the microflow either creates the variables required as arguments for the web service call, or has those passed to it.
 
     {% endmarkdown %}</div>
-2.  If you are creating your own microflow add the **Call web service** activity to the microflow. If you do not know how to add activities to a microflow, please refer to [this](/howto25/Add+an+activity+to+a+microflow) article.
+2.  If you are creating your own microflow add the **Call web service** activity to the microflow.
     ![](attachments/2949201/3080367.png)
 3.  Click **Select...** to bring up a window allowing you to choose the operation you want to use for this web service call.![](attachments/2949201/8946300.png)
 4.  In the **Request** section you can configure the SOAP body, which contains the parameters needed to execute the web service request. The radio buttons allow you to choose the type of SOAP body to use. Use the **Edit value** button to change the Domain-to-XML mapping or the variables from the microflow used as input arguments.
@@ -74,17 +74,3 @@ An alternative to using the described Wizard is importing a web service document
     ![](attachments/2949201/3080371.png)
 7.  Finally, in the **Output** section, you can configure the handling of the return from the web service call. If the return is a primitive, you can store it in a variable which you can name at **Store in variable**. If the return is a complex XML structure, you can use an XML-to-Domain mapping to map the XML elements to domain model entities. You can also choose to ignore the return.![](attachments/2949201/3080376.png)![](attachments/2949201/3080350.png)
 8.  Your imported web service is now ready to be used in your application.
-
-## 4\. Related content
-
-*   [Expose a web service](/howto40/Expose+a+web+service)
-*   [Configure an XML-to-Domain mapping](/howto40/Configure+an+XML-to-Domain+mapping)
-*   [Configure a Domain-to-XML mapping](/howto40/Configure+a+Domain-to-XML+mapping)
-*   [Expose a web service](/howto30/Expose+a+web+service)
-*   [Add web service users](/howto30/Add+web+service+users)
-*   [Add and configure an XML schema](/howto30/Add+and+configure+an+XML+schema)
-*   [Configure an XML-to-Domain mapping](/howto30/Configure+an+XML-to-Domain+mapping)
-*   [Configure a Domain-to-XML mapping](/howto30/Configure+a+Domain-to-XML+mapping)
-*   [Consume a web service](/howto30/Consume+a+web+service)
-*   [Consume a web service](/howto40/Consume+a+web+service)
-

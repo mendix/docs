@@ -7,11 +7,10 @@ space: "Mendix 5 How-to's"
 
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">6.0</td><td class="confluenceTd">Nov 19, 2015 08:32</td><td colspan="1" class="confluenceTd">Mar 08, 2016 15:10</td></tr></tbody></table>
 
- [![](attachments/18448647/19398951.png)](/howto6/Deploying+a+Mendix+App+to+IBM+Bluemix)[![](attachments/18448647/19398952.png)](/howto6/Deploying+a+Mendix+App+to+HP+Helion) [![](attachments/18448647/19398954.png)](/howto6/Deploying+a+Mendix+App+to+Pivotal)
-
-  [![](attachments/18448647/19398953.png)](/howto6/Deployment+to+the+Cloud)
-
-
+[![](attachments/18448647/19398951.png)](howto6/Deploying+a+Mendix+App+to+IBM+Bluemix)
+[![](attachments/18448647/19398952.png)](Deploying+a+Mendix+App+to+HP+Helion)
+[![](attachments/18448647/19398954.png)](Deploying+a+Mendix+App+to+Pivotal)
+[![](attachments/18448647/19398953.png)](Deployment+to+the+Cloud)
 
 Cloud Foundry is an Open Source Platform-as-a-Service that can run all kinds of web applications. Its technical highlights are:
 
@@ -45,14 +44,4 @@ These guides focus on graphical interfaces, command line instructions can be fou
 
 ## Select a Cloud Foundry guide
 
-[![](attachments/18448647/18580546.png)](/howto6/Deploying+a+Mendix+App+to+Pivotal)  [![](attachments/18448647/18580544.png)](/howto6/Deploying+a+Mendix+App+to+HP+Helion)  [![](attachments/18448647/19398955.png)](/howto6/Deploying+a+Mendix+App+to+IBM+Bluemix)
-
-
-
-## Related content
-
-*   [Deploying a Mendix App to Pivotal](/howto6/Deploying+a+Mendix+App+to+Pivotal)
-*   [Deploying a Mendix App to HP Helion](/howto6/Deploying+a+Mendix+App+to+HP+Helion)
-*   [Deploying a Mendix App to Cloud Foundry](/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry)
-*   [Deploying a Mendix App to IBM Bluemix](/howto6/Deploying+a+Mendix+App+to+IBM+Bluemix)
-
+[![](attachments/18448647/18580546.png)](Deploying+a+Mendix+App+to+Pivotal)  [![](attachments/18448647/18580544.png)](Deploying+a+Mendix+App+to+HP+Helion)  [![](attachments/18448647/19398955.png)](Deploying+a+Mendix+App+to+IBM+Bluemix)

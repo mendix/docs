@@ -3,11 +3,6 @@ title: "Common Mendix SSO Errors"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Author</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Last Modified By</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd"><a href="    /~sjoerd.breur@mendix.com
-" class="url fn confluence-userlink" data-username="sjoerd.breur@mendix.com" rel="nofollow">Sjoerd Breur</a></td><td class="confluenceTd">Aug 05, 2014 14:19</td><td colspan="1" class="confluenceTd"><a href="    /~jan
-" class="url fn confluence-userlink" data-username="jan" rel="nofollow">Jan de Vries</a></td><td colspan="1" class="confluenceTd">Sep 03, 2015 14:04</td></tr></tbody></table>
-
-
 
 Below you will find solutions for some of the most common problems you may encounter when developing an AppCloud-enabled app.
 
@@ -23,9 +18,6 @@ These are commonly caused by compatibility issues with JAR files in the <project
 
 *   [Finding the Root Cause of Runtime Errors](/howto50/Finding+the+Root+Cause+of+Runtime+Errors)
 *   [Clearing Warning Messages in Mendix](/howto50/Clearing+Warning+Messages+in+Mendix)
-*   [Finding the Root Cause of Runtime Errors](/howto6/Finding+the+Root+Cause+of+Runtime+Errors)
-*   [Clearing Warning Messages in Mendix](/howto6/Clearing+Warning+Messages+in+Mendix)
-*   [Testing web services using SoapUI](/howto6/Testing+web+services+using+SoapUI)
 *   [Testing web services using SoapUI](/howto50/Testing+web+services+using+SoapUI)
 *   [Debugging Microflows](/howto50/Debugging+Microflows)
 *   [Common Mendix SSO Errors](/howto50/Common+Mendix+SSO+Errors)

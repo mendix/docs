@@ -2,143 +2,137 @@
 title: "Custom Actions Reference Guide"
 category: "Test Development"
 ---
-## Naming Conventions
-Always use describing names for your actions and parameters, e.g. "Set TextBox value" for an action or "Column Name" for a parameter. This makes it easier to know what your action does, without looking into it.
-
-Some parameter names used by the ATS core library:
- * Widget Name
- * Username
- * Password
- * Caption
- * Column Name
- * Column Value
- * Index
- * Page Title
- * Row/Item
- * Value
-
+## [Naming Conventions](Naming+Conventions)
 ## Predefined Actions in ATS
-This sections provides you with an overview of the most common used, predefined actions in ATS.
+This sections provides you with an overview of the most common used, predefined actions in ATS. Click an action to read more.
 ### Mendix Actions
-##### DataGrid, TemplateGrid, ListView
-#### Click DataGrid Row
-Click a DataGrid Row by a given column value
+#### DataGrid, TemplateGrid, ListView
++ [Click DataGrid Row](Mendix+Actions/DataGrid+TemplateGrid+ListView/Click+DataGrid+Row.md)
++ [Find/Assert DataGrid Row](Mendix+Actions/DataGrid+TemplateGrid+ListView/FindAssert+DataGrid+Row.md)
++ [Find Item/Row](Mendix+Actions/DataGrid+TemplateGrid+ListView/Find+ItemRow.md)
++ [Find Item/Row (by child element)](Mendix+Actions/DataGrid+TemplateGrid+ListView/Find+ItemRow+by+child.md)
++ [Set Row Cell Value](Mendix+Actions/DataGrid+TemplateGrid+ListView/Set+Row+Cell+Value.md)
++ [Get Row Cell Value](Mendix+Actions/DataGrid+TemplateGrid+ListView/Get+Row+Cell+Value.md)
 
-**Input Parameters**
+#### Dialog
 
-Name | Datatype | Description
----- | --------- | ---------------
-Widget Name | String | The name of the DataGrid
-Column Name | String | The name of the column in which the column value is located
-Column Value | String | The column value which defines the row
-#### Find/Assert DataGrid Row
-Find/Assert a DataGrid Row by a certain column value
++ [Cancel Dialog](Mendix+Actions/Dialog/)
++ [Close Dialog](Mendix+Actions/Dialog/)
++ [Confirm Dialog](Mendix+Actions/Dialog/)
++ [Find/Assert Dialog](Mendix+Actions/Dialog/)
++ [Get Dialog Message Text](Mendix+Actions/Dialog/)
 
-**Input Parameters**
+#### Generic
++ [Find/Assert Widget](Mendix+Actions/Generic/)
++ [Click/Doubleclick](Mendix+Actions/Generic/)
++ [Click Widget](Mendix+Actions/Generic/)
++ [Login](Mendix+Actions/Generic/)
++ [Logout](Mendix+Actions/Generic/)
 
-Name | Datatype | Description
----- | --------- | ---------------
-Widget Name | String | The name of the DataGrid
-Column Name | String | The name of the column in which the column value is located
-Column Value | String | The column value which defines the row
-#### Find Item/Row
-Find a Row/Item in a DataGrid, TemplateGrid or ListView by Index
+#### GroupBox
++ [Open/Close GroupBox](Mendix+Actions/GroupBox/)
++ [GroupBox is Collapsed](Mendix+Actions/GroupBox/)
 
-**Input Parameters**
+#### Input
++ [Assert Value](Mendix+Actions/Input/)
++ [Set/Get Value](Mendix+Actions/Input/)
++ [Set/Get Checkbox Value](Mendix+Actions/Input/)
++ [Toggle Checkbox Value](Mendix+Actions/Input/)
 
-Name | Datatype | Description
----- | --------- | ---------------
-Widget Name | String | The name of the DataGrid, TemplateGrid or Listview
-Index | Integer | The index of the Item/Row to find
-#### Find Item/Row (by child element)
-Finds item or row of a TemplateGrid, DataGrid or ListView containing a specified WebElement.
+#### Navigation, Menu
++ [Click Menu Item](Mendix+Actions/Navigation+Menu/)
++ [Find/Assert Menu Item](Mendix+Actions/Navigation+Menu/)
 
-**Input Parameters**
+#### System
++ [Find Widget Child Node](Mendix+Actions/System/)
++ [Focus WebElement](Mendix+Actions/System/)
++ [Get current Page Title](Mendix+Actions/System/)
++ [Mendix wait](Mendix+Actions/System/)
 
-Name | Datatype | Description
----- | --------- | ---------------
-Child Element | WebElement | The WebElement which is located in the item or row
-#### Set Row Cell Value
-Set the cell value in a DataGrid row
-
-**Input Parameters**
-
-Name | Datatype | Description
----- | --------- | ---------------
-DataGrid Row | WebElement | The DataGrid row to insert the value into
-Value | String | The value to insert into the Cell
-Column Name | String | The column name to define the cell in which the value gets inserted
-#### Get Row Cell Value
-Get the Cell Value of a DataGrid row
-
-**Input Parameters**
-
-Name | Datatype | Description
----- | --------- | ---------------
-DataGrid Row | WebElement | The DataGrid row of the cell
-Column Name | String | The column name of the cell
-
-##### Dialog
-#### Cancel Dialog
-#### Close Dialog
-#### Confirm Dialog
-#### Find/Assert Dialog
-#### Get Dialog Message Text
-
-
-##### Generic
-#### Find/Assert Widget
-#### Click/Doubleclick
-#### Click Widget
-#### Login/Logout
-
-
-##### GroupBox
-#### Open/Close GroupBox
-#### GroupBox is Collapsed
-
-##### Input
-#### Assert Value
-#### Set/Get Value
-#### Set/Get Checkbox Value
-#### Toggle Checkbox Value
-
-
-##### Navigation, Menu
-#### Click Menu Item
-#### Find/Assert Menu Item
-
-
-##### System
-#### Find Widget Child Node
-#### Focus WebElement
-#### Get current Page Title
-#### Mendix wait
-
-
-##### Tab
-#### Assert Active Tab Caption
-#### Get Active Tab Caption
+#### Tab
++ [Assert Active Tab Caption](Mendix+Actions/Tab/)
++ [Get Active Tab Caption](Mendix+Actions/Tab/)
 
 ### Mendix Appstore Widgets Actions
+#### Boolean Slider
++ [Get BooleanSlider Value](Widgets/BooleanSlider/)
++ [Set BooleanSlider Value](Widgets/BooleanSlider/)
++ [Assert BooleanSlider Value](Widgets/BooleanSlider/)
++ [Toggle BooleanSlider Value](Widgets/BooleanSlider/)
+
+#### Bootstrap WSIWYG
++ [Get BootstrapRTE Value](Widgets/BootstrapRTE/)
++ [Set BootstrapRTE Value](Widgets/BootstrapRTE/)
++ [Assert BootstrapRTE Value](Widgets/BootstrapRTE/)
+
+#### Checkbox Set Selector
++ [Find Checkbox Set Selector Checkbox_All](Widgets/Checkbox+Set+Selector/)
++ [Get Checkbox Set Selector Checkbox_All Value](Widgets/Checkbox+Set+Selector/)
++ [Set Checkbox Set Selector Checkbox_All Value](Widgets/Checkbox+Set+Selector/)
++ [Toggle Checkbox Set Selector Checkbox_All](Widgets/Checkbox+Set+Selector/)
++ [Find Checkbox Set Selector Checkbox](Widgets/Checkbox+Set+Selector/)
++ [Get Checkbox Set Selector Checkbox Value](Widgets/Checkbox+Set+Selector/)
++ [Set Checkbox Set Selector Checkbox Value](Widgets/Checkbox+Set+Selector/)
++ [Assert Checkbox Set Selector Checkbox Value](Widgets/Checkbox+Set+Selector/)
++ [Toggle Checkbox Set Selector Checkbox](Widgets/Checkbox+Set+Selector/)
+
+#### CKEditor
++ [Get CKEditor Value](Widgets/CKEditor/)
++ [Set CKEditor Value](Widgets/CKEditor/)
++ [Assert CKEditor Value](Widgets/CKEditor/)
+
+#### Dropdown Div Converter
++ [Find Dropdown div converter Menu Item](Widgets/Dropdown+Div+Converter/)
++ [FindByValue Dropdown div converter Menu Item](Widgets/Dropdown+Div+Converter/)
++ [Click Dropdown div converter Menu item](Widgets/Dropdown+Div+Converter/)
++ [ClickByValue Dropdown div converter Menu Item](Widgets/Dropdown+Div+Converter/)
++ [Click Dropdown div converter splitbutton](Widgets/Dropdown+Div+Converter/)
+
+#### Grid Selector
++ [Find Grid Selector Box](Widgets/Grid+Selector/)
++ [Get Grid Selector Box Value](Widgets/Grid+Selector/)
++ [Set Grid Selector Checkbox Value](Widgets/Grid+Selector/)
++ [Set Grid Selector Radiobox checked](Widgets/Grid+Selector/)
++ [Toggle Grid Selector Checkbox Value](Widgets/Grid+Selector/)
++ [Assert Grid Selector Box Value](Widgets/Grid+Selector/)
+
+#### Input Reference Selector
++ [Get InputReferenceSelector Value](Widgets/Input+Reference+Selector/)
++ [Set InputReferenceSelector Value](Widgets/Input+Reference+Selector/)
++ [Assert InputReferenceSelector Value](Widgets/Input+Reference+Selector/)
+
+#### OnChange Inputbox
++ [Get OnChangeInputbox Value](Widgets/OnChange+Inputbox/)
++ [Set OnChange Inputbox Value](Widgets/OnChange+Inputbox/)
++ [Assert OnChange Inputbox Value](Widgets/OnChange+Inputbox/)
+
+#### Simple Checkbox Set Selector
++ [Find Simple Checkbox Set Selector Checkbox](Widgets/Simple+Checkbox+Set+Selector/)
++ [Get Simple Checkbox Set Selector Checkbox Value](Widgets/Simple+Checkbox+Set+Selector/)
++ [Set Simple Checkbox Set Selector Checkbox Value](Widgets/Simple+Checkbox+Set+Selector/)
++ [Assert Simple Checkbox Set Selector Checkbox Value](Widgets/Simple+Checkbox+Set+Selector/)
++ [Toggle Simple Checkbox Set Selector Checkbox Value](Widgets/Simple+Checkbox+Set+Selector/)
 
 ### ATS Core Actions
-#### Assert equals/not equals/...
-#### Concatenate String
-#### Get Current DateTime String
-#### Open Application
-#### Random Number/String
-#### Set Return Value
++ [Assert equals](ATS+Core+Actions/)
++ [Assert not equals](ATS+Core+Actions/)
++ [Concatenate String](ATS+Core+Actions/)
++ [Get Current DateTime String](ATS+Core+Actions/)
++ [Open Application](ATS+Core+Actions/)
++ [Random Number/String](ATS+Core+Actions/)
++ [Set Return Value](ATS+Core+Actions/)
+
 ### Selenium Actions
-#### Execute JavaScript Integer/String/WebElement
-#### Focus WebElement
-#### Send Keys
-####
++ [Execute JavaScript Integer](Selenium+Actions/)
++ [Execute JavaScript String](Selenium+Actions/)
++ [Execute JavaScript WebElement](Selenium+Actions/)
++ [Focus WebElement](Selenium+Actions/)
++ [Send Keys](Selenium+Actions/)
 
 ## Selectors
-### CSS Selectors
-### JQuery Selectors
-### ATS Selectors
++ [CSS Selectors](Selectors/)
++ [JQuery Selectors](Selectors/)
++ [ATS Selectors](Selectors/)
 
 
 ## Best Practices

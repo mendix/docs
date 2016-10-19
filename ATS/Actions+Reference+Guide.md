@@ -26,6 +26,7 @@ This sections provides you with an overview of the most common used, predefined 
 + [Find/Assert Widget](Mendix+Actions/Generic/FindAssert+Widget)
 + [Click/Doubleclick](Mendix+Actions/Generic/ClickDoubleclick)
 + [Click Widget](Mendix+Actions/Generic/Click+Widget)
++ [Open Application](Mendix+Actions/Generic/Open+Application)
 + [Login](Mendix+Actions/Generic/Login)
 + [Logout](Mendix+Actions/Generic/Logout)
 
@@ -43,27 +44,27 @@ This sections provides you with an overview of the most common used, predefined 
 + [Toggle Checkbox Value](Mendix+Actions/Input/Toggle+Checkbox+Value)
 
 #### Navigation, Menu
-+ [Click Menu Item](Mendix+Actions/Navigation+Menu/)
-+ [Find/Assert Menu Item](Mendix+Actions/Navigation+Menu/)
++ [Click Menu Item](Mendix+Actions/Navigation+Menu/Click+Menu+Item)
++ [Find/Assert Menu Item](Mendix+Actions/Navigation+Menu/FindAssert+Menu+Item)
 
 #### System
-+ [Find Widget Child Node](Mendix+Actions/System/)
-+ [Focus WebElement](Mendix+Actions/System/)
-+ [Get current Page Title](Mendix+Actions/System/)
-+ [Mendix wait](Mendix+Actions/System/)
++ [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node)
++ [Focus WebElement](Mendix+Actions/System/Focus+WebElement)
++ [Get current Page Title](Mendix+Actions/System/Get+Current+Page+Title)
++ [Mendix wait](Mendix+Actions/System/Mendix+Wait)
 
 #### Tab
-+ [Assert Active Tab Caption](Mendix+Actions/Tab/)
-+ [Get Active Tab Caption](Mendix+Actions/Tab/)
++ [Assert Active Tab Caption](Mendix+Actions/Tab/Assert+Active+Tab+Caption)
++ [Get Active Tab Caption](Mendix+Actions/Tab/Get+Active+Tab+Caption)
 
 ### ATS Core Actions
-+ [Assert equals](ATS+Core+Actions/)
-+ [Assert not equals](ATS+Core+Actions/)
-+ [Concatenate String](ATS+Core+Actions/)
-+ [Get Current DateTime String](ATS+Core+Actions/)
-+ [Open Application](ATS+Core+Actions/)
-+ [Random Number/String](ATS+Core+Actions/)
-+ [Set Return Value](ATS+Core+Actions/)
++ [Assert equals](ATS+Core+Actions/Assert+Equals)
++ [Assert not equals](ATS+Core+Actions/Assert+Not+Equals)
++ [Concatenate String](ATS+Core+Actions/Concatenate+String)
++ [Get Current DateTime String](ATS+Core+Actions/Get+Current+DateTime+String)
++ [Random Number](ATS+Core+Actions/Random+Number)
++ [Random String](ATS+Core+Actions/Random+String)
++ [Set Return Value](ATS+Core+Actions/Set+Return+Value)
 
 ### Selenium Actions
 + [Execute JavaScript Integer](Selenium+Actions/)

@@ -1,6 +1,5 @@
 ---
 title: "Getting Started"
-category: "howto50"
 space: "Mendix 5 How-to's"
 redirect_from:
   - "/howto50/Kick-Start"

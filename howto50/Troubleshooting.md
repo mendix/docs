@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting"
-category: "howto50"
+category: "On-premises Deployment"
 space: "Mendix 5 How-to's"
 ---
 

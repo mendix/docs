@@ -1,6 +1,5 @@
 ---
 title: "View logging - Advanced"
-category: "howto50"
 space: "Mendix 5 How-to's"
 ---
 ## Description

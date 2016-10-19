@@ -1,6 +1,5 @@
 ---
 title: "Mendix Hosting Enviroment project structure and commands"
-category: "howto50"
 space: "Mendix 5 How-to's"
 ---
 ## Description

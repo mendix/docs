@@ -1,6 +1,6 @@
 ---
 title: "Consuming a REST Service"
-category: "howto50"
+category: "Integration"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.14.1</td><td class="confluenceTd">Apr 20, 2015 09:42</td><td colspan="1" class="confluenceTd">Oct 07, 2015 10:57</td></tr></tbody></table>
@@ -183,4 +183,3 @@ In the previous sections you have retrieved data from the Rijksmuseum with a GET
 
 *   [Expose a web service](Exposing+a+web+service)
 *   [Consume a simple web service](Consuming+a+simple+Web+Service)
-

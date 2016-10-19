@@ -1,6 +1,6 @@
 ---
 title: "Creating your first two Overview and Detail pages"
-category: "howto50"
+category: "GUI's"
 space: "Mendix 5 How-to's"
 ---
 
@@ -76,4 +76,3 @@ How-to's
 Reference Guide
 
 *   [Page](/refguide5/Page)
-

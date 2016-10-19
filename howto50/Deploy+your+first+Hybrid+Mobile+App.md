@@ -1,6 +1,6 @@
 ---
 title: "Deploy your first Hybrid Mobile App"
-category: "howto50"
+category: "Mobile"
 space: "Mendix 5 How-to's"
 ---
 # Deploy Your First Hybrid Mobile App

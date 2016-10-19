@@ -1,6 +1,6 @@
 ---
 title: "Mendix SQL Maintenance Plans"
-category: "howto50"
+parent: "Mendix+on+Windows+-+Microsoft+SQL+Server"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.0</td><td class="confluenceTd">Jun 18, 2013 15:04</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:39</td></tr></tbody></table>
@@ -148,4 +148,3 @@ space: "Mendix 5 How-to's"
 *   [Troubleshooting SQL Server](/howto6/Troubleshooting+SQL+Server)
 *   [Mendix SQL Maintenance Plans](/howto6/Mendix+SQL+Maintenance+Plans)
 *   [Setting up a new SQL Server database](/howto6/Setting+up+a+new+SQL+Server+database)
-

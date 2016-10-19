@@ -1,6 +1,6 @@
 ---
 title: "Finding your way through a project"
-category: "howto50"
+category: "Tips & Tricks"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.6</td><td class="confluenceTd">Aug 08, 2014 13:25</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:54</td></tr></tbody></table>
@@ -37,4 +37,3 @@ This how-to explains how you can find your way through a project in the Mendix B
 *   [Finding Unused Items](Finding+Unused+Items)
 *   [Showing a Project in the Directory in Explorer](Showing+a+Project+in+the+Directory+in+Explorer)
 *   [Querying over self-references](Querying+over+self+references)
-

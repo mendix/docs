@@ -1,6 +1,6 @@
 ---
 title: "Build a simple HRM app 3: Show related data in the GUI"
-category: "howto50"
+parent: "How+to+build+a+simple+HRM+app"
 space: "Mendix 5 How-to's"
 ---
 

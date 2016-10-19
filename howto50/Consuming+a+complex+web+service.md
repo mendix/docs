@@ -1,6 +1,6 @@
 ---
 title: "Consuming a complex web service"
-category: "howto50"
+category: "Integration"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Aug 26, 2010 14:51</td><td colspan="1" class="confluenceTd">Sep 02, 2015 13:02</td></tr></tbody></table>

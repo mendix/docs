@@ -1,6 +1,6 @@
 ---
 title: "Finding Unused Items"
-category: "howto50"
+category: "Tips & Tricks"
 space: "Mendix 5 How-to's"
 ---
 # Finding Unused Items
@@ -70,4 +70,3 @@ Some pages and microflows are only used from Java code and will be listed as an 
 *   [Finding your way through a project](Finding+your+way+through+a+project)
 *   [Showing a Project in the Directory in Explorer](Showing+a+Project+in+the+Directory+in+Explorer)
 *   [Querying over self-references](Querying+over+self+references)
-

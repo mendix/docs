@@ -1,10 +1,16 @@
 ---
-title: "Mobile"
-category: "howto50"
+title: Mobile
 space: "Mendix 5 How-to's"
 ---
+
 Our vision for mobile app development is that enterprises can greatly benefit from a single platform that supports the various styles of mobile app development (web, native and hybrid) for multiple devices and provides common mobile back-end services.
 
-The rapid evolution of standards like HTML and the wide adoption of frameworks to bridge the native device functions provide an ever-richer user experience for cross-platform apps. And from a logic perspective, JavaScript is powerful as a platform-independent, backend technology, even in native clients. There’s a shift going on from native languages towards JavaScript, where JavaScript gets more and more embedded in native programming languages to raise the level of re-usability of code across platforms.
+The rapid evolution of standards like HTML and the wide adoption of frameworks to bridge the native device functions provide an ever-richer user experience for cross-platform apps. And from a logic perspective, JavaScript is powerful as a platform-independent, backend technology, even in native clients. There's a shift going on from native languages towards JavaScript, where JavaScript gets more and more embedded in native programming languages to raise the level of re-usability of code across platforms.
 
-<table><thead><tr><th class="highlight-blue confluenceTh" data-highlight-colour="blue">Basic</th></tr></thead><tbody><tr><td class="confluenceTd"><span><a href="Deploy+your+first+Hybrid+Mobile+App"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783163/8946558.png" data-image-src="attachments/8783163/8946558.png"></a> <a href="Deploy+your+first+Hybrid+Mobile+App">Deploy your first Hybrid Mobile App</a></span></td></tr></tbody></table><table><thead><tr><th class="highlight-blue confluenceTh" data-highlight-colour="blue">Advanced</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd"><a href="Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783163/8946558.png" data-image-src="attachments/8783163/8946558.png"></a> <a href="Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores">Publishing a Mendix Hybrid Mobile App in Mobile App Stores</a></td></tr></tbody></table>
+| Basic
+| -----------------------------------------------------
+| [Deploy your first Hybrid Mobile App](Deploy+your+first+Hybrid+Mobile+App)
+
+| Advanced
+| -----------------------------------------------------
+| [Publishing a Mendix Hybrid Mobile App in Mobile App Stores](Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores)

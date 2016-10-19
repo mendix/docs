@@ -1,6 +1,6 @@
 ---
 title: "Build a simple HRM app 2: First steps in building a rich GUI"
-category: "howto50"
+parent: "How+to+build+a+simple+HRM+app"
 space: "Mendix 5 How-to's"
 ---
 

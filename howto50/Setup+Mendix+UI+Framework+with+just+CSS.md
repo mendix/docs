@@ -1,6 +1,6 @@
 ---
 title: "Setup Mendix UI Framework with just CSS"
-category: "howto50"
+parent: "Setup+Mendix+UI+Framework"
 space: "Mendix 5 How-to's"
 ---
 
@@ -69,4 +69,3 @@ In this chapter we will create a new app and select a theme from the New App sel
 *   [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
 *   [Creating your first two Overview and Detail pages](Creating+your+first+two+Overview+and+Detail+pages)
 *   [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
-

@@ -1,6 +1,6 @@
 ---
 title: "Setting up data validation"
-category: "howto50"
+category: "Data Models"
 space: "Mendix 5 How-to's"
 ---
 
@@ -93,4 +93,3 @@ Validating user input can also be achieved by overriding the default save button
 *   [Denormalize Data to Improve Performance](Denormalize+Data+to+Improve+Performance)
 *   [Setting up data validation](Setting+up+data+validation)
 *   [Working With Object Events](Working+With+Object+Events)
-

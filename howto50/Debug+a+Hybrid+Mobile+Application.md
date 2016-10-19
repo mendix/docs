@@ -1,6 +1,6 @@
 ---
 title: "Debug a Hybrid Mobile Application"
-category: "howto50"
+category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
 # Debug a Hybrid Mobile Application
@@ -45,4 +45,3 @@ You can now surf to the **same** address from your local browser to start the d
 *   [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)
 *   [Monitoring Mendix using JMX](Monitoring+Mendix+using+JMX)
 *   [Debugging Java Actions](Debugging+Java+Actions)
-

@@ -1,6 +1,6 @@
 ---
 title: "Anonymous User Security"
-category: "howto50"
+category: "Security"
 space: "Mendix 5 How-to's"
 ---
 # Anonymous User Security
@@ -59,4 +59,3 @@ For example to download a file, it is possible to got the url: https://myMendixA
 *   [Creating a secure app](Creating+a+secure+app)
 *   [Required Network Access for connecting to the Mendix Platform](/mxsupport/Required+Network+Access+for+connecting+to+the+Mendix+Platform)
 *   [Anonymous User Security](Anonymous+User+Security)
-

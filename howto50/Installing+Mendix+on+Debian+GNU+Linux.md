@@ -1,6 +1,6 @@
 ---
 title: "Installing Mendix on Debian GNU Linux"
-category: "howto50"
+category: "On-premises Deployment"
 space: "Mendix 5 How-to's"
 ---
 # Installing Mendix on Debian GNU/Linux
@@ -23,4 +23,3 @@ The documentation which describes the installation and basic configuration of th
 *   [Debugging Java Actions](Debugging+Java+Actions)
 *   [Debugging Java actions remotely](Debugging+Java+actions+remotely)
 *   [Log Levels](Log+Levels)
-

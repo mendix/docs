@@ -1,8 +1,28 @@
 ---
-title: "Monitoring and Troubleshooting"
-category: "howto50"
+title: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
+
 Stay updated on the health of your app and troubleshoot when needed.
 
-<table><thead><tr><th class="highlight-blue confluenceTh" data-highlight-colour="blue">Basic</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd"><a href="Monitoring+application+health"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Monitoring+application+health">Monitoring application health</a></td></tr><tr><td colspan="1" class="confluenceTd"><a href="Log+Levels"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Log+Levels">Log Levels</a></td></tr><tr><td colspan="1" class="confluenceTd"><span><a href="http://ww2.mendix.com/Expert-Webinar.Error-Handling.html" class="external-link" rel="nofollow"><img class="confluence-embedded-image confluence-thumbnail" alt="Webinar" width="20" src="attachments/8783184/8946545.png" data-image-src="attachments/8783184/8946545.png"></a> <a href="http://ww2.mendix.com/Expert-Webinar.Error-Handling.html" class="external-link" rel="nofollow">Error Handling</a></span></td></tr><tr><td colspan="1" class="confluenceTd"><a href="Clearing+Warning+Messages+in+Mendix"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Clearing+Warning+Messages+in+Mendix">Clearing Warning Messages in Mendix</a></td></tr><tr><td colspan="1" class="confluenceTd"><a href="Finding+the+Root+Cause+of+Runtime+Errors"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Finding+the+Root+Cause+of+Runtime+Errors">Finding the Root Cause of Runtime Errors</a></td></tr><tr><td colspan="1" class="confluenceTd"><a href="Debug+a+Hybrid+Mobile+Application"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Debug+a+Hybrid+Mobile+Application">Debug a Hybrid Mobile Application</a></td></tr></tbody></table><table><thead><tr><th class="highlight-blue confluenceTh" data-highlight-colour="blue">Advanced</th></tr></thead><tbody><tr><td class="confluenceTd"><a href="Debugging+Microflows"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Debugging+Microflows">Debugging Microflows</a></td></tr><tr><td colspan="1" class="confluenceTd"><a href="Debugging+Microflows+Remotely"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Debugging+Microflows+Remotely">Debugging Microflow remotely</a></td></tr><tr><td class="confluenceTd"><a href="Monitoring+Mendix+using+JMX"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Monitoring+Mendix+using+JMX">Monitoring Mendix using JMX</a></td></tr></tbody></table><table><thead><tr><th class="highlight-blue confluenceTh" data-highlight-colour="blue">Expert</th></tr></thead><tbody><tr><td class="confluenceTd"><a href="Debugging+Java+Actions"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Debugging+Java+Actions">Debugging Java Actions</a></td></tr><tr><td class="confluenceTd"><a href="Debugging+Java+actions+remotely"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Debugging+Java+actions+remotely">Debugging Java Actions remotely</a></td></tr><tr><td class="confluenceTd"><a href="Common+Mendix+SSO+Errors"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Common+Mendix+SSO+Errors">Common Mendix SSO Errors</a></td></tr><tr><td class="confluenceTd"><a href="Testing+Mendix+applications+using+Selenium+IDE"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Testing+Mendix+applications+using+Selenium+IDE">Testing Mendix applications using Selenium IDE</a></td></tr></tbody></table>
+| Basic
+| -----------------------------------------------------------------------------------
+| [Monitoring application health](Monitoring+application+health)
+| [Log Levels](Log+Levels)
+| [Error Handling (webinar)](http://ww2.mendix.com/Expert-Webinar.Error-Handling.html)
+| [Clearing Warning Messages in Mendix](Clearing+Warning+Messages+in+Mendix)
+| [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
+| [Debug a Hybrid Mobile Application](Debug+a+Hybrid+Mobile+Application)
+
+| Advanced
+| -----------------------------------------------------------------------------------
+| [Debugging Microflows](Debugging+Microflows)
+| [Debugging Microflow remotely](Debugging+Microflows+Remotely)
+| [Monitoring Mendix using JMX](Monitoring+Mendix+using+JMX)
+
+| Expert
+| -----------------------------------------------------------------------------------
+| [Debugging Java Actions](Debugging+Java+Actions)
+| [Debugging Java Actions remotely](Debugging+Java+actions+remotely)
+| [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)
+| [Testing Mendix applications using Selenium IDE](Testing+Mendix+applications+using+Selenium+IDE)

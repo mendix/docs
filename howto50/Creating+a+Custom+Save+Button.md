@@ -1,6 +1,6 @@
 ---
 title: "Creating a Custom Save Button"
-category: "howto50"
+category: "Logic and Business Rules"
 space: "Mendix 5 How-to's"
 ---
 # Creating a Custom Save Button

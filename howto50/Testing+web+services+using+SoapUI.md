@@ -1,6 +1,6 @@
 ---
 title: "Testing web services using SoapUI"
-category: "howto50"
+category: "Testing"
 space: "Mendix 5 How-to's"
 ---
 # Testing web services using SoapUI

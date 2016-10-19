@@ -1,6 +1,6 @@
 ---
 title: "Extending Your Application with Custom Java"
-category: "howto50"
+category: "Logic and Business Rules"
 space: "Mendix 5 How-to's"
 ---
 # Extending Your Application with Custom Java
@@ -114,4 +114,3 @@ You can use any text editor to create custom Java actions, but we highly recomme
 *   [Creating a Custom Save Button](Creating+a+Custom+Save+Button)
 *   [Extending Your Application with Custom Java](Extending+Your+Application+with+Custom+Java)
 *   [Working With Lists in a Microflow](Working+With+Lists+in+a+Microflow)
-

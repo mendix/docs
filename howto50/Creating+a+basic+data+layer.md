@@ -1,6 +1,6 @@
 ---
 title: "Creating a basic data layer"
-category: "howto50"
+category: "Data Models"
 space: "Mendix 5 How-to's"
 ---
 

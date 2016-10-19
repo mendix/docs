@@ -1,6 +1,6 @@
 ---
 title: "Creating a secure app"
-category: "howto50"
+category: "Security"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Oct 30, 2014 16:25</td><td colspan="1" class="confluenceTd">Sep 02, 2015 11:52</td></tr></tbody></table>

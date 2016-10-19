@@ -1,6 +1,6 @@
 ---
 title: "Create and Deploy Your First App"
-category: "howto50"
+category: "Getting Started"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.18</td><td class="confluenceTd">Dec 15, 2014 16:00</td><td colspan="1" class="confluenceTd">Nov 30, 2015 11:26</td></tr></tbody></table>
@@ -93,4 +93,3 @@ With Mendix you can manage requirements, build applications under version contro
 *   [Build a simple HRM app 2: First steps in building a rich GUI](Build+a+simple+HRM+app+2+First+steps+in+building+a+rich+GUI)
 *   [Build a simple HRM app 3: Show related data in the GUI](Build+a+simple+HRM+app+3+Show+related+data+in+the+GUI)
 *   [Testing microflows using the UnitTesting module](Testing+microflows+using+the+UnitTesting+module)
-

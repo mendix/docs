@@ -1,6 +1,6 @@
 ---
 title: "Creating automated tests with TestNG"
-category: "howto50"
+category: "Testing"
 space: "Mendix 5 How-to's"
 ---
 # Creating automated tests with TestNG
@@ -123,7 +123,7 @@ The @BeforeTest annotation is used to tell that the method under it will be exe
 
     ```java
     @BeforeTest
-    public void beforeTest() {	
+    public void beforeTest() {
     }
     ```
 
@@ -132,7 +132,7 @@ The @BeforeTest annotation is used to tell that the method under it will be exe
     ```java
     @BeforeTest
     public void beforeTest() {
-    	driver = new FirefoxDriver();	
+    	driver = new FirefoxDriver();
     }
     ```
 
@@ -427,7 +427,7 @@ The test you created is now run on Firefox only. If you want to make sure the fu
     ```java
     @BeforeTest
     public void beforeTest() {
-    	driver = new FirefoxDriver();	
+    	driver = new FirefoxDriver();
     }
     ```
 

@@ -1,6 +1,6 @@
 ---
 title: "Managing your Application Requirements with Mendix"
-category: "howto50"
+category: 'Collaboration & Project Management'
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21</td><td class="confluenceTd">Feb 04, 2015 16:47</td><td colspan="1" class="confluenceTd">Nov 17, 2015 15:39</td></tr></tbody></table>

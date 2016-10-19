@@ -1,6 +1,6 @@
 ---
 title: "Create a custom theme with the Mendix UI Framework"
-category: "howto50"
+category: "GUI's"
 space: "Mendix 5 How-to's"
 ---
 # Create a custom theme with the Mendix UI Framework
@@ -177,4 +177,3 @@ In this tutorial we are going to create a custom theme based on the website from
 *   [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
 *   [Creating your first two Overview and Detail pages](Creating+your+first+two+Overview+and+Detail+pages)
 *   [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
-

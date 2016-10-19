@@ -1,6 +1,6 @@
 ---
 title: "Consuming a simple Web Service"
-category: "howto50"
+category: "Integration"
 space: "Mendix 5 How-to's"
 ---
 # Consuming a simple Web Service
@@ -13,7 +13,7 @@ Mendix is "The App Platform for the Enterprise" and in enterprise software it is
 
 ## Table of Contents
 
-## 
+##
 1\. Importing a WSDL
 
 A WSDL describes the operations of a web service and can be imported in the Mendix Business Modeler. After importing the WSDL you can invoke the operations of the web service instantly within the Microflow editor.
@@ -83,4 +83,3 @@ A WSDL describes the operations of a web service and can be imported in the Mend
 ## 3\. Related content
 
 *   [Security](Security)
-

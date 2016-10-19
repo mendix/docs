@@ -1,6 +1,6 @@
 ---
 title: "Setting up the database user"
-category: "howto50"
+parent: "Setting+up+a+SQL+Server+user"
 space: "Mendix 5 How-to's"
 ---
 # Setting up the database user
@@ -55,4 +55,3 @@ Allow the user to connect to the database. If the user is Denied the privilege t
 *   [Setting up a SQL Server user](Setting+up+a+SQL+Server+user)
 *   [Restoring a SQL Server database](/howto6/Restoring+a+SQL+Server+database)
 *   [Troubleshooting SQL Server](/howto6/Troubleshooting+SQL+Server)
-

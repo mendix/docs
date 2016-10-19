@@ -1,6 +1,6 @@
 ---
 title: "Common Mendix SSO Errors"
-category: "howto50"
+category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
 
@@ -23,4 +23,3 @@ These are commonly caused by compatibility issues with JAR files in the <project
 *   [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)
 *   [Monitoring Mendix using JMX](Monitoring+Mendix+using+JMX)
 *   [Debugging Java Actions](Debugging+Java+Actions)
-

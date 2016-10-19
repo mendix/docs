@@ -1,6 +1,6 @@
 ---
 title: "Layouts and Snippets"
-category: "howto50"
+category: "GUI's"
 space: "Mendix 5 How-to's"
 ---
 
@@ -177,4 +177,3 @@ Additionally, a snippet can define an entity that serves as a context for the wi
 *   [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
 *   [Creating your first two Overview and Detail pages](Creating+your+first+two+Overview+and+Detail+pages)
 *   [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
-

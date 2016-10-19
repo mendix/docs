@@ -1,6 +1,6 @@
 ---
 title: "Security checklist for your on-premises installation"
-category: "howto50"
+category: "On-premises Deployment"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21</td><td class="confluenceTd">Nov 14, 2012 14:59</td><td colspan="1" class="confluenceTd">Nov 25, 2015 09:30</td></tr></tbody></table>
@@ -59,4 +59,3 @@ NEVER use the Mendix Business Modeler to directly connect to a production databa
 *   [Mendix SQL Maintenance Plans](/howto6/Mendix+SQL+Maintenance+Plans)
 *   [Setting up a new SQL Server database](/howto6/Setting+up+a+new+SQL+Server+database)
 *   [Setting up a SQL Server user](/howto6/Setting+up+a+SQL+Server+user)
-

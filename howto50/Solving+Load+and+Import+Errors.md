@@ -1,6 +1,6 @@
 ---
 title: "Solving Load and Import Errors"
-category: "howto50"
+category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
 # Solving Load and Import Errors
@@ -65,4 +65,3 @@ Finally, in the unlikely event that you encounter this error while working on yo
 *   [Debugging Microflows Remotely](Debugging+Microflows+Remotely)
 *   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
 *   [How to connect a different project to a node](/mxsupport/How+to+connect+a+different+project+to+a+node)
-

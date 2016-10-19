@@ -38,7 +38,7 @@ If just the login process seems to be failing you need to validate the response 
 *   A 404 status code, indicates that the /xas/ url cannot be found. This is an issue in your rewriter configuration, the /xas/ requests should be redirected to the localhost/xas/ url. If the rewriter is not setup correctly IIS will try and open the folder called xas, which obviously does not exists. 
 *   A 401 status code with an html page as response,    IIS should be configured to return detailed error messages. If IIS is not returning detailed error messages, for every message different than 200 it will return the default html error page. The client system needs to have the detailed (JSON) error message in order to correctly process the response. [See this IIS page for more info about detailed error responses](https://esus1.mendixcloud.com/index.html#mce_temp_url#) 
 
-After you have identified the exact cause of your problem it is best to search on the exact error message you are receiving, or take a look at [the How to Configure IIS](Setting+up+Internet+Information+Services). There are numerous reasons why IIS might give that error, existing IIS blog and documentation pages give a much better understanding on how to solve your specific issue. 
+After you have identified the exact cause of your problem it is best to search on the exact error message you are receiving. There are numerous reasons why IIS might give that error, existing IIS blog and documentation pages give a much better understanding on how to solve your specific issue. 
 
 ## 2\. Mendix Service Console
 
@@ -76,4 +76,3 @@ Make sure that the user account for the service has enough rights to the folders
 *   [Testing web services using SoapUI](Testing+web+services+using+SoapUI)
 *   [Debugging Microflows](Debugging+Microflows)
 *   [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)
-

@@ -1,6 +1,6 @@
 ---
 title: "Drag and Drop Microflows/Pages into Microflow"
-category: "howto50"
+category: "Logic and Business Rules"
 space: "Mendix 5 How-to's"
 ---
 
@@ -30,4 +30,3 @@ Instead of creating a new sub microflow action it is a lot easier to drag an exi
 *   [Triggering Logic using Microflows](Triggering+Logic+using+Microflows)
 *   [Creating a Custom Save Button](Creating+a+Custom+Save+Button)
 *   [Extending Your Application with Custom Java](Extending+Your+Application+with+Custom+Java)
-

@@ -1,6 +1,6 @@
 ---
 title: "Publishing a Mendix Hybrid Mobile App in Mobile App Stores"
-category: "howto50"
+category: "Mobile"
 space: "Mendix 5 How-to's"
 ---
 # Publishing a Mendix Hybrid Mobile App in Mobile App Stores
@@ -80,27 +80,25 @@ After you have been redirected back to the Mendix Developer Portal, the packagin
 
 You will see the "PhoneGap Build: Signing Key Required" page. It asks you to go to PhoneGap Build and set up the signing keys.
 
-1.  Click the link "log in to PhoneGap Build".
+1. Click the link "log in to PhoneGap Build".
 
     A new tab will be opened for "[https://build.phonegap.com/apps](https://build.phonegap.com/apps)", where you can see the PhoneGap Build App that was created by the Mendix Developer Portal for your app. The app is named as you defined it in the App Info in a previous step.
-2.  First, set up the app signing key for your app in your account.
-3.  You will later configure the app to be built with it:
+2. First, set up the app signing key for your app in your account.
+3. You will later configure the app to be built with it:
 
     *   Go to your PhoneGap Build account details. Click the avatar icon at the top right of the page and click the "Edit account" link.
     *   Click the "Signing Keys" tab.
     *   Under "iOS", click "add a key ...".
     *   A pop-up is shown where you must upload a certificate file and a provisioning profile file.
         You can get those files from Apple. The certificate is the ".p12" file, the provisioning profile is the ".mobileprovision" file. See our documentation on [how to obtain app signing keys](/refguide5/Managing+App+Signing+Keys) for more information.
-    *   Give the key a title that you can easily recognize, and upload the files.<div class="alert alert-warning">{% markdown %}
-    Before using the key, it must be unlocked with the passphrase that was set up for the key. Click the lock with yellow background on the same row as the key and enter the passphrase. As the pop-up mentions, the key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again for security reasons.
-    {% endmarkdown %}</div>
-4.  Now you are ready to configure the app. Click on "Apps" in the black bar at the top of the page to go to an overview showing your app(s). Click the logo or name of your app to go to the details of the app.
-5.  Select the correct key for your app. Next to the text "iOS", there is a dropdown box with "No key selected". Select the newly uploaded key from the dropdown box. It should be listed under "unlocked".
+    *   Give the key a title that you can easily recognize, and upload the files.
+<div class="alert alert-warning">{% markdown %}Before using the key, it must be unlocked with the passphrase that was set up for the key. Click the lock with yellow background on the same row as the key and enter the passphrase. As the pop-up mentions, the key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again for security reasons.{% endmarkdown %}</div>
+4. Now you are ready to configure the app. Click on "Apps" in the black bar at the top of the page to go to an overview showing your app(s). Click the logo or name of your app to go to the details of the app.
+5. Select the correct key for your app. Next to the text "iOS", there is a dropdown box with "No key selected". Select the newly uploaded key from the dropdown box. It should be listed under "unlocked".
 
 Now your PhoneGap Build account is ready and you can continue the packaging process.
 
-## 
-4\. Completing the packaging process
+## 4\. Completing the packaging process
 
 Complete the packaging process in the Mendix Developer Portal:
 
@@ -110,8 +108,7 @@ Complete the packaging process in the Mendix Developer Portal:
     You are presented with a page showing the build status of your apps titled "Building Mobile App Store Packages". It will show a status of "Building..." while PhoneGap Build is processing your app. Once ready, it will show a status of "Done" and a button is available to start the download of your iOS package.
 3.  When the build process is done click the "Download iOS package" button and save the package (.ipa file) to your computer.
 
-## 
-5\. Installing the iOS app to your test device
+## 5\. Installing the iOS app to your test device
 
 You can now deploy your app to your test device. An easy way to do this is with Apple iTunes:
 
@@ -143,4 +140,3 @@ The app should now be visible on your device. Open it and log in to your app wit
 *   [The Mobile Slider Custom Widget](/howto6/The+Mobile+Slider+Custom+Widget)
 *   [Debug a Hybrid Mobile Application](Debug+a+Hybrid+Mobile+Application)
 *   [Debug a Hybrid Mobile Application](/howto6/Debug+a+Hybrid+Mobile+Application)
-

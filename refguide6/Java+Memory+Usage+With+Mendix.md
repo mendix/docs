@@ -1,7 +1,7 @@
 ---
 title: "Java Memory Usage With Mendix"
 space: "Reference Guide 6"
-category: "refguide6"
+parent: "Transient+Objects+Garbage+Collecting"
 ---
 # Java Memory Usage With Mendix
 
@@ -40,7 +40,7 @@ The minor garbage collection run is executed frequently and requires little reso
 
 The minor garbage collection only reviews the **Eden Space** which is the primary segment of the **Young Generation.**
 
-The Eden Space usually contains a lot of garbage and the minor garbage collection is optimized to get rid of a lot of unused objects at once in a short time span. 
+The Eden Space usually contains a lot of garbage and the minor garbage collection is optimized to get rid of a lot of unused objects at once in a short time span.
 
 Any objects that are in use during the minor garbage collection will be moved to the **Survive Space**, which is part of the **Young Generation** segment.
 
@@ -54,7 +54,7 @@ The **Old / Tenured Generation** won’t cleaned frequently by the garbage colle
 
 ![](attachments/16714070/16844068.png)
 
-A healthy Mendix application that consumes a small amount of memory will show a graph similar to the first graph on the right. 
+A healthy Mendix application that consumes a small amount of memory will show a graph similar to the first graph on the right.
 
 ![](attachments/16714070/16844067.png)
 

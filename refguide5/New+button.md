@@ -1,6 +1,6 @@
 ---
 title: "New button"
-category: "refguide5"
+parent: "Button+Widgets"
 space: "Reference Guide 5"
 ---
 

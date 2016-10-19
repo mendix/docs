@@ -1,6 +1,6 @@
 ---
 title: "Table row"
-category: "refguide5"
+parent: "Table"
 space: "Reference Guide 5"
 ---
 

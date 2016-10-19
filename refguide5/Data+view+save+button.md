@@ -1,6 +1,6 @@
 ---
 title: "Data view save button"
-category: "refguide5"
+parent: "Data+view+control+bar"
 space: "Reference Guide 5"
 ---
 

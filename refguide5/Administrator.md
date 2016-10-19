@@ -1,6 +1,6 @@
 ---
 title: "Administrator"
-category: "refguide5"
+parent: "Project+Security"
 space: "Reference Guide 5"
 ---
 

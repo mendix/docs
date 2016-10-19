@@ -1,6 +1,6 @@
 ---
 title: "Navigation"
-category: "refguide5"
+parent: "Project"
 space: "Reference Guide 5"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Tab page"
-category: "refguide5"
+parent: "Tab+container"
 space: "Reference Guide 5"
 ---
 

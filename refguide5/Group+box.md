@@ -1,6 +1,6 @@
 ---
 title: "Group box"
-category: "refguide5"
+parent: "Container+Widgets"
 space: "Reference Guide 5"
 ---
 

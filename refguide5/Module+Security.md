@@ -1,6 +1,6 @@
 ---
 title: "Module Security"
-category: "refguide5"
+parent: "Modules"
 space: "Reference Guide 5"
 ---
 

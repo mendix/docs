@@ -1,6 +1,6 @@
 ---
 title: "Attributes"
-category: "refguide5"
+parent: "Entities"
 space: "Reference Guide 5"
 ---
 

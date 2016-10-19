@@ -1,6 +1,6 @@
 ---
 title: "Layout grid"
-category: "refguide5"
+parent: "Container+Widgets"
 space: "Reference Guide 5"
 ---
 

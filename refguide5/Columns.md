@@ -1,6 +1,6 @@
 ---
 title: "Columns"
-category: "refguide5"
+parent: "Data+grid"
 space: "Reference Guide 5"
 ---
 ## Common Properties

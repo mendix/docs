@@ -1,6 +1,6 @@
 ---
 title: "Page Concepts"
-category: "refguide5"
+parent: "Pages"
 space: "Reference Guide 5"
 ---
 

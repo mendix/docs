@@ -1,6 +1,6 @@
 ---
 title: "Tab container"
-category: "refguide5"
+parent: "Container+Widgets"
 space: "Reference Guide 5"
 ---
 

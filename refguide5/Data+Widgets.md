@@ -1,6 +1,6 @@
 ---
 title: "Data Widgets"
-category: "refguide5"
+parent: "Pages"
 space: "Reference Guide 5"
 ---
 
@@ -22,4 +22,3 @@ The list view is similar to the template grid. The list view shows a list of obj
 
 [![](attachments/4522348/13402432.png)](Template+grid)**[Template grid](Template+grid)**
 The template grid shows a list of objects in a tile view. For example, a template grid can show a list of products. Using controls provided by the template grid you can browse, search and manipulate those objects.
-

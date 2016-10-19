@@ -1,6 +1,6 @@
 ---
 title: "Common Widgets"
-category: "refguide5"
+parent: "Pages"
 space: "Reference Guide 5"
 ---
 

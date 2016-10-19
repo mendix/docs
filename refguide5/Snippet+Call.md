@@ -1,6 +1,6 @@
 ---
 title: "Snippet Call"
-category: "refguide5"
+parent: "Common+Widgets"
 space: "Reference Guide 5"
 ---
 

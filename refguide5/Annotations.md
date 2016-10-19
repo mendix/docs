@@ -1,6 +1,6 @@
 ---
 title: "Annotations"
-category: "refguide5"
+parent: "Domain+Model"
 space: "Reference Guide 5"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Template grid"
-category: "refguide5"
+parent: "Data+Widgets"
 space: "Reference Guide 5"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Anonymous Users"
-category: "refguide5"
+parent: "Project+Security"
 space: "Reference Guide 5"
 ---
 

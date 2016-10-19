@@ -1,6 +1,6 @@
 ---
 title: "Version Control Scenarios"
-category: "refguide5"
+parent: "Version+Control"
 space: "Reference Guide 5"
 ---
 

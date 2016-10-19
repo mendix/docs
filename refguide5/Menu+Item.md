@@ -1,6 +1,6 @@
 ---
 title: "Menu Item"
-category: "refguide5"
+parent: "Menu"
 space: "Reference Guide 5"
 ---
 

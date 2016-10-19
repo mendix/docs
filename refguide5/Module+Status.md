@@ -1,6 +1,6 @@
 ---
 title: "Module Status"
-category: "refguide5"
+parent: "Project+Security"
 space: "Reference Guide 5"
 ---
 

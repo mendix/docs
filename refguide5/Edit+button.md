@@ -1,6 +1,6 @@
 ---
 title: "Edit button"
-category: "refguide5"
+parent: "Control+Bar"
 space: "Reference Guide 5"
 ---
 

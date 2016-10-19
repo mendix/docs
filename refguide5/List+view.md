@@ -1,6 +1,6 @@
 ---
 title: "List view"
-category: "refguide5"
+parent: "Data+Widgets"
 space: "Reference Guide 5"
 ---
 

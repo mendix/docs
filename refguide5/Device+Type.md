@@ -1,6 +1,6 @@
 ---
 title: "Device Type"
-category: "refguide5"
+parent: "Navigation"
 space: "Reference Guide 5"
 ---
 

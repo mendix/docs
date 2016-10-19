@@ -1,6 +1,6 @@
 ---
 title: "Sort Bar"
-category: "refguide5"
+parent: "Data+grid"
 space: "Reference Guide 5"
 ---
 

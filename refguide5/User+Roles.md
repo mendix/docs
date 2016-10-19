@@ -1,6 +1,6 @@
 ---
 title: "User Roles"
-category: "refguide5"
+parent: "Project+Security"
 space: "Reference Guide 5"
 ---
 A user role aggregates a number of access rights on data, forms and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent.

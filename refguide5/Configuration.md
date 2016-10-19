@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-category: "refguide5"
+parent: "Project+Settings"
 space: "Reference Guide 5"
 ---
 

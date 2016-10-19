@@ -24,8 +24,16 @@ algolia:
   excluded_files:
     - index.html
     - howto6/index.html
+    - howto50/index.html
     - refguide6/index.html
+    - refguide5/index.html
     - search/index.html
+  settings:
+    attributesForFaceting:
+      - 'tags'
+      - 'type'
+      - 'title'
+      - 'space'
 
 ####################################
 ######        SPACES         #######

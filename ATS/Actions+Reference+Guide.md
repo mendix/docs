@@ -17,27 +17,30 @@ This sections provides you with an overview of the most common used, predefined 
 #### Dialog
 
 + [Cancel Dialog](Mendix+Actions/Dialog/Cancel+Dialog)
-+ [Close Dialog](Mendix+Actions/Dialog/)
-+ [Confirm Dialog](Mendix+Actions/Dialog/)
-+ [Find/Assert Dialog](Mendix+Actions/Dialog/)
-+ [Get Dialog Message Text](Mendix+Actions/Dialog/)
++ [Close Dialog](Mendix+Actions/Dialog/Close+Dialog)
++ [Confirm Dialog](Mendix+Actions/Dialog/Confirm+Dialog)
++ [Find/Assert Dialog](Mendix+Actions/Dialog/FindAssert+Dialog)
++ [Get Dialog Message Text](Mendix+Actions/Dialog/Get+Dialog+Message+Text)
 
 #### Generic
-+ [Find/Assert Widget](Mendix+Actions/Generic/)
-+ [Click/Doubleclick](Mendix+Actions/Generic/)
-+ [Click Widget](Mendix+Actions/Generic/)
-+ [Login](Mendix+Actions/Generic/)
-+ [Logout](Mendix+Actions/Generic/)
++ [Find/Assert Widget](Mendix+Actions/Generic/FindAssert+Widget)
++ [Click/Doubleclick](Mendix+Actions/Generic/ClickDoubleclick)
++ [Click Widget](Mendix+Actions/Generic/Click+Widget)
++ [Login](Mendix+Actions/Generic/Login)
++ [Logout](Mendix+Actions/Generic/Logout)
 
 #### GroupBox
-+ [Open/Close GroupBox](Mendix+Actions/GroupBox/)
-+ [GroupBox is Collapsed](Mendix+Actions/GroupBox/)
++ [Open GroupBox](Mendix+Actions/GroupBox/Open+GroupBox)
++ [Close GroupBox](Mendix+Actions/GroupBox/Close+GroupBox)
++ [GroupBox is Collapsed](Mendix+Actions/GroupBox/GroupBox+is+Collapsed)
 
 #### Input
-+ [Assert Value](Mendix+Actions/Input/)
-+ [Set/Get Value](Mendix+Actions/Input/)
-+ [Set/Get Checkbox Value](Mendix+Actions/Input/)
-+ [Toggle Checkbox Value](Mendix+Actions/Input/)
++ [Assert Value](Mendix+Actions/Input/Assert+Value)
++ [Set Value](Mendix+Actions/Input/Set+Value)
++ [Get Value](Mendix+Actions/Input/Get+Value)
++ [Set Checkbox Value](Mendix+Actions/Input/Set+Checkbox+Value)
++ [Get Checkbox Value](Mendix+Actions/Input/Get+Checkbox+Value)
++ [Toggle Checkbox Value](Mendix+Actions/Input/Toggle+Checkbox+Value)
 
 #### Navigation, Menu
 + [Click Menu Item](Mendix+Actions/Navigation+Menu/)

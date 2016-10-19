@@ -61,7 +61,6 @@ If you are using Custom Settings to influence the Runtime behavior it is critica
 
 ## 3\. Related articles
 
-*   [Setting up Internet Information Services](Setting+up+Internet+Information+Services)
 *   [Updating a Mendix Application](Updating+a+Mendix+Application)
 *   [Troubleshooting](Troubleshooting)
 *   [Architecture Options](Architecture+Options)

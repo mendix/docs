@@ -44,7 +44,6 @@ For more information please see the [How to page on High availability](High+Avai
 
 ## 6\. Related content
 
-*   [Setting up Internet Information Services](Setting+up+Internet+Information+Services)
 *   [Updating a Mendix Application](Updating+a+Mendix+Application)
 *   [Troubleshooting](Troubleshooting)
 *   [Architecture Options](Architecture+Options)

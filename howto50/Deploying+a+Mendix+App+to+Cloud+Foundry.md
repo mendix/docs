@@ -10,7 +10,6 @@ space: "Mendix 5 How-to's"
 [![](attachments/18448647/19398951.png)](/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix)
 [![](attachments/18448647/19398952.png)](Deploying+a+Mendix+App+to+HP+Helion)
 [![](attachments/18448647/19398954.png)](Deploying+a+Mendix+App+to+Pivotal)
-[![](attachments/18448647/19398953.png)](Deployment+to+the+Cloud)
 
 Cloud Foundry is an Open Source Platform-as-a-Service that can run all kinds of web applications. Its technical highlights are:
 

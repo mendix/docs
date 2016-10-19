@@ -72,8 +72,6 @@ END;
 ## 3\. Related content
 
 *   [How to execute an SQL statement on an external database](/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database)
-*   [Activate Your Mendix License](Activate+your+Mendix+license)
 *   [Troubleshooting](Troubleshooting)
 *   [Setting up the database user](Setting+up+the+database+user)
 *   [Sharing the Development Database](Sharing+the+Development+Database)
-*   [Setting up Internet Information Services](Setting+up+Internet+Information+Services)

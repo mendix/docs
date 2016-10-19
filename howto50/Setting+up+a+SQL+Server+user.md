@@ -25,9 +25,7 @@ On this page you can find a step by step instruction on how to: [Set up the dat
 
 ## Related content
 
-*   [Activating a Mendix license on Microsoft Windows](Activate+your+Mendix+license)
 *   [Troubleshooting](Troubleshooting)
 *   [Setting up the database user](Setting+up+the+database+user)
 *   [How to execute an SQL statement on an external database](/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database)
-*   [Setting up Internet Information Services](Setting+up+Internet+Information+Services)
 *   [Restoring a SQL Server database](Restoring+a+SQL+Server+database)

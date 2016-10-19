@@ -151,13 +151,9 @@ If you encounter any problems you should consult the application logs.
 
 ## 8\. Related content
 
-*   [Deploying a Mendix App to Pivotal](/howto6/Deploying+a+Mendix+App+to+Pivotal)
-*   [Deploying a Mendix App to HP Helion](/howto6/Deploying+a+Mendix+App+to+HP+Helion)
-*   [Deploying a Mendix App to Cloud Foundry](/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry)
+*   [Deploying a Mendix App to Pivotal](Deploying+a+Mendix+App+to+Pivotal)
+*   [Deploying a Mendix App to HP Helion](Deploying+a+Mendix+App+to+HP+Helion)
+*   [Deploying a Mendix App to Cloud Foundry](Deploying+a+Mendix+App+to+Cloud+Foundry)
 *   [Deploying a Mendix App to IBM Bluemix](/howto6/Deploying+a+Mendix+App+to+IBM+Bluemix)
-
-
-
 *   [Pivotal Web Services Documentation](http://docs.run.pivotal.io/)
 *   [Pivotal Cloud Foundry Blog](http://blog.pivotal.io/cloud-foundry-pivotal)
-

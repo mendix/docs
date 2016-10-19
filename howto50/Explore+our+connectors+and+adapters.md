@@ -5,8 +5,6 @@ space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Dec 09, 2014 15:33</td><td colspan="1" class="confluenceTd">Sep 02, 2015 13:31</td></tr></tbody></table>
 
-
-
 One of the strengths of Mendix is that it’s easy to connect your Mendix application with other systems. Our App Store is filled with all kinds of connectors and adapters. Here is an overview of some of our connectors:
 
 # Table of contents
@@ -95,8 +93,4 @@ One of the strengths of Mendix is that it’s easy to connect your Mendix applic
 
 *   [Explore our connectors and adapters](/howto50/Explore+our+connectors+and+adapters)
 *   [Send Custom Emails From Your App](/howto50/Send+Custom+Emails+From+Your+App)
-*   [Send Custom Emails From Your App](/howto6/Send+Custom+Emails+From+Your+App)
 *   [Access a Samba share from the MxCloud](/howto50/Access+a+Samba+share+from+the+MxCloud)
-*   [Explore our connectors and adapters](/howto6/Explore+our+connectors+and+adapters)
-*   [Access a Samba share from the MxCloud](/howto6/Access+a+Samba+share+from+the+MxCloud)
-

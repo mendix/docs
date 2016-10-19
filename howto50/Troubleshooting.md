@@ -3,13 +3,6 @@ title: "Troubleshooting"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-# Troubleshooting
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Author</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Last Modified By</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd"><a href="    /~jonathan.veldhuizen@mendix.com
-" class="url fn confluence-userlink" data-username="jonathan.veldhuizen@mendix.com" rel="nofollow">Jonathan Veldhuizen</a></td><td class="confluenceTd">Dec 10, 2012 14:20</td><td colspan="1" class="confluenceTd"><a href="    /~jan
-" class="url fn confluence-userlink" data-username="jan" rel="nofollow">Jan de Vries</a></td><td colspan="1" class="confluenceTd">Sep 03, 2015 15:22</td></tr></tbody></table>
-
-# Table of contents
 
 ## 1. IIS Troubleshooting
 
@@ -78,13 +71,8 @@ Make sure that the user account for the service has enough rights to the folders
 
 ## 3\. Related content
 
-*   [Troubleshooting](/howto50/Troubleshooting)
-*   [Troubleshooting](/howto6/Troubleshooting)
 *   [Finding the Root Cause of Runtime Errors](/howto50/Finding+the+Root+Cause+of+Runtime+Errors)
 *   [Clearing Warning Messages in Mendix](/howto50/Clearing+Warning+Messages+in+Mendix)
-*   [Finding the Root Cause of Runtime Errors](/howto6/Finding+the+Root+Cause+of+Runtime+Errors)
-*   [Clearing Warning Messages in Mendix](/howto6/Clearing+Warning+Messages+in+Mendix)
-*   [Testing web services using SoapUI](/howto6/Testing+web+services+using+SoapUI)
 *   [Testing web services using SoapUI](/howto50/Testing+web+services+using+SoapUI)
 *   [Debugging Microflows](/howto50/Debugging+Microflows)
 *   [Common Mendix SSO Errors](/howto50/Common+Mendix+SSO+Errors)

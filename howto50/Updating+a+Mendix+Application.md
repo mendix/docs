@@ -5,10 +5,6 @@ space: "Mendix 5 How-to's"
 ---
 # Updating a Mendix Application with a new Release
 
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Author</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Last Modified By</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd"><a href="    /~jaspervanderhoek
-" class="url fn confluence-userlink" data-username="jaspervanderhoek" rel="nofollow">Jasper van der Hoek</a></td><td class="confluenceTd">Jan 29, 2015 17:37</td><td colspan="1" class="confluenceTd"><a href="    /~jan
-" class="url fn confluence-userlink" data-username="jan" rel="nofollow">Jan de Vries</a></td><td colspan="1" class="confluenceTd">Sep 03, 2015 15:20</td></tr></tbody></table>
-
 A Mendix application on a Windows server can be updated using the Mendix Service Console. Before starting with the server update, you need to make sure that you have a versioned deployment archive (*.mda file) accessible on your server and that the same version of the server distribution is either installed or also available as an installation package on the server.
 
 The service console creates a backup of the project files, this allows you to restore a previous deployment. But before every update it is recommended to create a backup of your data and uploaded files. The Mendix Service Console does not do this for you. 
@@ -66,9 +62,3 @@ The user that is configured as the Service Account should have Read&Execute priv
 *   [Setting up a new SQL Server database](/howto50/Setting+up+a+new+SQL+Server+database)
 *   [Troubleshooting SQL Server](/howto50/Troubleshooting+SQL+Server)
 *   [Setting up a SQL Server user](/howto50/Setting+up+a+SQL+Server+user)
-*   [Restoring a SQL Server database](/howto6/Restoring+a+SQL+Server+database)
-*   [Troubleshooting SQL Server](/howto6/Troubleshooting+SQL+Server)
-*   [Mendix SQL Maintenance Plans](/howto6/Mendix+SQL+Maintenance+Plans)
-*   [Setting up a new SQL Server database](/howto6/Setting+up+a+new+SQL+Server+database)
-*   [Setting up a SQL Server user](/howto6/Setting+up+a+SQL+Server+user)
-

@@ -129,15 +129,8 @@ Set the duration only to asynchronous if you experience problems. Sometimes if a
 ## 3\. Related content
 
 *   [Defining access rules using XPath](/howto50/Defining+access+rules+using+XPath)
-*   [Defining access rules using XPath](/howto6/Defining+access+rules+using+XPath)
-*   [Triggering Logic using Microflows](/howto50/Triggering+Logic+using+Microflows)
 *   [Creating a Custom Save Button](/howto50/Creating+a+Custom+Save+Button)
 *   [Extending Your Application with Custom Java](/howto50/Extending+Your+Application+with+Custom+Java)
-
-*   [Triggering Logic using Microflows](/howto6/Triggering+Logic+using+Microflows)
-*   [Creating a Custom Save Button](/howto6/Creating+a+Custom+Save+Button)
-*   [Working With Lists in a Microflow](/howto6/Working+With+Lists+in+a+Microflow)
-
-
-
+*   [Creating a Custom Save Button](Creating+a+Custom+Save+Button)
+*   [Working With Lists in a Microflow](Working+With+Lists+in+a+Microflow)
 *   [Microflow button](/refguide5/Microflow+button)

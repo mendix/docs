@@ -250,17 +250,11 @@ Here’s an example in the Mendix modeler:
 
 *   [Finding the Root Cause of Runtime Errors](/howto50/Finding+the+Root+Cause+of+Runtime+Errors)
 *   [Clearing Warning Messages in Mendix](/howto50/Clearing+Warning+Messages+in+Mendix)
-*   [Finding the Root Cause of Runtime Errors](/howto6/Finding+the+Root+Cause+of+Runtime+Errors)
-*   [Clearing Warning Messages in Mendix](/howto6/Clearing+Warning+Messages+in+Mendix)
-*   [Testing web services using SoapUI](/howto6/Testing+web+services+using+SoapUI)
 *   [Testing web services using SoapUI](/howto50/Testing+web+services+using+SoapUI)
 *   [Debugging Microflows](/howto50/Debugging+Microflows)
 *   [Common Mendix SSO Errors](/howto50/Common+Mendix+SSO+Errors)
 *   [Monitoring Mendix using JMX](/howto50/Monitoring+Mendix+using+JMX)
 *   [Debugging Java Actions](/howto50/Debugging+Java+Actions)
-
-
-
 *   [Debugging Java actions remotely](Debugging+Java+actions+remotely)
 *   [Getting started with Nexus maven repository manager](http://www.andrejkoelewijn.com/blog/2010/03/09/getting-started-with-nexus-maven-repository-manager/)
 *   [Using eclipse to debug your tomcat web application](http://www.andrejkoelewijn.com/blog/2003/10/23/using-eclipse-to-debug-your-tomcat-web-application/)

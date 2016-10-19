@@ -146,19 +146,9 @@ Other query examples are:
 
 ## 6\. Related content
 
-*   [Expose a web service](/howto40/Expose+a+web+service)
-*   [Configure an XML-to-Domain mapping](/howto40/Configure+an+XML-to-Domain+mapping)
-*   [Configure a Domain-to-XML mapping](/howto40/Configure+a+Domain-to-XML+mapping)
-*   [Expose a web service](/howto30/Expose+a+web+service)
-*   [Add web service users](/howto30/Add+web+service+users)
-*   [Add and configure an XML schema](/howto30/Add+and+configure+an+XML+schema)
-*   [Configure an XML-to-Domain mapping](/howto30/Configure+an+XML-to-Domain+mapping)
-*   [Configure a Domain-to-XML mapping](/howto30/Configure+a+Domain-to-XML+mapping)
-*   [Consume a web service](/howto30/Consume+a+web+service)
-*   [Consume a web service](/howto40/Consume+a+web+service)
-
-
-
+*   [Expose a web service](Exposing+a+web+service)
+*   [Consume a Simple Web Service](Consuming+a+simple+Web+Service)
+*   [Consume a Complex Web Service](Consuming+a+complex+web+service)
 *   [Published OData Services](/refguide5/Published+OData+Services)
 *   [OData Representation](/refguide5/OData+Representation)
 *   [OData Query Options](/refguide5/OData+Query+Options)

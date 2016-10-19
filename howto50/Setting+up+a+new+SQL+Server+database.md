@@ -72,13 +72,9 @@ END;
 ## 3\. Related content
 
 *   [How to execute an SQL statement on an external database](/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database)
-*   [Activating a Mendix license on Microsoft Windows](/howto6/Activating+a+Mendix+license+on+Microsoft+Windows)
+*   [Activate Your Mendix License](Activate+your+Mendix+license)
 *   [Troubleshooting](/howto50/Troubleshooting)
 *   [Setting up the database user](/howto50/Setting+up+the+database+user)
-*   [Setting up the database user](/howto6/Setting+up+the+database+user)
-*   [Troubleshooting](/howto6/Troubleshooting)
-*   [Migrating your Mendix database](/tips/Migrating+your+Mendix+database)
 *   [Sharing the Development Database](/howto50/Sharing+the+Development+Database)
-*   [Sharing the Development Database](/howto6/Sharing+the+Development+Database)
-*   [Setting up Internet Information Services](/howto6/Setting+up+Internet+Information+Services)
+*   [Setting up Internet Information Services](Setting+up+Internet+Information+Services)
 

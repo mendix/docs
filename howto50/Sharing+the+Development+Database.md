@@ -5,8 +5,6 @@ space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.7</td><td class="confluenceTd">Nov 04, 2014 10:32</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:22</td></tr></tbody></table>
 
-
-
 All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with the Mendix Business Modeler. This how-to will teach you how to open and manage the data stored inside the built-in database.
 
 # Table of contents
@@ -97,13 +95,7 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 ## 8\. Related content
 
 *   [Managing your Application Requirements with Mendix](/howto50/Managing+your+Application+Requirements+with+Mendix)
-*   [Managing your Application Requirements with Mendix](/howto6/Managing+your+Application+Requirements+with+Mendix)
 *   [Starting your own repository](/howto50/Starting+your+own+repository)
 *   [Contributing to a GitHub repository](/howto50/Contributing+to+a+GitHub+repository)
-*   [Contributing to a GitHub repository](/howto6/Contributing+to+a+GitHub+repository)
-*   [Starting your own repository](/howto6/Starting+your+own+repository)
 *   [Using Team Server - Version Control](/howto50/Using+Team+Server+-+Version+Control)
 *   [Gathering user feedback](/howto50/Gathering+user+feedback)
-*   [Using Team Server - Version Control](/howto6/Using+Team+Server+-+Version+Control)
-*   [Gathering user feedback](/howto6/Gathering+user+feedback)
-

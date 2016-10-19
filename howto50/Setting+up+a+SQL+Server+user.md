@@ -5,12 +5,12 @@ space: "Mendix 5 How-to's"
 ---
 
 
-## **Description**
+## Description
 
 This article describes how to configure the users of a SQL server to create a secure environment for a Mendix based application.
 To create a secure environment it is important to make a clear distinction between an user with an administrator role and a regular user of the application.
 
-## **Instructions**
+## Instructions
 
 *   **Create an administrator:** Create a user with the administrator role, for example 'MendixAdmin'.
 *   **Set the server roles for the administrator:** Depending on the tasks this user has to execute the administrator role should be connected to the following database roles:
@@ -25,14 +25,10 @@ On this page you can find a step by step instruction on how to: [Set up the dat
 
 ## Related content
 
-*   [Activating a Mendix license on Microsoft Windows](/howto6/Activating+a+Mendix+license+on+Microsoft+Windows)
+*   [Activating a Mendix license on Microsoft Windows](Activate+your+Mendix+license)
 *   [Troubleshooting](/howto50/Troubleshooting)
 *   [Setting up the database user](/howto50/Setting+up+the+database+user)
-*   [Setting up the database user](/howto6/Setting+up+the+database+user)
-*   [Troubleshooting](/howto6/Troubleshooting)
 *   [How to execute an SQL statement on an external database](/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database)
-*   [Setting up Internet Information Services](/howto6/Setting+up+Internet+Information+Services)
 *   [Setting up Internet Information Services](/howto50/Setting+up+Internet+Information+Services)
-*   [Scripted windows Mendix administration](/howto6/Scripted+windows+Mendix+administration)
 *   [Restoring a SQL Server database](/howto50/Restoring+a+SQL+Server+database)
 

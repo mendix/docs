@@ -64,12 +64,6 @@ _Result:_  The object will be removed from memory and if applicable from the da
 
 *   [Working with images and files](/howto50/Working+with+images+and+files)
 *   [Creating a basic data layer](/howto50/Creating+a+basic+data+layer)
-*   [Creating a basic data layer](/howto6/Creating+a+basic+data+layer)
-*   [Working with images and files](/howto6/Working+with+images+and+files)
 *   [Denormalize Data to Improve Performance](/howto50/Denormalize+Data+to+Improve+Performance)
 *   [Setting up data validation](/howto50/Setting+up+data+validation)
 *   [Working With Object Events](/howto50/Working+With+Object+Events)
-*   [Working With Object Events](/howto6/Working+With+Object+Events)
-*   [Setting up data validation](/howto6/Setting+up+data+validation)
-*   [Denormalize Data to Improve Performance](/howto6/Denormalize+Data+to+Improve+Performance)
-

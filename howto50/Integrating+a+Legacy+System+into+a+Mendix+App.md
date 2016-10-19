@@ -3,10 +3,6 @@ title: "Integrating a Legacy System into a Mendix App"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th class="confluenceTh">Last Modified By</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.13.1</td><td class="confluenceTd">Mar 30, 2015 22:50</td><td class="confluenceTd"><a href="    /~jan
-" class="url fn confluence-userlink" data-username="jan" rel="nofollow">Jan de Vries</a></td><td colspan="1" class="confluenceTd">Nov 16, 2015 09:33</td></tr></tbody></table>
-
-
 
 Mendix applications frequently need to communicate with existing systems.  Whether replacing an older platform entirely or leveraging an existing database to enhance your App, the ability to integrate with legacy systems is key to your success.  This article introduces a range of options that exist within the Mendix platform to integrate with legacy systems.
 
@@ -142,15 +138,7 @@ The above example demonstrates how a Mendix Application can quickly integrate da
 
 ## Related content
 
-*   [Expose a web service](/howto40/Expose+a+web+service)
-*   [Configure an XML-to-Domain mapping](/howto40/Configure+an+XML-to-Domain+mapping)
-*   [Configure a Domain-to-XML mapping](/howto40/Configure+a+Domain-to-XML+mapping)
-*   [Expose a web service](/howto30/Expose+a+web+service)
-*   [Add web service users](/howto30/Add+web+service+users)
-*   [Add and configure an XML schema](/howto30/Add+and+configure+an+XML+schema)
-*   [Configure an XML-to-Domain mapping](/howto30/Configure+an+XML-to-Domain+mapping)
-*   [Configure a Domain-to-XML mapping](/howto30/Configure+a+Domain-to-XML+mapping)
-*   [Consume a web service](/howto30/Consume+a+web+service)
-*   [Consume a web service](/howto40/Consume+a+web+service)
-
+*   [Expose a Web Service](Consuming+a+complex+web+service)
+*   [Consume a Simple Web Service](Consuming+a+simple+Web+Service)
+*   [Consume a Complex Web Service](Consuming+a+complex+web+service)
 *   [Extending Salesforce with Mendix, an Alternative to Force. com](https://www.mendix.com/blog/extending-salesforce-mendix-alternative-force-com/)

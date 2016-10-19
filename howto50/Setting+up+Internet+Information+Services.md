@@ -274,7 +274,5 @@ IIS 7
 *   [Installing Mendix on RedHat and CentOS](/howto50/Installing+Mendix+on+RedHat+and+CentOS)
 *   [Installing Mendix on Debian GNU Linux](/howto50/Installing+Mendix+on+Debian+GNU+Linux)
 *   [Create and Deploy Your First App](/howto50/Create+and+Deploy+Your+First+App)
-*   [Security checklist for your on-premises installation](/howto50/Security+checklist+for+your+on-premises+installation)
+*   [Security checklist for your on-premises installation](Security+checklist+for+your+on+premises+installation)
 *   [Deploying Mendix on Microsoft Windows](/howto50/Deploying+Mendix+on+Microsoft+Windows)
-
-[Back to the top](Setting+up+Internet+Information+Services)

@@ -53,14 +53,5 @@ Note that the fourth row in a grid has an index of 3.
 
 ## 4\. Related content
 
-*   [Creating automated tests with TestNG](/howto6/Creating+automated+tests+with+TestNG)
-*   [Creating automated tests with TestNG](/howto50/Creating+automated+tests+with+TestNG)
-*   [Expose a web service](/howto40/Expose+a+web+service)
-*   [Configure an XML-to-Domain mapping](/howto40/Configure+an+XML-to-Domain+mapping)
-*   [Configure a Domain-to-XML mapping](/howto40/Configure+a+Domain-to-XML+mapping)
-*   [Expose a web service](/howto30/Expose+a+web+service)
-*   [Add web service users](/howto30/Add+web+service+users)
-*   [Add and configure an XML schema](/howto30/Add+and+configure+an+XML+schema)
-*   [Configure an XML-to-Domain mapping](/howto30/Configure+an+XML-to-Domain+mapping)
-*   [Configure a Domain-to-XML mapping](/howto30/Configure+a+Domain-to-XML+mapping)
-
+*   [Creating automated tests with TestNG](Creating+automated+tests+with+TestNG)
+*   [Expose a web service](Exposing+a+web+service)

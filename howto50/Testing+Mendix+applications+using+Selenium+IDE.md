@@ -252,17 +252,10 @@ Now the test steps will have 'mx-name-' CSS selectors rather than the Selenium 
 ## 4\. Related content
 
 *   [Testing Mendix applications using Selenium IDE](/howto50/Testing+Mendix+applications+using+Selenium+IDE)
-*   [Testing Mendix applications using Selenium IDE](/howto6/Testing+Mendix+applications+using+Selenium+IDE)
-*   [Creating automated tests with TestNG](/howto6/Creating+automated+tests+with+TestNG)
 *   [Creating automated tests with TestNG](/howto50/Creating+automated+tests+with+TestNG)
 *   [Testing microflows using the UnitTesting module](/howto50/Testing+microflows+using+the+UnitTesting+module)
-*   [Testing microflows using the UnitTesting module](/howto6/Testing+microflows+using+the+UnitTesting+module)
 *   [Finding the Root Cause of Runtime Errors](/howto50/Finding+the+Root+Cause+of+Runtime+Errors)
 *   [Clearing Warning Messages in Mendix](/howto50/Clearing+Warning+Messages+in+Mendix)
-*   [Finding the Root Cause of Runtime Errors](/howto6/Finding+the+Root+Cause+of+Runtime+Errors)
-*   [Clearing Warning Messages in Mendix](/howto6/Clearing+Warning+Messages+in+Mendix)
-
-
 
 Learn more about this topic using the following helpful links:
 

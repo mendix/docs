@@ -299,7 +299,3 @@ _Default value:_ 0
 *   [Data view](Data+view)
 *   [Entities](Entities)
 *   [Associations](Associations)
-*   [How To: Use 'Constrained by' functionality for a reference selector](/howto25/%27Constrained+by%27+functionality+for+a+reference+selector)
-*   [How To: Configure the go-to page of a reference selector](/howto25/Configure+the+go-to+page+of+a+reference+selector)
-*   [How To: Configure the pop-up page of a reference selector](/howto25/Configure+the+pop-up+page+of+a+reference+selector)
-*   [How To: Use a microflow to determine selectable objects](/howto25/Use+a+microflow+to+determine+selectable+objects)

@@ -120,5 +120,3 @@ _Default value:_ Default
 A widget can be made editable based on the value of an attribute of the enclosing data view. The attribute must be of type boolean or enumeration. For each value, you specify whether the widget is editable. Upon entering the form and upon changing the condition attribute the edit state of the widget will be updated.
 
 Example: you don't have to ask for the marriage date if the end user indicates that he or she is not married.
-
-[![](attachments/7831673/8945706.png)](/howto50/Run+batch+processes#Runbatchprocesses-Backtothetop) [(Back to Top)](Common+Widget+Properties)

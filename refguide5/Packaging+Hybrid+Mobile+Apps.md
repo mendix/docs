@@ -9,4 +9,4 @@ If you want to publish your app on the Apple App Store, Google Play or Microsoft
 
 Once you are ready to distribute your app to test users or send it to one of the app stores, you need to package your app into a native app. PhoneGap offers tooling to do this, but you will need to install and configure a lot of software and for building iOS apps you will even need a Mac. The alternative is to let PhoneGap build do the packaging for you and we make it easy for you to do so.
 
-Once you have deployed your app to the Mendix Cloud, you can visit the 'Publish' tab in the [Development Portal](https://sprintr.home.mendix.com/). There, you can choose to "Publish for Mobile App Stores". Visit the [How-To](/howto50/Mendix+5+How-to%27s) section to learn more.
+Once you have deployed your app to the Mendix Cloud, you can visit the 'Publish' tab in the [Development Portal](https://sprintr.home.mendix.com/). There, you can choose to "Publish for Mobile App Stores".

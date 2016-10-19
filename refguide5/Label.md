@@ -14,7 +14,9 @@ A label placed in a cell with render mode header.
 
 {% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
-For input widgets it is recommended to use the more powerful [label property](Text+box#Textbox-Labelproperties) to describe their purpose.
+For input widgets it is recommended to use the more powerful label property to describe their purpose. For more information
+
+ [label property](Text+box#label-properties) to describe their purpose.
 
 {% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 

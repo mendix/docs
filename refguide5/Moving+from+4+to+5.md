@@ -206,12 +206,6 @@ Affected methods and classes: [Core.createBatch(..)](http://apidocs.mendix.com/4
 
 All batching code can be replaced by using [Core.instantiate()](http://apidocs.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html#a97b114ba40a4c6be5ceea9accd5e7b84), [Core.commit(..)](http://apidocs.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html#a12b75c0ee9aaaccf9cf322ce1c25d0cd) and [Core.delete(..)](http://apidocs.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html#a792d268ee4be4114ec7813deb75b1396) or their microflow activity equivalents. Since Mendix 4 these methods are as efficient as the more complex batching code. This deprecated batching code was no longer maintainable due to the changes in Mendix 5 and is therefore removed in Mendix 5.
 
-<div class="alert alert-success">{% markdown %}
-
-To replace old batching code by using microflows [see this Mendix 4 how-to](/howto40/Retrieve+and+manipulate+batches+of+objects).
-
-{% endmarkdown %}</div>
-
 _IRetrievalSchema.isSecurityDisabled(..)_ and _IRetrievalSchema.setSecurityDisabled(..)_
 Affected methods: [IRetrievalSchema.isSecurityDisabled()](http://apidocs.mendix.com/4/runtime/interfacecom_1_1mendix_1_1systemwideinterfaces_1_1connectionbus_1_1requests_1_1_i_retrieval_schema.html#ab6a56bb0f5d3eeaebf3a8e9aa4f7419c) and [IRetrievalSchema.setSecurityDisabled(..)](http://apidocs.mendix.com/4/runtime/interfacecom_1_1mendix_1_1systemwideinterfaces_1_1connectionbus_1_1requests_1_1_i_retrieval_schema.html#a4f23132936fb662b546953fba4823690)
 

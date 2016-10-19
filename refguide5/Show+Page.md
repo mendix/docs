@@ -45,7 +45,7 @@ This feature allows you to re-use the same page for the New and Edit buttons of 
 
 <div class="alert alert-info">{% markdown %}
 
-If the [layout](Layout) of the target page has a [layout type](Layout#Layout-Layouttype) configured, the Location property will be removed. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
+If the [layout](Layout) of the target page has a [layout type](Layout#layout-type) configured, the Location property will be removed. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
 
 {% endmarkdown %}</div>
 

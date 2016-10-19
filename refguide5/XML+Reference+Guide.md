@@ -335,14 +335,8 @@ Remember to use the correct language notation according to the [Java supported 
 
 # Related content
 
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/display/howto50/Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
-*   [Creating a chainable Custom Widget](/display/howto50/Creating+a+chainable+Custom+Widget)
-*   [XML Reference Guide](/displayXML+Reference+Guide)
-*   [Creating a chainable Custom Widget](/display/howto6/Creating+a+chainable+Custom+Widget)
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/display/howto6/Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
-*   [Creating a Basic Hello World Custom Widget](/display/howto50/Creating+a+Basic+Hello+World+Custom+Widget)
-*   [XML Reference Guide](/display/refguide6/XML+Reference+Guide)
-*   [Creating a Basic Hello World Custom Widget](/display/howto6/Creating+a+Basic+Hello+World+Custom+Widget)
-*   [The Mobile Slider Custom Widget](/display/howto50/The+Mobile+Slider+Custom+Widget)
-*   [The Mobile Slider Custom Widget](/display/howto6/The+Mobile+Slider+Custom+Widget)
-
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
+*   [Creating a chainable Custom Widget](Creating+a+chainable+Custom+Widget)
+*   [XML Reference Guide](XML+Reference+Guide)
+*   [Creating a Basic Hello World Custom Widget](Creating+a+Basic+Hello+World+Custom+Widget)
+*   [The Mobile Slider Custom Widget](The+Mobile+Slider+Custom+Widget)

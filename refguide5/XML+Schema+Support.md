@@ -9,7 +9,7 @@ Mendix derives the input/output formats for XML import/export and for calling SO
 
 <table><thead><tr><th class="confluenceTh">XSD Construct</th><th class="confluenceTh">Is Supported</th></tr></thead><tbody><tr><td class="confluenceTd">group</td><td class="confluenceTd">Yes</td></tr><tr><td class="confluenceTd">sequence</td><td class="confluenceTd">Only if it occurs exactly once</td></tr><tr><td class="confluenceTd">choice</td><td class="confluenceTd">Yes*</td></tr><tr><td class="confluenceTd">unique</td><td class="confluenceTd">Yes</td></tr><tr><td class="confluenceTd">attributeGroup</td><td class="confluenceTd">Yes</td></tr><tr><td class="confluenceTd">all</td><td class="confluenceTd">Only if each child element of the <strong>all</strong> occurs at most once</td></tr><tr><td class="confluenceTd">union</td><td class="confluenceTd">Yes</td></tr><tr><td class="confluenceTd">any</td><td class="confluenceTd">No</td></tr><tr><td class="confluenceTd">anyAttribute</td><td class="confluenceTd">No</td></tr><tr><td class="confluenceTd">list</td><td class="confluenceTd">No</td></tr></tbody></table><div class="alert alert-info">{% markdown %}
 
-Starting from release 5.14, `choice` elements are fully supported. In earlier Mendix releases, `choice` is only supported if each child element occurs at most once. For more information, please consult the  [Release Notes](/ReleaseNotes/5.14.0#id-5.14.0-Improvements) .
+Starting from release 5.14, `choice` elements are fully supported. In earlier Mendix releases, `choice` is only supported if each child element occurs at most once.
 
 {% endmarkdown %}</div>
 

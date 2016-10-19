@@ -7,7 +7,7 @@ space: "Reference Guide 5"
 
 In many places within pages you can open other pages. For example, the [edit button](Edit+button) of the [data grid](Data+grid) opens a page to edit the selected object.
 
-Pages can be opened either in the content pane of the browser or in a new pop-up. Where the page is opened depends on the [layout type](Layout#Layout-Layouttype) of its [layout](Layout): pages based on a layout of type 'Modal pop-up' or 'Pop-up' will be open as a pop-up, other pages will be opened in content. If the project does not have Page Templates enabled, or if the target page layout is of type 'Legacy', then the page location must be configured manually (see [Location](Opening+Pages#OpeningPages-Location) section below).
+Pages can be opened either in the content pane of the browser or in a new pop-up. Where the page is opened depends on the [layout type](Layout#layout-type) of its [layout](Layout): pages based on a layout of type 'Modal pop-up' or 'Pop-up' will be open as a pop-up, other pages will be opened in content. If the project does not have Page Templates enabled, or if the target page layout is of type 'Legacy', then the page location must be configured manually (see [Location](Opening+Pages#location) section below).
 
 If the target page contains a [data view](Data+view) with data source "caller of the page", then an object for this data view must be passed to the page while opening. What object to pass is configured automatically based on the arguments available for the widget opening the page (see [available arguments for microflows](Starting+Microflows) for details).
 
@@ -33,7 +33,7 @@ This feature allows you to re-use the same page for the New and Edit buttons of 
 
 <div class="alert alert-info">{% markdown %}
 
-If the [layout](Layout) of the target page has a [layout type](Layout#Layout-Layouttype) configured, the Location property will be removed. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
+If the [layout](Layout) of the target page has a [layout type](Layout#layout-type) configured, the Location property will be removed. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
 
 {% endmarkdown %}</div>
 

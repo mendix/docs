@@ -57,7 +57,3 @@ A healthy Mendix application that consumes a small amount of memory will show a 
 The graph on the right shows an unhealthy application. As can be seen here, the memory usage steadily increases throughout the span of one week. This can only be caused by a process that keeps consuming memory.
 
 It is acceptable for an application to consume a lot of memory in the tenured generation space, the JVM should run the major garbage collection and reduce the tenured generation to zero.
-
-## Related articles
-
-*   [Java Memory Usage With Mendix](/displayJava+Memory+Usage+With+Mendix)

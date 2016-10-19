@@ -63,8 +63,6 @@ An expression of type Boolean.
 
 Returns the negation of the specified expression. If the expression evaluates to True, it returns False; otherwise it returns True.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 not('hello' = 'hallo')
 
@@ -90,5 +88,3 @@ returns:
 false
 
 ```
-
-{% endmarkdown %}</div>

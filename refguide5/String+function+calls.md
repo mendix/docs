@@ -23,8 +23,6 @@ Set all characters in the string to lowercase.
 
 Same string, only all lowercase.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 toLowerCase('thisISmyString')
 
@@ -36,8 +34,6 @@ returns:
 'thisismystring'
 
 ```
-
-{% endmarkdown %}</div>
 
 ## toUpperCase
 
@@ -52,8 +48,6 @@ Set all characters in the string to uppercase.
 
 Same string, only all uppercase.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 toUpperCase('thisISmyString')
 
@@ -65,8 +59,6 @@ returns:
 'THISISMYSTRING'
 
 ```
-
-{% endmarkdown %}</div>
 
 ## length
 
@@ -82,8 +74,6 @@ Determines the length of a string.
 Length of the string
 Type: Integer
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 length('thisismystring')
 
@@ -95,8 +85,6 @@ returns:
 14
 
 ```
-
-{% endmarkdown %}</div>
 
 ## substring
 
@@ -115,8 +103,6 @@ Retrieve a substring of a string. Note that the first character of a string is l
 
 A part of the original string, starting at start position with length equal to the desired length. If no desired length is specified, will return a substring starting at start position and ending at the end of the string.
 Type: String
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 substring('thisismystring', 6)
@@ -144,8 +130,6 @@ returns:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## find
 
 Find the position of the first occurrence of the substring in the string.
@@ -163,8 +147,6 @@ Find the position of the first occurrence of the substring in the string.
 
 The first location of the substring in the original string. Will return '-1' if the substring does not occur at all in the original string.
 Type: Integer
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 find('thisismystring', 'my')
@@ -206,8 +188,6 @@ returns:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## findLast
 
 Find the position of the last occurrence of substring in the original string.
@@ -225,8 +205,6 @@ Find the position of the last occurrence of substring in the original string.
 
 The first location of the substring in the original string. Will return '-1' if the substring does not occur at all in the original string.
 Type: Integer
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 findLast('thisismystring', 't')
@@ -268,8 +246,6 @@ returns:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## contains
 
 Determines whether a substring occurs in the original string.
@@ -287,8 +263,6 @@ Determines whether a substring occurs in the original string.
 Whether the original string contains the substring
 Type: Boolean
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 contains('thisismystring', 'my')
 
@@ -300,8 +274,6 @@ returns:
 true
 
 ```
-
-{% endmarkdown %}</div>
 
 ## trim
 
@@ -317,8 +289,6 @@ Removes all whitespace at the beginning and end of a string. (leaves all spaces 
 Same string but without spaces at the beginning and end.
 Type: String
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 trim(' this is my string     ')
 
@@ -331,8 +301,6 @@ returns:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## isMatch
 
 Checks to see if a string matches a given [regular expression](Regular+Expressions)
@@ -344,22 +312,16 @@ Checks to see if a string matches a given [regular expression](Regular+Expressio
 *   Regular expression to match
     Type: String
 
-<div class="alert alert-warning">{% markdown %}
-
 This function call uses a regular expression. In isMatch() the regex is implicitly anchored at ^ and $.
 
 **Example**
 isMatch('NLG 123.45', '[0-9]') returns false
 isMatch('NLG 123.45', '.*[0-9].*') returns true
 
-{% endmarkdown %}</div>
-
 ### Output
 
 Whether the string matches or not.
 Type: Boolean
-
-<div class="alert alert-info">{% markdown %}
 
 This examples tests to see whether the string contains only numbers
 
@@ -374,8 +336,6 @@ returns:
 False
 
 ```
-
-{% endmarkdown %}</div>
 
 ## replaceAll
 
@@ -401,8 +361,6 @@ Please note that this function call uses a regular expression.
 The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
 
 Type: String
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 replaceAll('this is a string with 75 some numbers 234 thrown in', '([0-9])', 'NUMBER')
@@ -430,8 +388,6 @@ returns:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## replaceFirst
 
 Replaces the first occurrence of the regular expression with a replacement string.
@@ -445,19 +401,13 @@ Replaces the first occurrence of the regular expression with a replacement strin
 *   The replacement value
     Type: String
 
-<div class="alert alert-warning">{% markdown %}
-
 Please note that this function call uses a regular expression.
-
-{% endmarkdown %}</div>
 
 ### Output
 
 The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
 
 Type: String
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 replaceFirst('this is a string with 75 some numbers 234 thrown in', '([0-9])', 'NUMBER')
@@ -470,8 +420,6 @@ returns:
 'this is a string with NUMBER5 some numbers 234 thrown in'
 
 ```
-
-{% endmarkdown %}</div>
 
 ## String concatenation
 
@@ -491,8 +439,6 @@ At least one of the parameters must be of type String.
 A new string that is the literal concatenation of the two input parameters.
 
 Type: String
-
-<div class="alert alert-info">{% markdown %}
 
 To combine two strings:
 
@@ -517,5 +463,3 @@ returns:
 ```java
 '4.73 kilometers'
 ```
-
-{% endmarkdown %}</div>

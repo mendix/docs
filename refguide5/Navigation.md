@@ -37,10 +37,7 @@ If a device type is not enabled, it falls back to another device type as shown i
 
 It is also possible to force the client to use a specific device type by adding a 'profile' query string parameter to the URL when visiting a Mendix application. The possible values are 'Desktop', 'Tablet', and 'Phone'. An example:
 
-```html
-https://myapp.mendixcloud.com/index.html?profile=Phone
-
-```
+`https://myapp.mendixcloud.com/index.html?profile=Phone`
 
 ## Device Type
 

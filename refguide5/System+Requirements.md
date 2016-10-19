@@ -74,11 +74,8 @@ Jetty is built into the Mendix Business Server, an application server is not req
 
 *   Internet Explorer 8 - 11
 *   Microsoft Edge
-
 *   Firefox 3.6 and newer
-
 *   Chrome
-
 *   Safari 5 and newer
 
 ## Mobile Browsers

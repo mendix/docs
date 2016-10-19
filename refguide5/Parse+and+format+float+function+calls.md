@@ -24,8 +24,6 @@ Parses a String value to a Float value. Takes optional parameters for format and
 
 A Float value that matches the input String value. If the value cannot be parsed (i.e. does not match the format parameter or contains illegal characters) the default value will be returned. If no default value was provided, an error occurs.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 parseFloat('3.45')
 
@@ -66,8 +64,6 @@ returns:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## formatFloat
 
 Converts a Float value to a String value, according to a specified format.
@@ -84,8 +80,6 @@ Converts a Float value to a String value, according to a specified format.
 A String representation of the Float value, in the format specified by the 'format' parameter.
 Type: String
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 formatFloat(1234.56, '#,###.#')
 
@@ -97,5 +91,3 @@ returns:
 '1,234.5'
 
 ```
-
-{% endmarkdown %}</div>

@@ -25,4 +25,6 @@ Specifies whether passwords must contain at least one special symbol.
 
 The following characters are considered symbols:
 
+```
 ` ~ ! @ # $ % ^ & * ( ) - _ = + [ { ] } \ | ; : ' " < , > . / ?
+```

@@ -14,9 +14,9 @@ The syntax is as following:
 
 ```
 
-**entity_path**
+**`entity_path`**
 Specifies the entity to join and the path from an earlier defined entity in the FROM clause to this entity.
 The path Crm.Customer/Crm.Customer_Address/Crm.Address defines a path from the earlier defined entity Crm.Customer to the new entity Crm.Address.
 
-**ON <constraint>**
+**`ON <constraint>`**
 Constrains the specified entity in the JOIN part of the FROM clause. The constraint syntax is similar to that in the WHERE clause. Only the entities and from-aliases from the current and preceding JOIN elements can be used in the constraint.

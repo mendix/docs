@@ -27,8 +27,6 @@ Takes a string and tries to parse it. If it fails and a default value is specifi
 The parsed date, or the default value if a date could not be parsed.
 Type: DateTime
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 parseDateTime('2015-05-21', 'yyyy-MM-dd')
 ```
@@ -51,8 +49,6 @@ returns
 
 ```
 
-{% endmarkdown %}</div>
-
 ## formatDateTime[UTC]
 
 Converts the datetime to a string, formatted according to the format parameter. Without the format parameter, a standard format is used. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
@@ -69,8 +65,6 @@ Converts the datetime to a string, formatted according to the format parameter. 
 A formatted representation of the datetime.
 Type: String
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 formatDateTime($object/Date1,'EEE, d MMM yyyy HH:mm:ss Z')
 
@@ -82,8 +76,6 @@ returns:
 'Sun, 8 Jun 2008 10:12:01 +0200'
 
 ```
-
-{% endmarkdown %}</div>
 
 ## formatTime[UTC]
 
@@ -99,8 +91,6 @@ Converts the time part of datetime to a string in a standard format. `formatTime
 A formatted representation of the time part of the datetime value.
 Type: String
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 formatTime(dateTime(1974, 7, 2, 9, 50, 10))
 
@@ -112,8 +102,6 @@ returns:
 '9:50 AM'
 
 ```
-
-{% endmarkdown %}</div>
 
 ## formatDate[UTC]
 
@@ -129,8 +117,6 @@ Converts the date part of datetime to a string in a standard format. `formatDate
 A formatted representation of the date part of the datetime value.
 Type: String
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 formatDate(dateTime(1974, 7, 2, 9, 50, 10))
 
@@ -142,5 +128,3 @@ returns:
 '7/2/74'
 
 ```
-
-{% endmarkdown %}</div>

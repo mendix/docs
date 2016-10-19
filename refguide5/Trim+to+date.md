@@ -21,8 +21,6 @@ Trim the date to minutes, rounding off all (milli)seconds to zero.
 The same date, only rounded down to minutes.
 Type: DateTime
 
-<div class="alert alert-info">{% markdown %}
-
 (assume a variable $myDate that represents '08-06-2008 10:12:51')
 
 ```java
@@ -36,8 +34,6 @@ returns:
 'Sun Jun 08 10:12:00 CEST 2008'
 
 ```
-
-{% endmarkdown %}</div>
 
 ## trimToHours
 
@@ -53,8 +49,6 @@ Trim the date to hours, rounding off all minutes down to zero.
 The same date, only rounded down to hours.
 Type: DateTime
 
-<div class="alert alert-info">{% markdown %}
-
 (assume a variable $myDate that represents '08-06-2008 10:12:51')
 
 ```java
@@ -68,8 +62,6 @@ returns:
 'Sun Jun 08 10:00:00 CEST 2008'
 
 ```
-
-{% endmarkdown %}</div>
 
 ## trimToDays
 
@@ -85,8 +77,6 @@ Trim the date to days, rounding off all hours to zero.
 The same date, only rounded down to days.
 Type: DateTime
 
-<div class="alert alert-info">{% markdown %}
-
 (assume a variable $myDate that represents '08-06-2008 10:12:51')
 
 ```java
@@ -100,8 +90,6 @@ returns:
 'Sun Jun 08 00:00:00 CEST 2008'
 
 ```
-
-{% endmarkdown %}</div>
 
 ## trimToMonths
 
@@ -117,8 +105,6 @@ Trim the date to months, rounding off all days to zero.
 The same date, only rounded down to months.
 Type: DateTime
 
-<div class="alert alert-info">{% markdown %}
-
 (assume a variable $myDate that represents '08-06-2008 10:12:51')
 
 ```java
@@ -132,8 +118,6 @@ returns:
 'Sun Jun 01 00:00:00 CEST 2008'
 
 ```
-
-{% endmarkdown %}</div>
 
 ## trimToYears
 
@@ -149,8 +133,6 @@ Trim the date to years, rounding off all months, days to zero.
 The same date, only rounded down to years.
 Type: DateTime
 
-<div class="alert alert-info">{% markdown %}
-
 (assume a variable $myDate that represents '08-06-2008 10:12:51')
 
 ```java
@@ -164,5 +146,3 @@ returns:
 'Tue Jan 08 00:00:00 CEST 2008'
 
 ```
-
-{% endmarkdown %}</div>

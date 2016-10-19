@@ -23,8 +23,6 @@ Take a string and try to parse it to an integer.
 The integer, if it's possible to parse it from the string. If it's not a valid parsable string, the default value will be returned. If no default value is provided, an error will occur.
 Type: Integer
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 parseInteger('42')
 
@@ -50,5 +48,3 @@ returns:
 42
 
 ```
-
-{% endmarkdown %}</div>

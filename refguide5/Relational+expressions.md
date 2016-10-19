@@ -18,8 +18,6 @@ The values be any of the following types, but the two values should be in the sa
 *   Numeric (Integer/Long, Decimal, Float)
 *   DateTime
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 4<3
 
@@ -31,8 +29,6 @@ returns:
 False
 
 ```
-
-{% endmarkdown %}</div>
 
 ## >
 
@@ -47,8 +43,6 @@ The values be any of the following types, but the two values should be in the sa
 *   Numeric (Integer/Long, Decimal, Float)
 *   DateTime
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 4>3
 
@@ -60,8 +54,6 @@ returns:
 True
 
 ```
-
-{% endmarkdown %}</div>
 
 ## <=
 
@@ -75,8 +67,6 @@ The values be any of the following types, but the two values should be in the sa
 *   String
 *   Numeric (Integer/Long, Decimal, Float)
 *   DateTime
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 6<=3
@@ -104,8 +94,6 @@ True
 
 ```
 
-{% endmarkdown %}</div>
-
 ## >=
 
 Bigger than or equal operator. Determines whether the first value is greater than or equal to the second.
@@ -118,8 +106,6 @@ The values be any of the following types, but the two values should be in the sa
 *   Numeric (Integer/Long, Decimal, Float)
 *   DateTime
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 4>=3
 
@@ -131,8 +117,6 @@ returns:
 True
 
 ```
-
-{% endmarkdown %}</div>
 
 ## =
 
@@ -147,8 +131,6 @@ The values be any of the following types, but the two values should be in the sa
 *   Numeric (Integer/Long, Decimal, Float)
 *   DateTime
 *   Domain Entity. Equality is checked based on the ID of the object.
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 "mystring" = "myotherstring"
@@ -176,8 +158,6 @@ True
 
 ```
 
-{% endmarkdown %}</div>
-
 ## !=
 
 Inequality operator. Determines whether the two values are not equal.
@@ -192,8 +172,6 @@ The values be any of the following types, but the two values should be in the sa
 *   DateTime
 *   Object. Equality is checked based on the ID of the object.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 "mystring" != "mystring"
 
@@ -205,5 +183,3 @@ returns:
 False
 
 ```
-
-{% endmarkdown %}</div>

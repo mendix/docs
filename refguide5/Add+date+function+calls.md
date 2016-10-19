@@ -22,8 +22,6 @@ Add a number of milliseconds to a date.
 
 A result of type DateTime that corresponds to the initial date plus x milliseconds.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 addMilliseconds(dateTime(2007, 1, 1, 1, 1, 1), 1400)
 
@@ -35,8 +33,6 @@ results in a datetime that corresponds to
 "Mon Jan 01 01:01:02:400 CET 2007"
 
 ```
-
-{% endmarkdown %}</div>
 
 ## addSeconds
 
@@ -53,8 +49,6 @@ Add a number of seconds to a date.
 
 A result of type DateTime that corresponds to the initial date plus x seconds.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 addSeconds(dateTime(2007, 1, 1, 1, 1, 1), 2)
 
@@ -66,8 +60,6 @@ results in a datetime that corresponds to
 "Mon Jan 01 01:01:03 CET 2007"
 
 ```
-
-{% endmarkdown %}</div>
 
 ## addMinutes
 
@@ -84,8 +76,6 @@ Add a number of minutes to a date.
 
 A result of type DateTime that corresponds to the initial date plus x minutes.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 addMinutes(dateTime(2007, 1, 1, 1, 1, 1), 3)
 
@@ -97,8 +87,6 @@ results in a datetime that corresponds to
 "Mon Jan 01 01:04:01 CET 2007"
 
 ```
-
-{% endmarkdown %}</div>
 
 ## addHours
 
@@ -115,8 +103,6 @@ Add a number of hours to a date.
 
 A result of type DateTime that corresponds to the initial date plus x hours.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 addHours(dateTime(2007, 1, 1, 1, 1, 1), 25)
 
@@ -128,8 +114,6 @@ results in a datetime that corresponds to
 "Mon Jan 02 02:01:01 CET 2007"
 
 ```
-
-{% endmarkdown %}</div>
 
 ## addDays[UTC]
 
@@ -146,8 +130,6 @@ Add a number of days to a date. `addDays` uses the server's calendar and `addDay
 
 A result of type DateTime that corresponds to the initial date plus x days.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 addDays(dateTime(2007, 1, 1, 1, 1, 1), 3)
 
@@ -159,8 +141,6 @@ results in a datetime that corresponds to
 "Mon Jan 04 01:01:01 CET 2007"
 
 ```
-
-{% endmarkdown %}</div>
 
 ## addWeeks[UTC]
 
@@ -177,8 +157,6 @@ Add a number of weeks to a date. `addWeeks` uses the server's calendar and `addW
 
 A result of type DateTime that corresponds to the initial date plus x weeks.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 addWeeks(dateTime(2007, 1, 1, 1, 1, 1), 2)
 
@@ -190,8 +168,6 @@ results in a datetime that corresponds to
 "Mon Jan 15 01:01:01 CET 2007"
 
 ```
-
-{% endmarkdown %}</div>
 
 ## addMonths[UTC]
 
@@ -208,8 +184,6 @@ Add a number of months to a date. `addMonths` uses the server's calendar and `ad
 
 A result of type DateTime that corresponds to the initial date plus x months.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 addMonths(dateTime(2007, 1, 1, 1, 1, 1), 13)
 
@@ -221,8 +195,6 @@ results in a datetime that corresponds to
 "Mon Feb 01 01:01:01 CET 2008"
 
 ```
-
-{% endmarkdown %}</div>
 
 ## addYears[UTC]
 
@@ -239,8 +211,6 @@ Add a number of years to a date. `addYears` uses the server's calendar and `addY
 
 A result of type DateTime that corresponds to the initial date plus x years.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 addYears(dateTime(2007, 1, 1, 1, 1, 1), 11)
 
@@ -252,5 +222,3 @@ results in a datetime that corresponds to
 "Mon Jan 01 01:01:01 CET 2018"
 
 ```
-
-{% endmarkdown %}</div>

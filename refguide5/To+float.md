@@ -21,8 +21,6 @@ Converts the specified Decimal value to a value of type Float.
 
 *   A Decimal value that should be converted to a Float value.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 toFloat(parseDecimal('123.456'))
 
@@ -33,5 +31,3 @@ returns:
 ```java
 123.456
 ```
-
-{% endmarkdown %}</div>

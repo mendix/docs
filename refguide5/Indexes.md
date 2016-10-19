@@ -9,15 +9,13 @@ Indexes are lists of attributes for which a database index is created on the und
 
 Indexes are ordered. This means that when creating an index on two or more attributes, it is important to consider the order of the attributes. When performing a search or query on multiple attributes, these attributes should be in the same order as those in the index to take advantage of the improved performance. By extension, when the retrieval is constrained by only one attribute, the improved performance is only achieved if this is the first attribute in the index.
 
-<div class="alert alert-warning">{% markdown %}
+<div class="alert alert-warning">
 
 Only persistable entities can define indexes as they are database concepts. Indexes are disabled for non-persistable entities.
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+</div>
 
 Changing and deleting objects of an entity with indexes takes longer, because the index needs to be updated in addition to the actual data. Therefore, for attributes which are seldomly used as criteria in a search or query, only create an index if the increase in retrieval performance justifies the decrease in update performance.
-
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
 Customers are usually retrieved by a combination of zipcode and housenumber, so _one_ index is set on the combination of the attributes.
 
@@ -25,11 +23,9 @@ Customers are usually retrieved by a combination of zipcode and housenumber, so 
 
 The objects are retrieved by the following OQL query. Pay attention to the order of the attributes in the WHERE clause.
 
-```sql
+```
+sql
 FROM Module.Customer AS c
 WHERE c.zipcode = $ParameterZipCode AND c.housenumber = $ParameterHouseNumber
 SELECT c.name AS CustomerName
-
 ```
-
-{% endmarkdown %}</div>

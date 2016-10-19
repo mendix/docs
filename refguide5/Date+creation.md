@@ -22,8 +22,6 @@ These functions takes between one and 6 input parameters. These represent, in or
 6.  seconds
     Type: Integer, between 0 and 59
 
-<div class="alert alert-info">{% markdown %}
-
 One parameter:
 
 ```java
@@ -107,5 +105,3 @@ returns
 "Mon Jan 01 01:01:01 CET 2007"
 
 ```
-
-{% endmarkdown %}</div>

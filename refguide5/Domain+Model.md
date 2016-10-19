@@ -29,8 +29,6 @@ See [associations](Associations).
 
 In the database every entity is stored in one separate table and has columns for the attributes defined in the Modeler, the system attributes and a unique identifier for the object. If an entity has specializations there is also a column indicating which specialization the object belongs to. An association is stored in a cross-table with the identifiers (ID) of both objects.
 
-<div class="alert alert-info">{% markdown %}
-
 Take a look at the following domain model.
 
 ![](attachments/819203/917890.png)
@@ -46,4 +44,3 @@ The association 'Order_Customer' is stored in the table 'module$order_customer' 
 The entity 'Order' is stored in the table 'module$order' which is shown below. It is similar to the table of the entity 'Customer'. However all system attributes have been disabled and are not stored in the table.
 
 <table><thead><tr><th class="confluenceTh">id</th><th class="confluenceTh">number</th><th class="confluenceTh">date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">5</td><td class="confluenceTd">2009-11-27 09:56:45.099</td></tr><tr><td class="confluenceTd">8</td><td class="confluenceTd">8</td><td class="confluenceTd">2008-04-01 08:10:45.053</td></tr></tbody></table>
-{% endmarkdown %}</div>

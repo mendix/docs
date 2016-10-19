@@ -15,7 +15,7 @@ WHERE
 
 ```
 
-**<constraint>**
+**`<constraint>`**
 An expression for which the value always equals true. Expressions consist of simple comparables with operators, functions, keywords or system variables.
 
 <div class="alert alert-info">{% markdown %}

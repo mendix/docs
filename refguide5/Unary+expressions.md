@@ -7,8 +7,6 @@ space: "Reference Guide 5"
 
 A unary minus operator is used to convert a number from negative to positive or vice versa. Note: there is no unary plus.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 -8
 
@@ -28,5 +26,3 @@ returns:
 7
 
 ```
-
-{% endmarkdown %}</div>

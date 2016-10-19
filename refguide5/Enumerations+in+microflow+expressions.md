@@ -7,8 +7,6 @@ space: "Reference Guide 5"
 
 Enumerations are referenced by <modulename>.<enumerationname>.<enumerationvalue>
 
-<div class="alert alert-info">{% markdown %}
-
 Assume a module "OrderProcessing", in which an enumeration "Status" is defined with two possible values: "started" and "completed". To set the value of an attribute in a change action to "completed", use the following code:
 
 ```java
@@ -26,8 +24,6 @@ else
 
 ```
 
-{% endmarkdown %}</div>
-
 ## getCaption
 
 Takes an enumeration value and returns the caption of this value. The caption is a translatable string and the result of this function depends on the current language.
@@ -42,14 +38,10 @@ Takes an enumeration value and returns the caption of this value. The caption is
 The caption of the enumeration value in the current language.
 Type: String
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 getCaption($NewEntity/TestEnum)
 
 ```
-
-{% endmarkdown %}</div>
 
 ## getKey
 
@@ -65,11 +57,7 @@ Takes an enumeration value and returns the key (called Name in the Modeler) of t
 The key/name of the enumeration value
 Type: String
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 getKey($NewEntity/TestEnum)
 
 ```
-
-{% endmarkdown %}</div>

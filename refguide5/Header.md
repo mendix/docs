@@ -4,8 +4,7 @@ category: "refguide5"
 space: "Reference Guide 5"
 ---
 
-
-A header combines the functionality of a page title and a control bar for your page. Due to its compact design and versatility it is often used in mobile pages. As a lay-out feature it can only be used in a [lay-out|.
+A header combines the functionality of a page title and a control bar for your page. Due to its compact design and versatility it is often used in mobile pages. As a lay-out feature it can only be used in a layout.
 
 Headers consist of three distinct elements: a left drop-zone, a right drop-zone, and a page title. The drop-zones are intended for confirmation buttons, such as a [save](Save+button) and [cancel button](Cancel+button), but can easily be appropriated for any number of alternate implementations. The page title derives its value from the page title setting of the page being displayed.
 

@@ -24,8 +24,6 @@ Parses a String value to a Decimal value. Takes optional parameters for format a
 
 A Decimal value that matches the input String value. If the value cannot be parsed (i.e. does not match the format parameter or contains illegal characters) the default value will be returned. If no default value was provided, an error occurs.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 parseDecimal('3.45')
 
@@ -66,8 +64,6 @@ returns:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## formatDecimal
 
 Converts a Decimal value to a String value, according to a specified format.
@@ -84,8 +80,6 @@ Converts a Decimal value to a String value, according to a specified format.
 A String representation of the Decimal, in the format specified by the 'format' parameter.
 Type: String
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 formatDecimal(1234.56, '#,###.#')
 
@@ -97,5 +91,3 @@ returns:
 '1,234.5'
 
 ```
-
-{% endmarkdown %}</div>

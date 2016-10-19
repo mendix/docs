@@ -41,10 +41,6 @@ The project status indicates the security status for the current project securit
 
 <table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Complete</td><td class="confluenceTd">All security settings for the current security level have been configured.</td></tr><tr><td class="confluenceTd">Incomplete</td><td class="confluenceTd">Some security settings for the current security level need to be configured. See the module status for more information.</td></tr></tbody></table>
 
-![](attachments/819203/13402284.png)
-
-
-
 ## Extra Settings
 
 When the security level is set to 'Prototype / demo' or 'Production', a number of tab pages with extra settings are shown.
@@ -52,10 +48,6 @@ When the security level is set to 'Prototype / demo' or 'Production', a number 
 ## Module Status
 
 The module status overview shows the security status for each module. It shows the total number of items for which security needs to be configured, as well as the number of items for which security has been configured already. At the 'Prototype / demo' security level, the status of form access and microflow access is shown. Additionally, at the 'Production' security level, the status of entity access and data set access (if applicable) is shown.
-
-![](attachments/819203/13402284.png)
-
-
 
 ## User Roles
 
@@ -93,10 +85,6 @@ A user role can be allowed to manage users with a number of other user roles (in
 
 <table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">All</td><td class="confluenceTd">End-users with this user role can manage all users and grant all user roles. Usually this option should only be configured for an administrator.</td></tr><tr><td class="confluenceTd">Selected</td><td class="confluenceTd">End-users with this user role can manage users that have at most the selected user roles, and can grant only the selected user roles. If no user roles are selected, end-users with this user role cannot manage users at all.</td></tr></tbody></table>
 
-![](attachments/819203/13402284.png)
-
-
-
 ## Administrator
 
 **User Name**
@@ -114,10 +102,6 @@ _Default value_: 1
 **User Role**
 
 The user role of the administrator user that can be used to sign in to the application.
-
-![](attachments/819203/13402284.png)
-
-
 
 ## Demo Users
 
@@ -161,10 +145,6 @@ The entity of the demo user. This must be the System.User entity, or a specializ
 
 Here you can select the user roles of the demo user. Each demo user must have one or more roles.
 
-![](attachments/819203/13402284.png)
-
-
-
 ## Anonymous Users
 
 **Allow anonymous users**
@@ -201,10 +181,6 @@ An anonymous user in a web shop adds some items to her shopping cart and then cl
 
 {% endmarkdown %}</div>
 
-![](attachments/819203/13402284.png)
-
-
-
 ## Password Policy
 
 You can specify a number of requirements for passwords. These requirements will be enforced when creating new users or changing passwords of existing users.
@@ -230,6 +206,3 @@ The following characters are considered symbols:
 ```java
 ` ~ ! @ # $ % ^ & * ( ) - _ = + [ { ] } \ | ; : ' " < , > . / ?
 ```
-
-![](attachments/819203/13402284.png)
-

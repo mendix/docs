@@ -17,10 +17,10 @@ GROUP BY
 
 ```
 
-**expression**
+**`expression`**
 Specifies the expressions by which values of the rows are grouped.
 
-**HAVING <constraint>**
+**`HAVING <constraint>`**
 Specifies a constraint. When a GROUP BY expression is used, constraints must be defined in a HAVING clause.
 
 <div class="alert alert-info">{% markdown %}

@@ -19,8 +19,6 @@ Returns the largest value from the specified arguments. If the arguments are of 
 
 Type: Integer/Long or Decimal
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 max(5, 1, 5, 6.7)
 
@@ -34,8 +32,6 @@ returns:
 ```
 
 of type "Decimal".
-
-{% endmarkdown %}</div>
 
 ## min
 
@@ -51,8 +47,6 @@ Returns the smallest value from the specified arguments. If the arguments are o
 
 Type: Integer/Long or Decimal
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 min(5, 1, 5, 6.7)
 
@@ -66,8 +60,6 @@ returns:
 ```
 
 of type "Decimal".
-
-{% endmarkdown %}</div>
 
 ## round
 
@@ -86,8 +78,6 @@ Rounds a number to a certain precision.
 Rounds using "half to even" rounding (also called bankers' rounding). This is the default rounding mode used in  [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point "IEEE floating point")  computing functions and operators. For example, +23.5 becomes +23, as does +22.5; while −23.5 becomes −23, as does −22.5. The second optional parameter determines the precision of the rounding, the default value is 0. The result will be of the most precise type possible. For a precision of 0 the result will be of type Integer/Long and for all other precision values of type Decimal.
 
 Type: Integer/Long or Decimal
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 round(3.5)
@@ -118,8 +108,6 @@ returns:
 
 of type "Decimal"
 
-{% endmarkdown %}</div>
-
 ## random
 
 Generates a random number >= 0.0 and < 1.0
@@ -129,14 +117,10 @@ Generates a random number >= 0.0 and < 1.0
 A random number between 0.0 and 1.0
 Type: Decimal
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 random()
 
 ```
-
-{% endmarkdown %}</div>
 
 ## floor
 
@@ -152,8 +136,6 @@ Rounds down to an integer (everything after the decimal point is ignored).
 The input value rounded down to the nearest integer.
 
 Type: Integer/Long
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 floor(3.9)
@@ -181,8 +163,6 @@ returns:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## ceil
 
 Rounds up to an integer (everything after the decimal point is rounded up).
@@ -197,8 +177,6 @@ Rounds up to an integer (everything after the decimal point is rounded up).
 The input value rounded down to the nearest integer.
 
 Type: Integer/Long
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 ceil(3.2)
@@ -226,8 +204,6 @@ returns:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## pow
 
 Calculates the exponent of a number to a certain power.
@@ -244,8 +220,6 @@ Calculates the exponent of a number to a certain power.
 The number to the power, i.e. n^p. The result will be of the most precise type necessary.
 
 Type: Integer/Long or Decimal
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 pow(2, 3)
@@ -276,7 +250,7 @@ returns:
 
 of type "Decimal"
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+<div class="alert alert-warning">{% markdown %}
 
 Calculation of 'pow' with a decimal exponent might be less accurate, as the standard Java libraries do not support these calculations with high precision. Use a specialized library in a custom Java action if high precision is required for this case.
 
@@ -297,8 +271,6 @@ The absolute value of the input, which is never negative. Corresponds to taking 
 
 Type: Integer/Long or Decimal
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 abs(-5)
 
@@ -318,8 +290,6 @@ both return:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## floatsEqual
 
 ### Input
@@ -336,8 +306,6 @@ both return:
 Compares the two numbers to decimal point p, which is equal to Precision.
 
 Type: Boolean
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 floatsEqual(0.51, 0.50, 1)
@@ -365,14 +333,8 @@ false
 
 ```
 
-{% endmarkdown %}</div>
-
 ## currenciesEqual
 
 See floatsEqual.
 
-<div class="alert alert-warning">{% markdown %}
-
 The currenciesEqual function is a synonym for floatsEqual. However, we recommend the use of the high-precision Decimal type to represent money. Equality of Decimal numbers can be determined with the = operator.
-
-{% endmarkdown %}</div>

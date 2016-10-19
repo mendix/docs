@@ -18,8 +18,6 @@ Functions for calculating the differences between two dates.
 
 Returns the difference between the two dates, as a Float, measured in milliseconds.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 millisecondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,1,3))
 
@@ -32,8 +30,6 @@ results in
 
 ```
 
-{% endmarkdown %}</div>
-
 ## secondsBetween
 
 *   First date
@@ -44,8 +40,6 @@ results in
 ### Output
 
 Returns the difference between the two dates, as a Float, measured in seconds.
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 secondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,2,3))
@@ -59,8 +53,6 @@ results in
 
 ```
 
-{% endmarkdown %}</div>
-
 ## minutesBetween
 
 *   First date
@@ -71,8 +63,6 @@ results in
 ### Output
 
 Returns the difference between the two dates, as a Float, measured in minutes.
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 minutesBetween(dateTime(2007, 1, 1, 1, 2, 1), dateTime(2007,1,1,1,1,1))
@@ -86,8 +76,6 @@ results in
 
 ```
 
-{% endmarkdown %}</div>
-
 ## hoursBetween
 
 *   First date
@@ -98,8 +86,6 @@ results in
 ### Output
 
 Returns the difference between the two dates, as a Float, measured in hours.
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 hoursBetween(dateTime(2007, 1, 1, 3, 31, 1), dateTime(2007,1,1,1,1,1))
@@ -113,8 +99,6 @@ results in
 
 ```
 
-{% endmarkdown %}</div>
-
 ## daysBetween
 
 *   First date
@@ -126,8 +110,6 @@ results in
 
 Returns the difference between the two dates, as a Float, measured in days.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 daysBetween(dateTime(2007, 2, 13, 1, 1, 1), dateTime(2007,1,1,1,1,1))
 
@@ -136,8 +118,6 @@ daysBetween(dateTime(2007, 2, 13, 1, 1, 1), dateTime(2007,1,1,1,1,1))
 results in
 
 43
-
-{% endmarkdown %}</div>
 
 ## weeksBetween
 
@@ -150,8 +130,6 @@ results in
 
 Returns the difference between the two dates, as a Float, measured in weeks.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 weeksBetween(dateTime(2007, 1, 9, 1, 1, 1), dateTime(2007,1,1,1,1,1))
 
@@ -163,5 +141,3 @@ results in 8 days divided by 7 days in a week:
 1.1428571428571428
 
 ```
-
-{% endmarkdown %}</div>

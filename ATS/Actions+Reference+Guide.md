@@ -67,11 +67,10 @@ This sections provides you with an overview of the most common used, predefined 
 + [Set Return Value](ATS+Core+Actions/Set+Return+Value)
 
 ### Selenium Actions
-+ [Execute JavaScript Integer](Selenium+Actions/)
-+ [Execute JavaScript String](Selenium+Actions/)
-+ [Execute JavaScript WebElement](Selenium+Actions/)
-+ [Focus WebElement](Selenium+Actions/)
-+ [Send Keys](Selenium+Actions/)
++ [Execute JavaScript Integer](Selenium+Actions/Execute+JavaScript+Integer)
++ [Execute JavaScript String](Selenium+Actions/Execute+JavaScript+String)
++ [Execute JavaScript WebElement](Selenium+Actions/Execute+JavaScript+WebElement)
++ [Send Keys](Selenium+Actions/Send+Keys)
 
 ## Mendix Appstore Widgets Actions
 ### Boolean Slider

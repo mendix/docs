@@ -3,18 +3,10 @@ title: "Consuming a simple Web Service"
 category: "Integration"
 space: "Mendix 5 How-to's"
 ---
-# Consuming a simple Web Service
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21</td><td class="confluenceTd">Sep 24, 2014 14:40</td><td colspan="1" class="confluenceTd">Nov 17, 2015 13:48</td></tr></tbody></table>
-
-
 
 Mendix is "The App Platform for the Enterprise" and in enterprise software it is not likely that you work in a [green field](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation you will need to integrate with existing systems. Mendix supports many ways of integration and this how-to focuses on how you can consume web services with Mendix. For this how-to we'll be using an example web service of w3schools. Please note that this is a very simple web service that converts temperatures from Celsius to Fahrenheit and backwards. The converted temperature will be returned as a string value that can be stored in a variable directly. If you want to invoke a web service that returns a complex XML message you can use XML-to-Domain mappings explained in this [how-to](Importing+XML+documents).
 
-## Table of Contents
-
-##
-1\. Importing a WSDL
+## 1\. Importing a WSDL
 
 A WSDL describes the operations of a web service and can be imported in the Mendix Business Modeler. After importing the WSDL you can invoke the operations of the web service instantly within the Microflow editor.
 

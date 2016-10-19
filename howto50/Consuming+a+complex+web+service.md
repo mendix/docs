@@ -3,9 +3,6 @@ title: "Consuming a complex web service"
 category: "Integration"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Aug 26, 2010 14:51</td><td colspan="1" class="confluenceTd">Sep 02, 2015 13:02</td></tr></tbody></table>
-
-
 
 This how-to explains how you can consume a (third party) web service to integrate your Mendix application with, and reuse functionality and data from other applications. Web services are the preferred way of integrating a Mendix application with external systems. They can be used to retrieve data, send updates and perform operations. In Mendix, calling a web service is something you do in a microflow using the Call Web Service action.
 
@@ -28,7 +25,7 @@ This how-to section will first describe the powerful wizard which enables you to
 8.  Click **Finish** to create the web service.
     ![](attachments/2949201/8946295.png)
 
-### **1.1 Outcome**
+### 1.1 Outcome
 
 When finished the wizard will add to your model, based upon the options selected:
 
@@ -53,15 +50,12 @@ An alternative to using the described Wizard is importing a web service document
 
 ## 3\. Configuring the web service call
 
-1.  If you have not used the web service wizard, or have not used the option within this wizard to automatically create a microflow, you have to create a microflow which you will use to call the imported web service.
+1. If you have not used the web service wizard, or have not used the option within this wizard to automatically create a microflow, you have to create a microflow which you will use to call the imported web service.
     ![](attachments/2949201/8946299.png)
-
-    <div class="alert alert-info">{% markdown %}
 
     Make sure the microflow either creates the variables required as arguments for the web service call, or has those passed to it.
 
-    {% endmarkdown %}</div>
-2.  If you are creating your own microflow add the **Call web service** activity to the microflow.
+2. If you are creating your own microflow add the **Call web service** activity to the microflow.
     ![](attachments/2949201/3080367.png)
 3.  Click **Select...** to bring up a window allowing you to choose the operation you want to use for this web service call.![](attachments/2949201/8946300.png)
 4.  In the **Request** section you can configure the SOAP body, which contains the parameters needed to execute the web service request. The radio buttons allow you to choose the type of SOAP body to use. Use the **Edit value** button to change the Domain-to-XML mapping or the variables from the microflow used as input arguments.

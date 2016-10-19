@@ -3,7 +3,6 @@ title: "Generating a personal SSH2 key pair"
 category: "Security"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20</td><td class="confluenceTd">Sep 13, 2010 17:13</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:53</td></tr></tbody></table>
 
 This section describes how to generate a personal SSH2 keypair for use in the Mendix hosting environment.
 
@@ -68,13 +67,13 @@ Whenever your public key is known, anyone who is authorized to grant access to o
 
 ## 4\. I was told I should be able to log in to the 'someproject' account on the example.mendix.net server
 
-1.  Load your private key in Pageant by opening the .ppk file. You will be asked for the password which protects the use of your personal private key:
-2.  ![](attachments/2949159/13402540.png)
-3.  When it's loaded, start **PuTTY** and enter the server name at the **Host name** field. Other default settings for connecting (SSH, port 22) are **OK**.
-4.  Choose a name and click **Save** at the Saved Sessions section if you want to have the server information saved for quick future use.
+1. Load your private key in Pageant by opening the .ppk file. You will be asked for the password which protects the use of your personal private key:
+    ![](attachments/2949159/13402540.png)
+2. When it's loaded, start **PuTTY** and enter the server name at the **Host name** field. Other default settings for connecting (SSH, port 22) are **OK**.
+3.  Choose a name and click **Save** at the Saved Sessions section if you want to have the server information saved for quick future use.
     ![](attachments/2949159/13402541.png) 
-5.  Click **Open.** A login prompt will appear.
-6.  Enter the **username** of the login account and the system should should grant you access, informing you you've been authenticated using your keys.
+4.  Click **Open.** A login prompt will appear.
+5.  Enter the **username** of the login account and the system should should grant you access, informing you you've been authenticated using your keys.
 
 <div class="alert alert-info">{% markdown %}
 

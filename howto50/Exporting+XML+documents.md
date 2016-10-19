@@ -73,23 +73,20 @@ The XML Schema describes what the contents of an XML document should be, but we 
 8.  Open the connector, it should be in the bottom right corner of the Business Modeler.
     ![](attachments/8782441/8946635.png)
 
-    <div class="alert alert-info">{% markdown %}
-
     If you can't find the connector, you can re-open it from the view menu. 
 
     ![](attachments/8782441/8945848.png) 
 
-    {% endmarkdown %}</div>
 9.  Drag the entity **XMLDocument** from the connector to the place holder in the mapping editor.
     ![](attachments/8782441/8946659.png)
     The mapping editor for this element will pop up, you can close that by clicking **OK**.
-10.  Drag the entity **Customer** from the connector to place holder in the mapping editor.
+10. Drag the entity **Customer** from the connector to place holder in the mapping editor.
     ![](attachments/8782441/8946660.png)
 
     The mapping editor for this element will open up:
      ![](attachments/8782441/8946663.png)
 
-11.  Verify that the **Association to parent** setting is set to **XMLDocument_Customer**, this should happen automatically.
+11. Verify that the **Association to parent** setting is set to **XMLDocument_Customer**, this should happen automatically.
 12.  Select **Retrieving associated objects** as **Find method**.
 13.  Select attributes for all 5 attribute to value mappings or click **Map attributes by Name**, you should have to following mapping:
     ![](attachments/8782441/8946662.png)
@@ -139,11 +136,11 @@ In this section we'll explain how you can create logic to export customers store
 21.  Fill in _$CustomerList _as value.
 22.  Click **OK** to save the change item.
 23.  In the same way, create a change item to set the **Name** attribute to _'customers.xml'_ (including quote marks).
-24.  Click **OK** to save the action properties. The Microflow should look like this:
+24. Click **OK** to save the action properties. The Microflow should look like this:
 
     ![](attachments/8782441/8946452.png)
 
-25.  Drag an **Export XML** activity from the toolbox to the line between the start and end event. This inserts a new export XML activity.
+25. Drag an **Export XML** activity from the toolbox to the line between the start and end event. This inserts a new export XML activity.
 26.  Double click the new activity to open the properties editor:
     ![](attachments/8782441/8946453.png)
 

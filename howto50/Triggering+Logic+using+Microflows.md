@@ -35,7 +35,7 @@ At the moment there is only a button with no Microflow behind it yet. In this ex
     ![](attachments/8782452/8945881.png)
 2.  In the window that opens you can set the following parameters:
 
-    <table><thead><tr><td class="confluenceTd">Caption</td><td class="confluenceTd">This property indicates what text will be shown on this button. This is a translatable text.</td></tr></thead><tbody><tr><td class="confluenceTd">Tooltip</td><td class="confluenceTd">This property indicates what text will be displayed when users mouse over the button.</td></tr><tr><td colspan="1" class="confluenceTd">Image</td><td colspan="1" class="confluenceTd">This property indicates which image will be shown in front of the caption of the trigger.</td></tr><tr><td colspan="1" class="confluenceTd">Is default button</td><td colspan="1" class="confluenceTd">This property indicates whether this button is the default button of the grid or reference set selector. A grid or reference set selector can only have one default button. The default button is triggered when clicking or double clicking a row. Whether a click or a double click triggers it depends on the 'default button trigger' property of the&nbsp;<a href="/refguide5/Data+grid" rel="nofollow">Data grid</a>,&nbsp;<a href="/refguide5/Template+grid" rel="nofollow">Template grid</a>&nbsp;or&nbsp;<a href="/refguide5/Reference+set+selector" rel="nofollow">Reference set selector</a>.<br><img class="confluence-embedded-image confluence-thumbnail" width="300" src="attachments/8782452/8945883.png" data-image-src="attachments/8782452/8945883.png"></td></tr><tr><td colspan="1" class="confluenceTd">Visible&nbsp;</td><td colspan="1" class="confluenceTd">By default, whether or not an element is displayed in the browser is determined by how the page is designed and the user's roles within the application. However, the page can be configured to hide the element unless a certain condition is met.<p><br><em>Attribute:</em> When checked, this setting hides the widget unless the value of a particular attribute has a certain value. Only boolean and enumeration attributes can be assigned to this purpose.</p><p><em>Ignore security</em>: Check this box if you want the microflow button to be visible even if security says it should be hidden.</p></td></tr><tr><td colspan="1" class="confluenceTd">On click</td><td colspan="1" class="confluenceTd">This property specifies the microflow that is executed when the button is clicked.</td></tr><tr><td colspan="1" class="confluenceTd">On click settings</td><td colspan="1" class="confluenceTd">With the on click settings you can customize which parameters to pass to the microflow, whether to show a progress bar and more.</td></tr><tr><td colspan="1" class="confluenceTd">Name</td><td colspan="1" class="confluenceTd">This property specifies the name of the microflow in the page builderClass:&nbsp;The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.</td></tr><tr><td colspan="1" class="confluenceTd">Style</td><td colspan="1" class="confluenceTd">The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied&nbsp;<em>after</em>&nbsp;the class.</td></tr></tbody></table><div class="alert alert-warning">{% markdown %}
+    <table><thead><tr><td class="confluenceTd">Caption</td><td class="confluenceTd">This property indicates what text will be shown on this button. This is a translatable text.</td></tr></thead><tbody><tr><td class="confluenceTd">Tooltip</td><td class="confluenceTd">This property indicates what text will be displayed when users mouse over the button.</td></tr><tr><td colspan="1" class="confluenceTd">Image</td><td colspan="1" class="confluenceTd">This property indicates which image will be shown in front of the caption of the trigger.</td></tr><tr><td colspan="1" class="confluenceTd">Is default button</td><td colspan="1" class="confluenceTd">This property indicates whether this button is the default button of the grid or reference set selector. A grid or reference set selector can only have one default button. The default button is triggered when clicking or double clicking a row. Whether a click or a double click triggers it depends on the 'default button trigger' property of the&nbsp;<a href="/refguide5/Data+grid" rel="nofollow">Data grid</a>,&nbsp;<a href="/refguide5/Template+grid" rel="nofollow">Template grid</a>&nbsp;or&nbsp;<a href="/refguide5/Reference+set+selector" rel="nofollow">Reference set selector</a>.<br><img class="confluence-embedded-image confluence-thumbnail" width="300" src="attachments/8782452/8945883.png" data-image-src="attachments/8782452/8945883.png"></td></tr><tr><td colspan="1" class="confluenceTd">Visible&nbsp;</td><td colspan="1" class="confluenceTd">By default, whether or not an element is displayed in the browser is determined by how the page is designed and the user's roles within the application. However, the page can be configured to hide the element unless a certain condition is met.<p><br><em>Attribute:</em> When checked, this setting hides the widget unless the value of a particular attribute has a certain value. Only boolean and enumeration attributes can be assigned to this purpose.</p><p><em>Ignore security</em>: Check this box if you want the microflow button to be visible even if security says it should be hidden.</p></td></tr><tr><td colspan="1" class="confluenceTd">On click</td><td colspan="1" class="confluenceTd">This property specifies the microflow that is executed when the button is clicked.</td></tr><tr><td colspan="1" class="confluenceTd">On click settings</td><td colspan="1" class="confluenceTd">With the on click settings you can customize which parameters to pass to the microflow, whether to show a progress bar and more.</td></tr><tr><td colspan="1" class="confluenceTd">Name</td><td colspan="1" class="confluenceTd">This property specifies the name of the microflow in the page builderClass:&nbsp;The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.</td></tr><tr><td colspan="1" class="confluenceTd">Style</td><td colspan="1" class="confluenceTd">The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied&nbsp;<em>after</em>&nbsp;the class.</td></tr></tbody></table>
 
     The styling is applied in the following order:
 
@@ -43,16 +43,11 @@ At the moment there is only a button with no Microflow behind it yet. In this ex
     *   The 'Class' property of the widget
     *   The 'Style' property of the widget
 
-    {% endmarkdown %}</div>
-3.  Click **OK** to save the properties.
-
-    <div class="alert alert-warning">{% markdown %}
+3. Click **OK** to save the properties.
 
     If you single click the microflow button the properties can also be configured on the right side, in the properties section.
 
     ![](attachments/8782452/8945880.png)
-
-    {% endmarkdown %}</div>
 
 ### 2.3 Configuring the Microflow Settings
 
@@ -72,22 +67,14 @@ The properties in the 'General' section determine which information is sent to t
 *   Pass "data grid" object: The first parameter that can be passed to the microflow is the selection of the data grid.
 
     <table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Selection</td><td class="confluenceTd">The selected object(s) will be sent to the microflow. If the grid allows multi-select the selection will be a list. If not, the selection will be exactly one object.</td></tr><tr><td class="confluenceTd">Nothing</td><td class="confluenceTd">The grid selection is not sent to the microflow.</td></tr><tr><td class="confluenceTd">All pages</td><td class="confluenceTd">All objects will be sent to the microflow in a list.</td></tr></tbody></table>
-*   Pass enclosing data view object: If the data grid that refers to the microflow is part of another data view, you can also choose to send the object of that data view to the microflow.
 
-    <div class="alert alert-info">{% markdown %}
+*   Pass enclosing data view object: If the data grid that refers to the microflow is part of another data view, you can also choose to send the object of that data view to the microflow.
 
     If you have a grid showing orders inside a data view showing a customer. The control bar of the grid contains a microflow button. Apart from being able to pass the grid selection as a parameter you can choose to send the customer to the microflow as well.
 
-    {% endmarkdown %}</div>
-
 *   Microflow: This is the microflow that will be executed. Its parameters should match the parameters that are passed to it.
 
-    <div class="alert alert-success">{% markdown %}
-
-    If you create the microflow using the New button in the Select page, a microflow will be created with the correct parameters. Make sure you first select what you want to pass as parameter in the parameter properties.
-    Maintain selection after microflow (only for grid microflow buttons).
-
-    {% endmarkdown %}</div>
+    If you create the microflow using the New button in the Select page, a microflow will be created with the correct parameters. Make sure you first select what you want to pass as parameter in the parameter properties. Maintain selection after microflow (only for grid microflow buttons).
 
 *   Maintain selection after microflow: This property specifies whether the selection of the data should be maintained after executing the microflow.
 

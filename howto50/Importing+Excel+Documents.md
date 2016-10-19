@@ -3,7 +3,6 @@ title: "Importing Excel Documents"
 category: "Integration"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.12</td><td class="confluenceTd">Jan 28, 2015 15:20</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:48</td></tr></tbody></table>
 
 Adding large amounts of data to your application, for example rootdata or data from an external application, can be very time consuming. In order to save time and effort, this process can be automated by using the 'Excel Importer' module. In this How-to you will setup import templates, and import data into your application by using the 'Excel Importer'.
 
@@ -20,19 +19,16 @@ Before you continue, make sure that you know how to create:
 *   **Add Appstore** **content (**[Add appstore content to your app](Adding+App+Store+content+to+your+app)).
 *   **Secure applications **([Creating a secure app](Creating+a+secure+app)).
 
-1.  Create the following domain model.
+1. Create the following domain model.
     ![](attachments/8785707/8946752.png)
-
-    <div class="alert alert-warning">{% markdown %}
 
     The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [Working with images and files](Working+with+images+and+files).
 
-    {% endmarkdown %}</div>
-2.  Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.
-3.  Create **menu items **to access the **Order** and the **Customer** overview pages.
-4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the appstore.
-5.  Create **menu items** for the **ExcelImportOverview** and the **MxObjects_Overview** pages. Those pages already exist within the _**USE_ME** folders of the downloaded modules.
-6.  Configure the **Administrator** user role to have the **Configurator** modu lerole for the **Excel Importer** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
+2. Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.
+3. Create **menu items **to access the **Order** and the **Customer** overview pages.
+4. Download the **Excel Importer** and **Mx Model Reflection** modules from the appstore.
+5. Create **menu items** for the **ExcelImportOverview** and the **MxObjects_Overview** pages. Those pages already exist within the _**USE_ME** folders of the downloaded modules.
+6. Configure the **Administrator** user role to have the **Configurator** modu lerole for the **Excel Importer** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
 
 ## 2\. Prepare logic for data import
 
@@ -55,10 +51,9 @@ In order to set up import templates for importing data, your application model m
 3.  **Log in** as an Administrator.
 4.  Click on the menu item for the **MxObjects_Overview** in your navigation.
 5.  Select the module that contains the objects you want to use in your client, by clicking on the box to the left of it. In this case **MyFirstModule**.
-6.  Click on the arrows next to **Synchronize all entities and microflows of checked modules on the left.**
-    **![](attachments/8785707/14385239.png)
-    **
-7.  Now the two objects and the parse microflow from the module **MyFirstModule** can be seen and used in the client.
+6. Click on the arrows next to **Synchronize all entities and microflows of checked modules on the left.
+    ![](attachments/8785707/14385239.png)
+7. Now the two objects and the parse microflow from the module **MyFirstModule** can be seen and used in the client.
 
 ## 4\. Create Import Templates
 
@@ -82,31 +77,22 @@ Based on the structure of the file you want to import, you will setup your templ
     ![](attachments/8785707/8946766.png)
 
 6.  Click on the arrow next to **Reference to import objects** box.
-7.  Select the **MyFirstModule.Customer_XLSFile** association.
-
-    <div class="alert alert-warning">{% markdown %}
+7. Select the **MyFirstModule.Customer_XLSFile** association.
 
      By setting the association to the XLS File, the XLS file is saved on disk and the imported data is linked to the source file.
 
-    {% endmarkdown %}</div>
-8.  Set **Import Action** to **Synchronize objects**.![](attachments/8785707/8946767.png)
-
-    <div class="alert alert-warning">{% markdown %}
+8. Set **Import Action** to **Synchronize objects**.![](attachments/8785707/8946767.png)
 
     For this example you will be using a simple Excel file, with just one sheet and columnheaders at the first row. If a more comprehensive Excel file is used you can change these values at the **Sheet nr**, **Header row nr** and **Import from row nr** boxes.
 
-    {% endmarkdown %}</div>
-9.  Under the **Connect columns to attributes** section, click on **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
+9. Under the **Connect columns to attributes** section, click on **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
     ![](attachments/8785707/8946769.png)
 
-10.  Add the column number, this should correspond with the column number from the value on the Excel file you want to map
-
-    <div class="alert alert-warning">{% markdown %}
+10. Add the column number, this should correspond with the column number from the value on the Excel file you want to map
 
     The number of the first column in Excel is 0, the second 1, etc.
 
-    {% endmarkdown %}</div>
-11.  Define the Excel column header as the **Caption** value.
+11. Define the Excel column header as the **Caption** value.
 
 12.  Choose **Attribute** as a **type**.
 
@@ -116,14 +102,11 @@ Based on the structure of the file you want to import, you will setup your templ
 14.  Select the **attribute** you want to map the Excel value to.
     ![](attachments/8785707/8946772.png)
 
-15.  Repeat steps 9 to 14 for each attribute of the **Customer** object.
-
-    <div class="alert alert-warning">{% markdown %}
+15. Repeat steps 9 to 14 for each attribute of the **Customer** object.
 
     If the mapping is setup right, a green check will appear in front of the row.
 
-    {% endmarkdown %}</div>
-16.  For the mapping of attribute **Name** set the key value to **Yes**, to prevent a customer from being duplicated.
+16. For the mapping of attribute **Name** set the key value to **Yes**, to prevent a customer from being duplicated.
     ![](attachments/8785707/8946775.png)
 
 17.  After creating all the mappings for the **Customer** object attributes, also create mappings for the **Order** object attributes by repeating steps 9 to 11. 
@@ -196,20 +179,13 @@ In the previous steps you have manually added all the columns to your import tem
 8.  Automatically a row is created for every header of the Excel file.![](attachments/8785707/14385243.png)
 9.  Select the **Customer object****type**.
     ![](attachments/8785707/14385247.png)
-10.  Click on **Connecting matching attributes**.![](attachments/8785707/14385248.png)
-
-    <div class="alert alert-warning">{% markdown %}
+10. Click on **Connecting matching attributes**.![](attachments/8785707/14385248.png)
 
     The attributes of the selected Mendix Object which have the same name as the Caption will be automatically matched.
 
-    {% endmarkdown %}</div>
-11.  To complete the template repeat the same actions as performed in chapter 4.
-
-    <div class="alert alert-warning">{% markdown %}
+11. To complete the template repeat the same actions as performed in chapter 4.
 
     Keep in mind that you have to set a key attribute for as well as the **Customer **object as the **Order** object
-
-    {% endmarkdown %}</div>
 
 ## 7\. Export/Import Template
 
@@ -220,13 +196,9 @@ Once you have completed an Excel template you can export the template for exampl
     ![](attachments/8785707/14385249.png)
 3.  Import the downloaded file by clicking **Import template**.
 4.  Select the downloaded file and click **Import**.**![](attachments/8785707/14385250.png)**
-5.  You have now imported a complete import template.
-
-    <div class="alert alert-warning">{% markdown %}
+5. You have now imported a complete import template.
 
     You will have a duplicate import template in your app, but in a real life situation you would import this template in a different environment/database where this template is not created yet.
-
-    {% endmarkdown %}</div>
 
 ## 8\. Related content
 

@@ -3,9 +3,6 @@ title: "Error Handling"
 category: "Logic and Business Rules"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20</td><td class="confluenceTd">May 21, 2015 18:28</td><td colspan="1" class="confluenceTd">Oct 09, 2015 15:46</td></tr></tbody></table>
-
-
 
 When working with microflows it is important to realize that we always have transactions. These transactions help is in achieving the correct result, and in case something goes wrong they also help us to keep all information in our application consistent. 
 

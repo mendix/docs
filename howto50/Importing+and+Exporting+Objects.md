@@ -3,7 +3,6 @@ title: "Importing and Exporting Objects"
 category: "Integration"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.14</td><td class="confluenceTd">Apr 07, 2015 02:45</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:50</td></tr></tbody></table>
 
 Don't re-invent the wheel. Save time by importing modules others have already created, and exporting new modules for others to use. The App Store provides this functionality on a macro-level, but you can use the modeler's built-in import and export functions to share content between your own apps, import unofficial modules, and share entire projects.
 
@@ -42,20 +41,17 @@ Mendix project packages are stored as Mendix Package (.mpk) files.
 
 Mendix module packages are stored as Mendix Package (.mpk) files.
 
-1.  **Right click** on your project in the Project Explorer and select **Import Module Package...**![](attachments/12878954/13402350.png)
-2.  Select your Mendix Package file and click **Open.**
+1. **Right click** on your project in the Project Explorer and select **Import Module Package...**![](attachments/12878954/13402350.png)
+2. Select your Mendix Package file and click **Open.**
      ![](attachments/12878954/13402351.png)
 
-    A dialogue box will open.  
+   A dialogue box will open.  
 
-3.  Choose a name for your module and select whether to replace an existing module or create a new one.
+3. Choose a name for your module and select whether to replace an existing module or create a new one.
     ![](attachments/12878954/13402352.png) ![](attachments/12878954/13402353.png)
-
-    <div class="alert alert-info">{% markdown %}
 
     If you replace a module with a new version, existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.
 
-    {% endmarkdown %}</div>
 4.  Click **Import.**
     You may see another dialogue box, informing you of any included module dependencies that will be overwritten in your project.
     ![](attachments/12878954/13402354.png)
@@ -68,9 +64,10 @@ Mendix module packages are stored as Mendix Package (.mpk) files.
 
 Mendix module object packages are stored as Mendix Package (.mpk) files. An object package can contain a page, microflow, image collection, event, document template, constant, web service, layout, menu, and more.
 
-1.  **Right click** on a module in the Project Explorer and select **Import document package...**_![](attachments/12878954/13402365.png)
-    _An Open File dialogue will appear.
-2.  Select your Mendix Package file containing the object you want to import, and click **Open**.
+1. **Right click** on a module in the Project Explorer and select **Import document package...**
+    ![](attachments/12878954/13402365.png)
+    An Open File dialogue will appear.
+2. Select your Mendix Package file containing the object you want to import, and click **Open**.
 3.  If an object with the same name already exists, you will see a dialogue box:
     ![](attachments/12878954/13402367.png)
     At this point, you can either **Rename** the object or **Cancel.**
@@ -79,11 +76,7 @@ Mendix module object packages are stored as Mendix Package (.mpk) files. An obje
 5.  Click OK to import the object into your module:
     ![](attachments/12878954/13402369.png)
 
-    <div class="alert alert-info">{% markdown %}
-
     You may need to update the new object's permissions, depending on where it was originally exported from. For consistency, be sure to check permissions on any objects imported.
-
-    {% endmarkdown %}</div>
 
 ### Importing Widgets
 
@@ -97,11 +90,8 @@ Mendix module packages are stored as Mendix Package (.mpk) files. However, you n
 3.  Open the **Project**menu and select **Synchronize Project Directory**to synchronize the changes in the project directory.
     ![](attachments/12878954/13402359.png)
 
-    <div class="alert alert-info">{% markdown %}
-
     You can also press **F4** to synchronize your project directory.
 
-    {% endmarkdown %}</div>
 4.  Add your newly imported widget from the **Toolbox** or **Add Widget** context menu:
     ![](attachments/12878954/13402360.png)
 
@@ -115,10 +105,9 @@ To learn more about importing content from the App Store, see [Adding App Store
 
 This part will go through the steps required to export projects.
 
-1.  Click on the **File** menu in the modeler and select **Export Project Package...
-    **_![](attachments/12878954/13402374.png)
-    _
-2.  A dialog will appear that enables you to set the export location and, if required, select data to export.
+1. Click on the **File** menu in the modeler and select **Export Project Package...**
+    ![](attachments/12878954/13402374.png)
+2. A dialog will appear that enables you to set the export location and, if required, select data to export.
     ![](attachments/12878954/14385238.png)
     The option 'Existing snapshot' will only be available when a data snapshot was created earlier using the menu option **Add snapshot of data** from the **Team** menu.
     It is also possible to include a new snapshot based on the current state of the local database. This option is only available after the project has been started at least once.
@@ -135,11 +124,7 @@ This part will go through the steps required to export projects.
     ![](attachments/12878954/13402372.png)
     Here you can select files you would like to include in your package. This list includes any files in your **userlib** or **resources**folders in your project directory. If you don't want to include these files, you can uncheck the boxes.
 
-    <div class="alert alert-info">{% markdown %}
-
     To quickly uncheck all files, press _CTRL+a_ to select all of the items, then press the _Spacebar_ key to uncheck all objects.
-
-    {% endmarkdown %}</div>
 
 ### Exporting Widgets
 

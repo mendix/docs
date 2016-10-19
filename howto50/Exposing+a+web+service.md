@@ -3,9 +3,6 @@ title: "Exposing a web service"
 category: "Integration"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20.0</td><td class="confluenceTd">Aug 24, 2010 14:26</td><td colspan="1" class="confluenceTd">Oct 19, 2015 12:10</td></tr></tbody></table>
-
-
 
 Mendix supports many ways to expose functionality or data of your application to others. The easiest way is to use web services. A web service can contain multiple operations.
 
@@ -104,11 +101,9 @@ You need a WSDL to allow others to interact with the web service you just create
     Currently users of the web service don't need to authenticate.
 3.  Switch **Authentication** to **Username** **and password**.
     ![](attachments/2949205/16285932.png) 
-4.  Click **OK** and re-run the application. Users now need to authenticate before they can use the web service.
+4. Click **OK** and re-run the application. Users now need to authenticate before they can use the web service.
 
-    <div class="alert alert-success">{% markdown %}
-    Mendix allows you to create your own user management functionality as long as your own user object inherits from 'System.User'. The 'User' entity in the 'System' module contains a boolean attribute 'WebServiceUser'. This attribute determines if an user is able to interact with web services. If you want a certain user to be able to interact with web services, the value of this attribute must be 'true'.
-    {% endmarkdown %}</div>
+Mendix allows you to create your own user management functionality as long as your own user object inherits from 'System.User'. The 'User' entity in the 'System' module contains a boolean attribute 'WebServiceUser'. This attribute determines if an user is able to interact with web services. If you want a certain user to be able to interact with web services, the value of this attribute must be 'true'.
 
 ## 8\. Considerations
 

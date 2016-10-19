@@ -3,11 +3,6 @@ title: "Publishing a Mendix Hybrid Mobile App in Mobile App Stores"
 category: "Mobile"
 space: "Mendix 5 How-to's"
 ---
-# Publishing a Mendix Hybrid Mobile App in Mobile App Stores
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20</td><td class="confluenceTd">Oct 10, 2014 14:30</td><td colspan="1" class="confluenceTd">Oct 09, 2015 12:08</td></tr></tbody></table>
-
-
 
 Once you have developed your Mendix Mobile App, you want to make it available as an app for mobile platforms such as Apple's iOS, Google Android and Windows Phone. We provide the possibility to produce a platform-specific native app for your Mendix Apps under the Publish section of the Mendix Developer Portal.
 
@@ -57,22 +52,19 @@ First, open the "Publish for Mobile App Stores" page in the Mendix Developer Por
 
     *   For Community Edition apps, the only option is "Sandbox".
     *   For apps running on a licensed cloud node, you can choose from Test, Acceptance and Production (depending on what is available on your cloud node).
-10.  Leave the choice on how to build the package on the default: "Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build".
-
-    You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify and upload manually to Adobe PhoneGap Build. See our documentation on [how you can customize the PhoneGap Build package](/refguide5/Customizing+PhoneGap+Build+packages). This is unnecessary in almost all scenarios.
-
-11.  Start the actual hybrid mobile app package building process: Click the green "Start PhoneGap Build job" button to initiate the packaging process.
-12.  The first time you start this process, you will need to authorize the Mendix Developer Portal to act on your behalf with the Adobe PhoneGap Build service.
+10. Leave the choice on how to build the package on the default: "Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build". You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify and upload manually to Adobe PhoneGap Build. See our documentation on [how you can customize the PhoneGap Build package](/refguide5/Customizing+PhoneGap+Build+packages). This is unnecessary in almost all scenarios.
+11. Start the actual hybrid mobile app package building process: Click the green "Start PhoneGap Build job" button to initiate the packaging process.
+12. The first time you start this process, you will need to authorize the Mendix Developer Portal to act on your behalf with the Adobe PhoneGap Build service.
 
     *   You are presented with a pop-up to start a redirect to Adobe PhoneGap Build for authorization.
     *   Click the button "Authorize use of Adobe PhoneGap Build".
     *   You will be temporarily redirected to a website of Adobe PhoneGap Build.
-13.  You now end up on a page of the Adobe PhoneGap Build service. It will ask whether you want to authorize the "Mendix Developer Portal" to act on your behalf.
+13. You now end up on a page of the Adobe PhoneGap Build service. It will ask whether you want to authorize the "Mendix Developer Portal" to act on your behalf.
 
-    *   Choose "Yes" to allow us to start build jobs using your account.
-    *   You will then be redirected back to the Mendix Developer Portal.
-        *   If you choose "No", you will be redirected back to the Mendix Developer Portal and you will not be able to publish your app.
-        *   If you do not have a session with Adobe PhoneGap Build in your current browser, before being presented with the authorization request, you will be asked to login. 
+    * Choose "Yes" to allow us to start build jobs using your account.
+    * You will then be redirected back to the Mendix Developer Portal.
+        * If you choose "No", you will be redirected back to the Mendix Developer Portal and you will not be able to publish your app.
+        * If you do not have a session with Adobe PhoneGap Build in your current browser, before being presented with the authorization request, you will be asked to login. 
 
 After you have been redirected back to the Mendix Developer Portal, the packaging process will continue, and you will have to set up the proper signing keys for your app.
 

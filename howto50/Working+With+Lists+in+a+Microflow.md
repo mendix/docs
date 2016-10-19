@@ -3,9 +3,6 @@ title: "Working With Lists in a Microflow"
 category: "Logic and Business Rules"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.14</td><td class="confluenceTd">Jan 22, 2015 15:10</td><td colspan="1" class="confluenceTd">Oct 19, 2015 10:34</td></tr></tbody></table>
-
-
 
 In this how-to you will learn how to work with a list of objects in a Microflow. To manage this list you will first retrieve a filtered list of objects from the database. Mendix utilizes XPath constraints to apply filters. To learn more about XPath, take a look at this [documentation](/refguide5/XPath+contains). Secondly, you will iterate over the retrieved list of objects and calculate the total price of all the orders in a [Loop](/refguide5/Loop). You will end this how-to with an alternative to calculating aggregated values over a list of objects.
 
@@ -58,26 +55,20 @@ In the previous section you have set up a basic data structure and created some 
     ![](attachments/8785360/8946814.png)
 11.  Select **From database** as _source_ option.
     ![](attachments/8785360/8946816.png)
-12.  Set the following properties:
+12. Set the following properties:
     * For _Entity_ select **Order**.
     * For _Name_ enter **OrderList**
 
-<div class="alert alert-info">With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.</div>
+    With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.
 
-13.  Add the following XPath expression in the XPath constraint field: _[OrderStatus = 'Processing']_. This expression will filter the list to only orders with the status **Processing**.
-14.  Enter a descriptive name for the list variable. Your properties screen should look like this:
+13. Add the following XPath expression in the XPath constraint field: _[OrderStatus = 'Processing']_. This expression will filter the list to only orders with the status **Processing**.
+14. Enter a descriptive name for the list variable. Your properties screen should look like this:
     ![](attachments/8785360/8946818.png)
-
-    <div class="alert alert-info">{% markdown %}
 
     With the currents settings your retrieve action gets all the 'Processing' orders in the database. In the next section you will edit this list of orders. 
 
-    {% endmarkdown %}</div>
-
     You should see a Microflow like this:
     ![](attachments/8785360/8946819.png)
-
-[ ](Working+With+Lists+in+a+Microflow)
 
 ## 3\. Iterate Over a List of Objects
 
@@ -85,40 +76,34 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
 1.  Open the **IVK_SetOrderToComplete** microflow created in the previous section.
     ![](attachments/8785360/8946819.png)
-2.  Drag a **Loop** action from the toolbox to the line, behind the **OrderProcessingList** action activity.
+2. Drag a **Loop** action from the toolbox to the line, behind the **OrderProcessingList** action activity.
     ![](attachments/8785360/8946820.png)
-
-    <div class="alert alert-info">{% markdown %}
 
     For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events.
 
     The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue. For more information take a look at this [documentation](/refguide5/Loop?utm_source=businessmodeler&utm_medium=software&utm_campaign=modeler)
 
-    {% endmarkdown %}</div>
-3.  Double click the loop activity and select the **OrderProcessingList **to iterate over.
+3. Double click the loop activity and select the **OrderProcessingList **to iterate over.
     ![](attachments/8785360/8946821.png)
-4.  Drag a **Change object** activity inside the loop:
+4. Drag a **Change object** activity inside the loop:
     ![](attachments/8785360/8946822.png)
-5.  Double click the **change activity** to open its properties.
+5. Double click the **change activity** to open its properties.
     ![](attachments/8785360/8946823.png)
-6.  Select the **IteratorOrder**at the **Variable **drop down and click the **New**button.
+6. Select the **IteratorOrder**at the **Variable **drop down and click the **New**button.
     ![](attachments/8785360/8946825.png)
 
     You will see the following properties screen:
     ![](attachments/8785360/8946826.png)
-7.  Set the following properties
-    1.  For **Member **select _Orderstatus_.
-    2.  For **Value **enter _MyFirstModule.OrderStatus.Complete
-        _![](attachments/8785360/8946827.png)
+7. Set the following properties
+    * For **Member **select _Orderstatus_.
+    * For **Value **enter _MyFirstModule.OrderStatus.Complete
+    _![](attachments/8785360/8946827.png)
 
-        Click **OK**. Your properties screen should look like this:
-        ![](attachments/8785360/8946829.png)
+    Click **OK**. Your properties screen should look like this:
+    ![](attachments/8785360/8946829.png)
 
-        <div class="alert alert-warning">{% markdown %}
+    Set 'Commit' and 'Refresh in Client' to 'Yes' to commit your changes to the database and refresh your list in the client so your changes will be visible.
 
-        Set 'Commit' and 'Refresh in Client' to 'Yes' to commit your changes to the database and refresh your list in the client so your changes will be visible.
-
-        {% endmarkdown %}</div>
 8.  Click **OK. **Your microflow should look like this:
     ![](attachments/8785360/8946831.png)
 9.  **Re-deploy** your application.
@@ -142,47 +127,37 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
     1.  For **Data type**select _Float/Currency_
     2.  For **Value **enter _0_
     3.  For **Variable** enter _CalculatedTotalPrice_
-7.  Add a **Change** variable inside the loop.
-
-    <div class="alert alert-warning">{% markdown %}
+7. Add a **Change** variable inside the loop.
 
     It is not possible to drag an activity directly into a loop. So drag the activity first outside the loop, than drag it inside the loop.
 
-    {% endmarkdown %}</div>
-
     ![](attachments/8785360/9273354.png)
 
-8.  Double click the **change** variable activity to open its **properties.**
+8. Double click the **change** variable activity to open its **properties.**
     ![](attachments/8785360/9273355.png)
 
-9.  Set the following properties:
+9. Set the following properties:
 
-    1.  For **Variable **select _CalculatedTotalPrice_
-    2.  For **Value **enter _$CalculatedTotalPrice + $IteratorOrder/TotalPrice
+    * For **Variable **select _CalculatedTotalPrice_
+    * For **Value **enter _$CalculatedTotalPrice + $IteratorOrder/TotalPrice
 
-        _
+    By iterating over the list, the price of every order will be added one by one to the 'CalculatedTotalPrice' variable
 
-        <div class="alert alert-info">{% markdown %}
+    Your properties screen should look like this:
+    ![](attachments/8785360/9273356.png)
 
-        By iterating over the list, the price of every order will be added one by one to the 'CalculatedTotalPrice' variable
-
-        {% endmarkdown %}</div>
-
-        Your properties screen should look like this:
-        ![](attachments/8785360/9273356.png)
-
-10.  Drag a **Show Message** action from the toolbox to the end of the microflow.
+10. Drag a **Show Message** action from the toolbox to the end of the microflow.
     ![](attachments/8785360/9273357.png)
-11.  Double click the **message** activity to open its properties.
+11. Double click the **message** activity to open its properties.
     ![](attachments/8785360/9273359.png)
-12.  Set the following properties:
-    1.  For **Template** enter _Total calculated price: {1}._
-    2.  For **Parameters **add _toString($CalculatedTotalPrice).
-        _![](attachments/8785360/9273360.png)
-13.  Click **OK**. You should see a Microflow like this:
+12. Set the following properties:
+    * For **Template** enter _Total calculated price: {1}._
+    * For **Parameters **add _toString($CalculatedTotalPrice).
+    ![](attachments/8785360/9273360.png)
+13. Click **OK**. You should see a Microflow like this:
     ![](attachments/8785360/9273361.png)
-14.  **Re-deploy** your application.
-15.  Click the **Calculate total order price** button and you will see the price of all the orders added up.
+14. **Re-deploy** your application.
+15. Click the **Calculate total order price** button and you will see the price of all the orders added up.
     ![](attachments/8785360/8946721.png)
 
 ## 5\. Calculate a Total List Value Using an Aggregate Function
@@ -195,23 +170,14 @@ In the previous section you iterated over a list to add the value of single obje
     ![](attachments/8785360/9273365.png)
 3.  Double click the aggregate list activity to open its properties.
     ![](attachments/8785360/9273366.png)
-4.  Set the following properties
-    1.  For **Variable **select _OrderList_.
-    2.  For **Function **select _Sum
-        _
+4. Set the following properties
+    * For **Variable **select _OrderList_.
+    * For **Function **select _Sum - see the [documentation](/refguide5/Aggregate+List) for the description of the other functions.
+    * For **Attribute** select _TotalPrice_
+    * For **Variable** enter a descriptive name like _SumTotalPrice_.
+    ![](attachments/8785360/9273368.png)
 
-        <div class="alert alert-info">{% markdown %}
-
-        See the [documentation](/refguide5/Aggregate+List) for the description of the other functions.
-
-        {% endmarkdown %}</div>
-    3.  For **Attribute** select _TotalPrice_
-
-    4.  For **Variable** enter a descriptive name like _SumTotalPrice_.
-        ![](attachments/8785360/9273368.png)
-
-5.  Click **OK**.
-
+5. Click **OK**.
 6.  Double click on the message activity.
     ![](attachments/8785360/9273372.png)
 

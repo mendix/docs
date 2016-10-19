@@ -3,7 +3,6 @@ title: "Exposing data to BI tools using OData"
 category: "Integration"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.18</td><td class="confluenceTd">Apr 22, 2015 10:23</td><td colspan="1" class="confluenceTd">Oct 28, 2015 13:19</td></tr></tbody></table>
 
 **Introduction**
 

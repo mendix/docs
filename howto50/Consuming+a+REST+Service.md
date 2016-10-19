@@ -3,9 +3,6 @@ title: "Consuming a REST Service"
 category: "Integration"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.14.1</td><td class="confluenceTd">Apr 20, 2015 09:42</td><td colspan="1" class="confluenceTd">Oct 07, 2015 10:57</td></tr></tbody></table>
-
-
 
 With the REST services module from the Mendix Appstore, the full power of JSON-based REST APIs is available to Mendix developers. The module serves three goals: consuming services, publishing services and synchronizing data between (Mendix) apps by combining consume and publish. In this how-to, you will consume a JSON-based REST services by integrating with the API of the world famous Rijksmuseum which allows us to search for art.
 
@@ -37,15 +34,11 @@ To use this service you need to create an account at [https://www.rijksmuseum.n
 
 In this chapter you will define a data model to consume this service. You will create a Query entity to store the search request, and a Results object to store the result. Then you will add all interesting pieces of the result JSON to your domain model, in such a way that it reflects the structure of the JSON response, according to the JSON deserialization rules described [here](https://github.com/mweststrate/RESTServices#json-deserialization).
 
-<div class="alert alert-info">{% markdown %}
-
 { = Object
 
 [ { = List of objects
 
 [ = List: To be able to map a list of String-/Float-/Boolean values, you need to set a many to many association to the **Primitive** entity in your **RestServices** module, or a subclass of the **Primitive** entity.
-
-{% endmarkdown %}</div>
 
 1.  Create a non-persistable **Query** object and name the attribute the same as the query parameter (case sensitive).
     ![](attachments/12879450/13402441.png)
@@ -119,22 +112,18 @@ In the previous section you have created a domain model to map the JSON structur
 3.  Add a new **table** with three columns.
 4.  In the first column enter **Search the Rijksmuseum**.
 5.  Add the **Query > q** attribute to the middle column.
-6.  Add a Microflow button to the last column.**
+6.  Add a Microflow button to the last column.
     ![](attachments/12879450/13402452.png)
-    **
 7.  Add a nested **Results** data view inside the **Query** data view and add a nested **ArtObject** template grid inside the **Results** data view. 
     ![](attachments/12879450/13402453.png)
-8.  Add the following fields to the **ArtObject** template grid.
+8. Add the following fields to the **ArtObject** template grid.
     ![](attachments/12879450/13402454.png)
-
-    <div class="alert alert-warning">{% markdown %}
 
     You can download the **Image Viewer** widget from the Appstore, and add the **url** attribute to the **Image attribute** at the properties section.
 
     ![](attachments/12879450/13402508.png)
 
-    {% endmarkdown %}</div>
-9.  Add the created page to your navigation.
+9. Add the created page to your navigation.
 
 ## 4\. Consuming the Service using a Get Request
 

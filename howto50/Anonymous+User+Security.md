@@ -5,10 +5,6 @@ space: "Mendix 5 How-to's"
 ---
 # Anonymous User Security
 
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20</td><td class="confluenceTd">May 21, 2015 18:31</td><td colspan="1" class="confluenceTd">Oct 09, 2015 15:47</td></tr></tbody></table>
-
-
-
 When setting up anonymous access for your application you have to be wary about where you give the users access to. There are a few guidelines you have to remember otherwise you could make your entire application accessible to the public. 
 
 When creating an anonymous user role, always make sure you give it as few access as possible. Because of this you never want to re-use module rules from your named user accounts. This is probably faster, but makes it much easier to give the anonymous user to much access to information in your application. When you are using anonymous users, any changes made to your object can never be traced back to the actual user since the user was anonymous and no longer exists. 

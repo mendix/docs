@@ -3,13 +3,8 @@ title: "Creating a secure app"
 category: "Security"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Oct 30, 2014 16:25</td><td colspan="1" class="confluenceTd">Sep 02, 2015 11:52</td></tr></tbody></table>
-
-
 
 Each application must have proper security in order to have its data secured. This How-To will teach you how to turn the security on and configure it. You will start with the configuration of user and module roles and their access to page and microflows. Therefore we’ll turn on the prototype/demo security. Next you will deal with production security.
-
-
 
 ## 1\. Prepare data structure, GUI and example data
 
@@ -79,10 +74,10 @@ The two module roles that have been created should be assigned to a user role. W
 
 1.  Open the project **security.**
 2.  Go to the **User roles **tab.
-3.  Double click the **Administrator **User Role**.
-    ****![](attachments/8782293/9273392.png)**
+3.  Double click the **Administrator User Role**.
+    ![](attachments/8782293/9273392.png)
 4.  The properties editor will open.
-    **![](attachments/8782293/9273393.png)**
+    ![](attachments/8782293/9273393.png)
 5.  Click **Edit** to open the module role configuration.
     ![](attachments/8782293/8946735.png)
 6.  Select the **Administrator** module role for all the modules.
@@ -123,14 +118,10 @@ In this part of the How-To you will configure the security at production level. 
     ![](attachments/8782293/9273387.png)
 2.  Open the **Entity Access** tab.
     ![](attachments/8782293/9273404.png)
-3.  Click **New** to create access rules for the **Role Administrator **module.
-
-    <div class="alert alert-warning">{% markdown %}
+3. Click **New** to create access rules for the **Role Administrator **module.
 
     Make sure to allow a administrator to read/write all.
     And to allow a user less. This to clearly see the difference.
-
-    {% endmarkdown %}</div>
 
 ### 3.2 Creating access rules for the Administrator module role
 
@@ -145,15 +136,11 @@ You will start creating access rules for the **Administrator **module role. Sin
     *   Allow creating new objects: Tick (Yes)
     *   Allow deleting existing objects: Tick (Yes)
     *   Member read and write rights: 'Read, Write'
-4.  Click **OK**.
+4. Click **OK**.
     ![](attachments/8782293/8945777.png)
-
-    <div class="alert alert-warning">{% markdown %}
 
     A separate access rule will be created for all entities when the module role is set to 'Administrator'. 
     It is possible to adjust each rule individually at a later moment.
-
-    {% endmarkdown %}</div>
 
 ### 3.3 Creating access rules for the module role 'User'
 
@@ -162,8 +149,8 @@ Next you have to create access rules for the **User** module role. Since this r
 1.  Click new to create a new access rule for the **User **module role.
     ![](attachments/8782293/9273407.png)
 2.  Select the **Customer** entity.
-3.  Click **OK.
-    **![](attachments/8782293/9273409.png)
+3.  Click **OK**.
+    ![](attachments/8782293/9273409.png)
 4.  Setting up the correct rule configuration:
 
     *   Module role: User
@@ -192,8 +179,8 @@ In the previous section you have set some access rules to your domain model. In
 
 1.  Click the **Accounts** section at the **Administration** menu item.
     ![](attachments/8782293/9764886.png)
-2.  Click **New user
-    **![](attachments/8782293/9764888.png)
+2.  Click **New user**
+    ![](attachments/8782293/9764888.png)
 3.  Add an account with the user role **User**.
     ![](attachments/8782293/9764890.png)
 4.  Click **Save**.

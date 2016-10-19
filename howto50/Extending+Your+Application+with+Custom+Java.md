@@ -3,11 +3,6 @@ title: "Extending Your Application with Custom Java"
 category: "Logic and Business Rules"
 space: "Mendix 5 How-to's"
 ---
-# Extending Your Application with Custom Java
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.14</td><td class="confluenceTd">Dec 16, 2014 11:39</td><td colspan="1" class="confluenceTd">Oct 19, 2015 12:01</td></tr></tbody></table>
-
-
 
 Most application logic can be developed using Microflows. They are very powerful and contain a lot of features that you need in every application. To prevent you from getting stuck because of a missing feature, we made Microflows extendable. So whenever you feel something is missing you can add it yourself by use of Java actions. In this how-to you will extend your application with custom java code.
 

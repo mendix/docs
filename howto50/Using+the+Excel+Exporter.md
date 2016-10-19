@@ -44,8 +44,7 @@ Depending on the layout selected when the project was created, errors in the mod
 
 {% endmarkdown %}</div>
 
-##
-2\. Add Navigation Items to Allow Users to Configure Settings
+## 2\. Add Navigation Items to Allow Users to Configure Settings
 
 In this part of the how to you will learn how to add the required pages into the Project Navigation that are needed to configure both the Mx Model Reflection and the Excel Export templates that will be used within the application.
 
@@ -55,8 +54,7 @@ In this part of the how to you will learn how to add the required pages into the
 3.  Add a new item to the Navigation for **Administrator** to access **XLSReport.Excel_Document_Overview**.
     ![](attachments/8782996/8946105.png)
 
-##
-3\. Mx Model Reflection Configuration
+## 3\. Mx Model Reflection Configuration
 
 In this part of the how to you will learn how to run the MxModelReflection synchronization and so the app can leverage the output from that process to create the highly customizable Excel Export templates.
 
@@ -66,8 +64,7 @@ In this part of the how to you will learn how to run the MxModelReflection synch
 2.  Highlight each module the app needs to synchronize and click the **Toggle Module Sync** button (the Sync this Module should now be 'Yes').
 3.  Click the **Synchronize Objects** button to execute the synchronization process.
 
-##
-4\. Creating Excel Export Templates
+## 4\. Creating Excel Export Templates
 
 In this part of the how to you will learn how to create a basic Excel Export template within your app. This section will cover an overview of the various configuration items to enable you to start building the desired templates.
 
@@ -87,13 +84,7 @@ This module has many moving pieces that allow the configurations to be as simple
 
 1.  Open the **Excel Exporter Overview** via the Navigation item configured to XLSReport.Excel_Document_Overview.
 2.  Click the **New **button to create a new template.
-3.  Configure the **Filename** (without extension) to be the default file name when the template is used.
-
-    <div class="alert alert-info">{% markdown %}
-
-    The file name can always be changed when the template is used within a microflow.
-
-    {% endmarkdown %}</div>
+3. Configure the **Filename** (without extension) to be the default file name when the template is used. The file name can always be changed when the template is used within a microflow.
 4.  Configure the **Input Object **to be the file document entity that is associated to your entity to be exported.
 5.  Provide a **Description **for identifying and documenting what this exact template is used for.
 6.  Specify the **Date time export format **for how the dates and times should appear in the Excel file once exported.
@@ -104,31 +95,12 @@ This module has many moving pieces that allow the configurations to be as simple
     ![](attachments/8782996/14385213.png)
 2.  Specify the **Name **that will be given to the sheet when the file is exported.
 3.  Configure the **Row Object **that you want to export and set the reference to the template input object (if input object is used).
-4.  Configure the **Start retrieved data at row **to set the ordinal number in which the data should be exported.
-
-    <div class="alert alert-info">{% markdown %}
-
-    This setting will possibly trim the result set being exported, as the export will go from this value to the end of the list of data
-
-    {% endmarkdown %}</div>
-5.  Select if the export should export distinct only or allow duplicate data
-6.  Specify the **Column and Row Settings **for height and width, or leave as default
-7.  Specify if the extract will **Use Static Data **or not.
-
-    <div class="alert alert-info">{% markdown %}
-
-    If static data is used, that will be configured in Section 4.6.
-
-    {% endmarkdown %}</div>
-8.  Specify if the **Default text style** that will denote the pre-defined style to be applied to the exported data.
-
-9.  Specify if the **Default header text style** that will denote the pre-defined style to be applied to the header data.
-
-    <div class="alert alert-info">{% markdown %}
-
-    Specifying styles are addressed in Section 4.5.
-
-    {% endmarkdown %}</div>
+4. Configure the **Start retrieved data at row **to set the ordinal number in which the data should be exported. This setting will possibly trim the result set being exported, as the export will go from this value to the end of the list of data
+5. Select if the export should export distinct only or allow duplicate data
+6. Specify the **Column and Row Settings **for height and width, or leave as default
+7. Specify if the extract will **Use Static Data **or not. If static data is used, that will be configured in Section 4.6.
+8. Specify if the **Default text style** that will denote the pre-defined style to be applied to the exported data.
+9. Specify if the **Default header text style** that will denote the pre-defined style to be applied to the header data. Specifying styles are addressed in Section 4.5.
 
 ### 4.4 Configuring Dynamic Column Data
 
@@ -139,13 +111,7 @@ This module has many moving pieces that allow the configurations to be as simple
 3.  Define a **Name **for the column and specify if that **Name **should be the **Column Header **as well when exported.
 4.  Specify the **Retrieve type **to identify if this column will be an attribute or a reference.
 5.  Specify the **Select attribute **to identify the exact attribute on the row entity in which this column corresponds to.
-6.  Specify if the column should result in an aggregate.
-
-    <div class="alert alert-info">{% markdown %}
-
-    Only types of Decimal, Integer, and Long can be aggregated
-
-    {% endmarkdown %}</div>
+6. Specify if the column should result in an aggregate. Only types of Decimal, Integer, and Long can be aggregated
 
 ### 4.5 Configuring Static Data in the Sheet
 

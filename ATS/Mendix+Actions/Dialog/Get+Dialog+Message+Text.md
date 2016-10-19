@@ -1,0 +1,19 @@
+---
+title: "Get Dialog Message Text"
+---
+## Description
+Get the text from message and confirmation dialogs
+
+## Usage
+You have to pass the dialog as WebElement to the action. To get the dialog as WebElement use the action [Find/Assert Dialog](FindAssert+Dialog).
+
+## Input Parameters
+Name | Datatype | Required | Description
+---- | :--------: | :--------: | ---------------
+Dialog| WebElement | yes | The dialog as WebElement of which you want to get the message text
+
+## Return Value
+
+Name | Datatype | Description
+---- | :---------: | ---------------
+Text | String | The message or confirmation text

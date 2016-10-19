@@ -1,11 +1,11 @@
 ---
-title: "Cancel Dialog"
+title: "Confirm Dialog"
 ---
 ## Description
-Click Cancel on a Confirmation Dialog.
+Click Proceed/Ok Button on a Confirmation, Error, Warning or Info Dialog
 
 ## Usage
-Optional you can provide the dialog title and dialog type, to specify which dialog you want to cancel. Otherwise this action will cancel the first found active dialog.     
+Optional you can provide the dialog title and dialog type, to specify which dialog you want to confirm. Otherwise this action will confirm the first found active dialog.
 
 ## Input Parameters
 Name | Datatype | Required | Description

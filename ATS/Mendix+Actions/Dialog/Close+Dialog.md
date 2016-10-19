@@ -1,0 +1,15 @@
+---
+title: "Close Dialog"
+---
+## Description
+Click [x]-button on a Confirmation, Error, Warning or Info Dialog
+
+## Usage
+Optional you can provide the dialog title and dialog type, to specify which dialog you want to close. Otherwise this action will close the first found active dialog.
+This action is equivalent to pressing the [x]-button on top of the dialog.       
+
+## Input Parameters
+Name | Datatype | Required | Description
+---- | :--------: | :--------: | ---------------
+Dialog Title | String | no | The title of the dialog you want to cancel
+Dialog Type | Enumeration | no | The type of the dialog you want to cancel

@@ -7,7 +7,7 @@ space: "Reference Guide 5"
 
 When enabled, the footer will be inserted at the bottom of every page. Other widgets can be put in the footer.
 
-For inserting page numbers, see [Static Label](4522044)
+For inserting page numbers, see [Static Label](Static+Label+Document+Template)
 
 <div class="alert alert-info">{% markdown %}
 

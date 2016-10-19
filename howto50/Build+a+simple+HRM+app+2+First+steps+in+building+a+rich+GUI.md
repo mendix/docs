@@ -19,7 +19,7 @@ This is the second how-to in a series of five on how to create a simple HRM appl
 ## 1. Preparation
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
-*   [Build a simple HRM app 1: Create, manage and deploy the app](14091670)
+*   [Build a simple HRM app 1: Create, manage and deploy the app](Build+a+simple+HRM+app+1+Create+manage+and+deploy+the+app)
 
 ## 2\. Create a domain model
 
@@ -159,7 +159,7 @@ To view a page in your app, you need to add a menu item so you can navigate to t
 4.  Click on **Employees**.
     ![](attachments/14091674/14385510.png)
 
-You can now add and edit employees! Click [here](14091713) to go the third how-to on how to create a simple HRM application and learn how to show related data in the GUI.
+You can now add and edit employees! Click [here](Build+a+simple+HRM+app+3+Show+related+data+in+the+GUI) to go the third how-to on how to create a simple HRM application and learn how to show related data in the GUI.
 
 ## 5\. Related content
 

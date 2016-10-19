@@ -87,7 +87,7 @@ Let's deploy your app to a sandbox in the Mendix cloud, so others can view and t
     The default browser will open and your app will be shown.
     ![](attachments/14091670/14385453.png)
 
-Wow! You deployed your first app! Click [here](14091674) to go the second how-to on how to create a simple HRM application and learn the first steps in building a rich GUI.
+Wow! You deployed your first app! Click [here](Build+a+simple+HRM+app+2+First+steps+in+building+a+rich+GUI) to go the second how-to on how to create a simple HRM application and learn the first steps in building a rich GUI.
 
 ## 5\. Related content
 
@@ -98,6 +98,6 @@ Wow! You deployed your first app! Click [here](14091674) to go the second how-t
 
 Learn more about this topic using the following helpful links:
 s
-*   [Build a simple HRM app 2: First steps in building a rich GUI](14091674)
+*   [Build a simple HRM app 2: First steps in building a rich GUI](Build+a+simple+HRM+app+2+First+steps+in+building+a+rich+GUI)
 *   [The Eye-Catching Mendix UI Framework](https://www.mendix.com/blog/the-eye-catching-mendix-ui-framework/)
 *   [Managing your Application Requirements with Mendix](Managing+your+Application+Requirements+with+Mendix)

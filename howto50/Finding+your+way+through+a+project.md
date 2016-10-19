@@ -33,8 +33,8 @@ This how-to explains how you can find your way through a project in the Mendix B
 
 ## 3\. Related content
 
-*   [Finding Object Activities](/howto50/Finding+Object+Activities)
-*   [Finding Unused Items](/howto50/Finding+Unused+Items)
-*   [Showing a Project in the Directory in Explorer](/howto50/Showing+a+Project+in+the+Directory+in+Explorer)
-*   [Querying over self-references](Querying+over+self-references)
+*   [Finding Object Activities](Finding+Object+Activities)
+*   [Finding Unused Items](Finding+Unused+Items)
+*   [Showing a Project in the Directory in Explorer](Showing+a+Project+in+the+Directory+in+Explorer)
+*   [Querying over self-references](Querying+over+self+references)
 

@@ -19,8 +19,8 @@ Consider the following situation: you have a legacy system with valuable data th
 Before you continue, make sure that you
 
 *   **Have downloaded the Flat & Delimited File Importer App Store Module and all prerequisites**
-*   **Know how to create Domain models** ([Creating a basic data layer](/howto50/Creating+a+basic+data+layer)).
-*   **Know how to create Overview and detail pages** ([Creating your first two overview and detail pages](/howto50/Creating+your+first+two+overview+and+detail+pages)).
+*   **Know how to create Domain models** ([Creating a basic data layer](Creating+a+basic+data+layer)).
+*   **Know how to create Overview and detail pages** ([Creating your first two overview and detail pages](Creating+your+first+two+overview+and+detail+pages)).
 *   **Know how to create****Microflows** ().
 *   **Save the sample data file to your computer for use in this exercize ([SampleFlatfile.txt](attachments/12878647/13402303.txt))**
 
@@ -29,12 +29,12 @@ Before you continue, make sure that you
 2.  Now we must create the **Flat file Interface.** As per the instructions in the **Flat & Delimited Importer Module Release Notes,** add the page FlatFileInterface.InterfaceDefinition_Overview to your **Project Navigation**.
 3.  Start the app and navigate to the Interface Definition Overview page.
 4.  Select 'New' to create the Interface Definition
-    [![](attachments/12878647/13402297.png)](/howto50/Importing+Excel+Documents#ImportingExcelDocuments-3.Usetheapplicationmodelmetadataintheclient)
+    [![](attachments/12878647/13402297.png)](Importing+Excel+Documents#use-the-application-model-meta-data-in-the-client)
 5.  Select the **Product Entity** from the dropdown. 
 
     <div class="alert alert-warning">{% markdown %}
 
-    If this dropdown is empty, then it is likely that **Model Reflection** has been synced yet.  If you do not know how to execute this, please see instructions [here](/howto50/Importing+Excel+Documents#ImportingExcelDocuments-3.Usetheapplicationmodelmetadataintheclient).
+    If this dropdown is empty, then it is likely that **Model Reflection** has been synced yet.  If you do not know how to execute this, please see instructions [here](Importing+Excel+Documents#use-the-application-model-meta-data-in-the-client).
 
     {% endmarkdown %}</div>
 
@@ -85,8 +85,8 @@ Before you continue, make sure that you
 
 *   **Know how to download App Store Modules
     **
-*   **Know how to create Domain models** ([Creating a basic data layer](/howto50/Creating+a+basic+data+layer)).
-*   **Know how to create Overview and detail pages** ([Creating your first two overview and detail pages](/howto50/Creating+your+first+two+overview+and+detail+pages)).
+*   **Know how to create Domain models** ([Creating a basic data layer](Creating+a+basic+data+layer)).
+*   **Know how to create Overview and detail pages** ([Creating your first two overview and detail pages](Creating+your+first+two+overview+and+detail+pages)).
 *   **Know how to create** **Microflows and SubMicroflows** ().
 *   **Understand the concepts behind REST and web Services** ([Consuming Your First REST Service](http://www.mendix.com/blog/consuming-first-rest-service/)[, Consume a complex web service](Consuming+a+complex+web+service))
 

@@ -64,11 +64,11 @@ RESTORE permissions are given to roles in which membership information is always
 ## Related content
 
 *   [License key activation on Linux server](/mxsupport/License+key+activation+on+Linux+server)
-*   [Restoring a SQL Server database](/howto50/Restoring+a+SQL+Server+database)
-*   [Mendix SQL Maintenance Plans](/howto50/Mendix+SQL+Maintenance+Plans)
-*   [Setting up a new SQL Server database](/howto50/Setting+up+a+new+SQL+Server+database)
-*   [Troubleshooting SQL Server](/howto50/Troubleshooting+SQL+Server)
-*   [Setting up a SQL Server user](/howto50/Setting+up+a+SQL+Server+user)
+*   [Restoring a SQL Server database](Restoring+a+SQL+Server+database)
+*   [Mendix SQL Maintenance Plans](Mendix+SQL+Maintenance+Plans)
+*   [Setting up a new SQL Server database](Setting+up+a+new+SQL+Server+database)
+*   [Troubleshooting SQL Server](Troubleshooting+SQL+Server)
+*   [Setting up a SQL Server user](Setting+up+a+SQL+Server+user)
 *   [Restoring a SQL Server database](/howto6/Restoring+a+SQL+Server+database)
 *   [Troubleshooting SQL Server](/howto6/Troubleshooting+SQL+Server)
 *   [Mendix SQL Maintenance Plans](/howto6/Mendix+SQL+Maintenance+Plans)

@@ -93,9 +93,9 @@ In a few simple steps, Mendix enables you to start collecting feedback from your
 
 ## 9\. Related content
 
-*   [Managing your Application Requirements with Mendix](/howto50/Managing+your+Application+Requirements+with+Mendix)
-*   [Starting your own repository](/howto50/Starting+your+own+repository)
-*   [Contributing to a GitHub repository](/howto50/Contributing+to+a+GitHub+repository)
-*   [Using Team Server - Version Control](/howto50/Using+Team+Server+-+Version+Control)
-*   [Gathering user feedback](/howto50/Gathering+user+feedback)
+*   [Managing your Application Requirements with Mendix](Managing+your+Application+Requirements+with+Mendix)
+*   [Starting your own repository](Starting+your+own+repository)
+*   [Contributing to a GitHub repository](Contributing+to+a+GitHub+repository)
+*   [Using Team Server - Version Control](Using+Team+Server+-+Version+Control)
+*   [Gathering user feedback](Gathering+user+feedback)
 

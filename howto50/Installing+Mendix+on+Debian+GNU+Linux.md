@@ -13,14 +13,14 @@ The documentation which describes the installation and basic configuration of th
 
 ## Related content
 
-*   [Setting up monitoring with New Relic](/howto50/Setting+up+monitoring+with+New+Relic)
-*   [Finding the Root Cause of Runtime Errors](/howto50/Finding+the+Root+Cause+of+Runtime+Errors)
-*   [Clearing Warning Messages in Mendix](/howto50/Clearing+Warning+Messages+in+Mendix)
-*   [Testing web services using SoapUI](/howto50/Testing+web+services+using+SoapUI)
-*   [Debugging Microflows](/howto50/Debugging+Microflows)
-*   [Common Mendix SSO Errors](/howto50/Common+Mendix+SSO+Errors)
-*   [Monitoring Mendix using JMX](/howto50/Monitoring+Mendix+using+JMX)
-*   [Debugging Java Actions](/howto50/Debugging+Java+Actions)
-*   [Debugging Java actions remotely](/howto50/Debugging+Java+actions+remotely)
-*   [Log Levels](/howto50/Log+Levels)
+*   [Setting up monitoring with New Relic](Setting+up+monitoring+with+New+Relic)
+*   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
+*   [Clearing Warning Messages in Mendix](Clearing+Warning+Messages+in+Mendix)
+*   [Testing web services using SoapUI](Testing+web+services+using+SoapUI)
+*   [Debugging Microflows](Debugging+Microflows)
+*   [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)
+*   [Monitoring Mendix using JMX](Monitoring+Mendix+using+JMX)
+*   [Debugging Java Actions](Debugging+Java+Actions)
+*   [Debugging Java actions remotely](Debugging+Java+actions+remotely)
+*   [Log Levels](Log+Levels)
 

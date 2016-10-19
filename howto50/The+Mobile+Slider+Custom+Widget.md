@@ -22,7 +22,7 @@ This how-to is about using the Mobile Slider widget in your Mendix hybrid mobile
 Before you start building your Mendix hybrid mobile project with the Mobile Slider custom widget make sure you have the following programs installed:
 
 *   [Mendix Business Modeler](https://appstore.home.mendix.com/link/modelers) (version 5.x)
-*   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a how-to about this software here](/howto50/Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets).
+*   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a how-to about this software here](Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets).
 *   Also please read the "Hello World" how-to on creating a new widget based on the "AppStoreWidgetBoilerplate". [You can find a how-to about setting up a "Hello World" custom widget here](Creating+a+Basic+Hello+World+Custom+Widget).
 
 
@@ -148,11 +148,11 @@ I encourage you to download all the source files from the GitHub repository and 
 
 ## 9\. Related content
 
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto50/Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
-*   [Creating a chainable Custom Widget](/howto50/Creating+a+chainable+Custom+Widget)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
+*   [Creating a chainable Custom Widget](Creating+a+chainable+Custom+Widget)
 *   [XML Reference Guide](/refguide5/XML+Reference+Guide)
-*   [Creating a Basic Hello World Custom Widget](/howto50/Creating+a+Basic+Hello+World+Custom+Widget)
-*   [The Mobile Slider Custom Widget](/howto50/The+Mobile+Slider+Custom+Widget)
+*   [Creating a Basic Hello World Custom Widget](Creating+a+Basic+Hello+World+Custom+Widget)
+*   [The Mobile Slider Custom Widget](The+Mobile+Slider+Custom+Widget)
 
 Some interesting websites, books, and articles you might want to read next to dive into the source code of the AppStoreWidgetBoilerplate and the MobileSlider custom widget code base:
 

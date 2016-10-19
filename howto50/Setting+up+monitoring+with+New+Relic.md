@@ -47,9 +47,9 @@ After you restart the application your data should show up in New Relic. Note th
 
 ## Related content
 
-*   [Setting up monitoring with New Relic](/howto50/Setting+up+monitoring+with+New+Relic)
-*   [Finding the Root Cause of Runtime Errors](/howto50/Finding+the+Root+Cause+of+Runtime+Errors)
-*   [Clearing Warning Messages in Mendix](/howto50/Clearing+Warning+Messages+in+Mendix)
-*   [Testing web services using SoapUI](/howto50/Testing+web+services+using+SoapUI)
-*   [Debugging Microflows](/howto50/Debugging+Microflows)
-*   [Common Mendix SSO Errors](/howto50/Common+Mendix+SSO+Errors)
+*   [Setting up monitoring with New Relic](Setting+up+monitoring+with+New+Relic)
+*   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
+*   [Clearing Warning Messages in Mendix](Clearing+Warning+Messages+in+Mendix)
+*   [Testing web services using SoapUI](Testing+web+services+using+SoapUI)
+*   [Debugging Microflows](Debugging+Microflows)
+*   [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)

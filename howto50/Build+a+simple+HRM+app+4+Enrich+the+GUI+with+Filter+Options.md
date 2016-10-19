@@ -20,7 +20,7 @@ This is the fourth how-to in a series of five on how to create a simple HRM appl
 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
-*   [Build a simple HRM app 3: Show related data in the GUI](14091713)
+*   [Build a simple HRM app 3: Show related data in the GUI](Build+a+simple+HRM+app+3+Show+related+data+in+the+GUI)
 
 ## 2\. Enrich the user interface
 
@@ -115,7 +115,7 @@ Let's assume that you want to divide your employees into three different levels:
     ![](attachments/14091768/14876714.png)
 
     ![](attachments/14091768/14876715.png)
-    Only the employees with level Medior will be shown. Click [here](14091778) to go the fifth how-to on how to create a simple HRM application and learn how to smarten up your app with business logic.
+    Only the employees with level Medior will be shown. Click [here](Build+a+simple+HRM+app+5+Smarten+up+your+app+with+business+logic) to go the fifth how-to on how to create a simple HRM application and learn how to smarten up your app with business logic.
 
 ## 4\. Related content
 

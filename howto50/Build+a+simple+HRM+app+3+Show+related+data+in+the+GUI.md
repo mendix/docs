@@ -19,7 +19,7 @@ This is the third how-to in a series of five on how to create a simple HRM appli
 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
-*   [Build a simple HRM app 2: First steps in building a rich GUI](14091674)
+*   [Build a simple HRM app 2: First steps in building a rich GUI](Build+a+simple+HRM+app+2+First+steps+in+building+a+rich+GUI)
 
 ## 2\. Expand your app
 
@@ -149,7 +149,7 @@ To view a page in your app, you need to add a menu item so you can navigate to t
     ![](attachments/14091713/14876694.png)
     You can now see the selected department in the Employee Overview page.
 
-Click [here](14091768) to go the fourth how-to on how to create a simple HRM application and enrich the GUI with Filter Options.
+Click [here](Build+a+simple+HRM+app+4+Enrich+the+GUI+with+Filter+Options) to go the fourth how-to on how to create a simple HRM application and enrich the GUI with Filter Options.
 
 ## 4\. Related content
 

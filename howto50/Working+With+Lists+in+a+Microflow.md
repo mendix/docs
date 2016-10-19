@@ -243,10 +243,10 @@ In the previous sections you filtered the list of orders from database on attrib
 
 ## 7\. Related content
 
-*   [Defining access rules using XPath](/howto50/Defining+access+rules+using+XPath)
-*   [Triggering Logic using Microflows](/howto50/Triggering+Logic+using+Microflows)
-*   [Creating a Custom Save Button](/howto50/Creating+a+Custom+Save+Button)
-*   [Extending Your Application with Custom Java](/howto50/Extending+Your+Application+with+Custom+Java)
+*   [Defining access rules using XPath](Defining+access+rules+using+XPath)
+*   [Triggering Logic using Microflows](Triggering+Logic+using+Microflows)
+*   [Creating a Custom Save Button](Creating+a+Custom+Save+Button)
+*   [Extending Your Application with Custom Java](Extending+Your+Application+with+Custom+Java)
 *   [XPath](/refguide5/XPath)
 *   [XPath Constraints](/refguide5/XPath+Constraints)
 *   [Aggregate List](/refguide5/Aggregate+List)

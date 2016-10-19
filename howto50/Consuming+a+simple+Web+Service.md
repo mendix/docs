@@ -82,5 +82,5 @@ A WSDL describes the operations of a web service and can be imported in the Mend
 
 ## 3\. Related content
 
-*   [Security](/howto50/Security)
+*   [Security](Security)
 

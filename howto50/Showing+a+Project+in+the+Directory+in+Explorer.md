@@ -32,9 +32,9 @@ When developing an application the following directories in the project director
 
 3\. Related content
 
-*   [Finding Object Activities](/howto50/Finding+Object+Activities)
-*   [Finding Unused Items](/howto50/Finding+Unused+Items)
-*   [Finding your way through a project](/howto50/Finding+your+way+through+a+project)
-*   [Showing a Project in the Directory in Explorer](/howto50/Showing+a+Project+in+the+Directory+in+Explorer)
-*   [Querying over self-references](/howto50/Querying+over+self-references)
+*   [Finding Object Activities](Finding+Object+Activities)
+*   [Finding Unused Items](Finding+Unused+Items)
+*   [Finding your way through a project](Finding+your+way+through+a+project)
+*   [Showing a Project in the Directory in Explorer](Showing+a+Project+in+the+Directory+in+Explorer)
+*   [Querying over self-references](Querying+over+self+references)
 

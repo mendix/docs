@@ -21,7 +21,7 @@ This how-to is an introduction on building a custom widget that is chainable in 
 Before you start building your own chainable custom widget make sure you have the following programs installed:
 
 *   [Mendix Business Modeler](https://appstore.home.mendix.com/index3.html?v=7#1421997409316) (version 5.x)
-*   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a how-to about this software here](/howto50/Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets).
+*   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a how-to about this software here](Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets).
 
 Also please read the "Hello World" how-to on created a new widget based on the "AppStoreWidgetBoilerplate". [You can find a how-to about setting up a "Hello World" custom widget here](Creating+a+Basic+Hello+World+Custom+Widget).
 
@@ -207,9 +207,9 @@ This How-to has enabled you to create a chainable Custom Widget for the Mendix p
 
 ## 9\. Related content
 
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto50/Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
-*   [Creating a chainable Custom Widget](/howto50/Creating+a+chainable+Custom+Widget)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
+*   [Creating a chainable Custom Widget](Creating+a+chainable+Custom+Widget)
 *   [XML Reference Guide](/refguide5/XML+Reference+Guide)
-*   [Creating a Basic Hello World Custom Widget](/howto50/Creating+a+Basic+Hello+World+Custom+Widget)
+*   [Creating a Basic Hello World Custom Widget](Creating+a+Basic+Hello+World+Custom+Widget)
 *   [XML Reference Guide](/refguide6/XML+Reference+Guide)
-*   [The Mobile Slider Custom Widget](/howto50/The+Mobile+Slider+Custom+Widget)
+*   [The Mobile Slider Custom Widget](The+Mobile+Slider+Custom+Widget)

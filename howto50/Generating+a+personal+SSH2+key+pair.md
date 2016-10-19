@@ -84,8 +84,8 @@ As an alternative you can directly enter the username in the server name edit fi
 
 ## 5\. Related content
 
-*   [Security](/howto50/Security)
-*   [Generating a personal SSH2 key pair](/howto50/Generating+a+personal+SSH2+key+pair)
-*   [Creating a secure app](/howto50/Creating+a+secure+app)
+*   [Security](Security)
+*   [Generating a personal SSH2 key pair](Generating+a+personal+SSH2+key+pair)
+*   [Creating a secure app](Creating+a+secure+app)
 *   [Required Network Access for connecting to the Mendix Platform](/mxsupport/Required+Network+Access+for+connecting+to+the+Mendix+Platform)
-*   [Anonymous User Security](/howto50/Anonymous+User+Security)
+*   [Anonymous User Security](Anonymous+User+Security)

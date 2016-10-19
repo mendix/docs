@@ -58,6 +58,6 @@ _**Documentation:**_
 Related content
 
 *   [Explore our connectors and adapters](Explore+our+connectors+and+adapters)
-*   [Send Custom Emails From Your App](/howto50/Send+Custom+Emails+From+Your+App)
+*   [Send Custom Emails From Your App](Send+Custom+Emails+From+Your+App)
 *   [Send Custom Emails From Your App](/howto6/Send+Custom+Emails+From+Your+App)
-*   [Access a Samba share from the MxCloud](/howto50/Access+a+Samba+share+from+the+MxCloud)
+*   [Access a Samba share from the MxCloud](Access+a+Samba+share+from+the+MxCloud)

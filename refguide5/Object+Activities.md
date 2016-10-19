@@ -15,7 +15,7 @@ See [Change Object](Change+Object).
 
 ## Commit 
 
-See [Commit Object](4522127).
+See [Commit Object](Committing+Objects).
 
 ## Create
 
@@ -23,7 +23,7 @@ See [Create Object](Create+Object).
 
 ## Delete
 
-See [Delete Object(s)](4522124).
+See [Delete Object(s)](Deleting+Objects).
 
 ## Persisten Create
 

@@ -54,7 +54,7 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 ## 4\. Create functionality to expose
 
-1.  Create a **Microflow** that retrieves and returns a list of customers from the database. If you don't know how to create a Microflow, take a look at this [how-to](8784287).
+1.  Create a **Microflow** that retrieves and returns a list of customers from the database. If you don't know how to create a Microflow, take a look at this [how-to](Create+your+first+Microflow+Hello+World).
 2.  To make the Microflow a little more exciting, you could add 2 input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action as shown below:
     ![](attachments/2949205/16285924.png)
 
@@ -128,7 +128,5 @@ If an attribute is renamed after it is published, the name in the wsdl does not 
 
 ## 9\. Related content
 
-*   [Expose a web service](/howto40/Expose+a+web+service)
 *   [Consume a Simple Web Service](Consuming+a+simple+Web+Service)
 *   [Consume a Complex Web Service](Consuming+a+complex+web+service)
-

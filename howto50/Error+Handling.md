@@ -95,9 +95,9 @@ Don’t over-do it.   You could specify a lot of complicated error handling com
 
 ## Related articles
 
-*   [Defining access rules using XPath](/howto50/Defining+access+rules+using+XPath)
-*   [Triggering Logic using Microflows](/howto50/Triggering+Logic+using+Microflows)
-*   [Creating a Custom Save Button](/howto50/Creating+a+Custom+Save+Button)
-*   [Extending Your Application with Custom Java](/howto50/Extending+Your+Application+with+Custom+Java)
+*   [Defining access rules using XPath](Defining+access+rules+using+XPath)
+*   [Triggering Logic using Microflows](Triggering+Logic+using+Microflows)
+*   [Creating a Custom Save Button](Creating+a+Custom+Save+Button)
+*   [Extending Your Application with Custom Java](Extending+Your+Application+with+Custom+Java)
 *   [Working With Lists in a Microflow](Working+With+Lists+in+a+Microflow)
 

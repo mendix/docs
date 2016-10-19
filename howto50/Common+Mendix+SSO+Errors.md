@@ -16,11 +16,11 @@ These are commonly caused by compatibility issues with JAR files in the <project
 
 ## 3\. Related content
 
-*   [Finding the Root Cause of Runtime Errors](/howto50/Finding+the+Root+Cause+of+Runtime+Errors)
-*   [Clearing Warning Messages in Mendix](/howto50/Clearing+Warning+Messages+in+Mendix)
-*   [Testing web services using SoapUI](/howto50/Testing+web+services+using+SoapUI)
-*   [Debugging Microflows](/howto50/Debugging+Microflows)
-*   [Common Mendix SSO Errors](/howto50/Common+Mendix+SSO+Errors)
-*   [Monitoring Mendix using JMX](/howto50/Monitoring+Mendix+using+JMX)
-*   [Debugging Java Actions](/howto50/Debugging+Java+Actions)
+*   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
+*   [Clearing Warning Messages in Mendix](Clearing+Warning+Messages+in+Mendix)
+*   [Testing web services using SoapUI](Testing+web+services+using+SoapUI)
+*   [Debugging Microflows](Debugging+Microflows)
+*   [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)
+*   [Monitoring Mendix using JMX](Monitoring+Mendix+using+JMX)
+*   [Debugging Java Actions](Debugging+Java+Actions)
 

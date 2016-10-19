@@ -56,13 +56,13 @@ Finally, in the unlikely event that you encounter this error while working on yo
 
 ## 4\. Related content
 
-*   [Clearing Warning Messages in Mendix](/howto50/Clearing+Warning+Messages+in+Mendix)
-*   [Common Mendix SSO Errors](/howto50/Common+Mendix+SSO+Errors)
-*   [Debug a Hybrid Mobile Application](/howto50/Debug+a+Hybrid+Mobile+Application)
-*   [Debugging Java Actions](/howto50/Debugging+Java+Actions)
-*   [Debugging Java actions remotely](/howto50/Debugging+Java+actions+remotely)
-*   [Debugging Microflows](/howto50/Debugging+Microflows)
-*   [Debugging Microflows Remotely](/howto50/Debugging+Microflows+Remotely)
-*   [Finding the Root Cause of Runtime Errors](/howto50/Finding+the+Root+Cause+of+Runtime+Errors)
+*   [Clearing Warning Messages in Mendix](Clearing+Warning+Messages+in+Mendix)
+*   [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)
+*   [Debug a Hybrid Mobile Application](Debug+a+Hybrid+Mobile+Application)
+*   [Debugging Java Actions](Debugging+Java+Actions)
+*   [Debugging Java actions remotely](Debugging+Java+actions+remotely)
+*   [Debugging Microflows](Debugging+Microflows)
+*   [Debugging Microflows Remotely](Debugging+Microflows+Remotely)
+*   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
 *   [How to connect a different project to a node](/mxsupport/How+to+connect+a+different+project+to+a+node)
 

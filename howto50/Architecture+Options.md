@@ -44,14 +44,14 @@ For more information please see the [How to page on High availability](High+Avai
 
 ## 6\. Related content
 
-*   [Setting up Internet Information Services](/howto50/Setting+up+Internet+Information+Services)
-*   [Updating a Mendix Application](/howto50/Updating+a+Mendix+Application)
-*   [Troubleshooting](/howto50/Troubleshooting)
-*   [Architecture Options](/howto50/Architecture+Options)
-*   [High Availability](/howto50/High+Availability)
-*   [Mendix on Windows - Microsoft SQL Server](/howto50/Mendix+on+Windows+-+Microsoft+SQL+Server)
-*   [Setting up a new SQL Server database](/howto50/Setting+up+a+new+SQL+Server+database)
-*   [Restoring a SQL Server database](/howto50/Restoring+a+SQL+Server+database)
-*   [Setting up a SQL Server user](/howto50/Setting+up+a+SQL+Server+user)
-*   [Setting up the database user](/howto50/Setting+up+the+database+user)
+*   [Setting up Internet Information Services](Setting+up+Internet+Information+Services)
+*   [Updating a Mendix Application](Updating+a+Mendix+Application)
+*   [Troubleshooting](Troubleshooting)
+*   [Architecture Options](Architecture+Options)
+*   [High Availability](High+Availability)
+*   [Mendix on Windows - Microsoft SQL Server](Mendix+on+Windows+-+Microsoft+SQL+Server)
+*   [Setting up a new SQL Server database](Setting+up+a+new+SQL+Server+database)
+*   [Restoring a SQL Server database](Restoring+a+SQL+Server+database)
+*   [Setting up a SQL Server user](Setting+up+a+SQL+Server+user)
+*   [Setting up the database user](Setting+up+the+database+user)
 

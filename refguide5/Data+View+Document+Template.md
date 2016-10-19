@@ -9,7 +9,7 @@ The data view is used for showing the contents of exactly one object. If, for ex
 
 <div class="alert alert-info">{% markdown %}
 
-[![](attachments/819203/918139.png)](4522168)
+[![](attachments/819203/918139.png)](Data+View+Document+Template)
 A data view showing orderline information.
 
 {% endmarkdown %}</div>

@@ -45,14 +45,14 @@ With these three pieces of information, the cause of the error should be able to
 
 ## 3\. Related content
 
-*   [Clearing Warning Messages in Mendix](/howto50/Clearing+Warning+Messages+in+Mendix)
-*   [Testing web services using SoapUI](/howto50/Testing+web+services+using+SoapUI)
-*   [Debugging Microflows](/howto50/Debugging+Microflows)
-*   [Common Mendix SSO Errors](/howto50/Common+Mendix+SSO+Errors)
-*   [Monitoring Mendix using JMX](/howto50/Monitoring+Mendix+using+JMX)
-*   [Debugging Java Actions](/howto50/Debugging+Java+Actions)
+*   [Clearing Warning Messages in Mendix](Clearing+Warning+Messages+in+Mendix)
+*   [Testing web services using SoapUI](Testing+web+services+using+SoapUI)
+*   [Debugging Microflows](Debugging+Microflows)
+*   [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)
+*   [Monitoring Mendix using JMX](Monitoring+Mendix+using+JMX)
+*   [Debugging Java Actions](Debugging+Java+Actions)
 
 
 
-A blog post was written on this topic, which also provides some example errors and solutions, which is available [here](http://www.mendix.com/blog/the-root-cause-of-runtime-errors-and-resolving-the-2-most-common-issues/).  There is more information available for debugging microflows [locally](/howto50/Debugging+Microflows) and [remotely](/howto50/Debugging+Microflows+Remotely).
+A blog post was written on this topic, which also provides some example errors and solutions, which is available [here](http://www.mendix.com/blog/the-root-cause-of-runtime-errors-and-resolving-the-2-most-common-issues/).  There is more information available for debugging microflows [locally](Debugging+Microflows) and [remotely](Debugging+Microflows+Remotely).
 

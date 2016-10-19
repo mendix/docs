@@ -47,6 +47,6 @@ Level of support depends on availability and effort of the developer and/or comm
 
 ## 3\. Related content
 
-*   [Adding App Store content to your app](/howto50/Adding+App+Store+content+to+your+app)
-*   [App Store Content Support](/howto50/App+Store+Content+Support)
+*   [Adding App Store content to your app](Adding+App+Store+content+to+your+app)
+*   [App Store Content Support](App+Store+Content+Support)
 

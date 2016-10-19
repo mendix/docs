@@ -9,7 +9,7 @@ A dynamic image can be used to show a System.Image. If the image is not availabl
 
 <div class="alert alert-info">{% markdown %}
 
-[![](attachments/819203/918132.png)](4522043)
+[![](attachments/819203/918132.png)](Dynamic+Image+Document+Template)
 A dynamic image inside a table cell, showing the preset default image.
 
 {% endmarkdown %}</div>

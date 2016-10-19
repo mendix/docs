@@ -20,7 +20,7 @@ This is the last how-to in a series of five on how to create a simple HRM applic
 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
-*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](14091768)
+*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](Build+a+simple+HRM+app+4+Enrich+the+GUI+with+Filter+Options)
 
 ## 2\. Create a microflow
 

@@ -517,7 +517,7 @@ Happy testing!
 
 ## 8\. Related content
 
-*   [Testing Mendix applications using Selenium IDE](/howto50/Testing+Mendix+applications+using+Selenium+IDE)
-*   [Testing web services using SoapUI](/howto50/Testing+web+services+using+SoapUI)
-*   [Testing microflows using the UnitTesting module](/howto50/Testing+microflows+using+the+UnitTesting+module)
-*   [Creating automated tests with TestNG](/howto50/Creating+automated+tests+with+TestNG)
+*   [Testing Mendix applications using Selenium IDE](Testing+Mendix+applications+using+Selenium+IDE)
+*   [Testing web services using SoapUI](Testing+web+services+using+SoapUI)
+*   [Testing microflows using the UnitTesting module](Testing+microflows+using+the+UnitTesting+module)
+*   [Creating automated tests with TestNG](Creating+automated+tests+with+TestNG)

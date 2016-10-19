@@ -109,11 +109,11 @@ This How-to has enabled you to start working and building a Custom Widget for t
 
 ## 7\. Related content
 
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto50/Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
-*   [Creating a chainable Custom Widget](/howto50/Creating+a+chainable+Custom+Widget)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
+*   [Creating a chainable Custom Widget](Creating+a+chainable+Custom+Widget)
 *   [XML Reference Guide](/refguide5/XML+Reference+Guide)
-*   [Creating a Basic Hello World Custom Widget](/howto50/Creating+a+Basic+Hello+World+Custom+Widget)
-*   [The Mobile Slider Custom Widget](/howto50/The+Mobile+Slider+Custom+Widget)
+*   [Creating a Basic Hello World Custom Widget](Creating+a+Basic+Hello+World+Custom+Widget)
+*   [The Mobile Slider Custom Widget](The+Mobile+Slider+Custom+Widget)
 
 Some interesting books and articles you might want to read next to dive into the sourcecode of the AppStoreWidgetBoilerplate:
 

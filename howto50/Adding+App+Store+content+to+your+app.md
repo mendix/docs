@@ -140,15 +140,15 @@ Sometimes additional widgets are added when you download a module, for example t
 
 ## 3\. Related content
 
-*   [Adding App Store content to your app](/howto50/Adding+App+Store+content+to+your+app)
+*   [Adding App Store content to your app](Adding+App+Store+content+to+your+app)
 *   [Adding App Store content to your app](/appstore/Adding+App+Store+content+to+your+app)
-*   [Managing your Application Requirements with Mendix](/howto50/Managing+your+Application+Requirements+with+Mendix)
+*   [Managing your Application Requirements with Mendix](Managing+your+Application+Requirements+with+Mendix)
 *   [Managing your Application Requirements with Mendix](/howto6/Managing+your+Application+Requirements+with+Mendix)
-*   [Starting your own repository](/howto50/Starting+your+own+repository)
-*   [Contributing to a GitHub repository](/howto50/Contributing+to+a+GitHub+repository)
+*   [Starting your own repository](Starting+your+own+repository)
+*   [Contributing to a GitHub repository](Contributing+to+a+GitHub+repository)
 *   [Starting your own repository](/howto6/Starting+your+own+repository)
-*   [Using Team Server - Version Control](/howto50/Using+Team+Server+-+Version+Control)
-*   [Gathering user feedback](/howto50/Gathering+user+feedback)
+*   [Using Team Server - Version Control](Using+Team+Server+-+Version+Control)
+*   [Gathering user feedback](Gathering+user+feedback)
 
 
 

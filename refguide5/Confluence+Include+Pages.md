@@ -3,14 +3,14 @@ title: "Confluence Include Pages"
 category: "refguide5"
 space: "Reference Guide 5"
 ---
-*   [Attribute (path) Property](4522304)
+*   [Attribute (path) Property](Attribute+Path+Property)
 *   [Button Style Property](Button+Style+Property)
-*   [Caption (configurable) Property](4522165)
+*   [Caption (configurable) Property](Caption+Configurable+Property)
 *   [Column Width Properties](Column+Width+Properties)
 *   [Condition Property](Condition+Property)
 *   [Documentation Property](Documentation+Property)
 *   [Editable Property](Editable+Property)
-*   [Entity (path) Property](4522309)
+*   [Entity (path) Property](Entity+Path+Property)
 *   [Menu Source Properties](Menu+Source+Properties)
 *   [On Change Event](On+Change+Event)
 *   [On Click Event](On+Click+Event)

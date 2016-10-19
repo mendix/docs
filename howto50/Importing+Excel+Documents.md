@@ -13,19 +13,19 @@ Before you can start importing data into your application, you first need to set
 
 Before you continue, make sure that you know how to create:
 
-*   **Domain models** ([Creating a basic data layer](/howto50/Creating+a+basic+data+layer)).
-*   **Overview and detail pages** ([Creating your first two overview and detail pages](/howto50/Creating+your+first+two+overview+and+detail+pages)).
-*   **Menu items **([Setup the navigation structure](/howto50/Setup+the+navigation+structure)).
+*   **Domain models** ([Creating a basic data layer](Creating+a+basic+data+layer)).
+*   **Overview and detail pages** ([Creating your first two overview and detail pages](Creating+your+first+two+overview+and+detail+pages)).
+*   **Menu items **([Setup the navigation structure](Setting+Up+the+Navigation+Structure)).
 *   **Microflows** ().
-*   **Add Appstore** **content (**[Add appstore content to your app](/howto50/Add+appstore+content+to+your+app)).
-*   **Secure applications **([Creating a secure app](/howto50/Creating+a+secure+app)).
+*   **Add Appstore** **content (**[Add appstore content to your app](Adding+App+Store+content+to+your+app)).
+*   **Secure applications **([Creating a secure app](Creating+a+secure+app)).
 
 1.  Create the following domain model.
     ![](attachments/8785707/8946752.png)
 
     <div class="alert alert-warning">{% markdown %}
 
-    The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [Working with images and files](/howto50/Working+with+images+and+files).
+    The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [Working with images and files](Working+with+images+and+files).
 
     {% endmarkdown %}</div>
 2.  Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.

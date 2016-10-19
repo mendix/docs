@@ -69,14 +69,14 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 
 ## 5\. Related content
 
-*   [Scout and Windows 10 Workaround](/howto50/Scout+and+Windows+10+Workaround)
+*   [Scout and Windows 10 Workaround](Scout+and+Windows+10+Workaround)
 *   [Scout and Windows 10 Workaround](/howto6/Scout+and+Windows+10+Workaround)
-*   [Filtering Data on an Overview Page](/howto50/Filtering+Data+on+an+Overview+Page)
-*   [Layouts and Snippets](/howto50/Layouts+and+Snippets)
+*   [Filtering Data on an Overview Page](Filtering+Data+on+an+Overview+Page)
+*   [Layouts and Snippets](Layouts+and+Snippets)
 *   [Layouts and Snippets](/howto6/Layouts+and+Snippets)
 *   [Filtering Data on an Overview Page](/howto6/Filtering+Data+on+an+Overview+Page)
-*   [Setup Mendix UI Framework with just CSS](/howto50/Setup+Mendix+UI+Framework+with+just+CSS)
-*   [Setting Up the Navigation Structure](/howto50/Setting+Up+the+Navigation+Structure)
-*   [Creating your first two Overview and Detail pages](/howto50/Creating+your+first+two+Overview+and+Detail+pages)
-*   [Setup Mendix UI Framework](/howto50/Setup+Mendix+UI+Framework)
+*   [Setup Mendix UI Framework with just CSS](Setup+Mendix+UI+Framework+with+just+CSS)
+*   [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
+*   [Creating your first two Overview and Detail pages](Creating+your+first+two+Overview+and+Detail+pages)
+*   [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
 

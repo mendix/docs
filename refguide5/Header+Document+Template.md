@@ -7,7 +7,7 @@ space: "Reference Guide 5"
 
 When enabled, the header will be inserted at the top of every page. Other widgets can be put in the header.
 
-For inserting page numbers, see [Static Label](4522044)
+For inserting page numbers, see [Static Label](Static+Label+Document+Template)
 
 <div class="alert alert-info">{% markdown %}
 

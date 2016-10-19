@@ -11,9 +11,9 @@ The documentation which describes the installation and basic configuration of th
 
 ## 9\. Related content
 
-*   [How to build a simple HRM app](/howto50/How+to+build+a+simple+HRM+app)
-*   [Create and Deploy Your First App](/howto50/Create+and+Deploy+Your+First+App)
-*   [Testing microflows using the UnitTesting module](/howto50/Testing+microflows+using+the+UnitTesting+module)
+*   [How to build a simple HRM app](How+to+build+a+simple+HRM+app)
+*   [Create and Deploy Your First App](Create+and+Deploy+Your+First+App)
+*   [Testing microflows using the UnitTesting module](Testing+microflows+using+the+UnitTesting+module)
 *   [Build a simple HRM app 1: Create, manage and deploy the app](Build+a+simple+HRM+app+1+Create+manage+and+deploy+the+app)
 *   [Build a simple HRM app 2: First steps in building a rich GUI](Build+a+simple+HRM+app+2+First+steps+in+building+a+rich+GUI)
 *   [Build a simple HRM app 3: Show related data in the GUI](Build+a+simple+HRM+app+3+Show+related+data+in+the+GUI)

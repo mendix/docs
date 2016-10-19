@@ -271,8 +271,8 @@ IIS 7
 
 ### Related articles
 
-*   [Installing Mendix on RedHat and CentOS](/howto50/Installing+Mendix+on+RedHat+and+CentOS)
-*   [Installing Mendix on Debian GNU Linux](/howto50/Installing+Mendix+on+Debian+GNU+Linux)
-*   [Create and Deploy Your First App](/howto50/Create+and+Deploy+Your+First+App)
+*   [Installing Mendix on RedHat and CentOS](Installing+Mendix+on+RedHat+and+CentOS)
+*   [Installing Mendix on Debian GNU Linux](Installing+Mendix+on+Debian+GNU+Linux)
+*   [Create and Deploy Your First App](Create+and+Deploy+Your+First+App)
 *   [Security checklist for your on-premises installation](Security+checklist+for+your+on+premises+installation)
-*   [Deploying Mendix on Microsoft Windows](/howto50/Deploying+Mendix+on+Microsoft+Windows)
+*   [Deploying Mendix on Microsoft Windows](Deploying+Mendix+on+Microsoft+Windows)

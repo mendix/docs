@@ -9,115 +9,115 @@ You can also browse ourÂ <u>[reference guide](/refguide5/Reference+Guide+5)</u>Â
 
 ## **[![](attachments/8783270/9273434.png)](2949310) Getting Started**
 
-*   [Create and Deploy Your First App](/howto50/Create+and+Deploy+Your+First+App)
-*   [How to build a simple HRM app](/howto50/How+to+build+a+simple+HRM+app)
+*   [Create and Deploy Your First App](Create+and+Deploy+Your+First+App)
+*   [How to build a simple HRM app](How+to+build+a+simple+HRM+app)
 
 ## **[![](attachments/8783161/9273435.png)](2949310) Data Models**
 
-*   [Creating a basic data layer](/howto50/Creating+a+basic+data+layer)
-*   [Working with images and files](/howto50/Working+with+images+and+files)
-*   [Denormalize Data to Improve Performance](/howto50/Denormalize+Data+to+Improve+Performance)
-*   [Setting up data validation](/howto50/Setting+up+data+validation)
-*   [Working With Object Events](/howto50/Working+With+Object+Events)
+*   [Creating a basic data layer](Creating+a+basic+data+layer)
+*   [Working with images and files](Working+with+images+and+files)
+*   [Denormalize Data to Improve Performance](Denormalize+Data+to+Improve+Performance)
+*   [Setting up data validation](Setting+up+data+validation)
+*   [Working With Object Events](Working+With+Object+Events)
 
 ## **[![](attachments/2949310/9273459.png)](2949310) ** ** GUI's**
 
-*   [Creating your first two Overview and Detail pages](/howto50/Creating+your+first+two+Overview+and+Detail+pages)
-*   [Setting Up the Navigation Structure](/howto50/Setting+Up+the+Navigation+Structure)
-*   [Layouts and Snippets](/howto50/Layouts+and+Snippets)
-*   [Filtering Data on an Overview Page](/howto50/Filtering+Data+on+an+Overview+Page)
-*   [Setup Mendix UI Framework](/howto50/Setup+Mendix+UI+Framework)
-*   [Create a custom theme with the Mendix UI Framework](/howto50/Create+a+custom+theme+with+the+Mendix+UI+Framework)
-*   [Setup Mendix UI Framework with Koala](/howto50/Setup+Mendix+UI+Framework+with+Koala)
+*   [Creating your first two Overview and Detail pages](Creating+your+first+two+Overview+and+Detail+pages)
+*   [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
+*   [Layouts and Snippets](Layouts+and+Snippets)
+*   [Filtering Data on an Overview Page](Filtering+Data+on+an+Overview+Page)
+*   [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
+*   [Create a custom theme with the Mendix UI Framework](Create+a+custom+theme+with+the+Mendix+UI+Framework)
+*   [Setup Mendix UI Framework with Koala](Setup+Mendix+UI+Framework+with+Koala)
 
 ## **![](attachments/2949310/9273454.png) Logic and Business Rules**
 
-*   [Triggering Logic using Microflows](/howto50/Triggering+Logic+using+Microflows)
-*   [Extract and use sub microflows](/howto50/Extract+and+use+sub+microflows)
+*   [Triggering Logic using Microflows](Triggering+Logic+using+Microflows)
+*   [Extract and use sub microflows](Extract+and+use+sub+microflows)
 
-*   [Creating a Custom Save Button](/howto50/Creating+a+Custom+Save+Button)
-*   [Extending Your Application with Custom Java](/howto50/Extending+Your+Application+with+Custom+Java)
-*   [Working With Lists in a Microflow](/howto50/Working+With+Lists+in+a+Microflow)
-*   [Defining access rules using XPath](/howto50/Defining+access+rules+using+XPath)
-*   [Optimizing Retrieve Activities](/howto50/Optimizing+Retrieve+Activities)
-*   [Optimizing Microflow Aggregates](/howto50/Optimizing+Microflow+Aggregates)
-*   [Error Handling](/howto50/Error+Handling)
+*   [Creating a Custom Save Button](Creating+a+Custom+Save+Button)
+*   [Extending Your Application with Custom Java](Extending+Your+Application+with+Custom+Java)
+*   [Working With Lists in a Microflow](Working+With+Lists+in+a+Microflow)
+*   [Defining access rules using XPath](Defining+access+rules+using+XPath)
+*   [Optimizing Retrieve Activities](Optimizing+Retrieve+Activities)
+*   [Optimizing Microflow Aggregates](Optimizing+Microflow+Aggregates)
+*   [Error Handling](Error+Handling)
 
 ## **![](attachments/2949310/9273465.png) Mobile**
 
-*   [Publishing a Mendix Hybrid Mobile App in Mobile App Stores](/howto50/Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores)
-*   [Deploy your first Hybrid Mobile App](/howto50/Deploy+your+first+Hybrid+Mobile+App)
+*   [Publishing a Mendix Hybrid Mobile App in Mobile App Stores](Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores)
+*   [Deploy your first Hybrid Mobile App](Deploy+your+first+Hybrid+Mobile+App)
 
 ## **![](attachments/2949310/9273462.png) Security**
 
-*   [Generating a personal SSH2 key pair](/howto50/Generating+a+personal+SSH2+key+pair)
-*   [Creating a secure app](/howto50/Creating+a+secure+app)
-*   [Anonymous User Security](/howto50/Anonymous+User+Security)
+*   [Generating a personal SSH2 key pair](Generating+a+personal+SSH2+key+pair)
+*   [Creating a secure app](Creating+a+secure+app)
+*   [Anonymous User Security](Anonymous+User+Security)
 
 ## **![](attachments/2949310/9273460.png) Integration**
 
-*   [Exposing a web service](/howto50/Exposing+a+web+service)
-*   [Consuming a complex web service](/howto50/Consuming+a+complex+web+service)
-*   [Selenium Support](/howto50/Selenium+Support)
-*   [Importing XML documents](/howto50/Importing+XML+documents)
-*   [Consuming a simple Web Service](/howto50/Consuming+a+simple+Web+Service)
-*   [Exporting XML documents](/howto50/Exporting+XML+documents)
-*   [Using the Excel Exporter](/howto50/Using+the+Excel+Exporter)
-*   [Importing Excel Documents](/howto50/Importing+Excel+Documents)
-*   [Synchronizing user accounts using the LDAP module](/howto50/Synchronizing+user+accounts+using+the+LDAP+module)
-*   [Integrating a Legacy System into a Mendix App](/howto50/Integrating+a+Legacy+System+into+a+Mendix+App)
-*   [Importing and Exporting Objects](/howto50/Importing+and+Exporting+Objects)
-*   [Consuming a REST Service](/howto50/Consuming+a+REST+Service)
-*   [Exposing data to BI tools using OData](/howto50/Exposing+data+to+BI+tools+using+OData)
+*   [Exposing a web service](Exposing+a+web+service)
+*   [Consuming a complex web service](Consuming+a+complex+web+service)
+*   [Selenium Support](Selenium+Support)
+*   [Importing XML documents](Importing+XML+documents)
+*   [Consuming a simple Web Service](Consuming+a+simple+Web+Service)
+*   [Exporting XML documents](Exporting+XML+documents)
+*   [Using the Excel Exporter](Using+the+Excel+Exporter)
+*   [Importing Excel Documents](Importing+Excel+Documents)
+*   [Synchronizing user accounts using the LDAP module](Synchronizing+user+accounts+using+the+LDAP+module)
+*   [Integrating a Legacy System into a Mendix App](Integrating+a+Legacy+System+into+a+Mendix+App)
+*   [Importing and Exporting Objects](Importing+and+Exporting+Objects)
+*   [Consuming a REST Service](Consuming+a+REST+Service)
+*   [Exposing data to BI tools using OData](Exposing+data+to+BI+tools+using+OData)
 
 ## **![](attachments/2949310/9273457.png) Extendability**
 
-*   [Send Custom Emails From Your App](/howto50/Send+Custom+Emails+From+Your+App)
-*   [Explore our connectors and adapters](/howto50/Explore+our+connectors+and+adapters)
-*   [Access a Samba share from the MxCloud](/howto50/Access+a+Samba+share+from+the+MxCloud)
+*   [Send Custom Emails From Your App](Send+Custom+Emails+From+Your+App)
+*   [Explore our connectors and adapters](Explore+our+connectors+and+adapters)
+*   [Access a Samba share from the MxCloud](Access+a+Samba+share+from+the+MxCloud)
 
 ## **![](attachments/4522001/9764884.png) Custom Widget Development**
 
-*   [Creating a Basic Hello World Custom Widget](/howto50/Creating+a+Basic+Hello+World+Custom+Widget)
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto50/Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
-*   [Creating a chainable Custom Widget](/howto50/Creating+a+chainable+Custom+Widget)
-*   [The Mobile Slider Custom Widget](/howto50/The+Mobile+Slider+Custom+Widget)
+*   [Creating a Basic Hello World Custom Widget](Creating+a+Basic+Hello+World+Custom+Widget)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
+*   [Creating a chainable Custom Widget](Creating+a+chainable+Custom+Widget)
+*   [The Mobile Slider Custom Widget](The+Mobile+Slider+Custom+Widget)
 *   [XML Reference Guide](/refguide5/XML+Reference+Guide)
 *   [XML Reference Guide](/refguide6/XML+Reference+Guide)
 
 ## **![](attachments/2949310/9273464.png) Tips & Tricks**
 
-*   [Finding your way through a project](/howto50/Finding+your+way+through+a+project)
-*   [Showing a Project in the Directory in Explorer](/howto50/Showing+a+Project+in+the+Directory+in+Explorer)
-*   [Finding Unused Items](/howto50/Finding+Unused+Items)
-*   [Finding Object Activities](/howto50/Finding+Object+Activities)
-*   [Translatable Validation Messages](/howto50/Translatable+Validation+Messages)
+*   [Finding your way through a project](Finding+your+way+through+a+project)
+*   [Showing a Project in the Directory in Explorer](Showing+a+Project+in+the+Directory+in+Explorer)
+*   [Finding Unused Items](Finding+Unused+Items)
+*   [Finding Object Activities](Finding+Object+Activities)
+*   [Translatable Validation Messages](Translatable+Validation+Messages)
 *   [Querying over self-references](Querying+over+self+references)
 
 ## **![](attachments/2949310/9273461.png) Monitoring &Troubleshooting**
 
-*   [Common Mendix SSO Errors](/howto50/Common+Mendix+SSO+Errors)
-*   [Log Levels](/howto50/Log+Levels)
-*   [Monitoring application health](/howto50/Monitoring+application+health)
-*   [Debugging Microflows Remotely](/howto50/Debugging+Microflows+Remotely)
-*   [Debugging Java actions remotely](/howto50/Debugging+Java+actions+remotely)
-*   [Monitoring Mendix using JMX](/howto50/Monitoring+Mendix+using+JMX)
-*   [Debugging Microflows](/howto50/Debugging+Microflows)
-*   [Debugging Java Actions](/howto50/Debugging+Java+Actions)
-*   [Clearing Warning Messages in Mendix](/howto50/Clearing+Warning+Messages+in+Mendix)
-*   [Finding the Root Cause of Runtime Errors](/howto50/Finding+the+Root+Cause+of+Runtime+Errors)
-*   [Debug a Hybrid Mobile Application](/howto50/Debug+a+Hybrid+Mobile+Application)
-*   [Solving Load and Import Errors](/howto50/Solving+Load+and+Import+Errors)
+*   [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)
+*   [Log Levels](Log+Levels)
+*   [Monitoring application health](Monitoring+application+health)
+*   [Debugging Microflows Remotely](Debugging+Microflows+Remotely)
+*   [Debugging Java actions remotely](Debugging+Java+actions+remotely)
+*   [Monitoring Mendix using JMX](Monitoring+Mendix+using+JMX)
+*   [Debugging Microflows](Debugging+Microflows)
+*   [Debugging Java Actions](Debugging+Java+Actions)
+*   [Clearing Warning Messages in Mendix](Clearing+Warning+Messages+in+Mendix)
+*   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
+*   [Debug a Hybrid Mobile Application](Debug+a+Hybrid+Mobile+Application)
+*   [Solving Load and Import Errors](Solving+Load+and+Import+Errors)
 
 ## **![](attachments/2949310/9273458.png) Collaboration & Project Management**
 
-*   [Contributing to a GitHub repository](/howto50/Contributing+to+a+GitHub+repository)
-*   [Starting your own repository](/howto50/Starting+your+own+repository)
-*   [Using Team Server - Version Control](/howto50/Using+Team+Server+-+Version+Control)
-*   [Sharing the Development Database](/howto50/Sharing+the+Development+Database)
-*   [Adding App Store content to your app](/howto50/Adding+App+Store+content+to+your+app)
-*   [Gathering user feedback](/howto50/Gathering+user+feedback)
-*   [Managing your Application Requirements with Mendix](/howto50/Managing+your+Application+Requirements+with+Mendix)
+*   [Contributing to a GitHub repository](Contributing+to+a+GitHub+repository)
+*   [Starting your own repository](Starting+your+own+repository)
+*   [Using Team Server - Version Control](Using+Team+Server+-+Version+Control)
+*   [Sharing the Development Database](Sharing+the+Development+Database)
+*   [Adding App Store content to your app](Adding+App+Store+content+to+your+app)
+*   [Gathering user feedback](Gathering+user+feedback)
+*   [Managing your Application Requirements with Mendix](Managing+your+Application+Requirements+with+Mendix)
 
 ## **![](attachments/2949310/9273455.png) Mendix Cloud**
 
@@ -131,27 +131,27 @@ You can also browse ourÂ <u>[reference guide](/refguide5/Reference+Guide+5)</u>Â
 
 ## **![](attachments/12878728/13402519.png) Cloud Foundry**
 
-*   [Deploying a Mendix App to Cloud Foundry](/howto50/Deploying+a+Mendix+App+to+Cloud+Foundry)
-*   [Deploying a Mendix App to HP Helion](/howto50/Deploying+a+Mendix+App+to+HP+Helion)
-*   [Deploying a Mendix App to Pivotal](/howto50/Deploying+a+Mendix+App+to+Pivotal)
+*   [Deploying a Mendix App to Cloud Foundry](Deploying+a+Mendix+App+to+Cloud+Foundry)
+*   [Deploying a Mendix App to HP Helion](Deploying+a+Mendix+App+to+HP+Helion)
+*   [Deploying a Mendix App to Pivotal](Deploying+a+Mendix+App+to+Pivotal)
 
 ## **![](attachments/8783265/13402518.png) On-premises Deployment**
 
 *   [Security checklist for your on-premises installation](Security+checklist+for+your+on+premises+installation)
-*   [Troubleshooting](/howto50/Troubleshooting)
-*   [Mendix on Windows - Microsoft SQL Server](/howto50/Mendix+on+Windows+-+Microsoft+SQL+Server)
-*   [Updating a Mendix Application](/howto50/Updating+a+Mendix+Application)
-*   [Architecture Options](/howto50/Architecture+Options)
-*   [Installing Mendix on Debian GNU Linux](/howto50/Installing+Mendix+on+Debian+GNU+Linux)
-*   [Deploying Mendix on Microsoft Windows](/howto50/Deploying+Mendix+on+Microsoft+Windows)
-*   [Installing Mendix on RedHat and CentOS](/howto50/Installing+Mendix+on+RedHat+and+CentOS)
-*   [Setting up monitoring with New Relic](/howto50/Setting+up+monitoring+with+New+Relic)
+*   [Troubleshooting](Troubleshooting)
+*   [Mendix on Windows - Microsoft SQL Server](Mendix+on+Windows+-+Microsoft+SQL+Server)
+*   [Updating a Mendix Application](Updating+a+Mendix+Application)
+*   [Architecture Options](Architecture+Options)
+*   [Installing Mendix on Debian GNU Linux](Installing+Mendix+on+Debian+GNU+Linux)
+*   [Deploying Mendix on Microsoft Windows](Deploying+Mendix+on+Microsoft+Windows)
+*   [Installing Mendix on RedHat and CentOS](Installing+Mendix+on+RedHat+and+CentOS)
+*   [Setting up monitoring with New Relic](Setting+up+monitoring+with+New+Relic)
 
 ## **![](attachments/8783200/9764865.png) App Store**
 
 *   [Install an App from the App Store](/appstore/Install+an+App+from+the+App+Store)
 *   [App Store Approval Guidelines](/appstore/App+Store+Approval+Guidelines)
-*   [App Store Content Support](/howto50/App+Store+Content+Support)
+*   [App Store Content Support](App+Store+Content+Support)
 *   [App Store Content Support](/appstore/App+Store+Content+Support)
 
 <div class="alert alert-info">{% markdown %}

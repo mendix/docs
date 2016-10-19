@@ -54,7 +54,7 @@ Before you start with this how-to please follow these prerequisites:
 
 ## 5\. Related content
 
-*   [Creating a basic data layer](/howto50/Creating+a+basic+data+layer)
-*   [Denormalize Data to Improve Performance](/howto50/Denormalize+Data+to+Improve+Performance)
-*   [Setting up data validation](/howto50/Setting+up+data+validation)
-*   [Working With Object Events](/howto50/Working+With+Object+Events)
+*   [Creating a basic data layer](Creating+a+basic+data+layer)
+*   [Denormalize Data to Improve Performance](Denormalize+Data+to+Improve+Performance)
+*   [Setting up data validation](Setting+up+data+validation)
+*   [Working With Object Events](Working+With+Object+Events)

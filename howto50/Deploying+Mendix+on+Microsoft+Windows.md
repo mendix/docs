@@ -373,8 +373,8 @@ To make sure the correct application root URL is used within your web services y
 
 ## 6\. Related content
 
-*   [How to build a simple HRM app](/howto50/How+to+build+a+simple+HRM+app)
-*   [Create and Deploy Your First App](/howto50/Create+and+Deploy+Your+First+App)
+*   [How to build a simple HRM app](How+to+build+a+simple+HRM+app)
+*   [Create and Deploy Your First App](Create+and+Deploy+Your+First+App)
 *   [Build a simple HRM app 1: Create, manage and deploy the app](Build+a+simple+HRM+app+1+Create+manage+and+deploy+the+app)
 *   [Build a simple HRM app 2: First steps in building a rich GUI](Build+a+simple+HRM+app+2+First+steps+in+building+a+rich+GUI)
 *   [Build a simple HRM app 3: Show related data in the GUI](Build+a+simple+HRM+app+3+Show+related+data+in+the+GUI)

@@ -191,7 +191,7 @@ The form property lets you pass a form to the widget. If needsEntityContext is s
 <property key="helpForm" type="form">
  <caption>Help Form</caption>
  <category>Behaviour</category>
- <description>Form to open</description> 
+ <description>Form to open</description>
 </property>
 ```
 <div class="alert alert-info">{% markdown %}
@@ -274,7 +274,7 @@ The object property is an array of packaged sub-properties. It packages multiple
 <property key="collection" type="object" isList="true">
  <caption>Collection</caption>
  <category>Appearance</category>
- <description>Add the properties to show in your collection</description> 
+ <description>Add the properties to show in your collection</description>
  <properties>
 	<!-- Define the sub-properties here -->
 	<property key="number" type="integer" defaultValue="1">
@@ -335,8 +335,7 @@ Remember to use the correct language notation according to the [Java supported 
 
 # Related content
 
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
-*   [Creating a chainable Custom Widget](Creating+a+chainable+Custom+Widget)
-*   [XML Reference Guide](XML+Reference+Guide)
-*   [Creating a Basic Hello World Custom Widget](Creating+a+Basic+Hello+World+Custom+Widget)
-*   [The Mobile Slider Custom Widget](The+Mobile+Slider+Custom+Widget)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto50/Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
+*   [Creating a chainable Custom Widget](/howto50/Creating+a+chainable+Custom+Widget)
+*   [Creating a Basic Hello World Custom Widget](/howto50/Creating+a+Basic+Hello+World+Custom+Widget)
+*   [The Mobile Slider Custom Widget](/howto50/The+Mobile+Slider+Custom+Widget)

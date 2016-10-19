@@ -1,8 +1,18 @@
 ---
-title: "Custom Widget Development"
-category: "howto50"
+title: Custom Widget Development
+category: howto50
 space: "Mendix 5 How-to's"
 ---
+
 Learn how to build custom widgets.
 
-<table><thead><tr><th class="highlight-blue confluenceTh" data-highlight-colour="blue">Advanced</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd"><a href="/refguide5/XML+Reference+Guide"><img class="confluence-embedded-image confluence-thumbnail" width="20" src="attachments/8783158/8946530.png" data-image-src="attachments/8783158/8946530.png"></a> <a href="/refguide5/XML+Reference+Guide">XML Reference Guide</a></td></tr><tr><td class="confluenceTd"><a href="Creating+a+Basic+Hello+World+Custom+Widget"><img class="confluence-embedded-image confluence-thumbnail" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Creating+a+Basic+Hello+World+Custom+Widget">Creating a Basic Hello World Custom Widget</a></td></tr><tr><td colspan="1" class="confluenceTd"><a href="The+Mobile+Slider+Custom+Widget"><img class="confluence-embedded-image confluence-thumbnail" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="The+Mobile+Slider+Custom+Widget">The Mobile Slider Custom Widget</a></td></tr><tr><td colspan="1" class="confluenceTd"><a href="Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets"><img class="confluence-embedded-image confluence-thumbnail" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a><span>&nbsp;<a href="Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets">Getting started with the Widget Development Plugin for Adobe Brackets</a></span></td></tr></tbody></table><table><thead><tr><th class="highlight-blue confluenceTh" data-highlight-colour="blue">Expert</th></tr></thead><tbody><tr><td class="confluenceTd"><a href="Creating+a+chainable+Custom+Widget"><img class="confluence-embedded-image confluence-thumbnail" alt="Documentation" width="20" src="attachments/8784273/8946538.png" data-image-src="attachments/8784273/8946538.png"></a><span>&nbsp;</span><a href="Creating+a+chainable+Custom+Widget">Creating a chainable Custom Widget</a></td></tr></tbody></table>
+| Advanced
+| ---------------------------------------------------------------
+| [XML Reference Guide](/refguide5/XML+Reference+Guide)
+| [Creating a Basic Hello World Custom Widget](Creating+a+Basic+Hello+World+Custom+Widget)
+| [The Mobile Slider Custom Widget](The+Mobile+Slider+Custom+Widget)
+| [Getting started with the Widget Development Plugin for Adobe Brackets](Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
+
+| Expert
+| ---------------------------------------------------------------
+| [Creating a chainable Custom Widget](Creating+a+chainable+Custom+Widget)

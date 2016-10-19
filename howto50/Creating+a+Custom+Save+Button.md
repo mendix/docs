@@ -5,10 +5,6 @@ space: "Mendix 5 How-to's"
 ---
 # Creating a Custom Save Button
 
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Dec 15, 2014 16:08</td><td colspan="1" class="confluenceTd">Sep 02, 2015 11:30</td></tr></tbody></table>
-
-
-
 Mendix uses visual models to define the logic of your application, we call those models Microflows. A Microflow is a visual way of expressing what traditionally would be written in code. This how-to explains how you can create a custom save button on a detail page by utilizing Microflows.
 
 ## 1\. Preparation

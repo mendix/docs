@@ -3,9 +3,6 @@ title: "Triggering Logic using Microflows"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.12</td><td class="confluenceTd">Nov 04, 2014 13:25</td><td colspan="1" class="confluenceTd">Oct 19, 2015 10:55</td></tr></tbody></table>
-
-
 
 To add custom logic to your Mendix application you can use microflows. Microflows can be triggered in various ways, i.e. buttons, input fields, scheduled events, and more. This how-to will teach you how to configure the properties and settings of a microflow button placed on a grid or reference set selector. You will start with adding the microflow button to the right widget. Next you will need to configure the right properties and settings of the microflow button. 
 

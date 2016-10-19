@@ -3,9 +3,6 @@ title: "Creating your first two Overview and Detail pages"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20.0</td><td class="confluenceTd">Aug 05, 2014 16:15</td><td colspan="1" class="confluenceTd">Oct 23, 2015 14:49</td></tr></tbody></table>
-
-
 
 This how-to explains how you can create overview and detail pages in Mendix. 
 
@@ -39,8 +36,8 @@ This section will explain how you can add a new overview page to your project.
 12.  Click **OK** to auto-fill the data grid with search fields and columns.
     ![](attachments/2949141/3080477.png)
 
-    You should now have an overview page like this:
-    ![](attachments/2949141/16842781.png)
+You should now have an overview page like this:
+![](attachments/2949141/16842781.png)
 
 ## 3\. Creating a Detail Page
 

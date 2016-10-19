@@ -5,8 +5,6 @@ space: "Mendix 5 How-to's"
 ---
 # Create a custom theme with the Mendix UI Framework
 
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Sep 03, 2015 13:59</td><td colspan="1" class="confluenceTd">Oct 07, 2015 14:09</td></tr></tbody></table>
-
 In this how-to we will go through how to create a custom theme with the Mendix UI Framework. For this tutorial the website from Amazon will be used as an example.
 
 **After completing this how-to you will know:**
@@ -69,11 +67,11 @@ To be able to make changes to the theme we suggest to use [Sass](http://sass-lan
 
 ## 4\. Configure your text editor
 
-1.  Open the **Project Directory** from your App in your desired text editor.
+1. Open the **Project Directory** from your App in your desired text editor.
 
     ![](attachments/14091404/14385505.png)
-2.  The **theme **folder is where you can find the theme that was selected when creating a New App. The folder **theme\styles\custom** will be used to make our own changes.
-3.  Open up the file _<u> **custom-variables.scss** </u>. This file contains default variables that we can use to easily change basic colors. Think of variables as a way to store information that you want to reuse throughout your stylesheet.
+2. The **theme** folder is where you can find the theme that was selected when creating a New App. The folder **theme\styles\custom** will be used to make our own changes.
+3.  Open up the file **custom-variables.scss**. This file contains default variables that we can use to easily change basic colors. Think of variables as a way to store information that you want to reuse throughout your stylesheet.
 
     **Step 1** contains default colors like primary, success, danger and so on. These colors are used for buttons, labels, links, text and other elements.
     **Step 2** contains colors and heights for your navigation bar, sidebar and layout.
@@ -93,20 +91,20 @@ In this tutorial we are going to create a custom theme based on the website from
 
     To change the topbar background-color and primary buttons we have to adjust the following line in the **_custom-variables.scss** file that can be found in **theme\styles\custom**. 
 
-    **<u>Line 10:</u> $color-primary:  #4280cb;**
+    **Line 10: $color-primary:  #4280cb;**
 
     Why do we want to change this color? How do we know that this color is used for our topbar and primary buttons and other CSS elements? For example when you search for **color-primary** in the **_custom-variables.scss** file we will find the following two lines:
 
-    **<u>Line 42: </u>$color-topbar-bg:  $color-primary;
-    <u>Line 231:</u> $color-btn-bg-primary:  $color-primary; 
+    * Line 42: $color-topbar-bg:  $color-primary;
+    * Line 231: $color-btn-bg-primary:  $color-primary; 
 
     **If you look in your custom-variables file you would notice that a lot more CSS elements use $color-primary variable, all these elements will be changes. So with changing one variable you are able to modify a lot of elements in your theme. This saves a lot of time maintaining your theme.
 
-    In our App the **color-primary** has the color blue while Amazon primary color is dark blue **#232f3e**. We can now adjust the **$color-primary **on line 10 to the Amazon color what is **#232f3e.****
+    In our App the **color-primary** has the color blue while Amazon primary color is dark blue **#232f3e**. We can now adjust the **$color-primary **on line 10 to the Amazon color what is **#232f3e**.
 
     ![](attachments/14778678/15794193.png) 
 
-    **When you save your file after changing **color-primary** you will see the following change in **Scout **as in the example below. Scout detected a change to the** _custom-variables.scss** file and compiles the CSS files. If you don't want to use Sass you could just use these CSS files.
+    When you save your file after changing **color-primary** you will see the following change in **Scout** as in the example below. Scout detected a change to the **_custom-variables.scss** file and compiles the CSS files. If you don't want to use Sass you could just use these CSS files.
 
     ![](attachments/14778678/14876794.png) 
 
@@ -122,9 +120,9 @@ In this tutorial we are going to create a custom theme based on the website from
     _// Background color for specific pages like the dashboard also used as utility class_
     **<u>Line 38:</u> $color-layout-bg-secondary: #EFF4F7;**
 
-    The variable** **$color-layout-bg-secondary ****is used for several page templates. For example in the file **theme\styles\sass\pagetemplates\responsive\_page-dashboard.scss** the ****$color-layout-bg-secondary ****is used as a default background color for all dashboard templates. Because of this variable we can easily change all our background-colors to white.
+    The variable **$color-layout-bg-secondary** is used for several page templates. For example in the file **theme\styles\sass\pagetemplates\responsive\_page-dashboard.scss**, the **$color-layout-bg-secondary** is used as a default background color for all dashboard templates. Because of this variable we can easily change all our background-colors to white.
 
-    We can now adjust the ****$color-layout-bg-secondary****on line 38 to the background color what should be **#FFF.**
+    We can now adjust the **$color-layout-bg-secondary** on line 38 to the background color what should be **#FFF.**
 
      ![](attachments/14778678/15794191.png)      
 
@@ -133,9 +131,9 @@ In this tutorial we are going to create a custom theme based on the website from
     Just like we did before, we can now adjust our sidebar and navigation. Our app is now very dark so it would be wise to change the sidebar background-color. We can use the gray background-color that Amazon uses on their homepage.
 
     // Sidebar
-    **<u>Line 45:</u> $color-sidebar-bg: $color-inverse;
+    <u>Line 45:</u> $color-sidebar-bg: $color-inverse;
 
-    **Change to **$color-sidebar-bg: #f9f9f9;**. Now when you search for ****$color-sidebar-bg**** the Navigation part will show in the _custom-variables file. As you may notice is that the navigation also gets the same variable as the background-color, ****$color-sidebar-bg****. So we won't have to change the background-color here. Now re-deploy the application and you should see the following screenshot.
+    Change to **$color-sidebar-bg: #f9f9f9;**. Now when you search for **$color-sidebar-bg**, the Navigation part will show in the _custom-variables file. As you may notice is that the navigation also gets the same variable as the background-color, **$color-sidebar-bg**. So we won't have to change the background-color here. Now re-deploy the application and you should see the following screenshot.
 
     ![](attachments/14778678/15794196.png)
 
@@ -144,9 +142,9 @@ In this tutorial we are going to create a custom theme based on the website from
     We now have a different background color but the navigation text is impossible to read because they are white. For the sake of the tutorial we are going to make the text color, text hover color, text active and the sub text items color darker by using the variable **$color-inverse**. Color inverse is usually the darkest variable in a theme. Normally you could also have a different hover color of course.
 
     // Text colors
-    ****<u>Line 396: </u>**$color-navsidebar-text: $color-text-white-secondary;
-    ****<u>Line 397: $color-navsidebar-text-hover:</u>** $color-text-white;**
-    ****<u>Line 398: $color-navsidebar-text-active: </u>** $color-text-white;****
+    * <u>Line 396:</u> $color-navsidebar-text: $color-text-white-secondary;
+    * <u>Line 397:</u> $color-navsidebar-text-hover: $color-text-white;
+    * <u>Line 398:</u> $color-navsidebar-text-active: $color-text-white;
 
     Change to **$color-navsidebar-text: $color-inverse** and also do this for the hover and active variable.
 

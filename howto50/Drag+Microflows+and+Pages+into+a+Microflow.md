@@ -3,9 +3,6 @@ title: "Drag and Drop Microflows/Pages into Microflow"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.10</td><td class="confluenceTd">Nov 05, 2014 12:47</td><td colspan="1" class="confluenceTd">Oct 19, 2015 12:47</td></tr></tbody></table>
-
-
 
 Coming home with sore hands from using the mouse too much during the day is very uncomfortable. Therefore this how-to will teach you how to use the mouse more efficiently while modeling a Mendix app. 
 

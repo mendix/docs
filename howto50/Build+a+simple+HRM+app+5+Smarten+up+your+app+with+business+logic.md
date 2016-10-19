@@ -3,9 +3,6 @@ title: "Build a simple HRM app 5: Smarten up your app with business logic"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-# Build a simple HRM app 5: Smarten up your app with business logic
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Aug 18, 2015 16:12</td><td colspan="1" class="confluenceTd">Sep 03, 2015 14:46</td></tr></tbody></table>
 
 This how-to is based on the video "Build a simple HRM app: Smarten up your app with business logic", which is part of the [Getting Started videos](http://gettingstarted.mendixcloud.com/link/courses/gettingstarted).
 
@@ -50,8 +47,8 @@ In this chapter you will create a microflow.
 14.  Click on **Go to microflow**.
     ![](attachments/14091778/14876722.png) 
 
-    The microflow should look like the image below:
-    ![](attachments/14091778/14876723.png) 
+The microflow should look like the image below:
+![](attachments/14091778/14876723.png) 
 
 ### 2.2 Add an exclusive split
 
@@ -119,14 +116,12 @@ In this chapter you will create a microflow.
     ![](attachments/14091778/14876757.png) 
 10.  Click **OK**.
 11.  Click **OK**.
-12.  Click **OK** to save the change object properties.
-
-    The microflow will look like the image below:
+12.  Click **OK** to save the change object properties. The microflow will look like the image below:
     ![](attachments/14091778/14876758.png) 
-13.  Repeat steps 1 through 12 for the Medior path. Make sure that you set the level value to Senior.
 
-    The microflow should look like the image below:
+13.  Repeat steps 1 through 12 for the Medior path. Make sure that you set the level value to Senior. The microflow should look like the image below:
     ![](attachments/14091778/14876759.png)
+
 14.  Drag a **Show message** activity from the Toolbox to the Senior path.
     ![](attachments/14091778/14876760.png) 
 15.  Double-click on the **Show message** activity to open the properties editor. 
@@ -134,9 +129,7 @@ In this chapter you will create a microflow.
     ![](attachments/14091778/14876762.png)
 17.  Click **OK**.
 18.  Drag a **Change object** activity from the Toolbox to the path which will be executed when the Employee has no level.
-19.  Repeat steps 2 through 12 for this new **Change object **activity and make sure that you set the level value to Junior.
-
-    The microflow will look like the image below:
+19.  Repeat steps 2 through 12 for this new **Change object **activity and make sure that you set the level value to Junior. The microflow will look like the image below:
     ![](attachments/14091778/14876763.png) 
 
 ## 3\. View your app

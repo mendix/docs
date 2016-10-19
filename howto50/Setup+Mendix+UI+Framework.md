@@ -3,9 +3,6 @@ title: "Setup Mendix UI Framework"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-# Setup Mendix UI Framework
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Aug 04, 2015 16:16</td><td colspan="1" class="confluenceTd">Sep 02, 2015 11:22</td></tr></tbody></table>
 
 In this how-to we will go through how to setup the [Mendix UI Framework](https://ux.mendix.com/) with the program called Scout.
 
@@ -69,11 +66,11 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 1.  Open the **Project Directory** from your App in your desired text editor.
 
     ![](attachments/14091404/14385505.png)
-2.  The **theme **folder is where you can find the theme that was selected when creating a New App. The folder theme\styles\custom will be used to make our own changes. Let's change the background for our sidebar!
-3.  Open up the file _ <u>**custom-variables.scss**</u> .
+2.  The **theme** folder is where you can find the theme that was selected when creating a New App. The folder theme\styles\custom will be used to make our own changes. Let's change the background for our sidebar!
+3.  Open up the file **custom-variables.scss** .
 
      ![](attachments/14091404/14385506.png)
-    Let's take a look at **Step 2 **in the _ <u>**custom-variables.scss **</u> file. As the comments suggest we can adjust the background-color for the sidebar. 
+    Let's take a look at **Step 2** in the **custom-variables.scss** file. As the comments suggest we can adjust the background-color for the sidebar. 
 4.  Change the color from white (#FFF) to red (#FF0000).
 
     ![](attachments/14091404/14385508.png)

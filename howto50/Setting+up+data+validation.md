@@ -3,9 +3,6 @@ title: "Setting up data validation"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.04</td><td class="confluenceTd">Aug 08, 2014 12:52</td><td colspan="1" class="confluenceTd">Oct 20, 2015 08:20</td></tr></tbody></table>
-
-
 
 This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to setup a basic data structure, otherwise there won't be any data to validate. If you don't know how to setup a basic data structure, you can take a look at [this](Creating+a+basic+data+layer) how-to.
 

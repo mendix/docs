@@ -5,8 +5,6 @@ space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20.0</td><td class="confluenceTd">Aug 05, 2014 17:23</td><td colspan="1" class="confluenceTd">Oct 21, 2015 08:52</td></tr></tbody></table>
 
-
-
 Once you've created some pages you want to give users the ability to access them. The easiest way to do this is by using a navigation menu. The navigation editor of the Business Modeler allows you define navigation menus for desktop, tablet and phone interfaces. It also allows you to define which page is shown as a default home page depending on the user role.
 
 ## 1\. Preparation
@@ -30,13 +28,9 @@ This section will explain how to set the default home page. Please note that thi
     ![](attachments/2949138/16842791.png)
 5.  Click **Select**.
 
-    <div class="alert alert-info">{% markdown %}
+You can also select a microflow as default home page. Make sure that the microflow contains a 'Show Form' activity, otherwise the user won't see anything.
 
-    You can also select a microflow as default home page. Make sure that the microflow contains a 'Show Form' activity, otherwise the user won't see anything.
-
-    {% endmarkdown %}</div>
-
-    Now every time a user signs in to the application, the selected page/microflow is shown/triggered.
+Now every time a user signs in to the application, the selected page/microflow is shown/triggered.
 
 ## <a name="Setupthenavigationstructure-Settherolebasedhomepage" rel="nofollow"></a>3\. Setting a Role Based Home Page
 
@@ -62,22 +56,18 @@ In many cases you want users with different roles to see different home pages. T
 
 This section will explain how to create menu items.
 
-1.  Open the N**avigation** editor.
-2.  Select either **Desktop,****Tablet,** or **Phone** navigation, depending on the device interface you're working on.
-3.  Locate the Menu section.
-4.  Click **New Item** to create a top level menu item.
+1. Open the N**avigation** editor.
+2. Select either **Desktop,****Tablet,** or **Phone** navigation, depending on the device interface you're working on.
+3. Locate the Menu section.
+4. Click **New Item** to create a top level menu item.
     ![](attachments/2949138/16842797.png)
-
-    <div class="alert alert-info">{% markdown %}
 
     You can also select an existing menu item and click New subitem to create a sub menu item.
 
-    {% endmarkdown %}</div>
-5.  Enter a **caption**. In this case, we enter _Customer Overview_.
-
-6.  Select a page or microflow as target. In this case, we select the page _CustomerOverview.
-    ![](attachments/2949138/16842798.png) _
-7.  Save the menu item by clicking **OK**.
+5. Enter a **caption**. In this case, we enter _Customer Overview_.
+6. Select a page or microflow as target. In this case, we select the page _CustomerOverview.
+    ![](attachments/2949138/16842798.png)
+7. Save the menu item by clicking **OK**.
 
     In the overview of menu items you can see the caption of the menu item, the target form or microflow and which user role is needed to be able to see the menu item. The user roles are derived from the page and microflow access settings in the security model. You can restructure the menu by dragging and dropping menu items.
 

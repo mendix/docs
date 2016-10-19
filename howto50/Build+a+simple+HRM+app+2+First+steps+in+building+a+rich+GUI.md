@@ -3,9 +3,6 @@ title: "Build a simple HRM app 2: First steps in building a rich GUI"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-# Build a simple HRM app 2: First steps in building a rich GUI 
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Aug 17, 2015 16:26</td><td colspan="1" class="confluenceTd">Oct 14, 2015 09:52</td></tr></tbody></table>
 
 This how-to is based on the video "Build a simple HRM app: First steps in building a rich GUI", which is part of the [Getting Started videos](http://gettingstarted.mendixcloud.com/link/courses/gettingstarted).
 
@@ -99,7 +96,8 @@ Pages define the end user interface of a Mendix application. Every page is based
     ![](attachments/14091674/14385475.png) 
 16.  Drag and drop the following attributes to their corresponding:
 
-    <table><thead><tr><th class="confluenceTh">Attribute</th><th class="confluenceTh">Field</th><th colspan="1" class="confluenceTh">Container</th></tr></thead><tbody><tr><td class="confluenceTd">Email</td><td class="confluenceTd">Name</td><td colspan="1" class="confluenceTd">User details</td></tr><tr><td class="confluenceTd">Phone</td><td class="confluenceTd">Phone</td><td colspan="1" class="confluenceTd">Phone</td></tr><tr><td class="confluenceTd"><span>DateOfBirth</span></td><td class="confluenceTd">Birthday</td><td colspan="1" class="confluenceTd">Birthday</td></tr><tr><td colspan="1" class="confluenceTd">City</td><td colspan="1" class="confluenceTd">City</td><td colspan="1" class="confluenceTd">Location</td></tr><tr><td colspan="1" class="confluenceTd">State</td><td colspan="1" class="confluenceTd">State</td><td colspan="1" class="confluenceTd">Location</td></tr></tbody></table>
+<table><thead><tr><th class="confluenceTh">Attribute</th><th class="confluenceTh">Field</th><th colspan="1" class="confluenceTh">Container</th></tr></thead><tbody><tr><td class="confluenceTd">Email</td><td class="confluenceTd">Name</td><td colspan="1" class="confluenceTd">User details</td></tr><tr><td class="confluenceTd">Phone</td><td class="confluenceTd">Phone</td><td colspan="1" class="confluenceTd">Phone</td></tr><tr><td class="confluenceTd"><span>DateOfBirth</span></td><td class="confluenceTd">Birthday</td><td colspan="1" class="confluenceTd">Birthday</td></tr><tr><td colspan="1" class="confluenceTd">City</td><td colspan="1" class="confluenceTd">City</td><td colspan="1" class="confluenceTd">Location</td></tr><tr><td colspan="1" class="confluenceTd">State</td><td colspan="1" class="confluenceTd">State</td><td colspan="1" class="confluenceTd">Location</td></tr></tbody></table>
+
 17.  Delete the containers and input fields that are not being used.
     ![](attachments/14091674/14385476.png) 
 

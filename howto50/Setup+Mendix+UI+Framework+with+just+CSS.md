@@ -3,9 +3,6 @@ title: "Setup Mendix UI Framework with just CSS"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-# Setup Mendix UI Framework
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Aug 20, 2015 16:41</td><td colspan="1" class="confluenceTd">Sep 02, 2015 11:26</td></tr></tbody></table>
 
 In this how-to we will go through how to setup the [Mendix UI Framework](https://ux.mendix.com/) and do our first styling changes by just using CSS.
 

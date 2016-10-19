@@ -3,9 +3,6 @@ title: "Build a simple HRM app 1: Create, manage and deploy the app"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-# Build a simple HRM app 1: Create, manage and deploy the app 
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Aug 17, 2015 15:17</td><td colspan="1" class="confluenceTd">Oct 21, 2015 11:42</td></tr></tbody></table>
 
 This how-to is based on the video "Build a simple HRM app: Create, manage and deploy the app", which is part of the [Getting Started videos](http://gettingstarted.mendixcloud.com/link/courses/gettingstarted).
 

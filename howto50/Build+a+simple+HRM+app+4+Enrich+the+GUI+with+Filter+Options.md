@@ -3,9 +3,6 @@ title: "Build a simple HRM app 4: Enrich the GUI with Filter Options"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-# Build a simple HRM app 4: Enrich the GUI with Filter Options 
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Aug 18, 2015 14:13</td><td colspan="1" class="confluenceTd">Oct 14, 2015 09:54</td></tr></tbody></table>
 
 This how-to is based on the video "Build a simple HRM app: Enrich the GUI with Filter Options", which is part of the [Getting Started videos](http://gettingstarted.mendixcloud.com/link/courses/gettingstarted).
 
@@ -105,17 +102,20 @@ Let's assume that you want to divide your employees into three different levels:
 11.  Click on **SAVE**.
 12.  Repeat steps 4 till 10 with the following details:
 
-    <table><thead><tr><th class="confluenceTh">Name</th><th class="confluenceTh">Email</th><th class="confluenceTh">City</th><th class="confluenceTh">Department</th><th colspan="1" class="confluenceTh">Level</th></tr></thead><tbody><tr><td class="confluenceTd">Harvey Specter</td><td class="confluenceTd">harvey@<span>specter</span>.com</td><td class="confluenceTd">New York</td><td class="confluenceTd">Sales</td><td colspan="1" class="confluenceTd">Medior</td></tr><tr><td class="confluenceTd">Hugo Reyes</td><td class="confluenceTd">hugo@reyes.com</td><td class="confluenceTd">Sydney</td><td class="confluenceTd">Marketing</td><td colspan="1" class="confluenceTd">Senior</td></tr><tr><td colspan="1" class="confluenceTd">Michael Scofield</td><td colspan="1" class="confluenceTd">michael@scofield.com</td><td colspan="1" class="confluenceTd">Chicago</td><td colspan="1" class="confluenceTd">Marketing</td><td colspan="1" class="confluenceTd">Medior</td></tr></tbody></table>
+<table><thead><tr><th class="confluenceTh">Name</th><th class="confluenceTh">Email</th><th class="confluenceTh">City</th><th class="confluenceTh">Department</th><th colspan="1" class="confluenceTh">Level</th></tr></thead><tbody><tr><td class="confluenceTd">Harvey Specter</td><td class="confluenceTd">harvey@<span>specter</span>.com</td><td class="confluenceTd">New York</td><td class="confluenceTd">Sales</td><td colspan="1" class="confluenceTd">Medior</td></tr><tr><td class="confluenceTd">Hugo Reyes</td><td class="confluenceTd">hugo@reyes.com</td><td class="confluenceTd">Sydney</td><td class="confluenceTd">Marketing</td><td colspan="1" class="confluenceTd">Senior</td></tr><tr><td colspan="1" class="confluenceTd">Michael Scofield</td><td colspan="1" class="confluenceTd">michael@scofield.com</td><td colspan="1" class="confluenceTd">Chicago</td><td colspan="1" class="confluenceTd">Marketing</td><td colspan="1" class="confluenceTd">Medior</td></tr></tbody></table>
+
 13.  Click on **SEARCH** to open the search bar.
     ![](attachments/14091768/14876712.png) 
 
 14.  Select level **Medior**.
     ![](attachments/14091768/14876713.png)
 15.  Click on **SEARCH**.
+
     ![](attachments/14091768/14876714.png)
 
     ![](attachments/14091768/14876715.png)
-    Only the employees with level Medior will be shown. Click [here](Build+a+simple+HRM+app+5+Smarten+up+your+app+with+business+logic) to go the fifth how-to on how to create a simple HRM application and learn how to smarten up your app with business logic.
+
+Only the employees with level Medior will be shown. Click [here](Build+a+simple+HRM+app+5+Smarten+up+your+app+with+business+logic) to go the fifth how-to on how to create a simple HRM application and learn how to smarten up your app with business logic.
 
 ## 4\. Related content
 

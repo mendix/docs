@@ -3,9 +3,6 @@ title: "Build a simple HRM app 3: Show related data in the GUI"
 category: "howto50"
 space: "Mendix 5 How-to's"
 ---
-# Build a simple HRM app 3: Show related data in the GUI 
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.18+</td><td class="confluenceTd">Aug 18, 2015 10:00</td><td colspan="1" class="confluenceTd">Oct 14, 2015 09:53</td></tr></tbody></table>
 
 This how-to is based on the video "Build a simple HRM app: Show related data in the GUI", which is part of the [Getting Started videos](http://gettingstarted.mendixcloud.com/link/courses/gettingstarted).
 
@@ -106,7 +103,7 @@ In this chapter you will create an association between two entities and use the 
 18.  Drag-and-drop the attribute **Name** of the entity Department from the connector to the new reference selector.
     ![](attachments/14091713/14876687.png)
 
-    The reference selector now allows you to select a department while creating an employee.
+The reference selector now allows you to select a department while creating an employee.
 
 ### 2.5 Add the department overview page to the navigation
 
@@ -144,7 +141,8 @@ To view a page in your app, you need to add a menu item so you can navigate to t
 12.  Select **Marketing**.
 13.  Enter the following data in the other fields:
 
-    <table><thead><tr><th class="confluenceTh">Name</th><th class="confluenceTh">Address</th><th class="confluenceTh">City</th><th class="confluenceTh">State</th><th colspan="1" class="confluenceTh">Phone</th><th colspan="1" class="confluenceTh">Email</th><th colspan="1" class="confluenceTh">Date of birth</th></tr></thead><tbody><tr><td class="confluenceTd">Thomas Shelby</td><td class="confluenceTd"><span>50 Pinfold St</span></td><td class="confluenceTd">Birmingham</td><td class="confluenceTd">West Midlands</td><td colspan="1" class="confluenceTd">+12345678</td><td colspan="1" class="confluenceTd">thomas@shelby.com</td><td colspan="1" class="confluenceTd">5/25/1976</td></tr></tbody></table>
+<table><thead><tr><th class="confluenceTh">Name</th><th class="confluenceTh">Address</th><th class="confluenceTh">City</th><th class="confluenceTh">State</th><th colspan="1" class="confluenceTh">Phone</th><th colspan="1" class="confluenceTh">Email</th><th colspan="1" class="confluenceTh">Date of birth</th></tr></thead><tbody><tr><td class="confluenceTd">Thomas Shelby</td><td class="confluenceTd"><span>50 Pinfold St</span></td><td class="confluenceTd">Birmingham</td><td class="confluenceTd">West Midlands</td><td colspan="1" class="confluenceTd">+12345678</td><td colspan="1" class="confluenceTd">thomas@shelby.com</td><td colspan="1" class="confluenceTd">5/25/1976</td></tr></tbody></table>
+
 14.  Click **SAVE**.
     ![](attachments/14091713/14876694.png)
     You can now see the selected department in the Employee Overview page.

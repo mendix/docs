@@ -1,6 +1,6 @@
 ---
 title: "Map entity to element"
-category: "refguide5"
+parent: "Domain+to+XML+Mappings"
 space: "Reference Guide 5"
 ---
 

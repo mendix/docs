@@ -1,6 +1,6 @@
 ---
 title: "Keep alive mechanism for Persistent Sessions"
-category: "refguide5"
+category: "Runtime"
 space: "Reference Guide 5"
 ---
 ## Keep alive mechanism for Persistent Sessions

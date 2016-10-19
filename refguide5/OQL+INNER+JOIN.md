@@ -1,6 +1,6 @@
 ---
 title: "OQL INNER JOIN"
-category: "refguide5"
+parent: "OQL+From+Clause"
 space: "Reference Guide 5"
 ---
 

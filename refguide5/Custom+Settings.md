@@ -1,6 +1,6 @@
 ---
 title: "Custom Settings"
-category: "refguide5"
+category: "Runtime"
 space: "Reference Guide 5"
 ---
 

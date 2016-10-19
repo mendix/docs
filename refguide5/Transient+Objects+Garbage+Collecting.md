@@ -1,6 +1,6 @@
 ---
 title: "Transient Objects & Garbage Collecting"
-category: "refguide5"
+category: "Runtime"
 space: "Reference Guide 5"
 ---
 # Transient Objects & Garbage Collecting

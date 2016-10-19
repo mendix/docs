@@ -1,6 +1,6 @@
 ---
 title: "OQL Operators"
-category: "refguide5"
+parent: "OQL+Expressions"
 space: "Reference Guide 5"
 ---
 

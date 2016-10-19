@@ -1,6 +1,6 @@
 ---
 title: "Delete Object(s)"
-category: "refguide5"
+parent: "Object+Activities"
 space: "Reference Guide 5"
 ---
 

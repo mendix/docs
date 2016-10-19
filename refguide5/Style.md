@@ -1,6 +1,6 @@
 ---
 title: "Style"
-category: "refguide5"
+parent: "Document+Templates"
 space: "Reference Guide 5"
 ---
 

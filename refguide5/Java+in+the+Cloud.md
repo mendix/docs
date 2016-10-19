@@ -1,6 +1,6 @@
 ---
 title: "Java in the Cloud"
-category: "refguide5"
+category: "Java Programming"
 space: "Reference Guide 5"
 ---
 

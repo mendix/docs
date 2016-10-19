@@ -1,6 +1,6 @@
 ---
 title: "Cell (document template)"
-category: "refguide5"
+parent: "Row+Document+Templates"
 space: "Reference Guide 5"
 ---
 

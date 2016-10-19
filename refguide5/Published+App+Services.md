@@ -1,6 +1,6 @@
 ---
 title: "Published App Services"
-category: "refguide5"
+parent: "Integration"
 space: "Reference Guide 5"
 ---
 

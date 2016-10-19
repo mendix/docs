@@ -1,7 +1,9 @@
 ---
 title: "Show Page"
-category: "refguide5"
+parent: "Client+Activities"
 space: "Reference Guide 5"
+redirect_from:
+  - "/refguide5/Show+Form"
 ---
 
 

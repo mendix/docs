@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting"
-category: "refguide5"
+category: "Java Programming"
 space: "Reference Guide 5"
 ---
 

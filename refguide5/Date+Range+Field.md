@@ -1,6 +1,6 @@
 ---
 title: "Date Range Field"
-category: "refguide5"
+parent: "Date+Range+Selector"
 space: "Reference Guide 5"
 ---
 

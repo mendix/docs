@@ -1,6 +1,6 @@
 ---
 title: "Publish Packages To Mobile Stores"
-category: "refguide5"
+category: "Mobile"
 space: "Reference Guide 5"
 ---
 

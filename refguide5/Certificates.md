@@ -1,6 +1,6 @@
 ---
 title: "Certificates"
-category: "refguide5"
+category: "Deployment"
 space: "Reference Guide 5"
 ---
 

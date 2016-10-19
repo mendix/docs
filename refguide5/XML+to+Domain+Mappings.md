@@ -1,6 +1,6 @@
 ---
 title: "XML-to-Domain Mappings"
-category: "refguide5"
+parent: "Integration"
 space: "Reference Guide 5"
 ---
 

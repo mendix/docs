@@ -1,6 +1,6 @@
 ---
 title: "OData Representation"
-category: "refguide5"
+parent: "Published+OData+Services"
 space: "Reference Guide 5"
 ---
 

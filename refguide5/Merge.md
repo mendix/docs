@@ -1,6 +1,6 @@
 ---
 title: "Merge"
-category: "refguide5"
+parent: "Microflows"
 space: "Reference Guide 5"
 ---
 

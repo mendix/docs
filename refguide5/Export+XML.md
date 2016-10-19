@@ -1,6 +1,6 @@
 ---
 title: "Export XML"
-category: "refguide5"
+parent: "Integration+Activities"
 space: "Reference Guide 5"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Change Variable"
-category: "refguide5"
+parent: "Variable+Activities"
 space: "Reference Guide 5"
 ---
 

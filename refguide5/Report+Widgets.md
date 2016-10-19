@@ -2,6 +2,9 @@
 title: "Report Widgets"
 parent: "Pages"
 space: "Reference Guide 5"
+redirect_from:
+  - "/refguide5/Reporting+Widgets"
+  - "/refguide5/Reporting"
 ---
 
 

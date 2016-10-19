@@ -1,6 +1,6 @@
 ---
 title: "Columns (document template)"
-category: "refguide5"
+parent: "Data+Grid+Document+Template"
 space: "Reference Guide 5"
 ---
 

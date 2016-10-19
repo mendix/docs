@@ -1,6 +1,6 @@
 ---
 title: "XPath Query Functions"
-category: "refguide5"
+parent: "XPath"
 space: "Reference Guide 5"
 ---
 

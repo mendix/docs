@@ -1,6 +1,6 @@
 ---
 title: "Customizing Hybrid Mobile Apps"
-category: "refguide5"
+category: "Mobile"
 space: "Reference Guide 5"
 ---
 

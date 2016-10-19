@@ -1,6 +1,6 @@
 ---
 title: "Deploy To The Cloud Dialog"
-category: "refguide5"
+parent: "Dialogs"
 space: "Reference Guide 5"
 ---
 Use this dialog to create a versioned deployment archive and upload it to your app on the Cloud Portal.

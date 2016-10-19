@@ -1,6 +1,6 @@
 ---
 title: "Select elements"
-category: "refguide5"
+parent: "XML+to+Domain+Mappings"
 space: "Reference Guide 5"
 ---
 

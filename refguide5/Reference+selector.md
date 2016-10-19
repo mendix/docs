@@ -1,6 +1,6 @@
 ---
 title: "Reference selector"
-category: "refguide5"
+parent: "Input+Widgets"
 space: "Reference Guide 5"
 ---
 

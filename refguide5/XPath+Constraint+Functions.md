@@ -1,6 +1,6 @@
 ---
 title: "XPath Constraint Functions"
-category: "refguide5"
+parent: "XPath+Constraints"
 space: "Reference Guide 5"
 ---
 

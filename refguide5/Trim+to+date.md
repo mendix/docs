@@ -1,6 +1,6 @@
 ---
 title: "Trim to date"
-category: "refguide5"
+parent: "Microflow+Expressions"
 space: "Reference Guide 5"
 ---
 

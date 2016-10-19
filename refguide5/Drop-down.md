@@ -1,40 +1,23 @@
 ---
-title: "Date picker"
+title: "Drop-down"
 parent: "Input+Widgets"
 space: "Reference Guide 5"
+redirect_from:
+  - "/refguide5/Drop-Down+Widget"
+  - "/refguide5/Drop-Down Widget"
 ---
 
 
-A date picker is an [input widget](Input+Widgets) that can be used to display and edit date/time attributes. It takes into account the language setting to display a localized calendar.
+A drop-down is an [input widget](Input+Widgets) that can be used to display and edit enumeration attributes. It should not be confused with a reference selector, which is used to select a object with which to fill an [association](Associations).
 
 <div class="alert alert-info">{% markdown %}
 
-![](attachments/4522283/14385224.png)
-This date picker allows the end-user to set the birth date of the customer.
+ ![](attachments/4522273/14385225.png)
+This drop-down widget allows the end user to select the state of the customer.
 
 {% endmarkdown %}</div>
 
 ## General properties
-
-### Date format
-
-The date format determines whether the date picker displays the date, time, date and time, or a custom variation of the linked attribute. This does not affect how data is stored; in all cases both a date and a time will be recorded. It merely affects how the data is displayed. How the date and/or time are formatted depend on the localization of the user viewing the data.
-
-Possible values: 'Date', 'Time', 'Date and time' and 'Custom'.
-
-_Default value:_ Date
-
-### Custom date format
-
-If you choose 'Custom' as the date format (see above) this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
-
-<table><thead><tr><th class="confluenceTh">Symbol</th><th class="confluenceTh">No.</th><th class="confluenceTh">Example</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">G</td><td class="confluenceTd">1</td><td class="confluenceTd">AD</td><td class="confluenceTd">Era</td></tr><tr><td class="confluenceTd">y</td><td class="confluenceTd">1..n</td><td class="confluenceTd">2010</td><td class="confluenceTd">Year</td></tr><tr><td class="confluenceTd">M</td><td class="confluenceTd">1..2</td><td class="confluenceTd">09</td><td class="confluenceTd">Month</td></tr><tr><td class="confluenceTd">M</td><td class="confluenceTd">3</td><td class="confluenceTd">Sept</td></tr><tr><td class="confluenceTd">M</td><td class="confluenceTd">4</td><td class="confluenceTd">September</td></tr><tr><td class="confluenceTd">w</td><td class="confluenceTd">1..2</td><td class="confluenceTd">27</td><td class="confluenceTd">Week of year</td></tr><tr><td class="confluenceTd">d</td><td class="confluenceTd">1..2</td><td class="confluenceTd">12</td><td class="confluenceTd">Day of month</td></tr><tr><td class="confluenceTd">D</td><td class="confluenceTd">1..3</td><td class="confluenceTd">93</td><td class="confluenceTd">Day of year</td></tr><tr><td class="confluenceTd">a</td><td class="confluenceTd">1</td><td class="confluenceTd">AM</td><td class="confluenceTd">AM or PM</td></tr><tr><td class="confluenceTd">h</td><td class="confluenceTd">1..2</td><td class="confluenceTd">11</td><td class="confluenceTd">Hour (1-12)</td></tr><tr><td class="confluenceTd">H</td><td class="confluenceTd">1..2</td><td class="confluenceTd">13</td><td class="confluenceTd">Hour (0-23)</td></tr><tr><td class="confluenceTd">k</td><td class="confluenceTd">1..2</td><td class="confluenceTd">10</td><td class="confluenceTd">Hour (1-24)</td></tr><tr><td class="confluenceTd">K</td><td class="confluenceTd">1..2</td><td class="confluenceTd">0</td><td class="confluenceTd">Hour (0-11)</td></tr><tr><td class="confluenceTd">m</td><td class="confluenceTd">1..2</td><td class="confluenceTd">59</td><td class="confluenceTd">Minute, use one or two for zero padding</td></tr><tr><td class="confluenceTd">s</td><td class="confluenceTd">1..2</td><td class="confluenceTd">12</td><td class="confluenceTd">Second, use one or two for zero padding</td></tr><tr><td class="confluenceTd">S</td><td class="confluenceTd">1..3</td><td class="confluenceTd">153</td><td class="confluenceTd">Milliseconds</td></tr><tr><td class="confluenceTd">E</td><td class="confluenceTd">1..3</td><td class="confluenceTd">Thu</td><td class="confluenceTd">Day of week</td></tr><tr><td class="confluenceTd">E</td><td class="confluenceTd">4</td><td class="confluenceTd">Thursday</td><td class="confluenceTd">Day of week</td></tr><tr><td class="confluenceTd">z</td><td class="confluenceTd">1..3</td><td class="confluenceTd">PST</td><td class="confluenceTd">Time zone</td></tr><tr><td class="confluenceTd">z</td><td class="confluenceTd">4</td><td class="confluenceTd">Pacific Standard Time</td><td class="confluenceTd">Time zone</td></tr><tr><td class="confluenceTd">Z</td><td class="confluenceTd">4</td><td class="confluenceTd">GMT-04:0 0</td><td class="confluenceTd">Time zone offset</td></tr></tbody></table>
-
-<table><thead><tr><th class="confluenceTh">Format</th><th class="confluenceTh">Example output</th></tr></thead><tbody><tr><td class="confluenceTd"><code>EEEE d MMMM yyy G, h:mm a ss's</code></td><td class="confluenceTd">Tuesday 29 March 2011 AD, 1:37 PM 48s</td></tr><tr><td class="confluenceTd"><code>h:mm a</code></td><td class="confluenceTd">1:37 PM</td></tr><tr><td class="confluenceTd"><code>yyy D KK:mm</code></td><td class="confluenceTd">2011 88 01:26</td></tr><tr><td class="confluenceTd"><code>EEEE MMMM d yyy</code></td><td class="confluenceTd">Tuesday March 29 2011</td></tr><tr><td class="confluenceTd"><code>EEE, MMM d, ''yy</code></td><td class="confluenceTd">Wed, Jul 4, '01</td></tr></tbody></table>
-
-### Placeholder Text
-
-The placeholder text is shown if the date attribute is empty. It can be used to give the end user a hint as to the expected format. Note: placeholder texts will not work if a native date picker is available (e.g. iOS and Android versions 4.0 and higher).
 
 ### Required
 
@@ -108,7 +91,7 @@ Example: you don't have to ask for the marriage date if the end user indicates t
 ## Visibility properties
 
 <div class="alert alert-info">{% markdown %}
-Conditional visibility settings were added in version 5.10.0.
+Added in Mendix 5.10.0.
 {% endmarkdown %}</div>
 
 ### Visible

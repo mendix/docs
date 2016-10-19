@@ -1,6 +1,6 @@
 ---
 title: "Enumeration Values"
-category: "refguide5"
+parent: "Enumerations"
 space: "Reference Guide 5"
 ---
 

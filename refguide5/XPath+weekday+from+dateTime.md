@@ -1,6 +1,6 @@
 ---
 title: "XPath weekday-from-dateTime"
-category: "refguide5"
+parent: "XPath+Constraint+Functions"
 space: "Reference Guide 5"
 ---
 

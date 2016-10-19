@@ -1,6 +1,6 @@
 ---
 title: "Header"
-category: "refguide5"
+parent: "Layout+Widgets"
 space: "Reference Guide 5"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Create List"
-category: "refguide5"
+parent: "List+Activities"
 space: "Reference Guide 5"
 ---
 

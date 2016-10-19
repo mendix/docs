@@ -1,6 +1,6 @@
 ---
 title: "XPath day-of-year-from-dateTime"
-category: "refguide5"
+parent: "XPath+Constraint+Functions"
 space: "Reference Guide 5"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Row (document template)"
-category: "refguide5"
+parent: "Table+Document+Templates"
 space: "Reference Guide 5"
 ---
 

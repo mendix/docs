@@ -1,6 +1,6 @@
 ---
 title: "Boolean expressions"
-category: "refguide5"
+parent: "Microflow+Expressions"
 space: "Reference Guide 5"
 ---
 ### Boolean expressions
@@ -16,7 +16,7 @@ Combines two Boolean expressions and only returns True if both of the expressi
 <div class="alert alert-info">{% markdown %}
 
 ```java
-(6 > 4) and (3 < 5) 
+(6 > 4) and (3 < 5)
 ```
 
 evaluates to True because both of the expressions are True.

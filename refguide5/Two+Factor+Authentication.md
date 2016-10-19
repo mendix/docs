@@ -1,6 +1,6 @@
 ---
 title: "Two Factor Authentication"
-category: "refguide5"
+category: "Deployment"
 space: "Reference Guide 5"
 ---
 

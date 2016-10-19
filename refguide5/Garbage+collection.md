@@ -1,6 +1,6 @@
 ---
 title: "Garbage collection"
-category: "refguide5"
+category: "Java Programming"
 space: "Reference Guide 5"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "XML Reference Guide"
-category: "refguide5"
+category: "Modeler"
 space: "Reference Guide 5"
 ---
 # Widgets - XML reference guide

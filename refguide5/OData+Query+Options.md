@@ -1,6 +1,6 @@
 ---
 title: "OData Query Options"
-category: "refguide5"
+parent: "Published+OData+Services"
 space: "Reference Guide 5"
 ---
 This is a list of query options for OData. Note that when something is not in this list, we currently don't support it (yet).

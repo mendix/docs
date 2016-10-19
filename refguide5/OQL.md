@@ -1,6 +1,6 @@
 ---
 title: "OQL"
-category: "refguide5"
+parent: "Data+Sets"
 space: "Reference Guide 5"
 ---
 

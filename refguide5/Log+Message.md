@@ -1,6 +1,6 @@
 ---
 title: "Log Message"
-category: "refguide5"
+parent: "Logging+Activities"
 space: "Reference Guide 5"
 ---
 

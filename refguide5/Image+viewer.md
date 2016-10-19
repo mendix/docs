@@ -1,6 +1,6 @@
 ---
 title: "Image viewer"
-category: "refguide5"
+parent: "File+Widgets"
 space: "Reference Guide 5"
 ---
 

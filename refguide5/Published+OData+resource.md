@@ -1,6 +1,6 @@
 ---
 title: "Published OData resource"
-category: "refguide5"
+parent: "Published+OData+Services"
 space: "Reference Guide 5"
 ---
 <div class="alert alert-warning">{% markdown %}

@@ -1,6 +1,6 @@
 ---
 title: "Security constraints in the Mendix Cloud"
-category: "refguide5"
+category: "Deployment"
 space: "Reference Guide 5"
 ---
 

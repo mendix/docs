@@ -1,6 +1,6 @@
 ---
 title: "OQL DATEDIFF"
-category: "refguide5"
+parent: "OQL+Functions"
 space: "Reference Guide 5"
 ---
 

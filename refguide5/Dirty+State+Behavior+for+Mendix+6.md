@@ -1,6 +1,6 @@
 ---
 title: "Dirty State Behavior for Mendix 6"
-category: "refguide5"
+category: "Runtime"
 space: "Reference Guide 5"
 ---
 <div class="alert alert-info">{% markdown %}

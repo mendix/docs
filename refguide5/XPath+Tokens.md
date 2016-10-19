@@ -1,6 +1,6 @@
 ---
 title: "XPath Tokens"
-category: "refguide5"
+parent: "XPath"
 space: "Reference Guide 5"
 ---
 

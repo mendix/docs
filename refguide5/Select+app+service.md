@@ -1,6 +1,6 @@
 ---
 title: "Select app service"
-category: "refguide5"
+parent: "Consumed+App+Services"
 space: "Reference Guide 5"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "List Parameters"
-category: "refguide5"
+parent: "Published+App+Service"
 space: "Reference Guide 5"
 ---
 

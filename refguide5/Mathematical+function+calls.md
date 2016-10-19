@@ -1,6 +1,6 @@
 ---
 title: "Mathematical function calls"
-category: "refguide5"
+parent: "Microflow+Expressions"
 space: "Reference Guide 5"
 ---
 
@@ -229,7 +229,7 @@ pow(2, 3)
 returns:
 
 ```java
-8 
+8
 
 ```
 

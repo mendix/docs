@@ -1,6 +1,6 @@
 ---
 title: "Report Button"
-category: "refguide5"
+parent: "Report+Widgets"
 space: "Reference Guide 5"
 ---
 

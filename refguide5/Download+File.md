@@ -1,6 +1,6 @@
 ---
 title: "Download File"
-category: "refguide5"
+parent: "Client+Activities"
 space: "Reference Guide 5"
 ---
 

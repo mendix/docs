@@ -1,6 +1,6 @@
 ---
 title: "Check box"
-category: "refguide5"
+parent: "Input+Widgets"
 space: "Reference Guide 5"
 ---
 

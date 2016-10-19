@@ -1,6 +1,6 @@
 ---
 title: "String function calls"
-category: "refguide5"
+parent: "Microflow+Expressions"
 space: "Reference Guide 5"
 ---
 

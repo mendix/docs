@@ -1,6 +1,6 @@
 ---
 title: "Sequence Flow"
-category: "refguide5"
+parent: "Microflows"
 space: "Reference Guide 5"
 ---
 

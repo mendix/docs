@@ -1,6 +1,6 @@
 ---
 title: "OQL Case Expression"
-category: "refguide5"
+parent: "OQL+Operators"
 space: "Reference Guide 5"
 ---
 

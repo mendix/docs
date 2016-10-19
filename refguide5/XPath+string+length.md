@@ -1,6 +1,6 @@
 ---
 title: "XPath string-length"
-category: "refguide5"
+parent: "XPath+Constraint+Functions"
 space: "Reference Guide 5"
 ---
 

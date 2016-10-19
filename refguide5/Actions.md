@@ -1,6 +1,6 @@
 ---
 title: "Actions"
-category: "refguide5"
+parent: "Published+App+Services"
 space: "Reference Guide 5"
 ---
 

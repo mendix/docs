@@ -1,6 +1,6 @@
 ---
 title: "Opening Pages"
-category: "refguide5"
+parent: "Page+Concepts"
 space: "Reference Guide 5"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Static Image (document template)"
-category: "refguide5"
+parent: "Document+Templates"
 space: "Reference Guide 5"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Published web service"
-category: "refguide5"
+parent: "Published+Web+Services"
 space: "Reference Guide 5"
 ---
 

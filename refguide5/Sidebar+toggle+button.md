@@ -1,6 +1,6 @@
 ---
 title: "Sidebar toggle button"
-category: "refguide5"
+parent: "Layout+Widgets"
 space: "Reference Guide 5"
 ---
 

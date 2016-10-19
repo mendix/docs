@@ -1,6 +1,6 @@
 ---
 title: "Microflow Call"
-category: "refguide5"
+parent: "Action+Call+Activities"
 space: "Reference Guide 5"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "OQL LEFT OUTER JOIN"
-category: "refguide5"
+parent: "OQL+From+Clause"
 space: "Reference Guide 5"
 ---
 

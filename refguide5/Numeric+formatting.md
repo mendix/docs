@@ -1,6 +1,6 @@
 ---
 title: "Numeric formatting"
-category: "refguide5"
+parent: "Consumed+Web+Services"
 space: "Reference Guide 5"
 ---
 ## Behavior in your Mendix application

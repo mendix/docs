@@ -1,6 +1,6 @@
 ---
 title: "Microsoft SQL Server maintenance"
-category: "refguide5"
+category: "Deployment"
 space: "Reference Guide 5"
 ---
 

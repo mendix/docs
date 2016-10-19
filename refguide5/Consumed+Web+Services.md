@@ -1,6 +1,6 @@
 ---
 title: "Consumed Web Services"
-category: "refguide5"
+parent: "Integration"
 space: "Reference Guide 5"
 ---
 <div class="alert alert-warning">{% markdown %}

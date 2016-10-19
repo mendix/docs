@@ -1,6 +1,6 @@
 ---
 title: "Consumed web service"
-category: "refguide5"
+parent: "Consumed+Web+Services"
 space: "Reference Guide 5"
 ---
 

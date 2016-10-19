@@ -1,6 +1,6 @@
 ---
 title: "XPath max"
-category: "refguide5"
+parent: "XPath+Query+Functions"
 space: "Reference Guide 5"
 ---
 

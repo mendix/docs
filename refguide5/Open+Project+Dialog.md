@@ -1,6 +1,6 @@
 ---
 title: "Open Project Dialog"
-category: "refguide5"
+parent: "Dialogs"
 space: "Reference Guide 5"
 ---
 Use this dialog to open projects. It can be used to open projects on disk or through the Team Server. In the latter case the Modeler will check whether you have already downloaded the project. If so, it will simply open it. If not, the project will downloaded from the Team Server first.

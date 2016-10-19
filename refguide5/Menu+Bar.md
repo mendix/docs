@@ -1,6 +1,6 @@
 ---
 title: "Menu Bar"
-category: "refguide5"
+parent: "Menu+Widgets"
 space: "Reference Guide 5"
 ---
 

@@ -3,7 +3,7 @@ title: "Actions Reference Guide"
 category: "Test Development"
 ---
 ## Predefined Actions in ATS
-This sections provides you with an overview of the most common used, predefined actions in ATS. For more informations about the functionality and the usage of an action, click an item below.  
+This sections provides you with an overview of the most commonly used, predefined actions in ATS. For more informations about the functionality and the usage of an action, click an item below.  
 ### Mendix Actions
 
 #### DataGrid, TemplateGrid, ListView

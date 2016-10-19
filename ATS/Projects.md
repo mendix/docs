@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+space: "ATS (Application Test Suite)"
 ---
 Creating new test cases – especially with recording – is a simple activity, so you can quickly end up with a lot. Especially when you test multiple applications or even have different teams, you don't want all data in one place. Eventually, you want to separate, structure and protect the data.
 
@@ -51,7 +52,7 @@ The **Project Dashboard** is the first page you see when you open a project.
 
 ![The project dashboard](attachments/Projects/dashboard.png)
 
-There are three sections on the dashboard. The top-left section (1) shows you the number of all the test cases and their results. The lower-left section (2) shows a condensed view of the test results from the last seven days. The right section (3) shows you a detailed view of all the test cases and test suites. For more information, see [Introduction](Introduction.md#dashboard).
+There are three sections on the dashboard. The top-left section (1) shows you the number of all the test cases and their results. The lower-left section (2) shows a condensed view of the test results from the last seven days. The right section (3) shows you a detailed view of all the test cases and test suites. For more information, see [Introduction](Introduction#dashboard).
 
 ## Sprintr integration
 

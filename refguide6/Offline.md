@@ -1,6 +1,7 @@
 ---
 title: "Offline"
-general: "Category"
+space: "Reference Guide 6"
+category: "General"
 ---
 <div class="alert alert-warning">{% markdown %}
 
@@ -18,9 +19,9 @@ To access the Offline device profile, you need to have a mobile device that runs
 
 ## Synchronization
 
-The first time an [offline-enabled](Configuring+Hybrid+Mobile+Apps+To+Run+Offline) mobile application is run, it will retrieve all the data it requires to run offline from the server. After that, it will remain in offline mode until a synchronization event is triggered. Remaining in offline mode will significantly improve the performance of your application. Synchronization can be triggered by either the server or the user. The server will automatically resynchronize the app if it is opened after a new model is uploaded, to prevent inconsistencies. The user can trigger a sync by tapping a [sync button](Sync+button), which is available in the modeler. Lastly, the app will always attempt to synchronize if it is (re-)started. If you device is not connected to the internet during start-up, this step will be skipped. 
+The first time an [offline-enabled](Configuring+Hybrid+Mobile+Apps+To+Run+Offline) mobile application is run, it will retrieve all the data it requires to run offline from the server. After that, it will remain in offline mode until a synchronization event is triggered. Remaining in offline mode will significantly improve the performance of your application. Synchronization can be triggered by either the server or the user. The server will automatically resynchronize the app if it is opened after a new model is uploaded, to prevent inconsistencies. The user can trigger a sync by tapping a [sync button](Sync+button), which is available in the modeler. Lastly, the app will always attempt to synchronize if it is (re-)started. If you device is not connected to the internet during start-up, this step will be skipped.
 
-During synchronization, any changed, created, and deleted objects will be applied to the offline database. Additionally, any objects created by the user since the application last synced will be uploaded to the server. The server will perform any relevant event handlers on these objects as usual. If the synchronization action encounters an error during this process, the entire upload process is reversed. For example, if ten objects are uploaded and one of these commits triggers a validation error, all ten objects are lost. This is to ensure that the internal consistency between your newly created objects is maintained. For example; if a user creates a Order with several Orderlines and the Order fails to commit, the entire transaction is rolled back to prevent your Orderlines from ending up in the database without an Order, thus corrupting your data. 
+During synchronization, any changed, created, and deleted objects will be applied to the offline database. Additionally, any objects created by the user since the application last synced will be uploaded to the server. The server will perform any relevant event handlers on these objects as usual. If the synchronization action encounters an error during this process, the entire upload process is reversed. For example, if ten objects are uploaded and one of these commits triggers a validation error, all ten objects are lost. This is to ensure that the internal consistency between your newly created objects is maintained. For example; if a user creates a Order with several Orderlines and the Order fails to commit, the entire transaction is rolled back to prevent your Orderlines from ending up in the database without an Order, thus corrupting your data.
 
 ## Restrictions
 
@@ -58,7 +59,7 @@ With the exception of data views, list views, template grids, and data grids, da
 
 ### Excel/CSV export
 
-Spreadsheets are generated through direct database interaction, which is not available offline. 
+Spreadsheets are generated through direct database interaction, which is not available offline.
 
 ### Platforms
 

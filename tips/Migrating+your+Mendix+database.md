@@ -1,5 +1,6 @@
 ---
 title: "Migrating your Mendix database"
+space: "Tips and Tricks"
 category: "Tips and Tricks"
 ---
 # Migrating your Mendix database

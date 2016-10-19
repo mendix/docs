@@ -1,5 +1,6 @@
 ---
 title: "Generating a personal SSH2 key pair"
+space: "Mendix 6 How-to's"
 category: "Security"
 tags: []
 ---

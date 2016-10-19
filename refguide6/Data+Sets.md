@@ -1,6 +1,7 @@
 ---
 title: "Data Sets"
-category: "refguide6"
+space: "Reference Guide 6"
+category: "Modeler"
 ---
 
 
@@ -47,7 +48,7 @@ A parameter has the following configurable properties:
 
 _Ranges_
 
-When a parameter is defined as a range the drop-down box in the report shows each range instead of all values within the ranges. Currency (deprecated), float (deprecated) and decimal parameters are always ranges. 
+When a parameter is defined as a range the drop-down box in the report shows each range instead of all values within the ranges. Currency (deprecated), float (deprecated) and decimal parameters are always ranges.
 
 _XPath constraints_
 

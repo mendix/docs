@@ -1,5 +1,6 @@
 ---
 title: "Create a Custom Theme with the Mendix UI Framework"
+space: "Mendix 6 How-to's"
 category: "GUI's"
 tags: []
 ---

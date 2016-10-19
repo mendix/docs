@@ -1,5 +1,6 @@
 ---
 title: "Image viewer"
+space: "Reference Guide 6"
 parent: "File+Widgets"
 ---
 

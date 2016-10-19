@@ -1,12 +1,13 @@
 ---
 title: "Statistics Tool"
+space: "Application Performance Monitor"
 category: "User Manual"
 ---
 This chapter gives an overview of the Statistics Tool. The Statistics Tool measures durations of microflows and browser client requests and gathers statistics like number of executions, minimum-, maximum- and average duration. The Statistics Tool is used as the first step in gaining insight in what a system is doing when it doesn’t perform optimally.
 
 The Statistics Tool has an interactive part as shown below. Additionally statistics are stored periodically to be able to determine potential trends.
 
- ![](attachments/19956249/20217990.png)
+ ![](attachments/Statistics_Tool/Overview.png)
 
 For a generic description of layout parts see the description in the Log Tool chapter.
 
@@ -16,11 +17,11 @@ The Statistics tool has the bottom part split into two sections; one showing the
 
 You enable/disable the Statistics Tool using the Start/Stop buttons.
 
-![](attachments/19956249/21725207.png)
+![](attachments/Statistics_Tool/Control_NotRunning.png)
 
 The following screenshot shows the Statistics Tool when its stopped:
 
- ![](attachments/19956249/21725208.png)
+ ![](attachments/Statistics_Tool/Control_Running.png)
 
  and the screenshot below shows the Statistics Tool when its started:
 
@@ -32,7 +33,7 @@ Tool specific functionality:
 
 The following screenshot shows the options of the Statistics Tool:
 
- ![](attachments/19956249/21725209.png)
+ ![](attachments/Statistics_Tool/Options.png)
 
 The statistics tool will measure all microflow statistics all the time. The statistics tool can exclude certain microflows while presenting from memory or storing to the database.
 
@@ -54,16 +55,16 @@ The statistics tool results has a search grid with the ability to search on the 
 
 The Statistics Tool shows the running statistics output. Several search fields are available to search through and filter these statistics.
 
- ![](attachments/19956249/21725210.png)
+ ![](attachments/Statistics_Tool/Statistics.png)
 
 You can sort on last execution to see what microflows have been executed recently. There are continuous statistics and you can use snapshot statistics. The snapshot can be reset to be able to capture a short period of time.
 
 You can select a microflow an press the history button to see a graph with history statistics:
 
-![](attachments/19956249/21725211.png)
+![](attachments/Statistics_Tool/Trend.png)
 
 _Running microflows_ show a list of microflows that have been started but have not yet ended. The duration is the time between the start and n when the refresh button was hit.
 
-![](attachments/19956249/21725212.png)
+![](attachments/Statistics_Tool/Now_Running.png)
 
 When the server generates a lot of log messages and the server is running at a high CPU and all tools are running it can happen a queue builds up in the Mendix thread that sends the log messages to the subscribers. As a consequence it can look like running microflows take 10 seconds and the maximum in the statistics is 1 second. This is caused by the fact that the running time is calculated on the refresh date and the duration of a microflow is calculated by the message date. When this happens the debug running counter for message delay shows a high number, say 10000 milliseconds. The Statistics Tool pauses collecting- and handling messages if the processing delay is above the configured [Max Processing Delay (ms)].

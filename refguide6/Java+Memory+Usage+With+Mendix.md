@@ -1,5 +1,6 @@
 ---
 title: "Java Memory Usage With Mendix"
+space: "Reference Guide 6"
 category: "refguide6"
 ---
 # Java Memory Usage With Mendix

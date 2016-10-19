@@ -1,5 +1,6 @@
 ---
 title: "OQL RANGEBEGIN"
+space: "Reference Guide 6"
 parent: "OQL+Functions"
 ---
 

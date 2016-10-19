@@ -12,10 +12,14 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,300,600,700" rel="stylesheet" type="text/css" />
     <link href="https://developers.mendix.com/wp-content/themes/mendix/assets/css/fonts.css" rel="stylesheet" type="text/css" />
     <link href="https://developers.mendix.com/wp-content/themes/mendix/assets/css/external-header-footer.css" rel="stylesheet" type="text/css" />
+    <!--[if lte IE 9]>
+      <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <![endif]-->
     <script src="//use.typekit.net/ytc8qtv.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" }}">
+    <link rel="stylesheet" href="{{ "//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css" }}">
     <link rel="stylesheet" href="{{ "/public/styles/main.css" | prepend: site.baseurl }}">
 </head>

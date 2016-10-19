@@ -1,5 +1,6 @@
 ---
 title: "Tab page"
+space: "Reference Guide 6"
 parent: "Tab+container"
 ---
 

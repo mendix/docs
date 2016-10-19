@@ -1,5 +1,6 @@
 ---
 title: "High Availability"
+space: "Mendix 6 How-to's"
 parent: "Design+The+Architecture"
 ---
 ## 1. Description

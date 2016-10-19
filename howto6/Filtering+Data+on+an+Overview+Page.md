@@ -1,19 +1,33 @@
 ---
 title: "Filtering Data on an Overview Page"
+space: "Mendix 6 How-to's"
 category: "GUI's"
 tags: []
 ---
-To filter data on your page you can use the search bar functionality or you can add an XPath constraint to your data grid. The search bar contains search fields that allow the end-user to quickly find the information he or she needs. XPath is a hard coded constraint on your data grid to filter data. The how-to will start with preparing a data structure and some example data. After this set up you will filter your data with a search bar, followed by filtering your data using different XPath constraints. 
 
-## 1\. Preparing the Data Structure, GUI and Example Data
+## 1 Introduction
 
-To see the results of this how-to it is necessary that you setup a test project with test data.
+To filter data on your page, you can use the search bar functionality, or you can add an XPath constraint to your data grid. The search bar contains search fields that allow the end-user to quickly find the information he or she needs. XPath is a hard-coded constraint on your data grid that filters the data.
 
-Before you continue, make sure that you know how to create:
+This how-to will start with preparing a data structure and some example data. After this setup, you will filter your data with a search bar. Then you will filter your data using different XPath constraints. 
 
-*   **Domain models**, if you need more info, take a look at this [how-to](Create+a+Basic+Data+Layer).
-*   **Overview and detail pages**, if you need more info, take a look at this [how-to](Create+Your+First+Two+Overview+and+Detail+Pages).
-*   **Menu items**, if you need more info, take a look at this [how-to](Setting+Up+the+Navigation+Structure).
+**This how-to will teach you how to do the following:**
+
+* Prepare the data structure
+* Prepare the GUI
+* Prepare the data
+* Filter a list using the search bar
+* Filter a list using XPath
+
+## 2 Prerequisites - Preparing the Data Structure, GUI, and Example Data
+
+To see the results of this how-to, it is necessary that you set up a test project with test data.
+
+Before you continue, make sure that you know how to create the following:
+
+* **Domain models**, if you need more info, take a look at this [how-to](Create+a+Basic+Data+Layer).
+* **Overview and detail pages**, if you need more info, take a look at this [how-to](Create+Your+First+Two+Overview+and+Detail+Pages).
+* **Menu items**, if you need more info, take a look at this [how-to](Setting+Up+the+Navigation+Structure).
 
 1.  Create the following domain model:
     ![](attachments/18448705/18581378.png)
@@ -24,7 +38,7 @@ Before you continue, make sure that you know how to create:
 5.  Add the following order data to your app:
     ![](attachments/18448705/18581373.png)
 
-## 2\. Filter a List of Orders Using the Search Bar
+## 4 Filtering a List of Orders Using the Search Bar
 
 In the previous section you set up a basic data structure and created some sample data. In this section you will add search fields to the search bar to allow the user to filter data on your overview page. In the examples you will filter on the order status and on a minimum price.
 
@@ -59,7 +73,7 @@ In the previous section you set up a basic data structure and created some sampl
 8.  Redeploy your application and enter 50 in your newly added search field. Your list will be filtered to only show orders with a minimum value of 50.
     ![](attachments/18448705/18581350.png)
 
-## 3\. Filtering a List of Orders on Status 'Open' Using XPath 
+## 5 Filtering a List of Orders with the "Open" Status Using XPath 
 
 In the previous section you used the search bar to filter data on your overview page. Now you will add an XPath constraint on the Orders data grid. With an XPath constraint on a data grid you can (hard coded) filter the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath take a look at this [documentation](/refguide6/XPath+Constraints?utm_source=businessmodeler&utm_medium=software&utm_campaign=modeler). In this section you will constrain the data grid so it will only display orders with status 'Open'.
 
@@ -70,7 +84,7 @@ In the previous section you used the search bar to filter data on your overview 
 3.  Run your application to see the following result set:
     ![](attachments/18448705/18581370.png)
 
-## 4\. Filtering a List of Orders on Minimum Total Price Using XPath
+## 6 Filtering a List of Orders on the Minimum Total Price Using XPath
 
 In the previous section you have constraint the data grid on status 'Open'. In this section we will change the constraint to ensure that the data grid will only show orders with a minimum value of 50.00.
 
@@ -79,7 +93,7 @@ In the previous section you have constraint the data grid on status 'Open'. In t
 2.  If you run your application you will see the following result set.
     ![](attachments/18448705/18581368.png)
 
-## 5\. Combining Constraints Using XPath
+## 7 Combining Constraints Using XPath
 
 In the previous two sections you used single constraints to filter the data grid on status and minimum total price. In this section you will combine those two constraints. Combination can be made with logical operator **AND** and **OR**.  
 
@@ -98,7 +112,7 @@ In the previous two sections you used single constraints to filter the data grid
 4.  Run your application to see orders which are 'Open' and have a minimum total price of 50.
     ![](attachments/18448705/18581364.png)
 
-## 6\. Filter Order List on Attributes of Associated Customers Using XPath
+## 8 Filtering the Order List with Attributes of Associated Customers Using XPath
 
 In the previous section you have constrained the data grid on attributes of the same entity as the data grid entity. In this section you will constrain on attributes over an associated object. In the example of this section you will filter the orders by their associated customers based on the city letter of the customer. 
 
@@ -108,19 +122,14 @@ In the previous section you have constrained the data grid on attributes of the 
 2.  Run your application to only see the orders of customers in Rotterdam.
     ![](attachments/18448705/18581362.png)
 
-## 7\. Related content
+## 9 Related Content
 
 *   [Scout and Windows 10 Workaround](Scout+and+Windows+10+Workaround)
 *   [Layouts and Snippets](Layouts+and+Snippets)
-*   [Filtering Data on an Overview Page](Filtering+Data+on+an+Overview+Page)
 *   [Setup Mendix UI Framework with just CSS](Setup+Mendix+UI+Framework+with+just+CSS)
-
 *   [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
 *   [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
 *   [Setup Mendix UI Framework with Koala](Setup+Mendix+UI+Framework+with+Koala)
 *   [Creating your first two Overview and Detail pages](Create+Your+First+Two+Overview+and+Detail+Pages)
 *   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
-
-
-
 *   [XPath Constraints](/refguide6/XPath+Constraints)

@@ -1,5 +1,6 @@
 ---
 title: "How to unlink (delete) your sandbox and connect the project to a licensed node."
+space: "Mendix Support"
 category: "Mendix Support"
 ---
 

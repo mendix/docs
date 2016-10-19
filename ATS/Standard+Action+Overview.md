@@ -1,5 +1,6 @@
 ---
 title: "Standard Action Overview"
+space: "ATS (Application Test Suite)"
 category: "Test Development"
 ---
 The following tables list all standard actions for Mendix. There's one table per folder/category.

@@ -1,5 +1,6 @@
 ---
-title: "API documentation"
+title: "API Documentation"
+space: "API documentation"
 redirect_from: "/apidocs/API+documentation"
 ---
 # Business Server API

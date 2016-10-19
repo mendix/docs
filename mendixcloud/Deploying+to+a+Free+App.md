@@ -1,5 +1,6 @@
 ---
 title: "Deploying to a Free App"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
 
@@ -17,9 +18,7 @@ In our free tier, your app will go to sleep if it is not active for a couple of 
 
 There are two ways to connect your application to the free app. The first is to start with the free app set up when you open your project for the first time.
 
-The second method covers what happens if you have not started your project with the free app option but would like to connect your project to the free app. The second method will be covered in a separate article. 
-
-# Table of contents
+The second method covers what happens if you have not started your project with the free app option but would like to connect your project to the free app. The second method will be covered in a separate article.
 
 ## 1\. Free app start up
 
@@ -31,7 +30,7 @@ The following instructions will cover the basics of how to start your project wi
     ![](attachments/18448696/18581222.png)
 2.  Your default option is blank and for general development you want to create your project with a blank template. However, to add the free app you need to select the back button highlighted below.
     ![](attachments/18448696/18581221.png)
-3.  Once you click the arrow, it will move you to the first option. 
+3.  Once you click the arrow, it will move you to the first option.
     ![](attachments/18448696/18581220.png)
 4.  Click on AppCloud Default Project and make sure it is highlighted in blue.
 5.  Add a descriptive name to your application, the default option is just App.
@@ -48,11 +47,11 @@ The following instructions will cover the basics of how to start your project wi
 
 ### 1.3 Deploy into your Free App
 
-Once you have created and worked on your app, you will want to share it with others in the free app. You can deploy into the free app going to the Run option at the top of your project. If you have the sandbox option enabled, you can click on Run in Sandbox. 
+Once you have created and worked on your app, you will want to share it with others in the free app. You can deploy into the free app going to the Run option at the top of your project. If you have the sandbox option enabled, you can click on Run in Sandbox.
 
 ![](attachments/18448696/18581218.png)
 
-You can view your app in any browser and share the link with others. 
+You can view your app in any browser and share the link with others.
 
 ## 2\. Related content
 

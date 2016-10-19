@@ -1,5 +1,6 @@
 ---
 title: "Domain Model (Meta Model)"
+space: "Mendix Platform SDK"
 parent: "Understanding+the+metamodel"
 ---
 ## Overview

@@ -1,5 +1,6 @@
 ---
 title: "Finding things in the model"
+space: "Mendix Platform SDK"
 parent: "Manipulating+existing+models"
 ---
 The `model` object we got back from `workingCopy.model()` can be used to find and even manipulate units and elements. It provides three different means with which we can find units and elements.

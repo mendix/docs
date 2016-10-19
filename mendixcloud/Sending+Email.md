@@ -1,5 +1,6 @@
 ---
 title: "Sending Email"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
 
@@ -15,8 +16,6 @@ You may want to send email in the Mendix Cloud via, for instance, the [Email Mod
 | **Mendix Mail Servers** | &#x2713; | &#x2717; |
 
 In our paid plans we include a local mail server for convenience and backwards compatibility. For new applications, or applications that send large amounts of e-mail we recommend using an external e-mail service.
-
-# Table of contents
 
 ## 1. External Email Providers
 

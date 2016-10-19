@@ -1,11 +1,10 @@
 ---
 title: "Finding Object Activities"
+space: "Tips and Tricks"
 category: "Tips and Tricks"
 ---
 
 Mendix has comprehensive functionality to find changes made to several subjects in the application. This how-to will describe how to find changes made in objects based on a certain activity.
-
-# Table of contents
 
 ## 1\. Find object activities
 

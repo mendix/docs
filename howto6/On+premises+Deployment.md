@@ -1,5 +1,6 @@
 ---
 title: "On-premises Deployment"
+space: "Mendix 6 How-to's"
 ---
 Learn how to deploy your app on your own hardware.
 

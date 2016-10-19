@@ -1,5 +1,6 @@
 ---
 title: "Security checklist for your on-premises installation"
+space: "Mendix 6 How-to's"
 category: "On-premises Deployment"
 tags: []
 ---

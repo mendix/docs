@@ -1,6 +1,7 @@
 ---
 title: "Content Writing and Formatting Guidelines"
-category: "Community"
+space: "Community"
+parent: "Community+Documentation"
 ---
 
 # 1 Introduction
@@ -102,9 +103,9 @@ You can use this title structure: "[goal/problem to be solved] + [Mendix termino
 
 ### 5.1.2 Introduction
 
-The introduction should explain the business case of the how-to, what problems the document solves, and why end-users should read it. 
+The introduction should explain the business case of the how-to, what problems the document solves, and why end-users should read it.
 
-In the **This how-to will teach you . . .** section, sum up the key points that end-users will have learnt after reading the how-to (make this as clear and concrete as possible). 
+In the **This how-to will teach you . . .** section, sum up the key points that end-users will have learnt after reading the how-to (make this as clear and concrete as possible).
 
 For example:
 
@@ -116,9 +117,9 @@ For example:
 
 ### 5.1.3 Prerequisites Section
 
-Use the prerequisites section to let end-users know what they should have completed before starting the how-to. This prevents having to explain certain steps in detail. 
+Use the prerequisites section to let end-users know what they should have completed before starting the how-to. This prevents having to explain certain steps in detail.
 
-You can tell end-users that they need to have installed certain software requirements or have performed specific configurations before starting the how-to. You can also list other how-to's here that should be referenced. 
+You can tell end-users that they need to have installed certain software requirements or have performed specific configurations before starting the how-to. You can also list other how-to's here that should be referenced.
 
 For example:
 
@@ -136,7 +137,7 @@ When writing exercise steps, it is especially important to focus on the styling 
 
 Start each exercise with an introductory sentence about what the goal is (for example, "To enable batch translation, follow these steps").
 
-Keep the steps short and clear. Do not combine more than two simple actions in one step. 
+Keep the steps short and clear. Do not combine more than two simple actions in one step.
 
 For example:
 
@@ -168,7 +169,7 @@ Always show the result of a microflow assignment so that the user knows what it 
 
 ### 5.2.2 Using Beta Content Warning
 
-Provide a warning note when you are releasing documentation about a feature that is in beta. 
+Provide a warning note when you are releasing documentation about a feature that is in beta.
 
 For example:
 
@@ -180,7 +181,7 @@ For example:
 
 ### 5.2.3 Using International Test Data
 
-Use English-language and international test data if applicable. Think big! 
+Use English-language and international test data if applicable. Think big!
 
 For example:
 
@@ -190,7 +191,7 @@ For example:
 
 ### 5.2.4 Writing Detailed and Short Explanations
 
-Explain something in detail once, and use the short version after that. 
+Explain something in detail once, and use the short version after that.
 
 For example, this could be a "first time" explanation:
 
@@ -205,7 +206,7 @@ This could be the "short version" explanation:
 
 # 6 Guidelines for Writing and Formatting the Mendix Reference Guide
 
-When writing for the Mendix Reference Guide, consider these guidelines: 
+When writing for the Mendix Reference Guide, consider these guidelines:
 
 * Clarify the explanations of how each feature works
 * Add examples for each feature being documented

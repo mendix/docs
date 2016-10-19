@@ -1,5 +1,6 @@
 ---
 title: "Setting Up the Navigation Structure"
+space: "Mendix 6 How-to's"
 category: "GUI's"
 tags: []
 ---

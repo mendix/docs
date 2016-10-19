@@ -1,5 +1,6 @@
 ---
 title: "Call Rest Action"
+space: "Reference Guide 6"
 parent: "Microflow+Activities"
 ---
 
@@ -72,7 +73,7 @@ The response tab offers 4 options, accessible through a dropdown:
 
 *   Import mapping for the entire response. If the response is JSON or XML it can be mapped to entities using an [Import Mapping](Import+Mappings). 
 *   Store the response in a string variable. If the response is a string, such as CSV, it can be stored directly in a string variable.
-*   Store the response in a file document. If the response is a binary content, such as PDF, it can be stored directly to a file document.
+*   Store the response in a file document. If the response is a binary content, such as PDF, it can be stored directly to a file document. From version 6.10.0 onwards you are required to specify the type of entity to store it in. This entity should inherit from System.FileDocument.
 
 	<div class="alert alert-info">
     The 'Store the response in a file document' option is available from Mendix 6.9.0.

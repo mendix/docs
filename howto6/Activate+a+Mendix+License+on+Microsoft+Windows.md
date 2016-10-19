@@ -1,5 +1,6 @@
 ---
 title: "Activate a Mendix License on Microsoft Windows"
+space: "Mendix 6 How-to's"
 category: "On-premises Deployment"
 tags: []
 ---
@@ -16,6 +17,7 @@ After you have installed the Mendix software on your on-premises server and have
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
+* To activate a Mendix instance on-premises you need an on-premises license (call your Customer Success Manager for more information)
 * Install Mendix on your Microsoft Windows server (for more information, see [Deploying Mendix on Microsoft Windows](Deploy+Mendix+on+Microsoft+Windows))
 * Be registered as the technical contact for the license
     * This is usually done in the license request process

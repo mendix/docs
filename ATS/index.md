@@ -1,5 +1,6 @@
 ---
 title: "ATS (Application Test Suite)"
+space: "ATS (Application Test Suite)"
 redirect_from:
   - "/ATS/Application+Test+Suite+Home"
   - "/ATS/Reference+Guide"
@@ -7,54 +8,54 @@ redirect_from:
 
 The Reference Guide is divided in different sections, each describing a certain feature of the ATS.
 
-## [General](General.md)
+## [General](General)
 
-*   [Mendix Compatibility](General.md#mendix)
-*   [Browser Support](General.md#browser-support)
+*   [Mendix Compatibility](General)
+*   [Browser Support](General#browser-support)
 
-## [Introduction](Introduction.md)
+## [Introduction](Introduction)
 
-*   [Start Page](Introduction.md#startpage)
-*   [Dashboard](Introduction.md#dashboard)
-*   [Navigation](Introduction.md#navigation)
-*   [User Roles](Introduction.md#different-user-roles)
+*   [Start Page](Introduction#startpage)
+*   [Dashboard](Introduction#dashboard)
+*   [Navigation](Introduction#navigation)
+*   [User Roles](Introduction#different-user-roles)
 
-## [Projects](Projects.md)
+## [Projects](Projects)
 
-*   [Action Libraries](Projects.md#action-libraries)
-*   [Creation and Setup](Projects.md#creation-and-setup)
-*   [Switching Projects](Projects.md#switching-between-projects)
-*   [Project Dashboard](Projects.md#project-dashboard)
+*   [Action Libraries](Projects#action-libraries)
+*   [Creation and Setup](Projects#creation-and-setup)
+*   [Switching Projects](Projects#switching-between-projects)
+*   [Project Dashboard](Projects#project-dashboard)
 
-## [Data Management](Data+Management.md)
+## [Data Management](Data+Management)
 
-*   [Repository](Data+Management.md#repository)
-*   [Import/Export](Data+Management.md#importexport)
-*   [Test Data](Data+Management.md#test-data)
+*   [Repository](Data+Management#repository)
+*   [Import/Export](Data+Management#importexport)
+*   [Test Data](Data+Management#test-data)
 
-## [Monitoring](Monitoring.md)
+## [Monitoring](Monitoring)
 
-*   [Test Results](Monitoring.md#test-results)
-*   [Running Tests](Monitoring.md#running-tests)
+*   [Test Results](Monitoring#test-results)
+*   [Running Tests](Monitoring#running-tests)
 
-## [Test Development](Test+Development.md)
+## [Test Development](Test+Development)
 
-*   [Object Types in the ATS](Object+Types+in+the+ATS.md)
-*   [Recorder](Recorder.md)
-*   [Manual Test Steps](Manual+Test+Steps.md)
-*   [Standard Action Overview](Standard+Action+Overview.md)
-*   [Custom Actions](Custom+Actions.md)
-*   [Data Driven Tests](Data+Driven+Tests.md)
-*   [Test Case Documentation](Test+Case+documentation.md)
+*   [Object Types in the ATS](Object+Types+in+the+ATS)
+*   [Recorder](Recorder)
+*   [Manual Test Steps](Manual+Test+Steps)
+*   [Standard Action Overview](Standard+Action+Overview)
+*   [Custom Actions](Custom+Actions)
+*   [Data Driven Tests](Data+Driven+Tests)
+*   [Test Case Documentation](Test+Case+Documentation)
 
-## [Configuration](Configuration.md)
+## [Configuration](Configuration)
 
-*   [Configure Selenium hubs](Configuration.md#configure-selenium-hubs)
-*   [Configure Test Applications](Configuration.md#configure-test-applications-)
+*   [Configure Selenium hubs](Configuration#configure-the-selenium-hubs)
+*   [Configure Test Applications](Configuration#configure-test-applications)
 
-## [Administration](Administration.md)
+## [Administration](Administration)
 
-*   [Manage Projects](Administration.md#manage-projects)
-*   [Add Selenium Configurations](Administration.md#add-selenium-hubs)
-*   [Add Applications](Administration.md#add-addplications)
-*   [Create Accounts](Administration.md#create-accounts)
+*   [Manage Projects](Administration#manage-projects)
+*   [Add Selenium Configurations](Administration#add-selenium-configurations)
+*   [Add Applications](Administration#add-applications)
+*   [Create Accounts](Administration#create-accounts)

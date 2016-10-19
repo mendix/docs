@@ -1,5 +1,6 @@
 ---
 title: "Inheritance vs. 1-1 association"
+space: "Best Practices"
 category: "Best Practices"
 ---
 # Inheritance vs. 1-1 association

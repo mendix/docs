@@ -1,5 +1,6 @@
 ---
 title: "Clustered Mendix Business Server"
+space: "Reference Guide 6"
 category: "Runtime"
 ---
 This page describes the impact of running Mendix Business Server as a Cluster on its behavior. Using the Cluster functionality you can setup your Mendix application to run behind a load balancer to enable a fail-over and/or high availability architecture.

@@ -3,19 +3,14 @@ layout: json
 ---
 {
   "categories": [
-    "System Requirements",
-    "App Platform",
+    "General",
     "Team Server",
     "Modeler",
     "Runtime",
     "Java Programming",
     "Deployment",
     "Mobile",
-    "Offline",
-    "Proactive Maintenance",
-    "Moving from 5 to 6",
-    "Third Party Licenses",
-    "Model Share"
+    "Proactive Maintenance"
   ],
   "pages": {% include json-snippets/get_pages.inc dir="/refguide6/" %}
 }

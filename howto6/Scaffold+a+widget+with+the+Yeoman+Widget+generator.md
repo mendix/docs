@@ -1,5 +1,6 @@
 ---
 title: "Scaffold a widget with the Yeoman Widget generator"
+space: "Mendix 6 How-to's"
 category: "Custom Widget Development"
 tags: []
 ---
@@ -22,7 +23,7 @@ Yeoman and Grunt both run on Node.JS, so you will need to install this.
 *   Type 'cmd' and press Enter
     ![](attachments/19202547/19398836.png)
 *   Check if Node.JS is properly installed by typing 'node -v'
-    If Node is properly installed, it will show you the version that is installed 
+    If Node is properly installed, it will show you the version that is installed
 
 ### 1.2\. Install Yeoman, widget generator & Grunt
 
@@ -80,14 +81,16 @@ Press F4 in the Modeler or go to Project -> Synchronize Project Directory
 
 *   _**Installing dependencies result in errors**_
 
-    This will likely be a problem with Node.JS and NPM. Make sure you have the latest stable (LTS, Long Term Support) version installed (At the moment of writing this how-to it is v4.2.3 LTS). Also, make sure NPM (Node Package Manager) is up to date: 'npm install npm -g'
+    This will likely be a problem with Node.JS and NPM. Make sure you have the latest stable (LTS, Long Term Support) version installed (At the moment of writing this how-to it is v4.2.3 LTS). Also, make sure NPM (Node Package Manager) is up to date: ``npm install npm -g``
 *   _**Cannot start modeler**_
 
     The Grunt-task will try to find the Mendix Version Selector and run the test-project. Obviously, this can only be done in Windows
     If it has trouble finding the Version Selector, you can provide a path to the program in Gruntfile.js.
 
     Change the MODELER_PATH
+
     ![](attachments/19202547/19398844.png)
 
-    from **null** to '<path to VersionSelector.exe>' (make sure you use double backward slashes when providing the path)
+    from **null** to \'<path to VersionSelector.exe>\' (make sure you use double backward slashes when providing the path)
+
     ![](attachments/19202547/19398845.png)

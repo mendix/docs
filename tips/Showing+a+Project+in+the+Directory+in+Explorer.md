@@ -1,11 +1,10 @@
 ---
 title: "Showing a Project in the Directory in Explorer"
+space: "Tips and Tricks"
 category: "Tips and Tricks"
 ---
 
 Mendix applications are by default stored on the local hard drive of the computer on which it is being developed. Sometimes it is needed to go to this project directory to amend or add files. Therefore this How-to will teach you how to open the project directory.  
-
-# Table of contents
 
 ## 1\. Open the project directory
 

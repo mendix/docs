@@ -1,6 +1,6 @@
 ---
 title: "Installation"
-category: "APM"
+space: "Application Performance Monitor"
 ---
 This document describes the installation and uninstallation of the APM tool. The intended audience are Mendix advanced application developers who work with the Mendix Modeler and develop, install and support Mendix applications.
 
@@ -17,7 +17,6 @@ For the experienced user quick outline of the installation:
 
 *   Backup (commit in Modeler, backup database, copy project folder?)
 *   Import APM Agent module
-*   Optionally revert widgets
 *   Copy language if other than English US is used
 *   Configure to use USE_ME/AfterStartup and USE_ME/BeforeShutdown
 *   Add permission(s) to your Administrator role

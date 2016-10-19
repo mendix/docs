@@ -1,5 +1,6 @@
 ---
 title: "Expose a Web Service"
+space: "Mendix 6 How-to's"
 category: "Integration"
 redirect_from:
 - "howto6/Exposing+a+web+service"
@@ -122,15 +123,17 @@ To get a WSDL, follow these steps:
     * If you run the application locally, the application URL should look like this: `http://localhost:8080/index.html`
     * If you run the application in a sandbox, the application URL should look like this: `https://myfirstapp.mendixcloud.com/index.html`
 3. In both of the above cases, you can replace `/index.html` with `/ws-doc/` to open the web service documentation page:
+
     ![](attachments/18448728/18581703.png)
+
     You should see the name of your web service in the list.
-4. Click the upper URL to open the WSDL. This WSDL can be given to others so that they can interact with your web service.
+4. Click the "WSDL schema" URL to open the WSDL. This WSDL can be given to others so that they can interact with your web service.
 
 ## 8 Authentication and Users
 
 To change the user authentication, follow these steps:
 
-1. Double-click the published web service in the project explorer to open it.
+1. Double-click the published web service in the **Project Explorer** to open it.
 2. In the **Published Web Service** properties window, open the **Settings** tab. Because **No Authentication** is set, currently users of the web service do not need to authenticate:
 
     ![](attachments/18448728/18581702.png)

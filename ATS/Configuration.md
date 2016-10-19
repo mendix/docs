@@ -1,11 +1,8 @@
 ---
 title: "Configuration"
+space: "ATS (Application Test Suite)"
 ---
-<div class="alert alert-info">
 
-Only a user with the Project Administrator role in the current project can access the configuration page.
-
-</div>
 
 On the configuration page under the **Project** tab you can see the current project settings. You can change the settings and add users or libraries to your project by clicking the **Edit Project Settings** button.
 
@@ -31,7 +28,7 @@ Parallel Sessions | The number of tests that can run in parallel on the Selenium
 Proxy URL | The URL of an optional proxy server. Normally there should be no need to use a proxy server
 Custom Capabilities | Set the Selenium DesiredCapabilities (for more information, see the Selenium documentation).
 
-## Configure Test Applications <a name="Applications"></a>
+## Configure Test Applications
 
 On the **Applications** tab, you can see a list of test applications that are configured for the current project:
 

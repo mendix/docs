@@ -1,5 +1,6 @@
 ---
 title: "Project Security"
+space: "Reference Guide 6"
 parent: "Project"
 ---
 
@@ -9,10 +10,6 @@ parent: "Project"
 For more general information on security, see [Security](Security).
 
 {% endmarkdown %}</div>
-
-## Table of Contents
-
-
 
 In the project security dialog you can configure security settings related to the project, such as the security level, user roles, administrator access, and anonymous users.
 
@@ -116,7 +113,7 @@ The user role of the administrator user that can be used to sign in to the appli
 
 <div class="alert alert-info">{% markdown %}
 
-Since 6.4.1: 
+Since 6.4.1:
 This user is always created and has the System.Administrator role by default. This module role allows any user with this role to manage your users. On sandboxes the user that created the application automatically has this role by default as well so you can use it to administer your users in that environment.
 This role may be helpful in case for some reason you have exceeded your user license restriction in which case you can use any user that has this System.Administrator role to login to manage your users.
 

@@ -1,13 +1,8 @@
 ---
 title: "Best Practices for Component Based Development"
+space: "Best Practices"
 category: "Best Practices"
 ---
-
-
- Written by Bart Luijten
-
-# Table of contents
-
 ## What is Component Based Development?
 
 The definition of Component Based Development as given by [Wikipedia](https://en.wikipedia.org/wiki/Component-based_software_engineering) is:
@@ -27,7 +22,7 @@ CBD has many advantages that improve the software development life cycle for app
 
 ### Component Based Development Trade-offs
 
-Applying CBD in a development process requires taking some trade-offs or risks into account. 
+Applying CBD in a development process requires taking some trade-offs or risks into account.
 
 *   **Time to Market** – CBD generally slows initial time to market as it requires investment in upfront design and higher level of involvement of architect. This is generally compensated for by lower maintenance cost.
 *   **Initial Development Cost** – The design, development and testing of interfaces between components comes with associated cost that is typically not included in monolithic projects. However, this too will contribute to lower subsequent maintenance cost.
@@ -89,7 +84,7 @@ In this case, Mendix recommends creating a Component Based design up front to th
     *   Focus especially on application growth scenarios
     *   Also include the need for variability and configurability in your design
 *   Measure application quality during the refactoring process to keep the process on track
-    *   Perform architecture reviews through experts 
+    *   Perform architecture reviews through experts
     *   Leverage model analysis through the Mendix Platform SDK, or for example tools from SIG.
 
 ## Mendix Implementation Recommendations
@@ -103,7 +98,7 @@ Mendix recommends the following best practices for use in a CBD scenario. For si
     *   In a CB scenario, a microflow will become App Service
     *   In a CB scenario, a form will become a Deep link
 *   Ensure that Identity Management is implemented for the component apps. By default you can use MxID in the Mendix Cloud. Alternatively a 3rd party Identity Management solution can be used, which can be integrated using for example the SAML module.
-*   Avoid circular dependencies: A module that is identified as candidate for a re-usable service should not call / invoke other modules in the application. Such a module should only expose itself a a service. 
+*   Avoid circular dependencies: A module that is identified as candidate for a re-usable service should not call / invoke other modules in the application. Such a module should only expose itself a a service.
 
 ### Use of Mendix App Services
 

@@ -1,5 +1,6 @@
 ---
 title: "Adding App Store content to your app"
+space: "App Store"
 category: "App Store"
 ---
 
@@ -7,11 +8,9 @@ The Mendix modeler has a lot of out of the box functionalities and widgets such 
 
 This How-to will cover the basics of how to access the appstore within the modeler and provide a simple example of how to add a widget and a module to your application.
 
-# Table of contents
-
 ## 1\. Adding a widget from the appstore
 
-In this part of the how-to you will learn how to add a radio button widget. You can follow the same steps to download any appstore content you need. 
+In this part of the how-to you will learn how to add a radio button widget. You can follow the same steps to download any appstore content you need.
 
 ![](attachments/18448639/18580443.png)
 
@@ -82,11 +81,11 @@ Every widget has a Documentation Tab in the appstore which provides more informa
 
 ![](attachments/18448639/18580433.png)
 
-## 2\. Adding a module from the appstore 
+## 2\. Adding a module from the appstore
 
 In addition to widgets, you can download entire modules from the appstore. Examples of modules you can download from the appstore are Excel Importer, Forgot Password Functionality, Email with templates, LDAP integration and so on. The modules include whole functionalities and integrations which can be very helpful when you are building your application.
 
-In this example you will learn how to add the Google Maps module. 
+In this example you will learn how to add the Google Maps module.
 
 1\. Open the appstore in the Mendix modeler.
 
@@ -120,7 +119,7 @@ Unlike the widgets, the modules will be visible on your Project Explorer overvie
 
 ### 2.2 How to use downloaded modules
 
-Each module is different and some modules might give errors because they are connected to other modules. For example, if you download the Excel importer you will need to download MxModelReflection to make the 336 errors disappear. If you run into any problems, always check the documentation tab for any dependencies and how to install guidelines. 
+Each module is different and some modules might give errors because they are connected to other modules. For example, if you download the Excel importer you will need to download MxModelReflection to make the 336 errors disappear. If you run into any problems, always check the documentation tab for any dependencies and how to install guidelines.
 
 1. For the Google Maps module, add the “Home” and “ViewAllLocations” to your navigation.
 

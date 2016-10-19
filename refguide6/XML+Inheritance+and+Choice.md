@@ -1,5 +1,6 @@
 ---
 title: "XML Inheritance and Choice"
+space: "Reference Guide 6"
 parent: "Mapping+Documents"
 ---
 

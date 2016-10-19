@@ -1,4 +1,4 @@
-(function($) {
+((function($) {
   /* search
     TODO: Will be replaced by autocomplete function
   */
@@ -12,4 +12,4 @@
       }
     });
   });
-})(jQuery);
+})(jQuery));

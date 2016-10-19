@@ -1,5 +1,6 @@
 ---
 title: "Setup Mendix UI Framework with just CSS"
+space: "Mendix 6 How-to's"
 parent: "Setup+Mendix+UI+Framework"
 ---
 In this how-to we will go through how to setup the [Mendix UI Framework](https://ux.mendix.com/) and do our first styling changes by just using CSS.

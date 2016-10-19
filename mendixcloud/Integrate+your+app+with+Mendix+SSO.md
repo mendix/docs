@@ -1,5 +1,6 @@
 ---
 title: "Integrate your app with Mendix SSO"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
 
@@ -7,8 +8,6 @@ With the release of the AppCloud, Mendix introduced a new project layout and mod
 Do you want to know more about all the possibilities this opens up? Take a look at the [press release](http://www.mendix.com/press/new-mendix-appcloud/).
 
 In this how-to we will explain how you can incorporate the AppCloudServices module into your existing app.
-
-# Table of contents
 
 ## 1\. Read More
 

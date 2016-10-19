@@ -1,6 +1,7 @@
 ---
-title: Contribute to the Mendix Documentation
-category: "Community"
+title: "How to Contribute to the Mendix Documentation"
+space: "Community"
+parent: "Community+Documentation"
 ---
 
 ## 1 Introduction
@@ -32,8 +33,8 @@ Before starting with this how-to, make sure you have completed the following pre
 
 We recommend the use of the following tools for contributing to the Mendix documentation:
 
-* For writing and editing documentation – Visual Studio Code (with which you can preview your Markdown styling)
-* For commiting your documentation – SourceTree or GitHub for Windows
+* For writing and editing documentation – [Visual Studio Code](https://code.visualstudio.com) (with which you can preview your Markdown styling)
+* For commiting your documentation – [SourceTree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
 
 ## 3 Editing the Existing Documentation
 
@@ -47,12 +48,11 @@ To edit the existing documentation (for example, the reference guide or a how-to
 
 To add a new how-to to our documentation and submit it to our documentation, follow these steps:
 
-1. Click **Write a new how-to** on the Mendix documentation homepage.
-2. From the repository, save a copy of the [How-To Template](The+How+to+Template+Page) locally in order to use it.
-3. Follow the guidelines in the template for writing your how-to, and make sure the text aligns with our [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines).
-4. Take screenshots for the how-to and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [4.1 Naming New Files and Images](#NamingNewFilesandImages).
-5. To merge your new how-to files, fork the GitHub repository, and add your files.
-6. Create a pull request.
+1. Save a copy of the [How-To Template](The+How+to+Template+Page) locally in order to use it.
+2. Follow the guidelines in the template for writing your how-to, and make sure the text aligns with our [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines).
+3. Take screenshots for the how-to and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [5 Naming New Files and Images](#NamingNewFilesandImages).
+4. To merge your new how-to files, fork the GitHub repository, and add your files.
+5. Create a pull request.
 
 <div class="alert alert-info">
 
@@ -66,9 +66,9 @@ When writing a new how-to, make sure the Markdown file name is the same as the t
 
 When adding new image files, make sure the image file name describes what the image shows (meaning, labels on the UI and any specific data). Use underscores ("`_`") between each word of your image file name (for example, "New_App_Starting_Screen").
 
-The following image file types are allowed: .jpg, .png, .gif.
+The following image file types are allowed: *.jpg*, *.png*, *.gif*.
 
 ## 6 Related Content
 
-* [How-to Template](The+How+to+Template+Page)
+* [How-To Template](The+How+to+Template+Page)
 * [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines)

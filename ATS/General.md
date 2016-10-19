@@ -1,34 +1,44 @@
 ---
 title: "General"
+space: "ATS (Application Test Suite)"
 ---
 
-# Compatibility
-This page documents the compatibility of the Application Test Suite (ATS) with the
-Mendix platform and browsers.
+# ATS version: 1.5
 
-## Mendix
+## Mendix Compatibility
 
-| ATS version | Supported Mendix Versions | Tested |
+| Mendix Version | Supported | Tested |
 | --- | --- | --- |
-| 1.5 | 5.14.1 - 6.6.0 | 5.17.0, 5.21.1, 6.4.1, 6.6.0 |
-| 1.6 | 5.14.1 - 6.7.1 | 5.17.0, 5.21.1, 6.4.1, 6.6.0, 6.7.1 |
-| 1.7 | 5.14.1 - 6.9.0 | 5.17.0, 5.21.1, 6.4.1, 6.6.0, 6.7.1, 6.9.0 |
+| 3.x | - | - |
+| 4.x | - | - |
+| >5.14.1 | Yes | 5.17.0, 5.21.1 |
+| 6.0 - 6.7.1 | Yes | 6.4.1, 6.7.1 |
 
 ## Browser Support
 
 ### Firefox
 
-| ATS version | Supported Firefox Versions |
+| Version | Supported | Notes |
 | --- | --- | --- |
-| 1.5 - 1.7 | 44, 45, 38 ESR, 45 ESR |
+| Firefox 24 ESR | - |   |
+| Firefox 38 ESR | Yes |   |
+| Firefox 45 ESR | Yes |   |
+| Firefox <= 44 | - |   |
+| Firefox 44 | Yes |   |
+| Firefox 45 | Yes |   |
+| Firefox >=46 | - |   |
 
 ### Chrome
 
-| ATS version | Supported Chrome Versions | Notes |
+| Version | Supported  | Notes   |
 | --- | --- | --- |
-| 1.5, 1.6 | 46-50 |  |
-| 1.7 | 51-53 |   |
-|  | 54+ | Recent versions of Chrome usually work (unsupported). |
+| Chrome <= 45 | - |   |
+| Chrome 46 | Yes |   |
+| Chrome 47 | Yes |   |
+| Chrome 48 | Yes |   |
+| Chrome 49 | Yes |   |
+| Chrome 50 | Yes |   |
+| Chrome >= 51 | - | Recent versions of Chrome usually work (unsupported). |
 
 ### Internet Explorer and Edge
 

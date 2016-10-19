@@ -1,13 +1,8 @@
 ---
 title: "Trends"
+space: "Mendix Cloud"
 category: "Mendix Cloud"
 ---
-| Mendix Version | Create Date | Modified Date |
-| --- | --- | --- |
-| 6.0 | Nov 19, 2015 08:33 | Nov 30, 2015 09:50 |
-
-# Table of contents
-
 ## 1. Amount of handled external requests
 
 The requests graph shows the amount of requests that are sent from the end user web browser, or systems that integrate with your application using web services. The amount of requests per second is split up by request handler.

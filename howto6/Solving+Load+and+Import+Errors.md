@@ -1,5 +1,6 @@
 ---
 title: "Solving Load and Import Errors"
+space: "Mendix 6 How-to's"
 category: "Monitoring & Troubleshooting"
 tags: []
 ---

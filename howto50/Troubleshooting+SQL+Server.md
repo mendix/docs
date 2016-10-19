@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting SQL Server"
-category: "howto50"
+parent: "Mendix+on+Windows+-+Microsoft+SQL+Server"
 space: "Mendix 5 How-to's"
 ---
 # Troubleshooting SQL Server
@@ -21,4 +21,3 @@ space: "Mendix 5 How-to's"
 *   [Setting up a SQL Server user](Setting+up+a+SQL+Server+user)
 *   [Restoring a SQL Server database](/howto6/Restoring+a+SQL+Server+database)
 *   [Troubleshooting SQL Server](/howto6/Troubleshooting+SQL+Server)
-

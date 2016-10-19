@@ -1,6 +1,6 @@
 ---
 title: "Getting started with the Widget Development Plugin for Adobe Brackets"
-category: "howto50"
+category: "Custom Widget Development"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21</td><td class="confluenceTd">Jan 02, 2015 13:55</td><td colspan="1" class="confluenceTd">Dec 04, 2015 14:52</td></tr></tbody></table>

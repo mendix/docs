@@ -1,6 +1,6 @@
 ---
 title: "Setting Up the Navigation Structure"
-category: "howto50"
+category: "GUI's"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20.0</td><td class="confluenceTd">Aug 05, 2014 17:23</td><td colspan="1" class="confluenceTd">Oct 21, 2015 08:52</td></tr></tbody></table>
@@ -109,4 +109,3 @@ Now that you've created a menu structure it's time to start using it on pages.
 *   [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
 *   [Creating your first two Overview and Detail pages](Creating+your+first+two+Overview+and+Detail+pages)
 *   [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
-

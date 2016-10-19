@@ -1,6 +1,6 @@
 ---
 title: "Layouts and Snippets"
-category: "howto50"
+category: "GUI's"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">6.0</td><td class="confluenceTd">Dec 15, 2014 14:26</td><td colspan="1" class="confluenceTd">Nov 27, 2015 15:35</td></tr></tbody></table>
@@ -180,4 +180,3 @@ Additionally, a snippet can define an entity that serves as a context for the wi
 *   [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
 *   [Creating your first two Overview and Detail pages](Creating+your+first+two+Overview+and+Detail+pages)
 *   [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
-

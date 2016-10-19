@@ -1,6 +1,6 @@
 ---
 title: "Drag and Drop Microflows/Pages into Microflow"
-category: "howto50"
+category: "Logic and Business Rules"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.10</td><td class="confluenceTd">Nov 05, 2014 12:47</td><td colspan="1" class="confluenceTd">Oct 19, 2015 12:47</td></tr></tbody></table>
@@ -33,4 +33,3 @@ Instead of creating a new sub microflow action it is a lot easier to drag an exi
 *   [Triggering Logic using Microflows](Triggering+Logic+using+Microflows)
 *   [Creating a Custom Save Button](Creating+a+Custom+Save+Button)
 *   [Extending Your Application with Custom Java](Extending+Your+Application+with+Custom+Java)
-

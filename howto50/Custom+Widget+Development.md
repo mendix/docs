@@ -1,6 +1,5 @@
 ---
 title: Custom Widget Development
-category: howto50
 space: "Mendix 5 How-to's"
 ---
 

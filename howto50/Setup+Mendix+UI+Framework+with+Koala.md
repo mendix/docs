@@ -1,6 +1,6 @@
 ---
 title: "Setup Mendix UI Framework with Koala"
-category: "howto50"
+category: "GUI's"
 space: "Mendix 5 How-to's"
 ---
 # Setup Mendix UI Framework with Koala
@@ -79,4 +79,3 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 *   [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
 *   [Creating your first two Overview and Detail pages](Creating+your+first+two+Overview+and+Detail+pages)
 *   [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
-

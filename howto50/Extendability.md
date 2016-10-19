@@ -1,8 +1,14 @@
 ---
-title: "Extendability"
-category: "howto50"
+title: Extendability
 space: "Mendix 5 How-to's"
 ---
-One of the strengths of Mendix is that it’s easy to connect your Mendix application with other systems. Our App Store is filled with all kinds of connectors and adapters. And you're able to extend your app by using and creating Widgets.
 
-<table><thead><tr><th class="highlight-blue confluenceTh" data-highlight-colour="blue">Basic</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd"><img class="confluence-embedded-image confluence-thumbnail" alt="Documentation" width="20" src="attachments/8784273/8946538.png" data-image-src="attachments/8784273/8946538.png"> <a href="Explore+our+connectors+and+adapters">Explore our connectors and adapters</a></td></tr></tbody></table><table><thead><tr><th class="highlight-blue confluenceTh" data-highlight-colour="blue">Advanced</th></tr></thead><tbody><tr><td class="confluenceTd"><a href="Send+Custom+Emails+From+Your+App"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783163/8946558.png" data-image-src="attachments/8783163/8946558.png"></a> <a href="Send+Custom+Emails+From+Your+App">Send custom emails from your app</a></td></tr></tbody></table><table><thead><tr><th class="highlight-blue confluenceTh" data-highlight-colour="blue">Expert</th></tr></thead><tbody><tr><td class="confluenceTd"></td></tr><tr><td class="confluenceTd"><img class="confluence-embedded-image confluence-thumbnail" alt="Blog" width="20" src="attachments/8784273/8946540.png" data-image-src="attachments/8784273/8946540.png"></td></tr></tbody></table>
+One of the strengths of Mendix is that it's easy to connect your Mendix application with other systems. Our App Store is filled with all kinds of connectors and adapters. And you're able to extend your app by using and creating Widgets.
+
+| Basic
+| -----------------------
+| [Explore our connectors and adapters](Explore+our+connectors+and+adapters)
+
+| Advanced
+| ----------------------
+| [Send custom emails from your app](Send+Custom+Emails+From+Your+App)

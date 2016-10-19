@@ -1,6 +1,6 @@
 ---
 title: "Setting up monitoring with New Relic"
-category: "howto50"
+category: "On-premises Deployment"
 space: "Mendix 5 How-to's"
 ---
 # Setting up monitoring with New Relic
@@ -29,7 +29,7 @@ The configuration section in m2ee.yaml should look something like this:
  javaopts: [
  "-Dfile.encoding=UTF-8", "-XX:MaxPermSize=64M", "-Xmx256M", "-Xms256M",
  "-Djava.io.tmpdir=/path/to/project/data/tmp",
- "-javaagent:/home/mendix-user/newrelic/newrelic.jar", 
+ "-javaagent:/home/mendix-user/newrelic/newrelic.jar",
  ]
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: "Restoring a SQL Server database"
-category: "howto50"
+parent: "Mendix+on+Windows+-+Microsoft+SQL+Server"
 space: "Mendix 5 How-to's"
 ---
 
@@ -73,4 +73,3 @@ RESTORE permissions are given to roles in which membership information is always
 *   [Troubleshooting SQL Server](/howto6/Troubleshooting+SQL+Server)
 *   [Mendix SQL Maintenance Plans](/howto6/Mendix+SQL+Maintenance+Plans)
 *   [Setting up a new SQL Server database](/howto6/Setting+up+a+new+SQL+Server+database)
-

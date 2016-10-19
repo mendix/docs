@@ -1,6 +1,6 @@
 ---
 title: "Scout and Windows 10 Workaround"
-category: "howto50"
+parent: "Setup+Mendix+UI+Framework"
 space: "Mendix 5 How-to's"
 ---
 Scout has not been updated for Windows 10 and therefor Windows 10 users need to use the following workaround:
@@ -23,4 +23,3 @@ You can set your regional settings back to Dutch and it should still work.
 *   [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
 *   [Creating your first two Overview and Detail pages](Creating+your+first+two+Overview+and+Detail+pages)
 *   [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
-

@@ -1,6 +1,6 @@
 ---
 title: "Build a simple HRM app 4: Enrich the GUI with Filter Options"
-category: "howto50"
+parent: "How+to+build+a+simple+HRM+app"
 space: "Mendix 5 How-to's"
 ---
 # Build a simple HRM app 4: Enrich the GUI with Filter Options 

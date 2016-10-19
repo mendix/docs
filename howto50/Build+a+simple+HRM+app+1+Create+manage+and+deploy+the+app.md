@@ -1,6 +1,6 @@
 ---
 title: "Build a simple HRM app 1: Create, manage and deploy the app"
-category: "howto50"
+parent: "How+to+build+a+simple+HRM+app"
 space: "Mendix 5 How-to's"
 ---
 # Build a simple HRM app 1: Create, manage and deploy the app 

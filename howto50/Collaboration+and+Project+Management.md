@@ -1,8 +1,19 @@
 ---
-title: "Collaboration and Project Management"
-category: "howto50"
+title: 'Collaboration & Project Management'
 space: "Mendix 5 How-to's"
 ---
+
 Learn how to build apps in a team, share your code base and manage your projects.
 
-<table><thead><tr><th class="highlight-blue confluenceTh" data-highlight-colour="blue">Basic</th></tr></thead><tbody><tr><td class="confluenceTd"><a href="Gathering+user+feedback"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Gathering+user+feedback">Gathering user feedback</a></td></tr><tr><td colspan="1" class="confluenceTd"><a href="Sharing+the+Development+Database"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Sharing+the+Development+Database">Sharing the development database</a></td></tr><tr><td colspan="1" class="confluenceTd"><a href="Adding+App+Store+content+to+your+app"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Adding+App+Store+content+to+your+app">Adding App Store content to your app</a></td></tr><tr><td colspan="1" class="confluenceTd"><a href="Adding+App+Store+content+to+your+app"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a><a href="Managing+your+Application+Requirements+with+Mendix">Managing your Application Requirements with Mendix</a></td></tr></tbody></table><table><thead><tr><th class="highlight-blue confluenceTh" data-highlight-colour="blue">Advanced</th></tr></thead><tbody><tr><td class="confluenceTd"><a href="Starting+your+own+repository"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Starting+your+own+repository">Starting your own repository</a></td></tr><tr><td colspan="1" class="confluenceTd"><a href="Contributing+to+a+GitHub+repository"><img class="confluence-embedded-image confluence-thumbnail" alt="How-To" width="20" src="attachments/8783270/8946555.png" data-image-src="attachments/8783270/8946555.png"></a> <a href="Contributing+to+a+GitHub+repository">Contributing to a GitHub repository</a></td></tr><tr><td colspan="1" class="confluenceTd"><span><a href="Using+Team+Server+-+Version+Control"><img class="confluence-embedded-image confluence-thumbnail" alt="Documentation" width="20" src="attachments/8784266/8946548.png" data-image-src="attachments/8784266/8946548.png"></a> <a href="Using+Team+Server+-+Version+Control">Using Team Server/Version Control</a></span></td></tr></tbody></table>
+| Basic
+| ------------------------------------------------------------
+| [Gathering user feedback](Gathering+user+feedback)
+| [Sharing the development database](Sharing+the+Development+Database)
+| [Adding App Store content to your app](Adding+App+Store+content+to+your+app)
+| [Managing your Application Requirements with Mendix](Managing+your+Application+Requirements+with+Mendix)
+
+| Advanced
+| ------------------------------------------------------------
+| [Starting your own repository](Starting+your+own+repository)
+| [Contributing to a GitHub repository](Contributing+to+a+GitHub+repository)
+| [Using Team Server/Version Control](Using+Team+Server+-+Version+Control)

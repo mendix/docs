@@ -1,6 +1,6 @@
 ---
 title: "The Mobile Slider Custom Widget"
-category: "howto50"
+category: "Custom Widget Development"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21</td><td class="confluenceTd">Mar 30, 2015 10:20</td><td colspan="1" class="confluenceTd">Dec 04, 2015 14:51</td></tr></tbody></table>
@@ -182,4 +182,3 @@ To communicate with Mendix you need to use the Mendix JavaScript Client API. Rea
 A very nice book that helps you understand what JavaScript is all about.
 
 [http://addyosmani.com/resources/essentialjsdesignpatterns/book/](http://addyosmani.com/resources/essentialjsdesignpatterns/book/) 
-

@@ -1,6 +1,6 @@
 ---
 title: "Monitoring Mendix using JMX"
-category: "howto50"
+category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.10</td><td class="confluenceTd">Nov 17, 2014 16:09</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:37</td></tr></tbody></table>
@@ -245,7 +245,7 @@ The idea is that you will have a Java Action that you can call in a microflow, w
 
 Here’s an example in the Mendix modeler:
 
-## 
+##
 4\. Related content
 
 *   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)

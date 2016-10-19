@@ -1,6 +1,6 @@
 ---
 title: "Synchronizing user accounts using the LDAP module"
-category: "howto50"
+category: "Integration"
 space: "Mendix 5 How-to's"
 ---
 # Synchronizing user accounts using the LDAP module

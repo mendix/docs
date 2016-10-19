@@ -1,6 +1,6 @@
 ---
 title: "High Availability"
-category: "howto50"
+parent: "Architecture+Options"
 space: "Mendix 5 How-to's"
 ---
 
@@ -71,4 +71,3 @@ If you are using Custom Settings to influence the Runtime behavior it is critica
 *   [Restoring a SQL Server database](Restoring+a+SQL+Server+database)
 *   [Setting up a SQL Server user](Setting+up+a+SQL+Server+user)
 *   [Setting up the database user](Setting+up+the+database+user)
-

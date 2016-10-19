@@ -1,6 +1,6 @@
 ---
 title: "Sharing the Development Database"
-category: "howto50"
+category: 'Collaboration & Project Management'
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.7</td><td class="confluenceTd">Nov 04, 2014 10:32</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:22</td></tr></tbody></table>
@@ -18,7 +18,7 @@ To get the most out of the built in database, the following prerequisites have t
 3.  A running application
 4.  Some data in the database to commit SQL queries to
 
-## 
+##
 2\. Type of database
 
 The built-in database is a flatfile database called HSQLDB (HyperSQL DataBase). This is the leading SQL relational database software written in Java. It offers a small, fast multithreaded and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
@@ -27,7 +27,7 @@ HSQLDB has been constantly developed over 12 years and is used as a database and
 
 Therefore this type of database is excellent to use while developing and running applications in the Mendix Business Modeler on a local machine. Thanks to this built in functionality, the developer doesn't have to run a local database engine and management tools.
 
-## 
+##
 3\. Select the preferred database
 
 One application can make use of many different databases. Take the following steps to select the preferred database (if there is more than one configured)
@@ -37,7 +37,7 @@ One application can make use of many different databases. Take the following ste
 2.  Select the preferred database configuration and click on 'Make active'
     ![](attachments/8782429/8945806.png)
 
-## 
+##
 4\. Start the database viewer
 
 To start the built in database viewer, the following steps have to be applied:
@@ -51,7 +51,7 @@ To start the built in database viewer, the following steps have to be applied:
 
 This is the database manager. On the left pane all tables from all modules in the running application are showed. On the right top pane it is possible to enter SQL queries and on the right lower pane the results from the entered SQL query will be shown.
 
-## 
+##
 5\. Execute queries
 
 Queries can be executed in two ways. It can be done directly from the command line (top right pane) in SQL script, or via the explorer on the left pane. For more information about SQL, visit the following page: [http://www.w3schools.com/sql/](http://www.w3schools.com/sql/). To execute queries from the database explorer (left pane), the following steps have to be applied:
@@ -65,7 +65,7 @@ Queries can be executed in two ways. It can be done directly from the command li
 
 On the bottom right pane, the results are shown and a total of 50 rows is retrieved from the database. From the standard actions it is also possible to delete, update and insert records. The standard actions can also be customized to retrieve, update or delete specific data. Advanced knowledge about the SQL language is needed to get the desired results.
 
-## 
+##
 6\. Commit a data snapshot
 
 The built-in database can easily be shared with other members of the team. Like the business logic itself, it is possible to commit a snapshot of the database to the team server. To do this, take the following steps:
@@ -75,7 +75,7 @@ The built-in database can easily be shared with other members of the team. Like 
 2.  Press 'Yes' to commit if one already exists, then add the informational message and press 'OK'
 3.  The data is now committed to the team server and can be used by other team members
 
-## 
+##
 7\. Update a data snapshot
 
 To import a data snapshot into the model, the project has to be updated since the last database snapshot has been committed by another team member. To get the data from the committed database snapshot the following steps have to be applied:

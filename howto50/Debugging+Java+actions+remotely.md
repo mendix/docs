@@ -1,6 +1,6 @@
 ---
 title: "Debugging Java actions remotely"
-category: "howto50"
+category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Nov 17, 2014 11:01</td><td colspan="1" class="confluenceTd">Nov 17, 2015 13:54</td></tr></tbody></table>
@@ -44,7 +44,7 @@ In your Java IDE you need to configure remote debugging. The following screensho
 
 3\. Start debugging.
 
-## 
+##
 3\. Related content
 
 *   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)

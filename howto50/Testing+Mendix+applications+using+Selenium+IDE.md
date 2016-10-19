@@ -1,6 +1,6 @@
 ---
 title: "Testing Mendix applications using Selenium IDE"
-category: "howto50"
+category: "Testing"
 space: "Mendix 5 How-to's"
 ---
 # Testing Mendix applications using Selenium IDE

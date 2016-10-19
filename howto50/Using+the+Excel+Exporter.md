@@ -1,6 +1,6 @@
 ---
 title: "Using the Excel Exporter"
-category: "howto50"
+category: "Integration"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.12</td><td class="confluenceTd">Nov 24, 2014 22:44</td><td colspan="1" class="confluenceTd">Oct 19, 2015 10:37</td></tr></tbody></table>
@@ -44,7 +44,7 @@ Depending on the layout selected when the project was created, errors in the mod
 
 {% endmarkdown %}</div>
 
-## 
+##
 2\. Add Navigation Items to Allow Users to Configure Settings
 
 In this part of the how to you will learn how to add the required pages into the Project Navigation that are needed to configure both the Mx Model Reflection and the Excel Export templates that will be used within the application.
@@ -55,7 +55,7 @@ In this part of the how to you will learn how to add the required pages into the
 3.  Add a new item to the Navigation for **Administrator** to access **XLSReport.Excel_Document_Overview**.
     ![](attachments/8782996/8946105.png)
 
-## 
+##
 3\. Mx Model Reflection Configuration
 
 In this part of the how to you will learn how to run the MxModelReflection synchronization and so the app can leverage the output from that process to create the highly customizable Excel Export templates.
@@ -66,7 +66,7 @@ In this part of the how to you will learn how to run the MxModelReflection synch
 2.  Highlight each module the app needs to synchronize and click the **Toggle Module Sync** button (the Sync this Module should now be 'Yes').
 3.  Click the **Synchronize Objects** button to execute the synchronization process.
 
-## 
+##
 4\. Creating Excel Export Templates
 
 In this part of the how to you will learn how to create a basic Excel Export template within your app. This section will cover an overview of the various configuration items to enable you to start building the desired templates.

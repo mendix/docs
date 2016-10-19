@@ -1,6 +1,6 @@
 ---
 title: "Creating a Basic Hello World Custom Widget"
-category: "howto50"
+category: "Custom Widget Development"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21</td><td class="confluenceTd">Oct 22, 2014 12:48</td><td colspan="1" class="confluenceTd">Dec 04, 2015 14:51</td></tr></tbody></table>
@@ -512,7 +512,7 @@ The widget package contains a package.xml file and a helloworld.xml file. Now al
                     });
                     this._handles = [];
                 }
-                // When a mendix object exists create subscribtions. 
+                // When a mendix object exists create subscribtions.
                 if (this._contextObj) {
                     _objectHandle = this.subscribe({
                         guid: this._contextObj.getGuid(),
@@ -779,5 +779,3 @@ A very nice book that helps you understand what JavaScript is all about.
 *   [Creating a Basic Hello World Custom Widget](Creating+a+Basic+Hello+World+Custom+Widget)
 *   [XML Reference Guide](/refguide6/XML+Reference+Guide)
 *   [The Mobile Slider Custom Widget](The+Mobile+Slider+Custom+Widget)
-
-

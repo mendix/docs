@@ -1,6 +1,6 @@
 ---
 title: "Setting up a SQL Server user"
-category: "howto50"
+parent: "Mendix+on+Windows+-+Microsoft+SQL+Server"
 space: "Mendix 5 How-to's"
 ---
 
@@ -31,4 +31,3 @@ On this page you can find a step by step instruction on how to: [Set up the dat
 *   [How to execute an SQL statement on an external database](/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database)
 *   [Setting up Internet Information Services](Setting+up+Internet+Information+Services)
 *   [Restoring a SQL Server database](Restoring+a+SQL+Server+database)
-

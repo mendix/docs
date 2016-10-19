@@ -1,6 +1,6 @@
 ---
 title: "Gathering user feedback"
-category: "howto50"
+category: 'Collaboration & Project Management'
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.10</td><td class="confluenceTd">Nov 26, 2014 14:49</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:54</td></tr></tbody></table>
@@ -98,4 +98,3 @@ In a few simple steps, Mendix enables you to start collecting feedback from your
 *   [Contributing to a GitHub repository](Contributing+to+a+GitHub+repository)
 *   [Using Team Server - Version Control](Using+Team+Server+-+Version+Control)
 *   [Gathering user feedback](Gathering+user+feedback)
-

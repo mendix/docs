@@ -1,6 +1,6 @@
 ---
 title: "Querying over self-references"
-category: "howto50"
+category: "Tips & Tricks"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20</td><td class="confluenceTd">May 21, 2015 17:40</td><td colspan="1" class="confluenceTd">Oct 09, 2015 15:48</td></tr></tbody></table>

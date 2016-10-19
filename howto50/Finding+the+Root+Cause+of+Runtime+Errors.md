@@ -1,6 +1,6 @@
 ---
 title: "Finding the Root Cause of Runtime Errors"
-category: "howto50"
+category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.14</td><td class="confluenceTd">Mar 20, 2015 15:30</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:57</td></tr></tbody></table>
@@ -55,4 +55,3 @@ With these three pieces of information, the cause of the error should be able to
 
 
 A blog post was written on this topic, which also provides some example errors and solutions, which is available [here](http://www.mendix.com/blog/the-root-cause-of-runtime-errors-and-resolving-the-2-most-common-issues/).  There is more information available for debugging microflows [locally](Debugging+Microflows) and [remotely](Debugging+Microflows+Remotely).
-

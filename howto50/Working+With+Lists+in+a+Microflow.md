@@ -1,6 +1,6 @@
 ---
 title: "Working With Lists in a Microflow"
-category: "howto50"
+category: "Logic and Business Rules"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.14</td><td class="confluenceTd">Jan 22, 2015 15:10</td><td colspan="1" class="confluenceTd">Oct 19, 2015 10:34</td></tr></tbody></table>
@@ -59,12 +59,11 @@ In the previous section you have set up a basic data structure and created some 
 11.  Select **From database** as _source_ option.
     ![](attachments/8785360/8946816.png)
 12.  Set the following properties:
-    1.  For _Entity _select **Order**.
-    2.  For _Name_ enter **OrderList**<div class="alert alert-info">{% markdown %}
+    * For _Entity_ select **Order**.
+    * For _Name_ enter **OrderList**
 
-    With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.
+<div class="alert alert-info">With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.</div>
 
-    {% endmarkdown %}</div>
 13.  Add the following XPath expression in the XPath constraint field: _[OrderStatus = 'Processing']_. This expression will filter the list to only orders with the status **Processing**.
 14.  Enter a descriptive name for the list variable. Your properties screen should look like this:
     ![](attachments/8785360/8946818.png)

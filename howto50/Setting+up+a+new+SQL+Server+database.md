@@ -1,6 +1,6 @@
 ---
 title: "Setting up a new SQL Server database"
-category: "howto50"
+parent: "Mendix+on+Windows+-+Microsoft+SQL+Server"
 space: "Mendix 5 How-to's"
 ---
 # Setting up a new SQL Server database
@@ -57,7 +57,7 @@ CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone 
 ```
 
 ```
-CREATE PROCEDURE [dbo].[usp_nextsequencevalue] 
+CREATE PROCEDURE [dbo].[usp_nextsequencevalue]
 @SeqName nvarchar(128)
 AS
 BEGIN
@@ -77,4 +77,3 @@ END;
 *   [Setting up the database user](Setting+up+the+database+user)
 *   [Sharing the Development Database](Sharing+the+Development+Database)
 *   [Setting up Internet Information Services](Setting+up+Internet+Information+Services)
-

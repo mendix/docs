@@ -1,6 +1,6 @@
 ---
 title: "Build a simple HRM app 5: Smarten up your app with business logic"
-category: "howto50"
+parent: "How+to+build+a+simple+HRM+app"
 space: "Mendix 5 How-to's"
 ---
 # Build a simple HRM app 5: Smarten up your app with business logic

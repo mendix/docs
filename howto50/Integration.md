@@ -1,6 +1,5 @@
 ---
 title: Integration
-category: howto50
 space: "Mendix 5 How-to's"
 ---
 

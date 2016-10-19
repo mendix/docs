@@ -1,6 +1,6 @@
 ---
 title: "Contributing to a GitHub repository"
-category: "howto50"
+category: 'Collaboration & Project Management'
 space: "Mendix 5 How-to's"
 ---
 # Contributing to a GitHub repository
@@ -40,4 +40,3 @@ We like to work with our community and encourage you to create and contribute us
 *   [Contributing to a GitHub repository](Contributing+to+a+GitHub+repository)
 *   [Using Team Server - Version Control](Using+Team+Server+-+Version+Control)
 *   [Gathering user feedback](Gathering+user+feedback)
-

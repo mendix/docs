@@ -1,0 +1,214 @@
+---
+title: howto50 (Learn Mendix 5.0)
+category: howto50
+space: "Mendix 5 How-to's"
+---
+
+Name        | Learn Mendix 5.0
+----------- | ----------------------------------------------------------------------------
+Description | This space contains how-to's, documentation, and whitepapers about Mendix 5.
+Created by  | (Jul 21, 2010)
+
+# Available Pages:
+
+- TreeNavigation
+- [Mendix 5 How-to's](2949310) ![](images/icons/contenttypes/home_page_16.png)
+
+  - [Kick-Start](Kick+Start)
+
+    - [Create and Deploy Your First App](Create+and+Deploy+Your+First+App)
+    - [How to build a simple HRM app](How+to+build+a+simple+HRM+app)
+
+      - [Build a simple HRM app 1: Create, manage and deploy the app](Build+a+simple+HRM+app+1+Create+manage+and+deploy+the+app)
+      - [Build a simple HRM app 2: First steps in building a rich GUI](Build+a+simple+HRM+app+2+First+steps+in+building+a+rich+GUI)
+      - [Build a simple HRM app 3: Show related data in the GUI](Build+a+simple+HRM+app+3+Show+related+data+in+the+GUI)
+      - [Build a simple HRM app 4: Enrich the GUI with Filter Options](Build+a+simple+HRM+app+4+Enrich+the+GUI+with+Filter+Options)
+      - [Build a simple HRM app 5: Smarten up your app with business logic](Build+a+simple+HRM+app+5+Smarten+up+your+app+with+business+logic)
+
+  - [Data Models](Data+Models)
+
+    - [Creating a basic data layer](Creating+a+basic+data+layer)
+    - [Setting up data validation](Setting+up+data+validation)
+    - [Denormalize Data to Improve Performance](Denormalize+Data+to+Improve+Performance)
+    - [Working with images and files](Working+with+images+and+files)
+    - [Working With Object Events](Working+With+Object+Events)
+
+  - GUI's
+
+    - [Creating your first two Overview and Detail pages](Creating+your+first+two+Overview+and+Detail+pages)
+    - [Filtering Data on an Overview Page](Filtering+Data+on+an+Overview+Page)
+    - [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
+    - [Layouts and Snippets](Layouts+and+Snippets)
+    - [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
+
+      - [Scout and Windows 10 Workaround](Scout+and+Windows+10+Workaround)
+      - [Setup Mendix UI Framework with just CSS](Setup+Mendix+UI+Framework+with+just+CSS)
+      - [z_Setup Mendix UI Framework (old folder structure)](14091828)
+
+    - [Create a custom theme with the Mendix UI Framework](Create+a+custom+theme+with+the+Mendix+UI+Framework)
+    - [Setup Mendix UI Framework with Koala](Setup+Mendix+UI+Framework+with+Koala)
+
+  - [Logic and Business Rules](Logic+and+Business+Rules)
+
+    - [Create your first Microflow: Hello World!](Create+your+first+Microflow+Hello+World)
+    - [Creating a Custom Save Button](Creating+a+Custom+Save+Button)
+    - [Drag and Drop Microflows/Pages into Microflow](Drag+Microflows+and+Pages+into+a+Microflow)
+    - [Extract and use sub microflows](Extract+and+use+sub+microflows)
+    - [Triggering Logic using Microflows](Triggering+Logic+using+Microflows)
+    - [Working With Lists in a Microflow](Working+With+Lists+in+a+Microflow)
+    - [Defining access rules using XPath](Defining+access+rules+using+XPath)
+    - [Extending Your Application with Custom Java](Extending+Your+Application+with+Custom+Java)
+    - [Java API Tutorial](Java+API+Tutorial)
+    - [Error Handling](Error+Handling)
+    - [Optimizing Microflow Aggregates](Optimizing+Microflow+Aggregates)
+    - [Optimizing Retrieve Activities](Optimizing+Retrieve+Activities)
+
+  - Mobile
+
+    - [Deploy your first Hybrid Mobile App](Deploy+your+first+Hybrid+Mobile+App)
+    - [Publishing a Mendix Hybrid Mobile App in Mobile App Stores](Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores)
+
+  - Security
+
+    - [Creating a secure app](Creating+a+secure+app)
+    - [Generating a personal SSH2 key pair](Generating+a+personal+SSH2+key+pair)
+    - [Anonymous User Security](Anonymous+User+Security)
+
+  - Integration
+
+    - [Consuming a simple Web Service](Consuming+a+simple+Web+Service)
+    - [Importing and Exporting Objects](Importing+and+Exporting+Objects)
+    - [Consuming a complex web service](Consuming+a+complex+web+service)
+    - [Consuming a REST Service](Consuming+a+REST+Service)
+    - [Exposing data to BI tools using OData](Exposing+data+to+BI+tools+using+OData)
+    - [Exposing a web service](Exposing+a+web+service)
+    - [Importing XML documents](Importing+XML+documents)
+    - [Exporting XML documents](Exporting+XML+documents)
+    - [Importing Excel Documents](Importing+Excel+Documents)
+    - [Using the Excel Exporter](Using+the+Excel+Exporter)
+    - [Synchronizing user accounts using the LDAP module](Synchronizing+user+accounts+using+the+LDAP+module)
+    - [Selenium Support](Selenium+Support)
+    - [Integrating a Legacy System into a Mendix App](Integrating+a+Legacy+System+into+a+Mendix+App)
+
+  - Extendability
+
+    - [Explore our connectors and adapters](Explore+our+connectors+and+adapters)
+    - [Send Custom Emails From Your App](Send+Custom+Emails+From+Your+App)
+    - [Access a Samba share from the MxCloud](Access+a+Samba+share+from+the+MxCloud)
+
+  - [Custom Widget Development](Custom+Widget+Development)
+
+    - [Creating a Basic Hello World Custom Widget](Creating+a+Basic+Hello+World+Custom+Widget)
+    - [The Mobile Slider Custom Widget](The+Mobile+Slider+Custom+Widget)
+    - [Getting started with the Widget Development Plugin for Adobe Brackets](Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
+    - [Creating a chainable Custom Widget](Creating+a+chainable+Custom+Widget)
+
+  - [Tips & Tricks](Tips+Tricks)
+
+    - [Finding your way through a project](Finding+your+way+through+a+project)
+    - [Finding Object Activities](Finding+Object+Activities)
+    - [Finding Unused Items](Finding+Unused+Items)
+    - [Showing a Project in the Directory in Explorer](Showing+a+Project+in+the+Directory+in+Explorer)
+    - [Querying over self-references](Querying+over+self+references)
+    - [Translatable Validation Messages](Translatable+Validation+Messages)
+
+  - Testing
+
+    - [Testing microflows using the UnitTesting module](Testing+microflows+using+the+UnitTesting+module)
+    - [Testing web services using SoapUI](Testing+web+services+using+SoapUI)
+    - [Testing Mendix applications using Selenium IDE](Testing+Mendix+applications+using+Selenium+IDE)
+    - [Creating automated tests with TestNG](Creating+automated+tests+with+TestNG)
+
+  - [Monitoring and Troubleshooting](Monitoring+and+Troubleshooting)
+
+    - [Clearing Warning Messages in Mendix](Clearing+Warning+Messages+in+Mendix)
+    - [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)
+    - [Debug a Hybrid Mobile Application](Debug+a+Hybrid+Mobile+Application)
+    - [Debugging Java Actions](Debugging+Java+Actions)
+    - [Debugging Java actions remotely](Debugging+Java+actions+remotely)
+    - [Debugging Microflows](Debugging+Microflows)
+    - [Debugging Microflows Remotely](Debugging+Microflows+Remotely)
+    - [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
+    - [Log Levels](Log+Levels)
+    - [Monitoring application health](Monitoring+application+health)
+    - [Monitoring Mendix using JMX](Monitoring+Mendix+using+JMX)
+    - [Solving Load and Import Errors](Solving+Load+and+Import+Errors)
+
+  - [Collaboration and Project Management](Collaboration+and+Project+Management)
+
+    - [Gathering user feedback](Gathering+user+feedback)
+    - [Sharing the Development Database](Sharing+the+Development+Database)
+    - [Adding App Store content to your app](Adding+App+Store+content+to+your+app)
+    - [Managing your Application Requirements with Mendix](Managing+your+Application+Requirements+with+Mendix)
+    - [Starting your own repository](Starting+your+own+repository)
+    - [Contributing to a GitHub repository](Contributing+to+a+GitHub+repository)
+    - [Using Team Server - Version Control](Using+Team+Server+-+Version+Control)
+
+  - [Cloud Foundry](Cloud+Foundry)
+
+    - [Deploying a Mendix App to Cloud Foundry](Deploying+a+Mendix+App+to+Cloud+Foundry)
+    - [Deploying a Mendix App to HP Helion](Deploying+a+Mendix+App+to+HP+Helion)
+    - [Deploying a Mendix App to Pivotal](Deploying+a+Mendix+App+to+Pivotal)
+
+  - [On-premises Deployment](On+premises+Deployment)
+
+    - [Security checklist for your on-premises installation](Security+checklist+for+your+on+premises+installation)
+    - [Installing Mendix on Debian GNU Linux](Installing+Mendix+on+Debian+GNU+Linux)
+    - [Installing Mendix on RedHat and CentOS](Installing+Mendix+on+RedHat+and+CentOS)
+    - [Deploying Mendix on Microsoft Windows](Deploying+Mendix+on+Microsoft+Windows)
+    - [Updating a Mendix Application](Updating+a+Mendix+Application)
+    - <Troubleshooting>
+    - [Architecture Options](Architecture+Options)
+
+      - [High Availability](High+Availability)
+
+    - [Mendix on Windows - Microsoft SQL Server](Mendix+on+Windows+-+Microsoft+SQL+Server)
+
+      - [Setting up a new SQL Server database](Setting+up+a+new+SQL+Server+database)
+      - [Mendix SQL Maintenance Plans](Mendix+SQL+Maintenance+Plans)
+      - [Restoring a SQL Server database](Restoring+a+SQL+Server+database)
+      - [Setting up a SQL Server user](Setting+up+a+SQL+Server+user)
+
+        - [Setting up the database user](Setting+up+the+database+user)
+
+      - [Troubleshooting SQL Server](Troubleshooting+SQL+Server)
+
+    - [Setting up monitoring with New Relic](Setting+up+monitoring+with+New+Relic)
+
+  - Internal
+
+    - [How to create a How-to](How+to+create+a+How+to)
+    - [How-to information](How+to+information)
+
+  - [How-to articles](How+to+articles)
+
+- [Deprecated Documentation](Deprecated+Documentation)
+
+  - [Activate your Mendix license](Activate+your+Mendix+license)
+  - [Call a microflow](Call+a+microflow)
+  - [Configure the Mendix application~](Configure+the+Mendix+application~)
+  - [Deployment to the Cloud](Deployment+to+the+Cloud)
+
+    - [Call a web service over https which uses a self signed certifcate](Call+a+web+service+over+https+which+uses+a+self+signed+certifcate)
+    - [Change microflow constants](Change+microflow+constants)
+    - [Manage scheduled events](Manage+scheduled+events)
+    - [Mendix Hosting Enviroment project structure and commands](Mendix+Hosting+Enviroment+project+structure+and+commands)
+    - [View logging - Advanced](View+logging+-+Advanced)
+
+  - [Mendix on Windows - Service Console 4](Mendix+on+Windows+-+Service+Console+4)
+
+    - [Preparation of the environment](Preparation+of+the+environment)
+    - [Setting up a New Mendix Application](Setting+up+a+New+Mendix+Application)
+
+      - [Service form](Service+form)
+      - [Update app form](Update+app+form)
+      - [Database form](Database+form)
+      - [Configuration form](Configuration+form)
+
+    - [Setting up Internet Information Services](Setting+up+Internet+Information+Services)
+
+  - [Upgrading the Mendix Service Console](Upgrading+the+Mendix+Service+Console)
+  - [Use the Data View context object](Use+the+Data+View+context+object)
+
+- [String Concatenation](String+Concatenation)
+- [App Store Content Support](App+Store+Content+Support)

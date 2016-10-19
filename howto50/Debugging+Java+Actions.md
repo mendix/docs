@@ -1,6 +1,6 @@
 ---
 title: "Debugging Java Actions"
-category: "howto50"
+category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
 # Debugging Java Actions

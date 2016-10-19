@@ -1,6 +1,6 @@
 ---
 title: "Finding Object Activities"
-category: "howto50"
+category: "Tips & Tricks"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.10</td><td class="confluenceTd">Nov 19, 2014 12:23</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:58</td></tr></tbody></table>
@@ -33,4 +33,3 @@ The following steps will explain how to find certain activities that are used in
 *   [Finding your way through a project](Finding+your+way+through+a+project)
 *   [Showing a Project in the Directory in Explorer](Showing+a+Project+in+the+Directory+in+Explorer)
 *   [Querying over self-references](Querying+over+self+references)
-

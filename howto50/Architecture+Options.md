@@ -1,6 +1,6 @@
 ---
 title: "Architecture Options"
-category: "howto50"
+category: "On-premises Deployment"
 space: "Mendix 5 How-to's"
 ---
 # Architecture Options
@@ -54,4 +54,3 @@ For more information please see the [How to page on High availability](High+Avai
 *   [Restoring a SQL Server database](Restoring+a+SQL+Server+database)
 *   [Setting up a SQL Server user](Setting+up+a+SQL+Server+user)
 *   [Setting up the database user](Setting+up+the+database+user)
-

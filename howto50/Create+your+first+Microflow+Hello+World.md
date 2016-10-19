@@ -1,6 +1,6 @@
 ---
 title: "Create your first Microflow: Hello World!"
-category: "howto50"
+category: "Logic and Business Rules"
 space: "Mendix 5 How-to's"
 ---
 # Create your first Microflow: Hello World!

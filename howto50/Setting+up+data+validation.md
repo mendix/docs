@@ -1,6 +1,6 @@
 ---
 title: "Setting up data validation"
-category: "howto50"
+category: "Data Models"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.04</td><td class="confluenceTd">Aug 08, 2014 12:52</td><td colspan="1" class="confluenceTd">Oct 20, 2015 08:20</td></tr></tbody></table>
@@ -96,4 +96,3 @@ Validating user input can also be achieved by overriding the default save button
 *   [Denormalize Data to Improve Performance](Denormalize+Data+to+Improve+Performance)
 *   [Setting up data validation](Setting+up+data+validation)
 *   [Working With Object Events](Working+With+Object+Events)
-

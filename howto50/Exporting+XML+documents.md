@@ -1,6 +1,6 @@
 ---
 title: "Exporting XML documents"
-category: "howto50"
+category: "Integration"
 space: "Mendix 5 How-to's"
 ---
 # Exporting XML documents
@@ -169,4 +169,3 @@ In this section we'll explain how you can create logic to export customers store
 *   [Expose a web service](Exposing+a+web+service)
 *   [Consume a Simple Web Service](Consuming+a+simple+Web+Service)
 *   [Consume a Complex Web Service](Consuming+a+complex+web+service)
-

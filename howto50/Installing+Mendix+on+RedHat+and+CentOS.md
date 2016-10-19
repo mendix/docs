@@ -1,6 +1,6 @@
 ---
 title: "Installing Mendix on RedHat and CentOS"
-category: "howto50"
+category: "On-premises Deployment"
 space: "Mendix 5 How-to's"
 ---
 The documentation which describes the installation and basic configuration of the Mendix software on a system running RedHat or CentOS is available as part of the m2ee-tools helper program:

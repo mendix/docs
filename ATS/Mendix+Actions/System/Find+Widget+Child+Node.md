@@ -6,7 +6,7 @@ Find a Node within a Mendix Widget.
 Also matches the widget node itself.
 
 ## Usage
-Pass the name of the parent widget and the selector for the child node you want to find. You can use [CSS Selectors](/../Selectors#CSS+Selectors) and [JQuery Selectors](/../Selectors#JQuery+Selectors) to define the path to the child node.
+Pass the name of the parent widget and the selector for the child node you want to find. You can use [CSS Selectors](../../Selectors#CSS+Selectors) and [JQuery Selectors](../../Selectors#JQuery+Selectors) to define the path to the child node.
 Optional you can provide a WebElement as search context, to narrow down the search for the node, if there are two or more node with the same name.
 
 ## Input Parameters

@@ -2,6 +2,8 @@
 title: "Naming Conventions"
 space: "Best Practices"
 category: "Best Practices"
+redirect_from:
+  - "/bestpractices/Naming+conventions+in+Mendix+5"
 ---
 # Naming conventions in Mendix 5
 
@@ -156,7 +158,7 @@ In your integrations you have the following type of events.
 
 ### 2.4.7 Scheduled events
 
-For the microflow that you use in your scheduled events recommend using the prefix **SCE_**. 
+For the microflow that you use in your scheduled events recommend using the prefix **SCE_**.
 
 ## 2.5 Pages
 

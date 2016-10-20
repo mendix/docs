@@ -19,7 +19,7 @@ This section will explain how to create entities and their attributes.
     By default the Business Modeler creates a persistent entity. This means that the application's database will be able to store objects of this type of entity.
 4.  You can **start typing directly** to change the name of the entity into **Customer.
     ![](attachments/2949123/16842756.png) **
-5.  Right click the entity and select **Add** **>** **Attribute**.
+5.  Right click the entity and select **Add** > **Attribute**.
     ![](attachments/2949123/16842757.png)
 6.  Enter _Name_ as name of the new attribute.
 7.  Select _String_ as data type.
@@ -33,7 +33,7 @@ This section will explain how to create entities and their attributes.
 
 An enumeration is a predefined list of values that can be used as attribute type. This only allows users of the application to select any of the predefined values for this attribute. A good example for an enumeration is order status. Let's add an enumeration and extend the Order entity with an enum value based attribute.
 
-1.  Right click a module and select **Add > ****Enumeration**.
+1.  Right click a module and select **Add** > **Enumeration**.
     ![](attachments/2949123/16842763.png)
 2.  Enter _OrderStatus_ as name and click **OK**.
     ![](attachments/2949123/8946638.png)
@@ -41,19 +41,19 @@ An enumeration is a predefined list of values that can be used as attribute type
     ![](attachments/2949123/16842764.png)
 4.  Enter _Open_ as **caption** and click **OK**.
     ![](attachments/2949123/16842765.png)
-5.  Repeat those steps for the remaining values; **Processing**_, _**Complete**. You should have the following values:
+5.  Repeat those steps for the remaining values; **Processing**, **Complete**. You should have the following values:
     ![](attachments/2949123/16842766.png)
 6.  Click **OK** to save the enumeration.
 
     Now let's create an enum value based attribute in the Order entity.
-7.  Right click the **Order** entity and select **Add > ****Attribute**.
+7.  Right click the **Order** entity and select **Add** > **Attribute**.
     ![](attachments/2949123/16842767.png)
 8.  Enter _OrderStatus_ as **Name.**
 9.  Select _Enumeration_ as **Type.**
-10.  Select enumeration _OrderStatus_ and click **Select**.**
-    ![](attachments/2949123/16842768.png)**
-11.  Select _Open_ as **Default value.
-    **![](attachments/2949123/8946644.png)
+10.  Select enumeration _OrderStatus_ and click **Select**.
+    ![](attachments/2949123/16842768.png)
+11.  Select _Open_ as **Default** value.
+    ![](attachments/2949123/8946644.png)
 12.  Click **OK** to save the new attribute. The Order entity should look like this:
     ![](attachments/2949123/16842769.png)
 

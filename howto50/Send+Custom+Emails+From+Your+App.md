@@ -3,13 +3,8 @@ title: "Send Custom Emails From Your App"
 category: "Extendability"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.14</td><td class="confluenceTd">Nov 12, 2014 14:00</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:31</td></tr></tbody></table>
-
-
 
 Each application can leverage Mendix App Store content to create and send custom emails based off of configurable templates. To achieve this, the app will require three Mendix App Store modules and configuration settings for the SMTP server that will be used to relay the messages.
-
-# Table of contents
 
 ## 1\. Download the Required Modules from the Mendix App Store
 
@@ -47,8 +42,7 @@ Depending on the layout selected when the project was created, errors in the mod
 
 {% endmarkdown %}</div>
 
-##
-2\. Add Navigation Items to Allow Users to Configure Settings
+## 2\. Add Navigation Items to Allow Users to Configure Settings
 
 In this part of the how to you will learn how to add the required pages into the Project Navigation that are needed to configure both the SMTP settings and email templates that will be used within the application.
 
@@ -63,8 +57,7 @@ Within the EmailTemplate module, there are several useful pages that can help in
 
 {% endmarkdown %}</div>
 
-##
-3\. Configuration
+## 3\. Configuration
 
 In this part of the how to you will learn how to run the MxModelReflection synchronization, configure the SMTP settings required to send email from the app, the encryption module, and email templates that will be used in the app. SMTP server settings and configurations should be known at time of configuration. This encompasses settings such as username and password (if authentication is required), server name/address, port number for SMTP relay (25 is default, 587 for TLS), and sender address.
 
@@ -96,35 +89,25 @@ Make sure to allow a administrator to access this page and has read/write the co
 1.  Open the **Email Template Overview** page via the Navigation item configured to EmailTemplate.EmailTemplate_Overview.
 2.  Click **New** to start the creation of a new template.
 3.  Enter a name for the template in the **Name** field.
-4.  Specify by default what the values are for 'From', 'CC', 'BCC', 'Subject', and 'Use Only Plain Text'.![](attachments/8782771/8946061.png)
+4. Specify by default what the values are for 'From', 'CC', 'BCC', 'Subject', and 'Use Only Plain Text'.
 
-    <div class="alert alert-info">{% markdown %}
+    ![](attachments/8782771/8946061.png)
 
     All of the email values for To, From, CC, BCC, and Subject can be overridden once the email functionality is implemented if those values are to be dynamic within the app. Also, attachments can be added to this process at runtime within a microflow. 
 
-    {% endmarkdown %}</div>
 5.  Configure both HTML Text and Plain Text formats for the email with the template text needed to be in the email body. Since the template can handle tokens (described next) go ahead and put placeholders in for those dynamic attributes needed in the email in the format of \{\%TokenSequenceNumber\%\}
     ![](attachments/8782771/8946060.png)
 6.  Specify and upload any attachments that will be sent automatically when the email is triggered
 
 ### 3.4 Configuring the Template Tokens
 
-1.  Select the object that the token will need to be derived from.
+1. Select the object that the token will need to be derived from.
     ![](attachments/8782771/8946066.png)
-
-    <div class="alert alert-info">{% markdown %}
 
     Within the context of Email Templates, the object will be the Entity in the Domain Model that the data value will be derived from.
 
-    {% endmarkdown %}</div>
-2.  Set the **TokenSequenceNumber** between the token characters, **Description**, the **Attribute** that will populate in the email when triggered.![](attachments/8782771/8946065.png)
-3.  Save the token and the template
-
-    <div class="alert alert-info">{% markdown %}
-
-    If tokens are used within the template, it will be required that a parameter of the same entity type is passed to the email microflow so that the tokens can be read off of the correct object.
-
-    {% endmarkdown %}</div>
+2. Set the **TokenSequenceNumber** between the token characters, **Description**, the **Attribute** that will populate in the email when triggered.![](attachments/8782771/8946065.png)
+3. Save the token and the template. If tokens are used within the template, it will be required that a parameter of the same entity type is passed to the email microflow so that the tokens can be read off of the correct object.
 
 ### 3.5 Configuring the Encryption Key
 

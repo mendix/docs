@@ -5,10 +5,6 @@ space: "Mendix 5 How-to's"
 ---
 # Debugging Java Actions
 
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Dec 16, 2014 11:42</td><td colspan="1" class="confluenceTd">Nov 17, 2015 13:53</td></tr></tbody></table>
-
-
-
 The Mendix Business Modeler has a built-in debugger to solve errors on Microflow level. A Microflow can be extended with custom Java actions, but because these actions are text based they can only be checked on compile errors. If you run into an error in any of the Java actions, you can easily debug them utilizing the debugger of Eclipse.
 
 # Table of contents
@@ -29,12 +25,10 @@ Before you start with this how-to please complete the following prerequisites:
 2.  Double click the **ReverseCustomerName.java** in the package explorer of Eclipse.
     ![](attachments/8784371/8946365.png)
 3.  Place the cursor on the line that needs debugging.
-4.  Hold down **Ctrl+Shift** and press **B** to enable a breakpoint. A blue dot in front of the line will occur. 
+4. Hold down **Ctrl+Shift** and press **B** to enable a breakpoint. A blue dot in front of the line will occur. 
     ![](attachments/8784376/8946464.png)
 
-    <div class="alert alert-info">{% markdown %}
     You can also use Ctrl+Shift+B to disable a breakpoint.
-    {% endmarkdown %}</div>
 
 ## 3\. Debugging in Eclipse
 
@@ -48,19 +42,14 @@ Before you start with this how-to please complete the following prerequisites:
 
     As an end user of the application you will see progress bar on your application. As a developer you will notice that the Eclipse icon will be flashing on the windows task bar.
 4.  Open Eclipse. You should now see the 'Debug' perspective of Eclipse.
-5.  Click **Step into** (F5) or **Step over** (F6) to move on the next step in the Microflow.
+5. Click **Step into** (F5) or **Step over** (F6) to move on the next step in the Microflow.
     ![](attachments/8784376/8946467.png)
 
-    <div class="alert alert-warning">{% markdown %}
-
     The difference between 'Step into' and 'Step over' is only noticeable if you run into a function call. 'Step into' means that the debugger steps into the function and 'Step over' just moves the debugger to the next line in the same java action.
-
     With 'Step Return' (F7) you can instruct the debugger to leave the function. It's basically the opposite of 'Step Into'.
-
     Clicking 'Resume' (F8) instructs the debugger to continue until it reaches another breakpoint.
 
-    {% endmarkdown %}</div>
-6.  Place your cursor on any of the variables in the Java action to see its value in a pop-up.
+6. Place your cursor on any of the variables in the Java action to see its value in a pop-up.
     ![](attachments/8784376/8946466.png)
 
 ## 4\. Related content
@@ -72,7 +61,4 @@ Before you start with this how-to please complete the following prerequisites:
 *   [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)
 *   [Monitoring Mendix using JMX](Monitoring+Mendix+using+JMX)
 *   [Debugging Java Actions](Debugging+Java+Actions)
-
-
-
 *   [Java Actions](/refguide5/Java+Actions)

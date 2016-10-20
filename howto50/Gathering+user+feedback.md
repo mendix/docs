@@ -3,13 +3,8 @@ title: "Gathering user feedback"
 category: 'Collaboration & Project Management'
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.10</td><td class="confluenceTd">Nov 26, 2014 14:49</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:54</td></tr></tbody></table>
-
-
 
 With Mendix, you can make use of fully integrated feedback cycle functionality. Gathering feedback, evaluating the feedback and converting valid feedback into actionable userstories is supported by Mendix out of the box. In this document the entire process is explained in detail, aiming to enable developers to capture and process valuable user feedback.
-
-# Table of contents
 
 ## 1\. Prerequisites
 

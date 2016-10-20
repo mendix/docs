@@ -3,13 +3,8 @@ title: "Setting up monitoring with New Relic"
 category: "On-premises Deployment"
 space: "Mendix 5 How-to's"
 ---
-# Setting up monitoring with New Relic
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20</td><td class="confluenceTd">May 07, 2015 16:08</td><td colspan="1" class="confluenceTd">Oct 09, 2015 14:29</td></tr></tbody></table>
 
 When setting up a Mendix application on-premise, you can set up advanced monitoring with New Relic. This works with both Windows and Linux deployments.
-
-# Table of contents
 
 ## Preparations
 

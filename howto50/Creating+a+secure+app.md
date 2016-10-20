@@ -128,8 +128,8 @@ In this part of the How-To you will configure the security at production level. 
 You will start creating access rules for the **Administrator **module role. Since this role represents an administrator, let’s assume he is allowed to create, delete, read and write everything. So you can create the rules in a quick batch.
 
 1.  Check-in all entities.
-2.  Click **OK.
-    **![](attachments/8782293/9273406.png)
+2.  Click **OK.**
+    ![](attachments/8782293/9273406.png)
 3.  Setting up the rule configuration.
 
     *   Module role: Administrator

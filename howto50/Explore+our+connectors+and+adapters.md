@@ -3,13 +3,8 @@ title: "Explore our connectors and adapters"
 category: "Extendability"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Dec 09, 2014 15:33</td><td colspan="1" class="confluenceTd">Sep 02, 2015 13:31</td></tr></tbody></table>
 
 One of the strengths of Mendix is that it’s easy to connect your Mendix application with other systems. Our App Store is filled with all kinds of connectors and adapters. Here is an overview of some of our connectors:
-
-# Table of contents
-
-
 
 ## 1. [Salesforce.com](http://Salesforce.com)-Connector
 

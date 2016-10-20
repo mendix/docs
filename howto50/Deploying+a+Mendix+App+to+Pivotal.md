@@ -3,13 +3,8 @@ title: "Deploying a Mendix App to Pivotal"
 category: "Cloud Foundry"
 space: "Mendix 5 How-to's"
 ---
-# Deploying a Mendix App to Pivotal
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">6.0</td><td class="confluenceTd">Nov 19, 2015 08:32</td><td colspan="1" class="confluenceTd">Mar 08, 2016 15:10</td></tr></tbody></table>
 
 ![](attachments/18448647/18580547.png)
-
-
 
 This how-to will focus on deploying to Pivotal Web Services. Note that the outline is the same for all Cloud Foundry distributions.
 
@@ -108,17 +103,8 @@ To enable persistent file storage you need to configure the S3 object store whic
     ![](attachments/18448647/18580568.png)
 4.  Add the required **S3 variables**:
     ![](attachments/18448647/18580567.png)
-5.  Add any optional variables.
+5.  Add any optional variables. When adding Environment Variables to a running application you need to restart it for the changes to take effect. After deploying an App from the Mendix Business Modeler two variables will automatically be added: DEVELOPEMENT_MODE and ADMIN_PASSWORD. The development mode is _true_ by befault. Change this to _false_ to run the app in production. The admin password is the password of the default admin of your Mendix app.
 
-    <div class="alert alert-info">{% markdown %}
-
-    When adding Environment Variables to a running application you need to restart it for the changes to take effect.
-
-    {% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
-
-    After deploying an App from the Mendix Business Modeler two variables will automatically be added: DEVELOPEMENT_MODE and ADMIN_PASSWORD. The development mode is _true_ by befault. Change this to _false_ to run the app in production. The admin password is the password of the default admin of your Mendix app.
-
-    {% endmarkdown %}</div>
 
 ## 6\. Deploy your App to Cloud Foundry
 

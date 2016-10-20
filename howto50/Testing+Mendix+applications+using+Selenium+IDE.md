@@ -3,9 +3,6 @@ title: "Testing Mendix applications using Selenium IDE"
 category: "Testing"
 space: "Mendix 5 How-to's"
 ---
-# Testing Mendix applications using Selenium IDE
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">May 12, 2015 16:37</td><td colspan="1" class="confluenceTd">Nov 05, 2015 12:59</td></tr></tbody></table>
 
 Selenium IDE is a Firefox plugin which records and plays back user interactions with the browser. 
 
@@ -94,38 +91,35 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
 9.  Click the **Save** button.
 10.  Click the **Sign out** button.
 11.  Click the **Record** button in **Selenium IDE** to stop recording.
-12.  Click the **Run current test case** button.
+12. Click the **Run current test case** button. The test will fail because it can not find the element with target `css=input.form-control.mx-focus`.
 
-    The test will fail because it can not find the element with target _css=[input.form-control.mx](http://input.form-control.mx)-focus_.
     ![](attachments/12880232/13402556.png)
 
-    The element with target _css=[input.form-control.mx](http://input.form-control.mx)-focus_ does not exist on the page. The element does contain the CSS class _.mx-focus _ during recording the script, but does not contain the CSS class while running the test. You need to find another CSS selector for the same element with the use of Firebug and FirePath.
-13.  Repeat steps 3 till 6.
+    The element with target `css=input.form-control.mx-focus` does not exist on the page. The element does contain the CSS class `.mx-focus` during recording the script, but does not contain the CSS class while running the test. You need to find another CSS selector for the same element with the use of Firebug and FirePath.
+13. Repeat steps 3 till 6.
 14.  Click the **Firebug** button in the Firefox toolbar.
     ![](attachments/12880232/13828118.png)
 15.  Click the **FirePath** tab.
     ![](attachments/12880232/13828119.png) 
-16.  Click the **Inspect Element** button.
+16. Click the **Inspect Element** button.
     ![](attachments/12880232/13828120.png)
 
-17.  Click the **Amount** field.
+17. Click the **Amount** field.
     ![](attachments/12880232/13828121.png)
-    The CSS selector _.form-control_ is not unique; there are 14 matching nodes. We need to find a unique selector for the **Amount** field.
-
-    Mendix 5 uses CSS classes to identify page content like widgets and popups. You can use these classes in Selenium to manipulate pages and verify data. Widgets can be given a name in the Mendix Business Modeler. These names appear in the HTML document as class names prefixed by _mx-name-_. For instance, a grid named _EmployeeGrid_ will get a CSS class _mx-name-EmployeeGrid_. This is true for all widgets.
-18.  Open the **Desktop_Expense_NewEdit_Admin **page in the Mendix Business Modeler.
+    The CSS selector _.form-control_ is not unique; there are 14 matching nodes. We need to find a unique selector for the **Amount** field. Mendix 5 uses CSS classes to identify page content like widgets and popups. You can use these classes in Selenium to manipulate pages and verify data. Widgets can be given a name in the Mendix Business Modeler. These names appear in the HTML document as class names prefixed by _mx-name-_. For instance, a grid named _EmployeeGrid_ will get a CSS class _mx-name-EmployeeGrid_. This is true for all widgets.
+18. Open the **Desktop_Expense_NewEdit_Admin **page in the Mendix Business Modeler.
     ![](attachments/12880232/13828122.png)
-19.  Select the **Amount** field.
+19. Select the **Amount** field.
     ![](attachments/12880232/13828123.png) 
 
     The name of the **Amount** field is _textBox3._ Every element will automatically get the CSS class _mx-name-[Name]_. So the amount field will have the CSS class _mx-name-textBox3_.
     ![](attachments/12880232/13828124.png)
 
-20.  Enter _.mx-name-textBox3_ in **FirePath** and press Enter.
+20. Enter _.mx-name-textBox3_ in **FirePath** and press Enter.
     ![](attachments/12880232/13828125.png)
     There is only 1 matching node, so you have now found a unique selector for the **Amount** field.
 
-21.  Change the following value:
+21. Change the following value:
 
     ```java
     css=input.form-control.mx-focus
@@ -144,28 +138,28 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
     Because it is an input field, you have to add _input_ to the target.
 
     {% endmarkdown %}</div>
-22.  Click the **Run current test case** button.
+22. Click the **Run current test case** button.
 
     The test will fail because it can not find the element with target _css=.mx-name-textBox3 input_. The element can't be found because the page with the element is not loaded yet.
-23.  Switch the speed control to slow.
+23. Switch the speed control to slow.
     ![](attachments/12880232/14385160.png)
 
     The speed control determines how fast your test script runs. Default the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test started asserting for an element on the page even before the page is fully loaded by the browser. Try to run your test script as fast as possible.
-24.  Click the **Run current test case** button.
+24. Click the **Run current test case** button.
 
     The test will fail because it can not find the element with target _css=[input.form-control.mx](http://input.form-control.mx)-focus_.
     ![](attachments/12880232/14385157.png) 
 
-25.  Open the **Desktop_Expense_NewEdit_Admin** page in the Mendix Business Modeler.
-26.  Click the **Type **selectbox.
+25. Open the **Desktop_Expense_NewEdit_Admin** page in the Mendix Business Modeler.
+26. Click the **Type **selectbox.
     The name of the **Type **selectbox is _referenceSelector1_ and will have the CSS class _mx-name-_referenceSelector1__.
-27.  Enter _._mx-name-_referenceSelector1___ in **FirePath** and press Enter.
+27. Enter _._mx-name-_referenceSelector1___ in **FirePath** and press Enter.
 
     Two elements are found: one in the popup and one on the page in the background. To retrieve the element of the active page, you need to add _.mx-window-active_ to the target.
-28.  Enter _.mx-window-active __._mx-name-_referenceSelector1___ in **FirePath** and press Enter.
+28. Enter _.mx-window-active __._mx-name-_referenceSelector1___ in **FirePath** and press Enter.
 
     There is only 1 matching node, so you have now found a unique selector for the **Type** selectbox. 
-29.  Change the following value:
+29. Change the following value:
 
     ```java
     css=select.form-control.mx-focus
@@ -184,7 +178,7 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
     Because it is a dropdown list, you have to add _select_ to the target.
 
     {% endmarkdown %}</div>
-30.  Click the **Run current test case** button.
+30. Click the **Run current test case** button.
 
     The test will pass.
     ![](attachments/12880232/14385158.png)
@@ -234,20 +228,14 @@ Now the test steps will have 'mx-name-' CSS selectors rather than the Selenium 
 8.  Click the **Save** button.
 9.  Click the **Sign out** button.
 10.  Click the **Record** button in **Selenium IDE** to stop recording.
-11.  Click the **Run current test case** button.
-
-    The test will fail because it can not find the element with target _css=.mx-window-active .mx-name-textBox6 input_. The element can't be found because the page with the element is not loaded yet.
+11. Click the **Run current test case** button. The test will fail because it can not find the element with target _css=.mx-window-active .mx-name-textBox6 input_. The element can't be found because the page with the element is not loaded yet.
     ![](attachments/12880232/15794183.png) 
-12.  Switch the speed control to slow.
+12. Switch the speed control to slow.
     ![](attachments/12880232/14385160.png)
 
     The speed control determines how fast your test script runs. Default the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test started asserting for an element on the page even before the page is fully loaded by the browser. Try to run your test script as fast as possible.
-13.  Click the **Run current test case** button.
-
-    The test will pass.
+13. Click the **Run current test case** button. The test will pass.
     ![](attachments/12880232/15794184.png)
-
-**If you liked this how-to, let the author know by rating it. Thank you!**
 
 ## 4\. Related content
 

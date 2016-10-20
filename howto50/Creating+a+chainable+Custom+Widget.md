@@ -3,9 +3,6 @@ title: "Creating a chainable Custom Widget"
 category: "Custom Widget Development"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21</td><td class="confluenceTd">Mar 04, 2015 16:20</td><td colspan="1" class="confluenceTd">Dec 04, 2015 14:52</td></tr></tbody></table>
-
-
 
 This how-to is an introduction on building a custom widget that is chainable in your Mendix application. At the end of this tutorial you will have a basic understanding of the structure and setup of a chainable Mendix custom widget.
 
@@ -53,12 +50,10 @@ You can see the end result by clicking on the following screenshots.
     ![](attachments/10813523/11632641.png)_
     ![](attachments/10813523/11632642.png)
 
-    _
 3.  Select a coachwork.
 
-    _![](attachments/10813523/11632644.png)
+    ![](attachments/10813523/11632644.png)
 
-    _
 4.  Once you have selected a coachwork you can select a color.
     ![](attachments/10813523/11632646.png)
 5.  In the back-office we see that all the settings for the demo user are stored.
@@ -104,12 +99,11 @@ For "Car" / "Coachwork" and "CarColor" the following Microflows are active:
 
 For the "Car" entity the settings look like this:
 
- ![](attachments/10813523/11632652.png)
+![](attachments/10813523/11632652.png)
 
 {% endmarkdown %}</div>
 
-##
-5\. Configuration options of the widget
+## 5\. Configuration options of the widget
 
 We will take a look at what you need to configure in your widget in order to make it chainable. Remember when building custom widgets that you always need to build a widget that is as generic as possible. This means that the widget you build must handle all user-stories that are defined.
 That may be difficult in the beginning. But after building two or three custom widgets you will get the hang of it.
@@ -180,8 +174,7 @@ And that's it for the logic of the application.
 
 There is a unwritten rule in creating custom widgets for the Mendix platform, that you need to let (most of) the logic be done with the tools you have in Mendix. There is no other decent way of knowing what other widgets are doing in your application than to listen to changes on entities. Do not try to find this out by hacking the HTML output of the Mendix platform. This is bad practice. If you do want to know state of a widget that does not involve entity handling in your Mendix application, you can always create custom event handlers that widgets can listen to. But then you should make a widget have a "sender" and a "listener" mode. We will show an example of this in another how-to.
 
-##
-7\. General limitations of custom widgets
+## 7\. General limitations of custom widgets
 
 We need to tell you some important things about limitations in Mendix custom widgets. These limitations have made our choices to build the application this way. And they can help you a great deal in how you will setup your custom widgets in the future.
 

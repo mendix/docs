@@ -3,13 +3,8 @@ title: "Log Levels"
 category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.14</td><td class="confluenceTd">Nov 05, 2014 14:29</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:46</td></tr></tbody></table>
-
-
 
 Each application has a log and log-messages to monitor the health of the running of the application. Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require. This How-To will therefore teach you how to configure the log levels for the various occurrence of logging within your application. You will start with the basics around logging and its uses. Moving onto the practices around configuring the log levels.
-
-# Table of contents
 
 ## 1\. Logging the basics
 
@@ -44,17 +39,17 @@ The template is the structure of the log’s message, and can be composed of par
 The stack trace is a list of method calls from the point when the application was started to the point where the exception was thrown.
 In the modeler, log messages that include a stack trace are marked with a paperclip icon () and double-clicking them shows the stack trace.
 
-### **1.2 The different levels**
+### 1.2 The different levels
 
 The log level defines the severity of the log message. In the modeler, this is represented by different colors and an icon. Current log levels used by Mendix are: 
 
 <table><thead><tr><td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Option</strong></td><td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Icon</strong></td><td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Color</strong></td><td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>When it’s used</strong></td></tr></thead><tbody><tr><td class="confluenceTd"><em>Trace</em></td><td class="confluenceTd"><em>&nbsp;</em></td><td class="confluenceTd"><em>&nbsp;</em></td><td class="confluenceTd"><em>More detailed information. These are only written to logs.</em></td></tr><tr><td class="confluenceTd"><em>Debug</em></td><td class="confluenceTd"><em>&nbsp;</em></td><td class="confluenceTd"><em>&nbsp;</em></td><td class="confluenceTd"><em>Detailed information, typically of interest only when diagnosing problems.</em></td></tr><tr><td class="confluenceTd"><em>Info</em></td><td class="confluenceTd"><em>&nbsp;</em></td><td class="confluenceTd"><em>&nbsp;</em></td><td class="confluenceTd"><em>Confirmation that things are working as expected.</em></td></tr><tr><td class="confluenceTd"><em>Warning</em></td><td class="confluenceTd"><img class="confluence-embedded-image image-center" src="attachments/8782589/8946006.png" data-image-src="attachments/8782589/8946006.png"></td><td class="confluenceTd"><span><em>Text is orange</em></span></td><td class="confluenceTd"><em>An indication that something unexpected happened, or indicative of some problem in the near future (e.g. ‘disk space low’). The application is still working as expected.</em></td></tr><tr><td class="confluenceTd"><em>Error</em></td><td class="confluenceTd"><img class="confluence-embedded-image image-center" src="attachments/8782589/8946007.png" data-image-src="attachments/8782589/8946007.png"></td><td class="confluenceTd"><span><em>Text is red</em></span></td><td class="confluenceTd"><em>Due to a more serious problem, the application has not been able to perform some function.</em></td></tr><tr><td class="confluenceTd"><em>Critical</em></td><td class="confluenceTd"><img class="confluence-embedded-image image-center" src="attachments/8782589/8946008.png" data-image-src="attachments/8782589/8946008.png"></td><td class="confluenceTd"><span><em><span>Text is white, background red</span></em></span></td><td class="confluenceTd"><em>A serious error, indicating that the application itself may be unable to continue running.</em></td></tr></tbody></table>
 
-## **2\. Setting the log levels**
+## 2\. Setting the log levels
 
 Within this part of the how to you will learn how to configure the log levels of the logging messages produced by the system. The different levels highlighted above in section 1.2, can be applied to custom logging and to the predefined logging produced by the Mendix Business Modeller. This section will define how to configure both the log levels in custom logging and the predefined logging created by the Modeller.
 
-### **2.1 Advanced features of the console**
+### 2.1 Advanced features of the console
 
 ![](attachments/8782589/8946108.png)
 
@@ -62,9 +57,7 @@ Within this part of the how to you will learn how to configure the log levels of
 2.  Click ‘Advanced’ to open the drop down list of advanced options
 3.  On the list of options click ‘Set log levels…’
 
-### **2.2 Configuring log levels
-
-**
+### 2.2 Configuring log levels
 
 You can now select the level that which a log node will log messages as.
 
@@ -74,7 +67,7 @@ You can now select the level that which a log node will log messages as.
 2.  Click on the drop down list, in the log level column
 3.  From the drop down list select the correct level
 
-### **2.3 Configuring custom log levels**
+### 2.3 Configuring custom log levels
 
 You can also set the level of log messages in ones that you have created via a microflow.
 

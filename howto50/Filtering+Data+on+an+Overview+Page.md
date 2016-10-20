@@ -3,9 +3,6 @@ title: "Filtering Data on an Overview Page"
 category: "GUI's"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Jan 20, 2015 10:56</td><td colspan="1" class="confluenceTd">Sep 02, 2015 11:23</td></tr></tbody></table>
-
-
 
 To filter data on your page you can use the search bar functionality or you can add an XPath constraint to your data grid. The search bar contains search fields that allow the end-user to quickly find the information he or she needs. XPath is a hard coded constraint on your data grid to filter data. The how-to will start with preparing a data structure and some example data. After this set up you will filter your data with a search bar, followed by filtering your data using different XPath constraints.  
 
@@ -32,20 +29,13 @@ Before you continue, make sure that you know how to create:
 
 In the previous section you set up a basic data structure and created some sample data. In this section you will add search fields to the search bar to allow the user to filter data on your overview page. In the examples you will filter on the order status and on a minimum price.
 
-1.  Open your **orders overview** and right click on the (empty) section above the **Search **button.
-
-    <div class="alert alert-warning">{% markdown %}
-
-    The search bar section might be already populated if you automatically filled the contents of your data grid.
-
-    {% endmarkdown %}</div>
-
+1. Open your **orders overview** and right click on the (empty) section above the **Search **button. The search bar section might be already populated if you automatically filled the contents of your data grid.
     ![](attachments/8785272/8946745.png)
 
-2.  Right click on the search bar section and select **Drop-down**.
+2. Right click on the search bar section and select **Drop-down**.
     ![](attachments/8785272/8946754.png)
 
-3.  Add the **OrderStatus** attribute to the search field and define the name.
+3. Add the **OrderStatus** attribute to the search field and define the name.
     ![](attachments/8785272/8946758.png)
 
 4.  Redeploy your application and click on the **Search** button on your orders overview. The new search field appears.
@@ -124,7 +114,4 @@ In the previous section you have constrained the data grid on attributes of the 
 *   [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
 *   [Creating your first two Overview and Detail pages](Creating+your+first+two+Overview+and+Detail+pages)
 *   [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
-
-
-
 *   [XPath Constraints](/refguide5/XPath+Constraints)

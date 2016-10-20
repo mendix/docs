@@ -5,10 +5,6 @@ space: "Mendix 5 How-to's"
 ---
 # String Concatenation
 
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Jun 29, 2015 16:02</td><td colspan="1" class="confluenceTd">Jun 30, 2015 16:47</td></tr></tbody></table>
-
-
-
 In every project you will need to do this, concatenate some text together. Common cases are when you want to assemble the full name of a person based on the first and last name. 
 
 Whenever you want to paste multiple strings attributes together you want to make sure that the text looks good in all cases. For example you don't want a firstname + middlename + lastname to be printed as "John null Doe" because the middle name is empty. 
@@ -51,7 +47,7 @@ trim(
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/28e4594c-5f20-413f-ad9b-8912100cb976/bco_contactperson_createfullname_hardtoread?embed=true"></iframe>
 
-### Example 3, **BestPractice,**  expression break down:
+### Example 3, BestPractice,  expression break down:
 
 The most flexible solution is to break the string concatenate down into separate activities. This allows to easily add or remove text from the concatenate function. It should not create an additional level of complexity either, simply create a subflow to combine the string values and use that in your microflow. 
 In this example we went even one step further in the stability of the expression. By adding an additional trim to the attribute we prevent adding additional white spaces that might have been added by the user. Using the microflow below we are absolutely sure never to get any white spaces or null values in our text.

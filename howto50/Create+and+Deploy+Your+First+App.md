@@ -3,7 +3,6 @@ title: "Create and Deploy Your First App"
 category: "Getting Started"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.18</td><td class="confluenceTd">Dec 15, 2014 16:00</td><td colspan="1" class="confluenceTd">Nov 30, 2015 11:26</td></tr></tbody></table>
 
 In this how-to you will build your first application and deploy it to the cloud. Before you continue with this how-to, make sure that you are logged in to Mendix. You can log in at [http://www.mendix.com/](http://www.mendix.com/). If you do not have an account, you can sign up here: [http://www.mendix.com/try-now/](http://www.mendix.com/try-now/).
 

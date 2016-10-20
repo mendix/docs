@@ -3,7 +3,6 @@ title: "How to execute an SQL statement on an external database"
 space: "Best Practices"
 category: "Best Practices"
 ---
-# How to execute an SQL statement on an external database
 
 The Mendix platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The **Database connector** module can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, enabling you to incorporate your external data directly in your Mendix application.
 This document will focus on executing an SQL (_Structured Query Language_) _Statement_ on **relational external databases**.
@@ -32,15 +31,14 @@ The JDBC driver jars, for the databases you want to connect to, must be placed i
 
 ## 3\. Using Execute statement action in a microflow
 
-*   **Step 1 - Look for the Database connector in the Toolbox.
-*   **Step 2 - Drag and drop the 'Execute statement' action to your microflow.
+1. Look for the Database connector in the Toolbox.
+2. Drag and drop the 'Execute statement' action to your microflow.
 
-**![](attachments/19203493/19399122.png)
-**
+    ![](attachments/19203493/19399122.png)
 
-![](attachments/19203493/19399123.png)
+    ![](attachments/19203493/19399123.png)
 
-*   **Step 3** - Provide all the valid arguments to the _Execute statement_ action and specify output variable name of your choice, which in below mentioned case is `amountOfInsertedRows`.
+3. Provide all the valid arguments to the _Execute statement_ action and specify output variable name of your choice, which in below mentioned case is `amountOfInsertedRows`.
     `amountOfInsertedRows` is also the output of the SQL Statement which you provided for the `sql` argument within the connector.
 
 ![](attachments/19203493/19399146.png)

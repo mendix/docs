@@ -3,9 +3,6 @@ title: "Optimizing Retrieve Activities"
 category: "Logic & Business Rules"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20</td><td class="confluenceTd">May 21, 2015 18:06</td><td colspan="1" class="confluenceTd">Oct 09, 2015 15:47</td></tr></tbody></table>
-
-
 
 Often in processes you need to retrieve objects in order to complete the process. But what if those objects could not be found? Usually additional actions are required, but since the objects you retrieve and create are assigned different variable names you often can't merge back to a single flow.
 

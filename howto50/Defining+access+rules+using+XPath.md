@@ -1,6 +1,6 @@
 ---
 title: "Defining access rules using XPath"
-category: "Logic and Business Rules"
+category: "Logic & Business Rules"
 space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.12</td><td class="confluenceTd">Jan 26, 2015 16:00</td><td colspan="1" class="confluenceTd">Oct 19, 2015 12:56</td></tr></tbody></table>

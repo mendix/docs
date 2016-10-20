@@ -1,6 +1,6 @@
 ---
 title: "Extending Your Application with Custom Java"
-category: "Logic and Business Rules"
+category: "Logic & Business Rules"
 space: "Mendix 5 How-to's"
 ---
 

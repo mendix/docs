@@ -1,6 +1,6 @@
 ---
 title: "Working With Lists in a Microflow"
-category: "Logic and Business Rules"
+category: "Logic & Business Rules"
 space: "Mendix 5 How-to's"
 ---
 

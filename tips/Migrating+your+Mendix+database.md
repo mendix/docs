@@ -3,11 +3,6 @@ title: "Migrating your Mendix database"
 space: "Tips and Tricks"
 category: "Tips and Tricks"
 ---
-# Migrating your Mendix database
-
-| Mendix Version | Create Date | Modified Date |
-| --- | --- | --- |
-| 6.4 | Mar 21, 2016 09:53 | Jun 14, 2016 16:27 |
 
 This document explains how to migrate the data in an existing Mendix database to another Mendix database. This can be useful if you want to migrate from one type of database to another, for example MS SQL Server to PostgreSQL.
 

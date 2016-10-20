@@ -1,7 +1,6 @@
 ---
 title: "General"
 space: "Reference Guide 6"
-category: "refguide6"
 ---
 
 Browse the complete reference guide of the Mendix app platform.

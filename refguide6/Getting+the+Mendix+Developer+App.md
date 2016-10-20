@@ -1,7 +1,7 @@
 ---
 title: "Getting the Mendix Developer App"
 space: "Reference Guide 6"
-category: "refguide6"
+parent: "Developing+Hybrid+Mobile+Apps"
 ---
 
 

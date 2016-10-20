@@ -1,7 +1,7 @@
 ---
 title: "Common Widget Properties"
 space: "Reference Guide 6"
-category: "refguide6"
+parent: "Common+Widgets"
 ---
 # Common Widget Properties
 
@@ -27,7 +27,7 @@ For example, if an address field is required, the required message for the text 
 
 {% endmarkdown %}</div>
 
-## Common Properties 
+## Common Properties
 
 ### Tab index (only in web forms)
 
@@ -41,7 +41,7 @@ _Default value:_ 0
 
 {% snippet Style+Property.md %}
 
-## Data Source Properties 
+## Data Source Properties
 
 {% snippet Attribute+Path+Property.md %}
 

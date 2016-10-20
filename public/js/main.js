@@ -40,9 +40,9 @@
     }
 
     function normalizeUrl(url) {
-      if (typeof url === 'string' && url.substr(-1) === '/') {
-        url = url.slice(0, -1);
-      }
+      // if (typeof url === 'string' && url.substr(-1) === '/') {
+      //   url = url.slice(0, -1);
+      // }
       return url;
     }
 

@@ -9,6 +9,7 @@ encoding: utf-8
 latest_major_version: "6"
 github_repo: "https://github.com/mendix/docs"
 github_branch: "development"
+title: "Mendix Documentation"
 
 timezone: Netherlands/Amsterdam
 permalink: ordinal
@@ -75,7 +76,7 @@ defaults:
         - "bestpractices"
         - "appstore"
         - "mendixcloud"
-      banner: 'exportfromconfluence5'
+      #banner: 'exportfromconfluence5'
   - scope:
       path: 'refguide5'
       type: pages
@@ -83,7 +84,7 @@ defaults:
       menus:
         - "refguide5"
         - "community"
-      banner: 'exportfromconfluence5'
+      #banner: 'exportfromconfluence5'
 
   # VERSION INDEPENDENT
   - scope:

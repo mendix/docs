@@ -3,11 +3,8 @@ title: "Starting your own repository"
 category: 'Collaboration & Project Management'
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.17</td><td class="confluenceTd">Aug 14, 2014 16:59</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:18</td></tr></tbody></table>
 
 In this how-to you will learn how to set up a GitHub repository. The repository will contain your development content and can be shared with others, in order to contribute to the application.
-
-# Table of contents
 
 ## 1. Preparation
 

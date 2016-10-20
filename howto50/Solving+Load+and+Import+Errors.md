@@ -3,9 +3,6 @@ title: "Solving Load and Import Errors"
 category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
-# Solving Load and Import Errors
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21, 6.x</td><td class="confluenceTd">Oct 27, 2015 11:19</td><td colspan="1" class="confluenceTd">Nov 05, 2015 10:27</td></tr></tbody></table>
 
 This how-to will help you to solve problems that may occur when opening a project in the Mendix Business Modeler.
 

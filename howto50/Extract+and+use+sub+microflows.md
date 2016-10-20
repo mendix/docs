@@ -3,9 +3,6 @@ title: "Extract and use sub microflows"
 category: "Logic and Business Rules"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.12</td><td class="confluenceTd">Nov 04, 2014 17:40</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:59</td></tr></tbody></table>
-
-
 
 When you are building large microflows that span multiple functions, it is a good practice to break the large microflow down into more manageable parts, based on those functions. To better manage your logic, you can create sub microflows. 
 
@@ -37,18 +34,14 @@ In this scenario it makes sense to create a sub microflow of the validation step
     ![](attachments/8782499/8946251.png)
 2.  Right click an item in the selection.
     ![](attachments/8782499/8946253.png)
-3.  Select **Extract sub microflow...** and enter a name for the sub microflow
+3. Select **Extract sub microflow...** and enter a name for the sub microflow
     ![](attachments/8782499/8946254.png)
 
-    <div class="alert alert-warning">{% markdown %}
-
-    It is best practice to identify sub microflows by their name. You can use the Sub_MicroflowDescriptionHere notation, or Subflow_MicroclowDescriptionHere or any other notation that you feel comfortable with. The key is to be consistent when you name your microflows. If you are consistent, it is easy for other team members to understand and find the microflows they need.
-
-    {% endmarkdown %}</div>
-4.  Click **OK** to create your first sub microflow.
+    The best practice is to identify sub microflows by their name. You can use the Sub_MicroflowDescriptionHere notation, or Subflow_MicroclowDescriptionHere or any other notation that you feel comfortable with. The key is to be consistent when you name your microflows. If you are consistent, it is easy for other team members to understand and find the microflows they need.
+4. Click **OK** to create your first sub microflow.
     ![](attachments/8782499/8946255.png)
 
-5.  Open the sub microflow by right clicking on the **Sub_RegistrationValidation** microflow and selecting **Go To microflow**.
+5. Open the sub microflow by right clicking on the **Sub_RegistrationValidation** microflow and selecting **Go To microflow**.
     ![](attachments/8782499/8946256.png)
 
 The new sub microflow does the Registration validation. You can now reuse this sub microflow whenever you need to do a registration validation. 

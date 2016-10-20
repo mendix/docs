@@ -12,7 +12,7 @@ A frequent cause of this issue is that the OpenID request handler is not enabled
 
 ## 2\. Realm verification errors
 
-These are commonly caused by compatibility issues with JAR files in the <projectpath>/userlib directory of your project. You can refer to [this article](/refguide5/Troubleshooting) for the most common compatibility issues.
+These are commonly caused by compatibility issues with JAR files in the `<projectpath>/userlib` directory of your project. You can refer to [this article](/refguide5/Troubleshooting) for the most common compatibility issues.
 
 ## 3\. Related content
 

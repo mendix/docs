@@ -3,9 +3,6 @@ title: "Working With Object Events"
 category: "Data Models"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Jan 29, 2015 20:04</td><td colspan="1" class="confluenceTd">Sep 02, 2015 11:17</td></tr></tbody></table>
-
-
 
 When working with the Platform, objects are being created, removed, or reverted back to the original. Based on the state of the object and the 'Object Events' that are specified in the domain model, different actions are taken by the platform to guarantee data consistency. 
 

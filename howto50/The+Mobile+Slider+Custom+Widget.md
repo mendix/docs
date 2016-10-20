@@ -3,9 +3,6 @@ title: "The Mobile Slider Custom Widget"
 category: "Custom Widget Development"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21</td><td class="confluenceTd">Mar 30, 2015 10:20</td><td colspan="1" class="confluenceTd">Dec 04, 2015 14:51</td></tr></tbody></table>
-
-
 
 This how-to is about using the Mobile Slider widget in your Mendix hybrid mobile project, and creating the latest type of mobile interactivity. At the end of this tutorial you will have a basic understanding of the structure and setup of the custom widget and how to configure and prepare your Mendix app to use it. 
 
@@ -41,8 +38,6 @@ We have prepared a Mendix hybrid mobile project on GitHub for you with all the s
 ## 3\. What does the mobile slider do?
 
 The mobile slider lets you define slides on a page that people can view when they swipe left or right to go to back and forth through the page(s). Take a look at the following screenshots to see the effect:
-
-<table><thead><tr><th class="confluenceTh"></th><th class="confluenceTh"></th><th class="confluenceTh"></th></tr></thead><tbody></tbody></table>
 
 Notice that the background also moves to the left. This is possible with the extra **MobileSliderBackground** widget that works together with the MobileSlider widget. All the animation is possible with the **GreenSock** widget that is also included in this project.
 
@@ -113,7 +108,8 @@ Custom widgets in the Mendix project act as isolated features. This means that c
 
 The MobileSlider custom widget actually communicates to the MobileSliderBackground custom widget to set the background image of the entire application. Take a look at the following source code that can be found in the MobileSlider that does just that:
 
-**Custom JavaScript event | MobileSlider.js**
+**Custom JavaScript event, MobileSlider.js**
+
 ```js
 // Setting the background!
 
@@ -128,7 +124,8 @@ $('#mx-slider-background-layer').trigger('mx.slide.set.background', [{
 
 And the receiving bit of code in the MobileSliderBackground.js.
 
-**Receiving JavaScript event | MobileBackgroundSlider.js**
+**Receiving JavaScript event, MobileBackgroundSlider.js**
+
 ```js
 $('#mx-slider-background-layer').on('mx.slide.set.background', lang.hitch(this, function(event, data) {
 
@@ -137,8 +134,6 @@ $('#mx-slider-background-layer').on('mx.slide.set.background', lang.hitch(this, 
 
 }));
 ```
-
-
 
 ## 8\. Conclusion
 

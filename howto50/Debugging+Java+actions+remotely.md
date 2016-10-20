@@ -3,14 +3,9 @@ title: "Debugging Java actions remotely"
 category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Nov 17, 2014 11:01</td><td colspan="1" class="confluenceTd">Nov 17, 2015 13:54</td></tr></tbody></table>
-
-
 
 To debug Java Actions used in a Mendix Microflow you need to make some configuration changes to the way you start the Mendix runtime.
 This How-to will explain you how to manage this.
-
-# Table of contents
 
 ## 1\. Editing the Server Configuration with extra JVM parameters
 
@@ -44,8 +39,7 @@ In your Java IDE you need to configure remote debugging. The following screensho
 
 3\. Start debugging.
 
-##
-3\. Related content
+## 3\. Related content
 
 *   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
 *   [Clearing Warning Messages in Mendix](Clearing+Warning+Messages+in+Mendix)
@@ -54,9 +48,6 @@ In your Java IDE you need to configure remote debugging. The following screensho
 *   [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)
 *   [Monitoring Mendix using JMX](Monitoring+Mendix+using+JMX)
 *   [Debugging Java Actions](Debugging+Java+Actions)
-
-
-
 *   [Getting started with Nexus maven repository manager](http://www.andrejkoelewijn.com/blog/2010/03/09/getting-started-with-nexus-maven-repository-manager/)
 *   [Using eclipse to debug your tomcat web application](http://www.andrejkoelewijn.com/blog/2003/10/23/using-eclipse-to-debug-your-tomcat-web-application/)
 *   [Profiling Mendix using JProfiler](http://www.andrejkoelewijn.com/blog/2014/01/15/profiling-mendix-using-jprofiler/)

@@ -3,13 +3,8 @@ title: "Monitoring application health"
 category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Nov 11, 2014 13:27</td><td colspan="1" class="confluenceTd">Nov 25, 2015 09:40</td></tr></tbody></table>
-
-
 
 When your application has reached production status, it's important to keep track of its status and health. This How-To will teach you how to inspect your application's health in the Mendix app platform. You will learn how to access the application status page, what the information on this page means and how to look at the alerts for your app. 
-
-# Table of contents
 
 ## 1\. Application status
 
@@ -64,11 +59,7 @@ The monitoring information you saw in the previous chapter showed that one of th
 
     The overview shows alert types and details including date and time. The alert types gives a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications will also be shown here.
 
-    <div class="alert alert-warning">{% markdown %}
-
     The buttons "Acceptance" and "Production" at the top allow you to switch between viewing the status for either your production or acceptance node. Note that accessing production information may require additional authentication and is subject to your project's security settings.
-
-    {% endmarkdown %}</div>
 3.  Click the alert details or "View" button. This will open the alert details, which contains additional information. More information might be available in your application's log file.
 
     ![](attachments/8782717/8946031.png)

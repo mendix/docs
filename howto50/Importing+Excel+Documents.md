@@ -109,9 +109,7 @@ Based on the structure of the file you want to import, you will setup your templ
 16. For the mapping of attribute **Name** set the key value to **Yes**, to prevent a customer from being duplicated.
     ![](attachments/8785707/8946775.png)
 
-17.  After creating all the mappings for the **Customer** object attributes, also create mappings for the **Order** object attributes by repeating steps 9 to 11. 
-
-    Because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. The additional steps are discribed below.
+17. After creating all the mappings for the **Customer** object attributes, also create mappings for the **Order** object attributes by repeating steps 9 to 11. Because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. The additional steps are discribed below.
 
 18.  Choose **Reference** instead of **Attribute** as a type.
 

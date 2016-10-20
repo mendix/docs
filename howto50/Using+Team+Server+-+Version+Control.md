@@ -3,7 +3,6 @@ title: "Using Team Server - Version Control"
 category: 'Collaboration & Project Management'
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.0</td><td class="confluenceTd">Nov 03, 2014 09:09</td><td colspan="1" class="confluenceTd">Apr 26, 2016 10:28</td></tr></tbody></table>
 
 ## 1. Team server
 
@@ -179,7 +178,7 @@ The example shows that you can merge a single revision. It is also possible to m
     *   (Big) feature (work > 1 day)
     *   Integration external work
 
-4\. Related content
+## 4\. Related content
 
 *   [Managing your Application Requirements with Mendix](Managing+your+Application+Requirements+with+Mendix)
 *   [Starting your own repository](Starting+your+own+repository)

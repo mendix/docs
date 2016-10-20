@@ -3,7 +3,6 @@ title: "Creating a Basic Hello World Custom Widget"
 category: "Custom Widget Development"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21</td><td class="confluenceTd">Oct 22, 2014 12:48</td><td colspan="1" class="confluenceTd">Dec 04, 2015 14:51</td></tr></tbody></table>
 
 This tutorial is a quick introduction on how to build a custom widget to extend your Mendix application. We’re using the famous “Hello World” example to get you started. At the end of this tutorial you will have a basic understanding of the structure and setup of a Mendix widget.
 The Mendix front end uses the DOJO framework to implement widgets. Each Mendix widget in MX5 is essentially a DIJIT widget that inherits from mxui.widget._WidgetBase. For more information on DIJIT widgets and their life cycle see the widget life cycle documentation.
@@ -29,10 +28,9 @@ Before you start building your own widget make sure you have the following progr
 
 We have created a set of illustrations that explain what a custom widget is and how it behaves in the Mendix platform.
 
-### **2.1 What is a Mendix custom widget?
+### 2.1 What is a Mendix custom widget?
 
 ![](attachments/8782081/10682374.png) 
-**
 
 A Mendix custom widget is a part of the user interface in your Mendix app.
 It enables functionality and interaction with the end- users of your Mendix app.
@@ -47,23 +45,25 @@ A Mendix Custom Widget is also a folder packaged as a _".zip"_ file, renamed t
 *   A widget.js file. The JavaScript core of your widget.
 *   A widget.html file. The HTML template of your widget.
 
-### **2.2 The Development Life Cycle of a Custom Widget**
+### 2.2 The Development Life Cycle of a Custom Widget
 
 ![](attachments/8782081/9764940.png) 
 
 1.  Code your widget with Adobe Brackets (using the Widget Development Plugin).
-2.  Package and deploy the widget in Adobe Brackets to the "widgets" folder of your test project by pressing ![](attachments/8782081/9764943.png).
-3.  Widgets downloaded from the AppStore are also placed inside the "widgets" folder.
-4.  Within the Mendix business modeler press ![](attachments/8782081/9764943.png) to synchronise the project directory.
-5.  Within the Mendix business modeler you will need to set the properties of your custom widget and the widgets you imported.
-6.  If you have changed the properties of your widget you will have to update your widgets before being able to set properties again.
-7.  Within the Mendix business modeler press ![](attachments/8782081/9764947.png) to start the Mendix application locally or rerun the Mendix application.
-8.  In Chrome or Firefox you can debug the JavaScript code created for your widget.
+2. Package and deploy the widget in Adobe Brackets to the "widgets" folder of your test project by pressing this:
+    ![](attachments/8782081/9764943.png).
+3. Widgets downloaded from the AppStore are also placed inside the "widgets" folder.
+4. Within the Mendix business modeler, to synchronise the project directory, press this:
+    ![](attachments/8782081/9764943.png)
+5. Within the Mendix business modeler you will need to set the properties of your custom widget and the widgets you imported.
+6. If you have changed the properties of your widget you will have to update your widgets before being able to set properties again.
+7. Within the Mendix business modeler press,  to start the Mendix application locally or rerun the Mendix application:
+    ![](attachments/8782081/9764947.png)
+8. In Chrome or Firefox you can debug the JavaScript code created for your widget.
 
-### **2.3 The Run Time Life Cycle of a Custom Widget**
+### 2.3 The Run Time Life Cycle of a Custom Widget
 
-**
-![](attachments/8782081/10682369.png)**
+![](attachments/8782081/10682369.png)
 
 1.  A widget is responsible for a part of the user interface of a Mendix application.
 2.  The widget.js file contains logic to get data from a microflow into the widget.
@@ -71,27 +71,15 @@ A Mendix Custom Widget is also a folder packaged as a _".zip"_ file, renamed t
 4.  The widget also needs to handle interactivity from the web- browser and end- user .
 5.  Updates on entities where the widget is attached to can trigger a re- rendering of the part of the user interface.
 6.  Never try to connect widgets to each other through HTML! ... Use entities and micro- flows for that and leave the interface, its management of events and rendering of widget to how the normal run time life cycle of a widget is. 
-7.  **In case Mendix has send data and with an update has no data the widget should ALWAYS return to its original state without data!**
+7.  In case Mendix has send data and with an update has no data the widget should ALWAYS return to its original state without data!
 
 **What happens when the widget is first initialized?**
 
 ![](attachments/8782081/9764944.png)
 
 1.  Mendix client side sends a request to build the widget.
-2.  If the widget is configured to receive an entity from the modelerit will receive it. 
-
-    <div class="alert alert-info">{% markdown %}
-
-    The widget will get the entity in the update JavaScript function (described later on).
-
-    {% endmarkdown %}</div>
-3.  It is up to the widget to do something with the Mendix entity. 
-
-    <div class="alert alert-info">{% markdown %}
-
-    The Mendix entity in JavaScript is called a "context" object.
-
-    {% endmarkdown %}</div>
+2.  If the widget is configured to receive an entity from the modelerit will receive it. The widget will get the entity in the update JavaScript function (described later on).
+3. It is up to the widget to do something with the Mendix entity. The Mendix entity in JavaScript is called a "context" object.
 
 **Making the widget intelligent**
 
@@ -114,14 +102,8 @@ A property will contain the end result of something that is configured/provided 
 1.  The widget needs to request the modeler to execute a Microflow.
 
     ![](attachments/8782081/9764946.png)
-2.  The Microflow executes, gathers data from entities, and sends it back to the widget.
-
-    <div class="alert alert-info">{% markdown %}
-
-    A Microflow is a server-side action.
-
-    {% endmarkdown %}</div>
-3.  It is up to the widget to do something with the data.
+2. The Microflow executes, gathers data from entities, and sends it back to the widget. A Microflow is a server-side action.
+3. It is up to the widget to do something with the data.
 
 ## 3\. Creating a Custom Widget with Adobe Brackets
 
@@ -166,17 +148,14 @@ Start building your own Mendix custom widget by creating a copy of the "[AppStor
     ![](attachments/8782081/9764903.png)
 
     The newly created MPK package is placed in the **test/widgets **directory.![](attachments/8782081/9764904.png)
-7.  Open the test project by opening **Test.mpr** from the **test** directory. You can also use ![](attachments/8782081/9764936.png) or click the ![](attachments/8782081/9764937.png) button in the Mendix panel in Brackets.
+7. Open the test project by opening **Test.mpr** from the **test** directory. You can also use ![](attachments/8782081/9764936.png) or click the ![](attachments/8782081/9764937.png) button in the Mendix panel in Brackets.
     ![](attachments/8782081/9764938.png)
-
-    <div class="alert alert-info">{% markdown %}
-
-     The test project is created in Mendix 5.6.0\. It's possible that Brackets will ask you to select a modeler version. Select the version of your installed Mendix business modeler.
+    
+    The test project is created in Mendix 5.6.0\. It's possible that Brackets will ask you to select a modeler version. Select the version of your installed Mendix business modeler.
 
     ![](attachments/8785003/9273431.png)
-    {% endmarkdown %}</div>
 
-*** If you experience problems creating the widget using the Brackets plugin, there might be a problem with your user-right. Try to open the Brackets editor as an Administrator (Right-click on the Brackets-shortcut and choose "Run as Administrator"**
+**If you experience problems creating the widget using the Brackets plugin, there might be a problem with your user-right. Try to open the Brackets editor as an Administrator (Right-click on the Brackets-shortcut and choose "Run as Administrator"**
 
 ## 3\. Exploring the Custom Widget XML Files
 
@@ -215,7 +194,7 @@ The name “package.xml” already suggests that this file is related to the pac
 
     The next element inside the package element is **clientModule**. It contains 3 attributes:
 
-*   *   name -> Most commonly this is the same as the name of your .mpk
+    *   name -> Most commonly this is the same as the name of your .mpk
     *   version -> Although currently unused by the Modeler, it would be wise to keep track of the version of your widget package here
     *   xmlns -> clientModule uses a different namespace
 
@@ -729,19 +708,19 @@ You as a developer are responsible for that to happen.
 
 The final step is to add your widget to your Mendix Project. The widget should now be available up under the Add-on menu.
 
-1.  Open the test project by opening **Test.mpr** in the **test** directory. You can also use ![](attachments/8785003/9273419.png) in Brackets.
-
-    <div class="alert alert-info">{% markdown %}
+1. Open the test project by opening **Test.mpr** in the **test** directory. You can also use
+    
+    ![](attachments/8785003/9273419.png) in Brackets.
 
     The test project is created in Mendix 5.14.1\. It's possible that Brackets will ask you to select a modeler version. Select the Modeler Version of your installed Mendix version.
 
     ![](attachments/8785003/9273431.png)
-    {% endmarkdown %}</div>
 
     Brackets will open the test project for you inside Mendix:
+
     ![](attachments/8785003/9273420.png)
 
-2.  You will need to configure the test project. How this is done will be available in another how-to.
+2. You will need to configure the test project. How this is done will be available in another how-to.
 
 ## 6\. Conclusion
 
@@ -775,7 +754,6 @@ A very nice book that helps you understand what JavaScript is all about.
 *   [Getting started with the Widget Development Plugin for Adobe Brackets](Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
 *   [Creating a chainable Custom Widget](Creating+a+chainable+Custom+Widget)
 *   [XML Reference Guide](/refguide5/XML+Reference+Guide)
-
 *   [Creating a Basic Hello World Custom Widget](Creating+a+Basic+Hello+World+Custom+Widget)
 *   [XML Reference Guide](/refguide6/XML+Reference+Guide)
 *   [The Mobile Slider Custom Widget](The+Mobile+Slider+Custom+Widget)

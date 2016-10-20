@@ -3,9 +3,6 @@ title: "Testing microflows using the UnitTesting module"
 category: "Testing"
 space: "Mendix 5 How-to's"
 ---
-# Testing microflows using the UnitTesting module
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Jul 23, 2015 14:36</td><td colspan="1" class="confluenceTd">Sep 09, 2015 15:35</td></tr></tbody></table>
 
 To smarten up your app with business logic you can use microflows. To verify that your microflow works as expected you can create unit tests using the UnitTesting module. The UnitTesting module provides an easy to use interface to manage and run unit tests. The module supports unit tests that are created using microflows and unit tests that are created using JUnit.
 
@@ -44,11 +41,11 @@ In this chapter you will set up the unit testing module and run the example test
 11.  Enter _UnitTestOverview_ in the **Caption** field.
 12.  Select the microflow **UnitTestOverview** as target.
     ![](attachments/14091144/14385307.png)
-13.  Click **OK**.
+13. Click **OK**.
     ![](attachments/14091144/14385308.png)
-14.  Run the project locally.
-15.  Go to _http://localhost:8080/index.html_.
-16.  Click on **UnitTestOverview** in the navigation.
+14. Run the project locally.
+15. Go to _http://localhost:8080/index.html_.
+16. Click on **UnitTestOverview** in the navigation.
     ![](attachments/14091144/14385407.png)
 
     At the left side 2 buttons are shown. When you click on the Run all button, all unit tests will be executed. When you click on the Reset button, the status of all tests will change to not executed (question mark icon). Beneath the buttons all modules which contains unit tests are shown. In this case UnitTesting is the only module which contains unit tests. When you click on UnitTesting, all unit tests of this module are shown.
@@ -56,13 +53,13 @@ In this chapter you will set up the unit testing module and run the example test
     If you want to save all changes made in the microflow to the database, you need to uncheck the checkbox 'Rollback microflow tests after execution'. Keep the checkbox checked if you want to rollback all changes.
 
     At the right side the unit tests of the selected module are shown. In this example five unit tests are shown. When you click on the Run all button, all unit tests of the selected module will be executed. When you click on the play button next to a unit test, only that unit test will be executed. 
-17.  Click on the play button of **UnitTesting.Test_ValidUnitTest**.
+17. Click on the play button of **UnitTesting.Test_ValidUnitTest**.
     ![](attachments/14091144/14385311.png) 
     The color of the testcase will change to green if it passed.
     ![](attachments/14091144/14385312.png)
     And to red if the test case fails.
     ![](attachments/14091144/14385313.png)
-18.  Double click on **UnitTesting.TestValidUnitTest**.
+18. Double click on **UnitTesting.TestValidUnitTest**.
     ![](attachments/14091144/14385408.png)
 
     In this overview you will see the date and time of the last run, the result (success or failed), the latest, reported step and the result message.
@@ -100,59 +97,49 @@ In this chapter you will learn how to create a microflow test. To create a new m
 8.  Add a new activity of action type _Microflow call_.
 9.  Select microflow _MyFirstModule.Promote_.
     ![](attachments/14091144/14385336.png)
-10.  Click OK.
-
-    The next step is to check if the employee is promoted to the right level. 
-11.  Add a new activity of action type _Microflow call_.
-12.  Select microflow _UnitTesting.AssertTrue1_.
-13.  Set the argument of parameter **ValueToAssert** to _$NewEmployee/Level = MyFirstModule.Level.Junior_.
+10. Click OK. The next step is to check if the employee is promoted to the right level. 
+11. Add a new activity of action type _Microflow call_.
+12. Select microflow _UnitTesting.AssertTrue1_.
+13. Set the argument of parameter **ValueToAssert** to _$NewEmployee/Level = MyFirstModule.Level.Junior_.
     ![](attachments/14091144/14385404.png)
-14.  Click OK.
-
-    For failed tests, the last step information can be very useful. You can provide this information in your microflow by calling the ReportStep submicroflow.
-
-15.  Add a new activity of action type Microflow call between _Create Employee_ and _Promote_.
-16.  Select microflow _UnitTesting.ReportStep_.
-17.  Set the argument of parameter **Message** to _'Employee created'_.
-18.  Click OK.
-19.  Add a new activity of action type Microflow call between _Promote_ and _Promoted to Junior?_.
-20.  Select microflow _UnitTesting.ReportStep_.
-21.  Set the argument of parameter **Message** to _'Employee promoted'_.
-22.  Click OK.
-23.  Double-click on the **End event**.
-24.  Select **Boolean** as return type.
-25.  Enter **true** as return value.
-26.  Click OK.
-27.  The microflow should look like the model below:
-
+14. Click OK. For failed tests, the last step information can be very useful. You can provide this information in your microflow by calling the ReportStep submicroflow.
+15. Add a new activity of action type Microflow call between _Create Employee_ and _Promote_.
+16. Select microflow _UnitTesting.ReportStep_.
+17. Set the argument of parameter **Message** to _'Employee created'_.
+18. Click OK.
+19. Add a new activity of action type Microflow call between _Promote_ and _Promoted to Junior?_.
+20. Select microflow _UnitTesting.ReportStep_.
+21. Set the argument of parameter **Message** to _'Employee promoted'_.
+22. Click OK.
+23. Double-click on the **End event**.
+24. Select **Boolean** as return type.
+25. Enter **true** as return value.
+26. Click OK.
+27. The microflow should look like the model below:
     <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/93a3546c-df5e-4b7d-9dc8-447a9f24432f/unittest-promote-employee-to-junior?embed=true"></iframe>
-28.  Create three more test microflows as shown below:
 
-    **Test_PromoteEmployeeToMedior**
+28. Create three more test microflows as shown below:
 
+    * **Test_PromoteEmployeeToMedior**
     <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/a609f474-dd8c-4315-84fb-1056256ca3fc/unittest-promote-employee-to-medior?embed=true"></iframe>
 
-    **Test_PromoteEmployeeToSenior**
-
+    * **Test_PromoteEmployeeToSenior**
     <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/f247e678-1738-416a-8e6a-77dfdb2cf392/unittest-promote-employee-to-senior?embed=true"></iframe>
 
-    **Test_PromoteEmployeeWhenAlreadySenior**
-
+    * **Test_PromoteEmployeeWhenAlreadySenior**
     <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/44d6c6be-d35c-403d-ad2f-d89398956a07/unittest-promote-employee-when-already-senior?embed=true"></iframe>
-29.  Run the project locally.
-30.  Go to _http://localhost:8080/index.html_.
-31.  Click on **UnitTestOverview** in the navigation.
+29. Run the project locally.
+30. Go to _http://localhost:8080/index.html_.
+31. Click on **UnitTestOverview** in the navigation.
 
     **MyFirstModule** will be shown in the list with modules that contain one or more testcases.
     ![](attachments/14091144/14385391.png)
-32.  Click on **MyFirstModule**.
+32. Click on **MyFirstModule**.
 
     All testcases of module MyFirstModule will be shown.
     ![](attachments/14091144/14385392.png)
-33.  Check the checkbox **Rollback microflow tests after execution**.
-34.  Click on **Run all**.
-
-    All testcases should pass
+33. Check the checkbox **Rollback microflow tests after execution**.
+34. Click on **Run all**. All testcases should pass
     ![](attachments/14091144/14385393.png)
 
 Congratulations! You created your first unit tests using the UnitTesting module.

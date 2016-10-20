@@ -43,15 +43,15 @@ First, open the "Publish for Mobile App Stores" page in the Mendix Developer Por
 
     You can find those tabs next to the "App Info" tab.
 
-    1.  *   If you do not upload any images, default Mendix-branded images will be used (the ones that are shown).
-        *   Take note of the required resolutions and file types for the image files. The system will not allow you to upload images with incorrect resolutions, because otherwise your app packages will not function properly.
-        *   For the purposes of this how-to, it is not necessary to upload any images yourself.
+    * If you do not upload any images, default Mendix-branded images will be used (the ones that are shown).
+    * Take note of the required resolutions and file types for the image files. The system will not allow you to upload images with incorrect resolutions, because otherwise your app packages will not function properly.
+    * For the purposes of this how-to, it is not necessary to upload any images yourself.
 8.  Click the green **Publish for Mobile App Stores** button.
     You are then presented with the "Build Mobile App Store Packages" page.
 9.  Select the environment that you want to publish.
 
-    *   For Community Edition apps, the only option is "Sandbox".
-    *   For apps running on a licensed cloud node, you can choose from Test, Acceptance and Production (depending on what is available on your cloud node).
+    * For Community Edition apps, the only option is "Sandbox".
+    * For apps running on a licensed cloud node, you can choose from Test, Acceptance and Production (depending on what is available on your cloud node).
 10. Leave the choice on how to build the package on the default: "Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build". You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify and upload manually to Adobe PhoneGap Build. See our documentation on [how you can customize the PhoneGap Build package](/refguide5/Customizing+PhoneGap+Build+packages). This is unnecessary in almost all scenarios.
 11. Start the actual hybrid mobile app package building process: Click the green "Start PhoneGap Build job" button to initiate the packaging process.
 12. The first time you start this process, you will need to authorize the Mendix Developer Portal to act on your behalf with the Adobe PhoneGap Build service.

@@ -3,9 +3,6 @@ title: "Managing your Application Requirements with Mendix"
 category: 'Collaboration & Project Management'
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21</td><td class="confluenceTd">Feb 04, 2015 16:47</td><td colspan="1" class="confluenceTd">Nov 17, 2015 15:39</td></tr></tbody></table>
-
-
 
 In this how-to you will learn how to manage your application requirements in Mendix by creating and configuring sprints and stories. These components are often used in an agile development environment, where you and your team work in short development cycles from anywhere between 2 to 4 weeks. By adding your sprints to Mendix you will have a clear overview of your tasks and can easily view the status of your development cycle. You can also manage the progress of tasks and sprints from within the Mendix Modeler.
 
@@ -49,17 +46,13 @@ The development of a new product, feature, or release usually has multiple sprin
 5.  Select **Sprint**.
 6.  Enter a sprint name: **Sprint 1**.
 7.  Leave the **This sprint comes after** field empty. If there are existing sprints you can place it before or after a selected sprint.
-8.  Set the **Duration** to **2** (weeks).
+8. Set the **Duration** to **2** (weeks).
     ![](attachments/9109796/9273484.png)
 
-    <div class="alert alert-info">{% markdown %}
 
     The default duration of a sprint in Mendix is 2 weeks, starting the moment you create the sprint. Check customize to select a different start date.
 
-    {% endmarkdown %}</div>
-9.  Click **Save**.
-
-    The new sprint has been added to your stories overview.
+9. Click **Save**. The new sprint has been added to your stories overview.
     ![](attachments/9109796/9273485.png)
 
 ### 3.1 Adding Story Points
@@ -76,11 +69,9 @@ Every sprint contains a number of story points that describe a specific function
 7.  Add the description: **Create an expenses overview page for company employees**.
 8.  The finished story should look similar to this:
     ![](attachments/9109796/17662031.png)
-9.  Click **Post story**.
-    <div class="alert alert-info">{% markdown %}
-    You can also add Bug story points this way. Simply select Bug from the story type drop down. The icon in the top left will change accordingly (![](attachments/9109796/17662032.png))
-    {% endmarkdown %}</div>
-
+9. Click **Post story**. You can also add Bug story points this way. Simply select Bug from the story type drop down. The icon in the top left will change accordingly.
+    (![](attachments/9109796/17662032.png))
+    
     The new story point is added to Sprint 1.
     ![](attachments/9109796/9273489.png)
 
@@ -111,16 +102,12 @@ Besides being able to manage you sprints in the Project Dashboard, you can also 
     The status has now changed to running.
 6.  Go back to the project dashboard in your browser.
 7.  Go to the **Capture** page.
-8.  Expand the first sprint and check the status of the first entry:
+8. Expand the first sprint and check the status of the first entry:
     ![](attachments/9109796/17662035.png)
 
     It is now Running because you changed the status in the Mendix Modeler.
 
-    <div class="alert alert-info">{% markdown %}
-
     If you change a status or update story points in the modeler or in the browser, they will automatically be synchronized and available everywhere.
-
-    {% endmarkdown %}</div>
 
 ## 5\. Importing Stories
 

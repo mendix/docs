@@ -3,15 +3,10 @@ title: "Adding App Store content to your app"
 category: 'Collaboration & Project Management'
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Nov 04, 2014 16:55</td><td colspan="1" class="confluenceTd">Sep 03, 2015 14:10</td></tr></tbody></table>
-
-
 
 The Mendix modeler has a lot of out of the box functionalities and widgets such as data grids and snippets. However, if you want to extend your application with more widgets and modules such as 'forgot password' functionality, simple charts, excel importer and other features – you will need to add the content from the appstore. The appstore contains a many useful and reusable widgets and modules created by Mendix, our partners, and customers. You can access and browse the appstore content [here](https://appstore.home.mendix.com/).
 
 This How-to will cover the basics of how to access the appstore within the modeler and provide a simple example of how to add a widget and a module to your application.
-
-# Table of contents
 
 ## 1\. Adding a widget from the appstore
 
@@ -128,7 +123,7 @@ Each module is different and some modules might give errors because they are con
 
 1. For the Google Maps module, add the “Home” and “ViewAllLocations” to your navigation.
 
-![](attachments/8782479/8945994.png)
+    ![](attachments/8782479/8945994.png)
 
 2. Review the Google Map by running your app locally and adding some locations.
 
@@ -140,20 +135,12 @@ Sometimes additional widgets are added when you download a module, for example t
 
 ## 3\. Related content
 
-*   [Adding App Store content to your app](Adding+App+Store+content+to+your+app)
-*   [Adding App Store content to your app](/appstore/Adding+App+Store+content+to+your+app)
 *   [Managing your Application Requirements with Mendix](Managing+your+Application+Requirements+with+Mendix)
-*   [Managing your Application Requirements with Mendix](/howto6/Managing+your+Application+Requirements+with+Mendix)
 *   [Starting your own repository](Starting+your+own+repository)
 *   [Contributing to a GitHub repository](Contributing+to+a+GitHub+repository)
-*   [Starting your own repository](/howto6/Starting+your+own+repository)
 *   [Using Team Server - Version Control](Using+Team+Server+-+Version+Control)
 *   [Gathering user feedback](Gathering+user+feedback)
-
-
-
 *   [Creating a basic "hello world" custom widget](Creating+a+Basic+Hello+World+Custom+Widget)
-
 *   [Blog post on useful widgets](http://www.mendix.com/blog/top-5-mendix-widgets-speeding-application-development/)
 *   [Common Widget Properties](/refguide5/Common+Widget+Properties)
 *   [Blog post on feedback widget](http://www.mendix.com/blog/feedback-widget-bridging-the-gap-between-users/)

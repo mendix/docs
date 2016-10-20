@@ -3,9 +3,6 @@ title: "Optimizing Microflow Aggregates"
 category: "Logic and Business Rules"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20</td><td class="confluenceTd">May 21, 2015 18:20</td><td colspan="1" class="confluenceTd">Oct 09, 2015 15:46</td></tr></tbody></table>
-
-
 
 In some projects it is necessary to evaluate and large datasets in a microflow, for example for reporting purposes. If all those microflows do many retrieves and aggregates on large datasets it is easy to run into performance or memory problems. 
 

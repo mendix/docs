@@ -3,11 +3,6 @@ title: "Synchronizing user accounts using the LDAP module"
 category: "Integration"
 space: "Mendix 5 How-to's"
 ---
-# Synchronizing user accounts using the LDAP module
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.14</td><td class="confluenceTd">Jan 30, 2015 11:49</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:16</td></tr></tbody></table>
-
-
 
 Your client might already have a centralized identity management solution in place, which houses information for all users in the company. If you want to make use of that information in your Mendix app, you can use the LDAP module available in the App Store. This module will allow you to synchronize user data from your LDAP-compatible identity manager to your Mendix app, for example to keep user names consistent across applications, or to allow users to use the same password for multiple apps. The LDAP module supports any LDAP-compatible identity manager. This how-to will teach you how to set up the LDAP module to work with your app, focusing on Microsoft Active Directory. It will give you a basic understanding of the LDAP module, but will skip over some advanced details. The document assumes basic Mendix knowledge, and some basic knowledge of what LDAP is and how it works.
 
@@ -34,7 +29,7 @@ Your client might already have a centralized identity management solution in pla
     ![](attachments/8785894/11042865.png)
 5.  Locate the constant** EncryptionKey**, which should be in the **Encryption** module.
 6.  Set the **Default value** to a random value of exactly 16 characters.
-    ![](attachments/8785894/9273370.png)\
+    ![](attachments/8785894/9273370.png)
 7.  Click **OK.
      **
 
@@ -68,24 +63,19 @@ In this chapter you will run the application and complete the LDAP configuration
 
 The next step is to configure how to handle the user information.
 
-1.  In the server configuration screen, locate the **LDAP type** setting at the bottom.
+1. In the server configuration screen, locate the **LDAP type** setting at the bottom.
     ![](attachments/8785894/11042869.png)
-2.  Select **Import the users from the Active Directory**.
-
-    <div class="alert alert-info">{% markdown %}
-
+2. Select **Import the users from the Active Directory**.
     The LDAP type can have three values:
 
     *   Import the users from the Active Directory: The LDAP module will import user information from the LDAP server into Mendix.
     *   Only authenticate users: The LDAP module will use Active Directory to authenticate users, but will not import user information.
     *   Authenticate and create users: The LDAP module will use Active Directory to authenticate users, and create accounts in Mendix for successfully authenticated users who do not already exist.
 
-    {% endmarkdown %}</div>
-
     You will see extra configuration settings appear at the bottom of the form. Two extra tabs will also appear that contain extra configuration options for this setting. 
     ![](attachments/8785894/9764909.png)
 
-3.  Enter the following additional information:
+3. Enter the following additional information:
 
     <table><thead><tr><th class="confluenceTh">Field</th><th class="confluenceTh">Description</th><th class="confluenceTh">Example</th></tr></thead><tbody><tr><td class="confluenceTd">Map users to</td><td class="confluenceTd">The Mendix entity that represents users in your app.</td><td class="confluenceTd"><em>Administration.Account</em></td></tr><tr><td class="confluenceTd">Domain suffix</td><td class="confluenceTd">In Active directory user names are often suffixed with the domain of the company. If you want users to be able to log in using just their user name, enter the domain here. It will be stripped from the full user name, leaving just the actual account name as a username.</td><td class="confluenceTd"><em>@companydomain.local</em></td></tr><tr><td class="confluenceTd">Userroles WITHOUT ldap authentication</td><td class="confluenceTd">In most cases, certain user roles (usually administrators) should not be authenticated against LDAP. This can be, for example, because the corresponding users or roles don't exist in the LDAP server, or because the users should be able to log in when LDAP is not available for some reason. In most cases, you should enter an administrator role with access to the LDAP configuration.</td><td class="confluenceTd"><em>Administrator</em></td></tr></tbody></table>
 
@@ -103,20 +93,12 @@ The final step in the configuration is to configure how the LDAP module handles 
 3.  In **Login name field**, enter _sAMAccountName_ (note the capital letters).
 4.  Under **Custom attribute mapping** you can map other, non-essential attributes, from LDAP to Mendix users. Click **New** in this grid.
     ![](attachments/8785894/9764912.png)
-5.  Select an attribute name in the **User Attribute** drop down, for example "FullName".
-
-    <div class="alert alert-info">{% markdown %}
-
-    If the drop down is empty, click **Cancel**, **Save & Close** and reopen the server configuration. This refreshes the information in the settings screens.
-
-    {% endmarkdown %}</div>
+5.  Select an attribute name in the **User Attribute** drop down, for example "FullName". If the drop down is empty, click **Cancel**, **Save & Close** and reopen the server configuration. This refreshes the information in the settings screens.
 6.  In the **(select new)** drop down, select an LDAP attribute, like "displayName".
 7.  Click **Save**.You have just created an LDAP attribute mapping. The "displayName" attribute of an LDAP user will now be used to fill the "FullName" attribute of a Mendix user, when it is created during the synchronization.
 8.  Open the **LDAP group mapping** tab.
     ![](attachments/8785894/9764913.png)
-9.  Click **Refresh**. The LDAP module will now retrieve all known groups from the LDAP server.
-
-    On this screen you can map LDAP groups to Mendix user roles. In other words, when a user is a member of a certain group in LDAP, it will get the corresponding user role in Mendix.
+9.  Click **Refresh**. The LDAP module will now retrieve all known groups from the LDAP server. On this screen you can map LDAP groups to Mendix user roles. In other words, when a user is a member of a certain group in LDAP, it will get the corresponding user role in Mendix.
 10.  Select the group that you would like to map to a user role and click **Edit**.
     ![](attachments/8785894/9764914.png)
 11.  Click **Select** to open the user role selector

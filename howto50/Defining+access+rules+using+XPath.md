@@ -3,15 +3,10 @@ title: "Defining access rules using XPath"
 category: "Logic and Business Rules"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.12</td><td class="confluenceTd">Jan 26, 2015 16:00</td><td colspan="1" class="confluenceTd">Oct 19, 2015 12:56</td></tr></tbody></table>
-
-
 
 The access rules of an entity define what a user is allowed to do with objects of the entity. Users can be allowed to create and/or delete objects, and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing and removing can be limited by means of an [XPath constraint](/refguide5/XPath+Constraints). For more details about access rules, take a look at this [documentation](/refguide5/Access+Rules).
 
 In this how-to you will prepare a data structure (including security), a GUI and some example data for customers, orders and a financial administrator account. After this preparation you will define access rules for the 'Order' entity using XPath on the payment status. The XPath will constrain the order so it can only be seen by a financial administrator when the payment status of the order is set to 'Paid'.
-
-
 
 ## 1. Preparing the data structure, GUI and example data
 

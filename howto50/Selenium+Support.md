@@ -3,9 +3,6 @@ title: "Selenium Support"
 category: "Integration"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21.0</td><td class="confluenceTd">Jun 18, 2014 16:12</td><td colspan="1" class="confluenceTd">Nov 24, 2015 14:59</td></tr></tbody></table>
-
-
 
 Mendix 5 uses CSS classes to identify page content like widgets and popups. You can use these classes in Selenium to manipulate pages and verify data.
 

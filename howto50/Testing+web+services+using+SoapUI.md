@@ -3,9 +3,6 @@ title: "Testing web services using SoapUI"
 category: "Testing"
 space: "Mendix 5 How-to's"
 ---
-# Testing web services using SoapUI
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20.0</td><td class="confluenceTd">Jul 09, 2015 16:56</td><td colspan="1" class="confluenceTd">Oct 19, 2015 15:33</td></tr></tbody></table>
 
 You can publish your own webservices in a Mendix application. These webservices consist of operations. Other applications can then call operations of this webservice and you can return a result. This result is based on a microflow that will be executed when the webservice is called. With SoapUI you can create (automated) tests for these webservices.
 
@@ -82,7 +79,7 @@ In this chapter you will build a testsuite. A testsuite contains one or more tes
 12.  Open SOAP request **Retrieve Customers**.
     ![](attachments/14090991/14385264.png) 
 
-13.  Change the follow value:
+13. Change the follow value:
 
     ```java
     <Offset>?</Offset>
@@ -96,7 +93,7 @@ In this chapter you will build a testsuite. A testsuite contains one or more tes
     <PageSize>10</PageSize>
     ```
 
-14.  Press **ALT+Enter** to submit the request.
+14. Press **ALT+Enter** to submit the request.
 
     The customers you created in the previous how-to will be shown in the response. The response will look like the code below:
 
@@ -185,11 +182,11 @@ In this chapter you will extend your test case with multiple test steps and asse
 9.  Click **Assertions (2)**.
 10.  Open **XPath Match - Unknown**.
 11.  Change **Expected result** to _1 + [the number you entered in step 5.6]_.
-12.  Click **Save**.
-13.  Add a new SOAP request to the existing test case with the following details:
+12. Click **Save**.
+13. Add a new SOAP request to the existing test case with the following details:
 
     <table><thead><tr><th class="confluenceTh">Field</th><th class="confluenceTh">Value</th></tr></thead><tbody><tr><td class="confluenceTd">Specify name for step</td><td class="confluenceTd">Delete Customer</td></tr><tr><td class="confluenceTd">Select operation to invoke for request</td><td class="confluenceTd">CustomerWebServiceSoap -&gt; DeleteCustomer</td></tr></tbody></table>
-14.  Change the request into the following value:
+14. Change the request into the following value:
 
     ```java
     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://www.example.com/">

@@ -3,9 +3,6 @@ title: "Creating automated tests with TestNG"
 category: "Testing"
 space: "Mendix 5 How-to's"
 ---
-# Creating automated tests with TestNG
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.20.0</td><td class="confluenceTd">Oct 28, 2015 17:19</td><td colspan="1" class="confluenceTd">Nov 09, 2015 12:38</td></tr></tbody></table>
 
 Automated tests can be created with different tools, depending on the type of tests. Integration tests can be created with [SoapUI](Testing+web+services+using+SoapUI), unit tests with the [UnitTesting module](Testing+microflows+using+the+UnitTesting+module), and UI tests with [Selenium IDE](Testing+Mendix+applications+using+Selenium+IDE). With Selenium IDE you can create scripts to aid in automation-aided exploratory testing. If you’re looking to create robust, browser-based tests, you should look into using a testing framework with Selenium.
 
@@ -56,13 +53,12 @@ In this chapter you will install the TestNG plug-in and create a Java project in
 14.  Click **Finish** to set the default TestNG Library to this project.
 15.  Click **Add External JARs...**.
 16.  Navigate to where you saved the Selenium JAR files. 
-17.  Add all the JAR files inside the selenium-[version] and libs folder.
+17. Add all the JAR files inside the selenium-[version] and libs folder.
     ![](attachments/16711919/16842867.png)
 
     After adding the JARs the Libraries tab will look like the image below:
     ![](attachments/16711919/16842868.png)
-18.  Click **Finish** to create the java project.
-    MyFirstTestNGProject will be shown in the Package Explorer.
+18. Click **Finish** to create the java project. MyFirstTestNGProject will be shown in the Package Explorer.
     ![](attachments/16711919/16842869.png)
 
     You are now done setting up your project!
@@ -83,9 +79,7 @@ Lets now create a new TestNG file.
 9.  Check **@BeforeTest**.
 10.  Check **@AfterTest**.
     ![](attachments/16711919/16844089.png)
-11.  Click **Finish**.
-
-    The template for your first TestNG file will be created automatically as shown below:
+11. Click **Finish**. The template for your first TestNG file will be created automatically as shown below:
     ![](attachments/16711919/16844090.png)
     The @Test annotation is used to tell that the method under it is a test case. In this case, the method f is a test case. The @BeforeTest annotation is used to tell that the method under it will be executed before the first test case. The @AfterTest annotation is used to tell that the method under it will be executed after the last test case.
 
@@ -274,14 +268,14 @@ Now that you are on the expenses tab, you want to create a new expense.
 
 4.  Open the **Desktop_Expense_NewEdit_Admin** page.
 
-5.  Find the names of the following elements like you did in step 3:
+5. Find the names of the following elements like you did in step 3:
 
     <table><thead><tr><th class="confluenceTh">Element</th><th class="confluenceTh">Name</th></tr></thead><tbody><tr><td class="confluenceTd">Amount field</td><td class="confluenceTd">textBox6</td></tr><tr><td class="confluenceTd">Description dropdown</td><td class="confluenceTd"><span>referenceSelector1</span></td></tr><tr><td class="confluenceTd">Save button</td><td class="confluenceTd">saveButton1</td></tr></tbody></table><div class="alert alert-info">{% markdown %}
 
     The name of an element in your app may be different than the name shown in the Name column. In step 7, use the name of the element of your app.
 
     {% endmarkdown %}</div>
-6.  Go back to **Eclipse**.
+6. Go back to **Eclipse**.
 
 7.  Add a new test method called _createExpense_. Use the following code:
 
@@ -361,8 +355,7 @@ TestNG generates reports in HTML format.
 5.  Select **Open with > Web Browser**.
 
     The report will look like the following image:
-    **
-    ![](attachments/16711919/16844101.png)**
+    ![](attachments/16711919/16844101.png)
 6.  Click on **(show)**.
     The test methods are shown alphabetically.
     ![](attachments/16711919/16844104.png)

@@ -3,9 +3,6 @@ title: "Monitoring Mendix using JMX"
 category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.10</td><td class="confluenceTd">Nov 17, 2014 16:09</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:37</td></tr></tbody></table>
-
-
 
 The following is only relevant if you run [Mendix](http://www.mendix.com/) on-premises. If you do, you probably have standard monitoring tooling that you use to monitor all your applications.
 
@@ -71,8 +68,6 @@ The simplest way to expose management information is by writing a MBean interfac
 
 1.  Example of an interface which contains getters for some generic Mendix information, MxStatsMBean.java
 
-    <div class="alert alert-warning">{% markdown %}
-
     ```
     <code>package jmx.actions;</code>
     ```
@@ -117,10 +112,7 @@ The simplest way to expose management information is by writing a MBean interfac
     <code>}</code>
     ```
 
-    {% endmarkdown %}</div>
 2.  And here is the implementation, MxStats.java. The methods just call the [Mendix Core](http://apidocs.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html) class, and return the value:
-
-    <div class="alert alert-warning">{% markdown %}
 
     ```
     <code>package jmx.actions;</code>
@@ -234,7 +226,6 @@ The simplest way to expose management information is by writing a MBean interfac
     <code>}</code>
     ```
 
-    {% endmarkdown %}</div>
 3.  Next, you're able to see the result of the values exposed by this MBean in JConsole
     ![](attachments/8782836/8946090.png)
 
@@ -243,10 +234,7 @@ The simplest way to expose management information is by writing a MBean interfac
 You can use the same approach, with an Interface and implementation class, to also expose application specific information. Here’s a different approach: one that exposes a dynamic set of values. You can do the same with methods, but the example only shows attributes to retrieve values.
 The idea is that you will have a Java Action that you can call in a microflow, where you expose arbitrary key, value pairs.
 
-Here’s an example in the Mendix modeler:
-
-##
-4\. Related content
+## 4\. Related content
 
 *   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
 *   [Clearing Warning Messages in Mendix](Clearing+Warning+Messages+in+Mendix)

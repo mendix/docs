@@ -9,7 +9,7 @@ The documentation which describes the installation and basic configuration of th
 
 1.  [https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md](https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md)
 
-## 9\. Related content
+## Related content
 
 *   [How to build a simple HRM app](How+to+build+a+simple+HRM+app)
 *   [Create and Deploy Your First App](Create+and+Deploy+Your+First+App)

@@ -3,13 +3,8 @@ title: "Getting started with the Widget Development Plugin for Adobe Brackets"
 category: "Custom Widget Development"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21</td><td class="confluenceTd">Jan 02, 2015 13:55</td><td colspan="1" class="confluenceTd">Dec 04, 2015 14:52</td></tr></tbody></table>
-
-
 
 This How-To will teach you how to use the Widget Development Plugin for Adobe Brackets. The Widget Development Plugin for Adobe Brackets is a plugin for Adobe Brackets that allows a Mendix Developer to quickly create a Custom Widget project. Adobe Brackets is a code editor for HTML / JavaScript and CSS. The Widget Development Plugin for Adobe Brackets will turn Brackets into an IDE (_Integrated Developement Environment)_ for creating Custom Widgets for the Mendix platform. 
-
-# Table of contents
 
 ## 1\. Preparations
 

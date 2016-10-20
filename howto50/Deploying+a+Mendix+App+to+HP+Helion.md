@@ -3,7 +3,6 @@ title: "Deploying a Mendix App to HP Helion"
 category: "Cloud Foundry"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">6.0</td><td class="confluenceTd">Nov 19, 2015 08:32</td><td colspan="1" class="confluenceTd">Mar 08, 2016 15:09</td></tr></tbody></table>
 
 ![](attachments/18448646/18580542.png)
 
@@ -46,17 +45,14 @@ To push a Mendix app to Cloud Foundry you will have to configure the settings in
 
 ## 3\. Configure the HP Helion Development Environment
 
-1.  Go to your Development Platform web interface (in our case [https://api.helion.mendix.com/](https://api.helion.mendix.com/)) and log in with your **HP Helion credentials**.
-
-    <div class="alert alert-info">{% markdown %}
+1. Go to your Development Platform web interface (in our case [https://api.helion.mendix.com/](https://api.helion.mendix.com/)) and log in with your **HP Helion credentials**.
 
     This link is different per Helion instance. This how-to will use the Mendix url.
-
-    {% endmarkdown %}</div>
 
     ![](attachments/18448647/18580581.png)
 
 After logging in you will see the Dev Platform home screen:
+
 ![](attachments/18448647/18580580.png)
 
 *   You can see that you are logged in at the top right of the screen.
@@ -77,7 +73,7 @@ Apps make use of services. Think of Databases, File Stores, and caching services
     This will download the Application Lifecycle Service (ALS) client needed to manage the Helion Development Platform Apps.
 4.  **Unzip** the downloaded package.
 5.  Open the **Client**.
-6.  Enter the following command:
+6. Enter the following command:
 
     ```java
     helion > create-service postgresql NAMEOFTHESERVICE NAMEOFYOURAPP
@@ -89,7 +85,7 @@ Apps make use of services. Think of Databases, File Stores, and caching services
     helion > create-service postgresql CompanyExpensesDataStore CompanyExpenses
     ```
 
-7.  Select a plan and hit **Enter**.
+7. Select a plan and hit **Enter**.
     ![](attachments/18448647/18580577.png)
 
     The service will be created and bound to your app.
@@ -118,16 +114,10 @@ To enable persistent file storage you need to configure the S3 object store whic
 
 6.  Optionally you can add more variables mentioned above.
 7.  Click **Save** when you are done.
-8.  When you are done setting the variables you need to **restart** you App for the changes to take effect.
+8. When you are done setting the variables you need to **restart** you App for the changes to take effect.
     ![](attachments/18448647/18580570.png)
 
-    <div class="alert alert-info">{% markdown %}
-
     After deploying an App from the Mendix Business Modeler two variables will automatically be added: DEVELOPEMENT_MODE and ADMIN_PASSWORD. The development mode is _true_ by befault. Change this to _false_ to run the app in production. The admin password is the password of the default admin of your Mendix app.
-
-    {% endmarkdown %}</div>
-
-
 
 ## 6\. Deploy your App to Cloud Foundry
 

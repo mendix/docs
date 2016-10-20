@@ -3,15 +3,8 @@ title: "Debugging Microflows"
 category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
-# Debugging Microflows
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.11</td><td class="confluenceTd">Dec 16, 2014 10:56</td><td colspan="1" class="confluenceTd">Oct 19, 2015 12:58</td></tr></tbody></table>
-
-
 
 The Mendix Business Modeler has a built-in consistency checker that validates if the application you are building contains any obvious errors. This reduces the amount of technical errors during run-time dramatically, but the Business Modeler isn't able to check if your application contains functional errors. This is mainly a manual practice, but Mendix does support enough tools to make your live easy on this. If you run into a functional error in any of the Microflows, you can easily debug them with the debugger.
-
-# Table of contents
 
 ## 1. Preparation
 
@@ -71,17 +64,11 @@ Breakpoints are points in a microflow where the application will halt execution.
 
     The Debugger can be used to go through the Microflow step-by-step.
     ![](attachments/8784357/8946398.png)
-5.  Click **Step into** or **Step over** to move on the next step in the Microflow.
-
-    <div class="alert alert-info">{% markdown %}
-
-    The difference between 'Step into' and 'Step over' is only noticeable if you run into a 'Call Microflow' activity or 'Loop'. 'Step into' means that the debugger steps into the sub Microflow or Loop and 'Step over' just moves the debugger to the next step in the same Microflow.
+5. Click **Step into** or **Step over** to move on the next step in the Microflow. The difference between 'Step into' and 'Step over' is only noticeable if you run into a 'Call Microflow' activity or 'Loop'. 'Step into' means that the debugger steps into the sub Microflow or Loop and 'Step over' just moves the debugger to the next step in the same Microflow.
 
     With 'Step out' you can instruct the debugger to leave the sub Microflow or Loop. It's basically the opposite of 'Step Into'.
 
     Clicking 'Continue' instructs the debugger to continue until it reaches another breakpoint.
-
-    {% endmarkdown %}</div>
 
 ## 5\. Variable Viewer
 
@@ -119,7 +106,4 @@ Sometimes it's needed to configure a breakpoint in such a way that the Microflow
 *   [Common Mendix SSO Errors](Common+Mendix+SSO+Errors)
 *   [Monitoring Mendix using JMX](Monitoring+Mendix+using+JMX)
 *   [Debugging Java Actions](Debugging+Java+Actions)
-
-
-
 *   [Microflow Element Common Properties](/refguide5/Microflow+Element+Common+Properties)

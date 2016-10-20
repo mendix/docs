@@ -3,11 +3,8 @@ title: "Finding the Root Cause of Runtime Errors"
 category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.14</td><td class="confluenceTd">Mar 20, 2015 15:30</td><td colspan="1" class="confluenceTd">Oct 19, 2015 11:57</td></tr></tbody></table>
 
 This how to will show how to find the information necessary to locate the root cause of a runtime error.  The message displayed in the application is often vague and non-descript.  Depending on the environment the error occurred in, there are two methods to find this information.
-
-# Table of contents
 
 ## 1. In the Modeler
 

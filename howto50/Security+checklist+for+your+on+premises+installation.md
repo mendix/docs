@@ -3,7 +3,6 @@ title: "Security checklist for your on-premises installation"
 category: "On-premises Deployment"
 space: "Mendix 5 How-to's"
 ---
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.21</td><td class="confluenceTd">Nov 14, 2012 14:59</td><td colspan="1" class="confluenceTd">Nov 25, 2015 09:30</td></tr></tbody></table>
 
 ## Use a Mendix version containing the latest security patches
 

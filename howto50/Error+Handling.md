@@ -58,28 +58,42 @@ Most of the time you will be using a single activity with custom error handling.
 
 Especially when interacting with other systems you need to think about how you want to process the errors. The best solution depends on the exact desire you have, do you want to continue, skip/revert the record you are working on, keep the changes you have made so far but stop the process. All of this can be done, as long as you know what you want to achieve. The instructions below will show you a couple of examples on how you can use the different combinations of error handling options. 
 
-_**_**Rollback in parent flow, Rollback in subflow**_
-**_
+### Rollback in parent flow, Rollback in subflow 
 
-<table><thead><tr><td class="confluenceTd">&nbsp;</td><td class="confluenceTd"><em><strong>Initial transaction,</strong>&nbsp;This transaction is initiated when the microflow started. Custom error handling with Rollback does not initiated any transactions. Therefore the microflow is executed, but all actions both in the Parent and Sub flow will be reverted. None of the changes made anywhere in this transaction will be applied.</em></td></tr></thead><tbody><tr><td class="confluenceTd">&nbsp;</td><td class="confluenceTd"><strong><em>Transaction initiated by custom with rollback activity,&nbsp;</em> </strong><em>After catching the exception a new transaction is initiated to executed the remainder of the microflow activities.&nbsp;</em><em><br></em></td></tr></tbody></table>
+| Color | Description |
+| --- | --- |
+| ![](attachments/13566084/orange.png) | *Initial transaction* – this transaction is initiated when the microflow started. Custom error handling with rollback does not initiate any transactions. Therefore, the microflow is executed, but all the actions in both the parent and the subflow will be reverted. None of the changes made anywhere in this transaction will be applied. |
+| ![](attachments/13566084/blue.png) | *Transaction initiated by custom with rollback activity* – after catching the exception, a new transaction is initiated to execute the remainder of the microflow activities. |
 
 ![](attachments/13566084/14385361.png)
 
-_**Rollback in parent flow, Continue in subflow**_
+### Rollback in parent flow, Continue in subflow
 
-<table><thead><tr><td class="confluenceTd">&nbsp;</td><td class="confluenceTd"><em><strong>Initial transaction,</strong>&nbsp;This transaction is initiated when the microflow started. This transaction will be completely reverted, because the subflow re-throws the exception. None of the changes made during this transaction will be persisted<br></em><em>(If the subflow wasn't rethrowing the exception, all changes except the send email would have been persisted in the database.</em></td></tr></thead><tbody><tr><td class="confluenceTd">&nbsp;</td><td class="confluenceTd"><strong><em>Transaction initiated by custom with rollback activity,&nbsp;</em> </strong><em>After catching the exception a new transaction is initiated to executed the remainder of the microflow activities.</em><strong><em><br></em></strong></td></tr><tr><td class="confluenceTd">&nbsp;</td><td class="confluenceTd"><strong><em>Transaction initiated by subflow,&nbsp;</em> </strong><em>At the start of the subflow a new transaction is initiated. Any changes made in this transaction will be reverted because the activities in the 'SendEmail' subflow use default error handling.&nbsp;</em></td></tr></tbody></table>
+| Color | Description |
+| --- | --- |
+| ![](attachments/13566084/orange.png) | *Initial transaction* – this transaction is initiated when the microflow starts. This transaction will be completely reverted, because the subflow re-throws the exception. None of the changes made during this transaction will be persisted. (If the subflow wasn't rethrowing the exception, all changes except 'SendEmail' would have been persisted in the database.) |
+| ![](attachments/13566084/blue.png) | *Transaction initiated by custom with rollback activity* – after catching the exception, a new transaction is initiated to execute the remainder of the microflow activities. |
+| ![](attachments/13566084/green.png) | *Transaction initiated by subflow* – at the start of the subflow, a new transaction is initiated. Any changes made in this transaction will be reverted because the activities in the 'SendEmail' subflow use default error handling. |
 
  ![](attachments/13566084/14385364.png)
 
-_**Continue in parent flow, Rollback in subflow**_
+### Continue in parent flow, Rollback in subflow
 
-<table><thead><tr><td class="confluenceTd">&nbsp;</td><td class="confluenceTd"><em><strong>Initial transaction,</strong>&nbsp;This transaction is initiated when the microflow started. This transaction will complete successfully and any changes made during this transaction will be persisted.</em></td></tr></thead><tbody><tr><td class="confluenceTd">&nbsp;</td><td class="confluenceTd"><strong><em>Transaction initiated by subflow,&nbsp;</em> </strong><em>At the start of the subflow a new transaction is initiated. All changes in this transaction will be reverted because of the custom error handler 'with Rollback'.&nbsp;<br>As a result the change on the Customer will not be applied.&nbsp;</em></td></tr><tr><td class="confluenceTd">&nbsp;</td><td class="confluenceTd"><em><strong>Transaction initiated after the exception was caught by the error handler,&nbsp;</strong>This transaction is initiated, and after executing some actions it will re-throw the original exception. These changes will be persisted, this is because of the error handling on the initial sub-microflow call.&nbsp;</em></td></tr></tbody></table>
+| Color | Description |
+| --- | --- |
+| ![](attachments/13566084/orange.png) | *Initial transaction* – this transaction is initiated when the microflow starts. This transaction will complete successfully and any changes made during this transaction will be persisted. |
+| ![](attachments/13566084/blue.png) | *Transaction initiated by subflow* – at the start of the subflow, a new transaction is initiated. All changes in this transaction will be reverted because of the custom error handler "with rollback." As a result, the change on the customer will not be applied. |
+| ![](attachments/13566084/green.png) | *Transaction initiated after the exception was caught by the error handler* – when this transaction is initiated, after executing some actions, it will re-throw the original exception. These changes will be persisted because of the error handling on the initial sub-microflow call. |
 
  ![](attachments/13566084/14385362.png)
 
-_**Continue in parent flow, Continue in subflow**_
+### Continue in parent flow, Continue in subflow
 
-<table><thead><tr><td class="confluenceTd">&nbsp;</td><td class="confluenceTd"><em><strong>Initial transaction,</strong>&nbsp;Nothing will be reverted, the only difference compared to successful execution is that no email will be send, and the process will finish using the error flow instead of the normal process flow.&nbsp;</em></td></tr></thead><tbody><tr><td class="confluenceTd">&nbsp;</td><td class="confluenceTd"><strong><em>Transaction initiated by subflow,&nbsp;</em> </strong><em>At the start of the subflow a new transaction is initiated. All changes in this transaction will be kept because the 'SendEmail' subflow is configured to continue without rollback. Even though the exception is re-thrown, the initial microflow call is configured for custom without rollback, therefore none of the changes will be reverted. The process will just take the error flow instead of the default flow.<br></em></td></tr><tr><td class="confluenceTd">&nbsp;</td><td class="confluenceTd"><strong><em>Transaction initiated by subflow,&nbsp;</em> </strong><em>At the start of the subflow a new transaction is initiated. Any changes made in this transaction will be reverted because the activities in the 'SendEmail' subflow use default error handling.&nbsp;</em></td></tr></tbody></table>
+| Color | Description |
+| --- | --- |
+| ![](attachments/13566084/orange.png) | *Initial transaction* – nothing will be reverted. The only difference compared to successful execution is that no e-mail will be sent, and the process will finish using the error flow instead of the normal process flow.
+| ![](attachments/13566084/blue.png)  | *Transaction initiated by subflow* – at the start of the subflow, a new transaction is initiated. All the changes in this transaction will be kept, because the 'SendEmail' subflow is configured to continue without rollback. Even though the exception is re-thrown, the initial microflow call is configured for custom without rollback; therefore, none of the changes will be reverted. The process will just take the error flow instead of the default flow.
+| ![](attachments/13566084/green.png) | *Transaction initiated by subflow* – at the start of the subflow, a new transaction is initiated. Any changes made in this transaction will be reverted, because the activities in the 'SendEmail' subflow use default error handling.
 
 ![](attachments/13566084/14385363.png)
 

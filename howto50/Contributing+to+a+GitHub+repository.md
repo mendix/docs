@@ -3,13 +3,8 @@ title: "Contributing to a GitHub repository"
 category: 'Collaboration & Project Management'
 space: "Mendix 5 How-to's"
 ---
-# Contributing to a GitHub repository
-
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Aug 14, 2014 16:52</td><td colspan="1" class="confluenceTd">Sep 03, 2015 14:15</td></tr></tbody></table>
 
 We like to work with our community and encourage you to create and contribute using pull requests!
-
-# Table of contents
 
 ## 1. Preparation
 

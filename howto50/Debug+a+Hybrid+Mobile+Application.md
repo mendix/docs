@@ -5,8 +5,6 @@ space: "Mendix 5 How-to's"
 ---
 # Debug a Hybrid Mobile Application
 
-<table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5.17</td><td class="confluenceTd">Jun 22, 2015 16:49</td><td colspan="1" class="confluenceTd">Apr 11, 2016 08:33</td></tr></tbody></table>
-
 This how-to explains the steps involved in debugging a Mendix application that is running in the Mendix Developer App on your mobile phone.
 
 **After completing this how-to you will know:**

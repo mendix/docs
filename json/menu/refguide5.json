@@ -1,0 +1,16 @@
+---
+layout: json
+---
+{
+  "categories": [
+    "General",
+    "Team Server",
+    "Modeler",
+    "Runtime",
+    "Java Programming",
+    "Deployment",
+    "Mobile",
+    "Proactive Maintenance"
+  ],
+  "pages": {% include json-snippets/get_pages.inc dir="/refguide5/" %}
+}

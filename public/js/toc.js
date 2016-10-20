@@ -5,7 +5,7 @@
         var defaults = {
             noBackToTopLinks: false,
             title: '<i>Jump to...</i>',
-            minimumHeaders: 3,
+            minimumHeaders: 2,
             headers: 'h1, h2, h3, h4, h5, h6',
             listType: 'ol', // values: [ol|ul]
             showEffect: 'show', // values: [show|slideDown|fadeIn|none]
@@ -108,4 +108,4 @@
 
         render[settings.showEffect]();
     };
-})(jQuery); 
+})(jQuery);

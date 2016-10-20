@@ -29,7 +29,7 @@ If the transaction log space is depleted or there is a temporary increase in the
 In this case, the size of "LOGPRIMARY" must be increased. 
 
 For more detailed information, see [IBM Support](http://www-01.ibm.com/support/docview.wss?uid=swg21298630) and 
-[IBM Knowledge Center] (http://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.messages.sql.doc/doc/msql00964c.html).
+[IBM Knowledge Center](http://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.messages.sql.doc/doc/msql00964c.html).
 
 ## Making DB2 Case-Insensitive
 

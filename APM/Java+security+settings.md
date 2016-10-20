@@ -2,7 +2,7 @@
 title: "Java security settings"
 parent: "Pre+requisites"
 ---
-This appendix describes how to simulate security in the modeler and what permissions to request from Mendix support for a cloud slot. Experience learns that in the Modeler the emulated cloud security is a lot more restricting than the real cloud slots. Only the heap dump does not work by default in cloud slots.
+This appendix describes how to simulate security in the modeler and what java permissions are needed.
 
 # Simulate cloud security in the Modeler
 
@@ -22,11 +22,11 @@ Procedure to simulate cloud security plus APMAgent permissions:
 -Dcom.mendix.policy.file="**<new file from step 2.>**"
 **_Note._** _If there are spaces in your path you need the double quotes around the file names!_
 
-# Request permissions for the Mendix cloud or on premise runtime
+# Needed java permissions
 
-For a Mendix Cloud slot you send an email to Mendix support requesting permissions as described below.
 For an on premise installation often no additional java security is set and you don't have to do anything. If, however, your internal IT has set security on the java JVM running the Mendix Business Server you have to arrange additional permissions in java with your internal IT as described below.
 Here follow the permissions needed in java and what they are used for:
+
 For the JVM Browser and measurements based on JMX the following permissions are needed:
 
 *   permission javax.management.MBeanServerPermission "*";

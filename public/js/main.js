@@ -39,10 +39,17 @@
       return id.replace(/[ '"\+\-&]+/g, "-").toLowerCase();
     }
 
+    function normalizeUrl(url) {
+      if (typeof url === 'string' && url.substr(-1) === '/') {
+        url = url.slice(0, -1);
+      }
+      return url;
+    }
+
     function addNormalLink(title, url) {
       return $([
         '<i class="link-icon link-icon-link"></i>',
-        url === null ? '' : '<a href="' + url + '" data-page-title="' + title + '" title="' + title + '">',
+        url === null ? '' : '<a href="' + normalizeUrl(url) + '" data-page-title="' + title + '" title="' + title + '">',
         '<div class="category-title" ' + (url === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
         url === null ? '' : '</a>'
       ].join(''));
@@ -53,7 +60,7 @@
         '<a class="expand-link" href="#' + id + '" data-toggle="collapse" aria-expanded="false" aria-controls="' + id + '">',
         '<i class="link-icon link-icon-menu"></i>',
         '</a>',
-        url === null ? '' : '<a title="' + title + '" data-page-title="' + title + '" href="' + url + '">',
+        url === null ? '' : '<a title="' + title + '" data-page-title="' + title + '" href="' + normalizeUrl(url) + '">',
         '<div class="category-title" ' + (url === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
         url === null ? '' : '</a>',
       ].join(''));

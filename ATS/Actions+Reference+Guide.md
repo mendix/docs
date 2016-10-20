@@ -23,9 +23,9 @@ This sections provides you with an overview of all predefined actions in ATS. Fo
 #### Dialog
 <div class="alert alert-info">
 
-A _Window_ is rendered when a page is opened as a popup.
+A <i>Window</i> is rendered when a page is opened as a popup.
 
-A _ConfirmationDialog_ is shown when a delete or microflow action requires a confirmation. Show message actions in microflows result in _DialogMessage_ widgets.
+A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires a confirmation. Show message actions in microflows result in <i>DialogMessage</i> widgets.
 
 </div>
 

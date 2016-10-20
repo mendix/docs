@@ -9,6 +9,7 @@ encoding: utf-8
 latest_major_version: "6"
 github_repo: "https://github.com/mendix/docs"
 github_branch: "development"
+title: "Mendix Documentation"
 
 timezone: Netherlands/Amsterdam
 permalink: ordinal
@@ -24,8 +25,16 @@ algolia:
   excluded_files:
     - index.html
     - howto6/index.html
+    - howto50/index.html
     - refguide6/index.html
+    - refguide5/index.html
     - search/index.html
+  settings:
+    attributesForFaceting:
+      - 'tags'
+      - 'type'
+      - 'title'
+      - 'space'
 
 ####################################
 ######        SPACES         #######
@@ -38,6 +47,7 @@ defaults:
       layout: mxdefault
 
   # VERSION SPECIFIC CONTENT
+  # Mendix 6
   - scope:
       path: 'howto6'
       type: pages
@@ -55,6 +65,26 @@ defaults:
       menus:
         - "refguide6"
         - "community"
+  # Mendix 5
+  - scope:
+      path: 'howto50'
+      type: pages
+    values:
+      menus:
+        - "howto50"
+        - "tips"
+        - "bestpractices"
+        - "appstore"
+        - "mendixcloud"
+      #banner: 'exportfromconfluence5'
+  - scope:
+      path: 'refguide5'
+      type: pages
+    values:
+      menus:
+        - "refguide5"
+        - "community"
+      #banner: 'exportfromconfluence5'
 
   # VERSION INDEPENDENT
   - scope:

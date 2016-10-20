@@ -1,7 +1,7 @@
 ---
 title: "Footer (document template)"
 space: "Reference Guide 6"
-category: "refguide6"
+parent: "Document+Templates"
 ---
 
 

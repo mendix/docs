@@ -1,7 +1,6 @@
 ---
 title: "Mobile"
 space: "Reference Guide 6"
-category: "refguide6"
 ---
 
 
@@ -9,7 +8,7 @@ Mendix allows you to quickly build apps for mobile devices. This document gives 
 
 ## Navigation
 
-Every app starts at the home page. You can specify different home pages for phones and tablets in the [Navigation](Navigation) document. The mobile profiles can be enabled and disabled separately. If you enable a profile, you also have to provide its home page. Apart from the home page, different home page for different user roles can be specified. Also, there is a default menu that can be used in [menu widgets](Menu+Widgets). 
+Every app starts at the home page. You can specify different home pages for phones and tablets in the [Navigation](Navigation) document. The mobile profiles can be enabled and disabled separately. If you enable a profile, you also have to provide its home page. Apart from the home page, different home page for different user roles can be specified. Also, there is a default menu that can be used in [menu widgets](Menu+Widgets).
 
 ![](attachments/16714058/18582284.png?effects=drop-shadow)
 
@@ -29,7 +28,7 @@ Mendix apps can simply be viewed in mobile web browsers. However, some features 
 
 ### Hybrid Mobile Widgets
 
-To access native functions of the device, we provide a number of PhoneGap widgets on the App Store. And, of course, you can build your own custom widgets that use native features. PhoneGap widgets can be recognized by their special icon. You can also search for them by using Edit > Find Advanced (Ctrl+Shift+F). 
+To access native functions of the device, we provide a number of PhoneGap widgets on the App Store. And, of course, you can build your own custom widgets that use native features. PhoneGap widgets can be recognized by their special icon. You can also search for them by using Edit > Find Advanced (Ctrl+Shift+F).
 
 ![](attachments/16714058/16844052.png?effects=drop-shadow)
 

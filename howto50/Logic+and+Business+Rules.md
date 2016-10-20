@@ -1,6 +1,5 @@
 ---
-title: Logic and Business Rules
-category: howto50
+title: "Logic & Business Rules"
 space: "Mendix 5 How-to's"
 ---
 

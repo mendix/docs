@@ -4,6 +4,11 @@ title: "Find/Assert Menu Item"
 ## Description
 Find/Assert a visible Menu Item in a Navigation Tree, Menu Bar and Simple Menu Bar
 
+## Supported widgets
+ + NavigationTree
+ + MenuBar
+ + SimpleMenuBar
+
 ## Usage
 Pass the name of the parent widget and the caption of the menu item you want to find.
 Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.

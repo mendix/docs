@@ -1,14 +1,11 @@
 ---
-title: "Set Checkbox Value"
+title: "Assert Checkbox Value"
 ---
 ## Description
-Sets the value of a Checkbox.
-
-## Supported widgets
- + Checkbox
+Assert the value of a Checkbox (true or false).
 
 ## Usage
-Pass the name of the checkbox and the value you want to set.
+Pass the name of the widget and the value you want to assert.
 Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
 ## Input Parameters
@@ -16,5 +13,5 @@ Optional you can provide a WebElement as search context, to narrow down the sear
 Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
 Widget Name | String | yes | The name of the widget
-Value | Boolean | yes | The value you want to set (un-/checked)
+Value | String | yes | The value you want to assert
 Search Context | WebElement | no | Limit the search to the given WebElement

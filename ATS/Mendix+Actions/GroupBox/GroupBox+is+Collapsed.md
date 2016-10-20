@@ -4,6 +4,9 @@ title: "Groupbox is Collapsed"
 ## Description
 Returns the GroupBox Collapsed state: true if collapsed, otherwise false.
 
+## Supported widgtes
+ + GroupBox
+
 ## Usage
 Pass the name of the GroupBox you want to get the collapsed state from as parameter for the action.
 Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.

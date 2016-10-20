@@ -4,6 +4,11 @@ title: "Close Dialog"
 ## Description
 Click [x]-button on a Confirmation, Error, Warning or Info Dialog
 
+## Supported Widgets
+ + Window
+ + DialogMessage
+ + ConfirmationDialog
+
 ## Usage
 Optional you can provide the dialog title and dialog type, to specify which dialog you want to close. Otherwise this action will close the first found active dialog.
 This action is equivalent to pressing the [x]-button on top of the dialog.       

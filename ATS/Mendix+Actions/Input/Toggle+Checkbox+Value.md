@@ -2,7 +2,10 @@
 title: "Toggle Checkbox Value"
 ---
 ## Description
-Clicks on a Checkbox to toggle its value. This will inverse the current value of the checkbox. 
+Clicks on a Checkbox to toggle its value. This will inverse the current value of the checkbox.
+
+## Supported widgets
+ + Checkbox
 
 ## Usage
 Pass the name of the checkbox.

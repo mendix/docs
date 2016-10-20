@@ -4,6 +4,9 @@ title: "Click DataGrid Row"
 ## Description
 Click a DataGrid Row by a given column value.
 
+## Supported Widgets
+ * DataGrid
+
 ## Usage
 If you want to click/doubleclick a row in a DataGrid, use this action. You have to pass the name of the DataGrid, the column title and the cell value of the row, to determine which row to click. Optional you can provide a WebElement as search context, to narrow down the search for the DataGrid widget, if there are two or more DataGrids with the same name.      
 

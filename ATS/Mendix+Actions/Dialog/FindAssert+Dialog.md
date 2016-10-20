@@ -4,6 +4,11 @@ title: "Find/Assert Dialog"
 ## Description
 Find/Assert a Dialog by Title or Type
 
+## Supported Widgets
+ + Window
+ + DialogMessage
+ + ConfirmationDialog
+
 ## Usage
 Optional you can provide the dialog title and dialog type, to specify which dialog you want to find. Otherwise this action will return the first found active dialog.
 

@@ -4,6 +4,9 @@ title: "Cancel Dialog"
 ## Description
 Click Cancel on a Confirmation Dialog.
 
+## Supported Widgets
+ + ConfirmationDialog
+
 ## Usage
 Optional you can provide the dialog title and dialog type, to specify which dialog you want to cancel. Otherwise this action will cancel the first found active dialog.     
 

@@ -5,6 +5,9 @@ title: "Find/Assert Widget"
 Find/Assert a Mendix Widget by its given name or value.
 It is possible to use a sequence of names as a path.
 
+## Supported Widgets
+ + All widgets
+
 ## Usage
 Provide the name of the widget.
 Optional search the widget by value and filter only visible widgets.

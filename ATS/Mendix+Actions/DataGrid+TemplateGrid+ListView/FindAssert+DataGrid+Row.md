@@ -4,6 +4,9 @@ title: "Find/Assert DataGrid Row"
 ## Description
 Find/Assert a DataGrid Row by a certain column value.
 
+## Supported Widgets
+ + DataGrid
+
 ## Usage
 You have to pass the name of the DataGrid, the column title and the cell value of the row, to determine which row to find.
 Optional you can provide a WebElement as search context, to narrow down the search for the DataGrid widget, if there are two or more DataGrids with the same name.

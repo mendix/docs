@@ -4,6 +4,9 @@ title: "Get Active Tab Caption"
 ## Description
 Returns the caption of the active tab page.
 
+## Supported widgets
+ + TabContainer
+
 ## Usage
 Pass the tab widget name you want to get the tab caption from as parameter for the action.
 Optional you can provide a WebElement as search context, to narrow down the search for the tab widget, if there are two or more tab widgets with the same name.

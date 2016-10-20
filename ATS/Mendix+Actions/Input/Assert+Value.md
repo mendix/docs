@@ -4,6 +4,17 @@ title: "Assert Value"
 ## Description
 Assert the text value from a TextBox, TextArea, DateInput.
 
+## Supported widgets
+ + TextBox
+ + TextArea
+ + DatePicker
+ + Dropdown
+ + RadioButton
+ + ReferenceSelector
+ + SearchInput Text
+ + SearchInput Dropdown
+ + Label
+
 ## Usage
 Pass the name of the widget and the value you want to assert.
 Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.

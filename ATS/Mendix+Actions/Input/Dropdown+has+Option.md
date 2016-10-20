@@ -1,14 +1,16 @@
 ---
-title: "Get Checkbox Value"
+title: "Dropdown has Option"
 ---
 ## Description
-Returns true if the Checkbox is checked otherwise false.
+Returns true if value is available in dropdown otherwise false.
 
 ## Supported widgets
- + Checkbox
+ + Dropdown
+ + ReferenceSelector
+ + SearchInput Dropdown
 
 ## Usage
-Pass the name of the checkbox you want to get the value from.
+Pass the name of the widget you want to get the value from.
 Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
 ## Input Parameters
@@ -16,10 +18,11 @@ Optional you can provide a WebElement as search context, to narrow down the sear
 Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
 Widget Name | String | yes | The name of the widget
+Value | String | yes | The value you want to check
 Search Context | WebElement | no | Limit the search to the given WebElement
 
 ## Return Value
 
 Name | Datatype | Description
 ---- | :---------: | ---------------
-Value | Boolean | Value of the checkbox. True if checked, otherwise false.
+Has Option | Boolean | True if option with specified value is available in dropdown otherwise false.

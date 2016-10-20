@@ -1,14 +1,16 @@
 ---
-title: "Set Checkbox Value"
+title: "Get Index"
 ---
 ## Description
-Sets the value of a Checkbox.
+Gets the index of the selected value in a dropdown, e.g. an EnumSelect or ReferenceSelector.
 
 ## Supported widgets
- + Checkbox
++ Dropdown
++ ReferenceSelector
++ SearchInput Dropdown
 
 ## Usage
-Pass the name of the checkbox and the value you want to set.
+Pass the name of the widget you want to get the index for the currently selected value from.
 Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
 ## Input Parameters
@@ -16,5 +18,10 @@ Optional you can provide a WebElement as search context, to narrow down the sear
 Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
 Widget Name | String | yes | The name of the widget
-Value | Boolean | yes | The value you want to set (un-/checked)
 Search Context | WebElement | no | Limit the search to the given WebElement
+
+## Return Value
+
+Name | Datatype | Description
+---- | :---------: | ---------------
+Index | Integer | The index of the selected option. Starts with 0 for the first option.

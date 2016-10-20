@@ -2,7 +2,10 @@
 title: "Get Row Cell Value"
 ---
 ## Description
-Returns the cell value of a given DataGrid row as string, specified by the column name. 
+Returns the cell value of a given DataGrid row as string, specified by the column name.
+
+## Supported Widgets
+ + DataGrid
 
 ## Usage
 You have to pass a DataGrid row as WebElement and the column name to determine which cell you want to read. To get the DataGrid row, use the actions [Find Item/Row](Find+ItemRow), [Find Item/Row (by child element)](Find+ItemRow+by+child) or [Find/Assert DataGrid Row](FindAssert+DataGrid+Row).    

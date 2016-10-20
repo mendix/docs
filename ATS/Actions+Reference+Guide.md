@@ -3,7 +3,7 @@ title: "Actions Reference Guide"
 category: "Test Development"
 ---
 ## Predefined Actions in ATS
-This sections provides you with an overview of the most commonly used, predefined actions in ATS. For more informations about the functionality and the usage of an action, click an item below.  
+This sections provides you with an overview of all predefined actions in ATS. For more informations about the functionality and the usage of an action, click an item below.  
 ### Mendix Actions
 
 #### DataGrid, TemplateGrid, ListView
@@ -11,10 +11,23 @@ This sections provides you with an overview of the most commonly used, predefine
 + [Find/Assert DataGrid Row](Mendix+Actions/DataGrid+TemplateGrid+ListView/FindAssert+DataGrid+Row)
 + [Find Item/Row](Mendix+Actions/DataGrid+TemplateGrid+ListView/Find+ItemRow)
 + [Find Item/Row (by child element)](Mendix+Actions/DataGrid+TemplateGrid+ListView/Find+ItemRow+by+child)
-+ [Set Row Cell Value](Mendix+Actions/DataGrid+TemplateGrid+ListView/Set+Row+Cell+Value)
++ [Find Selected Item/Row](Mendix+Actions/DataGrid+TemplateGrid+ListView/Find+Selected+ItemRow)
++ [Get Item/Row Index](Mendix+Actions/DataGrid+TemplateGrid+ListView/Get+ItemRow+Index)
 + [Get Row Cell Value](Mendix+Actions/DataGrid+TemplateGrid+ListView/Get+Row+Cell+Value)
++ [Get Total Item/Row Count](Mendix+Actions/DataGrid+TemplateGrid+ListView/Get+Total+ItemRow+Count)
++ [Get Visible Item/Row Count](Mendix+Actions/DataGrid+TemplateGrid+ListView/Get+Visible+ItemRow+Count)
++ [Set ListView Search](Mendix+Actions/DataGrid+TemplateGrid+ListView/Set+ListView+Search)
++ [Set Row Cell Value](Mendix+Actions/DataGrid+TemplateGrid+ListView/Set+Row+Cell+Value)
++ [Sort DataGrid](Mendix+Actions/DataGrid+TemplateGrid+ListView/Sort+DataGrid)
 
 #### Dialog
+<div class="alert alert-info">
+
+A _Window_ is rendered when a page is opened as a popup.
+
+A _ConfirmationDialog_ is shown when a delete or microflow action requires a confirmation. Show message actions in microflows result in _DialogMessage_ widgets.
+
+</div>
 
 + [Cancel Dialog](Mendix+Actions/Dialog/Cancel+Dialog)
 + [Close Dialog](Mendix+Actions/Dialog/Close+Dialog)
@@ -22,13 +35,21 @@ This sections provides you with an overview of the most commonly used, predefine
 + [Find/Assert Dialog](Mendix+Actions/Dialog/FindAssert+Dialog)
 + [Get Dialog Message Text](Mendix+Actions/Dialog/Get+Dialog+Message+Text)
 
+#### FileManager
+
++ [Set File Manager](Mendix+Actions/File+Manager/Set+File+Manager)
+
 #### Generic
-+ [Find/Assert Widget](Mendix+Actions/Generic/FindAssert+Widget)
++ [Assert Current Page](Mendix+Actions/Generic/Assert+Current+Page)
++ [Assert Validation Message](Mendix+Actions/Generic/Assert+Validation+Message)
 + [Click/Doubleclick](Mendix+Actions/Generic/ClickDoubleclick)
 + [Click Widget](Mendix+Actions/Generic/Click+Widget)
-+ [Open Application](Mendix+Actions/Generic/Open+Application)
++ [Click Widget Button](Mendix+Actions/Generic/Click+Widget+Button)
++ [Find/Assert Widget](Mendix+Actions/Generic/FindAssert+Widget)
++ [Get Validation Message](Mendix+Actions/Generic/Get+Validation+Message)
 + [Login](Mendix+Actions/Generic/Login)
 + [Logout](Mendix+Actions/Generic/Logout)
++ [Open Application](Mendix+Actions/Generic/Open+Application)
 
 #### GroupBox
 + [Open GroupBox](Mendix+Actions/GroupBox/Open+GroupBox)
@@ -36,11 +57,15 @@ This sections provides you with an overview of the most commonly used, predefine
 + [GroupBox is Collapsed](Mendix+Actions/GroupBox/GroupBox+is+Collapsed)
 
 #### Input
++ [Assert Checkbox Value](Mendix+Actions/Input/Assert+Checkbox+Value)
 + [Assert Value](Mendix+Actions/Input/Assert+Value)
-+ [Set Value](Mendix+Actions/Input/Set+Value)
++ [Dropdown has Option](Mendix+Actions/Input/Dropdown+has+Option)
++ [Get Checkbox Value](Mendix+Actions/Input/Get+Checkbox+Value)
++ [Get Index](Mendix+Actions/Input/Get+Index)
 + [Get Value](Mendix+Actions/Input/Get+Value)
 + [Set Checkbox Value](Mendix+Actions/Input/Set+Checkbox+Value)
-+ [Get Checkbox Value](Mendix+Actions/Input/Get+Checkbox+Value)
++ [Set Value](Mendix+Actions/Input/Set+Value)
++ [Set Value (by index)](Mendix+Actions/Input/Set+Value+by+index)
 + [Toggle Checkbox Value](Mendix+Actions/Input/Toggle+Checkbox+Value)
 
 #### Navigation, Menu

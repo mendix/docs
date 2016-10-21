@@ -6,7 +6,7 @@ Login to a Mendix Application with standard login page or on Cloud using MxID.
 
 ## Usage
 Provide the name and password of the user account as parameters.
-Optional you can use a MxID to login to your mendix application.
+Optionally you can use a MxID to login to your mendix application.
 
 ## Input Parameters
 

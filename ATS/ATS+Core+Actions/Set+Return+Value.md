@@ -2,10 +2,10 @@
 title: "Set Return Value"
 ---
 ## Description
-Set the given value as return value for the action it is used in. 
+Sets the given value as return value for the action it is used in.
 
 ## Usage
-Use this action to set define the return value of your custom action.
+Use this action to set the return value of your custom action.
 Pass the value you want to set as return value as parameter.
 
 ## Input Parameters

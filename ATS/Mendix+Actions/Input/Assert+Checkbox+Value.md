@@ -2,14 +2,14 @@
 title: "Assert Checkbox Value"
 ---
 ## Description
-Assert the value of a Checkbox (true or false).
+Asserts the value of a Checkbox (true or false).
 
 ## Supported widgets
  + Checkbox
 
 ## Usage
 Pass the name of the widget and the value you want to assert.
-Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
+Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
 ## Input Parameters
 

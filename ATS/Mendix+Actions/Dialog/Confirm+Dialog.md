@@ -2,14 +2,14 @@
 title: "Confirm Dialog"
 ---
 ## Description
-Click Proceed/Ok Button on a Confirmation, Error, Warning or Info Dialog
+Clicks Proceed/Ok Button on a Confirmation, Error, Warning or Info Dialog.
 
 ## Supported Widgets
  + ConfirmationDialog
  + DialogMessage
 
 ## Usage
-Optional you can provide the dialog title and dialog type, to specify which dialog you want to confirm. Otherwise this action will confirm the first found active dialog.
+Optionally you can provide the dialog title and dialog type, to specify which dialog you want to confirm. Otherwise this action will confirm the first found active dialog.
 
 ## Input Parameters
 Name | Datatype | Required | Description

@@ -2,14 +2,14 @@
 title: "Click Widget"
 ---
 ## Description
-Click on a Mendix Widget (e.g. Button, Link, Image) by its name.
+Clicks on a Mendix widget (e.g. Button, Link, Image) by its name.
 
 ## Supported Widgets
 All widgets
 
 ## Usage
 Pass the name of the widget you want to click as parameter for the action.
-Optional you can specify if a doubleclick should be performed or not and you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
+Optionally you can specify if a doubleclick should be performed or not and you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
 ## Input Parameters
 

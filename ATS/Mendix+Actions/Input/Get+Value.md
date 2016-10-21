@@ -2,7 +2,7 @@
 title: "Get Value"
 ---
 ## Description
-Get the text value from a Textbox, Textarea, Dateinput, RadioButton, Dropdowns.
+Returns the text value from Textboxes, Textareas, Dateinputs, RadioButtons, Dropdowns etc.
 
 ## Supported Widgets
 + TextBox
@@ -17,7 +17,7 @@ Get the text value from a Textbox, Textarea, Dateinput, RadioButton, Dropdowns.
 
 ## Usage
 Pass the name of the widget you want to get the value from.
-Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
+Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
 ## Input Parameters
 

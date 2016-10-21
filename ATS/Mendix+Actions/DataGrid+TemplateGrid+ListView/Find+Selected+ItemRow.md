@@ -2,7 +2,7 @@
 title: "Find Selected Item/Row"
 ---
 ## Description
-Returns first selected Item/Row object in a DataGrid, TemplateGrid or ListView by a given index.
+Returns the first selected Item/Row object in a DataGrid, TemplateGrid or ListView.
 
 ## Supported Widgets
  + DataGrid
@@ -11,7 +11,7 @@ Returns first selected Item/Row object in a DataGrid, TemplateGrid or ListView b
 
 ## Usage
 Provide the name of the DataGrid, TemplateGrid or ListView.
-Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
+Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 ## Input Parameters
 
 Name | Datatype | Required | Description

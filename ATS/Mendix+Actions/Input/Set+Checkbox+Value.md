@@ -9,7 +9,7 @@ Sets the value of a Checkbox.
 
 ## Usage
 Pass the name of the checkbox and the value you want to set.
-Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
+Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
 ## Input Parameters
 

@@ -11,7 +11,7 @@ Gets the index of the selected value in a dropdown, e.g. an EnumSelect or Refere
 
 ## Usage
 Pass the name of the widget you want to get the index for the currently selected value from.
-Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
+Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
 ## Input Parameters
 

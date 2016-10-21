@@ -2,7 +2,7 @@
 title: "Focus WebElement"
 ---
 ## Description
-Focus WebElement and perform a Mendix wait afterwards.
+Focuses a WebElement and performs a Mendix wait afterwards.
 
 ## Supported widgtes
  + All WebElements

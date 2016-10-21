@@ -2,7 +2,7 @@
 title: "Get Total Item/Row Count"
 ---
 ## Description
-Gets the total grid count from the paging status
+Returns the total grid count from the paging status.
 
 ## Supported Widgets
  + DataGrid
@@ -11,7 +11,7 @@ Gets the total grid count from the paging status
 
 ## Usage
 You have to pass the widget name to the action.
-Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.    
+Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.    
 
 ## Input Parameters
 

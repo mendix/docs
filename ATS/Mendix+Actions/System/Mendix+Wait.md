@@ -2,7 +2,7 @@
 title: "Mendix wait"
 ---
 ## Description
-Inject Mendix Scripts and Wait
+Injects Mendix Scripts and waits
 
 ## Usage
-This will make your application wait until another action happens. 
+This will make your application wait until another action happens.

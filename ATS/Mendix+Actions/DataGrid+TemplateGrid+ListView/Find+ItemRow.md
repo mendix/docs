@@ -2,7 +2,7 @@
 title: "Find Item/Row"
 ---
 ## Description
-Find a Row/Item in a DataGrid, TemplateGrid or ListView by a given index.
+Finds a Row/Item in a DataGrid, TemplateGrid or ListView by a given index.
 
 ## Supported Widgets
  + DataGrid
@@ -10,8 +10,8 @@ Find a Row/Item in a DataGrid, TemplateGrid or ListView by a given index.
  + ListView
 
 ## Usage
-Provide the name of the DataGrid, TemplateGrid or ListView and the index (starting with 0) of the row.
-Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
+Provide the name of the DataGrid, TemplateGrid or ListView and the zero-based index of the row.
+Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 ## Input Parameters
 
 Name | Datatype | Required | Description

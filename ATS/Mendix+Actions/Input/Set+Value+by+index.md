@@ -2,7 +2,7 @@
 title: "Set Value (by index)"
 ---
 ## Description
-Set the value of a dropdown by index, e.g. EnumSelect or ReferenceSelector
+Sets the value of a dropdown by index, e.g. EnumSelect or ReferenceSelector
 
 ## Supported widgets
  + Dropdown
@@ -11,7 +11,7 @@ Set the value of a dropdown by index, e.g. EnumSelect or ReferenceSelector
 
 ## Usage
 Pass the name of the widget and the index of the value you want to set.
-Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
+Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
 ## Input Parameters
 

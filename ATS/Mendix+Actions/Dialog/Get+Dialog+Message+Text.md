@@ -2,7 +2,7 @@
 title: "Get Dialog Message Text"
 ---
 ## Description
-Get the text from message and confirmation dialogs
+Returns the text from messages and confirmation dialogs
 
 ## Supported Widgets
  + ConfirmationDialog

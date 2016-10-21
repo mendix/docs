@@ -2,7 +2,7 @@
 title: "Dropdown has Option"
 ---
 ## Description
-Returns true if value is available in dropdown otherwise false.
+Returns true if the value is available in the dropdown otherwise false.
 
 ## Supported widgets
  + Dropdown
@@ -11,7 +11,7 @@ Returns true if value is available in dropdown otherwise false.
 
 ## Usage
 Pass the name of the widget you want to get the value from.
-Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
+Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
 ## Input Parameters
 

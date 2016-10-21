@@ -8,7 +8,7 @@ Math.floor(Math.random() * (max - min)) + min;
 
 ## Usage
 Pass the lower/min and upper/max bound for the generated number, to limit the outcome.
-You need to define the min(included) and max (excluded).
+You have to define the min(included) and max (excluded).
 
 ## Input Parameters
 

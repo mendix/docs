@@ -2,7 +2,7 @@
 title: "Get Visible Item/Row Count"
 ---
 ## Description
-Returns number of currently visible Items/Rows in a TemplateGrid, DataGrid or ListView.
+Returns the number of currently visible Items/Rows in a TemplateGrid, DataGrid or ListView.
 
 ## Supported Widgets
  + DataGrid
@@ -11,7 +11,7 @@ Returns number of currently visible Items/Rows in a TemplateGrid, DataGrid or Li
 
 ## Usage
 You have to pass the widget name to the action.
-Optional you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.    
+Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.    
 
 ## Input Parameters
 

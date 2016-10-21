@@ -2,7 +2,7 @@
 title: "Find/Assert Dialog"
 ---
 ## Description
-Find/Assert a Dialog by Title or Type
+Finds/Asserts a Dialog by title or type.
 
 ## Supported Widgets
  + Window
@@ -10,7 +10,7 @@ Find/Assert a Dialog by Title or Type
  + ConfirmationDialog
 
 ## Usage
-Optional you can provide the dialog title and dialog type, to specify which dialog you want to find. Otherwise this action will return the first found active dialog.
+Optionally you can provide the dialog title and dialog type, to specify which dialog you want to find. Otherwise this action will return the first found active dialog.
 
 ## Input Parameters
 Name | Datatype | Required | Description

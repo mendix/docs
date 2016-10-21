@@ -2,7 +2,7 @@
 title: "Get Item/Row Index"
 ---
 ## Description
-Get the Index of a row in a Datagrid, or an item in a TemplateGrid or ListView.
+Returns the zero-based index of a row in a Datagrid, or of an item in a TemplateGrid or ListView.
 
 ## Supported Widgets
  + DataGrid
@@ -10,7 +10,7 @@ Get the Index of a row in a Datagrid, or an item in a TemplateGrid or ListView.
  + ListView
 
 ## Usage
-You have to pass a Item/Row as WebElement. To get the DataGrid row or TemplateGrid/ListView Item, use the actions [Find Item/Row](Find+ItemRow), [Find Item/Row (by child element)](Find+ItemRow+by+child) or [Find/Assert DataGrid Row](FindAssert+DataGrid+Row).    
+You have to provide a Item/Row as WebElement. To get the DataGrid row or TemplateGrid/ListView Item, use the actions [Find Item/Row](Find+ItemRow), [Find Item/Row (by child element)](Find+ItemRow+by+child) or [Find/Assert DataGrid Row](FindAssert+DataGrid+Row).    
 
 ## Input Parameters
 

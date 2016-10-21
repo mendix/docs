@@ -10,7 +10,7 @@ Clicks a Refresh/Loadmore/ClearSearchField (ListView)/ Goto/Add (ReferenceSelect
 
 ## Usage
 Pass the name of the widget wich contains the button. You can chose the button type from the provided global constants.
-Optional you can specify if a doubleclick should be performed or not and you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
+Optionally you can specify if a doubleclick should be performed or not and you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
 ## Input Parameters
 

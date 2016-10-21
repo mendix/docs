@@ -2,13 +2,13 @@
 title: "Sort DataGrid"
 ---
 ## Description
-Sorts DataGrid by given Column
+Sorts a DataGrid by the specified column.
 
 ## Supported Widgets
  + DataGrid
 
 ## Usage
-You have to pass the DataGrid and column name to determine the DataGrid widget and the sorting.
+You have to pass the DataGrid and the column name to determine the DataGrid widget and the sorting.
 
 ## Input Parameters
 Name | Datatype |Required| Description

@@ -2,7 +2,7 @@
 title: "Execute Javascript Integer"
 ---
 ## Description
-Execute javascript snippet.
+Executes the provided javascript snippet.
 Runs asynchronous when Timeout is set.
 Returns an Integer.
 

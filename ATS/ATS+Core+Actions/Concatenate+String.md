@@ -5,7 +5,7 @@ title: "Concatenate String"
 Concatenate Strings
 
 ## Usage
-Pass the Strings you want concatenate, with a maximum of five strings. 
+Pass the Strings you want to concatenate, with a maximum of five strings. 
 
 ## Input Parameters
 

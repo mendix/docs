@@ -39,6 +39,3 @@ Pattern |Name | Meaning
  :text | Text Selector | Selects all input elements of type text.
 
 For more informations visit the [official JQuery selectors reference](https://api.jquery.com/category/selectors/).
-
-### ATS Selectors
-//**_TODO_**

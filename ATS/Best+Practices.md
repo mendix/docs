@@ -12,7 +12,7 @@ Use input parameters and generic functions instead of hardcoding every variable 
 ### Retrieve WebElements/Widgets before applying JavaScript actions on them
 If you want to access a child node, from a parent widget and you cannot use the [Find widget child node action](Mendix+Actions/System/Find+Widget+Child+Node), you should get the parent widget first, before you manipulate the DOM with a JavaScript action. Especially if you use the extended JQuery selectors. Those selectors tend to be slower in their execution time and if you have to traverse the whole DOM to get to the desired node, this can make a huge difference. Use the [Find/Assert Widget action](Mendix+Actions/Generic/FindAssert+Widget) on the parent widget and pass the result to the JavaScript action as input parameter. From there you can traverse the subtree with the parent widget as root and save execution time.
 
-For more informations about JQuery selectors read the [JQuery selectors sections](Selectors#JQuery+Selectors) in this reference or visit the [official JQuery selectors referece](https://api.jquery.com/category/selectors/).  
+For more informations about JQuery selectors read the [JQuery selectors section](Selectors#JQuery+Selectors) of this reference or visit the [official JQuery selectors reference](https://api.jquery.com/category/selectors/).  
 
 
 ### Naming Conventions

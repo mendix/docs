@@ -2,11 +2,11 @@
 title: "Java security settings"
 parent: "Pre+requisites"
 ---
-This appendix describes how to simulate security in the modeler and what java permissions are needed.
+This appendix describes how to simulate security in the Mendix Modeler and what java permissions are needed.
 
-# Simulate cloud security in the Modeler
+# Simulate cloud security in the Mendix Modeler
 
-If you run your application in a Modeler with emulated cloud security you can use the log tool, trap tool, statistics tool and performance tool. For the additional tools you need extra permissions in java. The following procedure describes how you can configure the Modeler to simulate the same security as you get with emulated cloud security plus the security rules needed for the APMAgent.
+If you run your application in a Mendix Modeler with emulated cloud security, you can use the log tool, trap tool, statistics tool and performance tool. For the additional tools you need extra permissions in java. The following procedure describes how you can configure the Mendix Modeler to simulate the same security as you get with emulated cloud security plus the security rules needed for the APMAgent.
 Procedure to simulate cloud security plus APMAgent permissions:
 
 1.  Turn off the emulate cloud security option in project settings, active configuration, server tab
@@ -24,8 +24,8 @@ Procedure to simulate cloud security plus APMAgent permissions:
 
 # Needed java permissions
 
-For an on premise installation often no additional java security is set and you don't have to do anything. If, however, your internal IT has set security on the java JVM running the Mendix Business Server you have to arrange additional permissions in java with your internal IT as described below.
-Here follow the permissions needed in java and what they are used for:
+For an on-premises installation, often no additional Java security is set and you don't have to do anything. If, however, your internal IT has set security on the java JVM running the Mendix Business Server you have to arrange additional permissions in Java with your internal IT as described below.
+Here follow the permissions needed in Java and what they are used for:
 
 For the JVM Browser and measurements based on JMX the following permissions are needed:
 

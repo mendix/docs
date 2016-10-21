@@ -1,5 +1,5 @@
 ---
-title: "Actions Reference Guide"
+title: "Standard Actions Reference"
 category: "Test Development"
 ---
 ## Predefined Actions in ATS

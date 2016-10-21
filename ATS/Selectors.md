@@ -38,7 +38,7 @@ Pattern |Name | Meaning
  :parent | Parent Selector | Select all elements that have at least one child node (either an element or text).
  :text | Text Selector | Selects all input elements of type text.
 
-For more informations visit the official [JQuery selectors reference](https://api.jquery.com/category/selectors/).
+For more informations visit the [official JQuery selectors reference](https://api.jquery.com/category/selectors/).
 
 ### ATS Selectors
 //**_TODO_**

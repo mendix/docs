@@ -11,8 +11,8 @@ You can use the custom ATS selectors like CSS3 selectors in your custom actions.
 Pattern |Name | Meaning
 -----|---------|--------
 :clickable | Clickable pseudo-class | Selects a user interface element which is visible and clickable
-:containsExact(*text*) | ContainsExact pseudo-class | Selects a element which inner HTML is exactly equal to the given text (**not** case sensitive)
-:containsExactCase(*text*) | ContainsExactCase pseudo-class |Selects a element which inner HTML is exactly equal to the given text (case sensitive)
+:containsExact(*text*) | ContainsExact pseudo-class | Selects a element whose inner HTML is exactly equal to the given text (**not** case sensitive)
+:containsExactCase(*text*) | ContainsExactCase pseudo-class |Selects a element whose inner HTML is exactly equal to the given text (case sensitive)
 :containsRegex(*regex*) | ContainsRegex pseudo-class | Selects a element whose inner HTML matches the given regex.  
 :containsText(*text*) | ContainsText pseudo-class | Selects a element whose inner text value is equal to the given text. Can only be used on text, CDATA and element nodes
 :val(*text*) | Value pseudo-class | Selects a input, select or textarea whose value is equal to the given text

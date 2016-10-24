@@ -17,7 +17,7 @@ In some cases, encryption and authentication on connections is unnecessary. In t
 
 ## Scenario 2 - TLS/HTTPS
 
-This is the most common scenario, where the client verifies the server certificate and sets up an encrypted connection. Trust is verified by verifying the chain of trust to a Certificate Authority in the client's trust store. Using encryption, data sent and received over the connection can not be intercepted by other parties, so to authenticate the client a username/password or token can be used with e.g. HTTP headers. This can be used for services that natively support TLS. To connect to your service from the Mendix Cloud, the service can be exposed on an external IP address and port. This can be firewalled to only allow the Mendix Cloud to connect to it. To get the IP address ranges of your application in the Mendix Cloud you can file a ticket at Mendix Support.
+This is the most common scenario, where the client verifies the server certificate and sets up an encrypted connection. Trust is verified by verifying the chain of trust to a Certificate Authority in the client's trust store. Using encryption, data sent and received over the connection can not be intercepted by other parties, so to authenticate the client, a username/password or token can be used with, for example, HTTP headers. This can be used for services that natively support TLS. To connect to your service from the Mendix Cloud, the service can be exposed on an external IP address and port. This can be firewalled to only allow the Mendix Cloud to connect to it. To get the IP address ranges of your application in the Mendix Cloud, you can file a ticket at Mendix Support.
 
 ![](attachments/19202272/19399047.png)
 

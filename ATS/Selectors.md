@@ -3,7 +3,19 @@ title: "Selectors"
 category: "Test Development"
 ---
 
-For the [Find Widget Child Node action](/Mendix+Actions/System/Find+Widget+Child+Node)  or as part of a script for [Execute JavaScript Integer](/Selenium+Actions/Execute+JavaScript+Integer), [Execute JavaScript String](/Selenium+Actions/Execute+JavaScript+String) and [Execute JavaScript WebElement](/Selenium+Actions/Execute+JavaScript+WebElement) actions, you will have to use selectors to get a node or WebElement. ATS supports both, JQuery and CSS3 selectors. The following summary will give you a short overview of the most commonly used selectors in ATS.
+For the [Find Widget Child Node action](/Mendix+Actions/System/Find+Widget+Child+Node)  or as part of a script for [Execute JavaScript Integer](/Selenium+Actions/Execute+JavaScript+Integer), [Execute JavaScript String](/Selenium+Actions/Execute+JavaScript+String) and [Execute JavaScript WebElement](/Selenium+Actions/Execute+JavaScript+WebElement) actions, you will have to use selectors to get a node or WebElement. ATS supports both, JQuery and CSS3 selectors. In addition to that, ATS includes its own selectors. The following summary will give you a short overview of the most commonly used selectors in ATS.
+
+### ATS Selectors
+You can use the custom ATS selectors like CSS3 selectors in your custom actions.
+
+Pattern |Name | Meaning
+-----|---------|--------
+:clickable | Clickable pseudo-class | Selects a user interface element which is visible and clickable
+:containsExact(*text*) | ContainsExact pseudo-class | Selects a element which inner HTML is exactly equal to the given text (**not** case sensitive)
+:containsExactCase(*text*) | ContainsExactCase pseudo-class |Selects a element which inner HTML is exactly equal to the given text (case sensitive)
+:containsRegex(*regex*) | ContainsRegex pseudo-class | Selects a element whose inner HTML matches the given regex.  
+:containsText(*text*) | ContainsText pseudo-class | Selects a element whose inner text value is equal to the given text. Can only be used on text, CDATA and element nodes
+:val(*text*) | Value pseudo-class | Selects a input, select or textarea whose value is equal to the given text
 
 ### CSS Selectors
 You can use any CSS Selector defined in CSS3 and supported by your browser. The following table shows some of the commonly used CSS3 selectors in ATS.
@@ -20,6 +32,7 @@ You can use any CSS Selector defined in CSS3 and supported by your browser. The 
  E > F |Child Combinator | Selects an **F element child** of an E element
 
 For more informations visit the official [W3C CSS3 selectors reference](http://www.w3.org/TR/css3-selectors/).
+
 ### JQuery Selectors
 JQuery uses CSS3 selectors and extends the collection of selectors with its own ones. You can use those in your ATS actions.
 

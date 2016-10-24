@@ -94,10 +94,10 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 ### Selenium Actions
 
 #### Get
-+ [Get Property Value](Selenium+Actions/Get/Get+Text+md)
-+ [Get Selected Option Index](Selenium+Actions/Get/Get+Text+md)
-+ [Get Selected Option Text](Selenium+Actions/Get/Get+Text+md)
-+ [Get Selected Option Value](Selenium+Actions/Get/Get+Text+md)
++ [Get Property Value](Selenium+Actions/Get/Get+Property+Value)
++ [Get Selected Option Index](Selenium+Actions/Get/Get+Selected+Option+Index)
++ [Get Selected Option Text](Selenium+Actions/Get/Get+Selected+Option+Text)
++ [Get Selected Option Value](Selenium+Actions/Get/Get+TSelected+Option+Value)
 + [Get Text](Selenium+Actions/Get/Get+Text+md)
 
 #### Set

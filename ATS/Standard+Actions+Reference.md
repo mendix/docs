@@ -92,6 +92,10 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 + [Set Return Value](ATS+Core+Actions/Set+Return+Value)
 
 ### Selenium Actions
+#### Find Objects
++ [Find Element by CSS](Selenium+Actions/Find/Find+Element+by+CSS)
++ [Find Element by ID](Selenium+Actions/Find/Find+Element+by+ID)
++ [Find Element by Sizzle](Selenium+Actions/Find/Find+Element+by+Sizzle)
 
 #### Get
 + [Get Property Value](Selenium+Actions/Get/Get+Property+Value)

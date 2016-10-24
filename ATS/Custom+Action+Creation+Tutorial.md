@@ -98,3 +98,5 @@ Click **Add** and search for **"Set Return Value"**. Add the corresponding actio
 The <b>Test Step Output</b> category contains all output values of your test/action steps. You can identify the number of the test/action step by the number with the leading #      
 </div>
 ![Set Return Value](attachments/Custom+Action+Creation+Tutorial/setReturnValue.png)
+
+Now, that the return value is set for our custom action, we can use it in our test cases or in other actions. 

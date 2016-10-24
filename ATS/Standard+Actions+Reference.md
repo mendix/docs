@@ -92,6 +92,19 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 + [Set Return Value](ATS+Core+Actions/Set+Return+Value)
 
 ### Selenium Actions
+
+#### Get
++ [Get Property Value](Selenium+Actions/Get/Get+Text+md)
++ [Get Selected Option Index](Selenium+Actions/Get/Get+Text+md)
++ [Get Selected Option Text](Selenium+Actions/Get/Get+Text+md)
++ [Get Selected Option Value](Selenium+Actions/Get/Get+Text+md)
++ [Get Text](Selenium+Actions/Get/Get+Text+md)
+
+#### Set
++ [Set Implicit Wait](Selenium+Actions/Get/Get+Text+md)
++ [Set Page Load Timeout](Selenium+Actions/Get/Get+Text+md)
+
+#### Actions
 + [Execute JavaScript Integer](Selenium+Actions/Execute+JavaScript+Integer)
 + [Execute JavaScript String](Selenium+Actions/Execute+JavaScript+String)
 + [Execute JavaScript WebElement](Selenium+Actions/Execute+JavaScript+WebElement)

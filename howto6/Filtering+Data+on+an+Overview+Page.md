@@ -1,5 +1,5 @@
 ---
-title: "Filtering Data on an Overview Page"
+title: "Filter Data on an Overview Page"
 space: "Mendix 6 How-to's"
 category: "GUI's"
 tags: []
@@ -13,36 +13,44 @@ This how-to will start with preparing a data structure and some example data. Af
 
 **This how-to will teach you how to do the following:**
 
-* Prepare the data structure
+* Prepare the data and the data structure
 * Prepare the GUI
-* Prepare the data
 * Filter a list using the search bar
 * Filter a list using XPath
 
-## 2 Prerequisites - Preparing the Data Structure, GUI, and Example Data
+## 2 Prerequisites
 
 To see the results of this how-to, it is necessary that you set up a test project with test data.
 
 Before you continue, make sure that you know how to create the following:
 
-* **Domain models**, if you need more info, take a look at this [how-to](Create+a+Basic+Data+Layer).
-* **Overview and detail pages**, if you need more info, take a look at this [how-to](Create+Your+First+Two+Overview+and+Detail+Pages).
-* **Menu items**, if you need more info, take a look at this [how-to](Setting+Up+the+Navigation+Structure).
+* **Domain models** (for more information, see [How to Create a Basic Data Layer](Create+a+Basic+Data+Layer))
+* **Overview and detail pages** (for more information, see [How to Create Your First Two Overview and Detail Pages](Create+Your+First+Two+Overview+and+Detail+Pages))
+* **Menu items** (for more information, see [How to Set Up the Navigation Structure](Setting+Up+the+Navigation+Structure))
 
-1.  Create the following domain model:
+To set up the test data, follow these steps:
+
+1. Create the following domain model:
+
     ![](attachments/18448705/18581378.png)
-2.  Create **overview** and **detail** pages to manage objects of type **Customer** and **Order**.
-3.  Create **menu items** to access the **Order** and the **Customer** overview pages.
-4.  Add the following customer data to your app:
+
+2. Create overvie and detail pages to manage the **Customer** and **Order** objects.
+3. Create menu items to access the **Order** and the **Customer** overview pages.
+4. Add the following customer data to your app:
+
     ![](attachments/18448705/18581374.png)
-5.  Add the following order data to your app:
+
+5. Add the following order data to your app:
+
     ![](attachments/18448705/18581373.png)
 
-## 4 Filtering a List of Orders Using the Search Bar
+## 3 Filtering a List of Orders Using the Search Bar
 
-In the previous section you set up a basic data structure and created some sample data. In this section you will add search fields to the search bar to allow the user to filter data on your overview page. In the examples you will filter on the order status and on a minimum price.
+In the previous section you set up a basic data structure and created some sample data. In this section, you will add search fields to the search bar to enable filtering data on the overview page. In the examples below, you will filter via the order status and a minimum price.
 
-1.  Open your **orders overview** and right click on the (empty) section above the **Search **button.
+To filter a list of orders using the search bar, follow these steps:
+
+1. Open your orders overview page and right-click the (empty) section above the **Search** button.
 
     <div class="alert alert-warning">
 

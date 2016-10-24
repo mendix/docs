@@ -7,6 +7,7 @@ space: "ATS (Application Test Suite)"
 *   [Manual Test Steps](Manual+Test+Steps)
 *   [Standard Actions Reference](Standard+Actions+Reference)
 *   [Custom Actions](Custom+Actions)
+*   [Custom Action Creation Tutorial](Custom+Action+Creation+Tutorial)
 *   [Selectors](Selectors)
 *   [Best Practices](Best+Practices)
 *   [Data Driven Tests](Data+Driven+Tests)

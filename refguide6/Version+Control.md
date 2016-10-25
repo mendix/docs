@@ -31,7 +31,7 @@ We chose Subversion because of its popularity, maturity and solid Windows suppor
 
 ### Features
 
-Let us look at a list of features of this this solution and see how it not only tackles the inadequacies of the current situation but offers a lot more power as well:
+Let us look at a list of features of this solution and see how it not only tackles the inadequacies of the current situation but offers a lot more power as well:
 Scalable - People work independently on local copies and not on one model. This means that more people can work on the same project without constant interference with each other.
 
 *   _Reliable_ - Subversion handles the sending and retrieving of changes and does a good job of handling unreliable connections.

@@ -4,6 +4,11 @@ space: "Reference Guide 6"
 parent: "Report+Widgets"
 ---
 
+<div class="alert alert-info">{% markdown %}
+
+Renamed to [Report Grid](Report+Grid) in version 6.10.0.
+
+{% endmarkdown %}</div>
 
 A basic report shows the reported data in a grid.
 

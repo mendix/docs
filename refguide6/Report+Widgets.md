@@ -5,7 +5,7 @@ parent: "Pages"
 ---
 With reporting you can create reports over the database data. Reporting is used for creating aggregated information, e.g. total sales per customer.
 
-The difference between a data grid and a basic report is that the data shown in the basic report is not stored in the database. Each time a report is created the data is retrieved from the database. The user can define a wide variety of data sets over the data presented in the report pane. Like for example aggregations, filters, etc.
+The difference between a data grid and a report grid is that the data shown in the report grid is not stored in the database. Each time a report is created the data is retrieved from the database. Data for the reporting widgets is provided by [data sets](Data+Sets).
 
 
 The top section of the report pane can contain parameter widgets ([drop downs](Drop+Down) and/or [date range selectors](Date+Range+Selector)) through which the end user can filter the displayed data, and a [report button](Report+Button) through which the end user can start the reporting.

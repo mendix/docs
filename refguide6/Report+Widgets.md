@@ -7,7 +7,4 @@ With reporting you can create reports over the database data. Reporting is used 
 
 The difference between a data grid and a report grid is that the data shown in the report grid is not stored in the database. Each time a report is created the data is retrieved from the database. Data for the reporting widgets is provided by [data sets](Data+Sets).
 
-
-The top section of the report pane can contain parameter widgets ([drop downs](Drop+Down) and/or [date range selectors](Date+Range+Selector)) through which the end user can filter the displayed data, and a [report button](Report+Button) through which the end user can start the reporting.
-
-The bottom section of the report pane should contain one or more [report charts](Report+Chart) (to show data graphically) and/or [basic reports](Basic+Reports) (to show data in matrices) which define the reports themselves.
+Report can be presented on a [page](Page) in a tabular form using [report grid](Report+Grid) widget or in a graphical form using [report chart](Report+Chart) widget. If the [data set](Data+Sets) corresponding to the report contains parameters, they can be specified by the end user via [report parameter](Report+Parameter) and [report date parameter](Report+Date+Parameter) widgets. Note that all report parameters are optional can be either not specified by the user, it is not obligatory to specify all parameters.

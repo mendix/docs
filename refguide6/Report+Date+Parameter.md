@@ -6,29 +6,31 @@ parent: "Report+Widgets"
 
 <div class="alert alert-info">{% markdown %}
 
-Renamed to [Report Date Parameter](Report+Date+Parameter) in version 6.10.0.
+Introduced in version 6.10.0.
 
 {% endmarkdown %}</div>
 
-With a date range selector the end user can filter a report on a parameter of the data set which has type DataTime.
+With a report date parameter the end user can specify a DateTime parameter of the data set, which is then used for filtering data displayed in the [report](Report+Widgets).
 
-In the date range selector you can add [date range fields](Date+Range+Field) to make it easier for an end user to select a data range. (This can be done by right clicking the data range selector and choosing add field from the popup menu.)
+In the report date parameter you can add [date range fields](Date+Range+Field) to make it easier for an end user to select a data range. (This can be done by right clicking the widget and choosing add field from the popup menu.)
 
-## Appearance Properties
+## General properties
+
+### Parameter
+
+Refers to the data set parameter of which the value is restricted by this widget. Corresponding data set must be used by one of the report widgets on the page.
 
 ### Fields per row
 
 This property indicates how many date range fields can be placed beside each other in a row. (There are always two rows available for data range fields.)
 
-### From label
+### From caption
 
 Text that's displayed beside the place where an end user can choose **from** which date/time occurrences should be shown in the report.
 
-### To label
+### To caption
 
 Text that's displayed beside the place where an end user can choose **to** which date/time occurrences should be shown in the report.
-
-## Behavior Properties
 
 ### Show from/to
 
@@ -43,10 +45,6 @@ Minimum year which can be chosen in a date range field in which the end user can
 ### Max. year
 
 Maximum year which can be chosen in a date range field in which the end user can choose a year.
-
-### Parameter
-
-Parameter of the data set of which the range is determined by this date range selector.
 
 ## Common Properties
 

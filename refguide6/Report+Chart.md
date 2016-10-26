@@ -4,18 +4,33 @@ space: "Reference Guide 6"
 parent: "Report+Widgets"
 ---
 
+<div class="alert alert-info">{% markdown %}
+
+Deprecated in version 6.10.0 and is marked for removal in version 8.0.0
+
+{% endmarkdown %}</div>
 
 A report chart is used to display a data set graphically as a set of vertical bars.
 
 For each object in the data set one or more bars are displayed, depending on the defined Series of the report chart.
 
-## Appearance Property
+## Data source properties
+
+### Data set
+
+The data set determines which data will be show in the report chart.
+
+## General properties
 
 ### Aspect ratio
 
 This property determines the aspect ratio (width : height) of the report chart as the end user will see it.
 
-## Chart Property
+### Generate report on page load
+
+If this property is false, report chart will not show it's data until the end user presses the [report button](Report+Button). This is especially useful if report uses parameters that should be specified by the end user. 
+
+## Chart properties
 
 ### Type
 
@@ -29,13 +44,7 @@ With this property you can choose the type of the report chart. The following ty
 | Lines | ![](attachments/524337/688229.png) |
 | Area | ![](attachments/524337/688223.png) |
 
-## Common Properties
-
-### Name, Class, Style
-
-See [Widget Properties](Common+Widget+Properties).
-
-### Horizontal axis Properties
+### Horizontal axis properties
 
 <div class="alert alert-warning">{% markdown %}
 
@@ -55,7 +64,7 @@ This property refers to the column of the data set of which the value is display
 
 If the data set column of the horizontal axis has type DateTime, through this property you can choose how the date is displayed.
 
-## Vertical axis Properties
+## Vertical axis properties
 
 <div class="alert alert-warning">{% markdown %}
 
@@ -84,3 +93,9 @@ Minimum value of the vertical axis. This is only used if property 'Use min/max' 
 ### Maximum
 
 Maximum value of the vertical axis. This is only used if property 'Use min/max' (described above) is true.
+
+## Common Properties
+
+### Name, Class, Style
+
+See [Widget Properties](Common+Widget+Properties).

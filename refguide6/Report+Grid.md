@@ -1,5 +1,5 @@
 ---
-title: "Basic Reports"
+title: "Report Grid"
 space: "Reference Guide 6"
 parent: "Report+Widgets"
 ---

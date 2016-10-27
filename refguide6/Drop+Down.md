@@ -6,7 +6,7 @@ parent: "Report+Widgets"
 
 <div class="alert alert-info">{% markdown %}
 
-Renamed to [Report Parameter](Report+Parameter) in version 6.10.0.
+This has been renamed to [Report Parameter](Report+Parameter) in version 6.10.0.
 
 {% endmarkdown %}</div>
 

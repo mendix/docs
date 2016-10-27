@@ -6,48 +6,48 @@ parent: "Report+Widgets"
 
 <div class="alert alert-info">{% markdown %}
 
-Introduced in version 6.10.0.
+This has been introduced in version 6.10.0.
 
 {% endmarkdown %}</div>
 
-With a report date parameter the end user can specify a DateTime parameter of the data set, which is then used for filtering data displayed in the [report](Report+Widgets).
+With the report date parameter, the user can specify the DateTime parameter of the data set, which is then used for filtering the data displayed in the [Report](Report+Widgets).
 
-In the report date parameter you can add [date range fields](Date+Range+Field) to make it easier for an end user to select a data range. (This can be done by right clicking the widget and choosing add field from the popup menu.)
+In the report date parameter you can add [Date Range Fields](Date+Range+Field) to make it easier for an end user to select a data range. To do this, right-click the widget and choose **Add field** from the pop-up menu.
 
-## General properties
+## General Properties
 
 ### Parameter
 
-Refers to the data set parameter of which the value is restricted by this widget. Corresponding data set must be used by one of the report widgets on the page.
+This refers to the data set parameter, the value of which is restricted by this widget. The corresponding data set must be used by one of the report widgets on the page.
 
-### Fields per row
+### Fields Per Row
 
-This property indicates how many date range fields can be placed beside each other in a row. (There are always two rows available for data range fields.)
+This property indicates how many date range fields can be placed beside each other in a row. There are always two rows available for data range fields.
 
-### From caption
+### From Caption
 
-Text that's displayed beside the place where an end user can choose **from** which date/time occurrences should be shown in the report.
+This is the text that is displayed beside the place where the user can choose **from** which date/time occurrences should be shown in the report.
 
-### To caption
+### To Caption
 
-Text that's displayed beside the place where an end user can choose **to** which date/time occurrences should be shown in the report.
+This is the text that is displayed beside the place where the user can choose **to** which date/time occurrences should be shown in the report.
 
-### Show from/to
+### Show From/To
 
-True if fields in which the user can fill in from and to when results should be shown in the report.
+This is true if the **from** and **to** field results should be shown in the report.
 
-False if these fields are not shown, and the filter is thus determined by the date range fields in this date range selector.
+This is false if the **from** and **to** field results should not be shown and the filter is thus determined by the date range fields in this date range selector.
 
-### Min. year
+### Min. Year
 
-Minimum year which can be chosen in a date range field in which the end user can choose a year.
+This is the minimum year that can be chosen in the date range field where the user can choose the year.
 
 ### Max. year
 
-Maximum year which can be chosen in a date range field in which the end user can choose a year.
+This is the maximum year that can be chosen in the date range field where the end user can choose the year.
 
 ## Common Properties
 
 ### Name, Class, Style
 
-See [Widget Properties](Common+Widget+Properties).
+For details, see [Widget Properties](Common+Widget+Properties).

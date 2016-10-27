@@ -6,7 +6,7 @@ parent: "Report+Widgets"
 
 <div class="alert alert-info">{% markdown %}
 
-Removed in version 6.10.0 as unnecessary.
+This has been removed in version 6.10.0 as it is unnecessary.
 
 {% endmarkdown %}</div>
 

@@ -1,5 +1,5 @@
 ---
-title: "Date Range Selector"
+title: "Report Date Parameter"
 space: "Reference Guide 6"
 parent: "Report+Widgets"
 ---

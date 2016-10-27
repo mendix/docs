@@ -1,5 +1,5 @@
 ---
-title: "Drop Down"
+title: "Report Parameter"
 space: "Reference Guide 6"
 parent: "Report+Widgets"
 ---

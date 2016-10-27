@@ -4,6 +4,11 @@ space: "Reference Guide 6"
 parent: "Report+Widgets"
 ---
 
+<div class="alert alert-info">{% markdown %}
+
+This has been renamed to [Report Date Parameter](Report+Date+Parameter) in version 6.10.0.
+
+{% endmarkdown %}</div>
 
 With a date range selector the end user can filter a report on a parameter of the data set which has type DataTime.
 

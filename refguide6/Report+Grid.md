@@ -5,48 +5,48 @@ parent: "Report+Widgets"
 ---
 <div class="alert alert-info">{% markdown %}
 
-Added in version 6.10.0.
+This has been introduced in version 6.10.0.
 
 {% endmarkdown %}</div>
 
-A report grid shows the reported data in a grid.
+This shows the reported data in a grid.
 
-## Data source properties
+## Data Source Properties
 
-### Data set
+### Data Set
 
-The data set determines which data will be show in the report grid.
+This is the data set that determines the data that will be shown in the report grid.
 
-## General properties
+## General Properties
 
-### Use paging
+### Use Paging
 
-If the expected quantity of data is too large to be displayed at once, use paging should be true, so that the data is distributed over different pages.
+If the expected quantity of the data is too large to be displayed at once, **Use Paging** should be true so that the data is distributed over different pages.
 
-### Page size
+### Page Size
 
-If Use paging is true, this property indicates the number of occurrences that's displayed on one page.
+If **Use Paging** is true, this property indicates the number of occurrences that is displayed on one page.
 
 ### Zoom
 
-The zoom property can refer to a form. When the end user double clicks an occurrence in the report, that form is displayed.
+This property can refer to a form. When the user double-clicks an occurrence in the report, that form is displayed.
 
 If the other form contains a report, the columns of the current report can be mapped to the parameters of the report in the other form.
 
-### Column widths
+### Column Widths
 
 The widths of the columns are expressed as a percentage of the total width of the basic report. You can edit this property by dragging the border between the columns.
 
-### Show export button
+### Show Export Button
 
-If this property is true, a button 'Export to Excel' is available for the end users on the report grid.
+If this property is true, the **Export to Excel** button will be available for the user on the report grid.
 
-### Generate report on page load
+### Generate Report on Page Load
 
-If this property is false, report grid will not show it's data until the end user presses the [report button](Report+Button). This is especially useful if report uses parameters that should be specified by the end user. 
+If this property is false, the report grid will not show its data until the user presses the [Report Button](Report+Button). This is especially useful if the report uses parameters that should be specified by the user. 
 
 ## Common Properties
 
 ### Name, Class, Style
 
-See [Widget Properties](Common+Widget+Properties).
+For details, see [Common Widget Properties](Common+Widget+Properties).

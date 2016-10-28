@@ -14,6 +14,7 @@ Sets the text value of a Textbox, Textarea, Dateinput, Reference Selector or Enu
 + SearchInput Text
 + SearchInput Dropdown
 + Label
++ OnChangeInputbox
 
 ## Usage
 Pass the name of the widget and the value you want to set.

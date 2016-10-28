@@ -14,6 +14,7 @@ Returns the text value from Textboxes, Textareas, Dateinputs, RadioButtons, Drop
 + SearchInput Text
 + SearchInput Dropdown
 + Label
++ OnChangeInputbox
 
 ## Usage
 Pass the name of the widget you want to get the value from.

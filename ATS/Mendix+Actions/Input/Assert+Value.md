@@ -14,6 +14,7 @@ Asserts the text value from a TextBox, TextArea, DateInput.
  + SearchInput Text
  + SearchInput Dropdown
  + Label
+ + OnChangeInputbox
 
 ## Usage
 Pass the name of the widget and the value you want to assert.

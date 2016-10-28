@@ -17,7 +17,7 @@ A WSDL describes the operations of a web service and can be imported in the Mend
 3.  Click **OK** and enter a name for the new consumed web service, e.g. _TemperatureConverter_.
 4.  Click **OK** again. You should now see the consumed web service editor.
     ![](attachments/7831673/8028246.png)
-5.  Enter [http://www.w3schools.com/webservices/tempconvert.asmx?WSDL](http://www.w3schools.com/webservices/tempconvert.asmx?WSDL) as URL and click **Import**. You will see a popup asking you to select a web service port.
+5.  Enter `http://www.w3schools.com/xml/tempconvert.asmx?WSDL` as URL and click **Import**. You will see a popup asking you to select a web service port.
     ![](attachments/7831673/17662027.png)
 6.  Click **OK** to select the default. The Business Modeler should now import the operations: **CelsiusToFahrenheit** and **FahrenheitToCelcius**.
     ![](attachments/7831673/8028247.png)

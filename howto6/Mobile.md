@@ -10,6 +10,7 @@ These are the mobile how-to's:
 
 * [How to Build a Mendix Hybrid Mobile App for Windows Phone](Building+a+Mendix+Hybrid+Mobile+App+for+Windows+Phone)
 * [How to Deploy Your First Hybrid Mobile App](Deploy+your+first+Hybrid+Mobile+App)
+* [How to Enable WKWebView for Hybrid Apps on iOS](How+To+Enable+WKWebView+for+Hybrid+App+for+iOS)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](Publishing+a+Mendix+Hybrid+Mobile+App+in+Mobile+App+Stores)
 * [Push Notifications](Push+Notifications)
     * [Implementation Guide](Implementation+Guide)

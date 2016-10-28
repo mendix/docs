@@ -36,3 +36,6 @@ JavaScript Object Notation (JSON) is a lightweight representation of data.
 ```
 
 Above the object 'person' is described with the corresponding values for the attributes 'name', 'age' and the referred object 'address'.
+
+## Limitations
+It is not possible to specify a timeout value.

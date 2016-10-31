@@ -20,22 +20,25 @@ Welcome to the custom action creation tutorial. You will learn how to create a c
 
 ## Introduction
 <!--
-- Why create custom actions
+- Why create custom actions (testing not yet supported appstore widget, testing custom widget, mendix app embedded in cms)
 - Standard actions vs. actions for Custom Action Development
 - What to do for boolean slider get_Value action
 - Approach
 -->
-We will create a custom action for the Boolean Slider Appstore widget. The following image shows the application we want to test. It consists of the Boolean Slider Appstore Widget whose current value we want to retrieve as a string.
+
+There are several reason for creating a custom action in ATS. Maybe you're using a appstore widget, that is not yet supported by ATS. Or you've created your own widget that you want to test. If thats the case, you will have to create a custom action for your widget.
+
+Before you start with developing your own custom action, you should check if there is a standard action that does the job. Sometimes the standard actions work with unsupported widgets. If that is not the case, you should determine what your custom action should do and how the action should do it.   
+
+In this tutorial, we want to get the current value of the booleanSlider Appstore widget. If we would use the [Get Checkbox Value action](/Mendix+Actions/Input/Get+Checkbox+Value), it would only return *true* or *false* for the current state of the boolean slider. We will have to develop our own custom action. The action shall retrieve the current value of the booleanSlider as a string, in this case *Sure* or *No*. We have to determine where the string is stored inside the Document Object Model and how we can read it. The following image shows the widget inside a simple mendix application.
 
 ![test app](attachments/Custom+Action+Creation+Tutorial/application.png)
 
 ## Widget Preparation
-<!--
+<!--[WIP]
  - Create prototype application with widget
- - Inspection of the DOM
+ - Inspection of the DOM (Where is the value we want?)
 -->
-If we would use the [Get Checkbox Value action](/Mendix+Actions/Input/Get+Checkbox+Value), it would only return *true* or *false* for the current state of the boolean slider.
-Because we want the string value, and there is no standard action for retrieving it, we have to write our own custom action for it.
 
 Before we start creating our own custom action, we will look at the HTML source code of the widget in our application.
 
@@ -55,9 +58,9 @@ We see, that the two possible string values of the boolean slider (*Sure* and *N
 ## Create a Custom Action
 <!--  
 - Basic Frame/Settings
+- Best Practices
 - Naming Conventions
 - Input & Output
-- Best Practices
 - Implementation
 -->
 Now that we know, where the value we want to retrive is located in the DOM , we can go on with the custom action creation. Switch to ATS to begin.

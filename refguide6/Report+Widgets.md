@@ -5,12 +5,9 @@ parent: "Pages"
 redirect_from:
   - "/refguide6/Reporting"
 ---
-With reporting you can create reports over the database data. Reporting is used for creating aggregated information, e.g. total sales per customer.
 
-The difference between a data grid and a basic report is that the data shown in the basic report is not stored in the database. Each time a report is created the data is retrieved from the database. The user can define a wide variety of data sets over the data presented in the report pane. Like for example aggregations, filters, etc.
+With reporting, you can create reports over the database data. Reporting is used for creating aggregated information (for example , the total sales per customer).
 
-A report is defined in a [report pane](Report+Pane), which is inserted in a [page](Page).
+The difference between a data grid and a report grid is that the data shown in the report grid is not stored in the database. Each time a report is created, the data is retrieved from the database. Data for the reporting widgets is provided by [Data Sets](Data+Sets).
 
-The top section of the report pane can contain parameter widgets ([drop downs](Drop+Down) and/or [date range selectors](Date+Range+Selector)) through which the end user can filter the displayed data, and a [report button](Report+Button) through which the end user can start the reporting.
-
-The bottom section of the report pane should contain one or more [report charts](Report+Chart) (to show data graphically) and/or [basic reports](Basic+Reports) (to show data in matrices) which define the reports themselves.
+A report can be presented on a [Page](Page) in a tabular form using a [Report Grid](Report+Grid) widget or in a graphical form using a [Report Chart](Report+Chart) widget. If the [Data Set](Data+Sets) corresponding to the report contains parameters, these can be specified by the user via the [Report Parameter](Report+Parameter) and [Report Date Parameter](Report+Date+Parameter) widgets. Note that all of the report parameters are optional, so it is not obligatory to specify all parameters.

@@ -4,21 +4,38 @@ space: "ATS (Application Test Suite)"
 category: "Test Development"
 ---
 
-Welcome to the custom action creation tutorial. You will learn how to create a custom action for an appstore widget from scratch.
+Welcome to the custom action creation tutorial. You will learn how to create a custom action for a widget from scratch.
 
+
+## Table of Contents
 *  [Introduction](Custom+Action+Creation+Tutorial.md#introduction)
-*  [Create a Custom Action](Custom+Action+Creation+Tutorial.md#create-a-custom-action)
-*  [Setting Input- and Outputparameters](Custom+Action+Creation+Tutorial.md#setting-input--and-+oOutputparameters)
-*  [Adding Subactions](Custom+Action+Creation+Tutorial.md#adding-subactions)
-*  [Set Return Value](Custom+Action+Creation+Tutorial.md#set-return-value)
+*  [Widget Preparation](Custom+Action+Creation+Tutorial#widget-preparation)
+*  [Create the custom action](Custom+Action+Creation+Tutorial.md#create-a-custom-action)
+  *  [Basic Settings](Custom+Action+Creation+Tutorial.md#basic-settings)
+  *  [Setting input- and outputparameters](Custom+Action+Creation+Tutorial.md#setting-input--and-+oOutputparameters)
+  *  [Implementation](Custom+Action+Creation+Tutorial.md#adding-subactions)
+  *  [Set return value](Custom+Action+Creation+Tutorial.md#set-return-value)
+*  [Testing the custom action](Custom+Action+Creation+Tutorial.md#testing-the-custom-action)
+*  [Conclusion](Custom+Action+Creation+Tutorial.md#Conclusion)
 
 ## Introduction
-We will create a custom action based on the Boolean Slider Appstore widget. The following image shows the application we want to test. It consists of the Boolean Slider Appstore Widget whose current value we want to retrieve as a string.
+<!--
+- Why create custom actions
+- Standard actions vs. actions for Custom Action Development
+- What to do for boolean slider get_Value action
+- Approach
+-->
+We will create a custom action for the Boolean Slider Appstore widget. The following image shows the application we want to test. It consists of the Boolean Slider Appstore Widget whose current value we want to retrieve as a string.
 
 ![test app](attachments/Custom+Action+Creation+Tutorial/application.png)
 
-If we would use the [Get Checkbox Value action](/Mendix+Actions/Input/Get+Checkbox+Value),it would only return true or false for the current state of the boolean slider.
-Because we want the string value, and there is no standard action for retrieving it, we will have to write our own custom action for it.
+## Widget Preparation
+<!--
+ - Create prototype application with widget
+ - Inspection of the DOM
+-->
+If we would use the [Get Checkbox Value action](/Mendix+Actions/Input/Get+Checkbox+Value), it would only return *true* or *false* for the current state of the boolean slider.
+Because we want the string value, and there is no standard action for retrieving it, we have to write our own custom action for it.
 
 Before we start creating our own custom action, we will look at the HTML source code of the widget in our application.
 
@@ -33,11 +50,17 @@ Before we start creating our own custom action, we will look at the HTML source 
     </div>
 </div>
 ```
-
-We see, that the string values of the boolean slider are stored inside the two ``<span>-elements`` of the widget, so we have to select the current active ``<span>-element`` and return its value.
+We see, that the two possible string values of the boolean slider (*Sure* and *No*) are located inside two ``<span>-elements`` of the widget. But the DOM does not tell, which of them is the current active/visible one. To select the current active ``<span>``, we will use the ATS sepecific [:clickable-Selector](Selectors#ats-selectors).
 
 ## Create a Custom Action
-Now that we know, where the value we want to retrive is located, we can go on with the custom action creation. Switch to ATS to begin.
+<!--  
+- Basic Frame/Settings
+- Naming Conventions
+- Input & Output
+- Best Practices
+- Implementation
+-->
+Now that we know, where the value we want to retrive is located in the DOM , we can go on with the custom action creation. Switch to ATS to begin.
 
 Go to the repository, switch to the All Objects tab and create a new action by clicking **Add Item**. A popup window will appear.
 
@@ -51,6 +74,8 @@ Choose **Action** and give it the name **"Get booleanSlider value"** and set **"
 The **Edit Action** page should have openend, where you can edit your newly created **Get booleanSlider value** action.
 
 ![Edit action page](attachments/Custom+Action+Creation+Tutorial/editAction.png)
+
+## Basic settings
 
 ## Setting Input- and Outputparameters
 Before we add subactions to our custom action, we will edit the input and output settings. Switch to the **Settings** tab.
@@ -72,7 +97,7 @@ Input areas for the output parameter settings will appear. Now enter **Value** a
 
 ATS will automatically save your changes as new settings for the output parameter.
 
-## Adding Subactions
+## Implementation
 Now that we have completed the groundwork, we can add subactions to our custom action. Switch back to the **Test Steps** tab and click **Add**.
 
 ![Add subaction](attachments/Custom+Action+Creation+Tutorial/addSubaction.png)  
@@ -112,3 +137,14 @@ The <b>Test Step Output</b> category contains all output values of your test/act
 ![Set Return Value](attachments/Custom+Action+Creation+Tutorial/setReturnValue.png)
 
 Now, that the return value is set for our custom action, we can use it in our test cases or in other actions.
+
+## Testing the custom action
+<!--
+- Testing the widget with laboritory conditions (prototype app)
+- Testing the custom action with standard actions or JavaScript
+-->
+## Conclusion
+<!--
+- What we've learned
+- What to do from here
+-->

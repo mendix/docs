@@ -3,8 +3,15 @@ title: "Custom Action Creation Tutorial"
 space: "ATS (Application Test Suite)"
 category: "Test Development"
 ---
+
 Welcome to the custom action creation tutorial. You will learn how to create a custom action for an appstore widget from scratch.
 
+*  [Introduction](Custom+Action+Creation+Tutorial.md#Introduction)
+*  [Create a Custom Action](Custom+Action+Creation+Tutorial.md#Create+a+Custom+Action)
+*  [Setting Input- and Outputparameters](Custom+Action+Creation+Tutorial.md#Setting+Input-+and+Outputparameters)
+*  [Adding Subactions](Custom+Action+Creation+Tutorial.md#Adding+Subactions)
+*  [Set Return Value](Custom+Action+Creation+Tutorial.md#Set+Return+Value)
+## Introduction
 We will create a custom action based on the Boolean Slider Appstore widget. The following image shows the application we want to test. It consists of the Boolean Slider Appstore Widget whose current value we want to retrieve as a string.
 
 ![test app](attachments/Custom+Action+Creation+Tutorial/application.png)
@@ -28,6 +35,7 @@ Before we start creating our own custom action, we will look at the HTML source 
 
 We see, that the string values of the boolean slider are stored inside the two ``<span>-elements`` of the widget, so we have to select the current active ``<span>-element`` and return its value.
 
+## Create a Custom Action
 Now that we know, where the value we want to retrive is located, we can go on with the custom action creation. Switch to ATS to begin.
 
 Go to the repository, switch to the All Objects tab and create a new action by clicking **Add Item**. A popup window will appear.
@@ -43,6 +51,7 @@ The **Edit Action** page should have openend, where you can edit your newly crea
 
 ![Edit action page](attachments/Custom+Action+Creation+Tutorial/editAction.png)
 
+## Setting Input- and Outputparameters
 Before we add subactions to our custom action, we will edit the input and output settings. Switch to the **Settings** tab.
 
 ![Edit action page](attachments/Custom+Action+Creation+Tutorial/editActionSettings.png)
@@ -62,6 +71,7 @@ Input areas for the output parameter settings will appear. Now enter **Value** a
 
 ATS will automatically save your changes as new settings for the output parameter.
 
+## Adding Subactions
 Now that we have completed the groundwork, we can add subactions to our custom action. Switch back to the **Test Steps** tab and click **Add**.
 
 ![Add subaction](attachments/Custom+Action+Creation+Tutorial/addSubaction.png)  
@@ -92,11 +102,12 @@ The [Find Widget Child Node](/Mendix+Actions/System/Find+Widget+Child+Node) acti
 
 The output of the [Find Widget Child Node](/Mendix+Actions/System/Find+Widget+Child+Node) action will automatically be set as input value for the [Get Text](Selenium+Actions/Get/Get+Text) action.
 
-Next we have to set the output value of the [Get Text](Selenium+Actions/Get/Get+Text) action as return value of our custom action.
+## Set Return Value
+Next we have to set the output value of the [Get Text](Selenium+Actions/Get/Get+Text) action as return value for our custom action.
 Click **Add** and search for **"Set Return Value"**. Add the corresponding action as subaction. After you have added the [Set Return Value](ATS+Core+Actions/Set+Return+Value) action, doubleclick the **"Value"** row in **Input Values** table. In the **Edit Input Value** dialog, click on the category **Test Step Output** and select **"#2 Value [String]"**. Click **Save**.
 <div class="alert alert-info">
 The <b>Test Step Output</b> category contains all output values of your test/action steps. You can identify the number of the test/action step by the number with the leading #      
 </div>
 ![Set Return Value](attachments/Custom+Action+Creation+Tutorial/setReturnValue.png)
 
-Now, that the return value is set for our custom action, we can use it in our test cases or in other actions. 
+Now, that the return value is set for our custom action, we can use it in our test cases or in other actions.

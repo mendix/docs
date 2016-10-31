@@ -1,4 +1,4 @@
-# Mendix Documentation
+# Mendix Documentation [![Build Status](https://secure.travis-ci.org/mendix/docs.png?branch=master)](https://travis-ci.org/mendix/docs)
 
 This repository contains the Mendix Documentation, served on [https://docs.mendix.com](https://docs.mendix.com).
 

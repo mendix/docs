@@ -1,5 +1,5 @@
 ---
-title: "Filtering Data on an Overview Page"
+title: "Filter Data on an Overview Page"
 space: "Mendix 6 How-to's"
 category: "GUI's"
 tags: []
@@ -13,36 +13,44 @@ This how-to will start with preparing a data structure and some example data. Af
 
 **This how-to will teach you how to do the following:**
 
-* Prepare the data structure
+* Prepare the data and the data structure
 * Prepare the GUI
-* Prepare the data
 * Filter a list using the search bar
 * Filter a list using XPath
 
-## 2 Prerequisites - Preparing the Data Structure, GUI, and Example Data
+## 2 Prerequisites
 
 To see the results of this how-to, it is necessary that you set up a test project with test data.
 
 Before you continue, make sure that you know how to create the following:
 
-* **Domain models**, if you need more info, take a look at this [how-to](Create+a+Basic+Data+Layer).
-* **Overview and detail pages**, if you need more info, take a look at this [how-to](Create+Your+First+Two+Overview+and+Detail+Pages).
-* **Menu items**, if you need more info, take a look at this [how-to](Setting+Up+the+Navigation+Structure).
+* **Domain models** (for more information, see [How to Create a Basic Data Layer](Create+a+Basic+Data+Layer))
+* **Overview and detail pages** (for more information, see [How to Create Your First Two Overview and Detail Pages](Create+Your+First+Two+Overview+and+Detail+Pages))
+* **Menu items** (for more information, see [How to Set Up the Navigation Structure](Setting+Up+the+Navigation+Structure))
 
-1.  Create the following domain model:
+To set up the test data, follow these steps:
+
+1. Create the following domain model:
+
     ![](attachments/18448705/18581378.png)
-2.  Create **overview** and **detail** pages to manage objects of type **Customer** and **Order**.
-3.  Create **menu items** to access the **Order** and the **Customer** overview pages.
-4.  Add the following customer data to your app:
+
+2. Create overvie and detail pages to manage the **Customer** and **Order** objects.
+3. Create menu items to access the **Order** and the **Customer** overview pages.
+4. Add the following customer data to your app:
+
     ![](attachments/18448705/18581374.png)
-5.  Add the following order data to your app:
+
+5. Add the following order data to your app:
+
     ![](attachments/18448705/18581373.png)
 
-## 4 Filtering a List of Orders Using the Search Bar
+## 3 Filtering a List of Orders Using the Search Bar
 
-In the previous section you set up a basic data structure and created some sample data. In this section you will add search fields to the search bar to allow the user to filter data on your overview page. In the examples you will filter on the order status and on a minimum price.
+In the previous section, you set up a basic data structure and created some sample data. In this section, you will add search fields to the search bar to enable filtering data on the overview page. In the examples below, you will filter via the order status and a minimum price.
 
-1.  Open your **orders overview** and right click on the (empty) section above the **Search **button.
+To filter a list of orders using the search bar, follow these steps:
+
+1. Open your **Orders** overview page and right-click the (empty) section above the **Search** button.
 
     <div class="alert alert-warning">
 
@@ -52,84 +60,132 @@ In the previous section you set up a basic data structure and created some sampl
 
     ![](attachments/18448705/18581359.png)
 
-2.  Right click on the search bar section and select **Drop-down**.
+2. Right-click the search bar section and select **Drop-down**:
+
     ![](attachments/18448705/18581358.png)
 
-3.  Add the **OrderStatus** attribute to the search field and define the name.
+3. Add the **OrderStatus** attribute to the search field and define the name:
+
     ![](attachments/18448705/18581355.png)
 
-4.  Redeploy your application and click on the **Search** button on your orders overview. The new search field appears.
+4. Redeploy your application and click **Search** on the **Orders** overview. The new search field will appear.
+
     ![](attachments/18448705/18581354.png)
 
-5.  Use the **Order status** search field to filter your list on a specific order status and click the 'Search' button on the right side.
+5. Use the **Order status** search field to filter your list to a specific order status and then click **Search**:
+
     ![](attachments/18448705/18581353.png)
 
-6.  To filter on a minimum price, add another search field to your orders overview of type **Comparison**.
+6. To filter a minimum price, add another search field to the **Orders** overview of the **Comparison** type:
+
     ![](attachments/18448705/18581352.png)
 
-7.  Select the **TotalPrice** attribute, name the search field **Minimum total price** and change the **Comparison** from **Contains** to **Greater or equal.**
+7. Select the **TotalPrice** attribute, name the search field **Minimum total price**, and change the **Comparison** from **Contains** to **Greater or equal**:
+
     ![](attachments/18448705/18581351.png)
 
-8.  Redeploy your application and enter 50 in your newly added search field. Your list will be filtered to only show orders with a minimum value of 50.
+8. Redeploy your application and enter *50* in the new search field. Your list will be filtered to only show orders with a minimum value of "50."
+
     ![](attachments/18448705/18581350.png)
 
-## 5 Filtering a List of Orders with the "Open" Status Using XPath 
+## 4 Filtering a List of Orders on the "Open" Status Using XPath 
 
-In the previous section you used the search bar to filter data on your overview page. Now you will add an XPath constraint on the Orders data grid. With an XPath constraint on a data grid you can (hard coded) filter the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath take a look at this [documentation](/refguide6/XPath+Constraints?utm_source=businessmodeler&utm_medium=software&utm_campaign=modeler). In this section you will constrain the data grid so it will only display orders with status 'Open'.
+In the previous section, you used the search bar to filter the data on your overview page. Now you will add an XPath constraint on the **Orders** data grid. With an XPath constraint on a data grid, you can filter (in a hard-coded way) the objects shown in the list. 
 
-1.  **Select** the **Order data grid** and click the **XPath constraint** field at the **Properties** section on the right.
+Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select the data of Mendix objects and their attributes or associations. To learn more about XPath, see take a look at this [XPath Constraints](/refguide6/XPath+Constraints?) in the Mendix Reference Guide.
+
+To constrain the data grid so that it only displays orders with the status of "Open," follow these steps:
+
+1. Select the **Order** data grid and click **XPath constraint** in the properties section on the right:
+
     ![](attachments/18448705/18581372.png)
-2.  Enter the following expression in the XPath Constraint window: _[OrderStatus = 'Open']_. The data grid will now only show orders with status 'Open'.
+
+2. Enter the following expression in the **XPath Constraint** pop-up window: 
+
+    `[OrderStatus = 'Open']`
+
     ![](attachments/18448705/18581371.png)
-3.  Run your application to see the following result set:
+
+    The data grid will now only show orders with the status of "Open."
+
+3. Run your application to see the following result set:
+
     ![](attachments/18448705/18581370.png)
 
-## 6 Filtering a List of Orders on the Minimum Total Price Using XPath
+## 5 Filtering a List of Orders on the Minimum Total Price Using XPath
 
-In the previous section you have constraint the data grid on status 'Open'. In this section we will change the constraint to ensure that the data grid will only show orders with a minimum value of 50.00.
+In the previous section, you have constrained the data grid to the status of "Open." In this section, you will change the constraint to ensure that the data grid will only show orders with a minimum value of "50.00."
 
-1.  **Select** the **Order** **data grid** and Open the **XPath constraint** field at the **Properties** section again and enter the following expression: _[TotalPrice >= 50]_.
-    ![](attachments/18448705/18581367.png) 
-2.  If you run your application you will see the following result set.
+To filter the list of orders for the minimum total price using XPath, follow these steps:
+
+1. Select the **Order** data grid, open the **XPath constraint** field in the properties section, and enter the following expression:
+
+    `_[TotalPrice >= 50]`
+
+    ![](attachments/18448705/18581367.png)
+ 
+2. When you run your application, you will see the following result set:
+
     ![](attachments/18448705/18581368.png)
 
-## 7 Combining Constraints Using XPath
+## 6 Combining Constraints Using XPath
 
-In the previous two sections you used single constraints to filter the data grid on status and minimum total price. In this section you will combine those two constraints. Combination can be made with logical operator **AND** and **OR**.  
+In the previous two sections, you used single constraints to filter the data grid on the status and the minimum total price. In this section, you will combine those two constraints. The combination can be made with the `or` and `and` logical operator.
 
-1.  To constrain the results in the order overview to only the 'Open' orders _**or**_ of a minimum price of a 50.00, you have to insert an _OR_ statement to the XPath in the 'XPath Contraint' box:
-    _[OrderStatus = 'Open']_
-    _or_
-    _[TotalPrice >= 50]_
+To combine constraints using XPath, follow these steps:
+
+1. To constrain the results in the **Order** overview to only "Open" orders *or* orders with a minimum price of "50.00," insert an `or` statement into the XPath in the **XPath Contraint** pop-up window:
+
+    ```
+    [OrderStatus = 'Open']
+    or
+    [TotalPrice >= 50]
+    ```
+
     ![](attachments/18448705/18581366.png)
-2.  Run your application to see all the orders with the order status 'Open' or with a total price higher or equal to 50.
+
+2. Run your application to see all the orders with the order status of "Open" or with a total price higher than or equal to "50":
+
     ![](attachments/18448705/18581373.png)
-3.  To constrain the results in the order overview to only orders which are 'Open' _**and**_ have a minimum total price of 50, add an 'and' statement to the XPath in the 'XPath Contraint' box.
-    _[OrderStatus = 'Open']_
-    _and_
-    _[TotalPrice >= 50]_
+
+3. To constrain the results in the **Orders** overview to only orders that are "Open" *and* have a minimum total price of "50," insert an `and` statement into the XPath in the **XPath Contraint** pop-up window:
+
+    ```
+    [OrderStatus = 'Open']
+    and
+    [TotalPrice >= 50]
+    ```
+
     ![](attachments/18448705/18581365.png)
-4.  Run your application to see orders which are 'Open' and have a minimum total price of 50.
+
+4. Run your application to see orders which are "Open" and have a minimum total price of 50:
+
     ![](attachments/18448705/18581364.png)
 
-## 8 Filtering the Order List with Attributes of Associated Customers Using XPath
+## 7 Filtering the Orders List with the Attributes of Associated Customers Using XPath
 
-In the previous section you have constrained the data grid on attributes of the same entity as the data grid entity. In this section you will constrain on attributes over an associated object. In the example of this section you will filter the orders by their associated customers based on the city letter of the customer. 
+In the previous section, you constrained the data grid to attributes of the same entity as the data grid entity. In this section, you will constrain with attributes over an associated object. 
 
-1.  To constrain the results in the order overview to only the orders from customers in Rotterdam enter the following XPath into the 'XPath Contraint' box:
-    _[Sales.Order_Customer/Sales.Customer/City = 'Rotterdam']_
+In the example activity of this section, you will filter the orders by their associated customers based on the city letter of the customer. So, to constrain the results in the **Orders** overview to only the orders from customers in Rotterdam, follow these steps:
+
+1. Enter the following XPath into the **XPath Contraint** pop-up window:
+
+    `[Sales.Order_Customer/Sales.Customer/City = 'Rotterdam']`
+
     ![](attachments/18448705/18581363.png)
-2.  Run your application to only see the orders of customers in Rotterdam.
+
+2. Run your application to only see the orders of customers in Rotterdam:
+
     ![](attachments/18448705/18581362.png)
 
-## 9 Related Content
+## 8 Related Content
 
-*   [Scout and Windows 10 Workaround](Scout+and+Windows+10+Workaround)
-*   [Layouts and Snippets](Layouts+and+Snippets)
-*   [Setup Mendix UI Framework with just CSS](Setup+Mendix+UI+Framework+with+just+CSS)
-*   [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
-*   [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
-*   [Setup Mendix UI Framework with Koala](Setup+Mendix+UI+Framework+with+Koala)
-*   [Creating your first two Overview and Detail pages](Create+Your+First+Two+Overview+and+Detail+Pages)
-*   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
-*   [XPath Constraints](/refguide6/XPath+Constraints)
+* [How to Configure the Scout and Windows 10 Workaround](Scout+and+Windows+10+Workaround)
+* [How to Set Up Layouts and Snippets](Layouts+and+Snippets)
+* [How to Set Up the Mendix UI Framework](Setup+Mendix+UI+Framework)
+* [How to Set Up the Mendix UI Framework with Just CSS](Setup+Mendix+UI+Framework+with+just+CSS)
+* [How to Set Up the Mendix UI Framework with Koala](Setup+Mendix+UI+Framework+with+Koala)
+* [How to Set Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
+* [How to Create Your First Two Overview and Detail Pages](Create+Your+First+Two+Overview+and+Detail+Pages)
+* [How to Find the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
+* [XPath Constraints](/refguide6/XPath+Constraints)

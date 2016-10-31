@@ -6,11 +6,12 @@ category: "Test Development"
 
 Welcome to the custom action creation tutorial. You will learn how to create a custom action for an appstore widget from scratch.
 
-*  [Introduction](Custom+Action+Creation+Tutorial.md#Introduction)
-*  [Create a Custom Action](Custom+Action+Creation+Tutorial.md#Create+a+Custom+Action)
-*  [Setting Input- and Outputparameters](Custom+Action+Creation+Tutorial.md#Setting+Input-+and+Outputparameters)
-*  [Adding Subactions](Custom+Action+Creation+Tutorial.md#Adding+Subactions)
-*  [Set Return Value](Custom+Action+Creation+Tutorial.md#Set+Return+Value)
+*  [Introduction](Custom+Action+Creation+Tutorial.md#introduction)
+*  [Create a Custom Action](Custom+Action+Creation+Tutorial.md#create-a-custom-action)
+*  [Setting Input- and Outputparameters](Custom+Action+Creation+Tutorial.md#setting-input--and-+oOutputparameters)
+*  [Adding Subactions](Custom+Action+Creation+Tutorial.md#adding-subactions)
+*  [Set Return Value](Custom+Action+Creation+Tutorial.md#set-return-value)
+
 ## Introduction
 We will create a custom action based on the Boolean Slider Appstore widget. The following image shows the application we want to test. It consists of the Boolean Slider Appstore Widget whose current value we want to retrieve as a string.
 

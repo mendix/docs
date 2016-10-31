@@ -1,12 +1,25 @@
 ---
-title: "Finding the Root Cause of Runtime Errors"
+title: "Find the Root Cause of Runtime Errors"
 space: "Mendix 6 How-to's"
 category: "Monitoring & Troubleshooting"
 tags: []
 ---
+
+## 1 Introduction
+
 This how to will show how to find the information necessary to locate the root cause of a runtime error.  The message displayed in the application is often vague and non-descript.  Depending on the environment the error occurred in, there are two methods to find this information.
 
-## 1. In the Modeler
+**This how-to will teach you how to do the following:**
+
+* Create...
+* Build...
+* Configure...
+
+## 2 Prerequisites
+
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+## 3 In the Modeler
 
 If the application is deployed from the modeler, the information is located in the console.
 
@@ -24,9 +37,7 @@ There are three key pieces of information:
 
 With these three pieces of information, the cause of the error should be able to be found.  If you cannot determine the cause from this information, you can put in a break point in the specified microflow and debug the situation. 
 
-
-
-## 2\. In the Application Logs
+## 4 In the Application Logs
 
 If the application is deployed from the service console or in the cloud, the information is available in the application logs.  NOTE: You will need to have the timestamp of the error when it occurred – the logs can contain a lot of information, and this timestamp will make searching through them much easier. Once you navigate to the log file, you can search for the error.
 
@@ -40,7 +51,7 @@ Go to the section of the log which corresponds to the time of the error.  There 
 
 With these three pieces of information, the cause of the error should be able to be found.  If you cannot determine the cause from this information, you can put in a break point in the specified microflow and debug the situation. 
 
-## 3\. Related content
+## 5 Related content
 
 *   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
 *   [Clearing Warning Messages in Mendix](Clear+Warning+Messages)

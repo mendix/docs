@@ -1,18 +1,27 @@
 ---
-title: "Gathering user feedback"
+title: "Gather User Feedback"
 space: "Mendix 6 How-to's"
 category: "Collaboration & Project Management"
 tags: []
 ---
-With Mendix, you can make use of fully integrated feedback cycle functionality. Gathering feedback, evaluating the feedback and converting valid feedback into actionable userstories is supported by Mendix out of the box. In this document the entire process is explained in detail, aiming to enable developers to capture and process valuable user feedback.
 
-## 1\. Prerequisites
+## 1 Introduction
 
-Before you can start gathering feedback, the following prerequisites have to be in place:
+With Mendix, you can make use of the fully integrated feedback cycle functionality. Gathering feedback, evaluating the feedback, and converting valid feedback into actionable user stories is supported by Mendix out of the box. In this document the entire process is explained in detail, aiming to enable developers to capture and process valuable user feedback.
+
+**This how-to will teach you how to do the following:**
+
+* Create...
+* Build...
+* Configure...
+
+## 2 Prerequisites
+
+Before starting this how-to, make sure you have completed the following prerequisites:
 
 1.  A project containing a working application model
 
-### 1.1 Ensure that the Mendix feedback widget is included in your project
+### 2.1 Ensure that the Mendix feedback widget is included in your project
 
 The feedback widget is automatically included in any new project that you create. If you are working in an older Mendix project, the first step would be to ensure you have the latest version of the Mendix Feedback Widget included in your project.
 
@@ -23,7 +32,7 @@ The feedback widget is automatically included in any new project that you create
 3.  If the Feedback Widget is not added to the page, please add the widget to the page or layout by selecting the Feedback Widget under 'Add-on' and dropping the widget on any position of the document
     ![](attachments/18448640/18580453.png)
 
-## 2\. Configure the widget
+## 3 Configure the widget
 
 The next step would be to configure the widget.
 
@@ -39,18 +48,18 @@ The next step would be to configure the widget.
     ![](attachments/18448640/18580451.png)
 8.  If you have configured multiple homepages for different user roles, you need to add the Mendix Feedback Widget to each homepage for the user role that you wish to gather feedback from. This can easily be done by copying the configured widget to the other relevant layouts and/or pages.
 
-## 3\. Gathering feedback
+## 4 Gathering feedback
 
 When a version of the application containing the Mendix Feedback Widget that has been configured and added to all homepages is deployed, we can start gathering feedback. 
 
-## 4\. Receive feedback
+## 5 Receive feedback
 
 When a user is logged into the application a feedback button will appear on the right hand side of the screen.
 
 1.  Click the feedback button and a popup will be opened that allows the user to enter feedback.
     ![](attachments/18448640/18580450.png)
 
-## 5\. Process feedback
+## 6 Process feedback
 
 Once you have received feedback, you and your team can process the feedback within the Mendix Developer Portal. 
 
@@ -72,7 +81,7 @@ Once you have received feedback, you and your team can process the feedback with
 | _Convert to question_ | Change the feedback type to 'question' |
 | _Move to project_ | Move the item to another project that you have access to |
 
-## 6\. Add a feedback story on your backlog
+## 7 Add a feedback story on your backlog
 
 After clicking the 'Accept feedback' button only a small steps need to be taken to create a story on the basis of the feedback item to your backlog. 
 
@@ -82,18 +91,18 @@ After clicking the 'Accept feedback' button only a small steps need to be taken 
 4.  Select any label that you want to add to that story
     ![](attachments/18448640/18580447.png)
 
-## 7\. Feedback to the user
+## 8 Feedback to the user
 
 Once a feedback item is connected to a userstory, Mendix will automatically update the person that submitted the story on the progress made on that story. 
 
 1.  Adding a story that has feedback attached from your backlog to a sprint will result in a message that the item has been planned.
 2.  Completing a sprint containing a story that has feedback attached will result in a message that the item has been completed.
 
-## 8\. Conclusion
+## 9 Conclusion
 
 In a few simple steps, Mendix enables you to start collecting feedback from your users. Once feedback has been collected it can be easily processed and transferred into actionable items on your backlog. To complete the cycle, the user will be updated on the progress made on the processing of this feedback item automatically.
 
-## 9\. Related content
+## 10 Related content
 
 *   [Managing your Application Requirements with Mendix](Managing+your+Application+Requirements+with+Mendix)
 *   [Contributing to a GitHub repository](Contribute+to+a+GitHub+Repository)

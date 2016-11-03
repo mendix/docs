@@ -23,7 +23,7 @@ All documentation contributions may undergo changes after editing according to o
 **This how-to will teach you how to do the following:**
 
 * Add to and edit existing documentation
-* Create a new how-to using the Mendix how-to template
+* Create a new how-to or reference guide page using a template
 
 ## 2 Prerequisites
 

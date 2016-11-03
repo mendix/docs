@@ -30,5 +30,3 @@ Some parameter names used by the ATS core library:
  * Row/Item
  * Value
  * Element
-
-### Solution Patterns

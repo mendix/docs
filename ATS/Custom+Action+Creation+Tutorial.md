@@ -97,10 +97,10 @@ The **Edit Action** page should have openend, where you can edit your newly crea
 
 ![Edit action page](attachments/Custom+Action+Creation+Tutorial/editAction.png)
 
-### Basic settings
+## Basic settings
 It is good practice to start the development of a custom action with the basic input and output settings and go to the processing of those parameters from there. We will first determine which input parameters we will need and how we will return the result of our action, before we add subactions to our custom action.
 
-#### Setting Inputparameters
+### Setting Inputparameters
 Switch to the **Settings** tab.
 
 ![Edit action page](attachments/Custom+Action+Creation+Tutorial/editActionSettings.png)
@@ -112,7 +112,7 @@ Set **Datatype** to **String**, **Show as Password** to **No**, **Required/Optio
 
 We have successfully added the Widget Name as input parameter for our action.
 
-#### Setting the Output parameter
+### Setting the Output parameter
 We're not done yet. We have to add an output parameter to our action, to make the string value of the booleanSlider widget available to other actions. Click on **Set** in the **Output Parameter** section.
 
 ![Add Output Parameter](attachments/Custom+Action+Creation+Tutorial/addOutputParameter.png)
@@ -123,7 +123,7 @@ Input areas for the output parameter settings will appear. Now enter **Value** a
 
 ATS will automatically save your changes as new settings for the output parameter of the action.
 
-### Implementation
+## Implementation
 Now that we have completed the groundwork, we can add subactions to our custom action. Switch back to the **Test Steps** tab and click **Add**.
 
 ![Add subaction](attachments/Custom+Action+Creation+Tutorial/addSubaction.png)  
@@ -154,7 +154,7 @@ The [Find Widget Child Node](/Mendix+Actions/System/Find+Widget+Child+Node) acti
 
 The output of the [Find Widget Child Node](/Mendix+Actions/System/Find+Widget+Child+Node) action will automatically be set as input value for the [Get Text](Selenium+Actions/Get/Get+Text) action.
 
-### Set Return Value
+## Set Return Value
 Next we have to set the output value of the [Get Text](Selenium+Actions/Get/Get+Text) action as return value for our custom action.
 Click **Add** and search for **"Set Return Value"**. Add the corresponding action as subaction. After you have added the [Set Return Value](ATS+Core+Actions/Set+Return+Value) action, doubleclick the **"Value"** row in **Input Values** table. In the **Edit Input Value** dialog, click on the category **Test Step Output** and select **"#2 Value [String]"**. Click **Save**.
 <div class="alert alert-info">
@@ -162,13 +162,19 @@ The <b>Test Step Output</b> category contains all output values of your test/act
 </div>
 ![Set Return Value](attachments/Custom+Action+Creation+Tutorial/setReturnValue.png)
 
-Now, that the return value is set for our custom action, we can use it in our test cases or in other actions.
+Now, that the return value is set, our **Get booleanSlider Value** action is done. But we have to test, if the value the action returns, is actually the right one, before we use the action in test cases for a real application.
 
 ## Testing the custom action
 <!--
 - Testing the widget with laboritory conditions (prototype app)
 - Testing the custom action with standard actions or JavaScript
 -->
+
+To test the custom action we've developed for the booleanSlider widget, we will use our prototype application and ATS standard actions.
+Set the prototype application as *test application* in ATS (Read the [configuration section](Configuration#configure-test-applications) for more informations about setting applications as test applications). Now create a new test case. Let the test case open the prototype application and add our custom action to it. After that add [Assert Equals action](/ATS+Core+Actions/Assert+Equals) and use the test step output of our action as input parameter 1 for the [Assert Equals action](/ATS+Core+Actions/Assert+Equals). As input parameter 2, we will use the default value of the widget after launching the application, in our case *Sure*.
+
+Always try to test your custom actions with ATS standard actions or JavaScript code. If you use other custom actions to evaluate the outcome of your new custom action, it is possible that you recieve false-positive results due to missbeheaving custom actions. 
+
 ## Conclusion
 <!--
 - What we've learned

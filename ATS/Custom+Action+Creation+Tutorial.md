@@ -14,7 +14,8 @@ You should also know, how to use CSS/JavaScript/ATS selectors. For more informat
 *  [Widget Preparation](Custom+Action+Creation+Tutorial#widget-preparation)
 *  [Create the custom action](Custom+Action+Creation+Tutorial.md#create-a-custom-action)
   *  [Basic Settings](Custom+Action+Creation+Tutorial.md#basic-settings)
-  *  [Setting input- and outputparameters](Custom+Action+Creation+Tutorial.md#setting-input--and-+oOutputparameters)
+    *  [Setting inputparameters](Custom+Action+Creation+Tutorial.md#setting-input--and-+oOutputparameters)
+    *  [Setting the outputparameter](Custom+Action+Creation+Tutorial.md#setting-input--and-+oOutputparameters)
   *  [Implementation](Custom+Action+Creation+Tutorial.md#adding-subactions)
   *  [Set return value](Custom+Action+Creation+Tutorial.md#set-return-value)
 *  [Testing the custom action](Custom+Action+Creation+Tutorial.md#testing-the-custom-action)
@@ -44,12 +45,12 @@ In this tutorial, we want to get the current value of the booleanSlider Appstore
 Before we start with creating actions, we have to prepare our widget. Therefore we will build a prototype application, with only the widget we want to test in it. After that is done, we will run the application and inspect the HTML source code of the application with the browser development tools. You can open the development tools in **Mozilla Firefox** and **Google Chrome** by pressing <kbd>F12</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on your keyboard. Your browser should now look similar to this.
 
 **Chrome Development Tools**
-![chrome devtools](attachments/Custom+Action+Creation+Tutorial/chrome_devtools.png)   
+![Chrome devtools](attachments/Custom+Action+Creation+Tutorial/chrome_devtools.png)   
 
 **Firefox Development Tools**
-![chrome devtools](attachments/Custom+Action+Creation+Tutorial/firefox_devtools.png)   
+![Firefox devtools](attachments/Custom+Action+Creation+Tutorial/firefox_devtools.png)   
 
-In the upper right part of the development tools, you will find the page inspector [Firefox] or elements view[Chrome] respectively. With the page inspector or elements view you can examine or modify the HTML and CSS of your application. Search for the booleanSlider widget in the HTML source code by entering the widget name in the searchfield (If the searchfield is not visible, press <kbd>Ctrl</kbd>+<kbd>F</kbd> on your keyboard to open it).In our case, the name of the booleanSlider widget is *booleanSlider1*. Your browser should now highlight the widget in the HTML code of the application.Open all container nodes inside the widget. The code should now look like this.
+In the upper right part of the development tools, you will find the page inspector [Firefox] or elements view[Chrome] respectively. With the page inspector or elements view you can examine or modify the HTML and CSS of your application. Search for the booleanSlider widget in the HTML source code by entering the widget name in the searchfield (If the searchfield is not visible, press <kbd>Ctrl</kbd>+<kbd>F</kbd> on your keyboard to open it). In our case, the name of the booleanSlider widget is *booleanSlider1*. Your browser should now highlight the widget in the HTML code of the application.Open all container nodes inside the widget. The code should now look like this.
 
 ```HTML
 <div class="wgt-BooleanSlider mx-name-booleanSlider1" id="BooleanSlider_widget_BooleanSlider_0" data-mendix-id="27_3" focusindex="0" widgetid="BooleanSlider_widget_BooleanSlider_0" style="display: block;">
@@ -96,10 +97,11 @@ The **Edit Action** page should have openend, where you can edit your newly crea
 
 ![Edit action page](attachments/Custom+Action+Creation+Tutorial/editAction.png)
 
-## Basic settings
+### Basic settings
+It is good practice to start the development of a custom action with the basic input and output settings and go to the processing of those parameters from there. We will first determine which input parameters we will need and how we will return the result of our action, before we add subactions to our custom action.
 
-## Setting Input- and Outputparameters
-Before we add subactions to our custom action, we will edit the input and output settings. Switch to the **Settings** tab.
+#### Setting Inputparameters
+Switch to the **Settings** tab.
 
 ![Edit action page](attachments/Custom+Action+Creation+Tutorial/editActionSettings.png)
 
@@ -108,7 +110,10 @@ Set **Widget Name** as name of the input parameter and add the description **"Th
 Set **Datatype** to **String**, **Show as Password** to **No**, **Required/Optional** to **Required** and **Type** to **Default**. Click on **Save**.   
 ![Edit Input Parameter Dialog](attachments/Custom+Action+Creation+Tutorial/editInputParameter.png)
 
-We have successfully added the Widget Name as input parameter for our action. But we're not done yet. We have to add an output parameter to our action, to make the string value of the booleanSlider widget available to other actions. Click on **Set** in the **Output Parameter** section.
+We have successfully added the Widget Name as input parameter for our action.
+
+#### Setting the Output parameter
+We're not done yet. We have to add an output parameter to our action, to make the string value of the booleanSlider widget available to other actions. Click on **Set** in the **Output Parameter** section.
 
 ![Add Output Parameter](attachments/Custom+Action+Creation+Tutorial/addOutputParameter.png)
 
@@ -116,9 +121,9 @@ Input areas for the output parameter settings will appear. Now enter **Value** a
 
 ![Edit Output Parameter](attachments/Custom+Action+Creation+Tutorial/editOutputParameter.png)
 
-ATS will automatically save your changes as new settings for the output parameter.
+ATS will automatically save your changes as new settings for the output parameter of the action.
 
-## Implementation
+### Implementation
 Now that we have completed the groundwork, we can add subactions to our custom action. Switch back to the **Test Steps** tab and click **Add**.
 
 ![Add subaction](attachments/Custom+Action+Creation+Tutorial/addSubaction.png)  
@@ -149,7 +154,7 @@ The [Find Widget Child Node](/Mendix+Actions/System/Find+Widget+Child+Node) acti
 
 The output of the [Find Widget Child Node](/Mendix+Actions/System/Find+Widget+Child+Node) action will automatically be set as input value for the [Get Text](Selenium+Actions/Get/Get+Text) action.
 
-## Set Return Value
+### Set Return Value
 Next we have to set the output value of the [Get Text](Selenium+Actions/Get/Get+Text) action as return value for our custom action.
 Click **Add** and search for **"Set Return Value"**. Add the corresponding action as subaction. After you have added the [Set Return Value](ATS+Core+Actions/Set+Return+Value) action, doubleclick the **"Value"** row in **Input Values** table. In the **Edit Input Value** dialog, click on the category **Test Step Output** and select **"#2 Value [String]"**. Click **Save**.
 <div class="alert alert-info">

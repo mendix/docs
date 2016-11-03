@@ -38,7 +38,7 @@ We recommend the use of the following tools for contributing to the Mendix docum
 
 ## 3 Editing the Existing Documentation
 
-To edit the existing documentation (for example, the reference guide or a how-to), follow these steps:
+To edit the existing documentation (for example, a how-to or reference guide page), follow these steps:
 
 1. Click **Edit on GitHub** in the upper-right corner of the specific Mendix documentation page that you want to work on.
 2. Find the files in the repository and make your changes (make sure your changes align with our [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines)).

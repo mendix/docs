@@ -10,7 +10,7 @@ You can use the custom ATS selectors like CSS3 selectors in your custom actions.
 
 Pattern |Name | Meaning
 -----|---------|--------
-:clickable | Clickable pseudo-class | Selects a user interface element which is visible and clickable
+:clickable | Clickable pseudo-class | Selects a user interface element whose CSS visibility property is set to visible.
 :containsExact(*text*) | ContainsExact pseudo-class | Selects a element whose inner HTML is exactly equal to the given text (**not** case sensitive)
 :containsExactCase(*text*) | ContainsExactCase pseudo-class |Selects a element whose inner HTML is exactly equal to the given text (case sensitive)
 :containsRegex(*regex*) | ContainsRegex pseudo-class | Selects a element whose inner HTML matches the given regex.  

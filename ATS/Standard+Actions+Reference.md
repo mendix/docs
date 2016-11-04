@@ -128,11 +128,11 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 + [Set InputReferenceSelector Value](Mendix+Appstore+Widgets+Actions/InputReferenceSelector/Set+InputReferenceSelector+Value)
 
 #### Simple Checkbox Set Selector
-+ [Assert Simple Checkbox Set Selector Checkbox Value](Mendix+Appstore+Widgets+Actions/)
-+ [Find Simple Checkbox Set Selector Checkbox](Mendix+Appstore+Widgets+Actions/)
-+ [Get Simple Checkbox Set Selector Checkbox Value](Mendix+Appstore+Widgets+Actions/)
-+ [Set Simple Checkbox Set Selector Checkbox Value](Mendix+Appstore+Widgets+Actions/)
-+ [Toggle Simple Checkbox Set Selector Checkbox Value](Mendix+Appstore+Widgets+Actions/)
++ [Assert Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Assert+Simple+Checkbox+Set+Selector+Value)
++ [Find Simple Checkbox Set Selector](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Find+Simple+Checkbox+Set+Selector)
++ [Get Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Get+Simple+Checkbox+Set+Selector+Value)
++ [Set Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Set+Simple+Checkbox+Set+Selector+Value)
++ [Toggle Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Toggle+Simple+Checkox+Set+Selector+Value)
 
 ### ATS Core Actions
 + [Assert equals](ATS+Core+Actions/Assert+Equals)

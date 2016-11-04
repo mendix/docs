@@ -5,16 +5,8 @@ title: "Assert Checkbox Set Selector Value"
 Finds the checkbox by column caption and its cell value and asserts that the checkbox is set to the given value
 
 ## Supported widgets
- + TextBox
- + TextArea
- + DatePicker
- + Dropdown
- + RadioButton
- + ReferenceSelector
- + SearchInput Text
- + SearchInput Dropdown
- + Label
- + OnChangeInputbox
++ Checkbox Set Selector
+
 
 ## Usage
 Pass the name of the widget, the column caption and the cell value of the checkbox you want to assert the value for.

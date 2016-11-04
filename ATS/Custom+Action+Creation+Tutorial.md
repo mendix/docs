@@ -22,12 +22,6 @@ You should also know, how to use CSS/JavaScript/ATS selectors. For more informat
 *  [Conclusion](Custom+Action+Creation+Tutorial.md#Conclusion)
 
 ## Introduction
-<!--
-- Why create custom actions (testing not yet supported appstore widget, testing custom widget, mendix app embedded in cms)
-- Standard actions vs. actions for Custom Action Development
-- What to do for boolean slider get_Value action
-- Approach
--->
 
 There are several reason for creating custom actions in ATS. Maybe you're using a appstore widget, that is not yet supported by ATS. Or you've created your own widget that you want to test. If thats the case, you will have to create a custom action for your widget.
 
@@ -38,10 +32,7 @@ In this tutorial, we want to get the current value of the booleanSlider Appstore
 ![test app](attachments/Custom+Action+Creation+Tutorial/application.png)
 
 ## Widget Inspection
-<!--[WIP]
- - Create prototype application with widget
- - Inspection of the DOM (Where is the value we want?)
--->
+
 Before we start with creating actions, we have to prepare our widget. Therefore we will build a prototype application, with only the widget we want to test in it. After that is done, we will run the application and inspect the HTML source code of the application with the browser development tools. You can open the development tools in **Mozilla Firefox** and **Google Chrome** by pressing <kbd>F12</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on your keyboard. Your browser should now look similar to this.
 
 **Chrome Development Tools**
@@ -77,13 +68,7 @@ We see, that the two possible string values of the boolean slider (*Sure* and *N
 To get the current value of the booleanSlider widget, we will use the ATS sepecific [:clickable-Selector](Selectors#ats-selectors), which will select an element, whose visibility property is set to visible.
 
 ## Create a Custom Action
-<!--  
-- Basic Frame/Settings
-- Best Practices
-- Naming Conventions
-- Input & Output
-- Implementation
--->
+
 Now that we know, where the value we want to retrive, is located in the HTML code, we can go on with the custom action creation. Open **ATS** and go to **Repository**, switch to the **All Objects** tab and create a new action by clicking **Add Item**. A popup window will appear.
 
 ![Add Item button on Repository page](attachments/Test+Development/repository.png)
@@ -107,7 +92,8 @@ Switch to the **Settings** tab.
 
 Now click on **New** in the **Input Parameters** section. The **Edit Input Parameter** dialog will open.
 Set **Widget Name** as name of the input parameter and add the description **"The name of the booleanSlider widget"**.
-Set **Datatype** to **String**, **Show as Password** to **No**, **Required/Optional** to **Required** and **Type** to **Default**. Click on **Save**.   
+Set **Datatype** to **String**, **Show as Password** to **No**, **Required/Optional** to **Required** and **Type** to **Default**. Click on **Save**.
+
 ![Edit Input Parameter Dialog](attachments/Custom+Action+Creation+Tutorial/editInputParameter.png)
 
 We have successfully added the Widget Name as input parameter for our action.
@@ -165,18 +151,8 @@ The <b>Test Step Output</b> category contains all output values of your test/act
 Now, that the return value is set, our **Get booleanSlider Value** action is done. But we have to test, if the value the action returns, is actually the right one, before we use the action in test cases for a real application.
 
 ## Testing the custom action
-<!--
-- Testing the widget with laboritory conditions (prototype app)
-- Testing the custom action with standard actions or JavaScript
--->
 
 To test the custom action we've developed for the booleanSlider widget, we will use our prototype application and ATS standard actions.
 Set the prototype application as *test application* in ATS (Read the [configuration section](Configuration#configure-test-applications) for more informations about setting applications as test applications). Now create a new test case. Let the test case open the prototype application and add our custom action to it. After that add [Assert Equals action](/ATS+Core+Actions/Assert+Equals) and use the test step output of our action as input parameter 1 for the [Assert Equals action](/ATS+Core+Actions/Assert+Equals). As input parameter 2, we will use the default value of the widget after launching the application, in our case *Sure*.
 
 Always try to test your custom actions with ATS standard actions or JavaScript code. If you use other custom actions to evaluate the outcome of your new custom action, it is possible that you recieve false-positive results due to missbeheaving custom actions. 
-
-## Conclusion
-<!--
-- What we've learned
-- What to do from here
--->

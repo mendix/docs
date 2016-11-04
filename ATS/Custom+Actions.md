@@ -3,6 +3,26 @@ title: "Custom Actions"
 space: "ATS (Application Test Suite)"
 category: "Test Development"
 ---
+### Create Custom Actions from scratch
+If you want to create a new action from scratch, go to the Repository and switch to the **All Objects** tab.
+
+![Add Item button on Repository page](attachments/Test+Development/repository.png)
+
+Now click **Add Item**, a popup window will appear.
+
+![Create new Action](attachments/Test+Development/sampleAction.png)
+
+In that window you can choose wich type of item you want to create.
+Choose **Action** and give it a **name** and an optional **description**. You can change the name and the description later on if you want.
+When you have entered all needed informations, click **Create**.
+
+Now open the newly created action by doubleclicking its name in the repository.
+
+![Edit Action page](attachments/Test+Development/editAction.png)
+
+On this page you can edit your new action by adding other existing actions to it, like you would in a test case, and set **input-** and **output parameters**.
+
+### Create Custom Actions from existing Actions
 
 Based on the existing actions, you can build up your own actions (custom actions). Also, if you are fluent in JavaScript, you can add a whole variety of functionalities by using the generic “Execute JavaScript” action.
 

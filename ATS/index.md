@@ -43,8 +43,11 @@ The Reference Guide is divided in different sections, each describing a certain 
 *   [Object Types in the ATS](Object+Types+in+the+ATS)
 *   [Recorder](Recorder)
 *   [Manual Test Steps](Manual+Test+Steps)
-*   [Standard Action Overview](Standard+Action+Overview)
+*   [Standard Actions Reference](Standard+Actions+Reference)
 *   [Custom Actions](Custom+Actions)
+*   [Custom Action Creation Tutorial](Custom+Action+Creation+Tutorial)
+*   [Selectors](Selectors)
+*   [Best Practices](Best+Practices)
 *   [Data Driven Tests](Data+Driven+Tests)
 *   [Test Case Documentation](Test+Case+Documentation)
 

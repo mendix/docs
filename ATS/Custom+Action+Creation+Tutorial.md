@@ -36,7 +36,7 @@ In this tutorial, we want to get the current value of the booleanSlider Appstore
 Before we start with creating actions, we have to prepare our widget. Therefore we will build a prototype application, with only the widget we want to test in it. After that is done, we will run the application and inspect the HTML source code of the application with the browser development tools. You can open the development tools in **Mozilla Firefox** and **Google Chrome** by pressing <kbd>F12</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on your keyboard. Your browser should now look similar to this.
 
 **Chrome Development Tools**
-![Chrome devtools](attachments/Custom+Action+Creation+Tutorial/chrome_devtools.png)   
+![Chrome devtools](attachments/Custom+Action+Creation+Tutorial/chrome_devTools.png)   
 
 **Firefox Development Tools**
 ![Firefox devtools](attachments/Custom+Action+Creation+Tutorial/firefox_devtools.png)   

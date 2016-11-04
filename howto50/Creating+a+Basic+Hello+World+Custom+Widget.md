@@ -753,7 +753,7 @@ A very nice book that helps you understand what JavaScript is all about.
 
 *   [Getting started with the Widget Development Plugin for Adobe Brackets](Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets)
 *   [Creating a chainable Custom Widget](Creating+a+chainable+Custom+Widget)
-*   [XML Reference Guide](/refguide5/XML+Reference+Guide)
+*   [XML Reference Guide 5](/refguide5/XML+Reference+Guide)
+*   [XML Reference Guide 6](/refguide6/XML+Reference+Guide)
 *   [Creating a Basic Hello World Custom Widget](Creating+a+Basic+Hello+World+Custom+Widget)
-*   [XML Reference Guide](/refguide6/XML+Reference+Guide)
 *   [The Mobile Slider Custom Widget](The+Mobile+Slider+Custom+Widget)

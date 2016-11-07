@@ -13,7 +13,7 @@ Pass the name of the widget you want to get the select all checkbox from.
 ## Input Parameters
 Name | Datatype | Required | Description
 ---- | :--------: | :--------: | ---------------
-Widget Name | String | yes | The name of the widget
+Widget Name | String | Yes | The name of the widget.
 
 ## Return Value
 

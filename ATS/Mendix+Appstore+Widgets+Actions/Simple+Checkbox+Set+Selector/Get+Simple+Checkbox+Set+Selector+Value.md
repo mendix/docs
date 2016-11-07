@@ -20,4 +20,4 @@ Value | String | yes | The value connected to the check box.
 
 Name | Datatype | Description
 ---- | :---------: | ---------------
-Checked | Boolean | The current value of the check box
+Checked | Boolean | The current value of the check box.

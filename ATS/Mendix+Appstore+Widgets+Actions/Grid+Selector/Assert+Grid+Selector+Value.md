@@ -2,7 +2,7 @@
 title: "Assert Grid Selector Value"
 ---
 ## Description
-Asserts the value of check box and the radio button inside the Grid Selector Widget.
+Asserts the value of the check box and the radio button inside the Grid Selector Widget.
 
 ## Supported widgets
  + Grid Selector

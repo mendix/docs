@@ -6,12 +6,13 @@ redirect_from:
   - "/ATS/Reference+Guide"
 ---
 
-The Reference Guide is divided in different sections, each describing a certain feature of the ATS.
+The ATS Reference Guide is divided into the following different sections, each describing a certain feature of the application test suite (ATS).
 
 ## [General](General)
 
 *   [Mendix Compatibility](General)
 *   [Browser Support](General#browser-support)
+*   [Release Notes](Release+Notes/Release+Notes)
 
 ## [Introduction](Introduction)
 
@@ -43,8 +44,11 @@ The Reference Guide is divided in different sections, each describing a certain 
 *   [Object Types in the ATS](Object+Types+in+the+ATS)
 *   [Recorder](Recorder)
 *   [Manual Test Steps](Manual+Test+Steps)
-*   [Standard Action Overview](Standard+Action+Overview)
+*   [Standard Actions Reference](Standard+Actions+Reference)
 *   [Custom Actions](Custom+Actions)
+*   [Custom Action Creation Tutorial](Custom+Action+Creation+Tutorial)
+*   [Selectors](Selectors)
+*   [Best Practices](Best+Practices)
 *   [Data Driven Tests](Data+Driven+Tests)
 *   [Test Case Documentation](Test+Case+Documentation)
 

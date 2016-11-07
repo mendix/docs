@@ -35,7 +35,7 @@ To create a Phonegap Build package using a provided template, follow these steps
     * {{description}} - The description of your app
 
     After changing these variables, the `config.xml` will look similar to this:
-    ```
+    {% highlight xml %}
     <?xml version="1.0" encoding="UTF-8" ?>
         <widget xmlns = "http://www.w3.org/ns/widgets"
             xmlns:gap = "http://phonegap.com/ns/1.0"
@@ -46,21 +46,19 @@ To create a Phonegap Build package using a provided template, follow these steps
 
         <description>The Sample WP8 App</description>
 
-        .....
-    ```
+        .....{% endhighlight %}
 4. Save the file.
 5. Open the `index.html` file and change the `{{url}}` to the address where your application is
 running (for example, `https://com.mendixcloud.myapp`).
 6. Save the file. The part where the URL is used will now look similar to this:
-    ```
+    {% highlight js %}
     ...
 
     document.addEventListener("deviceready", function() {
         mxapp.initialize("https://com.mendixcloud.myapp", enableOffline, requirePin);
     });
 
-    ...
-    ```
+    ...{% endhighlight %}
 To create an archive with these changes, follow these steps:
 
 1. Select all the files and directories you extracted.
@@ -70,7 +68,7 @@ To create an archive with these changes, follow these steps:
 
 To build the Windows Phone app, follow these steps:
 
-1. Log in to [Phonegap Build](https://build.phonegap.com/) and upload the archive you created in the previous section. This will trigger a build for Windows Phone, so sit bad back and relax while your build archive is being created.
+1. Log in to [Phonegap Build](https://build.phonegap.com/) and upload the archive you created in the previous section. This will trigger a build for Windows Phone, so sit back and relax while your build archive is being created.
 2. When the build is finished, download the Windows Phone app by clicking the `xap` button.
 
 You can deploy this xap file to the Windows store, or use it to test the app on a device.

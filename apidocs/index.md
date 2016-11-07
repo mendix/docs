@@ -3,6 +3,9 @@ title: "API Documentation"
 space: "API documentation"
 redirect_from: "/apidocs/API+documentation"
 ---
+
+The API documentation is divided into the sections described below.
+
 # Business Server API
 
 Extend your application model using Java. All functionality and information from both the application model and Business Server is accessible via these APIs.

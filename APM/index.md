@@ -8,10 +8,10 @@ The Application Performance Monitor is a solution that helps analyzing performan
 
 This is the home of the documentation for the APM Tool.
 
-The documentation is organized as follows:
+## Main Documents in This Category
 
-*   [Introduction](Introduction)
-*   [Use Cases](Use+Cases)
-*   [Release Notes](Release+Notes)
-*   [Installation](Installation)
-*   [User Manual](User+Manual)
+* [Introduction](Introduction)
+* [Use Cases](Use+Cases)
+* [Release Notes](Release+Notes)
+* [Installation](Installation)
+* [User Manual](User+Manual)

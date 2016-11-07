@@ -2,7 +2,7 @@
 title: "Find Checkbox Set Selector (all)"
 ---
 ## Description
-Finds a checkbox by given cell value and column caption. Returns first match.
+Finds a checkbox by given cell value and column caption. Returns the first match.
 
 ## Supported widgtes
  + Checkbox Set Selector
@@ -13,9 +13,9 @@ Pass the name of the widget, the column caption and the cell value of the checkb
 ## Input Parameters
 Name | Datatype | Required | Description
 ---- | :--------: | :--------: | ---------------
-Widget Name | String | yes | The name of the widget
-Column Caption | String | yes | The caption of the wanted checkbox column
-Value | String | yes | The cell value of the checkbox row
+Widget Name | String | Yes | The name of the widget.
+Column Caption | String  | Yes | The caption of the wanted checkbox column.
+Value | String | Yes | The cell value of the checkbox row.
 
 ## Return Value
 

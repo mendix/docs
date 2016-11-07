@@ -70,7 +70,7 @@ To create an archive with these changes, follow these steps:
 
 To build the Windows Phone app, follow these steps:
 
-1. Log in to [Phonegap Build](https://build.phonegap.com/) and upload the archive you created in the previous section. This will trigger a build for Windows Phone, so sit bad back and relax while your build archive is being created.
+1. Log in to [Phonegap Build](https://build.phonegap.com/) and upload the archive you created in the previous section. This will trigger a build for Windows Phone, so sit back and relax while your build archive is being created.
 2. When the build is finished, download the Windows Phone app by clicking the `xap` button.
 
 You can deploy this xap file to the Windows store, or use it to test the app on a device.

@@ -2,7 +2,7 @@
 title: "Get BootstrapRTE Value"
 ---
 ## Description
-Returns the current BootstrapRTE value as html-string
+Returns the current BootstrapRTE value as html-string.
 
 ## Supported Widgets
 + BootstrapRTE

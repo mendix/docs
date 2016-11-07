@@ -2,7 +2,7 @@
 title: "Set Checkbox Set Selector Value"
 ---
 ## Description
-Finds checkbox by column and row caption. Sets its value to the given Checked parameter.
+Finds the check box by column and row caption. Sets its value to the given checked parameter.
 
 ## Supported Widgets
  + Grid Selector
@@ -13,7 +13,7 @@ Finds checkbox by column and row caption. Sets its value to the given Checked pa
 ## Input Parameters
 Name | Datatype | Required | Description
 ---- | :--------: | :--------: | ---------------
-Widget Name | String | yes | The name of the Grid Selector widget
-Column Caption | String | yes | The column caption of the checkbox cell you want to get the value from
-Row Caption | String | yes | The row caption of the checkbox cell you want to get the value from
-Checked | Boolean | yes | The value for the checkbox you want to Set (true or false)
+Widget Name | String | Yes | The name of the Grid Selector widget.
+Column Caption | String | Yes | The column caption of the check box cell you want to get the value from.
+Row Caption | String | Yes | The row caption of the check box cell you want to get the value from.
+Checked | Boolean | Yes | The value for the check box you want to Set (true or false).

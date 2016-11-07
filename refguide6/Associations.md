@@ -98,7 +98,7 @@ The type property has its default value 'Reference'. In this example a customer 
 
 In XML instances of these entities and their association look as follows. Note that the association is only stored in the Order element.
 
-```xml
+{% highlight xml %}
 <Order id="101">
 	<number>1</number>
 	<date>9/30/2008</date>
@@ -110,8 +110,7 @@ In XML instances of these entities and their association look as follows. Note t
 	<address>1 Infinite Loop</address>
 	<telephonenumber>1-800-MY-APPLE</telephonenumber>
 </Customer>
-
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
@@ -122,7 +121,7 @@ In this example a customer can have multiple groups and a group can have multipl
 
 In XML instances of these entities and their association look as follows. Note that the association is only stored in the Customer element.
 
-```xml
+{% highlight xml %}
 <Customer id="201">
 	<fullname>Apple Inc.</name>
 	<address>1 Infinite Loop</address>
@@ -138,7 +137,7 @@ In XML instances of these entities and their association look as follows. Note t
 	<name>Hardware suppliers</name>
 </Group>
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
@@ -149,7 +148,7 @@ In this example a customer can have one profile and a profile can have one custo
 
 In XML instances of these entities and their association look as follows. Note that the association is stored both in the Profile element and the Customer element.
 
-```xml
+{% highlight xml %}
 <Profile id="401">
 	<religion>Buddhism</religion>
 	<job>Chief Executive Officer</job>
@@ -164,7 +163,7 @@ In XML instances of these entities and their association look as follows. Note t
 	<Customer_Profile>id_401</Customer_Profile>
 </Customer>
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
@@ -174,7 +173,7 @@ In this example an accountant can have multiple groups and a group can have mult
 ![](attachments/819203/918125.png)
 In XML instances of these entities and their association look as follows. Note that the association is stored both in the Accountant element and the Group element.
 
-```xml
+{% highlight xml %}
 <Accountant id="501">
 	<idnumber>1</idnumber>
 	<name>Earl Grey</name>
@@ -199,6 +198,6 @@ In XML instances of these entities and their association look as follows. Note t
 	<Accountant_Group>id_501 id_502</Accountant_Group>
 </Group>
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>

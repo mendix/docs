@@ -2,17 +2,17 @@
 title: "Get Simple Checkbox Set Selector Value"
 ---
 ## Description
-Un-/Checks the checkbox found by given value connected to the checkbox. 
+Checks or clears the check box found by the given value connected to the check box. 
 
 ## Supported Widgets
 + Simple Checkbox Set Selector
 
 ## Usage
-Pass the name of the widget, the value connected to the checkbox and if the checkbox shall be un-/checked.
+Pass the name of the widget, the value connected to the check box, and if the check box shall be checked or cleared.
 
 ## Input Parameters
 Name | Datatype | Required | Description
 ---- | :--------: | :--------: | ---------------
-Widget Name | String | yes | The name of the Simple Checkbox Set Selector widget
-Value | String | yes | The value connected to the checkbox
-Checked | Boolean | yes | Un-/check the checkbox
+Widget Name | String | Yes | The name of the Simple Checkbox Set Selector widget.
+Value | String | Yes | The value connected to the check box.
+Checked | Boolean | Yes | Check or clear the check box.

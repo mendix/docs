@@ -14,5 +14,5 @@ Pass the name of the widget and the value you want to mark as active.
 
 Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
-Widget Name | String | yes | The name of the widget
-Value | String | yes | The value you want to mark as active
+Widget Name | String | yes | The name of the widget.
+Value | String | yes | The value you want to mark as active.

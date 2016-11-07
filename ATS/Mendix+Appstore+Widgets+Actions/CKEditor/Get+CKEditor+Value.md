@@ -2,7 +2,7 @@
 title: "Get CKEditor Value"
 ---
 ## Description
-Returns the CKEditor value as html code.
+Returns the CKEditor value as HTML code.
 
 ## Supported Widgets
 + CKEditor
@@ -14,7 +14,7 @@ Pass the name of the widget you want to get the value from.
 
 Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
-Widget Name | String | yes | The name of the widget
+Widget Name | String | Yes | The name of the widget.
 
 ## Return Value
 

@@ -2,7 +2,7 @@
 title: "Assert CKEditor Value"
 ---
 ## Description
-Compares the CKEditor value with the given Value
+Compares the CKEditor value with the given value.
 
 ## Supported widgets
  + CKEditor
@@ -14,5 +14,5 @@ Pass the name of the widget and the value you want to assert.
 
 Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
-Widget Name | String | yes | The name of the widget
-Value | String | yes | The value you want to assert
+Widget Name | String | Yes | The name of the widget.
+Value | String | Yes | The value you want to assert.

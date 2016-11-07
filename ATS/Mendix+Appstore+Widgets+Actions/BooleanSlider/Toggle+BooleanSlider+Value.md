@@ -14,4 +14,4 @@ Pass the name of the widget.
 
 Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
-Widget Name | String | yes | The name of the widget
+Widget Name | String | yes | The name of the widget.

@@ -2,18 +2,18 @@
 title: "Toggle Checkbox Set Selector Value"
 ---
 ## Description
-Finds checkbox by given entity attribute and inverses the value.
+Finds check box by given entity attribute and inverses the value.
 
 ## Supported Widgets
  + Checkbox Set Selector
 
 ## Usage
-Pass the name of the widget, the column caption, and the cell value of the checkbox you want to toggle.
+Pass the name of the widget, the column caption, and the cell value of the check box you want to toggle.
 
 ## Input Parameters
 
 Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
 Widget Name | String | Yes | The name of the widget.
-Column Caption | String | Yes | The caption of the wanted checkbox column.
-Value | String | Yes | The cell value of the checkbox row.
+Column Caption | String | Yes | The caption of the wanted check box column.
+Value | String | Yes | The cell value of the check box row.

@@ -2,7 +2,7 @@
 title: "Toggle Checkbox Set Selector Value"
 ---
 ## Description
-Finds check box by given entity attribute and inverses the value.
+Finds check box by given entity attribute and inverts the value.
 
 ## Supported Widgets
  + Checkbox Set Selector

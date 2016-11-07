@@ -2,7 +2,7 @@
 title: "Toggle BooleanSlider Value"
 ---
 ## Description
-Clicks on a BooleanSlider widget to toggle its value. This will inverse the current value of the BooleanSlider.
+Clicks the BooleanSlider widget to toggle its value. This will invert the current value of the BooleanSlider.
 
 ## Supported widgets
  + BooleanSlider

@@ -1,5 +1,5 @@
 ---
-title: "Toggle Grid Selector checkbox Value"
+title: "Toggle Grid Selector Checkbox Value"
 ---
 ## Description
 Inverses the check box found by the given column and row caption.

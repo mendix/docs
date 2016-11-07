@@ -14,7 +14,7 @@ Pass the name of the widget you want to get the value from.
 
 Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
-Widget Name | String | yes | The name of the widget
+Widget Name | String | yes | The name of the widget.
 
 ## Return Value
 

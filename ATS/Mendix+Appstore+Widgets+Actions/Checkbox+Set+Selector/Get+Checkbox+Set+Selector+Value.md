@@ -16,7 +16,7 @@ Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
 Widget Name | String | Yes | The name of the widget.
 Column Caption | String | Yes | The column caption of the desired check box.
-Value | String | Yes | The cell value of the wanted check box.
+Value | String | Yes | The cell value of the desired check box.
 
 ## Return Value
 

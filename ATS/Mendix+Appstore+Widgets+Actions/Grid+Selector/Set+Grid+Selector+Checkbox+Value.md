@@ -5,10 +5,10 @@ title: "Set Checkbox Set Selector Value"
 Finds the check box by column and row caption. Sets its value to the given checked parameter.
 
 ## Supported Widgets
- + Grid Selector
+Grid Selector
 
- ## Usage
- Pass the name of the widget, the column caption and the row caption of the checkbox you want to find.
+## Usage
+Pass the name of the widget, the column caption and the row caption of the checkbox you want to find.
 
 ## Input Parameters
 Name | Datatype | Required | Description

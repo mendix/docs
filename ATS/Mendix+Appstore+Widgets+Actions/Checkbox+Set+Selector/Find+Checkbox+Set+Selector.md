@@ -1,5 +1,5 @@
 ---
-title: "Find Checkbox Set Selector (all)"
+title: "Find Checkbox Set Selector (All)"
 ---
 ## Description
 Finds a check box by given cell value and column caption. Returns the first match.

@@ -8,7 +8,7 @@ Finds the radio button by column and row caption. Sets it to be checked.
 + Grid Selector
 
 ## Usage
-Pass the name of the widget, the column caption, and the row caption of the radiobutton you want to find.
+Pass the name of the widget, the column caption, and the row caption of the radio button you want to find.
 
 ## Input Parameters
 Name | Datatype | Required | Description

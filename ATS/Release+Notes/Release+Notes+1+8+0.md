@@ -7,8 +7,9 @@ parent: "Release+Notes"
 Date: November 6, 2016
 
 ## Supporting AppStore Widgets
-Everybody uses widgets from the Mendix AppStore in their applications. And of course you want them to be tested like all other parts of your application. Now they can be tested.
-We've selected the top widgets from the AppStore and added support for testing with ATS.
+Everybody uses widgets from the Mendix App Store in their applications. And of course you want them to be tested like all other parts of your application. Now they can be tested.
+
+We've selected the top widgets from the App Store and added support for testing with ATS.
 
 These are the new widgets now supported by ATS:
 * [Dropdown Div Converter](https://appstore.home.mendix.com/link/app/2089/Mendix/DropdownDivConverter)
@@ -24,12 +25,12 @@ These are the new widgets now supported by ATS:
 The [Action Reference Guide](../Standard+Actions+Reference#mendix-appstore-widgets-actions) lists the new actions.
 
 ## Action Reference Guide and Tutorial
-In case you use a widget that is not supported by ATS you can help yourself and create your own actions. In order to help you with this we now provide a [Tutorial](../Custom+Action+Creation+Tutorial) that explains how to create an action based on the example of the Boolean Slider widget.
+If you use a widget that is not supported by ATS, you can help yourself and create your own actions. To help you with this, we now provide a [Tutorial](../Custom+Action+Creation+Tutorial) that explains how to create an action based on the example of the Boolean Slider widget.
 
-We've also documented all our actions in a [Reference Guide](../Standard+Actions+Reference). It describes all the actions that you can use in your test cases. In addition to that it also references internal actions which are very helpful if you want to create your own actions.
+We've also documented all our actions in a [Reference Guide](../Standard+Actions+Reference). It describes all the actions that you can use in your test cases. In addition to that, it also references the internal actions that are very helpful if you want to create your own actions.
 
 ## Improved Recording
-We've improved the recording functionality to get rid of some unwanted recordings. Previously the recorder would also record a test step when you clicked on elements like a table or a dataview. With this release this does not happen anymore.
+We've improved the recording functionality to get rid of some unwanted recordings. Previously the recorder would also record a test step when you clicked elements like a table or a dataview. With this release, this does not happen anymore.
 
-## Known Limitations
-Unfortunately the recording for Input Reference Selector, CKEditor and Bootstrap Wysiwyg Editor is not possible yet. Though, the widgets can still be tested by manually inserting the actions into your test case.
+## Known Issue
+Unfortunately recording for the Input Reference Selector, CKEditor, and Bootstrap Wysiwyg Editor is not possible yet. However, the widgets can still be tested by manually inserting the actions into your test case.

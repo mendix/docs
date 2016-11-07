@@ -2,7 +2,7 @@
 title: "Find Grid Selector Box"
 ---
 ## Description
-Find checkbox/radiobutton by column and row caption
+Find check box and radio button by column and row caption.
 
 ## Supported widgtes
  + Grid Selector
@@ -13,12 +13,12 @@ Pass the name of the parent widget, the column caption and row caption.
 ## Input Parameters
 Name | Datatype | Required | Description
 ---- | :--------: | :--------: | ---------------
-Widget Name | String | yes | The name of the Grid Selector widget
-Column Caption | String | yes | The column caption of the checkbox cell you want to find
-Row Caption | String | yes | The row caption of the checkbox cell you want to find
+Widget Name | String | Yes | The name of the Grid Selector widget.
+Column Caption | String | Yes | The column caption of the check box cell you want to find.
+Row Caption | String | Yes | The row caption of the check box cell you want to find.
 
 ## Return Value
 
 Name | Datatype | Description
 ---- | :---------: | ---------------
-Box | WebElement | The found checkbox/radiobutton.
+Box | WebElement | The found check box and radio button.

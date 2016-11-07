@@ -1,5 +1,5 @@
 ---
-title: "Get Checkbox Set Selector Value (all)"
+title: "Get Checkbox Set Selector Value (All)"
 ---
 ## Description
 Returns the "select all" check box value.

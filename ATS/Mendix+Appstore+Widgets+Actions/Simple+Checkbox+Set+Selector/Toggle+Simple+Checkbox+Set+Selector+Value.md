@@ -2,16 +2,16 @@
 title: "Get Simple Checkbox Set Selector Value"
 ---
 ## Description
-Inverses the value of the checkbox found by given value connected to the checkbox.
+Inverts the value of the check box found by the given value connected to the check box.
 
 ## Supported Widgets
 + Simple Checkbox Set Selector
 
 ## Usage
-Pass the name of the widget and the value connected to the checkbox.
+Pass the name of the widget and the value connected to the check box.
 
 ## Input Parameters
 Name | Datatype | Required | Description
 ---- | :--------: | :--------: | ---------------
-Widget Name | String | yes | The name of the Simple Checkbox Set Selector widget
-Value | String | yes | The value connected to the checkbox
+Widget Name | String | Yes | The name of the Simple Checkbox Set Selector widget.
+Value | String | Yes | The value connected to the check box.

@@ -1,17 +1,17 @@
 ---
-title: "Click Dropdown div converter dropdown button"
+title: "Click Drop-Down div Converter Drop-Down Button"
 ---
 ## Description
-Clicks the dropdown button of the dropdown div converter to expand the dropdown menu.
+Clicks the dropdown button of the drop-down `div` converter to expand the drop-down menu.
 
 ## Supported Widgets
  + Dropdown div converter
 
 ## Usage
-Pass the name of the dropdown div converter widget.
+Pass the name of the drop-down `div` converter widget.
 
 ## Input Parameters
 
 Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
-Widget Name | String | yes | The name of the dropdown div converter widget.
+Widget Name | String | yes | The name of the drop-down `div` converter widget.

@@ -15,4 +15,4 @@ Pass the name of the widget and the value you want to assert.
 Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
 Widget Name | String | Yes | The name of the widget.
-Value | String | yes | The value you want to assert.
+Value | String | Yes | The value you want to assert.

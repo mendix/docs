@@ -24,17 +24,15 @@ A result of type DateTime that corresponds to the initial date plus x millisecon
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 addMilliseconds(dateTime(2007, 1, 1, 1, 1, 1), 1400)
-
-```
+{% endhighlight %}
 
 results in a datetime that corresponds to
 
-```java
+{% highlight java %}
 "Mon Jan 01 01:01:02:400 CET 2007"
-
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>
 
@@ -55,17 +53,17 @@ A result of type DateTime that corresponds to the initial date plus x seconds.
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 addSeconds(dateTime(2007, 1, 1, 1, 1, 1), 2)
 
-```
+{% endhighlight %}
 
 results in a datetime that corresponds to
 
-```java
+{% highlight java %}
 "Mon Jan 01 01:01:03 CET 2007"
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>
 
@@ -86,17 +84,17 @@ A result of type DateTime that corresponds to the initial date plus x minutes.
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 addMinutes(dateTime(2007, 1, 1, 1, 1, 1), 3)
 
-```
+{% endhighlight %}
 
 results in a datetime that corresponds to
 
-```java
+{% highlight java %}
 "Mon Jan 01 01:04:01 CET 2007"
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>
 
@@ -117,17 +115,17 @@ A result of type DateTime that corresponds to the initial date plus x hours.
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 addHours(dateTime(2007, 1, 1, 1, 1, 1), 25)
 
-```
+{% endhighlight %}
 
 results in a datetime that corresponds to
 
-```java
+{% highlight java %}
 "Mon Jan 02 02:01:01 CET 2007"
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>
 
@@ -148,17 +146,17 @@ A result of type DateTime that corresponds to the initial date plus x days.
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 addDays(dateTime(2007, 1, 1, 1, 1, 1), 3)
 
-```
+{% endhighlight %}
 
 results in a datetime that corresponds to
 
-```java
+{% highlight java %}
 "Mon Jan 04 01:01:01 CET 2007"
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>
 
@@ -179,17 +177,17 @@ A result of type DateTime that corresponds to the initial date plus x weeks.
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 addWeeks(dateTime(2007, 1, 1, 1, 1, 1), 2)
 
-```
+{% endhighlight %}
 
 results in a datetime that corresponds to
 
-```java
+{% highlight java %}
 "Mon Jan 15 01:01:01 CET 2007"
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>
 
@@ -210,17 +208,17 @@ A result of type DateTime that corresponds to the initial date plus x months.
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 addMonths(dateTime(2007, 1, 1, 1, 1, 1), 13)
 
-```
+{% endhighlight %}
 
 results in a datetime that corresponds to
 
-```java
+{% highlight java %}
 "Mon Feb 01 01:01:01 CET 2008"
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>
 
@@ -241,30 +239,30 @@ A result of type DateTime that corresponds to the initial date plus x years.
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 addYears(dateTime(2007, 1, 1, 1, 1, 1), 11)
 
-```
+{% endhighlight %}
 
 results in a datetime that corresponds to
 
-```java
+{% highlight java %}
 "Mon Jan 01 01:01:01 CET 2018"
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
 
 From Mendix release 6.6, It's also possible to pass Long values to different Add date function calls:
 
-```java
+{% highlight java %}
 addSeconds(dateTime(1970, 1, 1, 0, 0, 0), (long)(2147483647 + 100))
-```
+{% endhighlight %}
 
 results in a datetime that corresponds to
 
-```java
+{% highlight java %}
 "Tue Jan 19 04:15:47 CET 2038"
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>

@@ -156,7 +156,7 @@ The way file document content is stored can differ per application deployment en
 is removed from the API in Mendix 5\. To fix usages of this method one can use the sample code below (which makes use of the [Apache Commons IO library](http://commons.apache.org/proper/commons-io/)):
 
 **Sample code to replace Core.getFileDocumentContentAsFile occurrences**
-```java
+{% highlight java %}
 public void doSomethingWithFileDocumentContent(IMendixObject fileDocument)
 {
 	InputStream inputStream = null;
@@ -186,19 +186,19 @@ public void doSomethingWithFileDocumentContent(IMendixObject fileDocument)
 	}
 }
 
-```
+{% endhighlight %}
 
 Writing file document content to a stream can be accomplished with the following code:
 
 **Write file document content to a stream**
-```java
+{% highlight java %}
 public void writeContentToStream(IMendixObject fileDocument)
 {
 	InputStream inputStream = IOUtils.toInputStream(text);
 	Core.storeFileDocumentContent(getContext(), fileDocument, inputStream);
 }
 
-```
+{% endhighlight %}
 
 Batching
 

@@ -27,7 +27,7 @@ To enable systems to understand each other, a standard way of "encoding" data is
 
 <div class="alert alert-info">{% markdown %}
 
-```xml
+{% highlight xml %}
 <person>
 	<name>John Smith</name>
 	<age>23</age>
@@ -37,7 +37,7 @@ To enable systems to understand each other, a standard way of "encoding" data is
 	</address>
 </person>
 
-```
+{% endhighlight %}
 
 Above the object 'person' is described with the corresponding values for the attributes 'name', 'age' and the referred object 'address'.
 

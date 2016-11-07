@@ -8,7 +8,7 @@ Find check box and radio button by column and row caption.
  + Grid Selector
 
 ## Usage
-Pass the name of the parent widget, the column caption and row caption.
+Pass the name of the parent widget, the column caption, and row caption.
 
 ## Input Parameters
 Name | Datatype | Required | Description

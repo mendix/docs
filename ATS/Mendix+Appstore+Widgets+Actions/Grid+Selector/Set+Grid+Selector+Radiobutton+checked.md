@@ -5,9 +5,9 @@ title: "Set Grid Selector RadioButton Value"
 Finds radiobutton by column and row caption. Sets it to be checked.
 
 ## Supported Widgets
- + Grid Selector
++ Grid Selector
 
- ## Usage
+## Usage
  Pass the name of the widget, the column caption and the row caption of the radiobutton you want to find.
 
 ## Input Parameters

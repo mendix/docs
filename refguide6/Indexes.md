@@ -25,11 +25,9 @@ Customers are usually retrieved by a combination of zipcode and housenumber, so 
 
 The objects are retrieved by the following OQL query. Pay attention to the order of the attributes in the WHERE clause.
 
-```sql
+{% highlight sql %}
 FROM Module.Customer AS c
 WHERE c.zipcode = $ParameterZipCode AND c.housenumber = $ParameterHouseNumber
-SELECT c.name AS CustomerName
-
-```
+SELECT c.name AS CustomerName{% endhighlight %}
 
 {% endmarkdown %}</div>

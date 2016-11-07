@@ -36,11 +36,9 @@ The Mendix Business Modeler will recognize automatically if a Model Share URL is
 To embed a Model Share in your blog post, go to the page of your Model Share and copy the embed text. The embed text will look as follows:
 
 **Example embed code**
-
-**Example embed code**
-```xml
+{% highlight xml %}
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/b44c19a1-db24-424d-8447-a64f85286016/AppCloudServices.RetrieveDisplayName?embed=true' allowfullscreen></iframe>
-```
+{% endhighlight %}
 
 Once pasted in your blog post / tutorial / wherever valid (X)HTML is accepted, the embed should appear as follows:
 

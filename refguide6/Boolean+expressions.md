@@ -15,15 +15,15 @@ Combines two Boolean expressions and only returns True if both of the expression
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 (6 > 4) and (3 < 5)
-```
+{% endhighlight %}
 
 evaluates to True because both of the expressions are True.
 
-```java
+{% highlight java %}
 ('hello' = 'hallo') and (3 < 5)
-```
+{% endhighlight %}
 
 evaluates to False, because only the second expression is True.
 
@@ -37,17 +37,17 @@ Combines two Boolean expressions, and returns True if at least one of the expres
 
 Given a domain entity instance with name "$product" that has an integer attribute "price" with value "3" and another integer attribute "recommendedPrice" with value "2", the following expression:
 
-```java
+{% highlight java %}
 ($product/price < $product/recommendedPrice : 2) or ($product/price > 0)
-```
+{% endhighlight %}
 
 will return True because at least one of the expressions evaluates to True (the second one, to be precise). Note that the expression would still return True if both statements had been True.
 
 The following example returns False, because both expressions evaluate to False:
 
-```java
+{% highlight java %}
 ('hello' = 'nothello') or ('byebye' = 'stillnotbyebye')
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>
 
@@ -65,30 +65,30 @@ Returns the negation of the specified expression. If the expression evaluates to
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 not('hello' = 'hallo')
 
-```
+{% endhighlight %}
 
 returns:
 
-```java
+{% highlight java %}
 true
 
-```
+{% endhighlight %}
 
 and
 
-```java
+{% highlight java %}
 not(true)
 
-```
+{% endhighlight %}
 
 returns:
 
-```java
+{% highlight java %}
 false
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>

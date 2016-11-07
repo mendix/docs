@@ -28,17 +28,17 @@ if any of the two inputs is of type Float and they're both not of type Decimal, 
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 3 * 4
 
-```
+{% endhighlight %}
 
 results in
 
-```java
+{% highlight java %}
 12
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>
 
@@ -61,31 +61,31 @@ If any of the two inputs is of type Decimal, the result is of type Decimal. Othe
 
 "div" syntax:
 
-```java
+{% highlight java %}
 3 div 5
 
-```
+{% endhighlight %}
 
 results in
 
-```java
+{% highlight java %}
 0.6
 
-```
+{% endhighlight %}
 
 ":" syntax:
 
-```java
+{% highlight java %}
 12 : 3
 
-```
+{% endhighlight %}
 
 results in
 
-```java
+{% highlight java %}
 4.0
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>
 
@@ -110,31 +110,31 @@ if any of the two inputs is of type Float and they're both not of type Decimal, 
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 23 mod 5
 
-```
+{% endhighlight %}
 
 results in an Integer/Long with value
 
-```java
+{% highlight java %}
 3
 
-```
+{% endhighlight %}
 
 Alternatively,
 
-```java
+{% highlight java %}
 23 mod 5.6
 
-```
+{% endhighlight %}
 
 results in a Float with value
 
-```java
+{% highlight java %}
 0.6
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>
 
@@ -165,29 +165,29 @@ if any of the two inputs is of type Float and they're both not of type Decimal, 
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 -3 + 4
 
-```
+{% endhighlight %}
 
 results in an Integer/Long with value
 
-```java
+{% highlight java %}
 1
 
-```
+{% endhighlight %}
 
-```java
+{% highlight java %}
 4.5 + 3
 
-```
+{% endhighlight %}
 
 results in a Float with value
 
-```java
+{% highlight java %}
 7.5
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>
 
@@ -212,28 +212,28 @@ if any of the two inputs is of type Float and they're both not of type Decimal, 
 
 <div class="alert alert-info">{% markdown %}
 
-```java
+{% highlight java %}
 5 - 4
 
-```
+{% endhighlight %}
 
 results in an Integer/Long with value
 
-```java
+{% highlight java %}
 1
 
-```
+{% endhighlight %}
 
-```java
+{% highlight java %}
 34.4 - 3.1
 
-```
+{% endhighlight %}
 
 results in a Float with value
 
-```java
+{% highlight java %}
 31.3
 
-```
+{% endhighlight %}
 
 {% endmarkdown %}</div>

@@ -68,7 +68,6 @@ In this chapter you will download an install the Mendix Service Console.
     We advise use a directory that is _not_ on the system partition, where you can easily control the security rights.
 
     <div class="alert alert-info">{% markdown %}
-
     The location configured in step 4 is used for storing your app files and Mendix server files.
     The app directory consists of 4 subdirectories:
     - Backup: This directory will store any database changes due to model upgrades
@@ -77,7 +76,6 @@ In this chapter you will download an install the Mendix Service Console.
     data/files that contain all of your uploaded files.
     - Service: This directory contains files for configuring the Windows Services.
     Furthermore there will be a file called “Settings.yaml” which contains your application configuration.
-
     {% endmarkdown %}</div>
 
 ## 3\. Deploying a Mendix App
@@ -171,15 +169,15 @@ In order to use the proxy functionality within ARR you need to enable this featu
 8.  Double click the _xas_ in Features View.
 9.  In the **Pattern field** enter:
 
-    ```java
+    {% highlight java %}
     ^(xas/)(.*)
-    ```
+    {% endhighlight %}
 
 10.  In the **Rewrite URL** field enter:
 
-    ```bash
+    {% highlight bash %}
     http://localhost:8080/{R:1}{R:2}
-    ```
+    {% endhighlight %}
 
 11.  Click **Apply**.
 12.  Click **Back to Rules**.
@@ -194,15 +192,15 @@ In order to use the proxy functionality within ARR you need to enable this featu
 6.  Double click the _ws_ in Features View.
 7.  In the Pattern field enter:
 
-    ```java
+    {% highlight java %}
     ^(ws/)(.*)
-    ```
+    {% endhighlight %}
 
 8.  In the **Rewrite URL** field type:
 
-    ```bash
+    {% highlight bash %}
     http://localhost:8080/{R:1}{R:2}
-    ```
+    {% endhighlight %}
 
 9.  Click **Apply**.
 10.  Click **Back to Rules**.
@@ -217,15 +215,15 @@ In order to use the proxy functionality within ARR you need to enable this featu
 6.  Double click the _ws_ in Features View.
 7.  In the Pattern field enter:
 
-    ```java
+    {% highlight java %}
     ^(ws-doc/)(.*)
-    ```
+    {% endhighlight %}
 
 8.  In the **Rewrite URL** field type:
 
-    ```bash
+    {% highlight bash %}
     http://localhost:8080/{R:1}{R:2}
-    ```
+    {% endhighlight %}
 
 9.  Click **Apply**.
 10.  In the Actions pane on the right-hand side, **Back to Rules**.
@@ -246,15 +244,15 @@ The reason you use the trailing slash in _^(ws-doc/)(.*)_ is because it points t
 6.  Double click the _ws_ in Features View.
 7.  In the Pattern field enter:
 
-    ```java
+    {% highlight java %}
     ^(file)(.*)
-    ```
+    {% endhighlight %}
 
 8.  In the **Rewrite URL** field type:
 
-    ```bash
+    {% highlight bash %}
     http://localhost:8080/{R:1}{R:2}
-    ```
+    {% endhighlight %}
 
 9.  Click **Apply**.
 10.  In the Actions pane on the right-hand side, **Back to Rules**.
@@ -269,15 +267,15 @@ The reason you use the trailing slash in _^(ws-doc/)(.*)_ is because it points t
 6.  Double click the _ws_ in Features View.
 7.  In the Pattern field enter:
 
-    ```java
+    {% highlight java %}
     ^(link/)(.*)
-    ```
+    {% endhighlight %}
 
 8.  In the **Rewrite URL** field type:
 
-    ```bash
+    {% highlight bash %}
     http://localhost:8080/{R:1}{R:2}
-    ```
+    {% endhighlight %}
 
 9.  Click **Apply**.
 10.  In the Actions pane on the right-hand side, **Back to Rules**.
@@ -300,15 +298,15 @@ If you need to add additional request handlers, use the following example:
 6.  Double click the _ws_ in Features View.
 7.  In the Pattern field enter:
 
-    ```java
+    {% highlight java %}
     ^(requesthandler)(.*)
-    ```
+    {% endhighlight %}
 
 8.  In the **Rewrite URL** field type:
 
-    ```bash
+    {% highlight bash %}
     http://localhost:8080/{R:1}{R:2}
-    ```
+    {% endhighlight %}
 
 9.  Click **Apply**.
 10.  In the Actions pane on the right-hand side, **Back to Rules**.
@@ -318,7 +316,7 @@ Replace **requesthandler** with your own request handler needed for the applicat
 In the application directory under Project/Web you will find the web.config file which contains the Microsoft IIS configuration for the application. The contents of this file must be similar to this example:
 
 **web.config**
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <system.webServer>
@@ -351,7 +349,7 @@ In the application directory under Project/Web you will find the web.config file
         </staticContent>
     </system.webServer>
 </configuration> 
-```
+{% endhighlight %}
 
 ## 5\. Preserve Host Header
 
@@ -361,15 +359,15 @@ To make sure the correct application root URL is used within your web services y
 2.  Click **Accessories**, and then click **Command Prompt**.
 3.  Execute the following command from the command prompt:
 
-    ```java
+    {% highlight java %}
     cd %windir%\system32\inetsrv
-    ```
+    {% endhighlight %}
 
 4.  Then type:
 
-    ```java
+    {% highlight java %}
     appcmd.exe set config -section:system.webServer/proxy /preserveHostHeader:"True" /commit:apphost
-    ```
+    {% endhighlight %}
 
 ## 6\. Related content
 

@@ -16,6 +16,6 @@ Set checked to true or false.
 Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
 Widget Name | String | Yes | The name of the widget.
-Column Caption | String | Yes | The caption of the wanted check box column.
+Column Caption | String | Yes | The caption of the desired check box column.
 Value | String | Yes | The cell value of the check box row.
 Checked | Boolean | Yes | The value for the check box you want to set (true or false).

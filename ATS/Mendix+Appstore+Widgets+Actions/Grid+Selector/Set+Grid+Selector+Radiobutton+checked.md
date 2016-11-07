@@ -2,18 +2,18 @@
 title: "Set Grid Selector RadioButton Value"
 ---
 ## Description
-Finds radiobutton by column and row caption. Sets it to be checked.
+Finds the radio button by column and row caption. Sets it to be checked.
 
 ## Supported Widgets
 + Grid Selector
 
 ## Usage
- Pass the name of the widget, the column caption and the row caption of the radiobutton you want to find.
+Pass the name of the widget, the column caption, and the row caption of the radiobutton you want to find.
 
 ## Input Parameters
 Name | Datatype | Required | Description
 ---- | :--------: | :--------: | ---------------
-Widget Name | String | yes | The name of the Grid Selector widget
-Column Caption | String | yes | The column caption of the radiobutton cell
-Row Caption | String | yes | The row caption of the radiobutton cell
-Checked | Boolean | yes | The value for the checkbox you want to Set (true or false)
+Widget Name | String | Yes | The name of the Grid Selector widget.
+Column Caption | String | Yes | The column caption of the radio button cell.
+Row Caption | String | Yes | The row caption of the radio button cell.
+Checked | Boolean | Yes | The value for the check box you want to set (true or false).

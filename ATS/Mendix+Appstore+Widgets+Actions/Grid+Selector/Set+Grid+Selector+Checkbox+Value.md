@@ -1,5 +1,5 @@
 ---
-title: "Set Check Box Set Selector Value"
+title: "Set Checkbox Set Selector Value"
 ---
 ## Description
 Finds the check box by column and row caption. Sets its value to the given checked parameter.

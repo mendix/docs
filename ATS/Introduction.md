@@ -60,7 +60,7 @@ You can navigate your project using the navigation sidebar to the left of the sc
 Over the sidebar you can navigate to different pages of the ATS:
 
 | Navigation Item             | Explanation                                                                                          |
-| :-------------------------- | :----------------------------------------------------------------------------------------------------|
+| -------------------------- | ----------------------------------------------------------------------------------------------------|
 | **Change current Project**  | At the top of the sidebar you can switch between projects which are available on your account        |
 | **My Projects**             | This button will bring you back to the startpage.                                                    |
 | **Dashboard**               | Gives an overview over the selected project                                                          |

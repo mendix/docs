@@ -1,16 +1,19 @@
 ---
 title: "Concatenate String"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
+
 Concatenate Strings
 
 ## Usage
-Pass the Strings you want to concatenate, with a maximum of five strings. 
+
+Pass the Strings you want to concatenate, with a maximum of five strings.
 
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+---- |--------| -------|---------------
 String 1 | String | no | First String of the chain.
 String 2 | String | no | Appended after String 1
 String 3 | String | no | Appended after String 2

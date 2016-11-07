@@ -14,4 +14,4 @@ Pass the name of the dropdown div converter widget.
 
 Name | Datatype | Required | Description
 ---- |:--------:| :-------:|---------------
-Widget Name | String | yes | The name of the dropdown div converter widget
+Widget Name | String | Yes | The name of the dropdown div converter widget.

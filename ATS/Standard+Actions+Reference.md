@@ -82,6 +82,58 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 + [Assert Active Tab Caption](Mendix+Actions/Tab/Assert+Active+Tab+Caption)
 + [Get Active Tab Caption](Mendix+Actions/Tab/Get+Active+Tab+Caption)
 
+### Mendix Appstore Widgets Actions
+#### BooleanSlider Widget
++ [Assert BooleanSlider Value](Mendix+Appstore+Widgets+Actions/BooleanSlider/Assert+BooleanSlider+Value)
++ [Get BooleanSlider Value](Mendix+Appstore+Widgets+Actions/BooleanSlider/Get+BooleanSlider+Value)
++ [Set BooleanSlider Value](Mendix+Appstore+Widgets+Actions/BooleanSlider/Set+BooleanSlider+Value)
++ [Toggle BooleanSlider Value](Mendix+Appstore+Widgets+Actions/BooleanSlider/Toogle+BooleanSlider+Value)
+
+#### BootstrapRTE
++ [Assert BootstrapRTE Value](Mendix+Appstore+Widgets+Actions/BootstrapRTE/Assert+BootstrapRTE+Value)
++ [Get BootstrapRTE Value](Mendix+Appstore+Widgets+Actions/BootstrapRTE/Get+BootstrapRTE+Value)
++ [Set BootstrapRTE Value](Mendix+Appstore+Widgets+Actions/BootstrapRTE/Set+BootstrapRTE+Value)
+
+#### Checkbox Set Selector
++ [Assert Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Assert+Checkbox+Set+Selector+Value)
++ [Find Checkbox Set Selector](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Find+Checkbox+Set+Selector)
++ [Find Checkbox Set Selector (all)](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Find+Checkbox+Set+Selector(all))
++ [Get Checkbox Set Selector Value (all)](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Get+Checkbox+Set+Selector+Value)
++ [Get Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Get+Checkbox+Set+Selector+Value(all))
++ [Set Checkbox Set Selector Value (all)](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Set+Checkbox+Set+Selector+Value)
++ [Set Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Set+Checkbox+Set+Selector+Value(all))
++ [Toggle Checkbox Set Selector](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Toggle+Checkbox+Set+Selector+Value)
++ [Toggle Checkbox Set Selector (all)](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Toggle+Checkbox+Set+SelecorValue(all))
+
+#### CKEditor
++ [Assert CKEditor Value](Mendix+Appstore+Widgets+Actions/CKEditor/Assert+CKEditor+Value)
++ [Get CKEditor Value](Mendix+Appstore+Widgets+Actions/CKEditor/Get+CKEditor+Value)
++ [Set CKEditor Value](Mendix+Appstore+Widgets+Actions/CKEditor/Set+CKEditor+Value)
+
+#### Dropdown div converter
++ [Click Dropdown div converter dropdown button](Mendix+Appstore+Widgets+Actions/Dropdown+Div+Converter/Click+Dropdown+div+converter+dropdown+button)
++ [Click Dropdown div converter split button](Mendix+Appstore+Widgets+Actions/Dropdown+Div+Converter/Click+Dropdown+div+converter+split+button)
+
+#### Grid Selector
++ [Assert Grid Selector Box Value](Mendix+Appstore+Widgets+Actions/Grid+Selector/Assert+Grid+Selector+Value)
++ [Find Grid Selector Box](Mendix+Appstore+Widgets+Actions/Grid+Selector/Find+Grid+Selector+Box)
++ [Get Grid Selector Box Value](Mendix+Appstore+Widgets+Actions/Grid+Selector/Get+Grid+Selector+Box+Value)
++ [Set Grid Selector Checkbox Value](Mendix+Appstore+Widgets+Actions/Grid+Selector/Set+Grid+Selector+Checkbox+Value)
++ [Set Grid Selector Radiobox Value](Mendix+Appstore+Widgets+Actions/Grid+Selector/Set+Grid+Selector+Radiobutton+checked)
++ [Toggle Grid Selector Checkbox Value](Mendix+Appstore+Widgets+Actions/Grid+Selector/Toggle+Grid+Selector+Checkbox+Value)
+
+#### Input Reference Selector
++ [Assert InputReferenceSelector Value](Mendix+Appstore+Widgets+Actions/InputReferenceSelector/Assert+InputReferenceSelector+Value)
++ [Get InputReferenceSelector Value](Mendix+Appstore+Widgets+Actions/InputReferenceSelector/Get+InputReferenceSelector+Value)
++ [Set InputReferenceSelector Value](Mendix+Appstore+Widgets+Actions/InputReferenceSelector/Set+InputReferenceSelector+Value)
+
+#### Simple Checkbox Set Selector
++ [Assert Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Assert+Simple+Checkbox+Set+Selector+Value)
++ [Find Simple Checkbox Set Selector](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Find+Simple+Checkbox+Set+Selector)
++ [Get Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Get+Simple+Checkbox+Set+Selector+Value)
++ [Set Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Set+Simple+Checkbox+Set+Selector+Value)
++ [Toggle Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Toggle+Simple+Checkox+Set+Selector+Value)
+
 ### ATS Core Actions
 + [Assert equals](ATS+Core+Actions/Assert+Equals)
 + [Assert not equals](ATS+Core+Actions/Assert+Not+Equals)

@@ -12,6 +12,7 @@ The Reference Guide is divided in different sections, each describing a certain 
 
 *   [Mendix Compatibility](General)
 *   [Browser Support](General#browser-support)
+*   [Release Notes](Release+Notes/Release+Notes)
 
 ## [Introduction](Introduction)
 

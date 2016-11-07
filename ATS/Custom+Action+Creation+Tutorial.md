@@ -36,7 +36,7 @@ In this tutorial, we want to get the current value of the booleanSlider Appstore
 Before we start with creating actions, we have to prepare our widget. Therefore we will build a prototype application, with only the widget we want to test in it. After that is done, we will run the application and inspect the HTML source code of the application with the browser development tools. You can open the development tools in **Mozilla Firefox** and **Google Chrome** by pressing <kbd>F12</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on your keyboard. Your browser should now look similar to this.
 
 **Chrome Development Tools**
-![Chrome devtools](attachments/Custom+Action+Creation+Tutorial/chrome_devtools.png)   
+![Chrome devtools](attachments/Custom+Action+Creation+Tutorial/chrome_devTools.png)   
 
 **Firefox Development Tools**
 ![Firefox devtools](attachments/Custom+Action+Creation+Tutorial/firefox_devtools.png)   
@@ -155,4 +155,4 @@ Now, that the return value is set, our **Get booleanSlider Value** action is don
 To test the custom action we've developed for the booleanSlider widget, we will use our prototype application and ATS standard actions.
 Set the prototype application as *test application* in ATS (Read the [configuration section](Configuration#configure-test-applications) for more informations about setting applications as test applications). Now create a new test case. Let the test case open the prototype application and add our custom action to it. After that add [Assert Equals action](/ATS+Core+Actions/Assert+Equals) and use the test step output of our action as input parameter 1 for the [Assert Equals action](/ATS+Core+Actions/Assert+Equals). As input parameter 2, we will use the default value of the widget after launching the application, in our case *Sure*.
 
-Always try to test your custom actions with ATS standard actions or JavaScript code. If you use other custom actions to evaluate the outcome of your new custom action, it is possible that you recieve false-positive results due to missbeheaving custom actions. 
+Always try to test your custom actions with ATS standard actions or JavaScript code. If you use other custom actions to evaluate the outcome of your new custom action, it is possible that you recieve false-positive results due to misbehaving custom actions. 

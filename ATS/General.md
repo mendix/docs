@@ -14,6 +14,7 @@ Mendix platform and browsers.
 | 1.5 | 5.14.1 - 6.6.0 | 5.17.0, 5.21.1, 6.4.1, 6.6.0 |
 | 1.6 | 5.14.1 - 6.7.1 | 5.17.0, 5.21.1, 6.4.1, 6.6.0, 6.7.1 |
 | 1.7 | 5.14.1 - 6.9.0 | 5.17.0, 5.21.1, 6.4.1, 6.6.0, 6.7.1, 6.9.0 |
+| 1.8 | 5.14.1 - 6.9.0 | 5.17.0, 5.21.1, 6.4.1, 6.6.0, 6.7.1, 6.9.0 |
 
 ## Browser Support
 
@@ -21,14 +22,14 @@ Mendix platform and browsers.
 
 | ATS version | Supported Firefox Versions |
 | --- | --- | --- |
-| 1.5 - 1.7 | 44, 45, 38 ESR, 45 ESR |
+| 1.5 - 1.8 | 44, 45, 38 ESR, 45 ESR |
 
 ### Chrome
 
 | ATS version | Supported Chrome Versions | Notes |
 | --- | --- | --- |
 | 1.5, 1.6 | 46-50 |  |
-| 1.7 | 51-53 |   |
+| 1.7, 1.8 | 51-53 |   |
 |  | 54+ | Recent versions of Chrome usually work (unsupported). |
 
 ### Internet Explorer and Edge

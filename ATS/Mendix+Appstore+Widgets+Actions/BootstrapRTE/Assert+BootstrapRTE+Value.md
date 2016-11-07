@@ -2,7 +2,7 @@
 title: "Assert BootstrapRTE Value"
 ---
 ## Description
-Asserts that the BootstrapRTE value is equal to the given value
+Asserts that the BootstrapRTE value is equal to the given value.
 
 ## Supported widgets
  + BootstrapRTE

@@ -10,16 +10,15 @@ You should also know, how to use CSS/JavaScript/ATS selectors. For more informat
 
 
 ## Table of Contents
-*  [Introduction](Custom+Action+Creation+Tutorial.md#introduction)
-*  [Widget Preparation](Custom+Action+Creation+Tutorial#widget-preparation)
-*  [Create the custom action](Custom+Action+Creation+Tutorial.md#create-a-custom-action)
-  *  [Basic Settings](Custom+Action+Creation+Tutorial.md#basic-settings)
-    *  [Setting inputparameters](Custom+Action+Creation+Tutorial.md#setting-input--and-+oOutputparameters)
-    *  [Setting the outputparameter](Custom+Action+Creation+Tutorial.md#setting-input--and-+oOutputparameters)
-  *  [Implementation](Custom+Action+Creation+Tutorial.md#adding-subactions)
-  *  [Set return value](Custom+Action+Creation+Tutorial.md#set-return-value)
-*  [Testing the custom action](Custom+Action+Creation+Tutorial.md#testing-the-custom-action)
-*  [Conclusion](Custom+Action+Creation+Tutorial.md#Conclusion)
+*  [Introduction](Custom+Action+Creation+Tutorial#introduction)
+*  [Widget Inspection](Custom+Action+Creation+Tutorial#widget-inspection)
+*  [Create the custom action](Custom+Action+Creation+Tutorial#create-the-custom-action)
+  *  [Basic Settings](Custom+Action+Creation+Tutorial#basic-settings)
+    *  [Setting input parameters](Custom+Action+Creation+Tutorial#setting-input-parameters)
+    *  [Setting the output parameter](Custom+Action+Creation+Tutorial#setting-the-output-parameter)
+  *  [Implementation](Custom+Action+Creation+Tutorial#implementation)
+  *  [Set return value](Custom+Action+Creation+Tutorial#set-return-value)
+*  [Testing the custom action](Custom+Action+Creation+Tutorial#testing-the-custom-action)
 
 ## Introduction
 
@@ -27,7 +26,7 @@ There are several reason for creating custom actions in ATS. Maybe you're using 
 
 Before you start with developing your own custom action, you should check if there is a standard action that does the job. Sometimes the standard actions work with unsupported widgets. If that is not the case, you should determine what your custom action should do and how the action should do it.   
 
-In this tutorial, we want to get the current value of the booleanSlider Appstore widget. If we would use the [Get Checkbox Value action](/Mendix+Actions/Input/Get+Checkbox+Value), it would only return *true* or *false* for the current state of the boolean slider. We have to develop our own custom action. The action shall retrieve the current value of the booleanSlider as a string, in this case *Sure* or *No*. We have to determine, where the string is stored inside the HTML code and how we can get the current value from it. The following image shows the widget inside a simple mendix application.
+In this tutorial, we want to get the current value of the booleanSlider Appstore widget. If we would use the [Get Checkbox Value action](Mendix+Actions/Input/Get+Checkbox+Value), it would only return *true* or *false* for the current state of the boolean slider. We have to develop our own custom action. The action shall retrieve the current value of the booleanSlider as a string, in this case *Sure* or *No*. We have to determine, where the string is stored inside the HTML code and how we can get the current value from it. The following image shows the widget inside a simple mendix application.
 
 ![test app](attachments/Custom+Action+Creation+Tutorial/application.png)
 
@@ -67,7 +66,7 @@ We see, that the two possible string values of the boolean slider (*Sure* and *N
 ```
 To get the current value of the booleanSlider widget, we will use the ATS sepecific [:clickable-Selector](Selectors#ats-selectors), which will select an element, whose visibility property is set to visible.
 
-## Create a Custom Action
+## Create the Custom Action
 
 Now that we know, where the value we want to retrive, is located in the HTML code, we can go on with the custom action creation. Open **ATS** and go to **Repository**, switch to the **All Objects** tab and create a new action by clicking **Add Item**. A popup window will appear.
 
@@ -85,7 +84,7 @@ The **Edit Action** page should have openend, where you can edit your newly crea
 ## Basic settings
 It is good practice to start the development of a custom action with the basic input and output settings and go to the processing of those parameters from there. We will first determine which input parameters we will need and how we will return the result of our action, before we add subactions to our custom action.
 
-### Setting Inputparameters
+### Setting Input parameters
 Switch to the **Settings** tab.
 
 ![Edit action page](attachments/Custom+Action+Creation+Tutorial/editActionSettings.png)
@@ -114,7 +113,7 @@ Now that we have completed the groundwork, we can add subactions to our custom a
 
 ![Add subaction](attachments/Custom+Action+Creation+Tutorial/addSubaction.png)  
 
-The **Test Step Setup** dialog will open. Enter **"Select active span"** as description for the action in textfield 1 and **"Find Widget Child Node"**in textfield 2. Now press **Search**. The [Find Widget Child Node](/Mendix+Actions/System/Find+Widget+Child+Node) action will appear in the search results table. Select the action, by clicking the corresponding row in the table and press **Save**. We have succesfully added the [Find Widget Child Node](/Mendix+Actions/System/Find+Widget+Child+Node) action as subaction.
+The **Test Step Setup** dialog will open. Enter **"Select active span"** as description for the action in textfield 1 and **"Find Widget Child Node"**in textfield 2. Now press **Search**. The [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) action will appear in the search results table. Select the action, by clicking the corresponding row in the table and press **Save**. We have succesfully added the [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) action as subaction.
 
 ![Add Find Widget Child Node subaction](attachments/Custom+Action+Creation+Tutorial/addFindWidgetChildNode.png)
 
@@ -134,11 +133,11 @@ Next we have to add the selector for the current active span child node. To sele
 
 ![Child Node Selector Input Value](attachments/Custom+Action+Creation+Tutorial/childNodeSelector.png)
 
-The [Find Widget Child Node](/Mendix+Actions/System/Find+Widget+Child+Node) action will now select the first active ``<span>-element``, which is a child node of the widget with the name "Widget Name". To get the text inside of the ``<span>-element`` we will use the [Get Text](Selenium+Actions/Get/Get+Text) action. Click **Add** on the **Test Steps** tab and in the openend **Test Step Setup** dialog type **"Get Text"** in textfeld 2. Make sure, that **Search private folders** is checked. Select the **Get Text** row in the search results tab and click **Save**.
+The [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) action will now select the first active ``<span>-element``, which is a child node of the widget with the name "Widget Name". To get the text inside of the ``<span>-element`` we will use the [Get Text](Selenium+Actions/Get/Get+Text) action. Click **Add** on the **Test Steps** tab and in the openend **Test Step Setup** dialog type **"Get Text"** in textfeld 2. Make sure, that **Search private folders** is checked. Select the **Get Text** row in the search results tab and click **Save**.
 
 ![Add Get Text action](attachments/Custom+Action+Creation+Tutorial/getText.png)
 
-The output of the [Find Widget Child Node](/Mendix+Actions/System/Find+Widget+Child+Node) action will automatically be set as input value for the [Get Text](Selenium+Actions/Get/Get+Text) action.
+The output of the [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) action will automatically be set as input value for the [Get Text](Selenium+Actions/Get/Get+Text) action.
 
 ## Set Return Value
 Next we have to set the output value of the [Get Text](Selenium+Actions/Get/Get+Text) action as return value for our custom action.
@@ -153,6 +152,6 @@ Now, that the return value is set, our **Get booleanSlider Value** action is don
 ## Testing the custom action
 
 To test the custom action we've developed for the booleanSlider widget, we will use our prototype application and ATS standard actions.
-Set the prototype application as *test application* in ATS (Read the [configuration section](Configuration#configure-test-applications) for more informations about setting applications as test applications). Now create a new test case. Let the test case open the prototype application and add our custom action to it. After that add [Assert Equals action](/ATS+Core+Actions/Assert+Equals) and use the test step output of our action as input parameter 1 for the [Assert Equals action](/ATS+Core+Actions/Assert+Equals). As input parameter 2, we will use the default value of the widget after launching the application, in our case *Sure*.
+Set the prototype application as *test application* in ATS (Read the [configuration section](Configuration#configure-test-applications) for more informations about setting applications as test applications). Now create a new test case. Let the test case open the prototype application and add our custom action to it. After that add [Assert Equals action](ATS+Core+Actions/Assert+Equals) and use the test step output of our action as input parameter 1 for the [Assert Equals action](ATS+Core+Actions/Assert+Equals). As input parameter 2, we will use the default value of the widget after launching the application, in our case *Sure*.
 
-Always try to test your custom actions with ATS standard actions or JavaScript code. If you use other custom actions to evaluate the outcome of your new custom action, it is possible that you recieve false-positive results due to misbehaving custom actions. 
+Always try to test your custom actions with ATS standard actions or JavaScript code. If you use other custom actions to evaluate the outcome of your new custom action, it is possible that you recieve false-positive results due to misbehaving custom actions.

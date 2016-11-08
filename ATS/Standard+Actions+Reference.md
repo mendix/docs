@@ -38,7 +38,7 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 
 #### FileManager
 
-+ [Set File Manager](Mendix+Actions/File+Manager/Set+File+Manager)
++ [Set File Manager](Mendix+Actions/FileManager/Set+File+Manager)
 
 #### Generic
 + [Assert Current Page](Mendix+Actions/Generic/Assert+Current+Page)
@@ -88,7 +88,7 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 + [Assert BooleanSlider Value](Mendix+Appstore+Widgets+Actions/BooleanSlider/Assert+BooleanSlider+Value)
 + [Get BooleanSlider Value](Mendix+Appstore+Widgets+Actions/BooleanSlider/Get+BooleanSlider+Value)
 + [Set BooleanSlider Value](Mendix+Appstore+Widgets+Actions/BooleanSlider/Set+BooleanSlider+Value)
-+ [Toggle BooleanSlider Value](Mendix+Appstore+Widgets+Actions/BooleanSlider/Toogle+BooleanSlider+Value)
++ [Toggle BooleanSlider Value](Mendix+Appstore+Widgets+Actions/BooleanSlider/Toggle+BooleanSlider+Value)
 
 #### BootstrapRTE
 + [Assert BootstrapRTE Value](Mendix+Appstore+Widgets+Actions/BootstrapRTE/Assert+BootstrapRTE+Value)
@@ -104,7 +104,7 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 + [Set Checkbox Set Selector Value (all)](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Set+Checkbox+Set+Selector+Value)
 + [Set Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Set+Checkbox+Set+Selector+Value(all))
 + [Toggle Checkbox Set Selector](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Toggle+Checkbox+Set+Selector+Value)
-+ [Toggle Checkbox Set Selector (all)](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Toggle+Checkbox+Set+SelecorValue(all))
++ [Toggle Checkbox Set Selector (all)](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Toggle+Checkbox+Set+SelectorValue(all))
 
 #### CKEditor
 + [Assert CKEditor Value](Mendix+Appstore+Widgets+Actions/CKEditor/Assert+CKEditor+Value)
@@ -133,7 +133,7 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 + [Find Simple Checkbox Set Selector](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Find+Simple+Checkbox+Set+Selector)
 + [Get Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Get+Simple+Checkbox+Set+Selector+Value)
 + [Set Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Set+Simple+Checkbox+Set+Selector+Value)
-+ [Toggle Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Toggle+Simple+Checkox+Set+Selector+Value)
++ [Toggle Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Toggle+Simple+Checkbox+Set+Selector+Value)
 
 ### ATS Core Actions
 + [Assert equals](ATS+Core+Actions/Assert+Equals)
@@ -154,40 +154,40 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 + [Get Property Value](Selenium+Actions/Get/Get+Property+Value)
 + [Get Selected Option Index](Selenium+Actions/Get/Get+Selected+Option+Index)
 + [Get Selected Option Text](Selenium+Actions/Get/Get+Selected+Option+Text)
-+ [Get Selected Option Value](Selenium+Actions/Get/Get+TSelected+Option+Value)
-+ [Get Text](Selenium+Actions/Get/Get+Text+md)
++ [Get Selected Option Value](Selenium+Actions/Get/Get+Selected+Option+Value)
++ [Get Text](Selenium+Actions/Get/Get+Text)
 
-#### Set
-+ [Set Implicit Wait](Selenium+Actions/Get/Get+Text+md)
-+ [Set Page Load Timeout](Selenium+Actions/Get/Get+Text+md)
+#### Settings
++ Set Implicit Wait
++ Set Page Load Timeout
 
 #### Actions
-+ [Accept Browser Alert](Selenium+Actions/Accept+Browser+Alert)
-+ [Clear WebElement](Selenium+Actions/Clear+WebElement)
-+ [Click](Selenium+Actions/Click)
-+ [Close Window](Selenium+Actions/Close+Window)
-+ [Close Window & Auto-Switch](Selenium+Actions/Close+Window+And+AutoSwitch)
-+ [Dismiss Browser Alert](Selenium+Actions/Dismiss+Browser+Alert)
-+ [Doubleclick](Selenium+Actions/Doubleclick)
++ Accept Browser Alert
++ Clear WebElement
++ Click
++ Close Window
++ Close Window & Auto-Switch
++ Dismiss Browser Alert
++ Doubleclick
 + [Execute JavaScript Integer](Selenium+Actions/Execute+JavaScript+Integer)
 + [Execute JavaScript String](Selenium+Actions/Execute+JavaScript+String)
 + [Execute JavaScript WebElement](Selenium+Actions/Execute+JavaScript+WebElement)
-+ [Focus and Clear Element Value](Selenium+Actions/Focus+and+Clear+Element+Value)
-+ [Focus WebElement](Selenium+Actions/Focus+WebElement)
-+ [Get Current Window Handle](Selenium+Actions/Get+Current+Window+Handle)
-+ [Hover](Selenium+Actions/Hover)
-+ [Maximizie](Selenium+Actions/Maximizie)
-+ [Open Website](Selenium+Actions/Open+Website)
-+ [Select Option](Selenium+Actions/Select+Option)
-+ [Select Option by Index](Selenium+Actions/Select+Option+by+Index)
-+ [Select Option by Text](Selenium+Actions/Select+Option+by+Text)
-+ [Select Option by Value](Selenium+Actions/Select+Option+by+Value)
-+ [Send Enter](Selenium+Actions/Send+Enter)
++ Focus and Clear Element Value
++ Focus WebElement
++ Get Current Window Handle
++ Hover
++ Maximizie
++ Open Website
++ Select Option
++ Select Option by Index
++ Select Option by Text
++ Select Option by Value
++ Send Enter
 + [Send Keys](Selenium+Actions/Send+Keys)
-+ [Set Size](Selenium+Actions/Set+Size)
-+ [Switch to Default Frame](Selenium+Actions/Switch+to+Default+Frame)
-+ [Switch to Frame](Selenium+Actions/Swich+to+Frame)
-+ [Switch to Next Window](Selenium+Actions/Switch+to+Next+Window)
-+ [Unfocus WebElement](Selenium+Actions/Unfocus+WebElement)
-+ [Wait for Condition](Selenium+Actions/Wait+for+Condition)
-+ [Wait for Condition JS](Selenium+Actions/Wait+for+Condition+JS)
++ Set Size
++ Switch to Default Frame
++ Switch to Frame
++ Switch to Next Window
++ Unfocus WebElement
++ Wait for Condition
++ Wait for Condition JS

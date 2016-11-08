@@ -84,7 +84,7 @@ The **Edit Action** page should have openend, where you can edit your newly crea
 
 ![Edit action page](attachments/Custom+Action+Creation+Tutorial/editAction.png)
 
-## Basic settings
+## Basic Settings
 
 It is good practice to start the development of a custom action with the basic input and output settings and go to the processing of those parameters from there. We will first determine which input parameters we will need and how we will return the result of our action, before we add subactions to our custom action.
 
@@ -120,7 +120,7 @@ Now that we have completed the groundwork, we can add subactions to our custom a
 
 ![Add subaction](attachments/Custom+Action+Creation+Tutorial/addSubaction.png)  
 
-The **Test Step Setup** dialog will open. Enter **"Select active span"** as description for the action in textfield 1 and **"Find Widget Child Node"**in textfield 2. Now press **Search**. The [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) action will appear in the search results table. Select the action, by clicking the corresponding row in the table and press **Save**. We have succesfully added the [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) action as subaction.
+The **Test Step Setup** dialog will open. Enter **"Select active span"** as description for the action in text field 1 and **"Find Widget Child Node"**in text field 2. Now press **Search**. The [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) action will appear in the search results table. Select the action, by clicking the corresponding row in the table and press **Save**. We have succesfully added the [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) action as subaction.
 
 ![Add Find Widget Child Node subaction](attachments/Custom+Action+Creation+Tutorial/addFindWidgetChildNode.png)
 
@@ -136,11 +136,11 @@ In the <b>Action Input Parameter</b> category you will find all of the input par
 
 ![Edit Input Value dialog](attachments/Custom+Action+Creation+Tutorial/editInputValue.png)
 
-Next we have to add the selector for the current active span child node. To select the current active ``<span>-element`` of the booleanSlider widget, we will use the ATS *:clickable* pseudo-class selector. This selector will select a visible and clickable user interface element. Doubleclick the **Child Node Selector** row in the **Input Values** table. Just as for the widget name, the **Edit Input Value** dialog will open for the **Child Node Selector** parameter. Select the category **Constant** and enter **"span:clickable"** in the textarea on the right side. Now click **Save**.   
+Next we have to add the selector for the current active span child node. To select the current active ``<span>-element`` of the booleanSlider widget, we will use the ATS *:clickable* pseudo-class selector. This selector will select a visible and clickable user interface element. Doubleclick the **Child Node Selector** row in the **Input Values** table. Just as for the widget name, the **Edit Input Value** dialog will open for the **Child Node Selector** parameter. Select the category **Constant** and enter **"span:clickable"** in the text area on the right side. Now click **Save**.   
 
 ![Child Node Selector Input Value](attachments/Custom+Action+Creation+Tutorial/childNodeSelector.png)
 
-The [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) action will now select the first active ``<span>-element``, which is a child node of the widget with the name "Widget Name". To get the text inside of the ``<span>-element`` we will use the [Get Text](Selenium+Actions/Get/Get+Text) action. Click **Add** on the **Test Steps** tab and in the openend **Test Step Setup** dialog type **"Get Text"** in textfeld 2. Make sure, that **Search private folders** is checked. Select the **Get Text** row in the search results tab and click **Save**.
+The [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) action will now select the first active ``<span>-element``, which is a child node of the widget with the name "Widget Name". To get the text inside of the ``<span>-element`` we will use the [Get Text](Selenium+Actions/Get/Get+Text) action. Click **Add** on the **Test Steps** tab and in the openend **Test Step Setup** dialog type **"Get Text"** in text field 2. Make sure, that **Search private folders** is checked. Select the **Get Text** row in the search results tab and click **Save**.
 
 ![Add Get Text action](attachments/Custom+Action+Creation+Tutorial/getText.png)
 

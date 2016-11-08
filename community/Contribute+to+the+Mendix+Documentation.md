@@ -23,7 +23,7 @@ All documentation contributions may undergo changes after editing according to o
 **This how-to will teach you how to do the following:**
 
 * Add to and edit existing documentation
-* Create a new how-to using the Mendix how-to template
+* Create a new how-to or reference guide page using a template
 
 ## 2 Prerequisites
 
@@ -34,24 +34,24 @@ Before starting with this how-to, make sure you have completed the following pre
 We recommend the use of the following tools for contributing to the Mendix documentation:
 
 * For writing and editing documentation – [Visual Studio Code](https://code.visualstudio.com) (with which you can preview your Markdown styling)
-* For commiting your documentation – [SourceTree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
+* For committing your documentation – [SourceTree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
 
 ## 3 Editing the Existing Documentation
 
-To edit the existing documentation (for example, the reference guide or a how-to), follow these steps:
+To edit the existing documentation (for example, a how-to or reference guide page), follow these steps:
 
 1. Click **Edit on GitHub** in the upper-right corner of the specific Mendix documentation page that you want to work on.
 2. Find the files in the repository and make your changes (make sure your changes align with our [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines)).
 3. Create a pull request.
 
-## 4 Writing a New How-to
+## 4 Writing a New How-To or Reference Guide Page
 
-To add a new how-to to our documentation and submit it to our documentation, follow these steps:
+To submit a new how-to or reference guide page to our documentation, follow these steps:
 
-1. Save a copy of the [How-To Template](The+How+to+Template+Page) locally in order to use it.
-2. Follow the guidelines in the template for writing your how-to, and make sure the text aligns with our [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines).
-3. Take screenshots for the how-to and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [5 Naming New Files and Images](#NamingNewFilesandImages).
-4. To merge your new how-to files, fork the GitHub repository, and add your files.
+1. Save a copy of the [How-To Template](The+How+to+Template+Page) or [Reference Guide Page Template](The+Reference+Guide+Page+Template+Page) locally in order to use it.
+2. Follow the guidelines in the template for writing your document, and make sure the text aligns with our [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines).
+3. Take screenshots for the new document and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [5 Naming New Files and Images](#NamingNewFilesandImages).
+4. To merge your new document files, fork the GitHub repository, and add your files.
 5. Create a pull request.
 
 <div class="alert alert-info">
@@ -60,9 +60,9 @@ You may receive a response to your pull request asking for verification of speci
 
 </div>
 
-## <a name="NamingNewFilesandImages"></a>5 Naming New How-to Files and Images
+## <a name="NamingNewFilesandImages"></a>5 Naming New Files and Images
 
-When writing a new how-to, make sure the Markdown file name is the same as the title of the how-to. Use a plus sign ("+") between each word of your file name (for example, "Clear+Warning+Messages").
+When writing a new how-to or reference guide page, make sure the Markdown file name is the same as the title of the document. Use a plus sign ("+") between each word of your file name (for example, "Clear+Warning+Messages").
 
 When adding new image files, make sure the image file name describes what the image shows (meaning, labels on the UI and any specific data). Use underscores ("`_`") between each word of your image file name (for example, "New_App_Starting_Screen").
 
@@ -71,4 +71,5 @@ The following image file types are allowed: *.jpg*, *.png*, *.gif*.
 ## 6 Related Content
 
 * [How-To Template](The+How+to+Template+Page)
+* [Reference Guide Page Template](The+Reference+Guide+Page+Template+Page)
 * [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines)

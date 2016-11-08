@@ -6,7 +6,7 @@ redirect_from:
   - "/ATS/Reference+Guide"
 ---
 
-The Reference Guide is divided in different sections, each describing a certain feature of the ATS.
+The ATS Reference Guide is divided into the following different sections, each describing a certain feature of the application test suite (ATS).
 
 ## [General](General)
 

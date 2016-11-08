@@ -29,7 +29,7 @@ To import a WSDL, follow these steps:
 3. Click **OK** and enter a name for the new consumed web service (for example, _TemperatureConverter_).
 4. Click **OK** again. You will now see the consumed web service editor:
     ![](attachments/18448738/18582085.png)
-5. Enter `http://www.w3schools.com/webservices/tempconvert.asmx?WSDL` as the URL, and then click **Import**. This will bring up the **Select Ports** pop-up window asking you to select a web service port:
+5. Enter `http://www.w3schools.com/xml/tempconvert.asmx?WSDL` as the URL, and then click **Import**. This will bring up the **Select Ports** pop-up window asking you to select a web service port:
     ![](attachments/18448738/18582065.png)
 6. Click **OK** to select the default. The Modeler should now import these operations: **CelsiusToFahrenheit** and **FahrenheitToCelsius**.
     ![](attachments/18448738/18582084.png)

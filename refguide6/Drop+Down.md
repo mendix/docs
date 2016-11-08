@@ -4,6 +4,11 @@ space: "Reference Guide 6"
 parent: "Report+Widgets"
 ---
 
+<div class="alert alert-info">{% markdown %}
+
+This has been renamed to [Report Parameter](Report+Parameter) in version 6.10.0.
+
+{% endmarkdown %}</div>
 
 With a drop down the end user can filter a report on a specific parameter of the data set.
 

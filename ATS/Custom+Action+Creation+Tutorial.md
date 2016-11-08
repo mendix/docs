@@ -10,15 +10,16 @@ You should also know, how to use CSS/JavaScript/ATS selectors. For more informat
 
 
 ## Table of Contents
+
 *  [Introduction](Custom+Action+Creation+Tutorial#introduction)
 *  [Widget Inspection](Custom+Action+Creation+Tutorial#widget-inspection)
-*  [Create the custom action](Custom+Action+Creation+Tutorial#create-the-custom-action)
+*  [Create the Custom Action](Custom+Action+Creation+Tutorial#create-the-custom-action)
   *  [Basic Settings](Custom+Action+Creation+Tutorial#basic-settings)
-    *  [Setting input parameters](Custom+Action+Creation+Tutorial#setting-input-parameters)
-    *  [Setting the output parameter](Custom+Action+Creation+Tutorial#setting-the-output-parameter)
+    *  [Setting the Input Parameters](Custom+Action+Creation+Tutorial#setting-input-parameters)
+    *  [Setting the Output Parameter](Custom+Action+Creation+Tutorial#setting-the-output-parameter)
   *  [Implementation](Custom+Action+Creation+Tutorial#implementation)
-  *  [Set return value](Custom+Action+Creation+Tutorial#set-return-value)
-*  [Testing the custom action](Custom+Action+Creation+Tutorial#testing-the-custom-action)
+  *  [Set the Return Value](Custom+Action+Creation+Tutorial#set-return-value)
+*  [Testing the Custom Action](Custom+Action+Creation+Tutorial#testing-the-custom-action)
 
 ## Introduction
 
@@ -35,9 +36,11 @@ In this tutorial, we want to get the current value of the booleanSlider Appstore
 Before we start with creating actions, we have to prepare our widget. Therefore we will build a prototype application, with only the widget we want to test in it. After that is done, we will run the application and inspect the HTML source code of the application with the browser development tools. You can open the development tools in **Mozilla Firefox** and **Google Chrome** by pressing <kbd>F12</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on your keyboard. Your browser should now look similar to this.
 
 **Chrome Development Tools**
+
 ![Chrome devtools](attachments/Custom+Action+Creation+Tutorial/chrome_devTools.png)   
 
 **Firefox Development Tools**
+
 ![Firefox devtools](attachments/Custom+Action+Creation+Tutorial/firefox_devtools.png)   
 
 In the upper right part of the development tools, you will find the page inspector [Firefox] or elements view[Chrome] respectively. With the page inspector or elements view you can examine or modify the HTML and CSS of your application. Search for the booleanSlider widget in the HTML source code by entering the widget name in the searchfield (If the searchfield is not visible, press <kbd>Ctrl</kbd>+<kbd>F</kbd> on your keyboard to open it). In our case, the name of the booleanSlider widget is *booleanSlider1*. Your browser should now highlight the widget in the HTML code of the application.Open all container nodes inside the widget. The code should now look like this.
@@ -82,9 +85,11 @@ The **Edit Action** page should have openend, where you can edit your newly crea
 ![Edit action page](attachments/Custom+Action+Creation+Tutorial/editAction.png)
 
 ## Basic settings
+
 It is good practice to start the development of a custom action with the basic input and output settings and go to the processing of those parameters from there. We will first determine which input parameters we will need and how we will return the result of our action, before we add subactions to our custom action.
 
-### Setting Input parameters
+### Setting the Input Parameters
+
 Switch to the **Settings** tab.
 
 ![Edit action page](attachments/Custom+Action+Creation+Tutorial/editActionSettings.png)
@@ -97,7 +102,8 @@ Set **Datatype** to **String**, **Show as Password** to **No**, **Required/Optio
 
 We have successfully added the Widget Name as input parameter for our action.
 
-### Setting the Output parameter
+### Setting the Output Parameter
+
 We're not done yet. We have to add an output parameter to our action, to make the string value of the booleanSlider widget available to other actions. Click on **Set** in the **Output Parameter** section.
 
 ![Add Output Parameter](attachments/Custom+Action+Creation+Tutorial/addOutputParameter.png)
@@ -109,6 +115,7 @@ Input areas for the output parameter settings will appear. Now enter **Value** a
 ATS will automatically save your changes as new settings for the output parameter of the action.
 
 ## Implementation
+
 Now that we have completed the groundwork, we can add subactions to our custom action. Switch back to the **Test Steps** tab and click **Add**.
 
 ![Add subaction](attachments/Custom+Action+Creation+Tutorial/addSubaction.png)  
@@ -140,6 +147,7 @@ The [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) actio
 The output of the [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) action will automatically be set as input value for the [Get Text](Selenium+Actions/Get/Get+Text) action.
 
 ## Set Return Value
+
 Next we have to set the output value of the [Get Text](Selenium+Actions/Get/Get+Text) action as return value for our custom action.
 Click **Add** and search for **"Set Return Value"**. Add the corresponding action as subaction. After you have added the [Set Return Value](ATS+Core+Actions/Set+Return+Value) action, doubleclick the **"Value"** row in **Input Values** table. In the **Edit Input Value** dialog, click on the category **Test Step Output** and select **"#2 Value [String]"**. Click **Save**.
 <div class="alert alert-info">
@@ -149,7 +157,7 @@ The <b>Test Step Output</b> category contains all output values of your test/act
 
 Now, that the return value is set, our **Get booleanSlider Value** action is done. But we have to test, if the value the action returns, is actually the right one, before we use the action in test cases for a real application.
 
-## Testing the custom action
+## Testing the Custom Action
 
 To test the custom action we've developed for the booleanSlider widget, we will use our prototype application and ATS standard actions.
 Set the prototype application as *test application* in ATS (Read the [configuration section](Configuration#configure-test-applications) for more informations about setting applications as test applications). Now create a new test case. Let the test case open the prototype application and add our custom action to it. After that add [Assert Equals action](ATS+Core+Actions/Assert+Equals) and use the test step output of our action as input parameter 1 for the [Assert Equals action](ATS+Core+Actions/Assert+Equals). As input parameter 2, we will use the default value of the widget after launching the application, in our case *Sure*.

@@ -7,4 +7,4 @@ parent: "Release+Notes"
 Date: November 7, 2016
 
 ## Fixes
-* Fixed a bug where the _View Project_ button on the dashboard sometimes returned with an error message.
+* Fixed the bug where the **View Project** button on the dashboard returned an error message.

@@ -30,7 +30,7 @@ The project ID of the Mendix sprintr project that you want to get your stories f
 
 **Mendix API Key**
 
-The API key that you created in your sprintr project for ATS.
+The API key that you created in your sprintr project for ATS. (Be aware of the fact that this is not the User API key, but the Project API key which can be found in the project settings in sprintr)
 
 **Project Users**
 

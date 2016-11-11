@@ -11,7 +11,9 @@ However, in rare cases you might want to customize the app. We provide the optio
 
 ### How to download the PhoneGap package
 
-To download the PhoneGap package, publish your app for mobile app stores through the Developer Portal. At the "Build Mobile App Store Packages" page, under "How should the device packages be build?", choose the non-default option "Generate the Adobe PhoneGap Build configuration. I will manage the build process manually myself." Click the green button "Download PhoneGap Build Package" to download the PhoneGap package.
+ - 1. To download the PhoneGap package, publish your app for mobile app stores through the Developer Portal. 
+ - 2. At the "Build Mobile App Store Packages" page, under "How should the device packages be build?", choose the non-default option "Generate the Adobe PhoneGap Build configuration. I will manage the build process manually myself." 
+ - 3. Click the green button "Download PhoneGap Build Package" to download the PhoneGap package.
 
 ### Customizing the PhoneGap package
 

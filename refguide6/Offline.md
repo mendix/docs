@@ -51,7 +51,7 @@ Both autonumbers and calculated attributes require server intervention and are, 
 
 ### Files
 
-Storing and uploading files offline is not supported. Specializations of the System.FileDocument can still be viewed and created offline but files cannot be uploaded or displayed. Please note that, as a specialization of System.FileDocument, this also applies to System.Image.
+Storing and uploading files offline is not supported. Specializations of the System.FileDocument can still be created offline but files cannot be up- or downloaded. The exception to this rule is System.Image, which can be accessed, viewed, and uploaded as usual with the image viewer and upload widgets. 
 
 ### Associations
 

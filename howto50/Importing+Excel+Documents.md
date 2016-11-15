@@ -59,15 +59,12 @@ In order to set up import templates for importing data, your application model m
 
 Before you can import data from an Excel File into your application, you have to first setup an import template. In this template you will configure which objects the data should be mapped to, if an object is associated to another object, from which row of the Excel File the import should start and which columns should be imported.
 
-<div class="alert alert-warning">{% markdown %}
-
 In this How-to you will import data from a simple Excel file which can be downloaded here:
 
 [![](attachments/8785707/13402142.png)](attachments/8785707/9273362.xlsx)
 
 Based on the structure of the file you want to import, you will setup your template.
 
-{% endmarkdown %}</div>
 
 1.  Click on the menu item for the ExcelImportOverview in your navigation.
 2.  Click on **New Template**.![](attachments/8785707/8946734.png)

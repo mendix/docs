@@ -23,7 +23,7 @@
     this.config = window.ALGOLIA_CONFIG;
     this.suggestion = null;
     this.init($(selector));
-  }
+  };
 
   searchClient.prototype.init = function ($el) {
     this.$el = $el;
@@ -84,7 +84,9 @@
         }
         window.location = this.domain + '/search/?q=' + val;
       }.bind(this));
-  }
+  };
+
+  window.__searchClient = searchClient;
 
   if ($('#mendix_search').length === 1) {
     new searchClient('#mendix_search', false);

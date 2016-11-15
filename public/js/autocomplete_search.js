@@ -43,7 +43,7 @@
               var el = '<div>';
               el += '<div class="aa-suggestion__title">' + suggestion._highlightResult.title.value + '</div>';
               el += '<div class="aa-suggestion__text">' + suggestion._highlightResult.text.value + '</div>';
-              el += '<div class="aa-suggestion__space">' + suggestion.space + '</div>';
+              el += '<div class="aa-suggestion__space">' + (typeof suggestion.space !== 'undefined' ? suggestion.space : '&nbsp;') + '</div>';
               el += '</div>';
               return el;
             },

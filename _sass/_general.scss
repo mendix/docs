@@ -15,27 +15,29 @@
   .search {
     margin: 1em 0.1em;
     width: 100%;
-    .input-group-addon {
-      background: #FFF;
-      padding-right: $padding-search;
+    input[type="text"] {
       border-radius: 0px;
-      float: left;
-      width: 35px;
-      line-height: 1.45em;
-    }
-    input {
-      border-left: 0px;
-      border-radius: 0px;
-      padding: $padding-search;
+      padding: 6px 6px 6px 2em;
       -webkit-box-shadow: none;
               box-shadow: none;
-      width: calc(100% - 35px);
+      width: 100%;
       float: left;
       &.form-control:focus {
-        border-color: #ccc;
+        border-color: #999;
         -webkit-box-shadow: none;
                 box-shadow: none;
       }
+    }
+    &:before {
+      content: "\e003";
+      font-family: 'Glyphicons Halflings';
+      line-height: 1;
+      display: block;
+      position: absolute;
+      top: 10px;
+      font-size: 16px;
+      z-index: 100;
+      left: 0.5em;
     }
   }
 }

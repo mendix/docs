@@ -59,7 +59,7 @@ On the new page, go to the `Cloud Messaging` tab. Your _Sender ID_ and _Server k
 
 ### 4.4 Step 4 – Configure FCM in Your Application
 
-Open your Mendix application, log in as an Admin, and open the `PushNotifications_Administration` page. In this page, navigate to `Configurations` tab. Select the configuration object and click on the `Edit` button if it already exists, or on the `New` button if it does not. For the `DTAP mode` field, choose the option which corresponds to your environment. Enter the **sender id** into the `Sender id` field and the **server key** into the `API Key` field.
+Open your Mendix application, log in as an Admin, and open the `PushNotifications_Administration` page. In this page, navigate to the `Configurations` tab. Select the configuration object and click `Edit` if it already exists, or `New` if it does not. For the `DTAP mode` field, select the option that corresponds to your environment. Enter the **sender id** into the `Sender id` field and the **server key** into the `API Key` field.
 
 Note that at this moment, multiple configuration objects are not supported; having more than one of these objects will lead to unpredictable behavior. This will be fixed in the near future.
 

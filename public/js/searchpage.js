@@ -21,7 +21,7 @@
           }
           DEBOUNCE = setTimeout(function () {
             search(query);
-          }, 200);
+          }, 100);
         }
       })
     );

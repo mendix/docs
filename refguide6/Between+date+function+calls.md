@@ -16,7 +16,7 @@ Functions for calculating the differences between two dates.
 
 ### Output
 
-Returns the difference between the two dates, as a Float, measured in milliseconds.
+Returns the difference between the two dates, as a Decimal, measured in milliseconds.
 
 ```java
 millisecondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,1,3))
@@ -37,7 +37,7 @@ results in
 
 ### Output
 
-Returns the difference between the two dates, as a Float, measured in seconds.
+Returns the difference between the two dates, as a Decimal, measured in seconds.
 
 ```java
 secondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,2,3))
@@ -58,7 +58,7 @@ results in
 
 ### Output
 
-Returns the difference between the two dates, as a Float, measured in minutes.
+Returns the difference between the two dates, as a Decimal, measured in minutes.
 
 ```java
 minutesBetween(dateTime(2007, 1, 1, 1, 2, 1), dateTime(2007,1,1,1,1,1))
@@ -79,7 +79,7 @@ results in
 
 ### Output
 
-Returns the difference between the two dates, as a Float, measured in hours.
+Returns the difference between the two dates, as a Decimal, measured in hours.
 
 ```java
 hoursBetween(dateTime(2007, 1, 1, 3, 31, 1), dateTime(2007,1,1,1,1,1))
@@ -100,7 +100,7 @@ results in
 
 ### Output
 
-Returns the difference between the two dates, as a Float, measured in days.
+Returns the difference between the two dates, as a Decimal, measured in days.
 
 ```java
 daysBetween(dateTime(2007, 2, 13, 1, 1, 1), dateTime(2007,1,1,1,1,1))
@@ -121,7 +121,7 @@ results in
 
 ### Output
 
-Returns the difference between the two dates, as a Float, measured in weeks.
+Returns the difference between the two dates, as a Decimal, measured in weeks.
 
 ```java
 weeksBetween(dateTime(2007, 1, 9, 1, 1, 1), dateTime(2007,1,1,1,1,1))
@@ -132,3 +132,6 @@ results in 8 days divided by 7 days in a week:
 ```java
 1.1428571428571428
 ```
+## yearsBetween
+
+For this function call you would need the Java action YearsBetween from the Community Commons module from the appstore.

@@ -1,9 +1,8 @@
 ---
-title: "Between date function calls"
+title: "Between Date Function Calls"
 space: "Reference Guide 6"
 parent: "Microflow+Expressions"
 ---
-
 
 Functions for calculating the differences between two dates.
 
@@ -17,6 +16,8 @@ Functions for calculating the differences between two dates.
 ### Output
 
 Returns the difference between the two dates, as a Decimal, measured in milliseconds.
+
+For example:
 
 ```java
 millisecondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,1,3))
@@ -39,6 +40,8 @@ results in
 
 Returns the difference between the two dates, as a Decimal, measured in seconds.
 
+For example:
+
 ```java
 secondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,2,3))
 ```
@@ -59,6 +62,8 @@ results in
 ### Output
 
 Returns the difference between the two dates, as a Decimal, measured in minutes.
+
+For example:
 
 ```java
 minutesBetween(dateTime(2007, 1, 1, 1, 2, 1), dateTime(2007,1,1,1,1,1))
@@ -81,6 +86,8 @@ results in
 
 Returns the difference between the two dates, as a Decimal, measured in hours.
 
+For example:
+
 ```java
 hoursBetween(dateTime(2007, 1, 1, 3, 31, 1), dateTime(2007,1,1,1,1,1))
 ```
@@ -101,6 +108,8 @@ results in
 ### Output
 
 Returns the difference between the two dates, as a Decimal, measured in days.
+
+For example:
 
 ```java
 daysBetween(dateTime(2007, 2, 13, 1, 1, 1), dateTime(2007,1,1,1,1,1))
@@ -123,6 +132,8 @@ results in
 
 Returns the difference between the two dates, as a Decimal, measured in weeks.
 
+For example:
+
 ```java
 weeksBetween(dateTime(2007, 1, 9, 1, 1, 1), dateTime(2007,1,1,1,1,1))
 ```
@@ -134,4 +145,4 @@ results in 8 days divided by 7 days in a week:
 ```
 ## yearsBetween
 
-For this function call you would need the Java action YearsBetween from the Community Commons module from the appstore.
+For this function call, you need the Java Action YearsBetween from the Community Commons module from the App Store.

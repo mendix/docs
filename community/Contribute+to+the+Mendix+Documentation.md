@@ -42,7 +42,7 @@ To edit the existing documentation (for example, a how-to or reference guide pag
 
 1. Click **Edit on GitHub** in the upper-right corner of the specific Mendix documentation page that you want to work on.
 2. Find the files in the repository and make your changes (make sure your changes align with our [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines)).
-3. Create a pull request.
+3. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/). 
 
 ## 4 Writing a New How-To or Reference Guide Page
 
@@ -52,7 +52,7 @@ To submit a new how-to or reference guide page to our documentation, follow thes
 2. Follow the guidelines in the template for writing your document, and make sure the text aligns with our [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines).
 3. Take screenshots for the new document and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [5 Naming New Files and Images](#NamingNewFilesandImages).
 4. To merge your new document files, fork the GitHub repository, and add your files.
-5. Create a pull request.
+5. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/). 
 
 <div class="alert alert-info">
 

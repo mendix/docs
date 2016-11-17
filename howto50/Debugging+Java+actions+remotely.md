@@ -24,8 +24,6 @@ Within this part of the how to you will learn how to configure the security at p
 ![](attachments/8782829/8946069.png)
 
 4\. Next, start your application in Mendix.
- [
- ](Debugging+Java+actions+remotely)
 
 ## 2\. Configuring remote debugging
 

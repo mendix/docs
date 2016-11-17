@@ -60,8 +60,6 @@ Mendix doesn’t provide any runtime or application specific MBeans, which means
 
 {% endmarkdown %}</div>
 
-[ ](Monitoring+Mendix+using+JMX)
-
 ## 2\. MBean exposing generic Mendix statistics
 
 The simplest way to expose management information is by writing a MBean interface and a Java class which implements the interface. You can define getters and setter, but you can also define methods which can be called from generic management tooling. I’ve used this for example to tell a running application to reload its configuration file.

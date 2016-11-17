@@ -54,5 +54,5 @@ Deprecated classes/methods will be removed in Mendix 7.
 | com.mendix.systemwideinterfaces.core.meta.IMetaObject.getComponent() | - |
 | com.mendix.systemwideinterfaces.core.ISession.getComponent() | - |
 | com.mendix.modules.exportmanager.excel.ExcelExporter., generateWorkbook(LocalComponent component, IContext context, List<IExcelGrid> grids) | - |
-| com.mendix.core.callWebservice() | Use the microflow action *Call REST Action* to do the HTTP post |
+| com.mendix.core.callWebservice() | Use the microflow action *Call REST Action* to do the HTTP POST |
 | com.mendix.core.importxmlStream() | Use *com.mendix.core.importStream()* instead |

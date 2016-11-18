@@ -1,5 +1,6 @@
 ---
 title: "Get Checkbox Set Selector Value (All)"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Returns the "select all" check box value.
@@ -11,6 +12,8 @@ Returns the "select all" check box value.
 Pass the name of the widget you want to get the select all check box value from.
 
 ## Input Parameters
+
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

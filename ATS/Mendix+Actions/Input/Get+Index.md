@@ -1,5 +1,6 @@
 ---
 title: "Get Index"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Gets the index of the selected value in a dropdown, e.g. an EnumSelect or ReferenceSelector.
@@ -16,12 +17,12 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the widget
 Search Context | WebElement | no | Limit the search to the given WebElement
 
 ## Return Value
 
 Name | Datatype | Description
----- | :---------: | ---------------
+--- | --- | ---
 Index | Integer | The index of the selected option. Starts with 0 for the first option.

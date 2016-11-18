@@ -1,5 +1,6 @@
 ---
 title: "Get Simple Checkbox Set Selector Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Returns the current value of the found check box.
@@ -11,6 +12,8 @@ Returns the current value of the found check box.
 Pass the name of the widget and the value connected to the check box.
 
 ## Input Parameters
+
+
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------
 Widget Name | String | Yes | The name of the Simple Checkbox Set Selector widget.

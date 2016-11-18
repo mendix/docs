@@ -1,5 +1,6 @@
 ---
 title: "Get Property Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Returns the property value from a web element
@@ -10,6 +11,7 @@ Returns the property value from a web element
 Pass the WebElement you want to get the text value from.
 
 ## Input Parameters
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

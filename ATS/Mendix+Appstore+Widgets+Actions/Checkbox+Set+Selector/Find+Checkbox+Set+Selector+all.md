@@ -1,5 +1,6 @@
 ---
 title: "Find Checkbox Set Selector"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Finds the select all check box. 
@@ -11,6 +12,8 @@ Finds the select all check box.
 Pass the name of the widget you want to get the select all check box from.
 
 ## Input Parameters
+
+
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------
 Widget Name | String | Yes | The name of the widget.

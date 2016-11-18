@@ -1,5 +1,6 @@
 ---
 title: "Open Application"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Opens a Mendix application at [Application URL] in a browser with
@@ -11,5 +12,5 @@ Pass the URL of the application you want to open. You can also use the global co
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Applicaton URL | String | yes | The URL of the application you want to open

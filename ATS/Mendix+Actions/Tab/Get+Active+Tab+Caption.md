@@ -1,5 +1,6 @@
 ---
 title: "Get Active Tab Caption"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Returns the caption of the active tab page.
@@ -13,11 +14,11 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 
 ## Input Parameters
 Name | Datatype | Required | Description
----- | :--------: | :--------: | ---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the tab widget
 Search Context | WebElement | no | Limit the search for the DataGrid row to the given WebElement
 
 ## Return Value
 Name | Datatype | Description
----- | :---------: | ---------------
+--- | --- | ---
 Active Tab Caption | String | Caption of the currently active tab.

@@ -1,5 +1,6 @@
 ---
 title: "Click Widget"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Clicks on a Mendix widget (e.g. Button, Link, Image) by its name.
@@ -14,7 +15,7 @@ Optionally you can specify if a doubleclick should be performed or not and you c
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the widget you want to click/doubleclick
 Doubleclick | Boolean |no | Perform a doubleclick
 Search Context | WebElement | no | Limit the search to the given WebElement

@@ -1,5 +1,6 @@
 ---
 title: "Get BooleanSlider Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Returns the current active text value from the BooleanSlider Appstore Widget.
@@ -11,6 +12,8 @@ Returns the current active text value from the BooleanSlider Appstore Widget.
 Pass the name of the widget you want to get the value from.
 
 ## Input Parameters
+
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

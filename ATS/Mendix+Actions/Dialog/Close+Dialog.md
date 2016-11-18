@@ -1,5 +1,6 @@
 ---
 title: "Close Dialog"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Clicks [x]-button on a Confirmation, Error, Warning or Info Dialog.
@@ -15,6 +16,6 @@ This action is equivalent to pressing the [x]-button on top of the dialog.
 
 ## Input Parameters
 Name | Datatype | Required | Description
----- | :--------: | :--------: | ---------------
+--- | --- | --- | ---
 Dialog Title | String | no | The title of the dialog you want to cancel
 Dialog Type | Enumeration | no | The type of the dialog you want to cancel

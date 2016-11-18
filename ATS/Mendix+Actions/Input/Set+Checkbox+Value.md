@@ -1,5 +1,6 @@
 ---
 title: "Set Checkbox Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Sets the value of a Checkbox.
@@ -14,7 +15,7 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the widget
 Value | Boolean | yes | The value you want to set (un-/checked)
 Search Context | WebElement | no | Limit the search to the given WebElement

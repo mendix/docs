@@ -1,5 +1,6 @@
 ---
 title: "Assert BootstrapRTE Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Asserts that the BootstrapRTE value is equal to the given value.
@@ -11,6 +12,8 @@ Asserts that the BootstrapRTE value is equal to the given value.
 Pass the name of the widget and the value you want to assert.
 
 ## Input Parameters
+
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

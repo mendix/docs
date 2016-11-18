@@ -1,5 +1,6 @@
 ---
 title: "Get Selected Option Index"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Returns the index of the currently selected item of a WebElement, e.g. select
@@ -9,6 +10,7 @@ Returns the index of the currently selected item of a WebElement, e.g. select
 Pass the parent WebElement of which you want to get the currently selected option's index from.
 
 ## Input Parameters
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

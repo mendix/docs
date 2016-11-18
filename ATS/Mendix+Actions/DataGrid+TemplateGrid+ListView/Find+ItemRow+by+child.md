@@ -1,5 +1,6 @@
 ---
 title: "Find Item/Row (by child element)"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Finds Item or Row of a TemplateGrid, DataGrid or ListView containing a specified element.
@@ -13,8 +14,8 @@ Finds Item or Row of a TemplateGrid, DataGrid or ListView containing a specified
 Provide the child WebElement which resides in the item or row you want to find, e.g. a specific button or DataView.  
 
 ## Input Parameters
-Name | Datatype |Required| Description
----- |:--------:|:------:|---------------
+Name | Datatype | Required | Description
+--- | --- | --- | ---
 Child Element | WebElement | yes | The WebElement in the Item/Row
 
 ## Return Value

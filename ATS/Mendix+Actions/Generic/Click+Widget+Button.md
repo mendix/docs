@@ -1,5 +1,6 @@
 ---
 title: "Click Widget Button"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Clicks a Refresh/Loadmore/ClearSearchField (ListView)/ Goto/Add (ReferenceSelector) button.
@@ -15,7 +16,7 @@ Optionally you can specify if a doubleclick should be performed or not and you c
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the widget wich contains the button
 Button | Enumeration | yes | The type of button
 Search Context | WebElement | no | Limit the search to the given WebElement

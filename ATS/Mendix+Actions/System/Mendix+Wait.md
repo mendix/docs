@@ -1,5 +1,6 @@
 ---
 title: "Mendix wait"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Injects Mendix Scripts and waits

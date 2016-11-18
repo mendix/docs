@@ -1,5 +1,6 @@
 ---
 title: "Open GroupBox"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Opens a groupbox by its given name.
@@ -14,6 +15,6 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the groupbox you want to open
 Search Context | WebElement | no | Limit the search to the given WebElement

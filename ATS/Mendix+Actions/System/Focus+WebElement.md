@@ -1,5 +1,6 @@
 ---
 title: "Focus WebElement"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Focuses a WebElement and performs a Mendix wait afterwards.
@@ -12,5 +13,5 @@ Pass the WebElement you want to focus as parameter for the action. To get the We
 
 ## Input Parameters
 Name | Datatype | Required | Description
----- | :--------: | :--------: | ---------------
+--- | --- | --- | ---
 Element | WebElement | yes | The WebElement you want to focus

@@ -1,5 +1,6 @@
 ---
 title: "Toggle Checkbox Set Selector Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Finds check box by given entity attribute and inverts the value.
@@ -11,6 +12,8 @@ Finds check box by given entity attribute and inverts the value.
 Pass the name of the widget, the column caption, and the cell value of the check box you want to toggle.
 
 ## Input Parameters
+
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

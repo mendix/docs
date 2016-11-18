@@ -1,5 +1,6 @@
 ---
 title: "Set BooleanSlider Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Sets the given text as active value for the BooleanSlider appstore widget.
@@ -11,6 +12,8 @@ Sets the given text as active value for the BooleanSlider appstore widget.
 Pass the name of the widget and the value you want to mark as active.
 
 ## Input Parameters
+
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

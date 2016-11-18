@@ -1,5 +1,6 @@
 ---
 title: "Get Visible Item/Row Count"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Returns the number of currently visible Items/Rows in a TemplateGrid, DataGrid or ListView.
@@ -16,12 +17,12 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 ## Input Parameters
 
 Name | Datatype | Required| Description
----- |:--------:|:-------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the DataGrid, TemplateGrid or Listview
 Search Context | WebElement | no |Limit the search to the given WebElement
 
 ## Return Value
 
 Name | Datatype | Description
----- | :---------: | ---------------
+--- | --- | --- 
 Item/Row Count | Integer | The number of visible Items/Rows.

@@ -1,5 +1,6 @@
 ---
 title: "Set CKEditor Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Sets the given value as current value for the CKEditor value. The value can be formatted via HTML code.
@@ -11,6 +12,8 @@ Sets the given value as current value for the CKEditor value. The value can be f
 Pass the name of the widget and the value you want to set.
 
 ## Input Parameters
+
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

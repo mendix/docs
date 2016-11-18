@@ -1,5 +1,6 @@
 ---
 title: "Set Checkbox Set Selector Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Clear/check the "select all" check box.
@@ -11,6 +12,8 @@ Clear/check the "select all" check box.
 Pass the name of the widget and the value you want do set for the "select all" check box.
 
 ## Input Parameters
+
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

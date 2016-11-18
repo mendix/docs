@@ -1,5 +1,6 @@
 ---
 title: "Set Checkbox Set Selector Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Finds check box by column caption and cell value. Sets its value to checked.
@@ -12,6 +13,8 @@ Pass the name of the widget, the column caption, and the cell value of the check
 Set checked to true or false.
 
 ## Input Parameters
+
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

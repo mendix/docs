@@ -1,5 +1,6 @@
 ---
 title: "Confirm Dialog"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Clicks Proceed/Ok Button on a Confirmation, Error, Warning or Info Dialog.
@@ -13,6 +14,6 @@ Optionally you can provide the dialog title and dialog type, to specify which di
 
 ## Input Parameters
 Name | Datatype | Required | Description
----- | :--------: | :--------: | ---------------
+--- | --- | --- | ---
 Dialog Title | String | no | The title of the dialog you want to cancel
 Dialog Type | Enumeration | no | The type of the dialog you want to cancel

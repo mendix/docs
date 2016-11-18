@@ -1,5 +1,6 @@
 ---
 title: "Get BootstrapRTE Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Returns the current BootstrapRTE value as an HTML string.
@@ -11,6 +12,8 @@ Returns the current BootstrapRTE value as an HTML string.
 Pass the name of the widget you want to get the value from.
 
 ## Input Parameters
+
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

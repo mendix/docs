@@ -1,5 +1,6 @@
 ---
 title: "Set InputReferenceSelector Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Set the InputReferenceSelector to the given value.
@@ -11,6 +12,8 @@ Set the InputReferenceSelector to the given value.
 Pass the name of the widget and the value you want to set.
 
 ## Input Parameters
+
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

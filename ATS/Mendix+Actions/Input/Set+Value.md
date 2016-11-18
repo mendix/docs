@@ -1,5 +1,6 @@
 ---
 title: "Set Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Sets the text value of a Textbox, Textarea, Dateinput, Reference Selector or Enum Selector.
@@ -23,7 +24,7 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the widget
 Value | String | yes | The value you want to set
 Search Context | WebElement | no | Limit the search to the given WebElement

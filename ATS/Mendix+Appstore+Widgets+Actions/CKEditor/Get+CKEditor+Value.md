@@ -1,5 +1,6 @@
 ---
 title: "Get CKEditor Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Returns the CKEditor value as HTML code.
@@ -11,6 +12,8 @@ Returns the CKEditor value as HTML code.
 Pass the name of the widget you want to get the value from.
 
 ## Input Parameters
+
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

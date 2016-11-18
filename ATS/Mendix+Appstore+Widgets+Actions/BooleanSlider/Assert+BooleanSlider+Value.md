@@ -1,5 +1,6 @@
 ---
 title: "Assert BooleanSlider Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Asserts the value of the BooleanSlider Appstore Widget (String).
@@ -11,6 +12,8 @@ Asserts the value of the BooleanSlider Appstore Widget (String).
 Pass the name of the widget and the value you want to assert.
 
 ## Input Parameters
+
+
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

@@ -1,5 +1,6 @@
 ---
 title: "Set Value (by index)"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Sets the value of a dropdown by index, e.g. EnumSelect or ReferenceSelector
@@ -16,7 +17,7 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the widget
 Index | Integer | yes | The index of the desired value
 Search Context | WebElement | no | Limit the search to the given WebElement

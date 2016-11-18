@@ -1,5 +1,6 @@
 ---
 title: "Get Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Returns the text value from Textboxes, Textareas, Dateinputs, RadioButtons, Dropdowns etc.
@@ -23,12 +24,12 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the widget
 Search Context | WebElement | no | Limit the search to the given WebElement
 
 ## Return Value
 
 Name | Datatype | Description
----- | :---------: | ---------------
+--- | --- | --- 
 Value | String | The displayed value of the widget.

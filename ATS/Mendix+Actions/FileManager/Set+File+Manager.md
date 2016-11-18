@@ -1,5 +1,6 @@
 ---
 title: "Set File Manager"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Sets a file manager to the given file path to upload a file.
@@ -13,7 +14,7 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 
 ## Input Parameters
 Name | Datatype |Required| Description
----- |:--------:|:------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the DataGrid, TemplateGrid or Listview
 File Path | String | yes | The path to the file you want to upload
 Search Context | WebElement | no |Limit the search to the given WebElement

@@ -1,5 +1,6 @@
 ---
 title: "Set Checkbox Set Selector Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Finds the check box by column and row caption. Sets its value to the given checked parameter.
@@ -11,6 +12,8 @@ Finds the check box by column and row caption. Sets its value to the given check
 Pass the name of the widget, the column caption, and the row caption of the checkbox you want to find.
 
 ## Input Parameters
+
+
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------
 Widget Name | String | Yes | The name of the Grid Selector widget.

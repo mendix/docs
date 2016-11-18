@@ -1,5 +1,6 @@
 ---
 title: "Find/Assert DataGrid Row"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Find/Assert a DataGrid Row by a certain column value.
@@ -13,7 +14,7 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 
 ## Input Parameters
 Name | Datatype | Required | Description
----- |:--------:|:--------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the DataGrid
 Column Name | String | yes |The name of the column in which the column value is located
 Column Value | String | yes | The column value which defines the row
@@ -22,5 +23,5 @@ Search Context | WebElement | no | Limit the search to the given WebElement
 ## Return Value
 
 Name | Datatype | Description
----- | :---------: | ---------------
+--- | --- | ---
 DataGrid Row | WebElement | DataGrid Row found is returned as a Web Element

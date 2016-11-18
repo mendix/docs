@@ -17,6 +17,7 @@ Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------
 Element | WebElement | yes | The WebElement you want to get the property value from.
 Property Name | String | yes | The name of the property
+
 ## Return Value
 
 Name | Datatype | Description

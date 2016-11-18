@@ -18,6 +18,7 @@ Search Context | WebElement | no | Limit the search to the given WebElement
 Occurence | Integer | no | Index of the result-list value you want to get (defaults to the first element)
 
 ## Return Value
+
 Name | Datatype | Description
 ---- | --------- | ---------------
 Element | WebElement | The wanted WebElement

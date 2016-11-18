@@ -128,6 +128,7 @@ The [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) actio
 The output of the [Find Widget Child Node](Mendix+Actions/System/Find+Widget+Child+Node) action will automatically be set as input value for the [Get Text](Selenium+Actions/Get/Get+Text) action.
 
 ## Set Return Value
+
 Next we have to set the output value of the [Get Text](Selenium+Actions/Get/Get+Text) action as return value for our custom action.
 Click **Add** and search for **"Set Return Value"**. Add the corresponding action as subaction. After you have added the [Set Return Value](ATS+Core+Actions/Set+Return+Value) action, doubleclick the **"Value"** row in **Input Values** table. In the **Edit Input Value** dialog, click on the category **Test Step Output** and select **"#2 Value [String]"**. Click **Save**.
 <div class="alert alert-info">

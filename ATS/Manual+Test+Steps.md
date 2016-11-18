@@ -3,6 +3,7 @@ title: "Manual Test Steps"
 space: "ATS (Application Test Suite)"
 category: "Test Development"
 ---
+
 Manual test steps are the process to search and select required actions to manually create a test case in ATS. In this way the test case will be created by selecting the actions manually.
 
 When you create a new test case it is empty and has no test steps assigned.

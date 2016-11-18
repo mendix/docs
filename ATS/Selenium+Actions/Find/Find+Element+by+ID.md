@@ -10,12 +10,12 @@ Optionally restrict the search to a specified SearchContext element.
 
 ## Input Parameters
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+---- | -------- | ------- |---------------
 ID| String | yes |  The ID of the element you want to get  
 Search Context | WebElement | no | Limit the search to the given WebElement
 Occurence | Integer | no | Index of the result-list value you want to get (defaults to the first element)
 
 ## Return Value
 Name | Datatype | Description
----- | :---------: | ---------------
+---- | --------- | ---------------
 Element | WebElement | The wanted WebElement

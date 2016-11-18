@@ -13,7 +13,7 @@ Pass the name of the widget, the column caption, and the cell value of the check
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+---- | -------- | ------- |---------------
 Widget Name | String | Yes | The name of the widget.
 Column Caption | String | Yes | The column caption of the desired check box.
 Value | String | Yes | The cell value of the desired check box.
@@ -21,5 +21,5 @@ Value | String | Yes | The cell value of the desired check box.
 ## Return Value
 
 Name | Datatype | Description
----- | :---------: | ---------------
+---- | --------- | ---------------
 Checked | Boolean | The current value of the check box.

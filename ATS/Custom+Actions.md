@@ -3,7 +3,8 @@ title: "Custom Actions"
 space: "ATS (Application Test Suite)"
 category: "Test Development"
 ---
-### Create Custom Actions from scratch
+
+## Create Custom Actions from scratch
 If you want to create a new action from scratch, go to the Repository and switch to the **All Objects** tab.
 
 ![Add Item button on Repository page](attachments/Test+Development/repository.png)
@@ -22,7 +23,7 @@ Now open the newly created action by doubleclicking its name in the repository.
 
 On this page you can edit your new action by adding other existing actions to it, like you would in a test case, and set **input-** and **output parameters**.
 
-### Create Custom Actions from existing Actions
+## Create Custom Actions from existing Actions
 
 Based on the existing actions, you can build up your own actions (custom actions). Also, if you are fluent in JavaScript, you can add a whole variety of functionalities by using the generic “Execute JavaScript” action.
 
@@ -36,7 +37,7 @@ Then extract the actions into one test step that contains your selected actions 
 
 On this dialog box, you can give your new custom action a **Name** and a **Description**. Click **Close** to finish. You can now add your action to any test case, like you would with any other action.
 
-### Changing Custom Actions
+## Changing Custom Actions
 
 When selecting a custom action, click **Open** under **Test Step Settings** to go inside the custom action:
 
@@ -44,7 +45,7 @@ When selecting a custom action, click **Open** under **Test Step Settings** to g
 
 While inside your custom action, you can change the action just like you would in a test case. Additionally, you can set input and output parameters for your action under the settings tab.
 
-### Setting Input Parameters
+## Setting Input Parameters
 
 ![Costum action settings screen](attachments/20644057/21168184.png)
 
@@ -80,7 +81,7 @@ Enumeration entries have two attributes:
 
 ![Edit enumeration dialog](attachments/20644057/21168187.png)
 
-### Setting an Output Parameter
+## Setting an Output Parameter
 
 Setting an output parameter, works in a similar way to setting an input parameter. The difference is that you can only have one output parameter per action. To set an output parameter, click **Set** under **Output Parameter**.
 

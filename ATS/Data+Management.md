@@ -2,6 +2,7 @@
 title: "Data Management"
 space: "ATS (Application Test Suite)"
 ---
+
 ## Repository
 
 This workspace is the heart of ATS, since it allows to create and manage folders, test suites, test cases and actions. The folder in the ATS is equivalent to a directory in your file browser. You can create folders within other folders, and in each folder, you can store test suites, test cases and actions.

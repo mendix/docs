@@ -12,7 +12,7 @@ Pass the name of the widget, the column caption, and the row caption of the radi
 
 ## Input Parameters
 Name | Datatype | Required | Description
----- | :--------: | :--------: | ---------------
+---- | -------- | -------- | ---------------
 Widget Name | String | Yes | The name of the Grid Selector widget.
 Column Caption | String | Yes | The column caption of the radio button cell.
 Row Caption | String | Yes | The row caption of the radio button cell.

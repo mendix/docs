@@ -13,5 +13,5 @@ Pass the name of the widget.
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+---- | -------- | ------- |---------------
 Widget Name | String | Yes | The name of the widget.

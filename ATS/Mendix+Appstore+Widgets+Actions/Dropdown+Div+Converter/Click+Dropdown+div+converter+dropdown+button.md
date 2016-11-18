@@ -13,5 +13,5 @@ Pass the name of the drop-down `div` converter widget.
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+---- | -------- | ------- |---------------
 Widget Name | String | yes | The name of the drop-down `div` converter widget.

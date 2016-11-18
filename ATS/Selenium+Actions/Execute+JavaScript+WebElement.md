@@ -13,7 +13,7 @@ The optional arguments are stored in an array and can be used in your script. Fo
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+---- | -------- | ------- |---------------
 Script | String | yes | The JavaScript source code you want to Execute
 Timeout(ms) | Integer | no | The time in milliseconds for the script to finish
 Argument 0 | any | no | Argument to use in the JavaScript code
@@ -24,5 +24,5 @@ Argument 3 | any | no | Argument to use in the JavaScript code
 ## Return Value
 
 Name | Datatype | Description
----- | :---------: | ---------------
+---- | --------- | ---------------
 Script Result | WebElement | The return value set in the script.

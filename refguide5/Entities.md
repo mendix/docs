@@ -11,7 +11,7 @@ The properties or features of an entity are described using [attributes](Attribu
 
 The domain model editor uses the following symbols for visualization on entities:
 
-<table><thead><tr><th class="confluenceTh">Symbol</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd"><img class="confluence-embedded-image" src="attachments/819203/917594.png" data-image-src="https://world.mendix.com/download/attachments/819203/eventHandlerSymbol.png?version=1&amp;modificationDate=1259076620000&amp;api=v2"></td><td class="confluenceTd">This entity has one or more event handlers.</td></tr></tbody></table><div class="alert alert-info">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Symbol</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd"><img class="confluence-embedded-image" src="attachments/819203/917594.png" ></td><td class="confluenceTd">This entity has one or more event handlers.</td></tr></tbody></table><div class="alert alert-info">{% markdown %}
 
 Let us say you have a collection of CDs like the one in the table below.
 

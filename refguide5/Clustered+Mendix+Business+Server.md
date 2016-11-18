@@ -51,7 +51,7 @@ When clustering support is not enabled, the Mendix Business Server behaves as be
 
 The Mendix Business Server Cluster requires the following infrastructure:
 
-![](attachments/14091121/16285745.png?effects=border-simple,shadow-kn)
+![](attachments/14091121/16285745.png)
 
 This means that a Mendix Cluster requires a Load Balancer to distribute the load of the clients over the available Business Server Cluster instances. It also means that all the instances need to connect to the same Mendix Database and that files need to be stored on S3 (see the File Storage topic). The number of instances in your cluster depends on the application, the high availability requirements and its usage. 
 
@@ -82,7 +82,7 @@ At the end of a user session (which is terminated either by an explicit user sig
 
 Having unsaved objects (newly created or changed objects) in State is actually called 'Dirty State'. The following picture describes its behavior:
 
-![](attachments/14091121/16285746.png?effects=border-simple,shadow-kn)
+![](attachments/14091121/16285746.png)
 
 Reading objects from the Mendix Database and deleting (unchanged) objects from the Mendix Database is still 'Clean State'. Changing an existing object or instantiating a new object will create 'Dirty State'. 'Dirty State' needs to be synchronized (at the end of the request as described above) between the Mendix Business Server instances to allow requests being handled by other instances getting hold of the instantiated objects and changed objects within a session. Committing objects or rolling back will remove them from the 'Dirty State'. The same will happen if an instantiated or changed object is deleted. Non-persistent entities are always part of 'Dirty State'.
 
@@ -98,7 +98,7 @@ The more objects being part of 'Dirty State', the more data has to be synchroniz
 
 By default the Mendix Business Server uses the Mendix Database to store the Dirty State when clustering is enabled. However, this puts an additional load on the database which may slow down the system if insufficient resources are available. To circumvent that, it is possible to configure a REDIS server to store the Dirty State. With REDIS as Dirty State Store, the deployment picture would become:
 
-![](attachments/14091121/16285917.png?effects=border-simple,shadow-kn)
+![](attachments/14091121/16285917.png)
 
 This can be achieved by configuring the Mendix Business Server with the following parameters:
 
@@ -120,15 +120,15 @@ The alternative solution for this API is to store the data in a Mendix Entity. T
 
 In microflows the `$currentSession` variable has been introduced, so that a reference to the current session can be easily obtained. When an object needs to be stored its association can be set to `$currentSession` and when the object needs to be retrieved again `$currentSession` can be used as a starting point from which the desired object can be retrieved by association. The associated object can be designed in such a way that it meets the desired needs.
 
-![](attachments/14091121/16285747.png?effects=border-simple,shadow-kn)
+![](attachments/14091121/16285747.png)
 
 E.g. one can add `Key` and `Value` members to a `Data` entity associated with `System.Session` (and have constants for key values).
 
-[![](attachments/14091121/16285769.png?effects=border-simple,shadow-kn)](attachments/14091121/16285770.png)
+[![](attachments/14091121/16285769.png)](attachments/14091121/16285770.png)
 
 The `Value` values can easily be obtained by performing a find on the `Key` values of a list of `Data` instances.
 
-![](attachments/14091121/16285770.png?effects=border-simple,shadow-kn)
+![](attachments/14091121/16285770.png)
 
 Keep alive mechanism for Persistent Sessions
 

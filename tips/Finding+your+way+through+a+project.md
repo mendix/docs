@@ -9,7 +9,7 @@ This how-to explains how you can find your way through a project in the Mendix B
 ## 1\. 'Go to' options
 
 1.  Open the **Navigation** editor.
-    ![](attachments/18448722/19398806.png?effects=border-simple,blur-border)
+    ![](attachments/18448722/19398806.png)
 2.  Right click a menu item and select **Go to target**. The Modeler now opens the corresponding target of the menu item, in this case a page.
     ![](attachments/18448722/18581619.png)
 3.  Now right click any of the buttons in the data grid and select 'Go to microflow'. The Business Modeler opens the corresponding microflow.

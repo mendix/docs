@@ -11,7 +11,7 @@ Attributes are characteristics that describe and/or identify the entity. For exa
 
 The domain model editor uses the following symbols for visualization of attribute properties:
 
-<table><thead><tr><th class="confluenceTh">Symbol</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd"><img class="confluence-embedded-image" src="attachments/819203/917593.png" data-image-src="https://world.mendix.com/download/attachments/819203/validationRuleSymbol.png?version=1&amp;modificationDate=1259076619000&amp;api=v2"></td><td class="confluenceTd">This attribute has one or more validation rules.</td></tr><tr><td class="confluenceTd"><img class="confluence-embedded-image" src="attachments/819203/917592.png" data-image-src="https://world.mendix.com/download/attachments/819203/calculatedAttributeSymbol.png?version=1&amp;modificationDate=1259076619000&amp;api=v2"></td><td class="confluenceTd">This attribute has a microflow that calculates the value of the attribute.</td></tr></tbody></table>
+<table><thead><tr><th class="confluenceTh">Symbol</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd"><img class="confluence-embedded-image" src="attachments/819203/917593.png" ></td><td class="confluenceTd">This attribute has one or more validation rules.</td></tr><tr><td class="confluenceTd"><img class="confluence-embedded-image" src="attachments/819203/917592.png" ></td><td class="confluenceTd">This attribute has a microflow that calculates the value of the attribute.</td></tr></tbody></table>
 
 ## Common Properties
 

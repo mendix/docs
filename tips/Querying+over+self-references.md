@@ -5,7 +5,7 @@ category: "Tips and Tricks"
 ---
 When using more generic domain models, you often turn to using inheritance or self references to allow for simple yet efficiently designed models. This makes building your microflows and application logic much easier, but it can become challenging to query the correct objects; especially when your are using a self-reference. In this example, a self-reference to Group is used. This will allow you to build a group structure with an unlimited amount of sub-groups.
 
-![](attachments/18448725/18581640.png?effects=border-simple,blur-border)     ![](attachments/18448725/18581639.png?effects=border-simple,blur-border)
+![](attachments/18448725/18581640.png)     ![](attachments/18448725/18581639.png)
 
 There are 5 groups relevant to this example. Group with ID 4 and 5 are the parent groups and each have the same three subgroups. 
 
@@ -15,7 +15,7 @@ If you have the ParentGroup available in your microflow you can easily retrieve 
 
 If we assume that the $ParentGroup variable is the group S2 with ID 5\. The following data highlighted in blue will be returned. The Platform applies the constraint by default on the right/child side of the association and returns the relavant ChildGroups.
 
-![](attachments/18448725/18581637.png?effects=border-simple,blur-border)
+![](attachments/18448725/18581637.png)
 
 However when you only have the SubGroup available and you want to retrieve all its ParentGroups from the database it becomes more complicated. You can use the expression [reversed()] to instruct the platform to read the constraint opposite of what it would normally do. So instead of reading the association from left to right the platform will interpret the id's from right to left. Keep in mind that this instruction only applies to one association. So if you would have used multiple associations they are always interpreted the normal way. 
 The reversed() expression can only be applied on self-references, when an association is created between two different objecttypes the platform will be capable of determining the correct join automatically.
@@ -24,7 +24,7 @@ The reversed() expression can only be applied on self-references, when an associ
 
 Let's assume the $SubGroup variable is group G2 with ID 2\. This query will return the data highlighted in blue, and thus all the ParentGroups. 
 
-![](attachments/18448725/18581635.png?effects=border-simple,blur-border)
+![](attachments/18448725/18581635.png)
 
 This a simple example however the [reversed()] expression can also be used in more complicated queries such as the one below. If we assume that our Customer is associated with group G2 with ID 2, our query will return the exact same dataset as the previous example. 
 This constraint will return all the Groups with an association to the group that is associated with the Customer variable. Because the reversed association is specified for the group association it will be interpreted from right to left. The ParentGroup is considered to be the right side of the association, therefore the query will be returning ParentGroups. The ChildGroup needs to be associated with the Customer variable to be applicable in this constraint. 

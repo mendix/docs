@@ -15,7 +15,7 @@ For the implementation of [Clustered Mendix Business Server](Clustered+Mendix+B
 
 This page uses specific terminology to describe data in the Mendix Business Server. The picture shown below has been taken from the [Clustered Mendix Business Server](Clustered+Mendix+Business+Server) page:
 
-![](attachments/16056891/16285792.png?effects=border-simple,shadow-kn)
+![](attachments/16056891/16285792.png)
 
 In a short summary, this picture describes that all data coming from the Mendix Database is called `Clean State` while changed data and newly instantiated data are called `Dirty State`. 
 

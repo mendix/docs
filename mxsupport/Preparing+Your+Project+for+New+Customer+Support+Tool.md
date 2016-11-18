@@ -27,15 +27,15 @@ NOTE: Keep in mind that this should be done for every new app that is created if
 {% endmarkdown %}</div>
 
 1.  Go to the applicable project overview and invite all users that should be able to submit/view tickets concerning this project by adding the users as project team members.
-    ![](attachments/19203711/19399152.png?effects=border-simple,blur-border)
+    ![](attachments/19203711/19399152.png)
 2.  Enter the email addresses of all co-workers that should be able to submit tickets regarding the application that is connected to this project. It is possible to paste a list of email addresses as well. The parts of this project which can be accessed by the invitees will be based on the role you select for each invitee.
-    ![](attachments/19203711/19399151.png?effects=border-simple,blur-border)
+    ![](attachments/19203711/19399151.png)
 3.  A - All team members with the authorization ‘Edit permissions on Develop or Capture’ will be allowed to submit tickets for the app. We would advise to use the default ‘Business Engineer’ role (_see above_).
 
     B - If the user is already an existing team member you can verify and/or adjust the permission by going to the ‘Project Security’ tab in the ‘Project Settings’. If you click on the ‘Role settings’ button you can view all the specifications of the roles and, if desired, customize or create roles.
     ![](attachments/19203711/19399150.png)
 4.  To finalize the set up send an email to [support@mendix.com](http://support.mendix.com) with the Project Name, ProjectID and the name of the applicable app. The ProjectID can be found on the General Settings tab in the Project Settings.
-    ![](attachments/19203711/19399149.png?effects=border-simple,blur-border) 
+    ![](attachments/19203711/19399149.png) 
 
 For more information on how to create a collaboration project in the Mendix Cloud Portal please see: [How to Create and Deploy Your First App](/howto6/Create+and+Deploy+Your+First+App).
 

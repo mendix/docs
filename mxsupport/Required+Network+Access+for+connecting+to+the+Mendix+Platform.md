@@ -33,7 +33,7 @@ Before starting this how-to, please make sure you have completed the following s
 
 The Mendix Modeler is unable to connect to the Team Server and giving an error without any error message.
 
-![](attachments/19202983/19399016.png?effects=border-simple,blur-border)
+![](attachments/19202983/19399016.png)
 
 <div class="alert alert-info">{% markdown %}
 
@@ -49,7 +49,7 @@ If you are able to download the Team server project it would indicate that the s
 
 If the same results are shown in your screen as in the screenshot below, then there are no security blockades for your browser. If you receive an error then this confirms that the IP address is probably blocked in your internal network, please contact your internal system administrator to enable access.
 
-_![](attachments/19202983/19399024.png?effects=border-simple,blur-border)
+_![](attachments/19202983/19399024.png)
 _
 
 ## 3\. How to enable firewall access to Team Server
@@ -66,7 +66,7 @@ If needed inform yourIT team that the business modeler connects to [https://team
 
 The modeler connects with the domains stated below over HTTPS on port 443, these domains should be added to the firewall white list:
 
-[![](attachments/19202983/19399025.jpg?effects=border-simple,blur-border)](http://teamserver.sprintr.com)
+[![](attachments/19202983/19399025.jpg)](http://teamserver.sprintr.com)
 
 * [home.mendix.com](http://mendix.com): Enables you to login to and use the Mendix Business Modeler.
 

@@ -1,11 +1,15 @@
 ---
 title: "Set Value"
 space: "ATS (Application Test Suite)"
+parent: "Input"
 ---
+
 ## Description
+
 Sets the text value of a Textbox, Textarea, Dateinput, Reference Selector or Enum Selector.
 
 ## Supported Widgets
+
 + TextBox
 + TextArea
 + DatePicker
@@ -18,6 +22,7 @@ Sets the text value of a Textbox, Textarea, Dateinput, Reference Selector or Enu
 + OnChangeInputbox
 
 ## Usage
+
 Pass the name of the widget and the value you want to set.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 

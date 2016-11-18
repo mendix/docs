@@ -1,6 +1,7 @@
 ---
 title: "Toggle Checkbox Set Selector Value"
 space: "ATS (Application Test Suite)"
+parent: "Checkbox+Set+Selector"
 ---
 ## Description
 Finds check box by given entity attribute and inverts the value.

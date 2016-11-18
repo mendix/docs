@@ -1,6 +1,7 @@
 ---
 title: "Concatenate String"
 space: "ATS (Application Test Suite)"
+parent: "ATS+Core+Actions"
 ---
 
 ## Description

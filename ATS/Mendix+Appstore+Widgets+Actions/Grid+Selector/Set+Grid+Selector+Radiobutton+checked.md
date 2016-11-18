@@ -1,6 +1,7 @@
 ---
 title: "Set Grid Selector RadioButton Value"
 space: "ATS (Application Test Suite)"
+parent: "Grid+Selector"
 ---
 ## Description
 Finds the radio button by column and row caption. Sets it to be checked.

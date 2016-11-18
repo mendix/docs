@@ -1,6 +1,7 @@
 ---
 title: "Assert InputReferenceSelector Value"
 space: "ATS (Application Test Suite)"
+parent: "InputReferenceSelector"
 ---
 ## Description
 Asserts that the InputReferenceSelector has the given value.

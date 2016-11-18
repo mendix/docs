@@ -1,14 +1,19 @@
 ---
 title: "Get Checkbox Value"
 space: "ATS (Application Test Suite)"
+parent: "Input"
 ---
+
 ## Description
+
 Returns true if the checkbox is checked otherwise false.
 
 ## Supported widgets
+
  + Checkbox
 
 ## Usage
+
 Pass the name of the checkbox you want to get the value from.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 

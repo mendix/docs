@@ -1,6 +1,7 @@
 ---
 title: "Assert not equals"
 space: "ATS (Application Test Suite)"
+parent: "ATS+Core+Actions"
 ---
 
 ## Description

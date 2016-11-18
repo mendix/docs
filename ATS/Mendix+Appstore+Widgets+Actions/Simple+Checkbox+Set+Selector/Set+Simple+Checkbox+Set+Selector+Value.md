@@ -1,6 +1,7 @@
 ---
 title: "Get Simple Checkbox Set Selector Value"
 space: "ATS (Application Test Suite)"
+parent: "Simple+Checkbox+Set+Selector"
 ---
 ## Description
 Checks or clears the check box found by the given value connected to the check box. 

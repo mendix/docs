@@ -1,6 +1,8 @@
 ---
 title: "Assert BootstrapRTE Value"
 space: "ATS (Application Test Suite)"
+parent: "Checkbox+Set+Selector"
+parent: "BootstrapRTE"
 ---
 ## Description
 Asserts that the BootstrapRTE value is equal to the given value.

@@ -1,5 +1,5 @@
 ---
-title: "ATS Core Actions"
+title: "Mendix Appstore Widgets Actions"
 space: "ATS (Application Test Suite)"
-redirect_to: "/ATS/"
+parent: "Standard+Actions+Reference"
 ---

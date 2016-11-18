@@ -1,6 +1,7 @@
 ---
 title: "Set Return Value"
 space: "ATS (Application Test Suite)"
+parent: "ATS+Core+Actions"
 ---
 
 ## Description

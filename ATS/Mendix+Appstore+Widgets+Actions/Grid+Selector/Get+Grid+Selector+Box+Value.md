@@ -1,6 +1,7 @@
 ---
 title: "Get Grid Selector Box Value"
 space: "ATS (Application Test Suite)"
+parent: "Grid+Selector"
 ---
 ## Description
 Returns the current check box and radio button value.

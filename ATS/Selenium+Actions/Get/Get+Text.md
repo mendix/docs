@@ -1,16 +1,17 @@
 ---
 title: "Get Text"
 space: "ATS (Application Test Suite)"
+parent: "Get"
 ---
-## Description
-Returns the text value inside a WebElement.
 
+## Description
+
+Returns the text value inside a WebElement.
 
 ## Usage
 Pass the WebElement you want to get the text value from.
 
 ## Input Parameters
-
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

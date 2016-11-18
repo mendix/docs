@@ -1,6 +1,7 @@
 ---
 title: "Assert Simple Checkbox Set Selector Value"
 space: "ATS (Application Test Suite)"
+parent: "Simple+Checkbox+Set+Selector"
 ---
 ## Description
 Asserts that the check box found by the given value is checked or cleared.

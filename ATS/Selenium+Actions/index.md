@@ -1,5 +1,5 @@
 ---
 title: "Selenium Actions"
 space: "ATS (Application Test Suite)"
-redirect_to: "/ATS/"
+parent: "Standard+Actions+Reference"
 ---

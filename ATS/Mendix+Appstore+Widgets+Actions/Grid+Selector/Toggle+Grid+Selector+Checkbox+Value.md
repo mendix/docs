@@ -1,6 +1,7 @@
 ---
 title: "Toggle Grid Selector Checkbox Value"
 space: "ATS (Application Test Suite)"
+parent: "Grid+Selector"
 ---
 ## Description
 Inverses the check box found by the given column and row caption.

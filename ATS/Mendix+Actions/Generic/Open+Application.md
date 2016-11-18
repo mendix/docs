@@ -1,12 +1,16 @@
 ---
 title: "Open Application"
 space: "ATS (Application Test Suite)"
+parent: "Generic"
 ---
+
 ## Description
+
 Opens a Mendix application at [Application URL] in a browser with
 Mendix specific settings.
 
 ## Usage
+
 Pass the URL of the application you want to open. You can also use the global constant **Application URL**.
 
 ## Input Parameters

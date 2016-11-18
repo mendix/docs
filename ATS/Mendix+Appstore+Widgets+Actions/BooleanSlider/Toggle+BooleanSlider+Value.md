@@ -1,6 +1,7 @@
 ---
 title: "Toggle BooleanSlider Value"
 space: "ATS (Application Test Suite)"
+parent: "BooleanSlider"
 ---
 ## Description
 Clicks the BooleanSlider widget to toggle its value. This will invert the current value of the BooleanSlider.

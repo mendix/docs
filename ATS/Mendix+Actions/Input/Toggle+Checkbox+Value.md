@@ -1,14 +1,19 @@
 ---
 title: "Toggle Checkbox Value"
 space: "ATS (Application Test Suite)"
+parent: "Input"
 ---
+
 ## Description
+
 Clicks on a Checkbox to toggle its value. This will inverse the current value of the checkbox.
 
 ## Supported widgets
+
  + Checkbox
 
 ## Usage
+
 Pass the name of the checkbox.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 

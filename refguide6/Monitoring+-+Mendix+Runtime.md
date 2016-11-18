@@ -1,9 +1,9 @@
 ---
-title: "Monitoring - Mendix Business Server"
+title: "Monitoring - Mendix Runtime"
 space: "Reference Guide 6"
 category: "Proactive Maintenance"
 ---
-The Mendix Business Server monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration.
+The Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration.
 The JSON request should be accompanied by a base64 encoded monitoring password (the password should also be specified in the application configuration) and put in the request header "X-M2EE-Authentication". The content type of the request should be "application/json".
 
 Read the next sections to find out which monitoring actions are supported.

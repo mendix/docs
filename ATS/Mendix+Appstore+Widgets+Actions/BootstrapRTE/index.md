@@ -1,5 +1,6 @@
 ---
 title: "BootstrapRTE"
 space: "ATS (Application Test Suite)"
-redirect_to: "/ATS/"
+parent: "Checkbox+Set+Selector"
+parent: "Mendix+Appstore+Widgets+Actions"
 ---

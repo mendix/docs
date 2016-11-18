@@ -226,7 +226,7 @@ Now that you are on the login window, you want to login.
 
 Now that you are logged in, you want to navigate to the expenses tab.
 
-1.  Open the **Mendix Business Modeler**.
+1.  Open the **Mendix Modeler**.
 
 2.  Open the **Desktop_AdminMenu** page.
     ![](attachments/16711919/16844092.png)
@@ -255,7 +255,7 @@ Now that you are logged in, you want to navigate to the expenses tab.
 
 Now that you are on the expenses tab, you want to create a new expense.
 
-1.  Open the **Mendix Business Modeler**.
+1.  Open the **Mendix Modeler**.
 
 2.  Open the **Desktop_AdminMenu **page.
 
@@ -309,7 +309,7 @@ Now that you are on the expenses tab, you want to create a new expense.
 
 After you have created an expense, you want to sign out.
 
-1.  Open the **Mendix Business Modeler**.
+1.  Open the **Mendix Modeler**.
 
 2.  Open the **Desktop_MyInfo** snippet.
 

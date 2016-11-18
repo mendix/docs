@@ -77,11 +77,11 @@ client.platform().createNewApp(`NewApp-${Date.now() }`)
     .then(project => project.createWorkingCopy())
 ```
 
-The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix platform which will also create a commit in the Team Server repository. The result of this call will be accessible via the Mendix Business Modeler but in order to be able to manipulate it using the SDK you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
+The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix platform which will also create a commit in the Team Server repository. The result of this call will be accessible via the Mendix Modeler but in order to be able to manipulate it using the SDK you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
 
 <div class="alert alert-info">{% markdown %}
 
-If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the Mendix Business Modeler version 5.20 or later. Earlier versions are not supported!
+If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the Mendix Modeler version 5.20 or later. Earlier versions are not supported!
 
 {% endmarkdown %}</div>**lines 13-21**
 ```js
@@ -160,7 +160,7 @@ Read more about [consuming promises](http://know.cujojs.com/tutorials/promises/c
 
 2.  Open the new project, and on the right hand side click on the **Edit in Modeler** button.
 
-3.  If you have the [Mendix Business Modeler](https://appstore.home.mendix.com/link/modelers/) 6.0 or later, it will start and load the app you just created from the Team Server.
+3.  If you have the [Mendix Modeler](https://appstore.home.mendix.com/link/modelers/) 6.0 or later, it will start and load the app you just created from the Team Server.
 
 ## Next step
 

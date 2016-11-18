@@ -7,7 +7,7 @@ The `model` object we got back from `workingCopy.model()` can be used to find an
 
 ## The model.root property
 
-The `root` object refers to the `root` project node in the Project Explorer in the Mendix Business Modeler, and from here on you can walk through the project tree and into specific documents. The following line for examples finds the name of the first attribute of the `Customer` entity in the first module of your project.
+The `root` object refers to the `root` project node in the Project Explorer in the Mendix Modeler, and from here on you can walk through the project tree and into specific documents. The following line for examples finds the name of the first attribute of the `Customer` entity in the first module of your project.
 
 ```js
 var attrName = model.root

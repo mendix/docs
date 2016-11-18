@@ -1,6 +1,7 @@
 ---
 title: "Random Number"
 space: "ATS (Application Test Suite)"
+parent: "ATS+Core+Actions"
 ---
 
 ## Description

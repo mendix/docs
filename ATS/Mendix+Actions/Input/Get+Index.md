@@ -1,16 +1,21 @@
 ---
 title: "Get Index"
 space: "ATS (Application Test Suite)"
+parent: "Input"
 ---
+
 ## Description
+
 Gets the index of the selected value in a dropdown, e.g. an EnumSelect or ReferenceSelector.
 
 ## Supported widgets
+
 + Dropdown
 + ReferenceSelector
 + SearchInput Dropdown
 
 ## Usage
+
 Pass the name of the widget you want to get the index for the currently selected value from.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 

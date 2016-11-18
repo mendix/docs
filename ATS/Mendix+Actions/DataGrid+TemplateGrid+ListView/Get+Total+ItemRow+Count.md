@@ -1,16 +1,21 @@
 ---
 title: "Get Total Item/Row Count"
 space: "ATS (Application Test Suite)"
+parent: "DataGrid+TemplateGrid+ListView"
 ---
+
 ## Description
+
 Returns the total grid count from the paging status.
 
 ## Supported Widgets
+
  + DataGrid
  + TemplateGrid
  + ListView
 
 ## Usage
+
 You have to pass the widget name to the action.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.    
 

@@ -12,14 +12,14 @@ To follow this guide you will need to have access to an [HP Helion Development P
 
 ## 1. Preparation
 
-*   Download the [latest version of the Mendix Business Modeler](https://appstore.home.mendix.com/link/modelers) from the Mendix App Store.
+*   Download the [latest version of the Mendix Modeler](https://appstore.home.mendix.com/link/modelers) from the Mendix App Store.
 *   If you don't have an HP Helion Development Platform set up, you can follow this guide on [installing the Dev Platform on the HP Cloud](http://docs.hpcloud.com/helion/devplatform/ALS-developer-trial-quick-start/).
 
 ## 2\. Configure the Helion endpoint in the Modeler
 
 To push a Mendix app to Cloud Foundry you will have to configure the settings in the [Business Modeler](https://appstore.home.mendix.com/link/modelers).
 
-1.  Open the **Mendix Business Modeler**.
+1.  Open the **Mendix Modeler**.
 2.  Go to **Run > Edit Cloud Foundry Settings**:
     ![](attachments/18448647/18580551.png)
 3.  Enter the following details in the settings window:
@@ -115,7 +115,7 @@ To enable persistent file storage you need to configure the S3 object store whic
 8. When you are done setting the variables you need to **restart** you App for the changes to take effect.
     ![](attachments/18448647/18580570.png)
 
-    After deploying an App from the Mendix Business Modeler two variables will automatically be added: DEVELOPEMENT_MODE and ADMIN_PASSWORD. The development mode is _true_ by befault. Change this to _false_ to run the app in production. The admin password is the password of the default admin of your Mendix app.
+    After deploying an App from the Mendix Modeler two variables will automatically be added: DEVELOPEMENT_MODE and ADMIN_PASSWORD. The development mode is _true_ by befault. Change this to _false_ to run the app in production. The admin password is the password of the default admin of your Mendix app.
 
 ## 6\. Deploy your App to Cloud Foundry
 

@@ -37,14 +37,14 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 In this chapter you will install and run the Company Expenses App
 
-1.  Open the **Mendix Business Modeler**.
+1.  Open the **Mendix Modeler**.
 2.  Click the **App Store** button.
     ![](attachments/18448631/18580298.png)
 3.  Search for _Company Expenses_.
 4.  Click **Company Expenses**.
     ![](attachments/18448631/18580282.png)
 5.  Click **Download**.
-6.  Click **OK**. This will open the **Company Expenses** app in the **Mendix Business Modeler**.
+6.  Click **OK**. This will open the **Company Expenses** app in the **Mendix Modeler**.
     ![](attachments/18448631/18580296.png)
 7.  Click **Run Locally** (F5).
 8.  Click **View App** (F9).
@@ -116,8 +116,8 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
 
 17.  Click the **Amount** field.
     ![](attachments/18448631/18580291.png)
-    The CSS selector _.form-control_ is not unique; there are 14 matching nodes. We need to find a unique selector for the **Amount** field. Mendix 5 uses CSS classes to identify page content like widgets and popups. You can use these classes in Selenium to manipulate pages and verify data. Widgets can be given a name in the Mendix Business Modeler. These names appear in the HTML document as class names prefixed by _mx-name-_. For instance, a grid named _EmployeeGrid_ will get a CSS class _mx-name-EmployeeGrid_. This is true for all widgets.
-18.  Open the **Desktop_Expense_NewEdit_Admin **page in the Mendix Business Modeler.
+    The CSS selector _.form-control_ is not unique; there are 14 matching nodes. We need to find a unique selector for the **Amount** field. Mendix 5 uses CSS classes to identify page content like widgets and popups. You can use these classes in Selenium to manipulate pages and verify data. Widgets can be given a name in the Mendix Modeler. These names appear in the HTML document as class names prefixed by _mx-name-_. For instance, a grid named _EmployeeGrid_ will get a CSS class _mx-name-EmployeeGrid_. This is true for all widgets.
+18.  Open the **Desktop_Expense_NewEdit_Admin **page in the Mendix Modeler.
     ![](attachments/18448631/18580285.png)
 19.  Select the **Amount** field.
     ![](attachments/18448631/18580290.png) 
@@ -153,7 +153,7 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
     ![](attachments/18448631/18580284.png)
 24.  Click the **Run current test case** button. The test will fail because it can not find the element with target `css=input.form-control.mx-focus`.
     ![](attachments/18448631/18580287.png) 
-25.  Open the **Desktop_Expense_NewEdit_Admin** page in the Mendix Business Modeler.
+25.  Open the **Desktop_Expense_NewEdit_Admin** page in the Mendix Modeler.
 26.  Click the **Type **selectbox. The name of the **Type **selectbox is _referenceSelector1_ and will have the CSS class _mx-name-_referenceSelector1__.
 27.  Enter _._mx-name-_referenceSelector1___ in **FirePath** and press Enter. Two elements are found: one in the popup and one on the page in the background. To retrieve the element of the active page, you need to add _.mx-window-active_ to the target.
 28.  Enter _.mx-window-active __._mx-name-_referenceSelector1___ in **FirePath** and press Enter. There is only 1 matching node, so you have now found a unique selector for the **Type** selectbox. 

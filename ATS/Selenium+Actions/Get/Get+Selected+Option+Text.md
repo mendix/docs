@@ -1,16 +1,18 @@
 ---
 title: "Get Selected Option Text"
 space: "ATS (Application Test Suite)"
+parent: "Get"
 ---
+
 ## Description
+
 Returns the text of the currently selected item of a WebElement, e.g. select
 
-
 ## Usage
+
 Pass the parent WebElement of which you want to get the currently selected option's text from.
 
 ## Input Parameters
-
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

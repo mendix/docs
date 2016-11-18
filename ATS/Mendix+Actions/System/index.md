@@ -1,5 +1,5 @@
 ---
-title: "Tab"
+title: "System"
 space: "ATS (Application Test Suite)"
-redirect_to: "/ATS/"
+parent: "Mendix+Actions"
 ---

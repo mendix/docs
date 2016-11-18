@@ -1,11 +1,15 @@
 ---
 title: "Clock DataGrid Row"
 space: "ATS (Application Test Suite)"
+parent: "DataGrid+TemplateGrid+ListView"
 ---
+
 ## Description
+
 Clicks a DataGrid Row by a given column value.
 
 ## Supported Widgets
+
  * DataGrid
 
 ## Usage

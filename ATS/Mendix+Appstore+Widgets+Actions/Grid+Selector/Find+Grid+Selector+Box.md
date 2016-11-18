@@ -1,6 +1,7 @@
 ---
 title: "Find Grid Selector Box"
 space: "ATS (Application Test Suite)"
+parent: "Grid+Selector"
 ---
 ## Description
 Find check box and radio button by column and row caption.

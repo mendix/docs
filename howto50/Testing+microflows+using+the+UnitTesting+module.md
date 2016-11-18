@@ -15,9 +15,9 @@ To smarten up your app with business logic you can use microflows. To verify tha
 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
-*   Download the Mendix Business Modeler.
+*   Download the Mendix Modeler.
 
-<table><thead><tr><th class="confluenceTh">Software</th><th class="confluenceTh">Version used in this how-to</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd">Mendix Business Modeler</td><td colspan="1" class="confluenceTd">5.18.0</td></tr><tr><td class="confluenceTd">UnitTesting module</td><td class="confluenceTd">4.2</td></tr><tr><td colspan="1" class="confluenceTd">Community Commons Function Library module</td><td colspan="1" class="confluenceTd">5.4</td></tr></tbody></table><div class="alert alert-warning">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Software</th><th class="confluenceTh">Version used in this how-to</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd">Mendix Modeler</td><td colspan="1" class="confluenceTd">5.18.0</td></tr><tr><td class="confluenceTd">UnitTesting module</td><td class="confluenceTd">4.2</td></tr><tr><td colspan="1" class="confluenceTd">Community Commons Function Library module</td><td colspan="1" class="confluenceTd">5.4</td></tr></tbody></table><div class="alert alert-warning">{% markdown %}
 All images, names and steps in this how-to are based on these versions. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
 {% endmarkdown %}</div>
 

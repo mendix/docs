@@ -103,7 +103,7 @@ To configure the web service call, follow these steps:
     * Use the **Simple** option if only static values or variables from the microflow need to be passed to the imported web service
     * Use the **Advanced** option if domain-to-XML mapping is needed for authentication
     * Use the **Custom** option to define a custom XML header and to specify parameters
-6. On the **HTTP Authentication** tab in the **Request** section of the **Call Web Service** dialog box, enter the HTTP authentication information if the Mendix Business Server should use this before calling the web service:
+6. On the **HTTP Authentication** tab in the **Request** section of the **Call Web Service** dialog box, enter the HTTP authentication information if the Mendix Runtime should use this before calling the web service:
     ![](attachments/18448730/18581794.png)
 7. In the **Output** section of the **Call Web Service** dialog box, you can configure the handling of the return from the web service call:
     * If the return is a complex XML structure, you can select the **Map to entities** option and use an XML-to-domain mapping to map the XML elements to the domain model entities:

@@ -1,6 +1,7 @@
 ---
 title: "Assert BooleanSlider Value"
 space: "ATS (Application Test Suite)"
+parent: "BooleanSlider"
 ---
 ## Description
 Asserts the value of the BooleanSlider Appstore Widget (String).

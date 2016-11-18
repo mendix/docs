@@ -21,7 +21,7 @@ The Mendix front end uses the DOJO framework to implement widgets. Each Mendix w
 
 Before you start building your own widget make sure you have the following programs installed:
 
-*   [Mendix Business Modeler](https://appstore.home.mendix.com/index3.html?v=7#1421997409316) (version 5.x)
+*   [Mendix Modeler](https://appstore.home.mendix.com/index3.html?v=7#1421997409316) (version 5.x)
 *   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a How- to about this software here](Getting+started+with+the+Widget+Development+Plugin+for+Adobe+Brackets).
 
 ## 2\. How does it all work?!
@@ -38,7 +38,7 @@ And a Mendix custom widget can alter the interface, data, images and the way the
 
 ![](attachments/8782081/9764939.png) 
 
-A Mendix Custom Widget is also a folder packaged as a _".zip"_ file, renamed to an _".mpk"_ file. It contains JavaScript, HTML, CSS, and XML files that can be read by the Mendix Business Modeler. The following files are required to create a widget:
+A Mendix Custom Widget is also a folder packaged as a _".zip"_ file, renamed to an _".mpk"_ file. It contains JavaScript, HTML, CSS, and XML files that can be read by the Mendix Modeler. The following files are required to create a widget:
 
 *   A package.xml file.Define the HTML, XML, CSS, and JavaScript files that make up the custom widget inside the Mendix business modeler.
 *   A widget.xml file. This file contains properties you can set in Mendix to configure the widget.
@@ -224,7 +224,7 @@ The name “package.xml” already suggests that this file is related to the pac
 
 ### 3.2 The widget XML file
 
-The AppStoreWidgetBoilerplate also comes with a pre- configured widget xml file. The Mendix Business Modeler uses the widget XML file to create the property input fields, which show up when you add your widget to a form.
+The AppStoreWidgetBoilerplate also comes with a pre- configured widget xml file. The Mendix Modeler uses the widget XML file to create the property input fields, which show up when you add your widget to a form.
 
 1.  Open **HelloWorld/src/widget/helloworld.xml** in Brackets:
 
@@ -261,7 +261,7 @@ The AppStoreWidgetBoilerplate also comes with a pre- configured widget xml file.
     The first element in the file is **widget**. It contains 3 attributes:
 
 *   **id** ->  This is the widget’s JavaScript class: The path to the js file, starting at the root folder, separated by dots. Note that this is case-sensitive. For more information take a look at [Dojo’s documentation on modules](http://dojotoolkit.org/documentation/tutorials/1.8/modules/).
-*   **needsEntityContext** -> This is a Boolean and it tells the Mendix Business Modeler whether or not your widget needs to be placed inside a dataview.
+*   **needsEntityContext** -> This is a Boolean and it tells the Mendix Modeler whether or not your widget needs to be placed inside a dataview.
 *   **xmlns** -> we’ve seen this attribute before in our package XML. The value of this attribute is the same for every widget XML file.
 
     The entity context needs to be set the true because you're going to use a Mendix entity object in the widget. That means the tag will look like this:
@@ -272,14 +272,14 @@ The AppStoreWidgetBoilerplate also comes with a pre- configured widget xml file.
 
     Inside the widget element are 3 child elements that are pretty straightforward:
 
-*   **name** -> This element is used to add the name of the widget. This is how it will show up among the “Add-ons” in the Mendix Business Modeler (if you’ve done the introduction course, you’re familiar with this button).
+*   **name** -> This element is used to add the name of the widget. This is how it will show up among the “Add-ons” in the Mendix Modeler (if you’ve done the introduction course, you’re familiar with this button).
     _<name>Hello world</name>_
 *   **description** -> This element  is used to add a brief description of the widget. What is the widget for?
     _<description>This is my new fancy Hello World widget and it does really cool stuff! (like printing a sentence on the screen, woo!)</description>_
-*   **icon** -> This element is used to define the widget's icon. Every element or widget in the Mendix Business Modeler has its own icon. It is a [Base64](http://en.wikipedia.org/wiki/Base64) representation of the image, so that it can be used in an XML file.
+*   **icon** -> This element is used to define the widget's icon. Every element or widget in the Mendix Modeler has its own icon. It is a [Base64](http://en.wikipedia.org/wiki/Base64) representation of the image, so that it can be used in an XML file.
     _<icon>*add the Base64 string here*</icon>
 
-    _Next you will define the widget properties. Any properties you define in your widget XML file can be set using the Mendix Business Modeler and they will be passed to your JavaScript file, so you can use them in your widget. To define properties in XML you will have to use the “property” element. Since you’re making a list, the individual property elements will be grouped inside a “properties” element, like this:
+    _Next you will define the widget properties. Any properties you define in your widget XML file can be set using the Mendix Modeler and they will be passed to your JavaScript file, so you can use them in your widget. To define properties in XML you will have to use the “property” element. Since you’re making a list, the individual property elements will be grouped inside a “properties” element, like this:
 
     ```xml
     <properties>
@@ -305,7 +305,7 @@ The AppStoreWidgetBoilerplate also comes with a pre- configured widget xml file.
     </properties>
     ```
 
-    All property elements define at least 2 attributes: **key** and **type**. The value of **key** is the name of the property in your widget, so use a descriptive name. The value of **type** refers to the type of the property, for example “string” or “integer”. Some additional attributes are optional, like “isDefault” and “required”. However, based on the type, you may have to define certain attributes so the Mendix Business Modeler gets all the information it requires. An XSD is provided in each AppStoreWidgetBoilerplate to help you define what you need to set at certain property types.
+    All property elements define at least 2 attributes: **key** and **type**. The value of **key** is the name of the property in your widget, so use a descriptive name. The value of **type** refers to the type of the property, for example “string” or “integer”. Some additional attributes are optional, like “isDefault” and “required”. However, based on the type, you may have to define certain attributes so the Mendix Modeler gets all the information it requires. An XSD is provided in each AppStoreWidgetBoilerplate to help you define what you need to set at certain property types.
 
     Your Hello World widget needs an input string, which doesn't need any additional attributes defined.
 
@@ -315,9 +315,9 @@ The AppStoreWidgetBoilerplate also comes with a pre- configured widget xml file.
 
     Every property element contains at least 3 child elements. As with the attributes, based on the type of the property, you may have to define additional child elements. A string only needs the 3 following:
 
-*   caption -> This element is used to add the name of the property. This is how it will show up in the Properties list in the Mendix Business Modeler.
+*   caption -> This element is used to add the name of the property. This is how it will show up in the Properties list in the Mendix Modeler.
     _<caption>Hello World string</caption>_
-*   category -> This element defines in what category this property will be shown in the Properties list in the Mendix Business Modeler. Common categories are “Behavior”, “Appearance” and “Data source”.
+*   category -> This element defines in what category this property will be shown in the Properties list in the Mendix Modeler. Common categories are “Behavior”, “Appearance” and “Data source”.
     _<category>Data source</category>_
 *   description - > This element is used to add a useful description of the property, so the end user knows what it’s for.
     _<description>Add the string you want to print on your screen here (e.g.: Hello World!).</description>_

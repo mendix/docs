@@ -1,8 +1,11 @@
 ---
 title: "Assert Value"
 space: "ATS (Application Test Suite)"
+parent: "Input"
 ---
+
 ## Description
+
 Asserts the text value from a TextBox, TextArea, DateInput.
 
 ## Supported widgets
@@ -19,6 +22,7 @@ Asserts the text value from a TextBox, TextArea, DateInput.
  + OnChangeInputbox
 
 ## Usage
+
 Pass the name of the widget and the value you want to assert.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 

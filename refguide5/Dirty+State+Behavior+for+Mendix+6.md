@@ -9,11 +9,11 @@ State of this document: PROPOSAL
 
 {% endmarkdown %}</div>
 
-For the implementation of [Clustered Mendix Business Server](Clustered+Mendix+Business+Server) several aspects of the Mendix Business Server are evaluated. One of these aspects is the Dirty State Behavior in Mendix. This behavior needs to be changed in order to deliver better performance in clustered scenarios. This page describes the changes on the aspect of Dirty State Behavior and the impact on building solutions with Mendix. For the TL;DR: see the overview at the end of the page.
+For the implementation of [Clustered Mendix Runtime](Clustered+Mendix+Business+Server) several aspects of the Mendix Runtime are evaluated. One of these aspects is the Dirty State Behavior in Mendix. This behavior needs to be changed in order to deliver better performance in clustered scenarios. This page describes the changes on the aspect of Dirty State Behavior and the impact on building solutions with Mendix. For the TL;DR: see the overview at the end of the page.
 
 ## Explanation of terminology
 
-This page uses specific terminology to describe data in the Mendix Business Server. The picture shown below has been taken from the [Clustered Mendix Business Server](Clustered+Mendix+Business+Server) page:
+This page uses specific terminology to describe data in the Mendix Runtime. The picture shown below has been taken from the [Clustered Mendix Runtime](Clustered+Mendix+Business+Server) page:
 
 ![](attachments/16056891/16285792.png)
 
@@ -21,7 +21,7 @@ In a short summary, this picture describes that all data coming from the Mendix 
 
 ## Background
 
-In a clustered environment it is important to have the data accessible in all Mendix Business Server instances. For `Clean State` this is easy (it can be read from the database). For `Dirty State` it needs to be synchronized between the instances. The more data that needs to be synchronized, the more it influences the performance of the system. For that reason, the amount of `Dirty State` should be kept as minimal as possible.
+In a clustered environment it is important to have the data accessible in all Mendix Runtime instances. For `Clean State` this is easy (it can be read from the database). For `Dirty State` it needs to be synchronized between the instances. The more data that needs to be synchronized, the more it influences the performance of the system. For that reason, the amount of `Dirty State` should be kept as minimal as possible.
 
 ## Old situation (prior to Mendix 6)
 
@@ -45,7 +45,7 @@ Data retrieved from external sources and converted into non persistent entities 
 
 For an overview of changes in behavior, see the scenario matrix below. To understand it, the following behavior applies in the two possible states:
 
-<table><thead><tr><th class="confluenceTh">Type of State</th><th colspan="1" class="confluenceTh">Type of Entities</th><th class="confluenceTh">Old behavior (&lt; Mendix 6)</th><th class="confluenceTh">New behavior (&gt;= Mendix 6)</th></tr></thead><tbody><tr><td class="confluenceTd">Clean State</td><td colspan="1" class="confluenceTd">Persistent</td><td class="confluenceTd">Not kept in memory by Mendix Business Server</td><td class="confluenceTd">idem</td></tr><tr><td colspan="1" class="confluenceTd">Clean State</td><td colspan="1" class="confluenceTd">Non Persistent</td><td colspan="1" class="confluenceTd">n/a</td><td colspan="1" class="confluenceTd">n/a</td></tr><tr><td colspan="1" class="confluenceTd">Dirty State</td><td colspan="1" class="confluenceTd">Persistent</td><td rowspan="2" class="confluenceTd"><span><br>Kept in memory, garbage collected after x pages or cleaned upon logout</span><span>, delete</span><span> or commit/rollback</span></td><td colspan="1" class="confluenceTd"><span>Kept in memory, c<span>leaned upon logout, delete or commit/rollback</span></span></td></tr><tr><td colspan="1" class="confluenceTd">Dirty State</td><td colspan="1" class="confluenceTd">Non Persistent</td><td colspan="1" class="confluenceTd"><span>Cleaned after request, unless associated to session (in the latter case cleaned upon logout or delete)</span></td></tr></tbody></table><div class="alert alert-info">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Type of State</th><th colspan="1" class="confluenceTh">Type of Entities</th><th class="confluenceTh">Old behavior (&lt; Mendix 6)</th><th class="confluenceTh">New behavior (&gt;= Mendix 6)</th></tr></thead><tbody><tr><td class="confluenceTd">Clean State</td><td colspan="1" class="confluenceTd">Persistent</td><td class="confluenceTd">Not kept in memory by Mendix Runtime</td><td class="confluenceTd">idem</td></tr><tr><td colspan="1" class="confluenceTd">Clean State</td><td colspan="1" class="confluenceTd">Non Persistent</td><td colspan="1" class="confluenceTd">n/a</td><td colspan="1" class="confluenceTd">n/a</td></tr><tr><td colspan="1" class="confluenceTd">Dirty State</td><td colspan="1" class="confluenceTd">Persistent</td><td rowspan="2" class="confluenceTd"><span><br>Kept in memory, garbage collected after x pages or cleaned upon logout</span><span>, delete</span><span> or commit/rollback</span></td><td colspan="1" class="confluenceTd"><span>Kept in memory, c<span>leaned upon logout, delete or commit/rollback</span></span></td></tr><tr><td colspan="1" class="confluenceTd">Dirty State</td><td colspan="1" class="confluenceTd">Non Persistent</td><td colspan="1" class="confluenceTd"><span>Cleaned after request, unless associated to session (in the latter case cleaned upon logout or delete)</span></td></tr></tbody></table><div class="alert alert-info">{% markdown %}
 
 As explained above: backwards compatibility can be enforced by a project setting
 

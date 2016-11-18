@@ -275,7 +275,7 @@ Inside the widget element, there are three straightforward child elements:
 
 Child Element | Description
 --- | ---
-`name` | This element is used to add the name of the widget. This is how it will show up among the “Add-ons” in the Mendix Business Modeler (if you’ve done the introduction course, you’re familiar with this button). For example: `<name>Hello world</name>`.
+`name` | This element is used to add the name of the widget. This is how it will show up among the “Add-ons” in the Mendix Modeler (if you’ve done the introduction course, you’re familiar with this button). For example: `<name>Hello world</name>`.
 `description` | This element is used to add a brief description of the widget. What is the widget for? For example: `<description>This is my new Hello World widget and it does really cool stuff! (like printing a sentence on the screen, woo!)</description>`
 `icon` | This element is used to define the widget's icon. Every element or widget in the Mendix Modeler has its own icon. It is a [Base64](http://en.wikipedia.org/wiki/Base64) representation of the image, so it can be used in an XML file.
 

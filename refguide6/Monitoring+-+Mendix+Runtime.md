@@ -1,9 +1,11 @@
 ---
-title: "Monitoring - Mendix Business Server"
+title: "Monitoring - Mendix Runtime"
 space: "Reference Guide 6"
 category: "Proactive Maintenance"
+redirect_from:
+  - "/refguide6/Monitoring+-+Mendix+Business+Server"
 ---
-The Mendix Business Server monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration.
+The Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration.
 The JSON request should be accompanied by a base64 encoded monitoring password (the password should also be specified in the application configuration) and put in the request header "X-M2EE-Authentication". The content type of the request should be "application/json".
 
 Read the next sections to find out which monitoring actions are supported.
@@ -79,10 +81,10 @@ Read the next sections to find out which monitoring actions are supported.
 }
 ```
 
-This request returns the current executions of actions known by the Mendix Business Server. Actions can amongst others be microflows, Java actions, web service calls and scheduled events. For each execution the following is reported:
+This request returns the current executions of actions known by the Mendix Runtime. Actions can amongst others be microflows, Java actions, web service calls and scheduled events. For each execution the following is reported:
 
 *   the "duration" of the execution in milliseconds.
-*   the "type" of execution. Possible types are "CLIENT", "CLIENT_ASYNC", "CLIENT_ASYNC_MONITORED", "CUSTOM", "WEB_SERVICE", "SCHEDULED_EVENT" and "UNKNOWN". "CLIENT_ASYNC" is the asynchronous microflow call triggered from the web client, "CLIENT_ASYNC_MONITORED" is the actual execution of the asynchronous microflow in the Mendix Business Server, which happens in a different thread.
+*   the "type" of execution. Possible types are "CLIENT", "CLIENT_ASYNC", "CLIENT_ASYNC_MONITORED", "CUSTOM", "WEB_SERVICE", "SCHEDULED_EVENT" and "UNKNOWN". "CLIENT_ASYNC" is the asynchronous microflow call triggered from the web client, "CLIENT_ASYNC_MONITORED" is the actual execution of the asynchronous microflow in the Mendix Runtime, which happens in a different thread.
 *   the "user" is the name of the user associated with the session executing the action. In case of a non-user session the name "System" is displayed.
 *   the "action_stack" shows the stack of actions for this execution. For each action in this stack detailed information is displayed, e.g. for a microflow the current activity and the name of the microflow are shown.
 
@@ -195,7 +197,7 @@ The empty handler represents the resource request handler, which handles images,
 
 <u>Cache</u>
 
-Shows the total number of objects which are currently part of the runtime state (all session together). The runtime state either resides in memory (non-clustered runtime) or in Redis or the database (clustered runtime). Too many objects in the state could slow down the performance of the Mendix Business Server.
+Shows the total number of objects which are currently part of the runtime state (all session together). The runtime state either resides in memory (non-clustered runtime) or in Redis or the database (clustered runtime). Too many objects in the state could slow down the performance of the Mendix Runtime.
 
 <u>Sessions</u>
 The "user_sessions" sections shows the current user sessions with their user agents. The other sections show the number of sessions per category. Categories are "named users" (the number of user instances), "named_user_sessions" (the number of non-anonymous concurrent sessions) and "anonymous_sessions" (the number of anonymous concurrent sessions).
@@ -265,7 +267,7 @@ In case you do want to develop a strategy on interpreting these pools anyway bas
 }
 ```
 
-This monitoring action gives more detailed information about objects which are currently in the state of the Mendix Business Server. In "totals" the total number of objects per sessions are shown, in "user_totals" the number of objects per entity for a particular sessions are shown. This information can be an aid in figuring out which objects cause a lot of memory usage.
+This monitoring action gives more detailed information about objects which are currently in the state of the Mendix Runtime. In "totals" the total number of objects per sessions are shown, in "user_totals" the number of objects per entity for a particular sessions are shown. This information can be an aid in figuring out which objects cause a lot of memory usage.
 
 ## Server statistics
 
@@ -410,7 +412,7 @@ Returns all the current thread stack traces by name. This is useful to low level
 }
 ```
 
-Returns the current Mendix Business Server status. Possible status values are: "created", "starting", "broken", "running", "stopping" and "stopped". This information can be used to track in what state the Mendix Business Server is when the command to start or stop was given or to check whether the runtime is still running.
+Returns the current Mendix Runtime status. Possible status values are: "created", "starting", "broken", "running", "stopping" and "stopped". This information can be used to track in what state the Mendix Runtime is when the command to start or stop was given or to check whether the runtime is still running.
 
 ## Check health
 
@@ -433,13 +435,13 @@ Returns the current Mendix Business Server status. Possible status values are: "
 }
 ```
 
-In the Mendix Business Modeler a [Health Microflow](Project+Settings) can be configured. This microflow can report on the functional status of the application. Does the general functionality of the application work? Are the necessary remote services available?
+In the Mendix Modeler a [Health Microflow](Project+Settings) can be configured. This microflow can report on the functional status of the application. Does the general functionality of the application work? Are the necessary remote services available?
 
 If such a Health Microflow has been configured, this request will report on the current health status. The "health" value, can be either "healthy", "sick", or "unknown" (when no health microflow was configured). In case of the value "sick", the "diagnosis" value will give the reason the application is not healthy. This reason is the return value of the Health Microflow.
 
 <div class="alert alert-warning">{% markdown %}
 
-This request can only be executed when the Mendix Business Server status is "running" (see Runtime Status).
+This request can only be executed when the Mendix Runtime status is "running" (see Runtime Status).
 
 {% endmarkdown %}</div>
 
@@ -470,4 +472,4 @@ This request can only be executed when the Mendix Business Server status is "run
 }
 ```
 
-Returns feedback about the Mendix Business Server. "java_version" is available from Mendix 6.6 onwards.
+Returns feedback about the Mendix Runtime. "java_version" is available from Mendix 6.6 onwards.

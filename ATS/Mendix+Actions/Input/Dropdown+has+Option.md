@@ -1,16 +1,21 @@
 ---
 title: "Dropdown has Option"
 space: "ATS (Application Test Suite)"
+parent: "Input"
 ---
+
 ## Description
+
 Returns true if the value is available in the dropdown otherwise false.
 
 ## Supported widgets
+
  + Dropdown
  + ReferenceSelector
  + SearchInput Dropdown
 
 ## Usage
+
 Pass the name of the widget you want to get the value from.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 

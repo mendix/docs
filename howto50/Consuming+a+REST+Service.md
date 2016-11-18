@@ -21,7 +21,7 @@ To use this service you need to create an account at [https://www.rijksmuseum.n
 
 {% endmarkdown %}</div>
 
-1.  Open the **Mendix Business Modeler**.
+1.  Open the **Mendix Modeler**.
 2.  Open the **App Store**.
 3.  Download the latest **REST Services** module from the App Store.
     ![](attachments/12879450/13402510.png)

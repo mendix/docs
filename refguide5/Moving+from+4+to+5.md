@@ -99,7 +99,7 @@ However if you do have custom Java code, we may prompt you to fix Java compilati
 
 In such cases please open Eclipse and solve the errors manually. See the section 'Breaking API Changes' below to see what has changed in the API. When you have solved all errors, press 'Compile again'. If your Java code compiles, you can press 'Next' to move on to the next screen.
 
-In Mendix 5 we changed the way Java actions are compiled. Previously Java action code had access to all the libraries that were used by the Mendix runtime. This prevented us from updating our libraries properly without potentially breaking Java actions. The Mendix Business Server in Mendix 5 runs in an OSGi container which enables us to allow projects to use different version of libraries than the Runtime itself uses.
+In Mendix 5 we changed the way Java actions are compiled. Previously Java action code had access to all the libraries that were used by the Mendix runtime. This prevented us from updating our libraries properly without potentially breaking Java actions. The Mendix Runtime in Mendix 5 runs in an OSGi container which enables us to allow projects to use different version of libraries than the Runtime itself uses.
 
 The consequence is that projects that were using Mendix runtime libraries before Mendix 5 should now include these libraries in their 'userlib' directory. The wizard will analyze your Java code to see which of these libraries are actually used and copy those to the 'userlib' folder.
 

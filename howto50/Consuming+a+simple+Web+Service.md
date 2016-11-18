@@ -8,7 +8,7 @@ Mendix is "The App Platform for the Enterprise" and in enterprise software it is
 
 ## 1\. Importing a WSDL
 
-A WSDL describes the operations of a web service and can be imported in the Mendix Business Modeler. After importing the WSDL you can invoke the operations of the web service instantly within the Microflow editor.
+A WSDL describes the operations of a web service and can be imported in the Mendix Modeler. After importing the WSDL you can invoke the operations of the web service instantly within the Microflow editor.
 
 1.  Right click a module in the project explorer and select **Add > Document** from the menu. You can also use shortcut **Ctrl+N**.
     ![](attachments/7831673/8028244.png)

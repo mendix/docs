@@ -13,11 +13,11 @@ This is the reference guide for the widget XML.
 
 ## Requirements
 
-This reference guide assumes you have a basic understanding of XML and the Mendix Business Modeler. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/). To learn more about the Mendix Business Modeler, watch the [Getting Started](https://gettingstarted.mendixcloud.com/index.html) videos.
+This reference guide assumes you have a basic understanding of XML and the Mendix Modeler. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/). To learn more about the Mendix Modeler, watch the [Getting Started](https://gettingstarted.mendixcloud.com/index.html) videos.
 
 ## Start of the widget XML
 
-An XML file always starts with the XML version and encoding declaration. These are standard and should be present in every XML file. The Mendix Business Modeler uses the widget XML file to create the property input fields, which show up when you add your widget to a form. Our widget declaration XML starts at the **<widget>** element. This is the root element that will contain all our settings for this widget.
+An XML file always starts with the XML version and encoding declaration. These are standard and should be present in every XML file. The Mendix Modeler uses the widget XML file to create the property input fields, which show up when you add your widget to a form. Our widget declaration XML starts at the **<widget>** element. This is the root element that will contain all our settings for this widget.
 
 ## <a name="Widgets-XMLreferenceguide-Widgetattributes" rel="nofollow"></a>Widget element
 
@@ -59,7 +59,7 @@ Inside the widget element are 4 child elements.
 
 ## Property element
 
-Any properties you define in your widget XML file can be set using the Mendix Business Modeler and they will be passed to your JavaScript file, so you can use them in your widget.
+Any properties you define in your widget XML file can be set using the Mendix Modeler and they will be passed to your JavaScript file, so you can use them in your widget.
 
 ### Child elements
 
@@ -102,7 +102,7 @@ Note that the **required** attribute defaults to "true".
 
 ### Attribute
 
-A property of type Attribute is always related to an entity: it uses the entityContext if it is set on true, otherwise an entityProperty is required. It enables the user in the Mendix Business Modeler to select one of the attributes of the related entity (optionally over an association).
+A property of type Attribute is always related to an entity: it uses the entityContext if it is set on true, otherwise an entityProperty is required. It enables the user in the Mendix Modeler to select one of the attributes of the related entity (optionally over an association).
 
 ```xml
 <property key="backgroundColor" type="attribute" entityProperty="color">
@@ -153,7 +153,7 @@ A property of type Boolean requires the attribute defaultValue.
 </property>
 ```
 
-What it looks like in the Mendix Business Modeler:
+What it looks like in the Mendix Modeler:
 
 ![](attachments/12878790/13402489.png)
 
@@ -161,7 +161,7 @@ What it looks like in the Mendix Business Modeler:
 
 ### Entity
 
-A property of type Entity allows the user to configure an entity in the Mendix Business Modeler. This entity can then be used in your JavaScript to retrieve all the necessary information.
+A property of type Entity allows the user to configure an entity in the Mendix Modeler. This entity can then be used in your JavaScript to retrieve all the necessary information.
 
 ```xml
 <property key="color" type="entity" isPath="optional" pathType="reference">
@@ -189,7 +189,7 @@ The EntityConstraint lets you put a constraint on either the entity you specify 
 
 The enumeration property has an extra required child element: a list of enumerationValues. An enumerationValue contains a **key** attribute and a **caption** within their tag.
 
-This presents the user with a dropdown list of options, based on the **captions** in the Mendix Business Modeler. The **keys** will reach your widget's JavaScript as an enumeration. 
+This presents the user with a dropdown list of options, based on the **captions** in the Mendix Modeler. The **keys** will reach your widget's JavaScript as an enumeration. 
 
 It requires a default value to be set, which should correspond with one of the enumerationValue keys.
 
@@ -206,7 +206,7 @@ It requires a default value to be set, which should correspond with one of the e
 </property>
 ```
 
-What it looks like in the Mendix Business Modeler:
+What it looks like in the Mendix Modeler:
 
 ![](attachments/12878790/13402496.jpg)
 
@@ -232,7 +232,7 @@ Remember that calling a form  with a dataview, if needsEntityContext is set to 
 
 ### Image
 
-The image property lets the user select an image from the Mendix Business Modeler's images to pass it to the widget.
+The image property lets the user select an image from the Mendix Modeler's images to pass it to the widget.
 
 ```xml
 <property key="picture" type="image">
@@ -260,7 +260,7 @@ The integer property lets you to pass an integer to the widget.  This property
 
 ### Microflow
 
-The Microflow property allows a user to select a microflow in the Mendix Business Modeler. There are 3 options:
+The Microflow property allows a user to select a microflow in the Mendix Modeler. There are 3 options:
 
 1.  If needsEntityContext is set to "true", the selected microflow is required to have the context entity as an input parameter (as this will automatically be passed into it).
 2.  If needsEntityContext is set to false and no entityProperty attribute is specified, the microflow will have no input parameters.
@@ -318,7 +318,7 @@ The object property is an array of packaged sub-properties. It packages multiple
 </property>
 ```
 
-What it looks like in the Mendix Business Modeler:
+What it looks like in the Mendix Modeler:
 
 ![](attachments/12878790/13402490.png)
 
@@ -338,7 +338,7 @@ The string property lets you to pass a string to the widget.
 
 ### TranslatableString
 
-The translatableString property is similar to a normal string property, except you can add translated versions of the default value for different languages. To achieve this, the translatableString property has an extra required child element:  a list of translations.The Mendix Business Modeler language will match the assigned <translation> value.
+The translatableString property is similar to a normal string property, except you can add translated versions of the default value for different languages. To achieve this, the translatableString property has an extra required child element:  a list of translations.The Mendix Modeler language will match the assigned <translation> value.
 
 ```xml
 <property key="translatableMessage" type="translatableString">
@@ -352,7 +352,7 @@ The translatableString property is similar to a normal string property, except y
 </property>
 ```
 
-What it looks like in the Mendix Business Modeler: 
+What it looks like in the Mendix Modeler: 
 
 ![](attachments/12878790/13402493.png)
 

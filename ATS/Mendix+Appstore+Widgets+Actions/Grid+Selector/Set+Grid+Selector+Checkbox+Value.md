@@ -1,6 +1,7 @@
 ---
 title: "Set Checkbox Set Selector Value"
 space: "ATS (Application Test Suite)"
+parent: "Grid+Selector"
 ---
 ## Description
 Finds the check box by column and row caption. Sets its value to the given checked parameter.

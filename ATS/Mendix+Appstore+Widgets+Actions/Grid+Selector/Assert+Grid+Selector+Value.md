@@ -1,6 +1,7 @@
 ---
 title: "Assert Grid Selector Value"
 space: "ATS (Application Test Suite)"
+parent: "Grid+Selector"
 ---
 ## Description
 Asserts the value of the check box and the radio button inside the Grid Selector Widget.

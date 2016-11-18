@@ -22,7 +22,7 @@ Before starting this how-to, please make sure you have completed the following p
 *   Install [WinSCP](https://winscp.net/eng/download.php)
 *   Install [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 *   An [AWS account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct)
-*   [Mendix Business Modeler](https://appstore.home.mendix.com/link/modelers/) 5.18+ installed
+*   [Mendix Modeler](https://appstore.home.mendix.com/link/modelers/) 5.18+ installed
 
 ## 1. Adding Mendix from the Amazon marketplace
 
@@ -72,7 +72,7 @@ The first thing to do when you want to run a Mendix instance on AWS is adding a 
 
 Now that you've got your Mendix instance up and running it's time to run an app on it. To do this you need to create a deployment package of your Mendix app and upload it to the AWS instance.
 
-1.  Open the **Mendix Business Modeler**.
+1.  Open the **Mendix Modeler**.
 2.  Login with your credentials.
 3.  Open a **project** you want to run on the Mendix AWS instance.
 4.  Create a deployment package of your project (**F7**).

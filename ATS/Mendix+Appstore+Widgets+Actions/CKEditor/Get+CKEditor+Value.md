@@ -1,6 +1,7 @@
 ---
 title: "Get CKEditor Value"
 space: "ATS (Application Test Suite)"
+parent: "CKEditor"
 ---
 ## Description
 Returns the CKEditor value as HTML code.

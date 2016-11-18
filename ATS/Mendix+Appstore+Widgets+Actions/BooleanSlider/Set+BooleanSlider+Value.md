@@ -1,6 +1,7 @@
 ---
 title: "Set BooleanSlider Value"
 space: "ATS (Application Test Suite)"
+parent: "BooleanSlider"
 ---
 ## Description
 Sets the given text as active value for the BooleanSlider appstore widget.

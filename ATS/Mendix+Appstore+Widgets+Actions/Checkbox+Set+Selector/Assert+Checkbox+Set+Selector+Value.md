@@ -1,6 +1,7 @@
 ---
 title: "Assert Checkbox Set Selector Value"
 space: "ATS (Application Test Suite)"
+parent: "Checkbox+Set+Selector"
 ---
 ## Description
 Finds the check box by the column caption and its cell value and asserts that the check box is set to the given value.

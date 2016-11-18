@@ -1,6 +1,7 @@
 ---
 title: "Assert CKEditor Value"
 space: "ATS (Application Test Suite)"
+parent: "CKEditor"
 ---
 ## Description
 Compares the CKEditor value with the given value.

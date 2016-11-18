@@ -1,6 +1,7 @@
 ---
 title: "Set Checkbox Set Selector Value"
 space: "ATS (Application Test Suite)"
+parent: "Checkbox+Set+Selector"
 ---
 ## Description
 Clear/check the "select all" check box.

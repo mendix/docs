@@ -1,14 +1,19 @@
 ---
 title: "Set Checkbox Value"
 space: "ATS (Application Test Suite)"
+parent: "Input"
 ---
+
 ## Description
+
 Sets the value of a Checkbox.
 
 ## Supported widgets
+
  + Checkbox
 
 ## Usage
+
 Pass the name of the checkbox and the value you want to set.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 

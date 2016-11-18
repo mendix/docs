@@ -1,6 +1,7 @@
 ---
 title: "Find Simple Checkbox Set Selector"
 space: "ATS (Application Test Suite)"
+parent: "Simple+Checkbox+Set+Selector"
 ---
 ## Description
 Finds the check box by the given value.

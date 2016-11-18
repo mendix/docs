@@ -1,11 +1,15 @@
 ---
 title: "Send Keys"
 space: "ATS (Application Test Suite)"
+parent: "Selenium+Actions"
 ---
+
 ## Description
+
 Simulates typing text into the provided WebElement.
 
 ## Usage
+
 Pass the text and the WebElement you want to insert the text into as parameter for this action. To get the WebElement, use an action like Find/Assert Widget which returns a WebElement.
 
 ## Input Parameters

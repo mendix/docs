@@ -1,6 +1,7 @@
 ---
 title: "Get Checkbox Set Selector Value"
 space: "ATS (Application Test Suite)"
+parent: "Checkbox+Set+Selector"
 ---
 ## Description
 Finds the check box via the column caption and cell value. Returns its value.

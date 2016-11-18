@@ -1,6 +1,7 @@
 ---
 title: "Set Checkbox Set Selector Value"
 space: "ATS (Application Test Suite)"
+parent: "Checkbox+Set+Selector"
 ---
 ## Description
 Finds check box by column caption and cell value. Sets its value to checked.

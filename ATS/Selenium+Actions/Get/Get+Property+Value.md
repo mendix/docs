@@ -1,17 +1,19 @@
 ---
 title: "Get Property Value"
 space: "ATS (Application Test Suite)"
+parent: "Get"
 ---
+
 ## Description
+
 Returns the property value from a web element
 (Does not have access to dojo widget properties)
 
-
 ## Usage
+
 Pass the WebElement you want to get the text value from.
 
 ## Input Parameters
-
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

@@ -1,6 +1,7 @@
 ---
 title: "Get Checkbox Set Selector Value (All)"
 space: "ATS (Application Test Suite)"
+parent: "Checkbox+Set+Selector"
 ---
 ## Description
 Returns the "select all" check box value.

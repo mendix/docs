@@ -1,6 +1,7 @@
 ---
 title: "Find Checkbox Set Selector (All)"
 space: "ATS (Application Test Suite)"
+parent: "Checkbox+Set+Selector"
 ---
 ## Description
 Finds a check box by given cell value and column caption. Returns the first match.

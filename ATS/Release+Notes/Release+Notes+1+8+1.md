@@ -1,7 +1,7 @@
 ---
 title: "Mendix ATS 1.8.1 Release Notes"
 space: "ATS (Application Test Suite)"
-parent: "Release+Notes"
+category: "Release Notes"
 ---
 
 Date: November 7, 2016

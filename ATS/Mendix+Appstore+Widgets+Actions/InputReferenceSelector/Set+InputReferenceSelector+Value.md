@@ -1,6 +1,7 @@
 ---
 title: "Set InputReferenceSelector Value"
 space: "ATS (Application Test Suite)"
+parent: "InputReferenceSelector"
 ---
 ## Description
 Set the InputReferenceSelector to the given value.

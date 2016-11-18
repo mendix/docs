@@ -1,6 +1,7 @@
 ---
 title: "Find Checkbox Set Selector"
 space: "ATS (Application Test Suite)"
+parent: "Checkbox+Set+Selector"
 ---
 ## Description
 Finds the select all check box. 

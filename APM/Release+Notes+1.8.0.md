@@ -1,5 +1,6 @@
 ---
 title: "Release Notes 1.8.0"
+space: "Application Performance Monitor"
 category: "Release Notes"
 ---
 The theme for this version is a tool summary on a dashboard and improved styling.

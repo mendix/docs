@@ -1,7 +1,7 @@
 ---
 title: Translate Your App Content
 category: "Collaboration & Project Management"
-tags: []
+space: "Mendix 6 How-to's"
 ---
 
 ## 1 Introduction
@@ -30,7 +30,7 @@ Any project language can be used as a development language in the Modeler (for d
 
 ## <a name="changingthedevelopmentlanguage"></a>3 Changing the Development Language
 
-The development language is the language used to define translatable texts as you develop your app in the Modeler. For example, if you select **Dutch, Netherlands** as the development language, any labels that you type during the development of your app in the Modeler will be added to your project's Dutch dictionary. The Dutch translation of your app will be seen by users of your app who set Dutch as their preferred language in their profile (if they do not specify a preferred language, the project default language will be used). 
+The development language is the language used to define translatable texts as you develop your app in the Modeler. For example, if you select **Dutch, Netherlands** as the development language, any labels that you type during the development of your app in the Modeler will be added to your project's Dutch dictionary. The Dutch translation of your app will be seen by users of your app who set Dutch as their preferred language in their profile (if they do not specify a preferred language, the project default language will be used).
 
 You can change the language setting if desired in the Modeler toolbar:
 

@@ -16,6 +16,7 @@ Learn how to deploy your app, either in a Sandbox or to the Cloud. And go check 
 *   [Integrate your app with Mendix SSO](Integrate+your+app+with+Mendix+SSO)
 *   [Java in the Cloud](Java+in+the+Cloud)
 *   [Maintenance Windows](Maintenance+Windows)
+*   [Migrating to Mendix Cloud V4](migrating+to+v4)
 *   [Monitoring application health](Monitoring+application+health)
 *   [Securing Outgoing Connections from your Application](Securing+Outgoing+Connections+from+your+Application)
 *   [Security constraints in the Mendix Cloud](Security+constraints+in+the+Mendix+Cloud)

@@ -12,7 +12,7 @@ The ATS Reference Guide is divided into the following different sections, each d
 
 *   [Mendix Compatibility](General)
 *   [Browser Support](General#browser-support)
-*   [Release Notes](Release+Notes/Release+Notes)
+*   [Release Notes](Release+Notes)
 
 ## [Introduction](Introduction)
 

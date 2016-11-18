@@ -60,7 +60,7 @@ To configure Cloud Foundry in the Modeler, follow these steps:
     * [5 Add a Database Service to Your App](#5)
     * [6 Add a FileStore Service to Your App](#6)
 
-    ![](attachments/19202595/19398874.png) 
+    ![](attachments/19202595/19398874.png)
 
 ## 4 <a name="4"></a>Configure the IBM Bluemix Environment
 
@@ -86,7 +86,7 @@ Apps make use of services (for example, databases, load balancers, and memory to
 
 2. Select **ElephantSQL**:
 
-    ![](attachments/19202595/19398878.png) 
+    ![](attachments/19202595/19398878.png)
 
     This is a PostgreSQL database that your app will use. Mendix supports PostgreSQL and MySQL databases on Cloud Foundry. For some database services that do not add a `DATABASE_URL` environment variable, you will need to set that manually.
 
@@ -145,7 +145,7 @@ To enable persistent file storage, you need to configure the S3 object store (wh
 1. Open the Modeler.
 2. Open the app you want to deploy to Cloud Foundry.
 3. Click the arrow for the **Run** options and select **Run on Cloud Foundry**:
-    ![](attachments/19202595/19398884.png) 
+    ![](attachments/19202595/19398884.png)
 
     The Mendix app will now be deployed to the configured Cloud Foundry installation and started automatically.
 
@@ -167,5 +167,5 @@ If you encounter any problems, you should consult the application logs:
 * [How to Deploy a Mendix App to IBM Bluemix](Deploy+a+Mendix+App+to+IBM+Bluemix)
 * [How to Deploy a Mendix App to Pivotal](Deploy+a+Mendix+App+to+Pivotal)
 * [How to Deploy a Mendix App to HP Helion](Deploy+a+Mendix+App+to+HP+Helion)
-* [How to Deploy a Mendix App to Cloud Foundry](Deploy+a+Mendix+App+to+Cloud+Foundry)
+* [How to Deploy a Mendix App to Cloud Foundry](Deploying+a+Mendix+App+to+Cloud+Foundry)
 * [IBM Bluemix documentation](https://www.eu-gb.bluemix.net/docs)

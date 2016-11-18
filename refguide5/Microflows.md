@@ -17,7 +17,18 @@ Microflows allow you to express the logic of your application. A microflow can p
 
 In Mendix 5.1.0 keyboard navigation in the microflow editor was improved. See the table for the meaning of the various keys. In older versions only the home and end key are supported plus typing to change the caption of an element.
 
-<table><thead><tr><th class="confluenceTh">Key</th><th class="confluenceTh">Effect</th></tr></thead><tbody><tr><td class="confluenceTd">Arrow</td><td class="confluenceTd">Select nearby element (activity, event, loop or parameter) in the direction of the arrow.</td></tr><tr><td class="confluenceTd">Enter</td><td class="confluenceTd">Edit the properties of the selected element.</td></tr><tr><td class="confluenceTd">F2</td><td class="confluenceTd">Rename the variable introduced by the selected element.</td></tr><tr><td class="confluenceTd">Shift+F2 or just start typing</td><td class="confluenceTd">Edit the caption of the selected element.</td></tr><tr><td class="confluenceTd">Ctrl+Arrow</td><td class="confluenceTd">Move the selected element in the direction of the arrow.</td></tr><tr><td class="confluenceTd">Tab</td><td class="confluenceTd">If a loop is selected, the first element inside the loop will be selected.</td></tr><tr><td class="confluenceTd">Shift+Tab</td><td class="confluenceTd">If an element inside a loop is selected, the loop itself will be selected.</td></tr><tr><td class="confluenceTd">Home</td><td class="confluenceTd">Select the start event.</td></tr><tr><td class="confluenceTd">End</td><td class="confluenceTd">Cycle through the end events.</td></tr><tr><td class="confluenceTd">Context-menu key or Shift-F10</td><td class="confluenceTd">Open the context-menu for the currently selected element.</td></tr></tbody></table>
+Key                           | Effect
+----------------------------- | -----------------------------------------------------------------------------------------
+Arrow                         | Select nearby element (activity, event, loop or parameter) in the direction of the arrow.
+Enter                         | Edit the properties of the selected element.
+F2                            | Rename the variable introduced by the selected element.
+Shift+F2 or just start typing | Edit the caption of the selected element.
+Ctrl+Arrow                    | Move the selected element in the direction of the arrow.
+Tab                           | If a loop is selected, the first element inside the loop will be selected.
+Shift+Tab                     | If an element inside a loop is selected, the loop itself will be selected.
+Home                          | Select the start event.
+End                           | Cycle through the end events.
+Context-menu key or Shift-F10 | Open the context-menu for the currently selected element.
 
 ## Notation
 
@@ -36,31 +47,56 @@ A microflow is composed of elements. Below is a categorized overview of all elem
 
 Events represent start and end points of a microflow and special operations in a loop.
 
-<table><thead><tr><th class="confluenceTh">Graphic</th><th class="confluenceTh">Name</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd"><a href="Start+Event"><img class="confluence-embedded-image" src="attachments/819203/917902.png" ></a></td><td class="confluenceTd"><a href="Start+Event">Start Event</a></td><td class="confluenceTd">A start event is the starting point of the microflow. A microflow can only have one start event.</td></tr><tr><td class="confluenceTd"><a href="End+Event"><img class="confluence-embedded-image" src="attachments/819203/918113.png" ></a></td><td class="confluenceTd"><a href="End+Event">End Event</a></td><td class="confluenceTd">An end event defines the location where the microflow will stop. Depending on the return type of the microflow in some cases a value must be specified. There can be more than one end event.</td></tr><tr><td colspan="1" class="confluenceTd"><img class="confluence-embedded-image confluence-thumbnail" width="23" src="attachments/4522004/12451844.png" ></td><td colspan="1" class="confluenceTd"><a href="Error+Event">Error Event</a></td><td colspan="1" class="confluenceTd">An error event defines a location where the microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not.</td></tr><tr><td class="confluenceTd"><a href="Continue+Event"><img class="confluence-embedded-image" src="attachments/819203/918115.png" ></a></td><td class="confluenceTd"><a href="Continue+Event">Continue Event</a></td><td class="confluenceTd">A continue event is used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a <a href="Loop">Loop</a>.</td></tr><tr><td class="confluenceTd"><a href="Break+Event"><img class="confluence-embedded-image" src="attachments/819203/918026.png" ></a></td><td class="confluenceTd"><a href="Break+Event">Break Event</a></td><td class="confluenceTd">A break event is used to stop iterating over the list of objects and continue with the rest of the flow after the loop. Please note that break events can only be used inside a <a href="Loop">Loop</a>.</td></tr></tbody></table>
+Graphic                                              | Name                             | Description
+---------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[![](attachments/819203/917902.png)](Start+Event)    | [Start Event](Start+Event)       | A start event is the starting point of the microflow. A microflow can only have one start event.
+[![](attachments/819203/918113.png)](End+Event)      | [End Event](End+Event)           | An end event defines the location where the microflow will stop. Depending on the return type of the microflow in some cases a value must be specified. There can be more than one end event.
+![](attachments/4522004/12451844.png)                | [Error Event](Error+Event)       | An error event defines a location where the microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not.
+[![](attachments/819203/918115.png)](Continue+Event) | [Continue Event](Continue+Event) | A continue event is used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a <Loop>.
+[![](attachments/819203/918026.png)](Break+Event)    | [Break Event](Break+Event)       | A break event is used to stop iterating over the list of objects and continue with the rest of the flow after the loop. Please note that break events can only be used inside a <Loop>.
+
 
 ## Flows
 
 Flows form the connection between elements.
 
-<table><thead><tr><th class="confluenceTh">Graphic</th><th class="confluenceTh">Name</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd"><a href="Sequence+Flow"><img class="confluence-embedded-image" src="attachments/819203/917883.png" ></a></td><td class="confluenceTd"><a href="Sequence+Flow">Sequence Flow</a></td><td class="confluenceTd">A sequence flow is an arrow that links events, activities, splits and merges with each other. Together they defined the order of execution within a microflow.</td></tr><tr><td class="confluenceTd"><a href="Annotation+flow"><img class="confluence-embedded-image" src="attachments/819203/917688.png" ></a></td><td class="confluenceTd"><a href="Annotation+flow">Annotation flow</a></td><td class="confluenceTd">An association is a connection that can be used to connect an annotation to another element.</td></tr></tbody></table>
+Graphic                                               | Name                               | Description
+----------------------------------------------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------
+[![](attachments/819203/917883.png)](Sequence+Flow)   | [Sequence Flow](Sequence+Flow)     | A sequence flow is an arrow that links events, activities, splits and merges with each other. Together they defined the order of execution within a microflow.
+[![](attachments/819203/917688.png)](Annotation+flow) | [Annotation flow](Annotation+flow) | An association is a connection that can be used to connect an annotation to another element.
+
 
 ## Gateways
 
 Gateways deal with making choices and merging different paths again..
 
-<table><thead><tr><th class="confluenceTh">Graphic</th><th class="confluenceTh">Name</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd"><a href="Exclusive+Split"><img class="confluence-embedded-image" src="attachments/819203/917726.png" ></a></td><td class="confluenceTd"><a href="Exclusive+Split">Exclusive Split</a></td><td class="confluenceTd">An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows.<br class="atl-forced-newline"><strong>Note</strong>: There is no parallell execution in microflows.</td></tr><tr><td class="confluenceTd"><a href="Inheritance+Split"><img class="confluence-embedded-image" src="attachments/819203/918122.png" ></a></td><td class="confluenceTd"><a href="Inheritance+Split">Inheritance Split</a></td><td class="confluenceTd">An inheritance split is an element that makes a choice based on the <a href="Entities">specialization</a> of the selected object. You can give the specialized object a name using a <a href="Cast+Object">Cast Object</a> action.</td></tr><tr><td class="confluenceTd"><a href="Merge"><img class="confluence-embedded-image" src="attachments/819203/918116.png" ></a></td><td class="confluenceTd"><a href="Merge">Merge</a></td><td class="confluenceTd">A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge.</td></tr></tbody></table>
+Graphic                                                 | Name                                   | Description
+------------------------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[![](attachments/819203/917726.png)](Exclusive+Split)   | [Exclusive Split](Exclusive+Split)     | An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows.<br>
+**Note**: There is no parallell execution in microflows.
+[![](attachments/819203/918122.png)](Inheritance+Split) | [Inheritance Split](Inheritance+Split) | An inheritance split is an element that makes a choice based on the [specialization](Entities) of the selected object. You can give the specialized object a name using a [Cast Object](Cast+Object) action.
+[![](attachments/819203/918116.png)](Merge)             | <Merge>                                | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge.
+
 
 ## Activities
 
 Activities are the actions that are executed in a microflow.
 
-<table><thead><tr><th class="confluenceTh">Graphic</th><th class="confluenceTh">Name</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd"><a href="Activities"><img class="confluence-embedded-image" src="attachments/819203/918096.png" ></a></td><td class="confluenceTd"><a href="Activities">Activity</a></td><td class="confluenceTd">An activity can be used to execute a specific action in a microflow.</td></tr><tr><td class="confluenceTd"><a href="Loop"><img class="confluence-embedded-image" src="attachments/819203/917804.png" ></a></td><td class="confluenceTd"><a href="Loop">Loop</a></td><td class="confluenceTd">A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in microflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows.</td></tr></tbody></table>
+Graphic                                          | Name                   | Description
+------------------------------------------------ | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[![](attachments/819203/918096.png)](Activities) | [Activity](Activities) | An activity can be used to execute a specific action in a microflow.
+[![](attachments/819203/917804.png)](Loop)       | <Loop>                 | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in microflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows.
+
 
 ## Artifacts
 
 Artifacts provide the microflow with input and allow comments to be made.
 
-<table><thead><tr><th class="confluenceTh">Graphic</th><th class="confluenceTh">Name</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd"><a href="Parameter"><img class="confluence-embedded-image" src="attachments/819203/918019.png" ></a></td><td class="confluenceTd"><a href="Parameter">Parameter</a></td><td class="confluenceTd">A parameter is data that serves as input for the microflow. Parameters are filled at the location from where the microflow is triggered.</td></tr><tr><td class="confluenceTd"><a href="Annotation"><img class="confluence-embedded-image" src="attachments/819203/917689.png" ></a></td><td class="confluenceTd"><a href="Annotation">Annotation</a></td><td class="confluenceTd">An annotation is an element that can be used to put comments in a microflow.</td></tr></tbody></table>
+Graphic                                          | Name         | Description
+------------------------------------------------ | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------
+[![](attachments/819203/918019.png)](Parameter)  | <Parameter>  | A parameter is data that serves as input for the microflow. Parameters are filled at the location from where the microflow is triggered.
+[![](attachments/819203/917689.png)](Annotation) | <Annotation> | An annotation is an element that can be used to put comments in a microflow.
+
 
 ## Variable usages
 
@@ -112,7 +148,17 @@ You can determine whether an error was a SOAP fault by checking `$latestSoapFaul
 
 The following table shows the attributes of System.Error and System.SoapFault.
 
-<table><thead><tr><th class="confluenceTh">Entity</th><th class="confluenceTh">Attribute</th><th class="confluenceTh">Type</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">System.Error</td><td class="confluenceTd">ErrorType</td><td class="confluenceTd">String</td><td class="confluenceTd">The Java exception type of the error that occurred.</td></tr><tr><td class="confluenceTd">System.Error</td><td class="confluenceTd">Message</td><td class="confluenceTd">String</td><td class="confluenceTd">The message of the Java exception.</td></tr><tr><td class="confluenceTd">System.Error</td><td class="confluenceTd">Stacktrace</td><td class="confluenceTd">String</td><td class="confluenceTd">The stacktrace of the Java exception.</td></tr><tr><td class="confluenceTd">System.SoapFault</td><td class="confluenceTd">Code</td><td class="confluenceTd">String</td><td class="confluenceTd">The Code element of the SOAP fault.</td></tr><tr><td class="confluenceTd">System.SoapFault</td><td class="confluenceTd">Reason</td><td class="confluenceTd">String</td><td class="confluenceTd">The Reason element of the SOAP fault.</td></tr><tr><td class="confluenceTd">System.SoapFault</td><td class="confluenceTd">Node</td><td class="confluenceTd">String</td><td class="confluenceTd">The Node element of the SOAP fault.</td></tr><tr><td class="confluenceTd">System.SoapFault</td><td class="confluenceTd">Role</td><td class="confluenceTd">String</td><td class="confluenceTd">The Role element of the SOAP fault.</td></tr><tr><td class="confluenceTd">System.SoapFault</td><td class="confluenceTd">Detail</td><td class="confluenceTd">String</td><td class="confluenceTd">The Detail element of the SOAP fault.</td></tr></tbody></table>
+Entity           | Attribute  | Type   | Description
+---------------- | ---------- | ------ | ---------------------------------------------------
+System.Error     | ErrorType  | String | The Java exception type of the error that occurred.
+System.Error     | Message    | String | The message of the Java exception.
+System.Error     | Stacktrace | String | The stacktrace of the Java exception.
+System.SoapFault | Code       | String | The Code element of the SOAP fault.
+System.SoapFault | Reason     | String | The Reason element of the SOAP fault.
+System.SoapFault | Node       | String | The Node element of the SOAP fault.
+System.SoapFault | Role       | String | The Role element of the SOAP fault.
+System.SoapFault | Detail     | String | The Detail element of the SOAP fault.
+
 
 Click [here](http://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
 

@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## <a name="ConfiguretheHelionEndpointintheModeler"></a>3 Configure the Helion Endpoint in the Modeler
 
-To push a Mendix app to Cloud Foundry, you have to configure the settings in the Modeler. 
+To push a Mendix app to Cloud Foundry, you have to configure the settings in the Modeler.
 
 To configure the Helion endpoint in the Modeler, follow these steps:
 
@@ -186,7 +186,6 @@ If you encounter any problems, you should consult the application logs:
 
 * [How to Deploy a Mendix App to IBM Bluemix](Deploy+a+Mendix+App+to+IBM+Bluemix)
 * [How to Deploy a Mendix App to Pivotal](Deploy+a+Mendix+App+to+Pivotal)
-* [How to Deploy a Mendix App to HP Helion](Deploy+a+Mendix+App+to+HP+Helion)
-* [How to Deploy a Mendix App to Cloud Foundry](Deploy+a+Mendix+App+to+Cloud+Foundry)
+* [How to Deploy a Mendix App to Cloud Foundry](Deploying+a+Mendix+App+to+Cloud+Foundry)
 * [HP Helion Development Platform ALS documentation](http://docs.hpcloud.com/als/v1/)
 * [HP Helion Development Platform documentation](http://docs.hpcloud.com/helion/devplatform/1.1/)

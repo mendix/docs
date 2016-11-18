@@ -34,7 +34,15 @@ If you have an existing project and you want to start using version control, you
 
 The status of your project is a summary of all the changes in your working copy when compared to the original. The Modeler shows the status both in the project explorer and in the new 'Changes' dock. Different kinds of changes are visualized with different icons.
 
-<table><thead><tr><th class="confluenceTh">Icon</th><th class="confluenceTh">Meaning</th></tr></thead><tbody><tr><td class="confluenceTd"><img class="confluence-embedded-image confluence-external-resource" src="attachments/524294/688173.png" ></td><td class="confluenceTd">Nothing happened to this item. It is unchanged w.r.t. to the original.</td></tr><tr><td class="confluenceTd"><img class="confluence-embedded-image confluence-external-resource" src="attachments/524294/688172.png" ></td><td class="confluenceTd">You modified this item (i.e. document, folder or module).</td></tr><tr><td class="confluenceTd"><img class="confluence-embedded-image confluence-external-resource" src="attachments/524294/688175.png" ></td><td class="confluenceTd">You added this item.</td></tr><tr><td class="confluenceTd"><img class="confluence-embedded-image confluence-external-resource" src="attachments/524294/688174.png" ></td><td class="confluenceTd">You moved this item to another position in the project tree.</td></tr><tr><td class="confluenceTd"><img class="confluence-embedded-image confluence-external-resource" src="attachments/524294/688164.png" ></td><td class="confluenceTd">You deleted this item.</td></tr><tr><td class="confluenceTd"><img class="confluence-embedded-image confluence-external-resource" src="attachments/524294/688165.png" ></td><td class="confluenceTd">This item is conflicted. We will get back to conflicts later on.</td></tr></tbody></table>
+Icon                               | Meaning
+---------------------------------- | ----------------------------------------------------------------------
+![](attachments/524294/688173.png) | Nothing happened to this item. It is unchanged w.r.t. to the original.
+![](attachments/524294/688172.png) | You modified this item (i.e. document, folder or module).
+![](attachments/524294/688175.png) | You added this item.
+![](attachments/524294/688174.png) | You moved this item to another position in the project tree.
+![](attachments/524294/688164.png) | You deleted this item.
+![](attachments/524294/688165.png) | This item is conflicted. We will get back to conflicts later on.
+
 
 The project explorer shows an icon in front of items (documents, folders and modules) that are changed in some way. There is only room for one icon and if a document is both modified and moved it is shown as modified.
 

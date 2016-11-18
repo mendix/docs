@@ -70,8 +70,17 @@ Do not rely on hiding tab pages and table rows for security! Also use domain mod
 
 Buttons are automatically hidden if security would prevent the user from executing the action. You can ignore this and show the button anyway. This is useful for application with anonymous users. Clicking a button for which you do not have the rights will then trigger a sign in page. In the table below you can see what rights you need to have for the button to be visible in the normal case.
 
-<table><thead><tr><th class="confluenceTh">Button type</th><th class="confluenceTh">Necessary rights</th></tr></thead><tbody><tr><td class="confluenceTd">Microflow button</td><td class="confluenceTd">Execute the microflow.</td></tr><tr><td class="confluenceTd">New button</td><td class="confluenceTd">Create objects and open the page.</td></tr><tr><td class="confluenceTd">Edit button</td><td class="confluenceTd">Open the page.</td></tr><tr><td class="confluenceTd">Delete button</td><td class="confluenceTd">Delete objects.</td></tr></tbody></table>
+Button type      | Necessary rights
+---------------- | ---------------------------------
+Microflow button | Execute the microflow.
+New button       | Create objects and open the page.
+Edit button      | Open the page.
+Delete button    | Delete objects.
 
 The visibility settings are visualized on the button.
 
-<table><thead><tr><th class="confluenceTh">Icon</th><th class="confluenceTh">Meaning</th></tr></thead><tbody><tr><td class="confluenceTd">None</td><td class="confluenceTd">The visibility follows the default rules: buttons are hidden if security dictates this.</td></tr><tr><td class="confluenceTd"><img class="confluence-embedded-image" src="attachments/4522264/4751417.png" ></td><td class="confluenceTd">The button is visible even if security settings would normally hide it. It can still be conditionally visible based on an attribute. This is not visualized separatedly.</td></tr><tr><td class="confluenceTd"><img class="confluence-embedded-image" src="attachments/4522264/4751414.png" ></td><td class="confluenceTd">The button's visibility is based on the value of an attribute.</td></tr></tbody></table>
+Icon                                 | Meaning
+--------- |---------
+None                                 | The visibility follows the default rules: buttons are hidden if security dictates this.
+![](attachments/4522264/4751417.png) | The button is visible even if security settings would normally hide it. It can still be conditionally visible based on an attribute. This is not visualized separatedly.
+![](attachments/4522264/4751414.png) | The button's visibility is based on the value of an attribute.

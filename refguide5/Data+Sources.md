@@ -16,7 +16,16 @@ Most simple input widgets derive their content from their context. A text box wi
 
 Which methods are available depend on the widget being used. An overview of relevant widgets and potentials data sources is shown below.
 
-<table><thead><tr><th class="confluenceTh">Widget</th><th class="confluenceTh">Database</th><th class="confluenceTh">Association*</th><th class="confluenceTh">Microflow</th><th class="confluenceTh">Listen to list widget</th></tr></thead><tbody><tr><td class="confluenceTd"><a href="Data+grid">Data grid</a></td><td class="confluenceTd">x</td><td class="confluenceTd">x</td><td class="confluenceTd">x</td><td class="confluenceTd">&nbsp;</td></tr><tr><td class="confluenceTd"><a href="Template+grid">Template grid</a></td><td class="confluenceTd">x</td><td class="confluenceTd">x</td><td class="confluenceTd">x</td><td class="confluenceTd">&nbsp;</td></tr><tr><td class="confluenceTd"><a href="List+view">List view</a></td><td class="confluenceTd">x</td><td class="confluenceTd">x</td><td class="confluenceTd">x</td><td class="confluenceTd">&nbsp;</td></tr><tr><td class="confluenceTd"><a href="Data+view">Data view</a></td><td class="confluenceTd">x</td><td class="confluenceTd">x</td><td class="confluenceTd">x</td><td class="confluenceTd">x</td></tr><tr><td class="confluenceTd"><a href="Reference+selector">Reference selector</a></td><td class="confluenceTd">&nbsp;</td><td class="confluenceTd">x</td><td class="confluenceTd">x</td><td class="confluenceTd">&nbsp;</td></tr><tr><td class="confluenceTd"><a href="Reference+set+selector">Reference set selector</a></td><td class="confluenceTd">&nbsp;</td><td class="confluenceTd">x</td><td class="confluenceTd">x</td><td class="confluenceTd">&nbsp;</td></tr><tr><td class="confluenceTd"><a href="Input+reference+set+selector">Input reference set selector</a></td><td class="confluenceTd">&nbsp;</td><td class="confluenceTd">x</td><td class="confluenceTd">x</td><td class="confluenceTd">&nbsp;</td></tr></tbody></table>
+Widget                                                       | Database | Association* | Microflow | Listen to list widget
+------------------------------------------------------------ | -------- | ------------ | --------- | ---------------------
+[Data grid](Data+grid)                                       | x        | x            | x         |
+[Template grid](Template+grid)                               | x        | x            | x         |
+[List view](List+view)                                       | x        | x            | x         |
+[Data view](Data+view)                                       | x        | x            | x         | x
+[Reference selector](Reference+selector)                     |          | x            | x         |
+[Reference set selector](Reference+set+selector)             |          | x            | x         |
+[Input reference set selector](Input+reference+set+selector) |          | x            | x         |
+
 
 The association data source is by definition only available when a widget is nested in an existing context, such as a data view.
 

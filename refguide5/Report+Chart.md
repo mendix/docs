@@ -21,7 +21,14 @@ This property determines the aspect ratio (width : height) of the report chart a
 
 With this property you can choose the type of the report chart. The following types are avalailable.
 
-<table><thead><tr><th class="confluenceTh">Name</th><th class="confluenceTh">Layout</th></tr></thead><tbody><tr><td class="confluenceTd">VerticalBars</td><td class="confluenceTd"><img class="confluence-embedded-image confluence-external-resource" src="attachments/524337/688226.png" ></td></tr><tr><td class="confluenceTd">VerticalBars3D</td><td class="confluenceTd"><img class="confluence-embedded-image confluence-external-resource" src="attachments/524337/688227.png" ></td></tr><tr><td class="confluenceTd">HorizontalBars</td><td class="confluenceTd"><img class="confluence-embedded-image confluence-external-resource" src="attachments/524337/688228.png" ></td></tr><tr><td class="confluenceTd">Lines</td><td class="confluenceTd"><img class="confluence-embedded-image confluence-external-resource" src="attachments/524337/688229.png" ></td></tr><tr><td class="confluenceTd">Area</td><td class="confluenceTd"><img class="confluence-embedded-image confluence-external-resource" src="attachments/524337/688223.png" ></td></tr></tbody></table>
+Name           | Layout
+-------------- | ----------------------------------
+VerticalBars   | ![](attachments/524337/688226.png)
+VerticalBars3D | ![](attachments/524337/688227.png)
+HorizontalBars | ![](attachments/524337/688228.png)
+Lines          | ![](attachments/524337/688229.png)
+Area           | ![](attachments/524337/688223.png)
+
 
 ## Common Properties
 

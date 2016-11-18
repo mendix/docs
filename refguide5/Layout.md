@@ -69,7 +69,15 @@ When this property is enabled, pages based on this layout will only show the con
 
 If [Page Templates](Page+Templates) are enabled, every layout has a layout type
 
-<table><thead><tr><th class="confluenceTh">Layout type</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Responsive</td><td class="confluenceTd">Use this layout for pages that will work fine on all types of devices. The <a href="Layout+grid">layout grid</a> and other widgets make it possible to create responsive pages.</td></tr><tr><td class="confluenceTd">Tablet specific</td><td class="confluenceTd">Use this layout for pages on a tablet if the responsive option is not sufficient, e.g. if different use cases with different user interfaces have to be supported.</td></tr><tr><td colspan="1" class="confluenceTd">Phone specific</td><td colspan="1" class="confluenceTd">Use this layout for pages on a phone if the responsive option is not sufficient, e.g. if different use cases with different user interfaces have to be supported.</td></tr><tr><td colspan="1" class="confluenceTd">Modal pop-up</td><td colspan="1" class="confluenceTd">Use this layout for pages that should appear as modal pop-ups.</td></tr><tr><td colspan="1" class="confluenceTd">Pop-up</td><td colspan="1" class="confluenceTd">Use this layout for pages that should appear as non-modal pop-ups.</td></tr><tr><td colspan="1" class="confluenceTd">Legacy</td><td colspan="1" class="confluenceTd">Layouts created in Mendix 5.17 or older are of this type. It is recommended to assign one of the other layout types.</td></tr></tbody></table>
+Layout type     | Description
+--------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Responsive      | Use this layout for pages that will work fine on all types of devices. The [layout grid](Layout+grid) and other widgets make it possible to create responsive pages.
+Tablet specific | Use this layout for pages on a tablet if the responsive option is not sufficient, e.g. if different use cases with different user interfaces have to be supported.
+Phone specific  | Use this layout for pages on a phone if the responsive option is not sufficient, e.g. if different use cases with different user interfaces have to be supported.
+Modal pop-up    | Use this layout for pages that should appear as modal pop-ups.
+Pop-up          | Use this layout for pages that should appear as non-modal pop-ups.
+Legacy          | Layouts created in Mendix 5.17 or older are of this type. It is recommended to assign one of the other layout types.
+
 
 The layout type also determines how a page is opened, instead of the old [location property](Opening+Pages). If the layout type is "Legacy", then the location property is still used.
 

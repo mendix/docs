@@ -4,7 +4,7 @@ space: "Mendix 6 How-to's"
 category: "Logic & Business Rules"
 tags: []
 ---
-To add custom logic to your Mendix application you can use microflows. Microflows can be triggered in various ways, i.e. buttons, input fields, scheduled events, and more. This how-to will teach you how to configure the properties and settings of a microflow button placed on a grid or reference set selector. You will start with adding the microflow button to the right widget. Next you will need to configure the right properties and settings of the microflow button. 
+To add custom logic to your Mendix application you can use microflows. Microflows can be triggered in various ways, i.e. buttons, input fields, scheduled events, and more. This how-to will teach you how to configure the properties and settings of a microflow button placed on a grid or reference set selector. You will start with adding the microflow button to the right widget. Next you will need to configure the right properties and settings of the microflow button.
 
 ## 1. Preparations
 
@@ -29,7 +29,7 @@ In this exercise you will add a microflow button to a grid or a reference set se
 
 ### 2.2 Configuring the Microflow Properties
 
-At the moment there is only a button with no Microflow behind it yet. In this exercise you will configure the button settings. 
+At the moment there is only a button with no Microflow behind it yet. In this exercise you will configure the button settings.
 
 1. Double click the **Microflow** button to open its properties.
     ![](attachments/18448675/18580941.png)
@@ -47,7 +47,7 @@ At the moment there is only a button with no Microflow behind it yet. In this ex
 | Name | This property specifies the name of the microflow in the page builderClass: The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget. |
 | Style | The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class. |
 
-<div class="alert alert-warning">
+<div class="alert alert-warning">{% markdown %}
 
 The styling is applied in the following order:
 
@@ -55,7 +55,7 @@ The styling is applied in the following order:
 *   The 'Class' property of the widget
 *   The 'Style' property of the widget
 
-</div>
+{% endmarkdown %}</div>
 
 Click **OK** to save the properties. If you single click the microflow button the properties can also be configured on the right side, in the properties section.
 

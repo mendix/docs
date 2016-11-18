@@ -1,5 +1,6 @@
 ---
 title: "Get Checkbox Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Returns true if the checkbox is checked otherwise false.
@@ -14,12 +15,12 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the widget
 Search Context | WebElement | no | Limit the search to the given WebElement
 
 ## Return Value
 
 Name | Datatype | Description
----- | :---------: | ---------------
+--- | --- | ---
 Value | Boolean | Value of the checkbox. True if checked, otherwise false.

@@ -1,5 +1,6 @@
 ---
 title: "Assert Validation Message"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Asserts the validation message of a widget with a certain text.
@@ -13,7 +14,7 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 
 ## Input Parameters
 Name | Datatype |Required| Description
----- |:--------:|:------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the DataGrid, TemplateGrid or Listview
 Validation Message | String | yes | The expected validation message
 Search Context | WebElement | no |Limit the search to the given WebElement

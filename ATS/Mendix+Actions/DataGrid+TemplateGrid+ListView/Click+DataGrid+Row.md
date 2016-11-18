@@ -1,5 +1,6 @@
 ---
-title: "Click DataGrid Row"
+title: "Clock DataGrid Row"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Clicks a DataGrid Row by a given column value.
@@ -12,7 +13,7 @@ If you want to click/doubleclick a row in a DataGrid, use this action. You have 
 
 ## Input Parameters
 Name | Datatype | Required | Description
----- | :--------: | :--------: | ---------------
+---- | -------- | -------- | ---------------
 Widget Name | String | yes | The name of the DataGrid
 Column Name | String | yes | The name of the column in which the column value is located
 Column Value | String | yes | The column value which defines the row

@@ -1,5 +1,6 @@
 ---
 title: "Login"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Login to a Mendix Application with standard login page or on Cloud using MxID.
@@ -11,7 +12,7 @@ Optionally you can use a MxID to login to your mendix application.
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 User Name | String | yes | The name of the user account
 Password | String |yes | The password for the user account
 Use MxID | Boolean | no | Specify if the MxID should be used

@@ -1,5 +1,6 @@
 ---
 title: "Assert Active Tab Caption"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Asserts a given value for the caption of the active tab page.
@@ -13,7 +14,7 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 
 ## Input Parameters
 Name | Datatype | Required | Description
----- | :--------: | :--------: | ---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the tab widget
 Tab Caption | String | yes | The caption of the tab
 Search Context | WebElement | no | Limit the search for the DataGrid row to the given WebElement

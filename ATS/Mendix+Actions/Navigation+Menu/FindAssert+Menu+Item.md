@@ -1,5 +1,6 @@
 ---
 title: "Find/Assert Menu Item"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Finds/Asserts a visible Menu Item in a Navigation Tree, Menu Bar and Simple Menu Bar
@@ -15,7 +16,7 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 
 ## Input Parameters
 Name | Datatype | Required | Description
----- | :--------: | :--------: | ---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the parent widget
 Caption | String | yes | The caption of the menu item
 Search Context | WebElement | no | Limit the search for the DataGrid row to the given WebElement
@@ -23,5 +24,5 @@ Search Context | WebElement | no | Limit the search for the DataGrid row to the 
 ## Return Value
 
 Name | Datatype | Description
----- | :---------: | ---------------
+--- | --- | --- 
 Menu Item | WebElement | Menu Item as a Web Element

@@ -3,7 +3,6 @@ title: "Configuration"
 space: "ATS (Application Test Suite)"
 ---
 
-
 On the configuration page under the **Project** tab you can see the current project settings. You can change the settings and add users or libraries to your project by clicking the **Edit Project Settings** button.
 
 ![Configuration Page Project Tab](attachments/20644064/21168209.png)

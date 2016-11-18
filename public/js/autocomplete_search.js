@@ -53,10 +53,10 @@
               }
               var el = '<div class="autocomplete-header">';
               el    += '<p>There are <span>' + results.nbHits + '</span> results. Press &lt;Enter&gt; for full search or click ';
-              el    += '<a href="/search/?q=' + results.query + '">here</a></p>';
+              el    += '<a href="' + this.domain + '/search/?q=' + results.query + '">here</a></p>';
               el    += '</div>';
               return el;
-            }
+            }.bind(this)
           }
         }]
     );
@@ -65,7 +65,7 @@
       .on('autocomplete:selected', function(event, suggestion, dataset) {
         event.stopPropagation();
         event.preventDefault();
-        window.location = this.domain + suggestion.url;
+        window.location = this.domain + suggestion.url.replace('.html', '');
       }.bind(this))
       .on('autocomplete:cursorchanged', function (event, suggestion, dataset) {
         this.suggestion = suggestion;

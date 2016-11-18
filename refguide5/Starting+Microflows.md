@@ -7,7 +7,19 @@ space: "Reference Guide 5"
 
 Mendix allows for microflows to be triggered in pages by a variety of methods. These methods share a set of properties that determine the conditions in which the microflow is run. Listed below are all the components that can directly trigger microflows. Also listed are the event that will cause the microflow to trigger, as well as the parameter that can be made available to the triggered microflow. 
 
-<table><thead><tr><th class="confluenceTh">Component</th><th class="confluenceTh">Event/property</th><th class="confluenceTh">Available parameter</th></tr></thead><tbody><tr><td class="confluenceTd">Data view action button</td><td class="confluenceTd">On click</td><td class="confluenceTd">Data view object</td></tr><tr><td class="confluenceTd">Data view</td><td class="confluenceTd">Data source</td><td class="confluenceTd">Object of the data view containing this data view</td></tr><tr><td class="confluenceTd">Grid action button (1)</td><td class="confluenceTd">On click</td><td class="confluenceTd">Grid selection or clicked row (as an object or as a list, depending on the <a href="Data+grid#selection-mode" rel="nofollow">selection mode</a>)</td></tr><tr><td class="confluenceTd">Reference set selector</td><td class="confluenceTd">On change</td><td class="confluenceTd">Data view object</td></tr><tr><td class="confluenceTd">Attribute widget (2)</td><td class="confluenceTd">On change</td><td class="confluenceTd">Data view object</td></tr><tr><td class="confluenceTd">Attribute widget</td><td class="confluenceTd">On enter</td><td class="confluenceTd">Data view object</td></tr><tr><td class="confluenceTd">Attribute widget</td><td class="confluenceTd">On leave</td><td class="confluenceTd">Data view object</td></tr><tr><td class="confluenceTd">Image viewer</td><td class="confluenceTd">On click</td><td class="confluenceTd">Image viewer object</td></tr><tr><td class="confluenceTd">Action button</td><td class="confluenceTd">On click</td><td class="confluenceTd">Enclosing data view object, if available</td></tr><tr><td class="confluenceTd">Reference selector</td><td class="confluenceTd">Data source</td><td class="confluenceTd">Data view object</td></tr></tbody></table>
+Component               | Event/property | Available parameter
+----------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------
+Data view action button | On click       | Data view object
+Data view               | Data source    | Object of the data view containing this data view
+Grid action button (1)  | On click       | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](Data+grid#selection-mode))
+Reference set selector  | On change      | Data view object
+Attribute widget (2)    | On change      | Data view object
+Attribute widget        | On enter       | Data view object
+Attribute widget        | On leave       | Data view object
+Image viewer            | On click       | Image viewer object
+Action button           | On click       | Enclosing data view object, if available
+Reference selector      | Data source    | Data view object
+
 
 (1) The following 'grid' widgets have microflow buttons: data grid, template grid and reference set selector.
 (2) The following widgets are attribute widgets: check box, date picker, drop-down, text area, and text box.
@@ -44,7 +56,13 @@ This property indicates whether the connected microflow is executed synchronousl
 
 Set the duration only to asynchronous if you experience problems. Sometimes if a request takes too long to handle, the request will be sent again by an (impatient) proxy server.
 
-{% endmarkdown %}</div><table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Synchronous</td><td class="confluenceTd">The client waits until the microflow is done executing.</td></tr><tr><td class="confluenceTd">Asynchronous</td><td class="confluenceTd">The client executes the microflow and starts polling to determine whether the microflow is done executing.</td></tr></tbody></table>
+{% endmarkdown %}</div>
+
+Value        | Description
+------------ | ----------------------------------------------------------------------------------------------------------
+Synchronous  | The client waits until the microflow is done executing.
+Asynchronous | The client executes the microflow and starts polling to determine whether the microflow is done executing.
+
 
 _Default value_: Synchronous
 
@@ -52,7 +70,12 @@ _Default value_: Synchronous
 
 This property indicates whether a progress bar is shown during the execution of the microflow. The message shown in the progress bar can be set with the 'Progress message' property.
 
-<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">None</td><td class="confluenceTd">No progress bar is shown.</td></tr><tr><td class="confluenceTd">Non-Blocking</td><td class="confluenceTd">A progress bar is shown, but the end user can continue working.</td></tr><tr><td class="confluenceTd">Blocking</td><td class="confluenceTd">A progress bar is shown and the end user must wait until the microflow is done.</td></tr></tbody></table>
+Value        | Description
+------------ | -------------------------------------------------------------------------------
+None         | No progress bar is shown.
+Non-Blocking | A progress bar is shown, but the end user can continue working.
+Blocking     | A progress bar is shown and the end user must wait until the microflow is done.
+
 
 ### Progress message
 
@@ -99,7 +122,12 @@ For microflows that are used within a data view, you can specify whether you wan
 
 By using this property you can perform page validations _before_ executing the microflow. If the validations fail, the microflow will not be executed.
 
-<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Yes</td><td class="confluenceTd">This will prevent the microflow from executing on all validation errors.</td></tr><tr><td class="confluenceTd">Only for this widget</td><td class="confluenceTd">This will prevent the microflow from executing on validation errors of the specific widget.</td></tr><tr><td class="confluenceTd">No</td><td class="confluenceTd">The microflow will always be executed.</td></tr></tbody></table>
+Value                | Description
+-------------------- | -------------------------------------------------------------------------------------------
+Yes                  | This will prevent the microflow from executing on all validation errors.
+Only for this widget | This will prevent the microflow from executing on validation errors of the specific widget.
+No                   | The microflow will always be executed.
+
 
 _Default value:_ Yes
 
@@ -125,13 +153,22 @@ The first parameter that can be passed to the microflow can be seen in the third
 
 In the case of a data view or image viewer object you can choose whether or not to send this object to the microflow.
 
-<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Yes</td><td class="confluenceTd">This will pass the object of the data view or image viewer as a parameter to the microflow.</td></tr><tr><td class="confluenceTd">No</td><td class="confluenceTd">This will not pass the object.</td></tr></tbody></table>
+Value | Description
+----- | -------------------------------------------------------------------------------------------
+Yes   | This will pass the object of the data view or image viewer as a parameter to the microflow.
+No    | This will not pass the object.
+
 
 _Default value:_ Yes
 
 In the case of a grid button you can choose whether to send the selection, all objects in the grid or nothing to the microflow.
 
-<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Nothing</td><td class="confluenceTd">The grid selection is not sent to the microflow.</td></tr><tr><td class="confluenceTd">Selection</td><td class="confluenceTd">The selected object(s) will be sent to the microflow. If the grid allows multi-select the selection will be a list. If not, the selection will be exactly one object.</td></tr><tr><td class="confluenceTd">All pages</td><td class="confluenceTd">All objects will be sent to the microflow in a list.</td></tr></tbody></table>
+Value     | Description
+--------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Nothing   | The grid selection is not sent to the microflow.
+Selection | The selected object(s) will be sent to the microflow. If the grid allows multi-select the selection will be a list. If not, the selection will be exactly one object.
+All pages | All objects will be sent to the microflow in a list.
+
 
 ### Pass enclosing data view object
 
@@ -143,7 +180,11 @@ Removed in Mendix 5.17
 
 If the data grid or data view that refers to the microflow is contained by another data view, you can also choose to send the object of that data view to the microflow.
 
-<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Yes</td><td class="confluenceTd">This will pass the object of the enclosing data view as a parameter to the microflow.</td></tr><tr><td class="confluenceTd">No</td><td class="confluenceTd">No parameter will be passed.</td></tr></tbody></table>
+Value | Description
+----- | -------------------------------------------------------------------------------------
+Yes   | This will pass the object of the enclosing data view as a parameter to the microflow.
+No    | No parameter will be passed.
+
 
 _Default value:_ No
 
@@ -198,7 +239,12 @@ For microflows that are used within a data view, you can specify whether you wan
 
 By using this property you can perform page validations _before_ executing the microflow. If the validations fail, the microflow will not be executed.
 
-<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Yes</td><td class="confluenceTd">This will prevent the microflow from executing on all validation errors.</td></tr><tr><td class="confluenceTd">Only for this widget</td><td class="confluenceTd">This will prevent the microflow from executing on validation errors of the specific widget.</td></tr><tr><td class="confluenceTd">No</td><td class="confluenceTd">The microflow will always be executed.</td></tr></tbody></table>
+Value                | Description
+-------------------- | -------------------------------------------------------------------------------------------
+Yes                  | This will prevent the microflow from executing on all validation errors.
+Only for this widget | This will prevent the microflow from executing on validation errors of the specific widget.
+No                   | The microflow will always be executed.
+
 
 _Default value:_ Yes
 
@@ -206,7 +252,12 @@ _Default value:_ Yes
 
 This property indicates whether a progress bar is shown during the execution of the microflow. The message shown in the progress bar can be set with the 'Progress message' property.
 
-<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">None</td><td class="confluenceTd">No progress bar is shown.</td></tr><tr><td class="confluenceTd">Non-Blocking</td><td class="confluenceTd">A progress bar is shown, but the end user can continue working.</td></tr><tr><td class="confluenceTd">Blocking</td><td class="confluenceTd">A progress bar is shown and the end user must wait until the microflow is done.</td></tr></tbody></table>
+Value        | Description
+------------ | -------------------------------------------------------------------------------
+None         | No progress bar is shown.
+Non-Blocking | A progress bar is shown, but the end user can continue working.
+Blocking     | A progress bar is shown and the end user must wait until the microflow is done.
+
 
 ### Progress message
 
@@ -220,6 +271,12 @@ This property indicates whether the connected microflow is executed synchronousl
 
 Set the duration only to asynchronous if you experience problems. Sometimes if a request takes too long to handle, the request will be sent again by an (impatient) proxy server.
 
-{% endmarkdown %}</div><table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Synchronous</td><td class="confluenceTd">The client waits until the microflow is done executing.</td></tr><tr><td class="confluenceTd">Asynchronous</td><td class="confluenceTd">The client executes the microflow and starts polling to determine whether the microflow is done executing.</td></tr></tbody></table>
+{% endmarkdown %}</div>
+
+Value        | Description
+------------ | ----------------------------------------------------------------------------------------------------------
+Synchronous  | The client waits until the microflow is done executing.
+Asynchronous | The client executes the microflow and starts polling to determine whether the microflow is done executing.
+
 
 _Default value_: Synchronous

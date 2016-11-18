@@ -1,10 +1,12 @@
 ---
 title: "Assert Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Asserts the text value from a TextBox, TextArea, DateInput.
 
 ## Supported widgets
+
  + TextBox
  + TextArea
  + DatePicker
@@ -23,7 +25,7 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the widget
 Value | String | yes | The value you want to assert
 Search Context | WebElement | no | Limit the search to the given WebElement

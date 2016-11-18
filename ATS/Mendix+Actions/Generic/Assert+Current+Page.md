@@ -1,5 +1,6 @@
 ---
 title: "Assert Current Page"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Asserts that a certain page is open, by checking the current page title. Note that the page title may depend on the user’s language! For dialogs use the [Find/Assert dialog action](../Dialog/FindAssert+Dialog).
@@ -11,5 +12,5 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 ## Input Parameters
 
 Name | Datatype | Required| Description
----- |:--------:|:-------:|---------------
+--- | --- | --- | ---
 Page Title | String | yes | The title the page has to have

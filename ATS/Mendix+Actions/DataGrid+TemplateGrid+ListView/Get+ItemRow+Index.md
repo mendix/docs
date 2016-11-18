@@ -1,5 +1,6 @@
 ---
 title: "Get Item/Row Index"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Returns the zero-based index of a row in a Datagrid, or of an item in a TemplateGrid or ListView.
@@ -15,11 +16,11 @@ You have to provide a Item/Row as WebElement. To get the DataGrid row or Templat
 ## Input Parameters
 
 Name | Datatype | Required| Description
----- |:--------:|:-------:|---------------
+--- | --- | --- | ---
 Item/Row | WebElement |yes| The DataGrid row or TemplateGrid/ListView Item
 
 ## Return Value
 
 Name | Datatype | Description
----- | :---------: | ---------------
+--- | --- | --- 
 Index | Integer | The index of the supplied Row/Item. Starts with 0 for the first Row/Item.

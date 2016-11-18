@@ -9,15 +9,29 @@ With scheduled events you can let the runtime execute a microflow at a specific 
 
 ## Common Properties
 
-<table><thead><tr><th class="confluenceTh">Property</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Name</td><td class="confluenceTd">The name of the scheduled event. This name is stored in the ScheduledEventInformation objects at runtime, so that runs of the scheduled event are recognizable.</td></tr><tr><td class="confluenceTd">Documentation</td><td class="confluenceTd">This field is for documentation purposes only. Its value is not visible to end users and doesn't influence the behavior of your application.</td></tr></tbody></table>
+Property      | Description
+------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Name          | The name of the scheduled event. This name is stored in the ScheduledEventInformation objects at runtime, so that runs of the scheduled event are recognizable.
+Documentation | This field is for documentation purposes only. Its value is not visible to end users and doesn't influence the behavior of your application.
+
 
 ## Execution Properties
 
-<table><thead><tr><th class="confluenceTh">Property</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Microflow</td><td class="confluenceTd">The microflow that is executed when the scheduled event is executed. It should have no parameters and run with all rights (see&nbsp;<a href="/refguide6/Microflow">Microflow</a>).</td></tr><tr><td class="confluenceTd">Enabled</td><td class="confluenceTd">The microflow is only executed if the scheduled event is enabled. This setting only applies when running from the Modeler or from Eclipse. On server deployments, scheduled events are enabled/disabled using configuration files.</td></tr></tbody></table>
+Property  | Description
+--------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and run with all rights (see [Microflow](Microflow)).
+Enabled   | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from the Modeler or from Eclipse. On server deployments, scheduled events are enabled/disabled using configuration files.
+
 
 ## Timing Properties
 
-<table><thead><tr><th class="confluenceTh">Property</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Start date/time</td><td class="confluenceTd"><p>The date and time when the scheduled event is executed the first time.</p><div class="aui-message warning shadowed information-macro"><p>If the start date/time is UTC time the scheduled event is executed when it is the indicated time in UTC (Universal Coordinated Time).</p><p>If the start date/time is server time, the scheduled event is executed when it is the indicated time on the server on which your application runs.</p></div></td></tr><tr><td class="confluenceTd">Repeat</td><td class="confluenceTd">The scheduled event is repeated with the indicated interval (e.g. every 5 minutes) if repeat is on.</td></tr><tr><td class="confluenceTd">Interval</td><td class="confluenceTd">This number together with the interval type indicates how large the interval is between two events. This number should be greater than zero.</td></tr><tr><td colspan="1" class="confluenceTd">Interval type</td><td colspan="1" class="confluenceTd">The interval type determines the unit of the interval. Together with the interval number it indicates how large the interval between two events is. For example, 1 day or 10 minutes.</td></tr></tbody></table>
+Property        | Description
+--------------- | -------
+Start date/time | The date and time when the scheduled event is executed the first time.<br /><br />If the start date/time is UTC time the scheduled event is executed when it is the indicated time in UTC (Universal Coordinated Time).<br /><br />If the start date/time is server time, the scheduled event is executed when it is the indicated time on the server on which your application runs.
+Repeat          | The scheduled event is repeated with the indicated interval (e.g. every 5 minutes) if repeat is on.
+Interval        | This number together with the interval type indicates how large the interval is between two events. This number should be greater than zero.
+Interval type   | The interval type determines the unit of the interval. Together with the interval number it indicates how large the interval between two events is. For example, 1 day or 10 minutes.
+
 
 ### Additional information
 

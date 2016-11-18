@@ -1,5 +1,6 @@
 ---
 title: "Assert Simple Checkbox Set Selector Value"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Asserts that the check box found by the given value is checked or cleared.
@@ -12,8 +13,10 @@ Pass the name of the widget, the value connected to the check box, and if the ch
 
 ## Input Parameters
 
+
+
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+---- | -------- | ------- |---------------
 Widget Name | String | Yes | The name of the widget.
 Value | String | Yes | The value connected to the check box.
 Checked | Boolean | Yes | Assert that the check box is checked or cleared.

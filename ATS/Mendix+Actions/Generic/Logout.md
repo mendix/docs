@@ -1,5 +1,6 @@
 ---
 title: "Logout"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Triggers the logout/logoff from an application via the client API.

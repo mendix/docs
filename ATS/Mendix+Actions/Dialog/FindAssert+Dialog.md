@@ -1,5 +1,6 @@
 ---
 title: "Find/Assert Dialog"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Finds/Asserts a Dialog by title or type.
@@ -14,7 +15,7 @@ Optionally you can provide the dialog title and dialog type, to specify which di
 
 ## Input Parameters
 Name | Datatype | Required | Description
----- | :--------: | :--------: | ---------------
+--- | --- | --- | ---
 Dialog Title | String | no | The title of the dialog you want to cancel
 Dialog Type | Enumeration | no | The type of the dialog you want to cancel
 Message Text | String | no | The message text of the dialog
@@ -22,5 +23,5 @@ Message Text | String | no | The message text of the dialog
 ## Return Value
 
 Name | Datatype | Description
----- | :---------: | ---------------
+--- | --- | ---
 Dialog | WebElement | The dialog as a Web Element.

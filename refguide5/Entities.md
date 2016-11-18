@@ -11,11 +11,20 @@ The properties or features of an entity are described using [attributes](Attribu
 
 The domain model editor uses the following symbols for visualization on entities:
 
-<table><thead><tr><th class="confluenceTh">Symbol</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd"><img class="confluence-embedded-image" src="attachments/819203/917594.png" ></td><td class="confluenceTd">This entity has one or more event handlers.</td></tr></tbody></table><div class="alert alert-info">{% markdown %}
+Symbol                             | Description
+---------------------------------- | -------------------------------------------
+![](attachments/819203/917594.png) | This entity has one or more event handlers.
+
+
+<div class="alert alert-info">{% markdown %}
 
 Let us say you have a collection of CDs like the one in the table below.
 
-<table><thead><tr><th class="confluenceTh">Title</th><th class="confluenceTh">Artist</th></tr></thead><tbody><tr><td class="confluenceTd">How to Dismantle an Atomic Bomb</td><td class="confluenceTd">U2</td></tr><tr><td class="confluenceTd">Exodus</td><td class="confluenceTd">Bob Marley &amp; The Wailers</td></tr></tbody></table>
+Title                           | Artist
+------------------------------- | ------------------------
+How to Dismantle an Atomic Bomb | U2
+Exodus                          | Bob Marley & The Wailers
+
 
 The rows in the table are CDs. The type of the two rows is 'CD' and this is the entity name. A specific CD like 'How to Dismantle an Atomic Bomb' of the band U2 is called an object of the entity 'CD'. Characteristics like the title and artist are called attributes.
 
@@ -74,7 +83,11 @@ This property can be used in a situation where one has an entity 'Student' and a
 
 This property defines whether the entity contains the system attribute 'createdDate'. This is an attribute of type DateTime that stores the date and time when the object was created. The value of this attribute is automatically set by the server upon creating an object.
 
-<table><thead><tr><th class="confluenceTh">Option</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">True</td><td class="confluenceTd">Entity contains the system attribute 'createdDate'.</td></tr><tr><td class="confluenceTd">False</td><td class="confluenceTd">Entity does not contain the system attribute 'createdDate'.</td></tr></tbody></table>
+Option | Description
+------ | -----------------------------------------------------------
+True   | Entity contains the system attribute 'createdDate'.
+False  | Entity does not contain the system attribute 'createdDate'.
+
 
 _Default value:_ True
 
@@ -82,7 +95,11 @@ _Default value:_ True
 
 This property defines whether the entity contains the system attribute 'changedDate'. This is an attribute of type DateTime that stores the most recent date and time when the object was changed.
 
-<table><thead><tr><th class="confluenceTh">Option</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">True</td><td class="confluenceTd">Entity contains the system attribute 'changedDate'.</td></tr><tr><td class="confluenceTd">False</td><td class="confluenceTd">Entity does not contain the system attribute 'changedDate'.</td></tr></tbody></table>
+Option | Description
+------ | -----------------------------------------------------------
+True   | Entity contains the system attribute 'changedDate'.
+False  | Entity does not contain the system attribute 'changedDate'.
+
 
 _Default value:_ True
 
@@ -90,7 +107,11 @@ _Default value:_ True
 
 This property defines whether the entity has the system association 'owner'. This is an association to the system entity 'User' that (initially) stores a reference to the user that created the object. This association is automatically set by the server upon creating an object.
 
-<table><thead><tr><th class="confluenceTh">Option</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">True</td><td class="confluenceTd">Entity has the system association 'owner'.</td></tr><tr><td class="confluenceTd">False</td><td class="confluenceTd">Entity does not have the system association 'owner'.</td></tr></tbody></table>
+Option | Description
+------ | ----------------------------------------------------
+True   | Entity has the system association 'owner'.
+False  | Entity does not have the system association 'owner'.
+
 
 _Default value:_ True
 
@@ -98,6 +119,10 @@ _Default value:_ True
 
 This property defines whether the entity has the system association 'changedBy'. This is an association to the system entity 'User' that stores a reference to the user that most recently changed the object.
 
-<table><thead><tr><th class="confluenceTh">Option</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">True</td><td class="confluenceTd">Entity has the system association 'changedBy'.</td></tr><tr><td class="confluenceTd">False</td><td class="confluenceTd">Entity does not have the system association 'changedBy'.</td></tr></tbody></table>
+Option | Description
+------ | --------------------------------------------------------
+True   | Entity has the system association 'changedBy'.
+False  | Entity does not have the system association 'changedBy'.
+
 
 _Default value:_ True

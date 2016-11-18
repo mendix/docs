@@ -30,7 +30,12 @@ The file document that will contain the generated document. It should be an obje
 
 The language in which the titles and labels of the document should appear.
 
-<table><thead><tr><th class="confluenceTh">Option</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Current user</td><td class="confluenceTd">Use the language of the current user.</td></tr><tr><td class="confluenceTd">Project default</td><td class="confluenceTd">Use the default language that is specified in the <a href="Project+Settings">Project Settings</a>.</td></tr><tr><td class="confluenceTd">Variable</td><td class="confluenceTd">Use the language stored in the selected variable. The variable should be of type System.Language.</td></tr></tbody></table>
+Option          | Description
+--------------- | -------------------------------------------------------------------------------------------------
+Current user    | Use the language of the current user.
+Project default | Use the default language that is specified in the [Project Settings](Project+Settings).
+Variable        | Use the language stored in the selected variable. The variable should be of type System.Language.
+
 
 _Default value:_ Current user
 
@@ -38,7 +43,15 @@ _Default value:_ Current user
 
 The document type specifies the type of the generated document.
 
-<table><thead><tr><th class="confluenceTh">Option</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">HTML</td><td class="confluenceTd">Generate a document in HTML format.</td></tr><tr><td class="confluenceTd">PDF</td><td class="confluenceTd">Generate a document in PDF format.</td></tr><tr><td class="confluenceTd">Word 2007</td><td class="confluenceTd">Generate a document in Word 2007 format.</td></tr><tr><td class="confluenceTd">Word 2003</td><td class="confluenceTd">Generate a document in Word 2003 format.</td></tr><tr><td class="confluenceTd">Rich-text format</td><td class="confluenceTd">Generate a document in Rich-text format.</td></tr><tr><td class="confluenceTd">ODT</td><td class="confluenceTd">Generate a document in Open Office (ODT) format.</td></tr></tbody></table>
+Option           | Description
+---------------- | ------------------------------------------------
+HTML             | Generate a document in HTML format.
+PDF              | Generate a document in PDF format.
+Word 2007        | Generate a document in Word 2007 format.
+Word 2003        | Generate a document in Word 2003 format.
+Rich-text format | Generate a document in Rich-text format.
+ODT              | Generate a document in Open Office (ODT) format.
+
 
 ### Template
 

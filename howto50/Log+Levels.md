@@ -32,7 +32,7 @@ Customized log messages are created by defining a template, in the example above
 
 **_‘Email not sent to customer {1}’_**
 
-The template is the structure of the log’s message, and can be composed of parameters and free text. If we take the example above, when the error occurs we insert into the parameter placeholder **_‘{1}’_ **the customer’s full name. Therefore producing the log message **_‘Email not sent to customer John Smith’_**. This log message is now customized to data specific to the situation.
+The template is the structure of the log’s message, and can be composed of parameters and free text. If we take the example above, when the error occurs we insert into the parameter placeholder **_‘{1}’_** the customer’s full name. Therefore producing the log message **_‘Email not sent to customer John Smith’_**. This log message is now customized to data specific to the situation.
 
 **The stack trace**
 
@@ -43,7 +43,15 @@ In the modeler, log messages that include a stack trace are marked with a paperc
 
 The log level defines the severity of the log message. In the modeler, this is represented by different colors and an icon. Current log levels used by Mendix are: 
 
-<table><thead><tr><td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Option</strong></td><td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Icon</strong></td><td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Color</strong></td><td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>When it’s used</strong></td></tr></thead><tbody><tr><td class="confluenceTd"><em>Trace</em></td><td class="confluenceTd"><em>&nbsp;</em></td><td class="confluenceTd"><em>&nbsp;</em></td><td class="confluenceTd"><em>More detailed information. These are only written to logs.</em></td></tr><tr><td class="confluenceTd"><em>Debug</em></td><td class="confluenceTd"><em>&nbsp;</em></td><td class="confluenceTd"><em>&nbsp;</em></td><td class="confluenceTd"><em>Detailed information, typically of interest only when diagnosing problems.</em></td></tr><tr><td class="confluenceTd"><em>Info</em></td><td class="confluenceTd"><em>&nbsp;</em></td><td class="confluenceTd"><em>&nbsp;</em></td><td class="confluenceTd"><em>Confirmation that things are working as expected.</em></td></tr><tr><td class="confluenceTd"><em>Warning</em></td><td class="confluenceTd"><img class="confluence-embedded-image image-center" src="attachments/8782589/8946006.png" ></td><td class="confluenceTd"><span><em>Text is orange</em></span></td><td class="confluenceTd"><em>An indication that something unexpected happened, or indicative of some problem in the near future (e.g. ‘disk space low’). The application is still working as expected.</em></td></tr><tr><td class="confluenceTd"><em>Error</em></td><td class="confluenceTd"><img class="confluence-embedded-image image-center" src="attachments/8782589/8946007.png" ></td><td class="confluenceTd"><span><em>Text is red</em></span></td><td class="confluenceTd"><em>Due to a more serious problem, the application has not been able to perform some function.</em></td></tr><tr><td class="confluenceTd"><em>Critical</em></td><td class="confluenceTd"><img class="confluence-embedded-image image-center" src="attachments/8782589/8946008.png" ></td><td class="confluenceTd"><span><em><span>Text is white, background red</span></em></span></td><td class="confluenceTd"><em>A serious error, indicating that the application itself may be unable to continue running.</em></td></tr></tbody></table>
+| **Option** |  **Icon** | **Color** | **When it's used** |
+| --- | --- | --- | --- |
+| _Trace_    |  |  | _More detailed information. These are only written to logs._ |
+| _Debug_    |  |  | _Detailed information, typically of interest only when diagnosing problems._ |
+| _Info_     |  |  | _Confirmation that things are working as expected._ |
+| _Warning_  | ![](attachments/8782589/8946006.png) | _Text is orange_ | _An indication that something unexpected happened, or indicative of some problem in the near future (e.g. 'disk space low'). The application is still working as expected._ |
+| _Error_    | ![](attachments/8782589/8946007.png) | _Text is red_ | _Due to a more serious problem, the application has not been able to perform some function._ |
+| _Critical_ | ![](attachments/8782589/8946008.png) | _Text is white, background red_ | _A serious error, indicating that the application itself may be unable to continue running._ |
+
 
 ## 2\. Setting the log levels
 

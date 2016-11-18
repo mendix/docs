@@ -98,7 +98,7 @@ The Mendix Business Server and cloud portal offer a number of performance graphs
 
 Once you've identified a slow page, it's pretty easy to identify which microflows are executed on that page. Make sure you look at directly referenced microflows, such as data sources, but also look at any sub-flows, on change event handlers, or domain model event handlers that could be called by your page.
 
-Setting a break point and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action. To get started with debugging microflows, see: [Debugging Microflows](Debugging+Microflows). If you cannot subjectively identify your slow process, move on to the next step.
+Setting a break point and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action. To get started with debugging microflows, see: [Debugging Microflows](Debug+Microflows). If you cannot subjectively identify your slow process, move on to the next step.
 
 ### Microflow Time Stamps
 

@@ -49,8 +49,6 @@ To push a Mendix app to Cloud Foundry you will have to configure the settings in
 
     This link is different per Helion instance. This how-to will use the Mendix url.
 
-    ![](attachments/18448647/18580581.png)
-
 After logging in you will see the Dev Platform home screen:
 
 ![](attachments/18448647/18580580.png)
@@ -150,6 +148,5 @@ If you encounter any problems you should consult the application logs.
 *   [Deploying a Mendix App to Pivotal](Deploying+a+Mendix+App+to+Pivotal)
 *   [Deploying a Mendix App to HP Helion](Deploying+a+Mendix+App+to+HP+Helion)
 *   [Deploying a Mendix App to Cloud Foundry](Deploying+a+Mendix+App+to+Cloud+Foundry)
-*   [Deploying a Mendix App to IBM Bluemix](/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix)
 *   [HP Helion Development Platform ALS Documentation](http://docs.hpcloud.com/als/v1/)
 *   [HP Helion Development Platform Documentation](http://docs.hpcloud.com/helion/devplatform/1.1/)

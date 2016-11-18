@@ -1,5 +1,6 @@
 ---
 title: "Click/Doubleclick"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Performs a Click or Doubleclick and waits for Mendix activities.
@@ -14,6 +15,6 @@ Optionally you can specify if a doubleclick should be performed or not.
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Element | WebElement | yes | The WebElement you want to click/doubleclick
 Doubleclick | Boolean |no | Perform a doubleclick

@@ -1,5 +1,6 @@
 ---
 title: "Groupbox is Collapsed"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Returns the GroupBox Collapsed state: true if collapsed, otherwise false.
@@ -14,12 +15,12 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 ## Input Parameters
 
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the groupbox you want to close
 Search Context | WebElement | no | Limit the search to the given WebElement
 
 ## Return Value
 
 Name | Datatype | Description
----- | :---------: | ---------------
+--- | --- | --- | ---
 Is Collapsed | Boolean | Collapsed state of the GroupBox. True if it is collapsed, false if not.

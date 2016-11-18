@@ -1,5 +1,6 @@
 ---
 title: "Set ListView Search"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Sets the ListView Search Text.
@@ -13,7 +14,7 @@ Optionally you can provide a WebElement as search context, to narrow down the se
 
 ## Input Parameters
 Name | Datatype |Required| Description
----- |:--------:|:------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the DataGrid, TemplateGrid or Listview
 Value | String | yes | The text to set as search text
 Search Context | WebElement | no |Limit the search to the given WebElement

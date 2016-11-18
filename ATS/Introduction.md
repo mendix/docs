@@ -2,6 +2,7 @@
 title: "Introduction"
 space: "ATS (Application Test Suite)"
 ---
+
 ## Startpage
 
 When you login to the ATS as a user you see the _My Projects_ page. If there are no projects on your account yet, you are prompted to create a new Project. For project creation see the ReferenceGuide_Projects page of the documentation.
@@ -13,6 +14,7 @@ If you already have active projects you can see directly how many test cases hav
 ![My Projects overview page](attachments/20644051/21168194.png)
 
 ## Dashboard
+
 When you open an empty project for the first time, the dashboard will look like this:
 
 ![ATS empty project dashboard](attachments/Introduction/dashboardEmpty.png)
@@ -60,7 +62,7 @@ You can navigate your project using the navigation sidebar to the left of the sc
 Over the sidebar you can navigate to different pages of the ATS:
 
 | Navigation Item             | Explanation                                                                                          |
-| :-------------------------- | :----------------------------------------------------------------------------------------------------|
+| -------------------------- | ----------------------------------------------------------------------------------------------------|
 | **Change current Project**  | At the top of the sidebar you can switch between projects which are available on your account        |
 | **My Projects**             | This button will bring you back to the startpage.                                                    |
 | **Dashboard**               | Gives an overview over the selected project                                                          |
@@ -70,7 +72,7 @@ Over the sidebar you can navigate to different pages of the ATS:
 | **Scheduler**               | On the _Scheduler_ page you can schedule test cases to run in regular intervals                      |
 | **Configuration**           | Change project settings, add Selenium hubs and add applications to test                              |
 | **Import**                  | Import new/updated actions, test cases or test suites into your project                              |
-| **My Account**              | Change your username, email and password                                                             | 
+| **My Account**              | Change your username, email and password                                                             |
 
 ## Different User Roles
 

@@ -19,7 +19,14 @@ See [Microflow Element Common Properties](Microflow+Element+Common+Properties) f
 
 The log level defines the severity of the log message. In the modeler console dock, messages have a different color and an icon for some log levels.
 
-<table><thead><tr><th class="confluenceTh">Option</th><th class="confluenceTh">Icon</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Trace</td><td class="confluenceTd">&nbsp;</td><td class="confluenceTd">Used for detailed execution traces.</td></tr><tr><td class="confluenceTd">Debug</td><td class="confluenceTd">&nbsp;</td><td class="confluenceTd">Used to debug execution.</td></tr><tr><td class="confluenceTd">Info</td><td class="confluenceTd">&nbsp;</td><td class="confluenceTd">Used to log informative messages.</td></tr><tr><td class="confluenceTd">Warning</td><td class="confluenceTd"><img class="confluence-embedded-image" src="attachments/819203/917893.png" ></td><td class="confluenceTd">Used to log warnings. These messages appear in <span>orange</span>.</td></tr><tr><td class="confluenceTd">Error</td><td class="confluenceTd"><img class="confluence-embedded-image" src="attachments/819203/917894.png" ></td><td class="confluenceTd">Used to log error messages. These messages appear in <span>red</span>.</td></tr><tr><td class="confluenceTd">Critical</td><td class="confluenceTd"><img class="confluence-embedded-image" src="attachments/819203/917895.png" ></td><td class="confluenceTd">Used to log critical errors. These messages appear in <span>&nbsp;</span><span class="">white on red</span> <span>&nbsp;</span>.</td></tr></tbody></table>
+Option   | Icon                               | Description
+----- | ---- | ----
+Trace    |                                    | Used for detailed execution traces.
+Debug    |                                    | Used to debug execution.
+Info     |                                    | Used to log informative messages.
+Warning  | ![](attachments/819203/917893.png) | Used to log warnings. These messages appear in **orange**
+Error    | ![](attachments/819203/917894.png) | Used to log error messages. These messages appear in **red**
+Critical | ![](attachments/819203/917895.png) | Used to log critical errors. These messages appear in **white**
 
 _Default value:_ Info
 

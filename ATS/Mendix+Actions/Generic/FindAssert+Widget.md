@@ -1,5 +1,6 @@
 ---
 title: "Find/Assert Widget"
+space: "ATS (Application Test Suite)"
 ---
 ## Description
 Finds/Asserts a Mendix widget by its given name or value.
@@ -15,7 +16,7 @@ You can also provide a WebElement as search context, to narrow down the search f
 
 ## Input Parameters
 Name | Datatype | Required | Description
----- |:--------:| :-------:|---------------
+--- | --- | --- | ---
 Widget Name | String | yes | The name of the widget
 Value | String |no | The value of the widget
 Visible Only | Boolean | no | Limit the possible return value to only visible widgets
@@ -23,5 +24,5 @@ Search Context | WebElement | no | Limit the search to the given WebElement
 
 ## Return Value
 Name | Datatype | Description
----- | :---------: | ---------------
+--- | --- | ---
 Widget | WebElement | The Widget as a Web Element.

@@ -23,7 +23,13 @@ An XML file always starts with the XML version and encoding declaration. These a
 
 ### Attributes
 
-<table><thead><tr><th class="confluenceTh">Attribute</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">id</td><td class="confluenceTd">The id is where your widget is located. The path to the js file, starting at the root folder, separated by dots. Note that this is case-sensitive.</td></tr><tr><td class="confluenceTd"><h4 id="XMLReferenceGuide-needsEntityContext">needsEntityContext</h4></td><td class="confluenceTd">This boolean determines if your widget requires an object to be passed as the EntityContext and is required. If this is set to "true", the widget can only be used within a dataview or a templategrid. If set to "false", the widget can be used anywhere, but won't have an object passed to it automatically.</td></tr><tr><td colspan="1" class="confluenceTd"><h4 id="XMLReferenceGuide-xmlns">xmlns</h4></td><td colspan="1" class="confluenceTd"><p>The XML namespace used by the widget. The value of this attribute is the same for every widget.</p><div class="code panel pdl"><div class="codeContent panelContent pdl"><pre class="theme: Confluence; brush: xml; gutter: true">&lt;widget id="HelloWorld.widget.helloworld" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/"&gt;</pre></div></div></td></tr></tbody></table>
+| Attribute | Description |
+| --- | --- |
+| id | The id is where your widget is located. The path to the js file, starting at the root folder, separated by dots. Note that this is case-sensitive. |
+| needsEntityContext | This boolean determines whether your widget requires an object to be passed as the EntityContext and is required. If this is set to "true", the widget can only be used within a dataview or a templategrid. If set to "false", the widget can be used anywhere, but won't have an object passed to it automatically. |
+| offlineCapable | This boolean determines whether your widget can be used on pages that are accessible through the offline profile. If this attribute is not set, or set to "false", the widget cannot be used offline. If set to "true", the widget can be used offline. Keep in mind that there are a number of restrictions when working offline. Calling a microflows or fetching data using XPath are examples of features that are not supported offline. For a comprehensive list of restrictions see [offline restrictions](/refguide6/Offline). |
+| xmlns | The XML namespace used by the widget. The value of this attribute is the same for every widget. `<widget id="HelloWorld.widget.helloworld" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">` |
+
 
 #### <a name="Widgets-XMLreferenceguide-id" rel="nofollow"></a>
 
@@ -31,14 +37,23 @@ An XML file always starts with the XML version and encoding declaration. These a
 
 Inside the widget element are 4 child elements.
 
-<table><thead><tr><th class="confluenceTh">Element</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Name</td><td class="confluenceTd">The name property is what your widget will be called in the Mendix Business Modeler. It will also be used to name the different instances of your widget by adding a number to the end of it each time it is used in a form.</td></tr><tr><td class="confluenceTd">Description</td><td class="confluenceTd">The description determines the mouse-over tooltip over your widget in the Custom Widgets toolbar.</td></tr><tr><td colspan="1" class="confluenceTd">Icon</td><td colspan="1" class="confluenceTd">Every element or widget in the Modeler has its own icon. Your new widget's icon can be defined with this property. It is a&nbsp;<a href="http://en.wikipedia.org/wiki/Base64" class="external-link" rel="nofollow">Base64</a>&nbsp;representation of the image, so that it can be used in an XML file.</td></tr><tr><td colspan="1" class="confluenceTd">Properties</td><td colspan="1" class="confluenceTd"><div><p>The individual property elements will be grouped inside the “properties” element.</p></div><div><p>&nbsp;</p><div class="code panel pdl"><div class="codeContent panelContent pdl"><pre class="theme: Confluence; brush: xml; gutter: true">&lt;widget id="HelloWorld.widget.HelloWorld" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/"&gt;
-  &lt;name&gt;HelloWorld&lt;/name&gt;
-  &lt;description&gt;The description of this widget.&lt;/description&gt;
-  &lt;icon&gt;&lt;!-- Base64 icon here --&gt;&lt;/icon&gt;
-  &lt;properties&gt;
-   &lt;!-- Define the widget properties here --&gt;
-  &lt;/properties&gt;
-&lt;/widget&gt;</pre></div></div></div></td></tr></tbody></table>
+| Element | Description |
+| --- | --- |
+| Name | The name property is what your widget will be called in the Mendix Modeler. It will also be used to name the different instances of your widget by adding a number to the end of it each time it is used in a form. |
+| Description | The description determines the mouse-over tooltip over your widget in the Custom Widgets toolbar. |
+| Icon | Every element or widget in the Modeler has its own icon. Your new widget's icon can be defined with this property. It is a [Base64](http://en.wikipedia.org/wiki/Base64) representation of the image, so that it can be used in an XML file. |
+| Properties | The individual property elements will be grouped inside the “properties” element as in the code snippet below. |
+
+```xml
+<widget id="HelloWorld.widget.HelloWorld" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>HelloWorld</name>
+    <description>The description of this widget.</description>
+    <icon><!-- Base64 icon here --></icon>
+    <properties>
+        <!-- Define the widget properties here -->
+    </properties>
+</widget>
+```
 
 #### <a name="Widgets-XMLreferenceguide-Name" rel="nofollow"></a>
 
@@ -50,7 +65,11 @@ Any properties you define in your widget XML file can be set using the Mendix Bu
 
 Every property element contains at least the following 3 child elements.
 
-<table><thead><tr><th class="confluenceTh">Element</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Caption</td><td class="confluenceTd">This element is used to add the name of the property. This is how it will show up in the Properties list in the Mendix Business Modeler.</td></tr><tr><td class="confluenceTd">Category</td><td class="confluenceTd">This element defines in what category this property will be shown in the Properties list in the Mendix Business Modeler. Common categories are “Behavior”, “Appearance” and “Data source”.</td></tr><tr><td colspan="1" class="confluenceTd">Description</td><td colspan="1" class="confluenceTd">This element is used to add a useful description of the property, so the end user knows what it’s for.</td></tr></tbody></table> 
+| Element | Description |
+| --- | --- |
+| Caption | This element is used to add the name of the property. This is how it will show up in the Properties list in the Mendix Modeler. |
+| Category | This element defines in what category this property will be shown in the Properties list in the Mendix Modeler. Common categories are “Behavior”, “Appearance” and “Data source”. |
+| Description | This element is used to add a useful description of the property, so the end user knows what it’s for. |
 
 ### Attributes
 
@@ -58,7 +77,15 @@ All property elements define at least 2 attributes: **key** and **type**. The va
 
 Other possible attributes are:
 
-<table><thead><tr><th class="confluenceTh">Attribute</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">isList</td><td class="confluenceTd">Only used for the Object property type.</td></tr><tr><td class="confluenceTd"><h4 id="XMLReferenceGuide-entityProperty">entityProperty</h4></td><td class="confluenceTd">Assigns a entity to a property. This should point to the&nbsp;<strong>key</strong>&nbsp;attribute of the&nbsp;<strong>entity&nbsp;</strong>to which it is related.</td></tr><tr><td colspan="1" class="confluenceTd"><h4 id="XMLReferenceGuide-defaultValue">defaultValue</h4></td><td colspan="1" class="confluenceTd">The default value that a property starts with when it is created.</td></tr><tr><td colspan="1" class="confluenceTd"><h4 id="XMLReferenceGuide-required">required</h4></td><td colspan="1" class="confluenceTd">Specifies if the property is a required field or not. Defaults to "True" if not present.</td></tr><tr><td colspan="1" class="confluenceTd"><h4 id="XMLReferenceGuide-isDefault">isDefault</h4></td><td colspan="1" class="confluenceTd">Marks a property as the default property that is selected when the widget is selected.</td></tr><tr><td colspan="1" class="confluenceTd"><h4 id="XMLReferenceGuide-isPath">isPath</h4></td><td colspan="1" class="confluenceTd"><p><em>("no" | "optional" | "yes")</em></p><p>The path for an attribute or entity property, it can be either "no", "optional" or "yes", where "no" is the default value if the property is left out. The "optional" means that the attribute/entity can be either the current entity (or an attribute of the current entity) or an entity (or attribute) over a 1-deep association.</p></td></tr><tr><td colspan="1" class="confluenceTd"><h4 id="XMLReferenceGuide-pathType">pathType</h4></td><td colspan="1" class="confluenceTd"><p><em>("reference" | "referenceSet")</em></p><p>This defines what sort of reference should be shown for an entity/attribute over an association, either a "reference" or a "referenceSet".</p></td></tr></tbody></table>
+| Attribute | Description |
+| --- | --- |
+| isList | Only used for the Object property type. |
+| entityProperty | Assigns a entity to a property. This should point to the **key** attribute of the **entity **to which it is related. |
+| defaultValue | The default value that a property starts with when it is created. |
+| required | Specifies if the property is a required field or not. Defaults to "True" if not present. |
+| isDefault | Marks a property as the default property that is selected when the widget is selected. |
+| isPath | _("no", "optional", "yes")_ The path for an attribute or entity property, it can be either "no", "optional" or "yes", where "no" is the default value if the property is left out. The "optional" means that the attribute/entity can be either the current entity (or an attribute of the current entity) or an entity (or attribute) over a 1-deep association. |
+| pathType | _("reference", "referenceSet")_ This defines what sort of reference should be shown for an entity/attribute over an association, either a "reference" or a "referenceSet". |
 
 The different property types and their respective required attributes are discussed below.
 
@@ -79,12 +106,12 @@ A property of type Attribute is always related to an entity: it uses the entityC
 
 ```xml
 <property key="backgroundColor" type="attribute" entityProperty="color">
- <caption>Background Color</caption>
- <category>Data source</category>
- <description></description>
- <attributeTypes>
-   <attributeType name="String" />
- </attributeTypes>
+    <caption>Background Color</caption>
+    <category>Data source</category>
+    <description></description>
+    <attributeTypes>
+        <attributeType name="String" />
+    </attributeTypes>
 </property>
 ```
 
@@ -120,9 +147,9 @@ A property of type Boolean requires the attribute defaultValue.
 
 ```xml
 <property key="isVisible" type="boolean" defaultValue="true">
- <caption>Visibility</caption>
- <category>Data source</category>
- <description>Whether the widget is initially visible.</description>
+    <caption>Visibility</caption>
+    <category>Data source</category>
+    <description>Whether the widget is initially visible.</description>
 </property>
 ```
 
@@ -138,9 +165,9 @@ A property of type Entity allows the user to configure an entity in the Mendix B
 
 ```xml
 <property key="color" type="entity" isPath="optional" pathType="reference">
- <caption>Color</caption>
- <category>Data source</category>
- <description>The Color entity to use.</description>
+    <caption>Color</caption>
+    <category>Data source</category>
+    <description>The Color entity to use.</description>
 </property>
 ```
 
@@ -150,9 +177,9 @@ The EntityConstraint lets you put a constraint on either the entity you specify 
 
 ```xml
 <property key="constraint" type="entityConstraint" entityProperty="color">
- <caption>Color constraint</caption>
- <category>Data source</category>
- <description>The xpath constraint on the entity.</description>
+    <caption>Color constraint</caption>
+    <category>Data source</category>
+    <description>The xpath constraint on the entity.</description>
 </property>
 ```
 
@@ -167,16 +194,16 @@ This presents the user with a dropdown list of options, based on the **captions
 It requires a default value to be set, which should correspond with one of the enumerationValue keys.
 
 ```xml
-    <property key="colorEnum" type="enumeration" defaultValue="xff0000">
-      <caption>Textcolor</caption>
-      <category>Appearance</category>
-      <description>The textcolor of the message in the widget</description>
-      <enumerationValues>
+<property key="colorEnum" type="enumeration" defaultValue="xff0000">
+    <caption>Textcolor</caption>
+    <category>Appearance</category>
+    <description>The textcolor of the message in the widget</description>
+    <enumerationValues>
         <enumerationValue key="xff0000">Red</enumerationValue>
         <enumerationValue key="x000000">Black</enumerationValue>
         <enumerationValue key="xffffff">White</enumerationValue>
-      </enumerationValues>
-    </property>
+    </enumerationValues>
+</property>
 ```
 
 What it looks like in the Mendix Business Modeler:
@@ -189,9 +216,9 @@ The form property lets you pass a form to the widget. If needsEntityContext is s
 
 ```xml
 <property key="helpForm" type="form">
- <caption>Help Form</caption>
- <category>Behaviour</category>
- <description>Form to open</description>
+    <caption>Help Form</caption>
+    <category>Behaviour</category>
+    <description>Form to open</description>
 </property>
 ```
 <div class="alert alert-info">{% markdown %}
@@ -209,9 +236,9 @@ The image property lets the user select an image from the Mendix Business Modele
 
 ```xml
 <property key="picture" type="image">
- <caption>Picture</caption>
- <category>Data Source</category>
- <description>Select an image to add.</description>
+    <caption>Picture</caption>
+    <category>Data Source</category>
+    <description>Select an image to add.</description>
 </property>
 ```
 
@@ -223,9 +250,9 @@ The integer property lets you to pass an integer to the widget.  This property
 
 ```xml
 <property key="height" type="integer" defaultValue="1">
- <caption>Height</caption>
- <category>Appearance</category>
- <description>The height of the widget</description>
+    <caption>Height</caption>
+    <category>Appearance</category>
+    <description>The height of the widget</description>
 </property>
 ```
 
@@ -241,10 +268,10 @@ The Microflow property allows a user to select a microflow in the Mendix Busines
 
 ```xml
 <property key="messageMicroflow" type="microflow" required="false">
- <caption>Message Microflow</caption>
- <category>Data source</category>
- <description>Return value: the message to show.</description>
- <returnType type="String" />
+    <caption>Message Microflow</caption>
+    <category>Data source</category>
+    <description>Return value: the message to show.</description>
+    <returnType type="String" />
 </property>
 ```
 
@@ -272,22 +299,22 @@ The object property is an array of packaged sub-properties. It packages multiple
 
 ```xml
 <property key="collection" type="object" isList="true">
- <caption>Collection</caption>
- <category>Appearance</category>
- <description>Add the properties to show in your collection</description>
- <properties>
-	<!-- Define the sub-properties here -->
-	<property key="number" type="integer" defaultValue="1">
-     <caption>Number</caption>
-     <category>Data source</category>
-     <description>Give us a number</description>
-    </property>
-    <property key="text" type="string">
-     <caption>Text</caption>
-     <category>Data source</category>
-     <description>And a text!</description>
-    </property>
- </properties>
+    <caption>Collection</caption>
+    <category>Appearance</category>
+    <description>Add the properties to show in your collection</description>
+    <properties>
+        <!-- Define the sub-properties here -->
+        <property key="number" type="integer" defaultValue="1">
+            <caption>Number</caption>
+            <category>Data source</category>
+            <description>Give us a number</description>
+        </property>
+        <property key="text" type="string">
+            <caption>Text</caption>
+            <category>Data source</category>
+            <description>And a text!</description>
+        </property>
+    </properties>
 </property>
 ```
 
@@ -301,9 +328,9 @@ The string property lets you to pass a string to the widget.
 
 ```xml
 <property key="message" type="string">
- <caption>Message</caption>
- <category>Data source</category>
- <description>A hardcoded message</description>
+    <caption>Message</caption>
+    <category>Data source</category>
+    <description>A hardcoded message</description>
 </property>
 ```
 
@@ -315,13 +342,13 @@ The translatableString property is similar to a normal string property, except y
 
 ```xml
 <property key="translatableMessage" type="translatableString">
- <caption>Message</caption>
- <category>Data source</category>
- <description>A hardcoded message</description>
- <translations>
-  <translation lang="en_US">Add your message here.</translation>
-  <translation lang="nl_NL">Vul hier je bericht in.</translation>
- </translations>
+    <caption>Message</caption>
+    <category>Data source</category>
+    <description>A hardcoded message</description>
+    <translations>
+        <translation lang="en_US">Add your message here.</translation>
+        <translation lang="nl_NL">Vul hier je bericht in.</translation>
+    </translations>
 </property>
 ```
 

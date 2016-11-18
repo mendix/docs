@@ -108,7 +108,7 @@ To add a database service to your app, follow these steps:
 
 6. Click **Add** to finish the service configuration for ElephantSQL:
 
-    ![](attachments/18448647/18580592.png) 
+    ![](attachments/18448647/18580592.png)
 
     The app you bound the service to will be loaded.
 
@@ -159,7 +159,7 @@ To enable persistent file storage, you need to configure the S3 object store (wh
 2. Open the app you want to deploy to Cloud Foundry.
 3. Click the arrow for the **Run** options and select **Run on Cloud Foundry**:
 
-    ![](attachments/18448647/18580549.png) 
+    ![](attachments/18448647/18580549.png)
 
     The Mendix app will now be deployed to the configured Pivotal app and started automatically
 
@@ -192,6 +192,6 @@ If you encounter any problems, you should consult the application logs:
 * [How to Deploy a Mendix App to IBM Bluemix](Deploy+a+Mendix+App+to+IBM+Bluemix)
 * [How to Deploy a Mendix App to Pivotal](Deploy+a+Mendix+App+to+Pivotal)
 * [How to Deploy a Mendix App to HP Helion](Deploy+a+Mendix+App+to+HP+Helion)
-* [How to Deploy a Mendix App to Cloud Foundry](Deploy+a+Mendix+App+to+Cloud+Foundry)
+* [How to Deploy a Mendix App to Cloud Foundry](Deploying+a+Mendix+App+to+Cloud+Foundry)
 * [Pivotal Web Services documentation](http://docs.run.pivotal.io/)
 * [Pivotal Cloud Foundry blog](http://blog.pivotal.io/cloud-foundry-pivotal)

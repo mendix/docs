@@ -11,37 +11,31 @@ Pages are defined based on Layouts (see below). Pages, Layouts and Snippets inhe
 
 ![](attachments/15466567/18582251.svg)
 
-#### Business Modeler reference guide
 
-*   [Pages overview](/refguide6/Pages)
-*   [Page](/refguide6/Page)
+Business Modeler reference guide | Model SDK API docs
+-|-
+[Pages overview](/refguide6/Pages) | [Page](https://apidocs.mendix.com/modelsdk/latest/classes/pages.page.html)
+[Page](/refguide6/Page) | [FormBase](https://apidocs.mendix.com/modelsdk/latest/classes/pages.formbase.html)
+ | [LayoutCall](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutcall.html)
 
-#### Model SDK API docs
-
-*   [Page](https://apidocs.mendix.com/modelsdk/latest/classes/pages.page.html)
-*   [FormBase](https://apidocs.mendix.com/modelsdk/latest/classes/pages.formbase.html)
-*   [LayoutCall](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutcall.html)
 
 ## Layouts
 
-A Page can have a LayoutCall to render a Layout. As a Layout has zero or more LayoutParameters, the amount of LayoutCallArguments the LayoutCall needs is equal to the amount of LayoutParameters. 
+A Page can have a LayoutCall to render a Layout. As a Layout has zero or more LayoutParameters, the amount of LayoutCallArguments the LayoutCall needs is equal to the amount of LayoutParameters.
 
 A Layout can contain one or more Widgets or Placeholders. For each Placeholder, the Layout will have a LayoutParameter. A LayoutCall that targets that Layout will have a LayoutCallArgument for each LayoutParameter/Placeholder pair.
 
 ![](attachments/15466567/18582250.svg)
 
-#### Modeler reference guide
+Modeler reference guide | Model SDK API docs
+-|-
+[Layout](/refguide6/Layout) | [Page](https://apidocs.mendix.com/modelsdk/latest/classes/pages.page.html)
+| [Layout](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layout.html)
+| [LayoutParameter](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutparameter.html)
+| [Placeholder](https://apidocs.mendix.com/modelsdk/latest/classes/pages.placeholder.html)
+| [LayoutCall](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutcall.html)
+| [LayoutCallArgument](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutcallargument.html)
 
-*   [Layout](/refguide6/Layout)
-
-#### Model SDK API docs
-
-*   [Page](https://apidocs.mendix.com/modelsdk/latest/classes/pages.page.html)
-*   [Layout](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layout.html)
-*   [LayoutParameter](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutparameter.html)
-*   [Placeholder](https://apidocs.mendix.com/modelsdk/latest/classes/pages.placeholder.html)
-*   [LayoutCall](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutcall.html)
-*   [LayoutCallArgument](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutcallargument.html)
 
 ## Snippets
 
@@ -53,15 +47,11 @@ For a Page to include a Snippet, it needs to use the SnippetCallWidget which, in
 
 ![](attachments/15466567/18582219.svg)
 
-#### Modeler reference guide
-
-*   [Snippet](/refguide6/Snippet)
-
-#### Model SDK API docs
-
-*   [Snippet](https://apidocs.mendix.com/modelsdk/latest/classes/pages.snippet.html)
-*   [SnippetCall](https://apidocs.mendix.com/modelsdk/latest/classes/pages.snippetcall.html)
-*   [SnippetCallWidget](https://apidocs.mendix.com/modelsdk/latest/classes/pages.snippetcallwidget.html)
+Modeler reference guide | Model SDK API docs
+-|-
+[Snippet](/refguide6/Snippet) | [Snippet](https://apidocs.mendix.com/modelsdk/latest/classes/pages.snippet.html)
+| [SnippetCall](https://apidocs.mendix.com/modelsdk/latest/classes/pages.snippetcall.html)
+| [SnippetCallWidget](https://apidocs.mendix.com/modelsdk/latest/classes/pages.snippetcallwidget.html)
 
 ## Data Widgets
 
@@ -85,19 +75,13 @@ The control bar of the data view can have the following buttons: save, cancel, c
 
 ![](attachments/15466567/18582311.svg)
 
-#### Modeler reference guide
-
-*   [List View](/refguide6/List+view)
-*   [Data view](/refguide6/Data+view)
-*   [Data view control bar](/refguide6/Data+view+control+bar)
-
-#### Model SDK API docs
-
-*   [ListView](https://apidocs.mendix.com/modelsdk/latest/classes/pages.listview.html)
-*   [ListViewTemplate](https://apidocs.mendix.com/modelsdk/latest/classes/pages.listviewtemplate.html)
-*   [DataView](https://apidocs.mendix.com/modelsdk/latest/classes/pages.dataview.html)
-*   [DataViewControlBar](https://apidocs.mendix.com/modelsdk/latest/classes/pages.dataviewcontrolbar.html)
-*   [ConditionalVisibilitySettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.conditionalvisibilitysettings.html)
+Modeler reference guide | Model SDK API docs
+-|-
+[List View](/refguide6/List+view) | [ListView](https://apidocs.mendix.com/modelsdk/latest/classes/pages.listview.html)
+[Data view](/refguide6/Data+view) | [ListViewTemplate](https://apidocs.mendix.com/modelsdk/latest/classes/pages.listviewtemplate.html)
+[Data view control bar](/refguide6/Data+view+control+bar) | [DataView](https://apidocs.mendix.com/modelsdk/latest/classes/pages.dataview.html)
+| [DataViewControlBar](https://apidocs.mendix.com/modelsdk/latest/classes/pages.dataviewcontrolbar.html)
+| [ConditionalVisibilitySettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.conditionalvisibilitysettings.html)
 
 ## Data Sources
 
@@ -119,17 +103,11 @@ An `ImageViewerSource` only works with the ImageViewer widget and is restricted 
 
 ![](attachments/15466567/18582293.svg)
 
-#### Modeler reference guide
-
-*   [Data Sources](/refguide6/Data+Sources)
-*   [Listen to Grid Source](/refguide6/Listen+To+Grid+Source)
-*   [XPath](/refguide6/XPath)
-
-#### Model SDK API docs
-
-*   [DataSource](https://apidocs.mendix.com/modelsdk/latest/classes/pages.datasource.html)
-*   [DatabaseConstraint](https://apidocs.mendix.com/modelsdk/latest/classes/pages.databaseconstraint.html)
-*   [SortableEntityPathSource](https://apidocs.mendix.com/modelsdk/latest/classes/pages.sortableentitypathsource.html)
+Modeler reference guide | Model SDK API docs
+-|-
+[Data Sources](/refguide6/Data+Sources) | [DataSource](https://apidocs.mendix.com/modelsdk/latest/classes/pages.datasource.html)
+[Listen to Grid Source](/refguide6/Listen+To+Grid+Source) | [DatabaseConstraint](https://apidocs.mendix.com/modelsdk/latest/classes/pages.databaseconstraint.html)
+[XPath](/refguide6/XPath) | [SortableEntityPathSource](https://apidocs.mendix.com/modelsdk/latest/classes/pages.sortableentitypathsource.html)
 
 ## Grids
 
@@ -149,19 +127,12 @@ The reference set selector allows you to set an association of type _reference s
 
 ![](attachments/15466567/18582297.svg)
 
-#### Modeler reference guide
-
-*   [Template grid](/refguide6/Template+grid)
-*   [Data grid](/refguide6/Data+grid)
-*   [Reference set selector](/refguide6/Reference+set+selector)
-*   [Control Bar](/refguide6/Control+Bar)
-
-#### Model SDK API docs
-
-*   [TemplateGrid](https://apidocs.mendix.com/modelsdk/latest/classes/pages.templategrid.html)
-*   [DataGrid](https://apidocs.mendix.com/modelsdk/latest/classes/pages.datagrid.html)
-*   [ReferenceSetSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.referencesetselector.html)
-*   [GridControlBar](https://apidocs.mendix.com/modelsdk/latest/classes/pages.gridcontrolbar.html)
+Modeler reference guide | Model SDK API Docs
+-|
+[Template grid](/refguide6/Template+grid) | [TemplateGrid](https://apidocs.mendix.com/modelsdk/latest/classes/pages.templategrid.html)
+[Data grid](/refguide6/Data+grid) | [DataGrid](https://apidocs.mendix.com/modelsdk/latest/classes/pages.datagrid.html)
+[Reference set selector](/refguide6/Reference+set+selector) | [ReferenceSetSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.referencesetselector.html)
+[Control Bar](/refguide6/Control+Bar) | [GridControlBar](https://apidocs.mendix.com/modelsdk/latest/classes/pages.gridcontrolbar.html)
 
 ## Buttons
 
@@ -169,20 +140,14 @@ Button widgets perform an action when clicked. They can be rendered as a button 
 
 ![](attachments/15466567/18582314.svg)
 
-#### Modeler reference guide
-
-*   [Button Widgets](/refguide6/Button+Widgets)
-*   [Action Button](/refguide6/Action+Button)
-*   [Translatable Texts](/refguide6/Translatable+Texts)  
-
-#### Model SDK API docs
-
-*   [Button](https://apidocs.mendix.com/modelsdk/latest/classes/pages.button.html)
-*   [ButtonStyle](https://apidocs.mendix.com/modelsdk/latest/classes/pages.buttonstyle.html)
-*   [RenderType](https://apidocs.mendix.com/modelsdk/latest/classes/pages.rendertype.html)
-*   [Icon](https://apidocs.mendix.com/modelsdk/latest/classes/pages.icon.html)
-*   [Text](https://apidocs.mendix.com/modelsdk/latest/classes/texts.text.html)
-*   [ClientTemplate](https://apidocs.mendix.com/modelsdk/latest/classes/pages.clienttemplate.html)
+Modeler Reference Guide | Model SDK API Docs
+-|
+[Button Widgets](/refguide6/Button+Widgets) | [Button](https://apidocs.mendix.com/modelsdk/latest/classes/pages.button.html)
+[Action Button](/refguide6/Action+Button) | [ButtonStyle](https://apidocs.mendix.com/modelsdk/latest/classes/pages.buttonstyle.html)
+[Translatable Texts](/refguide6/Translatable+Texts) | [RenderType](https://apidocs.mendix.com/modelsdk/latest/classes/pages.rendertype.html)
+| [Icon](https://apidocs.mendix.com/modelsdk/latest/classes/pages.icon.html)
+| [Text](https://apidocs.mendix.com/modelsdk/latest/classes/texts.text.html)
+| [ClientTemplate](https://apidocs.mendix.com/modelsdk/latest/classes/pages.clienttemplate.html)
 
 ## Containers
 
@@ -190,21 +155,13 @@ DivContainers, Split Panes, Group Boxes, LayoutGridColumns, ScrollContainerRegio
 
 ![](attachments/15466567/18582317.svg)
 
-#### Modeler reference guide
-
-*   [Tab page](/refguide6/Tab+page)
-*   [Layout grid](/refguide6/Layout+grid)
-*   [Container](/refguide6/Container)
-*   [Vertical Split Pane](/refguide6/Vertical+Split+Pane)
-*   [Scroll Container](/refguide6/Scroll+Container)
-
-#### Model SDK API docs
-
-*   [TabPage](https://apidocs.mendix.com/modelsdk/latest/classes/pages.tabpage.html)
-*   [LayoutGrid](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutgrid.html)
-*   [DivContainer](https://apidocs.mendix.com/modelsdk/latest/classes/pages.divcontainer.html)
-*   [SplitPane](https://apidocs.mendix.com/modelsdk/latest/classes/pages.splitpane.html)
-*   [ScrollContainer](https://apidocs.mendix.com/modelsdk/latest/classes/pages.scrollcontainer.html)
+Modeler reference guide | Model SDK API docs
+-|
+[Tab page](/refguide6/Tab+page) | [TabPage](https://apidocs.mendix.com/modelsdk/latest/classes/pages.tabpage.html)
+[Layout grid](/refguide6/Layout+grid) | [LayoutGrid](https://apidocs.mendix.com/modelsdk/latest/classes/pages.layoutgrid.html)
+[Container](/refguide6/Container) | [DivContainer](https://apidocs.mendix.com/modelsdk/latest/classes/pages.divcontainer.html)
+[Vertical Split Pane](/refguide6/Vertical+Split+Pane) | [SplitPane](https://apidocs.mendix.com/modelsdk/latest/classes/pages.splitpane.html)
+[Scroll Container](/refguide6/Scroll+Container) | [ScrollContainer](https://apidocs.mendix.com/modelsdk/latest/classes/pages.scrollcontainer.html)
 
 ## Association widgets
 
@@ -212,24 +169,17 @@ The _reference selector_ is an input widget that can be used to display and edit
 
 ![](attachments/15466567/18582318.svg)
 
-#### Modeler reference guide
+Modeler reference guide | Model SDK API docs
+-|
+[Associations](/refguide6/Associations) | [InputReferenceSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.inputreferencesetselector.html)
+[Input Widgets](/refguide6/Input+Widgets) | [ReferenceSetSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.referencesetselector.html)
+[Reference selector](/refguide6/Reference+selector) | [PageSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.pagesettings.html)
+[Reference set selector](/refguide6/Reference+set+selector) | [MicroflowSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.microflowsettings.html)
+[Starting Microflows](/refguide6/Starting+Microflows) |
+[Opening Pages](/refguide6/Opening+Pages) |
 
-*   [Associations](/refguide6/Associations)
-*   [Input Widgets](/refguide6/Input+Widgets)
-*   [Reference selector](/refguide6/Reference+selector)
-*   [Reference set selector](/refguide6/Reference+set+selector)
-*   [Starting Microflows](/refguide6/Starting+Microflows)
-*   [Opening Pages](/refguide6/Opening+Pages)
+## Related Content
 
-#### Model SDK API docs
-
-*   [InputReferenceSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.inputreferencesetselector.html)
-*   [ReferenceSetSelector](https://apidocs.mendix.com/modelsdk/latest/classes/pages.referencesetselector.html)
-*   [PageSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.pagesettings.html)
-*   [MicroflowSettings](https://apidocs.mendix.com/modelsdk/latest/classes/pages.microflowsettings.html)
-
-## External resources
-
-*   [Designing flexible user interfaces with layouts (Mendix developer blog)](https://www.mendix.com/blog/designing-flexible-user-interfaces-layouts/)
-*   [Creating maintainable interfaces with snippets (Mendix developer blog)](https://www.mendix.com/blog/creating-maintainable-interfaces-with-snippets/)
-*   [Introducing support for Glyphicons in Mendix (Mendix developer blog)](https://www.mendix.com/blog/introducing-support-for-glyphicons-in-mendix/)
+*   Blog: [Designing Flexible User Interfaces with Layouts](https://www.mendix.com/blog/designing-flexible-user-interfaces-layouts/)
+*   Blog: [Creating Maintainable Interfaces with Snippets](https://www.mendix.com/blog/creating-maintainable-interfaces-with-snippets/)
+*   Blog: [Introducing Support for Glyphicons in Mendix](https://www.mendix.com/blog/introducing-support-for-glyphicons-in-mendix/)

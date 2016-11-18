@@ -5,7 +5,7 @@ category: "App Store"
 ---
 
 
-This section describes how to download an item from the Mendix App Store and add it to your project using the Mendix Business Modeler.
+This section describes how to download an item from the Mendix App Store and add it to your project using the Mendix Modeler.
 
 ## 1. What type of content can you download with the Business Modeler?
 
@@ -16,7 +16,7 @@ Using the App Store from the Business Modeler enables you can download:
 
 ## 2\. How to install content from the App Store
 
-1.  Open the **Mendix Business Modeler** and make sure you are logged in with your Mendix account credentials.
+1.  Open the **Mendix Modeler** and make sure you are logged in with your Mendix account credentials.
 2.  Open the **project** in which you would like to install a component.
 3.  Open the **App Store** in the Business Modeler by clicking the  ![](attachments/18450039/18582344.png) icon in the menu bar.
 

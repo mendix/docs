@@ -17,7 +17,7 @@ In this how-to you will build your first application and deploy it to the cloud.
 Before starting this how-to, please make sure you have completed the following steps:
 
 *   Create an account with Mendix [here](http://www.mendix.com/try-now/).
-*   Download and install the Mendix Business Modeler [here](https://appstore.home.mendix.com/link/modelers).
+*   Download and install the Mendix Modeler [here](https://appstore.home.mendix.com/link/modelers).
 
 ## 2\. Create a collaboration project
 

@@ -28,7 +28,7 @@ Cloud Foundry is an Open Source Platform-as-a-Service that can run all kinds of 
 
 ## Introduction
 
-**Mendix 5.15** and up integrate with the Cloud Foundry ecosystem in multiple ways. We added support for external filestores to store FileDocuments, we made the session cookie name configurable to support horizontal scaling and we added Cloud Foundry support in the Mendix Business Modeler. Furthermore, we released V1.0 of our [Mendix Cloud Foundry BuildPack](https://github.com/mendix/cf-mendix-buildpack).
+**Mendix 5.15** and up integrate with the Cloud Foundry ecosystem in multiple ways. We added support for external filestores to store FileDocuments, we made the session cookie name configurable to support horizontal scaling and we added Cloud Foundry support in the Mendix Modeler. Furthermore, we released V1.0 of our [Mendix Cloud Foundry BuildPack](https://github.com/mendix/cf-mendix-buildpack).
 
 <table><thead><tr><th class="blueheader confluenceTh">Traditionally there are four platforms for running Mendix apps</th></tr></thead><tbody><tr><td class="confluenceTd">Mendix Cloud</td></tr><tr><td class="confluenceTd">Mendix Cloud Community Edition Sandboxes</td></tr><tr><td class="confluenceTd">On Premises - Linux</td></tr><tr><td colspan="1" class="confluenceTd">On Premises - Windows</td></tr></tbody></table><table><thead><tr><th class="blueheader confluenceTh">With support for Cloud Foundry we are adding the following deployment options</th></tr></thead><tbody><tr><td class="confluenceTd">Pivotal Web Services</td></tr><tr><td class="confluenceTd">HP Helion Development Platform</td></tr><tr><td class="confluenceTd">On Premises - Cloud Foundry</td></tr></tbody></table>
 

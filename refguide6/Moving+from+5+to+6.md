@@ -54,7 +54,7 @@ The following features have been deprecated in Mendix 6\. Using these features i
 
 *   The data types Float and Currency have been deprecated in favor of the high-precision Decimal type. This includes all microflow expression functions that operate on those types, i.e. 'currenciesEqual', 'floatsEqual', 'toFloat', 'formatFloat' and 'parseFloat'.
 *   The specification of project-level access rules for the File and Image system entities has been deprecated. Instead create a specialized entity for each use case and configure access rules for those entities.
-*   With the introduction of cluster support for Mendix Business Server, Java API to store objects into the session have been deprecated. This includes ISession.retain(), ISession.release() and ISession.getData() methods. The alternative solution is to store objects by associating them to System.Session entity. See [custom session data](ISession+API+Usage) for more information and an example.
+*   With the introduction of cluster support for Mendix Runtime, Java API to store objects into the session have been deprecated. This includes ISession.retain(), ISession.release() and ISession.getData() methods. The alternative solution is to store objects by associating them to System.Session entity. See [custom session data](ISession+API+Usage) for more information and an example.
 
 ## Removed deprecated functionality
 

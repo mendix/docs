@@ -7,7 +7,7 @@ space: "Reference Guide 5"
 
 ## Modeler
 
-The Mendix Business Modeler supports Windows XP (Service Pack 3), Vista, 7, and 8(.1). From version 5.21.1 the Modeler also supports Windows 10.
+The Mendix Modeler supports Windows XP (Service Pack 3), Vista, 7, and 8(.1). From version 5.21.1 the Modeler also supports Windows 10.
 
 The following frameworks are automatically installed (if necessary):
 
@@ -62,13 +62,13 @@ You can download JREs here:
 
 [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
-There is an issue since Java 7, causing timeouts when using Web Services with a certain amount of data. You can circumvent this issue by adding the VM params "`-Djava.net.preferIPv4Stack=true`". The Mendix Business Modeler will do this for you but if you are running Mendix on premise on a Windows server you will need to do this yourself.
+There is an issue since Java 7, causing timeouts when using Web Services with a certain amount of data. You can circumvent this issue by adding the VM params "`-Djava.net.preferIPv4Stack=true`". The Mendix Modeler will do this for you but if you are running Mendix on premise on a Windows server you will need to do this yourself.
 
 For more information about this issue, have a look at [http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) or [https://forums.oracle.com/forums/thread.jspa?messageID=9985748](https://forums.oracle.com/forums/thread.jspa?messageID=9985748)
 
 ### Application server
 
-Jetty is built into the Mendix Business Server, an application server is not required.
+Jetty is built into the Mendix Runtime, an application server is not required.
 
 ## Desktop Browsers
 

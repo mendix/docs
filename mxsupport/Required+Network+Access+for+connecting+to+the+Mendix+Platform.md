@@ -5,7 +5,7 @@ category: "Mendix Support"
 ---
 # Required Network Access for connecting to the Mendix Platform
 
-In this how-to you will learn how to provide network access to the Mendix Business modeler and Team Server. The Mendix Business Modeler needs to connect to the Team Server where all projects are saved. Before you continue with this how-to, make sure that you are logged in to Mendix via your browser. You can log in at [http://www.mendix.com/](http://www.mendix.com/). If you do not have an account, you can sign up here: [http://www.mendix.com/try-now/](http://www.mendix.com/try-now/).
+In this how-to you will learn how to provide network access to the Mendix Modeler and Team Server. The Mendix Modeler needs to connect to the Team Server where all projects are saved. Before you continue with this how-to, make sure that you are logged in to Mendix via your browser. You can log in at [http://www.mendix.com/](http://www.mendix.com/). If you do not have an account, you can sign up here: [http://www.mendix.com/try-now/](http://www.mendix.com/try-now/).
 
 **After completing this how-to you will know:**
 
@@ -18,12 +18,12 @@ In this how-to you will learn how to provide network access to the Mendix Busine
 Before starting this how-to, please make sure you have completed the following steps:
 
 *   Create an account with Mendix [here](http://www.mendix.com/try-now/)
-*   Download the Mendix Business Modeler [here](https://appstore.home.mendix.com/index3.html)[](https://appstore.mendix.com/)
+*   Download the Mendix Modeler [here](https://appstore.home.mendix.com/index3.html)[](https://appstore.mendix.com/)
 *   Download or upload a Team Server project in the Business Modeler
 
 <div class="alert alert-info">{% markdown %}
 
-**Download from Team Server:** When creating a new project it is possible to create a local or a Team Server project (see 'Enable Team server' [here](/refguide6/App+Settings+Dialog)). When creating a new Team Server project the Mendix Business Modeler will connect with [https://teamserver.sprintr.com/](https://teamserver.sprintr.com/). When other project team members want to access the Team Server project they will have to download the project from the Team Server in the Mendix Business Modeler (see [Open Project Dialog](/refguide6/Open+Project+Dialog) and [Download From Team Server Dialog](/refguide6/Download+From+Team+Server+Dialog)).
+**Download from Team Server:** When creating a new project it is possible to create a local or a Team Server project (see 'Enable Team server' [here](/refguide6/App+Settings+Dialog)). When creating a new Team Server project the Mendix Modeler will connect with [https://teamserver.sprintr.com/](https://teamserver.sprintr.com/). When other project team members want to access the Team Server project they will have to download the project from the Team Server in the Mendix Modeler (see [Open Project Dialog](/refguide6/Open+Project+Dialog) and [Download From Team Server Dialog](/refguide6/Download+From+Team+Server+Dialog)).
 
 **Upload to Team Server:** If a local project has been created it can be uploaded to the Team Server (see [Upload To Team Server Dialog](/refguide6/Upload+To+Team+Server+Dialog)).
 
@@ -68,8 +68,8 @@ The modeler connects with the domains stated below over HTTPS on port 443, these
 
 [![](attachments/19202983/19399025.jpg)](http://teamserver.sprintr.com)
 
-* [home.mendix.com](http://mendix.com): Enables you to login to and use the Mendix Business Modeler.
+* [home.mendix.com](http://mendix.com): Enables you to login to and use the Mendix Modeler.
 
 * [cloud.mendix.com / cloud.home.mendix.com:](http://mendix.com) Enables you to deploy your app to the Mendix Cloud.
 
-* [teamserver.sprintr.com](http://teamserver.sprintr.com): Enables you to access the Team Server and download/upload/commit Team Server projects in the Mendix Business Modeler.
+* [teamserver.sprintr.com](http://teamserver.sprintr.com): Enables you to access the Team Server and download/upload/commit Team Server projects in the Mendix Modeler.

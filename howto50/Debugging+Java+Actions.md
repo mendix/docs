@@ -5,7 +5,7 @@ space: "Mendix 5 How-to's"
 ---
 # Debugging Java Actions
 
-The Mendix Business Modeler has a built-in debugger to solve errors on Microflow level. A Microflow can be extended with custom Java actions, but because these actions are text based they can only be checked on compile errors. If you run into an error in any of the Java actions, you can easily debug them utilizing the debugger of Eclipse.
+The Mendix Modeler has a built-in debugger to solve errors on Microflow level. A Microflow can be extended with custom Java actions, but because these actions are text based they can only be checked on compile errors. If you run into an error in any of the Java actions, you can easily debug them utilizing the debugger of Eclipse.
 
 # Table of contents
 
@@ -16,7 +16,7 @@ Before you start with this how-to please complete the following prerequisites:
 *   Install [Eclipse](https://eclipse.org/)
 *   Add a Java action and open the project in Eclipse.
 *   Complete the how-to about [extending your application with custom Java](Extending+Your+Application+with+Custom+Java)
-*   Deploy the application for Eclipse by selecting 'Deploy for Eclipse' from the project menu in the Business Modeler. You should redo this every time you make changes in the Mendix Business Modeler.
+*   Deploy the application for Eclipse by selecting 'Deploy for Eclipse' from the project menu in the Business Modeler. You should redo this every time you make changes in the Mendix Modeler.
     ![](attachments/8784371/8946361.png)
 
 ## 2\. Setting Breakpoints

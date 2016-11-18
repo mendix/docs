@@ -36,7 +36,7 @@ Before you can start with this how-to, make sure you have completed the followin
 
 A Published OData service can be used by third-party applications to read data from a Mendix application. In this chapter you will create and configure such a service.
 
-1.  Open the **Mendix Business Modeler**.
+1.  Open the **Mendix Modeler**.
 2.  Add a new folder to the **Expenses** folder called **OData Services**.
 3.  Right click the OData Service folder and select **Add > Published services > Published OData service**.
     ![](attachments/12879520/13402469.png)

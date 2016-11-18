@@ -41,7 +41,7 @@ If you override the location, this property defines the location where to call t
 
 ### Use HTTP authentication
 
-Use HTTP authentication defines whether the Mendix Business Server should use HTTP authentication before the web service is called.
+Use HTTP authentication defines whether the Mendix Runtime should use HTTP authentication before the web service is called.
 
 ### User name
 

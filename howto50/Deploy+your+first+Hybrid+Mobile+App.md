@@ -8,7 +8,7 @@ Mendix already supported mobile web development, but with the 5.10 release of th
 
 ## <a name="Integratewithwebservices-Consumewebservice" rel="nofollow"></a>1\. Preparations
 
-*   Hybrid mobility is available since version 5.10 of the Mendix Business Modeler. If you don't have this (or a higher) version installed on your computer, you can download it from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers).
+*   Hybrid mobility is available since version 5.10 of the Mendix Modeler. If you don't have this (or a higher) version installed on your computer, you can download it from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers).
 *   Mendix Developer App: [Download](/refguide5/Getting+the+Mendix+Developer+App). The Mendix Developer App makes it real easy to see a hybrid application in action without the need to get it approved in the different App Stores.
 
 ## 2\. Opening a hybrid example app

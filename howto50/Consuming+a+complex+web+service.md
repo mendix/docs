@@ -64,7 +64,7 @@ An alternative to using the described Wizard is importing a web service document
 5.  If the imported web service requires authentication, use the **SOAP Header** tab to enter the authentication information using the **Edit value** button.
     ![](attachments/2949201/3080372.png)
     Again there are three input options. The **Simple** option can be used if only static values or variables from the microflow need to be passed to the imported web service. If a Domain-to-XML mapping is needed for authentication, the **Advanced** option should be used. Finally, the **Custom** option allows for the definition of a custom XML header with the possibility to specify parameters.
-6.  Use the **HTTP Authentication** tab to enter HTTP authentication information if the Mendix Business Server should use this before calling the web service.
+6.  Use the **HTTP Authentication** tab to enter HTTP authentication information if the Mendix Runtime should use this before calling the web service.
     ![](attachments/2949201/3080371.png)
 7.  Finally, in the **Output** section, you can configure the handling of the return from the web service call. If the return is a primitive, you can store it in a variable which you can name at **Store in variable**. If the return is a complex XML structure, you can use an XML-to-Domain mapping to map the XML elements to domain model entities. You can also choose to ignore the return.![](attachments/2949201/3080376.png)![](attachments/2949201/3080350.png)
 8.  Your imported web service is now ready to be used in your application.

@@ -23,17 +23,17 @@ The Mendix App Platform consists of the following components:
 *   Dev Center – Web based collaborative environment for design, development and deployment of apps.
 *   App Store – portal with hundreds of publicly available building blocks to speed up app development.
 *   Buzz – online collaboration portal.
-*   Mendix Business Modeler - multi-user modeling studio of the Mendix App Platform.
+*   Mendix Modeler - multi-user modeling studio of the Mendix App Platform.
 *   Team Server - a central repository to manage and version application models.
 *   Build Server - creates deployment packages from artifacts – such as models, style sheets, custom java classes.
 *   MxID - a user management and provisioning service that applies the OpenID standard.
 *   Cloud Portal - manage users and environments, deploy apps to the cloud with a single click and manage and monitor their performance.
-*   Runtime environment – runs applications using a server part, Mendix Business Server, and a client part, Mendix Client.
+*   Runtime environment – runs applications using a server part, Mendix Runtime, and a client part, Mendix Client.
 
 The focus of this document is on the last component, the Mendix runtime environment. More specifically the collaboration between the following parts:
 
 *   Mendix Client - JavaScript client running in the browser of a user.
-*   Mendix Business Server - Java/Scala runtime running on a server, responsible for executing Microflow Logic, business rules, and persisting the objects.
+*   Mendix Runtime - Java/Scala runtime running on a server, responsible for executing Microflow Logic, business rules, and persisting the objects.
 *   RDBMS where the data is persisted.
 *   Optionally a state store to share state between horizontally scaled runtime instances.
 
@@ -42,7 +42,7 @@ Communication between these components is as follows:
 *   The Mendix Client issues 2 types of requests:
     *   Static resources like pages, stylesheets, widgets, images, etc.
     *   Application data related communication. This includes CRUD commands on data, and logic that may require data.
-*   The Mendix Business Server communicates with different RDBMSs using SQL statements handled by a JDBC library. Application data is stored in a ER-model in an RDBMS.
+*   The Mendix Runtime communicates with different RDBMSs using SQL statements handled by a JDBC library. Application data is stored in a ER-model in an RDBMS.
 
 # Basic CRUD communication pattern
 
@@ -56,7 +56,7 @@ The second page can be reached from the first page using the new and edit button
 
 ![](attachments/19202918/19399028.png) ![](attachments/19202918/19399029.png)
 
-The following sections outline the actions involved when executing these pages. As stated earlier, this pattern can be seen in many Mendix applications, but the exact runtime result depends on many details and design decisions taken while building the application using the Mendix Business Modeler. More advanced data models and pages will result in more (complex) queries.
+The following sections outline the actions involved when executing these pages. As stated earlier, this pattern can be seen in many Mendix applications, but the exact runtime result depends on many details and design decisions taken while building the application using the Mendix Modeler. More advanced data models and pages will result in more (complex) queries.
 
 ## Read object required to display object table
 
@@ -70,7 +70,7 @@ Displaying a table of objects consists of the following steps:
 
 A basic sequence diagram would like this:
 
-The Mendix Client uses a REST-like protocol to request data from the Business Server. The following example shows what this looks like when requesting objects from the Employees entity:
+The Mendix Client uses a REST-like protocol to request data from the Mendix Runtime. The following example shows what this looks like when requesting objects from the Employees entity:
 
 ```java
 {
@@ -101,7 +101,7 @@ The Mendix Client uses a REST-like protocol to request data from the Business Se
 
 The XPath expression states which data is needed: this can be an entity, or just some attributes of an entities, as required by the application.
 
-The schema section can be used to specify additional restrictions on what data is required: what attributes, how many records. This approach ensures that the amount of data transferred between Mendix Business Server and Mendix Client is minimized.
+The schema section can be used to specify additional restrictions on what data is required: what attributes, how many records. This approach ensures that the amount of data transferred between Mendix Runtime and Mendix Client is minimized.
 
 This retrieve action results in 2 SQL queries, one to retrieve the data, and one to retrieve the total number of objects.
 
@@ -121,7 +121,7 @@ This retrieve action results in 2 SQL queries, one to retrieve the data, and one
 
 Depending on the data displayed and the domain model (usage of inheritance and row or attribute security), a retrieve may result in more queries or additional where clauses.
 
-The response of the Mendix Business Server to the Mendix Client is as follows:
+The response of the Mendix Runtime to the Mendix Client is as follows:
 
 ```sql
 {"count":2,"mxobjects":[{"objectType":"MyFirstModule.Employee","guid":"281474976710757","attributes":{"Firstname":{"value":"peter1"},"DateOfBirth":{"value":-315622800000},"Jobtitle":{"value":"sales"},"Department":{"value":"sales"},"Lastname":{"value":"jones"&#125;&#125;},{"objectType":"MyFirstModule.Employee","guid":"281474976710657","attributes":{"Firstname":{"value":"piet"},"DateOfBirth":{"value":476406000000},"Jobtitle":{"value":"consultant"},"Department":{"value":"expert services"},"Lastname":{"value":"jansen"&#125;&#125;}]}
@@ -131,9 +131,9 @@ The response of the Mendix Business Server to the Mendix Client is as follows:
 
 The typical create new object flow consists of a number of steps:
 
-*   Instantiate a new object (primary key is generated by the database, Business Server keeps a cache of pks),
+*   Instantiate a new object (primary key is generated by the database, Mendix Runtime keeps a cache of pks),
 *   Get the edit form (if not already cached by the browser),
-*   Save updated object in Mendix Business Server,
+*   Save updated object in Mendix Runtime,
 *   Commit updated object to the database.
 
 ![](attachments/19202918/19399031.png)
@@ -183,7 +183,7 @@ Commit the updates to the database:
 {"action":"commit","params":{"guid":"281474976710757"},"context":[],"profiledata":{"204ee6e9b5eddc0":25&#125;&#125;
 ```
 
-The commit will cause the Mendix Business Server to save the object to the RDBMS. Before the commit, the data is only kept in the Mendix Business Server to optimize performance and minimize impact on the database.
+The commit will cause the Mendix Runtime to save the object to the RDBMS. Before the commit, the data is only kept in the Mendix Runtime to optimize performance and minimize impact on the database.
 
 ```sql
  INSERT INTO "myfirstmodule$employee" ("id",
@@ -207,7 +207,7 @@ The typical _edit existing object_ flow consists of a number of steps:
 *   Select an object in a table of objects page (overview page),
 *   Get the edit form (if not already cached by the browser),
 *   Show object values already available in the browser in the form,
-*   Save changed attributes of the object to the Business Server,
+*   Save changed attributes of the object to the Mendix Runtime,
 *   Retrieve object from database,
 *   Validate object changes,
 *   Commit the changes in the database.
@@ -257,9 +257,9 @@ This will trigger the actual database update and commit.
 The typical delete flow consists of a number of steps:
 
 *   Select an object in a table of objects (overview page),
-*   Send a delete request to the Business Server,
-*   Business Server validates the delete request,
-*   Business Server deletes object from database,
+*   Send a delete request to the Mendix Runtime,
+*   Mendix Runtime validates the delete request,
+*   Mendix Runtime deletes object from database,
 *   Commit the changes in the database,
 *   Inform client that delete has succeeded,
 *   Refresh data and update page.
@@ -308,11 +308,11 @@ Business logic is modeled using microflows in Mendix. Following is a description
 A data grid on a page is often directly linked to an entity in the domain model. An alternative approach is to use a microflow to create a list of objects to be displayed in a data grid.
 
 A microflow retrieving all objects from an entity can be modeled as follows:
-![](attachments/19202918/19399034.png) In this situation, all objects are transported to the browser in one request. A user can page through all the objects without triggering communication to the Business Server.
+![](attachments/19202918/19399034.png) In this situation, all objects are transported to the browser in one request. A user can page through all the objects without triggering communication to the Mendix Runtime.
 
 High level sequence diagram for this scenario looks like this:
 ![](attachments/19202918/19399035.png)
-Json action executed from Mendix Client to Business Server:
+Json action executed from Mendix Client to Mendix Runtime:
 
 ```java
 {"action":"executeaction","params":{"actionname":"MyFirstModule.GetAllEmployees","applyto":"none"},"context":[],"profiledata":{"204f418ba05e7c0":55&#125;&#125;
@@ -330,7 +330,7 @@ SELECT "myfirstmodule$employee"."id",
 FROM "myfirstmodule$employee"
 ```
 
-Response from the Business Server to the Mendix client:
+Response from the Mendix Runtime to the Mendix client:
 
 ```java
 {"actionResult":[{"objectType":"MyFirstModule.Employee","guid":"281474976710657","attributes":{"Firstname":{"value":"piet"},"DateOfBirth":{"value":476406000000},"Jobtitle":{"value":"consultant"},"Department":{"value":"expert services"},"Lastname":{"value":"jansen"&#125;&#125;},{"objectType":"MyFirstModule.Employee","guid":"281474976710957","attributes":{"Firstname":{"value":"wee"},"DateOfBirth":{"value":1454886000000},"Jobtitle":{"value":"ewji"},"Department":{"value":"wew"},"Lastname":{"value":"ewfeew"&#125;&#125;},{"objectType":"MyFirstModule.Employee","guid":"281474976710958
@@ -338,12 +338,12 @@ Response from the Business Server to the Mendix client:
 }]}
 ```
 
-# Business Server internals
+# Mendix Runtime internals
 
 As can be seen in the description of the CRUD scenario, the Mendix platform ensures efficiency while running the application in a number of ways:
 
 *   Only data required for user actions is involved in communication and processing.
-*   An efficient transport protocol is used when communicating between different processes: terse JSON format between Mendix Client and Mendix Business Server, native SQL protocol for RDBMS communication.
+*   An efficient transport protocol is used when communicating between different processes: terse JSON format between Mendix Client and Mendix Runtime, native SQL protocol for RDBMS communication.
 *   Data already available in the Mendix Client is reused if possible (see edit scenario where the data fetched for the data grid is reused in the edit form).
 
 ## Data transformation
@@ -351,15 +351,15 @@ As can be seen in the description of the CRUD scenario, the Mendix platform ensu
 Data is transported between Mendix Client and database as required. The following transformation are applied when going full circle from Mendix Client to database and back again:
 
 *   Data entered by a user in a form is stored in JavaScript objects.
-*   For communication to the Business Server JavaScript objects are serialized to JSON.
-*   The Business Server transforms the JSON objects to java MxObjects.
+*   For communication to the Mendix Runtime JavaScript objects are serialized to JSON.
+*   The Mendix Runtime transforms the JSON objects to java MxObjects.
 *   MxObject properties are bound to SQL statement parameters as needed by SQL queries.
 *   JDBC result set data is transformed to MxObjects.
 *   MxObjects are serialized to JSON when send to the Mendix Client.
 
 ## State
 
-To facilitate (horizontal) scalability, the Mendix platform minimizes the state kept in the Business Server memory. The overall strategy is to only have _dirty objects_ in memory, other objects are cleaned up at the end of a request. Objects are considered dirty if they have been changed, but the changes have not yet been persisted to the RDBMS. The state is maintained per session.
+To facilitate (horizontal) scalability, the Mendix platform minimizes the state kept in the Mendix Runtime memory. The overall strategy is to only have _dirty objects_ in memory, other objects are cleaned up at the end of a request. Objects are considered dirty if they have been changed, but the changes have not yet been persisted to the RDBMS. The state is maintained per session.
 
 ![](attachments/19202918/19399036.png)
 
@@ -377,19 +377,19 @@ This XPath expression is processed in a number of steps to a database query:
 
 ## Scalability
 
-The Mendix Business Server can run as a single process, or it can be horizontally scaled to facilitate more concurrent users, and improve availability. In this scenario multiple Business Modeler instances are running. These instances run independently, there will not be any communication between the processes.
+The Mendix Runtime can run as a single process, or it can be horizontally scaled to facilitate more concurrent users, and improve availability. In this scenario multiple Business Modeler instances are running. These instances run independently, there will not be any communication between the processes.
 
 ### Single instance
 
-Within a single instance, the Scala Akka actor model is used to handle all processing in the Business Server efficiently.
+Within a single instance, the Scala Akka actor model is used to handle all processing in the Mendix Runtime efficiently.
 Using an actor model for concurrency has the following benefits:
 
 *   The number of concurrent users that can be processed is not limited by the amount of threads available. Threads are not allocated per request, but rather by processing responsibility.
 
-To process Mendix Client requests received by the Business Server, the actions required are dispatched to an Akka actor. This actor has a dedicated thread pool. Every (Microflow) action is handled by a separate message to the Action dispatcher actor. This optimizes usage of threads for blocking actions. For example, if an action part of a Microflow calls an external web service and is blocked waiting for a response, this only impacts the threadpool for the Action dispatcher, not for the HTTP request handler.
+To process Mendix Client requests received by the Mendix Runtime, the actions required are dispatched to an Akka actor. This actor has a dedicated thread pool. Every (Microflow) action is handled by a separate message to the Action dispatcher actor. This optimizes usage of threads for blocking actions. For example, if an action part of a Microflow calls an external web service and is blocked waiting for a response, this only impacts the threadpool for the Action dispatcher, not for the HTTP request handler.
 
 ### Multi instance
 
-When running in a horizontally scaled scenario, Business Server state is coordinated via a Redis statestore. At the end of every request all the dirty objects of a session are written to the Redis statestore. At the start of a new request this state is read from the Redis statestore.
+When running in a horizontally scaled scenario, Mendix Runtime state is coordinated via a Redis statestore. At the end of every request all the dirty objects of a session are written to the Redis statestore. At the start of a new request this state is read from the Redis statestore.
 
 ![](attachments/19202918/19399037.png)

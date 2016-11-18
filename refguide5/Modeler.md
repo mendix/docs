@@ -4,7 +4,7 @@ space: "Reference Guide 5"
 ---
 
 
-The Mendix Business Modeler is the place where you create, view and edit your Mendix application. This is called a [project](Project) in the Modeler. A project consists of many documents that are grouped in [modules](Modules) and folders. There are some project-level settings but the core of the functionality will be inside modules. Examples of documents are the [project settings](Project+Settings), [domain model](Domain+Model), [pages](Pages) and [microflows](Microflows). The Modeler can have one project open at the same time. You can, however, open two Modeler instances when necessary.
+The Mendix Modeler is the place where you create, view and edit your Mendix application. This is called a [project](Project) in the Modeler. A project consists of many documents that are grouped in [modules](Modules) and folders. There are some project-level settings but the core of the functionality will be inside modules. Examples of documents are the [project settings](Project+Settings), [domain model](Domain+Model), [pages](Pages) and [microflows](Microflows). The Modeler can have one project open at the same time. You can, however, open two Modeler instances when necessary.
 
 This documentation describes the interface of the Modeler. The rest of the documentation follows the structure of the project explorer.
 
@@ -23,7 +23,7 @@ Dockable window  | Description
 Breakpoints      | Shows all breakpoints in the project. You can enable/disable breakpoints from here.
 Changes          | For [Team Server](Team+Server) projects, this dock shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here.
 Connector        | Shows what elements can be connected to the currently selected element. For example, when a button is a selected, the connector will show microflows that you can drag and drop onto the button to connect them.
-Console          | Shows the output of the Mendix Business Server while running an application.
+Console          | Shows the output of the Mendix Runtime while running an application.
 Debugger         | Added in Mendix 4.3\. This can be used to debug your application.
 Documentation    | Shows the documentation for the currently selected element (if applicable).
 Error List       | Shows the errors and warning currently in your project.
@@ -139,9 +139,9 @@ Help menu                     | Description                                     
 ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------
 Help                          | Open the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | F1
 Help Contents                 | Open the start page of the documentaton in the default web browser.                                                                                    |
-Getting Started               | Open a dialog that offers useful resources for getting started with the Mendix Business Modeler.                                                       |
+Getting Started               | Open a dialog that offers useful resources for getting started with the Mendix Modeler.                                                       |
 Ask a Question                | Opens the community forum in the default web browser.                                                                                                  |
-About Mendix Business Modeler | Show information about the current version of the Mendix Business Modeler.                                                                             |
+About Mendix Modeler | Show information about the current version of the Mendix Modeler.                                                                             |
 
 
 ## General Shortcut Keys

@@ -21,7 +21,7 @@ Before you can start with this how-to, make sure you have completed the followin
 
 | Software | Version used in this how-to |
 | --- | --- |
-| Mendix Business Modeler | 5.20.0 |
+| Mendix Modeler | 5.20.0 |
 | SoapUI | 5.2.0 |
 
 <div class="alert alert-warning">
@@ -34,7 +34,7 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 In the how-to [Exposing a web service](Expose+a+web+service) you already published the microflow _GetCustomers _as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
 
-1.  Open the **Mendix Business Modeler**.
+1.  Open the **Mendix Modeler**.
 2.  Open the project you created in the how-to [Exposing a web service](Expose+a+web+service).
 3.  Create a **Microflow** that creates a customer and returns a boolean. 
 
@@ -51,7 +51,7 @@ In this chapter you will create a new SOAP project.
 1.  Open **SoapUI**.
 2.  Press **CTRL+N** to create a new SOAP project.
     ![](attachments/18448632/18580339.png)
-3.  Run the project locally in the **Mendix Business Modeler**.
+3.  Run the project locally in the **Mendix Modeler**.
 4.  Go to _http://localhost:8080/ws-doc/_.
     ![](attachments/18448632/18580314.png)
 5.  Enter the URL of the WSDL schema in the **Initial WSDL** field in SoapUI.

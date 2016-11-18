@@ -25,7 +25,7 @@ Procedure to simulate cloud security plus APMAgent permissions:
 
 # Needed java permissions
 
-For an on-premises installation, often no additional Java security is set and you don't have to do anything. If, however, your internal IT has set security on the java JVM running the Mendix Business Server you have to arrange additional permissions in Java with your internal IT as described below.
+For an on-premises installation, often no additional Java security is set and you don't have to do anything. If, however, your internal IT has set security on the java JVM running the Mendix Runtime you have to arrange additional permissions in Java with your internal IT as described below.
 Here follow the permissions needed in Java and what they are used for:
 
 For the JVM Browser and measurements based on JMX the following permissions are needed:

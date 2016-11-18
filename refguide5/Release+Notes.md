@@ -53,7 +53,7 @@ Applications are almost never developed and deployed in a green-field. This mean
 
 Mendix 5 makes integrating Mendix applications with each other extremely easy. Instead of calling a web service with the need to define mappings from the domain model to the XML of the service, a Mendix app can directly call the app service as if it is a microflow. The operations of an imported app service are available as microflow activities for the consumer and all input and output data can directly be created as if they are entities in the model of the consumer. This means that using "remote microflows" is as easy as using activities within the app itself. We call this direct app-to-app integration on the model level app services.
 
-App services are forward and backward compatible. This means that the consumer can migrate to a newer version of the Mendix Business Server without the need to change anything. The same holds for the provider, if it is migrated to a new Mendix Business Server version all consumers just keep working.
+App services are forward and backward compatible. This means that the consumer can migrate to a newer version of the Mendix Runtime without the need to change anything. The same holds for the provider, if it is migrated to a new Mendix Runtime version all consumers just keep working.
 
 App services are completely integrated in the Mendix App Platform. If an application is deployed in the Mendix Cloud, the app services that are provided by that app can be 1-click published to the App Store in the "publish" step of the app lifecycle. In the "monitor" step, all consumed app services can be viewed as well as the status of these services. Within the Business Modeler app services can be 1-click consumed via the Community App Store or Enterprise App Store.
 
@@ -69,7 +69,7 @@ If you want to change the interface definition of an app service you need to int
 
 The Community App Store we introduced with Mendix 2.5 has been a great success. With Mendix 5 we extend our App Store with what we call, an Enterprise App Store. This Enterprise App Store allows you to share content with your company only, instead of the complete Mendix Community. Publishing content has become a 1-click process that is fully integrated into the app lifecycle in this version. The Enterprise App Store allows you to easily re-use app models, model parts, widgets, App Services, themes, etc. All content is managed at a single place, including versioning, release notes, and documentation.
 
-Similar to the Enterprise App Store, the Community App Store also contains a new category of elements: App Services. This means you can provide services to the whole community and optionally monetize them using your own implementation of choice. The advantage of sharing services with the community in comparison with model parts is that you only have one instance, which you manage and support yourself. It basically is the difference between Software-as-a-Service (SaaS) and installed software. In this way new business models around your content are much more feasible. Users of the Mendix Business Modeler can 1-click consume all App Services that are available in the App Store and thereby have a lot of out-of-the-box content at their fingertips that will substantially speed-up application development.
+Similar to the Enterprise App Store, the Community App Store also contains a new category of elements: App Services. This means you can provide services to the whole community and optionally monetize them using your own implementation of choice. The advantage of sharing services with the community in comparison with model parts is that you only have one instance, which you manage and support yourself. It basically is the difference between Software-as-a-Service (SaaS) and installed software. In this way new business models around your content are much more feasible. Users of the Mendix Modeler can 1-click consume all App Services that are available in the App Store and thereby have a lot of out-of-the-box content at their fingertips that will substantially speed-up application development.
 
 ## Integrate seamlessly with enterprise development environments using the Platform API
 
@@ -113,7 +113,7 @@ On top of the powerful features mentioned before, Mendix 5 also comes with a lot
 
 Business Server enhancements
 
-*   The Mendix Business Server is now based on OSGi, which enables proper modularity, but more importantly different class loaders for each bundle. This means that libraries in userlib will never conflict with other libraries, even if you use the same library but a different version.
+*   The Mendix Runtime is now based on OSGi, which enables proper modularity, but more importantly different class loaders for each bundle. This means that libraries in userlib will never conflict with other libraries, even if you use the same library but a different version.
 *   From now on, Java Runtime Environment (JRE) 7 is required to run Mendix apps. It is not possible anymore to run Mendix 5 apps on Java 6\. See [here](Moving+from+4+to+5) for more information.
 
 Business Modeler enhancements

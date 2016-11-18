@@ -5,20 +5,20 @@ category: "Reference Documentation"
 ---
 ## Units
 
-If you are familiar with the Mendix Business Modeler you know that a Mendix model is just a collection of documents (microflows, domain models, pages, layouts, modules, folders, etc.) organised in a tree and accessible through the Project Explorer. In the SDK we refer to documents with the generic name `units`. Basically, any item in the Project Explorer of the Business Modeler is a `unit`.
+If you are familiar with the Mendix Modeler you know that a Mendix model is just a collection of documents (microflows, domain models, pages, layouts, modules, folders, etc.) organised in a tree and accessible through the Project Explorer. In the SDK we refer to documents with the generic name `units`. Basically, any item in the Project Explorer of the Business Modeler is a `unit`.
 
 Units come in two flavors:
 
 *   **structural units**: These are the _nodes_ in the project tree and can be (only): the entire project (root), modules and folders. A structural unit mainly provides structure and contains very little information itself.
-*   **model units**: These are the _leafs_ in the project tree: microflows, pages, etc. These can be edited in an editor of the Mendix Business Modeler. Internally, a model unit is a collection of model objects which we call: _elements_.
+*   **model units**: These are the _leafs_ in the project tree: microflows, pages, etc. These can be edited in an editor of the Mendix Modeler. Internally, a model unit is a collection of model objects which we call: _elements_.
 
 ## Elements
 
 Each model unit consists of a tree of elements. Examples of elements are: entities in a domain model, attributes of an entity, activities and arrows in a microflow, widgets in a page, etc.
 
-Each element has an ID that's only internally used and a _type_, such as `Entity` or `Attribute`, etc. It's important to note that, in general, there is not always a 1-to-1 correspondence between things you see in the Mendix Business Modeler and elements. We often need to use more elements than you'd see at first glance in the Mendix Business Modeler, usually to be able to capture the variety of constructs which Mendix supports, and sometimes because it's technically more convenient.
+Each element has an ID that's only internally used and a _type_, such as `Entity` or `Attribute`, etc. It's important to note that, in general, there is not always a 1-to-1 correspondence between things you see in the Mendix Modeler and elements. We often need to use more elements than you'd see at first glance in the Mendix Modeler, usually to be able to capture the variety of constructs which Mendix supports, and sometimes because it's technically more convenient.
 
-As an example: an entity can have a generalization. If it has none, you see "(none)" in the Mendix Business Modeler but in the Entity element this is expressed using an element of type `NoGeneralization`. If the entity has a generalization, then this is expressed through an element of type `Generalization` which holds a reference to the generalization entity. The images that ship with the reference documentation should guide you through these constructions.
+As an example: an entity can have a generalization. If it has none, you see "(none)" in the Mendix Modeler but in the Entity element this is expressed using an element of type `NoGeneralization`. If the entity has a generalization, then this is expressed through an element of type `Generalization` which holds a reference to the generalization entity. The images that ship with the reference documentation should guide you through these constructions.
 
 ### Abstract element types
 
@@ -26,7 +26,7 @@ A lot of elements (or: element types) share features. For example: microflows an
 
 ## Properties
 
-Almost all elements have one or more properties, or rather: their values. The properties are determined by the element's type and the type of the values of a property are determined by the property. These typically show up as a editable values in the Properties pane/view. As before with elements, some properties will be rather technical in nature and (seemingly) do not map 1-to-1/clearly with anything shown in the Mendix Business Modeler. For example the `Location` property of an entity denotes the position where the entity is drawn in the Mendix Business Modeler.
+Almost all elements have one or more properties, or rather: their values. The properties are determined by the element's type and the type of the values of a property are determined by the property. These typically show up as a editable values in the Properties pane/view. As before with elements, some properties will be rather technical in nature and (seemingly) do not map 1-to-1/clearly with anything shown in the Mendix Modeler. For example the `Location` property of an entity denotes the position where the entity is drawn in the Mendix Modeler.
 
 ### References
 

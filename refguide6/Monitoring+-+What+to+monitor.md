@@ -16,7 +16,7 @@ This document is based upon the following assumptions:
 *   User is familiar with the logging guidelines defined in:
     *   [Review log files - MS IIS Server](Review+log+files+-+MS+IIS+Server)
     *   [Review log files - MS SQL Server](Review+log+files+-+MS+SQL+Server)
-    *   [Monitoring - Mendix Business Server](Monitoring+-+Mendix+Business+Server)
+    *   [Monitoring - Mendix Runtime](Monitoring+-+Mendix+Business+Server)
     *   [Logging](Logging)
 *   SQL Server maintenance plans have been set up according to:
     *   [Mendix SQL Maintenance Plans](/howto6/Mendix+SQL+Maintenance+Plans)

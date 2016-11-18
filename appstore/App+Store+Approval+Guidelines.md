@@ -14,7 +14,7 @@ These guidelines are applicable to all the App Store content you want to submit.
 *   Provide an extended description of the content.
 *   Describe typical usage scenario(s).
 *   Describe the features / limitations of your content.
-*   Describe dependencies (e.g. Mendix Business Modeler version, modules, jars, images, styles)
+*   Describe dependencies (e.g. Mendix Modeler version, modules, jars, images, styles)
 *   Describe the necessary steps to install the content.
 *   Describe the necessary steps to configure the content.
 *   Describe the know bugs.

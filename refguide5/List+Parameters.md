@@ -8,7 +8,7 @@ space: "Reference Guide 5"
 In Mendix 5.4.0, a major improvement has been made in app services: now the complete domain model is transferred from the provider to the consumer. As a consequence, parameters of type List in published microflows are handled differently than in the previous release.
 In previous releases, when you published an app service that contained a microflow with a List of _Entity_ input parameter, on the consuming side your domain model would contain a "wrapper" entity with a one-to-many relationship to the _Entity_. ![](attachments/4522374/4751461.png)_microflow with a List input parameter_
 
-With this release, a 1 on 1 copy of the domain model is made. Therefore, this wrapper entity is no longer generated. This is why the Mendix Business Modeler version 5.4.0 will prevent you from publishing an app service with an action that has a List input.
+With this release, a 1 on 1 copy of the domain model is made. Therefore, this wrapper entity is no longer generated. This is why the Mendix Modeler version 5.4.0 will prevent you from publishing an app service with an action that has a List input.
 
 ![](attachments/4522374/4751457.png)_Domain model with a wrapper entity for the Order_
 

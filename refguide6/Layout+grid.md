@@ -7,7 +7,7 @@ parent: "Container+Widgets"
 
 The layout grid is a widget that gives structure to your pages. A layout grid contains one or more rows and each row contains one to twelve columns. Each column has a weight, a number from 1 to 12, and the weights of the columns in a row must add up to 12\. In the browser the layout grid is implemented by the Bootstrap grid system. Reading the official Bootstrap [documentation on the grid system](http://getbootstrap.com/css/#grid) can help you understand what you can build with this widget.
 
-## ![](attachments/16713862/16843978.png?effects=drop-shadow)
+## ![](attachments/16713862/16843978.png)
 
 ## Automatic classes
 
@@ -20,7 +20,7 @@ The layout grid is exported as nested div elements. In addition to the classes y
     <div class="col-md-6"> ... </div>
   </div>
   ...
-</div> 
+</div>
 ```
 
 The outermost `div` represents the widget as a whole and gets the one of the following classes:
@@ -44,7 +44,7 @@ A row in a layout grid contains one or more columns. Each column can be styled w
 
 *   one column with weight 12
 *   two columns, both with weight 6
-*   a column with weight 3 and a column with weight 9. 
+*   a column with weight 3 and a column with weight 9.
 
 There is rarely a use case for more than four columns in a row.
 
@@ -52,7 +52,7 @@ There is rarely a use case for more than four columns in a row.
 
 {% snippet Name+Property.md %}
 
-{% snippet Class+Property.md %} 
+{% snippet Class+Property.md %}
 
 {% snippet Style+Property.md %}
 
@@ -60,7 +60,7 @@ There is rarely a use case for more than four columns in a row.
 
 ### Width
 
-This property determines the width of the layout grid. 
+This property determines the width of the layout grid.
 
 | Value | Description |
 | --- | --- |

@@ -39,8 +39,6 @@ Most people start with creating an application interface for the desktop user. B
 
 ![](attachments/8784246/8946488.png) 
 
-[ ](Layouts+and+Snippets)
-
 ## 2\. Styling
 
 Besides layouts, the application should have a certain look & feel, like a color scheme matching the customer brand. This is accomplished with CSS/Bootstrap with a set of predefined classes which are connected to Mendix page elements through the CSS file. This part of application design is really neat and allows for a lot of flexibility, though it is an advanced step and requires specific CSS & HTML knowledge. For the current scope of this piece of Documentation, we will use the default styling. 

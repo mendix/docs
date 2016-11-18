@@ -116,7 +116,7 @@ Besides entering your stories manually you can also import them easily with an E
 1.  Download the example Excel **[here](attachments/9109796/17662036.xls)**.
 2.  Click **Import/Export** on the Stories page.
 3.  Select **Update stories from Excel**.
-    ![](attachments/9109796/9273496.png?effects=border-simple,blur-border) 
+    ![](attachments/9109796/9273496.png) 
 4.  Click **Browse** to select the example Excel file that contains your user stories.
 5.  Click **Import**.
     ![](attachments/9109796/9273497.png)

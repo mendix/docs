@@ -35,15 +35,13 @@ Layouts are used to structure the user interface, by allowing us to define a def
 
 *   Contains in general only a content placeholder
 
-Most people start with creating an application interface for the desktop user. But it's easy to unlock the app for mobile or tablet users. For each device we can create a set of layouts, which fits the specific layout needs for the device. When device specific layouts have been created, they can be used as templates for creating  the device specific pages. 
+Most people start with creating an application interface for the desktop user. But it's easy to unlock the app for mobile or tablet users. For each device we can create a set of layouts, which fits the specific layout needs for the device. When device specific layouts have been created, they can be used as templates for creating  the device specific pages.
 
-![](attachments/18448710/18581465.png) 
-
-[ ](Layouts+and+Snippets)
+![](attachments/18448710/18581465.png)
 
 ## 2\. Styling
 
-Besides layouts, the application should have a certain look & feel, like a color scheme matching the customer brand. This is accomplished with CSS/Bootstrap with a set of predefined classes which are connected to Mendix page elements through the CSS file. This part of application design is really neat and allows for a lot of flexibility, though it is an advanced step and requires specific CSS & HTML knowledge. For the current scope of this piece of Documentation, we will use the default styling. 
+Besides layouts, the application should have a certain look & feel, like a color scheme matching the customer brand. This is accomplished with CSS/Bootstrap with a set of predefined classes which are connected to Mendix page elements through the CSS file. This part of application design is really neat and allows for a lot of flexibility, though it is an advanced step and requires specific CSS & HTML knowledge. For the current scope of this piece of Documentation, we will use the default styling.
 
 ### 2.1 Creating a new layout
 
@@ -65,7 +63,7 @@ With regions you divide the layout container in sections, in order to position t
 
 A placeholder can be used in a layout to define an area that can be filled in a page that is based on that layout or in another layout that defines that layout as a master layout.
 
-![](attachments/18448710/18581463.png) 
+![](attachments/18448710/18581463.png)
 
 When the area is filled in a page, this will be the content area of that page, showing the dynamic data as specified in that page. When a layout inherits from another layout, the area can filled with a new layout container, in order to define this specialized layout. Or it can be kept empty and then it will be filled in a page.
 
@@ -97,7 +95,7 @@ After defining the structure of the layout with the layout container(s), the reg
 
 ### 4.1 Menu Bar
 
-The menu bar widget shows a configured menu in the form of a horizontal bar with items. Items can have sub items and the main item in the menu can be expanded. Sub items can go only one level deep – one sub item cannot have another sub items again. The Menu Item points to either the page or the microflow that will opened or start when the item is clicked. 
+The menu bar widget shows a configured menu in the form of a horizontal bar with items. Items can have sub items and the main item in the menu can be expanded. Sub items can go only one level deep – one sub item cannot have another sub items again. The Menu Item points to either the page or the microflow that will opened or start when the item is clicked.
 
 ![](attachments/18448710/18581460.png)
 
@@ -115,7 +113,7 @@ The simple menu bar widget shows a configured menu in the form of a horizontal b
 
 ### 4.4 Menu Source
 
-The items that are shown in the menu widget are determined by the menu source. A menu widget is either filled from a menu configured in the Navigation document or a Menu document. 
+The items that are shown in the menu widget are determined by the menu source. A menu widget is either filled from a menu configured in the Navigation document or a Menu document.
 
 ![](attachments/18448710/18581457.png)
 

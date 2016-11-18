@@ -9,7 +9,7 @@ Next to posting jobs on the [Mendix job board](https://developers.mendix.com/job
 2.  You can mark jobs as 'Filled'. This will grey out the job on the job board, but does not remove it. That way the community can see what the job offering was, even though the position has been filled.
 3.  You can delete old/obsolete jobs. Keep in mind that this is permanent and cannot be reversed!
 
-![](attachments/19203315/19399088.png?effects=border-simple,blur-border)
+![](attachments/19203315/19399088.png)
 
 ## Getting a Job Dashboard account
 

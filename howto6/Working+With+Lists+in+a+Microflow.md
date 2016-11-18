@@ -68,14 +68,12 @@ In the previous section you have set up a basic data structure and created some 
     ![](attachments/18448686/18581088.png)
 
     <div class="alert alert-info">
-    With the currents settings your retrieve action gets all the 'Processing' orders in the database. In the next section you will edit this list of orders. 
+    With the currents settings your retrieve action gets all the 'Processing' orders in the database. In the next section you will edit this list of orders.
 
     </div>
 
     You should see a Microflow like this:
     ![](attachments/18448686/18581087.png)
-
-[ ](Working+With+Lists+in+a+Microflow)
 
 ## 3\. Iterate Over a List of Objects
 
@@ -120,7 +118,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
 10.  Click the **Set Processing to Complete** button. The orders with status 'Processing' will now be changed to 'Complete'.
     ![](attachments/18448686/18581113.png)
 
-## 4\. Calculating a Total List Value Using a Variable and a Loop 
+## 4\. Calculating a Total List Value Using a Variable and a Loop
 
 In the previous section you iterated over a filtered list of objects using a 'Loop'. In this section you will use a loop to calculate the total sum of all your orders. To calculate this sum you will generate a variable, which will be changed for every iteration in the loop.  
 
@@ -219,7 +217,7 @@ In the previous section you iterated over a list to add the value of single obje
 
 ## 6\. Filter List of Orders on the City of the Associated Customers
 
-In the previous sections you filtered the list of orders from database on attributes of the order entity itself. In this section you will constrain on attributes over the associated customer object. In the example of this section you will set the order status of all customers in Rotterdam to the status 'Complete'. 
+In the previous sections you filtered the list of orders from database on attributes of the order entity itself. In this section you will constrain on attributes over the associated customer object. In the example of this section you will set the order status of all customers in Rotterdam to the status 'Complete'.
 
 1.  Open the microflow **IVK_SetOrderToComplete**.
     ![](attachments/18448686/18581112.png)

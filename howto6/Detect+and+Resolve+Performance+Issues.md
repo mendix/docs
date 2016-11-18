@@ -98,7 +98,7 @@ The Mendix Business Server and cloud portal offer a number of performance graphs
 
 Once you've identified a slow page, it's pretty easy to identify which microflows are executed on that page. Make sure you look at directly referenced microflows, such as data sources, but also look at any sub-flows, on change event handlers, or domain model event handlers that could be called by your page.
 
-Setting a break point and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action. To get started with debugging microflows, see: [Debugging Microflows](https://world.mendix.com/display/howto6/Debugging+Microflows). If you cannot subjectively identify your slow process, move on to the next step.
+Setting a break point and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action. To get started with debugging microflows, see: [Debugging Microflows](Debugging+Microflows). If you cannot subjectively identify your slow process, move on to the next step.
 
 ### Microflow Time Stamps
 
@@ -134,7 +134,7 @@ Slow retrieves can occur for a number of different reasons. Here are a few:
 *   Complex calculated attributes
 *   Large # of objects retrieved (See batching below)
 
-Additionally, review this article on denormalization and how it can improve your app performance in some cases: [Denormalize Data to Improve Performance](https://world.mendix.com/display/howto6/Denormalize+Data+to+Improve+Performance)
+Additionally, review this article on denormalization and how it can improve your app performance in some cases: [Denormalize Data to Improve Performance](Denormalize+Data+to+Improve+Performance)
 
 ### Slow Database Commits
 

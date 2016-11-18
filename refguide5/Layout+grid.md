@@ -13,7 +13,7 @@ Added in Mendix 5.18.0.
 
 The layout grid is a widget that gives structure to your pages. A layout grid contains one or more rows and each row contains one to twelve columns. Each column has a weight, a number from 1 to 12, and the weights of the columns in a row must add up to 12\. In the browser the layout grid is implemented by the Bootstrap grid system. Reading the official Bootstrap [documentation on the grid system](http://getbootstrap.com/css/#grid) can help you understand what you can build with this widget.
 
-## ![](attachments/14090483/14385185.png?effects=drop-shadow)
+## ![](attachments/14090483/14385185.png)
 
 ## Automatic classes
 

@@ -11,13 +11,13 @@ Mendix allows you to quickly build apps for mobile devices. This document gives 
 
 Every app starts at the home page. You can specify different home pages for phones and tablets in the [Navigation](Navigation) document. The tablet and phone device types can be enabled and disabled separately. If you enable a device, you also have to provide its home page. Apart from the home page, different home page for different user roles can be specified. Also, there is a default menu that can be used in [menu widgets](Menu+Widgets). 
 
-![](attachments/7831584/8028177.png?effects=drop-shadow)
+![](attachments/7831584/8028177.png)
 
 ## Layout
 
 In theory, you can show the whole desktop site on mobile devices but you probably want to have optimized pages with simpler layout and less information. [Layouts](Layouts), introduced in Mendix 5, help you to create pages that suit a device. For mobile device you might want to have a layout that hides the menu in a collapsible [side bar](Sidebar+toggle+button). You will need at least one layout per supported device type (desktop, tablet, phone) to optimize your app but you can create as many as you like.
 
-![](attachments/7831584/8028178.png?effects=drop-shadow)
+![](attachments/7831584/8028178.png)
 
 ## Widgets
 
@@ -31,7 +31,7 @@ Mendix apps can simply be viewed in mobile web browsers. However, some features 
 
 To access native functions of the device, we provide a number of PhoneGap widgets on the App Store. And, of course, you can build your own custom widgets that use native features. PhoneGap widgets can be recognized by their special icon. You can also search for them by using Edit > Find Advanced (Ctrl+Shift+F). 
 
-![](attachments/7831584/8028179.png?effects=drop-shadow)
+![](attachments/7831584/8028179.png)
 
 For more information on hybrid mobile apps, see:
 

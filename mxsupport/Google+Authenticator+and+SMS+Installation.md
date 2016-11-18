@@ -32,22 +32,22 @@ If youwant to transport your deployment package into the production environment,
 2.  Click on the Deploy button underneath the package if you wish to deploy your deployment package to the cloud.
 3.  In the _Environments_ section you can transport the deployment package from the test environment (_if applicable_) to acceptance and then to production by clicking on the 'Transport to Production' button (_marked with a locked icon_).
 
-    ![](attachments/19956271/20218005.png?effects=border-simple,blur-border)
+    ![](attachments/19956271/20218005.png)
 
 4.  When you click on the 'Transport to Production' button a pop window will appear asking you to set up two factor authentication.You will need to choose how you would like to receive your two-factor authentication key.
-    ![](attachments/19956271/20218013.png?effects=border-simple,blur-border)
+    ![](attachments/19956271/20218013.png)
 5.  If you choose to 'Use Google Authenticator', a pop window will open.
 
-    ![](attachments/19956271/20218008.png?effects=border-simple,blur-border)
+    ![](attachments/19956271/20218008.png)
 
     The installation screens are different per mobile phone type. The following installation screenshots are based on an android phone.
 
 6.  Select '_Set up Account_' option in the Google Authenticator main page on your Android phone.
-    ![](attachments/19956271/20218009.png?effects=border-simple,blur-border)
+    ![](attachments/19956271/20218009.png)
 7.  Choose to scan a barcode (_see step 6_) or to manually enter the provided key.
-    ![](attachments/19956271/20218010.png?effects=border-simple,blur-border)
+    ![](attachments/19956271/20218010.png)
 8.  Enter the 6-digit time-based code from step 6 into the Google Authenticator into your Mendix account or scan the barcode and it will activate your two factor authentication.
 9.  Once Google Authenticator is setup, you will be asked to confirm by inserting your security key.
-    ![](attachments/19956271/20218012.png?effects=border-simple,blur-border)
+    ![](attachments/19956271/20218012.png)
 
 10.  Now your account is secure and ready to use. You will get a 6-digit number that expires every minute. You will need to enter that number to validate your account every time you access production.

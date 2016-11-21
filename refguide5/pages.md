@@ -13,12 +13,12 @@ This document describes what pages are for and what kind of widgets can be place
 
 
 
-[![](attachments/4522061/13402397.png)](/refguide5/layouts)
+[![](attachments/4522061/13402397.png)](/refguide5/layout)
 [Layouts](/refguide5/layout)  specify what comes where. Each page is based on a layout. The layout contains widgets and structures that return on every page based on that layout. For example, it is common to put a menu bar widget on a layout so that it is visible on all pages. Layouts are a new feature of Mendix 5\. In Mendix 4 there was one fixed layout that could not be edited inside the Modeler.
 
 
 
-[![](attachments/4522061/13402395.png)](/refguide5/snippets)
+[![](attachments/4522061/13402395.png)](/refguide5/snippet)
 [Snippets](/refguide5/snippet) define reusable interface parts. They can be used on pages and layouts. By using snippets you have to make changes in fewer places if you want to modify the interface. For example, you can have a snippet that is used both in the contents area of a template grid and in a data view. If you add a row to a table in the snippet, that change will show up in both places.
 
 

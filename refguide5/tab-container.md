@@ -2,8 +2,6 @@
 title: "Tab container"
 parent: "container-widgets"
 space: "Reference Guide 5"
-redirect_from:
-  - "/refguide5/Tab+Control"
 ---
 
 

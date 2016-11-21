@@ -2,9 +2,6 @@
 title: "Drop-down"
 parent: "input-widgets"
 space: "Reference Guide 5"
-redirect_from:
-  - "/refguide5/Drop-Down+Widget"
-  - "/refguide5/Drop-Down Widget"
 ---
 
 

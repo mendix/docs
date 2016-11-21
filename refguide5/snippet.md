@@ -2,8 +2,6 @@
 title: "Snippet"
 parent: "pages"
 space: "Reference Guide 5"
-redirect_from:
-  - "/refguide5/Snippets"
 ---
 
 

@@ -1,9 +1,6 @@
 ---
 title: "Mendix Cloud"
 space: "Mendix Cloud"
-redirect_from:
-  - "/mendixcloud/Mendix+Cloud"
-  - "/mendixcloud/Mendix+Cloud+Home"
 ---
 Learn how to deploy your app, either in a Sandbox or to the Cloud. And go check out our AppCloudServices.
 

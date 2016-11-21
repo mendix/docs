@@ -1,8 +1,6 @@
 ---
 title: "Mendix SDK Home"
 space: "Mendix Platform SDK"
-redirect_from:
-  - "/MXSDK/Mendix+SDK+Home"
 ---
 ## Your Learning Path for the Mendix SDK
 

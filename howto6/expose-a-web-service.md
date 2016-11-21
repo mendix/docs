@@ -2,8 +2,6 @@
 title: "Expose a Web Service"
 space: "Mendix 6 How-to's"
 category: "Integration"
-redirect_from:
-- "howto6/Exposing+a+web+service"
 ---
 
 ## 1 Introduction
@@ -51,7 +49,7 @@ To create a published web service, follow these steps:
 
 3. You should now see the **Published Web Service** properties window. Take note of the following tab details:
     * On the **General** tab, you can change the **Name** if necessary:
-    
+
         ![](attachments/18448728/18581714.png)
 
     * On the **Operations** tab, you can see the available operations of the web service (currently the list is empty, so we'll add an operation [6 Publishing a Microflow](#6)):

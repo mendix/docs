@@ -2,8 +2,6 @@
 title: "Design the Architecture"
 space: "Mendix 6 How-to's"
 category: "On-premises Deployment"
-redirect_from:
-  - "/howto6/Architecture+Options"
 ---
 
 ## 1 Introduction

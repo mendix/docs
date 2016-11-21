@@ -1,9 +1,6 @@
 ---
 title: "ATS (Application Test Suite)"
 space: "ATS (Application Test Suite)"
-redirect_from:
-  - "/ATS/Application+Test+Suite+Home"
-  - "/ATS/Reference+Guide"
 ---
 
 The ATS Reference Guide is divided into the following different sections, each describing a certain feature of the application test suite (ATS).

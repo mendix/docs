@@ -2,8 +2,6 @@
 title: "Tips and Tricks"
 space: "Tips and Tricks"
 category: "tips"
-redirect_from:
-  - "/tips/Tips+and+Tricks"
 ---
 This is where our experts reveal their tips and tricks.
 

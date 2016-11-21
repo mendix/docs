@@ -1,8 +1,6 @@
 ---
 title: "API Documentation"
 space: "API documentation"
-redirect_from:
-  - "/apidocs/API+documentation"
 ---
 
 The API documentation is divided into the sections described below.

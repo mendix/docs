@@ -2,8 +2,6 @@
 title: "Group box"
 parent: "container-widgets"
 space: "Reference Guide 5"
-redirect_from:
-  - "/refguide5/Section"
 ---
 
 

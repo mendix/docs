@@ -2,8 +2,6 @@
 title: "Naming Conventions"
 space: "Best Practices"
 category: "Best Practices"
-redirect_from:
-  - "/bestpractices/Naming+conventions+in+Mendix+5"
 ---
 # Naming conventions in Mendix 5
 

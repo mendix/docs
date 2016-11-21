@@ -2,8 +2,6 @@
 title: "App Settings Dialog"
 parent: "dialogs"
 space: "Reference Guide 5"
-redirect_from:
-  - "/refguide5/New+Project+Dialog"
 ---
 The App Settings dialog lets you specify the name of your new app,  the language of your app, whether or not to enable the Team Server, and the location on disk where the project files for your app are stored. These settings are optional; clicking the 'Create app' button will create your app with proper default settings.
 

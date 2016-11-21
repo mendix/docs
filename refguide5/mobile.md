@@ -15,7 +15,7 @@ Every app starts at the home page. You can specify different home pages for phon
 
 ## Layout
 
-In theory, you can show the whole desktop site on mobile devices but you probably want to have optimized pages with simpler layout and less information. [Layouts](/refguide5/layouts), introduced in Mendix 5, help you to create pages that suit a device. For mobile device you might want to have a layout that hides the menu in a collapsible [side bar](/refguide5/sidebar-toggle-button). You will need at least one layout per supported device type (desktop, tablet, phone) to optimize your app but you can create as many as you like.
+In theory, you can show the whole desktop site on mobile devices but you probably want to have optimized pages with simpler layout and less information. [Layouts](/refguide5/layout), introduced in Mendix 5, help you to create pages that suit a device. For mobile device you might want to have a layout that hides the menu in a collapsible [side bar](/refguide5/sidebar-toggle-button). You will need at least one layout per supported device type (desktop, tablet, phone) to optimize your app but you can create as many as you like.
 
 ![](attachments/7831584/8028178.png)
 

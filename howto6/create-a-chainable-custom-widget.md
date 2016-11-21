@@ -3,8 +3,6 @@ title: "Create a Chainable Custom Widget"
 space: "Mendix 6 How-to's"
 category: "Custom Widget Development"
 tags: []
-redirect_from:
-    - "path/old+filename" 
 ---
 
 ## 1 Introduction
@@ -26,7 +24,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 ## 3 What Are You Going to Build?
 
-You are going to build a Mendix app and a widget where you can select a "car" with a certain "coachwork" and "color." To show you what we mean by *chainable widget*, you can't select a coachwork if you do not have a car selected in the app. In addition, you can't select a color if you do not have a coachwork selected. 
+You are going to build a Mendix app and a widget where you can select a "car" with a certain "coachwork" and "color." To show you what we mean by *chainable widget*, you can't select a coachwork if you do not have a car selected in the app. In addition, you can't select a color if you do not have a coachwork selected.
 
 For this how-to, we created a chainable custom widget and Mendix app, and we made the project available from the following GitHub location: [https://github.com/mendix/ChainableCustomWidget](https://github.com/mendix/ChainableCustomWidget).
 
@@ -78,7 +76,7 @@ xsd | Gives you an XSD to verify the properties that you define within your *wid
 
 Let's take a look at the domain model in the Mendix test project:
 
-![](attachments/18448566/18579949.png) 
+![](attachments/18448566/18579949.png)
 
 There is an **AppFlow**, **Car**, **Coachwork**, **CarColor**, **CarImage**, **CoachworkImage**, and **CarColorImage** entity. These are some important details:
 
@@ -201,10 +199,10 @@ A Mendix custom widget can only handle one entity it receives from the data view
     ![](attachments/18448566/18579968.png)
 
 * The **Delete** button is a microflow button from the Mendix framework and has the following option:
-    ![](attachments/18448566/18579969.png) 
+    ![](attachments/18448566/18579969.png)
 
 * You can select a microflow and pass an entity, but you can also pass an enclosing entity, in which case the microflow receives both the Car and Coachwork entities:
-    ![](attachments/18448566/18579970.png) 
+    ![](attachments/18448566/18579970.png)
 
 ### 8.2 Passing Multiple Types of Entities to Microflows from a Custom Mendix Widget
 

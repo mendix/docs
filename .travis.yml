@@ -4,7 +4,7 @@ rvm:
 
 script:
   - bundle exec jekyll build
-  - bundle exec rake test
+  #- bundle exec rake test
 
 cache: bundler
 
@@ -20,6 +20,7 @@ env:
 #sudo: false # route your build to the container-based infrastructure for a faster build
 
 deploy:
+  skip_cleanup: true
   provider: cloudfoundry
   edge: true
   api: $CF_API

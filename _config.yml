@@ -14,6 +14,8 @@ title: "Mendix Documentation"
 timezone: Netherlands/Amsterdam
 permalink: ordinal
 
+production: false
+
 ####################################
 ######        ALGOLIA        #######
 ####################################

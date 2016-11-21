@@ -53,7 +53,7 @@ The Mendix Runtime Cluster requires the following infrastructure:
 
 ![](attachments/14091121/16285745.png)
 
-This means that a Mendix Cluster requires a Load Balancer to distribute the load of the clients over the available Business Server Cluster instances. It also means that all the instances need to connect to the same Mendix Database and that files need to be stored on S3 (see the File Storage topic). The number of instances in your cluster depends on the application, the high availability requirements and its usage. 
+This means that a Mendix Cluster requires a Load Balancer to distribute the load of the clients over the available Mendix Runtime Cluster instances. It also means that all the instances need to connect to the same Mendix Database and that files need to be stored on S3 (see the File Storage topic). The number of instances in your cluster depends on the application, the high availability requirements and its usage. 
 
 ### Pivotal Web Services
 

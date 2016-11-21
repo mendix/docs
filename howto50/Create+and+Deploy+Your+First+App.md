@@ -37,7 +37,7 @@ With Mendix you can manage requirements, build applications under version contro
 6.  Click on **CREATE APP**.
 7.  You've now created your first project. Here you can invite co-workers, share ideas, manage requirements, and deploy and monitor your application. Version control is still empty but we'll fix that in the next step. 
 
-## 3\. Open the project in Business Modeler
+## 3\. Open the project in Mendix Modeler
 
 1.  Click on **Edit in Modeler**.
     ![](attachments/8784276/14385416.png)
@@ -46,7 +46,7 @@ With Mendix you can manage requirements, build applications under version contro
 
 ## 4\. Create a basic data layer
 
-1.  Expand the module **MyFirstModule** in the project explorer on the left side of the Business Modeler.
+1.  Expand the module **MyFirstModule** in the project explorer on the left side of the Mendix Modeler.
 2.  Double click **Domain Model**. This opens the Domain Model document on the right side.
     ![](attachments/8784276/14385417.png) 
 3.  Create an domain model like this. If you don't know how to create an entity, take a look at [this](Creating+a+basic+data+layer) how-to.
@@ -77,7 +77,7 @@ With Mendix you can manage requirements, build applications under version contro
 
 1.  Click the **Save All** icon (CTRL+SHIFT+S) to save all files.
     ![](attachments/8784276/16842819.png)
-2.  Click **Run in Sandbox** to deploy the application to the cloud. The Business Modeler automatically commits the changes to the Team Server (version control).
+2.  Click **Run in Sandbox** to deploy the application to the cloud. The Mendix Modeler automatically commits the changes to the Team Server (version control).
     ![](attachments/14091670/16842817.png)
 3.  As soon as the deployment process is complete, click 'View App' to open the application in your browser.
     ![](attachments/14091670/16842818.png)

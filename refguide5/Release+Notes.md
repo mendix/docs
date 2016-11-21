@@ -13,7 +13,7 @@ End-user expectations about the user experience of the applications they use hav
 
 ### Starting a new project
 
-Mendix 5 puts user experience first. When developers start to model a new application in the Business Modeler, the first thing they need to do is select a sample project to start from. These sample projects, available in the Mendix App Store, contain beautiful layouts specifically designed for desktop, tablet, or smartphone devices. They also contain some example pages to get you started quickly.
+Mendix 5 puts user experience first. When developers start to model a new application in the Mendix Modeler, the first thing they need to do is select a sample project to start from. These sample projects, available in the Mendix App Store, contain beautiful layouts specifically designed for desktop, tablet, or smartphone devices. They also contain some example pages to get you started quickly.
 
 In addition to starting a new project based on a sample project, you can also start a project "from scratch". This means you start the project by creating your own layouts.
 
@@ -21,7 +21,7 @@ In addition to starting a new project based on a sample project, you can also st
 
 Layouts specify the different panes of an application. A layout can, for example, specify a header, a left sidebar, a footer, and a content pane in which the different pages are opened. Layouts can contain every type of widget, but the most used ones will probably be focused on navigation (e.g. menu bars, navigation trees, etc).
 
-Each page (formerly known as a form) refers to a layout. When an end-user navigates to a page the accompanied layout will be shown. Layouts can easily be defined in the Business Modeler. The intuitive layout editor lets you add panes, define alignment and scrolling behaviour, and even lets you nest "layout containers" to create advanced structures.
+Each page (formerly known as a form) refers to a layout. When an end-user navigates to a page the accompanied layout will be shown. Layouts can easily be defined in the Mendix Modeler. The intuitive layout editor lets you add panes, define alignment and scrolling behaviour, and even lets you nest "layout containers" to create advanced structures.
 
 ### Device profiles
 
@@ -55,7 +55,7 @@ Mendix 5 makes integrating Mendix applications with each other extremely easy. I
 
 App services are forward and backward compatible. This means that the consumer can migrate to a newer version of the Mendix Runtime without the need to change anything. The same holds for the provider, if it is migrated to a new Mendix Runtime version all consumers just keep working.
 
-App services are completely integrated in the Mendix App Platform. If an application is deployed in the Mendix Cloud, the app services that are provided by that app can be 1-click published to the App Store in the "publish" step of the app lifecycle. In the "monitor" step, all consumed app services can be viewed as well as the status of these services. Within the Business Modeler app services can be 1-click consumed via the Community App Store or Enterprise App Store.
+App services are completely integrated in the Mendix App Platform. If an application is deployed in the Mendix Cloud, the app services that are provided by that app can be 1-click published to the App Store in the "publish" step of the app lifecycle. In the "monitor" step, all consumed app services can be viewed as well as the status of these services. Within the Mendix Modeler app services can be 1-click consumed via the Community App Store or Enterprise App Store.
 
 Integration has never been this fast and easy!
 
@@ -63,7 +63,7 @@ Integration has never been this fast and easy!
 
 To better support the evolution of multi-app landscapes we introduced explicit versioning for app services in Mendix 5\. A published app service can be available in multiple versions. Once an app service version is published its interface definition is frozen, which means that it cannot be changed anymore. This ensures that consumers will never break when you deploy a new version of your app. You can of course still change the implementation of an app service (e.g. use another microflow) as long as the implementation fulfills the interface definition.
 
-If you want to change the interface definition of an app service you need to introduce a new version of the app service that will be available on a separate URL so that consumers can migrate to this new version at their time of choice. As soon as all consumers have migrated to the new version the old version can be removed. The Business Modeler will check the consistency of the services and their implementation and guide users in handling published app service evolution correctly.
+If you want to change the interface definition of an app service you need to introduce a new version of the app service that will be available on a separate URL so that consumers can migrate to this new version at their time of choice. As soon as all consumers have migrated to the new version the old version can be removed. The Mendix Modeler will check the consistency of the services and their implementation and guide users in handling published app service evolution correctly.
 
 ## Re-use and share content through a new Enterprise App Store
 
@@ -97,7 +97,7 @@ Collaboration is one of the most important aspects of successful application del
 
 ### Dev center
 
-All team members can quickly access applications that run on a test, acceptance, or production environment via the new App Launchpad. Apps can be organized to make the apps that you currently work on quickly accessible. The development and management of these applications has been organized in the Dev Center. Via the Dev Center, users have access to projects, the latest Business Modeler, manage cloud nodes, and the developer forum and (API) documentation.
+All team members can quickly access applications that run on a test, acceptance, or production environment via the new App Launchpad. Apps can be organized to make the apps that you currently work on quickly accessible. The development and management of these applications has been organized in the Dev Center. Via the Dev Center, users have access to projects, the latest Mendix Modeler, manage cloud nodes, and the developer forum and (API) documentation.
 
 ### Publish
 
@@ -105,18 +105,18 @@ In Mendix 5 we added a new step to the application lifecycle: Publish. We made p
 
 ### Build server
 
-Last but not least, we extended the Mendix App Platform with a cloud-based build server. New releases of applications created with Mendix 5 can be created directly from the Team Server without the need to use the Business Modeler. Deploying to the cloud from within the Business Modeler will simply trigger the build server and is therefore quick and easy.
+Last but not least, we extended the Mendix App Platform with a cloud-based build server. New releases of applications created with Mendix 5 can be created directly from the Team Server without the need to use the Mendix Modeler. Deploying to the cloud from within the Mendix Modeler will simply trigger the build server and is therefore quick and easy.
 
 ## Notable other enhancements
 
 On top of the powerful features mentioned before, Mendix 5 also comes with a lot of smaller enhancements.
 
-Business Server enhancements
+Mendix Runtime enhancements
 
 *   The Mendix Runtime is now based on OSGi, which enables proper modularity, but more importantly different class loaders for each bundle. This means that libraries in userlib will never conflict with other libraries, even if you use the same library but a different version.
 *   From now on, Java Runtime Environment (JRE) 7 is required to run Mendix apps. It is not possible anymore to run Mendix 5 apps on Java 6\. See [here](Moving+from+4+to+5) for more information.
 
-Business Modeler enhancements
+Mendix Modeler enhancements
 
 *   Form editor usability has been improved a lot (we think). Can you spot the changes? What is your favorite one?
 *   Ticket 6335, 8085: Allow remembering the sign in credentials.

@@ -32,7 +32,7 @@ When finished the wizard will add to your model, based upon the options selected
 *   The Imported Service
 *   An XML to domain mapping
 *   A microflow in which the web service operation is called
-*   Domain model entities. By default the Business Modeler creates non-persistent entities.
+*   Domain model entities. By default the Mendix Modeler creates non-persistent entities.
 
 ![](attachments/2949201/8946296.png)
 

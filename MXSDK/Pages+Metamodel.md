@@ -12,7 +12,7 @@ Pages are defined based on Layouts (see below). Pages, Layouts and Snippets inhe
 ![](attachments/15466567/18582251.svg)
 
 
-Business Modeler reference guide | Model SDK API docs
+Mendix Modeler reference guide | Model SDK API docs
 -|-
 [Pages overview](/refguide6/Pages) | [Page](https://apidocs.mendix.com/modelsdk/latest/classes/pages.page.html)
 [Page](/refguide6/Page) | [FormBase](https://apidocs.mendix.com/modelsdk/latest/classes/pages.formbase.html)

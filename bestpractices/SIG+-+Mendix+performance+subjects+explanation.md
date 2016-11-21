@@ -377,7 +377,7 @@ This XPath expression is processed in a number of steps to a database query:
 
 ## Scalability
 
-The Mendix Runtime can run as a single process, or it can be horizontally scaled to facilitate more concurrent users, and improve availability. In this scenario multiple Business Modeler instances are running. These instances run independently, there will not be any communication between the processes.
+The Mendix Runtime can run as a single process, or it can be horizontally scaled to facilitate more concurrent users, and improve availability. In this scenario multiple Mendix Modeler instances are running. These instances run independently, there will not be any communication between the processes.
 
 ### Single instance
 

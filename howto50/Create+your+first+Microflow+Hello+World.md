@@ -27,7 +27,7 @@ Microflows can be triggered in many different ways, as explained [here](Triggeri
 
     You should see an empty Microflow like this:
     ![](attachments/8784287/8946316.png)
-2.  Open the toolbox. It should be on the bottom right of the Business Modeler.
+2.  Open the toolbox. It should be on the bottom right of the Mendix Modeler.
     ![](attachments/8784287/8946802.png)
 3.  If you can't find the toolbox, you can re-open it from the view menu.
     ![](attachments/2949137/3080419.png)

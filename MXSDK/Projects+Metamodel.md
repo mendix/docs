@@ -13,7 +13,7 @@ A Mendix app model starts with a project. A project contains several top-level o
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Project](/refguide6/Project)
 *   [Modules](/refguide6/Modules)
@@ -35,7 +35,7 @@ Project-level documents describe project security, project settings, app navigat
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Project Settings](/refguide6/Project+Settings)
 *   [Project Security](/refguide6/Project+Security)
@@ -58,7 +58,7 @@ A module consists of a domain model, model security settings and zero or more do
 
 #### See also
 
-Business Modeler reference guide
+Mendix Modeler reference guide
 
 *   [Domain Model](/refguide6/Domain+Model)
 
@@ -81,7 +81,7 @@ In this sense, Module and Folder behave in the exact same way, and thus inherit 
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Modules](/refguide6/Modules)
 

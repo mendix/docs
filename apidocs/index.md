@@ -6,9 +6,9 @@ redirect_from: "/apidocs/API+documentation"
 
 The API documentation is divided into the sections described below.
 
-# Business Server API
+# Runtime API
 
-Extend your application model using Java. All functionality and information from both the application model and Business Server is accessible via these APIs.
+Extend your application model using Java. All functionality and information from both the application model and Mendix Runtime is accessible via these APIs.
 
 *   [Mendix 6 Server Runtime](https://apidocs.mendix.com/6/runtime/)
 *   [Mendix 5 Server Runtime](https://apidocs.mendix.com/5/runtime/)

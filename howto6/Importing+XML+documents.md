@@ -79,7 +79,7 @@ The XML Schema describes what the possible contents of an XML file are, but we n
 
 ![](attachments/18448727/18581655.png)
 
-9\. Open the connector, it should be in the lower right of the Business Modeler.
+9\. Open the connector, it should be in the lower right of the Mendix Modeler.
 
 ![](attachments/18448727/18581683.png)  
 
@@ -135,7 +135,7 @@ In this section you will create logic to import customers stored in a [XML docum
 
 ![](attachments/18448727/18581669.png)
 
-9\. Open the toolbox. It should be on the bottom right of the Business Modeler. If you can't find the toolbox, you can re-open it from the view menu.
+9\. Open the toolbox. It should be on the bottom right of the Mendix Modeler. If you can't find the toolbox, you can re-open it from the view menu.
 
 10\. Drag an **Import XML** activity from the toolbox to the line between the start and end event. This inserts a new import XML activity.
 

@@ -16,7 +16,7 @@ This section will explain how to create entities and their attributes.
     ![](attachments/2949123/16842754.png) 
 3.  Click once in the domain model editor to create an entity.
     ![](attachments/2949123/16842755.png) 
-    By default the Business Modeler creates a persistent entity. This means that the application's database will be able to store objects of this type of entity.
+    By default the Mendix Modeler creates a persistent entity. This means that the application's database will be able to store objects of this type of entity.
 4.  You can **start typing directly** to change the name of the entity into **Customer.
     ![](attachments/2949123/16842756.png) **
 5.  Right click the entity and select **Add** > **Attribute**.

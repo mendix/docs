@@ -6,7 +6,7 @@ space: "Mendix 5 How-to's"
 
 This how-to will help you to solve problems that may occur when opening a project in the Mendix Modeler.
 
-One possible cause of errors that prevent loading is the usage of the [Mendix Model SDK](/MXSDK/Mendix+SDK+Home) for creating or editing the project. With the Mendix Model SDK it's possible to edit your project in such a way that its format becomes invalid, and in the process preventing the Business Modeler from opening it. When this happens the following message is shown:
+One possible cause of errors that prevent loading is the usage of the [Mendix Model SDK](/MXSDK/Mendix+SDK+Home) for creating or editing the project. With the Mendix Model SDK it's possible to edit your project in such a way that its format becomes invalid, and in the process preventing the Mendix Modeler from opening it. When this happens the following message is shown:
 
 ![](attachments/16711895/16842855.png)
 

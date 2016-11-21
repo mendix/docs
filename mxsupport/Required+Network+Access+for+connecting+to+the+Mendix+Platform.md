@@ -19,7 +19,7 @@ Before starting this how-to, please make sure you have completed the following s
 
 *   Create an account with Mendix [here](http://www.mendix.com/try-now/)
 *   Download the Mendix Modeler [here](https://appstore.home.mendix.com/index3.html)[](https://appstore.mendix.com/)
-*   Download or upload a Team Server project in the Business Modeler
+*   Download or upload a Team Server project in the Mendix Modeler
 
 <div class="alert alert-info">{% markdown %}
 

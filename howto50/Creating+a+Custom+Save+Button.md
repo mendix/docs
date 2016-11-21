@@ -35,7 +35,7 @@ Before you start with this how-to please complete the following prerequisites:
 
     The Microflow should look like this:
     ![](attachments/8784290/8946329.png)
-2.  Open the **toolbox.** It should be on the bottom right of the Business Modeler.
+2.  Open the **toolbox.** It should be on the bottom right of the Mendix Modeler.
     ![](attachments/8784287/8946802.png)
 3.  If you can't find the toolbox, you can re-open it from the view menu.
     ![](attachments/2949137/3080419.png)

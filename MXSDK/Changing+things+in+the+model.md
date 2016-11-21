@@ -23,7 +23,7 @@ function createEntitiy(domainModel : domainmodels.DomainModel, entityName : stri
 	newEntity.name = entityName;
 	domainModel.entities.push(newEntity);
 
-	// location on the canvas in the Business Modeler:
+	// location on the canvas in the Mendix Modeler:
 	newEntity.location = { 'x': 100, 'y': 100 };
 
 	// new attribute (which is by default a string attribute):

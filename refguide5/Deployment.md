@@ -15,7 +15,7 @@ If you plan to deploy to the Mendix 3.0 cloud later on and your project contains
 
 ## Mendix 5.0 Cloud
 
-From within the Business Modeler you can view the cloud slots you have available in the Mendix Cloud. You can upload a deployment archive (mda) to the [Cloud Portal](https://cloud.mendix.com) and from there you can transfer it and start running it. See the documentation on [security constraints](Security+constraints+in+the+Mendix+Cloud) or the  section for more information.
+From within the Mendix Modeler you can view the cloud slots you have available in the Mendix Cloud. You can upload a deployment archive (mda) to the [Cloud Portal](https://cloud.mendix.com) and from there you can transfer it and start running it. See the documentation on [security constraints](Security+constraints+in+the+Mendix+Cloud) or the  section for more information.
 
 ## On-premise
 

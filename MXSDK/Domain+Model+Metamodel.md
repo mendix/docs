@@ -17,7 +17,7 @@ The entities can also relate to each other through generalizations. Finally, you
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler Reference Guide
 
 *   [Domain Model](/refguide6/Domain+Model)
 *   [Entities](/refguide6/Entities)
@@ -46,7 +46,7 @@ Entities can have multiple attributes. Each attribute has a specific type.
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler Reference Guide
 
 *   [Attributes](/refguide6/Attributes)
 
@@ -68,7 +68,7 @@ An `Entity` instance has a `generalization` property with which to define this r
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler Reference Guide
 
 *   [Entities](/refguide6/Entities) (section "Inheritance Properties")
 
@@ -89,7 +89,7 @@ To secure access to the data in a Mendix app, you can define access rules for en
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler Reference Guide
 
 *   [Access rules](/refguide6/Access+Rules)
 
@@ -110,7 +110,7 @@ For each attribute of an entity, it is possible to define a validation rule. The
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler Reference Guide
 
 *   [Validation Rules](/refguide6/Validation+Rules)
 
@@ -130,7 +130,7 @@ An entity can have multiple indexes. Each index consists of a set of indexed att
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler Reference Guide
 
 *   [Indexes](/refguide6/Indexes)
 

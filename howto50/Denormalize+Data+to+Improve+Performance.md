@@ -48,7 +48,7 @@ Let's assume that the domain model contains two related entities called 'Custome
     Let's take a moment to think what the new Microflow should do. We want to calculate the total order amount and store this value at the customer object. As you can see, the current Microflow only has an order object as input parameter. So first we need to retrieve the corresponding customer. Then we need to get all the orders of this customer and calculate the total order amount. As soon as we have the total order amount we need to store it in the customer object. Once you're done, the Microflow should look like this:
     ![](attachments/2949132/3080423.png)
 
-12.  Open the toolbox. It should be in the bottom right of the Business Modeler.
+12.  Open the toolbox. It should be in the bottom right of the Mendix Modeler.
     ![](attachments/2949132/3080393.png)
 13.  If you can't find the toolbox, you can re-open it from the view menu.
     ![](attachments/2949132/3080380.png)

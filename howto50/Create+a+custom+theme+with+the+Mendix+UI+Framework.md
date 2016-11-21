@@ -152,14 +152,14 @@ In this tutorial we are going to create a custom theme based on the website from
 
     ![](attachments/14778678/15794194.png)
 
-    We hope this gives you an understanding how the basics of variables work and the theme structure. In the next chapter we will change the Logo in the Business Modeler and do a small theming adjustment.
-4.  Change the logo in the Business Modeler
+    We hope this gives you an understanding how the basics of variables work and the theme structure. In the next chapter we will change the Logo in the Mendix Modeler and do a small theming adjustment.
+4.  Change the logo in the Mendix Modeler
 
     Use the following logo to replace our "Company Name" in the topbar.
 
     ![](attachments/14778678/15794200.png)
 
-    In the Business Modeler, go to the Layout "Sidebar_Full_Responsive" and replace the image. Leave the caption blank because the caption "amazon" is in the new image. Re-deploy the application and we have a shiny new logo.
+    In the Mendix Modeler, go to the Layout "Sidebar_Full_Responsive" and replace the image. Leave the caption blank because the caption "amazon" is in the new image. Re-deploy the application and we have a shiny new logo.
 
     ![](attachments/14778678/15794202.png)
 

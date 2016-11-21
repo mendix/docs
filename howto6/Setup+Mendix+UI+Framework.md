@@ -17,7 +17,7 @@ In this how-to we will go through how to setup the [Mendix UI Framework](https:/
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
 *   Download the latest [Mendix Modeler](https://appstore.mendix.com)
-*   Download [Scout](http://mhs.github.io/scout-app/) ([or use a different compiler](http://sass-lang.com/install))
+*   Download [Scout](https://github.com/scout-app/scout-app) ([or use a different compiler](http://sass-lang.com/install))
 *   Download text editor [Sublime Text](http://www.sublimetext.com/)
 
 ## 2\. Create a new App in the Mendix Modeler

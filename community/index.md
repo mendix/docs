@@ -1,7 +1,8 @@
 ---
 title: "Community"
 space: "Community"
-redirect_from: "/community/Community"
+redirect_from:
+  - "/community/Community"
 ---
 
 ## Mendix Community Team

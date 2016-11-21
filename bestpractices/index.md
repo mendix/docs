@@ -1,7 +1,8 @@
 ---
 title: "Best Practices"
 space: "Best Practices"
-redirect_from: "/bestpractices/Best+Practices"
+redirect_from:
+  - "/bestpractices/Best+Practices"
 ---
 This category contains documents about best practices when developing with Mendix.
 

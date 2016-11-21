@@ -8,6 +8,7 @@ permalink: robots.txt
 User-agent: *
 # robotstxt.org - if _config production variable is false robots will be disallowed.
 Disallow: /mappings/*
+Disallow: /json/*
 {% if site.production != true %}
   Disallow: /
 {% else %}

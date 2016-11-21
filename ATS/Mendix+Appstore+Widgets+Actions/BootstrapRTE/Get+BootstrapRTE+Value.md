@@ -1,7 +1,6 @@
 ---
 title: "Get BootstrapRTE Value"
 space: "ATS (Application Test Suite)"
-parent: "Checkbox+Set+Selector"
 parent: "BootstrapRTE"
 ---
 ## Description

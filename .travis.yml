@@ -4,7 +4,7 @@ rvm:
 
 script:
   - bundle exec jekyll build
-  #- bundle exec rake test
+  - bundle exec rake test
 
 cache: bundler
 
@@ -28,3 +28,5 @@ deploy:
   organization: $CF_ORG
   space: $CF_SPACE
   appname: $CF_APPNAME
+  on:
+    branch: master

@@ -1,8 +1,6 @@
 ---
 title: "Community"
 space: "Community"
-redirect_from:
-  - "/community/Community"
 ---
 
 ## Mendix Community Team
@@ -15,19 +13,19 @@ The team's goal is to activate and engage the community of Mendix developers in 
 
 These pages provide more information on the various projects that the team is working on:
 
-* [How to Set Up Your Partner Profile](How+to+set+up+your+partner+profile)
-* [How to Set Up Your Profile](How+to+set+up+your+profile)
-* [Feature Requests](Feature+requests)
-* [The Mendix Job Dashboard](The+Mendix+Job+Dashboard)
-* [The Mendix MVP Program](The+Mendix+MVP+program)
+* [How to Set Up Your Partner Profile](/community/how-to-set-up-your-partner-profile)
+* [How to Set Up Your Profile](/community/how-to-set-up-your-profile)
+* [Feature Requests](/community/feature-requests)
+* [The Mendix Job Dashboard](/community/the-mendix-job-dashboard)
+* [The Mendix MVP Program](/community/the-mendix-mvp-program)
 
 ## Community Documentation
 
 These pages provide details on how you can contribute to the Mendix documentation:
 
-* [How to Contribute to the Mendix Documentation](Contribute+to+the+Mendix+Documentation)
-* [Content Writing and Formatting Guidelines](Content+Writing+and+Formatting+Guidelines)
-* [The How-to Template](The+How+to+Template+Page)
+* [How to Contribute to the Mendix Documentation](/community/contribute-to-the-mendix-documentation)
+* [Content Writing and Formatting Guidelines](/community/content-writing-and-formatting-guidelines)
+* [The How-to Template](/community/the-how-to-template-page)
 
 ## More Information
 

@@ -1,5 +1,5 @@
 ---
 title: "Find"
 space: "ATS (Application Test Suite)"
-parent: "Selenium+Actions"
+parent: "selenium-actions"
 ---

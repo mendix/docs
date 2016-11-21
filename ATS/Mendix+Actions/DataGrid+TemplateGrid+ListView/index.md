@@ -1,5 +1,5 @@
 ---
 title: "DataGrid TemplateGrid ListView"
 space: "ATS (Application Test Suite)"
-parent: "Mendix+Actions"
+parent: "mendix-actions"
 ---

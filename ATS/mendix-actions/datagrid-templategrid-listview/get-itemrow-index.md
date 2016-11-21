@@ -16,7 +16,7 @@ Returns the zero-based index of a row in a Datagrid, or of an item in a Template
 
 ## Usage
 
-You have to provide a Item/Row as WebElement. To get the DataGrid row or TemplateGrid/ListView Item, use the actions [Find Item/Row](/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/find-itemrow), [Find Item/Row (by child element)](/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/find-itemrow-by-child) or [Find/Assert DataGrid Row](/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/findassert-datagrid-row).    
+You have to provide a Item/Row as WebElement. To get the DataGrid row or TemplateGrid/ListView Item, use the actions [Find Item/Row](/ATS/mendix-actions/datagrid-templategrid-listview/find-itemrow), [Find Item/Row (by child element)](/ATS/mendix-actions/datagrid-templategrid-listview/find-itemrow-by-child) or [Find/Assert DataGrid Row](/ATS/mendix-actions/datagrid-templategrid-listview/findassert-datagrid-row).    
 
 ## Input Parameters
 

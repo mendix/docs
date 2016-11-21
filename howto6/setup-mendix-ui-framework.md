@@ -35,7 +35,7 @@ In this chapter we will create a new app and select a theme from the New App sel
 
 ## 3\. Configure Scout
 
-**Windows 10 users need to use the following workaround. Click [here](Scout+and+Windows+10+Workaround) for the workaround.**
+**Windows 10 users need to use the following workaround. Click [here](scout-and-windows-10-workaround) for the workaround.**
 
 The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can install [Scout](http://mhs.github.io/scout-app/) to run Sass in a self-contained Ruby environment, letting you effortlessly manage all of your Sass projects with a handful of clicks. This way you don't have to worry about using the terminal. You can still do this if you are familiar with Sass and terminal.
 
@@ -87,12 +87,11 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 
 ## 5\. Related content
 
-*   [Scout and Windows 10 Workaround](Scout+and+Windows+10+Workaround)
-*   [Layouts and Snippets](Layouts+and+Snippets)
-*   [Filtering Data on an Overview Page](Filtering+Data+on+an+Overview+Page)
-*   [Setup Mendix UI Framework with just CSS](Setup+Mendix+UI+Framework+with+just+CSS)
-*   [Setup Mendix UI Framework](Setup+Mendix+UI+Framework)
-*   [Setting Up the Navigation Structure](Setting+Up+the+Navigation+Structure)
-*   [Setup Mendix UI Framework with Koala](Setup+Mendix+UI+Framework+with+Koala)
-*   [Creating your first two Overview and Detail pages](Create+Your+First+Two+Overview+and+Detail+Pages)
-*   [Finding the Root Cause of Runtime Errors](Finding+the+Root+Cause+of+Runtime+Errors)
+*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
+*   [Layouts and Snippets](layouts-and-snippets)
+*   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
+*   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
+*   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
+*   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
+*   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)
+*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)

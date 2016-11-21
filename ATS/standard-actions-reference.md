@@ -8,18 +8,18 @@ This sections provides you with an overview of all predefined actions in ATS. Fo
 ### Mendix Actions
 
 #### DataGrid, TemplateGrid, ListView
-+ [Click DataGrid Row](Mendix+Actions/DataGrid+TemplateGrid+ListView/click-datagrid-row)
-+ [Find/Assert DataGrid Row](Mendix+Actions/DataGrid+TemplateGrid+ListView/findassert-datagrid-row)
-+ [Find Item/Row](Mendix+Actions/DataGrid+TemplateGrid+ListView/find-itemrow)
-+ [Find Item/Row (by child element)](Mendix+Actions/DataGrid+TemplateGrid+ListView/find-itemrow-by-child)
-+ [Find Selected Item/Row](Mendix+Actions/DataGrid+TemplateGrid+ListView/find-selected-itemrow)
-+ [Get Item/Row Index](Mendix+Actions/DataGrid+TemplateGrid+ListView/get-itemrow-index)
-+ [Get Row Cell Value](Mendix+Actions/DataGrid+TemplateGrid+ListView/get-row-cell-value)
-+ [Get Total Item/Row Count](Mendix+Actions/DataGrid+TemplateGrid+ListView/get-total-itemrow-count)
-+ [Get Visible Item/Row Count](Mendix+Actions/DataGrid+TemplateGrid+ListView/get-visible-itemrow-count)
-+ [Set ListView Search](Mendix+Actions/DataGrid+TemplateGrid+ListView/set-listview-search)
-+ [Set Row Cell Value](Mendix+Actions/DataGrid+TemplateGrid+ListView/set-row-cell-value)
-+ [Sort DataGrid](Mendix+Actions/DataGrid+TemplateGrid+ListView/sort-datagrid)
++ [Click DataGrid Row](mendix-actions/datagrid-templategrid-listview/click-datagrid-row)
++ [Find/Assert DataGrid Row](mendix-actions/datagrid-templategrid-listview/findassert-datagrid-row)
++ [Find Item/Row](mendix-actions/datagrid-templategrid-listview/find-itemrow)
++ [Find Item/Row (by child element)](mendix-actions/datagrid-templategrid-listview/find-itemrow-by-child)
++ [Find Selected Item/Row](mendix-actions/datagrid-templategrid-listview/find-selected-itemrow)
++ [Get Item/Row Index](mendix-actions/datagrid-templategrid-listview/get-itemrow-index)
++ [Get Row Cell Value](mendix-actions/datagrid-templategrid-listview/get-row-cell-value)
++ [Get Total Item/Row Count](mendix-actions/datagrid-templategrid-listview/get-total-itemrow-count)
++ [Get Visible Item/Row Count](mendix-actions/datagrid-templategrid-listview/get-visible-itemrow-count)
++ [Set ListView Search](mendix-actions/datagrid-templategrid-listview/set-listview-search)
++ [Set Row Cell Value](mendix-actions/datagrid-templategrid-listview/set-row-cell-value)
++ [Sort DataGrid](mendix-actions/datagrid-templategrid-listview/sort-datagrid)
 
 #### Dialog
 <div class="alert alert-info">
@@ -30,135 +30,135 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 
 </div>
 
-+ [Cancel Dialog](Mendix+Actions/Dialog/cancel-dialog)
-+ [Close Dialog](Mendix+Actions/Dialog/close-dialog)
-+ [Confirm Dialog](Mendix+Actions/Dialog/confirm-dialog)
-+ [Find/Assert Dialog](Mendix+Actions/Dialog/findassert-dialog)
-+ [Get Dialog Message Text](Mendix+Actions/Dialog/get-dialog-message-text)
++ [Cancel Dialog](mendix-actions/dialog/cancel-dialog)
++ [Close Dialog](mendix-actions/dialog/close-dialog)
++ [Confirm Dialog](mendix-actions/dialog/confirm-dialog)
++ [Find/Assert Dialog](mendix-actions/dialog/findassert-dialog)
++ [Get Dialog Message Text](mendix-actions/dialog/get-dialog-message-text)
 
 #### FileManager
 
-+ [Set File Manager](Mendix+Actions/FileManager/set-file-manager)
++ [Set File Manager](mendix-actions/FileManager/set-file-manager)
 
 #### Generic
-+ [Assert Current Page](Mendix+Actions/Generic/assert-current-page)
-+ [Assert Validation Message](Mendix+Actions/Generic/assert-validation-message)
-+ [Click/Doubleclick](Mendix+Actions/Generic/clickdoubleclick)
-+ [Click Widget](Mendix+Actions/Generic/click-widget)
-+ [Click Widget Button](Mendix+Actions/Generic/click-widget-button)
-+ [Find/Assert Widget](Mendix+Actions/Generic/findassert-widget)
-+ [Get Validation Message](Mendix+Actions/Generic/get-validation-message)
-+ [Login](Mendix+Actions/Generic/login)
-+ [Logout](Mendix+Actions/Generic/logout)
-+ [Open Application](Mendix+Actions/Generic/open-application)
++ [Assert Current Page](mendix-actions/generic/assert-current-page)
++ [Assert Validation Message](mendix-actions/generic/assert-validation-message)
++ [Click/Doubleclick](mendix-actions/generic/clickdoubleclick)
++ [Click Widget](mendix-actions/generic/click-widget)
++ [Click Widget Button](mendix-actions/generic/click-widget-button)
++ [Find/Assert Widget](mendix-actions/generic/findassert-widget)
++ [Get Validation Message](mendix-actions/generic/get-validation-message)
++ [Login](mendix-actions/generic/login)
++ [Logout](mendix-actions/generic/logout)
++ [Open Application](mendix-actions/generic/open-application)
 
 #### GroupBox
-+ [Open GroupBox](Mendix+Actions/GroupBox/open-groupbox)
-+ [Close GroupBox](Mendix+Actions/GroupBox/close-groupbox)
-+ [GroupBox is Collapsed](Mendix+Actions/GroupBox/groupbox-is-collapsed)
++ [Open GroupBox](mendix-actions/groupbox/open-groupbox)
++ [Close GroupBox](mendix-actions/groupbox/close-groupbox)
++ [GroupBox is Collapsed](mendix-actions/groupbox/groupbox-is-collapsed)
 
 #### Input
-+ [Assert Checkbox Value](Mendix+Actions/Input/assert-checkbox-value)
-+ [Assert Value](Mendix+Actions/Input/assert-value)
-+ [Dropdown has Option](Mendix+Actions/Input/dropdown-has-option)
-+ [Get Checkbox Value](Mendix+Actions/Input/get-checkbox-value)
-+ [Get Index](Mendix+Actions/Input/get-index)
-+ [Get Value](Mendix+Actions/Input/get-value)
-+ [Set Checkbox Value](Mendix+Actions/Input/set-checkbox-value)
-+ [Set Value](Mendix+Actions/Input/set-value)
-+ [Set Value (by index)](Mendix+Actions/Input/set-value-by-index)
-+ [Toggle Checkbox Value](Mendix+Actions/Input/toggle-checkbox-value)
++ [Assert Checkbox Value](mendix-actions/input/assert-checkbox-value)
++ [Assert Value](mendix-actions/input/assert-value)
++ [Dropdown has Option](mendix-actions/input/dropdown-has-option)
++ [Get Checkbox Value](mendix-actions/input/get-checkbox-value)
++ [Get Index](mendix-actions/input/get-index)
++ [Get Value](mendix-actions/input/get-value)
++ [Set Checkbox Value](mendix-actions/input/set-checkbox-value)
++ [Set Value](mendix-actions/input/set-value)
++ [Set Value (by index)](mendix-actions/input/set-value-by-index)
++ [Toggle Checkbox Value](mendix-actions/input/toggle-checkbox-value)
 
 #### Navigation, Menu
-+ [Click Menu Item](Mendix+Actions/Navigation+Menu/click-menu-item)
-+ [Find/Assert Menu Item](Mendix+Actions/Navigation+Menu/findassert-menu-item)
++ [Click Menu Item](mendix-actions/navigation-menu/click-menu-item)
++ [Find/Assert Menu Item](mendix-actions/navigation-menu/findassert-menu-item)
 
 #### System
-+ [Find Widget Child Node](Mendix+Actions/System/find-widget-child-node)
-+ [Focus WebElement](Mendix+Actions/System/focus-webelement)
-+ [Get current Page Title](Mendix+Actions/System/get-current-page-title)
-+ [Mendix wait](Mendix+Actions/System/mendix-wait)
++ [Find Widget Child Node](mendix-actions/system/find-widget-child-node)
++ [Focus WebElement](mendix-actions/system/focus-webelement)
++ [Get current Page Title](mendix-actions/system/get-current-page-title)
++ [Mendix wait](mendix-actions/system/mendix-wait)
 
 #### Tab
-+ [Assert Active Tab Caption](Mendix+Actions/Tab/assert-active-tab-caption)
-+ [Get Active Tab Caption](Mendix+Actions/Tab/get-active-tab-caption)
++ [Assert Active Tab Caption](mendix-actions/tab/assert-active-tab-caption)
++ [Get Active Tab Caption](mendix-actions/tab/get-active-tab-caption)
 
 ### Mendix Appstore Widgets Actions
 #### BooleanSlider Widget
-+ [Assert BooleanSlider Value](Mendix+Appstore+Widgets+Actions/BooleanSlider/assert-booleanslider-value)
-+ [Get BooleanSlider Value](Mendix+Appstore+Widgets+Actions/BooleanSlider/get-booleanslider-value)
-+ [Set BooleanSlider Value](Mendix+Appstore+Widgets+Actions/BooleanSlider/set-booleanslider-value)
-+ [Toggle BooleanSlider Value](Mendix+Appstore+Widgets+Actions/BooleanSlider/toggle-booleanslider-value)
++ [Assert BooleanSlider Value](mendix-appstore-widgets-actions/booleanslider/assert-booleanslider-value)
++ [Get BooleanSlider Value](mendix-appstore-widgets-actions/booleanslider/get-booleanslider-value)
++ [Set BooleanSlider Value](mendix-appstore-widgets-actions/booleanslider/set-booleanslider-value)
++ [Toggle BooleanSlider Value](mendix-appstore-widgets-actions/booleanslider/toggle-booleanslider-value)
 
 #### BootstrapRTE
-+ [Assert BootstrapRTE Value](Mendix+Appstore+Widgets+Actions/BootstrapRTE/assert-bootstraprte-value)
-+ [Get BootstrapRTE Value](Mendix+Appstore+Widgets+Actions/BootstrapRTE/get-bootstraprte-value)
-+ [Set BootstrapRTE Value](Mendix+Appstore+Widgets+Actions/BootstrapRTE/set-bootstraprte-value)
++ [Assert BootstrapRTE Value](mendix-appstore-widgets-actions/bootstraprte/assert-bootstraprte-value)
++ [Get BootstrapRTE Value](mendix-appstore-widgets-actions/bootstraprte/get-bootstraprte-value)
++ [Set BootstrapRTE Value](mendix-appstore-widgets-actions/bootstraprte/set-bootstraprte-value)
 
 #### Checkbox Set Selector
-+ [Assert Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/assert-checkbox-set-selector-value)
-+ [Find Checkbox Set Selector](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/find-checkbox-set-selector)
-+ [Find Checkbox Set Selector +all](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/find-checkbox-set-selector-all)
-+ [Get Checkbox Set Selector Value +all](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/get-checkbox-set-selector-value)
-+ [Get Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/get-checkbox-set-selector-value-all)
-+ [Set Checkbox Set Selector Value +all](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/set-checkbox-set-selector-value)
-+ [Set Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/set-checkbox-set-selector-value-all)
-+ [Toggle Checkbox Set Selector](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/toggle-checkbox-set-selector-value)
-+ [Toggle Checkbox Set Selector +all](Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/toggle-checkbox-set-selector-value-all)
++ [Assert Checkbox Set Selector Value](mendix-appstore-widgets-actions/checkbox-set-selector/assert-checkbox-set-selector-value)
++ [Find Checkbox Set Selector](mendix-appstore-widgets-actions/checkbox-set-selector/find-checkbox-set-selector)
++ [Find Checkbox Set Selector +all](mendix-appstore-widgets-actions/checkbox-set-selector/find-checkbox-set-selector-all)
++ [Get Checkbox Set Selector Value +all](mendix-appstore-widgets-actions/checkbox-set-selector/get-checkbox-set-selector-value)
++ [Get Checkbox Set Selector Value](mendix-appstore-widgets-actions/checkbox-set-selector/get-checkbox-set-selector-value-all)
++ [Set Checkbox Set Selector Value +all](mendix-appstore-widgets-actions/checkbox-set-selector/set-checkbox-set-selector-value)
++ [Set Checkbox Set Selector Value](mendix-appstore-widgets-actions/checkbox-set-selector/set-checkbox-set-selector-value-all)
++ [Toggle Checkbox Set Selector](mendix-appstore-widgets-actions/checkbox-set-selector/toggle-checkbox-set-selector-value)
++ [Toggle Checkbox Set Selector +all](mendix-appstore-widgets-actions/checkbox-set-selector/toggle-checkbox-set-selector-value-all)
 
 #### CKEditor
-+ [Assert CKEditor Value](Mendix+Appstore+Widgets+Actions/CKEditor/assert-ckeditor-value)
-+ [Get CKEditor Value](Mendix+Appstore+Widgets+Actions/CKEditor/get-ckeditor-value)
-+ [Set CKEditor Value](Mendix+Appstore+Widgets+Actions/CKEditor/set-ckeditor-value)
++ [Assert CKEditor Value](mendix-appstore-widgets-actions/ckeditor/assert-ckeditor-value)
++ [Get CKEditor Value](mendix-appstore-widgets-actions/ckeditor/get-ckeditor-value)
++ [Set CKEditor Value](mendix-appstore-widgets-actions/ckeditor/set-ckeditor-value)
 
 #### Dropdown div converter
-+ [Click Dropdown div converter dropdown button](Mendix+Appstore+Widgets+Actions/Dropdown+Div+Converter/click-dropdown-div-converter-dropdown-button)
-+ [Click Dropdown div converter split button](Mendix+Appstore+Widgets+Actions/Dropdown+Div+Converter/click-dropdown-div-converter-split-button)
++ [Click Dropdown div converter dropdown button](mendix-appstore-widgets-actions/dropdown-div-converter/click-dropdown-div-converter-dropdown-button)
++ [Click Dropdown div converter split button](mendix-appstore-widgets-actions/dropdown-div-converter/click-dropdown-div-converter-split-button)
 
 #### Grid Selector
-+ [Assert Grid Selector Box Value](Mendix+Appstore+Widgets+Actions/Grid+Selector/assert-grid-selector-value)
-+ [Find Grid Selector Box](Mendix+Appstore+Widgets+Actions/Grid+Selector/find-grid-selector-box)
-+ [Get Grid Selector Box Value](Mendix+Appstore+Widgets+Actions/Grid+Selector/get-grid-selector-box-value)
-+ [Set Grid Selector Checkbox Value](Mendix+Appstore+Widgets+Actions/Grid+Selector/set-grid-selector-checkbox-value)
-+ [Set Grid Selector Radiobox Value](Mendix+Appstore+Widgets+Actions/Grid+Selector/set-grid-selector-radiobutton-checked)
-+ [Toggle Grid Selector Checkbox Value](Mendix+Appstore+Widgets+Actions/Grid+Selector/toggle-grid-selector-checkbox-value)
++ [Assert Grid Selector Box Value](mendix-appstore-widgets-actions/grid-selector/assert-grid-selector-value)
++ [Find Grid Selector Box](mendix-appstore-widgets-actions/grid-selector/find-grid-selector-box)
++ [Get Grid Selector Box Value](mendix-appstore-widgets-actions/grid-selector/get-grid-selector-box-value)
++ [Set Grid Selector Checkbox Value](mendix-appstore-widgets-actions/grid-selector/set-grid-selector-checkbox-value)
++ [Set Grid Selector Radiobox Value](mendix-appstore-widgets-actions/grid-selector/set-grid-selector-radiobutton-checked)
++ [Toggle Grid Selector Checkbox Value](mendix-appstore-widgets-actions/grid-selector/toggle-grid-selector-checkbox-value)
 
 #### Input Reference Selector
-+ [Assert InputReferenceSelector Value](Mendix+Appstore+Widgets+Actions/InputReferenceSelector/assert-inputreferenceselector-value)
-+ [Get InputReferenceSelector Value](Mendix+Appstore+Widgets+Actions/InputReferenceSelector/get-inputreferenceselector-value)
-+ [Set InputReferenceSelector Value](Mendix+Appstore+Widgets+Actions/InputReferenceSelector/set-inputreferenceselector-value)
++ [Assert InputReferenceSelector Value](mendix-appstore-widgets-actions/inputreferenceselector/assert-inputreferenceselector-value)
++ [Get InputReferenceSelector Value](mendix-appstore-widgets-actions/inputreferenceselector/get-inputreferenceselector-value)
++ [Set InputReferenceSelector Value](mendix-appstore-widgets-actions/inputreferenceselector/set-inputreferenceselector-value)
 
 #### Simple Checkbox Set Selector
-+ [Assert Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/assert-simple-checkbox-set-selector-value)
-+ [Find Simple Checkbox Set Selector](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/find-simple-checkbox-set-selector)
-+ [Get Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/get-simple-checkbox-set-selector-value)
-+ [Set Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/set-simple-checkbox-set-selector-value)
-+ [Toggle Simple Checkbox Set Selector Value](Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/toggle-simple-checkbox-set-selector-value)
++ [Assert Simple Checkbox Set Selector Value](mendix-appstore-widgets-actions/simple-checkbox-set-selector/assert-simple-checkbox-set-selector-value)
++ [Find Simple Checkbox Set Selector](mendix-appstore-widgets-actions/simple-checkbox-set-selector/find-simple-checkbox-set-selector)
++ [Get Simple Checkbox Set Selector Value](mendix-appstore-widgets-actions/simple-checkbox-set-selector/get-simple-checkbox-set-selector-value)
++ [Set Simple Checkbox Set Selector Value](mendix-appstore-widgets-actions/simple-checkbox-set-selector/set-simple-checkbox-set-selector-value)
++ [Toggle Simple Checkbox Set Selector Value](mendix-appstore-widgets-actions/simple-checkbox-set-selector/toggle-simple-checkbox-set-selector-value)
 
 ### ATS Core Actions
-+ [Assert equals](ATS+Core+Actions/assert-equals)
-+ [Assert not equals](ATS+Core+Actions/assert-not-equals)
-+ [Concatenate String](ATS+Core+Actions/concatenate-string)
-+ [Get Current DateTime String](ATS+Core+Actions/get-current-datetime-string)
-+ [Random Number](ATS+Core+Actions/random-number)
-+ [Random String](ATS+Core+Actions/random-string)
-+ [Set Return Value](ATS+Core+Actions/set-return-value)
++ [Assert equals](ats-core-actions/assert-equals)
++ [Assert not equals](ats-core-actions/assert-not-equals)
++ [Concatenate String](ats-core-actions/concatenate-string)
++ [Get Current DateTime String](ats-core-actions/get-current-datetime-string)
++ [Random Number](ats-core-actions/random-number)
++ [Random String](ats-core-actions/random-string)
++ [Set Return Value](ats-core-actions/set-return-value)
 
 ### Selenium Actions
 #### Find Objects
-+ [Find Element by CSS](Selenium+Actions/Find/find-element-by-css)
-+ [Find Element by ID](Selenium+Actions/Find/find-element-by-id)
-+ [Find Element by Sizzle](Selenium+Actions/Find/find-element-by-sizzle)
++ [Find Element by CSS](selenium-actions/find/find-element-by-css)
++ [Find Element by ID](selenium-actions/find/find-element-by-id)
++ [Find Element by Sizzle](selenium-actions/find/find-element-by-sizzle)
 
 #### Get
-+ [Get Property Value](Selenium+Actions/Get/get-property-value)
-+ [Get Selected Option Index](Selenium+Actions/Get/get-selected-option-index)
-+ [Get Selected Option Text](Selenium+Actions/Get/get-selected-option-text)
-+ [Get Selected Option Value](Selenium+Actions/Get/get-selected-option-value)
-+ [Get Text](Selenium+Actions/Get/get-text)
++ [Get Property Value](selenium-actions/get/get-property-value)
++ [Get Selected Option Index](selenium-actions/get/get-selected-option-index)
++ [Get Selected Option Text](selenium-actions/get/get-selected-option-text)
++ [Get Selected Option Value](selenium-actions/get/get-selected-option-value)
++ [Get Text](selenium-actions/get/get-text)
 
 #### Actions
-+ [Execute JavaScript Integer](Selenium+Actions/execute-javascript-integer)
-+ [Execute JavaScript String](Selenium+Actions/execute-javascript-string)
-+ [Execute JavaScript WebElement](Selenium+Actions/execute-javascript-webelement)
-+ [Send Keys](Selenium+Actions/send-keys)
++ [Execute JavaScript Integer](selenium-actions/execute-javascript-integer)
++ [Execute JavaScript String](selenium-actions/execute-javascript-string)
++ [Execute JavaScript WebElement](selenium-actions/execute-javascript-webelement)
++ [Send Keys](selenium-actions/send-keys)

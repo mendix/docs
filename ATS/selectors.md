@@ -4,7 +4,7 @@ category: "Test Development"
 space: "ATS (Application Test Suite)"
 ---
 
-For the [Find Widget Child Node action](Mendix+Actions/System/find-widget-child-node)  or as part of a script for [Execute JavaScript Integer](Selenium+Actions/execute-javascript-integer), [Execute JavaScript String](Selenium+Actions/execute-javascript-string) and [Execute JavaScript WebElement](Selenium+Actions/execute-javascript-webelement) actions, you will have to use selectors to get a node or WebElement. ATS supports both, JQuery and CSS3 selectors. In addition to that, ATS includes its own selectors. The following summary will give you a short overview of the most commonly used selectors in ATS.
+For the [Find Widget Child Node action](mendix-actions/system/find-widget-child-node)  or as part of a script for [Execute JavaScript Integer](selenium-actions/execute-javascript-integer), [Execute JavaScript String](selenium-actions/execute-javascript-string) and [Execute JavaScript WebElement](selenium-actions/execute-javascript-webelement) actions, you will have to use selectors to get a node or WebElement. ATS supports both, JQuery and CSS3 selectors. In addition to that, ATS includes its own selectors. The following summary will give you a short overview of the most commonly used selectors in ATS.
 
 ### ATS Selectors
 You can use the custom ATS selectors like CSS3 selectors in your custom actions.
@@ -37,9 +37,9 @@ For more informations visit the official [W3C CSS3 selectors reference](http://w
 ### JQuery Selectors
 JQuery uses CSS3 selectors and extends the collection of selectors with its own ones. You can use those in your ATS actions.
 
-If you use JQuery selectors in the [Find Widget Child Node](Mendix+Actions/System/find-widget-child-node) action, you **mustn't** use the *jQuery(...)* or *$(...)* function. Only use simple selectors, without quotation.
+If you use JQuery selectors in the [Find Widget Child Node](mendix-actions/system/find-widget-child-node) action, you **mustn't** use the *jQuery(...)* or *$(...)* function. Only use simple selectors, without quotation.
 
-In the [Execute JavaScript actions](Selenium+Actions/execute-javascript-integer), you will have to use the *jQuery(...)* or *$(...)* function to select a WebElement or node.
+In the [Execute JavaScript actions](selenium-actions/execute-javascript-integer), you will have to use the *jQuery(...)* or *$(...)* function to select a WebElement or node.
 
 The following table shows some of the additional JQuery selectors you can use in ATS.      
 

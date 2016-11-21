@@ -14,6 +14,8 @@ title: "Mendix Documentation"
 timezone: Netherlands/Amsterdam
 permalink: ordinal
 
+production: true
+
 ####################################
 ######        ALGOLIA        #######
 ####################################
@@ -181,8 +183,8 @@ exclude:
   - test.txt
   - run.bat
   - manifest.yml
-  - community/The+How+to+Template.md
-  - community/The+Reference+Guide+Page+Template.md
+  - community/the-how-to-template.md
+  - community/the-reference-guide-page-template.md
   - CONTRIBUTING.md
 
 markdown: kramdown

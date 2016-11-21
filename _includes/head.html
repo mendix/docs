@@ -23,4 +23,10 @@
     <link rel="stylesheet" href="{{ "//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css" }}">
     <link rel="stylesheet" href="{{ "/public/styles/main.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/public/styles/search_autocomplete.css" | prepend: site.baseurl }}">
+
+    {% if site.production == true and page.sitemap != false  %}
+    <meta name="ROBOTS" content="INDEX, FOLLOW">
+      {% else %}
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    {% endif %}
 </head>

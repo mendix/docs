@@ -4,7 +4,7 @@ category: 'Monitoring & Troubleshooting'
 space: "Mendix 5 How-to's"
 ---
 
-The Mendix Modeler has a built-in consistency checker that validates if the application you are building contains any obvious errors. This reduces the amount of technical errors during run-time dramatically, but the Business Modeler isn't able to check if your application contains functional errors. This is mainly a manual practice, but Mendix does support enough tools to make your live easy on this. If you run into a functional error in any of the Microflows, you can easily debug them with the debugger.
+The Mendix Modeler has a built-in consistency checker that validates if the application you are building contains any obvious errors. This reduces the amount of technical errors during run-time dramatically, but the Mendix Modeler isn't able to check if your application contains functional errors. This is mainly a manual practice, but Mendix does support enough tools to make your live easy on this. If you run into a functional error in any of the Microflows, you can easily debug them with the debugger.
 
 ## 1. Preparation
 
@@ -44,7 +44,7 @@ It is best practice to have the debugger and variables windows at different dock
 Breakpoints are points in a microflow where the application will halt execution. This is useful to analyze the application execution and data up to that point. You can add breakpoints at any point in your Microflow by following the steps below.
 
 1.  Run your application locally.
-2.  Open the **Microflow** that needs debugging in the Business Modeler.
+2.  Open the **Microflow** that needs debugging in the Mendix Modeler.
 3.  Right click any of the activities or splits in the Microflow and select **Add breakpoint**. This sets a breakpoint on the selected step in the Microflow, visually represented by a red stop sign.
     ![](attachments/8784357/8946386.png)
     You can open an overview of all the breakpoints by going to **View > Breakpoints**:
@@ -57,7 +57,7 @@ Breakpoints are points in a microflow where the application will halt execution.
 
 1.  **Run** the application.
 2.  Open the application in your browser and do whatever is needed to trigger the Microflow that you want to debug. As an end user of the application you will see progress bar on your application.  As a developer you will notice that the Mendix icon will be flashing on the windows task bar.
-3.  Click the icon on the windows task bar to open the **Business Modeler**. The element with the breakpoint that interrupts this Microflow should be highlighted with a red border.
+3.  Click the icon on the windows task bar to open the **Mendix Modeler**. The element with the breakpoint that interrupts this Microflow should be highlighted with a red border.
     ![](attachments/8784357/8946396.png)
 4.  Open the **Debugger** from the **View** menu.
     ![](attachments/8784357/8946397.png)

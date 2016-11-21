@@ -13,7 +13,7 @@ Microflows have parameters, a return type (the return value is defined in an obj
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   The [Microflows](/refguide6/Microflows) overview page
 *   [Microflow](/refguide6/Microflow), technical information on properties of a microflow
@@ -39,7 +39,7 @@ _For example, a simple microflow could consist of a start event, a single activi
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Activities](/refguide6/Activities)
 *   [Sequence Flow](/refguide6/Sequence+Flow)
@@ -61,7 +61,7 @@ There are several types of objects that can be added to a microflow. One type is
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Activities](/refguide6/Activities)
 *   [Start](/refguide6/Start+Event) and [End](/refguide6/End+Event) events
@@ -92,7 +92,7 @@ Annotation flows are used to connect annotations to other microflow objects.
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Sequence Flow](/refguide6/Sequence+Flow)
 *   [Annotation flow](/refguide6/Annotation+flow)
@@ -117,7 +117,7 @@ An exclusive split conditionally splits on either an expression or a rule. In ca
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Exclusive Split](/refguide6/Exclusive+Split)
 *   [Inheritance Split](/refguide6/Inheritance+Split)
@@ -148,7 +148,7 @@ Object attributes can be updated with a change action, both in a create action a
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Create Object](/refguide6/Create+Object)
 *   [Change Object](/refguide6/Change+Object)
@@ -173,7 +173,7 @@ A retrieve action is either an association-based retrieve or a database-based re
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Retrieve](/refguide6/Retrieve)
 *   [XPath](/refguide6/XPath) constraints
@@ -196,7 +196,7 @@ Microflows can call other microflows by defining a mapping of expressions to par
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Microflow Call](/refguide6/Microflow+Call)
 
@@ -216,7 +216,7 @@ Microflows can trigger behavior in the browser: showing and closing pages, showi
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Show Page](/refguide6/Show+Page) and [Show Home Page](/refguide6/Show+Home+Page)
 *   [Close Page](/refguide6/Close+Form)
@@ -242,7 +242,7 @@ An app service call action points to a specific app service action (which is par
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Consumed App Services](/refguide6/Consumed+App+Services)
 
@@ -265,7 +265,7 @@ See the following diagrams for details on the HTTP configuration, request handli
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Call Web Service](/refguide6/Call+Web+Service)
 
@@ -285,7 +285,7 @@ An HTTP configuration has an optional custom endpoint location, authentication c
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Call Web Service](/refguide6/Call+Web+Service)
 
@@ -309,7 +309,7 @@ A web service operation request needs to be mapped from Mendix app concepts to t
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Call Web Service](/refguide6/Call+Web+Service)
 
@@ -333,7 +333,7 @@ The result of a web service operation needs to be mapped to Mendix app concepts 
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Call Web Service](/refguide6/Call+Web+Service)
 
@@ -354,7 +354,7 @@ Microflow variables can be created and changed with specific actions. A create v
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Create Variable](/refguide6/Create+Variable)
 *   [Change Variable](/refguide6/Change+Variable)
@@ -374,7 +374,7 @@ Lists can be created, changed and deleted with specific actions. List aggregatio
 
 #### See also
 
-Business Modeler reference guide
+Mendix Modeler reference guide
 
 *   [Create List](/refguide6/Create+List)
 *   [Change List](/refguide6/Change+List)
@@ -400,7 +400,7 @@ Lists can be manipulated with different types of operations. Lists can be sorted
 
 #### See also
 
-Business Modeler reference guide
+Mendix Modeler reference guide
 
 *   [List Operation](/refguide6/List+Operation)
 
@@ -421,7 +421,7 @@ Lists can be manipulated with several binary operations, which take two lists as
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [List Operation](/refguide6/List+Operation)
 
@@ -444,7 +444,7 @@ Java action calls point to a specific Java action and have a parameter mapping w
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Java Action Call](/refguide6/Java+Action+Call)
 
@@ -465,7 +465,7 @@ Logging actions target a single log node on a specific log level. The log messag
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Log Message](/refguide6/Log+Message)
 
@@ -507,7 +507,7 @@ Documents are generated from a document template. Such a template has parameters
 
 #### See also
 
-###### Business Modeler reference guide
+###### Mendix Modeler reference guide
 
 *   [Generate Document](/refguide6/Generate+Document)
 

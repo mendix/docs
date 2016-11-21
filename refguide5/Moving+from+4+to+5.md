@@ -12,7 +12,7 @@ This documentation aims to help you to update your project from version 4 to ver
 *   [Converting your project](Moving+from+4+to+5): preparing for conversion and actually converting your project to version 5.
 *   [Java 7 required](Moving+from+4+to+5): from Mendix 5 on Java 7 is required to run the platform.
 *   [Using com.sun packages in custom Java actions](Moving+from+4+to+5): Read this section for more information about using com.sun package in custom Java action code
-*   [Breaking changes in the Business Server API](Moving+from+4+to+5): changes in the API that might affect your Java code.
+*   [Breaking changes in the Mendix Runtime API](Moving+from+4+to+5): changes in the API that might affect your Java code.
 *   [Database synchronization](Moving+from+4+to+5): notes on migrating the data database to Mendix 5.
 *   [Theming](Moving+from+4+to+5): notes on theming Mendix 5 applications.
 *   [Converting App Store Modules](Moving+from+4+to+5): how to convert app store modules to be Mendix 5 compatible.
@@ -51,7 +51,7 @@ Click 'Next' to continue.
 
 #### Confirm App Store modules
 
-In Mendix 5, the Business Modeler keeps track of which modules in your project originate from the App Store. It will also remember the version of these modules, so it can notify you of updates in the future.
+In Mendix 5, the Mendix Modeler keeps track of which modules in your project originate from the App Store. It will also remember the version of these modules, so it can notify you of updates in the future.
 
 You need to tell the Modeler which modules have been downloaded from the App Store in the past. The wizard makes an (accurate) guess based on the names of the modules in your project. You need to confirm the App Store modules by ticking the check box in the 'Confirm' column.
 
@@ -123,7 +123,7 @@ The solution to solve this issue is to manually add jars containing these packag
 
 For more information refer to [Why Developers Should Not Write Programs That Call 'sun' Packages](http://www.oracle.com/technetwork/java/faq-sun-packages-142232.html) .
 
-## Breaking API changes in the Business Server
+## Breaking API changes in the Mendix Runtime
 
 Some changes in Mendix 5 which were necessary to provide certain features caused a few breaking API changes. Those changes are minimal and should only affect very specialized Java code, so the impact should be limited.
 

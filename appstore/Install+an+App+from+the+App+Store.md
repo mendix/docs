@@ -7,9 +7,9 @@ category: "App Store"
 
 This section describes how to download an item from the Mendix App Store and add it to your project using the Mendix Modeler.
 
-## 1. What type of content can you download with the Business Modeler?
+## 1. What type of content can you download with the Mendix Modeler?
 
-Using the App Store from the Business Modeler enables you can download:
+Using the App Store from the Mendix Modeler enables you can download:
 
 *   ready-to-use projects like examples or layouts.
 *   components to enrich your project like modules, widgets or themes.
@@ -18,11 +18,11 @@ Using the App Store from the Business Modeler enables you can download:
 
 1.  Open the **Mendix Modeler** and make sure you are logged in with your Mendix account credentials.
 2.  Open the **project** in which you would like to install a component.
-3.  Open the **App Store** in the Business Modeler by clicking the  ![](attachments/18450039/18582344.png) icon in the menu bar.
+3.  Open the **App Store** in the Mendix Modeler by clicking the  ![](attachments/18450039/18582344.png) icon in the menu bar.
 
     When viewing the App Store overview page you can browse through the content and search for a project or component you want to user in your project. You can use the search bar to find a specific project or component. It's also possible to browse App Store content using categories in order to get a general view of what is available to download. You can press the "Read more" button to view the item details and download option.
     ![](attachments/18450039/18582345.png)
-4.  Once you have found a project to download, or a component you would like to download into your project, you can click the "Download" button which you can find on the detail page of an item. By clicking the download button a project will be created instantly on your disk and opened in the Business Modeler. A module or widget will be downloaded directly into your project.
+4.  Once you have found a project to download, or a component you would like to download into your project, you can click the "Download" button which you can find on the detail page of an item. By clicking the download button a project will be created instantly on your disk and opened in the Mendix Modeler. A module or widget will be downloaded directly into your project.
 
 ## 3\. Where did my download go?
 
@@ -40,7 +40,7 @@ You can't create a new project in an existing repository that is not empty.
 
 ### Widget
 
-A **widget** downloaded from the App Store will be placed in the **widgets folder** in your project structure on disk. By adding the widget to the widgets folder it becomes available to your project in the Business Modeler. You can find and use the widget in your project by clicking the 'Add-On' icon in the toolbar. ![](attachments/18450039/18582346.png)
+A **widget** downloaded from the App Store will be placed in the **widgets folder** in your project structure on disk. By adding the widget to the widgets folder it becomes available to your project in the Mendix Modeler. You can find and use the widget in your project by clicking the 'Add-On' icon in the toolbar. ![](attachments/18450039/18582346.png)
 Deleting a widget should be done by removing the widget(mpk file) from your project's widgets folder on disk.
 
 ### Theme
@@ -50,10 +50,10 @@ Deleting a theme should be done manually by removing the theme(zip file) from yo
 
 ### Module
 
-A **module** downloaded from the App Store will store files on disk if the module contains files, e.g. userlib or resource files. Additionaly, the model part of the module will be added to your project file(mpr file) and will become visible in the project navigation window in the Business Modeler.
-Before the Business Modeler starts downloading you have to specify if you want to add the module as a new or as an existing module. The difference is that for a new module, new entities will be created in your project. When overriding an existing module, the Business Modeler matches up the entities and their attributes with existing entities and their attributes by name. This prevents data from being lost when updating a module.
+A **module** downloaded from the App Store will store files on disk if the module contains files, e.g. userlib or resource files. Additionaly, the model part of the module will be added to your project file(mpr file) and will become visible in the project navigation window in the Mendix Modeler.
+Before the Mendix Modeler starts downloading you have to specify if you want to add the module as a new or as an existing module. The difference is that for a new module, new entities will be created in your project. When overriding an existing module, the Mendix Modeler matches up the entities and their attributes with existing entities and their attributes by name. This prevents data from being lost when updating a module.
 
-When a module contains entities or attributes of which the name is changed, the Business Modeler can't pick up these changes. This will result in new entities/attributes and deletion of renamed entities/attributes, and their respective tables/columns they represent in the database.
+When a module contains entities or attributes of which the name is changed, the Mendix Modeler can't pick up these changes. This will result in new entities/attributes and deletion of renamed entities/attributes, and their respective tables/columns they represent in the database.
 
 ## 4\. Related content
 

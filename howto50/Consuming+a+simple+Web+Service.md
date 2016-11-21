@@ -19,7 +19,7 @@ A WSDL describes the operations of a web service and can be imported in the Mend
     ![](attachments/7831673/8028246.png)
 5.  Enter `http://www.w3schools.com/xml/tempconvert.asmx?WSDL` as URL and click **Import**. You will see a popup asking you to select a web service port.
     ![](attachments/7831673/17662027.png)
-6.  Click **OK** to select the default. The Business Modeler should now import the operations: **CelsiusToFahrenheit** and **FahrenheitToCelcius**.
+6.  Click **OK** to select the default. The Mendix Modeler should now import the operations: **CelsiusToFahrenheit** and **FahrenheitToCelcius**.
     ![](attachments/7831673/8028247.png)
 7.  Click **OK** to save the consumed web service.
 
@@ -32,7 +32,7 @@ A WSDL describes the operations of a web service and can be imported in the Mend
 3.  Click **OK** and enter a name for the new microflow, e.g. _ConvertCelsiusToFahrenheit_.
 4.  Click **OK** again. You should now see an empty microflow.
     ![](attachments/7831673/8028250.png)
-5.  Open the toolbox. It should be on the bottom right of the Business Modeler.
+5.  Open the toolbox. It should be on the bottom right of the Mendix Modeler.
     ![](attachments/8784287/8946802.png)
 6.  If you can't find the toolbox, you can re-open it from the view menu.
     ![](attachments/7831673/8945708.png)

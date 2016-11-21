@@ -30,9 +30,9 @@ Before you can deploy an app to the cloud, make sure you meet the following requ
 
 ## 3\. Deploying the application to the Mendix cloud
 
-There are two ways to deploy the application to the Mendix Cloud. The first option is directly via the Business Modeler and the second option is to do it in the cloud portal.
+There are two ways to deploy the application to the Mendix Cloud. The first option is directly via the Mendix Modeler and the second option is to do it in the cloud portal.
 
-### 3.1 Deploy via Business Modeler
+### 3.1 Deploy via Mendix Modeler
 
 1.  Go to Project and click "Deploy to licensed cloud node", or press Ctrl+F5![](attachments/18448697/18581233.png)
 

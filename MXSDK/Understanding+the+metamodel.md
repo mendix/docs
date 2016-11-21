@@ -5,7 +5,7 @@ category: "Reference Documentation"
 ---
 ## Units
 
-If you are familiar with the Mendix Modeler you know that a Mendix model is just a collection of documents (microflows, domain models, pages, layouts, modules, folders, etc.) organised in a tree and accessible through the Project Explorer. In the SDK we refer to documents with the generic name `units`. Basically, any item in the Project Explorer of the Business Modeler is a `unit`.
+If you are familiar with the Mendix Modeler you know that a Mendix model is just a collection of documents (microflows, domain models, pages, layouts, modules, folders, etc.) organised in a tree and accessible through the Project Explorer. In the SDK we refer to documents with the generic name `units`. Basically, any item in the Project Explorer of the Mendix Modeler is a `unit`.
 
 Units come in two flavors:
 

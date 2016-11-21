@@ -66,7 +66,7 @@ The XML Schema describes what the contents of an XML document should be, but we 
 7.  Click **OK**. You should now see the first part of the import mapping like this:
     ![](attachments/8782441/8946658.png)
 
-8.  Open the connector, it should be in the bottom right corner of the Business Modeler.
+8.  Open the connector, it should be in the bottom right corner of the Mendix Modeler.
     ![](attachments/8782441/8946635.png)
 
     If you can't find the connector, you can re-open it from the view menu. 
@@ -110,7 +110,7 @@ In this section we'll explain how you can create logic to export customers store
     ![](attachments/8782441/17662021.png)
 
 9.  Select the input parameter and delete it.
-10.  Open the toolbox. It should be on the bottom right of the Business Modeler. If you can't find the toolbox, you can re-open it from the view menu.
+10.  Open the toolbox. It should be on the bottom right of the Mendix Modeler. If you can't find the toolbox, you can re-open it from the view menu.
 11.  Drag a **Retrieve** activity from the toolbox to the line between the start and end event.
 12.  Double click the activity to open the properties editor.
     ![](attachments/8782441/8946445.png)

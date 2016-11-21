@@ -26,7 +26,7 @@ Go to the [Mendix App Store](https://appstore.home.mendix.com) and locate the Co
 4.  Click **Run in Sandbox** to deploy this application to the Mendix Cloud.
     ![](attachments/8782127/16285893.png) 
 
-    The Business Modeler will notify you as soon as the application is deployed.
+    The Mendix Modeler will notify you as soon as the application is deployed.
 5.  Open the **View App** menu by clicking the small arrow and select **View Hybrid Mobile App**.
     ![](attachments/8782127/16285894.png) 
 

@@ -38,7 +38,7 @@ Please follow these prerequisites before starting this how-to:
 
 *   Mendix Deployment Archive (MDA) of your Mendix Project
 
-*   Mendix Server Distribution corresponding with your Business Modeler ([https://appstore.mendix.com](https://appstore.home.mendix.com/link/modelers))
+*   Mendix Server Distribution corresponding with your Mendix Modeler ([https://appstore.mendix.com](https://appstore.home.mendix.com/link/modelers))
 
 *   Database with sufficient security rights
 
@@ -100,7 +100,7 @@ In this chapter you will deploy a Mendix App using the Service Console.
 5.  In the Project Files screen first click **Select App**.
     ![](attachments/10813802/11042880.png)
 
-6.  Now select the **MDA** file that was created in the Business Modeler and contains your application logic.
+6.  Now select the **MDA** file that was created in the Mendix Modeler and contains your application logic.
 
     After the installation of your MDA file, you will see which Mendix Server (Mendix Runtime) version is needed.
 

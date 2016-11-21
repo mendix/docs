@@ -19,7 +19,7 @@ To follow this guide you will need to have access to a[ Pivotal Web Services](h
 
 ## 2. Configure Cloud Foundry in the Modeler
 
-To push a Mendix app to Cloud Foundry you will have to configure the settings in the [Business Modeler](https://appstore.home.mendix.com/link/modelers).
+To push a Mendix app to Cloud Foundry you will have to configure the settings in the [Mendix Modeler](https://appstore.home.mendix.com/link/modelers).
 
 1.  Open the **Mendix Modeler**.
 2.  Go to **Run > Edit Pivotal Settings**:
@@ -108,7 +108,7 @@ To enable persistent file storage you need to configure the S3 object store whic
 
 ## 6\. Deploy your App to Cloud Foundry
 
-1.  Open the **Business Modeler**.
+1.  Open the **Mendix Modeler**.
 2.  Open the **App** you want to deploy to Cloud Foundry.
 3.  Click the arrow for the Run options and select **Run on Cloud Foundry**.
     ![](attachments/18448647/18580549.png) 

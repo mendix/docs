@@ -16,7 +16,7 @@ Before you start with this how-to please complete the following prerequisites:
 *   Install [Eclipse](https://eclipse.org/)
 *   Add a Java action and open the project in Eclipse.
 *   Complete the how-to about [extending your application with custom Java](Extending+Your+Application+with+Custom+Java)
-*   Deploy the application for Eclipse by selecting 'Deploy for Eclipse' from the project menu in the Business Modeler. You should redo this every time you make changes in the Mendix Modeler.
+*   Deploy the application for Eclipse by selecting 'Deploy for Eclipse' from the project menu in the Mendix Modeler. You should redo this every time you make changes in the Mendix Modeler.
     ![](attachments/8784371/8946361.png)
 
 ## 2\. Setting Breakpoints

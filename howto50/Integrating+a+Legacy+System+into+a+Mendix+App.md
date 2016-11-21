@@ -103,7 +103,7 @@ For this tutorial, we will use the publicly available Google Books API.  Detail
 
     * Creates a new Response **Object**
     * Makes the REST call to the API using the following **Target**
-    [](attachments/12878647/13402332.png)
+    ![](attachments/12878647/13402332.png)
     * Calls a **Sub-Microflow** that **retrieves** all the Items associated with the response.  Each Item then has all associated Volumes retrieved.
     ![](attachments/12878647/13402340.png)
     * Iterate through the VolumeList and make a new BookResult object to display our search results.

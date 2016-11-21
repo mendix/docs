@@ -3,12 +3,13 @@ layout: null
 permalink: robots.txt
 ---
 # filter pages and documents for the noindex key
+User-agent: *
+Disallow: /mappings/
+Disallow: /json/
+Sitemap: https://docs.mendix.com/sitemap.xml
+# robotstxt.org - if _config production variable is false robots will be disallowed.
 {% assign noindexPages = site.pages | where: 'sitemap', false %}
 {% assign noindexDocuments = site.documents | where: 'sitemap', false %}
-User-agent: *
-# robotstxt.org - if _config production variable is false robots will be disallowed.
-Disallow: /mappings/*
-Disallow: /json/*
 {% if site.production != true %}
   Disallow: /
 {% else %}

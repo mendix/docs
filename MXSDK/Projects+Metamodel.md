@@ -11,19 +11,12 @@ A Mendix app model starts with a project. A project contains several top-level o
 
 ![](attachments/16057002/16842800.svg)
 
-#### See also
-
-###### Mendix Modeler reference guide
-
-*   [Project](/refguide6/Project)
-*   [Modules](/refguide6/Modules)
-
-###### Model SDK API docs
-
-*   TypeScript module [projects](https://apidocs.mendix.com/modelsdk/latest/modules/projects.html)
-*   [Project](https://apidocs.mendix.com/modelsdk/latest/classes/projects.project.html)
-*   [Module](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html)
-*   [ProjectDocument](https://apidocs.mendix.com/modelsdk/latest/classes/projects.projectdocument.html)
+Modeler Reference Guide | Model SDK API docs
+-|-
+[Project](/refguide6/Project) |TypeScript module [projects](https://apidocs.mendix.com/modelsdk/latest/modules/projects.html)
+[Modules](/refguide6/Modules) |[Project](https://apidocs.mendix.com/modelsdk/latest/classes/projects.project.html)
+|[Module](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html)
+|[ProjectDocument](https://apidocs.mendix.com/modelsdk/latest/classes/projects.projectdocument.html)
 
 ### Project documents
 
@@ -33,18 +26,14 @@ Project-level documents describe project security, project settings, app navigat
 
 ![](attachments/16057002/16842801.svg)
 
-#### See also
+Modeler Reference Guide | Model SDK API docs
+-|-
+[Project Settings](/refguide6/Project+Settings) |[ProjectDocument](https://apidocs.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy
+[Project Security](/refguide6/Project+Security) |
+[Navigation](/refguide6/Navigation) |
+[System Texts](/refguide6/System+Texts) |
 
-###### Mendix Modeler reference guide
 
-*   [Project Settings](/refguide6/Project+Settings)
-*   [Project Security](/refguide6/Project+Security)
-*   [Navigation](/refguide6/Navigation)
-*   [System Texts](/refguide6/System+Texts)
-
-###### Model SDK API docs
-
-*   [ProjectDocument](https://apidocs.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy
 
 ## Modules
 
@@ -56,18 +45,10 @@ A module consists of a domain model, model security settings and zero or more do
 
 ![](attachments/16057002/18582255.svg)
 
-#### See also
-
-Mendix Modeler reference guide
-
-*   [Domain Model](/refguide6/Domain+Model)
-
-*   [Module Security](/refguide6/Module+Security)
-
-Model SDK API docs
-
-*   Property [`domainModel`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html#domainmodel) of Project
-*   Property [`moduleSecurity`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html#modulesecurity) of Project
+Modeler Reference Guide | Model SDK API docs
+-|-
+[Domain Model](/refguide6/Domain+Model) | Property [`domainModel`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html#domainmodel) of Project
+[Module Security](/refguide6/Module+Security) | Property [`moduleSecurity`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html#modulesecurity) of Project
 
 ### Documents
 
@@ -79,17 +60,11 @@ In this sense, Module and Folder behave in the exact same way, and thus inherit 
 
 ![](attachments/16057002/18582254.svg)
 
-#### See also
-
-###### Mendix Modeler reference guide
-
-*   [Modules](/refguide6/Modules)
-
-###### Model SDK API docs
-
-*   Property [`modules`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.project.html#modules) of Project
-*   [Module](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html)
-*   [FolderBase](https://apidocs.mendix.com/modelsdk/latest/classes/projects.folderbase.html)
-*   [Folder](https://apidocs.mendix.com/modelsdk/latest/classes/projects.folder.html)
-*   [ModuleDocument](https://apidocs.mendix.com/modelsdk/latest/classes/projects.moduledocument.html)
-*   [Document](https://apidocs.mendix.com/modelsdk/latest/classes/projects.document.html)
+Modeler Reference Guide | Model SDK API docs
+-|-
+[Modules](/refguide6/Modules) |Property [`modules`](https://apidocs.mendix.com/modelsdk/latest/classes/projects.project.html#modules) of Project
+|[Module](https://apidocs.mendix.com/modelsdk/latest/classes/projects.module.html)
+|[FolderBase](https://apidocs.mendix.com/modelsdk/latest/classes/projects.folderbase.html)
+|[Folder](https://apidocs.mendix.com/modelsdk/latest/classes/projects.folder.html)
+|[ModuleDocument](https://apidocs.mendix.com/modelsdk/latest/classes/projects.moduledocument.html)
+|[Document](https://apidocs.mendix.com/modelsdk/latest/classes/projects.document.html)

@@ -138,7 +138,7 @@ Sometimes additional widgets are added when you download a module, for example t
 *   [Managing your Application Requirements with Mendix](/howto50/managing-your-application-requirements-with-mendix)
 *   [Starting your own repository](/howto50/starting-your-own-repository)
 *   [Contributing to a GitHub repository](/howto50/contributing-to-a-github-repository)
-*   [Using Team Server - Version Control](/howto50/using-team-server-_-version-control)
+*   [Using Team Server - Version Control](/howto50/using-team-server-version-control)
 *   [Gathering user feedback](/howto50/gathering-user-feedback)
 *   [Creating a basic "hello world" custom widget](/howto50/creating-a-basic-hello-world-custom-widget)
 *   [Blog post on useful widgets](http://www.mendix.com/blog/top-5-mendix-widgets-speeding-application-development/)

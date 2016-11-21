@@ -1,12 +1,12 @@
 ---
 title: "Using Team Server - Version Control"
-category: 'Collaboration & Project Management'
-space: "Mendix 5 How-to's"
+space: "Mendix 6 How-to's"
+category: "Collaboration & Project Management"
+tags: []
 ---
+## 1. Team server
 
-## 1. Team server
-
-In the Mendix platform every app has a central repository on the Team Server that contains both the model and the resources for that app. Each person working on the project of the app has a local copy of both model and resources. There are explicit actions to commit local changes to the repository and to retrieve changes by others from the repository (update). Only project members with the appropriate permissions have access to the app's Team Server repository. We build on top of Subversion that supports this style of working.
+In the Mendix platform there is a central repository that contains both the model and the resources. Each person working on the project, has a local copy of both model and resources. There are explicit actions to commit local changes to the repository and to retrieve changes by others from the repository (update). We build on top of Subversion that supports this style of working.
 
 We chose Subversion because of its popularity, maturity and solid Windows support. Building on top of Subversion means that we inherit its reliable protocols for sending and receiving changes. Subversion has a lot of operations that allow us to support advanced features like branching and merging. The Modeler simplifies Subversion commands by providing a layer over them. All common operations can be executed right from the Modeler.
 
@@ -23,7 +23,7 @@ Becoming a team member is handled through an invite which has to be send to you 
 
 The role is depending on the project security/role settings. By default the roles “Scrum master” & “Business Engineer” are allowed to access the team server. Though this can be adjusted by the scrum master of the project. Once a role has the “Edit” right to the development step, team members with this role will be able to download the model, change it and committing new revisions. View means that the team member is allowed to see the repository overview of the team server revisions.
 
-![](attachments/8782383/8946012.png)
+![](attachments/18448641/18580469.png)
 
 ### 2.2 Repository
 
@@ -52,15 +52,15 @@ If you have an existing project with an empty team server repository (you didn�
 
 The status of your project is a summary of all the changes in your working copy when compared to the original. The Modeler shows the status both in the project explorer and in the new 'Changes' dock. Different kinds of changes are visualized with different icons.
 
-![](attachments/8782383/8946013.png)
+![](attachments/18448641/18580468.png)
 
 The project explorer shows an icon in front of items (documents, folders and modules) that are changed in some way. There is only room for one icon and if a document is both modified and moved it is shown as modified.
 
-![](attachments/8782383/8946014.png)
+![](attachments/18448641/18580467.png)
 
 In the screenshot you can see that the document Account_NewEdit has been modified. Also a new folder called 'Flows' was added and all Microflows were moved inside this folder. Note that the folders and modules containing changes are depicted with a small yellow circle. This helps you to quickly see where in the project the changes are.
 
-![](attachments/8782383/8946015.png)
+![](attachments/18448641/18580466.png)
 
 The Changes Dock shows a line for each change to an item. If a document is both modified and moved there are two lines for that document. The dock also shows items that were deleted, something the project explorer cannot do.
 
@@ -80,7 +80,7 @@ These storiesrelate to the commit. And is documented in the platform
 
 Our advice is to keep commits small and this means that a commit probably relates to one story. The Modeler only shows stories that are currently ‘Running’ and will not change the state of the story. Setting the status to ‘Done’ is the responsibility of the team and depends on your definition of done.
 
-![](attachments/8782383/8946016.png)
+![](attachments/18448641/18580465.png)
 
 The Modeler also attaches some information automatically:
 
@@ -107,7 +107,7 @@ A conflict arises when two changes cannot be combined. There are two places wher
 
 The documents that are conflicted are marked as such in the project explorer and the changes dock. In the case of a document conflict you can zoom in to the exact spot where the conflicting change is. In the case of a project conflict the document will be highlighted in the project explorer tree.
 
-![](attachments/8782383/8946017.png)
+![](attachments/18448641/18580464.png)
 
 Resolving a conflict can be done in by using the ‘Use mine’ and ‘Use theirs’ button in the version control dock. In the case of a project conflict only the ‘Use mine’ button is enabled and it resolves the conflict and keeps the situation as it is now in your working copy. For document conflicts both buttons are enabled and with them you can choose between your version and ‘their’ version.
 
@@ -115,7 +115,7 @@ Resolving a conflict can be done in by using the ‘Use mine’ and ‘Use their
 
 The history of the project is a list of all revisions that have been committed in reverse chronological order (newest is at top of list). The history form quickly shows you revision number, date, time, author and message of each revision. By selecting a revision you can view additional details such as related userstories, changed documents, Modeler version and changes on disk. Icons summarize the kinds of changes that happened in the project; whether there are model changes, disk changes and whether the project was upgraded to a new Modeler version can quickly be checked by looking at the icons.
 
-![](attachments/8782383/8946018.png)
+![](attachments/18448641/18580463.png)
 
 ## 3\. Development lines
 
@@ -133,15 +133,15 @@ After creating a branch and solving of the issue, or creation of a new bigger fe
 
 A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development called the main line (called ‘trunk’ in subversion). All development then happens inside that one line.
 
-![](attachments/8782383/8946020.png)
+![](attachments/18448641/18580461.png)
 
 It is often convenient to have more than one development line. For example, one development line for fixing bugs in the currently deployed version of your project and another line where you develop new functionality. If you then find a bug in the deployed version you can fix it in the corresponding development line irrespective of the state of the development line where new functionality is developed.
 
-![](attachments/8782383/8946021.png)
+![](attachments/18448641/18580460.png)
 
 Development lines other than the main line are called branch lines. Our advice would be to develop new features in the main line and to have branch lines for fixing bugs in versions that have been deployed. This is the scenario the Modeler makes easy but other scenarios for more complex projects are supported as well.
 
-![](attachments/8782383/8946022.png)
+![](attachments/18448641/18580459.png)
 
 Note that revision numbers are unique across all development lines. This means that two commits in the same development line do not always have consecutive numbers, for example the jump from 3 to 6.
 
@@ -153,9 +153,9 @@ Merging is always done while you have a working copy open. The merge will result
 
 In the picture below revision 5 from the branch line is merged into a working copy of the main line that was at revision 6\. Those merged changes are then committed to form revision 7.
 
-![](attachments/8782383/8946023.png)
+![](attachments/18448641/18580458.png)
 
-![](attachments/8782383/8946024.png)
+![](attachments/18448641/18580457.png)
 
 The example shows that you can merge a single revision. It is also possible to merge a whole range of revisions from one development line to another. If a branch line represents a big new feature that you completely want to integrate into the main line you can merge all revisions of the branch.
 
@@ -178,10 +178,11 @@ The example shows that you can merge a single revision. It is also possible to m
     *   (Big) feature (work > 1 day)
     *   Integration external work
 
-## 4\. Related content
+4\. Related content
 
-*   [Managing your Application Requirements with Mendix](/howto50/managing-your-application-requirements-with-mendix)
-*   [Starting your own repository](/howto50/starting-your-own-repository)
-*   [Contributing to a GitHub repository](/howto50/contributing-to-a-github-repository)
-*   [Using Team Server - Version Control](/howto50/using-team-server-_-version-control)
-*   [Gathering user feedback](/howto50/gathering-user-feedback)
+*   [Managing your Application Requirements with Mendix](/howto6/managing-your-application-requirements-with-mendix)
+*   [Contributing to a GitHub repository](/howto6/contribute-to-a-github-repository)
+*   [Starting your own repository](/howto6/starting-your-own-repository)
+*   [Using Team Server - Version Control](/howto6/using-team-server-version-control)
+*   [Gathering user feedback](/howto6/gathering-user-feedback)
+*   [Sharing the Development Database](/howto6/sharing-the-development-database)

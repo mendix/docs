@@ -16,4 +16,4 @@ Learn how to build apps in a team, share your code base and manage your projects
 | ------------------------------------------------------------
 | [Starting your own repository](/howto50/starting-your-own-repository)
 | [Contributing to a GitHub repository](/howto50/contributing-to-a-github-repository)
-| [Using Team Server/Version Control](/howto50/using-team-server-_-version-control)
+| [Using Team Server/Version Control](/howto50/using-team-server-version-control)

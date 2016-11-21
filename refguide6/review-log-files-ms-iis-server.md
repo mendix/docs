@@ -51,4 +51,4 @@ On an operational IIS server, reviewing log files forms an integral part of syst
     *   The request could not be completed (error: not found)
     *   The request was completed in 471Ms
 
-More information on interpreting IIS logs can be found here: [Monitoring - What to monitor](/refguide6/monitoring-_-what-to-monitor)
+More information on interpreting IIS logs can be found here: [Monitoring - What to monitor](/refguide6/monitoring-what-to-monitor)

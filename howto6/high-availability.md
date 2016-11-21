@@ -56,7 +56,7 @@ If you are using Custom Settings to influence the Runtime behavior it is critica
 
 *   [Security checklist for your on-premises installation](/howto6/security-checklist-for-your-on-premises-installation)
 *   [Updating a Mendix Application](/howto6/updating-a-mendix-application)
-*   [Mendix on Windows - Microsoft SQL Server](/howto6/mendix-on-windows-_-microsoft-sql-server)
+*   [Mendix on Windows - Microsoft SQL Server](/howto6/mendix-on-windows-microsoft-sql-server)
 *   [Setting up a new SQL Server database](/howto6/setting-up-a-new-sql-server-database)
 *   [Mendix SQL Maintenance Plans](/howto6/mendix-sql-maintenance-plans)
 *   [Restoring a SQL Server database](/howto6/restoring-a-sql-server-database)

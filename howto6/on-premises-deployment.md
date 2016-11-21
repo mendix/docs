@@ -15,7 +15,7 @@ Learn how to deploy your app on your own hardware.
 *   [Troubleshooting](/howto6/troubleshooting)
 *   [Architecture Options](/howto6/design-the-architecture)
     *   [High Availability](/howto6/high-availability)
-*   [Mendix on Windows - Microsoft SQL Server](/howto6/mendix-on-windows-_-microsoft-sql-server)
+*   [Mendix on Windows - Microsoft SQL Server](/howto6/mendix-on-windows-microsoft-sql-server)
     *   [Setting up a new SQL Server database](/howto6/setting-up-a-new-sql-server-database)
     *   [Mendix SQL Maintenance Plans](/howto6/mendix-sql-maintenance-plans)
     *   [Restoring a SQL Server database](/howto6/restoring-a-sql-server-database)

@@ -198,7 +198,7 @@
 /bestpractices/Inheritance+vs.+1+1+association /bestpractices/inheritance-vs.-1-1-association;
 /bestpractices/Naming+conventions /bestpractices/naming-conventions;
 /bestpractices/Naming+conventions+in+Mendix+5 /bestpractices/naming-conventions;
-/bestpractices/SIG+-+Mendix+performance+subjects+explanation /bestpractices/sig-_-mendix-performance-subjects-explanation;
+/bestpractices/SIG+-+Mendix+performance+subjects+explanation /bestpractices/sig-mendix-performance-subjects-explanation;
 
 /community/Community+Documentation /community/community-documentation;
 /community/Community+Projects /community/community-projects;
@@ -295,7 +295,7 @@
 /howto50/Manage+scheduled+events /howto50/manage-scheduled-events;
 /howto50/Managing+your+Application+Requirements+with+Mendix /howto50/managing-your-application-requirements-with-mendix;
 /howto50/Mendix+Hosting+Enviroment+project+structure+and+commands /howto50/mendix-hosting-enviroment-project-structure-and-commands;
-/howto50/Mendix+on+Windows+-+Microsoft+SQL+Server /howto50/mendix-on-windows-_-microsoft-sql-server;
+/howto50/Mendix+on+Windows+-+Microsoft+SQL+Server /howto50/mendix-on-windows-microsoft-sql-server;
 /howto50/Mendix+SQL+Maintenance+Plans /howto50/mendix-sql-maintenance-plans;
 ~/howto50/Mobile /howto50/mobile;
 /howto50/Monitoring+and+Troubleshooting /howto50/monitoring-and-troubleshooting;
@@ -339,9 +339,9 @@
 ~/howto50/Troubleshooting /howto50/troubleshooting;
 /howto50/Troubleshooting+SQL+Server /howto50/troubleshooting-sql-server;
 /howto50/Updating+a+Mendix+Application /howto50/updating-a-mendix-application;
-/howto50/Using+Team+Server+-+Version+Control /howto50/using-team-server-_-version-control;
+/howto50/Using+Team+Server+-+Version+Control /howto50/using-team-server-version-control;
 /howto50/Using+the+Excel+Exporter /howto50/using-the-excel-exporter;
-/howto50/View+logging+-+Advanced /howto50/view-logging-_-advanced;
+/howto50/View+logging+-+Advanced /howto50/view-logging-advanced;
 /howto50/Working+with+images+and+files /howto50/working-with-images-and-files;
 /howto50/Working+With+Lists+in+a+Microflow /howto50/working-with-lists-in-a-microflow;
 /howto50/Working+With+Object+Events /howto50/working-with-object-events;
@@ -430,7 +430,7 @@
 /howto6/Manage+Application+Performance+with+AppDynamics /howto6/manage-application-performance-with-appdynamics;
 /howto6/Manage+Application+Performance+with+New+Relic /howto6/manage-application-performance-with-new-relic;
 /howto6/Managing+your+Application+Requirements+with+Mendix /howto6/managing-your-application-requirements-with-mendix;
-/howto6/Mendix+on+Windows+-+Microsoft+SQL+Server /howto6/mendix-on-windows-_-microsoft-sql-server;
+/howto6/Mendix+on+Windows+-+Microsoft+SQL+Server /howto6/mendix-on-windows-microsoft-sql-server;
 /howto6/Mendix+SQL+Maintenance+Plans /howto6/mendix-sql-maintenance-plans;
 ~/howto6/Mobile /howto6/mobile;
 /howto6/Monitoring+and+Troubleshooting /howto6/monitoring-and-troubleshooting;
@@ -479,7 +479,7 @@
 /howto6/Troubleshooting+SQL+Server /howto6/troubleshooting-sql-server;
 /howto6/Updating+a+Mendix+Application /howto6/updating-a-mendix-application;
 /howto6/Use+Connectors+and+Adapters /howto6/use-connectors-and-adapters;
-/howto6/Using+Team+Server+-+Version+Control /howto6/using-team-server-_-version-control;
+/howto6/Using+Team+Server+-+Version+Control /howto6/using-team-server-version-control;
 /howto6/Using+the+Excel+Exporter /howto6/using-the-excel-exporter;
 /howto6/Visualize+Data+using+the+ChartsJS+Module /howto6/visualize-data-using-the-chartsjs-module;
 /howto6/Working+with+images+and+files /howto6/working-with-images-and-files;
@@ -767,8 +767,8 @@
 /refguide5/Module+Security /refguide5/module-security;
 /refguide5/Module+Status /refguide5/module-status;
 ~/refguide5/Modules /refguide5/modules;
-/refguide5/Monitoring+-+Mendix+Runtime /refguide5/monitoring-_-mendix-runtime;
-/refguide5/Monitoring+-+What+to+monitor /refguide5/monitoring-_-what-to-monitor;
+/refguide5/Monitoring+-+Mendix+Runtime /refguide5/monitoring-mendix-runtime;
+/refguide5/Monitoring+-+What+to+monitor /refguide5/monitoring-what-to-monitor;
 /refguide5/Moving+from+4+to+5 /refguide5/moving-from-4-to-5;
 ~/refguide5/MySQL /refguide5/mysql;
 /refguide5/Name+Property /refguide5/name-property;
@@ -861,8 +861,8 @@
 /refguide5/Required+message+Property /refguide5/required-message-property;
 /refguide5/Required+Property /refguide5/required-property;
 ~/refguide5/Retrieve /refguide5/retrieve;
-/refguide5/Review+log+files+-+MS+IIS+Server /refguide5/review-log-files-_-ms-iis-server;
-/refguide5/Review+log+files+-+MS+SQL+Server /refguide5/review-log-files-_-ms-sql-server;
+/refguide5/Review+log+files+-+MS+IIS+Server /refguide5/review-log-files-ms-iis-server;
+/refguide5/Review+log+files+-+MS+SQL+Server /refguide5/review-log-files-ms-sql-server;
 /refguide5/Rollback+Object /refguide5/rollback-object;
 /refguide5/Row+Document+Template /refguide5/row-document-template;
 ~/refguide5/Rules /refguide5/rules;
@@ -1198,9 +1198,9 @@
 /refguide6/Module+Security /refguide6/module-security;
 /refguide6/Module+Status /refguide6/module-status;
 ~/refguide6/Modules /refguide6/modules;
-/refguide6/Monitoring+-+Mendix+Runtime /refguide6/monitoring-_-mendix-runtime;
-/refguide6/Monitoring+-+Mendix+Business+Server /refguide6/monitoring-_-mendix-runtime;
-/refguide6/Monitoring+-+What+to+monitor /refguide6/monitoring-_-what-to-monitor;
+/refguide6/Monitoring+-+Mendix+Runtime /refguide6/monitoring-mendix-runtime;
+/refguide6/Monitoring+-+Mendix+Business+Server /refguide6/monitoring-mendix-runtime;
+/refguide6/Monitoring+-+What+to+monitor /refguide6/monitoring-what-to-monitor;
 /refguide6/Moving+from+5+to+6 /refguide6/moving-from-5-to-6;
 ~/refguide6/MxBuild /refguide6/mxbuild;
 ~/refguide6/MySQL /refguide6/mysql;
@@ -1290,8 +1290,8 @@
 /refguide6/Report+Widgets /refguide6/report-widgets;
 ~/refguide6/Reporting /refguide6/report-widgets;
 ~/refguide6/Retrieve /refguide6/retrieve;
-/refguide6/Review+log+files+-+MS+IIS+Server /refguide6/review-log-files-_-ms-iis-server;
-/refguide6/Review+log+files+-+MS+SQL+Server /refguide6/review-log-files-_-ms-sql-server;
+/refguide6/Review+log+files+-+MS+IIS+Server /refguide6/review-log-files-ms-iis-server;
+/refguide6/Review+log+files+-+MS+SQL+Server /refguide6/review-log-files-ms-sql-server;
 /refguide6/Rollback+Object /refguide6/rollback-object;
 /refguide6/Row+Document+Template /refguide6/row-document-template;
 ~/refguide6/Rules /refguide6/rules;

@@ -57,6 +57,6 @@ Please go to our [Mendix 5 How-to's](/howto50/) section if you're looking for m
 
 ## [![](attachments/4522001/9764884.png)](/refguide5/proactive-maintenance) [Proactive Maintenance](/refguide5/proactive-maintenance)
 
-*   [Monitoring - Mendix Runtime](/refguide5/monitoring-_-mendix-runtime)
-*   [Monitoring - What to monitor](/refguide5/monitoring-_-what-to-monitor)
-*   [Review log files - MS IIS Server](/refguide5/review-log-files-_-ms-iis-server)
+*   [Monitoring - Mendix Runtime](/refguide5/monitoring-mendix-runtime)
+*   [Monitoring - What to monitor](/refguide5/monitoring-what-to-monitor)
+*   [Review log files - MS IIS Server](/refguide5/review-log-files-ms-iis-server)

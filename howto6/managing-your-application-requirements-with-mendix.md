@@ -164,7 +164,7 @@ With Mendix it’s always possible to export your data, from your application bu
 *   [Managing your Application Requirements with Mendix](/howto6/managing-your-application-requirements-with-mendix)
 *   [Contributing to a GitHub repository](/howto6/contribute-to-a-github-repository)
 *   [Starting your own repository](/howto6/starting-your-own-repository)
-*   [Using Team Server - Version Control](/howto6/using-team-server-_-version-control)
+*   [Using Team Server - Version Control](/howto6/using-team-server-version-control)
 *   [Gathering user feedback](/howto6/gathering-user-feedback)
 *   [Sharing the Development Database](/howto6/sharing-the-development-database)
 *   [Using the Excel Exporter](/howto6/using-the-excel-exporter)

@@ -46,6 +46,6 @@ Allow the user to connect to the database. If the user is Denied the privilege t
 *   [Setting up a new SQL Server database](/howto6/setting-up-a-new-sql-server-database)
 *   [Setting up a SQL Server user](/howto6/setting-up-a-sql-server-user)
 *   [Security checklist for your on-premises installation](/howto6/security-checklist-for-your-on-premises-installation)
-*   [Mendix on Windows - Microsoft SQL Server](/howto6/mendix-on-windows-_-microsoft-sql-server)
+*   [Mendix on Windows - Microsoft SQL Server](/howto6/mendix-on-windows-microsoft-sql-server)
 *   [Deploying Mendix on Microsoft Windows](/howto6/deploy-mendix-on-microsoft-windows)
 *   [Installing Mendix on Debian GNU Linux](/howto6/installing-mendix-on-debian-gnu-linux)

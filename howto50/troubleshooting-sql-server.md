@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting SQL Server"
-parent: "mendix-on-windows-_-microsoft-sql-server"
+parent: "mendix-on-windows-microsoft-sql-server"
 space: "Mendix 5 How-to's"
 ---
 # Troubleshooting SQL Server

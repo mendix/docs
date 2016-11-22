@@ -1,7 +1,7 @@
 ---
 title: "Get InputReferenceSelector Value"
 space: "ATS (Application Test Suite)"
-parent: "inputreferenceselector"
+parent: "input-reference-selector"
 ---
 ## Description
 Returns the current value of the InputReferenceSelector.

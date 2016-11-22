@@ -2,6 +2,14 @@ language: ruby
 rvm:
 - 2.3.1
 
+env:
+  - TRAVIS_NODE_VERSION="6.9.1"
+
+install:
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+  - npm install -g gulp
+  - npm install
+
 script:
   - bundle exec jekyll build
   #- bundle exec rake test

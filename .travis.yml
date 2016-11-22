@@ -3,7 +3,10 @@ rvm:
 - 2.3.1
 
 env:
+  global:
   - TRAVIS_NODE_VERSION="6.9.1"
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+  - JEKYLL_ENV=production
 
 install:
   - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
@@ -21,11 +24,6 @@ branches:
   only:
     - master
     - feature/gulp-automate
-
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-  - JEKYLL_ENV=production
 
 #sudo: false # route your build to the container-based infrastructure for a faster build
 

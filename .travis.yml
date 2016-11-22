@@ -11,14 +11,16 @@ install:
   - npm install
 
 script:
-  - bundle exec jekyll build
+  #- bundle exec jekyll build
   #- bundle exec rake test
+  - gulp build
 
 cache: bundler
 
 branches:
   only:
     - master
+    - feature/gulp-automate
 
 env:
   global:

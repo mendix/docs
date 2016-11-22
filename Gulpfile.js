@@ -73,7 +73,7 @@ const spawnJekyll = (test, watch, cb) => {
   child.on('close', function(code) {
       gutil.log(jekyll_indicator, "Closed with exit code", code);
       if (cb && _.isFunction(cb)) {
-        cb();
+        cb(code);
       }
   });
 }
@@ -128,7 +128,16 @@ gulp.task('sass:dev', () => {
 });
 
 gulp.task('jekyll:build', [], done => {
-  spawnJekyll(false, false, done);
+  spawnJekyll(false, false, (code) => {
+    if (code !== 0) {
+      throw new gutil.PluginError({
+        plugin: 'jekyll:build',
+        message: `Jekyll exit code is ${code}, check your Jekyll setup`
+      });
+    } else {
+      done();
+    }
+  });
 });
 
 gulp.task('dev', ['sass:dev', 'copy:images', 'compress:js'], done => {

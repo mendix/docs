@@ -38,5 +38,5 @@ deploy:
   organization: $CF_ORG
   space: $CF_SPACE
   appname: $CF_APPNAME
-  on:
-    branch: master
+  # on:
+  #   branch: master

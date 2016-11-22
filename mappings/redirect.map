@@ -1143,7 +1143,8 @@
 ~/refguide6/Image /refguide6/image;
 /refguide6/Image+uploader /refguide6/image-uploader;
 /refguide6/Image+viewer /refguide6/image-viewer;
-/refguide6/Images+refguide /refguide6/images-refguide;
+/refguide6/Images+refguide /refguide6/images;
+~/refguide6/Images /refguide6/images;
 /refguide6/Import+Mapping+Action /refguide6/import-mapping-action;
 /refguide6/Import+Mappings /refguide6/import-mappings;
 /refguide6/Import+XML /refguide6/import-xml;
@@ -1358,6 +1359,7 @@
 /refguide6/Unary+expressions /refguide6/unary-expressions;
 /refguide6/Upload+To+Team+Server+Dialog /refguide6/upload-to-team-server-dialog;
 /refguide6/User+Roles /refguide6/user-roles;
+/refguide6/User+Role /refguide6/user-roles;
 /refguide6/Using+a+proxy+to+call+a+webservice /refguide6/using-a-proxy-to-call-a-webservice;
 /refguide6/Using+Eclipse /refguide6/using-eclipse;
 /refguide6/Validation+Feedback /refguide6/validation-feedback;

@@ -1,8 +1,8 @@
 ---
-title: "[Enter the title here]"
-space: "[To be filled in by Mendix]"
-parent: "[to be filled in by mendix]"
-tags: "[To be filled in by Mendix]"
+#title: "[Uncomment and enter the title here]"
+#space: "[To be filled in by Mendix]"
+#parent: "[to be filled in by mendix]"
+#tags: "[To be filled in by Mendix]"
 ---
 
 ## 1 Introduction

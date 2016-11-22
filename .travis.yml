@@ -2,20 +2,29 @@ language: ruby
 rvm:
 - 2.3.1
 
+env:
+  global:
+  - TRAVIS_NODE_VERSION="6.9.1"
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+  - JEKYLL_ENV=production
+
+install:
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+  - bundle install
+  - npm install -g gulp
+  - npm install
+
 script:
-  - bundle exec jekyll build
+  #- bundle exec jekyll build
   #- bundle exec rake test
+  - gulp build
 
 cache: bundler
 
 branches:
   only:
     - master
-
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-  - JEKYLL_ENV=production
+    #- feature/gulp-automate
 
 #sudo: false # route your build to the container-based infrastructure for a faster build
 
@@ -30,4 +39,5 @@ deploy:
   space: $CF_SPACE
   appname: $CF_APPNAME
   on:
-    branch: master
+    branch:
+      - master

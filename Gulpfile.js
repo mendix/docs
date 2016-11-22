@@ -2,6 +2,7 @@ const gulp        = require('gulp');
 const gutil       = require('gulp-util');
 const sass        = require('gulp-sass');
 const sourcemaps  = require('gulp-sourcemaps');
+const minify      = require('gulp-minify');
 
 const browserSync = require('browser-sync').create();
 const spawn       = require('child_process').spawn;
@@ -91,7 +92,19 @@ gulp.task('copy:images', () => {
   return gulp
     .src(paths.images.src)
     .pipe(gulp.dest(paths.images.dest));
-})
+});
+
+gulp.task('compress:js', () => {
+  return gulp
+    .src(paths.scripts.src)
+    .pipe(minify({
+      ext: {
+        src: '-debug.js',
+        min: '.js'
+      }
+    }))
+    .pipe(gulp.dest(paths.scripts.dest));
+});
 
 gulp.task('sass:build', () => {
   return gulp
@@ -118,7 +131,7 @@ gulp.task('jekyll:build', [], done => {
   spawnJekyll(false, false, done);
 });
 
-gulp.task('run', ['sass:dev', 'copy:images'], done => {
+gulp.task('dev', ['sass:dev', 'copy:images', 'compress:js'], done => {
   browserSync.init({
       port: PORT,
       serveStatic: [ DIST_FOLDER ],
@@ -128,9 +141,14 @@ gulp.task('run', ['sass:dev', 'copy:images'], done => {
   });
   spawnJekyll(true, true);
   gulp.watch(paths.styles.src, ['sass:dev']);
+  gulp.watch(paths.scripts.src, ['compress:js']);
   gulp.watch(paths.images.src, ['copy:images']);
 });
 
+gulp.task('serve', done => {
+  runSequence('clean', 'dev');
+})
+
 gulp.task('build', done => {
-  runSequence('clean', ['jekyll:build', 'sass:build', 'copy:images'], done);
+  runSequence('clean', ['jekyll:build', 'sass:build', 'copy:images', 'compress:js'], done);
 });

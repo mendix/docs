@@ -24,7 +24,7 @@ cache: bundler
 branches:
   only:
     - master
-    - feature/gulp-automate
+    #- feature/gulp-automate
 
 #sudo: false # route your build to the container-based infrastructure for a faster build
 

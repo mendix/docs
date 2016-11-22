@@ -41,7 +41,7 @@ Integrate your company's user management systems with the Mendix App Platform. C
 
 *   [User Management API](/apidocs/user-management-api)
 
-# Single Sign On API
+# Single Sign-On API
 
 The Mendix Single Sign-On system is based on OpenID. Learn how to connect your (non-Mendix) app to the Mendix Identity Provider.
 

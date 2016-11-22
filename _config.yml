@@ -170,6 +170,8 @@ defaults:
 
 ####################################
 
+keep_files:
+  - public
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -178,6 +180,9 @@ exclude:
   - README.md
   - Rakefile
   - node_modules
+  - Gulpfile.js
+  - LICENSE
+  - _assets
   - vendor
   - package.json
   - test.txt
@@ -193,11 +198,6 @@ kramdown:
   hard_wrap: false
   syntax_highlighter: rouge
 
-sass:
-  sass_dir: _sass
-  style: compressed
-
 gems:
-  - jekyll-redirect-from
   - jekyll-sitemap
   - algoliasearch-jekyll

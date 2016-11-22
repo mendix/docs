@@ -31,7 +31,7 @@ If you want to dynamically show different images based on data, please take a lo
 
 The actual image that this widget shows.
 
-See [Images](/refguide6/images-refguide).
+See [Images](/refguide6/images).
 
 {% snippet Image+Width+Unit.md %}
 

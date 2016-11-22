@@ -585,7 +585,8 @@
 /refguide5/Class+Property /refguide5/class-property;
 /refguide5/Client+Activities /refguide5/client-activities;
 /refguide5/Close+Form /refguide5/close-form;
-/refguide5/Clustered+Mendix+Business+Server /refguide5/clustered-mendix-business-server;
+/refguide5/Clustered+Mendix+Runtime /refguide5/clustered-mendix-runtime;
+/refguide5/Clustered+Mendix+Business+Server /refguide5/clustered-mendix-runtime;
 /refguide5/Column+Width+Properties /refguide5/column-width-properties;
 ~/refguide5/Columns /refguide5/columns;
 /refguide5/Columns+Document+Template /refguide5/columns-document-template;
@@ -1030,6 +1031,7 @@
 /refguide6/Close+Form /refguide6/close-form;
 /refguide6/Close+page+button /refguide6/close-page-button;
 /refguide6/Clustered+Mendix+Runtime /refguide6/clustered-mendix-runtime;
+/refguide6/Clustered+Mendix+Business+Server /refguide6/clustered-mendix-runtime;
 ~/refguide6/Columns /refguide6/columns;
 /refguide6/Columns+Document+Template /refguide6/columns-document-template;
 /refguide6/Commit+Dialog /refguide6/commit-dialog;
@@ -1141,7 +1143,9 @@
 ~/refguide6/Image /refguide6/image;
 /refguide6/Image+uploader /refguide6/image-uploader;
 /refguide6/Image+viewer /refguide6/image-viewer;
-/refguide6/Images+refguide /refguide6/images-refguide;
+/refguide6/Images+refguide /refguide6/images;
+~/refguide6/Images /refguide6/images;
+/refguide6/Image+Property /refguide6/image-property;
 /refguide6/Import+Mapping+Action /refguide6/import-mapping-action;
 /refguide6/Import+Mappings /refguide6/import-mappings;
 /refguide6/Import+XML /refguide6/import-xml;
@@ -1356,6 +1360,7 @@
 /refguide6/Unary+expressions /refguide6/unary-expressions;
 /refguide6/Upload+To+Team+Server+Dialog /refguide6/upload-to-team-server-dialog;
 /refguide6/User+Roles /refguide6/user-roles;
+/refguide6/User+Role /refguide6/user-roles;
 /refguide6/Using+a+proxy+to+call+a+webservice /refguide6/using-a-proxy-to-call-a-webservice;
 /refguide6/Using+Eclipse /refguide6/using-eclipse;
 /refguide6/Validation+Feedback /refguide6/validation-feedback;

@@ -9,11 +9,11 @@ State of this document: PROPOSAL
 
 {% endmarkdown %}</div>
 
-For the implementation of [Clustered Mendix Runtime](/refguide5/clustered-mendix-business-server) several aspects of the Mendix Runtime are evaluated. One of these aspects is the Dirty State Behavior in Mendix. This behavior needs to be changed in order to deliver better performance in clustered scenarios. This page describes the changes on the aspect of Dirty State Behavior and the impact on building solutions with Mendix. For the TL;DR: see the overview at the end of the page.
+For the implementation of [Clustered Mendix Runtime](/refguide5/clustered-mendix-runtime) several aspects of the Mendix Runtime are evaluated. One of these aspects is the Dirty State Behavior in Mendix. This behavior needs to be changed in order to deliver better performance in clustered scenarios. This page describes the changes on the aspect of Dirty State Behavior and the impact on building solutions with Mendix. For the TL;DR: see the overview at the end of the page.
 
 ## Explanation of terminology
 
-This page uses specific terminology to describe data in the Mendix Runtime. The picture shown below has been taken from the [Clustered Mendix Runtime](/refguide5/clustered-mendix-business-server) page:
+This page uses specific terminology to describe data in the Mendix Runtime. The picture shown below has been taken from the [Clustered Mendix Runtime](/refguide5/clustered-mendix-runtime) page:
 
 ![](attachments/16056891/16285792.png)
 

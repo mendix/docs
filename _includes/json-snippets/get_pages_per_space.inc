@@ -7,7 +7,7 @@
 {% if catpage.space == include.space %}
 {% unless loop == 1 %},{% endunless %}
 {% assign loop = loop | plus: 1 %}
-{% assign indexID = catpage.title | replace: ' ','+' %}
+{% assign indexID = catpage.title | replace: ' ','-' %}
 {"title":"{{ catpage.title }}",
 "category":"{{ catpage.category }}",
 "id":"{{ catpage.name | remove: '.md' | replace:'index',indexID }}",

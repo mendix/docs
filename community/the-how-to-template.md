@@ -1,8 +1,8 @@
 ---
-title: "[Enter the title here]"
-space: "[To be filled in by Mendix]"
-category: "[To be filled in by Mendix]"
-tags: "[To be filled in by Mendix]"
+#title: "[Enter the title here]"
+#space: "[To be filled in by Mendix]"
+#category: "[To be filled in by Mendix]"
+#tags: "[To be filled in by Mendix]"
 ---
 
 ## 1 Introduction

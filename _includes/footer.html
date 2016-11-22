@@ -81,7 +81,7 @@
     </div>
   </div>
 </div>
-
+{% if site.production == true %}
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-QJG4"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -102,6 +102,7 @@
     }
   });
 </script>
+{% endif %}
 <script>
   window.toggleConflNavigation = function() {
     var disqus = document.getElementById("disqus");
@@ -124,16 +125,6 @@
       }
     }
   }
-</script>
-<script>
-  jQuery(document).ready(function() {
-    var duration = 500;
-    jQuery('.back-to-top').click(function(event) {
-      event.preventDefault();
-      jQuery('html, body').animate({scrollTop: 0}, duration);
-      return false;
-    })
-  });
 </script>
 <script src="https://developer.mendixcloud.com/topbar.js"></script>
 <script type="text/javascript">

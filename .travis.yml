@@ -41,4 +41,3 @@ deploy:
   on:
     branch:
       - master
-      - feature/gulp-automate

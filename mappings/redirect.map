@@ -1145,6 +1145,7 @@
 /refguide6/Image+viewer /refguide6/image-viewer;
 /refguide6/Images+refguide /refguide6/images;
 ~/refguide6/Images /refguide6/images;
+/refguide6/Image+Property /refguide6/image-property;
 /refguide6/Import+Mapping+Action /refguide6/import-mapping-action;
 /refguide6/Import+Mappings /refguide6/import-mappings;
 /refguide6/Import+XML /refguide6/import-xml;

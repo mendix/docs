@@ -706,35 +706,35 @@
     },
     {
       "from": "/ATS/Selenium+Actions/Find/Find+Element+by+CSS",
-      "to": "/ATS/selenium-actions/Find/find-element-by-css"
+      "to": "/ATS/selenium-actions/find/find-element-by-css"
     },
     {
       "from": "/ATS/Selenium+Actions/Find/Find+Element+by+ID",
-      "to": "/ATS/selenium-actions/Find/find-element-by-id"
+      "to": "/ATS/selenium-actions/find/find-element-by-id"
     },
     {
       "from": "/ATS/Selenium+Actions/Find/Find+Element+by+Sizzle",
-      "to": "/ATS/selenium-actions/Find/find-element-by-sizzle"
+      "to": "/ATS/selenium-actions/find/find-element-by-sizzle"
     },
     {
       "from": "/ATS/Selenium+Actions/Get/Get+Property+Value",
-      "to": "/ATS/selenium-actions/Get/get-property-value"
+      "to": "/ATS/selenium-actions/get/get-property-value"
     },
     {
       "from": "/ATS/Selenium+Actions/Get/Get+Selected+Option+Index",
-      "to": "/ATS/selenium-actions/Get/get-selected-option-index"
+      "to": "/ATS/selenium-actions/get/get-selected-option-index"
     },
     {
       "from": "/ATS/Selenium+Actions/Get/Get+Selected+Option+Text",
-      "to": "/ATS/selenium-actions/Get/get-selected-option-text"
+      "to": "/ATS/selenium-actions/get/get-selected-option-text"
     },
     {
       "from": "/ATS/Selenium+Actions/Get/Get+Selected+Option+Value",
-      "to": "/ATS/selenium-actions/Get/get-selected-option-value"
+      "to": "/ATS/selenium-actions/get/get-selected-option-value"
     },
     {
       "from": "/ATS/Selenium+Actions/Get/Get+Text",
-      "to": "/ATS/selenium-actions/Get/get-text"
+      "to": "/ATS/selenium-actions/get/get-text"
     },
     {
       "from": "/ATS/Selenium+Actions/Send+Keys",

@@ -185,6 +185,7 @@ exclude:
   - _assets
   - vendor
   - package.json
+  - mappings.json
   - test.txt
   - run.bat
   - manifest.yml

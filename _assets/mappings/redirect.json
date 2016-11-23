@@ -1217,8 +1217,10 @@
       "to": "/howto50/selenium-support"
     },
     {
-      "from": "/howto50/send custom emails from your app",
-      "to": "/howto50/send-custom-emails-from-your-app"
+      "from": "~*\/howto50\/send\\ custom\\ emails\\ from\\ your\\ app",
+      "to": "/howto50/send-custom-emails-from-your-app",
+      "exact": true,
+      "disabled": true
     },
     {
       "from": "/howto50/Send+Custom+Emails+From+Your+App",
@@ -1909,8 +1911,10 @@
       "to": "/howto6/working-with-object-events"
     },
     {
-      "from": "/mendixcloud/Custom Domains",
-      "to": "/mendixcloud/custom-domains"
+      "from": "~*\\\/mendixcloud\\\/Custom\\ Domains",
+      "to": "/mendixcloud/custom-domains",
+      "exact": true,
+      "disabled": true
     },
     {
       "from": "/mendixcloud/Custom+Domains",

@@ -21,6 +21,7 @@ For the experienced user quick outline of the installation:
 *   Configure to use USE_ME/AfterStartup and USE_ME/BeforeShutdown
 *   Add permission(s) to your Administrator role
 *   Add USE_ME/IVK_OpenConsole microflow to navigation
+*   Set APMAgent.CompanyName constant
 *   Start App
 *   Navigate to APM Tool, an installer page opens
 *   In installer page mail license request

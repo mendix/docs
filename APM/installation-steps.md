@@ -32,11 +32,13 @@ If you are not using only English, United States copy the English, United States
 Add permissions APMAgent.Admin to project security / user roles tab to a selected administrator role.
 ![](attachments/Installation_steps/Add_Permissions.png)
 
-**_Note._** _Do not use the Debug role. This is for developer of the APM tool to test certain features._ _If you want to get rid of the warnings about security introduce a Debug user role and give this user role permissions to APMAgent.Debug._
-
-**_Note_**_. The same applies for the OData role_
+**_Note._** _Do not use the Debug role. This is for developer of the APM tool to test certain features._ 
 
 **_Note._** _You can choose to add the HeapDump role if you want to make heap dumps in java. In the cloud you need additional permissions to be requested at Mendix support._
+
+**_Note._** _If you want to get rid of the warnings about security introduce Debug, HeapDump, Load test recorder and OData user roles 
+and give these user roles the corresponding permissions from the APM module: APMAgent.Debug, APMAgent.HeapDump, APMAgent.OData and APMAgent.LoadTestRecorder._
+
 
 # Add to navigation
 
@@ -54,6 +56,10 @@ Call APMAgent\USE_ME\BeforeShutdown from a before shutdown microflow.
 You can find the AfterStartup and BeforeShutdown microflows in the project settings.
 ![](attachments/Installation_steps/Project_Settings_After_Startup.png)
 
+# Configure APMAgent.CompanyName constant
+Set the name of you company in the constant. Do not change the constant in the model. Use the Modeler settings or
+the runtime settings for constants. After an upgrade the model constant gets overwritten.
+
 # Start the Modeler or the Runtime
 
 You can now startup.
@@ -65,9 +71,10 @@ Otherwise login as Admin and navigate to the APM Tool.
 # Welcome dialog
 
 After startup for the first time a small wizard is started:
-![](attachments/Installation_steps/Welcom_Dialog.png)
+![](attachments/Installation_steps/Welcome_Dialog.png)
 
-*   Use button to send mail with license request
+*   Use button to send mail with license request. One buttons tries to open your mail client. The other opens 
+a dialog, so you can copy-paste text for the email to be sent at [apmtool@mansystems.nl](mailto://apmtool@mansystems.nl).
 *   Upon receiving the license, copy-paste
 *   Select production / non-production
 *   Save

@@ -594,11 +594,11 @@
     },
     {
       "from": "/ATS/Mendix+Appstore+Widgets+Actions/Dropdown+Div+Converter/Click+Dropdown+div+converter+dropdown+button",
-      "to": "/ATS/mendix-appstore-widgets-actions/dropdown-div-Converter/click-dropdown-div-converter-dropdown-button"
+      "to": "/ATS/mendix-appstore-widgets-actions/dropdown-div-converter/click-dropdown-div-converter-dropdown-button"
     },
     {
       "from": "/ATS/Mendix+Appstore+Widgets+Actions/Dropdown+Div+Converter/Click+Dropdown+div+converter+split+button",
-      "to": "/ATS/mendix-appstore-widgets-actions/dropdown-div-Converter/click-dropdown-div-converter-split-button"
+      "to": "/ATS/mendix-appstore-widgets-actions/dropdown-div-converter/click-dropdown-div-converter-split-button"
     },
     {
       "from": "/ATS/Mendix+Appstore+Widgets+Actions/Grid+Selector/Assert+Grid+Selector+Value",

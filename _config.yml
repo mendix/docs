@@ -172,6 +172,7 @@ defaults:
 
 keep_files:
   - public
+  - mappings
 exclude:
   - Gemfile
   - Gemfile.lock

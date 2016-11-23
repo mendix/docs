@@ -160,6 +160,9 @@ const mappings = (write, cb) => {
       const mappingsFile = mappingsArr.join('\n');
 
       if (write) {
+        if (!shell.test('-d', '_site/mappings')) {
+          shell.mkdir('-p', '_site/mappings');
+        }
         fs.writeFile('_site/mappings/redirect.map', mappingsFile, err => {
           if (err) {
             throwErr('write:mappings', `Error writing _site/mappings/redirect.map: ${err}`);

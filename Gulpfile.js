@@ -4,18 +4,23 @@ const sass        = require('gulp-sass');
 const sourcemaps  = require('gulp-sourcemaps');
 const minify      = require('gulp-minify');
 
-const browserSync = require('browser-sync').create();
+const fs          = require('fs');
 const spawn       = require('child_process').spawn;
+
+const browserSync = require('browser-sync').create();
 const _           = require('lodash');
 const del         = require('del');
 const runSequence = require('run-sequence');
+const shell       = require('shelljs');
 
+const buildDate     = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
 const PORT          = 3000;
 const DIST_FOLDER   = '_site';            // DO NOT CHANGE THIS, IS USED BY TRAVIS FOR DEPLOYMENT IN MANIFEST
 const CONFIG        = '_config.yml';
 const CONFIG_TEST   = '_config_test.yml';
 
 /* DONT EDIT BELOW */
+gutil.log(`Gulp started at ${buildDate}`);
 
 const paths = {
   styles: {
@@ -33,8 +38,15 @@ const paths = {
 }
 
 /*************************************************
-    JEKYLL RUNNER (BUNDLE EXEC JEKYLL BUILD)
+  FUNCTIONS
 **************************************************/
+const throwErr = (plugin, error) => {
+  throw new gutil.PluginError({
+    plugin: plugin,
+    message: error
+  }, { showStack: true });
+}
+
 const spawnJekyll = (test, watch, cb) => {
   const jekyll_indicator = gutil.colors.cyan("[JEKYLL]");
   const doneStr = 'done in';
@@ -76,16 +88,117 @@ const spawnJekyll = (test, watch, cb) => {
         cb(code);
       }
   });
+};
+
+const build = (t, cb) => {
+  spawnJekyll(t, false, (code) => {
+    if (code !== 0) {
+      throwErr('jekyll:build', `Jekyll exit code is ${code}, check your Jekyll setup`);
+    } else {
+      cb();
+    }
+  });
+};
+
+const escapeMapping = str => {
+  return str
+      .replace(/\//g, '\\\/')
+      .replace(/\+/g,'\\\+')
+      .replace(/\./g,'\\.')
+      .replace(/\(/g,'\\(')
+      .replace(/\)/g,'\\)')
+      //.replace(/'/g,'\'')
+      .replace(/ /g,'\\ ')
+      .replace(/\:/g,'\\\:')
+      .replace(/"/g,'\\\"');
 }
 
+const mappings = (write, cb) => {
+  fs.readFile('_assets/mappings/redirect.json', (err, data) => {
+    if (err) {
+      throwErr('write:mappings', `Cannot read _assets/mappings/redirect.json`);
+    }
+    let mappings = null;
+    try {
+      mappings = JSON.parse(data);
+    } catch (e) {
+      throwErr('write:mappings', `Cannot read _assets/mappings/redirect.json: ${e}`);
+    }
+    if (mappings.redirect) {
+      const red = mappings.redirect;
+      let mappingsArr = [
+            '############################################################################################',
+            `# Mendix redirect mapping, generated on ${buildDate} using \'gulp write:mappings\'`,
+            '############################################################################################',
+            ''
+          ],
+          done = [];
+      _.forEach(red, r => {
+        if (!r.to || !r.from) {
+          throwErr('write:mappings', `Error reading _assets/mappings/redirect.json, this is not a correct mapping: ${JSON.stringify(r, null, 4)}`);
+        }
+        if (r.disabled) {
+          gutil.log(`Mapping ${r.from} => ${r.to} disabled`)
+        }
+        const to = r.to.trim(),
+              from = r.from.trim(),
+              lastChar = to.substr(-1),
+              mdFile = '.' + to + (lastChar === '/' ? 'index.md' : '.md'),
+              htmlFile = gutil.replaceExtension(mdFile, '.html'),
+              hash = new Buffer(`${from}-${to}`).toString('base64'),
+              caseSensitive = to.toLowerCase() === from.toLowerCase();
+
+        if (!shell.test('-e', mdFile) && !shell.test('-e', htmlFile)) {
+          throwErr('write:mappings', `Error in mappings. There is no file for the mapping in mappings.json to: ${gutil.colors.cyan(to)}`);
+        } else if (to === from) {
+          throwErr('write:mappings', `Error in mappings. ${gutil.colors.cyan(to)} is the same as ${gutil.colors.cyan(from)}`);
+        } else if (done.indexOf(hash) !== -1) {
+          throwErr('write:mappings', `You have a duplicate mapping for. ${gutil.colors.cyan(from)} => ${gutil.colors.cyan(to)}`);
+        }
+        let mappingStr = '',
+            fromStr = (from.substr(-1) === '/' ? from + '?' : from + '/?');
+
+        if (r.exact) {
+          mappingsArr.push(`${from} ${to};`);
+        } else {
+          mappingsArr.push((caseSensitive ? '~' : '~*') + `${escapeMapping(fromStr)} ${to};`);
+        }
+
+      });
+      const mappingsFile = mappingsArr.join('\n');
+
+      if (write) {
+        if (!shell.test('-d', '_site/mappings')) {
+          shell.mkdir('-p', '_site/mappings');
+        }
+        fs.writeFile('_site/mappings/redirect.map', mappingsFile, err => {
+          if (err) {
+            throwErr('write:mappings', `Error writing _site/mappings/redirect.map: ${err}`);
+          } else {
+            gutil.log('Mappings written to _site/mappings/redirect.map');
+          }
+          cb();
+        })
+      } else {
+        cb();
+      }
+    } else {
+      throwErr('write:mappings', `No redirects found in mappings.json`);
+    }
+  });
+};
 /*************************************************
-    TASKS
+  TASKS
 **************************************************/
 
 gulp.task('clean', () => {
   return del([
     DIST_FOLDER
   ], { force: true });
+});
+
+gulp.task('write:mappings', done => {
+  mappings(true, done);
 });
 
 gulp.task('copy:images', () => {
@@ -128,16 +241,11 @@ gulp.task('sass:dev', () => {
 });
 
 gulp.task('jekyll:build', [], done => {
-  spawnJekyll(false, false, (code) => {
-    if (code !== 0) {
-      throw new gutil.PluginError({
-        plugin: 'jekyll:build',
-        message: `Jekyll exit code is ${code}, check your Jekyll setup`
-      });
-    } else {
-      done();
-    }
-  });
+  build(false, done);
+});
+
+gulp.task('jekyll:build-test', [], done => {
+  build(true, done);
 });
 
 gulp.task('dev', ['sass:dev', 'copy:images', 'compress:js'], done => {
@@ -159,5 +267,9 @@ gulp.task('serve', done => {
 })
 
 gulp.task('build', done => {
-  runSequence('clean', ['jekyll:build', 'sass:build', 'copy:images', 'compress:js'], done);
+  runSequence('clean', ['jekyll:build', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
+});
+
+gulp.task('build-test', done => {
+  runSequence('clean', ['jekyll:build-test', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
 });

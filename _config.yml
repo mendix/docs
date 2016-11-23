@@ -172,6 +172,7 @@ defaults:
 
 keep_files:
   - public
+  - mappings
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -185,6 +186,7 @@ exclude:
   - _assets
   - vendor
   - package.json
+  - mappings.json
   - test.txt
   - run.bat
   - manifest.yml

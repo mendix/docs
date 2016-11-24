@@ -125,7 +125,7 @@ const mappings = (write, cb) => {
       throwErr('write:mappings', `Cannot read _assets/mappings/redirect.json: ${e}`);
     }
     if (mappings.redirect) {
-      const red = mappings.redirect;
+      const red = _.reverse(_.sortBy(mappings.redirect, mapping => mapping.from.length));
       let mappingsArr = [
             '############################################################################################',
             `# Mendix redirect mapping, generated on ${buildDate} using \'gulp write:mappings\'`,

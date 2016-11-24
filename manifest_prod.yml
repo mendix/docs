@@ -6,3 +6,4 @@ applications:
   buildpack: staticfile_buildpack
   disk_quota: 512M
   instances: 2
+  host: docs

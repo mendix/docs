@@ -1,43 +1,47 @@
+sudo: true
 language: ruby
 rvm:
 - 2.3.1
-
 env:
   global:
-  - TRAVIS_NODE_VERSION="6.9.1"
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-  - JEKYLL_ENV=production
-
+    - GOPATH="${HOME}/.go_workspace"
+    - TRAVIS_NODE_VERSION="6.9.1"
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+    - JEKYLL_ENV=production
+    - CF_APP=documentation-accp
+    - CF_API=https://api.run.pivotal.io
+    - CF_USERNAME=jelte.lagendijk@mendix.com
+    - CF_ORGANIZATION=mendix-rnd.com
+    - CF_SPACE=docs
+    - secure: "NdoI6WzRsU/OsGpyIjjzgrnc23IJWzSAkEhJQWEjkMim6g2NrhrSipcKVjpsGkOyJFlmhMcVcejTxuvCMkIxOPSZziDHvHyqVU752ZGPTd7dYUIET2k7W6xytA2Aos66R3DasUPParFdmvvUdFny5GFjIILB8s6P5n3d1BnUG+nWhNOf3s++eY2UITq+jZl8JjEq8hMUq4UKLaFcwKUoFYBdNe9CV5sHmRK54BOOP65UJCm10H8pS6ywA/7ZVoHJwaIUF1XVdypxfdMpciqIN4jq6VB7AYEN6a2Qep6fa1wYeitCJkLaWkSzArGSQWUNw39JQcODijE2y1H/QBq7DNwqHcQtwtIme+HDtVsPHLzv47GQ/NV+AjV20EmXIxWp2ZgrUdndUC0sP3rhnRSAE0L2YSUwzYUG1xIKry4bxafkpjQ2DcZ0JC/2bpMy3JTThot/Ek8eDX+1cKbkaTghMYqT5bpSlL0OqE1/F2dr/ZGVUjhqdlMWf992pmDAq7IUl3nERLAY1RZByb6yDUy8llxpv3NWGeAxoXZFdfJNdN08qSJb6d2j2U+Y1NMbXhDjcs6YT1Jbn/33ZEwzS6NmKvQc+oEwjgKLbZKNoUmo822X8lBhvvr+bpHItycUqQUZ+nx344wsp3ISkSedZjeE1Lia98ZY1ryXC+UpoI9lQQE="
 install:
-  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
-  - bundle install
-  - npm install -g gulp
-  - npm install
-
+- rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm
+  && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm
+  install $TRAVIS_NODE_VERSION
+- bundle install
+- npm install -g gulp
+- npm install
+before_deploy:
+- curl -L "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar -zx
+- mkdir -p ./tmp/
+- mv -v cf ./tmp/cf
+- "./tmp/cf api $CF_API"
+- "./tmp/cf login -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORGANIZATION -s $CF_SPACE"
+- "./tmp/cf -v"
+- go get github.com/concourse/autopilot
+- "./tmp/cf install-plugin $GOPATH/bin/autopilot -f"
 script:
-  #- bundle exec jekyll build
-  #- bundle exec rake test
-  - gulp build
-
+- gulp build
 cache: bundler
-
 branches:
   only:
-    - master
-    #- feature/gulp-automate
-
-#sudo: false # route your build to the container-based infrastructure for a faster build
-
+  - master
+  - fix/bluegreen
 deploy:
+- provider: script
+  script: cf zero-downtime-push $CF_APP -f ./manifest.yml
   skip_cleanup: true
-  provider: cloudfoundry
-  edge: true
-  api: $CF_API
-  username: $CF_USER
-  password: $CF_PASS
-  organization: $CF_ORG
-  space: $CF_SPACE
-  appname: $CF_APPNAME
   on:
     branch:
       - master
+      - fix/bluegreen

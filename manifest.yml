@@ -1,4 +1,4 @@
 ---
 applications:
-- name: documentation
+- name: documentation-accp
   path: ./_site/

@@ -8,7 +8,7 @@ env:
     - TRAVIS_NODE_VERSION="6.9.1"
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
     - JEKYLL_ENV=production
-    - CF_APP=documentation
+    - CF_APP=docs
     - CF_API=https://api.run.pivotal.io
     - CF_USERNAME=jelte.lagendijk@mendix.com
     - CF_ORGANIZATION=mendix-rnd.com

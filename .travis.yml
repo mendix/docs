@@ -4,7 +4,6 @@ rvm:
 - 2.3.1
 env:
   global:
-    - GOPATH="${HOME}/.go_workspace"
     - TRAVIS_NODE_VERSION="6.9.1"
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
     - JEKYLL_ENV=production
@@ -22,14 +21,16 @@ install:
 - npm install -g gulp
 - npm install
 before_deploy:
-- curl -L "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar -zx
-- mkdir -p ./tmp/
-- mv -v cf ./tmp/cf
-- "./tmp/cf api $CF_API"
-- "./tmp/cf login -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORGANIZATION -s $CF_SPACE"
-- "./tmp/cf -v"
+- export PATH=$HOME:$PATH
+- travis_retry curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.22.2"
+- tar xzvf $HOME/cf.tgz -C $HOME
+- mkdir -p ${HOME}/Godeps/_workspace
+- export GOPATH=${HOME}/Godeps/_workspace
 - go get github.com/concourse/autopilot
-- "./tmp/cf install-plugin $GOPATH/bin/autopilot -f"
+- cf install-plugin -f $GOPATH/bin/autopilot
+- "cf api $CF_API"
+- "cf login -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORGANIZATION -s $CF_SPACE"
+- "cf -v"
 script:
 - gulp build
 cache: bundler

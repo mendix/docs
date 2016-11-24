@@ -22,7 +22,7 @@ install:
 - npm install
 before_deploy:
 - export PATH=$HOME:$PATH
-- travis_retry curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.22.2"
+- travis_retry curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&version=6.22.1"
 - tar xzvf $HOME/cf.tgz -C $HOME
 - mkdir -p ${HOME}/Godeps/_workspace
 - export GOPATH=${HOME}/Godeps/_workspace

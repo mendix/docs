@@ -21,7 +21,7 @@ install:
 - cf api $CF_API
 - cf login -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORGANIZATION -s $CF_SPACE
 - cf -v
-- cf install-plugin autopilot -r CF-Community
+- cf install-plugin autopilot -r CF-Community -f
 ####
 - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm
   && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm

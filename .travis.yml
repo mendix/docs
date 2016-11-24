@@ -16,14 +16,10 @@ env:
     - secure: "NdoI6WzRsU/OsGpyIjjzgrnc23IJWzSAkEhJQWEjkMim6g2NrhrSipcKVjpsGkOyJFlmhMcVcejTxuvCMkIxOPSZziDHvHyqVU752ZGPTd7dYUIET2k7W6xytA2Aos66R3DasUPParFdmvvUdFny5GFjIILB8s6P5n3d1BnUG+nWhNOf3s++eY2UITq+jZl8JjEq8hMUq4UKLaFcwKUoFYBdNe9CV5sHmRK54BOOP65UJCm10H8pS6ywA/7ZVoHJwaIUF1XVdypxfdMpciqIN4jq6VB7AYEN6a2Qep6fa1wYeitCJkLaWkSzArGSQWUNw39JQcODijE2y1H/QBq7DNwqHcQtwtIme+HDtVsPHLzv47GQ/NV+AjV20EmXIxWp2ZgrUdndUC0sP3rhnRSAE0L2YSUwzYUG1xIKry4bxafkpjQ2DcZ0JC/2bpMy3JTThot/Ek8eDX+1cKbkaTghMYqT5bpSlL0OqE1/F2dr/ZGVUjhqdlMWf992pmDAq7IUl3nERLAY1RZByb6yDUy8llxpv3NWGeAxoXZFdfJNdN08qSJb6d2j2U+Y1NMbXhDjcs6YT1Jbn/33ZEwzS6NmKvQc+oEwjgKLbZKNoUmo822X8lBhvvr+bpHItycUqQUZ+nx344wsp3ISkSedZjeE1Lia98ZY1ryXC+UpoI9lQQE="
 install:
 #### Move this after we get this working
-- curl -L "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar -zx
-- mkdir -p ./tmp/
-- mv -v cf ./tmp/cf
-- ./tmp/cf api $CF_API
-- ./tmp/cf login -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORGANIZATION -s $CF_SPACE
-- ./tmp/cf -v
-- go get github.com/concourse/autopilot
-- ./tmp/cf install-plugin $GOPATH/bin/autopilot -f
+- wget https://cli.run.pivotal.io/stable?release=debian64&version=6.22.2&source=github-rel -qO temp.deb && sudo dpkg -i temp.deb
+- rm temp.deb
+- cf cf login -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORGANIZATION -s $CF_SPACE
+- cf install-plugin autopilot -r CF-Community
 ####
 - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm
   && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm

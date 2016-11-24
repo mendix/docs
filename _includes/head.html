@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="{{ "/public/styles/search_autocomplete.css" | prepend: site.baseurl }}">
 
     <meta name="google-site-verification" content="aMsqgUmbPjh3W_nNVxtQEkUEdMcxM-EULoGHGBDGpYo" />
-    {% if site.production == true and page.sitemap != false  %}
+    {% if jekyll.environment == "production" and page.sitemap != false  %}
     <meta name="ROBOTS" content="INDEX, FOLLOW">
       {% else %}
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">

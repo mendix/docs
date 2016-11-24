@@ -1,6 +1,6 @@
 ---
 applications:
-- name: documentation-accp
+- name: documentation
   path: ./_site/
   memory: 128M
   buildpack: staticfile_buildpack

@@ -10,7 +10,7 @@ Sitemap: https://docs.mendix.com/sitemap.xml
 # robotstxt.org - if _config production variable is false robots will be disallowed.
 {% assign noindexPages = site.pages | where: 'sitemap', false %}
 {% assign noindexDocuments = site.documents | where: 'sitemap', false %}
-{% if site.production != true %}
+{% if jekyll.environment != "production" %}
   Disallow: /
 {% else %}
   {% if noindexDocuments or noindexPages %}

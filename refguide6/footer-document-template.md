@@ -7,7 +7,7 @@ parent: "document-templates"
 
 When enabled, the footer will be inserted at the bottom of every page. Other widgets can be put in the footer.
 
-For inserting page numbers, see [Static Label](/refguide6/static-label-document-template).
+For inserting page numbers, see [Static Label](static-label-document-template).
 
 <div class="alert alert-info">{% markdown %}
 

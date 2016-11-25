@@ -113,10 +113,10 @@ This How-to has enabled you to start working and building a Custom Widget for th
 
 ## 7\. Related content
 
-*   [Creating a chainable Custom Widget](/howto6/create-a-chainable-custom-widget)
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto6/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-*   [Creating a Basic Hello World Custom Widget](/howto6/create-a-basic-hello-world-custom-widget)
-*   [The Mobile Slider Custom Widget](/howto6/the-mobile-slider-custom-widget)
+*   [Creating a chainable Custom Widget](create-a-chainable-custom-widget)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
+*   [Creating a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
+*   [The Mobile Slider Custom Widget](the-mobile-slider-custom-widget)
 
 
 

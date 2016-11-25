@@ -10,9 +10,9 @@ App services are the preferred way of connecting Mendix applications to each oth
 *   Microflow actions
 *   Domain model entities
 
-In the project explorer, an app service can be selected in the 'Add' context menu on a module. See [Select app service](/refguide6/select-app-service) for more information.
+In the project explorer, an app service can be selected in the 'Add' context menu on a module. See [Select app service](select-app-service) for more information.
 
-See the [Settings](/refguide6/settings) page for more information on document options.
+See the [Settings](settings) page for more information on document options.
 
 App service actions are directly available in Microflows. If a new activity is added, new app service actions are shown below the standard microflow actions.
 

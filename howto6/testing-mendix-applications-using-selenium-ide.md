@@ -237,16 +237,16 @@ Now the test steps will have 'mx-name-' CSS selectors rather than the Selenium d
 
 ## 4\. Related content
 
-*   [Testing Mendix applications using Selenium IDE](/howto6/testing-mendix-applications-using-selenium-ide)
-*   [Creating automated tests with TestNG](/howto6/create-automated-tests-with-testng)
-*   [Testing microflows using the UnitTesting module](/howto6/testing-microflows-using-the-unittesting-module)
-*   [Finding the Root Cause of Runtime Errors](/howto6/finding-the-root-cause-of-runtime-errors)
-*   [Clearing Warning Messages in Mendix](/howto6/clear-warning-messages)
-*   [Testing web services using SoapUI](/howto6/testing-web-services-using-soapui)
-*   [Monitoring Mendix using JMX](/howto6/monitoring-mendix-using-jmx)
-*   [Debugging Java actions remotely](/howto6/debug-java-actions-remotely)
-*   [Log Levels](/howto6/log-levels)
-*   [Debugging Java Actions](/howto6/debug-java-actions)
+*   [Testing Mendix applications using Selenium IDE](testing-mendix-applications-using-selenium-ide)
+*   [Creating automated tests with TestNG](create-automated-tests-with-testng)
+*   [Testing microflows using the UnitTesting module](testing-microflows-using-the-unittesting-module)
+*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+*   [Clearing Warning Messages in Mendix](clear-warning-messages)
+*   [Testing web services using SoapUI](testing-web-services-using-soapui)
+*   [Monitoring Mendix using JMX](monitoring-mendix-using-jmx)
+*   [Debugging Java actions remotely](debug-java-actions-remotely)
+*   [Log Levels](log-levels)
+*   [Debugging Java Actions](debug-java-actions)
 
 
 

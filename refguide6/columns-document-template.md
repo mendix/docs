@@ -9,7 +9,7 @@ parent: "data-grid-document-template"
 
 ### Caption
 
-The caption of a column is the text that appears as a header above the rows. This is a translatable text. See [Internationalization](/refguide6/translatable-texts).
+The caption of a column is the text that appears as a header above the rows. This is a translatable text. See [Internationalization](translatable-texts).
 
 ### Enumeration Format (only for attributes of type Enumeration)
 

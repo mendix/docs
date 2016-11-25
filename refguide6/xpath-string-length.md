@@ -5,4 +5,4 @@ parent: "xpath-constraint-functions"
 ---
 
 
-See [length](/refguide6/xpath-length).
+See [length](xpath-length).

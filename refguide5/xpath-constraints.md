@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-A constraint can be added to any Xpath query to modulate the data retrieved. It should always take the form of a valid [expression](/refguide5/xpath-expressions). This should consist of one or more variables combined with [operators](/refguide5/xpath-operators), [functions](/refguide5/xpath-constraint-functions), [keywords or system variables](/refguide5/xpath-keywords-and-system-variables).
+A constraint can be added to any Xpath query to modulate the data retrieved. It should always take the form of a valid [expression](xpath-expressions). This should consist of one or more variables combined with [operators](xpath-operators), [functions](xpath-constraint-functions), [keywords or system variables](xpath-keywords-and-system-variables).
 
 ```
 //Sales.Customer[Name = 'Jansen']
@@ -24,7 +24,7 @@ Multiple constraints can be added to a single query, this is true for all querie
 
 This query retrieves all customers whose name is equal to Jansen and who live in Rotterdam.
 
-It is also possible to combine constraints with an 'and' or 'or' [operator](/refguide5/xpath-operators).
+It is also possible to combine constraints with an 'and' or 'or' [operator](xpath-operators).
 
 ```
 //Sales.Customer[Name = 'Jansen' and Sales.Customer_Address/Sales.Address/City = 'Rotterdam']

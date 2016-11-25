@@ -5,7 +5,7 @@ parent: "container-widgets"
 ---
 
 
-Tables can be used to lend structure to a page. They contain a number of [rows](/refguide6/table-row) and columns, the intersection of which is called a [cell](/refguide6/table-cell). Each cell can contain widgets.
+Tables can be used to lend structure to a page. They contain a number of [rows](table-row) and columns, the intersection of which is called a [cell](table-cell). Each cell can contain widgets.
 
 <div class="alert alert-info">{% markdown %}
 

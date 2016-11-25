@@ -5,7 +5,7 @@ parent: "input-widgets"
 ---
 
 
-A check box is an [input widget](/refguide6/input-widgets) that can be used to display and edit boolean attributes. It will display a tick if the value is true and remain empty if it is false.
+A check box is an [input widget](input-widgets) that can be used to display and edit boolean attributes. It will display a tick if the value is true and remain empty if it is false.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -53,5 +53,5 @@ This checkbox might be used to indicate whether or not a user is a customer.
 
 ## Related articles
 
-*   [Data view](/refguide6/data-view)
-*   [Attribute](/refguide6/attributes)s
+*   [Data view](data-view)
+*   [Attribute](attributes)s

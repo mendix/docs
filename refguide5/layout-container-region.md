@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-A layout container region is part of a [Layout Container](/refguide5/layout-container), and defines a content area.
+A layout container region is part of a [Layout Container](layout-container), and defines a content area.
 
 ## Common Properties
 

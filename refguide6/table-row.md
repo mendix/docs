@@ -5,7 +5,7 @@ parent: "table"
 ---
 
 
-A table consists of a number of rows divided into [table cells](/refguide6/table-cell).
+A table consists of a number of rows divided into [table cells](table-cell).
 
 ## Common properties
 

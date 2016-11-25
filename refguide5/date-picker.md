@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-A date picker is an [input widget](/refguide5/input-widgets) that can be used to display and edit date/time attributes. It takes into account the language setting to display a localized calendar.
+A date picker is an [input widget](input-widgets) that can be used to display and edit date/time attributes. It takes into account the language setting to display a localized calendar.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -44,7 +44,7 @@ _Default value:_ False
 
 ### Required message
 
-This property determines the message that is shown to the end user if the widget is empty and the 'Required' property is set to true. This is a translable text. See [Translatable Texts](/refguide5/translatable-texts).
+This property determines the message that is shown to the end user if the widget is empty and the 'Required' property is set to true. This is a translable text. See [Translatable Texts](translatable-texts).
 
 <div class="alert alert-info">{% markdown %}
 
@@ -137,7 +137,7 @@ The on-change property optionally specifies a microflow that will be executed wh
 
 The on change settings specify what parameters are passed to the microflow, whether a progress bar is shown and more.
 
-See [Starting Microflows](/refguide5/starting-microflows).
+See [Starting Microflows](starting-microflows).
 
 ### On enter
 
@@ -147,7 +147,7 @@ The on-enter property optionally specifies a microflow that will be executed whe
 
 The on enter settings specify what parameters are passed to the microflow, whether a progress bar is shown and more.
 
-See [Starting Microflows](/refguide5/starting-microflows).
+See [Starting Microflows](starting-microflows).
 
 ### On leave
 
@@ -157,7 +157,7 @@ The on-leave property optionally specifies a microflow that will be executed whe
 
 The on leave settings specify what parameters are passed to the microflow, whether a progress bar is shown and more.
 
-See [Starting Microflows](/refguide5/starting-microflows).
+See [Starting Microflows](starting-microflows).
 
 ## Common properties
 
@@ -198,5 +198,5 @@ _Default value:_ 0
 
 ## Related articles
 
-*   [Data view](/refguide5/data-view)
-*   [Attributes](/refguide5/attributes)
+*   [Data view](data-view)
+*   [Attributes](attributes)

@@ -96,7 +96,7 @@ Retrieves the name of a user of the application based on the user's OpenID. Note
 
 <div class="alert alert-warning">{% markdown %}
 
-Please download the latest version of the [AppCloudServices module](https://appstore.home.mendix.com/link/app/934/Mendix/AppCloudServices) from the App Store and use [GetUserProfile](/apidocs/profile-api) from API version 3 instead.
+Please download the latest version of the [AppCloudServices module](https://appstore.home.mendix.com/link/app/934/Mendix/AppCloudServices) from the App Store and use [GetUserProfile](profile-api) from API version 3 instead.
 
 {% endmarkdown %}</div>
 

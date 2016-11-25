@@ -15,7 +15,7 @@ Before you start with this how-to please complete the following prerequisites:
 
 *   Install [Eclipse](https://eclipse.org/)
 *   Add a Java action and open the project in Eclipse.
-*   Complete the how-to about [extending your application with custom Java](/howto50/extending-your-application-with-custom-java)
+*   Complete the how-to about [extending your application with custom Java](extending-your-application-with-custom-java)
 *   Deploy the application for Eclipse by selecting 'Deploy for Eclipse' from the project menu in the Mendix Modeler. You should redo this every time you make changes in the Mendix Modeler.
     ![](attachments/8784371/8946361.png)
 
@@ -54,11 +54,11 @@ Before you start with this how-to please complete the following prerequisites:
 
 ## 4\. Related content
 
-*   [Finding the Root Cause of Runtime Errors](/howto50/finding-the-root-cause-of-runtime-errors)
-*   [Clearing Warning Messages in Mendix](/howto50/clearing-warning-messages-in-mendix)
-*   [Testing web services using SoapUI](/howto50/testing-web-services-using-soapui)
-*   [Debugging Microflows](/howto50/debugging-microflows)
-*   [Common Mendix SSO Errors](/howto50/common-mendix-sso-errors)
-*   [Monitoring Mendix using JMX](/howto50/monitoring-mendix-using-jmx)
-*   [Debugging Java Actions](/howto50/debugging-java-actions)
+*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+*   [Clearing Warning Messages in Mendix](clearing-warning-messages-in-mendix)
+*   [Testing web services using SoapUI](testing-web-services-using-soapui)
+*   [Debugging Microflows](debugging-microflows)
+*   [Common Mendix SSO Errors](common-mendix-sso-errors)
+*   [Monitoring Mendix using JMX](monitoring-mendix-using-jmx)
+*   [Debugging Java Actions](debugging-java-actions)
 *   [Java Actions](/refguide5/java-actions)

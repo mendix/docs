@@ -24,9 +24,9 @@ To see the results of this how-to, it is necessary that you set up a test projec
 
 Before you continue, make sure that you know how to create the following:
 
-* **Domain models** (for more information, see [How to Create a Basic Data Layer](/howto6/create-a-basic-data-layer))
-* **Overview and detail pages** (for more information, see [How to Create Your First Two Overview and Detail Pages](/howto6/create-your-first-two-overview-and-detail-pages))
-* **Menu items** (for more information, see [How to Set Up the Navigation Structure](/howto6/setting-up-the-navigation-structure))
+* **Domain models** (for more information, see [How to Create a Basic Data Layer](create-a-basic-data-layer))
+* **Overview and detail pages** (for more information, see [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages))
+* **Menu items** (for more information, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure))
 
 To set up the test data, follow these steps:
 
@@ -180,12 +180,12 @@ In the example activity of this section, you will filter the orders by their ass
 
 ## 8 Related Content
 
-* [How to Configure the Scout and Windows 10 Workaround](/howto6/scout-and-windows-10-workaround)
-* [How to Set Up Layouts and Snippets](/howto6/layouts-and-snippets)
-* [How to Set Up the Mendix UI Framework](/howto6/setup-mendix-ui-framework)
-* [How to Set Up the Mendix UI Framework with Just CSS](/howto6/setup-mendix-ui-framework-with-just-css)
-* [How to Set Up the Mendix UI Framework with Koala](/howto6/setup-mendix-ui-framework-with-koala)
-* [How to Set Up the Navigation Structure](/howto6/setting-up-the-navigation-structure)
-* [How to Create Your First Two Overview and Detail Pages](/howto6/create-your-first-two-overview-and-detail-pages)
-* [How to Find the Root Cause of Runtime Errors](/howto6/finding-the-root-cause-of-runtime-errors)
+* [How to Configure the Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
+* [How to Set Up Layouts and Snippets](layouts-and-snippets)
+* [How to Set Up the Mendix UI Framework](setup-mendix-ui-framework)
+* [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
+* [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
+* [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)
+* [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages)
+* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [XPath Constraints](/refguide6/xpath-constraints)

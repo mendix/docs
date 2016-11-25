@@ -146,6 +146,6 @@ It is very important to setup Log Activities within the microflows to capture er
 
 ## 5\. Related content
 
-*   [Send Custom Emails From Your App](/howto6/send-custom-emails-from-your-app)
-*   [Explore our connectors and adapters](/howto6/explore-the-connectors-and-adapters)
-*   [Access a Samba share from the MxCloud](/howto6/access-a-samba-share-from-the-mxcloud)
+*   [Send Custom Emails From Your App](send-custom-emails-from-your-app)
+*   [Explore our connectors and adapters](explore-the-connectors-and-adapters)
+*   [Access a Samba share from the MxCloud](access-a-samba-share-from-the-mxcloud)

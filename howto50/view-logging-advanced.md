@@ -21,4 +21,4 @@ The most important keyboard bindings for use in `less` are:
 The older log files can be opened using `zless`, like: `zless /var/log/xas2/example.log.1.gz`
 
 Return to:
-[![](attachments/819203/917564.png)](/howto50/view-logging-advanced)[(Back to Top)](/howto50/view-logging-advanced)
+[![](attachments/819203/917564.png)](view-logging-advanced)[(Back to Top)](view-logging-advanced)

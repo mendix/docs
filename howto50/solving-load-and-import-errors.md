@@ -29,7 +29,7 @@ Before trying to solve the problems, it's useful to discover the origin of the p
 
 ### 2.1 Is this a Team Server project?
 
-If your project is a [Team Server](/refguide5/team-server) project, and you just did a [download or update](/howto50/using-team-server-version-control) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit in the **Develop** menu item in the top menu of your Project Dashboard in the [Mendix Dev Portal](https://sprintr.home.mendix.com).
+If your project is a [Team Server](/refguide5/team-server) project, and you just did a [download or update](using-team-server-version-control) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit in the **Develop** menu item in the top menu of your Project Dashboard in the [Mendix Dev Portal](https://sprintr.home.mendix.com).
 
 If the latest change on your branch line was committed by someone other than yourself, please inform the person about the problem.
 
@@ -37,7 +37,7 @@ If the latest change on your branch line was committed by someone other than you
 
 ### 2.2 Did you obtain the model from someone else?
 
-If you received the model from someone else, for example as a [project package](/howto50/importing-and-exporting-objects) (.mpk) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
+If you received the model from someone else, for example as a [project package](importing-and-exporting-objects) (.mpk) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
 
 ### 2.3 Did you create the project yourself?
 
@@ -53,12 +53,12 @@ Finally, in the unlikely event that you encounter this error while working on yo
 
 ## 4\. Related content
 
-*   [Clearing Warning Messages in Mendix](/howto50/clearing-warning-messages-in-mendix)
-*   [Common Mendix SSO Errors](/howto50/common-mendix-sso-errors)
-*   [Debug a Hybrid Mobile Application](/howto50/debug-a-hybrid-mobile-application)
-*   [Debugging Java Actions](/howto50/debugging-java-actions)
-*   [Debugging Java actions remotely](/howto50/debugging-java-actions-remotely)
-*   [Debugging Microflows](/howto50/debugging-microflows)
-*   [Debugging Microflows Remotely](/howto50/debugging-microflows-remotely)
-*   [Finding the Root Cause of Runtime Errors](/howto50/finding-the-root-cause-of-runtime-errors)
+*   [Clearing Warning Messages in Mendix](clearing-warning-messages-in-mendix)
+*   [Common Mendix SSO Errors](common-mendix-sso-errors)
+*   [Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)
+*   [Debugging Java Actions](debugging-java-actions)
+*   [Debugging Java actions remotely](debugging-java-actions-remotely)
+*   [Debugging Microflows](debugging-microflows)
+*   [Debugging Microflows Remotely](debugging-microflows-remotely)
+*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 *   [How to connect a different project to a node](/support/how-to-connect-a-different-project-to-a-node)

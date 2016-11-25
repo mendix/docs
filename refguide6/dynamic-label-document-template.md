@@ -18,7 +18,7 @@ A dynamic label linking to a customer name.
 
 ### Style
 
-See [Style](/refguide6/style)
+See [Style](style)
 
 ### Render XHTML
 

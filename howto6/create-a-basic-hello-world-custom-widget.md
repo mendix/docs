@@ -23,7 +23,7 @@ The Mendix front-end uses the DOJO framework to implement widgets. Each Mendix w
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Download and install the [Mendix Modeler](https://appstore.home.mendix.com/link/modelers/)
-* [Get Started with the Widget Development Plugin for Adobe Brackets](/howto6/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
+* [Get Started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
 
 ## 3 Custom Widget Overview
 
@@ -729,6 +729,6 @@ This is a great book that can help you understand what JavaScript is all about:
 
 ## 9 Related Content
 
-* [Create a Chainable Custom Widget](/howto6/create-a-chainable-custom-widget)
-* [Get Started with the Widget Development Plugin for Adobe Brackets](/howto6/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-* [Use the Mobile Slider Custom Widget](/howto6/the-mobile-slider-custom-widget)
+* [Create a Chainable Custom Widget](create-a-chainable-custom-widget)
+* [Get Started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
+* [Use the Mobile Slider Custom Widget](the-mobile-slider-custom-widget)

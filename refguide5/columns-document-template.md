@@ -9,7 +9,7 @@ space: "Reference Guide 5"
 
 ### Caption
 
-The caption of a column is the text that appears as a header above the rows. This is a translatable text. See [Internationalization](/refguide5/translatable-texts).
+The caption of a column is the text that appears as a header above the rows. This is a translatable text. See [Internationalization](translatable-texts).
 
 ### Enumeration Format (only for attributes of type Enumeration)
 

@@ -51,7 +51,7 @@ As the Mendix Runtime performs database synchronization at startup it is importa
 
 ## File storage
 
-When using clustered Mendix Runtime instances uploaded files should be stored in a shared file storage facility, as every Mendix Runtime instance should access the same files. Either the local storage facility is shared or the files are stored in a central storage facility, such as S3\. See [the S3 settings page](/refguide6/custom-settings) for how to configure S3 for Mendix.
+When using clustered Mendix Runtime instances uploaded files should be stored in a shared file storage facility, as every Mendix Runtime instance should access the same files. Either the local storage facility is shared or the files are stored in a central storage facility, such as S3\. See [the S3 settings page](custom-settings) for how to configure S3 for Mendix.
 
 ## Configuring the Mendix Runtime
 

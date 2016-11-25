@@ -11,7 +11,7 @@ Component               | Event/property | Available parameter
 ----------------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------
 Data view action button | On click       | Data view object
 Data view               | Data source    | Object of the data view containing this data view
-Grid action button (1)  | On click       | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](/refguide5/data-grid#selection-mode))
+Grid action button (1)  | On click       | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](data-grid#selection-mode))
 Reference set selector  | On change      | Data view object
 Attribute widget (2)    | On change      | Data view object
 Attribute widget        | On enter       | Data view object
@@ -38,7 +38,7 @@ You can create a new microflow by clicking 'Select...' and then 'New'. Modeler w
 
 <div class="alert alert-info">{% markdown %}
 
-Since Mendix 5.17\. For older versions see the [following section](/refguide5/starting-microflows).
+Since Mendix 5.17\. For older versions see the [following section](starting-microflows).
 
 {% endmarkdown %}</div>
 
@@ -133,7 +133,7 @@ _Default value:_ Yes
 
 <div class="alert alert-info">{% markdown %}
 
-This following section applies to versions older than 5.17\. For newer versions see the [previous section](/refguide5/starting-microflows).
+This following section applies to versions older than 5.17\. For newer versions see the [previous section](starting-microflows).
 
 {% endmarkdown %}</div>
 

@@ -15,5 +15,5 @@ The App Platform can be used separately from the other Mendix products and it's 
 
 ## Further reading
 
-*   [Team Server](/refguide5/team-server) - read more about the Team Server.
+*   [Team Server](team-server) - read more about the Team Server.
 *   [The Mendix App Platform](http://home.mendix.com) - go to home.mendix.com to claim your own account!

@@ -129,8 +129,8 @@ Note that the scheduled event will always synchronize all enabled LDAP server co
 
 ## 8\. Related content
 
-*   [Expose a Web Service](/howto50/consuming-a-complex-web-service)
-*   [Consume a Simple Web Service](/howto50/consuming-a-simple-web-service)
-*   [Consume a Complex Web Service](/howto50/consuming-a-complex-web-service)
+*   [Expose a Web Service](consuming-a-complex-web-service)
+*   [Consume a Simple Web Service](consuming-a-simple-web-service)
+*   [Consume a Complex Web Service](consuming-a-complex-web-service)
 *   [http://www.openldap.org/](http://www.openldap.org/)
 *   [https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)

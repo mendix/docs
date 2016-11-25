@@ -42,12 +42,12 @@ Go to the [Mendix App Store](https://appstore.home.mendix.com) and locate the Co
 
 ## 3\. Installing the app on your device
 
-If you want to install this application as native app on your device, you can either install it via iTunes or publish it to one of the mobile app stores. How to achieve this is described in this [how-to](/howto50/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
+If you want to install this application as native app on your device, you can either install it via iTunes or publish it to one of the mobile app stores. How to achieve this is described in this [how-to](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
 
 ## 4\. Related content
 
-*   [Build a simple HRM app 1: Create, manage and deploy the app](/howto50/build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-*   [Build a simple HRM app 2: First steps in building a rich GUI](/howto50/build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-*   [Build a simple HRM app 3: Show related data in the GUI](/howto50/build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](/howto50/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
-*   [Build a simple HRM app 5: Smarten up your app with business logic](/howto50/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
+*   [Build a simple HRM app 1: Create, manage and deploy the app](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+*   [Build a simple HRM app 2: First steps in building a rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+*   [Build a simple HRM app 3: Show related data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+*   [Build a simple HRM app 5: Smarten up your app with business logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)

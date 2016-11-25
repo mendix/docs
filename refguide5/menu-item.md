@@ -5,17 +5,17 @@ space: "Reference Guide 5"
 ---
 
 
-[Menus](/refguide5/menu) are composed of menu items. Menu items can contain other menu items within certain limits. Menu bars can have two levels, the navigation tree three levels and the simple menu bar only one.
+[Menus](menu) are composed of menu items. Menu items can contain other menu items within certain limits. Menu bars can have two levels, the navigation tree three levels and the simple menu bar only one.
 
 ## General Properties
 
 ### Caption
 
-The caption is the text that will appear in the [menu widget](/refguide5/menu-widgets). This is a translatable text. See [Translatable Texts](/refguide5/translatable-texts).
+The caption is the text that will appear in the [menu widget](menu-widgets). This is a translatable text. See [Translatable Texts](translatable-texts).
 
 ### Icon
 
-The glyph icon or image will appear next to or above the caption in the [menu widget](/refguide5/menu-widgets).
+The glyph icon or image will appear next to or above the caption in the [menu widget](menu-widgets).
 
 ### Target
 

@@ -7,6 +7,6 @@ parent: "pages"
 
 These are widgets that you can use to display menus in your application.
 
-*   [Menu Bar](/refguide6/menu-bar)
-*   [Navigation Tree](/refguide6/navigation-tree)
-*   [Simple Menu Bar](/refguide6/simple-menu-bar)
+*   [Menu Bar](menu-bar)
+*   [Navigation Tree](navigation-tree)
+*   [Simple Menu Bar](simple-menu-bar)

@@ -16,7 +16,7 @@ This is the third how-to in a series of five on how to create a simple HRM appli
 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
-*   [Build a simple HRM app 2: First steps in building a rich GUI](/howto50/build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+*   [Build a simple HRM app 2: First steps in building a rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
 
 ## 2\. Expand your app
 
@@ -147,14 +147,14 @@ To view a page in your app, you need to add a menu item so you can navigate to t
     ![](attachments/14091713/14876694.png)
     You can now see the selected department in the Employee Overview page.
 
-Click [here](/howto50/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options) to go the fourth how-to on how to create a simple HRM application and enrich the GUI with Filter Options.
+Click [here](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options) to go the fourth how-to on how to create a simple HRM application and enrich the GUI with Filter Options.
 
 ## 4\. Related content
 
-*   [Build a simple HRM app 1: Create, manage and deploy the app](/howto50/build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-*   [Build a simple HRM app 2: First steps in building a rich GUI](/howto50/build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](/howto50/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
-*   [Build a simple HRM app 5: Smarten up your app with business logic](/howto50/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
+*   [Build a simple HRM app 1: Create, manage and deploy the app](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+*   [Build a simple HRM app 2: First steps in building a rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+*   [Build a simple HRM app 5: Smarten up your app with business logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
 
 Learn more about this topic using the following helpful links:
 

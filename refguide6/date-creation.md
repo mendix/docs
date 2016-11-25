@@ -5,7 +5,7 @@ parent: "microflow-expressions"
 ---
 
 
-Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between the two is that `dateTime` uses the calendar of the session used in this function call and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default but this can be configured in the [project settings](/refguide6/project-settings).
+Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between the two is that `dateTime` uses the calendar of the session used in this function call and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default but this can be configured in the [project settings](project-settings).
 
 These functions takes between one and 6 input parameters. These represent, in order:
 

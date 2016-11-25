@@ -40,35 +40,35 @@ Consider the following query:
 `//Sales.Customer[Name='Jansen']`
 
 The constraint is clearly visible between brackets and restricts the objects retrieved to those for which the attribute 'Name' equals 'Jansen'. Objects with any other name than Jansen are excluded from the list.
-The number of possible constraints on a single query is unlimited. For more information on how to add and manipulate these constraints see [this page](/refguide6/xpath-constraints).
+The number of possible constraints on a single query is unlimited. For more information on how to add and manipulate these constraints see [this page](xpath-constraints).
 
 Element D of a query is optional and specifies an attribute of the retrieved entity. This option is rarely used in the modeler itself as all data is stored in objects, making it cumbersome and needlessly complicated to deal with a list of single attribute. However, various Java actions have use of such lists. Also, this functionality can be used in conjunction with Part A to create aggregates of certain variables easily.
 
-Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](/refguide6/xpath-avg), [count](/refguide6/xpath-count), [max](/refguide6/xpath-max), [min](/refguide6/xpath-min) and [sum](/refguide6/xpath-sum). With the exception of 'count', each of these functions require that a particular attribute is specified in element D.
+Element A of a query is optional and specifies an aggregation. Element A can be one of the following functions: [avg](xpath-avg), [count](xpath-count), [max](xpath-max), [min](xpath-min) and [sum](xpath-sum). With the exception of 'count', each of these functions require that a particular attribute is specified in element D.
 
-The exception to these basic guidelines is the ID query. See [this page](/refguide6/xpath-id) for more information.
+The exception to these basic guidelines is the ID query. See [this page](xpath-id) for more information.
 
-## [Tokens](/refguide6/xpath-tokens)
+## [Tokens](xpath-tokens)
 
-## [Operators](/refguide6/xpath-operators)
+## [Operators](xpath-operators)
 
 ## Functions
 
 The following XPath functions are available:
 
-[XPath functions](/refguide6/xpath-query-functions):
+[XPath functions](xpath-query-functions):
 
-*   [avg](/refguide6/xpath-avg)
-*   [count](/refguide6/xpath-count)
-*   [max](/refguide6/xpath-max)
-*   [min](/refguide6/xpath-min)
-*   [sum](/refguide6/xpath-sum)
+*   [avg](xpath-avg)
+*   [count](xpath-count)
+*   [max](xpath-max)
+*   [min](xpath-min)
+*   [sum](xpath-sum)
 
-[Constraint functions](/refguide6/xpath-constraint-functions):
+[Constraint functions](xpath-constraint-functions):
 
-*   [contains](/refguide6/xpath-contains)
-*   [start-with](/refguide6/xpath-starts-with)
-*   [ends-with](/refguide6/xpath-ends-with)
-*   [not](/refguide6/xpath-not)
-*   [true](/refguide6/xpath-true)
-*   [false](/refguide6/xpath-false)
+*   [contains](xpath-contains)
+*   [start-with](xpath-starts-with)
+*   [ends-with](xpath-ends-with)
+*   [not](xpath-not)
+*   [true](xpath-true)
+*   [false](xpath-false)

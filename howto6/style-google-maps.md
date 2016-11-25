@@ -76,10 +76,10 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 
 ## 3\. Related content
 
-*   [Create a custom theme with the Mendix UI Framework](/howto6/create-a-custom-theme-with-the-mendix-ui-framework)
-*   [Layouts and Snippets](/howto6/layouts-and-snippets)
-*   [Filtering Data on an Overview Page](/howto6/filtering-data-on-an-overview-page)
-*   [Setup Mendix UI Framework](/howto6/setup-mendix-ui-framework)
-*   [Setting Up the Navigation Structure](/howto6/setting-up-the-navigation-structure)
-*   [Setup Mendix UI Framework with Koala](/howto6/setup-mendix-ui-framework-with-koala)
-*   [Creating your first two Overview and Detail pages](/howto6/create-your-first-two-overview-and-detail-pages)
+*   [Create a custom theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
+*   [Layouts and Snippets](layouts-and-snippets)
+*   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
+*   [Setup Mendix UI Framework](setup-mendix-ui-framework)
+*   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
+*   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
+*   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)

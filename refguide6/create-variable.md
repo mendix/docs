@@ -9,7 +9,7 @@ With the 'Create Variable' action you can create a new variable and assign a val
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide6/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 
@@ -17,11 +17,11 @@ See [Microflow Element Common Properties](/refguide6/microflow-element-common-pr
 
 ### Data type
 
-Defines what kind of data can be stored in the variable. A variable can have one of the following [data types](/refguide6/data-types): Boolean, Enumeration, Decimal, Float (deprecated), Integer/Long or String.
+Defines what kind of data can be stored in the variable. A variable can have one of the following [data types](data-types): Boolean, Enumeration, Decimal, Float (deprecated), Integer/Long or String.
 
 ### Initial value
 
-Defines the initial value of the variable. The value is entered using a [microflow expression](/refguide6/microflow-expressions). The result of the microflow expression should match the data type of the variable.
+Defines the initial value of the variable. The value is entered using a [microflow expression](microflow-expressions). The result of the microflow expression should match the data type of the variable.
 
 ## Output Properties
 

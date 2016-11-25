@@ -56,4 +56,4 @@ The JDBC driver jars, for the databases you want to connect to, must be placed i
 
 ## 5\. Related content
 
-*   [How to execute an SQL statement on an external database](/bestpractices/how-to-execute-an-sql-statement-on-an-external-database)
+*   [How to execute an SQL statement on an external database](how-to-execute-an-sql-statement-on-an-external-database)

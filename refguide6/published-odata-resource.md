@@ -5,7 +5,7 @@ parent: "published-odata-services"
 ---
 <div class="alert alert-warning">{% markdown %}
 
-This document describes the properties of a published OData resource. If you want a general overview of OData services, you can check the [Published OData Services](/refguide6/published-odata-services) documentation.
+This document describes the properties of a published OData resource. If you want a general overview of OData services, you can check the [Published OData Services](published-odata-services) documentation.
 
 {% endmarkdown %}</div>
 
@@ -23,7 +23,7 @@ Press the **Select...** button to open a dialog window that allows you to select
 
 ![](attachments/16713722/16843930.png)
 
-IBM DB2 does not support read-isolated data retrieval operations that are non-blocking in a multi-user environment. Therefore the data retrieved by OData might not be 100% consistent if the same data rows are modified concurrently by another user. For the details see this [IBM DB2](/refguide6/db2) page.
+IBM DB2 does not support read-isolated data retrieval operations that are non-blocking in a multi-user environment. Therefore the data retrieved by OData might not be 100% consistent if the same data rows are modified concurrently by another user. For the details see this [IBM DB2](db2) page.
 
 ## Selecting exposed attributes and associations
 

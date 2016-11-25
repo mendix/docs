@@ -144,7 +144,7 @@ Adds two numbers.
 
 <div class="alert alert-info">{% markdown %}
 
-See [String function calls](/refguide5/string-function-calls) for more information.
+See [String function calls](string-function-calls) for more information.
 
 {% endmarkdown %}</div>
 

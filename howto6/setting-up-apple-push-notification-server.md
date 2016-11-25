@@ -5,7 +5,7 @@ parent: "push-notifications"
 ---
 In order to proceed you need an Apple developer license and a device running Mac OS X.
 
-We assume that you already have the app signing key with provisioning profile and can freely build and install your mobile app (if not, please refer to [this how-to](/howto6/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)). Take into account that your App ID should use `Explicit App ID` and have `Push Notifications` turned on so you can receive push notifications with your app.
+We assume that you already have the app signing key with provisioning profile and can freely build and install your mobile app (if not, please refer to [this how-to](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)). Take into account that your App ID should use `Explicit App ID` and have `Push Notifications` turned on so you can receive push notifications with your app.
 
 ![](attachments/19955752/20217895.png)
 
@@ -45,7 +45,7 @@ This certificate needs to be converted into the `.p12` format. If you don’t kn
 
 ### Step 6 - Configure APNs in your application
 
-For the last step you need to configure APNs within your application. This can be done by logging into your application as a user with Administrator role and opening the Configuration tab of the `PushNotifications_Administration` page that was set up in [step 8](/howto6/implementation-guide) of the Implementation Guide.
+For the last step you need to configure APNs within your application. This can be done by logging into your application as a user with Administrator role and opening the Configuration tab of the `PushNotifications_Administration` page that was set up in [step 8](implementation-guide) of the Implementation Guide.
 
 For this purpose you need to
 

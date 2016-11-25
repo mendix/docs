@@ -114,7 +114,7 @@ On top of the powerful features mentioned before, Mendix 5 also comes with a lot
 Mendix Runtime enhancements
 
 *   The Mendix Runtime is now based on OSGi, which enables proper modularity, but more importantly different class loaders for each bundle. This means that libraries in userlib will never conflict with other libraries, even if you use the same library but a different version.
-*   From now on, Java Runtime Environment (JRE) 7 is required to run Mendix apps. It is not possible anymore to run Mendix 5 apps on Java 6\. See [here](/refguide5/moving-from-4-to-5) for more information.
+*   From now on, Java Runtime Environment (JRE) 7 is required to run Mendix apps. It is not possible anymore to run Mendix 5 apps on Java 6\. See [here](moving-from-4-to-5) for more information.
 
 Mendix Modeler enhancements
 

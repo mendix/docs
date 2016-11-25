@@ -19,8 +19,8 @@ This how-to is an introduction to building a custom widget that is chainable in 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Install the [Mendix Modeler](https://appstore.home.mendix.com/link/modelers/)
-* Install Adobe Brackets and the Widget Development Plugin for Adobe Brackets (for details, see [How to Get Started with the Widget Development Plugin for Adobe Brackets](/howto6/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-* Read [How to Create a Basic Hello World Custom Widget](/howto6/create-a-basic-hello-world-custom-widget)
+* Install Adobe Brackets and the Widget Development Plugin for Adobe Brackets (for details, see [How to Get Started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
+* Read [How to Create a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
 
 ## 3 What Are You Going to Build?
 
@@ -210,6 +210,6 @@ A Mendix custom widget can only pass one type of entity as an input parameter in
 
 ## 9 Related content
 
-* [Get Started with the Widget Development Plugin for Adobe Brackets](/howto6/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-* [Create a Basic Hello World Custom Widget](/howto6/create-a-basic-hello-world-custom-widget)
-* [Use the Mobile Slider Custom Widget](/howto6/the-mobile-slider-custom-widget)
+* [Get Started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
+* [Create a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
+* [Use the Mobile Slider Custom Widget](the-mobile-slider-custom-widget)

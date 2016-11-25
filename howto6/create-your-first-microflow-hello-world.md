@@ -16,7 +16,7 @@ Mendix uses visual models called microflows to define the logic of your applicat
 
 ## <a name="CreatingaMenuItem"></a>2 Creating a Menu Item
 
-Microflows can be triggered in many different ways (for details, see [Trigger Logic Using Microflows](/howto6/triggering-logic-using-microflows)). For this how-to, you'll be using a menu item to trigger the new microflow.
+Microflows can be triggered in many different ways (for details, see [Trigger Logic Using Microflows](triggering-logic-using-microflows)). For this how-to, you'll be using a menu item to trigger the new microflow.
 
 To create a menu item, follow these steps:
 
@@ -54,12 +54,12 @@ To edit the new microflow, follow these steps:
 
 ## 4 Related Content
 
-* [How to Define Access Rules Using XPath](/howto6/define-access-rules-using-xpath)
-* [How to Trigger Logic Using Microflows](/howto6/triggering-logic-using-microflows)
-* [How to Create a Custom Save Button](/howto6/create-a-custom-save-button)
-* [How to Extend Your Application with Custom Java](/howto6/extending-your-application-with-custom-java)
-* [How to Work with Lists in a Microflow](/howto6/working-with-lists-in-a-microflow)
-* [How to Optimize the Retrieve Activities](/howto6/optimizing-retrieve-activities)
-* [How to Configure Error Handling](/howto6/set-up-error-handling)
-* [How to Optimize Microflow Aggregates](/howto6/optimizing-microflow-aggregates)
-* [How to Extract and Use Sub-Microflows](/howto6/extract-and-use-sub-microflows)
+* [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
+* [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
+* [How to Create a Custom Save Button](create-a-custom-save-button)
+* [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
+* [How to Work with Lists in a Microflow](working-with-lists-in-a-microflow)
+* [How to Optimize the Retrieve Activities](optimizing-retrieve-activities)
+* [How to Configure Error Handling](set-up-error-handling)
+* [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
+* [How to Extract and Use Sub-Microflows](extract-and-use-sub-microflows)

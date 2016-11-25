@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-The sidebar toggle is a button that when pressed will make a region of a [scroll container](/refguide5/scroll-container) (Mendix 5.18) or [layout container](/refguide5/layout-container) appear or disappear. This makes it possible to create sidebars, for instance a menu on a mobile phone that is hidden by default and can be shown by clicking the button. See the picture for an example layout that used the sidebar toggle. 
+The sidebar toggle is a button that when pressed will make a region of a [scroll container](scroll-container) (Mendix 5.18) or [layout container](layout-container) appear or disappear. This makes it possible to create sidebars, for instance a menu on a mobile phone that is hidden by default and can be shown by clicking the button. See the picture for an example layout that used the sidebar toggle. 
 
 ![](attachments/4522238/14385316.png)
 
@@ -19,11 +19,11 @@ Changed in Mendix 5.19: button captions are based on templates with parameters t
 
 {% endmarkdown %}</div>
 
-The caption defines the text that will be shown. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera. Note that to use template parameters the widget must be placed in a context of an entity, e.g. inside a [data view](/refguide5/data-view) or [list view](/refguide5/list-view). The parameters will be replaced by the values of the attributes.
+The caption defines the text that will be shown. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera. Note that to use template parameters the widget must be placed in a context of an entity, e.g. inside a [data view](data-view) or [list view](list-view). The parameters will be replaced by the values of the attributes.
 
 _Before 5.19:_
 
-The caption can be set to either a literal value, or an attribute value. A literal caption specifies a translatable text. See [Translatable Texts](/refguide5/translatable-texts). An attribute caption specifies a path to an attribute. The path starts at the entity of the entity widget in which this widget is contained.
+The caption can be set to either a literal value, or an attribute value. A literal caption specifies a translatable text. See [Translatable Texts](translatable-texts). An attribute caption specifies a path to an attribute. The path starts at the entity of the entity widget in which this widget is contained.
 
 ### Image
 

@@ -51,7 +51,7 @@ _Default value:_ In a page
 
 This property is relevant if the edit location is set to 'In a page' and it indicates the page that is shown to the end-user when he or she clicks this button. The end-user can use this page to edit the newly created object before it is saved. This page should contain a data view connected to the same entity as this grid or reference set selector.
 
-See [Opening Pages](/refguide6/opening-pages).
+See [Opening Pages](opening-pages).
 
 ## Visibility Properties
 

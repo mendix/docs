@@ -6,8 +6,8 @@ The APM Tools have been used extensively by Mansystems’ developers and support
 
 The different use cases are described here:
 
-*   [Generic](/APM/generic)
-*   [In development](/APM/in-development)
-*   [In test and acceptance](/APM/in-test-and-acceptance)
-*   [In production](/APM/in-production)
-*   [In a load test](/APM/in-a-load-test)
+*   [Generic](generic)
+*   [In development](in-development)
+*   [In test and acceptance](in-test-and-acceptance)
+*   [In production](in-production)
+*   [In a load test](in-a-load-test)

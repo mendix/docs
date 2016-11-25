@@ -34,7 +34,7 @@ Area           | ![](attachments/524337/688223.png)
 
 ### Name, Class, Style
 
-See [Widget Properties](/refguide5/common-widget-properties).
+See [Widget Properties](common-widget-properties).
 
 ### Horizontal axis Properties
 

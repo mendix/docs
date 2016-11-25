@@ -6,7 +6,7 @@ category: "Test Development"
 
 Welcome to the custom action creation tutorial. You will learn how to create a custom action for a widget from scratch.
 Before you start with this tutorial, you should know how to navigate through the HTML source code of a Mendix application inside a Browser and how to inspect the CSS properties.
-You should also know, how to use CSS/JavaScript/ATS selectors. For more informations on selectors, visit the [selectors section](/ATS/selectors) of the ATS Reference.
+You should also know, how to use CSS/JavaScript/ATS selectors. For more informations on selectors, visit the [selectors section](selectors) of the ATS Reference.
 
 ## Introduction
 
@@ -52,7 +52,7 @@ We see, that the two possible string values of the boolean slider (*Sure* and *N
     visibility: hidden;
 }
 ```
-To get the current value of the booleanSlider widget, we will use the ATS sepecific [:clickable-Selector](/ATS/selectors#ats-selectors), which will select an element, whose visibility property is set to visible.
+To get the current value of the booleanSlider widget, we will use the ATS sepecific [:clickable-Selector](selectors#ats-selectors), which will select an element, whose visibility property is set to visible.
 
 ## Create a Custom Action
 
@@ -61,7 +61,7 @@ Now that we know, where the value we want to retrive, is located in the HTML cod
 ![Add Item button on Repository page](attachments/Test+Development/repository.png)
 
 In that window you can choose wich type of item you want to create.
-Choose **Action** and give it the name **"Get booleanSlider value"** and set **"Returns the current value of the booleanSlider as String"** as description. As best practice, you should always use desciptive names for your actions and give them a description. (For more informations read the [Best Practices](/ATS/best-practices)). You can change the name and the description later on if you want. Now click on **Create**.
+Choose **Action** and give it the name **"Get booleanSlider value"** and set **"Returns the current value of the booleanSlider as String"** as description. As best practice, you should always use desciptive names for your actions and give them a description. (For more informations read the [Best Practices](best-practices)). You can change the name and the description later on if you want. Now click on **Create**.
 
 ![Create action and add name and description](attachments/Custom+Action+Creation+Tutorial/createactiondialog.png)
 
@@ -141,6 +141,6 @@ Now, that the return value is set, our **Get booleanSlider Value** action is don
 ## Testing the custom action
 
 To test the custom action we've developed for the booleanSlider widget, we will use our prototype application and ATS standard actions.
-Set the prototype application as *test application* in ATS (Read the [configuration section](/ATS/configuration#configure-test-applications) for more informations about setting applications as test applications). Now create a new test case. Let the test case open the prototype application and add our custom action to it. After that add [Assert Equals action](ats-core-actions/assert-equals) and use the test step output of our action as input parameter 1 for the [Assert Equals action](ats-core-actions/assert-equals). As input parameter 2, we will use the default value of the widget after launching the application, in our case *Sure*.
+Set the prototype application as *test application* in ATS (Read the [configuration section](configuration#configure-test-applications) for more informations about setting applications as test applications). Now create a new test case. Let the test case open the prototype application and add our custom action to it. After that add [Assert Equals action](ats-core-actions/assert-equals) and use the test step output of our action as input parameter 1 for the [Assert Equals action](ats-core-actions/assert-equals). As input parameter 2, we will use the default value of the widget after launching the application, in our case *Sure*.
 
 Always try to test your custom actions with ATS standard actions or JavaScript code. If you use other custom actions to evaluate the outcome of your new custom action, it is possible that you recieve false-positive results due to misbehaving custom actions.

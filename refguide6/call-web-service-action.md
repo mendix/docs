@@ -5,7 +5,7 @@ parent: "microflow-activities"
 ---
 
 
-The call-web-service activity can be used to call one of the [imported web service](/refguide6/consumed-web-services) operations. You can specify whether or not to use authentication, what the request should look like and how the response of the web service should be handled.
+The call-web-service activity can be used to call one of the [imported web service](consumed-web-services) operations. You can specify whether or not to use authentication, what the request should look like and how the response of the web service should be handled.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -37,7 +37,7 @@ When calling a web service using a call-web-service activity, the location of th
 
 ### Location
 
-If you override the location, this property defines the location where to call the web service. The location needs to be entered using [microflow expressions](/refguide6/microflow-expressions). The microflow expression should result in a valid URL string.
+If you override the location, this property defines the location where to call the web service. The location needs to be entered using [microflow expressions](microflow-expressions). The microflow expression should result in a valid URL string.
 
 ### Use timeout on request
 
@@ -75,11 +75,11 @@ Use HTTP authentication defines whether the basic authentication should be used.
 
 ### User name
 
-User name defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [microflow expressions](/refguide6/microflow-expressions). The microflow expression should result in a string.
+User name defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [microflow expressions](microflow-expressions). The microflow expression should result in a string.
 
 ### Password
 
-Password defines the password that will be used to authenticate over HTTP. The password needs to be entered using [microflow expressions](/refguide6/microflow-expressions). The microflow expression should result in a string.
+Password defines the password that will be used to authenticate over HTTP. The password needs to be entered using [microflow expressions](microflow-expressions). The microflow expression should result in a string.
 
 ### Custom HTTP Headers
 
@@ -93,13 +93,13 @@ The XML for the request parts (header and body) can be generated in several ways
 
 ### Export mapping for entire request
 
-Using this option, a single [Export Mapping](/refguide6/export-mappings) can be used to generate the XML for the request part. You can choose the export mapping to use for the request part and, if applicable, the object or list that you want to use as parameter for the mapping.
+Using this option, a single [Export Mapping](export-mappings) can be used to generate the XML for the request part. You can choose the export mapping to use for the request part and, if applicable, the object or list that you want to use as parameter for the mapping.
 
 ### Simple expressions for each request parameter
 
 This option for request parts can be used when all children of the XML element of the request part occur at most once and are primitive values. If that is not the case, this options is disabled and cannot be used.
 
-Using this option you need to supply an argument value for all elements of a primitive type (parameters). Argument values need to be entered using [microflow expressions](/refguide6/microflow-expressions) resulting in the same data type as the parameter.
+Using this option you need to supply an argument value for all elements of a primitive type (parameters). Argument values need to be entered using [microflow expressions](microflow-expressions) resulting in the same data type as the parameter.
 
 ### Export mappings for each request parameter
 
@@ -115,7 +115,7 @@ _Default:_ do not send the empty values.
 
 ### Custom request template
 
-This option allows you to generate the XML for the request part using a template. The template defines the XML structure of the request part in plain text. Parameters can be used by writing a number between braces, e.g. '{1}'. For each parameter in the template you can specify its value using a [microflow expression](/refguide6/microflow-expressions) resulting in a String value.
+This option allows you to generate the XML for the request part using a template. The template defines the XML structure of the request part in plain text. Parameters can be used by writing a number between braces, e.g. '{1}'. For each parameter in the template you can specify its value using a [microflow expression](microflow-expressions) resulting in a String value.
 
 For the request header, the Modeler provides some common XML structures in the drop down menu.
 
@@ -123,11 +123,11 @@ For the request header, the Modeler provides some common XML structures in the d
 
 ## SOAP Response
 
-If the data type is a complex XML structure it can be mapped to entities using a [Import Mapping](/refguide6/import-mappings). If it is primitive data, it can be stored in a variable immediately. The response does not have to be used though; it can also be ignored if you are not interested in it.
+If the data type is a complex XML structure it can be mapped to entities using a [Import Mapping](import-mappings). If it is primitive data, it can be stored in a variable immediately. The response does not have to be used though; it can also be ignored if you are not interested in it.
 
 ### Import Mapping (for complex XML structures)
 
-Here you can choose the [Import Mapping](/refguide6/import-mappings) that will be used to transform the XML into objects.
+Here you can choose the [Import Mapping](import-mappings) that will be used to transform the XML into objects.
 
 ### Parameter
 

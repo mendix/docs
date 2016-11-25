@@ -17,7 +17,7 @@ You can specify whether the range boundaries are inclusive or exclusive using th
 
 ### Caption
 
-The caption is the text that is shown in front of the actual search field. This is a translatable text. See [Translatable Texts](/refguide5/translatable-texts).
+The caption is the text that is shown in front of the actual search field. This is a translatable text. See [Translatable Texts](translatable-texts).
 
 ### Type
 

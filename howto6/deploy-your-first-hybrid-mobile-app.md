@@ -64,14 +64,14 @@ To open a hybrid example app, follow these steps:
 
 ## 4 Installing the App on Your Device
 
-If you want to install this application as a native app on your device, you can install it via iTunes or publish it to one of the mobile app stores. For details on how to achieve this, see [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto6/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
+If you want to install this application as a native app on your device, you can install it via iTunes or publish it to one of the mobile app stores. For details on how to achieve this, see [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
 
 ## 5 Related Content
 
-* [How to Build a Simple HRM App 1: Create, Manage, and Deploy the App](/howto6/build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-* [How to Build a Simple HRM App 2: First Steps in Building a Rich GUI](/howto6/build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-* [How to Build a Simple HRM App 3: Show Related Data in the GUI](/howto6/build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-* [How to Build a Simple HRM App 4: Enrich the GUI with Filter Options](/howto6/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
-* [How to Build a Simple HRM App 5: Smarten Up Your App with Business Logic](/howto6/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
-* [How to Create and Deploy Your First App](/howto6/create-and-deploy-your-first-app)
-* [How to Debug a Hybrid Mobile Application](/howto6/debug-a-hybrid-mobile-application)
+* [How to Build a Simple HRM App 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+* [How to Build a Simple HRM App 2: First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+* [How to Build a Simple HRM App 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+* [How to Build a Simple HRM App 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+* [How to Build a Simple HRM App 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
+* [How to Create and Deploy Your First App](create-and-deploy-your-first-app)
+* [How to Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)

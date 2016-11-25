@@ -61,12 +61,12 @@ If you are using Custom Settings to influence the Runtime behavior it is critica
 
 ## 3\. Related articles
 
-*   [Updating a Mendix Application](/howto50/updating-a-mendix-application)
-*   [Troubleshooting](/howto50/troubleshooting)
-*   [Architecture Options](/howto50/architecture-options)
-*   [High Availability](/howto50/high-availability)
-*   [Mendix on Windows - Microsoft SQL Server](/howto50/mendix-on-windows-microsoft-sql-server)
-*   [Setting up a new SQL Server database](/howto50/setting-up-a-new-sql-server-database)
-*   [Restoring a SQL Server database](/howto50/restoring-a-sql-server-database)
-*   [Setting up a SQL Server user](/howto50/setting-up-a-sql-server-user)
-*   [Setting up the database user](/howto50/setting-up-the-database-user)
+*   [Updating a Mendix Application](updating-a-mendix-application)
+*   [Troubleshooting](troubleshooting)
+*   [Architecture Options](architecture-options)
+*   [High Availability](high-availability)
+*   [Mendix on Windows - Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
+*   [Setting up a new SQL Server database](setting-up-a-new-sql-server-database)
+*   [Restoring a SQL Server database](restoring-a-sql-server-database)
+*   [Setting up a SQL Server user](setting-up-a-sql-server-user)
+*   [Setting up the database user](setting-up-the-database-user)

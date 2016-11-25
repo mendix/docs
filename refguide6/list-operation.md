@@ -9,7 +9,7 @@ The List Operation activity can perform various actions on a list. See below for
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide6/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 

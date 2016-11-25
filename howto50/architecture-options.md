@@ -40,16 +40,16 @@ _
 The platform can handle a load balancer in front of the platform. The only additional requirement is that the load balancer uses sticky sessions. When a problem occurs on a single instance, the only thing an active user could lose is the data he is working on. Everything that was only available in the memory of the failed instance will be gone. All the stored data will still be available for the user. 
 When updating the application, it is best to stop every instance. If the database structure has changed, and a single instance updates the database structure it could cause some strange behavior on all running instances since they are still expecting the old database structure.
 
-For more information please see the [How to page on High availability](/howto50/high-availability)
+For more information please see the [How to page on High availability](high-availability)
 
 ## 6\. Related content
 
-*   [Updating a Mendix Application](/howto50/updating-a-mendix-application)
-*   [Troubleshooting](/howto50/troubleshooting)
-*   [Architecture Options](/howto50/architecture-options)
-*   [High Availability](/howto50/high-availability)
-*   [Mendix on Windows - Microsoft SQL Server](/howto50/mendix-on-windows-microsoft-sql-server)
-*   [Setting up a new SQL Server database](/howto50/setting-up-a-new-sql-server-database)
-*   [Restoring a SQL Server database](/howto50/restoring-a-sql-server-database)
-*   [Setting up a SQL Server user](/howto50/setting-up-a-sql-server-user)
-*   [Setting up the database user](/howto50/setting-up-the-database-user)
+*   [Updating a Mendix Application](updating-a-mendix-application)
+*   [Troubleshooting](troubleshooting)
+*   [Architecture Options](architecture-options)
+*   [High Availability](high-availability)
+*   [Mendix on Windows - Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
+*   [Setting up a new SQL Server database](setting-up-a-new-sql-server-database)
+*   [Restoring a SQL Server database](restoring-a-sql-server-database)
+*   [Setting up a SQL Server user](setting-up-a-sql-server-user)
+*   [Setting up the database user](setting-up-the-database-user)

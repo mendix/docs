@@ -5,7 +5,7 @@ parent: "layout-widgets"
 ---
 
 
-A placeholder can be used in a [layout](/refguide6/layout) to define a 'gap' that can be filled in a [page](/refguide6/page) that is based on that layout or in another layout that defines that layout as a master layout.
+A placeholder can be used in a [layout](layout) to define a 'gap' that can be filled in a [page](page) that is based on that layout or in another layout that defines that layout as a master layout.
 
 ## Common Properties
 

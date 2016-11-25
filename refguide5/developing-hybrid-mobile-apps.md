@@ -13,7 +13,7 @@ While developing a hybrid mobile app, you cannot simply test it in your mobile b
 
 ![](attachments/7831636/8945722.png)
 
-See also [this page](/refguide5/getting-the-mendix-developer-app) for information about how to download the Mendix Developer App.
+See also [this page](getting-the-mendix-developer-app) for information about how to download the Mendix Developer App.
 
 <div class="alert alert-warning">{% markdown %}
 
@@ -23,7 +23,7 @@ Note that your mobile device has to be on the same network as your development m
 
 See also:
 
-*   [Mobile](/refguide5/mobile)
-*   [Getting the Mendix Developer App](/refguide5/getting-the-mendix-developer-app)
-*   [Customizing Hybrid Mobile Apps](/refguide5/customizing-hybrid-mobile-apps)
-*   [Packaging Hybrid Mobile Apps](/refguide5/packaging-hybrid-mobile-apps)
+*   [Mobile](mobile)
+*   [Getting the Mendix Developer App](getting-the-mendix-developer-app)
+*   [Customizing Hybrid Mobile Apps](customizing-hybrid-mobile-apps)
+*   [Packaging Hybrid Mobile Apps](packaging-hybrid-mobile-apps)

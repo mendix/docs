@@ -7,7 +7,7 @@ space: "Reference Guide 5"
 
 <div class="alert alert-info">{% markdown %}
 
-This part is an overview of all the elements that can be used in a microflow. For the properties of the microflow itself, see [Microflow](/refguide5/microflow).
+This part is an overview of all the elements that can be used in a microflow. For the properties of the microflow itself, see [Microflow](microflow).
 
 {% endmarkdown %}</div>
 
@@ -36,12 +36,12 @@ The graphical notation of microflows is based on the Business Process Modeling N
 
 A microflow is composed of elements. Below is a categorized overview of all elements. The following categories are used:
 
-*   [Events](/refguide5/microflows) represent start and end points of a microflow and special operations in a loop.
-*   [Flows](/refguide5/microflows) form the connection between elements.
-*   [Gateways](/refguide5/microflows) deal with making choices and merging different paths again.
-*   [Activities](/refguide5/microflows) are the actions that are executed in a microflow.
-*   [Artifacts](/refguide5/microflows) provide the microflow with input and allow comments to be made.
-*   [Error handlers](/refguide5/microflows) can be set on an activity, gateway or loop to define how to handle an error.
+*   [Events](microflows) represent start and end points of a microflow and special operations in a loop.
+*   [Flows](microflows) form the connection between elements.
+*   [Gateways](microflows) deal with making choices and merging different paths again.
+*   [Activities](microflows) are the actions that are executed in a microflow.
+*   [Artifacts](microflows) provide the microflow with input and allow comments to be made.
+*   [Error handlers](microflows) can be set on an activity, gateway or loop to define how to handle an error.
 
 ## Events
 
@@ -49,11 +49,11 @@ Events represent start and end points of a microflow and special operations in a
 
 Graphic                                              | Name                             | Description
 ---------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[![](attachments/819203/917902.png)](/refguide5/start-event)    | [Start Event](/refguide5/start-event)       | A start event is the starting point of the microflow. A microflow can only have one start event.
-[![](attachments/819203/918113.png)](/refguide5/end-event)      | [End Event](/refguide5/end-event)           | An end event defines the location where the microflow will stop. Depending on the return type of the microflow in some cases a value must be specified. There can be more than one end event.
-![](attachments/4522004/12451844.png)                | [Error Event](/refguide5/error-event)       | An error event defines a location where the microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not.
-[![](attachments/819203/918115.png)](/refguide5/continue-event) | [Continue Event](/refguide5/continue-event) | A continue event is used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a <Loop>.
-[![](attachments/819203/918026.png)](/refguide5/break-event)    | [Break Event](/refguide5/break-event)       | A break event is used to stop iterating over the list of objects and continue with the rest of the flow after the loop. Please note that break events can only be used inside a <Loop>.
+[![](attachments/819203/917902.png)](start-event)    | [Start Event](start-event)       | A start event is the starting point of the microflow. A microflow can only have one start event.
+[![](attachments/819203/918113.png)](end-event)      | [End Event](end-event)           | An end event defines the location where the microflow will stop. Depending on the return type of the microflow in some cases a value must be specified. There can be more than one end event.
+![](attachments/4522004/12451844.png)                | [Error Event](error-event)       | An error event defines a location where the microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not.
+[![](attachments/819203/918115.png)](continue-event) | [Continue Event](continue-event) | A continue event is used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a <Loop>.
+[![](attachments/819203/918026.png)](break-event)    | [Break Event](break-event)       | A break event is used to stop iterating over the list of objects and continue with the rest of the flow after the loop. Please note that break events can only be used inside a <Loop>.
 
 
 ## Flows
@@ -62,8 +62,8 @@ Flows form the connection between elements.
 
 Graphic                                               | Name                               | Description
 ----------------------------------------------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------
-[![](attachments/819203/917883.png)](/refguide5/sequence-flow)   | [Sequence Flow](/refguide5/sequence-flow)     | A sequence flow is an arrow that links events, activities, splits and merges with each other. Together they defined the order of execution within a microflow.
-[![](attachments/819203/917688.png)](/refguide5/annotation-flow) | [Annotation flow](/refguide5/annotation-flow) | An association is a connection that can be used to connect an annotation to another element.
+[![](attachments/819203/917883.png)](sequence-flow)   | [Sequence Flow](sequence-flow)     | A sequence flow is an arrow that links events, activities, splits and merges with each other. Together they defined the order of execution within a microflow.
+[![](attachments/819203/917688.png)](annotation-flow) | [Annotation flow](annotation-flow) | An association is a connection that can be used to connect an annotation to another element.
 
 
 ## Gateways
@@ -72,10 +72,10 @@ Gateways deal with making choices and merging different paths again..
 
 Graphic                                                 | Name                                   | Description
 ------------------------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[![](attachments/819203/917726.png)](/refguide5/exclusive-split)   | [Exclusive Split](/refguide5/exclusive-split)     | An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows.<br>
+[![](attachments/819203/917726.png)](exclusive-split)   | [Exclusive Split](exclusive-split)     | An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows.<br>
 **Note**: There is no parallell execution in microflows.
-[![](attachments/819203/918122.png)](/refguide5/inheritance-split) | [Inheritance Split](/refguide5/inheritance-split) | An inheritance split is an element that makes a choice based on the [specialization](/refguide5/entities) of the selected object. You can give the specialized object a name using a [Cast Object](/refguide5/cast-object) action.
-[![](attachments/819203/918116.png)](/refguide5/merge)             | <Merge>                                | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge.
+[![](attachments/819203/918122.png)](inheritance-split) | [Inheritance Split](inheritance-split) | An inheritance split is an element that makes a choice based on the [specialization](entities) of the selected object. You can give the specialized object a name using a [Cast Object](cast-object) action.
+[![](attachments/819203/918116.png)](merge)             | <Merge>                                | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge.
 
 
 ## Activities
@@ -84,8 +84,8 @@ Activities are the actions that are executed in a microflow.
 
 Graphic                                          | Name                   | Description
 ------------------------------------------------ | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[![](attachments/819203/918096.png)](/refguide5/activities) | [Activity](/refguide5/activities) | An activity can be used to execute a specific action in a microflow.
-[![](attachments/819203/917804.png)](/refguide5/loop)       | <Loop>                 | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in microflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows.
+[![](attachments/819203/918096.png)](activities) | [Activity](activities) | An activity can be used to execute a specific action in a microflow.
+[![](attachments/819203/917804.png)](loop)       | <Loop>                 | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in microflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows.
 
 
 ## Artifacts
@@ -94,8 +94,8 @@ Artifacts provide the microflow with input and allow comments to be made.
 
 Graphic                                          | Name         | Description
 ------------------------------------------------ | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------
-[![](attachments/819203/918019.png)](/refguide5/parameter)  | <Parameter>  | A parameter is data that serves as input for the microflow. Parameters are filled at the location from where the microflow is triggered.
-[![](attachments/819203/917689.png)](/refguide5/annotation) | <Annotation> | An annotation is an element that can be used to put comments in a microflow.
+[![](attachments/819203/918019.png)](parameter)  | <Parameter>  | A parameter is data that serves as input for the microflow. Parameters are filled at the location from where the microflow is triggered.
+[![](attachments/819203/917689.png)](annotation) | <Annotation> | An annotation is an element that can be used to put comments in a microflow.
 
 
 ## Variable usages

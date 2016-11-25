@@ -5,17 +5,17 @@ space: "Reference Guide 5"
 ---
 
 
-Please read the [Release Notes](/refguide5/release-notes) to see what new major improvements we added in the version 5 release.
+Please read the [Release Notes](release-notes) to see what new major improvements we added in the version 5 release.
 
 This documentation aims to help you to update your project from version 4 to version 5\. It contains the following topics:
 
-*   [Converting your project](/refguide5/moving-from-4-to-5): preparing for conversion and actually converting your project to version 5.
-*   [Java 7 required](/refguide5/moving-from-4-to-5): from Mendix 5 on Java 7 is required to run the platform.
-*   [Using com.sun packages in custom Java actions](/refguide5/moving-from-4-to-5): Read this section for more information about using com.sun package in custom Java action code
-*   [Breaking changes in the Mendix Runtime API](/refguide5/moving-from-4-to-5): changes in the API that might affect your Java code.
-*   [Database synchronization](/refguide5/moving-from-4-to-5): notes on migrating the data database to Mendix 5.
-*   [Theming](/refguide5/moving-from-4-to-5): notes on theming Mendix 5 applications.
-*   [Converting App Store Modules](/refguide5/moving-from-4-to-5): how to convert app store modules to be Mendix 5 compatible.
+*   [Converting your project](moving-from-4-to-5): preparing for conversion and actually converting your project to version 5.
+*   [Java 7 required](moving-from-4-to-5): from Mendix 5 on Java 7 is required to run the platform.
+*   [Using com.sun packages in custom Java actions](moving-from-4-to-5): Read this section for more information about using com.sun package in custom Java action code
+*   [Breaking changes in the Mendix Runtime API](moving-from-4-to-5): changes in the API that might affect your Java code.
+*   [Database synchronization](moving-from-4-to-5): notes on migrating the data database to Mendix 5.
+*   [Theming](moving-from-4-to-5): notes on theming Mendix 5 applications.
+*   [Converting App Store Modules](moving-from-4-to-5): how to convert app store modules to be Mendix 5 compatible.
 
 ## Converting your project
 
@@ -232,7 +232,7 @@ App Store Modules need to be updated for Mendix 5\. Mendix 5 will only show modu
 *   Open the project in Mendix 5.
 *   The conversion wizard will start automatically.
 *   If other app store modules are recognized during the conversion wizard, then there are Mendix 5 versions of those already. Choose to update them.
-*   Fix Java compilations errors if there are any. See the section on [breaking changes](/refguide5/moving-from-4-to-5) for API differences in Mendix 5.
+*   Fix Java compilations errors if there are any. See the section on [breaking changes](moving-from-4-to-5) for API differences in Mendix 5.
 *   In the step 'Removing unused Java libraries', you as the module creator probably know best which Java libraries are really necessary. Only keep those.
 
 ### Pages

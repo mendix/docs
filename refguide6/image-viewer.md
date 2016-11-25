@@ -52,7 +52,7 @@ This property specifies the microflow that will be executed when the image is cl
 
 The on click settings specify what parameters will be passed to the microflow, whether to show a progress bar or not, and more.
 
-See [Starting Microflows](/refguide6/starting-microflows).
+See [Starting Microflows](starting-microflows).
 
 ## General properties
 
@@ -90,5 +90,5 @@ _Default value:_ Thumbnail
 
 ## Related articles
 
-*   [Data view](/refguide6/data-view)
-*   [Entities](/refguide6/entities)
+*   [Data view](data-view)
+*   [Entities](entities)

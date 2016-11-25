@@ -7,7 +7,7 @@ parent: "integration"
 
 <div class="alert alert-warning">{% markdown %}
 
-This document describes published web services. If you're looking for specific information on the published web services screen, you can check the [Published web service](/refguide6/published-web-service) documentation.
+This document describes published web services. If you're looking for specific information on the published web services screen, you can check the [Published web service](published-web-service) documentation.
 
 {% endmarkdown %}</div>
 

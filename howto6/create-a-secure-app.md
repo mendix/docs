@@ -20,9 +20,9 @@ You will start with the configuration of user and module roles for access to pag
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Know how to create a domain model (for more information, see [How to Create a Basic Data Layer](/howto6/create-a-basic-data-layer))
-* Know how to create overview and detail pages (for more information, see [How to Create Your First Two Overview and Details Pages](/howto6/create-your-first-two-overview-and-detail-pages))
-* Know how to create menu items (for more information, see [How to Set Up the Navigation Structure](/howto6/setting-up-the-navigation-structure))
+* Know how to create a domain model (for more information, see [How to Create a Basic Data Layer](create-a-basic-data-layer))
+* Know how to create overview and detail pages (for more information, see [How to Create Your First Two Overview and Details Pages](create-your-first-two-overview-and-detail-pages))
+* Know how to create menu items (for more information, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure))
 
 ## 3 Preparing the Data Structure, GUI, and Example Data
 
@@ -250,5 +250,5 @@ An XPath constraint can be used to constrain the set of objects to which the acc
 
 ## 7 Related Content
 
-* [Generate a Personal SSH2 Key Pair](/howto6/generating-a-personal-ssh2-key-pair)
-* [Set Up Anonymous User Security](/howto6/set-up-anonymous-user-security)
+* [Generate a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)
+* [Set Up Anonymous User Security](set-up-anonymous-user-security)

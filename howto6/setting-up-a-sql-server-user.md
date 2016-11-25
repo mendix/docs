@@ -28,15 +28,15 @@ To create a secure environment it is important to make a clear distinction betwe
 *   **Set the server role for each user:** Associate each user with the role _public_.
 *   **Define the user mapping for each user:** Associate all the databases related to Mendix with their respective user(s). The template for these databases should be: _dbo_ and the roles for each corresponding user should be: _db_datareader_ and _datawriter_.
 
-On this page you can find a step by step instruction on how to: [Set up the database user](/howto6/setting-up-the-database-user)
+On this page you can find a step by step instruction on how to: [Set up the database user](setting-up-the-database-user)
 
 ## 3. Related content
 
-*   [Activating a Mendix license on Microsoft Windows](/howto6/activate-a-mendix-license-on-microsoft-windows)
-*   [Setting up the database user](/howto6/setting-up-the-database-user)
-*   [Troubleshooting](/howto6/troubleshooting)
-*   [Restoring a SQL Server database](/howto6/restoring-a-sql-server-database)
-*   [Troubleshooting SQL Server](/howto6/troubleshooting-sql-server)
-*   [Mendix SQL Maintenance Plans](/howto6/mendix-sql-maintenance-plans)
-*   [Setting up a new SQL Server database](/howto6/setting-up-a-new-sql-server-database)
-*   [Setting up a SQL Server user](/howto6/setting-up-a-sql-server-user)
+*   [Activating a Mendix license on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows)
+*   [Setting up the database user](setting-up-the-database-user)
+*   [Troubleshooting](troubleshooting)
+*   [Restoring a SQL Server database](restoring-a-sql-server-database)
+*   [Troubleshooting SQL Server](troubleshooting-sql-server)
+*   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
+*   [Setting up a new SQL Server database](setting-up-a-new-sql-server-database)
+*   [Setting up a SQL Server user](setting-up-a-sql-server-user)

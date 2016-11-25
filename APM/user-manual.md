@@ -6,12 +6,12 @@ This is the user manual for the Mansystems APM for Mendix.
 
 The user manual has the following chapters:
 
-*   [Console](/APM/console)
-*   [Log Tool](/APM/log-tool)
-*   [Trap Tool](/APM/trap-tool)
-*   [Statistics Tool](/APM/statistics-tool)
-*   [Performance Tool](/APM/performance-tool)
-*   [JVM Browser](/APM/jvm-browser)
-*   [Measurements Tool](/APM/measurements-tool)
-*   [Query Tool](/APM/query-tool)
-*   [Load Test Recorder](/APM/load-test-recorder)
+*   [Console](console)
+*   [Log Tool](log-tool)
+*   [Trap Tool](trap-tool)
+*   [Statistics Tool](statistics-tool)
+*   [Performance Tool](performance-tool)
+*   [JVM Browser](jvm-browser)
+*   [Measurements Tool](measurements-tool)
+*   [Query Tool](query-tool)
+*   [Load Test Recorder](load-test-recorder)

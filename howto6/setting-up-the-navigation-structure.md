@@ -10,8 +10,8 @@ Once you've created some pages you want to give users the ability to access them
 
 Before starting this how-to make sure you have completed the following prerequisites:
 
-*   [Creating a basic data layer](/howto6/create-a-basic-data-layer)
-*   [Creating your first two Overview and Detail pages](/howto6/create-your-first-two-overview-and-detail-pages)
+*   [Creating a basic data layer](create-a-basic-data-layer)
+*   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)
 
 ## 2\. Setting a Default Home Page
 
@@ -96,13 +96,13 @@ Now that you've created a menu structure it's time to start using it on pages.
 
 ## 6\. Related content
 
-*   [Scout and Windows 10 Workaround](/howto6/scout-and-windows-10-workaround)
-*   [Layouts and Snippets](/howto6/layouts-and-snippets)
-*   [Filtering Data on an Overview Page](/howto6/filtering-data-on-an-overview-page)
-*   [Setup Mendix UI Framework with just CSS](/howto6/setup-mendix-ui-framework-with-just-css)
+*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
+*   [Layouts and Snippets](layouts-and-snippets)
+*   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
+*   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
 
-*   [Setup Mendix UI Framework](/howto6/setup-mendix-ui-framework)
-*   [Setting Up the Navigation Structure](/howto6/setting-up-the-navigation-structure)
-*   [Setup Mendix UI Framework with Koala](/howto6/setup-mendix-ui-framework-with-koala)
-*   [Creating your first two Overview and Detail pages](/howto6/create-your-first-two-overview-and-detail-pages)
-*   [Finding the Root Cause of Runtime Errors](/howto6/finding-the-root-cause-of-runtime-errors)
+*   [Setup Mendix UI Framework](setup-mendix-ui-framework)
+*   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
+*   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
+*   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)
+*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)

@@ -35,7 +35,7 @@ When the user presses a new button, the Mendix application will create a new obj
 
 This property specifies the page that is opened when the end user presses this button. The end user can use this page to edit the newly created object before it is saved. This page should contain a data view connected to the same entity as this button.
 
-See [Opening Pages](/refguide6/opening-pages).
+See [Opening Pages](opening-pages).
 
 ### Entity
 

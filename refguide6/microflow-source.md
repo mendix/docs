@@ -5,7 +5,7 @@ parent: "data-sources"
 ---
 
 
-In most cases, the intended object or objects used to fill a [data widget](/refguide6/data-widgets) is obvious: an edit form opened from a data grid is going to require an object selected in the data grid, a data grid gets its objects from a database query, and a nested template grid will retrieve its objects over an association. However, sometimes the target objects need to adhere to very specific criteria, or different objects are shown under different circumstances that cannot be handled by [XPath](/refguide6/xpath-constraints). In these situations a microflow data source may be required.
+In most cases, the intended object or objects used to fill a [data widget](data-widgets) is obvious: an edit form opened from a data grid is going to require an object selected in the data grid, a data grid gets its objects from a database query, and a nested template grid will retrieve its objects over an association. However, sometimes the target objects need to adhere to very specific criteria, or different objects are shown under different circumstances that cannot be handled by [XPath](xpath-constraints). In these situations a microflow data source may be required.
 
 When a data widget with a microflow data source is displayed in the browser or refreshed, it runs the designated microflow and displays the return value. The manner in which the objects are acquired in the microflow is entirely up to the designer. This allows for unlimited control over the exact objects returned.
 
@@ -38,4 +38,4 @@ Designates the microflow used to populate the widget. This microflow will be run
 
 ### Microflow settings
 
-See [Starting Microflows](/refguide6/starting-microflows).
+See [Starting Microflows](starting-microflows).

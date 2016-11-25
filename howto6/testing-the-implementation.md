@@ -3,7 +3,7 @@ title: "Testing the Implementation"
 space: "Mendix 6 How-to's"
 parent: "push-notifications"
 ---
-Once you finish implementing the steps described previously, you will want to test whether everything works correctly. This can be done easily using the administration pages that should have been included in your application during [step 6](/howto6/implementation-guide) of the implementation guide. Follow these steps to send a push notification to a device:
+Once you finish implementing the steps described previously, you will want to test whether everything works correctly. This can be done easily using the administration pages that should have been included in your application during [step 6](implementation-guide) of the implementation guide. Follow these steps to send a push notification to a device:
 
 ### Step 1 - Log in as administrator to the web (desktop) application
 

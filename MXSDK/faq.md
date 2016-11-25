@@ -38,7 +38,7 @@ However, because we provide full read-write access, you can also break the model
 *   Custom widgets
 *   Rest services: PublishedRestService is an unsupported, experimental feature.
 
-When changing these components, make sure to use the [reverse engineering tool](/MXSDK/generating-code-from-the-model) to increase your chances of successfully building a script that creates valid models.
+When changing these components, make sure to use the [reverse engineering tool](generating-code-from-the-model) to increase your chances of successfully building a script that creates valid models.
 
 ## Common error messages
 
@@ -55,4 +55,4 @@ This can happen when you open a huge model and then load a lot of documents (e.g
 
 ## What the heck are these "promises" anyway?
 
-Glad you asked. We put together a page on [Working with when.js and promises in TypeScript](/MXSDK/working-with-when.js-and-promises-in-typescript). We're happy to tell you all about it!
+Glad you asked. We put together a page on [Working with when.js and promises in TypeScript](working-with-when.js-and-promises-in-typescript). We're happy to tell you all about it!

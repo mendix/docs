@@ -38,4 +38,4 @@ SQL Server's job scheduling subsystem, SQL Server Agent, maintains a set of log 
 
 SQL Server Profiler, the primary application-tracing tool in SQL Server, captures the system's current database activity and writes it to a file for later analysis. You can find the Profiler logs in the log .trc file in the %ProgramFiles%\Microsoft SQL Server\MSSQL.1\MSSQL\LOG directory.
 
-More information on interpreting SQL Server logs can be found in [Monitoring - What to monitor](/refguide5/monitoring-what-to-monitor)
+More information on interpreting SQL Server logs can be found in [Monitoring - What to monitor](monitoring-what-to-monitor)

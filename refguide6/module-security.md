@@ -7,7 +7,7 @@ parent: "modules"
 
 <div class="alert alert-info">{% markdown %}
 
-For more general information on security, see [Security](/refguide6/security).
+For more general information on security, see [Security](security).
 
 {% endmarkdown %}</div>
 
@@ -19,13 +19,13 @@ Within a module you can define module roles and specify security settings of tho
 
 Form Access defines for each module role which forms users with this module role can access. The menu bar is optimized so that it only shows forms and microflows that the user has access to.
 
-Form access takes the shape of a large matrix showing forms and modules roles. For each combination you can indicate whether or not the module role has access to the form. You can also edit this information in a [form](/refguide6/page) using the property 'Visible for'.
+Form access takes the shape of a large matrix showing forms and modules roles. For each combination you can indicate whether or not the module role has access to the form. You can also edit this information in a [form](page) using the property 'Visible for'.
 
 ## Microflow Access
 
 Microflow Access defines which microflows can be executed by users with a certain module role. The menu bar is optimized so that it only shows forms and microflows that the user has access to.
 
-Microflow access takes the shape of a large matrix showing microflows and modules roles. For each combination you can indicate whether or not the module role has access to the microflow. You can also edit this information in a [microflow](/refguide6/microflow) using the property 'Allowed roles'.
+Microflow access takes the shape of a large matrix showing microflows and modules roles. For each combination you can indicate whether or not the module role has access to the microflow. You can also edit this information in a [microflow](microflow) using the property 'Allowed roles'.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -37,16 +37,16 @@ Note that these roles are only checked when the microflow is executed from the c
 
 Entity Access defines for each module role whether users with this role are authorized to Create, Read, Write and/or Delete objects of the entity.
 
-Entity Access takes the form of a large matrix showing access rules that apply to entities. Each access rule in turn applies to a set of module roles. See [Access Rules](/refguide6/access-rules) for more information.
+Entity Access takes the form of a large matrix showing access rules that apply to entities. Each access rule in turn applies to a set of module roles. See [Access Rules](access-rules) for more information.
 
 ## OData Access 
 
 OData Access defines for each module role whether users with this role are authorized to access OData resources for each OData service exposed within the module.
-OData access takes the shape of a large matrix showing published OData services and modules roles. For each combination you can indicate whether or not the module role has access to the published OData service. You can also edit this information in a [published OData services](/refguide6/published-odata-services) using the property 'Allowed roles' in the 'Settings' tab.
+OData access takes the shape of a large matrix showing published OData services and modules roles. For each combination you can indicate whether or not the module role has access to the published OData service. You can also edit this information in a [published OData services](published-odata-services) using the property 'Allowed roles' in the 'Settings' tab.
 
 ## Data Set Access
 
-Data Set Access shows for each [data set](/refguide6/data-sets) (used for [reporting](/refguide6/report-widgets)) and each module role which access the module role has to the data set.
+Data Set Access shows for each [data set](data-sets) (used for [reporting](report-widgets)) and each module role which access the module role has to the data set.
 
 | Value | Description |
 | --- | --- |
@@ -65,7 +65,7 @@ The ranges are defined in the parameters of the data set. Whether values in thes
 
 # Module Role
 
-The module roles define which roles users of this module can have. See [Security](/refguide6/security) for more information on module roles and [user roles](/refguide6/user-roles) and their relation.
+The module roles define which roles users of this module can have. See [Security](security) for more information on module roles and [user roles](user-roles) and their relation.
 
 ## Name
 

@@ -75,14 +75,14 @@ If you do not see an overview similar to the one below, then you do not have suf
 
 ## 4 Related Content
 
-* [How to Find the Root Cause of Runtime Errors](/howto6/finding-the-root-cause-of-runtime-errors)
-* [How to Clear Warning Messages](/howto6/clear-warning-messages)
-* [How to Test Web Services Using SoapUI](/howto6/testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](/howto6/monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](/howto6/debug-java-actions-remotely)
-* [How to Log Levels](/howto6/log-levels)
-* [How to Debug Microflows](/howto6/debug-microflows)
-* [How to Debug Java Actions](/howto6/debug-java-actions)
-* [How to Handle Common Mendix SSO Errors](/howto6/handle-common-mendix-sso-errors)
+* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [How to Clear Warning Messages](clear-warning-messages)
+* [How to Test Web Services Using SoapUI](testing-web-services-using-soapui)
+* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
+* [How to Log Levels](log-levels)
+* [How to Debug Microflows](debug-microflows)
+* [How to Debug Java Actions](debug-java-actions)
+* [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [The Ultimate Debugger](http://www.mendix.com/tech-blog/the-ultimate-debugger/) 
 * [Debug Live Apps in the Cloud](http://www.mendix.com/tech-blog/new-goodies-for-mendix-app-platform-users-mendix-business-modeler-4-3-release-today/)

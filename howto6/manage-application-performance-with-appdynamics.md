@@ -167,13 +167,13 @@ For more information on AppDynamics, see the AppDynamics documentation here: [ht
 
 ## 9 Related Content
 
-* [Finding the Root Cause of Runtime Errors](/howto6/finding-the-root-cause-of-runtime-errors)
-* [Clearing Warning Messages in Mendix](/howto6/clear-warning-messages)
-* [Monitoring Mendix Using JMX](/howto6/monitoring-mendix-using-jmx)
-* [Debugging Java Actions Remotely](/howto6/debug-java-actions-remotely)
-* [Log Levels](/howto6/log-levels)
-* [Debugging Microflows](/howto6/debug-microflows)
-* [Debugging Java Actions](/howto6/debug-java-actions)
-* [Common Mendix SSO Errors](/howto6/handle-common-mendix-sso-errors)
-* [Solving Load and Import Errors](/howto6/solving-load-and-import-errors)
-* [Debugging Microflows Remotely](/howto6/debug-microflows-remotely)
+* [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [Clearing Warning Messages in Mendix](clear-warning-messages)
+* [Monitoring Mendix Using JMX](monitoring-mendix-using-jmx)
+* [Debugging Java Actions Remotely](debug-java-actions-remotely)
+* [Log Levels](log-levels)
+* [Debugging Microflows](debug-microflows)
+* [Debugging Java Actions](debug-java-actions)
+* [Common Mendix SSO Errors](handle-common-mendix-sso-errors)
+* [Solving Load and Import Errors](solving-load-and-import-errors)
+* [Debugging Microflows Remotely](debug-microflows-remotely)

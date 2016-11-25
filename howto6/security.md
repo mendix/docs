@@ -6,6 +6,6 @@ How to secure your data and make sure that the right user is actually seeing the
 
 **How-to's**:
 
-*   [Creating a secure app](/howto6/create-a-secure-app)
-*   [Generating a personal SSH2 key pair](/howto6/generating-a-personal-ssh2-key-pair)
-*   [Anonymous User Security](/howto6/set-up-anonymous-user-security)
+*   [Creating a secure app](create-a-secure-app)
+*   [Generating a personal SSH2 key pair](generating-a-personal-ssh2-key-pair)
+*   [Anonymous User Security](set-up-anonymous-user-security)

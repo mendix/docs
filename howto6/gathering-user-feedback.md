@@ -121,8 +121,8 @@ In a few simple steps, Mendix enables you to start collecting feedback from your
 
 ## 11 Related Content
 
-* [How to Manage Your Application Requirements with Mendix](/howto6/managing-your-application-requirements-with-mendix)
-* [How to Contribute to a GitHub Repository](/howto6/contribute-to-a-github-repository)
-* [How to Start Your Own Repository](/howto6/starting-your-own-repository)
-* [How to Use Team Server and Version Control](/howto6/using-team-server-version-control)
-* [How to Share the Development Database](/howto6/sharing-the-development-database)
+* [How to Manage Your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
+* [How to Contribute to a GitHub Repository](contribute-to-a-github-repository)
+* [How to Start Your Own Repository](starting-your-own-repository)
+* [How to Use Team Server and Version Control](using-team-server-version-control)
+* [How to Share the Development Database](sharing-the-development-database)

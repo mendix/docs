@@ -4,7 +4,7 @@ space: "Reference Guide 6"
 parent: "scroll-container"
 ---
 
-A scroll container region is part of a [Scroll Container](/refguide6/scroll-container), and defines a content area.
+A scroll container region is part of a [Scroll Container](scroll-container), and defines a content area.
 
 ## Common Properties
 
@@ -32,7 +32,7 @@ The height of the region, either in pixels or a percentage, depending on the val
 
 ### Toggle Mode (Only for Left and Right Regions)
 
-This setting determines whether the region is always visible or can be hidden from view. The different options allow the sidebar to interact with the page in a variety of ways when moving in and out of view. The visibility of the region is triggered by the [sidebar+toggle](/refguide6/sidebar-toggle-button).
+This setting determines whether the region is always visible or can be hidden from view. The different options allow the sidebar to interact with the page in a variety of ways when moving in and out of view. The visibility of the region is triggered by the [sidebar+toggle](sidebar-toggle-button).
 
 <div class="alert alert-info">{% markdown %}
 

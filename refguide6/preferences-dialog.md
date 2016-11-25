@@ -51,7 +51,7 @@ This setting defines the default response to the question whether to automatical
 
 #### Executable
 
-The path and name of the program that is used to view the details of file changes in the [commit dialog](/refguide6/commit-dialog).
+The path and name of the program that is used to view the details of file changes in the [commit dialog](commit-dialog).
 
 #### Argument pattern
 

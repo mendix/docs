@@ -44,11 +44,11 @@ Changed in Mendix 5.19: button captions are based on templates with parameters t
 
 {% endmarkdown %}</div>
 
-The caption defines the text that will be shown. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera. Note that to use template parameters the widget must be placed in a context of an entity, e.g. inside a [data view](/refguide5/data-view) or [list view](/refguide5/list-view). The parameters will be replaced by the values of the attributes.
+The caption defines the text that will be shown. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera. Note that to use template parameters the widget must be placed in a context of an entity, e.g. inside a [data view](data-view) or [list view](list-view). The parameters will be replaced by the values of the attributes.
 
 _Before 5.19:_
 
-This property indicates what text will be shown on this widget or part of the widget. This is a translatable text. See [Translatable Texts](/refguide5/translatable-texts).
+This property indicates what text will be shown on this widget or part of the widget. This is a translatable text. See [Translatable Texts](translatable-texts).
 
 ### Tooltip
 
@@ -58,7 +58,7 @@ Added in Mendix 5.8.0.
 
 {% endmarkdown %}</div>
 
-The tooltip property determines the text you will see in the tooltip that appears when you hover over the button. The tooltip text is translatable. See [Translatable Texts](/refguide5/translatable-texts). If the tooltip is not specified, no tooltip will be shown when hovering over the button.
+The tooltip property determines the text you will see in the tooltip that appears when you hover over the button. The tooltip text is translatable. See [Translatable Texts](translatable-texts). If the tooltip is not specified, no tooltip will be shown when hovering over the button.
 
 ### Image
 
@@ -94,7 +94,7 @@ This property specifies the microflow that will be executed when the button is c
 
 ### On click settings
 
-With the on click settings you can customize which parameters to pass to the microflow, whether to show a progress bar and more. See [Starting Microflows](/refguide5/starting-microflows).
+With the on click settings you can customize which parameters to pass to the microflow, whether to show a progress bar and more. See [Starting Microflows](starting-microflows).
 
 ## Visibility properties
 

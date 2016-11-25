@@ -21,11 +21,11 @@ To create a secure environment it is important to make a clear distinction betwe
 *   **Set the server role for each user:** Associate each user with the role _public_.
 *   **Define the user mapping for each user:** Associate all the databases related to Mendix with their respective user(s). The template for these databases should be: _dbo_ and the roles for each corresponding user should be: _db_datareader_ and _datawriter_.
 
-On this page you can find a step by step instruction on how to: [Set up the database user](/howto50/setting-up-the-database-user)
+On this page you can find a step by step instruction on how to: [Set up the database user](setting-up-the-database-user)
 
 ## Related content
 
-*   [Troubleshooting](/howto50/troubleshooting)
-*   [Setting up the database user](/howto50/setting-up-the-database-user)
+*   [Troubleshooting](troubleshooting)
+*   [Setting up the database user](setting-up-the-database-user)
 *   [How to execute an SQL statement on an external database](/bestpractices/how-to-execute-an-sql-statement-on-an-external-database)
-*   [Restoring a SQL Server database](/howto50/restoring-a-sql-server-database)
+*   [Restoring a SQL Server database](restoring-a-sql-server-database)

@@ -50,7 +50,7 @@ To create a basic data layer, follow these steps:
     ![](attachments/18448667/18580743.png) 
 3. Create this domain model:
     ![](attachments/18448745/18582175.png)
-    For more information on creating an entity, see [How to Create a Basic Data Layer](/howto6/create-a-basic-data-layer).
+    For more information on creating an entity, see [How to Create a Basic Data Layer](create-a-basic-data-layer).
 
 ## 5 Creating Overview and Detail Pages
 
@@ -60,7 +60,7 @@ To create overview and detail pages, follow these steps:
     ![](attachments/18448667/19399067.png) 
     Your detail page should look like this:
     ![](attachments/18448667/19399068.png)
-    For more information on creating a page, see [How to Create Your Overviw and Detail Pages](/howto6/create-your-first-two-overview-and-detail-pages).
+    For more information on creating a page, see [How to Create Your Overviw and Detail Pages](create-your-first-two-overview-and-detail-pages).
 2. Create an overview and detail page to manage objects of the **Order** entity. Your overview page should look like this:
     ![](attachments/18448667/19399069.png) 
     Your detail page should look like this:
@@ -70,7 +70,7 @@ To create overview and detail pages, follow these steps:
 
 To create menu items, follow these steps:
 
-1. Create a menu item to access the customer overview page. For more information on creating menu items, see [How to Set Up the Navigation Structure](/howto6/setting-up-the-navigation-structure).
+1. Create a menu item to access the customer overview page. For more information on creating menu items, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure).
 2. Create a menu item to access the order overview page.
 
 ## 7 Deploying an App to the Cloud
@@ -86,9 +86,9 @@ To deploy an app to the cloud, follow these steps:
 
 ## 8 Related Content
 
-* [Build a Simple HRM App 1: Create, Manage, and Deploy the App](/howto6/build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-* [Build a Simple HRM App 2: Perform the First Steps to Build a Rich GUI](/howto6/build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-* [Build a Simple HRM App 3: Show Related Data in the GUI](/howto6/build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-* [Build a Simple HRM App 4: Enrich the GUI with Filter Options](/howto6/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
-* [Build a Simple HRM App 5: Smarten Up Your App with Business Logic](/howto6/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
-* [Test Microflows Using the UnitTesting Module](/howto6/testing-microflows-using-the-unittesting-module)
+* [Build a Simple HRM App 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+* [Build a Simple HRM App 2: Perform the First Steps to Build a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+* [Build a Simple HRM App 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+* [Build a Simple HRM App 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+* [Build a Simple HRM App 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
+* [Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)

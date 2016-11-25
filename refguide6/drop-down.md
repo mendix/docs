@@ -6,7 +6,7 @@ parent: "report-widgets"
 
 <div class="alert alert-info">{% markdown %}
 
-This has been renamed to [Report Parameter](/refguide6/report-parameter) in version 6.10.0.
+This has been renamed to [Report Parameter](report-parameter) in version 6.10.0.
 
 {% endmarkdown %}</div>
 
@@ -14,7 +14,7 @@ With a drop down the end user can filter a report on a specific parameter of the
 
 <div class="alert alert-warning">{% markdown %}
 
-A drop down can be used for a data set parameter of any type except DateTime. DataTime parameters can be filtered by a [date range selector](/refguide6/date-range-selector).
+A drop down can be used for a data set parameter of any type except DateTime. DataTime parameters can be filtered by a [date range selector](date-range-selector).
 
 {% endmarkdown %}</div>
 
@@ -32,4 +32,4 @@ Refers to the data set parameter of which the value is restricted by this drop d
 
 ### Name, Class, Style
 
-See [Widget Properties](/refguide6/common-widget-properties).
+See [Widget Properties](common-widget-properties).

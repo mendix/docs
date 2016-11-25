@@ -20,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install [Eclipse](https://eclipse.org/)
 * Add a Java action and open the project in Eclipse
-* Read [How to Extend Your Application with Custom Java](/howto6/extending-your-application-with-custom-java)
+* Read [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
 * Deploy the application for Eclipse by selecting **Deploy for Eclipse** from the project menu in the Modeler (you should redo this every time you make changes in the Modeler):
     ![](attachments/18448685/18581045.png)
 
@@ -62,13 +62,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 5 Related Content
 
-* [How to Find the Root Cause of Runtime Errors](/howto6/finding-the-root-cause-of-runtime-errors)
-* [How to Clear Warning Messages in Mendix](/howto6/clear-warning-messages)
-* [How to Test Web Services Using SoapUI](/howto6/testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](/howto6/monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](/howto6/debug-java-actions-remotely)
-* [How to Log Levels](/howto6/log-levels)
-* [How to Debug Microflows](/howto6/debug-microflows)
-* [How to Common Mendix SSO Errors](/howto6/handle-common-mendix-sso-errors)
-* [How to Debug Microflows Remotely](/howto6/debug-microflows-remotely)
+* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [How to Clear Warning Messages in Mendix](clear-warning-messages)
+* [How to Test Web Services Using SoapUI](testing-web-services-using-soapui)
+* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
+* [How to Log Levels](log-levels)
+* [How to Debug Microflows](debug-microflows)
+* [How to Common Mendix SSO Errors](handle-common-mendix-sso-errors)
+* [How to Debug Microflows Remotely](debug-microflows-remotely)
 * [Java Actions](/refguide6/java-actions)

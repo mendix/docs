@@ -7,32 +7,32 @@ space: "Reference Guide 5"
 
 ## Cast
 
-See [Cast Object](/refguide5/cast-object).
+See [Cast Object](cast-object).
 
 ## Change
 
-See [Change Object](/refguide5/change-object).
+See [Change Object](change-object).
 
 ## Commit 
 
-See [Commit Object](/refguide5/committing-objects).
+See [Commit Object](committing-objects).
 
 ## Create
 
-See [Create Object](/refguide5/create-object).
+See [Create Object](create-object).
 
 ## Delete
 
-See [Delete Object(s)](/refguide5/deleting-objects).
+See [Delete Object(s)](deleting-objects).
 
 ## Persisten Create
 
-See [Persisten Create Object](/refguide5/persistent-create-object).
+See [Persisten Create Object](persistent-create-object).
 
 ## Retrieve
 
-See [Retrieve](/refguide5/retrieve).
+See [Retrieve](retrieve).
 
 ## Rollback
 
-See [Rollback Object](/refguide5/rollback-object).
+See [Rollback Object](rollback-object).

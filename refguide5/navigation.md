@@ -15,13 +15,13 @@ This document describes the general concept of navigation in Mendix applications
 
 
 
-The Navigation document defines the navigation structure of the application for end-users. It allows you to set the home page of your application as well as define menu structures for use in [menu widgets](/refguide5/menu-widgets). The home page can vary based on the [roles](/refguide5/user-roles) the user has.
+The Navigation document defines the navigation structure of the application for end-users. It allows you to set the home page of your application as well as define menu structures for use in [menu widgets](menu-widgets). The home page can vary based on the [roles](user-roles) the user has.
 
 ## Device Types
 
 At the heart of the navigation model in Mendix are three device types: Desktop, Tablet, and Phone. You can define separate home pages and menus for each of these three devices. The Desktop device type is always enabled, while Tablet and Phone can be disabled if you do not want to use them. When a user visits a Mendix application, she is automatically redirected to the home page of the appropriate device type (see 'Redirection to Device Types' below).
 
-The device type of the currently logged in user is available in [microflows](/refguide5/microflows) as the variable `$currentDeviceType`. The type of this variable is [enumeration](/refguide5/enumerations) 'System.DeviceType', which has values 'Phone', 'Tablet' and 'Desktop'. You can use the `$currentDeviceType` variable to perform different actions based on the device type. Typical usage is to show different pages based on the device type.
+The device type of the currently logged in user is available in [microflows](microflows) as the variable `$currentDeviceType`. The type of this variable is [enumeration](enumerations) 'System.DeviceType', which has values 'Phone', 'Tablet' and 'Desktop'. You can use the `$currentDeviceType` variable to perform different actions based on the device type. Typical usage is to show different pages based on the device type.
 
 ## Redirection to Device Types
 
@@ -29,7 +29,7 @@ The Mendix Runtime automatically redirects users to the home page of the appropr
 
 <table><thead><tr><th class="confluenceTh">User-Agent string regular expression</th><th class="confluenceTh">Device type</th></tr></thead><tbody><tr><td class="confluenceTd">Android.*Mobile|iPhone|iPod|BlackBerry</td><td class="confluenceTd">Phone</td></tr><tr><td class="confluenceTd">Android|iPad</td><td class="confluenceTd">Tablet</td></tr><tr><td class="confluenceTd"><em>(other)</em></td><td class="confluenceTd">Desktop</td></tr></tbody></table>
 
-To configure the regular expressions used to match phone or tablet user, see [custom settings](/refguide5/custom-settings).
+To configure the regular expressions used to match phone or tablet user, see [custom settings](custom-settings).
 
 If a device type is not enabled, it falls back to another device type as shown in the following table.
 
@@ -41,7 +41,7 @@ It is also possible to force the client to use a specific device type by adding 
 
 ## Device Type
 
-[Navigation](/refguide5/navigation) in Mendix application is split into three device types: Desktop, Tablet and Phone. Each of these device types has the following properties.
+[Navigation](navigation) in Mendix application is split into three device types: Desktop, Tablet and Phone. Each of these device types has the following properties.
 
 ### General
 
@@ -63,7 +63,7 @@ Here you can specify the application title. This title is shown in the title bar
 
 **Default home page**
 
-The default home page indicates which [page](/refguide5/page) or [microflow](/refguide5/microflow) is opened when a user has just signed in. If role-based home pages (see below) are specified for one of the [user roles](/refguide5/user-roles) of the user, then that home page will be used instead.
+The default home page indicates which [page](page) or [microflow](microflow) is opened when a user has just signed in. If role-based home pages (see below) are specified for one of the [user roles](user-roles) of the user, then that home page will be used instead.
 
 ### Role-based home pages
 
@@ -73,12 +73,12 @@ Per role-based home page you can specify the user role it applies to and the tar
 
 ### Menu
 
-Each device type contains a default menu. You can use these menus in [menu widgets](/refguide5/menu-widgets). Defining the menu for a device type works in the same way as when editing a menu document.
+Each device type contains a default menu. You can use these menus in [menu widgets](menu-widgets). Defining the menu for a device type works in the same way as when editing a menu document.
 
-See [Menu](/refguide5/menu).
+See [Menu](menu).
 
 <div class="alert alert-warning">{% markdown %}
 
-If [security](/refguide5/project-security) is enabled, the menu will only show items that the user has access to.
+If [security](project-security) is enabled, the menu will only show items that the user has access to.
 
 {% endmarkdown %}</div>

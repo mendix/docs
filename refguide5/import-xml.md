@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-With the import-XML action you can import the data stored in a XML document into [domain model](/refguide5/domain-model) entities.
+With the import-XML action you can import the data stored in a XML document into [domain model](domain-model) entities.
 
 ## Input Properties
 
@@ -17,7 +17,7 @@ The XML document that will be imported. This should be an object of entity 'Syst
 
 ### XML-to-domain mapping
 
-The [XML-to-domain mapping](/refguide5/xml-to-domain-mappings) defines how to transform the XML document to objects.
+The [XML-to-domain mapping](xml-to-domain-mappings) defines how to transform the XML document to objects.
 
 ### Parameter
 

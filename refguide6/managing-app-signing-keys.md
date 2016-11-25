@@ -9,9 +9,9 @@ To create any mobile apps, you need platform-specific app signing keys. Mobile a
 
 Depending on which platforms you want to target, you will need to create the required signing keys. The following sections describe, per platform, how to create those keys.
 
-*   [iOS](/refguide6/managing-app-signing-keys)
-*   [Android](/refguide6/managing-app-signing-keys)
-*   [Windows Phone](/refguide6/managing-app-signing-keys)
+*   [iOS](managing-app-signing-keys)
+*   [Android](managing-app-signing-keys)
+*   [Windows Phone](managing-app-signing-keys)
 
 ## iOS
 
@@ -21,7 +21,7 @@ It is convenient to have an Apple Mac available, however, that is not a requirem
 
 ### On Apple Macs
 
-If you have an Apple Mac available, see the Apple developer documentation on [certificate management](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) for information on how to obtain an iOS signing certificate and distribution profile. Afterwards, see the Apple documentation on [how to create the required distribution profile](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html). Finally, check the end of this section for information on [how to upload the signing key files to Adobe PhoneGap Build](/refguide6/managing-app-signing-keys).
+If you have an Apple Mac available, see the Apple developer documentation on [certificate management](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) for information on how to obtain an iOS signing certificate and distribution profile. Afterwards, see the Apple documentation on [how to create the required distribution profile](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html). Finally, check the end of this section for information on [how to upload the signing key files to Adobe PhoneGap Build](managing-app-signing-keys).
 
 ### On other platforms
 

@@ -29,7 +29,7 @@ The following steps will explain how to find certain activities that are used in
 
 ## 2\. Related content
 
-*   [Finding Unused Items](/howto50/finding-unused-items)
-*   [Finding your way through a project](/howto50/finding-your-way-through-a-project)
-*   [Showing a Project in the Directory in Explorer](/howto50/showing-a-project-in-the-directory-in-explorer)
-*   [Querying over self-references](/howto50/querying-over-self-references)
+*   [Finding Unused Items](finding-unused-items)
+*   [Finding your way through a project](finding-your-way-through-a-project)
+*   [Showing a Project in the Directory in Explorer](showing-a-project-in-the-directory-in-explorer)
+*   [Querying over self-references](querying-over-self-references)

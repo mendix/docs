@@ -46,4 +46,4 @@ This query retrieves all customers and returns the first and last name sorted on
 
 {% endmarkdown %}</div>
 
-**Note:** For default ordering behavior of NULL values refer to [this documentation](/refguide6/null-ordering-behavior).
+**Note:** For default ordering behavior of NULL values refer to [this documentation](null-ordering-behavior).

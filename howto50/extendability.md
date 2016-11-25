@@ -7,8 +7,8 @@ One of the strengths of Mendix is that it's easy to connect your Mendix applicat
 
 | Basic
 | -----------------------
-| [Explore our connectors and adapters](/howto50/explore-our-connectors-and-adapters)
+| [Explore our connectors and adapters](explore-our-connectors-and-adapters)
 
 | Advanced
 | ----------------------
-| [Send custom emails from your app](/howto50/send-custom-emails-from-your-app)
+| [Send custom emails from your app](send-custom-emails-from-your-app)

@@ -17,13 +17,13 @@ In the domain model there is an association of type reference set from customer 
 
 {% endmarkdown %}</div>
 
-The reference set selector looks a lot like a [data grid](/refguide6/data-grid) and consequently shares many properties with the data grid. Main differences are that the reference set selector lacks a search bar and that it has different buttons by default (Add, Remove).
+The reference set selector looks a lot like a [data grid](data-grid) and consequently shares many properties with the data grid. Main differences are that the reference set selector lacks a search bar and that it has different buttons by default (Add, Remove).
 
 <div class="alert alert-warning">{% markdown %}
 
 The 'Add and Remove' buttons mean something else than the 'New and Delete' buttons that are used by default in the data grid:
 
-*   The Add button adds a reference to an existing object. The New button, on the other hand, creates a new object and does not add references. (the [context mechanism](/refguide6/context-mechanism) may automatically set references but that is a story for another time)
+*   The Add button adds a reference to an existing object. The New button, on the other hand, creates a new object and does not add references. (the [context mechanism](context-mechanism) may automatically set references but that is a story for another time)
 
 *   The Delete button actually deletes an object for good, whereas the Remove button simply removes the reference to the object and leaves the object itself intact.
 
@@ -33,15 +33,15 @@ The 'Add and Remove' buttons mean something else than the 'New and Delete' butto
 
 ### Control bar
 
-See [Control Bar](/refguide6/control-bar).
+See [Control Bar](control-bar).
 
 ### Sort bar
 
-See [Sort Bar](/refguide6/sort-bar).
+See [Sort Bar](sort-bar).
 
 ### Columns
 
-See [Columns](/refguide6/columns) for more information.
+See [Columns](columns) for more information.
 
 ## Common properties
 
@@ -61,7 +61,7 @@ This property indicates whether the control bar will be visible in the end user 
 
 <div class="alert alert-warning">{% markdown %}
 
-Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking on a row. See the property 'Default button trigger' and [control bar](/refguide6/control-bar) for more information.
+Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking on a row. See the property 'Default button trigger' and [control bar](control-bar) for more information.
 
 {% endmarkdown %}</div>
 
@@ -123,7 +123,7 @@ _Default value:_ Double click
 
 ### Tooltip page
 
-A tooltip page is a page that appears when you hover your mouse over a row. The tooltip page should consist of a data view on the same entity as the data grid. On top of creating, and connecting, a tooltip page you also have to specify on which columns the tooltip will appear. See the property 'Show tooltip' of [data grid columns](/refguide6/columns).
+A tooltip page is a page that appears when you hover your mouse over a row. The tooltip page should consist of a data view on the same entity as the data grid. On top of creating, and connecting, a tooltip page you also have to specify on which columns the tooltip will appear. See the property 'Show tooltip' of [data grid columns](columns).
 
 ## Data source properties
 
@@ -143,23 +143,23 @@ With the reference selector you are editing an association of type reference set
 
 ## Selectable objects properties
 
-The selectable objects are determined in the same way as in the reference selector. See the [selectable objects properties](/refguide6/reference-selector) of the reference selector for more information. Note that you cannot use a microflow in a reference set selector.
+The selectable objects are determined in the same way as in the reference selector. See the [selectable objects properties](reference-selector) of the reference selector for more information. Note that you cannot use a microflow in a reference set selector.
 
 ### XPath constraint
 
-See [Selectable Objects Properties](/refguide6/reference-selector) of the reference selector.
+See [Selectable Objects Properties](reference-selector) of the reference selector.
 
 ### Constrained by
 
-See [Selectable Objects Properties](/refguide6/reference-selector) of the reference selector.
+See [Selectable Objects Properties](reference-selector) of the reference selector.
 
 ### Apply context
 
-See [Selectable Objects Properties](/refguide6/reference-selector) of the reference selector.
+See [Selectable Objects Properties](reference-selector) of the reference selector.
 
 ### Remove from context
 
-See [Selectable Objects Properties](/refguide6/reference-selector) of the reference selector.
+See [Selectable Objects Properties](reference-selector) of the reference selector.
 
 ## Visibility properties
 
@@ -167,6 +167,6 @@ See [Selectable Objects Properties](/refguide6/reference-selector) of the refere
 
 ## Related Articles
 
-*   [Data view](/refguide6/data-view)
-*   [Entities](/refguide6/entities)
-*   [Associations](/refguide6/associations)
+*   [Data view](data-view)
+*   [Entities](entities)
+*   [Associations](associations)

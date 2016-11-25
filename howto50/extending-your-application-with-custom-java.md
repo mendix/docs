@@ -10,7 +10,7 @@ Most application logic can be developed using Microflows. They are very powerful
 
 Before you start with this how-to please complete the following prerequisites:
 
-*   [Create and Deploy Your First App](/howto50/create-and-deploy-your-first-app)
+*   [Create and Deploy Your First App](create-and-deploy-your-first-app)
 *   You need Eclipse: download it [here](https://eclipse.org/)
 
 <div class="alert alert-info">{% markdown %}
@@ -104,8 +104,8 @@ You can use any text editor to create custom Java actions, but we highly recomme
 
 ## 6\. Related content
 
-*   [Defining access rules using XPath](/howto50/defining-access-rules-using-xpath)
-*   [Triggering Logic using Microflows](/howto50/triggering-logic-using-microflows)
-*   [Creating a Custom Save Button](/howto50/creating-a-custom-save-button)
-*   [Extending Your Application with Custom Java](/howto50/extending-your-application-with-custom-java)
-*   [Working With Lists in a Microflow](/howto50/working-with-lists-in-a-microflow)
+*   [Defining access rules using XPath](defining-access-rules-using-xpath)
+*   [Triggering Logic using Microflows](triggering-logic-using-microflows)
+*   [Creating a Custom Save Button](creating-a-custom-save-button)
+*   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
+*   [Working With Lists in a Microflow](working-with-lists-in-a-microflow)

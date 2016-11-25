@@ -9,7 +9,7 @@ Retrieve can be used to get one or more objects, either by directly traversing a
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide6/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 
@@ -60,7 +60,7 @@ When you know you have only one object or you only want to use the first object 
 
 ### XPath constraint
 
-[XPath](/refguide6/xpath) constraint defines the condition the objects need to suffice to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
+[XPath](xpath) constraint defines the condition the objects need to suffice to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
 
 ### Sorting
 

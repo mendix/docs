@@ -13,8 +13,8 @@ The [Recorded] button is used to see what has been recorded to assist in filteri
 
 The performance tool is described in the following articles:
 
-*   [Performance Tool Control](/APM/performance-tool-control)
-*   [Performance Tool Filter](/APM/performance-tool-filter)
-*   [Performance Tool Options](/APM/performance-tool-options)
-*   [Performance Tool Results](/APM/performance-tool-results)
-*   [Inserting context information](/APM/inserting-context-information)
+*   [Performance Tool Control](performance-tool-control)
+*   [Performance Tool Filter](performance-tool-filter)
+*   [Performance Tool Options](performance-tool-options)
+*   [Performance Tool Results](performance-tool-results)
+*   [Inserting context information](inserting-context-information)

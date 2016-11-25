@@ -4,7 +4,7 @@ space: "Reference Guide 6"
 ---
 
 
-The Mendix Modeler is the place where you create, view and edit your Mendix application. This is called a [project](/refguide6/project) in the Modeler. A project consists of many documents that are grouped in [modules](/refguide6/modules) and folders. There are some project-level settings but the core of the functionality will be inside modules. Examples of documents are the [project settings](/refguide6/project-settings), [domain model](/refguide6/domain-model), [pages](/refguide6/pages) and [microflows](/refguide6/microflows). The Modeler can have one project open at the same time. You can, however, open two Modeler instances when necessary.
+The Mendix Modeler is the place where you create, view and edit your Mendix application. This is called a [project](project) in the Modeler. A project consists of many documents that are grouped in [modules](modules) and folders. There are some project-level settings but the core of the functionality will be inside modules. Examples of documents are the [project settings](project-settings), [domain model](domain-model), [pages](pages) and [microflows](microflows). The Modeler can have one project open at the same time. You can, however, open two Modeler instances when necessary.
 
 This documentation describes the graphical user interface of the Modeler. The rest of the documentation follows the structure of the project explorer.
 
@@ -21,7 +21,7 @@ The Modeler sports quite a number of dockable windows or docks. You can close so
 | Dockable window | Description |
 | --- | --- |
 | Breakpoints | Shows all breakpoints in the project. You can enable/disable breakpoints from here. |
-| Changes | For [Team Server](/refguide6/team-server) projects, this dock shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here. |
+| Changes | For [Team Server](team-server) projects, this dock shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here. |
 | Connector | Shows what elements can be connected to the currently selected element. For example, when a button is a selected, the connector will show microflows that you can drag and drop onto the button to connect them. |
 | Console | Shows the output of the Mendix Runtime while running an application. |
 | Debugger | This can be used to debug your application. |
@@ -31,7 +31,7 @@ The Modeler sports quite a number of dockable windows or docks. You can close so
 | Get Started | Shows information on how to get started with the Mendix Modeler. Available in version 6.2.0 and higher. |
 | Project Explorer | Shows the complete structure of your project including all documents inside the modules. By default the active document is always selected in the project explorer so you can quickly see where the document you are editing is in the tree. You can change this behavior in the preferences window (menu Edit > Preferences). |
 | Properties | Shows properties of the currently selected element. This is where a lot of editing in the Modeler takes place. |
-| Stories | For [Team Server](/refguide6/team-server) enabled projects, this dock shows the stories of the current sprint. |
+| Stories | For [Team Server](team-server) enabled projects, this dock shows the stories of the current sprint. |
 | Toolbox | Shows the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (text box, data view etc.) by dragging them from the toolbox to your form. |
 | Variables | You can view the current values of variables here when debugging your application. |
 
@@ -73,18 +73,18 @@ Using items in the menu bar of the Modeler you can create new projects, deploy a
 | Previous Error | Highlight the next find result in the Error List dock and open it in an editor. | Shift+F8 |
 | View menu | Description | Shortcut key |
 | Start Page | Open the start page in a tab in the Modeler. |   |
-| Breakpoints | Open the dockable window '[Breakpoints](/refguide6/modeler)'. |   |
-| Changes | Open the dockable window '[Changes](/refguide6/modeler)'. |   |
-| Connector | Open the dockable window '[Connector](/refguide6/modeler)'. |   |
-| Console | Open the dockable window '[Console](/refguide6/modeler)'. |   |
-| Documentation | Open the dockable window '[Documentation](/refguide6/modeler)'. |   |
-| Error List | Open the dockable window '[Error List](/refguide6/modeler)'. |   |
-| Find Results 1 | Open the dockable window '[Find Results 1](/refguide6/modeler)'. |   |
-| Find Results 2 | Open the dockable window '[Find Results 2](/refguide6/modeler)'. |   |
-| Project Explorer | Open the dockable window '[Project Explorer](/refguide6/modeler)'. |   |
-| Properties | Open the dockable window '[Properties](/refguide6/modeler)'. |   |
-| Stories | Open the dockable window '[Stories](/refguide6/modeler)'. |   |
-| Toolbox | Open the dockable window '[Toolbox](/refguide6/modeler)'. |   |
+| Breakpoints | Open the dockable window '[Breakpoints](modeler)'. |   |
+| Changes | Open the dockable window '[Changes](modeler)'. |   |
+| Connector | Open the dockable window '[Connector](modeler)'. |   |
+| Console | Open the dockable window '[Console](modeler)'. |   |
+| Documentation | Open the dockable window '[Documentation](modeler)'. |   |
+| Error List | Open the dockable window '[Error List](modeler)'. |   |
+| Find Results 1 | Open the dockable window '[Find Results 1](modeler)'. |   |
+| Find Results 2 | Open the dockable window '[Find Results 2](modeler)'. |   |
+| Project Explorer | Open the dockable window '[Project Explorer](modeler)'. |   |
+| Properties | Open the dockable window '[Properties](modeler)'. |   |
+| Stories | Open the dockable window '[Stories](modeler)'. |   |
+| Toolbox | Open the dockable window '[Toolbox](modeler)'. |   |
 | Fullscreen | Temporarily hide all dockable windows so that the tabbed documents can be shown in fullscreen. | F11 |
 | Reset Layout | Resets the layout of the Modeler to factory defaults. |   |
 | Project menu | Description | Shortcut key |

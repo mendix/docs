@@ -8,7 +8,7 @@ This section describes how to manage scheduled events under Linux.
 
 ## Instructions
 
-To manage the scheduled events we have to edit the `m2ee.yaml` configuration file. See [Mendix Hosting Enviroment project structure and commands](/howto50/mendix-hosting-enviroment-project-structure-and-commands) about finding this file and opening it in an editor.
+To manage the scheduled events we have to edit the `m2ee.yaml` configuration file. See [Mendix Hosting Enviroment project structure and commands](mendix-hosting-enviroment-project-structure-and-commands) about finding this file and opening it in an editor.
 
 At the end of the configuration file, you'll see the following content:
 
@@ -27,4 +27,4 @@ At the end of the configuration file, you'll see the following content:
 Setting the ScheduledEventExecution option to ALL will cause every defined scheduled event in the application to be enabled. NONE will disable all of them, and SPECIFIED will require you to edit the `MyScheduledEvents` value to present a comma separated list of scheduled events that you want to have enabled in this specific environment.
 
 Return to:
-[![](attachments/819203/917564.png)](/howto50/manage-scheduled-events)[(Back to Top)](/howto50/manage-scheduled-events)
+[![](attachments/819203/917564.png)](manage-scheduled-events)[(Back to Top)](manage-scheduled-events)

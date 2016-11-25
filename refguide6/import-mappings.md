@@ -7,7 +7,7 @@ parent: "mapping-documents"
 
 
 
-Please refer to [Mapping Documents](/refguide6/mapping-documents) for an introduction.
+Please refer to [Mapping Documents](mapping-documents) for an introduction.
 
 <div class="alert alert-info">{% markdown %}
 Importing from JSON is available since Mendix 6.6.0.
@@ -86,7 +86,7 @@ Having defined the mappings for the attributes, these mappings are also shown in
 
 ## Parameter Entity
 
-Import Mappings have the additional option to pass an incoming entity. This entity is created or retrieved in the microflow that calls an [Import from Mapping](/refguide6/import-mapping-action) action, and is passed as a parameter. This parameter entity serves as input to the Import Mapping, and is not created in the mapping itself. Associations can be set to the parameter entity, and the parameter entity can be used in microflows to obtain objects. In the example of Figure 5, a TestCase entity is passed to the Import Mapping, and is used in the microflow that obtains an Order (Call_PWS_ReturnsOrder). Associations can be set to the input parameter as well.
+Import Mappings have the additional option to pass an incoming entity. This entity is created or retrieved in the microflow that calls an [Import from Mapping](import-mapping-action) action, and is passed as a parameter. This parameter entity serves as input to the Import Mapping, and is not created in the mapping itself. Associations can be set to the parameter entity, and the parameter entity can be used in microflows to obtain objects. In the example of Figure 5, a TestCase entity is passed to the Import Mapping, and is used in the microflow that obtains an Order (Call_PWS_ReturnsOrder). Associations can be set to the input parameter as well.
 
 ![](attachments/16713727/16843941.png)
 

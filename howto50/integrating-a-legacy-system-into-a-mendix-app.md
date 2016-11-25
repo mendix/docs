@@ -19,8 +19,8 @@ Consider the following situation: you have a legacy system with valuable data th
 Before you continue, make sure that you
 
 *   **Have downloaded the Flat & Delimited File Importer App Store Module and all prerequisites**
-*   **Know how to create Domain models** ([Creating a basic data layer](/howto50/creating-a-basic-data-layer)).
-*   **Know how to create Overview and detail pages** ([Creating your first two overview and detail pages](/howto50/creating-your-first-two-overview-and-detail-pages)).
+*   **Know how to create Domain models** ([Creating a basic data layer](creating-a-basic-data-layer)).
+*   **Know how to create Overview and detail pages** ([Creating your first two overview and detail pages](creating-your-first-two-overview-and-detail-pages)).
 *   **Know how to create****Microflows** ().
 *   **Save the sample data file to your computer for use in this exercize ([SampleFlatfile.txt](attachments/12878647/13402303.txt))**
 
@@ -29,10 +29,10 @@ Before you continue, make sure that you
 2.  Now we must create the **Flat file Interface.** As per the instructions in the **Flat & Delimited Importer Module Release Notes,** add the page FlatFileInterface.InterfaceDefinition_Overview to your **Project Navigation**.
 3.  Start the app and navigate to the Interface Definition Overview page.
 4.  Select 'New' to create the Interface Definition
-    [![](attachments/12878647/13402297.png)](/howto50/importing-excel-documents#use-the-application-model-meta-data-in-the-client)
+    [![](attachments/12878647/13402297.png)](importing-excel-documents#use-the-application-model-meta-data-in-the-client)
 5. Select the **Product Entity** from the dropdown. 
 
-    If this dropdown is empty, then it is likely that **Model Reflection** has been synced yet.  If you do not know how to execute this, please see instructions [here](/howto50/importing-excel-documents#use-the-application-model-meta-data-in-the-client).
+    If this dropdown is empty, then it is likely that **Model Reflection** has been synced yet.  If you do not know how to execute this, please see instructions [here](importing-excel-documents#use-the-application-model-meta-data-in-the-client).
 
     ![](attachments/12878647/13402300.png)
 
@@ -64,7 +64,7 @@ Before you continue, make sure that you
 
 **Importing Legacy Data using an Excel File**
 
-If your legacy system produces data in an **Excel File** format, integration can be accomplished using the Excel Imported App Store Module. Detailed instructions on how to import data to Mendix with Excel can be found here: [Importing Excel Documents](/howto50/importing-excel-documents).
+If your legacy system produces data in an **Excel File** format, integration can be accomplished using the Excel Imported App Store Module. Detailed instructions on how to import data to Mendix with Excel can be found here: [Importing Excel Documents](importing-excel-documents).
 
 ## Interacting with a legacy system using REST
 
@@ -80,10 +80,10 @@ In this Chapter, you will learn how to retrieve data from a legacy system using 
 Before you continue, make sure that you
 
 *   **Know how to download App Store Modules**
-*   **Know how to create Domain models** ([Creating a basic data layer](/howto50/creating-a-basic-data-layer)).
-*   **Know how to create Overview and detail pages** ([Creating your first two overview and detail pages](/howto50/creating-your-first-two-overview-and-detail-pages)).
+*   **Know how to create Domain models** ([Creating a basic data layer](creating-a-basic-data-layer)).
+*   **Know how to create Overview and detail pages** ([Creating your first two overview and detail pages](creating-your-first-two-overview-and-detail-pages)).
 *   **Know how to create** **Microflows and SubMicroflows** ().
-*   **Understand the concepts behind REST and web Services** ([Consuming Your First REST Service](http://www.mendix.com/blog/consuming-first-rest-service/)[, Consume a complex web service](/howto50/consuming-a-complex-web-service))
+*   **Understand the concepts behind REST and web Services** ([Consuming Your First REST Service](http://www.mendix.com/blog/consuming-first-rest-service/)[, Consume a complex web service](consuming-a-complex-web-service))
 
 Creating an exposed REST service on top of your legacy system is beyond the scope of this tutorial.  For instructions on how to accomplish, please refer to configuration of your non-Mendix.
 
@@ -123,7 +123,7 @@ The above example demonstrates how a Mendix Application can quickly integrate da
 
 ## Related content
 
-*   [Expose a Web Service](/howto50/consuming-a-complex-web-service)
-*   [Consume a Simple Web Service](/howto50/consuming-a-simple-web-service)
-*   [Consume a Complex Web Service](/howto50/consuming-a-complex-web-service)
+*   [Expose a Web Service](consuming-a-complex-web-service)
+*   [Consume a Simple Web Service](consuming-a-simple-web-service)
+*   [Consume a Complex Web Service](consuming-a-complex-web-service)
 *   [Extending Salesforce with Mendix, an Alternative to Force. com](https://www.mendix.com/blog/extending-salesforce-mendix-alternative-force-com/)

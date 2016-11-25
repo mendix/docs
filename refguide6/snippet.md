@@ -5,9 +5,9 @@ parent: "pages"
 ---
 
 
-Snippets define reusable interface parts. They can be used on [pages](/refguide6/page) and [layouts](/refguide6/layout). By using snippets you have to make changes in fewer places if you want to modify the interface. For example, you can have a snippet that is used both in the contents area of a template grid and in a data view. If you add a row to a table in the snippet, that change will show up in both places.
+Snippets define reusable interface parts. They can be used on [pages](page) and [layouts](layout). By using snippets you have to make changes in fewer places if you want to modify the interface. For example, you can have a snippet that is used both in the contents area of a template grid and in a data view. If you add a row to a table in the snippet, that change will show up in both places.
 
-A snippet can optionally define an [entity](/refguide6/entities) that serves as a context for the widgets placed on it. For example, if you would select a Customer entity for a snippet, you could place a text box that shows the customer's name on the snippet without having to define a data view first.
+A snippet can optionally define an [entity](entities) that serves as a context for the widgets placed on it. For example, if you would select a Customer entity for a snippet, you could place a text box that shows the customer's name on the snippet without having to define a data view first.
 
 When an entity is defined on a snippet, any usages of the snippet need to be placed inside a context for that entity or a specialization, e.g. a data view.
 

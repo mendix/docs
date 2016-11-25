@@ -71,7 +71,7 @@ This property specifies the microflow that will be executed when the image is cl
 
 The on click settings specify what parameters will be passed to the microflow, whether to show a progress bar or not, and more.
 
-See [Starting Microflows](/refguide5/starting-microflows).
+See [Starting Microflows](starting-microflows).
 
 ## General properties
 
@@ -155,5 +155,5 @@ The widget can be made visible to a subset of the user roles available in your a
 
 ## Related articles
 
-*   [Data view](/refguide5/data-view)
-*   [Entities](/refguide5/entities)
+*   [Data view](data-view)
+*   [Entities](entities)

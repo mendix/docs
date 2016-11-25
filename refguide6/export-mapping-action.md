@@ -7,11 +7,11 @@ parent: "microflow-activities"
 
 ![](attachments/19202807/19399019.png)
 
-With the Export Mapping action you can export the data stored in [domain model](/refguide6/domain-model) entities into an XML or JSON document, or into a string variable.
+With the Export Mapping action you can export the data stored in [domain model](domain-model) entities into an XML or JSON document, or into a string variable.
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide6/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 
@@ -19,7 +19,7 @@ See [Microflow Element Common Properties](/refguide6/microflow-element-common-pr
 
 ### Export mapping
 
-The [Export Mapping](/refguide6/export-mappings) defines in which way the data in the [domain model](/refguide6/domain-model) corresponds with the XML schema or JSON structure.
+The [Export Mapping](export-mappings) defines in which way the data in the [domain model](domain-model) corresponds with the XML schema or JSON structure.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -29,7 +29,7 @@ From Mendix 6.7.0 export mappings support flat JSON. You can select a JSON struc
 
 ### Argument
 
-If the [Export Mapping](/refguide6/export-mappings) requires an object as input, you can select a variable of the correct type.
+If the [Export Mapping](export-mappings) requires an object as input, you can select a variable of the correct type.
 
 <div class="alert alert-info">{% markdown %}
 

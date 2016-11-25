@@ -9,11 +9,11 @@ tags: []
 
 These are the how-to's for push notifications:
 
-* [How to Implement Push Notifications](/howto6/implementation-guide)
-* [How to Test the Push Notifications Implementation](/howto6/testing-the-implementation)
-* [How to Set Up the Apple Push Notification Server](/howto6/setting-up-apple-push-notification-server)
-* [How to Set Up the Firebase Cloud Messaging Server](/howto6/setting-up-google-firebase-cloud-messaging-server)
-* [How to Use the Push Notification APIs](/howto6/apis)
+* [How to Implement Push Notifications](implementation-guide)
+* [How to Test the Push Notifications Implementation](testing-the-implementation)
+* [How to Set Up the Apple Push Notification Server](setting-up-apple-push-notification-server)
+* [How to Set Up the Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server)
+* [How to Use the Push Notification APIs](apis)
 
 Push Notifications let your application notify a user of events even when the user is not actively using the application. This is a native capability available on both Android and iOS devices, and controlled via Google Cloud Messaging (GCM) and Apple Push Notifications service (APNs). This project is meant to make it easy for Mendix developers who want to include Push Notification capabilities in their Mendix hybrid mobile application.
 
@@ -64,4 +64,4 @@ From the Admin pages, you currently cannot disable the APNs service completely. 
 
 ## Contributing
 
-For more information on contributing to this repository, see [How to Contribute to a GitHub repository](/howto6/contribute-to-a-github-repository).
+For more information on contributing to this repository, see [How to Contribute to a GitHub repository](contribute-to-a-github-repository).

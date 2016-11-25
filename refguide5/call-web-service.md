@@ -5,11 +5,11 @@ space: "Reference Guide 5"
 ---
 
 
-The call-web-service activity can be used to call one of the [imported web service](/refguide5/consumed-web-services) operations. You can specify whether or not to use authentication, what the request should look like and how the response of the web service should be handled.
+The call-web-service activity can be used to call one of the [imported web service](consumed-web-services) operations. You can specify whether or not to use authentication, what the request should look like and how the response of the web service should be handled.
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide5/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 
@@ -37,7 +37,7 @@ When calling a web service using a call-web-service activity, the location of th
 
 ### Location
 
-If you override the location, this property defines the location where to call the web service. The location needs to be entered using [microflow expressions](/refguide5/microflow-expressions). The microflow expression should result in a valid URL string.
+If you override the location, this property defines the location where to call the web service. The location needs to be entered using [microflow expressions](microflow-expressions). The microflow expression should result in a valid URL string.
 
 ### Use HTTP authentication
 
@@ -45,11 +45,11 @@ Use HTTP authentication defines whether the Mendix Runtime should use HTTP authe
 
 ### User name
 
-User name defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [microflow expressions](/refguide5/microflow-expressions). The microflow expression should result in a string.
+User name defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [microflow expressions](microflow-expressions). The microflow expression should result in a string.
 
 ### Password
 
-Password defines the password that will be used to authenticate over HTTP. The password needs to be entered using [microflow expressions](/refguide5/microflow-expressions). The microflow expression should result in a string.
+Password defines the password that will be used to authenticate over HTTP. The password needs to be entered using [microflow expressions](microflow-expressions). The microflow expression should result in a string.
 
 ### Custom HTTP Headers
 
@@ -61,17 +61,17 @@ The XML for the request parts (header and body) can be generated in several ways
 
 ### Mapping
 
-Using the 'Mapping' option, a single [domain-to-XML mapping](/refguide5/domain-to-xml-mappings) can be used to generate the XML for the request part. You can choose the domain-to-XML mapping to use for the request part and, if applicable, the object or list that you want to use as parameter for the mapping.
+Using the 'Mapping' option, a single [domain-to-XML mapping](domain-to-xml-mappings) can be used to generate the XML for the request part. You can choose the domain-to-XML mapping to use for the request part and, if applicable, the object or list that you want to use as parameter for the mapping.
 
 ### Simple
 
 The 'Simple' option for request parts can be used when all children of the XML element of the request part occur at most once and are primitive values. If that is not the case, this options is disabled and cannot be used.
 
-Using this option you need to supply an argument value for all elements of a primitive type (parameters). Argument values need to be entered using [microflow expressions](/refguide5/microflow-expressions) resulting in the same data type as the parameter.
+Using this option you need to supply an argument value for all elements of a primitive type (parameters). Argument values need to be entered using [microflow expressions](microflow-expressions) resulting in the same data type as the parameter.
 
 ### Custom
 
-The 'Custom' option allows you to generate the XML for the request part using a template. The template defines the XML structure of the request part in plain text. Parameters can be used by writing a number between braces, e.g. {1}. For each parameter in the template you can specify its value using a [microflow expression](/refguide5/microflow-expressions) resulting in a String value.
+The 'Custom' option allows you to generate the XML for the request part using a template. The template defines the XML structure of the request part in plain text. Parameters can be used by writing a number between braces, e.g. {1}. For each parameter in the template you can specify its value using a [microflow expression](microflow-expressions) resulting in a String value.
 
 For the request header, the Modeler provides some common XML structures in the drop down menu.
 
@@ -85,11 +85,11 @@ We recommend using the 'Mapping' option instead of 'Advanced' because it is more
 
 ### Result type
 
-The result type tells you the type of the data that is returned by the web service operation. If the data type is a complex XML structure it can be mapped to entities using a [XML-to-domain mapping](/refguide5/xml-to-domain-mappings). If it is primitive data, it can be stored in a variable immediately. The response does not have to be used though; it can also be ignored if you are not interested in it.
+The result type tells you the type of the data that is returned by the web service operation. If the data type is a complex XML structure it can be mapped to entities using a [XML-to-domain mapping](xml-to-domain-mappings). If it is primitive data, it can be stored in a variable immediately. The response does not have to be used though; it can also be ignored if you are not interested in it.
 
 ### Mapping (for complex XML structures)
 
-Here you can choose the [XML-to-domain mapping](/refguide5/xml-to-domain-mappings) that will be used to transform the XML into objects.
+Here you can choose the [XML-to-domain mapping](xml-to-domain-mappings) that will be used to transform the XML into objects.
 
 ### Parameter
 

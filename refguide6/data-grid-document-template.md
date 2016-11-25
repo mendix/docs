@@ -9,7 +9,7 @@ The data grid shows a list of objects in a grid. For example, a data grid can sh
 
 <div class="alert alert-info">{% markdown %}
 
-[![](attachments/819203/918138.png)](/refguide6/data-grid-document-template)
+[![](attachments/819203/918138.png)](data-grid-document-template)
 A data grid showing a list of orders with a description and the referenced customer name.
 
 {% endmarkdown %}</div>
@@ -18,11 +18,11 @@ A data grid showing a list of orders with a description and the referenced custo
 
 ### Columns
 
-See [Columns (document template)](/refguide6/columns-document-template).
+See [Columns (document template)](columns-document-template).
 
 ### Sort bar
 
-See [Sort Bar](/refguide6/sort-bar).
+See [Sort Bar](sort-bar).
 
 ## Appearance Properties
 
@@ -50,7 +50,7 @@ With striping enabled you can set the properties of even and uneven datagrid row
 
 ### Style
 
-See [Style](/refguide6/style)
+See [Style](style)
 
 ## Common Properties
 

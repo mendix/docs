@@ -9,7 +9,7 @@ The image widget can be used to show a predefined image on a page, layout or sni
 
 <div class="alert alert-success">{% markdown %}
 
-If you want to dynamically show different images based on data, please take a look at the [image viewer](/refguide5/image-viewer).
+If you want to dynamically show different images based on data, please take a look at the [image viewer](image-viewer).
 
 {% endmarkdown %}</div>
 
@@ -56,19 +56,19 @@ _Default value:_ Do nothing
 
 ### Page (only for "Open a page")
 
-The [page](/refguide5/page) that should be opened.
+The [page](page) that should be opened.
 
-See [Opening Pages](/refguide5/opening-pages).
+See [Opening Pages](opening-pages).
 
 ### Microflow (only for "Call a microflow")
 
-The [microflow](/refguide5/microflow) that should be executed.
+The [microflow](microflow) that should be executed.
 
 ### Microflow settings (only for "Call a microflow")
 
 The microflow settings specify what parameters will be passed to the microflow, whether to show a progress bar or not, and more.
 
-See [Starting Microflows](/refguide5/starting-microflows).
+See [Starting Microflows](starting-microflows).
 
 ## General properties
 
@@ -76,7 +76,7 @@ See [Starting Microflows](/refguide5/starting-microflows).
 
 The actual image that this widget shows.
 
-See [Images](/refguide5/images).
+See [Images](images).
 
 ### Width Unit
 

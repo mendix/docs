@@ -10,7 +10,7 @@ Tables can be used both in- and outside the data view or templategrid widgets.
 
 <div class="alert alert-info">{% markdown %}
 
-[![](attachments/819203/918134.png)](/refguide5/table-document-template)
+[![](attachments/819203/918134.png)](table-document-template)
 A table with four rows and three columns. The last row containing a dataview with another table.
 
 {% endmarkdown %}</div>
@@ -23,7 +23,7 @@ A column in a table.
 
 ### Row
 
-A row in a table. See [Row (document template)](/refguide5/row-document-template).
+A row in a table. See [Row (document template)](row-document-template).
 
 ## Appearance Properties
 
@@ -47,7 +47,7 @@ Cell padding specifies the space between the content of the cell and the cell wa
 
 ### Style
 
-See [Style](/refguide5/style)
+See [Style](style)
 
 ## Common Properties
 

@@ -171,14 +171,14 @@ Variable ‘Variable’ is never used.
 
 ## 4 Related Content
 
-*   [Finding the Root Cause of Runtime Errors](/howto6/finding-the-root-cause-of-runtime-errors)
-*   [Testing Web Services Using SoapUI](/howto6/testing-web-services-using-soapui)
-*   [Monitoring Mendix Using JMX](/howto6/monitoring-mendix-using-jmx)
-*   [Debug Java Actions Remotely](/howto6/debug-java-actions-remotely)
-*   [Log Levels](/howto6/log-levels)
-*   [Debug Microflows](/howto6/debug-microflows)
-*   [Debug Java Actions](/howto6/debug-java-actions)
-*   [Common Mendix SSO Errors](/howto6/handle-common-mendix-sso-errors)
-*   [Debug Microflows Remotely](/howto6/debug-microflows-remotely)
+*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+*   [Testing Web Services Using SoapUI](testing-web-services-using-soapui)
+*   [Monitoring Mendix Using JMX](monitoring-mendix-using-jmx)
+*   [Debug Java Actions Remotely](debug-java-actions-remotely)
+*   [Log Levels](log-levels)
+*   [Debug Microflows](debug-microflows)
+*   [Debug Java Actions](debug-java-actions)
+*   [Common Mendix SSO Errors](handle-common-mendix-sso-errors)
+*   [Debug Microflows Remotely](debug-microflows-remotely)
 
 Several warnings relate to improper security. For more information on this, see the [Project Security chapter of the Mendix Reference Guide](/refguide6/project-security).

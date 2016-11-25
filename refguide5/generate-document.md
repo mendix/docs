@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-The generate-document action can be used to create a document based on a [template](/refguide5/document-templates).
+The generate-document action can be used to create a document based on a [template](document-templates).
 
 <div class="alert alert-info">{% markdown %}
 
@@ -14,7 +14,7 @@ Generate document
 
 {% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide5/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 
@@ -33,7 +33,7 @@ The language in which the titles and labels of the document should appear.
 Option          | Description
 --------------- | -------------------------------------------------------------------------------------------------
 Current user    | Use the language of the current user.
-Project default | Use the default language that is specified in the [Project Settings](/refguide5/project-settings).
+Project default | Use the default language that is specified in the [Project Settings](project-settings).
 Variable        | Use the language stored in the selected variable. The variable should be of type System.Language.
 
 
@@ -55,7 +55,7 @@ ODT              | Generate a document in Open Office (ODT) format.
 
 ### Template
 
-Template defines which [document template](/refguide5/document-templates) is used to generate the file. Depending on the template being used one or more arguments need to be specified. For each top-level data grid and data view objects of the correct type need to be passed to the template. The value of the argument can be entered using microflow expressions.
+Template defines which [document template](document-templates) is used to generate the file. Depending on the template being used one or more arguments need to be specified. For each top-level data grid and data view objects of the correct type need to be passed to the template. The value of the argument can be entered using microflow expressions.
 
 ### Override margins
 

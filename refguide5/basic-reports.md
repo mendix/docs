@@ -41,4 +41,4 @@ If Use paging is true, this property indicates the number of occurrences that's 
 
 ### Name, Class, Style
 
-See [Widget Properties](/refguide5/common-widget-properties).
+See [Widget Properties](common-widget-properties).

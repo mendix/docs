@@ -170,5 +170,5 @@ In the previous sections you have retrieved data from the Rijksmuseum with a GET
 
 ## 6\. Related content
 
-*   [Expose a web service](/howto50/exposing-a-web-service)
-*   [Consume a simple web service](/howto50/consuming-a-simple-web-service)
+*   [Expose a web service](exposing-a-web-service)
+*   [Consume a simple web service](consuming-a-simple-web-service)

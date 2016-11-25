@@ -71,6 +71,6 @@ _Default value:_ False
 
 ## Related articles
 
-*   [Data view](/refguide6/data-view)
-*   [Entities](/refguide6/entities)
-*   [Associations](/refguide6/associations)
+*   [Data view](data-view)
+*   [Entities](entities)
+*   [Associations](associations)

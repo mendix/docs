@@ -28,7 +28,7 @@ Each row in the navigation list is a navigation list item. A navigation list ite
 
 ### Action
 
-Action defines what action is performed when a navigation list item is 'clicked'. This can either be opening a page or calling a microflow. For opening a page see [Opening Pages](/refguide6/opening-pages) and for calling a microflow see [Starting Microflows](/refguide6/starting-microflows). Microflows attached to a navigation list item have no Confirmation or Advanced microflow settings.
+Action defines what action is performed when a navigation list item is 'clicked'. This can either be opening a page or calling a microflow. For opening a page see [Opening Pages](opening-pages) and for calling a microflow see [Starting Microflows](starting-microflows). Microflows attached to a navigation list item have no Confirmation or Advanced microflow settings.
 
 ## Visibility properties
 

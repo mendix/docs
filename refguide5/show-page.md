@@ -9,7 +9,7 @@ With the 'Show page' action you can show a page to the end user.
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide5/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 
@@ -17,13 +17,13 @@ See [Microflow Element Common Properties](/refguide5/microflow-element-common-pr
 
 ### Object to pass
 
-Object that will be passed to the opened page. This object will be used by [data views](/refguide5/data-view) with data source "caller of the page".
+Object that will be passed to the opened page. This object will be used by [data views](data-view) with data source "caller of the page".
 
 ## Action Properties
 
 ### Page
 
-The [page](/refguide5/page) to show to the end user. If the Object to pass is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
+The [page](page) to show to the end user. If the Object to pass is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
 
 <div class="alert alert-success">{% markdown %}
 
@@ -45,7 +45,7 @@ This feature allows you to re-use the same page for the New and Edit buttons of 
 
 <div class="alert alert-info">{% markdown %}
 
-If the [layout](/refguide5/layout) of the target page has a [layout type](/refguide5/layout#layout-type) configured, the Location property will be removed. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
+If the [layout](layout) of the target page has a [layout type](layout#layout-type) configured, the Location property will be removed. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
 
 {% endmarkdown %}</div>
 

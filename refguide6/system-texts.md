@@ -9,7 +9,7 @@ System texts are texts that are shown to end users by the server or the client. 
 
 ## Languages
 
-In the [project settings](/refguide6/project-settings) you can manage the available languages of your application. For each language you can specify the translation of the system texts. If you do not provide a translation the text will be shown in the default language.
+In the [project settings](project-settings) you can manage the available languages of your application. For each language you can specify the translation of the system texts. If you do not provide a translation the text will be shown in the default language.
 
 ## Parameters
 

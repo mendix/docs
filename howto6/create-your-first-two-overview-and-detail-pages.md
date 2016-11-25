@@ -18,7 +18,7 @@ This how-to explains how you can create overview and detail pages in Mendix.
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Set up a basic data structure by reading [How to Create a Basic Data Layer](/howto6/create-a-basic-data-layer):
+* Set up a basic data structure by reading [How to Create a Basic Data Layer](create-a-basic-data-layer):
     ![](attachments/18448745/18582175.png)
 
 ## 3 Creating an Overview Page
@@ -60,17 +60,17 @@ You should now have an overview page like this:
 
 ## 4 Navigation and Security
 
-1. Now create a navigation item for your overview page to start using it. For details on how to set up the navigation structure, see [How to Set Up the Navigation Structure](/howto6/setting-up-the-navigation-structure).
-2. If you switched on security for this application, you need to configure page access on both the overview and detail pages. For more information on configuring page access, see [How to Create a Secure App](/howto6/create-a-secure-app).
+1. Now create a navigation item for your overview page to start using it. For details on how to set up the navigation structure, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure).
+2. If you switched on security for this application, you need to configure page access on both the overview and detail pages. For more information on configuring page access, see [How to Create a Secure App](create-a-secure-app).
 
 ## 5 Related content
 
-* [How to Configure Scout and the Windows 10 Workaround](/howto6/scout-and-windows-10-workaround)
-* [How to Use Layouts and Snippets](/howto6/layouts-and-snippets)
-* [How to Filter Data on an Overview Page](/howto6/filtering-data-on-an-overview-page)
-* [How to Set Up the Mendix UI Framework with Just CSS](/howto6/setup-mendix-ui-framework-with-just-css)
-* [How to Set Up the Navigation Structure](/howto6/setting-up-the-navigation-structure)
-* [How to Set Up the Mendix UI Framework](/howto6/setup-mendix-ui-framework)
-* [How to Set Up the Mendix UI Framework with Koala](/howto6/setup-mendix-ui-framework-with-koala)
-* [How to Find the Root Cause of Runtime Errors](/howto6/finding-the-root-cause-of-runtime-errors)
+* [How to Configure Scout and the Windows 10 Workaround](scout-and-windows-10-workaround)
+* [How to Use Layouts and Snippets](layouts-and-snippets)
+* [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)
+* [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
+* [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)
+* [How to Set Up the Mendix UI Framework](setup-mendix-ui-framework)
+* [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
+* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 * [Finding the Root Cause of Runtime Errors](/refguide6/page)

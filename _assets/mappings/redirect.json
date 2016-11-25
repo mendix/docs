@@ -1938,7 +1938,11 @@
     },
     {
       "from": "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
-      "to": "/mendixcloud/how-to-deploy-a-mendix-app-on-azure"
+      "to": "/howto6/how-to-deploy-a-mendix-app-on-azure"
+    },
+    {
+      "from": "/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
+      "to": "/howto6/how-to-deploy-a-mendix-app-on-azure"
     },
     {
       "from": "/mendixcloud/Mendix+Cloud",

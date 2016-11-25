@@ -1,8 +1,7 @@
 ---
-title: "AQM (Application Quality Monitor)"
+title: "Mendix Application Quality Monitor (AQM)"
 space: "Application Quality Monitor"
 ---
-# Mendix Application Quality Monitor (AQM) 
 
 Mendix Application Quality Monitor (AQM) is a cloud service developed by Mendix and the Software Improvement Group (SIG). 
 Mendix AQM performs a static analysis of Mendix application models according the ISO 25010 standard for maintainability. 

@@ -8,7 +8,7 @@ Mendix uses visual models to define the logic of your application, we call those
 
 ## 1\. Creating a Menu Item
 
-Microflows can be triggered in many different ways, as explained [here](/howto50/triggering-logic-using-microflows). For this how-to you'll be using a menu item to trigger the new Microflow.
+Microflows can be triggered in many different ways, as explained [here](triggering-logic-using-microflows). For this how-to you'll be using a menu item to trigger the new Microflow.
 
 1.  Open the **navigation editor** and add a menu item in the desktop navigation settings.
     ![](attachments/8784287/8946312.png)
@@ -42,7 +42,7 @@ Microflows can be triggered in many different ways, as explained [here](/howto50
 
 ## 3\. Related content
 
-*   [Defining access rules using XPath](/howto50/defining-access-rules-using-xpath)
-*   [Triggering Logic using Microflows](/howto50/triggering-logic-using-microflows)
-*   [Creating a Custom Save Button](/howto50/creating-a-custom-save-button)
-*   [Extending Your Application with Custom Java](/howto50/extending-your-application-with-custom-java)
+*   [Defining access rules using XPath](defining-access-rules-using-xpath)
+*   [Triggering Logic using Microflows](triggering-logic-using-microflows)
+*   [Creating a Custom Save Button](creating-a-custom-save-button)
+*   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)

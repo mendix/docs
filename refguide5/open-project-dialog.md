@@ -15,13 +15,13 @@ You can open either a project from the Team Server or from disk. For opening a p
 
 From the list select the Team Server project you wish to open.
 
-For more information about the Mendix Team Server, see [Team Server](/refguide5/team-server).
+For more information about the Mendix Team Server, see [Team Server](team-server).
 
 ## Development line
 
 Choose the development line in which you want to start developing.
 
-For more information about development lines, see [Version Control Concepts](/refguide5/version-control-concepts).
+For more information about development lines, see [Version Control Concepts](version-control-concepts).
 
 ## Disk location
 

@@ -5,9 +5,9 @@ parent: "microflows"
 ---
 
 
-An inheritance split is an element that makes a choice based on the type of certain variable. For each specialization the microflow can continue in a different way. If you want to use the specialized type in the rest of the microflow you can use a [cast](/refguide6/cast-object) action.
+An inheritance split is an element that makes a choice based on the type of certain variable. For each specialization the microflow can continue in a different way. If you want to use the specialized type in the rest of the microflow you can use a [cast](cast-object) action.
 
-See [Entities](/refguide6/entities) to read more about specialization and generalization.
+See [Entities](entities) to read more about specialization and generalization.
 
 ## Input Properties
 
@@ -27,4 +27,4 @@ Let us say you have an entity Student and an entity Professor which have the ent
 
 ### Caption
 
-See [Microflow Element Common Properties](/refguide6/microflow-element-common-properties).
+See [Microflow Element Common Properties](microflow-element-common-properties).

@@ -7,7 +7,7 @@ space: "Reference Guide 5"
 
 ## Object Mapping
 
-The type of domain entity that is mapped to the XML element. Specified in the [domain-to-XML mappings](/refguide5/domain-to-xml-mappings) screen.
+The type of domain entity that is mapped to the XML element. Specified in the [domain-to-XML mappings](domain-to-xml-mappings) screen.
 
 Defining an object for a mapping is optional when the mapped element does not contain any attributes. When no object is defined for the optional mapping, the creation of the element will be skipped if it does not have any child element and the minimum required occurrence of the element is 0 (as specified by the XML Schema or WSDL). In the case the minimum occurrence is greater than 0 but it is nillable, the element will still be created with the nil attribute set to true.
 
@@ -56,7 +56,7 @@ The XML element that will be filled.
 
 ### Occurrence
 
-Displays how often the element may occur. This can be "0..1" or "1", depending on if it is required or not. If the value is empty and the minimum required occurrence of the element is 0 (as specified by the XML Schema or WSDL) the creation of the element will be skipped. In the case you want to never map a value to an optional element, simply disable it in the "Select elements..." dialog in the [Domain-to-XML mapping](/refguide5/domain-to-xml-mappings) screen.
+Displays how often the element may occur. This can be "0..1" or "1", depending on if it is required or not. If the value is empty and the minimum required occurrence of the element is 0 (as specified by the XML Schema or WSDL) the creation of the element will be skipped. In the case you want to never map a value to an optional element, simply disable it in the "Select elements..." dialog in the [Domain-to-XML mapping](domain-to-xml-mappings) screen.
 
 ### Convert using (optional)
 

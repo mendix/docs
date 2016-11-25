@@ -23,4 +23,4 @@ In the rightmost corner of the 'Most recent app services overview', you can sele
 
 #### Tile
 
-Selecting a tile (for instance: 'SalesForce.com' in the above illustration) and then selecting the OK button will import the app service for you in the modeler. See [Consumed App Services](/refguide5/consumed-app-services) for information about the use of imported app services.
+Selecting a tile (for instance: 'SalesForce.com' in the above illustration) and then selecting the OK button will import the app service for you in the modeler. See [Consumed App Services](consumed-app-services) for information about the use of imported app services.

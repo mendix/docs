@@ -39,7 +39,7 @@ _Default value:_ False
 
 ### Break condition
 
-If the property 'Break here' is set to True, the break condition can be used to define the criterion for when the microflow is paused. The condition can be entered using a [microflow expression](/refguide5/microflow-expressions). The expression should result in True if the microflow should be paused and in False if it should continue.
+If the property 'Break here' is set to True, the break condition can be used to define the criterion for when the microflow is paused. The condition can be entered using a [microflow expression](microflow-expressions). The expression should result in True if the microflow should be paused and in False if it should continue.
 
 <div class="alert alert-info">{% markdown %}
 

@@ -9,6 +9,6 @@ The 'Show home page' action navigates to the home page for the current user. It 
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide5/microflow-element-common-properties) for properties that all activities share (e.g. caption).
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption).
 
 {% endmarkdown %}</div>

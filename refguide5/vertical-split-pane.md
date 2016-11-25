@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-The vertical split pane is deprecated in version 5.18.0 in favor of the more powerful [Scroll Container](/refguide5/scroll-container).
+The vertical split pane is deprecated in version 5.18.0 in favor of the more powerful [Scroll Container](scroll-container).
 
 A vertical split pane creates a region that is split in two by a vertical divider. In the client the divider can be dragged up and down by the end user.
 

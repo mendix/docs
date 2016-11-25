@@ -41,4 +41,4 @@ For more information on how to create a collaboration project in the Mendix Clou
 
 ## 3\. Related content
 
-*   [How to connect a different project to a node](/mxsupport/how-to-connect-a-different-project-to-a-node)
+*   [How to connect a different project to a node](how-to-connect-a-different-project-to-a-node)

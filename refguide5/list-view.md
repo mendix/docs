@@ -53,7 +53,7 @@ If this property is set to 'Yes', items in the list view can be edited. The chan
 
 ### Click action
 
-The click action defines what action is performed when a list view entry is 'clicked'. This can either be opening a page or calling a microflow. For opening a page see [Opening Pages](/refguide5/opening-pages) and for the microflow settings see [Starting Microflows](/refguide5/starting-microflows). The list view has no Confirmation or Advanced microflow settings.
+The click action defines what action is performed when a list view entry is 'clicked'. This can either be opening a page or calling a microflow. For opening a page see [Opening Pages](opening-pages) and for the microflow settings see [Starting Microflows](starting-microflows). The list view has no Confirmation or Advanced microflow settings.
 
 ### Page size
 
@@ -61,7 +61,7 @@ With this property you can change the number of containers that will be shown in
 
 ## Data source properties
 
-The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](/refguide5/data-sources).
+The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](data-sources).
 
 ### Type
 
@@ -79,7 +79,7 @@ Let us say the domain model contains entities Order and OrderLine with a referen
 
 ### XPath constraint (for data source type "Database")
 
-See [Database Source](/refguide5/database-source).
+See [Database Source](database-source).
 
 ### Microflow (for data source type "Microflow")
 
@@ -87,7 +87,7 @@ The microflow property specifies a microflow is executed when the list view is o
 
 ### Microflow settings (for data source type "Microflow")
 
-The microflow settings specify which parameters to pass to the microflow. See [Starting Microflows](/refguide5/starting-microflows).
+The microflow settings specify which parameters to pass to the microflow. See [Starting Microflows](starting-microflows).
 
 ## Templates properties
 

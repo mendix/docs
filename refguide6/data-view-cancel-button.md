@@ -7,7 +7,7 @@ parent: "data-view-control-bar"
 
 <div class="alert alert-info">{% markdown %}
 
-This special cancel button, that was only available in the data view control bar, has been removed in version 6.7.0. Use a normal [Cancel button](/refguide6/cancel-button) instead.
+This special cancel button, that was only available in the data view control bar, has been removed in version 6.7.0. Use a normal [Cancel button](cancel-button) instead.
 
 {% endmarkdown %}</div>
 

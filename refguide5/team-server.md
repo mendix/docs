@@ -13,6 +13,6 @@ The Team Server also connects the capture and develop phase of the agile applica
 
 ## Further reading
 
-*   [Team Server FAQ](/refguide5/team-server-faq) - read the answer to the most asked questions about the Team Server.
-*   [Version Control](/refguide5/version-control) - for a reference guide describing all Version Control options in the Modeler.
-*   [sprintr](/refguide5/app-platform) - to learn more about sprintr.
+*   [Team Server FAQ](team-server-faq) - read the answer to the most asked questions about the Team Server.
+*   [Version Control](version-control) - for a reference guide describing all Version Control options in the Modeler.
+*   [sprintr](app-platform) - to learn more about sprintr.

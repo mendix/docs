@@ -17,7 +17,7 @@ This How-to will cover the following subjects:
 *   Set up SQL Server notifications
 *   Define an SQL Server backup routine
 *   Set up SQL Server database maintenance
-*   [Continue to How-To: Mendix SQL Maintenance Plans](/howto6/mendix-sql-maintenance-plans)
-*   [Continue to How-To: Restoring a SQL Server database](/howto6/restoring-a-sql-server-database)
-*   [Continue to How-To: Set up SQL Server user](/howto6/setting-up-a-sql-server-user)
-*   [Continue to How-To: Troubleshooting SQL Server](/howto6/troubleshooting-sql-server)
+*   [Continue to How-To: Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
+*   [Continue to How-To: Restoring a SQL Server database](restoring-a-sql-server-database)
+*   [Continue to How-To: Set up SQL Server user](setting-up-a-sql-server-user)
+*   [Continue to How-To: Troubleshooting SQL Server](troubleshooting-sql-server)

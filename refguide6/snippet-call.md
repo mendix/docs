@@ -5,7 +5,7 @@ parent: "common-widgets"
 ---
 
 
-The snippet call widget allows you to use a [snippet](/refguide6/snippet) on another snippet, a [page](/refguide6/page) or a [layout](/refguide6/layout).
+The snippet call widget allows you to use a [snippet](snippet) on another snippet, a [page](page) or a [layout](layout).
 
 ## Common Properties
 
@@ -15,4 +15,4 @@ The snippet call widget allows you to use a [snippet](/refguide6/snippet) on ano
 
 ### Snippet
 
-The actual [Snippet](/refguide6/snippet) that will be shown here.
+The actual [Snippet](snippet) that will be shown here.

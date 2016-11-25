@@ -9,4 +9,4 @@ The sort bar contains sort items. Each sort item specifies what attribute to sor
 
 If you specify no sort items, the objects will appear in the order in which they were created. Note: in Mendix 6.3 and before, you were required to specify at least one sort item.
 
-**Note:** For default ordering behavior of NULL values refer to [this documentation](/refguide6/null-ordering-behavior).
+**Note:** For default ordering behavior of NULL values refer to [this documentation](null-ordering-behavior).

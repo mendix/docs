@@ -21,7 +21,7 @@ This property specifies the microflow that is executed when the button is clicke
 
 ### On click settings
 
-With the on click settings you can customize which parameters to pass to the microflow, whether to show a progress bar and more. See [Starting Microflows](/refguide6/starting-microflows).
+With the on click settings you can customize which parameters to pass to the microflow, whether to show a progress bar and more. See [Starting Microflows](starting-microflows).
 
 ## General properties
 

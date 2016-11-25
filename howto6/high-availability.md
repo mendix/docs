@@ -54,12 +54,12 @@ If you are using Custom Settings to influence the Runtime behavior it is critica
 
 ## 3\. Related articles
 
-*   [Security checklist for your on-premises installation](/howto6/security-checklist-for-your-on-premises-installation)
-*   [Updating a Mendix Application](/howto6/updating-a-mendix-application)
-*   [Mendix on Windows - Microsoft SQL Server](/howto6/mendix-on-windows-microsoft-sql-server)
-*   [Setting up a new SQL Server database](/howto6/setting-up-a-new-sql-server-database)
-*   [Mendix SQL Maintenance Plans](/howto6/mendix-sql-maintenance-plans)
-*   [Restoring a SQL Server database](/howto6/restoring-a-sql-server-database)
-*   [Setting up a SQL Server user](/howto6/setting-up-a-sql-server-user)
-*   [Setting up the database user](/howto6/setting-up-the-database-user)
-*   [Troubleshooting SQL Server](/howto6/troubleshooting-sql-server)
+*   [Security checklist for your on-premises installation](security-checklist-for-your-on-premises-installation)
+*   [Updating a Mendix Application](updating-a-mendix-application)
+*   [Mendix on Windows - Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
+*   [Setting up a new SQL Server database](setting-up-a-new-sql-server-database)
+*   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
+*   [Restoring a SQL Server database](restoring-a-sql-server-database)
+*   [Setting up a SQL Server user](setting-up-a-sql-server-user)
+*   [Setting up the database user](setting-up-the-database-user)
+*   [Troubleshooting SQL Server](troubleshooting-sql-server)

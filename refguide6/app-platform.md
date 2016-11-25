@@ -15,5 +15,5 @@ The App Platform can be used separately from the other Mendix products and its f
 
 ## Further reading
 
-*   [Team Server](/refguide6/team-server) - read more about the Team Server.
+*   [Team Server](team-server) - read more about the Team Server.
 *   [Get Started with the Mendix Free edition](https://www.mendix.com/try-now/) - create a free account to get started!

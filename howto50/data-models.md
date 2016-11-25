@@ -23,11 +23,11 @@ Now learn how to create a basic data layer, create pages and setup your data val
 
 | Basic
 | ------------------------------------------------------------------------------------------------------------------------------------
-| [Creating a basic data layer](/howto50/creating-a-basic-data-layer)
-| [Setting up data validation](/howto50/setting-up-data-validation)
+| [Creating a basic data layer](creating-a-basic-data-layer)
+| [Setting up data validation](setting-up-data-validation)
 
 | Advanced
 | ------------------------------------------------------------------------------------------------------------------------------------
-| [Denormalize Data to Improve Performance](/howto50/denormalize-data-to-improve-performance)
-| [Working with images and files](/howto50/working-with-images-and-files)
-| [Working With Object Events](/howto50/working-with-object-events)
+| [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+| [Working with images and files](working-with-images-and-files)
+| [Working With Object Events](working-with-object-events)

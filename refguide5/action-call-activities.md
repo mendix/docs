@@ -7,8 +7,8 @@ space: "Reference Guide 5"
 
 ## Microflow Call
 
-See [Microflow Call](/refguide5/microflow-call).
+See [Microflow Call](microflow-call).
 
 ## Java Action Call
 
-See [Java Action Call](/refguide5/java-action-call).
+See [Java Action Call](java-action-call).

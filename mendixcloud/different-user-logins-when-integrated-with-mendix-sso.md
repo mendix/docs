@@ -273,10 +273,10 @@ You can view the implementation by deploying your app to the Mendix Cloud and go
 
 ## 6\. Related content
 
-*   [Different user logins when integrated with Mendix SSO](/mendixcloud/different-user-logins-when-integrated-with-mendix-sso)
-*   [Trends](/mendixcloud/trends)
-*   [Deploying to the cloud](/mendixcloud/deploying-to-the-cloud)
-*   [How to deploy a Mendix app on Azure](/mendixcloud/how-to-deploy-a-mendix-app-on-azure)
-*   [Sending Email](/mendixcloud/sending-email)
-*   [Integrate your app with Mendix SSO](/mendixcloud/integrate-your-app-with-mendix-sso)
-*   [Deploying to a Free App](/mendixcloud/deploying-to-a-free-app)
+*   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
+*   [Trends](trends)
+*   [Deploying to the cloud](deploying-to-the-cloud)
+*   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
+*   [Sending Email](sending-email)
+*   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)
+*   [Deploying to a Free App](deploying-to-a-free-app)

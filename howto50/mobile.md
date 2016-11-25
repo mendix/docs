@@ -9,8 +9,8 @@ The rapid evolution of standards like HTML and the wide adoption of frameworks t
 
 | Basic
 | -----------------------------------------------------
-| [Deploy your first Hybrid Mobile App](/howto50/deploy-your-first-hybrid-mobile-app)
+| [Deploy your first Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
 
 | Advanced
 | -----------------------------------------------------
-| [Publishing a Mendix Hybrid Mobile App in Mobile App Stores](/howto50/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+| [Publishing a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)

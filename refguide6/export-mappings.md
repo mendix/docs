@@ -7,7 +7,7 @@ parent: "mapping-documents"
 
 
 
-Please refer to [Mapping Documents](/refguide6/mapping-documents) for an introduction.
+Please refer to [Mapping Documents](mapping-documents) for an introduction.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -17,7 +17,7 @@ From Mendix 6.8.0, JSON Structure is fully supported in export mappings.
 
 ## Obtaining objects in Export Mappings
 
-Figure 1 shows an example of an Export Mapping document in which two elements from a schema are selected using the [Select Elements](/refguide6/select--elements) dialog. The entity Cheesecake (on the left) was dragged into the mapping to map to the Cheesecake element (on the right) and the entity Topping was mapped to the Topping element.
+Figure 1 shows an example of an Export Mapping document in which two elements from a schema are selected using the [Select Elements](select--elements) dialog. The entity Cheesecake (on the left) was dragged into the mapping to map to the Cheesecake element (on the right) and the entity Topping was mapped to the Topping element.
 
 ![](attachments/16713726/16843939.png)
 **Figure 1**

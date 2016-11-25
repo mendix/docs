@@ -152,10 +152,10 @@ With Mendix it’s always possible to export your data, from your application bu
 
 ## 8\. Related content
 
-*   [Managing your Application Requirements with Mendix](/howto50/managing-your-application-requirements-with-mendix)
-*   [Starting your own repository](/howto50/starting-your-own-repository)
-*   [Contributing to a GitHub repository](/howto50/contributing-to-a-github-repository)
-*   [Using Team Server - Version Control](/howto50/using-team-server-version-control)
-*   [Gathering user feedback](/howto50/gathering-user-feedback)
+*   [Managing your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
+*   [Starting your own repository](starting-your-own-repository)
+*   [Contributing to a GitHub repository](contributing-to-a-github-repository)
+*   [Using Team Server - Version Control](using-team-server-version-control)
+*   [Gathering user feedback](gathering-user-feedback)
 *   [App Platform](/refguide5/app-platform)
 *   [Team Server](/refguide5/team-server)

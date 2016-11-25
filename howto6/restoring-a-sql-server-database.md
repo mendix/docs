@@ -11,7 +11,7 @@ In certain situations, i.e. unwanted database updates, data corruption, etc. it 
 
 The steps detailed in this document are based on the following assumptions:
 
-*   The Mendix database is maintained using Maintanance Plans as described in, or similar to: [Mendix SQL Maintenance Plans](/howto6/mendix-sql-maintenance-plans)
+*   The Mendix database is maintained using Maintanance Plans as described in, or similar to: [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
 *   A valid database backup file exists for the Mendix database
 *   Valid transaction log files exist for the Mendix database
 *   The user performing the restore has sufficient rights on the DBMS (see paragraph: Permissions below)
@@ -59,13 +59,13 @@ RESTORE permissions are given to roles in which membership information is always
 
 ## Related content
 
-*   [Restoring a SQL Server database](/howto6/restoring-a-sql-server-database)
-*   [Troubleshooting SQL Server](/howto6/troubleshooting-sql-server)
-*   [Mendix SQL Maintenance Plans](/howto6/mendix-sql-maintenance-plans)
-*   [Setting up a new SQL Server database](/howto6/setting-up-a-new-sql-server-database)
-*   [Setting up a SQL Server user](/howto6/setting-up-a-sql-server-user)
-*   [Security checklist for your on-premises installation](/howto6/security-checklist-for-your-on-premises-installation)
-*   [Mendix on Windows - Microsoft SQL Server](/howto6/mendix-on-windows-microsoft-sql-server)
-*   [Deploying Mendix on Microsoft Windows](/howto6/deploy-mendix-on-microsoft-windows)
-*   [Installing Mendix on Debian GNU Linux](/howto6/installing-mendix-on-debian-gnu-linux)
-*   [Installing Mendix on RedHat and CentOS](/howto6/installing-mendix-on-redhat-and-centos)
+*   [Restoring a SQL Server database](restoring-a-sql-server-database)
+*   [Troubleshooting SQL Server](troubleshooting-sql-server)
+*   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
+*   [Setting up a new SQL Server database](setting-up-a-new-sql-server-database)
+*   [Setting up a SQL Server user](setting-up-a-sql-server-user)
+*   [Security checklist for your on-premises installation](security-checklist-for-your-on-premises-installation)
+*   [Mendix on Windows - Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
+*   [Deploying Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
+*   [Installing Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)
+*   [Installing Mendix on RedHat and CentOS](installing-mendix-on-redhat-and-centos)

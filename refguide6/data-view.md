@@ -34,13 +34,13 @@ The footer of the data view is the section at the bottom of the data view which 
 
 <div class="alert alert-info">{% markdown %}
 
-The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. See [Data view footer](/refguide6/data-view).
+The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. See [Data view footer](data-view).
 
 {% endmarkdown %}</div>
 
 The control bar of the data view is the bar with buttons at the bottom of the component. By default, it contains a Save and a Cancel button but the bar can be customized. A read-only data view would typically provide only a Close button. You can add buttons with custom behavior through the use of a microflow button.
 
-See [Data view control bar](/refguide6/data-view-control-bar) for a description of the buttons and their properties.
+See [Data view control bar](data-view-control-bar) for a description of the buttons and their properties.
 
 ## Common properties
 
@@ -64,7 +64,7 @@ _Default value:_ Horizontal
 
 ### Label width (weight)
 
-If the form orientation is set to horizontal this property can be used to specify the width of labels of input widgets inside the data view. The width is specified using column weights from the [Bootstrap grid system](http://getbootstrap.com#grid) (see [Layout Grid](/refguide6/layout-grid)).
+If the form orientation is set to horizontal this property can be used to specify the width of labels of input widgets inside the data view. The width is specified using column weights from the [Bootstrap grid system](http://getbootstrap.com#grid) (see [Layout Grid](layout-grid)).
 
 _Default value:_ 3
 
@@ -72,7 +72,7 @@ _Default value:_ 3
 
 <div class="alert alert-info">{% markdown %}
 
-This property is removed in version 6.7.0\. Use the 'Close page' property of the [Save button](/refguide6/save-button) or [Cancel button](/refguide6/cancel-button) instead.
+This property is removed in version 6.7.0\. Use the 'Close page' property of the [Save button](save-button) or [Cancel button](cancel-button) instead.
 
 {% endmarkdown %}</div>
 
@@ -98,7 +98,7 @@ _Default value:_ True
 
 <div class="alert alert-info">{% markdown %}
 
-The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. Use the [Show footer property](/refguide6/data-view) instead.
+The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. Use the [Show footer property](data-view) instead.
 
 {% endmarkdown %}</div>
 
@@ -108,7 +108,7 @@ _Default value:_ True
 
 ### Empty entity message
 
-If this message is specified, a data view that receives no source data will show this message instead of its content. Otherwise, the data view will show its static content and disabled input widgets. This property is a translable text. See [Translatable Texts](/refguide6/translatable-texts).
+If this message is specified, a data view that receives no source data will show this message instead of its content. Otherwise, the data view will show its static content and disabled input widgets. This property is a translable text. See [Translatable Texts](translatable-texts).
 
 There are number of ways a data view can end up without source data. For instance, a data view with a 'Listen to widget' data source will remain empty until an object is selected in the target grid. In this scenario, 'Empty entity message' can be used to guide the user to select an item from the grid.
 
@@ -144,7 +144,7 @@ This property determines how input widgets are rendered if read-only.
 
 ## Data source properties
 
-The data source determines which objects will be shown in the data view. For general information about data sources, see the [data sources](/refguide6/data-sources) documentation page.
+The data source determines which objects will be shown in the data view. For general information about data sources, see the [data sources](data-sources) documentation page.
 
 ### Type
 
@@ -154,9 +154,9 @@ The data view supports the following types of data sources: entity (path), micro
 
 See the corresponding data source for specific properties:
 
-*   [Entity (path) source](/refguide6/entity-path-source)
-*   [Microflow source](/refguide6/microflow-source)
-*   [Listen to list widget source](/refguide6/listen-to-grid-source)
+*   [Entity (path) source](entity-path-source)
+*   [Microflow source](microflow-source)
+*   [Listen to list widget source](listen-to-grid-source)
 
 ### Use schema
 
@@ -168,5 +168,5 @@ This defines whether only the required attributes and associations for the objec
 
 ## Related Articles
 
-*   [Entities](/refguide6/entities)
-*   [Associations](/refguide6/associations)
+*   [Entities](entities)
+*   [Associations](associations)

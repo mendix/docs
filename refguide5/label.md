@@ -16,11 +16,11 @@ A label placed in a cell with render mode header.
 
 For input widgets it is recommended to use the more powerful label property to describe their purpose. For more information
 
- [label property](/refguide5/text-box#label-properties) to describe their purpose.
+ [label property](text-box#label-properties) to describe their purpose.
 
 {% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
-The [text widget](/refguide5/text) is a more correct way to show text to the user. It also provides more features, e.g. text templates, and generates semantically correct HTML.
+The [text widget](text) is a more correct way to show text to the user. It also provides more features, e.g. text templates, and generates semantically correct HTML.
 
 {% endmarkdown %}</div>
 
@@ -34,16 +34,16 @@ Changed in Mendix 5.19: button captions are based on templates with parameters t
 
 {% endmarkdown %}</div>
 
-The caption defines the text that will be shown. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera. Note that to use template parameters the widget must be placed in a context of an entity, e.g. inside a [data view](/refguide5/data-view) or [list view](/refguide5/list-view). The parameters will be replaced by the values of the attributes.
+The caption defines the text that will be shown. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera. Note that to use template parameters the widget must be placed in a context of an entity, e.g. inside a [data view](data-view) or [list view](list-view). The parameters will be replaced by the values of the attributes.
 
 _Before 5.19:_
 
-This property indicates what text will be shown on this widget or part of the widget. This is a translatable text. See [Translatable Texts](/refguide5/translatable-texts).
+This property indicates what text will be shown on this widget or part of the widget. This is a translatable text. See [Translatable Texts](translatable-texts).
 
 ### Render mode
 
 <div class="alert alert-info">{% markdown %}
-Added in Mendix 5.4, removed in Mendix 5.19\. All labels rendered as a heading were converted to a [text widget](/refguide5/text).
+Added in Mendix 5.4, removed in Mendix 5.19\. All labels rendered as a heading were converted to a [text widget](text).
 {% endmarkdown %}</div>
 
 The render mode determines what the label will look like in the web browser.

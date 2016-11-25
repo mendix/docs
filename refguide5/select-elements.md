@@ -9,7 +9,7 @@ This describes how to select elements for a XML-to-Domain mapping.
 
 ## XSD Source
 
-Here you can select whether the XML schema comes from an [imported web service](/refguide5/consumed-web-services) or an [XML schema](/refguide5/xml-schemas).
+Here you can select whether the XML schema comes from an [imported web service](consumed-web-services) or an [XML schema](xml-schemas).
 
 When using an XML schema as source, you must select which XML element to start at. This should be the root element of the XML file(s) that you wish to import.
 

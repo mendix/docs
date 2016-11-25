@@ -234,14 +234,14 @@ The idea is that you will have a Java Action that you can call in a microflow, w
 
 ## 4\. Related content
 
-*   [Finding the Root Cause of Runtime Errors](/howto50/finding-the-root-cause-of-runtime-errors)
-*   [Clearing Warning Messages in Mendix](/howto50/clearing-warning-messages-in-mendix)
-*   [Testing web services using SoapUI](/howto50/testing-web-services-using-soapui)
-*   [Debugging Microflows](/howto50/debugging-microflows)
-*   [Common Mendix SSO Errors](/howto50/common-mendix-sso-errors)
-*   [Monitoring Mendix using JMX](/howto50/monitoring-mendix-using-jmx)
-*   [Debugging Java Actions](/howto50/debugging-java-actions)
-*   [Debugging Java actions remotely](/howto50/debugging-java-actions-remotely)
+*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+*   [Clearing Warning Messages in Mendix](clearing-warning-messages-in-mendix)
+*   [Testing web services using SoapUI](testing-web-services-using-soapui)
+*   [Debugging Microflows](debugging-microflows)
+*   [Common Mendix SSO Errors](common-mendix-sso-errors)
+*   [Monitoring Mendix using JMX](monitoring-mendix-using-jmx)
+*   [Debugging Java Actions](debugging-java-actions)
+*   [Debugging Java actions remotely](debugging-java-actions-remotely)
 *   [Getting started with Nexus maven repository manager](http://www.andrejkoelewijn.com/blog/2010/03/09/getting-started-with-nexus-maven-repository-manager/)
 *   [Using eclipse to debug your tomcat web application](http://www.andrejkoelewijn.com/blog/2003/10/23/using-eclipse-to-debug-your-tomcat-web-application/)
 *   [Profiling Mendix using JProfiler](http://www.andrejkoelewijn.com/blog/2014/01/15/profiling-mendix-using-jprofiler/)

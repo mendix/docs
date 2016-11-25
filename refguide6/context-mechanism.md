@@ -9,7 +9,7 @@ The context mechanism of the client keeps track of where the user is and has bee
 
 <div class="alert alert-warning">{% markdown %}
 
-Since version 2.5 we provide alternatives for the context mechanism that are more explicit. We advise you not to rely on the implicit context mechanism anymore. [See below.](/refguide6/context-mechanism)
+Since version 2.5 we provide alternatives for the context mechanism that are more explicit. We advise you not to rely on the implicit context mechanism anymore. [See below.](context-mechanism)
 
 {% endmarkdown %}</div>
 

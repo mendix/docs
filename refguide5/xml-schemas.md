@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-An XML schema is defined in an XML Schema Definition (XSD) file and can be imported in your model. It describes what a certain XML document should look like. The schema can then be used in [Domain-to-XML Mappings](/refguide5/domain-to-xml-mappings) or [XML-to-Domain Mappings](/refguide5/xml-to-domain-mappings).
+An XML schema is defined in an XML Schema Definition (XSD) file and can be imported in your model. It describes what a certain XML document should look like. The schema can then be used in [Domain-to-XML Mappings](domain-to-xml-mappings) or [XML-to-Domain Mappings](xml-to-domain-mappings).
 
 ## General
 

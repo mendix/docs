@@ -5,13 +5,13 @@ space: "Reference Guide 5"
 ---
 
 
-The persistent-create-object action is the result of converting a create-object action from version 3\. This action not only creates the object in memory but also inserts a row in the database. This action is deprecated and there will be a warning for it in the error list. Right-clicking the warning allows you to find all occurrences and to convert them to new [create actions](/refguide5/create-object).
+The persistent-create-object action is the result of converting a create-object action from version 3\. This action not only creates the object in memory but also inserts a row in the database. This action is deprecated and there will be a warning for it in the error list. Right-clicking the warning allows you to find all occurrences and to convert them to new [create actions](create-object).
 
 In obscure cases you can detect the difference between the old and the new create action. For example, if you look at the database after the create action but before a corresponding commit action, the object will not be in the database if you used the new create action. Because we cannot guarantee 100% backward compatibility we do not convert the persistent create actions automatically.
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide5/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 

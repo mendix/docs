@@ -12,11 +12,11 @@ To see the results of this how-to it is necessary that you setup a test project 
 
 Before you continue, make sure that you know how to create:
 
-*   **Domain models**, if you need more info, take a look at this [how-to](/howto50/creating-a-basic-data-layer).
+*   **Domain models**, if you need more info, take a look at this [how-to](creating-a-basic-data-layer).
 
-*   **Overview and detail pages**, if you need more info, take a look at this [how-to](/howto50/creating-your-first-two-overview-and-detail-pages).
+*   **Overview and detail pages**, if you need more info, take a look at this [how-to](creating-your-first-two-overview-and-detail-pages).
 
-*   **Menu items**, if you need more info, take a look at this [how-to](/howto50/setting-up-the-navigation-structure).
+*   **Menu items**, if you need more info, take a look at this [how-to](setting-up-the-navigation-structure).
 
 1.  Create the following domain model:
     ![](attachments/8785272/8946672.png)
@@ -205,8 +205,8 @@ In the previous section you have set some access rules to your domain model. In
 
 ## 5\. Related content
 
-*   [Security](/howto50/security)
-*   [Generating a personal SSH2 key pair](/howto50/generating-a-personal-ssh2-key-pair)
-*   [Creating a secure app](/howto50/creating-a-secure-app)
-*   [Required Network Access for connecting to the Mendix Platform](/mxsupport/required-network-access-for-connecting-to-the-mendix-platform)
-*   [Anonymous User Security](/howto50/anonymous-user-security)
+*   [Security](security)
+*   [Generating a personal SSH2 key pair](generating-a-personal-ssh2-key-pair)
+*   [Creating a secure app](creating-a-secure-app)
+*   [Required Network Access for connecting to the Mendix Platform](/support/required-network-access-for-connecting-to-the-mendix-platform)
+*   [Anonymous User Security](anonymous-user-security)

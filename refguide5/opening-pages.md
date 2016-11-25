@@ -5,13 +5,13 @@ space: "Reference Guide 5"
 ---
 
 
-In many places within pages you can open other pages. For example, the [edit button](/refguide5/edit-button) of the [data grid](/refguide5/data-grid) opens a page to edit the selected object.
+In many places within pages you can open other pages. For example, the [edit button](edit-button) of the [data grid](data-grid) opens a page to edit the selected object.
 
-Pages can be opened either in the content pane of the browser or in a new pop-up. Where the page is opened depends on the [layout type](/refguide5/layout#layout-type) of its [layout](/refguide5/layout): pages based on a layout of type 'Modal pop-up' or 'Pop-up' will be open as a pop-up, other pages will be opened in content. If the project does not have Page Templates enabled, or if the target page layout is of type 'Legacy', then the page location must be configured manually (see [Location](/refguide5/opening-pages#location) section below).
+Pages can be opened either in the content pane of the browser or in a new pop-up. Where the page is opened depends on the [layout type](layout#layout-type) of its [layout](layout): pages based on a layout of type 'Modal pop-up' or 'Pop-up' will be open as a pop-up, other pages will be opened in content. If the project does not have Page Templates enabled, or if the target page layout is of type 'Legacy', then the page location must be configured manually (see [Location](opening-pages#location) section below).
 
-If the target page contains a [data view](/refguide5/data-view) with data source "caller of the page", then an object for this data view must be passed to the page while opening. What object to pass is configured automatically based on the arguments available for the widget opening the page (see [available arguments for microflows](/refguide5/starting-microflows) for details).
+If the target page contains a [data view](data-view) with data source "caller of the page", then an object for this data view must be passed to the page while opening. What object to pass is configured automatically based on the arguments available for the widget opening the page (see [available arguments for microflows](starting-microflows) for details).
 
-Generally speaking, opening a page in content will trigger a full reload of the entire browser contents. However, if the new page uses the same [layout](/refguide5/layout) as the old one, only the page contents will refresh. The layout will retain its state. This allows for navigation without any unnecessary overhead or loss of data. 
+Generally speaking, opening a page in content will trigger a full reload of the entire browser contents. However, if the new page uses the same [layout](layout) as the old one, only the page contents will refresh. The layout will retain its state. This allows for navigation without any unnecessary overhead or loss of data. 
 
 ## Properties
 
@@ -19,7 +19,7 @@ Mendix allows for a number of methods for opening a page. Each of these methods 
 
 ### Page
 
-This is the [page](/refguide5/page) that is shown to the end user. There can be a number restrictions on the page, depending on the place which the page is opened from. For example, the page that is opened by the New button must contain a data view that is connected to the same entity as the grid.
+This is the [page](page) that is shown to the end user. There can be a number restrictions on the page, depending on the place which the page is opened from. For example, the page that is opened by the New button must contain a data view that is connected to the same entity as the grid.
 
 ### Page title
 
@@ -33,7 +33,7 @@ This feature allows you to re-use the same page for the New and Edit buttons of 
 
 <div class="alert alert-info">{% markdown %}
 
-If the [layout](/refguide5/layout) of the target page has a [layout type](/refguide5/layout#layout-type) configured, the Location property will be removed. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
+If the [layout](layout) of the target page has a [layout type](layout#layout-type) configured, the Location property will be removed. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
 
 {% endmarkdown %}</div>
 

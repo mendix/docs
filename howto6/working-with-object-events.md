@@ -65,13 +65,13 @@ Pressing a delete button or triggering a Delete activity will initiate the Delet
 
 ## 5\. Related content
 
-*   [Working with images and files](/howto6/working-with-images-and-files)
-*   [Creating a basic data layer](/howto6/create-a-basic-data-layer)
-*   [Working With Object Events](/howto6/working-with-object-events)
-*   [Denormalize Data to Improve Performance](/howto6/denormalize-data-to-improve-performance)
-*   [Setting up data validation](/howto6/setting-up-data-validation)
-*   [Finding the Root Cause of Runtime Errors](/howto6/finding-the-root-cause-of-runtime-errors)
-*   [Managing your Application Requirements with Mendix](/howto6/managing-your-application-requirements-with-mendix)
-*   [Scout and Windows 10 Workaround](/howto6/scout-and-windows-10-workaround)
-*   [Generating a personal SSH2 key pair](/howto6/generating-a-personal-ssh2-key-pair)
-*   [Creating a chainable Custom Widget](/howto6/create-a-chainable-custom-widget)
+*   [Working with images and files](working-with-images-and-files)
+*   [Creating a basic data layer](create-a-basic-data-layer)
+*   [Working With Object Events](working-with-object-events)
+*   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+*   [Setting up data validation](setting-up-data-validation)
+*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+*   [Managing your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
+*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
+*   [Generating a personal SSH2 key pair](generating-a-personal-ssh2-key-pair)
+*   [Creating a chainable Custom Widget](create-a-chainable-custom-widget)

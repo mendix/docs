@@ -97,4 +97,4 @@ There is no difference in the behavior of a Rollback and a Delete when it’s ex
 
 ## Related articles
 
-*   [Java Memory Usage With Mendix](/refguide6/java-memory-usage-with-mendix)
+*   [Java Memory Usage With Mendix](java-memory-usage-with-mendix)

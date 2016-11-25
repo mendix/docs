@@ -48,13 +48,13 @@ Note that the fourth row in a grid has an index of 3.
 
 ## 4\. Related content
 
-*   [Creating automated tests with TestNG](/howto6/create-automated-tests-with-testng)
-*   [Testing Mendix applications using Selenium IDE](/howto6/testing-mendix-applications-using-selenium-ide)
-*   [Consuming a complex web service](/howto6/consume-a-complex-web-service)
-*   [Consuming a simple Web Service](/howto6/consume-a-simple-web-service)
-*   [Selenium Support](/howto6/selenium-support)
-*   [Synchronizing user accounts using the LDAP module](/howto6/synchronizing-user-accounts-using-the-ldap-module)
-*   [Importing Excel Documents](/howto6/importing-excel-documents)
-*   [Exporting XML documents](/howto6/export-xml-documents)
-*   [Exposing a web service](/howto6/expose-a-web-service)
-*   [Importing XML documents](/howto6/importing-xml-documents)
+*   [Creating automated tests with TestNG](create-automated-tests-with-testng)
+*   [Testing Mendix applications using Selenium IDE](testing-mendix-applications-using-selenium-ide)
+*   [Consuming a complex web service](consume-a-complex-web-service)
+*   [Consuming a simple Web Service](consume-a-simple-web-service)
+*   [Selenium Support](selenium-support)
+*   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
+*   [Importing Excel Documents](importing-excel-documents)
+*   [Exporting XML documents](export-xml-documents)
+*   [Exposing a web service](expose-a-web-service)
+*   [Importing XML documents](importing-xml-documents)

@@ -7,9 +7,9 @@ parent: "common-widgets"
 
 <div class="alert alert-warning">{% markdown %}
 
-For input widgets it is recommended to use the more powerful [label property](/refguide6/text-box) to describe their purpose.
+For input widgets it is recommended to use the more powerful [label property](text-box) to describe their purpose.
 
-For all other text use the [text widget](/refguide6/text) as it provides more features, e.g. text templates, and generates semantically correct HTML.
+For all other text use the [text widget](text) as it provides more features, e.g. text templates, and generates semantically correct HTML.
 
 {% endmarkdown %}</div>
 

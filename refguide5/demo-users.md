@@ -5,11 +5,11 @@ space: "Reference Guide 5"
 ---
 
 
-In this section of the [Project Security](/refguide5/project-security) settings, you can define demo users that may be used during the development phase of your application for testing purposes, or to show the application to other people.
+In this section of the [Project Security](project-security) settings, you can define demo users that may be used during the development phase of your application for testing purposes, or to show the application to other people.
 
 Each demo user can be assigned an entity and one or more user roles that apply when you sign in to your application with that user. When the application is started for the first time, the specified demo users are created automatically.
 
-After signing in to your application with the [administrator user](/refguide5/administrator), a small tab called the 'user switcher' is presented at the right side of your application. Expanding this tab shows a list with all the demo users that are defined in the project security settings. Selecting a user from this list will sign in to your application using the credentials of this user, thus allowing you to test or demo your application with the user's role(s). This allows for rapid testing of your application with different user roles.
+After signing in to your application with the [administrator user](administrator), a small tab called the 'user switcher' is presented at the right side of your application. Expanding this tab shows a list with all the demo users that are defined in the project security settings. Selecting a user from this list will sign in to your application using the credentials of this user, thus allowing you to test or demo your application with the user's role(s). This allows for rapid testing of your application with different user roles.
 
 ![](attachments/8781903/8945718.png)
 
@@ -31,7 +31,7 @@ Here you can configure whether the specified demo users are created and accessib
 
 ### Username
 
-The name of the demo user. This name must be unique, and cannot be the same as the name of the [administrator user](/refguide5/administrator).
+The name of the demo user. This name must be unique, and cannot be the same as the name of the [administrator user](administrator).
 
 ### Password
 

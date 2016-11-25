@@ -61,7 +61,7 @@ If your application is accessible without signing in, those anonymous users will
 
 Per attribute of type DateTime you can specify whether you want the date and time to be localized. This is not a new feature but worth mentioning on this page. Both localized and non-localized attributes are stored in UTC but only localized attributes are converted to the time zone of the user when displaying their value. Use non-localized attributes if you are not interested in the time component (e.g. birthdays) or if you want a date to look exactly the same all over the world.
 
-See the documentation of the Localize property of [Attributes](/refguide6/attributes) for more information.
+See the documentation of the Localize property of [Attributes](attributes) for more information.
 
 ## Tokens
 

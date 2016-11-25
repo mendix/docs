@@ -7,8 +7,8 @@ parent: "activities"
 
 ## Microflow Call
 
-See [Microflow Call](/refguide6/microflow-call).
+See [Microflow Call](microflow-call).
 
 ## Java Action Call
 
-See [Java Action Call](/refguide6/java-action-call).
+See [Java Action Call](java-action-call).

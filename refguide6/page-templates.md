@@ -17,7 +17,7 @@ When creating a new page there are multiple choices to be made.
 
 ### Changes in page generation
 
-Generated pages will contain a [layout grid](/refguide6/layout-grid) and input widgets will have their built-in labels enabled. For existing projects this might mean that the new pages will not be styled properly as the page structure is different.
+Generated pages will contain a [layout grid](layout-grid) and input widgets will have their built-in labels enabled. For existing projects this might mean that the new pages will not be styled properly as the page structure is different.
 
 ## Images
 

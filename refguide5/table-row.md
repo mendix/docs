@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-A table consists of a number of rows divided into [table cells](/refguide5/table-cell).
+A table consists of a number of rows divided into [table cells](table-cell).
 
 ## Common properties
 

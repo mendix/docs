@@ -16,12 +16,12 @@ So next time when you want to do multiple aggregates on the same list variable, 
 
 ## Related content
 
-*   [Defining access rules using XPath](/howto6/define-access-rules-using-xpath)
-*   [Extending Your Application with Custom Java](/howto6/extending-your-application-with-custom-java)
-*   [Working With Lists in a Microflow](/howto6/working-with-lists-in-a-microflow)
-*   [Triggering Logic using Microflows](/howto6/triggering-logic-using-microflows)
-*   [Creating a Custom Save Button](/howto6/create-a-custom-save-button)
-*   [Optimizing Retrieve Activities](/howto6/optimizing-retrieve-activities)
-*   [Error Handling](/howto6/set-up-error-handling)
-*   [Optimizing Microflow Aggregates](/howto6/optimizing-microflow-aggregates)
-*   [Extract and use sub microflows](/howto6/extract-and-use-sub-microflows)
+*   [Defining access rules using XPath](define-access-rules-using-xpath)
+*   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
+*   [Working With Lists in a Microflow](working-with-lists-in-a-microflow)
+*   [Triggering Logic using Microflows](triggering-logic-using-microflows)
+*   [Creating a Custom Save Button](create-a-custom-save-button)
+*   [Optimizing Retrieve Activities](optimizing-retrieve-activities)
+*   [Error Handling](set-up-error-handling)
+*   [Optimizing Microflow Aggregates](optimizing-microflow-aggregates)
+*   [Extract and use sub microflows](extract-and-use-sub-microflows)

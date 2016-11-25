@@ -7,7 +7,7 @@ space: "Reference Guide 5"
 
 An entity represents a class of real-world objects, such as customers, invoices, work items, etc. An instance of an entity is called an object. For example, the object representing the person 'Bob Marley' could be an instance of the entity 'Person'.
 
-The properties or features of an entity are described using [attributes](/refguide5/attributes). An attribute represents a small piece of information about an entity, such as the name or birth date of a person.
+The properties or features of an entity are described using [attributes](attributes). An attribute represents a small piece of information about an entity, such as the name or birth date of a person.
 
 The domain model editor uses the following symbols for visualization on entities:
 
@@ -32,15 +32,15 @@ The rows in the table are CDs. The type of the two rows is 'CD' and this is the 
 
 ## Components
 
-*   [Attributes](/refguide5/attributes)
+*   [Attributes](attributes)
 
-*   [Validation Rules](/refguide5/validation-rules)
+*   [Validation Rules](validation-rules)
 
-*   [Event Handlers](/refguide5/event-handlers)
+*   [Event Handlers](event-handlers)
 
-*   [Indexes](/refguide5/indexes)
+*   [Indexes](indexes)
 
-*   [Access Rules](/refguide5/access-rules)
+*   [Access Rules](access-rules)
 
 ## Common Properties
 
@@ -54,7 +54,7 @@ The image property can be used to associate the entity with an image. In the dom
 
 ### Persistable
 
-Define whether instances of this entity can be stored in the database. See [persistability](/refguide5/persistability) for more information about this property. Non-persistable entities are painted orange instead of blue to indicate the difference.
+Define whether instances of this entity can be stored in the database. See [persistability](persistability) for more information about this property. Non-persistable entities are painted orange instead of blue to indicate the difference.
 
 <div class="alert alert-info">{% markdown %}
 

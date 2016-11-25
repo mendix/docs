@@ -2074,43 +2074,47 @@
     },
     {
       "from": "/mxsupport/Connecting+Project+to+a+Licensed+Node",
-      "to": "/mxsupport/connecting-project-to-a-licensed-node"
+      "to": "/support/connecting-project-to-a-licensed-node"
     },
     {
       "from": "/mxsupport/Google+Authenticator+and+SMS+Installation",
-      "to": "/mxsupport/google-authenticator-and-sms-installation"
+      "to": "/support/google-authenticator-and-sms-installation"
     },
     {
       "from": "/mxsupport/How+to+connect+a+different+project+to+a+node",
-      "to": "/mxsupport/how-to-connect-a-different-project-to-a-node"
+      "to": "/support/how-to-connect-a-different-project-to-a-node"
     },
     {
       "from": "/mxsupport/How+to+download+a+backup",
-      "to": "/mxsupport/how-to-download-a-backup"
+      "to": "/support/how-to-download-a-backup"
     },
     {
       "from": "/mxsupport/How+to+restore+a+backup",
-      "to": "/mxsupport/how-to-restore-a-backup"
+      "to": "/support/how-to-restore-a-backup"
     },
     {
       "from": "/mxsupport/Mendix+Support+Home",
-      "to": "/mxsupport/"
+      "to": "/support/"
+    },
+    {
+      "from": "/mxsupport/TreeNavigation",
+      "to": "/support/"
     },
     {
       "from": "/mxsupport/License+key+activation+on+Linux+server",
-      "to": "/mxsupport/license-key-activation-on-linux-server"
+      "to": "/support/license-key-activation-on-linux-server"
     },
     {
       "from": "/mxsupport/Preparing+Your+Project+for+New+Customer+Support+Tool",
-      "to": "/mxsupport/preparing-your-project-for-new-customer-support-tool"
+      "to": "/support/preparing-your-project-for-new-customer-support-tool"
     },
     {
       "from": "/mxsupport/Required+Network+Access+for+connecting+to+the+Mendix+Platform",
-      "to": "/mxsupport/required-network-access-for-connecting-to-the-mendix-platform"
+      "to": "/support/required-network-access-for-connecting-to-the-mendix-platform"
     },
     {
       "from": "/mxsupport/Technical+Contact+Definition",
-      "to": "/mxsupport/technical-contact-definition"
+      "to": "/support/technical-contact-definition"
     },
     {
       "from": "/refguide5/TreeNavigation",

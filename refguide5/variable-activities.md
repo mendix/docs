@@ -7,8 +7,8 @@ space: "Reference Guide 5"
 
 ## Create Variable
 
-See [Create Variable](/refguide5/create-variable).
+See [Create Variable](create-variable).
 
 ## Change Variable
 
-See [Change Variable](/refguide5/change-variable).
+See [Change Variable](change-variable).

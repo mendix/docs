@@ -17,4 +17,4 @@ Here you type the caption that the end user sees for the button that generates r
 
 ## Common Properties
 
-For details on name, class, and style, see [Common Widget Properties](/refguide6/common-widget-properties).
+For details on name, class, and style, see [Common Widget Properties](common-widget-properties).

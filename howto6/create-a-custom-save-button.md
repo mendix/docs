@@ -16,9 +16,9 @@ Mendix uses visual models called microflows to define the logic of your applicat
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Create a basic data layer (for details, see [How to Create a Basic Data Layer](/howto6/create-a-basic-data-layer))
-* Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview and Detail Pages](/howto6/create-your-first-two-overview-and-detail-pages))
-* Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](/howto6/setting-up-the-navigation-structure))
+* Create a basic data layer (for details, see [How to Create a Basic Data Layer](create-a-basic-data-layer))
+* Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages))
+* Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure))
 
 ## 3 Replacing the Default Save Button with a Custom Save Button
 
@@ -71,14 +71,14 @@ To replace the default Save button with a custom one, follow these steps:
 
 ## 6 Related Content
 
-* [How to Define Access Rules Using XPath](/howto6/define-access-rules-using-xpath)
-* [How to Trigger Logic Using Microflows](/howto6/triggering-logic-using-microflows)
-* [How to Extend Your Application with Custom Java](/howto6/extending-your-application-with-custom-java)
-* [How to Work With Lists in a Microflow](/howto6/working-with-lists-in-a-microflow)
-* [How to Optimize Retrieve Activities](/howto6/optimizing-retrieve-activities)
-* [How to Configure Error Handling](/howto6/set-up-error-handling)
-* [How to Optimize Microflow Aggregates](/howto6/optimizing-microflow-aggregates)
-* [How to Extract and Use Submicroflows](/howto6/extract-and-use-sub-microflows)
+* [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
+* [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
+* [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
+* [How to Work With Lists in a Microflow](working-with-lists-in-a-microflow)
+* [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
+* [How to Configure Error Handling](set-up-error-handling)
+* [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
+* [How to Extract and Use Submicroflows](extract-and-use-sub-microflows)
 * [Button Widgets](/refguide6/button-widgets)
 * [Save Button](/refguide6/save-button)
 * [Microflow Activities](/refguide6/activities)

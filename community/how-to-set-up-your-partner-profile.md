@@ -53,7 +53,7 @@ These fields are required before you can set your profile to public: address, em
 
 ## 3\. Add developers to your Partner Profile
 
-In this chapter we will show how to add the biggest asset of your company: your employees. Before you can add a developer to your partner profile, you need to make sure their profile is set to public. Learn [how to set up your Community Profile](/community/how-to-set-up-your-profile) and set it to public.
+In this chapter we will show how to add the biggest asset of your company: your employees. Before you can add a developer to your partner profile, you need to make sure their profile is set to public. Learn [how to set up your Community Profile](how-to-set-up-your-profile) and set it to public.
 
 1.  Go to the Developers tab to add the developers to your profile. All the employees attached to your company are shown in this overview.
     ![](attachments/19203677/20217919.png)
@@ -115,5 +115,5 @@ The sum of the normalised KPI values of your company (PR+CD+ML+RP) defines the s
 
 ## 6\. Related content
 
-*   [How to set up your profile](/community/how-to-set-up-your-profile)
-*   [How to set up your partner profile](/community/how-to-set-up-your-partner-profile)
+*   [How to set up your profile](how-to-set-up-your-profile)
+*   [How to set up your partner profile](how-to-set-up-your-partner-profile)

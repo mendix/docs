@@ -9,7 +9,7 @@ tags: []
 
 Mendix is the app platform for the enterprise, and in enterprise software, it is not likely that you work in a [greenfield project](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation, you will need to integrate with existing systems. Mendix supports many ways of integrating, and this how-to focuses on how you can consume web services with Mendix.
 
-For this how-to, you will be using an example web service of [W3Schools](http://www.w3schools.com/). Please note that this is a very simple web service that converts temperatures from Celsius to Fahrenheit and vice versa. The converted temperature will be returned as a string value that can be stored in a variable directly. If you want to invoke a web service that returns a complex XML message, you can use the XML-to-domain mappings explained in [How to Import XML Documents](/howto6/importing-xml-documents).
+For this how-to, you will be using an example web service of [W3Schools](http://www.w3schools.com/). Please note that this is a very simple web service that converts temperatures from Celsius to Fahrenheit and vice versa. The converted temperature will be returned as a string value that can be stored in a variable directly. If you want to invoke a web service that returns a complex XML message, you can use the XML-to-domain mappings explained in [How to Import XML Documents](importing-xml-documents).
 
 **After using this how-to, you will know how to do the following:**  
 
@@ -77,16 +77,16 @@ To create logic to call the web service, follow these steps:
     ![](attachments/18448738/18582072.png)
 22. Click **OK** again to save the **Show message activity** properties. The microflow will look like this:
   ![](attachments/18448738/18582070.png)
-23. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](/howto6/setting-up-the-navigation-structure).
+23. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure).
 24. Deploy the application and trigger the microflow to call the web service operation. You should see a message with the converted temperature.
 
 ## 4 Related Content
 
-* [Generating a Personal SSH2 Key Pair](/howto6/generating-a-personal-ssh2-key-pair)
-* [Create a Secure App](/howto6/create-a-secure-app)
-* [Security](/howto6/security)
-* [Consuming a Complex Web Service](/howto6/consume-a-complex-web-service)
-* [Exporting XML Documents](/howto6/export-xml-documents)
-* [Importing Excel Documents](/howto6/importing-excel-documents)
-* [Exposing a Web Service](/howto6/expose-a-web-service)
-* [Selenium Support](/howto6/selenium-support)
+* [Generating a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)
+* [Create a Secure App](create-a-secure-app)
+* [Security](security)
+* [Consuming a Complex Web Service](consume-a-complex-web-service)
+* [Exporting XML Documents](export-xml-documents)
+* [Importing Excel Documents](importing-excel-documents)
+* [Exposing a Web Service](expose-a-web-service)
+* [Selenium Support](selenium-support)

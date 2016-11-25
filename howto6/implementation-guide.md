@@ -99,11 +99,11 @@ If you are using a Free App, you should set a default value for the constant in 
 
 Set up access to APNs and FCM and configure them in your application. Note that starting with FCM is recommended because it is significantly less complicated than setting up APNs. You can return to this step later on to set up APNs.
 
-See [Setting up Apple Push Notification Server](/howto6/setting-up-apple-push-notification-server) and [Setting up Firebase Cloud Messaging Server](/howto6/setting-up-google-firebase-cloud-messaging-server) for the details.
+See [Setting up Apple Push Notification Server](setting-up-apple-push-notification-server) and [Setting up Firebase Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server) for the details.
 
 ### 3.9 Step 9 – Build the Hybrid Mobile Application
 
-You will need to build the hybrid mobile application. Refer to the [Publishing a Mendix Hybrid Mobile App how-to](/howto6/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores) to get the explanation on how to do this.
+You will need to build the hybrid mobile application. Refer to the [Publishing a Mendix Hybrid Mobile App how-to](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores) to get the explanation on how to do this.
 
 For more information about PhoneGap Build, you can refer to their [documentation](http://docs.build.phonegap.com/en_US/index.html).
 

@@ -12,19 +12,19 @@ Before you can start importing data into your application, you first need to set
 
 Before you continue, make sure that you know how to create:
 
-*   **Domain models** ([Creating a basic data layer](/howto6/create-a-basic-data-layer)).
-*   **Overview and detail pages** ([Creating your first two overview and detail pages](/howto6/create-your-first-two-overview-and-detail-pages)).
-*   **Menu items **([Setting Up the Navigation Structure](/howto6/setting-up-the-navigation-structure)).
-*   **Microflows** ([Create your first Microflow: Hello World!](/howto6/create-your-first-microflow-hello-world)
+*   **Domain models** ([Creating a basic data layer](create-a-basic-data-layer)).
+*   **Overview and detail pages** ([Creating your first two overview and detail pages](create-your-first-two-overview-and-detail-pages)).
+*   **Menu items **([Setting Up the Navigation Structure](setting-up-the-navigation-structure)).
+*   **Microflows** ([Create your first Microflow: Hello World!](create-your-first-microflow-hello-world)
 *   **Add Appstore** **content (** [Adding appstore content to your app](/appstore/adding-app-store-content-to-your-app)).
-*   **Secure applications** ([Creating a secure app](/howto6/create-a-secure-app)).
+*   **Secure applications** ([Creating a secure app](create-a-secure-app)).
 
 Follow these steps:
 
 1. Create the following domain model.
    ![](attachments/18448735/18581969.png)
 
-   The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [Working with images and files](/howto6/working-with-images-and-files).
+   The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [Working with images and files](working-with-images-and-files).
 2. Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.
 3.  Create **menu items **to access the **Order** and the **Customer** overview pages.
 4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the appstore.
@@ -222,16 +222,16 @@ Once you have completed an Excel template you can export the template for exampl
 
 ## 8\. Related content
 
-*   [Consuming a complex web service](/howto6/consume-a-complex-web-service)
-*   [Consuming a simple Web Service](/howto6/consume-a-simple-web-service)
-*   [Exporting XML documents](/howto6/export-xml-documents)
-*   [Importing Excel Documents](/howto6/importing-excel-documents)
-*   [Exposing a web service](/howto6/expose-a-web-service)
-*   [Selenium Support](/howto6/selenium-support)
-*   [Synchronizing user accounts using the LDAP module](/howto6/synchronizing-user-accounts-using-the-ldap-module)
-*   [Importing XML documents](/howto6/importing-xml-documents)
-*   [Consuming a REST Service](/howto6/consume-a-rest-service)
-*   [Exposing data to BI tools using OData](/howto6/exposing-data-to-bi-tools-using-odata)
+*   [Consuming a complex web service](consume-a-complex-web-service)
+*   [Consuming a simple Web Service](consume-a-simple-web-service)
+*   [Exporting XML documents](export-xml-documents)
+*   [Importing Excel Documents](importing-excel-documents)
+*   [Exposing a web service](expose-a-web-service)
+*   [Selenium Support](selenium-support)
+*   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
+*   [Importing XML documents](importing-xml-documents)
+*   [Consuming a REST Service](consume-a-rest-service)
+*   [Exposing data to BI tools using OData](exposing-data-to-bi-tools-using-odata)
 
 
 

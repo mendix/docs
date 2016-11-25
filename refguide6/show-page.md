@@ -9,7 +9,7 @@ With the 'Show page' action you can show a page to the end user.
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide6/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 
@@ -17,13 +17,13 @@ See [Microflow Element Common Properties](/refguide6/microflow-element-common-pr
 
 ### Object to pass
 
-Object that will be passed to the opened page. This object will be used by [data views](/refguide6/data-view) with data source "caller of the page".
+Object that will be passed to the opened page. This object will be used by [data views](data-view) with data source "caller of the page".
 
 ## Action Properties
 
 ### Page
 
-The [page](/refguide6/page) to show to the end user. If the Object to pass is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
+The [page](page) to show to the end user. If the Object to pass is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
 
 <div class="alert alert-success">{% markdown %}
 

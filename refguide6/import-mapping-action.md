@@ -5,7 +5,7 @@ parent: "microflow-activities"
 ---
 
 
-With the Import Mapping Action you can import the data stored in a XML or JSON document into [domain model](/refguide6/domain-model) entities.
+With the Import Mapping Action you can import the data stored in a XML or JSON document into [domain model](domain-model) entities.
 
 ![](attachments/19202813/19399018.png)
 
@@ -21,7 +21,7 @@ It the variable is a file document, it should be an object of entity 'System.Fil
 
 ### Import mapping
 
-The [Import Mapping](/refguide6/import-mappings) defines how to transform the XML or JSON string (or file document) to objects.
+The [Import Mapping](import-mappings) defines how to transform the XML or JSON string (or file document) to objects.
 
 <div class="alert alert-info">{% markdown %}
 Importing from JSON is available since Mendix 6.6.0.

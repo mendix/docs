@@ -7,11 +7,11 @@ parent: "pages"
 
 <div class="alert alert-warning">{% markdown %}
 
-This document describes the properties of a page. If you want to see what pages are for and what kind of widgets can be placed on them, please read the [Pages](/refguide6/pages) overview documentation.
+This document describes the properties of a page. If you want to see what pages are for and what kind of widgets can be placed on them, please read the [Pages](pages) overview documentation.
 
 {% endmarkdown %}</div>
 
-Pages define the end user interface of a Mendix application. Every page is based on a [layout](/refguide6/layout). A page fills the 'gaps' defined by a layout with widgets such as the [data view](/refguide6/data-view) and the [data grid](/refguide6/data-grid).
+Pages define the end user interface of a Mendix application. Every page is based on a [layout](layout). A page fills the 'gaps' defined by a layout with widgets such as the [data view](data-view) and the [data grid](data-grid).
 
 ## Common Properties
 
@@ -52,11 +52,11 @@ _Default value:_ 600
 
 ### Title
 
-The title of the page that is shown using the [page title widget](/refguide6/page-title). If the page is shown in a pop-up the title appears in the title bar of the pop-up. The title can be overridden from places where forms are opened to make it possible to reuse a page for different purposes. For example, a [Grid New Button](/refguide6/grid-new-button) and an [Edit button](/refguide6/edit-button) can refer to the same page but override the title to 'New' and 'Edit' respectively.
+The title of the page that is shown using the [page title widget](page-title). If the page is shown in a pop-up the title appears in the title bar of the pop-up. The title can be overridden from places where forms are opened to make it possible to reuse a page for different purposes. For example, a [Grid New Button](grid-new-button) and an [Edit button](edit-button) can refer to the same page but override the title to 'New' and 'Edit' respectively.
 
 ### Layout
 
-The [layout](/refguide6/layout) that this page is based on.
+The [layout](layout) that this page is based on.
 
 ### URL
 
@@ -72,9 +72,9 @@ The URL of the page can be used to directly navigate to the page, e.g. from exte
 
 ### Visible for
 
-The module roles for which the page is visible. This has effect on [menu widgets](/refguide6/menu-widgets) and on buttons that are visible only if allowed. See, for example, the [Edit button](/refguide6/edit-button).
+The module roles for which the page is visible. This has effect on [menu widgets](menu-widgets) and on buttons that are visible only if allowed. See, for example, the [Edit button](edit-button).
 
-See also [Module Security](/refguide6/module-security).
+See also [Module Security](module-security).
 
 ## Pop-up Properties
 

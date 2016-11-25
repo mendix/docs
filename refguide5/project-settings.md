@@ -11,13 +11,13 @@ In the project settings dialog you can alter settings which are applicable to th
 
 A configuration is a group of settings with a name. You can define any number of configurations. The active configuration, i.e. the one that will be used when running your application, is determined by the drop-down in the toolbar of the Modeler.
 
-See [Configuration](/refguide5/configuration) for the settings in a configuration.
+See [Configuration](configuration) for the settings in a configuration.
 
 ## Model
 
 ### Enable page templates
 
-Determines whether or not you the project allows the use of [page templates](/refguide5/page-templates) when creating pages. 
+Determines whether or not you the project allows the use of [page templates](page-templates) when creating pages. 
 
 ### Enable widget bundling
 

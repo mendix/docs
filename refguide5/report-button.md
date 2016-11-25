@@ -19,12 +19,12 @@ Here you type the caption that the end user sees for the button that generates r
 
 ### Name
 
-See [Widget Properties](/refguide5/common-widget-properties).
+See [Widget Properties](common-widget-properties).
 
 ### Class
 
-See [Widget Properties](/refguide5/common-widget-properties).
+See [Widget Properties](common-widget-properties).
 
 ### Style
 
-See [Widget Properties](/refguide5/common-widget-properties).
+See [Widget Properties](common-widget-properties).

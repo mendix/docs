@@ -17,7 +17,7 @@ Most application logic can be developed using microflows. Microflows are very po
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read [How to Create and Deploy Your First App](/howto6/create-and-deploy-your-first-app)
+* Read [How to Create and Deploy Your First App](create-and-deploy-your-first-app)
 * You need Eclipse: download it [here](https://eclipse.org/)
 
 <div class="alert alert-info">
@@ -184,11 +184,11 @@ To edit the Java action in Eclipse, follow these steps:
 
 ## 7 Related Content
 
-* [How to Define Access Rules Using XPath](/howto6/define-access-rules-using-xpath)
-* [How to Trigger Logic Using Microflows](/howto6/triggering-logic-using-microflows)
-* [How to Create a Custom Save Button](/howto6/create-a-custom-save-button)
-* [How to Work with Lists in a Microflow](/howto6/working-with-lists-in-a-microflow)
-* [How to Optimize Retrieve Activities](/howto6/optimizing-retrieve-activities)
-* [How to Set Up Error Handling](/howto6/set-up-error-handling)
-* [How to Optimize Microflow Aggregates](/howto6/optimizing-microflow-aggregates)
-* [How to Extract and Use Sub Microflows](/howto6/extract-and-use-sub-microflows)
+* [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
+* [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
+* [How to Create a Custom Save Button](create-a-custom-save-button)
+* [How to Work with Lists in a Microflow](working-with-lists-in-a-microflow)
+* [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
+* [How to Set Up Error Handling](set-up-error-handling)
+* [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
+* [How to Extract and Use Sub Microflows](extract-and-use-sub-microflows)

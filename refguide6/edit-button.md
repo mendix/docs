@@ -29,7 +29,7 @@ The edit button allows user to edit, or view, an object selected in the grid or 
 
 This property indicates the page that is shown to end-end user when he or she clicks this button. The end-user can use this page to edit the selected object. This page should contain a data view connected to the same entity as the grid, or as the reference set selector.
 
-See [Opening Pages](/refguide6/opening-pages).
+See [Opening Pages](opening-pages).
 
 ### Pages for specializations
 

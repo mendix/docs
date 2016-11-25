@@ -23,7 +23,7 @@ A column in a table.
 
 ### Row
 
-A row in a table. See [Row (document template)](/refguide6/row-document-template).
+A row in a table. See [Row (document template)](row-document-template).
 
 ## Appearance Properties
 
@@ -47,7 +47,7 @@ Cell padding specifies the space between the content of the cell and the cell wa
 
 ### Style
 
-See [Style](/refguide6/style)
+See [Style](style)
 
 ## Common Properties
 

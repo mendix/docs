@@ -19,14 +19,14 @@ If you want to stop your microflow after an activity, you link the activity, usi
 
 ### Return value
 
-The return value is the value that is returned to the microflow that called the current microflow. The value can be entered as a [microflow expression](/refguide5/microflow-expressions).
+The return value is the value that is returned to the microflow that called the current microflow. The value can be entered as a [microflow expression](microflow-expressions).
 
 ## Debug Properties
 
 ### Break here
 
-See [Microflow Element Common Properties](/refguide5/microflow-element-common-properties).
+See [Microflow Element Common Properties](microflow-element-common-properties).
 
 ### Break condition
 
-See [Microflow Element Common Properties](/refguide5/microflow-element-common-properties).
+See [Microflow Element Common Properties](microflow-element-common-properties).

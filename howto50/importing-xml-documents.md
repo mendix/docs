@@ -12,10 +12,10 @@ The XML document that is used during this how-to contains customers. To be able 
 
 Before you continue, make sure that you know how to create:
 
-*   **Domain models**, if you need more info, take a look at this [how-to](/howto50/creating-a-basic-data-layer).
-*   **Custom File Document**, if you need more info, take a look at this [how-to](/howto50/working-with-images-and-files).
-*   **Overview and detail pages**, if you need more info, take a look at this [how-to](/howto50/creating-your-first-two-overview-and-detail-pages).
-*   **Menu items**, if you need more info, take a look at this [how-to](/howto50/setting-up-the-navigation-structure).
+*   **Domain models**, if you need more info, take a look at this [how-to](creating-a-basic-data-layer).
+*   **Custom File Document**, if you need more info, take a look at this [how-to](working-with-images-and-files).
+*   **Overview and detail pages**, if you need more info, take a look at this [how-to](creating-your-first-two-overview-and-detail-pages).
+*   **Menu items**, if you need more info, take a look at this [how-to](setting-up-the-navigation-structure).
 
 1.  Create the following entity **Customer** in your domain model:
     ![](attachments/7831653/17662023.png)
@@ -25,7 +25,7 @@ Before you continue, make sure that you know how to create:
 4.  Create an entity called **XMLDocument** that inherits all properties from **System.FileDocument**. 
     ![](attachments/7831653/8945900.png)
 5.  Create overview and detail pages to manage objects of type **XMLDocument**.
-6.  Create a menu item to access the XML document overview page. If you don't know how to create menu items, take a look at this [how-to](/howto50/setting-up-the-navigation-structure).
+6.  Create a menu item to access the XML document overview page. If you don't know how to create menu items, take a look at this [how-to](setting-up-the-navigation-structure).
 
 ## 2\. Adding an XML Schema (XSD)
 
@@ -148,6 +148,6 @@ In this section you will create logic to import customers stored in a [XML docu
 
 ## 6\. Related content
 
-*   [Expose a Web Service](/howto50/consuming-a-complex-web-service)
-*   [Consume a Simple Web Service](/howto50/consuming-a-simple-web-service)
-*   [Consume a Complex Web Service](/howto50/consuming-a-complex-web-service)
+*   [Expose a Web Service](consuming-a-complex-web-service)
+*   [Consume a Simple Web Service](consuming-a-simple-web-service)
+*   [Consume a Complex Web Service](consuming-a-complex-web-service)

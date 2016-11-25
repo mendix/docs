@@ -14,11 +14,11 @@ Names of Published App Service documents must be unique, also with regard to Pub
 ### Create version
 
 The button 'Create version' instantiates a new app service version.
-For more information, see [Published App Service](/refguide5/published-app-service).
+For more information, see [Published App Service](published-app-service).
 
 <div class="alert alert-warning">{% markdown %}
 
-From Mendix 5.4.0, app service microflows cannot have Lists as input parameters! For more information, please refer to [List parameters](/refguide5/list-parameters).
+From Mendix 5.4.0, app service microflows cannot have Lists as input parameters! For more information, please refer to [List parameters](list-parameters).
 
 {% endmarkdown %}</div>
 

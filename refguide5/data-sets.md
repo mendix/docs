@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-A data set can be used for [reporting](/refguide5/report-widgets).
+A data set can be used for [reporting](report-widgets).
 
 A data set is defined using either an OQL query or a custom Java action. To constrain datasets parameters can be defined which can be used in the OQL queries or Java Actions.
 
@@ -20,7 +20,7 @@ Example of a data set using OQL:
 
 **Source**
 
-*   _OQL query_: The [OQL query](/refguide5/oql) which defines the data set.
+*   _OQL query_: The [OQL query](oql) which defines the data set.
 *   _Java action_: The interface of the Java action which returns a data set. The columns and data types of the columns needs to be specified in the modeler. Based on this specification the modeler will create a template for this action.
 
 **Parameters**
@@ -48,6 +48,6 @@ When a parameter is defined as a range the dropdown box in the report shows each
 
 _XPath constraints_
 
-An XPath constraint can be defined using [XPath](/refguide5/xpath). Multiple constraints can be defined on a parameter and each constraint can be associated with a user role.
+An XPath constraint can be defined using [XPath](xpath). Multiple constraints can be defined on a parameter and each constraint can be associated with a user role.
 
 ![](attachments/819203/918070.png)

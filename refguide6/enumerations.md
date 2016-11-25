@@ -7,7 +7,7 @@ category: "Modeler"
 
 An enumeration defines a list of options. An attribute can be of type enumeration and that means that its value is one of the options of the enumeration. For example, the status of an order can be Open, Closed, In progress. An enumeration would be ideal to represent these options.
 
-An enumeration has one or more [enumeration values](/refguide6/enumeration-values). Each value represents one option. An attribute of type enumeration can also be empty to represent an uninitialized state.
+An enumeration has one or more [enumeration values](enumeration-values). Each value represents one option. An attribute of type enumeration can also be empty to represent an uninitialized state.
 
 ## Common Properties
 
@@ -19,4 +19,4 @@ The name of the enumeration.
 
 Each enumeration value has a caption, a name and an image.
 
-See [Enumeration Values](/refguide6/enumeration-values).
+See [Enumeration Values](enumeration-values).

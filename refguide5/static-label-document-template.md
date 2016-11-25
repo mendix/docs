@@ -9,7 +9,7 @@ A static label shows a line of static text. You can use it to place custom text 
 
 <div class="alert alert-info">{% markdown %}
 
-[![](attachments/819203/918130.png)](/refguide5/static-label-document-template)
+[![](attachments/819203/918130.png)](static-label-document-template)
 A label with text 'Customer name'.
 
 {% endmarkdown %}</div>
@@ -38,4 +38,4 @@ This is the value that will be displayed in the document.
 
 ### Style
 
-See [Style](/refguide5/style)
+See [Style](style)

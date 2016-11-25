@@ -9,7 +9,7 @@ To ensure our and your safety, there are stringent security policies in the stan
 
 ## Java security
 
-There is a java security policy in place on all Mendix runtimes. These check specific possibly dangerous operating system calls. Specifics can be found here: [Java in the Cloud](/refguide5/java-in-the-cloud). If you receive an "AccessControllerException" anywhere in your logs, you are either doing something that's prohibited in the cloud or something that you need to ask permission to do. You can file a ticket for this.
+There is a java security policy in place on all Mendix runtimes. These check specific possibly dangerous operating system calls. Specifics can be found here: [Java in the Cloud](java-in-the-cloud). If you receive an "AccessControllerException" anywhere in your logs, you are either doing something that's prohibited in the cloud or something that you need to ask permission to do. You can file a ticket for this.
 
 ## Network
 

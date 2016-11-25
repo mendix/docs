@@ -63,11 +63,11 @@ END;
 
 ## 3\. Related content
 
-*   [Activating a Mendix license on Microsoft Windows](/howto6/activate-a-mendix-license-on-microsoft-windows)
-*   [Setting up the database user](/howto6/setting-up-the-database-user)
-*   [Troubleshooting](/howto6/troubleshooting)
-*   [Sharing the Development Database](/howto6/sharing-the-development-database)
-*   [Restoring a SQL Server database](/howto6/restoring-a-sql-server-database)
-*   [Troubleshooting SQL Server](/howto6/troubleshooting-sql-server)
-*   [Mendix SQL Maintenance Plans](/howto6/mendix-sql-maintenance-plans)
-*   [Setting up a new SQL Server database](/howto6/setting-up-a-new-sql-server-database)
+*   [Activating a Mendix license on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows)
+*   [Setting up the database user](setting-up-the-database-user)
+*   [Troubleshooting](troubleshooting)
+*   [Sharing the Development Database](sharing-the-development-database)
+*   [Restoring a SQL Server database](restoring-a-sql-server-database)
+*   [Troubleshooting SQL Server](troubleshooting-sql-server)
+*   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
+*   [Setting up a new SQL Server database](setting-up-a-new-sql-server-database)

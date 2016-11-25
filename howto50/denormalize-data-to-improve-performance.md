@@ -8,7 +8,7 @@ This how-to explains how you can improve performance by de-normalizing data in M
 
 ## 1. Prepratation
 
-*   Create a basic data layer. You can use this how-to: [Creating a basic data layer](/howto50/creating-a-basic-data-layer)
+*   Create a basic data layer. You can use this how-to: [Creating a basic data layer](creating-a-basic-data-layer)
 
 ## 2. Denormalization
 
@@ -92,10 +92,10 @@ Let's assume that the domain model contains two related entities called 'Custome
 
 ## 4\. Related content
 
-*   [Working with images and files](/howto50/working-with-images-and-files)
-*   [Creating a basic data layer](/howto50/creating-a-basic-data-layer)
-*   [Denormalize Data to Improve Performance](/howto50/denormalize-data-to-improve-performance)
-*   [Setting up data validation](/howto50/setting-up-data-validation)
-*   [Working With Object Events](/howto50/working-with-object-events)
+*   [Working with images and files](working-with-images-and-files)
+*   [Creating a basic data layer](creating-a-basic-data-layer)
+*   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+*   [Setting up data validation](setting-up-data-validation)
+*   [Working With Object Events](working-with-object-events)
 *   Calculated Values and Stored Values: [Attributes](/refguide5/attributes)
 *   [Event Handlers](/refguide5/event-handlers)

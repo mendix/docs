@@ -13,7 +13,7 @@ The following screenshot shows the filter options of the Performance Tool when t
 
 The thresholds are used to filter recorded microflows, actions or SQL statements and not store them in/remove them from memory if they have an execution duration less than the threshold.
 
-You can see what has been recorded in memory with the [Show Recorded](/APM/show-recorded-dialog)button
+You can see what has been recorded in memory with the [Show Recorded](show-recorded-dialog)button
 
 The option [Include sub-microflows] can be used to keep sub-microflows called from a long running microflow in memory.
 

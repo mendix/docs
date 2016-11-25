@@ -5,6 +5,6 @@ parent: "pages"
 ---
 
 
-*   [Placeholder](/refguide6/placeholder)
-*   [Header](/refguide6/header)
-*   [Sidebar toggle button](/refguide6/sidebar-toggle-button)
+*   [Placeholder](placeholder)
+*   [Header](header)
+*   [Sidebar toggle button](sidebar-toggle-button)

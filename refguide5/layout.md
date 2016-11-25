@@ -5,9 +5,9 @@ space: "Reference Guide 5"
 ---
 
 
-Layouts specify what comes where. Each [page](/refguide5/page) is based on a layout. The layout contains widgets and structures that return on every page based on that layout. For example, it is common to put a menu bar widget in a layout so that the menu is visible on all pages.
+Layouts specify what comes where. Each [page](page) is based on a layout. The layout contains widgets and structures that return on every page based on that layout. For example, it is common to put a menu bar widget in a layout so that the menu is visible on all pages.
 
-A layout consists of contents and [placeholder](/refguide5/placeholder)s. The contents covers everything that should be present in every page that uses the layout, from navigation bars to sign out buttons. Placeholders, on the other hand, are empty areas that later form the canvas for any pages that make use of the layout. The layout contents remains the same in every page, but the placeholder areas cover what is unique to every individual page. 
+A layout consists of contents and [placeholder](placeholder)s. The contents covers everything that should be present in every page that uses the layout, from navigation bars to sign out buttons. Placeholders, on the other hand, are empty areas that later form the canvas for any pages that make use of the layout. The layout contents remains the same in every page, but the placeholder areas cover what is unique to every individual page. 
 
 Layouts can be based on other layouts, in which case the generic layout is referred to as the master layout. If a layout has a master layout, it can use the placeholders defined in the master to create a more specialized configuration. If a page is based on this specialized layout, it makes use of the placeholders defined in the new layout, ignoring those of the master layout. 
 
@@ -51,7 +51,7 @@ _Default value:_ 600
 
 ### Master layout
 
-This property specified the master layout on which this layout is based. If no master layout is specified, this layout contains a single widget (e.g. a [layout container](/refguide5/layout-container)) that defines the structure of pages based on this layout. If a master layout is specified, this layout fills the gaps defined by the master layout. You can introduce new gaps on this layout by using [placeholders](/refguide5/placeholder).
+This property specified the master layout on which this layout is based. If no master layout is specified, this layout contains a single widget (e.g. a [layout container](layout-container)) that defines the structure of pages based on this layout. If a master layout is specified, this layout fills the gaps defined by the master layout. You can introduce new gaps on this layout by using [placeholders](placeholder).
 
 ### Use main placeholder for pop-ups
 
@@ -65,11 +65,11 @@ When this property is enabled, pages based on this layout will only show the con
 
 ### Layout type
 
-If [Page Templates](/refguide5/page-templates) are enabled, every layout has a layout type
+If [Page Templates](page-templates) are enabled, every layout has a layout type
 
 Layout type     | Description
 --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Responsive      | Use this layout for pages that will work fine on all types of devices. The [layout grid](/refguide5/layout-grid) and other widgets make it possible to create responsive pages.
+Responsive      | Use this layout for pages that will work fine on all types of devices. The [layout grid](layout-grid) and other widgets make it possible to create responsive pages.
 Tablet specific | Use this layout for pages on a tablet if the responsive option is not sufficient, e.g. if different use cases with different user interfaces have to be supported.
 Phone specific  | Use this layout for pages on a phone if the responsive option is not sufficient, e.g. if different use cases with different user interfaces have to be supported.
 Modal pop-up    | Use this layout for pages that should appear as modal pop-ups.
@@ -77,7 +77,7 @@ Pop-up          | Use this layout for pages that should appear as non-modal pop-
 Legacy          | Layouts created in Mendix 5.17 or older are of this type. It is recommended to assign one of the other layout types.
 
 
-The layout type also determines how a page is opened, instead of the old [location property](/refguide5/opening-pages). If the layout type is "Legacy", then the location property is still used.
+The layout type also determines how a page is opened, instead of the old [location property](opening-pages). If the layout type is "Legacy", then the location property is still used.
 
 When enabling page templates and assigning layout types to existing layouts, it might be that pages will be opened in a different way than the location property indicated.
 

@@ -27,12 +27,12 @@ This how-to was written based on Modeler version 5.20. All the images, names, an
 
 ## 3 Data Structure and GUI
 
-1. Create the following **Customer** entity in your domain model (for details on how to create an entity, see [How to Create a Basic Data Layer](/howto6/create-a-basic-data-layer)):
+1. Create the following **Customer** entity in your domain model (for details on how to create an entity, see [How to Create a Basic Data Layer](create-a-basic-data-layer)):
 
     ![](attachments/7831572/8945665.png)
 
-2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview and Detail Pages](/howto6/create-your-first-two-overview-and-detail-pages).
-3. Create a menu item to access the customer overview page (for details on how to create menu items, see [How to Set Up the Navigation Structure](/howto6/setting-up-the-navigation-structure).
+2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages).
+3. Create a menu item to access the customer overview page (for details on how to create menu items, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure).
 4. Run the application and add some data to expose in the web service.
 
 ## <a name="4"></a>4 Creating a Published Web Service
@@ -70,7 +70,7 @@ To create a published web service, follow these steps:
 
 To create the functionality to expose, follow these steps:
 
-1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [How to Create Your First Microflow: Hello World!](/howto6/create-your-first-microflow-hello-world)).
+1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [How to Create Your First Microflow: Hello World!](create-your-first-microflow-hello-world)).
 2. To make the microflow more exciting, add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
 
     ![](attachments/18448728/18581709.png)
@@ -154,12 +154,12 @@ When exposing a web service, consider the following things:
 
 ## 10 Related Content
 
-* [How to Consume a Complex Web Service](/howto6/consume-a-complex-web-service)
-* [How to Consume a Simple Web Service](/howto6/consume-a-simple-web-service)
-* [How to Export XML Documents](/howto6/export-xml-documents)
-* [How to Import Excel Documents](/howto6/importing-excel-documents)
-* [How to Enable Selenium Support](/howto6/selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](/howto6/synchronizing-user-accounts-using-the-ldap-module)
-* [How to Import XML Documents](/howto6/importing-xml-documents)
-* [How to Consume a REST Service](/howto6/consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](/howto6/exposing-data-to-bi-tools-using-odata)
+* [How to Consume a Complex Web Service](consume-a-complex-web-service)
+* [How to Consume a Simple Web Service](consume-a-simple-web-service)
+* [How to Export XML Documents](export-xml-documents)
+* [How to Import Excel Documents](importing-excel-documents)
+* [How to Enable Selenium Support](selenium-support)
+* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
+* [How to Import XML Documents](importing-xml-documents)
+* [How to Consume a REST Service](consume-a-rest-service)
+* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

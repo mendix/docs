@@ -7,11 +7,11 @@ space: "Reference Guide 5"
 
 Java action call can be used to call a Java action. Arguments can be passed to the action and the result can be stored in a variable. Java actions can be found in the resources section of a model.
 
-See [Java Actions](/refguide5/java-actions) for information on how to use this section.
+See [Java Actions](java-actions) for information on how to use this section.
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide5/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 
@@ -23,7 +23,7 @@ The Java action that is called by this activity.
 
 ### Parameters
 
-For each parameter of the Java action you have to supply an argument of the same type. The values of the arguments can be expressed using [microflow expressions](/refguide5/microflow-expressions).
+For each parameter of the Java action you have to supply an argument of the same type. The values of the arguments can be expressed using [microflow expressions](microflow-expressions).
 
 ## Output Properties
 

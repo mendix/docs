@@ -7,9 +7,9 @@ One of the strengths of Mendix is that it’s easy to connect your Mendix applic
 
 For details on extendability, see the following how-to's:
 
-* [How to Explore the Connectors and Adapters](/howto6/explore-the-connectors-and-adapters)
-* [How to Send Custom Emails From Your App](/howto6/send-custom-emails-from-your-app)
-* [How to Access a Samba Share from the MxCloud](/howto6/access-a-samba-share-from-the-mxcloud)
-* [How to Install and Configure the SMTP Module](/howto6/install-and-configure-the-smtp-module)
-* [How to Visualize Data Using the ChartsJS Module](/howto6/visualize-data-using-the-chartsjs-module)
-* [How to Incorporate Mendix Application with Amazon Machine Learning](/howto6/how-to-incorporate-mendix-application-with-amazon-machine-learning)
+* [How to Explore the Connectors and Adapters](explore-the-connectors-and-adapters)
+* [How to Send Custom Emails From Your App](send-custom-emails-from-your-app)
+* [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
+* [How to Install and Configure the SMTP Module](install-and-configure-the-smtp-module)
+* [How to Visualize Data Using the ChartsJS Module](visualize-data-using-the-chartsjs-module)
+* [How to Incorporate Mendix Application with Amazon Machine Learning](how-to-incorporate-mendix-application-with-amazon-machine-learning)

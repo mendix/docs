@@ -23,7 +23,7 @@ Before you can start with this how-to, please make sure you have completed the f
 
 Because we are going to unlink the sandbox/free app from the project, the sandbox/free app will be deleted. That is why all data will be lost from the sandbox/free app or licensed node. To keep your data a backup needs to be created.
 
-The documentation on how to download a backup can be found [here.](/mxsupport/how-to-download-a-backup)
+The documentation on how to download a backup can be found [here.](how-to-download-a-backup)
 
 ## 3\. Unlinking project from sandbox and connecting to a licensed node
 
@@ -59,4 +59,4 @@ The project has now been connected to the node. Refresh page to see the project 
 
 After you have connected your project to a licensed node, you will need to restore a backup.
 
-The documentation on how to download a backup can be found [here.](/mxsupport/how-to-restore-a-backup)
+The documentation on how to download a backup can be found [here.](how-to-restore-a-backup)

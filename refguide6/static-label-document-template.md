@@ -36,4 +36,4 @@ This is the value that will be displayed in the document.
 
 ### Style
 
-See [Style](/refguide6/style)
+See [Style](style)

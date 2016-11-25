@@ -43,4 +43,4 @@ entity1Interface.load((entity1 : domainmodels.Entity) => {
 
 {% endmarkdown %}</div>
 
-Continue your learning path with [Generating code from the model](/MXSDK/generating-code-from-the-model).
+Continue your learning path with [Generating code from the model](generating-code-from-the-model).

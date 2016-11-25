@@ -7,7 +7,7 @@ space: "Reference Guide 5"
 
 <div class="alert alert-info">{% markdown %}
 
-Added in Mendix 5.18\. For older versions see the [Layout Container](/refguide5/layout-container).
+Added in Mendix 5.18\. For older versions see the [Layout Container](layout-container).
 
 {% endmarkdown %}</div>
 

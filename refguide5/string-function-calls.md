@@ -303,7 +303,7 @@ returns:
 
 ## isMatch
 
-Checks to see if a string matches a given [regular expression](/refguide5/regular-expressions)
+Checks to see if a string matches a given [regular expression](regular-expressions)
 
 ### Input parameters
 

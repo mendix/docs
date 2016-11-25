@@ -5,9 +5,9 @@ category: "Modeler"
 ---
 
 
-A rule is a special kind of microflow. Its result should be an enumeration or a boolean and it can be used in an [exclusive split](/refguide6/exclusive-split) to make a decision based on that result. The idea is that complicated decisions can be consolidated in rules and reused in various places.
+A rule is a special kind of microflow. Its result should be an enumeration or a boolean and it can be used in an [exclusive split](exclusive-split) to make a decision based on that result. The idea is that complicated decisions can be consolidated in rules and reused in various places.
 
-Rules are very similar to microflows; see the documentation about [Microflows](/refguide6/microflows) for more information on how to build a rule. There are only a few differences between rules and microflows:
+Rules are very similar to microflows; see the documentation about [Microflows](microflows) for more information on how to build a rule. There are only a few differences between rules and microflows:
 
 *   A rule can only be used in an exclusive split.
 *   The return type has to be boolean or enumeration.

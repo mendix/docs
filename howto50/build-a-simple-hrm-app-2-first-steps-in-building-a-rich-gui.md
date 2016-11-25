@@ -16,7 +16,7 @@ This is the second how-to in a series of five on how to create a simple HRM appl
 ## 1. Preparation
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
-*   [Build a simple HRM app 1: Create, manage and deploy the app](/howto50/build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+*   [Build a simple HRM app 1: Create, manage and deploy the app](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
 
 ## 2\. Create a domain model
 
@@ -157,20 +157,20 @@ To view a page in your app, you need to add a menu item so you can navigate to t
 4.  Click on **Employees**.
     ![](attachments/14091674/14385510.png)
 
-You can now add and edit employees! Click [here](/howto50/build-a-simple-hrm-app-3-show-related-data-in-the-gui) to go the third how-to on how to create a simple HRM application and learn how to show related data in the GUI.
+You can now add and edit employees! Click [here](build-a-simple-hrm-app-3-show-related-data-in-the-gui) to go the third how-to on how to create a simple HRM application and learn how to show related data in the GUI.
 
 ## 5\. Related content
 
-*   [Build a simple HRM app 1: Create, manage and deploy the app](/howto50/build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-*   [Build a simple HRM app 3: Show related data in the GUI](/howto50/build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](/howto50/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
-*   [Build a simple HRM app 5: Smarten up your app with business logic](/howto50/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
+*   [Build a simple HRM app 1: Create, manage and deploy the app](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+*   [Build a simple HRM app 3: Show related data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+*   [Build a simple HRM app 5: Smarten up your app with business logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
 
 Learn more about this topic using the following helpful links:
 
 *   [Domain Model](/refguide5/domain-model)
 *   [Entities](/refguide5/entities)
 *   [Pages](/refguide5/page)
-*   [Setting Up the Navigation Structure](/howto50/setting-up-the-navigation-structure)
+*   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
 *   [New button](/refguide5/new-button)
 *   [Delete button](/refguide5/delete-button)

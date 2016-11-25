@@ -67,4 +67,4 @@ The monitoring information you saw in the previous chapter showed that one of th
 
 ## 3\. Related content
 
-*   [Monitoring application health](/mendixcloud/monitoring-application-health)
+*   [Monitoring application health](monitoring-application-health)

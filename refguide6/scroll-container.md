@@ -4,7 +4,7 @@ space: "Reference Guide 6"
 parent: "container-widgets"
 ---
 
-A scroll container is used to divide the layout in regions (for details on regions, see [Scroll Container Region](/refguide6/scroll-container-region) in the Mendix Reference Guide) such as the header, sidebar, or footer. A scroll container must be the only top-level widget. Apart from that, a scroll container can only be placed directly in another scroll container.
+A scroll container is used to divide the layout in regions (for details on regions, see [Scroll Container Region](scroll-container-region) in the Mendix Reference Guide) such as the header, sidebar, or footer. A scroll container must be the only top-level widget. Apart from that, a scroll container can only be placed directly in another scroll container.
 
 Scroll containers may be placed on navigation layouts as well as on pages.
 
@@ -67,16 +67,16 @@ _Default value:_ Center
 
 ### Enable Top
 
-Determines whether the scroll container should contain a top region (for details on regions, see [Scroll Container Region](/refguide6/scroll-container-region) in the Mendix Reference Guide).
+Determines whether the scroll container should contain a top region (for details on regions, see [Scroll Container Region](scroll-container-region) in the Mendix Reference Guide).
 
 ### Enable Bottom
 
-Determines whether the scroll container should contain a bottom region (for details on regions, see [Scroll Container Region](/refguide6/scroll-container-region) in the Mendix Reference Guide).
+Determines whether the scroll container should contain a bottom region (for details on regions, see [Scroll Container Region](scroll-container-region) in the Mendix Reference Guide).
 
 ### Enable Left
 
-Determines whether the scroll container should contain a left region (for details on regions, see [Scroll Container Region](/refguide6/scroll-container-region) in the Mendix Reference Guide).
+Determines whether the scroll container should contain a left region (for details on regions, see [Scroll Container Region](scroll-container-region) in the Mendix Reference Guide).
 
 ### Enable Right
 
-Determines whether the scroll container should contain a right region (for details on regions, see [Scroll Container Region](/refguide6/scroll-container-region) in the Mendix Reference Guide).
+Determines whether the scroll container should contain a right region (for details on regions, see [Scroll Container Region](scroll-container-region) in the Mendix Reference Guide).

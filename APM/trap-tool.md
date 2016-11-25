@@ -3,27 +3,42 @@ title: "Trap Tool"
 space: "Application Performance Monitor"
 category: "User Manual"
 ---
-This chapter gives an overview of the trap tool. The Trap Tool can be used to always collect the latest series of messages before an error, warning or critical message occurs and when they occur store those messages in the database. No more asking the customer to turn on logging, waiting for things to happen, turn on even more logging, generating huge files and spending a lot of time catching the event. Simply use the trap tool.
+This chapter gives an overview of the trap tool. The Trap Tool can be used to always collect the latest 
+series of messages before an error, a warning or a critical message occurs and when they occur 
+store those messages in the database. No more asking the customer to turn on logging, waiting for things 
+to happen, turn on even more logging, generating huge files and spending a lot of time catching the event. 
+Simply use the trap tool.
+
+## Traps
+
+The Trap Tool shows the traps that are stored.
 
  ![](attachments/Trap_Tool/Overview.png)
 
-## Trap Tool Control
+When you select a trap you get to see all the messages in that trap.
 
-The Trap Tool can be enabled by using the Start/Stop button. When running you can manually send a trap and get logging output. This can be useful when there might be a microflow hanging or if an issue occurs but no error is generated.
+ ![](attachments/Trap_Tool/Individual_Trap.png)
 
-The following screenshot shows the Trap Tool when stopped:
+The search parameters to include or exclude connection bus messages[Connection Bus] and 
+microflow messages[Microflow Engine] are available to show or hide the most occurring messages.
 
-![](attachments/Trap_Tool/Control_NotRunning.png)
+Also a list of selected records can be sent to the Performance Tool. 
+If the performance tool is already running running you get a warning that you can only send a
+ trap to the performance tool if it is not running.
 
- and the screenshot below shows the Trap Tool when started:
+## Manual trap
+You can manually send a trap and get logging output. This can be useful when there might be a microflow 
+hanging or if an issue occurs but no error is generated.
 
- ![](attachments/Trap_Tool/Control_Running.png)
+There is the [Output Queue Size] counter. 
 
-There is the [Output Queue Size] counter. When a trap occurs all messages to be written to disk are stored in a queue. A separate thread handles this queue. The trap tool has a counter to indicate the number of messages in the output queue. When the Trap Tool is disabled or stopped the output is interrupted and cancelled in the middle of processing the output queue.
+ ![](attachments/Trap_Tool/Output_Queue.png)
 
-Tool specific functionality:
+When a trap occurs all messages to be written to disk are stored 
+in a queue. A separate thread handles this queue. The trap tool has a counter to indicate the number of 
+messages in the output queue. When the Trap Tool is disabled or stopped the output is interrupted and 
+cancelled in the middle of processing the output queue.
 
-*   The Trap Now button stores Trap Memory in the database. So if you know the server is busy doing something you can investigate what it is doing. Also if on a non-production environment trap memory consists of a minute of data you can look what happened for
 
 ## Trap Tool Options
 
@@ -31,13 +46,10 @@ The following screenshot shows the Trap Tool options:
 
  ![](attachments/Trap_Tool/Options.png)
 
-The Trap Tool has no import feature (like the Log Tool). Logging can be imported in the Log Tool.
-
 You can define which traps are excluded to avoid highly repetitive messages which are not useful for analysis.
-
- ![](attachments/Trap_Tool/Exclusions.png)
-
-You can exclude a complete node or filter out trap messages by regular expressions. Exclusions can be added manually but also by selecting an error, a warning or a critical message in either the Log Tool or the Trap Tool, viewing their details and pressing the [Exclude] button.
+You can exclude a complete node or filter out trap messages by regular expressions. 
+Exclusions can be added manually but also by selecting an error, a warning or a critical message in either 
+the Log Tool or the Trap Tool, viewing their details and pressing the [Exclude] button.
 
  ![](attachments/Trap_Tool/Edit_Exclusion.png)
 
@@ -55,16 +67,5 @@ You can run the Trap Tool for a fixed amount of time. The Trap Tool is intended 
 
 The Trap Tool has a [Max Processing Delay (ms)] protection to stop the Trap Tool if the system generates too many log messages which causes queueing inside Mendix. This off course depends on any other tools that might be running and other factors that might generate additional messages.
 
-Changes to the options are applied to the Trap Tool if the button [Save & Apply] is used.
+Changes to the options are applied to the Trap Tool if the button [Save & apply] is used.
 
-## Trap Tool Results
-
-The Trap Tool shows the recorded log messages resulting from a trap on the main screen. Several search fields are available to search through and filter these log messages.
-
- ![](attachments/Trap_Tool/Results.png)
-
-This feature is similar to the Log Tool. Extra is the [Trap Key] attribute that links the messages preceding a trap to the trap they were recorded for. This link does not mean these log messages were generated by the trap, just that they occurred just before the trap and potentially could have led up to the trap.
-
-Extra search parameters to include or exclude connection bus messages[Connection Bus] and/or microflow messages[Microflow Engine] are available.
-
-Also a list of selected records can be sent to the Performance Tool (if its <u>not</u> already running running).

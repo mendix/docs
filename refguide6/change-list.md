@@ -9,7 +9,7 @@ With the Change List activity you can change a list that is stored in a variable
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide6/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 
@@ -36,4 +36,4 @@ _Default value:_ Add
 
 ### Value
 
-Value defines the value that is used to change the list. The value is entered using a [microflow expression](/refguide6/microflow-expressions). The microflow expression should result in an object or list of the same [entity](/refguide6/entities) as the input list.
+Value defines the value that is used to change the list. The value is entered using a [microflow expression](microflow-expressions). The microflow expression should result in an object or list of the same [entity](entities) as the input list.

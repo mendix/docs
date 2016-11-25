@@ -33,4 +33,4 @@ function createEntitiy(domainModel : domainmodels.DomainModel, entityName : stri
 }
 ```
 
-Continue the learning path with [Closing the server connection](/MXSDK/closing-the-server-connection).
+Continue the learning path with [Closing the server connection](closing-the-server-connection).

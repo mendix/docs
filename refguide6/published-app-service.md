@@ -39,7 +39,7 @@ Can be used to describe what the app service is used for.
 
 ![](attachments/16713718/16843915.png)
 
-Provide the actual actions of which the app service is composed. Each of these actions is coupled to a microflow. See [Actions](/refguide6/actions).
+Provide the actual actions of which the app service is composed. Each of these actions is coupled to a microflow. See [Actions](actions).
 
 ## Settings
 

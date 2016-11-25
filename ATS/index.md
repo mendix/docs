@@ -5,58 +5,58 @@ space: "ATS (Application Test Suite)"
 
 The ATS Reference Guide is divided into the following different sections, each describing a certain feature of the application test suite (ATS).
 
-## [General](/ATS/general)
+## [General](general)
 
-*   [Mendix Compatibility](/ATS/general)
-*   [Browser Support](/ATS/general#browser-support)
-*   [Release Notes](/ATS/release-notes)
+*   [Mendix Compatibility](general)
+*   [Browser Support](general#browser-support)
+*   [Release Notes](release-notes)
 
-## [Introduction](/ATS/introduction)
+## [Introduction](introduction)
 
-*   [Start Page](/ATS/introduction#startpage)
-*   [Dashboard](/ATS/introduction#dashboard)
-*   [Navigation](/ATS/introduction#navigation)
-*   [User Roles](/ATS/introduction#different-user-roles)
+*   [Start Page](introduction#startpage)
+*   [Dashboard](introduction#dashboard)
+*   [Navigation](introduction#navigation)
+*   [User Roles](introduction#different-user-roles)
 
-## [Projects](/ATS/projects)
+## [Projects](projects)
 
-*   [Action Libraries](/ATS/projects#action-libraries)
-*   [Creation and Setup](/ATS/projects#creation-and-setup)
-*   [Switching Projects](/ATS/projects#switching-between-projects)
-*   [Project Dashboard](/ATS/projects#project-dashboard)
+*   [Action Libraries](projects#action-libraries)
+*   [Creation and Setup](projects#creation-and-setup)
+*   [Switching Projects](projects#switching-between-projects)
+*   [Project Dashboard](projects#project-dashboard)
 
-## [Data Management](/ATS/data-management)
+## [Data Management](data-management)
 
-*   [Repository](/ATS/data-management#repository)
-*   [Import/Export](/ATS/data-management#importexport)
-*   [Test Data](/ATS/data-management#test-data)
+*   [Repository](data-management#repository)
+*   [Import/Export](data-management#importexport)
+*   [Test Data](data-management#test-data)
 
-## [Monitoring](/ATS/monitoring)
+## [Monitoring](monitoring)
 
-*   [Test Results](/ATS/monitoring#test-results)
-*   [Running Tests](/ATS/monitoring#running-tests)
+*   [Test Results](monitoring#test-results)
+*   [Running Tests](monitoring#running-tests)
 
-## [Test Development](/ATS/test-development)
+## [Test Development](test-development)
 
-*   [Object Types in the ATS](/ATS/object-types-in-the-ats)
-*   [Recorder](/ATS/recorder)
-*   [Manual Test Steps](/ATS/manual-test-steps)
-*   [Standard Actions Reference](/ATS/standard-actions-reference)
-*   [Custom Actions](/ATS/custom-actions)
-*   [Custom Action Creation Tutorial](/ATS/custom-action-creation-tutorial)
-*   [Selectors](/ATS/selectors)
-*   [Best Practices](/ATS/best-practices)
-*   [Data Driven Tests](/ATS/data-driven-tests)
-*   [Test Case Documentation](/ATS/test-case-documentation)
+*   [Object Types in the ATS](object-types-in-the-ats)
+*   [Recorder](recorder)
+*   [Manual Test Steps](manual-test-steps)
+*   [Standard Actions Reference](standard-actions-reference)
+*   [Custom Actions](custom-actions)
+*   [Custom Action Creation Tutorial](custom-action-creation-tutorial)
+*   [Selectors](selectors)
+*   [Best Practices](best-practices)
+*   [Data Driven Tests](data-driven-tests)
+*   [Test Case Documentation](test-case-documentation)
 
-## [Configuration](/ATS/configuration)
+## [Configuration](configuration)
 
-*   [Configure Selenium hubs](/ATS/configuration#configure-the-selenium-hubs)
-*   [Configure Test Applications](/ATS/configuration#configure-test-applications)
+*   [Configure Selenium hubs](configuration#configure-the-selenium-hubs)
+*   [Configure Test Applications](configuration#configure-test-applications)
 
-## [Administration](/ATS/administration)
+## [Administration](administration)
 
-*   [Manage Projects](/ATS/administration#manage-projects)
-*   [Add Selenium Configurations](/ATS/administration#add-selenium-configurations)
-*   [Add Applications](/ATS/administration#add-applications)
-*   [Create Accounts](/ATS/administration#create-accounts)
+*   [Manage Projects](administration#manage-projects)
+*   [Add Selenium Configurations](administration#add-selenium-configurations)
+*   [Add Applications](administration#add-applications)
+*   [Create Accounts](administration#create-accounts)

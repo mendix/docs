@@ -15,7 +15,7 @@ Returns the text from messages and confirmation dialogs
 
 ## Usage
 
-You have to pass the dialog as WebElement to the action. To get the dialog as WebElement use the action [Find/Assert Dialog](/ATS/mendix-actions/dialog/findassert-dialog).
+You have to pass the dialog as WebElement to the action. To get the dialog as WebElement use the action [Find/Assert Dialog](findassert-dialog).
 
 ## Input Parameters
 

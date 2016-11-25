@@ -30,7 +30,7 @@ If this property is set to 'Yes', items in the list view can be edited. The chan
 
 ### Click action
 
-The click action defines what action is performed when a list view entry is 'clicked'. This can either be opening a page or calling a microflow. For opening a page see [Opening Pages](/refguide6/opening-pages) and for the microflow settings see [Starting Microflows](/refguide6/starting-microflows). The list view has no Confirmation or Advanced microflow settings.
+The click action defines what action is performed when a list view entry is 'clicked'. This can either be opening a page or calling a microflow. For opening a page see [Opening Pages](opening-pages) and for the microflow settings see [Starting Microflows](starting-microflows). The list view has no Confirmation or Advanced microflow settings.
 
 ### Page size
 
@@ -38,20 +38,20 @@ With this property you can change the number of containers that will be shown in
 
 ## Data source properties
 
-The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](/refguide6/data-sources).
+The data source determines which objects will be shown in the list view. For general information about data sources, see [Data Sources](data-sources).
 
 ### Type
 
-The list view supports the following types of data sources: database source, XPath source, association source and microflow Source. The database and XPath sources retrieve objects from the database and supports searching and sorting. The database source can also be used in [offline](/refguide6/offline) applications. The association source follows an association from the enclosing data view to get to the objects. Finally, the microflow source calculates the list of objects by executing a microflow.
+The list view supports the following types of data sources: database source, XPath source, association source and microflow Source. The database and XPath sources retrieve objects from the database and supports searching and sorting. The database source can also be used in [offline](offline) applications. The association source follows an association from the enclosing data view to get to the objects. Finally, the microflow source calculates the list of objects by executing a microflow.
 
 ### Other properties
 
 See the corresponding data source for its properties:
 
-*   [Database source](/refguide6/database-source)
-*   [XPath source](/refguide6/xpath-source)
-*   [Microflow source](/refguide6/microflow-source)
-*   [Association source](/refguide6/association-source)
+*   [Database source](database-source)
+*   [XPath source](xpath-source)
+*   [Microflow source](microflow-source)
+*   [Association source](association-source)
 
 ## Templates properties
 

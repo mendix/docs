@@ -5,7 +5,7 @@ parent: "container-widgets"
 ---
 
 
-The horizontal split pane is deprecated since version 5.18.0 in favor of the more powerful [Scroll Container](/refguide6/scroll-container).
+The horizontal split pane is deprecated since version 5.18.0 in favor of the more powerful [Scroll Container](scroll-container).
 
 A horizontal split pane creates a region that is split in two by a horizontal divider. In the client the divider can be dragged up and down by the end user.
 

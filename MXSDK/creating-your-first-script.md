@@ -3,7 +3,7 @@ title: "Creating your first script"
 space: "Mendix Platform SDK"
 category: "Your learning path for the Mendix SDK"
 ---
-This tutorial will guide you through the process of setting up everything you need to start working with the Mendix Platform SDK. In [the previous part](/MXSDK/setting-up-your-development-environment) you set up all the development tools. Let's create an SDK script that automatically bootstraps a new Mendix app.
+This tutorial will guide you through the process of setting up everything you need to start working with the Mendix Platform SDK. In [the previous part](setting-up-your-development-environment) you set up all the development tools. Let's create an SDK script that automatically bootstraps a new Mendix app.
 
 ## Writing a first script
 
@@ -164,4 +164,4 @@ Read more about [consuming promises](http://know.cujojs.com/tutorials/promises/c
 
 ## Next step
 
-Continue with [Creating the domain model](/MXSDK/creating-the-domain-model)
+Continue with [Creating the domain model](creating-the-domain-model)

@@ -11,136 +11,136 @@ To illustrate this imagine an object with variable name _package_ with two attri
 
 An overview of the possibilities with expressions can be found below.
 
-### [Unary Expressions](/refguide6/unary-expressions):
+### [Unary Expressions](unary-expressions):
 
-*   [Unary minus ( - )](/refguide6/unary-expressions)
+*   [Unary minus ( - )](unary-expressions)
 
-### [Arithmetic Expressions](/refguide6/arithmetic-expressions):
+### [Arithmetic Expressions](arithmetic-expressions):
 
-*   [Multiplication ( * )](/refguide6/arithmetic-expressions)
-*   [Division ( div or : )](/refguide6/arithmetic-expressions)
-*   [Modulo ( mod )](/refguide6/arithmetic-expressions)
-*   [Addition ( + )](/refguide6/arithmetic-expressions)
-*   [Subtraction ( - )](/refguide6/arithmetic-expressions)
+*   [Multiplication ( * )](arithmetic-expressions)
+*   [Division ( div or : )](arithmetic-expressions)
+*   [Modulo ( mod )](arithmetic-expressions)
+*   [Addition ( + )](arithmetic-expressions)
+*   [Subtraction ( - )](arithmetic-expressions)
 
-### [Relational Expressions](/refguide6/relational-expressions):
+### [Relational Expressions](relational-expressions):
 
-*   [Less than ( < )](/refguide6/relational-expressions)
-*   [Greater than ( > )](/refguide6/relational-expressions)
-*   [Less than or equal to ( <= )](/refguide6/relational-expressions)
-*   [Greater than or equal to ( >= )](/refguide6/relational-expressions)
-*   [Is equal to ( = )](/refguide6/relational-expressions)
-*   [Is not equal to ( != )](/refguide6/relational-expressions)
+*   [Less than ( < )](relational-expressions)
+*   [Greater than ( > )](relational-expressions)
+*   [Less than or equal to ( <= )](relational-expressions)
+*   [Greater than or equal to ( >= )](relational-expressions)
+*   [Is equal to ( = )](relational-expressions)
+*   [Is not equal to ( != )](relational-expressions)
 
-### [Special checks](/refguide6/special-checks)
+### [Special checks](special-checks)
 
-*   [Checking for an empty object](/refguide6/special-checks)
-*   [Checking for an empty object member](/refguide6/special-checks)
-*   [`isNew`](/refguide6/special-checks) - Checking whether an object is new
+*   [Checking for an empty object](special-checks)
+*   [Checking for an empty object member](special-checks)
+*   [`isNew`](special-checks) - Checking whether an object is new
 
-### [Boolean expressions](/refguide6/boolean-expressions)
+### [Boolean expressions](boolean-expressions)
 
-*   [and](/refguide6/boolean-expressions)
-*   [or](/refguide6/boolean-expressions)
-*   [not](/refguide6/boolean-expressions)
+*   [and](boolean-expressions)
+*   [or](boolean-expressions)
+*   [not](boolean-expressions)
 
-### [If expressions](/refguide6/if-expressions)
+### [If expressions](if-expressions)
 
-### [Mathematical function calls](/refguide6/mathematical-function-calls)
+### [Mathematical function calls](mathematical-function-calls)
 
-*   [`max`](/refguide6/mathematical-function-calls) - Maximum of a list of numbers
-*   [`min`](/refguide6/mathematical-function-calls) - Minimum of a list of numbers
-*   [`round`](/refguide6/mathematical-function-calls) - Rounding a floating-point number, optionally to a specified precision
-*   [`random`](/refguide6/mathematical-function-calls) - Random number generation
-*   [`floor`](/refguide6/mathematical-function-calls) - Rounding a floating-point number down
-*   [`ceil`](/refguide6/mathematical-function-calls) - Rounding a floating-point number up
-*   [`pow`](/refguide6/mathematical-function-calls) - Exponentiation
-*   [`abs`](/refguide6/mathematical-function-calls) - Absolute value
-*   [`floatsEqual` `/ currenciesEqual`](/refguide6/mathematical-function-calls) - Equality of floats/currencies for a certain precision (deprecated)
+*   [`max`](mathematical-function-calls) - Maximum of a list of numbers
+*   [`min`](mathematical-function-calls) - Minimum of a list of numbers
+*   [`round`](mathematical-function-calls) - Rounding a floating-point number, optionally to a specified precision
+*   [`random`](mathematical-function-calls) - Random number generation
+*   [`floor`](mathematical-function-calls) - Rounding a floating-point number down
+*   [`ceil`](mathematical-function-calls) - Rounding a floating-point number up
+*   [`pow`](mathematical-function-calls) - Exponentiation
+*   [`abs`](mathematical-function-calls) - Absolute value
+*   [`floatsEqual` `/ currenciesEqual`](mathematical-function-calls) - Equality of floats/currencies for a certain precision (deprecated)
 
-### [String function calls](/refguide6/string-function-calls)
+### [String function calls](string-function-calls)
 
-*   [`toUpperCase`](/refguide6/string-function-calls) - Convert string to uppercase
-*   [`toLowerCase`](/refguide6/string-function-calls) - Convert string to lowercase
-*   [`length`](/refguide6/string-function-calls) - String length
-*   [`substring`](/refguide6/string-function-calls) - Get part of a string
-*   [`find`](/refguide6/string-function-calls) - Get substring position
-*   [`findLast`](/refguide6/string-function-calls) - Get last substring position
-*   [`contains`](/refguide6/string-function-calls) - Contains substring
-*   `[startsWith](/refguide6/string-function-calls)`  - Determine whether a string starts with the specified substring
-*   `[endsWith](/refguide6/string-function-calls)`  - Determine whether a string ends with the specified substring
-*   [`trim`](/refguide6/string-function-calls) - Remove leading and trailing whitespace
-*   [`isMatch`](/refguide6/string-function-calls) - Match regular expression
-*   [`replaceAll`](/refguide6/string-function-calls) - Replace occurences of substring
-*   [`replaceFirst`](/refguide6/string-function-calls) - Replace first occurence of substring
-*   [String concatenation ( + )](/refguide6/string-function-calls) - Concatenate strings
+*   [`toUpperCase`](string-function-calls) - Convert string to uppercase
+*   [`toLowerCase`](string-function-calls) - Convert string to lowercase
+*   [`length`](string-function-calls) - String length
+*   [`substring`](string-function-calls) - Get part of a string
+*   [`find`](string-function-calls) - Get substring position
+*   [`findLast`](string-function-calls) - Get last substring position
+*   [`contains`](string-function-calls) - Contains substring
+*   `[startsWith](string-function-calls)`  - Determine whether a string starts with the specified substring
+*   `[endsWith](string-function-calls)`  - Determine whether a string ends with the specified substring
+*   [`trim`](string-function-calls) - Remove leading and trailing whitespace
+*   [`isMatch`](string-function-calls) - Match regular expression
+*   [`replaceAll`](string-function-calls) - Replace occurences of substring
+*   [`replaceFirst`](string-function-calls) - Replace first occurence of substring
+*   [String concatenation ( + )](string-function-calls) - Concatenate strings
 
-### [Date creation](/refguide6/date-creation)
+### [Date creation](date-creation)
 
-*   [`dateTime`](/refguide6/date-creation) - Creating a date value using the server's calendar
-*   [`dateTimeUTC`](/refguide6/date-creation) - Creating a date value using the UTC calendar
+*   [`dateTime`](date-creation) - Creating a date value using the server's calendar
+*   [`dateTimeUTC`](date-creation) - Creating a date value using the UTC calendar
 
-### [Between date function calls](/refguide6/between-date-function-calls)
+### [Between date function calls](between-date-function-calls)
 
-*   [`millisecondsBetween`](/refguide6/between-date-function-calls) - Milliseconds between two dates
-*   [`secondsBetween`](/refguide6/between-date-function-calls) - Seconds between two dates
-*   [`minutesBetween`](/refguide6/between-date-function-calls) - Minutes between two dates
-*   [`hoursBetween`](/refguide6/between-date-function-calls) - Hours between two dates
-*   [`daysBetween`](/refguide6/between-date-function-calls) - Days between two dates
-*   [`weeksBetween`](/refguide6/between-date-function-calls) - Weeks between two dates
+*   [`millisecondsBetween`](between-date-function-calls) - Milliseconds between two dates
+*   [`secondsBetween`](between-date-function-calls) - Seconds between two dates
+*   [`minutesBetween`](between-date-function-calls) - Minutes between two dates
+*   [`hoursBetween`](between-date-function-calls) - Hours between two dates
+*   [`daysBetween`](between-date-function-calls) - Days between two dates
+*   [`weeksBetween`](between-date-function-calls) - Weeks between two dates
 
-### [Add date function calls](/refguide6/add-date-function-calls)
+### [Add date function calls](add-date-function-calls)
 
-*   [`addMilliseconds`](/refguide6/add-date-function-calls) - Add milliseconds to a date
-*   [`addSeconds`](/refguide6/add-date-function-calls) - Add seconds to a date
-*   [`addMinutes`](/refguide6/add-date-function-calls) - Add minutes to a date
-*   [`addHours`](/refguide6/add-date-function-calls) - Add hours to a date
-*   [`addDays`](/refguide6/add-date-function-calls) - Add days to a date
-*   [`addDaysUTC`](/refguide6/add-date-function-calls) - Add days to a date using the UTC calendar
-*   [`addWeeks`](/refguide6/add-date-function-calls) - Add weeks to a date
-*   [`addWeeksUTC`](/refguide6/add-date-function-calls) - Add weeks to a date using the UTC calendar
-*   [`addMonths`](/refguide6/add-date-function-calls) - Add months to a date
-*   [`addMonthsUTC`](/refguide6/add-date-function-calls) - Add months to a date using the UTC calendar
-*   [`addYears`](/refguide6/add-date-function-calls) - Add years to a date
-*   [`addYearsUTC`](/refguide6/add-date-function-calls) - Add years to a date using the UTC calendar
+*   [`addMilliseconds`](add-date-function-calls) - Add milliseconds to a date
+*   [`addSeconds`](add-date-function-calls) - Add seconds to a date
+*   [`addMinutes`](add-date-function-calls) - Add minutes to a date
+*   [`addHours`](add-date-function-calls) - Add hours to a date
+*   [`addDays`](add-date-function-calls) - Add days to a date
+*   [`addDaysUTC`](add-date-function-calls) - Add days to a date using the UTC calendar
+*   [`addWeeks`](add-date-function-calls) - Add weeks to a date
+*   [`addWeeksUTC`](add-date-function-calls) - Add weeks to a date using the UTC calendar
+*   [`addMonths`](add-date-function-calls) - Add months to a date
+*   [`addMonthsUTC`](add-date-function-calls) - Add months to a date using the UTC calendar
+*   [`addYears`](add-date-function-calls) - Add years to a date
+*   [`addYearsUTC`](add-date-function-calls) - Add years to a date using the UTC calendar
 
-### [Trim to date](/refguide6/trim-to-date)
+### [Trim to date](trim-to-date)
 
-*   [`trimToSeconds`](/refguide6/trim-to-date) - Trim to seconds
-*   [`trimToMinutes`](/refguide6/trim-to-date) - Trim to minutes
-*   [`trimToHours`](/refguide6/trim-to-date) - Trim to hours
-*   [`trimToHoursUTC`](/refguide6/trim-to-date) - Trim to hours using the UTC calendar
-*   [`trimToDays`](/refguide6/trim-to-date) - Trim to days
-*   [`trimToDaysUTC`](/refguide6/trim-to-date) - Trim to days using the UTC calendar
-*   [`trimToMonths`](/refguide6/trim-to-date) - Trim to months
-*   [`trimToMonthsUTC`](/refguide6/trim-to-date) - Trim to months using the UTC calendar
-*   [`trimToYears`](/refguide6/trim-to-date) - Trim to years
-*   [`trimToYearsUTC`](/refguide6/trim-to-date) - Trim to years using the UTC calendar
+*   [`trimToSeconds`](trim-to-date) - Trim to seconds
+*   [`trimToMinutes`](trim-to-date) - Trim to minutes
+*   [`trimToHours`](trim-to-date) - Trim to hours
+*   [`trimToHoursUTC`](trim-to-date) - Trim to hours using the UTC calendar
+*   [`trimToDays`](trim-to-date) - Trim to days
+*   [`trimToDaysUTC`](trim-to-date) - Trim to days using the UTC calendar
+*   [`trimToMonths`](trim-to-date) - Trim to months
+*   [`trimToMonthsUTC`](trim-to-date) - Trim to months using the UTC calendar
+*   [`trimToYears`](trim-to-date) - Trim to years
+*   [`trimToYearsUTC`](trim-to-date) - Trim to years using the UTC calendar
 
-### [To string](/refguide6/to-string)
+### [To string](to-string)
 
-### [To float](/refguide6/to-float) (deprecated)
+### [To float](to-float) (deprecated)
 
-### [Parse integer](/refguide6/parse-integer)
+### [Parse integer](parse-integer)
 
-### [Parse/format float function calls](/refguide6/parse-and-format-float-function-calls) (deprecated)
+### [Parse/format float function calls](parse-and-format-float-function-calls) (deprecated)
 
-*   [`parseFloat`](/refguide6/parse-and-format-float-function-calls) - Convert a string to a float
-*   [`formatFloat`](/refguide6/parse-and-format-float-function-calls) - Convert a float to a string
+*   [`parseFloat`](parse-and-format-float-function-calls) - Convert a string to a float
+*   [`formatFloat`](parse-and-format-float-function-calls) - Convert a float to a string
 
-### [Parse/format decimal function calls](/refguide6/parse-and-format-decimal-function-calls)
+### [Parse/format decimal function calls](parse-and-format-decimal-function-calls)
 
-*   [`parseDecimal`](/refguide6/parse-and-format-decimal-function-calls)  - Convert a string to a decimal
-*   [`formatDecimal`](/refguide6/parse-and-format-decimal-function-calls)  - Convert a decimal to a string
+*   [`parseDecimal`](parse-and-format-decimal-function-calls)  - Convert a string to a decimal
+*   [`formatDecimal`](parse-and-format-decimal-function-calls)  - Convert a decimal to a string
 
-### [Parse/format date function calls](/refguide6/parse-and-format-date-function-calls)
+### [Parse/format date function calls](parse-and-format-date-function-calls)
 
 *   [`parseDateTime[UTC]`](parse-and-format-date-function-calls) - Convert a string to a date value
 *   [`formatDateTime[UTC]`](parse-and-format-date-function-calls) - Convert a date value to a string
 *   [`formatTime[UTC]`](parse-and-format-date-function-calls) - Convert the time part of a date value to a string
 *   [`formatDate[UTC]`](parse-and-format-date-function-calls) - Convert the date part of a date value to a string
 
-### [Enumerations in microflow expressions](/refguide6/enumerations-in-microflow-expressions)
+### [Enumerations in microflow expressions](enumerations-in-microflow-expressions)
 
-*   [`getCaption`](/refguide6/enumerations-in-microflow-expressions) - Get caption of enumeration value in current language
-*   [`getKey`](/refguide6/enumerations-in-microflow-expressions) - Get technical name of enumeration value
+*   [`getCaption`](enumerations-in-microflow-expressions) - Get caption of enumeration value in current language
+*   [`getKey`](enumerations-in-microflow-expressions) - Get technical name of enumeration value

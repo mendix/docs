@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 <div class="alert alert-warning">{% markdown %}
 
-This document describes the properties of a published OData resource. If you want a general overview of OData services, you can check the [Published OData Services](/refguide5/published-odata-services) documentation.
+This document describes the properties of a published OData resource. If you want a general overview of OData services, you can check the [Published OData Services](published-odata-services) documentation.
 
 {% endmarkdown %}</div>
 

@@ -87,10 +87,10 @@ This section will explain how to set the delete behavior of associations. You ca
 
 ## 6\. Related content
 
-*   [Working with images and files](/howto50/working-with-images-and-files)
-*   [Creating a basic data layer](/howto50/creating-a-basic-data-layer)
-*   [Denormalize Data to Improve Performance](/howto50/denormalize-data-to-improve-performance)
-*   [Setting up data validation](/howto50/setting-up-data-validation)
-*   [Working With Object Events](/howto50/working-with-object-events)
-*   [Creating your first two Overview and Detail pages](/howto50/creating-your-first-two-overview-and-detail-pages)
-*   [Setting up data validation](/howto50/setting-up-data-validation)
+*   [Working with images and files](working-with-images-and-files)
+*   [Creating a basic data layer](creating-a-basic-data-layer)
+*   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+*   [Setting up data validation](setting-up-data-validation)
+*   [Working With Object Events](working-with-object-events)
+*   [Creating your first two Overview and Detail pages](creating-your-first-two-overview-and-detail-pages)
+*   [Setting up data validation](setting-up-data-validation)

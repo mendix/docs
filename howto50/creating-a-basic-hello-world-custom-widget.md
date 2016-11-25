@@ -22,7 +22,7 @@ The Mendix front end uses the DOJO framework to implement widgets. Each Mendix w
 Before you start building your own widget make sure you have the following programs installed:
 
 *   [Mendix Modeler](https://appstore.home.mendix.com/index3.html?v=7#1421997409316) (version 5.x)
-*   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a How- to about this software here](/howto50/getting-started-with-the-widget-development-plugin-for-adobe-brackets).
+*   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a How- to about this software here](getting-started-with-the-widget-development-plugin-for-adobe-brackets).
 
 ## 2\. How does it all work?!
 
@@ -751,9 +751,9 @@ A very nice book that helps you understand what JavaScript is all about.
 
 
 
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto50/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-*   [Creating a chainable Custom Widget](/howto50/creating-a-chainable-custom-widget)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
+*   [Creating a chainable Custom Widget](creating-a-chainable-custom-widget)
 *   [XML Reference Guide 5](/refguide5/xml-reference-guide)
 *   [XML Reference Guide 6](/refguide6/xml-reference-guide)
-*   [Creating a Basic Hello World Custom Widget](/howto50/creating-a-basic-hello-world-custom-widget)
-*   [The Mobile Slider Custom Widget](/howto50/the-mobile-slider-custom-widget)
+*   [Creating a Basic Hello World Custom Widget](creating-a-basic-hello-world-custom-widget)
+*   [The Mobile Slider Custom Widget](the-mobile-slider-custom-widget)

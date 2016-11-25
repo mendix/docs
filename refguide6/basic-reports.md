@@ -6,7 +6,7 @@ parent: "report-widgets"
 
 <div class="alert alert-info">{% markdown %}
 
-This has been renamed to [Report Grid](/refguide6/report-grid) in version 6.10.0.
+This has been renamed to [Report Grid](report-grid) in version 6.10.0.
 
 {% endmarkdown %}</div>
 
@@ -46,4 +46,4 @@ If Use paging is true, this property indicates the number of occurrences that's 
 
 ### Name, Class, Style
 
-See [Widget Properties](/refguide6/common-widget-properties).
+See [Widget Properties](common-widget-properties).

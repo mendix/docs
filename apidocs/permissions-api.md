@@ -8,9 +8,9 @@ space: "API documentation"
 
 The Permissions API is an [App Service](/refguide6/consumed-app-services) that allows retrieving the [user roles](/refguide6/user-roles) a specific user has in your application. There are several ways in which the roles granted to a user in an application can be changed:
 
-*   The role with which the user was invited through the Launchpad, or the role with which the user was invited through the [Invite API](/apidocs/invite-api).
+*   The role with which the user was invited through the Launchpad, or the role with which the user was invited through the [Invite API](invite-api).
 *   User roles for an individual user can be changed from the Launchpad in the _Manage App Users_ screen, provided the user attempting to change these has sufficient privileges.
-*   A user may be granted roles through a group policy for a security group he is a member of. Group policies define a specific set of user roles to be granted to members of the security group to which the policy applies, for a specific environment; they can be configured in the Company Admin. Security group membership can be changed through either the Company Admin or the [User Management API](/apidocs/user-management-api) .
+*   A user may be granted roles through a group policy for a security group he is a member of. Group policies define a specific set of user roles to be granted to members of the security group to which the policy applies, for a specific environment; they can be configured in the Company Admin. Security group membership can be changed through either the Company Admin or the [User Management API](user-management-api) .
 
 <div class="alert alert-info">{% markdown %}
 

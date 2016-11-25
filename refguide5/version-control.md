@@ -67,5 +67,5 @@ Since each revision is stored on the Team Server, you always have not one but do
 
 ## Further reading
 
-*   [Concepts](/refguide5/version-control-concepts) - Learn about the terminology of version control.
-*   [Scenarios](/refguide5/version-control-scenarios) - See how version control is used in practice in different scenarios.
+*   [Concepts](version-control-concepts) - Learn about the terminology of version control.
+*   [Scenarios](version-control-scenarios) - See how version control is used in practice in different scenarios.

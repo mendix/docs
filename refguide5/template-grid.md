@@ -55,15 +55,15 @@ _Default value:_ 0
 
 ### Control bar
 
-See [Control Bar](/refguide5/control-bar).
+See [Control Bar](control-bar).
 
 ### Search bar (for data source type "Database")
 
-See [Search Bar](/refguide5/search-bar).
+See [Search Bar](search-bar).
 
 ### Sort bar (for data source type "Database")
 
-See [Sort Bar](/refguide5/sort-bar).
+See [Sort Bar](sort-bar).
 
 ## General properties
 
@@ -73,7 +73,7 @@ This property indicates whether the control bar will be visible in the end user 
 
 <div class="alert alert-warning">{% markdown %}
 
-Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [grid buttons](/refguide5/control-bar) for more information.
+Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [grid buttons](control-bar) for more information.
 
 {% endmarkdown %}</div>
 
@@ -131,7 +131,7 @@ _Default value:_ 0
 
 ## Data source properties
 
-The data source determines which objects will be shown in the template grid. For general information about data sources, see [Data Sources](/refguide5/data-sources).
+The data source determines which objects will be shown in the template grid. For general information about data sources, see [Data Sources](data-sources).
 
 ### Type
 
@@ -149,23 +149,23 @@ Let us say the domain model contains entities Order and OrderLine with a referen
 
 ### Show search bar (for data source type "Database")
 
-See [Database source](/refguide5/database-source).
+See [Database source](database-source).
 
 ### Wait for search (for data source type "Database")
 
-See [Database Source](/refguide5/database-source).
+See [Database Source](database-source).
 
 ### XPath constraint (for data source type "Database")
 
-See [Database Source](/refguide5/database-source).
+See [Database Source](database-source).
 
 ### Apply context (for data source type "Database")
 
-See [Database Source](/refguide5/database-source).
+See [Database Source](database-source).
 
 ### Remove from context (for data source type "Database")
 
-See [Database Source](/refguide5/database-source).
+See [Database Source](database-source).
 
 ### Microflow (for data source type "Microflow")
 
@@ -173,7 +173,7 @@ The microflow property specifies a microflow is executed when the grid is opened
 
 ### Microflow settings (for data source type "Microflow")
 
-The microflow settings specify which parameters to pass to the microflow. See [Starting Microflows](/refguide5/starting-microflows).
+The microflow settings specify which parameters to pass to the microflow. See [Starting Microflows](starting-microflows).
 
 ## Visibility properties
 

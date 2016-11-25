@@ -103,5 +103,5 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Related articles
 
-*   [Data view](/refguide6/data-view)
-*   [Attributes](/refguide6/attributes)
+*   [Data view](data-view)
+*   [Attributes](attributes)

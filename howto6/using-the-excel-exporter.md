@@ -178,13 +178,13 @@ This module has many steps that must be configured in order for the template to 
 
 ## 6\. Related content
 
-*   [Consuming a complex web service](/howto6/consume-a-complex-web-service)
-*   [Consuming a simple Web Service](/howto6/consume-a-simple-web-service)
-*   [Selenium Support](/howto6/selenium-support)
-*   [Synchronizing user accounts using the LDAP module](/howto6/synchronizing-user-accounts-using-the-ldap-module)
-*   [Importing Excel Documents](/howto6/importing-excel-documents)
-*   [Exporting XML documents](/howto6/export-xml-documents)
-*   [Exposing a web service](/howto6/expose-a-web-service)
-*   [Importing XML documents](/howto6/importing-xml-documents)
-*   [Consuming a REST Service](/howto6/consume-a-rest-service)
-*   [Exposing data to BI tools using OData](/howto6/exposing-data-to-bi-tools-using-odata)
+*   [Consuming a complex web service](consume-a-complex-web-service)
+*   [Consuming a simple Web Service](consume-a-simple-web-service)
+*   [Selenium Support](selenium-support)
+*   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
+*   [Importing Excel Documents](importing-excel-documents)
+*   [Exporting XML documents](export-xml-documents)
+*   [Exposing a web service](expose-a-web-service)
+*   [Importing XML documents](importing-xml-documents)
+*   [Consuming a REST Service](consume-a-rest-service)
+*   [Exposing data to BI tools using OData](exposing-data-to-bi-tools-using-odata)

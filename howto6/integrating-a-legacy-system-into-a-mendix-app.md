@@ -19,9 +19,9 @@ Consider the following situation: you have a legacy system with valuable data th
 Before you continue, make sure that you
 
 *   **Have downloaded the Flat & Delimited File Importer App Store Module and all prerequisites**
-*   **Know how to create Domain models** ([Creating a basic data layer](/howto6/create-a-basic-data-layer)).
-*   **Know how to create Overview and detail pages** ([Creating your first two overview and detail pages](/howto6/create-your-first-two-overview-and-detail-pages)).
-*   **Know how to create****Microflows** ([Build your first Microflow: Hello world!](/howto6/create-your-first-microflow-hello-world)).
+*   **Know how to create Domain models** ([Creating a basic data layer](create-a-basic-data-layer)).
+*   **Know how to create Overview and detail pages** ([Creating your first two overview and detail pages](create-your-first-two-overview-and-detail-pages)).
+*   **Know how to create****Microflows** ([Build your first Microflow: Hello world!](create-your-first-microflow-hello-world)).
 *   **Save the sample data file to your computer for use in this exercize ([SampleFlatfile.txt](attachments/18448737/18582047.txt))**
 
 1.  Create a **Mendix object** that matches the data you want to input.  For the example provided, this **entity** is a 'Product' has two **attributes**, Value 1 and Value 2.
@@ -32,7 +32,7 @@ Before you continue, make sure that you
     ![](attachments/18448737/18582053.png)
 5.  Select the **Product Entity** from the dropdown.
 
-    If this dropdown is empty, then it is likely that **Model Reflection** has been synced yet.  If you do not know how to execute this, please see instructions [here](/howto6/importing-excel-documents).
+    If this dropdown is empty, then it is likely that **Model Reflection** has been synced yet.  If you do not know how to execute this, please see instructions [here](importing-excel-documents).
 
     ![](attachments/18448737/18582050.png)
 
@@ -63,7 +63,7 @@ Before you continue, make sure that you
 
 **Importing Legacy Data using an Excel File**
 
-If your legacy system produces data in an **Excel File** format, integration can be accomplished using the Excel Imported App Store Module. Detailed instructions on how to import data to Mendix with Excel can be found here: [Importing Excel Documents](/howto6/importing-excel-documents).
+If your legacy system produces data in an **Excel File** format, integration can be accomplished using the Excel Imported App Store Module. Detailed instructions on how to import data to Mendix with Excel can be found here: [Importing Excel Documents](importing-excel-documents).
 
 ## 2\. Interacting with a legacy system using REST
 
@@ -79,10 +79,10 @@ In this Chapter, you will learn how to retrieve data from a legacy system using 
 Before you continue, make sure that you
 
 *   **Know how to download App Store Modules**
-*   **Know how to create Domain models **([Creating a basic data layer](/howto6/create-a-basic-data-layer)).
-*   **Know how to create Overview and detail pages **([Create+Your+First+Two+Overview+and+Detail+Pages](/howto6/create-your-first-two-overview-and-detail-pages)).
-*   **Know how to create** **Microflows and SubMicroflows** ([Build your first Microflow: Hello world!](/howto6/create-your-first-microflow-hello-world)).
-*   **Understand the concepts behind REST and web Services** ([Consuming Your First REST Service](http://www.mendix.com/blog/consuming-first-rest-service/)[, Consume a complex web service](/howto6/consume-a-complex-web-service))
+*   **Know how to create Domain models **([Creating a basic data layer](create-a-basic-data-layer)).
+*   **Know how to create Overview and detail pages **([Create+Your+First+Two+Overview+and+Detail+Pages](create-your-first-two-overview-and-detail-pages)).
+*   **Know how to create** **Microflows and SubMicroflows** ([Build your first Microflow: Hello world!](create-your-first-microflow-hello-world)).
+*   **Understand the concepts behind REST and web Services** ([Consuming Your First REST Service](http://www.mendix.com/blog/consuming-first-rest-service/)[, Consume a complex web service](consume-a-complex-web-service))
 
     <div class="alert alert-warning">
 
@@ -131,15 +131,15 @@ The above example demonstrates how a Mendix Application can quickly integrate da
 
 ## 3\. Related content
 
-*   [Consuming a complex web service](/howto6/consume-a-complex-web-service)
-*   [Consuming a simple Web Service](/howto6/consume-a-simple-web-service)
-*   [Exporting XML documents](/howto6/export-xml-documents)
-*   [Importing Excel Documents](/howto6/importing-excel-documents)
-*   [Exposing a web service](/howto6/expose-a-web-service)
-*   [Selenium Support](/howto6/selenium-support)
-*   [Synchronizing user accounts using the LDAP module](/howto6/synchronizing-user-accounts-using-the-ldap-module)
-*   [Importing XML documents](/howto6/importing-xml-documents)
-*   [Consuming a REST Service](/howto6/consume-a-rest-service)
-*   [Exposing data to BI tools using OData](/howto6/exposing-data-to-bi-tools-using-odata)
+*   [Consuming a complex web service](consume-a-complex-web-service)
+*   [Consuming a simple Web Service](consume-a-simple-web-service)
+*   [Exporting XML documents](export-xml-documents)
+*   [Importing Excel Documents](importing-excel-documents)
+*   [Exposing a web service](expose-a-web-service)
+*   [Selenium Support](selenium-support)
+*   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
+*   [Importing XML documents](importing-xml-documents)
+*   [Consuming a REST Service](consume-a-rest-service)
+*   [Exposing data to BI tools using OData](exposing-data-to-bi-tools-using-odata)
 
 *   [Extending Salesforce with Mendix, an Alternative to Force. com](https://www.mendix.com/blog/extending-salesforce-mendix-alternative-force-com/)

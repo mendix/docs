@@ -20,7 +20,7 @@ A tab control with two tab pages (Address, Orders).
 
 A tab control contains one or more tab pages, into which you can again place other widgets. For example, a tab page can contain a grid of orders.
 
-See [Tab page](/refguide6/tab-page).
+See [Tab page](tab-page).
 
 ## Common properties
 

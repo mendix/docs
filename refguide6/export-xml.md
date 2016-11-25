@@ -7,6 +7,6 @@ parent: "integration-activities"
 
 <div class="alert alert-warning">{% markdown %}
 
-The documentation has moved to [Export Mapping Action](/refguide6/export-mapping-action)
+The documentation has moved to [Export Mapping Action](export-mapping-action)
 
 {% endmarkdown %}</div>

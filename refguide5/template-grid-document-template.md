@@ -9,7 +9,7 @@ The template grid shows a list of objects in a tile view. For example, a templat
 
 <div class="alert alert-info">{% markdown %}
 
-[![](attachments/819203/918137.png)](/refguide5/template-grid-document-template)
+[![](attachments/819203/918137.png)](template-grid-document-template)
 A template grid showing products with name, description and image.
 
 {% endmarkdown %}</div>
@@ -18,7 +18,7 @@ A template grid showing products with name, description and image.
 
 ### Sort bar
 
-See [Sort Bar](/refguide5/sort-bar).
+See [Sort Bar](sort-bar).
 
 ## Appearance Properties
 

@@ -18,7 +18,7 @@ This how-to explains how you can improve performance by de-normalizing data in M
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Create a basic data layer (for details, see [How to Create a Basic Data Layer](/howto6/create-a-basic-data-layer))
+* Create a basic data layer (for details, see [How to Create a Basic Data Layer](create-a-basic-data-layer))
 
 ## 3 Denormalization
 
@@ -127,14 +127,14 @@ Now the application is ready to store redundant data, but you still need to keep
 
 ## 5 Related Content
 
-* [How to Work with Images and Files](/howto6/working-with-images-and-files)
-* [How to Create a Basic Data Layer](/howto6/create-a-basic-data-layer)
-* [How to Set Up Data Validation](/howto6/setting-up-data-validation)
-* [How to Work with Object Events](/howto6/working-with-object-events)
-* [How to Find the Root Cause of Runtime Errors](/howto6/finding-the-root-cause-of-runtime-errors)
-* [How to Manage Your Application Requirements](/howto6/managing-your-application-requirements-with-mendix)
-* [How to Define Access Rules Using XPath](/howto6/define-access-rules-using-xpath)
-* [How to Configure the Scout and Windows 10 Workaround](/howto6/scout-and-windows-10-workaround)
-* [How to Generate a Personal SSH2 Key Pair](/howto6/generating-a-personal-ssh2-key-pair)
+* [How to Work with Images and Files](working-with-images-and-files)
+* [How to Create a Basic Data Layer](create-a-basic-data-layer)
+* [How to Set Up Data Validation](setting-up-data-validation)
+* [How to Work with Object Events](working-with-object-events)
+* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [How to Manage Your Application Requirements](managing-your-application-requirements-with-mendix)
+* [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
+* [How to Configure the Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
+* [How to Generate a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)
 * [Attributes](/refguide6/attributes)
 * [Event Handlers](/refguide6/event-handlers)

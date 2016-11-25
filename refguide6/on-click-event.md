@@ -10,4 +10,4 @@ The On click property specifies a microflow that will be executed when clicking 
 
 The On click settings specify what parameters are passed to the microflow, whether a progress bar is shown and more.
 
-See [Starting Microflows](/refguide6/starting-microflows).
+See [Starting Microflows](starting-microflows).

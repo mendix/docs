@@ -7,7 +7,7 @@ space: "Reference Guide 5"
 
 <div class="alert alert-info">{% markdown %}
 
-Added in Mendix 5.17\. It replaced the [microflow button](/refguide5/microflow-button).
+Added in Mendix 5.17\. It replaced the [microflow button](microflow-button).
 
 {% endmarkdown %}</div>
 
@@ -23,11 +23,11 @@ Changed in Mendix 5.19: button captions are based on templates with parameters t
 
 {% endmarkdown %}</div>
 
-The caption defines the text that will be shown. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera. Note that to use template parameters the widget must be placed in a context of an entity, e.g. inside a [data view](/refguide5/data-view) or [list view](/refguide5/list-view). The parameters will be replaced by the values of the attributes.
+The caption defines the text that will be shown. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera. Note that to use template parameters the widget must be placed in a context of an entity, e.g. inside a [data view](data-view) or [list view](list-view). The parameters will be replaced by the values of the attributes.
 
 _Before 5.19:_
 
-The caption can be set to either a literal value, or an attribute value. A literal caption specifies a translatable text. See [Translatable Texts](/refguide5/translatable-texts). An attribute caption specifies a path to an attribute. The path starts at the entity of the entity widget in which this widget is contained.
+The caption can be set to either a literal value, or an attribute value. A literal caption specifies a translatable text. See [Translatable Texts](translatable-texts). An attribute caption specifies a path to an attribute. The path starts at the entity of the entity widget in which this widget is contained.
 
 ### Tooltip
 
@@ -37,7 +37,7 @@ Added in Mendix 5.8.0.
 
 {% endmarkdown %}</div>
 
-The tooltip property determines the text you will see in the tooltip that appears when you hover over the button. The tooltip text is translatable. See [Translatable Texts](/refguide5/translatable-texts). If the tooltip is not specified, no tooltip will be shown when hovering over the button.
+The tooltip property determines the text you will see in the tooltip that appears when you hover over the button. The tooltip text is translatable. See [Translatable Texts](translatable-texts). If the tooltip is not specified, no tooltip will be shown when hovering over the button.
 
 ### Image
 
@@ -138,19 +138,19 @@ _Default value:_ Do nothing
 
 ### Page (only for "Open a page")
 
-The [page](/refguide5/page) that should be opened.
+The [page](page) that should be opened.
 
-See [Opening Pages](/refguide5/opening-pages).
+See [Opening Pages](opening-pages).
 
 ### Microflow (only for "Call a microflow")
 
-The [microflow](/refguide5/microflow) that should be executed.
+The [microflow](microflow) that should be executed.
 
 ### Microflow settings (only for "Call a microflow")
 
 The microflow settings specify what parameters will be passed to the microflow, whether to show a progress bar or not, and more.
 
-See [Starting Microflows](/refguide5/starting-microflows).
+See [Starting Microflows](starting-microflows).
 
 ## Visibility properties
 

@@ -9,7 +9,7 @@ The create-object action can be used to create an object.
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide5/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 
@@ -29,7 +29,7 @@ _Default value_: False
 
 ### Initialize members
 
-You can initialize members of the newly created object. Values for members are specified with a [microflow expression](/refguide5/microflow-expressions) and should be of the same type as the member.
+You can initialize members of the newly created object. Values for members are specified with a [microflow expression](microflow-expressions) and should be of the same type as the member.
 
 ## Output Properties
 

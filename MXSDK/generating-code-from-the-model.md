@@ -5,7 +5,7 @@ category: "Your learning path for the Mendix SDK"
 ---
 ## Introduction
 
-To help you to find out how you can write code to alter your model, the SDK ships with a nice reverse engineering tool. Given a [fully loaded model unit](/MXSDK/loading-units-and-elements), you can generate the JavaScript code that would create that very same unit using code. This way, you can build a template model in the Mendix Modeler, then generate the code you would need to write to achieve the same.
+To help you to find out how you can write code to alter your model, the SDK ships with a nice reverse engineering tool. Given a [fully loaded model unit](loading-units-and-elements), you can generate the JavaScript code that would create that very same unit using code. This way, you can build a template model in the Mendix Modeler, then generate the code you would need to write to achieve the same.
 
 ## For the impatient
 
@@ -196,8 +196,8 @@ Execute the script. You should have a new project with the generated entities.
 
 <div class="alert alert-success">{% markdown %}
 
-Instead of creating a new project, you can also reuse an existing project or even an existing online working copy. See [Development Workflow](/MXSDK/development-workflow) for more detail.
+Instead of creating a new project, you can also reuse an existing project or even an existing online working copy. See [Development Workflow](development-workflow) for more detail.
 
 {% endmarkdown %}</div>
 
-Go back to [your learning path for the Mendix SDK](/MXSDK/your-learning-path-for-the-mendix-sdk).
+Go back to [your learning path for the Mendix SDK](your-learning-path-for-the-mendix-sdk).

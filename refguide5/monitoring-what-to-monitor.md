@@ -14,10 +14,10 @@ Application and system monitoring forms an integral part of on-premise hosting o
 This document is based upon the following assumptions:
 
 *   User is familiar with the logging guidelines defined in:
-    *   [Review log files – MS IIS Server](/refguide5/review-log-files-ms-iis-server "review log files _ ms iis server")
-    *   [Review log files – MS SQL Server](/refguide5/review-log-files-ms-sql-server "review log files _ ms sql server")
-    *   [Monitoring - Mendix Runtime](/refguide5/monitoring-mendix-runtime "monitoring _ mendix runtime")
-    *   [Logging](/refguide5/logging "logging")
+    *   [Review log files – MS IIS Server](review-log-files-ms-iis-server "review log files _ ms iis server")
+    *   [Review log files – MS SQL Server](review-log-files-ms-sql-server "review log files _ ms sql server")
+    *   [Monitoring - Mendix Runtime](monitoring-mendix-runtime "monitoring _ mendix runtime")
+    *   [Logging](logging "logging")
 *   SQL Server maintenance plans have been set up according to:
     *   [Mendix SQL Maintenance Plans](/howto50/mendix-sql-maintenance-plans "mendix sql maintenance plans")
 

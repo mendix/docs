@@ -49,7 +49,7 @@ Level of support depends on availability and effort of the developer and/or comm
 
 ## 3\. Related content
 
-*   [Install an App from the App Store](/appstore/install-an-app-from-the-app-store)
-*   [App Store Approval Guidelines](/appstore/app-store-approval-guidelines)
-*   [App Store Content Support](/appstore/app-store-content-support)
-*   [Adding App Store content to your app](/appstore/adding-app-store-content-to-your-app)
+*   [Install an App from the App Store](install-an-app-from-the-app-store)
+*   [App Store Approval Guidelines](app-store-approval-guidelines)
+*   [App Store Content Support](app-store-content-support)
+*   [Adding App Store content to your app](adding-app-store-content-to-your-app)

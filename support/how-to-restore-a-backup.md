@@ -20,7 +20,7 @@ Before you can start with this how-to, please make sure you have the following p
 
 ## 2\. Downloading a backup
 
-The documentation on how to download a backup can be found [here.](/mxsupport/how-to-download-a-backup)
+The documentation on how to download a backup can be found [here.](how-to-download-a-backup)
 
 ## 3\. Restoring a backup
 

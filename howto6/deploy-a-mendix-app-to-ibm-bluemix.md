@@ -164,8 +164,8 @@ If you encounter any problems, you should consult the application logs:
 
 ## 9 Related Content
 
-* [How to Deploy a Mendix App to IBM Bluemix](/howto6/deploy-a-mendix-app-to-ibm-bluemix)
-* [How to Deploy a Mendix App to Pivotal](/howto6/deploy-a-mendix-app-to-pivotal)
-* [How to Deploy a Mendix App to HP Helion](/howto6/deploy-a-mendix-app-to-hp-helion)
-* [How to Deploy a Mendix App to Cloud Foundry](/howto6/deploying-a-mendix-app-to-cloud-foundry)
+* [How to Deploy a Mendix App to IBM Bluemix](deploy-a-mendix-app-to-ibm-bluemix)
+* [How to Deploy a Mendix App to Pivotal](deploy-a-mendix-app-to-pivotal)
+* [How to Deploy a Mendix App to HP Helion](deploy-a-mendix-app-to-hp-helion)
+* [How to Deploy a Mendix App to Cloud Foundry](deploying-a-mendix-app-to-cloud-foundry)
 * [IBM Bluemix documentation](https://www.eu-gb.bluemix.net/docs)

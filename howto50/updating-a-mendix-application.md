@@ -57,8 +57,8 @@ The user that is configured as the Service Account should have Read&Execute priv
 
 ## 3\. Related content
 
-*   [Restoring a SQL Server database](/howto50/restoring-a-sql-server-database)
-*   [Mendix SQL Maintenance Plans](/howto50/mendix-sql-maintenance-plans)
-*   [Setting up a new SQL Server database](/howto50/setting-up-a-new-sql-server-database)
-*   [Troubleshooting SQL Server](/howto50/troubleshooting-sql-server)
-*   [Setting up a SQL Server user](/howto50/setting-up-a-sql-server-user)
+*   [Restoring a SQL Server database](restoring-a-sql-server-database)
+*   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
+*   [Setting up a new SQL Server database](setting-up-a-new-sql-server-database)
+*   [Troubleshooting SQL Server](troubleshooting-sql-server)
+*   [Setting up a SQL Server user](setting-up-a-sql-server-user)

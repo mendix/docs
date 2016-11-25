@@ -12,9 +12,9 @@ To see the results of this how-to it is necessary that you setup a test project 
 
 Before you continue, make sure that you know how to create:
 
-*   **Domain models**, if you need more info, take a look at this [how-to](/howto6/create-a-basic-data-layer).
-*   **Overview and detail pages**, if you need more info, take a look at this [how-to](/howto6/create-your-first-two-overview-and-detail-pages).
-*   **Menu items**, if you need more info, take a look at this [how-to](/howto6/setting-up-the-navigation-structure).
+*   **Domain models**, if you need more info, take a look at this [how-to](create-a-basic-data-layer).
+*   **Overview and detail pages**, if you need more info, take a look at this [how-to](create-your-first-two-overview-and-detail-pages).
+*   **Menu items**, if you need more info, take a look at this [how-to](setting-up-the-navigation-structure).
 
 1.  Create the following domain model:
     ![](attachments/18448705/18581378.png)
@@ -231,16 +231,16 @@ In the previous sections you filtered the list of orders from database on attrib
 
 ## 7\. Related content
 
-*   [Defining access rules using XPath](/howto6/define-access-rules-using-xpath)
-*   [Extending Your Application with Custom Java](/howto6/extending-your-application-with-custom-java)
+*   [Defining access rules using XPath](define-access-rules-using-xpath)
+*   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
 
-*   [Working With Lists in a Microflow](/howto6/working-with-lists-in-a-microflow)
-*   [Triggering Logic using Microflows](/howto6/triggering-logic-using-microflows)
-*   [Creating a Custom Save Button](/howto6/create-a-custom-save-button)
-*   [Optimizing Retrieve Activities](/howto6/optimizing-retrieve-activities)
-*   [Error Handling](/howto6/set-up-error-handling)
-*   [Optimizing Microflow Aggregates](/howto6/optimizing-microflow-aggregates)
-*   [Extract and use sub microflows](/howto6/extract-and-use-sub-microflows)
+*   [Working With Lists in a Microflow](working-with-lists-in-a-microflow)
+*   [Triggering Logic using Microflows](triggering-logic-using-microflows)
+*   [Creating a Custom Save Button](create-a-custom-save-button)
+*   [Optimizing Retrieve Activities](optimizing-retrieve-activities)
+*   [Error Handling](set-up-error-handling)
+*   [Optimizing Microflow Aggregates](optimizing-microflow-aggregates)
+*   [Extract and use sub microflows](extract-and-use-sub-microflows)
 *   [XPath](/refguide6/xpath)
 *   [XPath Constraints](/refguide6/xpath-constraints)
 *   [Aggregate List](/refguide6/aggregate-list)

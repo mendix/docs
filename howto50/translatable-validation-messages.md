@@ -48,8 +48,8 @@ The text is replaced by this microflow, the input is the translated text, the va
 
 ## Related content
 
-*   [Finding Object Activities](/howto50/finding-object-activities)
-*   [Finding Unused Items](/howto50/finding-unused-items)
-*   [Finding your way through a project](/howto50/finding-your-way-through-a-project)
-*   [Showing a Project in the Directory in Explorer](/howto50/showing-a-project-in-the-directory-in-explorer)
-*   [Querying over self-references](/howto50/querying-over-self-references)
+*   [Finding Object Activities](finding-object-activities)
+*   [Finding Unused Items](finding-unused-items)
+*   [Finding your way through a project](finding-your-way-through-a-project)
+*   [Showing a Project in the Directory in Explorer](showing-a-project-in-the-directory-in-explorer)
+*   [Querying over self-references](querying-over-self-references)

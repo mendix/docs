@@ -18,9 +18,9 @@ This how-to is an introduction on building a custom widget that is chainable in 
 Before you start building your own chainable custom widget make sure you have the following programs installed:
 
 *   [Mendix Modeler](https://appstore.home.mendix.com/index3.html?v=7#1421997409316) (version 5.x)
-*   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a how-to about this software here](/howto50/getting-started-with-the-widget-development-plugin-for-adobe-brackets).
+*   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a how-to about this software here](getting-started-with-the-widget-development-plugin-for-adobe-brackets).
 
-Also please read the "Hello World" how-to on created a new widget based on the "AppStoreWidgetBoilerplate". [You can find a how-to about setting up a "Hello World" custom widget here](/howto50/creating-a-basic-hello-world-custom-widget).
+Also please read the "Hello World" how-to on created a new widget based on the "AppStoreWidgetBoilerplate". [You can find a how-to about setting up a "Hello World" custom widget here](creating-a-basic-hello-world-custom-widget).
 
 ## 2\. What are you going to build?
 
@@ -200,9 +200,9 @@ This How-to has enabled you to create a chainable Custom Widget for the Mendix p
 
 ## 9\. Related content
 
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto50/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-*   [Creating a chainable Custom Widget](/howto50/creating-a-chainable-custom-widget)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
+*   [Creating a chainable Custom Widget](creating-a-chainable-custom-widget)
 *   [XML Reference Guide](/refguide5/xml-reference-guide)
-*   [Creating a Basic Hello World Custom Widget](/howto50/creating-a-basic-hello-world-custom-widget)
+*   [Creating a Basic Hello World Custom Widget](creating-a-basic-hello-world-custom-widget)
 *   [XML Reference Guide](/refguide6/xml-reference-guide)
-*   [The Mobile Slider Custom Widget](/howto50/the-mobile-slider-custom-widget)
+*   [The Mobile Slider Custom Widget](the-mobile-slider-custom-widget)

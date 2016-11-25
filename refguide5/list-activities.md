@@ -5,16 +5,16 @@ space: "Reference Guide 5"
 ---
 ## Aggregate
 
-See [Aggregate List](/refguide5/aggregate-list).
+See [Aggregate List](aggregate-list).
 
 ## Change
 
-See [Change List](/refguide5/change-list).
+See [Change List](change-list).
 
 ## Create
 
-See [Create List](/refguide5/create-list).
+See [Create List](create-list).
 
 ## List Operation
 
-See [List Operation](/refguide5/list-operation).
+See [List Operation](list-operation).

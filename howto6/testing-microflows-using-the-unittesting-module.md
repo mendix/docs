@@ -149,4 +149,4 @@ Do not test everything, focus on the most used and complex microflows.
 
 ## 4\. Releated Content
 
-*   [Creating automated tests with TestNG](/howto6/create-automated-tests-with-testng)
+*   [Creating automated tests with TestNG](create-automated-tests-with-testng)

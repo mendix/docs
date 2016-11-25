@@ -13,7 +13,7 @@ The following setting categories are available:
 
 A configuration is a group of settings with a name. You can define any number of configurations. The active configuration, i.e. the one that will be used when running your application, is determined by the drop-down in the toolbar of the Modeler.
 
-See [Configuration](/refguide6/configuration) for the settings in a configuration.
+See [Configuration](configuration) for the settings in a configuration.
 
 ## Runtime
 

@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-A continue event is used to stop the current iteration and start the iteration of the next object. Please note that continue events can only be used inside [loops](/refguide5/loop).
+A continue event is used to stop the current iteration and start the iteration of the next object. Please note that continue events can only be used inside [loops](loop).
 
 <div class="alert alert-warning">{% markdown %}
 

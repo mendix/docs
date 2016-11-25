@@ -11,7 +11,7 @@ You can use configurations to have different database settings for different peo
 
 <div class="alert alert-warning">{% markdown %}
 
-When you are deploying your application to a server or the Mendix cloud you will have to configure settings below there. See the [deployment guide](/refguide6/deployment) for more information.
+When you are deploying your application to a server or the Mendix cloud you will have to configure settings below there. See the [deployment guide](deployment) for more information.
 
 {% endmarkdown %}</div>
 
@@ -110,4 +110,4 @@ Only use this functionality if you know exactly what you are doing. Wrong values
 
 Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`.
 
-See [this page](/refguide6/custom-settings) for an overview of settings.
+See [this page](custom-settings) for an overview of settings.

@@ -44,8 +44,8 @@ To submit changes, follow these guidelines:
 
 ## 5 Related Content
 
-* [Managing Your Application Requirements with Mendix](/howto6/managing-your-application-requirements-with-mendix)
-* [Starting Your Own Repository](/howto6/starting-your-own-repository)
-* [Using Team Server – Version Control](/howto6/using-team-server-version-control)
-* [Gathering User Feedback](/howto6/gathering-user-feedback)
-* [Sharing the Development Database](/howto6/sharing-the-development-database)
+* [Managing Your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
+* [Starting Your Own Repository](starting-your-own-repository)
+* [Using Team Server – Version Control](using-team-server-version-control)
+* [Gathering User Feedback](gathering-user-feedback)
+* [Sharing the Development Database](sharing-the-development-database)

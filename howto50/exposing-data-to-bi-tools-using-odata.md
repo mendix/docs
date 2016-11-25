@@ -145,9 +145,9 @@ Other query examples are:
 
 ## 6\. Related content
 
-*   [Expose a web service](/howto50/exposing-a-web-service)
-*   [Consume a Simple Web Service](/howto50/consuming-a-simple-web-service)
-*   [Consume a Complex Web Service](/howto50/consuming-a-complex-web-service)
+*   [Expose a web service](exposing-a-web-service)
+*   [Consume a Simple Web Service](consuming-a-simple-web-service)
+*   [Consume a Complex Web Service](consuming-a-complex-web-service)
 *   [Published OData Services](/refguide5/published-odata-services)
 *   [OData Representation](/refguide5/odata-representation)
 *   [OData Query Options](/refguide5/odata-query-options)

@@ -10,9 +10,9 @@ Mendix uses visual models to define the logic of your application, we call those
 
 Before you start with this how-to please complete the following prerequisites:
 
-*   Create a basic domain model with [this how-to](/howto50/creating-a-basic-data-layer)
-*   Create overview and detail pages for the Customer object using [this how-to](/howto50/creating-your-first-two-overview-and-detail-pages)
-*   Create a menu item to access the customer overview page using [this how-to](/howto50/setting-up-the-navigation-structure)
+*   Create a basic domain model with [this how-to](creating-a-basic-data-layer)
+*   Create overview and detail pages for the Customer object using [this how-to](creating-your-first-two-overview-and-detail-pages)
+*   Create a menu item to access the customer overview page using [this how-to](setting-up-the-navigation-structure)
 
 ## 2\. Replacing the Default Save Button with a Custom one
 
@@ -61,10 +61,10 @@ Before you start with this how-to please complete the following prerequisites:
 
 ## 5\. Related content
 
-*   [Defining access rules using XPath](/howto50/defining-access-rules-using-xpath)
-*   [Triggering Logic using Microflows](/howto50/triggering-logic-using-microflows)
-*   [Creating a Custom Save Button](/howto50/creating-a-custom-save-button)
-*   [Extending Your Application with Custom Java](/howto50/extending-your-application-with-custom-java)
+*   [Defining access rules using XPath](defining-access-rules-using-xpath)
+*   [Triggering Logic using Microflows](triggering-logic-using-microflows)
+*   [Creating a Custom Save Button](creating-a-custom-save-button)
+*   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
 
 Learn more using the following links:
 

@@ -7,7 +7,7 @@ parent: "consumed-web-services"
 
 <div class="alert alert-warning">{% markdown %}
 
-This document describes the properties of an imported web service. If you want a general overview of imported web services, you can check the [Consumed Web Services](/refguide6/consumed-web-services) overview documentation.
+This document describes the properties of an imported web service. If you want a general overview of imported web services, you can check the [Consumed Web Services](consumed-web-services) overview documentation.
 
 {% endmarkdown %}</div>
 
@@ -36,7 +36,7 @@ This part contains the services to be found in the WSDL.
 *   Name is the name of the service.
 *   Port is selected port in multiple-port service.
 *   Location is where the service is located.
-*   Location constant can be used to add additional locations for a service, for example: the URL of the soap service may change when moving from a development to a production environment. See also [Constants](/refguide6/constants).
+*   Location constant can be used to add additional locations for a service, for example: the URL of the soap service may change when moving from a development to a production environment. See also [Constants](constants).
 
 If there is a multiple-port service defined in the WSDL, a dialog will pop up that allows the user to select which one of the ports to use_._
 
@@ -60,4 +60,4 @@ The documentation of the imported web service. Here you can describe the purpose
 
 # Calling consumed web services
 
-Please refer to the section [Call Web Service Action](/refguide6/call-web-service-action).
+Please refer to the section [Call Web Service Action](call-web-service-action).

@@ -50,13 +50,13 @@ The Team Server is implemented using Subversion and the Modeler uses the HTTPS p
 ### Database server
 
 *   [Microsoft SQL Server 2005 or newer](/howto50/mendix-on-windows-microsoft-sql-server)
-*   [MySQL 5.5](/refguide5/mysql) / [MariaDB 5.5](/refguide5/mysql)
-*   [Oracle Database 11_g_ Release 2 or newer](/refguide5/oracle)
+*   [MySQL 5.5](mysql) / [MariaDB 5.5](mysql)
+*   [Oracle Database 11_g_ Release 2 or newer](oracle)
 *   PostgreSQL 8.4 or newer
 
 ### Java
 
-When running Mendix on a server you will need Java Runtime Environment (JRE) 7 or 8 (for Mendix 5.16 and later). It is not possible anymore to run Mendix 5 apps on Java 6\. See [here](/refguide5/moving-from-4-to-5) for more information.
+When running Mendix on a server you will need Java Runtime Environment (JRE) 7 or 8 (for Mendix 5.16 and later). It is not possible anymore to run Mendix 5 apps on Java 6\. See [here](moving-from-4-to-5) for more information.
 
 You can download JREs here:
 

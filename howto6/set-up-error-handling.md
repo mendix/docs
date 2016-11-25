@@ -135,11 +135,11 @@ Consider the following best practices for error handling:
 
 ## 7 Related Content
 
-* [How to Define Access Rules Using XPath](/howto6/define-access-rules-using-xpath)
-* [How to Trigger Logic Using Microflows](/howto6/triggering-logic-using-microflows)
-* [How to Create a Custom Save Button](/howto6/create-a-custom-save-button)
-* [How to Extend Your Application with Custom Java](/howto6/extending-your-application-with-custom-java)
-* [How to Work with Lists in a Microflow](/howto6/working-with-lists-in-a-microflow)
-* [How to Optimize Retrieve Activities](/howto6/optimizing-retrieve-activities)
-* [How to Optimize Microflow Aggregates](/howto6/optimizing-microflow-aggregates)
-* [How to Extract and Use Submicroflows](/howto6/extract-and-use-sub-microflows)
+* [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
+* [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
+* [How to Create a Custom Save Button](create-a-custom-save-button)
+* [How to Extend Your Application with Custom Java](extending-your-application-with-custom-java)
+* [How to Work with Lists in a Microflow](working-with-lists-in-a-microflow)
+* [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
+* [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
+* [How to Extract and Use Submicroflows](extract-and-use-sub-microflows)

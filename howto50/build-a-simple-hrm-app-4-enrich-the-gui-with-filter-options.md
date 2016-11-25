@@ -17,7 +17,7 @@ This is the fourth how-to in a series of five on how to create a simple HRM appl
 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
-*   [Build a simple HRM app 3: Show related data in the GUI](/howto50/build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+*   [Build a simple HRM app 3: Show related data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
 
 ## 2\. Enrich the user interface
 
@@ -115,14 +115,14 @@ Let's assume that you want to divide your employees into three different levels:
 
     ![](attachments/14091768/14876715.png)
 
-Only the employees with level Medior will be shown. Click [here](/howto50/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic) to go the fifth how-to on how to create a simple HRM application and learn how to smarten up your app with business logic.
+Only the employees with level Medior will be shown. Click [here](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic) to go the fifth how-to on how to create a simple HRM application and learn how to smarten up your app with business logic.
 
 ## 4\. Related content
 
-*   [Build a simple HRM app 1: Create, manage and deploy the app](/howto50/build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-*   [Build a simple HRM app 2: First steps in building a rich GUI](/howto50/build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-*   [Build a simple HRM app 3: Show related data in the GUI](/howto50/build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-*   [Build a simple HRM app 5: Smarten up your app with business logic](/howto50/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
+*   [Build a simple HRM app 1: Create, manage and deploy the app](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+*   [Build a simple HRM app 2: First steps in building a rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+*   [Build a simple HRM app 3: Show related data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+*   [Build a simple HRM app 5: Smarten up your app with business logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
 
 Learn more about this topic using the following helpful links:
 

@@ -6,13 +6,13 @@ parent: "report-widgets"
 
 <div class="alert alert-info">{% markdown %}
 
-This has been renamed to [Report Date Parameter](/refguide6/report-date-parameter) in version 6.10.0.
+This has been renamed to [Report Date Parameter](report-date-parameter) in version 6.10.0.
 
 {% endmarkdown %}</div>
 
 With a date range selector the end user can filter a report on a parameter of the data set which has type DataTime.
 
-In the date range selector you can add [date range fields](/refguide6/date-range-field) to make it easier for an end user to select a data range. (This can be done by right clicking the data range selector and choosing add field from the popup menu.)
+In the date range selector you can add [date range fields](date-range-field) to make it easier for an end user to select a data range. (This can be done by right clicking the data range selector and choosing add field from the popup menu.)
 
 ## Appearance Properties
 
@@ -52,4 +52,4 @@ Parameter of the data set of which the range is determined by this date range se
 
 ### Name, Class, Style
 
-See [Widget Properties](/refguide6/common-widget-properties).
+See [Widget Properties](common-widget-properties).

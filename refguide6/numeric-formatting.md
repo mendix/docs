@@ -5,7 +5,7 @@ parent: "consumed-web-services"
 ---
 ## Behavior in your Mendix application
 
-A number will be translated into XML untouched, except that any trailing zeroes will be stripped and the representation will always be in non-scientific notation. The used rounding mode is configured in the [Project Settings](/refguide6/project-settings).
+A number will be translated into XML untouched, except that any trailing zeroes will be stripped and the representation will always be in non-scientific notation. The used rounding mode is configured in the [Project Settings](project-settings).
 
 ## XML Schema facets
 

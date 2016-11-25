@@ -19,4 +19,4 @@ When you have two activities that you want to link together a sequence flow is u
 
 ### Condition value
 
-Condition value describes which direction should be followed based on the outcome of an [exclusive split](/refguide6/exclusive-split) or an [inheritance split](/refguide6/inheritance-split).
+Condition value describes which direction should be followed based on the outcome of an [exclusive split](exclusive-split) or an [inheritance split](inheritance-split).

@@ -4,7 +4,7 @@ category: "Data Models"
 space: "Mendix 5 How-to's"
 ---
 
-This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to setup a basic data structure, otherwise there won't be any data to validate. If you don't know how to setup a basic data structure, you can take a look at [this](/howto50/creating-a-basic-data-layer) how-to.
+This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to setup a basic data structure, otherwise there won't be any data to validate. If you don't know how to setup a basic data structure, you can take a look at [this](creating-a-basic-data-layer) how-to.
 
 ## 1. Data Validation on Entity Level
 
@@ -23,7 +23,7 @@ This section will explain how you can add validation rules to the domain model o
 
 ## 2\. Required Validation on Inputs, Reference Selectors and Drop-downs
 
-The page builder of the Mendix Modeler allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](/howto50/creating-your-first-two-overview-and-detail-pages) how-to.
+The page builder of the Mendix Modeler allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](creating-your-first-two-overview-and-detail-pages) how-to.
 
 1.  Open a **detail page** and double click an input to open its properties.
 2.  Set the **Required** property to **Yes** and enter a message. This message is shown below the input if a user clicks the save button without filling in a value.
@@ -53,7 +53,7 @@ As long as this Microflow returns a boolean value, you are free to add any logic
 
 ## 4\. Advanced Validation with a Custom 'Save' Button
 
-Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [this](/howto50/creating-your-first-two-overview-and-detail-pages) how-to. Your detail page should look similar to this:
+Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [this](creating-your-first-two-overview-and-detail-pages) how-to. Your detail page should look similar to this:
 
 ![](attachments/2949130/3080395.png)
 
@@ -88,8 +88,8 @@ Validating user input can also be achieved by overriding the default save button
 
 ## 5\. Related content
 
-*   [Working with images and files](/howto50/working-with-images-and-files)
-*   [Creating a basic data layer](/howto50/creating-a-basic-data-layer)
-*   [Denormalize Data to Improve Performance](/howto50/denormalize-data-to-improve-performance)
-*   [Setting up data validation](/howto50/setting-up-data-validation)
-*   [Working With Object Events](/howto50/working-with-object-events)
+*   [Working with images and files](working-with-images-and-files)
+*   [Creating a basic data layer](creating-a-basic-data-layer)
+*   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+*   [Setting up data validation](setting-up-data-validation)
+*   [Working With Object Events](working-with-object-events)

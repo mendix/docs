@@ -3,7 +3,7 @@ title: "Merge Dialog"
 parent: "dialogs"
 space: "Reference Guide 5"
 ---
-With the merge dialog you can [merge](/refguide5/version-control-concepts) changes from a branch line to the main line. For example, a fix that you applied in a maintenance branch line can be merged back to the main line so that you do not have to apply the fix by hand again. Also if you completed developing a large feature in a separate branch line you can use merge to incorporate that feature into the main line.
+With the merge dialog you can [merge](version-control-concepts) changes from a branch line to the main line. For example, a fix that you applied in a maintenance branch line can be merged back to the main line so that you do not have to apply the fix by hand again. Also if you completed developing a large feature in a separate branch line you can use merge to incorporate that feature into the main line.
 
 ![](attachments/524302/688181.png)
 

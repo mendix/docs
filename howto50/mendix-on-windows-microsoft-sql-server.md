@@ -21,7 +21,7 @@ This How-to will cover the following subjects:
 
 Continue to:
 
-* [How-To: Mendix SQL Maintenance Plans](/howto50/mendix-sql-maintenance-plans)
-* [How-To: Restoring a SQL Server database](/howto50/restoring-a-sql-server-database)
-* [How-To: Set up SQL Server user](/howto50/setting-up-a-sql-server-user)
-* [How-To: Troubleshooting SQL Server](/howto50/troubleshooting-sql-server)
+* [How-To: Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
+* [How-To: Restoring a SQL Server database](restoring-a-sql-server-database)
+* [How-To: Set up SQL Server user](setting-up-a-sql-server-user)
+* [How-To: Troubleshooting SQL Server](troubleshooting-sql-server)

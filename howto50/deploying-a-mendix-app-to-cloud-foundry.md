@@ -5,8 +5,8 @@ space: "Mendix 5 How-to's"
 ---
 
 [![](attachments/18448647/19398951.png)](/howto6/deploy-a-mendix-app-to-ibm-bluemix)
-[![](attachments/18448647/19398952.png)](/howto50/deploying-a-mendix-app-to-hp-helion)
-[![](attachments/18448647/19398954.png)](/howto50/deploying-a-mendix-app-to-pivotal)
+[![](attachments/18448647/19398952.png)](deploying-a-mendix-app-to-hp-helion)
+[![](attachments/18448647/19398954.png)](deploying-a-mendix-app-to-pivotal)
 
 Cloud Foundry is an Open Source Platform-as-a-Service that can run all kinds of web applications. Its technical highlights are:
 
@@ -40,4 +40,4 @@ These guides focus on graphical interfaces, command line instructions can be fou
 
 ## Select a Cloud Foundry guide
 
-[![](attachments/18448647/18580546.png)](/howto50/deploying-a-mendix-app-to-pivotal)  [![](attachments/18448647/18580544.png)](/howto50/deploying-a-mendix-app-to-hp-helion)  [![](attachments/18448647/19398955.png)](/howto6/deploy-a-mendix-app-to-ibm-bluemix)
+[![](attachments/18448647/18580546.png)](deploying-a-mendix-app-to-pivotal)  [![](attachments/18448647/18580544.png)](deploying-a-mendix-app-to-hp-helion)  [![](attachments/18448647/19398955.png)](/howto6/deploy-a-mendix-app-to-ibm-bluemix)

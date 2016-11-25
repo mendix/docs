@@ -9,7 +9,7 @@ A static image shows a predefined image. It can be put either in- or outside a d
 
 <div class="alert alert-info">{% markdown %}
 
-[![](attachments/819203/918133.png)](/refguide5/static-image-document-template)
+[![](attachments/819203/918133.png)](static-image-document-template)
 A static image inside a table cell.
 
 {% endmarkdown %}</div>

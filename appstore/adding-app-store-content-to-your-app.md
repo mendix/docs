@@ -135,7 +135,7 @@ Sometimes additional widgets are added when you download a module, for example t
 
 ## 3\. Related content
 
-*   [Adding App Store content to your app](/appstore/adding-app-store-content-to-your-app)
+*   [Adding App Store content to your app](adding-app-store-content-to-your-app)
 
 
 

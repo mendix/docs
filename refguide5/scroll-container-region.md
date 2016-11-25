@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-A scroll container region is part of a [Scroll Container](/refguide5/scroll-container), and defines a content area.
+A scroll container region is part of a [Scroll Container](scroll-container), and defines a content area.
 
 ## Common Properties
 

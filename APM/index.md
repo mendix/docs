@@ -8,8 +8,8 @@ This is the home of the documentation for the APM Tool.
 
 ## Main Documents in This Category
 
-* [Introduction](/APM/introduction)
-* [Use Cases](/APM/use-cases)
-* [Release Notes](/APM/release-notes)
-* [Installation](/APM/installation)
-* [User Manual](/APM/user-manual)
+* [Introduction](introduction)
+* [Use Cases](use-cases)
+* [Release Notes](release-notes)
+* [Installation](installation)
+* [User Manual](user-manual)

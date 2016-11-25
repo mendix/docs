@@ -113,11 +113,11 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 
 ## 12\. Related content
 
-*   [Trends](/mendixcloud/trends)
-*   [Deploying to the cloud](/mendixcloud/deploying-to-the-cloud)
-*   [How to deploy a Mendix app on Azure](/mendixcloud/how-to-deploy-a-mendix-app-on-azure)
-*   [Sending Email](/mendixcloud/sending-email)
-*   [Monitoring application health](/mendixcloud/monitoring-application-health)
-*   [Different user logins when integrated with Mendix SSO](/mendixcloud/different-user-logins-when-integrated-with-mendix-sso)
-*   [Integrate your app with Mendix SSO](/mendixcloud/integrate-your-app-with-mendix-sso)
-*   [Deploying to a Free App](/mendixcloud/deploying-to-a-free-app)
+*   [Trends](trends)
+*   [Deploying to the cloud](deploying-to-the-cloud)
+*   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
+*   [Sending Email](sending-email)
+*   [Monitoring application health](monitoring-application-health)
+*   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
+*   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)
+*   [Deploying to a Free App](deploying-to-a-free-app)

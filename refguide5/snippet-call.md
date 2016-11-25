@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-The snippet call widget allows you to use a [snippet](/refguide5/snippet) on another snippet, a [page](/refguide5/page) or a [layout](/refguide5/layout).
+The snippet call widget allows you to use a [snippet](snippet) on another snippet, a [page](page) or a [layout](layout).
 
 ## Common Properties
 
@@ -17,4 +17,4 @@ The internal name of the widget. You can use this to give sensible names to widg
 
 ### Snippet
 
-The actual [Snippet](/refguide5/snippet) that will be shown here.
+The actual [Snippet](snippet) that will be shown here.

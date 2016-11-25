@@ -10,7 +10,7 @@ Constants are used to define values that can be different in different configura
 Constants can be used in:
 
 *   A microflow expression by prefixing the full name of the constant with @.
-*   [Consumed Web Services](/refguide5/consumed-web-services): in this case the constant is a URL that specifies where the web service is located. This can vary based on the configuration, so that you can use a different web service during development than in production.
+*   [Consumed Web Services](consumed-web-services): in this case the constant is a URL that specifies where the web service is located. This can vary based on the configuration, so that you can use a different web service during development than in production.
 
 ## Common
 
@@ -26,7 +26,7 @@ This field is for documentation purpose only: end users will never see it, and i
 
 Here you can choose the type of the constant.
 
-The chosen type influences what you can fill in under Value. The type of the value is one of the following [data types](/refguide5/data-types): String, Boolean, Date and time, Decimal, Float or Integer/Long.
+The chosen type influences what you can fill in under Value. The type of the value is one of the following [data types](data-types): String, Boolean, Date and time, Decimal, Float or Integer/Long.
 
 ## Value
 

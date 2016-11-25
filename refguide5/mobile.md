@@ -9,19 +9,19 @@ Mendix allows you to quickly build apps for mobile devices. This document gives 
 
 ## Navigation
 
-Every app starts at the home page. You can specify different home pages for phones and tablets in the [Navigation](/refguide5/navigation) document. The tablet and phone device types can be enabled and disabled separately. If you enable a device, you also have to provide its home page. Apart from the home page, different home page for different user roles can be specified. Also, there is a default menu that can be used in [menu widgets](/refguide5/menu-widgets). 
+Every app starts at the home page. You can specify different home pages for phones and tablets in the [Navigation](navigation) document. The tablet and phone device types can be enabled and disabled separately. If you enable a device, you also have to provide its home page. Apart from the home page, different home page for different user roles can be specified. Also, there is a default menu that can be used in [menu widgets](menu-widgets). 
 
 ![](attachments/7831584/8028177.png)
 
 ## Layout
 
-In theory, you can show the whole desktop site on mobile devices but you probably want to have optimized pages with simpler layout and less information. [Layouts](/refguide5/layout), introduced in Mendix 5, help you to create pages that suit a device. For mobile device you might want to have a layout that hides the menu in a collapsible [side bar](/refguide5/sidebar-toggle-button). You will need at least one layout per supported device type (desktop, tablet, phone) to optimize your app but you can create as many as you like.
+In theory, you can show the whole desktop site on mobile devices but you probably want to have optimized pages with simpler layout and less information. [Layouts](layout), introduced in Mendix 5, help you to create pages that suit a device. For mobile device you might want to have a layout that hides the menu in a collapsible [side bar](sidebar-toggle-button). You will need at least one layout per supported device type (desktop, tablet, phone) to optimize your app but you can create as many as you like.
 
 ![](attachments/7831584/8028178.png)
 
 ## Widgets
 
-Some widgets are more suitable to mobile use than others. The [data grid](/refguide5/data-grid), for example, is not very well suited because of its reliance on multiple columns and multiple search fields. The [list view](/refguide5/list-view) is a simpler, more compact widget for showing a list of objects. [Data views](/refguide5/data-view) lend themselves equally to mobile and desktop usage but it, of course, depends on all the widgets you place inside. Some custom widgets can only be used in hybrid mobile apps, because they access native features of the device. And that is the topic of the next section.
+Some widgets are more suitable to mobile use than others. The [data grid](data-grid), for example, is not very well suited because of its reliance on multiple columns and multiple search fields. The [list view](list-view) is a simpler, more compact widget for showing a list of objects. [Data views](data-view) lend themselves equally to mobile and desktop usage but it, of course, depends on all the widgets you place inside. Some custom widgets can only be used in hybrid mobile apps, because they access native features of the device. And that is the topic of the next section.
 
 ## Hybrid Mobile Apps
 
@@ -35,7 +35,7 @@ To access native functions of the device, we provide a number of PhoneGap widget
 
 For more information on hybrid mobile apps, see:
 
-*   [Developing Hybrid Mobile Apps](/refguide5/developing-hybrid-mobile-apps)
-*   [Customizing Hybrid Mobile Apps](/refguide5/customizing-hybrid-mobile-apps)
-*   [Packaging Hybrid Mobile Apps](/refguide5/packaging-hybrid-mobile-apps)
-*   [Publishing Hybrid Mobile Apps](/refguide5/publish-packages-to-mobile-stores)
+*   [Developing Hybrid Mobile Apps](developing-hybrid-mobile-apps)
+*   [Customizing Hybrid Mobile Apps](customizing-hybrid-mobile-apps)
+*   [Packaging Hybrid Mobile Apps](packaging-hybrid-mobile-apps)
+*   [Publishing Hybrid Mobile Apps](publish-packages-to-mobile-stores)

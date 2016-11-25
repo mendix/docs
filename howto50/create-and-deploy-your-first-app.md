@@ -49,12 +49,12 @@ With Mendix you can manage requirements, build applications under version contro
 1.  Expand the module **MyFirstModule** in the project explorer on the left side of the Mendix Modeler.
 2.  Double click **Domain Model**. This opens the Domain Model document on the right side.
     ![](attachments/8784276/14385417.png) 
-3.  Create an domain model like this. If you don't know how to create an entity, take a look at [this](/howto50/creating-a-basic-data-layer) how-to.
+3.  Create an domain model like this. If you don't know how to create an entity, take a look at [this](creating-a-basic-data-layer) how-to.
     ![](attachments/2949123/16842770.png)
 
 ## 5\. Create 'Customer' overview and detail pages
 
-1.  Create an overview and detail page to manage objects of the entity _Customer_. If you don't know how to create those pages, take a look at [this](/howto50/creating-your-first-two-overview-and-detail-pages) how-to.
+1.  Create an overview and detail page to manage objects of the entity _Customer_. If you don't know how to create those pages, take a look at [this](creating-your-first-two-overview-and-detail-pages) how-to.
     Your overview page should look like this:
     ![](attachments/8784276/8946669.png)
     Your detail page should look like this:
@@ -62,7 +62,7 @@ With Mendix you can manage requirements, build applications under version contro
 
 ## 6\. Create 'Order' overview and detail pages
 
-1.  Create an overview and detail page to manage objects of the entity _Order_. If you don't know how to create those pages, take a look at [this](/howto50/creating-your-first-two-overview-and-detail-pages) how-to.
+1.  Create an overview and detail page to manage objects of the entity _Order_. If you don't know how to create those pages, take a look at [this](creating-your-first-two-overview-and-detail-pages) how-to.
     Your overview page should look like this:
     ![](attachments/8784276/8946673.png)
     Your detail page should look like this:
@@ -70,7 +70,7 @@ With Mendix you can manage requirements, build applications under version contro
 
 ## 7\. Create menu items
 
-1.  Create a menu item to access the customer overview page. If you don't know how to create menu items, take a look at this [how-to](/howto50/setting-up-the-navigation-structure).
+1.  Create a menu item to access the customer overview page. If you don't know how to create menu items, take a look at this [how-to](setting-up-the-navigation-structure).
 2.  Create a menu item to access the order overview page.
 
 ## 8\. Deploy application to the cloud
@@ -84,11 +84,11 @@ With Mendix you can manage requirements, build applications under version contro
 
 ## 9\. Related content
 
-*   [How to build a simple HRM app](/howto50/how-to-build-a-simple-hrm-app)
-*   [Create and Deploy Your First App](/howto50/create-and-deploy-your-first-app)
-*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](/howto50/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
-*   [Build a simple HRM app 5: Smarten up your app with business logic](/howto50/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
-*   [Build a simple HRM app 1: Create, manage and deploy the app](/howto50/build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-*   [Build a simple HRM app 2: First steps in building a rich GUI](/howto50/build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-*   [Build a simple HRM app 3: Show related data in the GUI](/howto50/build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-*   [Testing microflows using the UnitTesting module](/howto50/testing-microflows-using-the-unittesting-module)
+*   [How to build a simple HRM app](how-to-build-a-simple-hrm-app)
+*   [Create and Deploy Your First App](create-and-deploy-your-first-app)
+*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+*   [Build a simple HRM app 5: Smarten up your app with business logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
+*   [Build a simple HRM app 1: Create, manage and deploy the app](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+*   [Build a simple HRM app 2: First steps in building a rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+*   [Build a simple HRM app 3: Show related data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+*   [Testing microflows using the UnitTesting module](testing-microflows-using-the-unittesting-module)

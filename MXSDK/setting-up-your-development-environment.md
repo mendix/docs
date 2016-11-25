@@ -9,7 +9,7 @@ This tutorial will lead you through the process of setting up everything you nee
 
 ## Quick Installation
 
-If you know what you are doing, the quick installation instructions below are for you. Otherwise, please skip this paragraph and continue with [Setting up your development tools](/MXSDK/setting-up-your-development-environment).
+If you know what you are doing, the quick installation instructions below are for you. Otherwise, please skip this paragraph and continue with [Setting up your development tools](setting-up-your-development-environment).
 
 **Quick installation instructions**
 
@@ -147,4 +147,4 @@ We use [curl](http://curl.haxx.se/download.html#Win32) to download a `tsconfig.j
 
 ## Next step
 
-Continue with [Getting started - Creating your first script](/MXSDK/creating-your-first-script)
+Continue with [Getting started - Creating your first script](creating-your-first-script)

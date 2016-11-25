@@ -62,4 +62,4 @@ There is a difference between downloading a backup from a sandbox/free app and a
 
 ## 3\. Restoring a backup
 
-The documentation on how to restore a backup can be found [here.](/mxsupport/how-to-restore-a-backup)
+The documentation on how to restore a backup can be found [here.](how-to-restore-a-backup)

@@ -17,8 +17,8 @@ This how-to is about using the Mobile Slider widget in your Mendix hybrid mobile
 Before you start building your Mendix hybrid mobile project with the Mobile Slider custom widget make sure you have the following programs installed:
 
 *   [Mendix Modeler](https://appstore.home.mendix.com/link/modelers)
-*   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a how-to about this software here](/howto6/getting-started-with-the-widget-development-plugin-for-adobe-brackets).
-*   Also please read the "Hello World" how-to on creating a new widget based on the "AppStoreWidgetBoilerplate". [You can find a how-to about setting up a "Hello World" custom widget here](/howto6/create-a-basic-hello-world-custom-widget).
+*   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a how-to about this software here](getting-started-with-the-widget-development-plugin-for-adobe-brackets).
+*   Also please read the "Hello World" how-to on creating a new widget based on the "AppStoreWidgetBoilerplate". [You can find a how-to about setting up a "Hello World" custom widget here](create-a-basic-hello-world-custom-widget).
 
 
 
@@ -104,7 +104,7 @@ You can also use one page as your main slide.
 
 ## 7\. Interesting feature
 
-As promised in my previous how-to [Creating a Chainable Widget](/howto6/create-a-chainable-custom-widget) I would create a custom widget that is able to communicate to another custom widget with custom events. 
+As promised in my previous how-to [Creating a Chainable Widget](create-a-chainable-custom-widget) I would create a custom widget that is able to communicate to another custom widget with custom events. 
 
 <div class="alert alert-warning">
 
@@ -150,10 +150,10 @@ I encourage you to download all the source files from the GitHub repository and 
 
 ## 9\. Related content
 
-*   [Creating a chainable Custom Widget](/howto6/create-a-chainable-custom-widget)
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto6/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-*   [Creating a Basic Hello World Custom Widget](/howto6/create-a-basic-hello-world-custom-widget)
-*   [The Mobile Slider Custom Widget](/howto6/the-mobile-slider-custom-widget)
+*   [Creating a chainable Custom Widget](create-a-chainable-custom-widget)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
+*   [Creating a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
+*   [The Mobile Slider Custom Widget](the-mobile-slider-custom-widget)
 
 
 

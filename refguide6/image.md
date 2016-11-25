@@ -9,7 +9,7 @@ The image widget can be used to show a predefined image on a page, layout or sni
 
 <div class="alert alert-success">{% markdown %}
 
-If you want to dynamically show different images based on data, please take a look at the [image viewer](/refguide6/image-viewer).
+If you want to dynamically show different images based on data, please take a look at the [image viewer](image-viewer).
 
 {% endmarkdown %}</div>
 
@@ -31,7 +31,7 @@ If you want to dynamically show different images based on data, please take a lo
 
 The actual image that this widget shows.
 
-See [Images](/refguide6/images).
+See [Images](images).
 
 {% snippet Image+Width+Unit.md %}
 

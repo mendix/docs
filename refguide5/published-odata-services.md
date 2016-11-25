@@ -11,11 +11,11 @@ The standard used for OData in Mendix is OData version 3 ([http://www.odata.org/
 
 ### Query options
 
-Please refer to the [OData Query Options](/refguide5/odata-query-options) page to see how to filter the OData response.
+Please refer to the [OData Query Options](odata-query-options) page to see how to filter the OData response.
 
 ### Supported Types
 
-Please refer to the [OData Representation](/refguide5/odata-representation) page to see how Mendix attributes are being represented in OData.
+Please refer to the [OData Representation](odata-representation) page to see how Mendix attributes are being represented in OData.
 
 ### Service name
 
@@ -49,7 +49,7 @@ This result is a header which looks like _Authorization: Basic QWxhZGRpbjpvcGV
 
 #### Anonymous Access
 
-With project security enabled, OData resources can still be exposed to anonymous users. Please refer to the section [Anonymous user role](/refguide5/anonymous-users) for detailed information on allowing anonymous users.
+With project security enabled, OData resources can still be exposed to anonymous users. Please refer to the section [Anonymous user role](anonymous-users) for detailed information on allowing anonymous users.
 
 #### Project security off
 
@@ -57,7 +57,7 @@ If project security is off, for debugging purposes you can retrieve all data wit
 
 #### Role-based access
 
-If security is enabled, it is required to configure which users have access rights to a specific OData service document. This can be done by opening the specific Published OData service document, navigating to the Settings tab and changing the allowed roles in the Security section. By default, no allowed user roles are selected. The security settings are reflected in [Module Security](/refguide5/module-security).
+If security is enabled, it is required to configure which users have access rights to a specific OData service document. This can be done by opening the specific Published OData service document, navigating to the Settings tab and changing the allowed roles in the Security section. By default, no allowed user roles are selected. The security settings are reflected in [Module Security](module-security).
 
 ![](attachments/10158388/13402407.png)
 

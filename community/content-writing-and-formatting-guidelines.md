@@ -87,7 +87,7 @@ These are some tips to consider when formatting Markdown:
 
 # 5 Guidelines for Writing and Formatting the How-To's
 
-This section presents detailed guidlines for writing a how-to. Read this section while referencing the [How-to Template](/community/the-how-to-template-page).
+This section presents detailed guidlines for writing a how-to. Read this section while referencing the [How-to Template](the-how-to-template-page).
 
 ## 5.1 How-to Sections
 

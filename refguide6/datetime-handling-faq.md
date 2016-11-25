@@ -68,7 +68,7 @@ Whether something is a local date or not is irrelevant in this case. Note that t
 
 ### I would like to plan an event at the start of office hours in a different time zone. How would I do this?
 
-You can do this by parsing your time string (for example: 2013-01-01 09:00:00) with a certain format and time zone set, using Java actions. The DateTimeLibrary App Store module also provides this functionality. It works in the same way as parseDateTime at [Parse and format date function calls](/refguide6/parse-and-format-date-function-calls) but has an additional parameter for a time zone.
+You can do this by parsing your time string (for example: 2013-01-01 09:00:00) with a certain format and time zone set, using Java actions. The DateTimeLibrary App Store module also provides this functionality. It works in the same way as parseDateTime at [Parse and format date function calls](parse-and-format-date-function-calls) but has an additional parameter for a time zone.
 
 ### What does the setting Scheduled event time zone do?
 

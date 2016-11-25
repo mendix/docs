@@ -10,7 +10,7 @@ The image below provides a domain model representation of the concepts discussed
 
 # Authentication
 
-The Cloud Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](/apidocs/authentication "authentication").
+The Cloud Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication "authentication").
 
 
 # <a name="TeamServerAPI-APIcalls" rel="nofollow"></a>API calls

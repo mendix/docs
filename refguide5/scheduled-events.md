@@ -19,7 +19,7 @@ Documentation | This field is for documentation purposes only. Its value is not 
 
 Property  | Description
 --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and run with all rights (see [Microflow](/refguide5/microflow)).
+Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and run with all rights (see [Microflow](microflow)).
 Enabled   | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from the Modeler or from Eclipse. On server deployments, scheduled events are enabled/disabled using configuration files.
 
 

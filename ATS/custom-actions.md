@@ -7,11 +7,11 @@ category: "Test Development"
 ## Create Custom Actions from scratch
 If you want to create a new action from scratch, go to the Repository and switch to the **All Objects** tab.
 
-![Add Item button on Repository page](attachments/Test+Development/repository.png)
+![Add Item button on Repository page](attachments/test-development/repository.png)
 
 Now click **Add Item**, a popup window will appear.
 
-![Create new Action](attachments/Test+Development/sampleaction.png)
+![Create new Action](attachments/test-development/sampleaction.png)
 
 In that window you can choose wich type of item you want to create.
 Choose **Action** and give it a **name** and an optional **description**. You can change the name and the description later on if you want.
@@ -19,7 +19,7 @@ When you have entered all needed informations, click **Create**.
 
 Now open the newly created action by doubleclicking its name in the repository.
 
-![Edit Action page](attachments/Test+Development/editaction.png)
+![Edit Action page](attachments/test-development/editaction.png)
 
 On this page you can edit your new action by adding other existing actions to it, like you would in a test case, and set **input-** and **output parameters**.
 

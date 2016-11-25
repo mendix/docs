@@ -6,7 +6,7 @@ space: "Reference Guide 6"
 
 With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows.
 
-For information about Java actions in the modeler see [Java Actions](/refguide6/java-actions).
+For information about Java actions in the modeler see [Java Actions](java-actions).
 
 ## Writing code in the .java files of your Java actions
 
@@ -46,7 +46,7 @@ A tutorial with some examples can be found at the [Java API Tutorial](/howto6/ja
 
 ## Using Eclipse as an environment to write your Mendix Java actions
 
-See [Using Eclipse](/refguide6/using-eclipse).
+See [Using Eclipse](using-eclipse).
 
 ## Java actions in the cloud
 

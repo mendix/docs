@@ -57,13 +57,13 @@ With these three pieces of information, you shouold be able to find the cause of
 
 ## 5 Related Content
 
-* [How to Clear Warning Messages](/howto6/clear-warning-messages)
-* [How to Test Web Services Using SoapUI](/howto6/testing-web-services-using-soapui)
-* [How to Monitor Mendix Using JMX](/howto6/monitoring-mendix-using-jmx)
-* [How to Debug Java Actions Remotely](/howto6/debug-java-actions-remotely)
-* [How to Log Levels](/howto6/log-levels)
-* [How to Debug Microflows](/howto6/debug-microflows)
-* [How to Debug Microflows Remotely](/howto6/debug-microflows-remotely)
-* [How to Debug Java Actions](/howto6/debug-java-actions)
-* [How to Handle Common SSO Errors](/howto6/handle-common-mendix-sso-errors)
+* [How to Clear Warning Messages](clear-warning-messages)
+* [How to Test Web Services Using SoapUI](testing-web-services-using-soapui)
+* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
+* [How to Log Levels](log-levels)
+* [How to Debug Microflows](debug-microflows)
+* [How to Debug Microflows Remotely](debug-microflows-remotely)
+* [How to Debug Java Actions](debug-java-actions)
+* [How to Handle Common SSO Errors](handle-common-mendix-sso-errors)
 * [The Root Cause of Runtime Errors and Resolving the 2 Most Common Issues](http://www.mendix.com/blog/the-root-cause-of-runtime-errors-and-resolving-the-2-most-common-issues/)

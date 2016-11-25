@@ -13,7 +13,7 @@ Converts the base type to a string representation.
 
 ### Input parameters
 
-*   A value that should be converted to a String. Supported [types](/refguide5/data-types): Integer/Long, Decimal, Float or DateTime.
+*   A value that should be converted to a String. Supported [types](data-types): Integer/Long, Decimal, Float or DateTime.
 
 ```java
 toString(1.4)

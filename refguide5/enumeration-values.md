@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-An [enumeration](/refguide5/enumerations) has one or more enumeration values. Each value represents one of the options.
+An [enumeration](enumerations) has one or more enumeration values. Each value represents one of the options.
 
 ## Properties
 
@@ -17,7 +17,7 @@ The name of an enumeration value must be a technical name without spaces and spe
 
 ### Caption
 
-The caption of an enumeration value is the text that the end user sees for this enumeration value. This is a translatable text. See [Translatable Texts](/refguide5/translatable-texts).
+The caption of an enumeration value is the text that the end user sees for this enumeration value. This is a translatable text. See [Translatable Texts](translatable-texts).
 
 ### Name
 
@@ -31,4 +31,4 @@ The name of an enumeration value is also used to store the enumeration value in 
 
 ## Image
 
-The image of an enumeration value is used when the values for an attribute (of which the type is the enumeration) are displayed in a data grid column of which the enumeration format is 'Image'. See the documentation on [data grid columns](/refguide5/columns).
+The image of an enumeration value is used when the values for an attribute (of which the type is the enumeration) are displayed in a data grid column of which the enumeration format is 'Image'. See the documentation on [data grid columns](columns).

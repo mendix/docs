@@ -9,7 +9,7 @@ With a drop down the end user can filter a report on a specific parameter of the
 
 <div class="alert alert-warning">{% markdown %}
 
-A drop down can be used for a data set parameter of any type except DateTime. DataTime parameters can be filtered by a [date range selector](/refguide5/date-range-selector).
+A drop down can be used for a data set parameter of any type except DateTime. DataTime parameters can be filtered by a [date range selector](date-range-selector).
 
 {% endmarkdown %}</div>
 
@@ -27,4 +27,4 @@ Refers to the data set parameter of which the value is restricted by this drop d
 
 ### Name, Class, Style
 
-See [Widget Properties](/refguide5/common-widget-properties).
+See [Widget Properties](common-widget-properties).

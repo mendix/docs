@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-A check box is an [input widget](/refguide5/input-widgets) that can be used to display and edit boolean attributes. It will display a tick if the value is true and remain empty if it is false.
+A check box is an [input widget](input-widgets) that can be used to display and edit boolean attributes. It will display a tick if the value is true and remain empty if it is false.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -100,7 +100,7 @@ The on-change property optionally specifies a microflow that will be executed wh
 
 The on change settings specify what parameters are passed to the microflow, whether a progress bar is shown and more.
 
-See [Starting Microflows](/refguide5/starting-microflows).
+See [Starting Microflows](starting-microflows).
 
 ### On enter
 
@@ -110,7 +110,7 @@ The on-enter property optionally specifies a microflow that will be executed whe
 
 The on enter settings specify what parameters are passed to the microflow, whether a progress bar is shown and more.
 
-See [Starting Microflows](/refguide5/starting-microflows).
+See [Starting Microflows](starting-microflows).
 
 ### On leave
 
@@ -120,7 +120,7 @@ The on-leave property optionally specifies a microflow that will be executed whe
 
 The on leave settings specify what parameters are passed to the microflow, whether a progress bar is shown and more.
 
-See [Starting Microflows](/refguide5/starting-microflows).
+See [Starting Microflows](starting-microflows).
 
 ## Common properties
 
@@ -161,5 +161,5 @@ _Default value:_ 0
 
 ## Related articles
 
-*   [Data view](/refguide5/data-view)
-*   [Attribute](/refguide5/attributes)s
+*   [Data view](data-view)
+*   [Attribute](attributes)s

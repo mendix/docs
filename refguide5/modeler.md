@@ -4,7 +4,7 @@ space: "Reference Guide 5"
 ---
 
 
-The Mendix Modeler is the place where you create, view and edit your Mendix application. This is called a [project](/refguide5/project) in the Modeler. A project consists of many documents that are grouped in [modules](/refguide5/modules) and folders. There are some project-level settings but the core of the functionality will be inside modules. Examples of documents are the [project settings](/refguide5/project-settings), [domain model](/refguide5/domain-model), [pages](/refguide5/pages) and [microflows](/refguide5/microflows). The Modeler can have one project open at the same time. You can, however, open two Modeler instances when necessary.
+The Mendix Modeler is the place where you create, view and edit your Mendix application. This is called a [project](project) in the Modeler. A project consists of many documents that are grouped in [modules](modules) and folders. There are some project-level settings but the core of the functionality will be inside modules. Examples of documents are the [project settings](project-settings), [domain model](domain-model), [pages](pages) and [microflows](microflows). The Modeler can have one project open at the same time. You can, however, open two Modeler instances when necessary.
 
 This documentation describes the interface of the Modeler. The rest of the documentation follows the structure of the project explorer.
 
@@ -21,7 +21,7 @@ The Modeler sports quite a number of dockable windows or docks. You can close so
 Dockable window  | Description
 ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Breakpoints      | Shows all breakpoints in the project. You can enable/disable breakpoints from here.
-Changes          | For [Team Server](/refguide5/team-server) projects, this dock shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here.
+Changes          | For [Team Server](team-server) projects, this dock shows the local changes to the project since the last commit. You can commit changes, update to the latest revision and view the history from here.
 Connector        | Shows what elements can be connected to the currently selected element. For example, when a button is a selected, the connector will show microflows that you can drag and drop onto the button to connect them.
 Console          | Shows the output of the Mendix Runtime while running an application.
 Debugger         | Added in Mendix 4.3\. This can be used to debug your application.
@@ -30,7 +30,7 @@ Error List       | Shows the errors and warning currently in your project.
 Find Results     | Shows the results of the latest find action. You can search for text, for usages of an element (e.g. attribute) and for unused items. There are two find results docks. If you lock the results of the first dock, the second one will be used for subsequent find operations until you unlock it.
 Project Explorer | Shows the complete structure of your project including all documents inside the modules. By default the active document is always selected in the project explorer so you can quickly see where the document you are editing is in the tree. You can change this behavior in the preferences window (menu Edit > Preferences).
 Properties       | Shows properties of the currently selected element. This is where a lot of editing in the Modeler takes place.
-Stories          | For [Team Server](/refguide5/team-server) enabled projects, this dock shows the stories of the current sprint.
+Stories          | For [Team Server](team-server) enabled projects, this dock shows the stories of the current sprint.
 Toolbox          | Shows the tools that can be used in the current editor. For example, in a form you can insert all kinds of widgets (text box, data view etc.) by dragging them from the toolbox to your form.
 Variables        | Added in Mendix 4.3\. You can view the current values of variables here when debugging your application.
 
@@ -79,18 +79,18 @@ Previous Error       | Highlight the next find result in the Error List dock and
 View menu        | Description                                                                                    | Shortcut key
 ---------------- | ---------------------------------------------------------------------------------------------- | ------------
 Start Page       | Open the start page in a tab in the Modeler.                                                   |
-Breakpoints      | Open the dockable window '[Breakpoints](/refguide5/modeler)'.                                             |
-Changes          | Open the dockable window '[Changes](/refguide5/modeler)'.                                                 |
-Connector        | Open the dockable window '[Connector](/refguide5/modeler)'.                                               |
-Console          | Open the dockable window '[Console](/refguide5/modeler)'.                                                 |
-Documentation    | Open the dockable window '[Documentation](/refguide5/modeler)'.                                           |
-Error List       | Open the dockable window '[Error List](/refguide5/modeler)'.                                              |
-Find Results 1   | Open the dockable window '[Find Results 1](/refguide5/modeler)'.                                          |
-Find Results 2   | Open the dockable window '[Find Results 2](/refguide5/modeler)'.                                          |
-Project Explorer | Open the dockable window '[Project Explorer](/refguide5/modeler)'.                                        |
-Properties       | Open the dockable window '[Properties](/refguide5/modeler)'.                                              |
-Stories          | Open the dockable window '[Stories](/refguide5/modeler)'.                                                 |
-Toolbox          | Open the dockable window '[Toolbox](/refguide5/modeler)'.                                                 |
+Breakpoints      | Open the dockable window '[Breakpoints](modeler)'.                                             |
+Changes          | Open the dockable window '[Changes](modeler)'.                                                 |
+Connector        | Open the dockable window '[Connector](modeler)'.                                               |
+Console          | Open the dockable window '[Console](modeler)'.                                                 |
+Documentation    | Open the dockable window '[Documentation](modeler)'.                                           |
+Error List       | Open the dockable window '[Error List](modeler)'.                                              |
+Find Results 1   | Open the dockable window '[Find Results 1](modeler)'.                                          |
+Find Results 2   | Open the dockable window '[Find Results 2](modeler)'.                                          |
+Project Explorer | Open the dockable window '[Project Explorer](modeler)'.                                        |
+Properties       | Open the dockable window '[Properties](modeler)'.                                              |
+Stories          | Open the dockable window '[Stories](modeler)'.                                                 |
+Toolbox          | Open the dockable window '[Toolbox](modeler)'.                                                 |
 Fullscreen       | Temporarily hide all dockable windows so that the tabbed documents can be shown in fullscreen. | F11
 Reset Layout     | Resets the layout of the Modeler to factory defaults.                                          |
 

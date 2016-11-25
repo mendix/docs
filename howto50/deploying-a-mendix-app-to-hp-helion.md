@@ -145,8 +145,8 @@ If you encounter any problems you should consult the application logs.
 
 ## 8\. Read More
 
-*   [Deploying a Mendix App to Pivotal](/howto50/deploying-a-mendix-app-to-pivotal)
-*   [Deploying a Mendix App to HP Helion](/howto50/deploying-a-mendix-app-to-hp-helion)
-*   [Deploying a Mendix App to Cloud Foundry](/howto50/deploying-a-mendix-app-to-cloud-foundry)
+*   [Deploying a Mendix App to Pivotal](deploying-a-mendix-app-to-pivotal)
+*   [Deploying a Mendix App to HP Helion](deploying-a-mendix-app-to-hp-helion)
+*   [Deploying a Mendix App to Cloud Foundry](deploying-a-mendix-app-to-cloud-foundry)
 *   [HP Helion Development Platform ALS Documentation](http://docs.hpcloud.com/als/v1/)
 *   [HP Helion Development Platform Documentation](http://docs.hpcloud.com/helion/devplatform/1.1/)

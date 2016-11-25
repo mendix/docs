@@ -12,9 +12,9 @@ To see the results of this how-to it is necessary that you setup a test project 
 
 Before you continue, make sure that you know how to create:
 
-*   **Domain models**, if you need more info, take a look at this [how-to](/howto50/creating-a-basic-data-layer).
-*   **Overview and detail pages**, if you need more info, take a look at this [how-to](/howto50/creating-your-first-two-overview-and-detail-pages).
-*   **Menu items**, if you need more info, take a look at this [how-to](/howto50/setting-up-the-navigation-structure).
+*   **Domain models**, if you need more info, take a look at this [how-to](creating-a-basic-data-layer).
+*   **Overview and detail pages**, if you need more info, take a look at this [how-to](creating-your-first-two-overview-and-detail-pages).
+*   **Menu items**, if you need more info, take a look at this [how-to](setting-up-the-navigation-structure).
 
 1.  Create the following domain model:
     ![](attachments/8785272/8946672.png)
@@ -208,10 +208,10 @@ In the previous sections you filtered the list of orders from database on attrib
 
 ## 7\. Related content
 
-*   [Defining access rules using XPath](/howto50/defining-access-rules-using-xpath)
-*   [Triggering Logic using Microflows](/howto50/triggering-logic-using-microflows)
-*   [Creating a Custom Save Button](/howto50/creating-a-custom-save-button)
-*   [Extending Your Application with Custom Java](/howto50/extending-your-application-with-custom-java)
+*   [Defining access rules using XPath](defining-access-rules-using-xpath)
+*   [Triggering Logic using Microflows](triggering-logic-using-microflows)
+*   [Creating a Custom Save Button](creating-a-custom-save-button)
+*   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
 *   [XPath](/refguide5/xpath)
 *   [XPath Constraints](/refguide5/xpath-constraints)
 *   [Aggregate List](/refguide5/aggregate-list)

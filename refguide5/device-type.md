@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-[Navigation](/refguide5/navigation) in Mendix application is split into three device types: Desktop, Tablet and Phone. Each of these device types has the following properties.
+[Navigation](navigation) in Mendix application is split into three device types: Desktop, Tablet and Phone. Each of these device types has the following properties.
 
 ## General
 
@@ -27,7 +27,7 @@ Here you can specify the application title. This title is shown in the title bar
 
 ### Default home page
 
-The default home page indicates which [page](/refguide5/page) or [microflow](/refguide5/microflow) is opened when a user has just signed in. If role-based home pages (see below) are specified for one of the [user roles](/refguide5/user-roles) of the user, then that home page will be used instead.
+The default home page indicates which [page](page) or [microflow](microflow) is opened when a user has just signed in. If role-based home pages (see below) are specified for one of the [user roles](user-roles) of the user, then that home page will be used instead.
 
 ## Role-based home pages
 
@@ -37,12 +37,12 @@ Per role-based home page you can specify the user role it applies to and the tar
 
 ## Menu
 
-Each device type contains a default menu. You can use these menus in [menu widgets](/refguide5/menu-widgets). Defining the menu for a device type works in the same way as when editing a menu document.
+Each device type contains a default menu. You can use these menus in [menu widgets](menu-widgets). Defining the menu for a device type works in the same way as when editing a menu document.
 
-See [Menu](/refguide5/menu).
+See [Menu](menu).
 
 <div class="alert alert-warning">{% markdown %}
 
-If [security](/refguide5/project-security) is enabled, the menu will only show items that the user has access to.
+If [security](project-security) is enabled, the menu will only show items that the user has access to.
 
 {% endmarkdown %}</div>

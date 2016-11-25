@@ -5,9 +5,9 @@ space: "Reference Guide 5"
 ---
 
 
-The access rules of an entity define what a user is allowed to do with objects of the entity. Users can be allowed to create and/or delete objects, and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing and removing can be limited by means of an [XPath constraint](/refguide5/xpath-constraints).
+The access rules of an entity define what a user is allowed to do with objects of the entity. Users can be allowed to create and/or delete objects, and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing and removing can be limited by means of an [XPath constraint](xpath-constraints).
 
-Every access rule is applicable to one or more [module roles](/refguide5/module-role). An access rule grants certain access rights to those roles. Rules are additive, which means that if multiple access rules apply to the same module role, all access rights of those rules are combined for that module role.
+Every access rule is applicable to one or more [module roles](module-role). An access rule grants certain access rights to those roles. Rules are additive, which means that if multiple access rules apply to the same module role, all access rights of those rules are combined for that module role.
 
 <div class="alert alert-warning">{% markdown %}
 
@@ -53,7 +53,7 @@ A customer is allowed to view her discount, but is not allowed to edit it. The a
 
 ### XPath constraint
 
-The [XPath constraint](/refguide5/xpath-constraints) can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all objects of the entity.
+The [XPath constraint](xpath-constraints) can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all objects of the entity.
 
 <div class="alert alert-info">{% markdown %}
 

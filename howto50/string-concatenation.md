@@ -58,4 +58,4 @@ trim(  $ContactPerson/Fullname + **' ' **+ trim(  $ContactPerson/Firstname
 
 ## Related articles
 
-*   [String Concatenation](/howto50/string-concatenation)
+*   [String Concatenation](string-concatenation)

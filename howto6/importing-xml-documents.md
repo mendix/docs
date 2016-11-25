@@ -12,10 +12,10 @@ The XML document that is used during this how-to contains customers. To be able 
 
 Before you continue, make sure that you know how to create:
 
-*   **Domain models**, if you need more info, take a look at this [how-to](/howto6/create-a-basic-data-layer).
-*   **Custom File Document**, if you need more info, take a look at this [how-to](/howto6/working-with-images-and-files).
-*   **Overview and detail pages**, if you need more info, take a look at this [how-to](/howto6/create-your-first-two-overview-and-detail-pages).
-*   **Menu items**, if you need more info, take a look at this [how-to](/howto6/setting-up-the-navigation-structure).
+*   **Domain models**, if you need more info, take a look at this [how-to](create-a-basic-data-layer).
+*   **Custom File Document**, if you need more info, take a look at this [how-to](working-with-images-and-files).
+*   **Overview and detail pages**, if you need more info, take a look at this [how-to](create-your-first-two-overview-and-detail-pages).
+*   **Menu items**, if you need more info, take a look at this [how-to](setting-up-the-navigation-structure).
 
 1.  Create the following entity **Customer** in your domain model:
     ![](attachments/18448727/18581649.png)
@@ -25,7 +25,7 @@ Before you continue, make sure that you know how to create:
 4.  Create an entity called **XMLDocument** that inherits all properties from **System.FileDocument**.
     ![](attachments/18448727/18581650.png)
 5.  Create overview and detail pages to manage objects of type **XMLDocument**.
-6.  Create a menu item to access the XML document overview page. If you don't know how to create menu items, take a look at this [how-to](/howto6/setting-up-the-navigation-structure).
+6.  Create a menu item to access the XML document overview page. If you don't know how to create menu items, take a look at this [how-to](setting-up-the-navigation-structure).
 
 ## 2\. Adding an XML Schema (XSD)
 
@@ -159,12 +159,12 @@ In this section you will create logic to import customers stored in a [XML docum
 
 ## 6\. Related content
 
-*   [Consuming a complex web service](/howto6/consume-a-complex-web-service)
-*   [Consuming a simple Web Service](/howto6/consume-a-simple-web-service)
-*   [Exporting XML documents](/howto6/export-xml-documents)
-*   [Importing Excel Documents](/howto6/importing-excel-documents)
-*   [Exposing a web service](/howto6/expose-a-web-service)
-*   [Selenium Support](/howto6/selenium-support)
-*   [Synchronizing user accounts using the LDAP module](/howto6/synchronizing-user-accounts-using-the-ldap-module)
-*   [Consuming a REST Service](/howto6/consume-a-rest-service)
-*   [Exposing data to BI tools using OData](/howto6/exposing-data-to-bi-tools-using-odata)
+*   [Consuming a complex web service](consume-a-complex-web-service)
+*   [Consuming a simple Web Service](consume-a-simple-web-service)
+*   [Exporting XML documents](export-xml-documents)
+*   [Importing Excel Documents](importing-excel-documents)
+*   [Exposing a web service](expose-a-web-service)
+*   [Selenium Support](selenium-support)
+*   [Synchronizing user accounts using the LDAP module](synchronizing-user-accounts-using-the-ldap-module)
+*   [Consuming a REST Service](consume-a-rest-service)
+*   [Exposing data to BI tools using OData](exposing-data-to-bi-tools-using-odata)

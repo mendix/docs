@@ -23,4 +23,4 @@ Links to available API documentation such as WSDLs for published web services ar
 
 ## Logging
 
-The runtime logs activity at different levels. You can read more about logging and log levels at the [Logging](/refguide5/logging) page.
+The runtime logs activity at different levels. You can read more about logging and log levels at the [Logging](logging) page.

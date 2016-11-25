@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-A regular expression describes a set of criteria that a string can match. In the [validation rules](/refguide5/validation-rules) of an entity a regular expression can be used to validate whether an attribute of type String matches these criteria.
+A regular expression describes a set of criteria that a string can match. In the [validation rules](validation-rules) of an entity a regular expression can be used to validate whether an attribute of type String matches these criteria.
 
 A regular expression has the following properties.
 
@@ -13,7 +13,7 @@ A regular expression has the following properties.
 
 ### Name
 
-The name can be used to refer to the regular expression from a [validation rule](/refguide5/validation-rules) of an entity.
+The name can be used to refer to the regular expression from a [validation rule](validation-rules) of an entity.
 
 ### Documentation
 

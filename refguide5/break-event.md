@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-A break event is used to stop iterating over the list of objects and continue with the rest of the flow. Please note that break events can only be used inside [loops](/refguide5/loop).
+A break event is used to stop iterating over the list of objects and continue with the rest of the flow. Please note that break events can only be used inside [loops](loop).
 
 <div class="alert alert-info">{% markdown %}
 

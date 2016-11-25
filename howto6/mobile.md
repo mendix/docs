@@ -8,13 +8,13 @@ The rapid evolution of standards like HTML and the wide adoption of frameworks t
 
 These are the mobile how-to's:
 
-* [How to Build a Mendix Hybrid Mobile App for Windows Phone](/howto6/building-a-mendix-hybrid-mobile-app-for-windows-phone)
-* [How to Deploy Your First Hybrid Mobile App](/howto6/deploy-your-first-hybrid-mobile-app)
-* [How to Enable WKWebView for Hybrid Apps on iOS](/howto6/how-to-enable-wkwebview-for-hybrid-app-for-ios)
-* [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto6/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
-* [Push Notifications](/howto6/push-notifications)
-    * [Implementation Guide](/howto6/implementation-guide)
-    * [Testing the Implementation](/howto6/testing-the-implementation)
-    * [APIs](/howto6/apis)
-    * [Setting up Apple Push Notification Server](/howto6/setting-up-apple-push-notification-server)
-    * [Setting up Google Cloud Messaging Server](/howto6/setting-up-google-firebase-cloud-messaging-server)
+* [How to Build a Mendix Hybrid Mobile App for Windows Phone](building-a-mendix-hybrid-mobile-app-for-windows-phone)
+* [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
+* [How to Enable WKWebView for Hybrid Apps on iOS](how-to-enable-wkwebview-for-hybrid-app-for-ios)
+* [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* [Push Notifications](push-notifications)
+    * [Implementation Guide](implementation-guide)
+    * [Testing the Implementation](testing-the-implementation)
+    * [APIs](apis)
+    * [Setting up Apple Push Notification Server](setting-up-apple-push-notification-server)
+    * [Setting up Google Cloud Messaging Server](setting-up-google-firebase-cloud-messaging-server)

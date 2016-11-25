@@ -7,7 +7,7 @@ parent: "document-templates"
 
 <div class="alert alert-warning">{% markdown %}
 
-This document describes the properties of a document template. If you want to see what document templates are for and what kind of widgets can be placed on them, you can check the [Document Templates](/refguide6/document-templates) overview documentation.
+This document describes the properties of a document template. If you want to see what document templates are for and what kind of widgets can be placed on them, you can check the [Document Templates](document-templates) overview documentation.
 
 {% endmarkdown %}</div>
 
@@ -53,7 +53,7 @@ Indicates whether the page has a footer that is displayed on each page (except o
 
 ## Style
 
-See [Style](/refguide6/style).
+See [Style](style).
 
 ## Common Properties
 

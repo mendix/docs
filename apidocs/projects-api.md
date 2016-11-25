@@ -26,7 +26,7 @@ The following operations are available in the Projects API.
 
 ### CreateNewApp
 
-The CreateNewApp operation will create a new app and corresponding project. As parameters it requires a project name, a user name that is linked to a Mendix account, an [API Key](/apidocs/authentication) corresponding to that user account, and a project summary. The project summary may contain a brief description of the project.
+The CreateNewApp operation will create a new app and corresponding project. As parameters it requires a project name, a user name that is linked to a Mendix account, an [API Key](authentication) corresponding to that user account, and a project summary. The project summary may contain a brief description of the project.
 
 ![](attachments/14778446/18582269.png)
 
@@ -37,7 +37,7 @@ The CreateNewApp operation will create a new app and corresponding project. As p
 | ProjectName | String | Name of the project. May not be blank or contain any of the following characters: `<>:/\|?*` |
 | ProjectSummary | String | A brief description of the project. May be set to `empty`. |
 | User | String | The <u>email address</u> you use to log into your Mendix account. |
-| ApiKey | String | An [API Key](/apidocs/authentication) associated to the user account of _User_. |
+| ApiKey | String | An [API Key](authentication) associated to the user account of _User_. |
 
 #### Output
 

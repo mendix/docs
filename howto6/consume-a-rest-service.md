@@ -181,13 +181,13 @@ In this section, you will create a microflow to hypothetically send data back to
 
 ## 6 Related Content
 
-* [Consuming a Complex Web Service](/howto6/consume-a-complex-web-service)
-* [Consuming a Simple Web Service](/howto6/consume-a-simple-web-service)
-* [Exporting XML Documents](/howto6/export-xml-documents)
-* [Importing Excel Documents](/howto6/importing-excel-documents)
-* [Exposing a Web Service](/howto6/expose-a-web-service)
-* [Selenium Support](/howto6/selenium-support)
-* [Synchronizing User Accounts Using the LDAP Module](/howto6/synchronizing-user-accounts-using-the-ldap-module)
-* [Importing XML Documents](/howto6/importing-xml-documents)
-* [Consuming a REST Service](/howto6/consume-a-rest-service)
-* [Exposing Data to BI Tools Using OData](/howto6/exposing-data-to-bi-tools-using-odata)
+* [Consuming a Complex Web Service](consume-a-complex-web-service)
+* [Consuming a Simple Web Service](consume-a-simple-web-service)
+* [Exporting XML Documents](export-xml-documents)
+* [Importing Excel Documents](importing-excel-documents)
+* [Exposing a Web Service](expose-a-web-service)
+* [Selenium Support](selenium-support)
+* [Synchronizing User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
+* [Importing XML Documents](importing-xml-documents)
+* [Consuming a REST Service](consume-a-rest-service)
+* [Exposing Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

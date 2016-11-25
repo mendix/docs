@@ -37,4 +37,4 @@ var attrName = model
 	.attributes[0].name;
 ```
 
-Continue the learning path with [Loading units and elements](/MXSDK/loading-units-and-elements).
+Continue the learning path with [Loading units and elements](loading-units-and-elements).

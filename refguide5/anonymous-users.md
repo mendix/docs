@@ -23,7 +23,7 @@ The sign-in microflow has two parameters.
 
 <table><thead><tr><th class="confluenceTh">Name</th><th class="confluenceTh">Type</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">AnonymousUser</td><td class="confluenceTd">Object of entity 'System.User'</td><td class="confluenceTd">The 'User' object of the anonymous user. This object will be automatically deleted after the execution of the sign-in microflow.</td></tr><tr><td class="confluenceTd">SignedInUser</td><td class="confluenceTd">Object of entity 'System.User'</td><td class="confluenceTd">The 'User' object of the signed-in user.</td></tr></tbody></table><div class="alert alert-warning">{% markdown %}
 
-Clean up objects that were attached to the anonymous user and that you do _not_ transfer to the signed-in user. Since the anonymous user is deleted after running the sign-in microflow, you can use [delete behavior](/refguide5/associations) to automatically clean objects that were attached to the anonymous user.
+Clean up objects that were attached to the anonymous user and that you do _not_ transfer to the signed-in user. Since the anonymous user is deleted after running the sign-in microflow, you can use [delete behavior](associations) to automatically clean objects that were attached to the anonymous user.
 
 {% endmarkdown %}</div>
 

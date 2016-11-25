@@ -136,5 +136,5 @@ It is very important to setup Log Activities within the microflows to capture er
 
 ## 5\. Related content
 
-*   [Explore our connectors and adapters](/howto50/explore-our-connectors-and-adapters)
-*   [Access a Samba share from the MxCloud](/howto50/access-a-samba-share-from-the-mxcloud)
+*   [Explore our connectors and adapters](explore-our-connectors-and-adapters)
+*   [Access a Samba share from the MxCloud](access-a-samba-share-from-the-mxcloud)

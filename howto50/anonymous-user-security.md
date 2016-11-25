@@ -53,5 +53,5 @@ For example to download a file, it is possible to got the url: https://myMendixA
 *   [Security](/howto50/security)
 *   [Generating a personal SSH2 key pair](/howto50/generating-a-personal-ssh2-key-pair)
 *   [Creating a secure app](/howto50/creating-a-secure-app)
-*   [Required Network Access for connecting to the Mendix Platform](/mxsupport/required-network-access-for-connecting-to-the-mendix-platform)
+*   [Required Network Access for connecting to the Mendix Platform](/support/required-network-access-for-connecting-to-the-mendix-platform)
 *   [Anonymous User Security](/howto50/anonymous-user-security)

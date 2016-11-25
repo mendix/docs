@@ -61,4 +61,4 @@ Finally, in the unlikely event that you encounter this error while working on yo
 *   [Debugging Microflows](/howto50/debugging-microflows)
 *   [Debugging Microflows Remotely](/howto50/debugging-microflows-remotely)
 *   [Finding the Root Cause of Runtime Errors](/howto50/finding-the-root-cause-of-runtime-errors)
-*   [How to connect a different project to a node](/mxsupport/how-to-connect-a-different-project-to-a-node)
+*   [How to connect a different project to a node](/support/how-to-connect-a-different-project-to-a-node)

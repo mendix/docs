@@ -120,11 +120,11 @@ defaults:
       menus:
         - "MXSDK"
   - scope:
-      path: 'mxsupport'
+      path: 'support'
       type: pages
     values:
       menus:
-        - "mxsupport"
+        - "support"
   - scope:
       path: 'tips'
       type: pages

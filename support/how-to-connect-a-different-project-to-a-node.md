@@ -59,8 +59,8 @@ In case you want to exchange two **projects** with **nodes** who are already con
 Project A → Node 1
 Project B → Node 2
 
-1.  To be able to connect **project A** to **Node 2**, you have to create a new empty **project C** (see [Chapter 1](/mxsupport/how-to-connect-a-different-project-to-a-node)).
-2.  And to connect this to **Node 1** (see [Chapter 2](/mxsupport/how-to-connect-a-different-project-to-a-node)). 
+1.  To be able to connect **project A** to **Node 2**, you have to create a new empty **project C** (see [Chapter 1](how-to-connect-a-different-project-to-a-node)).
+2.  And to connect this to **Node 1** (see [Chapter 2](how-to-connect-a-different-project-to-a-node)). 
 3.  **Project A** will be released from **Node 1** and can be connected to **Node 2** (see ).
 
 {% endmarkdown %}</div>

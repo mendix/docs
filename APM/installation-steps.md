@@ -8,6 +8,7 @@ This chapter describes the installation of the APM tool.
 # Backup
 
 Did you commit your work to the team server? And did you make a database backup?
+
 ![](attachments/Installation_steps/Commit.png)
 
 If you don't have installed an SVN client like Tortoise SVN make a copy of the widgets folder in your project.
@@ -15,6 +16,7 @@ If you don't have installed an SVN client like Tortoise SVN make a copy of the w
 # Import Module APMAgent
 
 Import the module APMAgent in the modeler.
+
 ![](attachments/Installation_steps/Import_Module_Package.png)
 
 Write down the widgets in the warning dialog that are overwritten to be able to revert these changes.
@@ -24,12 +26,15 @@ Write down the widgets in the warning dialog that are overwritten to be able to 
 If you are not using only English, United States copy the English, United States language for the APMAgent module to all the languages using Tools\Language Operations in the modeller:
 
 ![](attachments/Installation_steps/Language_Operations_Header.png)
+
 ![](attachments/Installation_steps/Language_Operations_APM.png)
+
 ![](attachments/Installation_steps/Language_Operations_Footer.png)
 
 # Add Permissions
 
 Add permissions APMAgent.Admin to project security / user roles tab to a selected administrator role.
+
 ![](attachments/Installation_steps/Add_Permissions.png)
 
 <div class="alert alert-info">
@@ -54,6 +59,7 @@ and give these user roles the corresponding permissions from the APM module: APM
 # Add to Navigation
 
 To use the APM Tools you need to call the APM Tool user interface (UI). Use the "APMAgent/USE_ME/IVK_OpenConsole" microflow for this. Add a navigation menu item for example.
+
 ![](attachments/Installation_steps/Add_To_Navigation.png)
 
 # Optional: Add to After Startup and Before Shutdown
@@ -69,6 +75,7 @@ Call APMAgent\USE_ME\AfterStartup from an after startup microflow. This feature 
 Call APMAgent\USE_ME\BeforeShutdown from a before shutdown microflow.
 
 You can find the AfterStartup and BeforeShutdown microflows in the project settings.
+
 ![](attachments/Installation_steps/Project_Settings_After_Startup.png)
 
 # Configure APMAgent.CompanyName constant
@@ -87,6 +94,7 @@ Otherwise login as Admin and navigate to the APM Tool.
 # Welcome Dialog
 
 After startup for the first time a small wizard is started:
+
 ![](attachments/Installation_steps/Welcome_Dialog.png)
 
 *   Use button to send mail with license request. One buttons tries to open your mail client. The other opens 

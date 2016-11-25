@@ -50,7 +50,7 @@ Since data is separated into projects, your work always happens inside a project
 
 The **Project Dashboard** is the first page you see when you open a project.
 
-![The project dashboard](attachments/Projects/dashboard.png)
+![The project dashboard](attachments/projects/dashboard.png)
 
 There are three sections on the dashboard. The top-left section (1) shows you the number of all the test cases and their results. The lower-left section (2) shows a condensed view of the test results from the last seven days. The right section (3) shows you a detailed view of all the test cases and test suites. For more information, see [Introduction](introduction#dashboard).
 

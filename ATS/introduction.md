@@ -17,11 +17,11 @@ If you already have active projects you can see directly how many test cases hav
 
 When you open an empty project for the first time, the dashboard will look like this:
 
-![ATS empty project dashboard](attachments/Introduction/dashboardempty.png)
+![ATS empty project dashboard](attachments/introduction/dashboardempty.png)
 
 If you already have some active test cases in your **ATS project**, the dashboard will give you a summarized overview of the current state of your project at a glance.
 
-![ATS project dashboard](attachments/Introduction/dashboard.png)
+![ATS project dashboard](attachments/introduction/dashboard.png)
 
 The dashboard can be divided into four parts:
 * Current state chart
@@ -31,11 +31,11 @@ The dashboard can be divided into four parts:
 
 The **current state chart** will show you the total number of test cases in your project. Furthermore, it will present you the state of your test cases as numeral and as percentage.
 
-![current state chart](attachments/Introduction/doughnutchart.png)
+![current state chart](attachments/introduction/doughnutchart.png)
 
 The **7-Day history chart** reflects the state of your test cases over the past seven days.
 
-![7day history chart](attachments/Introduction/7dayhistory.png)
+![7day history chart](attachments/introduction/7dayhistory.png)
 
 The **test case treeview** shows you detailed informations for all of your test cases and test suites. You can see the passed time since the latest execution, its result and the success rate. For test suites, the success rate is calculated using the results of all containing test cases. For data driven tests, the success rate is calculated on basis of the execution results of all records from the data set, they were executed with.
 
@@ -43,21 +43,21 @@ The data set (meaning, the data driven test was executed with) is displayed in t
 
 You can open the latest execution log of a test case by pressing **Show Log**.  
 
-![Testcase treeview](attachments/Introduction/treeview.png)
+![Testcase treeview](attachments/introduction/treeview.png)
 
 If your **test suites** contain one or more test suites/cases you can open a test suite by pressing the *plus* in front of the test suite name. The test suite will expand and you will see all containing test suites/cases. For **data driven tests**, pressing the *plus* will show the executions for all records in the data set that they were executed with.  
 
-![Testcase treeview expanded](attachments/Introduction/treeviewexpanded.png)
+![Testcase treeview expanded](attachments/introduction/treeviewexpanded.png)
 
 You can export the current results of your test cases by pressing **PDF**. This will generate a detailed test report for your project as pdf document.  
 
-![Dashboard export button](attachments/Introduction/dashboardexportbutton.png)
+![Dashboard export button](attachments/introduction/dashboardexportbutton.png)
 
 ## Navigation
 
 You can navigate your project using the navigation sidebar to the left of the screen.
 
-![Navigation sidebar](attachments/Introduction/navigation.png)
+![Navigation sidebar](attachments/introduction/navigation.png)
 
 Over the sidebar you can navigate to different pages of the ATS:
 

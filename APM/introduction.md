@@ -94,24 +94,42 @@ the last several seconds (configurable!). When an error occurs the last few seco
 
 The following additional tools are used to support the tools mentioned above.
 
-* The **Log Tool** is used to collect Mendix Runtime log messages and store them in the database. 
+## Log Tool
+
+The log tool is used to collect Mendix Runtime log messages and store them in the database. 
 This gives remote access to log information, makes it available to consultants, and allows for easy 
 searching and analyzing.
-* The **JVM Browser** can be used to see JVM information similar to tools like JConsole, JVisualVM or JMC.
+
+## JVM Browser
+
+The JVM browser can be used to see JVM information similar to tools like JConsole, JVisualVM or JMC.
  This gives the information to more functional people without the need for specialists and technical access
   to the machines running the Mendix application.
-* The **Query Tool** allows to perform XPath, OQL and JDBC queries to collect either business statistics
+  
+## Query Tool
+
+The query tool enables performing XPath, OQL and JDBC queries to collect either business statistics
  (report like), application statistics (number of scheduled events running at the same time) or database 
  specific statistics like the number of sessions. This module is also used for the explain plan functionality 
   the performance tool.
-* The **Log rerouting** makes sure that java messages that are sent to the Java console, to the 
+  
+## Log Rerouting
+
+The log rerouting makes sure that java messages that are sent to the Java console, to the 
 java util library or to the log4j library are rerouted to the Mendix log. For example javamail sends 
 debug output to the console and with this option you can collect that information and make it visible 
 in the Mendix log as well as in the APMx Log Tool and APMx Trap Tool. This helped our support a lot
  in solving email issues and issues with web services security and certificates.
-* The **JMX Tool** exposes statistics of Mendix, the Mendix Application Monitoring and Analysis Tools
+
+## JMX Tool
+
+The JMX tool exposes statistics of Mendix, the Mendix Application Monitoring and Analysis Tools
  and custom application metrics to the Java Management eXtensions (JMX) for usage in other 
  management platforms.
+ 
+<div class="alert alert-info">
 
 The APM tools give valuable information for analyzing the behavior and performance of an application 
-in production. Off course the tool can and should also be used during development and test phases.
+in production. Of course a tool can and should also be used during development and test phases.
+
+</div>

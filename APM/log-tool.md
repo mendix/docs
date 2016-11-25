@@ -3,29 +3,38 @@ title: "Log Tool"
 space: "Application Performance Monitor"
 category: "User Manual"
 ---
-This chapter gives an overview of the log tool. The Log Tool is used to collect Mendix Runtime log messages and store them in the database. This gives access to log information without the need of looking into log files. Additionally, the log information can be browsed, searched and sorted for analysis.
+This chapter gives an overview of the log tool. The Log Tool is used to collect Mendix Runtime log messages 
+and store them in the database. This gives access to log information without the need of looking into log 
+files. Additionally, the log information can be browsed, searched and sorted for analysis.
+
+## Logs
+The logs tab shows the stored logs in the database.
 
  ![](attachments/Log_Tool/Overview.png)
 
-The following screenshot shows the console part of the Log Tool when running:
+You can start and stop the Log Tool via the play button in the header.
 
-![](attachments/Log_Tool/Console.png)
+Double clicking a log message shows its details.
 
-## Log Tool Control
+ ![](attachments/Log_Tool/View_Message.png)
 
-You can start and stop the Log Tool.
+If the message has level WARNING, ERROR or CRITICAL an extra button [Exclude in TrapTool] is shown.
+ This configures an exclusion in the Trap Tool and allows you to run the Log Tool for a period of time 
+ to collect often occurring WARNING’s, ERROR’s or CRITICAL messages and make sure the Trap Tool does not
+  store huge amounts of irrelevant data when started.
 
-***Note.** The Log-, Trap-, Statistics- and Performance Tool and the Load Test Recorder each subscribe to the Mendix Logging. So installing without starting a tool does not impact the system at all! When stopped the subscription is not completely undone but the tools do nothing so there is no impact at all (aside from Mendix internal micro-overhead for calling the immediately returning tool).*
+***Note.** The [Exclude in Trap Tool] is described further in the chapter for the Trap Tool.*
 
-The following screenshot shows the Log Tool when stopped:
 
- ![](attachments/Log_Tool/Control_NotRunning.png)
+***Note.** The Log-, Trap-, Statistics- and Performance Tool and the Load Test Recorder each subscribe 
+to the Mendix Logging. So installing without starting a tool does not impact the system at all! When 
+stopped the subscription is not completely undone but the tools do nothing so there is no impact at all 
+(aside from Mendix internal micro-overhead for calling the immediately returning tool).*
 
- and the screenshot below shows the Log Tool when started:
-
- ![](attachments/Log_Tool/Control_Running.png)
-
-***Note.** A message comes from the Mendix system and is the same as the message in the Modeler when changing the log levels. The Log Tools, Trap Tool, Statistics Tool and Performance Tool each subscribe to the Mendix message logging. All these tools listen to a high level (TRACE or DEBUG) of messages and filter out the messages they need.*
+***Note.** A message comes from the Mendix system and is the same as the message in the Modeler when 
+changing the log levels. The Log Tools, Trap Tool, Statistics Tool and Performance Tool each subscribe 
+to the Mendix message logging. All these tools listen to a high level (TRACE or DEBUG) of messages and 
+filter out the messages they need.*
 
 ## Log Tool Options
 
@@ -33,55 +42,59 @@ The following screenshot shows the Log Tool Options:
 
  ![](attachments/Log_Tool/Options.png)
 
-Logging consists of a log node, a level and the logging message itself. For the Log Tool to record logging for a specific log node and level, this combination needs to be configured.
+Logging consists of a log node, a level and the logging message itself. For the Log Tool to record logging
+ for a specific log node and level, this combination needs to be configured.
 
-Log nodes are created when the first log message has occurred for this node in Mendix. The options _Level for new nodes _determines the initial log level in the Log Tool for these new log nodes.
+Log nodes are created when the first log message has occurred for this node in Mendix. The options _Level
+ for new nodes _determines the initial log level in the Log Tool for these new log nodes.
 
-The [Max messages to store] can limit the amount of records in the database. There are two things that can happen when the maximum is reached:
+The [Max messages to store] can limit the amount of records in the database. There are two things that can
+ happen when the maximum is reached:
 
 1.  The Log Tool can stop if the checkbox [On max stop?] is checked.
 2.  The Log Tool can start removing the oldest records (comparable to a log file that is rolling over).
 
 ***Notes***
 
-1. *The removal of the oldest records is done by a private thread that only runs when the Log Tool is running.*
-2. *Log Tool counts the messages it writes and counts on start up the messages in the database. When the [Max messages to store] + 10% amount is reached the oldest 10% is deleted. This to be able to delete in small batches.*
+1. *The removal of the oldest records is done by a private thread that only runs when the Log Tool is 
+running.*
+2. *Log Tool counts the messages it writes and counts on start up the messages in the database. When the 
+[Max messages to store] + 10% amount is reached the oldest 10% is deleted. This to be able to delete in 
+small batches.*
 3. *To handle a load balancing situation only the records per server are counted and removed.*
 
-The option _Run fixed period of time (seconds)_ can be used to predetermine the amount of time a Log tool session runs.
+The option _Run fixed period of time (seconds)_ can be used to predetermine the amount of time a Log tool 
+session runs.
 
-You can configure the Log Tool to stop if a queue builds up with too many messages. This is controlled by a parameter called the [Max Processing Delay (ms)] that measures the delay between the moment the log record is logged in the queue and the moment the log record is processed by the Log Tool. If all settings are set to level trace in a high loaded system the [Processing Delay (ms)] counter might go up and the protection will most probably kick-in to protect application performance from degrading.
+You can configure the Log Tool to stop if a queue builds up with too many messages. This is controlled by 
+a parameter called the [Max Processing Delay (ms)] that measures the delay between the moment the log record
+ is logged in the queue and the moment the log record is processed by the Log Tool. If all settings are
+  set to level trace in a high loaded system the [Processing Delay (ms)] counter might go up and the
+   protection will most probably kick-in to protect application performance from degrading.
 
-You can configure the Log Tool to stop or to fall back to a different level of logging in case the Processing Delay becomes to long.
+You can configure the Log Tool to stop or to fall back to a different level of logging in case the 
+Processing Delay becomes to long.
 
-When the tool is running you can Save & Propagate the options which means the settings will immediately take effect in the running session.
+When the tool is running you can Save & Propagate the options which means the settings will immediately
+ take effect in the running session.
 
 ## Log Tool Levels
 
-The Log Tool when it connects reads log levels from the Log tool options to determine what messages are to be logged to the database. If the lognode of a message that is generated by the Mendix runtime is not found in the options it is added to the options with an initial [Level for new nodes]. The log levels are managed with the following dialog:
+The Log Tool when it connects reads log levels from the Log tool options to determine what messages are
+ to be logged to the database. If the lognode of a message that is generated by the Mendix runtime is not
+  found in the options it is added to the options with an initial [Level for new nodes]. The log levels
+   are managed with the following dialog:
 
  ![](attachments/Log_Tool/Levels.png)
 
- Here you can change individual log nodes inline or select multiple rows and set them to [None]. [Info] or increase or decrease their level. On opening of the level dialog the levels are synchronized with the levels in log tool memory, because a fall-back can have changed the requested level.
+Here you can change individual log nodes inline or set all to [None] or [Info]. 
+On opening of the level dialog the levels are synchronized with the levels in log tool memory, 
+because a fall-back can have changed the requested level.
 
-You can delete configuration records for the situation that the runtime no longer uses a certain log node. Since records are automatically created when a message from that node arrives it does not harm the system to delete configuration records.
+You can delete configuration records for the situation that the runtime no longer uses a certain log node. 
+Since records are automatically created when a message from that node arrives it does not harm the system 
+to delete configuration records.
 
-Changes to the log level are immediately applied to the Log Tool if it is running. Other options can be changed to the running Log Tool by using the [Save & Apply] button.
+Changes to the log level are immediately applied to the Log Tool if it is running. Other options can be 
+changed to the running Log Tool by using the [Save & Apply] button.
 
-## Log Tool Results
-
-The Log Tool shows the recorded log messages on the main screen. Several search fields are available to search through and filter these log messages.
-
- ![](attachments/Log_Tool/Results.png)
-
- The search on ID-ranges is added for precise filtering.
-
-Double clicking a log message shows its details.
-
- ![](attachments/Log_Tool/View_Message.png)
-
-If the message has level WARNING, ERROR or CRITICAL an extra button [Exclude in TrapTool] is shown. This configures an exclusion in the Trap Tool and allows you to run the Log Tool for a period of time to collect often occurring WARNING’s, ERROR’s or CRITICAL messages and make sure the Trap Tool does not store huge amounts of irrelevant data when started.
-
-***Note.** The [Exclude in Trap Tool] is described further in the chapter for the Trap Tool.*
-
-Furthermore, you can delete individual records or all records.

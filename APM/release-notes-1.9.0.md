@@ -28,7 +28,6 @@ Below are the details.
 
 ## Measurements Tool
 The measurements tool has been redesigned to include some new features.
-* The term counter has been introduced when discussing the configuration of what to measure, aka the measurement definition
 * An entity triggered events has been introduced to store a record whenever a trigger fires. This record is linked to the trigger, the measurement, and when appropriate the trap, the statistics snapshot or the heap dump.
 * And entity for heapdumps has been added, so they are available from the client side and can be deleted.
 * The trigger actions now include the basic log besides the already available trap, statistics snapshot, heap dump and run microflow.

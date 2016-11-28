@@ -91,4 +91,27 @@
   if ($('#mendix_search').length === 1) {
     new searchClient('#mendix_search', false);
   }
+
+  if ($('.not-found-suggestion')) {
+    var $el = $('.not-found-suggestion'),
+        path = location.pathname.replace(/[\ \/\-\+]/g, ' '),
+        client = algoliasearch(ALGOLIA_CONFIG.appId, ALGOLIA_CONFIG.apiKey),
+        index = client.initIndex(ALGOLIA_CONFIG.indexName);
+
+    index.search(path, function searchDone(err, content) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      if (content.hits && content.hits.length > 0) {
+        var suggestion = content.hits[0],
+            url = (location.hostname === 'localhost' ? '' : 'https://docs.mendix.com') +  suggestion.url;
+            searchUrl = (location.hostname === 'localhost' ? '/search?' : 'https://docs.mendix.com/search?') +  content.params;
+        $el.empty();
+        $el.append('<p class="text-center lead">Are you looking for: <a href="' + url + '">https://docs.mendix.com' + url + '</a> ? If not, use the <a href="' + searchUrl + '">search</a>.</p>');
+        $el.removeClass('hidden');
+      }
+    });
+  }
+
 })(jQuery));

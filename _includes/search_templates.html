@@ -4,7 +4,7 @@
 <script type="text/html" id="stats-template">
   <div class="stats">
     {{#nonEmptyQuery}}Found {{{nbHits}}} results for search: &quot;{{query}}&quot;{{/nonEmptyQuery}}
-    {{#emptyQuery}}There are {{{nbHits}}} pages{{/emptyQuery}}
+    {{#emptyQuery}}There are {{{nbHits}}} results{{/emptyQuery}}
     <div class="stats_time">{{{processingTimeMS}}} ms</div>
   </div>
 </script>

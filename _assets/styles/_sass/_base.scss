@@ -32,6 +32,12 @@ a {
 
   &.no-title {
     margin-top: 30px;
+    &.not-found {
+      margin-top: 5em;
+      .not-found-suggestion {
+        margin: 3em 0;
+      }
+    }
   }
 
   table {

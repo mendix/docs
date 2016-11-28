@@ -3,12 +3,14 @@ const gutil       = require('gulp-util');
 const sass        = require('gulp-sass');
 const sourcemaps  = require('gulp-sourcemaps');
 const minify      = require('gulp-minify');
-const serverFac   = require('spa-server');
+const Server      = require('spa-server');
 const gulputil    = require('gulp-util');
 
 const fs          = require('fs');
 const spawn       = require('child_process').spawn;
+const url         = require('url');
 
+const pump        = require('pump');
 const browserSync = require('browser-sync').create();
 const _           = require('lodash');
 const del         = require('del');
@@ -16,7 +18,7 @@ const runSequence = require('run-sequence');
 const shell       = require('shelljs');
 
 const buildDate     = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
-const PORT          = 3000;
+const PORT          = 4000;
 const DIST_FOLDER   = '_site';            // DO NOT CHANGE THIS, IS USED BY TRAVIS FOR DEPLOYMENT IN MANIFEST
 const CONFIG        = '_config.yml';
 const CONFIG_TEST   = '_config_test.yml';
@@ -196,13 +198,18 @@ const mappings = (write, cb) => {
 };
 
 const spawnServer = () => {
-  const server = serverFac.create({
+  const server = Server.create({
     path: './_site',
     port: 8888,
     fallback: (req, res) => {
-      let target = req.url + '.html';
+      const parsed = url.parse(req.url),
+            target = parsed.pathname + '.html',
+            alternateTarget = parsed.pathname + '/index.html';
       if (shell.test('-f', '_site' + target)) {
-        return target;
+        return target + (parsed.query ? `?${parsed.query}` : '');
+      }
+      if (shell.test('-f', '_site' + alternateTarget)) {
+        return alternateTarget + (parsed.query ? `?${parsed.query}` : '');
       }
       return '404.html';
     }
@@ -229,16 +236,17 @@ gulp.task('copy:images', `Copy images from _assets folder`, () => {
     .pipe(gulp.dest(paths.images.dest));
 });
 
-gulp.task('compress:js', `Compress js files`, () => {
-  return gulp
-    .src(paths.scripts.src)
-    .pipe(minify({
+gulp.task('compress:js', `Compress js files`, (done) => {
+  pump([
+    gulp.src(paths.scripts.src),
+    minify({
       ext: {
         src: '-debug.js',
         min: '.js'
       }
-    }))
-    .pipe(gulp.dest(paths.scripts.dest));
+    }),
+    gulp.dest(paths.scripts.dest)
+  ], done);
 });
 
 gulp.task('js-watch', `Internal task, don't use`, ['compress:js'], function (done) {
@@ -287,7 +295,7 @@ gulp.task('dev', ``, ['sass:dev', 'copy:images', 'compress:js'], done => {
   gulp.watch(paths.styles.src, ['sass:dev']);
   gulp.watch(paths.scripts.src, ['js-watch']);
   gulp.watch(paths.images.src, ['copy:images']);
-  gulputil.log(`\n\n*********\nOpen your browser with this address: ${gulputil.colors.cyan('localhost:3000')}\n*********\n`);
+  gulputil.log(`\n\n*********\nOpen your browser with this address: ${gulputil.colors.cyan(`localhost:${PORT}`)}\n*********\n`);
 });
 
 gulp.task('serve', `Jekyll serve, using ${CONFIG_TEST}`, done => {

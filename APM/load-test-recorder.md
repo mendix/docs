@@ -3,14 +3,13 @@ title: "Load Test Recorder"
 space: "Application Performance Monitor"
 category: "User Manual"
 ---
-This chapter gives an overview of the load test recorder. Mansystems has a load test tool that can be used 
-in projects by our consultants. The tool is likely to be productized in the future and is NOT INCLUDED in 
-the APM Tool. This tool needs a recorder to record sessions. These sessions can then be scripted/parametrized
- for usage in the load test. 
+The load test recorder is a recorder for sessions to be used in a separate tool. It is only seen with 
+special permissions. Mansystems has a load test tool that can be used in projects by our consultants. 
+The load test tool is NOT INCLUDED in the APM Tool!
 
-The APM Tool includes the load test session recorder, so APM Tool users are immediately ready for a load test
- and need not again add a module to their App. Load test customers will need the APM Tool for measurements 
- and hence also benefit from the addition. 
+The APM Tool includes the load test session recorder, so APM Tool users do not need to do a deployment to have
+Mansystems execute a load test.Load test customers will need the APM Tool for measurements 
+ and hence also benefit from the combination. 
 
 ## Load Test Recorder
 

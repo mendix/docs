@@ -3,6 +3,8 @@ const gutil       = require('gulp-util');
 const sass        = require('gulp-sass');
 const sourcemaps  = require('gulp-sourcemaps');
 const minify      = require('gulp-minify');
+const serverFac   = require('spa-server');
+const gulputil    = require('gulp-util');
 
 const fs          = require('fs');
 const spawn       = require('child_process').spawn;
@@ -192,6 +194,21 @@ const mappings = (write, cb) => {
     }
   });
 };
+
+const spawnServer = () => {
+  const server = serverFac.create({
+    path: './_site',
+    port: 8888,
+    fallback: (req, res) => {
+      let target = req.url + '.html';
+      if (shell.test('-f', '_site' + target)) {
+        return target;
+      }
+      return '404.html';
+    }
+  })
+  server.start();
+}
 /*************************************************
   TASKS
 **************************************************/
@@ -224,6 +241,11 @@ gulp.task('compress:js', `Compress js files`, () => {
     .pipe(gulp.dest(paths.scripts.dest));
 });
 
+gulp.task('js-watch', `Internal task, don't use`, ['compress:js'], function (done) {
+    browserSync.reload();
+    done();
+});
+
 gulp.task('sass:build', `Sass build`, () => {
   return gulp
     .src(paths.styles.src)
@@ -254,17 +276,18 @@ gulp.task('jekyll:build-test', `Jekyll build, using ${CONFIG_TEST}`, [], done =>
 });
 
 gulp.task('dev', ``, ['sass:dev', 'copy:images', 'compress:js'], done => {
-  browserSync.init({
-      port: PORT,
-      serveStatic: [ DIST_FOLDER ],
-      serveStaticOptions: {
-          extensions: ['html'] // pretty urls (so this works locally as it would online)
-      }
-  });
+  spawnServer();
   spawnJekyll(true, true);
+  browserSync.init({
+    port: PORT,
+    proxy: 'localhost:8888',
+    online: false,
+    open: false
+  });
   gulp.watch(paths.styles.src, ['sass:dev']);
-  gulp.watch(paths.scripts.src, ['compress:js']);
+  gulp.watch(paths.scripts.src, ['js-watch']);
   gulp.watch(paths.images.src, ['copy:images']);
+  gulputil.log(`\n\n*********\nOpen your browser with this address: ${gulputil.colors.cyan('localhost:3000')}\n*********\n`);
 });
 
 gulp.task('serve', `Jekyll serve, using ${CONFIG_TEST}`, done => {

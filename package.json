@@ -33,7 +33,8 @@
     "gulp-util": "^3.0.7",
     "lodash": "^4.17.2",
     "run-sequence": "^1.2.2",
-    "shelljs": "^0.7.5"
+    "shelljs": "^0.7.5",
+    "spa-server": "^1.0.0"
   },
   "scripts": {}
 }

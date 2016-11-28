@@ -5,7 +5,7 @@ parent: "button-widgets"
 ---
 
 
-The cancel button works in conjunction with a top-level [Data view](/refguide6/data-view). Pressing the button will roll back any changes made on the object shown in the data view.
+The cancel button works in conjunction with a top-level [Data view](data-view). Pressing the button will roll back any changes made on the object shown in the data view.
 
 ## Button properties
 

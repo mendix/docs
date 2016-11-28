@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-The domain model is a data model that describes the information in your application domain in an abstract way. It is central to the architecture of your application. The domain model consists of [entities](/refguide5/entities) and their relations represented by [associations](/refguide5/associations).
+The domain model is a data model that describes the information in your application domain in an abstract way. It is central to the architecture of your application. The domain model consists of [entities](entities) and their relations represented by [associations](associations).
 
 <div class="alert alert-info">{% markdown %}
 
@@ -19,11 +19,11 @@ Here is a domain model that defines customers and orders. The line between them 
 
 ### Entities
 
-See [entities](/refguide5/entities).
+See [entities](entities).
 
 ### Associations
 
-See [associations](/refguide5/associations).
+See [associations](associations).
 
 ## Technical Appendix
 

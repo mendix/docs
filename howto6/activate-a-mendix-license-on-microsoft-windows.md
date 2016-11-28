@@ -7,7 +7,7 @@ tags: []
 
 ## 1 Introduction
 
-After you have installed the Mendix software on your on-premises server and have deployed your first app (for details, see [Deploying Mendix on Microsoft Windows](/howto6/deploy-mendix-on-microsoft-windows)), it is time to activate your license. This how-to will guide you through this process.  
+After you have installed the Mendix software on your on-premises server and have deployed your first app (for details, see [Deploying Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)), it is time to activate your license. This how-to will guide you through this process.  
 
 **After using this how-to, you will know how to do the following:**  
 
@@ -18,7 +18,7 @@ After you have installed the Mendix software on your on-premises server and have
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * To activate a Mendix instance on-premises you need an on-premises license (call your Customer Success Manager for more information)
-* Install Mendix on your Microsoft Windows server (for more information, see [Deploying Mendix on Microsoft Windows](/howto6/deploy-mendix-on-microsoft-windows))
+* Install Mendix on your Microsoft Windows server (for more information, see [Deploying Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows))
 * Be registered as the technical contact for the license
     * This is usually done in the license request process
     * If you are not the technical contact, ask him or her to follow this how-to to activate the license
@@ -62,10 +62,10 @@ In this section, you will enter the license key into the Mendix server, thus com
 
 ## 6 Related Content
 
-*   [Setting up the Database User](/howto6/setting-up-the-database-user)
-*   [Troubleshooting](/howto6/troubleshooting)
-*   [Restoring a SQL Server Database](/howto6/restoring-a-sql-server-database)
-*   [Troubleshooting SQL Server](/howto6/troubleshooting-sql-server)
-*   [Mendix SQL Maintenance Plans](/howto6/mendix-sql-maintenance-plans)
-*   [Setting Up a New SQL Server Database](/howto6/setting-up-a-new-sql-server-database)
-*   [Setting Up a SQL Server User](/howto6/setting-up-a-sql-server-user)
+*   [Setting up the Database User](setting-up-the-database-user)
+*   [Troubleshooting](troubleshooting)
+*   [Restoring a SQL Server Database](restoring-a-sql-server-database)
+*   [Troubleshooting SQL Server](troubleshooting-sql-server)
+*   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
+*   [Setting Up a New SQL Server Database](setting-up-a-new-sql-server-database)
+*   [Setting Up a SQL Server User](setting-up-a-sql-server-user)

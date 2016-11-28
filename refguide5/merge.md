@@ -19,8 +19,8 @@ You have a situation where the microflow has been separated in two flows accordi
 
 ### Break here
 
-See [Microflow Element Common Properties](/refguide5/microflow-element-common-properties)
+See [Microflow Element Common Properties](microflow-element-common-properties)
 
 ### Break condition
 
-See [Microflow Element Common Properties](/refguide5/microflow-element-common-properties)
+See [Microflow Element Common Properties](microflow-element-common-properties)

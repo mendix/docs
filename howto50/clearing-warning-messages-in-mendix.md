@@ -159,14 +159,14 @@ The warning can be double clicked or right-clicked to get more information.
 
 ## 3\. Related content
 
-*   [Finding the Root Cause of Runtime Errors](/howto50/finding-the-root-cause-of-runtime-errors)
-*   [Clearing Warning Messages in Mendix](/howto50/clearing-warning-messages-in-mendix)
+*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+*   [Clearing Warning Messages in Mendix](clearing-warning-messages-in-mendix)
 *   [Finding the Root Cause of Runtime Errors](/howto6/finding-the-root-cause-of-runtime-errors)
-*   [Testing web services using SoapUI](/howto50/testing-web-services-using-soapui)
-*   [Debugging Microflows](/howto50/debugging-microflows)
-*   [Common Mendix SSO Errors](/howto50/common-mendix-sso-errors)
-*   [Monitoring Mendix using JMX](/howto50/monitoring-mendix-using-jmx)
-*   [Debugging Java Actions](/howto50/debugging-java-actions)
+*   [Testing web services using SoapUI](testing-web-services-using-soapui)
+*   [Debugging Microflows](debugging-microflows)
+*   [Common Mendix SSO Errors](common-mendix-sso-errors)
+*   [Monitoring Mendix using JMX](monitoring-mendix-using-jmx)
+*   [Debugging Java Actions](debugging-java-actions)
 
 
 

@@ -17,11 +17,11 @@ Changed in Mendix 5.19: button captions are based on templates with parameters t
 
 {% endmarkdown %}</div>
 
-The caption defines the text that will be shown. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera. Note that to use template parameters the widget must be placed in a context of an entity, e.g. inside a [data view](/refguide5/data-view) or [list view](/refguide5/list-view). The parameters will be replaced by the values of the attributes.
+The caption defines the text that will be shown. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera. Note that to use template parameters the widget must be placed in a context of an entity, e.g. inside a [data view](data-view) or [list view](list-view). The parameters will be replaced by the values of the attributes.
 
 _Before 5.19:_
 
-The caption can be set to either a literal value, or an attribute value. A literal caption specifies a translatable text. See [Translatable Texts](/refguide5/translatable-texts). An attribute caption specifies a path to an attribute. The path starts at the entity of the entity widget in which this widget is contained.
+The caption can be set to either a literal value, or an attribute value. A literal caption specifies a translatable text. See [Translatable Texts](translatable-texts). An attribute caption specifies a path to an attribute. The path starts at the entity of the entity widget in which this widget is contained.
 
 ### Tooltip
 
@@ -31,7 +31,7 @@ Added in Mendix 5.8.0.
 
 {% endmarkdown %}</div>
 
-The tooltip property determines the text you will see in the tooltip that appears when you hover over the button. The tooltip text is translatable. See [Translatable Texts](/refguide5/translatable-texts). If the tooltip is not specified, no tooltip will be shown when hovering over the button.
+The tooltip property determines the text you will see in the tooltip that appears when you hover over the button. The tooltip text is translatable. See [Translatable Texts](translatable-texts). If the tooltip is not specified, no tooltip will be shown when hovering over the button.
 
 ### Image
 

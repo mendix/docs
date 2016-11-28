@@ -115,12 +115,12 @@ To configure the web service call, follow these steps:
 
 ## 5 Related Content
 
-* [Consuming a Simple Web Service](/howto6/consume-a-simple-web-service)
-* [Exporting XML Documents](/howto6/export-xml-documents)
-* [Importing Excel Documents](/howto6/importing-excel-documents)
-* [Exposing a Web Service](/howto6/expose-a-web-service)
-* [Selenium Support](/howto6/selenium-support)
-* [Synchronizing User Accounts Using the LDAP Mmodule](/howto6/synchronizing-user-accounts-using-the-ldap-module)
-* [Importing XML Documents](/howto6/importing-xml-documents)
-* [Consuming a REST Service](/howto6/consume-a-rest-service)
-* [Exposing Data to BI tools Using OData](/howto6/exposing-data-to-bi-tools-using-odata)
+* [Consuming a Simple Web Service](consume-a-simple-web-service)
+* [Exporting XML Documents](export-xml-documents)
+* [Importing Excel Documents](importing-excel-documents)
+* [Exposing a Web Service](expose-a-web-service)
+* [Selenium Support](selenium-support)
+* [Synchronizing User Accounts Using the LDAP Mmodule](synchronizing-user-accounts-using-the-ldap-module)
+* [Importing XML Documents](importing-xml-documents)
+* [Consuming a REST Service](consume-a-rest-service)
+* [Exposing Data to BI tools Using OData](exposing-data-to-bi-tools-using-odata)

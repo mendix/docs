@@ -18,7 +18,7 @@ A template grid showing products with name, description and image.
 
 ### Sort bar
 
-See [Sort Bar](/refguide6/sort-bar).
+See [Sort Bar](sort-bar).
 
 ## Appearance Properties
 

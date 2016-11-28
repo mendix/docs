@@ -35,7 +35,7 @@ In this chapter we will create a new app and select a theme from the New App sel
 
 ## 3\. Configure Scout
 
-**Windows 10 users need to use the following workaround. Click [here](/howto50/scout-and-windows-10-workaround) for the workaround.**
+**Windows 10 users need to use the following workaround. Click [here](scout-and-windows-10-workaround) for the workaround.**
 
 The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can install [Scout](http://mhs.github.io/scout-app/) to run Sass in a self-contained Ruby environment, letting you effortlessly manage all of your Sass projects with a handful of clicks. This way you don't have to worry about using the terminal. You can still do this if you are familiar with Sass and terminal.
 
@@ -87,13 +87,13 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 
 ## 5\. Related content
 
-*   [Scout and Windows 10 Workaround](/howto50/scout-and-windows-10-workaround)
+*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Scout and Windows 10 Workaround](/howto6/scout-and-windows-10-workaround)
-*   [Filtering Data on an Overview Page](/howto50/filtering-data-on-an-overview-page)
-*   [Layouts and Snippets](/howto50/layouts-and-snippets)
+*   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
+*   [Layouts and Snippets](layouts-and-snippets)
 *   [Layouts and Snippets](/howto6/layouts-and-snippets)
 *   [Filtering Data on an Overview Page](/howto6/filtering-data-on-an-overview-page)
-*   [Setup Mendix UI Framework with just CSS](/howto50/setup-mendix-ui-framework-with-just-css)
-*   [Setting Up the Navigation Structure](/howto50/setting-up-the-navigation-structure)
-*   [Creating your first two Overview and Detail pages](/howto50/creating-your-first-two-overview-and-detail-pages)
-*   [Setup Mendix UI Framework](/howto50/setup-mendix-ui-framework)
+*   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
+*   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
+*   [Creating your first two Overview and Detail pages](creating-your-first-two-overview-and-detail-pages)
+*   [Setup Mendix UI Framework](setup-mendix-ui-framework)

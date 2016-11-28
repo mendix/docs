@@ -149,6 +149,6 @@ This module has many steps that must be configured in order for the template to 
 
 ## 6\. Related content
 
-*   [Expose a Web Service](/howto50/consuming-a-complex-web-service)
-*   [Consume a Simple Web Service](/howto50/consuming-a-simple-web-service)
-*   [Consume a Complex Web Service](/howto50/consuming-a-complex-web-service)
+*   [Expose a Web Service](consuming-a-complex-web-service)
+*   [Consume a Simple Web Service](consuming-a-simple-web-service)
+*   [Consume a Complex Web Service](consuming-a-complex-web-service)

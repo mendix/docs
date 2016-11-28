@@ -7,7 +7,7 @@ parent: "microflows"
 
 <div class="alert alert-warning">{% markdown %}
 
-This document describes the properties of a microflow. If you want to see what microflows are for and what kind of elements they contain, you can check the [microflows overview documentation](/refguide6/microflows)
+This document describes the properties of a microflow. If you want to see what microflows are for and what kind of elements they contain, you can check the [microflows overview documentation](microflows)
 
 {% endmarkdown %}</div>
 
@@ -44,7 +44,7 @@ Error microflow defines which microflow is executed when concurrent execution is
 
 ### Return type
 
-The return type defines what information the microflow returns. The caller of the microflow will get a result of this type. See [Data Types](/refguide6/data-types) for the possible return types.
+The return type defines what information the microflow returns. The caller of the microflow will get a result of this type. See [Data Types](data-types) for the possible return types.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -56,7 +56,7 @@ A microflow could return whether or not the committing of an object should conti
 
 ### Allowed roles
 
-Allowed roles defines to which [module role](/refguide6/module-role) the user must have to be able to execute the microflow.
+Allowed roles defines to which [module role](module-role) the user must have to be able to execute the microflow.
 
 <div class="alert alert-warning">{% markdown %}
 
@@ -64,11 +64,11 @@ Note that these roles are only checked when the microflow is executed from the c
 
 {% endmarkdown %}</div>
 
-See also [Module Security](/refguide6/module-security).
+See also [Module Security](module-security).
 
 ### Apply entity access
 
-This property indicates whether entity access based on the current user is applied when performing operations on objects. Applying entity access limits the objects that are retrieved by the [retrieve action](/refguide6/retrieve) to only those that the current user is allowed to see. Similarly, to reading and writing attributes and associations the entity access of the current user is applied. If entity access is not applied on the other hand, all operations are allowed and all objects are retrieved.
+This property indicates whether entity access based on the current user is applied when performing operations on objects. Applying entity access limits the objects that are retrieved by the [retrieve action](retrieve) to only those that the current user is allowed to see. Similarly, to reading and writing attributes and associations the entity access of the current user is applied. If entity access is not applied on the other hand, all operations are allowed and all objects are retrieved.
 
 <div class="alert alert-warning">{% markdown %}
 

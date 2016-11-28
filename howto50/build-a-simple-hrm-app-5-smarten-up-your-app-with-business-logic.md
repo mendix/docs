@@ -17,7 +17,7 @@ This is the last how-to in a series of five on how to create a simple HRM applic
 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
-*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](/howto50/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
 
 ## 2\. Create a microflow
 
@@ -146,10 +146,10 @@ The microflow should look like the image below:
 
 ## 4\. Related content
 
-*   [Build a simple HRM app 1: Create, manage and deploy the app](/howto50/build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-*   [Build a simple HRM app 2: First steps in building a rich GUI](/howto50/build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-*   [Build a simple HRM app 3: Show related data in the GUI](/howto50/build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](/howto50/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+*   [Build a simple HRM app 1: Create, manage and deploy the app](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+*   [Build a simple HRM app 2: First steps in building a rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+*   [Build a simple HRM app 3: Show related data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
 
 Learn more about this topic using the following helpful links:
 

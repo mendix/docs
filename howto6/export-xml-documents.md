@@ -19,9 +19,9 @@ In enterprise software, it is not likely that you work in a [greenfield](https:/
 Before you can start exporting XML documents, you need data in your application that is used during the export. You first need to set up the data structure and GUI to maintain the customer data. Then you'll create the actual export logic and the corresponding export mapping. So, you need to know how to do the following:
 
 * Create a domain model (for more information, see [How to Create a Basic Data Layer](create-a-basic-data-layer))
-* Create a custom file document (for more information, see [How to Work with Images and Files](/howto6/working-with-images-and-files))
-* Create overview and detail pages (for more information, see [How to Create Your First Two Overview and Detail Pages](/howto6/create-your-first-two-overview-and-detail-pages))
-* Create menu items, (for more information, see [How to Set Up the Navigation Structure](/howto6/setting-up-the-navigation-structure))
+* Create a custom file document (for more information, see [How to Work with Images and Files](working-with-images-and-files))
+* Create overview and detail pages (for more information, see [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages))
+* Create menu items, (for more information, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure))
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -203,12 +203,12 @@ To create the export logic, follow these steps:
 
 ## 6 Related Content
 
-* [How to Consume a Complex Web Service](/howto6/consume-a-complex-web-service)
-* [How to Consume a Simple Web Service](/howto6/consume-a-simple-web-service)
-* [How to Import Excel Documents](/howto6/importing-excel-documents)
-* [How to Expose a Web Service](/howto6/expose-a-web-service)
-* [How to Enable Selenium Support](/howto6/selenium-support)
-* [How to Synchronize User Accounts Using the LDAP Module](/howto6/synchronizing-user-accounts-using-the-ldap-module)
-* [How to Import XML Documents](/howto6/importing-xml-documents)
-* [How to Consume a REST Service](/howto6/consume-a-rest-service)
-* [How to Expose Data to BI Tools Using OData](/howto6/exposing-data-to-bi-tools-using-odata)
+* [How to Consume a Complex Web Service](consume-a-complex-web-service)
+* [How to Consume a Simple Web Service](consume-a-simple-web-service)
+* [How to Import Excel Documents](importing-excel-documents)
+* [How to Expose a Web Service](expose-a-web-service)
+* [How to Enable Selenium Support](selenium-support)
+* [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
+* [How to Import XML Documents](importing-xml-documents)
+* [How to Consume a REST Service](consume-a-rest-service)
+* [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

@@ -38,7 +38,7 @@ A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires 
 
 #### FileManager
 
-+ [Set File Manager](mendix-actions/FileManager/set-file-manager)
++ [Set File Manager](mendix-actions/filemanager/set-file-manager)
 
 #### Generic
 + [Assert Current Page](mendix-actions/generic/assert-current-page)

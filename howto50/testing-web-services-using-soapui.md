@@ -17,7 +17,7 @@ You can publish your own webservices in a Mendix application. These webservices 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
 *   Download and install [SoapUI](http://www.soapui.org/downloads/soapui/open-source.html). 
-*   Complete the how-to [Exposing a web service](/howto50/exposing-a-web-service). 
+*   Complete the how-to [Exposing a web service](exposing-a-web-service). 
 
 <table><thead><tr><th class="confluenceTh">Software</th><th class="confluenceTh">Version used in this how-to</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd">Mendix Modeler</td><td colspan="1" class="confluenceTd">5.20.0</td></tr><tr><td class="confluenceTd">SoapUI</td><td class="confluenceTd">5.2.0</td></tr></tbody></table><div class="alert alert-warning">{% markdown %}
 
@@ -27,17 +27,17 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 ## 2\. Publish more microflows as web service operation
 
-In the how-to [Exposing a web service](/howto50/exposing-a-web-service) you already published the microflow _GetCustomers _as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
+In the how-to [Exposing a web service](exposing-a-web-service) you already published the microflow _GetCustomers _as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
 
 1.  Open the **Mendix Modeler**.
-2.  Open the project you created in the how-to [Exposing a web service](/howto50/exposing-a-web-service).
+2.  Open the project you created in the how-to [Exposing a web service](exposing-a-web-service).
 3.  Create a **Microflow** that creates a customer and returns a boolean. 
 
     <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/27dedcb6-38d2-48e4-a77d-68e1d5bde73a/createcustomer?embed=true"></iframe>
 4.  Create a **Microflow** that deletes a customer and returns a boolean.
 
     <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/33c17aed-c915-420b-b433-0c22614a0273/deletecustomer?embed=true"></iframe>
-5.  Publish both microflows as web service operation of the **CustomerWebservice** as described in chapter 4 of the how-to [Exposing a web service](/howto50/exposing-a-web-service).
+5.  Publish both microflows as web service operation of the **CustomerWebservice** as described in chapter 4 of the how-to [Exposing a web service](exposing-a-web-service).
 
 ## 3\. Create a new SOAP project
 
@@ -212,13 +212,13 @@ Congratulations! You have just created your first automated test with SoapUI.
 
 ## 8\. Related content
 
-*   [Finding the Root Cause of Runtime Errors](/howto50/finding-the-root-cause-of-runtime-errors)
-*   [Clearing Warning Messages in Mendix](/howto50/clearing-warning-messages-in-mendix)
-*   [Testing web services using SoapUI](/howto50/testing-web-services-using-soapui)
-*   [Debugging Microflows](/howto50/debugging-microflows)
-*   [Common Mendix SSO Errors](/howto50/common-mendix-sso-errors)
-*   [Monitoring Mendix using JMX](/howto50/monitoring-mendix-using-jmx)
-*   [Debugging Java Actions](/howto50/debugging-java-actions)
+*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+*   [Clearing Warning Messages in Mendix](clearing-warning-messages-in-mendix)
+*   [Testing web services using SoapUI](testing-web-services-using-soapui)
+*   [Debugging Microflows](debugging-microflows)
+*   [Common Mendix SSO Errors](common-mendix-sso-errors)
+*   [Monitoring Mendix using JMX](monitoring-mendix-using-jmx)
+*   [Debugging Java Actions](debugging-java-actions)
 
 Learn more about this topic using the following helpful links:
 

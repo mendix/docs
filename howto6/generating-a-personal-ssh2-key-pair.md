@@ -100,7 +100,7 @@ As an alternative you can directly enter the username in the server name edit fi
 
 ## 7 Related content
 
-*   [Generating a personal SSH2 key pair](/howto6/generating-a-personal-ssh2-key-pair)
-*   [Creating a secure app](/howto6/create-a-secure-app)
-*   [Security](/howto6/security)
-*   [Anonymous User Security](/howto6/set-up-anonymous-user-security)
+*   [Generating a personal SSH2 key pair](generating-a-personal-ssh2-key-pair)
+*   [Creating a secure app](create-a-secure-app)
+*   [Security](security)
+*   [Anonymous User Security](set-up-anonymous-user-security)

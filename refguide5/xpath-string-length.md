@@ -5,4 +5,4 @@ space: "Reference Guide 5"
 ---
 
 
-See [length](/refguide5/xpath-length).
+See [length](xpath-length).

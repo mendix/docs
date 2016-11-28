@@ -58,12 +58,12 @@ When a module contains entities or attributes of which the name is changed, the 
 ## 4\. Related content
 
 *   [Install the SMTP email module](/howto6/install-and-configure-the-smtp-module)
-*   [App Store Content Support](/appstore/app-store-content-support)
-*   [Install an App from the App Store](/appstore/install-an-app-from-the-app-store)
-*   [App Store Approval Guidelines](/appstore/app-store-approval-guidelines)
-*   [App Store Content Support](/appstore/app-store-content-support)
-*   [Adding App Store content to your app](/appstore/adding-app-store-content-to-your-app)
-*   [Adding App Store content to your app](/appstore/adding-app-store-content-to-your-app)
+*   [App Store Content Support](app-store-content-support)
+*   [Install an App from the App Store](install-an-app-from-the-app-store)
+*   [App Store Approval Guidelines](app-store-approval-guidelines)
+*   [App Store Content Support](app-store-content-support)
+*   [Adding App Store content to your app](adding-app-store-content-to-your-app)
+*   [Adding App Store content to your app](adding-app-store-content-to-your-app)
 *   [Restoring a SQL Server database](/howto6/restoring-a-sql-server-database)
 *   [Mendix SQL Maintenance Plans](/howto6/mendix-sql-maintenance-plans)
 *   [Setting up a new SQL Server database](/howto6/setting-up-a-new-sql-server-database)

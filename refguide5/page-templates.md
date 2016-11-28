@@ -33,15 +33,15 @@ To enable the page templates, expand `Project` in the `Project Explorer` and ope
 
 ### Changes in page generation
 
-If page templates are enabled generated pages will contain a [layout grid](/refguide5/layout-grid) instead of a table and input widgets will have their built-in labels enabled. For existing projects this might mean that the new pages will not be styled properly as the page structure is different.
+If page templates are enabled generated pages will contain a [layout grid](layout-grid) instead of a table and input widgets will have their built-in labels enabled. For existing projects this might mean that the new pages will not be styled properly as the page structure is different.
 
 With page templates disabled the generated pages will be the same as in Mendix 5.17.
 
 ### Changes in how pages are opened
 
-If page templates are disabled, pages are opened in content or as a pop-up based on the location property of a button. With page templates enabled this is determined by the [layout type](/refguide5/layout), unless the layout type is legacy. This may result in different behavior of your application.
+If page templates are disabled, pages are opened in content or as a pop-up based on the location property of a button. With page templates enabled this is determined by the [layout type](layout), unless the layout type is legacy. This may result in different behavior of your application.
 
-For more information see [layout](/refguide5/layout).
+For more information see [layout](layout).
 
 ## Navigation layouts
 

@@ -66,13 +66,13 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 
 ## 5\. Related content
 
-*   [Scout and Windows 10 Workaround](/howto50/scout-and-windows-10-workaround)
+*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Scout and Windows 10 Workaround](/howto6/scout-and-windows-10-workaround)
-*   [Filtering Data on an Overview Page](/howto50/filtering-data-on-an-overview-page)
-*   [Layouts and Snippets](/howto50/layouts-and-snippets)
+*   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
+*   [Layouts and Snippets](layouts-and-snippets)
 *   [Layouts and Snippets](/howto6/layouts-and-snippets)
 *   [Filtering Data on an Overview Page](/howto6/filtering-data-on-an-overview-page)
-*   [Setup Mendix UI Framework with just CSS](/howto50/setup-mendix-ui-framework-with-just-css)
-*   [Setting Up the Navigation Structure](/howto50/setting-up-the-navigation-structure)
-*   [Creating your first two Overview and Detail pages](/howto50/creating-your-first-two-overview-and-detail-pages)
-*   [Setup Mendix UI Framework](/howto50/setup-mendix-ui-framework)
+*   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
+*   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
+*   [Creating your first two Overview and Detail pages](creating-your-first-two-overview-and-detail-pages)
+*   [Setup Mendix UI Framework](setup-mendix-ui-framework)

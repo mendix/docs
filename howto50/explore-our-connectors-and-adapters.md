@@ -86,6 +86,6 @@ One of the strengths of Mendix is that it’s easy to connect your Mendix applic
 
 # Related content
 
-*   [Explore our connectors and adapters](/howto50/explore-our-connectors-and-adapters)
-*   [Send Custom Emails From Your App](/howto50/send-custom-emails-from-your-app)
-*   [Access a Samba share from the MxCloud](/howto50/access-a-samba-share-from-the-mxcloud)
+*   [Explore our connectors and adapters](explore-our-connectors-and-adapters)
+*   [Send Custom Emails From Your App](send-custom-emails-from-your-app)
+*   [Access a Samba share from the MxCloud](access-a-samba-share-from-the-mxcloud)

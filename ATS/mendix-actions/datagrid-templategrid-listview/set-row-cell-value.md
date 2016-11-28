@@ -14,7 +14,7 @@ Sets the cell value in a given DataGrid row, specified by the column name.
 
 ## Usage
 
-You have to pass a DataGrid row as WebElement and the column name to determine which cell you want to write. To get the DataGrid row, use the actions [Find Item/Row](/ATS/mendix-actions/datagrid-templategrid-listview/find-itemrow), [Find Item/Row (by child element)](/ATS/mendix-actions/datagrid-templategrid-listview/find-itemrow-by-child) or [Find/Assert DataGrid Row](/ATS/mendix-actions/datagrid-templategrid-listview/findassert-datagrid-row).    
+You have to pass a DataGrid row as WebElement and the column name to determine which cell you want to write. To get the DataGrid row, use the actions [Find Item/Row](find-itemrow), [Find Item/Row (by child element)](find-itemrow-by-child) or [Find/Assert DataGrid Row](findassert-datagrid-row).    
 
 ## Input Parameters
 

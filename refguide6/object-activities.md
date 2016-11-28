@@ -7,28 +7,28 @@ parent: "activities"
 
 ## Cast
 
-See [Cast Object](/refguide6/cast-object).
+See [Cast Object](cast-object).
 
 ## Change
 
-See [Change Object](/refguide6/change-object).
+See [Change Object](change-object).
 
 ## Commit 
 
-See [Commit Object](/refguide6/committing-objects).
+See [Commit Object](committing-objects).
 
 ## Create
 
-See [Create Object](/refguide6/create-object).
+See [Create Object](create-object).
 
 ## Delete
 
-See [Delete Object(s)](/refguide6/deleting-objects).
+See [Delete Object(s)](deleting-objects).
 
 ## Retrieve
 
-See [Retrieve](/refguide6/retrieve).
+See [Retrieve](retrieve).
 
 ## Rollback
 
-See [Rollback Object](/refguide6/rollback-object).
+See [Rollback Object](rollback-object).

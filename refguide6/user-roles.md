@@ -5,7 +5,7 @@ parent: "project-security"
 ---
 A user role aggregates a number of access rights on data, forms and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent.
 
-Every user role has one or more [module roles](/refguide6/module-role), which means that users with that user role have all the access rights that are defined for those module roles. A typical user role has module role System.User and at least one other module role.
+Every user role has one or more [module roles](module-role), which means that users with that user role have all the access rights that are defined for those module roles. A typical user role has module role System.User and at least one other module role.
 
 The purpose of the distinction between user roles and module roles is to make a module self-contained (independent from the project in which it is defined or used), so that it can be reused in different projects and/or published to the App Store.
 
@@ -27,7 +27,7 @@ A list of module roles of which the access rights are accumulated in the user ro
 
 ### Check security
 
-This specifies whether the consistency of security settings is checked for this user role. You can choose to not check security for a user role. For example, user roles that are used only for web service users do not need to be checked because they never sign in to the client. See [Project Security](/refguide6/project-security) for more information on the security check.
+This specifies whether the consistency of security settings is checked for this user role. You can choose to not check security for a user role. For example, user roles that are used only for web service users do not need to be checked because they never sign in to the client. See [Project Security](project-security) for more information on the security check.
 
 ## User Management Properties
 

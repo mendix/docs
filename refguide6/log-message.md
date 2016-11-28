@@ -9,7 +9,7 @@ With the log-message action you can create messages that appear in the log of yo
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide6/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 
@@ -36,7 +36,7 @@ The log node name is a microflow expression that defines the source of the log m
 
 <div class="alert alert-success">{% markdown %}
 
-It is advised to use a [constant](/refguide6/constants) for the log node name. This prevents typing errors and makes it easier to change the log node name afterwards.
+It is advised to use a [constant](constants) for the log node name. This prevents typing errors and makes it easier to change the log node name afterwards.
 
 {% endmarkdown %}</div>
 
@@ -46,7 +46,7 @@ Template defines the text of the message. The template can contain parameters th
 
 ### Parameters
 
-For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [microflow expressions](/refguide6/microflow-expressions) resulting in a string.
+For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [microflow expressions](microflow-expressions) resulting in a string.
 
 <div class="alert alert-success">{% markdown %}
 

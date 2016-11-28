@@ -12,17 +12,17 @@ Before you can start importing data into your application, you first need to set
 
 Before you continue, make sure that you know how to create:
 
-*   **Domain models** ([Creating a basic data layer](/howto50/creating-a-basic-data-layer)).
-*   **Overview and detail pages** ([Creating your first two overview and detail pages](/howto50/creating-your-first-two-overview-and-detail-pages)).
-*   **Menu items **([Setup the navigation structure](/howto50/setting-up-the-navigation-structure)).
+*   **Domain models** ([Creating a basic data layer](creating-a-basic-data-layer)).
+*   **Overview and detail pages** ([Creating your first two overview and detail pages](creating-your-first-two-overview-and-detail-pages)).
+*   **Menu items **([Setup the navigation structure](setting-up-the-navigation-structure)).
 *   **Microflows** ().
-*   **Add Appstore** **content (**[Add appstore content to your app](/howto50/adding-app-store-content-to-your-app)).
-*   **Secure applications **([Creating a secure app](/howto50/creating-a-secure-app)).
+*   **Add Appstore** **content (**[Add appstore content to your app](adding-app-store-content-to-your-app)).
+*   **Secure applications **([Creating a secure app](creating-a-secure-app)).
 
 1. Create the following domain model.
     ![](attachments/8785707/8946752.png)
 
-    The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [Working with images and files](/howto50/working-with-images-and-files).
+    The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [Working with images and files](working-with-images-and-files).
 
 2. Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.
 3. Create **menu items **to access the **Order** and the **Customer** overview pages.
@@ -197,6 +197,6 @@ Once you have completed an Excel template you can export the template for exampl
 
 ## 8\. Related content
 
-*   [Expose a web service](/howto50/exposing-a-web-service)
-*   [Consume a Simple Web Service](/howto50/consuming-a-simple-web-service)
-*   [Consume a Complex Web Service](/howto50/consuming-a-complex-web-service)
+*   [Expose a web service](exposing-a-web-service)
+*   [Consume a Simple Web Service](consuming-a-simple-web-service)
+*   [Consume a Complex Web Service](consuming-a-complex-web-service)

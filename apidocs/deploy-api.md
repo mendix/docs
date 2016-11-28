@@ -13,7 +13,7 @@ The image below provides a domain model representation of the concepts discussed
 
 # <a name="DeployAPI-Authentication" rel="nofollow"></a>Authentication
 
-The Cloud Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](/apidocs/authentication "authentication").
+The Cloud Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication "authentication").
 In the web interface of our portal we provide 2-factor authentication for all operations that involve production environments. For our APIs we obviously cannot provide you with 2-factor authentication in the same way. For the APIs we created Multi-Factor Authentication so you can control which users can access which environments via the Node Security screen under Project Settings you can configure which environments are accessible via the API to which users. By default test and acceptance are accessible to users that also have access to these environments via the portal. Access to the production environment needs to be configured by the technical contact of the application for specific users.
 
 # <a name="DeployAPI-APIcalls" rel="nofollow"></a>API calls

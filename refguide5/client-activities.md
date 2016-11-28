@@ -7,20 +7,20 @@ space: "Reference Guide 5"
 
 ## Close form
 
-See [Close Form](/refguide5/close-form).
+See [Close Form](close-form).
 
 ## Download File
 
-See [Download File](/refguide5/download-file).
+See [Download File](download-file).
 
 ## Show Form
 
-See [Show Page](/refguide5/show-page).
+See [Show Page](show-page).
 
 ## Show Message
 
-See [Show Message](/refguide5/show-message).
+See [Show Message](show-message).
 
 ## Validation Feedback
 
-See [Validation Feedback](/refguide5/validation-feedback).
+See [Validation Feedback](validation-feedback).

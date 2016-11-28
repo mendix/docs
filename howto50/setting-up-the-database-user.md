@@ -45,13 +45,13 @@ Allow the user to connect to the database. If the user is Denied the privilege t
 
 ## 5\. Related content
 
-*   [Setting up the database user](/howto50/setting-up-the-database-user)
+*   [Setting up the database user](setting-up-the-database-user)
 *   [Setting up the database user](/howto6/setting-up-the-database-user)
 *   [How to execute an SQL statement on an external database](/bestpractices/how-to-execute-an-sql-statement-on-an-external-database)
-*   [Restoring a SQL Server database](/howto50/restoring-a-sql-server-database)
-*   [Mendix SQL Maintenance Plans](/howto50/mendix-sql-maintenance-plans)
-*   [Setting up a new SQL Server database](/howto50/setting-up-a-new-sql-server-database)
-*   [Troubleshooting SQL Server](/howto50/troubleshooting-sql-server)
-*   [Setting up a SQL Server user](/howto50/setting-up-a-sql-server-user)
+*   [Restoring a SQL Server database](restoring-a-sql-server-database)
+*   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
+*   [Setting up a new SQL Server database](setting-up-a-new-sql-server-database)
+*   [Troubleshooting SQL Server](troubleshooting-sql-server)
+*   [Setting up a SQL Server user](setting-up-a-sql-server-user)
 *   [Restoring a SQL Server database](/howto6/restoring-a-sql-server-database)
 *   [Troubleshooting SQL Server](/howto6/troubleshooting-sql-server)

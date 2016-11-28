@@ -10,9 +10,9 @@ The Mendix Modeler has a built-in consistency checker that validates if the appl
 
 Before starting this how-to please complete the following prerequisites:
 
-*   [Creating a basic data layer](/howto50/creating-a-basic-data-layer)
+*   [Creating a basic data layer](creating-a-basic-data-layer)
 
-*   [Creating your first two Overview and Detail pages](/howto50/creating-your-first-two-overview-and-detail-pages)
+*   [Creating your first two Overview and Detail pages](creating-your-first-two-overview-and-detail-pages)
 
 ## 2\. Debugging Overview
 
@@ -98,11 +98,11 @@ Sometimes it's needed to configure a breakpoint in such a way that the Microflow
 
 ## 7\. Related content
 
-*   [Finding the Root Cause of Runtime Errors](/howto50/finding-the-root-cause-of-runtime-errors)
-*   [Clearing Warning Messages in Mendix](/howto50/clearing-warning-messages-in-mendix)
-*   [Testing web services using SoapUI](/howto50/testing-web-services-using-soapui)
-*   [Debugging Microflows](/howto50/debugging-microflows)
-*   [Common Mendix SSO Errors](/howto50/common-mendix-sso-errors)
-*   [Monitoring Mendix using JMX](/howto50/monitoring-mendix-using-jmx)
-*   [Debugging Java Actions](/howto50/debugging-java-actions)
+*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+*   [Clearing Warning Messages in Mendix](clearing-warning-messages-in-mendix)
+*   [Testing web services using SoapUI](testing-web-services-using-soapui)
+*   [Debugging Microflows](debugging-microflows)
+*   [Common Mendix SSO Errors](common-mendix-sso-errors)
+*   [Monitoring Mendix using JMX](monitoring-mendix-using-jmx)
+*   [Debugging Java Actions](debugging-java-actions)
 *   [Microflow Element Common Properties](/refguide5/microflow-element-common-properties)

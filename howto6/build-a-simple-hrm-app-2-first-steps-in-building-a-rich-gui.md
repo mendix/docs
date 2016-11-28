@@ -19,7 +19,7 @@ This is the second how-to in a series of five on how to create a simple HRM appl
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Use the first how-to in this series: [Build a Simple HRM App 1: Create, Manage, and Deploy the App](/howto6/build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+* Use the first how-to in this series: [Build a Simple HRM App 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
 
 ## 3 Creating a Domain Model
 
@@ -175,13 +175,13 @@ To view your app, follow these steps:
 
 You can now add and edit employees! 
 
-To use the third how-to for creating a simple HRM application, see [Build a Simple HRM App 3: Show Related Data in the GUI](/howto6/build-a-simple-hrm-app-3-show-related-data-in-the-gui).
+To use the third how-to for creating a simple HRM application, see [Build a Simple HRM App 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui).
 
 ## 6 Related Content
 
-* [Build a Simple HRM App 1: Create, Manage, and Deploy the App](/howto6/build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-* [Build a Simple HRM App 3: Show Related Data in the GUI](/howto6/build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-* [Build a Simple HRM App 4: Enrich the GUI with Filter Options](/howto6/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
-* [Build a Simple HRM App 5: Smarten Up Your App with Business Logic](/howto6/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
-* [Create and Deploy Your First App](/howto6/create-and-deploy-your-first-app)
-* [Testing Microflows Using the UnitTesting Module](/howto6/testing-microflows-using-the-unittesting-module)
+* [Build a Simple HRM App 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+* [Build a Simple HRM App 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+* [Build a Simple HRM App 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+* [Build a Simple HRM App 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
+* [Create and Deploy Your First App](create-and-deploy-your-first-app)
+* [Testing Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)

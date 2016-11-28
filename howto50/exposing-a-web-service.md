@@ -25,10 +25,10 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 ## 2\. Data structure and GUI
 
-1.  Create the following entity **Customer** in your domain model. If you don't know how to create an entity, take a look at [this how-to](/howto50/creating-a-basic-data-layer).
+1.  Create the following entity **Customer** in your domain model. If you don't know how to create an entity, take a look at [this how-to](creating-a-basic-data-layer).
     ![](attachments/7831572/8945665.png)
-2.  Create overview and detail pages to manage objects of type **Customer**. If you don't know how to create overview and detail pages, take a look at [this how-to](/howto50/creating-your-first-two-overview-and-detail-pages).
-3.  Create a menu item to access the customer overview page. If you don't know how to create menu items, take a look at [this how-to](/howto50/setting-up-the-navigation-structure).
+2.  Create overview and detail pages to manage objects of type **Customer**. If you don't know how to create overview and detail pages, take a look at [this how-to](creating-your-first-two-overview-and-detail-pages).
+3.  Create a menu item to access the customer overview page. If you don't know how to create menu items, take a look at [this how-to](setting-up-the-navigation-structure).
 4.  Run the application and add some data to expose in the web service.
 
 ## 3\. Create a published web service
@@ -51,7 +51,7 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 ## 4\. Create functionality to expose
 
-1.  Create a **Microflow** that retrieves and returns a list of customers from the database. If you don't know how to create a Microflow, take a look at this [how-to](/howto50/create-your-first-microflow-hello-world).
+1.  Create a **Microflow** that retrieves and returns a list of customers from the database. If you don't know how to create a Microflow, take a look at this [how-to](create-your-first-microflow-hello-world).
 2.  To make the Microflow a little more exciting, you could add 2 input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action as shown below:
     ![](attachments/2949205/16285924.png)
 
@@ -123,5 +123,5 @@ If an attribute is renamed after it is published, the name in the wsdl does not 
 
 ## 9\. Related content
 
-*   [Consume a Simple Web Service](/howto50/consuming-a-simple-web-service)
-*   [Consume a Complex Web Service](/howto50/consuming-a-complex-web-service)
+*   [Consume a Simple Web Service](consuming-a-simple-web-service)
+*   [Consume a Complex Web Service](consuming-a-complex-web-service)

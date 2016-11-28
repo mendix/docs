@@ -13,7 +13,7 @@ While developing a hybrid mobile app, you cannot simply test it in your mobile b
 
 ![](attachments/16714059/16844055.png)
 
-See also [this page](/refguide6/getting-the-mendix-developer-app) for information about how to download the Mendix Developer App.
+See also [this page](getting-the-mendix-developer-app) for information about how to download the Mendix Developer App.
 
 <div class="alert alert-warning">{% markdown %}
 
@@ -21,13 +21,13 @@ Note that your mobile device has to be on the same network as your development m
 
 {% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
 
-The Mendix Developer App does not yet support running [offline enabled](/refguide6/offline) apps.
+The Mendix Developer App does not yet support running [offline enabled](offline) apps.
 
 {% endmarkdown %}</div>
 
 See also:
 
-*   [Mobile](/refguide6/mobile)
-*   [Getting the Mendix Developer App](/refguide6/getting-the-mendix-developer-app)
-*   [Customizing Hybrid Mobile Apps](/refguide6/customizing-hybrid-mobile-apps)
-*   [Packaging Hybrid Mobile Apps](/refguide6/packaging-hybrid-mobile-apps)
+*   [Mobile](mobile)
+*   [Getting the Mendix Developer App](getting-the-mendix-developer-app)
+*   [Customizing Hybrid Mobile Apps](customizing-hybrid-mobile-apps)
+*   [Packaging Hybrid Mobile Apps](packaging-hybrid-mobile-apps)

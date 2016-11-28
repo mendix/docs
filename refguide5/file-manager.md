@@ -144,6 +144,6 @@ _Default value:_ 0
 
 ## Related articles
 
-*   [Data view](/refguide5/data-view)
-*   [Entities](/refguide5/entities)
-*   [Associations](/refguide5/associations)
+*   [Data view](data-view)
+*   [Entities](entities)
+*   [Associations](associations)

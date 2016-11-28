@@ -7,7 +7,7 @@ space: "Reference Guide 5"
 
 <div class="alert alert-info">{% markdown %}
 
-For Mendix 5.18 or later see the [Scroll Container](/refguide5/scroll-container).
+For Mendix 5.18 or later see the [Scroll Container](scroll-container).
 
 {% endmarkdown %}</div>
 

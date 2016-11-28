@@ -7,7 +7,7 @@ parent: "project"
 
 <div class="alert alert-info">{% markdown %}
 
-For more general information on security, see [Security](/refguide6/security).
+For more general information on security, see [Security](security).
 
 {% endmarkdown %}</div>
 
@@ -58,7 +58,7 @@ The module status overview shows the security status for each module. It shows t
 
 A user role aggregates a number of access rights on data, forms and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent.
 
-Every user role has one or more [module roles](/refguide6/module-role), which means that users with that user role have all the access rights that are defined for those module roles. A typical user role has module role System.User and at least one other module role.
+Every user role has one or more [module roles](module-role), which means that users with that user role have all the access rights that are defined for those module roles. A typical user role has module role System.User and at least one other module role.
 
 The purpose of the distinction between user roles and module roles is to make a module self-contained (independent from the project in which it is defined or used), so that it can be reused in different projects and/or published to the App Store.
 
@@ -80,7 +80,7 @@ A list of module roles of which the access rights are accumulated in the user ro
 
 **Check security**
 
-This specifies whether the consistency of security settings is checked for this user role. You can choose to not check security for a user role. For example, user roles that are used only for web service users do not need to be checked because they never sign in to the client. See [Project Security](/refguide6/project-security) for more information on the security check.
+This specifies whether the consistency of security settings is checked for this user role. You can choose to not check security for a user role. For example, user roles that are used only for web service users do not need to be checked because they never sign in to the client. See [Project Security](project-security) for more information on the security check.
 
 ### User Management Properties
 
@@ -150,7 +150,7 @@ Here you can configure whether the specified demo users are created and accessib
 
 **Username**
 
-The name of the demo user. This name must be unique, and cannot be the same as the name of the [administrator user](/refguide6/administrator).
+The name of the demo user. This name must be unique, and cannot be the same as the name of the [administrator user](administrator).
 
 **Password**
 
@@ -192,7 +192,7 @@ The sign-in microflow has two parameters.
 
 <div class="alert alert-warning">{% markdown %}
 
-Clean up objects that were attached to the anonymous user and that you do _not_ transfer to the signed-in user. Since the anonymous user is deleted after running the sign-in microflow, you can use [delete behavior](/refguide6/associations) to automatically clean objects that were attached to the anonymous user.
+Clean up objects that were attached to the anonymous user and that you do _not_ transfer to the signed-in user. Since the anonymous user is deleted after running the sign-in microflow, you can use [delete behavior](associations) to automatically clean objects that were attached to the anonymous user.
 
 {% endmarkdown %}</div>
 

@@ -8,4 +8,4 @@ parent: "activities"
 
 ## Log Message
 
-See [Log Message](/refguide6/log-message).
+See [Log Message](log-message).

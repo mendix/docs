@@ -86,13 +86,13 @@ You can also set the level of log messages in ones that you have created via a m
 
 ## 3\. Related content
 
-*   [Finding the Root Cause of Runtime Errors](/howto6/finding-the-root-cause-of-runtime-errors)
-*   [Clearing Warning Messages in Mendix](/howto6/clear-warning-messages)
-*   [Testing web services using SoapUI](/howto6/testing-web-services-using-soapui)
-*   [Monitoring Mendix using JMX](/howto6/monitoring-mendix-using-jmx)
-*   [Debugging Java actions remotely](/howto6/debug-java-actions-remotely)
-*   [Log Levels](/howto6/log-levels)
-*   [Debugging Microflows](/howto6/debug-microflows)
-*   [Debugging Java Actions](/howto6/debug-java-actions)
-*   [Common Mendix SSO Errors](/howto6/handle-common-mendix-sso-errors)
-*   [Debugging Microflows Remotely](/howto6/debug-microflows-remotely)
+*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+*   [Clearing Warning Messages in Mendix](clear-warning-messages)
+*   [Testing web services using SoapUI](testing-web-services-using-soapui)
+*   [Monitoring Mendix using JMX](monitoring-mendix-using-jmx)
+*   [Debugging Java actions remotely](debug-java-actions-remotely)
+*   [Log Levels](log-levels)
+*   [Debugging Microflows](debug-microflows)
+*   [Debugging Java Actions](debug-java-actions)
+*   [Common Mendix SSO Errors](handle-common-mendix-sso-errors)
+*   [Debugging Microflows Remotely](debug-microflows-remotely)

@@ -83,7 +83,7 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 
 ### Caption
 
-The caption of a column is the text that appears as a header above the rows. This is a translatable text. See [Translatable Texts](/refguide6/translatable-texts).
+The caption of a column is the text that appears as a header above the rows. This is a translatable text. See [Translatable Texts](translatable-texts).
 
 ### Editable
 
@@ -110,7 +110,7 @@ Note that all objects will be taken into account, and not just the ones on the c
 
 ### Aggregate caption
 
-The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Translatable Texts](/refguide6/translatable-texts).
+The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Translatable Texts](translatable-texts).
 
 <div class="alert alert-info">{% markdown %}
 
@@ -120,6 +120,6 @@ The aggregate caption is the text that appears in front of the computed value. T
 
 ### Show tooltip
 
-This property determines whether the tooltip page is shown as the mouse is hovered over this column. The tooltip page can be configured on the [Data grid](/refguide6/data-grid).
+This property determines whether the tooltip page is shown as the mouse is hovered over this column. The tooltip page can be configured on the [Data grid](data-grid).
 
 _Default value:_ False

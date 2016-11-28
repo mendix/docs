@@ -12,7 +12,7 @@ The User Management API allows your company's user management systems to integra
 
 # Authentication
 
-The User Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](/apidocs/authentication).
+The User Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication).
 
 # Error Handling
 
@@ -241,7 +241,7 @@ A JSON object with the following keys:
 *   _displayName_ (String, required) : This name is used for display purposes in the entire Mendix platform.
 *   _password_ (String, required) : Should have at least 8 characters, an uppercase, lowercase, non-alphanumeric and numeric character.
 *   _emailAddress_ (String, required) : This will be the user's login name, and the address to which communications from the Mendix platform will be sent.
-*   _country_ (String, required) : The user's country. See [countries reference](/apidocs/user-management-api).
+*   _country_ (String, required) : The user's country. See [countries reference](user-management-api).
 *   _changePasswordOnFirstLogin_ (Boolean, optional) : If set to true, the user will be forced to change his/her password on first login. Default value: false
 
 ##### Example

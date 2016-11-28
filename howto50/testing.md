@@ -7,10 +7,10 @@ Testing is a vital component when creating a Mendix application. On this page yo
 
 | How-to's
 | ----------------------------------------
-| [Testing microflows using the UnitTesting module](/howto50/testing-microflows-using-the-unittesting-module)
-| [Testing web services using SoapUI](/howto50/testing-web-services-using-soapui)
-| [Testing Mendix applications using Selenium IDE](/howto50/testing-mendix-applications-using-selenium-ide)
-| [Creating automated tests with TestNG](/howto50/creating-automated-tests-with-testng)
+| [Testing microflows using the UnitTesting module](testing-microflows-using-the-unittesting-module)
+| [Testing web services using SoapUI](testing-web-services-using-soapui)
+| [Testing Mendix applications using Selenium IDE](testing-mendix-applications-using-selenium-ide)
+| [Creating automated tests with TestNG](creating-automated-tests-with-testng)
 
 | Blogs
 | -----------------------------------------

@@ -11,4 +11,4 @@ The on-enter property optionally specifies a microflow that will be executed whe
 
 The on enter settings specify what parameters are passed to the microflow, whether a progress bar is shown and more.
 
-See [Starting Microflows](/refguide5/starting-microflows).
+See [Starting Microflows](starting-microflows).

@@ -5,7 +5,7 @@ parent: "input-widgets"
 ---
 
 
-The radio buttons widget is an [input widget](/refguide6/input-widgets) that can be used to display and edit boolean and enumeration attributes.
+The radio buttons widget is an [input widget](input-widgets) that can be used to display and edit boolean and enumeration attributes.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -61,5 +61,5 @@ _Default value:_ Horizontal
 
 ## Related articles
 
-*   [Data view](/refguide6/data-view)
-*   [Attributes](/refguide6/attributes)
+*   [Data view](data-view)
+*   [Attributes](attributes)

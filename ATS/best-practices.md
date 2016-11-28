@@ -16,7 +16,7 @@ Use input parameters and generic functions instead of hardcoding every variable 
 
 If you want to access a child node, from a parent widget and you cannot use the [Find widget child node action](mendix-actions/system/find-widget-child-node), you should get the parent widget first, before you manipulate the DOM with a JavaScript action. Especially if you use the extended JQuery selectors. Those selectors tend to be slower in their execution time and if you have to traverse the whole DOM to get to the desired node, this can make a huge difference. Use the [Find/Assert Widget action](mendix-actions/generic/findassert-widget) on the parent widget and pass the result to the JavaScript action as input parameter. From there you can traverse the subtree with the parent widget as root and save execution time.
 
-For more informations about JQuery selectors read the [JQuery selectors section](/ATS/selectors#jquery-selectors) of this reference or visit the [official JQuery selectors reference](https://api.jquery.com/category/selectors/).  
+For more informations about JQuery selectors read the [JQuery selectors section](selectors#jquery-selectors) of this reference or visit the [official JQuery selectors reference](https://api.jquery.com/category/selectors/).  
 
 ### Naming Conventions
 Always use descriptive names for your actions and parameters, e.g. "Set TextBox value" for an action or "Column Name" for a parameter. This makes it easier to know what your action does, without looking into it.

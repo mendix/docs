@@ -15,7 +15,7 @@ This is the value you wish to display in the document.
 
 ### Style
 
-See [Style](/refguide6/style)
+See [Style](style)
 
 ## Common Properties
 

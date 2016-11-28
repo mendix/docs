@@ -97,7 +97,7 @@ Mendix module packages are stored as Mendix Package (.mpk) files. However, you n
 
 ### Importing Content from the App Store
 
-To learn more about importing content from the App Store, see [Adding App Store content to your app](/howto50/adding-app-store-content-to-your-app).
+To learn more about importing content from the App Store, see [Adding App Store content to your app](adding-app-store-content-to-your-app).
 
 ## Exporting Objects
 
@@ -141,9 +141,9 @@ Mendix module object packages are stored as Mendix Package (.mpk) files. An obje
 
 ## Related content
 
-*   [Expose a Web Service](/howto50/consuming-a-complex-web-service)
-*   [Consume a Simple Web Service](/howto50/consuming-a-simple-web-service)
-*   [Consume a Complex Web Service](/howto50/consuming-a-complex-web-service)
+*   [Expose a Web Service](consuming-a-complex-web-service)
+*   [Consume a Simple Web Service](consuming-a-simple-web-service)
+*   [Consume a Complex Web Service](consuming-a-complex-web-service)
 *   [Modules](/refguide5/modules)
 *   [Project](/refguide5/project)
 *   [Common Widgets](/refguide5/common-widgets)

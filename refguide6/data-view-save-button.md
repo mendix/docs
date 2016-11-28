@@ -7,7 +7,7 @@ parent: "data-view-control-bar"
 
 <div class="alert alert-info">{% markdown %}
 
-This special save button, that was only available in the data view control bar, has been removed in version 6.7.0. Use a normal [Save button](/refguide6/save-button) instead.
+This special save button, that was only available in the data view control bar, has been removed in version 6.7.0. Use a normal [Save button](save-button) instead.
 
 {% endmarkdown %}</div>
 

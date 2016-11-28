@@ -9,7 +9,7 @@ With the validation-feedback action you can display a red text below a widget th
 
 <div class="alert alert-info">{% markdown %}
 
-See [Microflow Element Common Properties](/refguide5/microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {% endmarkdown %}</div>
 
@@ -21,7 +21,7 @@ Object defines for which object the message will be shown.
 
 ### Member
 
-Member defines for which attribute or association the message will be shown. In the case of a [reference selector](/refguide5/reference-selector) or [reference set selector](/refguide5/reference-set-selector) you should select the association that is edited with the selector.
+Member defines for which attribute or association the message will be shown. In the case of a [reference selector](reference-selector) or [reference set selector](reference-set-selector) you should select the association that is edited with the selector.
 
 ### Template
 
@@ -29,4 +29,4 @@ Template defines the text of the validation message. The template can contain pa
 
 ### Parameters
 
-For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [microflow expressions](/refguide5/microflow-expressions) resulting in a string.
+For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [microflow expressions](microflow-expressions) resulting in a string.

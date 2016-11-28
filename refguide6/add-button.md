@@ -29,7 +29,7 @@ The add button can only be used in the reference set selector. With this button 
 
 This property indicates the page that is shown to the end-user after he or she clicks on this button. The end-user can use this page to select objects that have to be added to the reference set selector. This page should contain a data grid, template grid or list view connected to the same entity as the reference set selector.
 
-See [Opening Pages](/refguide6/opening-pages). Note that opening select pages in content is prohibited.
+See [Opening Pages](opening-pages). Note that opening select pages in content is prohibited.
 
 ## Visibility properties
 

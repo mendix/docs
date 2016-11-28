@@ -4,7 +4,7 @@ space: "Mendix 6 How-to's"
 category: "Data Models"
 tags: []
 ---
-This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to setup a basic data structure, otherwise there won't be any data to validate. If you don't know how to setup a basic data structure, you can take a look at [this how-to](/howto6/create-a-basic-data-layer).
+This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to setup a basic data structure, otherwise there won't be any data to validate. If you don't know how to setup a basic data structure, you can take a look at [this how-to](create-a-basic-data-layer).
 
 ## 1. Data Validation on Entity Level
 
@@ -23,7 +23,7 @@ This section will explain how you can add validation rules to the domain model o
 
 ## 2\. Required Validation on Inputs, Reference Selectors and Drop-downs
 
-The page builder of the Mendix Modeler allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](/howto6/create-your-first-two-overview-and-detail-pages) how-to.
+The page builder of the Mendix Modeler allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](create-your-first-two-overview-and-detail-pages) how-to.
 
 1.  Open a **detail page** and double click an input to open its properties.
 2.  Set the **Required** property to **Yes** and enter a message. This message is shown below the input if a user clicks the save button without filling in a value.
@@ -53,7 +53,7 @@ As long as this Microflow returns a boolean value, you are free to add any logic
 
 ## 4\. Advanced Validation with a Custom 'Save' Button
 
-Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [this](/howto6/create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look similar to this:
+Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [this](create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look similar to this:
 
 ![](attachments/18448742/18582143.png)
 
@@ -88,13 +88,13 @@ Validating user input can also be achieved by overriding the default save button
 
 ## 5\. Related content
 
-*   [Working with images and files](/howto6/working-with-images-and-files)
-*   [Creating a basic data layer](/howto6/create-a-basic-data-layer)
-*   [Working With Object Events](/howto6/working-with-object-events)
-*   [Denormalize Data to Improve Performance](/howto6/denormalize-data-to-improve-performance)
-*   [Setting up data validation](/howto6/setting-up-data-validation)
-*   [Finding the Root Cause of Runtime Errors](/howto6/finding-the-root-cause-of-runtime-errors)
-*   [Managing your Application Requirements with Mendix](/howto6/managing-your-application-requirements-with-mendix)
-*   [Scout and Windows 10 Workaround](/howto6/scout-and-windows-10-workaround)
-*   [Generating a personal SSH2 key pair](/howto6/generating-a-personal-ssh2-key-pair)
-*   [Creating a chainable Custom Widget](/howto6/create-a-chainable-custom-widget)
+*   [Working with images and files](working-with-images-and-files)
+*   [Creating a basic data layer](create-a-basic-data-layer)
+*   [Working With Object Events](working-with-object-events)
+*   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+*   [Setting up data validation](setting-up-data-validation)
+*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+*   [Managing your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
+*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
+*   [Generating a personal SSH2 key pair](generating-a-personal-ssh2-key-pair)
+*   [Creating a chainable Custom Widget](create-a-chainable-custom-widget)

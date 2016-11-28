@@ -22,7 +22,7 @@ To be able to create such a domain model, there are several questions that you n
 2.  Which SDK classes do you need to use?
 3.  How do you use those SDK classes?
 
-The answer to the first question is directly based on functional requirements: you need to create two entities, one association, and set the generalization of one of the two entities. For the answers to the second and third question you need to combine information from several sources of information: the [Desktop Modeler](/refguide6/) reference guide, the [Reference Documentation](/MXSDK/reference-documentation) reference guide, and the [Model SDK API](https://apidocs.mendix.com/modelsdk/latest/index.html) documentation.
+The answer to the first question is directly based on functional requirements: you need to create two entities, one association, and set the generalization of one of the two entities. For the answers to the second and third question you need to combine information from several sources of information: the [Desktop Modeler](/refguide6/) reference guide, the [Reference Documentation](reference-documentation) reference guide, and the [Model SDK API](https://apidocs.mendix.com/modelsdk/latest/index.html) documentation.
 
 The Desktop Modeler reference guide gives an overview of what can be configured for different parts of the Mendix app model, the Metamodel reference guide specifies in detail which actual programmable objects are available in the SDK, and the Model SDK API docs provide the precise API details needed to write the actual code.
 
@@ -32,7 +32,7 @@ This tutorial will guide you through the collection of the necessary information
 
 First, you start with creation of the two entities, `Customer` and `Invoice`. Entities have some basic properties, such as their `name` and `documentation`. You can see these in the Desktop Modeler in the Properties pane when you have selected an entity. These properties are documented in the Desktop Modeler reference guide under the [Entities](/refguide6/entities) topic.
 
-The relevant concept in the app model can be found in the Metamodel reference guide. In this case, you are working on the domain model, so the [Domain Model](/MXSDK/domain-model-metamodel) page is the starting point. In the Overview section, `Entity` is visible, which is the likely candidate for creation of new domain model entities.
+The relevant concept in the app model can be found in the Metamodel reference guide. In this case, you are working on the domain model, so the [Domain Model](domain-model-metamodel) page is the starting point. In the Overview section, `Entity` is visible, which is the likely candidate for creation of new domain model entities.
 
 So how do you set these properties with the SDK? The Model SDK API docs provide us with this information. On the [`domainmodels.Entity`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html) page, you can find everything that is configurable for domain model entities, including the properties  [`name`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#name)  and [`documentation`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#documentation) . They are of type `string`, which means that you can directly set their value to any `string` value.
 
@@ -49,7 +49,7 @@ An `Entity` also has a [`location`](https://apidocs.mendix.com/modelsdk/latest/c
 customer.location = { x: 100, y: 100 };
 ```
 
-With these ingredients, you can create the two entities. Replace the snippet that creates a single entity in the script that you created in the [previous tutorial steps](/MXSDK/creating-your-first-script) with the following snippet to create the two new entities:
+With these ingredients, you can create the two entities. Replace the snippet that creates a single entity in the script that you created in the [previous tutorial steps](creating-your-first-script) with the following snippet to create the two new entities:
 
 ```js
 workingCopy => {
@@ -77,7 +77,7 @@ Desktop Modeler reference guide
 
 Metamodel reference guide
 
-*   [Domain Model](/MXSDK/domain-model-metamodel)
+*   [Domain Model](domain-model-metamodel)
 
 Model SDK API docs
 
@@ -92,7 +92,7 @@ Model SDK API docs
 
 The next step is to create an association between the `Customer` and `Invoice` entities to define their relationship: a `Customer` can have zero or more `Invoices`.
 
-The Desktop Modeler reference guide explains that [Associations](/refguide6/associations) have an owner and are a reference (set). In the metamodel reference guide for the [domain model](/MXSDK/domain-model-metamodel), the overview shows that an `Association` inherits from `AssociationBase`, which means that, besides its own properties,  it has all the properties of `AssociationBase`. The metamodel reference documentation graph shows that `Entity` and `Association` are related through `child` and `parent` properties on `Association` (the arrows point from `Association` to `Entity`). The `child` and `parent` properties define the target and source of the association arrows in the domain model editor, respectively.
+The Desktop Modeler reference guide explains that [Associations](/refguide6/associations) have an owner and are a reference (set). In the metamodel reference guide for the [domain model](domain-model-metamodel), the overview shows that an `Association` inherits from `AssociationBase`, which means that, besides its own properties,  it has all the properties of `AssociationBase`. The metamodel reference documentation graph shows that `Entity` and `Association` are related through `child` and `parent` properties on `Association` (the arrows point from `Association` to `Entity`). The `child` and `parent` properties define the target and source of the association arrows in the domain model editor, respectively.
 
 So those two properties need to be set to point to the correct entities. The exact overview of all available properties for associations can be found in the Model SDK API documentation of the relevant object, in this case [`Association`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html) .
 
@@ -149,7 +149,7 @@ The metamodel in the  reference guide contains a section 'Generalization relatio
 
 In the Model SDK, the [`Entity.generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#generalization)  property is used to configure this behavior. When it is set to a `[NoGeneralization](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html) `instance, the entity does not have a generalization. When it is set to a [`Generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)  instance, the entity is a specialization of the entity that is set with the  [`Generalization.generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization) property.
 
-So, to set up entity `Customer` as a specialization of entity `Administration.Account`, you first need to look up the `Account` entity which [can be done in several ways](/MXSDK/finding-things-in-the-model). The following snippet looks up the `Account` entity in the `Administration` domain model, using the `findEntityByQualifiedName` function:
+So, to set up entity `Customer` as a specialization of entity `Administration.Account`, you first need to look up the `Account` entity which [can be done in several ways](finding-things-in-the-model). The following snippet looks up the `Account` entity in the `Administration` domain model, using the `findEntityByQualifiedName` function:
 
 ```js
 const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration.Account`);
@@ -201,4 +201,4 @@ Model SDK API docs
 
 This completes the script. Compile and execute it as described in the previous section. Open the app in the Desktop Modeler to inspect the results!
 
-As a next step you can either continue with the [second part](/MXSDK/your-learning-path-for-the-mendix-sdk) of the learning path or return to the [Mendix SDK homepage](/MXSDK/) to find references to other resources.
+As a next step you can either continue with the [second part](your-learning-path-for-the-mendix-sdk) of the learning path or return to the [Mendix SDK homepage]() to find references to other resources.

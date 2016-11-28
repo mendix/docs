@@ -58,7 +58,7 @@ You can find the AfterStartup and BeforeShutdown microflows in the project setti
 
 You can now startup.
 
-If an error appears check [here](/APM/after-startup-error).
+If an error appears check [here](after-startup-error).
 
 Otherwise login as Admin and navigate to the APM Tool.
 

@@ -9,6 +9,6 @@ The documentation in this section describes a new feature that is still in beta,
 
 {% endmarkdown %}</div>
 
-The offline device profile allows users to continue using their Mendix application even without a working internet connection. The offline device profile can be reached (when enabled) by accessing the application with an offline enabled PhoneGap hybrid application. A number of restrictions apply to pages available to the offline device profile, a full listing can be found [here](/refguide6/offline). 
+The offline device profile allows users to continue using their Mendix application even without a working internet connection. The offline device profile can be reached (when enabled) by accessing the application with an offline enabled PhoneGap hybrid application. A number of restrictions apply to pages available to the offline device profile, a full listing can be found [here](offline). 
 
 {% snippet Profile+properties.md %}

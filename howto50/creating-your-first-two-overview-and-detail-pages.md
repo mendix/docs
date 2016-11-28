@@ -8,7 +8,7 @@ This how-to explains how you can create overview and detail pages in Mendix. 
 
 ## 1. Preparation
 
-*   Before you can create those pages you need to setup a basic data structure using [this](/howto50/creating-a-basic-data-layer) how-to.
+*   Before you can create those pages you need to setup a basic data structure using [this](creating-a-basic-data-layer) how-to.
     ![](attachments/2949123/16842770.png)
 
 ## 2\. Creating an Overview Page
@@ -55,23 +55,23 @@ You should now have an overview page like this:
 
 ## 4\. Navigation and Security
 
-1.  Now create a navigation item for your overview page to start using it. If you don't know how to setup the navigation structure, take a look at [this](/howto50/setting-up-the-navigation-structure) how-to.
-2.  If you switched on security for this application you need to configure page access on both the overview and detail pages. If you don't know how to configure page access, take a look at [this](/howto50/creating-a-secure-app) how-to.
+1.  Now create a navigation item for your overview page to start using it. If you don't know how to setup the navigation structure, take a look at [this](setting-up-the-navigation-structure) how-to.
+2.  If you switched on security for this application you need to configure page access on both the overview and detail pages. If you don't know how to configure page access, take a look at [this](creating-a-secure-app) how-to.
 
 ## 5\. Related content
 
 How-to's
 
-*   [Scout and Windows 10 Workaround](/howto50/scout-and-windows-10-workaround)
+*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Scout and Windows 10 Workaround](/howto6/scout-and-windows-10-workaround)
-*   [Filtering Data on an Overview Page](/howto50/filtering-data-on-an-overview-page)
-*   [Layouts and Snippets](/howto50/layouts-and-snippets)
+*   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
+*   [Layouts and Snippets](layouts-and-snippets)
 *   [Layouts and Snippets](/howto6/layouts-and-snippets)
 *   [Filtering Data on an Overview Page](/howto6/filtering-data-on-an-overview-page)
-*   [Setup Mendix UI Framework with just CSS](/howto50/setup-mendix-ui-framework-with-just-css)
-*   [Setting Up the Navigation Structure](/howto50/setting-up-the-navigation-structure)
-*   [Creating your first two Overview and Detail pages](/howto50/creating-your-first-two-overview-and-detail-pages)
-*   [Setup Mendix UI Framework](/howto50/setup-mendix-ui-framework)
+*   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
+*   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
+*   [Creating your first two Overview and Detail pages](creating-your-first-two-overview-and-detail-pages)
+*   [Setup Mendix UI Framework](setup-mendix-ui-framework)
 
 Reference Guide
 

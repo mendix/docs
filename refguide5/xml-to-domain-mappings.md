@@ -11,7 +11,7 @@ An XML-to-Domain mapping is used to convert data in XML format to objects in you
 
 ### Parameter
 
-When set, this property specifies the type of the parameter that needs to be passed to this mapping. This parameter can be specified in the [Call Web Service](/refguide5/call-web-service) dialog.
+When set, this property specifies the type of the parameter that needs to be passed to this mapping. This parameter can be specified in the [Call Web Service](call-web-service) dialog.
 
 ### Use subtransactions for microflows
 
@@ -67,7 +67,7 @@ The documentation describing this element.
 
 ### Object Mapping
 
-Reflects the properties that were selected in the [Map element to entity](/refguide5/map-element-to-entity) dialog.
+Reflects the properties that were selected in the [Map element to entity](map-element-to-entity) dialog.
 
 ### Schema
 

@@ -15,56 +15,56 @@ The following screenshot shows the Trap Tool when stopped:
 
 ![](attachments/Trap_Tool/Control_NotRunning.png)
 
- and the screenshot below shows the Trap Tool when started:
+The screenshot below shows the Trap Tool when started:
 
  ![](attachments/Trap_Tool/Control_Running.png)
 
-There is the [Output Queue Size] counter. When a trap occurs all messages to be written to disk are stored in a queue. A separate thread handles this queue. The trap tool has a counter to indicate the number of messages in the output queue. When the Trap Tool is disabled or stopped the output is interrupted and cancelled in the middle of processing the output queue.
+There is the **Output Queue Size** counter. When a trap occurs all messages to be written to disk are stored in a queue. A separate thread handles this queue. The trap tool has a counter to indicate the number of messages in the output queue. When the Trap Tool is disabled or stopped the output is interrupted and cancelled in the middle of processing the output queue.
 
 Tool specific functionality:
 
-*   The Trap Now button stores Trap Memory in the database. So if you know the server is busy doing something you can investigate what it is doing. Also if on a non-production environment trap memory consists of a minute of data you can look what happened for
+* The Trap Now button stores Trap Memory in the database. So if you know the server is busy doing something you can investigate what it is doing. Also if on a non-production environment trap memory consists of a minute of data you can look what happened for
 
 ## Trap Tool Options
 
 The following screenshot shows the Trap Tool options:
 
- ![](attachments/Trap_Tool/Options.png)
+![](attachments/Trap_Tool/Options.png)
 
 The Trap Tool has no import feature (like the Log Tool). Logging can be imported in the Log Tool.
 
 You can define which traps are excluded to avoid highly repetitive messages which are not useful for analysis.
 
- ![](attachments/Trap_Tool/Exclusions.png)
+![](attachments/Trap_Tool/Exclusions.png)
 
 You can exclude a complete node or filter out trap messages by regular expressions. Exclusions can be added manually but also by selecting an error, a warning or a critical message in either the Log Tool or the Trap Tool, viewing their details and pressing the [Exclude] button.
 
- ![](attachments/Trap_Tool/Edit_Exclusion.png)
+![](attachments/Trap_Tool/Edit_Exclusion.png)
 
 The regular expression can be tested against the trap messages in the database, so if the tool currently recorded a message that needs to be excluded the next time it occurs then the test button should give a result.
 
- ![](attachments/Trap_Tool/Test_Exclusion.png)
+![](attachments/Trap_Tool/Test_Exclusion.png)
 
 The Trap Tool can be configured to trap on Warning-, Error- and Critical messages.
 
 The Trap Tool can be configured to remember messages recorded during a certain amount of time or a certain amount of records that precede a trap. So in the screenshot-example of the options dialog you store per trap at most 15.000 records and at most messages from 10.000ms (10 seconds) before the trap.
 
-If you define a [Max messages to store] the system will either stop when the maximum is reached or delete the oldest trap messages. This is determined by the setting [On max stop?]. The oldest messages are deleted when a new trap arrives after the new messages have been added to the database.
+If you define a **Max messages to store** the system will either stop when the maximum is reached or delete the oldest trap messages. This is determined by the setting **On max stop?**. The oldest messages are deleted when a new trap arrives after the new messages have been added to the database.
 
 You can run the Trap Tool for a fixed amount of time. The Trap Tool is intended to run always, but when using the Trap Tool for the first time and not knowing which errors or warnings to exclude you might want to limit the duration the Trap Tool is running.
 
-The Trap Tool has a [Max Processing Delay (ms)] protection to stop the Trap Tool if the system generates too many log messages which causes queueing inside Mendix. This off course depends on any other tools that might be running and other factors that might generate additional messages.
+The Trap Tool has a **Max Processing Delay (ms)** protection to stop the Trap Tool if the system generates too many log messages which causes queueing inside Mendix. This off course depends on any other tools that might be running and other factors that might generate additional messages.
 
-Changes to the options are applied to the Trap Tool if the button [Save & Apply] is used.
+Changes to the options are applied to the Trap Tool if the **Save & Apply** button is used.
 
 ## Trap Tool Results
 
 The Trap Tool shows the recorded log messages resulting from a trap on the main screen. Several search fields are available to search through and filter these log messages.
 
- ![](attachments/Trap_Tool/Results.png)
+![](attachments/Trap_Tool/Results.png)
 
-This feature is similar to the Log Tool. Extra is the [Trap Key] attribute that links the messages preceding a trap to the trap they were recorded for. This link does not mean these log messages were generated by the trap, just that they occurred just before the trap and potentially could have led up to the trap.
+This feature is similar to the Log Tool. Extra is the **Trap Key** attribute that links the messages preceding a trap to the trap they were recorded for. This link does not mean these log messages were generated by the trap, just that they occurred just before the trap and potentially could have led up to the trap.
 
-Extra search parameters to include or exclude connection bus messages[Connection Bus] and/or microflow messages[Microflow Engine] are available.
+Extra search parameters to include or exclude connection bus messages[Connection Bus] and/or microflow messages **Microflow Engine** are available.
 
 Also a list of selected records can be sent to the Performance Tool (if its <u>not</u> already running running).

@@ -10,10 +10,10 @@ In pages certain elements can be shown or hidden or made editable or read-only b
 The following elements support conditional visibility or editability:
 
 *   All widgets support conditional visibility
-*   [Table row](/refguide6/table-row) supports conditional visibility
-*   [Tab page](/refguide6/tab-page) supports conditional visibility
-*   Input widgets ([Text box](/refguide6/text-box), [Reference selector](/refguide6/reference-selector) etc.) support conditional editability
-*   [Grid control bar buttons](/refguide6/control-bar), [data view control bar buttons](/refguide6/data-view-control-bar) and [action buttons](/refguide6/action-button).
+*   [Table row](table-row) supports conditional visibility
+*   [Tab page](tab-page) supports conditional visibility
+*   Input widgets ([Text box](text-box), [Reference selector](reference-selector) etc.) support conditional editability
+*   [Grid control bar buttons](control-bar), [data view control bar buttons](data-view-control-bar) and [action buttons](action-button).
 
 There are three kinds of conditions:
 

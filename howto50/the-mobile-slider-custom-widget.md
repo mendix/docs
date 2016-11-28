@@ -19,8 +19,8 @@ This how-to is about using the Mobile Slider widget in your Mendix hybrid mobile
 Before you start building your Mendix hybrid mobile project with the Mobile Slider custom widget make sure you have the following programs installed:
 
 *   [Mendix Modeler](https://appstore.home.mendix.com/link/modelers) (version 5.x)
-*   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a how-to about this software here](/howto50/getting-started-with-the-widget-development-plugin-for-adobe-brackets).
-*   Also please read the "Hello World" how-to on creating a new widget based on the "AppStoreWidgetBoilerplate". [You can find a how-to about setting up a "Hello World" custom widget here](/howto50/creating-a-basic-hello-world-custom-widget).
+*   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a how-to about this software here](getting-started-with-the-widget-development-plugin-for-adobe-brackets).
+*   Also please read the "Hello World" how-to on creating a new widget based on the "AppStoreWidgetBoilerplate". [You can find a how-to about setting up a "Hello World" custom widget here](creating-a-basic-hello-world-custom-widget).
 
 
 
@@ -102,7 +102,7 @@ You can also use one page as your main slide.
 
 ## 7\. Interesting feature
 
-As promised in my previous how-to [Creating a Chainable Widget](/howto50/creating-a-chainable-custom-widget) I would create a custom widget that is able to communicate to another custom widget with custom events. 
+As promised in my previous how-to [Creating a Chainable Widget](creating-a-chainable-custom-widget) I would create a custom widget that is able to communicate to another custom widget with custom events. 
 
 Custom widgets in the Mendix project act as isolated features. This means that custom widgets cannot and do not know anything about platform widgets _(example: the datagrid, the listview)_. It is also not possible to hook into an event from a platform widget in a custom widget.
 
@@ -143,11 +143,11 @@ I encourage you to download all the source files from the GitHub repository and 
 
 ## 9\. Related content
 
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto50/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-*   [Creating a chainable Custom Widget](/howto50/creating-a-chainable-custom-widget)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
+*   [Creating a chainable Custom Widget](creating-a-chainable-custom-widget)
 *   [XML Reference Guide](/refguide5/xml-reference-guide)
-*   [Creating a Basic Hello World Custom Widget](/howto50/creating-a-basic-hello-world-custom-widget)
-*   [The Mobile Slider Custom Widget](/howto50/the-mobile-slider-custom-widget)
+*   [Creating a Basic Hello World Custom Widget](creating-a-basic-hello-world-custom-widget)
+*   [The Mobile Slider Custom Widget](the-mobile-slider-custom-widget)
 
 Some interesting websites, books, and articles you might want to read next to dive into the source code of the AppStoreWidgetBoilerplate and the MobileSlider custom widget code base:
 

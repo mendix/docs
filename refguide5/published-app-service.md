@@ -43,11 +43,11 @@ Can be used to describe what the app service is used for.
 
 ![](attachments/4521991/4751405.png)
 
-Provide the actual actions of which the app service is composed. Each of these actions is coupled to a microflow. See [Actions](/refguide5/actions).
+Provide the actual actions of which the app service is composed. Each of these actions is coupled to a microflow. See [Actions](actions).
 
 <div class="alert alert-warning">{% markdown %}
 
-From Mendix 5.4.0, app service microflows cannot have Lists as input parameters! For more information, please refer to [List parameters](/refguide5/list-parameters).
+From Mendix 5.4.0, app service microflows cannot have Lists as input parameters! For more information, please refer to [List parameters](list-parameters).
 
 {% endmarkdown %}</div>
 

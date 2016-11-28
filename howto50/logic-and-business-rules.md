@@ -13,14 +13,14 @@ Now, learn how to translate your business logic into Microflows and build and de
 
 | Basic
 | ------------------------------------------------------------------------------------------------------------------------------------------------------
-| [Create your first Microflow: Hello World!](/howto50/create-your-first-microflow-hello-world)
-| [Creating a Custom Save Button](/howto50/creating-a-custom-save-button)
-| [Drag and Drop Microflows/Pages into Microflow](/howto50/drag-microflows-and-pages-into-a-microflow)
-| [Triggering Logic using Microflows](/howto50/triggering-logic-using-microflows)
+| [Create your first Microflow: Hello World!](create-your-first-microflow-hello-world)
+| [Creating a Custom Save Button](creating-a-custom-save-button)
+| [Drag and Drop Microflows/Pages into Microflow](drag-microflows-and-pages-into-a-microflow)
+| [Triggering Logic using Microflows](triggering-logic-using-microflows)
 
 | Advanced
 | ------------------------------------------------------------------------------------------------------------------------------------------------------
-| [Extract and use sub microflows](/howto50/extract-and-use-sub-microflows)
-| [Working With Lists in a Microflow](/howto50/working-with-lists-in-a-microflow)
-| [Defining access rules using XPath](/howto50/defining-access-rules-using-xpath)
-| [Extending Your Application with Custom Java](/howto50/extending-your-application-with-custom-java)
+| [Extract and use sub microflows](extract-and-use-sub-microflows)
+| [Working With Lists in a Microflow](working-with-lists-in-a-microflow)
+| [Defining access rules using XPath](defining-access-rules-using-xpath)
+| [Extending Your Application with Custom Java](extending-your-application-with-custom-java)

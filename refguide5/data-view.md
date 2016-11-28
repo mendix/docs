@@ -24,7 +24,7 @@ The data view contents area is the place where all the layout and input widgets 
 
 The control bar of the data view is the bar with buttons at the bottom of the component. By default, it contains a Save and a Cancel button but the bar can be customized. A read-only data view would typically provide only a Close button. You can add buttons with custom behavior through the use of a microflow button.
 
-See [Data view control bar](/refguide5/data-view-control-bar) for a description of the buttons and their properties.
+See [Data view control bar](data-view-control-bar) for a description of the buttons and their properties.
 
 ## Common properties
 
@@ -81,7 +81,7 @@ _Default value:_ Horizontal
 
 ### Label width (weight)
 
-If the form orientation is set to horizontal this property can be used to specify the width of labels of input widgets inside the data view. The width is specified using column weights from the [Bootstrap grid system](http://getbootstrap.com#grid) (see [Layout Grid](/refguide5/layout-grid)).
+If the form orientation is set to horizontal this property can be used to specify the width of labels of input widgets inside the data view. The width is specified using column weights from the [Bootstrap grid system](http://getbootstrap.com#grid) (see [Layout Grid](layout-grid)).
 
 _Default value:_ 3
 
@@ -105,7 +105,7 @@ _Default value:_ True
 This property was added in version 5.10.  
 {% endmarkdown %}</div>
 
-If this message is specified, a data view that receives no source data will show this message instead of its content. Otherwise, the data view will show its static content and disabled input widgets. This property is a translable text. See [Translatable Texts](/refguide5/translatable-texts).
+If this message is specified, a data view that receives no source data will show this message instead of its content. Otherwise, the data view will show its static content and disabled input widgets. This property is a translable text. See [Translatable Texts](translatable-texts).
 
 There are number of ways a data view can end up without source data. For instance, a data view with a 'Listen to widget' data source will remain empty until an object is selected in the target grid. In this scenario, 'Empty entity message' can be used to guide the user to select an item from the grid.
 
@@ -140,7 +140,7 @@ The microflow property specifies a microflow is executed when that data view is 
 
 ### Microflow settings (only for data source type "Microflow")
 
-The microflow settings specify which parameters to pass to the microflow. See [Starting Microflows](/refguide5/starting-microflows).
+The microflow settings specify which parameters to pass to the microflow. See [Starting Microflows](starting-microflows).
 
 ### Listen target (only for data source type "Listen to widget")
 
@@ -186,5 +186,5 @@ The widget can be made visible to a subset of the user roles available in your a
 
 ## Related Articles
 
-*   [Entities](/refguide5/entities)
-*   [Associations](/refguide5/associations)
+*   [Entities](entities)
+*   [Associations](associations)

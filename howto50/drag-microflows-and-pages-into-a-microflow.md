@@ -26,7 +26,7 @@ Instead of creating a new sub microflow action it is a lot easier to drag an exi
 
 ## 4\. Related content
 
-*   [Defining access rules using XPath](/howto50/defining-access-rules-using-xpath)
-*   [Triggering Logic using Microflows](/howto50/triggering-logic-using-microflows)
-*   [Creating a Custom Save Button](/howto50/creating-a-custom-save-button)
-*   [Extending Your Application with Custom Java](/howto50/extending-your-application-with-custom-java)
+*   [Defining access rules using XPath](defining-access-rules-using-xpath)
+*   [Triggering Logic using Microflows](triggering-logic-using-microflows)
+*   [Creating a Custom Save Button](creating-a-custom-save-button)
+*   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)

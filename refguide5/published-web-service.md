@@ -7,7 +7,7 @@ space: "Reference Guide 5"
 
 <div class="alert alert-warning">{% markdown %}
 
-This document describes the properties of a published web service. If you want a general overview of how Mendix publishes microflows as web services, you can check the [Published Web Services](/refguide5/published-web-services) overview documentation.
+This document describes the properties of a published web service. If you want a general overview of how Mendix publishes microflows as web services, you can check the [Published Web Services](published-web-services) overview documentation.
 
 {% endmarkdown %}</div>
 
@@ -23,7 +23,7 @@ Names of Published Web Service documents must be unique, also with regard to Pub
 
 Provide the actual operations of which the web service is composed. Each of these operations is a Microflow.
 
-See [Operations](/refguide5/operations).
+See [Operations](operations).
 
 ## Settings
 

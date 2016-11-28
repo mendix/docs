@@ -45,9 +45,9 @@ To mark a page as 'used' you can also use the properties popup by clicking the r
 
 ## 3\. Related content
 
-*   [Finding Object Activities](/tips/finding-object-activities)
-*   [Finding Unused Items](/tips/finding-unused-items)
-*   [Finding your way through a project](/tips/finding-your-way-through-a-project)
-*   [Querying over self-references](/tips/querying-over-self_references)
-*   [Showing a Project in the Directory in Explorer](/tips/showing-a-project-in-the-directory-in-explorer)
-*   [Translatable Validation Messages](/tips/translatable-validation-messages)
+*   [Finding Object Activities](finding-object-activities)
+*   [Finding Unused Items](finding-unused-items)
+*   [Finding your way through a project](finding-your-way-through-a-project)
+*   [Querying over self-references](querying-over-self_references)
+*   [Showing a Project in the Directory in Explorer](showing-a-project-in-the-directory-in-explorer)
+*   [Translatable Validation Messages](translatable-validation-messages)

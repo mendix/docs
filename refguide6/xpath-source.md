@@ -9,7 +9,7 @@ If database is selected as the data source for a widget then the object or objec
 
 1.  The access rules defined in the security section of the project.
 2.  The XPath constraint supplied in the widgets settings.
-3.  Objects already in context as defined by the [context mechanism](/refguide6/context-mechanism), if the apply context setting is set to true.
+3.  Objects already in context as defined by the [context mechanism](context-mechanism), if the apply context setting is set to true.
 4.  An association, if the widget is nested in another data widget and the data path described runs over an association.
 
 <div class="alert alert-success">{% markdown %}
@@ -22,11 +22,11 @@ Use access rules whenever possible to limit data in data grids. This way you kno
 
 ### Search bar
 
-See [Search Bar](/refguide6/search-bar).
+See [Search Bar](search-bar).
 
 ### Sort bar
 
-See [Sort Bar](/refguide6/sort-bar).
+See [Sort Bar](sort-bar).
 
 ## Properties
 
@@ -36,12 +36,12 @@ The entity (path) property specifies the target of the database query. A top-lev
 
 A nested data grid can either be connected to an entity or to an entity path starting in the entity of the containing data view. The entity path follows one association of type reference in the opposite direction in which the association's arrow is pointing (from * to 1).
 
-Please note that this differs from the [association data source](/refguide6/association-source) in that the objects are not retrieved from the client cache but directly from the database. The association is simply parsed as an extra constraint in the database query.
+Please note that this differs from the [association data source](association-source) in that the objects are not retrieved from the client cache but directly from the database. The association is simply parsed as an extra constraint in the database query.
 
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/16713835/16843965.jpg)
-The [domain model](/refguide6/domain-model) above describes a database in which an indeterminate number of users can be linked to a single country.
+The [domain model](domain-model) above describes a database in which an indeterminate number of users can be linked to a single country.
 
 ![](attachments/16713835/16843966.jpg)
 The data view shown contains a single country. The data grid nested inside will display only those users that are linked to that particular country.
@@ -69,17 +69,17 @@ _Default value:_ false
 
 ### XPath constraint
 
-The [XPath constraint](/refguide6/xpath-constraints) allows for custom, hard-coded limitations on the data displayed. This constraint will be appended to the constraints (if any) already applied through security and context.
+The [XPath constraint](xpath-constraints) allows for custom, hard-coded limitations on the data displayed. This constraint will be appended to the constraints (if any) already applied through security and context.
 
 <div class="alert alert-warning">{% markdown %}
 
-XPath constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to shield a particular subset of the data from users then [entity access rules](/refguide6/access-rules) are superior in that they can be tailored to each individual user role and that they apply system-wide.
+XPath constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to shield a particular subset of the data from users then [entity access rules](access-rules) are superior in that they can be tailored to each individual user role and that they apply system-wide.
 
 {% endmarkdown %}</div>
 
 ### Apply context
 
-The property 'Apply context' indicates whether the [context mechanism](/refguide6/context-mechanism) will be used to constrain the list of objects in the grid.
+The property 'Apply context' indicates whether the [context mechanism](context-mechanism) will be used to constrain the list of objects in the grid.
 
 <div class="alert alert-success">{% markdown %}
 
@@ -89,12 +89,12 @@ The apply context setting has the disadvantage of being implicit: the effects of
 
 _Default value_: False
 
-Apply context is deprecated in version 5.19.0 in favor of the more explicit [XPath constraints](/refguide6/xpath-constraints).
+Apply context is deprecated in version 5.19.0 in favor of the more explicit [XPath constraints](xpath-constraints).
 
 ### Remove from context
 
 Using this property you can remove objects from the context. If you remove objects of a certain entity from the context they will not be used to constrain the list of objects, nor will references to that entity automatically be set when using a standard new button.
 
-See [Context Mechanism](/refguide6/context-mechanism).
+See [Context Mechanism](context-mechanism).
 
-Apply context is deprecated in version 5.19.0 in favor of the more explicit [XPath constraints](/refguide6/xpath-constraints).
+Apply context is deprecated in version 5.19.0 in favor of the more explicit [XPath constraints](xpath-constraints).

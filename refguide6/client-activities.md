@@ -7,24 +7,24 @@ parent: "activities"
 
 ## Close form
 
-See [Close Form](/refguide6/close-form).
+See [Close Form](close-form).
 
 ## Download File
 
-See [Download File](/refguide6/download-file).
+See [Download File](download-file).
 
 ## Show Form
 
-See [Show Page](/refguide6/show-page).
+See [Show Page](show-page).
 
 ## Show Home page
 
-See [Show home page](/refguide6/show-home-page).
+See [Show home page](show-home-page).
 
 ## Show Message
 
-See [Show Message](/refguide6/show-message).
+See [Show Message](show-message).
 
 ## Validation Feedback
 
-See [Validation Feedback](/refguide6/validation-feedback).
+See [Validation Feedback](validation-feedback).

@@ -48,7 +48,7 @@ Before you can start with this how-to, make sure you have completed the followin
 
 1.  Click on **Capture**.
     ![](attachments/14091670/14385439.png)
-    On this page you can plan the development of your app by adding sprints and stories. Click [here](/howto50/managing-your-application-requirements-with-mendix) to learn how to manage your application requirements in Mendix by creating and configuring sprints and stories.
+    On this page you can plan the development of your app by adding sprints and stories. Click [here](managing-your-application-requirements-with-mendix) to learn how to manage your application requirements in Mendix by creating and configuring sprints and stories.
 2.  Click on **Develop**.
     ![](attachments/14091670/14385440.png)
     On this page you can see the latest revisions to your app, done through the use of version control.
@@ -84,17 +84,17 @@ Let's deploy your app to a sandbox in the Mendix cloud, so others can view and t
     The default browser will open and your app will be shown.
     ![](attachments/14091670/14385453.png)
 
-Wow! You deployed your first app! Click [here](/howto50/build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui) to go the second how-to on how to create a simple HRM application and learn the first steps in building a rich GUI.
+Wow! You deployed your first app! Click [here](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui) to go the second how-to on how to create a simple HRM application and learn the first steps in building a rich GUI.
 
 ## 5\. Related content
 
-*   [Build a simple HRM app 2: First steps in building a rich GUI](/howto50/build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-*   [Build a simple HRM app 3: Show related data in the GUI](/howto50/build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](/howto50/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
-*   [Build a simple HRM app 5: Smarten up your app with business logic](/howto50/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
+*   [Build a simple HRM app 2: First steps in building a rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+*   [Build a simple HRM app 3: Show related data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+*   [Build a simple HRM app 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+*   [Build a simple HRM app 5: Smarten up your app with business logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
 
 Learn more about this topic using the following helpful links:
 s
-*   [Build a simple HRM app 2: First steps in building a rich GUI](/howto50/build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+*   [Build a simple HRM app 2: First steps in building a rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
 *   [The Eye-Catching Mendix UI Framework](https://www.mendix.com/blog/the-eye-catching-mendix-ui-framework/)
-*   [Managing your Application Requirements with Mendix](/howto50/managing-your-application-requirements-with-mendix)
+*   [Managing your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)

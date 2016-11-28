@@ -14,7 +14,7 @@ Names of Published App Service documents must be unique, also with regard to Pub
 ### Create version
 
 The button 'Create version' instantiates a new app service version.
-For more information, see [Published App Service](/refguide6/published-app-service).
+For more information, see [Published App Service](published-app-service).
 
 ### Edit
 

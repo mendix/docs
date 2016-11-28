@@ -13,10 +13,10 @@ Before you can start exporting XML documents, you need data in your application 
 
 Before you continue, make sure that you know how to create:
 
-*   **Domain models**, if you need more info, take a look at this [how-to](/howto50/creating-a-basic-data-layer).
-*   **Custom File Document**, if you need more info, take a look at this [how-to](/howto50/working-with-images-and-files).
-*   **Overview and detail pages**, if you need more info, take a look at this [how-to](/howto50/creating-your-first-two-overview-and-detail-pages).
-*   **Menu items**, if you need more info, take a look at this [how-to](/howto50/setting-up-the-navigation-structure).
+*   **Domain models**, if you need more info, take a look at this [how-to](creating-a-basic-data-layer).
+*   **Custom File Document**, if you need more info, take a look at this [how-to](working-with-images-and-files).
+*   **Overview and detail pages**, if you need more info, take a look at this [how-to](creating-your-first-two-overview-and-detail-pages).
+*   **Menu items**, if you need more info, take a look at this [how-to](setting-up-the-navigation-structure).
 
 1.  Create the following entity **Customer** in your domain model.
     ![](attachments/8782441/8946652.png)
@@ -159,6 +159,6 @@ In this section we'll explain how you can create logic to export customers store
 
 ## 5\. Related content
 
-*   [Expose a web service](/howto50/exposing-a-web-service)
-*   [Consume a Simple Web Service](/howto50/consuming-a-simple-web-service)
-*   [Consume a Complex Web Service](/howto50/consuming-a-complex-web-service)
+*   [Expose a web service](exposing-a-web-service)
+*   [Consume a Simple Web Service](consuming-a-simple-web-service)
+*   [Consume a Complex Web Service](consuming-a-complex-web-service)

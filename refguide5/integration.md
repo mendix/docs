@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-Integration with other applications (other than Mendix) is preferably done by using web services and XML. Integration between Mendix applications is done best with App Services (see [Published App Services](/refguide5/published-app-services) and [Consumed App Services](/refguide5/consumed-app-services) ). Some of the most often used terms are explained below.
+Integration with other applications (other than Mendix) is preferably done by using web services and XML. Integration between Mendix applications is done best with App Services (see [Published App Services](published-app-services) and [Consumed App Services](consumed-app-services) ). Some of the most often used terms are explained below.
 
 ## Web Services
 
@@ -15,11 +15,11 @@ Mendix supports the interaction between servers using SOAP. This can either be M
 
 ### Consumed web services
 
-Using third party web services is easy in Mendix. There is a Microflow activity available which calls a web service on another system and imports the XML in the Mendix database. See [Consumed Web Services](/refguide5/consumed-web-services).
+Using third party web services is easy in Mendix. There is a Microflow activity available which calls a web service on another system and imports the XML in the Mendix database. See [Consumed Web Services](consumed-web-services).
 
 ### Published web services
 
-To expose functionality in a Mendix server (thus enabling other systems to make use of certain functions) a Microflow can easily be published as a web service. See [Published Web Services](/refguide5/published-web-services).
+To expose functionality in a Mendix server (thus enabling other systems to make use of certain functions) a Microflow can easily be published as a web service. See [Published Web Services](published-web-services).
 
 ## XML
 
@@ -45,8 +45,8 @@ Above the object 'person' is described with the corresponding values for the att
 
 XML can be used in Mendix for serialization and deserialization, in order to export and import data.
 
-See [XML Schemas](/refguide5/xml-schemas) for information on importing XSDs into your application.
-See [XML to domain mappings](/refguide5/xml-to-domain-mappings) for info on mapping XML documents to domain entities and [domain to XML mappings](/refguide5/domain-to-xml-mappings) for info on exporting domain entities as XML.
+See [XML Schemas](xml-schemas) for information on importing XSDs into your application.
+See [XML to domain mappings](xml-to-domain-mappings) for info on mapping XML documents to domain entities and [domain to XML mappings](domain-to-xml-mappings) for info on exporting domain entities as XML.
 
 ## SOAP
 

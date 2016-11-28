@@ -6,9 +6,9 @@ This category contains documents about best practices when developing with Mendi
 
 ## Available best practice documents
 
-* [Best Practices for Component Based Development](/bestpractices/best-practices-for-component-based-development)
-* [Naming Conventions](/bestpractices/naming-conventions)
+* [Best Practices for Component Based Development](best-practices-for-component-based-development)
+* [Naming Conventions](naming-conventions)
 * [Moving from 5 to 6](/refguide6/moving-from-5-to-6)
-* [Inheritance vs. 1-1 association](/bestpractices/inheritance-vs.-1-1-association)
-* [SIG - Mendix performance subjects explanation](/bestpractices/sig-mendix-performance-subjects-explanation)
-* [How to execute an SQL statement on an external database](/bestpractices/how-to-execute-an-sql-statement-on-an-external-database)
+* [Inheritance vs. 1-1 association](inheritance-vs.-1-1-association)
+* [SIG - Mendix performance subjects explanation](sig-mendix-performance-subjects-explanation)
+* [How to execute an SQL statement on an external database](how-to-execute-an-sql-statement-on-an-external-database)

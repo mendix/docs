@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-The menu bar widget shows a configured menu in the form of a horizontal bar with items. Items can have subitems in which case the main item can be expanded. Subitems cannot have subitems again. In the end a [Menu Item](/refguide5/menu-item) points to either the page or the microflow that will opened or started when the item is clicked.
+The menu bar widget shows a configured menu in the form of a horizontal bar with items. Items can have subitems in which case the main item can be expanded. Subitems cannot have subitems again. In the end a [Menu Item](menu-item) points to either the page or the microflow that will opened or started when the item is clicked.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -48,7 +48,7 @@ This will result in a blue background
 
 ### Menu source
 
-The items that are shown in the menu widget are determined by the menu source. A menu widget is either filled from a menu configured in the [Navigation](/refguide5/navigation) document or a [Menu](/refguide5/menu) document.
+The items that are shown in the menu widget are determined by the menu source. A menu widget is either filled from a menu configured in the [Navigation](navigation) document or a [Menu](menu) document.
 
 Value              | Description
 ------------------ | ------------------------------------------------------------------------------------------------------------------------------------
@@ -60,7 +60,7 @@ _Default value:_ Project navigation
 
 ### Menu (only for menu source 'Project navigation')
 
-If the menu source is 'Project navigation', this property specify which of the three menus that can be configured in the [Navigation](/refguide5/navigation) document will be used to fill the menu widget.
+If the menu source is 'Project navigation', this property specify which of the three menus that can be configured in the [Navigation](navigation) document will be used to fill the menu widget.
 
 Value   | Description
 ------- | ----------------------
@@ -73,4 +73,4 @@ _Default value:_ Desktop
 
 ### Menu document (only for menu source 'Menu document')
 
-If the menu source is 'Menu document', you can select a [Menu](/refguide5/menu) document that will be used to fill the menu widget.
+If the menu source is 'Menu document', you can select a [Menu](menu) document that will be used to fill the menu widget.

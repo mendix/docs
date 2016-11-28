@@ -7,7 +7,7 @@ space: "Reference Guide 5"
 
 <div class="alert alert-warning">{% markdown %}
 
-This document describes the properties of an imported web service. If you want a general overview of consumed web services, you can check the [Consumed Web Services](/refguide5/consumed-web-services) overview documentation.
+This document describes the properties of an imported web service. If you want a general overview of consumed web services, you can check the [Consumed Web Services](consumed-web-services) overview documentation.
 
 {% endmarkdown %}</div>
 
@@ -45,7 +45,7 @@ This part contains the services to be found in the WSDL.
 
 *   Name is the name of the service.
 *   Location is where the service is located.
-*   Location constant can be used to add additional locations for a service, for example: the URL of the soap service may change when moving from a development to a production environment. See also [Constants](/refguide5/constants).
+*   Location constant can be used to add additional locations for a service, for example: the URL of the soap service may change when moving from a development to a production environment. See also [Constants](constants).
 
 If there is a multiple-port service defined in the WSDL, a dialog will pop up that allows the user to select which one of the ports to use _(Added in 5.10)._
 
@@ -65,4 +65,4 @@ This part contains all the operations found in the WSDL. You can expand the list
 
 # Calling consumed web services
 
-Please refer to the section [Call Web Service](/refguide5/call-web-service).
+Please refer to the section [Call Web Service](call-web-service).

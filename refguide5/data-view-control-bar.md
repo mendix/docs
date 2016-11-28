@@ -13,16 +13,16 @@ Microflow buttons can be used to add buttons with custom behavior to the control
 
 ### Save
 
-See [Save Button](/refguide5/data-view-save-button).
+See [Save Button](data-view-save-button).
 
 ### Cancel
 
-See [Cancel Button](/refguide5/data-view-cancel-button).
+See [Cancel Button](data-view-cancel-button).
 
 ### Close
 
-See [Close Button](/refguide5/data-view-close-button).
+See [Close Button](data-view-close-button).
 
 ### Microflow
 
-See [Microflow Button](/refguide5/data-view-microflow-button).
+See [Microflow Button](data-view-microflow-button).

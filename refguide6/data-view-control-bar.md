@@ -7,7 +7,7 @@ parent: "data-view"
 
 <div class="alert alert-info">{% markdown %}
 
-The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. See [Data view footer](/refguide6/data-view).
+The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. See [Data view footer](data-view).
 
 {% endmarkdown %}</div>
 
@@ -19,16 +19,16 @@ Microflow buttons can be used to add buttons with custom behavior to the control
 
 ### Save
 
-See [Save Button](/refguide6/data-view-save-button).
+See [Save Button](data-view-save-button).
 
 ### Cancel
 
-See [Cancel Button](/refguide6/data-view-cancel-button).
+See [Cancel Button](data-view-cancel-button).
 
 ### Close
 
-See [Close Button](/refguide6/data-view-close-button).
+See [Close Button](data-view-close-button).
 
 ### Action
 
-See [Action Button](/refguide6/data-view-action-button).
+See [Action Button](data-view-action-button).

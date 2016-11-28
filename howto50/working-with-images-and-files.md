@@ -10,7 +10,7 @@ This how-to explains how you can work with images and files with Mendix. Out of 
 
 Before you start with this how-to please follow these prerequisites:
 
-*   [Creating a basic data layer](/howto50/creating-a-basic-data-layer)
+*   [Creating a basic data layer](creating-a-basic-data-layer)
 
 ## 2\. Images
 
@@ -39,19 +39,19 @@ Before you start with this how-to please follow these prerequisites:
     **![](attachments/2949139/8028193.png)
 5.  Click **OK** in the entities property form. Your entity now inherits all properties from the System.FileDocument entity you selected and should look like this:
     ![](attachments/2949139/8028191.png)
-6.  Create an overview and detail page to manage objects of the entity that you just created. If you don't know how to create those pages, take a look at [this](/howto50/creating-your-first-two-overview-and-detail-pages) how-to. Your detail page should look like this:
+6.  Create an overview and detail page to manage objects of the entity that you just created. If you don't know how to create those pages, take a look at [this](creating-your-first-two-overview-and-detail-pages) how-to. Your detail page should look like this:
     ![](attachments/2949139/8028195.png)
 7.  Open the detail page and double click the FileManager to open its properties. On this form you can select the maximum file size and allowed file extensions.
     ![](attachments/2949139/8028199.png)
 
 ## 4\. Navigation and Security
 
-1.  Create a navigation item for your overview page to start using it. If you don't know how to setup the navigation structure, take a look at [this](/howto50/setting-up-the-navigation-structure) how-to.
-2.  If you turned on security for this application you need to configure page access on both the overview and detail pages. If you don't know how to configure page access, take a look at [this](/howto50/creating-a-secure-app) how-to.
+1.  Create a navigation item for your overview page to start using it. If you don't know how to setup the navigation structure, take a look at [this](setting-up-the-navigation-structure) how-to.
+2.  If you turned on security for this application you need to configure page access on both the overview and detail pages. If you don't know how to configure page access, take a look at [this](creating-a-secure-app) how-to.
 
 ## 5\. Related content
 
-*   [Creating a basic data layer](/howto50/creating-a-basic-data-layer)
-*   [Denormalize Data to Improve Performance](/howto50/denormalize-data-to-improve-performance)
-*   [Setting up data validation](/howto50/setting-up-data-validation)
-*   [Working With Object Events](/howto50/working-with-object-events)
+*   [Creating a basic data layer](creating-a-basic-data-layer)
+*   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+*   [Setting up data validation](setting-up-data-validation)
+*   [Working With Object Events](working-with-object-events)

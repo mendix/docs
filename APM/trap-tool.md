@@ -19,8 +19,8 @@ When you select a trap you get to see all the messages in that trap.
 
  ![](attachments/Trap_Tool/Individual_Trap.png)
 
-The search parameters to include or exclude connection bus messages[Connection Bus] and 
-microflow messages[Microflow Engine] are available to show or hide the most occurring messages.
+The search parameters to include or exclude **Connection Bus** messages and 
+**Microflow Engine** messages are available to show or hide the most occurring messages.
 
 Also a list of selected records can be sent to the Performance Tool. 
 If the performance tool is already running running you get a warning that you can only send a
@@ -49,23 +49,33 @@ The following screenshot shows the Trap Tool options:
 You can define which traps are excluded to avoid highly repetitive messages which are not useful for analysis.
 You can exclude a complete node or filter out trap messages by regular expressions. 
 Exclusions can be added manually but also by selecting an error, a warning or a critical message in either 
-the Log Tool or the Trap Tool, viewing their details and pressing the [Exclude] button.
+the Log Tool or the Trap Tool, viewing their details and pressing the **Exclude** button.
 
  ![](attachments/Trap_Tool/Edit_Exclusion.png)
 
-The regular expression can be tested against the trap messages in the database, so if the tool currently recorded a message that needs to be excluded the next time it occurs then the test button should give a result.
+The regular expression can be tested against the trap messages in the database, so if the tool currently 
+recorded a message that needs to be excluded the next time it occurs then the test button should give a
+ result.
 
  ![](attachments/Trap_Tool/Test_Exclusion.png)
 
 The Trap Tool can be configured to trap on Warning-, Error- and Critical messages.
 
-The Trap Tool can be configured to remember messages recorded during a certain amount of time or a certain amount of records that precede a trap. So in the screenshot-example of the options dialog you store per trap at most 15.000 records and at most messages from 10.000ms (10 seconds) before the trap.
+The Trap Tool can be configured to remember messages recorded during a certain amount of time or a certain
+ amount of records that precede a trap. So in the screenshot-example of the options dialog you store per
+  trap at most 15.000 records and at most messages from 10.000ms (10 seconds) before the trap.
 
-If you define a [Max messages to store] the system will either stop when the maximum is reached or delete the oldest trap messages. This is determined by the setting [On max stop?]. The oldest messages are deleted when a new trap arrives after the new messages have been added to the database.
+If you define a **Max messages to store** the system will either stop when the maximum is reached or 
+delete the oldest trap messages. This is determined by the setting **On max stop?**. The oldest messages
+ are deleted when a new trap arrives after the new messages have been added to the database.
 
-You can run the Trap Tool for a fixed amount of time. The Trap Tool is intended to run always, but when using the Trap Tool for the first time and not knowing which errors or warnings to exclude you might want to limit the duration the Trap Tool is running.
+You can run the Trap Tool for a fixed amount of time. The Trap Tool is intended to run always, but when
+ using the Trap Tool for the first time and not knowing which errors or warnings to exclude you might want
+  to limit the duration the Trap Tool is running.
 
-The Trap Tool has a [Max Processing Delay (ms)] protection to stop the Trap Tool if the system generates too many log messages which causes queueing inside Mendix. This off course depends on any other tools that might be running and other factors that might generate additional messages.
+The Trap Tool has a **Max Processing Delay (ms)** protection to stop the Trap Tool if the system generates
+ too many log messages which causes queueing inside Mendix. This off course depends on any other tools that
+  might be running and other factors that might generate additional messages.
 
-Changes to the options are applied to the Trap Tool if the button [Save & apply] is used.
+Changes to the options are applied to the Trap Tool if the button **Save & apply** is used.
 

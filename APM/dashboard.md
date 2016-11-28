@@ -5,7 +5,7 @@ category: "User Manual"
 ---
 The Application Performance Monitor (APM) dashboard is the home screen of APM:
 
- ![](attachments/Console/Overview.png)
+ ![](attachments/Dashboard/Dashboard.png)
 
 The dashboard shows recent information from the statistics tool, measurements tool, trap tool and log tool.
 
@@ -18,7 +18,7 @@ of the App to which the APM tool has been added.
 
 # After Startup Configuration
 
-![](attachments/Console/Settings_After_Startup.png)
+![](attachments/Dashboard/Configuration_After_Startup.png)
 
 This tab lets you determine which tools should run _after startup_.
 *The Mendix Modeler contains a safety constant which overrules these after startup settings and enables the 
@@ -38,7 +38,7 @@ APM requires an application license that can be requested via email using the bu
  
  A license is required per app. Every license has an end date.
 
-![](attachments/Console/Settings_License.png)
+![](attachments/Dashboard/Configuration_License.png)
 
 The license code goes in the _License_ field. The _Expiry Date_ field is automatically filled.
 
@@ -47,7 +47,7 @@ The JDBC settings are to execute queries in the query tool and to use the explai
 performance tool. Usually these settings are correctly determined during installation and can stay
 unchanged.
 
-![](attachments/Console/Settings_JDBC.png)                       
+![](attachments/Dashboard/Configuration_JDBC.png)                       
 
 A JDBC URL is automatically set during installation. For special cases this URL can be changed.
 The URL can contain variables that are replaced on executing a JDBC statement.
@@ -64,19 +64,21 @@ The remaining four options are used in the query tool to determine the output an
 To quickly remove all data that is collected by and stored in the APM tool you can use the buttons on 
 the clean data tab.
 
-![](attachments/Console/Settings_CleanData.png)                       
+![](attachments/Dashboard/Configuration_CleanData.png)                       
 
 # More
 Some other settings are collected here.
 
-![](attachments/Console/Settings_Advanced.png)                       
+![](attachments/Dashboard/Configuration_More.png)                       
 
 A default measurement graph can be selected for the dashboard.
+
+Automatic cleanup for the triggered event data in the measurements tool is configured here.
 
 # Start/stop
 A dialog has been added to manually start/stop tools.
 
-![](attachments/Console/StartStop.png)                       
+![](attachments/Dashboard/StartStop.png)                       
 
 The reroute buttons add log messages from other sources to the Mendix logging,
 so that all log information is combined and available in the log and trap tool.

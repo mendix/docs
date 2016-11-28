@@ -7,7 +7,7 @@ The Performance Tool (since version 1.2.1) has a special action to allow context
 
 To add context information use the java action PerformanceTool.PerformanceToolInfoAction in your microflow as shown below.
 
-![](attachments/Inserting_context_information/Performance_Tool_Info_Action_Details.png)             
+![](attachments/Performance_Tool/Inserting_context_information/Performance_Tool_Info_Action_Details.png)             
 
 You can use the info string for the action name and a message string. Optionally you can add 3 mendix objects that have all their attributes added.
 
@@ -19,8 +19,8 @@ You can use the info string for the action name and a message string. Optionally
 
 This leads to an action in the action list with context information:
 
-![](attachments/Inserting_context_information/Microflow_Java_Action.png)
+![](attachments/Performance_Tool/Inserting_context_information/Microflow_Java_Action.png)
 
 Details of the Performance Tool info action will look similar to the image below.
 
-![](attachments/Inserting_context_information/Performance_Tool_Info_Action_InList.png)
+![](attachments/Performance_Tool/Inserting_context_information/Performance_Tool_Info_Action_InList.png)

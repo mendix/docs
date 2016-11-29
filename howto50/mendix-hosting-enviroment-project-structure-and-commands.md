@@ -1,7 +1,7 @@
 ---
 title: "Mendix Hosting Enviroment project structure and commands"
 space: "Mendix 5 How-to's"
-category: "on-premises-deployment"
+category: "On-premises Deployment"
 ---
 ## Description
 

@@ -1940,18 +1940,6 @@
       "from": "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
       "to": "/mendixcloud/how-to-deploy-a-mendix-app-on-azure"
     },
-    
-	{
-      "from": "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
-      "to": "/howto6/how-to-deploy-a-mendix-app-on-azure",
-	  "disabled": true
-    },
-    {
-      "from": "/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
-      "to": "/howto6/how-to-deploy-a-mendix-app-on-azure",
-	  "disabled": true
-    },
-	
     {
       "from": "/mendixcloud/Mendix+Cloud",
       "to": "/mendixcloud/"
@@ -2086,11 +2074,11 @@
     },
     {
       "from": "/mxsupport/Connecting+Project+to+a+Licensed+Node",
-      "to": "/support/connecting-project-to-a-licensed-node"
+      "to": "/support/how-to-connect-a-project-to-a-licensed-node"
     },
     {
       "from": "/mxsupport/Google+Authenticator+and+SMS+Installation",
-      "to": "/support/google-authenticator-and-sms-installation"
+      "to": "/support/how-to-set-up-two-factor-authentication-with-google-authenticator"
     },
     {
       "from": "/mxsupport/How+to+connect+a+different+project+to+a+node",
@@ -2114,19 +2102,19 @@
     },
     {
       "from": "/mxsupport/License+key+activation+on+Linux+server",
-      "to": "/support/license-key-activation-on-linux-server"
+      "to": "/support/license-key-activation-on-linux"
     },
     {
       "from": "/mxsupport/Preparing+Your+Project+for+New+Customer+Support+Tool",
-      "to": "/support/preparing-your-project-for-new-customer-support-tool"
+      "to": "/support/prepare-your-project-for-new-customer-support-portal"
     },
     {
       "from": "/mxsupport/Required+Network+Access+for+connecting+to+the+Mendix+Platform",
-      "to": "/support/required-network-access-for-connecting-to-the-mendix-platform"
+      "to": "/support/troubleshoot-network-issues-for-team-server"
     },
     {
       "from": "/mxsupport/Technical+Contact+Definition",
-      "to": "/support/technical-contact-definition"
+      "to": "/support/technical-contact"
     },
     {
       "from": "/refguide5/TreeNavigation",

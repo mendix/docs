@@ -1,85 +1,60 @@
 ---
-title: "How to restore a backup"
+title: "How to Restore a Backup"
 space: "Mendix Support"
-category: "Mendix Support"
+#category: "{{category}}"
+#parent: ""
+#description: ""
+#tags: []
 ---
 
-This how-to describes how to restore a backup to a sandbox/free app or licensed node.
+## 1 Introduction
+This how-to describes how to restore a backup to a Free App or licensed cloud node.
 
-**After completing this how-to you will know:**
+**This how-to will teach you how to do the following:**
+*   How to restore a full back up of a Free App.
+*   How to restore a full back up of a licensed cloud node 
 
-*   How to restore a full back up of a sandbox/free app.
-*   How to restore a full back up of a licensed node.
+## 2 Prerequisites
+Before starting this how-to, make sure you have completed the following prerequisites:
 
-## 1. Preparation
+*   You have a Free App or licensed cloud node available
+*   You have a backup from a Free App
 
-Before you can start with this how-to, please make sure you have the following prerequisites.
+## 3 Restore A Backup
 
-*   A sandbox/free app or licensed node available.
-*   A backup from a sandbox/free app.
+The process for restoring a backup from a Free App and a licensed cloud node are different. Refer to the chapter applicable to your situation for steps on how to restore a backup.
 
-## 2\. Downloading a backup
+### 3.1 Restore A Backup For A Free App
 
-The documentation on how to download a backup can be found [here.](how-to-download-a-backup)
+1.  Go to [home.mendix.com](http://home.mendix.com).
+2.  Click **Dev Portal**.
+3.  Go to the **Projects** tab.
+4.  Select the project from you want to download the backup.
+5.  Go to the **Deploy** tab.
+6.  Go to the **Backup** tab.
+7.  Select the backup you want to restore and click **Restore Backup**.
 
-## 3\. Restoring a backup
+    ![](attachments/how-to-restore-a-backup/Restore_Step4.2.png)
+8.  Click **Yes** to confirm the restoration.
 
-There is a difference between restoring a backup from a sandbox/free app and licensed node.
+### 3.2 Restoring a backup for a licensed cloud node.
 
-### 3.1 Restoring a backup for a sandbox/free app.
+1.  Go to [home.mendix.com](http://home.mendix.com).
+2.  Click **Dev Portal**.
+3.  Go to the **Projects** tab.
+4.  Select the project from you want to download the backup.
+5.  Go to the **Deploy** tab.
+6.  Go to the **Backup** tab.
+7.  Select the backup you want to restore and click **Restore Backup**.
 
-1.  Go to ‘home.mendix.com'
+    ![](attachments/how-to-restore-a-backup/Restore_Step10.png)
 
-2.  Click on ‘Dev Portal’
+8.  Select the environment the backup should be restored to and click **Restore backup**.
 
-    ![](attachments/20643872/21168129.png)
-3.  Go to the projects tab.
+    ![](attachments/how-to-restore-a-backup/Restore_Step11.png)
+9.  Click **Yes** to restore the backup to the selected environment.
 
-4.  Then select the project where you want to restore the backup to.
-    ![](attachments/20643872/21168130.png)
-
-5.  Go to the ‘deploy’ tab.
-
-    ![](attachments/20643872/21168131.png)
-6.  Click on the ‘backup’ tab.
-
-    ![](attachments/20643872/21168132.png)
-7.  Select the backup you want to restore and then click on restore backup.
-
-    ![](attachments/20643872/21168133.png)
-8.  Click on ‘yes’ to confirm to the restore.
-
-    ![](attachments/20643872/21168134.png)
-9.  The backup has been restored.
-
-### 3.2 Restoring a backup for a licensed node.
-
-1.  Go to ‘[home.mendix.com](http://home.mendix.com)'
-2.  Click on ‘Dev Portal’
-    ![](attachments/20643872/21168129.png)
-3.  Go to the projects tab.
-4.  Then select the project where you want to restore the backup to.
-    ![](attachments/20643872/21168130.png)
-5.  Go to the ‘deploy’ tab.
-    ![](attachments/20643872/21168131.png)
-6.  Click on the ‘backup’ tab.
-    ![](attachments/20643872/21168135.png)
-7.  Click on ‘upload data’.
-    ![](attachments/20643872/21168136.png)
-8.  Select the downloaded database and uploaded files. (These files can be downloaded from other environments) Then click on restore.
-    ![](attachments/20643872/21168137.png)
-9.  Click 'stop and clear' if you are certain the environment has been back upped.
-    ![](attachments/20643872/21168138.png)
-10.  The cloud portal will clear your environment and ask to upload the data. Click 'upload'.
-    ![](attachments/20643872/21168139.png)
-11.  The cloud portal has uploaded the data and can now be used to be deployed to the environment. Click 'Okay'.
-    ![](attachments/20643872/21168140.png)
-12.  Select the backup you have just created and want to restore. Then click on 'Restore Backup'.
-    ![](attachments/20643872/21168141.png)
-
-13.  Select the environment the backup should be restored to. Then click on restore backup.
-    ![](attachments/20643872/21168142.png)
-
-14.  Click on 'yes' to confirm to transport the backup to the environment.
-    ![](attachments/20643872/21168143.png)
-15.  The backup has been restored to the licensed node.
+## 4 Related Content
+*   [How To Unlink Your Sandbox](how-to-unlink-your-sandbox)
+*   [How To Download A Backup](how-to-download-a-backup)
+*   [How To Connect A Project To A Licensed Cloud Node](how-to-connect-a-project-to-a-licensed-node)

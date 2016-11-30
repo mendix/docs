@@ -1938,12 +1938,20 @@
     },
     {
       "from": "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
-      "to": "/howto6/how-to-deploy-a-mendix-app-on-azure"
+      "to": "/mendixcloud/how-to-deploy-a-mendix-app-on-azure"
+    },
+    
+	{
+      "from": "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
+      "to": "/howto6/how-to-deploy-a-mendix-app-on-azure",
+	  "disabled": true
     },
     {
       "from": "/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
-      "to": "/howto6/how-to-deploy-a-mendix-app-on-azure"
+      "to": "/howto6/how-to-deploy-a-mendix-app-on-azure",
+	  "disabled": true
     },
+	
     {
       "from": "/mendixcloud/Mendix+Cloud",
       "to": "/mendixcloud/"

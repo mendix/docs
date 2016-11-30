@@ -1,65 +1,56 @@
 ---
-title: "How to download a backup"
+title: "How to Download a Backup"
 space: "Mendix Support"
 category: "Mendix Support"
 ---
 
-This how-to describes how to download a sandbox/free app backup and download a licensed node backup.
+## 1 Introduction
+This how-to describes how to download a Sandbox environment backup from a Free App and how to download a licensed cloud node backup.
 
-**After completing this how-to you will know:**
+**This how-to will teach you how to do the following:**
 
-*   How to download a full back up of a sandbox/free app.
-*   How to download a full back up of a licensed node.
+*   How to download a full backup of a Sandbox environment
+*   How to download a full backup of a licensed cloud node
 
-## 1. Preparation
+## 2 Prerequisites
 
-Before you can start with this how-to, please make sure you have the following prerequisites.
+Before starting this how-to, make sure you have completed the following prerequisites:
 
-*   A sandbox/free app or licensed node with backups.
+*   You have a Free App or licensed cloud node with backups
 
-## 2\. Downloading a backup
+## 3 Download A Free App Backup
+Download a backup of a Free App by following these steps:
 
-There is a difference between downloading a backup from a sandbox/free app and a licensed node.
+1.  Go to [home.mendix.com](http://home.mendix.com).
+2.  Click **Dev Portal**.
+3.  Go to the **Projects** tab.
+4.  Select the project from you want to download the backup.
+5.  Go to the **Deploy** tab.
+6.  Go to the **Backup** tab.
 
-### 2.1 Downloading a backup from a sandbox/free app.
-
-1.  Go to ‘[home.mendix.com](http://home.mendix.com)’
-2.  Click on ‘Dev Portal’
-    ![](attachments/20643883/21168144.png)
-3.  Go to the projects tab.
-4.  Then select the project where you want to download the backup from.
-    ![](attachments/20643883/21168145.png)
-5.  Go to the ‘deploy’ tab.
-    ![](attachments/20643883/21168146.png)
-6.  Click on the ‘backup’ tab.
     ![](attachments/20643883/21168147.png)
-7.  Select backup and click on ‘download backup’.
+7.  Select the backup you want to download and click **Download Backup**.
+
     ![](attachments/20643883/21168148.png)
 
-8.  Click on the desired backup, for example download the ‘database only’ and ‘files only’.
-    ![](attachments/20643883/21168149.png)
-9.  The backup has now been downloaded.
+8.  Click **Download** for your preferred backup.
 
-### 2.2 Downloading a backup from a licensed node.
+    > Options are *Full Snapshot*, *Database Only* and *Files Only*.
 
-1.  Go to ‘[home.mendix.com](http://home.mendix.com)’.
-2.  Click on ‘Dev Portal’.
-    ![](attachments/20643883/21168144.png)
-3.  Go to the projects tab.
-4.  Then select the project where you want to download the backup from.
-    ![](attachments/20643883/21168145.png)
-5.  Go to the ‘deploy’ tab.
-    ![](attachments/20643883/21168146.png)
-6.  Click on the ‘backup’ tab.
-    ![](attachments/20643883/21168147.png)
 
-7.  Select a backup and press on ‘download backup’.
-    ![](attachments/20643883/21168150.png)
+## 4 Download A Licensed Cloud Node Backup
 
-8.  For examplet you can click on the 'download' here to download a full backup.
-    ![](attachments/20643883/21168151.png)
-9.  The backup has now been downloaded.
+1.  Go to [home.mendix.com](http://home.mendix.com).
+2.  Click **Dev Portal**.
+3.  Go to the **Projects** tab.
+4.  Select the project from you want to download the backup.
+5.  Go to the **Deploy** tab.
+6.  Go to the **Backup** tab.
+7.  Select a backup and click **Download Backup**.
+8.  Click **Download** for your preferred backup.
 
-## 3\. Restoring a backup
 
-The documentation on how to restore a backup can be found [here.](how-to-restore-a-backup)
+## 5 Related Content
+*   [How To Unlink Your Sandbox](how-to-unlink-your-sandbox)
+*   [How To Restore A Backup](how-to-restore-a-backup)
+*   [How To Connect A Project To A Licensed Cloud Node](how-to-connect-a-project-to-a-licensed-node)

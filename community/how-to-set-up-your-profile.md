@@ -21,13 +21,17 @@ If you access your profile through the Leaderboards or Developers page, it will 
 
 Since the release of My Community Profile you can merge your old Mendix account(s) into your current Mendix account. This action will combine all your hard-earned points, certifications and achievements in your efforts to climb the leaderboards.
 
-How can I merge my accounts? With three quick and easy steps!
+How can I merge my accounts? With five quick and easy steps!
 
 1.  Go to [your profile](https://developer.mendixcloud.com/link/ownprofile/)
-2.  Make your profile public.
-3.  Click the feedback button and add the text: I would like to merge the accounts with email address XXX, XXX and XXX to the account which I provided this feedback item.
+2.  Make your profile public
+3.  Click Account Settings
+4.  Enter the email address of the account you want to merge with your current account
+5.  Send merge request
 
-We’ll take things from there and notify you when the accounts have been merged.
+We’ll take things from there and the email address of the merged account will be shown in the list when the accounts have been merged.
+
+![](attachments/19202388/MergeAccountsRequestApproved.png)
 
 Note: with this action we only combine the accounts. We don’t deactivate the old account(s). This should be done by that company’s administrator.
 

@@ -94,7 +94,8 @@
 
   if ($('.not-found-suggestion')) {
     var $el = $('.not-found-suggestion'),
-        path = location.pathname.replace(/[\ \/\-\+]/g, ' '),
+        splitted = location.pathname.split('/'),
+        path = splitted.slice(-1)[0].replace(/[\ \/\-\+]/g, ' '),
         client = algoliasearch(ALGOLIA_CONFIG.appId, ALGOLIA_CONFIG.apiKey),
         index = client.initIndex(ALGOLIA_CONFIG.indexName);
 
@@ -105,7 +106,7 @@
       }
       if (content.hits && content.hits.length > 0) {
         var suggestion = content.hits[0],
-            url = (location.hostname === 'localhost' ? '' : 'https://docs.mendix.com') +  suggestion.url;
+            url = (location.hostname === 'localhost' ? '' : 'https://docs.mendix.com') +  suggestion.url.replace('.html', '');
             searchUrl = (location.hostname === 'localhost' ? '/search?' : 'https://docs.mendix.com/search?') +  content.params;
         $el.empty();
         $el.append('<p class="text-center lead">Are you looking for: <a href="' + url + '">https://docs.mendix.com' + url + '</a> ? If not, use the <a href="' + searchUrl + '">search</a>.</p>');

@@ -1,66 +1,63 @@
 ---
-title: "How to connect a different project to a node"
+title: "How to Connect a Different Project to a Cloud Node"
 space: "Mendix Support"
-category: "Mendix Support"
+#category: "{{category}}"
+#parent: ""
+#description: ""
+#tags: []
 ---
-# How to connect a different project to a node
 
-This how-to describes how to connect a different **project** to your licensed **node** so that you can deploy a different **app.**
+## 1 Introduction
 
-**After completing this how-to you will know:**
+This how-to describes how to connect a different Mendix project to your licensed cloud node so that you can deploy a different app.
 
-*   How to connect a different **project** to your **node** which already has a connected project
-*   How to exchange **projects** between two **nodes**
+**This how-to will teach you how to do the following:**
 
-## 1. Preparation
+*   How to connect a different project to your node which already has a connected project
+*   How to exchange projects between two nodes
 
-Before you can start with this how-to, please make sure you have completed the following prerequisites.
+## 2 Prerequisites
 
-*   **Project** is a teamserver project. In [here](/howto6/create-and-deploy-your-first-app) you can see how to create a collaboration **project**.
+Before starting this how-to, make sure you have completed the following prerequisites:
 
-<div class="alert alert-info">{% markdown %}
+*   Your project is a Team Server project
 
-In case you have created a project in the modeler, then you can upload this to the teamserver (see [Upload To Team Server Dialog](/refguide6/upload-to-team-server-dialog)) and a repository will be created automatically.
+    > If you created a project in the Modeler you can upload it to the Team Server and a repository will be created automatically. See [Upload To Team Server Dialog](https://docs.mendix.com/refguide6/upload-to-team-server-dialog) for more information.
 
-{% endmarkdown %}</div>
+*   You don't have a Free App connected to your project
 
-*   No **sandbox** is connected to your **project**. (Every teamserver **project** is connected to a **sandbox** automatically).
+    > You can raise a ticket with [Mendix Support](https://support.mendix.com/) to delete your Free App. Select the template *Delete Sandbox*.
 
-<div class="alert alert-info">{% markdown %}
 
-You can create a **ticket** to delete your **sandbox** on our [Support Portal](https://support.mendix.com/). You can choose the template **‘Delete Sandbox’**.
+## 3 Connect A Different Project To The Node
 
-{% endmarkdown %}</div>
+1.  Go to the **Developer Portal**.
+2.  Go to **Projects** and select the project you want to connect to the node.
+3.  Go to the **Deploy** tab.
+4.  Click **Select Node**.
 
-## 2\. Connecting a project to a cloud node
+    > If your project is still connected to a Free App, follow the [How To Connect A Project To A Licensed Cloud Node ](how-to-unlink-your-sandbox) how-to to learn how to remove it.
 
-*   In [here](/mendixcloud/deploying-to-the-cloud) you can see how to connect a **project** to a cloud **node**.
+5.  Click **Use this Node** for the node you want to connect. The current connected project will be disconnected automatically.
 
-## 3\. Connecting a different project to the node
+    ![](attachments/how-to-connect-a-different-project-to-a-node/usethisnode.png)
 
-1.  In the **Dev Center**, go to **'Projects'** and select the **project** you want to connect to the **node** 
+## 4 Exchange Connected Projects Between Nodes
 
-    ![](attachments/19202636/19398908.png)
-2.  Once you are in the **project**, go to the **'Deploy'** tab.
+If you want to exchange two projects with nodes who are already connected, you can create a new project and follow chapters 1 to 3 of this document.
 
-    ![](attachments/19202636/19398909.png)
-3.  In case your **project** isn’t linked to a **sandbox** anymore you should be able to see the blue button **‘Select Node’** and click on it.
+### 4.1 Example
+In this example we'll show you how to exchange connected projected between nodes. You will start by disconnecting Project A from Node 1, connecting it to Node 2, and then connecting Project B to Node 1.
 
-    ![](attachments/19202636/19398912.png)
-4.  Select the correct **node** by clicking on **'Use this Node' **button and connect it to your **project** to deploy your **app**. The current connected **project** will be disconnected automatically.
-    ![](attachments/19202636/19398913.png)
+* Project A → Node 1
+* Project B → Node 2
 
-## 4\. Exchange connected projects between nodes
+1.  Create a new, empty project (Project C).
+2.  Connect **Project C** to **Node 1**. This will disconnect Project A from Node 1. 
+3.  Connect **Project A** to **Node 2**.
+4.  Now connect **Project B** to **Node 1**.
 
-In case you want to exchange two **projects** with **nodes** who are already connected, you can create a new **project** and follow chapters 1 to 3 of this document.
+The connected projects have now switched nodes. Project C is merely a placeholder used to remove Project A from Node 1. After the operation is completed Project C can be safely deleted.
 
-<div class="alert alert-info">{% markdown %}
-
-Project A → Node 1
-Project B → Node 2
-
-1.  To be able to connect **project A** to **Node 2**, you have to create a new empty **project C** (see [Chapter 1](how-to-connect-a-different-project-to-a-node)).
-2.  And to connect this to **Node 1** (see [Chapter 2](how-to-connect-a-different-project-to-a-node)). 
-3.  **Project A** will be released from **Node 1** and can be connected to **Node 2** (see ).
-
-{% endmarkdown %}</div>
+## 5 Related Content
+*   [How To Unlink Your Sandbox](how-to-unlink-your-sandbox)

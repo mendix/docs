@@ -14,7 +14,7 @@ const runSequence = require('run-sequence');
 const shell       = require('shelljs');
 
 const buildDate     = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
-const PORT          = 3000;
+const PORT          = 4000;               // Keep this at 4000 for now
 const DIST_FOLDER   = '_site';            // DO NOT CHANGE THIS, IS USED BY TRAVIS FOR DEPLOYMENT IN MANIFEST
 const CONFIG        = '_config.yml';
 const CONFIG_TEST   = '_config_test.yml';

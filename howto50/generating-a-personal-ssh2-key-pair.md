@@ -86,5 +86,5 @@ As an alternative you can directly enter the username in the server name edit fi
 *   [Security](security)
 *   [Generating a personal SSH2 key pair](generating-a-personal-ssh2-key-pair)
 *   [Creating a secure app](creating-a-secure-app)
-*   [Required Network Access for connecting to the Mendix Platform](/support/required-network-access-for-connecting-to-the-mendix-platform)
+*   [Required Network Access for connecting to the Mendix Platform](/support/troubleshoot-network-issues-for-team-server)
 *   [Anonymous User Security](anonymous-user-security)

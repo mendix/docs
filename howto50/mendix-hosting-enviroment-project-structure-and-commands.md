@@ -1,6 +1,7 @@
 ---
 title: "Mendix Hosting Enviroment project structure and commands"
 space: "Mendix 5 How-to's"
+category: "On-premises Deployment"
 ---
 ## Description
 
@@ -88,5 +89,4 @@ The file can be edited using a text editor like `vim` or `nano`, the latter bein
 
 Don't hesitate to ask for help on the Mendix Forum at [https://forum.mendix.com/](https://forum.mendix.com/) or file a support ticket for your application environment at [https://support.mendix.com/](https://support.mendix.com/) if you have trouble editing this file or understanding details of the configuration.
 
-Return to:
-[![](attachments/819203/917564.png)](mendix-hosting-enviroment-project-structure-and-commands)[(Back to Top)](mendix-hosting-enviroment-project-structure-and-commands)
+

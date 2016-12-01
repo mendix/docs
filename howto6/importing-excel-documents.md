@@ -14,7 +14,7 @@ Before you continue, make sure that you know how to create:
 
 *   **Domain models** ([Creating a basic data layer](create-a-basic-data-layer)).
 *   **Overview and detail pages** ([Creating your first two overview and detail pages](create-your-first-two-overview-and-detail-pages)).
-*   **Menu items **([Setting Up the Navigation Structure](setting-up-the-navigation-structure)).
+*   **Menu items** ([Setting Up the Navigation Structure](setting-up-the-navigation-structure)).
 *   **Microflows** ([Create your first Microflow: Hello World!](create-your-first-microflow-hello-world)
 *   **Add Appstore** **content (** [Adding appstore content to your app](/appstore/adding-app-store-content-to-your-app)).
 *   **Secure applications** ([Creating a secure app](create-a-secure-app)).
@@ -28,26 +28,30 @@ Follow these steps:
 2. Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.
 3.  Create **menu items **to access the **Order** and the **Customer** overview pages.
 4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the appstore.
-5.  Create **menu items** for the **ExcelImportOverview** and the **MxObjects_Overview** pages. Those pages already exist within the _**USE_ME** folders of the downloaded modules.
+5.  Create **menu items** for the **ExcelImportOverview** and the **MxObjects_Overview** pages. Those pages already exist within the **USE_ME** folders of the downloaded modules.
 6.  Configure the **Administrator** user role to have the **Configurator** modu lerole for the **Excel Importer** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
 
-## 2\. Prepare logic for data import
+## 2 Prepare logic for data import
 
-As an enumeration is used for the **OrderStatus** attribute, a microflow needs to be created to determine the enumeration value of the attribute based on the input from the Excel file. 
+As an enumeration is used for the **OrderStatus** attribute, a microflow needs to be created to determine the enumeration value of the attribute based on the input from the Excel file.
 
 1.  Create the following Microflow and name it **IVK_ParseStatus**.
+
     ![](attachments/18448735/18581968.png)
 2.  Set the **Return value** as followes:
+
     ![](attachments/18448735/18581967.png)
 3.  **Save** the microflow.
 
-## 3\. Use the application model meta data in the client
+## 3 Use the application model meta data in the client
 
 In order to set up import templates for importing data, your application model meta data should be reflected in the client. This can be achieved by using [Mx Model reflection](https://appstore.home.mendix.com/link/app/69/Mendix/Mx-Model-reflection). In this part of the How-to you will learn to do so.
 
-1.  Click on **Run Locally **to start your application.
+1.  Click on **Run Locally** to start your application.
+
     ![](attachments/18448735/18581975.png)
-2.  Click on  **View App ** to open your application in the browser.
+2.  Click on  **View App** to open your application in the browser.
+
     ![](attachments/18448735/18581974.png)
 3.  **Log in** as an Administrator.
 4.  Click on the menu item for the **MxObjects_Overview** in your navigation.
@@ -57,7 +61,7 @@ In order to set up import templates for importing data, your application model m
     **
 7.  Now the two objects and the parse microflow from the module **MyFirstModule** can be seen and used in the client.
 
-## 4\. Create Import Templates
+## 4 Create Import Templates
 
 Before you can import data from an Excel File into your application, you have to first setup an import template. In this template you will configure which objects the data should be mapped to, if an object is associated to another object, from which row of the Excel File the import should start and which columns should be imported.
 
@@ -68,7 +72,9 @@ In this How-to you will import data from a simple Excel file which can be downlo
 Based on the structure of the file you want to import, you will setup your template.
 
 1.  Click on the menu item for the ExcelImportOverview in your navigation.
-2.  Click on **New Template**.![](attachments/18448735/18581971.png)
+2.  Click on **New Template**.
+
+  ![](attachments/18448735/18581971.png)
 3.  Determine the name of the template.
 4.  Click on the arrow next to the **Mendix object** box.
 5.  Select the **Customer** object.
@@ -174,7 +180,7 @@ Now the template is setup you can start importing data from an Excel file into y
 ## 6\. Create Import templates by Excel file
 
 In the previous steps you have manually added all the columns to your import template. In this section you will be creating the same Excel template in an automated way. You can do this by using the **New template by excelfile** button at the **Normal templates** tab. An example Excel file can be downloaded here:
-[![](attachments/18448735/18581938.png)](attachments/18448735/18581949.xlsx) 
+[![](attachments/18448735/18581938.png)](attachments/18448735/18581949.xlsx)
 
 1.  Click on the menu item for the ExcelImportOverview in your navigation.
 2.  Click on  **New template by excelfile

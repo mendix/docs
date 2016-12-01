@@ -3,14 +3,13 @@ const gutil       = require('gulp-util');
 const sass        = require('gulp-sass');
 const sourcemaps  = require('gulp-sourcemaps');
 const minify      = require('gulp-minify');
-const Server      = require('spa-server');
 
+const Server      = require('./_gulp/server');
 const Jekyll      = require('./_gulp/jekyll');
 const gulpErr     = require('./_gulp/helpers').gulpErr;
 
 const fs          = require('fs');
 const spawn       = require('child_process').spawn;
-const url         = require('url');
 
 const pump        = require('pump');
 const browserSync = require('browser-sync').create();
@@ -19,6 +18,7 @@ const del         = require('del');
 const runSequence = require('run-sequence');
 const shell       = require('shelljs');
 
+const currentFolder = __dirname;
 const buildDate     = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
 const PORT          = 4000;
 const DIST_FOLDER   = '_site';            // DO NOT CHANGE THIS, IS USED BY TRAVIS FOR DEPLOYMENT IN MANIFEST
@@ -139,25 +139,7 @@ const mappings = (write, cb) => {
   });
 };
 
-const spawnServer = () => {
-  const server = Server.create({
-    path: './_site',
-    port: 8888,
-    fallback: (req, res) => {
-      const parsed = url.parse(req.url),
-            target = parsed.pathname + '.html',
-            alternateTarget = parsed.pathname + '/index.html';
-      if (shell.test('-f', '_site' + target)) {
-        return target + (parsed.query ? `?${parsed.query}` : '');
-      }
-      if (shell.test('-f', '_site' + alternateTarget)) {
-        return alternateTarget + (parsed.query ? `?${parsed.query}` : '');
-      }
-      return '404.html';
-    }
-  })
-  server.start();
-}
+
 /*************************************************
   TASKS
 **************************************************/
@@ -226,7 +208,7 @@ gulp.task('jekyll:build-test', `Jekyll build, using ${CONFIG_TEST}`, [], done =>
 });
 
 gulp.task('dev', ``, ['sass:dev', 'copy:images', 'compress:js'], done => {
-  spawnServer();
+  Server.spawn(currentFolder);
   Jekyll.spawn(CONFIG_TEST, true);
   browserSync.init({
     port: PORT,

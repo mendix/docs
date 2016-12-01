@@ -176,6 +176,7 @@ exclude:
   - Gemfile.lock
   - Gemfile.lock.osx
   - Gemfile.lock.win
+  - _gulp
   - README.md
   - Rakefile
   - node_modules

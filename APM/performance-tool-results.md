@@ -17,7 +17,7 @@ When viewing or drilling down on called microflows. This will open a dialog begi
 
 The tab with the "main microflows during this microflow" shows domain model microflows and calculated attributes. Please note that other microflows occurring in the same interval might appear here as well.
 
-The **SQL statements** tab shows the SQL statements of the currently viewed microflow. If the microflow is a main microflow—which consists of its own runtime request—all the SQL statements that are not linked to an individual action are linked here.
+The **SQL statements** tab shows the SQL statements of the currently viewed microflow. If the microflow is a main microflow which consists of its own runtime request all the SQL statements that are not linked to an individual action are linked here.
 
 ![](attachments/Performance_Tool/Browse/Action_SQL_Statements.png) 
 

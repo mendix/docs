@@ -7,7 +7,9 @@ const minify      = require('gulp-minify');
 const Server      = require('./_gulp/server');
 const Jekyll      = require('./_gulp/jekyll');
 const gulpErr     = require('./_gulp/helpers').gulpErr;
+const Mappings    = require('./_gulp/mappings');
 
+const path        = require('path');
 const fs          = require('fs');
 const spawn       = require('child_process').spawn;
 
@@ -46,104 +48,12 @@ const paths = {
 /*************************************************
   FUNCTIONS
 **************************************************/
-const escapeMapping = str => {
-  return str
-      .replace(/\//g, '\\\/')
-      .replace(/\+/g,'\\\+')
-      .replace(/\./g,'\\.')
-      .replace(/\(/g,'\\(')
-      .replace(/\)/g,'\\)')
-      //.replace(/'/g,'\'')
-      .replace(/ /g,'\\ ')
-      .replace(/\:/g,'\\\:')
-      .replace(/"/g,'\\\"');
-}
 
-const mappings = (write, cb) => {
-  fs.readFile('_assets/mappings/redirect.json', (err, data) => {
-    if (err) {
-      gulpErr('write:mappings', `Cannot read _assets/mappings/redirect.json`);
-    }
-    let mappings = null;
-    try {
-      mappings = JSON.parse(data);
-    } catch (e) {
-      gulpErr('write:mappings', `Cannot read _assets/mappings/redirect.json: ${e}`);
-    }
-    if (mappings.redirect) {
-      const red = _.reverse(_.sortBy(mappings.redirect, mapping => mapping.from.length));
-      let mappingsArr = [
-            '############################################################################################',
-            `# Mendix redirect mapping, generated on ${buildDate} using \'gulp write:mappings\'`,
-            '############################################################################################',
-            ''
-          ],
-          done = [],
-          errors = [];
-      _.forEach(red, r => {
-        if (!r.to || !r.from) {
-          gulpErr('write:mappings', `Error reading _assets/mappings/redirect.json, this is not a correct mapping: ${JSON.stringify(r, null, 4)}`);
-        }
-        if (r.disabled) {
-          gutil.log(`Mapping ${r.from} => ${r.to} disabled`)
-        }
-        const to = r.to.trim(),
-              from = r.from.trim(),
-              lastChar = to.substr(-1),
-              mdFile = '.' + to + (lastChar === '/' ? 'index.md' : '.md'),
-              htmlFile = gutil.replaceExtension(mdFile, '.html'),
-              hash = new Buffer(`${from}-${to}`).toString('base64'),
-              caseSensitive = to.toLowerCase() === from.toLowerCase();
-
-        if (!shell.test('-e', mdFile) && !shell.test('-e', htmlFile)) {
-          errors.push(`There is no file for the mapping in mappings.json to: ${gutil.colors.cyan(to)}`);
-        } else if (to === from) {
-          errors.push(`${gutil.colors.cyan(to)} is the same as ${gutil.colors.cyan(from)}`);
-        } else if (done.indexOf(hash) !== -1) {
-          errors.push(`You have a duplicate mapping for. ${gutil.colors.cyan(from)} => ${gutil.colors.cyan(to)}`);
-        }
-        let mappingStr = '',
-            fromStr = (from.substr(-1) === '/' ? from + '?' : from + '/?');
-
-        if (r.exact) {
-          mappingsArr.push(`${from} ${to};`);
-        } else {
-          mappingsArr.push((caseSensitive ? '~' : '~*') + `${escapeMapping(fromStr)} ${to};`);
-        }
-
-      });
-      const mappingsFile = mappingsArr.join('\n');
-
-      if (errors.length > 0) {
-        gulpErr('write:mappings', `You have errors in your mapping ${gutil.colors.cyan('_assets/mappings/redirect.json')} file:\n\n${errors.join('\n')}\n`);
-      }
-
-      if (write) {
-        if (!shell.test('-d', '_site/mappings')) {
-          shell.mkdir('-p', '_site/mappings');
-        }
-        fs.writeFile('_site/mappings/redirect.map', mappingsFile, err => {
-          if (err) {
-            gulpErr('write:mappings', `Error writing _site/mappings/redirect.map: ${err}`);
-          } else {
-            gutil.log('Mappings written to _site/mappings/redirect.map');
-          }
-          cb();
-        })
-      } else {
-        cb();
-      }
-    } else {
-      gulpErr('write:mappings', `No redirects found in mappings.json`);
-    }
-  });
-};
 
 
 /*************************************************
   TASKS
 **************************************************/
-
 gulp.task('clean', `Cleanup the ${DIST_FOLDER} directory`, () => {
   return del([
     DIST_FOLDER
@@ -151,7 +61,12 @@ gulp.task('clean', `Cleanup the ${DIST_FOLDER} directory`, () => {
 });
 
 gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json to ${DIST_FOLDER}/mappings/redirect.map`, done => {
-  mappings(true, done);
+  Mappings.run({
+    write: true,
+    src: path.join(currentFolder, '/_assets/mappings/redirect.json'),
+    dest: path.join(currentFolder, '/_site/mappings/redirect.map'),
+    callback: done
+  });
 });
 
 gulp.task('copy:images', `Copy images from _assets folder`, () => {

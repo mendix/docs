@@ -67,6 +67,7 @@ gulp.task('write:githistory', `Write git_history to data`, done => {
         if (err) {
           throwErr('write:githistory', `Error writing githistory: ${err}`);
         }
+        gutil.log(gutil.colors.cyan('[GIT-HISTORY]') + ` Git history written to ${gutil.colors.cyan(path.join(CURRENTFOLDER, '/_data/history.yml'))}`)
         done();
       });
     })

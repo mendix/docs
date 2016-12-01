@@ -1,0 +1,8 @@
+{% unless page.nogit %}
+{% assign history = site.data.history[page.path] %}
+{% if history %}
+  <div class="history">Last update: <time datetime="{{history.date}}">{{ history.date }}</time> in <a target="_blank" href="https://github.com/mendix/docs/commit/{{history.hash}}" title="commit {{history.hash}}">{{ history.hash | slice: 0, 6 }}</a></div>
+{% else %}
+  <!-- NO GIT HISTORY FOUND -->
+{% endif %}
+{% endunless %}

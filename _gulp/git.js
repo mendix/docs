@@ -6,7 +6,6 @@ const recursive = require('recursive-readdir');
 const moment = require('moment');
 const async = require('async');
 const gutil = require('gulp-util');
-//const yaml = require('write-yaml')
 
 const rev = 'HEAD';
 const ASYNC_LIMIT = 50;

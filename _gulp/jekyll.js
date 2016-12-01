@@ -4,7 +4,7 @@ const _ = require('lodash');
 const gulpErr = require('./helpers').gulpErr;
 const browserSync = require('browser-sync').create();
 
-const spawnJekyll = (config, watch, cb) => {
+const spawnJekyll = (config, watch, cb, bsync) => {
   const jekyll_indicator = gutil.colors.cyan("[JEKYLL]");
   const doneStr = 'done in';
   const child = spawn('bundle', [
@@ -24,7 +24,9 @@ const spawnJekyll = (config, watch, cb) => {
         if (line) {
           gutil.log(jekyll_indicator, line);
           if (line.indexOf(doneStr) !== -1 && watch) {
-            browserSync.reload();         // Rebuild was triggered by Hugo, so we'll reload the page
+            if (bsync) {
+              bsync.reload();         // Rebuild was triggered by Hugo, so we'll reload the page
+            }
           }
         }
       });

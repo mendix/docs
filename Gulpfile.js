@@ -131,7 +131,7 @@ gulp.task('jekyll:build-test', `Jekyll build, using ${CONFIG_TEST}`, [], done =>
 
 gulp.task('dev', ``, ['sass:dev', 'copy:images', 'compress:js'], done => {
   server.spawn(CURRENTFOLDER);
-  jekyll.spawn(CONFIG_TEST, true);
+  jekyll.spawn(CONFIG_TEST, true, false, browserSync);
   browserSync.init({
     port: PORT,
     proxy: 'localhost:8888',

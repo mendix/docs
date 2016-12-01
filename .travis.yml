@@ -36,6 +36,7 @@ branches:
   only:
   - master
   - development
+  - feature_development
 deploy:
 - provider: script
   script: cf zero-downtime-push $CF_APP -f ./manifest_prod.yml

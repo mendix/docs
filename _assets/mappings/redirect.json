@@ -77,10 +77,6 @@
       "to": "/APM/after-startup-error"
     },
     {
-      "from": "/APM/Console",
-      "to": "/APM/console"
-    },
-    {
       "from": "/APM/Constants",
       "to": "/APM/constants"
     },
@@ -149,18 +145,6 @@
       "to": "/APM/performance-tool"
     },
     {
-      "from": "/APM/Performance+Tool+Control",
-      "to": "/APM/performance-tool-control"
-    },
-    {
-      "from": "/APM/Performance+Tool+Filter",
-      "to": "/APM/performance-tool-filter"
-    },
-    {
-      "from": "/APM/Performance+Tool+Options",
-      "to": "/APM/performance-tool-options"
-    },
-    {
       "from": "/APM/Performance+Tool+Results",
       "to": "/APM/performance-tool-results"
     },
@@ -187,10 +171,6 @@
     {
       "from": "/APM/Release+Notes+1.8.0",
       "to": "/APM/release-notes-1.8.0"
-    },
-    {
-      "from": "/APM/Show+Recorded+Dialog",
-      "to": "/APM/show-recorded-dialog"
     },
     {
       "from": "/APM/Sizing+impact",

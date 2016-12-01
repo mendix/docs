@@ -8,12 +8,14 @@ const server      = require('./_gulp/server');
 const jekyll      = require('./_gulp/jekyll');
 const gulpErr     = require('./_gulp/helpers').gulpErr;
 const mappings    = require('./_gulp/mappings');
+const git         = require('./_gulp/git');
 
 const path        = require('path');
 const pump        = require('pump');
 const browserSync = require('browser-sync').create();
 const del         = require('del');
 const runSequence = require('run-sequence');
+const yaml        = require('write-yaml');
 
 const CURRENTFOLDER = __dirname;
 const BUILDDATE     = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
@@ -56,6 +58,21 @@ gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json 
     dest: path.join(CURRENTFOLDER, '/_site/mappings/redirect.map'),
     callback: done
   });
+});
+
+gulp.task('write:githistory', `Write git_history to data`, done => {
+  git.getCommits(CURRENTFOLDER, true)
+    .then(commits => {
+      yaml('_data/history.yml', commits, err => {
+        if (err) {
+          throwErr('write:githistory', `Error writing githistory: ${err}`);
+        }
+        done();
+      });
+    })
+    .error(err => {
+      throwErr('write:githistory', `Error with reading git history:`, err);
+    })
 });
 
 gulp.task('copy:images', `Copy images from _assets folder`, () => {
@@ -131,9 +148,9 @@ gulp.task('serve', `Jekyll serve, using ${CONFIG_TEST}`, done => {
 })
 
 gulp.task('build', `Jekyll build, using ${CONFIG}. Used for production`, done => {
-  runSequence('clean', ['jekyll:build', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
+  runSequence('clean', 'write:githistory', ['jekyll:build', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
 });
 
 gulp.task('build-test', `Jekyll build, using ${CONFIG_TEST}. Used for test`, done => {
-  runSequence('clean', ['jekyll:build-test', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
+  runSequence('clean', 'write:githistory', ['jekyll:build-test', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
 });

@@ -13,9 +13,7 @@ const spawnServer = (folder) => {
             target = parsed.pathname + '.html',
             alternateTarget = parsed.pathname + '/index.html';
 
-      console.log(path.join(targetFolder, target));
-
-      if (shell.test('-f', path.resolve(targetFolder, target))) {
+      if (shell.test('-f', path.join(targetFolder, target))) {
         return target + (parsed.query ? `?${parsed.query}` : '');
       }
       if (shell.test('-f', path.resolve(targetFolder, alternateTarget))) {

@@ -4,7 +4,9 @@ const sass        = require('gulp-sass');
 const sourcemaps  = require('gulp-sourcemaps');
 const minify      = require('gulp-minify');
 const Server      = require('spa-server');
-const gulputil    = require('gulp-util');
+
+const Jekyll      = require('./_gulp/jekyll');
+const gulpErr     = require('./_gulp/helpers').gulpErr;
 
 const fs          = require('fs');
 const spawn       = require('child_process').spawn;
@@ -44,66 +46,6 @@ const paths = {
 /*************************************************
   FUNCTIONS
 **************************************************/
-const throwErr = (plugin, error) => {
-  throw new gutil.PluginError({
-    plugin: plugin,
-    message: error
-  }, { showStack: true });
-}
-
-const spawnJekyll = (test, watch, cb) => {
-  const jekyll_indicator = gutil.colors.cyan("[JEKYLL]");
-  const doneStr = 'done in';
-  const child = spawn('bundle', [
-    'exec',
-    'jekyll',
-    'build',
-    '--config',
-    (test ? CONFIG_TEST : CONFIG),
-    (watch ? '-w' : '')
-  ], { cwd: process.cwd()});
-
-  child.stdout.setEncoding('utf8');
-  child.stderr.setEncoding('utf8');
-
-  child.stdout.on('data', data => {
-      _.each(data.split('\n'), line => {
-        if (line) {
-          gutil.log(jekyll_indicator, line);
-          if (line.indexOf(doneStr) !== -1 && watch) {
-            browserSync.reload();         // Rebuild was triggered by Hugo, so we'll reload the page
-          }
-        }
-      });
-  });
-
-  child.stderr.on('data', data => {
-      _.each(data.split('\n'), line => {
-        if (line) {
-          gutil.log(jekyll_indicator, gutil.colors.red(line));
-        }
-      });
-      gutil.beep();
-  });
-
-  child.on('close', function(code) {
-      gutil.log(jekyll_indicator, "Closed with exit code", code);
-      if (cb && _.isFunction(cb)) {
-        cb(code);
-      }
-  });
-};
-
-const build = (t, cb) => {
-  spawnJekyll(t, false, (code) => {
-    if (code !== 0) {
-      throwErr('jekyll:build', `Jekyll exit code is ${code}, check your Jekyll setup`);
-    } else {
-      cb();
-    }
-  });
-};
-
 const escapeMapping = str => {
   return str
       .replace(/\//g, '\\\/')
@@ -120,13 +62,13 @@ const escapeMapping = str => {
 const mappings = (write, cb) => {
   fs.readFile('_assets/mappings/redirect.json', (err, data) => {
     if (err) {
-      throwErr('write:mappings', `Cannot read _assets/mappings/redirect.json`);
+      gulpErr('write:mappings', `Cannot read _assets/mappings/redirect.json`);
     }
     let mappings = null;
     try {
       mappings = JSON.parse(data);
     } catch (e) {
-      throwErr('write:mappings', `Cannot read _assets/mappings/redirect.json: ${e}`);
+      gulpErr('write:mappings', `Cannot read _assets/mappings/redirect.json: ${e}`);
     }
     if (mappings.redirect) {
       const red = _.reverse(_.sortBy(mappings.redirect, mapping => mapping.from.length));
@@ -140,7 +82,7 @@ const mappings = (write, cb) => {
           errors = [];
       _.forEach(red, r => {
         if (!r.to || !r.from) {
-          throwErr('write:mappings', `Error reading _assets/mappings/redirect.json, this is not a correct mapping: ${JSON.stringify(r, null, 4)}`);
+          gulpErr('write:mappings', `Error reading _assets/mappings/redirect.json, this is not a correct mapping: ${JSON.stringify(r, null, 4)}`);
         }
         if (r.disabled) {
           gutil.log(`Mapping ${r.from} => ${r.to} disabled`)
@@ -173,7 +115,7 @@ const mappings = (write, cb) => {
       const mappingsFile = mappingsArr.join('\n');
 
       if (errors.length > 0) {
-        throwErr('write:mappings', `You have errors in your mapping ${gutil.colors.cyan('_assets/mappings/redirect.json')} file:\n\n${errors.join('\n')}\n`);
+        gulpErr('write:mappings', `You have errors in your mapping ${gutil.colors.cyan('_assets/mappings/redirect.json')} file:\n\n${errors.join('\n')}\n`);
       }
 
       if (write) {
@@ -182,7 +124,7 @@ const mappings = (write, cb) => {
         }
         fs.writeFile('_site/mappings/redirect.map', mappingsFile, err => {
           if (err) {
-            throwErr('write:mappings', `Error writing _site/mappings/redirect.map: ${err}`);
+            gulpErr('write:mappings', `Error writing _site/mappings/redirect.map: ${err}`);
           } else {
             gutil.log('Mappings written to _site/mappings/redirect.map');
           }
@@ -192,7 +134,7 @@ const mappings = (write, cb) => {
         cb();
       }
     } else {
-      throwErr('write:mappings', `No redirects found in mappings.json`);
+      gulpErr('write:mappings', `No redirects found in mappings.json`);
     }
   });
 };
@@ -285,7 +227,7 @@ gulp.task('jekyll:build-test', `Jekyll build, using ${CONFIG_TEST}`, [], done =>
 
 gulp.task('dev', ``, ['sass:dev', 'copy:images', 'compress:js'], done => {
   spawnServer();
-  spawnJekyll(true, true);
+  Jekyll.spawn(CONFIG_TEST, true);
   browserSync.init({
     port: PORT,
     proxy: 'localhost:8888',
@@ -295,7 +237,7 @@ gulp.task('dev', ``, ['sass:dev', 'copy:images', 'compress:js'], done => {
   gulp.watch(paths.styles.src, ['sass:dev']);
   gulp.watch(paths.scripts.src, ['js-watch']);
   gulp.watch(paths.images.src, ['copy:images']);
-  gulputil.log(`\n\n*********\nOpen your browser with this address: ${gulputil.colors.cyan(`localhost:${PORT}`)}\n*********\n`);
+  gutil.log(`\n\n*********\nOpen your browser with this address: ${gutil.colors.cyan(`localhost:${PORT}`)}\n*********\n`);
 });
 
 gulp.task('serve', `Jekyll serve, using ${CONFIG_TEST}`, done => {

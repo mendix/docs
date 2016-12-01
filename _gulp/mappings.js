@@ -80,7 +80,7 @@ const mappings = (opts) => {
       }
 
       if (opts.write) {
-        touch(opts.src);
+        touch(opts.dest);
         fs.writeFile(opts.dest, mappingsFile, err => {
           if (err) {
             gulpErr('write:mappings', `Error writing ${opts.dest}: ${err}`);

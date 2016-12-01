@@ -1,7 +1,7 @@
 ---
 title: "Mendix Cloud Status"
 space: "Mendix Support"
-#category: "{{category}}"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

@@ -1,7 +1,7 @@
 ---
 title: "Database Maintenance: Size Reduction"
 space: "Mendix Support"
-#category: "{{category}}"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

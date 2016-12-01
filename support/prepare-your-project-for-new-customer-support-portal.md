@@ -1,7 +1,7 @@
 ---
 title: "On-Premises Customers: Prepare Your Project for the New Support Portal"
 space: "Mendix Support"
-#category: "{{category}}"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

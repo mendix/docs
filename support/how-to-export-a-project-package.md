@@ -1,7 +1,7 @@
 ---
 title: "How to Export a Mendix Project Package"
 space: "Mendix Support"
-#category: "{{category}}"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

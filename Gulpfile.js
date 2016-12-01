@@ -4,31 +4,26 @@ const sass        = require('gulp-sass');
 const sourcemaps  = require('gulp-sourcemaps');
 const minify      = require('gulp-minify');
 
-const Server      = require('./_gulp/server');
-const Jekyll      = require('./_gulp/jekyll');
+const server      = require('./_gulp/server');
+const jekyll      = require('./_gulp/jekyll');
 const gulpErr     = require('./_gulp/helpers').gulpErr;
-const Mappings    = require('./_gulp/mappings');
+const mappings    = require('./_gulp/mappings');
 
 const path        = require('path');
-const fs          = require('fs');
-const spawn       = require('child_process').spawn;
-
 const pump        = require('pump');
 const browserSync = require('browser-sync').create();
-const _           = require('lodash');
 const del         = require('del');
 const runSequence = require('run-sequence');
-const shell       = require('shelljs');
 
-const currentFolder = __dirname;
-const buildDate     = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+const CURRENTFOLDER = __dirname;
+const BUILDDATE     = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
 const PORT          = 4000;
 const DIST_FOLDER   = '_site';            // DO NOT CHANGE THIS, IS USED BY TRAVIS FOR DEPLOYMENT IN MANIFEST
 const CONFIG        = '_config.yml';
 const CONFIG_TEST   = '_config_test.yml';
 
 /* DONT EDIT BELOW */
-gutil.log(`Gulp started at ${buildDate}`);
+gutil.log(`Gulp started at ${BUILDDATE}`);
 
 const paths = {
   styles: {
@@ -46,12 +41,6 @@ const paths = {
 }
 
 /*************************************************
-  FUNCTIONS
-**************************************************/
-
-
-
-/*************************************************
   TASKS
 **************************************************/
 gulp.task('clean', `Cleanup the ${DIST_FOLDER} directory`, () => {
@@ -61,10 +50,10 @@ gulp.task('clean', `Cleanup the ${DIST_FOLDER} directory`, () => {
 });
 
 gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json to ${DIST_FOLDER}/mappings/redirect.map`, done => {
-  Mappings.run({
+  mappings.run({
     write: true,
-    src: path.join(currentFolder, '/_assets/mappings/redirect.json'),
-    dest: path.join(currentFolder, '/_site/mappings/redirect.map'),
+    src: path.join(CURRENTFOLDER, '/_assets/mappings/redirect.json'),
+    dest: path.join(CURRENTFOLDER, '/_site/mappings/redirect.map'),
     callback: done
   });
 });
@@ -115,16 +104,16 @@ gulp.task('sass:dev', `Sass build (dev task, sourcemaps included)`, () => {
 });
 
 gulp.task('jekyll:build', `Jekyll build, using ${CONFIG}`, [], done => {
-  build(false, done);
+  jekyll.build(CONFIG, done);
 });
 
 gulp.task('jekyll:build-test', `Jekyll build, using ${CONFIG_TEST}`, [], done => {
-  build(true, done);
+  jekyll.build(CONFIG_TEST, done);
 });
 
 gulp.task('dev', ``, ['sass:dev', 'copy:images', 'compress:js'], done => {
-  Server.spawn(currentFolder);
-  Jekyll.spawn(CONFIG_TEST, true);
+  server.spawn(CURRENTFOLDER);
+  jekyll.spawn(CONFIG_TEST, true);
   browserSync.init({
     port: PORT,
     proxy: 'localhost:8888',

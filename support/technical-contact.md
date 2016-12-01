@@ -26,7 +26,7 @@ Managing licenses (renewals/activation/upgrades):
 * Mendix will send license renewal notifications to the technical contact via email
 * If the technical contact would like to expand the license (e.g. more users), they need to contact their Account Executive
 
-You can submit requests in the [Support Portal](support.mendix.com) for questions, changes and incidents.
+You can submit requests in the [Support Portal](https://support.mendix.com) for questions, changes and incidents.
 
 ### 4.2 Mendix Cloud
 
@@ -47,7 +47,7 @@ Licenses (renewals/activation/upgrades):
 * Mendix is responsible for Mendix Cloud app renewals
 * Contact your Account Executive if you want to expand the license
 
-You can submit requests in the [Support Portal](support.mendix.com) for questions, changes and incidents.
+You can submit requests in the [Support Portal](https://support.mendix.com) for questions, changes and incidents.
 
 ## 5. Can We Change the Technical Contact?
 

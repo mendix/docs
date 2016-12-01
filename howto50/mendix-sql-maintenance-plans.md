@@ -138,7 +138,7 @@ space: "Mendix 5 How-to's"
 
 ## Related content
 
-*   [License key activation on Linux server](/support/license-key-activation-on-linux-server)
+*   [License key activation on Linux server](/support/license-key-activation-on-linux)
 *   [Restoring a SQL Server database](restoring-a-sql-server-database)
 *   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
 *   [Setting up a new SQL Server database](setting-up-a-new-sql-server-database)

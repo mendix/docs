@@ -40,17 +40,17 @@ Depending on the type of request it is helpful to provide additional information
 
 *   Modeler type (Desktop Modeler or Web Modeler)
 *   Modeler version
-*   Test project - read [How To Export A Mendix Project Package (.mpk)](how-to-export-a-project-package-mpk) for more information
+*   Test project - read [How To Export A Mendix Project Package (.mpk)](how-to-export-a-project-package) for more information
 *   Reproducible steps
 
 ### 3.4 App Store Content Problem – Module, Widget, Theme Issues
 
 *   Name of the content
 *   Modeler version
-*   Test project - read [How To Export A Mendix Project Package (.mpk)](how-to-export-a-project-package-mpk) for more information
+*   Test project - read [How To Export A Mendix Project Package (.mpk)](how-to-export-a-project-package) for more information
 *   Reproducible steps
 
-> Not all App Store content is compatible with every Mendix Modeler version and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/appstore/App+Store+Content+Support).
+> Not all App Store content is compatible with every Mendix Modeler version and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/appstore/app-store-content-support).
 
 ### 3.5 Mobile Problem
 
@@ -69,4 +69,4 @@ Depending on the type of request it is helpful to provide additional information
 *   [Mendix Documentation](https://docs.mendix.com/)
 
 ## 5 Related Content
-*   [How To Submit A Request With Mendix Support](how-to-submit-a-ticket---quick-reference-for-endusers)
+*   [How To Submit A Request With Mendix Support](how-to-submit-a-request-with-mendix-support)

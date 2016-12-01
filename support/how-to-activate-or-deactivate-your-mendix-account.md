@@ -22,7 +22,7 @@ Your MxID can have several roles within the Mendix Platform:
 You can also be involved in unsolved support tickets.
 
 Make sure that your MxID has **no roles in your company** by following these steps:
-1. Log in to the [Developer Portal](sprintr.home.mendix.com).
+1. Log in to the [Developer Portal](https://sprintr.home.mendix.com).
 2. Leave any projects of which you are a team member.
 3. If you are a Company Admin, make someone else Company Admin.
 4. If you are a Company Member, Technical Contact or Project Contact, ask your Company Admin to remove these roles.

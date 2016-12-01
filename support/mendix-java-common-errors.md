@@ -79,4 +79,4 @@ If you see the grey *committed* line peak into the white part of the *Applicatio
 
 ## 3 Related Content
 
-*   [Mendix and Java Part I - The Basics in a Nutshell](mendix-java-the-basics.md)
+*   [Mendix and Java Part I - The Basics in a Nutshell](mendix-java-the-basics)

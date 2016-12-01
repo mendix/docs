@@ -36,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 3.  Go to the **Deploy** tab.
 4.  Click **Select Node**.
 
-    > If your project is still connected to a Free App, follow the [How To Connect A Project To A Licensed Cloud Node ](how-to-unlink-delete-your-sandbox-and-connect-the-project-to-a-licensed-node.md) how-to to learn how to remove it.
+    > If your project is still connected to a Free App, follow the [How To Connect A Project To A Licensed Cloud Node ](how-to-unlink-your-sandbox) how-to to learn how to remove it.
 
 5.  Click **Use this Node** for the node you want to connect. The current connected project will be disconnected automatically.
 

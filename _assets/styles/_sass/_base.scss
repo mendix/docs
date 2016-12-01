@@ -36,6 +36,12 @@ a {
       margin-top: 5em;
       .not-found-suggestion {
         margin: 3em 0;
+        .suggestions {
+          list-style: none;
+          li {
+            text-align: center;
+          }
+        }
       }
     }
   }

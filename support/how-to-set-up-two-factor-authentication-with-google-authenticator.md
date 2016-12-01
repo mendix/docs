@@ -1,7 +1,7 @@
 ---
 title: "How to Set Up Two-Factor Authentication With Google Authenticator"
 space: "Mendix Support"
-#category: "Mendix Support"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

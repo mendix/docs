@@ -1,7 +1,7 @@
 ---
 title: "Ticket Priority"
 space: "Mendix Support"
-#category: "Support Portal"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

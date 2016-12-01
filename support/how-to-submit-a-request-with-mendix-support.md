@@ -1,7 +1,7 @@
 ---
 title: "How to Submit a Request With Mendix Support"
 space: "Mendix Support"
-#category: "Suppoprtt Portal"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

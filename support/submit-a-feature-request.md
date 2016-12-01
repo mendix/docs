@@ -1,7 +1,7 @@
 ---
 title: "Submit a Feature Request"
 space: "Mendix Support"
-#category: "Mendix Support"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

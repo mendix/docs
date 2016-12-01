@@ -1,7 +1,7 @@
 ---
 title: "Hashing Algorithms"
 space: "Mendix Support"
-#category: "Best Practices"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

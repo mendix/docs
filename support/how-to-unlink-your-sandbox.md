@@ -1,7 +1,7 @@
 ---
 title: "How to Unlink Your Sandbox From Your Free App"
 space: "Mendix Support"
-#category: "{{category}}"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

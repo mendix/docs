@@ -1,7 +1,7 @@
 ---
 title: "How to Submit Support Requests"
 space: "Mendix Support"
-#category: "{{category}}"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

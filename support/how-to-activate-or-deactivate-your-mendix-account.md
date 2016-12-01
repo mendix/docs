@@ -1,7 +1,7 @@
 ---
 title: "How to Activate or Deactivate Your Mendix Account"
 space: "Mendix Support"
-#category: "{{category}}"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

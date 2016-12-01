@@ -1,7 +1,7 @@
 ---
 title: "Mendix and Java Part I - The Basics"
 space: "Mendix Support"
-#category: "{{category}}"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

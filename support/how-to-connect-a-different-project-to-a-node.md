@@ -1,7 +1,7 @@
 ---
 title: "How to Connect a Different Project to a Cloud Node"
 space: "Mendix Support"
-#category: "{{category}}"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

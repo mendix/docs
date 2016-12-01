@@ -1,7 +1,7 @@
 ---
 title: "License Key Activation on Linux"
 space: "Mendix Support"
-#category: "{{category}}"
+category: "Mendix Support"
 #parent: ""
 #description: ""
 #tags: []

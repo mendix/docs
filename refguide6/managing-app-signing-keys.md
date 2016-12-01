@@ -32,7 +32,7 @@ If you do not have an Apple Mac available, you can create a certificate signing 
 2.  Open a command prompt. On most systems, you need to do this as Administrator (right-click the Windows Start Menu link and select "Run as Administrator").
 3.  Generate a private key with the openssl program that you just installed. Replace the "C:\OpenSSL" part with where you installed OpenSSL in step 1. The private key file is stored at the location specified after the "-out" parameter. The following example will store the file in the root directory of your C: drive. You can change this to anything you want, just choose a convenient place and make sure to keep track of where the file is stored.
 
-    `    "C:\OpenSSL\bin\openssl.exe" genrsa -out "C:\private.key" 2048`
+    `    "C:\OpenSSL\bin\openssl.exe" genrsa -des3 -out "C:\private.key" 2048`
     The command will output, among others, "Generating RSA private key, 2048 bit long modulus" and lots of dots and pluses.
 4.  Generate a certificate signing request (CSR). The file is again stored in the same folder, but can be placed anywhere. Make sure to point to the private key file that was created in the previous step:
 

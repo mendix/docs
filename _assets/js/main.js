@@ -221,8 +221,10 @@
     ******************/
     $('.mxdefault').find('img').each(function () {
       var $img = $(this),
-          src = $img.attr('src');
-      if (src && src.indexOf('attachments') !== -1) {
+          src = $img.attr('src'),
+          parentTag = $img.parent() ? $img.parent().prop('tagName') : null;
+
+      if (src && src.indexOf('attachments') !== -1 && parentTag !== 'A') {
         $img.wrap('<a href="' + src + '" rel="lightbox[mxdefault]"></a>');
       }
     })

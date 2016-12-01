@@ -29,10 +29,10 @@ Before you continue, make sure that you
 2.  Now we must create the **Flat file Interface.** As per the instructions in the **Flat & Delimited Importer Module Release Notes,** add the page FlatFileInterface.InterfaceDefinition_Overview to your **Project Navigation**.
 3.  Start the app and navigate to the Interface Definition Overview page.
 4.  Select 'New' to create the Interface Definition
-    [![](attachments/12878647/13402297.png)](importing-excel-documents#3-use-the-application-model-meta-data-in-the-client)
+    [![](attachments/12878647/13402297.png)](importing-excel-documents)
 5. Select the **Product Entity** from the dropdown. 
 
-    If this dropdown is empty, then it is likely that **Model Reflection** has been synced yet.  If you do not know how to execute this, please see instructions [here](importing-excel-documents#3-use-the-application-model-meta-data-in-the-client).
+    If this dropdown is empty, then it is likely that **Model Reflection** has been synced yet.  If you do not know how to execute this, please see instructions [here](importing-excel-documents).
 
     ![](attachments/12878647/13402300.png)
 

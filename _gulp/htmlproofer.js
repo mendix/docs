@@ -1,6 +1,5 @@
 // Note: This is work-in-progress and not ready to be used
 
-const recursive = require('recursive-readdir');
 const url = require('url');
 const path = require('path');
 const _ = require('lodash');
@@ -9,53 +8,14 @@ const cheerio = require('cheerio');
 const Promise = require('bluebird');
 const helpers = require('./helpers');
 
-const readFile = Promise.promisify(require('fs').readFile);
 const verbose = false;
 const getSourceFile = filePath => {};
 
 let SOURCEPATH = null;
 
-const getFiles = dir => {
-  return new Promise((resolve, reject) => {
-    recursive(dir, [], (err, files) => {
-      if (err) {
-        return reject(err);
-      }
-      resolve(_.filter(files, file => path.extname(file) === '.html'));
-    });
-  });
-};
-
-const readHtmlFile = filePath => {
-  return new Promise((resolve, reject) => {
-    readFile(filePath, "utf8").then(content => {
-      resolve({
-        path: filePath,
-        basePath: filePath.replace(SOURCEPATH, ''),
-        sourcePath: SOURCEPATH,
-        content: content,
-        links: [],
-        images:[],
-        anchors: [],
-        anchorLinks: [],
-        external: {
-          links: [],
-          images: [],
-          mailto: []
-        },
-        errors: [],
-        warnings: []
-      });
-    }).catch(reject);
-  });
-};
-
-const readFiles = paths => {
-  return Promise.all(_.map(paths, file => readHtmlFile(file)));
-};
-
 const parseHtmlFiles = files => {
   return _.map(files, file => {
+    file.basePath = file.path.replace(SOURCEPATH, '');
     if (file.content) {
       const $ = cheerio.load(file.content);
 
@@ -150,8 +110,8 @@ const validateFiles = files => {
     resolve(_.map(files, file => {
       // Let's check all the links
       _.forEach(file.links, link => {
-        const fullPath = path.join(file.sourcePath, link),
-              fullUrl = url.parse(path.join(file.sourcePath, link));
+        const fullPath = path.join(SOURCEPATH, link),
+              fullUrl = url.parse(path.join(SOURCEPATH, link));
 
         let linkPath = fullUrl.pathname;
         let linkedFile = _.filter(
@@ -177,7 +137,7 @@ const validateFiles = files => {
 
       // Let's check all the images
       _.forEach(file.images, image => {
-        let fullPath = path.join(file.sourcePath, image);
+        let fullPath = path.join(SOURCEPATH, image);
         if (!helpers.isFile(fullPath)) {
           file.errors.push(`Has image: ${gutil.colors.cyan(image)} which would resolve to ${gutil.colors.cyan(fullPath)}, but it does not exist`);
           verbose && console.log(`err image ${file.path}`, image);
@@ -201,8 +161,8 @@ const validateFiles = files => {
 const checkFiles = (dir, cb) => {
   SOURCEPATH = dir;
   console.log(`Testing html in ${dir}`);
-  getFiles(dir)
-    .then(readFiles)
+  helpers.getFiles(dir)
+    .then(helpers.readHtmlFiles)
     .then(parseHtmlFiles)
     .then(validateFiles)
     .then(files => {

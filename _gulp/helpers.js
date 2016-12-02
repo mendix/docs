@@ -9,12 +9,16 @@ const throwError = (plugin, error) => {
   }, { showStack: true });
 }
 
-const touchFile = (filePath) => {
+const isFile = filePath => {
+  return shell.test('-f', filePath);
+}
+
+const touchFile = filePath => {
   const parsed = path.parse(filePath);
   if (!shell.test('-d', parsed.dir)) {
     shell.mkdir('-p', parsed.dir);
   }
-  if (!shell.test('-f', filePath)) {
+  if (!isFile(filePath)) {
     shell.touch(filePath);
   }
 }
@@ -22,5 +26,6 @@ const touchFile = (filePath) => {
 
 module.exports = {
   gulpErr: throwError,
-  touch: touchFile
+  touch: touchFile,
+  isFile: isFile
 }

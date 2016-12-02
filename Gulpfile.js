@@ -9,6 +9,7 @@ const jekyll      = require('./_gulp/jekyll');
 const gulpErr     = require('./_gulp/helpers').gulpErr;
 const mappings    = require('./_gulp/mappings');
 const git         = require('./_gulp/git');
+const htmlproofer = require('./_gulp/htmlproofer');
 
 const path        = require('path');
 const pump        = require('pump');
@@ -147,6 +148,10 @@ gulp.task('dev', ``, ['sass:dev', 'copy:images', 'compress:js'], done => {
 gulp.task('serve', `Jekyll serve, using ${CONFIG_TEST}`, done => {
   runSequence('clean', 'dev');
 })
+
+gulp.task('htmlproofer', `Check HTML files in the build folder`, done => {
+  htmlproofer.check(path.resolve(CURRENTFOLDER, '_site'), done);
+});
 
 gulp.task('build', `Jekyll build, using ${CONFIG}. Used for production`, done => {
   runSequence('clean', 'write:githistory', ['jekyll:build', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);

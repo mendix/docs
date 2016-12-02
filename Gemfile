@@ -8,11 +8,6 @@ gem 'jekyll-sitemap', '~> 0.10.0'
 
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
-gem 'html-proofer'
-
-# Auto redirect pages
-gem 'jekyll-redirect-from'
-
 # For `rake watch`
 gem 'rb-fsevent'
 

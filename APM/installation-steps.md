@@ -41,7 +41,7 @@ Add permissions APMAgent.Admin to project security / user roles tab to a selecte
 
 **Note:** You can choose to add the HeapDump role if you want to make heap dumps in java. In the cloud you need additional permissions to be requested at Mendix support.
 
-**Note:** If you want to get rid of the warnings about security introduce Debug, Tester, HeapDump, Load test recorder and OData user roles 
+**Note:** If you want to get rid of the warnings about security introduce Debug, Tester, HeapDump, Load test recorder and OData user roles
 and give these user roles the corresponding permissions from the APM module: APMAgent.Debug, APMAgent.Tester, APMAgent.HeapDump, APMAgent.OData and APMAgent.LoadTestRecorder.
 
 # Add to Navigation
@@ -85,8 +85,8 @@ After startup for the first time a small wizard is started:
 
 ![](attachments/Installation_steps/Welcome_Dialog.png)
 
-*   Use button to send mail with license request. One buttons tries to open your mail client. The other opens 
-a dialog, so you can copy-paste text for the email to be sent at [apmtool@mansystems.nl](mailto://apmtool@mansystems.nl).
+*   Use button to send mail with license request. One buttons tries to open your mail client. The other opens
+a dialog, so you can copy-paste text for the email to be sent at [apmtool@mansystems.nl](mailto:apmtool@mansystems.nl).
 *   Upon receiving the license, copy-paste
 *   Select production / non-production
 *   Save

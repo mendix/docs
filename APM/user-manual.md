@@ -6,7 +6,6 @@ This is the user manual for the Mansystems APM for Mendix.
 
 The user manual has the following chapters:
 
-*   [Console](console)
 *   [Log Tool](log-tool)
 *   [Trap Tool](trap-tool)
 *   [Statistics Tool](statistics-tool)

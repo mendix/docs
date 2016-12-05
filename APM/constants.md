@@ -7,15 +7,23 @@ This appendix describes the constants used in the APMAgent. You are advised to u
 The following constants are used:
 
 *   APMAgent.BatchDeleteChunkSize (default 10000) to determine the batch size when deleting data
-*   APMAgent.UseAfterStartup (default True) to disable the after startup without re-deployment in the rare case of an error on startup of the runtime*.
-*   APMAgent .MaxRunningMicroflowsInDialog (default 10) to determine how many microflows are loaded in the running microflows dialog of the performance tool.
-*   APMAgent. ExcludedMicroflows (default APMAgent.; ) Contains a list of patterns in a semi colon separated list that filters out microflows. Excludes are used in the statistics tool and the performance tool.
-*   APMAgent.PerformanceToolWaitTimeForMicroflowToFinish (default 10) seconds to wait for started microflows to finish on stop recording. Only used for GUI button to stop, no when a protection kicks in.
+*   APMAgent.ExcludedMicroflows (default APMAgent.; ) Contains a list of patterns in a semi colon separated
+ list that filters out microflows. Excludes are used in the statistics tool and the performance tool.
+*   APMAgent.InstanceIndex (default 0) is used only for on premise load balanced situations to give each 
+instance a unique number
+*   APMAgent.MaxRunningMicroflowsInDialog (default 10) to determine how many microflows are loaded in the
+ running microflows dialog of the performance tool.
+*   APMAgent.MetricHistory (default 5) to set the number of previous measurements kept in cache in the 
+measurements tool for use in expressions
+*   APMAgent.PerformanceToolWaitTimeForMicroflowToFinish (default 10) seconds to wait for started microflows
+ to finish on stop recording. Only used for GUI button to stop, no when a protection kicks in.
 *   APMAgent.CompanyName (default '<company name constant>') is used in the license
-*   APMAgent.InstanceIndex (default 0) is used only for on premise load balanced situations to give each instance a unique number
-*   APMAgent.PrintAllOnStartup (default false) is used to choose if AfterStartup should write all JMX data to the Mendix log. This can be handy for debugging
+*   APMAgent.PrintAllOnStartup (default false) is used to choose if AfterStartup should write all JMX data
+ to the Mendix log. This can be handy for debugging
+*   APMAgent.RunAfterStartup (default True) to disable the after startup without re-deployment in the rare 
+case of an error on startup of the runtime*.
 
-*_**Note.** The constant APMAgent.UseAfterStartup_ _that skips the after startup and before shutdown microflows_ _(immediately exists to be precise). This is a safety measure for a rare situation where the Mendix API changes._
+**Note.** The constant APMAgent.RunAfterStartup_ _that skips the after startup and before shutdown microflows_ _(immediately exists to be precise). This is a safety measure for a rare situation where the Mendix API changes._
 _Description of potential use:_
 
 *   _First Mendix is upgraded and the test does not reveal the changed API error,_

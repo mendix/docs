@@ -103,13 +103,13 @@ Apps make use of services (for example, databases, load balancers, and memory to
 
 ## 6 <a name="6"></a>Add a FileStore Service to Your App
 
-To enable persistent file storage, you need to configure the IBM Swift Object Storage service (which was introduced in Mendix 6.8). To make sure the FileDocuments in your application persist, you need to attach this service to your application. 
+To enable persistent file storage, you need to configure the IBM Swift Object Storage service (which was introduced in Mendix 6.8). To make sure the FileDocuments in your application persist, you need to attach this service to your application.
 
 1. Go to the Bluemix environment.
 
 2. Open your app from the list on the home screen:
 
-    ![](attachments/19202595/BluemixAppListed.png)
+    ![](attachments/19202595/selectappsingle.PNG)
 
 3. Go to the **Connections** menu item and click on Connect New:
 
@@ -119,12 +119,13 @@ To enable persistent file storage, you need to configure the IBM Swift Object St
 
     ![](attachments/19202595/IBM Swift Object Storage.png)
 
-5. Create the service. 
+5. Create the service.
 
-	![](attachments/19202595/Bluemixstoragecreate.png)
-This can take a few seconds, after the service is created you can check if it is connected with.
+	![](attachments/19202595/bmselectcreateservice.PNG)
 
-   **After deploying an app from the Modeler, two variables will be added automatically: `DEVELOPEMENT_MODE` and `ADMIN_PASSWORD`. The development mode is true by befault; change this to false to run the app in production. The admin password is the password of the default admin of your Mendix app.**
+  This can take a few seconds, after the service is created you can check if it is connected with.
+
+  **After deploying an app from the Modeler, two variables will be added automatically: `DEVELOPEMENT_MODE` and `ADMIN_PASSWORD`. The development mode is true by befault; change this to false to run the app in production. The admin password is the password of the default admin of your Mendix app.** 
 
 6. You can now go back and click **Finish** in the final section of the the **Edit Cloud Foundry Settings** configuration window (see step #6 of [3 Configure Cloud Foundry in the Modeler](#3)).
 

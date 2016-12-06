@@ -47,7 +47,7 @@ deploy:
       - master
 - provider: script
   script:
-    - cf zero-downtime-push $CF_APP -f ./manifest_accp.yml
+    - cf zero-downtime-push documentation-accp -f ./manifest_accp.yml
     - gulp algolia
   skip_cleanup: true
   on:

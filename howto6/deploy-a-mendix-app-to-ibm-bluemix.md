@@ -103,38 +103,24 @@ Apps make use of services (for example, databases, load balancers, and memory to
 
 ## 6 <a name="6"></a>Add a FileStore Service to Your App
 
-To enable persistent file storage, you need to configure the S3 object store (which was introduced in Mendix 5.15). Mendix supports S3 and the object stores that enable the S3 API. To make sure the FileDocuments in your application persist, you need to set up the following environment variables:
-
-| Variable | Value | Example | Required |
-| --- | --- | --- | --- |
-| S3_ACCESS_KEY_ID | The access key of your IAM credentials. | AKIAILYXS5VM4DQ7CTWQ | Yes |
-| S3_SECRET_ACCESS_KEY | The secret key of your IAM credentials. | XfSrHqbLG3D8VIPhn1vT7jN9H8w4ak3GAap/xcR1 | Yes |
-| S3_BUCKET_NAME | The bucket name that can be accessed using the IAM credentials above. | my-s3-bucket | Yes |
-| S3_ENDPOINT | Not needed if you are using Amazon S3. If you are using an S3-compatible object store (such as Riak CS and Ceph), you can use the domain name of the object store. | [s3.amazonaws.com](http://s3.amazonaws.com/) | No |
-| S3_KEY_SUFFIX | For multi-tenant buckets, you can add a suffix to each object name. Access to suffixed objects can be restricted using IAM policies. | -my-key-suffix | No |
-| S3_PERFORM_DELETES | Set to false when using the object store in append-only mode. In this mode, the backups can be created and restored via just the database. | false | No |
-| S3_USE_V2_AUTH | Set to true to force the S3 connector to use [V2 of the AWS authentication protocol](http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html). This is required for S3-compatible file stores that do not support [V4 of the authentication protocol](http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) (such as Riak CS, Ceph, and OpenStack Swift). | true | No |
+To enable persistent file storage, you need to configure the IBM Swift Object Storage service (which was introduced in Mendix 6.8). To make sure the FileDocuments in your application persist, you need to attach this service to your application. 
 
 1. Go to the Bluemix environment.
 2. Open your app from the list on the home screen:
 
-    ![](attachments/19202595/19398881.png)
+    ![](attachments/19202595/BluemixAppListed.png)
 
-3. Go to the **Environment Variables** menu item:
+3. Go to the **Connections** menu item and click **Connect New**:
 
-    ![](attachments/19202595/19398882.png)
+    ![](attachments/19202595/BluemixConnectNewService.png)
 
-4. Add the required S3 variables:
+4. Select the **Object Storage** service from the catalog:
 
-    ![](attachments/19202595/19398883.png)
+    ![](attachments/19202595/IBM Swift Object Storage.png)
 
-5. Add any optional variables.
+5. Create the service. 
 
-    <div class="alert alert-info">
-
-    When adding environment variables to a running application, you need to restart it for the changes to take effect.
-
-    </div>
+	![](attachments/19202595/Bluemixstoragecreate.png)
 
     After deploying an app from the Modeler, two variables will be added automatically: `DEVELOPEMENT_MODE` and `ADMIN_PASSWORD`. The development mode is true by befault; change this to false to run the app in production. The admin password is the password of the default admin of your Mendix app.
 

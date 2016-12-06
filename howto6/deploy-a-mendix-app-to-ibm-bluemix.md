@@ -106,16 +106,15 @@ Apps make use of services (for example, databases, load balancers, and memory to
 To enable persistent file storage, you need to configure the IBM Swift Object Storage service (which was introduced in Mendix 6.8). To make sure the FileDocuments in your application persist, you need to attach this service to your application. 
 
 1. Go to the Bluemix environment.
-
 2. Open your app from the list on the home screen:
 
     ![](attachments/19202595/BluemixAppListed.png)
 
-3. Go to the **Connections** menu item and click on Connect New:
+3. Go to the **Connections** menu item and click **Connect New**:
 
     ![](attachments/19202595/BluemixConnectNewService.png)
 
-4. Select the Object Storage Service from the Catalog:
+4. Select the **Object Storage** service from the catalog:
 
     ![](attachments/19202595/IBM Swift Object Storage.png)
 

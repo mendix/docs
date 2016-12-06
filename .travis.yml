@@ -49,10 +49,10 @@ deploy:
     branch:
       - master
 - provider: script
-  script:
-    - cf zero-downtime-push documentation -f ./manifest_accp.yml
-    - gulp algolia
+  script: cf zero-downtime-push documentation -f ./manifest_accp.yml
   skip_cleanup: true
   on:
     branch:
       - feature_development
+after_deploy:
+  - gulp algolia

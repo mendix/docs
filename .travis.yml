@@ -45,3 +45,11 @@ deploy:
   on:
     branch:
       - master
+- provider: script
+  script:
+    - cf zero-downtime-push $CF_APP -f ./manifest_accp.yml
+    - gulp algolia
+  skip_cleanup: true
+  on:
+    branch:
+      - feature_development

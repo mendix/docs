@@ -32,7 +32,10 @@ before_deploy:
 script:
   - gulp build
   - gulp htmlproofer
-cache: bundler
+cache:
+  directories:
+    vendor
+    node_modules
 branches:
   only:
   - master
@@ -47,7 +50,7 @@ deploy:
       - master
 - provider: script
   script:
-    - cf zero-downtime-push documentation-accp -f ./manifest_accp.yml
+    - cf zero-downtime-push documentation -f ./manifest_accp.yml
     - gulp algolia
   skip_cleanup: true
   on:

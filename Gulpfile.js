@@ -10,6 +10,7 @@ const gulpErr     = require('./_gulp/helpers').gulpErr;
 const mappings    = require('./_gulp/mappings');
 const git         = require('./_gulp/git');
 const htmlproofer = require('./_gulp/htmlproofer');
+const algolia     = require('./_gulp/algolia');
 
 const path        = require('path');
 const pump        = require('pump');
@@ -24,6 +25,8 @@ const PORT          = 4000;
 const DIST_FOLDER   = '_site';            // DO NOT CHANGE THIS, IS USED BY TRAVIS FOR DEPLOYMENT IN MANIFEST
 const CONFIG        = '_config.yml';
 const CONFIG_TEST   = '_config_test.yml';
+const ALGOLIA_APP_ID = 'OHBX5T982M';
+const ALGOLIA_INDEX = 'docs';
 
 /* DONT EDIT BELOW */
 gutil.log(`Gulp started at ${BUILDDATE}`);
@@ -151,6 +154,17 @@ gulp.task('serve', `Jekyll serve, using ${CONFIG_TEST}`, done => {
 
 gulp.task('htmlproofer', `Check HTML files in the build folder`, done => {
   htmlproofer.check(path.resolve(CURRENTFOLDER, '_site'), done);
+});
+
+gulp.task('algolia', `Push Algolia indexes (not production ready)`, done => {
+  algolia.run({
+    target : path.resolve(CURRENTFOLDER, '_site'),
+    source : CURRENTFOLDER,
+    spacesFile: path.resolve(CURRENTFOLDER, '_data/spaces.yml'),
+    algolia_app_id: ALGOLIA_APP_ID,
+    algolia_index: ALGOLIA_INDEX,
+    cb: done
+  });
 });
 
 gulp.task('build', `Jekyll build, using ${CONFIG}. Used for production`, done => {

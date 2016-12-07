@@ -19,11 +19,11 @@ disk as well as your components like the database and the web server. However fo
 
 We all know software contains bugs, and of course we all test before we bring something into production. 
 For the end-users, an error is a sign that the application is not functioning. If the error appears 
-unexpected, the user loses his trust in the system. The standard reaction of our support was always to 
+unexpected, the user loses his trust in the system. The standard reaction of support was always to 
 ask questions, including whether the customer can reproduce the issue, to turn on logging and to ask for
- a database dump, so our support can investigate the issue in a safe environment.
+ a database dump, so support can investigate the issue in a safe environment.
 
-# The Statistics Tool to See Performance Issues Coming
+# The Statistics Tool to see performance issues coming
 
 We also know that performance in applications is difficult to test in the initial stage. The data set is 
 small and the exact usage of, for example search behavior of end-users is unknown. Therefore even if all
@@ -32,7 +32,7 @@ production. Usually they appear over time, so the question is how to see them co
 
 The APMx Statistics tool collects statistical data on microflows and client API requests. These statistics
  are stored periodically (usually daily, configurable) and from these statistics you can see a trend long 
- before the users are ringing the bell. Also, as a good habit, our support frequently checks the longest 
+ before the users are ringing the bell. Also, as a good habit, support frequently checks the longest 
  and most often running microflows to see if they can be improved.
 
 This is the statistics tool (or load balanced environments you see the server where the microflow 
@@ -40,9 +40,9 @@ runs):
 
 ![](attachments/Introduction/Statistics_Tool.png)
 
-# The Performance Tool to Record Microflows
+# The Performance Tool to record microflows
 
-When our support wants to investigate a performance issue, either pro-actively coming from the statistics
+When support wants to investigate a performance issue, either pro-actively coming from the statistics
  tool or reactively when a customer reports an issue they use the APMx Performance tool. With this tool 
  they can see on the action level the duration of the steps in the microflow. They can drill down and see
   individual SQL statements. They can even ask the database for an explain plan that tells you how the 
@@ -63,18 +63,18 @@ This is the SQL statements during an action:
 ![](attachments/Introduction/Performance_Tool_Browse_Actions.png)
 
 
-# The Measurements Tool to Collect Even More Information and Trigger an Alarm When Needed
+# The Measurements Tool to collect even more information and trigger an alarm when needed
 
-The APMx Measurements tool is measurements to linking business logic and is bridging the gap between the
+The APM Measurements tool is measurements to linking business logic and is bridging the gap between the
  model and the infrastructure metrics, like CPU measurements. The APMx Measurements get information from
-  several different sources. First a simple APMx JVM browser to present similar information as shown in
-   the standard java management tool like JConsole, VisualVM and JMC. Second the APMx query tool to perform
+  several different sources. First a simple APM JVM browser to present similar information as shown in
+   the standard java management tool like JConsole, VisualVM and JMC. Second the APM query tool to perform
     business and database queries to monitor database specific meta information and/or business values.
-     Third the internal metrics of Mendix and the APMx tool are available as well via the APMx JVM Browser
+     Third the internal metrics of Mendix and the APMx tool are available as well via the APM JVM Browser
       or other Java JVM management platforms.
 
 The measurements can be used to trigger events on thresholds. For example if more than 80% if memory is used
- or if more than 80% of the CPU is used a trigger fires. At some customers, our support has configured a 
+ or if more than 80% of the CPU is used a trigger fires. At some customers, support has configured a 
  trigger on a model change so they are informed when a new deployment is done.
 
 The trigger can be to trap logging, to execute a microflow, for example to send an email or to make a 
@@ -82,7 +82,7 @@ heap dump.
 
 ![](attachments/Introduction/Measurements_Tool.png)
 
-# The Trap Tool Is Your Flight Data Recorder
+# The Trap Tool is your flight data recorder
 
 The APM Trap tool is always listening on all levels of logging up to the highest TRACE level and remembers 
 the last several seconds (configurable!). When an error occurs the last few seconds of logging leading up
@@ -90,7 +90,7 @@ the last several seconds (configurable!). When an error occurs the last few seco
  trap logging when a threshold is reached. In this way, the information is collected the first time 
  something occurs and this speeds up the problem resolution considerably.
 
-# Other Tools
+# Other tools
 
 The following additional tools are used to support the tools mentioned above.
 
@@ -118,7 +118,7 @@ The query tool enables performing XPath, OQL and JDBC queries to collect either 
 The log rerouting makes sure that java messages that are sent to the Java console, to the 
 java util library or to the log4j library are rerouted to the Mendix log. For example javamail sends 
 debug output to the console and with this option you can collect that information and make it visible 
-in the Mendix log as well as in the APMx Log Tool and APMx Trap Tool. This helped our support a lot
+in the Mendix log as well as in the APM Log Tool and APM Trap Tool. This helped support a lot
  in solving email issues and issues with web services security and certificates.
 
 ## JMX Tool

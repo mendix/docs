@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Download the latest version of the Mendix Modeler from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers)
 * Have access to an [IBM Bluemix](https://console.ng.bluemix.net/) account with the rights to create new applications and services (if you’re not a current IBM Bluemix customer, you can sign up for a [free 30-day trial](https://console.ng.bluemix.net/registration/))
-* Setup a strong Administrator password within your Model.
+* Set up a strong administrator password within your model
 
 ## 3 <a name="3"></a>Configure Cloud Foundry in the Modeler
 
@@ -72,7 +72,7 @@ After logging in, you will see the Bluemix home screen. The following details on
 
 * This view is per region, and you can select a different region in the personal menu in the top-right corner of the screen
 * You can see that you are logged in at the top-right corner of the screen
-* Also on the top right side of the screen, you can see the organization you have access to and the spaces within that organization
+* You can see the organization you have access to and the spaces within that organization at the top-right side of the screen
 
 ![](attachments/19202595/bmappoverview.PNG)
 
@@ -84,9 +84,7 @@ Apps make use of services (for example, databases, load balancers, and memory to
 
     ![](attachments/19202595/bmselectcreateservice.PNG)
 
-2. Mendix has support for DB2, DashDB, Compose For PostgreSQL, ClearDB MySQL and ElephantSQL on Bluemix
-
- Lets Select  **ElephantSQL** for this setup:
+2. Mendix has support for DB2, DashDB, Compose For PostgreSQL, ClearDB MySQL, and ElephantSQL on Bluemix. Select  **ElephantSQL** for this setup:
 
     ![](attachments/19202595/selectdataabase.PNG)
 
@@ -97,7 +95,7 @@ Apps make use of services (for example, databases, load balancers, and memory to
 
 4. In the **Add Service** section of the screen, do the following:
     * Select the app to which you want to bind the database instance (for example, **company-expenses**) for **App**
-    * Enter the name of the ElephantSQL Database (for example, *ElephantSQL_7k* for **Service name**
+    * Enter the name of the ElephantSQL Database (for example, *ElephantSQL_7k*) for **Service name**
 
 5. Click **Create** to finish the service configuration for ElephantSQL.
 
@@ -111,21 +109,21 @@ To enable persistent file storage, you need to configure the IBM Swift Object St
 
     ![](attachments/19202595/selectappsingle.PNG)
 
-3. Go to the **Connections** menu item and click on Connect New:
+3. Go to the **Connections** menu item and click **Connect new**:
 
     ![](attachments/19202595/BluemixConnectNewService.png)
 
-4. Select the Object Storage Service from the Catalog:
+4. Select the **Object Storage** service from the catalog:
 
     ![](attachments/19202595/IBM Swift Object Storage.png)
 
-5. Create the service.
+5. Create the service:
 
 	![](attachments/19202595/bmselectcreateservice.PNG)
 
-  This can take a few seconds, after the service is created you can check if it is connected with.
+  This can take a few seconds. After the service is created, you can check if it is connected.
 
-  **After deploying an app from the Modeler, two variables will be added automatically: `DEVELOPEMENT_MODE` and `ADMIN_PASSWORD`. The development mode is true by befault; change this to false to run the app in production. The admin password is the password of the default admin of your Mendix app.** 
+  After deploying an app from the Modeler, two variables will be added automatically: `DEVELOPEMENT_MODE` and `ADMIN_PASSWORD`. The development mode is true by default; change this to false to run the app in production. The admin password is the password of the default admin of your Mendix app.
 
 6. You can now go back and click **Finish** in the final section of the the **Edit Cloud Foundry Settings** configuration window (see step #6 of [3 Configure Cloud Foundry in the Modeler](#3)).
 

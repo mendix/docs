@@ -1,13 +1,13 @@
 ---
-title: "Runtime API changes"
+title: "Runtime API Changes"
 space: "API documentation"
 category: "Moving From 6 to 7"
 ---
-Below is the list of removed deprecated API in Mendix 7 as well as migration solution from Mendix 6, when it's applicable.
+Below is the list of removed deprecated APIs in Mendix 7, as well as a migration solution from Mendix 6 where applicable.
 
-## Removed Deprecated classes/methods in Mendix 7.
+## Removed Deprecated Classes and Methods in Mendix 7
 
-### classes for which interfaces exist:
+### Classes for Which Interfaces Exist
 
 | Class Name | Alternative Interface |
 | --- | --- |
@@ -18,13 +18,13 @@ Below is the list of removed deprecated API in Mendix 7 as well as migration sol
 | com.mendix.systemwideinterfaces.core.Feedback | com.mendix.systemwideinterfaces.core.IFeedback |
 | com.mendix.core.conf.ConfigurationImpl | com.mendix.core.conf.Configuration |
 
-### Removed InternalCore:
+### Removed InternalCore
 
 | Interface Name | Alternative Class |
 | --- | --- |
 | com.mendix.core.component.InternalCore | com.mendix.Core |
 
-### Removed Constants:
+### Removed Constants
 
 | Class Name | Alternative |
 | --- | --- |
@@ -35,7 +35,7 @@ Below is the list of removed deprecated API in Mendix 7 as well as migration sol
 | com.mendix.core.conf.Tokens | - |
 | com.mendix.externalinterface.connector.RequestHandler.XAS\_SESSION\_ID| *Used in RequestHandler:* com.mendix.externalinterface.connector.RequestHandler.getSessionCookieName()<br> *Used as a constant:* com.mendix.core.Core.getConfiguration.getSessionIdCookieName() |
 
-### Other Classes/methods:
+### Other Classes and Methods
 
 | Class Name | Alternative |
 | --- | --- |
@@ -73,13 +73,13 @@ Below is the list of removed deprecated API in Mendix 7 as well as migration sol
 | com.mendix.systemwideinterfaces.core.IContext.setSudo(boolean sudo) | - |
 | com.mendix.systemwideinterfaces.core.IContext.getSudoContext() | com.mendix.systemwideinterfaces.core.IContext.createSudoClone() |
 
-### Constructors:
+### Constructors
 
 | Constructor Name | Alternative |
 | --- | --- |
 | com.mendix.systemwideinterfaces.core.UserActionListener(<br>com.mendix.core.component.LocalComponent component,<br> Class\<T> targetClass) | com.mendix.systemwideinterfaces.core.UserActionListener(Class\<T> targetClass) |
 
-## Deprecated classes/methods in Mendix 7.
+## Deprecated Classes and Methods in Mendix 7
 
 | Method Name | Alternative |
 | --- | --- |
@@ -88,13 +88,13 @@ Below is the list of removed deprecated API in Mendix 7 as well as migration sol
 | com.mendix.core.Core.exportStream(<br> IContext context,<br> String exportMappingName,<br> IMendixObject objectToExport,<br> Boolean shouldValidate) | com.mendix.core.integration().exportStream(<br> IContext context,<br> String exportMappingName,<br> IMendixObject objectToExport,<br> Boolean shouldValidate) |
 | com.mendix.core.Core.importStream(<br> IContext context,<br> InputStream stream,<br> String importMappingName,<br> IMendixObject mappingParameter,<br> Boolean shouldValidate) | com.mendix.core.integration().importStream(<br> IContext context,<br> InputStream stream,<br> String importMappingName,<br> IMendixObject mappingParameter,<br> Boolean shouldValidate) |
 
-## Compilation issues when migrating a project to 7.
+## Compilation Issues When Migrating a Project to Mendix 7
 
-Removal of deprecated classes and methods in Mendix 7 can cause compilation errors after migration. Please use the provided alternative for the removed deprecated code.
+The removal of deprecated classes and methods in Mendix 7 can cause compilation errors after migrating your project to Mendix 7. Please use the provided alternative for the removed deprecated code.
 
 ### SystemModuleConstants
-These are mainly used to refer to the name of System entities or such entities' attribute names. Such names are also available via corresponding System proxies.
-For instance **SystemModuleConstants.FILE_DOCUMENT_NAME** can be replaced by **FileDocument** proxy:
+These are mainly used to refer to the name of system entities or their attribute names. Such names are also available via corresponding System proxies.
+For example, **SystemModuleConstants.FILE_DOCUMENT_NAME** can be replaced by **FileDocument** proxy:
 ```
 import com.mendix.systemwideinterfaces.SystemModuleConstants;
 
@@ -108,9 +108,6 @@ private final String FILE_DOCUMENT_NAME = MemberNames.Name.toString();
 ```
 Where MemberNames is an Enum defined in the FileDocument proxy class.
 
-## Runtime issues when migrating a project to 7.
+## Runtime Issues When Migrating a Project to Mendix 7
 
-In Mendix 7 libraries shipped with the installation package are not available for projects anymore. While this results in a better dependency management
-for each project, it can also cause errors at runtime after migration e.g. **NoClassDefFoundError**. Therefore, it's important to make sure that the **userlib**
-directory of the migrated project includes all the required libraries. It's also worth to mention that in Mendix 7 only one version of each library can exist at runtime.
-This means if there are multiple versions of one library the latest version is picked up and the rest are evicted.
+Java libraries in Mendix 7 shipped with the installation package are not available for projects anymore. While this results in a better dependency management for each project, it can also cause errors at runtime after migration, for example, **NoClassDefFoundError**. Therefore, it's important to make sure that the **userlib** directory of the migrated project includes all the required libraries. It's also worth noting that in Mendix 7 only one version of each library can exist at runtime. This means that if there are multiple versions of one library the latest version is used and the rest are ignored.

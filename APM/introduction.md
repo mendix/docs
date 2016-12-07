@@ -39,7 +39,7 @@ in production. Of course a tool can and should also be used during development a
 
 # The Statistics Tool to see performance issues coming
 
-We also know that performance in applications is difficult to test in the initial stage. The data set is 
+We know that performance in applications is difficult to test in the initial stage. The data set is 
 small and the exact usage of, for example search behavior of end-users is unknown. Therefore even if all
 good performance practices are applied in building a Mendix application, some issues still appear in 
 production. Usually they appear over time, so the question is how to see them coming.

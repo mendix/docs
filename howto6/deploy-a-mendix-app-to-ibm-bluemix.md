@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Download the latest version of the Mendix Modeler from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers)
 * Have access to an [IBM Bluemix](https://console.ng.bluemix.net/) account with the rights to create new applications and services (if you’re not a current IBM Bluemix customer, you can sign up for a [free 30-day trial](https://console.ng.bluemix.net/registration/))
-    * Have an S3 or S3-compatible object store with user credentials, a bucket, and rights to create and delete objects
+* Set up a strong administrator password within your model
 
 ## 3 <a name="3"></a>Configure Cloud Foundry in the Modeler
 
@@ -66,51 +66,50 @@ To configure Cloud Foundry in the Modeler, follow these steps:
 
 To configure the IBM Bluemix environment, go to [IBM Bluemix](https://console.ng.bluemix.net/) and log in with your IBM Bluemix credentials:
 
-![](attachments/19202595/19398875.png)
+![](attachments/19202595/bmsignin.PNG)
 
 After logging in, you will see the Bluemix home screen. The following details on this screen are important:
 
 * This view is per region, and you can select a different region in the personal menu in the top-right corner of the screen
 * You can see that you are logged in at the top-right corner of the screen
-* In the sidebar on the left side of the screen, you can see the organization you have access to and the spaces within that organization
+* You can see the organization you have access to and the spaces within that organization at the top-right side of the screen
 
-![](attachments/19202595/19398876.png)
+![](attachments/19202595/bmappoverview.PNG)
 
 ## 5 <a name="5"></a>Add a Database Service to Your App
 
-Apps make use of services (for example, databases, load balancers, and memory tools). In this step, you will add a database service that your app will use to store data.
+Apps make use of services (for example, databases, load balancers, and memory tools). In this step, you will add a database service that your app will use to store data. A Database is mandatory for a mendix app to run.
 
-1. Click **Use Services or APIs**:
+1. Click **Create Service**:
 
-    ![](attachments/19202595/19398877.png)
+    ![](attachments/19202595/bmselectcreateservice.PNG)
 
-2. Select **ElephantSQL**:
+2. Mendix has support for DB2, DashDB, Compose For PostgreSQL, ClearDB MySQL, and ElephantSQL on Bluemix. Select  **ElephantSQL** for this setup:
 
-    ![](attachments/19202595/19398878.png)
+    ![](attachments/19202595/selectdataabase.PNG)
 
-    This is a PostgreSQL database that your app will use. Mendix supports PostgreSQL and MySQL databases on Cloud Foundry. For some database services that do not add a `DATABASE_URL` environment variable, you will need to set that manually.
 
 3. Select the plan that fits your needs. This example will use the **Free** option:
 
-    ![](attachments/19202595/19398880.png)
+    ![](attachments/19202595/bmselectappbinding.PNG)
 
 4. In the **Add Service** section of the screen, do the following:
-    * Select the space to which you want to add the instance for **Space**
     * Select the app to which you want to bind the database instance (for example, **company-expenses**) for **App**
-    * Enter the name of the ElephantSQL Database (for example, *ComanyExpensesDataStore* for **Service name**
+    * Enter the name of the ElephantSQL Database (for example, *ElephantSQL_7k*) for **Service name**
 
 5. Click **Create** to finish the service configuration for ElephantSQL.
 
 ## 6 <a name="6"></a>Add a FileStore Service to Your App
 
-To enable persistent file storage, you need to configure the IBM Swift Object Storage service (which was introduced in Mendix 6.8). To make sure the FileDocuments in your application persist, you need to attach this service to your application. 
+To enable persistent file storage, you need to configure the IBM Swift Object Storage service (which was introduced in Mendix 6.8). To make sure the FileDocuments in your application persist, you need to attach this service to your application.
 
 1. Go to the Bluemix environment.
+
 2. Open your app from the list on the home screen:
 
-    ![](attachments/19202595/BluemixAppListed.png)
+    ![](attachments/19202595/selectappsingle.PNG)
 
-3. Go to the **Connections** menu item and click **Connect New**:
+3. Go to the **Connections** menu item and click **Connect new**:
 
     ![](attachments/19202595/BluemixConnectNewService.png)
 
@@ -118,15 +117,17 @@ To enable persistent file storage, you need to configure the IBM Swift Object St
 
     ![](attachments/19202595/IBM Swift Object Storage.png)
 
-5. Create the service. 
+5. Create the service:
 
-	![](attachments/19202595/Bluemixstoragecreate.png)
+	![](attachments/19202595/bmselectcreateservice.PNG)
 
-    After deploying an app from the Modeler, two variables will be added automatically: `DEVELOPEMENT_MODE` and `ADMIN_PASSWORD`. The development mode is true by befault; change this to false to run the app in production. The admin password is the password of the default admin of your Mendix app.
+  This can take a few seconds. After the service is created, you can check if it is connected.
+
+  After deploying an app from the Modeler, two variables will be added automatically: `DEVELOPEMENT_MODE` and `ADMIN_PASSWORD`. The development mode is true by default; change this to false to run the app in production. The admin password is the password of the default admin of your Mendix app.
 
 6. You can now go back and click **Finish** in the final section of the the **Edit Cloud Foundry Settings** configuration window (see step #6 of [3 Configure Cloud Foundry in the Modeler](#3)).
 
-## 7 Deploy your App to Cloud Foundry
+## 7 Deploy Your App to Cloud Foundry
 
 1. Open the Modeler.
 2. Open the app you want to deploy to Cloud Foundry.
@@ -142,11 +143,11 @@ If you encounter any problems, you should consult the application logs:
 1. Go to the IBM Bluemix environment.
 2. Open your app from the top menu:
 
-    ![](attachments/19202595/19398881.png)
+    ![](attachments/19202595/selectappsingle.PNG)
 
 3. Go to the **Logs** menu item and view the most recent log lines in real time:
 
-    ![](attachments/19202595/19398885.png)
+    ![](attachments/19202595/bmlogging.PNG)
 
 ## 9 Related Content
 

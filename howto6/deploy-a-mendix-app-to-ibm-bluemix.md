@@ -127,7 +127,7 @@ To enable persistent file storage, you need to configure the IBM Swift Object St
 
 6. You can now go back and click **Finish** in the final section of the the **Edit Cloud Foundry Settings** configuration window (see step #6 of [3 Configure Cloud Foundry in the Modeler](#3)).
 
-## 7 Deploy your App to Cloud Foundry
+## 7 Deploy Your App to Cloud Foundry
 
 1. Open the Modeler.
 2. Open the app you want to deploy to Cloud Foundry.

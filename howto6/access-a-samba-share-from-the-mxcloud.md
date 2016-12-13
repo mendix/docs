@@ -7,7 +7,11 @@ tags: []
 
 ## 1 Introduction
 
-With the Mendix cloud and a VPN connection, you can use a Samba connection to pull or push files to a Windows share. When doing this, you need to use a static IP address in the connection string. The library could support the usage of a servername, but that requires extensive configuration to specify the DNS server location, DFS address, etc. It is far more efficient to use the IP address.
+<div class="alert alert-info">
+
+With the *Mendix cloud* and a **VPN connection**, you can use a Samba connection to pull or push files to a Windows share. When doing this, you need to use a static IP address in the connection string. The library could support the usage of a servername, but that requires extensive configuration to specify the DNS server location, DFS address, etc. It is far more efficient to use the IP address.
+
+</div>
 
 **After using this how-to, you will know how to do the following:**
 

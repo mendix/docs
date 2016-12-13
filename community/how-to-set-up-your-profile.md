@@ -1,5 +1,5 @@
 ---
-title: "How to Set Up Your Community Profile"
+title: "Set Up Your Community Profile"
 space: "Community"
 parent: "community-projects"
 ---

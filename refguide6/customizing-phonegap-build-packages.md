@@ -20,3 +20,5 @@ To download the PhoneGap package, follow these steps:
 ### Customizing the PhoneGap Package
 
 You can customize the PhoneGap package to your wishes. If you plan on uploading the package to PhoneGap Build manually, we recommend you follow [the documentation specific for PhoneGap Build](http://docs.build.phonegap.com/). Once you have customized your app according to your needs, you can upload it to PhoneGap Build to create mobile hybrid app packages.
+
+Please note that any redirects in your application (for example, due to SSO) need to be [whitelisted] (http://docs.phonegap.com/en/4.0.0/guide_appdev_whitelist_index.md.html) in the *config.xml*.

@@ -9,6 +9,10 @@
       "to": "/"
     },
     {
+      "from": "/apidocs/Home",
+      "to": "/apidocs/"
+    },
+    {
       "from": "/apidocs/Authentication",
       "to": "/apidocs/authentication"
     },

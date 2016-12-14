@@ -115,7 +115,7 @@ To enable persistent file storage, you need to configure the IBM Swift Object St
 
 4. Select the **Object Storage** service from the catalog:
 
-    ![](attachments/19202595/IBM Swift Object Storage.png)
+    ![](attachments/19202595/IBM_Swift_Object_Storage.png)
 
 5. Create the service:
 

@@ -41,15 +41,15 @@ On the Profile page you can edit the elements by clicking on the edit ![](attach
 *   Geographical focus: add the countries where your company is active / has coverage. This will be used in the filter option on the partner overview, so that a customer has the possibility to search for a partner in a specific country.
     ![](attachments/19203677/20217916.png)
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
-In case you're missing an input item (e.g. industry) just send us a feedback message with the missing item using the feedback button on the right.
+If you're missing an input option (for example, an industry), just send us a feedback message with the missing item using the Feedback button on the right side of the screen.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+</div><div class="alert alert-info">
 
-These fields are required before you can set your profile to public: address, email, summary, geographical focus, type of services and support capabilities.
+These fields are required before you can set your profile to public: address, email, summary, geographical focus, type of services, and support capabilities.
 
-{% endmarkdown %}</div>
+</div>
 
 ## 3\. Add developers to your Partner Profile
 

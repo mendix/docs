@@ -49,6 +49,8 @@ The ATS Reference Guide is divided into the following different sections, each d
 *   [Data Driven Tests](data-driven-tests)
 *   [Test Case Documentation](test-case-documentation)
 
+## [Test Run](test-run)
+
 ## [Configuration](configuration)
 
 *   [Configure Selenium hubs](configuration#configure-the-selenium-hubs)

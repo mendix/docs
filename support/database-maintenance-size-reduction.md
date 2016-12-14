@@ -20,7 +20,7 @@ There might be instances where physically reclaiming the lost space is important
 
 Let’s explore both options.
 
-## Otion 1: The VACUUM FULL Command**
+## Option 1: The VACUUM FULL Command**
 
 This is a simple command that can be issued through an SQL query. Instead of doing something like:
 

@@ -1,5 +1,5 @@
 ---
-title: "The Reference Guide Template"
+title: "The Reference Guide Page Template"
 space: "Community"
 parent: "community-documentation"
 ---

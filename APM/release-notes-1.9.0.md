@@ -89,9 +89,6 @@ The layout has been improved further.
 to the documentation.
 * Green 'dots' in the menu now indicate if a tool is running. The old badges have been removed in most places.
 
-## New architecture
-* A start has been made with the new architecture where agent and GUI are separated. A protocol (MQTT) has been implemented over which Mendix Objects can be sent and received.
-
 ## Other
 * The load test recorder has been placed under a permission, so regular users don't see it. This should remove the
 confusion that APM includes a load test tool. There is just the recorder for a session that can be processed and executed

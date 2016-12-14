@@ -95,6 +95,7 @@ Only the certifications and Mendix levels (the exact amount of points) of the ad
 This section presents information on adding reference cases to your Partner Profile and how to boost your overall rating. 
 
 Go to the **Reference** tab and click **Add Project**. This is where you can add all the details of your reference case.
+
 ![](attachments/19203677/20217920.png)
 
 *   The customer is an open text field, so if this customer needs to stay anonymous you could also add 'bank in the US'.

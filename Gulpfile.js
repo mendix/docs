@@ -4,23 +4,32 @@ const sass        = require('gulp-sass');
 const sourcemaps  = require('gulp-sourcemaps');
 const minify      = require('gulp-minify');
 
-const fs          = require('fs');
-const spawn       = require('child_process').spawn;
+const server      = require('./_gulp/server');
+const jekyll      = require('./_gulp/jekyll');
+const gulpErr     = require('./_gulp/helpers').gulpErr;
+const mappings    = require('./_gulp/mappings');
+const git         = require('./_gulp/git');
+const htmlproofer = require('./_gulp/htmlproofer');
+const algolia     = require('./_gulp/algolia');
 
+const path        = require('path');
+const pump        = require('pump');
 const browserSync = require('browser-sync').create();
-const _           = require('lodash');
 const del         = require('del');
 const runSequence = require('run-sequence');
-const shell       = require('shelljs');
+const yaml        = require('write-yaml');
 
-const buildDate     = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
-const PORT          = 4000;               // Keep this at 4000 for now
+const CURRENTFOLDER = __dirname;
+const BUILDDATE     = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+const PORT          = 4000;
 const DIST_FOLDER   = '_site';            // DO NOT CHANGE THIS, IS USED BY TRAVIS FOR DEPLOYMENT IN MANIFEST
 const CONFIG        = '_config.yml';
 const CONFIG_TEST   = '_config_test.yml';
+const ALGOLIA_APP_ID = 'OHBX5T982M';
+const ALGOLIA_INDEX = 'docs';
 
 /* DONT EDIT BELOW */
-gutil.log(`Gulp started at ${buildDate}`);
+gutil.log(`Gulp started at ${BUILDDATE}`);
 
 const paths = {
   styles: {
@@ -38,164 +47,8 @@ const paths = {
 }
 
 /*************************************************
-  FUNCTIONS
-**************************************************/
-const throwErr = (plugin, error) => {
-  throw new gutil.PluginError({
-    plugin: plugin,
-    message: error
-  }, { showStack: true });
-}
-
-const spawnJekyll = (test, watch, cb) => {
-  const jekyll_indicator = gutil.colors.cyan("[JEKYLL]");
-  const doneStr = 'done in';
-  const child = spawn('bundle', [
-    'exec',
-    'jekyll',
-    'build',
-    '--config',
-    (test ? CONFIG_TEST : CONFIG),
-    (watch ? '-w' : '')
-  ], { cwd: process.cwd()});
-
-  child.stdout.setEncoding('utf8');
-  child.stderr.setEncoding('utf8');
-
-  child.stdout.on('data', data => {
-      _.each(data.split('\n'), line => {
-        if (line) {
-          gutil.log(jekyll_indicator, line);
-          if (line.indexOf(doneStr) !== -1 && watch) {
-            browserSync.reload();         // Rebuild was triggered by Hugo, so we'll reload the page
-          }
-        }
-      });
-  });
-
-  child.stderr.on('data', data => {
-      _.each(data.split('\n'), line => {
-        if (line) {
-          gutil.log(jekyll_indicator, gutil.colors.red(line));
-        }
-      });
-      gutil.beep();
-  });
-
-  child.on('close', function(code) {
-      gutil.log(jekyll_indicator, "Closed with exit code", code);
-      if (cb && _.isFunction(cb)) {
-        cb(code);
-      }
-  });
-};
-
-const build = (t, cb) => {
-  spawnJekyll(t, false, (code) => {
-    if (code !== 0) {
-      throwErr('jekyll:build', `Jekyll exit code is ${code}, check your Jekyll setup`);
-    } else {
-      cb();
-    }
-  });
-};
-
-const escapeMapping = str => {
-  return str
-      .replace(/\//g, '\\\/')
-      .replace(/\+/g,'\\\+')
-      .replace(/\./g,'\\.')
-      .replace(/\(/g,'\\(')
-      .replace(/\)/g,'\\)')
-      //.replace(/'/g,'\'')
-      .replace(/ /g,'\\ ')
-      .replace(/\:/g,'\\\:')
-      .replace(/"/g,'\\\"');
-}
-
-const mappings = (write, cb) => {
-  fs.readFile('_assets/mappings/redirect.json', (err, data) => {
-    if (err) {
-      throwErr('write:mappings', `Cannot read _assets/mappings/redirect.json`);
-    }
-    let mappings = null;
-    try {
-      mappings = JSON.parse(data);
-    } catch (e) {
-      throwErr('write:mappings', `Cannot read _assets/mappings/redirect.json: ${e}`);
-    }
-    if (mappings.redirect) {
-      const red = _.reverse(_.sortBy(mappings.redirect, mapping => mapping.from.length));
-      let mappingsArr = [
-            '############################################################################################',
-            `# Mendix redirect mapping, generated on ${buildDate} using \'gulp write:mappings\'`,
-            '############################################################################################',
-            ''
-          ],
-          done = [],
-          errors = [];
-      _.forEach(red, r => {
-        if (!r.to || !r.from) {
-          throwErr('write:mappings', `Error reading _assets/mappings/redirect.json, this is not a correct mapping: ${JSON.stringify(r, null, 4)}`);
-        }
-        if (r.disabled) {
-          gutil.log(`Mapping ${r.from} => ${r.to} disabled`)
-        }
-        const to = r.to.trim(),
-              from = r.from.trim(),
-              lastChar = to.substr(-1),
-              mdFile = '.' + to + (lastChar === '/' ? 'index.md' : '.md'),
-              htmlFile = gutil.replaceExtension(mdFile, '.html'),
-              hash = new Buffer(`${from}-${to}`).toString('base64'),
-              caseSensitive = to.toLowerCase() === from.toLowerCase();
-
-        if (!shell.test('-e', mdFile) && !shell.test('-e', htmlFile)) {
-          errors.push(`There is no file for the mapping in mappings.json to: ${gutil.colors.cyan(to)}`);
-        } else if (to === from) {
-          errors.push(`${gutil.colors.cyan(to)} is the same as ${gutil.colors.cyan(from)}`);
-        } else if (done.indexOf(hash) !== -1) {
-          errors.push(`You have a duplicate mapping for. ${gutil.colors.cyan(from)} => ${gutil.colors.cyan(to)}`);
-        }
-        let mappingStr = '',
-            fromStr = (from.substr(-1) === '/' ? from + '?' : from + '/?');
-
-        if (r.exact) {
-          mappingsArr.push(`${from} ${to};`);
-        } else {
-          mappingsArr.push((caseSensitive ? '~' : '~*') + `${escapeMapping(fromStr)} ${to};`);
-        }
-
-      });
-      const mappingsFile = mappingsArr.join('\n');
-
-      if (errors.length > 0) {
-        throwErr('write:mappings', `You have errors in your mapping ${gutil.colors.cyan('_assets/mappings/redirect.json')} file:\n\n${errors.join('\n')}\n`);
-      }
-
-      if (write) {
-        if (!shell.test('-d', '_site/mappings')) {
-          shell.mkdir('-p', '_site/mappings');
-        }
-        fs.writeFile('_site/mappings/redirect.map', mappingsFile, err => {
-          if (err) {
-            throwErr('write:mappings', `Error writing _site/mappings/redirect.map: ${err}`);
-          } else {
-            gutil.log('Mappings written to _site/mappings/redirect.map');
-          }
-          cb();
-        })
-      } else {
-        cb();
-      }
-    } else {
-      throwErr('write:mappings', `No redirects found in mappings.json`);
-    }
-  });
-};
-/*************************************************
   TASKS
 **************************************************/
-
 gulp.task('clean', `Cleanup the ${DIST_FOLDER} directory`, () => {
   return del([
     DIST_FOLDER
@@ -203,7 +56,28 @@ gulp.task('clean', `Cleanup the ${DIST_FOLDER} directory`, () => {
 });
 
 gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json to ${DIST_FOLDER}/mappings/redirect.map`, done => {
-  mappings(true, done);
+  mappings.run({
+    write: true,
+    src: path.join(CURRENTFOLDER, '/_assets/mappings/redirect.json'),
+    dest: path.join(CURRENTFOLDER, '/_site/mappings/redirect.map'),
+    callback: done
+  });
+});
+
+gulp.task('write:githistory', `Write git_history to data`, done => {
+  git.getCommits(CURRENTFOLDER, true)
+    .then(commits => {
+      yaml('_data/history.yml', commits, err => {
+        if (err) {
+          throwErr('write:githistory', `Error writing githistory: ${err}`);
+        }
+        gutil.log(gutil.colors.cyan('[GIT-HISTORY]') + ` Git history written to ${gutil.colors.cyan(path.join(CURRENTFOLDER, '/_data/history.yml'))}`)
+        done();
+      });
+    })
+    .error(err => {
+      throwErr('write:githistory', `Error with reading git history:`, err);
+    })
 });
 
 gulp.task('copy:images', `Copy images from _assets folder`, () => {
@@ -212,16 +86,22 @@ gulp.task('copy:images', `Copy images from _assets folder`, () => {
     .pipe(gulp.dest(paths.images.dest));
 });
 
-gulp.task('compress:js', `Compress js files`, () => {
-  return gulp
-    .src(paths.scripts.src)
-    .pipe(minify({
+gulp.task('compress:js', `Compress js files`, (done) => {
+  pump([
+    gulp.src(paths.scripts.src),
+    minify({
       ext: {
         src: '-debug.js',
         min: '.js'
       }
-    }))
-    .pipe(gulp.dest(paths.scripts.dest));
+    }),
+    gulp.dest(paths.scripts.dest)
+  ], done);
+});
+
+gulp.task('js-watch', `Internal task, don't use`, ['compress:js'], function (done) {
+    browserSync.reload();
+    done();
 });
 
 gulp.task('sass:build', `Sass build`, () => {
@@ -246,35 +126,51 @@ gulp.task('sass:dev', `Sass build (dev task, sourcemaps included)`, () => {
 });
 
 gulp.task('jekyll:build', `Jekyll build, using ${CONFIG}`, [], done => {
-  build(false, done);
+  jekyll.build(CONFIG, done);
 });
 
 gulp.task('jekyll:build-test', `Jekyll build, using ${CONFIG_TEST}`, [], done => {
-  build(true, done);
+  jekyll.build(CONFIG_TEST, done);
 });
 
 gulp.task('dev', ``, ['sass:dev', 'copy:images', 'compress:js'], done => {
+  server.spawn(CURRENTFOLDER);
+  jekyll.spawn(CONFIG_TEST, true, false, browserSync);
   browserSync.init({
-      port: PORT,
-      serveStatic: [ DIST_FOLDER ],
-      serveStaticOptions: {
-          extensions: ['html'] // pretty urls (so this works locally as it would online)
-      }
+    port: PORT,
+    proxy: 'localhost:8888',
+    online: false,
+    open: false
   });
-  spawnJekyll(true, true);
   gulp.watch(paths.styles.src, ['sass:dev']);
-  gulp.watch(paths.scripts.src, ['compress:js']);
+  gulp.watch(paths.scripts.src, ['js-watch']);
   gulp.watch(paths.images.src, ['copy:images']);
+  gutil.log(`\n\n*********\nOpen your browser with this address: ${gutil.colors.cyan(`localhost:${PORT}`)}\n*********\n`);
 });
 
 gulp.task('serve', `Jekyll serve, using ${CONFIG_TEST}`, done => {
   runSequence('clean', 'dev');
 })
 
+gulp.task('htmlproofer', `Check HTML files in the build folder`, done => {
+  htmlproofer.check(path.resolve(CURRENTFOLDER, '_site'), done);
+});
+
+gulp.task('algolia', `Push Algolia indexes (not production ready)`, done => {
+  algolia.run({
+    target : path.resolve(CURRENTFOLDER, '_site'),
+    source : CURRENTFOLDER,
+    spacesFile: path.resolve(CURRENTFOLDER, '_data/spaces.yml'),
+    algolia_app_id: ALGOLIA_APP_ID,
+    algolia_index: ALGOLIA_INDEX,
+    cb: done
+  });
+});
+
 gulp.task('build', `Jekyll build, using ${CONFIG}. Used for production`, done => {
-  runSequence('clean', ['jekyll:build', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
+  runSequence('clean', 'write:githistory', ['jekyll:build', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
 });
 
 gulp.task('build-test', `Jekyll build, using ${CONFIG_TEST}. Used for test`, done => {
-  runSequence('clean', ['jekyll:build-test', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
+  runSequence('clean', 'write:githistory', ['jekyll:build-test', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
 });

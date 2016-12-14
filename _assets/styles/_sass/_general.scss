@@ -175,6 +175,14 @@
       }
     }
   }
+
+  .history {
+    text-align: right;
+    font-size: 0.8em;
+    time {
+      font-weight: bold
+    }
+  }
 }
 
 .github {

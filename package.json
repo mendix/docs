@@ -23,8 +23,13 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "algoliasearch": "^3.19.2",
+    "async": "^2.1.4",
+    "bluebird": "^3.4.6",
     "browser-sync": "^2.18.2",
+    "cheerio": "^0.22.0",
     "del": "^2.2.2",
+    "git-blame": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-help": "^1.6.1",
     "gulp-minify": "0.0.14",
@@ -32,8 +37,15 @@
     "gulp-sourcemaps": "^1.9.1",
     "gulp-util": "^3.0.7",
     "lodash": "^4.17.2",
+    "moment": "^2.17.0",
+    "pump": "^1.0.1",
+    "recursive-readdir": "^2.1.0",
     "run-sequence": "^1.2.2",
-    "shelljs": "^0.7.5"
+    "shelljs": "^0.7.5",
+    "spa-server": "^1.0.0",
+    "write-yaml": "^0.2.2",
+    "yaml-front-matter": "^3.4.0",
+    "yamljs": "^0.2.8"
   },
   "scripts": {}
 }

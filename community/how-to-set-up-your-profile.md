@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 My Community Profile
 
-The first thing you want to check out is the [My Community Profile](https://developer.mendixcloud.com/link/profile) page. To get there, mouse over your picture in the navigation bar and click **My Community Profile**. This overview page shows a the main page of your profile, including your summary, skills, industry experience, and badges.
+The first thing you want to check out is your [Community Profile](https://developer.mendixcloud.com/link/profile) page. To get there, mouse over your picture in the navigation bar and click **My Community Profile**. This overview page shows a the main page of your profile, including your summary, skills, industry experience, and badges.
 
 ![](attachments/19202388/19398797.png)
 
@@ -32,48 +32,55 @@ If you access your profile through the **Developers** or **Leaderboards** tabs o
 
 ![](attachments/19202388/19398798.png)
 
-## 4 Merging Your Accounts
+## 4 My Work
 
-Since the release of My Community Profile you can merge your old Mendix account(s) into your current Mendix account. This action will combine all your hard-earned points, certifications and achievements in your efforts to climb the leaderboards.
+You can add your Mendix project experience on this page by clicking **Add Project** and filling out the form (with the project name, a description, your role, other developers involved, skills involved, the customer, the industry, the period, and your visibility settings).
 
-How can I merge my accounts? With five quick and easy steps!
-
-1.  Go to [your profile](https://developer.mendixcloud.com/link/ownprofile/)
-2.  Make your profile public
-3.  Click Account Settings
-4.  Enter the email address of the account you want to merge with your current account
-5.  Send merge request
-
-We’ll take things from there and the email address of the merged account will be shown in the list when the accounts have been merged.
-
-![](attachments/19202388/MergeAccountsRequestApproved.png)
-
-Note: with this action we only combine the accounts. We don’t deactivate the old account(s). This should be done by that company’s administrator.
-
-## 5 My Work
-
-Add your Mendix project experience on this page by clicking on New Project and filling out the form. You can add a screenshot that will be shown on the My Work page, and will be visible to other developers when they visit your Work page.
+You can add a screenshot here that will be shown on the **My Work** tab and that will be visible to other developers when they visit your Community Profile:
 
 ![](attachments/19202388/19398799.png)
 
-## 6 My Badges
+## 5 My Badges
 
-You can’t actually change anything on this page, but you can view your earned badges.
+You can view your earned badges on this tab, but you cannot actually change anything here:
 
 ![](attachments/19202388/19398803.png)
 
-![](attachments/19202388/19398796.png) [Learn how to earn badges](https://developer.mendixcloud.com/link/faq)
+For details on how to earn badges, see [Become True Mendix Blue](https://developer.mendixcloud.com/link/faq).
 
-## 7 Making Your Profile Public
+## 6 Making Your Profile Public<a name="MakingYourProfilePublic"></a>
 
-When you’re done setting up your profile, click the big blue **Make my profile public** button.
+When you’re done setting up your Community Profile, click the big blue **Make my profile public** button:
 
 ![](attachments/19202388/19398800.png)
 
 Make sure you meet all the requirements before making your profile public:
 
-*   You entered a summary
-*   You added at least 1 skill
-*   You added at least 1 industry experience item
-*   You have 100 or more points
-*   Confirm if you are looking for a job or project
+* You entered a **Summary**
+* You added at least 1 skill
+* You added at least 1 industry experience item
+* You have 100 or more points
+* Confirm if you are looking for a job or project
+
+## 7 Merging Your Accounts
+
+Since the release of the Community Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your hard-earned points, certifications, and achievements in your efforts to climb the leaderboards.
+
+There are five quick and easy steps to merge your accounts:
+
+1. Go to your [Community Profile](https://developer.mendixcloud.com/link/ownprofile/).
+2. Click **Make my profile public** to make your Community Profile public (for more information, see [6 Making Your Profile Public](#abcd)).
+3. Click **Account Settings** on the right side of the screen.
+4. Under **Merge your accounts**, enter the email address of the account you want to merge with your current account.
+5. Click the send button to send a merge request.
+
+We’ll take things from there, and the email address of the merged account will be shown in the list when the accounts have been merged:
+
+![](attachments/19202388/MergeAccountsRequestApproved.png)
+
+<div class="alert alert-info">
+
+With this action we only combine the accounts. We don’t deactivate the old account(s). This should be done by that company’s administrator.
+
+</div>
+

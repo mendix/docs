@@ -1,6 +1,7 @@
 ---
 title: "Test Run"
 space: "ATS (Application Test Suite)"
+parent: "test-development"
 ---
 
 To run an existing test, you have to open the test case or test suite by clicking its name in the repository.

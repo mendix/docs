@@ -21,13 +21,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" }}">
     <link rel="stylesheet" href="{{ "//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css" }}">
-    <link rel="stylesheet" href="{{ "/public/styles/main.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/public/styles/search_autocomplete.css" | prepend: site.baseurl }}">
+    {% include asset.html type="css" filename="main.css" %}
+    {% include asset.html type="css" filename="search_autocomplete.css" %}
 
     <meta name="google-site-verification" content="aMsqgUmbPjh3W_nNVxtQEkUEdMcxM-EULoGHGBDGpYo" />
-    {% if jekyll.environment == "production" and page.sitemap != false  %}
-    <meta name="ROBOTS" content="INDEX, FOLLOW">
-      {% else %}
-    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
-    {% endif %}
+    {% if jekyll.environment == "production" and page.sitemap != false  %}<meta name="ROBOTS" content="INDEX, FOLLOW">{% else %}<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">{% endif %}
 </head>

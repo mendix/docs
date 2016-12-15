@@ -1,6 +1,7 @@
 ---
 title: "Summary"
 space: "Reference Guide 6"
+category: "General"
 ---
 
 Applications, built with Mendix, can communicate with SAP by sending and receiving IDocs, or by calling BAPIs on SAP.

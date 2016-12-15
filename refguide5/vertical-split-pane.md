@@ -1,6 +1,6 @@
 ---
 title: "Vertical Split Pane"
-category: "refguide5"
+parent: "container-widgets"
 space: "Reference Guide 5"
 ---
 

@@ -786,7 +786,8 @@
     },
     {
       "from": "/community/Feature+requests",
-      "to": "/community/feature-requests"
+      "to": "/community/feature-requests",
+      "disabled": true
     },
     {
       "from": "/community/How+to+set+up+your+partner+profile",
@@ -2181,14 +2182,6 @@
       "to": "/refguide5/associations"
     },
     {
-      "from": "/refguide5/Attribute+condition",
-      "to": "/refguide5/attribute-condition"
-    },
-    {
-      "from": "/refguide5/Attribute+Path+Property",
-      "to": "/refguide5/attribute-path-property"
-    },
-    {
       "from": "/refguide5/Attributes",
       "to": "/refguide5/attributes"
     },
@@ -2217,10 +2210,6 @@
       "to": "/refguide5/break-event"
     },
     {
-      "from": "/refguide5/Button+Style+Property",
-      "to": "/refguide5/button-style-property"
-    },
-    {
       "from": "/refguide5/Button+Widgets",
       "to": "/refguide5/button-widgets"
     },
@@ -2235,14 +2224,6 @@
     {
       "from": "/refguide5/Cancel+button",
       "to": "/refguide5/cancel-button"
-    },
-    {
-      "from": "/refguide5/Caption+Configurable+Property",
-      "to": "/refguide5/caption-configurable-property"
-    },
-    {
-      "from": "/refguide5/Caption+Property",
-      "to": "/refguide5/caption-property"
     },
     {
       "from": "/refguide5/Cast+Object",
@@ -2273,10 +2254,6 @@
       "to": "/refguide5/check-box"
     },
     {
-      "from": "/refguide5/Class+Property",
-      "to": "/refguide5/class-property"
-    },
-    {
       "from": "/refguide5/Client+Activities",
       "to": "/refguide5/client-activities"
     },
@@ -2291,10 +2268,6 @@
     {
       "from": "/refguide5/Clustered+Mendix+Business+Server",
       "to": "/refguide5/clustered-mendix-runtime"
-    },
-    {
-      "from": "/refguide5/Column+Width+Properties",
-      "to": "/refguide5/column-width-properties"
     },
     {
       "from": "/refguide5/Columns",
@@ -2323,10 +2296,6 @@
     {
       "from": "/refguide5/Comparison+Search+Field",
       "to": "/refguide5/comparison-search-field"
-    },
-    {
-      "from": "/refguide5/Condition+Property",
-      "to": "/refguide5/condition-property"
     },
     {
       "from": "/refguide5/Conditions",
@@ -2541,10 +2510,6 @@
       "to": "/refguide5/document-templates"
     },
     {
-      "from": "/refguide5/Documentation+Property",
-      "to": "/refguide5/documentation-property"
-    },
-    {
       "from": "/refguide5/Domain+Model",
       "to": "/refguide5/domain-model"
     },
@@ -2593,12 +2558,12 @@
       "to": "/refguide5/dynamic-label-document-template"
     },
     {
-      "from": "/refguide5/Edit+button",
-      "to": "/refguide5/edit-button"
+      "from": "/refguide5/Dynamic+Label+(Document+Template)",
+      "to": "/refguide5/dynamic-label-document-template"
     },
     {
-      "from": "/refguide5/Editable+Property",
-      "to": "/refguide5/editable-property"
+      "from": "/refguide5/Edit+button",
+      "to": "/refguide5/edit-button"
     },
     {
       "from": "/refguide5/End+Event",
@@ -2607,10 +2572,6 @@
     {
       "from": "/refguide5/Entities",
       "to": "/refguide5/entities"
-    },
-    {
-      "from": "/refguide5/Entity+Path+Property",
-      "to": "/refguide5/entity-path-property"
     },
     {
       "from": "/refguide5/Enumeration+Values",
@@ -2678,7 +2639,7 @@
     },
     {
       "from": "/refguide5/Goal",
-      "to": "/refguide5/goal"
+      "to": "/refguide5/"
     },
     {
       "from": "/refguide5/Grid+action+button",
@@ -2725,36 +2686,12 @@
       "to": "/refguide5/image"
     },
     {
-      "from": "/refguide5/Image+Height",
-      "to": "/refguide5/image-height"
-    },
-    {
-      "from": "/refguide5/Image+Height+Unit",
-      "to": "/refguide5/image-height-unit"
-    },
-    {
-      "from": "/refguide5/Image+Property",
-      "to": "/refguide5/image-property"
-    },
-    {
-      "from": "/refguide5/Image+Responsive",
-      "to": "/refguide5/image-responsive"
-    },
-    {
       "from": "/refguide5/Image+uploader",
       "to": "/refguide5/image-uploader"
     },
     {
       "from": "/refguide5/Image+viewer",
       "to": "/refguide5/image-viewer"
-    },
-    {
-      "from": "/refguide5/Image+Width",
-      "to": "/refguide5/image-width"
-    },
-    {
-      "from": "/refguide5/Image+Width+Unit",
-      "to": "/refguide5/image-width-unit"
     },
     {
       "from": "/refguide5/Images",
@@ -2783,14 +2720,6 @@
     {
       "from": "/refguide5/Integration+Activities",
       "to": "/refguide5/integration-activities"
-    },
-    {
-      "from": "/refguide5/Is+close+button+Property",
-      "to": "/refguide5/is-close-button-property"
-    },
-    {
-      "from": "/refguide5/Is+default+button+Property",
-      "to": "/refguide5/is-default-button-property"
     },
     {
       "from": "/refguide5/ISession+API+Usage",
@@ -2823,10 +2752,6 @@
     {
       "from": "/refguide5/Label",
       "to": "/refguide5/label"
-    },
-    {
-      "from": "/refguide5/Label+Property",
-      "to": "/refguide5/label-property"
     },
     {
       "from": "/refguide5/Layout",
@@ -2925,10 +2850,6 @@
       "to": "/refguide5/menu-item"
     },
     {
-      "from": "/refguide5/Menu+Source+Properties",
-      "to": "/refguide5/menu-source-properties"
-    },
-    {
       "from": "/refguide5/Menu+Widgets",
       "to": "/refguide5/menu-widgets"
     },
@@ -2989,14 +2910,6 @@
       "to": "/refguide5/module-role"
     },
     {
-      "from": "/refguide5/Module+Roles+Condition+Extended",
-      "to": "/refguide5/module-roles-condition-extended"
-    },
-    {
-      "from": "/refguide5/Module+Roles+Condition+Simple",
-      "to": "/refguide5/module-roles-condition-simple"
-    },
-    {
       "from": "/refguide5/Module+Security",
       "to": "/refguide5/module-security"
     },
@@ -3023,10 +2936,6 @@
     {
       "from": "/refguide5/MySQL",
       "to": "/refguide5/mysql"
-    },
-    {
-      "from": "/refguide5/Name+Property",
-      "to": "/refguide5/name-property"
     },
     {
       "from": "/refguide5/Navigation",
@@ -3061,24 +2970,8 @@
       "to": "/refguide5/odata-representation"
     },
     {
-      "from": "/refguide5/On+Change+Event",
-      "to": "/refguide5/on-change-event"
-    },
-    {
       "from": "/refguide5/On+Click+Event",
       "to": "/refguide5/on-click-event"
-    },
-    {
-      "from": "/refguide5/On+Click+Event+Action",
-      "to": "/refguide5/on-click-event-action"
-    },
-    {
-      "from": "/refguide5/On+Enter+event",
-      "to": "/refguide5/on-enter-event"
-    },
-    {
-      "from": "/refguide5/On+Leave+Event",
-      "to": "/refguide5/on-leave-event"
     },
     {
       "from": "/refguide5/Open+Project+Dialog",
@@ -3318,7 +3211,7 @@
     },
     {
       "from": "/refguide5/Reference+Guide+5",
-      "to": "/refguide5/reference-guide-5"
+      "to": "/refguide5/"
     },
     {
       "from": "/refguide5/Reference+selector",
@@ -3345,10 +3238,6 @@
       "to": "/refguide5/remove-button"
     },
     {
-      "from": "/refguide5/Render+Mode+Property",
-      "to": "/refguide5/render-mode-property"
-    },
-    {
       "from": "/refguide5/Report+Button",
       "to": "/refguide5/report-button"
     },
@@ -3371,14 +3260,6 @@
     {
       "from": "/refguide5/Reporting",
       "to": "/refguide5/report-widgets"
-    },
-    {
-      "from": "/refguide5/Required+message+Property",
-      "to": "/refguide5/required-message-property"
-    },
-    {
-      "from": "/refguide5/Required+Property",
-      "to": "/refguide5/required-property"
     },
     {
       "from": "/refguide5/Retrieve",
@@ -3431,26 +3312,6 @@
     {
       "from": "/refguide5/Search+button",
       "to": "/refguide5/search-button"
-    },
-    {
-      "from": "/refguide5/Search+Field+Attribute+Path+Property",
-      "to": "/refguide5/search-field-attribute-path-property"
-    },
-    {
-      "from": "/refguide5/Search+Field+Caption+Property",
-      "to": "/refguide5/search-field-caption-property"
-    },
-    {
-      "from": "/refguide5/Search+Field+Comparison+Property",
-      "to": "/refguide5/search-field-comparison-property"
-    },
-    {
-      "from": "/refguide5/Search+Field+Default+Value+Property",
-      "to": "/refguide5/search-field-default-value-property"
-    },
-    {
-      "from": "/refguide5/Search+Field+Type+Property",
-      "to": "/refguide5/search-field-type-property"
     },
     {
       "from": "/refguide5/Security",
@@ -3561,10 +3422,6 @@
       "to": "/refguide5/style"
     },
     {
-      "from": "/refguide5/Style+Property",
-      "to": "/refguide5/style-property"
-    },
-    {
       "from": "/refguide5/Summary",
       "to": "/refguide5/summary"
     },
@@ -3583,10 +3440,6 @@
     {
       "from": "/refguide5/Tab+Control",
       "to": "/refguide5/tab-container"
-    },
-    {
-      "from": "/refguide5/Tab+index+Property",
-      "to": "/refguide5/tab-index-property"
     },
     {
       "from": "/refguide5/Tab+page",
@@ -3651,10 +3504,6 @@
     {
       "from": "/refguide5/To+string",
       "to": "/refguide5/to-string"
-    },
-    {
-      "from": "/refguide5/Tooltip+Property",
-      "to": "/refguide5/tooltip-property"
     },
     {
       "from": "/refguide5/Transient+Objects+Garbage+Collecting",
@@ -3727,18 +3576,6 @@
     {
       "from": "/refguide5/Vertical+Split+Pane",
       "to": "/refguide5/vertical-split-pane"
-    },
-    {
-      "from": "/refguide5/Visibility+Property+with+Module+Roles+Extended",
-      "to": "/refguide5/visibility-property-with-module-roles-extended"
-    },
-    {
-      "from": "/refguide5/Visibility+Property+with+Module+Roles+Simple",
-      "to": "/refguide5/visibility-property-with-module-roles-simple"
-    },
-    {
-      "from": "/refguide5/Visible+Property",
-      "to": "/refguide5/visible-property"
     },
     {
       "from": "/refguide5/XML+Reference+Guide",

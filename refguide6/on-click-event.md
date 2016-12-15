@@ -1,6 +1,7 @@
 ---
 title: "On Click Event"
 space: "Reference Guide 6"
+parent: "page-concepts"
 ---
 ### On click
 

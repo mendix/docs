@@ -1,7 +1,6 @@
 ---
 title: "Introduction"
 space: "Application Performance Monitor"
-category: "APM"
 ---
 This introduction provides a short explanation about what APM is, which tools are in the APM suite and what they are used for. The APM tool consists of the following tools:
 * Statistics Tool
@@ -16,11 +15,11 @@ This introduction provides a short explanation about what APM is, which tools ar
 
 Wikipedia provides a good definition of [Application Performance Management](http://en.wikipedia.org/wiki/Application_performance_management).
 
-APM is the monitoring and management of performance and availability of software applications. 
-APM strives to detect and diagnose application performance problems to maintain an expected level of service. 
+APM is the monitoring and management of performance and availability of software applications.
+APM strives to detect and diagnose application performance problems to maintain an expected level of service.
 APM is the translation of IT metrics into business meaning (value).
 
-Of course you need the basic infrastructure probes to measure hardware parts like the CPU, memory and 
+Of course you need the basic infrastructure probes to measure hardware parts like the CPU, memory and
 disk, as well as components like the database and the web server. However, for higher quality support you should also look at the application and how it is performing, especially linking this to the user’s business perspective.
 
 We all know software contains bugs, and of course we all test before we bring something into production. For users, an error is a sign that the application is not functioning. If the error appears unexpected, the user loses trust in the system. The standard reaction of support was always to ask questions, including whether the customer can reproduce the issue, to turn on logging and to ask for a database dump, so support can investigate the issue in a safe environment.
@@ -45,7 +44,7 @@ This is the statistics tool (for load balanced environments you see the server w
 
 When support wants to investigate a performance issue, either proactively through the statistics tool or reactively when a customer reports an issue, they use the APM Performance tool. With it they can see the duration of the steps in the microflow on the action level. They can drill down to see individual SQL statements. They can even ask the database for an explain plan that tells you how the database processes the query, which indexes it uses, and more. This tool quickly helps to pinpoint the issue.
 
-This is the call tree, which provides an overview of what happens, showing the called microflows and one iteration 
+This is the call tree, which provides an overview of what happens, showing the called microflows and one iteration
 of a loop, filtered by duration:
 
 ![](attachments/Introduction/Performance_Tool_Tree_View.png)
@@ -77,16 +76,14 @@ The trigger can be to trap logging, or to execute a microflow, for example, to s
 # JVM Browser
 
 The JVM browser can be used to see JVM information similar to tools like JConsole, JVisualVM or JMC. This gives the information to more functional people without the need for specialists and technical access to the machines running the Mendix application.
-  
+
 # Query Tool
 
 The query tool lets you perform XPath, OQL and JDBC queries to collect either business statistics (like reports), application statistics (number of scheduled events running at the same time) or database specific statistics like the number of sessions. This module is also used for the explain plan functionality of the performance tool.
-  
+
 # Log Tool
 
-The log tool is used to collect Mendix Runtime log messages and store them in the database. 
+The log tool is used to collect Mendix Runtime log messages and store them in the database.
 This gives remote access to log information, makes it available to consultants, and allows for easy searching and analyzing.
 
 The log rerouting makes sure that Java messages that are sent to the Java console, to the java util library or to the log4j library, are rerouted to the Mendix log. For example, javamail sends debug output to the console and with this option you can collect that information and make it visible in the Mendix log as well as in the APM Log Tool and APM Trap Tool. This helped support a lot in solving email issues and issues with web services security and certificates.
-
- 

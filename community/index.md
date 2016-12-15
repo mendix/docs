@@ -9,13 +9,13 @@ The Mendix Community team is responsible for the mendix [App Store](http://appst
 
 The team's goal is to activate and engage the community of Mendix developers in order to provide them with the necessary tools, knowledge, and assistance for building better apps. The team is continuously evolving while working on new ways to make the life of developers easier by providing them with better content and opportunities on a daily basis.
 
-## Community Projects
+## Community Tools
 
 These pages provide more information on the various projects that the team is working on:
 
+* [How to Set Up Your Community Profile](how-to-set-up-your-profile)
 * [How to Set Up Your Partner Profile](how-to-set-up-your-partner-profile)
-* [How to Set Up Your Profile](how-to-set-up-your-profile)
-* [Feature Requests](feature-requests)
+* [The Mendix Forum](the-mendix-forum)
 * [The Mendix Job Dashboard](the-mendix-job-dashboard)
 * [The Mendix MVP Program](the-mendix-mvp-program)
 

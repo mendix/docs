@@ -1,7 +1,6 @@
 ---
 title: "Tips and Tricks"
 space: "Tips and Tricks"
-category: "tips"
 ---
 This is where our experts reveal their tips and tricks.
 

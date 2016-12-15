@@ -1,6 +1,5 @@
 ---
 title: "Java Programming"
-category: "refguide5"
 space: "Reference Guide 5"
 ---
 

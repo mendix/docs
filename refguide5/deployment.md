@@ -1,6 +1,5 @@
 ---
 title: "Deployment"
-category: "refguide5"
 space: "Reference Guide 5"
 ---
 

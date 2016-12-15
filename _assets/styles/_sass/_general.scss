@@ -175,6 +175,18 @@
       }
     }
   }
+
+  .history {
+    text-align: right;
+    font-size: 0.8em;
+    time {
+      font-weight: bold
+    }
+    i {
+      margin-left: 4px;
+      color: $goldfish-orange;
+    }
+  }
 }
 
 .github {
@@ -215,6 +227,8 @@
     }
   }
 }
+
+
 
 .header-link {
   font-size: 29px;

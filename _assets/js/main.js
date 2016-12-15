@@ -14,6 +14,11 @@
       }
     });
 
+    // Make tooltips visible
+    $('[data-toggle="tooltip"]').tooltip({
+      html: true
+    });
+
     /*****************
       Overview blocks
     ******************/
@@ -253,49 +258,19 @@
     });
 
     /*****************
-      Github file info
+      Git file info
     ******************/
-    $('.github_file_info').each(function () {
-      $this = $(this), path = $this.data('path');
-      if (path) {
-        $.get('https://api.github.com/repos/mendix/docs/commits?sha=master&path=' + encodeURIComponent(path), {}, function (data) {
-          if (data.length === 0) { return; }
-          var first = data[0];
-          $this.find('.link').attr('href', first.html_url);
-          if (first.committer) {
-            if (first.committer.html_url) {
-              $this.find('.author').attr('href', first.committer.html_url);
-            }
-          }
-          if (first.commit && first.commit.author) {
-            if (first.commit.author.name) {
-              $this.find('.author').text(first.commit.author.name);
-            }
-            if (first.commit.author.date) {
-              var m = moment(first.commit.author.date);
-              $this.find('.datetime').text(m.fromNow());
-            }
-          }
+    $('.post .history time').each(function() {
+      var $el = $(this),
+          m = moment($el.text());
 
-          var committers = {},
-              contributors = 0;
-          $.each(data, function (i, d) {
-            var author = d.author;
-            if (author && author.login && author.url && author.avatar_url) {
-              if (!committers[author.login]) {
-                committers[author.login] = true; contributors++;
-                $('<img src="' + author.avatar_url + '" alt="' + author.login + '" />').appendTo($this.find('.github_file_info_contributors'));
-              }
-            }
-          });
-          if (contributors == 0) {
-            $this.find('.github_file_info_contributors').hide();
-          } else {
-            $this.find('.github_file_info_count').text(contributors + ' contributor' + (contributors > 1 ? 's' : ''));
-          }
-          $this.show();
-        }, 'json');
+      if (m.isValid()) {
+        $el.text(m.fromNow());
+      } else {
+        $el.remove();
       }
-    });
+    })
+
+
   });
 })(jQuery));

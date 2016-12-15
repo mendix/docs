@@ -81,7 +81,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
     For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events.
 
-    The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue. For more information take a look at this [documentation](/refguide5/loop?utm_source=businessmodeler&utm_medium=software&utm_campaign=modeler)
+    The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue. For more information take a look at this [documentation](/refguide5/loop)
 
 3. Double click the loop activity and select the **OrderProcessingList **to iterate over.
     ![](attachments/8785360/8946821.png)

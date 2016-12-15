@@ -1,5 +1,5 @@
 ---
-title: "Logic and Business Rules"
+title: "Logic & Business Rules"
 space: "Mendix 6 How-to's"
 ---
 Application logic is created in Mendix in the form of Microflows. So, what's a Microflow?

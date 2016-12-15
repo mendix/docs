@@ -1,6 +1,5 @@
 ---
 title: "Team Server"
-category: "refguide5"
 space: "Reference Guide 5"
 ---
 

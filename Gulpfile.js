@@ -11,6 +11,7 @@ const mappings    = require('./_gulp/mappings');
 const git         = require('./_gulp/git');
 const htmlproofer = require('./_gulp/htmlproofer');
 const algolia     = require('./_gulp/algolia');
+const menu        = require('./_gulp/menu');
 
 const path        = require('path');
 const pump        = require('pump');
@@ -160,8 +161,17 @@ gulp.task('serve', `Jekyll serve, using ${CONFIG_TEST}`, done => {
   runSequence('clean', 'dev');
 })
 
-gulp.task('htmlproofer', `Check HTML files in the build folder`, done => {
+gulp.task('check:html', `Check HTML files in the build folder`, done => {
   htmlproofer.check(path.resolve(CURRENTFOLDER, '_site'), function (err) {
+    if (err) {
+      return process.exit(2);
+    } else {
+      done();
+    }
+  });
+});
+gulp.task('check:menu', `Check menu structure in the build folder`, done => {
+  menu.check(path.resolve(CURRENTFOLDER, '_site/json/menu'), function (err) {
     if (err) {
       return process.exit(2);
     } else {

@@ -31,7 +31,7 @@ before_deploy:
   - cf install-plugin 'https://github.com/contraband/autopilot/releases/download/0.0.2/autopilot-linux' -f
 script:
   - gulp build
-  - gulp htmlproofer
+  - gulp check:html
 cache:
   directories:
     vendor

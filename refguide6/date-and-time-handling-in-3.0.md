@@ -1,6 +1,7 @@
 ---
-title: "Date and Time Handling in 3.0"
+title: "Date and Time Handling"
 space: "Reference Guide 6"
+category: "Runtime"
 ---
 In version 3.0 date and time handling has been improved. The most important change is that server operations now use the time zone of the user instead of the server time zone. Previously operations like generating documents, exporting to Excel/CSV and date computations in microflows/OQL all used the server time zone. This is fine if the server and all users of your application are in the same time zone. If they are not, however, generated output can contain unexpected results.
 

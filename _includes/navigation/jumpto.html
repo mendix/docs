@@ -6,7 +6,7 @@
       </button>
       <ul class="dropdown-menu jumpto_dropdown">
         {% for jump in site.data.jumpto %}
-          <li><a href="{{ jump.url }}">{{ jump.title }}</a></li>
+          <li><a href="{{ jump.url }}" {% if jump.external %}target="_blank"{% endif %}>{{ jump.title }}</a></li>
         {% endfor %}
       </ul>
     </div>

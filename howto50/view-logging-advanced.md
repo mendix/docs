@@ -1,6 +1,7 @@
 ---
 title: "View logging - Advanced"
 space: "Mendix 5 How-to's"
+category: "Logic & Business Rules"
 ---
 ## Description
 

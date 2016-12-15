@@ -182,6 +182,10 @@
     time {
       font-weight: bold
     }
+    i {
+      margin-left: 4px;
+      color: $goldfish-orange;
+    }
   }
 }
 
@@ -223,6 +227,8 @@
     }
   }
 }
+
+
 
 .header-link {
   font-size: 29px;

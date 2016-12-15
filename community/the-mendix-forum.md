@@ -112,7 +112,7 @@ In addition to sorting, you can filter the questions by entering keywords into t
 
 * **My favorites** – the questions you have starred and marked as favorites (for details on how to favorite a question, see [3.1 Question and Answer Details Page](#QuestionDescriptionPage))
 * **My own questions** – the questions you have asked (for more information, see [3.2 Asking a Question](#AskingaQuestion))
-* **Status** – the status of a question according to whether it remains **Unanswered**, has been **Answered**, or has been **Accepted answered** (meaning, it has been answered and the answer has been accepted) 
+* **Status** – the status of a question according to whether it remains **Unanswered**, has been **Answered**, or has been **Accepted answered** (meaning, it has been answered and the answer has been accepted)
 * **Categories** – the categories set when the questions were asked (for more information, see [3.2 Asking a Question](#AskingaQuestion))
 * **Tags** – the tags set when the questions were asked (for more information, see [3.2 Asking a Question](#AskingaQuestion))
 
@@ -160,7 +160,7 @@ You can easily upload your images in the forum by dragging them directly into th
 
 ### 3.2 Asking a Question<a name="AskingaQuestion"></a>
 
-It's never been easier to ask a question on the Mendix Forum. But before you submit a new question, be sure to search the forum for similar questions that have already been asked. There may be someone else who has already posted the same question! 
+It's never been easier to ask a question on the Mendix Forum. But before you submit a new question, be sure to search the forum for similar questions that have already been asked. There may be someone else who has already posted the same question!
 
 To ask your own question on the forum, follow these steps:
 
@@ -190,7 +190,7 @@ You should accept the answer that properly and accurately responds to your quest
 
 ## 4 Ideas Tab<a name="IdeasTab"></a>
 
-This tab lists ideas and feature requests for improving the Mendix platform that have been submitted by Mendix Community members. 
+This tab lists ideas and feature requests for improving the Mendix platform that have been submitted by Mendix Community members.
 
 ![](attachments/the-mendix-forum/ideas_example.png)
 
@@ -214,9 +214,9 @@ The **Sort by** drop-down menu at the top of the screen has three options for so
 In addition to sorting, you can filter the ideas by entering keywords into the search box or by selecting from the following criteria on the right side of the screen:
 
 * **My favorites** – the ideas you have starred and marked as favorites (for details on how to favorite an idea, see [4.1 Idea and Comment Details Page](#IdeaDescriptionPage))
-* **My own ideas** – the ideas you have submitted (for more information, see [4.2 Submitting an Idea](#SubmittingAnIdea))
-* **Categories** – the categories set when the ideas were submitted (for more information, see [4.2 Submitting an Idea](#SubmittingAnIdea))
-* **Tags** – the tags set when the ideas were submitted (for more information, see [4.2 Submitting an Idea](#SubmittingAnIdea))
+* **My own ideas** – the ideas you have submitted (for more information, see [4.2 Submitting an Idea](#42-submitting-an-idea))
+* **Categories** – the categories set when the ideas were submitted (for more information, see [4.2 Submitting an Idea](#42-submitting-an-idea))
+* **Tags** – the tags set when the ideas were submitted (for more information, see [4.2 Submitting an Idea](#42-submitting-an-idea))
 
 ### 4.1 Idea and Comment Details Page<a name="IdeaDescriptionPage"></a>
 
@@ -240,7 +240,7 @@ On this page, you can read the full descriptive text of the idea and do the foll
 * Click **Copy** to copy the deep link to the idea and share it (**2**)
 * Click **Vote** to upvote the idea (**3**)
     * By upvoting ideas, you can show the Mendix Community and the Product Managers what you would like to see added to the Mendix platform
-    * The upvotes will be used as input for the Product Managers and the Mendix Community MVPs to decide which features will be nominated for implementation (for more information, see [4.2.2 Processing Feature Requests](#ProcessingFeatureRequests))
+    * The upvotes will be used as input for the Product Managers and the Mendix Community MVPs to decide which features will be nominated for implementation.
 * Click the star to favorite the idea (**4**)
 
 Below the idea details are the comments on the idea:

@@ -1,12 +1,12 @@
 ---
 title: "String Concatenation"
 space: "Mendix 6 How-to's"
-category: "Logic and Business Rules"
+category: "Logic & Business Rules"
 tags: []
 ---
-In every project you will need to do this, concatenate some text together. Common cases are when you want to assemble the full name of a person based on the first and last name. 
+In every project you will need to do this, concatenate some text together. Common cases are when you want to assemble the full name of a person based on the first and last name.
 
-Whenever you want to paste multiple strings attributes together you want to make sure that the text looks good in all cases. For example you don't want a firstname + middlename + lastname to be printed as "John null Doe" because the middle name is empty. 
+Whenever you want to paste multiple strings attributes together you want to make sure that the text looks good in all cases. For example you don't want a firstname + middlename + lastname to be printed as "John null Doe" because the middle name is empty.
 
 To understand what to look out for when concatenating strings it is important to be aware of the three state a string can be in.
 
@@ -50,7 +50,7 @@ trim(
 
 ### Example 3, **BestPractice,**  expression break down:
 
-The most flexible solution is to break the string concatenate down into separate activities. This allows to easily add or remove text from the concatenate function. It should not create an additional level of complexity either, simply create a subflow to combine the string values and use that in your microflow. 
+The most flexible solution is to break the string concatenate down into separate activities. This allows to easily add or remove text from the concatenate function. It should not create an additional level of complexity either, simply create a subflow to combine the string values and use that in your microflow.
 In this example we went even one step further in the stability of the expression. By adding an additional trim to the attribute we prevent adding additional white spaces that might have been added by the user. Using the microflow below we are absolutely sure never to get any white spaces or null values in our text.
 
 ```

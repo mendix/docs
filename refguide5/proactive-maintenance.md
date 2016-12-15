@@ -1,6 +1,5 @@
 ---
 title: "Proactive Maintenance"
-category: "refguide5"
 space: "Reference Guide 5"
 ---
 

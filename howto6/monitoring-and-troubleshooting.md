@@ -1,5 +1,5 @@
 ---
-title: "Monitoring and Troubleshooting"
+title: "Monitoring & Troubleshooting"
 space: "Mendix 6 How-to's"
 ---
 Stay updated on the health of your app and troubleshoot when needed.

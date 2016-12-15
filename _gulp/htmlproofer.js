@@ -147,7 +147,7 @@ const validateFiles = files => {
       // Let's check anchorlinks
       _.forEach(file.anchorLinks, anchorlink => {
         if (file.anchors.indexOf(anchorlink) === -1) {
-          console.log(file.anchors);
+          //console.log(file.anchors);
           file.warnings.push(`Has anchor link: ${gutil.colors.cyan('#' + anchorlink)}, which does not exist in the page`);
           verbose && console.log(`err anchor ${file.path}`, anchorlink);
         }

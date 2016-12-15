@@ -74,6 +74,6 @@ The following image file types are allowed: *.jpg*, *.png*, *.gif*.
 
 ## 6 Related Content
 
+* [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)
 * [How-To Template](the-how-to-template-page)
 * [Reference Guide Page Template](the-reference-guide-page-template-page)
-* [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)

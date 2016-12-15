@@ -3,21 +3,36 @@ title: "Set Up Your Community Profile"
 space: "Community"
 parent: "community-projects"
 ---
-So you’ve decided to check out your new Mendix profile page, and found it suspiciously empty. Don’t worry, I’m here to help you set up your profile, so you can show the world what a real Mendix Developer looks like!
 
-## My Profile
+## 1 Introduction
 
-The first thing you want to check out is the [My Profile](https://developer.mendixcloud.com/link/profile) page. To get there, mouse over your picture in the navigation bar and click **My Community Profile**. This overview page shows a summary of your profile, including your summary, your skills, industry experience, and badges.
+So you’ve decided to check out your new Mendix Community Profile page, but you've found it suspiciously empty. Don’t worry, we're here to help you set up your profile so you can show the world what a real Mendix developer looks like!
+
+**This how-to will teach you how to do the following:**
+
+* Set up your Community Profile
+* Merge your accounts
+* Make your account public
+
+## 2 Prerequisites
+
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Have an account with Mendix (register [here](https://www.mendix.com/try-now/))
+
+## 3 My Community Profile
+
+The first thing you want to check out is the [My Community Profile](https://developer.mendixcloud.com/link/profile) page. To get there, mouse over your picture in the navigation bar and click **My Community Profile**. This overview page shows a the main page of your profile, including your summary, skills, industry experience, and badges.
 
 ![](attachments/19202388/19398797.png)
 
-When you access your profile page through the My Profile link it is automatically in edit mode, so you can easily update your profile. Click the Edit button to add a summary, new skills, industry experience, or add new social profiles on the right.
+When you access your profile page through the My Community Profile link, it is automatically in edit mode so that you can easily update your profile. Click ![](attachments/19202388/19399148.png) to add a summary, new skills, industry experience, and links to your social media profiles.
 
-If you access your profile through the Leaderboards or Developers page, it will display your public profile. Click the Edit Profile button to go into edit mode.
+If you access your profile through the **Developers** or **Leaderboards** tabs of the [Our Community](https://developer.mendixcloud.com/link/community) page, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
 
 ![](attachments/19202388/19398798.png)
 
-## Merge your accounts
+## 4 Merging Your Accounts
 
 Since the release of My Community Profile you can merge your old Mendix account(s) into your current Mendix account. This action will combine all your hard-earned points, certifications and achievements in your efforts to climb the leaderboards.
 
@@ -35,13 +50,13 @@ We’ll take things from there and the email address of the merged account will 
 
 Note: with this action we only combine the accounts. We don’t deactivate the old account(s). This should be done by that company’s administrator.
 
-## My Work
+## 5 My Work
 
 Add your Mendix project experience on this page by clicking on New Project and filling out the form. You can add a screenshot that will be shown on the My Work page, and will be visible to other developers when they visit your Work page.
 
 ![](attachments/19202388/19398799.png)
 
-## My Badges
+## 6 My Badges
 
 You can’t actually change anything on this page, but you can view your earned badges.
 
@@ -49,7 +64,7 @@ You can’t actually change anything on this page, but you can view your earned 
 
 ![](attachments/19202388/19398796.png) [Learn how to earn badges](https://developer.mendixcloud.com/link/faq)
 
-## Make your profile public
+## 7 Making Your Profile Public
 
 When you’re done setting up your profile, click the big blue **Make my profile public** button.
 

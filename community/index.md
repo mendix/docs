@@ -15,7 +15,6 @@ These pages provide more information on the various projects that the team is wo
 
 * [How to Set Up Your Partner Profile](how-to-set-up-your-partner-profile)
 * [How to Set Up Your Profile](how-to-set-up-your-profile)
-* [Feature Requests](feature-requests)
 * [The Mendix Job Dashboard](the-mendix-job-dashboard)
 * [The Mendix MVP Program](the-mendix-mvp-program)
 

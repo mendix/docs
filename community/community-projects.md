@@ -1,13 +1,13 @@
 ---
-title: "Community Projects"
+title: "Community Tools"
 space: "Community"
 category: "Community"
 ---
 
-These pages provide more information on the various projects that the Community Team is working on:
+These pages provide more information on the various tools available to the Mendix Community:
 
+* [How to Set Up Your Community Profile](how-to-set-up-your-profile)
 * [How to Set Up Your Partner Profile](how-to-set-up-your-partner-profile)
-* [How to Set Up Your Profile](how-to-set-up-your-profile)
-* [Feature Requests](feature-requests)
+* [The Mendix Forum](forum-overview)
 * [The Mendix Job Dashboard](the-mendix-job-dashboard)
 * [The Mendix MVP Program](the-mendix-mvp-program)

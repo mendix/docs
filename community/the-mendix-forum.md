@@ -203,7 +203,7 @@ Each idea specifies the following elements:
     * This is taken from the [idea and comment details page](#IdeaDescriptionPage)
 * Tags (**6**) (for example, **datagrid**, **listen-target**, **conditional-visibility**)
 * The category (**7**) of the idea
-    * This is set when submitting an idea (for details, see [4.2 Submitting an Idea](#SubmittinganIdea))
+    * This is set when submitting an idea (for details, see [4.2 Submitting an Idea](#42-submitting-an-idea))
 * When the idea was created (**8**)
 * The name, avatar, points, and level of the developer created the idea (**9**)
 

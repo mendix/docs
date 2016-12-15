@@ -24,7 +24,7 @@ The purpose of the Partner Profile is to give the Mendix Community and customers
 To log in to your Partner Profile, follow these steps:
 
 1. Click [here](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/ownprofile/) to log in and check your own Community Profile. With this action the system knows who your are and which company is attached to your account. Everybody within a company is allowed to edit that company's Partner Profile.
-2. Navigate to the [partner overview page](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview). Your company will be shown at the top of the **Partners** overview list:
+2. Navigate to the [Partner Profiles overview](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview). Your company will be shown at the top of the **Partners** overview list:
 
     ![](attachments/19203677/20217909.png)
 
@@ -46,11 +46,11 @@ In **Video**, you can add a company video (currently only YouTube videos are sup
 
 ![](attachments/19203677/20217913.png)
 
-In **Industries**, you can add your focus industries. This will be used in the filter option on the partner overview so that a customer can for a partner with a focus on a specific industry.
+In **Industries**, you can add your focus industries. This will be used in the filter option on the Partner Profiles overview so that a customer can for a partner with a focus on a specific industry.
 
 ![](attachments/19203677/20217914.png)
 
-In **Geographical Focus**, add the countries where your company is active and has coverage. This will be used in the filter option on the partner overview so that a customer can search for a partner in a specific country:
+In **Geographical Focus**, add the countries where your company is active and has coverage. This will be used in the filter option on the Partner Profiles overview so that a customer can search for a partner in a specific country:
 
 ![](attachments/19203677/20217916.png)
 
@@ -60,7 +60,7 @@ If you're missing an input option (for example, an industry), just send us a fee
 
 </div><div class="alert alert-info">
 
-These fields are required before you can set your profile to public: address, email, summary, geographical focus, type of services, and support capabilities.
+These fields are required before you can set your profile to public: Address, Email, Summary, Geographical Focus, Type of Services, and Support Capabilities.
 
 </div>
 
@@ -92,54 +92,66 @@ Only the certifications and Mendix levels (the exact amount of points) of the ad
 
 ## 6 Reference Cases
 
-This section presents information on adding reference cases to your Partner Profile and how to boost your overall rating. 
+This section presents information on adding reference cases to your Partner Profile and how to boost your overall rating.
 
 Go to the **Reference** tab and click **Add Project**. This is where you can add all the details of your reference case.
 
 ![](attachments/19203677/20217920.png)
 
-*   The customer is an open text field, so if this customer needs to stay anonymous you could also add 'bank in the US'.
-*   The industry will be used in the overview page, the number next to the label will show the number of projects you've added to your profile.
+* The customer is an open text field (so if the customer needs to stay anonymous, you could enter, for example, "Bank in the US")
+* The industry will be used in the overview page, and the number next to the label will show the number of projects you have added to your profile
+
     ![](attachments/19203677/20217921.png)
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
 These fields are required before you can save a reference case: Project, Description, Customer, Industry, and Period.
 
-{% endmarkdown %}</div>
+</div>
 
-A customer can add a review on your reference case. The average rating of all reviews of all projects will be shown on the partner overview page and partner detail page. Our partner success managers will check / moderate the reviews.
+A customer can add a review of your reference case. The average rating of all the reviews of all your projects will be shown on the Partner Profiles overview and Partner Profile detail page. Our partner success managers will check and moderate the reviews.
+
 ![](attachments/19203677/20217926.png)
+
 ![](attachments/19203677/20217927.png)
 
-## 7 Partner Overview Page
+## 7 Sorting of Partner Profiles Overview
 
-The [partner overview page](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview) shows our partner community. The sorting is based on the combination of several KPIs:
+The [Partner Profiles overview](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview) lists our partners. This list is sorted according to a combination of several KPIs:
 
-*   Projects rating (PR): this is the average rating of all the reviews on your reference cases.
+* Projects rating (PR) – the average rating of all the reviews of your reference cases
+
     ![](attachments/19203677/20217923.png)
-*   Certified developers (CD): this shows the total amount of certified developers (note: developers with multiple certifications count as one certified developer).
+
+* Certified developers (CD) – the total amount of certified developers (please note that developers with multiple certifications count as one certified developer)
+
      ![](attachments/19203677/20217924.png)
-*   Mendix Level (ML): this is based on the average points (resulting in a [Mendix Level](https://developer.mendixcloud.com/link/faq)) of your developers added to your public profile.
+
+* Mendix Level (ML) – this is based on the average points of your developers added to your public profile (for more information on the Mendix Level, see [Become True Mendix Blue](https://developer.mendixcloud.com/link/faq))
+
     ![](attachments/19203677/20217925.png)
 
-    For the calculation of the sorting order we use the average points instead of the Mendix Level, this will result in an more granulated sorting.
+    <div class="alert alert-info">
 
-*   Number of reference projects (RP): the number of reference projects are also part of the sorting formula.
+    For the calculation of the sorting order, Mendix uses the average points instead of the Mendix Level, as this results in a more granulated sorting.
 
-For the sorting we normalize the KPI's of all the partners to a score between 0 and 1, following this formula:
+    </div>
 
-New KPI value = (your value - minimal value) / (maximum value - minimum value)
+* Number of reference projects (RP) – this number is also part of the sorting formula
 
-Example: you have 14 certified developers (CD). The biggest company has 40 certified developers (max) and smallest 1 certified developer (min):
+For the sorting, we normalize the KPIs of all the partners to a score between 0 and 1 following this formula:
 
-* KPI value CD biggest company = 1
-* KPI value CD smallest company = 0
-* KPI value CD your company = 0,33 = (14 - 1) / (40-1)
+* *(your value – minimal value) / (maximum value – minimum value) = new KPI value*
 
-The sum of the normalised KPI values of your company (PR+CD+ML+RP) defines the sorting order between the partners.
+For example, you have 14 certified developers (CD). The biggest company has 40 certified developers (maximum), and the smallest company has one certified developer (minimum):
+
+* CD KPI value of the biggest company: 1
+* CD KPI value of the smallest company: 0
+* CD KPI value of your company: (14 – 1) / (40 – 1) = 0.33
+
+The sum of the normalized KPI values of your company (PR + CD + ML + RP) defines the sorting order between the partners.
 
 ## 8 Related Content
 
-*   [How to set up your profile](how-to-set-up-your-profile)
-*   [How to set up your partner profile](how-to-set-up-your-partner-profile)
+* [How to Set Up Your Community Profile](how-to-set-up-your-profile)
+* [How to Set Up Your Partner Profile](how-to-set-up-your-partner-profile)

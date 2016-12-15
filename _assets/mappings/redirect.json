@@ -786,7 +786,8 @@
     },
     {
       "from": "/community/Feature+requests",
-      "to": "/community/feature-requests"
+      "to": "/community/feature-requests",
+      "disabled": true
     },
     {
       "from": "/community/How+to+set+up+your+partner+profile",

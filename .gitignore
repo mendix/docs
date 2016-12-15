@@ -11,3 +11,4 @@ _algolia_api_key_
 
 _config_test.yml
 _data/history.yml
+_data/asset*.json

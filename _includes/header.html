@@ -2,8 +2,8 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript" /></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js" type="text/javascript" /></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js" type="text/javascript" /></script>
-<script src="{{ "/public/js/toc.js" | prepend: site.baseurl }}" type="text/javascript" /></script>
-<script src="{{ "/public/js/main.js" | prepend: site.baseurl }}" type="text/javascript" /></script>
+{% include asset.html type="js" filename="toc.js" %}
+{% include asset.html type="js" filename="main.js" %}
 <script>
   window.ALGOLIA_CONFIG = {
     'appId': '{{ site.algolia.application_id }}',

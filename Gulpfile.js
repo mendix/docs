@@ -3,6 +3,7 @@ const gutil       = require('gulp-util');
 const sass        = require('gulp-sass');
 const sourcemaps  = require('gulp-sourcemaps');
 const minify      = require('gulp-minify');
+const hash        = require('gulp-hash');
 
 const server      = require('./_gulp/server');
 const jekyll      = require('./_gulp/jekyll');
@@ -104,7 +105,11 @@ gulp.task('compress:js', `Compress js files`, (done) => {
         min: '.js'
       }
     }),
-    gulp.dest(paths.scripts.dest)
+    gulp.dest(paths.scripts.dest),
+    hash(),
+    gulp.dest(paths.scripts.dest),
+    hash.manifest('assetsjs.json', true, 4),
+    gulp.dest('_data')
   ], done);
 });
 
@@ -120,6 +125,10 @@ gulp.task('sass:build', `Sass build`, () => {
       outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(gulp.dest(paths.styles.dest))
+    .pipe(hash())
+    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(hash.manifest('assetscss.json', true, 4))
+    .pipe(gulp.dest('_data'));
 });
 
 gulp.task('sass:dev', `Sass build (dev task, sourcemaps included)`, () => {
@@ -131,7 +140,7 @@ gulp.task('sass:dev', `Sass build (dev task, sourcemaps included)`, () => {
     }).on('error', sass.logError))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.styles.dest))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 });
 
 gulp.task('jekyll:build', `Jekyll build, using ${CONFIG}`, [], done => {
@@ -192,7 +201,7 @@ gulp.task('algolia', `Push Algolia indexes (not production ready)`, done => {
 });
 
 gulp.task('build', `Jekyll build, using ${CONFIG}. Used for production`, done => {
-  runSequence('clean', 'write:githistory', ['jekyll:build', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
+  runSequence('clean', 'write:githistory', ['sass:build', 'copy:images', 'compress:js', 'write:mappings'], 'jekyll:build', done);
 });
 
 gulp.task('build-test', `Jekyll build, using ${CONFIG_TEST}. Used for test`, done => {

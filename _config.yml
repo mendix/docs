@@ -178,6 +178,8 @@ exclude:
   - manifest_accp.yml
   - community/the-how-to-template.md
   - community/the-reference-guide-page-template.md
+  - _data/assetsjs.json
+  - _data/assetscss.json
   - CONTRIBUTING.md
 
 markdown: kramdown

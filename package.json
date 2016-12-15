@@ -31,6 +31,7 @@
     "del": "^2.2.2",
     "git-blame": "^1.1.0",
     "gulp": "^3.9.1",
+    "gulp-hash": "^3.1.0",
     "gulp-help": "^1.6.1",
     "gulp-minify": "0.0.14",
     "gulp-sass": "^2.3.2",

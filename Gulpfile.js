@@ -60,7 +60,13 @@ gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json 
     write: true,
     src: path.join(CURRENTFOLDER, '/_assets/mappings/redirect.json'),
     dest: path.join(CURRENTFOLDER, '/_site/mappings/redirect.map'),
-    callback: done
+    callback: function (err) {
+      if (err) {
+        process.exit(2);
+      } else {
+        done();
+      }
+    }
   });
 });
 
@@ -70,13 +76,15 @@ gulp.task('write:githistory', `Write git_history to data`, done => {
       yaml('_data/history.yml', commits, err => {
         if (err) {
           throwErr('write:githistory', `Error writing githistory: ${err}`);
+          return process.exit(2);
         }
         gutil.log(gutil.colors.cyan('[GIT-HISTORY]') + ` Git history written to ${gutil.colors.cyan(path.join(CURRENTFOLDER, '/_data/history.yml'))}`)
         done();
       });
     })
-    .error(err => {
-      throwErr('write:githistory', `Error with reading git history:`, err);
+    .catch(err => {
+      gulpErr('write:githistory', `Error with reading git history:`, err);
+      return process.exit(2);
     })
 });
 

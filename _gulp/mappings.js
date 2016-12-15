@@ -6,6 +6,8 @@ const gutil = require('gulp-util');
 const shell = require('shelljs');
 const _ = require('lodash');
 
+const mapping_indicator = gutil.colors.cyan("[MAPPING]");
+
 const escapeMapping = str => {
   return str
       .replace(/\//g, '\\\/')
@@ -45,7 +47,7 @@ const mappings = (opts) => {
           gulpErr('write:mappings', `Error reading ${opts.src}, this is not a correct mapping: ${JSON.stringify(r, null, 4)}`);
         }
         if (r.disabled) {
-          gutil.log(`Mapping ${r.from} => ${r.to} disabled`)
+          gutil.log(`${mapping_indicator} ${r.from} => ${r.to} disabled`)
           return true;
         }
         const to = r.to.trim(),
@@ -77,6 +79,7 @@ const mappings = (opts) => {
 
       if (errors.length > 0) {
         gulpErr('write:mappings', `You have errors in your mapping ${gutil.colors.cyan(opts.src)} file:\n\n${errors.join('\n')}\n`);
+        opts.callback(true);
       }
 
       if (opts.write) {
@@ -84,13 +87,14 @@ const mappings = (opts) => {
         fs.writeFile(opts.dest, mappingsFile, err => {
           if (err) {
             gulpErr('write:mappings', `Error writing ${opts.dest}: ${err}`);
+            opts.callback(true);
           } else {
             gutil.log(`Mappings written to ${opts.dest}`);
+            opts.callback(false);
           }
-          opts.callback();
         })
       } else {
-        opts.callback();
+        opts.callback(false);
       }
     } else {
       gulpErr('write:mappings', `No redirects found in ${opts.src}`);

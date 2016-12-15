@@ -7,6 +7,8 @@ const moment = require('moment');
 const async = require('async');
 const gutil = require('gulp-util');
 
+const git_indicator = gutil.colors.cyan("[GIT-HISTORY]");
+
 const rev = 'HEAD';
 const ASYNC_LIMIT = 50;
 
@@ -15,19 +17,23 @@ const getCommits = (gitPath, file) => {
     if (!file) {
       reject('Error: filename should be provided');
     } else {
-      let commits = []
-      gitBlame(gitPath, {
-        file: file,
-        rev: rev
-      }).on('data', (type, data) => { // type = 'line' or 'commit'
-        if (type === 'commit') {
-          commits.push(data);
-        }
-      }).on('error', err => {
-        reject(err);
-      }).on('end', () => {
-        resolve(commits);
-      });
+      let commits = [];
+      try {
+        gitBlame(gitPath, {
+          file: file,
+          rev: rev
+        }).on('data', (type, data) => { // type = 'line' or 'commit'
+          if (type === 'commit') {
+            commits.push(data);
+          }
+        }).on('error', err => {
+          reject(err);
+        }).on('end', () => {
+          resolve(commits);
+        });
+      } catch (e) {
+        reject(`Error getting commits for ${gitPath}`);
+      }
     }
   })
 }
@@ -64,7 +70,14 @@ const getLastCommit = (folder, filename) => {
           date: timestamp.local().format()
         });
       })
-      .error(reject)
+      .catch(err => {
+        if (err.message && err.message.indexOf('no such path') !== -1) {
+          gutil.log(`${git_indicator} No history found for ${gutil.colors.cyan(filename)}, skipping`);
+          resolve({})
+        } else {
+          reject(err);
+        }
+      });
   })
 };
 
@@ -78,16 +91,20 @@ const getCommitsFolder = (folder, verbose) => {
         async.eachLimit(files, ASYNC_LIMIT, (file, cb) => {
           getLastCommit(folder, file)
             .then(cm => {
-              commitsObj[file] = cm;
-              const perc = Math.floor((len/files.length)*100);
-              if (perc % 10 === 0 && rep !== perc && verbose) {
-                gutil.log(`${gutil.colors.cyan("[GIT-HISTORY]")} Got ${perc}% of commits`);
-                rep = perc;
+              if (cm.hash) {
+                commitsObj[file] = cm;
+                const perc = Math.floor((len/files.length)*100);
+                if (perc % 10 === 0 && rep !== perc && verbose) {
+                  gutil.log(`${git_indicator} Got ${perc}% of commits`);
+                  rep = perc;
+                }
+                len++;
               }
-              len++;
               cb();
             })
-            .error(err => { cb(err); })
+            .catch(err => {
+              cb(err.message);
+            })
         }, (err) => {
           if (err) {
             reject(err);

@@ -53,6 +53,7 @@ const build = (config, cb) => {
   spawnJekyll(config, false, (code) => {
     if (code !== 0) {
       gulpErr('jekyll:build', `Jekyll exit code is ${code}, check your Jekyll setup`);
+      return process.exit(2);
     } else {
       cb();
     }

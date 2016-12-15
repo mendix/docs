@@ -153,7 +153,13 @@ gulp.task('serve', `Jekyll serve, using ${CONFIG_TEST}`, done => {
 })
 
 gulp.task('htmlproofer', `Check HTML files in the build folder`, done => {
-  htmlproofer.check(path.resolve(CURRENTFOLDER, '_site'), done);
+  htmlproofer.check(path.resolve(CURRENTFOLDER, '_site'), function (err) {
+    if (err) {
+      return process.exit(2);
+    } else {
+      done();
+    }
+  });
 });
 
 gulp.task('algolia', `Push Algolia indexes (not production ready)`, done => {

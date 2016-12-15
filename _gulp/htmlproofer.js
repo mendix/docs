@@ -190,13 +190,14 @@ const checkFiles = (dir, cb) => {
       }
       console.log('')
       if (errors.length === 0) {
-        cb();
+        cb(false);
       } else {
-        helpers.gulpErr('htmlproofer', 'You have errors');
+        cb(true);
       }
     })
     .catch(err => {
       helpers.gulpErr('htmlproofer', err);
+      cb(true);
     });
 };
 

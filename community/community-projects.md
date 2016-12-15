@@ -4,7 +4,7 @@ space: "Community"
 category: "Community"
 ---
 
-These pages provide more information on the various projects that the team is working on:
+These pages provide more information on the various projects that the Community Team is working on:
 
 * [How to Set Up Your Partner Profile](how-to-set-up-your-partner-profile)
 * [How to Set Up Your Profile](how-to-set-up-your-profile)

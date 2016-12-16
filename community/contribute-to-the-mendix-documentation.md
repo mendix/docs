@@ -66,11 +66,13 @@ You may receive a response to your pull request asking for verification of speci
 
 ## <a name="NamingNewFilesandImages"></a>5 Naming New Files and Images
 
-When writing a new how-to or reference guide page, make sure the Markdown file name is the same as the title of the document. Use a plus sign ("+") between each word of your file name (for example, "Clear+Warning+Messages").
+When writing a new how-to or contributing to current documentation, make sure the files comply with our naming conventions:
 
-When adding new image files, make sure the image file name describes what the image shows (meaning, labels on the UI and any specific data). Use underscores ("`_`") between each word of your image file name (for example, "New_App_Starting_Screen").
+ * Markdown pages should have the same name as the title. For example, if the page is titled "Setup your project", the filename should be ``setup-your-project.md``
+ * Filenames should always be lowercase, with dashes (`-`) in between. Do not use spaces or any other symbols (for example `&`). These will not be accepted
+ * Images should be named in the same way: lowercase with dashes in between. Make sure the image files have names that make sense, so it's easier to find them later on.
+ * The following image file types are allowed: `.jpg`, `.png`, `.gif`
 
-The following image file types are allowed: *.jpg*, *.png*, *.gif*.
 
 ## 6 Related Content
 

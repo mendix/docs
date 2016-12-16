@@ -4,7 +4,7 @@ space: "Community"
 parent: "community-projects"
 ---
 
-## Mendix Job Board Account
+## Mendix Job Dashboard Account
 
 In additon to posting jobs on the [Mendix job board](https://developers.mendix.com/jobs/), you can now request an account to manage your job postings. This has several benefits:
 
@@ -16,10 +16,10 @@ In additon to posting jobs on the [Mendix job board](https://developers.mendix.c
 
 ![](attachments/19203315/19399088.png)
 
-## Getting a Job Dashboard account
+## Opening a Job Dashboard Account
 
-If you are interested in a job dashboard account, please send your request to [community@mendix.com.](mailto:community@mendix.com.)
+If you are interested in a job dashboard account, please send your request to [community@mendix.com](mailto:community@mendix.com.).
 
-When you have an account you can log in at [https://developers.mendix.com/wp-login.php](https://developers.mendix.com/wp-login.php), and access your job dashboard at [https://developers.mendix.com/jobs/job-dashboard](https://developers.mendix.com/jobs/job-dashboard).
+When you have an account, you can log in at [https://developers.mendix.com/wp-login.php](https://developers.mendix.com/wp-login.php), and you can access your job dashboard at [https://developers.mendix.com/jobs/job-dashboard](https://developers.mendix.com/jobs/job-dashboard).
 
-For further questions, please contact the Mendix Community Team at [community@mendix.com.](mailto:community@mendix.com.)
+For further questions, please contact the Mendix Community Team at [community@mendix.com.](mailto:community@mendix.com).

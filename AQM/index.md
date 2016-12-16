@@ -16,8 +16,9 @@ The general notion of software quality embraces a variety of quality aspects, of
 
 # Additional Information
 
-* Mendix AQM is available for projects based on Mendix 6.0 and up.
-* Mendix AQM is part of our Mendix pricelist. Please contact your Mendix Customer Success Manager or Sales for more information or activation.
-* Detailed documentation is available in your AQM report dashboard on [https://aqm.mendix.com](https://aqm.mendix.com), under the menu item *Documentation*.
-* Mendix AQM reports are generated every night based on the latest version in your Project Team Server.
-* By default, the Mendix AQM reports are based on the Mainline in your Project Team Server. On request base, this can be changed to a specific branch.
+* Mendix AQM is available for projects based on Mendix 6.0 and higher
+* Mendix AQM is part of our Mendix pricelist – for more information or activation, please contact your Mendix Customer Success Manager or Sales
+* Detailed documentation is available in your AQM report dashboard on [https://aqm.mendix.com](https://aqm.mendix.com), under the **Documentation** menu item
+* Mendix AQM reports are generated every night based on the latest version in your Project Team Server
+* By default, the Mendix AQM reports are based on the Mainline in your Project Team Server
+  * On request base, this can be changed to a specific branch

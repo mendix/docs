@@ -34,7 +34,7 @@
               <div class="row post-header-row">
                 <div class="col-xs-9">
                   {% unless page.notoc %}
-                  <div id="toc" class="toc"></div>
+                  <div id="toc" class="toc" {% if page.toc-level %}data-level="{{ page.toc-level }}"{%endif%}></div>
                   {% endunless %}
                 </div>
                 <div class="col-xs-3">
@@ -80,9 +80,9 @@
       </div>
     </div>
     <a href="#" id="back-to-top" title="Back to top"><i class="glyphicon glyphicon-menu-up"></i></a>
+    {% include footer.html %}
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
     <script src="{{ "/public/js/autocomplete_search.js" | prepend: site.baseurl }}" type="text/javascript" /></script>
-    {% include footer.html %}
     </body>
 </html>

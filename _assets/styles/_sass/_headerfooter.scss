@@ -263,7 +263,9 @@
       position: relative;
       padding-left: 0.9375em;
       padding-right: 0.9375em;
-      float: left; }
+      float: left;
+      min-height: 7em;
+    }
 
     .large-1 {
       width: 8.33333%; }
@@ -374,6 +376,7 @@
 .navCell li {
   .topLevelLink {
     font-size: 1.6rem;
+    min-height: 6em;
   }
   .navMenu {
     li {
@@ -391,6 +394,7 @@
   }
   .navCell li .topLevelLink {
       font-size: 2rem;
+      min-height: auto;
 
       span.icon-plus, span.icon-minus {
         font-size: 1rem;

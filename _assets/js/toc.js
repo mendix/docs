@@ -7,6 +7,7 @@
             title: '<i>Jump to...</i>',
             minimumHeaders: 2,
             headers: 'h1, h2, h3, h4, h5, h6',
+            maxLevel: null,
             listType: 'ol', // values: [ol|ul]
             showEffect: 'show', // values: [show|slideDown|fadeIn|none]
             showSpeed: 'slow', // set to 0 to deactivate effect
@@ -72,32 +73,37 @@
         var level = get_level(headers[0]),
             this_level,
             html = settings.title + " <" + settings.listType + " class=\"" + settings.classes.list + "\">";
-        headers.on('click', function() {
-            if (!settings.noBackToTopLinks) {
-                window.location.hash = this.id;
-            }
-        })
+
+        headers
+            .on('click', function() {
+                if (!settings.noBackToTopLinks) {
+                    window.location.hash = this.id;
+                }
+            })
             .addClass('clickable-header')
             .each(function(_, header) {
-            this_level = get_level(header);
-            if (!settings.noBackToTopLinks && this_level === highest_level) {
-                $(header).addClass('top-level-header').after(return_to_top);
-            }
-            if (this_level === level) // same level as before; same indenting
-            html += "<li class=\"" + settings.classes.item + "\">" + createLink(header);
-            else if (this_level <= level) { // higher level than before; end parent ol
-                for (i = this_level; i < level; i++) {
-                    html += "</li></" + settings.listType + ">"
+                this_level = get_level(header);
+                if (!settings.noBackToTopLinks && this_level === highest_level) {
+                    $(header).addClass('top-level-header').after(return_to_top);
                 }
-                html += "<li class=\"" + settings.classes.item + "\">" + createLink(header);
-            } else if (this_level > level) { // lower level than before; expand the previous to contain a ol
-                for (i = this_level; i > level; i--) {
-                    html += "<" + settings.listType + " class=\"" + settings.classes.list + "\">" + "<li class=\"" + settings.classes.item + "\">"
+                if (settings.maxLevel !== null && (this_level - highest_level > settings.maxLevel - 1)) {
+                  // do nothing, max level reached
+                } else if (this_level === level) {
+                  // same level as before; same indenting
+                  html += "<li class=\"" + settings.classes.item + "\">" + createLink(header);
+                } else if (this_level <= level) { // higher level than before; end parent ol
+                    for (i = this_level; i < level; i++) {
+                        html += "</li></" + settings.listType + ">"
+                    }
+                    html += "<li class=\"" + settings.classes.item + "\">" + createLink(header);
+                } else if (this_level > level) { // lower level than before; expand the previous to contain a ol
+                    for (i = this_level; i > level; i--) {
+                        html += "<" + settings.listType + " class=\"" + settings.classes.list + "\">" + "<li class=\"" + settings.classes.item + "\">"
+                    }
+                    html += createLink(header);
                 }
-                html += createLink(header);
-            }
-            level = this_level; // update for the next one
-        });
+                level = this_level; // update for the next one
+            });
         html += "</" + settings.listType + ">";
         if (!settings.noBackToTopLinks) {
             $(document).on('click', '.back-to-top', function() {

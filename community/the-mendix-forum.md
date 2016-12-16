@@ -4,7 +4,7 @@ space: "Community"
 parent: "community-projects"
 ---
 
-## 1 Introduction to the Forum
+## 1 Introduction
 
 The [Mendix Forum](https://forum.mendixcloud.com/index3.html) is where the Mendix Community comes together to help each other out with questions and answers and to propose ideas for improving the Mendix app platform.
 

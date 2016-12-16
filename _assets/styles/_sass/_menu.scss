@@ -116,7 +116,8 @@ $padding-menu: 25px;
     }
   }
   &_caret {
-    float: right;
-    margin-top: 0.5em;
+    position: absolute;
+    right: 12px;
+    top: 14px;
   }
 }

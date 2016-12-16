@@ -2706,6 +2706,10 @@
       "to": "/refguide5/inheritance-split"
     },
     {
+      "from": "/refguide5/Indexes",
+      "to": "/refguide5/indexes"
+    },
+    {
       "from": "/refguide5/Input+reference+set+selector",
       "to": "/refguide5/input-reference-set-selector"
     },
@@ -4368,6 +4372,10 @@
     {
       "from": "/refguide6/Inheritance+Split",
       "to": "/refguide6/inheritance-split"
+    },
+    {
+      "from": "/refguide6/Indexes",
+      "to": "/refguide6/indexes"
     },
     {
       "from": "/refguide6/Input+reference+set+selector",

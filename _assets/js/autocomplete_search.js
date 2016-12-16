@@ -95,7 +95,8 @@
   if ($('.not-found-suggestion')) {
     var $el = $('.not-found-suggestion'),
         splitted = location.pathname.split('/'),
-        path = decodeURIComponent(splitted.slice(-1)[0]).replace(/[\ \/\-\+]/g, ' '),
+        last = splitted.slice(-1)[0] === "" ? -2 : -1,
+        path = decodeURIComponent(splitted.slice(last)[0]).replace(/[\ \/\-\+]/g, ' '),
         client = algoliasearch(ALGOLIA_CONFIG.appId, ALGOLIA_CONFIG.apiKey),
         index = client.initIndex(ALGOLIA_CONFIG.indexName);
 

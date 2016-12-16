@@ -51,7 +51,7 @@ When contributing to the Mendix documentation, consider these style guidelines:
 * The tone of the Mendix documentation is relaxed, conversational, not too serious, and always straight-forward
 * Define obscure acronyms and write them out fully the first time before using them throughout the rest of the document (except if it is something very well-known: for example, there is no need to remind the reader that "HTML" stands for "hypertext markup language")
 * Avoid adverbs such as “simply,” “possibly,” “might,” “could,” “actually,” and “potentially,” as these words add uncertainty and cloud the true meaning of sentences
-* Be inclusive with your langauge and do not use just "he," use "the user" or "they" instead
+* Be inclusive with your language and do not use just "he," use "the user" or "they" instead
 
 Need an extra hand with spelling and grammar? Load your article into [Hemmingway](http://www.hemingwayapp.com/) to spot any potential errors.
 
@@ -72,7 +72,7 @@ Use *italics* when the user needs to enter text. For example: "In the **Name** f
 To embed a modelshare in the documentation, paste the `iframe`. For example:
 
 ```html
-<iframe width=='1oo%' height='491px' frameborder='0' src=https://modleshare.mendix.com/models/a0e6fba1-aa44-4d95-ac06-3f9fc`cca082/new-car-rental-validation?embed=true'></iframe>
+<iframe width='100%' height='491px' frameborder='0' src=https://modelshare.mendix.com/models/a0e6fba1-aa44-4d95-ac06-3f9fccca082/new-car-rental-validation?embed=true'></iframe>
 ```
 
 ## 4.4 Specific Formatting Tips

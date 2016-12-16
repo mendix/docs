@@ -3,11 +3,16 @@ title: "The Mendix Job Dashboard"
 space: "Community"
 parent: "community-projects"
 ---
-Next to posting jobs on the [Mendix job board](https://developers.mendix.com/jobs/), you can now request an account to manage your job postings. This has several benefits:
 
-1.  You can easily edit and update your job postings without contacting Mendix Community.
-2.  You can mark jobs as 'Filled'. This will grey out the job on the job board, but does not remove it. That way the community can see what the job offering was, even though the position has been filled.
-3.  You can delete old/obsolete jobs. Keep in mind that this is permanent and cannot be reversed!
+## Mendix Job Board Account
+
+In additon to posting jobs on the [Mendix job board](https://developers.mendix.com/jobs/), you can now request an account to manage your job postings. This has several benefits:
+
+* You can easily edit and update your job postings without contacting the Mendix Community
+* You can mark jobs as **Filled**, which will grey out the job on the job board but not remove it
+    * This way, the Community can see what the job offering was, even though the position has been filled
+* You can delete old and obsolete jobs
+    * Keep in mind that this is permanent and cannot be reversed!
 
 ![](attachments/19203315/19399088.png)
 

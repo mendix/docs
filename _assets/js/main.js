@@ -237,10 +237,12 @@
     /*****************
       Table of contents
     ******************/
+    var maxLevel = $('#toc') ? $('#toc').data('level') || null : null;
     $('#toc').toc({
       noBackToTopLinks: true,
       title: '<span class="toc_title">Table of contents</span>',
       showEffect: 'slideDown',
+      maxLevel: maxLevel,
       showSpeed: '250',
       listType: 'ul',
       headers: [

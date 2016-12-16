@@ -2,14 +2,10 @@
 title: "XML Reference Guide"
 space: "Reference Guide 6"
 category: "Modeler"
+# toc-level: 1 # set Table of contents maximum depth
 ---
-# Widgets - XML reference guide
-
-
 
 This is the reference guide for the widget XML.
-
-
 
 ## Requirements
 
@@ -355,7 +351,7 @@ What it looks like in the Mendix Modeler:
 Remember to use the correct language notation according to the [Java supported locales](http://java.sun.com/javase/6/docs/technotes/guides/intl/locale.doc.html).
 {% endmarkdown %}</div>
 
-# Related content
+## Related content
 
 *   [Creating a chainable Custom Widget](/howto6/create-a-chainable-custom-widget)
 *   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto6/getting-started-with-the-widget-development-plugin-for-adobe-brackets)

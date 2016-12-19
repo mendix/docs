@@ -1,18 +1,24 @@
 ---
-title: "How to Set Up Your Partner Profile"
+title: "Set Up Your Partner Profile"
 space: "Community"
 parent: "community-projects"
 ---
 
+## 1 Introduction
+
 The purpose of the Partner Profile is to give our community and customers a good overview and transparency of our partner’s knowledge, skills, experience, reviews, culture, etc. With the Partner Profile we want to give our partners a simple and clear way to present themselves. The Partner Profile gives an aggregated view of the developers within your organization, including the number of certified developers and their average Mendix level. Next to that we offer the possibility to add projects, customer reviews, contact information, a corporate video and a description.
 
-**After completing this how-to you will know:**
+**This how-to will teach you how to do the following:**
 
 *   How to set up your Partner Profile
 *   Edit your company profile
 *   Add developers to your company
 *   Add reference projects to your company
 *   The functionality of the partner overview page
+
+## 2 Prerequisites
+
+Before starting this how-to, make sure you have completed the following prerequisites:
 
 ## 1. How to log in to your own Partner Profile
 

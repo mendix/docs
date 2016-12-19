@@ -3,6 +3,7 @@
 #space: "[To be filled in by Mendix]"
 #parent: "[to be filled in by mendix]"
 #tags: "[To be filled in by Mendix]"
+#toc-level: 0 #Set this to 0 when not using a Table of contents or a number to set the maximum depth. Removing this will show all levels
 ---
 
 ## 1 Introduction

@@ -60,7 +60,7 @@ The **App Store Updates** section of the Developers site presents the latest upd
 
 Clicking any App Store content name will bring you to that specific page in the App Store, where you can read a detailed description of the content and check out some user reviews. Clicking **VIEW ALL** will bring you to the main Mendix App Store page, where you can see featured and new content, recent updates, reviews, and the top contributors to the App Store. 
 
-For more information, see [App Store](/appstore/index.md).
+For more information, see [App Store](/appstore/index).
 
 ## 7 Job Board
 

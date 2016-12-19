@@ -1,6 +1,6 @@
 ---
 title: "Stories API"
-space: "API documentation"
+space: "API Documentation"
 ---
 
 

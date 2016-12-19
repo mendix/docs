@@ -1,6 +1,6 @@
 ---
 title: "Team Server API"
-space: "API documentation"
+space: "API Documentation"
 ---
 # <a name="TeamServerAPI-Introduction" rel="nofollow"></a>Introduction
 

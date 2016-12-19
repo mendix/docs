@@ -1,5 +1,5 @@
 ---
-title: "Mendix SDK Home"
+title: "Mendix SDK Overview"
 space: "Mendix Platform SDK"
 ---
 ## Your Learning Path for the Mendix SDK

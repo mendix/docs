@@ -1,6 +1,6 @@
 ---
 title: "Profile API"
-space: "API documentation"
+space: "API Documentation"
 ---
 
 

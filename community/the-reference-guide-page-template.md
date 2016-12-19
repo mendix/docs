@@ -2,7 +2,8 @@
 #title: "[Uncomment and enter the title here]"
 #space: "[To be filled in by Mendix]"
 #parent: "[to be filled in by mendix]"
-#tags: "[To be filled in by Mendix]"
+#description: "[Uncomment and set a description with a maximum of 140 characters]" #optional, can be removed
+#tags: "[To be filled in by Mendix]" # Add a maximum of 5-7 tags and keep it focussed on the most important topics
 #toc-level: 0 #Set this to 0 when not using a Table of contents or a number to set the maximum depth. Removing this will show all levels
 ---
 

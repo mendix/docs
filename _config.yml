@@ -1,9 +1,10 @@
 # Site settings
-name: Mendix
-description: ""
+name: "Mendix Documentation"
+description: "Mendix documentation"
 url: "https://docs.mendix.com"
 baseurl: ""
 encoding: utf-8
+locale: "en_US"
 
 # Base variables
 latest_major_version: "6"

@@ -1,7 +1,7 @@
 ---
 title: "Set Up Your Community Profile"
 space: "Community"
-parent: "community-projects"
+parent: "community-tools"
 ---
 
 ## 1 Introduction

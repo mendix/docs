@@ -1,7 +1,7 @@
 ---
 title: "The Mendix Job Dashboard"
 space: "Community"
-parent: "community-projects"
+parent: "community-tools"
 ---
 
 ## Mendix Job Dashboard Account

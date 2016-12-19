@@ -1,7 +1,7 @@
 ---
 title: "The Mendix MVP Program"
 space: "Community"
-parent: "community-projects"
+parent: "community-tools"
 ---
 
 ## 1 Introduction

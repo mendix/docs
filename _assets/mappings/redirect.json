@@ -62,7 +62,7 @@
     },
     {
       "from": "/apidocs/Single+Sign-On+API",
-      "to": "/apidocs/single-sign_on-api"
+      "to": "/apidocs/single-sign-on-api"
     },
     {
       "from": "/apidocs/Stories+API",
@@ -5418,7 +5418,7 @@
     },
     {
       "from": "/tips/Querying+over+self-references",
-      "to": "/tips/querying-over-self_references"
+      "to": "/tips/querying-over-self-references"
     },
     {
       "from": "/tips/Showing+a+Project+in+the+Directory+in+Explorer",

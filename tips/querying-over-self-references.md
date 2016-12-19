@@ -37,6 +37,6 @@ If you do not specify the [reversed()] expression the query will be interpreted 
 *   [Finding Object Activities](finding-object-activities)
 *   [Finding Unused Items](finding-unused-items)
 *   [Finding your way through a project](finding-your-way-through-a-project)
-*   [Querying over self-references](querying-over-self_references)
+*   [Querying over self-references](querying-over-self-references)
 *   [Showing a Project in the Directory in Explorer](showing-a-project-in-the-directory-in-explorer)
 *   [Translatable Validation Messages](translatable-validation-messages)

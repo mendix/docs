@@ -58,7 +58,7 @@ Widgets have the ability to get data from the Runtime, manipulate objects, show 
 
 ### 3.6 Configuring the Widget in Mendix
 
-Mendix has a specific way of configuring your widget through the use of an XML file. For more information and an example, see [WidgetName in the AppStoreWidgetBoilerplate repository](https://github.com/mendix/AppStoreWidgetBoilerplate/blob/master/src/WidgetName/WidgetName.xml). 
+Mendix has a specific way of configuring your widget through the use of an XML file. For more information and an example, see [WidgetName](https://github.com/mendix/AppStoreWidgetBoilerplate/blob/master/src/WidgetName/WidgetName.xml) in the AppStoreWidgetBoilerplate repository.
 
 For the full reference on writing a widget XML, see the [XML Reference Guide](/refguide6/xml-reference-guide).
 
@@ -68,13 +68,13 @@ The Yeoman widget generator ships two versions of a boilerplate created by Mendi
 
 ## 4 Further Reading
 
-The [Custom Widget Development](https://docs.mendix.com/) how-to category present in-depth information on how to build your own widgets. A few more tips are below.
+The [Custom Widget Development](https://docs.mendix.com/) how-to category presents in-depth information on how to build your own widgets. A few more tips are below.
 
 ### 4.1 Learn by Example
 
 Most of the widgets in the [Mendix App Store](https://appstore.home.mendix.com/index3.html) are open-source and available on GitHub. You can find the **View on GitHub** link on the right side of the App Store screen:
 
-   ![](attachments/custom-widget-development/appstore-github-link.png)
+![](attachments/custom-widget-development/appstore-github-link.png)
 
 ### 4.2 Learn by Doing
 

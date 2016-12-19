@@ -785,11 +785,6 @@
       "to": "/community/contribute-to-the-mendix-documentation"
     },
     {
-      "from": "/community/Feature+requests",
-      "to": "/community/feature-requests",
-      "disabled": true
-    },
-    {
       "from": "/community/How+to+set+up+your+partner+profile",
       "to": "/community/how-to-set-up-your-partner-profile"
     },

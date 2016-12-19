@@ -1,7 +1,7 @@
 ---
 title: "Set Up Your Partner Profile"
 space: "Community"
-parent: "community-projects"
+parent: "community-tools"
 ---
 
 ## 1 Introduction

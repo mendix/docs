@@ -1,7 +1,7 @@
 ---
 title: "Community Tools"
 space: "Community"
-category: "Community"
+category: "Tools"
 ---
 
 These pages provide more information on the various tools available to the Mendix Community:

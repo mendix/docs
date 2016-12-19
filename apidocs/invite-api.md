@@ -1,6 +1,6 @@
 ---
 title: "Invite API"
-space: "API documentation"
+space: "API Documentation"
 ---
 
 

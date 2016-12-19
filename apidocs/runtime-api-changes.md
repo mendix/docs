@@ -1,6 +1,6 @@
 ---
 title: "Runtime API Changes"
-space: "API documentation"
+space: "API Documentation"
 category: "Moving From 6 to 7"
 ---
 Below is the list of removed deprecated APIs in Mendix 7, as well as a migration solution from Mendix 6 where applicable.

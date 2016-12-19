@@ -1,6 +1,6 @@
 ---
 title: "Example implementation"
-space: "API documentation"
+space: "API Documentation"
 category: "Deploy API"
 ---
 

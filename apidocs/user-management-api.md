@@ -1,6 +1,6 @@
 ---
 title: "User Management API"
-space: "API documentation"
+space: "API Documentation"
 ---
 
 

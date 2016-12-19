@@ -1,6 +1,6 @@
 ---
 title: "Authentication"
-space: "API documentation"
+space: "API Documentation"
 ---
 
 

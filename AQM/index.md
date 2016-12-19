@@ -1,5 +1,5 @@
 ---
-title: "Mendix Application Quality Monitor (AQM)"
+title: "AQM Overview"
 space: "Application Quality Monitor"
 ---
 

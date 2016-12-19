@@ -1,7 +1,7 @@
 ---
-title: "Developer Site"
+title: "The Developer Site"
 space: "Community"
-parent: "Community-Tools"
+parent: "community-tools"
 ---
 
 ## 1 Overview
@@ -14,7 +14,7 @@ On the [Mendix Forum](https://forum.mendixcloud.com/index3.html), you can ask qu
 
 The **Forum** section of the Mendix Developers site presents the latest questions being asked on the forum along with the author of the question and how long ago it was asked:
 
-![](developer-site/Forum.png)
+![](attachments/the-developer-site/Forum.png)
 
 Click any question to go to that specific question page in the forum. Click **VIEW ALL** to go to the main Mendix Forum page, where you can browse all of the Community questions, answers, and ideas on many different topics.
 
@@ -26,7 +26,7 @@ The [Mendix Documentation](https://docs.mendix.com/) covers all aspects of the M
 
 The **Documentation** section of the Developers site presents the latest documents to be published on the documentation site:
 
-![](developer-site/Documentation.png)
+![](attachments/the-developer-site/Documentation.png)
 
 Click a document title to go to that specific page in the documentation. Click **VIEW ALL** to go to the main Mendix documentation page, where you can browse the how-to's, reference guide, API and SDK, documentation on Community tools, and documentation for APM, ATS, and AQM.
 
@@ -36,7 +36,7 @@ The [Mendix Developer Blog](https://www.mendix.com/tag/developers/) presents blo
 
 The **Developer Blog** section of the Developers site presents the latest developer blog posts:
 
-![](developer-site/Developer_Blog.png)
+![](attachments/the-developer-site/Developer_Blog.png)
 
 Click any blog post title to go to the full text of that post. Click **VIEW ALL** to go to the Developer Blog page, where you can browse all of the different posts and read the ones that look most interesting to you.
 
@@ -46,7 +46,7 @@ The [Mendix Community Blog](https://developers.mendix.com/spotlight/) presents l
 
 The **Community Blog** section of the Developers site presents the latest Mendix Community blog posts:
 
-![](developer-site/Community_Blog.png)
+![](attachments/the-developer-site/Community_Blog.png)
 
 Clicking any title will bring you to the full text of that blog post. Clicking **VIEW ALL** will bring you to the Community Blog page, where you can browse all the different posts and check out the perspectives of a variety of Community developers.
 
@@ -56,11 +56,11 @@ The [Mendix App Store](https://appstore.home.mendix.com/index3.html) is where yo
 
 The **App Store Updates** section of the Developers site presents the latest updates to the App Store content (for example, an update of the Bootstrap Tooltip widget):
 
-![](developer-site/App_Store.png)
+![](attachments/the-developer-site/App_Store.png)
 
 Clicking any App Store content name will bring you to that specific page in the App Store, where you can read a detailed description of the content and check out some user reviews. Clicking **VIEW ALL** will bring you to the main Mendix App Store page, where you can see featured and new content, recent updates, reviews, and the top contributors to the App Store. 
 
-For more information, see [App Store](/appstore/index.md).
+For more information, see [App Store](appstore/index.md).
 
 ## 7 Job Board
 
@@ -68,11 +68,11 @@ Because Mendix customers and partners are committed to changing their business a
 
 The **Jobs** section of the Developers site presents the latest job opportunities to be posted on the job board:
 
-![](developer-site/Job_Board.png)
+![](attachments/the-developer-site/Job_Board.png)
 
 Clicking any job title will bring you to that specific page of the job board, where you can find all the details necessary on that particular job opportunity. Clicking **VIEW ALL** will bring you to the main page of the Mendix job board, where you can see all of the job postings.
 
-For more information, see [The Mendix Job Dashboard](The+Mendix+Job+Dashboard).
+For more information, see [The Mendix Job Dashboard](the-mendix-job-dashboard).
 
 ## 8 Meetups
 
@@ -80,7 +80,7 @@ Mendix regularly organizes and hosts knowledge meetups and Q&A sessions where Me
 
 The **Meetups** section of the Developers site presents the upcoming scheduled meetups: 
 
-![](developer-site/Meetups.png)
+![](attachments/the-developer-site/Meetups.png)
 
 Clicking any meetup title will bring you to that specific page on the [Mendix Developers Netherlands](http://www.meetup.com/Mendix-Netherlands/) site. Clicking **VIEW ALL** will bring you to the *meetup.com* site where you can search for and browse all of the meetups that Mendix offers.
 
@@ -90,7 +90,7 @@ Mendix loves interviewing its active Community developers about their background
 
 The **Developer Interviews** section of the Developers site lists the most recent interviews:
 
-![](developer-site/Developer_Profiles.png)
+![](attachments/the-developer-site/Developer_Profiles.png)
 
 Click a title to go to the full text of that interview. Click **VIEW ALL** to see the full list of developer interviews available for your reading.
 
@@ -100,7 +100,7 @@ There are many interactive and free webinars that Mendix produces available for 
 
 The **Latest Webinar** section of the Developers site presents the most recent expert webinar video:
 
-![](developer-site/Latest_Webinar.png)
+![](attachments/the-developer-site/Latest_Webinar.png)
 
 Clicking **VIEW ALL** will bring you to the On-Demand Expert Webinars page, where you can browse all the available webinars and watch the ones you find interesting.
 
@@ -110,6 +110,6 @@ Clicking **VIEW ALL** will bring you to the On-Demand Expert Webinars page, wher
 
 The **Training** section of the Developers site presents a list of upcoming classroom courses and certification exams:
 
-![](developer-site/Training.png)
+![](attachments/the-developer-site/Training.png)
 
 Clicking a specific training or exam session will bring you to the Mendix Academy Portal, where you can register for the event. Clicking **VIEW ALL** will bring you to the main page of the Mendix Academy, where you can read detailed information on the Mendix developer training certification program.

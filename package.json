@@ -41,6 +41,7 @@
     "moment": "^2.17.0",
     "pump": "^1.0.1",
     "recursive-readdir": "^2.1.0",
+    "request": "^2.79.0",
     "run-sequence": "^1.2.2",
     "shelljs": "^0.7.5",
     "spa-server": "^1.0.0",

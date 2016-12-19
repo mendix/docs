@@ -7,7 +7,7 @@ space: "Mendix 6 How-to's"
 
 A Mendix custom widget is a part of the user interface in your Mendix app that enables functionality and interaction with the users of the app. A custom widget can alter the interface, data, and images of the app as well as the way the app works. These custom widgets bridge the gap between using standard Mendix components (for example, buttons and list-views) and creating very specific components yourself.
 
-Custom widget development can be difficult to start with. These how-to's will help you start your widget development.
+Custom widget development can be difficult at the beginning. The resources below will help you start your widget development.
 
 ## 2 Prerequisites
 
@@ -42,15 +42,15 @@ For details on the widget life cycle, reference this documentation:
 
 ### 3.3 Widget Scaffolding
 
-In the past we created widgets using Brackets and a plugin. With the new Javascript/Node.JS tools that have recently come out, we deprecated this way of creating widgets. The new way of creating widgets is done using Yeoman and a generator. 
+In the past we created widgets using Brackets and a plugin. With the new JavaScript/Node.JS tools that have recently come out, we deprecated this way of creating widgets. The new way of creating widgets is done using Yeoman and a generator. 
 
-For a quick tutorial on how to use the widget generator, see [How to Scaffold a Widget with the Yeoman Widget Generator](/howto6/scaffold-a-widget-with-the-yeoman-widget-generator).
+For a quick tutorial on using the widget generator, see [How to Scaffold a Widget with the Yeoman Widget Generator](scaffold-a-widget-with-the-yeoman-widget-generator).
 
-This information is also covered in [Expert Series: Kickstart Your Widget Development](https://www.youtube.com/watch?v=Jy_BnR06hwk)).
+This information is also covered in [Expert Series: Kickstart Your Widget Development](https://www.youtube.com/watch?v=MZ0Ihu2QGYY).
 
 ### 3.4 Understanding Each Step in a Simple Mendix Widget
 
-This tutorial presents the steps a widget will go through in its life cycle and how a Mendix widget is structured: [How to Create a Basic Hello World Widget](/howto6/create-a-basic-hello-world-custom-widget).
+This tutorial presents the steps a Mendix widget will go through in its life cycle and how a widget is structured: [How to Create a Basic Hello World Widget](create-a-basic-hello-world-custom-widget).
 
 ### 3.5 Interacting with Mendix Runtime
 
@@ -58,28 +58,30 @@ Widgets have the ability to get data from the Runtime, manipulate objects, show 
 
 ### 3.6 Configuring the Widget in Mendix
 
-Mendix has a specific way of configuring your widget through the use of an XML file. For more information and an example, see [AppStoreWidgetBoilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate/blob/master/src/WidgetName/WidgetName.xml). 
+Mendix has a specific way of configuring your widget through the use of an XML file. For more information and an example, see [WidgetName in the AppStoreWidgetBoilerplate repository](https://github.com/mendix/AppStoreWidgetBoilerplate/blob/master/src/WidgetName/WidgetName.xml). 
 
 For the full reference on writing a widget XML, see the [XML Reference Guide](/refguide6/xml-reference-guide).
 
 ### 3.7 Boilerplate
 
-The Yeoman widget generator ships two versions of a boilerplate created by Mendix. The source code for this boilerplate is available in the [AppStoreWidgetBoilerplate GitHub repository](https://github.com/mendix/AppStoreWidgetBoilerplate).
+The Yeoman widget generator ships two versions of a boilerplate created by Mendix. The source code for this boilerplate is available in the [AppStoreWidgetBoilerplate repository](https://github.com/mendix/AppStoreWidgetBoilerplate).
 
 ## 4 Further Reading
 
-The [Custom Widget Development](https://docs.mendix.com/) how-to category goes in-depth on how to build your own widgets. A few more tips are below.
+The [Custom Widget Development](https://docs.mendix.com/) how-to category present in-depth information on how to build your own widgets. A few more tips are below.
 
- ### 4.1 Learn by Example
+### 4.1 Learn by Example
 
-Most of the widgets in the [Mendix AppStore](https://appstore.home.mendix.com/index3.html) are open-source and available on GitHub. You can find the link on the right side of the screen:
+Most of the widgets in the [Mendix App Store](https://appstore.home.mendix.com/index3.html) are open-source and available on GitHub. You can find the **View on GitHub** link on the right side of the App Store screen:
 
    ![](attachments/custom-widget-development/appstore-github-link.png)
 
- ### 4.2 Learn by Doing
+### 4.2 Learn by Doing
 
-Using the widget generator, you get a test-project. Along with the test-project (or your own project), you can quickly start creating widgets. By debugging your widgets, you will quickly learn where you make mistakes and how the widget life cycle works.
+Using the widget generator, you get a test project. With the test project (or your own project), you can quickly start creating widgets.
 
- ### 4.3 Ask the Community
+By debugging your widgets, you will quickly learn where you make mistakes and how the widget life cycle works.
 
-Within the Mendi Community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com/index3.html) is the place to go to when you have questions.
+### 4.3 Ask the Community
+
+Within the Mendix Community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com/index3.html) is the place to go to when you have questions.

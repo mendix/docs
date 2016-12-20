@@ -83,6 +83,12 @@ defaults:
         - "refguide6"
         - "community"
   - scope:
+      path: 'ReleaseNotes'
+      type: pages
+    values:
+      menus:
+        - "releasenotes"
+  - scope:
       path: 'apidocs'
       type: pages
     values:

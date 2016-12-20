@@ -1,0 +1,11 @@
+---
+layout: json
+---
+{
+  "categories": [
+    "Modeler",
+    "Platform Portal",
+    "Model SDK"    
+  ],
+  "pages": {% include json-snippets/get_pages_per_space.inc space="Release Notes" %}
+}

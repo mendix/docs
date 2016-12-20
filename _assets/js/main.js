@@ -239,7 +239,7 @@
     ******************/
     var maxLevel = $('#toc') ? $('#toc').data('level') || null : null;
     $('#toc').toc({
-      noBackToTopLinks: true,
+      noBackToTopLinks: false,
       title: '<span class="toc_title">Table of contents</span>',
       showEffect: 'slideDown',
       maxLevel: maxLevel,

@@ -194,6 +194,3 @@ kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
   hard_wrap: false
   syntax_highlighter: rouge
-
-gems:
-  - jekyll-sitemap

@@ -1,5 +1,6 @@
 ---
 layout: json
+sitemap: false
 ---
 {
   "categories": [

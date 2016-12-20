@@ -1,5 +1,5 @@
 ---
-title: "The Developer Site"
+title: "The Developers Site"
 space: "Community"
 parent: "community-tools"
 ---

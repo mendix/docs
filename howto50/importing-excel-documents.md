@@ -16,7 +16,7 @@ Before you continue, make sure that you know how to create:
 *   **Overview and detail pages** ([Creating your first two overview and detail pages](creating-your-first-two-overview-and-detail-pages)).
 *   **Menu items **([Setup the navigation structure](setting-up-the-navigation-structure)).
 *   **Microflows** ().
-*   **Add Appstore** **content (**[Add appstore content to your app](adding-app-store-content-to-your-app)).
+*   **Add Appstore** **content (**[Use App Store Content in the Modeler](/community/use-app-store-content-in-the-modeler)).
 *   **Secure applications **([Creating a secure app](creating-a-secure-app)).
 
 1. Create the following domain model.

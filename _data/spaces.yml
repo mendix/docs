@@ -1,44 +1,61 @@
 #folder:
 #  space: 'Space for this folder'
 #  mendix_version: 6 #optional, used for searches
-#  relative_weight: 0 #optional, used for sitemap (not functional yet)
+#  priority: 1 - 9 (used for sitemap). If omitted this will not be included, which defaults to 0.5
 apidocs:
   space: "API documentation"
+  priority: 6
 APM:
   space: "Application Performance Monitor"
+  priority: false
 appstore:
   space: "App Store"
+  priority: false
 AQM:
   space: "Application Quality Monitor"
+  priority: false
 ATS:
   space: "ATS (Application Test Suite)"
+  priority: false
 bestpractices:
   space: "Best Practices"
+  priority: false
 community:
   space: "Community"
+  priority: false
 howto50:
   space: "Mendix 5 How-to's"
+  priority: false
   mendix_version: 5
 howto6:
   space: "Mendix 6 How-to's"
+  priority: 6
   mendix_version: 6
 howto7:
   space: "Mendix 7 How-to's"
+  priority: false
   mendix_version: 7
 mendixcloud:
   space: "Mendix Cloud"
+  priority: false
 MXSDK:
   space: "Mendix Platform SDK"
+  priority: false
 refguide5:
   space: "Reference Guide 5"
+  priority: false
   mendix_version: 5
 refguide6:
   space: "Reference Guide 6"
+  priority: 7
   mendix_version: 6
 refguide7:
   space: "Reference Guide 7"
+  priority: false
   mendix_version: 7
 support:
   space: "Mendix Support"
+  priority: false
 tips:
   space: "Tips and Tricks"
+  priority: false

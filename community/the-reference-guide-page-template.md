@@ -1,10 +1,10 @@
 ---
-#title: "[Uncomment and enter the title here]"
-#space: "[To be filled in by Mendix]"
-#parent: "[to be filled in by mendix]"
-#description: "[Uncomment and set a description with a maximum of 140 characters]" #optional, can be removed
-#tags: "[To be filled in by Mendix]" # Add a maximum of 5-7 tags and keep it focussed on the most important topics
-#toc-level: 0 #Set this to 0 when not using a Table of contents or a number to set the maximum depth. Removing this will show all levels
+#title: "[Enter the title of the document]"
+#space: "[Enter the space in which the document should be published (for example, "Reference Guide 6")]"
+#parent: "[Enter the parent document filename of this document if necessary (for example, "push-notifications")]"
+#description: "[Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed]"
+#tags: "[Add a maximum of 5-7 tags/keywords; keep them focussed on the most important topics of the document]"
+#toc-level: "[Set to "0" when not using a table of contents, or set a number for the maximum depth of the TOC (for example, "3"); removing this will show all the levels that exist in the document]"
 ---
 
 ## 1 Introduction

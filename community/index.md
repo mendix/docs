@@ -28,6 +28,15 @@ These pages provide details on how you can contribute to the Mendix documentatio
 * [The How-to Template](the-how-to-template-page)
 * [The Reference Guide Page Template](https://docs.mendix.com/community/the-reference-guide-page-template-page)
 
+## 4 App Store
+
+These pages provide detailed information on using the Mendix App Store:
+
+* [App Store Overview](app-store-overview)
+* [How to Use App Store Content in the Modeler](use-app-store-content-in-the-modeler)
+* [How to Share App Store Content](share-app-store-content)
+* [App Store Content Support](app-store-content-support)
+
 ## 4 More Information
 
 Questions about the team or what we do can be sent to *community@mendix.com*.

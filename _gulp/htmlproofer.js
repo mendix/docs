@@ -11,7 +11,8 @@ const helpers = require('./helpers');
 const verbose = false;
 const getSourceFile = filePath => {};
 
-let SOURCEPATH = null;
+let SOURCEPATH = null,
+    EXTERNAL = false;
 
 const parseHtmlFiles = files => {
   return _.map(files, file => {
@@ -158,13 +159,48 @@ const validateFiles = files => {
   })
 };
 
-const checkFiles = (dir, cb) => {
-  SOURCEPATH = dir;
-  console.log(`Testing html in ${dir}`);
-  helpers.getFiles(dir)
+const checkAllLinks = (links, files) => {
+  return helpers
+    .checkLinks(links)
+    .then(results => {
+      return _.map(files, file => {
+        if (file.external && file.external.links) {
+          file.external.links.forEach(link => {
+            const res = _.find(results, result => result.url === link);
+            if (res && res.code && res.code !== 200) {
+              if (res.code === 404) {
+                file.errors.push(`Has link to ${gutil.colors.cyan(link)} which return a ${gutil.colors.red('Page not found')}. Please fix this`);
+              } else {
+                //file.warnings.push(`Has link to ${gutil.colors.cyan(link)} which return a http code ${gutil.colors.cyan(res.code)}. Please check this`);
+              }
+            }
+          })
+        }
+        return file;
+      })
+    })
+}
+
+const checkExternal = files => {
+  const externalChecked = 0,
+        total = _.flatten(_.map(files, file => file.external && file.external.links ? file.external.links : [])),
+        uniq = _.uniq(total).filter(url => !/github\.com|localhost|linkedin\.com|facebook\.com|world\.mendix\.com/.test(url)); // we ignore github links for now
+
+  if (!EXTERNAL) {
+    return files;
+  }
+  return checkAllLinks(uniq, files);
+}
+
+const checkFiles = (opts) => {
+  SOURCEPATH = opts.dir;
+  EXTERNAL = opts.external || false;
+  console.log(`Testing html in ${SOURCEPATH}`);
+  helpers.getFiles(SOURCEPATH)
     .then(helpers.readHtmlFiles)
     .then(parseHtmlFiles)
     .then(validateFiles)
+    .then(checkExternal)
     .then(files => {
       const errors = _.filter(files, file => file.errors.length > 0),
             warnings = _.filter(files, file => file.warnings.length > 0);
@@ -190,14 +226,14 @@ const checkFiles = (dir, cb) => {
       }
       console.log('')
       if (errors.length === 0) {
-        cb(false);
+        opts.callback(false);
       } else {
-        cb(true);
+        opts.callback(true);
       }
     })
     .catch(err => {
       helpers.gulpErr('htmlproofer', err);
-      cb(true);
+      opts.callback(true);
     });
 };
 

@@ -23,16 +23,7 @@
             </section>
         </div>
         <div class="col-md-3 search-sidebar">
-          <div class="btn-group jumpto_group">
-            <button type="button" class="btn btn-default dropdown-toggle jumpto_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Jump to: <span class="caret jumpto_caret"></span>
-            </button>
-            <ul class="dropdown-menu jumpto_dropdown">
-              {% for jump in site.data.jumpto %}
-                <li><a href="{{ jump.url }}">{{ jump.title }}</a></li>
-              {% endfor %}
-            </ul>
-          </div>
+          {% include jumpto.html %}
           <div class="search_filters">
             <div id="space" class="search_filters_block"></div>
           </div>

@@ -3,12 +3,13 @@ title: 'Mendix Documentation'
 layout: mxoverview
 maintitle: 'Mendix Documentation'
 description: 'Documentation for Mendix'
+priority: 10
 ---
 {% assign howto = "/howtoX/" | replace: "X", site.latest_major_version %}
 {% assign refguide = "/refguideX/" | replace: "X", site.latest_major_version %}
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="{{ howto }}">How-to's</a></h1>
+    <h1 class="header-link"><a href="{{ howto }}" title="Mendix {{ site.latest_major_version }} How-to's">How-to's</a></h1>
   </div>
 </div>
 <div class="row">
@@ -18,7 +19,7 @@ description: 'Documentation for Mendix'
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="{{ refguide }}">Reference Guide</a></h1>
+    <h1 class="header-link"><a href="{{ refguide }}" title="Reference Guide for Mendix {{ site.latest_major_version }}">Reference Guide</a></h1>
   </div>
 </div>
 <div class="row">
@@ -28,7 +29,7 @@ description: 'Documentation for Mendix'
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/apidocs/">API &amp; SDK</a></h1>
+    <h1 class="header-link"><a href="/apidocs/" title="API Documentation Overview">API &amp; SDK</a></h1>
   </div>
 </div>
 <div class="row">
@@ -38,7 +39,7 @@ description: 'Documentation for Mendix'
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/community/">Community</a></h1>
+    <h1 class="header-link"><a href="/community/" title="Community">Community</a></h1>
   </div>
 </div>
 <div class="row">
@@ -48,7 +49,7 @@ description: 'Documentation for Mendix'
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/support/">Support</a></h1>
+    <h1 class="header-link"><a href="/support/" title="Mendix Support Documentation">Support</a></h1>
   </div>
 </div>
 <div class="row">
@@ -58,7 +59,7 @@ description: 'Documentation for Mendix'
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/apidocs/">Tools</a></h1>
+    <h1 class="header-link">Tools</h1>
   </div>
 </div>
 <div class="row">

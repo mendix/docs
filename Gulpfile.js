@@ -171,11 +171,14 @@ gulp.task('serve', `Jekyll serve, using ${CONFIG_TEST}`, done => {
 })
 
 gulp.task('check:html', `Check HTML files in the build folder`, done => {
-  htmlproofer.check(path.resolve(CURRENTFOLDER, '_site'), function (err) {
-    if (err) {
-      return process.exit(2);
-    } else {
-      done();
+  htmlproofer.check({
+    dir: path.resolve(CURRENTFOLDER, '_site'),
+    callback: function (err) {
+      if (err) {
+        return process.exit(2);
+      } else {
+        done();
+      }
     }
   });
 });

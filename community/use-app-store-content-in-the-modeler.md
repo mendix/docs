@@ -28,7 +28,7 @@ To download content from the App Store via the Modeler, follow these steps:
 
 1. Open the Modeler and log in with your Mendix account credentials.
 2. Open the project in which you would like to install a component.
-3. Click **App Store** in the menu bar to open the App Store in the Modeler: 
+3. Click **App Store** in the menu bar to open the App Store in the Modeler:
 
     ![](attachments/use-app-store-content-in-the-modeler/toolbar.png)
 
@@ -56,7 +56,7 @@ To download content from the App Store via the Modeler, follow these steps:
 
 ## 4 Using a Widget from the App Store in the Modeler
 
-In this section of the how-to, you will learn how to add the Radiobutton List widget as an example scenario. You can follow the same steps to download any App Store widget you need. 
+In this section of the how-to, you will learn how to add the Radiobutton List widget as an example scenario. You can follow the same steps to download any App Store widget you need.
 
 ### 4.1 Adding a Widget from the App Store
 
@@ -89,7 +89,7 @@ Each widget that you download from the App Store is different and has different 
 
 ![](attachments/use-app-store-content-in-the-modeler/18580433.png)
 
-Most widgets will require you to configure them. This is why when you drop the widget into a page, you will often see an error in the **Errors** list. 
+Most widgets will require you to configure them. This is why when you drop the widget into a page, you will often see an error in the **Errors** list.
 
 To resolve the radio button error, follow these steps:
 
@@ -111,7 +111,7 @@ To resolve the radio button error, follow these steps:
 
 In addition to widgets, you can download entire modules from the App Store (for example, Excel Importer, Forgot Password, E-mail with Templates, and LDAP Synchronization). The modules include whole functionalities and integrations that can be very helpful when you are building your applications.
 
-In this section of the how-to, you will learn how to add the Google Maps module as an example scenario. You can follow the same steps to download any App Store module you need. 
+In this section of the how-to, you will learn how to add the Google Maps module as an example scenario. You can follow the same steps to download any App Store module you need.
 
 ### 5.1 Adding a Module from the App Store
 
@@ -180,7 +180,7 @@ To delete a theme, remove the *.zip* file from your project's **theme** folder.
 * [Common Widget Properties](/refguide6/common-widget-properties)
 * [How to Create a Basic "Hello World" Custom Widget](/howto6/create-a-basic-hello-world-custom-widget)
 * [How to Install the SMTP Email Module](/howto6/install-and-configure-the-smtp-module)
-* [How to Plan Mendix SQL Maintenance](/howto6/mendix-sql-maintenance-plansrr)
+* [How to Plan Mendix SQL Maintenance](/howto6/mendix-sql-maintenance-plans)
 * [How to Restore an SQL Server Database](/howto6/restoring-a-sql-server-database)
 * [How to Set Up a New SQL Server Database](/howto6/setting-up-a-new-sql-server-database)
 * [Feedback Widget: Bridging the Gap Between Developers and Business Users](http://www.mendix.com/blog/feedback-widget-bridging-the-gap-between-users/)

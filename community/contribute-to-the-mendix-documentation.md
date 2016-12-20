@@ -44,8 +44,14 @@ To edit the existing documentation (for example, a how-to or reference guide pag
 2. Find the files in the repository and make your changes (make sure your changes align with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)).
 3. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
 
-<div class="alert alert-warning">
+<div class="alert alert-info">
+
+You can add and edit the description and tags metadata in the header of the document so that the document is more searchable. It is also possible to add how many table of contents levels you want to appear in the document. For more information on the metadata, see the [How-To Template](the-how-to-template-page) and [Reference Guide Page Template](the-reference-guide-page-template-page).
+
+</div><div class="alert alert-warning">
+
 Mendix supports documentation for three major versions at any one time. This means that if you make a documentation change in one version, it is important to make that same change in the documentation for the two previous versions (if the change is applicable, of course). For example, you make a change for Mendix version 6 but these changes are also applicable to Mendix versions 5 and 4, so you should make the same change in the documentation for Mendix versions 5 and 4. You can submit all of these changes in the same pull request.
+
 </div>
 
 ## 4 Writing a New How-To or Reference Guide Page

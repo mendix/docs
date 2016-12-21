@@ -26,28 +26,93 @@ The buttons "Acceptance" and "Production" at the top allow you to switch between
 
 {% endmarkdown %}</div>
 
-There are a number of categories on the status overview, related to various technical parts of your app node. Any category that does not display "OK" is a cause for investigation. Each category indicates a different part of the app infrastructure that is monitored:
-
-*   Application status
-
-    *   CPU: The processor of the app node is not overloaded.
-    *   Critical Logs: No critical log messages have been emitted by your app.
-    *   Health Microflow: The health microflow does not return errors.
-    *   Running: The app is running and accessible.
-*   Platform status
-    *   Application Server Up: The Mendix app server component is running.
-    *   Database Server Up: The Mendix database component is running.
-    *   Application Server Disk Usage: There is enough free disk space on the application server
-    *   Database Server Disk Usage: There is enough free disk space on the database server
-    *   Webserver: The webserver in front of your app is running.
-
-     5\.  Click a line that does not display **OK** to show additional information on the error.
+5.  If one of the status items is not listed as **OK**, then click the line to show an additional information box with details about the error.
 
 ![](attachments/18448569/18579999.png)
 
-This will tell you important information that you either need to resolve the issue, or needs to be included when creating support request to Mendix. Any status that could cause your app to stop functioning will result in an alert (which will be sent). See the next paragraph for information on how to view these alerts.
+This will tell you important information that you either need to resolve the issue, or needs to be included when creating support request to Mendix. Any status that could cause your app to stop functioning will result in an alert (which will be sent).
 
-## 2\. Alerts History
+## 2\. Alerting Categories and Thresholds
+
+There are a number of categories on the status overview, related to various technical parts of your application environment. Any category that does not display "OK" is a cause for investigation. Each category indicates a different part of the app infrastructure that is monitored:
+
+### 2.1 Application Status
+
+CPU | |
+:---|:---|
+Description | Overall system load of the application server. High values point at high CPU load because of application activity, and/or at CPU spending too much time waiting for disk reads or writes.
+Example message | System load: CRITICAL (9.6, 10.19, 10.84)
+Warning Threshold | System load is higher than 2.8 over the last 15, 10 and 5 minutes, with a max. deviation of 20% between the values
+Critical Threshold | System load is higher than 6.0 over the last 15, 10 and 5 minutes, with a max. deviation of 20% between the values
+First actions to take | Inspect the trends for 'Application node CPU usage' combined with 'Application node disk throughput' and 'Application node load' for anomalies and correlate those with application behaviour.
+
+Critical Logs | |
+:---|:---|
+Description | The CRITICAL log level is reserved for issuing messages in 'rare cases where the application may not be able to function reliably anymore', meaning e.g. there's a chance of data corruption when the application continues to be running. Internal JVM Errors are logged to this level. Out of Memory errors, which are JVM Errors must be treated as harmful for the stability and integrity of your mendix application process.
+Example message | 2 critical error(s) were logged
+Warning Threshold | Not used.
+Critical Threshold | If any logging is done on CRITICAL level, the alerts status always directly switches to Critical. The critical log messages counter will only be reset when restarting the application process.
+First actions to take | Inspect application log file, look up the CRITICAL error messages. Restart application as soon as possible in case of stability issues.
+
+Health Microflow | |
+:---|:---|
+Description | A health check microflow was implemented in the application model, but it detected a warning that needs to be reported, and returns this warning as string value when the microflow finishes. |
+Example message | Health: the nightly import job took more than an hour to complete! |
+Warning Threshold | The warning status is triggered as long as the defined health check microflow returns a non-empty string.
+Critical Threshold | Not used.
+First actions to take | Because a health check is completely defined by customizable application logic, this can vary wildly.
+
+Running | |
+:---|:---|
+Description | Show the state (running, not running) of the application, or an error state when the process should be running, but is not responding or otherwise inaccessible.
+Example message | Application should be running, but the application process has disappeared!
+Warning Threshold | Not used.
+Critical Threshold | If the application process should be running, but completely disappeared or if the JVM process does not respond to any signal any more.
+First actions to take | Review application state for Out Of Memory errors and/or review OS memory trends for a OS-level memory problem. If unavailable, restart the application.
+
+### 2.2 Platform Status
+
+Application Server Up | |
+:---|:---|
+Description | The container or virtual machine in which the application process is running is reachable over the internal network. Alerts on this subject might point at an internal network connectivity issue.
+Example message | Packet loss = 5%, RTA = 226.74 ms
+Warning Threshold | Response on a series of ICMP ping packets arrives with more than 5% packet loss, or with a latency higher than 200 milliseconds.
+Critical Threshold | Response on a series of ICMP ping packets arrives with more than 50% packet loss, or with a latency higher than 1 second.
+First actions to take | If this alert triggers and the application seems to be slow to respond, or if you're getting the red error page with running monsters, visit https://status.mendix.com/ to see if an outage is reported. Inspect trends graphs to look for any anomaly in application behaviour leading up to the problem. If no outage is reported, contact support, there might be something wrong with this specific environment.
+
+Database Server Up | |
+:---|:---|
+Description | The operating system of the database server used by the application is reachable over the internal network. Alerts on this subject might point at an internal network connectivity issue.
+Example message | Packet loss = 5%, RTA = 226.74 ms
+Warning Threshold | Response on a series of ICMP ping packets arrives with more than 5% packet loss, or with a latency higher than 200 milliseconds.
+Critical Threshold | Response on a series of ICMP ping packets arrives with more than 50% packet loss, or with a latency higher than 1 second.
+First actions to take | If this alert triggers and the application log displays errors about not being able to create database connections, visit https://status.mendix.com/ to see if an outage is reported. Inspect trends graphs to look for any anomaly in application behaviour leading up to the problem. If no outage is reported, contact support, there might be something wrong with this specific environment.
+
+Application Server Disk Usage | |
+:---|:---|
+Description | Track the amount of disk space used for storage of the application model, application log files and uploaded files owned by the application.
+Example message | Disk usage 83% (warning=80, critical=90)
+Warning Threshold | More than 80% of available disk space is in use.
+Critical Threshold | More than 90% of available disk space is in use.
+First actions to take | Review trends for "Application node disk usage in %" and "Application node disk usage (in bytes)" and inspect the usage value of the application files partition (usually /srv/), to see if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old files or ordering more storage.
+
+Database Server Disk Usage | |
+:---|:---|
+Description | Track the amount of disk space used for the database belonging to the appication.
+Example message | Disk usage 92% (warning=80, critical=90)
+Warning Threshold | More than 80% of available disk space is in use.
+Critical Threshold | More than 90% of available disk space is in use.
+First actions to take | Review trends for "Database node disk usage in %" and "Database node disk usage (in bytes)" and inspect the usage value of the database partition (usually /var/lib/postgresql/), to see if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old data or ordering more storage.
+
+Webserver | |
+:---|:---|
+Description | The application URL is reachable. This check tries to visit the URL of your application, retrieving HTTP headers on the top level location /.
+Example message | Did not find correct headers for url 'https://example.mendixcloud.com/'
+Warning Threshold | The application URL is not reachable.
+Critical Threshold | Not used.
+First actions to take | If this alert triggers and visiting the application url results in slow loading or unresponsiveness, visit https://status.mendix.com/ to see if an outage is reported. This condition might point at an internal networking connectivity problem.
+
+## 3\. Alerts History
 
 The monitoring information you saw in the previous chapter showed that one of the status indicators was "Critical". When this happens to one of your nodes, all users that are subscribed to alerts will receive an e-mail alert.Alerts are also stored in the app monitoring part of the Mendix app platform. To access the alerts for your app, follow these steps.
 
@@ -65,6 +130,6 @@ The monitoring information you saw in the previous chapter showed that one of th
 
     ![](attachments/18448569/18579995.png)
 
-## 3\. Related content
+## 4\. Related content
 
 *   [Monitoring application health](monitoring-application-health)

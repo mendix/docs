@@ -109,7 +109,7 @@ To add content to the App Store, follow these steps:
 
         <div class="alert alert-info">
 
-        You can request other license types to be added as **License** options by pressing the **Feedback** button on the right side of the App Store screen.
+        You can request other license types to be added as "License" options by pressing the "Feedback" button on the right side of the App Store screen.
 
         </div>
 

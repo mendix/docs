@@ -41,7 +41,9 @@ const spawnJekyll = (config, watch, cb, bsync) => {
         if (line) {
           gutil.log(jekyll_indicator, gutil.colors.red(line));
           if (line.indexOf('Error') !== -1) {
-            cb(1);
+            if (cb) {
+              cb(1);
+            }
             process.exit(1);
           }
         }

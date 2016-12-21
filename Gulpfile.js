@@ -7,7 +7,7 @@ const hash        = require('gulp-hash');
 
 const server      = require('./_gulp/server');
 const jekyll      = require('./_gulp/jekyll');
-const gulpErr     = require('./_gulp/helpers').gulpErr;
+const helpers     = require('./_gulp/helpers');
 const mappings    = require('./_gulp/mappings');
 const git         = require('./_gulp/git');
 const htmlproofer = require('./_gulp/htmlproofer');
@@ -21,17 +21,21 @@ const del         = require('del');
 const runSequence = require('run-sequence');
 const yaml        = require('write-yaml');
 
-const CURRENTFOLDER = __dirname;
-const BUILDDATE     = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
-const PORT          = 4000;
-const DIST_FOLDER   = '_site';            // DO NOT CHANGE THIS, IS USED BY TRAVIS FOR DEPLOYMENT IN MANIFEST
-const CONFIG        = '_config.yml';
-const CONFIG_TEST   = '_config_test.yml';
-const ALGOLIA_APP_ID = 'OHBX5T982M';
-const ALGOLIA_INDEX = 'docs';
+const CURRENTFOLDER   = __dirname;
+const BUILDDATE       = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+const PORT            = 4000;
+const DIST_FOLDER     = '_site';            // DO NOT CHANGE THIS, IS USED BY TRAVIS FOR DEPLOYMENT IN MANIFEST
+let CONFIG            = '_config.yml';
+let CONFIG_TEST       = '_config_test.yml';
+const ALGOLIA_APP_ID  = 'OHBX5T982M';
+const ALGOLIA_INDEX   = 'docs';
+
+if (!helpers.isFile(CONFIG_TEST)) {
+  CONFIG_TEST = CONFIG;
+}
 
 /* DONT EDIT BELOW */
-gutil.log(`Gulp started at ${BUILDDATE}`);
+gutil.log(`Gulp started at ${gutil.colors.cyan(BUILDDATE)}`);
 
 const paths = {
   styles: {
@@ -85,7 +89,7 @@ gulp.task('write:githistory', `Write git_history to data`, done => {
       });
     })
     .catch(err => {
-      gulpErr('write:githistory', `Error with reading git history:`, err);
+      helpers.gulpErr('write:githistory', `Error with reading git history:`, err);
       return process.exit(2);
     })
 });

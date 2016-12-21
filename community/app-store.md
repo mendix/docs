@@ -18,7 +18,7 @@ In addition, you get Mendix points for downloading, uploading, and reviewing App
 
 ## 3 App Store Versions
 
-## 3.1 Private and Public App Store
+### 3.1 Private and Public App Store
 
 Mendix offers a private App Store and a public App Store. 
 
@@ -26,7 +26,7 @@ The private App Store has content that can be reused only within a company, whic
 
 The public App Store is open to all Mendix Community developers.
 
-## 3.2 Online and Modeler App Store
+### 3.2 Online and Modeler App Store
 
 The [web version of the App Store](https://appstore.home.mendix.com/) has a lot of advanced options available. However, if you download content from here, you will then have to separately upload it into your project. For more information, see [How to Import and Export Objects](/howto6/importing-and-exporting-objects).
 

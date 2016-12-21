@@ -4,6 +4,9 @@ space: "Mendix 6 How-to's"
 category: "Testing"
 tags: []
 ---
+
+## 1 Introduction
+
 Selenium IDE is a Firefox plugin which records and plays back user interactions with the browser. 
 
 **After using this how-to, you will know how to do the following:**
@@ -11,9 +14,9 @@ Selenium IDE is a Firefox plugin which records and plays back user interactions 
 * Record test scripts with Selenium IDE
 * Find unique CSS selectors with FirePath
 
-## 1. Preparation
+## 2 Prerequisites
 
-Before you can start with this how-to, make sure you have completed the following prerequisites.
+Before starting with this how-to, make sure you have completed the following prerequisite:
 
 *   Download and install [Firefox](https://www.mozilla.org/nl/firefox/new/).
 *   Download and install [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/). When Selenium IDE is installed, it is then available as a Firefox plugin.
@@ -33,7 +36,7 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 </div>
 
-## 2\. Install and run the Company Expenses App
+## 3 Install and Run the Company Expenses App
 
 In this chapter you will install and run the Company Expenses App
 
@@ -55,7 +58,7 @@ In this chapter you will install and run the Company Expenses App
 7.  Click **Run Locally** (F5).
 8.  Click **View App** (F9).
 
-## 3\. Create your first automated test
+## 4 Create Your First Automated Test
 
 In the first part of this chapter you will create an automated test by using the record button in Selenium IDE.
 
@@ -94,7 +97,7 @@ In the first part of this chapter you will create an automated test by using the
 
 Well done! You have just created your first automated test!
 
-### 3.1 Use Firebug and FirePath to locate the element
+### 4.1 Use Firebug and FirePath to Locate the Element
 
 Selenium IDE can be used to record tests scripts, but almost alway these scripts need to be edited before you can use them (e.g. HTML tag IDs are generated dynamically and will be different with each run of the same page). In this paragraph you will edit some test steps that don't, by using Firebug and FirePath to find the right locator. Locators tell Selenium IDE which GUI elements (e.g. buttons, textboxes, datagrids) it needs to operate on. To make it easier to create a locator for Mendix elements, ‘mx-name’ is added to the class of an element. When the position of an element in the form changes, there is no need to rewrite the script.
 
@@ -220,7 +223,7 @@ Some widgets, like a Grid or a Listview, can show multiple items. Every item has
 
 </div>
 
-### 3.2 Install the Selenium Mendix locator builder plugin
+### 4.2 Install the Selenium Mendix Locator Builder Plugin
 
 Manually editing a lot of test steps is time consuming. Marcel Groenweg created a Selenium plugin for Mendix test recording. When you add the plugin to Selenium IDE, the test steps will have mx-name- CSS selectors rather than the Selenium default. It will also look for parent grids and list views and add selectors to get the correct row by it's index. This reduces the time spent on editing the test steps.
 
@@ -244,7 +247,7 @@ Manually editing a lot of test steps is time consuming. Marcel Groenweg created 
 
 Now the test steps will have 'mx-name-' CSS selectors rather than the Selenium default.
 
-### 3.3 Create an automated test with the Selenium Mendix locator builder plugin
+### 4.3 Create an Automated Test with the Selenium Mendix Locator Builder Plugin
 
 1.  Open **Selenium IDE**.
 2.  Enter the following login details on the Mendix login screen:
@@ -277,7 +280,7 @@ Now the test steps will have 'mx-name-' CSS selectors rather than the Selenium d
 
     ![](attachments/18448631/18580275.png)
 
-## 4\. Related content
+## 5 Related Content
 
 * [How to Test Mendix Applications Using Selenium IDE](testing-mendix-applications-using-selenium-ide)
 * [How to Create Automated Tests with TestNG](create-automated-tests-with-testng)

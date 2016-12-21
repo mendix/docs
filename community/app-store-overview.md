@@ -180,6 +180,10 @@ Click **Download** to download the installation file for that Modeler version.
 
 The **My App Store** tab presents all of your App Store activity:
 
+* Your numbers for **PUBLISHED CONTENT** and **SUBMITTED REVIEWS**
+* **Notifications** on content you favorited
+* Your content **Favorites**
+
 ![](attachments/app-store-overview/my_app_store.png)
 
 In the menu on the left-side of the screen, you can see the following:

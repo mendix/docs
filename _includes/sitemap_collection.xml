@@ -22,7 +22,7 @@
     {% endif %}
 
     {% if link.priority %}
-    <priority>{{ link.sitemap.priority | append: '.0' | divided_by: 10 | round: 1 }}</priority>
+    <priority>{{ link.priority | append: '.0' | divided_by: 10 | round: 1 }}</priority>
     {% elsif space and space.priority != false %}
     <priority>{{ space.priority | append: '.0' | divided_by: 10 | round: 1 }}</priority>
     {% else %}

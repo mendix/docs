@@ -34,29 +34,29 @@ To add content to the App Store, follow these steps:
     * **Promotion** — a way to advertise a component or solution while not making it downloadable
         * If you select this option, continue to [step #4](#4) below
 3. When adding Modeler content, select your **content source**:<a name="3"></a>
-    * If you select **Select from GitHub**, follow these steps:</br>
+    * If you select **Select from GitHub**, follow these steps:
 
-        a. Select the type of GitHub profile (**Organisation** or **User**) where the content is stored.</br>
+        a. Select the type of GitHub profile (**Organisation** or **User**) where the content is stored.
 
-        b. Enter the **GitHub profile name**.</br>
+        b. Enter the **GitHub profile name**.
 
-        c. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**. The system will crawl all of the projects fpr that GitHub profile and present the Mendix package file (*.mpk*) options to you on the **Please select a repository** pop-up window. When you find the correct *.mpk* file name, click **Select** on this window.</br>
+        c. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**. The system will crawl all of the projects fpr that GitHub profile and present the Mendix package file (*.mpk*) options to you on the **Please select a repository** pop-up window. When you find the correct *.mpk* file name, click **Select** on this window.
 
-        d. Select the **release** by clicking **Select**. If there are various releases of the *.mpk* file available, the system will present them to you on the **Please select a release** pop-up window. When you find the correct release, click **Select** on this window.</br>
+        d. Select the **release** by clicking **Select**. If there are various releases of the *.mpk* file available, the system will present them to you on the **Please select a release** pop-up window. When you find the correct release, click **Select** on this window.
 
-        e. Check the **Use GitHub readme.md** check-box if you want the *readme.md* file to be included with the content.</br>
+        e. Check the **Use GitHub readme.md** check-box if you want the *readme.md* file to be included with the content.
 
-        f. Note that the **Release notes** section is only available for updating a new version of the content (for more information, see [4 Updating Existing App Store Content](#UpdatingExistingAppStoreContent)).</br>
+        f. Note that the **Release notes** section is only available for updating a new version of the content (for more information, see [4 Updating Existing App Store Content](#UpdatingExistingAppStoreContent)).
 
         ![](attachments/share-app-store-content/add_content_1.png)
 
-    * If you select **Manual upload**, follow these steps:</br>
+    * If you select **Manual upload**, follow these steps:
 
-        a. Select the **Source file** by clicking **Upload**.</br>
+        a. Select the **Source file** by clicking **Upload**.
 
-        b. On the **Upload source file** dialog box, click **Browse** to browse the source files on your computer, select your source file, and then click **Save**.</br>
+        b. On the **Upload source file** dialog box, click **Browse** to browse the source files on your computer, select your source file, and then click **Save**.
 
-        c. Enter **Release notes** that describe your manually uploaded content.</br>
+        c. Enter **Release notes** that describe your manually uploaded content.
 
         ![](attachments/share-app-store-content/add_content_2.png)
 

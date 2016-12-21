@@ -6,10 +6,10 @@ tags: []
 ---
 Selenium IDE is a Firefox plugin which records and plays back user interactions with the browser. 
 
-**After completing this how-to you will know:**
+**After using this how-to, you will know how to do the following:**
 
-*   How to record test scripts with Selenium IDE. 
-*   How to find unique CSS selectors with FirePath.
+* Record test scripts with Selenium IDE
+* Find unique CSS selectors with FirePath
 
 ## 1. Preparation
 
@@ -39,13 +39,19 @@ In this chapter you will install and run the Company Expenses App
 
 1.  Open the **Mendix Modeler**.
 2.  Click the **App Store** button.
+
     ![](attachments/18448631/18580298.png)
+    
 3.  Search for _Company Expenses_.
 4.  Click **Company Expenses**.
+
     ![](attachments/18448631/18580282.png)
+    
 5.  Click **Download**.
 6.  Click **OK**. This will open the **Company Expenses** app in the **Mendix Modeler**.
+
     ![](attachments/18448631/18580296.png)
+    
 7.  Click **Run Locally** (F5).
 8.  Click **View App** (F9).
 
@@ -55,8 +61,10 @@ In the first part of this chapter you will create an automated test by using the
 
 1.  Open **Firefox.**
 2.  Go to _http://localhost:8080/index.html_.
-3.  Click the **Selenium IDE** button (DEFAULT RECORDING). **
-    ![](attachments/18448631/18580306.png)**
+3.  Click the **Selenium IDE** button (DEFAULT RECORDING).
+
+    ![](attachments/18448631/18580306.png)
+    
 4.  Enter the following login details on the Mendix login screen:
 
     | Field | Value |
@@ -69,14 +77,19 @@ In the first part of this chapter you will create an automated test by using the
 5.  Click **Sign in**.
 6.  Click **Sign out**.
 7.  Click the **Record** button in **Selenium IDE**.
+
     ![](attachments/18448631/18580302.png)
 
     Selenium IDE should look like the image below:
+    
     ![](attachments/18448631/18580281.png)
+    
 8.  Click the **Run current test case** button.
+
     ![](attachments/18448631/18580303.png)
 
     Every passed test step will be marked green as you can see in the image below:
+    
     ![](attachments/18448631/18580278.png)
 
 Well done! You have just created your first automated test!
@@ -98,31 +111,40 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
 5.  Click the **Expenses** tab.
 6.  Click the **New Expense** button.
 7.  Enter 1 in the **Amount** field.
-8.  Select _Accomodation_ in the **Description** selectbox.
+8.  Select _Accomodation_ in the **Description** box.
+
     ![](attachments/18448631/18580273.png)
+    
 9.  Click the **Save** button.
 10.  Click the **Sign out** button.
 11.  Click the **Record** button in **Selenium IDE** to stop recording.
 12.  Click the **Run current test case** button. The test will fail because it can not find the element with target `id=mxui_widget_NumberInput_1_input`.
+
     ![](attachments/18448631/18580299.png)
     
-    The element with target `id=mxui_widget_NumberInput_1_input` does not exist on the page. The number in the id is not always the same. You need to find another target selector for the same element with the use of Firebug and FirePath.
+    The element with target `id=mxui_widget_NumberInput_1_input` does not exist on the page. The number in the ID is not always the same. You need to find another target selector for the same element with the use of Firebug and FirePath.
 13.  Repeat steps 3 till 6.
 14.  Click the **Firebug** button in the Firefox toolbar.
+
     ![](attachments/18448631/18580294.png)
+    
 15.  Click the **FirePath** tab.
-    ![](attachments/18448631/18580293.png) 
+
+    ![](attachments/18448631/18580293.png)
+    
 16.  Click the **Inspect Element** button.
+
     ![](attachments/18448631/18580292.png)
 
 17.  Click the **Amount** field.
     
     ![](attachments/18448631/18580291.png)
     
-    The CSS selector _mxui_widget_NumberInput_1_input_ does not exist. We need to find a unique selector for the **Amount** field. Mendix uses CSS classes to identify page content like widgets and popups. You can use these classes in Selenium to manipulate pages and verify data. Widgets can be given a name in the Mendix Modeler. These names appear in the HTML document as class names prefixed by _mx-name-_. For instance, a grid named _EmployeeGrid_ will get a CSS class _mx-name-EmployeeGrid_. This is true for all widgets.
+    The CSS selector _mxui_widget_NumberInput_1_input_ does not exist. We need to find a unique selector for the **Amount** field. Mendix uses CSS classes to identify page content like widgets and pop-up windows. You can use these classes in Selenium to manipulate pages and verify data. Widgets can be given a name in the Mendix Modeler. These names appear in the HTML document as class names prefixed by _mx-name-_. For instance, a grid named _EmployeeGrid_ will get a CSS class _mx-name-EmployeeGrid_. This is true for all widgets.
 18.  Open the **Desktop_Expense_NewEdit_Admin** page in the Mendix Modeler.
     
     ![](attachments/18448631/18580285.png)
+    
 19.  Select the **Amount** field.
     
     ![](attachments/18448631/18580290.png) 
@@ -134,6 +156,7 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
 20.  Enter _.mx-name-textBox6_ in **FirePath** and press Enter.
     
     ![](attachments/18448631/18580288.png)
+    
     There is only 1 matching node, so you have now found a unique selector for the **Amount** field.
 
 21.  Change this value:
@@ -158,12 +181,14 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
 
 22.  Click the **Run current test case** button. The test will fail because it can not find the element with target _css=.mx-name-textBox6 input_. The element can't be found because the page with the element is not loaded yet.
 23.  Switch the speed control to slow. The speed control determines how fast your test script runs. Default the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test started asserting for an element on the page even before the page is fully loaded by the browser. Try to run your test script as fast as possible.
+
     ![](attachments/18448631/18580284.png)
+    
 24.  Click the **Run current test case** button. The test will fail because it can not find the element with target `css=input.form-control.mx-focus`.
 25.  Open the **Desktop_Expense_NewEdit_Admin** page in the Mendix Modeler.
-26.  Click the **Description** selectbox. The name of the **Description** selectbox is _referenceSelector1_ and will have the CSS class _mx-name-referenceSelector1_.
-27.  Enter _.mx-name-referenceSelector1_ in **FirePath** and press Enter. Two elements are found: one in the popup and one on the page in the background. To retrieve the element of the active page, you need to add _.mx-window-active_ to the target.
-28.  Enter _.mx-window-active .mx-name-referenceSelector1_ in **FirePath** and press Enter. There is only 1 matching node, so you have now found a unique selector for the **Type** selectbox. 
+26.  Click the **Description** box. The name of the **Description** box is _referenceSelector1_ and will have the CSS class _mx-name-referenceSelector1_.
+27.  Enter _.mx-name-referenceSelector1_ in **FirePath** and press **Enter**. Two elements are found: one in the pop-up window and one on the page in the background. To retrieve the element of the active page, you need to add _.mx-window-active_ to the target.
+28.  Enter _.mx-window-active .mx-name-referenceSelector1_ in **FirePath** and press **Enter**. There is only one matching node, so you have now found a unique selector for the **Type** box. 
 29.  Change this value:
 
         ```
@@ -184,6 +209,7 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
 
         </div>
 30.  Click the **Run current test case** button. The test will pass.
+
     ![](attachments/18448631/18580286.png)
 
 Congratulations! You have just created your second automated test.
@@ -200,7 +226,9 @@ Manually editing a lot of test steps is time consuming. Marcel Groenweg created 
 
 1.  Go to [https://github.com/mgroeneweg/SeleniumMendixLocatorBuilder](https://github.com/mgroeneweg/SeleniumMendixLocatorBuilder).
 2.  Click on **Download ZIP**.
+
     ![](attachments/18448631/18580277.png)
+    
 3.  Unzip **SeleniumMendixLocatorBuilder-master.zip**.
 4.  Open **Selenium IDE**.
 5.  Go to **Options > Options**.
@@ -230,33 +258,38 @@ Now the test steps will have 'mx-name-' CSS selectors rather than the Selenium d
 4.  Click the **Expenses** tab.
 5.  Click the **New Expense** button.
 6.  Enter 1 in the **Amount** field.
-7.  Select _Accomodation_ in the **Description** selectbox.
+7.  Select _Accomodation_ in the **Description** box.
+
     ![](attachments/18448631/18580274.png)
+    
 8.  Click the **Save** button.
 9.  Click the **Sign out** button.
 10.  Click the **Record** button in **Selenium IDE** to stop recording.
 11.  Click the **Run current test case** button. The test will fail because it can not find the element with target _css=.mx-window-active .mx-name-textBox6 input_. The element can't be found because the page with the element is not loaded yet.
-    ![](attachments/18448631/18580276.png) 
+
+    ![](attachments/18448631/18580276.png)
+    
 12.  Switch the speed control to slow. The speed control determines how fast your test script runs. Default the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test started asserting for an element on the page even before the page is fully loaded by the browser. Try to run your test script as fast as possible.
+
     ![](attachments/18448631/18580284.png)
+    
 13.  Click the **Run current test case** button. The test will pass.
+
     ![](attachments/18448631/18580275.png)
 
 ## 4\. Related content
 
-*   [Testing Mendix applications using Selenium IDE](testing-mendix-applications-using-selenium-ide)
-*   [Creating automated tests with TestNG](create-automated-tests-with-testng)
-*   [Testing microflows using the UnitTesting module](testing-microflows-using-the-unittesting-module)
-*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-*   [Clearing Warning Messages in Mendix](clear-warning-messages)
-*   [Testing web services using SoapUI](testing-web-services-using-soapui)
-*   [Monitoring Mendix using JMX](monitoring-mendix-using-jmx)
-*   [Debugging Java actions remotely](debug-java-actions-remotely)
-*   [Log Levels](log-levels)
-*   [Debugging Java Actions](debug-java-actions)
+* [How to Test Mendix Applications Using Selenium IDE](testing-mendix-applications-using-selenium-ide)
+* [How to Create Automated Tests with TestNG](create-automated-tests-with-testng)
+* [How to Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)
+* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [How to Clear Warning Messages in Mendix](clear-warning-messages)
+* [How to Test Web Services Using SoapUI](testing-web-services-using-soapui)
+* [How to Monitor Mendix Using JMX](monitoring-mendix-using-jmx)
+* [How to Debug Java Actions Remotely](debug-java-actions-remotely)
+* [How to Log Levels](log-levels)
+* [How to Debug Java Actions](debug-java-actions)
 
+Learn more about this topic using the following helpful link:
 
-
-Learn more about this topic using the following helpful links:
-
-*   [Selenium IDE Documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp)
+* [Selenium IDE Documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp)

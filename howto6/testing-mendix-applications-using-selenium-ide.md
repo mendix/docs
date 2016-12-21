@@ -18,10 +18,10 @@ Selenium IDE is a Firefox plugin which records and plays back user interactions 
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-*   Download and install [Firefox](https://www.mozilla.org/nl/firefox/new/).
-*   Download and install [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/). When Selenium IDE is installed, it is then available as a Firefox plugin.
-*   Install Firefox add-on [Firebug](https://addons.mozilla.org/en-US/firefox/addon/firebug/).
-*   Install Firefox add-on [FirePath](https://addons.mozilla.org/en-US/firefox/addon/firepath/).
+*   Download and install [Firefox](https://www.mozilla.org/nl/firefox/new/)
+*   Download and install [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/) (when Selenium IDE is installed, it is then available as a Firefox plugin)
+*   Install Firefox add-on [Firebug](https://addons.mozilla.org/en-US/firefox/addon/firebug/)
+*   Install Firefox add-on [FirePath](https://addons.mozilla.org/en-US/firefox/addon/firepath/)
 
 | Software | Version used in this how-to |
 | --- | --- |

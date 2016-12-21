@@ -16,16 +16,16 @@ Selenium IDE is a Firefox plugin which records and plays back user interactions 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
 *   Download and install [Firefox](https://www.mozilla.org/nl/firefox/new/).
-*   Download and install [Selenium IDE](http://docs.seleniumhq.org/download/) (Scroll down to chapter Selenium IDE and download the latest version). When Selenium IDE is installed, it is then available as a Firefox plugin.
-*   Install Firefox add-on [Firebug](https://addons.mozilla.org/nl/firefox/addon/firebug/).
-*   Install Firefox add-on [FirePath](https://addons.mozilla.org/nl/firefox/addon/firepath/).
+*   Download and install [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/). When Selenium IDE is installed, it is then available as a Firefox plugin.
+*   Install Firefox add-on [Firebug](https://addons.mozilla.org/en-US/firefox/addon/firebug/).
+*   Install Firefox add-on [FirePath](https://addons.mozilla.org/en-US/firefox/addon/firepath/).
 
 | Software | Version used in this how-to |
 | --- | --- |
-| Firefox | 37.0.2 |
-| Selenium IDE | 2.9 |
-| Firebug | 2.0.9 |
-| FirePath | 0.9.7.1 |
+| Firefox | 50.1.0 |
+| Selenium IDE | 2.9.1.1 |
+| Firebug | 2.0.18 |
+| FirePath | 0.9.7.1.1 |
 
 <div class="alert alert-warning">
 
@@ -72,7 +72,7 @@ In the first part of this chapter you will create an automated test by using the
     ![](attachments/18448631/18580302.png)
 
     Selenium IDE should look like the image below:
-    ![](attachments/18448631/18580281.png)
+    ![](attachments/18448631/18580281.png)
 8.  Click the **Run current test case** button.
     ![](attachments/18448631/18580303.png)
 
@@ -95,17 +95,18 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
     | Password | 1 |
 
 4.  Click the **Sign in** button.
-5.  Click the **Expenses **tab.
-6.  Click the **New Expense **button.
+5.  Click the **Expenses** tab.
+6.  Click the **New Expense** button.
 7.  Enter 1 in the **Amount** field.
-8.  Select _Accomodation_ in the **Type** selectbox.
+8.  Select _Accomodation_ in the **Description** selectbox.
     ![](attachments/18448631/18580273.png)
 9.  Click the **Save** button.
 10.  Click the **Sign out** button.
 11.  Click the **Record** button in **Selenium IDE** to stop recording.
-12.  Click the **Run current test case** button. The test will fail because it can not find the element with target `css=input.form-control.mx-focus`.
+12.  Click the **Run current test case** button. The test will fail because it can not find the element with target `id=mxui_widget_NumberInput_1_input`.
     ![](attachments/18448631/18580299.png)
-    The element with target `css=input.form-control.mx-focus` does not exist on the page. The element does contain the CSS class _.mx-focus _ during recording the script, but does not contain the CSS class while running the test. You need to find another CSS selector for the same element with the use of Firebug and FirePath.
+    
+    The element with target `id=mxui_widget_NumberInput_1_input` does not exist on the page. The number in the id is not always the same. You need to find another target selector for the same element with the use of Firebug and FirePath.
 13.  Repeat steps 3 till 6.
 14.  Click the **Firebug** button in the Firefox toolbar.
     ![](attachments/18448631/18580294.png)
@@ -115,29 +116,36 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
     ![](attachments/18448631/18580292.png)
 
 17.  Click the **Amount** field.
+    
     ![](attachments/18448631/18580291.png)
-    The CSS selector _.form-control_ is not unique; there are 14 matching nodes. We need to find a unique selector for the **Amount** field. Mendix 5 uses CSS classes to identify page content like widgets and popups. You can use these classes in Selenium to manipulate pages and verify data. Widgets can be given a name in the Mendix Modeler. These names appear in the HTML document as class names prefixed by _mx-name-_. For instance, a grid named _EmployeeGrid_ will get a CSS class _mx-name-EmployeeGrid_. This is true for all widgets.
-18.  Open the **Desktop_Expense_NewEdit_Admin **page in the Mendix Modeler.
+    
+    The CSS selector _mxui_widget_NumberInput_1_input_ does not exist. We need to find a unique selector for the **Amount** field. Mendix uses CSS classes to identify page content like widgets and popups. You can use these classes in Selenium to manipulate pages and verify data. Widgets can be given a name in the Mendix Modeler. These names appear in the HTML document as class names prefixed by _mx-name-_. For instance, a grid named _EmployeeGrid_ will get a CSS class _mx-name-EmployeeGrid_. This is true for all widgets.
+18.  Open the **Desktop_Expense_NewEdit_Admin** page in the Mendix Modeler.
+    
     ![](attachments/18448631/18580285.png)
 19.  Select the **Amount** field.
+    
     ![](attachments/18448631/18580290.png) 
-    The name of the **Amount** field is _textBox3._ Every element will automatically get the CSS class _mx-name-[Name]_. So the amount field will have the CSS class _mx-name-textBox3_.
+    
+    The name of the **Amount** field is _textBox6_. Every element will automatically get the CSS class _mx-name-[Name]_. So the amount field will have the CSS class _mx-name-textBox6_.
+    
     ![](attachments/18448631/18580289.png)
 
-20.  Enter _.mx-name-textBox3_ in **FirePath** and press Enter.
+20.  Enter _.mx-name-textBox6_ in **FirePath** and press Enter.
+    
     ![](attachments/18448631/18580288.png)
     There is only 1 matching node, so you have now found a unique selector for the **Amount** field.
 
 21.  Change this value:
 
         ```
-        css=input.form-control.mx-focus
+        id=_mxui_widget_NumberInput_1_input_
         ```
 
       into:
 
         ```
-        css=.mx-name-textBox3 input
+        css=.mx-name-textBox6 input
         ```
 
       in Selenium.
@@ -148,19 +156,18 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
 
         </div>
 
-22.  Click the **Run current test case** button. The test will fail because it can not find the element with target _css=.mx-name-textBox3 input_. The element can't be found because the page with the element is not loaded yet.
+22.  Click the **Run current test case** button. The test will fail because it can not find the element with target _css=.mx-name-textBox6 input_. The element can't be found because the page with the element is not loaded yet.
 23.  Switch the speed control to slow. The speed control determines how fast your test script runs. Default the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test started asserting for an element on the page even before the page is fully loaded by the browser. Try to run your test script as fast as possible.
     ![](attachments/18448631/18580284.png)
 24.  Click the **Run current test case** button. The test will fail because it can not find the element with target `css=input.form-control.mx-focus`.
-    ![](attachments/18448631/18580287.png) 
 25.  Open the **Desktop_Expense_NewEdit_Admin** page in the Mendix Modeler.
-26.  Click the **Type **selectbox. The name of the **Type **selectbox is _referenceSelector1_ and will have the CSS class _mx-name-_referenceSelector1__.
-27.  Enter _._mx-name-_referenceSelector1___ in **FirePath** and press Enter. Two elements are found: one in the popup and one on the page in the background. To retrieve the element of the active page, you need to add _.mx-window-active_ to the target.
-28.  Enter _.mx-window-active __._mx-name-_referenceSelector1___ in **FirePath** and press Enter. There is only 1 matching node, so you have now found a unique selector for the **Type** selectbox. 
+26.  Click the **Description** selectbox. The name of the **Description** selectbox is _referenceSelector1_ and will have the CSS class _mx-name-referenceSelector1_.
+27.  Enter _.mx-name-referenceSelector1_ in **FirePath** and press Enter. Two elements are found: one in the popup and one on the page in the background. To retrieve the element of the active page, you need to add _.mx-window-active_ to the target.
+28.  Enter _.mx-window-active .mx-name-referenceSelector1_ in **FirePath** and press Enter. There is only 1 matching node, so you have now found a unique selector for the **Type** selectbox. 
 29.  Change this value:
 
         ```
-        css=select.form-control.mx-focus
+        id=mxui_widget_ReferenceSelector_2_input
         ```
 
       into:
@@ -220,10 +227,10 @@ Now the test steps will have 'mx-name-' CSS selectors rather than the Selenium d
     | Password | 1 |
 
 3.  Click the **Sign in** button.
-4.  Click the **Expenses **tab.
-5.  Click the **New Expense **button.
+4.  Click the **Expenses** tab.
+5.  Click the **New Expense** button.
 6.  Enter 1 in the **Amount** field.
-7.  Select _Accomodation_ in the **Type** selectbox.
+7.  Select _Accomodation_ in the **Description** selectbox.
     ![](attachments/18448631/18580274.png)
 8.  Click the **Save** button.
 9.  Click the **Sign out** button.

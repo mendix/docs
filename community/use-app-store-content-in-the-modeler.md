@@ -44,15 +44,11 @@ To download content from the App Store via the Modeler, follow these steps:
     * A project will be created on your hard-drive and will be opened in the Modeler
     * A component will be downloaded directly into your project
 
-    <div class="alert alert-warning">
-
     Make sure that you download the correct version of the content from the App Store, because the widget or module version needs to be compatible with the Modeler version in which you are working. For example, if you are using Mendix 6, always download a widget that has a Mendix 6 version. Do not download a widget that has a higher release version than the Modeler in which you are working. You can access older versions of the widgets in the All Versions tab in the App Store and download the most compatible version:
 
     ![](attachments/use-app-store-content-in-the-modeler/18580437.png)
 
-    For more information on App Store content compatibility, see 4.5 Compatibility Section in the [App Store Overview](app-store-overview).
-
-    </div>
+    For more information on App Store content compatibility, see **4.5 Compatibility Section** in the [App Store Overview](app-store-overview).
 
 ## 4 Using a Widget from the App Store in the Modeler
 
@@ -125,7 +121,7 @@ To add the Google Maps module from the App Store via the Modeler, follow these s
 
     <div class="alert alert-warning">
 
-    If you have made any edits or customization to a module that you have already downloaded, be aware of the **Replace existing module** option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.
+    If you have made any edits or customization to a module that you have already downloaded, be aware of the "Replace existing module" option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.
 
     </div>
 

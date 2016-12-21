@@ -41,7 +41,7 @@ There are a number of categories on the status overview, related to various tech
     *   Database Server Disk Usage: There is enough free disk space on the database server
     *   Webserver: The webserver in front of your app is running.
 
-     5\.  Click a line that does not display **OK** to show additional information on the error.
+5.  Click a line that does not display **OK** to show additional information on the error.
 
 ![](attachments/18448569/18579999.png)
 

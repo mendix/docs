@@ -33,6 +33,6 @@
     {% include search_templates.html %}
     {% include footer.html %}
     <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
-    <script src={{ "/public/js/searchpage.js" | prepend: site.baseurl }}></script>
+    {% include asset.html type="js" filename="searchpage.js" %}  </body>
     </body>
 </html>

@@ -21,4 +21,4 @@ The general notion of software quality embraces a variety of quality aspects, of
 * Detailed documentation is available in your AQM report dashboard on [https://aqm.mendix.com](https://aqm.mendix.com), under the **Documentation** menu item
 * Mendix AQM reports are generated every night based on the latest version in your Project Team Server
 * By default, the Mendix AQM reports are based on the Mainline in your Project Team Server
-  * On request base, this can be changed to a specific branch
+  * This can be changed to a specific branch on request

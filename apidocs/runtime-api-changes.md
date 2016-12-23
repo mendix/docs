@@ -72,6 +72,8 @@ Below is the list of removed deprecated APIs in Mendix 7, as well as a migration
 | com.mendix.systemwideinterfaces.core.IContext.setContextObjects(List<IMendixIdentifier> contextObjects) | - |
 | com.mendix.systemwideinterfaces.core.IContext.setSudo(boolean sudo) | - |
 | com.mendix.systemwideinterfaces.core.IContext.getSudoContext() | com.mendix.systemwideinterfaces.core.IContext.createSudoClone() |
+| com.mendix.core.callWebservice() | use Call REST action in the microflow instead.
+| com.mendix.core.importXmlStream() | use com.mendix.core.integration().importStream() instead. |
 
 ### Constructors
 

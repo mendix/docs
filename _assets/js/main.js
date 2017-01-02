@@ -271,8 +271,14 @@
       } else {
         $el.remove();
       }
-    })
+    });
 
+    /*****************
+      Code highlighting
+    ******************/
+    $('pre').each(function () {
+      $(this).addClass('line-numbers');
+    });
 
   });
 })(jQuery));

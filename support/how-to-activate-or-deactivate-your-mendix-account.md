@@ -9,7 +9,7 @@ category: "Mendix Support"
 
 ## 1 Deactivate Your Mendix Account
 
-This how-to will explain how to activate and deactivate your Mendix account (MxID). It contains a checklist of things to keep in mind of what to do with your Mendix account when you **leave/move to another company**.
+This how-to will explain how to activate and deactivate your Mendix account (MxID). It contains a checklist of things to keep in mind of what to do with your Mendix account when you **leave a company or move to another company**.
 
 Your MxID can have several roles within the Mendix Platform:
 
@@ -34,6 +34,6 @@ This means that you won't be able to access the Mendix Platform any more.
 
 Follow these steps when you want to switch to another company:
 
-1. Create a new Mendix account: http://www.mendix.com/try-now/
-2. Submit a Feedback item to merge your old account into your new account. For more information, read this how-to: [/community/how-to-set-up-your-profile](/community/how-to-set-up-your-profile)
+1. Create a new Mendix account: [http://www.mendix.com/try-now/]http://www.mendix.com/try-now/.
+2. Submit a Feedback item to merge your old account into your new account. For more information, read this how-to: [How to Set Up Your Profile](/community/how-to-set-up-your-profile).
 3. Make sure you have been added as a company member to the new company in the Developer Portal.

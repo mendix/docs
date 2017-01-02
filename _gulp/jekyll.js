@@ -28,6 +28,10 @@ const spawnJekyll = (config, watch, cb, bsync) => {
               bsync.reload();         // Rebuild was triggered by Hugo, so we'll reload the page
             }
           }
+          if (line.indexOf('Error') !== -1 && !watch) {
+            cb(1);
+            process.exit(1);
+          }
         }
       });
   });
@@ -36,6 +40,12 @@ const spawnJekyll = (config, watch, cb, bsync) => {
       _.each(data.split('\n'), line => {
         if (line) {
           gutil.log(jekyll_indicator, gutil.colors.red(line));
+          if (line.indexOf('Error') !== -1) {
+            if (cb) {
+              cb(1);
+            }
+            process.exit(1);
+          }
         }
       });
       gutil.beep();

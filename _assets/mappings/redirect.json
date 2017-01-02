@@ -206,27 +206,27 @@
     },
     {
       "from": "/appstore/Adding+App+Store+content+to+your+app",
-      "to": "/appstore/adding-app-store-content-to-your-app"
+      "to": "/community/use-app-store-content-in-the-modeler"
     },
     {
       "from": "/appstore/App+Store+Approval+Guidelines",
-      "to": "/appstore/app-store-approval-guidelines"
+      "to": "/community/share-app-store-content"
     },
     {
       "from": "/appstore/App+Store+Content+Support",
-      "to": "/appstore/app-store-content-support"
+      "to": "/community/app-store-content-support"
     },
     {
       "from": "/appstore/App+Store",
-      "to": "/appstore/"
+      "to": "/community/app-store"
     },
     {
       "from": "/appstore/App+Store+Home",
-      "to": "/appstore/"
+      "to": "/community/app-store"
     },
     {
       "from": "/appstore/Install+an+App+from+the+App+Store",
-      "to": "/appstore/install-an-app-from-the-app-store"
+      "to": "/community/use-app-store-content-in-the-modeler"
     },
     {
       "from": "/ATS/Administration",
@@ -757,6 +757,10 @@
       "to": "/bestpractices/inheritance-vs.-1-1-association"
     },
     {
+      "from": "/bestpractices/Inheritance+vs.+1-1+association",
+      "to": "/bestpractices/inheritance-vs.-1-1-association"
+    },
+    {
       "from": "/bestpractices/Naming+conventions",
       "to": "/bestpractices/naming-conventions"
     },
@@ -1173,6 +1177,10 @@
       "to": "/howto50/querying-over-self-references"
     },
     {
+      "from": "/howto50/Querying+over+self-references",
+      "to": "/howto50/querying-over-self-references"
+    },
+    {
       "from": "/howto50/Restoring+a+SQL+Server+database",
       "to": "/howto50/restoring-a-sql-server-database"
     },
@@ -1289,6 +1297,10 @@
     {
       "from": "/howto50/Translatable+Validation+Messages",
       "to": "/howto50/translatable-validation-messages"
+    },
+    {
+      "from": "/howto50/Trends",
+      "to": "/mendixcloud/trends"
     },
     {
       "from": "/howto50/Triggering+Logic+using+Microflows",
@@ -1411,6 +1423,10 @@
       "to": "/howto6/create-a-basic-data-layer"
     },
     {
+      "from": "/howto6/Creating+a+Basic+Data+Layer",
+      "to": "/howto6/create-a-basic-data-layer"
+    },
+    {
       "from": "/howto6/Create+a+Basic+Hello+World+Custom+Widget",
       "to": "/howto6/create-a-basic-hello-world-custom-widget"
     },
@@ -1467,6 +1483,10 @@
       "to": "/howto6/debug-microflows"
     },
     {
+      "from": "/howto6/Debugging+Microflows",
+      "to": "/howto6/debug-microflows"
+    },
+    {
       "from": "/howto6/Debug+Microflows+Remotely",
       "to": "/howto6/debug-microflows-remotely"
     },
@@ -1505,6 +1525,10 @@
     {
       "from": "/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry",
       "to": "/howto6/deploying-a-mendix-app-to-cloud-foundry"
+    },
+    {
+      "from": "/howto6/deploying+to+the+cloud",
+      "to": "/mendixcloud/deploying-to-the-cloud"
     },
     {
       "from": "/howto6/Design+the+Architecture",
@@ -1685,6 +1709,10 @@
     {
       "from": "/howto6/Monitoring+Mendix+using+JMX",
       "to": "/howto6/monitoring-mendix-using-jmx"
+    },
+    {
+      "from": "/howto6/monitoring+application+health",
+      "to": "/mendixcloud/monitoring-application-health"
     },
     {
       "from": "/howto6/On-premises+Deployment",

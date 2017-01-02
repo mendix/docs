@@ -45,7 +45,6 @@ defaults:
         - "howto6"
         - "tips"
         - "bestpractices"
-        - "appstore"
         - "mendixcloud"
   - scope:
       path: 'refguide6'
@@ -63,7 +62,6 @@ defaults:
         - "howto50"
         - "tips"
         - "bestpractices"
-        - "appstore"
         - "mendixcloud"
   - scope:
       path: 'refguide5'
@@ -132,7 +130,6 @@ defaults:
         - "howto6"
         - "tips"
         - "bestpractices"
-        - "appstore"
         - "mendixcloud"
   - scope:
       path: 'bestpractices'
@@ -142,17 +139,6 @@ defaults:
         - "howto6"
         - "tips"
         - "bestpractices"
-        - "appstore"
-        - "mendixcloud"
-  - scope:
-      path: 'appstore'
-      type: pages
-    values:
-      menus:
-        - "howto6"
-        - "tips"
-        - "bestpractices"
-        - "appstore"
         - "mendixcloud"
   - scope:
       path: 'mendixcloud'
@@ -162,7 +148,6 @@ defaults:
         - "howto6"
         - "tips"
         - "bestpractices"
-        - "appstore"
         - "mendixcloud"
 
 ####################################
@@ -200,6 +185,3 @@ kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
   hard_wrap: false
   syntax_highlighter: rouge
-
-gems:
-  - jekyll-sitemap

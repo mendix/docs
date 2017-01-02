@@ -23,16 +23,7 @@
             </section>
         </div>
         <div class="col-md-3 search-sidebar">
-          <div class="btn-group jumpto_group">
-            <button type="button" class="btn btn-default dropdown-toggle jumpto_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Jump to: <span class="caret jumpto_caret"></span>
-            </button>
-            <ul class="dropdown-menu jumpto_dropdown">
-              {% for jump in site.data.jumpto %}
-                <li><a href="{{ jump.url }}">{{ jump.title }}</a></li>
-              {% endfor %}
-            </ul>
-          </div>
+          {% include jumpto.html %}
           <div class="search_filters">
             <div id="space" class="search_filters_block"></div>
           </div>
@@ -42,6 +33,6 @@
     {% include search_templates.html %}
     {% include footer.html %}
     <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
-    <script src={{ "/public/js/searchpage.js" | prepend: site.baseurl }}></script>
+    {% include asset.html type="js" filename="searchpage.js" %}  </body>
     </body>
 </html>

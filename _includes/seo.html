@@ -51,14 +51,29 @@
     <meta property="og:locale" content="{{ site.locale }}" />
 
     <script type="application/ld+json">
+{% if page.url != "/" %}
     {
       "@context": "http://schema.org",
       "@type": {{ seo_type | jsonify }},
       "headline": {{ title | jsonify }},
-      "url": {{ page.url | replace:'index.html','' | replace:'.html','' | absolute_url | jsonify }}{% if history %},
+      "url": {{ page.url | replace:'index.html','' | replace:'.html','' | absolute_url | prepend: site.url | jsonify }}{% if history %},
       "dateModified": {{ history.date | date_to_xmlschema | jsonify }}{% endif %}{% if page.description %},
       "description": {{ seo_description | jsonify }}{% endif %}
     }
+{% else %}
+    {
+      "@context": "http://schema.org",
+      "@type": {{ seo_type | jsonify }},
+      "headline": {{ title | jsonify }},
+      "url": {{ page.url | replace:'index.html','' | replace:'.html','' | absolute_url | prepend: site.url | jsonify }}{% if history %},
+      "dateModified": {{ history.date | date_to_xmlschema | jsonify }}{% endif %}{% if page.description %},
+      "description": {{ seo_description | jsonify }}{% endif %},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ site.url }}/search/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+{% endif %}
     </script>
-
 {% endstrip %}    <!-- END SEO -->

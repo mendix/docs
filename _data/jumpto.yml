@@ -23,3 +23,5 @@
   url: "/ATS/"
 - title: "APM (Application Performance Monitor)"
   url: "/APM/"
+- title: "Search"
+  url: "/search/"

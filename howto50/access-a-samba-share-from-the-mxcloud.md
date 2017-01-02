@@ -33,11 +33,11 @@ public Boolean executeAction() throws Exception
 
 ## Using a servername instead of ip-address
 
-If you choose to connect to a server based on the server name instead of the ip-address, you will have to enable all the properties related to this option. See this page: [http://www.stderr.org/doc/libjcifs-java-doc/resolver.html](http://www.stderr.org/doc/libjcifs-java-doc/resolver.html) That page describes the different WINS properties that need to be specified in order for the library to resolve the domain and the server.
+If you choose to connect to a server based on the server name instead of the ip-address, you will have to enable all the properties related to this option. See this page: [Setting Name Resolution Properties](https://jcifs.samba.org/src/docs/resolver.html) That page describes the different WINS properties that need to be specified in order for the library to resolve the domain and the server.
 
 | Name Resolution Properties
 | --------------------------
-**jcifs.netbios.wins**     | The IP address of the WINS server(or more formally [NBNS](http://www.stderr.org/doc/libjcifs-java-doc/wins.html)). This is only required when accessing hosts on different subnets although it is recomended if a WINS server is being used.
+**jcifs.netbios.wins**     | The IP address of the WINS server(or more formally [NBNS](https://jcifs.samba.org/src/docs/wins.html)). This is only required when accessing hosts on different subnets although it is recomended if a WINS server is being used.
 **jcifs.netbios.baddr**    | The local network's broadcast address. It may be necessary to set this for certain network configurations because the default of 255.255.255.255 may otherwise throw a "Network is unreachable" `IOException`. For example if the local host's IP address is 192.168.1.15, the broadcast address would likely be 192.168.1.255.
 **jcifs.resolveOrder**     | A comma separated list of name resolution method identifiers that specify which methods will be used and in what order to resolve hostnames. The possible identifiers are `LMHOSTS`, `WINS`, `BCAST`, and `DNS`.
 **jcifs.netbios.lmhosts**  | The path to an lmhosts file containing a map of IP addresses to hostnames. The format of this file is identical to that of the Windows lmhosts file format with a few exceptions noted below.
@@ -57,7 +57,7 @@ Additional information describing all the properties can be found here: [http:/
 _**Documentation:**_
 
 *   [http://jcifs.samba.org/](http://jcifs.samba.org/)
-*   [http://www.stderr.org/doc/libjcifs-java-doc/overview.html#scp](http://www.stderr.org/doc/libjcifs-java-doc/overview.html#scp)
+*   [https://jcifs.samba.org/src/docs/overview.html](https://jcifs.samba.org/src/docs/overview.html)
 
 Related content
 

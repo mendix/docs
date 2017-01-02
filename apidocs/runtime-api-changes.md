@@ -11,7 +11,7 @@ Below is the list of runtime API changes in Mendix 7, as well as a migration sol
 | --- | --- |
 | org.json.\* | com.mendix.thirdparty.org.json.\* |
 
-This is needed to avoid potential namespace conflict between mendix version of org.json library with other json libraries.
+This is needed to avoid potential namespace conflicts between the Mendix version of the org.json library and other json libraries.
 
 ## Removed Deprecated Classes and Methods in Mendix 7
 

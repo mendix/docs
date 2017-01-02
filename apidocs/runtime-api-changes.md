@@ -82,6 +82,8 @@ This is needed to avoid potential namespace conflicts between the Mendix version
 | com.mendix.systemwideinterfaces.core.IContext.getSudoContext() | com.mendix.systemwideinterfaces.core.IContext.createSudoClone() |
 | com.mendix.core.callWebservice() | use Call REST action in the microflow instead. |
 | com.mendix.core.importXmlStream() | use com.mendix.core.integration().importStream() instead. |
+| com.mendix.m2ee.api.IMxRuntimeRequest.getOriginalRequest() | com.mendix.m2ee.api.IMxRuntimeRequest.getHttpServletRequest() |
+| com.mendix.m2ee.api.IMxRuntimeResponse.getOriginalResponse() | com.mendix.m2ee.api.IMxRuntimeResponse.getHttpServletResponse() |
 
 ### Constructors
 

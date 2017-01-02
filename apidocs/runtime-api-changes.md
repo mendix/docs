@@ -3,7 +3,15 @@ title: "Runtime API Changes"
 space: "API Documentation"
 category: "Moving From 6 to 7"
 ---
-Below is the list of removed deprecated APIs in Mendix 7, as well as a migration solution from Mendix 6 where applicable.
+Below is the list of runtime API changes in Mendix 7, as well as a migration solution from Mendix 6 where applicable.
+
+## Moved Packages
+
+| Class Name | Alternative Interface |
+| --- | --- |
+| org.json.\* | com.mendix.thirdparty.org.json.\* |
+
+This is needed to avoid potential namespace conflict between mendix version of org.json library with other json libraries.
 
 ## Removed Deprecated Classes and Methods in Mendix 7
 

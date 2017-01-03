@@ -1,11 +1,11 @@
 ---
-title: "Release notes 2015-06-16"
-category: "Platform Portal"
+title: "Platform Portal 2015-06-16"
 space: "Release Notes"
+category: "Platform Portal"
 ---
 
 
-### _16 June 2015_
+***Date: June 16, 2015***
 
 ## Improvements
 

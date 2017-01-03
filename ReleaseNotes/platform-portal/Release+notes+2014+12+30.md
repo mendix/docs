@@ -1,13 +1,11 @@
 ---
-title: "Release notes 2014-12-30"
-category: "Platform Portal"
+title: "Platform Portal 2014-12-30"
 space: "Release Notes"
+category: "Platform Portal"
 ---
 
 
-### _December 30, 2014_
-
-## Contents
+***Date: December 30, 2014***
 
 ## Improvements
 

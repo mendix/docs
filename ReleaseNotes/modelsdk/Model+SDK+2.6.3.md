@@ -1,7 +1,7 @@
 ---
 title: "Model SDK 2.6.3"
-category: "Model SDK"
 space: "Release Notes"
+category: "Model SDK"
 ---
 Note that Model SDK 2.6.1 and 2.6.2 have been skipped (and unpublished from NPM) because installing through NPM failed.
 

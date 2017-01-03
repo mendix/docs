@@ -1,7 +1,8 @@
 ---
 title: "Model SDK 1.0.0"
-category: "Model SDK"
 space: "Release Notes"
+category: "Model SDK"
+
 ---
 | Story # | Impact | Description |
 | --- | --- | --- |
@@ -30,7 +31,7 @@ space: "Release Notes"
 
 ('*' means: fixed during this story, but not intrinsically related to this story)
 
-### Introducing structure factories
+## Introducing structure factories
 
 In this release we moved from argument less constructors to factory methods. This has a few advantages: 1\. We can perform more consistency checks upfront, such as whether the type you are creating is available in the Mendix version of your project. 2\. Factories can be overloaded in many more ways than constructors, this allows us to introduce even more convenience factories in the future.
 

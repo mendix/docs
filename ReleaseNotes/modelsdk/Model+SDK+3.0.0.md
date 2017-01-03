@@ -1,7 +1,7 @@
 ---
 title: "Model SDK 3.0.0"
-category: "Model SDK"
 space: "Release Notes"
+category: "Model SDK"
 ---
 | Impact | Description |
 | --- | --- |

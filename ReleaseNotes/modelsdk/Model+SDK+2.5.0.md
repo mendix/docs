@@ -1,7 +1,7 @@
 ---
 title: "Model SDK 2.5.0"
-category: "Model SDK"
 space: "Release Notes"
+category: "Model SDK"
 ---
 | Impact | Description |
 | --- | --- |

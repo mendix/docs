@@ -7,7 +7,7 @@ space: "Release Notes"
 Below, you can find the available release notes for the latest Platform Portal releases.
 
 *   [Release Notes 2016-10-05](Release+Notes+2016+10+05)
-*   [Release notes 2016-05-12](Release+notes+2016+05+12)
+*   [Release Notes 2016-05-12](Release+notes+2016+05+12)
 *   [Release notes 2016-03-24](Release+notes+2016+03+24)
 *   [Release notes 2016-02-18](Release+notes+2016+02+18)
 *   [Release notes 2016-01-13](Release+notes+2016+01+13)

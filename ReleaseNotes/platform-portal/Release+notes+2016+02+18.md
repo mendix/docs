@@ -1,9 +1,10 @@
 ---
-title: "Release notes 2016-02-18"
-category: "Platform Portal"
+title: "Platform Portal 2016-02-18"
 space: "Release Notes"
+category: "Platform Portal"
 ---
 
+***Date: February 8, 2016***
 
 ## Features
 

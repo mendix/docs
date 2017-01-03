@@ -1,7 +1,7 @@
 ---
 title: "Model SDK 1.0.2"
-category: "Model SDK"
 space: "Release Notes"
+category: "Model SDK"
 ---
 This release replaces all previous SDK versions as our API endpoints have been changed and finalized.
 Please run `npm update mendixmodelsdk --save`.

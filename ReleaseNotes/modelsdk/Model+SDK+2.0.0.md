@@ -1,7 +1,7 @@
 ---
 title: "Model SDK 2.0.0"
-category: "Model SDK"
 space: "Release Notes"
+category: "Model SDK"
 ---
 This release introduces a number of breaking changes in the SDK's API, so because of semantic versioning we need to up the major version.
 

@@ -1,15 +1,15 @@
 ---
-title: "Release Notes 1.8.0"
-space: "Application Performance Monitor"
-category: "Release Notes"
+title: "APM 1.8.0"
+space: "Release Notes"
+category: "APM"
 ---
 The theme for this version is a tool summary on a dashboard and improved styling.
 
-## 1 GUI Makeover to Match Style With Mansystems Applications Test Suite
+## GUI Makeover to Match Style With Mansystems Applications Test Suite
 
 The new console is more about presenting information instead of more stop/start buttons and navigation.
 
-## ![](attachments/Release_Notes_1.8.0/Console.png)
+![](attachments/apm-1.8.0/Console.png)
 
 The new console has four parts:
 * The statistics of the last 10 minutes are shown (this is configurable)
@@ -17,15 +17,15 @@ The new console has four parts:
 * The Trap tool shows the latest traps
 * The Log tool shows the latest messages
 
-## 2 Trap Tool Separates Trap and Messages
+## Trap Tool Separates Trap and Messages
 
 The Trap tool separartes the trap and the messages, so that it is clearer which messages belong to which trap, and in order to show a list of traps without messages in the GUI.
 
-## ![](attachments/Release_Notes_1.8.0/Trap_View.png)
+![](attachments/apm-1.8.0/Trap_View.png)
 
-## ![](attachments/Release_Notes_1.8.0/Statistics_Tool.png)
+![](attachments/apm-1.8.0/Statistics_Tool.png)
 
-## 3 Gathering Statistics Over More Periods
+## Gathering Statistics Over More Periods
 
 The statistics tool now gathers statistics over different time periods:
 * Since startup
@@ -35,9 +35,9 @@ The statistics tool now gathers statistics over different time periods:
 * For measurement triggers (between once and twice according to the console frequency, in order to prevent the statistics from just being reset when a trigger fires)
 * These statistics are saved in the stored statistics when a trigger fires and is configured to store statistics
 
-## ![](attachments/Release_Notes_1.8.0/Traps.png)
+![](attachments/apm-1.8.0/Traps.png)
 
-## 4 Bug Fixes and Minor Changes
+## Bug Fixes and Minor Changes
 * We replaced the Mansystems customized String Formatter widget with the AppStore FormatString widget, in order to reduce the number of custom widgets and to keep APM maintainable.
 * We made custom APM versions of the standard AppStore widgets in order to prevent conflicts with other versions of the widget for customers.
 * We moved the JDBC settings from the query tool to the global settings in order to simplify and separate the configuration from usage.
@@ -49,7 +49,7 @@ The statistics tool now gathers statistics over different time periods:
 * We fixed the situation in which a new measurement being defined had no real measurements (you could not define triggers, because they depended on the column records that were automatically generated).
 * The measurements tool has measurements in a collapsible container, so if you have a lot of measurements and some have multiple columns, you will now see a second grid appear.
 
-## 5 Known Issues
+## Known Issues
 * The JDBC query and explain-plan functionality against MySQL has not been tested.
 * The JDBC query and explain-plan functionality for the built-in database work only after starting the database viewer in the Mendix Modeler from the advanced menu of the console.
 * The performance tool can run out of memory when recording. The protection options advised for the performance tool still expect 1GB of available memory, so for small implementations, the protection options should be stricter.

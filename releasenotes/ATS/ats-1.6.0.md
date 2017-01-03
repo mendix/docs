@@ -1,11 +1,12 @@
 ---
-title: "Mendix ATS 1.6.0 Release Notes"
-space: "ATS (Application Test Suite)"
-category: "Release Notes"
----
-Date: August 29, 2016
+title: "ATS 1.6.0"
+space: "Release Notes"
+category: "ATS"
 
-### Data-Driven Testing
+---
+***Date: August 29, 2016***
+
+## Data-Driven Testing
 
 ATS 1.6 is equipped with a highly demanded feature, namely data-driven testing. It is now possible to outsource test data from test cases and manage both separately. There is a new tab in the repository to define data sets and create records. You can import existing data from Excel sheets or export all data for easier maintenance.
 
@@ -15,7 +16,7 @@ The most beneficial use however is to cover multiple test scenarios with a singl
 
 Check the documentation on how to [create/maintain test data](https://world.mendix.com/display/ATS/Data+Management#DataManagement-TestData) and [use it within a test case](https://world.mendix.com/display/ATS/Data+Driven+Tests).
 
-# Other fixes
+## Other fixes
 
 *   Click Widget action now doesn’t try to click invisible widgets
 *   Recorder now also records when there is no mxname class on the lowest element
@@ -24,10 +25,10 @@ Check the documentation on how to [create/maintain test data](https://world.mend
 *   Improved layout and usability on import dialog and overview page
 *   Several theme fixes
 
-# Deprecations
+## Deprecations
 
 *   The _Click Item/Row_ action has been deprecated in favor of the generic _Click Widget_ action. To click a certain listview/templategrid/datagrid item/row you simply use the index classes (index-0 for the first, index-1 for the second item/row etc.).
 
-# Notes
+## Notes
 
 *   The data-driven testing feature lead to a change in the file format for exported repository items (test cases/suites, actions, folders, enumerations). As a consequence exports from 1.6 cannot be imported on older releases.

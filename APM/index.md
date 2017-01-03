@@ -10,6 +10,5 @@ This is the home of the documentation for the APM Tool.
 
 * [Introduction](introduction)
 * [Use Cases](use-cases)
-* [Release Notes](release-notes)
 * [Installation](installation)
 * [User Manual](user-manual)

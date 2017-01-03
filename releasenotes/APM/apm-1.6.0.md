@@ -1,18 +1,20 @@
 ---
-title: "Release Notes 1.6.0"
-space: "Application Performance Monitor"
-category: "Release Notes"
+title: "APM 1.6.0"
+space: "Release Notes"
+category: "APM"
+
 ---
 The theme for this version is Mendix 6 and a visual trend on microflow statistics to show at Mendix World.
 
 ## New feature: Graph on microflow statistics to show trend
 
 To better visualize and show trends in the history of microflow statistics a graph has been added to show the last 100 statistics. A button called [History] in the statistics tool and called [Show History Graph] on the microflow history (under search menu) shows the graph (to visualize a trend) on microflow statistics.
-![](attachments/Release_Notes_1.6.0/Microflow_Trend.png)
+
+![](attachments/apm-1.6.0/Microflow_Trend.png)
 
 With this feature during a performance analysis you can see if a microflow is taking more time to execute after a certain period of time. This can indicate a database table getting populated.
 
-## New BETA feature: Trigger on microflow statistics
+## New Beta feature: Trigger on microflow statistics
 
 Customers have asked to get a notification when a microflow runs longer than a certain amount of time. A quick (hence BETA) implementation was to gather microflow statistics in the query tool and use those as measurements. Then you can build a trigger on a measurement of a microflow statistic to for example send an e-mail.
 This feature will change in the future.

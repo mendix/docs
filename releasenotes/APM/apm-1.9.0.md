@@ -1,11 +1,11 @@
 ---
-title: "Release Notes 1.9.0"
-space: "Application Performance Monitor"
-category: "Release Notes"
+title: "APM 1.9.0"
+space: "Release Notes"
+category: "APM"
 ---
 The theme for this version is further enhancement of UX. 
 
-## ![](attachments/Release_Notes_1.9.0/Dashboard_1.9.0.png)
+![](attachments/apm-1.9.0/Dashboard_1.9.0.png)
 
 The measurements tool has been enhanced to allow for calculated measurements. This allows for 
 measuring memory as a percentage and triggering on 70% instead of some large number. The measurements tool

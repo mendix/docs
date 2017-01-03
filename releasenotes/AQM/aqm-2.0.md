@@ -1,11 +1,13 @@
 ---
-title: "Mendix AQM 2.0 Release Notes"
-category: "releasenotes"
+title: "AQM 2.0"
 space: "Release Notes"
+category: "AQM"
 ---
-**Quality Monitor tool update**
+
+## Quality Monitor tool update
+
 It is now possible to compare snapshots with each other. This functionality is similar to the metrics table.
-The Compare snapshot functionality shows the differences between 2 snapshots.
+The Compare snapshot functionality shows the differences between two snapshots.
 
 We have enhanced dependency graph with some nice new features so you can see more information about the dependencies:
 
@@ -15,7 +17,8 @@ We have enhanced dependency graph with some nice new features so you can see mor
 *   If you want to analyze the dependencies a bit further, you now can download the information in the DOT format. This can be used in tools like Graphviz.
 *   Large graphs are now correctly rendered again.
 
-**Analysis tool update - Pseudocode generator**
+## Analysis tool update - Pseudocode generator
+
 The Analysis tool has been enhanced a lot, this will mitigate the occurrence of commonly seen false positive duplicates in the Microflows and Pages:
 
 *   Render references similar to attributes in CreateObject action
@@ -26,5 +29,6 @@ The Analysis tool has been enhanced a lot, this will mitigate the occurrence of 
 *   Don’t render canvas size for pages and snippets
 *   AllowedRoles are now all rendered on a single line in the pseudo code of a Page
 
-**System Analysis Toolkit**
+## System Analysis Toolkit
+
 We have upgraded the Model to the latest version 8.0 of SIG/TÜVIT Maintainability Model (Feb. 2016 calibrated version).

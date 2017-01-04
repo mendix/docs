@@ -155,7 +155,7 @@ What it looks like in the Mendix Modeler:
 
 ### Entity
 
-A property of type Entity allows the user to configure an (non persistable) entity in the Mendix Modeler. This entity can then be used in your JavaScript to retrieve all the necessary information.
+A property of the type Entity allows the user to configure a non-persistable entity in the Mendix Modeler. This entity can then be used in your JavaScript to retrieve all the necessary information.
 
 ```xml
 <property key="color" type="entity" isPath="optional" allowNonPersistableEntities="true" pathType="reference">

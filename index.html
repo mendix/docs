@@ -8,7 +8,7 @@ description: 'Documentation for Mendix'
 {% assign refguide = "/refguideX/" | replace: "X", site.latest_major_version %}
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="{{ howto }}">How-to's</a></h1>
+    <h1 class="header-link"><a href="{{ howto }}">How-To's</a></h1>
   </div>
 </div>
 <div class="row">
@@ -38,6 +38,16 @@ description: 'Documentation for Mendix'
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/addons/">Add-Ons</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/addons.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
     <h1 class="header-link"><a href="/community/">Community</a></h1>
   </div>
 </div>
@@ -48,26 +58,20 @@ description: 'Documentation for Mendix'
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/releasenotes/">Release Notes</a></h1>
+  </div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/releasenotes.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
     <h1 class="header-link"><a href="/support/">Support</a></h1>
   </div>
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
     {% include blocks/support.html %}
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/apidocs/">Tools</a></h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    {% include blocks/tools.html %}
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    {% include blocks/releasenotes.html %}
   </div>
 </div>

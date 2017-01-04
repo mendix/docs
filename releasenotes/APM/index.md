@@ -2,7 +2,7 @@
 title: "APM"
 space: "Release Notes"
 ---
-Here are the release notes for APM:
+Here are the release notes for Mendix Application Performance Monitor:
 
 *   [APM 1.9.0](apm-1.9.0)
 *   [APM 1.8.0](apm-1.8.0)

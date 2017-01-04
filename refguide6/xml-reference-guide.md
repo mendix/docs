@@ -1,5 +1,5 @@
 ---
-title: "XML Reference Guide"
+title: "XML"
 space: "Reference Guide 6"
 category: "Modeler"
 # toc-level: 1 # set Table of contents maximum depth
@@ -76,12 +76,12 @@ Other possible attributes are:
 | --- | --- |
 | isList | Only used for the Object property type. |
 | entityProperty | Assigns a entity to a property. This should point to the **key** attribute of the **entity **to which it is related. |
-| allowNonPersistableEntities | Allows the selection of an non persistent entity. (By default it is false) |
+| allowNonPersistableEntities | Allows the selection of a non-persistable entity. (By default this is false.) |
 | defaultValue | The default value that a property starts with when it is created. |
 | required | Specifies if the property is a required field or not. Defaults to "True" if not present. |
 | isDefault | Marks a property as the default property that is selected when the widget is selected. |
-| multiline | Makes the string input mulitple lines, usefull for long texts. |
-| parameterIsList| Requires the parameter of a microflow to be a list of the type defined in the **entityProperty** |
+| multiline | Makes the string input mulitple lines, which is useful for long texts. |
+| parameterIsList| Requires the parameter of a microflow to be a list of the type defined in the **entityProperty**. |
 | isPath | _("no", "optional", "yes")_ The path for an attribute or entity property, it can be either "no", "optional" or "yes", where "no" is the default value if the property is left out. The "optional" means that the attribute/entity can be either the current entity (or an attribute of the current entity) or an entity (or attribute) over a 1-deep association. |
 | pathType | _("reference", "referenceSet")_ This defines what sort of reference should be shown for an entity/attribute over an association, either a "reference" or a "referenceSet". |
 

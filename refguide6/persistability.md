@@ -18,4 +18,4 @@ Non-persistable entities cannot be stored in the database and hence have no asso
 
 All objects associated with domain model entities are inherently transient when they are created in Mendix. In this context transient means they only exist in memory.
 
-When an objects is created, the database will not be accessed. The exception is when retrieving autonumber information when attributes of this type are present (autonumber attributes are only allowed for persistable entities). This means a transient object is eligible for garbage collection when not in use anymore.
+When an object is created, the database will not be accessed. The exception is when retrieving autonumber information when attributes of this type are present (autonumber attributes are only allowed for persistable entities). This means a transient object is eligible for garbage collection when not in use anymore.

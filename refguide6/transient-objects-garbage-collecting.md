@@ -3,15 +3,12 @@ title: "Transient Objects & Garbage Collecting"
 space: "Reference Guide 6"
 category: "Runtime"
 ---
-# Transient Objects & Garbage Collecting
-
-
 
 This article will explain the life-cycle of both persistable and non-persistable objects. How both of them flow through the platform memory. In order to understand the behavior of transient Objects there are a few facts that we need to be aware off:
 
 *   A Transient Object is an Object that is considered temporary and only exists in memory
 
-*   Non-Persistable (Non-persistent) Objects can only exist in memory
+*   Non-Persistable Objects can only exist in memory
 
 *   Persistable Objects that you do not commit only exist in Memory and we can also consider them as Transient Objects
 
@@ -21,7 +18,7 @@ This article will explain the life-cycle of both persistable and non-persistable
 
 The Mendix Platform uses an Object Cache to temporarily store every Object that is being retrieved. This improves the applications performance and provides a User with the possibility to change and use an Object without having to save all the values to the Database for all changes. Each Object that is being retrieved will pass through the cache, until the Object is no longer used it will stay in cache.
 
-Every Session in the Platform has its own instance in the Platform Cache, that means that all Transient Objects are Session specific and they will only exist in the Session in which they are created. Every change made in an Object will only exist for that User in that single session. As soon as the session is being destroyed all Non-Persistent Objects that remained in the cache will become eligible for Garbage Collection.
+Every Session in the Platform has its own instance in the Platform Cache, that means that all Transient Objects are Session specific and they will only exist in the Session in which they are created. Every change made in an Object will only exist for that User in that single session. As soon as the session is being destroyed all Non-Persistable Objects that remained in the cache will become eligible for Garbage Collection.
 
 Any references to the Mendix Platform Cache on this page or in any other piece of documentation will always refer to the Session specific instance.
 
@@ -35,15 +32,15 @@ Besides objects being used in a microflow, it is also possible that a user has t
 
 ### Objects used in the Client
 
-Non-Persistent Objects that are used in the browser will remain in the cache as long as you can still navigate to them using your browser back and forward buttons. Objects from a pop-up are garbage collect as soon as you close the form, but Objects in content could remain available. When you open forms sequentially the user will always be able to use the back/forward buttons in the browser unless you close any previous forms. If a form is closed the client cleans up the data in that form or when you open a different form using the navigation you also lose all the history and the Non-persistent Objects are no longer in use.
+Non-Persistable Objects that are used in the browser will remain in the cache as long as you can still navigate to them using your browser back and forward buttons. Objects from a pop-up are garbage collect as soon as you close the form, but Objects in content could remain available. When you open forms sequentially the user will always be able to use the back/forward buttons in the browser unless you close any previous forms. If a form is closed the client cleans up the data in that form or when you open a different form using the navigation you also lose all the history and the Non-persistable Objects are no longer in use.
 
 ### Objects used in Microflow
 
-Non-Persistent Objects that are no longer used in a Microflow or a form can still be considered in use. Let’s say you have a process where you create a new Invoice, in the initial Microflow you’re creating some Non-persistent Objects and set the association with the Invoice you are going to show in a form. As long as the instance of the Invoice is considered ‘in use’ the platform will also consider all the Non-persistent Objects ‘in use’ which you can retrieve over association. Even if I have no interest in accessing my earlier created Non-persistent Objects they will remain in the cache until my Invoice Objects is being removed from the cache.
+Non-Persistable Objects that are no longer used in a Microflow or a form can still be considered in use. Let’s say you have a process where you create a new Invoice, in the initial Microflow you’re creating some Non-persistable Objects and set the association with the Invoice you are going to show in a form. As long as the instance of the Invoice is considered ‘in use’ the platform will also consider all the Non-persistable Objects ‘in use’ which you can retrieve over association. Even if I have no interest in accessing my earlier created Non-persistable Objects they will remain in the cache until my Invoice Objects is being removed from the cache.
 
 ### Associated Objects
 
-But what about using associations between Non-persistent Objects and System.User or any subclass. A User is always present in the cache because it is always used. The user is used in the browser (you are a User, the browser checks security, etc) and a user is always available in the Microflow as the currentUser variable. So if we look at our previous rule, “Non-persistent Objects are considered ‘in use’ when they have an association to an Object that is ‘in use’”, and a User is always in use, the platform will never garbage collect any Non-persistent Objects with an association to a (specialization of) System.User.
+But what about using associations between Non-persistable Objects and System.User or any subclass. A User is always present in the cache because it is always used. The user is used in the browser (you are a User, the browser checks security, etc) and a user is always available in the Microflow as the currentUser variable. So if we look at our previous rule, “Non-persistable Objects are considered ‘in use’ when they have an association to an Object that is ‘in use’”, and a User is always in use, the platform will never garbage collect any Non-persistable Objects with an association to a (specialization of) System.User.
 
 ### Retained Objects in Java
 
@@ -59,7 +56,7 @@ All retained objects are considered ‘in use’ until you manually remove that 
 this.getContext().getSession().release( myMendixObject );
 ```
 
-After calling the release function the Non-Persistent Object will be removed according to the normal rules.
+After calling the release function the Non-Persistable Object will be removed according to the normal rules.
 
 ### Cache clean-up process
 
@@ -93,7 +90,7 @@ The Cache holds a list of all the Objects that have been put in there. Even if t
 Whenever a Transient Object is no longer used you should remove the Object from Cache. If an Object is removed from Cache it allows the Garbage Collector to reuse the allocated memory and increase the applications performance. 
 Objects can be removed from Cache either by deleting it or by performing a rollback. ToDo: Analyze if this statement is supposed to be true.
 
-There is no difference in the behavior of a Rollback and a Delete when it’s executed for Transient Objects compared to Objects in the database. If you delete a Transient Object, it will also execute any delete behavior or prevention that is configured. Even if all the Objects are not-persistent.
+There is no difference in the behavior of a Rollback and a Delete when it’s executed for Transient Objects compared to Objects in the database. If you delete a Transient Object, it will also execute any delete behavior or prevention that is configured. Even if all the Objects are non-persistable.
 
 ## Related articles
 

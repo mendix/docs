@@ -64,7 +64,7 @@ For more information, see the [App Store Overview](app-store-overview).
 
 ## 7 Job Board
 
-Because Mendix customers and partners are committed to changing their business and markets through digital innovation, they need top talent like you to make an immediate impact and a lasting difference. With the [Mendix Job Board[(https://developers.mendix.com/jobs), you can find your next great career opportunity right now.
+Because Mendix customers and partners are committed to changing their business and markets through digital innovation, they need top talent like you to make an immediate impact and a lasting difference. With the [Mendix Job Board](https://developers.mendix.com/jobs), you can find your next great career opportunity right now.
 
 The **Jobs** section of the Developers site presents the latest job opportunities to be posted on the job board:
 
@@ -72,7 +72,7 @@ The **Jobs** section of the Developers site presents the latest job opportunitie
 
 Clicking any job title will bring you to that specific page of the job board, where you can find all the details necessary on that particular job opportunity. Clicking **VIEW ALL** will bring you to the main page of the Mendix job board, where you can see all of the job postings.
 
-For more information, see [The Mendix Job Dashboard](the-mendix-job-dashboard).
+For more information, see [The Mendix Job Board](the-mendix-job-board).
 
 ## 8 Meetups
 

@@ -54,5 +54,5 @@ deploy:
 #   on:
 #     branch:
 #       - feature_development
-# after_deploy:
-#  - gulp algolia
+after_deploy:
+ - gulp algolia

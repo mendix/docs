@@ -17,7 +17,7 @@ These pages provide more information on the various projects that the Community 
 * [How to Set Up Your Community Profile](how-to-set-up-your-profile)
 * [How to Set Up Your Partner Profile](how-to-set-up-your-partner-profile)
 * [The Mendix Forum](the-mendix-forum)
-* [The Mendix Job Dashboard](the-mendix-job-dashboard)
+* [The Mendix Job Board](the-mendix-job-board)
 * [The Mendix MVP Program](the-mendix-mvp-program)
 
 ## 3 Community Documentation

@@ -4,8 +4,7 @@ space: "Reference Guide 6"
 parent: "object-activities"
 ---
 
-
-This action can commit one or more objects. For persistent entities this means that the object will be stored in the database. Committing non-persistable entities stores the current attribute values and association values in memory, this allows a rollback to revert to those values. See also [Persistability](persistability).
+This action can commit one or more objects. For persistable entities, this means that the object will be stored in the database. Committing non-persistable entities stores the current attribute values and association values in memory, this allows a rollback to revert to those values. See also [Persistability](persistability).
 
 <div class="alert alert-info">{% markdown %}
 

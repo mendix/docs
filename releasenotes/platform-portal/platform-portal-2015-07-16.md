@@ -1,0 +1,12 @@
+---
+title: "Platform Portal 2015-07-16"
+space: "Release Notes"
+category: "Platform Portal"
+---
+
+
+***Date: July 16, 2015***
+
+## Bug fixes
+
+*   Various small fixes

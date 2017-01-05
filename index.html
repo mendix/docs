@@ -2,14 +2,13 @@
 title: 'Mendix Documentation'
 layout: mxoverview
 maintitle: 'Mendix Documentation'
-description: "The Mendix Documentation helps you become a better developer. We provide reference guides, how-to's, support docs, and more. Learn, and build better apps."
-priority: 10
+description: 'Documentation for Mendix'
 ---
 {% assign howto = "/howtoX/" | replace: "X", site.latest_major_version %}
 {% assign refguide = "/refguideX/" | replace: "X", site.latest_major_version %}
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="{{ howto }}" title="Mendix {{ site.latest_major_version }} How-to's">How-to's</a></h1>
+    <h1 class="header-link"><a href="{{ howto }}">How-To's</a></h1>
   </div>
 </div>
 <div class="row">
@@ -19,7 +18,7 @@ priority: 10
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="{{ refguide }}" title="Reference Guide for Mendix {{ site.latest_major_version }}">Reference Guide</a></h1>
+    <h1 class="header-link"><a href="{{ refguide }}">Reference Guide</a></h1>
   </div>
 </div>
 <div class="row">
@@ -29,7 +28,7 @@ priority: 10
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/apidocs/" title="API Documentation Overview">API &amp; SDK</a></h1>
+    <h1 class="header-link"><a href="/apidocs/">API &amp; SDK</a></h1>
   </div>
 </div>
 <div class="row">
@@ -39,7 +38,17 @@ priority: 10
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/community/" title="Community">Community</a></h1>
+    <h1 class="header-link"><a href="/addons/">Add-Ons</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/addons.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/community/">Community</a></h1>
   </div>
 </div>
 <div class="row">
@@ -49,21 +58,20 @@ priority: 10
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/support/" title="Mendix Support Documentation">Support</a></h1>
+    <h1 class="header-link"><a href="/releasenotes/">Release Notes</a></h1>
+  </div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/releasenotes.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/support/">Support</a></h1>
   </div>
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
     {% include blocks/support.html %}
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link">Tools</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    {% include blocks/tools.html %}
   </div>
 </div>

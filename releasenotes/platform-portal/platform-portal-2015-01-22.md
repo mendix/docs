@@ -1,0 +1,18 @@
+---
+title: "Platform Portal 2015-01-22"
+space: "Release Notes"
+category: "Platform Portal"
+---
+
+
+***Date: January 22, 2015***
+
+## Improvements
+
+*   Numerous small user interface improvements
+
+## New features
+
+### Deployment
+
+*   A new graph was introduced: JVM Process memory usage (read more about this here: [https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/))

@@ -12,16 +12,16 @@ _Default value:_ Do nothing
 
 ### Page (only for "Open a page")
 
-The [page](Page) that should be opened.
+The [page](page) that should be opened.
 
-See [Opening Pages](Opening+Pages).
+See [Opening Pages](opening-pages).
 
 ### Microflow (only for "Call a microflow")
 
-The [microflow](Microflow) that should be executed.
+The [microflow](microflow) that should be executed.
 
 ### Microflow settings (only for "Call a microflow")
 
 The microflow settings specify what parameters will be passed to the microflow, whether to show a progress bar or not, and more.
 
-See [Starting Microflows](Starting+Microflows).
+See [Starting Microflows](starting-microflows).

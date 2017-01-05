@@ -1,61 +1,64 @@
 ---
-title: "ATS (Application Test Suite)"
+title: "Application Test Suite (ATS)"
 space: "ATS (Application Test Suite)"
-redirect_from:
-  - "/ATS/Application+Test+Suite+Home"
-  - "/ATS/Reference+Guide"
 ---
 
-The Reference Guide is divided in different sections, each describing a certain feature of the ATS.
+The ATS Reference Guide is divided into the following different sections, each describing a certain feature of the application test suite (ATS).
 
-## [General](General)
+## [General](general)
 
-*   [Mendix Compatibility](General)
-*   [Browser Support](General#browser-support)
+*   [Mendix Compatibility](general)
+*   [Browser Support](general#browser-support)
+*   [Release Notes](release-notes)
 
-## [Introduction](Introduction)
+## [Introduction](introduction)
 
-*   [Start Page](Introduction#startpage)
-*   [Dashboard](Introduction#dashboard)
-*   [Navigation](Introduction#navigation)
-*   [User Roles](Introduction#different-user-roles)
+*   [Start Page](introduction#startpage)
+*   [Dashboard](introduction#dashboard)
+*   [Navigation](introduction#navigation)
+*   [User Roles](introduction#different-user-roles)
 
-## [Projects](Projects)
+## [Projects](projects)
 
-*   [Action Libraries](Projects#action-libraries)
-*   [Creation and Setup](Projects#creation-and-setup)
-*   [Switching Projects](Projects#switching-between-projects)
-*   [Project Dashboard](Projects#project-dashboard)
+*   [Action Libraries](projects#action-libraries)
+*   [Creation and Setup](projects#creation-and-setup)
+*   [Switching Projects](projects#switching-between-projects)
+*   [Project Dashboard](projects#project-dashboard)
 
-## [Data Management](Data+Management)
+## [Data Management](data-management)
 
-*   [Repository](Data+Management#repository)
-*   [Import/Export](Data+Management#importexport)
-*   [Test Data](Data+Management#test-data)
+*   [Repository](data-management#repository)
+*   [Import/Export](data-management#importexport)
+*   [Test Data](data-management#test-data)
 
-## [Monitoring](Monitoring)
+## [Monitoring](monitoring)
 
-*   [Test Results](Monitoring#test-results)
-*   [Running Tests](Monitoring#running-tests)
+*   [Test Results](monitoring#test-results)
+*   [Running Tests](monitoring#running-tests)
 
-## [Test Development](Test+Development)
+## [Test Development](test-development)
 
-*   [Object Types in the ATS](Object+Types+in+the+ATS)
-*   [Recorder](Recorder)
-*   [Manual Test Steps](Manual+Test+Steps)
-*   [Standard Action Overview](Standard+Action+Overview)
-*   [Custom Actions](Custom+Actions)
-*   [Data Driven Tests](Data+Driven+Tests)
-*   [Test Case Documentation](Test+Case+Documentation)
+*   [Object Types in the ATS](object-types-in-the-ats)
+*   [Recorder](recorder)
+*   [Manual Test Steps](manual-test-steps)
+*   [Standard Actions Reference](standard-actions-reference)
+*   [Custom Actions](custom-actions)
+*   [Custom Action Creation Tutorial](custom-action-creation-tutorial)
+*   [Selectors](selectors)
+*   [Best Practices](best-practices)
+*   [Data Driven Tests](data-driven-tests)
+*   [Test Case Documentation](test-case-documentation)
 
-## [Configuration](Configuration)
+## [Test Run](test-run)
 
-*   [Configure Selenium hubs](Configuration#configure-the-selenium-hubs)
-*   [Configure Test Applications](Configuration#configure-test-applications)
+## [Configuration](configuration)
 
-## [Administration](Administration)
+*   [Configure Selenium hubs](configuration#configure-the-selenium-hubs)
+*   [Configure Test Applications](configuration#configure-test-applications)
 
-*   [Manage Projects](Administration#manage-projects)
-*   [Add Selenium Configurations](Administration#add-selenium-configurations)
-*   [Add Applications](Administration#add-applications)
-*   [Create Accounts](Administration#create-accounts)
+## [Administration](administration)
+
+*   [Manage Projects](administration#manage-projects)
+*   [Add Selenium Configurations](administration#add-selenium-configurations)
+*   [Add Applications](administration#add-applications)
+*   [Create Accounts](administration#create-accounts)

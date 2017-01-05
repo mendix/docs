@@ -7,7 +7,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-push-1">
-            <h1 class="overview-title text-center">Page not found. Can we help search?</h1>
+            <span class="overview-title text-center">Page not found. Can we help search?</span>
             {% include search.html %}
           </div>
         </div>
@@ -17,14 +17,15 @@
       <div class="row main">
         <div class="col-md-12 content borderless">
           <div class="post">
-            <article class="post-content no-title">
+            <article class="post-content no-title not-found">
               {{ content }}
             </article>
           </div>
         </div>
       </div>
     </div>
-    <script src="{{ "/public/js/autocomplete_search.js" | prepend: site.baseurl }}" type="text/javascript" /></script>
     {% include footer.html %}
-  </body>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+    {% include asset.html type="js" filename="autocomplete_search.js" %}  </body>
 </html>

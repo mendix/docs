@@ -1,9 +1,0 @@
----
-layout: json
----
-{
-  "categories": [
-    "App Store"
-  ],
-  "pages": {% include json-snippets/get_pages.inc dir="/appstore/" %}
-}

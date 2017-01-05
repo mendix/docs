@@ -7,12 +7,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-8 col-xs-12">
-            <ol class="breadcrumb">
-                <li><a href="/">Docs</a></li>
-              {% if page.space %}
-                <li><a href="{{ page.dir }}">{{ page.space }}</a></li>
-              {% endif %}
-            </ol>
+            {% include breadcrumb.html %}
           </div>
           <div class="col-lg-4 col-md-4 col-xs-12">
             {% include search.html %}
@@ -34,7 +29,9 @@
               <div class="row post-header-row">
                 <div class="col-xs-9">
                   {% unless page.notoc %}
-                  <div id="toc" class="toc"></div>
+                    {% unless page.toc-level == 0 %}
+                      <div id="toc" class="toc" {% if page.toc-level %}data-level="{{ page.toc-level }}"{%endif%}></div>
+                    {% endunless %}
                   {% endunless %}
                 </div>
                 <div class="col-xs-3">
@@ -43,23 +40,14 @@
               </div>
               {{ content }}
             </article>
-            {% include github_file_info.html %}
+            {% include git_file_info.html %}
           </div>
         </div>
         <div class="col-md-3 col-xs-12 col-md-pull-9 sidebar">
           <div class="sidebar-menu">
             <div class="row">
               <div class="col-md-12">
-                <div class="btn-group jumpto_group">
-                  <button type="button" class="btn btn-default dropdown-toggle jumpto_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Jump to: <span class="caret jumpto_caret"></span>
-                  </button>
-                  <ul class="dropdown-menu jumpto_dropdown">
-                    {% for jump in site.data.jumpto %}
-                      <li><a href="{{ jump.url }}">{{ jump.title }}</a></li>
-                    {% endfor %}
-                  </ul>
-                </div>
+                {% include jumpto.html %}
               </div>
             </div>
             <div class="row">
@@ -80,7 +68,9 @@
       </div>
     </div>
     <a href="#" id="back-to-top" title="Back to top"><i class="glyphicon glyphicon-menu-up"></i></a>
-    <script src="{{ "/public/js/autocomplete_search.js" | prepend: site.baseurl }}" type="text/javascript" /></script>
     {% include footer.html %}
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+    {% include asset.html type="js" filename="autocomplete_search.js" %}
     </body>
 </html>

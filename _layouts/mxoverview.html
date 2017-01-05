@@ -7,7 +7,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10 col-md-push-1">
-            <h1 class="overview-title text-center">What can we help you with?</h1>
+            <span class="overview-title text-center">What can we help you with?</span>
             {% include search.html %}
           </div>
         </div>
@@ -22,7 +22,8 @@
         </div>
       </div>
     </div>
-    <script src="{{ "/public/js/autocomplete_search.js" | prepend: site.baseurl }}" type="text/javascript" /></script>
     {% include footer.html %}
-  </body>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+    {% include asset.html type="js" filename="autocomplete_search.js" %}  </body>
 </html>

@@ -1,5 +1,6 @@
 ---
 layout: json
+sitemap: false
 ---
 {
   "categories": [
@@ -11,7 +12,8 @@ layout: json
     "Data Management",
     "Scheduling",
     "Configuration",
-    "Monitoring"
+    "Monitoring",
+    "Release Notes"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="/ATS/" %}
+  "pages": {% include json-snippets/get_pages_per_space.inc space="ATS (Application Test Suite)" %}
 }

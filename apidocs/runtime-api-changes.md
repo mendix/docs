@@ -41,7 +41,7 @@ This is needed to avoid potential namespace conflicts between the Mendix version
 | com.mendix.core.conf.CoreConstants | - |
 | com.mendix.core.conf.AdminActionConstants | - |
 | com.mendix.core.conf.Tokens | - |
-| com.mendix.externalinterface.connector.RequestHandler.XAS\_SESSION\_ID| *Used in RequestHandler:* com.mendix.externalinterface.connector.RequestHandler.getSessionCookieName()<br> *Used as a constant:* com.mendix.core.Core.getConfiguration.getSessionIdCookieName() |
+| com.mendix.externalinterface.connector.RequestHandler.XAS\_SESSION\_ID| *Used in RequestHandler:* com.mendix.externalinterface.connector.RequestHandler.getSessionCookieName()<br> *Used as a constant:* com.mendix.core.Core.getConfiguration().getSessionIdCookieName() |
 
 ### Other Classes and Methods
 

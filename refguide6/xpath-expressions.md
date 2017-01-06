@@ -74,9 +74,9 @@ However, it is strongly recommended not to use this notation. This is because it
 
 See [this page](xpath-constraint-functions) for information on the available functions.
 
-## Exist-expressions
+## Exist Expressions
 
-The last type of expression, the exist-expression, can be used to check whether a specific association is filled or not.
+The last type of expression, the exist expression, can be used to check whether a specific association is filled or not.
 
 <div class="alert alert-info">{% markdown %}
 

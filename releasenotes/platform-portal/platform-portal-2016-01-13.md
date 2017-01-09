@@ -1,7 +1,7 @@
 ---
 title: "Platform Portal 2016-01-13"
 space: "Release Notes"
-category: "Platform Portal""
+category: "Platform Portal"
 ---
 
 

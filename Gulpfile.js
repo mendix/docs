@@ -214,3 +214,5 @@ gulp.task('build', `Jekyll build, using ${CONFIG}. Used for production`, done =>
 gulp.task('build-test', `Jekyll build, using ${CONFIG_TEST}. Used for test`, done => {
   runSequence('clean', 'write:githistory', ['jekyll:build-test', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
 });
+
+gulp.task('test', `Test the html and menu`, ['check:html', 'check:menu']);

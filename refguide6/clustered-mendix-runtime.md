@@ -9,7 +9,7 @@ This feature is not finished completely yet, therefore it starts with an overvie
 
 <div class="alert alert-warning">{% markdown %}
 
-Clustering Support is **beta** feature. This means that it is _not supported_ in production environments. As this feature has been redesigned completely in Mendix 7, we advice to skip this clustering implementation.
+Clustering Support is **beta** feature. This means that it is _not supported_ in production environments. We recommend skipping this clustering implementation beccause this feature has been redesigned completely in Mendix 7.
 
 {% endmarkdown %}</div>
 

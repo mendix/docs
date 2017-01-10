@@ -50,5 +50,5 @@ Here are the release notes for the Mendix Modeler:
 * [Modeler 5.11.1](modeler-5.11.1)
 * [Modeler 5.11.0](modeler-5.11.0)
 * [Modeler 5.10.0](modeler-5.10.0)
-* [Modeler 5.09.0](modeler-5.09.0)
-* [Modeler 4.08.10](modeler-4.08.10)
+* [Modeler 5.9.0](modeler-5.9.0)
+* [Modeler 4.8.10](modeler-4.8.10)

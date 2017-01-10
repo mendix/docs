@@ -1,0 +1,15 @@
+---
+layout: json
+---
+{
+  "categories": [
+    "Modeler",
+    "Platform Portal",
+    "SDK",
+    "APM",
+    "ATS",
+    "AQM",
+    "Beta Features"
+  ],
+  "pages": {% include json-snippets/get_pages_per_space.inc space="Release Notes" %}
+}

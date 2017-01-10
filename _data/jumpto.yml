@@ -11,7 +11,7 @@
 - title: "Reference Guide 5"
   url: "/refguide5/"
 - title: "Release Notes"
-  url: "https://world.mendix.com/display/ReleaseNotes/"
+  url: "/releasenotes/"
   external: true
 - title: "Support Documentation"
   url: "/support/"

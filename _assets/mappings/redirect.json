@@ -162,19 +162,19 @@
     },
     {
       "from": "/APM/Release+Notes",
-      "to": "/APM/release-notes"
+      "to": "/releasenotes/APM/"
     },
     {
       "from": "/APM/Release+Notes+1.6.0",
-      "to": "/APM/release-notes-1.6.0"
+      "to": "/releasenotes/APM/apm-1.6.0"
     },
     {
       "from": "/APM/Release+Notes+1.7.0",
-      "to": "/APM/release-notes-1.7.0"
+      "to": "/releasenotes/APM/apm-1.7.0"
     },
     {
       "from": "/APM/Release+Notes+1.8.0",
-      "to": "/APM/release-notes-1.8.0"
+      "to": "/releasenotes/APM/apm-1.8.0"
     },
     {
       "from": "/APM/Sizing+impact",
@@ -658,15 +658,15 @@
     },
     {
       "from": "/ATS/Release+Notes/",
-      "to": "/ATS/release-notes/"
+      "to": "/releasenotes/ATS/"
     },
     {
       "from": "/ATS/Release+Notes/Release+Notes+1+8+0",
-      "to": "/ATS/release-notes/release-notes-1-8-0"
+      "to": "/releasenotes/ATS/ats-1.8.0"
     },
     {
       "from": "/ATS/Release+Notes/Release+Notes+1+8+1",
-      "to": "/ATS/release-notes/release-notes-1-8-1"
+      "to": "/releasenotes/ATS/ats-1.8.1"
     },
     {
       "from": "/ATS/Scheduling",
@@ -5455,6 +5455,414 @@
     {
       "from": "/tips/Translatable+Validation+Messages",
       "to": "/tips/translatable-validation-messages"
+    },
+    {
+      "from": "/ReleaseNotes/",
+      "to": "/releasenotes/"
+    },
+    {
+      "from": "/ReleaseNotes/6.10.3",
+      "to": "/releasenotes/modeler/modeler-6.10.3"
+    },
+    {
+      "from": "/ReleaseNotes/6.10.2",
+      "to": "/releasenotes/modeler/modeler-6.10.2"
+    },
+    {
+      "from": "/ReleaseNotes/6.10.1",
+      "to": "/releasenotes/modeler/modeler-6.10.1"
+    },
+    {
+      "from": "/ReleaseNotes/6.10.0",
+      "to": "/releasenotes/modeler/modeler-6.10.0"
+    },
+    {
+      "from": "/ReleaseNotes/6.9.1",
+      "to": "/releasenotes/modeler/modeler-6.9.1"
+    },
+    {
+      "from": "/ReleaseNotes/6.9.0",
+      "to": "/releasenotes/modeler/modeler-6.9.0"
+    },
+    {
+      "from": "/ReleaseNotes/6.8.1",
+      "to": "/releasenotes/modeler/modeler-6.8.1"
+    },
+    {
+      "from": "/ReleaseNotes/6.8.0",
+      "to": "/releasenotes/modeler/modeler-6.8.0"
+    },
+    {
+      "from": "/ReleaseNotes/6.7.1",
+      "to": "/releasenotes/modeler/modeler-6.7.1"
+    },
+    {
+      "from": "/ReleaseNotes/6.7.0",
+      "to": "/releasenotes/modeler/modeler-6.7.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.21.5",
+      "to": "/releasenotes/modeler/modeler-5.21.5"
+    },
+    {
+      "from": "/ReleaseNotes/6.6.0",
+      "to": "/releasenotes/modeler/modeler-6.6.0"
+    },
+    {
+      "from": "/ReleaseNotes/6.5.1",
+      "to": "/releasenotes/modeler/modeler-6.5.1"
+    },
+    {
+      "from": "/ReleaseNotes/6.5.0",
+      "to": "/releasenotes/modeler/modeler-6.5.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.21.4",
+      "to": "/releasenotes/modeler/modeler-5.21.4"
+    },
+    {
+      "from": "/ReleaseNotes/6.4.1",
+      "to": "/releasenotes/modeler/modeler-6.4.1"
+    },
+    {
+      "from": "/ReleaseNotes/6.4.0",
+      "to": "/releasenotes/modeler/modeler-6.4.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.21.3",
+      "to": "/releasenotes/modeler/modeler-5.21.3"
+    },
+    {
+      "from": "/ReleaseNotes/6.3.1",
+      "to": "/releasenotes/modeler/modeler-6.3.1"
+    },
+    {
+      "from": "/ReleaseNotes/6.3.0",
+      "to": "/releasenotes/modeler/modeler-6.3.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.21.2",
+      "to": "/releasenotes/modeler/modeler-5.21.2"
+    },
+    {
+      "from": "/ReleaseNotes/6.2.1",
+      "to": "/releasenotes/modeler/modeler-6.2.1"
+    },
+    {
+      "from": "/ReleaseNotes/6.2.0",
+      "to": "/releasenotes/modeler/modeler-6.2.0"
+    },
+    {
+      "from": "/ReleaseNotes/6.1.0",
+      "to": "/releasenotes/modeler/modeler-6.1.0"
+    },
+    {
+      "from": "/ReleaseNotes/6.0.1",
+      "to": "/releasenotes/modeler/modeler-6.0.1"
+    },
+    {
+      "from": "/ReleaseNotes/5.21.1",
+      "to": "/releasenotes/modeler/modeler-5.21.1"
+    },
+    {
+      "from": "/ReleaseNotes/6.0.0",
+      "to": "/releasenotes/modeler/modeler-6.0.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.21.0",
+      "to": "/releasenotes/modeler/modeler-5.21.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.20.0",
+      "to": "/releasenotes/modeler/modeler-5.20.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.19.0",
+      "to": "/releasenotes/modeler/modeler-5.19.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.18.0",
+      "to": "/releasenotes/modeler/modeler-5.18.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.17.0",
+      "to": "/releasenotes/modeler/modeler-5.17.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.16.1",
+      "to": "/releasenotes/modeler/modeler-5.16.1"
+    },
+    {
+      "from": "/ReleaseNotes/5.16.0",
+      "to": "/releasenotes/modeler/modeler-5.16.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.15.1",
+      "to": "/releasenotes/modeler/modeler-5.15.1"
+    },
+    {
+      "from": "/ReleaseNotes/5.14.2",
+      "to": "/releasenotes/modeler/modeler-5.14.2"
+    },
+    {
+      "from": "/ReleaseNotes/4.08.10",
+      "to": "/releasenotes/modeler/modeler-4.08.10"
+    },
+    {
+      "from": "/ReleaseNotes/5.15.0",
+      "to": "/releasenotes/modeler/modeler-5.15.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.14.1",
+      "to": "/releasenotes/modeler/modeler-5.14.1"
+    },
+    {
+      "from": "/ReleaseNotes/5.14.0",
+      "to": "/releasenotes/modeler/modeler-5.14.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.13.1",
+      "to": "/releasenotes/modeler/modeler-5.13.1"
+    },
+    {
+      "from": "/ReleaseNotes/5.13.0",
+      "to": "/releasenotes/modeler/modeler-5.13.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.12.0",
+      "to": "/releasenotes/modeler/modeler-5.12.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.11.1",
+      "to": "/releasenotes/modeler/modeler-5.11.1"
+    },
+    {
+      "from": "/ReleaseNotes/5.11.0",
+      "to": "/releasenotes/modeler/modeler-5.11.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.10.0",
+      "to": "/releasenotes/modeler/modeler-5.10.0"
+    },
+    {
+      "from": "/ReleaseNotes/5.09.0",
+      "to": "/releasenotes/modeler/modeler-5.09.0"
+    },
+    {
+      "from": "/ReleaseNotes/Release+Notes+2016-10-05",
+      "to": "/releasenotes/platform-portal/platform-portal-2016-10-05"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2016-05-12",
+      "to": "/releasenotes/platform-portal/platform-portal-2016-05-12"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2016-03-24",
+      "to": "/releasenotes/platform-portal/platform-portal-2016-03-24"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2016-02-18",
+      "to": "/releasenotes/platform-portal/platform-portal-2016-02-18"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2016-01-13",
+      "to": "/releasenotes/platform-portal/platform-portal-2016-01-13"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-12-01",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-12-01"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-11-30",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-11-30"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-10-16",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-10-16"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-09-17",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-09-17"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-09-03",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-09-03"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-08-06",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-08-06"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-07-31",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-07-31"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-07-24",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-07-24"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-07-16",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-07-16"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-07-03",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-07-03"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-06-16",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-06-16"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-06-02",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-06-02"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-05-29",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-05-29"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-04-21",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-04-21"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-04-16",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-04-16"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-03-31",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-03-31"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-02-26",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-02-26"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-02-19",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-02-19"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-02-05",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-02-05"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2015-01-22",
+      "to": "/releasenotes/platform-portal/platform-portal-2015-01-22"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2014-12-30",
+      "to": "/releasenotes/platform-portal/platform-portal-2014-12-30"
+    },
+    {
+      "from": "/ReleaseNotes/Release+notes+2014-12-23",
+      "to": "/releasenotes/platform-portal/platform-portal-2014-12-23"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+3.0.1",
+      "to": "/releasenotes/SDK/model-sdk-3.0.1"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+3.0.0",
+      "to": "/releasenotes/SDK/model-sdk-3.0.0"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+2.9.1",
+      "to": "/releasenotes/SDK/model-sdk-2.9.1"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+2.9.0",
+      "to": "/releasenotes/SDK/model-sdk-2.9.0"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+2.8.1",
+      "to": "/releasenotes/SDK/model-sdk-2.8.1"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+2.8.0",
+      "to": "/releasenotes/SDK/model-sdk-2.8.0"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+2.7.0",
+      "to": "/releasenotes/SDK/model-sdk-2.7.0"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+2.6.3",
+      "to": "/releasenotes/SDK/model-sdk-2.6.3"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+2.6.0",
+      "to": "/releasenotes/SDK/model-sdk-2.6.0"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+2.5.0",
+      "to": "/releasenotes/SDK/model-sdk-2.5.0"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+2.4.0",
+      "to": "/releasenotes/SDK/model-sdk-2.4.0"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+2.3.0",
+      "to": "/releasenotes/SDK/model-sdk-2.3.0"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+2.2.2",
+      "to": "/releasenotes/SDK/model-sdk-2.2.2"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+2.1.0",
+      "to": "/releasenotes/SDK/model-sdk-2.1.0"
+    },
+    {
+      "from": "/ReleaseNotes/Platform+SDK+2.0.0",
+      "to": "/releasenotes/SDK/platform-sdk-2.0.0"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+2.0.0",
+      "to": "/releasenotes/SDK/model-sdk-2.0.0"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+1.2.0",
+      "to": "/releasenotes/SDK/model-sdk-1.2.0"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+1.1.1",
+      "to": "/releasenotes/SDK/model-sdk-1.1.1"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+1.1.0",
+      "to": "/releasenotes/SDK/model-sdk-1.1.0"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+1.0.2",
+      "to": "/releasenotes/SDK/model-sdk-1.0.2"
+    },
+    {
+      "from": "/ReleaseNotes/Platform+SDK+1.0.2",
+      "to": "/releasenotes/SDK/platform-sdk-1.0.2"
+    },
+    {
+      "from": "/ReleaseNotes/Model+SDK+1.0.0",
+      "to": "/releasenotes/SDK/model-sdk-1.0.0"
+    },
+    {
+      "from": "/ReleaseNotes/Application+Quality+Monitor",
+      "to": "/releasenotes/AQM/"
+    },
+    {
+      "from": "/ReleaseNotes/Mendix+AQM+2.0+Release+Notes",
+      "to": "/releasenotes/AQM/aqm-2.0"
+    },
+    {
+      "from": "/ReleaseNotes/Application+Performance+Monitor",
+      "to": "/releasenotes/APM/"
+    },
+    {
+      "from": "/ReleaseNotes/Mendix+AQM+2.0+Release+Notes",
+      "to": "/releasenotes/AQM/aqm-2.0"
+    },
+    {
+      "from": "/ReleaseNotes/Beta+features",
+      "to": "/releasenotes/beta-features/"
     }
   ]
 }

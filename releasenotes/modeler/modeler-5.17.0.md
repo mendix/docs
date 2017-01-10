@@ -8,7 +8,7 @@ category: "Modeler"
 
 ***Date: June 26, 2015***
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modelers/5.17.0)
+{% modelerdownloadlink 5.17.0 %}
 
 ## Backwards compatibility breaking changes
 

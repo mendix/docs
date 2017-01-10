@@ -228,8 +228,6 @@
   }
 }
 
-
-
 .header-link {
   font-size: 29px;
   font-weight: 100;
@@ -240,6 +238,11 @@
       color: $color-blue;
     }
   }
+}
+
+.btn-modeler {
+  @include border-radius(2px);
+  border-width: 0px;
 }
 
 #back-to-top {

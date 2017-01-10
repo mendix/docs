@@ -6,7 +6,7 @@ category: "Modeler"
 ---
 ***Date: September 26, 2016***
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modeler/6.9.0)
+{% modelerdownloadlink 6.9.0 %}
 
 ## Autologin improvements
 

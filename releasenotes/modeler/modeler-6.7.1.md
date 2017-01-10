@@ -8,7 +8,7 @@ category: "Modeler"
 
 
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modeler/6.7.1)
+{% modelerdownloadlink 6.7.1 %}
 
 ## Fixes
 
@@ -16,4 +16,4 @@ category: "Modeler"
 *   You can now use 6.7.1 for opening 5.21.5 projects (it was not possible to open 5.21.5 projects with 6.7.0). (Ticket 467011)
 *   We fixed the conversion issues in the Modeler due to excluded mapping documents.
 
-See also the [Mendix 6.7.0 Release Notes](https://world.mendix.com/display/ReleaseNotes/6.7.0).
+See also the [Mendix 6.7.0 Release Notes](6.7.0).

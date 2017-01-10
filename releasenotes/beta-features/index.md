@@ -1,7 +1,6 @@
 ---
 title: "Beta Features"
 space: "Release Notes"
-category: "Beta Features"
 ---
 
 ## 1 Beta Features Overview

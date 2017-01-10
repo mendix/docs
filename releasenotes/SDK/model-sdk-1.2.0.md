@@ -1,7 +1,7 @@
 ---
 title: "Model SDK 1.2.0"
 space: "Release Notes"
-category: "Model SDK"
+category: "SDK"
 ---
 | Story # | Impact | Description |
 | --- | --- | --- |

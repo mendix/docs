@@ -4,11 +4,9 @@ space: "Release Notes"
 category: "Modeler"
 
 ---
-
-
 ***Date: February 3, 2015***
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modelers)
+{% modelerdownloadlink 5.13.0 %}
 
 ## <a name="backwards-compatibility-breaking-changes" rel="nofollow"></a>Backwards compatibility breaking changes
 

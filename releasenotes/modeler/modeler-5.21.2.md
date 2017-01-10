@@ -8,9 +8,9 @@ category: "Modeler"
 
 ***Date: February 22, 2016***
 
-See also the release notes for Mendix [5.21.0](https://world.mendix.com/display/ReleaseNotes/5.21.0) and [5.21.1](https://world.mendix.com/display/ReleaseNotes/5.21.1).
+See also the release notes for Mendix [5.21.0](5.21.0) and [5.21.1](5.21.1).
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modeler/5.21.2)
+{% modelerdownloadlink 5.21.2 %}
 
 ## Fixes
 

@@ -7,9 +7,9 @@ category: "Modeler"
 
 ***Date: December 10, 2015***
 
-See also the release notes for Mendix [6.0.0](https://world.mendix.com/display/ReleaseNotes/6.0.0).
+See also the release notes for Mendix [6.0.0](6.0.0).
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modeler/6.0.1)
+{% modelerdownloadlink 6.0.1 %}
 
 ## Fixes
 

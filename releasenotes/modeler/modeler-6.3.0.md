@@ -7,7 +7,7 @@ category: "Modeler"
 
 ***Date: February 29, 2016***
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modeler/6.3.0)
+{% modelerdownloadlink 6.3.0 %}
 
 ## Improvements
 

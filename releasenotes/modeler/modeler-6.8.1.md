@@ -6,9 +6,9 @@ category: "Modeler"
 ---
 ***Date: September 8, 2016***
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modeler/6.8.1)
+{% modelerdownloadlink 6.8.1 %}
 
-See also the [Mendix 6.8.0 Release Notes](https://world.mendix.com/display/ReleaseNotes/6.8.0).
+See also the [Mendix 6.8.0 Release Notes](6.8.0).
 
 ## Fixes
 

@@ -1,7 +1,7 @@
 ---
 title: "Platform SDK 1.0.2"
 space: "Release Notes"
-category: "Model SDK"
+category: "SDK"
 ---
 
 ## Changed

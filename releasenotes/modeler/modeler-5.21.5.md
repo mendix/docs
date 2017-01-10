@@ -8,9 +8,9 @@ category: "Modeler"
 
 ***Date: July 22, 2016***
 
-See also the release notes for Mendix [5.21.0](https://world.mendix.com/display/ReleaseNotes/5.21.0), [5.21.1](https://world.mendix.com/display/ReleaseNotes/5.21.1), [5.21.2](https://world.mendix.com/display/ReleaseNotes/5.21.2), [5.21.3](https://world.mendix.com/display/ReleaseNotes/5.21.3) and [5.21.4](https://world.mendix.com/display/ReleaseNotes/5.21.4).
+See also the release notes for Mendix [5.21.0](5.21.0), [5.21.1](5.21.1), [5.21.2](5.21.2), [5.21.3](5.21.3) and [5.21.4](5.21.4).
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modeler/5.21.5)
+{% modelerdownloadlink 5.21.5 %}
 
 ## New feature
 

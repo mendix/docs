@@ -8,7 +8,7 @@ category: "Modeler"
 
 ***Date: December 29, 2014***
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modelers)
+{% modelerdownloadlink 5.12.0 %}
 
 ## Features
 

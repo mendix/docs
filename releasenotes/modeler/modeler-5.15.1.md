@@ -7,9 +7,9 @@ category: "Modeler"
 
 ***Date: May 6, 2015***
 
-See also the release notes for Mendix [5.15.0](https://world.mendix.com/display/ReleaseNotes/5.15.0).
+See also the release notes for Mendix [5.15.0](5.15.0).
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modelers/5.15.1)
+{% modelerdownloadlink 5.15.1 %}
 
 ## <a name="fixes" rel="nofollow"></a>
 

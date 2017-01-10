@@ -81,7 +81,7 @@ defaults:
         - "refguide6"
         - "community"
   - scope:
-      path: 'ReleaseNotes'
+      path: 'releasenotes'
       type: pages
     values:
       menus:

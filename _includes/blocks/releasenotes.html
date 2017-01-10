@@ -1,13 +1,13 @@
 {% strip %}
 <div class="overview">
   <div class="row">
-    {% include blocks/overview_page_block.html dir="/releasenotes/" title="Modeler" page="index" icon="howto/-icon-gettingstarted.png" %}
-    {% include blocks/overview_page_block.html dir="/releasenotes/" title="Platform Portal" page="index" icon="howto/-icon-gettingstarted.png" %}
-    {% include blocks/overview_page_block.html dir="/releasenotes/" title="SDK" page="index" icon="howto/-icon-gettingstarted.png" %}
-    {% include blocks/overview_page_block.html dir="/releasenotes/" title="APM" page="index" icon="howto/-icon-gettingstarted.png" %}
-    {% include blocks/overview_page_block.html dir="/releasenotes/" title="ATS" page="index" icon="howto/-icon-gettingstarted.png" %}
-    {% include blocks/overview_page_block.html dir="/releasenotes/" title="AQM" page="index" icon="howto/-icon-gettingstarted.png" %}
-    {% include blocks/overview_page_block.html dir="/releasenotes/" title="Beta Features" page="index" icon="howto/-icon-gettingstarted.png" %}
+    {% include blocks/overview_block.html dir="/releasenotes/modeler/" category="Modeler" overview=true icon="howto/-icon-gettingstarted.png" %}
+    {% include blocks/overview_block.html dir="/releasenotes/platform-portal/" category="Platform Portal" overview=true icon="howto/-icon-gettingstarted.png" %}
+    {% include blocks/overview_block.html dir="/releasenotes/SDK/" category="SDK" overview=true icon="howto/-icon-gettingstarted.png" %}
+    {% include blocks/overview_block.html dir="/releasenotes/APM/" category="APM" overview=true icon="howto/-icon-gettingstarted.png" %}
+    {% include blocks/overview_block.html dir="/releasenotes/ATS/" category="ATS" overview=true icon="howto/-icon-gettingstarted.png" %}
+    {% include blocks/overview_block.html dir="/releasenotes/AQM/" category="AQM" overview=true icon="howto/-icon-gettingstarted.png" %}
+    {% include blocks/overview_block.html dir="/releasenotes/beta-features/" category="Beta Features" overview=true icon="howto/-icon-gettingstarted.png" %}
   </div>
 </div>
 {% endstrip %}

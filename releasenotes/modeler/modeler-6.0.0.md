@@ -8,7 +8,7 @@ category: "Modeler"
 
 ***Date: November 30, 2015***
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modeler/6.0.0)
+{% modelerdownloadlink 6.0.0 %}
 
 ## Migration from Mendix 5
 

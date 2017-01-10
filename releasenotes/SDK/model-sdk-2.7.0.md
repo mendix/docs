@@ -1,7 +1,7 @@
 ---
 title: "Model SDK 2.7.0"
 space: "Release Notes"
-category: "Model SDK"
+category: "SDK"
 ---
 | Impact | Description |
 | --- | --- |

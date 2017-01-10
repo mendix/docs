@@ -8,7 +8,7 @@ category: "Modeler"
 
 
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modeler/6.6.0)
+{% modelerdownloadlink 6.6.0 %}
 
 ## Consuming REST services
 

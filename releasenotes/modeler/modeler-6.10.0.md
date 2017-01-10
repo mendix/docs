@@ -6,7 +6,7 @@ category: "Modeler"
 ---
 ***Date: October 31, 2016***
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modeler/6.10.0)
+{% modelerdownloadlink 6.10.0 %}
 
 ## Region toggle settings moved
 

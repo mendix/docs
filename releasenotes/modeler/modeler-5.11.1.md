@@ -9,7 +9,7 @@ category: "Modeler"
 
 Please, see also the release notes for Mendix [5.11.0](5.11.0).
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modelers)
+{% modelerdownloadlink 5.11.1 %}
 
 ## Fixes
 

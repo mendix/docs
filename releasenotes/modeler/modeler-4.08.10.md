@@ -5,7 +5,7 @@ category: "Modeler"
 
 ---
 
-[![](attachments/download-button/download-button.png)](https://appstore.home.mendix.com/link/modelers/4.8.10)
+{% modelerdownloadlink 4.8.10 %}
 
 ## <a name="backwards-compatibility-breaking-changes" rel="nofollow"></a>Backwards compatibility breaking changes
 

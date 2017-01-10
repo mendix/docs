@@ -5875,6 +5875,10 @@
     {
       "from": "/ReleaseNotes/Beta+features",
       "to": "/releasenotes/beta-features/"
+    },
+    {
+      "from": "/ReleaseNotes/Application+Test+Suite",
+      "to": "/releasenotes/ATS/"
     }
   ]
 }

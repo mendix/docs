@@ -5461,6 +5461,14 @@
       "to": "/releasenotes/"
     },
     {
+      "from": "/ReleaseNotes/Release+Notes+Home",
+      "to": "/releasenotes/"
+    },
+    {
+      "from": "/ReleaseNotes/Modeler",
+      "to": "/releasenotes/modeler/"
+    },
+    {
       "from": "/ReleaseNotes/6.10.3",
       "to": "/releasenotes/modeler/modeler-6.10.3"
     },
@@ -5647,6 +5655,10 @@
     {
       "from": "/ReleaseNotes/5.09.0",
       "to": "/releasenotes/modeler/modeler-5.09.0"
+    },
+    {
+      "from": "/ReleaseNotes/Platform+Portal",
+      "to": "/releasenotes/platform-portal/"
     },
     {
       "from": "/ReleaseNotes/Release+Notes+2016-10-05",

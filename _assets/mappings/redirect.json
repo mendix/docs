@@ -5468,7 +5468,8 @@
     },
     {
       "from": "/ReleaseNotes/Modeler",
-      "to": "/releasenotes/modeler/"
+      "to": "/releasenotes/modeler/",
+      "disabled": true
     },
     {
       "from": "/ReleaseNotes/6.10.3",

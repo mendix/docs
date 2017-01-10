@@ -44,17 +44,24 @@
       return id.replace(/[ '"\+\-&]+/g, "-").toLowerCase();
     }
 
-    function normalizeUrl(url) {
-      // if (typeof url === 'string' && url.substr(-1) === '/') {
-      //   url = url.slice(0, -1);
-      // }
-      return url;
+    function sortPages(arr, getModifier, numFunc) {
+      return arr.sort(function (p1, p2) {
+        return numFunc(getModifier(p1)) - numFunc(getModifier(p2));
+      });
+    }
+
+    function sortModelerPages(arr) {
+      return sortPages(
+        arr,
+        function (p) { return p.id.replace("modeler-","").split(".").map(function (n) { return parseInt(n, 10) }); },
+        function (n) { return (n[0] ? n[0] * 10000 : 0) + (n[1] ? n[1] * 100 : 0) + (n[2] || 0); }
+      );
     }
 
     function addNormalLink(title, url) {
       return $([
         '<i class="link-icon link-icon-link"></i>',
-        url === null ? '' : '<a href="' + normalizeUrl(url) + '" data-page-title="' + title + '" title="' + title + '">',
+        url === null ? '' : '<a href="' + url + '" data-page-title="' + title + '" title="' + title + '">',
         '<div class="category-title" ' + (url === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
         url === null ? '' : '</a>'
       ].join(''));
@@ -65,7 +72,7 @@
         '<a class="expand-link" href="#' + id + '" data-toggle="collapse" aria-expanded="false" aria-controls="' + id + '">',
         '<i class="link-icon link-icon-menu"></i>',
         '</a>',
-        url === null ? '' : '<a title="' + title + '" data-page-title="' + title + '" href="' + normalizeUrl(url) + '">',
+        url === null ? '' : '<a title="' + title + '" data-page-title="' + title + '" href="' + url + '">',
         '<div class="category-title" ' + (url === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
         url === null ? '' : '</a>',
       ].join(''));
@@ -100,6 +107,10 @@
           catPage = data.pages.filter(function (page) { return page.title.toLowerCase() === cat.toLowerCase(); });
 
       var catUrl = catPage && catPage.length === 1 ? catPage[0].url : null;
+
+      if (catUrl === "/releasenotes/modeler/") {
+        getPages = sortModelerPages(getPages);
+      }
 
       if (getPages.length === 0 && catUrl) {
         $cat.append(addNormalLink(cat, catUrl));

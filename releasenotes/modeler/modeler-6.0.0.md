@@ -17,7 +17,7 @@ To make migration easier, see [Moving from 5 to 6](https://world.mendix.com/disp
 ## New features
 
 <div class="alert alert-info">{% markdown %}
-Please consult the [Beta features support](Beta+features) page when you are considering using the beta features listed below.
+Please consult the [Beta features support](/releasenotes/beta-features) page when you are considering using the beta features listed below.
 {% endmarkdown %}</div>
 
 *   [BETA] Support for clustered runtimes. Allows running multiple runtime instances of the Runtime in order to achieve high availability and horizontal scalability. For detailed information about this feature see: [Clustered Mendix Business Server](https://world.mendix.com/display/refguide6/Clustered+Mendix+Business+Server).

@@ -24,13 +24,13 @@ These are the new widgets now supported by ATS:
 * [CKEditor](https://appstore.home.mendix.com/link/app/1715/Mendix/CKEditor-For-Mendix) (not supported in recording yet)
 * [Bootstrap Wysiwyg Editor](https://appstore.home.mendix.com/link/app/902/Mendix/Bootstrap-Wysiwyg-Editor) (not supported in recording yet)
 
-The [Action Reference Guide](../standard-actions-reference#mendix-appstore-widgets-actions) lists the new actions.
+The [Action Reference Guide](/ATS/standard-actions-reference#mendix-appstore-widgets-actions) lists the new actions.
 
 ## Action Reference Guide and Tutorial
 
-If you use a widget that is not supported by ATS, you can help yourself and create your own actions. To help you with this, we now provide a [Tutorial](../custom-action-creation-tutorial) that explains how to create an action based on the example of the Boolean Slider widget.
+If you use a widget that is not supported by ATS, you can help yourself and create your own actions. To help you with this, we now provide a [Tutorial](/ATS/custom-action-creation-tutorial) that explains how to create an action based on the example of the Boolean Slider widget.
 
-We've also documented all our actions in a [Reference Guide](../standard-actions-reference). It describes all the actions that you can use in your test cases. In addition to that, it also references the internal actions that are very helpful if you want to create your own actions.
+We've also documented all our actions in a [Reference Guide](/ATS/standard-actions-reference). It describes all the actions that you can use in your test cases. In addition to that, it also references the internal actions that are very helpful if you want to create your own actions.
 
 ## Improved Recording
 

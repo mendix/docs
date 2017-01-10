@@ -5,6 +5,7 @@ space: "Release Notes"
 
 Here are the release notes for the Mendix Modeler:
 
+* [Modeler 6.10.3](modeler-6.10.3)
 * [Modeler 6.10.2](modeler-6.10.2)
 * [Modeler 6.10.1](modeler-6.10.1)
 * [Modeler 6.10.0](modeler-6.10.0)

@@ -5458,11 +5458,13 @@
     },
     {
       "from": "/ReleaseNotes/",
-      "to": "/releasenotes/"
+      "to": "/releasenotes/",
+      "disabled": true
     },
     {
       "from": "/ReleaseNotes/Release+Notes+Home",
-      "to": "/releasenotes/"
+      "to": "/releasenotes/",
+      "disabled": true
     },
     {
       "from": "/ReleaseNotes/Modeler",

@@ -5462,8 +5462,7 @@
     },
     {
       "from": "/ReleaseNotes/6.10.3",
-      "to": "/releasenotes/modeler/modeler-6.10.3",
-      "disabled": true
+      "to": "/releasenotes/modeler/modeler-6.10.3"
     },
     {
       "from": "/ReleaseNotes/6.10.2",
@@ -5759,8 +5758,7 @@
     },
     {
       "from": "/ReleaseNotes/Model+SDK+3.0.1",
-      "to": "/releasenotes/SDK/model-sdk-3.0.1",
-      "disabled": true
+      "to": "/releasenotes/SDK/model-sdk-3.0.1"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+3.0.0",

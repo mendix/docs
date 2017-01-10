@@ -75,7 +75,7 @@ Besides the text widget two more widgets have support for client-sided templatin
 *   Fix issue in the Modeler where pasting a widget with the same name as an existing one changed the name of that existing widget.
 *   Pass correct context to a microflow called from a static image. (Ticket 400589, 530493)
 *   Enable "Abort on validation errors" for microflow action buttons on grid. (Ticket 102896)
-*   Apply Mendix rounding (20.8) to decimal values when sending them to the client. (Ticket 314846)
+*   Apply Mendix rounding (modeler-20.8) to decimal values when sending them to the client. (Ticket 314846)
 
 ## Known issues
 

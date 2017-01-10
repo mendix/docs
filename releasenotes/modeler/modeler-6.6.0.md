@@ -104,5 +104,5 @@ Fixes:
 
 *   In case of domain model validation rules of type 'Equals', 'Range', 'Regular expression' or 'Maximum length', validation rules can fire prematurely for new objects. E.g. when a new object is opened in a Dataview and a microflow is triggered on that page before committing the object, the changes are already sent, while the validation rule is possibly not satisfied yet.
     The workaround for this is to either: 1\. Make sure the correct value is entered before the microfow is triggered 2\. Give the attribute a 'dummy' default value and give this the correct value before committing the object.
-    This issue will be fixed in the next release (6.7.0).
+    This issue will be fixed in the next release (modeler-6.7.0).
 *   If the checkboxes 'Store owner' or 'Store changedBy' are checked for non-persistable entities, unexpected behavior can occur when running the app. For example, runtime errors like "'System.owner' is not a persistable association" or "'System.changedBy' is not a persistable association" may appear. The workaround for this problem is to uncheck these checkboxes. This problem is solved in Mendix 6.10.

@@ -162,19 +162,19 @@
     },
     {
       "from": "/APM/Release+Notes",
-      "to": "/APM/release-notes"
+      "to": "/releasenotes/APM/"
     },
     {
       "from": "/APM/Release+Notes+1.6.0",
-      "to": "/APM/release-notes-1.6.0"
+      "to": "/releasenotes/APM/apm-1.6.0"
     },
     {
       "from": "/APM/Release+Notes+1.7.0",
-      "to": "/APM/release-notes-1.7.0"
+      "to": "/releasenotes/APM/apm-1.7.0"
     },
     {
       "from": "/APM/Release+Notes+1.8.0",
-      "to": "/APM/release-notes-1.8.0"
+      "to": "/releasenotes/APM/apm-1.8.0"
     },
     {
       "from": "/APM/Sizing+impact",
@@ -658,15 +658,15 @@
     },
     {
       "from": "/ATS/Release+Notes/",
-      "to": "/ATS/release-notes/"
+      "to": "/releasenotes/ATS/"
     },
     {
       "from": "/ATS/Release+Notes/Release+Notes+1+8+0",
-      "to": "/ATS/release-notes/release-notes-1-8-0"
+      "to": "/releasenotes/ATS/ats-1.8.0"
     },
     {
       "from": "/ATS/Release+Notes/Release+Notes+1+8+1",
-      "to": "/ATS/release-notes/release-notes-1-8-1"
+      "to": "/releasenotes/ATS/ats-1.8.1"
     },
     {
       "from": "/ATS/Scheduling",

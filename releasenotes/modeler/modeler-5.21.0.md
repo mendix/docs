@@ -8,7 +8,7 @@ category: "Modeler"
 
 <div class="alert alert-warning">{% markdown %}
 
-Mendix 5.21.0 is no longer available for download, please use version [5.21.1](5.21.1) instead. If you use entities with inheritance more than 3 levels deep, you are advised to upgrade to 5.21.1 or higher.
+Mendix 5.21.0 is no longer available for download, please use version [5.21.1](modeler-5.21.1) instead. If you use entities with inheritance more than 3 levels deep, you are advised to upgrade to 5.21.1 or higher.
 
 {% endmarkdown %}</div>
 

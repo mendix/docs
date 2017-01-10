@@ -8,7 +8,7 @@ category: "Modeler"
 
 ***Date: February 18, 2016***
 
-See also the release notes for Mendix [6.2.0](6.2.0).
+See also the release notes for Mendix [6.2.0](modeler-6.2.0).
 
 {% modelerdownloadlink 6.2.1 %}
 

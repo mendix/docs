@@ -8,7 +8,7 @@ category: "Modeler"
 
 {% modelerdownloadlink 6.10.2 %}
 
-See also the [Mendix 6.10.0 Release Notes](6.10.0).
+See also the [Mendix 6.10.0 Release Notes](modeler-6.10.0).
 
 ## Fixes
 

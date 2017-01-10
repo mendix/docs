@@ -7,7 +7,7 @@ category: "Modeler"
 
 ***Date: May 6, 2015***
 
-See also the release notes for Mendix [5.15.0](5.15.0).
+See also the release notes for Mendix [5.15.0](modeler-5.15.0).
 
 {% modelerdownloadlink 5.15.1 %}
 

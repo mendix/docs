@@ -4185,9 +4185,9 @@
       "to": "/refguide6/download-from-team-server-dialog"
     },
     {
-      "from": "/refguide6/Drop-down",
+      "from": "~\/refguide6\/Drop-down",
       "to": "/refguide6/drop_down",
-      "disabled": true
+      "exact": true
     },
     {
       "from": "/refguide6/Drop+Down+Widget",

@@ -4186,7 +4186,8 @@
     },
     {
       "from": "/refguide6/Drop-down",
-      "to": "/refguide6/drop_down"
+      "to": "/refguide6/drop_down",
+      "disabled": true
     },
     {
       "from": "/refguide6/Drop+Down+Widget",

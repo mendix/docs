@@ -33,13 +33,12 @@ This query returns all customers who have not placed at least one order.
 
 ```
 
-This query returns all customers who have not placed any orders and those that have not placed orders with a total value of more than 30,000 euros.
+This query returns all the customers who have placed *no* orders with a TotalPrice of *more than* 30,000, including those that have not place any orders at all.
 
 This query does not return the same result as:
 
-```
+```java
 //Sales.Customer[Sales.Customer_Order/Sales.Order/TotalPrice <= 30000]
-
 ```
 
-This query will also return all customers that have not placed any orders worth more than 30,000 euros. However, only customers that have placed at least one order will be retrieved! Customers without any orders will be excluded.
+This query returns all the customers who have placed *at least one* order with a TotalPrice of *less than* 30,000, regardless of the number of orders they have placed worth more than 30,000. For example, if a customer has placed two orders, one for 15,000 and one for 35,000, this query will return this customer, while the *not* query will not. Customers who have not placed any orders will not be returned by this query.

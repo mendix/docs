@@ -47,3 +47,6 @@ Create a microflow in which you retrieve all instances of the entity, loop throu
 
 When you deploy, you have to run this microflow one time, after which you can remove both the microflow and the button pointing to it, and then you can also remove the old attribute.
 
+## Effects of association type changes on existing associations
+
+When you have a one-to-many association and change it into a one-to-one association, be aware that duplicate associations are not cleaned up in the database. For example: a one-to-many association from entity A to entity B allows multiple references: a1 to b1, a1 to b2, etc. One-to-one associations only allow a single reference per object: a1 to b1. Duplicate association entries like a1 to b2 are not cleaned up when you redeploy your app.

@@ -1,6 +1,6 @@
 ---
 title: "Data Migration"
-space: "Reference Guid 6"
+space: "Reference Guide 6"
 parent: "data-storage"
 ---
 

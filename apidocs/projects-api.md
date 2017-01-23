@@ -28,7 +28,7 @@ The following operations are available in the Projects API.
 
 The CreateNewApp operation will create a new app and corresponding project. As parameters it requires a project name, a user name that is linked to a Mendix account, an [API Key](authentication) corresponding to that user account, and a project summary. The project summary may contain a brief description of the project.
 
-![](attachments/14778446/18582269.png)
+![](attachments/14778446/CreateNewAppCall.PNG)
 
 #### Parameters
 
@@ -125,6 +125,6 @@ The CommitOnlineWorkingCopyChangesToTeamServer action returns a String which is 
 
 Download the Projects API App Service below, so you can import it in your model:
 
-[ProjectsAPI 10.msd](attachments/14778446/16285850.msd)
+[ProjectsAPI 10.msd](attachments/14778446/ProjectsAPI 10.msd)
 
 In the consumed Projects API App Service settings, you will have to use a constant with the value `[https://sprintr.home.mendix.com/ws/ProjectsAPI/9/soap1](https://sprintr.home.mendix.com/ws/ProjectsAPI/9/soap1)` as Location.

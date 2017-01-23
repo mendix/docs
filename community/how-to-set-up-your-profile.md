@@ -32,11 +32,11 @@ If you access your profile through the **Developers** or **Leaderboards** tabs o
 
 ![](attachments/19202388/19398798.png)
 
-## 4 My Work
+## 4 Work
 
 You can add your Mendix project experience on this page by clicking **Add Project** and filling out the form (with the project name, a description, your role, other developers involved, skills involved, the customer, the industry, the period, and your visibility settings).
 
-You can add a screenshot here that will be shown on the **My Work** tab and that will be visible to other developers when they visit your Community Profile:
+You can add a screenshot here that will be shown on the **Work** tab and that will be visible to other developers when they visit your Community Profile:
 
 ![](attachments/19202388/19398799.png)
 
@@ -62,7 +62,30 @@ Make sure you meet all the requirements before making your profile public:
 * You have 100 or more points
 * Confirm if you are looking for a job or project
 
-## 7 Merging Your Accounts
+## 7 Public Activity
+
+After you make your profile public, a new tab will be available on your public profile called **Public Activity**:
+
+![](attachments/19202388/public_activity.png)
+
+This tab lists the following activities for which you can gain points:
+
+* Presentation given
+* Webinar attended
+* Mendix World 2016 attended
+* Meetup organized
+* Meetup attended
+* Hackathon winner
+* Hackathon finalist
+* Hackathon attended
+* Blog post added
+* App review added
+* MVP status reached
+* Expert course completed
+* Advanced course completed
+* Introduction course completed
+
+## 8 Merging Your Accounts
 
 Since the release of the Community Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your hard-earned points, certifications, and achievements in your efforts to climb the leaderboards.
 

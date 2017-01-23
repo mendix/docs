@@ -59,13 +59,13 @@ Retrieves the status of a background job that was queued for execution.
 | --- | --- | --- |
 | JobId | String | The ID of a background job that was provided to you by one of the ProjectsAPI operations. |
 
-![](attachments/14778446/18582277.png)
+![](attachments/14778446/RetrieveJobStatusCall.PNG)
 
 #### Output
 
 The output of the RetrieveJobStatus operation is a `JobStatus` entity with the following attributes:
 
-![](attachments/14778446/18582347.png)
+![](attachments/14778446/RetrieveJobStatusResponse.PNG)
 
 The `ProjectsAPI.JobState` enumeration can have the values `Running`, `Completed` or `Failed`.
 
@@ -127,4 +127,4 @@ Download the Projects API App Service below, so you can import it in your model:
 
 [ProjectsAPI 10.msd](attachments/14778446/ProjectsAPI 10.msd)
 
-In the consumed Projects API App Service settings, you will have to use a constant with the value `[https://sprintr.home.mendix.com/ws/ProjectsAPI/9/soap1](https://sprintr.home.mendix.com/ws/ProjectsAPI/9/soap1)` as Location.
+In the consumed Projects API App Service settings, you will have to use a constant with the value `https://sprintr.home.mendix.com/ws/ProjectsAPI/10/soap1` as Location.

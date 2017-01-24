@@ -1,7 +1,7 @@
 ---
 title: "MySQL"
 space: "Reference Guide 6"
-category: "data-storage"
+parent: "data-storage"
 ---
 Mendix introduced support for MySQL 5.5 in Mendix 5.12, and support for MariaDB 5.5\. in Mendix 5.16.
 

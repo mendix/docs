@@ -1,7 +1,7 @@
 ---
 title: "Oracle"
 space: "Reference Guide 6"
-category: "data-storage"
+parent: "data-storage"
 ---
 ## Known issue
 

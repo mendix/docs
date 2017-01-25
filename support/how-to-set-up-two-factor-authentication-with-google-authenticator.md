@@ -22,7 +22,7 @@ Technical Conctacts are required to use 2FA with their Mendix account when they 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-*   A Mendix account - create one at [http://www.mendix.com/try-now/](http://www.mendix.com/try-now/)
+*   A Mendix account - create one at [http://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup](http://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup)
 *   A computer and smartphone
 *   Google Authenticator and QR code reader installed and configured on your smartphone
 

@@ -18,7 +18,7 @@ This is the first how-to in a series of five on how to create a simple HRM appli
 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
-*   [Create a Mendix account](https://www.mendix.com/try-now/).
+*   [Create a Mendix account](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup).
 
 ## 2\. Create your app
 

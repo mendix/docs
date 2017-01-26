@@ -25,7 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To log in to the Partner Profile, edit it, and make it public, follow these steps:
 
-1. Log in to your own Community Profile profile [here](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/ownprofile/). With this action, Mendix knows who your are and which company is attached to your account.
+1. Log in to your own Community Profile profile [here](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/ownprofile/). With this action, Mendix knows who you are and which company is attached to your account.
 2. Navigate to the [Meet Our Partners page](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview). Your company will be shown at the top of the partners overview list.
 
     ![](attachments/19203677/20217909.png)
@@ -35,7 +35,7 @@ To log in to the Partner Profile, edit it, and make it public, follow these step
 
     ![](attachments/19203677/20217910.png)
     
-    If you are not authorized to edit the profile, but one or more of your colleagues are, a list with their email addresses is shown. Please contact them to gain access (for details about gaining access to colleagues, see [7 Make colleagues profile editor](#ProfileEditors)). If none of your colleagues is allowed, please submit a feedback item to gain access.
+    If you are not authorized to edit the profile but one or more of your colleagues are, a list with their email addresses is shown. To gain access to editing the profile, you can contact them (for more information, see [7 Make a Colleague a Profile Editor](#ProfileEditors)). If none of your colleagues are allowed, please submit a feedback item to gain access.
 
 4. After you're done editing the profile, you can set the profile to public so that the Community and customers can view it. To do so, simply click **Make this profile public**:
 
@@ -114,18 +114,18 @@ These fields are required before you can save a reference case: Project, Descrip
 
 </div>
 
-Customer can add reviews of your reference case. The average rating of all the reviews of all the projects will be shown on the **Meet our partners** overview page and the Partner Profile detail page. The Mendix Partner Success managers will check and moderate the reviews.
+Customer can add reviews of your reference case. The average rating of all the reviews of all the projects will be shown on the **Meet our partners** overview page and the Partner Profile details page. The Mendix Partner Success managers will check and moderate the reviews.
 
 ![](attachments/19203677/20217926.png)
 
 ![](attachments/19203677/20217927.png)
 
-## 7 Make colleagues profile editor<a name="ProfileEditors"></a>
+## 7 Making a Colleague a Profile Editor<a name="ProfileEditors"></a>
 
-To make colleagues profile editor, follow these steps:
+To make a colleague a profile editor, follow these steps:
 
 1. On the Partner Profile details page, click **Profile editor(s)**. All the employees attached to your company are shown in this overview.
-2. Select the employee you want to make profile editor.
+2. Select the employee you want to make a profile editor.
 3. Click **Make Profile Editor**.
 
 ## 8 Sorting of the Meet Our Partners Overview Page
@@ -161,7 +161,7 @@ For example, your company has 14 certified developers (CD). The biggest company 
 
 The following formula of the normalized KPI values of the company defines the sorting order between the partners:
 
-* *PR + (2xCD) + (0.5xML) + RP*
+* *PR + (2 x CD) + (0.5 x ML) + RP*
 
 ## 9 Related Content
 

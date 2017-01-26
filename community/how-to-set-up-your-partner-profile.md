@@ -19,13 +19,13 @@ The purpose of the Partner Profile is to provide the Mendix Community and custom
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a Community Profile (register [here](https://www.mendix.com/try-now/?utm_source=platform&utm_medium=platform&utm_campaign=signup); for more information, see [How to Set Up Your Community Profile](how-to-set-up-your-profile))
+* Have a Community Profile (register [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup); for more information, see [How to Set Up Your Community Profile](how-to-set-up-your-profile))
 
 ## 3 Logging In to the Partner Profile
 
 To log in to the Partner Profile, edit it, and make it public, follow these steps:
 
-1. Log in to your own Community Profile profile [here](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/ownprofile/). With this action, Mendix knows who your are and which company is attached to your account. Everybody within a company is allowed to edit that specific company's Partner Profile.
+1. Log in to your own Community Profile profile [here](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/ownprofile/). With this action, Mendix knows who you are and which company is attached to your account.
 2. Navigate to the [Meet Our Partners page](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview). Your company will be shown at the top of the partners overview list.
 
     ![](attachments/19203677/20217909.png)
@@ -34,6 +34,8 @@ To log in to the Partner Profile, edit it, and make it public, follow these step
 4. Click **Edit Partner Profile** to edit the profile (for details about editing, see [4 Editing the Partner Profile](#EditingthePartnerProfile)):
 
     ![](attachments/19203677/20217910.png)
+    
+    If you are not authorized to edit the profile but one or more of your colleagues are, a list with their email addresses is shown. To gain access to editing the profile, you can contact them (for more information, see [7 Make a Colleague a Profile Editor](#ProfileEditors)). If none of your colleagues are allowed, please submit a feedback item to gain access.
 
 4. After you're done editing the profile, you can set the profile to public so that the Community and customers can view it. To do so, simply click **Make this profile public**:
 
@@ -112,13 +114,21 @@ These fields are required before you can save a reference case: Project, Descrip
 
 </div>
 
-Customer can add reviews of your reference case. The average rating of all the reviews of all the projects will be shown on the partner the **Meet our partners** overview page and the Partner Profile detail page. The Mendix Partner Success managers will check and moderate the reviews.
+Customer can add reviews of your reference case. The average rating of all the reviews of all the projects will be shown on the **Meet our partners** overview page and the Partner Profile details page. The Mendix Partner Success managers will check and moderate the reviews.
 
 ![](attachments/19203677/20217926.png)
 
 ![](attachments/19203677/20217927.png)
 
-## 7 Sorting of the Meet Our Partners Overview Page
+## 7 Making a Colleague a Profile Editor<a name="ProfileEditors"></a>
+
+To make a colleague a profile editor, follow these steps:
+
+1. On the Partner Profile details page, click **Profile editor(s)**. All the employees attached to your company are shown in this overview.
+2. Select the employee you want to make a profile editor.
+3. Click **Make Profile Editor**.
+
+## 8 Sorting of the Meet Our Partners Overview Page
 
 The [Meet Our Partners overview page](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview) shows the Mendix Partner Community. The sorting is based on a combination of the following KPIs:
 
@@ -149,8 +159,10 @@ For example, your company has 14 certified developers (CD). The biggest company 
 * CD of smallest company KPI value – *0*
 * CD of your company KPI value – *(14 - 1) / (40-1) = 0.33*
 
-The sum of the normalized KPI values of the company (meaning, PR + CD + ML + RP) defines the sorting order between the partners.
+The following formula of the normalized KPI values of the company defines the sorting order between the partners:
 
-## 8 Related Content
+* *PR + (2 x CD) + (0.5 x ML) + RP*
+
+## 9 Related Content
 
 * [How to Set Up Your Community Profile](how-to-set-up-your-profile)

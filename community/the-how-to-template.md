@@ -4,7 +4,7 @@
 #category: "[Enter the category under which the document should be published (for example, "Mobile")]"
 #parent: "[Enter the parent document filename of this document if necessary (for example, "design-the-architecture")]"
 #description: "[Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed]"
-#tags: "[Add a maximum of 5-7 tags/keywords; keep them focussed on the most important topics of the document]"
+#tags: "[Add a maximum of 5-7 tags/keywords; keep them focused on the most important topics of the document]"
 #toc-level: "[Set to "0" when not using a table of contents, or set a number for the maximum depth of the TOC (for example, "3"); removing this will show all the levels that exist in the document]"
 ---
 

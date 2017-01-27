@@ -5,6 +5,9 @@ space: "Release Notes"
 
 These are the release notes for the Mendix Model SDK:
 
+* [3.0.3](3.0.3)
+* [3.0.2](3.0.2)
+* [3.0.1](3.0.1)
 * [3.0.0](3.0.0)
 * [2.9.1](2.9.1)
 * [2.9.0](2.9.0)

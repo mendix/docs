@@ -166,15 +166,15 @@
     },
     {
       "from": "/APM/Release+Notes+1.6.0",
-      "to": "/releasenotes/APM/apm-1.6.0"
+      "to": "/releasenotes/APM/1.6.0"
     },
     {
       "from": "/APM/Release+Notes+1.7.0",
-      "to": "/releasenotes/APM/apm-1.7.0"
+      "to": "/releasenotes/APM/1.7.0"
     },
     {
       "from": "/APM/Release+Notes+1.8.0",
-      "to": "/releasenotes/APM/apm-1.8.0"
+      "to": "/releasenotes/APM/1.8.0"
     },
     {
       "from": "/APM/Sizing+impact",
@@ -662,11 +662,11 @@
     },
     {
       "from": "/ATS/Release+Notes/Release+Notes+1+8+0",
-      "to": "/releasenotes/ATS/ats-1.8.0"
+      "to": "/releasenotes/ATS/1.8.0"
     },
     {
       "from": "/ATS/Release+Notes/Release+Notes+1+8+1",
-      "to": "/releasenotes/ATS/ats-1.8.1"
+      "to": "/releasenotes/ATS/1.8.1"
     },
     {
       "from": "/ATS/Scheduling",
@@ -4185,8 +4185,9 @@
       "to": "/refguide6/download-from-team-server-dialog"
     },
     {
-      "from": "/refguide6/Drop-down",
-      "to": "/refguide6/drop_down"
+      "from": "~\/refguide6\/Drop-down",
+      "to": "/refguide6/drop_down",
+      "exact": true
     },
     {
       "from": "/refguide6/Drop+Down+Widget",
@@ -5658,199 +5659,199 @@
     },
     {
       "from": "/ReleaseNotes/Release+Notes+2016-10-05",
-      "to": "/releasenotes/platform-portal/platform-portal-2016-10-05"
+      "to": "/releasenotes/platform-portal/2016-10-05"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2016-05-12",
-      "to": "/releasenotes/platform-portal/platform-portal-2016-05-12"
+      "to": "/releasenotes/platform-portal/2016-05-12"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2016-03-24",
-      "to": "/releasenotes/platform-portal/platform-portal-2016-03-24"
+      "to": "/releasenotes/platform-portal/2016-03-24"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2016-02-18",
-      "to": "/releasenotes/platform-portal/platform-portal-2016-02-18"
+      "to": "/releasenotes/platform-portal/2016-02-18"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2016-01-13",
-      "to": "/releasenotes/platform-portal/platform-portal-2016-01-13"
+      "to": "/releasenotes/platform-portal/2016-01-13"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-12-01",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-12-01"
+      "to": "/releasenotes/platform-portal/2015-12-01"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-11-30",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-11-30"
+      "to": "/releasenotes/platform-portal/2015-11-30"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-10-16",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-10-16"
+      "to": "/releasenotes/platform-portal/2015-10-16"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-09-17",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-09-17"
+      "to": "/releasenotes/platform-portal/2015-09-17"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-09-03",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-09-03"
+      "to": "/releasenotes/platform-portal/2015-09-03"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-08-06",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-08-06"
+      "to": "/releasenotes/platform-portal/2015-08-06"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-07-31",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-07-31"
+      "to": "/releasenotes/platform-portal/2015-07-31"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-07-24",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-07-24"
+      "to": "/releasenotes/platform-portal/2015-07-24"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-07-16",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-07-16"
+      "to": "/releasenotes/platform-portal/2015-07-16"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-07-03",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-07-03"
+      "to": "/releasenotes/platform-portal/2015-07-03"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-06-16",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-06-16"
+      "to": "/releasenotes/platform-portal/2015-06-16"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-06-02",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-06-02"
+      "to": "/releasenotes/platform-portal/2015-06-02"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-05-29",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-05-29"
+      "to": "/releasenotes/platform-portal/2015-05-29"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-04-21",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-04-21"
+      "to": "/releasenotes/platform-portal/2015-04-21"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-04-16",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-04-16"
+      "to": "/releasenotes/platform-portal/2015-04-16"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-03-31",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-03-31"
+      "to": "/releasenotes/platform-portal/2015-03-31"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-02-26",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-02-26"
+      "to": "/releasenotes/platform-portal/2015-02-26"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-02-19",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-02-19"
+      "to": "/releasenotes/platform-portal/2015-02-19"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-02-05",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-02-05"
+      "to": "/releasenotes/platform-portal/2015-02-05"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2015-01-22",
-      "to": "/releasenotes/platform-portal/platform-portal-2015-01-22"
+      "to": "/releasenotes/platform-portal/2015-01-22"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2014-12-30",
-      "to": "/releasenotes/platform-portal/platform-portal-2014-12-30"
+      "to": "/releasenotes/platform-portal/2014-12-30"
     },
     {
       "from": "/ReleaseNotes/Release+notes+2014-12-23",
-      "to": "/releasenotes/platform-portal/platform-portal-2014-12-23"
+      "to": "/releasenotes/platform-portal/2014-12-23"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+3.0.1",
-      "to": "/releasenotes/SDK/model-sdk-3.0.1"
+      "to": "/releasenotes/model-sdk/3.0.1"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+3.0.0",
-      "to": "/releasenotes/SDK/model-sdk-3.0.0"
+      "to": "/releasenotes/model-sdk/3.0.0"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+2.9.1",
-      "to": "/releasenotes/SDK/model-sdk-2.9.1"
+      "to": "/releasenotes/model-sdk/2.9.1"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+2.9.0",
-      "to": "/releasenotes/SDK/model-sdk-2.9.0"
+      "to": "/releasenotes/model-sdk/2.9.0"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+2.8.1",
-      "to": "/releasenotes/SDK/model-sdk-2.8.1"
+      "to": "/releasenotes/model-sdk/2.8.1"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+2.8.0",
-      "to": "/releasenotes/SDK/model-sdk-2.8.0"
+      "to": "/releasenotes/model-sdk/2.8.0"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+2.7.0",
-      "to": "/releasenotes/SDK/model-sdk-2.7.0"
+      "to": "/releasenotes/model-sdk/2.7.0"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+2.6.3",
-      "to": "/releasenotes/SDK/model-sdk-2.6.3"
+      "to": "/releasenotes/model-sdk/2.6.3"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+2.6.0",
-      "to": "/releasenotes/SDK/model-sdk-2.6.0"
+      "to": "/releasenotes/model-sdk/2.6.0"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+2.5.0",
-      "to": "/releasenotes/SDK/model-sdk-2.5.0"
+      "to": "/releasenotes/model-sdk/2.5.0"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+2.4.0",
-      "to": "/releasenotes/SDK/model-sdk-2.4.0"
+      "to": "/releasenotes/model-sdk/2.4.0"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+2.3.0",
-      "to": "/releasenotes/SDK/model-sdk-2.3.0"
+      "to": "/releasenotes/model-sdk/2.3.0"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+2.2.2",
-      "to": "/releasenotes/SDK/model-sdk-2.2.2"
+      "to": "/releasenotes/model-sdk/2.2.2"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+2.1.0",
-      "to": "/releasenotes/SDK/model-sdk-2.1.0"
+      "to": "/releasenotes/model-sdk/2.1.0"
     },
     {
       "from": "/ReleaseNotes/Platform+SDK+2.0.0",
-      "to": "/releasenotes/SDK/platform-sdk-2.0.0"
+      "to": "/releasenotes/platform-sdk/2.0.0"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+2.0.0",
-      "to": "/releasenotes/SDK/model-sdk-2.0.0"
+      "to": "/releasenotes/model-sdk/2.0.0"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+1.2.0",
-      "to": "/releasenotes/SDK/model-sdk-1.2.0"
+      "to": "/releasenotes/model-sdk/1.2.0"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+1.1.1",
-      "to": "/releasenotes/SDK/model-sdk-1.1.1"
+      "to": "/releasenotes/model-sdk/1.1.1"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+1.1.0",
-      "to": "/releasenotes/SDK/model-sdk-1.1.0"
+      "to": "/releasenotes/model-sdk/1.1.0"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+1.0.2",
-      "to": "/releasenotes/SDK/model-sdk-1.0.2"
+      "to": "/releasenotes/model-sdk/1.0.2"
     },
     {
       "from": "/ReleaseNotes/Platform+SDK+1.0.2",
-      "to": "/releasenotes/SDK/platform-sdk-1.0.2"
+      "to": "/releasenotes/platform-sdk/1.0.2"
     },
     {
       "from": "/ReleaseNotes/Model+SDK+1.0.0",
-      "to": "/releasenotes/SDK/model-sdk-1.0.0"
+      "to": "/releasenotes/model-sdk/1.0.0"
     },
     {
       "from": "/ReleaseNotes/Application+Quality+Monitor",
@@ -5858,15 +5859,11 @@
     },
     {
       "from": "/ReleaseNotes/Mendix+AQM+2.0+Release+Notes",
-      "to": "/releasenotes/AQM/aqm-2.0"
+      "to": "/releasenotes/AQM/2.0"
     },
     {
       "from": "/ReleaseNotes/Application+Performance+Monitor",
       "to": "/releasenotes/APM/"
-    },
-    {
-      "from": "/ReleaseNotes/Mendix+AQM+2.0+Release+Notes",
-      "to": "/releasenotes/AQM/aqm-2.0"
     },
     {
       "from": "/ReleaseNotes/Beta+features",

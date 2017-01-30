@@ -1,9 +1,0 @@
----
-title: "Platform Portal 2016-03-24"
-space: "Release Notes"
-category: "Platform Portal"
----
-
-***Date: March 4, 2016***
-
-*   Fixed the Invite API - it is again possible to invite other users to your app using a custom invitation flow.

@@ -35,7 +35,7 @@ On the resulting page, click on the green `Download` button. Make sure that 'Add
 
 ### 3.2 Step 2 – Install Module Dependencies
 
-The `PushNotifications` module has one dependency; the `Encryption` module. Include this dependency by downloading it from the App Store, similar to how you installed the `PushNotifications` module. While importing you may again get a dialog about overwriting project files, which you can confirm by clicking the `OK` button.
+The `PushNotifications` module has two dependencies; the `Encryption` module and the `Community Commons Function Library` module. Include both dependencies by downloading them from the App Store, similar to how you installed the `PushNotifications` module. While importing you may again get a dialog about overwriting project files, which you can confirm by clicking the `OK` button.
 
 If your project is using an older version of the [Encryption module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption), it might trigger an error for referencing a non-existent layout. Fix it by assigning the master layout of the `Encryption.ResponsiveLayout_Certificate` layout to another layout (in this specific use case it is not really important which layout is used). This does not apply to version 1.3.1 and higher.
 

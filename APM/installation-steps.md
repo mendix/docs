@@ -3,7 +3,7 @@ title: "Installation steps"
 space: "Application Performance Monitor"
 category: "Installation"
 ---
-This chapter describes the installation of the APM tool.
+This chapter describes the installation of the APM tool. For details on upgrading to a new version, see [Upgrade Steps](upgrade-steps).
 
 # Backup
 

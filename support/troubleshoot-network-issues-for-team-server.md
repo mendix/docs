@@ -9,7 +9,7 @@ category: "Mendix Support"
 
 ## 1 Introduction
 
-The Mendix Modeler needs to connect to Team Server, which is where all your projects are stored. Before you continue with this how-to, make sure that you are logged in to Mendix at [home.mendix.com/home/](https://home.mendix.com/home/). If you do not have an account, you can sign up here: [http://www.mendix.com/try-now/](http://www.mendix.com/try-now/).
+The Mendix Modeler needs to connect to Team Server, which is where all your projects are stored. Before you continue with this how-to, make sure that you are logged in to Mendix at [home.mendix.com/home/](https://home.mendix.com/home/). If you do not have an account, you can sign up here: [http://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup](http://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup).
 
 **This how-to will teach you how to do the following:**
 
@@ -20,7 +20,7 @@ The Mendix Modeler needs to connect to Team Server, which is where all your proj
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-*   A Mendix account - sign up for one [here](http://www.mendix.com/try-now/)
+*   A Mendix account - sign up for one [here](http://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup)
 *   Mendix Modeler installed - download the Mendix Modeler [here](https://appstore.mendix.com/)
 *   Download or upload a Team Server project in the Mendix Modeler
 

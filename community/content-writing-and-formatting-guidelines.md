@@ -10,7 +10,7 @@ This document presents guidelines for creating a common voice, style, and struct
 
 # 2 Types of Documentation
 
-## 2.1 The How-to's
+## 2.1 The How-To's
 
 The how-to's are contextual and version-specific guides on Mendix topics that take you through the necessary steps to achieve a goal, whether it's adding a Google Maps widget to your UI, importing Excel files, or consuming a web service. The how-to's use relevant information on Mendix components to create realistic scenarios with specific contexts, and they should deliver functionalities.
 
@@ -89,7 +89,7 @@ These are some tips to consider when formatting Markdown:
 
 This section presents detailed guidlines for writing a how-to. Read this section while referencing the [How-to Template](the-how-to-template-page).
 
-## 5.1 How-to Sections
+## 5.1 How-To Sections
 
 ### 5.1.1 Title
 
@@ -159,7 +159,7 @@ Add boxes, indicators, arrows, and other information to an image only if it make
 
 Keep the images as simple as possible, because having too many arrows on an image can make it confusing!
 
-## 5.2 How-to Content
+## 5.2 How-To Content
 
 ### 5.2.1 Documenting Microflows
 

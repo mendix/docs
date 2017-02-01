@@ -1,5 +1,11 @@
 ((function($) {
-  function searchClient (selector, debug) {
+  function searchClient (selector, opts) {
+    if (!opts) {
+      opts = {
+        debug: false,   // keep open after blur
+        target: 'self'  // target = self or new
+      };
+    }
     this.domain = 'https://docs.mendix.com';
     if (location.hostname === 'localhost') {
       this.domain = 'http://localhost:4000';
@@ -16,7 +22,7 @@
       console.warn('Mendix search: No algolia search library, did you include it?');
       return
     }
-    this.debug = typeof debug !== 'undefined' ? debug : false;
+    this.opts = opts;
     this.client = null;
     this.index = null;
     this.autocomplete = null;
@@ -31,7 +37,7 @@
     this.index = this.client.initIndex(this.config.indexName);
     this.autocomplete = $el.autocomplete({
         hint: false,
-        debug: this.debug
+        debug: this.opts.debug
       }, [{
           source: $.fn.autocomplete.sources.hits(this.index, { hitsPerPage: 5 }),
           displayKey: 'title',
@@ -65,7 +71,12 @@
       .on('autocomplete:selected', function(event, suggestion, dataset) {
         event.stopPropagation();
         event.preventDefault();
-        window.location = this.domain + suggestion.url.replace('.html', '');
+        var link = this.domain + suggestion.url.replace('.html', '');
+        if (this.opts.target === 'new') {
+          window.open(link);
+        } else {
+          window.location = link;
+        }
       }.bind(this))
       .on('autocomplete:cursorchanged', function (event, suggestion, dataset) {
         this.suggestion = suggestion;
@@ -89,7 +100,10 @@
   window.__searchClient = searchClient;
 
   if ($('#mendix_search').length === 1) {
-    new searchClient('#mendix_search', false);
+    new searchClient('#mendix_search', {
+      debug: false,
+      target: 'self'
+    });
   }
 
   if ($('.not-found-suggestion')) {

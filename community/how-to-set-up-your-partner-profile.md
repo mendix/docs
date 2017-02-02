@@ -43,7 +43,11 @@ To log in to the Partner Profile, edit it, and make it public, follow these step
 
 ## 4 Editing the Partner Profile<a name="EditingthePartnerProfile"></a>
 
-On the Partner Profile details page, you can edit the elements by clicking ![](attachments/19203677/19399148.png). These are some of the most important elements you can edit:
+On the Partner Profile details page, you can edit the elements by clicking this icon:
+
+![](attachments/19203677/19399148.png)
+
+These are some of the most important elements you can edit:
 
 * Below the company name at the top of the page, you can add the company's address (which will be displayed at the top of the profile) and/or email address (which will be used for the **Contact Us** button).
 * On the **Profile** tab of the details page, you can add a company video (YouTube or Vimeo):

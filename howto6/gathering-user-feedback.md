@@ -13,20 +13,20 @@ With Mendix, you can make use of the fully integrated feedback cycle functionali
 
 * Configure the widget
 * Gather, receive, and process feedback
-* Add a feedback story to the projec backlog
+* Add a feedback story to the app backlog
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Create a project containing a working application model
+* Create an app containing a working application model
 
-## 3 Ensuring the Mendix Feedback Widget Is Included in Your Project
+## 3 Ensuring the Mendix Feedback Widget Is Included in Your App
 
-The feedback widget is automatically included in any new project that you create. If you are working in an older Mendix project, the first step is to ensure you have the latest version of the Mendix Feedback Widget included in your project. To do that, follow these steps:
+The feedback widget is automatically included in any new app that you create. If you are working in an older Mendix app, the first step is to ensure you have the latest version of the Mendix Feedback Widget included in your app. To do that, follow these steps:
 
 1. Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/Mendix/Mendix-Feedback-Widget) from the Mendix App Store.
-2. When the latest Mendix Feedback Widget is included in your project, we need to ensure that the widget is added to the homepage of your application. Open the homepage from your project navigation:
+2. When the latest Mendix Feedback Widget is included in your app, we need to ensure that the widget is added to the homepage of your application. Open the homepage from your app navigation:
 
     ![](attachments/18448640/18580455.png)
 
@@ -50,7 +50,7 @@ To configure the widget, follow these steps:
 4. Decide whether you want to allow users to add a file to the feedback item and whether you want to allow the inclusion of a screenshot of the page. 
 5. Open the **Configuration** tab of the feedback widget preferences.
 6. Ensure that the feedback server is set to `https://sprintr.home.mendix.com/`.
-7. Ensure that the project identifier is filled in correctly. This is automatically done for the widget included in the default homepage of your application. If necessary, you can find the identifier of your project by clicking the Settings &gt; General link in the lower left corner of your project sidebar within the Mendix Developer Portal.
+7. Ensure that the app identifier is filled in correctly. This is automatically done for the widget included in the default homepage of your application. If necessary, you can find the identifier of your app by clicking the Settings &gt; General link in the lower left corner of your app sidebar within the Mendix Developer Portal.
 
     ![](attachments/18448640/18580451.png)
 
@@ -74,7 +74,7 @@ Once you have received feedback, you and your team can process the feedback with
 
 To process the feedback, follow these steps:
 
-1. Open the project in the Mendix Developer Portal.
+1. Open the app in the Mendix Developer Portal.
 2. Open the **Feedback** page:
 
     ![](attachments/18448640/18580449.png)
@@ -94,7 +94,7 @@ To process the feedback, follow these steps:
     **Close feedback** | Closes the feedback (for example, when the item is already solved, a duplicate has already been accepted, etc.).
     **Convert to Idea** | Changes the feedback type to an idea.
     **Convert to Question** | Changes the feedback type to a question.
-    **Move to project** | Moves the item to another project that you have access to.
+    **Move to app** | Moves the item to another app that you have access to.
     **Delete feedback** | Deletes the feedback.
 
 ## 8 Adding a Feedback Story to Your Backlog

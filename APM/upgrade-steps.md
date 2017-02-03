@@ -31,3 +31,6 @@ Now start following the installation procedure steps after the backup. Most the 
 *   Copy Language, because the newly imported module has only english-us in it
 
 When upgrading from below 1.7.0 to a version above you need a new license.
+
+In 1.10.0 a new constant AppName was introduced. This constant is needed when a new
+license request is done.

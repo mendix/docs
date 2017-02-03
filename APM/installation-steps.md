@@ -37,12 +37,12 @@ Add permissions APMAgent.Admin to project security / user roles tab to a selecte
 
 ![](attachments/Installation_steps/Add_Permissions.png)
 
-**Note:** Do not use the Debug role. This is for developer of the APM tool to test certain features.
+**Note:** Do not use the Debug role. This is for developers of the APM tool to test certain features.
 
 **Note:** You can choose to add the HeapDump role if you want to make heap dumps in java. In the cloud you need additional permissions to be requested at Mendix support.
 
-**Note:** If you want to get rid of the warnings about security introduce Debug, Tester, HeapDump, Load test recorder and OData user roles
-and give these user roles the corresponding permissions from the APM module: APMAgent.Debug, APMAgent.Tester, APMAgent.HeapDump, APMAgent.OData and APMAgent.LoadTestRecorder.
+**Note:** If you want to get rid of the warnings about security introduce Debug, HeapDump, Load test recorder and OData user roles
+and give these user roles the corresponding permissions from the APM module: APMAgent.Debug, APMAgent.HeapDump, APMAgent.OData and APMAgent.LoadTestRecorder.
 
 # Add to Navigation
 
@@ -66,9 +66,11 @@ You can find the AfterStartup and BeforeShutdown microflows in the project setti
 
 ![](attachments/Installation_steps/Project_Settings_After_Startup.png)
 
-# Configure APMAgent.CompanyName constant
+# Configure APMAgent.CompanyName and APMAgent.AppName constants
 
-Set the name of you company in the constant. Do not change the constant in the model. Use the Modeler settings or
+Set the name of your company and app in the constants. 
+
+**Note:** Do not change the constants in the model. Use the Modeler settings or
 the runtime settings for constants. After an upgrade the model constant gets overwritten.
 
 # Start the Modeler or the Runtime
@@ -85,8 +87,14 @@ After startup for the first time a small wizard is started:
 
 ![](attachments/Installation_steps/Welcome_Dialog.png)
 
-*   Use button to send mail with license request. One buttons tries to open your mail client. The other opens
-a dialog, so you can copy-paste text for the email to be sent at [apmtool@mansystems.nl](mailto:apmtool@mansystems.nl).
-*   Upon receiving the license, copy-paste
+*   If you have received a license request code for this App you can enter this code in the 
+license request code field.   
+*   Use the mail license request button to send mail with license request.
+*   If a mail clients does not opened, is not configured or fails otherwise, use the manual 
+license request button .This one opens a dialog, so you can copy-paste text for the email 
+to be sent at [apmtool@mansystems.nl](mailto:apmtool@mansystems.nl).
+*   Upon receiving the license, copy-paste the license in the license key field
 *   Select production / non-production
 *   Save
+
+Now the tools that are configured for after startup are started and the tool is ready to be used.

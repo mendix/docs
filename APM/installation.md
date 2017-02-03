@@ -21,19 +21,21 @@ For the experienced user quick outline of the installation:
 *   Configure to use USE_ME/AfterStartup and USE_ME/BeforeShutdown
 *   Add permission(s) to your Administrator role
 *   Add USE_ME/IVK_OpenConsole microflow to navigation
-*   Set APMAgent.CompanyName constant
+*   Set APMAgent.CompanyName and APMAgent.AppName constants
 *   Start App
 *   Navigate to APM Tool, an installer page opens
-*   In installer page mail license request
-*   On receiving a mail with license enter license
+*   In installer page mail license request. In APM 1.10 you can use a license request code 
+to automatically obtain a license key.
+*   On receiving a mail with license key enter this license key
 *   Choose production or non-production settings
 *   Save
 
 ## Upgrade for the experienced user
 
-And for an upgrade of 1.5.4 and above
+For an upgrade from APM 1.5.4 and above to the latest version
 
 *   Import module
 *   Remove old jar for userlib
 *   Start and all the needed data changes are automatically performed
 *   From before to after 1.7.0 a new license needs to be requested, because the license is now per App
+*   From before to after 1.10.0 a new constant AppName is introduced and needs to be set

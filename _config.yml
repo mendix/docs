@@ -52,7 +52,6 @@ defaults:
     values:
       menus:
         - "refguide6"
-        - "community"
   # Mendix 5
   - scope:
       path: 'howto50'
@@ -69,7 +68,6 @@ defaults:
     values:
       menus:
         - "refguide5"
-        - "community"
 
   # VERSION INDEPENDENT
   - scope:
@@ -78,7 +76,6 @@ defaults:
     values:
       space: "Community"
       menus:
-        - "refguide6"
         - "community"
   - scope:
       path: 'releasenotes'

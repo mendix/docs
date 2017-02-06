@@ -1,5 +1,5 @@
 ---
-title: "Update a Mendix application~"
+title: "Update a Mendix application"
 category: "howto40"
 space: "Mendix 4 How-to's"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites~"
+title: "Prerequisites"
 category: "howto40"
 space: "Mendix 4 How-to's"
 ---
@@ -20,11 +20,11 @@ You have to define the Windows user that must be used to run the Mendix service 
 The following components must be downloaded:
 
 *   Mendix Windows Service
-    Current version: 3.0 - [How to upgrade](update-a-mendix-application~)
+    Current version: 3.0 - [How to upgrade](update-a-mendix-application)
     This program is needed to install the application as a Windows service, to configure and to test them.
 *   ASP.NET URL Rewriter
     This component is needed to let Internet Information Services and Mendix communicate with each other.
-    More instructions on downloading this item can be found in [this article](set-up-internet-information-services~).
+    More instructions on downloading this item can be found in [this article](set-up-internet-information-services).
 
 ### Database
 
@@ -61,4 +61,3 @@ There are two other folders needed to run the application. See the following tab
  |
 
 Step 2 will show you how to define other locations for these folders. If you choose to use the default location, then make sure these locations exist before running the application!
-

@@ -67,4 +67,3 @@ Note that the **applyContext** function can be called upon multiple times, each 
 
 {% endmarkdown %}</div>
 
-[![](attachments/819203/917564.png)](use-the-data-view-context-object)[(Back to Top)](use-the-data-view-context-object)

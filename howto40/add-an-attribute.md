@@ -31,4 +31,3 @@ This section will describe how to add an attribute to an entity. The related ref
 
 ![](attachments/2621517/2752529.png)
 
-[![](attachments/819203/917564.png)](add-an-attribute)[(Back to Top)](add-an-attribute)

@@ -37,4 +37,3 @@ Note that the association between the data view or template grid entity and the 
 
 ![](attachments/2621473/2752695.png)
 
-[![](attachments/819203/917564.png)](2621473)[(Back to Top)](2621473)

@@ -20,4 +20,3 @@ This How To has been split up into four articles:
 
 There is also an article about [troubleshooting](troubleshooting).
 
-[![](attachments/819203/917564.png)](mendix-on-windows---service-console-4)[(Back to Top)](mendix-on-windows---service-console-4)

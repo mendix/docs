@@ -21,4 +21,3 @@ If you try to run two applications locally in the same browser, you will have to
 
 {% endmarkdown %}</div>
 
-[![](attachments/819203/917564.png)](run-two-applications-locally-at-once)[(Back to Top)](run-two-applications-locally-at-once)

@@ -37,4 +37,3 @@ This section describes how to connect forms using buttons. The related reference
 
 ![](attachments/2621495/2752764.png)
 
-[![](attachments/819203/917564.png)](connect-forms-using-buttons)[(Back to Top)](connect-forms-using-buttons)

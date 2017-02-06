@@ -25,4 +25,3 @@ After you click on Finish, you can change each setting by opening the same confi
 
 ![](attachments/2621661/2752522.png)
 
-[![](attachments/819203/917564.png)](set-up-a-mendix-app)[(Back to Top)](set-up-a-mendix-app)

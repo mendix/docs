@@ -23,4 +23,3 @@ This section describes how you can configure widgets to be visible or editable b
 
 ![](attachments/2621489/2752743.png)
 
-[![](attachments/819203/917564.png)](set-up-visibility-and-editability-based-on-an-enumeration)[(Back to Top)](set-up-visibility-and-editability-based-on-an-enumeration)

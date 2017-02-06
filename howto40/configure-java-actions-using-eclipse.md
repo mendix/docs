@@ -63,4 +63,3 @@ The code in the screenshot above first uses an XPath query to find a list of cus
 
 If you are working on multiple applications in Eclipse, you can use the downward pointing arrow to bring up a menu where you can select which application you want to run. If you want to debug your application, you can press the 'Debug' button to the left of the 'Run' button instead.
 
-[![](attachments/819203/917564.png)](configure-java-actions-using-eclipse)[(Back to Top)](configure-java-actions-using-eclipse)

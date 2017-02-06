@@ -21,4 +21,3 @@ In the above microflow, a new 'Order' object is created. If the user is of the t
 
 ![](attachments/2621591/2752864.png)
 
-[![](attachments/819203/917564.png)](cast-an-object)[(Back to Top)](cast-an-object)

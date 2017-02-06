@@ -31,4 +31,3 @@ In the new menu, select the form or microflow you want to link the navigation it
 
 In the new menu, select the icon you would like the item to have from the list and press the 'Select' button.
 
-[![](attachments/819203/917564.png)](create-a-new-navigation-menu-item)[(Back to Top)](create-a-new-navigation-menu-item)

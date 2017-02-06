@@ -17,4 +17,3 @@ This section will explain how you can add a new language to your project. The re
 
 ![](attachments/819203/917932.png) **Select the language you want to add in the new menu and press 'OK'.**
 
-[![](attachments/819203/917564.png)](add-a-new-language-to-your-project)[(Back to Top)](add-a-new-language-to-your-project)

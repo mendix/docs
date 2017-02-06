@@ -23,4 +23,3 @@ This section describes how you can display icons for enumeration values in a dat
 
 ![](attachments/2621552/2752608.png)
 
-[![](attachments/819203/917564.png)](display-icons-for-enumeration-values)[(Back to Top)](display-icons-for-enumeration-values)

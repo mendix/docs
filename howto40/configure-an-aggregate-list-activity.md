@@ -31,4 +31,3 @@ In the screenshot 'PizzaList' is a list of 'Pizza' objects associated to an 'Ord
 
 ![](attachments/819203/917932.png) **Enter the name you want to use for the variable in the microflow under 'Output'.**
 
-[![](attachments/819203/917564.png)](2621501)[(Back to Top)](2621501)

@@ -59,4 +59,3 @@ The domain model for this can be seen above. The Pizza entity has 'Name', 'Ingre
 
 ![](attachments/2621487/2752724.png)
 
-[![](attachments/819203/917564.png)](build-a-template-grid)[(Back to Top)](build-a-template-grid)

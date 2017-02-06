@@ -35,4 +35,3 @@ A list should be created in this microflow; 'Create list' and 'Retrieve' are act
 
 You can enter the expression manually, or use the 'Generate' button to have the modeler construct a basic expression.
 
-[![](attachments/819203/917564.png)](change-a-list)[(Back to Top)](change-a-list)

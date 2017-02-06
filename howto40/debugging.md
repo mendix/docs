@@ -138,4 +138,3 @@ When the value of a certain attribute is too large to display in the variables w
 
 As you can see, a nice extra for DateTime variables is that it will also display the time of the session the microflow is executed with.
 
-[![](attachments/819203/917564.png)](debugging)[(Back to Top)](debugging)

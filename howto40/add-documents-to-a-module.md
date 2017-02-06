@@ -47,4 +47,3 @@ This can be done in several locations:
 
 For some document types an additional menu will open after this, allowing further configuration.
 
-[![](attachments/819203/917564.png)](add-documents-to-a-module)[(Back to Top)](add-documents-to-a-module)

@@ -159,4 +159,3 @@ IIS 7
 *   [http://weblogs.asp.net/owscott/archive/2009/02/22/iis-7-compression-good-bad-how-much.aspx](http://weblogs.asp.net/owscott/archive/2009/02/22/iis-7-compression-good-bad-how-much.aspx)
 *   [http://technet.microsoft.com/nl-nl/library/cc771003(WS.10).aspx](http://technet.microsoft.com/nl-nl/library/cc771003%28WS.10%29.aspx)
 
-[![](attachments/819203/917564.png)](set-up-internet-information-services~)[(Back to Top)](set-up-internet-information-services~)

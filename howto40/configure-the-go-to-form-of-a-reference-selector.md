@@ -28,5 +28,3 @@ This section describes how to configure the go-to form for a reference selector.
 ![](attachments/819203/917932.png) **After selecting the go-to form you can configure its behavior by clicking on the '...' button next to 'Go-to form settings' in the Properties window. This will bring up a new menu in which you can choose whether the go-to form should open as a (blocking) pop up or not, and if the form should have a custom title.**
 
 ![](attachments/2621460/2752684.png)
-
-[![](attachments/819203/917564.png)](configure-the-go-to-form-of-a-reference-selector)[(Back to Top)](configure-the-go-to-form-of-a-reference-selector)

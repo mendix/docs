@@ -21,4 +21,3 @@ This section describes how to create a list in a microflow. The related referenc
 
 ![](attachments/819203/917932.png) **The list created by the 'Create list' activity is empty; you will need to utilize other list activities to add objects to it.**
 
-[![](attachments/819203/917564.png)](create-a-list)[(Back to Top)](create-a-list)

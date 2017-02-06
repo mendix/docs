@@ -25,4 +25,3 @@ This section describes how to configure a listen target for a data view. This al
 
 ![](attachments/2621442/2752630.png)
 
-[![](attachments/819203/917564.png)](set-up-a-listen-target-for-a-data-view)[(Back to Top)](set-up-a-listen-target-for-a-data-view)

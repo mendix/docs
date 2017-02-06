@@ -23,4 +23,3 @@ You can search for specific phrases or words using the 'Search' field.
 
 ![](attachments/819203/917932.png) **Once you are finished entering replacement phrases and words, click on the 'Replace' button to finish.**
 
-[![](attachments/819203/917564.png)](use-the-batch-replace-function)[(Back to Top)](use-the-batch-replace-function)

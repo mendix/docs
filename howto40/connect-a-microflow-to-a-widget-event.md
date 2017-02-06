@@ -25,4 +25,3 @@ This section describes how to configure a microflow to trigger based on a widget
 
 In the menu that appears you can configure which objects should be passed to the microflow, if it should abort on validation errors, if a progress bar should be shown and if the client should wait for the microflow to finish.*
 
-[![](attachments/819203/917564.png)](connect-a-microflow-to-a-widget-event)[(Back to Top)](connect-a-microflow-to-a-widget-event)

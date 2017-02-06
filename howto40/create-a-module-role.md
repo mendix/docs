@@ -19,4 +19,3 @@ This section explains how to add a new module user role to a module. The related
 
 ![](attachments/2621541/2752580.png)
 
-[![](attachments/819203/917564.png)](create-a-module-role)[(Back to Top)](create-a-module-role)

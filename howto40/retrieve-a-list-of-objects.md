@@ -43,4 +43,3 @@ This can be used if you want it to return a specific object you need for the mic
 
 ![](attachments/819203/917932.png) **For both retrieve methods, you can alter the 'Output variable' to change the variable name which will be used to the returned object or object list in the microflow.**
 
-[![](attachments/819203/917564.png)](retrieve-a-list-of-objects)[(Back to Top)](retrieve-a-list-of-objects)

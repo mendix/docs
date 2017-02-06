@@ -47,4 +47,3 @@ You can only set read and write permissions for all objects of all the entities 
 
 You can do this by clicking on the cell which forms the intersection of the data set and module role you want to configure. This will bring up a window which allows you to configure the allowed parameter values per module role.
 
-[![](attachments/819203/917564.png)](set-up-access-rules)[(Back to Top)](set-up-access-rules)

@@ -33,4 +33,3 @@ In the screenshot, the first reference selector has been connected to 'Name' of 
 
 ![](attachments/2621472/2752700.png)
 
-[![](attachments/819203/917564.png)](2621472)[(Back to Top)](2621472)

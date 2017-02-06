@@ -21,4 +21,3 @@ This section describes how to use aggregate functionality to display the sum of 
 
 ![](attachments/2621558/2752613.png)
 
-[![](attachments/819203/917564.png)](display-the-sum-of-a-data-grid-column)[(Back to Top)](display-the-sum-of-a-data-grid-column)

@@ -31,4 +31,3 @@ This microflow should return the list of objects which should be selectable in t
 
 ![](attachments/2621459/2752673.png)
 
-[![](attachments/819203/917564.png)](use-a-microflow-to-determine-selectable-objects)[(Back to Top)](use-a-microflow-to-determine-selectable-objects)

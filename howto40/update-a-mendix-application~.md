@@ -38,4 +38,3 @@ Before you do this, you have to stop the Mendix service, so start the Mendix Ser
 
 Now you can replace the Mendix\Services folder by a new version. Then start the Mendix Service Console, test the application and start the service again.
 
-[![](attachments/819203/917564.png)](update-a-mendix-application~)[(Back to Top)](update-a-mendix-application~)

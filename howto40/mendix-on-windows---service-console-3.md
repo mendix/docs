@@ -17,4 +17,3 @@ This How To has been split up into four articles:
 4.  [Update a Mendix application~](update-a-mendix-application~)
 5.  [Check the security of your installation using this checklist](security-checklist-for-your-on-premise-installation)
 
-[![](attachments/819203/917564.png)](mendix-on-windows---service-console-3)[(Back to Top)](mendix-on-windows---service-console-3)

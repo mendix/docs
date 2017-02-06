@@ -51,4 +51,3 @@ For example if you choose 'Unique', your application will show the error message
 
 ![](attachments/2621526/2752536.png)
 
-[![](attachments/819203/917564.png)](add-a-validation-rule)[(Back to Top)](add-a-validation-rule)

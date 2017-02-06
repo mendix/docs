@@ -21,4 +21,3 @@ This section describes how you can configure your application to display differe
 
 Alternatively you could open the same menu by pressing the '...' button next to 'Target' in the Properties window. A third option would be to click on the form you want to set as alternative home page in the Connector window, hold the left mouse button and drag it to the newly created entry.
 
-[![](attachments/819203/917564.png)](set-up-alternative-home-pages-based-on-user-role)[(Back to Top)](set-up-alternative-home-pages-based-on-user-role)

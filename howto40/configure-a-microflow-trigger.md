@@ -43,4 +43,3 @@ This section describes how to configure a microflow trigger. The related referen
 ![](attachments/2621462/2752655.png)
 ![](attachments/2621462/2752656.png)
 
-[![](attachments/819203/917564.png)](configure-a-microflow-trigger)[(Back to Top)](configure-a-microflow-trigger)

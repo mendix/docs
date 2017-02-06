@@ -33,4 +33,3 @@ This section describes how to connect an attribute of an entity to a search fiel
 
 ![](attachments/2621449/2752610.png)
 
-[![](attachments/819203/917564.png)](connect-an-attribute-to-a-search-field)[(Back to Top)](connect-an-attribute-to-a-search-field)

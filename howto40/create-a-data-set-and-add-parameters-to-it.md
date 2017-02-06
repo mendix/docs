@@ -43,4 +43,3 @@ The statement in the screenshot looks up 'Order' objects and defines 'Number', '
 
 ![](attachments/2621546/2752589.png)
 
-[![](attachments/819203/917564.png)](create-a-data-set-and-add-parameters-to-it)[(Back to Top)](create-a-data-set-and-add-parameters-to-it)

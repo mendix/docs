@@ -21,4 +21,3 @@ This section describes how to add a constant to your module and configure it. Th
 
 For example you might want a constant which contains the location of a web service, having different values depending on whether the application is run in a development or test configuration.
 
-[![](attachments/819203/917564.png)](create-and-configure-a-constant)[(Back to Top)](create-and-configure-a-constant)

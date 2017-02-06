@@ -29,4 +29,3 @@ This section describes how to use an inheritance split to use a specialization o
 
 ![](attachments/2621610/2752854.png)
 
-[![](attachments/819203/917564.png)](use-a-specialization-of-an-entity)[(Back to Top)](use-a-specialization-of-an-entity)

@@ -35,4 +35,3 @@ This section describes how to connect an entity to a data grid. The related arti
 
 ![](attachments/2621445/2752618.png)
 
-[![](attachments/819203/917564.png)](connect-an-entity-to-a-data-grid)[(Back to Top)](connect-an-entity-to-a-data-grid)

@@ -37,4 +37,3 @@ The microflow will have to pass an object to the form it opens, so make sure tha
 
 ![](attachments/2621596/2752888.png)
 
-[![](attachments/819203/917564.png)](show-a-form-using-a-microflow)[(Back to Top)](show-a-form-using-a-microflow)

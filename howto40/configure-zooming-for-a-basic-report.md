@@ -21,4 +21,3 @@ This section describes how to configure zooming for a basic report. The related 
 
 If the form which is opened contains another report, the columns of the current report can be mapped to the parameters of the report in the other form..
 
-[![](attachments/819203/917564.png)](configure-zooming-for-a-basic-report)[(Back to Top)](configure-zooming-for-a-basic-report)

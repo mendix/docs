@@ -41,4 +41,3 @@ Your App is now in the approval process!
 
 ![](attachments/2621634/2752928.png)
 
-[![](attachments/819203/917564.png)](publish-an-app-in-the-appstore)[(Back to Top)](publish-an-app-in-the-appstore)

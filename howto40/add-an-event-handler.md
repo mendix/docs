@@ -27,4 +27,3 @@ For example choosing 'Before' and 'Commit' will have the selected microflow exec
 
 ![](attachments/2621529/2752548.png)
 
-[![](attachments/819203/917564.png)](add-an-event-handler)[(Back to Top)](add-an-event-handler)

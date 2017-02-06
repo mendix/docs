@@ -59,4 +59,3 @@ Again there are three input options. The 'Simple' option can be used if only sta
 
 ![](attachments/819203/917932.png) **Your imported web service is now ready to be used in your application.**
 
-[![](attachments/819203/917564.png)](consume-a-web-service)[(Back to Top)](consume-a-web-service)

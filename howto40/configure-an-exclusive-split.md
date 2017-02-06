@@ -57,4 +57,3 @@ If your exclusive split is intended to use an enumeration, make sure it is eithe
 
 For example in the above microflow customer ranks are based on the number orders placed, with the ranges being 0-5, 5-10, 10-15 and greater than 15\. To split the sequence flow into these ranges, multiple exclusive splits are used which test whether or not the number of orders placed exceeds a boundary of a range, with boolean as result. The first exclusive split for example checks if the number of orders placed is greater than 5; if this is not the case the customer is assigned 'Basic' rank, whereas if this is the case the sequence flow leads to a new exclusive split checking if the customer ordered more than 10 times. If this is not the case, the customer falls in the 5-10 range and is assigned 'Bronze' rank.
 
-[![](attachments/819203/917564.png)](configure-an-exclusive-split)[(Back to Top)](configure-an-exclusive-split)

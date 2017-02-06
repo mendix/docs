@@ -37,4 +37,3 @@ Make sure the variables needed for the Java action are either created in the mic
 
 ![](attachments/2621595/2752917.png)
 
-[![](attachments/819203/917564.png)](configure-a-java-action-call)[(Back to Top)](configure-a-java-action-call)

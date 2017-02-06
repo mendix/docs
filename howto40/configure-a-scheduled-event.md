@@ -33,4 +33,3 @@ You can use the radio buttons to choose if these variables are defined as server
 
 ![](attachments/2621601/2752830.png)
 
-[![](attachments/819203/917564.png)](configure-a-scheduled-event)[(Back to Top)](configure-a-scheduled-event)

@@ -49,4 +49,3 @@ This section describes how to add an activity to a microflow; these steps can al
 
 ![](attachments/2621612/2752838.png)
 
-[![](attachments/819203/917564.png)](add-an-activity-to-a-microflow)[(Back to Top)](add-an-activity-to-a-microflow)

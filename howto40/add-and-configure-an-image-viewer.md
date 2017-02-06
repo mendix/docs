@@ -43,4 +43,3 @@ In this example, PizzaImage is a specialization of System.Image, associated to t
 
 ![](attachments/819203/917932.png) **If necessary you can use the Properties window to configure the image viewer, setting the default image to be displayed if no image is found, the image size, and whether or not to display a thumbnail of the image rather than the full version.**
 
-[![](attachments/819203/917564.png)](add-and-configure-an-image-viewer)[(Back to Top)](add-and-configure-an-image-viewer)

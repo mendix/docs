@@ -15,4 +15,3 @@ This section explains how to edit system texts for your project. The related ref
 
 ![](attachments/2621519/2752531.png)
 
-[![](attachments/819203/917564.png)](edit-system-texts)[(Back to Top)](edit-system-texts)

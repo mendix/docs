@@ -71,4 +71,3 @@ When searching for the object, the attributes marked as key will be taken and co
 
 ![](attachments/2621624/2752801.png)
 
-[![](attachments/819203/917564.png)](configure-an-xml-to-domain-mapping)[(Back to Top)](configure-an-xml-to-domain-mapping)

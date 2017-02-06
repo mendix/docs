@@ -33,4 +33,3 @@ You can change the return type of the rule in the Properties window when no sequ
 
 ![](attachments/2621603/2752833.png)
 
-[![](attachments/819203/917564.png)](set-up-a-rule)[(Back to Top)](set-up-a-rule)

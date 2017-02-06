@@ -25,4 +25,3 @@ This section describes how to configure delete behavior for entities when they a
 
 Note that not all combinations are possible. For example if you set the child delete behavior to only allow deletion if it has no associated parent objects, you can no longer configure child objects to be deleted when the associated parent object is deleted. If you set one of the delete behaviors to only allow deletion if the object has no associated objects, you can also enter an error message which will be shown if this is attempted.
 
-[![](attachments/819203/917564.png)](configure-delete-behavior)[(Back to Top)](configure-delete-behavior)

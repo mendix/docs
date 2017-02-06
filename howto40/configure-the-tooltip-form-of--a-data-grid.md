@@ -31,4 +31,3 @@ This form should be a data view on the same entity as the reference set selector
 
 ![](attachments/2621444/2752625.png)
 
-[![](attachments/819203/917564.png)](configure-the-tooltip-form-of--a-data-grid)[(Back to Top)](configure-the-tooltip-form-of--a-data-grid)

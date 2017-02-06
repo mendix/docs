@@ -29,4 +29,3 @@ In this menu you can also select in which modules you want to grant this project
 
 ![](attachments/2621510/2752783.png)
 
-[![](attachments/819203/917564.png)](set-up-module-roles-for-a-project-user-role)[(Back to Top)](set-up-module-roles-for-a-project-user-role)

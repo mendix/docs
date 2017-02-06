@@ -21,4 +21,3 @@ This section describes how you can put constraints on the objects being shown in
 
 For example in the picture, the XPath constraint constrains the display of orders in a data grid so that a customer is only able to see his own orders.
 
-[![](attachments/819203/917564.png)](apply-xpath-within-the-form-builder)[(Back to Top)](apply-xpath-within-the-form-builder)

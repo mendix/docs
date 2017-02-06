@@ -27,4 +27,3 @@ If you add parameter widgets to the report pane, there should be a generate repo
 
 This should be a combination of basic reports and report charts.
 
-[![](attachments/819203/917564.png)](create-a-report-and-add-widgets-to-it)[(Back to Top)](create-a-report-and-add-widgets-to-it)

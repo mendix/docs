@@ -71,4 +71,3 @@ Optionally you can choose to display a custom form title.
 
 ![](attachments/819203/917932.png) **You now have a microflow which when you press the button will create a new object of the grid entity, create a new object of the image entity, set the association between the two new objects and open the new/edit form which allows you to enter the attributes and upload the image.**
 
-[![](attachments/819203/917564.png)](create-a-new-object-with-associated-image-object)[(Back to Top)](create-a-new-object-with-associated-image-object)

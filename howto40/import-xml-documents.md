@@ -33,4 +33,3 @@ Make sure that the XML document and (if necessary) the object that has to be pas
 
 ![](attachments/2621584/2752872.png)
 
-[![](attachments/819203/917564.png)](import-xml-documents)[(Back to Top)](import-xml-documents)

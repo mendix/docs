@@ -71,4 +71,3 @@ For example, it's not possible to map an enumeration value to an XML element, so
 
 ![](attachments/2621625/2752792.png)
 
-[![](attachments/819203/917564.png)](configure-a-domain-to-xml-mapping)[(Back to Top)](configure-a-domain-to-xml-mapping)

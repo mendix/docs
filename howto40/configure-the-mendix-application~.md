@@ -125,4 +125,3 @@ When the service is running, you can start the Mendix Service Console to see the
 
 Now you cannot start the application in the console pane, but you can define log levels and see the log messages.
 
-[![](attachments/819203/917564.png)](configure-the-mendix-application~)[(Back to Top)](configure-the-mendix-application~)

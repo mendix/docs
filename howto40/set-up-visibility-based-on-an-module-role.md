@@ -21,4 +21,3 @@ This section describes how you can configure widgets to be visible based on the 
 
 ![](attachments/2621483/2752749.png)
 
-[![](attachments/819203/917564.png)](set-up-visibility-based-on-an-module-role)[(Back to Top)](set-up-visibility-based-on-an-module-role)

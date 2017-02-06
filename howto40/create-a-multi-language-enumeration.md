@@ -43,4 +43,3 @@ This section describes how to create an enumeration in multiple languages. The r
 
 ![](attachments/2621550/2752604.png)
 
-[![](attachments/819203/917564.png)](create-a-multi-language-enumeration)[(Back to Top)](create-a-multi-language-enumeration)

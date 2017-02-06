@@ -31,4 +31,3 @@ This section describes how to connect an attribute of an entity to a column of a
 
 ![](attachments/2621557/2752607.png)
 
-[![](attachments/819203/917564.png)](connect-an-attribute-to-a-column)[(Back to Top)](connect-an-attribute-to-a-column)

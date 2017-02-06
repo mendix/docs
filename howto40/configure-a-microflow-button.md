@@ -43,4 +43,3 @@ This section describes how to configure a microflow button in a form. The relate
 
 ![](attachments/2621497/2752752.png)
 
-[![](attachments/819203/917564.png)](configure-a-microflow-button)[(Back to Top)](configure-a-microflow-button)

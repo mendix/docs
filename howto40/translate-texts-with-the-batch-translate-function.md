@@ -27,4 +27,3 @@ You can search for specific phrases or words using the 'Search' field.
 
 ![](attachments/819203/917932.png) **Once you are done translating, click on the 'Translate' button to finish.**
 
-[![](attachments/819203/917564.png)](translate-texts-with-the-batch-translate-function)[(Back to Top)](translate-texts-with-the-batch-translate-function)

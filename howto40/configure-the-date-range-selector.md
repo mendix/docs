@@ -25,4 +25,3 @@ This section describes how to configure the date range selector in a report pane
 
 You can choose to add fields allowing users to choose year, quarter, month and week, or add a period field which lets users choose from several predefined periods.
 
-[![](attachments/819203/917564.png)](configure-the-date-range-selector)[(Back to Top)](configure-the-date-range-selector)

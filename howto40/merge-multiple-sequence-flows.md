@@ -25,4 +25,3 @@ This section describes how to merge multiple sequence flows in a microflow. The 
 
 ![](attachments/2621614/2752845.png)
 
-[![](attachments/819203/917564.png)](merge-multiple-sequence-flows)[(Back to Top)](merge-multiple-sequence-flows)

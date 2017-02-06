@@ -62,4 +62,3 @@ There are two other folders needed to run the application. See the following tab
 
 Step 2 will show you how to define other locations for these folders. If you choose to use the default location, then make sure these locations exist before running the application!
 
-[![](attachments/819203/917564.png)](prerequisites~)[(Back to Top)](prerequisites~)

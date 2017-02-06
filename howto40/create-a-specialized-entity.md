@@ -23,4 +23,3 @@ This section describes how to configure an entity to be a specialized version of
 
 ![](attachments/2621535/2752550.png)
 
-[![](attachments/819203/917564.png)](create-a-specialized-entity)[(Back to Top)](create-a-specialized-entity)

@@ -26,4 +26,3 @@ This section describes how you can change the properties of an association to ma
 
 The above screenshots show the same association; the first shows it using hierarchical notation, whereas the second shows it using UML notation, which was added in version 2.5.1\. You can switch between these modes using the Edit > Preferences menu.
 
-[![](attachments/819203/917564.png)](2621539)[(Back to Top)](2621539)

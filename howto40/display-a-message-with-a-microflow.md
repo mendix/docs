@@ -43,4 +43,3 @@ If you have variables or attributes which are not strings, you can use the 'toSt
 
 The end result in this screenshot is a blocking information message to a user congratulating them with a customer status upgrade, with customer specific information added through parameters.
 
-[![](attachments/819203/917564.png)](display-a-message-with-a-microflow)[(Back to Top)](display-a-message-with-a-microflow)

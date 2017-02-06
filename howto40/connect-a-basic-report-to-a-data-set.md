@@ -41,4 +41,3 @@ This section describes how to connect a basic report in a report pane to a data 
 
 The columns of the basic report will now be automatically filled with the columns of the data set, in the order of appearance in the OQL query.
 
-[![](attachments/819203/917564.png)](connect-a-basic-report-to-a-data-set)[(Back to Top)](connect-a-basic-report-to-a-data-set)

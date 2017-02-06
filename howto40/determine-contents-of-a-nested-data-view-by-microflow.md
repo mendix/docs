@@ -27,4 +27,3 @@ As the 'Customer' object for the nested data view will be returned by the microf
 
 ![](attachments/2621455/2752639.png)
 
-[![](attachments/819203/917564.png)](determine-contents-of-a-nested-data-view-by-microflow)[(Back to Top)](determine-contents-of-a-nested-data-view-by-microflow)

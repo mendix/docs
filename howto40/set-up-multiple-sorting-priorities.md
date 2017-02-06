@@ -25,4 +25,3 @@ This section describes how to define multiple sorting priorities for a data grid
 
 ![](attachments/2621447/2752614.png)
 
-[![](attachments/819203/917564.png)](set-up-multiple-sorting-priorities)[(Back to Top)](set-up-multiple-sorting-priorities)

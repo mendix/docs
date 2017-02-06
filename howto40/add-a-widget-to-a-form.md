@@ -31,4 +31,3 @@ This section describes how to add a widget to a form. The related reference guid
 
 ![](attachments/2621484/2752736.png)
 
-[![](attachments/819203/917564.png)](add-a-widget-to-a-form)[(Back to Top)](add-a-widget-to-a-form)

@@ -19,4 +19,3 @@ This section describes how to connect the parameter widgets in the top half of t
 
 ![](attachments/2621474/2752727.png)
 
-[![](attachments/819203/917564.png)](connect-parameter-widgets-to-a-data-set)[(Back to Top)](connect-parameter-widgets-to-a-data-set)

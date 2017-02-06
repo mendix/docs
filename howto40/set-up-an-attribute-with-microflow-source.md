@@ -45,4 +45,3 @@ Note that the microflow should return a value of the same type as the attribute.
 
 ![](attachments/2621522/2752540.png)
 
-[![](attachments/819203/917564.png)](set-up-an-attribute-with-microflow-source)[(Back to Top)](set-up-an-attribute-with-microflow-source)

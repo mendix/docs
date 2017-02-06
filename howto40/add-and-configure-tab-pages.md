@@ -29,4 +29,3 @@ This section describes how to add tab pages to a form and then configure them. T
 
 ![](attachments/819203/917932.png) **After setting up the tab pages, add content to them using tables and content widgets.**
 
-[![](attachments/819203/917564.png)](add-and-configure-tab-pages)[(Back to Top)](add-and-configure-tab-pages)

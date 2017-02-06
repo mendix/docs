@@ -72,4 +72,3 @@ The **error** parameter defines the message that is send to the log. The **actio
 
 The microflow returns a JSON object with our string variable in it. The object is basically the XMLHttpRequest we get back, we can call on this using **xhr**; our string variable can be found under **responseText**. We convert this using **dojo.fromJson** into a JavaScript object we can use. After converting our string is located under **['actionResult']**.
 
-[![](attachments/819203/917564.png)](call-a-microflow)[(Back to Top)](call-a-microflow)

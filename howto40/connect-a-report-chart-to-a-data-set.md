@@ -37,4 +37,3 @@ This section describes how to configure a report chart and connect it to a data 
 
 ![](attachments/819203/917932.png) **You can change the captions for the X and Y-axis by changing the 'Caption' property for both the 'Horizontal Axis' and 'Vertical Axis' in the Properties window.**
 
-[![](attachments/819203/917564.png)](connect-a-report-chart-to-a-data-set)[(Back to Top)](connect-a-report-chart-to-a-data-set)

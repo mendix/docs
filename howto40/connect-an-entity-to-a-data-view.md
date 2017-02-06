@@ -35,4 +35,3 @@ This section describes how to connect an entity to a data view. The related refe
 
 ![](attachments/2621456/2752634.png)
 
-[![](attachments/819203/917564.png)](connect-an-entity-to-a-data-view)[(Back to Top)](connect-an-entity-to-a-data-view)

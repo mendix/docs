@@ -39,4 +39,3 @@ For example using 'Contains' with 'CheapPizzas' as 'Variable 1' and 'PizzasOrder
 
 ![](attachments/819203/917932.png) **At 'name' you can specify the name for the output variable from the list operation.**
 
-[![](attachments/819203/917564.png)](configure-a-list-operation)[(Back to Top)](configure-a-list-operation)

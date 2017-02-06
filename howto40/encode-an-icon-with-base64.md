@@ -41,4 +41,3 @@ BBSg6cDOCN+tZtdmfy6udcragyXru95VwBdxkVkn0Cny3jI6ne/ZWL114cgvAQYA
 
 ```
 
-[![](attachments/819203/917564.png)](encode-an-icon-with-base64)[(Back to Top)](encode-an-icon-with-base64)

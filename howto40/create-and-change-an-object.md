@@ -29,4 +29,3 @@ This section describes how to create and change an object in a microflow. The re
 
 ![](attachments/2621585/2752866.png)
 
-[![](attachments/819203/917564.png)](create-and-change-an-object)[(Back to Top)](create-and-change-an-object)

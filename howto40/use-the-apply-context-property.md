@@ -27,4 +27,3 @@ In the above screenshot the selected data grid is connected to the 'Order' entit
 
 In the menu that appears, you can select the entities that should be removed from the context.
 
-[![](attachments/819203/917564.png)](2621492)[(Back to Top)](2621492)

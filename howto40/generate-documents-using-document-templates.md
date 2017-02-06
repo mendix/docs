@@ -61,4 +61,3 @@ You can choose either the language of the current user, the default project lang
 
 If the document is not intended to be kept after the initial download, you can add a 'Change' activity to the microflow that generated the document to set the 'DeleteAfterDownload' flag of the document to 'true'.
 
-[![](attachments/819203/917564.png)](generate-documents-using-document-templates)[(Back to Top)](generate-documents-using-document-templates)

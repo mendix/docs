@@ -59,4 +59,3 @@ A module will be placed directly into your project. You should see it appear dir
 
 ![](attachments/2621635/2752935.jpg)
 
-[![](attachments/819203/917564.png)](install-an-app-from-the-appstore)[(Back to Top)](install-an-app-from-the-appstore)

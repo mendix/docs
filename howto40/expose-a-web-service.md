@@ -55,4 +55,3 @@ If the parameters and return are not primitive but objects or lists of objects i
 
 ![](attachments/2621605/2752814.png)
 
-[![](attachments/819203/917564.png)](expose-a-web-service)[(Back to Top)](expose-a-web-service)

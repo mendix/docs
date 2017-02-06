@@ -23,4 +23,3 @@ This section describes how to add an XML schema to your project and then configu
 
 ![](attachments/2621604/2752812.png)
 
-[![](attachments/819203/917564.png)](add-and-configure-an-xml-schema)[(Back to Top)](add-and-configure-an-xml-schema)

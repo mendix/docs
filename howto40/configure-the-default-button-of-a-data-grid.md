@@ -23,4 +23,3 @@ This section describes how to configure the default button of a data grid. The r
 
 ![](attachments/2621443/2752631.png)
 
-[![](attachments/819203/917564.png)](configure-the-default-button-of-a-data-grid)[(Back to Top)](configure-the-default-button-of-a-data-grid)

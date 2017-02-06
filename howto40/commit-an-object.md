@@ -66,4 +66,3 @@ If your widget is in a Data view and you are editing the object of the Data view
 
 {% endmarkdown %}</div>
 
-[![](attachments/819203/917564.png)](commit-an-object)[(Back to Top)](commit-an-object)

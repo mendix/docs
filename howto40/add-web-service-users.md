@@ -29,4 +29,3 @@ This section describes how to add web service users to your application, allowin
 
 ![](attachments/819203/917932.png) **Finally press the 'Save' button to store the new web service user.**
 
-[![](attachments/819203/917564.png)](add-web-service-users)[(Back to Top)](add-web-service-users)

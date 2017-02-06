@@ -41,4 +41,3 @@ The purpose of the microflow in the screenshot is to send the amount of orders t
 
 ![](attachments/2621593/2752910.png)
 
-[![](attachments/819203/917564.png)](call-a-microflow-inside-another-microflow)[(Back to Top)](call-a-microflow-inside-another-microflow)

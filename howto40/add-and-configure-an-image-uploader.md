@@ -21,4 +21,3 @@ This section describes how to add an image uploader to your form and then config
 
 ![](attachments/2621452/2752648.png)
 
-[![](attachments/819203/917564.png)](add-and-configure-an-image-uploader)[(Back to Top)](add-and-configure-an-image-uploader)

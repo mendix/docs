@@ -21,4 +21,3 @@ This section describes how to add a file manager to your project and configure i
 
 ![](attachments/2621454/2752645.png)
 
-[![](attachments/819203/917564.png)](add-and-configure-a-file-manager)[(Back to Top)](add-and-configure-a-file-manager)

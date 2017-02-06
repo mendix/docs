@@ -49,4 +49,3 @@ The above screenshots show the same association; the first shows it using hierar
 
 The above screenshots show the same association; the first shows it using hierarchical notation, whereas the second shows it using UML notation, which was added in version 2.5.1\. You can switch between these modes using the Edit > Preferences menu.
 
-[![](attachments/819203/917564.png)](create-an-association)[(Back to Top)](create-an-association)

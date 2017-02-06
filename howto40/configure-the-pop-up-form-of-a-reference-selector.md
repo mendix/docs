@@ -33,4 +33,3 @@ This section describes how to configure the pop-up form. The related reference g
 
 ![](attachments/2621458/2752674.png)
 
-[![](attachments/819203/917564.png)](configure-the-pop-up-form-of-a-reference-selector)[(Back to Top)](configure-the-pop-up-form-of-a-reference-selector)

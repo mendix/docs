@@ -23,4 +23,3 @@ This section describes how to add a Java action to your project and then configu
 
 ![](attachments/819203/917932.png) **Finally at 'Return type' you can use the drop-down menu to configure what type of variable or object (if any) the Java action will return.**
 
-[![](attachments/819203/917564.png)](add-and-configure-a-java-action)[(Back to Top)](add-and-configure-a-java-action)

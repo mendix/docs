@@ -21,4 +21,4 @@ The variable name for the result of the cast. It can be used by all activities t
 
 ## Related Articles
 
-*   [How To: Cast an object](https://world.mendix.com/display/howto25/Cast+an+object)
+*   [How To: Cast an object](/howto40/cast-an-object)

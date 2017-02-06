@@ -5,7 +5,7 @@ space: "Reference Guide 4"
 ---
 With a date range selector the end user can filter a report on a parameter of the data set which has type DataTime.
 
-In the date range selector you can add [date range fields](https://world.mendix.com/display/refguide3/Date+Range+Field) to make it easier for an end user to select a data range. (This can be done by right clicking the data range selector and choosing add field from the popup menu.)
+In the date range selector you can add [date range fields](date-range-field) to make it easier for an end user to select a data range. (This can be done by right clicking the data range selector and choosing add field from the popup menu.)
 
 ## Appearance Properties
 
@@ -45,16 +45,12 @@ Parameter of the data set of which the range is determined by this date range se
 
 ### Name
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties)
 
 ### Class
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties)
 
 ### Style
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
-
-## Related Articles
-
-*   [How To: Configure the date range selector](https://world.mendix.com/display/howto25/Configure+the+date+range+selector)
+See [Widget Properties](widget-properties)

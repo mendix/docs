@@ -167,16 +167,10 @@ See [Sign Out Button](sign-out-button).
 
 If the project directory of your project has a widget directory with custom widgets, these custom widgets are available in the form editor.
 
-For more information, see the [tutorials](https://world.mendix.com/display/Tutorials/Custom+Widgets) for custom widgets.
+For more information, see the [tutorials](/howto40/custom-widgets) for custom widgets.
 
 <div class="alert alert-warning">{% markdown %}
 
 Custom widgets that require the context of an entity should be inserted in a data view or list view.
 
 {% endmarkdown %}</div>
-
-## Related Articles
-
-*   [How To: Add a widget to a form](https://world.mendix.com/display/howto40/Add+a+widget+to+a+form)
-*   [How To: Create and build a form](https://world.mendix.com/display/howto40/Create+and+build+a+form)
-*   [How To: Apply XPath within the form builder](https://world.mendix.com/display/howto40/Apply+XPath+within+the+form+builder)

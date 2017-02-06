@@ -60,7 +60,3 @@ This property defines the microflow that is executed for the specified event. Th
 By enabling this option the event handler will raise an error when the microflow returns false. You can then use error handling to detect whether the event handler returned false. This makes 'before commit' event handlers more like native validation. If this option is disabled, a 'before commit' event handler can only stop the commit from happening but the rest of the microflow will still be executed.
 
 _Default value:_ Yes
-
-## Related Articles
-
-*   [How To: Add an event handler](https://world.mendix.com/display/howto25/Add+an+event+handler)

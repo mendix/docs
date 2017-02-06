@@ -22,7 +22,3 @@ The entity of the objects list. All objects in the list should be of the same ty
 ### Variable name
 
 Variable name defines the name of the list variable that can be used by all activities that follow this activity.
-
-## Related Articles
-
-*   [How To: Create a list](https://world.mendix.com/display/howto25/Create+a+list)

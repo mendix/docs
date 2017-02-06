@@ -32,7 +32,3 @@ Parameters are the means by which you pass data into the Java action. In the Jav
 ### Return type
 
 The return type determines the type of the data that the Java action returns. It corresponds with the return type of the executeAction() method in the .java file of the Java action. You can use the result of a Java action in the rest of the microflow in which you call it.
-
-## Related Articles
-
-*   [How To: Add and configure a Java action](https://world.mendix.com/display/howto25/Add+and+configure+a+Java+action)

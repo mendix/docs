@@ -56,7 +56,3 @@ Template defines which [document template](document-templates) is used to genera
 ### Override margins
 
 Here you can set custom margins for your documents that can be defined at runtime.
-
-## Related Articles
-
-*   [How To: Generate documents using document templates](https://world.mendix.com/display/howto25/Generate+documents+using+document+templates)

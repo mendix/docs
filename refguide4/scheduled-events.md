@@ -50,7 +50,3 @@ This number together with the interval type indicates how large the interval is 
 ### Interval type
 
 The interval type determines the unit of the interval. Together with the interval number it indicates how large the interval between two events is. For example, 1 day or 10 minutes.
-
-## Related Articles
-
-*   [How To: Configure a scheduled event](https://world.mendix.com/display/howto25/Configure+a+scheduled+event)

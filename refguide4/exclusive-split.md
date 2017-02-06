@@ -50,7 +50,3 @@ See [Microflow Element Common Properties](microflow-element-common-properties).
 ### Break condition
 
 See [Microflow Element Common Properties](microflow-element-common-properties).
-
-## Related Articles
-
-*   [How To: Configure an exclusive split](https://world.mendix.com/display/howto25/Configure+an+exclusive+split)

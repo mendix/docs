@@ -81,7 +81,7 @@ Returns true if object exists |
 Returns all objects not in Rotterdam. |
 | `CASE`
  | Evaluates one or more conditions and returns a possible expression.
- | See [this page](https://world.mendix.com/display/refguide3/OQL+Case+Expression).
+ | See [this page](oql-case-expression).
  |
 | `OR`
  | Returns true if one or both expressions around this operator return true.  | `price = 9.80 OR price = 9.70`

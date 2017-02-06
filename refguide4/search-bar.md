@@ -20,7 +20,3 @@ See [Date Search Field](date-search-field).
 ### Drop down
 
 See [Drop-Down Search Field](drop-down-search-field).
-
-## Related Articles
-
-*   [How To: Connect an attribute to a search field](https://world.mendix.com/display/howto25/Connect+an+attribute+to+a+search+field)

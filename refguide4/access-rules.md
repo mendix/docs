@@ -77,4 +77,4 @@ XPath constraints can only be applied to persistable entities as they are comput
 
 ## Related Articles
 
-*   [How To: Set up access rules](https://world.mendix.com/display/howto25/Set+up+access+rules)
+*   [How To: Set up access rules](/howto40/set-up-access-rules)

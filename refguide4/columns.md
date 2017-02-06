@@ -115,9 +115,3 @@ The editable property indicates whether the values of the column will be editabl
 ### Attribute (path)
 
 The attribute (path) property specifies the attribute's value that will be displayed in this column. It can be an attribute of the grid entity, or it can be an attribute of an associated entity, in which case we speak of an attribute path. The path can follow multiple associations of type reference, and at the end (optionally) one of type reference set. If you show a reference set in a column the values will be separated by a comma.
-
-## Related Articles
-
-*   [How To: Connect an attribute to a column](https://world.mendix.com/display/howto25/Connect+an+attribute+to+a+column)
-*   [How To: Display icons for enumeration values](https://world.mendix.com/display/howto25/Display+icons+for+enumeration+values)
-*   [How To: Display the sum of a data grid column](https://world.mendix.com/display/howto25/Display+the+sum+of+a+data+grid+column)

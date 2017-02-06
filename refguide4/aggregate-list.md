@@ -40,7 +40,3 @@ Attribute defines which attribute of the objects in the list is used to aggregat
 ### Variable name
 
 The name of the (numeric) variable in which the result of the aggregation is stored.
-
-## Related Articles
-
-*   [How To: Configure an 'Aggregate list' activity](https://world.mendix.com/display/howto25/Configure+an+%27Aggregate+list%27+activity)

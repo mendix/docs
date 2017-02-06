@@ -47,7 +47,3 @@ Choose whether to store the result of the import in a variable.
 ### Name
 
 The name for the variable that will hold the result of the import.
-
-## Related Articles
-
-*   [How To: Import XML documents](https://world.mendix.com/display/howto25/Import+XML+documents)

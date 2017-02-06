@@ -40,7 +40,7 @@ The type property defines the type of data that can be stored in the attribute. 
 **Note**: Hash values are generated using the hash algorithm that is chosen in the [Project Settings](project-settings). |
 | Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 2147483647), negative (minimum -2<sup>31</sup>, thus -2147483648), or zero. |
 | Long | A whole number that can be positive (maximum 2<sup>63</sup>-1), negative (minimum -2<sup>63</sup>), or zero. |
-| String | 
+| String |
 
 A text containing letters, spaces, numbers and other characters.
 
@@ -144,8 +144,3 @@ In a webshop you want to show the total expenses for each customer. These are ca
 ![](attachments/819203/917570.png)
 
 {% endmarkdown %}</div>
-
-## Related Articles
-
-*   [How To: Add an attribute](https://world.mendix.com/display/howto25/Add+an+attribute)
-*   [How To: Set up an attribute with microflow source](https://world.mendix.com/display/howto25/Set+up+an+attribute+with+microflow+source)

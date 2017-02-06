@@ -112,6 +112,3 @@ This defines whether only the required attributes and associations for the objec
 
 *   [Entities](entities)
 *   [Associations](associations)
-*   [How To: Connect an entity to a data view](https://world.mendix.com/display/howto25/Connect+an+entity+to+a+data+view)
-*   [How To: Determine contents of a nested data view by microflow](https://world.mendix.com/display/howto25/Determine+contents+of+a+nested+data+view+by+microflow)
-*   [How To: Set up a listen target for a data view](https://world.mendix.com/display/howto25/Set+up+a+listen+target+for+a+data+view)

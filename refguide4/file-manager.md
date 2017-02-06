@@ -74,4 +74,3 @@ See [Widget Properties](widget-properties).
 *   [Data View](data-view)
 *   [Entities](entities)
 *   [Associations](associations)
-*   [How To: Add and configure a file manager](https://world.mendix.com/display/howto25/Add+and+configure+a+file+manager)

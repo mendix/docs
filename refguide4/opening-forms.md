@@ -34,7 +34,3 @@ By default the title of the form is taken from the title property of the selecte
 You can use the same form for the New and Edit buttons of a data grid. By replacing the pop-up title with a custom title, you can still have different titles for these pop-ups, e.g. 'New customer' and 'Edit customer'.
 
 {% endmarkdown %}</div>
-
-## Related Articles
-
-*   [How To: Connect forms using buttons](https://world.mendix.com/display/howto25/Connect+forms+using+buttons)

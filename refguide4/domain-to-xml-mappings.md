@@ -5,17 +5,17 @@ space: "Reference Guide 4"
 ---
 Domain to XML mappings are used to convert a domain entity to XML, so that it can be sent to other systems. They are used in two different scenarios:
 
-*   An [imported web service](https://world.mendix.com/display/refguide3/Imported+web+service) uses them to map domain entities to complex XML structures for the request.
+*   An [imported web service](imported-web-service) uses them to map domain entities to complex XML structures for the request.
 
-*   An [export XML activity](https://world.mendix.com/display/refguide3/Export+XML) needs a domain to XML mapping so that it knows how to map the objects to XML.
+*   An [export XML activity](export-xml) needs a domain to XML mapping so that it knows how to map the objects to XML.
 
 The screen is divided in two; on the left side are the domain entities that are mapped to the XML elements. On the right side are gray boxes corresponding to XML elements.
 
-The top level domain entity is considered the parameter to the domain-to-XML mapping and needs to be specified wherever the mapping is called (such as a [call web service](https://world.mendix.com/display/refguide3/Call+Web+Service) microflow activity). Thus, the "Obtain the object(s) by" section is disabled for the top level element.
+The top level domain entity is considered the parameter to the domain-to-XML mapping and needs to be specified wherever the mapping is called (such as a [call web service](call-web-service) microflow activity). Thus, the "Obtain the object(s) by" section is disabled for the top level element.
 
 All other domain entities that are mapped to elements need their "Obtain the object(s) by" specified, except for those that are a direct child of a choice element. For those elements, the object is the same as that of the parent choice element.
 
-See [Map entity to element](https://world.mendix.com/display/refguide3/Map+entity+to+element) for details on mapping an entity to an XML element.
+See [Map entity to element](map-entity-to-element) for details on mapping an entity to an XML element.
 
 ## Behavior
 
@@ -72,7 +72,3 @@ Name of the XML Schema that this mapping is for.
 ### Start at
 
 Determines which part of the XML structure this mapping defines.
-
-## Related Articles
-
-*   [How To: Configure a Domain-to-XML mapping](https://world.mendix.com/display/howto25/Configure+a+Domain-to-XML+mapping)

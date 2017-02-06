@@ -303,7 +303,7 @@ If the project directory of your project has a widget directory with custom widg
 
 {% endmarkdown %}</div>
 
-For more information, see the [tutorials](https://world.mendix.com/display/Tutorials/Custom+Widgets) for custom widgets.
+For more information, see the [tutorials](/howto40/custom-widgets) for custom widgets.
 
 <div class="alert alert-warning">{% markdown %}
 

@@ -45,7 +45,3 @@ The Sort operation allows you to sort a list based on a number of a attributes. 
 ### Variable name
 
 The variable name defines the name of the resulting list, object or boolean. It can be used by all activities that follow this activity.
-
-## Related Articles
-
-*   [How To: Configure a list operation](https://world.mendix.com/display/howto25/Configure+a+list+operation)

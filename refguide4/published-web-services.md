@@ -80,8 +80,3 @@ Once the parameters have been parsed from the XML, the microflow call proceeds a
 ### Result is converted back to XML
 
 If the microflow has a return value, it will be returned as a result of the webservice call. As with the parameters, basic types will be returned directly, and Domain Entities require a mapping to be converted to XML.
-
-## Related Articles
-
-*   [How To: Expose a web service](https://world.mendix.com/display/howto25/Expose+a+web+service)
-*   [How To: Add web service users](https://world.mendix.com/display/howto25/Add+web+service+users)

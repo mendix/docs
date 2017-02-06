@@ -3,7 +3,7 @@ title: "Data Sets"
 category: "refguide4"
 space: "Reference Guide 4"
 ---
-A data set can be used for [reporting](https://world.mendix.com/display/refguide3/Reporting).
+A data set can be used for [reporting](reporting).
 
 A data set is defined using either an OQL query or a custom Java action. To constrain datasets parameters can be defined which can be used in the OQL queries or Java Actions.
 
@@ -18,11 +18,11 @@ Example of a data set using OQL:
 
 **Source**
 
-*   _OQL query_: The [OQL query](https://world.mendix.com/display/refguide3/Object+Query+Language+%28OQL%29) which defines the data set.
+*   _OQL query_: The [OQL query](oql) which defines the data set.
 *   _Java action_: The interface of the Java action which returns a data set. The columns and data types of the columns needs to be specified in the modeler. Based on this specification the modeler will create a template for this action.
 
 **Parameters**
-A dataset can have multiple parameters. Parameters are used to filter / manipulate data sets. [Security](https://world.mendix.com/display/refguide3/Data+Set+Access) on data sets is configured based on the parameters. In a Java action the parameters are used in the generated template.
+A dataset can have multiple parameters. Parameters are used to filter / manipulate data sets. [Security](security) on data sets is configured based on the parameters. In a Java action the parameters are used in the generated template.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -34,7 +34,7 @@ In OQL parameters can be called using a **$** symbol, for example: **$Month**.
 
 *   _Name_: The name of the parameter
 *   _Type_: The type of the parameter: object, enumeration or a primitive (e.g. datetime, float, integer, boolean, etc).
-*   _Constraints_: The constraints on a parameter. These constraints influence which values can be selected for parameter input values by the end user. Constraints can be associated with user roles in the [data set security](https://world.mendix.com/display/refguide3/Data+Set+Access). There are two type of constraints: ranges which apply to numeric and date parameters and XPath constraints which apply to object parameters.
+*   _Constraints_: The constraints on a parameter. These constraints influence which values can be selected for parameter input values by the end user. Constraints can be associated with user roles in the [data set security](security). There are two type of constraints: ranges which apply to numeric and date parameters and XPath constraints which apply to object parameters.
 
 _Ranges_
 
@@ -53,7 +53,3 @@ _XPath constraints_
 An XPath constraint can be defined using [XPath](xpath). Multiple constraints can be defined on a parameter and each constraint can be associated with a user role.
 
 ![](attachments/819203/918070.png)
-
-## Related Articles
-
-*   [How To: Create a data set and add parameters to it](https://world.mendix.com/display/howto25/Create+a+data+set+and+add+parameters+to+it)

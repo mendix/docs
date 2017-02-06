@@ -142,9 +142,5 @@ In microflows that apply entity access, which are recognizable by their yellow b
 
 If you want to see what is happening while a microflow is executing, you can use the microflow debugger. See the following how-tos:
 
-*   [Version 4.2 and earlier](https://world.mendix.com/display/howto40/Debugging+%284.2+and+before%29)
-*   [Version 4.3 and later](https://world.mendix.com/display/howto40/Debugging)
-
-## Related Articles
-
-*   [How To: Add an activity to a microflow](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow)
+*   [Version 4.2 and earlier](/howto40/debugging-4.2-and-before)
+*   [Version 4.3 and later](/howto40/debugging)

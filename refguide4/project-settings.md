@@ -128,8 +128,3 @@ When client and server are RFC-5746 compatible at a future point in time, this J
 For background information see [this](http://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html) article.
 
 {% endmarkdown %}</div>
-
-## Related Articles
-
-*   [How To: Add a new language to your project](https://world.mendix.com/display/howto25/Add+a+new+language+to+your+project)
-*   [How To: Run two applications locally at once](https://world.mendix.com/display/howto25/Run+two+applications+locally+at+once)

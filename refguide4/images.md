@@ -16,7 +16,3 @@ The following image formats are supported: png, gif, jpeg, bmp. PNG is recommend
 ### Name
 
 The name of the image.
-
-## Related Articles
-
-*   [How To: Add custom images](https://world.mendix.com/display/howto25/Add+custom+images)

@@ -36,7 +36,3 @@ See [Microflow Element Common Properties](microflow-element-common-properties).
 ### Break condition
 
 See [Microflow Element Common Properties](microflow-element-common-properties).
-
-## Related Articles
-
-*   [How To: Configure a loop](https://world.mendix.com/display/howto25/Configure+a+loop)

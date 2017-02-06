@@ -75,4 +75,3 @@ A microflow trigger can be shown or hidden based on certain conditions. See [Con
 
 *   [Data View](data-view)
 *   [Microflows](microflows)
-*   [How To: Configure a microflow trigger](https://world.mendix.com/display/howto25/Configure+a+microflow+trigger)

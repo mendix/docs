@@ -37,7 +37,3 @@ You can initialize members of the newly created object. Values for members are s
 ### Variable name
 
 Variable name defines the name of the resulting object variable. It can be used by all activities that follow this activity.
-
-## Related Articles
-
-*   [How To: Create and change an object](https://world.mendix.com/display/howto25/Create+and+change+an+object)

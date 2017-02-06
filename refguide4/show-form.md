@@ -36,7 +36,3 @@ Pop-up title displays the title of the form. By checking override form title you
 ### Form object
 
 If the selected form contains a data view, it needs an object of the same entity as the data view to display its content. The form object is the object that is used by the data view to display its content.
-
-## Related Articles
-
-*   [How To: Show a form using a microflow](https://world.mendix.com/display/howto25/Show+a+form+using+a+microflow)

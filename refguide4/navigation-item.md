@@ -26,7 +26,3 @@ The target of the navigation item is the form or microflow that will be opened w
 You can open a form that contains a data view from a navigation item by setting as target a microflow that first retrieves an object for the data view and then opens the form.
 
 {% endmarkdown %}</div>
-
-## Related Articles
-
-*   [How To: Create a new navigation item](https://world.mendix.com/display/howto25/Create+a+new+navigation+menu+item)

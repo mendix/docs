@@ -38,15 +38,15 @@ With this property you can choose the type of the report chart. The following ty
 
 ### Name
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties).
 
 ### Class
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties).
 
 ### Style
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties).
 
 ## Horizontal axis Properties
 
@@ -97,7 +97,3 @@ Minimum value of the vertical axis. This is only used if property 'Use min/max' 
 ### Maximum
 
 Maximum value of the vertical axis. This is only used if property 'Use min/max' (described above) is true.
-
-## Related Articles
-
-*   [How To: Connect a report chart to a data set](https://world.mendix.com/display/howto25/Connect+a+report+chart+to+a+data+set)

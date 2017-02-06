@@ -82,8 +82,3 @@ The visibility settings are visualized on the button.
 | None | The visibility follows the default rules: buttons are hidden if security dictates this. |
 | ![](attachments/4194423/4325428.png) | The button is visible even if security settings would normally hide it. It can still be conditionally visible based on an attribute. This is not visualized separatedly. |
 | ![](attachments/4194423/4325430.png) | The button's visibility is based on the value of an attribute. |
-
-## Related Articles
-
-*   [How To: Set up visibility and editability based on an enumeration](https://world.mendix.com/display/howto25/Set+up+visibility+and+editability+based+on+an+enumeration)
-*   [How To: Set up visibility based on an module role](https://world.mendix.com/display/howto25/Set+up+visibility+based+on+an+module+role)

@@ -198,10 +198,3 @@ In XML instances of these entities and their association look as follows. Note t
 ```
 
 {% endmarkdown %}</div>
-
-## Related Articles
-
-*   [How To: Create an association](https://world.mendix.com/display/howto25/Create+an+association)
-*   [How To: Add a reference set](https://world.mendix.com/display/howto25/Add+a+reference+set)
-*   [How To: Set the association owner to 'both'](https://world.mendix.com/display/howto25/Set+the+association+owner+to+%27both%27)
-*   [How To: Configure delete behavior](https://world.mendix.com/display/howto25/Configure+delete+behavior)

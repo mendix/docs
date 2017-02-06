@@ -17,12 +17,12 @@ Here you type the caption that the end user sees for the button that generates r
 
 ### Name
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties).
 
 ### Class
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties).
 
 ### Style
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties).

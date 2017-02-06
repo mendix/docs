@@ -13,7 +13,3 @@ Rules are very similar to microflows; see the documentation about [Microflows](m
 *   A rule cannot change data in the database; the actions to create, delete, change and rollback objects are not available in rules.
 *   A rule cannot perform interaction with the client; the actions to show or close forms, to show messages, send validation feedback and the download files are not available in rules.
 *   A rule cannot call web services, generate documents or import XML.
-
-## Related Articles
-
-*   [How To: Set up a rule](https://world.mendix.com/display/howto25/Set+up+a+rule)

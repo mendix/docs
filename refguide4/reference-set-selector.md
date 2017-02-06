@@ -208,5 +208,3 @@ See [Selectable Objects Properties](reference-selector) of the reference selecto
 *   [Data View](data-view)
 *   [Entities](entities)
 *   [Associations](associations)
-*   [How To: 'Constrained by' functionality for a reference set selector](https://world.mendix.com/display/howto25/%27Constrained+by%27+functionality+for+a+reference+set+selector)
-*   [How To: Configure the tooltip form of a reference set selector](https://world.mendix.com/display/howto25/Configure+the+tooltip+form+of+a+reference+set+selector)

@@ -36,7 +36,3 @@ See [Microflow Element Common Properties](microflow-element-common-properties).
 ### Break condition
 
 See [Microflow Element Common Properties](microflow-element-common-properties).
-
-## Related Articles
-
-*   [How To: Use a specialization of an entity](https://world.mendix.com/display/howto25/Use+a+specialization+of+an+entity)

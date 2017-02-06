@@ -170,7 +170,3 @@ A static image inside a table cell.
 ## Style
 
 See [Style](style)
-
-## Related Articles
-
-*   [How To: Create and build a document template](https://world.mendix.com/display/howto25/Create+and+build+a+document+template)

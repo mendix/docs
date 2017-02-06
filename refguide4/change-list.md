@@ -38,4 +38,4 @@ Value defines the value that is used to change the list. The value needs to be e
 
 ## Related Articles
 
-*   [How To: Change a list](https://world.mendix.com/display/howto25/Change+a+list)
+*   [How To: Change a list](/howto40/change-a-list)

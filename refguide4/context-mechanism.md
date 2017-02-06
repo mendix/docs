@@ -56,7 +56,3 @@ If you want, you can achieve the same effect by hand by creating a microflow but
 The order is created, the association with customer is set and the form to edit the order is opened. Of course, you can perform additional initialization in this microflow as well.
 
 In summary, version 2.5 allows for a more explicit way to constrain nested grids and initializing associations of created objects.
-
-## Related Articles
-
-*   [How To: Use the 'Apply context' property](https://world.mendix.com/display/howto25/Use+the+%27Apply+context%27+property)

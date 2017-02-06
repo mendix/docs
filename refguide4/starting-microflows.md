@@ -152,7 +152,3 @@ Set the duration only to asynchronous if you experience problems. Sometimes if a
 | Asynchronous | The client executes the microflow and starts polling to determine whether the microflow is done executing. |
 
 _Default value_: Synchronous
-
-## Related Articles
-
-*   [How To: Configure a microflow button](https://world.mendix.com/display/howto25/Configure+a+microflow+button)

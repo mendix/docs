@@ -128,7 +128,3 @@ This property defines whether the entity has the system association 'changedBy'.
 | False | Entity does not have the system association 'changedBy'. |
 
 _Default value:_ True
-
-## Related Articles
-
-*   [How To: Create a specialized entity](https://world.mendix.com/display/howto25/Create+a+specialized+entity)

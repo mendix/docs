@@ -41,7 +41,7 @@ You can find the Javadoc at [apidocs.mendix.com](http://apidocs.mendix.com/4/run
 
 This library is automatically added to your libraries when you imported your project into Eclipse (see [Using Eclipse](using-eclipse)) and it is called mxruntime.jar
 
-A tutorial with some examples can be found at the [Java API Tutorial](https://world.mendix.com/display/howto40/Java+API+Tutorial) page.
+A tutorial with some examples can be found at the [Java API Tutorial](/howto40/java-api-tutorial) page.
 
 ## Using Eclipse as an environment to write your Mendix Java actions
 

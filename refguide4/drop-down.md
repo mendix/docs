@@ -7,7 +7,7 @@ With a drop down the end user can filter a report on a specific parameter of the
 
 <div class="alert alert-warning">{% markdown %}
 
-A drop down can be used for a data set parameter of any type except DateTime. DataTime parameters can be filtered by a [date range selector](https://world.mendix.com/display/refguide3/Date+Range+Selector).
+A drop down can be used for a data set parameter of any type except DateTime. DataTime parameters can be filtered by a [date range selector](date-range-selector).
 
 {% endmarkdown %}</div>
 
@@ -25,12 +25,12 @@ Refers to the data set parameter of which the value is restricted by this drop d
 
 ### Name
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties)
 
 ### Class
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties)
 
 ### Style
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties)

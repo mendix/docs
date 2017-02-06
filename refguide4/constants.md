@@ -35,7 +35,3 @@ Under value you can set the values of the constants for your development and tes
 You can specify values for development and test configurations in the Modeler. For the acceptance and production environment the values of constants need to be configured in the application.conf file.
 
 {% endmarkdown %}</div>
-
-## Related Articles
-
-*   [How To: Create and configure a constant](https://world.mendix.com/display/howto25/Create+and+configure+a+constant)

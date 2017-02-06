@@ -32,7 +32,3 @@ The return type is the type of the result of the Java action.
 ### Variable name
 
 The result of the Java action will be stored in a variable with this name.
-
-## Related Articles
-
-*   [How To: Configure a Java action call](https://world.mendix.com/display/howto25/Configure+a+Java+action+call)

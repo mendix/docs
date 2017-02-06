@@ -15,13 +15,11 @@ If you miss something in the documentation, please let us know through the feedb
 
 <div class="alert alert-info">{% markdown %}
 
-Visit the [Mendix 4 How To section](https://world.mendix.com/display/howto40/Home) if you are looking for step-by-step guides on some of the more challenging aspects of the Mendix Framework.
+Visit the [Mendix 4 How To section](/howto40/) if you are looking for step-by-step guides on some of the more challenging aspects of the Mendix Framework.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{% endmarkdown %}</div>
 
-The documentation for the 3 Mendix Business Modeler is still available here: [3.0 Reference Guide](https://world.mendix.com/display/refguide3/Introduction).
-
-{% endmarkdown %}</div>**Modeler**
+**Modeler**
 
 Here you find the documentation of the types of documents you can create within the Mendix Business Modeler and the settings that you can configure. Here is a selection of links to the documentation.
 
@@ -49,10 +47,7 @@ The Mendix Business server executes the model you create in the Modeler. The ser
 
 The Mendix Client System displays the application to the end users.
 
-[Custom Widget Tutorials](https://world.mendix.com/display/archive/Custom+Widgets)
-[Custom Widget How-to's](https://world.mendix.com/display/howto40/Custom+Widgets)
-[Theming Tutorials (Mendix 3)](https://world.mendix.com/display/archive/Theming)
-[Wrapping in a native mobile app](#)
+[Custom Widget How-to's](/howto40/custom-widgets)
 
 **Languages**
 

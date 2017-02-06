@@ -82,4 +82,3 @@ See [Starting Microflows](starting-microflows).
 
 *   [Data View](data-view)
 *   [Entities](entities)
-*   [How To: Add and configure an image viewer](https://world.mendix.com/display/howto25/Add+and+configure+an+image+viewer)

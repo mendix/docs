@@ -30,7 +30,3 @@ The return type of the called microflow.
 ### Variable name
 
 The name of the variable that will contain the result of the called microflow.
-
-## Related Articles
-
-*   [How To: Call a microflow inside another microflow](https://world.mendix.com/display/howto40/Call+a+microflow+inside+another+microflow)

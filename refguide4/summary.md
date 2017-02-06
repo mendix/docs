@@ -7,7 +7,7 @@ space: "Reference Guide 4"
 
 Applications, built with Mendix, can communicate with SAP by sending and receiving IDocs, or by calling BAPIs on SAP.
 
-Details can be found in the [How To's](https://world.mendix.com/display/howto25/SAP+Integration).
+Details can be found in the [How To's](/howto40/sap-integration).
 
 IDoc = Intermediate Document. IDoc types are defined in SAP, and IDocs of these types can be sent to and from SAP.
 

@@ -5,7 +5,7 @@ category: "General"
 ---
 
 
-Please read the [Release Notes](https://world.mendix.com/display/ReleaseNotes/Release+Notes+Home) to see what new major improvements we added in Mendix 6.
+Please read the [Release Notes](/releasenotes/) to see what new major improvements we added in Mendix 6.
 
 This documentation aims to help you to update your project from Mendix 5 to Mendix 6\. It contains the following topics:
 
@@ -38,7 +38,7 @@ Fix errors and warnings as far as possible. Take special note of the 'Deprecatio
 
 ### Fix deprecations in Java actions
 
-Fix deprecations in your Java actions by importing your project in Eclipse and solving all the deprecations in the "Problems" tab. For details of the removed and deprecated APIs, see the section "Removed features" of the [Mendix 6.0.0 release notes](https://world.mendix.com/display/ReleaseNotes/6.0.0).
+Fix deprecations in your Java actions by importing your project in Eclipse and solving all the deprecations in the "Problems" tab. For details of the removed and deprecated APIs, see the section "Removed features" of the [Mendix 6.0.0 release notes](/releasenotes/desktop-modeler/6.0).
 
 ### Converting!
 

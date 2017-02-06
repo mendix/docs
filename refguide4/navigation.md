@@ -51,7 +51,3 @@ The navigation tree consists of [navigation items](navigation-item).
 If [security](project-security) is enabled, the navigation tree will only show items that the user has access to.
 
 {% endmarkdown %}</div>
-
-## Related Articles
-
-*   [How To: Set up alternative home pages based on user role](https://world.mendix.com/display/howto25/Set+up+alternative+home+pages+based+on+user+role)

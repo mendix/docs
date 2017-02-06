@@ -333,7 +333,7 @@ returns:
 
 ## isMatch
 
-Checks to see if a string matches a given [regular expression](https://world.mendix.com/display/refguide3/Regular+Expressions)
+Checks to see if a string matches a given [regular expression](regular-expressions)
 
 ### Input parameters
 

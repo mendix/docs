@@ -31,16 +31,16 @@ Specifies another OQL query from which data must be retrieved. This will be the 
 Note: if you use a OQL sub query, the main query can only use * to select all attributes. It is not a possible to select a subset of attributes.
 
 **INNER JOIN**
-See [this page](https://world.mendix.com/display/refguide3/OQL+INNER+JOIN).
+See [this page](oql-inner-join).
 
 **LEFT OUTER JOIN**
-See [this page](https://world.mendix.com/display/refguide3/OQL+LEFT+OUTER+JOIN).
+See [this page](oql-left-outer-join).
 
 **RIGHT OUTER JOIN**
-See [this page](https://world.mendix.com/display/refguide3/OQL+RIGHT+OUTER+JOIN).
+See [this page](oql-right-outer-join).
 
 **FULL OUTER JOIN**
-See [this page](https://world.mendix.com/display/refguide3/OQL+FULL+OUTER+JOIN).
+See [this page](oql-full-outer-join).
 
 **ON <constraint>**
 Constraints the specified entity in the JOIN part of the FROM clause. The constraint syntax is similar as those of the WHERE clause. Only the entities and from-aliases from the current JOIN element and each previous one can be used in the constraint.

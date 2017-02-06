@@ -69,7 +69,3 @@ Sorting defines the order of the list. The list can be sorted in ascending and d
 ### Variable name
 
 Variable name defines the name of the result list or object variable. It can be used by all activities that follow this activity.
-
-## Related Articles
-
-*   [How To: Retrieve a list of objects](https://world.mendix.com/display/howto25/Retrieve+a+list+of+objects)

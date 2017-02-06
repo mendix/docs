@@ -49,7 +49,3 @@ Blocking defines whether the message appears with a hover on top of the existing
 | False | The message appears in the bottom left corner and you can continue working in the application. |
 
 _Default value:_ True
-
-## Related Articles
-
-*   [How To: Display a message with a microflow](https://world.mendix.com/display/howto25/Display+a+message+with+a+microflow)

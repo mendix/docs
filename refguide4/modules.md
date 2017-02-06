@@ -37,7 +37,3 @@ A module can contain many different types of documents. Each type of document is
 | [Published web services](published-web-services) | A microflow can be published as a web service so that it can be called by other applications. |
 | [XML schemas](xml-schemas) | An XML schema is defined in an XML Schema Definition (XSD) file and can be imported in your model. It describes what a certain XML document should look like. |
 | [XML-to-Domain Mappings](xml-to-domain-mappings) | An XML-to-domain mapping defines a translation from XML objects to domain model objects. |
-
-## Related Articles
-
-*   [How To: Add documents to a module](https://world.mendix.com/display/howto25/Add+documents+to+a+module)

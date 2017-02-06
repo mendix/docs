@@ -7,7 +7,7 @@ The Client creates the interface of your Mendix application. It shows pages serv
 
 ## Custom Widgets
 
-The Client supports custom widgets that are distributed through the AppStore. The API that custom widgets can use to interact with the rest of the Client is described in the [API documentation pages](http://apidocs.mendix.com/4/client/). There is also a [tutorial](https://world.mendix.com/display/Tutorials/Custom+Widgets) on creating custom widgets.
+The Client supports custom widgets that are distributed through the AppStore. The API that custom widgets can use to interact with the rest of the Client is described in the [API documentation pages](http://apidocs.mendix.com/4/client/). There is also a [tutorial](/howto40/custom-widgets) on creating custom widgets.
 
 Mobile applications can be wrapped in a native app for iOS and Android. This allows custom mobile widgets to access native device functionality, e.g. the camera and GPS. This is described in the [Cordova documentation](#).
 

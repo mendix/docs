@@ -22,7 +22,3 @@ See [Microflow Element Common Properties](microflow-element-common-properties)
 ### Break condition
 
 See [Microflow Element Common Properties](microflow-element-common-properties)
-
-## Related Articles
-
-*   [How To: Merge multiple sequence flows](https://world.mendix.com/display/howto25/Merge+multiple+sequence+flows)

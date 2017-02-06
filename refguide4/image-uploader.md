@@ -63,5 +63,3 @@ See [Widget Properties](widget-properties).
 *   [Data View](data-view)
 *   [Entities](entities)
 *   [Associations](associations)
-*   [How To: Add and configure an image uploader](https://world.mendix.com/display/howto25/Add+and+configure+an+image+uploader)
-*   [How To: Create a new object with associated image object](https://world.mendix.com/display/howto25/Create+a+new+object+with+associated+image+object)

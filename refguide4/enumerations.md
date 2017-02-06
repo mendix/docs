@@ -18,7 +18,3 @@ The name of the enumeration.
 Each enumeration value has a caption, a name and an image.
 
 See [Enumeration Values](enumeration-values).
-
-## Related Articles
-
-*   [How To: Create a multi-language enumeration](https://world.mendix.com/display/howto25/Create+a+multi-language+enumeration)

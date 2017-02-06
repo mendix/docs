@@ -31,7 +31,3 @@ SELECT c.name AS CustomerName
 ```
 
 {% endmarkdown %}</div>
-
-## Related Articles
-
-*   [How To: Improve performance with indexes](https://world.mendix.com/display/howto25/Improve+performance+with+indexes)

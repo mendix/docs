@@ -39,17 +39,17 @@ If Use paging is true, this property indicates the number of occurrences that's 
 
 ### Name
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties).
 
 ### Class
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties).
 
 ### Style
 
-See [Widget Properties](https://world.mendix.com/display/refguide3/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties).
 
 ## Related Articles
 
-*   [How To: Connect a basic report to a data set](https://world.mendix.com/display/howto25/Connect+a+basic+report+to+a+data+set)
-*   [How To: Configure zooming for a basic report](https://world.mendix.com/display/howto25/Configure+zooming+for+a+basic+report)
+*   [How To: Connect a basic report to a data set](connect-a-basic-report-to-a-data-set)
+*   [How To: Configure zooming for a basic report](configure-zooming-for-a-basic-report)

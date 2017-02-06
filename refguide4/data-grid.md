@@ -175,9 +175,3 @@ See [Widget Properties](widget-properties).
 ### Style
 
 See [Widget Properties](widget-properties).
-
-## Related Articles
-
-*   [How To: Connect an entity to a data grid](https://world.mendix.com/display/howto25/Connect+an+entity+to+a+data+grid)
-*   [How To: Configure the default button of a data grid](https://world.mendix.com/display/howto25/Configure+the+default+button+of+a+data+grid)
-*   [How To: Configure the tooltip form of a data grid](https://world.mendix.com/display/howto25/Configure+the+tooltip+form+of++a+data+grid)

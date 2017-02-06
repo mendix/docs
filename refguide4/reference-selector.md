@@ -222,7 +222,3 @@ _Default value:_ No sort order
 *   [Data View](data-view)
 *   [Entities](entities)
 *   [Associations](associations)
-*   [How To: Use 'Constrained by' functionality for a reference selector](https://world.mendix.com/display/howto25/%27Constrained+by%27+functionality+for+a+reference+selector)
-*   [How To: Configure the go-to form of a reference selector](https://world.mendix.com/display/howto25/Configure+the+go-to+form+of+a+reference+selector)
-*   [How To: Configure the pop-up form of a reference selector](https://world.mendix.com/display/howto25/Configure+the+pop-up+form+of+a+reference+selector)
-*   [How To: Use a microflow to determine selectable objects](https://world.mendix.com/display/howto25/Use+a+microflow+to+determine+selectable+objects)

@@ -62,7 +62,3 @@ After you have launched the application, you will see the M2EE admin console pop
 The M2EE admin console.
 
 {% endmarkdown %}</div>
-
-## Related Articles
-
-*   [How To: Configure Java actions using Eclipse](https://world.mendix.com/display/howto25/Configure+Java+actions+using+Eclipse)

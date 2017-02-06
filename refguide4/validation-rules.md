@@ -49,7 +49,3 @@ _Default value:_ Required
 Date values should be entered in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format, for example 2012-07-26.
 
 {% endmarkdown %}</div>
-
-## Related Articles
-
-*   [How To: Add a validation rule](https://world.mendix.com/display/howto25/Add+a+validation+rule)

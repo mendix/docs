@@ -310,9 +310,3 @@ For more information, see the [tutorials](/howto40/custom-widgets) for custom wi
 Custom widgets that require the context of an entity should be inserted in a data view or template grid.
 
 {% endmarkdown %}</div>
-
-## Related Articles
-
-*   [How To: Add a widget to a form](https://world.mendix.com/display/howto40/Add+a+widget+to+a+form)
-*   [How To: Create and build a form](https://world.mendix.com/display/howto40/Create+and+build+a+form)
-*   [How To: Apply XPath within the form builder](https://world.mendix.com/display/howto40/Apply+XPath+within+the+form+builder)

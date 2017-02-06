@@ -51,5 +51,5 @@ See [Widget Properties](widget-properties).
 
 ## Related Articles
 
-*   [How To: Connect a basic report to a data set](connect-a-basic-report-to-a-data-set)
-*   [How To: Configure zooming for a basic report](configure-zooming-for-a-basic-report)
+*   [How To: Connect a basic report to a data set](/howto40/connect-a-basic-report-to-a-data-set)
+*   [How To: Configure zooming for a basic report](/howto40/configure-zooming-for-a-basic-report)

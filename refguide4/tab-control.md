@@ -37,7 +37,3 @@ See [Widget Properties](widget-properties).
 ### Style
 
 See [Widget Properties](widget-properties).
-
-## Related Articles
-
-*   [How To: Add and configure tab pages](https://world.mendix.com/display/howto25/Add+and+configure+tab+pages)

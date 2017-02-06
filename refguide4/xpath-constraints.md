@@ -3,7 +3,7 @@ title: "XPath Constraints"
 category: "refguide4"
 space: "Reference Guide 4"
 ---
-A constraint can be added to any Xpath query to modulate the data retrieved. It should always take the form of a valid [expression](xpath-expressions). This should consist of one or more variables combined with [operators](https://world.mendix.com/display/refguide3/XPath+Operators), [functions](https://world.mendix.com/display/refguide3/XPath+Constraint+Functions), [keywords or system variables](https://world.mendix.com/display/refguide3/XPath+Keywords+and+System+Variables).
+A constraint can be added to any Xpath query to modulate the data retrieved. It should always take the form of a valid [expression](xpath-expressions). This should consist of one or more variables combined with [operators](xpath-operators), [functions](xpath-constraint-functions), [keywords or system variables](xpath-keywords-and-system-variables).
 
 <div class="alert alert-info">{% markdown %}
 
@@ -30,7 +30,7 @@ This query retrieves all customers whose name is equal to Jansen and who live in
 
 {% endmarkdown %}</div>
 
-It is also possible to combine constraints with an 'and' or 'or' [operator](https://world.mendix.com/display/refguide3/XPath+Operators).
+It is also possible to combine constraints with an 'and' or 'or' [operator](xpath-operators).
 
 <div class="alert alert-info">{% markdown %}
 

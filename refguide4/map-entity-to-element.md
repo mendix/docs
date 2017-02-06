@@ -5,7 +5,7 @@ space: "Reference Guide 4"
 ---
 ## Object Mapping
 
-The type of domain entity that is mapped to the XML element. Specified in the [domain-to-XML mappings](domain-to-xml-mapping) screen.
+The type of domain entity that is mapped to the XML element. Specified in the [domain-to-XML mappings](domain-to-xml-mappings) screen.
 
 ## Obtain the object(s) by
 
@@ -52,7 +52,7 @@ The XML element that will be filled.
 
 ### Occurrence
 
-Displays how often the element may occur. This can be "0..1" or "1", depending on if it is required or not. If you want to never map a value to an optional (occurrence "0") element, simply disable it in the "Select elements..." dialog in the [Domain-to-XML mapping](domain-to-xml-mapping) screen.
+Displays how often the element may occur. This can be "0..1" or "1", depending on if it is required or not. If you want to never map a value to an optional (occurrence "0") element, simply disable it in the "Select elements..." dialog in the [Domain-to-XML mapping](domain-to-xml-mappings) screen.
 
 ### Convert using (optional)
 

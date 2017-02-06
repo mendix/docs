@@ -161,7 +161,3 @@ See [Widget Properties](widget-properties).
 ### Style
 
 See [Widget Properties](widget-properties).
-
-## Related Articles
-
-*   [How To: Build a template grid](https://world.mendix.com/display/howto25/Build+a+template+grid)

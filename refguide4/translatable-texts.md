@@ -14,8 +14,3 @@ To ease the translation of many texts a batch translate feature can be found in 
 {% endmarkdown %}</div>
 
 If a text has not been translated when you run the application the text in the default language will be used. In this way, you can translate parts of the application and see the results immediately.
-
-## Related Articles
-
-*   [How To: Translate texts with the batch translate function](https://world.mendix.com/display/howto25/Translate+texts+with+the+batch+translate+function)
-*   [How To: Use the batch replace function](https://world.mendix.com/display/howto25/Use+the+batch+replace+function)

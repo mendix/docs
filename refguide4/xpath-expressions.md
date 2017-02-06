@@ -13,7 +13,7 @@ There are three types of expressions usable for constraints:
 
 ## Comparisons
 
-A comparison expression consists of two attributes or values, separated by a comparison [operator](https://world.mendix.com/display/refguide3/XPath+Operators), like '=', '<=' and '>'.
+A comparison expression consists of two attributes or values, separated by a comparison [operator](xpath-operators), like '=', '<=' and '>'.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -70,7 +70,7 @@ However, it is strongly recommended not to use this notation. This is because it
 
 ## Functions
 
-See [this page](https://world.mendix.com/display/refguide3/XPath+Constraint+Functions) for information on the available functions.
+See [this page](xpath-constraint-functions) for information on the available functions.
 
 ## Exist-expressions
 

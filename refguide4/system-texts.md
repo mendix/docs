@@ -12,7 +12,3 @@ In the [Project Settings](project-settings) you can manage the available languag
 ## Parameters
 
 Some system texts have parameters that can be inserted into the text. For example, if you delete items in a data grid, the following question will appear: 'Delete {1} items?'. At the position of the text {1} the first parameter will be inserted. In this case, the parameter is the number of objects that are selected for deletion. You are not required to use the parameter and the text 'Delete these items?' would also be a valid text.
-
-## Related Articles
-
-*   [How To: Edit system texts](https://world.mendix.com/display/howto25/Edit+system+texts)

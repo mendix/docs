@@ -31,7 +31,3 @@ The elements of which the XML file is comprised.
 A simple schema
 
 {% endmarkdown %}</div>
-
-## Related Articles
-
-*   [How To: Add and configure an XML schema](https://world.mendix.com/display/howto25/Add+and+configure+an+XML+schema)

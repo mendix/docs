@@ -11,6 +11,6 @@ The Team Server also connects the capture and develop phase of the agile applica
 
 ## Further reading
 
-*   [Team Server FAQ](https://world.mendix.com/display/refguide3/Team+Server+FAQ) - read the answer to the most asked questions about the Team Server.
-*   [Version Control](https://world.mendix.com/display/refguide3/Version+Control) - for a reference guide describing all Version Control options in the Modeler.
+*   [Team Server FAQ](team-server-faq) - read the answer to the most asked questions about the Team Server.
+*   [Version Control](version-control) - for a reference guide describing all Version Control options in the Modeler.
 *   [sprintr](app-platform) - to learn more about sprintr.

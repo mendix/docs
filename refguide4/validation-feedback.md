@@ -28,7 +28,3 @@ Template defines the text of the validation message. The template can contain pa
 ### Parameters
 
 For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [microflow expressions](microflow-expressions) resulting in a string.
-
-## Related Articles
-
-*   [How To: Add validation feedback to forms](https://world.mendix.com/display/howto25/Add+validation+feedback+to+forms)

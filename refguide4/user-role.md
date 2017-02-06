@@ -39,7 +39,3 @@ A user role can be allowed to manage users with a number of other user roles (in
 | --- | --- |
 | All | End-users with this user role can manage all users and grant all user roles. Usually this option should only be configured for an administrator. |
 | Selected | End-users with this user role can manage users that have at most the selected user roles, and can grant only the selected user roles. If no user roles are selected, end-users with this user role cannot manage users at all. |
-
-## Related Articles
-
-*   [How To: Set up module roles for a project user role](https://world.mendix.com/display/howto25/Set+up+module+roles+for+a+project+user+role)

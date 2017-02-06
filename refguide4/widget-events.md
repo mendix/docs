@@ -32,7 +32,3 @@ The on-leave property optionally specifies a microflow that will be executed whe
 The on leave settings specify what parameters are passed to the microflow, whether a progress bar is shown and more.
 
 See [Starting Microflows](starting-microflows).
-
-## Related Articles
-
-*   [How To: Connect a microflow to a widget event](https://world.mendix.com/display/howto25/Connect+a+microflow+to+a+widget+event)

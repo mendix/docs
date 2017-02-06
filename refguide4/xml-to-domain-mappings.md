@@ -9,7 +9,7 @@ An XML-to-Domain mapping is used to convert data in XML format to objects in you
 
 ### Parameter
 
-When set, this property specifies the type of the parameter that needs to be passed to this mapping. This parameter can be specified in the [Call web service](https://world.mendix.com/display/refguide3/Call+Web+Service) dialog.
+When set, this property specifies the type of the parameter that needs to be passed to this mapping. This parameter can be specified in the [Call web service](call-web-service) dialog.
 
 ### Use subtransactions for microflows
 
@@ -61,7 +61,7 @@ The documentation describing this element.
 
 ### Object Mapping
 
-Reflects the properties that were selected in the [Map element to entity](https://world.mendix.com/display/refguide3/Map+element+to+entity) dialog.
+Reflects the properties that were selected in the [Map element to entity](map-element-to-entity) dialog.
 
 ### Schema
 
@@ -84,7 +84,3 @@ XML path inside either the SOAP header or SOAP body.
 #### Occurrence
 
 How many times this element occurs.
-
-## Related Articles
-
-*   [How To: Configure an XML-to-Domain mapping](https://world.mendix.com/display/howto25/Configure+an+XML-to-Domain+mapping)

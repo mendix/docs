@@ -25,7 +25,7 @@ This query returns all customers whose name is not known to the system.
 
 {% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
 
-These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. Read [this page](https://world.mendix.com/display/refguide3/XPath) for more information on how to constrain on associations.
+These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. Read [this page](xpath) for more information on how to constrain on associations.
 
 {% endmarkdown %}</div>
 

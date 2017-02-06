@@ -37,12 +37,12 @@ The team server runs in the trusted Mendix cloud environment and on a trusted in
 
 ### How do I merge changes from one development line to another?
 
-The modeler automates most of this process; you can simply merge development lines by selecting model revisions on the team server. The Mendix Business Modeler will do the merging and will keep track of consistency. [Read more](https://world.mendix.com/display/refguide3/Version+Control+Concepts)
+The modeler automates most of this process; you can simply merge development lines by selecting model revisions on the team server. The Mendix Business Modeler will do the merging and will keep track of consistency. [Read more](version-control-concepts)
 
 ### How do I resolve a conflict when two changes cannot be combined?
 
-Resolving a conflict can be done in by using the 'Use mine' and 'Use theirs' button in the version control dock. [Read more](https://world.mendix.com/display/refguide3/Version+Control+Scenarios)
+Resolving a conflict can be done in by using the 'Use mine' and 'Use theirs' button in the version control dock. [Read more](version-control-scenarios)
 
 ### How can I access the history of my project?
 
-The history of the project is a list of all revisions that have been committed in reverse chronological order. The history form quickly shows you revision number, date, time, author and message of each revision; it can be accessed from within the Mendix Business Modeler as well as sprintr. [Read more](https://world.mendix.com/display/refguide3/Version+Control+Scenarios)
+The history of the project is a list of all revisions that have been committed in reverse chronological order. The history form quickly shows you revision number, date, time, author and message of each revision; it can be accessed from within the Mendix Business Modeler as well as sprintr. [Read more](version-control-scenarios)

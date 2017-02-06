@@ -17,4 +17,4 @@ From within the Business Modeler you can view the cloud slots you have available
 
 ## On-premise
 
-Please visit the [How To: Mendix on Windows](/howto40/mendix-on-window---service-console-3) and [How To: Mendix on GNU/Linux](/howto40/installing-mendix-on-gnu) sections to learn how to deploy your Mendix application to servers running on these platforms.
+Please visit the [How To: Mendix on Windows](/howto40/mendix-on-windows---service-console-3) and [How To: Mendix on GNU/Linux](/howto40/installing-mendix-on-gnu) sections to learn how to deploy your Mendix application to servers running on these platforms.

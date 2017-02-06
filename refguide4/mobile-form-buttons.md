@@ -38,16 +38,16 @@ The button can be shown or hidden based on certain conditions. See [Conditions](
 
 ## Common Properties
 
-See [Widget Properties](https://world.mendix.com/display/refguide4/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties).
 
 ### Name
 
-See [Widget Properties](https://world.mendix.com/display/refguide4/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties).
 
 ### Class
 
-See [Widget Properties](https://world.mendix.com/display/refguide4/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties).
 
 ### Style
 
-See [Widget Properties](https://world.mendix.com/display/refguide4/Widget+Properties#WidgetProperties-CommonProperties).
+See [Widget Properties](widget-properties).

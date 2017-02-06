@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to use the 'Aggregate list' activity in a microflow. The related reference guide article can be found [here](/refguide4/Aggregate+List).
+This section describes how to use the 'Aggregate list' activity in a microflow. The related reference guide article can be found [here](/refguide4/aggregate-list).
 
 ## Instructions
 

@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to create and change an object in a microflow. The related reference guide article can be found [here](/refguide4/Create+Object) and [here](/refguide4/Change+Object).
+This section describes how to create and change an object in a microflow. The related reference guide article can be found [here](/refguide4/create-object) and [here](/refguide4/change-object).
 
 ## Instructions
 
@@ -28,4 +28,3 @@ This section describes how to create and change an object in a microflow. The re
 ![](attachments/819203/917932.png) **In the menu that appears, you will be able to specify the member (attribute or association) you want to change, and enter its new value with the use of microflow expressions.**
 
 ![](attachments/2621585/2752866.png)
-

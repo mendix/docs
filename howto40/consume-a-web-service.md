@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to consume a web service in your project. The related reference guide article can be found [here](/refguide4/Imported+Web+Services).
+This section describes how to consume a web service in your project. The related reference guide article can be found [here](/refguide4/imported-web-services).
 
 ## Instructions
 
@@ -58,4 +58,3 @@ Again there are three input options. The 'Simple' option can be used if only sta
 ![](attachments/2621626/2752994.png)![](attachments/2621626/2752995.png)
 
 ![](attachments/819203/917932.png) **Your imported web service is now ready to be used in your application.**
-

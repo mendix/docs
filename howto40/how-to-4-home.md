@@ -3,7 +3,7 @@ title: "How-to 4 Home"
 category: "howto40"
 space: "Mendix 4 How-to's"
 ---
-Welcome to the Mendix 4 How To section. Here you will find short step-by-step guides to help you with some of the more challenging aspects of the Mendix Framework. Should you be looking for in-depth descriptions of the various aspects of the Mendix technology, you can find these in the [reference guide](/refguide4/Introduction).
+Welcome to the Mendix 4 How To section. Here you will find short step-by-step guides to help you with some of the more challenging aspects of the Mendix Framework. Should you be looking for in-depth descriptions of the various aspects of the Mendix technology, you can find these in the [reference guide](/refguide4/).
 
 **Project Settings**
 

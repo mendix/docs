@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to call a microflow inside another microflow. The related reference guide article can be found [here](/refguide4/Microflow+Call).
+This section describes how to call a microflow inside another microflow. The related reference guide article can be found [here](/refguide4/microflow-call).
 
 ## Instructions
 
@@ -40,4 +40,3 @@ The purpose of the microflow in the screenshot is to send the amount of orders t
 ![](attachments/819203/917932.png) **At 'Variable name', fill in the name you want to use for the variable that the microflow will return.**
 
 ![](attachments/2621593/2752910.png)
-

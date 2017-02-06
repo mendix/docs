@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure a Java action call in a microflow. The related reference guide article can be found [here](/refguide4/Java+Action+Call).
+This section describes how to configure a Java action call in a microflow. The related reference guide article can be found [here](/refguide4/java-action-call).
 
 ## Instructions
 

@@ -11,7 +11,7 @@ This section describes how to add a new form and then build it with the availabl
 
 ![](attachments/819203/917932.png) **Add a new form to your project. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
-![](attachments/819203/917932.png) **Build the form using the widgets available to you. If you do not know how to add widgets to a form, please refer to [this](Add+a+widget+to+a+form) article.**
+![](attachments/819203/917932.png) **Build the form using the widgets available to you. If you do not know how to add widgets to a form, please refer to [this](add-a-widget-to-a-form) article.**
 
 ![](attachments/819203/917932.png) **Connect the widgets in the form to the entities from your domain model. If you do not know how to do this, you can find articles on how to connect entities to [data grids](connect-an-entity-to-a-data-grid) and [data views](connect-an-entity-to-a-data-view) in this How To section, as well as articles on how to connect attributes of an entity to a [search field](connect-an-attribute-to-a-search-field) or [data grid column](connect-an-attribute-to-a-column).**
 

@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to add an association of type reference set to your domain model. The related reference guide article can be found [here](/refguide4/Reference+set+selector).
+This section describes how to add an association of type reference set to your domain model. The related reference guide article can be found [here](/refguide4/reference-set-selector).
 
 ## Instructions
 

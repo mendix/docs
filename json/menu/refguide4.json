@@ -1,0 +1,10 @@
+---
+layout: json
+sitemap: false
+---
+{
+  "categories": [
+
+  ],
+  "pages": {% include json-snippets/get_pages.inc dir="/refguide4/" %}
+}

@@ -123,10 +123,10 @@ An overview of the possibilities with expressions can be found below.
 
 ### [Parse/format date function calls](parse-and-format-date-function-calls)
 
-*   [`parseDateTime[UTC]`](Parse+and+format+date+function+calls) - Convert a string to a date value
-*   [`formatDateTime[UTC]`](Parse+and+format+date+function+calls) - Convert a date value to a string
-*   [`formatTime[UTC]`](Parse+and+format+date+function+calls) - Convert the time part of a date value to a string
-*   [`formatDate[UTC]`](Parse+and+format+date+function+calls) - Convert the date part of a date value to a string
+*   [`parseDateTime[UTC]`](parse-and-format-date-function-calls) - Convert a string to a date value
+*   [`formatDateTime[UTC]`](parse-and-format-date-function-calls) - Convert a date value to a string
+*   [`formatTime[UTC]`](parse-and-format-date-function-calls) - Convert the time part of a date value to a string
+*   [`formatDate[UTC]`](parse-and-format-date-function-calls) - Convert the date part of a date value to a string
 
 ### [Enumerations in microflow expressions](enumerations-in-microflow-expressions)
 

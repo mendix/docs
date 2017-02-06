@@ -4,5 +4,5 @@ category: "refguide4"
 space: "Reference Guide 4"
 ---
 <div class="alert alert-warning">{% markdown %}
-This page will redirect to [Project Security](/display/refguide4/project-security).
+This page will redirect to [Project Security](project-security).
 {% endmarkdown %}</div>

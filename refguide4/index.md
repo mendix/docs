@@ -16,7 +16,7 @@ space: "Reference Guide 4"
 *   [Java API Tutorial](java-api-tutorial)
 *   [TreeNavigation](treenavigation)
 *   [Oracle](oracle)
-*   [Reference Guide 4 Introduction](reference-guide-4-introduction) ![](images/icons/contenttypes/home_page_16.png)
+*   [Reference Guide 4 Introduction](reference-guide-4-introduction)
     *   [App Platform](app-platform)
     *   [Team Server](team-server)
         *   [Team Server FAQ](team-server-faq)

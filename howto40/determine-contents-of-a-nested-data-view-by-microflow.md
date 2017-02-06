@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how you can use a microflow to determine the contents of a nested data view. The related reference guide article can be found [here](/refguide4/Data+View).
+This section describes how you can use a microflow to determine the contents of a nested data view. The related reference guide article can be found [here](/refguide4/data-view).
 
 ## Instructions
 

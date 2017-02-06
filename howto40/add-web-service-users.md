@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to add web service users to your application, allowing the consumption of an exposed web service. The related reference guide article can be found [here](/refguide4/Published+Web+Services).
+This section describes how to add web service users to your application, allowing the consumption of an exposed web service. The related reference guide article can be found [here](/refguide4/published-web-services).
 
 ## Instructions
 
@@ -28,4 +28,3 @@ This section describes how to add web service users to your application, allowin
 ![](attachments/819203/917932.png) **Use the reference set selector to add user roles for the web service user, and use the drop-down menu at 'Language' to configure their language.**
 
 ![](attachments/819203/917932.png) **Finally press the 'Save' button to store the new web service user.**
-

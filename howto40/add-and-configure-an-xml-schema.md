@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to add an XML schema to your project and then configure it. The related reference guide article can be found [here](/refguide4/XML+Schemas).
+This section describes how to add an XML schema to your project and then configure it. The related reference guide article can be found [here](/refguide4/xml-schemas).
 
 ## Instructions
 
@@ -22,4 +22,3 @@ This section describes how to add an XML schema to your project and then configu
 ![](attachments/819203/917932.png) **The 'Elements' section will now be filled with the elements of the XML schema, read from the XSD file.**
 
 ![](attachments/2621604/2752812.png)
-

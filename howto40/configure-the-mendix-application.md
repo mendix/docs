@@ -1,5 +1,5 @@
 ---
-title: "Configure the Mendix application~"
+title: "Configure the Mendix application"
 category: "howto40"
 space: "Mendix 4 How-to's"
 ---
@@ -66,7 +66,7 @@ The first three settings define the locations of the folders that we created in 
  | Here you can specify whether scheduled events must be executed or not. The option SPECIFIED can be used to specify the events that must be executed. Use in that case the custom setting 'MyScheduledEvents', as described below.
  |
 | Custom Mendix Settings
- | See [this page](/refguide4/Custom+Settings) for an overview of settings.
+ | See [this page](/refguide4/custom-settings) for an overview of settings.
 Here you can define advanced settings of the Mendix server, such as specific folder locations or advanced database settings. The simple database settings (same as in the Modeler) can be put in place via the option 'Database Configuration' on the navigation pane.
  |
 
@@ -124,4 +124,3 @@ Make sure that the user account for the service has enough rights to the folders
 When the service is running, you can start the Mendix Service Console to see the log message of the application. This works only if the Mendix Service Console is started when the service is already running.
 
 Now you cannot start the application in the console pane, but you can define log levels and see the log messages.
-

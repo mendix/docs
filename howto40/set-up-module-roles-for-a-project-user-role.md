@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section explains how you can configure module roles for a project user role. The related reference guide article can be found [here](/refguide4/User+Role).
+This section explains how you can configure module roles for a project user role. The related reference guide article can be found [here](/refguide4/user-role).
 
 ## Instructions
 
@@ -28,4 +28,3 @@ In this menu you can also select in which modules you want to grant this project
 ![](attachments/819203/917932.png) **The new menu will list the module roles per module. Add check marks to the module roles you would like to assign to the project user role and finish by pressing the 'OK' button.**
 
 ![](attachments/2621510/2752783.png)
-

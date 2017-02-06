@@ -134,4 +134,4 @@ Specifies whether passwords should contain at least one lowercase character and 
 
 ### Require symbol
 
-Specifies whether passwords should contain a special symbol, such as tilde (~) or plus ![(plus)](images/icons/emoticons/add.png).
+Specifies whether passwords should contain a special symbol, such as tilde (~) or plus.

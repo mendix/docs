@@ -5,7 +5,7 @@ space: "Reference Guide 4"
 ---
 With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows.
 
-For information about Java actions in the modeler see [Java Actions](https://world.mendix.com/display/refguide4/Java+Actions).
+For information about Java actions in the modeler see [Java Actions](java-actions).
 
 ## Writing code in the .java files of your Java actions
 

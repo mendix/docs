@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to use aggregate functionality to display the sum of a data grid column. The related reference guide article can be found [here](/refguide4/Columns).
+This section describes how to use aggregate functionality to display the sum of a data grid column. The related reference guide article can be found [here](/refguide4/columns).
 
 ## Instructions
 
@@ -20,4 +20,3 @@ This section describes how to use aggregate functionality to display the sum of 
 ![](attachments/819203/917932.png) **The column will now display the chosen aggregate function in the client.**
 
 ![](attachments/2621558/2752613.png)
-

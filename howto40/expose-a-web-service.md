@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to expose a web service in your project. The related reference guide article can be found [here](/refguide4/Published+Web+Services).
+This section describes how to expose a web service in your project. The related reference guide article can be found [here](/refguide4/published-web-services).
 
 ## Instructions
 

@@ -46,6 +46,9 @@ Logging consists of a log node, a level and the logging message itself. For the 
 Log nodes are created when the first log message has occurred for this node in Mendix. The options _Level
  for new nodes _determines the initial log level in the Log Tool for these new log nodes.
 
+![](attachments/Log_Tool/Protections.png)
+
+
 The **Max messages to store** can limit the amount of records in the database. There are two things that can happen when the maximum is reached:
 
 1.  The Log Tool can stop if the checkbox [On max stop?] is checked.

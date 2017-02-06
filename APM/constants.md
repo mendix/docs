@@ -6,7 +6,9 @@ parent: "installation-steps"
 This appendix describes the constants used in the APMAgent. You are advised to use the defaults with the exception of the CompanyName constant.
 The following constants are used:
 
+*   APMAgent.AppName is used in the license. Needs to be set on installation.
 *   APMAgent.BatchDeleteChunkSize (default 10000) to determine the batch size when deleting data
+*   APMAgent.CompanyName is used in the license. Needs to be set on installation.
 *   APMAgent.ExcludedMicroflows (default APMAgent.; ) Contains a list of patterns in a semi colon separated
  list that filters out microflows. Excludes are used in the statistics tool and the performance tool.
 *   APMAgent.InstanceIndex (default 0) is used only for on premise load balanced situations to give each 

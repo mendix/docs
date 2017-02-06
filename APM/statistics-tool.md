@@ -61,7 +61,11 @@ hourly. You also configure the top N statistics to be stored and an exclude patt
 The top N is both for maximum duration and total duration, so between N and 2 times N records are presented
  or stored in the database. When the top N value is empty or 0 all microflows are retrieved.
 
-The GUI options include also a top N and an exclude pattern to interactively filter with these options.
+The dashboard options include also a top N and an exclude pattern to interactively filter with these options.
+
+On the protections tab you see:
+
+![](attachments/Statistics_Tool/Protections.png)
 
 You can run the Statistics Tool for a fixed amount of time. The Statistics Tool is intended to always
 be active or running. This option is available if you want to measure statistics for short periods, say
@@ -73,6 +77,12 @@ The Statistics Tool is also protected with a **Max Processing Delay (ms)**. The 
    own max processing delay is that you might want the log tool to stop first, then the performance tool
    and last the trap or statistics tool.
 
+The data is cleanup automatically after a certain amount of days.
+
+![](attachments/Statistics_Tool/Triggers.png)
+On the trigger tab you can define triggers that fire on a certain microflow duration. For 
+details regarding triggers see the measurements tool.
+
 Changes to the options are applied to the currently running Statistics Tool session if the button
 **Save & apply** is used.
 
@@ -81,7 +91,7 @@ Changes to the options are applied to the currently running Statistics Tool sess
 The Statistics Tool shows the running statistics output. Several search fields are available to search
 through and filter these statistics.
 
- ![](attachments/Statistics_Tool/Statistics.png)
+ ![](attachments/Statistics_Tool/Overview.png)
 
 By default the result is sorted by **Total (ms)**. This will give a overview of the actions and microflows were the
 application spent to most time on. The average (**Avg**) is **Total (ms)** divided by **Count**. Sorted on Avg, the actions and
@@ -106,3 +116,13 @@ running it can happen a queue builds up in the Mendix thread that sends the log 
   duration of a microflow is calculated by the message date. When this happens the debug running counter
   for message delay shows a high number, say 10000 milliseconds. The Statistics Tool pauses collecting-
   and handling messages if the processing delay is above the configured **Max Processing Delay (ms)**.
+
+![](attachments/Statistics_Tool/Snapshots.png)
+In stored snapshots you find all the statistics bundled per snapshot. A snapshot is taken periodically.
+You can manually create snapshots. A trigger can fire the creation of a snapshot.
+
+You can prevent a snapshot from being deleted by cleanup when you select to keep it.
+
+
+![](attachments/Statistics_Tool/Snapshot_Details.png)
+You can rename snapshots and view the details that will include filtering details when applied.

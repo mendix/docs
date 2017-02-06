@@ -9,7 +9,7 @@ This section describes how to generate a document with a microflow using a previ
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the document template you intend to use. If you do not know how to do this, please refer to** **[this](/howto25/Create+and+build+a+document+template)** **article.**
+![](attachments/819203/917932.png) **Create the document template you intend to use. If you do not know how to do this, please refer to** **[this](create-and-build-a-document-template)** **article.**
 
 ![](attachments/2621586/2752884.png)
 
@@ -19,7 +19,7 @@ This section describes how to generate a document with a microflow using a previ
 
 Make sure that the object which is connected to the document template you intend to use is passed to the microflow.
 
-![](attachments/819203/917932.png) **Use a 'Create object' activity to create a new object of the System.FileDocument entity or a specialization of it. If you do not know how to use the 'Create object' activity, please refer to** **[this](/howto25/Create+and+change+an+object)** **article.**
+![](attachments/819203/917932.png) **Use a 'Create object' activity to create a new object of the System.FileDocument entity or a specialization of it. If you do not know how to use the 'Create object' activity, please refer to** **[this](create-and-change-an-object)** **article.**
 
 ![](attachments/2621586/2752879.png)
 
@@ -60,4 +60,3 @@ You can choose either the language of the current user, the default project lang
 ![](attachments/819203/917932.png) **To enable viewing of the generated document, add a download form with file manager, or add a 'Download' activity to the microflow that generated the document.**
 
 If the document is not intended to be kept after the initial download, you can add a 'Change' activity to the microflow that generated the document to set the 'DeleteAfterDownload' flag of the document to 'true'.
-

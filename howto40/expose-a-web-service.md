@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to expose a web service in your project. The related reference guide article can be found [here](/NRG/Published+Web+Services).
+This section describes how to expose a web service in your project. The related reference guide article can be found [here](/refguide4/Published+Web+Services).
 
 ## Instructions
 
@@ -41,7 +41,7 @@ If the parameters and return are not primitive but objects or lists of objects i
 
 ![](attachments/2621605/2752816.png)
 
-![](attachments/819203/917932.png) **To allow the use of your published web service, add web service users to your application. If you do not know how to do this, please refer to [this](/howto25/Add+web+service+users) article.**
+![](attachments/819203/917932.png) **To allow the use of your published web service, add web service users to your application. If you do not know how to do this, please refer to [this](add-web-service-users) article.**
 
 ### Advanced
 
@@ -54,4 +54,3 @@ If the parameters and return are not primitive but objects or lists of objects i
 ![](attachments/819203/917932.png) **If the return of the published web service is an object or a list of objects, you can also press the 'Edit' button in the 'Return value' section to bring up a window which allows you to select which attributes of the entity you want to return, as well as associated entities and their attributes.**
 
 ![](attachments/2621605/2752814.png)
-

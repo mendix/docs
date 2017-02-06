@@ -13,7 +13,7 @@ This section describes how to configure a listen target for a data view. This al
 
 ![](attachments/2621442/2752633.png)
 
-![](attachments/819203/917932.png) **Connect the data grid and data view to the entity and set up the widgets so they display the desired attributes. Note that the data view must be connected to the same entity as the data grid, or a generalization of it. If you do not know how to connect entities to widgets, you can find articles about how to do this for [data grids](/howto25/Connect+an+entity+to+a+data+grid) and [data views](connect-an-entity-to-a-data-view) in this How To database.**
+![](attachments/819203/917932.png) **Connect the data grid and data view to the entity and set up the widgets so they display the desired attributes. Note that the data view must be connected to the same entity as the data grid, or a generalization of it. If you do not know how to connect entities to widgets, you can find articles about how to do this for [data grids](connect-an-entity-to-a-data-grid) and [data views](connect-an-entity-to-a-data-view) in this How To database.**
 
 ![](attachments/2621442/2752632.png)
 
@@ -24,4 +24,3 @@ This section describes how to configure a listen target for a data view. This al
 ![](attachments/819203/917932.png) **Your form is now configured to let the data view show more detailed information about a selected object from the data grid, as shown in the picture below.**
 
 ![](attachments/2621442/2752630.png)
-

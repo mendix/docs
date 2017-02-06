@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to call a microflow inside another microflow. The related reference guide article can be found [here](/NRG/Microflow+Call).
+This section describes how to call a microflow inside another microflow. The related reference guide article can be found [here](/refguide4/Microflow+Call).
 
 ## Instructions
 

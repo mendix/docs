@@ -25,7 +25,7 @@ This section describes how to create an enumeration in multiple languages. The r
 
 ![](attachments/2621550/2752598.png)
 
-![](attachments/819203/917932.png) **If the second language has not been added to the project yet, do so know. If you do now know how to do this, refer to [this](/howto25/Add+a+new+language) article.**
+![](attachments/819203/917932.png) **If the second language has not been added to the project yet, do so know. If you do now know how to do this, refer to [this](add-a-new-language-to-your-project) article.**
 
 ![](attachments/819203/917932.png) **Switch to the new language using the drop down menu in the toolbar.**
 
@@ -42,4 +42,3 @@ This section describes how to create an enumeration in multiple languages. The r
 ![](attachments/819203/917932.png) **Do this for all entries; whenever you switch to the second language, these new captions will now be used. Note that when switching languages, only captions are changed, whereas the names for enumeration values remain the same.**
 
 ![](attachments/2621550/2752604.png)
-

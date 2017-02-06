@@ -13,7 +13,7 @@ This section describes how to add a new form and then build it with the availabl
 
 ![](attachments/819203/917932.png) **Build the form using the widgets available to you. If you do not know how to add widgets to a form, please refer to [this](Add+a+widget+to+a+form) article.**
 
-![](attachments/819203/917932.png) **Connect the widgets in the form to the entities from your domain model. If you do not know how to do this, you can find articles on how to connect entities to [data grids](Connect+an+entity+to+a+data+grid) and [data views](Connect+an+entity+to+a+data+view) in this How To section, as well as articles on how to connect attributes of an entity to a [search field](Connect+an+attribute+to+a+search+field) or [data grid column](Connect+an+attribute+to+a+column).**
+![](attachments/819203/917932.png) **Connect the widgets in the form to the entities from your domain model. If you do not know how to do this, you can find articles on how to connect entities to [data grids](connect-an-entity-to-a-data-grid) and [data views](connect-an-entity-to-a-data-view) in this How To section, as well as articles on how to connect attributes of an entity to a [search field](connect-an-attribute-to-a-search-field) or [data grid column](connect-an-attribute-to-a-column).**
 
 ## Example: Pizza order information form
 
@@ -59,5 +59,3 @@ This section describes how to add a new form and then build it with the availabl
 
 ![](attachments/2621494/2752761.png)
 ![](attachments/2621494/2752758.png)
-
-[![](attachments/819203/917564.png)](create-and-build-a-form) [(Back to Top)](create-and-build-a-form)

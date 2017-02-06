@@ -5,11 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 Welcome to the Mendix 4 How To section. Here you will find short step-by-step guides to help you with some of the more challenging aspects of the Mendix Framework. Should you be looking for in-depth descriptions of the various aspects of the Mendix technology, you can find these in the [reference guide](/refguide4/Introduction).
 
-<div class="alert alert-info">{% markdown %}
-
-You can still find the How To section for the 3 Mendix Business Modeler [here](/howto30/Home).
-
-{% endmarkdown %}</div>**Project Settings**
+**Project Settings**
 
 These articles help you configure settings that affect your entire project, as well as the navigation of your application.
 
@@ -45,7 +41,7 @@ Microflows are the means with which you can express logic in your project. They 
 *   [Configure a Java action call](configure-a-java-action-call) (How To 4.0)
 *   [Configure a list operation](configure-a-list-operation) (How To 4.0)
 *   [Configure a loop](configure-a-loop) (How To 4.0)
-*   [Configure an 'Aggregate list' activity](configure-an-%27aggregate-list%27-activity) (How To 4.0)
+*   [Configure an 'Aggregate list' activity](configure-an-aggregate-list-activity) (How To 4.0)
 *   [Configure an exclusive split](configure-an-exclusive-split) (How To 4.0)
 *   [Create a list](create-a-list) (How To 4.0)
 *   [Create and change an object](create-and-change-an-object) (How To 4.0)
@@ -117,8 +113,8 @@ These articles will help you to configure the various resources you can add to y
 
 Forms are used to build a user interface and display information to the user. These articles will explain how to build forms using the available widgets and use the reporting functionality.
 
-*   ['Constrained by' functionality for a reference selector](%27constrained-by%27-functionality-for-a-reference-selector) (How To 4.0)
-*   ['Constrained by' functionality for a reference set selector](%27constrained-by%27-functionality-for-a-reference-set-selector) (How To 4.0)
+*   ['Constrained by' functionality for a reference selector](constrained-by-functionality-for-a-reference-selector) (How To 4.0)
+*   ['Constrained by' functionality for a reference set selector](constrained-by-functionality-for-a-reference-set-selector) (How To 4.0)
 *   [Add a widget to a form](add-a-widget-to-a-form) (How To 4.0)
 *   [Add and configure a file manager](add-and-configure-a-file-manager) (How To 4.0)
 *   [Add and configure an image uploader](add-and-configure-an-image-uploader) (How To 4.0)
@@ -155,7 +151,7 @@ Forms are used to build a user interface and display information to the user. Th
 *   [Set up visibility and editability based on an enumeration](set-up-visibility-and-editability-based-on-an-enumeration) (How To 4.0)
 *   [Set up visibility based on an module role](set-up-visibility-based-on-an-module-role) (How To 4.0)
 *   [Use a microflow to determine selectable objects](use-a-microflow-to-determine-selectable-objects) (How To 4.0)
-*   [Use the 'Apply context' property](use-the-%27apply-context%27-property) (How To 4.0)
+*   [Use the 'Apply context' property](use-the-apply-context-property) (How To 4.0)
 
 **Custom Widgets**
 

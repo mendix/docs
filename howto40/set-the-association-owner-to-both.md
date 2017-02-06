@@ -9,7 +9,7 @@ This section describes how you can change the properties of an association to ma
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the association if it does not exist yet. If you do not know how to do this, refer to [this](/howto25/Create+an+association) article.**
+![](attachments/819203/917932.png) **Create the association if it does not exist yet. If you do not know how to do this, refer to [this](create-an-association) article.**
 
 ![](attachments/819203/917932.png) **Select the association.**
 

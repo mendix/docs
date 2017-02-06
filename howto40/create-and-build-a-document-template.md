@@ -47,5 +47,4 @@ This section describes how to create and build a basic document template. (Using
 
 ![](attachments/2621548/2752596.png)
 
-To find out how to use the created document template to generate a document with a microflow, please refer to [this](/howto25/Generate+documents+from+document+templates) article.
-
+To find out how to use the created document template to generate a document with a microflow, please refer to [this](generate-documents-using-document-templates) article.

@@ -5,13 +5,13 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to publish an application you created in the AppStore. Tutorials related to this subject can be found [/Tutorials/Custom+Widgets](/Tutorials/Custom+Widgets).
+This section describes how to publish an application you created in the AppStore. Tutorials related to this subject can be found [here](custom-widgets).
 
 ## Instructions
 
 ![](attachments/819203/917932.png) **Save your application.**
 
-Read the [AppStore Approval Guidelines](/archive/App+Approval+Guide) to make sure your App is ready to be submitted. Also make sure you save your App as an .mpk file.
+Read the AppStore Approval Guidelines to make sure your App is ready to be submitted. Also make sure you save your App as an .mpk file.
 
 ![](attachments/819203/917932.png) **Log in to the AppStore.**
 
@@ -40,4 +40,3 @@ Fill in all the fields. Consider what you put here as this is what other users w
 Your App is now in the approval process!
 
 ![](attachments/2621634/2752928.png)
-

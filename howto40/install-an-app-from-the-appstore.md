@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to download an application and add it to your project using the Mendix Business Modeler and the AppStore. Tutorials related to this subject can be found [here](/Tutorials/Custom+Widgets).
+This section describes how to download an application and add it to your project using the Mendix Business Modeler and the AppStore. Tutorials related to this subject can be found [here](custom-widgets).
 
 ## Instructions
 

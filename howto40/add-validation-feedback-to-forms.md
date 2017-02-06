@@ -17,7 +17,7 @@ This section describes how to add validation feedback to your forms with the use
 
 In the above microflow, an 'Order' object is passed to the microflow. A 'Retrieve' action is used to return a list of the 'Pizza' objects associated with the 'Order', followed by an 'Aggregate list' action to count how many 'Pizza' objects the list contains. In the exclusive split a check is made if the number of pizzas ordered is equal to zero. If this is not the case, the order is committed to the database; if the number of pizzas ordered is zero validation feedback will be shown telling the customer to order at least one pizza.
 
-![](attachments/819203/917932.png) **Connect the microflow to a widget event. If you do not know how to do this, please refer to [this](Connect+a+microflow+to+a+widget+event) article.**
+![](attachments/819203/917932.png) **Connect the microflow to a widget event. If you do not know how to do this, please refer to [this](connect-a-microflow-to-a-widget-event) article.**
 
 ![](attachments/819203/917932.png) **Open the microflow and double-click on the 'Validation feedback' activity to start configuring it.**
 

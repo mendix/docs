@@ -5,11 +5,11 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how you can use a microflow to determine the contents of a nested data view. The related reference guide article can be found [here](/NRG/Data+View).
+This section describes how you can use a microflow to determine the contents of a nested data view. The related reference guide article can be found [here](/refguide4/Data+View).
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the form with the nested data view. If you do not know how to create and build forms, please refer to [this](/howto25/create-and-build-a-form) article.**
+![](attachments/819203/917932.png) **Create the form with the nested data view. If you do not know how to create and build forms, please refer to [this](create-and-build-a-form) article.**
 
 ![](attachments/2621455/2752640.png)
 
@@ -26,4 +26,3 @@ As the 'Customer' object for the nested data view will be returned by the microf
 ![](attachments/819203/917932.png) **If you want to change settings for the microflow, right-click on the nested data view and choose 'Edit data source microflow settings...' or click the '...' button next to 'Microflow settings' in the Properties window. In the menu that appears, you can change settings on which objects should be passed to the microflow, as well as change the microflow which is used to determine the contents of the nested data view.**
 
 ![](attachments/2621455/2752639.png)
-

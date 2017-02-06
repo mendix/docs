@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure a data or template grid such that when you want to create a new object of the grid entity, you can press a button to create the new object, create an associated image object and open the form which allows you to set the attributes. This How To assumes the reader has a basic understanding of building forms and microflows. If you do not have this knowledge yet, please refer to the How To articles explaining how to build a [form](/howto25/create-and-build-a-form) and [microflow](add-an-activity-to-a-microflow) first. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9699405).
+This section describes how to configure a data or template grid such that when you want to create a new object of the grid entity, you can press a button to create the new object, create an associated image object and open the form which allows you to set the attributes. This How To assumes the reader has a basic understanding of building forms and microflows. If you do not have this knowledge yet, please refer to the How To articles explaining how to build a [form](create-and-build-a-form) and [microflow](add-an-activity-to-a-microflow) first. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9699405).
 
 ## Instructions
 
@@ -70,4 +70,3 @@ In this case you are using a microflow to create a new object, and no object nee
 Optionally you can choose to display a custom form title.
 
 ![](attachments/819203/917932.png) **You now have a microflow which when you press the button will create a new object of the grid entity, create a new object of the image entity, set the association between the two new objects and open the new/edit form which allows you to enter the attributes and upload the image.**
-

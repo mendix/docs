@@ -5,11 +5,11 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to map an XML document to a domain model entity with the help of an XML-to-domain mapping in a microflow. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=10420577).
+This section describes how to map an XML document to a domain model entity with the help of an XML-to-domain mapping in a microflow.
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the XML-to-Domain mapping. If you do not know how to do this, please refer to [this](/howto25/Configure+an+XML-to-Domain+mapping) article,**
+![](attachments/819203/917932.png) **Create the XML-to-Domain mapping. If you do not know how to do this, please refer to [this](configure-an-xml-to-domain-mapping) article,**
 
 ![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
@@ -32,4 +32,3 @@ Make sure that the XML document and (if necessary) the object that has to be pas
 ![](attachments/819203/917932.png) **At 'Parameter' use the drop down menu to select the object you want to pass to the XML-to-domain mapping, if necessary.**
 
 ![](attachments/2621584/2752872.png)
-

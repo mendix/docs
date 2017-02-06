@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section will explain how to add a new document to your project. The related reference guide article can be found [here](/NRG/Modules).
+This section will explain how to add a new document to your project. The related reference guide article can be found [here](/refguide4/modules).
 
 ## Instructions
 
@@ -46,4 +46,3 @@ This can be done in several locations:
 ![](attachments/2621630/2752970.png)
 
 For some document types an additional menu will open after this, allowing further configuration.
-

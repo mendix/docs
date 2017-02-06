@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to create and change an object in a microflow. The related reference guide article can be found [here](/NRG/Create+Object) and [here](/NRG/Change+Object).
+This section describes how to create and change an object in a microflow. The related reference guide article can be found [here](/refguide4/Create+Object) and [here](/refguide4/Change+Object).
 
 ## Instructions
 

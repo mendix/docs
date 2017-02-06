@@ -9,7 +9,7 @@ This section describes how to configure delete behavior for entities when they a
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the association between the two entities if it does not exist yet. If you do not know how to do this, refer to [this](/howto25/Create+an+association) article.**
+![](attachments/819203/917932.png) **Create the association between the two entities if it does not exist yet. If you do not know how to do this, refer to [this](create-an-association) article.**
 
 ![](attachments/819203/917932.png) **Select the association.**
 
@@ -24,4 +24,3 @@ This section describes how to configure delete behavior for entities when they a
 ![](attachments/2621538/2752578.png)
 
 Note that not all combinations are possible. For example if you set the child delete behavior to only allow deletion if it has no associated parent objects, you can no longer configure child objects to be deleted when the associated parent object is deleted. If you set one of the delete behaviors to only allow deletion if the object has no associated objects, you can also enter an error message which will be shown if this is attempted.
-

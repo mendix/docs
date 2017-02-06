@@ -23,7 +23,7 @@ This section describes how to create a data set and add parameters to it. The re
 
 ![](attachments/2621546/2752587.png)
 
-You can press the 'New' button to bring up a window allowing you to add new columns to the data set. For more information on configuring Java actions using Eclipse, please refer to [this](/howto25/Configure+Java+actions+using+Eclipse) article.
+You can press the 'New' button to bring up a window allowing you to add new columns to the data set. For more information on configuring Java actions using Eclipse, please refer to [this](configure-java-actions-using-eclipse) article.
 
 ![](attachments/819203/917932.png) **If you chose to use an OQL statement as source, enter this statement in the 'Source' area.**
 
@@ -42,4 +42,3 @@ The statement in the screenshot looks up 'Order' objects and defines 'Number', '
 ![](attachments/819203/917932.png) **Make sure all parameters from the OQL statement are added to the data set.**
 
 ![](attachments/2621546/2752589.png)
-

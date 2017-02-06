@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to add web service users to your application, allowing the consumption of an exposed web service. The related reference guide article can be found [here](/NRG/Published+Web+Services).
+This section describes how to add web service users to your application, allowing the consumption of an exposed web service. The related reference guide article can be found [here](/refguide4/Published+Web+Services).
 
 ## Instructions
 

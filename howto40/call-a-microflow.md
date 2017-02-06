@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to call a microflow from a Mendix JavaScript widget. Tutorials related to this subject can be found [here](/Tutorials/Custom+Widgets).
+This section describes how to call a microflow from a Mendix JavaScript widget. Tutorials related to this subject can be found [here](custom-widgets).
 
 ## Instructions
 
@@ -23,7 +23,7 @@ In order to call a microflow from our widget, we first need to assign it to the 
 
 ```
 
-In this example, our microflow will use the entity context from the Dataview our widget is in and return a string variable. To learn how to retrieve the context object in JavaScript, read this How To: [Use the Data View context object](/howto25/Use+the+Data+View+context+object).
+In this example, our microflow will use the entity context from the Dataview our widget is in and return a string variable. To learn how to retrieve the context object in JavaScript, read this How To: [Use the Data View context object](use-the-data-view-context-object).
 
 <div class="alert alert-info">{% markdown %}
 
@@ -71,4 +71,3 @@ The **error** parameter defines the message that is send to the log. The **actio
 ```
 
 The microflow returns a JSON object with our string variable in it. The object is basically the XMLHttpRequest we get back, we can call on this using **xhr**; our string variable can be found under **responseText**. We convert this using **dojo.fromJson** into a JavaScript object we can use. After converting our string is located under **['actionResult']**.
-

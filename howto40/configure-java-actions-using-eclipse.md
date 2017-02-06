@@ -9,7 +9,7 @@ This section describes how to configure a Java action for your project using Ecl
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Add the Java action to your project and configure it. If you do not know how to do this, please refer to [this](/howto25/Add+and+configure+a+Java+action) article.**
+![](attachments/819203/917932.png) **Add the Java action to your project and configure it. If you do not know how to do this, please refer to [this](add-and-configure-a-java-action) article.**
 
 ![](attachments/2621631/2752975.png)
 
@@ -62,4 +62,3 @@ The code in the screenshot above first uses an XPath query to find a list of cus
 ![](attachments/2621631/2752976.png)
 
 If you are working on multiple applications in Eclipse, you can use the downward pointing arrow to bring up a menu where you can select which application you want to run. If you want to debug your application, you can press the 'Debug' button to the left of the 'Run' button instead.
-

@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to set your widget to receive the context object from a Data View and how to get this into your widget. Tutorials related to this subject can be found [here](/Tutorials/Custom+Widgets).
+This section describes how to set your widget to receive the context object from a Data View and how to get this into your widget. Tutorials related to this subject can be found [here](custom-widgets).
 
 ## Instructions
 

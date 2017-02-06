@@ -9,5 +9,5 @@ This section describes how to manage your application in the [Mendix Cloud](http
 
 ## Available documentation in this section:
 
-*   [Migrating your data](/howto30/Migrating+your+data)
-*   [Uploading your Project](/howto30/Uploading+your+Project)
+*   [Migrating your data](migrating-your-data)
+*   [Uploading your Project](uploading-your-project)

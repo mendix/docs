@@ -15,5 +15,5 @@ Please select a How To:
 *   [Associations](associations)
     *   [Create an association](create-an-association)
     *   [Add a reference set](add-a-reference-set)
-    *   [Set the association owner to 'both'](2621539)
+    *   [Set the association owner to 'both'](set-the-association-owner-to-both)
     *   [Configure delete behavior](configure-delete-behavior)

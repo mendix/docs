@@ -5,11 +5,11 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure a Java action call in a microflow. The related reference guide article can be found [here](/NRG/Java+Action+Call).
+This section describes how to configure a Java action call in a microflow. The related reference guide article can be found [here](/refguide4/Java+Action+Call).
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the Java action. If you do not know how to do this, please refer to [this](/howto25/Add+and+configure+a+Java+action) article.**
+![](attachments/819203/917932.png) **Create the Java action. If you do not know how to do this, please refer to [this](add-and-configure-a-java-action) article.**
 
 ![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
@@ -36,4 +36,3 @@ Make sure the variables needed for the Java action are either created in the mic
 ![](attachments/819203/917932.png) **At 'Variable name', fill in the name you want to use for the variable that the Java action will return.**
 
 ![](attachments/2621595/2752917.png)
-

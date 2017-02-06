@@ -42,9 +42,25 @@ The following screenshot shows the Trap Tool options:
 
 ![](attachments/Trap_Tool/Options.png)
 
+The Trap Tool can be configured to remember messages recorded during a certain amount of time that precedes a trap. So in the screenshot-example of the options dialog you store per   trap at most 15.000 records and at most messages from 10.000ms (10 seconds) before the trap.
+
 ![](attachments/Trap_Tool/Options_Protections.png)
+If you define a **Max messages to buffer** the system will either stop when the maximum is reached or pause for
+a defined period of time. This allows the trap queue to be written to the database and prevent high volume traps
+causing too much load on the system.
+
+If you define a **Max messages to store** the system will either stop when the maximum is reached or delete the oldest trap messages. This is determined by the setting **On max stop?**. The oldest messages  are deleted when a new trap arrives after the new messages have been added to the database.
+
+You can run the Trap Tool for a fixed amount of time. The Trap Tool is intended to run always, but when
+ using the Trap Tool for the first time and not knowing which errors or warnings to exclude you might want
+  to limit the duration the Trap Tool is running.
+
+The Trap Tool has a **Max Processing Delay (ms)** protection to stop the Trap Tool if the system generates too many log messages which causes queueing inside Mendix. This off course depends on any other tools that might be running and other factors that might generate additional messages.
 
 ![](attachments/Trap_Tool/Options_Triggers.png)
+
+On the triggers tab you can define message triggers that fire on messages of level INFO and above. See the measurements
+tool for a description on triggers.
 
 You can define which traps are excluded to avoid highly repetitive messages which are not useful for analysis. You can exclude a complete node or filter out trap messages by regular expressions. Exclusions can be added manually but also by selecting an error, a warning or a critical message in either the Log Tool or the Trap Tool, viewing their details and pressing the **Exclude** button.
 
@@ -57,15 +73,5 @@ recorded a message that needs to be excluded the next time it occurs then the te
 ![](attachments/Trap_Tool/Test_Exclusion.png)
 
 The Trap Tool can be configured to trap on Warning-, Error- and Critical messages.
-
-The Trap Tool can be configured to remember messages recorded during a certain amount of time that precedes a trap. So in the screenshot-example of the options dialog you store per   trap at most 15.000 records and at most messages from 10.000ms (10 seconds) before the trap.
-
-If you define a **Max messages to store** the system will either stop when the maximum is reached or delete the oldest trap messages. This is determined by the setting **On max stop?**. The oldest messages  are deleted when a new trap arrives after the new messages have been added to the database.
-
-You can run the Trap Tool for a fixed amount of time. The Trap Tool is intended to run always, but when
- using the Trap Tool for the first time and not knowing which errors or warnings to exclude you might want
-  to limit the duration the Trap Tool is running.
-
-The Trap Tool has a **Max Processing Delay (ms)** protection to stop the Trap Tool if the system generates too many log messages which causes queueing inside Mendix. This off course depends on any other tools that might be running and other factors that might generate additional messages.
 
 Changes to the options are applied to the Trap Tool if the button **Save & apply** is used.

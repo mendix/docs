@@ -42,6 +42,10 @@ The following screenshot shows the Trap Tool options:
 
 ![](attachments/Trap_Tool/Options.png)
 
+![](attachments/Trap_Tool/Options_Protections.png)
+
+![](attachments/Trap_Tool/Options_Triggers.png)
+
 You can define which traps are excluded to avoid highly repetitive messages which are not useful for analysis. You can exclude a complete node or filter out trap messages by regular expressions. Exclusions can be added manually but also by selecting an error, a warning or a critical message in either the Log Tool or the Trap Tool, viewing their details and pressing the **Exclude** button.
 
 ![](attachments/Trap_Tool/Edit_Exclusion.png)

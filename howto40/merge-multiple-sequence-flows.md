@@ -9,7 +9,7 @@ This section describes how to merge multiple sequence flows in a microflow. The 
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the microflow with multiple sequence flows using inheritance or exclusive splits. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article; if you do not know how to add activities to a microflow, please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Create the microflow with multiple sequence flows using inheritance or exclusive splits. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article; if you do not know how to add activities to a microflow, please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621614/2752840.png)
 

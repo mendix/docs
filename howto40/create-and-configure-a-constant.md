@@ -9,7 +9,7 @@ This section describes how to add a constant to your module and configure it. Th
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Add a constant to the module of your choice. If you do not know how to add documents to a project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Add a constant to the module of your choice. If you do not know how to add documents to a project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/819203/917932.png) **Enter a name for the new constant.**
 

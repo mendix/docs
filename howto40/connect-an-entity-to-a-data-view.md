@@ -9,7 +9,7 @@ This section describes how to connect an entity to a data view. The related refe
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Add the data view to your form. If you do not know how to add widgets to a form, please refer to [this](https://world.mendix.com/display/howto25/Add+a+widget+to+a+form) article.**
+![](attachments/819203/917932.png) **Add the data view to your form. If you do not know how to add widgets to a form, please refer to [this](add-a-widget-to-a-form) article.**
 
 ### Method 1
 

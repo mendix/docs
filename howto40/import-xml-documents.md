@@ -9,15 +9,15 @@ This section describes how to map an XML document to a domain model entity with 
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the XML-to-Domain mapping. If you do not know how to do this, please refer to [this](https://world.mendix.com/display/howto25/Configure+an+XML-to-Domain+mapping) article,**
+![](attachments/819203/917932.png) **Create the XML-to-Domain mapping. If you do not know how to do this, please refer to [this](/howto25/Configure+an+XML-to-Domain+mapping) article,**
 
-![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/2621584/2752878.png)
 
 Make sure that the XML document and (if necessary) the object that has to be passed to the XML-to-domain mapping as parameter are either created in the microflow or passed to it.
 
-![](attachments/819203/917932.png) **Add an 'Import XML' activity to the microflow and double-click on it. If you do not know how to add activities to a microflow please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Add an 'Import XML' activity to the microflow and double-click on it. If you do not know how to add activities to a microflow please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621584/2752877.png)
 

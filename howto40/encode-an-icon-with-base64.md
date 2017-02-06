@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to encode your widget icon as Base64\. This is the format used by the Mendix Business Modeler when reading in your widget.xml. Tutorials related to this subject can be found [here](https://world.mendix.com/display/Tutorials/Custom+Widgets).
+This section describes how to encode your widget icon as Base64\. This is the format used by the Mendix Business Modeler when reading in your widget.xml. Tutorials related to this subject can be found [here](/Tutorials/Custom+Widgets).
 
 ## Instructions
 

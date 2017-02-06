@@ -5,17 +5,17 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to expose a web service in your project. The related reference guide article can be found [here](https://world.mendix.com/display/NRG/Published+Web+Services).
+This section describes how to expose a web service in your project. The related reference guide article can be found [here](/NRG/Published+Web+Services).
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the microflow you want to use for the web service, and define its input parameters and return type and variable. If you do not know how to do this, please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Create the microflow you want to use for the web service, and define its input parameters and return type and variable. If you do not know how to do this, please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621605/2752819.png)
 
 The simple microflow in the screenshot above receives the number of an order as parameter, uses this number to retrieve the order object and returns the order status.
 
-![](attachments/819203/917932.png) **Add a Published web service to your project. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Add a Published web service to your project. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/819203/917932.png) **Double-click on the published web service in the Project Explorer to start configuring it.**
 
@@ -41,7 +41,7 @@ If the parameters and return are not primitive but objects or lists of objects i
 
 ![](attachments/2621605/2752816.png)
 
-![](attachments/819203/917932.png) **To allow the use of your published web service, add web service users to your application. If you do not know how to do this, please refer to [this](https://world.mendix.com/display/howto25/Add+web+service+users) article.**
+![](attachments/819203/917932.png) **To allow the use of your published web service, add web service users to your application. If you do not know how to do this, please refer to [this](/howto25/Add+web+service+users) article.**
 
 ### Advanced
 

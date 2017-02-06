@@ -9,15 +9,15 @@ This section describes how to add validation feedback to your forms with the use
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the form you want to add validation feedback to. If you do not know how to build forms, please refer to [this](https://world.mendix.com/display/howto40/Create+and+build+a+form) article.**
+![](attachments/819203/917932.png) **Create the form you want to add validation feedback to. If you do not know how to build forms, please refer to [this](create-and-build-a-form) article.**
 
-![](attachments/819203/917932.png) **Create the microflow and add the activities to it, including the 'Validation feedback' activity. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto40/Add+documents+to+a+module) article; if you do not know how to add activities to a microflow, please refer to [this](https://world.mendix.com/display/howto40/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Create the microflow and add the activities to it, including the 'Validation feedback' activity. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article; if you do not know how to add activities to a microflow, please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621598/2752896.png)
 
 In the above microflow, an 'Order' object is passed to the microflow. A 'Retrieve' action is used to return a list of the 'Pizza' objects associated with the 'Order', followed by an 'Aggregate list' action to count how many 'Pizza' objects the list contains. In the exclusive split a check is made if the number of pizzas ordered is equal to zero. If this is not the case, the order is committed to the database; if the number of pizzas ordered is zero validation feedback will be shown telling the customer to order at least one pizza.
 
-![](attachments/819203/917932.png) **Connect the microflow to a widget event. If you do not know how to do this, please refer to [this](https://world.mendix.com/display/howto40/Connect+a+microflow+to+a+widget+event) article.**
+![](attachments/819203/917932.png) **Connect the microflow to a widget event. If you do not know how to do this, please refer to [this](Connect+a+microflow+to+a+widget+event) article.**
 
 ![](attachments/819203/917932.png) **Open the microflow and double-click on the 'Validation feedback' activity to start configuring it.**
 

@@ -9,11 +9,11 @@ This section describes how to configure a rule. The related reference guide arti
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Add a new rule to your project. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Add a new rule to your project. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/2621603/2752827.png)
 
-![](attachments/819203/917932.png) **Add activities to the rule; this is done in the same way as for microflows. If you do not know how to do this, please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Add activities to the rule; this is done in the same way as for microflows. If you do not know how to do this, please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621603/2752828.png)
 

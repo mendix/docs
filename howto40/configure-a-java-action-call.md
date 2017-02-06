@@ -5,19 +5,19 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure a Java action call in a microflow. The related reference guide article can be found [here](https://world.mendix.com/display/NRG/Java+Action+Call).
+This section describes how to configure a Java action call in a microflow. The related reference guide article can be found [here](/NRG/Java+Action+Call).
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the Java action. If you do not know how to do this, please refer to [this](https://world.mendix.com/display/howto25/Add+and+configure+a+Java+action) article.**
+![](attachments/819203/917932.png) **Create the Java action. If you do not know how to do this, please refer to [this](/howto25/Add+and+configure+a+Java+action) article.**
 
-![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/2621595/2752916.png)
 
 Make sure the variables needed for the Java action are either created in the microflow or passed to it. For example the microflow in the screenshot has a CustomerStatus object passed to it for this reason.
 
-![](attachments/819203/917932.png) **Add a 'Java action call' activity to the microflow and double-click on it. If you do not know how to add activities to a microflow please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Add a 'Java action call' activity to the microflow and double-click on it. If you do not know how to add activities to a microflow please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621595/2752915.png)
 

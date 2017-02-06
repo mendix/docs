@@ -9,7 +9,7 @@ This section describes how to configure a scheduled event. The related reference
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Add a new scheduled event to your project. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Add a new scheduled event to your project. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/819203/917932.png) **Double-click on the scheduled event in the Project Explorer to begin configuring it.**
 

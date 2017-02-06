@@ -9,13 +9,13 @@ This section describes how to configure a loop in a microflow. The related refer
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/2621608/2752844.png)
 
 Since the iterator of the loop will need a list of objects, make sure this list is created in the microflow. For example in the microflow in the screenshot, a retrieve activity is used to create a list of all the 'Order' objects of which the status attribute is 'Paid'.
 
-![](attachments/819203/917932.png) **Add a loop to the microflow. If you do not know how to do this, please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Add a loop to the microflow. If you do not know how to do this, please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621608/2752843.png)
 

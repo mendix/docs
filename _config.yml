@@ -68,6 +68,22 @@ defaults:
     values:
       menus:
         - "refguide5"
+  # Mendix 4
+  - scope:
+      path: 'howto40'
+      type: pages
+    values:
+      menus:
+        - "howto40"
+        - "tips"
+        - "bestpractices"
+        - "mendixcloud"
+  # - scope:
+  #     path: 'refguide4'
+  #     type: pages
+  #   values:
+  #     menus:
+  #       - "refguide4"
 
   # VERSION INDEPENDENT
   - scope:
@@ -176,6 +192,7 @@ exclude:
   - _data/assetsjs.json
   - _data/assetscss.json
   - CONTRIBUTING.md
+  - refguide4 # testing purposes
 
 markdown: kramdown
 kramdown:

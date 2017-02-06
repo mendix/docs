@@ -9,7 +9,7 @@ This section describes how to create and build a basic document template. (Using
 
 ## Instructions
 
-![](attachments/819203/917932.png) **If it does not exist yet, create the document template. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) How To.**
+![](attachments/819203/917932.png) **If it does not exist yet, create the document template. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) How To.**
 
 ![](attachments/819203/917932.png) **Double-click on the document template in the Project Explorer to open it.**
 
@@ -47,5 +47,5 @@ This section describes how to create and build a basic document template. (Using
 
 ![](attachments/2621548/2752596.png)
 
-To find out how to use the created document template to generate a document with a microflow, please refer to [this](https://world.mendix.com/display/howto25/Generate+documents+from+document+templates) article.
+To find out how to use the created document template to generate a document with a microflow, please refer to [this](/howto25/Generate+documents+from+document+templates) article.
 

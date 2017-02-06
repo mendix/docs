@@ -15,7 +15,7 @@ This section describes how to configure 'Constrained by' functionality to determ
 
 For example in the above screenshot you can use the associations to constrain the 'Product' objects you can choose from based on their 'Category'.
 
-![](attachments/819203/917932.png) **Create the form with data view or template grid containing the reference set selector. If you do not know how to add documents to a project please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article; if you do not know how to add widgets to a form, please refer to [this](https://world.mendix.com/display/howto25/Add+a+widget+to+a+form) article.**
+![](attachments/819203/917932.png) **Create the form with data view or template grid containing the reference set selector. If you do not know how to add documents to a project please refer to [this](add-documents-to-a-module) article; if you do not know how to add widgets to a form, please refer to [this](add-a-widget-to-a-form) article.**
 
 ![](attachments/2621473/2752690.png)
 

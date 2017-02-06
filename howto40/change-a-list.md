@@ -9,13 +9,13 @@ This section describes how to use a 'Change list' activity to perform operations
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/2621500/2752766.png)
 
 A list should be created in this microflow; 'Create list' and 'Retrieve' are activities that can do this.
 
-![](attachments/819203/917932.png) **Add a 'Change list' activity to the microflow. If you do not know how to add activities to a microflow please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Add a 'Change list' activity to the microflow. If you do not know how to add activities to a microflow please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621500/2752769.png)
 

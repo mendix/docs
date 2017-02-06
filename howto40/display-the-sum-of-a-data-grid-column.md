@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to use aggregate functionality to display the sum of a data grid column. The related reference guide article can be found [here](https://world.mendix.com/display/NRG/Columns).
+This section describes how to use aggregate functionality to display the sum of a data grid column. The related reference guide article can be found [here](/NRG/Columns).
 
 ## Instructions
 

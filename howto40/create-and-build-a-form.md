@@ -9,11 +9,11 @@ This section describes how to add a new form and then build it with the availabl
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Add a new form to your project. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto40/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Add a new form to your project. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
-![](attachments/819203/917932.png) **Build the form using the widgets available to you. If you do not know how to add widgets to a form, please refer to [this](https://world.mendix.com/display/howto40/Add+a+widget+to+a+form) article.**
+![](attachments/819203/917932.png) **Build the form using the widgets available to you. If you do not know how to add widgets to a form, please refer to [this](Add+a+widget+to+a+form) article.**
 
-![](attachments/819203/917932.png) **Connect the widgets in the form to the entities from your domain model. If you do not know how to do this, you can find articles on how to connect entities to [data grids](https://world.mendix.com/display/howto40/Connect+an+entity+to+a+data+grid) and [data views](https://world.mendix.com/display/howto40/Connect+an+entity+to+a+data+view) in this How To section, as well as articles on how to connect attributes of an entity to a [search field](https://world.mendix.com/display/howto40/Connect+an+attribute+to+a+search+field) or [data grid column](https://world.mendix.com/display/howto40/Connect+an+attribute+to+a+column).**
+![](attachments/819203/917932.png) **Connect the widgets in the form to the entities from your domain model. If you do not know how to do this, you can find articles on how to connect entities to [data grids](Connect+an+entity+to+a+data+grid) and [data views](Connect+an+entity+to+a+data+view) in this How To section, as well as articles on how to connect attributes of an entity to a [search field](Connect+an+attribute+to+a+search+field) or [data grid column](Connect+an+attribute+to+a+column).**
 
 ## Example: Pizza order information form
 

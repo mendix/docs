@@ -9,7 +9,7 @@ This section describes how to create a data set and add parameters to it. The re
 
 ## Instructions
 
-![](attachments/819203/917932.png) **If it does not exist yet, create the data set. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **If it does not exist yet, create the data set. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/819203/917932.png) **Open the Data Set menu by double-clicking on the data set in the Project Explorer.**
 
@@ -23,7 +23,7 @@ This section describes how to create a data set and add parameters to it. The re
 
 ![](attachments/2621546/2752587.png)
 
-You can press the 'New' button to bring up a window allowing you to add new columns to the data set. For more information on configuring Java actions using Eclipse, please refer to [this](https://world.mendix.com/display/howto25/Configure+Java+actions+using+Eclipse) article.
+You can press the 'New' button to bring up a window allowing you to add new columns to the data set. For more information on configuring Java actions using Eclipse, please refer to [this](/howto25/Configure+Java+actions+using+Eclipse) article.
 
 ![](attachments/819203/917932.png) **If you chose to use an OQL statement as source, enter this statement in the 'Source' area.**
 

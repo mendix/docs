@@ -5,11 +5,11 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to call a microflow inside another microflow. The related reference guide article can be found [here](https://world.mendix.com/display/NRG/Microflow+Call).
+This section describes how to call a microflow inside another microflow. The related reference guide article can be found [here](/NRG/Microflow+Call).
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create and configure the microflow you want to use in the microflow call. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article; if you do not know how to add activities to a microflow please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Create and configure the microflow you want to use in the microflow call. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article; if you do not know how to add activities to a microflow please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621593/2752906.png)
 

@@ -9,11 +9,11 @@ This section describes how to use an inheritance split to use a specialization o
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/2621610/2752848.png)
 
-![](attachments/819203/917932.png) **Add an 'Inheritance split' to the microflow and double click on it. If you do not know how to do this, please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Add an 'Inheritance split' to the microflow and double click on it. If you do not know how to do this, please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621610/2752847.png)
 

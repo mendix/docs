@@ -66,6 +66,6 @@ Use the following Jetty settings to configure some performance properties:
  | The maximum number of threads the Jetty server of the Mendix Runtime can have. | 256
  |
 | Custom Mendix Settings
- | See [this page](https://world.mendix.com/display/refguide4/Custom+Settings) for an overview of settings.
+ | See [this page](/refguide4/Custom+Settings) for an overview of settings.
 Here you can define advanced settings of the Mendix server, such as specific folder locations or advanced database settings. The simple database settings (same as in the Modeler) can be put in place via the option 'Database Configuration' on the navigation pane.
  |  |

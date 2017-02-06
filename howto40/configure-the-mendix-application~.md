@@ -66,7 +66,7 @@ The first three settings define the locations of the folders that we created in 
  | Here you can specify whether scheduled events must be executed or not. The option SPECIFIED can be used to specify the events that must be executed. Use in that case the custom setting 'MyScheduledEvents', as described below.
  |
 | Custom Mendix Settings
- | See [this page](https://world.mendix.com/display/refguide4/Custom+Settings) for an overview of settings.
+ | See [this page](/refguide4/Custom+Settings) for an overview of settings.
 Here you can define advanced settings of the Mendix server, such as specific folder locations or advanced database settings. The simple database settings (same as in the Modeler) can be put in place via the option 'Database Configuration' on the navigation pane.
  |
 

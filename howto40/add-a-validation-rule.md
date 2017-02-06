@@ -9,7 +9,7 @@ This section describes how to add a validation rule to an attribute. The related
 
 ## Instructions
 
-![](attachments/819203/917932.png) **If the attribute does not exist yet, create it. If you do not know how to do this, refer to [this](https://world.mendix.com/display/howto25/Add+an+attribute) How To.**
+![](attachments/819203/917932.png) **If the attribute does not exist yet, create it. If you do not know how to do this, refer to [this](add-an-attribute) How To.**
 
 ### Method 1
 

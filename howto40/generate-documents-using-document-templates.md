@@ -9,17 +9,17 @@ This section describes how to generate a document with a microflow using a previ
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the document template you intend to use. If you do not know how to do this, please refer to** **[this](https://world.mendix.com/display/howto25/Create+and+build+a+document+template)** **article.**
+![](attachments/819203/917932.png) **Create the document template you intend to use. If you do not know how to do this, please refer to** **[this](/howto25/Create+and+build+a+document+template)** **article.**
 
 ![](attachments/2621586/2752884.png)
 
-![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to** **[this](https://world.mendix.com/display/howto25/Add+documents+to+a+module)** **article.**
+![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to** **[this](add-documents-to-a-module)** **article.**
 
 ![](attachments/2621586/2752880.png)
 
 Make sure that the object which is connected to the document template you intend to use is passed to the microflow.
 
-![](attachments/819203/917932.png) **Use a 'Create object' activity to create a new object of the System.FileDocument entity or a specialization of it. If you do not know how to use the 'Create object' activity, please refer to** **[this](https://world.mendix.com/display/howto25/Create+and+change+an+object)** **article.**
+![](attachments/819203/917932.png) **Use a 'Create object' activity to create a new object of the System.FileDocument entity or a specialization of it. If you do not know how to use the 'Create object' activity, please refer to** **[this](/howto25/Create+and+change+an+object)** **article.**
 
 ![](attachments/2621586/2752879.png)
 

@@ -9,7 +9,7 @@ This section describes how to configure a microflow trigger. The related referen
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the form and add the microflow trigger to it. If you do not know how to add documents to a project please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article; if you do not know how to add widgets to a form, please refer to [this](https://world.mendix.com/display/howto25/Add+a+widget+to+a+form) article.**
+![](attachments/819203/917932.png) **Create the form and add the microflow trigger to it. If you do not know how to add documents to a project please refer to [this](add-documents-to-a-module) article; if you do not know how to add widgets to a form, please refer to [this](add-a-widget-to-a-form) article.**
 
 ![](attachments/2621462/2752657.png)
 

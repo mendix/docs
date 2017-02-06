@@ -5,11 +5,11 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how you can use a microflow to determine the contents of a nested data view. The related reference guide article can be found [here](https://world.mendix.com/display/NRG/Data+View).
+This section describes how you can use a microflow to determine the contents of a nested data view. The related reference guide article can be found [here](/NRG/Data+View).
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the form with the nested data view. If you do not know how to create and build forms, please refer to [this](https://world.mendix.com/display/howto25/Create+and+build+a+form) article.**
+![](attachments/819203/917932.png) **Create the form with the nested data view. If you do not know how to create and build forms, please refer to [this](/howto25/create-and-build-a-form) article.**
 
 ![](attachments/2621455/2752640.png)
 

@@ -9,13 +9,13 @@ This section describes how to split the sequence flow in a microflow with the he
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/2621589/2752856.png)
 
 If your exclusive split is intended to use an enumeration, make sure it is either created by the microflow or passed to it.
 
-![](attachments/819203/917932.png) **Add an 'Exclusive split' to the microflow and double click on it. If you do not know how to do this, please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Add an 'Exclusive split' to the microflow and double click on it. If you do not know how to do this, please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621589/2752861.png)
 

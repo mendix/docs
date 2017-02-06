@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to connect the parameter widgets in the top half of the report pane to parameters from a data set. The related reference guide article can be found [here](https://world.mendix.com/display/NRG/Report+Pane).
+This section describes how to connect the parameter widgets in the top half of the report pane to parameters from a data set. The related reference guide article can be found [here](/NRG/Report+Pane).
 
 ## Instructions
 

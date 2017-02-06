@@ -9,11 +9,11 @@ This section describes how to configure a listen target for a data view. This al
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the form, containing both the data grid and data view. If you do not know how to add widgets to a form, please refer to [this](https://world.mendix.com/display/howto25/Add+a+widget+to+a+form) article.**
+![](attachments/819203/917932.png) **Create the form, containing both the data grid and data view. If you do not know how to add widgets to a form, please refer to [this](add-a-widget-to-a-form) article.**
 
 ![](attachments/2621442/2752633.png)
 
-![](attachments/819203/917932.png) **Connect the data grid and data view to the entity and set up the widgets so they display the desired attributes. Note that the data view must be connected to the same entity as the data grid, or a generalization of it. If you do not know how to connect entities to widgets, you can find articles about how to do this for [data grids](https://world.mendix.com/display/howto25/Connect+an+entity+to+a+data+grid) and [data views](https://world.mendix.com/display/howto25/Connect+an+entity+to+a+data+view) in this How To database.**
+![](attachments/819203/917932.png) **Connect the data grid and data view to the entity and set up the widgets so they display the desired attributes. Note that the data view must be connected to the same entity as the data grid, or a generalization of it. If you do not know how to connect entities to widgets, you can find articles about how to do this for [data grids](/howto25/Connect+an+entity+to+a+data+grid) and [data views](connect-an-entity-to-a-data-view) in this How To database.**
 
 ![](attachments/2621442/2752632.png)
 

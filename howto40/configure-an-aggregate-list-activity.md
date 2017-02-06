@@ -5,17 +5,17 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to use the 'Aggregate list' activity in a microflow. The related reference guide article can be found [here](https://world.mendix.com/display/NRG/Aggregate+List).
+This section describes how to use the 'Aggregate list' activity in a microflow. The related reference guide article can be found [here](/NRG/Aggregate+List).
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/2621501/2752771.png)
 
 A list should be created in this microflow; 'Create list' and 'Retrieve' are activities that can do this.
 
-![](attachments/819203/917932.png) **Add a 'Aggregate list' activity to the microflow. If you do not know how to add activities to a microflow please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Add a 'Aggregate list' activity to the microflow. If you do not know how to add activities to a microflow please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621501/2752770.png)
 
@@ -30,4 +30,3 @@ A list should be created in this microflow; 'Create list' and 'Retrieve' are act
 In the screenshot 'PizzaList' is a list of 'Pizza' objects associated to an 'Order' object passed to the microflow. We could use the 'Sum' function on the 'Price' attribute to compute a sum of the prices of all the 'Pizza' objects associated with the 'Order' object, resulting in the total order price. On the other hand we could use the 'Maximum' function to find the price of the most expensive pizza in the order.
 
 ![](attachments/819203/917932.png) **Enter the name you want to use for the variable in the microflow under 'Output'.**
-

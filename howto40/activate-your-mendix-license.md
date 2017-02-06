@@ -7,17 +7,13 @@ space: "Mendix 4 How-to's"
 
 This section describes how to activate your 3.0 license for Mendix. The how-to has been split up in three subsections. We will explain here how to activate your license, how to request a conversion from 2.5 to 3.0 and requesting a new license key when you've moved servers.
 
-*   [Activating your Mendix license](activate-your-mendix-license)
-*   [Convert your 2.5 license to 3.0](activate-your-mendix-license)
-*   [Requesting a key change for a license](activate-your-mendix-license)
-
 ## Activating your Mendix license
 
 When you've purchased a Mendix 3.0 license, the technical contact of your license will be notified once your license becomes active. For activating your license we differentiate between licenses in the Mendix Cloud and licenses on-premise.
 
 ### Mendix cloud license
 
-If you bought a Mendix Cloud license, activation will be handled by Mendix. By default, you can login with your MxID at the [Cloud Portal](https://cloud.mendix.com/) and manage your application here. If specific requirements of your application prevent you from using the Cloud Portal for now, a custom cloud slot will be created for you. More information regarding managing your application in this case can be found here: [Mendix 2.5 on Mendix Hosting Environment](https://world.mendix.com/display/howto30/Mendix 2.5 on Mendix Hosting Enviroment "https://world.mendix.com/display/howto30/Mendix 2.5 on Mendix Hosting Enviroment")
+If you bought a Mendix Cloud license, activation will be handled by Mendix. By default, you can login with your MxID at the [Cloud Portal](https://cloud.mendix.com/) and manage your application here. If specific requirements of your application prevent you from using the Cloud Portal for now, a custom cloud slot will be created for you. 
 
 ### On-premise license
 

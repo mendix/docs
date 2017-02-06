@@ -5,11 +5,11 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to consume a web service in your project. The related reference guide article can be found [here](https://world.mendix.com/display/NRG/Imported+Web+Services).
+This section describes how to consume a web service in your project. The related reference guide article can be found [here](/NRG/Imported+Web+Services).
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Add an Imported web service to your project. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Add an Imported web service to your project. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/819203/917932.png) **Double-click on the imported web service in the Project Explorer to start configuring it.**
 
@@ -29,7 +29,7 @@ This section describes how to consume a web service in your project. The related
 
 Make sure the microflow either creates the variables required as arguments for the web service call, or has those passed to it.
 
-![](attachments/819203/917932.png) **Add the 'Call web service activity to the microflow, and double-click on it to start configuring it. If you do not know how to add activities to a microflow, please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Add the 'Call web service activity to the microflow, and double-click on it to start configuring it. If you do not know how to add activities to a microflow, please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621626/2752985.png)
 

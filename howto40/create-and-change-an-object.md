@@ -5,13 +5,13 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to create and change an object in a microflow. The related reference guide article can be found [here](https://world.mendix.com/display/NRG/Create+Object) and [here](https://world.mendix.com/display/NRG/Change+Object).
+This section describes how to create and change an object in a microflow. The related reference guide article can be found [here](/NRG/Create+Object) and [here](/NRG/Change+Object).
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
-![](attachments/819203/917932.png) **Add a 'Create object' activity to the microflow. If you do not know how to add activities to a microflow please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Add a 'Create object' activity to the microflow. If you do not know how to add activities to a microflow please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/819203/917932.png) **Double-click on the 'Create object' activity. In the menu that appears you can specify of which entity the object should be at 'Entity', as well as the variable name which will identify it in the microflow at 'Variable name'.**
 

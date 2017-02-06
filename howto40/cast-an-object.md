@@ -9,7 +9,7 @@ This section describes cast an object in a microflow. The related reference guid
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the microflow with inheritance split. If you do not know how to add activities to a microflow, please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Create the microflow with inheritance split. If you do not know how to add activities to a microflow, please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/819203/917932.png) **Add the 'Cast object' activity to the sequence flow directly behind the inheritance split.**
 

@@ -9,9 +9,9 @@ This section describes how to create a report and then add reporting widgets to 
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the form which will contain the report. If you do not know how to add documents to a project please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Create the form which will contain the report. If you do not know how to add documents to a project please refer to [this](add-documents-to-a-module) article.**
 
-![](attachments/819203/917932.png) **Add a Report Pane to the form. If you do not know how to add widgets to a form, please refer to [this](https://world.mendix.com/display/howto25/Add+a+widget+to+a+form) article.**
+![](attachments/819203/917932.png) **Add a Report Pane to the form. If you do not know how to add widgets to a form, please refer to [this](add-a-widget-to-a-form) article.**
 
 ![](attachments/2621475/2752704.png)
 

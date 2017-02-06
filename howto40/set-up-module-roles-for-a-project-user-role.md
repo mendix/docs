@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section explains how you can configure module roles for a project user role. The related reference guide article can be found [here](https://world.mendix.com/display/NRG/User+Role).
+This section explains how you can configure module roles for a project user role. The related reference guide article can be found [here](/NRG/User+Role).
 
 ## Instructions
 

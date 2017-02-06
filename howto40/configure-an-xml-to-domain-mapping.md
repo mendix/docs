@@ -9,7 +9,7 @@ This section describes how to create and configure an XML-to-Domain mapping. The
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Add a new XML-to-Domain mapping to your project. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Add a new XML-to-Domain mapping to your project. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/819203/917932.png) **Double-click on the XML-to-Domain mapping in the Project Explorer, then click on the 'Select elements...' button.**
 

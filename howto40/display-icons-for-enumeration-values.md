@@ -9,7 +9,7 @@ This section describes how you can display icons for enumeration values in a dat
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Make sure the values of the enumeration you are using have an image attached. If you do not know how to configure an enumeration, please refer to [this](https://world.mendix.com/display/howto25/Create+a+multi-language+enumeration) article.**
+![](attachments/819203/917932.png) **Make sure the values of the enumeration you are using have an image attached. If you do not know how to configure an enumeration, please refer to [this](/howto25/Create+a+multi-language+enumeration) article.**
 
 ![](attachments/2621552/2752603.png)
 

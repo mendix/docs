@@ -9,13 +9,13 @@ This section describes how to configure a Java action for your project using Ecl
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Add the Java action to your project and configure it. If you do not know how to do this, please refer to [this](https://world.mendix.com/display/howto25/Add+and+configure+a+Java+action) article.**
+![](attachments/819203/917932.png) **Add the Java action to your project and configure it. If you do not know how to do this, please refer to [this](/howto25/Add+and+configure+a+Java+action) article.**
 
 ![](attachments/2621631/2752975.png)
 
 The Java action in the screenshot is intended to compute the average spending per order by users of a certain user rank. It requires a user status as parameter, and will return the average spending per order of that user status.
 
-![](attachments/819203/917932.png) **Create the microflow which will call the Java action. If you do not know how to do this, please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Create the microflow which will call the Java action. If you do not know how to do this, please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621631/2752980.png)
 

@@ -9,7 +9,7 @@ This section describes how to add an image viewer to your form and then configur
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the data view or template grid. If you do not know how to add widgets to a form please refer to [this](https://world.mendix.com/display/howto25/Add+a+widget+to+a+form) article.**
+![](attachments/819203/917932.png) **Create the data view or template grid. If you do not know how to add widgets to a form please refer to [this](add-a-widget-to-a-form) article.**
 
 ![](attachments/819203/917932.png) **Add a table to contain widgets, including the image viewer. Then add the image viewer to the data view or template grid.**
 

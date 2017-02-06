@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section will explain how to add a new document to your project. The related reference guide article can be found [here](https://world.mendix.com/display/NRG/Modules).
+This section will explain how to add a new document to your project. The related reference guide article can be found [here](/NRG/Modules).
 
 ## Instructions
 

@@ -7,5 +7,5 @@ Please select a How To:
 
 *   [Create a list](create-a-list)
 *   [Change a list](change-a-list)
-*   [Configure an 'Aggregate list' activity](2621501)
+*   [Configure an 'Aggregate list' activity](configure-an-aggregate-list-activity)
 *   [Configure a list operation](configure-a-list-operation)

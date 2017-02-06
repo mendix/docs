@@ -9,7 +9,7 @@ This section describes how to create an enumeration in multiple languages. The r
 
 ## Instructions
 
-![](attachments/819203/917932.png) **If it does not exist yet, create the enumeration and give it a name. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **If it does not exist yet, create the enumeration and give it a name. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/819203/917932.png) **Open the enumeration by double-clicking on it in the Project Explorer.**
 
@@ -25,7 +25,7 @@ This section describes how to create an enumeration in multiple languages. The r
 
 ![](attachments/2621550/2752598.png)
 
-![](attachments/819203/917932.png) **If the second language has not been added to the project yet, do so know. If you do now know how to do this, refer to [this](https://world.mendix.com/display/howto25/Add+a+new+language) article.**
+![](attachments/819203/917932.png) **If the second language has not been added to the project yet, do so know. If you do now know how to do this, refer to [this](/howto25/Add+a+new+language) article.**
 
 ![](attachments/819203/917932.png) **Switch to the new language using the drop down menu in the toolbar.**
 

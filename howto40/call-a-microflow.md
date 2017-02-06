@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to call a microflow from a Mendix JavaScript widget. Tutorials related to this subject can be found [here](https://world.mendix.com/display/Tutorials/Custom+Widgets).
+This section describes how to call a microflow from a Mendix JavaScript widget. Tutorials related to this subject can be found [here](/Tutorials/Custom+Widgets).
 
 ## Instructions
 
@@ -23,7 +23,7 @@ In order to call a microflow from our widget, we first need to assign it to the 
 
 ```
 
-In this example, our microflow will use the entity context from the Dataview our widget is in and return a string variable. To learn how to retrieve the context object in JavaScript, read this How To: [Use the Data View context object](https://world.mendix.com/display/howto25/Use+the+Data+View+context+object).
+In this example, our microflow will use the entity context from the Dataview our widget is in and return a string variable. To learn how to retrieve the context object in JavaScript, read this How To: [Use the Data View context object](/howto25/Use+the+Data+View+context+object).
 
 <div class="alert alert-info">{% markdown %}
 

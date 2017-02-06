@@ -9,13 +9,13 @@ This section describes how to configure a 'List operation' activity in a microfl
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/2621594/2752772.png)
 
 A minimum of two lists of the same entity should be created in this microflow; 'Create list' and 'Retrieve' are activities that can do this. In the screenshot 'PizzasOrdered' is a list of 'Pizza' objects associated to the 'Order' object passed to the microflow, whereas 'CheapPizzas' is a list of all the Pizzas which cost less than ten euros.
 
-![](attachments/819203/917932.png) **Add a 'List operation' activity to the microflow. If you do not know how to add activities to a microflow please refer to [this](https://world.mendix.com/display/howto25/Add+an+activity+to+a+microflow) article.**
+![](attachments/819203/917932.png) **Add a 'List operation' activity to the microflow. If you do not know how to add activities to a microflow please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621594/2752912.png)
 

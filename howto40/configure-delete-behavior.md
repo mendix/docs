@@ -9,7 +9,7 @@ This section describes how to configure delete behavior for entities when they a
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the association between the two entities if it does not exist yet. If you do not know how to do this, refer to [this](https://world.mendix.com/display/howto25/Create+an+association) article.**
+![](attachments/819203/917932.png) **Create the association between the two entities if it does not exist yet. If you do not know how to do this, refer to [this](/howto25/Create+an+association) article.**
 
 ![](attachments/819203/917932.png) **Select the association.**
 

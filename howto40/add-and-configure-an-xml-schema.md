@@ -5,11 +5,11 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to add an XML schema to your project and then configure it. The related reference guide article can be found [here](https://world.mendix.com/display/refguide4/XML+Schemas).
+This section describes how to add an XML schema to your project and then configure it. The related reference guide article can be found [here](/refguide4/XML+Schemas).
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Add an XML schema to your project. If you do not know how to add documents to your project, please refer to [this](https://world.mendix.com/display/howto25/Add+documents+to+a+module) article.**
+![](attachments/819203/917932.png) **Add an XML schema to your project. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/819203/917932.png) **Double-click on the XML schema in the Project Explorer to start configuring it.**
 

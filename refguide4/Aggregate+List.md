@@ -1,0 +1,46 @@
+---
+title: "Aggregate List"
+category: "refguide4"
+space: "Reference Guide 4"
+---
+Aggregate List can be used to calculate aggregated values such as the maximum, minimum, sum, average and total amount of objects over a list of objects.
+
+<div class="alert alert-info">{% markdown %}
+
+See [Microflow Element Common Properties](Microflow+Element+Common+Properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+
+{% endmarkdown %}</div>
+
+## Input Properties
+
+### List
+
+The list to compute an aggregate over.
+
+## Action Properties
+
+### Function
+
+Aggregate function defines which type of aggregation is applied.
+
+| Value | Description |
+| --- | --- |
+| Sum | The sum of all values of an attribute from the list of objects. |
+| Average | The average of all values of an attribute from the list of objects. |
+| Count | The total amount of objects in the list. |
+| Minimum | The minimum of all values of an attribute from the list of objects. |
+| Maximum | The maximum of all values of an attribute from the list of objects. |
+
+### Attribute
+
+Attribute defines which attribute of the objects in the list is used to aggregate over. This must be a numeric attribute (Long, Integer, Float or Currency).
+
+## Output
+
+### Variable name
+
+The name of the (numeric) variable in which the result of the aggregation is stored.
+
+## Related Articles
+
+*   [How To: Configure an 'Aggregate list' activity](https://world.mendix.com/display/howto25/Configure+an+%27Aggregate+list%27+activity)

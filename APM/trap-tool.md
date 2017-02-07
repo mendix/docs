@@ -11,10 +11,20 @@ Simply use the trap tool.
 
 ## Traps
 
+### Overview
 The Trap Tool shows the traps that are stored.
 
  ![](attachments/Trap_Tool/Overview.png)
 
+You can send the trap message to the performance tool when the performance tool 
+is not running. This will process all microflow messages in the trap and will show the
+functionality that was running during the trap.
+
+If you mark a trap to be kept you make sure this trap is not deleted when the periodic
+cleanup of data run, or with a manual delete all, or when the protection mechanism
+removes the oldest traps to prevent the database from growing.
+
+### Trap details
 When you select a trap you get to see all the messages in that trap.
 
  ![](attachments/Trap_Tool/Individual_Trap.png)

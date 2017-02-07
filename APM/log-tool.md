@@ -6,6 +6,8 @@ category: "User Manual"
 This chapter gives an overview of the log tool. The Log Tool is used to collect Mendix Runtime log messages and store them in the database. This gives access to log information without the requiring looking into log files. Additionally, the log information can be browsed, searched, and sorted for analysis.
 
 ## Logs
+
+### Overview
 The logs tab shows the stored logs in the database.
 
  ![](attachments/Log_Tool/Overview.png)
@@ -16,27 +18,23 @@ Double clicking a log message shows its details.
 
  ![](attachments/Log_Tool/View_Message.png)
 
-If the message has level WARNING, ERROR or CRITICAL, the extra button **Exclude in TrapTool** is shown.
- This configures an exclusion in the Trap Tool and allows you to run the Log Tool for a period of time 
- to collect the WARNING, ERROR, or CRITICAL messages that are often occuring and make sure the Trap Tool does not
-  store huge amounts of irrelevant data when started.
+If the message has level WARNING, ERROR or CRITICAL, the extra button 
+**Exclude in TrapTool** is shown. This configures an exclusion in the Trap Tool and 
+allows you to run the Log Tool for a period of time to collect the WARNING, ERROR, or
+CRITICAL messages that are often occuring and make sure the Trap Tool does not store
+huge amounts of irrelevant data when started.
 
-***Note.** The [Exclude in Trap Tool] is described further in the chapter for the Trap Tool.*
-
-
-***Note.** The Log-, Trap-, Statistics- and Performance Tool and the Load Test Recorder each subscribe 
-to the Mendix Logging. So installing without starting a tool does not impact the system at all! When 
-stopped the subscription is not completely undone but the tools do nothing so there is no impact at all 
-(aside from Mendix internal micro-overhead for calling the immediately returning tool).*
+***Note.** The [Exclude in Trap Tool] is described further in the chapter for the 
+Trap Tool.*
 
 ***Note.** A message comes from the Mendix system and is the same as the message in the Modeler when 
 changing the log levels. The Log Tools, Trap Tool, Statistics Tool and Performance Tool each subscribe 
-to the Mendix message logging. All these tools listen to a high level (TRACE or DEBUG) of messages and 
+to the Mendix message logging. All these tools listen to a high level (TRACE) of messages and 
 filter out the messages they need.*
 
 ## Log Tool Options
 
-The following screenshot shows the Log Tool Options:
+The following screenshot shows the Log Tool Options dialog:
 
 ![](attachments/Log_Tool/Options.png)
 

@@ -1,6 +1,6 @@
 ---
 title: "DateTime handling FAQ"
-category: "refguide4"
+category: "Runtime"
 space: "Reference Guide 4"
 ---
 In this FAQ we'll answer some Frequently Asked Questions about DateTime.

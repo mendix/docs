@@ -1,6 +1,6 @@
 ---
 title: "Rollback Object"
-category: "refguide4"
+parent: "object-activities"
 space: "Reference Guide 4"
 ---
 The rollback-object action can be used to undo changes (that have not been committed) that were made to the object in the part of the microflow preceding the activity. Furthermore, it deletes objects that have been created but have never been committed.

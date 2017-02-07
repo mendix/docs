@@ -1,6 +1,6 @@
 ---
 title: "Change Object"
-category: "refguide4"
+parent: "object-activities"
 space: "Reference Guide 4"
 ---
 Change Object can be used to change the members of an object. This can be done with or without commiting, with or without events.

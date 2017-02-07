@@ -1,6 +1,6 @@
 ---
 title: "Entities"
-category: "refguide4"
+parent: "domain-model"
 space: "Reference Guide 4"
 ---
 An entity represents a class of real-world objects, such as customers, invoices, work items, etc. An instance of an entity is called an object. For example, the object representing the person 'Bob Marley' could be an instance of the entity 'Person'.

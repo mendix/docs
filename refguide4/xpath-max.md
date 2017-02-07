@@ -1,6 +1,6 @@
 ---
 title: "XPath max"
-category: "refguide4"
+parent: "xpath-query-functions"
 space: "Reference Guide 4"
 ---
 The max()-function returns the maximum value of its argument.

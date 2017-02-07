@@ -1,6 +1,6 @@
 ---
 title: "Generate Document"
-category: "refguide4"
+parent: "integration-activities"
 space: "Reference Guide 4"
 ---
 The generate-document action can be used to create a document based on a [template](document-templates).

@@ -1,6 +1,6 @@
 ---
 title: "Date Picker"
-category: "refguide4"
+parent: "common-widgets"
 space: "Reference Guide 4"
 ---
 A date picker can be used to display and/or edit a date value. It takes into account the language setting to display a localized calendar.

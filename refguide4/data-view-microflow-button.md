@@ -1,6 +1,6 @@
 ---
 title: "Data View Microflow Button"
-category: "refguide4"
+parent: "data-view-control-bar"
 space: "Reference Guide 4"
 ---
 The microflow button allows you to add buttons with custom behavior to the control bar of the data view.

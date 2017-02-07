@@ -1,6 +1,6 @@
 ---
 title: "Loop"
-category: "refguide4"
+parent: "microflows"
 space: "Reference Guide 4"
 ---
 A loop is used to iterate over a list of objects. For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain [break events](break-event) and [continue events](continue-event).

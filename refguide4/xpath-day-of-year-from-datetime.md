@@ -1,6 +1,6 @@
 ---
 title: "XPath day-of-year-from-dateTime"
-category: "refguide4"
+parent: "xpath-constraint-functions"
 space: "Reference Guide 4"
 ---
 The day-of-year-from-dateTime() function extracts the amount of days (in the year) from a DateTime attribute so it can be used to compare to a value. Values range from 1 to 366 (due to leap years)

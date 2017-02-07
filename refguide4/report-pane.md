@@ -1,6 +1,6 @@
 ---
 title: "Report Pane"
-category: "refguide4"
+parent: "reporting"
 space: "Reference Guide 4"
 ---
 Reports are defined in a report pane, which is inserted in a [form](forms).

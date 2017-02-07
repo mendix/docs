@@ -1,6 +1,6 @@
 ---
 title: "Custom Settings"
-category: "refguide4"
+category: "Runtime"
 space: "Reference Guide 4"
 ---
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by the Modeler.
@@ -59,10 +59,10 @@ The value can be true or false. | true
  |
 | CACertificates
  | Comma separated list of paths to Authority Certificates.
- | 
+ |
  |
 | ClientCertificates
- | 
+ |
 
 Comma separated list of paths to Client Certificates.
 
@@ -74,10 +74,10 @@ D:\App\Mx2.pfx,
 D:\App\Mx3.pfx,
 D:\App\Mx4.pfx
 ```
- | 
+ |
  |
 | ClientCertificatePasswords
- | 
+ |
 
 Comma separated list of passwords for Client Certificates (should match the "ClientCertificates" order).
 
@@ -86,10 +86,10 @@ Example:
 ```
 pwd1, pwd2, pwd3, pwd4
 ```
- | 
+ |
  |
 | WebServiceClientCertificates
- | 
+ |
 
 Defines which web service must use which client certificate. The value of this setting must be a comma separated list of key/value items. A key/value item must be specified as [imported web service name:"path to certificate"] without brackets. Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces.
 
@@ -99,14 +99,14 @@ Example:
 {
     Module.WebService2: "D:\\App\\Mx2.pfx",
     Module.WebService3: "D:\\App\\Mx3.pfx"
-} 
+}
 ```
- | 
+ |
  |
 | OracleServiceName
  | Defines the SERVICE_NAME when you have a connection with
 an Oracle DBMS.
- | 
+ |
  |
 | SessionTimeout
  | Defines the timeout for user sessions in milliseconds.

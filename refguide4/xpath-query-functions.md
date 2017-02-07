@@ -1,6 +1,6 @@
 ---
 title: "XPath Query Functions"
-category: "refguide4"
+parent: "xpath"
 space: "Reference Guide 4"
 ---
 The following XPath query aggregate functions are available:

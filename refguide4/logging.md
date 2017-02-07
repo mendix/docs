@@ -1,6 +1,6 @@
 ---
 title: "Logging"
-category: "refguide4"
+category: "Runtime"
 space: "Reference Guide 4"
 ---
 ## Log levels

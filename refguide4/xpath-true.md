@@ -1,6 +1,6 @@
 ---
 title: "XPath true"
-category: "refguide4"
+parent: "xpath-constraint-functions"
 space: "Reference Guide 4"
 ---
 The function true() returns the boolean value `true`.

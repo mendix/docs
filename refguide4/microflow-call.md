@@ -1,6 +1,6 @@
 ---
 title: "Microflow Call"
-category: "refguide4"
+parent: "action-call-activities"
 space: "Reference Guide 4"
 ---
 Microflow call can be used to call another microflow. Arguments can be passed to the microflow and the result can be stored in a variable.

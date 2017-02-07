@@ -1,6 +1,6 @@
 ---
 title: "OQL"
-category: "refguide4"
+parent: "languages"
 space: "Reference Guide 4"
 ---
 Mendix OQL (Object Query Language) is a relational query language just like [SQL](http://en.wikipedia.org/wiki/Sql). The major advantage of OQL is that OQL uses entity and association names instead of the actual database table names.

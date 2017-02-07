@@ -1,6 +1,6 @@
 ---
 title: "List View"
-category: "refguide4"
+parent: "mobile-forms"
 space: "Reference Guide 4"
 ---
 The list view is similar to the template grid available in web forms. The list view shows a list of objects arranged vertically. Each object is shown using a template. During development, the object template is defined by placing a widget inside the list view's dropzone. The list of objects shown is determined by a datasource.

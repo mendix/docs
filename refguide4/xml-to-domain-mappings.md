@@ -1,6 +1,6 @@
 ---
 title: "XML-to-Domain Mappings"
-category: "refguide4"
+parent: "integration"
 space: "Reference Guide 4"
 ---
 An XML-to-Domain mapping is used to convert data in XML format to objects in your domain model. This is basically done by connecting the objects in the XML to entities in your domain model.

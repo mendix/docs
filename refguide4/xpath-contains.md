@@ -1,6 +1,6 @@
 ---
 title: "XPath contains"
-category: "refguide4"
+parent: "xpath-constraint-functions"
 space: "Reference Guide 4"
 ---
 The contains() function tests whether a String attribute contains a specific string as a substring.

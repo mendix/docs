@@ -1,6 +1,6 @@
 ---
 title: "XPath sum"
-category: "refguide4"
+parent: "xpath-query-functions"
 space: "Reference Guide 4"
 ---
 The sum()-function returns the sum of its argument.

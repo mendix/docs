@@ -1,6 +1,6 @@
 ---
 title: "XPath avg"
-category: "refguide4"
+parent: "xpath-query-functions"
 space: "Reference Guide 4"
 ---
 The avg()-function returns the average of its argument.

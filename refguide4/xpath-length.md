@@ -1,6 +1,6 @@
 ---
 title: "XPath length"
-category: "refguide4"
+parent: "xpath-constraint-functions"
 space: "Reference Guide 4"
 ---
 The length() function returns the length of a String attribute or value.

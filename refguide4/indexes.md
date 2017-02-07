@@ -1,6 +1,6 @@
 ---
 title: "Indexes"
-category: "refguide4"
+parent: "entities"
 space: "Reference Guide 4"
 ---
 Indexes are lists of attributes for which a database index is created on the underlying database table of the entity. Indexes improve the speed of retrieving objects if the indexed attributes are used in a search field or XPath constraint of a data grid or template grid, or in a WHERE clause of an OQL query. However, search fields of which the Comparison property has value 'Contains' do not take advantage of the improved performance.

@@ -1,6 +1,5 @@
 ---
 title: "Java Programming"
-category: "refguide4"
 space: "Reference Guide 4"
 ---
 With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows.

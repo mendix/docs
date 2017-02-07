@@ -1,6 +1,6 @@
 ---
 title: "Footer (document template)"
-category: "refguide4"
+parent: "document-templates"
 space: "Reference Guide 4"
 ---
 When enabled, the footer will be inserted at the bottom of every page. Other widgets can be put in the footer.

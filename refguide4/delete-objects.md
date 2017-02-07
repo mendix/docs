@@ -1,6 +1,6 @@
 ---
 title: "Delete Object(s)"
-category: "refguide4"
+parent: "object-activities"
 space: "Reference Guide 4"
 ---
 Delete Object can be used to delete one or more objects.

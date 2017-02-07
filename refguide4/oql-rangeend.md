@@ -1,6 +1,6 @@
 ---
 title: "OQL RANGEEND"
-category: "refguide4"
+parent: "oql-functions"
 space: "Reference Guide 4"
 ---
 The RANGEEND function extracts the end value of a range parameter.

@@ -1,6 +1,6 @@
 ---
 title: "Add Button"
-category: "refguide4"
+parent: "control-bar"
 space: "Reference Guide 4"
 ---
 The add button can only be used in the reference set selector. With this button the end-user can select objects that have to be added to the reference set selector.

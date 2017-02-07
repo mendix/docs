@@ -1,6 +1,6 @@
 ---
 title: "Aggregate List"
-category: "refguide4"
+parent: "list-activities"
 space: "Reference Guide 4"
 ---
 Aggregate List can be used to calculate aggregated values such as the maximum, minimum, sum, average and total amount of objects over a list of objects.

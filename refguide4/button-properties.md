@@ -1,6 +1,6 @@
 ---
 title: "Button Properties"
-category: "refguide4"
+parent: "control-bar"
 space: "Reference Guide 4"
 ---
 ## Appearance Properties

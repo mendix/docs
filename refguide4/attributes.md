@@ -1,6 +1,6 @@
 ---
 title: "Attributes"
-category: "refguide4"
+parent: "entities"
 space: "Reference Guide 4"
 ---
 Attributes are characteristics that describe and/or identify the entity. For example, a Customer entity typically has attributes for the name of the customer, an e-mail address and other personal information.

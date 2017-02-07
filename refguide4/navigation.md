@@ -1,6 +1,6 @@
 ---
 title: "Navigation"
-category: "refguide4"
+parent: "project"
 space: "Reference Guide 4"
 ---
 Two types of navigation exist, "Web navigation" and "Mobile navigation". Web Navigation is used to navigate to web forms, whereas Mobile Navigation navigates to mobile forms.

@@ -1,6 +1,6 @@
 ---
 title: "Imported web service"
-category: "refguide4"
+parent: "imported-web-services"
 space: "Reference Guide 4"
 ---
 <div class="alert alert-warning">{% markdown %}

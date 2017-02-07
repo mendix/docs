@@ -1,6 +1,6 @@
 ---
 title: "Tab Page"
-category: "refguide4"
+parent: "tab-control"
 space: "Reference Guide 4"
 ---
 ## Appearance Properties

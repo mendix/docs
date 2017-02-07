@@ -1,6 +1,6 @@
 ---
 title: "Add date function calls"
-category: "refguide4"
+parent: "microflow-expressions"
 space: "Reference Guide 4"
 ---
 Adding a time unit to a date. In all examples, the first input can be either a new dateTime (depicted in all examples), a variable of type DateTime or an attribute of a domain entity of type DateTime.

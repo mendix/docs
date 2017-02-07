@@ -1,6 +1,6 @@
 ---
 title: "Version Control Concepts"
-category: "refguide4"
+parent: "version-control"
 space: "Reference Guide 4"
 ---
 Version control introduces a number of new concepts to the Modeler interface. People familiar with version control will recognize many of them. Here is an overview of those concepts together with screenshots of relevant parts of the Modeler.

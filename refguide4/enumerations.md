@@ -1,6 +1,6 @@
 ---
 title: "Enumerations"
-category: "refguide4"
+parent: "modules"
 space: "Reference Guide 4"
 ---
 An enumeration defines a list of options. An attribute can be of type enumeration and that means that its value is one of the options of the enumeration. For example, the status of an order can be Open, Closed, In progress. An enumeration would be ideal to represent these options.

@@ -1,6 +1,6 @@
 ---
 title: "Cancel Button"
-category: "refguide4"
+parent: "mobile-form-buttons"
 space: "Reference Guide 4"
 ---
 The cancel button works in conjunction with a top-level [Data View](data-view). Pressing the button will roll back any changes made on the object shown in the data view.

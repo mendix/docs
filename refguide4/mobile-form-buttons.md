@@ -1,6 +1,6 @@
 ---
 title: "Mobile Form Buttons"
-category: "refguide4"
+parent: "mobile-forms"
 space: "Reference Guide 4"
 ---
 All buttons placed on mobile forms contain the following properties.

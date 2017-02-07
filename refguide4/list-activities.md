@@ -1,6 +1,6 @@
 ---
 title: "List Activities"
-category: "refguide4"
+parent: "activities"
 space: "Reference Guide 4"
 ---
 ## Aggregate

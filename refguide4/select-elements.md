@@ -1,6 +1,6 @@
 ---
 title: "Select elements"
-category: "refguide4"
+parent: "xml-to-domain-mappings"
 space: "Reference Guide 4"
 ---
 This describes how to select elements for a XML-to-Domain mapping.

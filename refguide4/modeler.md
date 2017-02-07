@@ -1,6 +1,5 @@
 ---
 title: "Modeler"
-category: "refguide4"
 space: "Reference Guide 4"
 ---
 The Mendix Business Modeler is the place where you create, view and edit your Mendix application. This is called a [project](project) in the Modeler. A project consists of many documents that are grouped in [modules](modules) and folders. There are some project-level settings but the core of the functionality will be inside modules. Examples of documents are the [project settings](project-settings), [domain model](domain-model), [forms](forms) and [microflows](microflows). The Modeler can have one project open at the same time. You can, however, open two Modeler instances when necessary.

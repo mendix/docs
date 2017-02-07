@@ -1,6 +1,6 @@
 ---
 title: "Module Role"
-category: "refguide4"
+parent: "module-security"
 space: "Reference Guide 4"
 ---
 The module roles define which roles users of this module can have. See [Security](security) for more information on module roles and [user roles](user-role) and their relation.

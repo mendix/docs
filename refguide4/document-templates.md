@@ -1,6 +1,6 @@
 ---
 title: "Document Templates"
-category: "refguide4"
+parent: "modules"
 space: "Reference Guide 4"
 ---
 Document Templates are used to model a template required as input for a document export action which can generate all kinds of documents based on application data. They are composed much in the same way as [Web Forms](web-forms).

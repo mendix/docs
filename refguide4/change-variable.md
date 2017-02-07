@@ -1,6 +1,6 @@
 ---
 title: "Change Variable"
-category: "refguide4"
+parent: "variable-activities"
 space: "Reference Guide 4"
 ---
 The 'change variable' action can be used to change the value of a variable of type Boolean, DateTime, Enumeration, Float/Currency, Integer/Long or String.

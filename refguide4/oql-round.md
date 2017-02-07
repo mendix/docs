@@ -1,6 +1,6 @@
 ---
 title: "OQL ROUND"
-category: "refguide4"
+parent: "oql-functions"
 space: "Reference Guide 4"
 ---
 The ROUND function rounds a given numeric expression.

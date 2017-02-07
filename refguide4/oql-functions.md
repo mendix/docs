@@ -1,6 +1,6 @@
 ---
 title: "OQL Functions"
-category: "refguide4"
+parent: "oql-expressions"
 space: "Reference Guide 4"
 ---
 *   [OQL CAST](oql-cast)

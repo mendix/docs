@@ -1,6 +1,6 @@
 ---
 title: "Navigation Item"
-category: "refguide4"
+parent: "navigation"
 space: "Reference Guide 4"
 ---
 Each menu, menu item and item in the navigation tree is a navigation item. Navigation items can contain other navigation items within certain limits. Menus can have menu items (2 levels) and the navigation tree can have three levels.

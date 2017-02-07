@@ -1,6 +1,6 @@
 ---
 title: "Published web service"
-category: "refguide4"
+parent: "published-web-services"
 space: "Reference Guide 4"
 ---
 <div class="alert alert-warning">{% markdown %}

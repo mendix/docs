@@ -1,6 +1,6 @@
 ---
 title: "Check Box"
-category: "refguide4"
+parent: "common-widgets"
 space: "Reference Guide 4"
 ---
 A check box shows a box that is either ticked or empty. You can use it to display and/or edit a truth value.

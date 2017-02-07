@@ -1,6 +1,6 @@
 ---
 title: "String function calls"
-category: "refguide4"
+parent: "microflow-expressions"
 space: "Reference Guide 4"
 ---
 These are functions to convert and inspect strings. Note that these functions never change the string itself, they only return a new value.

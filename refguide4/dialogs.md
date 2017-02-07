@@ -1,6 +1,6 @@
 ---
 title: "Dialogs"
-category: "refguide4"
+category: "Modeler"
 space: "Reference Guide 4"
 ---
 *   [Sign In Dialog](sign-in-dialog)

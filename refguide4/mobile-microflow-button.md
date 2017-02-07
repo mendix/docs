@@ -1,6 +1,6 @@
 ---
 title: "Mobile Microflow Button"
-category: "refguide4"
+parent: "mobile-form-buttons"
 space: "Reference Guide 4"
 ---
 Pressing this button will execute a microflow.

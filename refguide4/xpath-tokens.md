@@ -1,6 +1,6 @@
 ---
 title: "XPath Tokens"
-category: "refguide4"
+parent: "xpath"
 space: "Reference Guide 4"
 ---
 The following tokens are used in XPath queries:

@@ -1,6 +1,6 @@
 ---
 title: "Reference Selector"
-category: "refguide4"
+parent: "common-widgets"
 space: "Reference Guide 4"
 ---
 The reference selector allows you to set an association of type reference by selecting an object. For example, in an order form you might be able to select the customer to whom the order applies. The reference selector shows an attribute of the associated entity, for example, the name of the customer.

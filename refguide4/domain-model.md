@@ -1,6 +1,6 @@
 ---
 title: "Domain Model"
-category: "refguide4"
+parent: "modules"
 space: "Reference Guide 4"
 ---
 The domain model is a data model that describes the information in your application domain in an abstract way. It is central to the architecture of your application. The domain model consists of [entities](entities) and their relations represented by [associations](associations).

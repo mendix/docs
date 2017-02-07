@@ -1,6 +1,6 @@
 ---
 title: "Garbage collection"
-category: "refguide4"
+category: "Java Programming"
 space: "Reference Guide 4"
 ---
 With the introduction of non-persistable objects a lot more objects will live in memory. Applications can run faster, because they do not have to access the database for all objects, but memory consumption will increase.

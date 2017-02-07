@@ -1,6 +1,6 @@
 ---
 title: "OQL Operators"
-category: "refguide4"
+parent: "oql-expressions"
 space: "Reference Guide 4"
 ---
 The following operators can be used in OQL expressions:

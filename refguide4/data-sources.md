@@ -1,6 +1,6 @@
 ---
 title: "Data Sources"
-category: "refguide4"
+parent: "form-concepts"
 space: "Reference Guide 4"
 ---
 Widgets operating on entities can retrieve their data in different ways, for example from the database or by executing a microflow. The data source determines where the data comes from. The following are examples of widgets that have a data source: data view, data grid, template grid, list view, reference set selector, and image viewer.

@@ -1,6 +1,6 @@
 ---
 title: "Export XML"
-category: "refguide4"
+parent: "integration-activities"
 space: "Reference Guide 4"
 ---
 With the export-XML action you can export the data stored in [domain model](domain-model) entities into an XML document.

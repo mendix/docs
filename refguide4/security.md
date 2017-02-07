@@ -1,6 +1,6 @@
 ---
 title: "Security"
-category: "refguide4"
+category: "Modeler"
 space: "Reference Guide 4"
 ---
 Security in Mendix has two sides: you want different people to see different parts of your application and you want to prevent unauthorized access. Both of these can be managed from the Modeler. Access to forms, data and microflows can be limited to authorized users.

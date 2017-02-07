@@ -1,6 +1,6 @@
 ---
 title: "Oracle"
-category: "refguide4"
+category: "System Requirements"
 space: "Reference Guide 4"
 ---
 There is a known issue with backups of your Oracle databases. If you restore a backup, then the database is not exactly the same as the original. This is caused by the way Mendix creates primary keys.

@@ -1,6 +1,6 @@
 ---
 title: "OQL Aggregation"
-category: "refguide4"
+parent: "oql-expressions"
 space: "Reference Guide 4"
 ---
 Aggregations perform specific calculations on the values of the retrieved column(s). The following aggregate functions are possible:

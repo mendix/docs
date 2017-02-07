@@ -1,6 +1,6 @@
 ---
 title: "Deselect All Button"
-category: "refguide4"
+parent: "control-bar"
 space: "Reference Guide 4"
 ---
 This button lets the user deselect all rows in the grid or reference set selector.

@@ -1,6 +1,6 @@
 ---
 title: "Relational expressions"
-category: "refguide4"
+parent: "microflow-expressions"
 space: "Reference Guide 4"
 ---
 Relational expressions allow the user to compare variables and base changes and actions upon that information. The return type of such expressions is always boolean.

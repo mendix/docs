@@ -1,6 +1,6 @@
 ---
 title: "Mathematical function calls"
-category: "refguide4"
+parent: "microflow-expressions"
 space: "Reference Guide 4"
 ---
 ## max
@@ -265,14 +265,14 @@ Calculates the exponent of a number to a certain power.
 pow dows not support negative powers, i.e.
 
 ```java
-pow(2,-3) 
+pow(2,-3)
 
 ```
 
 will reult in an error. To work waround this, use
 
 ```java
-1 div pow(2,3) 
+1 div pow(2,3)
 
 ```
 
@@ -306,7 +306,7 @@ pow(2,3)
 returns:
 
 ```java
-8 
+8
 
 ```
 

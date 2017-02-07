@@ -1,6 +1,6 @@
 ---
 title: "Image Uploader"
-category: "refguide4"
+parent: "common-widgets"
 space: "Reference Guide 4"
 ---
 <div class="alert alert-info">{% markdown %}

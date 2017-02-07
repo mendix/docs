@@ -1,6 +1,6 @@
 ---
 title: "Microflow Trigger"
-category: "refguide4"
+parent: "web-forms"
 space: "Reference Guide 4"
 ---
 A microflow trigger can be used to create a button that starts a microflow on a form.

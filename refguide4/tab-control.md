@@ -1,6 +1,6 @@
 ---
 title: "Tab Control"
-category: "refguide4"
+parent: "web-forms"
 space: "Reference Guide 4"
 ---
 Tab controls are used to show information categorized into multiple tab pages. This can be very useful if the amount of information that has to be displayed is larger than the amount of space on the screen.

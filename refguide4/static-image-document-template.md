@@ -1,6 +1,6 @@
 ---
 title: "Static Image (document template)"
-category: "refguide4"
+parent: "document-templates"
 space: "Reference Guide 4"
 ---
 A static image shows a predefined image. It can be put either in- or outside a data view or templategrid.

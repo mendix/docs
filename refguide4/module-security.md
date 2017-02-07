@@ -1,6 +1,6 @@
 ---
 title: "Module Security"
-category: "refguide4"
+parent: "modules"
 space: "Reference Guide 4"
 ---
 <div class="alert alert-warning">{% markdown %}

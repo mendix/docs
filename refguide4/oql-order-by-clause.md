@@ -1,6 +1,6 @@
 ---
 title: "OQL Order by Clause"
-category: "refguide4"
+parent: "oql"
 space: "Reference Guide 4"
 ---
 The ORDER BY clause specifies the sort order used on columns returned in a SELECT statement. Multiple columns can be specified. Columns are ordered in the sequence of the items in the ORDER BY clause.

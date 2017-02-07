@@ -1,6 +1,6 @@
 ---
 title: "Translatable Texts"
-category: "refguide4"
+parent: "modules"
 space: "Reference Guide 4"
 ---
 All texts that are presented to the end user can be translated to different languages. Examples include labels, the captions of buttons and data grid columns, menu items and messages that are sent from a microflow.

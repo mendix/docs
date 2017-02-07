@@ -1,6 +1,6 @@
 ---
 title: "XPath month-from-dateTime"
-category: "refguide4"
+parent: "xpath-constraint-functions"
 space: "Reference Guide 4"
 ---
 The month-from-dateTime() function extracts the amount of months from a DateTime attribute so it can be used to compare to a value.

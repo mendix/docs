@@ -1,6 +1,6 @@
 ---
 title: "Edit Button"
-category: "refguide4"
+parent: "control-bar"
 space: "Reference Guide 4"
 ---
 The edit button allows user to edit, or view, an object selected in the grid or reference set selector.

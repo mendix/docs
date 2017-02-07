@@ -1,6 +1,6 @@
 ---
 title: "Widget Properties"
-category: "refguide4"
+parent: "form-concepts"
 space: "Reference Guide 4"
 ---
 Here we discuss properties that are shared by many widgets in the form builder. Note: not all widgets have all of these properties. Look at the widget you are interested in for a complete list of applicable properties.

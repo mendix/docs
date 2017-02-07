@@ -1,6 +1,6 @@
 ---
 title: "Range Search Field"
-category: "refguide4"
+parent: "search-bar"
 space: "Reference Guide 4"
 ---
 Given an entity that contains a range, this search field is used to find all entities whose range overlaps with the specified value.

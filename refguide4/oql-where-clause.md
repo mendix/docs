@@ -1,6 +1,6 @@
 ---
 title: "OQL Where Clause"
-category: "refguide4"
+parent: "oql"
 space: "Reference Guide 4"
 ---
 The WHERE clause specifies how the data being retrieved must be constrained.

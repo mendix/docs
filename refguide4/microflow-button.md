@@ -1,6 +1,6 @@
 ---
 title: "Microflow Button"
-category: "refguide4"
+parent: "control-bar"
 space: "Reference Guide 4"
 ---
 The microflow button allows you to create a button with custom behavior. The selection in the grid or in the reference set selector can be passed on to the microflow as a parameter.

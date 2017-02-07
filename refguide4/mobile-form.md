@@ -1,6 +1,6 @@
 ---
 title: "Mobile Form"
-category: "refguide4"
+parent: "mobile-forms"
 space: "Reference Guide 4"
 ---
 <div class="alert alert-warning">{% markdown %}

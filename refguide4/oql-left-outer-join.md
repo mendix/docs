@@ -1,6 +1,6 @@
 ---
 title: "OQL LEFT OUTER JOIN"
-category: "refguide4"
+parent: "oql-from-clause"
 space: "Reference Guide 4"
 ---
 With a LEFT OUTER JOIN construction, the query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the join-predicate. When the association exists and the join-predicate is satisfied, column values for each matched pair of rows of A and B are combined into a result row.

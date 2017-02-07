@@ -1,6 +1,6 @@
 ---
 title: "Remove Button"
-category: "refguide4"
+parent: "control-bar"
 space: "Reference Guide 4"
 ---
 The remove button is a button specifically made for the reference set selector. With this button the end-user can remove objects that have been added to the reference set selector.

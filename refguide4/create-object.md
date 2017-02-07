@@ -1,6 +1,6 @@
 ---
 title: "Create Object"
-category: "refguide4"
+parent: "object-activities"
 space: "Reference Guide 4"
 ---
 The create-object action can be used to create an object.

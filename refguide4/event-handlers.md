@@ -1,6 +1,6 @@
 ---
 title: "Event Handlers"
-category: "refguide4"
+parent: "entities"
 space: "Reference Guide 4"
 ---
 Event handlers define microflows that handle certain events related to the entity. Depending on the chosen moment and type, the microflow is executed before or after creating, committing, deleting or rolling back an object.

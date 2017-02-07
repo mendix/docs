@@ -1,6 +1,6 @@
 ---
 title: "Download File"
-category: "refguide4"
+parent: "client-activities"
 space: "Reference Guide 4"
 ---
 The download-file action can be used to enable the browser to download a specific file. The user gets a download popup or the file is shown directly in the browser.

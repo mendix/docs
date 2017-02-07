@@ -1,6 +1,6 @@
 ---
 title: "Database Source"
-category: "refguide4"
+parent: "data-sources"
 space: "Reference Guide 4"
 ---
 The data source properties determine which objects will be shown in the data grid. The list of objects in the data grid is constrained by the following mechanisms:

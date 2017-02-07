@@ -1,6 +1,6 @@
 ---
 title: "OQL Limit Clause"
-category: "refguide4"
+parent: "oql"
 space: "Reference Guide 4"
 ---
 With the limit clause a portion of the result of a query can be returned.

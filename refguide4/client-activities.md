@@ -1,6 +1,6 @@
 ---
 title: "Client Activities"
-category: "refguide4"
+parent: "activities"
 space: "Reference Guide 4"
 ---
 ## Close form

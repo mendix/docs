@@ -1,6 +1,6 @@
 ---
 title: "And Or expressions"
-category: "refguide4"
+parent: "microflow-expressions"
 space: "Reference Guide 4"
 ---
 ### And/Or expressions
@@ -14,7 +14,7 @@ Combines two true/false statements and only returns True if both of the statemen
 <div class="alert alert-info">{% markdown %}
 
 ```java
-(6 > 4) and (3 < 5) 
+(6 > 4) and (3 < 5)
 ```
 
 evaluates to True because both of the statements are True.

@@ -1,6 +1,6 @@
 ---
 title: "Link Button"
-category: "refguide4"
+parent: "mobile-form-buttons"
 space: "Reference Guide 4"
 ---
 Pressing a link button can trigger a variety of actions, some of which are specific to mobile devices.

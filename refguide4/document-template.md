@@ -1,6 +1,6 @@
 ---
 title: "Document Template"
-category: "refguide4"
+parent: "document-templates"
 space: "Reference Guide 4"
 ---
 <div class="alert alert-warning">{% markdown %}

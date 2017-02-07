@@ -1,6 +1,6 @@
 ---
 title: "External Link"
-category: "refguide4"
+parent: "web-forms"
 space: "Reference Guide 4"
 ---
 An external link can be used to display a clickable link that redirects to a given URL. This can either be a static URL or a dynamic URL that is determined by an attribute of an entity. The caption can also be static or dynamic.

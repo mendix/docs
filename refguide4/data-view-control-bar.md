@@ -1,6 +1,6 @@
 ---
 title: "Data View Control Bar"
-category: "refguide4"
+parent: "data-view"
 space: "Reference Guide 4"
 ---
 The control bar of the data view can have the following kinds of buttons: save, cancel, close, and microflow buttons. A typical data view has a 'save' and a 'cancel' button; if it is not editable, a close button is sufficient.

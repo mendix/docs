@@ -1,6 +1,6 @@
 ---
 title: "OQL Select Clause"
-category: "refguide4"
+parent: "oql"
 space: "Reference Guide 4"
 ---
 The SELECT clause specifies which entity attributes or other specified data must be retrieved. The SELECT clause consists of the term SELECT and one or more expressions. These expressions must be separated by a comma. Each expression defines a column in the result.

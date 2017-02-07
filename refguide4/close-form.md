@@ -1,6 +1,6 @@
 ---
 title: "Close Form"
-category: "refguide4"
+parent: "client-activities"
 space: "Reference Guide 4"
 ---
 Close form closes the currently open form.

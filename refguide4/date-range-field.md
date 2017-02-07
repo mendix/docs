@@ -1,6 +1,6 @@
 ---
 title: "Date Range Field"
-category: "refguide4"
+parent: "date-range-selector"
 space: "Reference Guide 4"
 ---
 A date range field can be placed inside a date range selector to enable the end user to select a period in a date range. The begin and end of the selected period are stored in the from and to field of the date range selector.
@@ -27,7 +27,7 @@ The type determines the way in which the end user can select a range.
 | Week
  | The parameter is in the week that's chosen by the end user in this date range field. |
 | Period
- | 
+ |
 
 A date range field of type period lets the end user choose one of the following periods:
 

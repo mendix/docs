@@ -1,6 +1,6 @@
 ---
 title: "Date Range Selector"
-category: "refguide4"
+parent: "reporting"
 space: "Reference Guide 4"
 ---
 With a date range selector the end user can filter a report on a parameter of the data set which has type DataTime.

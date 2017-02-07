@@ -1,6 +1,6 @@
 ---
 title: "Project Security"
-category: "refguide4"
+parent: "project"
 space: "Reference Guide 4"
 ---
 <div class="alert alert-warning">{% markdown %}

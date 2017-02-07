@@ -4,7 +4,16 @@ sitemap: false
 ---
 {
   "categories": [
-
+    "App Platform",
+    "Team Server",
+    "Modeler",
+    "Runtime",
+    "Client",
+    "Deployment",
+    "Java Programming",
+    "Release Notes",
+    "System Requirements",
+    "Moving from 3 to 4"
   ],
   "pages": {% include json-snippets/get_pages.inc dir="/refguide4/" %}
 }

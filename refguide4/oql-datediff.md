@@ -1,6 +1,6 @@
 ---
 title: "OQL DATEDIFF"
-category: "refguide4"
+parent: "oql-functions"
 space: "Reference Guide 4"
 ---
 The DATEDIFF function returns the difference between two given date/time values. The difference is given in the specified unit.

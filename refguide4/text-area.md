@@ -1,6 +1,6 @@
 ---
 title: "Text Area"
-category: "refguide4"
+parent: "common-widgets"
 space: "Reference Guide 4"
 ---
 A text area can be used to display and/or edit a long text value that can be split over several lines.

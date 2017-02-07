@@ -1,6 +1,6 @@
 ---
 title: "New Project Dialog"
-category: "refguide4"
+parent: "dialogs"
 space: "Reference Guide 4"
 ---
 Use this dialog to create new projects. You can use it both for Team Server and for local projects. Local projects can always be uploaded to the Team Server at a later point in time.

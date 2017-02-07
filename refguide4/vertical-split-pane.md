@@ -1,6 +1,6 @@
 ---
 title: "Vertical Split Pane"
-category: "refguide4"
+parent: "web-forms"
 space: "Reference Guide 4"
 ---
 A vertical split pane creates a region that is split in two by a vertical divider. In the client the divider can be moved to the left and to the right by the end user.

@@ -1,6 +1,6 @@
 ---
 title: "Operations"
-category: "refguide4"
+parent: "published-web-services"
 space: "Reference Guide 4"
 ---
 Provides the actual methods of which the webservice is composed.

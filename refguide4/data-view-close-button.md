@@ -1,6 +1,6 @@
 ---
 title: "Data View Close Button"
-category: "refguide4"
+parent: "data-view-control-bar"
 space: "Reference Guide 4"
 ---
 The close button closes the form with the data view. This button can only be used in non-editable data views. In editable data views you use either save or cancel.

@@ -1,6 +1,6 @@
 ---
 title: "Enumerations in microflow expressions"
-category: "refguide4"
+parent: "microflow-expressions"
 space: "Reference Guide 4"
 ---
 Enumerations are referenced by <modulename>.<enumerationname>.<enumerationvalue>
@@ -17,7 +17,7 @@ OrderProcessing.Status.completed
 Conditional statements are also possible:
 
 ```java
-if 4>3 then 
+if 4>3 then
   OrderProcessing.Status.completed
 else
   OrderProcessing.Status.completed

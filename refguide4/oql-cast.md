@@ -1,6 +1,6 @@
 ---
 title: "OQL CAST"
-category: "refguide4"
+parent: "oql-functions"
 space: "Reference Guide 4"
 ---
 The CAST function converts an expression to a specific data type.

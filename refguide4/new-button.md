@@ -1,6 +1,6 @@
 ---
 title: "New Button"
-category: "refguide4"
+parent: "control-bar"
 space: "Reference Guide 4"
 ---
 The new button allows the end-user to create new objects in a grid or reference set selector.

@@ -1,6 +1,6 @@
 ---
 title: "Monitoring"
-category: "refguide4"
+category: "Deployment"
 space: "Reference Guide 4"
 ---
 The runtime statistics monitoring action can be called by sending a JSON request to the admin handler of the runtime. This is accomplished by sending a request to the admin port which is specified in the application configuration.

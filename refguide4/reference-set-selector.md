@@ -1,6 +1,6 @@
 ---
 title: "Reference Set Selector"
-category: "refguide4"
+parent: "web-forms"
 space: "Reference Guide 4"
 ---
 The reference set selector allows you to set an association of type reference set by selecting objects. For example, if customers can belong to several groups, a reference set selector can be used to select the groups the customer belongs to. This requires that there is an association from customer to group of type reference set in the domain model.

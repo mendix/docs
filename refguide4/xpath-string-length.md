@@ -1,6 +1,6 @@
 ---
 title: "XPath string-length"
-category: "refguide4"
+parent: "xpath-constraint-functions"
 space: "Reference Guide 4"
 ---
 See [length](xpath-length).

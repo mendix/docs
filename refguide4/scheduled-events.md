@@ -1,6 +1,6 @@
 ---
 title: "Scheduled Events"
-category: "refguide4"
+parent: "modules"
 space: "Reference Guide 4"
 ---
 With scheduled events you can let the runtime execute a microflow at a specific moment in time. The event can also be repeated with a given interval, for example every day.

@@ -1,6 +1,6 @@
 ---
 title: "Drop Down Button"
-category: "refguide4"
+parent: "mobile-form-buttons"
 space: "Reference Guide 4"
 ---
 Pressing a drop down button shows a list of items. Each item has a caption and an image. Clicking an item may execute a microflow or open a form.

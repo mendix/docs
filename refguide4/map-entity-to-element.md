@@ -1,6 +1,6 @@
 ---
 title: "Map entity to element"
-category: "refguide4"
+parent: "domain-to-xml-mappings"
 space: "Reference Guide 4"
 ---
 ## Object Mapping

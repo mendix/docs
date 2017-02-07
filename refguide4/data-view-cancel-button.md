@@ -1,6 +1,6 @@
 ---
 title: "Data View Cancel Button"
-category: "refguide4"
+parent: "data-view-control-bar"
 space: "Reference Guide 4"
 ---
 The cancel button cancels all changes that were made to the object in de data view. The form showing the data view will be closed if the data view property 'Close on Save/Cancel' is true.

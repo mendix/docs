@@ -1,6 +1,6 @@
 ---
 title: "Dynamic label (document template)"
-category: "refguide4"
+parent: "document-templates"
 space: "Reference Guide 4"
 ---
 A dynamic label would be used for the same kind of attributes as a text box from the form builder. It can be used to display a text value.

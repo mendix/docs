@@ -1,6 +1,6 @@
 ---
 title: "File Manager"
-category: "refguide4"
+parent: "web-forms"
 space: "Reference Guide 4"
 ---
 A file manager is used to upload and/or download files.

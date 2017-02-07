@@ -1,6 +1,6 @@
 ---
 title: "Table Row"
-category: "refguide4"
+parent: "table"
 space: "Reference Guide 4"
 ---
 A table consist of a number of rows and each row in turn consists of a number of [table cells](table-cell). A table row has the following properties.

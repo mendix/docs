@@ -1,6 +1,6 @@
 ---
 title: "XPath year-from-dateTime"
-category: "refguide4"
+parent: "xpath-constraint-functions"
 space: "Reference Guide 4"
 ---
 The year-from-dateTime() function extracts the amount of years from a DateTime attribute so it can be used to compare to a value.

@@ -1,6 +1,6 @@
 ---
 title: "Page Break (document template)"
-category: "refguide4"
+parent: "document-templates"
 space: "Reference Guide 4"
 ---
 When inserting a page break, the current page will be cut off after the break and widgets below the break will be inserted in a new page.

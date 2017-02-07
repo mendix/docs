@@ -1,6 +1,6 @@
 ---
 title: "Line break (document template)"
-category: "refguide4"
+parent: "document-templates"
 space: "Reference Guide 4"
 ---
 A new line will be started at the insertion of a Line Break.

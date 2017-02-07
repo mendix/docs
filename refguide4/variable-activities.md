@@ -1,6 +1,6 @@
 ---
 title: "Variable Activities"
-category: "refguide4"
+parent: "activities"
 space: "Reference Guide 4"
 ---
 ## Create Variable

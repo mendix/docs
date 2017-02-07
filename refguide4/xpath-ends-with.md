@@ -1,6 +1,6 @@
 ---
 title: "XPath ends-with"
-category: "refguide4"
+parent: "xpath-constraint-functions"
 space: "Reference Guide 4"
 ---
 The ends-with() function checks whether a String attribute ends with a specific substring.

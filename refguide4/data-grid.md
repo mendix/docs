@@ -1,6 +1,6 @@
 ---
 title: "Data Grid"
-category: "refguide4"
+parent: "web-forms"
 space: "Reference Guide 4"
 ---
 The data grid shows a list of objects in a grid. For example, a data grid can show all the orders a customer has placed. Using controls provided by the data grid you can browse, search and edit those objects.

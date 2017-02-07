@@ -1,6 +1,6 @@
 ---
 title: "XPath minutes-from-dateTime"
-category: "refguide4"
+parent: "xpath-constraint-functions"
 space: "Reference Guide 4"
 ---
 The minutes-from-dateTime() function extracts the amount of minutes from a DateTime attribute so it can be used to compare to a value.

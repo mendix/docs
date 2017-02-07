@@ -1,6 +1,6 @@
 ---
 title: "Domain-to-XML Mappings"
-category: "refguide4"
+parent: "integration"
 space: "Reference Guide 4"
 ---
 Domain to XML mappings are used to convert a domain entity to XML, so that it can be sent to other systems. They are used in two different scenarios:

@@ -1,6 +1,6 @@
 ---
 title: "Microflow Expressions"
-category: "refguide4"
+parent: "languages"
 space: "Reference Guide 4"
 ---
 Expressions can for example be used to change a member of an object based on logic. Variables in the microflow can be called in an expression by inserting the name of the variable and adding a dollar sign. E.g. _$customer_ refers to the variable _customer_. Expressions can be used recursively, e.g., _1 + 2 + 3_. Attributes and associations of object variables are accessed using a slash, e.g., _$customer/Name_, _$customer/CRM.Customer_Order_.

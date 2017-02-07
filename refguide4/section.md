@@ -1,6 +1,6 @@
 ---
 title: "Section"
-category: "refguide4"
+parent: "mobile-forms"
 space: "Reference Guide 4"
 ---
 A section is a container in which other components can be placed. A list view, data view, table, navigation list, label, microflow trigger, link button, back button, drop down button, sign out button or another section can be placed on top level.

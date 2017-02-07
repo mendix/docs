@@ -1,6 +1,6 @@
 ---
 title: "Version Control Scenarios"
-category: "refguide4"
+parent: "version-control"
 space: "Reference Guide 4"
 ---
 This page describes some common scenarios of working in the Modeler with version control.

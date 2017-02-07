@@ -1,6 +1,6 @@
 ---
 title: "Regular Expressions"
-category: "refguide4"
+parent: "modules"
 space: "Reference Guide 4"
 ---
 A regular expression describes a set of criteria that a string can match. In the [validation rules](validation-rules) of an entity a regular expression can be used to validate whether an attribute of type String matches these criteria.
@@ -43,7 +43,7 @@ A regular expression can contain the following types of subexpressions:
 |           |   |
 | --- | --- |
 | [ ]
- | 
+ |
 
 **A bracket expression**
 Matches a single character that is indicated within the brackets.
@@ -71,7 +71,7 @@ For example, using this construct the expression of the Dutch zip code example a
  | **A dot**
 Matches any single character. If you want to match a dot, you can escape it by prefixing it with a \ (backslash).
  |
-|   | 
+|   |
 
 **A literal character**
 A character that does not have a special meaning in the regular expression language matches itself.

@@ -1,6 +1,6 @@
 ---
 title: "Parse and format date function calls"
-category: "refguide4"
+parent: "microflow-expressions"
 space: "Reference Guide 4"
 ---
 Functions to parse datetimes from strings, using a specified pattern, or produce a string from a datetime.

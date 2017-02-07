@@ -1,6 +1,6 @@
 ---
 title: "Modules"
-category: "refguide4"
+category: "Modeler"
 space: "Reference Guide 4"
 ---
 A Mendix project consists of modules: a System module and one or more user-defined modules. Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. The Modeler does not enforce any kind of module structure; it is up to you to choose logical modules for your application.

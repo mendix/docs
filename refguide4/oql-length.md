@@ -1,6 +1,6 @@
 ---
 title: "OQL LENGTH"
-category: "refguide4"
+parent: "oql-functions"
 space: "Reference Guide 4"
 ---
 The LENGTH function returns the length of a String value.

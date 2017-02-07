@@ -1,6 +1,5 @@
 ---
 title: "Deployment"
-category: "refguide4"
 space: "Reference Guide 4"
 ---
 A Mendix application can be deployed in different ways. You can deploy to your local machine for development and testing, you can deploy to the Mendix cloud, and you can deploy to a server you configured yourself.

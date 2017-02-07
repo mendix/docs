@@ -1,6 +1,6 @@
 ---
 title: "Rules"
-category: "refguide4"
+parent: "modules"
 space: "Reference Guide 4"
 ---
 A rule is a special kind of microflow. Its result should be an enumeration or a boolean and it can be used in an [exclusive split](exclusive-split) to make a decision based on that result. The idea is that complicated decisions can be consolidated in rules and reused in various places.

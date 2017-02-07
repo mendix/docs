@@ -1,6 +1,6 @@
 ---
 title: "Annotation"
-category: "refguide4"
+parent: "microflows"
 space: "Reference Guide 4"
 ---
 An annotation is an element that can be used to put comments in a microflow.

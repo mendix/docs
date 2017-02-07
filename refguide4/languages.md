@@ -1,6 +1,6 @@
 ---
 title: "Languages"
-category: "refguide4"
+category: "Modeler"
 space: "Reference Guide 4"
 ---
 In the Modeler three different textual languages are used:

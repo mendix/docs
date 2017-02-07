@@ -1,6 +1,6 @@
 ---
 title: "Report Button"
-category: "refguide4"
+parent: "reporting"
 space: "Reference Guide 4"
 ---
 If a report pane has parameter widgets, it should also have a report button.

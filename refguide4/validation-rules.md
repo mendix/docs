@@ -1,6 +1,6 @@
 ---
 title: "Validation Rules"
-category: "refguide4"
+parent: "entities"
 space: "Reference Guide 4"
 ---
 Validation rules are conditions that should be satisfied before an object is committed. If a condition defined by a validation rule is not satisfied when the object is committed, the server generates a validation error. If the object was committed using a form, this results in a validation message. When committing an object in a microflow, this results in an error that can be handled using custom error handling. In all other cases, a validation error results in a Java exception being thrown.

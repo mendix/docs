@@ -1,6 +1,6 @@
 ---
 title: "Constants"
-category: "refguide4"
+parent: "modules"
 space: "Reference Guide 4"
 ---
 Constants are used to define values that can be different in different configurations (development, test, acceptation and production).

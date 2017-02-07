@@ -1,6 +1,5 @@
 ---
 title: "Team Server"
-category: "refguide4"
 space: "Reference Guide 4"
 ---
 Written on top of Subversion and delivered as a plugin to sprintr our Team Server is designed to make the life of a Mendix Business Engineer easier. The Business Modeler is tightly integrated with the Team Server and things like creating a new project (including a versioned model repository), updating, commiting changes, merging model versions, etc. are all available from within the Business Modeler as a single click action.

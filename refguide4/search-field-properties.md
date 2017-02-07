@@ -1,6 +1,6 @@
 ---
 title: "Search Field Properties"
-category: "refguide4"
+parent: "search-bar"
 space: "Reference Guide 4"
 ---
 ## Common Properties

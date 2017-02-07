@@ -1,6 +1,6 @@
 ---
 title: "Error Event"
-category: "refguide4"
+parent: "microflows"
 space: "Reference Guide 4"
 ---
 An error event defines a location where the microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not. This event throws the error again, so the caller of the microflow can catch them.

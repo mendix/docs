@@ -1,6 +1,6 @@
 ---
 title: "Project Settings"
-category: "refguide4"
+parent: "project"
 space: "Reference Guide 4"
 ---
 In the project settings dialog you can alter settings which are applicable to the whole project.

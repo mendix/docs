@@ -1,6 +1,6 @@
 ---
 title: "Import XML"
-category: "refguide4"
+parent: "integration-activities"
 space: "Reference Guide 4"
 ---
 With the import-XML action you can import the data stored in a XML document into [domain model](domain-model) entities.

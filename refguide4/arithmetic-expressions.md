@@ -1,6 +1,6 @@
 ---
 title: "Arithmetic expressions"
-category: "refguide4"
+parent: "microflow-expressions"
 space: "Reference Guide 4"
 ---
 A number of arithmetic expressions are supported. All of these statements work on any numeric type; integer, float, autonumber, currency and long.

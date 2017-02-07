@@ -1,6 +1,6 @@
 ---
 title: "Integration"
-category: "refguide4"
+parent: "modules"
 space: "Reference Guide 4"
 ---
 Integrating with other applications (Mendix or otherwise) is preferably done by using web services and XML. Below the some often used terms are explained in the context of the Mendix technology.

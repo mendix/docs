@@ -1,6 +1,6 @@
 ---
 title: "Microflow"
-category: "refguide4"
+parent: "microflows"
 space: "Reference Guide 4"
 ---
 <div class="alert alert-warning">{% markdown %}

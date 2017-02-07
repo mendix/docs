@@ -1,6 +1,6 @@
 ---
 title: "OQL Group by Clause"
-category: "refguide4"
+parent: "oql"
 space: "Reference Guide 4"
 ---
 The GROUP BY clause will condense all returned rows into a single row that shares the same values for the expressions defined in this clause. The expressions in this clause must exist in the SELECT clause of the query. All expressions in the SELECT clause which do not exist in the GROUP BY clause must be either an aggregation or the result an aggregate function.

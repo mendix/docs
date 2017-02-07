@@ -1,6 +1,6 @@
 ---
 title: "Persistent Create Object"
-category: "refguide4"
+parent: "object-activities"
 space: "Reference Guide 4"
 ---
 The persistent-create-object action is the result of converting a create-object action from version 3\. This action not only creates the object in memory but also inserts a row in the database. This action is deprecated and there will be a warning for it in the error list. Right-clicking the warning allows you to find all occurrences and to convert them to new [create actions](create-object).

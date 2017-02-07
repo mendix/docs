@@ -1,6 +1,6 @@
 ---
 title: "XPath min"
-category: "refguide4"
+parent: "xpath-query-functions"
 space: "Reference Guide 4"
 ---
 The min()-function returns the minimum value of its argument.

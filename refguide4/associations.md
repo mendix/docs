@@ -1,6 +1,6 @@
 ---
 title: "Associations"
-category: "refguide4"
+parent: "domain-model"
 space: "Reference Guide 4"
 ---
 An association describes a relation between entities. In a domain model diagram an association is represented by a line or an arrow between two entities.

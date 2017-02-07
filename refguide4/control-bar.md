@@ -1,6 +1,6 @@
 ---
 title: "Control Bar"
-category: "refguide4"
+parent: "data-grid"
 space: "Reference Guide 4"
 ---
 The control bar contains different kinds of buttons, and can be customized completely. Standard buttons allow you to create new objects, and to edit, and to delete them.

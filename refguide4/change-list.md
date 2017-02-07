@@ -1,6 +1,6 @@
 ---
 title: "Change List"
-category: "refguide4"
+parent: "list-activities"
 space: "Reference Guide 4"
 ---
 With the change-list action you can change the list that is stored in a variable.

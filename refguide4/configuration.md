@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-category: "refguide4"
+parent: "project-settings"
 space: "Reference Guide 4"
 ---
 A configuration is a group of settings with a name. You can define any number of configurations. The active configuration, i.e. the one that will be used when running your application, is determined by the drop-down in the toolbar of the Modeler.

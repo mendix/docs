@@ -3,7 +3,7 @@ title: "Domain Model"
 parent: "modules"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
 *   [Entities](entities)
     *   [Attributes](attributes)
@@ -11,9 +11,9 @@ Please select a How To:
     *   [Event Handlers](event-handlers)
     *   [Indexes](indexes)
     *   [Access Rules](access-rules)
-    *   [Create a specialized entity](create-a-specialized-entity)
+    *   [Create a Specialized Entity](create-a-specialized-entity)
 *   [Associations](associations)
-    *   [Create an association](create-an-association)
-    *   [Add a reference set](add-a-reference-set)
-    *   [Set the association owner to 'both'](set-the-association-owner-to-both)
-    *   [Configure delete behavior](configure-delete-behavior)
+    *   [Create an Association](create-an-association)
+    *   [Add a Reference Set](add-a-reference-set)
+    *   [Set the Association Wwner to 'both'](set-the-association-owner-to-both)
+    *   [Configure Delete Behavior](configure-delete-behavior)

@@ -3,14 +3,14 @@ title: "Reporting"
 parent: "forms"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Create a report and add widgets to it](create-a-report-and-add-widgets-to-it)
-*   [Connect parameter widgets to a data set](connect-parameter-widgets-to-a-data-set)
+*   [Create a Report And Add Widgets to It](create-a-report-and-add-widgets-to-it)
+*   [Connect Parameter Widgets to a Data Set](connect-parameter-widgets-to-a-data-set)
 *   [Date Range Selector](date-range-selector)
-    *   [Configure the date range selector](configure-the-date-range-selector)
+    *   [Configure the Date Range Selector](configure-the-date-range-selector)
 *   [Basic Reports](basic-reports)
-    *   [Configure zooming for a basic report](configure-zooming-for-a-basic-report)
-    *   [Connect a basic report to a data set](connect-a-basic-report-to-a-data-set)
+    *   [Configure Zooming for a Basic Report](configure-zooming-for-a-basic-report)
+    *   [Connect a Basic Report to a Data Set](connect-a-basic-report-to-a-data-set)
 *   [Report Chart](report-chart)
-    *   [Connect a report chart to a data set](connect-a-report-chart-to-a-data-set)
+    *   [Connect a Report Chart to a Data Set](connect-a-report-chart-to-a-data-set)

@@ -3,6 +3,6 @@ title: "Merge"
 parent: "microflows"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Merge multiple sequence flows](merge-multiple-sequence-flows)
+*   [Merge Multiple Sequence Flows](merge-multiple-sequence-flows)

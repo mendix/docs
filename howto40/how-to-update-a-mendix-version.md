@@ -1,9 +1,9 @@
 ---
-title: "How to update a Mendix Version"
+title: "How To Update a Mendix Version"
 category: "General"
 space: "Mendix 4 How-to's"
 ---
-## How to update a Mendix Version
+## How To Update a Mendix Version
 
 This tutorials shows a new Mendix version can be installed. To be exactly you can install a dozen Mendix version without destroying a previous release. What you need is the mendixrelease.tar.gz that can be provided by Mendix.
 

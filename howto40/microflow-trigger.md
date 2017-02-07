@@ -3,6 +3,6 @@ title: "Microflow Trigger"
 parent: "forms"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Configure a microflow trigger](configure-a-microflow-trigger)
+*   [Configure a Microflow Trigger](configure-a-microflow-trigger)

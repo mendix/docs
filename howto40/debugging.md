@@ -10,17 +10,17 @@ This section describes how to use the microflow debugger. In Mendix 4.3 we intro
 
 There are three dockable windows associated with debugging: Debugger, Breakpoints and Variables. You can find these windows under 'View -> 'Debug windows' in the menu.
 
-### Debugging a locally running application
+### Debugging a Locally Running Application
 
 When running an application locally from the Modeler, the debugger is automatically connected.
 
-### Connecting manually
+### Connecting Manually
 
 You can also manually connect to a server. When you have the 'Debugger' window opened and press connect, you will get the option to connect to a local server or a remote server. You can also connect the debugger using the option 'Connect debugger' in the 'Run' menu.
 
 ![](attachments/819203/917609.png)
 
-### Enabling the debugger in the cloud.
+### Enabling the Debugger in the Cloud
 
 When an application is running in the cloud, you can enable the debugger in your environment details under actions.
 
@@ -44,7 +44,7 @@ This works in the same way as local debugging. However, to make sure you do not 
 
 The password you will need to connect is the one you set when calling the M2EE command to enable to debugger.
 
-### Setting breakpoints
+### Setting Breakpoints
 
 Breakpoints are points in a microflow where execution will be halted. You can then inspect the values of the variables that are in scope.
 
@@ -66,7 +66,7 @@ Once you have set a breakpoint, it will show up in the Breakpoints window.
 
 ![](attachments/819203/917628.png)
 
-### Debugging your application
+### Debugging Your Application
 
 **Hitting a breakpoint**
 
@@ -115,7 +115,7 @@ Something to keep in mind is that the application will always break on a breakpo
 
 When the continue command is given, the microflow will simply continue executing the current microflow until it finishes or hits another breakpoint.
 
-### Inspecting variables
+### Inspecting Variables
 
 When debugging a microflow you can inspect the variables that are in the scope of the microflow using the 'Variables' window.
 

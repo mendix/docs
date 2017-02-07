@@ -3,6 +3,6 @@ title: "Context Mechanism"
 parent: "forms"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Use the 'Apply context' property](use-the-apply-context-property)
+*   [Use the 'Apply Context' Property](use-the-apply-context-property)

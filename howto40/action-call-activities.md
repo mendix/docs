@@ -3,7 +3,7 @@ title: "Action Call Activities"
 parent: "activities"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Call a microflow inside another microflow](call-a-microflow-inside-another-microflow)
-*   [Configure a Java action call](configure-a-java-action-call)
+*   [Call a Microflow Inside Another Microflow](call-a-microflow-inside-another-microflow)
+*   [Configure a Java Action Call](configure-a-java-action-call)

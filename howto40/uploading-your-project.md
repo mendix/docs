@@ -1,9 +1,9 @@
 ---
-title: "Uploading your Project"
+title: "Uploading Your Project"
 parent: "mendix-on-the-mendix-cloud"
 space: "Mendix 4 How-to's"
 ---
-## Uploading your project
+## Uploading Your Project
 
 There are two ways of uploading your application to the cloud. The first is via your modeler: click the Cloud icon and the Modeler will create a Mendix Deployment Archive (mda) and automatically upload it for you to the cloud. Note that although you can upload from the Modeler, you will not be able to start your application.
 

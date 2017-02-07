@@ -3,6 +3,6 @@ title: "Event Handlers"
 parent: "entities"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Add an event handler](add-an-event-handler)
+*   [Add an Event Handler](add-an-event-handler)

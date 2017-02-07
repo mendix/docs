@@ -3,7 +3,7 @@ title: "Image Uploader"
 parent: "forms"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Add and configure an image uploader](add-and-configure-an-image-uploader)
-*   [Create a new object with associated image object](create-a-new-object-with-associated-image-object)
+*   [Add and Configure an Image Uploader](add-and-configure-an-image-uploader)
+*   [Create a New Object With Associated Image Object](create-a-new-object-with-associated-image-object)

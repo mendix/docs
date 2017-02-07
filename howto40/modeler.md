@@ -2,7 +2,7 @@
 title: "Modeler"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
 *   [Project](project)
     *   [Project Settings](project-settings)
@@ -24,4 +24,4 @@ Please select a How To:
     *   [Scheduled Events](scheduled-events)
     *   [Integration](integration)
     *   [Translatable Texts](translatable-texts)
-    *   [Add documents to a module](add-documents-to-a-module)
+    *   [Add Documents to a Module](add-documents-to-a-module)

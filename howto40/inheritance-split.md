@@ -3,6 +3,6 @@ title: "Inheritance Split"
 parent: "microflows"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Use a specialization of an entity](use-a-specialization-of-an-entity)
+*   [Use a Specialization of an Entity](use-a-specialization-of-an-entity)

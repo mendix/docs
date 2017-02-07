@@ -1,5 +1,5 @@
 ---
-title: "Debugging (4.2 and before)"
+title: "Debugging (4.2 and Before)"
 category: "Debugging"
 space: "Mendix 4 How-to's"
 ---
@@ -44,7 +44,7 @@ The current activity is a microflow, so the "Step into" button is enabled and we
 
 {% endmarkdown %}</div>
 
-### Keyboard shorcuts
+### Keyboard Shorcuts
 
 There are three keyboard shortcuts to match the buttons:
 

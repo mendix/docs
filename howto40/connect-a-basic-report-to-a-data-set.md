@@ -9,33 +9,33 @@ This section describes how to connect a basic report in a report pane to a data 
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Open the form with reporting pane containing the basic report.**
+ **Open the form with reporting pane containing the basic report.**
 
 ### Method 1
 
-![](attachments/819203/917932.png) **Select the basic report, and look up the data set you want to connect to it in the Connector window.**
+ **Select the basic report, and look up the data set you want to connect to it in the Connector window.**
 
 ![](attachments/2621467/2752711.png)
 
-![](attachments/819203/917932.png) **Click and drag this data set to the yellow header of the basic report.**
+ **Click and drag this data set to the yellow header of the basic report.**
 
 ![](attachments/2621467/2752710.png)
 
-![](attachments/819203/917932.png) **Assign columns of the data set to columns of the basic report. You can do this by selecting the column, looking up the corresponding data set column in the Connector window, and then drag it to the basic report column.**
+ **Assign columns of the data set to columns of the basic report. You can do this by selecting the column, looking up the corresponding data set column in the Connector window, and then drag it to the basic report column.**
 
 ![](attachments/2621467/2752713.png)
 
 ### Method 2
 
-![](attachments/819203/917932.png) **Select the basic report, then right-click on it and choose 'Select data set...'.**
+ **Select the basic report, then right-click on it and choose 'Select data set...'.**
 
 ![](attachments/2621467/2752716.png)
 
-![](attachments/819203/917932.png) **In the menu that appears, choose the data set and press 'Select'**
+ **In the menu that appears, choose the data set and press 'Select'**
 
 ![](attachments/2621467/2752717.png)
 
-![](attachments/819203/917932.png) **Right-click on the basic report again, and choose 'Get columns from data set'.**
+ **Right-click on the basic report again, and choose 'Get columns from data set'.**
 
 ![](attachments/2621467/2752712.png)
 

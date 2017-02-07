@@ -3,6 +3,6 @@ title: "Scheduled Events"
 parent: "modules"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Configure a scheduled event](configure-a-scheduled-event)
+*   [Configure a Scheduled Event](configure-a-scheduled-event)

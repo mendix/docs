@@ -3,11 +3,11 @@ title: "Integration"
 parent: "modules"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Expose a web service](expose-a-web-service)
-*   [Consume a web service](consume-a-web-service)
-*   [Add web service users](add-web-service-users)
-*   [Configure a Domain-to-XML mapping](configure-a-domain-to-xml-mapping)
-*   [Configure an XML-to-Domain mapping](configure-an-xml-to-domain-mapping)
-*   [Add and configure an XML schema](add-and-configure-an-xml-schema)
+*   [Expose a Web Service](expose-a-web-service)
+*   [Consume a Web Service](consume-a-web-service)
+*   [Add Web Service Users](add-web-service-users)
+*   [Configure a Domain-to-XML Mapping](configure-a-domain-to-xml-mapping)
+*   [Configure an XML-to-Domain Mapping](configure-an-xml-to-domain-mapping)
+*   [Add and Configure an XML Schema](add-and-configure-an-xml-schema)

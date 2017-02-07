@@ -3,6 +3,6 @@ title: "Java Actions"
 parent: "modules"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Add and configure a Java action](add-and-configure-a-java-action)
+*   [Add and Configure a Java Action](add-and-configure-a-java-action)

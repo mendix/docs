@@ -1,5 +1,5 @@
 ---
-title: "Run two applications locally at once"
+title: "Run Two Applications Locally at Once"
 parent: "project-settings"
 space: "Mendix 4 How-to's"
 ---
@@ -9,9 +9,9 @@ This section will explain the steps you have to take to run two different Mendix
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Open the Project Settings by double-clicking on 'Settings' in the Project Explorer.**
+ **Open the Project Settings by double-clicking on 'Settings' in the Project Explorer.**
 
-![](attachments/819203/917932.png) **Choose the 'Server' tab and change the HTTP port and Server admin port to values different from those the other application uses.** ![](attachments/2621507/2752790.png)
+ **Choose the 'Server' tab and change the HTTP port and Server admin port to values different from those the other application uses.** ![](attachments/2621507/2752790.png)
 
 You can elect to use the default ports for the second application, or set it to use different ports in the same way as detailed above.
 

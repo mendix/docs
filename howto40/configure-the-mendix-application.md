@@ -3,6 +3,7 @@ title: "Configure the Mendix application"
 parent: "mendix-on-windows---service-console-3"
 space: "Mendix 4 How-to's"
 ---
+
 ## Description
 
 This section describes how to configure your Mendix application for deployment as Windows service.
@@ -51,37 +52,21 @@ The first three settings define the locations of the folders that we created in 
 
 | Setting | Meaning |
 | --- | --- |
-| Log path
- | The log files will be placed in this is the folder. When the application runs as a service there is no visible console with log messages. These message are save to logfiles in this folder. Also SQL validation queries will be logged here.
- |
+| Log path | The log files will be placed in this is the folder. When the application runs as a service there is no visible console with log messages. These message are save to logfiles in this folder. Also SQL validation queries will be logged here. |
 | Uploaded files path | The location of the uploaded files. A valid path can be: \\FileServer\CustomerPortalFiles. The default path is D:\CustomerPortal\Project\data\files. |
 | Temporary files path | The location of the temporary files. The default path is D:\CustomerPortal\Project\data\tmp. |
-| Java path
- | This is the path to Java. The JRE edition is sufficient. The JDK edition is not necessary for the Mendix Windows service. You can find the Java Path under Project Settings in the Modeler.
- |
-| Public application root URL
- | Here you must specify the web address where users access the application.
- |
-| Scheduled event execution
- | Here you can specify whether scheduled events must be executed or not. The option SPECIFIED can be used to specify the events that must be executed. Use in that case the custom setting 'MyScheduledEvents', as described below.
- |
-| Custom Mendix Settings
- | See [this page](/refguide4/custom-settings) for an overview of settings.
-Here you can define advanced settings of the Mendix server, such as specific folder locations or advanced database settings. The simple database settings (same as in the Modeler) can be put in place via the option 'Database Configuration' on the navigation pane.
- |
+| Java path | This is the path to Java. The JRE edition is sufficient. The JDK edition is not necessary for the Mendix Windows service. You can find the Java Path under Project Settings in the Modeler. |
+| Public application root URL | Here you must specify the web address where users access the application. |
+| Scheduled event execution | Here you can specify whether scheduled events must be executed or not. The option SPECIFIED can be used to specify the events that must be executed. Use in that case the custom setting 'MyScheduledEvents', as described below. |
+| Custom Mendix Settings | See [this page](/refguide4/custom-settings) for an overview of settings. Here you can define advanced settings of the Mendix server, such as specific folder locations or advanced database settings. The simple database settings (same as in the Modeler) can be put in place via the option 'Database Configuration' on the navigation pane. |
 
 **Jetty Settings**
 Use the following Jetty settings to configure some performance properties:
 
 | Name | Value | Default value |
 | --- | --- | --- |
-| runtime_min_threads
- | The minimum number of threads the Jetty server of the Mendix Runtime can have.
- | 8
- |
-| runtime_max_threads
- | The maximum number of threads the Jetty server of the Mendix Runtime can have. | 256
- |
+| runtime_min_threads | The minimum number of threads the Jetty server of the Mendix Runtime can have. | 8 |
+| runtime_max_threads | The maximum number of threads the Jetty server of the Mendix Runtime can have. | 256 |
 
 ### Database Configuration
 
@@ -119,7 +104,7 @@ EventType clr20r3, P1 mendixservice.exe, P2 1.0.3810.25652, P3 4c0cf0d8, P4 mend
 
 Make sure that the user account for the service has enough rights to the folders containing the Mendix Service executables and the subfolders x86 and x64.
 
-### Debugging while running the service
+### Debugging While Running the Service
 
 When the service is running, you can start the Mendix Service Console to see the log message of the application. This works only if the Mendix Service Console is started when the service is already running.
 

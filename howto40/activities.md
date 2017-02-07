@@ -3,7 +3,7 @@ title: "Activities"
 parent: "microflows"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a How-To:
 
 *   [Object Activities](object-activities)
     *   [Create and change an object](create-and-change-an-object)

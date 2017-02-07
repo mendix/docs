@@ -3,6 +3,6 @@ title: "Exclusive Split"
 parent: "microflows"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Configure an exclusive split](configure-an-exclusive-split)
+*   [Configure an Exclusive Split](configure-an-exclusive-split)

@@ -3,6 +3,6 @@ title: "Template Grid"
 parent: "forms"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Build a template grid](build-a-template-grid)
+*   [Build a Template Grid](build-a-template-grid)

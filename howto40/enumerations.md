@@ -3,6 +3,6 @@ title: "Enumerations"
 parent: "modules"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Create a multi-language enumeration](create-a-multi-language-enumeration)
+*   [Create a Multi-Language Enumeration](create-a-multi-language-enumeration)

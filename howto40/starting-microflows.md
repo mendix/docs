@@ -3,6 +3,6 @@ title: "Starting Microflows"
 parent: "forms"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Configure a microflow button](configure-a-microflow-button)
+*   [Configure a Microflow Button](configure-a-microflow-button)

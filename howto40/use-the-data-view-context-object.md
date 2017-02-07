@@ -1,5 +1,5 @@
 ---
-title: "Use the Data View context object"
+title: "Use the Data View Context Object"
 category: "Custom Widgets"
 space: "Mendix 4 How-to's"
 ---
@@ -9,7 +9,7 @@ This section describes how to set your widget to receive the context object from
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Set up your widget XML.**
+ **Set up your widget XML.**
 
 In your widget.xml, set **needsEntityContext** to true.
 
@@ -20,7 +20,7 @@ In your widget.xml, set **needsEntityContext** to true.
 
 This will limit your widget to only be usable in a Data View, as the object is passed as the context.
 
-![](attachments/819203/917932.png) **Make the widget context-ready.**
+ **Make the widget context-ready.**
 
 In the JavaScript you will need to add the **mendix.addon._Contextable** addon in order to use the functions needed to receive the object. You can do this at the start of your widget declaration.
 
@@ -42,7 +42,7 @@ In the **postCreate** function we call on **this.initContext()** which we now ha
 
 Now we only need to be able to receive and process the context object.
 
-![](attachments/819203/917932.png) **Retrieve the context object in JavaScript.**
+ **Retrieve the context object in JavaScript.**
 
 Once a context object is received by the widget, it will automatically call on the **applyContext** function. Here we will retrieve the actual object and hitch it to a different function, from where our widget can start using the context.
 

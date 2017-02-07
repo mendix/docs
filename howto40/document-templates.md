@@ -3,6 +3,6 @@ title: "Document Templates"
 parent: "modules"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Create and build a document template](create-and-build-a-document-template)
+*   [Create and Build a Document Template](create-and-build-a-document-template)

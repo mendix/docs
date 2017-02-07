@@ -1,5 +1,5 @@
 ---
-title: "Use the batch replace function"
+title: "Use the Batch Replace Function"
 parent: "translatable-texts"
 space: "Mendix 4 How-to's"
 ---
@@ -9,16 +9,16 @@ This section describes how to use the batch replace function to replace words or
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Click on the 'Batch replace' button.**
+ **Click on the 'Batch replace' button.**
 
 ![](attachments/2621629/2752999.png)
 
-![](attachments/819203/917932.png) **The new window that appears will list the phrases and words in your project, as well as their number of occurrences.**
+ **The new window that appears will list the phrases and words in your project, as well as their number of occurrences.**
 
 You can search for specific phrases or words using the 'Search' field.
 
-![](attachments/819203/917932.png) **Click on a corresponding field in the 'Replace with' column, and enter the word or phrase you would like to replace the original with.**
+ **Click on a corresponding field in the 'Replace with' column, and enter the word or phrase you would like to replace the original with.**
 
 ![](attachments/2621629/2752969.png)
 
-![](attachments/819203/917932.png) **Once you are finished entering replacement phrases and words, click on the 'Replace' button to finish.**
+ **Once you are finished entering replacement phrases and words, click on the 'Replace' button to finish.**

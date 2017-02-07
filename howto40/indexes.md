@@ -3,6 +3,6 @@ title: "Indexes"
 parent: "entities"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Improve performance with indexes](improve-performance-with-indexes)
+*   [Improve Performance With Indexes](improve-performance-with-indexes)

@@ -3,7 +3,7 @@ title: "Reference Set Selector"
 parent: "forms"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   ['Constrained by' functionality for a reference set selector](constrained-by-functionality-for-a-reference-set-selector)
-*   [Configure the tooltip form of a reference set selector](configure-the-tooltip-form-of-a-reference-set-selector)
+*   ['Constrained by' Functionality for a Reference Set Selector](constrained-by-functionality-for-a-reference-set-selector)
+*   [Configure the Tooltip Form of a Reference Set Selector](configure-the-tooltip-form-of-a-reference-set-selector)

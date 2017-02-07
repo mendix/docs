@@ -1,5 +1,5 @@
 ---
-title: "Service form"
+title: "Service Form"
 parent: "set-up-a-mendix-app"
 space: "Mendix 4 How-to's"
 ---
@@ -7,7 +7,7 @@ This form is important, especially for a correct installation of the Windows ser
 
 ![](attachments/2621653/2752521.png)
 
-#### Service name
+#### Service Name
 
 This name must be unique within all existing Windows services. A list of names of all currently existing services on your system can be retrieved by executing the following command line utility:
 
@@ -15,7 +15,7 @@ This name must be unique within all existing Windows services. A list of names o
 sc query | findstr SERVICE_NAME
 ```
 
-#### Display name
+#### Display Name
 
 This is the visible name of the app in the left bar of the Mendix Service Console and in the list of Windows services.
 
@@ -23,7 +23,7 @@ This is the visible name of the app in the left bar of the Mendix Service Consol
 
 This is the description of the app, which is visible as tooltip of the app in the left bar of the Mendix Service Console or visible as column in the list of Windows services.
 
-#### User name and password
+#### User Name and Password
 
 The app will always run under the user account given here. The service will be installed with this user account configured.
 The Mendix Service Console gives two options to start the app.

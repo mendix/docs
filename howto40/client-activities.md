@@ -3,8 +3,8 @@ title: "Client Activities"
 parent: "activities"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Display a message with a microflow](display-a-message-with-a-microflow)
-*   [Show a form using a microflow](show-a-form-using-a-microflow)
-*   [Add validation feedback to forms](add-validation-feedback-to-forms)
+*   [Display a Message With a Microflow](display-a-message-with-a-microflow)
+*   [Show a Form Using a Microflow](show-a-form-using-a-microflow)
+*   [Add Validation Feedback to Forms](add-validation-feedback-to-forms)

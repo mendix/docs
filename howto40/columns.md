@@ -3,8 +3,8 @@ title: "Columns"
 parent: "data-grid"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Connect an attribute to a column](connect-an-attribute-to-a-column)
-*   [Display the sum of a data grid column](display-the-sum-of-a-data-grid-column)
-*   [Display icons for enumeration values](display-icons-for-enumeration-values)
+*   [Connect an Attribute to a Column](connect-an-attribute-to-a-column)
+*   [Display the Sum of a Data Grid Column](display-the-sum-of-a-data-grid-column)
+*   [Display Icons for Enumeration Values](display-icons-for-enumeration-values)

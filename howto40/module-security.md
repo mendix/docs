@@ -3,6 +3,6 @@ title: "Module Security"
 parent: "modules"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Create a module role](create-a-module-role)
+*   [Create a Module Role](create-a-module-role)

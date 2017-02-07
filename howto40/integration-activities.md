@@ -3,7 +3,7 @@ title: "Integration Activities"
 parent: "activities"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Generate documents using document templates](generate-documents-using-document-templates)
-*   [Import XML documents](import-xml-documents)
+*   [Generate Documents Using Document Templates](generate-documents-using-document-templates)
+*   [Import XML Documents](import-xml-documents)

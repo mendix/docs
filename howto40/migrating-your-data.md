@@ -1,5 +1,5 @@
 ---
-title: "Migrating your data"
+title: "Migrating Your Data"
 parent: "mendix-on-the-mendix-cloud"
 space: "Mendix 4 How-to's"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Set up alternative home pages based on user role"
+title: "Set Up Alternative Home Pages Based On User Role"
 parent: "Navigation"
 space: "Mendix 4 How-to's"
 ---
@@ -9,13 +9,13 @@ This section describes how you can configure your application to display differe
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Open the Navigation menu by double-clicking on 'Navigation' in the Project Explorer.**
+ **Open the Navigation menu by double-clicking on 'Navigation' in the Project Explorer.**
 
-![](attachments/819203/917932.png) **Go to the 'Alternative Home Pages' tab. Press the 'New' button here and in the menu that appears choose the project user role for which you'd like to add the alternative home page.**
+ **Go to the 'Alternative Home Pages' tab. Press the 'New' button here and in the menu that appears choose the project user role for which you'd like to add the alternative home page.**
 
 ![](attachments/2621514/2752533.png)
 
-![](attachments/819203/917932.png) **Select the newly created entry, right-click and choose 'Select Target...'. In the new menu select the form you'd like to set as alternative home page and press 'Select'.**
+ **Select the newly created entry, right-click and choose 'Select Target...'. In the new menu select the form you'd like to set as alternative home page and press 'Select'.**
 
 ![](attachments/2621514/2752532.png)
 

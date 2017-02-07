@@ -3,7 +3,7 @@ title: "Data Grid"
 parent: "forms"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
 *   [Connect an entity to a data grid](connect-an-entity-to-a-data-grid)
 *   [Configure the tooltip form of a data grid](configure-the-tooltip-form-of--a-data-grid)

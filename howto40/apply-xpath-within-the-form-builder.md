@@ -1,5 +1,5 @@
 ---
-title: "Apply XPath within the form builder"
+title: "Apply XPath Within the Form Builder"
 parent: "forms"
 space: "Mendix 4 How-to's"
 ---
@@ -9,13 +9,13 @@ This section describes how you can put constraints on the objects being shown in
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Select the widget you want to apply XPath to.**
+ **Select the widget you want to apply XPath to.**
 
-![](attachments/819203/917932.png) **In the Properties window, press the '...' button next to 'XPath constraint'.**
+ **In the Properties window, press the '...' button next to 'XPath constraint'.**
 
 ![](attachments/2621491/2752757.png)
 
-![](attachments/819203/917932.png) **In the menu that appears, enter the XPath constraint you want to use.**
+ **In the menu that appears, enter the XPath constraint you want to use.**
 
 ![](attachments/2621491/2752775.png)
 

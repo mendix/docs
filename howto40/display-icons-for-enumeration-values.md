@@ -1,5 +1,5 @@
 ---
-title: "Display icons for enumeration values"
+title: "Display Icons for Enumeration Values"
 parent: "columns"
 space: "Mendix 4 How-to's"
 ---
@@ -9,16 +9,16 @@ This section describes how you can display icons for enumeration values in a dat
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Make sure the values of the enumeration you are using have an image attached. If you do not know how to configure an enumeration, please refer to [this](create-a-multi-language-enumeration) article.**
+ **Make sure the values of the enumeration you are using have an image attached. If you do not know how to configure an enumeration, please refer to [this](create-a-multi-language-enumeration) article.**
 
 ![](attachments/2621552/2752603.png)
 
-![](attachments/819203/917932.png) **Select the column of the data grid to which the enumeration attribute is connected.**
+ **Select the column of the data grid to which the enumeration attribute is connected.**
 
-![](attachments/819203/917932.png) **In the Properties window, use the drop down menu to set the 'Enumeration format' property to 'Image'.**
+ **In the Properties window, use the drop down menu to set the 'Enumeration format' property to 'Image'.**
 
 ![](attachments/2621552/2752602.png)
 
-![](attachments/819203/917932.png) **The enumeration values will now be displayed as icons instead of captions.**
+ **The enumeration values will now be displayed as icons instead of captions.**
 
 ![](attachments/2621552/2752608.png)

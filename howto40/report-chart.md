@@ -3,6 +3,6 @@ title: "Report Chart"
 parent: "reporting"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Connect a report chart to a data set](connect-a-report-chart-to-a-data-set)
+*   [Connect a Report Chart to a Data Set](connect-a-report-chart-to-a-data-set)

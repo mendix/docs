@@ -1,5 +1,5 @@
 ---
-title: "Add a reference set"
+title: "Add a Reference Set"
 parent: "associations"
 space: "Mendix 4 How-to's"
 ---
@@ -9,17 +9,17 @@ This section describes how to add an association of type reference set to your d
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the association between the two entities, choosing parent and child as you wish. If you do not know how to do this, refer to [this](create-an-association) article.**
+ **Create the association between the two entities, choosing parent and child as you wish. If you do not know how to do this, refer to [this](create-an-association) article.**
 
-![](attachments/819203/917932.png) **Select the association.**
+ **Select the association.**
 
 ![](attachments/2621536/2752558.png)
 
-![](attachments/819203/917932.png) **In the Properties window, use the drop down menu next to 'Type', and choose 'Reference Set'.**
+ **In the Properties window, use the drop down menu next to 'Type', and choose 'Reference Set'.**
 
 ![](attachments/2621536/2752571.png)
 
-![](attachments/819203/917932.png) **The association is now changed to be a reference set, instead of a reference.**
+ **The association is now changed to be a reference set, instead of a reference.**
 
 ![](attachments/2621536/2752560.png)
 ![](attachments/2621536/2752570.png)

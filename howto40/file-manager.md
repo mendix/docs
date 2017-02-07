@@ -3,6 +3,6 @@ title: "File Manager"
 parent: "forms"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Add and configure a file manager](add-and-configure-a-file-manager)
+*   [Add and Configure a File Manager](add-and-configure-a-file-manager)

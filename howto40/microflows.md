@@ -3,7 +3,7 @@ title: "Microflows"
 parent: "modules"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
 *   [Activities](activities)
     *   [Object Activities](object-activities)
@@ -12,11 +12,11 @@ Please select a How To:
     *   [Client Activities](client-activities)
     *   [Integration Activities](integration-activities)
 *   [Exclusive Split](exclusive-split)
-    *   [Configure an exclusive split](configure-an-exclusive-split)
+    *   [Configure an Axclusive Split](configure-an-exclusive-split)
 *   [Inheritance Split](inheritance-split)
-    *   [Use a specialization of an entity](use-a-specialization-of-an-entity)
+    *   [Use a Specialization of an Entity](use-a-specialization-of-an-entity)
 *   [Loop](loop)
-    *   [Configure a loop](configure-a-loop)
+    *   [Configure a Loop](configure-a-loop)
 *   [Merge](merge)
-    *   [Merge multiple sequence flows](merge-multiple-sequence-flows)
-*   [Add an activity to a microflow](add-an-activity-to-a-microflow)
+    *   [Merge Multiple Sequence Flows](merge-multiple-sequence-flows)
+*   [Add an Activity to a Microflow](add-an-activity-to-a-microflow)

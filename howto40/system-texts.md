@@ -3,6 +3,6 @@ title: "System Texts"
 parent: "Project"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Edit system texts](edit-system-texts)
+*   [Edit System Texts](edit-system-texts)

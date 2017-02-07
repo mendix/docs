@@ -3,6 +3,6 @@ title: "Validation Rules"
 parent: "entities"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Add a validation rule](add-a-validation-rule)
+*   [Add a Validation Rule](add-a-validation-rule)

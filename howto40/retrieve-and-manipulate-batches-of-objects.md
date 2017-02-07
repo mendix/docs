@@ -1,5 +1,5 @@
 ---
-title: "Retrieve and manipulate batches of objects"
+title: "Retrieve and Manipulate Batches of Objects"
 parent: "object-activities"
 space: "Mendix 4 How-to's"
 ---
@@ -9,11 +9,11 @@ This section describes how to retrieve batches of objects, manipulate them and c
 
 ## Instructions
 
-![](attachments/819203/917932.png) Create a microflow and create two variables, one for limit and one for offset. Initialize limit on the size you would like the batches to have. Initialize offset on zero.
+ Create a microflow and create two variables, one for limit and one for offset. Initialize limit on the size you would like the batches to have. Initialize offset on zero.
 
-![](attachments/819203/917932.png) Create a while loop by first putting a merge and then a split which returns to the merge as long as there are batches of objects to process.
+ Create a while loop by first putting a merge and then a split which returns to the merge as long as there are batches of objects to process.
 
-![](attachments/819203/917932.png) Put the meat of the microflow between the merge and the split. Retrieve a batch of objects using the defined limit and offset variables. Afterwards manipulate the objects by changing, committing or deleting them.
+ Put the meat of the microflow between the merge and the split. Retrieve a batch of objects using the defined limit and offset variables. Afterwards manipulate the objects by changing, committing or deleting them.
 
 <div class="alert alert-warning">{% markdown %}
 
@@ -21,6 +21,6 @@ When deleting batches of objects the offset should always be equal to zero as al
 
 {% endmarkdown %}</div>
 
-![](attachments/819203/917932.png) All done! See the picture below for an example.
+ All done! See the picture below for an example.
 
 ![](attachments/2621441/2752513.png)

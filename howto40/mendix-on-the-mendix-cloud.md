@@ -7,7 +7,7 @@ space: "Mendix 4 How-to's"
 
 This section describes how to manage your application in the [Mendix Cloud](https://cloud.mendix.com), also known as the Standard Cloud.
 
-## Available documentation in this section:
+## Available Documentation In This Section:
 
-*   [Migrating your data](migrating-your-data)
-*   [Uploading your Project](uploading-your-project)
+*   [Migrating Your Data](migrating-your-data)
+*   [Uploading Your Project](uploading-your-project)

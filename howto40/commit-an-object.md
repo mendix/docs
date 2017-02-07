@@ -1,5 +1,5 @@
 ---
-title: "Commit an object"
+title: "Commit an Object"
 category: "Custom Widgets"
 space: "Mendix 4 How-to's"
 ---
@@ -9,11 +9,11 @@ This section describes how to commit an object from your widget in JavaScript. T
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create or retrieve the object.**
+ **Create or retrieve the object.**
 
 Make sure you have your object in the scope for your function. You can get one by creating a new one or by retrieving it from either context or a mx.processor.getObject() call.
 
-![](attachments/819203/917932.png) **Set the object's attributes.**
+ **Set the object's attributes.**
 
 To change an attribute of an object, you can use setAttribute().
 
@@ -22,7 +22,7 @@ orderObj.setAttribute("ProductName", "Margarita pizza");
 
 ```
 
-![](attachments/819203/917932.png) **Save the object.**
+ **Save the object.**
 
 Now we'll send the changes to cache and the server using object.save(). This function saves the object in cache and results in an asynchronous call, sending the changes to the server. This function accepts 2 functions, a callback and an error function.
 
@@ -38,7 +38,7 @@ orderObj.save({
 
 ```
 
-![](attachments/819203/917932.png) **Commit the object.**
+ **Commit the object.**
 
 Committing an object from a widget is really simple. All you need is to call the commit() function on the object in question.
 

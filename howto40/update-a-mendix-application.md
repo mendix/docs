@@ -1,5 +1,5 @@
 ---
-title: "Update a Mendix application"
+title: "Update a Mendix Application"
 parent: "mendix-on-windows---service-console-3"
 space: "Mendix 4 How-to's"
 ---
@@ -17,7 +17,7 @@ There are three different updates:
 
 After you have updated the application, you must run the Mendix Service Console and start the application at least once manually (at the Console page). You see whether the application correctly starts or not and whether there are SQL commands to execute. If the application runs fine, you can stop them and start the Mendix Windows service.
 
-### Updating the application
+### Updating the Application
 
 Create a new Mendix Deployment Archive by the Modeler via menu Project, Create Deployment Archive... Start the Mendix Service Console and go to the Management panel. Click 'Update project...', select your deployment archive file (an .mda file) and press 'Update'.
 
@@ -28,7 +28,7 @@ The following steps will be automatically done:
 *   in the folder 'web', the subfolders 'forms', 'ui' and 'widgets' will be deleted;
 *   the given .mda file will be extracted to the project folder and existing files will be overwritten.
 
-### Upgrading to a new Mendix version
+### Upgrading to a New Mendix Version
 
 If you have upgraded your application to a new Mendix version and wish to deploy this to the server, you must also add the new Mendix server version here. You can download a suitable server distribution in the Mendix Support Portal, under menu Releases. Click on Server distribution to download a distribution file (with extension .tar.gz). Start the Mendix Service Console and go to the Management panel. Click 'Add server...', select your distribution file and press 'Add'.
 

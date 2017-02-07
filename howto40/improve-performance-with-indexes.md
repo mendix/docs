@@ -1,5 +1,5 @@
 ---
-title: "Improve performance with indexes"
+title: "Improve Performance with Indexes"
 parent: "indexes"
 space: "Mendix 4 How-to's"
 ---
@@ -9,13 +9,13 @@ This section describes how to improve your search performance by adding indexes 
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Double-click on the entity.**
+ **Double-click on the entity.**
 
-![](attachments/819203/917932.png) **Go to the Index tab and press the 'New' button.**
+ **Go to the Index tab and press the 'New' button.**
 
 ![](attachments/2621531/2752549.png)
 
-![](attachments/819203/917932.png) **Add the desired attributes to the 'Index attributes' list and finish by pressing 'OK'.**
+ **Add the desired attributes to the 'Index attributes' list and finish by pressing 'OK'.**
 
 ![](attachments/2621531/2752546.png)
 

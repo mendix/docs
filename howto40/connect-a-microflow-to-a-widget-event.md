@@ -1,5 +1,5 @@
 ---
-title: "Connect a microflow to a widget event"
+title: "Connect a Microflow to a Widget Event"
 parent: "widget-events"
 space: "Mendix 4 How-to's"
 ---
@@ -9,17 +9,17 @@ This section describes how to configure a microflow to trigger based on a widget
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Select the widget to an event of which you want to connect a microflow.**
+ **Select the widget to an event of which you want to connect a microflow.**
 
-![](attachments/819203/917932.png) **Right-click on the widget, go to the 'Events' submenu and choose the 'Select <event> microflow...' corresponding with the event you want to connect the microflow for. Additionally you can click the '...' button next to the corresponding event in the Properties window.**
+ **Right-click on the widget, go to the 'Events' submenu and choose the 'Select <event> microflow...' corresponding with the event you want to connect the microflow for. Additionally you can click the '...' button next to the corresponding event in the Properties window.**
 
 ![](attachments/2621482/2752748.png)
 
-![](attachments/819203/917932.png) **In the menu that appears, select the microflow you want to connect.**
+ **In the menu that appears, select the microflow you want to connect.**
 
 ![](attachments/2621482/2752747.png)
 
-![](attachments/819203/917932.png) **You can change the settings for the connected microflow by right-clicking on the widget again, going to the 'Event' submenu and choosing 'Edit <event> microflow settings...'. Alternatively you can click on the '...' button next to '<Event> settings' in the Properties window.**
+ **You can change the settings for the connected microflow by right-clicking on the widget again, going to the 'Event' submenu and choosing 'Edit <event> microflow settings...'. Alternatively you can click on the '...' button next to '<Event> settings' in the Properties window.**
 
 ![](attachments/2621482/2752746.png)
 

@@ -1,5 +1,5 @@
 ---
-title: "Call a microflow"
+title: "Call a Microflow"
 category: "Custom Widgets"
 space: "Mendix 4 How-to's"
 ---
@@ -9,7 +9,7 @@ This section describes how to call a microflow from a Mendix JavaScript widget. 
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Set up your widget XML.**
+ **Set up your widget XML.**
 
 In order to call a microflow from our widget, we first need to assign it to the widget in the Modeler. This can be achieved by including a microflow property in your widget.xml.
 
@@ -23,7 +23,7 @@ In order to call a microflow from our widget, we first need to assign it to the 
 
 ```
 
-In this example, our microflow will use the entity context from the Dataview our widget is in and return a string variable. To learn how to retrieve the context object in JavaScript, read this How To: [Use the Data View context object](use-the-data-view-context-object).
+In this example, our microflow will use the entity context from the Dataview our widget is in and return a string variable. To learn how to retrieve the context object in JavaScript, read this how-to: [Use the Data View context object](use-the-data-view-context-object).
 
 <div class="alert alert-info">{% markdown %}
 
@@ -31,7 +31,7 @@ You can use a _entityProperty="MyEntity"_ argument to have your microflow requir
 
 {% endmarkdown %}</div>
 
-![](attachments/819203/917932.png) **Create your microflow.**
+ **Create your microflow.**
 
 Insert your widget into a Dataview and select the microflow. If you create a new one, it should automatically be assigned the entity of your Data view and return a string variable.
 
@@ -41,7 +41,7 @@ For this example we will have it show an information message with the Member's N
 
 ![](attachments/2621646/2752926.png)
 
-![](attachments/819203/917932.png) **Call your microflow.**
+ **Call your microflow.**
 
 Calling the microflow is done using **mx.processor.xasAction**. You can see an example of this below.
 

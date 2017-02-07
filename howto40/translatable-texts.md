@@ -3,7 +3,7 @@ title: "Translatable Texts"
 parent: "modules"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Translate texts with the batch translate function](translate-texts-with-the-batch-translate-function)
-*   [Use the batch replace function](use-the-batch-replace-function)
+*   [Translate Texts With the Batch Translate Function](translate-texts-with-the-batch-translate-function)
+*   [Use the Batch Replace Function](use-the-batch-replace-function)

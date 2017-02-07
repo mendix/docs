@@ -1,5 +1,5 @@
 ---
-title: "Call SAP BAPI from Mx"
+title: "Call SAP BAPI from Mendix"
 parent: "sap-integration"
 space: "Mendix 4 How-to's"
 ---

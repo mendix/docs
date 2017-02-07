@@ -3,7 +3,7 @@ title: "Project Settings"
 parent: "Project"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Add a new language to your project](add-a-new-language-to-your-project)
-*   [Run two applications locally at once](run-two-applications-locally-at-once)
+*   [Add a New Language to Your Project](add-a-new-language-to-your-project)
+*   [Run Two Applications Locally at Once](run-two-applications-locally-at-once)

@@ -1,5 +1,5 @@
 ---
-title: "Database form"
+title: "Database Form"
 parent: "set-up-a-mendix-app"
 space: "Mendix 4 How-to's"
 ---

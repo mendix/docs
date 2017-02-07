@@ -1,5 +1,5 @@
 ---
-title: "Preparation of the environment"
+title: "Preparation of the Environment"
 parent: "mendix-on-windows---service-console-4"
 space: "Mendix 4 How-to's"
 ---
@@ -11,7 +11,7 @@ This section describes the preparation to deploy your Mendix 3 and 4 apps as Win
 
 ### Environment
 
-This How To requires Windows 2003 or higher with Microsoft .NET 4.0 or 3.5 SP1 and Java 6 (JRE, standard edition) installed. From Java only the JRE is necessary, not the JDK.
+This how-to requires Windows 2003 or higher with Microsoft .NET 4.0 or 3.5 SP1 and Java 6 (JRE, standard edition) installed. From Java only the JRE is necessary, not the JDK.
 
 If Internet Information Services will be used as separate web server, then ASP.NET 2.0 SP1 or higher is required. If 3.5 SP1 is installed, then you automatically have version 2.0\. However, make sure that ASP.NET also is installed and configured for usage in IIS.
 

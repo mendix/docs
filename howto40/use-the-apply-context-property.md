@@ -1,5 +1,5 @@
 ---
-title: "Use the 'Apply context' property"
+title: "Use the 'Apply Context' Property"
 parent: "context-mechanism"
 space: "Mendix 4 How-to's"
 ---
@@ -9,11 +9,11 @@ This section describes how to use the 'Apply context' property to constrain the 
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Create the forms for your application, and open the form you want to use the 'Apply context' functionality on.**
+ **Create the forms for your application, and open the form you want to use the 'Apply context' functionality on.**
 
-![](attachments/819203/917932.png) **Select the data grid or template grid you want to apply context on.**
+ **Select the data grid or template grid you want to apply context on.**
 
-![](attachments/819203/917932.png) **Use the drop-down menu next to 'Apply context' to set this property to 'True'.**
+ **Use the drop-down menu next to 'Apply context' to set this property to 'True'.**
 
 ![](attachments/2621492/2752774.png)
 
@@ -21,7 +21,7 @@ In the above screenshot the selected data grid is connected to the 'Order' entit
 
 ![](attachments/2621492/2752777.png)
 
-![](attachments/819203/917932.png) **On the other hand you can use the 'Remove from context' by clicking on the '...' button next to it in the Properties window to remove objects from the context, to avoid template or data grids from being constrained based on previous selections.**
+ **On the other hand you can use the 'Remove from context' by clicking on the '...' button next to it in the Properties window to remove objects from the context, to avoid template or data grids from being constrained based on previous selections.**
 
 ![](attachments/2621492/2752776.png)
 

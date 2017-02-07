@@ -1,5 +1,5 @@
 ---
-title: "Encode an icon with Base64"
+title: "Encode an Icon with Base64"
 category: "Custom Widgets"
 space: "Mendix 4 How-to's"
 ---
@@ -9,15 +9,15 @@ This section describes how to encode your widget icon as Base64\. This is the fo
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Find a suitable icon.**
+ **Find a suitable icon.**
 
-The first step is to find a small image to encode. For this How To the following icon will be used: ![](attachments/2621632/2752920.png)
+The first step is to find a small image to encode. For this how-to the following icon will be used: ![](attachments/2621632/2752920.png)
 
-![](attachments/819203/917932.png) **Encode the image.**
+ **Encode the image.**
 
 Use a Base64 encoder to process the image. These can be easily found by searching for "Base64 encoder" with a web search engine.
 
-![](attachments/819203/917932.png) **Insert the string into your widget.xml.**
+ **Insert the string into your widget.xml.**
 
 Enter the string which resulted from encoding between your widget.xml's <icon> tags.
 

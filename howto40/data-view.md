@@ -3,7 +3,7 @@ title: "Data View"
 parent: "forms"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
 *   [Connect an entity to a data view](connect-an-entity-to-a-data-view)
 *   [Determine contents of a nested data view by microflow](determine-contents-of-a-nested-data-view-by-microflow)

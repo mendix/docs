@@ -1,5 +1,5 @@
 ---
-title: "Configure a loop"
+title: "Configure a Loop"
 parent: "loop"
 space: "Mendix 4 How-to's"
 ---
@@ -9,21 +9,21 @@ This section describes how to configure a loop in a microflow.
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
+ **Open the microflow, or if necessary create a new one. If you do not know how to add documents to your project, please refer to [this](add-documents-to-a-module) article.**
 
 ![](attachments/2621608/2752844.png)
 
 Since the iterator of the loop will need a list of objects, make sure this list is created in the microflow. For example in the microflow in the screenshot, a retrieve activity is used to create a list of all the 'Order' objects of which the status attribute is 'Paid'.
 
-![](attachments/819203/917932.png) **Add a loop to the microflow. If you do not know how to do this, please refer to [this](add-an-activity-to-a-microflow) article.**
+ **Add a loop to the microflow. If you do not know how to do this, please refer to [this](add-an-activity-to-a-microflow) article.**
 
 ![](attachments/2621608/2752843.png)
 
-![](attachments/819203/917932.png) **Double-click on the loop and select list you want the loop to iterate over using the drop-down menu at 'Iterate over'. You can edit the name for the variable holding the object from the list for which the flow inside the loop is being executed at 'Variable name'.**
+ **Double-click on the loop and select list you want the loop to iterate over using the drop-down menu at 'Iterate over'. You can edit the name for the variable holding the object from the list for which the flow inside the loop is being executed at 'Variable name'.**
 
 ![](attachments/2621608/2752846.png)
 
-![](attachments/819203/917932.png) **Add the sequence flow inside the loop which is to be executed for every object on the list.**
+ **Add the sequence flow inside the loop which is to be executed for every object on the list.**
 
 ![](attachments/2621608/2752849.png)
 

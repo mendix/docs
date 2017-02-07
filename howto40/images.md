@@ -3,6 +3,6 @@ title: "Images"
 parent: "modules"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Add custom images](add-custom-images)
+*   [Add Custom Images](add-custom-images)

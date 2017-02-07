@@ -14,7 +14,7 @@ This tutorial describes a basic installation of Mendix on Debian Lenny. In this 
 *   M2ee tools provided by Mendix
 *   License key provided by Mendix
 
-### Nginx from backports
+### Nginx From Backports
 
 We use Nginx as webserver. To support IPv6, we install a backport from lenny-backports.
 
@@ -34,7 +34,7 @@ deb http://ftp.nl.debian.org/backports.org/ lenny-backports main
 
 ```
 
-### Install external packages
+### Install External Packages
 
 *   Nginx
 *   sun-java6-jre
@@ -51,7 +51,7 @@ deb http://ftp.nl.debian.org/backports.org/ lenny-backports main
 
 After these applicationa have been installed we have a Webserver (Nginx), Database (PostgreSQL) and Java 6\. Now the server can be configured to run Mendix Applications.
 
-### Create XAS specific user and groups
+### Create XAS Specific User and Groups
 
 ```java
 addgroup --system mxadmin
@@ -60,7 +60,7 @@ addgroup xas2
 
 ```
 
-### Public key authentication
+### Public Key Authentication
 
 If you are using public key authentication instead of passwords, you need to change /etc/ssh/sshd_config such that 'mxadmin' and 'xas2' are also among the allowed groups.
 
@@ -69,7 +69,7 @@ AllowGroups root mxadmin xas2
 
 ```
 
-### Configure the server
+### Configure the Server
 
 There are some folders that need to be created. The first folder is the location where the logfiles will be saved. The second folder is the location where Mendix Runtime will be extracted.
 
@@ -144,7 +144,7 @@ host    sameuser    all         ::1/128               ident sameuser
 
 ```
 
-### Change owner of xas directory's
+### Change Owner of xas Directories
 
 The 'mxdeploy' user is used to extract new Mendix releases. These Mendix releases are extracted in the /usr/local/share/mendix/ folder.
 
@@ -156,7 +156,7 @@ chown mxdeploy:mxadmin /usr/local/share/mendix/
 
 Now it's possible to upload the new Mendix release. After uploading the tar.gz file as the 'mxdeploy' user to the /usr/local/share/mendix/ folder we can extract it by issuing the command 'tar xvf <filename>'. Afther this has been done you can remove the tar.gz file.
 
-### Create application user
+### Create Application User
 
 ```java
 MXURL=example.mendix.nl
@@ -175,7 +175,7 @@ adduser --disabled-password --ingroup xas2 --gecos "$MXPROJECT,,," $MXUSER
 
 ```
 
-### Create database and database user
+### Create Database and Database User
 
 ```java
 create database example;
@@ -183,7 +183,7 @@ create role example login connection limit ????;
 
 ```
 
-### Change application user
+### Change Application User
 
 Change /home/$MXUSER/.bashrc
 
@@ -202,7 +202,7 @@ fi
 
 ```
 
-### Change variables in configuration file
+### Change Variables in Configuration File
 
 Change /home/$MXUSER/.m2eerc with the variables that ahve just been created.
 

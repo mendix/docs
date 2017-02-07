@@ -1,5 +1,5 @@
 ---
-title: "Create and configure a constant"
+title: "Create and Configure a Constant"
 parent: "constants"
 space: "Mendix 4 How-to's"
 ---
@@ -9,14 +9,14 @@ This section describes how to add a constant to your module and configure it.
 
 ## Instructions
 
-![](attachments/819203/917932.png) **Add a constant to the module of your choice. If you do not know how to add documents to a project, please refer to [this](add-documents-to-a-module) article.**
+ **Add a constant to the module of your choice. If you do not know how to add documents to a project, please refer to [this](add-documents-to-a-module) article.**
 
-![](attachments/819203/917932.png) **Enter a name for the new constant.**
+ **Enter a name for the new constant.**
 
 ![](attachments/2621544/2752574.png)
 
-![](attachments/819203/917932.png) **In the new menu, you can optionally add documentation describing the constant, choose its type, and choose its values, depending on the configuration.**
+ **In the new menu, you can optionally add documentation describing the constant, choose its type, and choose its values, depending on the configuration.**
 
 ![](attachments/2621544/2752575.png)
 
-For example you might want a constant which contains the location of a web service, having different values depending on whether the application is run in a development or test configuration.
+For example you might want a constant which contains the location of a Web Service, having different values depending on whether the application is run in a development or test configuration.

@@ -3,7 +3,7 @@ title: "Navigation"
 parent: "Project"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Create a new navigation menu item](create-a-new-navigation-menu-item)
-*   [Set up alternative home pages based on user role](set-up-alternative-home-pages-based-on-user-role)
+*   [Create a New Navigation Menu Item](create-a-new-navigation-menu-item)
+*   [Set Up Alternative Home Pages Based on User Role](set-up-alternative-home-pages-based-on-user-role)

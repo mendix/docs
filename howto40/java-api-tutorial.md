@@ -9,7 +9,7 @@ To avoid cluttering the tutorial, only the relevant code will be shown, so not t
 
 If you look at these examples, often an IContext will be used. This is the context in which something can be done. For example, it holds access rights to objects. If you do something with an object that requires access rights, the context in which you're working will determine if you have these rights and can perform that action.
 
-## Executing microflows and committing objects
+## Executing Microflows and Committing Objects
 
 There are cases in which you'd like to execute a microflow in a Java action. This case will explain how to do this, including passing parameters and obtaining the return value. Additionally, the result will be saved in an object and the object will be committed.
 

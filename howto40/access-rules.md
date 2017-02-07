@@ -3,6 +3,6 @@ title: "Access Rules"
 parent: "entities"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a How-To:
 
-*   [Set up access rules](set-up-access-rules)
+*   [Set Up Access Rules](set-up-access-rules)

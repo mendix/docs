@@ -3,6 +3,6 @@ title: "Widget Events"
 parent: "forms"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Connect a microflow to a widget event](connect-a-microflow-to-a-widget-event)
+*   [Connect a Microflow to a Widget Event](connect-a-microflow-to-a-widget-event)

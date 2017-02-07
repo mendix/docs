@@ -1,8 +1,8 @@
 ---
-title: "Opening forms"
+title: "Opening Forms"
 parent: "forms"
 space: "Mendix 4 How-to's"
 ---
-Please select a How To:
+Please select a how-to:
 
-*   [Connect forms using buttons](connect-forms-using-buttons)
+*   [Connect Forms Using Buttons](connect-forms-using-buttons)

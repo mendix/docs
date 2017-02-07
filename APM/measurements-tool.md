@@ -127,7 +127,8 @@ In the tester you can clear the cache and also remove all records from the datab
 
 
 # Triggered Events
-If a trigger fires a record is created in the triggered events.
+If a trigger fires, a record is created in the triggered events. The events are automatically deleted after a certain amount of days as configured in the global setting [More tab](/APM/dashboard#more). **Remove triggered events after (days)**. If you want to keep a event for future reference you
+can keep the event using the keep-button above the triggered event grid.
 
 ![](attachments/Measurements_Tool/Triggered_Events.png)
 

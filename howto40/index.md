@@ -10,7 +10,6 @@ space: "Mendix 4 How-to's"
 ## Available Pages:
 
 *   [Object Query Language](object-query-language)
-*   [TreeNavigation](treenavigation)
 *   [How-to 4 Home](how-to-4-home) ![](images/icons/contenttypes/home_page_16.png)
     *   [Modeler](modeler)
         *   [Project](project)

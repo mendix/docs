@@ -1,6 +1,6 @@
 ---
 title: "Update a Mendix application"
-category: "howto40"
+parent: "mendix-on-windows---service-console-3"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -37,4 +37,3 @@ If you have upgraded your application to a new Mendix version and wish to deploy
 Before you do this, you have to stop the Mendix service, so start the Mendix Service Console and click 'Stop Service'.
 
 Now you can replace the Mendix\Services folder by a new version. Then start the Mendix Service Console, test the application and start the service again.
-

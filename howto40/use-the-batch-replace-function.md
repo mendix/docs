@@ -1,6 +1,6 @@
 ---
 title: "Use the batch replace function"
-category: "howto40"
+parent: "translatable-texts"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -22,4 +22,3 @@ You can search for specific phrases or words using the 'Search' field.
 ![](attachments/2621629/2752969.png)
 
 ![](attachments/819203/917932.png) **Once you are finished entering replacement phrases and words, click on the 'Replace' button to finish.**
-

@@ -1,6 +1,6 @@
 ---
 title: "Mendix on the Mendix Cloud"
-category: "howto40"
+category: "Deployment"
 space: "Mendix 4 How-to's"
 ---
 ## Description

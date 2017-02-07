@@ -1,6 +1,6 @@
 ---
 title: "Connect a report chart to a data set"
-category: "howto40"
+parent: "report-chart"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -36,4 +36,3 @@ This section describes how to configure a report chart and connect it to a data 
 ![](attachments/2621481/2752709.png)
 
 ![](attachments/819203/917932.png) **You can change the captions for the X and Y-axis by changing the 'Caption' property for both the 'Horizontal Axis' and 'Vertical Axis' in the Properties window.**
-

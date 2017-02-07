@@ -1,6 +1,6 @@
 ---
 title: "Configure a Domain-to-XML mapping"
-category: "howto40"
+parent: "integration"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -70,4 +70,3 @@ For example, it's not possible to map an enumeration value to an XML element, so
 ![](attachments/819203/917932.png) **Configure the mapping for all XML elements to complete the Domain-to-XML mapping.**
 
 ![](attachments/2621625/2752792.png)
-

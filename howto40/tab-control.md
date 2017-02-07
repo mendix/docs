@@ -1,6 +1,6 @@
 ---
 title: "Tab Control"
-category: "howto40"
+parent: "forms"
 space: "Mendix 4 How-to's"
 ---
 Please select a How To:

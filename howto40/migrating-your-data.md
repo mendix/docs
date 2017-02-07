@@ -1,6 +1,6 @@
 ---
 title: "Migrating your data"
-category: "howto40"
+parent: "mendix-on-the-mendix-cloud"
 space: "Mendix 4 How-to's"
 ---
 You are free to upload and download backups via the Cloud Portal. This is done via the "Backups" tab. Uploaded files (FileDocuments) and database dumps are separate.

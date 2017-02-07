@@ -1,9 +1,9 @@
 ---
 title: "Mendix on Windows - Service Console 4"
-category: "howto40"
+category: "Deployment"
 space: "Mendix 4 How-to's"
 ---
-<This preliminary documentation is subject to change. It will be finished as soon as possible.>
+<b>This preliminary documentation is subject to change. It will be finished as soon as possible.</b>
 
 ## Description
 
@@ -19,4 +19,3 @@ This How To has been split up into four articles:
 4.  [Check the security of your installation using this checklist](security-checklist-for-your-on-premise-installation)
 
 There is also an article about [troubleshooting](troubleshooting).
-

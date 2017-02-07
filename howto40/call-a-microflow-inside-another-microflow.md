@@ -1,6 +1,6 @@
 ---
 title: "Call a microflow inside another microflow"
-category: "howto40"
+parent: "action-call-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description

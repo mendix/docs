@@ -1,6 +1,6 @@
 ---
 title: "Activities"
-category: "howto40"
+parent: "microflows"
 space: "Mendix 4 How-to's"
 ---
 Please select a How To:

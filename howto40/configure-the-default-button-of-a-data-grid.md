@@ -1,6 +1,6 @@
 ---
 title: "Configure the default button of a data grid"
-category: "howto40"
+parent: "data-grid"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -22,4 +22,3 @@ This section describes how to configure the default button of a data grid.
 ![](attachments/819203/917932.png) **You can change the default button trigger by selecting the data grid, and changing the 'Default button trigger' property in the Properties menu.**
 
 ![](attachments/2621443/2752631.png)
-

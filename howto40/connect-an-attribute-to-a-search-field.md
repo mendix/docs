@@ -1,6 +1,6 @@
 ---
 title: "Connect an attribute to a search field"
-category: "howto40"
+parent: "search-bar"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -32,4 +32,3 @@ This section describes how to connect an attribute of an entity to a search fiel
 ![](attachments/819203/917932.png) **If the attribute was not listed in the right-click menu or you used the '...' button from the Properties window, you can use the new menu to select the attribute you would like to connect to the search field.**
 
 ![](attachments/2621449/2752610.png)
-

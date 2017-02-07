@@ -1,6 +1,6 @@
 ---
 title: "Cast an object"
-category: "howto40"
+parent: "object-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -20,4 +20,3 @@ In the above microflow, a new 'Order' object is created. If the user is of the t
 ![](attachments/819203/917932.png) **Double-click on the 'Cast object' activity and enter the variable name you want the object you are casting to be identified with in the microflow.**
 
 ![](attachments/2621591/2752864.png)
-

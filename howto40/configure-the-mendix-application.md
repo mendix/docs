@@ -1,6 +1,6 @@
 ---
 title: "Configure the Mendix application"
-category: "howto40"
+parent: "mendix-on-windows---service-console-3"
 space: "Mendix 4 How-to's"
 ---
 ## Description

@@ -1,6 +1,6 @@
 ---
 title: "Improve performance with indexes"
-category: "howto40"
+parent: "indexes"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -20,4 +20,3 @@ This section describes how to improve your search performance by adding indexes 
 ![](attachments/2621531/2752546.png)
 
 Note that you will only see a performance gain if the attributes added are used in a search, and are searched for in the order they are sorted. If this is not the case you are likely to see a performance reduction since change and delete actions on objects of which the entity has an index take longer.
-

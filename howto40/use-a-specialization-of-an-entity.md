@@ -1,6 +1,6 @@
 ---
 title: "Use a specialization of an entity"
-category: "howto40"
+parent: "inheritance-split"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -28,4 +28,3 @@ This section describes how to use an inheritance split to use a specialization o
 ![](attachments/819203/917932.png) **Create additional paths for every specialization. Add activities and, if necessary, end events to these paths to finish the microflow.**
 
 ![](attachments/2621610/2752854.png)
-

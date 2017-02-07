@@ -1,6 +1,6 @@
 ---
 title: "Display the sum of a data grid column"
-category: "howto40"
+parent: "columns"
 space: "Mendix 4 How-to's"
 ---
 ## Description

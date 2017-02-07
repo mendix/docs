@@ -1,6 +1,6 @@
 ---
 title: "Set up visibility and editability based on an enumeration"
-category: "howto40"
+parent: "conditions"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -22,4 +22,3 @@ This section describes how you can configure widgets to be visible or editable b
 ![](attachments/819203/917932.png) **You will now be able to put check marks next to all the values of the enumeration indicating whether or not the row/widget should be visible/editable if the attribute has that enumeration value.**
 
 ![](attachments/2621489/2752743.png)
-

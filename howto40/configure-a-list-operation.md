@@ -1,6 +1,6 @@
 ---
 title: "Configure a list operation"
-category: "howto40"
+parent: "list-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -38,4 +38,3 @@ For example in the screenshot an 'Intersect' operation with 'PizzasOrdered' and 
 For example using 'Contains' with 'CheapPizzas' as 'Variable 1' and 'PizzasOrdered' as 'Variable 2' will check if 'CheapPizzas' contains all the 'Pizza' objects in 'PizzasOrdered', in other words if all the ordered pizzas cost less than 10 euros, and return the result as boolean.
 
 ![](attachments/819203/917932.png) **At 'name' you can specify the name for the output variable from the list operation.**
-

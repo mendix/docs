@@ -1,6 +1,6 @@
 ---
 title: "Display icons for enumeration values"
-category: "howto40"
+parent: "columns"
 space: "Mendix 4 How-to's"
 ---
 ## Description

@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting"
-category: "howto40"
+parent: "mendix-on-windows---service-console-4"
 space: "Mendix 4 How-to's"
 ---
 ![(warning)](images/icons/emoticons/warning.png) _Error while updating an app (1)_

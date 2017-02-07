@@ -1,6 +1,6 @@
 ---
 title: "'Constrained by' functionality for a reference set selector"
-category: "howto40"
+parent: "reference-set-selector"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -36,4 +36,3 @@ Note that the association between the data view or template grid entity and the 
 ![](attachments/819203/917932.png) **In the menu that appears, choose the constraining path you want to use from the available choices.**
 
 ![](attachments/2621473/2752695.png)
-

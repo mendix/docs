@@ -1,6 +1,6 @@
 ---
 title: "Use the 'Apply context' property"
-category: "howto40"
+parent: "context-mechanism"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -26,4 +26,3 @@ In the above screenshot the selected data grid is connected to the 'Order' entit
 ![](attachments/2621492/2752776.png)
 
 In the menu that appears, you can select the entities that should be removed from the context.
-

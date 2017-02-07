@@ -1,6 +1,6 @@
 ---
 title: "Create and change an object"
-category: "howto40"
+parent: "object-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description

@@ -1,6 +1,6 @@
 ---
 title: "Apply XPath within the form builder"
-category: "howto40"
+parent: "forms"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -20,4 +20,3 @@ This section describes how you can put constraints on the objects being shown in
 ![](attachments/2621491/2752775.png)
 
 For example in the picture, the XPath constraint constrains the display of orders in a data grid so that a customer is only able to see his own orders.
-

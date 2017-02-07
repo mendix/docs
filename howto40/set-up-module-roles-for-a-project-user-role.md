@@ -1,6 +1,6 @@
 ---
 title: "Set up module roles for a project user role"
-category: "howto40"
+parent: "project-security"
 space: "Mendix 4 How-to's"
 ---
 ## Description

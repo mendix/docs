@@ -1,6 +1,6 @@
 ---
 title: "Add and configure an image uploader"
-category: "howto40"
+parent: "image-uploader"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -20,4 +20,3 @@ This section describes how to add an image uploader to your form and then config
 ![](attachments/819203/917932.png) **You can then configure the image uploader using the Properties window while having it selected. This way you can set the thumbnail size for uploaded images, as well as changing the maximum file size in MB.**
 
 ![](attachments/2621452/2752648.png)
-

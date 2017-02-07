@@ -1,6 +1,6 @@
 ---
 title: "Retrieve and manipulate batches of objects"
-category: "howto40"
+parent: "object-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description

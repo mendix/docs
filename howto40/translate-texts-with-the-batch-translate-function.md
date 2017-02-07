@@ -1,6 +1,6 @@
 ---
 title: "Translate texts with the batch translate function"
-category: "howto40"
+parent: "translatable-texts"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -26,4 +26,3 @@ You can search for specific phrases or words using the 'Search' field.
 ![](attachments/2621627/2752998.png)
 
 ![](attachments/819203/917932.png) **Once you are done translating, click on the 'Translate' button to finish.**
-

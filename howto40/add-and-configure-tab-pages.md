@@ -1,6 +1,6 @@
 ---
 title: "Add and configure tab pages"
-category: "howto40"
+parent: "tab-control"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -28,4 +28,3 @@ This section describes how to add tab pages to a form and then configure them.
 ![](attachments/819203/917932.png) **By default, tabpages will refresh when opened. You can change this behavior by setting the 'Refresh on show' to 'False'.**
 
 ![](attachments/819203/917932.png) **After setting up the tab pages, add content to them using tables and content widgets.**
-

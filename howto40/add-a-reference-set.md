@@ -1,6 +1,6 @@
 ---
 title: "Add a reference set"
-category: "howto40"
+parent: "associations"
 space: "Mendix 4 How-to's"
 ---
 ## Description

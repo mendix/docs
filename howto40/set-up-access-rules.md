@@ -1,6 +1,6 @@
 ---
 title: "Set up access rules"
-category: "howto40"
+parent: "access-rules"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -46,4 +46,3 @@ You can only set read and write permissions for all objects of all the entities 
 ![](attachments/2621533/2752543.png)
 
 You can do this by clicking on the cell which forms the intersection of the data set and module role you want to configure. This will bring up a window which allows you to configure the allowed parameter values per module role.
-

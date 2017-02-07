@@ -1,6 +1,6 @@
 ---
 title: "How to update a Mendix Version"
-category: "howto40"
+category: "General"
 space: "Mendix 4 How-to's"
 ---
 ## How to update a Mendix Version

@@ -1,6 +1,6 @@
 ---
 title: "Configure an 'Aggregate list' activity"
-category: "howto40"
+parent: "list-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description

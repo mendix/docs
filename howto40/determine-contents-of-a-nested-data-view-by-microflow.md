@@ -1,6 +1,6 @@
 ---
 title: "Determine contents of a nested data view by microflow"
-category: "howto40"
+parent: "data-view"
 space: "Mendix 4 How-to's"
 ---
 ## Description

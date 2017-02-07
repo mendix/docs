@@ -1,6 +1,6 @@
 ---
 title: "Create a report and add widgets to it"
-category: "howto40"
+parent: "reporting"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -26,4 +26,3 @@ If you add parameter widgets to the report pane, there should be a generate repo
 ![](attachments/2621475/2752729.png)
 
 This should be a combination of basic reports and report charts.
-

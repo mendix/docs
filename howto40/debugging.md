@@ -1,6 +1,5 @@
 ---
 title: "Debugging"
-category: "howto40"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -137,4 +136,3 @@ When the value of a certain attribute is too large to display in the variables w
 ![](attachments/819203/917626.png)
 
 As you can see, a nice extra for DateTime variables is that it will also display the time of the session the microflow is executed with.
-

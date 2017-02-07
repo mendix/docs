@@ -1,6 +1,6 @@
 ---
 title: "SAP Integration"
-category: "howto40"
+category: "General"
 space: "Mendix 4 How-to's"
 ---
 Please select a How To:

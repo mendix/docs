@@ -1,6 +1,6 @@
 ---
 title: "Use a microflow to determine selectable objects"
-category: "howto40"
+parent: "reference-selector"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -30,4 +30,3 @@ This microflow should return the list of objects which should be selectable in t
 ![](attachments/819203/917932.png) **If you want to change settings for the microflow, right-click on the reference selector and choose 'Edit data source microflow settings...' or click the '...' button next to 'Microflow settings' in the Properties window. In the menu that appears, you can change settings on which objects should be passed to the microflow, as well as change the microflow which is used to determine the selectable objects for the reference selector.**
 
 ![](attachments/2621459/2752673.png)
-

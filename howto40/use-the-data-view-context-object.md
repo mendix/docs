@@ -1,6 +1,6 @@
 ---
 title: "Use the Data View context object"
-category: "howto40"
+category: "Custom Widgets"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -48,8 +48,8 @@ Once a context object is received by the widget, it will automatically call on t
 
 ```javascript
 	applyContext : function(context, callback){
-		logger.debug(this.id + ".applyContext"); 
-		if (context) 
+		logger.debug(this.id + ".applyContext");
+		if (context)
 			mx.processor.getObject(context.getActiveGUID(), dojo.hitch(this, this.processObject));
 		else
 			logger.warn(this.id + ".applyContext received empty context");
@@ -66,4 +66,3 @@ Note that the **applyContext** function can be called upon multiple times, each 
 **Example:** If you have a Data grid above your Data View, where the Data View listens to the Data grid. Every time a different object is selected in the Data Grid, a new object is send to the Data View.
 
 {% endmarkdown %}</div>
-

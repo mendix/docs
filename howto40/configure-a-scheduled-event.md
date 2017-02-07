@@ -1,6 +1,6 @@
 ---
 title: "Configure a scheduled event"
-category: "howto40"
+parent: "scheduled-events"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -32,4 +32,3 @@ You can use the radio buttons to choose if these variables are defined as server
 ![](attachments/819203/917932.png) **If you want the scheduled event to be executed at regular intervals instead of just once, place a check mark at 'Repeat'. After this you can use the drop-down menus at 'Interval' and 'Interval type' to define the interval between repetitions.**
 
 ![](attachments/2621601/2752830.png)
-

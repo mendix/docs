@@ -1,6 +1,6 @@
 ---
 title: "Add and configure an image viewer"
-category: "howto40"
+parent: "image-viewer"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -42,4 +42,3 @@ In this example, PizzaImage is a specialization of System.Image, associated to t
 In this example, PizzaImage is a specialization of System.Image, associated to the 'Pizza' entity.
 
 ![](attachments/819203/917932.png) **If necessary you can use the Properties window to configure the image viewer, setting the default image to be displayed if no image is found, the image size, and whether or not to display a thumbnail of the image rather than the full version.**
-

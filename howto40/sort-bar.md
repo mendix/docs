@@ -1,6 +1,6 @@
 ---
 title: "Sort Bar"
-category: "howto40"
+parent: "data-grid"
 space: "Mendix 4 How-to's"
 ---
 Please select a How To:

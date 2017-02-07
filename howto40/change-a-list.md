@@ -1,6 +1,6 @@
 ---
 title: "Change a list"
-category: "howto40"
+parent: "list-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -34,4 +34,3 @@ A list should be created in this microflow; 'Create list' and 'Retrieve' are act
 ![](attachments/2621500/2752767.png)
 
 You can enter the expression manually, or use the 'Generate' button to have the modeler construct a basic expression.
-

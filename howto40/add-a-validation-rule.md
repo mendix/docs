@@ -1,6 +1,6 @@
 ---
 title: "Add a validation rule"
-category: "howto40"
+parent: "validation-rules"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -50,4 +50,3 @@ For example if you choose 'Unique', your application will show the error message
 ![](attachments/819203/917932.png) **Finish by clicking on the 'OK' button. The domain model will now indicate that the attribute has a validation rule.**
 
 ![](attachments/2621526/2752536.png)
-

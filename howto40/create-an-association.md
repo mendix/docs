@@ -1,6 +1,6 @@
 ---
 title: "Create an association"
-category: "howto40"
+parent: "associations"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -48,4 +48,3 @@ The above screenshots show the same association; the first shows it using hierar
 ![](attachments/2621534/2752559.png)
 
 The above screenshots show the same association; the first shows it using hierarchical notation, whereas the second shows it using UML notation, which was added in version 2.5.1\. You can switch between these modes using the Edit > Preferences menu.
-

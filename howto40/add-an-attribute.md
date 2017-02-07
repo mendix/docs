@@ -1,6 +1,6 @@
 ---
 title: "Add an attribute"
-category: "howto40"
+parent: "attributes"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -30,4 +30,3 @@ This section will describe how to add an attribute to an entity.
 ![](attachments/819203/917932.png) **In the new menu you can choose the name and type, source and default value for the new attribute. Press 'OK' to finish.**
 
 ![](attachments/2621517/2752529.png)
-

@@ -1,6 +1,6 @@
 ---
 title: "Configure the go-to form of a reference selector"
-category: "howto40"
+parent: "reference-selector"
 space: "Mendix 4 How-to's"
 ---
 ## Description

@@ -1,6 +1,6 @@
 ---
 title: "Configure a Java action call"
-category: "howto40"
+parent: "action-call-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description

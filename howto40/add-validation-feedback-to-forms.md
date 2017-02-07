@@ -1,6 +1,6 @@
 ---
 title: "Add validation feedback to forms"
-category: "howto40"
+parent: "client-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description

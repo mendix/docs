@@ -1,6 +1,6 @@
 ---
 title: "Java API Tutorial"
-category: "howto40"
+category: "Java Programming"
 space: "Mendix 4 How-to's"
 ---
 This tutorial contains some examples on how to use the Java API provided by the Mendix Runtime. The tutorial assumes you have basic Java knowledge, as well as basic Mendix modeling knowledge.

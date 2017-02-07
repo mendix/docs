@@ -1,6 +1,6 @@
 ---
 title: "Call a microflow"
-category: "howto40"
+category: "Custom Widgets"
 space: "Mendix 4 How-to's"
 ---
 ## Description

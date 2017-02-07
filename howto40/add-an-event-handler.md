@@ -1,6 +1,6 @@
 ---
 title: "Add an event handler"
-category: "howto40"
+parent: "event-handlers"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -26,4 +26,3 @@ For example choosing 'Before' and 'Commit' will have the selected microflow exec
 ![](attachments/819203/917932.png) **The domain model will now indicate that the entity has an event handler.**
 
 ![](attachments/2621529/2752548.png)
-

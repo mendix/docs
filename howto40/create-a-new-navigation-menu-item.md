@@ -1,6 +1,6 @@
 ---
 title: "Create a new navigation menu item"
-category: "howto40"
+parent: "Navigation"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -30,4 +30,3 @@ In the new menu, select the form or microflow you want to link the navigation it
 ![](attachments/2621516/2752786.png)
 
 In the new menu, select the icon you would like the item to have from the list and press the 'Select' button.
-

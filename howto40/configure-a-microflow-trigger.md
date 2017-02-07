@@ -1,6 +1,6 @@
 ---
 title: "Configure a microflow trigger"
-category: "howto40"
+parent: "microflow-trigger"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -42,4 +42,3 @@ This section describes how to configure a microflow trigger.
 
 ![](attachments/2621462/2752655.png)
 ![](attachments/2621462/2752656.png)
-

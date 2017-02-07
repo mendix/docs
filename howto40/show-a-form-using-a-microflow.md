@@ -1,6 +1,6 @@
 ---
 title: "Show a form using a microflow"
-category: "howto40"
+parent: "client-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -36,4 +36,3 @@ The microflow will have to pass an object to the form it opens, so make sure tha
 ![](attachments/819203/917932.png) **Finally at 'Form object' use the drop-down menu to select the object you want to pass to the form.**
 
 ![](attachments/2621596/2752888.png)
-

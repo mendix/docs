@@ -1,6 +1,6 @@
 ---
 title: "Validation Rules"
-category: "howto40"
+parent: "entities"
 space: "Mendix 4 How-to's"
 ---
 Please select a How To:

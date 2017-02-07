@@ -1,6 +1,6 @@
 ---
 title: "Expose a web service"
-category: "howto40"
+parent: "integration"
 space: "Mendix 4 How-to's"
 ---
 ## Description

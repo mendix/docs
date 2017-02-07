@@ -1,6 +1,6 @@
 ---
 title: "Add custom images"
-category: "howto40"
+parent: "images"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -16,4 +16,3 @@ This section describes how to add custom images to your modules.
 ![](attachments/2621542/2752581.png)
 
 ![](attachments/819203/917932.png) **Select the image you would like to add to the project. Note that your image should have png, gif, jpeg or bmp as format.**
-

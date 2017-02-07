@@ -1,6 +1,6 @@
 ---
 title: "Create a multi-language enumeration"
-category: "howto40"
+parent: "enumerations"
 space: "Mendix 4 How-to's"
 ---
 ## Description

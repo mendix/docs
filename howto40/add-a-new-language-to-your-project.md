@@ -1,6 +1,6 @@
 ---
 title: "Add a new language to your project"
-category: "howto40"
+parent: "project-settings"
 space: "Mendix 4 How-to's"
 ---
 ## Description

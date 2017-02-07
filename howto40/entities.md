@@ -1,6 +1,6 @@
 ---
 title: "Entities"
-category: "howto40"
+parent: "domain-model"
 space: "Mendix 4 How-to's"
 ---
 Please select a How To:

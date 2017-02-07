@@ -1,6 +1,6 @@
 ---
 title: "Send IDoc from Mx to SAP"
-category: "howto40"
+parent: "sap-integration"
 space: "Mendix 4 How-to's"
 ---
 ## Description

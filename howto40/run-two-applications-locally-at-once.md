@@ -1,6 +1,6 @@
 ---
 title: "Run two applications locally at once"
-category: "howto40"
+parent: "project-settings"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -20,4 +20,3 @@ You can elect to use the default ports for the second application, or set it to 
 If you try to run two applications locally in the same browser, you will have to constantly log in again when switching between the applications, as they both run in the same domain. You can avoid this by running the applications in two different browsers, for example Firefox and Internet Explorer, which use separate cookies.
 
 {% endmarkdown %}</div>
-

@@ -1,6 +1,6 @@
 ---
 title: "Set up alternative home pages based on user role"
-category: "howto40"
+parent: "Navigation"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -20,4 +20,3 @@ This section describes how you can configure your application to display differe
 ![](attachments/2621514/2752532.png)
 
 Alternatively you could open the same menu by pressing the '...' button next to 'Target' in the Properties window. A third option would be to click on the form you want to set as alternative home page in the Connector window, hold the left mouse button and drag it to the newly created entry.
-

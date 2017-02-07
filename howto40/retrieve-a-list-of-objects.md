@@ -1,6 +1,6 @@
 ---
 title: "Retrieve a list of objects"
-category: "howto40"
+parent: "object-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -42,4 +42,3 @@ You can add new attributes to sort on by pressing the 'New' button.
 This can be used if you want it to return a specific object you need for the microflow, rather than a list. However be aware that your XPath expression will need to return the one needed object, or the sorting needs to ensure that the object is the first object on the list for this to work.
 
 ![](attachments/819203/917932.png) **For both retrieve methods, you can alter the 'Output variable' to change the variable name which will be used to the returned object or object list in the microflow.**
-

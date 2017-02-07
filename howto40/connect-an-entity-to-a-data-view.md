@@ -1,6 +1,6 @@
 ---
 title: "Connect an entity to a data view"
-category: "howto40"
+parent: "data-view"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -34,4 +34,3 @@ This section describes how to connect an entity to a data view.
 ![](attachments/819203/917932.png) **You will be asked if you want to have the Modeler fill the data view based on the attributes of the entity. If you choose 'Yes', the Modeler will automatically create content widgets and labels and connect them to the attributes of the entity. If you choose 'No' the entity is connected to the data view, but you have to add the content widgets and labels and connect them to the attributes yourself.**
 
 ![](attachments/2621456/2752634.png)
-

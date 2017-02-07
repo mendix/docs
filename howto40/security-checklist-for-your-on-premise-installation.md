@@ -1,6 +1,6 @@
 ---
 title: "Security checklist for your on-premise installation"
-category: "howto40"
+category: "Deployment"
 space: "Mendix 4 How-to's"
 ---
 ## Security checklist for your on-premise installation

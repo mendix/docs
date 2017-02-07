@@ -1,6 +1,6 @@
 ---
 title: "Set up multiple sorting priorities"
-category: "howto40"
+parent: "sort-bar"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -24,4 +24,3 @@ This section describes how to define multiple sorting priorities for a data grid
 ![](attachments/819203/917932.png) **Once you have added the attributes you want to sort on, you can select whether to sort ascending or descending for an attribute using the drop down menu to the right of the attribute. You can also change the sorting priority of an attribute by moving it up and down the list with the blue arrow buttons.**
 
 ![](attachments/2621447/2752614.png)
-

@@ -1,6 +1,6 @@
 ---
 title: "Add and configure a file manager"
-category: "howto40"
+parent: "file-manager"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -20,4 +20,3 @@ This section describes how to add a file manager to your project and configure i
 ![](attachments/819203/917932.png) **You can then configure the file manager using the Properties window while having it selected. This way you can set whether you want to allow the file manager to upload, download or both. You can also set the maximum file size in MB, as well as choose to have the file shown in the browser, rather than being downloaded.**
 
 ![](attachments/2621454/2752645.png)
-

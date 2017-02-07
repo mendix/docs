@@ -1,6 +1,6 @@
 ---
 title: "'Constrained by' functionality for a reference selector"
-category: "howto40"
+parent: "reference-selector"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -32,4 +32,3 @@ In the screenshot, the first reference selector has been connected to 'Name' of 
 ![](attachments/819203/917932.png) **In the menu that appears, choose the constraining path from the available choices.**
 
 ![](attachments/2621472/2752700.png)
-

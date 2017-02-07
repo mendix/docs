@@ -1,6 +1,6 @@
 ---
 title: "Set the association owner to 'both'"
-category: "howto40"
+parent: "associations"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -25,4 +25,3 @@ This section describes how you can change the properties of an association to ma
 ![](attachments/2621539/2752566.png)
 
 The above screenshots show the same association; the first shows it using hierarchical notation, whereas the second shows it using UML notation, which was added in version 2.5.1\. You can switch between these modes using the Edit > Preferences menu.
-

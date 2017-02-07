@@ -1,6 +1,6 @@
 ---
 title: "Set up a rule"
-category: "howto40"
+parent: "rules"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -32,4 +32,3 @@ You can change the return type of the rule in the Properties window when no sequ
 ![](attachments/819203/917932.png) **Your rule should now be fully configured for use in an exclusive split.**
 
 ![](attachments/2621603/2752833.png)
-

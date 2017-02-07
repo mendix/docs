@@ -1,6 +1,6 @@
 ---
 title: "Encode an icon with Base64"
-category: "howto40"
+category: "Custom Widgets"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -40,4 +40,3 @@ BBSg6cDOCN+tZtdmfy6udcragyXru95VwBdxkVkn0Cny3jI6ne/ZWL114cgvAQYA
 01518wUVoBgAAAAASUVORK5CYII=</icon>
 
 ```
-

@@ -1,6 +1,6 @@
 ---
 title: "Preparation of the environment"
-category: "howto40"
+parent: "mendix-on-windows---service-console-4"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -48,4 +48,3 @@ When you are ready, you will see the following window, with a clear white bar on
 ![](attachments/2621662/2752520.png)
 
 At the top of the Mendix Service Console, there is a main toolbar with four buttons. Use Add app and Remove app to add and remove apps. Use the Preferences button to change the location where the Mendix Service Console searches for apps and where new apps will be placed. With Mendix versions, it's possible to extend the available Mendix runtime server versions on the machine or to remove unnecessary ones.
-

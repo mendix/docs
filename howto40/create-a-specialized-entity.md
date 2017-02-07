@@ -1,6 +1,6 @@
 ---
 title: "Create a specialized entity"
-category: "howto40"
+parent: "entities"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -22,4 +22,3 @@ This section describes how to configure an entity to be a specialized version of
 ![](attachments/819203/917932.png) **The generalization will now be indicated in the domain model.**
 
 ![](attachments/2621535/2752550.png)
-

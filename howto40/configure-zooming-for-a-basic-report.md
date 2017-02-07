@@ -1,6 +1,6 @@
 ---
 title: "Configure zooming for a basic report"
-category: "howto40"
+parent: "basic-reports"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -20,4 +20,3 @@ This section describes how to configure zooming for a basic report.
 ![](attachments/2621478/2752706.png)
 
 If the form which is opened contains another report, the columns of the current report can be mapped to the parameters of the report in the other form..
-

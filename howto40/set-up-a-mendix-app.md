@@ -1,6 +1,6 @@
 ---
 title: "Set up a Mendix app"
-category: "howto40"
+parent: "mendix-on-windows---service-console-4"
 space: "Mendix 4 How-to's"
 ---
 <This preliminary documentation is subject to change. It will be finished as soon as possible.>
@@ -24,4 +24,3 @@ The wizard has up to five steps:
 After you click on Finish, you can change each setting by opening the same configuration forms via the buttons on the first toolbar of the app panel.
 
 ![](attachments/2621661/2752522.png)
-

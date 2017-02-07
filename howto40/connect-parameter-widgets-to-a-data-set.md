@@ -1,6 +1,6 @@
 ---
 title: "Connect parameter widgets to a data set"
-category: "howto40"
+parent: "reporting"
 space: "Mendix 4 How-to's"
 ---
 ## Description

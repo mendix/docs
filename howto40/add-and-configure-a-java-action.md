@@ -1,6 +1,6 @@
 ---
 title: "Add and configure a Java action"
-category: "howto40"
+parent: "java-actions"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -22,4 +22,3 @@ This section describes how to add a Java action to your project and then configu
 ![](attachments/2621502/2752778.png)
 
 ![](attachments/819203/917932.png) **Finally at 'Return type' you can use the drop-down menu to configure what type of variable or object (if any) the Java action will return.**
-

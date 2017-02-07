@@ -1,6 +1,6 @@
 ---
 title: "Add an activity to a microflow"
-category: "howto40"
+parent: "microflows"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -48,4 +48,3 @@ This section describes how to add an activity to a microflow; these steps can al
 ![](attachments/819203/917932.png) **After choosing the activity type, the menu allowing you to configure the activity will automatically appear.**
 
 ![](attachments/2621612/2752838.png)
-

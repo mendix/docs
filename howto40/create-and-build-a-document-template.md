@@ -1,6 +1,6 @@
 ---
 title: "Create and build a document template"
-category: "howto40"
+parent: "document-templates"
 space: "Mendix 4 How-to's"
 ---
 ## Description

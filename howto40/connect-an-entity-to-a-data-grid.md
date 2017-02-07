@@ -1,6 +1,6 @@
 ---
 title: "Connect an entity to a data grid"
-category: "howto40"
+parent: "data-grid"
 space: "Mendix 4 How-to's"
 ---
 ## Description

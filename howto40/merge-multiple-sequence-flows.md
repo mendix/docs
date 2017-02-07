@@ -1,6 +1,6 @@
 ---
 title: "Merge multiple sequence flows"
-category: "howto40"
+parent: "merge"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -24,4 +24,3 @@ This section describes how to merge multiple sequence flows in a microflow.
 ![](attachments/819203/917932.png) **Connect all separate sequence flows you want to merge to the merge gateway.**
 
 ![](attachments/2621614/2752845.png)
-

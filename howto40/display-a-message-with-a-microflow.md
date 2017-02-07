@@ -1,6 +1,6 @@
 ---
 title: "Display a message with a microflow"
-category: "howto40"
+parent: "client-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -42,4 +42,3 @@ If you have variables or attributes which are not strings, you can use the 'toSt
 ![](attachments/2621597/2752894.png)
 
 The end result in this screenshot is a blocking information message to a user congratulating them with a customer status upgrade, with customer specific information added through parameters.
-

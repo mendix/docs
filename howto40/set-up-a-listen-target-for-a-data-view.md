@@ -1,6 +1,6 @@
 ---
 title: "Set up a listen target for a data view"
-category: "howto40"
+parent: "data-view"
 space: "Mendix 4 How-to's"
 ---
 ## Description

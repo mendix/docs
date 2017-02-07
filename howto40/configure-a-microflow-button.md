@@ -1,6 +1,6 @@
 ---
 title: "Configure a microflow button"
-category: "howto40"
+parent: "starting-microflows"
 space: "Mendix 4 How-to's"
 ---
 ## Description

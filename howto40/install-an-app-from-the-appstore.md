@@ -1,6 +1,6 @@
 ---
 title: "Install an App from the AppStore"
-category: "howto40"
+category: "Custom Widgets"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -58,4 +58,3 @@ A theme will be stored in the 'MyProject/theme' folder. Next time you deploy, th
 A module will be placed directly into your project. You should see it appear directly in your Project Explorer.
 
 ![](attachments/2621635/2752935.jpg)
-

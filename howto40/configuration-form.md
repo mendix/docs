@@ -1,6 +1,6 @@
 ---
 title: "Configuration form"
-category: "howto40"
+parent: "set-up-a-mendix-app"
 space: "Mendix 4 How-to's"
 ---
 <This preliminary documentation is subject to change. It will be finished as soon as possible.>
@@ -36,7 +36,7 @@ Port Configuration
  | Runtime
  | This port is used to access the application. When you are using a webserver in front of the application (such as IIS), you'll need to use this port in the configuration.
  |
-| 
+|
  | Admin
  | Choose a free port, this port is used by the Service Console to interact with the application
  |
@@ -45,7 +45,7 @@ Port Configuration
  | When you install the Mendix software you should always use a webserver or proxy in front of the application. If the webserver is installed on the localserver you should only allow connections from localhost. When the webserver is located on a different server you should specify that server address in the custom field. We discourage the option 'Public' since this can be considered a security risk.
 <sub>Default: Localhost</sub>
  |
-| 
+|
  | Admin
  | Which source can access the admin port, should the admin port listen to any other locations that localhost. We discourage the use of any other option besides 'Localhost' since this can be considered a security risk.
 <sub>Default: Localhost</sub>

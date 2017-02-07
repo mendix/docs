@@ -1,6 +1,6 @@
 ---
 title: "Add documents to a module"
-category: "howto40"
+parent: "modules"
 space: "Mendix 4 How-to's"
 ---
 ## Description

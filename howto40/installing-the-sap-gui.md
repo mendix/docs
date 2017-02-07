@@ -1,6 +1,6 @@
 ---
 title: "Installing the SAP GUI"
-category: "howto40"
+parent: "sap-integration"
 space: "Mendix 4 How-to's"
 ---
 To test or demo the SAP integration, it is necessary to send IDocs from SAP, and to view the received IDocs in SAP.

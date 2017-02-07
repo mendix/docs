@@ -1,6 +1,6 @@
 ---
 title: "Configure the tooltip form of  a data grid"
-category: "howto40"
+parent: "data-grid"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -30,4 +30,3 @@ This form should be a data view on the same entity as the reference set selector
 ![](attachments/819203/917932.png) **The tooltip form will now be displayed when hovering over the columns for which it was turned on.**
 
 ![](attachments/2621444/2752625.png)
-

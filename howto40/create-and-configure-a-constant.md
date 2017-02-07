@@ -1,6 +1,6 @@
 ---
 title: "Create and configure a constant"
-category: "howto40"
+parent: "constants"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -20,4 +20,3 @@ This section describes how to add a constant to your module and configure it.
 ![](attachments/2621544/2752575.png)
 
 For example you might want a constant which contains the location of a web service, having different values depending on whether the application is run in a development or test configuration.
-

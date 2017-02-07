@@ -1,6 +1,6 @@
 ---
 title: "Create a list"
-category: "howto40"
+parent: "list-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -20,4 +20,3 @@ This section describes how to create a list in a microflow.
 ![](attachments/2621504/2752780.png)
 
 ![](attachments/819203/917932.png) **The list created by the 'Create list' activity is empty; you will need to utilize other list activities to add objects to it.**
-

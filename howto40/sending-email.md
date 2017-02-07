@@ -1,6 +1,6 @@
 ---
 title: "Sending Email"
-category: "howto40"
+parent: "mendix-on-the-mendix-cloud"
 space: "Mendix 4 How-to's"
 ---
 #### This documentation has been updated. Please view  instead.

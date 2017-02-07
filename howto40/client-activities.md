@@ -1,6 +1,6 @@
 ---
 title: "Client Activities"
-category: "howto40"
+parent: "activities"
 space: "Mendix 4 How-to's"
 ---
 Please select a How To:

@@ -1,6 +1,6 @@
 ---
 title: "Mendix on Windows - Service Console 3"
-category: "howto40"
+category: "Deployment"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -16,4 +16,3 @@ This How To has been split up into four articles:
 3.  [Set up Internet Information Services](set-up-internet-information-services)
 4.  [Update a Mendix application](update-a-mendix-application)
 5.  [Check the security of your installation using this checklist](security-checklist-for-your-on-premise-installation)
-

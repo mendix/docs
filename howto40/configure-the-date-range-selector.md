@@ -1,6 +1,6 @@
 ---
 title: "Configure the date range selector"
-category: "howto40"
+parent: "date-range-selector"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -24,4 +24,3 @@ This section describes how to configure the date range selector in a report pane
 ![](attachments/2621468/2752714.png)
 
 You can choose to add fields allowing users to choose year, quarter, month and week, or add a period field which lets users choose from several predefined periods.
-

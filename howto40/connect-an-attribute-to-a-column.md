@@ -1,6 +1,6 @@
 ---
 title: "Connect an attribute to a column"
-category: "howto40"
+parent: "columns"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -30,4 +30,3 @@ This section describes how to connect an attribute of an entity to a column of a
 ![](attachments/819203/917932.png) **If you chose the 'Other...' option or pressed the '...' button in the Properties window, a new menu will now appear. In this menu you can select the attribute you want to connect to the column.**
 
 ![](attachments/2621557/2752607.png)
-

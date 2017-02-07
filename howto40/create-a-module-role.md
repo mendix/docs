@@ -1,6 +1,6 @@
 ---
 title: "Create a module role"
-category: "howto40"
+parent: "module-security"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -18,4 +18,3 @@ This section explains how to add a new module user role to a module.
 ![](attachments/819203/917932.png) **Enter the name for the new module role, and optionally add documentation describing the new role.**
 
 ![](attachments/2621541/2752580.png)
-

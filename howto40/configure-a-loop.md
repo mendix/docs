@@ -1,6 +1,6 @@
 ---
 title: "Configure a loop"
-category: "howto40"
+parent: "loop"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -28,4 +28,3 @@ Since the iterator of the loop will need a list of objects, make sure this list 
 ![](attachments/2621608/2752849.png)
 
 This generally works the same as sequence flow outside the loop with a few exceptions. Rather than having a start event, the iterator will automatically start at the first activity of the sequence flow. End events on the other hand are replaced by Continue events, which are used when the sequence flow has been executed and the iterator should move to the next object on the list, and Break events, which are used to stop iterating and continue with the rest of the microflow.
-

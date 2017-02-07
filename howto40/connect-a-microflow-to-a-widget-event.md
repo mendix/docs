@@ -1,6 +1,6 @@
 ---
 title: "Connect a microflow to a widget event"
-category: "howto40"
+parent: "widget-events"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -24,4 +24,3 @@ This section describes how to configure a microflow to trigger based on a widget
 ![](attachments/2621482/2752746.png)
 
 In the menu that appears you can configure which objects should be passed to the microflow, if it should abort on validation errors, if a progress bar should be shown and if the client should wait for the microflow to finish.*
-

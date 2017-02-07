@@ -1,6 +1,6 @@
 ---
 title: "Generate documents using document templates"
-category: "howto40"
+parent: "integration-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description

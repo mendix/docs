@@ -1,6 +1,6 @@
 ---
 title: "Configure the pop-up form of a reference selector"
-category: "howto40"
+parent: "reference-selector"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -32,4 +32,3 @@ This section describes how to configure the pop-up form.
 ![](attachments/819203/917932.png) **After selecting the pop-up form you can configure its behavior by clicking on the '...' button next to 'Pop-up form settings' in the Properties window. This will bring up a new menu in which you can choose whether the pop-up form should open as a (blocking) pop up or not, and if the form should have a custom title.**
 
 ![](attachments/2621458/2752674.png)
-

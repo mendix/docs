@@ -1,6 +1,6 @@
 ---
 title: "Connect a basic report to a data set"
-category: "howto40"
+parent: "basic-reports"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -40,4 +40,3 @@ This section describes how to connect a basic report in a report pane to a data 
 ![](attachments/2621467/2752712.png)
 
 The columns of the basic report will now be automatically filled with the columns of the data set, in the order of appearance in the OQL query.
-

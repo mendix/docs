@@ -1,6 +1,6 @@
 ---
 title: "Configure the tooltip form of a reference set selector"
-category: "howto40"
+parent: "reference-set-selector"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -30,4 +30,3 @@ This form should be a data view on the same entity as the reference set selector
 ![](attachments/819203/917932.png) **Finally, the columns for which the tooltip form appears when the mouse hovers over them have to be configured. To do this, select a column you want to tooltip form to appear for, and in the Properties window use the drop down menu to set 'Show tooltip' to 'True'.**
 
 ![](attachments/2621471/2752692.png)
-

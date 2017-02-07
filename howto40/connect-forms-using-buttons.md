@@ -1,6 +1,6 @@
 ---
 title: "Connect forms using buttons"
-category: "howto40"
+parent: "opening-forms"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -36,4 +36,3 @@ This section describes how to connect forms using buttons.
 ![](attachments/819203/917932.png) **In the next menu, you can choose the how to display the new form, as well as select if you want to override the form's title.**
 
 ![](attachments/2621495/2752764.png)
-

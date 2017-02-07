@@ -1,6 +1,6 @@
 ---
 title: "Build a template grid"
-category: "howto40"
+parent: "template-grid"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -58,4 +58,3 @@ The domain model for this can be seen above. The Pizza entity has 'Name', 'Ingre
 ![](attachments/819203/917932.png) **Our form is now configured to display the available Pizzas, as can be seen below.**
 
 ![](attachments/2621487/2752724.png)
-

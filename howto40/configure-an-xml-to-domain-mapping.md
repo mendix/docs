@@ -1,6 +1,6 @@
 ---
 title: "Configure an XML-to-Domain mapping"
-category: "howto40"
+parent: "integration"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -70,4 +70,3 @@ When searching for the object, the attributes marked as key will be taken and co
 ![](attachments/819203/917932.png) **Configure the mapping for all entities to complete the XML-to-Domain mapping.**
 
 ![](attachments/2621624/2752801.png)
-

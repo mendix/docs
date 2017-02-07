@@ -1,6 +1,6 @@
 ---
 title: "Set up visibility based on an module role"
-category: "howto40"
+parent: "conditions"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -20,4 +20,3 @@ This section describes how you can configure widgets to be visible based on the 
 ![](attachments/819203/917932.png) **You will now be able to put check marks next to the available module roles to indicate whether or not the row should be visible for that role.**
 
 ![](attachments/2621483/2752749.png)
-

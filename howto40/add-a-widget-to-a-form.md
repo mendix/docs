@@ -1,6 +1,6 @@
 ---
 title: "Add a widget to a form"
-category: "howto40"
+parent: "forms"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -30,4 +30,3 @@ This section describes how to add a widget to a form.
 ![](attachments/819203/917932.png) **Click on the location in the form you would like to add the widget.**
 
 ![](attachments/2621484/2752736.png)
-

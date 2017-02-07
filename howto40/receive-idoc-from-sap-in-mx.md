@@ -1,6 +1,6 @@
 ---
 title: "Receive IDoc from SAP in Mx"
-category: "howto40"
+parent: "sap-integration"
 space: "Mendix 4 How-to's"
 ---
 To learn how you can receive IDocs from SAP into Mendix, you can execute the following scenario.

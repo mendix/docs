@@ -1,6 +1,6 @@
 ---
 title: "Import XML documents"
-category: "howto40"
+parent: "integration-activities"
 space: "Mendix 4 How-to's"
 ---
 ## Description

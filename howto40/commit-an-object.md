@@ -1,6 +1,6 @@
 ---
 title: "Commit an object"
-category: "howto40"
+category: "Custom Widgets"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -65,4 +65,3 @@ error : dojo.hitch(this, function (orderObj) {
 If your widget is in a Data view and you are editing the object of the Data view, it will be automatically committed when the form is saved. Use this for any changes to the actual Data view object, as the user might want to cancel their changes without committing the object.
 
 {% endmarkdown %}</div>
-

@@ -1,6 +1,6 @@
 ---
 title: "Set up an attribute with microflow source"
-category: "howto40"
+parent: "attributes"
 space: "Mendix 4 How-to's"
 ---
 ## Description
@@ -44,4 +44,3 @@ Note that the microflow should return a value of the same type as the attribute.
 ![](attachments/819203/917932.png) **The domain model will now indicate that the attribute is calculated by a microflow.**
 
 ![](attachments/2621522/2752540.png)
-

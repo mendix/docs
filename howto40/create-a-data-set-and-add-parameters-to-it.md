@@ -1,6 +1,6 @@
 ---
 title: "Create a data set and add parameters to it"
-category: "howto40"
+parent: "data-sets"
 space: "Mendix 4 How-to's"
 ---
 ## Description

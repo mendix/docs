@@ -1,6 +1,6 @@
 ---
 title: "Service form"
-category: "howto40"
+parent: "set-up-a-mendix-app"
 space: "Mendix 4 How-to's"
 ---
 This form is important, especially for a correct installation of the Windows service for this app.
@@ -32,4 +32,3 @@ The Mendix Service Console gives two options to start the app.
 
 The Start button starts the application directly from the Mendix Service Console.
 To use the second Start service button, the app has to be installed as Windows service first. The button starts the app as a Windows service. Both buttons start the app at a different way, but in both cases, the app runs under the user account (and his privileges) configured here.
-

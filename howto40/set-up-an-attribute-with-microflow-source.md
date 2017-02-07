@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to set up an attribute of which the value is calculated by a microflow. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208495).
+This section describes how to set up an attribute of which the value is calculated by a microflow.
 
 ## Instructions
 

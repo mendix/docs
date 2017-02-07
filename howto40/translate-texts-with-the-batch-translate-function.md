@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to translate texts for your multi-language project using the batch translate function. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=10092591).
+This section describes how to translate texts for your multi-language project using the batch translate function.
 
 ## Instructions
 

@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to connect an entity to a data grid. The related article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9699364).
+This section describes how to connect an entity to a data grid.
 
 ## Instructions
 
@@ -34,4 +34,3 @@ This section describes how to connect an entity to a data grid. The related arti
 ![](attachments/819203/917932.png) **You will be asked if you want to have the Modeler fill the data grid based on the attributes of the entity. If you choose 'Yes', the Modeler will automatically create columns and connect them to the attributes of the entity; if you choose 'No' the entity is connected to the data grid, but you have to add the columns and connect them to the attributes yourself.**
 
 ![](attachments/2621445/2752618.png)
-

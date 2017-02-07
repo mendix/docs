@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how you can change the properties of an association to make both entities its owner. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208493).
+This section describes how you can change the properties of an association to make both entities its owner.
 
 ## Instructions
 

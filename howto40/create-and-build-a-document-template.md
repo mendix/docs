@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to create and build a basic document template. (Using the example of a document with order details) The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208532).
+This section describes how to create and build a basic document template. (Using the example of a document with order details)
 
 ## Instructions
 

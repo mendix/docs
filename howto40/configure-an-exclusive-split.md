@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to split the sequence flow in a microflow with the help of an exclusive split. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=10420537).
+This section describes how to split the sequence flow in a microflow with the help of an exclusive split.
 
 ## Instructions
 

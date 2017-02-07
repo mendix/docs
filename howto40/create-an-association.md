@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to create an association between two entities. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208493).
+This section describes how to create an association between two entities.
 
 ## Instructions
 

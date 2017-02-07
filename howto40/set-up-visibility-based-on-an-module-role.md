@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how you can configure widgets to be visible based on the user's module role. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=12748227).
+This section describes how you can configure widgets to be visible based on the user's module role.
 
 ## Instructions
 

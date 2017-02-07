@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure the access rules for the forms, microflows and entities in your project. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9699435).
+This section describes how to configure the access rules for the forms, microflows and entities in your project.
 
 ## Instructions
 

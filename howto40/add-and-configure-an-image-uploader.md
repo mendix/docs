@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to add an image uploader to your form and then configure it. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9699405).
+This section describes how to add an image uploader to your form and then configure it.
 
 ## Instructions
 

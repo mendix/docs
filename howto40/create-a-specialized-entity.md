@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure an entity to be a specialized version of a general entity. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208491).
+This section describes how to configure an entity to be a specialized version of a general entity.
 
 ## Instructions
 

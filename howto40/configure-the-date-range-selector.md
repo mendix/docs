@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure the date range selector in a report pane. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=12387657).
+This section describes how to configure the date range selector in a report pane.
 
 ## Instructions
 

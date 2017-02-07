@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to create and configure an XML-to-Domain mapping. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208520).
+This section describes how to create and configure an XML-to-Domain mapping.
 
 ## Instructions
 

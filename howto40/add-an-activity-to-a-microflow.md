@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to add an activity to a microflow; these steps can also be used to add gateways or events to a microflow. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208499).
+This section describes how to add an activity to a microflow; these steps can also be used to add gateways or events to a microflow.
 
 ## Instructions
 

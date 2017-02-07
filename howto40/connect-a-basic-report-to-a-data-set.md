@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to connect a basic report in a report pane to a data set. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=12387630).
+This section describes how to connect a basic report in a report pane to a data set.
 
 ## Instructions
 

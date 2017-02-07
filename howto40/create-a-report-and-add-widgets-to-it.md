@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to create a report and then add reporting widgets to it. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9699407).
+This section describes how to create a report and then add reporting widgets to it.
 
 ## Instructions
 

@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to generate a document with a microflow using a previously designed document template. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=10420579).
+This section describes how to generate a document with a microflow using a previously designed document template.
 
 ## Instructions
 

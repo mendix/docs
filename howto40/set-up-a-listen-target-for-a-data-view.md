@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure a listen target for a data view. This allows a data view to show information about the object being selected in a data grid in the same form. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9699362).
+This section describes how to configure a listen target for a data view. This allows a data view to show information about the object being selected in a data grid in the same form.
 
 ## Instructions
 

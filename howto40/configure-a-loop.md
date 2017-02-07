@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure a loop in a microflow. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=10420544).
+This section describes how to configure a loop in a microflow.
 
 ## Instructions
 

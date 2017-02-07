@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure a Java action for your project using Eclipse. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=12747302).
+This section describes how to configure a Java action for your project using Eclipse.
 
 ## Instructions
 
@@ -47,7 +47,7 @@ Your Mendix project should now be imported into the Eclipse workspace.
 
 All the code outside these markers is automatically regenerated each time the project is deployed.
 
-![](attachments/819203/917932.png) **You can add any helper methods you need in the 'EXTRA CODE' section. For some examples of Java programming using the API provided by the Mendix Runtime, please refer to [this](https://world.mendix.com/pages/releaseview.action?pageId=12747478) article.**
+![](attachments/819203/917932.png) **You can add any helper methods you need in the 'EXTRA CODE' section.**
 
 Many of the methods you need, including performing XPath queries, are provided by the Core class. Additionally you can initialize proxy objects to manipulate objects. These proxy objects may need to be imported into the Java action in the 'import' section. The proxy classes are generated in the <ModuleName>.proxies namespace.
 

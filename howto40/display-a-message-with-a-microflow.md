@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to show a message to the user with a microflow. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=11437477).
+This section describes how to show a message to the user with a microflow.
 
 ## Instructions
 

@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how you can display icons for enumeration values in a data grid column, rather than their captions. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9699841).
+This section describes how you can display icons for enumeration values in a data grid column, rather than their captions.
 
 ## Instructions
 

@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section will explain the steps you have to take to run two different Mendix applications at once on the same computer. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=10420280).
+This section will explain the steps you have to take to run two different Mendix applications at once on the same computer.
 
 ## Instructions
 

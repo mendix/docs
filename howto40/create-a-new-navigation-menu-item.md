@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section explains how to add new menus to the navigation, and fill these with items linked to forms or microflows. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=13238662).
+This section explains how to add new menus to the navigation, and fill these with items linked to forms or microflows.
 
 ## Instructions
 

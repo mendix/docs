@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure the tooltip form for a reference set selector. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9699400).
+This section describes how to configure the tooltip form for a reference set selector.
 
 ## Instructions
 

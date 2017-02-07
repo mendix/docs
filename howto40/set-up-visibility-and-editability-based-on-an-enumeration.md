@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how you can configure widgets to be visible or editable based on the value of an enumeration attribute. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=12748227).
+This section describes how you can configure widgets to be visible or editable based on the value of an enumeration attribute.
 
 ## Instructions
 

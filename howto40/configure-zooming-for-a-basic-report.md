@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure zooming for a basic report. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=12387630).
+This section describes how to configure zooming for a basic report.
 
 ## Instructions
 

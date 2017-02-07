@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure the default button of a data grid. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9699364).
+This section describes how to configure the default button of a data grid.
 
 ## Instructions
 

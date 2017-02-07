@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure delete behavior for entities when they are connected by an association. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208493).
+This section describes how to configure delete behavior for entities when they are connected by an association.
 
 ## Instructions
 

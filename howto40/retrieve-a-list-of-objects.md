@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to retrieve an object or a list of objects in a microflow. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=11437399).
+This section describes how to retrieve an object or a list of objects in a microflow.
 
 ## Instructions
 

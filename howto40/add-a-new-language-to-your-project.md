@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section will explain how you can add a new language to your project. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=10420280).
+This section will explain how you can add a new language to your project.
 
 ## Instructions
 
@@ -16,4 +16,3 @@ This section will explain how you can add a new language to your project. The re
 ![](attachments/2621509/2752785.png)
 
 ![](attachments/819203/917932.png) **Select the language you want to add in the new menu and press 'OK'.**
-

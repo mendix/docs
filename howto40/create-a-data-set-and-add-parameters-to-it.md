@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to create a data set and add parameters to it. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208529).
+This section describes how to create a data set and add parameters to it.
 
 ## Instructions
 

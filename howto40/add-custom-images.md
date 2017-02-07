@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to add custom images to your modules. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208537).
+This section describes how to add custom images to your modules.
 
 ## Instructions
 

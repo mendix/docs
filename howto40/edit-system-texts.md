@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section explains how to edit system texts for your project. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=12747985).
+This section explains how to edit system texts for your project.
 
 ## Instructions
 

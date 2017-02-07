@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to connect an entity to a data view. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9699362).
+This section describes how to connect an entity to a data view.
 
 ## Instructions
 

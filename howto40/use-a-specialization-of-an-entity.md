@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to use an inheritance split to use a specialization of an entity. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=10420541).
+This section describes how to use an inheritance split to use a specialization of an entity.
 
 ## Instructions
 

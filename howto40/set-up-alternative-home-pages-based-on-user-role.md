@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how you can configure your application to display different home pages based on the project user role of the user that logged in. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208477).
+This section describes how you can configure your application to display different home pages based on the project user role of the user that logged in.
 
 ## Instructions
 

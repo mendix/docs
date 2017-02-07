@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section will describe how to add an attribute to an entity. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208495).
+This section will describe how to add an attribute to an entity.
 
 ## Instructions
 

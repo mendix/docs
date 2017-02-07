@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure a microflow button in a form. The related article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9699535).
+This section describes how to configure a microflow button in a form.
 
 ## Instructions
 
@@ -42,4 +42,3 @@ This section describes how to configure a microflow button in a form. The relate
 ![](attachments/819203/917932.png) **The 'Advanced' tab allows you to configure what should happen if the microflow encounters validation errors, choose if a progress bar should be displayed, enter a progress message to display along with the bar, as well as choose if the client should wait for the microflow to finish.**
 
 ![](attachments/2621497/2752752.png)
-

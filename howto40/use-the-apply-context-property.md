@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to use the 'Apply context' property to constrain the objects displayed in a data or template grid. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208573).
+This section describes how to use the 'Apply context' property to constrain the objects displayed in a data or template grid.
 
 ## Instructions
 

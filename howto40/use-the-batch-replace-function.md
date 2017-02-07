@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to use the batch replace function to replace words or phrases in your project. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=10092591).
+This section describes how to use the batch replace function to replace words or phrases in your project.
 
 ## Instructions
 

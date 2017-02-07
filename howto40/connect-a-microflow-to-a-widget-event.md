@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure a microflow to trigger based on a widget event. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9699554).
+This section describes how to configure a microflow to trigger based on a widget event.
 
 ## Instructions
 

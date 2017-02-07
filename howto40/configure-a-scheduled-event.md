@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to configure a scheduled event. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208505).
+This section describes how to configure a scheduled event.
 
 ## Instructions
 

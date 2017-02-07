@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to merge multiple sequence flows in a microflow. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=10420539).
+This section describes how to merge multiple sequence flows in a microflow.
 
 ## Instructions
 

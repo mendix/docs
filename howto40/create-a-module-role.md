@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section explains how to add a new module user role to a module. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=9208549).
+This section explains how to add a new module user role to a module.
 
 ## Instructions
 

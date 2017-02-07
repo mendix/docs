@@ -5,7 +5,7 @@ space: "Mendix 4 How-to's"
 ---
 ## Description
 
-This section describes how to define multiple sorting priorities for a data grid. The related reference guide article can be found [here](https://world.mendix.com/pages/releaseview.action?pageId=11436210).
+This section describes how to define multiple sorting priorities for a data grid.
 
 ## Instructions
 

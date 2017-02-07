@@ -3,7 +3,7 @@ title: "Performance Tool Results"
 space: "Application Performance Monitor"
 parent: "performance-tool"
 ---
-The performance tool results are saved per session. The results are displayed in a search grid with the ability to search the fields that are stored with a ‘microflow performance’ record. By default the grid only shows main microflows (Main? = Yes). These are microflows that were not called by other microflows during recording. By default the list is sorted on duration. 
+The performance tool results are saved per session. The session name can be changed in the top right corner, by using the 'Rename' button. Next to this button there is a 'Show filter' button. This button will open a dialog that will show the used filter when recording this session. The session results are displayed in a search grid with the ability to search the fields that are stored with a ‘microflow performance’ record. By default the grid only shows main microflows (Main? = Yes). These are microflows that were not called by other microflows during recording. By default the list is sorted on duration. 
 
 ![](attachments/Performance_Tool/Recorded_Session_Details.png)
 

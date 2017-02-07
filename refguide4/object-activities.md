@@ -21,7 +21,7 @@ See [Change Object](change-object).
 
 ## Delete
 
-See [Delete Object(s)](4194517).
+See [Delete Object(s)](delete-objects).
 
 ## Retrieve
 

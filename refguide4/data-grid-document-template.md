@@ -7,7 +7,7 @@ The data grid shows a list of objects in a grid. For example, a data grid can sh
 
 <div class="alert alert-info">{% markdown %}
 
-[![](attachments/819203/918138.png)](4194563)
+[![](attachments/819203/918138.png)](data-grid-document-template)
 A data grid showing a list of orders with a description and the referenced customer name.
 
 {% endmarkdown %}</div>
@@ -16,7 +16,7 @@ A data grid showing a list of orders with a description and the referenced custo
 
 ### Columns
 
-See [Columns (document template)](4194564).
+See [Columns (document template)](columns-document-template).
 
 ### Sort bar
 

@@ -7,7 +7,7 @@ A dynamic label would be used for the same kind of attributes as a text box from
 
 <div class="alert alert-info">{% markdown %}
 
-[![](attachments/819203/918131.png)](4194553)
+[![](attachments/819203/918131.png)](dynamic-label-document-template)
 A dynamic label linking to a customer name.
 
 {% endmarkdown %}</div>

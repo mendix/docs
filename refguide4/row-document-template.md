@@ -9,7 +9,7 @@ Rows are part of a table. They contain cells which in turn can contain other wid
 
 ### Cell
 
-A cell of a row. See [Cell (document template)](4194551)
+A cell of a row. See [Cell (document template)](cell-document-template)
 
 ## Appearance Properties
 

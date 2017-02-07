@@ -12,7 +12,7 @@ Activities are the actions that are executed in a microflow.
 | [![](attachments/819203/918013.png)](cast-object) | [Cast Object](cast-object) | Cast Object can be used in combination with an [inheritance split](inheritance-split) to use the [specialized](entities) members of the object. |
 | [![](attachments/819203/917661.png)](change-object) | [Change Object](change-object) | Change Object can be used to change the members of an object. This can be done with or without commiting and with or without events. |
 | [![](attachments/819203/917756.png)](create-object) | [Create Object](create-object) | Create Object can be used to create an object. |
-| [![](attachments/819203/918191.png)](4194517) | [Delete Object(s)](4194517) | Delete Object can be used to delete an object. |
+| [![](attachments/819203/918191.png)](delete-objects) | [Delete Object(s)](delete-objects) | Delete Object can be used to delete an object. |
 | [![](attachments/819203/918119.png)](rollback-object) | [Rollback Object](rollback-object) | Rollback Object can be used to undo changes (that have not been committed) that were made to the object in the part of the microflow preceding the activity. Furthermore it deletes objects that have been created but have never been committed. |
 | [![](attachments/819203/917866.png)](retrieve) | [Retrieve](retrieve) | Retrieve can be used to get one (or more) associated objects of another object. Furthermore the activity can also get one (or more) objects directly from the database. |
 

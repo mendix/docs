@@ -1,26 +1,22 @@
 ---
-title: "Dynamic Image (document template)"
+title: "Static Image (document template)"
 category: "refguide4"
 space: "Reference Guide 4"
 ---
-A dynamic image can be used to show a System.Image. If the image is not available (for example: the image was never saved) it will show the preset default image. It can be put inside a data view or templategrid.
+A static image shows a predefined image. It can be put either in- or outside a data view or templategrid.
 
 <div class="alert alert-info">{% markdown %}
 
-[![](attachments/819203/918132.png)](4194541)
-A dynamic image inside a table cell, showing the preset default image.
+[![](attachments/819203/918133.png)](static-image-document-template)
+A static image inside a table cell.
 
 {% endmarkdown %}</div>
 
 ## Appearance Properties
 
-### Default image
+### Image
 
-The default image is the image that will appear in the document when the dynamic image could not be found (when the entity that specializes the System.Image entity does not contain an actual image.)
-
-### Use thumbnail
-
-Here you can select whether to use the thumbnail in the document or the full image.
+This property defines the image that will appear in the document.
 
 ### Width
 
@@ -35,9 +31,3 @@ The height defines the height of the image in the document. This is set in pixel
 ### Name
 
 See [Widget Properties](widget-properties).
-
-## Data Source Properties
-
-### Entity
-
-The entity (path) property specifies of which entity the image will be shown.

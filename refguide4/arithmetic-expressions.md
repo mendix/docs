@@ -21,8 +21,6 @@ Multiplies two numbers.
 If the two inputs were both of type Integer or Autonumber, the result is of type Integer.
 If the two inputs were any other types of numbers, the operation returns a Float/Currency.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 3 * 4
 
@@ -34,8 +32,6 @@ results in
 12
 
 ```
-
-{% endmarkdown %}</div>
 
 ## Division
 
@@ -52,8 +48,6 @@ Divides two numbers. You can use either the `div` or colon ( : ) syntax, as can 
 
 The first number divided by the second.
 Type: Float/Currency
-
-<div class="alert alert-info">{% markdown %}
 
 "div" syntax:
 
@@ -82,8 +76,6 @@ results in
 4.0
 
 ```
-
-{% endmarkdown %}</div>
 
 ## Modulo
 
@@ -147,8 +139,6 @@ Adds two numbers.
 If the two inputs were of type Integer or Autonumber, the result is of type Integer.
 Any other combination of inputs results in a Float/Currency.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 -3 + 4
 
@@ -173,8 +163,6 @@ results in a Float/Currency with value
 
 ```
 
-{% endmarkdown %}</div>
-
 ## Subtraction
 
 Subtracts the second input from the first.
@@ -190,8 +178,6 @@ Subtracts the second input from the first.
 
 If the two inputs were of type Integer or Autonumber, the result is of type Integer.
 Any other combination of inputs results in a Float/Currency.
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 5 - 4
@@ -217,4 +203,3 @@ results in a Float/Currency with value
 
 ```
 
-{% endmarkdown %}</div>

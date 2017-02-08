@@ -24,29 +24,19 @@ The name property defines the name of the attribute. This name is used to refer 
 
 The type property defines the type of data that can be stored in the attribute. An attribute has one of the following types:
 
-| Type | Possible values |
-| --- | --- |
-| AutoNumber | A positive or negative whole number.
-**Note**: AutoNumber attributes are automatically generated numbers. The default value of the attribute determines the first number that will be generated. Each created object will have an AutoNumber that is one greater than the previous one. AutoNumbers can only be used for persistable entities as the AutoNumber value is computed in the database. |
-| Binary | Binary data. Can only be used for persistable entities as the data is stored in the database. For example an entire file.
-**Note**: In most cases you want to use an association to a FileDocument or Image to store file contents. |
+| Type | Possible values | Note
+| --- | --- | --- | 
+| AutoNumber | A positive or negative whole number. | AutoNumber attributes are automatically generated numbers. The default value of the attribute determines the first number that will be generated. Each created object will have an AutoNumber that is one greater than the previous one. AutoNumbers can only be used for persistable entities as the AutoNumber value is computed in the database. |
+| Binary | Binary data. Can only be used for persistable entities as the data is stored in the database. For example an entire file. | In most cases you want to use an association to a FileDocument or Image to store file contents. |
 | Boolean | True or false. |
-| Currency | A positive or negative amount of money. The amount can have digits after the decimal point.
-**Note**: A Currency attribute is represented internally as a Java double-precision floating point number. The only difference between Currency and Float attributes is how they are represented in the client. Double precision is usually more than enough for office applications but rounding errors can occur when doing extensive calculations. |
+| Currency | A positive or negative amount of money. The amount can have digits after the decimal point. | A Currency attribute is represented internally as a Java double-precision floating point number. The only difference between Currency and Float attributes is how they are represented in the client. Double precision is usually more than enough for office applications but rounding errors can occur when doing extensive calculations. |
 | DateTime | A point in time consisting of a date and a time component accurate up to milliseconds. |
 | Enum | One of the values of the given [enumeration](enumerations). |
 | Float | A positive or negative number. The amount can have digits after the decimal point. |
-| HashString | The hash value of a String or set of characters. It can among others contain letters, spaces and/or numbers. This type can for example be used to store a password.
-**Note**: Hash values are generated using the hash algorithm that is chosen in the [Project Settings](project-settings). |
+| HashString | The hash value of a String or set of characters. It can among others contain letters, spaces and/or numbers. This type can for example be used to store a password. | Hash values are generated using the hash algorithm that is chosen in the [Project Settings](project-settings). |
 | Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 2147483647), negative (minimum -2<sup>31</sup>, thus -2147483648), or zero. |
 | Long | A whole number that can be positive (maximum 2<sup>63</sup>-1), negative (minimum -2<sup>63</sup>), or zero. |
-| String |
-
-A text containing letters, spaces, numbers and other characters.
-
-**Note** (for Mendix up to version 4.8.10)**:** If you set the length of an existing String attribute to unlimited, existing data in the database will be truncated to 30 characters for Microsoft SQL Server or 24 characters for Oracle Database. For other database systems, all data will be preserved.
-
- |
+| String | A text containing letters, spaces, numbers and other characters. | For Mendix up to version 4.8.10): If you set the length of an existing String attribute to unlimited, existing data in the database will be truncated to 30 characters for Microsoft SQL Server or 24 characters for Oracle Database. For other database systems, all data will be preserved.
 
 The maximum size that can approximately be stored in an attribute of type binary depends on the database:
 
@@ -55,8 +45,6 @@ The maximum size that can approximately be stored in an attribute of type binary
 | 1 MB | 1 GB | 2 GB | 128 TB or limited by hard disk of server |
 
 _Default value:_ String
-
-<div class="alert alert-info">{% markdown %}
 
 In a web shop you want to store the id, profile photo, level (for service quality), user name, password, activity, total of minutes spent online, year of subscription, date of birth, total amount of expenses and the standard amount of discount for a customer.
 
@@ -69,9 +57,8 @@ Level has three possible values: High, Medium and Low. This is stored in an attr
 The password itself should not be stored, but only its hash value, thus it is stored in an attribute of type HashString.
 
 A customer can be active or inactive, which is stored in an attribute named 'Active' of type Boolean.
-![](attachments/819203/917578.png)
 
-{% endmarkdown %}</div>
+![](attachments/819203/917578.png)
 
 ### Localize (only attributes of type 'Date and time')
 
@@ -121,8 +108,6 @@ The default value property defines the value of this attribute when an object is
 
 The source determines whether the value of the attribute is stored in the database or calculated by a microflow.
 
-<div class="alert alert-warning">{% markdown %}
-
 Take note of the following things when using calculated attributes:
 
 *   Each time an object with a calculated attribute is retrieved, the attribute is calculated. Depending on the complexity of the microflow and the number of objects you retrieve this can have impact on performance.
@@ -131,16 +116,10 @@ Take note of the following things when using calculated attributes:
 
 *   It is not possible to sort on an attribute for which this property is used, because sorting is done by the database engine.
 
-{% endmarkdown %}</div>
-
 ### Microflow (only if source is microflow)
 
 If the source is a computation, the microflow property defines which microflow defines this computation to calculate the value of the attribute when the object is retrieved. The microflow should have a parameter of the type of the entity of the attribute and it should return a value with the same type as the attribute.
 
-<div class="alert alert-info">{% markdown %}
-
 In a webshop you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
 
 ![](attachments/819203/917570.png)
-
-{% endmarkdown %}</div>

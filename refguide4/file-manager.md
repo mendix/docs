@@ -5,11 +5,7 @@ space: "Reference Guide 4"
 ---
 A file manager is used to upload and/or download files.
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/819203/917529.png)
-
-{% endmarkdown %}</div>
 
 It must be placed into a table cell within a data view. This data view must be connected to the entity System.FileDocument or a specialization thereof.
 
@@ -21,15 +17,9 @@ This property indicates how the end user can interact with the file manager.
 
 | Value | Description |
 | --- | --- |
-| Upload
- | The file manager can only be used to upload a file.
- |
-| Download
- | The file manager can only be used to download a file.
- |
-| Both
- | The file manager can be used to upload, and to download a file.
- |
+| Upload | The file manager can only be used to upload a file. |
+| Download | The file manager can only be used to download a file. |
+| Both | The file manager can be used to upload, and to download a file. |
 
 _Default value:_ Both
 

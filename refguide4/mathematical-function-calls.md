@@ -16,8 +16,6 @@ Type: each parameter must be of a numerical type; Integer, Float, Currency, Auto
 
 Returns the largest number in the list. If any of the supplied input parameters is of type Float, Currency or Long, the resulting value will become Float/Currency. Otherwise it will be of type Integer.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 max(5,1,5,6.7)
 
@@ -32,8 +30,6 @@ returns:
 
 of type "Float/Currency".
 
-{% endmarkdown %}</div>
-
 ## min
 
 Determines the smallest number in a list.
@@ -46,8 +42,6 @@ Type: each parameter must be of a numerical type; Integer, Float, Currency, Auto
 ### Output
 
 Returns the smallest number in the list. If any of the supplied input parameters is of type Float, Currency or Long, the resulting value will become Float/Currency. Otherwise it will be of type Integer.
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 min(5,1,5,6.7)
@@ -63,8 +57,6 @@ returns:
 
 of type "Integer".
 
-{% endmarkdown %}</div>
-
 ## not
 
 Negation for true/false statements.
@@ -76,8 +68,6 @@ A statement that evaluates to true of false.
 ### Output
 
 Returns the opposite of what the statement would normally return. In the case of true, it would return false, in the case of false, it would return true.
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 not('hello' = 'hallo')
@@ -105,8 +95,6 @@ false
 
 ```
 
-{% endmarkdown %}</div>
-
 ## round
 
 Rounds the number off to an Integer.
@@ -122,8 +110,6 @@ Type: Integer
 ### Output
 
 Rounds off to the nearest half after the decimal point. .5 is rounded up, .49 is rounded down. The second optional parameter determines the decimal point after which the number is rounded. Default setting is 1.
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 round(3.5)
@@ -148,8 +134,6 @@ returns:
 
 3.55
 
-{% endmarkdown %}</div>
-
 ## random
 
 Generates a random number between 0.0 and 1.0
@@ -159,14 +143,10 @@ Generates a random number between 0.0 and 1.0
 A random number between 0.0 and 1.0
 Type: Float/Currency
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 random()
 
 ```
-
-{% endmarkdown %}</div>
 
 ## floor
 
@@ -181,8 +161,6 @@ Type: Float, Currency or Long
 
 Same number rounded down to the nearest Integer.
 Type: Integer
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 floor(3.9)
@@ -210,8 +188,6 @@ returns:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## ceil
 
 Rounds up to an integer (everything after the decimal point is rounded up).
@@ -225,8 +201,6 @@ Type: Float, Currency or Long
 
 Same number rounded up to the nearest Integer.
 Type: Integer
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 ceil(3.2)
@@ -254,13 +228,9 @@ returns:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## pow
 
 Calculates the exponent of a number to a certain power.
-
-<div class="alert alert-warning">{% markdown %}
 
 pow dows not support negative powers, i.e.
 
@@ -283,8 +253,6 @@ if(pow(2,3)!=0 )1 div pow(2,3) else 0
 
 ```
 
-{% endmarkdown %}</div>
-
 ### Input
 
 *   A number
@@ -295,8 +263,6 @@ if(pow(2,3)!=0 )1 div pow(2,3) else 0
 ### Output
 
 The number to the power, ie n^p.
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 pow(2,3)
@@ -310,8 +276,6 @@ returns:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## abs
 
 Calculates the absolute value of a number (ie not negative).
@@ -324,8 +288,6 @@ Type: any numerical type; Integer, Float, Currency, Autonumber or Long
 ### Output
 
 The absolute value of the input, which is never negative. Corresponds to taking the square and then the square root.
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 abs(-5)
@@ -346,8 +308,6 @@ both return:
 
 ```
 
-{% endmarkdown %}</div>
-
 ## currenciesEqual
 
 ### Input
@@ -362,8 +322,6 @@ both return:
 ### Output
 
 Compares the two numbers to decimal point p, which is equal to Precision.
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 currenciesEqual(2.451, 2.452, 2)
@@ -390,8 +348,6 @@ returns:
 false
 
 ```
-
-{% endmarkdown %}</div>
 
 ## floatsEqual
 

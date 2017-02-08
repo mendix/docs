@@ -3,11 +3,8 @@ title: "Imported Web Services"
 parent: "integration"
 space: "Reference Guide 4"
 ---
-<div class="alert alert-warning">{% markdown %}
 
 This document describes imported web services. If you're looking for specific information on the imported web services screen, you can check the [Imported web service](imported-web-service) documentation.
-
-{% endmarkdown %}</div>
 
 Using imported web services, you can import a web service from an external application so they can be used in your own application. You can import web services from third parties (such as the
 [w3schools example service](http://www.w3schools.com/webservices/tempconvert.asmx?WSDL)) or from other mendix projects.

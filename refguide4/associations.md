@@ -9,16 +9,11 @@ The value of the association can only be viewed or edited from objects of the en
 
 The cardinality (or number of referred objects) of an association is indicated by the number one (`1`) or a star (`*`) at either side of the association.
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/819203/918217.png)
+
 The arrow indicates that Order is the owner of the association. The number one (`1`) and the start (`*`) indicate that one customer is associated with many orders.
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
-
 An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have owner "Default".
-
-{% endmarkdown %}</div>
 
 See below for more examples.
 
@@ -36,18 +31,12 @@ Delete behavior defines what should happen to the associated object when an obje
 
 _Default value_: delete <name of entity> object but keep <name of other entity> object(s)
 
-<div class="alert alert-info">{% markdown %}
-
 This delete behavior is used if you want to delete any associated 'Profile' when a 'Customer' is deleted:
 
 ![](attachments/819203/918143.png)
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
-
 This delete behavior is used if you want to be able to delete a 'Customer' only if it is not associated with any 'Order':
 ![](attachments/819203/918146.png)
-
-{% endmarkdown %}</div>
 
 ## Common Properties
 
@@ -85,8 +74,6 @@ This property defines whether an association has one or two owners. If there is 
 
 _Default value:_ Default
 
-<div class="alert alert-info">{% markdown %}
-
 Drawing an association from entity Order to entity Customer results in the following:
 ![](attachments/819203/918217.png)
 
@@ -108,8 +95,6 @@ In XML instances of these entities and their association look as follows. Note t
 </Customer>
 
 ```
-
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
 A many-to-many association with default ownership is created by drawing an association and then setting the 'Type' property to 'Reference set'.
 
@@ -136,8 +121,6 @@ In XML instances of these entities and their association look as follows. Note t
 
 ```
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
-
 A one-to-one association is created by setting the owner property to both (while leaving the type property at its default value 'Reference').
 
 In this example a customer can have one profile and a profile can have one customer:
@@ -161,8 +144,6 @@ In XML instances of these entities and their association look as follows. Note t
 </Customer>
 
 ```
-
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
 A many-to-many association where both entities are owners is created by setting the owner property to both and the type property to 'Reference set'.
 
@@ -197,4 +178,3 @@ In XML instances of these entities and their association look as follows. Note t
 
 ```
 
-{% endmarkdown %}</div>

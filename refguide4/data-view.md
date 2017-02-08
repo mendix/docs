@@ -8,16 +8,19 @@ The data view is a central component in Mendix applications. It is the starting 
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/917891.png)
+
 An empty data view.
 
 {% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/917889.png)
+
 A simple data view showing the number and name of one customer.
 
 {% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/917888.png)
+
 A more advanced data view with a tab control and a data grid inside.
 
 {% endmarkdown %}</div>

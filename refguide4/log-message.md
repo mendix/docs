@@ -46,11 +46,7 @@ Template defines the text of the message. The template can contain parameters th
 
 For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [microflow expressions](microflow-expressions) resulting in a string.
 
-<div class="alert alert-success">{% markdown %}
-
 With parameters you can customize your message with data specific to the situation. For example, the message "An e-mail has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer to whom an e-mail has been sent.
-
-{% endmarkdown %}</div>
 
 ### Include latest stack trace
 

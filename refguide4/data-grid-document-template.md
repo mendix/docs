@@ -5,12 +5,8 @@ space: "Reference Guide 4"
 ---
 The data grid shows a list of objects in a grid. For example, a data grid can show all the orders a customer has placed.
 
-<div class="alert alert-info">{% markdown %}
-
 [![](attachments/819203/918138.png)](data-grid-document-template)
 A data grid showing a list of orders with a description and the referenced customer name.
-
-{% endmarkdown %}</div>
 
 ## Components
 
@@ -28,11 +24,7 @@ See [Sort bar](sort-bar).
 
 The column weights are percentages separated by semi-colons that determine the widths of the columns. The weights have to add up to 100\. An alternative way of changing the widths of columns is by dragging the separating line between columns.
 
-<div class="alert alert-info">{% markdown %}
-
 In the screenshot above the column weights are 50;25;25.
-
-{% endmarkdown %}</div>
 
 ### Cell spacing
 

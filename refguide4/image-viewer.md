@@ -5,12 +5,9 @@ space: "Reference Guide 4"
 ---
 An image viewer can be used to display an image or its thumbnail.
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/819203/918195.png)
-This image viewer shows the product image.
 
-{% endmarkdown %}</div>
+This image viewer shows the product image.
 
 An image viewer must be placed in a table cell inside a data view or template grid.
 

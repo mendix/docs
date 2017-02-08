@@ -31,12 +31,9 @@ The data grid shows a list of objects in a grid. For example, a data grid can sh
 
 See [Data Grid (document template)](data-grid-document-template).
 
-<div class="alert alert-info">{% markdown %}
-
 [![](attachments/819203/918138.png)](data-grid-document-template)
-A data grid showing a list of orders with a description and the referenced customer name.
 
-{% endmarkdown %}</div>
+A data grid showing a list of orders with a description and the referenced customer name.
 
 ### Data view
 
@@ -44,12 +41,9 @@ The data view is used for showing the contents of exactly one object. If, for ex
 
 See [Data View (document template)](data-view-document-template).
 
-<div class="alert alert-info">{% markdown %}
-
 [![](attachments/819203/918139.png)](data-view-document-template)
-A data view showing orderline information.
 
-{% endmarkdown %}</div>
+A data view showing orderline information.
 
 ### Template grid
 
@@ -57,12 +51,9 @@ The template grid shows a list of objects in a tile view. For example, a templat
 
 See [Template Grid (document template)](template-grid-document-template).
 
-<div class="alert alert-info">{% markdown %}
-
 [![](attachments/819203/918137.png)](template-grid-document-template)
-A template grid showing products with name and description.
 
-{% endmarkdown %}</div>
+A template grid showing products with name and description.
 
 ## Layout widgets
 
@@ -75,12 +66,9 @@ Tables can be used both inside and outside data view or templategrid widgets.
 
 See [Table (document template)](table-document-template).
 
-<div class="alert alert-info">{% markdown %}
-
 [![](attachments/819203/918134.png)](table-document-template)
-A table with four rows and three columns. Last row containing a data view with another table.
 
-{% endmarkdown %}</div>
+A table with four rows and three columns. Last row containing a data view with another table.
 
 ### Page break
 
@@ -88,12 +76,9 @@ When inserting a page break, the current page will be cut off after the break an
 
 See [Page Break (document template)](page-break-document-template).
 
-<div class="alert alert-info">{% markdown %}
-
 [![](attachments/819203/918135.png)](page-break-document-template)
-A page break
 
-{% endmarkdown %}</div>
+A page break
 
 ### Line break
 
@@ -111,12 +96,9 @@ A dynamic label would be used for the same attributetypes as a text box in form 
 
 See [Dynamic label (document template)](dynamic-label-document-template).
 
-<div class="alert alert-info">{% markdown %}
-
 [![](attachments/819203/918131.png)](dynamic-label-document-template)
-A dynamic label linking to a customer name.
 
-{% endmarkdown %}</div>
+A dynamic label linking to a customer name.
 
 ### Dynamic image
 
@@ -124,12 +106,9 @@ A dynamic image can be used to show a System.Image. If the image is not availabl
 
 See [Dynamic Image (document template)](dynamic-image-document-template).
 
-<div class="alert alert-info">{% markdown %}
-
 [![](attachments/819203/918132.png)](dynamic-image-document-template)
-A dynamic image inside a table cell, showing the preset default image.
 
-{% endmarkdown %}</div>
+A dynamic image inside a table cell, showing the preset default image.
 
 ## Static data widgets
 
@@ -141,12 +120,9 @@ A static label shows a line of static text. You can use it to place custom text 
 
 See [Static Label (document template)](static-label-document-template).
 
-<div class="alert alert-info">{% markdown %}
-
 [![](attachments/819203/918130.png)](static-label-document-template)
-A label with text 'Customer name'.
 
-{% endmarkdown %}</div>
+A label with text 'Customer name'.
 
 ### Title
 
@@ -160,12 +136,9 @@ A static image shows a predefined image. It can be put either in- or outside a d
 
 See [Static Image (document template)](static-image-document-template).
 
-<div class="alert alert-info">{% markdown %}
-
 [![](attachments/819203/918133.png)](static-image-document-template)
-A static image inside a table cell.
 
-{% endmarkdown %}</div>
+A static image inside a table cell.
 
 ## Style
 

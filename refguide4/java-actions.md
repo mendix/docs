@@ -5,13 +5,9 @@ space: "Reference Guide 4"
 ---
 With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow using the [Java Action Call](java-action-call).
 
-<div class="alert alert-info">{% markdown %}
-
 Each Java action, defined in the modeler, corresponds with a file <name of Java action>.java in subdirectory javasource/<module name>/actions of the project directory.
 
 The skeletons of these .java files are generated automatically when you deploy for Eclipse (in the Project menu). For more information about creating the Java code in these files see [Java Programming](java-programming).
-
-{% endmarkdown %}</div>
 
 ## Properties
 

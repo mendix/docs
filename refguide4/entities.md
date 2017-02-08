@@ -13,8 +13,6 @@ The domain model editor uses the following symbols for visualization on entities
 | --- | --- |
 | ![](attachments/819203/917594.png) | This entity has one or more event handlers. |
 
-<div class="alert alert-info">{% markdown %}
-
 Let us say you have a collection of CDs like the one in the table below.
 
 | Title | Artist |
@@ -23,8 +21,6 @@ Let us say you have a collection of CDs like the one in the table below.
 | Exodus | Bob Marley & The Wailers |
 
 The rows in the table are CDs. The type of the two rows is 'CD' and this is the entity name. A specific CD like 'How to Dismantle an Atomic Bomb' of the band U2 is called an objectof the entity 'CD'. Characteristics like the title and artist are called attributes.
-
-{% endmarkdown %}</div>
 
 ## Components
 
@@ -62,11 +58,7 @@ The image property can be used to associate the entity with an image. In the dom
 
 Define whether instances of this entity can be stored in the database. See [persistability](persistability) for more information about this property. Non-persistable entities are painted orange instead of blue to indicate the difference.
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/4194533/4325380.png)
-
-{% endmarkdown %}</div>
 
 ## Inheritance Properties
 
@@ -76,12 +68,9 @@ An entity can be a more specialized version of a general entity. This means that
 
 The generalization specifies the entity of which this entity derives her properties (attributes, assciations, events, etc.). This is used when entities have common attributes and can be generalized using a super entity. Using this feature it is possible to derive functionality from the System module like images from the entity 'Image' and files from the entity 'FileDocument'. In object oriented programming (OOP) the generic term for generalization and specialization is called inheritance.
 
-<div class="alert alert-info">{% markdown %}
-
 This property can be used in a situation where one has an entity 'Student' and an entity 'Professor' which have some generic properties. They both have a name, telephone number and email address and can be a member of one or more courses. Both entities are generalized in the entity 'Member'. Contrary this means that the entity 'Member' can be specialized in the entity 'Student' and the entity 'Professor'.
-![](attachments/819203/917900.png)
 
-{% endmarkdown %}</div>
+![](attachments/819203/917900.png)
 
 ## System Members Properties
 

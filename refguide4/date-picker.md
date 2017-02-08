@@ -5,12 +5,9 @@ space: "Reference Guide 4"
 ---
 A date picker can be used to display and/or edit a date value. It takes into account the language setting to display a localized calendar.
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/819203/917552.png)
-This date picker allows the end-user to set the birth date of the customer.
 
-{% endmarkdown %}</div>
+This date picker allows the end-user to set the birth date of the customer.
 
 A date picker must be placed in a table cell within a data view or template grid and connected to an attribute of type Date. The connected attribute is shown in blue and between brackets inside the date picker.
 
@@ -52,8 +49,6 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 | z | 4 | Pacific Standard Time | Time zone |
 | Z | 4 | GMT-04:0 0 | Time zone offset |
 
-<div class="alert alert-info">{% markdown %}
-
 | Format | Example output |
 | --- | --- |
 | `EEEE d MMMM yyy G, h:mm a ss's` | Tuesday 29 March 2011 AD, 1:37 PM 48s |
@@ -61,8 +56,6 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 | `yyy D KK:mm` | 2011 88 01:26 |
 | `EEEE MMMM d yyy` | Tuesday March 29 2011 |
 | `EEE, MMM d, ''yy` | Wed, Jul 4, '01 |
-
-{% endmarkdown %}</div>
 
 ### Placeholder text (only in mobile forms)
 

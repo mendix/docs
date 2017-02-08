@@ -5,12 +5,11 @@ space: "Reference Guide 4"
 ---
 The generate-document action can be used to create a document based on a [template](document-templates).
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/819203/918200.png)
+
 Generate document
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">{% markdown %}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 

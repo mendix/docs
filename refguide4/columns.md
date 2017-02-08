@@ -57,8 +57,6 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 | m | 1..2 | 59 | Minute, use one or two for zero padding |
 | s | 1..2 | 12 | Second, use one or two for zero padding |
 
-<div class="alert alert-info">{% markdown %}
-
 | Format | Example output |
 | --- | --- |
 | `EEEE d MMMM yyy G, h:mm a ss's` | Tuesday 29 March 2011 AD, 1:37 PM 48s |
@@ -66,8 +64,6 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 | `yyy D KK:mm` | 2011 88 01:26 |
 | `EEEE MMMM d yyy` | Tuesday March 29 2011 |
 | `EEE, MMM d, ''yy` | Wed, Jul 4, '01 |
-
-{% endmarkdown %}</div>
 
 ## Behavior Properties
 

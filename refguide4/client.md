@@ -44,13 +44,9 @@ The toolbar is found at the top of your browser window and contains five icons a
 
 Next to this toolbar one can find the menu bar if the application was designed to include menu items. These can be used to navigate through the application.
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/4194601/4325416.png)
 
 The example below allows you to navigate to the pages 'Product' or 'Order'. Alternatively, the bar can guide you to the Administration related pages listed in the dropdown.
-
-{% endmarkdown %}</div>
 
 Beneath the menu bar is the address bar. This bar tells you exactly where you are in the application.
 
@@ -114,13 +110,9 @@ What they all have in common is that they contain 'widgets', which is a term tha
 
 Aside from widgets a data view will nearly always have several buttons situated at the bottom of the form. Most commonly these are the 'Save' and 'Cancel' buttons.
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/4194601/4325410.png)
 
 The example above displays a relatively simple data view to edit a user. It contains text-box, date-picker and check-box widgets. There is also a second tab for address information and the customary 'Save' and 'Cancel' buttons.
-
-{% endmarkdown %}</div>
 
 ### Keyboard shortcuts
 

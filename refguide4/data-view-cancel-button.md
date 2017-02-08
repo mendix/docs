@@ -19,15 +19,11 @@ An optional image that appears on the button.
 
 The class property allows you to specify a cascading style sheet (CSS) class for the button. This class will be applied to the button in the browser and the button will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the button.
 
-<div class="alert alert-warning">{% markdown %}
-
 Note that the styling is applied in the following order:
 
 1.  Default styling defined by the theme the project uses.
 2.  The 'Class' property of the button.
 3.  The 'Style' property of the button.
-
-{% endmarkdown %}</div>
 
 ### Style
 

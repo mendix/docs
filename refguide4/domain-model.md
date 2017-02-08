@@ -5,13 +5,9 @@ space: "Reference Guide 4"
 ---
 The domain model is a data model that describes the information in your application domain in an abstract way. It is central to the architecture of your application. The domain model consists of [entities](entities) and their relations represented by [associations](associations).
 
-<div class="alert alert-info">{% markdown %}
-
 Here is a domain model that defines customers and orders. The line between them is an association. The words 'Customer' and 'Order' are the names of the entities. The words below the entity names are the attributes of the entities.
 
 ![](attachments/819203/917531.png)
-
-{% endmarkdown %}</div>
 
 ## Components
 
@@ -26,8 +22,6 @@ See [associations](associations).
 ## Technical Appendix
 
 In the database every entity is stored in one separate table and has columns for the attributes defined in the Modeler, the system attributes and a unique identifier for the object. If an entity has specializations there is also a column indicating which specialization the object belongs to. An association is stored in a cross-table with the identifiers (ID) of both objects.
-
-<div class="alert alert-info">{% markdown %}
 
 Take a look at the following domain model.
 
@@ -53,5 +47,3 @@ The entity 'Order' is stored in the table 'module$order' which is shown below. I
 | --- | --- | --- |
 | 5 | 5 | 2009-11-27 09:56:45.099 |
 | 8 | 8 | 2008-04-01 08:10:45.053 |
-
-{% endmarkdown %}</div>

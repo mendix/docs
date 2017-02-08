@@ -15,7 +15,7 @@ Only persistable entities can define indexes as they are database concepts. Inde
 
 Changing and deleting objects of an entity with indexes takes longer, because the index needs to be updated in addition to the actual data. Therefore, for attributes which are seldomly used as criteria in a search or query, only create an index if the increase in retrieval performance justifies the decrease in update performance.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{% endmarkdown %}</div>
 
 Customers are usually retrieved by a combination of zipcode and housenumber, so _one_ index is set on the combination of the attributes.
 
@@ -29,5 +29,3 @@ WHERE c.zipcode = $ParameterZipCode AND c.housenumber = $ParameterHouseNumber
 SELECT c.name AS CustomerName
 
 ```
-
-{% endmarkdown %}</div>

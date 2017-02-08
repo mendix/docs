@@ -5,12 +5,9 @@ space: "Reference Guide 4"
 ---
 The data grid shows a list of objects in a grid. For example, a data grid can show all the orders a customer has placed. Using controls provided by the data grid you can browse, search and edit those objects.
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/819203/917901.png)
-A data grid showing names and ages of employees.
 
-{% endmarkdown %}</div>
+A data grid showing names and ages of employees.
 
 ## Components
 

@@ -23,15 +23,11 @@ Operation defines which operation of the web service is called.
 
 Override location defines whether to override the location where the web service is called.
 
-<div class="alert alert-info">{% markdown %}
-
 When calling a web service using a call-web-service activity, the location of the web service is determined as follows.
 
 1.  If the location is overridden in the call-web-service activity, the location specified in that action is used.
 2.  If the service that defines the operation has a location constant defined, the value of that constant is used.
 3.  Otherwise, the location as specified in the WSDL of the imported web service is used.
-
-{% endmarkdown %}</div>
 
 ### Location
 

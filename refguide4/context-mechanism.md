@@ -47,11 +47,7 @@ Apart from constraining the grid the entity path will also be used when creating
 
 If you want, you can achieve the same effect by hand by creating a microflow button that simulates the New button and also sets the association to the appropriate value. For the example above, the microflow would look like this:
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/819203/918053.png)
-
-{% endmarkdown %}</div>
 
 The order is created, the association with customer is set and the form to edit the order is opened. Of course, you can perform additional initialization in this microflow as well.
 

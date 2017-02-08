@@ -5,12 +5,9 @@ space: "Reference Guide 4"
 ---
 With the import-XML action you can import the data stored in a XML document into [domain model](domain-model) entities.
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/819203/918200.png)
-Generate document
 
-{% endmarkdown %}</div>
+Generate document
 
 ## Input Properties
 

@@ -65,9 +65,6 @@ Conversion microflows of value elements are executed before these value elements
 
 This property specifies whether the value element is used as search key to obtain an object. If a value element is used as search key, you must specify the attribute it maps to. The XML value will be matched to the value of this attribute when searching for an object.
 
-<div class="alert alert-info">{% markdown %}
+The map element to entity screen:
 
 ![](attachments/819203/918233.png)
-The map element to entity screen
-
-{% endmarkdown %}</div>

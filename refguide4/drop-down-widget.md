@@ -5,12 +5,9 @@ space: "Reference Guide 4"
 ---
 A drop-down widget can be used to display and/or select an enumeration value.
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/819203/917539.png)
-This drop-down widget allows the end-user to select the state of the customer.
 
-{% endmarkdown %}</div>
+This drop-down widget allows the end-user to select the state of the customer.
 
 A drop-down widget must be placed in a table cell within a data view, or within a template grid, and must be connected to an attribute of type Enumeration. The connected attribute is shown in blue, and between brackets, inside the text box.
 

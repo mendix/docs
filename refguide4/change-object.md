@@ -5,8 +5,6 @@ space: "Reference Guide 4"
 ---
 Change Object can be used to change the members of an object. This can be done with or without commiting, with or without events.
 
-<div class="alert alert-info">{% markdown %}
-
 Before a customer is saved you want to make sure all characters of the zip code are capitals. You do this by creating an [event handler](event-handlers) for the entity 'Customer'. The microflow that is used as event handler is shown below. It consists of a parameter and a change object activity. The parameter contains the current customer being saved.
 
 ![](attachments/819203/918094.png)
@@ -20,7 +18,7 @@ The properties are configured as below.
 | Refresh in browser | False | Objects of the entity 'Customer' are automatically refreshed by the server when a object is committed in a form |
 | Change member action _set_ on _zipcode_ | toUpperCase($InputCustomer/zipcode) | A [microflow expression](microflow-expressions) can be used to set all characters to upper case (capitals) |
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">{% markdown %}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
@@ -44,13 +42,9 @@ Commit type defines the way the object is committed.
 | Yes without event handlers | The object is saved in the database, but the [event handlers](event-handlers) are not triggered |
 | No | The object is changed without being saved in the database |
 
-<div class="alert alert-success">{% markdown %}
-
 If a microflow is triggered from a data view (for example by the 'on change' of an text field) you often do not want to commit the changes you make to the data view object yet. The end user can press the Save or Cancel button to commit or rollback the changes.
 
 However, if the microflow is triggered from a data grid button that just performs an operation on a selection you will want to commit the changes to avoid losing them.
-
-{% endmarkdown %}</div>
 
 _Default value:_ No
 

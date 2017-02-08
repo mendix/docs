@@ -5,12 +5,9 @@ space: "Reference Guide 4"
 ---
 The data view is used for showing the contents of exactly one object. If, for example, you want to show details of a single orderline this is most easily achieved with a data view. The data view typically contains a table with static labels and dynamic data widgets like a dynamic label. In more complex templates, a data view can contain data grids and other data views for related objects.
 
-<div class="alert alert-info">{% markdown %}
-
 [![](attachments/819203/918139.png)](data-view-document-template)
-A data view showing orderline information.
 
-{% endmarkdown %}</div>
+A data view showing orderline information.
 
 ## Common Properties
 

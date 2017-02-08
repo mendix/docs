@@ -7,13 +7,9 @@ A loop is used to iterate over a list of objects. For each object the flow insid
 
 The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue.
 
-<div class="alert alert-info">{% markdown %}
-
 If you have a situation where you have a list of objects of the entity 'OrderLine' and you want to set the purchase date for every object, you can use a loop with a change activity in it that sets the purchase date.
 
 ![](attachments/819203/917942.png)
-
-{% endmarkdown %}</div>
 
 ## Input Properties
 

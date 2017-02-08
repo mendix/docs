@@ -3,11 +3,8 @@ title: "Imported web service"
 parent: "imported-web-services"
 space: "Reference Guide 4"
 ---
-<div class="alert alert-warning">{% markdown %}
 
 This document describes the properties of an imported web service. If you want a general overview of imported web services, you can check the [Imported web services](imported-web-services) overview documentation.
-
-{% endmarkdown %}</div>
 
 ## General
 

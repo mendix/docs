@@ -5,12 +5,9 @@ space: "Reference Guide 4"
 ---
 A label shows a line of static text. You can use it to place custom text on your form. You can change the look of the label by changing the render mode of the [Table Cell](table-cell) in which it is placed.
 
-<div class="alert alert-info">{% markdown %}
+The label is placed in a cell here and the render mode of the cell is header:
 
 ![](attachments/819203/917887.png)
-The label is placed in a cell here and the render mode of the cell is header.
-
-{% endmarkdown %}</div>
 
 A label must be placed in a table cell.
 

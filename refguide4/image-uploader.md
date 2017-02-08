@@ -11,12 +11,9 @@ The possibility to add the image uploader to mobile forms was added in 4.3.0\. B
 
 An image uploader is used to upload images to the server. It also generates a thumbnail of the uploaded image. The uploaded image or its thumbnail can be shown by use of the image viewer.
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/819203/917886.png)
-The image uploader is placed in a nested data view here. The Profile entity is a specialization of System.Image.
 
-{% endmarkdown %}</div>
+The image uploader is placed in a nested data view here. The Profile entity is a specialization of System.Image.
 
 An image uploader must be placed in a table cell within a data view. This data view must be connected to entity System.Image or a specialization thereof.
 

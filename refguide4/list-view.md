@@ -5,12 +5,9 @@ space: "Reference Guide 4"
 ---
 The list view is similar to the template grid available in web forms. The list view shows a list of objects arranged vertically. Each object is shown using a template. During development, the object template is defined by placing a widget inside the list view's dropzone. The list of objects shown is determined by a datasource.
 
-<div class="alert alert-info">{% markdown %}
+An empty list view:
 
 ![](attachments/4194325/4325382.png)
-An empty list view.
-
-{% endmarkdown %}</div>
 
 ## General
 

@@ -5,17 +5,13 @@ space: "Reference Guide 4"
 ---
 An external link can be used to display a clickable link that redirects to a given URL. This can either be a static URL or a dynamic URL that is determined by an attribute of an entity. The caption can also be static or dynamic.
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/819203/917545.png)
+
 This is what a static external link looks like in the modeler.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
-
 ![](attachments/819203/917542.png)
-This is what a dynamic external link looks like in the modeler. The properties 'Caption Attribute', and 'Url Attribute', are both connected to attributes of the entity  'Company'.
 
-{% endmarkdown %}</div>
+This is what a dynamic external link looks like in the modeler. The properties 'Caption Attribute', and 'Url Attribute', are both connected to attributes of the entity  'Company'.
 
 An external link must always be placed into a table cell. If the caption, or URL, of the external link is dynamic, then the containing table must also be placed within a data view, or within a template grid. The connected attributes are shown in blue, and between brackets, inside the text box.
 

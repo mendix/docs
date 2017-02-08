@@ -5,12 +5,7 @@ space: "Reference Guide 4"
 ---
 The input reference set selector can be used to select the items for the reference set connected to the enclosing object.
 
-<div class="alert alert-info">{% markdown %}
-
 ![](attachments/4194314/4325379.png)
-An input reference set selector
-
-{% endmarkdown %}</div>
 
 ## Common Properties
 

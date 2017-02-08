@@ -17,9 +17,7 @@ This property determines the ratio of the panes in percentages. Both panes are p
 
 <div class="alert alert-info">{% markdown %}
 
-15;85
-
-This will result in a horizontal split pane with 15 percent of the height reserved for the upper pane and 85 percent reserved for the lower pane.
+15;85 - this will result in a horizontal split pane with 15 percent of the height reserved for the upper pane and 85 percent reserved for the lower pane.
 
 {% endmarkdown %}</div>
 

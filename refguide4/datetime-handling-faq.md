@@ -43,11 +43,11 @@ You can download the DateTimeLibrary App Store module to get an implementation f
 
 Per attribute of type DateTime you can specify whether you want the date and time to be localized. Both localized and non-localized attributes are stored in UTC but only localized attributes are shown in the time zone of the user when displaying (or picking) their value, for example in the client or in generated documents. Use non-localized attributes if you are not interested in the time component (e.g. birthdays) or if you want a date to look exactly the same all over the world. Otherwise, the date could shift because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the USA.
 
-### If I assign a non-localized date the value of token: `[%CurrentDateTime%]` what should I be seeing in the client if I am in EST? It is currently 14:15 (EST), should I see that time or 19:15?
+### If I assign a non-localized date the value of token [%CurrentDateTime%] what should I be seeing in the client if I am in EST? It is currently 14:15 (EST), should I see that time or 19:15?
 
 You should see 19:15, the non-localized date will always show as UTC time. The current DateTime is simply a moment in time and obviously happens at the same moment everywhere on earth, but for non localized dates it would be displayed as UTC.
 
-### As a user I press a Microflow button and want to compare a non-localized date attribute with a localized date attribute. What should the platform do in case of this expression: `($entity/localizeddate > $entity/nonlocalizeddate)`, for example with a localizeddate at 14:00 EST and the nonlocalizeddate at 14:15 UTC?
+### As a user I press a Microflow button and want to compare a non-localized date attribute with a localized date attribute. What should the platform do in case of this expression: ($entity/localizeddate > $entity/nonlocalizeddate), for example with a localizeddate at 14:00 EST and the nonlocalizeddate at 14:15 UTC?
 
 It will simply compare the UTC values of the dates. See a previous question where we said that non-localized date is purely a display setting. So in this case 14:00 EST is greater than 14.15 UTC, because it really compares 19:00 UTC with 14:15 UTC.
 
@@ -55,11 +55,11 @@ It will simply compare the UTC values of the dates. See a previous question wher
 
 If you want to compare times of the day between different time zones, meaning you would like a localized date at 14.00 EST to be SMALLER than a non-localized date at 14:15 UTC, then you will have to format the dates as a string or integer and compare the times that way. Note that the actual moment 14:15 UTC will occur sooner than 14.00 EST and you should **really** be asking yourself why you're doing this. There may be valid reasons but most are not.
 
-### What should be the outcome (and why) if I run the following expression in EST: `[%BeginOfCurrentDay%] > [%BeginOfCurrentDayUTC%]` ?
+### What should be the outcome (and why) if I run the following expression in EST: [%BeginOfCurrentDay%] > [%BeginOfCurrentDayUTC%] ?
 
 It depends on when you run this statement. Usually it will return true because the beginning of the current day in UTC is sooner (so smaller) than the begin of the current day in EST. However, if you run this when the day already changed in UTC time but not in EST time (so between midnight and 05:00 UTC, or 19:00 and midnight EST) then it will return false, because the begin of the current day will be a day later in the UTC timezone.
 
-### If I am comparing something with a `[%CurrentDateTime%]` token in a DataGrid, which time should it use as a constraint for a localized and for a non-localized date? So if I do an XPath with the following constraint `[LocalDateAttr > [%CurrentDateTime%]` or the following constraint `[NotLocalDateAttr > [%CurrentDateTime%]` what should I expect in the result when it is 12:10pm in boston ET? Should it show all records with a date after 12:10 or all records after 17:10?
+### If I am comparing something with a [%CurrentDateTime%] token in a DataGrid, which time should it use as a constraint for a localized and for a non-localized date? So if I do an XPath with the following constraint [LocalDateAttr > [%CurrentDateTime%] or the following constraint [NotLocalDateAttr > [%CurrentDateTime%] what should I expect in the result when it is 12:10pm in boston ET? Should it show all records with a date after 12:10 or all records after 17:10?
 
 Whether something is a local date or not is irrelevant in this case. Note that there is no UTC variant of the `[%CurrentDateTime%]` token because this wouldn't make any sense, a moment in time is the same everywhere in the world, even if it may be displayed differently depending on the place. To answer the question, this is yes to both. It will show all records after 12:10 EST (for the localized dates) which is the same as 17:10 UTC (which is how your non-localized dates would show), but these times are the same.
 

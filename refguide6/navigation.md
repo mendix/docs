@@ -17,9 +17,15 @@ The Navigation document defines the navigation structure of the application for 
 
 At the heart of the navigation model in Mendix are four navigation profiles: Desktop, Tablet, Phone and Offline device. You can define separate home pages and menus for each of these profiles. The Desktop profile is always enabled, while Tablet, Phone, and Offline device can be disabled if you do not want to use them. Users that access the application via a particular device type are automatically redirected to the home page of the appropriate profile (see 'Redirection to profiles' below).
 
+<div class="alert alert-info">{% markdown %}
+
+In Mendix 6.10.4 the Offline device profile is replaced by the [Hybrid phone profile](hybrid-phone-profile) and the [Hybrid tablet profile](hybrid-tablet-profile) is introduced. All settings from the Offline device profile are automatically copied to the Hybrid phone profile.
+
+{% endmarkdown %}</div>
+
 The device type of the currently logged in user is available in [microflows](microflows) as the variable `$currentDeviceType`. The type of this variable is [enumeration](enumerations) 'System.DeviceType', which has values 'Phone', 'Tablet' and 'Desktop'. You can use the `$currentDeviceType` variable to perform different actions based on the device type. Typical usage is to show different pages based on the device type.
 
-## Offline device
+## Offline device and hybrid profiles
 
 <div class="alert alert-warning">{% markdown %}
 
@@ -27,7 +33,7 @@ The documentation in this section describes a new feature that is still in beta,
 
 {% endmarkdown %}</div> 
 
-The Offline device profile is different from the other profiles in that it does more than simply redirect a user based on the user's device type. This profile is designed to allow users to continue using their Mendix application even in the absence of an internet connection, though certain restrictions apply. An overview of the ramifications of running an offline device profile can be found [here](offline). 
+The Offline device, Hybrid tablet and Hybrid phone profiles are different from the other profiles in that they do more than simply redirect a user based on the user's device type. These profiles are designed to allow users to continue using their Mendix application even in the absence of an internet connection, though certain restrictions apply. An overview of the ramifications of running an offline device profile can be found [here](offline). 
 
 ## Redirection to profiles
 

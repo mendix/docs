@@ -11,11 +11,11 @@ The documentation in this section describes a new feature that is still in beta,
 
 
 
-We define an offline application as the portion of a Mendix app that is accessible through the [Offline device](offline-device-profile) [profile](navigation). Pages available in this profile can be viewed without an internet connection. Consequently, they are subject to a number of restrictions.
+We define an offline application as the portion of a Mendix app that is accessible through the [Offline device](offline-device-profile) [profile](navigation). For Mendix 6.10.4 or later the offline device profile is replaced by the [Hybrid tablet profile](hybrid-tablet-profile) and the [Hybrid phone profile](hybrid-phone-profile). Offline support must be enabled for the latter two profiles. Pages available in these profile can be viewed without an internet connection. Consequently, they are subject to a number of restrictions.
 
 ## Availability
 
-To access the Offline device profile, you need to have a mobile device that runs a correctly configured [PhoneGap](http://phonegap.com/) hybrid application. The app will require an internet connection the first time it is opened in order to download the necessary resources from the server. After the initial synchronization the data will remain available in the app, even without an internet connection. Please note that the offline profile will be used, whether or not an internet connection is actually available. Which profiles is used depends on the PhoneGap app settings, not the connection status of the device.
+To access the offline application, you need to have a mobile device that runs a correctly configured [PhoneGap](http://phonegap.com/) hybrid application. The app will require an internet connection the first time it is opened in order to download the necessary resources from the server. After the initial synchronization the data will remain available in the app, even without an internet connection. Please note that the offline profile will be used, whether or not an internet connection is actually available. Which profiles is used depends on the PhoneGap app settings, not the connection status of the device.
 
 ## Synchronization
 

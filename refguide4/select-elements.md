@@ -18,6 +18,7 @@ In this part you can select which elements from the XML you wish to map to your 
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/918232.png)
+
 The select elements screen.
 
 {% endmarkdown %}</div>

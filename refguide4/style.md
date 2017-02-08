@@ -22,6 +22,7 @@ Widgets/Components for which the font tab page is visible:
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/918095.png)
+
 The font tab page in the style editor.
 
 {% endmarkdown %}</div>
@@ -41,6 +42,7 @@ Widgets/Components for which the cell styling tab page is visible:
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/918102.png)
+
 The cell styling tab page in the style editor.
 
 {% endmarkdown %}</div>
@@ -52,6 +54,7 @@ The custom styles tab page is always visible for widgets/components that allow s
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/918104.png)
+
 The custom styles tab page in the style editor.
 
 {% endmarkdown %}</div>

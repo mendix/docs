@@ -13,6 +13,7 @@ Mendix will resolve this issue in a future version. For now, you have to repair 
 This script only works on Oracle Database 11_g_ Release 2 or higher!
 
 {% endmarkdown %}</div>
+
 ```sql
 BEGIN
   FOR cur_rec IN (SELECT c.constraint_name, c.table_name, LISTAGG('"' || cc.column_name || '"', ',') WITHIN GROUP (ORDER BY cc.position) AS column_names

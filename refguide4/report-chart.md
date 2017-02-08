@@ -23,16 +23,11 @@ With this property you can choose the type of the report chart. The following ty
 
 | Name | Layout |
 | --- | --- |
-| VerticalBars
- | ![](attachments/4194613/4325424.png) |
+| VerticalBars | ![](attachments/4194613/4325424.png) |
 | VerticalBars3D | ![](attachments/4194613/4325425.png) |
-| HorizontalBars
- | ![](attachments/4194613/4325426.png)
- |
-| Lines
- | ![](attachments/4194613/4325427.png) |
-| Area
- | ![](attachments/4194613/4325429.png) |
+| HorizontalBars | ![](attachments/4194613/4325426.png) |
+| Lines | ![](attachments/4194613/4325427.png) |
+| Area | ![](attachments/4194613/4325429.png) |
 
 ## Common Properties
 
@@ -50,11 +45,7 @@ See [Widget Properties](widget-properties).
 
 ## Horizontal axis Properties
 
-<div class="alert alert-warning">{% markdown %}
-
 If the chart type is HorizontalBars, the axisses are swapped, and these properties apply to the vertical axis instead of the horizontal axis.
-
-{% endmarkdown %}</div>
 
 ### Caption
 
@@ -70,11 +61,7 @@ If the data set column of the horizontal axis has type DateTime, through this pr
 
 ## Vertical axis Properties
 
-<div class="alert alert-warning">{% markdown %}
-
 If the chart type is HorizontalBars, the axisses are swapped, and these properties apply to the horizontal axis instead of the vertical axis.
-
-{% endmarkdown %}</div>
 
 ### Caption
 

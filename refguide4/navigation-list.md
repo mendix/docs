@@ -8,6 +8,7 @@ A navigation list can be used to attach an action to an entire row. Such a row i
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/4194318/4325378.png)
+
 A navigation list with three empty rows.
 
 {% endmarkdown %}</div>

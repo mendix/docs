@@ -41,15 +41,9 @@ Data Set Access shows for each [data set](data-sets) (used for [reporting](repor
 
 | Value | Description |
 | --- | --- |
-| Full access
- | No constraint applies to the parameters for the data set, and all eventual range parameters are allowed.
- |
-| Limited access
- | At least one constraint applies to the parameters for the data set, or at least one range parameter is not allowed.
- |
-| No access
- | Users with this module role have no access to the data set.
- |
+| Full access | No constraint applies to the parameters for the data set, and all eventual range parameters are allowed. |
+| Limited access | At least one constraint applies to the parameters for the data set, or at least one range parameter is not allowed. |
+| No access | Users with this module role have no access to the data set. |
 
 <div class="alert alert-warning">{% markdown %}
 

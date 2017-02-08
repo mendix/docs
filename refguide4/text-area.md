@@ -8,6 +8,7 @@ A text area can be used to display and/or edit a long text value that can be spl
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/917556.png)
+
 This text area allows the end-user to set the description of the product.
 
 {% endmarkdown %}</div>

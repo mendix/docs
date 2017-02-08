@@ -8,6 +8,7 @@ Tables can be used to change the layout of the form. They contain a number of ro
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/917524.png)
+
 This is how the layout of a form can be altered with use of tables.
 
 {% endmarkdown %}</div>

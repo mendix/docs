@@ -6,7 +6,7 @@ space: "Reference Guide 4"
 With a RIGHT OUTER JOIN construction, the query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the join-predicate. If the association exists and the join-predicate is satisfied, column values for each matched pair of rows of A and B are combined into a result row.
 However, in contrast to the INNER JOIN construction, rows from entity B that do not match entity A, will also be returned. When columns of entity A are specified, these columns contain a null value for these rows.
 
-The syntax is as following:
+The syntax is the following:
 
 ```
 RIGHT [ OUTER ] JOIN entity_path [ ON <constraint> ]

@@ -8,6 +8,7 @@ When inserting a page break, the current page will be cut off after the break an
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/918135.png)
+
 A page break
 
 {% endmarkdown %}</div>

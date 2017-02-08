@@ -8,6 +8,7 @@ A microflow trigger can be used to create a button that starts a microflow on a 
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/917520.png)
+
 This microflow trigger retrieves an address that belongs to the given zip code.
 
 {% endmarkdown %}</div>

@@ -12,8 +12,6 @@ In XPath, several keywords and system variables can be used called as a comparis
 
 Either of these keywords can be used to check whether an attribute has a value (any value) or if it has been left empty.
 
-<div class="alert alert-info">{% markdown %}
-
 See the following query:
 
 ```
@@ -23,11 +21,7 @@ See the following query:
 
 This query returns all customers whose name is not known to the system.
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
-
 These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. Read [this page](xpath) for more information on how to constrain on associations.
-
-{% endmarkdown %}</div>
 
 ## System variables
 
@@ -77,16 +71,12 @@ Period related (always use these tokens in combination with the tokens above)
 
 These variables must be used as string values, placed between two quotes. Time related tokens combined with period related tokens must be placed within one string. See example 3.
 
-<div class="alert alert-info">{% markdown %}
-
 ```
 //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]']
 
 ```
 
 This query returns only customers who have registered since the beginning of this week.
-
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
 ```
 //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]' and DateRegistered < '[%EndOfCurrentWeek%]']
@@ -95,16 +85,12 @@ This query returns only customers who have registered since the beginning of thi
 
 This query returns only customers who have registered this week.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
-
 ```
 //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
 
 ```
 
 This query returns only customers who have registered in the past three years.
-
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
 ```
 //System.User[System.UserRoles = '[%UserRole_Administrator%]']
@@ -113,8 +99,4 @@ This query returns only customers who have registered in the past three years.
 
 This query returns users with the role Administrator
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
-
 Because system variables are written as a string (between quotes)it is not possible to use parentheses to group expressions.
-
-{% endmarkdown %}</div>

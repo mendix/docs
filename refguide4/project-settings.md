@@ -119,7 +119,7 @@ When running from the Modeler or from Eclipse the certificates will be used auto
 
 Certificates can be installed in the Windows Certificate Store using the 'Install Certificate...' wizard in the 'View details' form. This can be useful when trying to access a WSDL-file using a https connection which requires a client certificate.
 
-{% endmarkdown %}</div><div class="alert alert-success">{% markdown %}
+{% endmarkdown %}
 
 When an SSLException occurs at runtime with the message "`HelloRequest followed by an unexpected handshake message`" or when a web service does not respond (Java 6 update 21 and higher) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](http://www.ietf.org/rfc/rfc5746.txt) compatible.
 When updating the client and server to be compatible with RFC-5746 is not feasible, the following should be added to "Extra JVM parameters" in the "Server" tab to avoid this exception: `-Dsun.security.ssl.allowUnsafeRenegotiation=true`. Be warned that this does make the client-server communication vulnerable to an exploit which has been fixed in RFC-5746.
@@ -127,4 +127,3 @@ When client and server are RFC-5746 compatible at a future point in time, this J
 
 For background information see [this](http://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html) article.
 
-{% endmarkdown %}</div>

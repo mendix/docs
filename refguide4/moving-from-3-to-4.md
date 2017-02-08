@@ -38,6 +38,7 @@ Now you are ready to convert. Simply open your project in the new version 4 mode
 <div class="alert alert-warning">{% markdown %}
 
 If you migrate your database separately from your files, the files and database will be out of sync after the migration. The same problem occur if you execute the database synchronisation SQL script manually. This can mean that FileDocument objects in the database point to the wrong files!
+
 Another problem is that migration to a version before Mendix 4.5 can lead to a huge amount of files to be renamed, which can cause large backup sizes.
 In Mendix 4.5, these problems cannot occur anymore.
 

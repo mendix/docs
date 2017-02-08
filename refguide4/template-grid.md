@@ -8,6 +8,7 @@ The template grid shows a list of objects in a tile view. For example, a templat
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/917977.png)
+
 A template grid showing products with an image, name and description.
 
 {% endmarkdown %}</div>

@@ -28,6 +28,7 @@ The elements of which the XML file is comprised.
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/918225.png)
+
 A simple schema
 
 {% endmarkdown %}</div>

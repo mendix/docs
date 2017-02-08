@@ -8,6 +8,7 @@ A section is a container in which other components can be placed. A list view, d
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/4194320/4325377.png)
+
 An empty section.
 
 {% endmarkdown %}</div>

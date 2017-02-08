@@ -6,8 +6,6 @@ space: "Reference Guide 4"
 The max()-function returns the maximum value of its argument.
 This function requires an XPath query as argument. The query must specify one attribute of type Long, Integer, Float or Currency.
 
-<div class="alert alert-info">{% markdown %}
-
 ```
 max(//Sales.Order/TotalPrice)
 
@@ -21,5 +19,3 @@ max(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPric
 ```
 
 This query returns the highest total price of an order placed by a customer named Jansen.
-
-{% endmarkdown %}</div>

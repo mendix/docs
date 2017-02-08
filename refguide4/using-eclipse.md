@@ -10,6 +10,7 @@ In Mendix, all text is saved in UTF-8 encoding. First make sure your source code
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/918120.png)
+
 Settings UTF-8 encoding.
 
 {% endmarkdown %}</div>
@@ -19,6 +20,7 @@ You should also have a Java Development Kit (JDK) installed and selected.
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/918186.png)
+
 Selecting a default JDK.
 
 {% endmarkdown %}</div>
@@ -34,11 +36,13 @@ To add a Mendix project to Eclipse, you can perform these steps:
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/917580.png)
+
 Import existing project.
 
 {% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/917527.png)
+
 Import existing project step 2.
 
 {% endmarkdown %}</div>
@@ -50,6 +54,7 @@ To actually launch the project, go to 'debug configurations' or 'run configurati
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/917586.png)
+
 Looking up your launch configuration.
 
 {% endmarkdown %}</div>
@@ -59,6 +64,7 @@ After you have launched the application, you will see the M2EE admin console pop
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/917582.png)
+
 The M2EE admin console.
 
 {% endmarkdown %}</div>

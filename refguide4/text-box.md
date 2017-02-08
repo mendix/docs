@@ -8,6 +8,7 @@ A text box can be used to display and/or edit a textual value.
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/917554.png)
+
 This text box allows the end-user to set the name of the customer.
 
 {% endmarkdown %}</div>

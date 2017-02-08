@@ -5,7 +5,7 @@ space: "Reference Guide 4"
 ---
 The ROUND function rounds a given numeric expression.
 
-The syntax is as following:
+The syntax is the following:
 
 ```
 ROUND ( numeric_expression , length )

@@ -15,8 +15,6 @@ Type: Any type of object.
 Returns whether the object is empty..
 Type: Boolean.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 $object1 = empty
 
@@ -25,8 +23,6 @@ $object1 = empty
 Assuming $object1 is a domain entity and that currently exists, this statement will return False. Conversely, if the object does not currently exist (which is possible if you try to retrieve a non-existent object), it will return True.
 
 The same holds for when $object1 is a variable (such as Integer, String etc).
-
-{% endmarkdown %}</div>
 
 ## Checking for an empty object member
 
@@ -40,8 +36,6 @@ Type: Any type of member.
 Whether the attribute is empty.
 Type: Boolean.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 $object1/member1 = empty
 
@@ -53,8 +47,6 @@ Assuming $object1 is an domain entity and that it has a member called 'member1',
 | --- | --- | --- |
 | $object1 has a value | false | true |
 | $object1 has no value | N/A | true |
-
-{% endmarkdown %}</div>
 
 ## Checking whether an object is new
 
@@ -68,11 +60,7 @@ Type: Any type of object.
 Returns whether the object is new (created but not yet committed). Note this only holds when this function is called on the variable which represents the created object. When the object is retrieved from the database isNew will always yield false.
 Type: Boolean.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 isNew($object1)
 
 ```
-
-{% endmarkdown %}</div>

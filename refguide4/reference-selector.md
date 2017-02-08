@@ -8,9 +8,11 @@ The reference selector allows you to set an association of type reference by sel
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/917939.png)
+
 The reference selector allows you to select the customer by name.
 
 ![](attachments/819203/917935.png)
+
 To use a reference selector you need a many-to-one association in the domain model.
 
 {% endmarkdown %}</div>
@@ -181,17 +183,17 @@ This property has no effect if a microflow is used to fill the reference selecto
 
 A reference selector can be constrained by one or more paths. This is typically used to make one reference selector dependent on another. For example, in form where you can edit an order line, a product selector can be constrained by a category selector. After selecting a category, the product selector is constrained by this category and shows only products in the category.
 
-<div class="alert alert-info">{% markdown %}
+_Domain model_ 
 
-_Domain model_ ![](attachments/819203/917938.png)
+![](attachments/819203/917938.png)
 
 In the domain model the order line has associations of type reference to both category and product. This is necessary for the two reference selectors (category and product). The third association, from product to category, describes the relation between those two entities. Such a 'triangle' shaped part of the domain model is what makes constraining possible.
 
-_Form_ ![](attachments/819203/917937.png)
+_Form_ 
+
+![](attachments/819203/917937.png)
 
 The form has two reference selectors, one for category and one for product. The one for product is constrained by the path through the domain model that forms the triangle.
-
-{% endmarkdown %}</div>
 
 This property has no effect if a microflow is used to fill the reference selector.
 

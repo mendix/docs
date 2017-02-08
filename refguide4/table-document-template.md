@@ -9,6 +9,7 @@ Tables can be used both in- and outside the data view or templategrid widgets.
 <div class="alert alert-info">{% markdown %}
 
 [![](attachments/819203/918134.png)](table-document-template)
+
 A table with four rows and three columns. The last row containing a dataview with another table.
 
 {% endmarkdown %}</div>

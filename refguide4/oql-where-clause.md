@@ -16,23 +16,17 @@ WHERE
 **<constraint>**
 An expression for which the value always equals true. Expressions consist of simple comparables with operators, functions, keywords or system variables.
 
-<div class="alert alert-info">{% markdown %}
+This query retrieves all customers whose name is equal to 'Jansen':
 
 ```
 SELECT FirstName FROM Sales.Customer
 WHERE LastName = 'Jansen'
 ```
 
-This query retrieves all customers whose name is equal to 'Jansen'.
-
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+This query retrieves all customers who live in 'Rotterdam':
 
 ```
 SELECT FirstName FROM Sales.Customer
 INNER JOIN Sales.Customer/Sales.Customer_Address/Sales.Address
 WHERE Sales.Address/LastName = 'Rotterdam'
 ```
-
-This query retrieves all customers who live in 'Rotterdam'.
-
-{% endmarkdown %}</div>

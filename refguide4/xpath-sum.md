@@ -6,8 +6,6 @@ space: "Reference Guide 4"
 The sum()-function returns the sum of its argument.
 This function requires an XPath query as argument. The query must specify one attribute of type Long, Integer, Currency or Float.
 
-<div class="alert alert-info">{% markdown %}
-
 ```
 sum(//Sales.Order/TotalPrice)
 
@@ -21,5 +19,3 @@ sum(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPric
 ```
 
 This query returns the sum of the total prices of all orders placed by a customer named Jansen.
-
-{% endmarkdown %}</div>

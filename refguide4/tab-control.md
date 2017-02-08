@@ -8,6 +8,7 @@ Tab controls are used to show information categorized into multiple tab pages. T
 <div class="alert alert-info">{% markdown %}
 
 ![](attachments/819203/918034.png)
+
 A tab control with two tab pages (Address, Orders).
 
 {% endmarkdown %}</div>

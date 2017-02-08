@@ -18,8 +18,6 @@ Can be any of the following types, but both values must be of the same type:
 *   Numerical (Integer, Float, Currency, Autonumber, Long)
 *   DateTime
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 4<3
 
@@ -31,8 +29,6 @@ returns:
 False
 
 ```
-
-{% endmarkdown %}</div>
 
 ## >
 
@@ -47,8 +43,6 @@ Can be any of the following types, but both values must be of the same type:
 *   Numerical (Integer, Float, Currency, Autonumber, Long)
 *   DateTime
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 4>3
 
@@ -60,8 +54,6 @@ returns:
 True
 
 ```
-
-{% endmarkdown %}</div>
 
 ## <=
 
@@ -75,8 +67,6 @@ Can be any of the following types, but both values must be of the same type:
 *   String
 *   Numerical (Integer, Float, Currency, Autonumber, Long)
 *   DateTime
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 6<=3
@@ -104,8 +94,6 @@ True
 
 ```
 
-{% endmarkdown %}</div>
-
 ## >=
 
 Bigger than or equal operator. Determines whether the first numerical value is bigger or equal to the second.
@@ -118,8 +106,6 @@ Can be any of the following types, but both values must be of the same type:
 *   Numerical (Integer, Float, Currency, Autonumber, Long)
 *   DateTime
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 4>=3
 
@@ -131,8 +117,6 @@ returns:
 True
 
 ```
-
-{% endmarkdown %}</div>
 
 ## =
 
@@ -147,8 +131,6 @@ Can be any of the following types, but both values must be of the same type:
 *   Numerical (Integer, Float, Currency, Autonumber, Long)
 *   DateTime
 *   Domain Entity. Equality is checked based on the ID of the object.
-
-<div class="alert alert-info">{% markdown %}
 
 ```java
 "mystring" = "myotherstring"
@@ -176,8 +158,6 @@ True
 
 ```
 
-{% endmarkdown %}</div>
-
 ## !=
 
 Inequality operator. Determines whether the two values are explicitly not equal.
@@ -192,8 +172,6 @@ Can be any of the following types, but both values must be of the same type:
 *   DateTime
 *   Object. Equality is checked based on the ID of the object.
 
-<div class="alert alert-info">{% markdown %}
-
 ```java
 "mystring" != "mystring"
 
@@ -205,5 +183,3 @@ returns:
 False
 
 ```
-
-{% endmarkdown %}</div>

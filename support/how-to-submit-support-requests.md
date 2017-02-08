@@ -1,5 +1,5 @@
 ---
-title: "How to Submit Support Requests"
+title: "How to Submit Support Incidents"
 space: "Mendix Support"
 category: "Mendix Support"
 #parent: ""

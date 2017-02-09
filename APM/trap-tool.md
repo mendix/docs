@@ -80,7 +80,7 @@ The regular expression can be tested against the traps and log messages in the d
 
 ![](attachments/Trap_Tool/Options_Triggers.png)
 
-On the **Triggers** tab, you can define message triggers that fire on messages of level INFO and above. See [Measurements Tool](measurements-tool.md) for a description on triggers.
+On the **Triggers** tab, you can define message triggers that fire on messages of level INFO and above. See [Measurements Tool](measurements-tool) for a description on triggers.
 
 ### Save & Apply
 

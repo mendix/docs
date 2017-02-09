@@ -94,8 +94,14 @@ Part of the AppCloudServices module.
 
 *   [Permissions API](permissions-api)
 
+## Platform SDK
+
+The Platform SDK is an Open Source TypeScript- & JavaScript-based SDK that through the Model API provides you access to the inner workings of every Mendix app.
+
+*   [Platform SDK docs](https://apidocs.mendix.com/platformsdk/latest/index.html)
+
 ## Model SDK
 
-The Model SDK enables users to connect to the Model API to gain access to the inner workings of your Mendix apps.
+The Model SDK enables users to modify your Mendix app, is used as part of the Platform SDK.
 
 *   [Model SDK API](https://apidocs.mendix.com/modelsdk/latest/index.html)

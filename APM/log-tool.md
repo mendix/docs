@@ -64,9 +64,9 @@ most probably kick in to protect application performance from degrading.
 You can configure the log tool to stop or to fall back to a different level of logging 
 in case the processing delay becomes to long.
 
-### Save and Apply
+### Save & Apply
 
-When the tool is running, you can save and apply the options which means the settings will 
+When the tool is running, you can save and apply the options, which means the settings will 
 immediately take effect in the running session.
 
 ## Log Tool Levels

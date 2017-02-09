@@ -1,7 +1,7 @@
 {% unless page.nogit %}
 {% assign history = site.data.history[page.path] %}
 {% if history %}
-  <div class="history">Last update: <a target="_blank" href="https://github.com/mendix/docs/commit/{{history.hash}}" title="commit {{history.hash}}"><time datetime="{{history.date}}">{{ history.date }}</time></a><i class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="left" title="This reflects the latest version on the master-branch.<br /><br />Please note that we actively develop on the development branch and periodically push this to master. So the page that is published here could be a few commits behind."></i></div>
+  <div class="history">Last update: <a target="_blank" href="https://github.com/mendix/docs/commits/development/{{page.path}}" title="commit {{history.hash}}"><time datetime="{{history.date}}">{{ history.date }}</time></a><i class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="left" title="This reflects the latest version on the master branch on Github.<br /><br />Please note that we actively develop on the development branch and periodically push this to master. The page that is published here could be a few commits behind."></i></div>
 {% else %}
   <!-- NO GIT HISTORY FOUND -->
 {% endif %}

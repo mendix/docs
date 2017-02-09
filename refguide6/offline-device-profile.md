@@ -15,4 +15,6 @@ The Offline Device profile allows users to continue using their Mendix applicati
 
 In Mendix 6.10.4 the Offline Device profile is replaced by the [Hybrid Phone profile](hybrid-phone-profile). All settings from the Offline device profile are automatically copied to the Hybrid Phone profile.
 
+{% endmarkdown %}</div>
+
 {% snippet Profile+properties.md %}

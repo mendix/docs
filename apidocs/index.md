@@ -96,6 +96,6 @@ Part of the AppCloudServices module.
 
 ## Model SDK
 
-Model SDK enables users to connect to the Model API to provide you access to the inner workings of every Mendix app. 
+The Model SDK enables users to connect to the Model API to gain access to the inner workings of your Mendix apps.
 
-*   [Model SDK API docs](https://apidocs.mendix.com/modelsdk/latest/index.html)
+*   [Model SDK API](https://apidocs.mendix.com/modelsdk/latest/index.html)

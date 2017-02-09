@@ -9,13 +9,11 @@ The documentation in this section describes a new feature that is still in beta,
 
 {% endmarkdown %}</div>
 
-
-
-We define an offline application as the portion of a Mendix app that is accessible through the [Offline device](offline-device-profile) [profile](navigation). For Mendix 6.10.4 or later the offline device profile is replaced by the [Hybrid tablet profile](hybrid-tablet-profile) and the [Hybrid phone profile](hybrid-phone-profile). Offline support must be enabled for the latter two profiles. Pages available in these profile can be viewed without an internet connection. Consequently, they are subject to a number of restrictions.
+We define an offline application as the portion of a Mendix app that is accessible through the [Offline Device](offline-device-profile) [profile](navigation). For Mendix 6.10.4 or later, the Offline Device profile is replaced by the [Hybrid Tablet profile](hybrid-tablet-profile) and the [Hybrid Phone profile](hybrid-phone-profile). Offline support must be enabled for the Hybrid Tablet and Hybrid Phone profiles. Pages available in these profiles can be viewed without an internet connection. Consequently, they are subject to a number of restrictions, explained below.
 
 ## Availability
 
-To access the offline application, you need to have a mobile device that runs a correctly configured [PhoneGap](http://phonegap.com/) hybrid application. The app will require an internet connection the first time it is opened in order to download the necessary resources from the server. After the initial synchronization the data will remain available in the app, even without an internet connection. Please note that the offline profile will be used, whether or not an internet connection is actually available. Which profiles is used depends on the PhoneGap app settings, not the connection status of the device.
+To access the offline application, you need to have a mobile device that runs a correctly configured [PhoneGap](http://phonegap.com/) hybrid application. The app will require an internet connection the first time it is opened in order to download the necessary resources from the server. After the initial synchronization the data will remain available in the app, even without an internet connection. Please note that the Offline Profile will be used, even if there is an internet connection available. Which profile is used depends on the PhoneGap app settings, not the connection status of the device.
 
 ## Synchronization
 
@@ -27,27 +25,27 @@ During synchronization, any changed, created, and deleted objects will be applie
 
 ### Microflows
 
-Without a server to process all the necessary logic, microflows run from the Mendix client cannot function in offline pages. This applies to any and all client-side microflows, from datasource microflows to on-change actions. Please note that all microflows run outside the scope of the client will still run. For instance, a before commit microflow can still be used to process complex logic, as long as the developer remains aware of the fact that it will be run on synchronization rather than initial save.
+Without a server to process all the necessary logic, microflows run from the Mendix client cannot function in offline pages. This applies to any and all client-side microflows, from data source microflows to on-change actions. Please note that all microflows that are run outside the scope of the client will still run. For instance, a before commit microflow can still be used to process complex logic, as long as the developer remains aware of the fact that it will be run on synchronization rather than the initial save.
 
 ### XPath
 
-The database used to store data on your mobile device for offline use does not support complex queries. As such, the XPath setting is disallowed on all widgets accessible through the offline device profile. Alternatively, the simple constraints found in the database data source can be used, as well as modeling complex queries using entity access.
+The database used to store data on your mobile device for offline use does not support complex queries. As such, the XPath setting is disallowed on all the widgets accessible through the Offline Device profile. Alternatively, the simple constraints found in the database data source can be used, as well as modeling complex queries using entity access.
 
-### Data sources
+### Data Sources
 
-Only the database datasource is allowed offline, due in part to the restrictions on both XPath and microflows described above.
+Only the database data source is allowed offline, due in part to the restrictions on both XPath and microflows described above.
 
 ### Search
 
-Because our search behavior relies on database queries, searching it is currently not available to offline grids and list views.
+Because our search behavior relies on database queries, searching is currently not available to offline grids and list views.
 
-### Data manipulation
+### Data Manipulation
 
 To simplify the synchronization process, offline pages only support the creation of new objects. Objects imported from the online database can be viewed but not changed. Objects can only be edited in the period between creation and synchronization.
 
-### Autonumbers and calculated attributes
+### Autonumbers and Calculated Attributes
 
-Both autonumbers and calculated attributes require server intervention and are, as such, disallowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
+Both autonumbers and calculated attributes require server intervention, and are therefore disallowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
 
 ### Files
 
@@ -55,9 +53,9 @@ Storing and uploading files offline is not supported. Specializations of the Sys
 
 ### Associations
 
-With the exception of data views, list views, template grids, and data grids, data displayed over an association is prohibited. This applies to everything from a data grid column displaying data in an associated object to reference selectors. In most cases, the desired goal can still be achieved by filling a nested data view with the relevant association and filling it with the required widgets.
+With the exception of data views, list views, template grids, and data grids, data displayed over an association is prohibited. This applies to everything from a data grid column that displays data in an associated object to reference selectors. In most cases, the desired goal can still be achieved by filling a nested data view with the relevant association and filling it with the required widgets.
 
-### Excel/CSV export
+### Excel/CSV Export
 
 Spreadsheets are generated through direct database interaction, which is not available offline.
 
@@ -67,4 +65,4 @@ Offline enabled apps are only supported on the iOS and Android platforms.
 
 For more information on offline apps:
 
-*   [Configuring Hybrid Mobile Apps To Run Offline](configuring-hybrid-mobile-apps-to-run-offline)
+*   [Configuring Hybrid Mobile Apps to Run Offline](configuring-hybrid-mobile-apps-to-run-offline)

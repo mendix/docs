@@ -9,25 +9,27 @@ This document describes the upgrade steps for version 1.5.5 and above.
 
 Do you have a backup? Is your other work committed to the team server?
 
-## Clear javasource folder
+## Clear javasource Folder
 
-This step is almost never necessary, but does not hurt either.
+This step is almost never necessary, but it does not hurt, either.
 
-Remove <project-folder>/javasource/apmagent/actions/*.java first, so no old code remains and could give compile errors.
+Remove `<project-folder>/javasource/apmagent/actions/*.java` first so that no old code remains and could lead to compile errors.
 
-## Remove old jar from userlib
+## Remove Old jar from userlib
 
-Check the userlib folder for performancetool*.jar and apmtool*.jar. If found multiple leave the one belonging to this release and the proper Mendix version.
+Check the `userlib` folder for `performancetool*.jar` and `apmtool*.jar`. If you find multiples, leave the one belonging to this release and the proper Mendix version.
 
-## Clean deployment
+## Clean Deployment
 
-Clean deployment before startup, so no old jar stays in your deployment folder.
+Clean deployment before startup so that no old jar stays in your deployment folder.
 
-## Repeat installation procedure steps
+## Repeat Installation Procedure Steps
 
-Now start following the installation procedure steps after the backup. Most the steps do not have to be repeated, because they are preserved. The following steps need attention:
+Now start following the installation procedure steps after the backup. Most of the steps do not have to be repeated, because they are preserved. The following steps need attention:
 
-*   Optional Revert overwritten widgets, because they are overwritten on the import of the module
-*   Copy Language, because the newly imported module has only english-us in it
+*   Optionally revert overwritten widgets, because they are overwritten on the import of the module
+*   Copy the language, because the newly imported module has only *english-us* in it
 
-When upgrading from below 1.7.0 to a version above you need a new license.
+When upgrading from below 1.7.0 to a version above, you need a new license.
+
+In 1.10.0, a new constant `AppName` was introduced. This constant is needed when a new license request is done.

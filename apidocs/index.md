@@ -93,3 +93,9 @@ Retrieve the user roles of your applications' users, so you can grant them the i
 Part of the AppCloudServices module.
 
 *   [Permissions API](permissions-api)
+
+## Model SDK
+
+The Model SDK enables users to connect to the Model API to gain access to the inner workings of your Mendix apps.
+
+*   [Model SDK API](https://apidocs.mendix.com/modelsdk/latest/index.html)

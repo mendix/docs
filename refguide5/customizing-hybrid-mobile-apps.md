@@ -5,7 +5,7 @@ space: "Reference Guide 5"
 ---
 
 
-The Mendix developer app and generated hybrid mobile apps contain their own `index.html` file. This index file cannot be edited to add css files, for example. However, you can influence the index file indirectly through a file called `components.json`. You can add css and Javascript files and arbitrary meta tags. The initial contents of `components.json` is shown below.
+The Mendix developer app and generated hybrid mobile apps contain their own `index.html` file. This index file cannot be edited to add css files, for example. However, you can influence the index file indirectly through a file called `components.json`. You can add css and JavaScript files and arbitrary meta tags. The initial contents of `components.json` is shown below.
 
 **Standard 'components.json'**
 {% highlight json %}
@@ -18,7 +18,7 @@ The Mendix developer app and generated hybrid mobile apps contain their own `ind
         ],
         "js": [ "mxclientsystem/mxui/mxui.js" ]
     },
-    "cachebust": "{{ "{{ cachebust " }}}}"
+    "cachebust": "{% raw %}{{cachebust}}{% endraw %}"
 }
 
 {% endhighlight %}
@@ -44,7 +44,8 @@ If you want to include more resources, you can add your own `components.json` fi
         "name": "keywords",
         "content": "search,engine,keywords,go,here"
       }
-    ]
+    ],
+    "cachebust": "{% raw %}{{cachebust}}{% endraw %}"
 }
 {% endhighlight %}
 

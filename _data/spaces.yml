@@ -24,15 +24,15 @@ community:
   space: "Community"
   priority: false
 howto50:
-  space: "Mendix 5 How-to's"
+  space: "Mendix 5 How-To's"
   priority: false
   mendix_version: 5
 howto6:
-  space: "Mendix 6 How-to's"
+  space: "Mendix 6 How-To's"
   priority: 6
   mendix_version: 6
 howto7:
-  space: "Mendix 7 How-to's"
+  space: "Mendix 7 How-To's"
   priority: false
   mendix_version: 7
 mendixcloud:

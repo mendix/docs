@@ -93,3 +93,15 @@ Retrieve the user roles of your applications' users, so you can grant them the i
 Part of the AppCloudServices module.
 
 *   [Permissions API](permissions-api)
+
+## Platform SDK
+
+The Platform SDK is an open source TypeScript-based and JavaScript-based SDK that, through the Model API, provides access to the inner workings of your Mendix apps.
+
+*   [Platform SDK](https://apidocs.mendix.com/platformsdk/latest/index.html)
+
+## Model SDK
+
+The Model SDK enables you to modify your Mendix app, and is used as part of the Platform SDK.
+
+*   [Model SDK](https://apidocs.mendix.com/modelsdk/latest/index.html)

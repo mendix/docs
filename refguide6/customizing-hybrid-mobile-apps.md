@@ -38,6 +38,7 @@ If you want to include more resources, you can add your own `components.json` fi
             "mxclientsystem/mxui/mxui.js",
             "myOwnCode.js"
         ]
-    }
+    },
+    "cachebust": "{% raw %}{{cachebust}}{% endraw %}"
 }
 {% endhighlight %}

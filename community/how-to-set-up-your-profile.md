@@ -26,7 +26,9 @@ The first thing you want to check out is your [Community Profile](https://develo
 
 ![](attachments/19202388/19398797.png)
 
-When you access your profile page through the My Community Profile link, it is automatically in edit mode so that you can easily update your profile. Click ![](attachments/19202388/19399148.png) to add a summary, new skills, industry experience, and links to your social media profiles.
+When you access your profile page through the My Community Profile link, it is automatically in edit mode so that you can easily update your profile. To add a summary, new skills, industry experience, and links to your social media profiles, click this icon:
+
+![](attachments/19202388/19399148.png)
 
 If you access your profile through the **Developers** or **Leaderboards** tabs of the [Our Community](https://developer.mendixcloud.com/link/community) page, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
 

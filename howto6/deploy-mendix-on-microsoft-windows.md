@@ -1,7 +1,7 @@
 ---
 title: "Deploy Mendix on Microsoft Windows"
 space: "Mendix 6 How-to's"
-category: "On-premises Deployment"
+category: "On-Premises Deployment"
 tags: []
 ---
 

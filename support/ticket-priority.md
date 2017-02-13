@@ -25,12 +25,6 @@ Low     | The operational functionality is *hardly* disrupted.
 
 
 ## 3 Priority Matrix
-
-|           |           |**Impact**|        |        
- -----------|------ ----|----------|--------|--------
-            |           | **High** | **Medium** | **Low**
-            | **High**  | Critical | High | Medium
-**Urgency** | **Medium**| High     | Medium | Low
-            | **Low**   | Medium   | Low | Low
+![](attachments/how-to-submit-a-ticket---quick-reference-for-endusers/204371729-pic5.png)
 
 If Mendix provides a workaround the Priority can never be higher than Medium.

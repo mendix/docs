@@ -48,9 +48,3 @@ If you want to include more resources, you can add your own `components.json` fi
     "cachebust": "{% raw %}{{cachebust}}{% endraw %}"
 }
 {% endhighlight %}
-
-The resulting meta tag will look like this:
-
-{% highlight html %}
-<meta name="keywords" content="search,engine,keywords,go,here">
-{% endhighlight %}

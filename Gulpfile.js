@@ -64,7 +64,8 @@ gulp.task('clean', `Cleanup the ${DIST_FOLDER} directory`, () => {
 gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json to ${DIST_FOLDER}/mappings/redirect.map`, done => {
   mappings.run({
     write: true,
-    src: path.join(CURRENTFOLDER, '/_assets/mappings/redirect.json'),
+    type: 'js',
+    src: path.join(CURRENTFOLDER, '/_assets/mappings/redirect.js'),
     dest: path.join(CURRENTFOLDER, '/_site/mappings/redirect.map'),
     callback: function (err) {
       if (err) {

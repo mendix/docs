@@ -117,7 +117,7 @@ Forms are used to build a user interface and display information to the user. Th
 *   [Add and Configure an Image Viewer](add-and-configure-an-image-viewer)
 *   [Add and Configure Tab Pages](add-and-configure-tab-pages)
 *   [Apply Xpath Within the Form Builder](apply-xpath-within-the-form-builder)
-*   [Build a Template Grid](auild-a-template-grid)
+*   [Build a Template Grid](build-a-template-grid)
 *   [Configure a Microflow Button](configure-a-microflow-button)
 *   [Configure a Microflow Trigger](configure-a-microflow-trigger)
 *   [Configure the Date Range Selector](configure-the-date-range-selector)

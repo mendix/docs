@@ -22,8 +22,6 @@ Multiple constraints can be added to a single query, this is true for all querie
 
 This query retrieves all customers whose name is equal to Jansen and who live in Rotterdam.
 
-{% endmarkdown %}</div>
-
 It is also possible to combine constraints with an 'and' or 'or' [operator](xpath-operators).
 
 ```
@@ -37,8 +35,6 @@ This query retrieves all customers whose names equal to Jansen and who live in R
 ```
 
 This query retrieves all customers whose name is Jansen or who live in Rotterdam.
-
-{% endmarkdown %}</div>
 
 With parentheses, constraints can be grouped to define priorities.
 

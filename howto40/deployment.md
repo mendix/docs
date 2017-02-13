@@ -4,7 +4,7 @@ space: "Mendix 4 How-to's"
 ---
 Please select a how-to:
 
-*   [Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
+*   [Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premise-installation)
 *   [Activate Your Mendix License](activate-your-mendix-license)
 *   [Mendix on the Mendix Cloud](mendix-on-the-mendix-cloud)
     *   [Migrating Your Data](migrating-your-data)

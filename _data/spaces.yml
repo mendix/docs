@@ -23,9 +23,13 @@ bestpractices:
 community:
   space: "Community"
   priority: false
-howto50:
-  space: "Mendix 5 How-To's"
+howto40:
+  space: "Mendix 4 How-to's"
   priority: false
+  mendix_version: 4
+howto50:
+  space: "Mendix 5 How-to's"
+  priority: 5
   mendix_version: 5
 howto6:
   space: "Mendix 6 How-To's"
@@ -41,9 +45,13 @@ mendixcloud:
 MXSDK:
   space: "Mendix Platform SDK"
   priority: false
+refguide4:
+  space: "Reference Guide 4"
+  priority: false
+  mendix_version: 4
 refguide5:
   space: "Reference Guide 5"
-  priority: false
+  priority: 6
   mendix_version: 5
 refguide6:
   space: "Reference Guide 6"

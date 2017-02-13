@@ -18,7 +18,7 @@ You can access the Mendix Support Portal at [support.mendix.com](https://support
 This home page lets you access various Mendix sites that provide important information or tools:
 
 *   [Mendix Documentation](https://docs.mendix.com)
-*   [Release Notes](https://world.mendix.com/display/ReleaseNotes/Release+Notes+Home)
+*   [Release Notes](/releasenotes/)
 *   [Mendix Forum](https://forum.mendix.com)
 *   [Mendix App Store](https://appstore.mendix.com)
 *   [Platform Status](https://status.mendix.com)

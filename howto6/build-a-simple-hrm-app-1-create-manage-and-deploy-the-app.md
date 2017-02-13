@@ -4,20 +4,6 @@ space: "Mendix 6 How-to's"
 parent: "build-a-simple-hrm-app"
 ---
 
-## Test
-
-<div class="alert alert-info">{% markdown %}
-
-| A | B |
-| --- | --- |
-| cc | cc |
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-
-{% endmarkdown %}</div>
-
 ## 1 Introduction
 
 This how-to is based on the video "Build a Simple HRM App: Create, Manage, and Deploy the App," which is part of the [Getting Started videos](http://gettingstarted.mendixcloud.com/link/courses/gettingstarted).

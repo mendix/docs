@@ -8,34 +8,13 @@ parent: "build-a-simple-hrm-app"
 
 <div class="alert alert-info">{% markdown %}
 
-![](attachments/18448672/18580904.png)
+| A | B |
+| --- | --- |
+| cc | cc |
 
-{% endmarkdown %}</div>
-
-<div class="alert alert-info">{% markdown %}
-
-*italics*
-
-{% endmarkdown %}</div>
-
-<div class="alert alert-info">{% markdown %}
-
-**bold**
-
-{% endmarkdown %}</div>
-
-<div class="alert alert-info">{% markdown %}
-
-`single line of code`
-
-{% endmarkdown %}</div>
-
-<div class="alert alert-info">{% markdown %}
-
-```
-code
-snippet
-```
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
 
 {% endmarkdown %}</div>
 

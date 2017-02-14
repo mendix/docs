@@ -1,5 +1,5 @@
 ---
-title: "Community Tools"
+title: "Tools"
 space: "Community"
 category: "Community"
 ---

@@ -8,7 +8,17 @@ description: 'Documentation for Mendix'
 {% assign refguide = "/refguideX/" | replace: "X", site.latest_major_version %}
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="{{ howto }}">How-To's</a></h1>
+    <h1 class="header-link"><a href="{{ refguide }}">Mendix Reference Guide</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/refguide-general.html dir=refguide %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="{{ howto }}">Mendix How-To's</a></h1>
   </div>
 </div>
 <div class="row">
@@ -18,12 +28,22 @@ description: 'Documentation for Mendix'
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="{{ refguide }}">Reference Guide</a></h1>
+    <h1 class="header-link"><a href="/support/">General How-To's</a></h1>
   </div>
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    {% include blocks/refguide-general.html dir=refguide %}
+    {% include blocks/howto-general-space.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/releasenotes/">Release Notes</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/releasenotes.html %}
   </div>
 </div>
 <div class="row">
@@ -54,25 +74,5 @@ description: 'Documentation for Mendix'
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
     {% include blocks/community.html %}
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/releasenotes/">Release Notes</a></h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    {% include blocks/releasenotes.html %}
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/support/">Support</a></h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    {% include blocks/support.html %}
   </div>
 </div>

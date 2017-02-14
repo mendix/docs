@@ -1,0 +1,10 @@
+---
+layout: json
+sitemap: false
+---
+{
+  "categories": [
+    "General How-To's"
+  ],
+  "pages": {% include json-snippets/get_pages.inc dir="/howtogeneral/" %}
+}

@@ -130,11 +130,11 @@ defaults:
       menus:
         - "MXSDK"
   - scope:
-      path: 'support'
+      path: 'howtogeneral'
       type: pages
     values:
       menus:
-        - "support"
+        - "howtogeneral"
   - scope:
       path: 'tips'
       type: pages

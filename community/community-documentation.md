@@ -1,5 +1,5 @@
 ---
-title: "Community Documentation"
+title: "Documentation"
 space: "Community"
 category: "Community"
 ---

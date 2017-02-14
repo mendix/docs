@@ -2889,47 +2889,47 @@ module.exports = {
      ****************************************************/
     {
       from: "/mxsupport/Connecting+Project+to+a+Licensed+Node",
-      to: "/support/how-to-connect-a-project-to-a-licensed-node"
+      to: "/howtogeneral/support/how-to-connect-a-project-to-a-licensed-node"
     },
     {
       from: "/mxsupport/Google+Authenticator+and+SMS+Installation",
-      to: "/support/how-to-set-up-two-factor-authentication-with-google-authenticator"
+      to: "/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator"
     },
     {
       from: "/mxsupport/How+to+connect+a+different+project+to+a+node",
-      to: "/support/how-to-connect-a-different-project-to-a-node"
+      to: "/howtogeneral/support/how-to-connect-a-different-project-to-a-node"
     },
     {
       from: "/mxsupport/How+to+download+a+backup",
-      to: "/support/how-to-download-a-backup"
+      to: "/howtogeneral/support/how-to-download-a-backup"
     },
     {
       from: "/mxsupport/How+to+restore+a+backup",
-      to: "/support/how-to-restore-a-backup"
+      to: "/howtogeneral/support/how-to-restore-a-backup"
     },
     {
       from: "/mxsupport/Mendix+Support+Home",
-      to: "/support/"
+      to: "/howtogeneral/support/"
     },
     {
       from: "/mxsupport/TreeNavigation",
-      to: "/support/"
+      to: "/howtogeneral/support/"
     },
     {
       from: "/mxsupport/License+key+activation+on+Linux+server",
-      to: "/support/license-key-activation-on-linux"
+      to: "/howtogeneral/support/license-key-activation-on-linux"
     },
     {
       from: "/mxsupport/Preparing+Your+Project+for+New+Customer+Support+Tool",
-      to: "/support/prepare-your-project-for-new-customer-support-portal"
+      to: "/howtogeneral/support/prepare-your-project-for-new-customer-support-portal"
     },
     {
       from: "/mxsupport/Required+Network+Access+for+connecting+to+the+Mendix+Platform",
-      to: "/support/troubleshoot-network-issues-for-team-server"
+      to: "/howtogeneral/support/troubleshoot-network-issues-for-team-server"
     },
     {
       from: "/mxsupport/Technical+Contact+Definition",
-      to: "/support/technical-contact"
+      to: "/howtogeneral/support/technical-contact"
     },
     /****************************************************
      * REFERENCE GUIDE MENDIX 4

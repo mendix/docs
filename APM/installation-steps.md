@@ -80,7 +80,8 @@ can call a microflow that sends an e-mail. The microflow gets 3 string parameter
 
 See sample microflow APMAgent.SampleNotifyMicroflow_LogMessage.
 
-## Startup
+## Start the Modeler or the Runtime
+
 You can now start up.
 
 If an error appears, see [After Startup Error](/APM/after-startup-error).

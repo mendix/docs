@@ -20,6 +20,7 @@ instance a unique number.
 measurements tool for use in expressions.
 *   `APMAgent.NotifyMicroflowName` (default APMAgent.SampleNotifyMicroflow_LogMessage) to define a microflows
 that is executed on the trigger notify action.
+*   `APMAgent.PerformanceToolWaitTimeForMicroflowToFinish` (default 10) seconds to wait for started microflows
  to finish on stop recording. Only used for GUI button to stop, no when a protection kicks in.
 *   `APMAgent.CompanyName` (default '<company name constant>') is used in the license.
 *   `APMAgent.PrintAllOnStartup` (default false) is used to choose if `AfterStartup` should write all JMX data

@@ -86,7 +86,6 @@ On the **Triggers** tab, you can define message triggers that fire on messages o
 
 See the description of [Triggers](/APM/triggers) for how to configure triggers.
 
-
 ### Save & Apply
 
 Changes to the options are applied to the trap tool if the button **Save & apply** is used.

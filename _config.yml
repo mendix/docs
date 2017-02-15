@@ -52,7 +52,6 @@ defaults:
     values:
       menus:
         - "refguide6"
-        - "community"
   # Mendix 5
   - scope:
       path: 'howto50'
@@ -69,7 +68,22 @@ defaults:
     values:
       menus:
         - "refguide5"
-        - "community"
+  # Mendix 4
+  - scope:
+      path: 'howto40'
+      type: pages
+    values:
+      menus:
+        - "howto40"
+        - "tips"
+        - "bestpractices"
+        - "mendixcloud"
+  - scope:
+      path: 'refguide4'
+      type: pages
+    values:
+      menus:
+        - "refguide4"
 
   # VERSION INDEPENDENT
   - scope:
@@ -78,7 +92,6 @@ defaults:
     values:
       space: "Community"
       menus:
-        - "refguide6"
         - "community"
   - scope:
       path: 'releasenotes'
@@ -117,11 +130,11 @@ defaults:
       menus:
         - "MXSDK"
   - scope:
-      path: 'support'
+      path: 'howtogeneral'
       type: pages
     values:
       menus:
-        - "support"
+        - "howtogeneral"
   - scope:
       path: 'tips'
       type: pages

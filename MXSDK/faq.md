@@ -6,7 +6,7 @@ space: "Mendix Platform SDK"
 
 ### What is the availability status of the Mendix SDK and Model API?
 
-The Mendix SDK and Model API are now in [public beta](https://world.mendix.com/display/ReleaseNotes/Beta+features).
+The Mendix SDK and Model API are now in [public beta](/releasenotes/beta-features/).
 
 ### Which Mendix versions are supported?
 
@@ -22,7 +22,7 @@ Online Working Copies are automatically removed 24 hours after they have been cr
 
 ### What are the limits on project size?
 
-The initial project mpk file that is uploaded is not allowed to exceed 250Mb (project mpr file and other files combined). 
+The initial project mpk file that is uploaded is not allowed to exceed 250Mb (project mpr file and other files combined).
 
 ### Which parts of the Mendix app model can I access with the Model API?
 
@@ -48,7 +48,7 @@ This error message is shown when making changes on a model, but the connection t
 
 ### JS Allocation failed - process out of memory
 
-This can happen when you open a huge model and then load a lot of documents (e.g. pages, microflows). You can increase the memory available to your script by running it using the max-old-space-size flag and an appropriate memory size in MB: 
+This can happen when you open a huge model and then load a lot of documents (e.g. pages, microflows). You can increase the memory available to your script by running it using the max-old-space-size flag and an appropriate memory size in MB:
 
 `node --max-old-space-size=4096 script.js`
 

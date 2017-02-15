@@ -22,7 +22,7 @@ For the experienced user, this is quick outline of the installation:
 5. Add permission(s) to your Administrator role.
 6. Add the USE_ME/IVK_OpenConsole microflow to the navigation.
 7. Set the `APMAgent.CompanyName` and `APMAgent.AppName` constants.
-*   Optionally configure the APMAgent.NotifyMicroflowName to call a microflow that sends mail.
+8. Optionally configure the `APMAgent.NotifyMicroflowName` constant to call a microflow that sends mail.
 9. Navigate to the APM tool, where an installer page will open.
 10. On the installer page, mail the license request. In APM 1.10, you can use a license request code to automatically obtain a license key.
 11. On receiving the mail with the license key, enter the key.

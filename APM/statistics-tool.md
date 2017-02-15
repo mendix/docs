@@ -128,8 +128,9 @@ The data is cleanup automatically after a certain amount of days.
 ### Statistics Tool options, triggers tab
 
 ![](attachments/Statistics_Tool/Triggers.png)
-On the trigger tab you can define triggers that fire on a certain microflow duration. For 
-details regarding triggers see the measurements tool.
+On the trigger tab you can define triggers that fire on a certain microflow duration.
+
+See the description of [Triggers](/APM/triggers) for how to configure triggers.
 
 ### Save & apply
 Changes to the options are applied to the currently running Statistics Tool session if the button

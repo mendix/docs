@@ -103,7 +103,9 @@ The regular expression can be tested against the traps and log messages in the d
 ![](attachments/Trap_Tool/Options_Triggers.png)
 
 On the triggers tab you can define message triggers that fire on messages of level INFO
-and above. See the measurements tool for a description on triggers.
+and above.
+
+See the description of [Triggers](/APM/triggers) for how to configure triggers.
 
 
 ### Save & apply

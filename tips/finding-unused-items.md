@@ -1,7 +1,7 @@
 ---
 title: "Finding Unused Items"
-space: "Tips and Tricks"
-category: "Tips and Tricks"
+space: "Tips & Tricks"
+category: "Tips & Tricks"
 ---
 # Finding Unused Items
 

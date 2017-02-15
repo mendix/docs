@@ -1,10 +1,9 @@
 ---
 layout: json
-sitemap: false
 ---
 {
   "categories": [
-    "General How-To's"
+    "Mendix Support"
   ],
-  "pages": {% include json-snippets/get_pages_per_space.inc space="General How-To's"%} 
+  "pages": {% include json-snippets/get_pages_per_space.inc space="General How-To's" %}
 }

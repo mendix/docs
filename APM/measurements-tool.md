@@ -4,36 +4,35 @@ space: "Application Performance Monitor"
 category: "User Manual"
 ---
 The measurements tool is meant to measure system resources and to trigger actions on thresholds. This allows 
-you to monitor memory and save statistics or perform a trap when memory usage reaches for example 80%. 
+you to monitor memory and save statistics or perform a trap when memory usage reaches, for example, 80%. 
 
-Measurements are created via a **Collect in Measurements Tool** 
-button in the JVM Browser or in the query tool. The collected measurements can be stored in the database 
-and used for generating graphs or for triggering events.
+Measurements are created via the **Collect in Measurements Tool** button in the JVM browser or in the query tool. The collected measurements can be stored in the database and used for generating graphs or for triggering events.
 
-# Charts
-The charts tab shows graphs of collected data in the Measurements Tool.
+## Charts
+
+The charts tab shows graphs of collected data in the measurements tool.
 
  ![](attachments/Measurements_Tool/Charts.png)
 
-Double-click on the measurement will open a read-only view of the measurement configuration.
+Double-clicking the measurement will open a read-only view of the measurement configuration.
 
-# Measurement configuration
+## Measurement Configuration
 
-Measurements can be configured on the measurement configuration tab. If the measurement is running you can only
+Measurements can be configured on the **Measurement configuration** tab. If the measurement is running, you can only
 view the measurement configuration. 
 
   ![](attachments/Measurements_Tool/Measurement_Configuration_Tab.png)                     
 
-Measurements can be started and stopped here. In the dialog behind the play-button you can start or stop all 
+Measurements can be started and stopped here. In the dialog behind the play-button, you can start or stop all 
 measurements at once.
 
-## Measurement configuration tab
-Double clicking or selecting and clicking the [Edit] button shows the measurement configuration dialog. 
-Here the selected measurement can be configured as shown in the screenshot below.
+### Measurement Configuration Tab
+
+Double-clicking or selecting and clicking the **Edit** button shows the measurement configuration dialog.  Here, the selected measurement can be configured:
 
  ![](attachments/Measurements_Tool/Measurement_Configuration_Edit.png)
 
-The Measurment configuration tab allows you to:
+The **Measurment configuration** tab allows you to do the folllowing:
 
 *   Change the **Name**
 *   Choose when to **Run**
@@ -41,62 +40,73 @@ The Measurment configuration tab allows you to:
      - Once after startup
      - Disabled
 *   **Calculate with expression**
-     - If yes, the **Expression** field appears. See below for the expression details
-     - If yes, the **Parameter** field appears. This parameter can be used in the expression.
+     - If yes, the **Expression** field appears (see below for the expression details)
+     - If yes, the **Parameter** field appears (this parameter can be used in the expression)
 *   Set the **Frequency (s)** that the measurement is executed in seconds
-*   **Store in database** stores the measurement in the database. You can only measure for triggers. For 
-charts you need the database to be stored in the database.
-*   The **Remove data after (days)** configures the automatic cleanup (purge) of the data. Measurements will
-automatically be removed after a certain amount of days.
+*   **Store in database** stores the measurement in the database
+ * You can only measure for triggers; for charts you need the database to be stored in the database
+*   The **Remove data after (days)** configures the automatic cleanup (purge) of the data
+ * Measurements will automatically be removed after a certain amount of days
 *   For a query measurement, the **Expose query results to JMX** makes the query results visible in other Java management
- consoles. This is only useful for query measurements, since JVM Browser measurements are already available
-  there.
-*   If a query has multiple results you can configure to use the first column a part of the name. **Use first 
-result column in name** make the name of
+ consoles – this is only useful for query measurements, since JVM Browser measurements are already available
+  there
+*   If a query has multiple results, you can configure using the first column a part of the name via **Use first 
+result column in name**
 
+### Triggers
 
 ## Triggers tab
-Triggers are used to check measurements for a specific value. If the Expression in a trigger is fulfilled, 
-the configured Action is taken. 
+the configured action is taken. 
 
  ![](attachments/Measurements_Tool/Measurement_Triggers.png)                 
 
 See the description of [Triggers](/APM/triggers) for how to configure triggers.
 
-## Expressions
+* **Expression** to set the business rule that fires the action (see below for details)
+These actions can be:
+
+#### Trigger Continuation
+This is to prevent, for example, a large amount of emails when the CPU usage is high.
+
+### Expressions
+
 Expressions for measurements and measurement triggers are written the same as 
 expressions are written in the Mendix Modeler expression editor. 
 
-The variables $Measurement is available with columns: 
-* ValueString, 
-* ValueDate, 
-* ValueLong, 
-* ValueFloat, 
-* ValueBoolean, 
-* TimeStamp.
+The `$Measurement` variables is available with columns:
 
-Also the last **N** measurement are available as $Measurement_1 (the previous one) up to $Measurement_**N**. The 
-amount of previous measurements (**N**) is configured in the App. By default 5, but an admin can changed this. 
+* `ValueString`
+* `ValueDate`
+* `ValueLong`
+* `ValueFloat`
+* `ValueBoolean`
+* `TimeStamp`
 
-At startup the last **N** measurements are empty, so handle the empty case!
+Also, the last **N** measurements are available as $Measurement_1 (the previous one) up to $Measurement_**N**. The 
+amount of previous measurements (**N**) is configured in the app. The default is 5, but an admin can changed this. 
 
-When the measurement is run only once the previous measurements are retrieved from the database and can be
- used as $MeasurementDB_1 to $MeasurementDB_**N**. 
+At startup, the last **N** measurements are empty, so handle the empty case!
 
-Example to calculate the difference between the current and the previous measurement:
+When the measurement is run only once, the previous measurements are retrieved from the database and can be
+ used as `$MeasurementDB_1` to `$MeasurementDB_N`. 
+
+This is an example to calculate the difference between the current and the previous measurement:
+
 $Measurement/ValueLong - $Measurement_1/ValueLong
 
 ## Tester tab
+
 The tester will execute the measurement and test the trigger (if enabled) to verify the expressions.
 
 ![](attachments/Measurements_Tool/Measurement_Tester.png)
 
-If there is an error the error message appears on **Apply & test**. You can view the stack trace as well.
+If there is an error, the error message appears on **Apply & test**. You can view the stack trace as well.
 
-In the tester you can clear the cache and also remove all records from the database.
+In the tester, you can clear the cache and also remove all records from the database.
 
+## Triggered Events
 
-# Triggered Events
+If a trigger fires, a record is created in the triggered events. The events are automatically deleted after a certain amount of days as configured in the **Remove triggered events after (days)** setting on the [More tab](/APM/dashboard#more). If you want to keep a event for future reference, you can keep the event using the keep-button above the triggered event grid.
 If a trigger fires, a record is created in the triggered events. 
 The events are automatically deleted after a certain amount of days as 
 configured in the global setting [More tab](/APM/dashboard#more). 
@@ -105,7 +115,7 @@ reference you can keep the event using the keep-button above the triggered event
 
 ![](attachments/Triggers/Triggered_Events.png)
 
-If a trap is created with the trigger actions you can open the trap.
+If a trap is created with the trigger actions, you can open the trap.
 
 If a statistics snapshot is created with the trigger actions you can open the 
 statistics snapshot.

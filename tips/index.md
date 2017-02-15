@@ -1,6 +1,6 @@
 ---
-title: "Tips and Tricks"
-space: "Tips and Tricks"
+title: "Tips & Tricks"
+space: "Tips & Tricks"
 ---
 This is where our experts reveal their tips and tricks.
 

@@ -65,7 +65,7 @@ howtogeneral:
   space: "General How-To's"
   priority: false
 tips:
-  space: "Tips and Tricks"
+  space: "Tips & Tricks"
   priority: false
 releasenotes:
   space: "Release Notes"

@@ -1,7 +1,7 @@
 ---
 title: "Layouts and Snippets"
 space: "Mendix 6 How-to's"
-category: "GUI's"
+category: "GUIs"
 tags: []
 ---
 This document will cover the basics of how to create pages using Layouts and Snippets.

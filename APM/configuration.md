@@ -50,7 +50,7 @@ the **Clean data** tab:
 ![](attachments/Dashboard/Configuration_CleanData.png)                       
 
 <a name="More"></a>
-
+## More
 Some other settings are collected on the **More** tab:
 
 ![](attachments/Dashboard/Configuration_More.png)                       

@@ -18,7 +18,7 @@ instance a unique number.
  running microflows dialog of the performance tool.
 *   `APMAgent.MetricHistory` (default 5) to set the number of previous measurements kept in cache in the 
 measurements tool for use in expressions.
-*   APMAgent.NotifyMicroflowName (default APMAgent.SampleNotifyMicroflow_LogMessage) to define a microflows
+*   `APMAgent.NotifyMicroflowName` (default APMAgent.SampleNotifyMicroflow_LogMessage) to define a microflows
 that is executed on the trigger notify action.
  to finish on stop recording. Only used for GUI button to stop, no when a protection kicks in.
 *   `APMAgent.CompanyName` (default '<company name constant>') is used in the license.

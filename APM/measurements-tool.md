@@ -53,20 +53,13 @@ The **Measurment configuration** tab allows you to do the folllowing:
 *   If a query has multiple results, you can configure using the first column a part of the name via **Use first 
 result column in name**
 
-### Triggers
-
-## Triggers tab
-the configured action is taken. 
+### Triggers tab
+Here you can define triggers on high memory usage for example.
 
  ![](attachments/Measurements_Tool/Measurement_Triggers.png)                 
 
 See the description of [Triggers](/APM/triggers) for how to configure triggers.
 
-* **Expression** to set the business rule that fires the action (see below for details)
-These actions can be:
-
-#### Trigger Continuation
-This is to prevent, for example, a large amount of emails when the CPU usage is high.
 
 ### Expressions
 
@@ -106,12 +99,14 @@ In the tester, you can clear the cache and also remove all records from the data
 
 ## Triggered Events
 
-If a trigger fires, a record is created in the triggered events. The events are automatically deleted after a certain amount of days as configured in the **Remove triggered events after (days)** setting on the [More tab](/APM/dashboard#more). If you want to keep a event for future reference, you can keep the event using the keep-button above the triggered event grid.
 If a trigger fires, a record is created in the triggered events. 
+
 The events are automatically deleted after a certain amount of days as 
-configured in the global setting [More tab](/APM/dashboard#more). 
-**Remove triggered events after (days)**. If you want to keep a event for future 
-reference you can keep the event using the keep-button above the triggered event grid.
+configured in the global setting [More tab](/APM/configuration#more). 
+**Remove triggered events after (days)**. 
+
+If you want to keep an event for future reference you can use the **Keep**-button
+ above the triggered event grid.
 
 ![](attachments/Triggers/Triggered_Events.png)
 

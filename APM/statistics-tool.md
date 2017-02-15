@@ -99,13 +99,11 @@ The statistics tool is also protected with a **Max Processing Delay (ms)**. The 
 The data is cleaned up automatically after a certain amount of days.
 
 ### Triggers Tab
-
-![](attachments/Statistics_Tool/Triggers.png)
 On the trigger tab you can define triggers that fire on a certain microflow duration.
 
-See the description of [Triggers](/APM/triggers) for how to configure triggers.
+![](attachments/Statistics_Tool/Triggers.png)
 
-On the **Trigger** tab, you can define the triggers that fire on a certain microflow duration. For details regarding triggers, see the measurements tool.
+See the description of [Triggers](/APM/triggers) for how to configure triggers.
 
 ### Save & Apply
 

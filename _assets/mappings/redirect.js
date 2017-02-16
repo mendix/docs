@@ -230,11 +230,11 @@ module.exports = {
     },
     {
       from: "/appstore/App+Store",
-      to: "/community/app-store/app-store"
+      to: "/community/app-store/"
     },
     {
       from: "/appstore/App+Store+Home",
-      to: "/community/app-store/app-store"
+      to: "/community/app-store/"
     },
     {
       from: "/appstore/Install+an+App+from+the+App+Store",

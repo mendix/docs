@@ -103,9 +103,7 @@ const mappings = (opts) => {
         if (errors.length > 0) {
           gulpErr('write:mappings', `You have errors in your mapping ${gutil.colors.cyan(opts.src)} file:\n\n${errors.join('\n')}\n`);
           opts.callback(true);
-        }
-
-        if (opts.write) {
+        } else if (opts.write) {
           touch(opts.dest);
           fs.writeFile(opts.dest, mappingsFile, err => {
             if (err) {

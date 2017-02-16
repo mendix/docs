@@ -218,27 +218,27 @@ module.exports = {
      ****************************************************/
     {
       from: "/appstore/Adding+App+Store+content+to+your+app",
-      to: "/community/use-app-store-content-in-the-modeler"
+      to: "/community/app-store/use-app-store-content-in-the-modeler"
     },
     {
       from: "/appstore/App+Store+Approval+Guidelines",
-      to: "/community/share-app-store-content"
+      to: "/community/app-store/share-app-store-content"
     },
     {
       from: "/appstore/App+Store+Content+Support",
-      to: "/community/app-store-content-support"
+      to: "/community/app-store/app-store-content-support"
     },
     {
       from: "/appstore/App+Store",
-      to: "/community/app-store"
+      to: "/community/app-store/app-store"
     },
     {
       from: "/appstore/App+Store+Home",
-      to: "/community/app-store"
+      to: "/community/app-store/app-store"
     },
     {
       from: "/appstore/Install+an+App+from+the+App+Store",
-      to: "/community/use-app-store-content-in-the-modeler"
+      to: "/community/app-store/use-app-store-content-in-the-modeler"
     },
     /****************************************************
      * Application Test Suite (ATS)
@@ -795,43 +795,43 @@ module.exports = {
      ****************************************************/
     {
       from: "/community/Community+Documentation",
-      to: "/community/community-documentation"
+      to: "/community/documentation/index"
     },
     {
       from: "/community/Community+Projects",
-      to: "/community/community-tools"
+      to: "/community/tools/index"
     },
     {
       from: "/community/Content+Writing+and+Formatting+Guidelines",
-      to: "/community/content-writing-and-formatting-guidelines"
+      to: "/community/documentation/content-writing-and-formatting-guidelines"
     },
     {
       from: "/community/Contribute+to+the+Mendix+Documentation",
-      to: "/community/contribute-to-the-mendix-documentation"
+      to: "/community/documentation/contribute-to-the-mendix-documentation"
     },
     {
       from: "/community/How+to+set+up+your+partner+profile",
-      to: "/community/how-to-set-up-your-partner-profile"
+      to: "/community/tools/how-to-set-up-your-partner-profile"
     },
     {
       from: "/community/How+to+set+up+your+profile",
-      to: "/community/how-to-set-up-your-profile"
+      to: "/community/tools/how-to-set-up-your-profile"
     },
     {
       from: "/community/The+How+to+Template+Page",
-      to: "/community/the-how-to-template-page"
+      to: "/community/documentation/the-how-to-template-page"
     },
     {
       from: "/community/The+Mendix+Job+Board",
-      to: "/community/the-mendix-job-board"
+      to: "/community/tools/the-mendix-job-board"
     },
     {
       from: "/community/The+Mendix+MVP+program",
-      to: "/community/the-mendix-mvp-program"
+      to: "/community/tools/the-mendix-mvp-program"
     },
     {
       from: "/community/The+Reference+Guide+Page+Template+Page",
-      to: "/community/the-reference-guide-page-template-page"
+      to: "/community/documentation/the-reference-guide-page-template-page"
     },
     /****************************************************
      * HOWTO MENDIX 4

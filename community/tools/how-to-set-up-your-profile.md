@@ -1,7 +1,7 @@
 ---
 title: "Set Up Your Community Profile"
 space: "Community"
-parent: "community-tools"
+category: "Tools"
 ---
 
 ## 1 Introduction
@@ -24,15 +24,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The first thing you want to check out is your [Community Profile](https://developer.mendixcloud.com/link/profile) page. To get there, mouse over your picture in the navigation bar and click **My Community Profile**. This overview page shows a the main page of your profile, including your summary, skills, industry experience, and badges.
 
-![](attachments/19202388/19398797.png)
+![](attachments/how-to-set-up-your-profile/community-profile.png)
 
 When you access your profile page through the My Community Profile link, it is automatically in edit mode so that you can easily update your profile. To add a summary, new skills, industry experience, and links to your social media profiles, click this icon:
 
-![](attachments/19202388/19399148.png)
+![](attachments/how-to-set-up-your-profile/icon.png)
 
 If you access your profile through the **Developers** or **Leaderboards** tabs of the [Our Community](https://developer.mendixcloud.com/link/community) page, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
 
-![](attachments/19202388/19398798.png)
+![](attachments/how-to-set-up-your-profile/edit.png)
 
 ## 4 Work
 
@@ -40,13 +40,13 @@ You can add your Mendix project experience on this page by clicking **Add Projec
 
 You can add a screenshot here that will be shown on the **Work** tab and that will be visible to other developers when they visit your Community Profile:
 
-![](attachments/19202388/19398799.png)
+![](attachments/how-to-set-up-your-profile/work-tab.png)
 
 ## 5 My Badges
 
 You can view your earned badges on this tab, but you cannot actually change anything here:
 
-![](attachments/19202388/19398803.png)
+![](attachments/how-to-set-up-your-profile/badges.png)
 
 For details on how to earn badges, see [Become True Mendix Blue](https://developer.mendixcloud.com/link/faq).
 
@@ -54,7 +54,7 @@ For details on how to earn badges, see [Become True Mendix Blue](https://develop
 
 When you’re done setting up your Community Profile, click the big blue **Make my profile public** button:
 
-![](attachments/19202388/19398800.png)
+![](attachments/how-to-set-up-your-profile/make-public.png)
 
 Make sure you meet all the requirements before making your profile public:
 
@@ -68,7 +68,7 @@ Make sure you meet all the requirements before making your profile public:
 
 After you make your profile public, a new tab will be available on your public profile called **Public Activity**:
 
-![](attachments/19202388/public_activity.png)
+![](attachments/how-to-set-up-your-profile/public_activity.png)
 
 This tab lists the following activities for which you can gain points:
 
@@ -101,7 +101,7 @@ There are five quick and easy steps to merge your accounts:
 
 We’ll take things from there, and the email address of the merged account will be shown in the list when the accounts have been merged:
 
-![](attachments/19202388/MergeAccountsRequestApproved.png)
+![](attachments/how-to-set-up-your-profile/MergeAccountsRequestApproved.png)
 
 <div class="alert alert-info">
 

@@ -1,7 +1,7 @@
 ---
 title: "Share App Store Content"
 space: "Community"
-parent: "app-store"
+category: "App Store"
 ---
 
 ## 1 Introduction
@@ -79,7 +79,7 @@ To add content to the App Store, follow these steps:
     * Upload **Screenshots** by clicking **Add screenshots** and selecting images of the content from your computer
     * Upload **Video** by clicking **Add video** and selecting a video that demonstrates using the content from your computer
 
-    ![](attachments/share-app-store-content/add_content_4.png)
+        ![](attachments/share-app-store-content/add_content_4.png)
 
 7. On the **Documentation** tab, you can write any documentation in the editor that should accompany your app.
     * The documentation template includes the following sections that you must fill out in order to submit your content:

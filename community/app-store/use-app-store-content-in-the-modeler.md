@@ -1,7 +1,7 @@
 ---
 title: "Use App Store Content in the Modeler"
 space: "Community"
-parent: "app-store"
+category: "App Store"
 
 ---
 

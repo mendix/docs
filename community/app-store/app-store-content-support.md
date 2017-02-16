@@ -1,7 +1,7 @@
 ---
 title: "App Store Content Support"
 space: "Community"
-parent: "app-store"
+category: "App Store"
 ---
 
 ## 1 App Store Content Support

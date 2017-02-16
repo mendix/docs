@@ -1,7 +1,7 @@
 ---
 title: "The Mendix Job Board"
 space: "Community"
-parent: "community-tools"
+category: "Tools"
 ---
 
 ## 1 Introduction

@@ -226,4 +226,6 @@ gulp.task('build-test', `Jekyll build, using ${CONFIG_TEST}. Used for test`, don
   runSequence('clean', 'write:githistory', ['jekyll:build-test', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
 });
 
-gulp.task('test', `Test the html and menu`, ['check:html', 'check:menu']);
+gulp.task('test', `Test the html and menu`, done => {
+  runSequence('check:html', 'check:menu', done);
+});

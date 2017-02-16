@@ -54,4 +54,5 @@ deploy:
 #     branch:
 #       - feature_development
 after_deploy:
- - gulp algolia
+  - if echo "$TRAVIS_COMMIT_MESSAGE" | grep -F -q "[skip algolia]" ; then echo "[skip algolia] has been found, exiting" && exit 0 ; else echo "[skip algolia] has not been found, continuing" ; fi
+  - gulp algolia

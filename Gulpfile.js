@@ -62,20 +62,19 @@ gulp.task('clean', `Cleanup the ${DIST_FOLDER} directory`, () => {
 });
 
 gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json to ${DIST_FOLDER}/mappings/redirect.map`, done => {
-  mappings.run({
-    write: true,
-    type: 'js',
-    src: path.join(CURRENTFOLDER, '/_assets/mappings/redirect.js'),
-    dest: path.join(CURRENTFOLDER, '/_site/mappings/redirect.map'),
-    callback: function (err) {
-      if (err) {
-        process.exit(2);
-      } else {
-        done();
-      }
-    }
+  mappings
+    .run({
+      write: true,
+      type: 'js',
+      src: path.join(CURRENTFOLDER, '/_assets/mappings/redirect.js'),
+      dest: path.join(CURRENTFOLDER, '/_site/mappings/redirect.map')
+    })
+    .then(done)
+    .catch(err => {
+      helpers.gulpErr('write:mapping', err);
+      process.exit(2);
+    });
   });
-});
 
 gulp.task('write:githistory', `Write git_history to data`, done => {
   git.getCommits(CURRENTFOLDER, true)
@@ -209,7 +208,7 @@ gulp.task('algolia', `Push Algolia indexes (not production ready)`, done => {
 });
 
 gulp.task('build', `Jekyll build, using ${CONFIG}. Used for production`, done => {
-  runSequence('clean', 'write:githistory', ['sass:build', 'copy:images', 'compress:js', 'write:mappings'], 'jekyll:build', done);
+  runSequence('clean', 'write:mappings', 'write:githistory', ['sass:build', 'copy:images', 'compress:js'], 'jekyll:build', done);
 });
 
 gulp.task('build-test', `Jekyll build, using ${CONFIG_TEST}. Used for test`, done => {

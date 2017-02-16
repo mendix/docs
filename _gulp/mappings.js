@@ -104,7 +104,7 @@ const mappings = (opts) => new Promise((resolve, reject) => {
         const mappingsFile = mappingsArr.join('\n');
 
         if (errors.length > 0) {
-          reject(new Error(`You have errors in your mapping ${gutil.colors.cyan(opts.src)} file:\n\n${errors.join('\n')}\n`))
+          reject(`You have errors in your mapping ${gutil.colors.cyan(opts.src)} file:\n\n${errors.join('\n')}\n`);
         } else if (opts.write) {
           touch(opts.dest);
 

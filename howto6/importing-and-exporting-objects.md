@@ -28,7 +28,7 @@ Mendix project packages are stored as Mendix Package (.mpk) files.
 
     Here, you have a few options:
 
-    *   Determine the local folder where you would like to store your project. 
+    *   Determine the local folder where you would like to store your project.
     *   Decide whether you want to use Mendix Team Server for this project. Unless you have a good reason _not_ to use Team Server, it is highly recommended that you leave this on.
     *   Decide whether to upload to a new repository (recommended) or to an existing repository.
     *   Finally, give your project a name. By default, it will be named as it was in the Mendix Package file.
@@ -103,7 +103,7 @@ Mendix module packages are stored as Mendix Package (.mpk) files. However, you n
 
 ### Importing Content from the App Store
 
-To learn more about importing content from the App Store, see [Use App Store Content in the Modeler](/community/use-app-store-content-in-the-modeler).
+To learn more about importing content from the App Store, see [Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler).
 
 ## Exporting Objects
 
@@ -145,7 +145,7 @@ Widgets are already available in the **widgets** folder in your project director
 
 Mendix module object packages are stored as Mendix Package (.mpk) files. An object package can contain a page, microflow, image collection, event, document template, constant, web service, layout, menu, and more.
 
-1.  **Right click** on the document you want to export and select **Export document package...** 
+1.  **Right click** on the document you want to export and select **Export document package...**
     ![](attachments/18448739/18582092.png)
     A save dialogue box will open.
 2.  Enter a **name** for your package and click **Save_._**

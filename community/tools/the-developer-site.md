@@ -6,7 +6,7 @@ category: "Tools"
 
 ## 1 Overview
 
-You can go to the [Mendix Developers site](https://developers.mendix.com/) for all the information you need as a member of the Mendix Community. Each section of the site is a Community tool that is updated with all the new Mendix content and exciting developments. In addition, the content on the site is not only created for Mendix Community developers, it's created by Mendix Community developers. 
+You can go to the [Mendix Developers site](https://developers.mendix.com/) for all the information you need as a member of the Mendix Community. Each section of the site is a Community tool that is updated with all the new Mendix content and exciting developments. In addition, the content on the site is not only created for Mendix Community developers, it's created by Mendix Community developers.
 
 ## 2 Forum
 
@@ -58,9 +58,9 @@ The **App Store Updates** section of the Developers site presents the latest upd
 
 ![](attachments/the-developer-site/App_Store.png)
 
-Clicking any App Store content name will bring you to that specific page in the App Store, where you can read a detailed description of the content and check out some user reviews. Clicking **VIEW ALL** will bring you to the main Mendix App Store page, where you can see featured and new content, recent updates, reviews, and the top contributors to the App Store. 
+Clicking any App Store content name will bring you to that specific page in the App Store, where you can read a detailed description of the content and check out some user reviews. Clicking **VIEW ALL** will bring you to the main Mendix App Store page, where you can see featured and new content, recent updates, reviews, and the top contributors to the App Store.
 
-For more information, see the [App Store Overview](app-store-overview).
+For more information, see the [App Store Overview](/community/app-store/app-store-overview).
 
 ## 7 Job Board
 
@@ -78,7 +78,7 @@ For more information, see [The Mendix Job Board](the-mendix-job-board).
 
 Mendix regularly organizes and hosts knowledge meetups and Q&A sessions where Mendix enthusiasts can share knowledge and best practices as well as discuss experiences of working with the Mendix app platform.
 
-The **Meetups** section of the Developers site presents the upcoming scheduled meetups: 
+The **Meetups** section of the Developers site presents the upcoming scheduled meetups:
 
 ![](attachments/the-developer-site/Meetups.png)
 

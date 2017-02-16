@@ -16,7 +16,7 @@ Before you continue, make sure that you know how to create:
 *   **Overview and detail pages** ([Creating your first two overview and detail pages](create-your-first-two-overview-and-detail-pages)).
 *   **Menu items** ([Setting Up the Navigation Structure](setting-up-the-navigation-structure)).
 *   **Microflows** ([Create your first Microflow: Hello World!](create-your-first-microflow-hello-world)
-*   **Add Appstore** **content (** [Use App Store Content in the Modeler](/community/use-app-store-content-in-the-modeler)).
+*   **Add Appstore** **content (** [Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler)).
 *   **Secure applications** ([Creating a secure app](create-a-secure-app)).
 
 Follow these steps:

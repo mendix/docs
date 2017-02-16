@@ -28,7 +28,7 @@ This means that equal response and resolve times are applicable, and the standar
 
 Support on content in this category is up to the user or organization providing the content. We recommend contacting the owner of the content in case of questions or issues via the following methods:
 
-* Open an an issue on the GitHub repository associated with the content (if available) 
+* Open an an issue on the GitHub repository associated with the content (if available)
     * For details on GitHub issues, see [Mastering Issues](https://guides.github.com/features/issues/)
 * Contact the owner of the content via the contact details available on the content item's detail page in the App Store
 * Ask for help on the [Mendix Forum](https://mxforum.mendix.com/)
@@ -47,4 +47,4 @@ The level of support depends on the availability and effort of the developer and
 
 * [App Store Overview](app-store-overview)
 * [How to Share App Store Content](share-app-store-content)
-* [How to Use App Store Content in the Modeler](/community/use-app-store-content-in-the-modeler)
+* [How to Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler)

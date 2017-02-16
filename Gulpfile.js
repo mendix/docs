@@ -208,7 +208,18 @@ gulp.task('algolia', `Push Algolia indexes (not production ready)`, done => {
 });
 
 gulp.task('build', `Jekyll build, using ${CONFIG}. Used for production`, done => {
-  runSequence('clean', 'write:mappings', 'write:githistory', ['sass:build', 'copy:images', 'compress:js'], 'jekyll:build', done);
+  runSequence('clean', 'write:mappings', 'write:githistory', ['sass:build', 'copy:images', 'compress:js'], 'jekyll:build', (err) => {
+      //if any error happened in the previous tasks, exit with a code > 0
+      if (err) {
+        var exitCode = 2;
+        console.log('[ERROR] gulp build task failed', err);
+        console.log('[FAIL] gulp build task failed - exiting with code ' + exitCode);
+        return process.exit(exitCode);
+      }
+      else {
+        return done();
+      }
+    });
 });
 
 gulp.task('build-test', `Jekyll build, using ${CONFIG_TEST}. Used for test`, done => {

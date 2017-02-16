@@ -1,7 +1,7 @@
 ---
 title: "The Developers Site"
 space: "Community"
-parent: "community-tools"
+category: "Tools"
 ---
 
 ## 1 Overview

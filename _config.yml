@@ -90,7 +90,6 @@ defaults:
       path: 'community'
       type: pages
     values:
-      space: "Community"
       menus:
         - "community"
   - scope:

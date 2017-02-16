@@ -1,7 +1,7 @@
 ---
 title: "The Mendix Forum"
 space: "Community"
-parent: "community-tools"
+category: "Tools"
 ---
 
 ## 1 Introduction

@@ -1,7 +1,7 @@
 ---
 title: "App Store Overview"
 space: "Community"
-parent: "app-store"
+category: "App Store"
 ---
 
 ## 1 Introduction

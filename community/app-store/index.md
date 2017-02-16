@@ -1,7 +1,7 @@
 ---
 title: "App Store"
 space: "Community"
-category: "Community"
+category: "App Store"
 ---
 
 ## 1 Introduction to the App Store

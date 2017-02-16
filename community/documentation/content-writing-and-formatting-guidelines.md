@@ -1,7 +1,7 @@
 ---
 title: "Content Writing and Formatting Guidelines"
 space: "Community"
-parent: "community-documentation"
+category: "Documentation"
 ---
 
 # 1 Introduction
@@ -151,11 +151,11 @@ If you want to use an image in your numbered list, add it after the related exer
 
 Add images that clearly show the specific functionality of the related step (so the reader can check that the image matches what they see on their screen). For example:
 
-![](attachments/Content+Writing+and+Formatting+Guidelines/image_examples.png)
+![](attachments/content-writing-and-formatting-guidelines/image_examples.png)
 
 Add boxes, indicators, arrows, and other information to an image only if it makes the image more understandable. For example:
 
-![](attachments/Content+Writing+and+Formatting+Guidelines/highlighting_image_example.png)
+![](attachments/content-writing-and-formatting-guidelines/highlighting_image_example.png)
 
 Keep the images as simple as possible, because having too many arrows on an image can make it confusing!
 

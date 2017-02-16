@@ -72,7 +72,7 @@ gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json 
     .then(done)
     .catch(err => {
       helpers.gulpErr('write:mapping', err);
-      process.exit(2);
+      return process.exit(2);
     });
   });
 

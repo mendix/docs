@@ -31,7 +31,6 @@ before_deploy:
   - cf install-plugin 'https://github.com/contraband/autopilot/releases/download/0.0.2/autopilot-linux' -f
 script:
   - gulp build
-  - gulp check:html
 cache:
   directories:
     vendor
@@ -55,4 +54,5 @@ deploy:
 #     branch:
 #       - feature_development
 after_deploy:
- - gulp algolia
+  - if echo "$TRAVIS_COMMIT_MESSAGE" | grep -F -q "[skip algolia]" ; then echo "[skip algolia] has been found, exiting" && exit 0 ; else echo "[skip algolia] has not been found, continuing" ; fi
+  - gulp algolia

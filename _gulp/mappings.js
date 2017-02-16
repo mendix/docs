@@ -52,7 +52,8 @@ const readMappingsFile = (src, type) => new Promise((resolve, reject) => {
   }
 });
 
-const mappings = (opts) => {
+const mappings = (opts) => new Promise((resolve, reject) => {
+
   readMappingsFile(opts.src, opts.type)
     .then(mappings => {
       if (mappings.redirect) {
@@ -65,66 +66,68 @@ const mappings = (opts) => {
             ],
             done = [],
             errors = [];
+
         _.forEach(red, r => {
           if (!r.to || !r.from) {
-            gulpErr('write:mappings', `Error reading ${opts.src}, this is not a correct mapping: ${JSON.stringify(r, null, 4)}`);
-          }
-          if (r.disabled) {
-            gutil.log(`${mapping_indicator} ${r.from} => ${r.to} disabled`)
-            return true;
-          }
-          const to = r.to.trim(),
-                from = r.from.trim(),
-                lastChar = to.substr(-1),
-                mdFile = '.' + to + (lastChar === '/' ? 'index.md' : '.md'),
-                htmlFile = gutil.replaceExtension(mdFile, '.html'),
-                hash = new Buffer(`${from}-${to}`).toString('base64'),
-                caseSensitive = to.toLowerCase() === from.toLowerCase();
-
-          if (!shell.test('-e', mdFile) && !shell.test('-e', htmlFile)) {
-            errors.push(`There is no file for the mapping in mappings.json to: ${gutil.colors.cyan(to)}`);
-          } else if (to === from) {
-            errors.push(`${gutil.colors.cyan(to)} is the same as ${gutil.colors.cyan(from)}`);
-          } else if (done.indexOf(hash) !== -1) {
-            errors.push(`You have a duplicate mapping for. ${gutil.colors.cyan(from)} => ${gutil.colors.cyan(to)}`);
-          }
-          let mappingStr = '',
-              fromStr = (from.substr(-1) === '/' ? from + '?' : from + '/?');
-
-          if (r.exact) {
-            mappingsArr.push(`${from} ${to};`);
+            return `Error reading ${opts.src}, this is not a correct mapping: ${JSON.stringify(r, null, 4)}`;
           } else {
-            mappingsArr.push((caseSensitive ? '~' : '~*') + `${escapeMapping(fromStr)} ${to};`);
-          }
 
+            if (r.disabled) {
+              gutil.log(`${mapping_indicator} ${r.from} => ${r.to} disabled`)
+              return true;
+            }
+            const to = r.to.trim(),
+                  from = r.from.trim(),
+                  lastChar = to.substr(-1),
+                  mdFile = '.' + to + (lastChar === '/' ? 'index.md' : '.md'),
+                  htmlFile = gutil.replaceExtension(mdFile, '.html'),
+                  hash = new Buffer(`${from}-${to}`).toString('base64'),
+                  caseSensitive = to.toLowerCase() === from.toLowerCase();
+
+            if (!shell.test('-e', mdFile) && !shell.test('-e', htmlFile)) {
+              errors.push(`There is no file for the mapping in mappings.json to: ${gutil.colors.cyan(to)}`);
+            } else if (to === from) {
+              errors.push(`${gutil.colors.cyan(to)} is the same as ${gutil.colors.cyan(from)}`);
+            } else if (done.indexOf(hash) !== -1) {
+              errors.push(`You have a duplicate mapping for. ${gutil.colors.cyan(from)} => ${gutil.colors.cyan(to)}`);
+            }
+            let mappingStr = '',
+                fromStr = (from.substr(-1) === '/' ? from + '?' : from + '/?');
+
+            if (r.exact) {
+              mappingsArr.push(`${from} ${to};`);
+            } else {
+              mappingsArr.push((caseSensitive ? '~' : '~*') + `${escapeMapping(fromStr)} ${to};`);
+            }
+          }
         });
         const mappingsFile = mappingsArr.join('\n');
 
         if (errors.length > 0) {
-          gulpErr('write:mappings', `You have errors in your mapping ${gutil.colors.cyan(opts.src)} file:\n\n${errors.join('\n')}\n`);
-          opts.callback(true);
+          reject(`You have errors in your mapping ${gutil.colors.cyan(opts.src)} file:\n\n${errors.join('\n')}\n`);
         } else if (opts.write) {
           touch(opts.dest);
+
           fs.writeFile(opts.dest, mappingsFile, err => {
             if (err) {
-              gulpErr('write:mappings', `Error writing ${opts.dest}: ${err}`);
-              opts.callback(true);
+              reject(`Error writing mappings: ${err}`)
             } else {
               gutil.log(`Mappings written to ${opts.dest}`);
-              opts.callback(false);
+              resolve();
             }
           })
+
         } else {
-          opts.callback(false);
+          resolve();
         }
       } else {
-        gulpErr('write:mappings', `No redirects found in ${opts.src}`);
+        reject(`No redirects found in ${opts.src}`);
       }
     })
     .catch((err) => {
-      gulpErr('write:mappings', `Rejected: ${err}`);
+      reject(err);
     });
-};
+});
 
 module.exports = {
   run: mappings

@@ -1,5 +1,5 @@
 ---
-title: "Working with when.js and promises in TypeScript"
+title: "Working with when.js and Promises in TypeScript"
 space: "Mendix Platform SDK"
 ---
 On this page you will find an explanation about the use of _promises_ in the Mendix SDK.
@@ -46,7 +46,7 @@ As you can see, specifying the `function` keyword isn't required here. In TypeSc
 
 ## How do you use promises?
 
-The returning pattern is that each time you receive a Promise object from a function call, you call `then` on it, until you end the chain with `done`. In `done`, you handle either the result if everything worked correctly, or you handle the error in case a promise was rejected somewhere along the way. Please have a look at the [CRUD example](https://github.com/mendix/mendixplatformsdk-examples/blob/master/crud/script.ts#L50) to see how you use this pattern in practice. 
+The returning pattern is that each time you receive a Promise object from a function call, you call `then` on it, until you end the chain with `done`. In `done`, you handle either the result if everything worked correctly, or you handle the error in case a promise was rejected somewhere along the way. Please have a look at the [CRUD example](https://github.com/mendix/mendixplatformsdk-examples/blob/master/crud/script.ts#L50) to see how you use this pattern in practice.
 
 ```js
 client.platform()
@@ -77,7 +77,7 @@ client.platform()
 	});
 ```
 
-Note that `workingCopy.commit()` returns a `Promise<[Revision](https://apidocs.mendix.com/platformsdk/latest/classes/_mendix_platform_sdk_.revision.html)``>`. You ignore this value in our success handler (line 68), but you could have used it for instance to show the revision number to the user. 
+Note that `workingCopy.commit()` returns a `Promise<[Revision](https://apidocs.mendix.com/platformsdk/latest/classes/_mendix_platform_sdk_.revision.html)``>`. You ignore this value in our success handler (line 68), but you could have used it for instance to show the revision number to the user.
 
 <div class="alert alert-success">{% markdown %}
 

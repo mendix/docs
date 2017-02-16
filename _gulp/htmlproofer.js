@@ -226,7 +226,12 @@ const checkFiles = (opts) => {
       }
       console.log('')
       if (errors.length === 0) {
-        opts.callback(false);
+        if (files.length === 0) {
+          console.log(`It seems there are no files to check. This looks bad`);
+          opts.callback(true);
+        } else {
+          opts.callback(false);
+        }
       } else {
         opts.callback(true);
       }

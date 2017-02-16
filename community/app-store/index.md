@@ -1,7 +1,6 @@
 ---
 title: "App Store"
 space: "Community"
-category: "App Store"
 ---
 
 ## 1 Introduction to the App Store
@@ -20,7 +19,7 @@ In addition, you get Mendix points for downloading, uploading, and reviewing App
 
 ### 3.1 Private and Public App Store
 
-Mendix offers a private App Store and a public App Store. 
+Mendix offers a private App Store and a public App Store.
 
 The private App Store has content that can be reused only within a company, which can help to speed up the development process for all the company teams. Access rights are restricted on the company level. In this way, you can protect intellectual property and content that may be of interest only to you.
 

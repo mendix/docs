@@ -14,5 +14,6 @@ The user manual has the following chapters:
 *   [Performance Tool](performance-tool)
 *   [JVM Browser](jvm-browser)
 *   [Measurements Tool](measurements-tool)
+*   [Triggers](triggers)
 *   [Query Tool](query-tool)
 *   [Load Test Recorder](load-test-recorder)

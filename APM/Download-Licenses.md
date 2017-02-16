@@ -1,0 +1,13 @@
+---
+title: "Download and Licenses"
+space: "Application Performance Monitor"
+category: "User Manual"
+---
+
+# Download #
+APM can be downloaded from the Mendix APPstore.<br>
+[https://appstore.home.mendix.com/link/app/6127/Mendix/Mendix-Application-Performance-Monitor](https://appstore.home.mendix.com/link/app/6127/Mendix/Mendix-Application-Performance-Monitor "APM download")
+
+# License #
+When a ‘License Request Code’ is delivered in the APM order. This one time ‘License Request Code' can be used to automatically obtain a license when mailing the license request by email. For more info see the 
+[License information](configuration/#License)

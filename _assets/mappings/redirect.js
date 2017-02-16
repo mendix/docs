@@ -230,7 +230,7 @@ module.exports = {
     },
     {
       from: "/appstore/App+Store",
-      to: "/community/app-store/appstore"
+      to: "/community/app-store/"
     },
     {
       from: "/appstore/App+Store+Home",

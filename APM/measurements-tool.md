@@ -58,7 +58,7 @@ Here you can define triggers on high memory usage for example.
 
  ![](attachments/Measurements_Tool/Measurement_Triggers.png)                 
 
-See the description of [Triggers](/APM/triggers) for how to configure triggers.
+See the description of [Triggers](triggers) for how to configure triggers.
 
 
 ### Expressions

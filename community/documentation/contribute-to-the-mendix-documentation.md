@@ -4,7 +4,7 @@ space: "Community"
 category: "Documentation"
 ---
 
-## 1 Introduction<a name="Introduction"></a>
+## 1 Introduction
 
 The documentation is open to the Mendix community, which means you can make changes and add to it in ways that you see necessary. Do you see a how-to that is inaccurate or a section of the reference guide that needs to be updated for UI changes? Now you can help us improve the documentation for the whole Mendix community!
 
@@ -54,7 +54,7 @@ Mendix supports documentation for three major versions at any one time. This mea
 
 </div>
 
-## 4 Writing a New How-To or Reference Guide Page
+## 4 Writing a New How-To or Reference Guide Page<a name="Writing"></a>
 
 To submit a new how-to or reference guide page to our documentation, follow these steps:
 

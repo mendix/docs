@@ -6,9 +6,7 @@ category: "Documentation"
 
 ## Test
 
-[Release Notes](/releasenotes/desktop-modeler/4.8)
-
-[Contribute to the Mendix Documentation](contribute-to-the-mendix-documentation#introduction)
+[Contribute to the Mendix Documentation](contribute-to-the-mendix-documentation#writing)
 
 # 1 Introduction
 

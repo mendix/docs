@@ -53,54 +53,17 @@ The **Measurment configuration** tab allows you to do the folllowing:
 *   If a query has multiple results, you can configure using the first column a part of the name via **Use first 
 result column in name**
 
-### Triggers
-
-Triggers are used to check measurements for a specific value. If the expression in a trigger is fulfilled, 
-the configured action is taken. 
+### Triggers Tab
+Here you can define triggers on high memory usage for example.
 
  ![](attachments/Measurements_Tool/Measurement_Triggers.png)                 
 
-#### Trigger Definition
+See the description of [Triggers](/APM/triggers) for how to configure triggers.
 
-You can configure the following fields on a trigger:
-
-* **Description** to describe the trigger – this description can be used in log and trap message actions as {1}
-* **Enabled** to enable or diable a trigger – triggers are automatically disabled if the continuation is 
-set to **Stop**
-* **Expression** to set the business rule that fires the action (see below for details)
-* **Parameter** to define another measurement to be used in the expression as a parameter
-
-#### Trigger Actions
-
-These actions can be:
-
-*   Running a microflow, see sample microflow APMAgent.SampleMetricTriggerMicroflow_LogMessage on how to
-build this microflow
-*   Creating a log message – you can use {1} for the trigger description, {2} for measurement name, 
-{3} measurement value
-*   Creating a trap message – you can use {1} for the trigger description, {2} for measurement name, 
-{3} measurement value
-*   Saving a statistics tool snapshot
- * The duration of this snapshot is configured in the global settings
- * The snapshot will by default have between 10 and 20 minutes of statistics
-*   Generating a heap dump
- * You only see the create heap dump option if you have special permissions (**USE WITH CAUTION**: creating a heap dump pauses the system for a certain period of time depending on the amount of heap space assigned to the Java process running the Mendix server; this can freeze the app for many seconds)
-
-#### Trigger Continuation
-
-The continuation tab allows to configure what happens after the trigger has fired and the action has 
-been executed. You can:
-
-*  Do **Nothing** means keep on checking and executing the trigger
-*  **Stop** means that the trigger will fire once and then disable itself
-*  **Pause** means you can define a period in which the trigger will not fire again
-
-This is to prevent, for example, a large amount of emails when the CPU usage is high.
 
 ### Expressions
 
-Expressions for measurements and triggers are written the same as expressions are written in the 
-Mendix Modeler expression editor. 
+Expressions for measurements and measurement triggers are written the same as expressions that are written in the Mendix Modeler expression editor. 
 
 The `$Measurement` variables is available with columns:
 
@@ -123,7 +86,7 @@ This is an example to calculate the difference between the current and the previ
 
 $Measurement/ValueLong - $Measurement_1/ValueLong
 
-### Tester
+## Tester Tab
 
 The tester will execute the measurement and test the trigger (if enabled) to verify the expressions.
 
@@ -135,15 +98,24 @@ In the tester, you can clear the cache and also remove all records from the data
 
 ## Triggered Events
 
-If a trigger fires, a record is created in the triggered events. The events are automatically deleted after a certain amount of days as configured in the **Remove triggered events after (days)** setting on the [More tab](/APM/dashboard#more). If you want to keep a event for future reference, you can keep the event using the keep-button above the triggered event grid.
+If a trigger fires, a record is created in the triggered events. 
 
-![](attachments/Measurements_Tool/Triggered_Events.png)
+The events are automatically deleted after a certain amount of days as 
+configured in the global setting [More tab](/APM/configuration#more). 
+**Remove triggered events after (days)**. 
+
+If you want to keep an event for future reference you can use the **Keep**-button
+ above the triggered event grid.
+
+![](attachments/Triggers/Triggered_Events.png)
 
 If a trap is created with the trigger actions, you can open the trap.
 
-If a statistics snapshot is created with the trigger actions, you can open the statistics snapshot.
+If a statistics snapshot is created with the trigger actions you can open the 
+statistics snapshot.
 
-If a heap dump is created with the trigger actions, you can download the heap dump. You only get this option 
-if you have special permissions.
+If a heap dump is created with the trigger actions you can download the heap dump. 
+You only get this option if you have special permissions.
 
-You can open the measurement configuration that contains the trigger with the **Show trigger** button.
+You can open the measurement configuration that contains the trigger with the 
+**Show trigger** button.

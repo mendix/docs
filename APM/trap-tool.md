@@ -74,13 +74,15 @@ a warning, or a critical message in either the log tool or the trap tool, viewin
 
 ![](attachments/Trap_Tool/Edit_Exclusion.png)
 
-The regular expression can be tested against the traps and log messages in the database, so if the tool currently recorded a message that needs to be excluded the next time it occurs, then the test button should give a result.
+The regular expression can be tested against the traps and log messages in the database, so if the tool currently records a message that needs to be excluded the next time it occurs, then the test button should give a result.
 
 ### Triggers Tab
+On the **Triggers** tab, you can define message triggers that fire on messages of level
+ INFO and above. 
 
 ![](attachments/Trap_Tool/Options_Triggers.png)
 
-On the **Triggers** tab, you can define message triggers that fire on messages of level INFO and above. See [Measurements Tool](measurements-tool) for a description on triggers.
+See the description of [Triggers](/APM/triggers) for how to configure triggers.
 
 ### Save & Apply
 

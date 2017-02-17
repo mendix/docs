@@ -103,7 +103,7 @@ On the trigger tab you can define triggers that fire on a certain microflow dura
 
 ![](attachments/Statistics_Tool/Triggers.png)
 
-See the description of [Triggers](/APM/triggers) for how to configure triggers.
+See the description of [Triggers](triggers) for how to configure triggers.
 
 ### Save & Apply
 

@@ -54,7 +54,7 @@ Mendix supports documentation for three major versions at any one time. This mea
 
 </div>
 
-## 4 Writing a New How-To or Reference Guide Page<a name="Writing"></a>
+## 4 Writing a New How-To or Reference Guide Page
 
 To submit a new how-to or reference guide page to our documentation, follow these steps:
 

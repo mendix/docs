@@ -4,6 +4,12 @@ space: "Community"
 category: "Documentation"
 ---
 
+## Test
+
+[Release Notes](releasenotes/desktop-modeler/4.8)
+
+[Contribute to the Mendix Documentation](contribute-to-the-mendix-documentation#introduction)
+
 # 1 Introduction
 
 This document presents guidelines for creating a common voice, style, and structure for every piece of content we write. The goal of our documentation is to attract and teach new Community developers. With that in mind, please read these guidelines carefully to help us keep the documentation consistent.

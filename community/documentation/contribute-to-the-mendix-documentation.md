@@ -4,7 +4,7 @@ space: "Community"
 category: "Documentation"
 ---
 
-## 1 Introduction
+## 1 Introduction<a name="Introduction"></a>
 
 The documentation is open to the Mendix community, which means you can make changes and add to it in ways that you see necessary. Do you see a how-to that is inaccurate or a section of the reference guide that needs to be updated for UI changes? Now you can help us improve the documentation for the whole Mendix community!
 

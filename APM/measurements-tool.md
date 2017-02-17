@@ -101,7 +101,7 @@ In the tester, you can clear the cache and also remove all records from the data
 If a trigger fires, a record is created in the triggered events. 
 
 The events are automatically deleted after a certain amount of days as 
-configured in the global setting [More tab](/APM/configuration#more). 
+configured in the global setting [More tab](configuration#more). 
 **Remove triggered events after (days)**. 
 
 If you want to keep an event for future reference you can use the **Keep**-button

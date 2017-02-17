@@ -6,7 +6,7 @@ category: "Documentation"
 
 ## Test
 
-[Contribute to the Mendix Documentation](contribute-to-the-mendix-documentation#writing)
+[Contribute to the Mendix Documentation](contribute-to-the-mendix-documentation#Writing)
 
 # 1 Introduction
 

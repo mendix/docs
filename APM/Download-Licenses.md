@@ -6,7 +6,7 @@ category: "User Manual"
 
 ## Download
 
-APM can be downloaded from the [Mendix App Store](https://appstore.home.mendix.com/link/app/6127/Mendix/Mendix-Application-Performance-Monitor "APM download").
+APM can be downloaded from the [Mendix App Store](https://appstore.home.mendix.com/link/app/6127/Mendix/Mendix-Application-Performance-Monitor).
 
 ## License
 

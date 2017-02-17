@@ -74,9 +74,7 @@ a warning, or a critical message in either the log tool or the trap tool, viewin
 
 ![](attachments/Trap_Tool/Edit_Exclusion.png)
 
-The regular expression can be tested against the traps and log messages in the database,
- so if the tool currently recorded a message that needs to be excluded the next time it 
- occurs, then the test button should give a result.
+The regular expression can be tested against the traps and log messages in the database, so if the tool currently records a message that needs to be excluded the next time it occurs, then the test button should give a result.
 
 ### Triggers Tab
 On the **Triggers** tab, you can define message triggers that fire on messages of level

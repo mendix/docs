@@ -71,14 +71,16 @@ Set the name of your company and app in the constants.
 
 **Note:** Do not change the constants in the model. Use the Modeler settings or the runtime settings for constants. After an upgrade, a model constant gets overwritten.
 
-## Optionally configure the APMAgent.NotifyMicroflowName constant
+## Optionally Configure the APMAgent.NotifyMicroflowName Constant
+
 This constant defines the microflow that is called on the trigger notify action. You
-can call a microflow that sends an e-mail. The microflow gets 3 string parameters:
+can call a microflow that sends an e-mail. The microflow gets three string parameters:
+
 * **To**
 * **Subject**
 * **Message**
 
-See sample microflow APMAgent.SampleNotifyMicroflow_LogMessage.
+See the sample microflow APMAgent.SampleNotifyMicroflow_LogMessage.
 
 ## Start the Modeler or the Runtime
 

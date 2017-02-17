@@ -53,7 +53,7 @@ The **Measurment configuration** tab allows you to do the folllowing:
 *   If a query has multiple results, you can configure using the first column a part of the name via **Use first 
 result column in name**
 
-### Triggers tab
+### Triggers Tab
 Here you can define triggers on high memory usage for example.
 
  ![](attachments/Measurements_Tool/Measurement_Triggers.png)                 
@@ -63,8 +63,7 @@ See the description of [Triggers](/APM/triggers) for how to configure triggers.
 
 ### Expressions
 
-Expressions for measurements and measurement triggers are written the same as 
-expressions are written in the Mendix Modeler expression editor. 
+Expressions for measurements and measurement triggers are written the same as expressions that are written in the Mendix Modeler expression editor. 
 
 The `$Measurement` variables is available with columns:
 
@@ -87,7 +86,7 @@ This is an example to calculate the difference between the current and the previ
 
 $Measurement/ValueLong - $Measurement_1/ValueLong
 
-## Tester tab
+## Tester Tab
 
 The tester will execute the measurement and test the trigger (if enabled) to verify the expressions.
 

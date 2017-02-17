@@ -18,7 +18,7 @@ As a protection, you can set a **Maximum log level** after startup if the log to
 
 In some cases, tools are run for a fixed period of time. However, running after startup usually means you want to run a specific tool all the time. With the  **Clear fixed period of time** after startup option, you can make sure the tools will keep on running after startup.
 
-## License
+## License<a name="license"></a>
 
 APM requires an application license that can be requested via email using the button in the configuration dialog. If the email client is not configured, you can use the **Manual license request** button and copy-paste the text in an email to [apmtool@mansystems.nl](mailto:apmtool@mansystems.nl). 
 

@@ -1,5 +1,5 @@
 ---
-title: "Download and Licenses"
+title: "Download and License"
 space: "Application Performance Monitor"
 category: "User Manual"
 ---

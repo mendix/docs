@@ -49,7 +49,7 @@ the **Clean data** tab:
 
 ![](attachments/Dashboard/Configuration_CleanData.png)                       
 
-<a name="More"></a>
+## More<a name="More"></a>
 Some other settings are collected on the **More** tab:
 
 ![](attachments/Dashboard/Configuration_More.png)                       
@@ -58,7 +58,7 @@ A default measurement graph can be selected for the dashboard.
 
 Automatic cleanup for the triggered event data in the measurements tool is configured here.
 
-Also a default **Triggers notify to** can be configured here.
+Also, the default **Triggers notify to** can be configured here.
 
 ## Start/Stop
 

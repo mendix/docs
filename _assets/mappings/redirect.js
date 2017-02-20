@@ -1493,6 +1493,10 @@ module.exports = {
       to: "/howto40/security-checklist-for-your-on-premise-installation"
     },
     {
+      from: "/howto40/Security+checklist+for+your+on+premise-installation",
+      to: "/howto40/security-checklist-for-your-on-premise-installation"
+    },
+    {
       from: "/howto40/Send+IDoc+from+Mx+to+SAP",
       to: "/howto40/send-idoc-from-mx-to-sap"
     },
@@ -1674,6 +1678,10 @@ module.exports = {
     {
       from: "/howto50/Build+a+simple+HRM+app+5+Smarten+up+your+app+with+business+logic",
       to: "/howto50/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic"
+    },
+    {
+      from: "/howto50/call+a+microflow",
+      to: "/refguide5/microflow-call"
     },
     {
       from: "/howto50/Clearing+Warning+Messages+in+Mendix",
@@ -3248,6 +3256,10 @@ module.exports = {
     },
     {
       from: "/refguide4/Drop+Down+Widget",
+      to: "/refguide4/drop-down-widget"
+    },
+    {
+      from: "/refguide4/Drop-Down+Widget",
       to: "/refguide4/drop-down-widget"
     },
     {

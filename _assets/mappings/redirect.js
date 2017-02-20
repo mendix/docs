@@ -7790,7 +7790,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Date+and+Time+Handling+in+3.0",
-      "to": "/refguide7/date-and-time-handling-in-3.0"
+      "to": "/refguide7/date-and-time-handling"
     },
     {
       "from": "/refguide7/Date+creation",
@@ -8609,10 +8609,6 @@ module.exports = {
     {
       "from": "/refguide7/Remove+button",
       "to": "/refguide7/remove-button"
-    },
-    {
-      "from": "/refguide7/Removed+APIs",
-      "to": "/refguide7/removed-apis"
     },
     {
       "from": "/refguide7/Report+Button",

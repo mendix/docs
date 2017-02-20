@@ -94,7 +94,7 @@ Since the release of the Community Profile, you can merge your old Mendix accoun
 There are five quick and easy steps to merge your accounts:
 
 1. Go to your [Community Profile](https://developer.mendixcloud.com/link/ownprofile/).
-2. Click **Make my profile public** to make your Community Profile public (for more information, see [6 Making Your Profile Public](#6-making-your-profile-public)).
+2. Click **Make my profile public** to make your Community Profile public (for more information, see [6 Making Your Profile Public](#MakingYourProfilePublic)).
 3. Click **Account Settings** on the right side of the screen.
 4. Under **Merge your accounts**, enter the email address of the account you want to merge with your current account.
 5. Click the send button to send a merge request.

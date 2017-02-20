@@ -5,17 +5,11 @@
 apidocs:
   space: "API Documentation"
   priority: 6
-APM:
-  space: "APM"
+addons:
+  space: "Add-Ons"
   priority: false
 appstore:
   space: "App Store"
-  priority: false
-AQM:
-  space: "AQM"
-  priority: false
-ATS:
-  space: "ATS"
   priority: false
 bestpractices:
   space: "Best Practices"

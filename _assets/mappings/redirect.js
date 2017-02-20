@@ -87,87 +87,87 @@ module.exports = {
      ****************************************************/
     {
       from: "/APM/After+Startup+Error",
-      to: "/APM/after-startup-error"
+      to: "/addons/APM/after-startup-error"
     },
     {
       from: "/APM/Constants",
-      to: "/APM/constants"
+      to: "/addons/APM/constants"
     },
     {
       from: "/APM/Generic",
-      to: "/APM/generic"
+      to: "/addons/APM/generic"
     },
     {
       from: "/APM/In+a+load+test",
-      to: "/APM/in-a-load-test"
+      to: "/addons/APM/in-a-load-test"
     },
     {
       from: "/APM/In+development",
-      to: "/APM/in-development"
+      to: "/addons/APM/in-development"
     },
     {
       from: "/APM/In+production",
-      to: "/APM/in-production"
+      to: "/addons/APM/in-production"
     },
     {
       from: "/APM/In+test+and+acceptance",
-      to: "/APM/in-test-and-acceptance"
+      to: "/addons/APM/in-test-and-acceptance"
     },
     {
       from: "/APM/Application+Performance+Monitor",
-      to: "/APM/"
+      to: "/addons/APM/"
     },
     {
       from: "/APM/Inserting+context+information",
-      to: "/APM/inserting-context-information"
+      to: "/addons/APM/inserting-context-information"
     },
     {
       from: "/APM/Installation",
-      to: "/APM/installation"
+      to: "/addons/APM/installation"
     },
     {
       from: "/APM/Installation+steps",
-      to: "/APM/installation-steps"
+      to: "/addons/APM/installation-steps"
     },
     {
       from: "/APM/Introduction",
-      to: "/APM/introduction"
+      to: "/addons/APM"
     },
     {
       from: "/APM/Java+security+settings",
-      to: "/APM/java-security-settings"
+      to: "/addons/APM/java-security-settings"
     },
     {
       from: "/APM/JVM+Browser",
-      to: "/APM/jvm-browser"
+      to: "/addons/APM/jvm-browser"
     },
     {
       from: "/APM/Load+Test+Recorder",
-      to: "/APM/load-test-recorder"
+      to: "/addons/APM/load-test-recorder"
     },
     {
       from: "/APM/Log+Tool",
-      to: "/APM/log-tool"
+      to: "/addons/APM/log-tool"
     },
     {
       from: "/APM/Measurements+Tool",
-      to: "/APM/measurements-tool"
+      to: "/addons/APM/measurements-tool"
     },
     {
       from: "/APM/Performance+Tool",
-      to: "/APM/performance-tool"
+      to: "/addons/APM/performance-tool"
     },
     {
       from: "/APM/Performance+Tool+Results",
-      to: "/APM/performance-tool-results"
+      to: "/addons/APM/performance-tool-results"
     },
     {
       from: "/APM/Pre+requisites",
-      to: "/APM/pre-requisites"
+      to: "/addons/APM/pre-requisites"
     },
     {
       from: "/APM/Query+Tool",
-      to: "/APM/query-tool"
+      to: "/addons/APM/query-tool"
     },
     {
       from: "/APM/Release+Notes",
@@ -187,31 +187,31 @@ module.exports = {
     },
     {
       from: "/APM/Sizing+impact",
-      to: "/APM/sizing-impact"
+      to: "/addons/APM/sizing-impact"
     },
     {
       from: "/APM/Statistics+Tool",
-      to: "/APM/statistics-tool"
+      to: "/addons/APM/statistics-tool"
     },
     {
       from: "/APM/Trap+Tool",
-      to: "/APM/trap-tool"
+      to: "/addons/APM/trap-tool"
     },
     {
       from: "/APM/Uninstall+steps",
-      to: "/APM/uninstall-steps"
+      to: "/addons/APM/uninstall-steps"
     },
     {
       from: "/APM/Upgrade+steps",
-      to: "/APM/upgrade-steps"
+      to: "/addons/APM/upgrade-steps"
     },
     {
       from: "/APM/Use+Cases",
-      to: "/APM/use-cases"
+      to: "/addons/APM/use-cases"
     },
     {
       from: "/APM/User+Manual",
-      to: "/APM/user-manual"
+      to: "/addons/APM/user-manual"
     },
     /****************************************************
      * APPSTORE

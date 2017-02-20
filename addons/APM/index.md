@@ -3,6 +3,8 @@ title: "APM"
 space: "Add-Ons"
 ---
 
+## Introduction
+
 The Application Performance Monitor (APM) is a solution that helps to analyze performance issues as well as support users in analyzing runtime behaviour.
 
 This introduction provides a short explanation about what APM is, which tools are in the APM suite and what they are used for. The APM tool consists of the following tools:

@@ -1,7 +1,9 @@
 ---
-title: "Application Quality Monitor (AQM)"
-space: "Application Quality Monitor"
+title: "AQM"
+space: "Add-Ons"
 ---
+
+## Introduction
 
 Mendix Application Quality Monitor (AQM) is a cloud service developed by Mendix and the Software Improvement Group (SIG). 
 Mendix AQM performs a static analysis of Mendix application models according the ISO 25010 standard for maintainability. 
@@ -14,7 +16,7 @@ The Mendix AQM quality model is based on the [SIG/TÜViT Evaluation Criteria](h
 
 The general notion of software quality embraces a variety of quality aspects, of which a taxonomy is available in the [ISO/IEC 25010](http://iso25000.com/index.php/en/iso-25000-standards/iso-25010) international standard on software product quality. The scope of the SIG/TÜViT **Evaluation Criteria** is limited to the internal quality characteristic of maintainability and its sub-characteristics of **analyzability, modifiability, testability, modularity and reusability**. The evaluation concerns the source code of a software product, not the behavior of the product in a test or production environment.
 
-# Additional Information
+## Additional Information
 
 * Mendix AQM is available for projects based on Mendix 6.0 and higher
 * Mendix AQM is part of our Mendix pricelist – for more information or activation, please contact your Mendix Customer Success Manager or Sales

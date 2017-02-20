@@ -229,6 +229,10 @@ module.exports = {
       to: "/community/app-store/app-store-content-support"
     },
     {
+      from: "/community/app-store-content-support",
+      to: "/community/app-store/app-store-content-support"
+    },
+    {
       from: "/appstore/App+Store",
       to: "/community/app-store/"
     },

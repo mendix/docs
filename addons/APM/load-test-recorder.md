@@ -1,7 +1,8 @@
 ---
 title: "Load Test Recorder"
-space: "Application Performance Monitor"
-category: "User Manual"
+space: "Add-Ons"
+category: "APM"
+parent: "user-manual"
 ---
 The load test recorder is a recorder for sessions to be used in a separate tool. It is only seen with 
 special permissions. Mansystems has a load test tool that can be used in projects by our consultants. 

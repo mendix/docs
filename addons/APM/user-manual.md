@@ -1,6 +1,7 @@
 ---
 title: "User Manual"
-space: "Application Performance Monitor"
+space: "Add-Ons"
+category: "APM"
 ---
 This is the user manual for the Mansystems APM for Mendix.
 

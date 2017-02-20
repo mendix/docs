@@ -1,6 +1,7 @@
 ---
 title: "Inserting context information"
-space: "Application Performance Monitor"
+space: "Add-Ons"
+category: "APM"
 parent: "performance-tool"
 ---
 The Performance Tool (since version 1.2.1) has a special action to allow context specific information in the Performance Tool. This way you can see data like in the debugger and know which scenarios were chosen.

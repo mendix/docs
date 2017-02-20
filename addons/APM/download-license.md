@@ -1,7 +1,8 @@
 ---
 title: "Download and License"
-space: "Application Performance Monitor"
-category: "User Manual"
+space: "Add-Ons"
+category: "APM"
+parent: "user-manual"
 ---
 
 ## Download

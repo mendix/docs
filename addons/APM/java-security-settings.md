@@ -1,6 +1,7 @@
 ---
 title: "Java security settings"
-space: "Application Performance Monitor"
+space: "Add-Ons"
+category: "APM"
 parent: "pre-requisites"
 ---
 This appendix describes how to simulate security in the Mendix Modeler and what java permissions are needed.

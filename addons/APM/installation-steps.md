@@ -1,7 +1,8 @@
 ---
 title: "Installation steps"
-space: "Application Performance Monitor"
-category: "Installation"
+space: "Add-Ons"
+category: "APM"
+parent: "installation"
 ---
 This chapter describes the installation of the APM tool. For details on upgrading to a new version, see [Upgrade Steps](upgrade-steps).
 

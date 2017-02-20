@@ -1,7 +1,8 @@
 ---
 title: "Configuration"
-space: "Application Performance Monitor"
-category: "User Manual"
+space: "Add-Ons"
+category: "APM"
+parent: "user-manual"
 ---
 
 This chapter describes the global configuration and the **Start/Stop** dialog. Both can be selected from the

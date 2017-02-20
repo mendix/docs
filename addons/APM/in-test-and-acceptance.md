@@ -1,7 +1,8 @@
 ---
 title: "In test and acceptance"
-space: "Application Performance Monitor"
-category: "Use Cases"
+space: "Add-Ons"
+category: "APM"
+parent: "use-cases"
 ---
 During the test and acceptance phase other users than the developer are testing and using the application. Now it is especially important to collect information for further analysis if they find an issue.
 

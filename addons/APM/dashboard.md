@@ -1,7 +1,8 @@
 ---
 title: "Dashboard"
-space: "Application Performance Monitor"
-category: "User Manual"
+space: "Add-Ons"
+category: "APM"
+parent: "user-manual"
 ---
 The Application Performance Monitor (APM) dashboard is the home screen of APM:
 

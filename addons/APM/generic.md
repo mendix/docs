@@ -1,7 +1,8 @@
 ---
 title: "Generic"
-space: "Application Performance Monitor"
-category: "Use Cases"
+space: "Add-Ons"
+category: "APM"
+parent: "use-cases"
 ---
 The trap tool is always on in development, test, acceptance and production and is used to have all logging immediately available when an error occurs.
 

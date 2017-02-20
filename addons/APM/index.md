@@ -1,8 +1,12 @@
 ---
-title: "Introduction"
-space: "Application Performance Monitor"
+title: "APM"
+space: "Add-Ons"
 ---
+
+The Application Performance Monitor (APM) is a solution that helps to analyze performance issues as well as support users in analyzing runtime behaviour.
+
 This introduction provides a short explanation about what APM is, which tools are in the APM suite and what they are used for. The APM tool consists of the following tools:
+
 * Statistics Tool
 * Performance Tool
 * Trap Tool
@@ -11,7 +15,7 @@ This introduction provides a short explanation about what APM is, which tools ar
 * Query Tool
 * Log Tool
 
-# Definition of APM
+## Definition of APM
 
 Wikipedia provides a good definition of [Application Performance Management](http://en.wikipedia.org/wiki/Application_performance_management).
 
@@ -30,7 +34,7 @@ The APM tools provide valuable information for analyzing the behavior and perfor
 
 </div>
 
-# The Statistics Tool to See Performance Issues Coming
+## The Statistics Tool to See Performance Issues Coming
 
 We know that performance in applications is difficult to test in the initial stage. The data set is small and the exact usage of, for example, search behavior of users is unknown. Therefore, even if all performance best practices are applied in building a Mendix application, some issues still appear in production. Usually they appear over time, so the question is how to see them coming.
 
@@ -40,7 +44,7 @@ This is the statistics tool (for load balanced environments you see the server w
 
 ![](attachments/Introduction/Statistics_Tool.png)
 
-# The Performance Tool to Record Microflows
+## The Performance Tool to Record Microflows
 
 When support wants to investigate a performance issue, either proactively through the statistics tool or reactively when a customer reports an issue, they use the APM Performance tool. With it they can see the duration of the steps in the microflow on the action level. They can drill down to see individual SQL statements. They can even ask the database for an explain plan that tells you how the database processes the query, which indexes it uses, and more. This tool quickly helps to pinpoint the issue.
 
@@ -57,12 +61,11 @@ This is the SQL statements during an action:
 
 ![](attachments/Introduction/Performance_Tool_Browse_Actions.png)
 
-
-# The Trap Tool is Your Flight Data Recorder
+## The Trap Tool is Your Flight Data Recorder
 
 The APM Trap tool is always listening on all levels of logging up to the highest TRACE level and remembers the last couple of seconds (configurable!). When an error occurs the last few seconds of logging leading up to the error are saved in the database. The APM Measurements tool can also monitor memory usage or CPU and trap logging when a threshold is reached. In this way, the information is collected the first time something occurs, which speeds up the problem resolution considerably.
 
-# The Measurements Tool to Collect Even More Information and Trigger an Alarm When Needed
+## The Measurements Tool to Collect Even More Information and Trigger an Alarm When Needed
 
 The APM Measurements tool is measurements to linking business logic and is bridging the gap between the model and the infrastructure metrics, like CPU measurements. The APM Measurements tool gets information from several sources. First, a simple APM JVM browser to present similar information as shown in the standard java management tool like JConsole, VisualVM and JMC. Second, the APM query tool to perform business and database queries to monitor database specific meta information and/or business values. Third, the internal metrics of Mendix and the APM tool are available as well via the APM JVM Browser or other Java JVM management platforms.
 
@@ -72,18 +75,25 @@ The trigger can be to trap logging, or to execute a microflow, for example, to s
 
 ![](attachments/Introduction/Measurements_Tool.png)
 
-
-# JVM Browser
+## JVM Browser
 
 The JVM browser can be used to see JVM information similar to tools like JConsole, JVisualVM or JMC. This gives the information to more functional people without the need for specialists and technical access to the machines running the Mendix application.
 
-# Query Tool
+## Query Tool
 
 The query tool lets you perform XPath, OQL and JDBC queries to collect either business statistics (like reports), application statistics (number of scheduled events running at the same time) or database specific statistics like the number of sessions. This module is also used for the explain plan functionality of the performance tool.
 
-# Log Tool
+## Log Tool
 
 The log tool is used to collect Mendix Runtime log messages and store them in the database.
 This gives remote access to log information, makes it available to consultants, and allows for easy searching and analyzing.
 
 The log rerouting makes sure that Java messages that are sent to the Java console, to the java util library or to the log4j library, are rerouted to the Mendix log. For example, javamail sends debug output to the console and with this option you can collect that information and make it visible in the Mendix log as well as in the APM Log Tool and APM Trap Tool. This helped support a lot in solving email issues and issues with web services security and certificates.
+
+## Main Documents in This Category
+
+* [Introduction](introduction)
+* [Download and License](download-license)
+* [Use Cases](use-cases)
+* [Installation](installation)
+* [User Manual](user-manual)

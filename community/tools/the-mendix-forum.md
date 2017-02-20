@@ -203,7 +203,7 @@ Each idea specifies the following elements:
     * This is taken from the [idea and comment details page](#IdeaDescriptionPage)
 * Tags (**6**) (for example, **datagrid**, **listen-target**, **conditional-visibility**)
 * The category (**7**) of the idea
-    * This is set when submitting an idea (for details, see [4.2 Submitting an Idea](#42-submitting-an-idea))
+    * This is set when submitting an idea (for details, see [4.2 Submitting an Idea](#SubmittingAnIdea))
 * When the idea was created (**8**)
 * The name, avatar, points, and level of the developer created the idea (**9**)
 
@@ -214,9 +214,9 @@ The **Sort by** drop-down menu at the top of the screen has three options for so
 In addition to sorting, you can filter the ideas by entering keywords into the search box or by selecting from the following criteria on the right side of the screen:
 
 * **My favorites** – the ideas you have starred and marked as favorites (for details on how to favorite an idea, see [4.1 Idea and Comment Details Page](#IdeaDescriptionPage))
-* **My own ideas** – the ideas you have submitted (for more information, see [4.2 Submitting an Idea](#42-submitting-an-idea))
-* **Categories** – the categories set when the ideas were submitted (for more information, see [4.2 Submitting an Idea](#42-submitting-an-idea))
-* **Tags** – the tags set when the ideas were submitted (for more information, see [4.2 Submitting an Idea](#42-submitting-an-idea))
+* **My own ideas** – the ideas you have submitted (for more information, see [4.2 Submitting an Idea](#SubmittingAnIdea))
+* **Categories** – the categories set when the ideas were submitted (for more information, see [4.2 Submitting an Idea](#SubmittingAnIdea))
+* **Tags** – the tags set when the ideas were submitted (for more information, see [4.2 Submitting an Idea](#SubmittingAnIdea))
 
 ### 4.1 Idea and Comment Details Page<a name="IdeaDescriptionPage"></a>
 

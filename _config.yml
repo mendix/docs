@@ -94,12 +94,14 @@ defaults:
         - "tips"
         - "bestpractices"
         - "mendixcloud"
+      banner: "mendix4howto"
   - scope:
       path: 'refguide4'
       type: pages
     values:
       menus:
         - "refguide4"
+      banner: "mendix4refguide"
 
   # VERSION INDEPENDENT
   - scope:

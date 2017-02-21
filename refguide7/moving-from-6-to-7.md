@@ -4,7 +4,6 @@ space: "Mendix 7 Reference Guide"
 category: "General"
 ---
 
-
 Please read the [Release Notes](/releasenotes/desktop-modeler/7.0) to see what new major improvements we added in Mendix 7.
 
 This documentation aims to help you to update your project from Mendix 6 to Mendix 7. It contains the following topics:
@@ -14,11 +13,11 @@ This documentation aims to help you to update your project from Mendix 6 to Mend
 *   Deprecated features: see which platform features have been deprecated in Mendix 7.
 *   Removed deprecated functionality: see which features which were deprecated
 
-## Converting your project
+## Converting Your Project
 
 Before converting your project we advise you to look at the following points.
 
-### Backup Project
+### Backing Up Your Project
 
 If you are not using the team server, make a backup of your project. Check that the backup was successful by opening the project.
 
@@ -28,15 +27,15 @@ Really make a backup!
 
 {% endmarkdown %}</div>
 
-### Convert to the latest Mendix 6 version
+### Converting to the Latest Mendix 6 Version
 
 Conversion to Mendix 7 will work for projects created with version 6.0.0 or newer. However, we advise to convert to the latest 6 version before converting to Mendix 7. At the time of writing this is 6.10.0.
 
-### Fix errors, warnings and deprecations
+### Fixing Errors, Warnings, and Deprecations
 
 Fix errors, warnings and deprecations as far as possible. Take special note of the 'Deprecations' in the Errors dock. Most features that are deprecated in Mendix 6 will be completely gone in Mendix 7, and will result in an error in your project.
 
-### Fix deprecations in Java actions
+### Fixing Deprecations in Java Actions
 
 Fix deprecations in your Java actions by importing your project in Eclipse and solving all the deprecations in the "Problems" tab. For details of the removed and deprecated APIs, see the section "Removed features" of the [Mendix 7 release notes](/releasenotes/desktop-modeler/7.0).
 
@@ -44,11 +43,11 @@ Fix deprecations in your Java actions by importing your project in Eclipse and s
 
 Now you are ready to convert. Simply open your project in the new Mendix Modeler. There are no explicit actions required after opening your Mendix 6 project in Mendix 7.
 
-## Deprecated features
+## Deprecated Features
 
 The following features have been deprecated in Mendix 7. Using these features is discouraged, since they will be removed in a future release of Mendix.
 
-### Java deprecations
+### Java Deprecations
 
 #### On `com.mendix.core.Core`
 | Method Name | Alternative |
@@ -58,7 +57,7 @@ The following features have been deprecated in Mendix 7. Using these features is
 | `exportStream(<br> IContext context,<br> String exportMappingName,<br> IMendixObject objectToExport,<br> Boolean shouldValidate)` | `com.mendix.core.integration().exportStream(<br> IContext context,<br> String exportMappingName,<br> IMendixObject objectToExport,<br> Boolean shouldValidate)` |
 | `importStream(<br> IContext context,<br> InputStream stream,<br> String importMappingName,<br> IMendixObject mappingParameter,<br> Boolean shouldValidate)` | `com.mendix.core.integration().importStream(<br> IContext context,<br> InputStream stream,<br> String importMappingName,<br> IMendixObject mappingParameter,<br> Boolean shouldValidate)` |
 
-## Removed deprecated functionality
+## Removed Deprecated Functionality
 
 The following features that were deprecated in Mendix 6 have been removed in Mendix 7.
 
@@ -83,6 +82,7 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 | `com.mendix.systemwideinterfaces.core.IMendixEnum` | `com.mendix.core.objectmanagement.member.MendixEnum` |
 
 ### Removed Constants
+
 | Class Name | Alternative |
 | --- | --- |
 | `com.mendix.systemwideinterfaces.HandlerConstants` | - |
@@ -95,6 +95,7 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 ### Removed Methods
 
 #### From `com.mendix.core.Configuration`
+
 | Method Name | Alternative |
 | --- | --- |
 | `registerConfigurationSetting(String name, String defaultValue)` | - |
@@ -112,6 +113,7 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 | `getDefaultHashAlgorithm()` | - |
 
 #### From `com.mendix.modules.exportmanager.excel.ExcelExporter`
+
 | Method Name | Alternative |
 | --- | --- |
 | `generateWorkbook(<br> LocalComponent component,<br> IContext context,<br> List<IExcelGrid> grids)` | - |
@@ -119,6 +121,7 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 | `generateXLS(<br> com.mendix.core.component.LocalComponent component,<br> IContext context,<br> IMendixObject fileObject,<br> String fileName,<br> List<String> oqlQueries,<br> boolean autoSizeColumns,<br> List<String> headerNames)` | `generateXLS(<br> IContext context,<br> IMendixObject fileObject,<br> String fileName,<br> List<String> oqlQueries,<br> boolean autoSizeColumns,<br> List<String> headerNames)` |
 
 #### From `com.mendix.systemwideinterfaces.core.IContext`
+
 | Method Name | Alternative |
 | --- | --- |
 | `setCurrentIdentifier(IMendixIdentifier currentIdentifier)` | - |
@@ -127,6 +130,7 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 | `getSudoContext()` | `createSudoClone()` |
 
 #### From `com.mendix.core.Core`
+
 | Method Name | Alternative |
 | --- | --- |
 | `callWebservice()` | use Call REST action in the microflow instead. |
@@ -134,6 +138,7 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 | `getComponent().runtime().about().get("model_version")` | `getModelVersion()` |
 
 #### Others
+
 | Method Name | Alternative |
 | --- | --- |
 | `com.mendix.m2ee.api.IMxRuntimeRequest.getOriginalRequest()` | `com.mendix.m2ee.api.IMxRuntimeRequest.getHttpServletRequest()` |
@@ -146,6 +151,7 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 The removal of deprecated classes and methods in Mendix 7 can cause compilation errors after migrating your project to Mendix 7. Please use the above provided alternative for the removed deprecated code.
 
 #### SystemModuleConstants
+
 These are mainly used to refer to the name of system entities or their attribute names. Such names are also available via corresponding System proxies.
 For example, **SystemModuleConstants.FILE_DOCUMENT_NAME** can be replaced by **FileDocument** proxy:
 ```

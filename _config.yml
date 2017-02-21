@@ -7,7 +7,7 @@ encoding: utf-8
 locale: "en_US"
 
 # Base variables
-latest_major_version: "6"
+latest_major_version: "7"
 github_repo: "https://github.com/mendix/docs"
 github_branch: "development"
 title: "Mendix Documentation"
@@ -36,6 +36,22 @@ defaults:
       layout: mxdefault
 
   # VERSION SPECIFIC CONTENT
+  # Mendix 7
+  - scope:
+      path: 'howto7'
+      type: pages
+    values:
+      menus:
+        - "howto7"
+        - "tips"
+        - "bestpractices"
+        - "mendixcloud"
+  - scope:
+      path: 'refguide7'
+      type: pages
+    values:
+      menus:
+        - "refguide7"
   # Mendix 6
   - scope:
       path: 'howto6'
@@ -78,12 +94,14 @@ defaults:
         - "tips"
         - "bestpractices"
         - "mendixcloud"
+      banner: "mendix4howto"
   - scope:
       path: 'refguide4'
       type: pages
     values:
       menus:
         - "refguide4"
+      banner: "mendix4refguide"
 
   # VERSION INDEPENDENT
   - scope:
@@ -139,7 +157,7 @@ defaults:
       type: pages
     values:
       menus:
-        - "howto6"
+        - "howto7"
         - "tips"
         - "bestpractices"
         - "mendixcloud"
@@ -148,7 +166,7 @@ defaults:
       type: pages
     values:
       menus:
-        - "howto6"
+        - "howto7"
         - "tips"
         - "bestpractices"
         - "mendixcloud"
@@ -157,7 +175,7 @@ defaults:
       type: pages
     values:
       menus:
-        - "howto6"
+        - "howto7"
         - "tips"
         - "bestpractices"
         - "mendixcloud"

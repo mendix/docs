@@ -157,7 +157,7 @@ defaults:
       type: pages
     values:
       menus:
-        - "howto6"
+        - "howto7"
         - "tips"
         - "bestpractices"
         - "mendixcloud"
@@ -166,7 +166,7 @@ defaults:
       type: pages
     values:
       menus:
-        - "howto6"
+        - "howto7"
         - "tips"
         - "bestpractices"
         - "mendixcloud"
@@ -175,7 +175,7 @@ defaults:
       type: pages
     values:
       menus:
-        - "howto6"
+        - "howto7"
         - "tips"
         - "bestpractices"
         - "mendixcloud"

@@ -31,6 +31,12 @@ If this option is enabled the static resources by your mobile application are do
 
 The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This concerns a number of files, including your theme, the javascript client, css files, and pages.
 
+### Optimize network calls
+
+If this option is enabled (`true` by default) we analyze every microflow which can be triggered from the client to minimize the number of objects required to be sent along. This speeds up your app significantly.
+
+If you experience issues while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this resolves the issue, please file a bug report so that we can fix the issue in the platform.
+
 ### After startup
 
 Here you can select a microflow that is automatically executed immediately after the application has been started up.

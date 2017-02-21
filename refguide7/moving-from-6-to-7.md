@@ -140,3 +140,27 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 | `com.mendix.m2ee.api.IMxRuntimeResponse.getOriginalResponse()` | `com.mendix.m2ee.api.IMxRuntimeResponse.getHttpServletResponse()` |
 | `com.mendix.systemwideinterfaces.core.meta.IMetaObject.getComponent()` | - |
 | `com.mendix.systemwideinterfaces.core.ISession.getComponent()` | - |
+
+### Compilation Issues When Migrating a Project to Mendix 7
+
+The removal of deprecated classes and methods in Mendix 7 can cause compilation errors after migrating your project to Mendix 7. Please use the above provided alternative for the removed deprecated code.
+
+#### SystemModuleConstants
+These are mainly used to refer to the name of system entities or their attribute names. Such names are also available via corresponding System proxies.
+For example, **SystemModuleConstants.FILE_DOCUMENT_NAME** can be replaced by **FileDocument** proxy:
+```
+import com.mendix.systemwideinterfaces.SystemModuleConstants;
+
+private final String FILE_DOCUMENT_NAME = SystemModuleConstants.FILE_DOCUMENT_NAME;
+```
+should be replaced by:
+```
+import system.proxies.FileDocument.MemberNames;
+
+private final String FILE_DOCUMENT_NAME = MemberNames.Name.toString();
+```
+Where MemberNames is an Enum defined in the FileDocument proxy class.
+
+### Runtime Issues When Migrating a Project to Mendix 7
+
+Java libraries in Mendix 7 shipped with the installation package are not available for projects anymore. While this results in a better dependency management for each project, it can also cause errors at runtime after migration, for example, **NoClassDefFoundError**. Therefore, it's important to make sure that the **userlib** directory of the migrated project includes all the required libraries. It's also worth noting that in Mendix 7 only one version of each library can exist at runtime. This means that if there are multiple versions of one library the latest version is used and the rest are ignored.

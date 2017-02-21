@@ -32,7 +32,7 @@ This property defines the event that triggers execution of the microflow.
 
 | Value | Description |
 | --- | --- |
-| Create | The microflow is executed when an object of this entity is created. This happens when a user clicks a new button on a grid, or when creating an object in a microflow. |
+| Create | The microflow is executed when an object of this entity is created. This happens when a user clicks a new button on a grid, or when creating an object in a microflow. In a microflow create action, an After Create is executed after the object is initialised with its default values, but before any change items specified in the action are applied. |
 | Commit | The microflow is executed when an object of this entity is committed. This happens when the user clicks a save button on a form, or when committing an object in a microflow. |
 | Delete | The microflow is executed when an object of this entity is deleted. This happens when a user clicks a delete button in a grid, or when deleting an object in a microflow. |
 | Rollback | The microflow is executed when an object of this entity is rolled back. This happens when a user clicks a cancel button in a form, or when rolling back an object in a microflow. |

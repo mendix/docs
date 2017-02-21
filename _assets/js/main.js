@@ -117,7 +117,8 @@
         catUrl.indexOf("/releasenotes/desktop-modeler/") === 0 ||
         catUrl.indexOf("/releasenotes/APM/") === 0 ||
         catUrl.indexOf("/releasenotes/model-sdk/") === 0 ||
-        catUrl.indexOf("/releasenotes/model-sdk/")
+        catUrl.indexOf("/releasenotes/platform-sdk/") === 0 ||
+        catUrl.indexOf("/releasenotes/ATS") === 0
       )) {
         getPages = sortModelerPages(getPages);
       }

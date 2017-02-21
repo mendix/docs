@@ -48,7 +48,15 @@ Now you are ready to convert. Simply open your project in the new Mendix Modeler
 
 The following features have been deprecated in Mendix 7. Using these features is discouraged, since they will be removed in a future release of Mendix.
 
-* TODO
+### Java deprecations
+
+#### On `com.mendix.core.Core`
+| Method Name | Alternative |
+| --- | --- |
+| `getActiveSession(String userName)` | use xpath query on session table instead. |
+| `getActiveSessions()` | use xpath query on session table instead. |
+| `exportStream(<br> IContext context,<br> String exportMappingName,<br> IMendixObject objectToExport,<br> Boolean shouldValidate)` | `com.mendix.core.integration().exportStream(<br> IContext context,<br> String exportMappingName,<br> IMendixObject objectToExport,<br> Boolean shouldValidate)` |
+| `importStream(<br> IContext context,<br> InputStream stream,<br> String importMappingName,<br> IMendixObject mappingParameter,<br> Boolean shouldValidate)` | `com.mendix.core.integration().importStream(<br> IContext context,<br> InputStream stream,<br> String importMappingName,<br> IMendixObject mappingParameter,<br> Boolean shouldValidate)` |
 
 ## Removed deprecated functionality
 

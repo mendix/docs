@@ -1,6 +1,7 @@
 ---
 title: "Administration"
-space: "ATS"
+space: "Add-Ons"
+category: "ATS"
 ---
 
 As an administrator in the ATS, you have access to additional functionality:

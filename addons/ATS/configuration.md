@@ -1,6 +1,7 @@
 ---
 title: "Configuration"
-space: "ATS"
+space: "Add-Ons"
+category: "ATS"
 ---
 
 On the configuration page under the **Project** tab you can see the current project settings. You can change the settings and add users or libraries to your project by clicking the **Edit Project Settings** button.

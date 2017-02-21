@@ -1,6 +1,7 @@
 ---
 title: "Manual Test Steps"
-space: "ATS"
+space: "Add-Ons"
+category: "ATS"
 parent: "test-development"
 ---
 

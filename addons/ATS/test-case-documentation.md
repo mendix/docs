@@ -1,6 +1,7 @@
 ---
 title: "Test Case Documentation"
-space: "ATS"
+space: "Add-Ons"
+category: "ATS"
 parent: "test-development"
 ---
 You can export the structure of your test case by pressing **PDF**:

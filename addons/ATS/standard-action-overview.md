@@ -1,6 +1,7 @@
 ---
 title: "Standard Action Overview"
-space: "ATS"
+space: "Add-Ons"
+category: "ATS"
 parent: "test-development"
 ---
 The following tables list all standard actions for Mendix. There's one table per folder/category.

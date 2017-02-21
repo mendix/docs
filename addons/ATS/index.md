@@ -1,11 +1,11 @@
 ---
-title: "Introduction"
-space: "ATS (Application Test Suite)"
+title: "ATS"
+space: "Add-Ons"
 ---
 
-## Startpage
+## 1 ATS Start Page
 
-When you login to the ATS as a user you see the _My Projects_ page. If there are no projects on your account yet, you are prompted to create a new Project. For project creation see the ReferenceGuide_Projects page of the documentation.
+When you log in to the Application Test Suite (ATS) as a user you see the _My Projects_ page. If there are no projects on your account yet, you are prompted to create a new Project. For project creation see the ReferenceGuide_Projects page of the documentation.
 
 ![Start page when there is no project created yet](attachments/20644051/21168193.png)
 
@@ -13,7 +13,7 @@ If you already have active projects you can see directly how many test cases hav
 
 ![My Projects overview page](attachments/20644051/21168194.png)
 
-## Dashboard
+## 2 ATS Dashboard
 
 When you open an empty project for the first time, the dashboard will look like this:
 
@@ -53,7 +53,7 @@ You can export the current results of your test cases by pressing **PDF**. This 
 
 ![Dashboard export button](attachments/introduction/dashboardexportbutton.png)
 
-## Navigation
+## 3 Navigation
 
 You can navigate your project using the navigation sidebar to the left of the screen.
 
@@ -74,7 +74,7 @@ Over the sidebar you can navigate to different pages of the ATS:
 | **Import**                  | Import new/updated actions, test cases or test suites into your project                              |
 | **My Account**              | Change your username, email and password                                                             |
 
-## Different User Roles
+## 4 Different User Roles
 
 ATS has a role concept that is applied on two different levels, the application and specific projects. There are two roles of users outside of projects:
 
@@ -87,3 +87,16 @@ Administrators manage users and manage projects, see ReferenceGuide_Administrati
 Users work in projects, they create and run test cases
 
 On the project level there are the roles of Project Administrator and Test Designer. The difference between the two is, that the Project Administrator can change the project settings and configure Selenium hbs and test applications. See ReferenceGuide_Configuration for mor info.
+
+## 5 Main Documents in This Category
+
+The ATS documentation is divided into the main sections below, each describing a certain feature.
+
+* [Compatability](general)
+* [Projects](projects)
+* [Data Management](data-management)
+* [Monitoring](monitoring)
+* [Test Development](test-development)
+* [Test Run](test-run)
+* [Configuration](configuration)
+* [Administration](administration)

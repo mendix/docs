@@ -1,6 +1,6 @@
 ---
 title: "Monitoring"
-space: "ATS (Application Test Suite)"
+space: "ATS"
 ---
 ## Test Results
 

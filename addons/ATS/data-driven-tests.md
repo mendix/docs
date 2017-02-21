@@ -1,7 +1,7 @@
 ---
 title: "Data Driven Tests"
-space: "ATS (Application Test Suite)"
-category: "Test Development"
+space: "ATS"
+parent: "test-development"
 ---
 
 Data Driven Testing in ATS allows you to run tests using tables of data directly as test inputs. This way you can test an array of different input values without having to write additional tests. Data sets are easy to create and maintain, so you can add additional data records later on without changing your test cases.

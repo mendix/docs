@@ -1,7 +1,7 @@
 ---
 title: "Recorder"
-space: "ATS (Application Test Suite)"
-category: "Test Development"
+space: "ATS"
+parent: "test-development"
 ---
 The recorder is a function/plugin within ATS which will record the actions behind your test steps during manually testing an application. After saving your recorded actions they are directly added to your active test case.
 

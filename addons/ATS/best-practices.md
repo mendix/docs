@@ -1,7 +1,7 @@
 ---
 title: "Best Practices"
-category: "Test Development"
-space: "ATS (Application Test Suite)"
+space: "ATS"
+parent: "test-development"
 ---
 
 ## Best Practices for writing custom actions

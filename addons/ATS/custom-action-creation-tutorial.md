@@ -1,7 +1,7 @@
 ---
 title: "Custom Action Creation Tutorial"
-space: "ATS (Application Test Suite)"
-category: "Test Development"
+space: "ATS"
+parent: "test-development"
 ---
 
 Welcome to the custom action creation tutorial. You will learn how to create a custom action for a widget from scratch.

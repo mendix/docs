@@ -1,8 +1,9 @@
 ---
 title: "Standard Actions Reference"
-space: "ATS (Application Test Suite)"
-category: "Test Development"
+space: "ATS"
+parent: "test-development"
 ---
+
 ## Predefined Actions in ATS
 This sections provides you with an overview of all predefined actions in ATS. For more informations about the functionality and the usage of an action, click an item below.  
 ### Mendix Actions

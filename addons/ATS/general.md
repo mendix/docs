@@ -1,13 +1,9 @@
 ---
-title: "General"
-space: "ATS (Application Test Suite)"
+title: "Compatibility"
+space: "ATS"
 ---
 
-# Compatibility
-This page documents the compatibility of the Application Test Suite (ATS) with the
-Mendix platform and browsers.
-
-## Mendix
+## Mendix Platform Compatibility
 
 | ATS version | Supported Mendix Versions | Tested |
 | --- | --- | --- |

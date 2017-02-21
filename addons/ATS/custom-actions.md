@@ -1,7 +1,7 @@
 ---
 title: "Custom Actions"
-space: "ATS (Application Test Suite)"
-category: "Test Development"
+space: "ATS"
+parent: "test-development"
 ---
 
 ## Create Custom Actions from scratch

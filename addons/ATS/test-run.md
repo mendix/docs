@@ -1,6 +1,6 @@
 ---
 title: "Test Run"
-space: "ATS (Application Test Suite)"
+space: "ATS"
 parent: "test-development"
 ---
 

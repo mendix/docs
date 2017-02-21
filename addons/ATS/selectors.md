@@ -1,7 +1,7 @@
 ---
 title: "Selectors"
-category: "Test Development"
-space: "ATS (Application Test Suite)"
+space: "ATS"
+parent: "test-development"
 ---
 
 For the [Find Widget Child Node action](mendix-actions/system/find-widget-child-node)  or as part of a script for [Execute JavaScript Integer](selenium-actions/execute-javascript-integer), [Execute JavaScript String](selenium-actions/execute-javascript-string) and [Execute JavaScript WebElement](selenium-actions/execute-javascript-webelement) actions, you will have to use selectors to get a node or WebElement. ATS supports both, JQuery and CSS3 selectors. In addition to that, ATS includes its own selectors. The following summary will give you a short overview of the most commonly used selectors in ATS.

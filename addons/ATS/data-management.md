@@ -1,6 +1,6 @@
 ---
 title: "Data Management"
-space: "ATS (Application Test Suite)"
+space: "ATS"
 ---
 
 ## Repository

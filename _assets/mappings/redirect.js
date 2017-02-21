@@ -48,7 +48,7 @@ module.exports = {
     },
     {
       from: "/apidocs/Moving+From+6+to+7",
-      to: "/apidocs/moving-from-6-to-7"
+      to: "/refguide7/moving-from-6-to-7"
     },
     {
       from: "/apidocs/Permissions+API",
@@ -64,7 +64,7 @@ module.exports = {
     },
     {
       from: "/apidocs/Runtime+API+changes",
-      to: "/apidocs/runtime-api-changes"
+      to: "/refguide7/moving-from-6-to-7"
     },
     {
       from: "/apidocs/Single+Sign-On+API",

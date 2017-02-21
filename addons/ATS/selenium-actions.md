@@ -5,7 +5,7 @@ category: "ATS"
 parent: "standard-actions-reference"
 ---
 
-This section contains these documents:
+**Selenium Actions** contains these documents:
 
 * [Execute JavaScript Integer](execute-javascript-integer)
 * [Execute JavaScript String](execute-javascript-string)

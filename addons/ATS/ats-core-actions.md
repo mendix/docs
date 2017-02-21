@@ -5,7 +5,7 @@ category: "ATS"
 parent: "standard-actions-reference"
 ---
 
-This section contains these documents:
+**ATS Core Actions** section contains these documents:
 
 * [Assert Equals](assert-equals)
 * [Assert Not equals](assert-not-equals)

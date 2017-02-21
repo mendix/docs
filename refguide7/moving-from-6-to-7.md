@@ -161,6 +161,14 @@ private final String FILE_DOCUMENT_NAME = MemberNames.Name.toString();
 ```
 Where MemberNames is an Enum defined in the FileDocument proxy class.
 
+### Moved Packages
+
+| Class Name | Alternative Interface |
+| --- | --- |
+| org.json.\* | com.mendix.thirdparty.org.json.\* |
+
+This is needed to avoid potential namespace conflicts between the Mendix version of the org.json library and other json libraries.
+
 ### Runtime Issues When Migrating a Project to Mendix 7
 
 Java libraries in Mendix 7 shipped with the installation package are not available for projects anymore. While this results in a better dependency management for each project, it can also cause errors at runtime after migration, for example, **NoClassDefFoundError**. Therefore, it's important to make sure that the **userlib** directory of the migrated project includes all the required libraries. It's also worth noting that in Mendix 7 only one version of each library can exist at runtime. This means that if there are multiple versions of one library the latest version is used and the rest are ignored.

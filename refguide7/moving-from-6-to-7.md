@@ -62,4 +62,81 @@ The following features have been deprecated in Mendix 7. Using these features is
 
 The following features that were deprecated in Mendix 6 have been removed in Mendix 7.
 
-* TODO
+### Removed Deprecated Classes
+
+| Class Name | Alternative Interface/Class |
+| --- | --- |
+| `com.mendix.modules.exportmanager.excel.ExcelCellStyle` | `com.mendix.modules.exportmanager`, `.interfaces.excel.IExcelCellStyle` |
+| `com.mendix.modules.exportmanager.excel.ExcelCell` | `com.mendix.modules.exportmanager`, `.interfaces.excel.IExcelCell` |
+| `com.mendix.modules.exportmanager.excel.ExcelColumn` | `com.mendix.modules.exportmanager`, `.interfaces.excel.IExcelColumn` |
+| `com.mendix.modules.exportmanager.excel.ExcelGrid` | `com.mendix.modules.exportmanager`, `.interfaces.excel.IExcelGrid` |
+| `com.mendix.systemwideinterfaces.core.Feedback` | `com.mendix.systemwideinterfaces.core.IFeedback` |
+| `com.mendix.core.conf.ConfigurationImpl` | `com.mendix.core.conf.Configuration` |
+| `com.mendix.core.component.InternalCore` | `com.mendix.Core` |
+| `com.mendix.core.conf.ConfigValueChecker` | -  |
+| `com.mendix.core.conf.UserPermissions`  | -  |
+| `com.mendix.core.conf.CertificateProcessor` | - |
+| `com.mendix.core.conf.HashAlgorithmType` | - |
+| `com.mendix.systemwideinterfaces.connectionbus.ConnectionBusException` | - |
+| `com.mendix.systemwideinterfaces.connectionbus.DBMSType` | - |
+| `com.mendix.systemwideinterfaces.connectionbus.JDBCDataStoreConfiguration` | -  |
+| `com.mendix.systemwideinterfaces.core.IMendixEnum` | `com.mendix.core.objectmanagement.member.MendixEnum` |
+
+### Removed Constants
+| Class Name | Alternative |
+| --- | --- |
+| `com.mendix.systemwideinterfaces.HandlerConstants` | - |
+| `com.mendix.systemwideinterfaces.SystemModuleConstants` | - |
+| `com.mendix.core.conf.CoreConstants` | - |
+| `com.mendix.core.conf.AdminActionConstants` | - |
+| `com.mendix.core.conf.Tokens` | - |
+| `com.mendix.externalinterface.connector.RequestHandler.XAS\_SESSION\_ID`| *Used in RequestHandler:* `com.mendix.externalinterface.connector.RequestHandler.getSessionCookieName()`<br> *Used as a constant:* `com.mendix.core.Core.getConfiguration().getSessionIdCookieName()` |
+
+### Removed Methods
+
+#### From `com.mendix.core.Configuration`
+| Method Name | Alternative |
+| --- | --- |
+| `registerConfigurationSetting(String name, String defaultValue)` | - |
+| `getValue(String name)` | - |
+| `setValue(String name, String Value)` | - |
+| `updateConfiguration(JSONObject params, boolean overwrite)` | - |
+| `getUploadedFilesPath()` | - |
+| `useLDAPAuthentication()` | - |
+| `getReadCommittedSnapshot()` | - |
+| `getMaxThreadsPerDataStoreRequest()` | - |
+| `getLogMinDurationQuery()` | - |
+| `mustReturnOnlyNecessaryDDLCommands()` | - |
+| `setReturnOnlyNecessaryDDLCommands(boolean returnOnlyNecessaryDDLCommands)` | - |
+| `getConstantValue(Object component, String key)` | - |
+| `getDefaultHashAlgorithm()` | - |
+
+#### From `com.mendix.modules.exportmanager.excel.ExcelExporter`
+| Method Name | Alternative |
+| --- | --- |
+| `generateWorkbook(<br> LocalComponent component,<br> IContext context,<br> List<IExcelGrid> grids)` | - |
+| `generateXLS(<br> com.mendix.core.component.LocalComponent component,<br> IContext context,<br> IMendixObject fileObject,<br> String fileName,<br> List<IExcelGrid> grids)` | `generateXLS(<br> IContext context,<br> IMendixObject fileObject,<br> String fileName,<br> List<IExcelGrid> grids)` |
+| `generateXLS(<br> com.mendix.core.component.LocalComponent component,<br> IContext context,<br> IMendixObject fileObject,<br> String fileName,<br> List<String> oqlQueries,<br> boolean autoSizeColumns,<br> List<String> headerNames)` | `generateXLS(<br> IContext context,<br> IMendixObject fileObject,<br> String fileName,<br> List<String> oqlQueries,<br> boolean autoSizeColumns,<br> List<String> headerNames)` |
+
+#### From `com.mendix.systemwideinterfaces.core.IContext`
+| Method Name | Alternative |
+| --- | --- |
+| `setCurrentIdentifier(IMendixIdentifier currentIdentifier)` | - |
+| `setContextObjects(List<IMendixIdentifier> contextObjects)` | - |
+| `setSudo(boolean sudo)` | - |
+| `getSudoContext()` | `createSudoClone()` |
+
+#### From `com.mendix.core.Core`
+| Method Name | Alternative |
+| --- | --- |
+| `callWebservice()` | use Call REST action in the microflow instead. |
+| `importXmlStream()` | use com.mendix.core.integration().importStream() instead. |
+| `getComponent().runtime().about().get("model_version")` | `getModelVersion()` |
+
+#### Others
+| Method Name | Alternative |
+| --- | --- |
+| `com.mendix.m2ee.api.IMxRuntimeRequest.getOriginalRequest()` | `com.mendix.m2ee.api.IMxRuntimeRequest.getHttpServletRequest()` |
+| `com.mendix.m2ee.api.IMxRuntimeResponse.getOriginalResponse()` | `com.mendix.m2ee.api.IMxRuntimeResponse.getHttpServletResponse()` |
+| `com.mendix.systemwideinterfaces.core.meta.IMetaObject.getComponent()` | - |
+| `com.mendix.systemwideinterfaces.core.ISession.getComponent()` | - |

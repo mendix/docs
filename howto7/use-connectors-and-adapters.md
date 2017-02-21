@@ -43,7 +43,7 @@ This module enables building Mendix apps on top of your [Salesforce](http://Sale
 
 ## 6 SAML
 
-[![](attachments/18448690/saml.png)](https://appstore.home.mendix.com/link/app/1174/Mendix/SAML)
+[![](attachments/18448690/SAML.png)](https://appstore.home.mendix.com/link/app/1174/Mendix/SAML)
 
 This module allows you to use SAML to authenticate your users in your cloud application. The module can communicate with any identity provider that supports SAML2.0 or Shibboleth.
 

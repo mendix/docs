@@ -55,7 +55,7 @@
         arr,
         function (p) { return p.id.replace("modeler-","").split(".").map(function (n) { return parseInt(n, 10) }); },
         function (n) { return (n[0] ? n[0] * 10000 : 0) + (n[1] ? n[1] * 100 : 0) + (n[2] || 0); }
-      );
+      ).reverse();
     }
 
     function addNormalLink(title, url) {
@@ -84,9 +84,14 @@
       pages.forEach(function (page) {
         var $item = $('<li />');
         var subpages = data.pages.filter(function (rootpage) { return rootpage.parent && rootpage.parent.toLowerCase() === page.id.toLowerCase(); });
+
         if (subpages && subpages.length > 0) {
           var pageId = 'cat-' + normalizeId(page.id),
               $collapse = $('<div class="collapse" id="'+ pageId + '" />');
+
+          if (page && page.url.indexOf("/releasenotes/desktop-modeler/") === 0) {
+            subpages = sortModelerPages(subpages);
+          }
 
           $item.append(addExpandLink(pageId, page.title, page.url));
           $collapse.append(addPages(subpages, data));
@@ -108,7 +113,13 @@
 
       var catUrl = catPage && catPage.length === 1 ? catPage[0].url : null;
 
-      if (catUrl === "/releasenotes/modeler/") {
+      if (catUrl && (
+        catUrl.indexOf("/releasenotes/desktop-modeler/") === 0 ||
+        catUrl.indexOf("/releasenotes/APM/") === 0 ||
+        catUrl.indexOf("/releasenotes/model-sdk/") === 0 ||
+        catUrl.indexOf("/releasenotes/platform-sdk/") === 0 ||
+        catUrl.indexOf("/releasenotes/ATS") === 0
+      )) {
         getPages = sortModelerPages(getPages);
       }
 

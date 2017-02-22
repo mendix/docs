@@ -100,6 +100,8 @@ You can also renew your Custom Domain Certificate by editing an existing Custom 
 
 After a Custom Domain Certificate has been uploaded, you can start configuring a Custom Domain for one of your Application Environments. For this go to one of your Environments and to the "Network" tab. Under "Custom Domains" you can manage your Custom Domains.
 
+![](attachments/deploy-network-tab.png)
+
 Configure a Custom Domain by:
 
 *   Providing a Domainname (like "myapp.mycompany.com" from the example at the top of this page)

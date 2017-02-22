@@ -4,7 +4,7 @@ sitemap: false
 ---
 {
   "categories": [
-    "Tips and Tricks"
+    "Tips & Tricks"
   ],
   "pages": {% include json-snippets/get_pages.inc dir="/tips/" %}
 }

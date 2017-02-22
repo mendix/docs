@@ -1,0 +1,15 @@
+---
+layout: json
+sitemap: false
+---
+{
+  "categories": [
+    "General",
+    "Modeler",
+    "Java Programming",
+    "Deployment",
+    "Custom Widgets",
+    "Debugging"
+  ],
+  "pages": {% include json-snippets/get_pages.inc dir="/howto40/" %}
+}

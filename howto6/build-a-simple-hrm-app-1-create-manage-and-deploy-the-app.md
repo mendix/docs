@@ -12,29 +12,32 @@ This is the first how-to in a series of five on how to create a simple HRM appli
 
 **After using this how-to, you will know how to do the following:**  
 
-* How to create an app
-* How to manage an app
-* How to deploy an app
+* Create an app
+* Manage an app
+* Deploy an app
 
 ## 2 Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Create a [Mendix account](https://www.mendix.com/try-now/)
+* Create a [Mendix account](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup)
 
 ## 3 Creating Your App
 
 To create your app, follow these steps:
 
 1. Go to the **Mendix App Platform** launchpad ([home.mendix.com](http://home.mendix.com)) and log in if you are not already logged in.
+
     ![](attachments/18448672/18580908.png)
 
     The launchpad is the central starting point for using, sharing, and building apps.
 2. Click the **Dev Portal** app.
+
     ![](attachments/18448672/18580907.png)
 
     The dev portal is your starting point for Mendix development. Here you can collaborate and manage the lifecycle of your app(s).
 3. In the dev portal, click **CREATE NEW APP**.
+
     ![](attachments/18448672/18580906.png) 
 4. On the **THEMES** tab, select a theme. We use **Blue Wave** theme in this how-to. To learn more about themes, see [The Eye-Catching Mendix UI Framework](https://www.mendix.com/blog/the-eye-catching-mendix-ui-framework/).
     ![](attachments/18448672/18580905.png) 
@@ -61,6 +64,7 @@ To manage your app, follow these steps:
 4. Click **Download Modeler**:
     ![](attachments/18448672/18580897.png) 
 5. Click **Download** and install the Modeler (5.18 or higher):
+
     ![](attachments/18448672/18580896.png) 
 6. Go back to the dev portal and click **Overview**:
     ![](attachments/18448672/18580895.png) 

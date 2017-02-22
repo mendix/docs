@@ -5,6 +5,7 @@ space: "Release Notes"
 
 These are the release notes for the Mendix Desktop Modeler:
 
+* [7](7)
 * [6.10](6.10)
 * [6.9](6.9)
 * [6.8](6.8)

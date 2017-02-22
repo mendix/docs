@@ -1,7 +1,7 @@
 ---
 title: "Import a large Excel file"
-space: "Tips and Tricks"
-category: "Tips and Tricks"
+space: "Tips & Tricks"
+category: "Tips & Tricks"
 ---
 Every now and then it happens that a client asks you to import some data. It doesn’t look like a lot of effort at first glance so you add it as a task and plan to pick it up at the end of the day.
 

@@ -4,7 +4,7 @@ category: "Getting Started"
 space: "Mendix 5 How-to's"
 ---
 
-In this how-to you will build your first application and deploy it to the cloud. Before you continue with this how-to, make sure that you are logged in to Mendix. You can log in at [http://www.mendix.com/](http://www.mendix.com/). If you do not have an account, you can sign up here: [http://www.mendix.com/try-now/](http://www.mendix.com/try-now/).
+In this how-to you will build your first application and deploy it to the cloud. Before you continue with this how-to, make sure that you are logged in to Mendix. You can log in at [http://www.mendix.com/](http://www.mendix.com/). If you do not have an account, you can sign up here: [http://www.mendix.com/try-now](http://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup).
 
 **After this how-to you will know:**
 
@@ -16,7 +16,7 @@ In this how-to you will build your first application and deploy it to the cloud.
 
 Before starting this how-to, please make sure you have completed the following steps:
 
-*   Create an account with Mendix [here](http://www.mendix.com/try-now/).
+*   Create an account with Mendix [here](http://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup).
 *   Download and install the Mendix Modeler [here](https://appstore.home.mendix.com/link/modelers).
 
 ## 2\. Create a collaboration project

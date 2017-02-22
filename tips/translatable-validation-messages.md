@@ -1,7 +1,7 @@
 ---
 title: "Translatable Validation Messages"
-space: "Tips and Tricks"
-category: "Tips and Tricks"
+space: "Tips & Tricks"
+category: "Tips & Tricks"
 ---
 
 Setting up validation rules should be relatively straight forward. Per object or per process step you want to have a single microflow that is in charge of the validation. That microflow has the required input parameters, validates all values. If a value is invalid the microflow will execute the validation feedback activity. When completing the microflow it will return a boolean true/false whether or not the object has been successfully validated.

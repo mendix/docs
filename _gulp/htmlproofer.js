@@ -98,6 +98,14 @@ const parseHtmlFiles = files => {
 };
 
 const getLinkPaths = link => {
+  // TODO: GET THIS FROM CONFIG
+  if (link.indexOf('/howto/') !== -1) {
+    link = link.replace(/\/howto\//g, '/howto7/');
+  }
+  if (link.indexOf('/refguide/') !== -1) {
+    link = link.replace(/\/refguide\//g, '/refguide7/');
+  }
+
   return [
     link,
     `${link}.html`,
@@ -226,7 +234,12 @@ const checkFiles = (opts) => {
       }
       console.log('')
       if (errors.length === 0) {
-        opts.callback(false);
+        if (files.length === 0) {
+          console.log(`It seems there are no files to check. This looks bad`);
+          opts.callback(true);
+        } else {
+          opts.callback(false);
+        }
       } else {
         opts.callback(true);
       }

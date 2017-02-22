@@ -85,10 +85,6 @@ The `System.Statistics` entity has been removed from the **System** module, as t
 * Support for `dojo.require` has been dropped. It never worked in hybrid apps, and we have now made it official. Write your custom widgets in the AMD style, as described in [How to Create a Basic Hello World Custom Widget](https://docs.mendix.com/howto7/create-a-basic-hello-world-custom-widget) and the [App Store Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate).
 * Dojo APIs exposed through the global `dojo` object are no longer supported, as they were never supposed to work in AMD widgets. Some of these APIs (for example, `dojo.html`) have already been removed, but others will be removed in the future without notice. So, use these at your own risk, or better yet, don't use them at all!
 
-#### Apply Context and Remove from Context
-
-The **Apply context** and **Remove from context** options of the reference selector, data grid, and template grid data sources were deprecated long ago (in [Mendix 5.19.0](/releasenotes/desktop-modeler/5.19)), and they are now removed. You will get consistency errors in places where you used them. We suggest using explicit XPath constraints instead.
-
 ## Deprecated Features
 
 The following features have been deprecated in Mendix 7. Using these features is discouraged, since they will be removed in a future release of Mendix.

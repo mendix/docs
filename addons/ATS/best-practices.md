@@ -1,7 +1,6 @@
 ---
 title: "Best Practices"
 space: "Add-Ons"
-category: "ATS"
 parent: "test-development"
 ---
 

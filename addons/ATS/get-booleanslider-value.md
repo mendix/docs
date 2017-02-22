@@ -1,7 +1,6 @@
 ---
 title: "Get BooleanSlider Value"
 space: "Add-Ons"
-category: "ATS"
 parent: "booleanslider"
 ---
 ## Description

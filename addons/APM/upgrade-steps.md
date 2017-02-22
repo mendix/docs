@@ -1,7 +1,6 @@
 ---
 title: "Upgrade Steps"
 space: "Add-Ons"
-category: "APM"
 parent: "installation"
 ---
 This document describes the upgrade steps for version 1.5.5 and above.

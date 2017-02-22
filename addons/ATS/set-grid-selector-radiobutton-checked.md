@@ -1,7 +1,6 @@
 ---
 title: "Set Grid Selector RadioButton Value"
 space: "Add-Ons"
-category: "ATS"
 parent: "grid-selector"
 ---
 ## Description

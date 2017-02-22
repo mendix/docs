@@ -1,7 +1,6 @@
 ---
 title: "Get Total Item/Row Count"
 space: "Add-Ons"
-category: "ATS"
 parent: "datagrid-templategrid-listview"
 ---
 

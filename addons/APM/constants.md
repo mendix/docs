@@ -1,7 +1,6 @@
 ---
 title: "Constants"
 space: "Add-Ons"
-category: "APM"
 parent: "installation-steps"
 ---
 This appendix describes the constants used in the APMAgent. You are advised to use the defaults with the exception of the CompanyName constant.

@@ -1,7 +1,6 @@
 ---
 title: "Get Validation Message"
 space: "Add-Ons"
-category: "ATS"
 parent: "generic"
 ---
 

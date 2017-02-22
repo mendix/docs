@@ -1,7 +1,6 @@
 ---
 title: "Dropdown has Option"
 space: "Add-Ons"
-category: "ATS"
 parent: "input"
 ---
 

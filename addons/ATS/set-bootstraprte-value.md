@@ -1,7 +1,6 @@
 ---
 title: "Set BootstrapRTE Value"
 space: "Add-Ons"
-category: "ATS"
 parent: "bootstraprte"
 ---
 ## Description

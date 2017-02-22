@@ -1,7 +1,6 @@
 ---
 title: "Toggle Checkbox Value"
 space: "Add-Ons"
-category: "ATS"
 parent: "input"
 ---
 

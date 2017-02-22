@@ -1,7 +1,6 @@
 ---
 title: "Get"
 space: "Add-Ons"
-category: "ATS"
 parent: "selenium-actions"
 ---
 

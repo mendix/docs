@@ -1,7 +1,6 @@
 ---
 title: "Find/Assert Dialog"
 space: "Add-Ons"
-category: "ATS"
 parent: "dialog"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Focus WebElement"
 space: "Add-Ons"
-category: "ATS"
 parent: "system"
 ---
 

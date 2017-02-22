@@ -1,7 +1,6 @@
 ---
 title: "Execute Javascript String"
 space: "Add-Ons"
-category: "ATS"
 parent: "selenium-actions"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "ATS Core Actions"
 space: "Add-Ons"
-category: "ATS"
 parent: "standard-actions-reference"
 ---
 

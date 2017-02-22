@@ -1,7 +1,6 @@
 ---
 title: "Random Number"
 space: "Add-Ons"
-category: "ATS"
 parent: "ats-core-actions"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Open Application"
 space: "Add-Ons"
-category: "ATS"
 parent: "generic"
 ---
 

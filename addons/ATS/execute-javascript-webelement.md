@@ -1,7 +1,6 @@
 ---
 title: "Execute Javascript WebElement"
 space: "Add-Ons"
-category: "ATS"
 parent: "selenium-actions"
 ---
 

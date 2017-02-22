@@ -1,7 +1,6 @@
 ---
 title: "Concatenate String"
 space: "Add-Ons"
-category: "ATS"
 parent: "ats-core-actions"
 ---
 

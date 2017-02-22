@@ -1,7 +1,6 @@
 ---
 title: "Click Drop-Down div Converter Split Button"
 space: "Add-Ons"
-category: "ATS"
 parent: "dropdown-div-converter"
 ---
 ## Description

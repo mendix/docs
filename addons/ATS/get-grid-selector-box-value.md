@@ -1,7 +1,6 @@
 ---
 title: "Get Grid Selector Box Value"
 space: "Add-Ons"
-category: "ATS"
 parent: "grid-selector"
 ---
 ## Description

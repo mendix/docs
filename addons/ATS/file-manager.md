@@ -1,7 +1,6 @@
 ---
 title: "File Manager"
 space: "Add-Ons"
-category: "ATS"
 parent: "mendix-actions"
 ---
 

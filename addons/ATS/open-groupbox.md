@@ -1,7 +1,6 @@
 ---
 title: "Open GroupBox"
 space: "Add-Ons"
-category: "ATS"
 parent: "groupbox"
 ---
 

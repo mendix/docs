@@ -1,7 +1,6 @@
 ---
 title: "Assert Active Tab Caption"
 space: "Add-Ons"
-category: "ATS"
 parent: "tab"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Set Checkbox Set Selector Value"
 space: "Add-Ons"
-category: "ATS"
 parent: "checkbox-set-selector"
 ---
 ## Description

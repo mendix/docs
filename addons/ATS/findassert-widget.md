@@ -1,7 +1,6 @@
 ---
 title: "Find/Assert Widget"
 space: "Add-Ons"
-category: "ATS"
 parent: "generic"
 ---
 

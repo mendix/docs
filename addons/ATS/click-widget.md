@@ -1,7 +1,6 @@
 ---
 title: "Click Widget"
 space: "Add-Ons"
-category: "ATS"
 parent: "generic"
 ---
 

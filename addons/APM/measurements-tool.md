@@ -1,7 +1,6 @@
 ---
 title: "Measurements Tool"
 space: "Add-Ons"
-category: "APM"
 parent: "user-manual"
 ---
 The measurements tool is meant to measure system resources and to trigger actions on thresholds. This allows 

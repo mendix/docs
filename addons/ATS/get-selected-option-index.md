@@ -1,7 +1,6 @@
 ---
 title: "Get Selected Option Index"
 space: "Add-Ons"
-category: "ATS"
 parent: "get"
 ---
 

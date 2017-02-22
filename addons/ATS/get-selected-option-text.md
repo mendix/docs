@@ -1,7 +1,6 @@
 ---
 title: "Get Selected Option Text"
 space: "Add-Ons"
-category: "ATS"
 parent: "get"
 ---
 

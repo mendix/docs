@@ -1,7 +1,6 @@
 ---
 title: "Custom Action Creation Tutorial"
 space: "Add-Ons"
-category: "ATS"
 parent: "test-development"
 ---
 

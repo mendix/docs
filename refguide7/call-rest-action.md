@@ -11,9 +11,17 @@ The Call REST activity can be used to call a REST endpoint. You can specify the 
 
 ![](attachments/19203256/19399080.png)
 
+### Location
+
 The **Location** property defines the REST endpoint to be called. The location needs to be entered using a string template. The string template should result in a valid URL string. Parameters can be used by writing a number between braces (for example, `{1}`). For each parameter in the template, you can specify its value using a [Microflow Expression](microflow-expressions) resulting in a string value. To escape the opening brace (`{`), a double opening brace should be used (`\{\{`).
 
 The **HTTP method** property defines the HTTP method to use when calling a REST endpoint. The possible values are: GET, POST, PUT, PATCH, DELETE.
+
+### Timeout
+
+Set **Use timeout on request** to _Yes_ to be able specify how long the Call REST activity should wait for the REST endpoint 
+to respond. If the REST endpoint hasn't responded after the number of seconds in **Timeout (s)**, an exception will be 
+thrown and the microflow will rollback or go into your custom error handler.
 
 ## HTTP Headers
 

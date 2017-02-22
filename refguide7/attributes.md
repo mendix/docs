@@ -127,6 +127,8 @@ Take note of the following things when using calculated attributes:
 
 *   It is not possible to sort on an attribute for which this property is used, because sorting is done by the database engine.
 
+*   Uncommitted associated objects cannot be retrieved in calculated attributes.
+
 {% endmarkdown %}</div>
 
 ### Microflow (only if source is microflow)

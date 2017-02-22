@@ -6947,10 +6947,6 @@ module.exports = {
       "to": "/refguide7/call-web-service-action"
     },
     {
-      "from": "/refguide7/Cancel+button",
-      "to": "/refguide7/cancel-button"
-    },
-    {
       "from": "/refguide7/Cast+Object",
       "to": "/refguide7/cast-object"
     },
@@ -6985,10 +6981,6 @@ module.exports = {
     {
       "from": "/refguide7/Close+Form",
       "to": "/refguide7/close-form"
-    },
-    {
-      "from": "/refguide7/Close+page+button",
-      "to": "/refguide7/close-page-button"
     },
     {
       "from": "/refguide7/Clustered+Mendix+Runtime",
@@ -7345,10 +7337,6 @@ module.exports = {
     {
       "from": "/refguide7/Footer+Document+Template",
       "to": "/refguide7/footer-document-template"
-    },
-    {
-      "from": "/refguide7/Garbage+collection",
-      "to": "/refguide7/garbage-collection"
     },
     {
       "from": "/refguide7/General",
@@ -8033,10 +8021,6 @@ module.exports = {
       "to": "/refguide7/runtime"
     },
     {
-      "from": "/refguide7/Save+button",
-      "to": "/refguide7/save-button"
-    },
-    {
       "from": "/refguide7/Scheduled+Events",
       "to": "/refguide7/scheduled-events"
     },
@@ -8155,10 +8139,6 @@ module.exports = {
     {
       "from": "/refguide7/Summary",
       "to": "/refguide7/summary"
-    },
-    {
-      "from": "/refguide7/Sync+button",
-      "to": "/refguide7/sync-button"
     },
     {
       "from": "/refguide7/System+Requirements",

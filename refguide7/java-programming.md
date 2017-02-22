@@ -53,6 +53,5 @@ See [Java in the Cloud](/mendixcloud/java-in-the-cloud).
 
 ## Documents in This Category
 
-* [Garbage Collection](garbage-collection)
 * [Troubleshooting](troubleshooting)
 * [Using Eclipse](using-eclipse)

@@ -7,7 +7,7 @@ parent: "data-view-control-bar"
 
 <div class="alert alert-info">{% markdown %}
 
-This special close button, that was only available in the data view control bar, has been removed in version 6.7.0. Use a normal [Close page button](close-page-button) instead.
+This special close button, that was only available in the data view control bar, has been removed in version 6.7.0. Use the [Create button](new-button) instead.
 
 {% endmarkdown %}</div>
 

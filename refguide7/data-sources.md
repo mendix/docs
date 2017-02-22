@@ -34,6 +34,6 @@ List widgets support the data sources listed below. The data source also determi
 
 <div class="alert alert-info">{% markdown %}
 
-The database source is the only data source that is also supported offline. If a list widget has a database data source in an offline application, the data will come from the database that is situated on the device. This database can be synced with the [sync button](sync-button).
+The database source is the only data source that is also supported offline. If a list widget has a database data source in an offline application, the data will come from the database that is situated on the device. This database can be synced with the [create button](new-button).
 
 {% endmarkdown %}</div>

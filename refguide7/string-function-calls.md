@@ -85,11 +85,11 @@ Retrieves a substring of a string. Note that the first character of a string is 
 ### Input parameters
 
 * Subject
-* Type: String
+   * Type: String
 * Start position of the substring
-* Type: Integer
+   * Type: Integer
 * (Optional) Desired length of the result
-* Type: Integer
+   * Type: Integer
 
 ### Output
 

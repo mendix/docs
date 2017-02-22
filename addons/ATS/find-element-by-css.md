@@ -1,7 +1,6 @@
 ---
 title: "Find Element by CSS"
 space: "Add-Ons"
-category: "ATS"
 parent: "find"
 ---
 

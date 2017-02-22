@@ -1,7 +1,6 @@
 ---
 title: "Get Checkbox Set Selector Value (All)"
 space: "Add-Ons"
-category: "ATS"
 parent: "checkbox-set-selector"
 ---
 ## Description

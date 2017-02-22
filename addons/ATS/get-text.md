@@ -1,7 +1,6 @@
 ---
 title: "Get Text"
 space: "Add-Ons"
-category: "ATS"
 parent: "get"
 ---
 

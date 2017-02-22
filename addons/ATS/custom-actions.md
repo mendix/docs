@@ -1,7 +1,6 @@
 ---
 title: "Custom Actions"
 space: "Add-Ons"
-category: "ATS"
 parent: "test-development"
 ---
 

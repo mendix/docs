@@ -1,7 +1,6 @@
 ---
 title: "Set Checkbox Value"
 space: "Add-Ons"
-category: "ATS"
 parent: "input"
 ---
 

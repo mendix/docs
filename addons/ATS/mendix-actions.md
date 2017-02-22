@@ -1,7 +1,6 @@
 ---
 title: "Mendix Actions"
 space: "Add-Ons"
-category: "ATS"
 parent: "standard-actions-reference"
 ---
 

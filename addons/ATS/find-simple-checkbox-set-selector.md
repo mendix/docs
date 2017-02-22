@@ -1,7 +1,6 @@
 ---
 title: "Find Simple Checkbox Set Selector"
 space: "Add-Ons"
-category: "ATS"
 parent: "simple-checkbox-set-selector"
 ---
 ## Description

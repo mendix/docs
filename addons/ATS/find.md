@@ -1,7 +1,6 @@
 ---
 title: "Find"
 space: "Add-Ons"
-category: "ATS"
 parent: "selenium-actions"
 ---
 

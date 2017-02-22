@@ -1,7 +1,6 @@
 ---
 title: "Send Keys"
 space: "Add-Ons"
-category: "ATS"
 parent: "selenium-actions"
 ---
 

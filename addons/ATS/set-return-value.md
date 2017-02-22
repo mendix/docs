@@ -1,7 +1,6 @@
 ---
 title: "Set Return Value"
 space: "Add-Ons"
-category: "ATS"
 parent: "ats-core-actions"
 ---
 

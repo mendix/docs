@@ -1,7 +1,6 @@
 ---
 title: "Query Tool"
 space: "Add-Ons"
-category: "APM"
 parent: "user-manual"
 ---
 To collect database or application information the Query Tool has been introduced. 

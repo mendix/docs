@@ -1,7 +1,6 @@
 ---
 title: "Set CKEditor Value"
 space: "Add-Ons"
-category: "ATS"
 parent: "ckeditor"
 ---
 ## Description

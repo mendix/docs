@@ -1,7 +1,6 @@
 ---
 title: "Set BooleanSlider Value"
 space: "Add-Ons"
-category: "ATS"
 parent: "booleanslider"
 ---
 ## Description

@@ -1,7 +1,6 @@
 ---
 title: "Data Driven Tests"
 space: "Add-Ons"
-category: "ATS"
 parent: "test-development"
 ---
 

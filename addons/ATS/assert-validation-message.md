@@ -1,7 +1,6 @@
 ---
 title: "Assert Validation Message"
 space: "Add-Ons"
-category: "ATS"
 parent: "generic"
 ---
 

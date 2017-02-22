@@ -1,7 +1,6 @@
 ---
 title: "Close GroupBox"
 space: "Add-Ons"
-category: "ATS"
 parent: "groupbox"
 ---
 

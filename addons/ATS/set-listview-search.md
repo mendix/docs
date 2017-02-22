@@ -1,7 +1,6 @@
 ---
 title: "Set ListView Search"
 space: "Add-Ons"
-category: "ATS"
 parent: "datagrid-templategrid-listview"
 ---
 

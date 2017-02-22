@@ -1,7 +1,6 @@
 ---
 title: "Get Value"
 space: "Add-Ons"
-category: "ATS"
 parent: "input"
 ---
 

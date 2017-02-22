@@ -1,7 +1,6 @@
 ---
 title: "Data Management"
 space: "Add-Ons"
-category: "ATS"
 ---
 
 ## Repository

@@ -1,7 +1,6 @@
 ---
 title: "Download and License"
 space: "Add-Ons"
-category: "APM"
 parent: "user-manual"
 ---
 

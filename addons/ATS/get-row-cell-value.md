@@ -1,7 +1,6 @@
 ---
 title: "Get Row Cell Value"
 space: "Add-Ons"
-category: "ATS"
 parent: "datagrid-templategrid-listview"
 ---
 

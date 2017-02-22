@@ -94,7 +94,6 @@ The log rerouting makes sure that Java messages that are sent to the Java consol
 
 ## 10 Documents in This Category
 
-* [Introduction](introduction)
 * [Download and License](download-license)
 * [Use Cases](use-cases)
 * [Installation](installation)

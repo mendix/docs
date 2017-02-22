@@ -83,7 +83,7 @@ On the **Triggers** tab, you can define message triggers that fire on messages o
 
 ![](attachments/Trap_Tool/Options_Triggers.png)
 
-See the description of [Triggers](/APM/triggers) for how to configure triggers.
+See the description of [Triggers](triggers) for how to configure triggers.
 
 ### Save & Apply
 

@@ -87,7 +87,7 @@ See the sample microflow APMAgent.SampleNotifyMicroflow_LogMessage.
 
 You can now start up.
 
-If an error appears, see [After Startup Error](/APM/after-startup-error).
+If an error appears, see [After Startup Error](after-startup-error).
 
 Otherwise, log in as Admin and navigate to the APM tool.
 

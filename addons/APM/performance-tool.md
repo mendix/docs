@@ -12,7 +12,7 @@ The performance tool consists of:
 * with the [filtering](#filter)
 * and the [options](#options).
 * The [Show recorded](#show-recorded)
-* The browsing of the [results](/APM/performance-tool-results)
+* The browsing of the [results](performance-tool-results)
 * Search tabs
 * [Advanced functions](#advanced-usage)
 
@@ -124,4 +124,4 @@ You can [View] and drill down into microflows. However, you cannot see SQL state
 
 ## Advanced usage
 To insert context information in the performance tool recording you can use a special action. This is
-described in the following article: [Inserting context information](/APM/inserting-context-information)
+described in the following article: [Inserting context information](inserting-context-information)

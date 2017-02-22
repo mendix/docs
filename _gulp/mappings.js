@@ -82,7 +82,7 @@ const mappings = (opts) => new Promise((resolve, reject) => {
                   mdFile = '.' + to + (lastChar === '/' ? 'index.md' : '.md'),
                   htmlFile = gutil.replaceExtension(mdFile, '.html'),
                   hash = new Buffer(`${from}-${to}`).toString('base64'),
-                  caseSensitive = to.toLowerCase() === from.toLowerCase();
+                  caseSensitive = to.toLowerCase() === from.toLowerCase() || to.toLowerCase().indexOf(from.toLowerCase()) !== -1;
 
             if (!shell.test('-e', mdFile) && !shell.test('-e', htmlFile)) {
               errors.push(`There is no file for the mapping in mappings.json to: ${gutil.colors.cyan(to)}`);

@@ -123,23 +123,11 @@ defaults:
       menus:
         - "apidocs"
   - scope:
-      path: 'ATS'
+      path: 'addons'
       type: pages
     values:
       menus:
-        - "ATS"
-  - scope:
-      path: 'APM'
-      type: pages
-    values:
-      menus:
-        - "APM"
-  - scope:
-      path: 'AQM'
-      type: pages
-    values:
-      menus:
-        #- "AQM"
+        - "addons"
   - scope:
       path: 'MXSDK'
       type: pages
@@ -209,6 +197,7 @@ exclude:
   - _data/assetsjs.json
   - _data/assetscss.json
   - CONTRIBUTING.md
+  - scripts
 
 markdown: kramdown
 kramdown:

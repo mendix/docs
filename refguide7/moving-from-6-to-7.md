@@ -97,12 +97,13 @@ The following features have been deprecated in Mendix 7. Using these features is
 ### Runtime Deprecations
 
 #### On `com.mendix.core.Core`
+
 | Method Name | Alternative |
 | --- | --- |
-| `getActiveSession(String userName)` | use xpath query on session table instead. |
-| `getActiveSessions()` | use xpath query on session table instead. |
-| `exportStream(<br> IContext context,<br> String exportMappingName,<br> IMendixObject objectToExport,<br> Boolean shouldValidate)` | `com.mendix.core.integration().exportStream(<br> IContext context,<br> String exportMappingName,<br> IMendixObject objectToExport,<br> Boolean shouldValidate)` |
-| `importStream(<br> IContext context,<br> InputStream stream,<br> String importMappingName,<br> IMendixObject mappingParameter,<br> Boolean shouldValidate)` | `com.mendix.core.integration().importStream(<br> IContext context,<br> InputStream stream,<br> String importMappingName,<br> IMendixObject mappingParameter,<br> Boolean shouldValidate)` |
+| `getActiveSession(String userName)` | Use XPath query on session table instead. |
+| `getActiveSessions()` | Use XPath query on session table instead. |
+| `exportStream(IContext context, String exportMappingName, IMendixObject objectToExport, Boolean shouldValidate)` | `com.mendix.core.integration().exportStream(IContext context, String exportMappingName, IMendixObject objectToExport,Boolean shouldValidate)` |
+| `importStream(IContext context,InputStream stream,String importMappingName,IMendixObject mappingParameter,Boolean shouldValidate)` | `com.mendix.core.integration().importStream(IContext context, InputStream stream, String importMappingName, IMendixObject mappingParameter, Boolean shouldValidate)` |
 
 ## Removed Deprecated Functionality
 
@@ -192,9 +193,9 @@ The **Apply context** and **Remove from context** options of the reference selec
 
 | Method Name | Alternative |
 | --- | --- |
-| `generateWorkbook(LocalComponent component,IContext context,List<IExcelGrid> grids)` | - |
-| `generateXLS(com.mendix.core.component.LocalComponent component,IContext context,IMendixObject fileObject,String fileName,List<IExcelGrid> grids)` | `generateXLS(IContext context,IMendixObject fileObject,String fileName,List<IExcelGrid> grids)` |
-| `generateXLS(com.mendix.core.component.LocalComponent component,IContext context,IMendixObject fileObject,String fileName,List<String> oqlQueries,boolean autoSizeColumns,List<String> headerNames)` | `generateXLS(IContext context,IMendixObject fileObject,String fileName,List<String> oqlQueries,boolean autoSizeColumns,List<String> headerNames)` |
+| `generateWorkbook(LocalComponent component, IContext context, List<IExcelGrid> grids)` | - |
+| `generateXLS(com.mendix.core.component.LocalComponent component, IContext context, IMendixObject fileObject, String fileName, List<IExcelGrid> grids)` | `generateXLS(IContext context, IMendixObject fileObject, String fileName, List<IExcelGrid> grids)` |
+| `generateXLS(com.mendix.core.component.LocalComponent component, IContext context, IMendixObject fileObject, String fileName, List<String> oqlQueries, boolean autoSizeColumns, List<String> headerNames)` | `generateXLS(IContext context, IMendixObject fileObject, String fileName, List<String> oqlQueries, boolean autoSizeColumns, List<String> headerNames)` |
 
 ##### From `com.mendix.systemwideinterfaces.core.IContext`
 
@@ -210,7 +211,7 @@ The **Apply context** and **Remove from context** options of the reference selec
 | Method Name | Alternative |
 | --- | --- |
 | `callWebservice()` | Use Call REST action in the microflow instead. |
-| `importXmlStream()` | Use com.mendix.core.integration().importStream() instead. |
+| `importXmlStream()` | Use `com.mendix.core.integration().importStream()` instead. |
 | `getComponent().runtime().about().get("model_version")` | `getModelVersion()` |
 
 ##### From `com.mendix.systemwideinterfaces.core.ISession`
@@ -243,7 +244,7 @@ The removal of deprecated classes and methods in Mendix 7 can cause compilation 
 #### SystemModuleConstants
 
 These are mainly used to refer to the name of system entities or their attribute names. Such names are also available via corresponding System proxies.
-For example, **SystemModuleConstants.FILE_DOCUMENT_NAME** can be replaced by **FileDocument** proxy:
+For example, `SystemModuleConstants.FILE_DOCUMENT_NAME` can be replaced by `FileDocument` proxy:
 ```
 import com.mendix.systemwideinterfaces.SystemModuleConstants;
 
@@ -255,16 +256,16 @@ import system.proxies.FileDocument.MemberNames;
 
 private final String FILE_DOCUMENT_NAME = MemberNames.Name.toString();
 ```
-Where MemberNames is an Enum defined in the FileDocument proxy class.
+Wherein `MemberNames` is an Enum defined in the `FileDocument` proxy class.
 
 #### Moved Packages
 
 | Class Name | Alternative Interface |
 | --- | --- |
-| org.json.\* | com.mendix.thirdparty.org.json.\* |
+| `org.json.\*` | `com.mendix.thirdparty.org.json.\*` |
 
-This is needed to avoid potential namespace conflicts between the Mendix version of the org.json library and other json libraries.
+This is needed to avoid potential namespace conflicts between the Mendix version of the `org.json` library and other JSON libraries.
 
 #### Runtime Issues When Migrating a Project to Mendix 7
 
-Java libraries in Mendix 7 shipped with the installation package are not available for projects anymore. While this results in a better dependency management for each project, it can also cause errors at runtime after migration, for example, **NoClassDefFoundError**. Therefore, it's important to make sure that the **userlib** directory of the migrated project includes all the required libraries. It's also worth noting that in Mendix 7 only one version of each library can exist at runtime. This means that if there are multiple versions of one library, the latest version is used and the rest are ignored.
+Java libraries in Mendix 7 shipped with the installation package are not available for projects anymore. While this results in a better dependency management for each project, it can also cause errors at runtime after migration, for example, `NoClassDefFoundError`. Therefore, it's important to make sure that the `userlib` directory of the migrated project includes all the required libraries. It's also worth noting that in Mendix 7 only one version of each library can exist at runtime. This means that if there are multiple versions of one library the latest version is used and the rest are ignored.

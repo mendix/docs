@@ -7339,10 +7339,6 @@ module.exports = {
       "to": "/refguide7/footer-document-template"
     },
     {
-      "from": "/refguide7/Garbage+collection",
-      "to": "/refguide7/garbage-collection"
-    },
-    {
       "from": "/refguide7/General",
       "to": "/refguide7/general"
     },

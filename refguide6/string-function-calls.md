@@ -502,3 +502,53 @@ returns:
 ```java
 '4.73 kilometers'
 ```
+
+## <a name="urlEncode"></a>urlEncode
+
+Converts a string to be used in a url. This function is useful when you want to use the
+string as part of a url, for instance:
+
+```java
+'http://google.com/search?q=' + urlEncode($myQuery)
+```
+
+### Input parameters
+
+*   String to convert  
+    Type: String
+
+### Output
+
+That string, url-encoded.
+
+```java
+urlEncode('Hello, world!')
+```
+
+returns:
+
+```java
+'Hello%2C+world%21'
+```
+
+## urlDecode
+
+Converts a string back from a url, the opposite of [urlEncode](#urlEncode).
+
+### Input parameters
+
+*   A url-encoded String to convert  
+    Type: String
+
+### Output
+
+That string, url decoded.
+
+```java
+urlEncode('Hello%2C+world%21')
+```
+
+returns:
+
+```java
+'Hello, world!'

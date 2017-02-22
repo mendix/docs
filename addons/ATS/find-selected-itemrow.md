@@ -1,7 +1,6 @@
 ---
 title: "Find Selected Item/Row"
 space: "Add-Ons"
-category: "ATS"
 parent: "datagrid-templategrid-listview"
 ---
 

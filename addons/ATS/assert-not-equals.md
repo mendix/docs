@@ -1,7 +1,6 @@
 ---
 title: "Assert not equals"
 space: "Add-Ons"
-category: "ATS"
 parent: "ats-core-actions"
 ---
 

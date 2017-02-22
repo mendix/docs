@@ -1,7 +1,6 @@
 ---
 title: "Get Index"
 space: "Add-Ons"
-category: "ATS"
 parent: "input"
 ---
 

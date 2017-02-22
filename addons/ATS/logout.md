@@ -1,7 +1,6 @@
 ---
 title: "Logout"
 space: "Add-Ons"
-category: "ATS"
 parent: "generic"
 ---
 

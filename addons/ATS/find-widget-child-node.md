@@ -1,7 +1,6 @@
 ---
 title: "Find Widget Child Node"
 space: "Add-Ons"
-category: "ATS"
 parent: "system"
 ---
 

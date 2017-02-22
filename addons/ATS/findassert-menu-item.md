@@ -1,7 +1,6 @@
 ---
 title: "Find/Assert Menu Item"
 space: "Add-Ons"
-category: "ATS"
 parent: "navigation-menu"
 ---
 

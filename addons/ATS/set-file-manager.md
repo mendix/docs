@@ -1,7 +1,6 @@
 ---
 title: "Set File Manager"
 space: "Add-Ons"
-category: "ATS"
 parent: "file-manager"
 ---
 

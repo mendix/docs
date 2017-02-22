@@ -1,7 +1,6 @@
 ---
 title: "Find Element by Sizzle"
 space: "Add-Ons"
-category: "ATS"
 parent: "find"
 ---
 

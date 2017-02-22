@@ -1,7 +1,6 @@
 ---
 title: "BootstrapRTE"
 space: "Add-Ons"
-category: "ATS"
 parent: "mendix-appstore-widgets-actions"
 ---
 

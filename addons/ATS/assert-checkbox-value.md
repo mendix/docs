@@ -1,7 +1,6 @@
 ---
 title: "Assert Checkbox Value"
 space: "Add-Ons"
-category: "ATS"
 parent: "input"
 ---
 

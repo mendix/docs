@@ -1,7 +1,6 @@
 ---
 title: "Statistics Tool"
 space: "Add-Ons"
-category: "APM"
 parent: "user-manual"
 ---
 This chapter gives an overview of the statistics tool, which measures the durations of microflows and browser-client requests and gathers statistics like number of executions as well as the, minimum, maximum and average durations. The statistics tool is used as 

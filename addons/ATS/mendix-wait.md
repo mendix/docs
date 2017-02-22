@@ -1,7 +1,6 @@
 ---
 title: "Mendix wait"
 space: "Add-Ons"
-category: "ATS"
 parent: "system"
 ---
 

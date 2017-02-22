@@ -1,7 +1,6 @@
 ---
 title: "Assert Equals"
 space: "Add-Ons"
-category: "ATS"
 parent: "ats-core-actions"
 ---
 

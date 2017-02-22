@@ -1,7 +1,6 @@
 ---
 title: "Dropdown Div Converter"
 space: "Add-Ons"
-category: "ATS"
 parent: "mendix-appstore-widgets-actions"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Mendix App Store Widgets Actions"
 space: "Add-Ons"
-category: "ATS"
 parent: "standard-actions-reference"
 ---
 

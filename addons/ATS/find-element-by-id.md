@@ -1,7 +1,6 @@
 ---
 title: "Find Element by ID"
 space: "Add-Ons"
-category: "ATS"
 parent: "find"
 ---
 

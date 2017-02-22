@@ -1,7 +1,6 @@
 ---
 title: "Sort DataGrid"
 space: "Add-Ons"
-category: "ATS"
 parent: "datagrid-templategrid-listview"
 ---
 

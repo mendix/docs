@@ -1,7 +1,6 @@
 ---
 title: "GroupBox is Collapsed"
 space: "Add-Ons"
-category: "ATS"
 parent: "groupbox"
 ---
 

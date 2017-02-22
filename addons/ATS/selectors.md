@@ -1,7 +1,6 @@
 ---
 title: "Selectors"
 space: "Add-Ons"
-category: "ATS"
 parent: "test-development"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Find Grid Selector Box"
 space: "Add-Ons"
-category: "ATS"
 parent: "grid-selector"
 ---
 ## Description

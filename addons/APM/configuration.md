@@ -1,7 +1,6 @@
 ---
 title: "Configuration"
 space: "Add-Ons"
-category: "APM"
 parent: "user-manual"
 ---
 

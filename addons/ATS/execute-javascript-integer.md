@@ -1,7 +1,6 @@
 ---
 title: "Execute JavaScript Integer"
 space: "Add-Ons"
-category: "ATS"
 parent: "selenium-actions"
 ---
 

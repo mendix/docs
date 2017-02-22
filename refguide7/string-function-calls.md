@@ -6,7 +6,7 @@ parent: "microflow-expressions"
 
 These are functions to convert and inspect [strings](data-types). Note that these functions never change the string itself, they only return a new value.
 
-Strings are surrounded by quotes. If the string contains a quote, it should be escaped by another quote. For example: 'this isn''t funny'
+Strings are surrounded by quotes. If the string contains a quote, it should be escaped by another quote. For example: 'this isn't funny'
 
 ## toLowerCase
 

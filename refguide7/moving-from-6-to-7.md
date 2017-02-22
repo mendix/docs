@@ -122,7 +122,7 @@ Support for navigation layouts of the **Legacy** type has been dropped. Layout t
 
 For more information, see [Layouts](/refguide7/layout#layout-type) and the blog post titled [Layouts Have Types](https://www.mendix.com/blog/layouts-have-types/).
 
-#### Apply context and remove from context
+#### Apply Context and Remove from Context
 
 The **Apply context** and **Remove from context** options of the reference selector, data grid, and template grid data sources were deprecated long ago (in [Mendix 5.19.0](/releasenotes/desktop-modeler/5.19)), and they have now been removed. You will now get consistency errors in places where you used them. We suggest using explicit XPath constraints instead.
 

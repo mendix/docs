@@ -253,31 +253,31 @@ module.exports = {
     },
     {
       from: "/ATS/ATS+Core+Actions/Assert+Equals",
-      to: "/addons/ATS/ats-core-actions/assert-equals"
+      to: "/addons/ATS/assert-equals"
     },
     {
       from: "/ATS/ATS+Core+Actions/Assert+Not+Equals",
-      to: "/addons/ATS/ats-core-actions/assert-not-equals"
+      to: "/addons/ATS/assert-not-equals"
     },
     {
       from: "/ATS/ATS+Core+Actions/Concatenate+String",
-      to: "/addons/ATS/ats-core-actions/concatenate-string"
+      to: "/addons/ATS/concatenate-string"
     },
     {
       from: "/ATS/ATS+Core+Actions/Get+Current+DateTime+String",
-      to: "/addons/ATS/ats-core-actions/get-current-datetime-string"
+      to: "/addons/ATS/get-current-datetime-string"
     },
     {
       from: "/ATS/ATS+Core+Actions/Random+Number",
-      to: "/addons/ATS/ats-core-actions/random-number"
+      to: "/addons/ATS/random-number"
     },
     {
       from: "/ATS/ATS+Core+Actions/Random+String",
-      to: "/addons/ATS/ats-core-actions/random-string"
+      to: "/addons/ATS/random-string"
     },
     {
       from: "/ATS/ATS+Core+Actions/Set+Return+Value",
-      to: "/addons/ATS/ats-core-actions/set-return-value"
+      to: "/addons/ATS/set-return-value"
     },
     {
       from: "/ATS/Best+Practices",
@@ -325,339 +325,339 @@ module.exports = {
     },
     {
       from: "/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/Click+DataGrid+Row",
-      to: "/addons/ATS/mendix-actions/datagrid-templategrid-listview/click-datagrid-row"
+      to: "/addons/ATS/click-datagrid-row"
     },
     {
       from: "/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/Find+ItemRow",
-      to: "/addons/ATS/mendix-actions/datagrid-templategrid-listview/find-itemrow"
+      to: "/addons/ATS/find-itemrow"
     },
     {
       from: "/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/Find+ItemRow+by+child",
-      to: "/addons/ATS/mendix-actions/datagrid-templategrid-listview/find-itemrow-by-child"
+      to: "/addons/ATS/find-itemrow-by-child"
     },
     {
       from: "/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/Find+Selected+ItemRow",
-      to: "/addons/ATS/mendix-actions/datagrid-templategrid-listview/find-selected-itemrow"
+      to: "/addons/ATS/find-selected-itemrow"
     },
     {
       from: "/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/FindAssert+DataGrid+Row",
-      to: "/addons/ATS/mendix-actions/datagrid-templategrid-listview/findassert-datagrid-row"
+      to: "/addons/ATS/findassert-datagrid-row"
     },
     {
       from: "/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/Get+ItemRow+Index",
-      to: "/addons/ATS/mendix-actions/datagrid-templategrid-listview/get-itemrow-index"
+      to: "/addons/ATS/get-itemrow-index"
     },
     {
       from: "/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/Get+Row+Cell+Value",
-      to: "/addons/ATS/mendix-actions/datagrid-templategrid-listview/get-row-cell-value"
+      to: "/addons/ATS/get-row-cell-value"
     },
     {
       from: "/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/Get+Total+ItemRow+Count",
-      to: "/addons/ATS/mendix-actions/datagrid-templategrid-listview/get-total-itemrow-count"
+      to: "/addons/ATS/get-total-itemrow-count"
     },
     {
       from: "/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/Get+Visible+ItemRow+Count",
-      to: "/addons/ATS/mendix-actions/datagrid-templategrid-listview/get-visible-itemrow-count"
+      to: "/addons/ATS/get-visible-itemrow-count"
     },
     {
       from: "/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/Set+ListView+Search",
-      to: "/addons/ATS/mendix-actions/datagrid-templategrid-listview/set-listview-search"
+      to: "/addons/ATS/set-listview-search"
     },
     {
       from: "/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/Set+Row+Cell+Value",
-      to: "/addons/ATS/mendix-actions/datagrid-templategrid-listview/set-row-cell-value"
+      to: "/addons/ATS/set-row-cell-value"
     },
     {
       from: "/ATS/Mendix+Actions/DataGrid+TemplateGrid+ListView/Sort+DataGrid",
-      to: "/addons/ATS/mendix-actions/datagrid-templategrid-listview/sort-datagrid"
+      to: "/addons/ATS/sort-datagrid"
     },
     {
       from: "/ATS/Mendix+Actions/Dialog/Cancel+Dialog",
-      to: "/addons/ATS/mendix-actions/dialog/cancel-dialog"
+      to: "/addons/ATS/cancel-dialog"
     },
     {
       from: "/ATS/Mendix+Actions/Dialog/Close+Dialog",
-      to: "/addons/ATS/mendix-actions/dialog/close-dialog"
+      to: "/addons/ATS/close-dialog"
     },
     {
       from: "/ATS/Mendix+Actions/Dialog/Confirm+Dialog",
-      to: "/addons/ATS/mendix-actions/dialog/confirm-dialog"
+      to: "/addons/ATS/confirm-dialog"
     },
     {
       from: "/ATS/Mendix+Actions/Dialog/FindAssert+Dialog",
-      to: "/addons/ATS/mendix-actions/dialog/findassert-dialog"
+      to: "/addons/ATS/findassert-dialog"
     },
     {
       from: "/ATS/Mendix+Actions/Dialog/Get+Dialog+Message+Text",
-      to: "/addons/ATS/mendix-actions/dialog/get-dialog-message-text"
+      to: "/addons/ATS/get-dialog-message-text"
     },
     {
       from: "/ATS/Mendix+Actions/FileManager/Set+File+Manager",
-      to: "/addons/ATS/mendix-actions/filemanager/set-file-manager"
+      to: "/addons/ATS/set-file-manager"
     },
     {
       from: "/ATS/Mendix+Actions/Generic/Assert+Current+Page",
-      to: "/addons/ATS/mendix-actions/generic/assert-current-page"
+      to: "/addons/ATS/assert-current-page"
     },
     {
       from: "/ATS/Mendix+Actions/Generic/Assert+Validation+Message",
-      to: "/addons/ATS/mendix-actions/generic/assert-validation-message"
+      to: "/addons/ATS/assert-validation-message"
     },
     {
       from: "/ATS/Mendix+Actions/Generic/Click+Widget",
-      to: "/addons/ATS/mendix-actions/generic/click-widget"
+      to: "/addons/ATS/click-widget"
     },
     {
       from: "/ATS/Mendix+Actions/Generic/Click+Widget+Button",
-      to: "/addons/ATS/mendix-actions/generic/click-widget-button"
+      to: "/addons/ATS/click-widget-button"
     },
     {
       from: "/ATS/Mendix+Actions/Generic/ClickDoubleclick",
-      to: "/addons/ATS/mendix-actions/generic/clickdoubleclick"
+      to: "/addons/ATS/clickdoubleclick"
     },
     {
       from: "/ATS/Mendix+Actions/Generic/FindAssert+Widget",
-      to: "/addons/ATS/mendix-actions/generic/findassert-widget"
+      to: "/addons/ATS/findassert-widget"
     },
     {
       from: "/ATS/Mendix+Actions/Generic/Get+Validation+Message",
-      to: "/addons/ATS/mendix-actions/generic/get-validation-message"
+      to: "/addons/ATS/get-validation-message"
     },
     {
       from: "/ATS/Mendix+Actions/Generic/Login",
-      to: "/addons/ATS/mendix-actions/generic/login"
+      to: "/addons/ATS/generic/login"
     },
     {
       from: "/ATS/Mendix+Actions/Generic/Logout",
-      to: "/addons/ATS/mendix-actions/generic/logout"
+      to: "/addons/ATS/generic/logout"
     },
     {
       from: "/ATS/Mendix+Actions/Generic/Open+Application",
-      to: "/addons/ATS/mendix-actions/generic/open-application"
+      to: "/addons/ATS/open-application"
     },
     {
       from: "/ATS/Mendix+Actions/GroupBox/Close+GroupBox",
-      to: "/addons/ATS/mendix-actions/groupbox/close-groupbox"
+      to: "/addons/ATS/close-groupbox"
     },
     {
       from: "/ATS/Mendix+Actions/GroupBox/GroupBox+is+Collapsed",
-      to: "/addons/ATS/mendix-actions/groupbox/groupbox-is-collapsed"
+      to: "/addons/ATS/groupbox-is-collapsed"
     },
     {
       from: "/ATS/Mendix+Actions/GroupBox/Open+GroupBox",
-      to: "/addons/ATS/mendix-actions/groupbox/open-groupbox"
+      to: "/addons/ATS/open-groupbox"
     },
     {
       from: "/ATS/Mendix+Actions/Input/Assert+Checkbox+Value",
-      to: "/addons/ATS/mendix-actions/input/assert-checkbox-value"
+      to: "/addons/ATS/assert-checkbox-value"
     },
     {
       from: "/ATS/Mendix+Actions/Input/Assert+Value",
-      to: "/addons/ATS/mendix-actions/input/assert-value"
+      to: "/addons/ATS/assert-value"
     },
     {
       from: "/ATS/Mendix+Actions/Input/Dropdown+has+Option",
-      to: "/addons/ATS/mendix-actions/input/dropdown-has-option"
+      to: "/addons/ATS/dropdown-has-option"
     },
     {
       from: "/ATS/Mendix+Actions/Input/Get+Checkbox+Value",
-      to: "/addons/ATS/mendix-actions/input/get-checkbox-value"
+      to: "/addons/ATS/get-checkbox-value"
     },
     {
       from: "/ATS/Mendix+Actions/Input/Get+Index",
-      to: "/addons/ATS/mendix-actions/input/get-index"
+      to: "/addons/ATS/get-index"
     },
     {
       from: "/ATS/Mendix+Actions/Input/Get+Value",
-      to: "/addons/ATS/mendix-actions/input/get-value"
+      to: "/addons/ATS/get-value"
     },
     {
       from: "/ATS/Mendix+Actions/Input/Set+Checkbox+Value",
-      to: "/addons/ATS/mendix-actions/input/set-checkbox-value"
+      to: "/addons/ATS/set-checkbox-value"
     },
     {
       from: "/ATS/Mendix+Actions/Input/Set+Value",
-      to: "/addons/ATS/mendix-actions/input/set-value"
+      to: "/addons/ATS/set-value"
     },
     {
       from: "/ATS/Mendix+Actions/Input/Set+Value+by+index",
-      to: "/addons/ATS/mendix-actions/input/set-value-by-index"
+      to: "/addons/ATS/set-value-by-index"
     },
     {
       from: "/ATS/Mendix+Actions/Input/Toggle+Checkbox+Value",
-      to: "/addons/ATS/mendix-actions/input/toggle-checkbox-value"
+      to: "/addons/ATS/toggle-checkbox-value"
     },
     {
       from: "/ATS/Mendix+Actions/Navigation+Menu/Click+Menu+Item",
-      to: "/addons/ATS/mendix-actions/navigation-menu/click-menu-item"
+      to: "/addons/ATS/click-menu-item"
     },
     {
       from: "/ATS/Mendix+Actions/Navigation+Menu/FindAssert+Menu+Item",
-      to: "/addons/ATS/mendix-actions/navigation-menu/findassert-menu-item"
+      to: "/addons/ATS/findassert-menu-item"
     },
     {
       from: "/ATS/Mendix+Actions/System/Find+Widget+Child+Node",
-      to: "/addons/ATS/mendix-actions/system/find-widget-child-node"
+      to: "/addons/ATS/find-widget-child-node"
     },
     {
       from: "/ATS/Mendix+Actions/System/Focus+WebElement",
-      to: "/addons/ATS/mendix-actions/system/focus-webelement"
+      to: "/addons/ATS/focus-webelement"
     },
     {
       from: "/ATS/Mendix+Actions/System/Get+Current+Page+Title",
-      to: "/addons/ATS/mendix-actions/system/get-current-page-title"
+      to: "/addons/ATS/get-current-page-title"
     },
     {
       from: "/ATS/Mendix+Actions/System/Mendix+Wait",
-      to: "/addons/ATS/mendix-actions/system/mendix-wait"
+      to: "/addons/ATS/mendix-wait"
     },
     {
       from: "/ATS/Mendix+Actions/Tab/Assert+Active+Tab+Caption",
-      to: "/addons/ATS/mendix-actions/tab/assert-active-tab-caption"
+      to: "/addons/ATS/assert-active-tab-caption"
     },
     {
       from: "/ATS/Mendix+Actions/Tab/Get+Active+Tab+Caption",
-      to: "/addons/ATS/mendix-actions/tab/get-active-tab-caption"
+      to: "/addons/ATS/get-active-tab-caption"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/BooleanSlider/Assert+BooleanSlider+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/booleanslider/assert-booleanslider-value"
+      to: "/addons/ATS/assert-booleanslider-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/BooleanSlider/Get+BooleanSlider+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/booleanslider/get-booleanslider-value"
+      to: "/addons/ATS/get-booleanslider-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/BooleanSlider/Set+BooleanSlider+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/booleanslider/set-booleanslider-value"
+      to: "/addons/ATS/set-booleanslider-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/BooleanSlider/Toggle+BooleanSlider+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/booleanslider/toggle-booleanslider-value"
+      to: "/addons/ATS/toggle-booleanslider-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/BootstrapRTE/Assert+BootstrapRTE+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/bootstraprte/assert-bootstraprte-value"
+      to: "/addons/ATS/assert-bootstraprte-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/BootstrapRTE/Get+BootstrapRTE+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/bootstraprte/get-bootstraprte-value"
+      to: "/addons/ATS/get-bootstraprte-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/BootstrapRTE/Set+BootstrapRTE+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/bootstraprte/set-bootstraprte-value"
+      to: "/addons/ATS/set-bootstraprte-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Assert+Checkbox+Set+Selector+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/checkbox-set-selector/assert-checkbox-set-selector-value"
+      to: "/addons/ATS/assert-checkbox-set-selector-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Find+Checkbox+Set+Selector",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/checkbox-set-selector/find-checkbox-set-selector"
+      to: "/addons/ATS/find-checkbox-set-selector"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Find+Checkbox+Set+Selector+all",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/checkbox-set-selector/find-checkbox-set-selector-all"
+      to: "/addons/ATS/find-checkbox-set-selector-all"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Get+Checkbox+Set+Selector+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/checkbox-set-selector/get-checkbox-set-selector-value"
+      to: "/addons/ATS/get-checkbox-set-selector-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Get+Checkbox+Set+Selector+Value+all",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/checkbox-set-selector/get-checkbox-set-selector-value-all"
+      to: "/addons/ATS/get-checkbox-set-selector-value-all"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Set+Checkbox+Set+Selector+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/checkbox-set-selector/set-checkbox-set-selector-value"
+      to: "/addons/ATS/set-checkbox-set-selector-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Set+Checkbox+Set+Selector+Value+all",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/checkbox-set-selector/set-checkbox-set-selector-value-all"
+      to: "/addons/ATS/set-checkbox-set-selector-value-all"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Toggle+Checkbox+Set+Selector+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/checkbox-set-selector/toggle-checkbox-set-selector-value"
+      to: "/addons/ATS/toggle-checkbox-set-selector-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Checkbox+Set+Selector/Toggle+Checkbox+Set+Selector+Value+all",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/checkbox-set-selector/toggle-checkbox-set-selector-value-all"
+      to: "/addons/ATS/toggle-checkbox-set-selector-value-all"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/CKEditor/Assert+CKEditor+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/ckeditor/assert-ckeditor-value"
+      to: "/addons/ATS/assert-ckeditor-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/CKEditor/Get+CKEditor+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/ckeditor/get-ckeditor-value"
+      to: "/addons/ATS/get-ckeditor-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/CKEditor/Set+CKEditor+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/ckeditor/set-ckeditor-value"
+      to: "/addons/ATS/set-ckeditor-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Dropdown+Div+Converter/Click+Dropdown+div+converter+dropdown+button",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/dropdown-div-converter/click-dropdown-div-converter-dropdown-button"
+      to: "/addons/ATS/click-dropdown-div-converter-dropdown-button"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Dropdown+Div+Converter/Click+Dropdown+div+converter+split+button",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/dropdown-div-converter/click-dropdown-div-converter-split-button"
+      to: "/addons/ATS/click-dropdown-div-converter-split-button"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Grid+Selector/Assert+Grid+Selector+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/grid-selector/assert-grid-selector-value"
+      to: "/addons/ATS/assert-grid-selector-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Grid+Selector/Find+Grid+Selector+Box",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/grid-selector/find-grid-selector-box"
+      to: "/addons/ATS/find-grid-selector-box"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Grid+Selector/Get+Grid+Selector+Box+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/grid-selector/get-grid-selector-box-value"
+      to: "/addons/ATS/get-grid-selector-box-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Grid+Selector/Set+Grid+Selector+Checkbox+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/grid-selector/set-grid-selector-checkbox-value"
+      to: "/addons/ATS/set-grid-selector-checkbox-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Grid+Selector/Set+Grid+Selector+Radiobutton+checked",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/grid-selector/set-grid-selector-radiobutton-checked"
+      to: "/addons/ATS/set-grid-selector-radiobutton-checked"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Grid+Selector/Toggle+Grid+Selector+Checkbox+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/grid-selector/toggle-grid-selector-checkbox-value"
+      to: "/addons/ATS/toggle-grid-selector-checkbox-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/InputReferenceSelector/Assert+InputReferenceSelector+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/inputreferenceselector/assert-inputreferenceselector-value"
+      to: "/addons/ATS/assert-inputreferenceselector-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/InputReferenceSelector/Get+InputReferenceSelector+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/inputreferenceselector/get-inputreferenceselector-value"
+      to: "/addons/ATS/get-inputreferenceselector-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/InputReferenceSelector/Set+InputReferenceSelector+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/inputreferenceselector/set-inputreferenceselector-value"
+      to: "/addons/ATS/set-inputreferenceselector-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Assert+Simple+Checkbox+Set+Selector+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/simple-checkbox-set-selector/assert-simple-checkbox-set-selector-value"
+      to: "/addons/ATS/assert-simple-checkbox-set-selector-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Find+Simple+Checkbox+Set+Selector",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/simple-checkbox-set-selector/find-simple-checkbox-set-selector"
+      to: "/addons/ATS/find-simple-checkbox-set-selector"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Get+Simple+Checkbox+Set+Selector+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/simple-checkbox-set-selector/get-simple-checkbox-set-selector-value"
+      to: "/addons/ATS/get-simple-checkbox-set-selector-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Set+Simple+Checkbox+Set+Selector+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/simple-checkbox-set-selector/set-simple-checkbox-set-selector-value"
+      to: "/addons/ATS/set-simple-checkbox-set-selector-value"
     },
     {
       from: "/ATS/Mendix+Appstore+Widgets+Actions/Simple+Checkbox+Set+Selector/Toggle+Simple+Checkbox+Set+Selector+Value",
-      to: "/addons/ATS/mendix-appstore-widgets-actions/simple-checkbox-set-selector/toggle-simple-checkbox-set-selector-value"
+      to: "/addons/ATS/toggle-simple-checkbox-set-selector-value"
     },
     {
       from: "/ATS/Monitoring",
@@ -697,51 +697,51 @@ module.exports = {
     },
     {
       from: "/ATS/Selenium+Actions/Execute+JavaScript+Integer",
-      to: "/addons/ATS/selenium-actions/execute-javascript-integer"
+      to: "/addons/ATS/execute-javascript-integer"
     },
     {
       from: "/ATS/Selenium+Actions/Execute+JavaScript+String",
-      to: "/addons/ATS/selenium-actions/execute-javascript-string"
+      to: "/addons/ATS/execute-javascript-string"
     },
     {
       from: "/ATS/Selenium+Actions/Execute+JavaScript+WebElement",
-      to: "/addons/ATS/selenium-actions/execute-javascript-webelement"
+      to: "/addons/ATS/execute-javascript-webelement"
     },
     {
       from: "/ATS/Selenium+Actions/Find/Find+Element+by+CSS",
-      to: "/addons/ATS/selenium-actions/find/find-element-by-css"
+      to: "/addons/ATS/find/find-element-by-css"
     },
     {
       from: "/ATS/Selenium+Actions/Find/Find+Element+by+ID",
-      to: "/addons/ATS/selenium-actions/find/find-element-by-id"
+      to: "/addons/ATS/find/find-element-by-id"
     },
     {
       from: "/ATS/Selenium+Actions/Find/Find+Element+by+Sizzle",
-      to: "/addons/ATS/selenium-actions/find/find-element-by-sizzle"
+      to: "/addons/ATS/find/find-element-by-sizzle"
     },
     {
       from: "/ATS/Selenium+Actions/Get/Get+Property+Value",
-      to: "/addons/ATS/selenium-actions/get/get-property-value"
+      to: "/addons/ATS/get/get-property-value"
     },
     {
       from: "/ATS/Selenium+Actions/Get/Get+Selected+Option+Index",
-      to: "/addons/ATS/selenium-actions/get/get-selected-option-index"
+      to: "/addons/ATS/get/get-selected-option-index"
     },
     {
       from: "/ATS/Selenium+Actions/Get/Get+Selected+Option+Text",
-      to: "/addons/ATS/selenium-actions/get/get-selected-option-text"
+      to: "/addons/ATS/get/get-selected-option-text"
     },
     {
       from: "/ATS/Selenium+Actions/Get/Get+Selected+Option+Value",
-      to: "/addons/ATS/selenium-actions/get/get-selected-option-value"
+      to: "/addons/ATS/get/get-selected-option-value"
     },
     {
       from: "/ATS/Selenium+Actions/Get/Get+Text",
-      to: "/addons/ATS/selenium-actions/get/get-text"
+      to: "/addons/ATS/get-text"
     },
     {
       from: "/ATS/Selenium+Actions/Send+Keys",
-      to: "/addons/ATS/selenium-actions/send-keys"
+      to: "/addons/ATS/send-keys"
     },
     {
       from: "/ATS/Standard+Action+Overview",

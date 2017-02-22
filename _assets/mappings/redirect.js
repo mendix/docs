@@ -131,7 +131,7 @@ module.exports = {
     },
     {
       from: "/APM/Introduction",
-      to: "/addons/APM"
+      to: "/addons/APM/index"
     },
     {
       from: "/APM/Java+security+settings",

@@ -1,7 +1,7 @@
 ---
 title: "Installing Mendix on Debian GNU Linux"
 space: "Mendix 6 How-to's"
-category: "On-premises Deployment"
+category: "On-Premises Deployment"
 tags: []
 ---
 The documentation which describes the installation and basic configuration of the Mendix software on a system running Debian GNU/Linux is available as part of the m2ee-tools helper program:

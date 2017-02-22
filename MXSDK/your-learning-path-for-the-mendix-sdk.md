@@ -1,5 +1,5 @@
 ---
-title: "Your learning path for the Mendix SDK"
+title: "Your Learning Path for the Mendix SDK"
 space: "Mendix Platform SDK"
 ---
 Before the Mendix SDK can make your life easier, there's some learning to do. Follow the step-by-step guides listed below to learn everything you need about using the SDK. After finishing the learning path, you'll not only know how to use the SDK, but also how all the parts fit together.

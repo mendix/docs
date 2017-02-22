@@ -18,7 +18,7 @@ sitemap: false
     "Monitoring & Troubleshooting",
     "Collaboration & Project Management",
     "Cloud Foundry",
-    "On-premises Deployment"
+    "On-Premises Deployment"
   ],
   "pages": {% include json-snippets/get_pages.inc dir="/howto50/" %}
 }

@@ -14,29 +14,29 @@ The team's goal is to activate and engage the community of Mendix developers in 
 
 These pages provide more information on the various projects that the Community Team is working on:
 
-* [How to Set Up Your Community Profile](how-to-set-up-your-profile)
-* [How to Set Up Your Partner Profile](how-to-set-up-your-partner-profile)
-* [The Mendix Forum](the-mendix-forum)
-* [The Mendix Job Board](the-mendix-job-board)
-* [The Mendix MVP Program](the-mendix-mvp-program)
+* [How to Set Up Your Community Profile](tools/how-to-set-up-your-profile)
+* [How to Set Up Your Partner Profile](tools/how-to-set-up-your-partner-profile)
+* [The Mendix Forum](tools/the-mendix-forum)
+* [The Mendix Job Board](tools/the-mendix-job-board)
+* [The Mendix MVP Program](tools/the-mendix-mvp-program)
 
 ## 3 Community Documentation
 
 These pages provide details on how you can contribute to the Mendix documentation:
 
-* [How to Contribute to the Mendix Documentation](contribute-to-the-mendix-documentation)
-* [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)
-* [The How-to Template](the-how-to-template-page)
-* [The Reference Guide Page Template](https://docs.mendix.com/community/the-reference-guide-page-template-page)
+* [How to Contribute to the Mendix Documentation](documentation/contribute-to-the-mendix-documentation)
+* [Content Writing and Formatting Guidelines](documentation/content-writing-and-formatting-guidelines)
+* [The How-to Template](documentation/the-how-to-template-page)
+* [The Reference Guide Page Template](documentation/the-reference-guide-page-template-page)
 
 ## 4 App Store
 
 These pages provide detailed information on using the Mendix App Store:
 
-* [App Store Overview](app-store-overview)
-* [How to Use App Store Content in the Modeler](use-app-store-content-in-the-modeler)
-* [How to Share App Store Content](share-app-store-content)
-* [App Store Content Support](app-store-content-support)
+* [App Store Overview](app-store/app-store-overview)
+* [How to Use App Store Content in the Modeler](app-store/use-app-store-content-in-the-modeler)
+* [How to Share App Store Content](app-store/share-app-store-content)
+* [App Store Content Support](app-store/app-store-content-support)
 
 ## 4 More Information
 

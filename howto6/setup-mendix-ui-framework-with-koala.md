@@ -1,7 +1,7 @@
 ---
 title: "Setup Mendix UI Framework with Koala"
 space: "Mendix 6 How-to's"
-category: "GUI's"
+category: "GUIs"
 tags: []
 ---
 In this how-to we will go through how to setup the [Mendix UI Framework](https://ux.mendix.com/) with the program called Koala.

@@ -28,7 +28,7 @@ The following operations are available in the Projects API.
 
 The CreateNewApp operation will create a new app and corresponding project. As parameters it requires a project name, a user name that is linked to a Mendix account, an [API Key](authentication) corresponding to that user account, and a project summary. The project summary may contain a brief description of the project.
 
-![](attachments/14778446/18582269.png)
+![](attachments/14778446/CreateNewAppCall.PNG)
 
 #### Parameters
 
@@ -38,6 +38,7 @@ The CreateNewApp operation will create a new app and corresponding project. As p
 | ProjectSummary | String | A brief description of the project. May be set to `empty`. |
 | User | String | The <u>email address</u> you use to log into your Mendix account. |
 | ApiKey | String | An [API Key](authentication) associated to the user account of _User_. |
+| TemplateUUID (can be `empty`) | String | UUID which identifies the template with which the project will be created. If left empty, a default blank template will be used instead. | 
 
 #### Output
 
@@ -59,13 +60,13 @@ Retrieves the status of a background job that was queued for execution.
 | --- | --- | --- |
 | JobId | String | The ID of a background job that was provided to you by one of the ProjectsAPI operations. |
 
-![](attachments/14778446/18582277.png)
+![](attachments/14778446/RetrieveJobStatusCall.PNG)
 
 #### Output
 
 The output of the RetrieveJobStatus operation is a `JobStatus` entity with the following attributes:
 
-![](attachments/14778446/18582347.png)
+![](attachments/14778446/RetrieveJobStatusResponse.PNG)
 
 The `ProjectsAPI.JobState` enumeration can have the values `Running`, `Completed` or `Failed`.
 
@@ -125,6 +126,6 @@ The CommitOnlineWorkingCopyChangesToTeamServer action returns a String which is 
 
 Download the Projects API App Service below, so you can import it in your model:
 
-[ProjectsAPI 9.msd](attachments/14778446/16285850.msd)
+[ProjectsAPI_10.msd](attachments/14778446/ProjectsAPI_10.msd)
 
-In the consumed Projects API App Service settings, you will have to use a constant with the value `[https://sprintr.home.mendix.com/ws/ProjectsAPI/9/soap1](https://sprintr.home.mendix.com/ws/ProjectsAPI/9/soap1)` as Location.
+In the consumed Projects API App Service settings, you will have to use a constant with the value `https://sprintr.home.mendix.com/ws/ProjectsAPI/10/soap1` as Location.

@@ -21,8 +21,8 @@ In Mendix, both inheritance and choice are mapped by entity specialization.
 
 In figure 1 an example of an Export Mapping with inheritance is shown. For Import Mappings, the structure is the same, only the direction of the arrows is reversed. One _Persons_ object has a one-to-many association to _Person._ The person can be either a Customer or Employee.
 
-**![](attachments/16713728/16843946.png)
-******Figure 1****
+![](attachments/16713728/16843946.png)
+**Figure 1**
 
 For import mappings, mapping the incoming XML to a specific XSD type is defined by the attribute _xsi:type_. However, this attribute is optional. When the _xsi:type_ attribute is **not** present and the base type of the element is **not** abstract, that type will be used (in the example that is Person). If the base type does not have a mapping defined in the import mapping document, it will be skipped. When the base type is abstract, an error will be thrown.
 

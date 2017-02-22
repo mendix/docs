@@ -14,10 +14,11 @@ let TESTED = [];
 let TOTAL = 0;
 
 const throwError = (plugin, error) => {
-  throw new gutil.PluginError({
+  const e = new gutil.PluginError({
     plugin: plugin,
     message: error
   }, { showStack: true });
+  gutil.log(e.message);
 }
 
 const isFile = filePath => {

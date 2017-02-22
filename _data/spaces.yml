@@ -3,19 +3,13 @@
 #  mendix_version: 6 #optional, used for searches
 #  priority: 1 - 9 (used for sitemap). If omitted this will not be included, which defaults to 0.5
 apidocs:
-  space: "API documentation"
+  space: "API Documentation"
   priority: 6
-APM:
-  space: "Application Performance Monitor"
+addons:
+  space: "Add-Ons"
   priority: false
 appstore:
   space: "App Store"
-  priority: false
-AQM:
-  space: "Application Quality Monitor"
-  priority: false
-ATS:
-  space: "ATS (Application Test Suite)"
   priority: false
 bestpractices:
   space: "Best Practices"
@@ -23,17 +17,21 @@ bestpractices:
 community:
   space: "Community"
   priority: false
+howto40:
+  space: "Mendix 4 How-To's"
+  priority: false
+  mendix_version: 4
 howto50:
-  space: "Mendix 5 How-to's"
+  space: "Mendix 5 How-To's"
   priority: false
   mendix_version: 5
 howto6:
-  space: "Mendix 6 How-to's"
-  priority: 6
+  space: "Mendix 6 How-To's"
+  priority: 5
   mendix_version: 6
 howto7:
-  space: "Mendix 7 How-to's"
-  priority: false
+  space: "Mendix 7 How-To's"
+  priority: 6
   mendix_version: 7
 mendixcloud:
   space: "Mendix Cloud"
@@ -41,21 +39,28 @@ mendixcloud:
 MXSDK:
   space: "Mendix Platform SDK"
   priority: false
+refguide4:
+  space: "Mendix 4 Reference Guide"
+  priority: false
+  mendix_version: 4
 refguide5:
-  space: "Reference Guide 5"
+  space: "Mendix 5 Reference Guide"
   priority: false
   mendix_version: 5
 refguide6:
-  space: "Reference Guide 6"
-  priority: 7
+  space: "Mendix 6 Reference Guide"
+  priority: 6
   mendix_version: 6
 refguide7:
-  space: "Reference Guide 7"
-  priority: false
+  space: "Mendix 7 Reference Guide"
+  priority: 7
   mendix_version: 7
-support:
-  space: "Mendix Support"
+howtogeneral:
+  space: "General How-To's"
   priority: false
 tips:
-  space: "Tips and Tricks"
+  space: "Tips & Tricks"
+  priority: false
+releasenotes:
+  space: "Release Notes"
   priority: false

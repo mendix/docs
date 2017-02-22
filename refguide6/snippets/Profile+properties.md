@@ -2,7 +2,7 @@
 
 ### General
 
-**Enabled (only Tablet, Phone, and Offline device)**
+**Enabled**
 
 Specifies whether the profile is enabled. If a profile is enabled, it can be used to determine the home page when a user logs into the application. If it is disabled, users accessing the application with a matching profile will be redirected to the nearest equivalent enabled profile. 
 
@@ -11,6 +11,10 @@ Specifies whether the profile is enabled. If a profile is enabled, it can be use
 The Desktop profile is always enabled.
 
 {% endmarkdown %}</div>
+
+**Enable offline support (only Hybrid tablet and Hybrid phone)**
+
+Specifies whether the hybrid profile allows users to continue using their Mendix application without a working internet connection. A number of restrictions apply to pages available offline, a full listing can be found [here](offline). 
 
 **Application title**
 

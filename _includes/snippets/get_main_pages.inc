@@ -1,5 +1,5 @@
 <ul>
-  <li><a class="overview-link" href="{{ include.dir }}" title="{{ include.category }}">Overview</a></li>
+  <li><a class="overview-link" href="{{ include.dir }}" title="{{ include.category }}">{{ include.category }}</a></li>
 {% for catpage in site.pages %}
   {% if include.dir == catpage.dir %}
     {% if catpage.category %}{% else %}

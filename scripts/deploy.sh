@@ -8,13 +8,13 @@ then
   exit 0
 fi
 
-if ([ "${TRAVIS_BRANCH}" == "development"])
+if ([ "${TRAVIS_BRANCH}" == "development" ])
 then
   cf push -f ./manifest_accp.yml
   exit 0
 fi
 
-if ([ "${TRAVIS_BRANCH}" == "master"])
+if ([ "${TRAVIS_BRANCH}" == "master" ])
 then
   cf zero-downtime-push $CF_APP -f ./manifest_prod.yml
   exit 0

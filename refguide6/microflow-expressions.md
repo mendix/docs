@@ -67,15 +67,13 @@ An overview of the possibilities with expressions can be found below.
 *   [`find`](string-function-calls) - Get substring position
 *   [`findLast`](string-function-calls) - Get last substring position
 *   [`contains`](string-function-calls) - Contains substring
-*   [`startsWith`](string-function-calls)  - Determine whether a string starts with the specified substring
-*   [`endsWith`](string-function-calls)  - Determine whether a string ends with the specified substring
+*   `[startsWith](string-function-calls)`  - Determine whether a string starts with the specified substring
+*   `[endsWith](string-function-calls)`  - Determine whether a string ends with the specified substring
 *   [`trim`](string-function-calls) - Remove leading and trailing whitespace
 *   [`isMatch`](string-function-calls) - Match regular expression
 *   [`replaceAll`](string-function-calls) - Replace occurences of substring
 *   [`replaceFirst`](string-function-calls) - Replace first occurence of substring
 *   [String concatenation ( + )](string-function-calls) - Concatenate strings
-*   [`urlEncode`](string-function-calls) - Convert a string to be used in a url
-*   [`urlDecode`](string-function-calls) - Convert a string back from a url
 
 ### [Date creation](date-creation)
 

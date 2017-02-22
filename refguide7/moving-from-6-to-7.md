@@ -53,8 +53,8 @@ The following features have been deprecated in Mendix 7. Using these features is
 
 | Method Name | Alternative |
 | --- | --- |
-| `getActiveSession(String userName)` | use xpath query on session table instead. |
-| `getActiveSessions()` | use xpath query on session table instead. |
+| `getActiveSession(String userName)` | Use XPath query on session table instead. |
+| `getActiveSessions()` | Use XPath query on session table instead. |
 | `exportStream(IContext context, String exportMappingName, IMendixObject objectToExport, Boolean shouldValidate)` | `com.mendix.core.integration().exportStream(IContext context, String exportMappingName, IMendixObject objectToExport,Boolean shouldValidate)` |
 | `importStream(IContext context,InputStream stream,String importMappingName,IMendixObject mappingParameter,Boolean shouldValidate)` | `com.mendix.core.integration().importStream(IContext context, InputStream stream, String importMappingName, IMendixObject mappingParameter, Boolean shouldValidate)` |
 
@@ -134,8 +134,8 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 
 | Method Name | Alternative |
 | --- | --- |
-| `callWebservice()` | use Call REST action in the microflow instead. |
-| `importXmlStream()` | use `com.mendix.core.integration().importStream()` instead. |
+| `callWebservice()` | Use Call REST action in the microflow instead. |
+| `importXmlStream()` | Use `com.mendix.core.integration().importStream()` instead. |
 | `getComponent().runtime().about().get("model_version")` | `getModelVersion()` |
 
 #### Others
@@ -166,7 +166,7 @@ import system.proxies.FileDocument.MemberNames;
 
 private final String FILE_DOCUMENT_NAME = MemberNames.Name.toString();
 ```
-Where `MemberNames` is an Enum defined in the `FileDocument` proxy class.
+Wherein `MemberNames` is an Enum defined in the `FileDocument` proxy class.
 
 ### Moved Packages
 
@@ -174,7 +174,7 @@ Where `MemberNames` is an Enum defined in the `FileDocument` proxy class.
 | --- | --- |
 | `org.json.\*` | `com.mendix.thirdparty.org.json.\*` |
 
-This is needed to avoid potential namespace conflicts between the Mendix version of the `org.json` library and other json libraries.
+This is needed to avoid potential namespace conflicts between the Mendix version of the `org.json` library and other JSON libraries.
 
 ### Runtime Issues When Migrating a Project to Mendix 7
 

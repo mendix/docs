@@ -28,6 +28,16 @@ Category | Description
 
 To see a detail page for each category, click **View more** (or **View full leaderboard**).
 
+## 3 Sidebar Menu
+
+The sidebar menu lists all the pages in the App Store that you can browse for content. 
+
+The pages are divided into the main categories of **Connectors**, **Widgets**, **Modules**, **Themes**, **App Services**, **Add-on Examples**, and **Sample apps**.
+
+You can also access [My App Store](), the [Modeler]() page, the [Solutions]() page, and the [Partners]() page.
+
+
+
 ## 3 Content Tabs
 
 ### 3.1 Add-Ons and Apps Tabs
@@ -148,9 +158,9 @@ Based on the responses from multiple users, the following compatability summarie
 
 For further information on the content compatibility, you can see how many **people say it works** and how many **people say it doesn't work**.
 
-## 5 Partners Tab<a name="PartnersTab"></a>
+## 5 Partners Page<a name="PartnersTab"></a>
 
-The **Partners** tab lists selected App Store partner companies:
+The **Partners** page lists selected App Store partner companies:
 
 ![](attachments/app-store-overview/partners.png)
 
@@ -166,7 +176,7 @@ On the **More info** tab, you can look at documents that provide more informatio
 
 ![](attachments/app-store-overview/partners_detail2.png)
 
-## 6 Modeler Tab
+## 6 Modeler Page
 
 On the **Modeler** tab, you can download any version of the Modeler you need. You can browse all of the Modeler versions in the **Versions** menu on the right-side of the screen:
 
@@ -176,7 +186,7 @@ For each Modeler version, there are **Description** and **Related downloads** ta
 
 Click **Download** to download the installation file for that Modeler version.
 
-## 7 My App Store<a name="MyAppStore"></a>
+## 7 My App Store Page<a name="MyAppStore"></a>
 
 The **My App Store** tab presents all of your App Store activity:
 

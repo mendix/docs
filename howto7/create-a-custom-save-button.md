@@ -80,5 +80,5 @@ To replace the default Save button with a custom one, follow these steps:
 * [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
 * [How to Extract and Use Submicroflows](extract-and-use-sub-microflows)
 * [Button Widgets](/refguide7/button-widgets)
-* [Save Button](/refguide7/save-button)
+* [Create Button](/refguide7/new-button)
 * [Microflow Activities](/refguide7/activities)

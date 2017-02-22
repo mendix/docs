@@ -72,7 +72,7 @@ _Default value:_ 3
 
 <div class="alert alert-info">{% markdown %}
 
-This property is removed in version 6.7.0\. Use the 'Close page' property of the [Save button](save-button) or [Cancel button](cancel-button) instead.
+This property is removed in version 6.7.0\. Use the 'Close page' property of the [Create button](new-button) instead.
 
 {% endmarkdown %}</div>
 

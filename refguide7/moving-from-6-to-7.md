@@ -51,7 +51,7 @@ An earlier version of Mendix enabled applications to move sessions to the databa
 
 This functionality is enabled by default, so there is no need for additional configuration.
 
-Because of this statelessness, it is the client that keeps track of objects that are not yet committed, objects that are not persistable, and even changes to the objects that weren't committed yet. To keep the resource usage low, we periodically prune the stored state — we remove objects that are not displayed in the UI and not connected by references. For gaining insight into how big the state is in your app (and even why it exists), we built a basic tool: use the **Ctrl + Alt + G** key combination in your browser, and the information will be dumped to your browser's console (note that this feature might be removed in a future release). For more details, see [Monitoring Client State](/runtime/monitoring-client-state).
+Because of this statelessness, it is the client that keeps track of objects that are not yet committed, objects that are not persistable, and even changes to the objects that weren't committed yet. To keep the resource usage low, we periodically prune the stored state — we remove objects that are not displayed in the UI and not connected by references. For gaining insight into how big the state is in your app (and even why it exists), we built a basic tool: use the **Ctrl + Alt + G** key combination in your browser, and the information will be dumped to your browser's console (note that this feature might be removed in a future release). For more details, see [Monitoring Client State](monitoring-client-state).
 
 Please be aware that reloading the browser window (as in, pressing F5) will drop the entire state.
 

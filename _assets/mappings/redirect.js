@@ -425,11 +425,11 @@ module.exports = {
     },
     {
       from: "/ATS/Mendix+Actions/Generic/Login",
-      to: "/addons/ATS/generic/login"
+      to: "/addons/ATS/login"
     },
     {
       from: "/ATS/Mendix+Actions/Generic/Logout",
-      to: "/addons/ATS/generic/logout"
+      to: "/addons/ATS/logout"
     },
     {
       from: "/ATS/Mendix+Actions/Generic/Open+Application",
@@ -709,31 +709,31 @@ module.exports = {
     },
     {
       from: "/ATS/Selenium+Actions/Find/Find+Element+by+CSS",
-      to: "/addons/ATS/find/find-element-by-css"
+      to: "/addons/ATS/find-element-by-css"
     },
     {
       from: "/ATS/Selenium+Actions/Find/Find+Element+by+ID",
-      to: "/addons/ATS/find/find-element-by-id"
+      to: "/addons/ATS/find-element-by-id"
     },
     {
       from: "/ATS/Selenium+Actions/Find/Find+Element+by+Sizzle",
-      to: "/addons/ATS/find/find-element-by-sizzle"
+      to: "/addons/ATS/find-element-by-sizzle"
     },
     {
       from: "/ATS/Selenium+Actions/Get/Get+Property+Value",
-      to: "/addons/ATS/get/get-property-value"
+      to: "/addons/ATS/get-property-value"
     },
     {
       from: "/ATS/Selenium+Actions/Get/Get+Selected+Option+Index",
-      to: "/addons/ATS/get/get-selected-option-index"
+      to: "/addons/ATS/get-selected-option-index"
     },
     {
       from: "/ATS/Selenium+Actions/Get/Get+Selected+Option+Text",
-      to: "/addons/ATS/get/get-selected-option-text"
+      to: "/addons/ATS/get-selected-option-text"
     },
     {
       from: "/ATS/Selenium+Actions/Get/Get+Selected+Option+Value",
-      to: "/addons/ATS/get/get-selected-option-value"
+      to: "/addons/ATS/get-selected-option-value"
     },
     {
       from: "/ATS/Selenium+Actions/Get/Get+Text",

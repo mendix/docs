@@ -3,17 +3,12 @@ title: "Mendix Objects and Caching"
 space: "Mendix 7 Reference Guide"
 category: "Runtime"
 description: "This page describes how objects interact with each other within a runtime request."
-tags: "runtime, MendixObject, caching, context, session, request, microflow"
+tags: ["runtime", "MendixObject", "caching", "context", "session", "request", "microflow"]
 ---
 
 ## 1 Introduction
 
-This page describes the following:
-
-* How objects get loaded from the database
-* In which cases objects are cached
-* When a cached object is retrieved
-* What happens when an object gets changed and committed
+This page describes how objects get loaded from the database, in which cases objects are cached, when a cached object is retrieved, and what happens when an object gets changed and committed.
 
 The term "object" refers to an instance of a Mendix entity.
 

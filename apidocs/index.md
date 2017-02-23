@@ -10,6 +10,7 @@ The API documentation is divided into the sections described below.
 
 Extend your application model using Java. All functionality and information from both the application model and Mendix Runtime is accessible via these APIs.
 
+*   [Mendix 7 Server Runtime](https://apidocs.mendix.com/7/runtime/)
 *   [Mendix 6 Server Runtime](https://apidocs.mendix.com/6/runtime/)
 *   [Mendix 5 Server Runtime](https://apidocs.mendix.com/5/runtime/)
 *   [Mendix 4 Server Runtime](https://apidocs.mendix.com/4/runtime/)
@@ -19,6 +20,7 @@ Extend your application model using Java. All functionality and information from
 
 Enrich the user interface of your applications by building on top of our web client APIs. Use standard web technology in combination with our powerful APIs to build any widget you want.
 
+*   [Client API Mendix 7](https://apidocs.mendix.com/7/client/)
 *   [Client API Mendix 6](https://apidocs.mendix.com/6/client/)
 *   [Client API Mendix 5](https://apidocs.mendix.com/5/client/)
 *   [Client API Mendix 4](https://apidocs.mendix.com/4/client/)

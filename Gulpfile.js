@@ -74,24 +74,30 @@ gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json 
       helpers.gulpErr('write:mapping', err);
       return process.exit(1);
     });
-  });
+});
 
 gulp.task('write:githistory', `Write git_history to data`, done => {
-  git.getCommits(CURRENTFOLDER, true)
-    .then(commits => {
-      yaml('_data/history.yml', commits, err => {
-        if (err) {
-          throwErr('write:githistory', `Error writing githistory: ${err}`);
-          return process.exit(2);
-        }
-        gutil.log(gutil.colors.cyan('[GIT-HISTORY]') + ` Git history written to ${gutil.colors.cyan(path.join(CURRENTFOLDER, '/_data/history.yml'))}`)
-        done();
-      });
-    })
-    .catch(err => {
-      helpers.gulpErr('write:githistory', `Error with reading git history:`, err);
-      return process.exit(2);
-    })
+  if (process.env['JEKYLL_ENV'] === 'production') {
+    git.getCommits(CURRENTFOLDER, true)
+      .then(commits => {
+        yaml('_data/history.yml', commits, err => {
+          if (err) {
+            throwErr('write:githistory', `Error writing githistory: ${err}`);
+            return process.exit(2);
+          }
+          gutil.log(gutil.colors.cyan('[GIT-HISTORY]') + ` Git history written to ${gutil.colors.cyan(path.join(CURRENTFOLDER, '/_data/history.yml'))}`)
+          done();
+        });
+      })
+      .catch(err => {
+        helpers.gulpErr('write:githistory', `Error with reading git history:`, err);
+        return process.exit(2);
+      })
+  } else {
+    gutil.log(gutil.colors.cyan("[GIT-HISTORY]") + ' skipping history on tests, use environment variable: JEKYLL_ENV=production');
+    helpers.touch(path.join(CURRENTFOLDER, '/_data/history.yml'));
+    done();
+  }
 });
 
 gulp.task('copy:images', `Copy images from _assets folder`, () => {

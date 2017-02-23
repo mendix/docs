@@ -7447,11 +7447,6 @@ module.exports = {
       "to": "/refguide7/integration-activities"
     },
     {
-      "from": "/refguide7/ISession+API+Usage",
-      "to": "/refguide7/isession-api-usage",
-      "disabled": true
-    },
-    {
       "from": "/refguide7/Java+Action+Call",
       "to": "/refguide7/java-action-call"
     },
@@ -7470,11 +7465,6 @@ module.exports = {
     {
       "from": "/refguide7/JSON+Structures",
       "to": "/refguide7/json-structures"
-    },
-    {
-      "from": "/refguide7/Keep+alive+mechanism+for+Persistent+Sessions",
-      "to": "/refguide7/keep-alive-mechanism-for-persistent-sessions",
-      "disabled": true
     },
     {
       "from": "/refguide7/Label",

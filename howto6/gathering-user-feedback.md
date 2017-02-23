@@ -117,7 +117,7 @@ Once a feedback item is connected to a user story, Mendix will automatically upd
 
 ## Feedback Widget in Mobile Apps
 
-To be able to load the Feedback Widget in your hybrid app, you will need to add the `mendix.com` domain to your whitelisted domains. See [Customizing PhoneGap Build Packages](customizing-phonegap-build-packages) for details.
+To be able to load the Feedback Widget in your hybrid app, you will need to add the `mendix.com` domain to your whitelisted domains. See [Customizing PhoneGap Build Packages](/refguide6/customizing-phonegap-build-packages) for details.
 
 ## Conclusion
 

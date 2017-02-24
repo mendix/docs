@@ -129,6 +129,12 @@ defaults:
       menus:
         - "addons"
   - scope:
+      path: 'ATS'
+      type: pages
+    values:
+      menus:
+        - "ATS"
+  - scope:
       path: 'MXSDK'
       type: pages
     values:

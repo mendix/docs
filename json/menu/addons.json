@@ -5,8 +5,7 @@ sitemap: false
 {
   "categories": [
     "APM",
-    "ATS",
     "AQM"
   ],
-  "pages": {% include json-snippets/get_pages_per_space.inc space="Add-Ons" %}
+  "pages": {% include json-snippets/get_pages_per_space.inc space="Other Add-Ons" %}
 }

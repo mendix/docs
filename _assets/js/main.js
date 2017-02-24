@@ -45,17 +45,40 @@
     }
 
     function sortPages(arr, getModifier, numFunc) {
+      var num = numFunc || function (n) { return n; };
       return arr.sort(function (p1, p2) {
-        return numFunc(getModifier(p1)) - numFunc(getModifier(p2));
+        return num(getModifier(p1)) - num(getModifier(p2));
       });
     }
 
-    function sortModelerPages(arr) {
-      return sortPages(
-        arr,
-        function (p) { return p.id.replace("modeler-","").split(".").map(function (n) { return parseInt(n, 10) }); },
-        function (n) { return (n[0] ? n[0] * 10000 : 0) + (n[1] ? n[1] * 100 : 0) + (n[2] || 0); }
-      ).reverse();
+    function getPageArrType(arr) {
+      var type = 'string';
+      arr.forEach(function (s) {
+        if (s.id && (s.id.indexOf('.') !== -1 || !isNaN(parseInt(s.id)) && s.id.length === 1)) {
+          type = 'version';
+        } else if (s.id && s.id.indexOf('-') !== -1 && s.id.split('-').length === 3) {
+          type = 'date'
+        }
+      });
+      return type;
+    }
+
+    function sortOnVersion(arr) {
+      var type = getPageArrType(arr);
+      if (type === 'version') {
+        return sortPages(
+          arr,
+          function (p) { return p.id.replace("modeler-","").split(".").map(function (n) { return parseInt(n, 10) }); },
+          function (n) { return (n[0] ? n[0] * 10000 : 0) + (n[1] ? n[1] * 100 : 0) + (n[2] || 0); }
+        ).reverse();
+      }
+      if (type === 'date') {
+        return sortPages(
+          arr,
+          function (p) { return new Date(p.id.trim()) }
+        ).reverse();
+      }
+      return arr.sort();
     }
 
     function addNormalLink(title, url) {
@@ -89,8 +112,8 @@
           var pageId = 'cat-' + normalizeId(page.id),
               $collapse = $('<div class="collapse" id="'+ pageId + '" />');
 
-          if (page && page.url.indexOf("/releasenotes/desktop-modeler/") === 0) {
-            subpages = sortModelerPages(subpages);
+          if (page && page.url.indexOf("/releasenotes/") === 0) {
+            subpages = sortOnVersion(subpages);
           }
 
           $item.append(addExpandLink(pageId, page.title, page.url));
@@ -113,14 +136,8 @@
 
       var catUrl = catPage && catPage.length === 1 ? catPage[0].url : null;
 
-      if (catUrl && (
-        catUrl.indexOf("/releasenotes/desktop-modeler/") === 0 ||
-        catUrl.indexOf("/releasenotes/APM/") === 0 ||
-        catUrl.indexOf("/releasenotes/model-sdk/") === 0 ||
-        catUrl.indexOf("/releasenotes/platform-sdk/") === 0 ||
-        catUrl.indexOf("/releasenotes/ATS") === 0
-      )) {
-        getPages = sortModelerPages(getPages);
+      if (catUrl && catUrl.indexOf("/releasenotes/") === 0){
+        getPages = sortOnVersion(getPages);
       }
 
       if (getPages.length === 0 && catUrl) {

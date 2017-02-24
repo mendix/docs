@@ -1,6 +1,6 @@
 ---
 title: "Get Current Page Title"
-space: "Add-Ons"
+space: "ATS" 
 parent: "system"
 ---
 

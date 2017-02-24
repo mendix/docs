@@ -1,6 +1,6 @@
 ---
 title: "CKEditor"
-space: "Add-Ons"
+space: "ATS" 
 parent: "mendix-appstore-widgets-actions"
 ---
 

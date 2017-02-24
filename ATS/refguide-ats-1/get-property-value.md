@@ -1,6 +1,6 @@
 ---
 title: "Get Property Value"
-space: "Add-Ons"
+space: "ATS" 
 parent: "get"
 ---
 

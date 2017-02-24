@@ -1,6 +1,6 @@
 ---
 title: "Assert Simple Checkbox Set Selector Value"
-space: "Add-Ons"
+space: "ATS" 
 parent: "simple-checkbox-set-selector"
 ---
 ## Description

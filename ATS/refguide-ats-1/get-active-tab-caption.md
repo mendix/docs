@@ -1,6 +1,6 @@
 ---
 title: "Get Active Tab Caption"
-space: "Add-Ons"
+space: "ATS" 
 parent: "tab"
 ---
 

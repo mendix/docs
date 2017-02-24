@@ -1,6 +1,6 @@
 ---
 title: "DataGrid, TemplateGrid, and ListView"
-space: "Add-Ons"
+space: "ATS" 
 parent: "mendix-actions"
 ---
 

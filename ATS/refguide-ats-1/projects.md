@@ -1,7 +1,7 @@
 ---
 title: "Projects"
-space: "Add-Ons"
-category: "ATS"
+space: "ATS" 
+category: "ATS Reference Guide 1"
 ---
 Creating new test cases – especially with recording – is a simple activity, so you can quickly end up with a lot. Especially when you test multiple applications or even have different teams, you don't want all data in one place. Eventually, you want to separate, structure and protect the data.
 

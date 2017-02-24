@@ -1,6 +1,6 @@
 ---
 title: "Checkbox Set Selector"
-space: "Add-Ons"
+space: "ATS" 
 parent: "mendix-appstore-widgets-actions"
 ---
 

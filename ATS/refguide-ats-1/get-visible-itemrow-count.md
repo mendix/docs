@@ -1,6 +1,6 @@
 ---
 title: "Get Visible Item/Row Count"
-space: "Add-Ons"
+space: "ATS" 
 parent: "datagrid-templategrid-listview"
 ---
 

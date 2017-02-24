@@ -1,6 +1,6 @@
 ---
 title: "Cancel Dialog"
-space: "Add-Ons"
+space: "ATS" 
 parent: "dialog"
 ---
 

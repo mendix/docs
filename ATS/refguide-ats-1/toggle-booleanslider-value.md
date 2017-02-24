@@ -1,6 +1,6 @@
 ---
 title: "Toggle BooleanSlider Value"
-space: "Add-Ons"
+space: "ATS" 
 parent: "booleanslider"
 ---
 ## Description

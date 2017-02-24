@@ -1,6 +1,6 @@
 ---
 title: "Dialog"
-space: "Add-Ons"
+space: "ATS" 
 parent: "mendix-actions"
 ---
 

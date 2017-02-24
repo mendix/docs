@@ -1,6 +1,6 @@
 ---
 title: "Get Dialog Message Text"
-space: "Add-Ons"
+space: "ATS" 
 parent: "dialog"
 ---
 

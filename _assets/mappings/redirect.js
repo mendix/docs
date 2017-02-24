@@ -7447,11 +7447,6 @@ module.exports = {
       "to": "/refguide7/integration-activities"
     },
     {
-      "from": "/refguide7/ISession+API+Usage",
-      "to": "/refguide7/isession-api-usage",
-      "disabled": true
-    },
-    {
       "from": "/refguide7/Java+Action+Call",
       "to": "/refguide7/java-action-call"
     },
@@ -7470,11 +7465,6 @@ module.exports = {
     {
       "from": "/refguide7/JSON+Structures",
       "to": "/refguide7/json-structures"
-    },
-    {
-      "from": "/refguide7/Keep+alive+mechanism+for+Persistent+Sessions",
-      "to": "/refguide7/keep-alive-mechanism-for-persistent-sessions",
-      "disabled": true
     },
     {
       "from": "/refguide7/Label",
@@ -8792,59 +8782,59 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Model+SDK+3.0.1",
-      to: "/releasenotes/model-sdk/3.0.1"
+      to: "/releasenotes/model-sdk/3.0"
     },
     {
       from: "/ReleaseNotes/Model+SDK+3.0.0",
-      to: "/releasenotes/model-sdk/3.0.0"
+      to: "/releasenotes/model-sdk/3.0"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.9.1",
-      to: "/releasenotes/model-sdk/2.9.1"
+      to: "/releasenotes/model-sdk/2.9"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.9.0",
-      to: "/releasenotes/model-sdk/2.9.0"
+      to: "/releasenotes/model-sdk/2.9"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.8.1",
-      to: "/releasenotes/model-sdk/2.8.1"
+      to: "/releasenotes/model-sdk/2.8"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.8.0",
-      to: "/releasenotes/model-sdk/2.8.0"
+      to: "/releasenotes/model-sdk/2.8"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.7.0",
-      to: "/releasenotes/model-sdk/2.7.0"
+      to: "/releasenotes/model-sdk/2.7"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.6.3",
-      to: "/releasenotes/model-sdk/2.6.3"
+      to: "/releasenotes/model-sdk/2.6"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.6.0",
-      to: "/releasenotes/model-sdk/2.6.0"
+      to: "/releasenotes/model-sdk/2.6"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.5.0",
-      to: "/releasenotes/model-sdk/2.5.0"
+      to: "/releasenotes/model-sdk/2.5"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.4.0",
-      to: "/releasenotes/model-sdk/2.4.0"
+      to: "/releasenotes/model-sdk/2.4"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.3.0",
-      to: "/releasenotes/model-sdk/2.3.0"
+      to: "/releasenotes/model-sdk/2.3"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.2.2",
-      to: "/releasenotes/model-sdk/2.2.2"
+      to: "/releasenotes/model-sdk/2.2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.1.0",
-      to: "/releasenotes/model-sdk/2.1.0"
+      to: "/releasenotes/model-sdk/2.1"
     },
     {
       from: "/ReleaseNotes/Platform+SDK+2.0.0",
@@ -8852,23 +8842,23 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.0.0",
-      to: "/releasenotes/model-sdk/2.0.0"
+      to: "/releasenotes/model-sdk/2.0"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.2.0",
-      to: "/releasenotes/model-sdk/1.2.0"
+      to: "/releasenotes/model-sdk/1.2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.1.1",
-      to: "/releasenotes/model-sdk/1.1.1"
+      to: "/releasenotes/model-sdk/1.1"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.1.0",
-      to: "/releasenotes/model-sdk/1.1.0"
+      to: "/releasenotes/model-sdk/1.1"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.0.2",
-      to: "/releasenotes/model-sdk/1.0.2"
+      to: "/releasenotes/model-sdk/1.0"
     },
     {
       from: "/ReleaseNotes/Platform+SDK+1.0.2",
@@ -8876,7 +8866,7 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.0.0",
-      to: "/releasenotes/model-sdk/1.0.0"
+      to: "/releasenotes/model-sdk/1.0"
     },
     {
       from: "/ReleaseNotes/Application+Quality+Monitor",

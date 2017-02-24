@@ -43,6 +43,13 @@ Fix deprecations in your Java actions by importing your project in Eclipse and s
 
 Now you are ready to convert. Simply open your project in the new Mendix Modeler. There are no explicit actions required after opening your Mendix 6 project in Mendix 7.
 
+### Upgrading App store modules
+After the conversion it is advised to verify if there is a newer version of your app store modules available.
+Some modules need to be upgraded to make them Mendix 7 compatible.
+Please also read the version release notes to see whether specific actions are required.
+
+As of Mendix 7 your App store modules uses in your project are grouped together. They can be found in the Project Explorer panel of the Mendix Desktop Modeler under 'Project' -> 'App store modules'
+
 ## Breaking Changes
 
 #### Stateless Runtime

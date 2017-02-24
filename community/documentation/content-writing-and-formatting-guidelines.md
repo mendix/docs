@@ -80,17 +80,15 @@ To embed a modelshare in the documentation, paste the `iframe`. For example:
 These are some tips to consider when formatting Markdown:
 
 * To format note styles, implement the following HTML classes:
-    * `<div class="alert alert-info">` __your note__ `</div>`
-    * `<div class="alert alert-warning">` __your note__ `</div>`
+    * `<div class="alert alert-info">` {your note} `</div>`
+    * `<div class="alert alert-warning">` {your note}`</div>`
 * To underline text, use: `<u>`[text]`</u>`
 * If you add an image link in Markdown and then edit that image, you have to referesh the preview in your Markdown editor to see the refreshed image
-* If you need to add a class to a link, add extra attributes using `{ }`. We use this for our links that are download buttons:
-
-`[test-link](#){: .btn.btn-primary}`
-
-will result in
-
-[test-link](#){: .btn.btn-primary}
+* If you need to add a class to a link, add extra attributes using `{ }`
+   * We use this for our links that are **Download** buttons: `[test-link](#){: .btn.btn-primary}`
+      * This will result in 
+      
+      [test-link](#){: .btn.btn-primary}
 
 # 5 Guidelines for Writing and Formatting the How-To's
 

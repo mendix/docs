@@ -10,7 +10,7 @@ module Jekyll
       @modeler = "https://appstore.home.mendix.com/link/modeler/#{@input}"
 
       <<-MARKUP.strip
-      <a class="btn btn-primary btn-modeler" href="#{@modeler}" title="Download version #{@input} from the AppStore" target="_blank">Download</a>
+      <a class="btn btn-primary" href="#{@modeler}" title="Download version #{@input} from the AppStore" target="_blank">Download</a>
       MARKUP
     end
 

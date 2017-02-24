@@ -15,7 +15,7 @@ To install the Chrome _ATS Recorder_ plugin click the _Show info_ button in the 
 
 With the _ATS Recorder_ plugin installed, you can start a recording session at anytime by clicking the _Record_ button while inside a test case in the ATS. You can now open the Mendix application you want to test in another tab of the browser and start testing the application manually. All test steps you take, will be recorded by the recorder and can be saved in the chosen test case.
 
-![Open recording session with 4 recorded test steps](attachments/20644057/21168177.png)
+![Open recording session with 4 recorded test steps](attachments/recorder/21168177.png)
 
 Some recorded test steps offer you multiple actions to choose from, for example when setting the value of a text box. Here you can either have an action to change the value of the text box or choose to assert the value of the text box. To change the selected action click on the recorded test step under _Recorded Events_. On the right-hand side, if multiple actions are proposed, select the action you want to execute by clicking the _Select_ button.
 

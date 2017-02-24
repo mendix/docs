@@ -1,5 +1,5 @@
 ---
-title: "Assert not equals"
+title: "Assert Not equals"
 space: "Add-Ons"
 parent: "ats-core-actions"
 ---

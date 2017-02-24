@@ -16,17 +16,17 @@ Before you start with developing your own custom action, you should check if the
 
 In this tutorial, we want to get the current value of the booleanSlider Appstore widget. If we would use the [Get Checkbox Value action](get-checkbox-value), it would only return *true* or *false* for the current state of the boolean slider. We have to develop our own custom action. The action shall retrieve the current value of the booleanSlider as a string, in this case *Sure* or *No*. We have to determine, where the string is stored inside the HTML code and how we can get the current value from it. The following image shows the widget inside a simple mendix application.
 
-![test app](attachments/custom-action-creation-tutorial/application.png)
+![test app](attachments/create-custom-action/application.png)
 
 ## Widget Inspection
 
 Before we start with creating actions, we have to prepare our widget. Therefore we will build a prototype application, with only the widget we want to test in it. After that is done, we will run the application and inspect the HTML source code of the application with the browser development tools. You can open the development tools in **Mozilla Firefox** and **Google Chrome** by pressing <kbd>F12</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> on your keyboard. Your browser should now look similar to this.
 
 **Chrome Development Tools**
-![Chrome devtools](attachments/custom-action-creation-tutorial/chrome_devtools.png)   
+![Chrome devtools](attachments/create-custom-action/chrome_devtools.png)   
 
 **Firefox Development Tools**
-![Firefox devtools](attachments/custom-action-creation-tutorial/firefox_devtools.png)   
+![Firefox devtools](attachments/create-custom-action/firefox_devtools.png)   
 
 In the upper right part of the development tools, you will find the page inspector [Firefox] or elements view[Chrome] respectively. With the page inspector or elements view you can examine or modify the HTML and CSS of your application. Search for the booleanSlider widget in the HTML source code by entering the widget name in the searchfield (If the searchfield is not visible, press <kbd>Ctrl</kbd>+<kbd>F</kbd> on your keyboard to open it). In our case, the name of the booleanSlider widget is *booleanSlider1*. Your browser should now highlight the widget in the HTML code of the application.Open all container nodes inside the widget. The code should now look like this.
 
@@ -63,11 +63,11 @@ Now that we know, where the value we want to retrive, is located in the HTML cod
 In that window you can choose wich type of item you want to create.
 Choose **Action** and give it the name **"Get booleanSlider value"** and set **"Returns the current value of the booleanSlider as String"** as description. As best practice, you should always use desciptive names for your actions and give them a description. (For more informations read the [Best Practices](best-practices)). You can change the name and the description later on if you want. Now click on **Create**.
 
-![Create action and add name and description](attachments/custom-action-creation-tutorial/createactiondialog.png)
+![Create action and add name and description](attachments/create-custom-action/createactiondialog.png)
 
 The **Edit Action** page should have openend, where you can edit your newly created **Get booleanSlider value** action.
 
-![Edit action page](attachments/custom-action-creation-tutorial/editaction.png)
+![Edit action page](attachments/create-custom-action/editaction.png)
 
 ## Basic settings
 It is good practice to start the development of a custom action with the basic input and output settings and go to the processing of those parameters from there. We will first determine which input parameters we will need and how we will return the result of our action, before we add subactions to our custom action.
@@ -75,39 +75,39 @@ It is good practice to start the development of a custom action with the basic i
 ### Setting Inputparameters
 Switch to the **Settings** tab.
 
-![Edit action page](attachments/custom-action-creation-tutorial/editactionsettings.png)
+![Edit action page](attachments/create-custom-action/editactionsettings.png)
 
 Now click on **New** in the **Input Parameters** section. The **Edit Input Parameter** dialog will open.
 Set **Widget Name** as name of the input parameter and add the description **"The name of the booleanSlider widget"**.
 Set **Datatype** to **String**, **Show as Password** to **No**, **Required/Optional** to **Required** and **Type** to **Default**. Click on **Save**.
 
-![Edit Input Parameter Dialog](attachments/custom-action-creation-tutorial/editinputparameter.png)
+![Edit Input Parameter Dialog](attachments/create-custom-action/editinputparameter.png)
 
 We have successfully added the Widget Name as input parameter for our action.
 
 ### Setting the Output parameter
 We're not done yet. We have to add an output parameter to our action, to make the string value of the booleanSlider widget available to other actions. Click on **Set** in the **Output Parameter** section.
 
-![Add Output Parameter](attachments/custom-action-creation-tutorial/addoutputparameter.png)
+![Add Output Parameter](attachments/create-custom-action/addoutputparameter.png)
 
 Input areas for the output parameter settings will appear. Now enter **Value** as name and **The current string value of the booleanSlider** as **Description** for the output parameter. Set the **datatype** to **String** and select the **Required** radiobutton.  
 
-![Edit Output Parameter](attachments/custom-action-creation-tutorial/editoutputparameter.png)
+![Edit Output Parameter](attachments/create-custom-action/editoutputparameter.png)
 
 ATS will automatically save your changes as new settings for the output parameter of the action.
 
 ## Implementation
 Now that we have completed the groundwork, we can add subactions to our custom action. Switch back to the **Test Steps** tab and click **Add**.
 
-![Add subaction](attachments/custom-action-creation-tutorial/addsubaction.png)  
+![Add subaction](attachments/create-custom-action/addsubaction.png)  
 
 The **Test Step Setup** dialog will open. Enter **"Select active span"** as description for the action in textfield 1 and **"Find Widget Child Node"**in textfield 2. Now press **Search**. The [Find Widget Child Node](find-widget-child-node) action will appear in the search results table. Select the action, by clicking the corresponding row in the table and press **Save**. We have succesfully added the [Find Widget Child Node](find-widget-child-node) action as subaction.
 
-![Add Find Widget Child Node subaction](attachments/custom-action-creation-tutorial/addfindwidgetchildnode.png)
+![Add Find Widget Child Node subaction](attachments/create-custom-action/addfindwidgetchildnode.png)
 
 Next, we have to configure the Find Widget Child node subaction. Make sure that the subaction, we have just added, is highlighted in the step order table. On the right side of the page you will see the **Test Step Settings** section for the Find Widget Child Node action. Double click the **Widget Name** row in the **Input Values** table.
 
-![Edit Find Widget Child Node subaction](attachments/custom-action-creation-tutorial/editfindwidgetchildnode.png)
+![Edit Find Widget Child Node subaction](attachments/create-custom-action/editfindwidgetchildnode.png)
 
 The **Edit Input Value** dialog will open. Select the **Action Input Parameter** category. Make sure that **Widget Name** is selected as Action Input parameter. Now click **Save**.
 
@@ -115,15 +115,15 @@ The **Edit Input Value** dialog will open. Select the **Action Input Parameter**
 In the <b>Action Input Parameter</b> category you will find all of the input parameters you have created for the custom action.
 </div>
 
-![Edit Input Value dialog](attachments/custom-action-creation-tutorial/editinputvalue.png)
+![Edit Input Value dialog](attachments/create-custom-action/editinputvalue.png)
 
 Next we have to add the selector for the current active span child node. To select the current active ``<span>-element`` of the booleanSlider widget, we will use the ATS *:clickable* pseudo-class selector. This selector will select a visible and clickable user interface element. Doubleclick the **Child Node Selector** row in the **Input Values** table. Just as for the widget name, the **Edit Input Value** dialog will open for the **Child Node Selector** parameter. Select the category **Constant** and enter **"span:clickable"** in the textarea on the right side. Now click **Save**.   
 
-![Child Node Selector Input Value](attachments/custom-action-creation-tutorial/childnodeselector.png)
+![Child Node Selector Input Value](attachments/create-custom-action/childnodeselector.png)
 
 The [Find Widget Child Node](find-widget-child-node) action will now select the first active ``<span>-element``, which is a child node of the widget with the name "Widget Name". To get the text inside of the ``<span>-element`` we will use the [Get Text](get-text) action. Click **Add** on the **Test Steps** tab and in the openend **Test Step Setup** dialog type **"Get Text"** in textfeld 2. Make sure, that **Search private folders** is checked. Select the **Get Text** row in the search results tab and click **Save**.
 
-![Add Get Text action](attachments/custom-action-creation-tutorial/gettext.png)
+![Add Get Text action](attachments/create-custom-action/gettext.png)
 
 The output of the [Find Widget Child Node](find-widget-child-node) action will automatically be set as input value for the [Get Text](get-text) action.
 
@@ -134,7 +134,7 @@ Click **Add** and search for **"Set Return Value"**. Add the corresponding actio
 <div class="alert alert-info">
 The <b>Test Step Output</b> category contains all output values of your test/action steps. You can identify the number of the test/action step by the number with the leading #      
 </div>
-![Set Return Value](attachments/custom-action-creation-tutorial/setreturnvalue.png)
+![Set Return Value](attachments/create-custom-action/setreturnvalue.png)
 
 Now, that the return value is set, our **Get booleanSlider Value** action is done. But we have to test, if the value the action returns, is actually the right one, before we use the action in test cases for a real application.
 

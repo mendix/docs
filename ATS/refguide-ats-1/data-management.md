@@ -8,7 +8,7 @@ category: "ATS"
 
 This workspace is the heart of ATS, since it allows to create and manage folders, test suites, test cases and actions. The folder in the ATS is equivalent to a directory in your file browser. You can create folders within other folders, and in each folder, you can store test suites, test cases and actions.
 
-![Repository of the ATS](attachments/20644060/21168203.png)
+![Repository of the ATS](attachments/data-management/21168203.png)
 
 ## Import/Export
 
@@ -25,11 +25,11 @@ To import data in ATS do the following:
 *   Click _Import_ in order to open the data import form.
 *   On the data import form, click the _New Import_ button to open the import data dialog.
 
-![ATS Import Page](attachments/20644060/21168204.png)
+![ATS Import Page](attachments/data-management/21168204.png)
 
 *   In the data import dialog select the .xml file containing your import and press **Upload**
 
-![Data Import Dialog](attachments/20644060/21168205.png)
+![Data Import Dialog](attachments/data-management/21168205.png)
 
 The system will check the import for data inconsistencies and shows error details in a list if there are any. Click the import button in the bottom of the screen to complete the import.
 
@@ -49,11 +49,11 @@ There are different scenarios on how to export data from ATS:
 
 In order to start an export, you can either mark the export items listed in the current list view in the _Repository_ and then click _Export_ in the top menu, or you can export the item you are currently editing by clicking the _Export_ button in the top right.
 
-![Exporting a test Case](attachments/20644060/21168206.png)
+![Exporting a test Case](attachments/data-management/21168206.png)
 
 Exporting in the repository:
 
-![Exporting items in the Repository](attachments/20644060/21168207.png)
+![Exporting items in the Repository](attachments/data-management/21168207.png)
 
 ## Test Data
 
@@ -61,7 +61,7 @@ Exporting in the repository:
 
 In the ATS repository under the _Test Data_ tab you can create data sets by clicking the _New Data Set_ button. You can name the data set and give a description.
 
-![](attachments/20644060/21168208.png)
+![](attachments/data-management/21168208.png)
 
 A data set is defined by one or more fields and records. Fields are the columns of your table, records are the lines in your table containing the field values. Fields can have the data types integer or string. After you have created a data set you can add Fields and Records to the set.
 

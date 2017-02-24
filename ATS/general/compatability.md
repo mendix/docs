@@ -1,7 +1,7 @@
 ---
 title: "Compatibility"
-space: "Add-Ons"
-category: "ATS"
+space: "ATS"
+category: "General"
 ---
 
 ## Mendix Platform Compatibility

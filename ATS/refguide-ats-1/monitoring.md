@@ -7,7 +7,7 @@ category: "ATS"
 
 The link Monitoring/Results shows you pending and most recent tests to review the results of test case or test suite runs. You can switch between both views via tabs.
 
-![](attachments/20644066/21168217.png)
+![](attachments/monitoring/21168217.png)
 
 Results allows to search previous test runs by
 
@@ -20,17 +20,17 @@ Results allows to search previous test runs by
 
 You can deep dive by each test run for further analysis by clicking on its name or _Rerun_ the test case.
 
-![Result Log Page of a Test Suite](attachments/20644066/21168218.png)
+![Result Log Page of a Test Suite](attachments/monitoring/21168218.png)
 
 The _Result Log_ provides you more details about the test case in Test Steps, Screenshots and Error log tabs.
 
 In tab _Test Steps_ you can deep dive by clicking the test step for each step in your test case.
 
-![Result Log Screenshots Tab](attachments/20644066/21168219.png)
+![Result Log Screenshots Tab](attachments/monitoring/21168219.png)
 
 Error log:
 
-![Result Log Error Tab](attachments/20644066/21168220.png)
+![Result Log Error Tab](attachments/monitoring/21168220.png)
 
 ## Running Tests
 

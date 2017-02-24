@@ -1,17 +1,18 @@
 ---
-title: "ATS"
-space: "Add-Ons"
+title: "Introduction to ATS"
+space: "ATS"
+category: "General"
 ---
 
 ## 1 ATS Start Page
 
 When you log in to the Application Test Suite (ATS) as a user you see the _My Projects_ page. If there are no projects on your account yet, you are prompted to create a new Project. For project creation see the ReferenceGuide_Projects page of the documentation.
 
-![Start page when there is no project created yet](attachments/20644051/21168193.png)
+![Start page when there is no project created yet](attachments/introduction/21168193.png)
 
 If you already have active projects you can see directly how many test cases have passed in every project. You can now view a specific project or create a new one.
 
-![My Projects overview page](attachments/20644051/21168194.png)
+![My Projects overview page](attachments/introduction/21168194.png)
 
 ## 2 ATS Dashboard
 
@@ -87,16 +88,3 @@ Administrators manage users and manage projects, see ReferenceGuide_Administrati
 Users work in projects, they create and run test cases
 
 On the project level there are the roles of Project Administrator and Test Designer. The difference between the two is, that the Project Administrator can change the project settings and configure Selenium hbs and test applications. See ReferenceGuide_Configuration for mor info.
-
-## 5 Main Documents in This Category
-
-The ATS documentation is divided into the main sections below, each describing a certain feature.
-
-* [Compatability](general)
-* [Projects](projects)
-* [Data Management](data-management)
-* [Monitoring](monitoring)
-* [Test Development](test-development)
-* [Test Run](test-run)
-* [Configuration](configuration)
-* [Administration](administration)

@@ -43,7 +43,7 @@ As an admin user you can configure Selenium hubs as you normally would. For more
 
 Additionally, as an administrator, you can assign a Selenium hub to a specific project, or you can make the hub available for all projects on the ATS instance. You can do this by creating a new Selenium hub or editing an existing one.
 
-![Edit Selenium hub dialog as admin](attachments/20644068/21168202.png)
+![Edit Selenium hub dialog as admin](attachments/administration/21168202.png)
 
 ## Add Applications
 

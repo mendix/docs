@@ -15,7 +15,7 @@ There’s also a special type of project, the Action Library. Action Libraries a
 
 Projects and Action Libraries can be created by users and administrators. A user clicks the _Add Project_ button on the application starting screen. Administrators create new projects/libraries from the project overview page they see after login. Users are automatically added as project administrators when they create a new project/library.
 
-![](attachments/20644054/21168197.png)
+![](attachments/projects/21168197.png)
 
 **Project type**
 
@@ -45,7 +45,7 @@ Check Action Libraries here to make their actions available to be used within yo
 
 Since data is separated into projects, your work always happens inside a project. You cannot work in multiple projects at the same time. However, you can switch between all your projects at any time. To switch between projects you can use the project selector which you find above the navigation menu on the left.
 
-![The project selector dropdown](attachments/20644054/21168198.png)
+![The project selector dropdown](attachments/projects/21168198.png)
 
 ## Project Dashboard
 

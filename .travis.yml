@@ -17,6 +17,7 @@ env:
     - secure: "kYSZufIWTrCfGHk6QX3r7hdOpusvxnBncCRSs1E6yh8Bept9NX/zhUGwSR1k1aMhzeLzxZRWGMnwUK1y0v1gJrry0dicLZkcqnkNRPR8l8YFHhpAloQQDfToAq83RMQwgZUFgQNP+y7d82mzui14aY6Na9gUl0U8KU3hXGM4RaUWOLf5Ovil4FvKsdPzPHuHmnkHOrAeDvf9nZgp9HqsePFjs3vr8LVZCL/QucjXp+4AVMDs83gOVayJEfg8lBbT2R+9gDEmZOzKJaJosFZ30DL7PM1EsKK7SJap+FQGlow5l7Q2Vf2RYAuTLpxKh5pr38rtYayRmQI9oNRzTROaialR4JqvEa42PojpBM7MUQChjpvyEsDi2FoxzLTc+DVSD2NhoH/kh/gilKX8HyfRLHIpIVqA2n7NnWhSZgMqbgdWntbMNrjEtLWA3GgWPDZ+wNYTL552d3ZAuXciJJEEQcr2nbnAjF4j5fwZ+WLl0TfFle750Jje/mqQcY5KkT7OPvFm0lbFqFhBzdKJzIS2kv3wtm19+uX376a/kwbZ9/S7uuKiarblC3IMzDmMZxV47q5sG/JImWU7KBl2gqXl8PTMNESpJ7uxwNbsSY6MZgxrRBO+CCjWPcNkBjGFlOFNiJEuJeEtmsJCGEJKX02J/BV4PV5lxbi4NxDiq5t8K3Q="
 install:
   - sh -c "if [ '$TRAVIS_BRANCH' = 'master' ]; then echo 'master branch'; export JEKYLL_ENV=production; fi"
+  - sh -c "if [ '$TRAVIS_BRANCH' = 'development' ]; then echo 'development branch'; export JEKYLL_ENV=test; fi"
   - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm
     && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm
     install $TRAVIS_NODE_VERSION

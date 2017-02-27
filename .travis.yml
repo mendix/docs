@@ -31,6 +31,7 @@ before_deploy:
   - cf -v
   - cf install-plugin 'https://github.com/contraband/autopilot/releases/download/0.0.2/autopilot-linux' -f
 script:
+  - sh -c "if [ '$TRAVIS_BRANCH' = 'master' ]; then echo 'master branch' && export JEKYLL_ENV=production; fi"
   - gulp build
 cache:
   directories:

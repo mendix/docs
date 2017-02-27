@@ -119,7 +119,7 @@
     var metadata = {
       path: location.href
     };
-    __trackIntercomEvent('not-found-page', metadata);
+    window.Intercom && __trackIntercomEvent('not-found-page', metadata);
 
     index.search(path, function searchDone(err, content) {
       if (err) {

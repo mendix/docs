@@ -6,4 +6,4 @@ category: "Model SDK"
 
 These are the release notes for the Model SDK version 1:
 
-* [1.0](1.0)
+* [1.0](1.0msdk)

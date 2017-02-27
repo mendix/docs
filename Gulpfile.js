@@ -77,7 +77,6 @@ gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json 
 });
 
 gulp.task('write:githistory', `Write git_history to data`, done => {
-  console.log(process.env['JEKYLL_ENV']);
   if (process.env['JEKYLL_ENV'] === 'production') {
     git.getCommits(CURRENTFOLDER, true)
       .then(commits => {

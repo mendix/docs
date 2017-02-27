@@ -27,4 +27,14 @@
     {% if jekyll.environment == "production" and page.sitemap != false  %}<meta name="ROBOTS" content="INDEX, FOLLOW">{% else %}<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">{% endif %}
 
     <link rel="search" type="application/opensearchdescription+xml" href="/search/opensearch.xml" title="Mendix Documentation"/>
+
+    {% if jekyll.environment %}
+    <script type="text/javascript">
+      {% if jekyll.environment == "production" %}window.__IntercomAppId = "{{ site.intercom.live_id }}"{% else %}window.__IntercomAppId = "{{ site.intercom.test_id }}"{% endif %}
+      window.intercomSettings = {
+        app_id: window.__IntercomAppId
+      };
+    </script>
+    {% include asset.html type="js" filename="intercom.js" %}
+    {% endif %}
 </head>

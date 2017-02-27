@@ -331,7 +331,7 @@
       }
     }
 
-    if (Intercom && window.__IntercomAppId && window.intercomSettings) {
+    if (window.Intercom && window.__IntercomAppId && window.intercomSettings) {
       $('#back-to-top').addClass('with-intercom');
       $.getJSON('https://home.mendix.com/mxid/appbar2?b=' + Math.random() + '&callback=?', function (rawData) {
           if (!rawData.length) {

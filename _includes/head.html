@@ -28,7 +28,7 @@
 
     <link rel="search" type="application/opensearchdescription+xml" href="/search/opensearch.xml" title="Mendix Documentation"/>
 
-    {% if jekyll.environment %}
+    {% if jekyll.environment == "production" or jekyll.environment == "test" %}
     <script type="text/javascript">
       {% if jekyll.environment == "production" %}window.__IntercomAppId = "{{ site.intercom.live_id }}"{% else %}window.__IntercomAppId = "{{ site.intercom.test_id }}"{% endif %}
       window.intercomSettings = {

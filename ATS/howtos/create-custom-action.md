@@ -23,7 +23,7 @@ In this how-to, you want to get the current value of the Boolean Slider App Stor
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Know how to navigate through the HTML source code of a Mendix app inside a browser and how to inspect the CSS properties
-* Know how to use CSS/JavaScript/ATS selectors (for more informations on selectors, see [Selectors](/ATS/refguide-ats-1/selectors) in the ATS Reference Guide)
+* Know how to use CSS/JavaScript/ATS selectors (for more informations on selectors, see [Selectors](../refguide-ats-1/selectors) in the ATS Reference Guide)
 
 ## 3 Inspecting the Widget
 
@@ -67,7 +67,7 @@ You can see that the two possible string values of the Boolean Slider (*Sure* an
 }
 ```
 
-To get the current value of the Boolean Slider widget, use the ATS sepecific [:clickable-Selector](/ATS/refguide-ats-1/selectors#ats-selectors), which will select an element whose visibility property is set to visible.
+To get the current value of the Boolean Slider widget, use the ATS sepecific [:clickable-Selector](../refguide-ats-1/selectors#ats-selectors), which will select an element whose visibility property is set to visible.
 
 ## 4 Creating a Custom Action
 
@@ -77,7 +77,7 @@ Open ATS and go to **Repository** and the **All Objects** tab. Create a new acti
 
 ![](attachments/create-custom-action/repository.png)
 
-In this window, you can choose the type of item you want to create. Choose **Action**, give it the name *Get booleanSlider value*, and set *Returns the current value of the booleanSlider as String* as a description. As a best practice, always use desciptive names for your actions and give them a description (for more informations, see [Best Practices](/ATS/refguide-ats-1/best-practices)). You can change the name and the description later on if you want. Now click **Create**:
+In this window, you can choose the type of item you want to create. Choose **Action**, give it the name *Get booleanSlider value*, and set *Returns the current value of the booleanSlider as String* as a description. As a best practice, always use desciptive names for your actions and give them a description (for more informations, see [Best Practices](../refguide-ats-1/best-practices)). You can change the name and the description later on if you want. Now click **Create**:
 
 ![](attachments/create-custom-action/createactiondialog.png)
 
@@ -123,7 +123,7 @@ Now that you have completed the groundwork, you can add sub-actions to your cust
 
 ![](attachments/create-custom-action/addsubaction.png)  
 
-The **Test Step Setup** dialog box will open. Enter *Select active span* for **Describe Test Step** and *Find Widget Child Node* for **Secarch Action**, then press **Search**. The [Find Widget Child Node](/ATS/refguide-ats-1/find-widget-child-node) action will appear in the search results table. Select the action by clicking the corresponding row in the table and click **Save**. You have now succesfully added the Find Widget Child Node action as a sub-action.
+The **Test Step Setup** dialog box will open. Enter *Select active span* for **Describe Test Step** and *Find Widget Child Node* for **Secarch Action**, then press **Search**. The [Find Widget Child Node](../refguide-ats-1/find-widget-child-node) action will appear in the search results table. Select the action by clicking the corresponding row in the table and click **Save**. You have now succesfully added the Find Widget Child Node action as a sub-action.
 
 ![](attachments/create-custom-action/addfindwidgetchildnode.png)
 
@@ -155,7 +155,7 @@ The output of the Find Widget Child Node action will automatically be set as inp
 
 Next, you have to set the output value of the Get Text action as a return value for the custom action.
 
-Click **Add** and search for *Set Return Value*. Add the corresponding action as sub-action. After you have added the [Set Return Value](/ATS/refguide-ats-1/set-return-value) action, double-click the **"Value"** row in **Input Values** table. In the **Edit Input Value** dialog box, click the category **Test Step Output** and select **#2 Value [String]**. Click **Save**.
+Click **Add** and search for *Set Return Value*. Add the corresponding action as sub-action. After you have added the [Set Return Value](../refguide-ats-1/set-return-value) action, double-click the **"Value"** row in **Input Values** table. In the **Edit Input Value** dialog box, click the category **Test Step Output** and select **#2 Value [String]**. Click **Save**.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -171,9 +171,9 @@ Now that the return value is set, your **Get booleanSlider Value** action is don
 
 To test the custom action you've developed for the Boolean Slider widget, you will use your prototype app and ATS standard actions.
 
-Set the prototype app as **test application** in ATS (for details about setting applications as test applications, see [Configuration](/ATS/refguide-ats-1/configuration#configure-test-applications)). 
+Set the prototype app as **test application** in ATS (for details about setting applications as test applications, see [Configuration](../refguide-ats-1/configuration#configure-test-applications)). 
 
-Now create a new test case. Let the test case open the prototype application and add the custom action to it. After that, add [Assert Equals action](/ATS/refguide-ats-1/assert-equals) and use the test step output of the action as input parameter 1 for the Assert Equals action. As input parameter 2, you will use the default value of the widget after launching the application (which in this case *Sure*).
+Now create a new test case. Let the test case open the prototype application and add the custom action to it. After that, add [Assert Equals action](../refguide-ats-1/assert-equals) and use the test step output of the action as input parameter 1 for the Assert Equals action. As input parameter 2, you will use the default value of the widget after launching the application (which in this case *Sure*).
 
 Always try to test your custom actions with ATS standard actions or JavaScript code. If you use other custom actions to evaluate the outcome of your new custom action, it is possible that you will recieve false-positive results due to misbehaving custom actions.
 

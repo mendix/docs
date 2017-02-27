@@ -10,5 +10,5 @@ sitemap: false
     "Use Case Examples",
     "Working with when.js and Promises in TypeScript"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="/MXSDK/" %}
+  "pages": {% include json-snippets/get_pages.inc dir="MXSDK" %}
 }

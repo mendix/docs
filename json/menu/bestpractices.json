@@ -6,5 +6,5 @@ sitemap: false
   "categories": [
     "Best Practices"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="/bestpractices/" %}
+  "pages": {% include json-snippets/get_pages.inc dir="bestpractices" %}
 }

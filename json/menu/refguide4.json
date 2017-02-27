@@ -15,5 +15,5 @@ sitemap: false
     "System Requirements",
     "Moving from 3 to 4"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="/refguide4/" %}
+  "pages": {% include json-snippets/get_pages.inc dir="refguide4" %}
 }

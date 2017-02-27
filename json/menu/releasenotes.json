@@ -12,5 +12,5 @@ layout: json
     "AQM",
     "Beta Features"
   ],
-  "pages": {% include json-snippets/get_pages_per_space.inc space="Release Notes" %}
+"pages": {% include json-snippets/get_pages.inc dir="releasenotes" %}
 }

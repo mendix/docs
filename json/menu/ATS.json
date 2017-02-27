@@ -7,5 +7,5 @@ layout: json
     "ATS Reference Guide 1",
     "ATS How-To's"
   ],
-  "pages": {% include json-snippets/get_pages_per_space.inc space="ATS Add-On" %}
+  "pages": {% include json-snippets/get_pages.inc dir="ATS" %}
 }

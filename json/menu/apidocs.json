@@ -20,5 +20,5 @@ sitemap: false
     "Model SDK",    
     "Moving From 6 to 7"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="/apidocs/" %}
+  "pages": {% include json-snippets/get_pages.inc dir="apidocs" %}
 }

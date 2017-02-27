@@ -77,16 +77,27 @@ To embed a modelshare in the documentation, paste the `iframe`. For example:
 
 ## 4.4 Specific Formatting Tips
 
-These are some tips to consider when formatting Markdown:
+Some tips to consider when formatting Markdown are listed below.
 
-* To format note styles, implement the following HTML classes:
-    * `<div class="alert alert-info">{% markdown %}`[your note]`{% endmarkdown %}</div>`
-    * `<div class="alert alert-warning">{% markdown %}`[your note]`{% endmarkdown %}</div>`
-* To underline text, use: `<u>`[text]`</u>`
-* If you add an image link in Markdown and then edit that image, you have to referesh the preview in your Markdown editor to see the refreshed image
-* If you need to add a class to a link, add extra attributes using `{ }`
-   * We use this for our links that are **Download** buttons: `[Download](#){: .btn.btn-primary}`
-      * This will result in: [Download](#){: .btn.btn-primary}
+### 4.4.1 Note Styles
+
+To format note styles, implement the following HTML classes:
+
+`<div class="alert alert-info">{% markdown %}`<br>
+[your note]<br>
+`{% endmarkdown %}</div>`
+
+`<div class="alert alert-warning">{% markdown %}`<br>
+[your note]<br>
+`{% endmarkdown %}</div>`
+
+### 4.4.2 Class
+
+If you need to add a class to a link, add extra attributes using `{ }`.
+
+We use this for our links that are **Download** buttons: `[Download](#){: .btn.btn-primary}`
+
+This will result in: [Download](#){: .btn.btn-primary}
 
 # 5 Guidelines for Writing and Formatting the How-To's
 

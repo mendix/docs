@@ -323,12 +323,12 @@
       Intercom
     ******************/
     function loadIntercom() {
-      window.Intercom('boot', window.intercomSettings);
-    }
-
-    function getCookie(key) {
-      var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
-      return keyValue ? keyValue[2] : "";
+      if (!window.intercomSettings || !window.intercomSettings.user_id) {
+        console.warn('No openID found, so the user might not be logged in. Skipping Intercom');
+        window.Intercom('shutdown');
+      } else {
+        window.Intercom('boot', window.intercomSettings);
+      }
     }
 
     if (Intercom && window.__IntercomAppId && window.intercomSettings) {

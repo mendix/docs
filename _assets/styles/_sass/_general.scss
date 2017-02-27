@@ -269,14 +269,21 @@
     transition: opacity 0.2s ease-out;
     opacity: 0;
     font-size: 25px;
-}
-#back-to-top i {
-  top: 5px;
-}
-#back-to-top:hover {
-    background: #e9ebec;
-    color: $base-text-color;
-}
-#back-to-top.show {
-    opacity: 1;
+
+    i {
+      top: 5px;
+    }
+
+    &:hover {
+        background: #e9ebec;
+        color: $base-text-color;
+    }
+
+    &.show {
+        opacity: 1;
+    }
+
+    &.with-intercom {
+      right:100px;
+    }
 }

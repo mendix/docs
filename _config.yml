@@ -24,6 +24,10 @@ algolia:
   index_name:        'docs'
   read_only_api_key: 'd23e5ac47b71a0f51afa5fedc695b718'
 
+intercom:
+  test_id: 'nw1x91z3'
+  live_id: 'xbpgtd40'
+
 
 ####################################
 ######        SPACES         #######

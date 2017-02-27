@@ -1,6 +1,6 @@
 ---
 title: "Input reference Selector"
-space: "ATS" 
+space: "ATS Add-On" 
 parent: "mendix-appstore-widgets-actions"
 ---
 

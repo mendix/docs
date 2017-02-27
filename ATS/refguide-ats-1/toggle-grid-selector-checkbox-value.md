@@ -1,6 +1,6 @@
 ---
 title: "Toggle Grid Selector Checkbox Value"
-space: "ATS" 
+space: "ATS Add-On" 
 parent: "grid-selector"
 ---
 ## Description

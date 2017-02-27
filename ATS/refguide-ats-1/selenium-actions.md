@@ -1,6 +1,6 @@
 ---
 title: "Selenium Actions"
-space: "ATS" 
+space: "ATS Add-On" 
 parent: "standard-actions-reference"
 ---
 

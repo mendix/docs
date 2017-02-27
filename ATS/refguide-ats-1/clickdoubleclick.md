@@ -1,6 +1,6 @@
 ---
 title: "Click/Doubleclick"
-space: "ATS" 
+space: "ATS Add-On" 
 parent: "generic"
 ---
 

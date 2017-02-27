@@ -1,6 +1,6 @@
 ---
 title: "Assert BooleanSlider Value"
-space: "ATS" 
+space: "ATS Add-On" 
 parent: "booleanslider"
 ---
 ## Description

@@ -1,6 +1,6 @@
 ---
 title: "GroupBox is Collapsed"
-space: "ATS" 
+space: "ATS Add-On" 
 parent: "groupbox"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Click Menu Item"
-space: "ATS" 
+space: "ATS Add-On" 
 parent: "navigation-menu"
 ---
 

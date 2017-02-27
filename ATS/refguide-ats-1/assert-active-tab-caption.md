@@ -1,6 +1,6 @@
 ---
 title: "Assert Active Tab Caption"
-space: "ATS" 
+space: "ATS Add-On" 
 parent: "tab"
 ---
 

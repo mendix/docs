@@ -1,6 +1,6 @@
 ---
 title: "Assert Current Page"
-space: "ATS" 
+space: "ATS Add-On" 
 parent: "generic"
 ---
 ## Description

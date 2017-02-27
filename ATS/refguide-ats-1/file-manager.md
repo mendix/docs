@@ -1,6 +1,6 @@
 ---
 title: "File Manager"
-space: "ATS" 
+space: "ATS Add-On" 
 parent: "mendix-actions"
 ---
 

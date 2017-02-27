@@ -1,6 +1,6 @@
 ---
 title: "Confirm Dialog"
-space: "ATS" 
+space: "ATS Add-On" 
 parent: "dialog"
 ---
 

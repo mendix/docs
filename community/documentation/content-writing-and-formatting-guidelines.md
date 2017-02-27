@@ -85,8 +85,8 @@ These are some tips to consider when formatting Markdown:
 * To underline text, use: `<u>`[text]`</u>`
 * If you add an image link in Markdown and then edit that image, you have to referesh the preview in your Markdown editor to see the refreshed image
 * If you need to add a class to a link, add extra attributes using `{ }`
-   * We use this for our links that are **Download** buttons: `[Link Name](#){: .btn.btn-primary}`
-      * This will result in: [Link Name](#){: .btn.btn-primary}
+   * We use this for our links that are **Download** buttons: `[Download](#){: .btn.btn-primary}`
+      * This will result in: [Download](#){: .btn.btn-primary}
 
 # 5 Guidelines for Writing and Formatting the How-To's
 

@@ -1,6 +1,5 @@
 ---
 title: "ATS"
-space: "ATS Add-On"
 ---
 
 This space contains all the documentation for ATS. These are the main ATS documents:

@@ -8838,7 +8838,7 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Platform+SDK+2.0.0",
-      to: "/releasenotes/platform-sdk/2.0.0"
+      to: "/releasenotes/platform-sdk/2.0"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.0.0",
@@ -8862,7 +8862,7 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Platform+SDK+1.0.2",
-      to: "/releasenotes/platform-sdk/1.0.2"
+      to: "/releasenotes/platform-sdk/1.0"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.0.0",

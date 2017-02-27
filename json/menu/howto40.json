@@ -11,5 +11,5 @@ sitemap: false
     "Custom Widgets",
     "Debugging"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="/howto40/" %}
+  "pages": {% include json-snippets/get_pages.inc dir="howto40" %}
 }

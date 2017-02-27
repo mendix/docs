@@ -1,6 +1,6 @@
 ---
 title: "Load Test Recorder"
-space: "Add-Ons"
+space: "Other Add-Ons"
 parent: "user-manual"
 ---
 The load test recorder is a recorder for sessions to be used in a separate tool. It is only seen with 

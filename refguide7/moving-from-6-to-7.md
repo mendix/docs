@@ -8,10 +8,10 @@ Please read the [Release Notes](/releasenotes/desktop-modeler/7.0) to see what n
 
 This documentation aims to help you to update your project from Mendix 6 to Mendix 7. It contains the following topics:
 
-*   Converting your project: preparing for conversion and actually converting your project to Mendix 6.
-*   Java 8 required: from Mendix 6 on Java 8 is required to run your applications.
-*   Deprecated features: see which platform features have been deprecated in Mendix 7.
-*   Removed deprecated functionality: see which features which were deprecated
+*   Converting your project – preparing for conversion and actually converting your project to Mendix 7
+*   Java 8 required – from Mendix 6 on, Java 8 is required to run your applications
+*   Deprecated features – see which platform features have been deprecated in Mendix 7
+*   Removed deprecated functionality – see which features which were deprecated
 
 ## Converting Your Project
 
@@ -43,11 +43,64 @@ Fix deprecations in your Java actions by importing your project in Eclipse and s
 
 Now you are ready to convert. Simply open your project in the new Mendix Modeler. There are no explicit actions required after opening your Mendix 6 project in Mendix 7.
 
+### Upgrading App Store Modules
+
+After the conversion, verifying if there is a newer version available of your App Store modules is advised. Some modules need to be upgraded to make them Mendix 7-compatible. Please also read the version release notes to see whether specific actions are required.
+
+As of Mendix 7, the App Store modules used in your projects are grouped together in the Modeler. They can be found in **Project Explorer** under **Project** > **App store modules**.
+
+## Breaking Changes
+
+#### Stateless Runtime
+
+An earlier version of Mendix enabled applications to move sessions to the database and files to an external file storage facility (for example, S3 or Azure Blob Storage). In Mendix 7, the server object state has been moved to the client, which means that the server is now completely stateless and can be scaled horizontally at will!
+
+This functionality is enabled by default, so there is no need for additional configuration.
+
+Because of this statelessness, it is the client that keeps track of objects that are not yet committed, objects that are not persistable, and even changes to the objects that weren't committed yet. To keep the resource usage low, we periodically prune the stored state — we remove objects that are not displayed in the UI and not connected by references. For gaining insight into how big the state is in your app (and even why it exists), we built a basic tool: use the **Ctrl + Alt + G** key combination in your browser, and the information will be dumped to your browser's console (note that this feature might be removed in a future release). For more details, see [Monitoring Client State](monitoring-client-state).
+
+Please be aware that reloading the browser window (as in, pressing F5) will drop the entire state.
+
+Because the server doesn't store the object state anymore, the client has to send it along with some requests, so the server-side microflow can access NPEs, uncommitted values, etc. We apply quite a few optimizations in order to send as little data as possible and to maintain the same network footprint as in previous Mendix versions. There is a new setting in the **Runtime** tab of **Project Settings** called **Optimize network calls**, so if you experience some awkward issues in your project (for example, a microflow called from the client doesn't see the changes made by the data source microflow), you can try to disable these optimizations. (Note that this setting will be removed in a future release, so please report any issues you experience as soon as possible.)
+
+#### Persistent Sessions
+
+Persistent sessions are enabled by default. This is necessary for Mendix to work correctly in a clustered scenario. It's still possible to disable persistent sessions by setting `PersistentSessions` to `false`. However, in that case, you can't run Mendix in a clustered mode.
+
+We optimized the system to reduce the performance impact of enabling this by default. This is achieved by allowing a Mendix Runtime instance to assume that a session is valid for a short timespan (by default, 30 seconds). A Mendix Runtime instance will only validate a session once within that timespan. However, this means that upon user logout, it may take up to that specific timespan (in the worst case scenario) before all the Mendix Runtime instances of a cluster (except for the one processing the logout) recognize that the user is logged out. This timeout can be configured by setting a value for `SessionValidationTimeout`, which represents the timespan in milliseconds.
+
+#### NPE Attribute-Level Security
+
+We have prohibited NPE (non-persistent entity) attribute-level security for attributes that do not have at least read access. The reason for this is that non-readable attributes cannot be sent to the client. A separate object (which is not sent to the client at all) should be used for these attributes instead.
+
+#### Autocommitted Objects for System Sessions
+
+If you have two new objects referencing one another and you try to commit one of those, you should also commit the other one. If you don't and you are running the microflow in a system session (for example, a scheduled event), you will now get an exception. Note that if you are running in a user session that is not required, we'll handle it for you.
+
+#### Sign-In Microflows
+
+Sign-in microflows are no longer supported, because they do not add any functionality. In a future version, the state will be automatically transferred from the anonymous user to the signed-in user by the client. In Mendix 7, having a sign-in microflow selected will result in a consistency check error. When this is solved by setting the microflow to **None**, the property will automatically disappear from the UI.
+
+#### System.Statistics Entity
+
+The `System.Statistics` entity has been removed from the **System** module, as the entity has become obsolete with the introduction of stateless Runtime. The **RuntimeStatistics** page and the **ViewStatistics** microflow are automatically removed from your project when they are in their default location (in the **Administration** module). The **Runtime Statistics** menu item is also automatically removed.
+
+#### Client API Changes
+
+* The semantics have changed for `MxObject.get` and `mx.parser.parseValue`. They now return a value of an appropriate type (for example, `Big` for numbers, numbers for dates) instead of always returning a string. For more details, see the documentation for [Class: mendix/lib/MxObject](https://apidocs.mendix.com/7/client/mendix_lib_MxObject.html#get).
+* Support for `dojo.require` has been dropped. It never worked in hybrid apps, and we have now made it official. Write your custom widgets in the AMD style, as described in [How to Create a Basic Hello World Custom Widget](https://docs.mendix.com/howto7/create-a-basic-hello-world-custom-widget) and the [App Store Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate).
+* Dojo APIs exposed through the global `dojo` object are no longer supported, as they were never supposed to work in AMD widgets. Some of these APIs (for example, `dojo.html`) have already been removed, but others will be removed in the future without notice. So, use these at your own risk, or better yet, don't use them at all!
+
 ## Deprecated Features
 
 The following features have been deprecated in Mendix 7. Using these features is discouraged, since they will be removed in a future release of Mendix.
 
-### Java Deprecations
+### Client Deprecations
+
+* The `mx.server.request` client API method has been deprecated. We bet you never even knew it existed! If you did, be aware that it no longer handles validations. This responsibility has been moved to `mx.data`.
+* The `MxContext` methods `setTrackId` and `setTrackEntity` have been deprecated. Use the `setContext` method instead.
+
+### Runtime Deprecations
 
 #### On `com.mendix.core.Core`
 
@@ -62,7 +115,36 @@ The following features have been deprecated in Mendix 7. Using these features is
 
 The following features that were deprecated in Mendix 6 have been removed in Mendix 7.
 
-### Removed Deprecated Classes
+### Removed Client Functionality
+
+#### Split Panes
+
+We dropped support for the vertical and horizontal split pane widgets that have been deprecated since Mendix 6. From now on, these widgets will result in consistency errors in the Modeler. To smooth out the conversion path for you, we introduced a tool to convert existing split panes (one-by-one or all together) into layout grids. You can access the tool by right-clicking the consistency error message or from the **Tools** menu.
+
+Note that while the tool is definitely awesome, it is not perfect. The resulting layout grids will not be able to dynamically resize (via the animated resize feature of the split panes, which is no longer supported in the platform), and the markup and scrolling behavior might be a bit different. So, please test your applications after updating to Mendix 7! (Do we really have to mention that?)
+
+#### Legacy Navigation Layout
+
+Support for navigation layouts of the **Legacy** type has been dropped. Layout types define how pages are opened in the web client: in a (modal) pop-up window or in the content. For navigation layouts of the Legacy type, that behavior was defined via the button (or microflow) opening the page, which could result in inconsistent behavior. All the navigation layouts of the Legacy type result in errors in the Modeler now.
+
+For more information, see [Layouts](/refguide7/layout#layout-type) and the blog post titled [Layouts Have Types](https://www.mendix.com/blog/layouts-have-types/).
+
+#### Apply Context and Remove from Context
+
+The **Apply context** and **Remove from context** options of the reference selector, data grid, and template grid data sources were deprecated long ago (in [Mendix 5.19.0](/releasenotes/desktop-modeler/5.19)), and they have now been removed. You will now get consistency errors in places where you used them. We suggest using explicit XPath constraints instead.
+
+### Removed Client APIs
+
+* `mxui/dom.{p,div,span...}` and `mxui/dom.builder` have been removed in favor of using `mxui/dom.create`
+* `MxMetaObject.isNumber` and `MxObject.isNumber` have been replaced with `isNumeric` methods
+* `mxui/dom.{copyChildren,insertBefore,insertAfter}` has been removed in favor of using plain `dom` APIs
+* `mx.ui.hideLogin` has been replaced with `hide` on the object returned by `mx.ui.showLogin`
+* The `mx.login` signature has been changed to `mx.login(username, password, onLoginSucceed, onLoginFailure)`
+* `_WidgetBase.resume`, `_WidgetBase.suspend`, and `_FormBase.startup` have been removed, as they had no effect
+
+### Removed Runtime Functionality
+
+#### Removed Deprecated Classes
 
 | Class Name | Alternative Interface/Class |
 | --- | --- |
@@ -82,7 +164,7 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 | `com.mendix.systemwideinterfaces.connectionbus.JDBCDataStoreConfiguration` | -  |
 | `com.mendix.systemwideinterfaces.core.IMendixEnum` | `com.mendix.core.objectmanagement.member.MendixEnum` |
 
-### Removed Constants
+#### Removed Constants
 
 | Class Name | Alternative |
 | --- | --- |
@@ -93,9 +175,9 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 | `com.mendix.core.conf.Tokens` | - |
 | `com.mendix.externalinterface.connector.RequestHandler.XAS\_SESSION\_ID`| *Used in RequestHandler:* `com.mendix.externalinterface.connector.RequestHandler.getSessionCookieName()`<br> *Used as a constant:* `com.mendix.core.Core.getConfiguration().getSessionIdCookieName()` |
 
-### Removed Methods
+#### Removed Methods
 
-#### From `com.mendix.core.Configuration`
+##### From `com.mendix.core.Configuration`
 
 | Method Name | Alternative |
 | --- | --- |
@@ -113,7 +195,7 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 | `getConstantValue(Object component, String key)` | - |
 | `getDefaultHashAlgorithm()` | - |
 
-#### From `com.mendix.modules.exportmanager.excel.ExcelExporter`
+##### From `com.mendix.modules.exportmanager.excel.ExcelExporter`
 
 | Method Name | Alternative |
 | --- | --- |
@@ -121,7 +203,7 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 | `generateXLS(com.mendix.core.component.LocalComponent component, IContext context, IMendixObject fileObject, String fileName, List<IExcelGrid> grids)` | `generateXLS(IContext context, IMendixObject fileObject, String fileName, List<IExcelGrid> grids)` |
 | `generateXLS(com.mendix.core.component.LocalComponent component, IContext context, IMendixObject fileObject, String fileName, List<String> oqlQueries, boolean autoSizeColumns, List<String> headerNames)` | `generateXLS(IContext context, IMendixObject fileObject, String fileName, List<String> oqlQueries, boolean autoSizeColumns, List<String> headerNames)` |
 
-#### From `com.mendix.systemwideinterfaces.core.IContext`
+##### From `com.mendix.systemwideinterfaces.core.IContext`
 
 | Method Name | Alternative |
 | --- | --- |
@@ -130,7 +212,7 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 | `setSudo(boolean sudo)` | - |
 | `getSudoContext()` | `createSudoClone()` |
 
-#### From `com.mendix.core.Core`
+##### From `com.mendix.core.Core`
 
 | Method Name | Alternative |
 | --- | --- |
@@ -138,7 +220,21 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 | `importXmlStream()` | Use `com.mendix.core.integration().importStream()` instead. |
 | `getComponent().runtime().about().get("model_version")` | `getModelVersion()` |
 
-#### Others
+##### From `com.mendix.systemwideinterfaces.core.ISession`
+
+The state has been moved to the client in Mendix 7, and because of that, the following methods are now obsolete:
+
+| Method Name | Alternative |
+| --- | --- |
+| `retain` | - | 
+| `release` | - | 
+| `addToClientRoots` | - |
+| `removeFromClientRoots` | - |
+| `getClientRoots` | - |
+| `getJavaActionRoots` | - |
+| `getData` | - |
+
+##### Others
 
 | Method Name | Alternative |
 | --- | --- |
@@ -147,7 +243,7 @@ The following features that were deprecated in Mendix 6 have been removed in Men
 | `com.mendix.systemwideinterfaces.core.meta.IMetaObject.getComponent()` | - |
 | `com.mendix.systemwideinterfaces.core.ISession.getComponent()` | - |
 
-### Compilation Issues When Migrating a Project to Mendix 7
+#### Compilation Issues When Migrating a Project to Mendix 7
 
 The removal of deprecated classes and methods in Mendix 7 can cause compilation errors after migrating your project to Mendix 7. Please use the above provided alternative for the removed deprecated code.
 
@@ -168,7 +264,7 @@ private final String FILE_DOCUMENT_NAME = MemberNames.Name.toString();
 ```
 Wherein `MemberNames` is an Enum defined in the `FileDocument` proxy class.
 
-### Moved Packages
+#### Moved Packages
 
 | Class Name | Alternative Interface |
 | --- | --- |
@@ -176,6 +272,6 @@ Wherein `MemberNames` is an Enum defined in the `FileDocument` proxy class.
 
 This is needed to avoid potential namespace conflicts between the Mendix version of the `org.json` library and other JSON libraries.
 
-### Runtime Issues When Migrating a Project to Mendix 7
+#### Runtime Issues When Migrating a Project to Mendix 7
 
 Java libraries in Mendix 7 shipped with the installation package are not available for projects anymore. While this results in a better dependency management for each project, it can also cause errors at runtime after migration, for example, `NoClassDefFoundError`. Therefore, it's important to make sure that the `userlib` directory of the migrated project includes all the required libraries. It's also worth noting that in Mendix 7 only one version of each library can exist at runtime. This means that if there are multiple versions of one library the latest version is used and the rest are ignored.

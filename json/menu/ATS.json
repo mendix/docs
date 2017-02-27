@@ -1,0 +1,11 @@
+---
+layout: json
+---
+{
+  "categories": [
+    "General",
+    "ATS Reference Guide 1",
+    "ATS How-To's"
+  ],
+  "pages": {% include json-snippets/get_pages_per_space.inc space="ATS Add-On" %}
+}

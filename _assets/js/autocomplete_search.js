@@ -9,6 +9,8 @@
     this.domain = 'https://docs.mendix.com';
     if (location.hostname === 'localhost') {
       this.domain = 'http://localhost:4000';
+    } else if (location.hostname === 'documentation-accp.cfapps.io') {
+      this.domain = 'https://documentation-accp.cfapps.io:4000';
     }
     if (!window.ALGOLIA_CONFIG) {
       console.warn('Mendix search: NO Algolia config for Mendix Documentation, no search possible');
@@ -113,6 +115,11 @@
         path = decodeURIComponent(splitted.slice(last)[0]).replace(/[\ \/\-\+]/g, ' '),
         client = algoliasearch(ALGOLIA_CONFIG.appId, ALGOLIA_CONFIG.apiKey),
         index = client.initIndex(ALGOLIA_CONFIG.indexName);
+
+    var metadata = {
+      path: location.href
+    };
+    window.Intercom && __trackIntercomEvent('not-found-page', metadata);
 
     index.search(path, function searchDone(err, content) {
       if (err) {

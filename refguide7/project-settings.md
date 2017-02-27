@@ -25,25 +25,31 @@ Here you can select the theme to use for your application. '(Default)' means tha
 
 You can also import a theme package (.zip) into your project directory using the 'Import' button.
 
-### Static resources from disk
+### Static Resources from Disk
 
 If this option is enabled the static resources by your mobile application are downloaded as soon as you open your application rather than bit by bit as you navigate through the app. This can drastically cut down on your network requests as the files can be retrieved from disk rather than from the server.
 
 The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This concerns a number of files, including your theme, the javascript client, css files, and pages.
 
-### After startup
+### Optimize Network Calls
+
+If this option is enabled (`true` by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
+
+If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this resolves the issue, please file a bug report so that we can fix the issue in the platform.
+
+### After Startup
 
 Here you can select a microflow that is automatically executed immediately after the application has been started up.
 
-### Before shutdown
+### Before Shutdown
 
 Here you can select a microflow that is automatically executed when a shutdown command has been given, just before the application shuts down.
 
-### Health check
+### Health Check
 
 Select a microflow which reports on the health status of a running application. When this microflow returns an empty String, the application is healthy, otherwise the String represents an explanation why the application is not healthy.
 
-### First day of the week
+### First Day of the Week
 
 The first day of the week setting determines the first day of the week in the date picker widget.
 
@@ -60,11 +66,11 @@ The first day of the week setting determines the first day of the week in the da
 
 _Default value_: Default (based on locale)
 
-### Default time zone
+### Default Time Zone
 
 The default time zone determines the time zone for newly created users. If your application is only used in one time zone setting this default will make sure that the users of your application never have to worry about setting their time zone.
 
-### Scheduled event time zone
+### Scheduled Event Time Zone
 
 The scheduled event time zone defines under which timezone scheduled events run. The default is UTC and this has been the case since 3.0\. If you would like to run scheduled events under another timezone such as the timezone the office of the company is at or perhaps the project default timezone, you can select it here.
 
@@ -72,7 +78,7 @@ This affects timezone-related operations such as parsing and formatting dates fr
 
 If you run on-premise then you can select the timezone the server runs at, but do note that no guarantees are given for the whereabouts of application servers in the cloud.
 
-### Hash algorithm
+### Hash Algorithm
 
 The hash algorithm that is used to generate hash values for attributes of type HashString, such as the password of a user.
 
@@ -89,7 +95,7 @@ For more information on MD5 see [MD5 on wikipedia](http://en.wikipedia.org/wiki/
 
 For more information on SHA etc. see [SHA hash functions on wikipedia](http://en.wikipedia.org/wiki/SHA_hash_functions).
 
-### Rounding mode
+### Rounding Mode
 
  The rounding mode is used to select how to round numbers when performing calculations.
 
@@ -111,7 +117,7 @@ The rounding methods "Half away from zero" and "Half to the nearest even number"
 
 _Default value_: Half away from zero
 
-### Multiple sessions per user
+### Multiple Sessions per User
 
 If this option is enabled, users can sign in multiple times through different clients (e.g. desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
 
@@ -123,7 +129,7 @@ In production this only works with licenses based on concurrent users.
 
 _Default value_: Yes
 
-### Enable clustering support
+### Enable Clustering Support
 
 TODO
 
@@ -133,19 +139,19 @@ _Default value_: No
 
 These settings determine the behavior of the Modeler for this project. The settings apply to everyone that is working on this project.
 
-### Bundle widgets when running locally
+### Bundle Widgets When Running Locally
 
 When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate start-up duration. In some cases, this may obfuscate errors triggered by faulty custom widgets. 
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 
-### Suggest lower-case names in microflows
+### Suggest Lower-Case Names in Microflows
 
 When enabled, the variable names that the Modeler suggests in microflows will start with a lower-case letter instead of an upper-case letter.
 
 ## Languages
 
-### Default language
+### Default Language
 
 The default language indicates the language that is used for end-users when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated in another language.
 

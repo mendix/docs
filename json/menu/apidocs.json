@@ -16,6 +16,8 @@ sitemap: false
     "Profile API",
     "Permissions API",
     "Invite API",
+    "Platform SDK",
+    "Model SDK",    
     "Moving From 6 to 7"
   ],
   "pages": {% include json-snippets/get_pages.inc dir="/apidocs/" %}

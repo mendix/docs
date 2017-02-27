@@ -81,14 +81,18 @@ Some tips to consider when formatting Markdown are listed below.
 
 ### 4.4.1 Note Styles
 
-To format note styles, implement the following HTML classes:
+To format note styles, implement the following:
 
-`<div class="alert alert-info">{% markdown %}`<br>
-[your note]<br>
+`<div class="alert alert-info">{% markdown %}`
+
+[your note]
+
 `{% endmarkdown %}</div>`
 
-`<div class="alert alert-warning">{% markdown %}`<br>
-[your note]<br>
+`<div class="alert alert-warning">{% markdown %}`
+
+[your note]
+
 `{% endmarkdown %}</div>`
 
 ### 4.4.2 Class

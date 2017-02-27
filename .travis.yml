@@ -1,4 +1,4 @@
-sudo: false
+sudo: true
 language: ruby
 rvm:
 - 2.3.1
@@ -24,12 +24,10 @@ install:
   - npm install -g gulp
   - npm install
 before_deploy:
-  - wget 'https://cli.run.pivotal.io/stable?release=debian64&version=6.22.2&source=github-rel' -qO temp.deb && sudo dpkg -i temp.deb
-  - rm temp.deb
-  - cf api $CF_API
-  - cf login -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORGANIZATION -s $CF_SPACE
-  - cf -v
-  - cf install-plugin 'https://github.com/contraband/autopilot/releases/download/0.0.2/autopilot-linux' -f
+  #- wget 'https://cli.run.pivotal.io/stable?release=debian64&version=6.22.2&source=github-rel' -qO temp.deb && sudo dpkg -i temp.deb
+  #- rm temp.deb
+  - sudo dpkg -i ./_scripts/cf_install.deb
+  - ./_scripts/before_deploy.sh
 script:
   - gulp build
 cache:

@@ -1,6 +1,6 @@
 ---
 title: "Performance Tool"
-space: "Add-Ons"
+space: "Other Add-Ons"
 parent: "user-manual"
 ---
 Use the Performance Tool to measure individual microflows and break them up into actions, loop iterations

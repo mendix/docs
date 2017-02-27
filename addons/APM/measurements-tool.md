@@ -1,6 +1,6 @@
 ---
 title: "Measurements Tool"
-space: "Add-Ons"
+space: "Other Add-Ons"
 parent: "user-manual"
 ---
 The measurements tool is meant to measure system resources and to trigger actions on thresholds. This allows 

@@ -10,7 +10,7 @@ There are several reason for creating custom actions in ATS. Maybe you're using 
 
 Before you start with developing your own custom action, you should check if there is a standard action that does the job. Sometimes the standard actions work with unsupported widgets. If that is not the case, you should determine what your custom action should do and how the action should accomplish this.
 
-In this how-to, you want to get the current value of the Boolean Slider App Store widget. If you use the [Get Checkbox Value action](/ATS/refguide-ats-1/get-checkbox-value), it only returns true or false for the current state of the Boolean Slider, so you have to develop your own custom action. The action shall retrieve the current value of the Boolean Slider as a string, in this case *Sure* or *No*. You have to determine, where the string is stored inside the HTML code and how you can get the current value from it. This image shows the widget inside a simple Mendix application:
+In this how-to, you want to get the current value of the Boolean Slider App Store widget. If you use the [Get Checkbox Value action](../refguide-ats-1/get-checkbox-value), it only returns true or false for the current state of the Boolean Slider, so you have to develop your own custom action. The action shall retrieve the current value of the Boolean Slider as a string, in this case *Sure* or *No*. You have to determine, where the string is stored inside the HTML code and how you can get the current value from it. This image shows the widget inside a simple Mendix application:
 
 ![](attachments/create-custom-action/application.png)
 

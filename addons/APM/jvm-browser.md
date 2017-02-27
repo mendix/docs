@@ -1,6 +1,6 @@
 ---
 title: "JVM Browser"
-space: "Add-Ons"
+space: "Other Add-Ons"
 parent: "user-manual"
 ---
 A JVM Browser shows information similar to JConsole or JVisualVM tools provided with the Java JDK. Using the **Refresh** button refreshes an individual item.

@@ -6,7 +6,10 @@ apidocs:
   space: "API Documentation"
   priority: 6
 addons:
-  space: "Add-Ons"
+  space: "Other Add-Ons"
+  priority: false
+ATS:
+  space: "ATS Add-On"
   priority: false
 appstore:
   space: "App Store"

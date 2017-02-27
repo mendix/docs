@@ -2,8 +2,6 @@
 
 set -ev
 
-
-
 if ([ $TRAVIS_PULL_REQUEST == "false" ])
 then
   if [[ $TRAVIS_BRANCH == 'development' ]]; then

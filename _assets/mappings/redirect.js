@@ -1207,7 +1207,7 @@ module.exports = {
     },
     {
       from: "/howto50/Finding+Object+Activities",
-      to: "/howto50/finding-object-activities"
+      to: "/howtogeneral/tips/finding-object-activities"
     },
     {
       from: "/howto50/Finding+the+Root+Cause+of+Runtime+Errors",
@@ -1215,11 +1215,11 @@ module.exports = {
     },
     {
       from: "/howto50/Finding+Unused+Items",
-      to: "/howto50/finding-unused-items"
+      to: "/howtogeneral/tips/finding-unused-items"
     },
     {
       from: "/howto50/Finding+your+way+through+a+project",
-      to: "/howto50/finding-your-way-through-a-project"
+      to: "/howtogeneral/tips/finding-your-way-through-a-project"
     },
     {
       from: "/howto50/Gathering+user+feedback",
@@ -1351,11 +1351,11 @@ module.exports = {
     },
     {
       from: "/howto50/Querying+over+self+references",
-      to: "/howto50/querying-over-self-references"
+      to: "/howtogeneral/tips/querying-over-self-references"
     },
     {
       from: "/howto50/Querying+over+self-references",
-      to: "/howto50/querying-over-self-references"
+      to: "/howtogeneral/tips/querying-over-self-references"
     },
     {
       from: "/howto50/Restoring+a+SQL+Server+database",
@@ -1423,7 +1423,7 @@ module.exports = {
     },
     {
       from: "/howto50/Showing+a+Project+in+the+Directory+in+Explorer",
-      to: "/howto50/showing-a-project-in-the-directory-in-explorer"
+      to: "/howtogeneral/tips/showing-a-project-in-the-directory-in-explorer"
     },
     {
       from: "/howto50/Solving+Load+and+Import+Errors",
@@ -1467,7 +1467,7 @@ module.exports = {
     },
     {
       from: "/howto50/Translatable+Validation+Messages",
-      to: "/howto50/translatable-validation-messages"
+      to: "/howtogeneral/tips/translatable-validation-messages"
     },
     {
       from: "/howto50/Trends",

@@ -1,6 +1,6 @@
 ---
 title: "Creating your first two Overview and Detail pages"
-category: "GUI's"
+category: "GUIs"
 space: "Mendix 5 How-to's"
 ---
 

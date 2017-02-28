@@ -1,6 +1,6 @@
 ---
 title: "Setup Mendix UI Framework with Koala"
-category: "GUI's"
+category: "GUIs"
 space: "Mendix 5 How-to's"
 ---
 

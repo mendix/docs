@@ -1,5 +1,5 @@
 ---
-title: "GUI's"
+title: "GUIs"
 space: "Mendix 5 How-to's"
 ---
 

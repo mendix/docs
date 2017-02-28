@@ -106,7 +106,9 @@
 
       pages.forEach(function (page) {
         var $item = $('<li />');
-        var subpages = data.pages.filter(function (rootpage) { return rootpage.parent && rootpage.parent.toLowerCase() === page.id.toLowerCase(); });
+        var subpages = data.pages.filter(function (rootpage) {
+          return rootpage.parent && rootpage.parent.toLowerCase() === page.id.toLowerCase() && rootpage.dir.indexOf(page.dir) !== -1;
+        });
 
         if (subpages && subpages.length > 0) {
           var pageId = 'cat-' + normalizeId(page.id),

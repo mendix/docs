@@ -7,7 +7,8 @@
 {"title":"{{ catpage.title }}",
 "category":"{{ catpage.category }}",
 "id":"{{ catpage.name | remove: '.md' }}",
-"url":"{{ catpage.url | remove: '.html' }}"{% if catpage.parent %},
+"url":"{{ catpage.url | remove: '.html' }}",
+"dir":"{{ catpage.dir }}"{% if catpage.parent %},
 "parent":"{{ catpage.parent }}"{% endif %}}
 {% endfor %}
 ]

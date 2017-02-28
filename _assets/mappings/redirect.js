@@ -8782,91 +8782,91 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Model+SDK+3.0.1",
-      to: "/releasenotes/model-sdk/3.0msdk"
+      to: "/releasenotes/model-sdk/3.0"
     },
     {
       from: "/ReleaseNotes/Model+SDK+3.0.0",
-      to: "/releasenotes/model-sdk/3.0msdk"
+      to: "/releasenotes/model-sdk/3.0"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.9.1",
-      to: "/releasenotes/model-sdk/2.9msdk"
+      to: "/releasenotes/model-sdk/2.9"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.9.0",
-      to: "/releasenotes/model-sdk/2.9msdk"
+      to: "/releasenotes/model-sdk/2.9"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.8.1",
-      to: "/releasenotes/model-sdk/2.8msdk"
+      to: "/releasenotes/model-sdk/2.8"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.8.0",
-      to: "/releasenotes/model-sdk/2.8msdk"
+      to: "/releasenotes/model-sdk/2.8"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.7.0",
-      to: "/releasenotes/model-sdk/2.7msdk"
+      to: "/releasenotes/model-sdk/2.7"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.6.3",
-      to: "/releasenotes/model-sdk/2.6msdk"
+      to: "/releasenotes/model-sdk/2.6"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.6.0",
-      to: "/releasenotes/model-sdk/2.6msdk"
+      to: "/releasenotes/model-sdk/2.6"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.5.0",
-      to: "/releasenotes/model-sdk/2.5msdk"
+      to: "/releasenotes/model-sdk/2.5"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.4.0",
-      to: "/releasenotes/model-sdk/2.4msdk"
+      to: "/releasenotes/model-sdk/2.4"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.3.0",
-      to: "/releasenotes/model-sdk/2.3msdk"
+      to: "/releasenotes/model-sdk/2.3"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.2.2",
-      to: "/releasenotes/model-sdk/2.2msdk"
+      to: "/releasenotes/model-sdk/2.2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.1.0",
-      to: "/releasenotes/model-sdk/2.1msdk"
+      to: "/releasenotes/model-sdk/2.1"
     },
     {
       from: "/ReleaseNotes/Platform+SDK+2.0.0",
-      to: "/releasenotes/platform-sdk/2.0psdk"
+      to: "/releasenotes/platform-sdk/2.0"
     },
     {
       from: "/ReleaseNotes/Model+SDK+2.0.0",
-      to: "/releasenotes/model-sdk/2.0msdk"
+      to: "/releasenotes/model-sdk/2.0"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.2.0",
-      to: "/releasenotes/model-sdk/1.2msdk"
+      to: "/releasenotes/model-sdk/1.2"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.1.1",
-      to: "/releasenotes/model-sdk/1.1msdk"
+      to: "/releasenotes/model-sdk/1.1"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.1.0",
-      to: "/releasenotes/model-sdk/1.1msdk"
+      to: "/releasenotes/model-sdk/1.1"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.0.2",
-      to: "/releasenotes/model-sdk/1.0msdk"
+      to: "/releasenotes/model-sdk/1.0"
     },
     {
       from: "/ReleaseNotes/Platform+SDK+1.0.2",
-      to: "/releasenotes/platform-sdk/1.0psdk"
+      to: "/releasenotes/platform-sdk/1.0"
     },
     {
       from: "/ReleaseNotes/Model+SDK+1.0.0",
-      to: "/releasenotes/model-sdk/1.0msdk"
+      to: "/releasenotes/model-sdk/1.0"
     },
     {
       from: "/ReleaseNotes/Application+Quality+Monitor",

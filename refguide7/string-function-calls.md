@@ -505,8 +505,8 @@ returns:
 
 ## <a name="urlEncode"></a>urlEncode
 
-Converts a string to be used in a url. This function is useful when you want to use the
-string as part of a url, for instance:
+Converts a string to be used in a URL. This function is useful when you want to use the
+string as part of a URL, for instance:
 
 ```java
 'http://google.com/search?q=' + urlEncode($myQuery)
@@ -514,12 +514,12 @@ string as part of a url, for instance:
 
 ### Input parameters
 
-*   String to convert  
-    Type: String
+* String to convert
+* Type: String
 
 ### Output
 
-That string, url-encoded.
+The string, URL-encoded.
 
 ```java
 urlEncode('Hello, world!')
@@ -533,16 +533,16 @@ returns:
 
 ## urlDecode
 
-Converts a string back from a url, the opposite of [urlEncode](#urlEncode).
+Converts a string back from a URL. The opposite of [urlEncode](#urlEncode).
 
 ### Input parameters
 
-*   A url-encoded String to convert  
-    Type: String
+* A url-encoded String to convert
+* Type: String
 
 ### Output
 
-That string, url decoded.
+The string, URL-decoded.
 
 ```java
 urlEncode('Hello%2C+world%21')

@@ -10,7 +10,7 @@
     if (location.hostname === 'localhost') {
       this.domain = 'http://localhost:4000';
     } else if (location.hostname === 'documentation-accp.cfapps.io') {
-      this.domain = 'https://documentation-accp.cfapps.io:4000';
+      this.domain = 'https://documentation-accp.cfapps.io';
     }
     if (!window.ALGOLIA_CONFIG) {
       console.warn('Mendix search: NO Algolia config for Mendix Documentation, no search possible');

@@ -4,19 +4,16 @@ space: "Reference Guide 6"
 category: "Deployment"
 ---
 
-
 MxBuild is a command-line tool that can be used to deploy and build a Mendix Deployment Package from a Mendix Project.
 
 MxBuild can be run in either _Build mode_ or _Service mode_, depending on your needs. These modes are described below.
 
 ## Build Mode
-
 In Build mode, you specify on the command-line the Mendix Project file (.mpr) for which you want to build the deployment package (.mda). This file name may be preceded by a relative or absolute path. The project file should be located inside a Mendix project directory.
 
 After creating the deployment package, the MxBuild process quits.
 
 ### Options
-
 The following additional options can be specified when running in Build mode:
 
 | Option | Description |
@@ -35,7 +32,6 @@ The following options are only applicable for the `package` build target:
 | `--model-description=DESCRIPTION` | This option can be used to describe the model. |
 
 ## Service Mode
-
 When you specify the command-line option `--serve`, MxBuild will start in Service mode. In this mode, you do not specify the project to build on the command-line. Instead, MxBuild will run indefinitely and you can tell it to build a project by sending it a POST request.
 
 The command-line option `--port=PORT` can be used to choose the TCP port that MxBuild will use. When this option is omitted, port `6543` is used.
@@ -43,7 +39,6 @@ The command-line option `--port=PORT` can be used to choose the TCP port that Mx
 The advantage of running MxBuild in Service mode is that the deployment of a project (`target` = `Deploy`) can be significantly faster for subsequent builds. For example, if no Java files have changed between subsequent builds, the Java compilation step will be skipped. Also, for some changes to the model, such as changes to Pages, the Mendix Runtime supports hot-reloading the model instead of doing a full restart. The response will indicate whether a full restart is required.
 
 ### Request
-
 A build can be started by sending a POST request to `<serviceLocation>/build`. The body of the POST request should contain a JSON object that specifies the path to the Mendix project (.mpr) file that you want to build, together with some additional options that are similar to the command-line options that can be used when running MxBuild in Build mode. Here is an example of this JSON object:
 
 ```js
@@ -72,7 +67,6 @@ The `forceFullDeployment` property is optional. Its default is `false`, meaning 
 ### Response
 
 #### Success
-
 The response to the POST request is a JSON object again. If the build finished without problems, this object contains a success status. In addition, it contains a field that indicates whether a restart of the Runtime is required. Note that in case a restart is **not** required, it is still required to call the M2EE command `reload_model` in order to update a running Runtime. For example:
 
 ```js
@@ -83,7 +77,6 @@ The response to the POST request is a JSON object again. If the build finished w
 ```
 
 #### Busy
-
 If a build is already in progress, the response will indicate this as follows:
 
 ```js
@@ -93,7 +86,6 @@ If a build is already in progress, the response will indicate this as follows:
 ```
 
 #### Failure
-
 If something goes wrong while processing the request, the status is `Failure` and an additional message describes the problem. For example:
 
 ```js
@@ -133,27 +125,17 @@ When your Mendix project contains consistency errors, deployment will fail and t
 See the section 'Project errors' below for a description of the error format.
 
 ## JDK settings
-
 When running MxBuild (either in Build mode or in Service mode), you're required to specify the following two settings on the command-line:
 
-|
-```
---java-home=DIRECTORY
-```
- | This is the directory in which the JDK is installed, e.g. `--java-home=/usr/lib/jvm/java-8-oracle`. |
+| Setting | Description |
 | --- | --- |
-|
-```
---java-exe-path=FILENAME
-```
- | This is the full path to the Java executable, e.g. `--java-exe-path=/usr/lib/jvm/java-8-oracle/bin/java`. |
+| `--java-home=DIRECTORY` | This is the directory in which the JDK is installed, e.g. `--java-home=/usr/lib/jvm/java-8-oracle`. |
+| `--java-exe-path=FILENAME` | This is the full path to the Java executable, e.g. `--java-exe-path=/usr/lib/jvm/java-8-oracle/bin/java`. |
 
 ## Other options
-
 Specifying `-h` or `--help` on the command-line will show a short description of MxBuild and a list of all available options.
 
 ## Return value
-
 When MxBuild exits, one of the following codes will be returned:
 
 | Exit Code | Description |
@@ -167,7 +149,6 @@ When MxBuild exits, one of the following codes will be returned:
 If the exit code is larger than 0, MxBuild will also output a message describing the error.
 
 ## Project errors
-
 When your Mendix project contains errors, deployment will fail and MxBuild will report these errors. When running in Build mode, you can use the `--write-errors=FILENAME` command-line option to tell MxBuild to write the errors to a file. In Service mode, MxBuild will return the errors as part of the JSON response object.
 
 In both cases, the errors are output in as a JSON object that has one property `problems`. The value of this property is an array of objects that each describe one error, warning or deprecation in your project. For example:
@@ -197,26 +178,10 @@ The following table describes the various properties of the problems JSON object
 
 | Property | Description |
 | --- | --- |
-|
-```
-name
-```
- | A unique identifier of the problem, or `null` when the consistency check is not yet defined in the Mendix Metamodel. |
-|
-```
-severity
-```
- | Describes the type of problem: either `Warning`, `Error` or `Deprecation`. |
-|
-```
-message
-```
- | The description of the problem. This is the same as the message in the 'Errors' dock of the Mendix Modeler. |
-|
-```
-locations
-```
- | Contains zero or more objects that describe the location in the Mendix project where the problem occurs (see the following table). |
+| `name` | A unique identifier of the problem, or `null` when the consistency check is not yet defined in the Mendix Metamodel. |
+| `severity` | Describes the type of problem: either `Warning`, `Error` or `Deprecation`. |
+| `message` | The description of the problem. This is the same as the message in the 'Errors' dock of the Mendix Modeler. |
+| `locations` | Contains zero or more objects that describe the location in the Mendix project where the problem occurs (see the following table). |
 
 The location(s) associated with the problem have the following properties:
 

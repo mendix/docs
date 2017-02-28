@@ -50,4 +50,4 @@ See [Using Eclipse](using-eclipse).
 
 ## Java actions in the cloud
 
-See [Java in the Cloud](/mendixcloud/java-in-the-cloud).
+See [Java in the Cloud](/howtogeneral/mendixcloud/java-in-the-cloud).

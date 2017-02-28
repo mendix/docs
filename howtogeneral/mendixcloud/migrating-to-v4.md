@@ -26,7 +26,7 @@ The data will always be stored in the same political region. Data in the EU, inc
 What are the limitations?
 ===
 
-Initially we won't have a mail server. You can use a third party email provider instead. VPN, which is already deprecated in favor of client certificates, will not be possible in the Mendix Cloud v4. See the [Certificates](../refguide6/certificates) documentation for more details.
+Initially we won't have a mail server. You can use a third party email provider instead. VPN, which is already deprecated in favor of client certificates, will not be possible in the Mendix Cloud v4. See the [Certificates](/refguide6/certificates) documentation for more details.
 
 Is the Java Security Manager still in place?
 ===

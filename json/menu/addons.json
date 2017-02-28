@@ -6,5 +6,5 @@ layout: json
     "APM",
     "AQM"
   ],
-  "pages": {% include json-snippets/get_pages_per_space.inc space="Other Add-Ons" %}
+  "pages": {% include json-snippets/get_pages.inc dir="addons" %}
 }

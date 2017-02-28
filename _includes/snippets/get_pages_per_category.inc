@@ -2,11 +2,9 @@
 {% if include.overview %}
       <li><a href="{{ include.dir }}" class="overview-link" title="{{ include.category }}">{{ include.category }}</a></li>
 {% endif %}
-{% for catpage in site.pages %}
-  {% if include.dir == catpage.dir %}
-    {% if catpage.category == include.category %}
+{% assign indexName = include.dir | append: include.category %}
+{% assign pages = site.data['category_index'][indexName] %}
+{% for catpage in pages %}
       <li><a href="{{ catpage.url | remove: '.html' }}" title="{{ catpage.title }}">{{ catpage.title }}</a></li>
-    {% endif %}
-  {% endif %}
 {% endfor %}
 </ul>

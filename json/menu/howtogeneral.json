@@ -5,5 +5,5 @@ layout: json
   "categories": [
     "Mendix Support"
   ],
-  "pages": {% include json-snippets/get_pages_per_space.inc space="General How-To's" %}
+  "pages": {% include json-snippets/get_pages.inc dir="howtogeneral" %}
 }

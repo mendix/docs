@@ -108,7 +108,7 @@
     });
   }
 
-  if ($('.not-found-suggestion')) {
+  if ($('.not-found-suggestion').length !== 0) {
     var $el = $('.not-found-suggestion'),
         splitted = location.pathname.split('/'),
         last = splitted.slice(-1)[0] === "" ? -2 : -1,
@@ -119,7 +119,7 @@
     var metadata = {
       path: location.href
     };
-    window.Intercom && __trackIntercomEvent('not-found-page', metadata);
+    window.Intercom && __trackIntercomEvent('page-not-found', metadata);
 
     index.search(path, function searchDone(err, content) {
       if (err) {
@@ -128,7 +128,7 @@
       }
       if (content.hits && content.hits.length > 0) {
         var suggestions = content.hits.slice(0, 5),
-            searchUrl = (location.hostname === 'localhost' ? '/search?' : 'https://docs.mendix.com/search?') +  content.params;
+            searchUrl = (location.hostname === 'localhost' ? '/search/?' : 'https://docs.mendix.com/search/?') +  content.params;
 
         $el.empty();
         $el.append('<p class="text-center lead">We have the following suggestions:</p><ul class="suggestions"></ul><p class="text-center lead">Or use the <a href="' + searchUrl + '">full search</a>.</p>');

@@ -13,5 +13,5 @@ sitemap: false
     "Mobile",
     "Proactive Maintenance"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="/refguide6/" %}
+  "pages": {% include json-snippets/get_pages.inc dir="refguide6" %}
 }

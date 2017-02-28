@@ -118,35 +118,35 @@ module.exports = {
      ****************************************************/
     {
       from: "/bestpractices/Best+Practices+for+Component+Based+Development",
-      to: "/bestpractices/best-practices-for-component-based-development"
+      to: "/howtogeneral/bestpractices/best-practices-for-component-based-development"
     },
     {
       from: "/bestpractices/How+to+execute+an+SQL+statement+on+an+external+database",
-      to: "/bestpractices/how-to-execute-an-sql-statement-on-an-external-database"
+      to: "/howtogeneral/bestpractices/how-to-execute-an-sql-statement-on-an-external-database"
     },
     {
       from: "/bestpractices/Best+Practices",
-      to: "/bestpractices/"
+      to: "/howtogeneral/bestpractices/"
     },
     {
       from: "/bestpractices/Inheritance+vs.+1+1+association",
-      to: "/bestpractices/inheritance-vs.-1-1-association"
+      to: "/howtogeneral/bestpractices/inheritance-vs.-1-1-association"
     },
     {
       from: "/bestpractices/Inheritance+vs.+1-1+association",
-      to: "/bestpractices/inheritance-vs.-1-1-association"
+      to: "/howtogeneral/bestpractices/inheritance-vs.-1-1-association"
     },
     {
       from: "/bestpractices/Naming+conventions",
-      to: "/bestpractices/naming-conventions"
+      to: "/howtogeneral/bestpractices/naming-conventions"
     },
     {
       from: "/bestpractices/Naming+conventions+in+Mendix+5",
-      to: "/bestpractices/naming-conventions"
+      to: "/howtogeneral/bestpractices/naming-conventions"
     },
     {
       from: "/bestpractices/SIG+-+Mendix+performance+subjects+explanation",
-      to: "/bestpractices/sig-mendix-performance-subjects-explanation"
+      to: "/howtogeneral/bestpractices/sig-mendix-performance-subjects-explanation"
     },
     /****************************************************
      * Community
@@ -1463,7 +1463,7 @@ module.exports = {
     },
     {
       from: "/howto50/Tips+Tricks",
-      to: "/howto50/tips-tricks"
+      to: "/howtogeneral/tips"
     },
     {
       from: "/howto50/Translatable+Validation+Messages",
@@ -1471,7 +1471,7 @@ module.exports = {
     },
     {
       from: "/howto50/Trends",
-      to: "/mendixcloud/trends"
+      to: "/howtogeneral/mendixcloud/trends"
     },
     {
       from: "/howto50/Triggering+Logic+using+Microflows",
@@ -1702,7 +1702,7 @@ module.exports = {
     },
     {
       from: "/howto6/deploying+to+the+cloud",
-      to: "/mendixcloud/deploying-to-the-cloud"
+      to: "/howtogeneral/mendixcloud/deploying-to-the-cloud"
     },
     {
       from: "/howto6/Design+the+Architecture",
@@ -1886,7 +1886,7 @@ module.exports = {
     },
     {
       from: "/howto6/monitoring+application+health",
-      to: "/mendixcloud/monitoring-application-health"
+      to: "/howtogeneral/mendixcloud/monitoring-application-health"
     },
     {
       from: "/howto6/On-premises+Deployment",
@@ -2093,71 +2093,71 @@ module.exports = {
      ****************************************************/
     {
       from: "/mendixcloud/Custom+Domains",
-      to: "/mendixcloud/custom-domains"
+      to: "/howtogeneral/mendixcloud/custom-domains"
     },
     {
       from: "/mendixcloud/Deploying+to+a+Free+App",
-      to: "/mendixcloud/deploying-to-a-free-app"
+      to: "/howtogeneral/mendixcloud/deploying-to-a-free-app"
     },
     {
       from: "/mendixcloud/Deploying+to+the+cloud",
-      to: "/mendixcloud/deploying-to-the-cloud"
+      to: "/howtogeneral/mendixcloud/deploying-to-the-cloud"
     },
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
-      to: "/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
+      to: "/howtogeneral/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Amazon+Web+Services",
-      to: "/mendixcloud/how-to-deploy-a-mendix-app-on-amazon-web-services"
+      to: "/howtogeneral/mendixcloud/how-to-deploy-a-mendix-app-on-amazon-web-services"
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
-      to: "/mendixcloud/how-to-deploy-a-mendix-app-on-azure"
+      to: "/howtogeneral/mendixcloud/how-to-deploy-a-mendix-app-on-azure"
     },
     {
       from: "/mendixcloud/Mendix+Cloud",
-      to: "/mendixcloud/"
+      to: "/howtogeneral/mendixcloud/"
     },
     {
       from: "/mendixcloud/Mendix+Cloud+Home",
-      to: "/mendixcloud/"
+      to: "/howtogeneral/mendixcloud/"
     },
     {
       from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
-      to: "/mendixcloud/integrate-your-app-with-mendix-sso"
+      to: "/howtogeneral/mendixcloud/integrate-your-app-with-mendix-sso"
     },
     {
       from: "/mendixcloud/Java+in+the+Cloud",
-      to: "/mendixcloud/java-in-the-cloud"
+      to: "/howtogeneral/mendixcloud/java-in-the-cloud"
     },
     {
       from: "/mendixcloud/Maintenance+Windows",
-      to: "/mendixcloud/maintenance-windows"
+      to: "/howtogeneral/mendixcloud/maintenance-windows"
     },
     {
       from: "/mendixcloud/migrating+to+v4",
-      to: "/mendixcloud/migrating-to-v4"
+      to: "/howtogeneral/mendixcloud/migrating-to-v4"
     },
     {
       from: "/mendixcloud/Monitoring+application+health",
-      to: "/mendixcloud/monitoring-application-health"
+      to: "/howtogeneral/mendixcloud/monitoring-application-health"
     },
     {
       from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
-      to: "/mendixcloud/securing-outgoing-connections-from-your-application"
+      to: "/howtogeneral/mendixcloud/securing-outgoing-connections-from-your-application"
     },
     {
       from: "/mendixcloud/Security+constraints+in+the+Mendix+Cloud",
-      to: "/mendixcloud/security-constraints-in-the-mendix-cloud"
+      to: "/howtogeneral/mendixcloud/security-constraints-in-the-mendix-cloud"
     },
     {
       from: "/mendixcloud/Sending+Email",
-      to: "/mendixcloud/sending-email"
+      to: "/howtogeneral/mendixcloud/sending-email"
     },
     {
       from: "/mendixcloud/Trends",
-      to: "/mendixcloud/trends"
+      to: "/howtogeneral/mendixcloud/trends"
     },
     /****************************************************
      * Mendix SDK
@@ -8431,39 +8431,39 @@ module.exports = {
      ****************************************************/
     {
       from: "/tips/Finding+Object+Activities",
-      to: "/tips/finding-object-activities"
+      to: "/howtogeneral/tips/finding-object-activities"
     },
     {
       from: "/tips/Finding+Unused+Items",
-      to: "/tips/finding-unused-items"
+      to: "/howtogeneral/tips/finding-unused-items"
     },
     {
       from: "/tips/Finding+your+way+through+a+project",
-      to: "/tips/finding-your-way-through-a-project"
+      to: "/howtogeneral/tips/finding-your-way-through-a-project"
     },
     {
       from: "/tips/Import+a+large+Excel+file",
-      to: "/tips/import-a-large-excel-file"
+      to: "/howtogeneral/tips/import-a-large-excel-file"
     },
     {
       from: "/tips/Tips+and+Tricks",
-      to: "/tips/"
+      to: "/howtogeneral/tips/"
     },
     {
       from: "/tips/Migrating+your+Mendix+database",
-      to: "/tips/migrating-your-mendix-database"
+      to: "/howtogeneral/tips/migrating-your-mendix-database"
     },
     {
       from: "/tips/Querying+over+self-references",
-      to: "/tips/querying-over-self-references"
+      to: "/howtogeneral/tips/querying-over-self-references"
     },
     {
       from: "/tips/Showing+a+Project+in+the+Directory+in+Explorer",
-      to: "/tips/showing-a-project-in-the-directory-in-explorer"
+      to: "/howtogeneral/tips/showing-a-project-in-the-directory-in-explorer"
     },
     {
       from: "/tips/Translatable+Validation+Messages",
-      to: "/tips/translatable-validation-messages"
+      to: "/howtogeneral/tips/translatable-validation-messages"
     },
     /****************************************************
      * RELEASE NOTES

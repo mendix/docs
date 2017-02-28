@@ -38,7 +38,7 @@ If you do not specify the [reversed()] expression the query will be interpreted
 
 ## Related articles
 
-*   [Finding Object Activities](finding-object-activities)
-*   [Finding Unused Items](finding-unused-items)
-*   [Finding your way through a project](finding-your-way-through-a-project)
-*   [Showing a Project in the Directory in Explorer](showing-a-project-in-the-directory-in-explorer)
+*   [Finding Object Activities](/howtogeneral/tips/finding-object-activities)
+*   [Finding Unused Items](/howtogeneral/tips/finding-unused-items)
+*   [Finding your way through a project](/howtogeneral/tips/finding-your-way-through-a-project)
+*   [Showing a Project in the Directory in Explorer](/howtogeneral/tips/showing-a-project-in-the-directory-in-explorer)

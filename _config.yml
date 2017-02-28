@@ -47,9 +47,6 @@ defaults:
     values:
       menus:
         - "howto7"
-        - "tips"
-        - "bestpractices"
-        - "mendixcloud"
   - scope:
       path: 'refguide7'
       type: pages
@@ -63,9 +60,6 @@ defaults:
     values:
       menus:
         - "howto6"
-        - "tips"
-        - "bestpractices"
-        - "mendixcloud"
   - scope:
       path: 'refguide6'
       type: pages
@@ -79,9 +73,6 @@ defaults:
     values:
       menus:
         - "howto50"
-        - "tips"
-        - "bestpractices"
-        - "mendixcloud"
   - scope:
       path: 'refguide5'
       type: pages
@@ -95,9 +86,6 @@ defaults:
     values:
       menus:
         - "howto40"
-        - "tips"
-        - "bestpractices"
-        - "mendixcloud"
       banner: "mendix4howto"
   - scope:
       path: 'refguide4'
@@ -150,33 +138,6 @@ defaults:
     values:
       menus:
         - "howtogeneral"
-  - scope:
-      path: 'tips'
-      type: pages
-    values:
-      menus:
-        - "howto7"
-        - "tips"
-        - "bestpractices"
-        - "mendixcloud"
-  - scope:
-      path: 'bestpractices'
-      type: pages
-    values:
-      menus:
-        - "howto7"
-        - "tips"
-        - "bestpractices"
-        - "mendixcloud"
-  - scope:
-      path: 'mendixcloud'
-      type: pages
-    values:
-      menus:
-        - "howto7"
-        - "tips"
-        - "bestpractices"
-        - "mendixcloud"
 
 ####################################
 

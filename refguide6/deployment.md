@@ -14,7 +14,8 @@ If you plan to deploy to the Mendix Cloud later on and your project contains Jav
 
 ## Mendix Cloud
 
-From within the Mendix Modeler you can view the cloud slots you have available in the Mendix Cloud. You can upload a deployment package (MDA) to the [Cloud Portal](https://cloud.mendix.com) and from there you can transfer it and start running it. See the documentation on [security constraints](/mendixcloud/security-constraints-in-the-mendix-cloud) or the  section for more information.
+From within the Mendix Modeler you can view the cloud slots you have available in the Mendix Cloud. You can upload a deployment package (MDA) to the [Cloud Portal](https://cloud.mendix.com) and from there you can transfer it and start running it. See the documentation on [security constraints](/howtogeneral
+/mendixcloud/security-constraints-in-the-mendix-cloud) or the  section for more information.
 
 ## Cloud Foundry
 
@@ -22,7 +23,7 @@ From within the Mendix Modeler you can deploy directly to Cloud Foundry based pl
 
 ## Azure
 
-Deploying to a Azure is possible from the [Azure Marketplace](https://azure.microsoft.com/en-us/marketplace/partners/mendix/mendix-pro/), see this [how-to](/mendixcloud/how-to-deploy-a-mendix-app-on-azure) for step by step instructions on deployment.
+Deploying to a Azure is possible from the [Azure Marketplace](https://azure.microsoft.com/en-us/marketplace/partners/mendix/mendix-pro/), see this [how-to](/howtogeneral/mendixcloud/how-to-deploy-a-mendix-app-on-azure) for step by step instructions on deployment.
 
 ## On-premise
 

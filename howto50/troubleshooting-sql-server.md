@@ -13,7 +13,7 @@ space: "Mendix 5 How-to's"
 
 *   [Setting up the database user](setting-up-the-database-user)
 *   [Setting up the database user](/howto6/setting-up-the-database-user)
-*   [How to execute an SQL statement on an external database](/bestpractices/how-to-execute-an-sql-statement-on-an-external-database)
+*   [How to execute an SQL statement on an external database](/howtogeneral/bestpractices/how-to-execute-an-sql-statement-on-an-external-database)
 *   [Restoring a SQL Server database](restoring-a-sql-server-database)
 *   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
 *   [Setting up a new SQL Server database](setting-up-a-new-sql-server-database)

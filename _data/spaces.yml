@@ -14,9 +14,6 @@ ATS:
 appstore:
   space: "App Store"
   priority: false
-bestpractices:
-  space: "Best Practices"
-  priority: false
 community:
   space: "Community"
   priority: false
@@ -36,9 +33,6 @@ howto7:
   space: "Mendix 7 How-To's"
   priority: 6
   mendix_version: 7
-mendixcloud:
-  space: "Mendix Cloud"
-  priority: false
 MXSDK:
   space: "Mendix Platform SDK"
   priority: false
@@ -60,9 +54,6 @@ refguide7:
   mendix_version: 7
 howtogeneral:
   space: "General How-To's"
-  priority: false
-tips:
-  space: "Tips & Tricks"
   priority: false
 releasenotes:
   space: "Release Notes"

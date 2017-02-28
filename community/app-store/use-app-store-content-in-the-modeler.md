@@ -2,7 +2,6 @@
 title: "Use App Store Content in the Modeler"
 space: "Community"
 category: "App Store"
-
 ---
 
 ## 1 Introduction
@@ -65,7 +64,7 @@ To add the Radiobutton List widget from the App Store via the Modeler, follow th
 
         ![](attachments/use-app-store-content-in-the-modeler/18580440.png)
 
-    * Right-click the field in which you want to use the widget, select **Add Widget** > **Add-On**, and select it from the list of all the widgets you have downloaded:
+    * Right-click the field in which you want to use the widget, select **Add Widget** > **Add-on**, and select it from the list of all the widgets you have downloaded:
 
         ![](attachments/use-app-store-content-in-the-modeler/18580439.png)
 
@@ -93,8 +92,8 @@ To resolve the radio button error, follow these steps:
 
     ![](attachments/use-app-store-content-in-the-modeler/18580436.png)
 
-    In this example, the "Target attribute" property in the radio button is required.
-2. Double-click the radio button to open all of its options in the **Edit Custom Widget** editor. Notice that the **Target Attribute** is empty or set to none:
+    In this example, the **Target attribute** property in the radio button is required.
+2. Double-click the radio button to open all of its options in the **Edit Custom Widget** editor. Notice that the **Target attribute** is empty or set to none:
 
     ![](attachments/use-app-store-content-in-the-modeler/18580435.png)
 

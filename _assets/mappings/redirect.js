@@ -1463,7 +1463,7 @@ module.exports = {
     },
     {
       from: "/howto50/Tips+Tricks",
-      to: "/howtogeneral/tips"
+      to: "/howtogeneral/tips/index"
     },
     {
       from: "/howto50/Translatable+Validation+Messages",

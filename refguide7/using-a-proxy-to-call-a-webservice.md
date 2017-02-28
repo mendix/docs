@@ -15,7 +15,7 @@ You can specify these in your .m2eerc under JVM parameters:
 ```java
 ...
 # custom java options, like -Xmx256m or -Djava.foo=bar
- javaopts: [ "-Dfile.encoding=UTF-8", "-Dsun.io.useCanonPrefixCache=false", "-XX:MaxPermSize=64M", "-Xmx128M", "-Xms128M", "-Dhttp.proxyHost=myproxyserver.com", "-Dhttp.proxyPort=3128"]
+ javaopts: [ ..., "-Dhttp.proxyHost=myproxyserver.com", "-Dhttp.proxyPort=3128"]
 ...
 
 ```
@@ -33,7 +33,6 @@ Some proxies require authentication. To specify the user and password, simply pa
 
 ```java
 -Dhttp.proxyUser=myusername -Dhttp.proxyPassword=mypassword
-
 ```
 
 ## SSL

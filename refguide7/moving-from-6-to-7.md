@@ -77,6 +77,11 @@ We have prohibited NPE (non-persistent entity) attribute-level security for attr
 
 If you have two new objects referencing one another and you try to commit one of those, you should also commit the other one. If you don't and you are running the microflow in a system session (for example, a scheduled event), you will now get an exception. Note that if you are running in a user session that is not required, we'll handle it for you.
 
+#### Objects Retrieved from Database are Not State
+Objects retrieved from the database are not part of the state, compared to objects retrieved by association. This means that you cannot access uncommitted changes and new objects through objects comming from the database, even when retrieving by association starting from these objects.
+
+For example, assume a user has associated (but not committed) an orderline with an existing order object. When retrieving the orderlines through the order object retrieved from the database, the aforementioned orderline is not retrieved. However, when the order object is passed as a microflow parameter from a page, the same retrieve would return the orderline object.
+
 #### Sign-In Microflows
 
 Sign-in microflows are no longer supported, because they do not add any functionality. In a future version, the state will be automatically transferred from the anonymous user to the signed-in user by the client. In Mendix 7, having a sign-in microflow selected will result in a consistency check error. When this is solved by setting the microflow to **None**, the property will automatically disappear from the UI.

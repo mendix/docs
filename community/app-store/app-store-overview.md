@@ -18,7 +18,7 @@ The home page of the Mendix App Store presents various content categories:
 
 ![](attachments/app-store-overview/home_page.png)
 
-Category | Description 
+Category | Description
 --- | ---
 **Featured** | Presents some of the most important and useful App Store content as determined by Mendix (think of it as a "staff picks" section).
 **Connectors**, **Modules**, **Widgets** | These are some of the add-on categories and sub-categories (for example, Internet of things and Authentication).
@@ -32,13 +32,13 @@ To see a detail page for each category, click **View more** (or **View full lead
 
 ### 2.2 Sidebar Menu
 
-The App Store sidebar menu lists all the pages that you can browse for content. 
+The App Store sidebar menu lists all the pages that you can browse for content.
 
 For details on add-ons, see [Add-On Details Page](#AddonDetailsPage).
 
 You can also access [My App Store](), the [Modeler]() page, the [Solutions]() page, and the [Partners]() page.
 
-## 3 Add-On Details Page<a name="ItemDetailsPage"></a>
+## 3 Add-On Details Page<a name="AddonDetailsPage"></a>
 
 Clicking an App Store item in a menu will bring you to the content item's details page. The details page presents the sections described below.
 
@@ -56,8 +56,8 @@ The top of the information page for each add-on presents the following item deta
     * **Preview** – click this to preview more information or a demo about the content
         * This is only available if the developer has included a demo URL when sharing the content (for details on sharing content, see [How to Share App Store Content](share-app-store-content))
     * **Open in Modeler** – click this to open the content directly in the Modeler
-        * This is only available for **Theme starting points** (available on the [Getting Started tab](#GettingStartedTab))
-    * **Download** – click this to download the content 
+        * This is only available for **Theme starting points** (available on the Getting Started tab)
+    * **Download** – click this to download the content
         * This is only available for content that has a file attached (meaning, all shared Modeler content, but not promotions; for details on sharing Modeler content, see [How to Share App Store Content](share-app-store-content))
         * For details on how to import downloaded App Store content into the Modeler, see [How to Import and Export Objects](/howto6/importing-and-exporting-objects)
         * Please note that the best practice is to download content from the App Store that is accessible in the Modeler, because it then downloads directly into the Modeler (for details, see [How to Use App Store Content in the Modeler](use-app-store-content-in-the-modeler))
@@ -95,7 +95,7 @@ The details page for each add-on and app presents the following item information
 In the **Additional Info** section, you can see the following information (depending the type of content):
 
 * The **Latest version** number of the item
-* The Modeler version that the item **Requires** to work 
+* The Modeler version that the item **Requires** to work
 * When the item was **Published**
 * The type of **License** for the item
 * The type of support Mendix offers for the item
@@ -192,7 +192,7 @@ Hovering your mouse pointer over a partner tile will bring up a summary of the c
 
 Clicking the partner name will bring you to the partner's App Store details page:
 
-![](attachments/app-store-overview/partners_detail3.png) 
+![](attachments/app-store-overview/partners_detail3.png)
 
 On the **Apps & Add-ons** tab at the bottom of the partner details page, you can browse the apps and add-ons that the partner has contributed to the App Store.
 

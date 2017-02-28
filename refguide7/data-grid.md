@@ -20,7 +20,7 @@ A data grid showing accounts.
 
 {% snippet Class+Property.md %}
 
-{% snippet Style+Property.md %} 
+{% snippet Style+Property.md %}
 
 {% snippet Tab+index+Property.md %}
 
@@ -133,7 +133,7 @@ See the corresponding data source for its properties:
 
 #### Common Properties
 
-### Class
+### Class property
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
@@ -147,7 +147,7 @@ Note that the styling is applied in the following order:
 
 {% endmarkdown %}</div>
 
-### Style
+### Style property
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 

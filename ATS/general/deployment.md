@@ -135,6 +135,7 @@ Before you start, make sure that your server has internet access to download the
 2. Install Docker Compose, as described in [Install Docker Compose](https://docs.docker.com/compose/install/).
 3. Create a folder called **selenium** in the user's home directory.
 4. Change to the folder and create a file called **docker-compose.yml** with this content:
+
     ```yaml
     seleniumhub:
         image: selenium/hub:2.53.0
@@ -156,11 +157,16 @@ Before you start, make sure that your server has internet access to download the
         - seleniumhub:hub
     ```
 5. Start up the Selenium grid with this command:
+
     ```sh
     docker-compose up -d
     ```
 6. You now have a grid running on `http://myserver:4444/wd/hub`. Attached to this grid are two nodes: one for Chrome and one for Firefox. You can easiliy scale by starting new nodes with a simple command. This example will start up a second node for both Firefox and Chrome:
+
     ```sh
     docker-compose scale firefoxnode=2 chromenode=2
     ```
     
+[green]:attachments/green.png
+[grey]:attachments/grey.png
+[red]:attachments/red.png

@@ -12,7 +12,7 @@ Every ATS deployment consists of four components: the ATS application, the Mendi
 
 The following diagram illustrates how the components are connected:
 
-![ATS simplified architecture](attachments/ATS_architecture_simplified.png)
+![ATS simplified architecture](attachments/deployment/ATS_architecture_simplified.png)
 
 ### Application Test Suite (ATS) Application
 
@@ -75,13 +75,13 @@ Selenium<sup>2</sup> Support          | ![][green] Yes<sup>3</sup> | ![][green] 
 
 ### Standard
 
-![Standard Option](attachments/deploymentoption_standard.png)
+![Standard Option](attachments/deployment/deploymentoption_standard.png)
 
 The standard option is highly recommended for all customers. It supports all current and future features, is easy to setup, is maintenance-free, and gets the best support.
 
 ### Alternative Option 1
 
-![Alternative Option 1](attachments/deploymentoption_alternative1.png)
+![Alternative Option 1](attachments/deployment/deploymentoption_alternative1.png)
 
 Alternative option 1 is meant for customers who run their app on premises. Since the app runs on premises, it is protected from external access via a firewall. In order to allow the Selenium Runner to access the app, you have to configure your firewall.
 
@@ -91,7 +91,7 @@ The firewall should accept connections from the internet either on port 80 (if y
 
 ### Alternative Option 2
 
-![Alternative Option 2](attachments/deploymentoption_alternative2.png)
+![Alternative Option 2](attachments/deployment/deploymentoption_alternative2.png)
 
 Alternative option 2 is meant for customers who run their app on premises and who don't want to open their firewall for the Selenium Runner. In order to enable communication between the Selenium Runner and your local application, you have to deploy a Selenium Saas Agent in your local network. This agent will establish a VPN tunnel to your Selenium Service Provider and route all traffic between the Selenium Runner and your application.
 
@@ -107,7 +107,7 @@ TestingBot       | TestingBot Tunnel   | [Here](https://testingbot.com/support/o
 
 ### Alternative Option 3
 
-![Alternative Option 3](attachments/deploymentoption_alternative3.png)
+![Alternative Option 3](attachments/deployment/deploymentoption_alternative3.png)
 
 Alternative option 3 is meant for customers who run their app on premises and who also want to run their own Selenium Runner. The challenging part of this option is that the customer needs to set up, maintain, and operate its own Selenium Runner.
 
@@ -167,6 +167,6 @@ Before you start, make sure that your server has internet access to download the
     docker-compose scale firefoxnode=2 chromenode=2
     ```
     
-[green]:attachments/green.png
-[grey]:attachments/grey.png
-[red]:attachments/red.png
+[green]:attachments/deployment/green.png
+[grey]:attachments/deployment/grey.png
+[red]:attachments/deployment/red.png

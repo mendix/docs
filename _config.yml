@@ -109,11 +109,11 @@ defaults:
       menus:
         - "releasenotes"
   - scope:
-      path: 'apidocs'
+      path: 'apidocs-mxsdk'
       type: pages
     values:
       menus:
-        - "apidocs"
+        - "apidocs-mxsdk"
   - scope:
       path: 'addons'
       type: pages
@@ -126,12 +126,6 @@ defaults:
     values:
       menus:
         - "ATS"
-  - scope:
-      path: 'MXSDK'
-      type: pages
-    values:
-      menus:
-        - "MXSDK"
   - scope:
       path: 'howtogeneral'
       type: pages

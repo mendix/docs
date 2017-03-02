@@ -4,7 +4,7 @@ layout: json
 {
   "categories": [
     "API Documentation",
-	"Mendix SDK"
+	"Mendix Platform SDK"
   ],
   "pages": {% include json-snippets/get_pages.inc dir="apidocs-mxsdk" %}
 }

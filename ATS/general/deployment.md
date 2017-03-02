@@ -62,7 +62,7 @@ The following matrix compares the efforts for setup and maintenance of the diffe
 
 Aspect                                | Standard                       | Alternative 1              | Alternative 2               | Alternative 3
 ------------------------------------- | ------------------------------ | -------------------------- | --------------------------- | ---------------------------------
-Firewall Setup                        | ![][green] None**            | ![][red] Required          | ![][green] None<sup>1</sup> | ![][red] Required
+Firewall Setup                        | ![][green] None           | ![][red] Required          | ![][green] None<sup>1</sup> | ![][red] Required
 Selenium<sup>2</sup> Runner Setup     | ![][green] No<sup>3</sup> | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>   | ![][red] Customer responsibility
 Selenium<sup>2</sup> SaaS Agent Setup | ![][green] No<sup>4</sup>  | ![][green] No<sup>4</sup>  | ![][red] Yes                | ![][green] No<sup>4</sup>
 Selenium<sup>2</sup> Maintenance      | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup>  | ![][red] Customer responsibility

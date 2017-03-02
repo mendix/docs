@@ -1,7 +1,6 @@
 ---
 title: "API Documentation"
 space: "API & SDK"
-priority: 8
 ---
 
 The API documentation is divided into the sections described below.

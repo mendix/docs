@@ -4,7 +4,7 @@
 #  priority: 1 - 9 (used for sitemap). If omitted this will not be included, which defaults to 0.5
 apidocs:
   space: "API & SDK"
-  priority: 6
+  priority: false
 addons:
   space: "Other Add-Ons"
   priority: false

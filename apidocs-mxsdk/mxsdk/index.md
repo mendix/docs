@@ -1,7 +1,6 @@
 ---
 title: "Mendix Platform SDK"
 space: "API & SDK"
-priority: 7
 ---
 ## Your Learning Path for the Mendix SDK
 

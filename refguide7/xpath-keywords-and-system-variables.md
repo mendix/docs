@@ -36,23 +36,26 @@ System variables can be used to obtain system or date related values. The follow
 
 ### Object related
 
-| `[%CurrentUser%]` | GUID of the user currently logged on |
+| Token | Description |
 | --- | --- |
+| `[%CurrentUser%]` | GUID of the user currently logged on |
 | `[%CurrentObject%]` | GUID of the active object (in the context) |
 
 ### Userroles
 
 These will be created for each userrole in your project. Here is an example:
 
-| `[%UserRole_Administrator%]` | The userrole Administrator |
+| Token | Description |
 | --- | --- |
+| `[%UserRole_Administrator%]` | The userrole Administrator |
 
 ### Time related
 
 The following tokens can be used to obtain a date and time value:
 
-| `[%CurrentDateTime%]` | Current date and time |
+| Token | Description |
 | --- | --- |
+| `[%CurrentDateTime%]` | Current date and time |
 | `[%BeginOfCurrentDay%]` | Date and time at the beginning of the current day |
 | `[%EndOfCurrentDay%]` | Date and time at the end of the current day |
 | `[%BeginOfCurrentHour%]` | Date and time at the beginning of the current hour |
@@ -66,8 +69,9 @@ The following tokens can be used to obtain a date and time value:
 
 The following tokens can be used to add or subtract a period of time from a date and time token value:
 
-| `[%DayLength%]` | Length of one day (24 hour) |
+| Token | Description |
 | --- | --- |
+| `[%DayLength%]` | Length of one day (24 hour) |
 | `[%HourLength%]` | Length of one hour |
 | `[%MinuteLength%]` | Length of one minute |
 | `[%SecondLength%]` | Length of one second |

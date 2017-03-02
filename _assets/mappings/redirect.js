@@ -12,39 +12,39 @@ module.exports = {
       to: "/"
     },
     /****************************************************
-     * API DOCS
+     * API & SDK
      ****************************************************/
     {
       from: "/apidocs/Home",
-      to: "/apidocs/"
+      to: "/apidocs-mxsdk/apidocs/"
     },
     {
       from: "/apidocs/Authentication",
-      to: "/apidocs/authentication"
+      to: "/apidocs-mxsdk/apidocs/authentication"
     },
     {
       from: "/apidocs/Build+API",
-      to: "/apidocs/build-api"
+      to: "/apidocs-mxsdk/apidocs/build-api"
     },
     {
       from: "/apidocs/Deploy+API",
-      to: "/apidocs/deploy-api"
+      to: "/apidocs-mxsdk/apidocs/deploy-api"
     },
     {
       from: "/apidocs/Example+implementation",
-      to: "/apidocs/example-implementation"
+      to: "/apidocs-mxsdk/apidocs/example-implementation"
     },
     {
       from: "/apidocs/Feedback+API",
-      to: "/apidocs/feedback-api"
+      to: "/apidocs-mxsdk/apidocs/feedback-api"
     },
     {
       from: "/apidocs/API+documentation",
-      to: "/apidocs/"
+      to: "/apidocs-mxsdk/apidocs/"
     },
     {
       from: "/apidocs/Invite+API",
-      to: "/apidocs/invite-api"
+      to: "/apidocs-mxsdk/apidocs/invite-api"
     },
     {
       from: "/apidocs/Moving+From+6+to+7",
@@ -52,15 +52,15 @@ module.exports = {
     },
     {
       from: "/apidocs/Permissions+API",
-      to: "/apidocs/permissions-api"
+      to: "/apidocs-mxsdk/apidocs/permissions-api"
     },
     {
       from: "/apidocs/Profile+API",
-      to: "/apidocs/profile-api"
+      to: "/apidocs-mxsdk/apidocs/profile-api"
     },
     {
       from: "/apidocs/Projects+API",
-      to: "/apidocs/projects-api"
+      to: "/apidocs-mxsdk/apidocs/projects-api"
     },
     {
       from: "/apidocs/Runtime+API+changes",
@@ -68,19 +68,107 @@ module.exports = {
     },
     {
       from: "/apidocs/Single+Sign-On+API",
-      to: "/apidocs/single-sign-on-api"
+      to: "/apidocs-mxsdk/apidocs/single-sign-on-api"
     },
     {
       from: "/apidocs/Stories+API",
-      to: "/apidocs/stories-api"
+      to: "/apidocs-mxsdk/apidocs/stories-api"
     },
     {
       from: "/apidocs/Team+Server+API",
-      to: "/apidocs/team-server-api"
+      to: "/apidocs-mxsdk/apidocs/team-server-api"
     },
     {
       from: "/apidocs/User+Management+API",
-      to: "/apidocs/user-management-api"
+      to: "/apidocs-mxsdk/apidocs/user-management-api"
+    },
+    {
+      from: "/MXSDK/Changing+things+in+the+model",
+      to: "/apidocs-mxsdk/mxsdk/changing-things-in-the-model"
+    },
+    {
+      from: "/MXSDK/Closing+the+server+connection",
+      to: "/apidocs-mxsdk/mxsdk/closing-the-server-connection"
+    },
+    {
+      from: "/MXSDK/Creating+the+domain+model",
+      to: "/apidocs-mxsdk/mxsdk/creating-the-domain-model"
+    },
+    {
+      from: "/MXSDK/Creating+your+first+script",
+      to: "/apidocs-mxsdk/mxsdk/creating-your-first-script"
+    },
+    {
+      from: "/MXSDK/Development+Workflow",
+      to: "/apidocs-mxsdk/mxsdk/development-workflow"
+    },
+    {
+      from: "/MXSDK/Domain+Model+Metamodel",
+      to: "/apidocs-mxsdk/mxsdk/domain-model-metamodel"
+    },
+    {
+      from: "/MXSDK/FAQ",
+      to: "/apidocs-mxsdk/mxsdk/faq"
+    },
+    {
+      from: "/MXSDK/Finding+things+in+the+model",
+      to: "/apidocs-mxsdk/mxsdk/finding-things-in-the-model"
+    },
+    {
+      from: "/MXSDK/Generating+code+from+the+model",
+      to: "/apidocs-mxsdk/mxsdk/generating-code-from-the-model"
+    },
+    {
+      from: "/MXSDK/Mendix+SDK+Home",
+      to: "/apidocs-mxsdk/mxsdk/"
+    },
+    {
+      from: "/MXSDK/JavaScript+TypeScript+Resources",
+      to: "/apidocs-mxsdk/mxsdk/javascript-typescript-resources"
+    },
+    {
+      from: "/MXSDK/Loading+units+and+elements",
+      to: "/apidocs-mxsdk/mxsdk/loading-units-and-elements"
+    },
+    {
+      from: "/MXSDK/Manipulating+existing+models",
+      to: "/apidocs-mxsdk/mxsdk/manipulating-existing-models"
+    },
+    {
+      from: "/MXSDK/Microflows+Metamodel",
+      to: "/apidocs-mxsdk/mxsdk/microflows-metamodel"
+    },
+    {
+      from: "/MXSDK/Pages+Metamodel",
+      to: "/apidocs-mxsdk/mxsdk/pages-metamodel"
+    },
+    {
+      from: "/MXSDK/Projects+Metamodel",
+      to: "/apidocs-mxsdk/mxsdk/projects-metamodel"
+    },
+    {
+      from: "/MXSDK/Reference+Documentation",
+      to: "/apidocs-mxsdk/mxsdk/reference-documentation"
+    },
+    {
+      from: "/MXSDK/Setting+up+your+development+environment",
+      to: "/apidocs-mxsdk/mxsdk/setting-up-your-development-environment"
+    },
+    {
+      from: "/MXSDK/Understanding+the+metamodel",
+      to: "/apidocs-mxsdk/mxsdk/understanding-the-metamodel"
+    },
+    {
+      from: "/MXSDK/Use+case+examples",
+      to: "/apidocs-mxsdk/mxsdk/use-case-examples"
+    },
+    {
+      from: "/MXSDK/Working+with+when.js+and+promises+in+TypeScript",
+      to: "/apidocs-mxsdk/mxsdk/working-with-when.js-and-promises-in-typescript"
+    },
+    {
+      from: "/MXSDK/Your+learning+path+for+the+Mendix+SDK",
+      to: "/apidocs-mxsdk/mxsdk/your-learning-path-for-the-mendix-sdk"
     },
     /****************************************************
      * APPSTORE
@@ -2158,97 +2246,6 @@ module.exports = {
     {
       from: "/mendixcloud/Trends",
       to: "/howtogeneral/mendixcloud/trends"
-    },
-    /****************************************************
-     * Mendix SDK
-     ****************************************************/
-    {
-      from: "/MXSDK/Changing+things+in+the+model",
-      to: "/MXSDK/changing-things-in-the-model"
-    },
-    {
-      from: "/MXSDK/Closing+the+server+connection",
-      to: "/MXSDK/closing-the-server-connection"
-    },
-    {
-      from: "/MXSDK/Creating+the+domain+model",
-      to: "/MXSDK/creating-the-domain-model"
-    },
-    {
-      from: "/MXSDK/Creating+your+first+script",
-      to: "/MXSDK/creating-your-first-script"
-    },
-    {
-      from: "/MXSDK/Development+Workflow",
-      to: "/MXSDK/development-workflow"
-    },
-    {
-      from: "/MXSDK/Domain+Model+Metamodel",
-      to: "/MXSDK/domain-model-metamodel"
-    },
-    {
-      from: "/MXSDK/FAQ",
-      to: "/MXSDK/faq"
-    },
-    {
-      from: "/MXSDK/Finding+things+in+the+model",
-      to: "/MXSDK/finding-things-in-the-model"
-    },
-    {
-      from: "/MXSDK/Generating+code+from+the+model",
-      to: "/MXSDK/generating-code-from-the-model"
-    },
-    {
-      from: "/MXSDK/Mendix+SDK+Home",
-      to: "/MXSDK/"
-    },
-    {
-      from: "/MXSDK/JavaScript+TypeScript+Resources",
-      to: "/MXSDK/javascript-typescript-resources"
-    },
-    {
-      from: "/MXSDK/Loading+units+and+elements",
-      to: "/MXSDK/loading-units-and-elements"
-    },
-    {
-      from: "/MXSDK/Manipulating+existing+models",
-      to: "/MXSDK/manipulating-existing-models"
-    },
-    {
-      from: "/MXSDK/Microflows+Metamodel",
-      to: "/MXSDK/microflows-metamodel"
-    },
-    {
-      from: "/MXSDK/Pages+Metamodel",
-      to: "/MXSDK/pages-metamodel"
-    },
-    {
-      from: "/MXSDK/Projects+Metamodel",
-      to: "/MXSDK/projects-metamodel"
-    },
-    {
-      from: "/MXSDK/Reference+Documentation",
-      to: "/MXSDK/reference-documentation"
-    },
-    {
-      from: "/MXSDK/Setting+up+your+development+environment",
-      to: "/MXSDK/setting-up-your-development-environment"
-    },
-    {
-      from: "/MXSDK/Understanding+the+metamodel",
-      to: "/MXSDK/understanding-the-metamodel"
-    },
-    {
-      from: "/MXSDK/Use+case+examples",
-      to: "/MXSDK/use-case-examples"
-    },
-    {
-      from: "/MXSDK/Working+with+when.js+and+promises+in+TypeScript",
-      to: "/MXSDK/working-with-when.js-and-promises-in-typescript"
-    },
-    {
-      from: "/MXSDK/Your+learning+path+for+the+Mendix+SDK",
-      to: "/MXSDK/your-learning-path-for-the-mendix-sdk"
     },
     /****************************************************
      * SUPPORT

@@ -1,5 +1,5 @@
 ---
-title: "Finding things in the model"
+title: "Finding Things in the Model"
 space: "API & SDK"
 parent: "manipulating-existing-models"
 ---

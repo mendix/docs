@@ -1,5 +1,5 @@
 ---
-title: "Closing the server connection"
+title: "Closing the Server Connection"
 space: "API & SDK"
 parent: "manipulating-existing-models"
 ---

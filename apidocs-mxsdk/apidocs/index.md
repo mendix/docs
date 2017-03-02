@@ -1,6 +1,6 @@
 ---
 title: "API Documentation"
-space: "API Documentation"
+space: "API & SDK"
 priority: 8
 ---
 
@@ -39,6 +39,7 @@ Build on top of the feedback management functionality of the Mendix App Platform
 *   [Feedback API](feedback-api)
 
 ## Projects API
+
 The Projects API allows you to programmatically create a project in your company space and move working copies between the Team Server and the Model Server.
 *   [Project API](projects-api)
 

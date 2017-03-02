@@ -1,5 +1,5 @@
 ---
-title: "Setting up your development environment"
+title: "Setting Up Your Development Environment"
 space: "API & SDK"
 parent: "your-learning-path-for-the-mendix-sdk"
 ---

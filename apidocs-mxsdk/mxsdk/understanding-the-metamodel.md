@@ -1,5 +1,5 @@
 ---
-title: "Understanding the metamodel"
+title: "Understanding the Metamodel"
 space: "API & SDK"
 parent: "reference-documentation"
 ---

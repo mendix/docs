@@ -1,5 +1,5 @@
 ---
-title: "Manipulating existing models"
+title: "Manipulating Existing Models"
 space: "API & SDK"
 parent: "your-learning-path-for-the-mendix-sdk"
 ---

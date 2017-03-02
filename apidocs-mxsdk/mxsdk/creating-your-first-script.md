@@ -1,5 +1,5 @@
 ---
-title: "Creating your first script"
+title: "Creating Your First Script"
 space: "API & SDK"
 category: "your-learning-path-for-the-mendix-sdk"
 ---

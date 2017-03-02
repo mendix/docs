@@ -1,7 +1,7 @@
 ---
 title: "Example implementation"
-space: "API Documentation"
-category: "Deploy API"
+space: "API & SDK"
+parent: "deploy-api"
 ---
 
 

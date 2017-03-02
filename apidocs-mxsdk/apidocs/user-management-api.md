@@ -1,7 +1,7 @@
 ---
 title: "User Management API"
-space: "API Documentation"
-toc-level: 3
+space: "API & SDK"
+category: "API Documentation"
 ---
 
 

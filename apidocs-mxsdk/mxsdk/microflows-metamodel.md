@@ -1,5 +1,5 @@
 ---
-title: "Microflows (metamodel)"
+title: "Microflows (Metamodel)"
 space: "API & SDK"
 parent: "understanding-the-metamodel"
 ---

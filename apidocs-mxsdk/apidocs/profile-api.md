@@ -1,6 +1,7 @@
 ---
 title: "Profile API"
-space: "API Documentation"
+space: "API & SDK"
+category: "API Documentation"
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Creating the domain model"
+title: "Creating the Domain Model"
 space: "API & SDK"
 category: "your-learning-path-for-the-mendix-sdk"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "JavaScript & TypeScript resources"
+title: "JavaScript & TypeScript Resources"
 space: "API & SDK"
 category: "reference-documentation"
 ---

@@ -3,7 +3,7 @@
 #  mendix_version: 6 #optional, used for searches
 #  priority: 1 - 9 (used for sitemap). If omitted this will not be included, which defaults to 0.5
 apidocs:
-  space: "API Documentation"
+  space: "API & SDK"
   priority: 6
 addons:
   space: "Other Add-Ons"
@@ -33,9 +33,6 @@ howto7:
   space: "Mendix 7 How-To's"
   priority: 6
   mendix_version: 7
-MXSDK:
-  space: "Mendix Platform SDK"
-  priority: false
 refguide4:
   space: "Mendix 4 Reference Guide"
   priority: false

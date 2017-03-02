@@ -1,5 +1,5 @@
 ---
-title: "Pages (metamodel)"
+title: "Pages (Metamodel)"
 space: "API & SDK"
 parent: "understanding-the-metamodel"
 ---

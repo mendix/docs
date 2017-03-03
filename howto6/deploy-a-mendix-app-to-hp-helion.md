@@ -64,7 +64,7 @@ To configure the Helion endpoint in the Modeler, follow these steps:
 
 ## <a name="ConfiguretheHPHelionDevelopmentEnvironment"></a>4 Configure the HP Helion Development Environment
 
-To configure the HP Helion development environment, go to your development platform web interface (in our case, that is [https://api.helion.mendix.com/](https://api.helion.mendix.com/)) and log in with your HP Helion credentials.
+To configure the HP Helion development environment, go to your development platform web interface (in our case, that is `https://api.helion.mendix.com/`) and log in with your HP Helion credentials.
 
 <div class="alert alert-info">
 

@@ -304,7 +304,7 @@ This monitoring action gives more detailed information about objects which are c
 
 The server statistics monitor action gives information about the embedded Jetty web server. The "jetty" section lists the number of current open connections and the maximum number of open connections. In addition, the maximum idle time of connection before it's being closed is listed, for both when Jetty is under normal circumstances and when low on resources.
 
-The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](http://download.eclipse.org/jetty/9.3.11.v20160721/apidocs/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
+The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](http://download.eclipse.org/jetty/stable-9/apidocs/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
 
 ## Logged in users
 

@@ -164,7 +164,7 @@ On the **Modeler** page, you can download any version of the Modeler you need by
 
 ![](attachments/app-store-overview/modeler.png)
 
-Clicking the **Release notes** icon will open the [Modeler release notes](//releasenotes/desktop-modeler/) for that particular version.
+Clicking the **Release notes** icon will open the [Modeler release notes](/releasenotes/desktop-modeler/) for that particular version.
 
 Clicking the **Related downloads** option will open a page with information relating to that Modeler version.
 

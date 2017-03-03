@@ -251,7 +251,7 @@ label {
 
 ```
 
-To test your implementation, deploy to the Mendix Cloud, and browse to your app, e.g. [https://yourapp.mendixcloud.com/](https://yourapp.mendixcloud.com/). You should be redirected to the new login page. Try to login with a local user (e.g. the administrator, if you set it up), log out, and try to log in with a Mendix account by using the link.
+To test your implementation, deploy to the Mendix Cloud, and browse to your app, e.g. `https://yourapp.mendixcloud.com/`. You should be redirected to the new login page. Try to login with a local user (e.g. the administrator, if you set it up), log out, and try to log in with a Mendix account by using the link.
 
 ## 4\. Allow users to log in with a Mendix account from an anonymous session
 
@@ -259,7 +259,7 @@ When part of your app targets anonymous users, there are anonymous pages in your
 
 To solve this problem, add somewhere in the anonymously accessible part of your app a link to `/openid/login`. Use the HTML/JS snippet widget from the app store to create a link. Set the content of the snippet to: `<a href="/openid/login">Log in with your Mendix account</a>`
 
-To try out your implementation, deploy your app to the Mendix Cloud, and go to your app, e.g., [https://yourapp.mendixcloud.com/](https://yourapp.mendixcloud.com/). Go to the page where you inserted the link, and click on it. You should be redirected to the Mendix Account login page, and then back to your app, to the (role-based) homepage of the user with which you logged in.
+To try out your implementation, deploy your app to the Mendix Cloud, and go to your app, e.g., `https://yourapp.mendixcloud.com/`. Go to the page where you inserted the link, and click on it. You should be redirected to the Mendix Account login page, and then back to your app, to the (role-based) homepage of the user with which you logged in.
 
 ## 5\. Users can log in with a Mendix or local account from an anonymous session
 
@@ -269,7 +269,7 @@ To implement this, add a link to the custom login page in the anonymous part wit
 
 The custom login page can be created in a similar manner as in scenario 2, with the same `login.html` and `login.css` files.
 
-You can view the implementation by deploying your app to the Mendix Cloud and going to your app, e.g. [https://yourapp.mendixcloud.com/](https://yourapp.mendixcloud.com/), and going to the page where you inserted the link. Click on the link, and you should see the custom login page. Test the local account login, and logout. Then test the Mendix account login.
+You can view the implementation by deploying your app to the Mendix Cloud and going to your app, e.g. `https://yourapp.mendixcloud.com/`, and going to the page where you inserted the link. Click on the link, and you should see the custom login page. Test the local account login, and logout. Then test the Mendix account login.
 
 ## 6\. Related content
 

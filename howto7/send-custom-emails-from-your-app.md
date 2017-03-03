@@ -4,9 +4,22 @@ space: "Mendix 7 How-To's"
 category: "Extendability"
 tags: []
 ---
+
+## 1 Introduction
+
 Each application can leverage Mendix App Store content to create and send custom emails based off of configurable templates. To achieve this, the app will require three Mendix App Store modules and configuration settings for the SMTP server that will be used to relay the messages.
 
-## 1\. Download the Required Modules from the Mendix App Store
+**This how-to will teach you how to do the following:**
+
+* Download the required modules
+* Add navigation items
+* Configure settings
+
+## 2 Prerequisites
+
+None.
+
+## 3 Download the Required Modules from the Mendix App Store
 
 Within this part of the how to you will learn how to download the necessary modules from the Mendix App Store. This is a very quick process, in that in just a few clicks the modules will be imported into your project. The modules that are required for this process are the **MxModelReflection, Encyption,** and **Email Module with Templates** modules.
 
@@ -16,21 +29,21 @@ The MxModelReflection module is a commonly used module in most apps. The purpose
 
 </div>
 
-### 1.1 Download the 'MxModelReflection' Module
+### 3.1 Download the 'MxModelReflection' Module
 
 1.  Open the **Mendix App Store** from within the modeler.
 2.  Search for the keyword **Reflection.**
 3.  Click the **Download** button and include the module as a new module.![](attachments/18448688/18581166.png)
 4.  Ensure the module has downloaded successfully and is now a new module in your project.
 
-### 1.2 Download the 'Encryption' Module
+### 3.2 Download the 'Encryption' Module
 
 1.  Open the **Mendix App Store** from within the modeler.
 2.  Search for the keyword **Encryption.**
 3.  Click the **Download** button and include the module as a new module.![](attachments/18448688/18581179.png)
 4.  Ensure the module has downloaded successfully and is now a new module in your project.
 
-### 1.3 Download the 'Email Module with Templates' Module 
+### 3.3 Download the 'Email Module with Templates' Module 
 
 1.  Open the **Mendix App Store** from within the modeler.
 2.  Search for the keywords **Email Template**.
@@ -42,7 +55,7 @@ Depending on the layout selected when the project was created, errors in the mod
 
 </div>
 
-## 2\. Add Navigation Items to Allow Users to Configure Settings
+## 4 Add Navigation Items to Allow Users to Configure Settings
 
 In this part of the how to you will learn how to add the required pages into the Project Navigation that are needed to configure both the SMTP settings and email templates that will be used within the application.
 
@@ -57,17 +70,17 @@ Within the EmailTemplate module, there are several useful pages that can help in
 
 </div>
 
-## 3\. Configuration
+## 5 Configuration
 
 In this part of the how to you will learn how to run the MxModelReflection synchronization, configure the SMTP settings required to send email from the app, the encryption module, and email templates that will be used in the app. SMTP server settings and configurations should be known at time of configuration. This encompasses settings such as username and password (if authentication is required), server name/address, port number for SMTP relay (25 is default, 587 for TLS), and sender address.
 
-### 3.1 Run the MxModelReflection Synchronization
+### 5.1 Run the MxModelReflection Synchronization
 
 1.  Open the **MxModelReflection** overview page via the Navigation item configured to **MxModelReflection.MxObjects_Overview**.
 2.  Highlight each module the app needs to synchronize and click the **Toggle Module Sync** button (the Sync this Module should now be 'Yes').
 3.  Click the **Synchronize Objects** button to execute the synchronization process.
 
-### 3.2 Configuring SMTP Settings
+### 5.2 Configuring SMTP Settings
 
 1.  Open the **SMTP Settings** page via the Navigation item configured to **EmailTempate.IVK_OpenEmailSettings**.
 2.  If an account is required to authenticate against the SMTP server, enter the **User name** and **Password'**(which will be encrypted).
@@ -84,7 +97,7 @@ Make sure to allow a administrator to access this page and has read/write the co
 
 </div>
 
-### 3.3 Configuring Email Templates
+### 5.3 Configuring Email Templates
 
 1.  Open the **Email Template Overview** page via the Navigation item configured to EmailTemplate.EmailTemplate_Overview.
 2.  Click **New** to start the creation of a new template.
@@ -100,7 +113,7 @@ Make sure to allow a administrator to access this page and has read/write the co
     ![](attachments/18448688/18581168.png)
 6.  Specify and upload any attachments that will be sent automatically when the email is triggered
 
-### 3.4 Configuring the Template Tokens
+### 5.4 Configuring the Template Tokens
 
 1.  Select the object that the token will need to be derived from.
     ![](attachments/18448688/18581162.png)
@@ -119,15 +132,15 @@ Make sure to allow a administrator to access this page and has read/write the co
 
     </div>
 
-### 3.5 Configuring the Encryption Key
+### 5.5 Configuring the Encryption Key
 
 Navigate to the **Encryption.EncryptionKey** constant within the app and set this value to a 16-character alpha-numeric value.![](attachments/18448688/18581170.png)
 
-## 4\. Implementing Email Functionality
+## 6 Implementing Email Functionality
 
 In this part of the how to you will learn how to utilize the previous configurations to send custom emails from the app by invoking microflows that interact with the EmailTemplate module. There is an example microflow within the EmailTemplate module (EmailTemplate.IVK_CreateAndSendEmail) that should be used as a basis for all email transmissions.
 
-### 4.1 Configure Microflow to Send Emails
+### 6.1 Configure Microflow to Send Emails
 
 1.  Duplicate the **EmailTemplate.IVK_CreateAndSendEmail** microflow.
 2.  Rename the duplicated microflow to a desired name.
@@ -144,7 +157,7 @@ It is very important to setup Log Activities within the microflows to capture er
 
 </div>
 
-## 5\. Related content
+## 7 Related content
 
 *   [Send Custom Emails From Your App](send-custom-emails-from-your-app)
 *   [Explore our connectors and adapters](explore-the-connectors-and-adapters)

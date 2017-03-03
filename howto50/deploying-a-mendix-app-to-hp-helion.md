@@ -45,7 +45,7 @@ To push a Mendix app to Cloud Foundry you will have to configure the settings in
 
 ## 3\. Configure the HP Helion Development Environment
 
-1. Go to your Development Platform web interface (in our case [https://api.helion.mendix.com/](https://api.helion.mendix.com/)) and log in with your **HP Helion credentials**.
+1. Go to your Development Platform web interface (in our case `https://api.helion.mendix.com/`) and log in with your **HP Helion credentials**.
 
     This link is different per Helion instance. This how-to will use the Mendix url.
 

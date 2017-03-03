@@ -67,7 +67,7 @@ Restart the application, the OData service is now ready to be consumed.
     ![](attachments/12879520/14385199.png)
 2.  Open the **DATA** tab page and select **OData Feed** from the **Other Sources** menu.
     ![](attachments/12879520/14385200.png)
-3.  Enter [http://localhost:8080/odata/Expenses/Expenses](http://localhost:8080/odata/Published_OData_service/Expenses) as **Location** of the data feed.
+3.  Enter `http://localhost:8080/odata/Published_OData_service/Expenses` as **Location** of the data feed.
 4.  Select **Use this name and password** and enter the **MxAdmin** credentials.
     ![](attachments/12879520/14385201.png)
 5.  Click **Next**.
@@ -85,7 +85,7 @@ In this exercise you will visualize data from the Company Expenses app in Tablea
 1.  Open **Tableau**.
 2.  Go to **More Servers > OData**.
     ![](attachments/12879520/13402484.png)
-3.  Enter [http://localhost:8080/odata/Expenses/Expenses](http://localhost:8080/odata/Published_OData_service/Expenses) as **Server** address.
+3.  Enter `http://localhost:8080/odata/Published_OData_service/Expenses` as **Server** address.
 4.  Select **Use a specific username and password** and enter the **MxAdmin** credentials.
     ![](attachments/12879520/13402486.png)
 5.  Click **OK** to save the Server Connection. You should see the data source details:
@@ -93,8 +93,8 @@ In this exercise you will visualize data from the Company Expenses app in Tablea
 6.  Click the name of the server connection and change it to **Expenses** for readability.
     ![](attachments/12879520/14385171.png)
 
-7.  Repeat step 2 - 6 to add a server connection for [http://localhost:8080/odata/Expenses/ExpenseTypes](http://localhost:8080/odata/Published_OData_service/Expenses)
-8.  Repeat step 2 - 6 to add a server connection for [http://localhost:8080/odata/Expenses/Employees](http://localhost:8080/odata/Published_OData_service/Expenses)
+7.  Repeat step 2 - 6 to add a server connection for `http://localhost:8080/odata/Published_OData_service/Expenses`
+8.  Repeat step 2 - 6 to add a server connection for `http://localhost:8080/odata/Published_OData_service/Expenses`
 9.  **Open** Sheet1.
 10.  Drag **Expense_Employee** and **Expense_ExpenseType** from **Measures** to **Dimensions**
     ![](attachments/12879520/14385174.png)
@@ -137,11 +137,11 @@ By default all expenses are retrieved by Tableau, but Mendix allows you to add f
     ![](attachments/12879520/14385195.png)
 4.  Open sheet1, you should now only see a stacked bar chart with only the data of 3 expenses.
     ![](attachments/12879520/14385196.png)
-5.  You can combine filters by using the **&** character. Repeat steps 1 - 4 but now use [http://localhost:8080/odata/Expenses/Expenses?$skip=3&$top=3](http://localhost:8080/odata/Expenses/Expenses?$skip=3&$top=3) as Server Url. You should now see a stacked bar chart showing data of expenses 4 to 6.
+5.  You can combine filters by using the **&** character. Repeat steps 1 - 4 but now use `http://localhost:8080/odata/Expenses/Expenses?$skip=3&$top=3` as Server Url. You should now see a stacked bar chart showing data of expenses 4 to 6.
 
 Other query examples are:
 
-[http://](http://localhost:8080/odata/Orders/Customers()?$top=100)[localhost:8080/odata/Expenses/Expenses(1688849860265137)](http://localhost:8080/odata/Orders/Customers()?$top=100)[http](http://localhost:8080/odata/Orders/Customers()?$top=100)[://localhost:8080/odata/Expenses/Expenses?$](http://localhost:8080/odata/Orders/Customers()?$top=100)[top=100](http://localhost:8080/odata/Orders/Customers()?$top=100)[http://localhost:8080/odata/](http://localhost:8080/odata/Orders/Customers()?$skip=10&$top=10)[Expenses/Expenses](http://localhost:8080/odata/Orders/Customers%28%29?$top=100)[?$skip=10&$](http://localhost:8080/odata/Orders/Customers()?$skip=10&$top=10)[top=10](http://localhost:8080/odata/Orders/Customers()?$skip=10&$top=10)[http://localhost:8080/odata/](http://localhost:8080/odata/Orders/Customers/$count)[Expenses/Expenses](http://localhost:8080/odata/Orders/Customers%28%29?$top=100)[/$](http://localhost:8080/odata/Orders/Customers/$count)[count](http://localhost:8080/odata/Orders/Customers/$count)<a rel="nofollow">http://localhost:8080/odata/</a>[Expenses/Expenses](http://localhost:8080/odata/Orders/Customers%28%29?$top=100)<a rel="nofollow">?$</a><a rel="nofollow">filter=Firstname+eq+'Ivan</a>'<a rel="nofollow">http://localhost:8080/odata/</a>[Expenses/Expenses](http://localhost:8080/odata/Orders/Customers%28%29?$top=100)<a rel="nofollow">?$</a><a rel="nofollow">filter=Firstname+ne+'Ivan</a>'<a rel="nofollow">http://localhost:8080/odata/</a>[Expenses/Expenses](http://localhost:8080/odata/Orders/Customers%28%29?$top=100)<a rel="nofollow">?$</a><a rel="nofollow">filter=DateOfBirth+gt+datetime'1995-01-01T00:00:00</a>'<a rel="nofollow">http</a><a rel="nofollow">://localhost:8080/odata/</a>[Expenses/Expenses](http://localhost:8080/odata/Orders/Customers%28%29?$top=100)<a rel="nofollow">?$</a><a rel="nofollow">filter=DateOfBirth+gt+datetime'2005-01-01T00:00:00</a><a rel="nofollow">'&$</a><a rel="nofollow">orderby=DateOfBirth</a>
+`[http://](http://localhost:8080/odata/Orders/Customers()?$top=100)[localhost:8080/odata/Expenses/Expenses(1688849860265137)](http://localhost:8080/odata/Orders/Customers()?$top=100)[http](http://localhost:8080/odata/Orders/Customers()?$top=100)[://localhost:8080/odata/Expenses/Expenses?$](http://localhost:8080/odata/Orders/Customers()?$top=100)[top=100](http://localhost:8080/odata/Orders/Customers()?$top=100)[http://localhost:8080/odata/](http://localhost:8080/odata/Orders/Customers()?$skip=10&$top=10)[Expenses/Expenses](http://localhost:8080/odata/Orders/Customers%28%29?$top=100)[?$skip=10&$](http://localhost:8080/odata/Orders/Customers()?$skip=10&$top=10)[top=10](http://localhost:8080/odata/Orders/Customers()?$skip=10&$top=10)[http://localhost:8080/odata/](http://localhost:8080/odata/Orders/Customers/$count)[Expenses/Expenses](http://localhost:8080/odata/Orders/Customers%28%29?$top=100)[/$](http://localhost:8080/odata/Orders/Customers/$count)[count](http://localhost:8080/odata/Orders/Customers/$count)<a rel="nofollow">http://localhost:8080/odata/</a>[Expenses/Expenses](http://localhost:8080/odata/Orders/Customers%28%29?$top=100)<a rel="nofollow">?$</a><a rel="nofollow">filter=Firstname+eq+'Ivan</a>'<a rel="nofollow">http://localhost:8080/odata/</a>[Expenses/Expenses](http://localhost:8080/odata/Orders/Customers%28%29?$top=100)<a rel="nofollow">?$</a><a rel="nofollow">filter=Firstname+ne+'Ivan</a>'<a rel="nofollow">http://localhost:8080/odata/</a>[Expenses/Expenses](http://localhost:8080/odata/Orders/Customers%28%29?$top=100)<a rel="nofollow">?$</a><a rel="nofollow">filter=DateOfBirth+gt+datetime'1995-01-01T00:00:00</a>'<a rel="nofollow">http</a><a rel="nofollow">://localhost:8080/odata/</a>[Expenses/Expenses](http://localhost:8080/odata/Orders/Customers%28%29?$top=100)<a rel="nofollow">?$</a><a rel="nofollow">filter=DateOfBirth+gt+datetime'2005-01-01T00:00:00</a><a rel="nofollow">'&$</a><a rel="nofollow">orderby=DateOfBirth</a>`
 
 ## 6\. Related content
 

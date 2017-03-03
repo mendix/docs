@@ -14,10 +14,7 @@ module.exports = {
     /****************************************************
      * API & SDK
      ****************************************************/
-	{
-      from: "/apidocs/",
-      to: "/apidocs-mxsdk/"
-    }, 
+
     {
       from: "/apidocs/Home",
       to: "/apidocs-mxsdk/apidocs/"

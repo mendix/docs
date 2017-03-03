@@ -6,6 +6,15 @@ category: "General"
 
 This document describes the supported deployment scenarios for the Application Test Suite (ATS).
 
+## Introduction
+
+Every customer situation is different. We want to make sure there's a convenient deployment option for ATS in all scenarios. The main difference is the place where your app is running, either in the cloud or on-premise. The second differentiator is the Selenium component. It can either run in the cloud or the customer can host it on-premise.
+For all scenarios we need to ensure a secure and reliable communication between the components.
+
+All in all there are four different supported deployment scenarios. This document describes and compares them.
+
+Please be aware that not every option supports the full set of features. Take a look at the [comparison](#comparing-the-options) to understand the differences.
+
 ## Components
 
 Every ATS deployment consists of four components: the ATS application, the Mendix Cloud Portal, a Selenium Runner, and your Application Under Test (AUT).
@@ -34,14 +43,48 @@ The AUT is the deployed Mendix application that you want to test.
 
 There is one standard deployment option in addition to three alternative options. The standard option is recommended, since it is optimized in terms of setup, ease of use, maintenance, and features.
 
-### Comparing the Options
+### Standard
+
+![Standard Option](attachments/deployment/deploymentoption_standard.png)
+
+The standard option is highly recommended for all customers. It supports all current and future features, is easy to setup, is maintenance-free, and gets the best support.
+
+### Public App On-Premise
+
+![Public app on-premise](attachments/deployment/deploymentoption_alternative1.png)
+
+*Public app on-premise* is meant for customers who run their app on premises. Since the app runs on premises, it is protected from external access via a firewall. In order to allow the Selenium Runner to access the app, you have to configure your firewall.
+
+### Private App On-Premise
+
+![Private app on-premise](attachments/deployment/deploymentoption_alternative2.png)
+
+*Private app on-premise* is meant for customers who run their app on premises and who don't want to open their firewall for the Selenium Runner. In order to enable communication between the Selenium Runner and your local application, you have to deploy a Selenium Saas Agent in your local network. This agent will establish a VPN tunnel to your Selenium Service Provider and route all traffic between the Selenium Runner and your application.
+
+### Customer Hosted Selenium
+
+![Customer hosted Selenium](attachments/deployment/deploymentoption_alternative3.png)
+
+*Customer hosted Selenium* is meant for customers who run their app on premises and who also want to run their own Selenium Runner. The challenging part of this option is that the customer needs to set up, maintain, and operate its own Selenium Runner.
+
+<div class="alert alert-warning">
+Selenium is an open-source third-party component and there is no active support from Mendix.
+</div>
+
+Since the Selenium Runner offers fewer features compared to Selenium SaaS Providers, it is not possible to make use of the full ATS feature set.
+
+<div class="alert alert-warning">
+The feature set in this option is limited.
+</div>
+
+## Comparing the Options
 
 Before you pick your option, you need to be aware of the differences. The following two sections will help you to make your choice.
 
-#### Features
+### Features
 
-Feature                       | Standard           | Alternative 1                 | Alternative 2                 | Alternative 3
------------------------------ | ------------------ | ----------------------------- | ----------------------------- | -----------------------------
+Feature                       | Standard       | Public app on-premise         | Private app on-premise        | Customer hosted Selenium
+----------------------------- | -------------- | ----------------------------- | ----------------------------- | -----------------------------
 Test Automation               | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][green] Yes
 Test Recording                | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][green] Yes
 OS Selection                  | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][red] No
@@ -50,50 +93,47 @@ Multiple Browsers<sup>1</sup> | ![][green] All | ![][green] All                |
 Mobile Testing<sup>2</sup>    | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][red] No
 Mendix Platform Integration   | ![][green] All | ![][grey] Limited<sup>4</sup> | ![][grey] Limited<sup>4</sup> | ![][grey] Limited<sup>4</sup>
 Live View & Video<sup>2</sup> | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][red] No
-Future Proof                  | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][red] No
+Future Proof<sup>5</sup>      | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][red] No
 
 <sup>1</sup> Only if supported by ATS.  
 <sup>2</sup> Feature not available yet.  
 <sup>3</sup> Additional setup for every browser required.  
-<sup>4</sup> Some future integrations require that your app runs in the Mendix Cloud.
+<sup>4</sup> ATS will integrate with several APIs from the Mendix Cloud to improve testing experience. Since some of these APIs are only available for apps that run in the Mendix Cloud, certain features cannot be offered for on-premise apps.  
+<sup>5</sup> Future features may depend on functionality offered by the Mendix Cloud or the Selenium service providers. They may not be available if you run your app on-premise or host your own Selenium server.
 
-#### Setup and Maintenance
+### Setup and Maintenance
 The following matrix compares the efforts for setup and maintenance of the different options.
 
-Aspect                                | Standard                       | Alternative 1              | Alternative 2               | Alternative 3
-------------------------------------- | ------------------------------ | -------------------------- | --------------------------- | ---------------------------------
-Firewall Setup                        | ![][green] None           | ![][red] Required          | ![][green] None<sup>1</sup> | ![][red] Required
-Selenium<sup>2</sup> Runner Setup     | ![][green] No<sup>3</sup> | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>   | ![][red] Customer responsibility
+Aspect                                | Standard                   | Public app on-premise      | Private app on-premise      | Customer hosted Selenium
+------------------------------------- | ---------------------------| -------------------------- | --------------------------- | ---------------------------------
+Firewall Setup                        | ![][green] None**          | ![][red] Required          | ![][green] None<sup>1</sup> | ![][red] Required
+Selenium<sup>2</sup> Runner Setup     | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>  | ![][green] No<sup>3</sup>   | ![][red] Customer responsibility
 Selenium<sup>2</sup> SaaS Agent Setup | ![][green] No<sup>4</sup>  | ![][green] No<sup>4</sup>  | ![][red] Yes                | ![][green] No<sup>4</sup>
 Selenium<sup>2</sup> Maintenance      | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup>  | ![][red] Customer responsibility
 Selenium<sup>2</sup> Support          | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup>  | ![][red] No
 
 <sup>1</sup> A Selenium SaaS Agent with VPN is used to surpass the company network firewall.  
 <sup>2</sup> Selenium is an open-source third-party component that is not maintained/supported by Mendix.  
-<sup>3</sup> Provided by your Selenium SaaS provider.
+<sup>3</sup> Provided by your Selenium SaaS provider.  
 <sup>4</sup> Not required in this option.
+
+## Setup Instructions
 
 ### Standard
 
-![Standard Option](attachments/deployment/deploymentoption_standard.png)
+There are no additional steps required to set up the standard option.
 
-The standard option is highly recommended for all customers. It supports all current and future features, is easy to setup, is maintenance-free, and gets the best support.
+### Public App On-Premise
 
-### Alternative Option 1
-
-![Alternative Option 1](attachments/deployment/deploymentoption_alternative1.png)
-
-Alternative option 1 is meant for customers who run their app on premises. Since the app runs on premises, it is protected from external access via a firewall. In order to allow the Selenium Runner to access the app, you have to configure your firewall.
+This option requires you to configure your firewall in order to allow Selenium to establish a connection to your AUT.
 
 #### Firewall Configuration
 
 The firewall should accept connections from the internet either on port 80 (if you use http) or port 443 (if you use https) and forward to the web server of your Mendix application.
 
-### Alternative Option 2
+### Private App On-Premise
 
-![Alternative Option 2](attachments/deployment/deploymentoption_alternative2.png)
-
-Alternative option 2 is meant for customers who run their app on premises and who don't want to open their firewall for the Selenium Runner. In order to enable communication between the Selenium Runner and your local application, you have to deploy a Selenium Saas Agent in your local network. This agent will establish a VPN tunnel to your Selenium Service Provider and route all traffic between the Selenium Runner and your application.
+This option requires you to deploy an agent component on-premise.
 
 #### Agent Setup
 
@@ -105,21 +145,13 @@ BrowserStack     | BrowserStack Local  | [Here](https://www.browserstack.com/loc
 SauceLabs        | Sauce Connect Proxy | [Here](https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect+Proxy)
 TestingBot       | TestingBot Tunnel   | [Here](https://testingbot.com/support/other/tunnel)
 
-### Alternative Option 3
+### Customer Hosted Selenium
 
-![Alternative Option 3](attachments/deployment/deploymentoption_alternative3.png)
-
-Alternative option 3 is meant for customers who run their app on premises and who also want to run their own Selenium Runner. The challenging part of this option is that the customer needs to set up, maintain, and operate its own Selenium Runner.
+This option requires you to setup your own Selenium server on-premise.
 
 <div class="alert alert-warning">
 Selenium is an open-source third-party component and there is no active support from Mendix.
 </div>
-
-Since the Selenium Runner offers fewer features compared to Selenium SaaS Providers, it is not possible to make use of the full ATS features set.
-
- <div class="alert alert-warning">
-The feature set in this option is limited.
- </div>
 
 #### Selenium Runner Setup
 
@@ -166,6 +198,10 @@ Before you start, make sure that your server has internet access to download the
     ```sh
     docker-compose scale firefoxnode=2 chromenode=2
     ```
+
+#### Firewall Configuration
+
+The firewall should accept TCP connections from the internet on port 4444 (the standard port for selenium server). This port should forward to your selenium server.
     
 [green]:attachments/deployment/green.png
 [grey]:attachments/deployment/grey.png

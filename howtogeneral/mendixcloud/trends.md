@@ -36,11 +36,11 @@ More information on this graph is available in a Tech Blog post: [What's in my J
 
 The application server thread pool graph shows the amount of concurrent requests that are being handled bij the mendix runtime, but only when they're initiated by a remote API, like the way the normal web based client communicates, or by calling web services. Because creating new thread which can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the amount of requests that's flowing through the application.
 
-## <a name="Trends-app_mxruntimethreads"></a>7 Total amount of threads in the JVM process
+## <a name="Trends-appmxruntimethreads"></a>7 Total amount of threads in the JVM process
 
 This graph shows the complete number of theads that exist inside the running JVM process. Besides the threadpool that is used for external http requests, as shown above, this includes the threadpool used for database connections, internal processes inside the Mendix Runtime and optional extra threads created by the application itself, e.g. using a threadpool in a custom module or custom java code.
 
-## <a name="Trends-app_mxruntime_cache"></a>8 Object Cache
+## <a name="Trends-appmxruntimecache"></a>8 Object Cache
 
 Mendix 4.0 introduced Non-Persistent Entities which live in the JVM memory and are garbage collected regularly. If you have a memory leak, the amount of objects in memory will grow over time. This might be a problem. In this graph you can monitor the number of Mendix Objects that live in memory.
 
@@ -102,7 +102,7 @@ The disk latency graph shows the average waiting times for disk operations to co
 
 Disk throughput shows the amount of data that is being read from and written to disk. If there's more than one disk partition in the system, the /srv partition generally holds project files and uploaded files of the application and /var generally holds the database storage.
 
-### <a name="Trends-appdfabs"></a><a name="Trends-dbdfabs"></a>11.5 Disk Usage
+### <a name="Trends-appdfabs"></a><a name="Trends-dbdfabs"><a name="Trends-dbdf"><a name="Trends-appdf"></a>11.5 Disk Usage
 
 This graph displays the amount of data that is stored on disk in absolute amounts. If there's more than one disk partit
 ion in the system, the /srv partition generally holds project files and uploaded files of the application and /var general

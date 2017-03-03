@@ -233,6 +233,31 @@ const checkFiles = (opts) => {
         })
       }
       console.log('')
+
+      let indexMappingHeader = [
+        '############################################################################################',
+        `# Mendix indexes redirect mapping, generated from \'gulp check:html\'`,
+        '############################################################################################',
+        ''
+      ];
+      let indexFiles = _.chain(files)
+        .filter(file =>
+          file.basePath.indexOf('index.html') !== -1 &&
+          file.basePath !== '/index.html' &&
+          file.basePath !== '/search/index.html'
+        )
+        .map(file => { return {
+          to: file.basePath.replace(/index\.html/, ''),
+          from: file.basePath.replace(/\/index\.html/, '')
+        }; })
+        .sortBy(file => file.from.length)
+        .map(file => `${file.from} ${file.to};`)
+        .value();
+      let indexes = indexMappingHeader.concat(indexFiles).join('\n');
+      console.log(indexes);
+
+
+
       if (errors.length === 0) {
         if (files.length === 0) {
           console.log(`It seems there are no files to check. This looks bad`);

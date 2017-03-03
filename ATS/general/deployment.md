@@ -146,7 +146,7 @@ TestingBot       | TestingBot Tunnel   | [Here](https://testingbot.com/support/o
 
 ### 5.4 Customer-Hosted Selenium
 
-This option requires you to set up your own Selenium server on-premises.
+This option requires you to set up your own Selenium Server on-premises.
 
 <div class="alert alert-warning">
 Selenium is an open-source third-party component and there is no active support from Mendix.

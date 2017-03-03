@@ -2,6 +2,7 @@
 
 const url = require('url');
 const path = require('path');
+const fs = require('fs');
 const _ = require('lodash');
 const gutil = require('gulp-util');
 const cheerio = require('cheerio');
@@ -242,7 +243,7 @@ const checkFiles = (opts) => {
       ];
       let indexFiles = _.chain(files)
         .filter(file =>
-          file.basePath.indexOf('index.html') !== -1 &&
+          file.basePath.indexOf('/index.html') !== -1 &&
           file.basePath !== '/index.html' &&
           file.basePath !== '/search/index.html'
         )
@@ -253,21 +254,28 @@ const checkFiles = (opts) => {
         .sortBy(file => file.from.length)
         .map(file => `${file.from} ${file.to};`)
         .value();
+
       let indexes = indexMappingHeader.concat(indexFiles).join('\n');
-      console.log(indexes);
+      const indexDest = path.join(SOURCEPATH, '/mappings/indexes.map');
 
-
-
-      if (errors.length === 0) {
-        if (files.length === 0) {
-          console.log(`It seems there are no files to check. This looks bad`);
+      fs.writeFile(indexDest, indexes, err => {
+        if (err) {
+          gutil.log(`Error writing index mappings: ${err}`)
           opts.callback(true);
         } else {
-          opts.callback(false);
+          gutil.log(`Index mappings written to ${indexDest}`);
+          if (errors.length === 0) {
+            if (files.length === 0) {
+              console.log(`It seems there are no files to check. This looks bad`);
+              opts.callback(true);
+            } else {
+              opts.callback(false);
+            }
+          } else {
+            opts.callback(true);
+          }
         }
-      } else {
-        opts.callback(true);
-      }
+      });
     })
     .catch(err => {
       helpers.gulpErr('htmlproofer', err);

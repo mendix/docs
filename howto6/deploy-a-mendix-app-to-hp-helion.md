@@ -21,7 +21,7 @@ This how-to focuses on deploying to the HP Helion Development Platform.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Download the latest version of the Mendix Modeler from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers)
-* Have access to an [HP Helion Development Platform](http://www8.hp.com/us/en/cloud/helion-devplatform-overview.html) instance with MySQL or PostgreSQL (for installation details, see the [HPE Helion Development Platform: Quick Start Developer Trial](http://docs.hpcloud.com/helion/devplatform/ALS-developer-trial-quick-start/))
+* Have access to an [HP Helion Development Platform](http://www8.hp.com/us/en/cloud/helion-devplatform-overview.html) instance with MySQL or PostgreSQL (for installation details, see the [HPE Helion Documentation](https://docs.hpcloud.com/)).
     * Have a user account with the rights to create new applications and services
     * Have an S3 or S3-compatible object store with user credentials, a bucket, and rights to create and delete objects
     * Enable sticky sessions on the Cloud Foundry router (in order to scale your app up to more than one instance)

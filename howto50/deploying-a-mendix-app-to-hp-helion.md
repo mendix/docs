@@ -13,7 +13,7 @@ To follow this guide you will need to have access to an [HP Helion Development P
 ## 1. Preparation
 
 *   Download the [latest version of the Mendix Modeler](https://appstore.home.mendix.com/link/modelers) from the Mendix App Store.
-*   If you don't have an HP Helion Development Platform set up, you can follow this guide on [installing the Dev Platform on the HP Cloud](http://docs.hpcloud.com/helion/devplatform/ALS-developer-trial-quick-start/).
+*   If you don't have an HP Helion Development Platform set up, you can view the follow this guide on [HPE Helion documentation](https://docs.hpcloud.com/devplat-1.3/index.html#1.3/installation/devplatform_commercial_install.html).
 
 ## 2\. Configure the Helion endpoint in the Modeler
 

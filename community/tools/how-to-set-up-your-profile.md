@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 My Community Profile
 
-The first thing you want to check out is your [Community Profile](https://developer.mendixcloud.com/link/profile) page. To get there, mouse over your picture in the navigation bar and click **My Community Profile**. This overview page shows a the main page of your profile, including your summary, skills, industry experience, and badges.
+The first thing you want to check out is your [Community Profile](https://developer.mendixcloud.com/link/profile) page. To get there, mouse over your picture in the navigation bar and click **My Community Profile**. This overview page shows the main page of your profile, including your summary, skills, industry experience, and badges.
 
 ![](attachments/how-to-set-up-your-profile/community-profile.png)
 

@@ -21,7 +21,7 @@ None.
 
 ## 3 Download the Required Modules from the Mendix App Store
 
-Within this part of the how to you will learn how to download the necessary modules from the Mendix App Store. This is a very quick process, in that in just a few clicks the modules will be imported into your project. The modules that are required for this process are the **MxModelReflection, Encyption,** and **Email Module with Templates** modules.
+In this part of the how-to, you will learn how to download the necessary modules from the Mendix App Store. This is a very quick process, as the modules will be imported into your project in just a few clicks. The modules that are required for this process are called MxModelReflection, Encyption, and Email Module with Templates.
 
 <div class="alert alert-info">
 
@@ -29,25 +29,35 @@ The MxModelReflection module is a commonly used module in most apps. The purpose
 
 </div>
 
-### 3.1 Download the 'MxModelReflection' Module
+### 3.1 Download the MxModelReflection Module
 
-1.  Open the **Mendix App Store** from within the modeler.
-2.  Search for the keyword **Reflection.**
-3.  Click the **Download** button and include the module as a new module.![](attachments/18448688/18581166.png)
-4.  Ensure the module has downloaded successfully and is now a new module in your project.
+1. Open the **Mendix App Store** from within the Modeler.
+2. Search for the keyword *Reflection*.
+3. Click **Download** and include the module as a new module:
 
-### 3.2 Download the 'Encryption' Module
+    ![](attachments/18448688/18581166.png)
 
-1.  Open the **Mendix App Store** from within the modeler.
-2.  Search for the keyword **Encryption.**
-3.  Click the **Download** button and include the module as a new module.![](attachments/18448688/18581179.png)
-4.  Ensure the module has downloaded successfully and is now a new module in your project.
+4. Ensure the module has been downloaded successfully and is now a new module in your project.
 
-### 3.3 Download the 'Email Module with Templates' Module 
+### 3.2 Download the Encryption Module
 
-1.  Open the **Mendix App Store** from within the modeler.
-2.  Search for the keywords **Email Template**.
-3.  Click the **Download** button and include the module as a new module.![](attachments/18448688/18581178.png)
+1. Open the **Mendix App Store** from within the Modeler.
+2. Search for the keyword *Encryption*.
+3. Click **Download** and include the module as a new module:
+
+    ![](attachments/18448688/18581179.png)
+
+4. Ensure the module has been downloaded successfully and is now a new module in your project.
+
+### 3.3 Download the Email Module with Templates Module 
+
+1. Open the **Mendix App Store** from within the modeler.
+2. Search for the keywords *Email Template*.
+3. Click **Download** and include the module as a new module.
+
+    ![](attachments/18448688/18581178.png)
+
+4. Ensure the module has been downloaded successfully and is now a new module in your project.
 
 <div class="alert alert-warning">
 
@@ -57,12 +67,20 @@ Depending on the layout selected when the project was created, errors in the mod
 
 ## 4 Add Navigation Items to Allow Users to Configure Settings
 
-In this part of the how to you will learn how to add the required pages into the Project Navigation that are needed to configure both the SMTP settings and email templates that will be used within the application.
+In this part of the how-to, you will learn how to add the required pages into the **Project Navigation** that are needed to configure both the SMTP settings and email templates that will be used within the application.
 
-1.  Open **Navigation** within the project.
-2.  Add a new item to the Navigation for **Administrator** to access **MxModelReflection.MxObjects_Overview**.![](attachments/18448688/18581165.png)
-3.  Add a new item to the Navigation for **Administrator** to access **EmailTemplate.IVK_OpenEmailSettings**.![](attachments/18448688/18581177.png)
-4.  Add a new item to the Navigation for **Administrator** to access **EmailTemplate.EmailTemplate_Overview**.![](attachments/18448688/18581176.png) 
+1. Open the **Navigation** tab within the project.
+2. Add a new item to the Navigation for **Administrator** to access **MxModelReflection.MxObjects_Overview**:
+
+    ![](attachments/18448688/18581165.png)
+
+3. Add a new item to the Navigation for **Administrator** to access **EmailTemplate.IVK_OpenEmailSettings**:
+
+    ![](attachments/18448688/18581177.png)
+
+4. Add a new item to the Navigation for **Administrator** to access **EmailTemplate.EmailTemplate_Overview**:
+
+    ![](attachments/18448688/18581176.png) 
 
 <div class="alert alert-info">
 
@@ -72,37 +90,40 @@ Within the EmailTemplate module, there are several useful pages that can help in
 
 ## 5 Configuration
 
-In this part of the how to you will learn how to run the MxModelReflection synchronization, configure the SMTP settings required to send email from the app, the encryption module, and email templates that will be used in the app. SMTP server settings and configurations should be known at time of configuration. This encompasses settings such as username and password (if authentication is required), server name/address, port number for SMTP relay (25 is default, 587 for TLS), and sender address.
+In this part of the how-to, you will learn how to run the MxModelReflection synchronization as well as configure the SMTP settings required to send email from the app, the encryption module, and email templates that will be used in the app. SMTP server settings and configurations should be known at the time of configuration. This encompasses settings such as username and password (if authentication is required), server name/address, port number for SMTP relay (25 is default, 587 for TLS), and sender address.
 
 ### 5.1 Run the MxModelReflection Synchronization
 
-1.  Open the **MxModelReflection** overview page via the Navigation item configured to **MxModelReflection.MxObjects_Overview**.
-2.  Highlight each module the app needs to synchronize and click the **Toggle Module Sync** button (the Sync this Module should now be 'Yes').
-3.  Click the **Synchronize Objects** button to execute the synchronization process.
+1. Open the **MxModelReflection** overview page via the navigation item configured to **MxModelReflection.MxObjects_Overview**.
+2. Highlight each module the app needs to synchronize and click **Toggle Module Sync** (**Sync this Module** should now be **Yes**).
+3. Click **Synchronize Objects** to execute the synchronization process.
 
 ### 5.2 Configuring SMTP Settings
 
-1.  Open the **SMTP Settings** page via the Navigation item configured to **EmailTempate.IVK_OpenEmailSettings**.
-2.  If an account is required to authenticate against the SMTP server, enter the **User name** and **Password'**(which will be encrypted).
-3.  Configure the **Server** as the SMTP server location (server name or IP address).
-4.  Configure the **Port** that will be open to SMTP relay (25 is default, 465 for SSL encryption, 587 for TLS encryption).
-5.  Configure the **From address** that will be the sender of the email.
-6.  Select an encryption method if SSL or TLS encryption methods are required to send SMTP relay.
-7.  **Save** the SMTP configuration settings.
+1. Open the **SMTP Settings** page via the navigation item configured to **EmailTempate.IVK_OpenEmailSettings**.
+2. If an account is required to authenticate against the SMTP server, enter the **User name** and **Password**(which will be encrypted).
+3. Configure the **Server** as the SMTP server location (server name or IP address).
+4. Configure the **Port** that will be open to SMTP relay (25 is default, 465 for SSL encryption, 587 for TLS encryption).
+5. Configure the **From address** that will be the sender of the email.
+6. Select an encryption method if SSL or TLS encryption methods are required to send an SMTP relay.
+7. Click **Save** to save the SMTP configuration settings:
+
     ![](attachments/18448688/18581171.png)
 
 <div class="alert alert-info">
 
-Make sure to allow a administrator to access this page and has read/write the configuration settings entity.
+Make sure to allow a administrator to access this page and that they can read/write the configuration settings entity.
 
 </div>
 
 ### 5.3 Configuring Email Templates
 
-1.  Open the **Email Template Overview** page via the Navigation item configured to EmailTemplate.EmailTemplate_Overview.
-2.  Click **New** to start the creation of a new template.
-3.  Enter a name for the template in the **Name** field.
-4.  Specify by default what the values are for 'From', 'CC', 'BCC', 'Subject', and 'Use Only Plain Text'.![](attachments/18448688/18581167.png)
+1. Open the **Email Template Overview** page via the navigation item configured to **EmailTemplate.EmailTemplate_Overview**.
+2. Click **New** to start the creation of a new template.
+3. Enter a name for the template in the **Name** field.
+4. Specify by default what the values are for **From**, **CC**, **BCC**, **Subject**, and **Use Only Plain Text**:
+
+    ![](attachments/18448688/18581167.png)
 
     <div class="alert alert-info">
 

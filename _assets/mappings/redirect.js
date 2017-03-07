@@ -40,7 +40,7 @@ module.exports = {
     },
     {
       from: "/apidocs/API+documentation",
-      to: "/apidocs-mxsdk/apidocs/"
+      to: "/apidocs-mxsdk/apidocs/index"
     },
     {
       from: "/apidocs/Invite+API",
@@ -120,7 +120,7 @@ module.exports = {
     },
     {
       from: "/MXSDK/Mendix+SDK+Home",
-      to: "/apidocs-mxsdk/mxsdk/"
+      to: "/apidocs-mxsdk/mxsdk/index"
     },
     {
       from: "/MXSDK/JavaScript+TypeScript+Resources",

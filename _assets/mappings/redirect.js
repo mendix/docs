@@ -16,7 +16,7 @@ module.exports = {
      ****************************************************/
     {
       from: "/apidocs/Home",
-      to: "/apidocs-mxsdk/apidocs/"
+      to: "/apidocs-mxsdk/apidocs/index"
     },
     {
       from: "/apidocs/Authentication",

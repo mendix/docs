@@ -130,22 +130,28 @@ Make sure to allow a administrator to access this page and that they can read/wr
     All of the email values for To, From, CC, BCC, and Subject can be overridden once the email functionality is implemented if those values are to be dynamic within the app. Also, attachments can be added to this process at runtime within a microflow. 
 
     </div>
-5.  Configure both HTML Text and Plain Text formats for the email with the template text needed to be in the email body. Since the template can handle tokens (described next) go ahead and put placeholders in for those dynamic attributes needed in the email in the format of &123;%TokenSequenceNumber%&125;
+5. Configure both the HTML Text and Plain Text formats for the email with the template text that needs to be in the email body. Since the template can handle tokens (described next), put placeholders in for the dynamic attributes needed in the email in the format of `&123;%TokenSequenceNumber%&125;`.
+
     ![](attachments/18448688/18581168.png)
-6.  Specify and upload any attachments that will be sent automatically when the email is triggered
+
+6. Specify and upload any attachments that will be sent automatically when the email is triggered.
 
 ### 5.4 Configuring the Template Tokens
 
-1.  Select the object that the token will need to be derived from.
+1. Select the object from which the token will need to be derived:
+
     ![](attachments/18448688/18581162.png)
 
     <div class="alert alert-info">
 
-    Within the context of Email Templates, the object will be the Entity in the Domain Model that the data value will be derived from.
+    Within the context of email templates, the object will be the entity in the Domain Model from which the data value will be derived.
 
     </div>
-2.  Set the **TokenSequenceNumber** between the token characters, **Description**, the **Attribute** that will populate in the email when triggered.![](attachments/18448688/18581163.png)
-3.  Save the token and the template
+2. Set the **TokenSequenceNumber** between the token characters, the **Description**, and the **Attribute** that will populate in the email when triggered:
+
+    ![](attachments/18448688/18581163.png)
+
+3.  Save the token and the template.
 
     <div class="alert alert-info">
 

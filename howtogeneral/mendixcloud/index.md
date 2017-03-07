@@ -2,7 +2,19 @@
 title: "Mendix Cloud"
 space: "General How-To's"
 ---
+The Mendix Cloud is our public cloud service and the default deployment option for Mendix applications.
+
 Learn how to deploy your app, either in a Sandbox or to the Cloud. And go check out our AppCloudServices.
+
+## Free App
+Every App that you create from the Mendix Modeler or the Developer Portal, will always get a Free App with one environment in the Mendix Cloud. This environment is called a Sandbox. 
+
+## Node
+A Free App can be upgraded to a licensed App with a Node in the Mendix Cloud. A Node has several environments and is hosted on Mendix Cloud V3 or Mendix Cloud V4. 
+
+## Environment
+A Node has a minimum of two environments: production and acceptance. A test environment is a third optional environment. You can deploy your licensed app (that is linked to a node) to its environments.
+
 
 *   [Custom Domains](custom-domains)
 *   [Deploying to a Free App](deploying-to-a-free-app)

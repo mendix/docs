@@ -161,31 +161,38 @@ Make sure to allow a administrator to access this page and that they can read/wr
 
 ### 5.5 Configuring the Encryption Key
 
-Navigate to the **Encryption.EncryptionKey** constant within the app and set this value to a 16-character alpha-numeric value.![](attachments/18448688/18581170.png)
+Navigate to the **Encryption.EncryptionKey** constant within the app and set this value to a 16-character alpha-numeric value:
+
+![](attachments/18448688/18581170.png)
 
 ## 6 Implementing Email Functionality
 
-In this part of the how to you will learn how to utilize the previous configurations to send custom emails from the app by invoking microflows that interact with the EmailTemplate module. There is an example microflow within the EmailTemplate module (EmailTemplate.IVK_CreateAndSendEmail) that should be used as a basis for all email transmissions.
+In this part of the how-to, you will learn how to utilize the previous configurations to send custom emails from the app by invoking microflows that interact with the EmailTemplate module. There is an example microflow within the EmailTemplate module (EmailTemplate.IVK_CreateAndSendEmail) that should be used as the basis for all email transmissions.
 
-### 6.1 Configure Microflow to Send Emails
+### 6.1 Configuring the Microflow to Send Emails
 
-1.  Duplicate the **EmailTemplate.IVK_CreateAndSendEmail** microflow.
-2.  Rename the duplicated microflow to a desired name.
-3.  Move the microflow into a non-App Store content module so it is not overwritten or removed in the future.
-4.  Change the microflow to use input parameters relevant to the emails in your app.
-5.  Example objects of Order and Customer should be removed for valid objects.
-6.  The appropriate EmailTemplate should be retrieved and passed to this microflow.![](attachments/18448688/18581160.png)
-7.  Customize the Action **Set email data based on the customer and template** to the necessary attributes from the microflow parameters.![](attachments/18448688/18581161.png)
-8.  Test the functionality to ensure SMTP and templates are configured correctly.
+1. Duplicate the **EmailTemplate.IVK_CreateAndSendEmail** microflow.
+2. Rename the duplicated microflow to the desired name.
+3. Move the microflow into a non-App Store content module so that it is not overwritten or removed in the future.
+4. Change the microflow to use the input parameters relevant to the emails in your app.
+5. Remove the **Order** and **Customer** example objects for valid objects.
+6. The appropriate EmailTemplate should be retrieved and passed to this microflow:
+
+    ![](attachments/18448688/18581160.png)
+
+7. Customize the **Set email data based on the customer and template** Actionto the necessary attributes from the microflow parameters:
+
+    ![](attachments/18448688/18581161.png)
+
+8. Test the functionality to ensure the SMTP and templates are configured correctly.
 
 <div class="alert alert-info">
 
-It is very important to setup Log Activities within the microflows to capture errors or other key events in the log for ease of debugging.
+It is very important to set up log activities within the microflows to capture errors or other key events in the log for ease of debugging.
 
 </div>
 
-## 7 Related content
+## 7 Related Content
 
-*   [Send Custom Emails From Your App](send-custom-emails-from-your-app)
-*   [Explore our connectors and adapters](explore-the-connectors-and-adapters)
-*   [Access a Samba share from the MxCloud](access-a-samba-share-from-the-mxcloud)
+* [How to Explore the Connectors and Adapters](explore-the-connectors-and-adapters)
+* [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)

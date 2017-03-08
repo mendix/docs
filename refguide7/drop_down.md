@@ -1,28 +1,28 @@
 ---
-title: "Drop-down"
+title: "Drop-Down"
 space: "Mendix 7 Reference Guide"
 parent: "input-widgets"
 ---
-
 
 A drop-down is an [input widget](input-widgets) that can be used to display and edit enumeration attributes. It should not be confused with a reference selector, which is used to select a object with which to fill an [association](associations).
 
 <div class="alert alert-info">{% markdown %}
 
  ![](attachments/16713880/16844000.png)
-This drop-down widget allows the end user to select the state of the customer.
+ 
+This drop-down widget allows the user to select the state of the customer.
 
 {% endmarkdown %}</div>
 
-## General properties
+## General Properties
 
-### Empty option caption
+### Empty Option Caption
 
-This property represents the caption for the empty option in drop-down shown to the end user. This is a translable text. See [Translatable Texts](translatable-texts).
+This property represents the caption for the empty option in the drop-down shown to the user. This is a translable text. For more details, see [Translatable Texts](translatable-texts).
 
 <div class="alert alert-info">{% markdown %}
 
-Filling out the caption for an empty option increases user experience of your application. It also helps screen reader users to operate with the application easily. For example drop-down that represents color selection for a car could have "Select a color" caption.
+Filling out the caption for an empty option increases the user experience of your application. It also helps screen-reader users to operate the application easily. For example, the drop-down that represents the color selection for a car could have a caption reading "Select a color."
 
 {% endmarkdown %}</div>
 

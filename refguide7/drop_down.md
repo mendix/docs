@@ -16,6 +16,20 @@ This drop-down widget allows the end user to select the state of the customer.
 
 ## General properties
 
+### Empty option caption
+
+This property represents the caption for the empty option in drop-down shown to the end user. This is a translable text. See [Translatable Texts](translatable-texts).
+
+<div class="alert alert-info">{% markdown %}
+
+Filling out the caption for an empty option increases user experience of your application. It also helps screen reader users to operate with the application easily. For example drop-down that represents color selection for a car could have "Select a color" caption.
+
+{% endmarkdown %}</div>
+
+<div class="alert alert-info">{% markdown %}
+Empty option caption is available since Mendix 7.1.0.
+{% endmarkdown %}</div>
+
 {% snippet Required+Property.md %}
 
 {% snippet Required+message+Property.md %}

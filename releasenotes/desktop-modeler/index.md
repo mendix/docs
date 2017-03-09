@@ -54,3 +54,9 @@ These are the release notes for the Mendix Desktop Modeler:
 The patch release notes are also included here.
 
 </div>
+
+<div class="alert alert-info">{% markdown %}
+
+The [Windows Service](windows-service) relese notes are also included here.
+
+{% endmarkdown %}</div>

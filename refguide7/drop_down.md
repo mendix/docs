@@ -27,20 +27,22 @@ Filling out the caption for an empty option increases the user experience of you
 {% endmarkdown %}</div>
 
 <div class="alert alert-info">{% markdown %}
-Empty option caption is available since Mendix 7.1.0.
+
+The empty option caption is available from Mendix 7.1.0.
+
 {% endmarkdown %}</div>
 
 {% snippet Required+Property.md %}
 
 {% snippet Required+message+Property.md %}
 
-## Data source properties
+## Data Source Properties
 
 {% snippet Attribute+Path+Property.md %}
 
 {% snippet Label+Property.md %}
 
-## Editability properties
+## Editability Properties
 
 {% snippet Editable+Property.md %}
 
@@ -52,7 +54,7 @@ Empty option caption is available since Mendix 7.1.0.
 
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}
 
-## Events properties
+## Events Properties
 
 {% snippet On+Change+Event.md %}
 
@@ -60,7 +62,7 @@ Empty option caption is available since Mendix 7.1.0.
 
 {% snippet On+Leave+Event.md %}
 
-## Common properties
+## Common Properties
 
 {% snippet Name+Property.md %}
 
@@ -70,7 +72,7 @@ Empty option caption is available since Mendix 7.1.0.
 
 {% snippet Tab+index+Property.md %}
 
-## Related articles
+## Related Content
 
-*   [Data view](data-view)
+*   [Data View](data-view)
 *   [Attributes](attributes)

@@ -5,6 +5,7 @@ space: "Release Notes"
 
 These are the release notes for the Mendix Platform Portal:
 
+* [2017-03-09](2017-03-09)
 * [2017-02-21](2017-02-21)
 * [2016-10-05](2016-10-05)
 * [2016-05-12](2016-05-12)

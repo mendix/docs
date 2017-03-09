@@ -57,6 +57,6 @@ The patch release notes are also included here.
 
 <div class="alert alert-info">{% markdown %}
 
-The [Windows Service](windows-service) relese notes are also included here.
+The [Windows Service](windows-service) release notes are also included here.
 
 {% endmarkdown %}</div>

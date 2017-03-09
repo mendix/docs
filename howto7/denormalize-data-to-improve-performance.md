@@ -102,7 +102,7 @@ Now the application is ready to store redundant data, but you still need to keep
     * Select **OrderList** as the **Input Variable**
     * Select **Sum** as the **Function**
     * Select **TotalPrice** as the **Attribute**
-    * Emter *SumTotalPrice* as the **Output Variable** name
+    * Enter *SumTotalPrice* as the **Output Variable** name
 
     ![](attachments/18448743/18582153.png)
 16. Click **OK** to save the activity. Your microflow should now look like this:

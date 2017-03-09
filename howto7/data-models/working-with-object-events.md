@@ -1,5 +1,5 @@
 ---
-title: "Working With Object Events"
+title: "Work with Object Events"
 space: "Mendix 7 How-To's"
 category: "Data Models"
 tags: []

@@ -1,5 +1,5 @@
 ---
-title: "Setting up data validation"
+title: "Set Up Data Validation"
 space: "Mendix 7 How-To's"
 category: "Data Models"
 tags: []

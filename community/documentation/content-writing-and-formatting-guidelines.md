@@ -91,7 +91,7 @@ If you need to add a class to a link, add extra attributes using `{ }`.
 
 We use this for our links that are **Download** buttons: `[Download](#){: .btn.btn-primary}`
 
-This will result in: [Download](#){: .btn.btn-primary}
+This will result in: [Download](hyperlink){: .btn.btn-primary}
 
 # 5 Guidelines for Writing and Formatting the How-To's
 

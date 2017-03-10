@@ -90,4 +90,3 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 *   [Starting your own repository](starting-your-own-repository)
 *   [Using Team Server - Version Control](using-team-server-_-version-control)
 *   [Gathering user feedback](gathering-user-feedback)
-*   [Sharing the Development Database](sharing-the-development-database)

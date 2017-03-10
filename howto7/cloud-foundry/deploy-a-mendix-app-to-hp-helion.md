@@ -186,7 +186,6 @@ If you encounter any problems, you should consult the application logs:
 
 * [How to Deploy a Mendix App to IBM Bluemix](deploy-a-mendix-app-to-ibm-bluemix)
 * [How to Deploy a Mendix App to Pivotal](deploy-a-mendix-app-to-pivotal)
-* [How to Deploy a Mendix App to HP Helion](deploy-a-mendix-app-to-hp-helion)
 * [How to Deploy a Mendix App to Cloud Foundry](deploy-a-mendix-app-to-cloud-foundry)
 * [HP Helion Development Platform ALS documentation](http://docs.hpcloud.com/als/v1/)
 * [HP Helion Development Platform documentation](http://docs.hpcloud.com/helion/devplatform/1.1/)

@@ -15,7 +15,7 @@ To download the Windows Service, go to the Modeler page in the [Mendix App Store
 
 ## 4.4
 
-**Release date: September 20, 2016**
+**Release date: September 20th, 2016**
 
 * When an app is updated with a deployment archive, the old app will not be copied anymore to a backup file. In the user interface, there is a checkbox now to enable backing up the old app. (ticket 41885)
 * Fixed exception which occurs when showing active server actions (ticket 41924, 44180).
@@ -25,7 +25,7 @@ Add DB2 and MariaDB as database types. They will only be useful when supported b
 
 ## 4.3
 
-**Release date: March 4, 2016**
+**Release date: March 4th, 2016**
 
 * Added support for Mendix 6.3. Please reinstall the service if the app has been upgraded from an earlier version.
 * Fixed exception about too large numbers in constants (System.OverflowException: Value was either too large or too small for an Int32) and the fact that the Settings were partly reset in that case. (ticket 463290, 462793)
@@ -40,7 +40,7 @@ Add DB2 and MariaDB as database types. They will only be useful when supported b
 
 ### 4.2.1
 
-**Release date: April 13, 2015**
+**Release date: April 13th, 2015**
 
 * Disabled 'Show or add license' button if an app is not running (ticket 204548).
 * Prevented the shared runtime mxclientsystem folder from being emptied when an app has to be removed (ticket 204549).
@@ -50,7 +50,7 @@ Add DB2 and MariaDB as database types. They will only be useful when supported b
 
 ### 4.2.0
 
-**Release date: January 16, 2014**
+**Release date: January 16th, 2014**
 
 Please be aware of the fact that all service user passwords and database passwords will be encrypted in the settings files after opening the Mendix Service Console for the first time. Only database passwords of already as service installed apps will be untouched, until you reinstall their services.
 
@@ -75,7 +75,7 @@ Changes between 4.2-beta2 and 4.2:
 
 ### 4.2.0 Beta 2
 
-**Release date: July 10, 2013**
+**Release date: July 10th, 2013**
 
 * Ticket 20737: Improved working of the Start service button. The database can now be synchronized, even if the app is started via the Start service button. The Start button is invisible by default, if the service is installed.
 * Ticket 16404, 15319 (partially): Added encryption for service account password and database password.
@@ -94,7 +94,7 @@ Changes between 4.2-beta2 and 4.2:
 
 ### 4.2.0 Beta 1
 
-**Release date: June 10, 2013**
+**Release date: June 10th, 2013**
 
 * Support for running Mendix 5 apps.
 * Ticket 16884: Fixed error on service start: Request <(..)> failed: Unable to connect to remote server. Maybe the service could not be started.
@@ -111,7 +111,7 @@ Changes between 4.2-beta2 and 4.2:
 
 ## 4.1
 
-**Release date: March 4, 2013**
+**Release date: March 4th, 2013**
 
 This release introduces two great new functionalities: you can enable the debugger and you can show the actions which are currently active on the server. In addition, many issues are solved, such as the errors which occur while updating apps.
 
@@ -133,9 +133,7 @@ You can safely update the Mendix Service Console. You don't have to stop the cur
 
 ## 4.0
 
-**Release date: December 12, 2012**
-
-Summary
+**Release date: December 12th, 2012**
 
 Mendix Service Console 4 manages all your Mendix 3 and 4 apps within one application. The left bar shows all the apps on your server. When you click an app, you can manage that app on the panel at the right side. You can show logging output of all your apps in separate windows.
 Installation
@@ -181,3 +179,201 @@ Now each app has its own license, even if it runs under the same user account as
 * Now toolbar buttons responds to clicks if the form does not have the focus.
 * Fixed license reset functionality for Mendix 3 apps.
 * Several user interface changes.
+
+## 3.0
+
+* Improved support for Mendix 4.
+* Improved overview and handling of database synchronization commands.
+* Added mobile license information to license form.
+
+## 2.2
+
+**Release date: June 1st, 2012**
+
+* Now the license key can be registered and viewed in the Mendix Service Console, even if the application is not started (from menu Advanced -> License information...).
+* Ticket 12171: Service console shows non-Mendix event messages.
+* Ticket 12490: Now a symbolic link to the correct mxclientsystem folder can be created or updated automatically when the project or server version will be updated.
+    * You don't have to create a virtual mxclientsystem folder on your web server (like IIS) anymore!
+* Fixed exception about checking user names.
+* Implemented a more robust folder cleaner (used by the project updater), so hopefully the following exception will not occur anymore: The directory is not empty.
+* Now a more user friendly error message will be shown with a help button on application start if the given (domain) user does not have rights to logon locally (native error 1385: Logon failure: the user has not been granted the requested logon type at this computer.)
+* Now the service cannot be uninstalled when the service is running.
+* Small user interface changes.
+
+## 2.1
+
+### 2.1.1
+
+**Release date: February 13th, 2012**
+
+* Ticket 10963: Installing Mendix Windows Service doesn't support user principal name format.
+* Ticket 11120: Mendix Windows Service did not restart after reboot.
+* Ticket 11159: Now a user friendly message will be shown if the Mendix Service Console cannot be started because service pack 1 of .NET Framework 3.5 is not installed.
+* Ticket 11160: Fixed the user picker dialog for computers without domain.
+* Now the password text boxes will be unreadable by default. Added a Show password check box, as known in the Modeler. Please be aware that the passwords will be saved unencrypted in the settings file, as before.
+* Improved error message when the following operating system error does occur: 'The requested operation requires elevation'.
+* Small user interface changes.
+
+### 2.1.0
+
+**Release date: January 12th, 2012**
+
+* Ticket 9470: Sometimes the maximum Java heap size configuration and other numeric settings were not saved.
+* Now you see a UAC popup when you start the Mendix Service Console, because the UAC administrator level will be required, to prevent an UAC request on (un)installing the service and to making it possible to start/stop services in the Console.
+* Removed the Informix database type because it is not supported by Mendix anymore.
+* Removed Stop button. Now Start button will be changed to Stop after starting the project.
+* Now the Windows service can be started and stopped in the Console by the new Start Service/Stop Service button.
+* Introduced new Management panel, above Common Configuration.
+* Moved Service panel content to Management panel.
+* Moved Project path and Mendix path from Common Configuration panel to Management panel.
+* Added setting for Backup path.
+* Added possibility to use a Mendix Deployment Archive (MDA file) to update the project. The old project files are backed up to a zip file in the Backup folder.
+* Added possibility to use a Mendix Server distribution (tar.gz file) to add a Mendix server version. More versions can be installed side-by-side. Mendix chooses the right version to start the project. The existing Mendix server version from pre-2.1 Mendix Windows Service applications will be kept when using this 2.1 version, but when you installs a new Mendix server version, that version will be used if suitable for the project.
+* Now the application is always started under the specific service user account to simulate the same user environment as when it is started as service. A service user account must be given before a project can be run.
+* Added possibility to select a service user account via a Active Directory picker.
+* Now a service user can be specified without a domain name/computer name. In that case it's a local user.
+* Removed setting for user account type. A common user account must always be given. Removed possibility for system accounts like Local System.
+* Now new application constants will have their default values as set in the Modeler.
+* Now application constants show their descriptions in a tooltip.
+* Added settings 'Uploaded files path' and 'Temporary files path' to the Common Configuration panel.
+* Now the system log file m2ee_log.txt is closed immediately when the process cannot start.
+* Connecting to an already running server will be done asynchronously while starting the Service Console, so the form will be shown more quickly.
+* Now all configurated paths will be validated when the server or the service starts.
+* Windows service exceptions will now be shown in the Service Console (so you don't have to go to Administrative Tools -> Event Viewer anymore).
+* Default folder of project path changed to 'Project' (was 'Application').
+* Default folders will be created if they do not exist when they are needed.
+* Now correct x86 or x64 libraries will be loaded from the Mendix library path, dependent on the Java Virtual Machine. At this moment needed for the SQL Server authentication library.
+* Improved exception handling.
+* Changed text for PostgreSQL database type option from 'PostgreSQL 8.2 and later' to 'PostgreSQL 8.3 and later'.
+* Small user interface changes.
+
+## 2.0
+
+**Release date: July 28th, 2011**
+
+* Support for Modeler 3.0 deployment format.
+* Communication with Runtime changed to support 3.0.
+* Configured default buttons for administrator password change dialogs.
+* Little interface improvements.
+
+## 1.0
+
+### 1.0.7
+
+**Release date: March 22nd, 2011**
+
+* Fixed incorrect shutdown handling.
+* Force quit will be done after waiting 10 instead of 5 seconds.
+* Improved handling configuration settings which are not set.
+* Messages about start exceptions now will be contain more info, when started via Console and as service.
+* Fixed a special case that the Java process is not stopped when an exception occur while starting (via Console and as service).
+* When an error occurs, now the Java process is killed after 1 second.
+* New dialog to change administrator passwords, showed when starting from Console and there are administrators with password '1'.
+* New dialog to create or update the Administrator user from menu Advanced. Now the Administrator user password setting will no longer be used.
+* Removed setting for Administrator user password.
+* Now a strong password will be used for communication between console/service and Mendix server. Password can be seen and changed via settings file key ServerPassword.
+* A readable error message will be shown when the console cannot be connected to a running Mendix service.
+ * Now default service name and display name will be empty when there is already a service with that name.
+* Default service and display name changed to 'Mendix'.
+* When service and display name are empty, now an error message will be shown while installing the service.
+* The maximum length of the service name has been set to 80, according to the Windows limit of service names.
+
+### 1.0.6
+
+#### 1.0.6.3
+
+**Release date: February 16th, 2011**
+
+* Support for DTAP modes Acceptance and Production (by default).
+* Now service user name and password fields are disabled when a fixed user has been chosen.
+* Log file setting keys now will be trimmed (may now start or end with white spaces)
+* Log file settings now won't be sent to runtime as normal runtime settings, so runtime does not show setting warnings about these settings anymore.
+
+#### 1.0.6.2
+
+**Release date: December 14th, 2010**
+
+* New Advanced menu-item to set the log level for the log file.
+* Create / update administrator user password buttons moved to a combined menu-item in menu Advanced.
+* Custom settings file now must be defined by /yaml file-location (not anymore a single file location, but preceeded by /yaml).
+* For all key-value pair settings, the key will be trimmed before sending to Runtime server. Keys now may be ended with one or more white spaces.
+* Restart button now works.
+
+#### 1.0.6.1
+
+**Release date: November 29th, 2010**
+
+* added support for defining Mendix Service settings file as first command line argument.
+
+#### 1.0.6.0
+
+**Release date: November 23rd, 2010**
+
+* In some cases, port number changes were not be saved.
+* Database settings user interface improved.
+* added support for setting Jetty options.
+* added support for setting LogFileName, MaxLogFileSize, MaxLogFileCount.
+* corrected adding userlib folder to the library path on running.
+* new x64 driver for SQLite (from 1.0.65 to 1.0.66).
+
+### 1.0.5
+
+**Release date: August 6th, 2010**
+
+* Better Windows log message content when the service start fails.
+* Version in title bar of Console.
+
+### 1.0.4
+
+#### 1.0.4.2
+
+**Release date: June 7th, 2010**
+
+* When folders were selected with folder selector, the locations were not saved.
+
+#### 1.0.4.1
+
+**Release date: June 4th, 2010**
+
+* Don't stop loading application constants from Modeler file when this setting does not exist in the yaml settings file.
+* Status bar added.
+* Don't send custom settings and application constants when key is null.
+* Save settings before (un)installing a service.
+
+#### 1.0.4.0
+
+**Release date: June 3rd, 2010**
+
+* Now the existence of the given paths will be checked before start.
+* More info will be shown in Windows Log in some cases of service startup fail.
+* Logging database validation commands no more fails.
+* ServiceTester assembly renamed to Mendix Service Console.
+* Added possibility to add runtime settings other than shown in interface.
+* Interface redesign.
+* Now, when updating the administrator password, the real administrator user name, set in the Modeler, will be used in stead of always MxAdmin.
+* Now application constants will be preloaded from Modeler file.
+* Moved the Mendix Settings.yaml file one level higher, so that the Service folder can be safely replaced by new versions.
+* Now the console start and stop buttons are not visible if the service is running, because starting and stopping a service is not possible at the moment.
+
+### 1.0.3
+
+#### 1.0.3.1
+
+**Release date: May 26th, 2010**
+
+* Fixed the occurring error when saving the configuration and there are no application constants given.
+* Added Mendix icon to Service Tester program and form.
+
+#### 1.0.3.0
+
+**Release date: May 18th, 2010**
+
+* User interface changes.
+* Added possibility to select folders by the Windows folder browser control.
+* Added possibility to easy install and uninstall the service from user interface.
+* Now when starting the console and the service already runs, the console connects the service and shows the log.
+* Server and Runtime path combined to Mendix path.
+* Java heap size setting added.
+* Added much default values for settings (e.g. folders, port numbers, service settings).
+* Support for application constants.
+* Now user name and password may be empty (when SQL Server integrated security is used).

@@ -145,6 +145,7 @@ If you encounter any problems you should consult the application logs.
 
 ## 8\. Read More
 
+*   [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack)
 *   [Deploying a Mendix App to Pivotal](deploying-a-mendix-app-to-pivotal)
 *   [Deploying a Mendix App to HP Helion](deploying-a-mendix-app-to-hp-helion)
 *   [Deploying a Mendix App to Cloud Foundry](deploying-a-mendix-app-to-cloud-foundry)

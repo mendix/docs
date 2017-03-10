@@ -1,6 +1,9 @@
-**Mendix Development Basic Best-Practices**
-
-Date: 12-oct-2016
+---
+title: "Mendix Development Basic Best-Practices"
+space: "General How-To's"
+category: "Best Practices"
+---
+#Mendix Development Basic Best-Practices
 
 Introduction
 ============
@@ -461,14 +464,3 @@ module is unavoidable, changes should be marked explicitly and clearly, and
 performed again when the module is updated. To minimize the amount of changes in
 the actual app store module, it is advisable to combine them in a separate
 extension module wherever possible.
-
-![](media/352329524dbc1c2f0a6675080a6f805d.png)
-
-**www.mendix.com**
-
-Mendix is the app platform company for the enterprise. We enable companies to
-build, integrate and deploy web and mobile applications faster and with better
-results, effectively driving ROI in days not months. Learn more, join our user
-community and get started for free at [now.mendix.com](http://now.mendix.com).
-
-© Mendix Inc. 2016. All Rights Reserved

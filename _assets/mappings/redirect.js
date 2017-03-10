@@ -233,6 +233,10 @@ module.exports = {
       to: "/howtogeneral/bestpractices/dev-best-practices"
     },
     {
+      from: "/howtogeneral/bestpractices/naming-conventions",
+      to: "/howtogeneral/bestpractices/dev-best-practices"
+    },
+    {
       from: "/bestpractices/SIG+-+Mendix+performance+subjects+explanation",
       to: "/howtogeneral/bestpractices/sig-mendix-performance-subjects-explanation"
     },

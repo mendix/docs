@@ -74,7 +74,7 @@ In this chapter you will learn how to create a microflow test. To create a new m
 1.  Create a new enumeration **Level** with three enumeration values; **Junior**, **Medior** and **Senior**.
     ![](attachments/18448633/18580356.png)
 2.  Open the Domain Model of **MyFirstModule**.
-3.  Create an entity **Employee **with two attributes, **Name** (String(200)) and **Level** (Enumeration 'Level').
+3.  Create an entity **Employee** with two attributes, **Name** (String(200)) and **Level** (Enumeration 'Level').
     ![](attachments/18448633/18580355.png)
 4.  Create a microflow **Promote**.
 

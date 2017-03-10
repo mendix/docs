@@ -32,7 +32,7 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 ## 2\. Publish more microflows as web service operation
 
-In the how-to [Exposing a web service](expose-a-web-service) you already published the microflow _GetCustomers _as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
+In the how-to [Exposing a web service](expose-a-web-service) you already published the microflow _GetCustomers_ as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
 
 1.  Open the **Mendix Modeler**.
 2.  Open the project you created in the how-to [Exposing a web service](expose-a-web-service).

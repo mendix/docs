@@ -20,6 +20,8 @@
 
 ## 2 Prerequisites
 
+{If there are no prerequisites, leave this section out}
+
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * {Prerequisite 1}

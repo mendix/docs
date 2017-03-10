@@ -6,7 +6,6 @@ category: "Best Practices"
 #Mendix Development Basic Best-Practices
 
 ## 1. Introduction
-============
 
 This document is written to be used as a guideline for adopting consistent
 naming and modeling conventions while developing your Mendix applications. This
@@ -26,10 +25,8 @@ adhering to naming and modeling conventions is a wise thing because:
 -   A clear structure aids in identifying reusable code.
 
 ## 2. Project setup
-=============
 
 ### 2.1 The application development language
-------------------------------------
 
 The language that will be used to develop the application should be determined
 upfront. In this way we have one language for modules, entities, microflows,
@@ -41,7 +38,6 @@ integration module. For example, in case the source data model is in another
 language already.
 
 ### 2.2 Project Name
-------------
 
 Every project is to be given a name at start. Make sure that you use a logical
 name that allows you to easily identify the application. You probably will
@@ -50,7 +46,6 @@ recommend to not include dates or Mendix version numbers in the project name
 since that information can be captured and extracted in a different way.
 
 ### 2.3 Configurations
---------------
 
 In every project you have one or multiple configurations. Every project starts
 with a single configuration called default. When you work with multiple persons
@@ -61,7 +56,6 @@ passwords defined in the configuration will be visible to other team members as
 well, be careful with using personal passwords you like to keep secret.
 
 ### 2.4 User roles
-----------
 
 The user roles should have logical names that reflect the different types of
 persons that will use the application. The user roles are singular and use a

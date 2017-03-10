@@ -16,7 +16,7 @@ Learn how to deploy your app on your own hardware.
 * [How to Set Up Architecture Options](design-the-architecture)
     * [How to Configure High Availability](high-availability)
 * [How to Set Up Mendix on Windows – Microsoft SQL Server](mendix-on-windows-_-microsoft-sql-server)
-    * [How to Set  Up a New SQL Server Database](setting-up-a-new-sql-server-database)
+    * [How to Set Up a New SQL Server Database](setting-up-a-new-sql-server-database)
     * [How to Set Up Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
     * [How to Restore a SQL Server Database](restoring-a-sql-server-database)
     * [How to Set Up a SQL Server User](setting-up-a-sql-server-user)

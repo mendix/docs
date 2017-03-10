@@ -169,4 +169,4 @@ If you encounter any problems, you should consult the application logs:
 * [How to Deploy a Mendix App to Pivotal](deploy-a-mendix-app-to-pivotal)
 * [How to Deploy a Mendix App to HP Helion](deploy-a-mendix-app-to-hp-helion)
 * [How to Deploy a Mendix App to Cloud Foundry](deploy-a-mendix-app-to-cloud-foundry)
-* [IBM Bluemix documentation](https://www.eu-gb.bluemix.net/docs)
+* [IBM Bluemix Documentation](https://www.eu-gb.bluemix.net/docs)

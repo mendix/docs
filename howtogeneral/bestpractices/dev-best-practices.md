@@ -206,7 +206,7 @@ indicated prefix.
 | Before shutdown | BeforeShutDown | BSD\_  |
 | Health check    | HealthCheck    | HCK\_  |
 
-### Pages
+#### 3.4.4 Pages
 
 Within your pages you have a number of events that can trigger a microflow. See
 below the list for the examples and prefixes.
@@ -221,12 +221,11 @@ below the list for the examples and prefixes.
 |                           | *or*                                 | (“IVK\_” is used historically)                                                                        |
 |                           | IVK\_\<Purpose\>                     |                                                                                                       |
 
-### Unit test microflows
+#### 3.4.5 Unit test microflows
 
 Microflows containing unit tests should have the prefix **TEST\_**.
 
-Integration
------------
+### 3.5 Integration
 
 In your integrations you have the following type of documents.
 
@@ -240,20 +239,18 @@ In your integrations you have the following type of documents.
 | JSON Structure                           | JSON\_ |
 | Deeplink                                 | DL\_   |
 
-Scheduled events
-----------------
+### 3.6 Scheduled events
 
 For the microflow that you use in your scheduled events we prefer to use the
 prefix **SCE\_**. The event itself should have a descriptive name since it will
 be shown in the cloud configuration portal. Preferably the scheduled event and
 the microflow should have the same name. 
 
-Validation
-----------
+### 3.7 Validation
 
 Microflows that are used for data validation use the prefix **VAL\_**.
 
-### Home pages
+#### 3.7.1 Home pages
 
 In your navigation you can define the home pages per device and role. See below
 a list of page names that we advise to use.
@@ -267,38 +264,36 @@ a list of page names that we advise to use.
 | Role based home page | Tablet  | Home\_Tablet\_\<Userrole\>  |
 | Role based home page | Mobile  | Home\_Phone\_\<Userrole\>   |
 
-### Layouts and Snippets
+#### 3.7.2 Layouts and Snippets
 
 Layouts should have a prefix of **LAY\_**. Snippets should use **SNIP\_**.
 
-### Overview pages
+#### 3.7.3 Overview pages
 
 Pages that show an overview of a single entity should have a postfix
 of **\_Overview**.
 
-### New / Edit / View pages
+#### 3.7.4 New / Edit / View pages
 
 Pages that are to create, edit or view entity data and that are not part of a
 process should have the
 postfix **\_New**, **\_Edit**, **\_NewEdit** or **\_View**.
 
-### Select pages
+#### 3.7.5 Select pages
 
 Pages that are used to make a selection of one object have a postfix
 of **\_Select** where the multi object selection pages should have the
 postfix **\_MultiSelect**.
 
-### Tooltip pages
+#### 3.7.6 Tooltip pages
 
 Pages that are used as a tooltip page should have the postfix **\_Tooltip**.
 
-General guidelines and best practices
-=====================================
+## 4. General guidelines and best practices
 
-Domain models
--------------
+### 4.1 Domain models
 
-### Attributes
+#### 4.1.1 Attributes
 
 Attributes which do not reflect business-related data but are only necessary for
 technical reasons must start with an underscore (“\_”). A strong indicator for
@@ -310,19 +305,19 @@ Using calculated (virtual) attributes is discouraged. These introduce a
 performance risk since they need to be calculated every time the object is used,
 regardless of whether the attribute itself is used.
 
-### Inheritance
+#### 4.1.2 Inheritance
 
 When using Inheritance (specialization/generalization), it is recommended to use
 a maximum of two levels for performance reasons.
 
-### Delete behavior
+#### 4.1.3 Delete behavior
 
 Delete behavior must be specified where possible. Delete behavior must, however,
 never be relied upon when deleting large amounts of data. For performance
 reasons it is better to explicitly delete dependent objects when doing batch
 deletes.
 
-### Event handlers
+#### 4.1.4 Event handlers
 
 Event handlers on domain entities must be used with a lot of caution. They can
 quickly result in complex and possibly unexpected behavior when more of them are
@@ -330,10 +325,9 @@ applicable to a single entity. It is often best to make the execution of
 microflows more explicit by using submicroflows that are called manually, e.g.
 just before committing an object.
 
-Microflows
-----------
+### 4.2 Microflows
 
-### Size
+#### 4.2.1 Size
 
 The size of a microflow should not exceed 25 elements. An element is any block
 that the modeler allows in a microflow (loops, action activities, splits etc.).
@@ -347,7 +341,7 @@ of it. For example, by separating presentation logic from business logic.
 Certain cases (such as validation checks) may require this rule to be ignored to
 produce an understandable result.
 
-### Documentation and annotations
+#### 4.2.2 Documentation and annotations
 
 All complex microflows (more than 10 activities or more than 2 splits) must have
 an annotation describing the purpose of the microflow and expected parameters
@@ -360,7 +354,7 @@ Complex, non-standard or integration-related sections in microflows must have an
 accompanying annotation. Examples of these are web service calls, custom loops,
 Java calls etc.
 
-### Readability
+#### 4.2.3 Readability
 
 The normal flow in a microflow must be aligned from left to right to ensure
 readability. Exceptions to the normal flow may branch out vertically: downwards
@@ -371,7 +365,7 @@ Avoid crossing of lines of the links between the MF elements.
 If you decide to color code the different activities in your project, be sure to
 align within your team on their meaning.
 
-### Complexity
+#### 4.2.4 Complexity
 
 Nested if statements in a single microflow expression are not allowed. If
 multiple checks depend on one another, this must be represented by multiple
@@ -387,7 +381,7 @@ facilitate reuse. If a microflow has many parameters, it becomes more difficult
 to determine what should be put into the parameters to make the microflow run
 correctly.
 
-### Logging and error handling
+#### 4.2.5 Logging and error handling
 
 Use microflow error handling for all integration and Java calls. Make sure to
 determine the correct rollback behavior. Always log the error that occurred,
@@ -400,8 +394,7 @@ the current state and progress of the process and must include a request ID or
 other identifying information. The log node must be the name of the module. This
 will greatly assist error analysis.
 
-Warnings and modeler feedback
------------------------------
+### 4.3 Warnings and modeler feedback
 
 No warnings must be visible in the modeler, unless explicitly documented with a
 reason. Warnings can indicate many issues, including maintainability and
@@ -414,8 +407,7 @@ are not actually called from a Java action before removing them. The modeler
 provides the possibility to mark such items as used to override warnings about
 this.
 
-XPath
------
+### 4.4 XPath
 
 XPath constraints in any part of the model must be kept as simple as possible.
 As a general rule, XPaths must not appear when the “Find advanced \> XPath”
@@ -425,8 +417,7 @@ When an XPath needs multiple constraints, each constraint must be put in
 brackets (“[]”) separately, instead of using the “and” keyword. This also
 applies to sub-constraints.
 
-Security
---------
+### 4.5 Security
 
 The security overview in the modeler must not show any incomplete (yellow)
 parts. All entity, microflow and page access must be configured completely. With
@@ -434,13 +425,11 @@ regards to entity access, it is recommended to not use the option to assign
 default rights to new members, as to ensure access is only granted after a
 conscious decision.
 
-Mendix version
---------------
+### 4.6 Mendix version
 
 Apps should keep up with new Mendix releases as much as possible.
 
-App store components
---------------------
+### 4.7 App store components
 
 When introducing a new app store component to a project, carefully consider the
 support level of the component. Using components that are community supported

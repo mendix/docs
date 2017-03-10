@@ -34,7 +34,7 @@ In this chapter you will set up the unit testing module and run the example test
 1.  Create a new project.
 2.  Download the **UnitTesting module**.
 3.  Download the **Community Commons Function Library module**.
-4.  Open the **Settings **of the project.
+4.  Open the **Settings** of the project.
     ![](attachments/18448633/18580371.png)
 5.  Click tab **Model**.
 6.  Click the **Select** button to select an after startup microflow.

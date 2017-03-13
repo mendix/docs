@@ -83,4 +83,4 @@ _Never use 1-1 association for entities:_
 ## Related content
 
 * [Best Practices for Component Based Development](best-practices-for-component-based-development)
-* [Naming Conventions](naming-conventions)
+* [Development Best-Practices](dev-best-practices)

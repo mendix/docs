@@ -226,11 +226,15 @@ module.exports = {
     },
     {
       from: "/bestpractices/Naming+conventions",
-      to: "/howtogeneral/bestpractices/naming-conventions"
+      to: "/howtogeneral/bestpractices/dev-best-practices"
     },
     {
       from: "/bestpractices/Naming+conventions+in+Mendix+5",
-      to: "/howtogeneral/bestpractices/naming-conventions"
+      to: "/howtogeneral/bestpractices/dev-best-practices"
+    },
+    {
+      from: "/howtogeneral/bestpractices/naming-conventions",
+      to: "/howtogeneral/bestpractices/dev-best-practices"
     },
     {
       from: "/bestpractices/SIG+-+Mendix+performance+subjects+explanation",

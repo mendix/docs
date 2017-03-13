@@ -22,7 +22,7 @@ Cloud Foundry is an Open Source Platform-as-a-Service that can run all kinds of 
 
 ![](attachments/18448647/18580558.png)Extending to more software architectures via custom buildpacks
 
-![](attachments/18448647/18580560.png) Automatic health monitoring and recovery
+![](attachments/18448647/18580560.png)Automatic health monitoring and recovery
 
 
 

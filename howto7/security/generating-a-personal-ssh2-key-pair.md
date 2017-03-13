@@ -101,4 +101,3 @@ As an alternative, you can directly enter the username in the server name edit f
 
 * [How to Create a Secure App](create-a-secure-app)
 * [How to Set Up Anonymous User Security](set-up-anonymous-user-security)
-* [Security How-To's](security)

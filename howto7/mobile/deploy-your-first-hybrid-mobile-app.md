@@ -74,4 +74,4 @@ If you want to install this application as a native app on your device, you can 
 * [How to Build a Simple HRM App 4: Enrich the GUI with Filter Options](../getting-started/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
 * [How to Build a Simple HRM App 5: Smarten Up Your App with Business Logic](../getting-started/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
 * [How to Create and Deploy Your First App](../getting-started/create-and-deploy-your-first-app)
-* [How to Debug a Hybrid Mobile Application](..monitoring-troubleshooting/debug-a-hybrid-mobile-application)
+* [How to Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)

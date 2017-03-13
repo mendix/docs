@@ -66,7 +66,7 @@ END;
 *   [Activating a Mendix license on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows)
 *   [Setting up the database user](setting-up-the-database-user)
 *   [Troubleshooting](troubleshooting)
-*   [Sharing the Development Database](sharing-the-development-database)
+*   [Sharing the Development Database](../collaboration-project-management/sharing-the-development-database)
 *   [Restoring a SQL Server database](restoring-a-sql-server-database)
 *   [Troubleshooting SQL Server](troubleshooting-sql-server)
 *   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)

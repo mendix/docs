@@ -279,5 +279,5 @@ To make sure the correct application root URL is used within your web services, 
 ## 7 Related Content
 
 * [How to Build a Simple HRM App](../getting-started/build-a-simple-hrm-app)
-* [How to Create and Deploy Your First App](create-and-deploy-your-first-app)
-* [How to Test Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)
+* [How to Create and Deploy Your First App](../getting-started/create-and-deploy-your-first-app)
+* [How to Test Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)

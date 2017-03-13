@@ -69,6 +69,8 @@
         }]
     );
 
+    $el.trigger('focus');
+
     this.autocomplete
       .on('autocomplete:selected', function(event, suggestion, dataset) {
         event.stopPropagation();

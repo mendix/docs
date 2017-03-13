@@ -21,7 +21,7 @@ None.
 
 ## 3 Preparing the Data Structure, GUI, and Example Data
 
-The access rules used in this how-to contain customer and order data. To define the access rules, you first need to set up the data structure, user roles, and GUI to maintain customer and order data. For details on how to create a data structure and GUI, see [How to Create and Deploy Your First App](create-and-deploy-your-first-app).
+The access rules used in this how-to contain customer and order data. To define the access rules, you first need to set up the data structure, user roles, and GUI to maintain customer and order data. For details on how to create a data structure and GUI, see [How to Create and Deploy Your First App](../getting-started/create-and-deploy-your-first-app).
 
 To prepare the data structure, GUI, and example data, follow these steps:
 
@@ -29,16 +29,16 @@ To prepare the data structure, GUI, and example data, follow these steps:
 
     ![](attachments/18448705/18581378.png)
 
-    For more information on creating a domain model, see [How to Create a Basic Data Layer](create-a-basic-data-layer).
-2. Create overview and detail pages to manage the Customer and Order objects (for more information on creating these pages, see [How To Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages)).
-3. Create menu items to access the Order and Customer overview pages (for more information on creating menu items, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)).
-4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](create-a-secure-app).
+    For more information on creating a domain model, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer).
+2. Create overview and detail pages to manage the Customer and Order objects (for more information on creating these pages, see [How To Create Your First Two Overview and Detail Pages](../guis/create-your-first-two-overview-and-detail-pages)).
+3. Create menu items to access the Order and Customer overview pages (for more information on creating menu items, see [How to Set Up the Navigation Structure](../guis/setting-up-the-navigation-structure)).
+4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](../security/create-a-secure-app).
 
     ![](attachments/18448681/18581008.png)
-5. Add the *FinancialAdministrator* user role and module role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](create-a-secure-app):
+5. Add the *FinancialAdministrator* user role and module role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](../security/create-a-secure-app):
 
     ![](attachments/18448681/18581005.png)
-6. Give both module roles access to all your created pages, and create separate read and write access rights to all your created entities (for more information on how to set the entity access, see [How to Create a Secure App](create-a-secure-app):
+6. Give both module roles access to all your created pages, and create separate read and write access rights to all your created entities (for more information on how to set the entity access, see [How to Create a Secure App](../security/create-a-secure-app):
 
     ![](attachments/18448681/18580997.png)
     ![](attachments/18448681/18581003.png)

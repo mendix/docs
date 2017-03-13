@@ -25,7 +25,7 @@ To see the results of this how-to, it is necessary that you set up a test projec
 
 Before you continue, make sure that you know how to create the following:
 
-* **Domain models**, if you need more info, take a look at this [how-to](create-a-basic-data-layer).
+* **Domain models**, if you need more info, take a look at this [how-to](../data-models/create-a-basic-data-layer).
 * **Overview and detail pages**, if you need more info, take a look at this [how-to](create-your-first-two-overview-and-detail-pages).
 * **Menu items**, if you need more info, take a look at this [how-to](setting-up-the-navigation-structure).
 
@@ -131,5 +131,5 @@ In the previous section you have constrained the data grid on attributes of the 
 *   [Setup Mendix UI Framework](setup-mendix-ui-framework)
 *   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 *   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)
-*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+*   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [XPath Constraints](/refguide7/xpath-constraints)

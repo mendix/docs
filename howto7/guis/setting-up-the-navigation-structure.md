@@ -10,7 +10,7 @@ Once you've created some pages you want to give users the ability to access them
 
 Before starting this how-to make sure you have completed the following prerequisites:
 
-*   [Creating a basic data layer](create-a-basic-data-layer)
+*   [Creating a basic data layer](../data-models/create-a-basic-data-layer)
 *   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)
 
 ## 2\. Setting a Default Home Page
@@ -105,4 +105,4 @@ Now that you've created a menu structure it's time to start using it on pages.
 *   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
 *   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 *   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)
-*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+*   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

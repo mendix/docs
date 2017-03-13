@@ -219,16 +219,16 @@ Congratulations! You have just created your first automated test with SoapUI.
 
 ## 8\. Related content
 
-*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-*   [Clearing Warning Messages in Mendix](clear-warning-messages)
+*   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+*   [Clearing Warning Messages in Mendix](../monitoring-troubleshooting/clear-warning-messages)
 *   [Testing web services using SoapUI](testing-web-services-using-soapui)
-*   [Monitoring Mendix using JMX](monitoring-mendix-using-jmx)
-*   [Debugging Java actions remotely](debug-java-actions-remotely)
-*   [Log Levels](log-levels)
-*   [Debugging Java Actions](debug-java-actions)
-*   [Common Mendix SSO Errors](handle-common-mendix-sso-errors)
-*   [Debugging Microflows](debug-microflows)
-*   [Debugging Microflows Remotely](debug-microflows-remotely)
+*   [Monitoring Mendix using JMX](../monitoring-troubleshooting/monitoring-mendix-using-jmx)
+*   [Debugging Java actions remotely](../monitoring-troubleshooting/debug-java-actions-remotely)
+*   [Log Levels](../monitoring-troubleshooting/log-levels)
+*   [Debugging Java Actions](../monitoring-troubleshooting/debug-java-actions)
+*   [Common Mendix SSO Errors](../monitoring-troubleshooting/handle-common-mendix-sso-errors)
+*   [Debugging Microflows](../monitoring-troubleshooting/debug-microflows)
+*   [Debugging Microflows Remotely](../monitoring-troubleshooting/debug-microflows-remotely)
 
 
 

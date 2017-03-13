@@ -59,6 +59,3 @@ trim(  $ContactPerson/Fullname + **' ' **+ trim(  $ContactPerson/Firstname ) )
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/60fd9671-0e98-4ee3-9719-e0a060abe844/bco_contactperson_createfullname?embed=true"></iframe>
 
-## Related articles
-
-*   [String Concatenation](/howto7/string-concatenation)

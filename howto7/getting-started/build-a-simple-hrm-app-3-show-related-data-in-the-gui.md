@@ -142,4 +142,4 @@ To use the fourth how-to for creating a simple HRM application, see [Build a Sim
 * [Build a simple HRM App 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
 * [Create and Deploy Your First App](create-and-deploy-your-first-app)
 * [How to Build a Simple HRM App](build-a-simple-hrm-app)
-* [Testing Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)
+* [Testing Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)

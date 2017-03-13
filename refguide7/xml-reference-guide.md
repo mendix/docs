@@ -356,7 +356,7 @@ Remember to use the correct language notation according to the [Java supported l
 
 # Related content
 
-*   [Creating a chainable Custom Widget](/howto7/create-a-chainable-custom-widget)
-*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto7/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-*   [Creating a Basic Hello World Custom Widget](/howto7/create-a-basic-hello-world-custom-widget)
-*   [The Mobile Slider Custom Widget](/howto7/the-mobile-slider-custom-widget)
+*   [Creating a chainable Custom Widget](/howto7/custom-widget-development/create-a-chainable-custom-widget)
+*   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto7/custom-widget-development/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
+*   [Creating a Basic Hello World Custom Widget](/howto7/custom-widget-development/create-a-basic-hello-world-custom-widget)
+*   [The Mobile Slider Custom Widget](/howto7/custom-widget-development/the-mobile-slider-custom-widget)

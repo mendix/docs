@@ -25,7 +25,7 @@ This means that a Mendix Cluster requires a Load Balancer to distribute the load
 
 The above depicted infrastructure is supported in an easy way in Pivotal Web Services. Pivotal Web Services allows easy scaling by increasing the number of running nodes for your app and provides a built-in load balancer for accessing the nodes.
 
-Deploying your application into Pivotal Web Services is described on this page: [Deploying a Mendix App to Pivotal](/howto7/deploy-a-mendix-app-to-pivotal).
+Deploying your application into Pivotal Web Services is described on this page: [Deploying a Mendix App to Pivotal](/howto7/cloud-foundry/deploy-a-mendix-app-to-pivotal).
 
 Scaling out can be done using the Pivotal App Manager. Using the Pivotal App Manager is documented in the [Pivotal Webservices Documentation](http://docs.run.pivotal.io/console/dev-console.html).
 

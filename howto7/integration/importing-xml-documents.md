@@ -19,10 +19,10 @@ Mendix is "The App Platform for the Enterprise" and in enterprise software it is
 
 Before you continue, make sure that you know how to create:
 
-* Domain models (for more information, see [How to Create a Basic Data Layer](create-a-basic-data-layer))
-* Custom File Document (for more information, see [How to Work with Images and Files](working-with-images-and-files))
-* Overview and detail pages (for more information, see [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages))
-* Menu items (for more information, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure))
+* Domain models (for more information, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
+* Custom File Document (for more information, see [How to Work with Images and Files](../data-models/working-with-images-and-files))
+* Overview and detail pages (for more information, see [How to Create Your First Two Overview and Detail Pages](../guis/create-your-first-two-overview-and-detail-pages))
+* Menu items (for more information, see [How to Set Up the Navigation Structure](../guis/setting-up-the-navigation-structure))
 
 ## 3 Preparing the Data Structure and GUI
 
@@ -41,7 +41,7 @@ To prepare the data structure and the GUI, follow these steps:
     ![](attachments/18448727/18581650.png)
 
 5. Create the overview and detail pages to manage objects of the **XMLDocument** type.
-6. Create a menu item to access the XML document overview page (for more information, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure).
+6. Create a menu item to access the XML document overview page (for more information, see [How to Set Up the Navigation Structure](../guis/setting-up-the-navigation-structure).
 
 ## 4 Adding an XML Schema (XSD)
 

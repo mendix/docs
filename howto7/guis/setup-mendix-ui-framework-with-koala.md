@@ -23,7 +23,6 @@ Before you can start with this how-to, please make sure you have completed the f
 ## 2\. Create a new App in the Mendix Business Modeler
 
 In this chapter we will create a new app and select a theme from the New App selector.
-
 1.  Open the **Mendix Modeler**.
 2.  Create a **New App** from the **My Apps** screen in the Mendix Business Modeler.
 
@@ -74,4 +73,4 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 *   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
 *   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 *   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)
-*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+*   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

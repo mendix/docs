@@ -12,4 +12,4 @@ When deploying Mendix on-premise using the Microsoft SQL Server platform, severa
 *   Based on the expected usage of your databases, define the frequency in which integrity checks and index-rebuilding has to be performed.
 *   Form a backup plan that suits the needs of your organization. Find a balance between organizational needs and technical specifications of your storage environment. Beware of overlaps with e.g. tape backups and consider backup vaulting.
 
-For more information, see [How to Configure Mendix SQL Maintenance Plans](/howto7/mendix-sql-maintenance-plans).
+For more information, see [How to Configure Mendix SQL Maintenance Plans](/howto7/on-premises-deployment/mendix-sql-maintenance-plans).

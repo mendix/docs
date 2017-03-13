@@ -167,4 +167,4 @@ Re-deploy your app to see the shiny new logo:
 * [How to Set Up the Mendix UI Framework](setup-mendix-ui-framework)
 * [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 * [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages)
-* [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

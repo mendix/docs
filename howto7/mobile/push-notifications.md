@@ -61,7 +61,7 @@ From the admin pages, you currently cannot disable the APNs service completely. 
 
 ## 8 Contributing
 
-For more information on contributing to this repository, see [How to Contribute to a GitHub Repository](contribute-to-a-github-repository).
+For more information on contributing to this repository, see [How to Contribute to a GitHub Repository](../collaboration-project-management/contribute-to-a-github-repository).
 
 ## 9 Documents in This Sub-Category
 

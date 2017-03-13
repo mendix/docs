@@ -12,19 +12,19 @@ Before you can start importing data into your application, you first need to set
 
 Before you continue, make sure that you know how to create:
 
-*   **Domain models** ([Creating a basic data layer](create-a-basic-data-layer)).
-*   **Overview and detail pages** ([Creating your first two overview and detail pages](create-your-first-two-overview-and-detail-pages)).
-*   **Menu items **([Setting Up the Navigation Structure](setting-up-the-navigation-structure)).
-*   **Microflows** ([Create your first Microflow: Hello World!](create-your-first-microflow-hello-world)
+*   **Domain models** ([Creating a basic data layer](../data-models/create-a-basic-data-layer)).
+*   **Overview and detail pages** ([Creating your first two overview and detail pages](../guis/create-your-first-two-overview-and-detail-pages)).
+*   **Menu items **([Setting Up the Navigation Structure](../guis/setting-up-the-navigation-structure)).
+*   **Microflows** ([Create your first Microflow: Hello World!](../logic-business-rules/create-your-first-microflow-hello-world)
 *   **Add Appstore** **content (** [Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler)).
-*   **Secure applications** ([Creating a secure app](create-a-secure-app)).
+*   **Secure applications** ([Creating a secure app](../security/create-a-secure-app)).
 
 Follow these steps:
 
 1. Create the following domain model.
    ![](attachments/18448735/18581969.png)
 
-   The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [Working with images and files](working-with-images-and-files).
+   The 'XLSFile' object inherits from the 'Filedocument' object. If you don't know how to achieve this, please take a look at [Working with images and files](../data-models/working-with-images-and-files).
 2. Create **Overview** and **Detail** pages to manage objects of type **Customer** and **Order**.
 3.  Create **menu items **to access the **Order** and the **Customer** overview pages.
 4.  Download the **Excel Importer** and **Mx Model Reflection** modules from the appstore.

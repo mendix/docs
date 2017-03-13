@@ -142,4 +142,4 @@ To view your app, follow these steps:
 * [Build a Simple HRM App 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
 * [Build a Simple HRM App 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
 * [Create and Deploy Your First App](create-and-deploy-your-first-app)
-* [Testing Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)
+* [Testing Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)

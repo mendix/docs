@@ -117,16 +117,16 @@ To create logic to call the web service, follow these steps:
 
     ![](attachments/18448738/18582070.png)
 
-23. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](setting-up-the-navigation-structure).
+23. Create a menu item that triggers this microflow. For details on how to create a menu item, see [How to Set Up the Navigation Structure](../guis/setting-up-the-navigation-structure).
 24. Deploy the application and trigger the microflow to call the web service operation. You should see a message with the converted temperature.
 
 ## 4 Related Content
 
-* [How to Generate a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)
-* [How to Create a Secure App](create-a-secure-app)
+* [How to Generate a Personal SSH2 Key Pair](../security/generating-a-personal-ssh2-key-pair)
+* [How to Create a Secure App](../security/create-a-secure-app)
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Export XML Documents](export-xml-documents)
 * [How to Import Excel Documents](importing-excel-documents)
 * [How to Expose a Web Service](expose-a-web-service)
 * [How to Use Selenium Support](selenium-support)
-* [Security How-To's](security)
+* [Security How-To's](../security/)

@@ -129,4 +129,4 @@ To use the fifth and final how-to for creating a simple HRM application, see [Bu
 * [Build a Simple HRM App 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
 * [Build a Simple HRM App 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
 * [Create and Deploy Your First App](create-and-deploy-your-first-app)
-* [Testing Microflows Using the UnitTesting Module](testing-microflows-using-the-unittesting-module)
+* [Testing Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)

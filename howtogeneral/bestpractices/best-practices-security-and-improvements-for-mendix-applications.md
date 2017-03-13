@@ -111,7 +111,7 @@ By using an SSL connection and adding the public key of the endpoint within your
 * The conversation isn’t readable if it was ever intercepted
 * The identity of your endpoint is confirmed
 
-There are several scenarios possible for protecting your outgoing connections using encryption, that depend on the infrastructure possibilities and protocols used. This article describes it perfectly: [Securing Outgoing Connections For Your Application](/mendixcloud/securing-outgoing-connections-from-your-application).
+There are several scenarios possible for protecting your outgoing connections using encryption, that depend on the infrastructure possibilities and protocols used. This article describes it perfectly: [Securing Outgoing Connections For Your Application](/howtogeneral/mendixcloud/securing-outgoing-connections-from-your-application).
 
 You can add individual certificates in your project’s settings in the Mendix Modeler. Test, acceptance and production environments require their certificates to be uploaded to the [Mendix Cloud](/refguide7/certificates).
 

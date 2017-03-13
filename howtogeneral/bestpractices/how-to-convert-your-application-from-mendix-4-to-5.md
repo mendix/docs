@@ -1,7 +1,7 @@
 ---
 title: "How to convert your application from Mendix 4 to Mendix 5"
-#space: "General How-To's"
-#category: "Best Practices"
+space: "General How-To's"
+category: "Best Practices"
 ---
 
 Is your application ready to make use of the features of Mendix 5 but are you not sure how to convert your project to Mendix 5? Don't worry! We are here to help and we are confident that this how-to will lower the barrier that some of you might have. This structured plan is the key to ensure a smooth transition from Mendix 4 to Mendix 5.

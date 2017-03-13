@@ -40,7 +40,7 @@ This section will explain how to set the default home page. Please note that thi
 In many cases you want users with different roles to see different home pages. This can be easily achieved with Mendix by use of Role-based home pages. You don't need to configure home pages for every role, because the default home page works as a fall-back mechanism. This section will explain how to set role based home pages.
 
 1.  Open the **Navigation** editor.
-2.  Select either **Desktop**,**Tablet**, or **Phone** navigation, depending on the device interface you're working on.
+2.  Select either **Desktop**, **Tablet**, or **Phone** navigation, depending on the device interface you're working on.
 3.  Locate the **Role-based home pages** setting and click **Edit...**
     ![](attachments/18448703/18581308.png)
 4.  In the overview click **New**.

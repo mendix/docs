@@ -88,13 +88,13 @@ Validating user input can also be achieved by overriding the default save button
 
 ## 5\. Related content
 
-*   [Working with images and files](working-with-images-and-files)
-*   [Creating a basic data layer](create-a-basic-data-layer)
-*   [Working With Object Events](working-with-object-events)
-*   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
-*   [Setting up data validation](setting-up-data-validation)
-*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-*   [Managing your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
-*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
-*   [Generating a personal SSH2 key pair](generating-a-personal-ssh2-key-pair)
-*   [Creating a chainable Custom Widget](create-a-chainable-custom-widget)
+* [Working with images and files](working-with-images-and-files)
+* [Creating a basic data layer](create-a-basic-data-layer)
+* [Working With Object Events](working-with-object-events)
+* [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+* [Setting up data validation](setting-up-data-validation)
+* [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [How to Manage Your Application Requirements](../collaboration-project-management/managing-your-application-requirements-with-mendix)
+* [How to Configure the Scout and Windows 10 Workaround](../guis/scout-and-windows-10-workaround)
+* [How to Generate a Personal SSH2 Key Pair](../security/generating-a-personal-ssh2-key-pair)
+* [Creating a chainable Custom Widget](../custom-widget-development/create-a-chainable-custom-widget)

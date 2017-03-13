@@ -19,5 +19,5 @@ sitemap: false
     "Cloud Foundry",
     "On-Premises Deployment"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="howto7" %}
+  "pages": {% include json-snippets/get_pages_per_space.inc space="Mendix 7 How-To's" %}
 }

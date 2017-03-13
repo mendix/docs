@@ -59,7 +59,7 @@ In many cases you want users with different roles to see different home pages. T
 
 This section will explain how to create menu items.
 
-1.  Open the N**avigation** editor.
+1.  Open the **Navigation** editor.
 2.  Select either **Desktop,****Tablet,** or **Phone** navigation, depending on the device interface you're working on.
 3.  Locate the Menu section.
 4.  Click **New Item** to create a top level menu item.

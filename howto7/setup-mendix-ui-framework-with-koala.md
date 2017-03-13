@@ -16,7 +16,7 @@ In this how-to we will go through how to setup the [Mendix UI Framework](https:/
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
-*   Download the latest [Mendix Business Modeler](https://appstore.mendix.com)
+*   Download the latest [Mendix Modeler](https://appstore.mendix.com)
 *   Download [Koala](http://koala-app.com/) ([or use a different compiler](http://sass-lang.com/install))
 *   Download text editor [Sublime Text](http://www.sublimetext.com/)
 
@@ -24,7 +24,7 @@ Before you can start with this how-to, please make sure you have completed the f
 
 In this chapter we will create a new app and select a theme from the New App selector.
 
-1.  Open the **Mendix Business Modeler**.
+1.  Open the **Mendix Modeler**.
 2.  Create a **New App** from the **My Apps** screen in the Mendix Business Modeler.
 
      ![](attachments/18448712/18581487.png)
@@ -40,7 +40,7 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 1.  Open your **App Project Folder** in Koala by clicking on the plus button in the left sidebar at the top (or drag your folder in Koala).
 
     ![](attachments/18448712/18581486.png)
-2.  Select the **project directory** from your newly created App. Koala auto detects the Sass and CSS files and you are ready. Koala auto compiles the files you want to adjust.
+2.  Select the **project directory** from your newly created App. Koala automatically detects the Sass and CSS files and you are ready. Koala automatically compiles the files you want to adjust.
 
     ![](attachments/18448712/18581485.png)
 
@@ -50,7 +50,7 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 
     ![](attachments/18448712/18581502.png)
 2.  The **theme** folder is where you can find the theme that was selected when creating a New App. The folder theme\styles\sass\custom will be used to make our own changes. Let's change the background for our sidebar!
-3.  Open up the file _ <u>**custom-variables.scss**</u> .
+3.  Open up the file <u>**custom-variables.scss**</u> .
 
      ![](attachments/18448712/18581503.png)
     Let's take a look at **Step 2** in the **custom-variables.scss** file. As the comments suggest we can adjust the background-color for the sidebar. 

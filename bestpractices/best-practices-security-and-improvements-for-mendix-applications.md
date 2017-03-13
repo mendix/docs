@@ -15,7 +15,7 @@ The Mendix architecture involves a client that can compose its own queries (gene
 
 ![Mendix Runtime Architecture](attachments/mendix-runtime-architecture.png)
 
-When designing an application, a developer can specify access rules on an entity, see [Create A Secure App](https://docs.mendix.com/howto6/create-a-secure-app) for more info. These access rules are applied whenever a query (received from a client) should be executed and therefore constrain the data returned to the client. For example, users with the *Customer* role can only view *Orders* that are associated to the customer this user is part of. While the data that should be viewable and editable in which role is application specific, we offer the following key guidelines:
+When designing an application, a developer can specify access rules on an entity, see [Create A Secure App](/howto6/create-a-secure-app) for more info. These access rules are applied whenever a query (received from a client) should be executed and therefore constrain the data returned to the client. For example, users with the *Customer* role can only view *Orders* that are associated to the customer this user is part of. While the data that should be viewable and editable in which role is application specific, we offer the following key guidelines:
 
 * Attributes that are determined by the system (like the status of an order) should never be writeable
 * If an anonymous user is allowed to create objects, constrain these objects to the owner (an anonymous user is actually a *System.User* object that is created on the fly)
@@ -93,7 +93,7 @@ Your application can gain several benefits from using an identity provider, like
 
 By default Mendix forces a strong password policy. The same password policy that is configured in the Mendix Modeler is also used for apps running in a hosted environment (for example, on test/acceptance/production).
 It is very tempting to simplify the password constraints for development purposes (making it possible to use a single character to login). However, we recommend avoiding this approach so deployments will continue to force a strong password policy.
-The password policy can be set by following the [Password Policy Guide]( https://docs.mendix.com/refguide7/password-policy).
+The password policy can be set by following the [Password Policy Guide](/refguide7/password-policy).
 
 ## Rename the Administrator User
 
@@ -111,9 +111,9 @@ By using an SSL connection and adding the public key of the endpoint within your
 * The conversation isn’t readable if it was ever intercepted
 * The identity of your endpoint is confirmed
 
-There are several scenarios possible for protecting your outgoing connections using encryption, that depend on the infrastructure possibilities and protocols used. This article describes it perfectly: [Securing Outgoing Connections For Your Application](https://docs.mendix.com/mendixcloud/securing-outgoing-connections-from-your-application).
+There are several scenarios possible for protecting your outgoing connections using encryption, that depend on the infrastructure possibilities and protocols used. This article describes it perfectly: [Securing Outgoing Connections For Your Application](/mendixcloud/securing-outgoing-connections-from-your-application).
 
-You can add individual certificates in your project’s settings in the Mendix Modeler. Test, acceptance and production environments require their certificates to be uploaded to the [Mendix Cloud](https://docs.mendix.com/refguide7/certificates).
+You can add individual certificates in your project’s settings in the Mendix Modeler. Test, acceptance and production environments require their certificates to be uploaded to the [Mendix Cloud](/refguide7/certificates).
 
 ## Prevent Embedding of Your App Within an IFrame
 

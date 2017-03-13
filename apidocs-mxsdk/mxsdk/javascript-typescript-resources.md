@@ -1,7 +1,7 @@
 ---
 title: "JavaScript & TypeScript Resources"
 space: "API & SDK"
-category: "reference-documentation"
+parent: "reference-documentation"
 ---
 # So what is this TypeScript thing?
 

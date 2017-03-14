@@ -76,7 +76,7 @@ To restore the database, follow these steps:
 * [How to Set Up an SQL Server User](setting-up-a-sql-server-user)
 * [How to Set Up a New SQL Server Database](setting-up-a-new-sql-server-database)
 * [How to Set Up Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
-* [How to Set Up a Security Checklist for Your On-Premises Isnstallation](security-checklist-for-your-on-premises-installation)
+* [How to Set Up a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
 * [How to Use Mendix on Windows - Microsoft SQL Server](mendix-on-windows-_-microsoft-sql-server)
 * [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
 * [How to Install Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)

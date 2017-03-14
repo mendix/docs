@@ -30,6 +30,7 @@ All documentation contributions may undergo changes after editing according to o
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Have a GitHub account (sign up [here](https://github.com/join))
+* Fork the [Mendix **docs** repository](https://github.com/mendix/docs) on GitHub (for details on how to do this, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/)
 
 We recommend the use of the following tools for contributing to the Mendix documentation:
 
@@ -41,7 +42,7 @@ We recommend the use of the following tools for contributing to the Mendix docum
 To edit the existing documentation (for example, a how-to or reference guide page), follow these steps:
 
 1. Click **Edit on GitHub** in the upper-right corner of the specific Mendix documentation page that you want to work on.
-2. Find the files in the repository and make your changes (make sure your changes align with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)).
+2. Make your changes (make sure the changes align with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)).
 3. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
 
 <div class="alert alert-info">
@@ -61,7 +62,7 @@ To submit a new how-to or reference guide page to our documentation, follow thes
 1. Save a copy of the [How-To Template](the-how-to-template-page) or [Reference Guide Page Template](the-reference-guide-page-template-page) locally in order to use it.
 2. Follow the guidelines in the template for writing your document, and make sure the text aligns with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines).
 3. Take screenshots for the new document and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [5 Naming New Files and Images](#NamingNewFilesandImages).
-4. To merge your new document files, fork the GitHub repository, and add your files.
+4. To merge your new document files, add your files to the GitHub repository.
 5. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
 
 <div class="alert alert-info">

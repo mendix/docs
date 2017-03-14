@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 3 Upload Data
 
 1.  Go to [home.mendix.com](http://home.mendix.com/).
-2.  Go to **Projects** and select the project you want to connect to the node.
+2.  Go to **Apps** and select the App you want to connect to the node.
 3.  Go to the **Deploy** tab.
 4.  Go to the **Backup** tab.
 5.  Click **Upload Data**.
@@ -40,8 +40,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 The cloud environment has now been updated with the uploaded data.
 
 ## 4 Related Content    
-*   [How to Unlink Your Sandbox](how-to-unlink-your-sandbox)
+*   [How to Unlink Your Sandbox](how-to-unlink-sandbox)
 *   [How to Download a Backup](how-to-download-a-backup)
 *   [How to Restore a Backup](how-to-restore-a-backup)
-*   [How to Connect a Project to a Licensed Cloud Node](how-to-connect-a-project-to-a-licensed-node)
-*   [How to Connect a Different Project to a Cloud Node](how-to-connect-a-different-project-to-a-node)
+*   [How to Connect a App to a Licensed Cloud Node](how-to-link-app-to-node)
+*   [How to Connect a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)

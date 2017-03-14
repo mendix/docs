@@ -55,6 +55,6 @@ The process for restoring a backup from a Free App and a licensed cloud node are
 9.  Click **Yes** to restore the backup to the selected environment.
 
 ## 4 Related Content
-*   [How To Unlink Your Sandbox](how-to-unlink-your-sandbox)
-*   [How To Download A Backup](how-to-download-a-backup)
-*   [How To Connect A Project To A Licensed Cloud Node](how-to-connect-a-project-to-a-licensed-node)
+*   [How To Unlink Your Sandbox](how-to-unlink-sandbox)
+*   [How To Download a Backup](how-to-download-a-backup)
+*   [How To Connect an App to a Licensed Cloud Node](how-to-link-app-to-node)

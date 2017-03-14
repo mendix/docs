@@ -70,7 +70,7 @@ To configure notifications, follow these steps:
 
     On every (sub)plan, notifications will be configured. Whether to only send **Failed** events or both **Failed** and **Successful** is up to the user.
 
-This is the the pattern for a notification:
+This is the pattern for a notification:
 
 * Subject: `SQL Server Message - <SQL instance> - <maintenance plan name> - <subplan name> <successful/failed>`
     * For example: *SQL Server Message - Mendix-SQL1 – MP_USERDB - weekly maintenance failed*

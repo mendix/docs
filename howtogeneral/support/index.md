@@ -1,15 +1,16 @@
 ---
 title: "Mendix Support"
-space: "General How-To's"
+space: "Mendix Support"
+redirect_from:
+  - "/mxsupport/Mendix+Support+Home"
 ---
 This space contains documentation to support customers using Expertdesk.
 
 ## Documents
 
-*   [How to connect a different project to a node](how-to-connect-a-different-project-to-a-node)
-*   [Technical Contact](technical-contact)
-*   [License key activation on Linux server](license-key-activation-on-linux)
-*   [On-premises customers: Preparing your project for new Customer Support tool](prepare-your-project-for-new-customer-support-portal)
-*   [How to unlink (delete) your sandbox and connect the project to a licensed node.](how-to-connect-a-project-to-a-licensed-node)
-*   [How to restore a backup](how-to-restore-a-backup)
-*   [How to download a backup](how-to-download-a-backup)
+
+*   [Required Network Access for connecting to the Mendix Platform](Required+Network+Access+for+connecting+to+the+Mendix+Platform)
+*   [Technical Contact Definition](Technical+Contact+Definition)
+*   [License key activation on Linux server](License+key+activation+on+Linux+server)
+*   [On-premises customers: Preparing your project for new Customer Support tool](Preparing+Your+Project+for+New+Customer+Support+Tool)
+*   [Google Authenticator and SMS Installation](Google+Authenticator+and+SMS+Installation)

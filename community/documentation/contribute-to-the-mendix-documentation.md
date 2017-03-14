@@ -71,16 +71,21 @@ You may receive a response to your pull request asking for verification of speci
 
 </div>
 
-## <a name="NamingNewFilesandImages"></a>5 Naming New Files and Images
+## <a name="NamingNewFilesandImages"></a>5 Naming New Document Files, Image Files, and Attachment Sub-Folders
 
-When writing a new how-to or contributing to the documentation, make sure the files comply with our naming conventions:
+When contributing to the documentation, make sure the document files comply with these naming conventions:
 
- * Markdown file names should have the same name as the title of the page (for example, if the page is titled "Set Up Your Project," the filename should be ``setup-your-project.md``)
- * File names should always be lower-case, with a hyphen (`-`) between each word
-  * Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
- * Images should be named in the same way: lower-case with a dash between each word
-  * Make sure the image files have names that make sense, so it's easier to find them later on
- * The following image file types are allowed: `.jpg`, `.png`, `.gif`
+* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Set Up Your Project," the filename should be `setup-your-project.md`)
+* Document file names should always be lower-case with a hyphen (`-`) between each word
+ * Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
+
+Make sure the image files comply with these naming conventions:
+
+* Image file names should always be lower-case with a hyphen (`-`) between each word
+ * Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
+* Make sure the image files have names that make sense, so it's easier to find them later on
+* Save the image files in a sub-folder in the **attachments** folder for the category in which the document is located; this sub-folder should have the same name as the document file name you are working on (for example, the `setup-your-project` image file is located in the **new-project** sub-folder [named for the document] in the **attachments** folder in the **getting-started** how-to category folder)
+* The following image file types are allowed: `.jpg`, `.png`, `.gif`
 
 ## 6 Related Content
 

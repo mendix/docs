@@ -30,7 +30,7 @@ All documentation contributions may undergo changes after editing according to o
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Have a GitHub account (sign up [here](https://github.com/join))
-* Fork the [Mendix **docs** repository](https://github.com/mendix/docs) on GitHub (for details on how to do this, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/)
+* Fork the [Mendix **docs** repository](https://github.com/mendix/docs) on GitHub (for details on how to do this, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/))
 
 We recommend the use of the following tools for contributing to the Mendix documentation:
 

@@ -67,25 +67,17 @@ Use **bold** when identifying buttons, windows, fields, and other entities that 
 
 Use *italics* when the user needs to enter text. For example: "In the **Name** field, enter *Customer_NewEdit_Commit*."
 
-## 4.3 Embedding a Modelshare
-
-To embed a modelshare in the documentation, paste the `iframe`. For example:
-
-```html
-<iframe width='100%' height='491px' frameborder='0' src=https://modelshare.mendix.com/models/a0e6fba1-aa44-4d95-ac06-3f9fccca082/new-car-rental-validation?embed=true'></iframe>
-```
-
-## 4.4 Specific Formatting Tips
+## 4.3 Specific Formatting Tips
 
 Some tips to consider when formatting Markdown are listed below.
 
-### 4.4.1 Note Styles
+### 4.3.1 Note Styles
 
 To format note styles, implement the following:
 
 ![](attachments/content-writing-and-formatting-guidelines/note_styles.png)
 
-### 4.4.2 Class
+### 4.3.2 Class
 
 If you need to add a class to a link, add extra attributes using `{ }`.
 

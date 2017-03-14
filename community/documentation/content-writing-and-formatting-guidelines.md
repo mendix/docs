@@ -158,7 +158,7 @@ For example:
 "Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Start a GitHub account
-* Fork the repository on GitHub
+* Fork the [Mendix **docs** repository](https://github.com/mendix/docs) on GitHub (for details on how to do this, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/)
 * Create a Basic Data Layer"
 
 ### 5.1.4 Exercises

@@ -99,7 +99,7 @@ Your note
 
 and
 
-```
+```html
 <div class="alert alert-warning">{% raw %}{% markdown %}
 Your note
 {% endmarkdown %}{% endraw %}</div>

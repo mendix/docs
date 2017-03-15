@@ -20,7 +20,7 @@ Before you can start with this how-to, please make sure you have completed the f
 In case you have created an app in the Mendix Modeler, you can upload it to the Team Server (see [Upload To Team Server Dialog](/refguide7/upload-to-team-server-dialog)) and a repository will be created automatically.
 
 *   No **Sandbox** is linked to your **app**. (Every Team Server **app** is linked to a **Sandbox** automatically).
-Read [this](/mendixcloud/how-to-unlink-sandbox) how-to to learn how to **unlink your Sandbox** from your **app** 
+Read [this](how-to-unlink-sandbox) how-to to learn how to **unlink your Sandbox** from your **app** 
 
 ## 2 Linking a App to a Licensed Cloud Node
 

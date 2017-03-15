@@ -28,10 +28,7 @@ Download a backup of a Free App by following these steps:
 5.  Go to the **Deploy** tab.
 6.  Go to the **Backup** tab.
 
-    ![](attachments/20643883/21168147.png)
 7.  Select the backup you want to download and click **Download Backup**.
-
-    ![](attachments/20643883/21168148.png)
 
 8.  Click **Download** for your preferred backup.
 

@@ -40,8 +40,4 @@ Before starting this how-to, make sure you have completed the following prerequi
 The cloud environment has now been updated with the uploaded data.
 
 ## 4 Related Content    
-*   [How to Unlink Your Sandbox](how-to-unlink-sandbox)
-*   [How to Download a Backup](how-to-download-a-backup)
-*   [How to Restore a Backup](how-to-restore-a-backup)
-*   [How to Connect a App to a Licensed Cloud Node](how-to-link-app-to-node)
-*   [How to Connect a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
+

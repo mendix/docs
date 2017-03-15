@@ -2254,25 +2254,10 @@ module.exports = {
     /****************************************************
      * SUPPORT
      ****************************************************/
-    {
-      from: "/mxsupport/Connecting+Project+to+a+Licensed+Node",
-      to: "/howtogeneral/support/how-to-connect-a-project-to-a-licensed-node"
-    },
+
     {
       from: "/mxsupport/Google+Authenticator+and+SMS+Installation",
       to: "/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator"
-    },
-    {
-      from: "/mxsupport/How+to+connect+a+different+project+to+a+node",
-      to: "/howtogeneral/support/how-to-connect-a-different-project-to-a-node"
-    },
-    {
-      from: "/mxsupport/How+to+download+a+backup",
-      to: "/howtogeneral/support/how-to-download-a-backup"
-    },
-    {
-      from: "/mxsupport/How+to+restore+a+backup",
-      to: "/howtogeneral/support/how-to-restore-a-backup"
     },
     {
       from: "/mxsupport/Mendix+Support+Home",

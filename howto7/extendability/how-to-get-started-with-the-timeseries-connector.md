@@ -27,7 +27,7 @@ Sign up for the connector by going to [our Connector website](http://connector.t
 
 Note: It can take up to a few hours to generate the key and send it to you. Use this key to activate and access your TimeSeries Analytics instance.
 
-After receiving the key, download the module from the [Mendix AppStore](https://appstore.home.mendix.com/link/app/31951/TimeSeries/TimeSeries-Connector "Click here for awesomeness"). 
+After receiving the key, import the module from the [Mendix AppStore](https://appstore.home.mendix.com/link/app/31951/TimeSeries/TimeSeries-Connector "Click here for awesomeness") in your project.
 
 ## 4 Configure the necessary settings
 
@@ -75,7 +75,7 @@ This action will return a boolean, which is not used.
 
 ### 5.4 Aggregate your data
 
-Once your channel has sufficient data, the power of the TimeSeries Connector can shine. Instead of having enormous amounts of data in your database which takes a long time to aggregate for reporting, you can now simply ask the TimeSeries platform for an aggregation of your data. For aggregation calls, supply the following information: An empty **Type parameter** used to populate the results, the **Asset ID** and **Channel key** to aggregate in, a **Start date** and **End date** in epoch time, an *Aggregation period** such as hourly or daily in the correct ISO format, the **Timezone** in which the results will be aggregated and the **Measurement type** in which the measurements have been stored.
+Once your channel has sufficient data, the TimeSeries Connector will really start to shine. Instead of having enormous amounts of data in your database which takes a long time to aggregate for reporting, you can now simply ask the TimeSeries platform for an aggregation of your data. For aggregation calls, supply the following information: An empty **Type parameter** used to populate the results, the **Asset ID** and **Channel key** to aggregate in, a **Start date** and **End date** in epoch time, an *Aggregation period** such as hourly or daily in the correct ISO format, the **Timezone** in which the results will be aggregated and the **Measurement type** in which the measurements have been stored.
 
 Make sure that the search result **Type parameter** has all the necessary attributes. An example entity:
 

@@ -23,7 +23,7 @@ Before you can start with this how-to, please make sure you have completed the f
 
 Please note that because you are going to unlink the Sandbox from your Free App, the Sandbox environment will be permanently deleted. This means that all data will be lost from the Sandbox/Free app. To keep your data, you need to create a backup.
 
-The documentation on how to download a backup can be found [here.](How+to+download+a+backup)
+The documentation on how to download a backup can be found [here](how-to-download-a-backup).
 
 ## 3 Unlinking Free App from Sandbox
 
@@ -35,12 +35,12 @@ When you have a Free App running in the sandbox you will need to unlink the Free
 4.  Go to **Environments** in the left navigation panel
 5.  Click on **unlink your app**
 6.  Beware, all data will be lost. Click **'Yes, delete all data and unlink this project'** to confirm.
-7.  Validate with your Google Authenticator
+7.  Validate with your Google Authenticator.
 
 The Free App has now been unlinked from the Sandbox environment.
 
 ## 4 Related Content
-*   [How To Link Your Free App to a Licensed Cloud Node] (how-to-link-app-to-node) 
+*   [How To Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node) 
 *   [How To Download A Backup](how-to-download-a-backup)
 *   [How To Restore A Backup](how-to-restore-a-backup)
-*   [How to Upgrade your Free App to a Licensed App] (how-to-upgrade-free-app)
+*   [How to Upgrade your Free App to a Licensed App](how-to-upgrade-free-app)

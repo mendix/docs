@@ -20,6 +20,8 @@ A node has a minimum of two environments: production and acceptance. A test envi
 
 ![](attachments/index/MendixCloud.jpg)
 
+## Documents in This Category
+
 *   [Custom Domains](custom-domains)
 *   [Deploying to a Free App](deploying-to-a-free-app)
 *   [Deploying to the cloud](deploying-to-the-cloud)

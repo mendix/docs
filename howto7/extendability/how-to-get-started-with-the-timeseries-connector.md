@@ -53,9 +53,7 @@ To give an example on how to use the Analytics platform we'll explain using the 
 
 Firstly, you will have to create an asset. Make sure to provide an **Asset name**, otherwise the connector will return an error. You are free to chose the name.
 
-{::nomarkdown}
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/12613211-22be-4c65-aac9-bb7d821ed99e/timeseries-connector-create-asset?embed=true'></iframe>
-{:/}
 
 This action will return an **Asset ID**, which you can store in your database for access.
 

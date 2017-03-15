@@ -47,7 +47,7 @@ Some of the following configurations will already be in place. If so, it will be
 ## 5 Implementation
 To give an example on how to use the Analytics platform we'll explain using the concept of a house. In this scenario the house is an asset, of which you can have multiple. This house will use gas and electricity, which we call channels. Each channel can hold values over time; every X seconds, minutes, hours, etc electricity usage can be measured and saved. These measurements can later be used for analysis.
 
-![](attachments/Systemoverview.PNG)
+![](attachments/how-to-get-started-with-the-timeseries-connector/Systemoverview.PNG)
 
 ### 5.1 Create an asset
 
@@ -79,7 +79,7 @@ Once your channel has sufficient data, the TimeSeries Connector will really star
 
 Make sure that the search result **Type parameter** has all the necessary attributes. An example entity:
 
-![](attachments/example-aggregate-domain.png)
+![](attachments/how-to-get-started-with-the-timeseries-connector/example-aggregate-domain.png)
 
 Now you can create your logic.
 

@@ -35,9 +35,6 @@ There are two methods to connect your project to a licensed cloud node:
 1.  Go to the [Developer Portal](http://home.mendix.com).
 2.  Click **Apps** in the top navigation panel.
 2.  Click **My Apps** and select **Nodes**.
-
-  ![](attachments/linknode/node.jpg)
-
 3.  Choose the app you want to connect by clicking **Connect to this app**.
 
 

@@ -51,6 +51,3 @@ There are two snapshot options in the export dialog window. The *Existing snapsh
 
 ![](attachments/how-to-export-a-project-package-mpk/snapshotincluded.png)
 
-## 5 Related Content
-*   [How To Download A Backup](how-to-download-a-backup)
-*   [How To Restore A Backup](how-to-restore-a-backup)

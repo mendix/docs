@@ -1,5 +1,5 @@
 ---
-title: "Deploying a Mendix App to IBM Bluemix"
+title: "Deploy a Mendix App to IBM Bluemix"
 space: "Mendix 7 How-To's"
 category: "Cloud Foundry"
 tags: []

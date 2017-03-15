@@ -33,8 +33,6 @@ The process for restoring a backup from a Free App and a licensed cloud node are
 5.  Go to the **Deploy** tab.
 6.  Go to the **Backup** tab.
 7.  Select the backup you want to restore and click **Restore Backup**.
-
-    ![](attachments/how-to-restore-a-backup/Restore_Step4.2.png)
 8.  Click **Yes** to confirm the restoration.
 
 ### 3.2 Restoring a backup for a licensed cloud node.
@@ -46,15 +44,10 @@ The process for restoring a backup from a Free App and a licensed cloud node are
 5.  Go to the **Deploy** tab.
 6.  Go to the **Backup** tab.
 7.  Select the backup you want to restore and click **Restore Backup**.
-
-    ![](attachments/how-to-restore-a-backup/Restore_Step10.png)
-
 8.  Select the environment the backup should be restored to and click **Restore backup**.
-
-    ![](attachments/how-to-restore-a-backup/Restore_Step11.png)
 9.  Click **Yes** to restore the backup to the selected environment.
 
 ## 4 Related Content
-*   [How To Unlink Your Sandbox](how-to-unlink-your-sandbox)
-*   [How To Download A Backup](how-to-download-a-backup)
-*   [How To Connect A Project To A Licensed Cloud Node](how-to-connect-a-project-to-a-licensed-node)
+*   [How To Unlink Your Sandbox](how-to-unlink-sandbox)
+*   [How To Download a Backup](how-to-download-a-backup)
+*   [How To Connect an App to a Licensed Cloud Node](how-to-link-app-to-node)

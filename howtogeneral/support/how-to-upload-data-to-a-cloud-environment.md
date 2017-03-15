@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 3 Upload Data
 
 1.  Go to [home.mendix.com](http://home.mendix.com/).
-2.  Go to **Projects** and select the project you want to connect to the node.
+2.  Go to **Apps** and select the App you want to connect to the node.
 3.  Go to the **Deploy** tab.
 4.  Go to the **Backup** tab.
 5.  Click **Upload Data**.

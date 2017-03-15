@@ -28,10 +28,7 @@ Download a backup of a Free App by following these steps:
 5.  Go to the **Deploy** tab.
 6.  Go to the **Backup** tab.
 
-    ![](attachments/20643883/21168147.png)
 7.  Select the backup you want to download and click **Download Backup**.
-
-    ![](attachments/20643883/21168148.png)
 
 8.  Click **Download** for your preferred backup.
 
@@ -51,6 +48,6 @@ Download a backup of a Free App by following these steps:
 
 
 ## 5 Related Content
-*   [How To Unlink Your Sandbox](how-to-unlink-your-sandbox)
-*   [How To Restore A Backup](how-to-restore-a-backup)
-*   [How To Connect A Project To A Licensed Cloud Node](how-to-connect-a-project-to-a-licensed-node)
+*   [How To Unlink Your Sandbox](how-to-unlink-sandbox)
+*   [How To Restore a Backup](how-to-restore-a-backup)
+*   [How To Link an App to a Licensed Cloud Node](how-to-link-app-to-node)

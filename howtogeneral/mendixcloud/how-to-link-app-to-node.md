@@ -15,7 +15,7 @@ This how-to describes the process of linking your Free App to a licensed cloud n
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 *   Free app - with an enabled Teamserver (Mendix 5.18 and up)
-*   Have a licensed cloud node available. To request a licensed cloud node, contact [Mendix Support](www.support.mendix.com)
+*   Have a licensed cloud node available. To request a licensed cloud node, contact [Mendix Support](http://www.support.mendix.com)
 *   You are the Technical Contact of the node
 *   Make sure that the Sandbox is unlinked. See [How To Unlink Your Sandbox](how-to-unlink-sandbox)
 *   Your Two-Factor Google Authenticator is enabled

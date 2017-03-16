@@ -2,7 +2,7 @@
 title: "Get Started with the TimeSeries Connector"
 space: "Mendix 7 How-to's"
 category: "Extendability"
-tags: "[IoT][Connector][TimeSeries][Big Data][Analytics]"
+tags: ["IoT", "Connector", "TimeSeries", "Big Data", "Analytics"]
 ---
 
 ## 1 Introduction
@@ -19,45 +19,65 @@ This how-to is focussed on implementing and understanding the TimeSeries Connect
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download and install Mendix 6.6.0 or higher
+* Download and install Mendix Modeler 6.6 or higher
+* Add CommunityCommons to your project
 
-## 3 Sign up for the TimeSeries Connector
+## 3 Sign Up for the TimeSeries Connector
 
-Sign up for the connector by going to [our Connector website](http://connector.timeseries.nl/ "Click here to go to the TimeSeries website") and register for free. After registration you will receive an email with your API key.
+Follow these steps to get access to the TimeSeries connector and receive an API key:
 
-Note: It can take up to a few hours to generate the key and send it to you. Use this key to activate and access your TimeSeries Analytics instance.
+1. Sign up for the connector by going to [our Connector website](http://connector.timeseries.nl/ "Click here to go to the TimeSeries website") and register for free. You will receive your API key in an email after registering.
 
-After receiving the key, import the module from the [Mendix AppStore](https://appstore.home.mendix.com/link/app/31951/TimeSeries/TimeSeries-Connector "Click here for awesomeness") in your project.
+  <div class="alert alert-info">{% markdown %}
+  It can take up to a few hours to generate the key and send it to you. Use this key to activate and access your TimeSeries Analytics instance.
+  {% endmarkdown %}</div>
 
-## 4 Configure the necessary settings
+2. After you receive the key, import the TimeSerices Connector module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/31951/TimeSeries/TimeSeries-Connector "Click here for awesomeness") into your project.
 
-Some of the following configurations will already be in place. If so, it will be clarified below.
+## 4 Configure the Module Settings
 
-### 4.1 Constants
-- Dateformat: Is by default set to yyyy-MM-dd'T'HH:mm:ss.SSSZ and should remain so.
-- TimeSeriesAccessKey: Is empty by default. This is where the access key should go.
-- TimeSeriesBasePath: Is by default set to https://timeseries-connector.timeseries.nl:16000/ and should remain so, unless communicated otherwise.
+After importing the module there are a couple of settings you need to configure. Some of these settings are already preconfigured.
 
-### 4.2 Enumerations
-- Enum_AggregationInterval: INTERVAL or REGISTER. These are the supported interval types for aggregation calls.
-- Enum_AggregationPeriod: Hourly, daily, weekly, monthly or yearly. These are the supported periods in ISO format.
-- Enum_MeasurementType: INTERVAL, REGISTER or EVENT. These are the supported measurement types. Note: measurements of type EVENT can not be aggregated.
-- Enum_SearchType: Purely for UI. These are used to determine which search to perform.
+### 4.1 Set the Constants
+There are three constants that you can configure. Follow these steps to configure them:
 
-## 5 Implementation
-To give an example on how to use the Analytics platform we'll explain using the concept of a house. In this scenario the house is an asset, of which you can have multiple. This house will use gas and electricity, which we call channels. Each channel can hold values over time; every X seconds, minutes, hours, etc electricity usage can be measured and saved. These measurements can later be used for analysis.
+1. Expand your project and go to **App Store modules > TimeSeriesConnector > Settings**.
+2. Open the TimeSeriesAccessKey constant.
+3. Paste your TimeSeries API key in the **Default value** field and click **OK**.
+
+  <div class="alert alert-info">{% markdown %}
+  
+  There are two more constants that don't need to be configured unless otherwise instructed.
+  
+  * Dateformat: Is by default set to yyyy-MM-dd'T'HH:mm:ss.SSSZ and should remain like that
+  * TimeSeriesBasePath: Is by default set to https://timeseries-connector.timeseries.nl:16000/ and should remain like that unless communicated otherwise
+
+    {% endmarkdown %}</div>
+
+### 4.2 Available Enumerations
+These are the available enumarations in the TimeSeriesConnector module:
+
+* Enum_AggregationInterval: INTERVAL or REGISTER. These are the supported interval types for aggregation calls.
+* Enum_AggregationPeriod: Hourly, daily, weekly, monthly or yearly. These are the supported periods in ISO format.
+* Enum_MeasurementType: INTERVAL, REGISTER or EVENT. These are the supported measurement types. Note: measurements of type EVENT can not be aggregated.
+* Enum_SearchType: Purely for UI. These are used to determine which search to perform.
+
+## 5 Implementation Example
+
+We'll explain the analytics platform using the concept of a house. In this scenario the house is an asset, of which you can have multiple. This house will use gas and electricity, which we call channels. Each channel can hold values over time; electricity usage is measured and saved every X seconds, minutes, hours, etc.. These measurements can later be used for analysis.
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/Systemoverview.PNG)
 
-### 5.1 Create an asset
+### 5.1 Create an Asset
+Follow these steps to create an asset:
 
-Firstly, you will have to create an asset. Make sure to provide an **Asset name**, otherwise the connector will return an error. You are free to chose the name.
+1. Make sure to provide an **Asset name**, otherwise the connector will return an error. You are free to chose the name.
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/12613211-22be-4c65-aac9-bb7d821ed99e/timeseries-connector-create-asset?embed=true'></iframe>
 
 This action will return an **Asset ID**, which you can store in your database for access.
 
-### 5.2 Create a channel
+### 5.2 Create a Channel
 
 Next, you will have to create a channel. Make sure your channel belongs to an asset and to provide the **Asset ID**, a **Channel key** and a **Measurement interval**. You are free to chose the channel key name and the measurement interval. This interval is stored and can be used for analysis.
 
@@ -65,17 +85,25 @@ Next, you will have to create a channel. Make sure your channel belongs to an as
 
 This action will return a boolean, specifying if the action was successful.
 
-### 5.3 Store measurement(s)
+### 5.3 Store Measurement(s)
 
-Now that you have created an asset with a channel, it's possible to start storing measurements. Make sure your measurement belongs to a channel (and thus, an asset) and to provide the **Date and time**, the **Measurement type** and the **Value**. The **Date and time** needs to be formatted in UTC to the following format:  yyyy-MM-dd'T'HH:mm:ss.SSSZ, the **Measurement type** can be INTERVAL, REGISTER or EVENT and the **Value** is a decimal.
+Now that you have created an asset with a channel, it's possible to start storing measurements. Follow these steps to store your measurements:
+
+1. ...
+
+Make sure your measurement belongs to a channel (and thus, an asset) and to provide the **Date and time**, the **Measurement type** and the **Value**. The **Date and time** needs to be formatted in UTC to the following format:  yyyy-MM-dd'T'HH:mm:ss.SSSZ, the **Measurement type** can be INTERVAL, REGISTER or EVENT and the **Value** is a decimal.
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/ab003bd9-159a-4b76-8fbe-42512951c28b/timeseries-connector-store-measurement?embed=true'></iframe>
 
 This action will return a boolean, which is not used. 
 
-### 5.4 Aggregate your data
+### 5.4 Aggregate Your Data
 
-Once your channel has sufficient data, the TimeSeries Connector will really start to shine. Instead of having enormous amounts of data in your database which takes a long time to aggregate for reporting, you can now simply ask the TimeSeries platform for an aggregation of your data. For aggregation calls, supply the following information: An empty **Type parameter** used to populate the results, the **Asset ID** and **Channel key** to aggregate in, a **Start date** and **End date** in epoch time, an *Aggregation period** such as hourly or daily in the correct ISO format, the **Timezone** in which the results will be aggregated and the **Measurement type** in which the measurements have been stored.
+Once your channel has sufficient data, the TimeSeries Connector will really start to shine. Instead of having enormous amounts of data in your database which takes a long time to aggregate for reporting, you can now simply ask the TimeSeries platform for an aggregation of your data. Follow these steps to set up your data aggregation:
+
+1. ...
+
+For aggregation calls, supply the following information: An empty **Type parameter** used to populate the results, the **Asset ID** and **Channel key** to aggregate in, a **Start date** and **End date** in epoch time, an *Aggregation period** such as hourly or daily in the correct ISO format, the **Timezone** in which the results will be aggregated and the **Measurement type** in which the measurements have been stored.
 
 Make sure that the search result **Type parameter** has all the necessary attributes. An example entity:
 
@@ -87,10 +115,8 @@ Now you can create your logic.
 
 This action will return a list of your type parameter. In this list you will find an aggregation of the channel data by the aggregation period specified. For example: From March 1st up to March 10th, you will receive a list of your total electricity usage per day. This means your list will hold 10 objects. 
 
-## 6 Final remarks
+## 6 Final Remarks
 
-In this 'How to get started with the TimeSeries Connector',  an example is provided on how to implement a basic subset of the available actions. Over time, more actions will be released.
+This how-to provides an example on how to implement a basic subset of the available actions. Over time, more actions will be released.
 
 If you have any questions, please contact Paul Ketelaars at <paul.ketelaars@timeseries.nl> or Willem van Zantvoort at <willem.van.zantvoort@timeseries.nl>. 
-
-## 7 Related Content

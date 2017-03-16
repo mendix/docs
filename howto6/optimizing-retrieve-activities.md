@@ -14,20 +14,21 @@ You want to prevent creating the same objects multiple times on different places
 
 [![](attachments/18448682/18581014.png)](https://esus1.mendixcloud.com/file?fileID=12&thumb=false)
 
-Working around this can easily be done by using a subflow at a different place. Avoid making exceptions in your microflow for the default behavior, so don't put the standard logic in a difficult to read sub microflow because of one exception earlier in the process. Since we got to this point because of an exception it makes most sense to solve this problem by altering the exception and changing it in such a way that it fits in our standard flow.
+Working around this can easily be done by using a subflow at a different place. Avoid making exceptions in your microflow for the default behavior, so don't put the standard logic in a sub-microflow that is difficult to read because of one exception earlier in the process. Because of the exception, it makes sense to solve this problem by altering the exception and by changing it so that it fits in our standard microflow.
 
-The easiest way to implement this is to move all the logic for acquiring the primary address into a subflow. This way all logic after getting the address only needs to be specified once and the microflow is still easily readable. 
+The easiest way to implement it is to move all the logic for acquiring the primary address into a sub-microflow. In this way, all the logic after getting the address only needs to be specified once and the microflow is still easily readable. 
 
 [![](attachments/18448682/18581013.png)](https://esus1.mendixcloud.com/file?fileID=11&thumb=false)  
 
- The subflow 'GetCustomerPrimaryAddress' does contains the same logic as the original example except this way there is only one result: 'The correct primary address'
+The sub-microflow 'GetCustomerPrimaryAddress' contains the same logic as the original example, except that there is only one result: 'The correct primary address.'
 
 [![](attachments/18448682/18581012.png)](https://esus1.mendixcloud.com/file?fileID=11&thumb=false)
 
 ## Retrieving an instance of an object
 
-Sometimes you need to have a specific instance of an object, and building a subflow for just one retrieve and create seems like a bit much work. An alternative could be building your own loop. This allows you to have one main flow but still be able to find and create objects during this process. 
-But there is a risk for creating an infinite loop, if the retrieve applies a constraint which is not correctly set during the create. So always make sure to print a log message so you can easily identify any problems in your design.
+Sometimes you need to have a specific instance of an object, and building a sub-microflow for just one 'retrieve' and 'create' seems like a bit too much work. An alternative is to build your own loop. This allows you to have one main flow but to still be able to find and create objects during this process.
+
+However, there is a risk in creating an infinite loop if the 'retrieve' applies a constraint that is not correctly set during the 'create.' You should always print a log message so that you can easily identify any problems in your design.
 
 ![](attachments/18448682/18581011.png)
 

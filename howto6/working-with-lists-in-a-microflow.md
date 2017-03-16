@@ -91,7 +91,8 @@ In the previous section you retrieved a list of orders with the status 'Processi
     The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue. For more information take a look at this [documentation](/refguide6/loop?utm_source=businessmodeler&utm_medium=software&utm_campaign=modeler)
 
     </div>
-3.  Double click the loop activity and select the **OrderProcessingList **to iterate over.
+    
+3.  Double click the loop activity and select the **OrderProcessingList** to iterate over.
     ![](attachments/18448686/18581085.png)
 4.  Drag a **Change object** activity inside the loop:
     ![](attachments/18448686/18581084.png)
@@ -145,7 +146,7 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
 
     ![](attachments/18448686/18581069.png)
 
-8.  Double click the **change** variable activity to open its **properties.**
+8.  Double click the **change** variable activity to open its **properties**.
     ![](attachments/18448686/18581068.png)
 
 9.  Set the following properties:<br>
@@ -189,15 +190,16 @@ In the previous section you iterated over a list to add the value of single obje
 4.  Set the following properties:<br>
     a. For **Variable**, select _OrderList_.<br>
     b. For **Function**, select _Sum<br>
-
+    c. For **Attribute**, select _TotalPrice_<br>
+    d. For **Variable**, enter a descriptive name like _SumTotalPrice_.<br>
+    
     <div class="alert alert-info">
 
     See the [documentation](/refguide6/aggregate-list) for the description of the other functions.
 
     </div>
-    c. For **Attribute**, select _TotalPrice_<br>
-    d.  For **Variable**, enter a descriptive name like _SumTotalPrice_.<br>
-        ![](attachments/18448686/18581059.png)
+    
+    ![](attachments/18448686/18581059.png)
 
 5.  Click **OK**.
 
@@ -233,7 +235,6 @@ In the previous sections you filtered the list of orders from database on attrib
 
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
 *   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
-
 *   [Working With Lists in a Microflow](working-with-lists-in-a-microflow)
 *   [Triggering Logic using Microflows](triggering-logic-using-microflows)
 *   [Creating a Custom Save Button](create-a-custom-save-button)

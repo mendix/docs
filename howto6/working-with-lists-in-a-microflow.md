@@ -189,8 +189,8 @@ In the previous section you iterated over a list to add the value of single obje
     ![](attachments/18448686/18581060.png)
 4.  Set the following properties:<br>
     a. For **Variable**, select _OrderList_.<br>
-    b. For **Function**, select _Sum<br>
-    c. For **Attribute**, select _TotalPrice_<br>
+    b. For **Function**, select _Sum_.<br>
+    c. For **Attribute**, select _TotalPrice_.<br>
     d. For **Variable**, enter a descriptive name like _SumTotalPrice_.<br>
     
     <div class="alert alert-info">

@@ -43,7 +43,7 @@ In the previous section you have set up a basic data structure and created some 
     ![](attachments/18448686/18581098.png)
 6.  Select the **IVK_SetOrderToComplete** Microflow and click **select**.
     ![](attachments/18448686/18581054.png)
-7.  Open the **IVK_SetOrderToComplete **Microflow created in the first steps by double clicking at it in the Project Explorer.
+7.  Open the **IVK_SetOrderToComplete** Microflow created in the first steps by double clicking at it in the Project Explorer.
     ![](attachments/18448686/18581092.png)
     You should see the empty Microflow again:
     ![](attachments/8784287/8946316.png)
@@ -56,8 +56,8 @@ In the previous section you have set up a basic data structure and created some 
 11.  Select **From database** as _source_ option.
     ![](attachments/18448686/18581089.png)
 12. Set the following properties:<br>
-    a. For _Entity _select **Order**<br>
-    b. For _Name_ enter **OrderList**<div class="alert alert-info"><br>
+    a. For _Entity_, select **Order**<br>
+    b. For _Name_, enter **OrderList**<div class="alert alert-info"><br>
 
     <div class="alert alert-info">
     With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.
@@ -91,20 +91,20 @@ In the previous section you retrieved a list of orders with the status 'Processi
     The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue. For more information take a look at this [documentation](/refguide6/loop?utm_source=businessmodeler&utm_medium=software&utm_campaign=modeler)
 
     </div>
-3.  Double click the loop activity and select the **OrderProcessingList **to iterate over.
+3.  Double click the loop activity and select the **OrderProcessingList** to iterate over.
     ![](attachments/18448686/18581085.png)
 4.  Drag a **Change object** activity inside the loop:
     ![](attachments/18448686/18581084.png)
 5.  Double click the **change activity** to open its properties.
     ![](attachments/18448686/18581083.png)
-6.  Select the **IteratorOrder** at the **Variable **drop down and click the **New** button.
+6.  Select the **IteratorOrder** at the **Variable** drop down and click the **New** button.
     ![](attachments/18448686/18581082.png)
 
     You will see the following properties screen:
     ![](attachments/18448686/18581081.png)
 7. Set the following properties:<br>
-    a. For **Member** select _Orderstatus_.<br>
-    b. For **Value** enter _MyFirstModule.OrderStatus.Complete.<br>
+    a. For **Member**, select _Orderstatus_.<br>
+    b. For **Value**, enter _MyFirstModule.OrderStatus.Complete.<br>
     ![](attachments/18448686/18581080.png)
     Click **OK**. Your properties screen should look like this:
     ![](attachments/18448686/18581078.png)
@@ -112,7 +112,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
     <div class="alert alert-warning">
     Set 'Commit' and 'Refresh in Client' to 'Yes' to commit your changes to the database and refresh your list in the client so your changes will be visible.
     </div>
-8.  Click **OK. **Your microflow should look like this:
+8.  Click **OK**. Your microflow should look like this:
     ![](attachments/18448686/18581076.png)
 9.  **Re-deploy** your application.
 10.  Click the **Set Processing to Complete** button. The orders with status 'Processing' will now be changed to 'Complete'.
@@ -132,9 +132,9 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
 5.  Double click the **variable** to open its properties.
     ![](attachments/18448686/18581072.png)
 6.  Set the following properties:
-    1.  For **Data type**select _Float/Currency_
-    2.  For **Value **enter _0_
-    3.  For **Variable** enter _CalculatedTotalPrice_
+    1.  For **Data type**, select _Float/Currency_
+    2.  For **Value**, enter _0_
+    3.  For **Variable**, enter _CalculatedTotalPrice_
 7.  Add a **Change** variable inside the loop.
 
     <div class="alert alert-warning">
@@ -145,12 +145,12 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
 
     ![](attachments/18448686/18581069.png)
 
-8.  Double click the **change** variable activity to open its **properties.**
+8.  Double click the **change** variable activity to open its **properties**.
     ![](attachments/18448686/18581068.png)
 
 9.  Set the following properties:<br>
-    a. For **Variable **select _CalculatedTotalPrice_<br>
-    b. For **Value **enter _$CalculatedTotalPrice + $IteratorOrder/TotalPrice<br>
+    a. For **Variable**, select _CalculatedTotalPrice_<br>
+    b. For **Value**, enter _$CalculatedTotalPrice + $IteratorOrder/TotalPrice_<br>
 
     <div class="alert alert-info">
 
@@ -167,8 +167,8 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
 11.  Double click the **message** activity to open its properties.
     ![](attachments/18448686/18581065.png)
 12.  Set the following properties:
-    1.  For **Template** enter _Total calculated price: {1}._
-    2.  For **Parameters **add _toString($CalculatedTotalPrice).
+    1.  For **Template**, enter _Total calculated price: {1}._
+    2.  For **Parameters**, add _toString($CalculatedTotalPrice)_.
         _![](attachments/18448686/18581064.png)
 13.  Click **OK**. You should see a Microflow like this:
     ![](attachments/18448686/18581063.png)
@@ -187,16 +187,16 @@ In the previous section you iterated over a list to add the value of single obje
 3.  Double click the aggregate list activity to open its properties.
     ![](attachments/18448686/18581060.png)
 4.  Set the following properties:<br>
-    a. For **Variable **select _OrderList_.<br>
-    b. For **Function **select _Sum<br>
+    a. For **Variable**, select _OrderList_.<br>
+    b. For **Function**, select _Sum<br>
 
     <div class="alert alert-info">
 
     See the [documentation](/refguide6/aggregate-list) for the description of the other functions.
 
     </div>
-    c. For **Attribute** select _TotalPrice_<br>
-    d.  For **Variable** enter a descriptive name like _SumTotalPrice_.<br>
+    c. For **Attribute**, select _TotalPrice_<br>
+    d.  For **Variable**, enter a descriptive name like _SumTotalPrice_.<br>
         ![](attachments/18448686/18581059.png)
 
 5.  Click **OK**.
@@ -204,7 +204,7 @@ In the previous section you iterated over a list to add the value of single obje
 6.  Double click on the message activity.
     ![](attachments/18448686/18581056.png)
 
-7.  Replace the **$CalculatedTotalPrice** variable in the **Parameters Expression** by the **$SumTotalPrice **variable
+7.  Replace the **$CalculatedTotalPrice** variable in the **Parameters Expression** by the **$SumTotalPrice** variable
     ![](attachments/18448686/18581055.png)
 
 8.  Click **OK**. Your microflow should look like this:

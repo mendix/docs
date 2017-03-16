@@ -1,17 +1,21 @@
 ### Condition
 
-The widget can be made editable only if the object of the data view that contains the widget satisfies specificied criteria.
+The widget can be made editable only if the object of the data view that contains the widget satisfies the specificied criteria.
 
-A practical example would be a personal details form in which the user must enter his mariage information. In this case you might wish to disable an input for marriage date until the user indicates that he or she is married.
+A practical example would be a personal details form in which the user must enter his marital status. In this case, you might wish to disable an input for the marriage date until the user indicates that he or she is married.
 
-##### Based on attribute value
+##### Based on Attribute Value
 
-When selected, this enables the widget while a particular attribute has a certain value. Only boolean and enumeration attributes can be used to this purpose.
+When selected, this enables the widget while a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
 
-##### Based on expression
+##### Based on Expression
 
-<div class="alert alert-info">{% markdown %}Added in Mendix 7.1.{% endmarkdown %}</div>
+<div class="alert alert-info">{% markdown %}
 
-When selected, this enables the widget while a provided [expression](microflow-expressions) evaluates to true. The object of the containg data view is available inside an expression as a variable **$currentObject**.
+Added in Mendix 7.1.
 
-Note that the expression is evaluated in the browser, and hence, we advise you against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants]. Also currently client-side expressions do not support all functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
+{% endmarkdown %}</div>
+
+When selected, this enables the widget while a provided [expression](microflow-expressions) evaluates to true. The object of the containg data view is available inside an expression as a `$currentObject` variable.
+
+Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.

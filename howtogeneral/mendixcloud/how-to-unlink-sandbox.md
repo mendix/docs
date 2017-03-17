@@ -5,7 +5,7 @@ category: "Mendix Cloud"
 ---
 
 This how-to describes the process of unlinking your Sandbox from your Free App. 
-A **Sandbox** will be only linked to you **Free App** when you you click on **Enable Teamserver** in the **Mendix Modeler**. 
+A Sandbox will be only linked to you Free App when you you click on **Enable Teamserver** in the **Mendix Modeler**. 
 
 **After completing this how-to you will know:**
 
@@ -16,14 +16,15 @@ A **Sandbox** will be only linked to you **Free App** when you you click on **En
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
 *   You have a Free App (Mendix version 5.18 and up).
-*   Your Free App is linked to a **Sandbox**. This happens *automatically* when you *deploy your Free App* from your **Mendix Modeler**. 
-*   Your **Two Factor Google Authenticator** is *enabled*.
+*   Your Free App is linked to a Sandbox. This happens automatically when you deploy your Free App from your **Mendix Modeler**. 
+*   Your Two Factor Google Authenticator is enabled.
 
 ## 2 Downloading a Backup
+<div class="alert alert-warning">{% markdown %}
+Please note that because you are going to unlink the Sandbox from your Free App, the Sandbox environment will be permanently deleted. This means that all data will be lost from the Sandbox/Free app. To keep your data, you need to create a backup.
+{% endmarkdown %}</div>
 
-Please note that because you are going to unlink the Sandbox from your Free App, the Sandbox environment will be permanently deleted. This means that **all data will be lost from the Sandbox/Free app**. To keep your data, you need to *create a backup*.
-
-The documentation on *how to download a backup* can be found [here](how-to-download-a-backup).
+The documentation on how to download a backup can be found [here](how-to-download-a-backup).
 
 ## 3 Unlinking Free App from Sandbox
 

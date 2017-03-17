@@ -44,4 +44,4 @@ The Free App has now been unlinked from the Sandbox environment.
 *   [How To Download A Backup](how-to-download-a-backup)
 *   [How To Restore A Backup](how-to-restore-a-backup)
 *   [How to Upgrade your Free App to a Licensed App](how-to-upgrade-free-app)
-*   [How to Set Up Two-Factor Authentication With Google Authenticator](howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)
+*   [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)

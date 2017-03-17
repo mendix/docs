@@ -64,7 +64,7 @@ Whether you plan to import documents or export documents, working with XML means
 
 The XML schema describes what the contents of an XML document should be. We need to create domain-to-XML mapping to define how the data in our application is transformed into a XML document.
 
-1. Right-click a module in the **Project Explorer** and select**Add** > **Document**:
+1. Right-click a module in the **Project Explorer** and select **Add** > **Document**:
 
     ![](attachments/18448731/18581853.png)
 

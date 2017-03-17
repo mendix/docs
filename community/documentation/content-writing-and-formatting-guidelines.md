@@ -63,7 +63,7 @@ For details on the Markdown syntax, see the [GitHub Guide to Mastering Markdown]
 
 ## 4.2 Text Styling
 
-Use **bold** when identifying buttons, windows, fields, and other entities that appear in the UI. For example: "Add a **Retrieve** activity to the Microflow."
+Use **bold** when identifying buttons, windows, fields, and other entities that appear in the UI. For example: "Add a **Retrieve** activity to the microflow."
 
 Use *italics* when the user needs to enter text. For example: "In the **Name** field, enter *Customer_NewEdit_Commit*."
 
@@ -174,7 +174,7 @@ For example:
 
 1. "Open the **Activity** properties.
 2. Click **Select** for the source.
-3. Select the Microflow you created earlier, and click **OK**."
+3. Select the microflow you created earlier, and click **OK**."
 
 If you want to use an image in your numbered list, add it after the related exercise step.
 

@@ -205,14 +205,14 @@ To filter data with query parameters, follow these steps:
 
 These are some other query examples:
 
-* `http:// localhost:8080/odata/Expenses/Expenses(1688849860265137)`
-* `http ://localhost:8080/odata/Expenses/Expenses?$ top=100`
-* `http://localhost:8080/odata/ Expenses/Expenses ?$skip=10&$ top=10`
-* `http://localhost:8080/odata/ Expenses/Expenses /$ count`
-* `http://localhost:8080/odata/ Expenses/Expenses ?$ filter=Firstname+eq+'Ivan'`
-* `http://localhost:8080/odata/ Expenses/Expenses ?$ filter=Firstname+ne+'Ivan'`
-* `http://localhost:8080/odata/ Expenses/Expenses ?$ filter=DateOfBirth+gt+datetime'1995-01-01T00:00:00'`
-* `http ://localhost:8080/odata/ Expenses/Expenses ?$ filter=DateOfBirth+gt+datetime'2005-01-01T00:00:00 '&$ orderby=DateOfBirth`
+* `http://localhost:8080/odata/Expenses/Expenses(1688849860265137)`
+* `http://localhost:8080/odata/Expenses/Expenses?$top=100`
+* `http://localhost:8080/odata/Expenses/Expenses?$skip=10&$ top=10`
+* `http://localhost:8080/odata/Expenses/Expenses/$count`
+* `http://localhost:8080/odata/Expenses/Expenses?$filter=Firstname+eq+'Ivan'`
+* `http://localhost:8080/odata/Expenses/Expenses?$filter=Firstname+ne+'Ivan'`
+* `http://localhost:8080/odata/Expenses/Expenses?$filter=DateOfBirth+gt+datetime'1995-01-01T00:00:00'`
+* `http://localhost:8080/odata/Expenses/Expenses?$filter=DateOfBirth+gt+datetime'2005-01-01T00:00:00'&$orderby=DateOfBirth`
 
 ## 7 Related Content
 

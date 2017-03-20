@@ -69,7 +69,7 @@ We'll explain the analytics platform using the concept of a house. In this scena
 ![](attachments/how-to-get-started-with-the-timeseries-connector/Systemoverview.PNG)
 
 ### 5.1 Create an Asset
-Follow these steps to create an asset:
+You start the implemntation by creating an asset. Follow these steps to create an asset:
 
 1. Make sure to provide an **Asset name**, otherwise the connector will return an error. You are free to chose the name.
 
@@ -78,32 +78,45 @@ Follow these steps to create an asset:
 This action will return an **Asset ID**, which you can store in your database for access.
 
 ### 5.2 Create a Channel
+Next, you create a channel. This channel should belong to an asset, so you start there:
 
-Next, you will have to create a channel. Make sure your channel belongs to an asset and to provide the **Asset ID**, a **Channel key** and a **Measurement interval**. You are free to chose the channel key name and the measurement interval. This interval is stored and can be used for analysis.
+1. Make sure your channel belongs to an asset, so provide the **Asset ID**.
+2. Provide a **Channel key**. 
+3. Provide a **Measurement interval**. 
+
+You are free to chose the channel key name and the measurement interval. This interval is stored and can be used for analysis.
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/d0dc163e-9741-4efc-986e-00bcbbf86ce7/timeseries-connector-create-channel?embed=true'></iframe>
 
 This action will return a boolean, specifying if the action was successful.
 
 ### 5.3 Store Measurement(s)
-
 Now that you have created an asset with a channel, it's possible to start storing measurements. Follow these steps to store your measurements:
 
-1. ...
+1. Make sure your measurement belongs to a channel (and thus, an asset).
+2. Provide the **Date and time** of the measurement.
+3. Provide the **Measurement type**.
+4. Provide the **Value**.
 
-Make sure your measurement belongs to a channel (and thus, an asset) and to provide the **Date and time**, the **Measurement type** and the **Value**. The **Date and time** needs to be formatted in UTC to the following format:  yyyy-MM-dd'T'HH:mm:ss.SSSZ, the **Measurement type** can be INTERVAL, REGISTER or EVENT and the **Value** is a decimal.
+  <div class="alert alert-info">{% markdown %}
+
+  The **Date and time** needs to be formatted in UTC to the following format:  yyyy-MM-dd'T'HH:mm:ss.SSSZ, the **Measurement type** can be INTERVAL, REGISTER or EVENT and the **Value** is a decimal.
+
+  {% endmarkdown %}</div>
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/ab003bd9-159a-4b76-8fbe-42512951c28b/timeseries-connector-store-measurement?embed=true'></iframe>
 
 This action will return a boolean, which is not used. 
 
 ### 5.4 Aggregate Your Data
-
 Once your channel has sufficient data, the TimeSeries Connector will really start to shine. Instead of having enormous amounts of data in your database which takes a long time to aggregate for reporting, you can now simply ask the TimeSeries platform for an aggregation of your data. Follow these steps to set up your data aggregation:
 
-1. ...
-
-For aggregation calls, supply the following information: An empty **Type parameter** used to populate the results, the **Asset ID** and **Channel key** to aggregate in, a **Start date** and **End date** in epoch time, an *Aggregation period** such as hourly or daily in the correct ISO format, the **Timezone** in which the results will be aggregated and the **Measurement type** in which the measurements have been stored.
+1. Provide an empty **Type parameter** used to populate the results.
+2. Provide the **Asset ID** and **Channel key** to aggregate in.
+3. Provide a **Start date** and **End date** in epoch time.
+4. Provide an *Aggregation period** such as hourly or daily in the correct ISO format.
+5. Provide the **Timezone** in which the results will be aggregated.
+6. Provide the **Measurement type** in which the measurements have been stored.
 
 Make sure that the search result **Type parameter** has all the necessary attributes. An example entity:
 

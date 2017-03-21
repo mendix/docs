@@ -28,7 +28,7 @@ Filling out the caption for an empty option increases the user experience of you
 
 <div class="alert alert-info">{% markdown %}
 
-The empty option caption is available from Mendix 7.1.0.
+The empty option caption is available from Mendix 7.2.0.
 
 {% endmarkdown %}</div>
 

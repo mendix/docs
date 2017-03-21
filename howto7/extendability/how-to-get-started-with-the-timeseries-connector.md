@@ -57,9 +57,9 @@ There are three constants that you can configure. Follow these steps to configur
 ### 4.2 Available Enumerations
 These are the available enumarations in the TimeSeriesConnector module:
 
-* Enum_AggregationInterval: INTERVAL or REGISTER. These are the supported interval types for aggregation calls.
-* Enum_AggregationPeriod: Hourly, daily, weekly, monthly or yearly. These are the supported periods in ISO format.
-* Enum_MeasurementType: INTERVAL, REGISTER or EVENT. These are the supported measurement types. Note: measurements of type EVENT can not be aggregated.
+* Enum_AggregationInterval: INTERVAL or REGISTER. These are determined by the TimeSeries platforma and are the supported interval types for aggregation calls.
+* Enum_AggregationPeriod: Hourly, daily, weekly, monthly or yearly. These are the supported time periods.
+* Enum_MeasurementType: INTERVAL, REGISTER or EVENT. These are determined by the TimeSeries platforma and are the only supported measurement types. Note: measurements of type EVENT can not be aggregated.
 * Enum_SearchType: Purely for UI. These are used to determine which search to perform.
 
 ## 5 Implementation Example
@@ -67,6 +67,18 @@ These are the available enumarations in the TimeSeriesConnector module:
 We'll explain the analytics platform using the concept of a house. In this scenario the house is an asset, of which you can have multiple. This house will use gas and electricity, which we call channels. Each channel can hold values over time; electricity usage is measured and saved every X seconds, minutes, hours, etc.. These measurements can later be used for analysis.
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/Systemoverview.PNG)
+
+The module comes with a ready-to-use domain model, which we'll also use in this how-to. Of course this isn't a necessity and you can use your own domain model.
+
+  <div class="alert alert-warning">{% markdown %}
+  
+  If you want to use your own domain model, make sure your that for every action that requires a Type Parameter, your entities have the necessary attributes.
+  
+  {% endmarkdown %}</div>
+
+The domain model provided looks like this:
+
+![](attachments/how-to-get-started-with-the-timeseries-connector/Domainmodel.PNG)
 
 ### 5.1 Create an Asset
 You start the implemntation by creating an asset. Follow these steps to create an asset:

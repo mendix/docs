@@ -67,7 +67,7 @@ Before you can import data from an Excel File into your application, you have to
 
 In this How-to you will import data from a simple Excel file which can be downloaded here:
 
-[![](attachments/18448735/18581938.png)](attachments/18448735/18581949.xlsx)
+![](attachments/18448735/18581938.png)(attachments/18448735/18581949.xlsx)
 
 Based on the structure of the file you want to import, you will setup your template.
 

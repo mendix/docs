@@ -84,7 +84,11 @@ Next, you create a channel. This channel should belong to an asset, so you start
 2. Provide a **Channel key**. 
 3. Provide a **Measurement interval**. 
 
-You are free to chose the channel key name and the measurement interval. This interval is stored and can be used for analysis.
+  <div class="alert alert-info">{% markdown %}
+  
+  You are free to chose the channel key name and the measurement interval. This interval is stored and can be used for analysis.
+  
+  {% endmarkdown %}</div>
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/d0dc163e-9741-4efc-986e-00bcbbf86ce7/timeseries-connector-create-channel?embed=true'></iframe>
 
@@ -114,7 +118,7 @@ Once your channel has sufficient data, the TimeSeries Connector will really star
 1. Provide an empty **Type parameter** used to populate the results.
 2. Provide the **Asset ID** and **Channel key** to aggregate in.
 3. Provide a **Start date** and **End date** in epoch time.
-4. Provide an *Aggregation period** such as hourly or daily in the correct ISO format.
+4. Provide an **Aggregation period** such as hourly or daily in the correct ISO format.
 5. Provide the **Timezone** in which the results will be aggregated.
 6. Provide the **Measurement type** in which the measurements have been stored.
 

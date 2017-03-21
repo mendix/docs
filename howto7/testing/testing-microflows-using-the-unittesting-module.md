@@ -1,5 +1,5 @@
 ---
-title: "Testing microflows using the UnitTesting module"
+title: "Test Microflows Using the UnitTesting Module"
 space: "Mendix 7 How-To's"
 category: "Testing"
 tags: []

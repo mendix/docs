@@ -18,7 +18,7 @@ This how-to describes the process of upgrading your Free App to a Licensed App.
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
 *   You have a Free App (Mendix version 5.18 and up)
-*   An available Licensed Cloud Node. To request a licensed cloud node, contact [Mendix Support](http://www.support.mendix.com)
+*   An available Licensed Cloud Node. To request a licensed cloud node, contact [Mendix Support](https://support.mendix.com/hc/en-us)
 
 # 2 Upgrade Steps for a Sandbox Environment
 

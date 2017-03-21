@@ -7,7 +7,7 @@ tags: ["IoT", "Connector", "TimeSeries", "Big Data", "Analytics"]
 
 ## 1 Introduction
 
-This how-to is focussed on implementing and understanding the TimeSeries Connector and the TimeSeries Analytics platform.
+This how-to is focussed on implementing and understanding the TimeSeries Connector and the TimeSeries Analytics platform. The TimeSeries Connector is especially useful when your application needs to handle big amounts of data. Let's take the IoT trend we see recently; one hundred sensors that send data each minute will send 144000 objects to your database per day, one hundred and fifty will send 216000 objects. See how these numbers start to add up once you add a few more sensors? Now imagine having your standard relational database handle this amount of data, let alone perform analysis on it. The TimeSeries Analytics platform is designed specifically to handle these amounts of data. 
 
 **This how-to will teach you how to do the following:**
 

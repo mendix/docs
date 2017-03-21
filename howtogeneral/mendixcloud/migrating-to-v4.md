@@ -16,8 +16,8 @@ This how-to describes everything about the migration from v3 to v4.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 *   An available v4 Cloud Node. To request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM)
-*   You are the Technical Contact of both v3 and v4 Cloud Nodes.
-*   Downloaded a Deployment Package and data of your v3 Node.
+*   You are the Technical Contact of both v3 and v4 Cloud Nodes
+*   Downloaded a Deployment Package and data of your v3 Node. See, [How to Download a Backup](/howtogeneral/mendixcloud/how-to-download-a-backup)
 
 ## 3 The migration
 
@@ -51,7 +51,7 @@ If you haven't downloaded a backup of your App on Mendix Cloud v3, the documenta
 
 ### 3.4 Deploy the Deployment Package to an environment
 
-The App on Mendix Cloud v4 is now ready to use. You only now have to deploy the package to an evironment and start your App.
+The App on Mendix Cloud v4 contains your data. You now only have to deploy the deployment package to an evironment and start your App.
 
 The documentation on how to deploy to the cloud can be found [here.](deploying-to-the-cloud)
 

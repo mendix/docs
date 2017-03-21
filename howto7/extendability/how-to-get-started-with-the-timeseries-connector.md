@@ -78,7 +78,7 @@ The module comes with a ready-to-use domain model, which we'll also use in this 
 
 The domain model provided looks like this:
 
-![](attachments/how-to-get-started-with-the-timeseries-connector/Domainmodel.PNG)
+![](attachments/how-to-get-started-with-the-timeseries-connector/Domainmodel.png)
 
 ### 5.1 Create an Asset
 You start the implemntation by creating an asset. Follow these steps to create an asset:

@@ -17,7 +17,7 @@ You can publish your own webservices in a Mendix application. These webservices 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
 *   Download and install [SoapUI](https://www.soapui.org/downloads/soapui.html)
-*   Complete the how-to [Exposing a web service](expose-a-web-service)
+*   Complete the how-to [Exposing an web service](expose-a-web-service)
 
 | Software | Version used in this how-to |
 | --- | --- |

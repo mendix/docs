@@ -53,17 +53,17 @@ If you haven't downloaded a backup of your App on Mendix Cloud v3, the documenta
 
 The App on Mendix Cloud v4 contains your data. You now only have to deploy the deployment package to an evironment and start your App.
 
+<div class="alert alert-warning">{% markdown %}
+
+Before starting your App in Mendix Cloud v4, make sure it has the same configurations as the v3 node. You can find all node settings in the **environment details** page under **Model Options**, **Network**, **Runtime**, **Maintenance**. 
+
+{% endmarkdown %}</div>
+
 The documentation on how to deploy to the cloud can be found [here.](deploying-to-the-cloud)
 
 ### 3.5 Submit a request to Support to Offboard the V3 Node
 
 Your App is now running in Mendix Cloud v4. If you don't need the Mendix Cloud v3 node, submit a request at [Mendix Support](www.support.mendix.com) to Offboard the v3 node.
-
-<div class="alert alert-warning">{% markdown %}
-
-Before offboarding the v3 node make sure that the new App on Mendix Cloud v4 has the same configurations as the v3 node.
-
-{% endmarkdown %}</div>
 
 ## 4 FAQ
 What will change for me?

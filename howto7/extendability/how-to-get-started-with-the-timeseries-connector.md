@@ -76,7 +76,7 @@ The module comes with a ready-to-use domain model, which we'll also use in this 
   
   {% endmarkdown %}</div>
 
-The domain model provided looks like this:
+The domain model looks like this:
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/Domainmodel.png)
 
@@ -127,11 +127,11 @@ This action will return a boolean, which is not used.
 ### 5.4 Aggregate Your Data
 Once your channel has sufficient data, the TimeSeries Connector will really start to shine. Instead of having enormous amounts of data in your database which takes a long time to aggregate for reporting, you can now simply ask the TimeSeries platform for an aggregation of your data. Follow these steps to set up your data aggregation:
 
-1. Create an entity which can serve as the ** Type parameter**. Make sure it has all the necessary attributes as defined in this example:
+1. Create a AggregateSearchResult object to use as the ** Type parameter**. If you create a new entity, make sure it has all the necessary attributes as defined in this example:
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/example-aggregate-domain.png)
 
-2. Provide an empty **Type parameter** used to populate the results.
+2. Provide the empty **Type parameter** used to populate the results.
 3. Provide the **Asset ID** and **Channel key** to aggregate in.
 4. Provide a **Start date** and **End date** in epoch time.
 5. Provide an **Aggregation period** such as hourly or daily in the correct ISO format.
@@ -140,7 +140,7 @@ Once your channel has sufficient data, the TimeSeries Connector will really star
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/9d9055e4-4301-4ee4-8ef9-fdcbcd05079e/timeseries-connector-get-aggregations?embed=true'></iframe>
 
-This action will return a list of your type parameter. In this list you will find an aggregation of the channel data by the aggregation period specified. For example: From March 1st up to March 10th, you will receive a list of your total electricity usage per day. This means your list will hold 10 objects. 
+This action will return a list of your type parameter, AggregateSearchResult. In this list you will find an aggregation of the channel data by the aggregation period specified. For example: From March 1st up to March 10th, you will receive a list of your total electricity usage per day. This means your list will hold 10 objects. 
 
 ## 6 Final Remarks
 

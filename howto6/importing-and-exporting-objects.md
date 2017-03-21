@@ -90,7 +90,7 @@ Mendix module packages are stored as Mendix Package (.mpk) files. However, you n
     _Your project directory will appear.
 2.  Open the widgets folder and paste your **Mendix Package file** here.
     ![](attachments/18448739/18582107.png)
-3.  Open the **Project** menu and select **Synchronize Project Directory**to synchronize the changes in the project directory.
+3.  Open the **Project** menu and select **Synchronize Project Directory** to synchronize the changes in the project directory.
     ![](attachments/18448739/18582106.png)
 
     <div class="alert alert-info">
@@ -111,8 +111,8 @@ To learn more about importing content from the App Store, see [Use App Store Con
 
 This part will go through the steps required to export projects.
 
-1.  Click on the **File** menu in the modeler and select **Export Project Package...
-    **_![](attachments/18448739/18582091.png)
+1.  Click on the **File** menu in the modeler and select **Export Project Package...**
+    _![](attachments/18448739/18582091.png)
     _
 2.  A dialog will appear that enables you to set the export location and, if required, select data to export.
     ![](attachments/18448739/18582090.png)
@@ -122,8 +122,8 @@ This part will go through the steps required to export projects.
 
 ### Exporting Modules
 
-1.  **Right click** on a module in the Project Explorer, and select **Export module package...
-    **![](attachments/18448739/18582095.png)
+1.  **Right click** on a module in the Project Explorer, and select **Export module package...**
+    ![](attachments/18448739/18582095.png)
     If your module refers to other modules in the project (i.e., it is not self-contained), you will receive a dialogue box warning you about this.
 2.  **Right click** on your module in the Project Explorer and select **Find usages of other user modules** to view the references.
     ![](attachments/18448739/18582094.png)
@@ -148,7 +148,7 @@ Mendix module object packages are stored as Mendix Package (.mpk) files. An obje
 1.  **Right click** on the document you want to export and select **Export document package...**
     ![](attachments/18448739/18582092.png)
     A save dialogue box will open.
-2.  Enter a **name** for your package and click **Save_._**
+2.  Enter a **name** for your package and click **Save**.
 
 ## Related content
 

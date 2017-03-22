@@ -131,7 +131,7 @@ To manage stories in the Modeler, follow these steps:
 
     ![](attachments/18448642/18580490.png)
 
-4. Click the **To-do** status for the first item to chang ethe status to **Running**:
+4. Click the **To-do** status for the first item to change the status to **Running**:
 
     ![](attachments/18448642/18580504.png)
 

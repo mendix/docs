@@ -35,6 +35,13 @@ space: "Release Notes"
 * We fixed the screen jumping at every key-press that occurred while you were writing a large post on the Buzz.
 
 
+# <a name='release-2017-02-20'>Release date: February 20th, 2017</a>
+
+### Improvements
+* We removed static information from the log lines in Mendix Cloud v3. Every line before contained `tr10000` and `127.0.0.1`. We removed these fields as they were useless.
+
+
+
 # <a name='release-2016-10-05'>Release date: October 5th, 2016</a>
 
 ## Fix

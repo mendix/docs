@@ -3,6 +3,7 @@ title: "Platform Portal"
 space: "Release Notes"
 ---
 
+
 # <a name='release-2017-03-09'>Release date: March 9th, 2017</a>
 
 ### Improvements
@@ -15,6 +16,8 @@ space: "Release Notes"
 
 * We fixed the issue in which completing a sprint from the **Stories** page wouldn't properly update the UI.
 * The **getAccounts** call in the **UserManagementAPI** will now sort results consistently on **EmailAddress** when using limit/offset.
+
+
 # <a name='release-2017-02-21'>Release date: February 21st, 2017</a>
 
 ### New Features
@@ -30,40 +33,57 @@ space: "Release Notes"
 * We fixed the password reset form giving an error if you tried to submit it using the **Enter** key (even though you would receive a link).
 * We fixed the **Team** overview flickering every few seconds that occurred after you create a new app.
 * We fixed the screen jumping at every key-press that occurred while you were writing a large post on the Buzz.
+
+
 # <a name='release-2016-10-05'>Release date: October 5th, 2016</a>
 
 ## Fix
 
-On Webkit-based browsers such as Safari a "connection error" dialog would sometimes pop up while loading the Dev Portal, after which the page would continue to load normally. We now prevent this dialog from appearing so that people can open the Dev Portal uninterrupted.---
+On Webkit-based browsers such as Safari a "connection error" dialog would sometimes pop up while loading the Dev Portal, after which the page would continue to load normally. We now prevent this dialog from appearing so that people can open the Dev Portal uninterrupted.
+
+
 # <a name='release-2016-05-12'>Release date: May 12th, 2016</a>
 
-*   The colors and styling of the Development Portal have been brought in line with the rest of the platform.---
+*   The colors and styling of the Development Portal have been brought in line with the rest of the platform.
+
+
 # <a name='release-2016-03-24'>Release date: March 4th, 2016</a>
 
-*   Fixed the Invite API - it is again possible to invite other users to your app using a custom invitation flow.---
+*   Fixed the Invite API - it is again possible to invite other users to your app using a custom invitation flow.
+
+
 # <a name='release-2016-02-18'>Release date: February 8th, 2016</a>
 
 ## Features
 
 *   Advanced Runtime Settings can now be configured for the paid tiers in Mendix Cloud applications. You can find a list of all custom settings here: [Custom Settings](/refguide6/custom-settings)
 *   The advanced settings LogMinDurationQuery and ClientQueryTimeout have been enabled by default. LogMinDurationQuery will print all database queries that take longer than 10 seconds to the application log and ClientQueryTimeout will cancel database select queries triggered from the Client that take longer than 15 minutes, which is when the http timeout has kicked in so the results can not be delivered and the query can safely be killed. A restart of the application is required for these changes to take effect.
+
+
 # <a name='release-2016-01-13'>Release date: January 13th, 2016</a>
 
 ## Features
 
 *   The Technical Contact of an application can now assign other people as the Technical Contact using the Node Security tab in the Project Settings on [https://home.mendix.com/](https://home.mendix.com/).
+
+
 # <a name='release-2015-12-01'>Release date: December 1st, 2015</a>
 
 ## Bug fixes
 
 *   The Mendix Cloud switched from the Jetty blocking I/O connector to a selector based non-blocking I/O connector for all applications. Due to a bug in the blocking I/O connector HTTP requests could be fired multiple times for long-running (> 2 minutes) requests, which would result in strange results in the Mendix Debugger (ticket 462699). If you want to apply this fix you can simply restart your application.
-*   Fixed bug that occurs when a which contains a large SVN directory is exposed into an Online Working Copy using Mendix Platform SDK.---
+*   Fixed bug that occurs when a which contains a large SVN directory is exposed into an Online Working Copy using Mendix Platform SDK.
+
+
 # <a name='release-2015-11-30'>Release date: November 30th, 2015</a>
 
 ## Improvements
 
 *   The story details page now provides more context, by showing comments, tasks and feedback when applicable.
-*   It is now easier to swap the priority of stories, using the arrow buttons at the left of each story and task.---
+*   It is now easier to swap the priority of stories, using the arrow buttons at the left of each story and task.
+
+
+
 # <a name='release-2015-10-16'>Release date: October 16th, 2015</a>
 
 ## Improvements
@@ -74,12 +94,16 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 
 *   Fixed issue which prevented downloading of feedback item attachments.
 *   Fixed issue which hid the tooltip explaining password requirements in the password reset screen.
-*   Fixed issue causing some messages on the Buzz to be rendered twice when clicking 'Show more'.---
+*   Fixed issue causing some messages on the Buzz to be rendered twice when clicking 'Show more'.
+
+
 # <a name='release-2015-09-17'>Release date: September 17, 2015</a>
 
 ## Bug fixes
 
-*   Fixed issue which caused collapsed/expanded state of sprints and stories to be forgotten when switching between the stories overview of a project and a story's details page.---
+*   Fixed issue which caused collapsed/expanded state of sprints and stories to be forgotten when switching between the stories overview of a project and a story's details page.
+
+
 # <a name='release-2015-09-03'>Release date: September 3rd, 2015</a>
 
 ## New features
@@ -94,12 +118,16 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 
 ## Bug fixes
 
-*   Removed the unnecessary confirmation popup at the end of the sign up process.---
+*   Removed the unnecessary confirmation popup at the end of the sign up process.
+
+
 # <a name='release-2015-08-06'>Release date: August 6th, 2015</a>
 
 ## New features
 
-*   We have rolled out our new project creation flow to all users. When creating a new project from the Portal, you are presented with a set of themes and sample apps that you can use as a basis for your new application.---
+*   We have rolled out our new project creation flow to all users. When creating a new project from the Portal, you are presented with a set of themes and sample apps that you can use as a basis for your new application.
+
+
 # <a name='release-2015-07-31'>Release date: July 31st, 2015</a>
 
 ## Improvements
@@ -108,7 +136,9 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 
 ## Bug fixes
 
-*   Added limits to search input fields in a number of pages.---
+*   Added limits to search input fields in a number of pages.
+
+
 # <a name='release-2015-07-24'>Release date: July 24th, 2015</a>
 
 ## New functionality
@@ -117,27 +147,37 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 
 ## Bug fixes
 
-*   Clicking on feedback items on your profile brings you to the proper details page---
+*   Clicking on feedback items on your profile brings you to the proper details page
+
+
 # <a name='release-2015-07-16'>Release date: July 16th, 2015</a>
 
 ## Bug fixes
 
-*   Various small fixes---
+*   Various small fixes
+
+
 # <a name='release-2015-07-03'>Release date: July 3rd, 2015</a>
 
 ## Improvements
 
-*   Improved project creation performance. Creating a new project will now take several seconds less than before.---
+*   Improved project creation performance. Creating a new project will now take several seconds less than before.
+
+
 # <a name='release-2015-06-16'>Release date: June 16th, 2015</a>
 
 ## Improvements
 
-*   Fixed an issue where in certain cases the input element was not focusable in Internet Explorer, after submitting feedback with the feedback widget  (Ticket #278349)---
+*   Fixed an issue where in certain cases the input element was not focusable in Internet Explorer, after submitting feedback with the feedback widget  (Ticket #278349)
+
+
 # <a name='release-2015-06-02'>Release date: June 2nd, 2015</a>
 
 ## Improvements
 
-*   Various small improvements---
+*   Various small improvements
+
+
 # <a name='release-2015-05-29'>Release date: May 29th, 2015</a>
 
 ## Contents
@@ -145,14 +185,19 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 ## Fixes
 
 *   Some users experienced stability issues when filtering projects on the Buzz. These issues has now been resolved.
-*   Several small fixes related to the UI and stability of Sprintr---
+*   Several small fixes related to the UI and stability of Sprintr
+
+
 # <a name='release-2015-04-21'>Release date: April 21st, 2015</a>
 
 ## Contents
 
 ## Fixes
 
-*   Fixed [home.mendix.com](https://home.mendix.com/) stability issue.---
+*   Fixed [home.mendix.com](https://home.mendix.com/) stability issue.
+
+
+
 # <a name='release-2015-04-16'>Release date: April 16th, 2015</a>
 
 ## Improvements
@@ -164,7 +209,9 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 *   Images on the wall can also be opened on Mobile interfaces
 *   MyProjects overview is once again sorted based on a logic (Tickets #212931, #140834)
 *   Various performance fixes
-*   Various styling fixes---
+*   Various styling fixes
+
+
 # <a name='release-2015-03-31'>Release date: March 31st, 2015</a>
 
 ## New features
@@ -179,23 +226,31 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 ## Improvements
 
 *   Several UI improvements, including a new navigation sidebar and a revised Projects page.
-*   Story / task detail pages contain buttons to quickly navigate back and forth between all stories / tasks within the same context.---
+*   Story / task detail pages contain buttons to quickly navigate back and forth between all stories / tasks within the same context.
+
+
 # <a name='release-2015-02-26'>Release date: February 26th, 2015</a>
 
 ## Improvements
 
 *   Searching for a term on the Capture page no longer causes spaces to be added within the results list.
-*   Various small UX fixes.---
+*   Various small UX fixes.
+
+
 # <a name='release-2015-02-19'>Release date: February 19th, 2015</a>
 
 ## Improvements
 
-*   Various small improvements---
+*   Various small improvements
+
+
 # <a name='release-2015-02-05'>Release date: February 5th, 2015</a>
 
 ## Improvements
 
-*   Various small user interface improvements---
+*   Various small user interface improvements
+
+
 # <a name='release-2015-01-22'>Release date: January 22nd, 2015</a>
 
 ## Improvements
@@ -206,7 +261,9 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 
 ### Deployment
 
-*   A new graph was introduced: JVM Process memory usage (read more about this here: [https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/))---
+*   A new graph was introduced: JVM Process memory usage (read more about this here: [https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/))
+
+
 # <a name='release-2014-12-30'>Release date: December 30th, 2014</a>
 
 ## Improvements
@@ -215,7 +272,9 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 
 *   The loading time of the Deploy tab of a project has been decreased dramatically.
 
-*   The "Create package from teamserver" button is now always visible. Previously it was only visible for projects that are on Mendix 5, but as most users are on Mendix 5 we dropped this restriction. Users that are not on Mendix 5 or do not have data in their Teamserver repository will be shown a pop up message stating that the feature is only available after an upgrade.---
+*   The "Create package from teamserver" button is now always visible. Previously it was only visible for projects that are on Mendix 5, but as most users are on Mendix 5 we dropped this restriction. Users that are not on Mendix 5 or do not have data in their Teamserver repository will be shown a pop up message stating that the feature is only available after an upgrade.
+
+
 # <a name='release-2014-12-23'>Release date: December 23rd, 2014</a>
 
 ## New features

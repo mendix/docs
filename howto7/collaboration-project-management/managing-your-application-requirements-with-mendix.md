@@ -135,7 +135,7 @@ To manage stories in the Modeler, follow these steps:
 
     ![](attachments/18448642/18580504.png)
 
-5. Go back to the project dashboard in your browser to the **Capture** page.
+5. Go back to the **Capture** page of the project dashboard in your browser.
 6. Expand the first sprint and check the status of the first entry:
 
     ![](attachments/18448642/18580489.png)

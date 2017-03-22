@@ -4,6 +4,28 @@ space: "Release Notes"
 ---
 
 
+# <a name='release-2017-03-20'>Release date: March 20th, 2017</a>
+
+### Bug fix
+* The Deploy / Operate sections in the Platform Portal were broken on Internet Explorer 11 due to widget incompatability, introduced in the previous release. This was hotpatched in production on March 16th already.
+
+
+# <a name='release-2017-03-13'>Release date: March 13th, 2017</a>
+
+### Bug fixes
+* The highlighted menu state was fixed, the wrong items were highlighted in some instances
+* AppStore links clicked from within the Deploy/Operate sections now open in the same tab
+* The **Show Profile** link was broken in some parts of the platform
+* Clicking **Operate -> Backups** resulted in errors for a Free App
+* Various fixes for internal beta program
+
+
+# <a name='release-2017-03-10'>Release date: March 10th, 2017</a>
+
+### New feature
+* Introduced a new setting in **Node Security**, you can now configure **Monitoring Permissions** separately from **Transport Permissions**. Immediately after this change, we granted all users that had **Transport Permissions** on an environment the **Monitoring Permissions** there as well. From now on, a **Technical Contact** can configure these settings for everyone in the team separately. While we introduced this setting, we revisited the layout of the **Node Security** screen, you now have a simpler interface to change the permissions en each environment.
+
+
 # <a name='release-2017-03-09'>Release date: March 9th, 2017</a>
 
 ### Improvements

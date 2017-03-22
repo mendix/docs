@@ -27,13 +27,13 @@ To configure the custom settings that are only used when you run your app locall
 
 1. Open your app in the Modele and go to **Project** > **Settings**.
 2. Click **Edit** to open the **Edit Configuration** dialog box, and select the **Custom** tab.
-3. Add these three custom settings:
+3. Add two custom settings to specify the paths to the certificates (ClientCertificates) and matching passwords (ClientCertificatePasswords). Also, add a third setting (WebServiceClientCertificates) to specify which web service should use which certificate if you use more than one certificate in your app.
 
     Name | Value | Notes
     --- | --- | ---
     ClientCertificates | The full paths to the certificate files. | Separate with commas if you have more than one file. Backslashes in the paths should not be doubled.
     ClientCertificatePasswords | The password for each certificate file.  | In the same order as the **ClientCertificates**.
-    WebServiceClientCertificates | The description of which files to use for which service, in the format of `"ModuleName.WebserviceName": "full path"`. | If you have more than one web service to configure, you can separate them with commas. The whole setting value needs to be enclosed in curly brackets ["{ }"]. Backslashes in the paths must be doubled. In addition, the paths you specify here should all appear in **ClientCertificates**.
+    WebServiceClientCertificates **(Optional)** | The description of which files to use for which service, in the format of `"ModuleName.WebserviceName": "full path"`. | If you have more than one web service to configure, you can separate them with commas. The whole setting value needs to be enclosed in curly brackets ["{ }"]. Backslashes in the paths must be doubled. In addition, the paths you specify here should all appear in **ClientCertificates**.
 
 This is an example:
 
@@ -59,8 +59,9 @@ To configure client certificates in the Mendix Cloud, follow these steps:
 2. Each environment has its own configuration. Click **Details** next one of the environments.
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.
-5. After the files have been uploaded, they appear in the list. Double-click an item in the list.
-6. In the **Pin Client Certificate to Web Services** section of the **Details** screen, add the names of the web services for which you want to use this certificate.
-7. Enter these names in the **ModuleName.WebServiceName** form.
-8. Close the **Details** screen.
-9. Click **Stop application** and then **Start application**.
+5. Only follow these steps if you are using more than one client certificate in your app:<br>
+    a. After the files have been uploaded, they appear in the list. Double-click an item in the list.<br>
+    b. In the **Pin Client Certificate to Web Services** section of the **Details** screen, add the names of the web services for which you want to use this certificate.<br>
+    c. Enter these names in the **ModuleName.WebServiceName** form.<br>
+    d. Close the **Details** screen.<br>
+6. Click **Stop application** and then **Start application**.

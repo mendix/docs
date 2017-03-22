@@ -27,7 +27,7 @@ To configure the custom settings that are only used when you run your app locall
 
 1. Open your app in the Modele and go to **Project** > **Settings**.
 2. Click **Edit** to open the **Edit Configuration** dialog box, and select the **Custom** tab.
-3. Add two custom settings to specify the paths to the certificates (ClientCertificates) and matching passwords (ClientCertificatePasswords). Also add a third setting (WebServiceClientCertificates) to specify which webservice should use which certificate if you use more than one certificate in your app.
+3. Add two custom settings to specify the paths to the certificates (ClientCertificates) and matching passwords (ClientCertificatePasswords). Also, add a third setting (WebServiceClientCertificates) to specify which web service should use which certificate if you use more than one certificate in your app.
 
     Name | Value | Notes
     --- | --- | ---
@@ -59,9 +59,9 @@ To configure client certificates in the Mendix Cloud, follow these steps:
 2. Each environment has its own configuration. Click **Details** next one of the environments.
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.
-5. Only follow these steps if you are using more than one client certificate in your app:
-    * After the files have been uploaded, they appear in the list. Double-click an item in the list.
-    * In the **Pin Client Certificate to Web Services** section of the **Details** screen, add the names of the web services for which you want to use this certificate.
-    * Enter these names in the **ModuleName.WebServiceName** form.
-    * Close the **Details** screen.    
+5. Only follow these steps if you are using more than one client certificate in your app:<br>
+    a. After the files have been uploaded, they appear in the list. Double-click an item in the list.<br>
+    b. In the **Pin Client Certificate to Web Services** section of the **Details** screen, add the names of the web services for which you want to use this certificate.<br>
+    c. Enter these names in the **ModuleName.WebServiceName** form.<br>
+    d. Close the **Details** screen.<br>
 6. Click **Stop application** and then **Start application**.

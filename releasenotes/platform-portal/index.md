@@ -53,14 +53,13 @@ space: "Release Notes"
 
 ## <a name='release-2017-02-20'>Release date: February 20th, 2017</a>
 
-### Improvements
 * We removed static information from the log lines in Mendix Cloud v3. Every line before contained `tr10000` and `127.0.0.1`. We removed these fields as they were useless.
 
 ## <a name='release-2016-10-05'>Release date: October 5th, 2016</a>
 
 ### Fix
 
-On Webkit-based browsers such as Safari a "connection error" dialog would sometimes pop up while loading the Dev Portal, after which the page would continue to load normally. We now prevent this dialog from appearing so that people can open the Dev Portal uninterrupted.
+* On Webkit-based browsers such as Safari a "connection error" dialog would sometimes pop up while loading the Dev Portal, after which the page would continue to load normally. We now prevent this dialog from appearing so that people can open the Dev Portal uninterrupted.
 
 ## <a name='release-2016-05-12'>Release date: May 12th, 2016</a>
 
@@ -72,14 +71,10 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 
 ## <a name='release-2016-02-18'>Release date: February 8th, 2016</a>
 
-### Features
-
 *   Advanced Runtime Settings can now be configured for the paid tiers in Mendix Cloud applications. You can find a list of all custom settings here: [Custom Settings](/refguide6/custom-settings)
 *   The advanced settings LogMinDurationQuery and ClientQueryTimeout have been enabled by default. LogMinDurationQuery will print all database queries that take longer than 10 seconds to the application log and ClientQueryTimeout will cancel database select queries triggered from the Client that take longer than 15 minutes, which is when the http timeout has kicked in so the results can not be delivered and the query can safely be killed. A restart of the application is required for these changes to take effect.
 
 ## <a name='release-2016-01-13'>Release date: January 13th, 2016</a>
-
-### Features
 
 *   The Technical Contact of an application can now assign other people as the Technical Contact using the Node Security tab in the Project Settings on [https://home.mendix.com/](https://home.mendix.com/).
 
@@ -243,8 +238,6 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 ## <a name='release-2014-12-30'>Release date: December 30th, 2014</a>
 
 ### Improvements
-
-#### Deploy
 
 *   The loading time of the Deploy tab of a project has been decreased dramatically.
 

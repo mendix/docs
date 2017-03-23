@@ -7,9 +7,9 @@ tags: ["integration", "web service"]
 
 ## 1 Introduction
 
-Some web services require you to authenticate using a client certificate. This how-to describes how to configure your app to do this.
+Some services require you to authenticate using a client certificate. This how-to describes how to configure your app to do this.
 
-Let's assume that you already have an app that calls a web service. For details on how to configure this, have a look at [How to Consume a Simple Web Service](consume-a-simple-web-service).
+Let's assume that you already have an app that calls a service. For details on how to configure this, have a look at [How to Consume a REST Service](consume-a-rest-service) or [How to Consume a Simple Web Service](consume-a-simple-web-service).
 
 This how-to will teach you how to do the following:
 
@@ -27,21 +27,21 @@ To configure the custom settings that are only used when you run your app locall
 
 1. Open your app in the Modele and go to **Project** > **Settings**.
 2. Click **Edit** to open the **Edit Configuration** dialog box, and select the **Custom** tab.
-3. Add two custom settings to specify the paths to the certificates (ClientCertificates) and matching passwords (ClientCertificatePasswords). Also, add a third setting (WebServiceClientCertificates) to specify which web service should use which certificate if you use more than one certificate in your app.
+3. Add two custom settings to specify the paths to the certificates (ClientCertificates) and matching passwords (ClientCertificatePasswords). Also, add a third setting (ClientCertificateUsages) to specify which service should use which certificate if you use more than one certificate in your app.
 
     Name | Value | Notes
     --- | --- | ---
-    ClientCertificates | The full paths to the certificate files. | Separate with commas if you have more than one file. Backslashes in the paths should not be doubled.
+    ClientCertificates | The paths to the certificate files. | Separate with commas if you have more than one file. Backslashes in the paths should not be doubled.
     ClientCertificatePasswords | The password for each certificate file.  | In the same order as the **ClientCertificates**.
-    WebServiceClientCertificates **(Optional)** | The description of which files to use for which service, in the format of `"ModuleName.WebserviceName": "full path"`. | If you have more than one web service to configure, you can separate them with commas. The whole setting value needs to be enclosed in curly brackets ["{ }"]. Backslashes in the paths must be doubled. In addition, the paths you specify here should all appear in **ClientCertificates**.
+    ClientCertificateUsages **(Optional)** | The description of which files to use for which service, in the format `"ModuleName.WebserviceName": "path"` (for web services) or `"www.server-to-contact.com": "path"` (for REST services). | If you have more than one service to configure, you can separate them with commas. Enclose the whole setting value in braces (`{ }`). Backslashes in the paths must be doubled. In addition, the paths you specify here should all appear in **ClientCertificates**.
 
 This is an example:
 
 ```
-{ "Module.WebService1": "D:\\App\\Mx1.pfx", "Module.WebService2": "D:\\App\\Mx2.pfx" }
+{ "Module.WebService1": "D:\\App\\Mx1.pfx", "www.server-to-contact.com": "D:\\App\\Mx2.pfx" }
 ```
 
-A complete configuration can look like this:
+A complete configuration may look like this:
 
 ![Example configuration](attachments/use-a-client-certificate/example-custom-settings.png)
 

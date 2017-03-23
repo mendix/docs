@@ -31,9 +31,9 @@ To configure the custom settings that are only used when you run your app locall
 
     Name | Value | Notes
     --- | --- | ---
-    ClientCertificates | The full paths to the certificate files. | Separate with commas if you have more than one file. Backslashes in the paths should not be doubled.
+    ClientCertificates | The paths to the certificate files. | Separate with commas if you have more than one file. Backslashes in the paths should not be doubled.
     ClientCertificatePasswords | The password for each certificate file.  | In the same order as the **ClientCertificates**.
-    ClientCertificateUsages **(Optional)** | The description of which files to use for which service, in the format `"ModuleName.WebserviceName": "full path"` (for web services) or `"www.server-to-contact.com": "full path"` (for REST services). | If you have more than one service to configure, you can separate them with commas. Enclose the whole setting value in curly brackets `{ }`. Backslashes in the paths must be doubled. In addition, the paths you specify here should all appear in **ClientCertificates**.
+    ClientCertificateUsages **(Optional)** | The description of which files to use for which service, in the format `"ModuleName.WebserviceName": "path"` (for web services) or `"www.server-to-contact.com": "path"` (for REST services). | If you have more than one service to configure, you can separate them with commas. Enclose the whole setting value in curly brackets `{ }`. Backslashes in the paths must be doubled. In addition, the paths you specify here should all appear in **ClientCertificates**.
 
 This is an example:
 

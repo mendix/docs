@@ -11,7 +11,7 @@ Mendix only supports the InnoDB storage engine, with row-based logging enabled.
 
 Mendix uses the `Read Committed` transaction isolation level by default since Mendix 6.10.6 and 7.2. Only row-based logging can be used in the case of this transaction isolation level. You should set the `binlog_format` database configuration value to `ROW` or `MIXED`. For more information, see the details on `binlog_format` [here](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_format) and [here](https://mariadb.com/kb/en/mariadb/replication-and-binary-log-server-system-variables/#binlog_format).
 
-#### The SAVEPOINT Exception Does Not Exist
+### The SAVEPOINT Exception Does Not Exist
 
 In the case of the "SAVEPOINT unnamed does not exist" exception, a deadlock has occurred. Mendix cannot correctly handle this situation, because MySQL/MariaDB automatically rolls back the transaction and removes all the save points for that transaction. Mendix tries to roll back to a specific save point, but that is not allowed anymore by MySQL and MariaDB. Avoiding deadlocks by keeping transactions as short as possible is advised.
 

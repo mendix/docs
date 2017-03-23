@@ -5,7 +5,6 @@ space: "Release Notes"
 
 ## <a name='release-2017-03-20'>Release date: March 20th, 2017</a>
 
-### Bug fix
 * The Deploy / Operate sections in the Platform Portal were broken on Internet Explorer 11 due to widget incompatability, introduced in the previous release. This was hotpatched in production on March 16th already.
 
 ## <a name='release-2017-03-13'>Release date: March 13th, 2017</a>
@@ -19,8 +18,7 @@ space: "Release Notes"
 
 ## <a name='release-2017-03-10'>Release date: March 10th, 2017</a>
 
-### New feature
-* Introduced a new setting in **Node Security**, you can now configure **Monitoring Permissions** separately from **Transport Permissions**. Immediately after this change, we granted all users that had **Transport Permissions** on an environment the **Monitoring Permissions** there as well. From now on, a **Technical Contact** can configure these settings for everyone in the team separately. While we introduced this setting, we revisited the layout of the **Node Security** screen, you now have a simpler interface to change the permissions en each environment.
+* We introduced a new setting in **Node Security**, you can now configure **Monitoring Permissions** separately from **Transport Permissions**. Immediately after this change, we granted all users that had **Transport Permissions** on an environment the **Monitoring Permissions** there as well. From now on, a **Technical Contact** can configure these settings for everyone in the team separately. While we introduced this setting, we revisited the layout of the **Node Security** screen, you now have a simpler interface to change the permissions en each environment.
 
 ## <a name='release-2017-03-09'>Release date: March 9th, 2017</a>
 
@@ -53,7 +51,6 @@ space: "Release Notes"
 
 ## <a name='release-2016-10-05'>Release date: October 5th, 2016</a>
 
-### Fix
 * On Webkit-based browsers such as Safari a "connection error" dialog would sometimes pop up while loading the Dev Portal, after which the page would continue to load normally. We now prevent this dialog from appearing so that people can open the Dev Portal uninterrupted.
 
 ## <a name='release-2016-05-12'>Release date: May 12th, 2016</a>
@@ -110,20 +107,20 @@ space: "Release Notes"
 * The signup process takes less time to complete
 * The 'details' link of each story in the backlog is now always visible, making it easier to access to the story details page.
 
-### Bug fixes
+### Bug fix
 * Removed the unnecessary confirmation popup at the end of the sign up process.
 
 ## <a name='release-2015-08-06'>Release date: August 6th, 2015</a>
 
-### New features
+### New feature
 * We have rolled out our new project creation flow to all users. When creating a new project from the Portal, you are presented with a set of themes and sample apps that you can use as a basis for your new application.
 
 ## <a name='release-2015-07-31'>Release date: July 31st, 2015</a>
 
-### Improvements
+### Improvement
 * Improved project creation performance. Users will now quickly navigate to the project homepage, with the project's Team Server repository being set up in the background.
 
-### Bug fixes
+### Bug fix
 * Added limits to search input fields in a number of pages.
 
 ## <a name='release-2015-07-24'>Release date: July 24th, 2015</a>
@@ -131,7 +128,7 @@ space: "Release Notes"
 ### New functionality
 * The status of stories and tasks can now be changed from the story details page
 
-### Bug fixes
+### Bug fix
 * Clicking on feedback items on your profile brings you to the proper details page
 
 ## <a name='release-2015-07-16'>Release date: July 16th, 2015</a>
@@ -162,7 +159,7 @@ space: "Release Notes"
 
 ## <a name='release-2015-04-16'>Release date: April 16th, 2015</a>
 
-### Improvements
+### Improvement
 * Added guidance to the Develop page
 
 ### Fixes
@@ -200,13 +197,11 @@ space: "Release Notes"
 
 ## <a name='release-2015-01-22'>Release date: January 22nd, 2015</a>
 
-### Improvements
+### Improvement
 * Numerous small user interface improvements
 
 ### New feature
-
-#### Deployment
-* A new graph was introduced: JVM Process memory usage (read more about this here: [https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/))
+* For deployment, a new graph was introduced: JVM Process memory usage (read more about this here: [https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/))
 
 ## <a name='release-2014-12-30'>Release date: December 30th, 2014</a>
 

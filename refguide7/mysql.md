@@ -1,9 +1,19 @@
 ---
-title: "MySQL"
+title: "MySQL/MariaDB"
 space: "Mendix 7 Reference Guide"
 parent: "data-storage"
 ---
 Mendix introduced support for MySQL 5.5 in Mendix 5.12, and support for MariaDB 5.5\. in Mendix 5.16.
+Mendix only supports the InnoDB storage engine, with row-based logging enabled.
+
+## Transaction isolation
+Mendix uses the `Read Committed` transaction isolation level by default since Mendix 6.10.6 and 7.2. Only row-based logging can be used in case of this transaction isolation level. You should set the `binlog_format` database configuration value to `ROW` or `MIXED`. For more information, see:
+
+https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_format
+https://mariadb.com/kb/en/mariadb/replication-and-binary-log-server-system-variables/#binlog_format
+
+#### Exception SAVEPOINT does not exist
+In case of exception 'SAVEPOINT unnamed does not exist', a deadlock has occurred. Mendix cannot correctly handle this situation, because MySQL/MariaDB automatically rollbacks the transaction and removes all the savepoints for the rollbacked transaction. Mendix tries to rollback to a specific savepoint, but that is not allowed anymore by MySQL and MariaDB. It is advisable to avoid deadlocks by keeping transactions as short as possible.
 
 ## Time zone support
 

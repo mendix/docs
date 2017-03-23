@@ -7,9 +7,9 @@ tags: ["integration", "web service"]
 
 ## 1 Introduction
 
-Some web services require you to authenticate using a client certificate. This how-to describes how to configure your app to do this.
+Some services require you to authenticate using a client certificate. This how-to describes how to configure your app to do this.
 
-Let's assume that you already have an app that calls a web service. For details on how to configure this, have a look at [How to Consume a Simple Web Service](consume-a-simple-web-service).
+Let's assume that you already have an app that calls a service. For details on how to configure this, have a look at [How to Consume a REST Service](consume-a-rest-service) or [How to Consume a Simple Web Service](consume-a-simple-web-service).
 
 This how-to will teach you how to do the following:
 
@@ -33,7 +33,7 @@ To configure the custom settings that are only used when you run your app locall
     --- | --- | ---
     ClientCertificates | The full paths to the certificate files. | Separate with commas if you have more than one file. Backslashes in the paths should not be doubled.
     ClientCertificatePasswords | The password for each certificate file.  | In the same order as the **ClientCertificates**.
-    ClientCertificateUsages **(Optional)** | The description of which files to use for which service, in the format `"ModuleName.WebserviceName": "full path"` (for web services) or `"www.server-to-contact.com": "full path"` (for REST services). | If you have more than one web service to configure, you can separate them with commas. Enclose the whole setting value in curly brackets `{ }`. Backslashes in the paths must be doubled. In addition, the paths you specify here should all appear in **ClientCertificates**.
+    ClientCertificateUsages **(Optional)** | The description of which files to use for which service, in the format `"ModuleName.WebserviceName": "full path"` (for web services) or `"www.server-to-contact.com": "full path"` (for REST services). | If you have more than one service to configure, you can separate them with commas. Enclose the whole setting value in curly brackets `{ }`. Backslashes in the paths must be doubled. In addition, the paths you specify here should all appear in **ClientCertificates**.
 
 This is an example:
 

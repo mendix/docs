@@ -7,7 +7,7 @@ Mendix introduced support for MySQL 5.5 in Mendix 5.12, and support for MariaDB 
 Mendix only supports the InnoDB storage engine, with row-based logging enabled.
 
 ## Transaction isolation
-Mendix uses the Read Committed transaction isolation level by default since Mendix 6.10.6 and 7.2. Only row-based logging can be used in case of this transaction isolation level. You should set the binlog_format database configuration value to ROW or MIXED. For more information, see:
+Mendix uses the `Read Committed` transaction isolation level by default since Mendix 6.10.6 and 7.2. Only row-based logging can be used in case of this transaction isolation level. You should set the `binlog_format` database configuration value to `ROW` or `MIXED`. For more information, see:
 
 https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_format
 https://mariadb.com/kb/en/mariadb/replication-and-binary-log-server-system-variables/#binlog_format

@@ -5,7 +5,7 @@ space: "Release Notes"
 
 ## <a name='release-2017-03-20'>Release date: March 20th, 2017</a>
 
-* The Deploy / Operate sections in the Platform Portal were broken on Internet Explorer 11 due to widget incompatability, introduced in the previous release. This was hotpatched in production on March 16th already.
+* The Deploy / Operate sections in the Platform Portal were broken on Internet Explorer 11 due to widget incompatability, introduced in the previous release. This was already hot-patched in production on March 16th.
 
 ## <a name='release-2017-03-13'>Release date: March 13th, 2017</a>
 

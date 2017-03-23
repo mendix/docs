@@ -159,31 +159,21 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 
 ## <a name='release-2015-07-16'>Release date: July 16th, 2015</a>
 
-### Bug fixes
-
 *   Various small fixes
 
 ## <a name='release-2015-07-03'>Release date: July 3rd, 2015</a>
-
-### Improvements
 
 *   Improved project creation performance. Creating a new project will now take several seconds less than before.
 
 ## <a name='release-2015-06-16'>Release date: June 16th, 2015</a>
 
-### Improvements
-
 *   Fixed an issue where in certain cases the input element was not focusable in Internet Explorer, after submitting feedback with the feedback widget  (Ticket #278349)
 
 ## <a name='release-2015-06-02'>Release date: June 2nd, 2015</a>
 
-### Improvements
-
 *   Various small improvements
 
 ## <a name='release-2015-05-29'>Release date: May 29th, 2015</a>
-
-### Contents
 
 ### Fixes
 
@@ -191,10 +181,6 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 *   Several small fixes related to the UI and stability of Sprintr
 
 ## <a name='release-2015-04-21'>Release date: April 21st, 2015</a>
-
-### Contents
-
-### Fixes
 
 *   Fixed [home.mendix.com](https://home.mendix.com/) stability issue.
 
@@ -236,13 +222,9 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 
 ## <a name='release-2015-02-19'>Release date: February 19th, 2015</a>
 
-### Improvements
-
 *   Various small improvements
 
 ## <a name='release-2015-02-05'>Release date: February 5th, 2015</a>
-
-### Improvements
 
 *   Various small user interface improvements
 
@@ -252,7 +234,7 @@ On Webkit-based browsers such as Safari a "connection error" dialog would someti
 
 *   Numerous small user interface improvements
 
-### New features
+### New feature
 
 #### Deployment
 

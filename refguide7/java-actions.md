@@ -40,7 +40,15 @@ Common use cases include, but are not limited to:
 
 #### Microflow Type
 
-The 'Microflow' parameter type allows users of Java actions to pass a microflow into a Java action. In the generated Java action template code, this type is represented as String.
+The 'Microflow' parameter type allows users of Java actions to pass a microflow into a Java action. In the generated Java action template code, this type is represented as String: the name of the microflow.
+
+#### Import mapping Type
+
+The 'Import mapping' parameter type allows users of Java actions to pass an import mapping into a Java action. In the generated Java action template code, this type is represented as String: the name of the import mapping.
+
+#### Export mapping Type
+
+The 'Export mapping' parameter type allows users of Java actions to pass an export mapping into a Java action. In the generated Java action template code, this type is represented as String: the name of the export mapping.
 
 #### Return type
 

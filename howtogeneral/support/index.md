@@ -3,47 +3,46 @@ title: "Mendix Support"
 space: "General How-To's"
 ---
 
-## What you can expect from Mendix Support
+## What You Can Expect from Mendix Support
 
-Although our platform is highly available and new versions of our products are tested extensively before going live, we want to provide the assurance that we are available in the case of disruptions.
+Although our platform is highly accessible and new versions of our products are tested extensively before going live, we want to provide the assurance that we are available in the case of disruptions.
 
-## Service Level Agreement
+Mendix Support is here to answer any questions and solve any issues that you might have. We try to make your journey as frictionless as possible.
 
-We are there for all the users of the Mendix Platform and are bound by a Service Level Agreement (SLA) for our licensed customers. Licensed customers can select their type of SLA-level: Platform or Platinum. The SLA-level determines the specific agreements on: 
+### Service Level Agreements
+
+We are there for all users of the Mendix platform, and we are bound by a service-level agreement (SLA) to our licensed customers. Licensed customers can select their type of SLA level: Platform or Platinum. The SLA level determines the specific agreement on the following points: 
 * Support availability 
 * Platform availability 
 * Maintenance 
 * Incident response time
 * Incident resolution time 
-* Recovery Time Objective (RTO)
-* Recovery Point Objective (RPO)
+* Recovery time objective (RTO)
+* Recovery point objective (RPO)
 
-The SLA for your company is available upon request. Please contact Mendix Support or your customer success manager in case you want to check the details. 
+The SLA for your company is available upon request. Please contact [Mendix Support](https://support.mendix.com/hc/en-us) or your Customer Success Manager if you want to check the details. 
 
-Mendix Support is here to answer any question and solve any issue that you might have. We try to make your journey as frictionless as possible.
+## Finding Your Answers
 
-## Find Your Answers
+We expect that many questions and issues can and will be solved by reading the Mendix [documentation](https://docs.mendix.com) and [forum](https://forum.mendix.com). If you can’t find your answer there, you can submit a question, incident, or change request with Mendix Support. We will act as focal point for issues on the Mendix Modeler, your applications, the [Cloud Portal](https://cloud.mendix.com), and the [Platform Portal](https://home.mendix.com). We will forward the issue to the second and third line if necessary.
 
-We expect that many questions and issues can and will be solved by our [documentation](https://docs.mendix.com) and the [Mendix Forum](https://forum.mendix.com). If you can’t find your answer there, you can submit your question, incident, or change request with Mendix Support. We will act as focal point for issues on the Mendix Modeler, your applications, the [Cloud Portal](https://cloud.mendix.com), and [Platform Portal](https://home.mendix.com), and forward the issue to second and third line if necessary.
+## Feature Requests
 
-## Feature requests
+We would like to invite you to an important channel where you can provide feature requests to Mendix: the [Mendix Idea Forum](https://forum.mendix.com/link/ideas/). Every quarter, any customer can post a feature request, which can be reviewed, expanded on, and voted on by other members of the Mendix Community. Based on this feedback, we will determine which features have the most value according to our customers, and they will be implemented.
 
-We would like to invite you to an important channel for providing feature requests to Mendix, the [IdeaForum](https://forum.mendix.com/link/ideas/). Every Quarter all our customers can bring in feature requests, which can be enriched and voted on by others. Based on this feedback we determine which features have most value according to our customers and will be implemented.
+## Accessing Mendix Support
 
-## How You can Access Mendix Support
-
-You can access our support team through our [Support Portal](https://support.mendix.com), email (support@mendix.com), or by phone (numbers are listed in our Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. You can check the status of your personal tickets and all submitted tickets on your applications and provide updates on them in our Support Portal.
-
+You can access our Mendix Support team through the [Support Portal](https://support.mendix.com), via email ([support@mendix.com](support@mendix.com)), or by phone (the phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. You can check the status of your personal tickets and all submitted tickets on your applications and provide updates on them in the Support Portal.
 
 ## What We Expect from You
 
-Mendix supports the Mendix Platform, and we expect you to support the applications that you have built on our platform. The following is not supported through the standard SLA: 
+Mendix supports the Mendix platform, and we expect you to support the applications that you have built on the platform. The following points are not supported through the standard SLA:
 * Developing code on your behalf
 * Debugging or troubleshooting your applications
-* Analyzing and troubleshooting the performance of your applications or your infrastructure, except when we suspect an underlying issue in the Mendix Platform
-* Troubleshooting community-developed components from our App Store
+* Analyzing and troubleshooting the performance of your applications or your infrastructure, except when we suspect an underlying issue exists in the Mendix platform
+* Troubleshooting Mendix Community-developed components from the Mendix App Store
 
-During the start phase and through part of the scale phase of your Digital Transformation journey it might be the best option to let the development team handle the support of the applications (DevOps). As the number of applications grows, it is best to let an expert service desk handle the support of your applications. You can involve your existing service desk team or outsource support to one of our support partners, which you can find on the Partners page.
+During the start phase and through part of the scale phase of your digital transformation journey, it might be best to let the Development Team handle the support of the applications (DevOps). As the number of applications grows, it is best to let an Expert Service desk handle the support of your applications. You can involve your existing service desk team or outsource support to one of our support partners, which you can find on the [Mendix Partners](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview) page.
 
 ## Company admins
 

@@ -10,7 +10,6 @@ toc-level: "1"
 
 ## March 13th, 2017
 
-### Bug fixes
 * The highlighted menu state was fixed, the wrong items were highlighted in some instances
 * AppStore links clicked from within the Deploy/Operate sections now open in the same tab
 * The **Show Profile** link was broken in some parts of the platform
@@ -73,13 +72,11 @@ toc-level: "1"
 
 ## December 1st, 2015
 
-### Bug fixes
 * The Mendix Cloud switched from the Jetty blocking I/O connector to a selector based non-blocking I/O connector for all applications. Due to a bug in the blocking I/O connector HTTP requests could be fired multiple times for long-running (> 2 minutes) requests, which would result in strange results in the Mendix Debugger (ticket 462699). If you want to apply this fix you can simply restart your application.
 * Fixed bug that occurs when a which contains a large SVN directory is exposed into an Online Working Copy using Mendix Platform SDK.
 
 ## November 30th, 2015
 
-### Improvements
 * The story details page now provides more context, by showing comments, tasks and feedback when applicable.
 * It is now easier to swap the priority of stories, using the arrow buttons at the left of each story and task.
 
@@ -95,7 +92,6 @@ toc-level: "1"
 
 ## September 17th, 2015
 
-### Bug fixes
 * Fixed issue which caused collapsed/expanded state of sprints and stories to be forgotten when switching between the stories overview of a project and a story's details page.
 
 ## September 3rd, 2015
@@ -113,7 +109,6 @@ toc-level: "1"
 
 ## August 6th, 2015
 
-### New feature
 * We have rolled out our new project creation flow to all users. When creating a new project from the Portal, you are presented with a set of themes and sample apps that you can use as a basis for your new application.
 
 ## July 31st, 2015
@@ -150,7 +145,6 @@ toc-level: "1"
 
 ## May 29th, 2015
 
-### Fixes
 * Some users experienced stability issues when filtering projects on the Buzz. These issues has now been resolved.
 * Several small fixes related to the UI and stability of Sprintr
 
@@ -184,7 +178,6 @@ toc-level: "1"
 
 ## February 26th, 2015
 
-### Improvements
 * Searching for a term on the Capture page no longer causes spaces to be added within the results list.
 * Various small UX fixes.
 
@@ -206,7 +199,6 @@ toc-level: "1"
 
 ## December 30th, 2014
 
-### Improvements
 * The loading time of the Deploy tab of a project has been decreased dramatically.
 * The "Create package from teamserver" button is now always visible. Previously it was only visible for projects that are on Mendix 5, but as most users are on Mendix 5 we dropped this restriction. Users that are not on Mendix 5 or do not have data in their Teamserver repository will be shown a pop up message stating that the feature is only available after an upgrade.
 

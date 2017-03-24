@@ -32,7 +32,7 @@ We would like to invite you to an important channel where you can provide featur
 
 ## Accessing Mendix Support
 
-You can access our Mendix Support team through the [Support Portal](https://support.mendix.com), via email ([support@mendix.com](support@mendix.com)), or by phone (the phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. You can check the status of your personal tickets and all submitted tickets on your applications and provide updates on them in the Support Portal.
+You can access our Mendix Support team through the [Support Portal](https://support.mendix.com), via email (<support@mendix.com>), or by phone (the phone numbers are listed in the Support Portal). Please note that critical tickets always need to be accompanied by a phone call to speed up the triage of the issue. You can check the status of your personal tickets and all submitted tickets on your applications and provide updates on them in the Support Portal.
 
 ## What We Expect from You
 

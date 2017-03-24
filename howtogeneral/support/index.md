@@ -44,27 +44,28 @@ Mendix supports the Mendix platform, and we expect you to support the applicatio
 
 During the start phase and through part of the scale phase of your digital transformation journey, it might be best to let the Development Team handle the support of the applications (DevOps). As the number of applications grows, it is best to let an Expert Service desk handle the support of your applications. You can involve your existing service desk team or outsource support to one of our support partners, which you can find on the [Mendix Partners](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview) page.
 
-## Company admins
+## Company Admins
 
-To manage your company account and the users, projects, and licensed cloud nodes of your company, you can appoint company admins in our Platform Portal. 
+To manage your company account and the users, projects, and licensed cloud nodes of your company, you can appoint company admins in the [Platform Portal](https://home.mendix.com).
 
 ## Technical Contacts
 
-You need to appoint a technical contact for each of your applications. The technical contact can check the performance of the applications in the Cloud Portal and receives alerts from our Cloud Portal based on errors and warnings in each application. It is possible to make other team members receive these alerts as well. 
-It is very important to read these alerts carefully and act upon them, as they can influence the performance of your app. For more information on the alerts, see the [monitoring application health documentation](https://docs.mendix.com/mendixcloud/monitoring-application-health).
+You need to appoint a technical contact for each of your applications. The technical contact can check the performance of the applications in the Cloud Portal and receives alerts from the Mendix Cloud Portal based on errors and warnings in each application. It is possible to make other team members receive these alerts as well. 
+
+It is very important to read these alerts carefully and to act upon them, as they can influence the performance of your app. For more information on alerts, see [Monitoring Application Health](../mendixcloud/monitoring-application-health).
 
 ## Training
 
-We expect your support team to be trained and certified on the Mendix Modeler, the Platform Portal, and our Cloud Portal, so that they can interpret and analyze alerts, graphs, and logs in the Cloud Portal. Please check out our [offering](https://developers.mendix.com/training/) for available training courses and webinars, or contact the Academy for more information. 
+We expect your support team to be trained and certified on the Mendix Modeler, the Platform Portal, and the Cloud Portal so that they can interpret and analyze alerts, graphs, and logs in the Cloud Portal. Please check out our [training courses](https://developers.mendix.com/training/) and [expert webinars](https://developers.mendix.com/training/webinars/), or contact the Mendix Academy (<academy@mendix.com>) for more information. 
 
-## Reach out to Mendix Support
+## Reach Out to Mendix Support
 
-If, after your analysis, an issue in the Mendix Platform is suspected, or if you have questions about your analysis, you can reach out to Mendix Support. We will provide pointers on how to solve the issues yourself or redirect you to Expert Services for further assistance. If we suspect a platform issue, we will involve second and third line support for confirmation, and fix it if it is a platform issue. If the issue is commercial, for example, because your app requires a larger app container or more file storage, you might refer you to your customer success manager directly. 
+If you suspect an issue in the Mendix platform exists after your analysis (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide pointers on how to solve the issues yourself or redirect you to Expert Services for further assistance. If we suspect a platform issue, we will involve second and third line support for confirmation, and we will fix it if it is a platform issue. If the issue is commercial (for example, because your app requires a larger app container or more file storage), we might refer you to your Customer Success Manager directly. 
 
-## Platform status
+## Platform Status
 
-If there is an issue in the Mendix Platform that affects multiple customers, or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com) and send updates on the progress through email if you have subscribed to this service. It is recommended to have your service desk team subscribe to updates from this page. 
+If there is an issue in the Mendix platform that affects multiple customers or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com) and send updates on the progress through email if you have subscribed to this service. It is recommended to have your service desk team subscribe to updates from this page. 
 
 ## Product Support Period
 
-Mendix supports the current major release and two prior major releases, and we support major releases for a minimum of 24 months. Because of this, we recommend that you upgrade your projects to the latest version of the Mendix Modeler at least once a year. We will reach out to you in time if you are running on a version that will become unsupported, so that you have ample time to perform an upgrade.
+Mendix supports the current major release and the two prior major releases, and we support major releases for a minimum of 24 months. Because of this, we recommend that you upgrade your projects to the latest version of the Mendix Modeler at least once a year. We will reach out to you in time if you are running on a version that will become unsupported so that you have ample time to perform an upgrade.

@@ -10,7 +10,7 @@ Mendix only supports the InnoDB storage engine, with row-based logging enabled.
 
 ## Transaction Isolation
 
-Mendix uses the `Read Committed` transaction isolation level by default since Mendix 6.10.6 and 7.2. Only row-based logging can be used in the case of this transaction isolation level. You should set the `binlog_format` database configuration value to `ROW` or `MIXED`. For more information, see the details on `binlog_format` [here](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_format) and [here](https://mariadb.com/kb/en/mariadb/replication-and-binary-log-server-system-variables/#binlog_format).
+Mendix uses the `Read Committed` transaction isolation level by default starting with the release of Mendix 7.2. Only row-based logging can be used in the case of this transaction isolation level. You should set the `binlog_format` database configuration value to `ROW` or `MIXED`. For more information, see the details on `binlog_format` [here](https://dev.mysql.com/doc/refman/5.7/en/replication-options-binary-log.html#sysvar_binlog_format) and [here](https://mariadb.com/kb/en/mariadb/replication-and-binary-log-server-system-variables/#binlog_format).
 
 ### The SAVEPOINT Exception Does Not Exist
 

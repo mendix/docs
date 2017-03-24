@@ -1,6 +1,7 @@
 ---
 title: "Platform Portal"
 space: "Release Notes"
+toc-level: "1"
 ---
 
 ## March 20th, 2017

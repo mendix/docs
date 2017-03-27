@@ -48,17 +48,17 @@ Mendix supports the Mendix platform, and we expect you to support the applicatio
 
 During the start phase and through part of the scale phase of your digital transformation journey, it might be best to let the development team (DevOps) handle the support of the applications. As the number of applications grows, it is best to let an expert service desk handle the support of your applications. You can involve your existing service desk team or outsource support to one of our support partners, which you can find listed on the [Mendix Partners](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview) page.
 
-## Company Admins
+### Company Admins
 
 To manage your company account and the users, projects, and licensed cloud nodes of your company, you can appoint company admins in the [Platform Portal](https://home.mendix.com).
 
-## Technical Contacts
+### Technical Contacts
 
 You need to appoint a technical contact for each of your applications. The technical contact checks the performance of the applications in the Cloud Portal and receives alerts from the Mendix Cloud Portal based on errors and warnings in each application. It is possible to make other team members receive these alerts as well. 
 
 It is very important to read these alerts carefully and to act upon them, as they can influence the performance of your app. For more information on alerts, see [Monitoring Application Health](../mendixcloud/monitoring-application-health).
 
-## Training
+### Training
 
 We expect your support team to be trained and certified on the Mendix Modeler, the Platform Portal, and the Cloud Portal so that they can interpret and analyze alerts, graphs, and logs in the Cloud Portal. For more information, please check our available [training courses](https://developers.mendix.com/training/) and [expert webinars](https://developers.mendix.com/training/webinars/) or contact the Mendix Academy (<academy@mendix.com>). 
 

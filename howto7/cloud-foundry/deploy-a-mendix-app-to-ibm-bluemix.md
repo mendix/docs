@@ -1,6 +1,6 @@
 ---
-title: "Deploy a Mendix App to IBM Bluemix"
-space: "Mendix 7 How-To's"
+title: "Deploying a Mendix App to IBM Bluemix"
+space: "Mendix 6 How-to's"
 category: "Cloud Foundry"
 tags: []
 ---
@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Download the latest version of the Mendix Modeler from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers)
 * Have access to an [IBM Bluemix](https://console.ng.bluemix.net/) account with the rights to create new applications and services (if you’re not a current IBM Bluemix customer, you can sign up for a [free 30-day trial](https://console.ng.bluemix.net/registration/))
-    * Have an S3 or S3-compatible object store with user credentials, a bucket, and rights to create and delete objects
+* Set up a strong administrator password within your model
 
 ## 3 <a name="3"></a>Configure Cloud Foundry in the Modeler
 
@@ -60,92 +60,80 @@ To configure Cloud Foundry in the Modeler, follow these steps:
     * [5 Add a Database Service to Your App](#5)
     * [6 Add a FileStore Service to Your App](#6)
 
-    ![](attachments/19202595/19398874.png) 
+    ![](attachments/19202595/19398874.png)
 
 ## 4 <a name="4"></a>Configure the IBM Bluemix Environment
 
 To configure the IBM Bluemix environment, go to [IBM Bluemix](https://console.ng.bluemix.net/) and log in with your IBM Bluemix credentials:
 
-![](attachments/19202595/19398875.png)
+![](attachments/19202595/bmsignin.png)
 
 After logging in, you will see the Bluemix home screen. The following details on this screen are important:
 
 * This view is per region, and you can select a different region in the personal menu in the top-right corner of the screen
 * You can see that you are logged in at the top-right corner of the screen
-* In the sidebar on the left side of the screen, you can see the organization you have access to and the spaces within that organization
+* You can see the organization you have access to and the spaces within that organization at the top-right side of the screen
 
-![](attachments/19202595/19398876.png)
+![](attachments/19202595/bmappoverview.png)
 
 ## 5 <a name="5"></a>Add a Database Service to Your App
 
-Apps make use of services (for example, databases, load balancers, and memory tools). In this step, you will add a database service that your app will use to store data.
+Apps make use of services (for example, databases, load balancers, and memory tools). In this step, you will add a database service that your app will use to store data. A Database is mandatory for a mendix app to run.
 
-1. Click **Use Services or APIs**:
+1. Click **Create Service**:
 
-    ![](attachments/19202595/19398877.png)
+    ![](attachments/19202595/bmselectcreateservice.png)
 
-2. Select **ElephantSQL**:
+2. Mendix has support for DB2, DashDB, Compose For PostgreSQL, ClearDB MySQL, and ElephantSQL on Bluemix. Select  **ElephantSQL** for this setup:
 
-    ![](attachments/19202595/19398878.png) 
+    ![](attachments/19202595/selectdataabase.png)
 
-    This is a PostgreSQL database that your app will use. Mendix supports PostgreSQL and MySQL databases on Cloud Foundry. For some database services that do not add a `DATABASE_URL` environment variable, you will need to set that manually.
 
 3. Select the plan that fits your needs. This example will use the **Free** option:
 
-    ![](attachments/19202595/19398880.png)
+    ![](attachments/19202595/bmselectappbinding.png)
 
 4. In the **Add Service** section of the screen, do the following:
-    * Select the space to which you want to add the instance for **Space**
     * Select the app to which you want to bind the database instance (for example, **company-expenses**) for **App**
-    * Enter the name of the ElephantSQL Database (for example, *ComanyExpensesDataStore* for **Service name**
+    * Enter the name of the ElephantSQL Database (for example, *ElephantSQL_7k*) for **Service name**
 
 5. Click **Create** to finish the service configuration for ElephantSQL.
 
 ## 6 <a name="6"></a>Add a FileStore Service to Your App
 
-To enable persistent file storage, you need to configure the S3 object store (which was introduced in Mendix 5.15). Mendix supports S3 and the object stores that enable the S3 API. To make sure the FileDocuments in your application persist, you need to set up the following environment variables:
-
-| Variable | Value | Example | Required |
-| --- | --- | --- | --- |
-| S3_ACCESS_KEY_ID | The access key of your IAM credentials. | AKIAILYXS5VM4DQ7CTWQ | Yes |
-| S3_SECRET_ACCESS_KEY | The secret key of your IAM credentials. | XfSrHqbLG3D8VIPhn1vT7jN9H8w4ak3GAap/xcR1 | Yes |
-| S3_BUCKET_NAME | The bucket name that can be accessed using the IAM credentials above. | my-s3-bucket | Yes |
-| S3_ENDPOINT | Not needed if you are using Amazon S3. If you are using an S3-compatible object store (such as Riak CS and Ceph), you can use the domain name of the object store. | [s3.amazonaws.com](http://s3.amazonaws.com/) | No |
-| S3_KEY_SUFFIX | For multi-tenant buckets, you can add a suffix to each object name. Access to suffixed objects can be restricted using IAM policies. | -my-key-suffix | No |
-| S3_PERFORM_DELETES | Set to false when using the object store in append-only mode. In this mode, the backups can be created and restored via just the database. | false | No |
-| S3_USE_V2_AUTH | Set to true to force the S3 connector to use [V2 of the AWS authentication protocol](http://docs.aws.amazon.com/general/latest/gr/signature-version-2.html). This is required for S3-compatible file stores that do not support [V4 of the authentication protocol](http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) (such as Riak CS, Ceph, and OpenStack Swift). | true | No |
+To enable persistent file storage, you need to configure the IBM Swift Object Storage service (which was introduced in Mendix 6.8). To make sure the FileDocuments in your application persist, you need to attach this service to your application.
 
 1. Go to the Bluemix environment.
+
 2. Open your app from the list on the home screen:
 
-    ![](attachments/19202595/19398881.png)
+    ![](attachments/19202595/selectappsingle.png)
 
-3. Go to the **Environment Variables** menu item:
+3. Go to the **Connections** menu item and click **Connect new**:
 
-    ![](attachments/19202595/19398882.png)
+    ![](attachments/19202595/BluemixConnectNewService.png)
 
-4. Add the required S3 variables:
+4. Select the **Object Storage** service from the catalog:
 
-    ![](attachments/19202595/19398883.png)
+    ![](attachments/19202595/IBM_Swift_Object_Storage.png)
 
-5. Add any optional variables.
+5. Create the service:
 
-    <div class="alert alert-info">
-
-    When adding environment variables to a running application, you need to restart it for the changes to take effect.
-
-    </div>
-
-    After deploying an app from the Modeler, two variables will be added automatically: `DEVELOPEMENT_MODE` and `ADMIN_PASSWORD`. The development mode is true by befault; change this to false to run the app in production. The admin password is the password of the default admin of your Mendix app.
+    ![](attachments/19202595/bmselectcreateservice.png)
+    
+    This can take a few seconds. After the service is created, you can check if it is connected.
+    
+    After deploying an app from the Modeler, two variables will be added automatically: `DEVELOPEMENT_MODE` and `ADMIN_PASSWORD`. The development mode is true by default; change this to false to run the app in production. The admin password is the password of the default admin of your Mendix app.
 
 6. You can now go back and click **Finish** in the final section of the the **Edit Cloud Foundry Settings** configuration window (see step #6 of [3 Configure Cloud Foundry in the Modeler](#3)).
 
-## 7 Deploy your App to Cloud Foundry
+## 7 Deploy Your App to Cloud Foundry
 
 1. Open the Modeler.
 2. Open the app you want to deploy to Cloud Foundry.
 3. Click the arrow for the **Run** options and select **Run on Cloud Foundry**:
-    ![](attachments/19202595/19398884.png) 
+
+    ![](attachments/19202595/19398884.png)
 
     The Mendix app will now be deployed to the configured Cloud Foundry installation and started automatically.
 
@@ -156,16 +144,16 @@ If you encounter any problems, you should consult the application logs:
 1. Go to the IBM Bluemix environment.
 2. Open your app from the top menu:
 
-    ![](attachments/19202595/19398881.png)
+    ![](attachments/19202595/selectappsingle.png)
 
 3. Go to the **Logs** menu item and view the most recent log lines in real time:
 
-    ![](attachments/19202595/19398885.png)
+    ![](attachments/19202595/bmlogging.png)
 
 ## 9 Related Content
 
 * [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack)
 * [How to Deploy a Mendix App to Pivotal](deploy-a-mendix-app-to-pivotal)
 * [How to Deploy a Mendix App to HP Helion](deploy-a-mendix-app-to-hp-helion)
-* [How to Deploy a Mendix App to Cloud Foundry](deploy-a-mendix-app-to-cloud-foundry)
-* [IBM Bluemix Documentation](https://www.eu-gb.bluemix.net/docs)
+* [How to Deploy a Mendix App to Cloud Foundry](deploying-a-mendix-app-to-cloud-foundry)
+* [IBM Bluemix documentation](https://www.eu-gb.bluemix.net/docs)

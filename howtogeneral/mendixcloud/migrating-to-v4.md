@@ -30,7 +30,7 @@ First, you need to create a new Free App.
 
 <div class="alert alert-alert">{% markdown %}
 
-Create a new app in [Developer Portal](www.home.mendix.com) to create a new app without a Sandbox.
+Create a new app in [Developer Portal](https://www.home.mendix.com) to create a new app without a Sandbox.
 
 {% endmarkdown %}</div>
 
@@ -63,7 +63,7 @@ Learn how to [Deploy to the Cloud](deploying-to-the-cloud).
 
 ### 3.5 Submit a Request to Support to Offboard the V3 Node
 
-Your app is now running in Mendix Cloud v4. If you don't need the Mendix Cloud v3 node, submit a request with [Mendix Support](www.support.mendix.com) to offboard the v3 node.
+Your app is now running in Mendix Cloud v4. If you don't need the Mendix Cloud v3 node, submit a request with [Mendix Support](https://www.support.mendix.com) to offboard the v3 node.
 
 ## 4 FAQ
 

@@ -7,42 +7,45 @@ tags: ["IoT", "Connector", "TimeSeries", "Big Data", "Analytics"]
 
 ## 1 Introduction
 
-This how-to is focussed on implementing and understanding the TimeSeries Connector and the TimeSeries Analytics platform. The TimeSeries Connector is especially useful when your application needs to handle big amounts of data. Let's take the IoT trend we see recently; one hundred sensors that send data each minute will send 144000 objects to your database per day, one hundred and fifty will send 216000 objects. See how these numbers start to add up once you add a few more sensors? Now imagine having your standard relational database handle this amount of data, let alone perform analysis on it. The TimeSeries Analytics platform is designed specifically to handle these amounts of data. 
+This how-to is focussed on implementing and understanding the TimeSeries Connector and the TimeSeries Analytics platform. The TimeSeries Connector is especially useful when your application needs to handle large amounts of data. Let's look at the IoT trend we see recently, one hundred sensors that send data each minute will send 144.000 objects to your database per day, one hundred and fifty will send 216.000 objects. See how these numbers start to add up once you add a few more sensors? Now imagine having your standard relational database handle this amount of data, let alone perform analysis on it. The TimeSeries Analytics platform is designed specifically to handle these amounts of data.
 
 **This how-to will teach you how to do the following:**
 
 * Sign up for the TimeSeries Connector
-* Configure the necessary settings
+* Configure the mobule settings
+* Create an asset
+* Create a channel
+* Store measurements
 * Implement the actions
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download and install Mendix Modeler 6.6 or higher
-* Add CommunityCommons to your project
+* Have the Mendix Desktop Modeler 6.6 or higher installed ([download](https://appstore.home.mendix.com/link/modeler/))
+* Have the [Community Commons Function Library](https://appstore.home.mendix.com/link/app/170/Mendix/Community-Commons-Function-Library) in your project
 
 ## 3 Sign Up for the TimeSeries Connector
 
 Follow these steps to get access to the TimeSeries connector and receive an API key:
 
-1. Sign up for the connector by going to [our Connector website](http://connector.timeseries.nl/ "Click here to go to the TimeSeries website") and register for free. You will receive your API key in an email after registering.
+1. Sign up for the connector by going to our [Connector website](http://connector.timeseries.nl/ "Click here to go to the TimeSeries website") and register for free. You will receive your API key in an email after registering.
 
   <div class="alert alert-info">{% markdown %}
-  It can take up to a few hours to generate the key and send it to you. Use this key to activate and access your TimeSeries Analytics instance.
+  It can take up to a few hours to generate the key and send it to you. This key is used to activate and access your TimeSeries Analytics instance.
   {% endmarkdown %}</div>
 
-2. After you receive the key, import the TimeSerices Connector module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/31951/TimeSeries/TimeSeries-Connector "Click here for awesomeness") into your project.
+2. After you receive the key, import the TimeSeries Connector module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/31951/TimeSeries/TimeSeries-Connector "Click here for awesomeness") into your project.
 
 ## 4 Configure the Module Settings
 
-After importing the module there are a couple of settings you need to configure. Some of these settings are already preconfigured.
+After importing the module, there are a couple of settings you need to configure. Some of these settings are already preconfigured.
 
 ### 4.1 Set the Constants
 There are three constants that you can configure. Follow these steps to configure them:
 
 1. Expand your project and go to **App Store modules > TimeSeriesConnector > Settings**.
-2. Open the TimeSeriesAccessKey constant.
+2. Open the **TimeSeriesAccessKey** constant.
 3. Paste your TimeSeries API key in the **Default value** field and click **OK**.
 
   <div class="alert alert-info">{% markdown %}
@@ -57,22 +60,22 @@ There are three constants that you can configure. Follow these steps to configur
 ### 4.2 Available Enumerations
 These are the available enumarations in the TimeSeriesConnector module:
 
-* Enum_AggregationInterval: INTERVAL or REGISTER. These are determined by the TimeSeries platforma and are the supported interval types for aggregation calls.
-* Enum_AggregationPeriod: Hourly, daily, weekly, monthly or yearly. These are the supported time periods.
-* Enum_MeasurementType: INTERVAL, REGISTER or EVENT. These are determined by the TimeSeries platforma and are the only supported measurement types. Note: measurements of type EVENT can not be aggregated.
-* Enum_SearchType: Purely for UI. These are used to determine which search to perform.
+* Enum_AggregationInterval: INTERVAL or REGISTER. These are determined by the TimeSeries platform and are the supported interval types for aggregation calls
+* Enum_AggregationPeriod: Hourly, daily, weekly, monthly or yearly. These are the supported time periods
+* Enum_MeasurementType: INTERVAL, REGISTER or EVENT. These are determined by the TimeSeries platforma and are the only supported measurement types. Note: measurements of type EVENT can not be aggregated
+* Enum_SearchType: Purely for UI. These are used to determine which search to perform
 
 ## 5 Implementation Example
 
-We'll explain the analytics platform using the concept of a house. In this scenario the house is an asset, of which you can have multiple. This house will use gas and electricity, which we call channels. Each channel can hold values over time; electricity usage is measured and saved every X seconds, minutes, hours, etc.. These measurements can later be used for analysis.
+We'll explain the analytics platform using the concept of a house. In this scenario the house is an asset, of which you can have multiple. This house will use gas and electricity, which we call channels. Each channel can hold values over time; electricity usage is measured and saved every X seconds, minutes, hours, and so on. These measurements can later be used for analysis.
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/Systemoverview.PNG)
 
-The module comes with a ready-to-use domain model, which we'll also use in this how-to. Of course this isn't a necessity and you can use your own domain model.
+The module comes with a ready-to-use domain model, which we'll also use in this how-to. Of course, this isn't a necessity, and you can also use your own domain model.
 
   <div class="alert alert-warning">{% markdown %}
   
-  If you want to use your own domain model, make sure your that for every action that requires a Type Parameter, your entities have the necessary attributes.
+  If you want to use your own domain model, make sure your that your entities have the necessary attributes for every action that requires a Type Parameter.
   
   {% endmarkdown %}</div>
 
@@ -81,24 +84,24 @@ The domain model looks like this:
 ![](attachments/how-to-get-started-with-the-timeseries-connector/Domainmodel.png)
 
 ### 5.1 Create an Asset
-You start the implemntation by creating an asset. Follow these steps to create an asset:
+You start the implementation by creating an asset.
 
-1. Make sure to provide an **Asset name**, otherwise the connector will return an error. You are free to chose the name.
+1. Provide an **Asset name**, otherwise the connector will return an error. You are free to chose the name.
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/12613211-22be-4c65-aac9-bb7d821ed99e/timeseries-connector-create-asset?embed=true'></iframe>
 
 This action will return an **Asset ID**, which you can store in your database for access.
 
 ### 5.2 Create a Channel
-Next, you create a channel. This channel should belong to an asset, so you start there:
+The next step is creating a channel. This channel should belong to an asset. Follow these steps to create a channel:
 
-1. Make sure your channel belongs to an asset, so provide the **Asset ID**.
+1. Provide an **Asset ID** to make sure your channel belongs to an asset.
 2. Provide a **Channel key**. 
 3. Provide a **Measurement interval**. 
 
   <div class="alert alert-info">{% markdown %}
   
-  You are free to chose the channel key name and the measurement interval. This interval is stored and can be used for analysis.
+  You are free to choose the channel key name and the measurement interval. The interval is stored and can be used for analysis.
   
   {% endmarkdown %}</div>
 
@@ -116,7 +119,7 @@ Now that you have created an asset with a channel, it's possible to start storin
 
   <div class="alert alert-info">{% markdown %}
 
-  The **Date and time** needs to be formatted in UTC to the following format:  yyyy-MM-dd'T'HH:mm:ss.SSSZ, the **Measurement type** can be INTERVAL, REGISTER or EVENT and the **Value** is a decimal.
+  The **Date and time** needs to be formatted in UTC to the following format: yyyy-MM-dd'T'HH:mm:ss.SSSZ. The **Measurement type** can be INTERVAL, REGISTER, or EVENT. The **Value** is a decimal.
 
   {% endmarkdown %}</div>
 
@@ -127,20 +130,20 @@ This action will return a boolean, which is not used.
 ### 5.4 Aggregate Your Data
 Once your channel has sufficient data, the TimeSeries Connector will really start to shine. Instead of having enormous amounts of data in your database which takes a long time to aggregate for reporting, you can now simply ask the TimeSeries platform for an aggregation of your data. Follow these steps to set up your data aggregation:
 
-1. Create a AggregateSearchResult object to use as the ** Type parameter**. If you create a new entity, make sure it has all the necessary attributes as defined in this example:
+1. Create an **AggregateSearchResult** object to use as the **Type parameter**. If you create a new entity, make sure it has all the necessary attributes as defined in this example:
 
-![](attachments/how-to-get-started-with-the-timeseries-connector/example-aggregate-domain.png)
+  ![](attachments/how-to-get-started-with-the-timeseries-connector/example-aggregate-domain.png)
 
 2. Provide the empty **Type parameter** used to populate the results.
 3. Provide the **Asset ID** and **Channel key** to aggregate in.
 4. Provide a **Start date** and **End date** in epoch time.
-5. Provide an **Aggregation period** such as hourly or daily in the correct ISO format.
+5. Provide an **Aggregation period**, such as hourly or daily, in the correct ISO format.
 6. Provide the **Timezone** in which the results will be aggregated.
 7. Provide the **Measurement type** in which the measurements have been stored.
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/9d9055e4-4301-4ee4-8ef9-fdcbcd05079e/timeseries-connector-get-aggregations?embed=true'></iframe>
 
-This action will return a list of your type parameter, AggregateSearchResult. In this list you will find an aggregation of the channel data by the aggregation period specified. For example: From March 1st up to March 10th, you will receive a list of your total electricity usage per day. This means your list will hold 10 objects. 
+This action will return a list of your type parameter, AggregateSearchResult. This list contains an aggregation of the channel data by the aggregation period specified. For example: From March 1st up to March 10th, you will receive a list of your total electricity usage per day. This means your list will hold 10 objects.
 
 ## 6 Final Remarks
 

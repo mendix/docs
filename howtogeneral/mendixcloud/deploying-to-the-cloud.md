@@ -36,7 +36,7 @@ There are two methods of deploying your app to the Mendix Cloud. The first optio
 
     ![](attachments/18448697/18581231.png)
 
-### 2.2 Create a package from Team Server in the Developer Portal
+### 3.2 Create a package from Team Server in the Developer Portal
 
 An app can also be deployed without using the Mendix Modeler. Take the following steps to do this:
 
@@ -50,7 +50,7 @@ An app can also be deployed without using the Mendix Modeler. Take the following
 
 The package is now being deployed to the cloud.
 
-## 3 Deploy the App to an Environment
+## 4 Deploy the App to an Environment
 
 Previous steps explained how to deploy a Deployment Package to the Mendix Cloud. The actual app is not running yet. This chapter will explain how to deploy the App to a node environment.
 
@@ -68,7 +68,7 @@ Follow these steps to deploy a Deployment Package to a node environment:
 
 The app is now deployed and the administrative account can be configured.
 
-## 4 Related content
+## 5 Related content
 *   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
 *   [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)
 *   [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)

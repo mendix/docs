@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 <div class="alert alert-warning">{% markdown %}
 
-Please note that because you are going to unlink the Sandbox from your Free App, the Sandbox environment will be permanently deleted. This means that all data will be lost from the Sandbox/Free App. To keep your data, you need to create a backup.
+Please note that because you are going to unlink the Sandbox from your Free App, the Sandbox environment will be permanently deleted. This means that all data will be lost from the Sandbox/Free App. To keep your data, you need to download a backup.
 
 {% endmarkdown %}</div>
 

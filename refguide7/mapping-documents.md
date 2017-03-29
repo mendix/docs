@@ -37,11 +37,11 @@ An example of an export mapping document is depicted in figure 2. In that exampl
 
 ## Creating a new Mapping document
 
-To specify an import or export mapping, do the following:
+Follow these steps to specify an import or export mapping:
 
 1.  Create a new **Import Mapping** or **Export Mapping** document.
 
-2.  Click **Select elements...** to select an XML schema, imported web service document, JSON structure document or entity as the source schema for this mapping.
+2.  Click **Select elements...** to select an XML schema, imported web service document, JSON structure document, or entity as the source schema for this mapping.
 
     <div class="alert alert-info">{% markdown %}
 
@@ -72,12 +72,12 @@ Mapping documents rely heavily on two windows. If they are not visible in the Mo
 
 *   Dragging entities: Drag an entity from the Connector Window and drop it on an entity placeholder (dashed box) to relate it to an XML element. 
 *   Double clicking on a mapping element (on either the entity side or the XML side): Opens a dialog that allows you to specify details for the individual mapping. If the element is not yet related to an entity, a dialog appears that lets you select the entity first.
-*   Right mouse click **Select Entity**: Change the entity that is coupled to an XML element.
-*   Right mouse click **Go to Entity**: Open the Domain Model that contains the entity and jumps to the entity.
-*   Right mouse click **Collapse All**: Hides all the children of the mapping element, so you can keep overview in large mappings.
-*   Right mouse click **Expand All**: Expands all children of the mapping element; all underlying elements become visible.
-*   Left mouse click **-** (below mapping element): Makes underlying elements invisible.
-*   Left mouse click **+** (below mapping element): Makes underlying elements visible.
+*   Right-click **Select Entity**: Change the entity that is coupled to an XML element.
+*   Right-click **Go to Entity**: Open the Domain Model that contains the entity and jumps to the entity.
+*   Right-click **Collapse All**: Hides all the children of the mapping element, so you can keep overview in large mappings.
+*   Right-click **Expand All**: Expands all children of the mapping element; all underlying elements become visible.
+*   Click **-** (below mapping element): Makes underlying elements invisible.
+*   Click **+** (below mapping element): Makes underlying elements visible.
 
 ## Properties
 

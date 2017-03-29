@@ -1,101 +1,74 @@
 ---
-title: "Deploying to the cloud"
-space: "General How-To's"
+title: "How to Deploy Your Licensed App to the Cloud"
+space: "General How-Tos"
 category: "Mendix Cloud"
 ---
 
-It has never been easier to deploy a Mendix application to the cloud. This How-to will explain the options a developer has to deploy applications to a connected cloud node.
+## 1 Introduction
 
-## 1\. Preparation
+It has never been easier to deploy a Mendix application to the cloud. This how-to will explain the options a developer has to deploy applications to a connected cloud node.
 
-Before you can deploy an app to the cloud, make sure you meet the following requirements:
+## 2 Prerequisites
 
-1.  A working application.
-2.  A cloud node licence.
+Before starting this how-to, make sure you have completed the following prerequisites:
 
-## 2\. Connecting a project to a cloud node
+*   Your app is linked to a licensed Cloud Node
+*   You have deployment permissions
+*   Your Google Authenticator is enabled
 
-1.  In the Dev Center, go to Nodes.
-    ![](attachments/18448697/18581238.png)
-    Here the licensed node is placed. This node will need to be connected with the project.
-2.  In the Dev Center, go to Projects.
-    ![](attachments/18448697/18581237.png)
-3.  Click on the project and go to Deploy.
-    ![](attachments/18448697/18581236.png)
-4.  Now link the project to the existing node.
-    ![](attachments/18448697/18581234.png)
-5.  Click 'Use this Node'.
+## 3 Deploying the App to the Mendix Cloud
 
- The project is linked to the cloud node now, which makes it possible to deploy applications to the Mendix cloud.
+There are two methods of deploying your app to the Mendix Cloud. The first option is directly via the **Mendix Modeler**, and the second  is through the **Developer Portal**.
 
-## 3\. Deploying the application to the Mendix cloud
+### 3.1 Deploy via the Mendix Modeler
 
-There are two ways to deploy the application to the Mendix Cloud. The first option is directly via the Mendix Modeler and the second option is to do it in the cloud portal.
+1.  Open the **[Mendix Modeler](http://appstore.home.mendix.com/link/modeler/)**.
+2.  Open the licensed app.
+3.  Click **Project** in the menu and select **Deploy to licensed cloud node** (Ctrl+F5).
 
-### 3.1 Deploy via Mendix Modeler
+    [](attachments/18448697/18581233.png)
 
-1.  Go to Project and click "Deploy to licensed cloud node", or press Ctrl+F5![](attachments/18448697/18581233.png)
+4.  Click **Deploy**.
 
-2\. Now press deploy
+    ![](attachments/18448697/18581232.png)
 
-![](attachments/18448697/18581232.png)
+5.  The deployment is now in progress. Click **Show online**, to see the uploaded package.
 
-3\. The deployment is in progress now. Click on 'Show online, to see the uploaded package'
+    ![](attachments/18448697/18581231.png)
 
-![](attachments/18448697/18581231.png)
+### 3.2 Create a package from Team Server in the Developer Portal
 
-### 3.2 Deploy via the cloud portal
+An app can also be deployed without using the Mendix Modeler. Take the following steps to do this:
 
-An application can also be deployed without using the Business modeler. Take the following steps to do this:
+1.  Go to the [Developer Portal](http://home.mendix.com).
+2.  Click **Apps** in the top navigation panel.
+3.  Select your app.
+4.  Go to **Environments**.
+5.  Click **Create package from teamserver**.
+6.  Select the preferred branch and revision and click **Next**.
+7.  Give the build a version number and click **Build this revision**.
 
-1\. Go to your Node and press 'Details'
+The package is now being deployed to the cloud.
 
-![](attachments/18448697/18581238.png)
+## 4 Deploy the App to an Environment
 
-2\. Here click on 'Create package from teamserver'
+Previous steps explained how to deploy a Deployment Package to the Mendix Cloud. The actual app is not running yet. This chapter will explain how to deploy the App to a node environment.
 
-![](attachments/18448697/18581230.png)
+Follow these steps to deploy a Deployment Package to a node environment:
 
-3\. Select the preferred branch and revision and click next
+1.  Open the [Developer Portal](http://home.mendix.com).
+2.  Open your app.
+2.  Go to **Environments**.
+3.  In the **Deployment Package Repository**, choose the preferred Deployment Package and click **Deploy**.
+4.  Select the preferred environment and click **Continue**.
+5.  Click **Transport**. If asked for, clean the environment.
+6.  Configure the Constants if needed, by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings. 
+7. Click **Continue**.
+8. Click **Start application**. If asked for, click **Synchronize database**.
 
-![](attachments/18448697/18581229.png)
+The app is now deployed and the administrative account can be configured.
 
-4\. Give the build a version number as preferred and click 'Build this revision'
-
-![](attachments/18448697/18581228.png)
-
-The Package is being deployed to the cloud now.
-
-## 4\. Making the application live in Production
-
-The Acceptance and Production environments are two environments, for the application to be live in production and to test the application by a user acceptance team.
-
-Previous steps explained how to deploy an application package to the Mendix Cloud. The actual application is not live yet. This chapter will explain how to bring the application live from Acceptance to Production.
-
-The following steps will explain how to deploy a package to the live environments:
-
-1\. Choose the preferred deployment package and press deploy
-
-![](attachments/18448697/18581227.png)
-
-2\. Select the preferred environment to deploy, press continue and then press 'Transport'. If asked for, clean the environment
-
-![](attachments/18448697/18581226.png)
-
-3\. Configure the constants if needed. This can also be done in a later stage in the settings. Now press continue and in the next screen press 'Start application'. If asked for, press 'Synchronize database'.
-
-![](attachments/18448697/18581225.png)
-
-4\. The application is deployed now and the administrative account can be configured
-
-![](attachments/18448697/18581224.png)
-
-## 4\. Related content
-
-*   [Trends](trends)
-*   [Deploying to the cloud](deploying-to-the-cloud)
-*   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
-*   [Sending Email](sending-email)
-*   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
-*   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)
-*   [Deploying to a Free App](deploying-to-a-free-app)
+## 5 Related content
+*   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
+*   [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)
+*   [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)

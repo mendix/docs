@@ -1,0 +1,10 @@
+---
+layout: json
+---
+{
+  "categories": [
+    "API Documentation",
+	"Mendix Platform SDK"
+  ],
+  "pages": {% include json-snippets/get_pages.inc dir="apidocs-mxsdk" %}
+}

@@ -1,0 +1,10 @@
+---
+layout: json
+---
+{
+  "categories": [
+    "APM",
+    "AQM"
+  ],
+  "pages": {% include json-snippets/get_pages.inc dir="addons" %}
+}

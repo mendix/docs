@@ -7,7 +7,7 @@ encoding: utf-8
 locale: "en_US"
 
 # Base variables
-latest_major_version: "6"
+latest_major_version: "7"
 github_repo: "https://github.com/mendix/docs"
 github_branch: "development"
 title: "Mendix Documentation"
@@ -24,6 +24,10 @@ algolia:
   index_name:        'docs'
   read_only_api_key: 'd23e5ac47b71a0f51afa5fedc695b718'
 
+intercom:
+  test_id: 'nw1x91z3'
+  live_id: 'xbpgtd40'
+
 
 ####################################
 ######        SPACES         #######
@@ -36,6 +40,19 @@ defaults:
       layout: mxdefault
 
   # VERSION SPECIFIC CONTENT
+  # Mendix 7
+  - scope:
+      path: 'howto7'
+      type: pages
+    values:
+      menus:
+        - "howto7"
+  - scope:
+      path: 'refguide7'
+      type: pages
+    values:
+      menus:
+        - "refguide7"
   # Mendix 6
   - scope:
       path: 'howto6'
@@ -43,9 +60,6 @@ defaults:
     values:
       menus:
         - "howto6"
-        - "tips"
-        - "bestpractices"
-        - "mendixcloud"
   - scope:
       path: 'refguide6'
       type: pages
@@ -59,9 +73,6 @@ defaults:
     values:
       menus:
         - "howto50"
-        - "tips"
-        - "bestpractices"
-        - "mendixcloud"
   - scope:
       path: 'refguide5'
       type: pages
@@ -75,22 +86,20 @@ defaults:
     values:
       menus:
         - "howto40"
-        - "tips"
-        - "bestpractices"
-        - "mendixcloud"
+      banner: "mendix4howto"
   - scope:
       path: 'refguide4'
       type: pages
     values:
       menus:
         - "refguide4"
+      banner: "mendix4refguide"
 
   # VERSION INDEPENDENT
   - scope:
       path: 'community'
       type: pages
     values:
-      space: "Community"
       menus:
         - "community"
   - scope:
@@ -100,11 +109,17 @@ defaults:
       menus:
         - "releasenotes"
   - scope:
-      path: 'apidocs'
+      path: 'apidocs-mxsdk'
       type: pages
     values:
       menus:
-        - "apidocs"
+        - "apidocs-mxsdk"
+  - scope:
+      path: 'addons'
+      type: pages
+    values:
+      menus:
+        - "addons"
   - scope:
       path: 'ATS'
       type: pages
@@ -112,56 +127,11 @@ defaults:
       menus:
         - "ATS"
   - scope:
-      path: 'APM'
-      type: pages
-    values:
-      menus:
-        - "APM"
-  - scope:
-      path: 'AQM'
-      type: pages
-    values:
-      menus:
-        #- "AQM"
-  - scope:
-      path: 'MXSDK'
-      type: pages
-    values:
-      menus:
-        - "MXSDK"
-  - scope:
       path: 'howtogeneral'
       type: pages
     values:
       menus:
         - "howtogeneral"
-  - scope:
-      path: 'tips'
-      type: pages
-    values:
-      menus:
-        - "howto6"
-        - "tips"
-        - "bestpractices"
-        - "mendixcloud"
-  - scope:
-      path: 'bestpractices'
-      type: pages
-    values:
-      menus:
-        - "howto6"
-        - "tips"
-        - "bestpractices"
-        - "mendixcloud"
-  - scope:
-      path: 'mendixcloud'
-      type: pages
-    values:
-      menus:
-        - "howto6"
-        - "tips"
-        - "bestpractices"
-        - "mendixcloud"
 
 ####################################
 
@@ -187,11 +157,12 @@ exclude:
   - run.bat
   - manifest_prod.yml
   - manifest_accp.yml
-  - community/the-how-to-template.md
-  - community/the-reference-guide-page-template.md
+  - community/documentation/the-how-to-template.md
+  - community/documentation/the-reference-guide-page-template.md
   - _data/assetsjs.json
   - _data/assetscss.json
   - CONTRIBUTING.md
+  - scripts
 
 markdown: kramdown
 kramdown:

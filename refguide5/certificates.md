@@ -27,8 +27,8 @@ For more information, see:
 
 Virtually all certificate formats can be converted to the PKCS12 format. For more information, see these links:
 
-*   [http://support.citrix.com/article/CTX106630](http://support.citrix.com/article/CTX106630)
-*   [http://www.openssl.org/docs/apps/openssl.html](http://www.openssl.org/docs/apps/openssl.html)
+*   [https://www.ssl.com/how-to/create-a-pfx-p12-certificate-file-using-openssl/](https://www.ssl.com/how-to/create-a-pfx-p12-certificate-file-using-openssl/)
+*   [https://www.openssl.org/docs/man1.0.1/apps/pkcs12.html](https://www.openssl.org/docs/man1.0.1/apps/pkcs12.html)
 
 ## Certificate Authorities
 

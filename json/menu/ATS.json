@@ -1,19 +1,11 @@
 ---
 layout: json
-sitemap: false
 ---
 {
   "categories": [
     "General",
-    "Administration",
-    "Introduction",
-    "Projects",
-    "Test Development",
-    "Data Management",
-    "Scheduling",
-    "Configuration",
-    "Monitoring",
-    "Release Notes"
+    "ATS Reference Guide 1",
+    "ATS How-To's"
   ],
-  "pages": {% include json-snippets/get_pages_per_space.inc space="ATS (Application Test Suite)" %}
+  "pages": {% include json-snippets/get_pages.inc dir="ATS" %}
 }

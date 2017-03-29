@@ -21,7 +21,7 @@ This how-to focuses on deploying to the HP Helion Development Platform.
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Download the latest version of the Mendix Modeler from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers)
-* Have access to an [HP Helion Development Platform](http://www8.hp.com/us/en/cloud/helion-devplatform-overview.html) instance with MySQL or PostgreSQL (for installation details, see the [HPE Helion Development Platform: Quick Start Developer Trial](http://docs.hpcloud.com/helion/devplatform/ALS-developer-trial-quick-start/))
+* Have access to an [HP Helion Development Platform](http://www8.hp.com/us/en/cloud/helion-devplatform-overview.html) instance with MySQL or PostgreSQL (for installation details, see the [HPE Helion Documentation](https://docs.hpcloud.com/)).
     * Have a user account with the rights to create new applications and services
     * Have an S3 or S3-compatible object store with user credentials, a bucket, and rights to create and delete objects
     * Enable sticky sessions on the Cloud Foundry router (in order to scale your app up to more than one instance)
@@ -64,7 +64,7 @@ To configure the Helion endpoint in the Modeler, follow these steps:
 
 ## <a name="ConfiguretheHPHelionDevelopmentEnvironment"></a>4 Configure the HP Helion Development Environment
 
-To configure the HP Helion development environment, go to your development platform web interface (in our case, that is [https://api.helion.mendix.com/](https://api.helion.mendix.com/)) and log in with your HP Helion credentials.
+To configure the HP Helion development environment, go to your development platform web interface (in our case, that is `https://api.helion.mendix.com/`) and log in with your HP Helion credentials.
 
 <div class="alert alert-info">
 
@@ -184,6 +184,7 @@ If you encounter any problems, you should consult the application logs:
 
 ## 9 Related Content
 
+* [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack)
 * [How to Deploy a Mendix App to IBM Bluemix](deploy-a-mendix-app-to-ibm-bluemix)
 * [How to Deploy a Mendix App to Pivotal](deploy-a-mendix-app-to-pivotal)
 * [How to Deploy a Mendix App to Cloud Foundry](deploying-a-mendix-app-to-cloud-foundry)

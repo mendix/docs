@@ -2,6 +2,7 @@
 
 const url = require('url');
 const path = require('path');
+const fs = require('fs');
 const _ = require('lodash');
 const gutil = require('gulp-util');
 const cheerio = require('cheerio');
@@ -98,6 +99,14 @@ const parseHtmlFiles = files => {
 };
 
 const getLinkPaths = link => {
+  // TODO: GET THIS FROM CONFIG
+  if (link.indexOf('/howto/') !== -1) {
+    link = link.replace(/\/howto\//g, '/howto7/');
+  }
+  if (link.indexOf('/refguide/') !== -1) {
+    link = link.replace(/\/refguide\//g, '/refguide7/');
+  }
+
   return [
     link,
     `${link}.html`,
@@ -225,11 +234,48 @@ const checkFiles = (opts) => {
         })
       }
       console.log('')
-      if (errors.length === 0) {
-        opts.callback(false);
-      } else {
-        opts.callback(true);
-      }
+
+      let indexMappingHeader = [
+        '############################################################################################',
+        `# Mendix indexes redirect mapping, generated from \'gulp check:html\'`,
+        '############################################################################################',
+        ''
+      ];
+      let indexFiles = _.chain(files)
+        .filter(file =>
+          file.basePath.indexOf('/index.html') !== -1 &&
+          file.basePath !== '/index.html' &&
+          file.basePath !== '/search/index.html'
+        )
+        .map(file => { return {
+          to: file.basePath.replace(/index\.html/, ''),
+          from: file.basePath.replace(/\/index\.html/, '')
+        }; })
+        .sortBy(file => file.from.length)
+        .map(file => `${file.from} ${file.to};`)
+        .value();
+
+      let indexes = indexMappingHeader.concat(indexFiles).join('\n');
+      const indexDest = path.join(SOURCEPATH, '/mappings/indexes.map');
+
+      fs.writeFile(indexDest, indexes, err => {
+        if (err) {
+          gutil.log(`Error writing index mappings: ${err}`)
+          opts.callback(true);
+        } else {
+          gutil.log(`Index mappings written to ${indexDest}`);
+          if (errors.length === 0) {
+            if (files.length === 0) {
+              console.log(`It seems there are no files to check. This looks bad`);
+              opts.callback(true);
+            } else {
+              opts.callback(false);
+            }
+          } else {
+            opts.callback(true);
+          }
+        }
+      });
     })
     .catch(err => {
       helpers.gulpErr('htmlproofer', err);

@@ -1,6 +1,6 @@
 ---
 title: "Filtering Data on an Overview Page"
-category: "GUI's"
+category: "GUIs"
 space: "Mendix 5 How-to's"
 ---
 

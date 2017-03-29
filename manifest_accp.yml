@@ -6,3 +6,5 @@ applications:
   buildpack: staticfile_buildpack
   disk_quota: 512M
   instances: 1
+  env:
+    FORCE_HTTPS: true

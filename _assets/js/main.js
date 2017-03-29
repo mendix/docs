@@ -45,17 +45,40 @@
     }
 
     function sortPages(arr, getModifier, numFunc) {
+      var num = numFunc || function (n) { return n; };
       return arr.sort(function (p1, p2) {
-        return numFunc(getModifier(p1)) - numFunc(getModifier(p2));
+        return num(getModifier(p1)) - num(getModifier(p2));
       });
     }
 
-    function sortModelerPages(arr) {
-      return sortPages(
-        arr,
-        function (p) { return p.id.replace("modeler-","").split(".").map(function (n) { return parseInt(n, 10) }); },
-        function (n) { return (n[0] ? n[0] * 10000 : 0) + (n[1] ? n[1] * 100 : 0) + (n[2] || 0); }
-      );
+    function getPageArrType(arr) {
+      var type = 'string';
+      arr.forEach(function (s) {
+        if (s.id && (s.id.indexOf('.') !== -1 || !isNaN(parseInt(s.id)) && s.id.length === 1)) {
+          type = 'version';
+        } else if (s.id && s.id.indexOf('-') !== -1 && s.id.split('-').length === 3) {
+          type = 'date'
+        }
+      });
+      return type;
+    }
+
+    function sortOnVersion(arr) {
+      var type = getPageArrType(arr);
+      if (type === 'version') {
+        return sortPages(
+          arr,
+          function (p) { return p.id.replace("modeler-","").split(".").map(function (n) { return parseInt(n, 10) }); },
+          function (n) { return (n[0] ? n[0] * 10000 : 0) + (n[1] ? n[1] * 100 : 0) + (n[2] || 0); }
+        ).reverse();
+      }
+      if (type === 'date') {
+        return sortPages(
+          arr,
+          function (p) { return new Date(p.id.trim()) }
+        ).reverse();
+      }
+      return arr.sort();
     }
 
     function addNormalLink(title, url) {
@@ -83,10 +106,17 @@
 
       pages.forEach(function (page) {
         var $item = $('<li />');
-        var subpages = data.pages.filter(function (rootpage) { return rootpage.parent && rootpage.parent.toLowerCase() === page.id.toLowerCase(); });
+        var subpages = data.pages.filter(function (rootpage) {
+          return rootpage.parent && rootpage.parent.toLowerCase() === page.id.toLowerCase() && rootpage.dir.indexOf(page.dir) !== -1;
+        });
+
         if (subpages && subpages.length > 0) {
           var pageId = 'cat-' + normalizeId(page.id),
               $collapse = $('<div class="collapse" id="'+ pageId + '" />');
+
+          if (page && page.url.indexOf("/releasenotes/") === 0) {
+            subpages = sortOnVersion(subpages);
+          }
 
           $item.append(addExpandLink(pageId, page.title, page.url));
           $collapse.append(addPages(subpages, data));
@@ -108,8 +138,8 @@
 
       var catUrl = catPage && catPage.length === 1 ? catPage[0].url : null;
 
-      if (catUrl === "/releasenotes/modeler/") {
-        getPages = sortModelerPages(getPages);
+      if (catUrl && catUrl.indexOf("/releasenotes/") === 0){
+        getPages = sortOnVersion(getPages);
       }
 
       if (getPages.length === 0 && catUrl) {
@@ -291,5 +321,45 @@
       $(this).addClass('line-numbers');
     });
 
+    /*****************
+      Intercom
+    ******************/
+    function loadIntercom() {
+      if (!window.intercomSettings || !window.intercomSettings.user_id) {
+        console.warn('No openID found, so the user might not be logged in. Skipping Intercom');
+        window.Intercom('shutdown');
+      } else {
+        window.Intercom('boot', window.intercomSettings);
+      }
+    }
+
+    if (window.Intercom && window.__IntercomAppId && window.intercomSettings) {
+      $('#back-to-top').addClass('with-intercom');
+      $.getJSON('https://home.mendix.com/mxid/appbar2?b=' + Math.random() + '&callback=?', function (rawData) {
+          if (!rawData.length) {
+              console && console.warn("Appbar request returns no content.");
+              loadIntercom();
+              return;
+          }
+          var data = rawData[0];
+          if (!data) {
+              console && console.warn("Appbar request returns empty content.");
+              loadIntercom();
+              return;
+          }
+
+          if (data.loggedIn) {
+            if (data.userName) window.intercomSettings.email = data.userName;
+            if (data.openId) window.intercomSettings.user_id = data.openId;
+            if (data.displayName) window.intercomSettings.name = data.displayName;
+          }
+
+          loadIntercom();
+
+        }).fail(function () {
+          console.warn('Failed to get MXID');
+          loadIntercom();
+        });
+    }
   });
 })(jQuery));

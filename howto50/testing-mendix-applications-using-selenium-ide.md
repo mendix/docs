@@ -147,7 +147,7 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
     The speed control determines how fast your test script runs. Default the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test started asserting for an element on the page even before the page is fully loaded by the browser. Try to run your test script as fast as possible.
 24. Click the **Run current test case** button.
 
-    The test will fail because it can not find the element with target _css=[input.form-control.mx](http://input.form-control.mx)-focus_.
+    The test will fail because it can not find the element with target `css=input.form-control.mx-focus`.
     ![](attachments/12880232/14385157.png) 
 
 25. Open the **Desktop_Expense_NewEdit_Admin** page in the Mendix Modeler.

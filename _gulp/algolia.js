@@ -22,7 +22,7 @@ let index = [];
 const getSourceFiles = files => {
   spacesObj = YAML.load(SPACES);
   return new Promise((resolve, reject) => {
-    files = _.filter(_.map(files, file => {
+    const raw = _.map(files, file => {
       file.basePath = file.path.replace(TARGETFOLDER, '');
       const parsed = path.parse(file.basePath),
             base = path.join(SOURCEFOLDER, parsed.dir, parsed.name),
@@ -41,8 +41,9 @@ const getSourceFiles = files => {
       }
 
       return file;
-    }), file => !!file.sourcePath);
-    //console.log(files);
+    });
+    files = _.filter(raw, file => !!file.sourcePath);
+
     resolve(files);
   })
 }
@@ -157,12 +158,12 @@ const weight = (item, index) => {
 
 const parseHtmlFile = file => {
   return new Promise((resolve, reject) => {
-    if (file.content && file.meta && file.meta.space) {
+    if (file.content && file.meta.title) {
       const $ = cheerio.load(file.content);
 
       $('article').find('p').each((i, el) => {
         var $el = $(el);
-        if (!!$el.text().length) {
+        if (!!$el.text().length && file.space.space) {
           let item = _.merge(
             _.omit(_.clone(file.meta), '__content'), {
             space: file.space.space,

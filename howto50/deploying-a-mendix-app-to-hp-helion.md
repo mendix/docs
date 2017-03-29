@@ -13,7 +13,7 @@ To follow this guide you will need to have access to an [HP Helion Development P
 ## 1. Preparation
 
 *   Download the [latest version of the Mendix Modeler](https://appstore.home.mendix.com/link/modelers) from the Mendix App Store.
-*   If you don't have an HP Helion Development Platform set up, you can follow this guide on [installing the Dev Platform on the HP Cloud](http://docs.hpcloud.com/helion/devplatform/ALS-developer-trial-quick-start/).
+*   If you don't have an HP Helion Development Platform set up, you can view the follow this guide on [HPE Helion documentation](https://docs.hpcloud.com/devplat-1.3/index.html#1.3/installation/devplatform_commercial_install.html).
 
 ## 2\. Configure the Helion endpoint in the Modeler
 
@@ -45,7 +45,7 @@ To push a Mendix app to Cloud Foundry you will have to configure the settings in
 
 ## 3\. Configure the HP Helion Development Environment
 
-1. Go to your Development Platform web interface (in our case [https://api.helion.mendix.com/](https://api.helion.mendix.com/)) and log in with your **HP Helion credentials**.
+1. Go to your Development Platform web interface (in our case `https://api.helion.mendix.com/`) and log in with your **HP Helion credentials**.
 
     This link is different per Helion instance. This how-to will use the Mendix url.
 
@@ -145,6 +145,7 @@ If you encounter any problems you should consult the application logs.
 
 ## 8\. Read More
 
+*   [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack)
 *   [Deploying a Mendix App to Pivotal](deploying-a-mendix-app-to-pivotal)
 *   [Deploying a Mendix App to HP Helion](deploying-a-mendix-app-to-hp-helion)
 *   [Deploying a Mendix App to Cloud Foundry](deploying-a-mendix-app-to-cloud-foundry)

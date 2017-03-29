@@ -50,7 +50,7 @@ Depending on the type of request it is helpful to provide additional information
 *   Test project - read [How To Export A Mendix Project Package (.mpk)](how-to-export-a-project-package) for more information
 *   Reproducible steps
 
-> Not all App Store content is compatible with every Mendix Modeler version and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/community/app-store-content-support).
+> Not all App Store content is compatible with every Mendix Modeler version and not all App Store content is supported by Mendix. For more information, see [App Store Content Support](/community/app-store/app-store-content-support).
 
 ### 3.5 Mobile Problem
 

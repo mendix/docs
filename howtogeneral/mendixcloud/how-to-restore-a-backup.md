@@ -1,7 +1,7 @@
 ---
 title: "How to Restore a Backup"
 space: "General How-To's"
-category: "Mendix Support"
+category: "Mendix Cloud"
 #parent: ""
 #description: ""
 #tags: []

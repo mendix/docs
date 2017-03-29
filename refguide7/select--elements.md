@@ -11,9 +11,9 @@ For both [import](import-mappings)and [export mappings](export-mappings) you nee
 
 Perform the following steps in the **Select elements** window:
 
-1.  Depending on whether you want to make a mapping for an [XML schema](xml-schemas), a [Consumed web service](consumed-web-services), a [JSON structure](json-structures) or an entity, you need to select an **XML schema**, a **Web service operation**, a **JSON structure** or an **Entity** as the source.
-2.  If source is XML schema then select the root element of the mapping. This is done by selecting the **Start at** element for the XML schema or the **request part** for the web service operation. **Start at** lists the root elements in an XML schema. You can select one root element to base your mapping on. If source is Web service operation, **Request part** lists the header and body element of the request part of an operation. If an operation has multiple parameters, these are listed in the Request part as well. **Request part** is only applicable to export mappings.
-3.  Finally, select specific elements in the tree explorer below. Typically you do not need to map an entire source, since they can be quite large.
+1.  Depending on whether you want to make a mapping for an [XML schema](xml-schemas), a [Consumed web service](consumed-web-services), a [JSON structure](json-structures), or an entity, you need to select an **XML schema**, a **Web service operation**, a **JSON structure**, or an **Entity** as the source.
+2.  If the source is an XML schema then select the root element of the mapping. This is done by selecting the **Start at** element for the XML schema or the **request part** for the web service operation. **Start at** lists the root elements in an XML schema. You can select one root element to base your mapping on. If source is a web service operation, **Request part** lists the header and body element of the request part of an operation. If an operation has multiple parameters, they are listed in the Request part as well. **Request part** is only applicable to export mappings.
+3.  Finally, select specific elements in the tree explorer below. Typically, you do not need to map an entire source, since it can be quite large.
 
 <div class="alert alert-success">{% markdown %}
 
@@ -43,7 +43,7 @@ When working on an import mapping you are allowed to skip elements in the hierar
 
 <div class="alert alert-success">{% markdown %}
 
-You may encounter element selection checkboxes that are greyed out. Hover the mouse over the checkbox to see which rule or restriction prevents you from changing the checkbox value. For example, you may need to select a parent node first before you can select a child node.
+You may encounter element selection checkboxes that are greyed out. Hover over the checkbox to see which rule or restriction prevents you from changing the checkbox value. For example, you may need to select a parent node first before you can select a child node.
 
 {% endmarkdown %}</div>
 

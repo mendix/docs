@@ -16,7 +16,7 @@ The function and assembly need to be created for timezone handling. In order to 
 
 ## 3 Set Up a New Database
 
-When setting up a new database for Mendix, most of the settings can be left to the default configuration. When looking at the general settings, you only need to set up the database name. Set up the database files according to the Microsoft SQL Server best practices.
+When setting up a new database for Mendix, most of the settings can be left to the default configuration. When looking at the general settings, you only need to set up the database name. Set up the database files according to the Microsoft SQL Server best practices (for details, see [Best Practices for Configuring SQL Server](https://msdn.microsoft.com/en-us/library/cc296885(v=bts.10).aspx)).
 
 ![](attachments/18448656/18580676.png)
 
@@ -77,4 +77,3 @@ END;
 * [Restore a SQL Server Database](restoring-a-sql-server-database)
 * [Troubleshooting SQL Server](troubleshooting-sql-server)
 * [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
-* [Setting Up a New SQL Server Database](setting-up-a-new-sql-server-database)

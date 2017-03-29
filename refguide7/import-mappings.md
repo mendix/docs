@@ -11,7 +11,7 @@ Please refer to [Mapping Documents](mapping-documents) for an introduction.
 
 ## Obtaining objects in Import Mappings
 
-Figure 1 depicts an example of an Import Mapping document in which two elements from an XML Schema have been selected using the **Select elements...** dialog. Following this the ReceivedPartners and ReceivedClient entities were added, and mapped to the Result and Client schema elements. Each time the Import Mapping is invoked, a new ReceivedPartners object is created.
+Figure 1 depicts an example of an Import Mapping document in which two elements from an XML Schema using the "Select elements..." dialog are selected. Following this the ReceivedPartners and ReceivedClient entities were added, and mapped to the Result and Client schema elements. Each time the Import Mapping is invoked, a new ReceivedPartners object is created.
 
 ![](attachments/16713727/16843942.png)
 
@@ -19,7 +19,7 @@ Figure 1 depicts an example of an Import Mapping document in which two elements 
 
 ### Obtaining an object
 
-For each XML or JSON object, a Mendix object needs to be obtained. You can either create an object or find an existing object in the database. Alternatively, you can use a custom microflow that returns an object. You can see how to configure how a Mendix object is obtained in the window depicted in figure 2, which is shown after double clicking a specific mapping element.
+For each XML or JSON object, a Mendix object needs to be obtained. You can create one or you can find an existing object in the database. Alternatively, you can use a custom microflow that returns an object. You can see how to configure how a Mendix object is obtained in the window depicted in figure 2, which is shown after double clicking a specific mapping element.
 
 ![](attachments/16713727/16843943.png)
 
@@ -51,7 +51,7 @@ Optionally, you may set an association to the parent object. If set to Yes, a li
 
 <div class="alert alert-warning">{% markdown %}
 
-Be aware that lists are not ordered in the Mendix database. XML Schemas can prescribe that a grouping of objects is a sequence, but the order of Mendix objects in the database may differ from the order of incoming XML elements.
+Be aware that lists are not stored ordered in the Mendix database. XML Schema can prescribe that a grouping of objects is a sequence, but the order of Mendix objects in the database may differ from the order of incoming XML elements.
 
 {% endmarkdown %}</div>
 
@@ -63,7 +63,7 @@ Each selected XML or JSON element needs to be mapped to an attribute in the doma
 
 **Figure 3**
 
-Having defined the mappings for the attributes, these mappings are also shown in the mapping document. When a specific attribute is selected the element is also selected. This works the other way around too. An example of this is shown in figure 4, where the **dati** attribute is selected in both the Entity and the schema element (in this case dati is mapped to dati).
+Having defined the mappings for the attributes, these mappings are also shown in the mapping document. When a specific attribute is selected the schema element is also selected. This works the other way around too. An example of this is shown in figure 4, where the **dati** attribute is selected in both the Entity and the schema element (in this case dati is mapped to dati).
 
 ![](attachments/16713727/16843944.png)
 
@@ -74,8 +74,8 @@ Having defined the mappings for the attributes, these mappings are also shown in
 | Property | Description |
 | --- | --- |
 | Entity Attribute | Here you can select an attribute to map this value element to. Each value mapping needs to be mapped, except when it is used as a parameter in the microflow to obtain an object. |
-| Value element | The name and type of the value element. |
-| Occurrence | Reflects how often the element may occur. This can be "0..1" or "1", depending on if it is required or not. If the value is empty and the minimum required occurrence of the element is 0, the creation of the element will be skipped. In the case you want to never map a value to an optional element, simply disable it in the **Select elements...** dialog. |
+| Schema value element | The name and type of the schema value element. |
+| Occurrence | Reflects how often the element may occur. This can be "0..1" or "1", depending on if it is required or not. If the value is empty and the minimum required occurrence of the element is 0 (as specified by the schema) the creation of the element will be skipped. In the case you want to never map a value to an optional element, simply disable it in the "Select elements..." dialog. |
 | Convert using (optional) | If the incoming data of a value element is not in the right format, you can use a microflow to convert it to a different data type. The conversion microflow should have one parameter that matches the element type. Alternatively, the parameter may be of type String, as all incoming data is in fact a String. For example, when the incoming data contains an exotic DateTime format, you can parse this format yourself by using a conversion microflow with a String parameter. If this value element maps to an attribute, the return type of the conversion microflow must match the attribute type. Conversion microflows of value elements are executed before these value elements are used as search keys or microflow parameters to obtain an object. This means that when using a value element with a conversion microflow as parameter for the microflow to obtain an object, the parameter type should match the return type of the conversion microflow. |
 | Key | This property specifies whether the value element is used as search key to obtain an object. If a value element is used as search key, you must specify the attribute it maps to. The XML value will be matched to the value of this attribute when searching for an object. Attribute with 'binary' type is not supported to be set as key.
 | Map attributes by name | If this button is clicked, an attempt is made to match attributes by name. A dialog appears reporting what has been changed. |

@@ -1,7 +1,7 @@
 ---
 title: "How to Download a Backup"
 space: "General How-To's"
-category: "Mendix Support"
+category: "Mendix Cloud"
 ---
 
 ## 1 Introduction

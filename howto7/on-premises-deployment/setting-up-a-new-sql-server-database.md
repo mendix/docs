@@ -70,10 +70,10 @@ END;
 
 ## 4 Related Content
 
-* [Activate a Mendix License on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows)
-* [Setting Up the Database User](setting-up-the-database-user)
-* [Troubleshooting](troubleshooting)
-* [Share the Development Database](../collaboration-project-management/sharing-the-development-database)
-* [Restore a SQL Server Database](restoring-a-sql-server-database)
-* [Troubleshooting SQL Server](troubleshooting-sql-server)
-* [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
+* [How to Activate a Mendix License on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows)
+* [How to Set Up the Database User](setting-up-the-database-user)
+* [How to Share the Development Database](../collaboration-project-management/sharing-the-development-database)
+* [How to Restore a SQL Server Database](restoring-a-sql-server-database)
+* [How to Troubleshoot](troubleshooting)
+* [How to Troubleshoot an SQL Server](troubleshooting-sql-server)
+* [How to Set Up Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)

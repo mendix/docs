@@ -12,39 +12,36 @@ This how-to describes how to download a Sandbox environment backup from a Free A
 *   How to download a full backup of a Sandbox environment
 *   How to download a full backup of a licensed cloud node
 
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 *   You have a Free App or licensed cloud node with backups
 
+
 ## 3 Download A Free App Backup
 Download a backup of a Free App by following these steps:
 
-1.  Go to [home.mendix.com](http://home.mendix.com).
-2.  Click **Dev Portal**.
-3.  Go to the **Projects** tab.
-4.  Select the project from you want to download the backup.
-5.  Go to the **Deploy** tab.
-6.  Go to the **Backup** tab.
-
-7.  Select the backup you want to download and click **Download Backup**.
-
-8.  Click **Download** for your preferred backup.
-
-    > Options are *Full Snapshot*, *Database Only* and *Files Only*.
+1.  Go to the [Developer Portal](http://home.mendix.com)
+2.  Click **Apps** in the top navigation panel
+3.  Select the App you want to download the backup from
+4.  Under **Operate** click **Backups**
+5.  Select the backup you want to download and click **Download Backup**.
+5.  Select the backup type **Full Snapshot**, **Database Only** or **Files Only**
 
 
 ## 4 Download A Licensed Cloud Node Backup
+Download a backup of a Licensed App by following these steps:
 
-1.  Go to [home.mendix.com](http://home.mendix.com).
-2.  Click **Dev Portal**.
-3.  Go to the **Projects** tab.
-4.  Select the project from you want to download the backup.
-5.  Go to the **Deploy** tab.
-6.  Go to the **Backup** tab.
-7.  Select a backup and click **Download Backup**.
-8.  Click **Download** for your preferred backup.
+1.  Go to the [Developer Portal](http://home.mendix.com)
+2.  Click **Apps** in the top navigation panel
+3.  Click **My Apps** and select **Nodes**
+4.  Select the node you want to download the backup from
+5.  Under **Operate** click **Backups**
+6.  If you want to create a backup first, click **Create Backup**
+7.  Select a backup and click **Download Backup**
+8.  Select the backup type **Full Snapshot**, **Database Only** or **Files Only**
 
 
 ## 5 Related Content

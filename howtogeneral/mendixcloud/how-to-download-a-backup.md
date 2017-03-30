@@ -26,7 +26,7 @@ Download a backup of a Free App by following these steps:
 1.  Go to the [Developer Portal](http://home.mendix.com)
 2.  Click **Apps** in the top navigation panel
 3.  Select the App you want to download the backup from
-4.  Under **Operate** click **Backups**
+4.  Click **Backups** under the **Operate** category
 5.  Select the backup you want to download and click **Download Backup**.
 5.  Select the backup type **Full Snapshot**, **Database Only** or **Files Only**
 
@@ -38,10 +38,14 @@ Download a backup of a Licensed App by following these steps:
 2.  Click **Apps** in the top navigation panel
 3.  Click **My Apps** and select **Nodes**
 4.  Select the node you want to download the backup from
-5.  Under **Operate** click **Backups**
-6.  If you want to create a backup first, click **Create Backup**
-7.  Select a backup and click **Download Backup**
-8.  Select the backup type **Full Snapshot**, **Database Only** or **Files Only**
+5.  Click **Backups** under the **Operate** category
+6.  Select the environment you want to download a backup from
+
+[](attachments/environment.jpg)
+
+7.  If you want to create a backup first, click **Create Backup**
+8.  Select a backup and click **Download Backup**
+9.  Select the backup type **Full Snapshot**, **Database Only** or **Files Only**
 
 
 ## 5 Related Content

@@ -41,11 +41,11 @@ To download a backup of a licensed app, follow these steps:
 
     ![](attachments/environment.jpg)
 
-    <div class="alert alert-info">{% markdown %}
+  <div class="alert alert-info">{% markdown %}
 
-    If you want to create a backup first, click **Create Backup**.
+  If you want to create a backup first, click **Create Backup**.
 
-    {% endmarkdown %}</div>
+  {% endmarkdown %}</div>
 
 6. Select a backup and click **Download Backup**.
 7. Select the backup type **Full Snapshot**, **Database Only**, or **Files Only**

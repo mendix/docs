@@ -58,9 +58,9 @@ When you’re done setting up your Community Profile, click the big blue **Make 
 
 Make sure you meet all the requirements before making your profile public:
 
+* You added an avatar
 * You entered a **Function**
 * You entered a **Location**
-* You added an avatar
 * You entered a **Summary**
 * You added at least 1 skill
 * You added at least 1 industry experience item

@@ -18,9 +18,6 @@ password : PlatformAPIPassword
 
 {% endmarkdown %}</div>
 
-**App Store Link**
-[https://appstore.home.mendix.com/link/app/Stories%20API](https://appstore.home.mendix.com/link/app/Stories%20API)
-
 [Get WSDL](attachments/9535497/19398865.wsdl)
 
 ## Published Microflows

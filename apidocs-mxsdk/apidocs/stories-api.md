@@ -13,8 +13,8 @@ The Mendix Stories API allows you to retrieve, create and update the sprints, st
 
 Each call also requires the parameters 'username' and 'password'. These are the public credentials you will find below; actual authentication of requests is done through API keys.
 
-username : PlatformAPIUser
-password : PlatformAPIPassword
+* username: PlatformAPIUser
+* password: PlatformAPIPassword
 
 {% endmarkdown %}</div>
 

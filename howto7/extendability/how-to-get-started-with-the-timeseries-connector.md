@@ -12,7 +12,7 @@ This how-to is focussed on implementing and understanding the TimeSeries Connect
 **This how-to will teach you how to do the following:**
 
 * Sign up for the TimeSeries Connector
-* Configure the mobule settings
+* Configure the module settings
 * Create an asset
 * Create a channel
 * Store measurements
@@ -71,7 +71,7 @@ We'll explain the analytics platform using the concept of a house. In this scena
 
 ![](attachments/how-to-get-started-with-the-timeseries-connector/Systemoverview.PNG)
 
-The module comes with a ready-to-use domain model, which we'll also use in this how-to. Of course, this isn't a necessity, and you can also use your own domain model.
+The module comes with a ready-to-use domain model, which we'll also use in this how-to. Of course, this isn't a necessity, and you can also use your own domain model. All referenced microflows in this how-to can also be found in the module.
 
   <div class="alert alert-warning">{% markdown %}
   
@@ -84,13 +84,18 @@ The domain model looks like this:
 ![](attachments/how-to-get-started-with-the-timeseries-connector/Domainmodel.png)
 
 ### 5.1 Create an Asset
-You start the implementation by creating an asset.
+You start the implementation by creating an asset object, using a page or directly in a microflow.
 
-1. Provide an **Asset name**, otherwise the connector will return an error. You are free to chose the name.
+1. Provide an **Asset name**, otherwise the connector will return an error. You are free to choose the name.
+
+In our example implementation we have created a page with an Asset object, on which the attributes can be set. The ID is grayed out because it will be returned by the connector later in this process.
+
+![](attachments/how-to-get-started-with-the-timeseries-connector/CreateAsset.png)
+
+After having set the **Asset name** we trigger some validation, call the **Create asset** action and save the **Asset ID** for later references. 
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/12613211-22be-4c65-aac9-bb7d821ed99e/timeseries-connector-create-asset?embed=true'></iframe>
-
-This action will return an **Asset ID**, which you can store in your database for access.
+See 1. Assets -> CreateAsset -> IVK_CreateAsset
 
 ### 5.2 Create a Channel
 The next step is creating a channel. This channel should belong to an asset. Follow these steps to create a channel:
@@ -104,10 +109,15 @@ The next step is creating a channel. This channel should belong to an asset. Fol
   You are free to choose the channel key name and the measurement interval. The interval is stored and can be used for analysis.
   
   {% endmarkdown %}</div>
+  
+In our example implementation we have created a page with a Channel object, on which the attributes and the association with an asset can be set.
+
+![](attachments/how-to-get-started-with-the-timeseries-connector/CreateChannel.png)
+
+After having set the necessary attributes and association we trigger some validation and call the **Add channel** action. This action will return a boolean, specifying if the action was successful.
 
 <iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/d0dc163e-9741-4efc-986e-00bcbbf86ce7/timeseries-connector-create-channel?embed=true'></iframe>
-
-This action will return a boolean, specifying if the action was successful.
+See 2. Channels -> AddChannel -> IVK_AddChannel
 
 ### 5.3 Store Measurement(s)
 Now that you have created an asset with a channel, it's possible to start storing measurements. Follow these steps to store your measurements:
@@ -123,9 +133,14 @@ Now that you have created an asset with a channel, it's possible to start storin
 
   {% endmarkdown %}</div>
 
-<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/ab003bd9-159a-4b76-8fbe-42512951c28b/timeseries-connector-store-measurement?embed=true'></iframe>
+In our example implementation we have created a page with a Measurement object, on which the attributes and the associations with an asset and channel can be set.
 
-This action will return a boolean, which is not used. 
+![](attachments/how-to-get-started-with-the-timeseries-connector/StoreMeasurement.png)
+
+After having set the necessary attributes and associations we trigger some validation and call the **Store measurement** action. This action will return a boolean, which is not used. 
+
+<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/ab003bd9-159a-4b76-8fbe-42512951c28b/timeseries-connector-store-measurement?embed=true'></iframe>
+See 3. Measuremenets -> StoreMeasurements -> IVK_StoreMeasurement
 
 ### 5.4 Aggregate Your Data
 Once your channel has sufficient data, the TimeSeries Connector will really start to shine. Instead of having enormous amounts of data in your database which takes a long time to aggregate for reporting, you can now simply ask the TimeSeries platform for an aggregation of your data. Follow these steps to set up your data aggregation:
@@ -141,9 +156,14 @@ Once your channel has sufficient data, the TimeSeries Connector will really star
 6. Provide the **Timezone** in which the results will be aggregated.
 7. Provide the **Measurement type** in which the measurements have been stored.
 
-<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/9d9055e4-4301-4ee4-8ef9-fdcbcd05079e/timeseries-connector-get-aggregations?embed=true'></iframe>
+In our example implementation we have created a page with an AggregateSearch object, on which the search values and the associations with an asset and channel can be set.
 
-This action will return a list of your type parameter, AggregateSearchResult. This list contains an aggregation of the channel data by the aggregation period specified. For example: From March 1st up to March 10th, you will receive a list of your total electricity usage per day. This means your list will hold 10 objects.
+![](attachments/how-to-get-started-with-the-timeseries-connector/AggregateSearch.png)
+
+After having set the necessary attributes and associations we trigger some validation, prepare the data and call the **Aggregate between timestamps** action. This action will return a list of your type parameter, AggregateSearchResult. This list contains an aggregation of the channel data by the aggregation period specified. For example: From March 1st up to March 10th, you will receive a list of your total electricity usage per day. This means your list will hold 10 objects.
+
+<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/9d9055e4-4301-4ee4-8ef9-fdcbcd05079e/timeseries-connector-get-aggregations?embed=true'></iframe>
+See 4. Aggregations -> GetAggregations -> IVK_GetAggregations
 
 ## 6 Final Remarks
 

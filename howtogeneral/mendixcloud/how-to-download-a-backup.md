@@ -17,7 +17,7 @@ This how-to describes how to download a Sandbox environment backup from a Free A
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-*   You have a Free App or licensed cloud node with backups
+* Have a Free App or licensed cloud node with backups
 
 ## 3 Downloading A Free App Backup
 

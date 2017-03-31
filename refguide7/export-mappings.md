@@ -14,7 +14,7 @@ The image below shows an example of an export mapping document in which two elem
 
 <p align="center">
 
-**Figure 1**
+  **Figure 1**
 
 </p>
 
@@ -28,7 +28,7 @@ Firstly, as shown in figure 1 above, it is possible to get the objects over an a
 
 <p align="center">
 
-**Figure 2**
+  **Figure 2**
 
 </p>
 
@@ -40,7 +40,7 @@ In this window, you can choose to either get the object by association with the 
 
 <p align="center">
 
-**Figure 3**
+  **Figure 3**
 
 </p>
 
@@ -50,7 +50,7 @@ When you choose to obtain an object by microflow, this is shown in the export ma
 
 <p align="center">
 
-**Figure 4**
+  **Figure 4**
 
 </p>
 
@@ -64,7 +64,7 @@ For each value element that the complex element encompasses, an attribute needs 
 
 <p align="center">
 
-**Figure 5**
+  **Figure 5**
 
 </p>
 
@@ -99,7 +99,7 @@ An example of this is shown in figure 6.
 
 <p align="center">
 
-**Figure 6**
+  **Figure 6**
 
 </p>
 

@@ -50,15 +50,24 @@ the **Clean data** tab:
 ![](attachments/Dashboard/Configuration_CleanData.png)                       
 
 ## More<a name="more"></a>
-Some other settings are collected on the **More** tab:
+Some other features and settings are collected on the **More** tab:
 
 ![](attachments/Dashboard/Configuration_More.png)                       
 
+### Dashboard
 A default measurement graph can be selected for the dashboard.
 
+### Triggered events
 Automatic cleanup for the triggered event data in the measurements tool is configured here.
 
 Also, the default **Triggers notify to** can be configured here.
+
+### settings
+You can import/export settings.
+
+You can globally set all settings to production, non-production or custom.
+
+You can recreate sample data.
 
 ## Start/Stop
 

@@ -33,7 +33,7 @@ For each XML or JSON object, a Mendix object needs to be obtained. You can eithe
 | Property | Description |
 | --- | --- |
 | Create an object | Simply creates a new object. Any failures in the "before create" microflows will throw an error when the mapping gets applied. |
-| Find an object (by key) | Searches for an object using the keys defined in the attributes list. The runtime searches for the object by taking all the attributes marked as "Key" (in the "Value element to attribute mapping" section below) and converting them to an XPath query. If more than one object is returned by the XPath query, an error will be thrown. |
+| Find an object (by key) | Searches for an object using the keys defined in the attributes list. The runtime searches for the object by taking all the attributes marked as "Key" (in the [Mapping Attribute Properties](#MappingAttributeProperties) section below) and converting them to an XPath query. If more than one object is returned by the XPath query, an error will be thrown. |
 | Call a microflow | Calls a microflow to obtain an object. If the microflow expects any parameters, these need to be specified in the **Select...** window. Possible parameters are the input parameter, any parent entity in the mapping, and any attributes in the current XML element. |
 
 #### 1.2.2 If No Object Was Found
@@ -74,7 +74,7 @@ Having defined the mappings for the attributes, these mappings are also shown in
   Figure 4
 </p>
 
-### 2.1 Mapping Attribute Properties
+### 2.1 Mapping Attribute Properties<a name="MappingAttributeProperties"></a>
 
 | Property | Description |
 | --- | --- |
@@ -87,7 +87,9 @@ Having defined the mappings for the attributes, these mappings are also shown in
 
 ## 3 Parameter Entity
 
-Import mappings have the additional option to pass an incoming entity. This entity is created or retrieved in the microflow that calls an [import-from-mapping](import-mapping-action) action, and it is passed as a parameter. This parameter entity serves as an input to the import mapping, and it is not created in the mapping itself. Associations can be set to the parameter entity, and the parameter entity can be used in microflows to obtain objects. In the example of figure 5 below, a **TestCase** entity is passed to the Import Mapping, and is used in the microflow that obtains an Order (Call_PWS_ReturnsOrder). Associations can be set to the input parameter as well.
+Import mappings have the additional option to pass an incoming entity. This entity is created or retrieved in the microflow that calls an [import-from-mapping](import-mapping-action) action, and it is passed as a parameter. This parameter entity serves as an input to the import mapping, and it is not created in the mapping itself. Associations can be set to the parameter entity, and the parameter entity can be used in microflows to obtain objects. 
+
+In the example of figure 5 below, a **TestCase** entity is passed to the import mapping, and it is used in the microflow that obtains an order (Call_PWS_ReturnsOrder). Associations can be set to the input parameter as well.
 
 ![](attachments/16713727/16843941.png)
 

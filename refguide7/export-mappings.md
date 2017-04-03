@@ -34,9 +34,9 @@ In this window, you can choose to either get the object by association with the 
 
 ![](attachments/16713726/16843937.png)
 
-<p align="center">{% markdown %}
+<p align="center">
   Figure 3
-{% endmarkdown %}</p>
+</p>
 
 When you choose to obtain an object by microflow, this is shown in the export mapping document, as depicted in figure 4.
 

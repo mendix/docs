@@ -32,7 +32,7 @@ For each XML or JSON object, a Mendix object needs to be obtained. You can eithe
 
 | Property | Description |
 | --- | --- |
-| Create an object | Simply creates a new object. An error can be thrown if there are any before create microflows that fail. |
+| Create an object | Simply creates a new object. Any failures in the "before create" microflows will throw an error when the mapping gets applied. |
 | Find an object (by key) | Searches for an object using the keys defined in the attributes list. The runtime searches for the object by taking all the attributes marked as "Key" (in the "Value element to attribute mapping" section below) and converting them to an XPath query. If more than one object is returned by the XPath query, an error will be thrown. |
 | Call a microflow | Calls a microflow to obtain an object. If the microflow expects any parameters, these need to be specified in the **Select...** window. Possible parameters are the input parameter, any parent entity in the mapping, and any attributes in the current XML element. |
 

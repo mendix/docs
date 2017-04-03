@@ -4,7 +4,7 @@ space: "API & SDK"
 category: "API Documentation"
 ---
 
-## Introduction
+# Introduction
 
 The Deploy API allows you to manage application environments in our public cloud. You can retrieve the status, start and stop applications, but also deploy and transport new model versions to application environments. To do the latter you will also need the Build API to create and manage deployment packages.
 
@@ -48,10 +48,10 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 
 List of objects with the following key-value pairs:
 
-*   _AppId_ (String) : Subdomain name of the app.
-*   _Name_ (String) : Name of the app.
-*   _ProjectId_ (String) : Sprintr Project identifier.
-*   _Url_ (String) : Production or sandbox URL to access your app.
+*   _AppId_ (String): Sub-domain name of the app.
+*   _Name_ (String): Name of the app.
+*   _ProjectId_ (String): Sprintr Project identifier.
+*   _Url_ (String): Production or sandbox URL to access your app.
 
 ##### <a rel="nofollow"></a>Example
 
@@ -106,10 +106,10 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 
 Response object with the following fields:
 
-*   _AppId_ (String) : Subdomain name of the app.
-*   _Name_ (String) : Name of the app.
-*   _ProjectId_ (String) : Sprintr Project identifier.
-*   _Url_ (String) : Production or sandbox URL to access your app.
+*   _AppId_ (String): Sub-domain name of the app.
+*   _Name_ (String): Name of the app.
+*   _ProjectId_ (String): Sprintr Project identifier.
+*   _Url_ (String): Production or sandbox URL to access your app.
 
 ##### <a name="DeployAPI-Errorcodes" rel="nofollow"></a>Error Codes
 
@@ -145,7 +145,7 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId> (https://deploy.mendix.com/ap
 
 ##### <a name="DeployAPI-Parameter" rel="nofollow"></a>Parameter
 
-*   _AppId_ (String) : Subdomain name of an app.
+*   _AppId_ (String): Sub-domain name of an app.
 
 ##### <a rel="nofollow"></a>Example
 
@@ -161,9 +161,9 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 
 Object with the following key-value pairs:
 
-*   _AppId_ (String) : Subdomain name of the app.
-*   _Name_ (String) : Name of the app.
-*   _Url_ (String) : Production or sandbox URL to access your app.
+*   _AppId_ (String): Sub-domain name of the app.
+*   _Name_ (String): Name of the app.
+*   _Url_ (String): Production or sandbox URL to access your app.
 
 ##### <a name="DeployAPI-Errorcodes" rel="nofollow"></a>Error codes
 
@@ -215,9 +215,9 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 
 List of objects with the following key-value pairs:
 
-*   _Status_ (String) : Status of the environment. Possible values: Empty, Stopped, Running
-*   _Url_ (String) : URL to access your application.
-*   Mode (String) : Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running
+*   _Url_ (String): URL to access your application.
+*   Mode (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
 ##### <a rel="nofollow"></a>Example
 
@@ -250,8 +250,8 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode> (https://
 
 ##### <a name="DeployAPI-Parameters" rel="nofollow"></a>Parameters
 
-*   _AppId_ (String) : Subdomain name of an app.
-*   _Mode_ (String) : The mode of the environment of the app. An environment with this mode should exist.
+*   _AppId_ (String): Subdomain name of an app.
+*   _Mode_ (String): The mode of the environment of the app. An environment with this mode should exist.
 
 ##### <a rel="nofollow"></a>Example
 
@@ -267,9 +267,9 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 
 An object with the following key-value pairs:
 
-*   _Status_ (String) : Status of the environment. Possible values: Empty, Stopped, Running
-*   _Url_ (String) : URL to access your application.
-*   _Mode_ (String) : Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running
+*   _Url_ (String): URL to access your application.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
 ##### <a rel="nofollow"></a>Error Codes
 
@@ -307,7 +307,7 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start (ht
 
 An object with the following key-value pair:
 
-*   _AutoSyncDb_ (Boolean) : Define whether the database should be synchronized automatically with the model during the start phase of the app.
+*   _AutoSyncDb_ (Boolean): Define whether the database should be synchronized automatically with the model during the start phase of the app.
 
 ##### <a rel="nofollow"></a>Example
 
@@ -328,7 +328,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 
 An object with the following key-value pairs:
 
-*   _JobId_ (String) : The identifier which can be used to track the progress of the start action
+*   _JobId_ (String): The identifier which can be used to track the progress of the start action
 
 ##### <a rel="nofollow"></a>Error Codes
 
@@ -376,7 +376,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 
 An object with the following key-value pair:
 
-*   _Status_ (String) : Possible values are Starting and Started
+*   _Status_ (String): Possible values are Starting and Started
 
 ##### <a rel="nofollow"></a>Error Codes
 
@@ -454,8 +454,8 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/package (
 
 ##### <a rel="nofollow"></a>Parameters
 
-*   _AppId_ (String) : Subdomain name of an app.
-*   _Mode_ (String) : The mode of the environment of the app. An environment with this mode should exist.
+*   _AppId_ (String): Sub-domain name of an app.
+*   _Mode_ (String): The mode of the environment of the app. An environment with this mode should exist.
 
 ##### <a rel="nofollow"></a>Example
 
@@ -472,16 +472,16 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 
 An object with the following key-value pairs:
 
-*   _PackageId_ (String) : Unique identification of the package.
-*   _Name_ (String) : Name of the package.
-*   _Description_ (String) : Description of the package.
-*   _Version_ (String) : Package version. This is also the name of the tag on the project teamserver.
-*   _Creator_ (String) : Uploader or creator of this package.
-*   _CreationDate_ (Date) : Date that the package became available in the portal. This can be the
+*   _PackageId_ (String): Unique identification of the package.
+*   _Name_ (String): Name of the package.
+*   _Description_ (String): Description of the package.
+*   _Version_ (String): Package version. This is also the name of the tag on the project teamserver.
+*   _Creator_ (String): Uploader or creator of this package.
+*   _CreationDate_ (Date): Date that the package became available in the portal. This can be the
     upload date or the date that a build was created in the portal.
-*   _Status_ (String) : Status of the package. A package is ready to use if the status is 'Succeeded'.
+*   _Status_ (String): Status of the package. A package is ready to use if the status is 'Succeeded'.
     Possible values: Succeeded, Queued, Building, Uploading and Failed.
-*   _Size_ (Long) : Size of the package in bytes.
+*   _Size_ (Long): Size of the package in bytes.
 
 ##### <a rel="nofollow"></a>Error Codes
 
@@ -521,8 +521,8 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload (https://depl
 
 ##### <a rel="nofollow"></a>Parameters
 
-*   _AppId_ (String) : Subdomain name of an app.
-*   _Raw body_ : Deployment package as a file.
+*   _AppId_ (String): Subdomain name of an app.
+*   _Raw body_: Deployment package as a file.
 
 ##### <a rel="nofollow"></a>Example
 
@@ -561,9 +561,9 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/transport
 
 ##### <a rel="nofollow"></a>Parameters
 
-*   _AppId_ (String) : Subdomain name of an app.
-*   _Mode_ (String) : Mode of the environment. Possible values: Test, Acceptance, Production.
-*   _PackageId_ (String) : Id of the deployment package
+*   _AppId_ (String): Sub-domain name of an app.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _PackageId_ (String): ID of the deployment package
 
 ##### <a rel="nofollow"></a>Example
 
@@ -610,8 +610,8 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/clean (ht
 
 ##### <a rel="nofollow"></a>Parameters
 
-*   _AppId_ (String) : Subdomain name of an app.
-*   _Mode_ (String) : Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _AppId_ (String): Sub-domain name of an app.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
 ##### <a rel="nofollow"></a>Example
 
@@ -651,8 +651,8 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
 
 ##### <a rel="nofollow"></a>Parameters
 
-*   _AppId_ (String) : Subdomain name of an app.
-*   _Mode_ (String) : Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _AppId_ (String): Sub-domain name of an app.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
 ##### <a rel="nofollow"></a>Example
 
@@ -714,9 +714,9 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
 
 ##### <a rel="nofollow"></a>Parameters
 
-*   _AppId_ (String) : Subdomain name of an app.
-*   _Mode_ (String) : Mode of the environment. Possible values: Test, Acceptance, Production.
-*   _Body_ : JSON collection retrieved with GET method at the same URI
+*   _AppId_ (String): Subdomain name of an app.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Body_: JSON collection retrieved with GET method at the same URI
 
 ##### <a rel="nofollow"></a>Example
 
@@ -791,7 +791,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 
 ### <a rel="nofollow"></a>Description
 
-Lists the backups of an environment
+Lists the backups of an environment.
 
 ```bash
 HTTP Method: GET
@@ -803,8 +803,8 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 
 ##### <a rel="nofollow"></a>Parameters
 
-*   _AppId_ (String) : Subdomain name of an app.
-*   _Mode_ (String) : Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _AppId_ (String): Sub-domain name of an app.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
 ##### <a rel="nofollow"></a>Example
 
@@ -865,8 +865,8 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 
 ##### <a rel="nofollow"></a>Parameters
 
-*   _AppId_ (String) : Subdomain name of an app.
-*   _Mode_ (String) : Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _AppId_ (String): Subdomain name of an app.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 *   _SnapshotId_ (String): Identifier of the backup
 
 ##### <a rel="nofollow"></a>Example

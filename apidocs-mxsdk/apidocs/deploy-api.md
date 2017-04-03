@@ -787,3 +787,118 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
      }]
 }
 ```
+
+## <a name="DeployAPI-ListBackups" rel="nofollow"></a>List environment backups
+
+### <a rel="nofollow"></a>Description
+
+Lists the backups of an environment
+
+```bash
+HTTP Method: GET
+curl -H "Mendix-Username: $username" -H "Mendix-ApiKey: $apikey" $baseurl/apps/richardford/environments/Acceptance/snapshots/201703221355 -X GET
+URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots (https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots)]
+```
+
+### <a rel="nofollow"></a>Request
+
+##### <a rel="nofollow"></a>Parameters
+
+*   _AppId_ (String) : Subdomain name of an app.
+*   _Mode_ (String) : Mode of the environment. Possible values: Test, Acceptance, Production.
+
+##### <a rel="nofollow"></a>Example
+
+```java
+GET /api/1/apps/calc/environments/acceptance/snapshots HTTP/ 1.1
+Host: deploy.mendix.com
+
+Accept: */*
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+
+```
+
+### <a rel="nofollow"></a>Output
+
+##### <a rel="nofollow"></a>Error codes
+
+| HTTP Status | Error code | Description |
+| --- | --- | --- |
+| 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
+| 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
+| 500 | SNAPSHOT_LISTING_FAILED | An error occurred while listing the backups. Please contact support. |
+
+##### <a rel="nofollow"></a>Example
+
+```java
+[{
+  "SnapshotID": "201703221358",
+  "ExpiresOn": 1498132715000,
+  "State": "Completed",
+  "Comment": null,
+  "ModelVersion": "unversioned",
+  "CreatedOn": 1490187480000
+},{
+  "SnapshotID": "201703221355",
+  "ExpiresOn": 1498132548000,
+  "State": "Completed",
+  "Comment": "accp",
+  "ModelVersion": "unversioned",
+  "CreatedOn": 1490187300000
+}]
+```
+
+## <a name="DeployAPI-DownloadBackup" rel="nofollow"></a>Download a backup for an environment
+
+### <a rel="nofollow"></a>Description
+
+Download the backup for an environment. The response contains direct links to the external backup system, you can use these links to download three types of backups.
+
+```bash
+HTTP Method: GET
+URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots (https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/<SnapshotId>)]
+```
+
+### <a rel="nofollow"></a>Request
+
+##### <a rel="nofollow"></a>Parameters
+
+*   _AppId_ (String) : Subdomain name of an app.
+*   _Mode_ (String) : Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _SnapshotId_ (String): Identifier of the backup
+
+##### <a rel="nofollow"></a>Example
+
+```java
+GET /api/1/apps/calc/environments/acceptance/snapshots/201703221355 HTTP/ 1.1
+Host: deploy.mendix.com
+
+Accept: */*
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+```
+
+### <a rel="nofollow"></a>Output
+
+##### <a rel="nofollow"></a>Error codes
+
+| HTTP Status | Error code | Description |
+| --- | --- | --- |
+| 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
+| 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
+| 404 | SNAPSHOT_NOT_FOUND | Snapshot not found. |
+
+##### <a rel="nofollow"></a>Example
+
+```java
+{
+  "FilesOnly": "https://cloud.home.mendix.com/backups/d4bf9d5d-cf3e-4561-9f7f-31b1c580a3d5",
+  "DatabaseOnly": "https://cloud.home.mendix.com/backups/5524ec0b-fdf1-460b-87c2-75bb06ec98ff",
+  "DatabaseAndFiles": "https://cloud.home.mendix.com/backups/24783a6c-30c4-49b4-8cb9-13b57cfec4cc"
+}
+```

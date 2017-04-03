@@ -4,7 +4,6 @@ space: "API & SDK"
 category: "API Documentation"
 ---
 
-
 ## Introduction
 
 The Deploy API allows you to manage application environments in our public cloud. You can retrieve the status, start and stop applications, but also deploy and transport new model versions to application environments. To do the latter you will also need the Build API to create and manage deployment packages.
@@ -17,11 +16,11 @@ The image below provides a domain model representation of the concepts discussed
 The Cloud Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication "authentication").
 In the web interface of our portal we provide 2-factor authentication for all operations that involve production environments. For our APIs we obviously cannot provide you with 2-factor authentication in the same way. For the APIs we created Multi-Factor Authentication so you can control which users can access which environments via the Node Security screen under Project Settings you can configure which environments are accessible via the API to which users. By default test and acceptance are accessible to users that also have access to these environments via the portal. Access to the production environment needs to be configured by the technical contact of the application for specific users.
 
-# <a name="DeployAPI-APIcalls" rel="nofollow"></a>API calls
+# <a name="DeployAPI-APIcalls" rel="nofollow"></a>API Calls
 
 Only _Retrieve apps_, _Create Sandbox_ and _Retrieve app_ API calls are supported for sandbox applications.
 
-## <a name="DeployAPI-Retrieveapps" rel="nofollow"></a>Retrieve apps
+## <a name="DeployAPI-Retrieveapps" rel="nofollow"></a>Retrieve Apps
 
 ### <a name="DeployAPI-Description" rel="nofollow"></a>Description
 
@@ -45,7 +44,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### <a rel="nofollow"></a>Output:
+### <a rel="nofollow"></a>Output
 
 List of objects with the following key-value pairs:
 
@@ -54,7 +53,7 @@ List of objects with the following key-value pairs:
 *   _ProjectId_ (String) : Sprintr Project identifier.
 *   _Url_ (String) : Production or sandbox URL to access your app.
 
-##### <a rel="nofollow"></a>Example:
+##### <a rel="nofollow"></a>Example
 
 ```java
 [{
@@ -103,7 +102,7 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### <a rel="nofollow"></a>Output:
+### <a rel="nofollow"></a>Output
 
 Response object with the following fields:
 
@@ -112,14 +111,14 @@ Response object with the following fields:
 *   _ProjectId_ (String) : Sprintr Project identifier.
 *   _Url_ (String) : Production or sandbox URL to access your app.
 
-##### <a name="DeployAPI-Errorcodes" rel="nofollow"></a>Error codes
+##### <a name="DeployAPI-Errorcodes" rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PROJECTID | Invalid ProjectId |
 | 400 | APPLICATION_ALREADY_EXISTS | Application already exists |
 
-##### <a rel="nofollow"></a>Example:
+##### <a rel="nofollow"></a>Example
 
 ```java
 {
@@ -130,7 +129,7 @@ Response object with the following fields:
 }
 ```
 
-## <a name="DeployAPI-Retrieveapp" rel="nofollow"></a>Retrieve app
+## <a name="DeployAPI-Retrieveapp" rel="nofollow"></a>Retrieve App
 
 ### <a rel="nofollow"></a>Description
 
@@ -236,7 +235,7 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-## <a name="DeployAPI-Retrieveenvironment" rel="nofollow"></a>Retrieve environment
+## <a name="DeployAPI-Retrieveenvironment" rel="nofollow"></a>Retrieve Environment
 
 ### <a rel="nofollow"></a>Description
 
@@ -272,7 +271,7 @@ An object with the following key-value pairs:
 *   _Url_ (String) : URL to access your application.
 *   _Mode_ (String) : Mode of the environment. Possible values: Test, Acceptance, Production.
 
-##### <a rel="nofollow"></a>Error codes
+##### <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -291,7 +290,7 @@ An object with the following key-value pairs:
 }
 ```
 
-## <a name="DeployAPI-Startenvironment" rel="nofollow"></a>Start environment
+## <a name="DeployAPI-Startenvironment" rel="nofollow"></a>Start Environment
 
 ### <a rel="nofollow"></a>Description
 
@@ -331,7 +330,7 @@ An object with the following key-value pairs:
 
 *   _JobId_ (String) : The identifier which can be used to track the progress of the start action
 
-##### <a rel="nofollow"></a>Error codes
+##### <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -349,7 +348,7 @@ An object with the following key-value pairs:
 }
 ```
 
-## <a name="DeployAPI-Getstartenvironmentstatus" rel="nofollow"></a>Get start environment status
+## <a name="DeployAPI-Getstartenvironmentstatus" rel="nofollow"></a>Get Start Environment Status
 
 ### <a rel="nofollow"></a>Description
 
@@ -379,7 +378,7 @@ An object with the following key-value pair:
 
 *   _Status_ (String) : Possible values are Starting and Started
 
-##### <a rel="nofollow"></a>Error codes
+##### <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -405,7 +404,7 @@ An object with the following key-value pair:
 }
 ```
 
-## <a name="DeployAPI-Stopenvironment" rel="nofollow"></a>Stop environment
+## <a name="DeployAPI-Stopenvironment" rel="nofollow"></a>Stop Environment
 
 ### <a rel="nofollow"></a>Description
 
@@ -431,7 +430,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 
 ### <a rel="nofollow"></a>Output
 
-##### <a rel="nofollow"></a>Error codes
+##### <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -440,7 +439,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found |
 | 500 | STOP_FAILED | Cannot stop app: reason |
 
-## <a name="DeployAPI-Retrieveenvironmentpackage" rel="nofollow"></a>Retrieve environment package
+## <a name="DeployAPI-Retrieveenvironmentpackage" rel="nofollow"></a>Retrieve Environment Package
 
 ### <a rel="nofollow"></a>Description
 
@@ -484,7 +483,7 @@ An object with the following key-value pairs:
     Possible values: Succeeded, Queued, Building, Uploading and Failed.
 *   _Size_ (Long) : Size of the package in bytes.
 
-##### <a rel="nofollow"></a>Error codes
+##### <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -507,7 +506,7 @@ An object with the following key-value pairs:
 }
 ```
 
-## <a name="DeployAPI-Uploadpackage" rel="nofollow"></a>Upload package
+## <a name="DeployAPI-Uploadpackage" rel="nofollow"></a>Upload Package
 
 ### <a rel="nofollow"></a>Description
 
@@ -538,7 +537,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 
 ### <a name="DeployAPI-Ouput" rel="nofollow"></a>Ouput
 
-##### <a rel="nofollow"></a>Error codes
+##### <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -547,7 +546,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 | 500 | UPLOAD_COPY_FAILED | Failed to store the deployment package. |
 | 500 | INVALID_PACKAGE | Failed to process the deployment package. |
 
-## <a name="DeployAPI-Transportadeploymentpackagetoanenvironment" rel="nofollow"></a>Transport a deployment package to an environment
+## <a name="DeployAPI-Transportadeploymentpackagetoanenvironment" rel="nofollow"></a>Transporting a Deployment Package to an Environment
 
 ### <a rel="nofollow"></a>Description
 
@@ -583,7 +582,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 
 ### <a rel="nofollow"></a>Output
 
-##### <a rel="nofollow"></a>Error codes
+##### <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -627,7 +626,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 
 ### <a rel="nofollow"></a>Output
 
-##### <a rel="nofollow"></a>Error codes
+##### <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -637,7 +636,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 500 | ENVIRONMENT_CLEAN_FAILED | Unable to clean the environment. Please contact support. |
 
-## <a name="DeployAPI-Retrieveenvironmentsettings" rel="nofollow"></a>Retrieve environment settings
+## <a name="DeployAPI-Retrieveenvironmentsettings" rel="nofollow"></a>Retrieve Environment Settings
 
 ### <a rel="nofollow"></a>Description
 
@@ -668,7 +667,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 
 ### <a rel="nofollow"></a>Output
 
-##### <a rel="nofollow"></a>Error codes
+##### <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -700,7 +699,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 }
 ```
 
-## <a name="DeployAPI-Setenvironmentsettings" rel="nofollow"></a>Set environment settings
+## <a name="DeployAPI-Setenvironmentsettings" rel="nofollow"></a>Set Environment Settings
 
 ### <a rel="nofollow"></a>Description
 
@@ -752,7 +751,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 
 ### <a rel="nofollow"></a>Output
 
-##### <a rel="nofollow"></a>Error codes
+##### <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -788,7 +787,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 }
 ```
 
-## <a name="DeployAPI-ListBackups" rel="nofollow"></a>List environment backups
+## <a name="DeployAPI-ListBackups" rel="nofollow"></a>List Environment Backups
 
 ### <a rel="nofollow"></a>Description
 
@@ -821,7 +820,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### <a rel="nofollow"></a>Output
 
-##### <a rel="nofollow"></a>Error codes
+##### <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -851,7 +850,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }]
 ```
 
-## <a name="DeployAPI-DownloadBackup" rel="nofollow"></a>Download a backup for an environment
+## <a name="DeployAPI-DownloadBackup" rel="nofollow"></a>Download a Backup for an Environment
 
 ### <a rel="nofollow"></a>Description
 
@@ -883,7 +882,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### <a rel="nofollow"></a>Output
 
-##### <a rel="nofollow"></a>Error codes
+##### <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |

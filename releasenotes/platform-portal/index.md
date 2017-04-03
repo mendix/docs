@@ -4,6 +4,16 @@ space: "Release Notes"
 toc-level: "1"
 ---
 
+## April 1st, 2017
+
+* We added list backups/download backup operations to the [Deploy API](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api#DeployAPI-ListBackups).
+* We fixed the status page link in alert emails.
+* We updated the **Security** link from the Deploy/Operate tabs. It now goes to the same page on all pages in the platform.
+* We fixed the issue where the Free Apps backups page was very slow or resulted in an error in some cases.
+* We fixed the issue where the log viewer for Free Apps did not escape HTML, so if the application logged plain HTML, it was interpreted in the browser.
+* We fixed the issue where simultaneous snapshot restore jobs from the same environment to two others could lock one of the environments.
+* We updated links from *world.mendix.com* to *docs.mendix.com*.
+
 ## March 20th, 2017
 
 * The Deploy / Operate sections in the Platform Portal were broken on Internet Explorer 11 due to widget incompatability, introduced in the previous release. This was already hot-patched in production on March 16th.

@@ -6,13 +6,13 @@ toc-level: "1"
 
 ## April 1st, 2017
 
-* We added list backups / download backup operations to the [Deploy API](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api#DeployAPI-ListBackups)
-* Fixed status page link in alert emails
-* Updated the "Security" link from Deploy/Operate tabs, it now goes to the same page on all pages in the platform
-* Fixed an issue where the Free Apps backups page was very slow or resulted in an error in some cases
-* The log viewer for Free Apps did not escape HTML, so if the application logged plain html, it would be interpreted in the browser.
-* Fixed an issue where simultaneous snapshot restore jobs from the same environment to two others could lock one of the environments
-* Updated links from world.mendix.com to docs.mendix.com
+* We added list backups/download backup operations to the [Deploy API](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api#DeployAPI-ListBackups).
+* We fixed the status page link in alert emails.
+* We updated the **Security** link from the Deploy/Operate tabs. It now goes to the same page on all pages in the platform.
+* We fixed the issue where the Free Apps backups page was very slow or resulted in an error in some cases.
+* We fixed the issue where the log viewer for Free Apps did not escape HTML, so if the application logged plain HTML, it was interpreted in the browser.
+* We fixed the issue where simultaneous snapshot restore jobs from the same environment to two others could lock one of the environments.
+* We updated links from *world.mendix.com* to *docs.mendix.com*.
 
 ## March 20th, 2017
 

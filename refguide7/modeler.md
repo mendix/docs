@@ -27,5 +27,5 @@ This part of the Mendix Reference Guide gescribes the various features of the Me
 * [Scheduled Events](scheduled-events)
 * [Security](security)
 * [Translatable Texts](translatable-texts)
-* [XML](xml)
+* [XML](xml-reference-guide)
 * [XPath](xpath)

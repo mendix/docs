@@ -28,7 +28,7 @@ You can this permission by following these steps:
 5. Click **Node Permissions** tab.
 6. Check **Access the Monitoring** next to the name of the person who is granted this permission.
 
-![](attachments/settings/accessmonitoring.jpg)
+![](attachments/settings/nodepermission.jpg)
 
 ### 1.2 Where to find the Trends
 
@@ -40,7 +40,7 @@ You can find the trends by following these steps:
 4. Click **Metrics** under the **Operate** category.
 5. Select the environment you want to monitor under the tab **Trends**.
 
-![](attachments/backup/environment.jpg)
+![](attachments/developerportal/environment.jpg)
 
 ## 2 Application Statistics
 

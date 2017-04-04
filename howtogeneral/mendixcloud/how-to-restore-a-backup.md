@@ -33,6 +33,9 @@ The process for restoring a backup from a Free App and a licensed cloud node are
 3. Select the app for which you want to restore the backup.
 4. Click **Backups** under the **Operate** category.
 5. Select the backup you want to restore and click **Restore Backup**.
+
+[](attachments/operate/backupoptions.jpg)
+
 6. Click **Yes** to confirm the restoration.
 
 ### 3.2 Restoring a Backup for a Licensed Cloud Node
@@ -43,7 +46,7 @@ There are two methods for restoring a backup for a licensed cloud node. The firs
 
 To restore a backup that is stored in the Mendix Cloud, follow these steps:
 
-1. Go to the [MEndix Developer Portal](http://home.mendix.com).
+1. Go to the [Mendix Developer Portal](http://home.mendix.com).
 2. Click **Apps**.
 3. Click **My Apps** and select **Nodes**.
 4. Select the node for which you want to restore the backup.
@@ -53,6 +56,9 @@ To restore a backup that is stored in the Mendix Cloud, follow these steps:
 [](attachments/developerportal/environment.jpg)
 
 7. Select the backup you want to restore and click **Restore Backup**.
+
+[](attachments/operate/backupoptions.jpg)
+
 8. Confirm the backup restore by clicking **Restore Backup**.
 
 <div class="alert alert-info">{% markdown %}
@@ -85,4 +91,3 @@ The backup file is immediately uploaded to the database.
 * [How To Unlink Your Sandbox](how-to-unlink-sandbox)
 * [How To Download a Backup](how-to-download-a-backup)
 * [How To Connect an App to a Licensed Cloud Node](how-to-link-app-to-node)
-

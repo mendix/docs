@@ -2,8 +2,8 @@
 title: "Java Actions"
 space: "Mendix 7 Reference Guide"
 category: "Modeler"
+description: "Describes using Java Actions to extend the functionality of your Mendix app."
 ---
-
 
 With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow using the [Java Action Call](java-action-call).
 

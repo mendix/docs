@@ -3,6 +3,7 @@ title: "Consume a REST Service"
 space: "Mendix 7 How-To's"
 category: "Integration"
 tags: ["integration", "rest service", "data model"]
+description: "Describes how to create a GET REST service and a POST REST service."
 ---
 
 ## 1 Introduction
@@ -13,8 +14,8 @@ In this how-to, you will consume a JSON-based REST services by integrating with 
 
 **This how-to will teach you how to do the following:**
 
-* How to create a GET REST Service
-* How to create a POST REST Service
+* How to create a GET REST service
+* How to create a POST REST service
 
 ## 2 Prerequisites
 

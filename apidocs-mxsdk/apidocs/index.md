@@ -1,6 +1,7 @@
 ---
 title: "API Documentation"
 space: "API & SDK"
+description: "The Mendix platform API documentation divided into various sections such as Runtime, Client, Feedback, and Deploy."
 ---
 
 The API documentation is divided into the sections described below.

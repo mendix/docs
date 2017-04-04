@@ -2,8 +2,8 @@
 title: "Microflows"
 space: "Mendix 7 Reference Guide"
 category: "Modeler"
+description: "Presents an overview of all the elements that can be used in a microflow."
 ---
-
 
 <div class="alert alert-info">{% markdown %}
 

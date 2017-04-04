@@ -2,6 +2,7 @@
 title: "Creating the Domain Model"
 space: "API & SDK"
 parent: "your-learning-path-for-the-mendix-sdk"
+description: ""
 ---
 In this tutorial you will learn:
 

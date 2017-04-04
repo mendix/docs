@@ -2,6 +2,7 @@
 title: "Generate a Personal SSH2 Key Pair"
 space: "Mendix 7 How-To's"
 category: "Security"
+description: "Describes how to generate a personal SSH2 keypair for use in the Mendix hosting environment."
 tags: []
 ---
 ## 1 Introduction

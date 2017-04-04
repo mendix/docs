@@ -3,11 +3,12 @@ title: "Create a Basic Hello World Custom Widget"
 space: "Mendix 7 How-To's"
 category: "Custom Widget Development"
 tags: ["widget", "app store", "custom"]
+description: "Provides a quick introduction to building a custom widget to extend your Mendix app."
 ---
 
 ## 1 Introduction
 
-This how-to is a quick introduction on how to build a custom widget to extend your Mendix application. We’re using the famous “Hello World” example to get you started. At the end of this how-to, you will have a basic understanding of the structure and setup of a Mendix widget.
+This how-to is a quick introduction to building a custom widget to extend your Mendix application. We’re using the famous “Hello World” example to get you started. At the end of this how-to, you will have a basic understanding of the structure and setup of a Mendix widget.
 
 The Mendix front-end uses the DOJO framework to implement widgets. Each Mendix widget is essentially a DIJIT widget that inherits from `mxui.widget._WidgetBase`. For more information on DIJIT widgets and their life cycle, see [http://dojotoolkit.org/documentation/tutorials/1.6/understanding_widget/](http://dojotoolkit.org/documentation/tutorials/1.6/understanding_widget/).
 

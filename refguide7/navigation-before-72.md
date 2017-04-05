@@ -35,11 +35,11 @@ The Hybrid Tablet and Hybrid Phone profiles are different from the other profile
 
 Mendix Runtime automatically redirects users to the home page of the appropriate device type based on the device they are using. This happens by examining the User-Agent string that is sent by the device's browser. The default configuration for this redirection is as follows:
 
-| User-Agent String Regular Expression | Device Type |
-| --- | --- |
-| `Android.*Mobile`|iPhone, iPod, BlackBerry Phone |
-| `Android` |iPad Tablet |
-| _(other)_ | Desktop |
++| User-Agent String Regular Expression | Device Type |
++| --- | --- |
++| Android.*Mobile|iPhone|iPod|BlackBerry | Phone |
++| Android|iPad | Tablet |
++| _(other)_ | Desktop |
 
 To configure the regular expressions used to match phone or tablet users, see [Custom Settings](custom-settings).
 

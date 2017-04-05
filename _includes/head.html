@@ -27,7 +27,7 @@
     <link rel="search" type="application/opensearchdescription+xml" href="/search/opensearch.xml" title="Mendix Documentation"/>
 
     {% if jekyll.environment == "production" %}
-    {% if page.sitemap != false  %}<meta name="ROBOTS" content="INDEX, FOLLOW">{% else %}<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">{% endif %}
+    {% if page.sitemap != false %}{% if page.noindex != true %}<meta name="ROBOTS" content="INDEX, FOLLOW">{% else %}<meta name="ROBOTS" content="NOINDEX, FOLLOW">{% endif %}{% else %}<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">{% endif %}
     <script type="text/javascript">
       window.__IntercomAppId = "{{ site.intercom.live_id }}"
       window.intercomSettings = {

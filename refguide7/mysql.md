@@ -4,8 +4,6 @@ space: "Mendix 7 Reference Guide"
 parent: "data-storage"
 ---
 
-Mendix introduced support for MySQL 5.5 in Mendix 5.12 and support for MariaDB 5.5 in Mendix 5.16.
-
 Mendix only supports the InnoDB storage engine, with row-based logging enabled.
 
 ## Transaction Isolation

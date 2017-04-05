@@ -2,7 +2,7 @@
 title: "Hybrid Tablet Profile"
 space: "Mendix 7 Reference Guide"
 parent: "navigation-before-72"
-description: "Describes usage of the Hybrid Tablet profile in a Mendix app."
+description: "Describes usage of the Hybrid Tablet profile in a Mendix app for Mendix versions 7.0 and 7.1."
 ---
 
 <div class="alert alert-info">{% markdown %}

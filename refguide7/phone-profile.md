@@ -2,7 +2,7 @@
 title: "Phone Profile"
 space: "Mendix 7 Reference Guide"
 parent: "navigation-before-72"
-"Describes usage of the Phone profile in a Mendix app."
+description: "Describes usage of the Phone profile in a Mendix app."
 ---
 
 <div class="alert alert-info">{% markdown %}

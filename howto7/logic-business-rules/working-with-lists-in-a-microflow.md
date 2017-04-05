@@ -2,9 +2,11 @@
 title: "Working With Lists in a Microflow"
 space: "Mendix 7 How-To's"
 category: "Logic & Business Rules"
+description: "Teaches you how to work with a list of objects in a microflow as well retrieve a filtered list of objects from the database."
 tags: []
 ---
-In this how-to you will learn how to work with a list of objects in a Microflow. To manage this list you will first retrieve a filtered list of objects from the database. Mendix utilizes XPath constraints to apply filters. To learn more about XPath, see [XPath Contains](/refguide7/xpath-contains) in the Mendix Reference Guide. Secondly, you will iterate over the retrieved list of objects and calculate the total price of all the orders in a [Loop](/refguide7/loop). You will end this how-to with an alternative to calculating aggregated values over a list of objects.
+
+In this how-to, you will learn how to work with a list of objects in a microflow. To manage this list you will first retrieve a filtered list of objects from the database. Mendix utilizes XPath constraints to apply filters. To learn more about XPath, see [XPath Contains](/refguide7/xpath-contains) in the Mendix Reference Guide. Secondly, you will iterate over the retrieved list of objects and calculate the total price of all the orders in a [Loop](/refguide7/loop). You will end this how-to with an alternative to calculating aggregated values over a list of objects.
 
 ## 1\. Preparing the Data Structure, GUI and Example Data
 
@@ -233,7 +235,6 @@ In the previous sections you filtered the list of orders from database on attrib
 
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
 *   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
-
 *   [Working With Lists in a Microflow](working-with-lists-in-a-microflow)
 *   [Triggering Logic using Microflows](triggering-logic-using-microflows)
 *   [Creating a Custom Save Button](create-a-custom-save-button)

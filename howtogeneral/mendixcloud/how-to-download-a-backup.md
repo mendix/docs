@@ -17,7 +17,7 @@ This how-to describes how to download a Sandbox environment backup from a Free A
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-*   You have a Free App or licensed cloud node with backups
+* Have a Free App or licensed cloud node with backups
 
 ## 3 Downloading A Free App Backup
 
@@ -39,7 +39,7 @@ To download a backup of a licensed app, follow these steps:
 4. Click **Backups** under the **Operate** category.
 5. Select the environment from which you want to download the backup.
 
-    ![](attachments/environment.jpg)
+    ![](attachments/developerportal/environment.jpg)
 
 6. If you want to create a backup first, click **Create Backup**.
 7. Select a backup and click **Download Backup**.

@@ -2,7 +2,9 @@
 title: "Build a Simple HRM App"
 space: "Mendix 7 How-To's"
 category: "Getting Started"
+description: "This series of Mendix How-To's will guide you through the process of creating a simple human resource management (HRM) application."
 ---
+
 The following how-to's will guide you through the process of creating a simple human resource management (HRM) application with Mendix:
 
 * [How to Build a Simple HRM App 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)

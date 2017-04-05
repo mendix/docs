@@ -2,8 +2,8 @@
 title: "Parse and format date function calls"
 space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
+description: "Describes the functions for parsing datetimes from strings using a specified pattern or producing a string from a datetime in Mendix."
 ---
-
 
 Functions to parse datetimes from strings, using a specified pattern, or produce a string from a datetime.
 

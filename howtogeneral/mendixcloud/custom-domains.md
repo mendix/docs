@@ -2,8 +2,10 @@
 title: "Custom Domains"
 space: "General How-To's"
 category: "Mendix Cloud"
+description: "Describes how to configure custom domains as well as generate, upload, and renew certificates in Mendix."
 ---
-# How to configure Custom Domains
+
+# How to Configure Custom Domains
 
 When your Mendix App needs to be accessible via your own URL, for example https://myapp.mycompany.com/, you have to provide a Custom Domain Certificate (a SSL/TLS Certificate) so we can keep serving your Mendix App via a secure connection.
 

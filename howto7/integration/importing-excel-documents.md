@@ -2,8 +2,10 @@
 title: "Importing Excel Documents"
 space: "Mendix 7 How-To's"
 category: "Integration"
+description: "Describes how to set up import templates and import data into your app using the Excel Importer module."
 tags: []
 ---
+
 Adding large amounts of data to your application, for example rootdata or data from an external application, can be very time consuming. In order to save time and effort, this process can be automated by using the 'Excel Importer' module. In this How-to you will setup import templates, and import data into your application by using the 'Excel Importer'.
 
 ## 1\. Prepare data structure, GUI and modules

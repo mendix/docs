@@ -1,10 +1,12 @@
 ---
 title: "Modeler"
 space: "Release Notes"
+description: "Presents all of the available release notees for the Mendix Desktop Modeler."
 ---
 
 These are the release notes for the Mendix Desktop Modeler:
 
+* [7.1](7.1)
 * [7.0](7.0)
 * [6.10](6.10)
 * [6.9](6.9)

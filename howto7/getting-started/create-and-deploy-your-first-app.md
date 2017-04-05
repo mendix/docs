@@ -2,6 +2,7 @@
 title: "Create and Deploy Your First App"
 space: "Mendix 7 How-To's"
 category: "Getting Started"
+description: "Presents how to build your first app in Mendix and deploy it to the cloud."
 tags: []
 ---
 
@@ -12,8 +13,8 @@ In this how-to, you will build your first application and deploy it to the cloud
 **This how-to will teach you how to do the following:**
 
 * Create an app in Mendix
-* Deploy an app with Mendix
 * Create overview and detail pages
+* Deploy an app with Mendix
 
 ## 2 Prerequisites
 

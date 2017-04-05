@@ -2,6 +2,7 @@
 title: "Trends"
 space: "General How-To's"
 category: "Mendix Cloud"
+description: "Describes how to interpret various graphs and trends in the Mendix Cloud."
 ---
 
 ## <a name="Trends-appmxruntimerequests"></a>1 Amount of handled external requests

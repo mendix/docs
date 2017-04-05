@@ -46,7 +46,7 @@ To download and install the Mendix Service Console, follow these steps:
 
 1. Download the latest version of the Mendix Service Console from the [App Store](https://appstore.home.mendix.com/link/modelers):
 
-    ![](attachments/18448665/18580732.png)
+    ![](attachments/18448665/service_console_download.png)
 
 2. Install the Mendix Service Console by following the installation wizard.
 3. Start the Mendix Service Console after the installation. The first time you launch the application, the **Preferences** dialog box will be shown (it will always be shown if no valid location is configured for all the apps and server files):

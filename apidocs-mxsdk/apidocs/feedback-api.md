@@ -13,17 +13,12 @@ The Mendix Feedback API allows you to retrieve, add and manage feedback for your
 
 Each call also requires the parameters 'username' and 'password'. These are the public credentials you will find below; actual authentication of requests is done through API keys.
 
-username : PlatformAPIUser
-password : PlatformAPIPassword
+* username: PlatformAPIUser
+* password: PlatformAPIPassword
 
 {% endmarkdown %}</div>
 
-**App Store Link**
-[https://appstore.home.mendix.com/link/app/Feedback%20API](https://appstore.home.mendix.com/link/app/Feedback%20API)
-
 **[Get WSDL](attachments/9535499/19398864.wsdl)**
-
-
 
 ## Published Microflows
 

@@ -1,11 +1,12 @@
 ---
 title: "Java Programming"
 space: "Mendix 7 Reference Guide"
+description: "Describes how to use the Mendix Java library and use Eclipse as an environment to write your Mendix Java Actions."
 ---
 
 With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows.
 
-For information about Java actions in the modeler see [Java Actions](java-actions).
+For information about Java actions in the Modeler see [Java Actions](java-actions).
 
 ## Writing code in the .java files of your Java actions
 

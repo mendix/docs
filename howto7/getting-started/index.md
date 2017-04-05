@@ -1,6 +1,7 @@
 ---
 title: "Getting Started"
 space: "Mendix 7 How-To's"
+description: "These introductory how-to's describe how to create and deploy your first app as well as how to build a simple HRM app."
 ---
 
 Get off to a flying start with these introductory how-to's.

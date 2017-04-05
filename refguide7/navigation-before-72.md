@@ -25,7 +25,7 @@ In Mendix 7.0.2, the Offline device profile is replaced by the [Hybrid Phone pro
 
 {% endmarkdown %}</div>
 
-The device type of a currently logged-in user is available in [microflows](microflows) as the `$currentDeviceType` variable. The type of this variable is the [enumeration](enumerations) `System.DeviceType`, which has the values Phone, Tablet, and Desktop. You can use the `$currentDeviceType` variable to perform different actions based on the device type. A typical example is to show different pages based on the device type.
+The device type of a currently logged-in user is available in [microflows](microflows) as the `$currentDeviceType` variable. The type of this variable is the [enumeration](enumerations) `System.DeviceType`, which has the values `Phone`, `Tablet`, and `Desktop`. You can use the `$currentDeviceType` variable to perform different actions based on the device type. A typical example is to show different pages based on the device type.
 
 ## 3 Hybrid Profiles
 

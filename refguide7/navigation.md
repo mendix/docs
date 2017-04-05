@@ -57,8 +57,8 @@ Mendix Runtime automatically redirects users to the home page of the appropriate
 
 | User-Agent String Regular Expression | Device Type |
 | --- | --- |
-| `Android.*Mobile&#124;iPhone&#124;iPod&#124;BlackBerry` | Phone |
-| `Android&#124;iPad` | Tablet |
+| Android.*Mobile&#124;iPhone&#124;iPod&#124;BlackBerry | Phone |
+| Android&#124;iPad | Tablet |
 | _(other)_ | Responsive |
 
 To configure the regular expressions used to match phone or tablet users, see [Custom Settings](custom-settings).

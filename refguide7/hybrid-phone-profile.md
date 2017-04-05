@@ -7,7 +7,7 @@ description: "Describes usage of the Hybrid Phone profile in a Mendix app."
 
 <div class="alert alert-info">{% markdown %}
 
-For Mendix 7.2 and higher, see [Navigation Profile](navigation-profile).
+For details on how this works in Mendix version 7.2 and higher, see [Navigation Profile](navigation-profile).
 
 {% endmarkdown %}</div>
 

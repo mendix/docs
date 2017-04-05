@@ -2,11 +2,12 @@
 title: "Desktop Profile"
 space: "Mendix 7 Reference Guide"
 parent: "navigation-before-72"
+description: "Describes the Desktop profile, which is the default profile used by a Mendix app."
 ---
 
 <div class="alert alert-info">{% markdown %}
 
-For Mendix 7.2 and higher see [navigation profile](navigation-profile).
+For Mendix 7.2 and higher, see [Navigation Profile](navigation-profile).
 
 {% endmarkdown %}</div>
 

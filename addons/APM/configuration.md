@@ -42,7 +42,7 @@ The **Explain plan query** is also automatically set during installation. This q
 
 The remaining four options are used in the query tool to determine the output and set a timeout.
 
-## Clean data
+## Clean Data
 
 To quickly remove all the data that is collected by and stored in the APM tool, you can use the buttons on
 the **Clean data** tab:
@@ -55,19 +55,22 @@ Some other features and settings are collected on the **More** tab:
 ![](attachments/Dashboard/Configuration_More.png)                       
 
 ### Dashboard
+
 A default measurement graph can be selected for the dashboard.
 
-### Triggered events
+### Triggered Events
+
 Automatic cleanup for the triggered event data in the measurements tool is configured here.
 
 Also, the default **Triggers notify to** can be configured here.
 
-### settings
-You can import/export settings.
+### Settings
 
-You can globally set all settings to production, non-production or custom.
+You can do the following:
 
-You can recreate sample data.
+* Import/export settings
+* Globally set all settings to production, non-production, or custom
+* Recreate sample data
 
 ## Start/Stop
 

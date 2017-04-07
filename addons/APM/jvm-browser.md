@@ -15,7 +15,6 @@ You can start collecting statistics on individual items using the **Collect** bu
 
 ## Additional JMX Exposed Statistics
 
-The runtime statistics of the tools, measurements that expose to JMX as well as Mendix statistics 
-are made available through JMX (when JMX is running).
+The runtime statistics of the tools, measurements that expose to JMX as well as Mendix statistics are made available through JMX (when JMX is running).
 
 The APM module has Java Actions to publish your own JMX data (for example, the result of a business rule).

@@ -24,8 +24,7 @@ Only _Retrieve apps_, _Create Sandbox_ and _Retrieve app_ API calls are supporte
 
 ### <a name="DeployAPI-Description" rel="nofollow"></a>Description
 
-Retrieves all apps which the authenticated user has access to as a regular user. These apps can be found via
-the "Nodes overview" screen in the Mendix Platform. 
+Retrieves all apps which the authenticated user has access to as a regular user. These apps can be found via the "Nodes overview" screen in the Mendix Platform. 
 
 ```bash
 HTTP Method: GET
@@ -133,8 +132,7 @@ Response object with the following fields:
 
 ### <a rel="nofollow"></a>Description
 
-Retrieves a specific app which the authenticated user has access to as a regular user. These app can be found via
-the "Nodes overview" screen in the Mendix Platform. 
+Retrieves a specific app which the authenticated user has access to as a regular user. These app can be found via the "Nodes overview" screen in the Mendix Platform. 
 
 ```bash
 HTTP Method: GET

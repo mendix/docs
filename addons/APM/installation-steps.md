@@ -73,8 +73,7 @@ Set the name of your company and app in the constants.
 
 ## Optionally Configure the APMAgent.NotifyMicroflowName Constant
 
-This constant defines the microflow that is called on the trigger notify action. You
-can call a microflow that sends an e-mail. The microflow gets three string parameters:
+This constant defines the microflow that is called on the trigger notify action. You can call a microflow that sends an e-mail. The microflow gets three string parameters:
 
 * **To**
 * **Subject**
@@ -96,12 +95,9 @@ After startup for the first time, a small wizard is started:
 
 ![](attachments/Installation_steps/Welcome_Dialog.png)
 
-*   If you have received a license request code for this app, you can enter this code in the 
-license request code field.   
+*   If you have received a license request code for this app, you can enter this code in the license request code field.   
 *   Use the **Mail license request** button to send a mail with the license request.
-*   If a mail client does not open, is not configured, or fails otherwise, use the **Manual 
-license request** button .This opens a dialog box so that you can copy-paste the text for the email 
-to be sent to [apmtool@mansystems.nl](mailto:apmtool@mansystems.nl).
+*   If a mail client does not open, is not configured, or fails otherwise, use the **Manual license request** button .This opens a dialog box so that you can copy-paste the text for the email to be sent to [apmtool@mansystems.nl](mailto:apmtool@mansystems.nl).
 *   Upon receiving the license, copy-paste the license in the **License key** field.
 *   Select **Production** or **Non-Production**.
 *   Select **Save**.

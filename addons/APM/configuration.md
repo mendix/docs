@@ -4,9 +4,7 @@ space: "Other Add-Ons"
 parent: "user-manual"
 ---
 
-This chapter describes the global configuration and the **Start/Stop** dialog. Both can be selected from the
-header. The header also has a button that opens the documentation and a button that returns you to the home page
-of the app to which the APM tool has been added.
+This chapter describes the global configuration and the **Start/Stop** dialog. Both can be selected from the header. The header also has a button that opens the documentation and a button that returns you to the home page of the app to which the APM tool has been added.
 
 ## After Startup Configuration
 
@@ -30,9 +28,7 @@ The license code goes in the **License key** field. The **Expiry date** field is
 
 ## JDBC
 
-The JDBC settings are for executing queries in the query tool and using the explain plan query in the
-performance tool. Usually these settings are correctly determined during installation and can stay
-unchanged.
+The JDBC settings are for executing queries in the query tool and using the explain plan query in the performance tool. Usually these settings are correctly determined during installation and can stay unchanged.
 
 ![](attachments/Dashboard/Configuration_JDBC.png)                       
 
@@ -44,8 +40,7 @@ The remaining four options are used in the query tool to determine the output an
 
 ## Clean data
 
-To quickly remove all the data that is collected by and stored in the APM tool, you can use the buttons on
-the **Clean data** tab:
+To quickly remove all the data that is collected by and stored in the APM tool, you can use the buttons on the **Clean data** tab:
 
 ![](attachments/Dashboard/Configuration_CleanData.png)                       
 

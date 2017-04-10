@@ -237,7 +237,7 @@ This graph displays the amount of data that is stored on disk in absolute amount
 
 Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
 
-## 5 Related content
+## 6 Related content
 
 *   [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
 *   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)

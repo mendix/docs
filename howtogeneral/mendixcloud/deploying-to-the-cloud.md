@@ -12,7 +12,7 @@ It has never been easier to deploy a Mendix application to the cloud. This how-t
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-### 2.1 Prerequisites for a licensed App
+### 2.1 Prerequisites for a Licensed App
 *   Your app is linked to a licensed Cloud Node
 *   You have deployment permissions
 *   Your Google Authenticator is enabled
@@ -20,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 ### 2.1 Prerequisites for a Free App
 *   
 
-## 3 Deploying a licensed App to the Mendix Cloud
+## 3 Deploying a Licensed App to the Mendix Cloud
 
 There are two methods of deploying your app to the Mendix Cloud. The first option is directly via the **Mendix Modeler**, and the second  is through the **Developer Portal**.
 
@@ -40,7 +40,7 @@ There are two methods of deploying your app to the Mendix Cloud. The first optio
 
     ![](attachments/18448697/18581231.png)
 
-### 3.2 Create a package from Team Server in the Developer Portal
+### 3.2 Create a Package from Team Server in the Developer Portal
 
 An app can also be deployed without using the Mendix Modeler. Take the following steps to do this:
 
@@ -56,9 +56,7 @@ The package is now being deployed to the cloud.
 
 ## 4 Deploy the App to an Environment
 
-Previous steps in paragraph 3.1 and 3.2 explained how to deploy a Deployment Package to the Mendix Cloud. The actual app is not running yet. This chapter will explain how to deploy the App to a node environment.
-
-Follow these steps to deploy a Deployment Package to a node environment:
+Previous steps explained how to deploy a Deployment Package to the Mendix Cloud. The actual app is not running yet. Follow these steps to deploy a Deployment Package to a node environment:
 
 1.  Open the [Developer Portal](http://home.mendix.com).
 2.  Open your app.
@@ -79,17 +77,15 @@ With a Free App it's only possible to deploy your App to a sandbox environment u
 
 ### Method 1
 
-Once you have created and worked on your App, you will want to share it with others in the Free App. You can deploy your Free app to a sandbox environment by clicking **Run** at the top of your Mendix Modeler. It will deploy your App automatically to a sandbox.
+Once you have created and worked on your App, you will want to share it with others in the Free App. You can deploy your Free App to a sandbox environment by clicking **Run** at the top of your Mendix Modeler. It will automatically deploy your app to a sandbox.
 
 ![](attachments/deploy/runapp2.jpg)
 
-
 ### Method 2
 
-If you want to choose whether you want to run your App locally or in the sandbox. You can enable the sandbox option by clicking **Run**.
+If you want to choose whether you want to run your app locally or in the sandbox, you can enable the sandbox option by clicking **Run**.
 
 ![](attachments/deploy/runapp.jpg)
-
 
 ## 6 Related content
 *   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)

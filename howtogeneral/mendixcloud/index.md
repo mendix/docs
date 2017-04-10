@@ -8,18 +8,17 @@ Learn how to deploy your app, either in a Sandbox or to the Cloud. And go check 
 
 ## Free App
 
-If you are new to the Mendix community and would like to deploy and share your own app, you can use the free tier of our public cloud offering. The free app environment (also called sandbox) is set up to allow any Mendix engineer to create and share their applications with the end users. It is not the same as a cloud environment and it does not support complex or large applications.
+If you are new to the Mendix community and would like to deploy and share your own app, you can use the free tier of our public cloud offering. The free app environment (also called sandbox) is set up to allow any Mendix engineer to create and share their applications with their users. It is not the same as a cloud environment and it does not support complex or large applications.
 
 <div class="alert alert-warning">{% markdown %}
 
-If you would like to be a client and use a licensed cloud node you can contact our team **[HERE](http://ww2.mendix.com/BuyNow.html)** . If you are an existing customer, then you should deploy into your licensed cloud node. Free apps are part of our community edition and require Mendix 5.18 or higher.
+If you would like to be a client and use a licensed cloud node you can contact our team **[HERE](http://ww2.mendix.com/BuyNow.html)**. If you are an existing customer, you should deploy into your licensed cloud node. Free apps are part of our community edition and require Mendix 5.18 or higher.
 
 {% endmarkdown %}</div>
 
-In our free tier, your app will go to sleep if it is not active for a couple of minutes. When it is inactive, you will see the image below. If you wait for a couple of minutes and the app does not come up, then contact our support team at [support.mendix.com](http://support.mendix.com).
+In our free tier, your app will go to sleep after a couple of minutes of inactivity. When it is inactive, you will see the image below. If you wait for a couple of minutes and the app does not come up, please contact our support team at [support.mendix.com](http://support.mendix.com).
 
 ![](attachments/deploy/appresumed.jpg)
-
 
 ## Node
 

@@ -79,24 +79,23 @@ The node permissions can be:
 
 ### Transport rights
 
-With transport rights you are able to deploy the application to the node. You have access to the environment details and the deployment repository.
+With transport rights you are able to deploy new versions of the application to the node. You can create new deployment packages, stop and start the environment and change the configuration, such as constants and scheduled events.
 
 ### Access to Backups
 
-With this permission you have access to the backups of the node. You can create, download and restore a backup.
+This permission grants access to the backups of the environment. You can view, create, download and restore a backup.
 
 ### Receive Alerts
 
-When "Receives alerts via e-mail" is checked in **Alerts**, this person will receive an e-mail when an alert is triggered. Alerts are triggered when the App went offline unexpected, the Application logged a message on level "Critical" or the health check failed.
+When "Receives alerts via e-mail" is checked in **Alerts**, this person will receive an e-mail when an alert is triggered. Alerts are triggered when the App went offline unexpected, the application logged a message on level "Critical", the health check failed or various infrastructure problems occurred.
 
 ### API Permissions
 
-With this permission you are able to use the deploy API in order to perform the deploy on this environment. 
-If you want to access the backup API, you must also have the **access to backup** permission. 
+With this permission you are able to use the **Deploy API** to get programmatic access to the environment. Naturally the API does not require two factor authentication, so API access is disabled in production by default. The **Technical Contact** can assign API access. Note that the **API Permissions** are needed in addition to the other permissions, so in order to access Backups via the API, you will need both **Access to Backups** and **API Permissions**.
 
 ### Access to Monitoring
 
-With this permission you are able to view the application trends.
+With this permission you are able to view the application metrics, logs and alerts. These allow you to successfully operate your Mendix Cloud environments.
 
 
 # 4 Related Content

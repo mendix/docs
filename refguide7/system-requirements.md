@@ -2,12 +2,12 @@
 title: "System Requirements"
 space: "Mendix 7 Reference Guide"
 category: "General"
+description: "Presents the system requirements for using the Mendix platform."
 ---
-
 
 ## Modeler
 
-The Mendix Modeler supports Windows 7, 8 and 10\. It supports both 32-bit and 64-bit variations, but 64-bit is recommended.
+The Mendix Modeler supports Windows 7, 8, and 10. It supports both 32-bit and 64-bit variations, but 64-bit is recommended.
 
 The following frameworks are automatically installed (if necessary):
 

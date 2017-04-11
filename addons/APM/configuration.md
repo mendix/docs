@@ -4,9 +4,7 @@ space: "Other Add-Ons"
 parent: "user-manual"
 ---
 
-This chapter describes the global configuration and the **Start/Stop** dialog. Both can be selected from the
-header. The header also has a button that opens the documentation and a button that returns you to the home page
-of the app to which the APM tool has been added.
+This chapter describes the global configuration and the **Start/Stop** dialog. Both can be selected from the header. The header also has a button that opens the documentation and a button that returns you to the home page of the app to which the APM tool has been added.
 
 ## After Startup Configuration
 
@@ -30,9 +28,7 @@ The license code goes in the **License key** field. The **Expiry date** field is
 
 ## JDBC
 
-The JDBC settings are for executing queries in the query tool and using the explain plan query in the
-performance tool. Usually these settings are correctly determined during installation and can stay
-unchanged.
+The JDBC settings are for executing queries in the query tool and using the explain plan query in the performance tool. Usually these settings are correctly determined during installation and can stay unchanged.
 
 ![](attachments/Dashboard/Configuration_JDBC.png)                       
 
@@ -42,23 +38,34 @@ The **Explain plan query** is also automatically set during installation. This q
 
 The remaining four options are used in the query tool to determine the output and set a timeout.
 
-## Clean data
+## Clean Data
 
-To quickly remove all the data that is collected by and stored in the APM tool, you can use the buttons on
-the **Clean data** tab:
+To quickly remove all the data that is collected by and stored in the APM tool, you can use the buttons on the **Clean data** tab:
 
 ![](attachments/Dashboard/Configuration_CleanData.png)                       
 
 ## More<a name="more"></a>
-Some other settings are collected on the **More** tab:
+Some other features and settings are collected on the **More** tab:
 
 ![](attachments/Dashboard/Configuration_More.png)                       
 
+### Dashboard
+
 A default measurement graph can be selected for the dashboard.
+
+### Triggered Events
 
 Automatic cleanup for the triggered event data in the measurements tool is configured here.
 
 Also, the default **Triggers notify to** can be configured here.
+
+### Settings
+
+You can do the following:
+
+* Import/export settings
+* Globally set all settings to production, non-production, or custom
+* Recreate sample data
 
 ## Start/Stop
 

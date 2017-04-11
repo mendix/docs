@@ -48,8 +48,7 @@ Trigger actions define what happens when the trigger fires.
  ![](attachments/Triggers/Trigger_Actions.png) 
 
 These are possible trigger actions:
-* **Notify**. You can use `{1}` for the administrator as configured in the global setting
- [More tab](configuration#more).You can use replacement variables like `{1}` in the subject and message. These are described in the **i**nformation icons.
+* **Notify**. You can use `{1}` for the administrator as configured in the global setting [More tab](configuration#more).You can use replacement variables like `{1}` in the subject and message. These are described in the **i**nformation icons.
 * **Create log message**. You can use replacement variables like `{1}` in the message. These are described in the **i**nformation icons.
 * **Create trap message**. You can use replacement variables like `{1}` in the message. These are described in the **i**nformation icons.
 * **Save statistics**. The duration of this snapshot is configured in the global settings. The snapshot will have 10-20 minutes of statistics by default.
@@ -74,8 +73,7 @@ This is to prevent, for example, a large amount of emails when the CPU usage is 
 
 ## Triggered Events
 
-If a trigger fires, a record is created in the triggered events. The events are automatically deleted after a certain amount of days, as 
-configured in the global setting [More tab](configuration#more). 
+If a trigger fires, a record is created in the triggered events. The events are automatically deleted after a certain amount of days, as configured in the global setting [More tab](configuration#more). 
 
 **Remove triggered events after (days)**. If you want to keep an event for future reference, you can keep the event using the keep-button above the triggered event grid.
 

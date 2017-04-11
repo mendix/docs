@@ -42,6 +42,10 @@ module Jekyll
               end
 
               @site.data['dir_index'][dir].push(page);
+
+              if root && root['noindex'] != nil
+                page.data['noindex'] = root['noindex']
+              end
             end
           end
         end

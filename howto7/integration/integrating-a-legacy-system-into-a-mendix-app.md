@@ -12,84 +12,19 @@ Mendix applications frequently need to communicate with existing systems. Whethe
 **This how-to will teach you how to do the following:**
 
 * Assess potential options for integrating an existing system with a Mendix app
-* Import data from a flat file or an Excel file using Mendix App Store modules
 * Integrate with a legacy system using REST
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the [flat & delimited file importer module](https://appstore.home.mendix.com/link/app/429/Erwin-'t-Hoen/Flat-&-delimited-file-import) in the App Store and all prerequisites 
 * Know how to create domain models (for details, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
 * Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Detail Pages](../guis/create-your-first-two-overview-and-detail-pages))
 * Know how to create microflows (for details, see [How to Build Your First Microflow: Hello world!](../logic-business-rules/create-your-first-microflow-hello-world))
-* Save sample data file to your computer for use in this exercise ([SampleFlatfile.txt](attachments/18448737/18582047.txt))
 * Understand the concepts behind REST and web services (for more information, see [Consuming Your First REST Service](http://www.mendix.com/blog/consuming-first-rest-service/) and [How to Consume a Complex Web Service](consume-a-complex-web-service))
     * Creating an exposed REST service on top of your legacy system is beyond the scope of this tutorial; for instructions on how to accomplish this, refer to the configuration of your non-Mendix platform
 
-## 3 Importing Legacy Data Using a Flat File
-
-Consider the following situation: you have a legacy system with valuable data that needs to be translated into Mendix. This system can produce a flat or delimeted extract of data . In this section, you will learn how to use the **Flat & Delimited Import Module** to import this data directly into Mendix. This process can be used for a one-time data transfer or for a regular dump of data from one system to another thanks to the scheduling feature. This approach is especially useful for older data systems that cannot accommodate more modern web service integrations.
-
-To import legacy data using a flat file, follow these steps:
-
-1. Create a Mendix object that matches the data you want to input. For the example provided, this entity is named **Product** has two attributes named **Value 1** and **Value 2**:
-
-    ![](attachments/18448737/18582058.png)
-
-2. By means of the instructions in the Flat & Delimited Importer Module release notes, add the page **FlatFileInterface.InterfaceDefinition_Overview** to your project **Navigation**.
-3. Start the app and navigate to the **Interface Definition Overview** page.
-4. Select **New** to create the interface definition:
-
-    ![](attachments/18448737/18582053.png)
-
-5. Select the product entity from the drop-down menu. If this drop-down menu is empty, then it is likely that the model reflection has not been synced yet. If you do not know how to execute this, see [How to Import Excel Documents](importing-excel-documents).
-
-    ![](attachments/18448737/18582050.png)
-
-6. Fill out the rest of the interface definition as follows:
-
-    ![](attachments/18448737/18582051.png)
-
-    * The **Import directory** is the location where the flat files will be landing
-        * In this example, it has been set to *C://flatfile*
-        * Select a directory for which you have read access
-    * **Text qualifier** is set to **None**, which means the data is encapsulated
-        * In this example that is sufficient, but make sure all the data is properly encapsulated and escaped if using more complex data sources
-7. Click **Save** and the **Columns** section will become visible. Click **New** to add columns.
-8. Add both columns for the **Product** entity. Once completed, it will look like this:
-
-    ![](attachments/18448737/18582049.png)
-
-9. To test the connection, click **Test Execution** on the **InterfaceDefinition_Overview** page:
-
-    ![](attachments/18448737/18582048.png)
-
-10. Data in the sample file will now be imported into your application. The logs for this operation are available in the **Logging** tab of the **InterfaceDefinition_NewEdit** page:
-
-    ![](attachments/18448737/18582046.png)
-
-11. To schedule the regular ingestion of a flat file, you can use the **Scheduling** tab of the **InterfaceDefinition_NewEdit** page:
-
-    ![](attachments/18448737/18582045.png)
-
-    Scheduling your file for regular ingestion will allow you to ingest the files dropped by your legacy system at regular intervals. If the existing system receives data updates during the day and produces a batch export at night, the Mendix app can ingest this file every evening as scheduled and the data will be ready for users the following morning.
-
-### 3.1 Considerations for Extending
-
-These are some considerations for extending: 
-
-* See the wide range of configurable settings
-* Utilize the queuing function to enhance your imports 
-* Documentation for this module is included in the App Store release and can be accessed here:
-
-    ![](attachments/18448737/18582044.png)
-
-### 3.2 Importing Legacy Data Using an Excel File
-
-If your legacy system produces data in an Excel file format, integration can be accomplished using the Excel Imported App Store Module. For detailed instructions on how to import data to Mendix with Excel, see [How to Import Excel Documents](importing-excel-documents).
-
-## 4 Interacting with a Legacy System Using REST
+## 3 Interacting with a Legacy System Using REST
 
 If the legacy system has the ability to expose its data to web services, integration can be accomplished using the Mendix REST module. This technique will allow your to preserve a system of record while accessing data only as you need it.
 
@@ -152,7 +87,7 @@ The above example demonstrates how a Mendix application can quickly integrate da
 
 For further documentation and to see the GitHub project for REST services, see the [Mendix RestServices GitHub page](https://github.com/mendix/RestServices).
 
-## 5 Related Content
+## 4 Related Content
 
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a Simple Web Service](consume-a-simple-web-service)

@@ -91,8 +91,7 @@ List of objects with the following key-value pairs:
 
 ### <a rel="nofollow"></a>Description
 
-Retrieves a specific deployment package that is available for a specific app which the
-authenticated user has access to as a regular user. This package can be found if you click Details on an app in the "Nodes overview" screen in the Mendix Platform.
+Retrieves a specific deployment package that is available for a specific app which the authenticated user has access to as a regular user. This package can be found if you click Details on an app in the "Nodes overview" screen in the Mendix Platform.
 
 ```java
 HTTP Method: GET

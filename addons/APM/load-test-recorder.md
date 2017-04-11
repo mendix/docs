@@ -7,9 +7,7 @@ The load test recorder is a recorder for sessions to be used in a separate tool.
 special permissions. Mansystems has a load test tool that can be used in projects by our consultants. 
 The load test tool is NOT INCLUDED in the APM Tool!
 
-The APM Tool includes the load test session recorder, so APM Tool users do not need to do a deployment to have
-Mansystems execute a load test.Load test customers will need the APM Tool for measurements 
- and hence also benefit from the combination. 
+The APM Tool includes the load test session recorder, so APM Tool users do not need to do a deployment to have Mansystems execute a load test.Load test customers will need the APM Tool for measurements  and hence also benefit from the combination. 
 
 ## Load Test Recorder
 

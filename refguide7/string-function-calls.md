@@ -2,6 +2,7 @@
 title: "String function calls"
 space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
+description: "Describes the functions for converting and inspecting strings in Mendix."
 ---
 
 These are functions to convert and inspect [strings](data-types). Note that these functions never change the string itself, they only return a new value.

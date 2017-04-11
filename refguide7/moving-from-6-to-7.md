@@ -2,9 +2,10 @@
 title: "Moving from 6 to 7"
 space: "Mendix 7 Reference Guide"
 category: "General"
+description: "Provides details on updating your project from Mendix 6 to Mendix 7, including sections on converting your project and deprecated features."
 ---
 
-Please read the [Release Notes](/releasenotes/desktop-modeler/7.0) to see what new major improvements we added in Mendix 7.
+Please read the [Release Notes](/releasenotes/desktop-modeler/7.0) for details about the new major improvements we added in Mendix 7.
 
 This documentation aims to help you to update your project from Mendix 6 to Mendix 7. It contains the following topics:
 

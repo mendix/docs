@@ -2188,10 +2188,6 @@ module.exports = {
       to: "/howtogeneral/mendixcloud/custom-domains"
     },
     {
-      from: "/mendixcloud/Deploying+to+a+Free+App",
-      to: "/howtogeneral/mendixcloud/deploying-to-a-free-app"
-    },
-    {
       from: "/mendixcloud/Deploying+to+the+cloud",
       to: "/howtogeneral/mendixcloud/deploying-to-the-cloud"
     },

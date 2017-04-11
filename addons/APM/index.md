@@ -25,8 +25,7 @@ APM is the monitoring and management of performance and availability of software
 APM strives to detect and diagnose application performance problems to maintain an expected level of service.
 APM is the translation of IT metrics into business meaning (value).
 
-Of course you need the basic infrastructure probes to measure hardware parts like the CPU, memory and
-disk, as well as components like the database and the web server. However, for higher quality support you should also look at the application and how it is performing, especially linking this to the user’s business perspective.
+Of course you need the basic infrastructure probes to measure hardware parts like the CPU, memory and disk, as well as components like the database and the web server. However, for higher quality support you should also look at the application and how it is performing, especially linking this to the user’s business perspective.
 
 We all know software contains bugs, and of course we all test before we bring something into production. For users, an error is a sign that the application is not functioning. If the error appears unexpected, the user loses trust in the system. The standard reaction of support was always to ask questions, including whether the customer can reproduce the issue, to turn on logging and to ask for a database dump, so support can investigate the issue in a safe environment.
 
@@ -50,8 +49,7 @@ This is the statistics tool (for load balanced environments you see the server w
 
 When support wants to investigate a performance issue, either proactively through the statistics tool or reactively when a customer reports an issue, they use the APM Performance tool. With it they can see the duration of the steps in the microflow on the action level. They can drill down to see individual SQL statements. They can even ask the database for an explain plan that tells you how the database processes the query, which indexes it uses, and more. This tool quickly helps to pinpoint the issue.
 
-This is the call tree, which provides an overview of what happens, showing the called microflows and one iteration
-of a loop, filtered by duration:
+This is the call tree, which provides an overview of what happens, showing the called microflows and one iteration of a loop, filtered by duration:
 
 ![](attachments/Introduction/Performance_Tool_Tree_View.png)
 

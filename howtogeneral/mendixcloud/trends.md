@@ -88,7 +88,7 @@ Mendix 4.0 introduced Non-Persistent Entities which live in the JVM memory and a
 
 ## 4 Database Statistics
 
-The database statistics the amount of database queries and mutations, as well as the total size of the database.
+The database statistics show the amount of database queries and mutations, as well as the total size of the database.
 
 ### <a name="Trends-dbpgstatdatabaseVERSIONmain"></a>4.1 Mutations
 

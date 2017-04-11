@@ -15,7 +15,7 @@ This how-to describes the process of upgrading your Free App to a Licensed App.
 
 # 1 Preparation
 
-Before starting with this how-to, please make sure you have completed the following prerequisites.
+Before starting this how-to, make sure you have completed the following prerequisites:
 
 *   You have a Free App (Mendix version 5.18 and up)
 *   An available Licensed Cloud Node. To request a licensed cloud node, contact your Customer Success Manager (CSM)
@@ -40,7 +40,7 @@ Follow the instructions from paragraph **2.1 Method 1** of the [How to Connect y
 
 <div class="alert alert-info">{% markdown %}
 
-If you have just unlinked your Free App from a Sanbox, you only have to refresh the page and follow the steps 4 and 5 of the documentation about How to Unlink Your Free App from a Sandbox Environment.
+If you have just unlinked your Free App from a Sanbox, you only have to refresh the page and follow the steps 4 and 5 of the documentation about [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox).
 
 {% endmarkdown %}</div>
 

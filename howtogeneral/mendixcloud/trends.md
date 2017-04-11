@@ -44,7 +44,7 @@ You can find the trends by following these steps:
 
 ## 3 Application Statistics
 
-{Introduction}
+These graphs show various application specific metrics, such as the number of HTTP requests, database queries, user sessions as well as JVM memory statistics.
 
 ### <a name="Trends-appmxruntimerequests"></a>3.1 Number of Handled External Requests
 
@@ -88,7 +88,7 @@ Mendix 4.0 introduced Non-Persistent Entities which live in the JVM memory and a
 
 ## 4 Database Statistics
 
-{Introduction}
+The database statistics the amount of database queries and mutations, as well as the total size of the database.
 
 ### <a name="Trends-dbpgstatdatabaseVERSIONmain"></a>4.1 Mutations
 
@@ -100,7 +100,7 @@ This database size graph shows the distribution between disk space used for stor
 
 ### 4.3 Application Node
 
-{Introduction}
+These are infrastructure level metrics with regards to the application node.
 
 #### <a name="Trends-appcpu"></a>4.3.1 CPU
 
@@ -114,7 +114,7 @@ The memory graph shows the distribution of operating system memory that is avail
 
 ### 4.4 Database Node
 
-{Introduction}
+These are infrastructure level metrics with regards to the database node.
 
 #### <a name="Trends-dbcpu"></a>4.4.1 CPU
 
@@ -134,7 +134,7 @@ The database connections graph shows the number of connections to the PostgreSQL
 
 ## <a name="Trends-dbdiskstatsiops"></a>5 Both Application and Database Node
 
-{Introduction}
+The following infrastructure metrics are available for both the application node and the database node.
 
 ### <a name="Trends-appdiskstatsiops"></a>5.1 Disk IOPS
 

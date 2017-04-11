@@ -168,4 +168,3 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 *   [Monitoring application health](monitoring-application-health)
 *   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
 *   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)
-*   [Deploying to a Free App](deploying-to-a-free-app)

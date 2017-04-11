@@ -1,5 +1,5 @@
 ---
-title: "Company Admin - Apps"
+title: "Apps"
 space: "Developer Portal"
 category: "Company Admin"
 description: "This page describes the options available to company administrators in a Mendix app."
@@ -30,6 +30,6 @@ For more informartion about user roles, refer to [Roles and Permissions](setup-r
 ## 4 Related Content
 
 * [Company Admin](index)
-* [Company Admin - Company](company)
-* [Company Admin - Users](nodes)
-* [Company Admin - Nodes](nodes)
+* [Company](company)
+* [Users](nodes)
+* [Nodes](nodes)

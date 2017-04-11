@@ -1,5 +1,5 @@
 ---
-title: "Company Admin - Users"
+title: "Users"
 space: "Developer Portal"
 category: "Company Admin"
 description: "Developer Portal Users"
@@ -40,6 +40,6 @@ A Company Admin can view all changes made in the company at the **Security Histo
 ## 5 Related Content
 
 * [Company Admin](index)
-* [Company Admin - Company](company)
-* [Company Admin - Apps](apps)
-* [Company Admin - Nodes](nodes)
+* [Company](company)
+* [Apps](apps)
+* [Nodes](nodes)

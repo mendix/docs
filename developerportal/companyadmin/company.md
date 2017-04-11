@@ -1,5 +1,5 @@
 ---
-title: "Company Admin - Company"
+title: "Company"
 space: "Developer Portal"
 category: "Company Admin"
 description: "The Company section in the Company Admin category lets Company Admins manage a company's details."
@@ -51,6 +51,6 @@ To see the current background image of your own company, go to the **Mendix Laun
 ## 4 Related Content
 
 * [Company Admin](index)
-* [Company Admin - Users](nodes)
-* [Company Admin - Apps](apps)
-* [Company Admin - Nodes](nodes)
+* [Users](nodes)
+* [Apps](apps)
+* [Nodes](nodes)

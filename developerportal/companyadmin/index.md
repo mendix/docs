@@ -73,7 +73,7 @@ A Company Admin can change the **Company settings** by following these steps:
 
 ## Documents in This Category
 
-* [Company Admin - Company](company)
-* [Company Admin - Users](users)
-* [Company Admin - Apps](apps)
-* [Company Admin - Nodes](nodes)
+* [Company](company)
+* [Users](users)
+* [Apps](apps)
+* [Nodes](nodes)

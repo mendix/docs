@@ -20,9 +20,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 *   You have licensed cloud node
 
 
-## 3 Creating a Backup
+## 3 Create a Backup
 
-To create a backup of a licensed app, follow these steps:
+Follow these steps to create a backup of a licensed app:
 
 1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps** and select **Nodes**.

@@ -8,7 +8,7 @@ tags: "[Add a maximum of 5-7 tags/keywords; keep them focused on the most import
 
 # 1 Introduction
 
-To manage the node of your application, you need access to specific security settings. Only the technical contact is able to grand the team members the permissions to access the node configurations. 
+Access Management for your Mendix Cloud environments is handled in the **Node Security** tab. Each team member can subscribe or unsubscribe to the alerts, and the **Technical Contact** can manage the permissions of each team member.
 
 <div class="alert alert-info">{% markdown %}
 

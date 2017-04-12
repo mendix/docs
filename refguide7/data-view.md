@@ -22,25 +22,7 @@ The data view contents area is the place where all the layout and input widgets 
 
 ### Data view footer
 
-<div class="alert alert-info">{% markdown %}
-
-Added in version 6.7.0.
-
-{% endmarkdown %}</div>
-
 The footer of the data view is the section at the bottom of the data view which often contains buttons to confirm or cancel the page. However, arbitrary widgets are allowed. The footer will stick to the bottom if the data view is the only top-level widget.
-
-### Data view control bar
-
-<div class="alert alert-info">{% markdown %}
-
-The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. See [Data view footer](data-view).
-
-{% endmarkdown %}</div>
-
-The control bar of the data view is the bar with buttons at the bottom of the component. By default, it contains a Save and a Cancel button but the bar can be customized. A read-only data view would typically provide only a Close button. You can add buttons with custom behavior through the use of a microflow button.
-
-See [Data view control bar](data-view-control-bar) for a description of the buttons and their properties.
 
 ## Common properties
 
@@ -68,41 +50,9 @@ If the form orientation is set to horizontal this property can be used to specif
 
 _Default value:_ 3
 
-### Close on Save/Cancel
-
-<div class="alert alert-info">{% markdown %}
-
-This property is removed in version 6.7.0\. Use the 'Close page' property of the [Create button](new-button) instead.
-
-{% endmarkdown %}</div>
-
-Using this property you can specify whether you want the current page to be closed when the Save or Cancel button is clicked. After closing the current page, the client will return to the previous screen. This property only has effect for data views that are shown in the content pane (as opposed to in a popup).
-
-For example, you have a data grid with customers and the edit button of the grid directs you to a data view in content showing the details of one customer. After clicking Save or Cancel you want the application to return to the page of the grid. In this case you want the property 'Close on Save/Cancel' to be true.
-
-_Default value_: True
-
 ### Show footer
 
-<div class="alert alert-info">{% markdown %}
-
-Added in version 6.7.0.
-
-{% endmarkdown %}</div>
-
 With this property you can specify whether you want the footer of the data view to be visible. The footer of nested data views is invisible by default regardless of the value of this property.
-
-_Default value:_ True
-
-### Show control bar
-
-<div class="alert alert-info">{% markdown %}
-
-The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. Use the [Show footer property](data-view) instead.
-
-{% endmarkdown %}</div>
-
-With this property you can specify whether you want the control bar of the data view to be visible. The control bar of nested data views is invisible by default regardless of the value of this property.
 
 _Default value:_ True
 

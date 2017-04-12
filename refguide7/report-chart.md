@@ -6,7 +6,7 @@ parent: "report-widgets"
 
 <div class="alert alert-info">{% markdown %}
 
-This has been deprecated in version 6.10.0 and is marked for removal in version 8.0.0.
+This widget been deprecated in version 6.10.0 and is marked for removal in version 8.0.0.
 
 {% endmarkdown %}</div>
 

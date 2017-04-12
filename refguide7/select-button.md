@@ -27,8 +27,4 @@ The select button confirms the choice of a row of a grid when it is used for sel
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
-Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
-
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

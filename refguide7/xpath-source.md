@@ -9,8 +9,7 @@ If database is selected as the data source for a widget then the object or objec
 
 1.  The access rules defined in the security section of the project.
 2.  The XPath constraint supplied in the widgets settings.
-3.  Objects already in context as defined by the [context mechanism](context-mechanism), if the apply context setting is set to true.
-4.  An association, if the widget is nested in another data widget and the data path described runs over an association.
+3.  An association, if the widget is nested in another data widget and the data path described runs over an association.
 
 <div class="alert alert-success">{% markdown %}
 
@@ -76,25 +75,3 @@ The [XPath constraint](xpath-constraints) allows for custom, hard-coded limitati
 XPath constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to shield a particular subset of the data from users then [entity access rules](access-rules) are superior in that they can be tailored to each individual user role and that they apply system-wide.
 
 {% endmarkdown %}</div>
-
-### Apply context
-
-The property 'Apply context' indicates whether the [context mechanism](context-mechanism) will be used to constrain the list of objects in the grid.
-
-<div class="alert alert-success">{% markdown %}
-
-The apply context setting has the disadvantage of being implicit: the effects of the constraint are not immediately visible in the modeler. Context can also be implemented explicitly by nesting the data widget in, for example, a data view. The widget can then by filled over an association. This can greatly increase the transparency of the functionality described in the modeler.
-
-{% endmarkdown %}</div>
-
-_Default value_: False
-
-Apply context is deprecated in version 5.19.0 in favor of the more explicit [XPath constraints](xpath-constraints).
-
-### Remove from context
-
-Using this property you can remove objects from the context. If you remove objects of a certain entity from the context they will not be used to constrain the list of objects, nor will references to that entity automatically be set when using a standard **Create** button.
-
-See [Context Mechanism](context-mechanism).
-
-Apply context is deprecated in version 5.19.0 in favor of the more explicit [XPath constraints](xpath-constraints).

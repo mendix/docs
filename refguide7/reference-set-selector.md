@@ -23,7 +23,7 @@ The reference set selector looks a lot like a [data grid](data-grid) and consequ
 
 The **Add** and **Remove** buttons mean something else than the **New** and **Delete** buttons that are used by default in the data grid:
 
-*   The **Add** button adds a reference to an existing object. The **Create** button, on the other hand, creates a new object and does not add references. (The [context mechanism](context-mechanism) may automatically set references but that is a story for another time.)
+*   The **Add** button adds a reference to an existing object. The **Create** button, on the other hand, creates a new object and does not add references.
 *   The **Delete** button actually deletes an object for good, whereas the **Remove** button simply removes the reference to the object and leaves the object itself intact.
 
 {% endmarkdown %}</div>
@@ -149,14 +149,6 @@ The selectable objects are determined in the same way as in the reference select
 See [Selectable Objects Properties](reference-selector) of the reference selector.
 
 ### Constrained by
-
-See [Selectable Objects Properties](reference-selector) of the reference selector.
-
-### Apply context
-
-See [Selectable Objects Properties](reference-selector) of the reference selector.
-
-### Remove from context
 
 See [Selectable Objects Properties](reference-selector) of the reference selector.
 

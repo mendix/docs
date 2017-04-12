@@ -110,7 +110,13 @@ See the corresponding data source for specific properties:
 
 ### Use schema
 
-This defines whether only the required attributes and associations for the object(s) are retrieved. This can sometimes improve your performance but it can also reduce performance because the objects can not be cached entirely. If you have custom widgets in your page and they need access to other attributes or associations, or if your next page contains other attributes or associations of the same object(s) you should not enable this. This is why the default value is false.
+<div class="alert alert-info">{% markdown %}
+
+This property has been deprecated in version 7.2.0 and is marked for removal in version 8.0.0.
+
+{% endmarkdown %}</div>
+
+Curently this has no effect.
 
 ## Visibility properties
 

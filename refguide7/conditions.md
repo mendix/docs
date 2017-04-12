@@ -16,17 +16,18 @@ The following elements support conditional visibility or editability:
 
 There are three kinds of conditions:
 
-*   The value of an attribute of the enclosing data view. The attribute must be of type boolean or enumeration. For each value you specify whether the element is visible/editable. Upon entering the page and upon changing the condition attribute the conditions will be applied.
+*   The value of an attribute of the enclosing data container. The attribute must be of type boolean or enumeration. For each value you specify whether the element is visible/editable. Upon entering the page and upon changing the condition attribute the conditions will be applied.
+*   Based on an [expression](microflow-expressions). The expression must evaluate to a value of type boolean. The element is visible/editable when the expression evaluates to `true`.
 *   Module roles. For each module you specify whether the element is visible or not.
 *   Ignore security. Buttons are automatically hidden if security would prevent the user from executing the action. You can ignore this and show the button anyway. This is useful for application with anonymous users. Clicking a button for which you do not have the rights will then trigger a sign in page.
 
 Module role conditions can only be used for visibility of table rows and tab pages. They cannot be used to make an input widget read-only or to hide buttons. To make an input widget conditionally editable based on roles, use security to give roles read/write access to attributes. For example, by not giving a role write access to an attribute the corresponding input widget will automatically turn read-only (i.e. not editable). To hide a button based on roles configure security of the underlying page or action. For example, by not giving a role create access 'New' buttons will be hidden.
 
-## Attribute
+## Context
 
-### Make element conditionally visible/editable based on attribute value
+### Show/enable element based on attribute value
 
-By checking this box the visibility or editability becomes conditional based on the attribute that is selected.
+By selecting this option the visibility or editability becomes conditional based on the value of the attribute that is selected.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -34,19 +35,27 @@ Let us say you have a boolean indicating whether a person wants to receive e-mai
 
 {% endmarkdown %}</div>
 
-### Attribute
+#### Attribute
 
 This is the attribute on which the conditions are based. The attribute must be of type boolean or enumeration.
 
-### Conditions
+#### Conditions
 
 For each value of the attribute you can specify whether the element is editable/visible.
 
-## Modules roles (only for table rows and tab pages)
+### Show/enable element based on expression
 
-### Make tab page/table row conditionally visible based on module roles
+By selecting this option the visibility or editability becomes conditional based on whether the enetered [expression](microflow-expressions) evaluates to `true` or `false`.
 
-By checking this box the visibility becomes conditional based on the module roles of the user that is signed in.
+The expression result must be of type boolean. The expression might use the obejct of the enclosing data container available as a `$currentObject` variable.
+
+Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
+
+## Modules roles
+
+### Show/enable element for selected module roles
+
+By selecting this option the visibility or editability becomes conditional based on the module roles of the user that is signed in.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -54,7 +63,7 @@ Let us say you have a page that has a tab page containing current orders of a cu
 
 {% endmarkdown %}</div>
 
-### Conditions
+#### Conditions
 
 For each module role you can specify whether the table row or tab page is visible or not.
 
@@ -64,23 +73,14 @@ Do not rely on hiding tab pages and table rows for security! Also use domain mod
 
 {% endmarkdown %}</div>
 
-## Ignore security (only for buttons)
+### Show/enable element for all module roles (only for some widgets)
 
-### Show the button even if security says it should be hidden
+Widgets triggering actions, e.g. action buttons, are automatically hidden if security would prevent the user from executing the action. You can overwrite this rule and show the widget anyway. This is useful for application with anonymous users. Clicking a button for which you do not have the rights will then trigger a sign in page. In the table below you can see what rights you need to have for the action to be accessible in the normal case.
 
-Buttons are automatically hidden if security would prevent the user from executing the action. You can ignore this and show the button anyway. This is useful for application with anonymous users. Clicking a button for which you do not have the rights will then trigger a sign in page. In the table below you can see what rights you need to have for the button to be visible in the normal case.
-
-| Button type | Necessary rights |
+| Action/widget type | Necessary rights |
 | --- | --- |
-| Microflow button | Execute the microflow. |
+| Call microflow action | Execute the microflow. |
+| Show page action | Open the page. |
 | Create button | Create objects and open the page. |
 | Edit button | Open the page. |
 | Delete button | Delete objects. |
-
-The visibility settings are visualized on the button.
-
-| Icon | Meaning |
-| --- | --- |
-| None | The visibility follows the default rules: buttons are hidden if security dictates this. |
-| ![](attachments/16713832/16843963.png) | The button is visible even if security settings would normally hide it. It can still be conditionally visible based on an attribute. This is not visualized separatedly. |
-| ![](attachments/16713832/16843962.png) | The button's visibility is based on the value of an attribute. |

@@ -46,9 +46,21 @@ The 'Microflow' parameter type allows users of Java Actions to pass a microflow 
 
 The 'Import mapping' parameter type allows users of Java Actions to pass an import mapping into a Java Action. In the generated Java Action template code, this type is represented as a string (the name of the import mapping).
 
+<div class="alert alert-info">{% markdown %}
+
+The 'Import mapping' parameter type was introduced in version 7.2.0.
+
+{% endmarkdown %}</div>
+
 #### Export Mapping Type
 
 The 'Export mapping' parameter type allows users of Java Actions to pass an export mapping into a Java Action. In the generated Java Action template code, this type is represented as a string (the name of the export mapping).
+
+<div class="alert alert-info">{% markdown %}
+
+The 'Export mapping' parameter type was introduced in version 7.2.0.
+
+{% endmarkdown %}</div>
 
 #### Return Type
 

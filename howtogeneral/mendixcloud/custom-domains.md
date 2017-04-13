@@ -10,7 +10,7 @@ description: "Describes how to configure custom domains as well as generate, upl
 When your Mendix App needs to be accessible via your own URL, for example https://myapp.mycompany.com/, you have to provide a Custom Domain Certificate (a SSL/TLS Certificate) so we can keep serving your Mendix App via a secure connection. 
 This option is only available for licensed apps.
 
-**After completing this how-to you will know:**
+**This how-to will teach you how to do the following:**
 
 *   How to generate a Certificate Request for your Custom Domain
 *   How to upload a Custom Domain Certificate to the Mendix Cloud Platform
@@ -19,7 +19,7 @@ This option is only available for licensed apps.
 
 ## 2 Prerequisites
 
-**Before you start configuring Custom Domains we assume:**
+Before starting this how-to, make sure you have completed the following prerequisites:
 
 *   You have basic knowledge about DNS
 *   You have basic knowledge about SSL/TLS certificates
@@ -29,7 +29,8 @@ This option is only available for licensed apps.
     *   You know what a "Certificate Request" is and what it is used for
 *   You have basic knowledge about Certificate Authorities (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, Comodo)
 
-### 2.1 Preparation
+
+### 2.1 Domain Registrar / DNS provider
 
 Before configuring your Custom Domain in the Mendix Cloud Platform you will need to configure a DNS record for your Custom Domain at your Domain Registrar / DNS provider.
 

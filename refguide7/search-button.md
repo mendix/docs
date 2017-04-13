@@ -4,16 +4,15 @@ space: "Mendix 7 Reference Guide"
 parent: "control-bar"
 ---
 
-
 The search button toggles the search bar on and off. It is only present if the 'Show search bar' property of the grid is either 'With button (initially open)' or 'With button (initially closed)'.
 
-## Common properties
+## Common Properties
 
 {% snippet Class+Property.md %}
 
 {% snippet Style+Property.md %}
 
-## General properties
+## General Properties
 
 {% snippet Caption+Property.md %}
 
@@ -25,6 +24,6 @@ The search button toggles the search bar on and off. It is only present if the '
 
 {% snippet Is+default+button+Property.md %}
 
-## Visibility properties
+## Visibility Properties
 
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

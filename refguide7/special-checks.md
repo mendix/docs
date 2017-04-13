@@ -4,8 +4,7 @@ space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 ---
 
-
-## Checking for an empty object
+## Checking for an Empty Object
 
 ### Input
 
@@ -27,7 +26,7 @@ Assuming $object1 is a domain entity and that currently exists, this statement w
 
 The same holds for when $object1 is a variable (such as Integer, String etc).
 
-## Checking for an empty object member
+## Checking for an Empty Object Member
 
 ### Input
 
@@ -52,7 +51,7 @@ Assuming $object1 is an domain entity and that it has a member called 'member1',
 | $object1 has a value | false | true |
 | $object1 has no value | N/A | true |
 
-## Checking whether an object is new
+## Checking Whether an Object Is New
 
 ### Input
 
@@ -70,13 +69,13 @@ Type: Boolean.
 isNew($object1)
 ```
 
-## Checking whether an object is synced
+## Checking Whether an Object Is Synced
 
 <div class="alert alert-info">{% markdown %}
 
 This function is available only in expressions for [conditional visibility or editability](conditions), as only they are evaluated client-side.
 
-Added in Mendix 7.1.
+This was added in Mendix 7.1.
 
 {% endmarkdown %}</div>
 
@@ -88,7 +87,7 @@ Type: Any type of object.
 
 ### Output
 
-Returns whether the changes done to the object [offline](offline) have been synchronized to the runtime database. In web profiles and [hybrid profiles](hybrid-phone-profile) without offline support always returns `true`.
+Returns whether the changes done to the object [offline](offline) have been synchronized to the runtime database. In web profiles and [hybrid profiles](hybrid-phone-profile) without offline support, this always returns `true`.
 
 Type: Boolean.
 

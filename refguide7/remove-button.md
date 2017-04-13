@@ -4,16 +4,15 @@ space: "Mendix 7 Reference Guide"
 parent: "control-bar"
 ---
 
-
 The remove button is a button specifically made for the reference set selector. With this button the end-user can remove objects that have been added to the reference set selector.
 
-## Common properties
+## Common Properties
 
 {% snippet Class+Property.md %}
 
 {% snippet Style+Property.md %}
 
-## General properties
+## General Properties
 
 {% snippet Caption+Property.md %}
 
@@ -25,6 +24,6 @@ The remove button is a button specifically made for the reference set selector. 
 
 {% snippet Is+default+button+Property.md %}
 
-## Visibility properties
+## Visibility Properties
 
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

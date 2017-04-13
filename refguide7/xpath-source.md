@@ -19,11 +19,11 @@ Use access rules whenever possible to limit data in data grids. This way you kno
 
 ## Components
 
-### Search bar
+### Search Bar
 
 See [Search Bar](search-bar).
 
-### Sort bar
+### Sort Bar
 
 See [Sort Bar](sort-bar).
 
@@ -47,7 +47,7 @@ The data view shown contains a single country. The data grid nested inside will 
 
 {% endmarkdown %}</div>
 
-### Show search bar
+### Show Search Bar
 
 With this property you can influence if and when a search bar is shown.
 
@@ -60,13 +60,13 @@ With this property you can influence if and when a search bar is shown.
 
 _Default value:_ With button (initially closed)
 
-### Wait for search
+### Wait for Search
 
 If set to true, the grid will remain empty of contents until a search has been performed. This can be useful if the target entity contains an extremely large set of objects but most mutations only require a subset of the data. Waiting for search will ensure that no database query is performed until the desired subset is specified, thus skipping the initial loading period associated with major data retrievals.
 
 _Default value:_ false
 
-### XPath constraint
+### XPath Constraint
 
 The [XPath constraint](xpath-constraints) allows for custom, hard-coded limitations on the data displayed. This constraint will be appended to the constraints (if any) already applied through security and context.
 

@@ -37,7 +37,7 @@ Module role conditions can only be used for the visibility of table rows and tab
 
 ## 2 Context
 
-### 2.1 Showing and Enabling an Element Based on an Attribute Value
+### 2.1 Show/Enable Element Based on Attribute Value
 
 By selecting this option, visibility or editability becomes conditional based on the value of the attribute that is selected.
 
@@ -51,7 +51,7 @@ This is the attribute on which the conditions are based. The attribute must be o
 
 For each value of the attribute, you can specify whether the element is editable or visible.
 
-### 2.2 Showing and Enabling an Element Based on an Expression
+### 2.2 Show/Enable Element Based on Expression
 
 By selecting this option, visibility or editability becomes conditional based on whether the enetered [microflow expression](microflow-expressions) evaluates to `true` or `false`.
 
@@ -65,7 +65,7 @@ The expression is evaluated in the browser, so we advise against using "secret" 
 
 ## 3 Modules Roles
 
-### 3.1 Showing and Enabling an Element for Selected Module Roles
+### 3.1 Show/Enable Element for Selected Module Roles
 
 By selecting this option, visibility or editability becomes conditional based on the module roles of the user who is signed in.
 
@@ -81,9 +81,7 @@ Do not rely on hiding tab pages and table rows for security! Also, use domain mo
 
 {% endmarkdown %}</div>
 
-### 3.2 Showing and Enabling an Element for All Module Roles 
-
-This only applies to certain widgets.
+### 3.2 Show/Enable Element for All Module Roles (for Some Widgets)
 
 Widgets triggering actions (for example, action buttons) are automatically hidden if security prevents the user from executing the action. You can overwrite this rule and show the widget anyway, which is useful for an app that has anonymous users. Clicking a button for which you do not have the rights will then trigger a sign-in page.
 

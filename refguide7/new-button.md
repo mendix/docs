@@ -1,13 +1,12 @@
 ---
-title: "Create button"
+title: "Create Button"
 space: "Mendix 7 Reference Guide"
 parent: "button-widgets"
 ---
 
-
 When the user presses the **Create** button, the Mendix application will create a new object and open a page to edit the new object.
 
-## Button properties
+## Button Properties
 
 {% snippet Caption+Property.md %}
 
@@ -19,7 +18,7 @@ When the user presses the **Create** button, the Mendix application will create 
 
 {% snippet Button+Style+Property.md %}
 
-## Common properties
+## Common Properties
 
 {% snippet Name+Property.md %}
 
@@ -29,7 +28,7 @@ When the user presses the **Create** button, the Mendix application will create 
 
 {% snippet Tab+index+Property.md %}
 
-## General properties
+## General Properties
 
 ### Page
 
@@ -37,10 +36,10 @@ This property specifies the page that is opened when the end user presses this b
 
 See [Opening Pages](opening-pages).
 
-### Entity (path)
+### Entity (Path)
 
 Specifies which type of object will be created when the button is clicked. It is possible to create an object which has an association to an object in an enclosing data view or to the object passed as the caller of the page. The association will be set automatically when the new object is created. Only one to one or one to many associations are supported.
 
-## Visibility properties
+## Visibility Properties
 
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

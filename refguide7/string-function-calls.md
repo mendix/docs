@@ -349,7 +349,7 @@ Checks to see if a string matches a given regular expression.
 
 <div class="alert alert-warning">{% markdown %}
 
-Please note that this function call uses a Java regular expression. For more information about regular expressions in Java, see [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html).
+Please note that this function call uses a regular expression language provided by the current platform: when used inside [microflows] - Java's regular expressions (see [documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)); when used inside [conditional formatting](conditions) - JavaScript's regular expressions (see [guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)).
 
 {% endmarkdown %}</div>
 
@@ -391,7 +391,7 @@ Replaces all occurrences of a regular expression with another string.
 
 <div class="alert alert-warning">{% markdown %}
 
-Please note that this function call uses a Java regular expression. For more information about regular expressions in Java, see [this page](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)   .
+Please note that this function call uses a regular expression language provided by the current platform: when used inside [microflows] - Java's regular expressions (see [documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)); when used inside [conditional formatting](conditions) - JavaScript's regular expressions (see [guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)).
 
 {% endmarkdown %}</div>
 
@@ -438,7 +438,7 @@ Replaces the first occurrence of the regular expression with a replacement strin
 
 <div class="alert alert-warning">{% markdown %}
 
-Please note that this function call uses a Java regular expression. For more information about regular expressions in Java, see [this page](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)   .
+Please note that this function call uses a regular expression language provided by the current platform: when used inside [microflows] - Java's regular expressions (see [documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)); when used inside [conditional formatting](conditions) - JavaScript's regular expressions (see [guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)).
 
 {% endmarkdown %}</div>
 

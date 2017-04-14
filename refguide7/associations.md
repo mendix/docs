@@ -89,8 +89,6 @@ This property defines whether an association has one or two owners. If there is 
 
 _Default value:_ Default
 
-<div class="alert alert-info">{% markdown %}
-
 Drawing an association from entity Order to entity Customer results in the following:
 ![](attachments/819203/918217.png)
 
@@ -112,8 +110,6 @@ In XML instances of these entities and their association look as follows. Note t
 </Customer>
 
 ```
-
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
 
 A many-to-many association with default ownership is created by drawing an association and then setting the 'Type' property to 'Reference set'.
 
@@ -140,8 +136,6 @@ In XML instances of these entities and their association look as follows. Note t
 
 ```
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
-
 A one-to-one association is created by setting the owner property to both (while leaving the type property at its default value 'Reference').
 
 In this example a customer can have one profile and a profile can have one customer:
@@ -165,9 +159,6 @@ In XML instances of these entities and their association look as follows. Note t
 </Customer>
 
 ```
-
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
-
 A many-to-many association where both entities are owners is created by setting the owner property to both and the type property to 'Reference set'.
 
 In this example an accountant can have multiple groups and a group can have multiple accountants:
@@ -200,5 +191,3 @@ In XML instances of these entities and their association look as follows. Note t
 </Group>
 
 ```
-
-{% endmarkdown %}</div>

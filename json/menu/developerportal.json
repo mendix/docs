@@ -6,5 +6,5 @@ sitemap: false
   "categories": [
     "Company Admin"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="addons" %}
+  "pages": {% include json-snippets/get_pages.inc dir="developerportal" %}
 }

@@ -1,7 +1,6 @@
 ---
 title: "Company Admin"
 space: "Developer Portal"
-category: "Company Admin"
 description: "This page describes the options available to company administrators in a Mendix app."
 tags: ["Company","Admin","Developer Portal"]
 ---

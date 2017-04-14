@@ -132,6 +132,12 @@ defaults:
     values:
       menus:
         - "howtogeneral"
+  - scope:
+      path: 'developerportal'
+      type: pages
+    values:
+      menus:
+        - 'developerportal'
 
 ####################################
 

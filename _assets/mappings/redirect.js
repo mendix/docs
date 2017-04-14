@@ -7045,10 +7045,6 @@ module.exports = {
       "to": "/refguide7/container-widgets"
     },
     {
-      "from": "/refguide7/Context+Mechanism",
-      "to": "/refguide7/context-mechanism"
-    },
-    {
       "from": "/refguide7/Continue+Event",
       "to": "/refguide7/continue-event"
     },
@@ -7335,10 +7331,6 @@ module.exports = {
     {
       "from": "/refguide7/Grid+action+button",
       "to": "/refguide7/grid-action-button"
-    },
-    {
-      "from": "/refguide7/Grid+microflow+button",
-      "to": "/refguide7/grid-microflow-button"
     },
     {
       "from": "/refguide7/Grid+New+Button",

@@ -13,7 +13,7 @@ Every company that uses Mendix can set up specific settings for apps, teams, and
 To see the **Company Admin** settings you need to:
 
 *   Have a **MxID**. To create a MxID, click [here](https://www.mendix.com/try-now/).
-*   Be a **Company Admin**. You can request information about the current Company Admin at [Mendix Support](www.support.mendix.com).
+*   Be a **Company Admin**. You can request information about the current Company Admin at [Mendix Support](https://www.support.mendix.com).
 
 <div class="alert alert-info">{% markdown %}
 

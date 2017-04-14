@@ -25,8 +25,6 @@ A Company Admin can manage the following items at the **Apps** tab:
 
 A Company Admin can edit user roles and add new user roles at the **Roles** tab.
 
-For more informartion about user roles, refer to [Roles and Permissions](setup-roles-permissions).
-
 ## 4 Related Content
 
 * [Company Admin](index)

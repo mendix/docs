@@ -13,7 +13,7 @@ Strings are surrounded by quotes. If the string contains a quote, it should be e
 
 Converts all characters in the string to lowercase.
 
-### Input parameters
+### Input Parameters
 
 * String to convert
 * Type: String
@@ -36,7 +36,7 @@ returns:
 
 Converts all characters in the string to uppercase.
 
-### Input parameters
+### Input Parameters
 
 * String to convert
 * Type: String
@@ -59,7 +59,7 @@ returns:
 
 Determines the length of a string.
 
-### Input parameters
+### Input Prameters
 
 * A string
 * Type: String
@@ -83,7 +83,7 @@ returns:
 
 Retrieves a substring of a string. Note that the first character of a string is located at position '0', and the last character is located at position `length(string)-1`.
 
-### Input parameters
+### Input Parameters
 
 * Subject
    * Type: String
@@ -124,7 +124,7 @@ returns:
 
 Finds the position of the first occurrence of the substring in the string.
 
-### Input parameters
+### Input Parameters
 
 * Original string. This is the string that you want to search _in_.
     * Type: String
@@ -176,7 +176,7 @@ returns:
 
 Finds the position of the last occurrence of substring in the original string.
 
-### Input parameters
+### Input Parameters
 
 * Original string. This is the string that you want to search _in_.
     * Type: String
@@ -265,7 +265,7 @@ true
 
 Determines whether a string starts with the specified substring.
 
-### Input parameters
+### Input Parameters
 
 * Original string. This is the string that you want to search _in_.
     * Type: String
@@ -291,7 +291,7 @@ true
 
 Determines whether a string ends with the specified substring.
 
-### Input parameters
+### Input Parameters
 
 * Original string. This is the string that you want to search _in_.
     * Type: String
@@ -317,7 +317,7 @@ true
 
 Removes all whitespace at the beginning and end of a string.
 
-### Input parameters
+### Input Parameters
 
 * A string
 * Type: String
@@ -340,7 +340,7 @@ returns:
 
 Checks to see if a string matches a given regular expression.
 
-### Input parameters
+### Input Parameters
 
 * String to try and match on
     * Type: String
@@ -349,7 +349,9 @@ Checks to see if a string matches a given regular expression.
 
 <div class="alert alert-warning">{% markdown %}
 
-Please note that this function call uses a regular expression language provided by the current platform: when used inside [microflows] - Java's regular expressions (see [documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)); when used inside [conditional formatting](conditions) - JavaScript's regular expressions (see [guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)).
+Please note that this function call uses a regular expression language provided by the current platform:
+* When used inside [microflows](microflow) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
+* When used inside [conditional formatting](conditions) – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {% endmarkdown %}</div>
 
@@ -380,7 +382,7 @@ isMatch('NLG 123.45', '.*[0-9].*') returns true
 
 Replaces all occurrences of a regular expression with another string.
 
-### Input parameters
+### Input Parameters
 
 * The string to search in
     * Type: String
@@ -391,7 +393,9 @@ Replaces all occurrences of a regular expression with another string.
 
 <div class="alert alert-warning">{% markdown %}
 
-Please note that this function call uses a regular expression language provided by the current platform: when used inside [microflows] - Java's regular expressions (see [documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)); when used inside [conditional formatting](conditions) - JavaScript's regular expressions (see [guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)).
+Please note that this function call uses a regular expression language provided by the current platform:
+* When used inside [microflows](microflows) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
+* When used inside [conditional formatting](conditions) – JavaScript's regular expressions (for details, see [Regular_Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {% endmarkdown %}</div>
 
@@ -427,7 +431,7 @@ returns:
 
 Replaces the first occurrence of the regular expression with a replacement string.
 
-### Input parameters
+### Input Parameters
 
 * The string to search in
     * Type: String
@@ -438,7 +442,9 @@ Replaces the first occurrence of the regular expression with a replacement strin
 
 <div class="alert alert-warning">{% markdown %}
 
-Please note that this function call uses a regular expression language provided by the current platform: when used inside [microflows] - Java's regular expressions (see [documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)); when used inside [conditional formatting](conditions) - JavaScript's regular expressions (see [guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)).
+Please note that this function call uses a regular expression language provided by the current platform:
+* When used inside [microflows](microflow) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
+* When used inside [conditional formatting](conditions) – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {% endmarkdown %}</div>
 
@@ -458,11 +464,11 @@ returns:
 'this is a string with NUMBER5 some numbers 234 thrown in'
 ```
 
-## String concatenation ( + )
+## String Concatenation ( + )
 
 The + operator can be used to concatenate two strings or a string and a number.
 
-### Input parameters
+### Input Parameters
 
 * First parameter
     * Type: String, Integer/Long, Float or Decimal
@@ -510,7 +516,7 @@ string as part of a URL, for instance:
 'http://google.com/search?q=' + urlEncode($myQuery)
 ```
 
-### Input parameters
+### Input Parameters
 
 * String to convert
 * Type: String
@@ -533,7 +539,7 @@ returns:
 
 Converts a string back from a URL. The opposite of [urlEncode](#urlEncode).
 
-### Input parameters
+### Input Parameters
 
 * A url-encoded String to convert
 * Type: String

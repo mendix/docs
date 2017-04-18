@@ -61,3 +61,6 @@ howtogeneral:
 releasenotes:
   space: "Release Notes"
   priority: false
+developerportal:
+  space: "Developer Portal"
+  priority: false

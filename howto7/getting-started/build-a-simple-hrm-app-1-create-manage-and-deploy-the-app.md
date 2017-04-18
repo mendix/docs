@@ -14,9 +14,9 @@ This is the first how-to in a series of five on how to create a simple human res
 
 **This how-to will teach you how to do the following:**
 
-* How to create an app
-* How to manage an app
-* How to deploy an app
+* Create an app
+* Manage an app
+* Deploy an app
 
 ## 2 Prerequisites
 

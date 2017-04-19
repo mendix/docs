@@ -29,5 +29,5 @@ A Company Admin can edit user roles and add new user roles at the **Roles** tab.
 
 * [Company Admin](index)
 * [Company](company)
-* [Users](nodes)
+* [Users](users)
 * [Nodes](nodes)

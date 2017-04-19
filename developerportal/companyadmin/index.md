@@ -70,7 +70,7 @@ A Company Admin can change the **Company settings** by following these steps:
 
   ![](attachments/companyadmin.jpg)
 
-## Documents in This Category
+## 5 Documents in This Category
 
 * [Company](company)
 * [Users](users)

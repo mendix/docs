@@ -30,7 +30,7 @@ A Company Admin can manage the following items at the **Security Groups** tab:
 
 *   Add/remove security groups
 *   Set up a security group by clicking **Details** for a group. There you can:
-    * Add a member by clicking on **Add**
+    * Add a member by clicking **Add**
     * Set up the access of a security group to apps by going to the **Access To**. Members of this security group will be granted access to the following apps automatically. Note that it is only possible to create policies for licensed, AppCloud-enabled apps. It is possible to select specific Node evironments and User Roles.
 
 ## 4 Security History

@@ -10,7 +10,6 @@ tags: ["Company","Admin","Developer Portal"]
 
 The **Nodes** section lets you manage the cloud nodes for your company.
 
-See [link] for more information about cloud nodes.
 
 ## 2 Related Content
 

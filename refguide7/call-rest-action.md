@@ -1,11 +1,11 @@
 ---
-title: "Call Rest Action"
+title: "Call REST Service Action"
 space: "Mendix 7 Reference Guide"
 parent: "microflow-activities"
 ---
 
 
-The Call REST activity can be used to call a REST endpoint. You can specify the location and how the response of the REST call should be handled.
+The **Call REST service** action can be used to call a REST endpoint. You can specify the location and how the response of the REST call should be handled.
 
 ## General
 

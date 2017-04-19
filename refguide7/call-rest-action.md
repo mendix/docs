@@ -1,5 +1,5 @@
 ---
-title: "Call Rest Action"
+title: "Call REST Action"
 space: "Mendix 7 Reference Guide"
 parent: "microflow-activities"
 ---

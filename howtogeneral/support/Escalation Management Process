@@ -20,6 +20,9 @@ We use this process as a communicative means to inform all parties involved in a
 
 The essence of our Escalation Management is to bring order, structure, focused management attention and additional resources to those customer situations which could otherwise result in a high level of customer dissatisfaction and/or damage to the service provider's reputation.                                                                                   
 
+##Escalation Process Overview
+![](howtogeneral/support/attachments/escalation process overview.PNG)
+
 ## When Should an Escalation Be Initiated
 
 For customers and partners who hold a valid support services contract, an escalation may be initiated anytime after the SLA Response Time. If you have worked through our standard support processes and with our teams and you are not satisfied with the level or timeliness of service you received, you can escalate accordingly. Additionally, an escalation should be initiated when there is tangible impact to your production environment, or there is high risk to the business operations.
@@ -39,6 +42,7 @@ The entry point into the Mendix escalation process is through your Support Case.
 
   1.	Navigate to https://support.mendix.com/hc/en-us
   2.	Submit a Request
+  ![](howtogeneral/support/attachments/zendesk.PNG)
   3.	Once the ticket has been submitted, this incoming ticket is assigned to a support engineer.
   4.	This engineer will come to a solution most of the time, sometimes after discussion with a Technical Support Lead and if needed with our 2nd Line team (i.e. Modeler, Client, Core or Expert Services).
   5.	If the gap between customer's expectation and Mendix possibilities cannot be solved, the escalation is started.
@@ -57,6 +61,7 @@ In the Case Notes, cc' escalation@mendix.com and in the case note,
   1.	Document the problem description
   2.	Provide the Business Use Case for the Escalation
   3.	Next Steps provided by the assigned Technical Support Engineer
+  ![](howtogeneral/support/attachments/escalation.PNG)
 
 ## What can I expect during an escalated status?
 

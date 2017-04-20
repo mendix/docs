@@ -43,7 +43,7 @@ We use [curl](http://curl.haxx.se/download.html#Win32) to download a `tsconfig.j
     In the rest of the tutorial, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
 
 3.  Install [Visual Studio Code](https://code.visualstudio.com/) - not to be confused with Visual Studio - a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v0.7.0+); check the version you are using through Help > About when you have Code opened.
-4.  Install TypeScript 1.6.2 with [`npm`](https://www.npmjs.com/) , Node.js' package manager:
+4.  Install TypeScript 2.*.* with [`npm`](https://www.npmjs.com/) , Node.js' package manager:
 
     ```text
     $ npm install -g typescript@1.6.2

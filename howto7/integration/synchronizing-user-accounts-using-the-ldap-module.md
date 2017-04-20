@@ -60,7 +60,7 @@ In this chapter you will run the application and complete the LDAP configuration
 6.  Click **Test connection**. The module will now try to connect to the LDAP server using the credentials you provided. If the test was successful you should see the following message: **Connection established**. If not, check the error message in the console log for possible causes and fix the issue(s).
 
     You will now configure the user path of the LDAP module so that it can find the user information on the server.
-7.  Click **Browse LDAP** in the **User paths** section. This opens a popup that displays the contents of the LDAP root directory.
+7.  Click **Browse LDAP** in the **User paths** section. This opens a pop-up window that displays the contents of the LDAP root directory.
     ![](attachments/18448733/18581925.png)
 8.  Navigate to the directory that contains the users you want to import. 
 9.  Once you have found the directory that contains the users, click **Use this directory as user import location.

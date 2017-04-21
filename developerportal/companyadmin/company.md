@@ -14,6 +14,8 @@ A Company Admin can manage the following items in the **Company** section:
 * Company Settings
 * Launchpad Settings
 
+![](attachments/companyprofile.jpg)
+
 ## 2 Company Profile
 
 A Company Admin can add or change the following items on the **Company Profile** tab:

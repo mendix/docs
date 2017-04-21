@@ -15,8 +15,6 @@ After setting up all the prerequisites, you can start writing a first script tha
 2.  Copy the following code to the  `script.ts` file:
 
     ```js
-    /// <reference path='./typings/tsd.d.ts' />
-
     import {MendixSdkClient, Project, OnlineWorkingCopy} from 'mendixplatformsdk';
     import {IModel, domainmodels} from 'mendixmodelsdk';
     import when = require('when');
@@ -147,7 +145,8 @@ Read more about [consuming promises](http://know.cujojs.com/tutorials/promises/c
     Successfully opened new online working copy [...] for project [...]: NewApp-[...]
     Closing connection to Model API...
     Closed connection to Model API successfully.
-    Committing changes in online working copy [...] to team server project [...] branch null base revision -1
+quality
+Committing changes in online working copy [...] to team server project [...] branch null base revision -1
     Successfully committed changes to team server: revision 3 on branch null
     Successfully committed revision: 3\. Done.
     ```

@@ -14,6 +14,8 @@ A Company Admin can manage the following items in the **Users** category:
 * Security Groups
 * Security History
 
+![](attachments/usersettings.jpg)
+
 ## 2 Users
 
 A Company Admin can manage the following items at the **Users** tab:

@@ -20,7 +20,7 @@ Note that you need to have a MxID to get access to the [Developer Portal](http:/
 
 {% endmarkdown %}</div>
 
-## 3 Company Contact
+## 2 Company Contact
 
 The Company Contact is internally the contact person about Mendix. All company members can see the Company Contact. Only a Company Admin can change the Company Contact.
 
@@ -38,8 +38,9 @@ There are two methods to see the Company Contact:
 3.  Click on a company member.
 4.  Click on the company name.
 
+![](attachments/companycontact.jpg)
 
-## 4 Company Admin
+## 3 Company Admin
 
 A Company Admin can manage four categories of settings:
 
@@ -70,7 +71,7 @@ A Company Admin can change the **Company settings** by following these steps:
 
   ![](attachments/companyadmin.jpg)
 
-## 5 Documents in This Category
+## 4 Documents in This Category
 
 * [Company](company)
 * [Users](users)

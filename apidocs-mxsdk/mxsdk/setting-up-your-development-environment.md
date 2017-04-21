@@ -46,36 +46,17 @@ We use [curl](http://curl.haxx.se/download.html#Win32) to download a `tsconfig.j
 4.  Install TypeScript 2.*.* with [`npm`](https://www.npmjs.com/) , Node.js' package manager:
 
     ```text
-    $ npm install -g typescript@1.6.2
+    $ npm install -g typescript@2.2.2
     ```
 
 5.  Use the following command to check the TypeScript compiler version on your PATH:
 
     ```text
     $ tsc --version
-    message TS6029: Version 1.6.2
+    Version 2.2.2
     ```
 
     If the version number is much lower, it could be that you also have an outdated TypeScript SDK on your system, left over from a previous installation. You can either uninstall the old TypeScript SDK, or bypass it by removing the old TypeScript SDK from your system's PATH environment variable.
-
-6.  Use the following command to install the [TypeScript Definition Manager for DefinitelyTyped](http://definitelytyped.org/tsd/). From the tsd homepage: "TSD is a package manager to search and install TypeScript definition files directly from the community driven [DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped) repository".
-
-    ```text
-    $ npm install -g tsd
-    ```
-
-7.  Use the following command to verify that a recent version is properly installed:
-
-    ```text
-    $ tsd --version
-    >> tsd 0.6.5
-    ```
-
-    A lot of libraries have been written in JavaScript, and require [custom typings](http://www.typescriptlang.org/Handbook#writing-dts-files) so that the TypeScript compiler can check for type correctness of the code that uses those libraries. Fortunately, the TypeScript community has already created those custom typings for many open source JavaScript libraries. See the [DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped) repository for typings for (at the time of writing) more than 1000 libraries.
-
-    Sometimes, invoking `tsd` will fail because the GitHub API usage limit has been reached. To fix this, create a `.tsdrc` file in your user (home) directory or in your project directory that contains a `{ "token": "your_github_token" }` GitHub OAuth token.
-
-    Please refer to the [tsd documentation](https://github.com/Definitelytyped/tsd#tsdrc) for further details.
 
 ## Setting up a working directory for your script
 
@@ -100,9 +81,10 @@ We use [curl](http://curl.haxx.se/download.html#Win32) to download a `tsconfig.j
 
     ```text
     "dependencies": {
-      "mendixmodelsdk": "~2.0.0",
-      "mendixplatformsdk": "~2.0.0",
-      "when": "^3.7.3"
+      "@types/when": "^2.4.28",
+      "mendixmodelsdk": "~3.2.0",
+      "mendixplatformsdk": "~3.0.0",
+      "when": "^2.4.28"
     }
     ```
 
@@ -132,18 +114,6 @@ We use [curl](http://curl.haxx.se/download.html#Win32) to download a `tsconfig.j
     The compiler options should be left as-is. The `files` directive is an array of strings with path names of all TypeScript files that make up your Node.js script or app. You can change it so that the compiler uses the right files.
 
     Create new files in your project directory with Visual Studio Code by hovering with the mouse cursor over the name of the working directory in the left side pane. A "new file" icon appears. Click it to create a new file. For more information on basic editing with Visual Studio Code, check the [manual](https://code.visualstudio.com/Docs/editor/codebasics).
-
-6.  Install the typings for the when.js library.
-
-    ```java
-    $ tsd install when --save
-    ```
-
-    This creates a `typings` directory in your project directory, which will contain subdirectories with imported typings, and a `tsd.d.ts` which can be referenced from your script to import all those typings. Again, add this `typings` directory to your version control system's ignore list if you use a VCS. 
-
-    These typings will be added automatically to the list in the `tsd.json` file created in the previous step.
-
-    Use the following command to re-install configured typings, e.g. after checking out the repository from version control, or if you cleaned up/deleted the `typings` directory: `tsd install`
 
 ## Next step
 

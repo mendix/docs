@@ -37,8 +37,9 @@ We use [curl](http://curl.haxx.se/download.html#Win32) to download a `tsconfig.j
     $ node --version
     v4.2.2
     ```
-
+` 
     For Debian-based Linux distributions such as Ubuntu, please refer to [this article](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
+    On Linux, if you get an error about node being unknown, use `apt-get install nodejs-legacy` to solve this.`
 
     In the rest of the tutorial, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
 

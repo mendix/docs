@@ -20,6 +20,6 @@ Added in Mendix 7.1.
 
 {% endmarkdown %}</div>
 
-When selected, this shows the widget while a provided [expression](microflow-expressions) evaluates to true. The object of the containg data view is available inside an expression as a `$currentObject` variable.
+When selected, this shows the widget while a provided [expression](microflow-expressions) evaluates to true. The object of the containing data view is available inside an expression as a `$currentObject` variable.
 
 Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](constants). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.

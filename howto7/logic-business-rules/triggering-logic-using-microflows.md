@@ -128,7 +128,7 @@ Note: the title of the confirmation pop-up is determined by a system text (categ
 | Non-Blocking | A progress bar is shown, but the end user can continue working. |
 | Blocking | A progress bar is shown and the end user must wait until the microflow is done. |
 
-*   Progress message:The progress message is shown along with the progress bar if the progress bar is either non-blocking or blocking (see above).
+*   Progress message: The progress message is shown along with the progress bar if the progress bar is either non-blocking or blocking (see above).
 *   Microflow call type: This property indicates whether the connected microflow is executed synchronously or asynchronously. With synchronously executed microflows the microflow is started and the client waits for the result. With asynchronously called microflows the microflow is started on the server but the client does not wait for the result. It will check the server every ten seconds to see if the microflow is done executing.
 
 <div class="alert alert-warning">

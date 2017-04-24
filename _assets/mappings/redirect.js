@@ -7961,10 +7961,6 @@ module.exports = {
       "to": "/refguide7/retrieve"
     },
     {
-      "from": "/refguide7/Review+log+files+-+MS+IIS+Server",
-      "to": "/refguide7/review-log-files-ms-iis-server"
-    },
-    {
       "from": "/refguide7/Review+log+files+-+MS+SQL+Server",
       "to": "/refguide7/review-log-files-ms-sql-server"
     },

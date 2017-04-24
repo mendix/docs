@@ -43,8 +43,4 @@ Let us say you have an entity Vehicle and two specializations thereof: Bicycle a
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
-Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
-
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

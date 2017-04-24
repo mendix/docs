@@ -10,5 +10,4 @@ When deciding to host the Mendix platform on-premises, several guidelines have t
 
 * [Monitoring - Defining monitoring metrics](monitoring-what-to-monitor)
 * [Monitoring the Mendix Runtime](monitoring-mendix-runtime)
-* [Review Microsoft IIS Server log files](review-log-files-ms-iis-server)
 * [Review Microsoft SQL Server log files](review-log-files-ms-sql-server)

@@ -4,73 +4,60 @@ space: "Mendix 7 Reference Guide"
 parent: "domain-model"
 ---
 
+## 1 Introduction
 
-An association describes a relation between entities. In a domain model diagram an association is represented by a line or an arrow between two entities.
+An association describes a relation between entities. In the domain model, an association is represented by a line or arrow between two entities.
 
-
-
-The value of the association can only be viewed or edited from objects of the entity that is the _owner_ of the association. Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owner, there is a line between the two entities.
+The value of the association can only be viewed or edited from the object of the entity that is the _owner_ of the association. Either one entity or both entities can be the owner of the association. If one entity is the owner, there is an arrow that points from the owner to the other entity. If both entities are owner, there is a line between the two entities.
 
 The cardinality (or number of referred objects) of an association is indicated by the number one (`1`) or a star (`*`) at either side of the association.
 
-<div class="alert alert-info">{% markdown %}
+The arrow here indicates that **Order** is the owner of the association, and the `1` and `*` indicate that one customer is associated with many orders:
 
 ![](attachments/819203/918217.png)
-The arrow indicates that Order is the owner of the association. The number one (`1`) and the start (`*`) indicate that one customer is associated with many orders.
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have the owner **Default**.
 
-An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have owner "Default".
+## 2 Behavior Properties
 
-{% endmarkdown %}</div>
-
-See below for more examples.
-
-## Behavior Properties
-
-### Delete behavior
+### 2.1 Delete Behavior
 
 Delete behavior defines what should happen to the associated object when an object is deleted. The following options can be configured for each end of the association.
 
 | Value | Description |
 | --- | --- |
-| delete <name of entity> object but keep <name of other entity> object(s) | When an object is deleted, the associated object(s) are not deleted. |
-| delete <name of entity> object and <name of other entity> object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
-| delete <name of entity> object only if it has no <name of other entity> object(s) | An object can only be deleted if it is not associated with any other object(s). |
+| delete {name of entity} object but keep {name of other entity} object(s) | When an object is deleted, the associated object(s) are not deleted. |
+| delete {name of entity> object and {name of other entity} object(s) as well | When an object is deleted, the associated object(s) are also deleted. |
+| delete {name of entity> object only if it has no {name of other entity} object(s) | An object can only be deleted if it is not associated with any other object(s). |
 
-_Default value_: delete <name of entity> object but keep <name of other entity> object(s)
+* *Default value*: delete {name of entity} object but keep {name of other entity} object(s)
 
-<div class="alert alert-info">{% markdown %}
-
-This delete behavior is used if you want to delete any associated 'Profile' when a 'Customer' is deleted:
+This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
 
 ![](attachments/819203/918143.png)
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+This delete behavior is used if you want to be able to delete a **Customer** only if it is not associated with any **Order**:
 
-This delete behavior is used if you want to be able to delete a 'Customer' only if it is not associated with any 'Order':
 ![](attachments/819203/918146.png)
 
-{% endmarkdown %}</div>
+## 3 Common Properties
 
-## Common Properties
+### 3.1 Name
 
-### Name
+The name of the association is used to refer to it from forms, microflows, XPath constraints, etc.
 
-The name of the association is used to refer to it from forms, microflows, XPath constraints etc.
+## 4 Type Properties
 
-## Type Properties
+### 4.1 Type
 
-### Type
-
-Type defines whether an association is a reference (single) or a reference set (plural).
+This property defines whether an association is a reference (single) or a reference set (plural).
 
 | Value | Description |
 | --- | --- |
 | Reference | Single: an object of the owning entity refers to zero or one objects of the other entity. |
 | Reference set | Plural: an object of the owning entity refers to zero or more objects of the other entity. |
 
-_Default value:_ Reference
+* *Default value*: Reference
 
 <div class="alert alert-info">{% markdown %}
 
@@ -78,23 +65,24 @@ The examples for this property are combined with the example of the owner proper
 
 {% endmarkdown %}</div>
 
-### Owner
+### 4.2 Owner
 
 This property defines whether an association has one or two owners. If there is one owner, the owner is located at the start of the arrow.
 
 | Value | Description |
 | --- | --- |
-| Default | Only one entity is owner, namely the one where the arrow starts. |
+| Default | Only one entity is the owner (namely, the one where the arrow starts). |
 | Both | Both entities are owner. |
 
-_Default value:_ Default
+* *Default value*: Default
 
-Drawing an association from entity Order to entity Customer results in the following:
+Drawing an association from the **Order** entity to the **Customer** entity results in the following:
+
 ![](attachments/819203/918217.png)
 
-The type property has its default value 'Reference'. In this example a customer can have multiple orders, and an order can only have one customer.
+The type property has its default value `Reference`. In this example, a customer can have multiple orders, and an order can only have one customer.
 
-In XML instances of these entities and their association look as follows. Note that the association is only stored in the Order element.
+In XML, instances of these entities and their association look as follows (note that the association is only stored in the **Order** element):
 
 ```xml
 <Order id="101">
@@ -111,12 +99,13 @@ In XML instances of these entities and their association look as follows. Note t
 
 ```
 
-A many-to-many association with default ownership is created by drawing an association and then setting the 'Type' property to 'Reference set'.
+A many-to-many association with default ownership is created by drawing an association and then setting the `Type` property to `Reference set`.
 
-In this example a customer can have multiple groups and a group can have multiple customers:
+In this example, a **Customer** can have multiple **Groups**, and a **Group** can have multiple **Customers**:
+
 ![](attachments/819203/918127.png)
 
-In XML instances of these entities and their association look as follows. Note that the association is only stored in the Customer element.
+In XML, instances of these entities and their associations look as follows (note that the association is only stored in the **Customer** element):
 
 ```xml
 <Customer id="201">
@@ -136,12 +125,13 @@ In XML instances of these entities and their association look as follows. Note t
 
 ```
 
-A one-to-one association is created by setting the owner property to both (while leaving the type property at its default value 'Reference').
+A one-to-one association is created by setting the owner property to `Both` (while leaving the type property at its default value `Reference`).
 
-In this example a customer can have one profile and a profile can have one customer:
+In this example, a **Customer** can have one **Profile**, and a **Profile** can have one **Customer**:
+
 ![](attachments/819203/918128.png)
 
-In XML instances of these entities and their association look as follows. Note that the association is stored both in the Profile element and the Customer element.
+In XML, instances of these entities and their associations look as follows (note that the association is stored both in the **Profile** element and the **Customer** element):
 
 ```xml
 <Profile id="401">
@@ -159,11 +149,14 @@ In XML instances of these entities and their association look as follows. Note t
 </Customer>
 
 ```
-A many-to-many association where both entities are owners is created by setting the owner property to both and the type property to 'Reference set'.
 
-In this example an accountant can have multiple groups and a group can have multiple accountants:
+A many-to-many association where both entities are owners is created by setting the owner property to `Both` and the type property to `Reference set`.
+
+In this example, an **Accountant** can have multiple **Groups** and a **Group** can have multiple **Accountants**:
+
 ![](attachments/819203/918125.png)
-In XML instances of these entities and their association look as follows. Note that the association is stored both in the Accountant element and the Group element.
+
+In XML, instances of these entities and their association look as follows (note that the association is stored both in the **Accountant** element and the **Group** element):
 
 ```xml
 <Accountant id="501">

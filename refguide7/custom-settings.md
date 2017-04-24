@@ -17,7 +17,7 @@ Only use this functionality if you know exactly what you are doing. Wrong values
 
 Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`. For a more detailed list of settings and example values please consult the [fully-documented m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-## General settings
+## General Settings
 
 The following custom settings can be configured:
 
@@ -35,13 +35,14 @@ The value can be true or false. | false |
 | CACertificates | Comma separated list of paths to Authority Certificates. |   |
 | ClientCertificates | Comma separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` |  |
 | ClientCertificatePasswords | Comma separated list of passwords for Client Certificates (should match the "ClientCertificates" order). Example: `pwd1, pwd2, pwd3, pwd4` |   |
-| ClientCertificateUsages | Defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as [`"identifier": "path to certificate"`] without brackets. For web services, use the imported web service name as the identifier. For REST services, use the host name of the remote server as the identifier. Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). Example: ![](attachments/Custom+Settings/code_snippet.png) |  |
+| WebServiceClientCertificates | Deprecated since version 7.2. Defines which web service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as [`"imported web service name": "path to certificate"`] without brackets. Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces. |  |
+| ClientCertificateUsages | Introduced in version 7.2. Defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as [`"identifier": "path to certificate"`] without brackets. For web services, use the imported web service name as the identifier. For REST services, use the host name of the remote server as the identifier. Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: ![](attachments/Custom+Settings/code_snippet.png) |  |
 | SessionTimeout | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
 | ClusterManagerActionInterval | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the SessionTimeout. | 300000 |
 | com.mendix.core.StorageService | Defines which storage service module will be used. The storage service module takes care of storing the actual files asssociated with 'System.FileDocument' objects, such as uploaded files. Possible values are 'com.mendix.storage.localfilesystem' and 'com.mendix.storage.s3'. From Mendix 6.6 onwards 'com.mendix.storage.azure' is also available. | com.mendix.storage.localfilesystem |
 | com.mendix.core.SessionIdCookieName | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie (e.g. Pivotal assumes 'JSESSIONID' as session cookie name). | XASSESSIONID |
 
-## Log file settings
+## Log File Settings
 
 The settings below influence the behavior of the log files. These settings can only be used on-premises. In the cloud these won't result in a difference in behavior.
 
@@ -51,9 +52,9 @@ The settings below influence the behavior of the log files. These settings can o
 | MaxLogFileSize | The maximum size per log file. When the log file has been reached this maximum size, the log file will be backed up and a new empty log file will be used. | 2097152 (2 MB) |
 | MaxLogFileCount | The maximum count of log files preserved (actual file plus back-up files). When the maximum count has been reached, the oldest backup file will be removed. | 10 |
 
-## Database settings
+## Database Settings
 
-### Common settings
+### Common Settings
 
 | Name | Description | Default value |
 | --- | --- | --- |
@@ -65,7 +66,7 @@ The settings below influence the behavior of the log files. These settings can o
 | ReadCommittedSnapshot | Defines whether the READ_COMMITTED_SNAPSHOT option of Microsoft SQL Server must be enabled or not. See for more information: [Using Snapshot Isolation](http://msdn.microsoft.com/en-us/library/tcbchxcb(VS.80).aspx).
 The value can be true or false. | true |
 
-### Connection pooling
+### Connection Pooling
 
 The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can for example define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](http://commons.apache.org/pool/) .
 
@@ -79,7 +80,7 @@ The settings below are used to define the database connection pooling behavior. 
 | ConnectionPoolingSoftMinEvictableIdleTimeMillis | Sets the minimum amount of time an object may sit idle in the pool before it is eligible for eviction by the idle object evictor (if any), with the extra condition that at least "minIdle" amount of object remain in the pool. When non-positive, no objects will be evicted from the pool due to idle time alone. | 300 000 (5 minutes) |
 | ConnectionPoolingNumTestsPerEvictionRun | Sets the max number of objects to examine during each run of the idle object evictor thread (if any). When a negative value is supplied, ceil(getNumIdle())/abs(getNumTestsPerEvictionRun()) tests will be run. I.e., when the value is -n, roughly one nth of the idle objects will be tested per run. | -3 |
 
-### Migration settings
+### Migration Settings
 
 The settings below are used to define the source database from which all data should be copied to the main database. You have to specify the settings below only at once. The main database should exist and should be empty. During the app start-up, the data will be copied if the settings below are specified. Remove the settings afterwards, because they are not necessary anymore.
 
@@ -99,7 +100,7 @@ Possible values: HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER |   |
 | SourceDatabaseUserName | The user name for the connection to the source database. |   |
 | SourceOracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS as source. |   |
 
-## Amazon S3 storage service settings
+## Amazon S3 Storage Service Settings
 
 The following settings influence the behavior of the Amazon S3 Storage Service module. Using these settings manually in the Mendix Cloud is strongly discouraged as the files stored in external systems will not be included in backups creation/restoration.
 
@@ -177,7 +178,7 @@ Note that unlike other storage services, IBM Bluemix does not provide server-sid
 | com.mendix.storage.swift.credentials.Password | Password |   |
 | com.mendix.storage.swift.credentials.Region | Region |   |
 
-## Web client settings
+## Web Client Settings
 
 The following settings influence the behavior of the Mendix web client.
 

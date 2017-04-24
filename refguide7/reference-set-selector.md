@@ -23,18 +23,18 @@ The reference set selector looks a lot like a [data grid](data-grid) and consequ
 
 The **Add** and **Remove** buttons mean something else than the **New** and **Delete** buttons that are used by default in the data grid:
 
-*   The **Add** button adds a reference to an existing object. The **Create** button, on the other hand, creates a new object and does not add references. (The [context mechanism](context-mechanism) may automatically set references but that is a story for another time.)
+*   The **Add** button adds a reference to an existing object. The **Create** button, on the other hand, creates a new object and does not add references.
 *   The **Delete** button actually deletes an object for good, whereas the **Remove** button simply removes the reference to the object and leaves the object itself intact.
 
 {% endmarkdown %}</div>
 
 ## Components
 
-### Control bar
+### Control Bar
 
 See [Control Bar](control-bar).
 
-### Sort bar
+### Sort Bar
 
 See [Sort Bar](sort-bar).
 
@@ -42,7 +42,7 @@ See [Sort Bar](sort-bar).
 
 See [Columns](columns) for more information.
 
-## Common properties
+## Common Properties
 
 {% snippet Name+Property.md %}
 
@@ -52,9 +52,9 @@ See [Columns](columns) for more information.
 
 {% snippet Tab+index+Property.md %}
 
-## Appearance properties
+## Appearance Properties
 
-### Show control bar
+### Show Control Bar
 
 This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
 
@@ -66,13 +66,13 @@ Even if the control bar is invisible there can still be a default button that is
 
 _Default value:_ True
 
-### Show paging buttons
+### Show Paging Buttons
 
 This property indicates whether the buttons to page through the information in the grid are visible or not. Only hide these buttons if you are sure that there will never be more objects than the number of rows of the grid. Note that hiding the control bar also hides the paging buttons.
 
 _Default value:_ True
 
-### Column weights
+### Column Weights
 
 The column weights are percentages separated by semi-colons. They determine the widths of the columns. The weights have to add up to 100\. An alternative way of changing the widths of columns is by dragging the separating line between columns.
 
@@ -82,21 +82,21 @@ In the screenshot above the column weights are 63;37.
 
 {% endmarkdown %}</div>
 
-### Number of rows
+### Number of Rows
 
 With this property you can change the number of rows that will be shown in one page. See also the property 'Show empty rows'.
 
 _Default value:_ 5
 
-### Show empty rows
+### Show Empty Rows
 
 If you choose to show empty rows there will always be the grid that shows the same number of rows (see 'Number of rows') even if there are fewer objects to show on the page.
 
 _Default value:_ False
 
-## Behavior properties
+## Behavior Properties
 
-### Selection mode
+### Selection Mode
 
 The selection mode determines whether and how the user can select items in the grid.
 
@@ -109,7 +109,7 @@ The selection mode determines whether and how the user can select items in the g
 
 _Default value:_ Single selection
 
-### Default button trigger
+### Default Button Trigger
 
 The default button can be triggered by a single or a double click on a row.
 
@@ -120,13 +120,13 @@ The default button can be triggered by a single or a double click on a row.
 
 _Default value:_ Double click
 
-### Tooltip page
+### Tooltip Page
 
 A tooltip page is a page that appears when you hover your mouse over a row. The tooltip page should consist of a data view on the same entity as the data grid. On top of creating, and connecting, a tooltip page you also have to specify on which columns the tooltip will appear. See the property 'Show tooltip' of [data grid columns](columns).
 
-## Data source properties
+## Data Source Properties
 
-### Entity path
+### Entity Path
 
 The entity path of a reference set selector is a path following one association of type 'reference set' from the entity of the containing data view to the entity on the other side of that association. In the example above the association Customer_Group from Customer to Group is followed and the path is: Customer_Group/Group.
 
@@ -136,35 +136,27 @@ With the reference selector you are editing an association of type reference set
 
 {% endmarkdown %}</div>
 
-## Events properties
+## Events Properties
 
 {% snippet On+Change+Event.md %}
 
-## Selectable objects properties
+## Selectable Objects Properties
 
 The selectable objects are determined in the same way as in the reference selector. See the [selectable objects properties](reference-selector) of the reference selector for more information. Note that you cannot use a microflow in a reference set selector.
 
-### XPath constraint
+### XPath Constraint
 
 See [Selectable Objects Properties](reference-selector) of the reference selector.
 
-### Constrained by
+### Constrained By
 
 See [Selectable Objects Properties](reference-selector) of the reference selector.
 
-### Apply context
-
-See [Selectable Objects Properties](reference-selector) of the reference selector.
-
-### Remove from context
-
-See [Selectable Objects Properties](reference-selector) of the reference selector.
-
-## Visibility properties
+## Visibility Properties
 
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}
 
-## Related Articles
+## Related Content
 
 *   [Data view](data-view)
 *   [Entities](entities)

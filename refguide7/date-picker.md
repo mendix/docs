@@ -88,6 +88,8 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}
 
 ## Events properties

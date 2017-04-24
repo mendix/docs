@@ -27,4 +27,6 @@ This button lets the user deselect all rows in the grid or reference set selecto
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

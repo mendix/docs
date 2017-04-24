@@ -60,4 +60,6 @@ If an attribute is chosen for the address, you can select the attribute here. An
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

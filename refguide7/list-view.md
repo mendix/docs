@@ -69,4 +69,6 @@ Now if there is a row of type Bicycle the template specific for bicycles will be
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

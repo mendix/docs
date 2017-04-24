@@ -26,4 +26,6 @@ The select button confirms the choice of a row of a grid when it is used for sel
 
 ## Visibility Properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

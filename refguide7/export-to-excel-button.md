@@ -45,4 +45,6 @@ When choosing _Date value_, dates will be shown only in the time zone of your Wi
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

@@ -42,4 +42,6 @@ Specifies which type of object will be created when the button is clicked. It is
 
 ## Visibility Properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

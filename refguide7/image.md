@@ -53,4 +53,6 @@ _Default value_: not applicable
 
 ### Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

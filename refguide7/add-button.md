@@ -33,4 +33,6 @@ See [Opening Pages](opening-pages). Note that opening select pages in content is
 
 ## Visibility Properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

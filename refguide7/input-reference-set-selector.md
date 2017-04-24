@@ -83,6 +83,8 @@ The page has displays a reference selector for the reference to country and an i
 
 ## Visibility Properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}
 
 ## Events Properties

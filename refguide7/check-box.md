@@ -31,6 +31,8 @@ This checkbox might be used to indicate whether or not a user is a customer.
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}
 
 ## Events properties

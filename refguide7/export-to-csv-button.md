@@ -61,4 +61,6 @@ If true, the date format of the column is used, otherwise a format that is recog
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

@@ -36,4 +36,6 @@ Pressing this button will close the popup for popup pages, or navigate to the pr
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

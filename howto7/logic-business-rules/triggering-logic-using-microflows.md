@@ -150,4 +150,3 @@ Set the duration only to asynchronous if you experience problems. Sometimes if a
 *   [Error Handling](set-up-error-handling)
 *   [Optimizing Microflow Aggregates](optimizing-microflow-aggregates)
 *   [Extract and use sub microflows](extract-and-use-sub-microflows)
-*   [Grid Microflow Button](/refguide7/grid-microflow-button)

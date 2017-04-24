@@ -122,43 +122,11 @@ Note: the title of the confirmation pop-up is determined by a system text (categ
 
 *   Show progress bar: This property indicates whether a progress bar is shown during the execution of the microflow. The message shown in the progress bar can be set with the 'Progress message' property.
 
-|
-
-Value
-
- |
-
-Description
-
- |
+| Value | Description |
 | --- | --- |
-|
-
-None
-
- |
-
-No progress bar is shown.
-
- |
-|
-
-Non-Blocking
-
- |
-
-A progress bar is shown, but the end user can continue working.
-
- |
-|
-
-Blocking
-
- |
-
-A progress bar is shown and the end user must wait until the microflow is done.
-
- |
+| None | No progress bar is shown. |
+| Non-Blocking | A progress bar is shown, but the end user can continue working. |
+| Blocking | A progress bar is shown and the end user must wait until the microflow is done. |
 
 *   Progress message:The progress message is shown along with the progress bar if the progress bar is either non-blocking or blocking (see above).
 *   Microflow call type: This property indicates whether the connected microflow is executed synchronously or asynchronously. With synchronously executed microflows the microflow is started and the client waits for the result. With asynchronously called microflows the microflow is started on the server but the client does not wait for the result. It will check the server every ten seconds to see if the microflow is done executing.
@@ -175,7 +143,6 @@ Set the duration only to asynchronous if you experience problems. Sometimes if a
 
 *   [Defining access rules using XPath](define-access-rules-using-xpath)
 *   [Extending Your Application with Custom Java](extending-your-application-with-custom-java)
-
 *   [Working With Lists in a Microflow](working-with-lists-in-a-microflow)
 *   [Triggering Logic using Microflows](triggering-logic-using-microflows)
 *   [Creating a Custom Save Button](create-a-custom-save-button)

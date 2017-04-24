@@ -11,6 +11,12 @@ Some services require you to authenticate using a client certificate. This how-t
 
 Let's assume that you already have an app that calls a service. For details on how to configure this, have a look at [How to Consume a REST Service](consume-a-rest-service) or [How to Consume a Simple Web Service](consume-a-simple-web-service).
 
+<div class="alert alert-info">{% markdown %}
+
+Client certificates for REST services were introduced in version 7.2.0.
+
+{% endmarkdown %}</div>
+
 This how-to will teach you how to do the following:
 
 * Configure to run locally

@@ -7045,10 +7045,6 @@ module.exports = {
       "to": "/refguide7/container-widgets"
     },
     {
-      "from": "/refguide7/Context+Mechanism",
-      "to": "/refguide7/context-mechanism"
-    },
-    {
       "from": "/refguide7/Continue+Event",
       "to": "/refguide7/continue-event"
     },
@@ -7335,10 +7331,6 @@ module.exports = {
     {
       "from": "/refguide7/Grid+action+button",
       "to": "/refguide7/grid-action-button"
-    },
-    {
-      "from": "/refguide7/Grid+microflow+button",
-      "to": "/refguide7/grid-microflow-button"
     },
     {
       "from": "/refguide7/Grid+New+Button",
@@ -7967,10 +7959,6 @@ module.exports = {
     {
       "from": "/refguide7/Retrieve",
       "to": "/refguide7/retrieve"
-    },
-    {
-      "from": "/refguide7/Review+log+files+-+MS+IIS+Server",
-      "to": "/refguide7/review-log-files-ms-iis-server"
     },
     {
       "from": "/refguide7/Review+log+files+-+MS+SQL+Server",

@@ -16,6 +16,8 @@
   url: "/howtogeneral/"
 - title: "Release Notes"
   url: "/releasenotes/"
+- title: "Developer Portal"
+  url: "/developerportal/"
 - title: "API & SDK"
   url: "/apidocs-mxsdk/"
 - title: "ATS Add-On"

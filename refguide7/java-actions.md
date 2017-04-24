@@ -40,21 +40,41 @@ Common use cases include, but are not limited to:
 
 #### Microflow Type
 
-The 'Microflow' parameter type allows users of Java actions to pass a microflow into a Java action. In the generated Java action template code, this type is represented as String.
+The 'Microflow' parameter type allows users of Java Actions to pass a microflow into a Java Action. In the generated Java Action template code, this type is represented as a string (the name of the microflow).
 
-#### Return type
+#### Import Mapping Type
+
+The 'Import mapping' parameter type allows users of Java Actions to pass an import mapping into a Java Action. In the generated Java Action template code, this type is represented as a string (the name of the import mapping).
+
+<div class="alert alert-info">{% markdown %}
+
+The 'Import mapping' parameter type was introduced in version 7.2.0.
+
+{% endmarkdown %}</div>
+
+#### Export Mapping Type
+
+The 'Export mapping' parameter type allows users of Java Actions to pass an export mapping into a Java Action. In the generated Java Action template code, this type is represented as a string (the name of the export mapping).
+
+<div class="alert alert-info">{% markdown %}
+
+The 'Export mapping' parameter type was introduced in version 7.2.0.
+
+{% endmarkdown %}</div>
+
+#### Return Type
 
 The return type determines the type of the data that the Java action returns. It corresponds with the return type of the executeAction() method in the .java file of the Java action. You can use the result of a Java action in the microflow in which you call it. See [Data Types](data-types) for the possible return types.
 
 As with parameters, the return type can also be an object or a list of some type parameter. The type parameter you choose for the return type must also be used by at least one of the Java action parameters.
 
-## Type parameters
+## Type Parameters
 
 A type parameter is a placeholder for an entity type which will be filled in with a specific entity when it is called in a microflow. Type parameters can be used when configuring the data type of a parameter, to allow users to pass an Object or a List of an arbitrary entity type.
 
 A Java action has zero or more type parameters. Each type parameter should have a unique name.
 
-## Expose as microflow action
+## Expose as Microflow action
 
 By selecting the 'Expose as microflow action', it is possible to expose the Java action as a microflow action. Exposing the Java action will make it appear in the the Toolbox window when editing a microflow, in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
 

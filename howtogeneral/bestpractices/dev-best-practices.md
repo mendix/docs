@@ -6,11 +6,9 @@ category: "Best Practices"
 
 ## 1 Introduction
 
-This document can be used as a guideline for adopting consistent
-naming and modeling conventions while developing your Mendix applications. This will help to improve your application’s maintainability and performance, and makes it easier to read and understand.
+This document can be used as a guideline for adopting consistent naming and modeling conventions while developing your Mendix applications. This will help to improve your application’s maintainability and performance, and makes it easier to read and understand.
 
-Even with the powerful navigation and search support in the Mendix Modeler,
-adhering to naming and modeling conventions is a wise thing because:
+Even with the powerful navigation and search support in the Mendix Modeler, adhering to naming and modeling conventions is a wise thing because:
 
 * After finishing an application, it is usually handed over to different people for maintenance. Years later they still need to be able to understand what you did and how to improve on it
 * When viewing an existing application everybody should quickly understand the app, what is located where, and how the different parts are related
@@ -20,42 +18,23 @@ adhering to naming and modeling conventions is a wise thing because:
 
 ### 2.1 The Application Development Language
 
-The language that will be used to develop the application should be determined
-upfront. This way you have one language for modules, entities, microflows,
-pages, etc. The preferred language for development is English.
+The language that will be used to develop the application should be determined upfront. This way you have one language for modules, entities, microflows, pages, etc. The preferred language for development is English.
 
-There are some exceptions why certain parts of an application may use another
-language. The main exception would be in the domain model of an
-integration module. For example, in case the source data model is in another
-language already.
+There are some exceptions why certain parts of an application may use another language. The main exception would be in the domain model of an integration module. For example, in case the source data model is in another language already.
 
 ### 2.2 Project Name
 
-Every project is named when it's created. Make sure you use a logical
-name that allows you to easily identify the application. You will probably
-create more projects in the future, and want to be able to recognize this project. We
-recommend leaving out dates or Mendix version numbers in the project name,
-since that information can be captured and extracted in a different way.
+Every project is named when it's created. Make sure you use a logical name that allows you to easily identify the application. You will probably create more projects in the future, and want to be able to recognize this project. We recommend leaving out dates or Mendix version numbers in the project name, since that information can be captured and extracted in a different way.
 
 ### 2.3 Configurations
 
-Every project has one or multiple configurations. Every project starts
-with a single configuration called *default*. When you work with multiple people
-on an application it is beneficial to create multiple configurations. When doing
-so, we recommend using logical names for those configurations, like the name of the
-developer or the app's purpose, like "Test" and "Acceptance". Beware that the database passwords defined in the configuration will be visible to other team members, so be careful with using personal passwords you'd like to keep secret.
+Every project has one or multiple configurations. Every project starts with a single configuration called *default*. When you work with multiple people on an application it is beneficial to create multiple configurations. When doing so, we recommend using logical names for those configurations, like the name of the developer or the app's purpose, like "Test" and "Acceptance". Beware that the database passwords defined in the configuration will be visible to other team members, so be careful with using personal passwords you'd like to keep secret.
 
 ### 2.4 User Roles
 
-The user roles should have logical names that reflect the different types of
-users that will use the application. The user roles are singular and use a
-camel case notation, like *FunctionalAdministrator*. User roles are mostly
-defined in English, a choice can be made to define this in the language of the
-country since the user role is visible in the front end.
+The user roles should have logical names that reflect the different types of users that will use the application. The user roles are singular and use a camel case notation, like *FunctionalAdministrator*. User roles are mostly defined in English, a choice can be made to define this in the language of the country since the user role is visible in the front end.
 
-Each user role should correspond to only one module role per module. In other
-words, a user role should not map to multiple module roles within the same
-module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
+Each user role should correspond to only one module role per module. In other words, a user role should not map to multiple module roles within the same module. This helps to keep the number of applicable module roles for a user to a minimum, which reduces complexity in understanding the security model and reduces the performance impact of complex security rules.
 
 ## 3. Naming Conventions
 
@@ -63,15 +42,11 @@ module. This helps to keep the number of applicable module roles for a user to a
 
 #### 3.1.1 Module Names
 
-Modules should be treated like standalone replaceable services, for example, the
-customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module
-names should have camel case names that identify the responsibility of the module. For example, *CustomerManagement* or *SharePointIntegration*.
+Modules should be treated like standalone replaceable services, for example, the customer module should function as a standalone customer management system as much as possible, replaceable by a different customer management system. Module names should have camel case names that identify the responsibility of the module. For example, *CustomerManagement* or *SharePointIntegration*.
 
 #### 3.1.2 Module Roles
 
-The module roles should have logical names that reflect the access they should
-have within a module. In comparison to the user role, the module role should
-always be in English, for instance *Administrator* or *Employee*.
+The module roles should have logical names that reflect the access they should have within a module. In comparison to the user role, the module role should always be in English, for instance *Administrator* or *Employee*.
 
 ### 3.2 Domain Model
 
@@ -81,18 +56,13 @@ Most of the time an entity reflects a real-world object that people can relate t
 
 #### 3.2.2 Entity Attributes
 
-The entity attribute should reflect a property of a real-world object that people can relate to and fits the purpose of that property. Furthermore we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names. Entity attributes use camel case, for example,
-*FirstName* or *TelephoneNumber*.
+The entity attribute should reflect a property of a real-world object that people can relate to and fits the purpose of that property. Furthermore we advise avoiding abbreviations, underscores, mathematical characters or any other special characters in the names. Entity attributes use camel case, for example, *FirstName* or *TelephoneNumber*.
 
 #### 3.2.3 Associations
 
-Association names in the domain model are automatically generated by Mendix. The
-auto-generated names are good to use by default. If you have multiple associations between the same entities we recommend extending the association name. By extending this name with a recognizable part you will be aware of the purpose of this specific association. For example, you can have a relation between *Person* and *Address*. A person can have multiple addresses but you want to specify what their postal address is and what their delivery address is. An implementation choice could be that you create two new associations for that purpose and adjust the names of the associations accordingly. For example, Person\_Address\_Delivery.
+Association names in the domain model are automatically generated by Mendix. The auto-generated names are good to use by default. If you have multiple associations between the same entities we recommend extending the association name. By extending this name with a recognizable part you will be aware of the purpose of this specific association. For example, you can have a relation between *Person* and *Address*. A person can have multiple addresses but you want to specify what their postal address is and what their delivery address is. An implementation choice could be that you create two new associations for that purpose and adjust the names of the associations accordingly. For example, Person\_Address\_Delivery.
 
-A second recommendation is that when an association already exists between
-entities, and you change the name on one or both of the entities, that you will
-rename the association. Mendix will not do this automatically for you and this
-way you will keep your model consistent and up-to-date.
+A second recommendation is that when an association already exists between entities, and you change the name on one or both of the entities, that you will ename the association. Mendix will not do this automatically for you and this way you will keep your model consistent and up-to-date.
 
 ### 3.3 Folders
 

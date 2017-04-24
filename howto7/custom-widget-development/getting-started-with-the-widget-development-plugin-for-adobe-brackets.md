@@ -28,7 +28,7 @@ To get started with Adobe Brackets and the Widget Development Plugin, follow the
 
     ![](attachments/18448565/18579936.png)
 
-2. Select **File* > **Extension manager...**:
+2. Select **File** > **Extension manager...**:
 
     ![](attachments/18448565/18579913.png)
 

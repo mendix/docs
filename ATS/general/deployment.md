@@ -12,7 +12,7 @@ Every customer situation is different. We want to make sure there's a convenient
 
 All in all, there are four different supported deployment scenarios. This document describes and compares them.
 
-Please be aware that not every option supports the full set of features. Take a look at [4 Comparing the Options](#comparing-the-options) to understand the differences.
+Please be aware that not every option supports the full set of features. Take a look at [4 Comparing the Options](#4-comparing-the-options) to understand the differences.
 
 ## 2 Components
 
@@ -201,7 +201,7 @@ Before you start, make sure that your server has internet access to download the
 #### 5.4.2 Firewall Configuration
 
 The firewall should accept TCP connections from the internet on port 4444 (the standard port for Selenium Server). This port should forward to your Selenium Server.
-    
+
 [green]:attachments/deployment/green.png
 [grey]:attachments/deployment/grey.png
 [red]:attachments/deployment/red.png

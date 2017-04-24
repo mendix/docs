@@ -28,7 +28,7 @@ The essence of our escalation management is to bring order, structure, focused m
 
 ## 3 Escalation Process Overview
 
-![](howtogeneral/support/attachments/escalation-management-process/escalation_process_overview.png)
+![](attachments/escalation-management-process/escalation_process_overview.png)
 
 ## 4 When Should an Escalation Be Initiated
 
@@ -53,7 +53,7 @@ This is the normal process for a support case:
 1. Navigate to the [Mendix Support homepage](https://support.mendix.com/hc/en-us).
 2. Submit a request:
 
-  ![](howtogeneral/support/attachments/escalation-management-process/zendesk.png)
+  ![](attachments/escalation-management-process/zendesk.png)
 
 3. Once the ticket has been submitted, this incoming ticket is assigned to a Support Engineer.
 4. This engineer will come to a solution most of the time, sometimes after discussion with a Technical Support Lead and, if needed, with our second-line team (as in, Modeler, Client, Core, or Expert Services).
@@ -79,7 +79,7 @@ In the case notes, CC **escalation@mendix.com** and in the case note, do the fol
 *	Provide the business use case for the escalation
 *	The next steps provided by the assigned Technical Support Engineer
 
-![](howtogeneral/support/attachments/escalation-management-process/escalation.png)
+![](attachments/escalation-management-process/escalation.png)
 
 ## 7 What Can I Expect During an Escalated Status?
 

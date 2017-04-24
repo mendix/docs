@@ -8,7 +8,17 @@ Learn how to deploy your app, either in a Sandbox or to the Cloud. And go check 
 
 ## Free App
 
-Every app that you create from the Mendix Modeler or the Developer Portal will always get a Free App with one environment in the Mendix Cloud. This environment is called a Sandbox. 
+If you are new to the Mendix community and would like to deploy and share your own app, you can use the free tier of our public cloud offering. The free app environment (also called sandbox) is set up to allow any Mendix engineer to create and share their applications with their users. It is not the same as a cloud environment and it does not support complex or large applications.
+
+<div class="alert alert-warning">{% markdown %}
+
+If you would like to be a client and use a licensed cloud node you can contact our team **[HERE](http://ww2.mendix.com/BuyNow.html)**. If you are an existing customer, you should deploy into your licensed cloud node. Free apps are part of our community edition and require Mendix 5.18 or higher.
+
+{% endmarkdown %}</div>
+
+In our free tier, your app will go to sleep after a couple of minutes of inactivity. When it is inactive, you will see the image below. If you wait for a couple of minutes and the app does not come up, please contact our support team at [support.mendix.com](http://support.mendix.com).
+
+![](attachments/deploy/appresumed.jpg)
 
 ## Node
 
@@ -23,11 +33,16 @@ A node has a minimum of two environments: production and acceptance. A test envi
 ## Documents in This Category
 
 *   [Custom Domains](custom-domains)
-*   [Deploying to a Free App](deploying-to-a-free-app)
-*   [Deploying to the cloud](deploying-to-the-cloud)
 *   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
 *   [How to deploy a Mendix app on Amazon Web Services](how-to-deploy-a-mendix-app-on-amazon-web-services)
 *   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
+*   [How to Deploy to the Cloud](deploying-to-the-cloud)
+*   [How to Download a Backup](how-to-download-a-backup)
+*   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
+*   [How to Migrate to Mendix Cloud v4](migrating-to-v4)
+*   [How to Restore a Backup](how-to-restore-a-backup)
+*   [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
+*   [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
 *   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)
 *   [Java in the Cloud](java-in-the-cloud)
 *   [Maintenance Windows](maintenance-windows)

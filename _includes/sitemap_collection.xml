@@ -10,10 +10,8 @@
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ link.url | remove: 'index.html' | remove: '.html' }}</loc>
     {% if history and history.date %}
-    <lastmod>{{ history.date | date: '%Y-%m-%d' }}</lastmod>
-    {% else %}
-
-    {% endif %}
+    {% comment %}<lastmod>{{ history.date | date: '%Y-%m-%d' }}</lastmod>{% endcomment %}
+    {% else %}{% endif %}
 
     {% if link.sitemap.changefreq %}
     {% comment %}<changefreq>{{ link.sitemap.changefreq }}</changefreq>{% endcomment %}

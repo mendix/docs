@@ -43,6 +43,22 @@ The advantage of a selecting using a drop-down is that it is very efficient; no 
 
 _Default value:_ Drop-down
 
+### Empty Option Caption
+
+This property represents the caption for the empty option in the drop-down reference selector shown to the user. Setting the caption is not available if the Select Using property set to the Page option. This is a translable text. For more details, see [Translatable Texts](translatable-texts).
+
+<div class="alert alert-info">{% markdown %}
+
+Filling out the caption for an empty option increases the user experience of your application. It also helps screen-reader users to operate the application easily.
+
+{% endmarkdown %}</div>
+
+<div class="alert alert-info">{% markdown %}
+
+The empty option caption is available from Mendix 7.2.0.
+
+{% endmarkdown %}</div>
+
 ### Select page
 
 The select page property determines which page is opened when the select page button is used. This page can be used to select associated objects from the list of all possible objects. This page should contain a data grid, template grid or list view connected to the same entity as the input reference set selector.

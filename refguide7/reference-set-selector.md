@@ -154,6 +154,8 @@ See [Selectable Objects Properties](reference-selector) of the reference selecto
 
 ## Visibility Properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}
 
 ## Related Content

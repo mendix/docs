@@ -193,6 +193,8 @@ Keep in mind that even though you connect an attribute to the reference selector
 
 ## Visibility Properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}
 
 ## Events Properties

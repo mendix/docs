@@ -15,4 +15,6 @@ The page title widget makes it possible to embed the page title in a [layout](la
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

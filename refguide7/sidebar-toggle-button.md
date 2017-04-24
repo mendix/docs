@@ -64,4 +64,6 @@ Only applicable if the mode is "Shrink content".
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

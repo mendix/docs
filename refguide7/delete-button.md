@@ -31,4 +31,6 @@ The delete button allows end-users to delete objects from the database that are 
 Conditional visibility settings were added in version 5.10.0.
 {% endmarkdown %}</div>
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

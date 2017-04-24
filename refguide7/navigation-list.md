@@ -32,4 +32,6 @@ Action defines what action is performed when a navigation list item is 'clicked'
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

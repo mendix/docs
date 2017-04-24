@@ -113,6 +113,8 @@ Curently this has no effect.
 
 ## 6 Visibility Properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}
 
 ## 7 Related Content

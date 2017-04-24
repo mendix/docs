@@ -26,4 +26,6 @@ The search button toggles the search bar on and off. It is only present if the '
 
 ## Visibility Properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

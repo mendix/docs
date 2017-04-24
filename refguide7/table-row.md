@@ -15,4 +15,6 @@ A table consists of a number of rows divided into [table cells](table-cell).
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

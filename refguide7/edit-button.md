@@ -43,4 +43,6 @@ Let us say you have an entity Vehicle and two specializations thereof: Bicycle a
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

@@ -39,4 +39,6 @@ The action of a drop down button item can specify a page or a microflow to execu
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

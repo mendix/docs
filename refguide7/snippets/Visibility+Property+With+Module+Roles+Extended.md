@@ -1,5 +1,3 @@
-{% snippet Visibility+Property.md %}
-
 #### Module Roles
 
 The widget can be made visible to a subset of the user roles available in your application. These are the three options available:

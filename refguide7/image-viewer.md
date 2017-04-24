@@ -86,6 +86,8 @@ _Default value:_ Thumbnail
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}
 
 ## Related articles

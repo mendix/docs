@@ -52,6 +52,8 @@ The empty option caption is available from Mendix 7.2.0.
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}
 
 ## Events Properties

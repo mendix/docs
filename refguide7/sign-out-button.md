@@ -31,4 +31,6 @@ Pressing a sign out button will sign out the currently signed in user. When no u
 
 ## Visibility Properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

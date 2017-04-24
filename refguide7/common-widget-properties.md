@@ -47,6 +47,8 @@ _Default value:_ 0
 
 ## Visibility Properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}
 
 ## Editability Properties

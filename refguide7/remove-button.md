@@ -26,4 +26,6 @@ The remove button is a button specifically made for the reference set selector. 
 
 ## Visibility Properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

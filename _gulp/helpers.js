@@ -127,16 +127,16 @@ const writeAssetMappings = (currentFolder) => new Promise((resolve, reject) => {
   if (isFile(assetsJS)) {
     _.mapKeys(require(assetsJS), (v,k) => {
       index.push({
-        from: `/public/js/${k.replace(/\./g, '\.'}`,
-        to: `/public/js/${v.replace(/\./g, '\.'}`
+        from: `/public/js/${k.replace('.', '\\\.')}`,
+        to: `/public/js/${v}`
       });
     });
   }
   if (isFile(assetsCSS)) {
     _.mapKeys(require(assetsJS), (v,k) => {
       index.push({
-        from: `/public/styles/${k.replace(/\./g, '\.'}`,
-        to: `/public/styles/${v.replace(/\./g, '\.'}`
+        from: `/public/styles/${k.replace('.', '\\\.')}`,
+        to: `/public/styles/${v}`
       });
     });
   }

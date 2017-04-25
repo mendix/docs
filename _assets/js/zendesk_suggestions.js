@@ -46,7 +46,7 @@
         search.addWidget(
             instantsearch.widgets.hits({
               container: $suggestion_list[0],
-              hitsPerPage: 10,
+              hitsPerPage: 6,
               templates: {
                 item: '<li><a target="_blank" href="{{{url}}}">{{{_highlightResult.title.value}}}</a> <span class="space">({{{space}}})</span><li>'
               },

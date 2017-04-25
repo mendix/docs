@@ -101,6 +101,17 @@ gulp.task('write:githistory', `Write git_history to data`, done => {
   }
 });
 
+gulp.task('write:assetmappings', `Write asset mappings to ${DIST_FOLDER}/mappings/assets.map`, done => {
+  helpers
+    .writeAssetMappings(CURRENTFOLDER)
+    .then(() => {
+      done();
+    })
+    .catch((e) => {
+      return process.exit(2);
+    });
+});
+
 gulp.task('copy:images', `Copy images from _assets folder`, () => {
   return gulp
     .src(paths.images.src)
@@ -215,7 +226,7 @@ gulp.task('algolia', `Push Algolia indexes (not production ready)`, done => {
 });
 
 gulp.task('build', `Jekyll build, using ${CONFIG}. Used for production`, done => {
-  runSequence('clean', 'write:mappings', 'write:githistory', ['sass:build', 'copy:images', 'compress:js'], 'jekyll:build', 'test', (err) => {
+  runSequence('clean', 'write:mappings', 'write:githistory', ['sass:build', 'copy:images', 'compress:js'], 'write:assetmappings', 'jekyll:build', 'test', (err) => {
       //if any error happened in the previous tasks, exit with a code > 0
       if (err) {
         var exitCode = 2;

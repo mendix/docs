@@ -17,7 +17,7 @@ The AppCloudServices module requires version 5.3.2 of the Mendix Modeler. If you
 
 This how-to uses version 3.0 of the Company Expenses (CE) app, which does not yet contain the AppCloudServices module. This version can be found in the Modeler AppStore by going to the app page and opening the versions tab. Company Expenses 3.0 was built in an older version of Mendix, so it should first be converted to Mendix 5.3.2.
 
-1.  Start the **Mendix** **Mendix Modeler** and open your existing app that has been converted to Mendix 5.3.2 or newer.
+1.  Start the **Mendix Modeler** and open your existing app that has been converted to Mendix 5.3.2 or newer.
 2.  Open the **App Store** inside the Mendix Modeler.
 3.  Search for _AppCloudServices,_ click on the **AppCloudServices** module created by Mendix and click **Download**.
 4.  Select **Add as a new module** and click on **Import**. The module should now be visible in the project explorer:

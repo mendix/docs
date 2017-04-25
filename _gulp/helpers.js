@@ -133,9 +133,9 @@ const writeAssetMappings = (currentFolder) => new Promise((resolve, reject) => {
     });
   }
   if (isFile(assetsCSS)) {
-    _.mapKeys(require(assetsJS), (v,k) => {
+    _.mapKeys(require(assetsCSS), (v,k) => {
       index.push({
-        from: `~*\\/public\\/js\\/${k.replace('.', '\\\.')}`,
+        from: `~*\\/public\\/styles\\/${k.replace('.', '\\\.')}`,
         to: `/public/styles/${v}`
       });
     });

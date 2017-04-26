@@ -7,7 +7,7 @@ category: "Java Programming"
 
 ## JAR Compatibility List
 
-There are some known compatibility issues regarding JAR files in the < project path >/userlib directory. This page lists the problematic JAR files and the known workarounds.
+There are some known compatibility issues regarding JAR files in the `<project path>/userlib directory`. This page lists the problematic JAR files and the known workarounds.
 
 | JAR file | Exception in the log | Workaround |
 | --- | --- | --- |

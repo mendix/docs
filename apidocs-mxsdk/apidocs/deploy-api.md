@@ -755,7 +755,7 @@ Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
 | 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
-| 400 | CONSTANT_NOT_FOUND | Constant not found: contant name. |
+| 400 | CONSTANT_NOT_FOUND | Constant not found: constant name. |
 | 400 | CUSTOM_SETTING_NOT_SUPPORTED | Custom setting not supported. |
 | 400 | SCHEDULED_EVENT_NOT_FOUND | Scheduled Event not found: scheduled event name. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |

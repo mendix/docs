@@ -94,10 +94,10 @@ Mendix Platform Integration   | ![][green] All | ![][grey] Limited<sup>4</sup> |
 Live View & Video<sup>2</sup> | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][red] No
 Future Proof<sup>5</sup>      | ![][green] Yes | ![][green] Yes                | ![][green] Yes                | ![][red] No
 
-<sup>1</sup> Only if supported by ATS.  
-<sup>2</sup> Feature not available yet.  
-<sup>3</sup> Additional setup for every browser required.  
-<sup>4</sup> ATS will integrate with several APIs from the Mendix Cloud to improve the testing experience. Since some of these APIs are only available for apps that run in the Mendix Cloud, certain features cannot be offered for on-premises apps.  
+<sup>1</sup> Only if supported by ATS.<br />
+<sup>2</sup> Feature not available yet.<br />
+<sup>3</sup> Additional setup for every browser required.<br />
+<sup>4</sup> ATS will integrate with several APIs from the Mendix Cloud to improve the testing experience. Since some of these APIs are only available for apps that run in the Mendix Cloud, certain features cannot be offered for on-premises apps.<br />
 <sup>5</sup> Future features may depend on the functionality offered by the Mendix Cloud or the Selenium service providers. They may not be available if you run your app on-premises or host your own Selenium server.
 
 ### 4.2 Setup and Maintenance
@@ -111,9 +111,9 @@ Selenium<sup>2</sup> SaaS Agent Setup | ![][green] No<sup>4</sup>  | ![][green] 
 Selenium<sup>2</sup> Maintenance      | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup>  | ![][red] Customer responsibility
 Selenium<sup>2</sup> Support          | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup> | ![][green] Yes<sup>3</sup>  | ![][red] No
 
-<sup>1</sup> A Selenium SaaS Agent with VPN is used to surpass the company network firewall.  
-<sup>2</sup> Selenium is an open-source third-party component that is not maintained/supported by Mendix.  
-<sup>3</sup> Provided by your Selenium SaaS provider.  
+<sup>1</sup> A Selenium SaaS Agent with VPN is used to surpass the company network firewall.<br />
+<sup>2</sup> Selenium is an open-source third-party component that is not maintained/supported by Mendix.<br />
+<sup>3</sup> Provided by your Selenium SaaS provider.<br />
 <sup>4</sup> Not required in this option.
 
 ## 5 Setup Instructions

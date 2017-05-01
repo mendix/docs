@@ -145,7 +145,7 @@ Committing changes in online working copy [...] to team server project [...] bra
     Successfully committed revision: 3\. Done.
     ```
 
-    Note that the steps for project creation (line 3) and committing to the Team Server (line 10) can take some time, so please be patient. Be aware that 'revision -1' refers to the latest revision, and that 'branch null' is equal to mainline.
+Note that the steps for project creation (line 3) and committing to the Team Server (line 10) can take some time, so please be patient. Be aware that 'revision -1' refers to the latest revision, and that 'branch null' is equal to mainline.
 
 ## Opening the app in the Mendix Modeler
 

@@ -159,7 +159,7 @@ Committing changes in online working copy [...] to team server project [...] bra
 
 2.  Open the new project, and on the right hand side click on the **Edit in Modeler** button.
 
-3.  If you have the [Mendix Modeler](https://appstore.home.mendix.com/link/modelers/) 6.0 or later, it will start and load the app you just created from the Team Server.
+3.  If you have the latest [Mendix Modeler](https://appstore.home.mendix.com/link/modelers/), it will start and load the app you just created from the Team Server.
 
 ## Next step
 

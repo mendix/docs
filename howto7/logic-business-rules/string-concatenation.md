@@ -34,15 +34,15 @@ Also the entire expression is surrounded with a trim, in case we only have a sin
 
 ```
 trim(
-( **if** $ContactPerson/Firstname != **empty** and $ContactPerson/Firstname != **''
-****then** $ContactPerson/Firstname + **' '****else** **''** ) +
-( **if**  $ContactPerson/Middlename != **empty**  and $ContactPerson/Middlename != **''
-****then**  $ContactPerson/Middlename + **' '****else**  **''** ) +
-( **if**  $ContactPerson/Lastname != **empty**  and $ContactPerson/Lastname != **''
-****then**  $ContactPerson/Lastname + **' '****else**  **''** ) +
-( **if**  $ContactPerson/Suffix !=  **empty**  
-**then**  getCaption( $ContactPerson/Suffix )
-**else** '')
+( if $ContactPerson/Firstname != empty and $ContactPerson/Firstname != ''
+then $ContactPerson/Firstname + ' ' else '' ) +
+( if  $ContactPerson/Middlename != empty  and $ContactPerson/Middlename != ''
+then  $ContactPerson/Middlename + ' ' else  '' ) +
+( if  $ContactPerson/Lastname != empty  and $ContactPerson/Lastname != ''
+then  $ContactPerson/Lastname + ' ' else  '' ) +
+( if  $ContactPerson/Suffix !=  empty  
+then  getCaption( $ContactPerson/Suffix )
+else '')
 )
 ```
 
@@ -54,7 +54,7 @@ The most flexible solution is to break the string concatenate down into separate
 In this example we went even one step further in the stability of the expression. By adding an additional trim to the attribute we prevent adding additional white spaces that might have been added by the user. Using the microflow below we are absolutely sure never to get any white spaces or null values in our text.
 
 ```
-trim(  $ContactPerson/Fullname + **' ' **+ trim(  $ContactPerson/Firstname ) )
+trim(  $ContactPerson/Fullname + ' ' + trim(  $ContactPerson/Firstname ) )
 ```
 
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/60fd9671-0e98-4ee3-9719-e0a060abe844/bco_contactperson_createfullname?embed=true"></iframe>

@@ -13,37 +13,34 @@ If you know what you are doing, the quick installation instructions below are fo
 
 **Quick installation instructions**
 
+For the q   uick installation we assume that you have `node` already installed. 
 Set up a new `node` project and install the dependencies:
 
 ```bash
 $ mkdir my-app-generator
 $ cd my-app-generator
 $ npm init --yes
-$ npm install -g typescript tsd
-$ npm install mendixmodelsdk mendixplatformsdk when --save
-$ tsd install when --save
-$ curl -o tsconfig.json -sL http://tinyurl.com/mxsdk-tsconfig
+$ npm install -g typescript
+$ npm install mendixmodelsdk mendixplatformsdk when @types/when --save
+$ tsc --init
 ```
-
-We use [curl](http://curl.haxx.se/download.html#Win32) to download a `tsconfig.json` file (see below) that we've already set up for you.
 
 ## Setting up your development tools
 
-1.  Install [Node.js](https://nodejs.org/). Make sure that version 4.2._x_ is installed. If you need to download it, you can find it on [this page](https://nodejs.org/en/download/releases/).
+1.  Install the latest LTS version of [Node.js](https://nodejs.org/). If you need to download it, you can find it on [this page](https://nodejs.org/en/download/releases/).
 
 2.  Open a terminal, on Windows e.g. [Command Prompt](http://windows.microsoft.com/en-us/windows/command-prompt-faq), and run the following command:
 
     ```text
     $ node --version
-    v4.2.2
+    v6.0.0
     ```
 ` 
     For Debian-based Linux distributions such as Ubuntu, please refer to [this article](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
-    On Linux, if you get an error about node being unknown, use `apt-get install nodejs-legacy` to solve this.`
 
     In the rest of the tutorial, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
 
-3.  Install [Visual Studio Code](https://code.visualstudio.com/) - not to be confused with Visual Studio - a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v0.7.0+); check the version you are using through Help > About when you have Code opened.
+3.  Install [Visual Studio Code](https://code.visualstudio.com/) - not to be confused with Visual Studio - a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+); check the version you are using through Help > About when you have Code opened.
 4.  Install TypeScript 2.*.* with [`npm`](https://www.npmjs.com/) , Node.js' package manager:
 
     ```text
@@ -104,7 +101,9 @@ We use [curl](http://curl.haxx.se/download.html#Win32) to download a `tsconfig.j
     {
     	"compilerOptions" : {
     		"module" : "commonjs",
-    		"target" : "es5"
+    		"target" : "es5",
+            "noImplicitAny": false,
+            "sourceMap": false
     	},
     	"files" : [
     		"script.ts"

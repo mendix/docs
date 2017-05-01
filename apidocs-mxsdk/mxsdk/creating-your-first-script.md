@@ -139,8 +139,7 @@ Read more about [consuming promises](http://know.cujojs.com/tutorials/promises/c
     Successfully opened new online working copy [...] for project [...]: NewApp-[...]
     Closing connection to Model API...
     Closed connection to Model API successfully.
-quality
-Committing changes in online working copy [...] to team server project [...] branch null base revision -1
+    Committing changes in online working copy [...] to team server project [...] branch null base revision -1
     Successfully committed changes to team server: revision 3 on branch null
     Successfully committed revision: 3\. Done.
     ```

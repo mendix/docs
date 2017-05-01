@@ -77,11 +77,9 @@ client.platform().createNewApp(`NewApp-${Date.now() }`)
 
 The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix platform which will also create a commit in the Team Server repository. The result of this call will be accessible via the Mendix Modeler but in order to be able to manipulate it using the SDK you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
 
-<div class="alert alert-info">{% markdown %}
+If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Modeler version. Earlier versions might not be supported!
 
-If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the Mendix Modeler version 5.20 or later. Earlier versions are not supported!
-
-{% endmarkdown %}</div>**lines 13-21**
+**lines 13-21**
 ```js
     .then(workingCopy => loadDomainModel(workingCopy))
     .then(workingCopy => {
@@ -109,13 +107,9 @@ Now that you have an online working copy, you can start manipulating the model. 
 
 Once you are done with the model changes, you can commit the changes back to the Team Server by calling `workingCopy.commit()`. Finally, in the done block you print a success message if things went OK, or handle the error otherwise. 
 
-<div class="alert alert-success">{% markdown %}
-
 You may have noticed that the script above uses `then()` and `done()` methods instead of callback functions. These can be called on the Promises that the Platform SDK returns to enable you to handle the result of asynchronous calls.
 
 Read more about [consuming promises](http://know.cujojs.com/tutorials/promises/consuming-promises) with [when.js](https://github.com/cujojs/when).
-
-{% endmarkdown %}</div>
 
 ## Compiling and running the script
 

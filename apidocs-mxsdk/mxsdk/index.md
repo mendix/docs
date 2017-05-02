@@ -47,12 +47,6 @@ Browse the compiled documentation about the Mendix Metamodel, as well as externa
 *   [Mendix Platform SDK API docs](https://apidocs.mendix.com/platformsdk/latest/)
 *   [FAQ](faq)
 
-### Example Code
-
-*   [Example scripts](https://github.com/mendix/mendixplatformsdk-examples) (generate crud app, generate textual representation for microflow, and reverse engineering) (github)
-*   [Components library](https://github.com/mendix/mendixmodelcomponents) to help you generate basic CRUD pages for entities
-*   [Use case examples](use-case-examples) for the different use cases such as Analyzing and Exporting models.
-
 ## Need Help?
 
 Check whether your question is answered in the [frequently asked questions](faq) section. Otherwise, ask your question in the [Beta Program project](https://sprintr.home.mendix.com/link/project/5d2b2ddb-5cdb-479f-b8de-0bf1e883356a) on the platform or in our [Gitter](https://gitter.im/mendix/mendixplatformsdk) chat room. Check out the technical specifications of the Mendix Platform SDK and Model API.

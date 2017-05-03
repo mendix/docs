@@ -151,7 +151,7 @@ To enable persistent file storage, you need to configure the S3 object store (wh
 7. After setting the variables, you need to restart your app for the changes to take effect, as stated in this warning message:
     ![](attachments/18448647/18580570.png)
 
-    After deploying an app from the Modeler, two variables will be added automatically: `DEVELOPEMENT_MODE` and `ADMIN_PASSWORD`. The development mode is true by befault; change this to false to run the app in production. The admin password is the password of the default admin of your Mendix app.
+    After deploying an app from the Modeler, two variables will be added automatically: `DEVELOPEMENT_MODE` and `ADMIN_PASSWORD`. The development mode is true by default; change this to false to run the app in production. The admin password is the password of the default admin of your Mendix app.
 
 8. You can now go back and click **Finish** in the final section of the the **Edit HP Helion Settings** configuration window (see step #6 of [3 Configure the Helion Endpoint in the Modeler](#ConfiguretheHelionEndpointintheModeler)).
 

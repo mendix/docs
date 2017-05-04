@@ -8,16 +8,15 @@ toc-level: "1"
 
 ### Improvements
 
-* Transporting a new deployment package dead-ended in a "Deploy successful" screen. Now we redirect you to the environment details screen, which is much more useful.
+* Transporting a new deployment package dead-ended in a "Deploy successful" screen. Users are redirected to the environment details screen, which is much more useful.
 
 ### Fixes
 
-* Restoring very large backups in Mendix Cloud v4 failed. But now, not anymore, unless the backup fills up the disk of the database.
-* Alert Details had the wrong menu item highlighted.
+* We fixed the failing of large backups in Mendix Cloud v4. Backups will now only fail when the disk of the database is filled up.
+* Alert Details now highlights the right menu item.
 * Fixed a race condition where two apps created at the same time could get the same domain name.
 * Added a warning message before restore backup, to prevent users clearing their environment. Clearing the environment before restoring resulted in a much slower non-incremental restore operation.
-* Disabled automatic copying of "Data Snapshots" to empty environments in Mendix Cloud v4 Pro/Enterprise environments. This features is only used in Free Apps. An issue was that weak admin passwords in the database snapshot would prevent the app from starting.
-
+* Disabled automatic copying of "Data Snapshots" to empty environments in Mendix Cloud v4 Pro/Enterprise environments. This features is only used in Free Apps. Weak admin passwords in the database snapshot would prevent the app from starting.
 
 ## April 5th, 2017
 

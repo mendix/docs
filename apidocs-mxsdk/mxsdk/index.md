@@ -11,7 +11,6 @@ Before the Mendix SDK can make your life easier, there's some learning to do. Fo
 *   [Setting up your development environment](setting-up-your-development-environment)
 *   [Creating your first script](creating-your-first-script)
 *   [Creating the domain model](creating-the-domain-model)
-*   [Development Workflow](development-workflow)
 *   [Manipulating existing models](manipulating-existing-models)
     *   [Changing things in the model](changing-things-in-the-model)
     *   [Closing the server connection](closing-the-server-connection)

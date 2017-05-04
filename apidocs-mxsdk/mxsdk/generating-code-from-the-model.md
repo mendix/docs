@@ -196,7 +196,7 @@ Execute the script. You should have a new project with the generated entities.
 
 <div class="alert alert-success">{% markdown %}
 
-Instead of creating a new project, you can also reuse an existing project or even an existing online working copy. See [Development Workflow](development-workflow) for more detail.
+Instead of creating a new project, you can also reuse an existing project or even an existing online working copy.
 
 {% endmarkdown %}</div>
 

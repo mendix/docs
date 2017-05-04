@@ -5,7 +5,7 @@ parent: "your-learning-path-for-the-mendix-sdk"
 ---
 This tutorial will guide you through the process of setting up everything you need to start working with the Mendix Platform SDK. In [the previous part](setting-up-your-development-environment) you set up all the development tools. Let's create an SDK script that automatically bootstraps a new Mendix app.
 
-## Writing a first script
+## Writing a First Script
 
 After setting up all the prerequisites, you can start writing a first script that will use the Mendix Platform SDK.
 
@@ -77,7 +77,7 @@ client.platform().createNewApp(`NewApp-${Date.now() }`)
 
 The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix platform which will also create a commit in the Team Server repository. The result of this call will be accessible via the Mendix Modeler but in order to be able to manipulate it using the SDK you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
 
-If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Modeler version. Earlier versions might not be supported!
+If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Desktop Modeler version. Earlier versions might not be supported!
 
 **lines 13-21**
 ```js
@@ -111,7 +111,7 @@ You may have noticed that the script above uses `then()` and `done()` methods in
 
 Read more about [consuming promises](http://know.cujojs.com/tutorials/promises/consuming-promises) with [when.js](https://github.com/cujojs/when).
 
-## Compiling and running the script
+## Compiling and Running the Script
 
 1.  Compile the script with the TypeScript compiler into JavaScript using the following command:
 
@@ -146,14 +146,12 @@ Read more about [consuming promises](http://know.cujojs.com/tutorials/promises/c
 
 Note that the steps for project creation (line 3) and committing to the Team Server (line 10) can take some time, so please be patient. Be aware that 'revision -1' refers to the latest revision, and that 'branch null' is equal to mainline.
 
-## Opening the app in the Mendix Modeler
+## Opening the App in the Mendix Modeler
 
-1.  In the Mendix [Development Portal](https://sprintr.home.mendix.com/), navigate to your Projects. The app you just created should be visible at the top of the list.
+1.  In the Mendix [Developer Portal](https://sprintr.home.mendix.com/), navigate to your Projects. The app you just created should be visible at the top of the list.
+2.  Open the new project, and on the right hand side click on **Edit in Modeler**.
+3.  If you have the latest [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/), it will start and load the app you just created from the Team Server.
 
-2.  Open the new project, and on the right hand side click on the **Edit in Modeler** button.
+## Next Step
 
-3.  If you have the latest [Mendix Modeler](https://appstore.home.mendix.com/link/modelers/), it will start and load the app you just created from the Team Server.
-
-## Next step
-
-Continue with [Creating the domain model](creating-the-domain-model)
+Continue with [Creating the Domain Model](creating-the-domain-model)

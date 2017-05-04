@@ -99,10 +99,6 @@ module.exports = {
       to: "/apidocs-mxsdk/mxsdk/creating-your-first-script"
     },
     {
-      from: "/MXSDK/Development+Workflow",
-      to: "/apidocs-mxsdk/mxsdk/development-workflow"
-    },
-    {
       from: "/MXSDK/Domain+Model+Metamodel",
       to: "/apidocs-mxsdk/mxsdk/domain-model-metamodel"
     },

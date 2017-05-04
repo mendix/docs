@@ -5,16 +5,14 @@ parent: "your-learning-path-for-the-mendix-sdk"
 ---
 This tutorial will lead you through the process of setting up everything you need to start working with the Mendix Platform SDK. This includes setting up development tools and creating a first SDK script that automatically bootstraps a new Mendix app.
 
-### Contents of this page
-
 ## Quick Installation
 
 If you know what you are doing, the quick installation instructions below are for you. Otherwise, please skip this paragraph and continue with [Setting up your development tools](setting-up-your-development-environment).
 
 **Quick installation instructions**
 
-For the q   uick installation we assume that you have `node` already installed. 
-Set up a new `node` project and install the dependencies:
+For the quick installation, we assume that you have `node` already installed. 
+Set up a new `node` project and install the dependencies using the following steps:
 
 ```bash
 $ mkdir my-app-generator
@@ -25,7 +23,7 @@ $ npm install mendixmodelsdk mendixplatformsdk when @types/when --save
 $ tsc --init
 ```
 
-## Setting up your development tools
+## Setting Up Your Development Tools
 
 1.  Install the latest LTS version of [Node.js](https://nodejs.org/). If you need to download it, you can find it on [this page](https://nodejs.org/en/download/releases/).
 
@@ -56,7 +54,7 @@ $ tsc --init
 
     If the version number is much lower, it could be that you also have an outdated TypeScript SDK on your system, left over from a previous installation. You can either uninstall the old TypeScript SDK, or bypass it by removing the old TypeScript SDK from your system's PATH environment variable.
 
-## Setting up a working directory for your script
+## Setting Up a Working Directory for Your Script
 
 1.  First, create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a  [`package.json`](https://docs.npmjs.com/files/package.json)with default contents. Through this file you control your `npm` package. 
 
@@ -115,6 +113,6 @@ $ tsc --init
 
     Create new files in your project directory with Visual Studio Code by hovering with the mouse cursor over the name of the working directory in the left side pane. A "new file" icon appears. Click it to create a new file. For more information on basic editing with Visual Studio Code, check the [manual](https://code.visualstudio.com/Docs/editor/codebasics).
 
-## Next step
+## Next Step
 
-Continue with [Getting started - Creating your first script](creating-your-first-script)
+Continue with [Getting started - Creating Your First Script](creating-your-first-script)

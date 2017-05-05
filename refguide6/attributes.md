@@ -138,4 +138,4 @@ In a webshop you want to show the total expenses for each customer. These are ca
 ![](attachments/819203/917570.png)
 
 ## Effects of data type changes on existing attributes
-See [Data Migration](data-migration)
+See [Attributes Type Migration](attributes-type-migration)

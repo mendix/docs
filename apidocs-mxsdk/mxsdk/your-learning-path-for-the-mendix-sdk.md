@@ -32,15 +32,9 @@ To learn how to navigate to the main documentation sources, refer to the [Creati
 
 ## Taking the Mendix SDK further
 
-### [Development workflow](development-workflow)
+### Development Workflow
 
 The script you used in the Creating your first script step was doing a full round-trip. It created an app, made it available as a working copy and committed it back to the TeamServer after making changes. Depending on what exactly you're using the SDK for (see [Use case examples](use-case-examples)), this may or may not be a good idea. If you're interested in, for instance, analyzing your model, you want to start from an existing project instead of a newly created app and you won't have any changes to your model to commit.
-
-To get an overview of your options, you can go to [Development Workflow](development-workflow), which includes a number of related code examples.
-
-### [Examples](use-case-examples)
-
-A complete example of a script that generates a basic CRUD (Create, Read, Updated, Delete) app that contains a domain model, pages, and microflows can be found here: [CRUD and Export examples on Github](https://github.com/mendix/mendixplatformsdk-examples/). Next to that you can also find an example that exports your microflows to a textual representation.
 
 ### [Manipulating existing models](manipulating-existing-models)
 

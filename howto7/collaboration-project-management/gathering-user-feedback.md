@@ -1,5 +1,5 @@
 ---
-title: "How to use the Feedback Widget"
+title: "How to Use the Feedback Widget"
 space: "Mendix 7 How-To's"
 category: "Collaboration & Project Management"
 tags: []
@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Create an App containing a working application model
 
-## 3 Ensuring the Mendix Feedback Widget Is Included in Your App
+## 3 Adding the Mendix Feedback Widget to Your App
 
 The Feedback Widget is automatically included in any new App that you create. 
 To ensure you have the lastest version of the Feedback Widget included in your App, follow these steps:
@@ -36,7 +36,7 @@ To ensure you have the lastest version of the Feedback Widget included in your A
 
     ![](attachments/18448640/18580453.png)
 
-## 4 Configuring the Widget
+## 4 Configuring the Feedback Widget
 
 To configure the widget, follow these steps:
 
@@ -68,7 +68,7 @@ If necessary, you can find the identifier (App ID) of your App in the [Developer
 
 8. If you have configured multiple home pages for different user roles, you need to add the Mendix Feedback Widget to each home page for the user role from which you want to gather feedback. This can easily be done by copying the configured widget to the other relevant layouts and/or pages.
 
-## 5 Gathering and receiving Feedback
+## 5 Gathering and Receiving Feedback
 
 When a version of the application is deployed that contains a Mendix Feedback Widget configured and added to all home pages, you can start gathering feedback. 
 
@@ -89,8 +89,8 @@ To process the feedback, follow these steps:
 
     ![](attachments/18448640/feedbacklist.jpg)
 
-3. Click **Details** of the feedback item to open the details of that item.
-4. Process the item by commenting on it (for example, ask for clarification) or by choosing one of the actions displayed in the menu bar on the right:
+3. Click **Details** for a feedback item to open its details.
+4. Process the item by commenting on it (for example, asking for clarification), or by choosing one of the actions displayed in the menu on the right:
 
     ![](attachments/18448640/feedbackdetails.jpg)
 
@@ -109,29 +109,29 @@ To process the feedback, follow these steps:
 
 ### 6.1 Adding a Feedback Story to Your Backlog
 
-After clicking **Accept feedback**, you can create a story on the basis of the feedback item and add it to your backlog. To do that, follow these stepsL
+After clicking **Accept feedback**, you can create a story on the basis of the feedback item and add it to your backlog. To do that, follow these steps:
 
-1. Fill in a logical name for the user story and a description.
+1. Enter a logical name and a description for the user story.
 2. Decide whether the feedback item should be classified as a bug or a feature.
 3. Select the sprint/backlog to which you want to add the story.
-4. Select any label that you want to add to the story (if you have any labels).
+4. Select any label (if you have any) that you want to add to the story.
 
     ![](attachments/18448640/acceptfeedback.jpg)
 
 ## 7 Providing Feedback to the User
 
-Once a feedback item is connected to a user story, Mendix will automatically update the person who submitted the story on the progress made on that story:
+Once a feedback item is connected to a user story, the user who submitted the story will automatically be updated on the progress made on that story:
 
 * Adding a story with feedback attached from your backlog to a sprint will result in a message that the item has been planned
 * Completing a sprint that contains a story with feedback attached will result in a message that the item has been completed
 
-## 8 View the List of Your Own Feedback items
+## 8 Viewing the List of Your Own Feedback Items
 
-After you have provided feedback yourself, you can view the feedback item in the feedback list in your profile settings. To find the list of the provided feedback items, follow these steps:
+You can view your own submitted feedback items in the feedback list in your profile settings. Follow these steps to find the list of the provided feedback items:
 
-1. In the [Developer Portal](http://home.mendix.com) click on your profile in the right top corner.
-2. Click **Show Profile**
-3. Open the **Feedback** tab
+1. Click on your profile in the right top corner in the [Developer Portal](http://home.mendix.com).
+2. Click **Show Profile**.
+3. Go to the **Feedback** tab.
 
     ![](attachments/18448640/feedbackoverview.jpg)
 

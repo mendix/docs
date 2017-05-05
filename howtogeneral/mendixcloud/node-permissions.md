@@ -8,7 +8,7 @@ tags: ""
 
 ## 1 Introduction
 
-Access management for your Mendix Cloud environments is handled in the **Node Security** tab. Each team member can subscribe or unsubscribe to the alerts, and the **Technical Contact** can manage the permissions of each team member.
+Access management for your Mendix Cloud environments is handled in the **Node Security** tab under **Security**. Each team member can subscribe or unsubscribe to the alerts, and the **Technical Contact** can manage the permissions of each team member.
 
 <div class="alert alert-info">{% markdown %}
 

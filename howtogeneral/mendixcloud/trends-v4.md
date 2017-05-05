@@ -6,9 +6,9 @@ category: "Mendix Cloud"
 
 ## 1 Introduction
 
-To monitor the application health and performance you can view the trends. 
+To monitor the application health and performance you can view the trends.
 
-## 2 Monitor Trends Access  
+## 2 Monitor Trends Access
 
 To view the **Trends** you must have permission to **Access the Monitoring**.
 
@@ -43,7 +43,8 @@ You can find the trends by following these steps:
 
 ## 3 Application Statistics
 
-{Introduction}
+In this section you will find the explanation for metrics that represent the current status and statistics of a running mendix application.
+Starting with the requests that the application processes from the services/clients its integrated with. On to the actions it does on its own database, Java Virtual Machine related statistics, and the Jetty web server it uses.
 
 ## <a name="Trends-appmxruntimerequests"></a>3.1 Number of Handled External Requests
 
@@ -53,17 +54,17 @@ The requests graph shows the number of requests that are sent from the client or
 
 The request types are:
 
-*   api-doc/:
-*   debugger/:
-*   default:
-*   file:
-*   odata-docs/:
-*   openid/:
-*   p/:
-*   rest-doc/:
-*   ws-doc/:
-*   ws:
-*   xas/:
+*   api-doc/: A general api doc overview for other doc request handlers
+*   debugger/: Mendix runtime debugger request handler
+*   /: Default request handler
+*   file: Request handler used for serving files
+*   odata-docs/: documentation request handler for odata
+*   openid/: OPENID authentication request handler
+*   p/: Request handler for Custom page urls
+*   rest-doc/: HTTP Rest webservice request handler documentation
+*   ws-doc/: SOAP webservice request handler documentation
+*   ws: SOAP webservice call request handler
+*   xas/: Request handler used by the mendix runtime itself
 
 ### <a name="Trends-appmxruntimeconnectionbus"></a>3.2 Number of Database Queries Being Executed
 
@@ -71,11 +72,11 @@ This graph shows the number of database queries that are executed by your Mendix
 
 The types are:
 
-*   inserts:
-*   transactions:
-*   update:
-*   select:
-*   delete
+*   inserts: Amount of SQL INSERT INTO statements per second. This is used to add new rows of data to a table in the database.
+*   transactions: Amount of SQL transactions per second. A transaction is a unit of work that is performed against a database.
+*   update: Amount of SQL UPDATE statements per second. The SQL UPDATE Query is used to modify the existing records in a table.
+*   select: Amount of SQL SELECT statements per second. The SQL SELECT statement is used to fetch the data from a database table which returns this data in the form of a result table.
+*   delete: Amount of SQL DELETE statements per second. The SQL DELETE Query is used to delete the existing records from a table.
 
 ### <a name="Trends-appmxruntimesessions"></a>3.3 User Accounts and Login Sessions
 
@@ -83,9 +84,9 @@ The sessions graph shows the number of logged-in named and anonymous user sessio
 
 The user types are:
 
-*   named users:
-*   concurrent named user sessions:
-*   concurrent anonymous user sessions:
+*   named users: Total number of user accounts
+*   concurrent named user sessions: Total number of named login sessions that is going on at that moment
+*   concurrent anonymous user sessions: Total number of anonymous login sessions that is going on at that moment
 
 ### <a name="Trends-appmxruntimejvmheap"></a>3.4 JVM Object Heap
 
@@ -97,10 +98,10 @@ If the tenured generation shows up to as big as 65% of the complete heap size, t
 
 The object types are:
 
-*   tenured generation:
-*   native memory:
-*   eden space:
-*   unused:
+*   tenured generation:  As objects "survive" repeated garbage collections in the survivor space they are migrated to the tenured generation. You can look at this metric as a number of long living objects in JVM.
+*   native memory: The native memory is the memory available to the operating system.
+*   eden space: The pool from which memory is initially allocated for most objects.
+*   unused: Unused JVM heap memory
 
 ### <a name="Trends-appmxruntimejvmprocessmemory"></a>3.5 JVM Process Memory Usage
 
@@ -110,27 +111,27 @@ More information about this graph is available in a Tech Blog post: [What's in m
 
 The types are:
 
-*   code cache:
-*   native code:
-*   jar files:
-*   tenured generation:
-*   survivor space:
-*   eden space:
-*   unused java heap:
-*   permanent generation:
-*   other:
-*   thread stacks:
+*   code cache: JVM also includes a code cache, containing memory that is used for compilation and storage of native code.
+*   native code: JVM allocated a certain amount of memory space for native bytecode.
+*   jar files: Jar files necessary for jvm itself to run.
+*   tenured generation: As objects "survive" repeated garbage collections in the survivor space they are migrated to the tenured generation. You can look at this metric as a number of long living objects in JVM.
+*   survivor space: The pool containing objects that have survived the garbage collection of the Eden space.
+*   eden space: The pool from which memory is initially allocated for most objects.
+*   unused java heap: Unused jvm heap memory
+*   permanent generation: The pool containing all the reflective data of the virtual machine itself, such as class and method objects. With Java VMs that use class data sharing, this generation is divided into read-only and read-write areas.
+*   other: Virtual or reserved memory space
+*   thread stacks: Stacks that are reserved for unique threads
 
 ### <a name="Trends-appm2eeserverthreadpool"></a>3.6 Threadpool for Handling External Requests
 
-The application server thread pool graph shows the number of concurrent requests that are being handled bij the Mendix Runtime, but only when they're initiated by a remote API, like the way the normal web-based client communicates, or by calling web services. Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
+The application server thread pool graph shows the number of concurrent requests that are being handled by the Mendix Runtime, but only when they're initiated by a remote API, like the way the normal web-based client communicates, or by calling web services. Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
 
 The types are:
 
-*   min threads:
-*   max threads:
-*   active threads:
-*   threadpool size:
+*   min threads: Minimum bound of threads to be used by Jetty threadpool
+*   max threads: Maximum bound of threads to be used by Jetty threadpool
+*   active threads: Active threads that are being used within the Jetty threadpool
+*   threadpool size: The current total size of the Jetty threadpool
 
 ### <a name="Trends-appmxruntimethreads"></a>3.7 Total Number of Threads in the JVM Process
 
@@ -142,7 +143,7 @@ Mendix 4.0 introduced Non-Persistent Entities which live in the JVM memory and a
 
 ## 4 Database Statistics
 
-{Introduction}
+In this section you will find the statistics about the database that the application uses.
 
 ### <a name="Trends-dbpgstatdatabaseVERSIONmain"></a>4.1 Mutations
 
@@ -150,11 +151,11 @@ This graph shows the number of database objects that were actually changed by da
 
 The types are:
 
-*   xact commit:
-*   xact rollback:
-*   tuples inserted:
-*   tuples updated:
-*   tuples deleted:
+*   xact commit: Number of transactions committed per second
+*   xact rollback: Number of transactions rolledback per second
+*   tuples inserted: Number of tuples inserted per second
+*   tuples updated: Number of tuples updated per second
+*   tuples deleted: Number of tuples deleted per second
 
 ### <a name="Trends-dbpgtableindexsizeVERSIONmain"></a>4.2 Index vs. Table Size
 
@@ -162,12 +163,12 @@ This database size graph shows the distribution between disk space used for stor
 
 The types are:
 
-*   tables:
-*   indexes:
+*   tables: Amount of space taken by the tables in the database
+*   indexes: Amount of space taken by the indexes in the database
 
 ### 4.3 Application Node
 
-{Introduction}
+Application Node is the isolated & secure machine that your application runs on, this sections shows the crucial information about this machine.
 
 #### <a name="Trends-appcpu"></a>4.3.1 CPU
 
@@ -181,7 +182,7 @@ The memory graph shows the distribution of operating system memory that is avail
 
 ### 4.4 Database Node
 
-{Introduction}
+The database node is the isolated & secure machine that your application runs on, this section shows the crucial information about this machine.
 
 #### <a name="Trends-dbcpu"></a>4.4.1 CPU
 
@@ -196,9 +197,10 @@ Clearly visible amounts of iowait, in combination with a high number of disk rea
 The memory graph shows the distribution of operating system memory that is available for this server. The most important part of this graph is the 'cache' section. This type of memory usage contains parts of the database storage that have been read from disk earlier. It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server, at the cache part. A lack of disk cache on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application.
 
 The types are:
-*   used memory:
-*   freeable memory:
-*   swap usage:
+
+*   used memory: Total memory size of the DB instance minus the freeable memory.
+*   freeable memory: The amount of available random access memory.
+*   swap usage: The amount of swap space used on the DB instance.
 
 #### <a name="Trends-dbpgstatactivityVERSIONmain"></a>4.4.3 Database Connections
 
@@ -206,7 +208,7 @@ The database connections graph shows the number of connections to the PostgreSQL
 
 ## <a name="Trends-dbdiskstatsiops"></a>5 Both Application and Database Node
 
-{Introduction}
+Shared statistics for both of the machines.
 
 ### <a name="Trends-appdiskstatsiops"></a>5.1 Disk IOPS
 
@@ -214,8 +216,8 @@ The Disk IO statistics show the number of disk read and write operations that ar
 
 The types are:
 
-*   read:
-*   write:
+*   read: Read ops on the current targeted filestorage
+*   write: Write ops on the current targeted filestorage
 
 ### <a name="Trends-appload"></a><a name="Trends-dbload"></a>5.2 Load
 

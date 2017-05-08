@@ -135,6 +135,31 @@ TODO
 
 _Default value_: No
 
+### Uniqueness Validation
+
+This option can have two different values 'Runtime' and 'Database'. For Mendix 7.3 or later, 'Database' will be the default value for new projects but old projects will still have 'Runtime' as the default value.
+<br>
+#### Database
+
+When 'Database' is selected, attributes and associations will be validated for uniqueness at the database level. This will ensure that the data doesn't get corrupted even in the case of high concurrency transactions.   
+'Database' is also the recommended setting since it ensures Data Accuracy at the highest level.
+
+#### Runtime
+Uniqueness validation requires a database query to be executed per object and the results are verified in memory.   
+
+#### Switching Uniqueness Validation Values
+You can always switch between 'Runtime' and 'Database'.
+
+##### 'Runtime' to 'Database'
+Moving from 'Runtime' to 'Database' will mean that the unique constraints will be added to the database and uniqueness responsibility will belong to the database.   
+Before switching to the 'Database' option, "DataStorage.EnableDiagnostics" custom runtime setting can be used to generate uniqueness violation report.   
+Unique Constraint Migration needs to be done if the generated report shows violations.    
+See https://docs.mendix.com/refguide7/uniqueconstraint-migration for more information on migration.
+
+##### 'Database' to 'Runtime'
+Falling back to the 'Runtime' option will remove the unique constraints from the database and uniqueness rules will not be checked at the database level anymore.
+Hence, data accuracy can't be guaranteed at the highest level especially in the case of high concurrency transactions.
+
 ## Modeler
 
 These settings determine the behavior of the Modeler for this project. The settings apply to everyone that is working on this project.

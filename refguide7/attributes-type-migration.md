@@ -4,15 +4,15 @@ space: "Reference Guide 7"
 parent: "data-storage"
 ---
 
-## Effects of data type changes on existing attributes
+## Effects of Data Type Changes on Existing Attributes
 
-### Data type change behavior
+### Data Type Change Behavior
 
 If the type of an existing attribute is changed in the Modeler, mostly the existing column will be dropped and a new column will be created. For some attribute type changes Mendix tries to convert existing data in the database to the new type.
 
 If data should NOT be converted to the new type, you must remove the attribute in the Modeler and create a new column (with the same name), instead of only changing the data type. Even if you change the type and rename the column, Mendix remembers the old column name and will try to convert the column values if possible.
 
-### Conversion table
+### Conversion Table
 
 In the table below, for each data type change you can see whether Mendix will convert the values.
 
@@ -39,7 +39,7 @@ Symbol | Description
 **–** | Conversion is not always possible, or data will be changed during conversion. If conversion is not possible, the behavior is the same as the "**X**" ones.
 **X** | Conversion not possible. The original column will be removed and a new column will be created with default values for the existing rows.
 
-### Manual conversion
+### Manual Conversion
 
 Even if Mendix cannot convert the values of a specific column to another type, you can still manage that manually. Change the name of the attribute, for example append the text 'Deleted' to its name. Create a new attribute with the same name and the new data type. Look up each occurrence of the old (renamed) attribute in the whole model and change this to the new attribute. Be sure that there is no microflow or form anymore which refers to the old attribute.
 

@@ -7,8 +7,9 @@ description: "Describes how to configure custom domains as well as generate, upl
 
 ## 1 Introduction
 
-When your Mendix App needs to be accessible via your own URL, for example https://myapp.mycompany.com/, you have to provide a Custom Domain Certificate (a SSL/TLS Certificate) so we can keep serving your Mendix App via a secure connection. 
-This option is only available for licensed apps.
+The Mendix Cloud supports adding custom domains such as https://myapp.mycompany.com/ to your environments. As we only allow HTTPS connections, you have to provide a Custom Domain Certificate (a SSL/TLS Certificate). This how-to walks you through the process.
+
+This option is available for free for licensed apps. You can not add custom domains to your free apps.
 
 **This how-to will teach you how to do the following:**
 

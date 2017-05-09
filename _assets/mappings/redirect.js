@@ -1559,7 +1559,7 @@ module.exports = {
     },
     {
       from: "/howto50/Trends",
-      to: "/howtogeneral/mendixcloud/trends"
+      to: "/developerportal/operate/trends"
     },
     {
       from: "/howto50/Triggering+Logic+using+Microflows",
@@ -1790,7 +1790,7 @@ module.exports = {
     },
     {
       from: "/howto6/deploying+to+the+cloud",
-      to: "/howtogeneral/mendixcloud/deploying-to-the-cloud"
+      to: "/developerportal/deploy/deploying-to-the-cloud"
     },
     {
       from: "/howto6/Design+the+Architecture",
@@ -2181,11 +2181,11 @@ module.exports = {
      ****************************************************/
     {
       from: "/mendixcloud/Custom+Domains",
-      to: "/howtogeneral/mendixcloud/custom-domains"
+      to: "/developerportal/deploy/custom-domains"
     },
     {
       from: "/mendixcloud/Deploying+to+the+cloud",
-      to: "/howtogeneral/mendixcloud/deploying-to-the-cloud"
+      to: "/developerportal/deploy/deploying-to-the-cloud"
     },
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
@@ -2221,7 +2221,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/migrating+to+v4",
-      to: "/howtogeneral/mendixcloud/migrating-to-v4"
+      to: "/developerportal/deploy/migrating-to-v4"
     },
     {
       from: "/mendixcloud/Monitoring+application+health",
@@ -2241,7 +2241,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Trends",
-      to: "/howtogeneral/mendixcloud/trends"
+      to: "/developerportal/operate/trends"
     },
     /****************************************************
      * SUPPORT

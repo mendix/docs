@@ -8,11 +8,11 @@ tags: ""
 
 ## 1 Introduction
 
-Access management for your Mendix Cloud environments is handled in the **Node Security** tab under **Security**. Each team member can subscribe or unsubscribe to the alerts, and the **Technical Contact** can manage the permissions of each team member.
+Fine grained access management for your Mendix Cloud environments is handled in the **Node Security** tab under **Security**. Each team member can subscribe or unsubscribe to the alerts, and the **Technical Contact** can manage various permissions of each team member per environment.
 
 <div class="alert alert-info">{% markdown %}
 
-Note that you need to have a **MxID** to get access to the [Developer Portal](http://home.mendix.com). To create a MxID, click [here](http://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup).
+Note that you need to have an **MxID** to get access to the [Developer Portal](http://home.mendix.com). To create an MxID, click [here](http://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup).
 
 {% endmarkdown %}</div>
 
@@ -30,7 +30,7 @@ In this section you will learn about configuring the user roles and permissions 
 
 ## 3 User Roles
 
-Users with the Technical Contact role can manage the cloud node.
+Users with the Technical Contact role can manage all the settings in the cloud node, other members are restricted in what they can manage.
 
 A cloud node always has:
 * only one Technical Contact
@@ -44,7 +44,7 @@ Note that only app team members with the **View Deploy and Monitor** permissions
 
 ### 4 Technical Contact
 
-The Technical Contact manages the cloud node and can edit the privileges of regular team members with the **View Deploy and Monitor** permissions. Only the Technical Contact can give his user role to another team member by clicking **Change to Technical Contact**.
+The Technical Contact manages the cloud node and can edit the privileges of regular team members with the **View Deploy and Monitor** permissions. Only the Technical Contact can give his user role to another team member by clicking **Change to Technical Contact**. After this, the new user has the Technical Contact role, the old user does not.
 
 The Technical Contact of the app is the first point of contact for [Mendix Support](https://www.support.mendix.com), and will receive alerts regarding the cloud node.
 
@@ -53,7 +53,7 @@ The Technical Contact of the app is the first point of contact for [Mendix Suppo
 The Technical Contact will receive the following alerts from the cloud node:
 
 *   Notifications for maintenance from **Mendix Support**
-*   Alerts from the node when problems arise (CPU load is high or running out of disk space). The Technical Contact cannot turn these off
+*   Alerts from the node when problems arise (CPU load is high, running out of disk space, etc.). The Technical Contact cannot turn these off
 
 
 ### 4.2 Mendix Support
@@ -61,7 +61,7 @@ The Technical Contact will receive the following alerts from the cloud node:
 The Technical Contact is the first point of contact for the app for [Mendix Support](https://www.support.mendix.com). The Technical Contact can submit requests for the cloud node with the following request types:
 
 *   Incidents: If incidents arise (for example, when the app is down)
-*   Standard changes: **Add App Engine/File Storage**, **Custom URL**, **Change Mendix URL**, **New App**, **(Re)new license**, **Reset Google authenticator**
+*   Standard changes: **Add Cloud Resources**, **Change Mendix URL**, **New App**, **(Re)new license**, **Reset Google authenticator**
 
 <div class="alert alert-warning">{% markdown %}
 
@@ -92,7 +92,7 @@ When **Receives Alerts** is checked, this person will receive an email when an a
 
 ### 5.4 API Rights
 
-With the API rights you can use the **Deploy API** to get programmatic access to the environment. Naturally, the API does not require two-factor authentication, so API access is disabled in production by default. The Technical Contact can assign API access. Note that the **API Rights** are needed in addition to the other permissions, so in order to access backups via the API you will need both **Access to Backups** as well as **API Rights**.
+With the API rights you can use the **Deploy API** to get programmatic access to the environment. Naturally, the API does not require two-factor authentication, so API access is disabled for the production environment by default. The Technical Contact can assign API access for each user. Note that the **API Rights** are needed in addition to the other permissions, so in order to access backups via the API you will need both **Access to Backups** as well as **API Rights**.
 
 ### 5.5 Access to Monitoring
 

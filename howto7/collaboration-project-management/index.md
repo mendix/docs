@@ -6,7 +6,6 @@ space: "Mendix 7 How-To's"
 ## Documents in This Category
 
 * [How to Contribute to a GitHub Repository](contribute-to-a-github-repository)
-* [How to Gather User Feedback](gathering-user-feedback)
 * [How to Manage Your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
 * [How to Share the Development Database](sharing-the-development-database)
 * [How to Start Your Own Repository](starting-your-own-repository)

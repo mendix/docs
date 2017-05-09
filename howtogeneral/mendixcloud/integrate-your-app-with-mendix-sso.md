@@ -67,7 +67,7 @@ This how-to uses version 3.0 of the Company Expenses (CE) app, which does not ye
 
 *   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
 *   [Trends](trends)
-*   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
+*   [How to Deploy to the Mendix Cloud](/developerportal/deploy/deploying-to-the-cloud)
 *   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
 *   [Sending Email](sending-email)
 *   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)

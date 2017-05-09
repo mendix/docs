@@ -9,7 +9,7 @@ category: "Mendix Support"
 
 ## 1 Introduction
 
-The "Cache" tab can be found in the "Metrics" page of your Cloud node. It can be used to monitor all Mendix objects that are currently being held in the memory of your environment.
+The "Cache" tab can be found on the "Metrics" page of your Cloud node. It can be used to monitor all Mendix objects that are currently being held in the memory of your environment.
 
 ## 2 About the "Cache" tab in the Mendix Cloud
 

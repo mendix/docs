@@ -2273,7 +2273,7 @@ module.exports = {
     },
     {
       from: "/mxsupport/Technical+Contact+Definition",
-      to: "/howtogeneral/support/technical-contact"
+      to: "/developerportal/settings/technical-contact"
     },
     /****************************************************
      * REFERENCE GUIDE MENDIX 4

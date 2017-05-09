@@ -190,7 +190,7 @@ Add boxes, indicators, arrows, and other information to an image only if it make
 
 Keep the images as simple as possible, because having too many arrows on an image can make it confusing!
 
-Place images in a folder with the same name as the document that uses the images, and place that folder in the attachment folder that is located in the folder as the file you're editing.
+Place images in a folder with the same name as the document that uses the images, and place that folder in the attachment folder that is located in the same folder as the file you're editing.
 
 For example, if you are adding an image to the Content Writing and Formatting Guidelines document, located at */community/documentation/*, you would place the images in the */community/documentation/attachments/content-writing-and-formatting-guidelines/* folder. That way, you can group images for the same document nicely together.
 

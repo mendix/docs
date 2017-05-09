@@ -1,1 +1,266 @@
+---
+title: "How to create a to-do app in minutes based on the Mobile Quick Starter app"
+space: "Mendix 7 How-to's"
+category: "Mobile"
+description: "Ready to build a to-do app in 20 minutes? This how-to will show you how the Mobile Quick Starter app will kickstart your mobile development."
+tags: ["Mobile", "Quick", "Starter", "App", "To-do", "Kickstart", "Development"]
+toc-level: "4"
+---
+
+## 1 Introduction
+
+This how-to is helping you to build a to-do app based on the new sample Mobile Quick Starter App. This new sample app is introduced since Mendix 7.2 and helps (new) developers to rapidly and easily build rich mobile apps with a native look & feel and according to best practices.
+The sample app is by default equiped with new (releases of) widgets, preconfigured modules, best practices and an example inspection module to kickstart your mobile development.
+
+**This how-to will teach you how to do the following:**
+* Create a project that will fasten and ease your mobile development
+* Build a to-do app
+* Configure several widgets to realize a rich mobile app with a native look and feel
+
+## 2 Prerequisites
+
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* [Mendix Modeler 7.2 or later](https://appstore.home.mendix.com/index3.html)
+
+## 3 Create and prepare a new project:
+
+Follow these steps to start-off in the right way:
+
+1. Go the the **Developer Portal** and click **Create App**.
+2. Go the the tab **Samples**.
+3. Click **Mobile Quick Starter App**.
+4. Click the button **Use this starting point >**.
+5. Configure the app settings and click **Create app**.
+6. Open the **Security** of your project.
+7. Switch the **Securiy level** to *Off*.
+
+<div class="alert alert-warning">{% markdown %}
+Switch the security level to *Off* is done for fast development. Make sure you change it back to *Production* and configure the security of your app when you are going to use the app.
+{% markdown %}</div>
+
+## 4 Build the To-do app
+Follow the coming steps to build your mobile To-do app with a native look and feel.
+
+### 4.1 Create a new module
+1. Right mouse click on your **ProjectName** in the left pane of the modeler which is the Project Explorer.
+2. Click **Add module** and give it the name *ToDo*.
+
+### 4.2 Create the Domain Model
+1. Click on the **Entity** element in your Domain Model editor and drop it on the Domain Model Canvas.
+2. Double click the **Entity** and change the name to *ToDo*.
+3. Add **3 attributes**:<div>
+3.1 *Description* (type: string);<div>
+3.2 *DueDate* (type: date and time);<div>
+3.3 *Completed* (type: boolean with default value *false*).
+
+### 4.3 Create the Pages
+Now you will create the Homepage and NewEdit page to create and adjust to-do's
+
+#### 4.3.1 Create the home page
+1. Right click on your new created module **ToDo** and then *Add > Page*.
+2. Choose the **Phone Specific** tab and click **Yes** to create a new Phone Profile. Ignore this step when you do not get the message to create a new Phone Profile.
+3. Change the **Page name** to *Home_Phone_Default*.
+4. Choose the *Phone_HeaderOnly* as **Navigation Layout**.
+5. Click on **Blank** and choose the *Blank page template*.
+6. Click **OK**
+
+#### 4.3.2 Configure the new Phone Profile (if you had to create one in *step 2* of *section 4.3.1*)
+1. Double click the **Error** in your Errorlist or navigate to your project **Navigation**.
+2. Select the tab of the newly created profile which is called **Profile**.
+3. Click the button **Change kind** and switch it to *Hybrid mobile app > Online*.
+4. Configure the following settings:<div>
+4.1 **Profile name**: *ToDo*;<div>
+4.2 **Application title**: *ToDo*;<div>
+4.3 **Default home page**: *ToDo.Home_Phone_Default*;<div>
+4.4 Leave the other input fields as they are.
+
+#### 4.3.3 Configure the home page
+1. Open the home page **Home_Phone_Default** of the ToDo module.
+2. Change the page title in the **Properties** pane at the right side of the Modeler to *My to-do's*.
+3. Remove the **Layout grid** on the page
+4. Add a **List view** to the page
+5. Double-click the **list view** and open the **Data soure** tab.
+6. Click **Select** button and choose the ToDo entity for the **Entity (path)**.
+7. Click **OK** and then **Yes** to automatically fill the content of the list view.
+8. Remove the **attribute Completed** by selecting it and hitting the delete button on your keyboard.
+9. Double-click on the **Sort order: (deaulf)** and **+Add** the attribute *DueDate* with the **Sort direction** *ascending*
+
+Now you can see a list of to-do's on your home page. Let's configure a page to create to-do's.
+
+#### 4.3.4 Create and configure the new and edit page
+1. Select the **Button** dropdown in the Page Editor, click on the **Create button** and drop it on the **HeaderRight** placeholder in the page.
+2. Select the **ToDo** entity in the pop-up.
+3. Right-click the **New** button and select **Generate page**.
+4. Choose **form default** and click **OK**. Keep all other elements as they are.
+5. Right-click the **New** button and select **Go to page**.
+6. Delete the **attribute Completed** by selecting it and hitting the Delete button on your keyboard.
+7. Select the **Run** dropdown in the toolbar at the top of the Modeler and choose **Run locally**. Click **Save and continue** if you did not save it yet.
+8. Click **Yes** to create a default database if this is asked.
+9. Open the **View App** dropdown and select **View Hybrid Mobile App**.
+10. Select the profile **ToDo** and choose the iPhone form factor for **Preview in browser**
+
+This is a easy way to see your app. There is also a way to simulate the touch behavior of an user on a mobile device, but this is explained later on in this how-to.
+
+### 4.4 Start to improve the mobile look and feel
+The following steps improve the mobile look and feel by adding and configuring widgets in your project.
+
+#### 4.4.1 Enhance the home page
+1. Go back to the **Modeler**
+2. Open the **Home_Phone_Default** of the ToDo module.
+3. Double-click the **attribute Description** and change the following **Properties**:<div>
+3.1 **General** tab > **Show label** > *No*;<div>
+3.2 **Common** tab > **Class** > *text-bold*.
+4. Double-click the **attribute DueDate** and change the following **Properties**:<div>
+4.1 **General** tab > **Show label** > *No*;<div>
+4.2 Optional: **Date format** > **Custom** > **Custom date format**: *dd-MMM-yyyy*.
+5. Double-click on the **List view** and change the following **Properties**:<div>
+5.1 In the tab **General** select *Show a page* for **On click**;<div>
+5.2 **Choose** the *ToDo_NewEdit* page and click **Select**;<div>
+5.3 Go to the tab **Common** and change the **Name** *listView1* to *ToDo* and click **OK**;
+5.4 Go to the tab **Data source** and **+Add** a **Constraint** for the attribute **Completed** that equals *false*.
+6. Drag and drop a **Layout grid** in(!) the **ToDo list view**.
+7. Move the attributes **Description** and **DueDate** into the **Layout grid**. This will make sure you get some spacing around the borders of your mobile screen.
+8. Open the **Properties** of the **Layout grid** and add the **Class**: *slide-left*. This class will activate a page transition and in this case it slides the page to the left when you hit the **New** button. Look at the **Mobile features** widget in the **Page layout** to see which classes are available for several page transitions.
+9. Right-click the **New** button in the top-right of the page and open the **Properties**
+10. Change the following **Properties**:<div>
+10.1 **Page title** > check the box **Override page title** and change it to *Create to do*;<div>
+10.2 **Render mode**: *Link*:<div>
+10.3 Add an **Icon** > **Select** > filter on *Plus* and select this **Glyphicon**;<div>
+10.4 **Class**: *flip-right*.
+
+#### 4.4.2 Enhance the page to create and edit to-do's
+1. Open the **ToDo_NewEdit** page in the Modeler.
+2. Open the **Properties** of the **<Back** button and add the class *flip-left*.
+3. Open the **Properties** of the **Save** button and add the class *flip-right*.
+4. Drag and drop a **Layout grid** in(!) the **ToDo data view**.
+5. Move the attributes **Description** and **DueDate** into the **Layout grid**.
+
+### 4.5 Continue improving the mobile look an feel by adding more widgtes
+The coming steps will show how to use the **Pull to refresh** and **List view swipe** widgets.
+
+#### 4.5.1 Add the **Pull-to-refresh** widget
+1. Go the the *add-ons* dropdown in the Page editor toolbar and choose **Pull to refresh**
+2. Drag and drop this widget above the **ToDo list view**.<div>
+
+This is all to refresh your list of to-do's. If you want, you can change some messages the widget is generating when you pull to refresh on your phone.
+
+#### 4.5.2 Add and configure the **List view swipe**  widget
+
+1. Go the the *add-ons* dropdown in the Page editor toolbar and choose **List vies swipe**.
+2. Drag and drop this widget underneath the **ToDo list view**.
+3. Open the **Properties** of the widget and configure the following settings:<div>
+3.1 The **General** tab:<div>
+3.1.1 **Target list view**: *ToDo* which is the name you gave to the list view;<div>
+3.1.2 **List view entity** *ToDo* which is the entity attached to the list view. <div>
+3.2 The **Swipe to right** tab:<div>
+3.2.1 **On swipe action**: *Call a microflow*;<div>
+3.2.2 **Page right**: *(none)*;<div>
+3.2.3 **Microflow right**: *Select* > *New* > *ACT_ToDo_MarkAsCompleted* (adding logic to the microflow is done later on in this how-to);<div>
+3.2.4. **Swipe container right**: *MarkAsCompleted*;<div>
+3.2.5 **Transparent swipe**: *yes*;<div>
+3.2.6 **After swipe right**: *Move out, hide*;<div>
+3.2.7. **Hide container right**: *MarkingAsCompleted*.<div>
+3.3. The **Swipe to left** tab:<div>
+3.3.1 **On swipe action**: *No action*;<div>
+3.3.2 **Page left**: *(none)*;<div>
+3.3.3 **Microflow left**: *(none)*;<div>
+3.3.4. **Swipe container left**: *Buttons*;<div>
+3.3.5 **Transparent swipe**: *no*;<div>
+3.3.6 **After swipe right**: *Stick to button(s)*;<div>
+3.3.7. **Hide container right**: leave it empty.<div>
+3.4 Go back to **Home_Phone_Default** page.<div>
+3.4.1 Unfold the **Module** *MobileGeneric* in your Project Explorer in the left pane of the Modeler<div>
+3.4.2 Drag and drop the **Snippet** *ListViewSwipe_MarkAsCompleted* underneath the **Layout grid**. This is where the *MarkAsCompleted* and *MarkingAsCompleted* in the widget configuration comes from. The containers in the **Snippet** have the same name as the text in it. You can add your own containers with different text, but make sure you set the correct name(s) of the container(s) in the widget.<div>
+3.5 Add a **Container** underneath the **Snippet** and within the **Todo list view**:<div>
+3.5.1 Open the **Properties** of the **Container** and **Name** it *Buttons* before you click **OK**;<div>
+3.5.2 Drag and drop a **Button** in the **Container**;<div>
+3.5.3	Remove the caption *Action* of the **Button**;<div>
+3.5.4 Add the **Glyphicon** *trash* to the **Button**;<div>
+3.5.5 Change the **Button style** to *Danger*;<div>
+3.5.6 Add an **On Click** click eveent: *Call a microflow* > *New* > *ACT_ToDo_Delete* and click **OK** (adding logic to the microflow is done later on in this how-to);<div>
+3.5.7 Change the **Microflow settings** by clicking **Edit...** and change **Ask confirmation** to *yes* and click **OK**;
+3.5.8 Add the class *btn-lg* to the **Class** field to make the button larger;
+3.5.9 Drag and drop a second **Button** in the **Container**;<div>
+3.5.10	Remove the caption *Action* of the **Button**;<div>
+3.5.11 Add the **Glyphicon** *remove alt* to the **Button**;<div>
+3.5.12 Change the **Button style** to *Info*;<div>
+3.5.13 On click: *Do nothing*;<div>
+3.5.14 Change the **Name** of the button to *Share*;<div>
+3.5.15 Add the class *btn-lg* to the **Class** field to make the button larger.<div>
+3.6 Download the **Native share** widget from the Mendix App Store and add it to the home page:<div>
+3.6.1 Click on **App Store** in the **Menu bar** of the Modeler;<div>
+3.6.2 Search for *share* in search funtionality of this page;<div>
+3.6.3 Click on the **Native Share** widget in your search results;<div>
+3.6.4 Click **Download** and **OK**;<div>
+3.6.5 Go back the page **Home_Phone_Default**;<div>
+3.6.6 Click the **Add-on** dropdown in the Page Editor and **Select** the **Native share** widget;<div>
+3.6.7 Drag and drop this widget above the buttons **Delete** and **Share** buttons;<div>
+3.6.8. Open the **Properties** of the widget and configure the **Behavior** tab;<div>
+3.6.9 Change the **Element name selector** to *Share* (the name of the share button);<div>
+3.6.10 Switch the **Hide outside Phonegap** to *No*;<div>
+3.6.11 Open the **Data source** tab;<div>
+3.6.12 For the **Message** make sure you **Select** the *ToDo.Description*;<div>
+3.6.13 Close the widget settings by clicking **OK**.<div>
+3.7. Download the **Badge** widget from the Mendix App Store and add it to the home page:<div>
+3.6.1 Click on **App Store** in the **Menu bar** of the Modeler;<div>
+3.6.2 Search for *badge* in search funtionality of this page;<div>
+3.6.3 Click on the **Badge** widget in your search results;<div>
+3.6.4 Click **Download** and **OK**;<div>
+3.6.5 Go back the page **Home_Phone_Default**;<div>
+3.6.6. Create a new column for the **Layour grid** by right-clicking the grid and click *Add column right*;<div>
+3.6.7 Change the weight of the columns to *10* and *2*;<div>
+3.6.8 Add the **Class** *col-xs-10* to the column with weight 10;<div>
+3.6.9 Add the **Class** *col-xs-2* to the column with weight 2;<div>
+3.6.10 Click the **Add-on** dropdown in the Page Editor and **Select** the **Badge** widget;<div>
+3.6.11 Drag and drop this widget in the column with weight *2*;<div>
+3.6.12 Open the **Properties** of the widget and configure the **Display** tab;<div>
+3.6.13 Set the **Value** of the badge to *Too late!*;<div>
+3.6.14 Set the **Bootstrap style** to *Warning*. Keep all the other setting as they are.<div>
+You only want tosee this **Badge** when the **DueDate** is passed, so let's add feature that is added since Mendix 7:<div>
+3.6.14 Add a **Container** in the columns with weight *2* and drag and drop the **Badge** into it;<div>
+3.6.15 Open the **Properties** of the **Container**;<div>
+3.6.16 **Edit..** the visibility and check the *based on expression* option in the new pop-up;<div>
+3.6.17 Add this expression ```$currentObject/DueDate < [%CurrentDateTime%]``` which will make sure the **Badge** shows up when an to-do is overdue.
+3.6.18 Click **OK** twice to close the pop-ups. This is how your page eventually should look like:
+
+![Image of final homepage](https://github.com/mendix/docs/blob/development/howto6/attachments/19955770/final-screen.JPG)
+
+### 4.6 Adding logic to the microflows
+The List view swipe widget is configured, but you added two microflows that do not gave logic yet. Let's add some logic so they execute the behavior we want when they are triggered.
+1. Open the microflow **ACT_ToDo_Delete**
+2. Add an **Activity** that deletes the **ToDo** object and refreshes the client.
+<iframe width='100%' height='350px' frameborder='0' src='https://modelshare.mendix.com/models/83d0f300-356e-4a6b-9ea3-7625284a6937/act_todo_delete?embed=true' allowfullscreen></iframe>
+3. Open the microlfow **ACT_ToDo_MarkAsCompleted**.
+4. Add an **Activity** that changes the **Completed** attributed of the **ToDo** object to *true* and set **Commit** to *Yes*.
+<iframe width='100%' height='350px' frameborder='0' src='https://modelshare.mendix.com/models/adbe2dd5-2e27-41ab-8f67-3a728917f01b/act_todo_markascompleted?embed=true' allowfullscreen></iframe>
+<div class="alert alert-info">{% markdown %}
+There is no need to refresh in the client due to the *Move out, hide* behavior of the List view swipe widget.
+{% markdown %}</div>
+
+### 4.7 Show the app and simulate touch behavior of mobile device
+1. Save all changes and Run locally.
+2. Open the **View App** dropdown and **Select** *View Hybrid Mobile App*.
+3. Choose the *ToDo* **Navigation Profile**
+4. Click on the *Laptop icon* underneath the **Preview in browser:**
+5. Press *F12*
+6. Press *Ctrl + Shift + M* to enable the Toggle Device Toolbar.
+7. Set the device you want to test on (you can select the device on top of the canvas where your mobile app is shown)
+8. Create a to-do and swipe it to left or right to see the swiping actions. Your mouse simulates the touch behavior of an user.
+<div class="alert alert-warning">{% markdown %}
+The Mobile Features widget is not be enabled in the browser, since this will only work when your app is hybrid. This means that page transitions (e.g. flip-left) and other properties of widget will not be shown in this preview.
+{% markdown %}</div>
+
+## 5 Create a Phonegap package to publish your app
+1. Open the [Development Portal](https://home.mendix.com)
+2. Go to your app and click on **Mobile Apps** in the navigation on the left of the page.
+3. Change the settings if you want. You can check some boxes to give your app permissions the phone camera, geolocation, etc. You can also add more plugins by adding code in the Custom Phonegap/Cordova Configuration option. 
+4. Click **Publish for Mobile App Stores**
+5. You can check *Build in the cloud* and start the **Start PhoneGap Build job**
+6. You can upload the package to Phonegap and follow the Android or Apple iOS process to publish your app to the App Stores. 
+
+
+## 6 Related Content
+
+{Do not enter anything here, this will be generated by Mendix}
 

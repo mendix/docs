@@ -35,15 +35,15 @@ If you are using custom settings to influence the runtime behavior, it is critic
 These are some important details:
 
 * Sticky sessions (in the load balancer) can be configured to your own preference as long as you are using sticky sessions
-* MX runtime port – all available ports are allowed, this is not different from a regular server setup
+* MX runtime port – all available ports are allowed, this is no different than a regular server setup
 * File share and document upload – images and uploaded files should be stored on HA shared storage
 * Application root URL setting – must be identical on each instance
 * The keep-alive port, health check, and monitoring – the Mendix runtime admin port can be used for a health check from the load balancer
-    * To identify whether the server is still available or not, the load balancer should check the keep-alive port in the configuration (the health-check microflow)
+    * To identify if the server is still available, the load balancer should check the keep-alive port in the configuration (the health-check microflow)
     * An HTTP status code of `200 OK` means the server is still available
 * The IP addresses of end users – Mendix runtime does not require the IP addresses of the end-users
     * The application log shows the users who logged in, and it is possible to develop custom logic based on the IP address
-    * It is useful to configure the IP address forwarding in the load balancer as well as the information is still usable
+    * It is useful to configure the IP address forwarding in the load balancer as well, so that the information is still usable
 * Mendix runtime sessions – in case an instance goes down and that instance was facilitating any end-user sessions, it often isn’t desirable that those users are logged out
     * To allow this, you need to enable persistent sessions by setting the `PersistentSessions` custom setting to true
     * This will make the Mendix runtime store all the session information in the database so it can be picked up by other instances
@@ -51,7 +51,7 @@ These are some important details:
     * This isn’t a recommended solution, but it is possible and will let Mendix runtime execute the schedule events at the same time on all instances
     * There are two options:
 
-    1. Run events on a single instance. Having all the scheduled events executed on a single instance solves the problem of executing the same actions for multiple times. This should be configured manually on each environment. This solution is not failover-capable, though. If the scheduled event instance goes down, the task will not be taken over by other instances.
+    1. Run events on a single instance. Having all the scheduled events executed on a single instance solves the problem of executing the same actions multiple times. This should be configured manually on each environment. This solution is not failover-capable, though. If the scheduled event instance goes down, the task will not be taken over by other instances.
     2. Develop a custom "Scheduled Event Cluster Manager." This is more complicated, but it is the most stable solution for the guaranteed execution of scheduled events. When developing a custom solution, it is important to focus on common problems such as: quorum, split brain scenarios, and fencing. For example:
         * Set up a heartbeat web service between the Mendix runtime instances and a configuration entity stating which instance should "execute" on scheduled events
         * If one instance goes down unexpectedly, the other instances notice on the heartbeat and take over scheduled events

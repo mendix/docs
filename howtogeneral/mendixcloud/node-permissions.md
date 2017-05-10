@@ -1,9 +1,9 @@
 --
 title: "Node Permissions of Your Licensed App"
-space: ""
-category: ""
-description: ""
-tags: ""
+space: "Developer Portal
+category: "Settings
+description: "This page describes the permission settings of your node."
+tags: ["Node","Permission","Developer Portal"]
 ---
 
 ## 1 Introduction
@@ -55,6 +55,7 @@ The Technical Contact will receive the following alerts from the cloud node:
 *   Notifications for maintenance from **Mendix Support**
 *   Alerts from the node when problems arise (CPU load is high, running out of disk space, etc.). The Technical Contact cannot turn these off
 
+To find more information about **Alerts**, read paragraph **2 Alerting Categories and Thresholds**. of the [Monitoring Application Health](../operate/monitoring-application-health) documentation. 
 
 ### 4.2 Mendix Support
 
@@ -76,7 +77,7 @@ The node permissions can be:
 * Managed only by the Technical Contact
 * Accessed by regular team members who have the permission to **View Deploy and Monitor**
 
-![](attachments/settings/nodepermission.jpg)
+![](attachments/nodepermission.jpg)
 
 ### 5.1 Transport Rights
 
@@ -84,7 +85,7 @@ With transport rights you can deploy new versions of the application to the node
 
 ### 5.2 Access to Backups
 
-This permission grants access to the backups of the environment. You can view, create, download, and restore a backup.
+This permission grants access to the backups of the environment. You can view, [create](../operate/how-to-create-backup), [download](../operate/how-to-download-a-backup), and [restore a backup](../operate/how-to-restore-a-backup).
 
 ### 5.3 Receive Alerts
 
@@ -92,12 +93,18 @@ When **Receives Alerts** is checked, this person will receive an email when an a
 
 ### 5.4 API Rights
 
-With the API rights you can use the **Deploy API** to get programmatic access to the environment. Naturally, the API does not require two-factor authentication, so API access is disabled for the production environment by default. The Technical Contact can assign API access for each user. Note that the **API Rights** are needed in addition to the other permissions, so in order to access backups via the API you will need both **Access to Backups** as well as **API Rights**.
+With the API rights you can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) to get programmatic access to the environment. Naturally, the API does not require two-factor authentication, so API access is disabled for the production environment by default. The Technical Contact can assign API access for each user. Note that the **API Rights** are needed in addition to the other permissions, so in order to access backups via the API you will need both **Access to Backups** as well as **API Rights**.
 
 ### 5.5 Access to Monitoring
 
 With this permission you can view the application metrics, logs, and alerts. These allow you to successfully operate your Mendix Cloud environments.
 
+For more information, see [Monitoring Application Health](../operate/monitoring-application-health)
+
 # 6 Related Content
-*   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
-*   [Trends](trends)
+
+*   [Deploy API](/apidocs-mxsdk/apidocs/deploy-api)
+*   [Monitoring Application Health](../operate/monitoring-application-health)
+*   [How To Create a Backup](../operate/how-to-create-backup)
+*   [How To Download a Backup](../operate/how-to-download-a-backup)
+*   [How To Restore a Backup](../operate/how-to-restore-a-backup)

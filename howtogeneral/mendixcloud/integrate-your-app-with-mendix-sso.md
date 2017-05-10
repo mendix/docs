@@ -66,11 +66,10 @@ This how-to uses version 3.0 of the Company Expenses (CE) app, which does not ye
 ## 3\. Related content
 
 *   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
-*   [Trends](trends)
+*   [Trends](/developerportal/operate/trends)
 *   [How to Deploy to the Mendix Cloud](/developerportal/deploy/deploying-to-the-cloud)
 *   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
 *   [Sending Email](sending-email)
-*   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)
 
 
 After completing this how to on configuring AppCloud services, you might want to check out [how to improve logging in with different types of user accounts](different-user-logins-when-integrated-with-mendix-sso).

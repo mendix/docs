@@ -181,7 +181,7 @@ The Mendix instance on AWS is now fully configured and ready for use. Let's try 
 
 ## 6\. Read more
 
-*   [Trends](trends)
+*   [Trends](/developerportal/operate/trends)
 *   [How to Deploy to the Mendix Cloud](/developerportal/deploy/deploying-to-the-cloud)
 *   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
 *   [Sending Email](sending-email)

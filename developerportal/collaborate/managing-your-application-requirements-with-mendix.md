@@ -213,6 +213,6 @@ To expot sprints and stories, follow these steps:
 * [How to Use Team Server - Version Control](/howto7/collaboration-project-management/using-team-server-_-version-control)
 * [How to Use the Feedback Widget](gathering-user-feedback)
 * [How to Share the Development Database](/howto7/collaboration-project-management/sharing-the-development-database)
-* [How to Use the Excel Exporter](../integration/using-the-excel-exporter)
+* [How to Use the Excel Exporter](/howto7/integration/using-the-excel-exporter)
 * [App Platform](/refguide7/app-platform)
 * [Team Server](/refguide7/team-server)

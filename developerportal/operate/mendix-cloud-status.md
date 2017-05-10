@@ -14,4 +14,4 @@ We advise you to subscribe to updates from this site. You will be informed about
 
 ## 2 Related Content
 
-* [Mendix IP Addresses](mendix-ip-addresses)
+* [Mendix IP Addresses](/howtogeneral/support/mendix-ip-addresses)

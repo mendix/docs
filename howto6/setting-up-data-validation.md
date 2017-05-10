@@ -94,7 +94,7 @@ Validating user input can also be achieved by overriding the default save button
 *   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
 *   [Setting up data validation](setting-up-data-validation)
 *   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-*   [Managing your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
+*   [How to Manage Sprints and Stories](managing-your-application-requirements-with-mendix)
 *   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Generating a personal SSH2 key pair](generating-a-personal-ssh2-key-pair)
 *   [Creating a chainable Custom Widget](create-a-chainable-custom-widget)

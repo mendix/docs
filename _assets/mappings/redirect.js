@@ -1974,7 +1974,7 @@ module.exports = {
     },
     {
       from: "/howto6/monitoring+application+health",
-      to: "/howtogeneral/mendixcloud/monitoring-application-health"
+      to: "/developerportal/operate/monitoring-application-health"
     },
     {
       from: "/howto6/On-premises+Deployment",
@@ -2225,7 +2225,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Monitoring+application+health",
-      to: "/howtogeneral/mendixcloud/monitoring-application-health"
+      to: "/developerportal/operate/monitoring-application-health"
     },
     {
       from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",

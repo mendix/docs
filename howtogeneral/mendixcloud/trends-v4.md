@@ -1,7 +1,7 @@
 ---
 title: "Application Trends in Mendix Cloud v4"
-space: "General How-To's"
-category: "Mendix Cloud"
+space: "Developer Portal"
+category: "Operate"
 ---
 
 ## 1 Introduction
@@ -14,7 +14,7 @@ To view the **Trends** you must have permission to **Access the Monitoring**.
 
 <div class="alert alert-info">{% markdown %}
 
-Note that only the [Technical Contact](/howtogeneral/support/technical-contact) is allowed to grand the node permissions.
+Note that only the **Technical Contact** is allowed to grand the [node permissions](../settings/node-permissions).
 
 {% endmarkdown %}</div>
 
@@ -29,7 +29,7 @@ Assign this permission by following these steps:
 
 ![](attachments/settings/nodepermission.jpg)
 
-## 2 Find the Trends
+## 2 Viewing the Trends
 
 You can find the trends by following these steps:
 
@@ -50,14 +50,14 @@ Starting with the requests that the application processes from the services/clie
 
 The requests graph shows the number of requests that are sent from the client or systems that integrate with your application using web services. The number of requests per second is split up by request handlers.
 
-"xas" lists general queries for data in datagrids, sending changes to the server and triggering the execution of microflows. "ws" shows the number of web service calls that were done. "file" shows the number of file uploads and downloads. The "/" should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process.
+"xas" lists general queries for data in datagrids, sending changes to the server and triggering the execution of microflows. "ws" shows the number of web service calls that were done. "FileDocuments" shows the number of file uploads and downloads. The "/" should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process.
 
 The request types are:
 
 *   api-doc/: A general api doc overview for other doc request handlers
 *   debugger/: Mendix runtime debugger request handler
 *   /: Default request handler
-*   file: Request handler used for serving files
+*   FileDocuments: Request handler used for serving files
 *   odata-docs/: documentation request handler for odata
 *   openid/: OPENID authentication request handler
 *   p/: Request handler for Custom page urls
@@ -242,11 +242,7 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 ## 6 Related content
 
 *   [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
-*   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
 *   [How to Deploy Your Licensed App to the Cloud](deploying-to-the-cloud)
-*   [How to Migrate to Mendix Cloud v4](migrating-to-v4)
-*   [Sending Email](sending-email)
+*   [How to Migrate to Mendix Cloud v4](../deploy/migrating-to-v4)
 *   [Monitoring application health](monitoring-application-health)
-*   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
-*   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)
-*   [Deploying to a Free App](deploying-to-a-free-app)
+*   [Node permissions](../settings/node-permissions)

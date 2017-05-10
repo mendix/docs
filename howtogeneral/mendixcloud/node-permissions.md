@@ -1,7 +1,7 @@
 --
-title: "Node Permissions of Your Licensed App"
-space: "Developer Portal
-category: "Settings
+title: "Node Permissions"
+space: "Developer Portal"
+category: "Settings"
 description: "This page describes the permission settings of your node."
 tags: ["Node","Permission","Developer Portal"]
 ---

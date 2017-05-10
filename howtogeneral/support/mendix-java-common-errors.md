@@ -31,7 +31,7 @@ The following things can cause this error:
 *   Memory leak
     *   Introduced by developer, custom code
     *   A bug in Mendix Runtime
-    *   A bug in aJava library used by custom code of the developer or by the Mendix Runtime
+    *   A bug in a Java library used by custom code of the developer or by the Mendix Runtime
     *   A bug in Java Runtime
 *   Massive creation of objects (for example, by retrieving 1 trillion entities in a single microflow at once)
 *   Configuration issue or sizing issue
@@ -67,13 +67,13 @@ If you want to reproduce this error, do something like this:
 
 ![](attachments/mendix--java-part-ii--common-errors/5.jpg)
 
-Eventually memory will run low due to all the accounts being created and the garbage collector will try to free up memory. But it won’t be able to as all these Account objects are still alive. After a while it will return the error above.
+Eventually, memory will run low because of all the created accounts and the garbage collector will try to free up memory. But it won’t be able to free it up so that all these Account objects are still alive. After a while, it will return the error.
 
-That concludes the list of some of the more common errors you can find in the application log that can cause your application to go down. But there is one more item to share. While it is not an error in the error log, it might match some of the symptoms outlined. And it is easy to check for, so never a bad idea.
+This concludes a list of some common errors in the application log that can cause your application to go down. But there is one more item to share. While it is not an error in the error log, it might match some of the symptoms outlined. 
 
 ### 2.5 Lack of resources on the application server
 
-If you see the grey *committed* line peak into the white part of the *Application node operating system memory* graph your app node needs more memory. Upgrading to a larger container is strongly recommended in this case. See the following graph for an example of this problem:
+If you see the grey *committed* line peak into the white part of the *Application node operating system memory* graph, then your app node needs more memory. Upgrading to a larger container is strongly recommended in this case. See the following graph for an example of this problem:
 
 ![](attachments/mendix--java-part-ii--common-errors/6.jpg)
 

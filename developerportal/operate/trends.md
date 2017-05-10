@@ -1,7 +1,7 @@
 ---
 title: "Application Trends in Mendix Cloud v3"
 space: "Developer Portal"
-category: "Deploy"
+category: "Operate"
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud."
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 ---

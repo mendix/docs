@@ -1415,7 +1415,7 @@ module.exports = {
     },
     {
       from: "/howto50/Monitoring+application+health",
-      to: "/howto50/monitoring-application-health"
+      to: "/developerportal/operate/monitoring-application-health"
     },
     {
       from: "/howto50/Monitoring+Mendix+using+JMX",

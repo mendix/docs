@@ -38,7 +38,6 @@ A node has a minimum of two environments: production and acceptance. A test envi
 *   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)
 *   [Java in the Cloud](java-in-the-cloud)
 *   [Maintenance Windows](maintenance-windows)
-*   [Monitoring application health](monitoring-application-health)
 *   [Securing Outgoing Connections from your Application](securing-outgoing-connections-from-your-application)
 *   [Security constraints in the Mendix Cloud](security-constraints-in-the-mendix-cloud)
 *   [Sending Email](sending-email)

@@ -2,14 +2,52 @@
   "name": "mxdocumentation",
   "version": "1.0.0",
   "description": "Mendix Documentation",
+  "private": true,
   "keywords": [
     "mendix",
     "documentation"
   ],
-  "author": "Mendix B.V.",
+  "author": {
+    "name": "Mendix B.V.",
+    "email": "community@mendix.com",
+    "url": "https://docs.mendix.com/community/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mendix/docs.git"
+  },
   "license": "CC BY 4.0.",
-  "dependencies": {
-    "bootstrap": "^3.3.6",
-    "jquery": "^2.2.4"
-  }
+  "bugs": {
+    "url": "https://github.com/mendix/docs/issues",
+    "email": "community@mendix.com"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "algoliasearch": "^3.19.2",
+    "async": "^2.1.4",
+    "bluebird": "^3.4.6",
+    "browser-sync": "^2.18.2",
+    "cheerio": "^0.22.0",
+    "del": "^2.2.2",
+    "git-blame": "^1.1.0",
+    "gulp": "^3.9.1",
+    "gulp-hash": "^3.1.0",
+    "gulp-help": "^1.6.1",
+    "gulp-minify": "0.0.14",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-util": "^3.0.7",
+    "lodash": "^4.17.2",
+    "moment": "^2.17.0",
+    "pump": "^1.0.1",
+    "recursive-readdir": "^2.1.0",
+    "request": "^2.79.0",
+    "run-sequence": "^1.2.2",
+    "shelljs": "^0.7.5",
+    "spa-server": "^1.0.0",
+    "write-yaml": "^0.2.2",
+    "yaml-front-matter": "^3.4.0",
+    "yamljs": "^0.2.8"
+  },
+  "scripts": {}
 }

@@ -1,6 +1,6 @@
-Layouts specify what comes where. Each [page](Page) is based on a layout. The layout contains widgets and structures that return on every page based on that layout. For example, it is common to put a menu bar widget in a layout so that the menu is visible on all pages.
+Layouts specify what comes where. Each [page](page) is based on a layout. The layout contains widgets and structures that return on every page based on that layout. For example, it is common to put a menu bar widget in a layout so that the menu is visible on all pages.
 
-A layout consists of contents and [placeholder](Placeholder)s. The contents covers everything that should be present in every page that uses the layout, from navigation bars to sign out buttons. Placeholders, on the other hand, are empty areas that later form the canvas for any pages that make use of the layout. The layout contents remains the same in every page, but the placeholder areas cover what is unique to every individual page. 
+A layout consists of contents and [placeholder](placeholder)s. The contents covers everything that should be present in every page that uses the layout, from navigation bars to sign out buttons. Placeholders, on the other hand, are empty areas that later form the canvas for any pages that make use of the layout. The layout contents remains the same in every page, but the placeholder areas cover what is unique to every individual page. 
 
 Layouts can be based on other layouts, in which case the generic layout is referred to as the master layout. If a layout has a master layout, it can use the placeholders defined in the master to create a more specialized configuration. If a page is based on this specialized layout, it makes use of the placeholders defined in the new layout, ignoring those of the master layout. 
 
@@ -44,7 +44,7 @@ _Default value:_ 600
 
 ### Master layout
 
-This property specified the master layout on which this layout is based. If no master layout is specified, this layout contains a single widget (e.g. a [scroll container](Scroll+Container)) that defines the structure of pages based on this layout. If a master layout is specified, this layout fills the gaps defined by the master layout. You can introduce new gaps on this layout by using [placeholders](Placeholder).
+This property specified the master layout on which this layout is based. If no master layout is specified, this layout contains a single widget (e.g. a [scroll container](scroll-container)) that defines the structure of pages based on this layout. If a master layout is specified, this layout fills the gaps defined by the master layout. You can introduce new gaps on this layout by using [placeholders](placeholder).
 
 ### Layout type
 
@@ -52,7 +52,7 @@ Every layout has a layout type, which determines the purpose of the layout and h
 
 | Layout type | Description |
 | --- | --- |
-| Responsive | Use this layout for pages that will work fine on all types of devices. The [layout grid](Layout+grid) and other widgets make it possible to create responsive pages. |
+| Responsive | Use this layout for pages that will work fine on all types of devices. The [layout grid](layout-grid) and other widgets make it possible to create responsive pages. |
 | Tablet specific | Use this layout for pages on a tablet if the responsive option is not sufficient, e.g. if different use cases with different user interfaces have to be supported. |
 | Phone specific | Use this layout for pages on a phone if the responsive option is not sufficient, e.g. if different use cases with different user interfaces have to be supported. |
 | Modal pop-up | Use this layout for pages that should appear as modal pop-ups. |
@@ -61,7 +61,7 @@ Every layout has a layout type, which determines the purpose of the layout and h
 
 Layouts created in Mendix 5.17 or older are of this type. It is recommended to assign one of the other layout types.
 
-How the page is opened is determined by the [location property](Opening+Pages).
+How the page is opened is determined by the [location property](opening-pages).
 
  |
 

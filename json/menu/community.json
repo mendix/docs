@@ -1,9 +1,12 @@
 ---
 layout: json
+sitemap: false
 ---
 {
   "categories": [
-    "Community"
+    "Tools",
+    "Documentation",
+    "App Store"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="/community/" %}
+  "pages": {% include json-snippets/get_pages.inc dir="community" %}
 }

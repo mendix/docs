@@ -1,12 +1,13 @@
 # Site settings
-name: Mendix
-description: ""
+name: "Mendix Documentation"
+description: "Mendix documentation"
 url: "https://docs.mendix.com"
 baseurl: ""
 encoding: utf-8
+locale: "en_US"
 
 # Base variables
-latest_major_version: "6"
+latest_major_version: "7"
 github_repo: "https://github.com/mendix/docs"
 github_branch: "development"
 title: "Mendix Documentation"
@@ -20,21 +21,13 @@ permalink: ordinal
 
 algolia:
   application_id:    'OHBX5T982M'
-  index_name:        'documentation'
+  index_name:        'docs'
   read_only_api_key: 'd23e5ac47b71a0f51afa5fedc695b718'
-  excluded_files:
-    - index.html
-    - howto6/index.html
-    - howto50/index.html
-    - refguide6/index.html
-    - refguide5/index.html
-    - search/index.html
-  settings:
-    attributesForFaceting:
-      - 'tags'
-      - 'type'
-      - 'title'
-      - 'space'
+
+intercom:
+  test_id: 'nw1x91z3'
+  live_id: 'xbpgtd40'
+
 
 ####################################
 ######        SPACES         #######
@@ -47,6 +40,19 @@ defaults:
       layout: mxdefault
 
   # VERSION SPECIFIC CONTENT
+  # Mendix 7
+  - scope:
+      path: 'howto7'
+      type: pages
+    values:
+      menus:
+        - "howto7"
+  - scope:
+      path: 'refguide7'
+      type: pages
+    values:
+      menus:
+        - "refguide7"
   # Mendix 6
   - scope:
       path: 'howto6'
@@ -54,17 +60,12 @@ defaults:
     values:
       menus:
         - "howto6"
-        - "tips"
-        - "bestpractices"
-        - "appstore"
-        - "mendixcloud"
   - scope:
       path: 'refguide6'
       type: pages
     values:
       menus:
         - "refguide6"
-        - "community"
   # Mendix 5
   - scope:
       path: 'howto50'
@@ -72,35 +73,53 @@ defaults:
     values:
       menus:
         - "howto50"
-        - "tips"
-        - "bestpractices"
-        - "appstore"
-        - "mendixcloud"
-      #banner: 'exportfromconfluence5'
   - scope:
       path: 'refguide5'
       type: pages
     values:
       menus:
         - "refguide5"
-        - "community"
-      #banner: 'exportfromconfluence5'
+  # Mendix 4
+  - scope:
+      path: 'howto40'
+      type: pages
+    values:
+      menus:
+        - "howto40"
+      banner: "mendix4howto"
+  - scope:
+      path: 'refguide4'
+      type: pages
+    values:
+      menus:
+        - "refguide4"
+      banner: "mendix4refguide"
 
   # VERSION INDEPENDENT
   - scope:
       path: 'community'
       type: pages
     values:
-      space: "Community"
       menus:
-        - "refguide6"
         - "community"
   - scope:
-      path: 'apidocs'
+      path: 'releasenotes'
       type: pages
     values:
       menus:
-        - "apidocs"
+        - "releasenotes"
+  - scope:
+      path: 'apidocs-mxsdk'
+      type: pages
+    values:
+      menus:
+        - "apidocs-mxsdk"
+  - scope:
+      path: 'addons'
+      type: pages
+    values:
+      menus:
+        - "addons"
   - scope:
       path: 'ATS'
       type: pages
@@ -108,93 +127,52 @@ defaults:
       menus:
         - "ATS"
   - scope:
-      path: 'APM'
+      path: 'howtogeneral'
       type: pages
     values:
       menus:
-        - "APM"
+        - "howtogeneral"
   - scope:
-      path: 'MXSDK'
+      path: 'developerportal'
       type: pages
     values:
       menus:
-        - "MXSDK"
-  - scope:
-      path: 'mxsupport'
-      type: pages
-    values:
-      menus:
-        - "mxsupport"
-  - scope:
-      path: 'tips'
-      type: pages
-    values:
-      menus:
-        - "howto6"
-        - "tips"
-        - "bestpractices"
-        - "appstore"
-        - "mendixcloud"
-  - scope:
-      path: 'bestpractices'
-      type: pages
-    values:
-      menus:
-        - "howto6"
-        - "tips"
-        - "bestpractices"
-        - "appstore"
-        - "mendixcloud"
-  - scope:
-      path: 'appstore'
-      type: pages
-    values:
-      menus:
-        - "howto6"
-        - "tips"
-        - "bestpractices"
-        - "appstore"
-        - "mendixcloud"
-  - scope:
-      path: 'mendixcloud'
-      type: pages
-    values:
-      menus:
-        - "howto6"
-        - "tips"
-        - "bestpractices"
-        - "appstore"
-        - "mendixcloud"
+        - 'developerportal'
 
 ####################################
 
+keep_files:
+  - public
+  - mappings
 exclude:
   - Gemfile
   - Gemfile.lock
   - Gemfile.lock.osx
   - Gemfile.lock.win
+  - _gulp
   - README.md
   - Rakefile
   - node_modules
+  - Gulpfile.js
+  - LICENSE
+  - _assets
   - vendor
   - package.json
+  - mappings.json
   - test.txt
   - run.bat
-  - manifest.yml
-  - community/The+How+to+Template.md
+  - manifest_prod.yml
+  - manifest_accp.yml
+  - community/documentation/the-how-to-template.md
+  - community/documentation/the-reference-guide-page-template.md
+  - _data/assetsjs.json
+  - _data/assetscss.json
   - CONTRIBUTING.md
+  - scripts
 
 markdown: kramdown
 kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
   hard_wrap: false
   syntax_highlighter: rouge
-
-sass:
-  sass_dir: _sass
-  style: compressed
-
-gems:
-  - jekyll-redirect-from
-  - jekyll-sitemap
-  - algoliasearch-jekyll
+  auto_id_stripping: false

@@ -1,23 +1,23 @@
 ---
 layout: json
+sitemap: false
 ---
 {
   "categories": [
     "Getting Started",
     "Data Models",
-    "GUI's",
+    "GUIs",
     "Logic & Business Rules",
     "Mobile",
     "Security",
     "Integration",
     "Extendability",
     "Custom Widget Development",
-    "Tips & Tricks",
     "Testing",
     "Monitoring & Troubleshooting",
     "Collaboration & Project Management",
     "Cloud Foundry",
-    "On-premises Deployment"
+    "On-Premises Deployment"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="/howto50/" %}
+  "pages": {% include json-snippets/get_pages.inc dir="howto50" %}
 }

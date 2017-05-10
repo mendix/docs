@@ -1,5 +1,6 @@
 ---
 layout: json
+sitemap: false
 ---
 {
   "categories": [
@@ -12,5 +13,5 @@ layout: json
     "Mobile",
     "Proactive Maintenance"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="/refguide5/" %}
+  "pages": {% include json-snippets/get_pages.inc dir="refguide5" %}
 }

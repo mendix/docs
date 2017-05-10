@@ -1,25 +1,14 @@
 ---
 title: 'Mendix Documentation'
 layout: mxoverview
-redirect_from:
-  - '/docs/Overview'
-  - '/docs/'
+maintitle: 'Mendix Documentation'
+description: 'You can browse all the documentation for the Mendix platform here.'
 ---
 {% assign howto = "/howtoX/" | replace: "X", site.latest_major_version %}
 {% assign refguide = "/refguideX/" | replace: "X", site.latest_major_version %}
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="{{ howto }}">Mendix {{ site.latest_major_version}} How-to's</a></h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    {% include blocks/howto-general.html dir=howto %}
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="{{ refguide }}">Reference Guide {{ site.latest_major_version }}</a></h1>
+    <h1 class="header-link"><a href="{{ refguide }}">Mendix Reference Guide</a></h1>
   </div>
 </div>
 <div class="row">
@@ -29,7 +18,37 @@ redirect_from:
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/apidocs/">API &amp; SDK</a></h1>
+    <h1 class="header-link"><a href="{{ howto }}">Mendix How-To's</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/howto-general.html dir=howto %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/howtogeneral/">General How-To's</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/howto-general-space.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/releasenotes/">Release Notes</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/releasenotes.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/apidocs-mxsdk/">API & SDK</a></h1>
   </div>
 </div>
 <div class="row">
@@ -39,21 +58,41 @@ redirect_from:
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/apidocs/">Community</a></h1>
+    <h1 class="header-link"><a href="/developerportal/">Developer Portal</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/developer-portal.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/ATS/">ATS Add-On</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/ats-addon.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/addons/">Other Add-Ons</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/other-addons.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/community/">Community</a></h1>
   </div>
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
     {% include blocks/community.html %}
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/apidocs/">Tools</a></h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    {% include blocks/tools.html %}
   </div>
 </div>

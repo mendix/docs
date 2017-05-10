@@ -2,12 +2,12 @@
   <div class="overview-block">
     <div class="overview-block-tile">
       <img class="overview-block-icon" src="{{ "/public/images/icons/" | prepend: site.baseurl | append: include.icon }}" alt="{{ include.category }}">
-      <h2 class="overview-block-title">{{ include.category }}</h2>
+      <span class="overview-block-title">{{ include.category }}</span>
       <div class="overview-block-arrow--down"></div>
     </div>
     <div class="overview-block-links">
       <a href="#" class="overview-block-close"></a>
-      {% include snippets/get_pages_per_category.inc category=include.category dir=include.dir %}
+      {% include snippets/get_pages_per_category.inc category=include.category dir=include.dir overview=include.overview %}
     </div>
   </div>
 </div>

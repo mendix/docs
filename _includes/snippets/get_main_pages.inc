@@ -1,13 +1,12 @@
 <ul>
+  <li><a class="overview-link" href="{{ include.dir }}" title="{{ include.category }}">{{ include.category }}</a></li>
 {% for catpage in site.pages %}
   {% if include.dir == catpage.dir %}
     {% if catpage.category %}{% else %}
       {% if catpage.parent %}{% else %}
-        {% if catpage.url == include.dir %}
-          <li><a class="overview-link" href="{{ include.dir }}">Overview</a></li>
-        {% else %}
-          <li><a href="{{ catpage.url | remove: '.html' }}">{{ catpage.title }}</a></li>
-        {% endif %}
+        {% unless catpage.url == include.dir %}
+  <li><a href="{{ catpage.url | remove: '.html' }}" title="{{ catpage.title }}">{{ catpage.title }}</a></li>
+        {% endunless %}
       {% endif %}
     {% endif %}
   {% endif %}

@@ -1,17 +1,12 @@
 ---
 layout: json
+sitemap: false
 ---
 {
   "categories": [
     "General",
-    "Administration",
-    "Introduction",
-    "Projects",
-    "Test Development",
-    "Data Management",
-    "Scheduling",
-    "Configuration",
-    "Monitoring"
+    "ATS Reference Guide 1",
+    "ATS How-To's"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="/ATS/" %}
+  "pages": {% include json-snippets/get_pages.inc dir="ATS" %}
 }

@@ -1,11 +1,12 @@
 ---
 layout: json
+sitemap: false
 ---
 {
   "categories": [
     "Getting Started",
     "Data Models",
-    "GUI's",
+    "GUIs",
     "Logic & Business Rules",
     "Mobile",
     "Security",
@@ -16,7 +17,7 @@ layout: json
     "Monitoring & Troubleshooting",
     "Collaboration & Project Management",
     "Cloud Foundry",
-    "On-premises Deployment"
+    "On-Premises Deployment"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="/howto6/" %}
+  "pages": {% include json-snippets/get_pages.inc dir="howto6" %}
 }

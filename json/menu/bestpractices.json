@@ -1,9 +1,0 @@
----
-layout: json
----
-{
-  "categories": [
-    "Best Practices"
-  ],
-  "pages": {% include json-snippets/get_pages.inc dir="/bestpractices/" %}
-}

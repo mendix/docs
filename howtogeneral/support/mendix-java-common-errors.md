@@ -67,13 +67,13 @@ If you want to reproduce this error, do something like this:
 
 ![](attachments/mendix--java-part-ii--common-errors/5.jpg)
 
-Eventually, memory will run low because of all the created accounts and the garbage collector will try to free up memory. But it won’t be able to free it up so that all these Account objects are still alive. After a while, it will return the error.
+Eventually, memory will run low because of all the account being created, which is when the garbage collector will try to free up memory. It won’t be able to do this, so that all these Account objects are still alive. After a while, it will return the error.
 
-This concludes a list of some common errors in the application log that can cause your application to go down. But there is one more item to share. While it is not an error in the error log, it might match some of the symptoms outlined. 
+That concludes this list of some of the more common errors in the application log that can cause your application to go down. But there is one more item to share. While it is not an error in the error log, it might match some of the symptoms outlined. 
 
-### 2.5 Lack of resources on the application server
+### 2.5 Lack of Resources on the Application Server
 
-If you see the grey *committed* line peak into the white part of the *Application node operating system memory* graph, then your app node needs more memory. Upgrading to a larger container is strongly recommended in this case. See the following graph for an example of this problem:
+If you see the grey *committed* line peak into the white part of the *Application node operating system memory* graph, your app node needs more memory. Upgrading to a larger container is strongly recommended in this case. See the following graph for an example of this problem:
 
 ![](attachments/mendix--java-part-ii--common-errors/6.jpg)
 

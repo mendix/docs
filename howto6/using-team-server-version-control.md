@@ -180,9 +180,9 @@ The example shows that you can merge a single revision. It is also possible to m
 
 4\. Related content
 
-*   [Managing your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
+*   [How to Manage Sprints and Stories](managing-your-application-requirements-with-mendix)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Starting your own repository](starting-your-own-repository)
 *   [Using Team Server - Version Control](using-team-server-version-control)
-*   [Gathering user feedback](gathering-user-feedback)
+*   [How to Use the Feedback Widget](gathering-user-feedback)
 *   [Sharing the Development Database](sharing-the-development-database)

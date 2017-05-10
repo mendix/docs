@@ -67,9 +67,8 @@ When using Mendix mail servers and a sender address in a domain that has a restr
 
 ## 4\. Related content
 
-*   [Trends](trends)
-*   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
+*   [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
+*   [How to Deploy to the Mendix Cloud](/developerportal/deploy/deploying-to-the-cloud)
 *   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
-*   [Sending Email](sending-email)
 *   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
 *   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)

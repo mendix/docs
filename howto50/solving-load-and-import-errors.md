@@ -61,4 +61,4 @@ Finally, in the unlikely event that you encounter this error while working on yo
 *   [Debugging Microflows](debugging-microflows)
 *   [Debugging Microflows Remotely](debugging-microflows-remotely)
 *   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-*   [How to Connect a Different App to a Node](/howtogeneral/mendixcloud/how-to-link-a-different-app-to-a-node)
+*   [How to Link a Different App to a Cloud Node](/developerportal/deploy/how-to-link-a-different-app-to-a-node)

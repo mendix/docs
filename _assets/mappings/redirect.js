@@ -1415,7 +1415,7 @@ module.exports = {
     },
     {
       from: "/howto50/Monitoring+application+health",
-      to: "/howto50/monitoring-application-health"
+      to: "/developerportal/operate/monitoring-application-health"
     },
     {
       from: "/howto50/Monitoring+Mendix+using+JMX",
@@ -1559,7 +1559,7 @@ module.exports = {
     },
     {
       from: "/howto50/Trends",
-      to: "/howtogeneral/mendixcloud/trends"
+      to: "/developerportal/operate/trends"
     },
     {
       from: "/howto50/Triggering+Logic+using+Microflows",
@@ -1790,7 +1790,7 @@ module.exports = {
     },
     {
       from: "/howto6/deploying+to+the+cloud",
-      to: "/howtogeneral/mendixcloud/deploying-to-the-cloud"
+      to: "/developerportal/deploy/deploying-to-the-cloud"
     },
     {
       from: "/howto6/Design+the+Architecture",
@@ -1974,7 +1974,7 @@ module.exports = {
     },
     {
       from: "/howto6/monitoring+application+health",
-      to: "/howtogeneral/mendixcloud/monitoring-application-health"
+      to: "/developerportal/operate/monitoring-application-health"
     },
     {
       from: "/howto6/On-premises+Deployment",
@@ -2181,11 +2181,11 @@ module.exports = {
      ****************************************************/
     {
       from: "/mendixcloud/Custom+Domains",
-      to: "/howtogeneral/mendixcloud/custom-domains"
+      to: "/developerportal/deploy/custom-domains"
     },
     {
       from: "/mendixcloud/Deploying+to+the+cloud",
-      to: "/howtogeneral/mendixcloud/deploying-to-the-cloud"
+      to: "/developerportal/deploy/deploying-to-the-cloud"
     },
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
@@ -2221,11 +2221,11 @@ module.exports = {
     },
     {
       from: "/mendixcloud/migrating+to+v4",
-      to: "/howtogeneral/mendixcloud/migrating-to-v4"
+      to: "/developerportal/deploy/migrating-to-v4"
     },
     {
       from: "/mendixcloud/Monitoring+application+health",
-      to: "/howtogeneral/mendixcloud/monitoring-application-health"
+      to: "/developerportal/operate/monitoring-application-health"
     },
     {
       from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
@@ -2241,7 +2241,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Trends",
-      to: "/howtogeneral/mendixcloud/trends"
+      to: "/developerportal/operate/trends"
     },
     /****************************************************
      * SUPPORT
@@ -2273,7 +2273,7 @@ module.exports = {
     },
     {
       from: "/mxsupport/Technical+Contact+Definition",
-      to: "/howtogeneral/support/technical-contact"
+      to: "/developerportal/settings/technical-contact"
     },
     /****************************************************
      * REFERENCE GUIDE MENDIX 4

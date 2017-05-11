@@ -103,7 +103,7 @@ With the API rights you can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-a
 
 With this permission you can view the application metrics, logs, and alerts under the **Operate** category in the [Developer Portal](http://home.mendix.com). This allows you to successfully operate your Mendix Cloud environments.
 
-For more information, see [Monitoring Application Health](monitoring-application-health)
+For more information, see [Monitoring Application Health](/howtogeneral/mendixcloud/monitoring-application-health)
 
 # 6 Related Content
 

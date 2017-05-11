@@ -1242,10 +1242,6 @@ module.exports = {
       to: "/howto50/deploying-a-mendix-app-to-cloud-foundry"
     },
     {
-      from: "/howto50/Deploying+a+Mendix+App+to+HP+Helion",
-      to: "/howto50/deploying-a-mendix-app-to-hp-helion"
-    },
-    {
       from: "/howto50/Deploying+a+Mendix+App+to+Pivotal",
       to: "/howto50/deploying-a-mendix-app-to-pivotal"
     },
@@ -1759,10 +1755,6 @@ module.exports = {
     {
       from: "/howto6/Denormalize+Data+to+Improve+Performance",
       to: "/howto6/denormalize-data-to-improve-performance"
-    },
-    {
-      from: "/howto6/Deploy+a+Mendix+App+to+HP+Helion",
-      to: "/howto6/deploy-a-mendix-app-to-hp-helion"
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",

@@ -192,7 +192,6 @@ If you encounter any problems, you should consult the application logs:
 * [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack)
 * [How to Deploy a Mendix App to IBM Bluemix](deploy-a-mendix-app-to-ibm-bluemix)
 * [How to Deploy a Mendix App to Pivotal](deploy-a-mendix-app-to-pivotal)
-* [How to Deploy a Mendix App to HP Helion](deploy-a-mendix-app-to-hp-helion)
 * [How to Deploy a Mendix App to Cloud Foundry](deploy-a-mendix-app-to-cloud-foundry)
 * [Pivotal Web Services Documentation](http://docs.run.pivotal.io/)
 * [Pivotal Cloud Foundry Blog](http://blog.pivotal.io/cloud-foundry-pivotal)

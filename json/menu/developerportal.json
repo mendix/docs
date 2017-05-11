@@ -5,6 +5,7 @@ sitemap: false
 {
   "categories": [
     "Company Admin"
+    "Settings"
   ],
   "pages": {% include json-snippets/get_pages.inc dir="developerportal" %}
 }

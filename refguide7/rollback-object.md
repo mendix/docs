@@ -9,7 +9,7 @@ The rollback-object action can be used to undo changes (that have not been commi
 
 **Rollback in sub microflows**
 
-When the rollback-object action is performed in a sub microflow it will roll back the uncommitted changes in the sub microflow, as well as its parent microflow.
+When the rollback-object action is performed in a sub microflow it will roll back the changes in the sub microflow, as well as its parent microflow.
 
 <div class="alert alert-info">{% markdown %}
 

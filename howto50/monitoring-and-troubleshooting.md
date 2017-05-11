@@ -7,7 +7,7 @@ Stay updated on the health of your app and troubleshoot when needed.
 
 | Basic
 | -----------------------------------------------------------------------------------
-| [Monitoring application health](/howtogeneral/mendixcloud/monitoring-application-health)
+| [Monitoring application health](/developerportal/operate/monitoring-application-health)
 | [Log Levels](log-levels)
 | [Error Handling (webinar)](http://ww2.mendix.com/Expert-Webinar.Error-Handling.html)
 | [Clearing Warning Messages in Mendix](clearing-warning-messages-in-mendix)

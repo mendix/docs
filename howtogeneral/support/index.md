@@ -56,7 +56,7 @@ To manage your company account and the users, projects, and licensed cloud nodes
 
 You need to appoint a technical contact for each of your applications. The technical contact checks the performance of the applications in the Cloud Portal and receives alerts from the Mendix Cloud Portal based on errors and warnings in each application. It is possible to make other team members receive these alerts as well. 
 
-It is very important to read these alerts carefully and to act upon them, as they can influence the performance of your app. For more information on alerts, see [Monitoring Application Health](../mendixcloud/monitoring-application-health).
+It is very important to read these alerts carefully and to act upon them, as they can influence the performance of your app. For more information on alerts, see [Monitoring Application Health](/developerportal/operate/monitoring-application-health).
 
 ### Training
 

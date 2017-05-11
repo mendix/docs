@@ -29,7 +29,6 @@ Traditionally, these are the four platforms for running Mendix apps:
 With support for Cloud Foundry, these deployment options are available:
 
 * Pivotal Web Services
-* HP Helion Development Platform
 * On Premises – Cloud Foundry
 
 ## 2 Prerequisites
@@ -45,7 +44,6 @@ Mendix is compatible with all known versions of Cloud Foundry as long as there a
 The how-to's below describe deploying Mendix apps to specific Cloud Foundry-powered platforms: 
 
 * [How to Deploy a Mendix App to Pivotal](deploy-a-mendix-app-to-pivotal)
-* [How to Deploy a Mendix App to HP Helion](deploy-a-mendix-app-to-hp-helion)
 * [How to Deploy a Mendix App to IBM Bluemix](deploy-a-mendix-app-to-ibm-bluemix)
 
 These how-to's focus on graphical interfaces. For command line instructions, see the [GitHub page of our BuildPack](https://github.com/mendix/cf-mendix-buildpack).

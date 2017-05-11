@@ -38,7 +38,7 @@ A cloud node always has:
 
 <div class="alert alert-info">{% markdown %}
 
-Note that only app team members with the **View Deploy and Monitor** permissions show up in the list of **Node Permissions**. These permissions are available in **App Team**. A SCRUM Master of the app can assign it to any team member by selecting one of the following app team user roles: **Application Operator**, **Business Engineer**, **Performance Engineer/Tester**, **SCRUM Master**.
+Note that only app team members with the **View Deploy and Monitor** permissions show up in the list of **Node Permissions**. These permissions are available in **App Team**. A SCRUM Master of the app can assign the **View Deploy and Monitor** permissions in the **App Team permissions** to any team member by selecting one of the following app team user roles: **Application Operator**, **Business Engineer**, **Performance Engineer/Tester**, **SCRUM Master**.
 
 {% endmarkdown %}</div>
 
@@ -46,7 +46,11 @@ Note that only app team members with the **View Deploy and Monitor** permissions
 
 The Technical Contact manages the cloud node and can edit the privileges of regular team members with the **View Deploy and Monitor** permissions. Only the Technical Contact can give his user role to another team member by clicking **Change to Technical Contact**. After this, the new user has the Technical Contact role, the old user does not.
 
+<div class="alert alert-info">{% markdown %}
+
 The Technical Contact of the app is the first point of contact for [Mendix Support](https://www.support.mendix.com), and will receive alerts regarding the cloud node.
+
+{% endmarkdown %}</div>
 
 ### 4.1 Alerts
 
@@ -55,7 +59,7 @@ The Technical Contact will receive the following alerts from the cloud node:
 *   Notifications for maintenance from **Mendix Support**
 *   Alerts from the node when problems arise (CPU load is high, running out of disk space, etc.). The Technical Contact cannot turn these off
 
-To find more information about **Alerts**, read paragraph **2 Alerting Categories and Thresholds**. of the [Monitoring Application Health](../operate/monitoring-application-health) documentation. 
+To find more information about **Alerts**, read paragraph **2 Alerting Categories and Thresholds**. of the [Monitoring Application Health](monitoring-application-health) documentation. 
 
 ### 4.2 Mendix Support
 
@@ -85,7 +89,7 @@ With transport rights you can deploy new versions of the application to the node
 
 ### 5.2 Access to Backups
 
-This permission grants access to the backups of the environment. You can view, [create](../operate/how-to-create-backup), [download](../operate/how-to-download-a-backup), and [restore a backup](../operate/how-to-restore-a-backup).
+This permission grants access to the backups of the environment. You can view, [create](/howtogeneral/mendixcloud/how-to-create-backup), [download](/howtogeneral/mendixcloud/how-to-download-a-backup), and [restore a backup](/howtogeneral/mendixcloud/how-to-restore-a-backup).
 
 ### 5.3 Receive Alerts
 
@@ -97,14 +101,14 @@ With the API rights you can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-a
 
 ### 5.5 Access to Monitoring
 
-With this permission you can view the application metrics, logs, and alerts. These allow you to successfully operate your Mendix Cloud environments.
+With this permission you can view the application metrics, logs, and alerts under the **Operate** category in the [Developer Portal](http://home.mendix.com). This allows you to successfully operate your Mendix Cloud environments.
 
-For more information, see [Monitoring Application Health](../operate/monitoring-application-health)
+For more information, see [Monitoring Application Health](monitoring-application-health)
 
 # 6 Related Content
 
 *   [Deploy API](/apidocs-mxsdk/apidocs/deploy-api)
-*   [Monitoring Application Health](../operate/monitoring-application-health)
-*   [How To Create a Backup](../operate/how-to-create-backup)
-*   [How To Download a Backup](../operate/how-to-download-a-backup)
-*   [How To Restore a Backup](../operate/how-to-restore-a-backup)
+*   [Monitoring Application Health](/howtogeneral/mendixcloud/monitoring-application-health)
+*   [How To Create a Backup](/howtogeneral/mendixcloud/how-to-create-backup)
+*   [How To Download a Backup](/howtogeneral/mendixcloud/how-to-download-a-backup)
+*   [How To Restore a Backup](/howtogeneral/mendixcloud/how-to-restore-a-backup)

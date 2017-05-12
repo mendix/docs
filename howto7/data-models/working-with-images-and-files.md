@@ -57,7 +57,7 @@ Before you start with this how-to please follow these prerequisites:
 *   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
 *   [Setting up data validation](setting-up-data-validation)
 *   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-*   [How to Manage Sprints and Stories](/developerportal/collaborate/managing-your-application-requirements-with-mendix)
+*   [Managing your Application Requirements with Mendix](../collaboration-project-management/managing-your-application-requirements-with-mendix)
 *   [Scout and Windows 10 Workaround](../guis/scout-and-windows-10-workaround)
 *   [Generating a personal SSH2 key pair](../security/generating-a-personal-ssh2-key-pair)
 *   [Creating a chainable Custom Widget](../custom-widget-development/create-a-chainable-custom-widget)

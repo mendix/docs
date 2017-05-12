@@ -1,5 +1,5 @@
 ---
-title: "How to Manage Sprints and Stories"
+title: "Managing your Application Requirements with Mendix"
 category: 'Collaboration & Project Management'
 space: "Mendix 5 How-to's"
 ---
@@ -152,10 +152,10 @@ With Mendix it’s always possible to export your data, from your application bu
 
 ## 8\. Related content
 
-*   [How to Manage Sprints and Stories](managing-your-application-requirements-with-mendix)
+*   [Managing your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
 *   [Starting your own repository](starting-your-own-repository)
 *   [Contributing to a GitHub repository](contributing-to-a-github-repository)
 *   [Using Team Server - Version Control](using-team-server-version-control)
-*   [How to Use the Feedback Widget](gathering-user-feedback)
+*   [Gathering user feedback](gathering-user-feedback)
 *   [App Platform](/refguide5/app-platform)
 *   [Team Server](/refguide5/team-server)

@@ -97,4 +97,4 @@ Learn more about this topic using the following helpful links:
 s
 *   [Build a simple HRM app 2: First steps in building a rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
 *   [The Eye-Catching Mendix UI Framework](https://www.mendix.com/blog/the-eye-catching-mendix-ui-framework/)
-*   [How to Manage Sprints and Stories](managing-your-application-requirements-with-mendix)
+*   [Managing your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)

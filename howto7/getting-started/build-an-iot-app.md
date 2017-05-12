@@ -2,21 +2,31 @@
 title: "Build an IoT App"
 space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
-description: "_____"
+description: "Presents details on how to configure the sensor data subscription and expand the Mendix Logistics IoT app."
 tags: ["iot", ________]
 ---
 
-## Introduction
+## 1 Introduction
 
 The application of IoT solutions to logistics ensures that the transport of goods and products can be tracked more closely. This helps to maintain both shipment quality and supply chain security. Item locations can be tracked with sensors and IoT apps at borders, in ports and warehouses, even on store shelves. The vehicles delivering these products can also be implemented with data points for monitoring. The communication of inventory and transport information enables making quick changes to the supply chain when necessary.
 
 In this tutorial, you are going to modify an IoT sample app to a set of custom requirements. This app obtains and measures data from various sensors in individual cargo shipments on a ship. In this scenario, a shipment of bananas needs to be monitored for the temperature inside the shipping container, and an alert needs to be sent whenever this temperature gets too high. The temperature sensor is connected to a cloud IoT platform (AWS), and its data is published via a channel that is called a topic. Subscribing to a topic makes it possible to use the various sensor indicators in the app.
 
-Before starting this tutorial, open the **Logistics IOT** app in the Modeler. If you have not downloaded the app yet, you can find it in the Mendix App Store. {ADD LINK}
+**This how-to will teach you how to do the following:**
 
-You will be working in the **Tutorial_Workspace** module (the **Tutorial_Completed** module has the full final version of the app model).
+* Create...
+* Build...
+* Configure...
 
-### Deploying and Viewing Your App
+## 2 Prerequisites
+
+Before starting this how-to, make sure you have completed the following prerequisites:
+
+* Open the **Logistics IOT** app in the Modeler. If you have not downloaded the app yet, you can find it in the Mendix App Store. {ADD LINK}
+    * You will be working in the **Tutorial_Workspace** module 
+    * The **Tutorial_Completed** module has the full final version of the app model
+
+## 3 Deploying and Viewing the App
 
 Start by deploying the application so that you can experience how this app looks. You will see how you can switch between your workspace and the completed example app.
 
@@ -29,7 +39,7 @@ To deploy and view the app, follow these steps:
 5. On the right-side of the screen, click the toggle with the user icon (located above the **Feedback** button). Switch to the **Tutorial_completed** section of the app, which contains the completed pages for you to use as a reference as well as a different data set.
 6. Click a container from the shipment overview to inspect the page with the container sensor details. This is the page that you are going to build in this tutorial.
 
-## 1 Connecting App Pages
+## 4 Connecting App Pages
 
 In this section, you are going to observe the app in the development environment. You will make your first change, which will enable the end-user to view the live details of a shipment selected from the shipment overview.
 
@@ -44,7 +54,7 @@ To connect an app page, follow these steps:
 7. Click the menu button in the top-right corner of the app and select **Shipments**.
 8. Click **Edit** on the preconfigured shipment, which will bring you to the **Shipment** form, where you can edit the details about the shipment.
 
-## 2 Configuring the Sensor Data Subscription
+## 5 Configuring the Sensor Data Subscription
 
 In this section, you will configure calling the **IVK_Subscribe** microflow via a button on the **Shipment_Detail** page.
 
@@ -63,7 +73,7 @@ To configure the sensor data subscription, follow these steps:
 9. Refresh the app in the browser, then click **Subscribe**.
 10. Return to the Modeler and observe the **Console**. Double-click the log message **Sensor data received**, which will open the **View Log Line Details** pop-up window, where you can see the **Topic** and **Payload** (JSON) in the **Message** section. Receiving this kind of log message means you have just connected to AWS!
 
-## 3 Handling the Sensor Data
+## 6 Handling the Sensor Data
 
 In the previous section, you verified that you are receiving data, but all you did was log it. In this section, you are going to process the data you receive in the string format into Mendix objects.
 
@@ -82,13 +92,13 @@ To configure the handling of the sensor data, follow these steps:
 5. Save the changes, click **Run Locally**, then click **View App**.
 6. In the app, click **Subscribe** and observe the temperature updating.
 
-## 4 Adding Another Data Dimension to the App
+## 7 Adding Another Data Dimension to the App
 
 In this section, you are going to enrich the data details that are configurable in the app so that you can categorize shipments based on the cargo type.
 
-### 4.1 Adding Cargo Type Pages
+### 7.1 Adding Cargo Type Pages
 
-In this section, you are going to introduce a cargo type with which you can register the thresholds for different measurements (for example, temperature and light). For an example scenario here, if a ship is transporting perishable goods, you will want to see an alert for any extreme activity with the indicators. 
+In this section, you are going to introduce a cargo type with which you can register the thresholds for different measurements (for example, temperature and light). For an example scenario here, if a ship is transporting perishable goods, you will want to see an alert for any extreme activity with the indicators.
 
 To add the cargo type pages, follow these steps:
 
@@ -140,7 +150,7 @@ To add the cargo type pages, follow these steps:
 31. No items are found, but now you are able to click **New** and edit a cargo type.
 32. Add the **Description** of *Bananas*, set the **Temperature threshold** to *10.00*, and set **Has temperature threshold** to **Yes**. You will now see the **Bananas** cargo type object in the list.
 
-### 4.2 Improving the Look and Feel of a Page
+### 7.2 Improving the Look and Feel of a Page
 
 When you observe the **Cargo Types** page in the app, you can see that it is not in line with the other pages you have created. In this section, you will improve the title and the attached image for the cargo.
 
@@ -155,7 +165,7 @@ To improve the look and feel of this page, follow these steps:
 7. Save the changes, click **Run Locally**, then click **View App**.
 8. Observe the changes in the app. Looks better, right?
 
-### 4.3 Adding a New Input to a Page
+### 7.3 Adding a New Input to a Page
 
 In this section, you are going to add a reference selector to the **Shipment** editor page for selecting the cargo type.
 
@@ -169,11 +179,11 @@ To add a new input to this page, follow these steps:
 6. Click **Edit** for the **TK124097987** shipment.
 7. In the new **Cargo type** field in the **Shipment** editor, select **Bananas** from the drop-down menu, then click **Save**.
 
-## 5 Creating Alerts
+## 8 Creating Alerts
 
 In this section, you are going to configure the creation of alerts for when the cargo exceeds the temperature threshhold.
 
-### 5.1 Extending the OnMessage Flow to Create Alerts
+### 8.1 Extending the OnMessage Flow to Create Alerts
 
 If the temperature threshhold has been exceeded, an alert needs to be created. To extend the OnMessage flow to create alerts, follow these steps:
 
@@ -196,7 +206,7 @@ If the temperature threshhold has been exceeded, an alert needs to be created. T
 17. On the shipment overview page of the app, select **Container Bananas**, then click **Subscribe**. The data will now come into the indicators.
 18. The temperature threshold was set to 30 degrees, so when the temperature goes above 30, you will get an alert. Click the alerts icon in the upper-right side of the screen. This will open the **Current alerts** panel, where you will see the newest alert.
 
-### 5.2 Improving Alert Mechanism
+### 8.2 Improving Alert Mechanism
 
 Now you get an alert every time the temperature exceeds the threshold, which is unnecessary after the initial alert. You need an indicator on a shipment that an alert is active, so now you are going to build some logic that prevents these repetitive alert messages.
 
@@ -214,11 +224,11 @@ To improve the alert mechanism, follow these steps:
 10. On the shipment overview page of the app, select **Container Bananas**, then click **Subscribe**.
 11. Open the **Current alerts** panel by clicking the exclamation mark icon in the top right of the page. You will see a message like this: **Temperature is too high: 15**.
 
-## 6 Adding a New Shipment with a Sensing Device
+## 9 Adding a New Shipment with a Sensing Device
 
 In this section, you are going to expand the shipments that will be tracked by the app.
 
-### 6.1 Adding a New Shipment
+### 9.1 Adding a New Shipment
 
 To add a new shipment, follow these steps:
 
@@ -237,7 +247,7 @@ To add a new shipment, follow these steps:
 13. Save the changes, click **Run Locally**, then click **View App**.
 14. On the **Global shipments** page of the app, click **New**. This adds a new shipment to the homepage. If you'd like to see a detailed shipment instance on the app homepage, you can fill in the details on the **Edit Shipment** form.
 
-### 6.2 Improving the Input Form
+### 9.2 Improving the Input Form
 
 To improve the input form, follow these steps:
 

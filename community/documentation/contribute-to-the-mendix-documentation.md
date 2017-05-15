@@ -108,12 +108,12 @@ As you add knowledge to the documentation that will help your fellow Mendix deve
 
 Before you can gain Mendix points for your documentation contributions, you must authorize the connection of your GitHub profile to your Mendix Community Profile. For details on this, see [Set Up Your Community Profile](../tools/how-to-set-up-your-profile).
 
-The amount of points you gain depends on the size of the documentation contribution you make. This is calculated per pull request and is based on the number of Markdown files you edited or added as well as sthe number of lines changed per file: [VERIFY]
+The amount of points you gain depends on the size of the documentation contribution you make. This is calculated per pull request and is based on the number of lines changed:
 
-* For a small contribution to the documentation (defined as, 1-20 lines edited/added total) – 5 points [VERIFY]
-* For a large contribution to the documentation (defined as, 20+ lines edited/added total) – 15 points [VERIFY]
+* For a small contribution to the documentation – 5 points
+* For a large contribution to the documentation – 15 points
 
-The points are awarded when the pull request is merged. [VERIFY] For more details on Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq).
+The points are awarded when the pull request is merged. For more details on Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq).
 
 ## 7 Related Content
 

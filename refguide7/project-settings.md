@@ -154,7 +154,7 @@ You can always switch between 'Runtime' and 'Database'.
 Moving from 'Runtime' to 'Database' will mean that the unique constraints will be added to the database and uniqueness responsibility will belong to the database.   
 Before switching to the 'Database' option, "DataStorage.EnableDiagnostics" custom runtime setting can be used to generate uniqueness violation report.   
 Unique Constraint Migration needs to be done if the generated report shows violations.    
-See https://docs.mendix.com/refguide7/uniqueconstraint-migration for more information on migration.
+See https://docs.mendix.com/refguide7/uniqueness-constraint-migration for more information on migration.
 
 ##### 'Database' to 'Runtime'
 Falling back to the 'Runtime' option will remove the unique constraints from the database and uniqueness rules will not be checked at the database level anymore.

@@ -67,6 +67,8 @@ Converts a Decimal value to a String value, according to a specified format.
     Type: Decimal
 *   format that the result should be in
     Type: String
+*   locale in which the results should be formated (optional). See [here](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#forLanguageTag-java.lang.String-) for the supported values. When omitted the user configured Locale is used. Supported since Mendix 7.3
+    Type: String
 
 ### Output
 

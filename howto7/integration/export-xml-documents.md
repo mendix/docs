@@ -116,7 +116,7 @@ The XML schema describes what the contents of an XML document should be. We need
 
     ![](attachments/18448731/18581807.png)
 
-14. Click **OK **to save the mapping.
+14. Click **OK** to save the mapping.
 
 ## 5 Creating the Export Logic
 

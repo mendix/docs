@@ -161,7 +161,7 @@ const parseHtmlFile = file => {
     if (file.content && file.meta.title) {
       const $ = cheerio.load(file.content);
 
-      $('article').find('p').each((i, el) => {
+      $('article').find('p,ul,ol').each((i, el) => {
         var $el = $(el);
         if (!!$el.text().length && file.space.space) {
           let item = _.merge(

@@ -4,25 +4,24 @@ space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 ---
 
-
-See [http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html](http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html) for all pattern possibilities.
+For all pattern possibilities, see [Class DecimalFormat](http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html).
 
 ## parseDecimal
 
-Parses a String value to a Decimal value. Takes optional parameters for format and default value.
+Parses a string value to a decimal value. Takes optional parameters for the format and default values.
 
 ### Input parameters
 
-*   value to parse
-    Type: String
-*   pattern to match on (optional)
-    Type: String
-*   default value (optional)
-    Type: Decimal
+* Value to parse
+    * Type: string
+* Pattern to match (optional)
+    * Type: string
+* Default value (optional)
+    * Type: decimal
 
 ### Output
 
-A Decimal value that matches the input String value. If the value cannot be parsed (i.e. does not match the format parameter or contains illegal characters) the default value will be returned. If no default value was provided, an error occurs.
+A decimal value that matches the inputted string value. If the value cannot be parsed (meaning, it does not match the format parameter or contains illegal characters), the default value will be returned. If no default value was provided, an error occurs.
 
 ```java
 parseDecimal('3.45')
@@ -57,21 +56,24 @@ returns:
 ```java
 3.33
 ```
+
 ## formatDecimal
 
-Converts a Decimal value to a String value, according to a specified format.
+Converts a decimal value to a string value according to a specified format.
 
-### Input parameters
+### Input Parameters
 
-*   value to convert
-    Type: Decimal
-*   format that the result should be in
-    Type: String
+* Value to convert
+    * Type: decimal
+* Format for the result
+    * Type: string
+* Locale in which the results should be formated (optional). For the supported values, see [forLanguageTag](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#forLanguageTag-java.lang.String-). When omitted, the user configured locale is used. Supported since Mendix 7.3.
+    * Type: string
 
 ### Output
 
-A String representation of the Decimal, in the format specified by the 'format' parameter.
-Type: String
+A string representation of the decimal in the format specified by the `format` parameter.
+* Type: string
 
 ```java
 formatDecimal(1234.56, '#,###.#')

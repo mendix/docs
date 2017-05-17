@@ -59,7 +59,7 @@ returns:
 
 Determines the length of a string.
 
-### Input Prameters
+### Input Parameters
 
 * A string
 * Type: string
@@ -570,3 +570,4 @@ returns:
 
 ```java
 'Hello, world!'
+```

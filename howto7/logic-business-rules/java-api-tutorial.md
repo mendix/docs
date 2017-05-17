@@ -73,7 +73,7 @@ public static List<IMendixObject> getAttachments(GenericObject object, IContext 
 ```
 
 | Line | Description |
-| ---|--- |
+| --- | --- |
 | 1 | The help method is defined here. Its parameters are the `GenericObject` proxy object and the context in which we are performing the query. |
 | 3 | The name of the `Attachment` entity is defined in a `String` by copying the `entityName` from the `Attachment` proxy class. |
 | 4 | The name of the relation between the `Attachment` entity and `GenericObject` entity is defined in a `String` by getting it from the `MemberNames` enumeration of the `Attachment` proxy class and calling `toString()` on it. |

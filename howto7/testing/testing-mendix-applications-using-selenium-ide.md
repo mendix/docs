@@ -165,7 +165,7 @@ In this section, you will edit some test steps by using Firebug and FirePath to 
     ![](attachments/18448631/18580288.png)
 
     There is only one matching node, so you have now found a unique selector for the **Amount** field.
-21. Change the value `id=_mxui_widget_NumberInput_1_input` into `css=.mx-name-textBox6 input` in Selenium.
+21. Change the value `id=_mxui_widget_NumberInput_1_input` into `css=.mx-name-textBox6 input` in Selenium.<br />
 
     <div class="alert alert-info">{% markdown %}
 
@@ -183,7 +183,7 @@ In this section, you will edit some test steps by using Firebug and FirePath to 
 26. Click the **Description** box. The name of this box is `referenceSelector1` and it will have the CSS class `mx-name-referenceSelector1`.
 27. Enter `.mx-name-referenceSelector1` in FirePath and press <kbd>Enter</kbd>. Two elements are found: one in the pop-up window and one on the page in the background. To retrieve the element of the active page, you need to add `.mx-window-active` to the target.
 28. Enter `.mx-window-active .mx-name-referenceSelector1` in FirePath and press <kbd>Enter</kbd>. There is only one matching node, so you have now found a unique selector for the **Type** box. 
-29. Change the value `id=mxui_widget_ReferenceSelector_2_input` into `css=.mx-window-active .mx-name-referenceSelector1 select` in Selenium.
+29. Change the value `id=mxui_widget_ReferenceSelector_2_input` into `css=.mx-window-active .mx-name-referenceSelector1 select` in Selenium.<br />
 
     <div class="alert alert-info">{% markdown %}
 

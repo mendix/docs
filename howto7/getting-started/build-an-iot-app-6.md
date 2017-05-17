@@ -1,8 +1,8 @@
 ---
-title: "Build an IoT App 6: Add a New Shipment with a Sensing Device" **[NEED MORE GENERIC TITLE: "Expand IoT App Tracking"? - VERIFY WITH ROELAND; HE NEEDS TO UPDATE NAMING IN MODEL BASED ON STEPS 4 AND 6]**
+title: "Build an IoT App 6: Expand the IoT App Tracking"
 space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
-description: "" **[FINISH]**
+description: "Describes how to extend the shipments that the Mendix Logistics IoT app will track."
 tags: ["iot", "logistics", "supply chain", "cargo", "shipment", "logistics", "sensor"]
 ---
 
@@ -21,9 +21,9 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Use the previous how-to in this series: [How to Build an IoT App 5: Create Alerts](build-an-iot-app-5)
 
-## 3 Adding a New Shipment (Step 6) **[NEED MORE GENERIC TITLE - VERIFY WITH ROELAND; HE NEEDS TO UPDATE NAMING IN MODEL BASED ON STEPS 4 AND 6]**
+## 3 Expanding the IoT App Tracking (Step 6)
 
-### 3.1 Adding a New Shipment with a Sensing Device (Step 6.1) **[NEED MORE GENERIC TITLE - VERIFY WITH ROELAND; HE NEEDS TO UPDATE NAMING IN MODEL BASED ON STEPS 4 AND 6]**
+### 3.1 Adding a New Shipment with a Sensing Device (Step 6.1)
 
 To add a new shipment, follow these steps:
 
@@ -42,7 +42,7 @@ To add a new shipment, follow these steps:
 13. Save the changes, click **Run Locally**, then click **View App**.
 14. On the **Global shipments** page of the app, click **New**. This adds a new shipment to the homepage. If you'd like to see a detailed shipment instance on the app homepage, you can fill in the details on the **Edit Shipment** form.
 
-### 3.2 Improving the Input Form (Step 6.2) **[THERE IS NO STEP 6 IN MODELER PROJECT; KEEP REFERENCES TO STEP 6?]**
+### 3.2 Improving the Input Form (Step 6.2)
 
 To improve the input form, follow these steps:
 

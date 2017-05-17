@@ -64,7 +64,7 @@ To add the cargo type pages, follow these steps:
 14. Keep **Database** selected for the **Type**, but clear the **Automatically fill the contents of the list view** check box.
 15. Right-click the top input field with the **No attribute selected** caption and select the **Description** attribute.
 16. Delete the other two input fields as well as the **See details** button (because you only want to show the **Description**).
-17. In order to add new **Cargo type** items in the app, you need to create a page where you can submit new cargo types. So now do the following:<br>
+17. In order to add new **Cargo type** items in the app, you need to create a page where you can submit new cargo types. To do this, follow these steps:<br>
     a. Right-click the gray bar in the row of the outer layout grid and select **Insert row above**.<br>
 
     ![](attachments/build-an-iot-app/select-layout-grid-row.png)<br>

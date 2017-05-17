@@ -168,11 +168,11 @@ In this section, you will edit some test steps by using Firebug and FirePath to 
 
 21. Change the value `id=_mxui_widget_NumberInput_1_input` into `css=.mx-name-textBox6 input` in Selenium.
 
-    <div class="alert alert-info">{% markdown %}
+
 
     Because it is an input field, you have to add _input_ to the target.
 
-    {% endmarkdown %}</div>
+
 
 22. Click **Run current test case**. The test will fail because it can not find the element with the target `css=.mx-name-textBox6 input`, because the page with the element has not been loaded yet.
 23. Switch the speed control to slow. The speed control determines how fast your test script runs. By default, the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test starts asserting for an element on the page even before the page is fully loaded by the browser. Try to run your test script as fast as possible.
@@ -186,11 +186,11 @@ In this section, you will edit some test steps by using Firebug and FirePath to 
 28. Enter `.mx-window-active .mx-name-referenceSelector1` in FirePath and press <kbd>Enter</kbd>. There is only one matching node, so you have now found a unique selector for the **Type** box. 
 29. Change the value `id=mxui_widget_ReferenceSelector_2_input` into `css=.mx-window-active .mx-name-referenceSelector1 select` in Selenium.
 
-     <div class="alert alert-info">{% markdown %}
+
 
     Because it is a dropdown list, you have to add _select_ to the target.
 
-    {% endmarkdown %}</div>
+
 30. Click **Run current test case**. The test will pass.
 
     ![](attachments/18448631/18580286.png)

@@ -53,11 +53,6 @@ String formattedString = formatString("this is an unformatted string", context);
 testObject.setTestString(context, formattedString);
 Core.commit(context, testObject.getMendixObject());
 ```
-Line | Description
---- | ---
-1 | The value of the formatted string from our helper method is obtained.
-2 | There is a `testObject` here. This is an entity of the MyFirstModule module and it's called `TestObject`. This object was passed to the Java Action and is available as a field in this entire Java Action class. It is used to store the formatted string in by calling a `set` method on one of its string attributes.
-3 | The `Core` method commit is called here. This will commit an object to tbe database. The context is passed as well as the `IMendixObject` of the object we're saving. This `IMendixObject` can be obtained from the proxy we've used.
 
 ## 4 Copying FileDocuments
 

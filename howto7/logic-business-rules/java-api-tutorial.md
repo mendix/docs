@@ -97,6 +97,7 @@ for (IMendixObject iMendixObject: getAttachments(sourceObject, context))
 	Core.storeFileDocumentContent(context, newAttachment.getMendixObject(), (String) iMendixObject.getValue(system.proxies.Document.MemberNames.Name.toString()),  inputStream);
 }
 ```
+
 | Line | Description |
 | --- | --- |
 | 1 | Declaring an `Attachment` variable named `newAttachment`. |

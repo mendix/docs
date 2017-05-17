@@ -47,7 +47,7 @@ As you can see, specifying the `function` keyword isn't required here. In TypeSc
 
 ## How do you use promises?
 
-The returning pattern is that each time you receive a Promise object from a function call, you call `then` on it, until you end the chain with `done`. In `done`, you handle either the result if everything worked correctly, or you handle the error in case a promise was rejected somewhere along the way. Please have a look at the [CRUD example] to see how you use this pattern in practice.
+The returning pattern is that each time you receive a Promise object from a function call, you call `then` on it, until you end the chain with `done`. In `done`, you handle either the result if everything worked correctly, or you handle the error in case a promise was rejected somewhere along the way.
 
 ```js
 client.platform()
@@ -120,7 +120,7 @@ In the snippet above, `documents.map( doc => loadAsPromise(doc))` transforms the
 
 <div class="alert alert-success">{% markdown %}
 
-You can load model units or elements using a convenience method [`loadAsPromise`] which is available in mendixplatformsdk as a way to load and getting `promise` as an output instead of having to use a callback function.
+You can load model units or elements using the convenience method `loadAsPromise`, which is available in the Mendix platform SDK as a way to load and get `promise` as an output instead of having to use a callback function.
 
 {% endmarkdown %}</div>
 
@@ -128,7 +128,7 @@ You can load model units or elements using a convenience method [`loadAsPromise`
 
 In an arrow function, the object `this` points to is different from what it would be in a regular function declaration.
 
-In practice, this sometimes makes us prefer the function notation, for instance when you [want to put a timeout on an integration test].
+In practice, this sometimes makes you prefer the function notation (for example, when you want to put a timeout on an integration test).
 
 ### Potentially unhandled rejection
 

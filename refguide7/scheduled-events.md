@@ -35,10 +35,7 @@ If the start date/time is UTC time the scheduled event is executed when it is th
 
 If the start date/time is server time, the scheduled event is executed when it is the indicated time on the server on which your application runs.
 
-{% endmarkdown %}</div> |
-| Repeat | The scheduled event is repeated with the indicated interval (e.g. every 5 minutes) if repeat is on. |
-| Interval | This number together with the interval type indicates how large the interval is between two events. This number should be greater than zero. |
-| Interval type | The interval type determines the unit of the interval. Together with the interval number it indicates how large the interval between two events is. For example, 1 day or 10 minutes. |
+{% endmarkdown %}</div> 
 
 ### Additional information
 

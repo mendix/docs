@@ -1,16 +1,29 @@
 ---
-title: "Build an IoT App 6: "
+title: "Build an IoT App 6: Add a New Shipment with a Sensing Device" **[NEED MORE GENERIC TITLE: "Expand IoT App Tracking"? - VERIFY WITH ROELAND; HE NEEDS TO UPDATE NAMING IN MODEL BASED ON STEPS 4 AND 6]**
 space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
-description: "Presents details on how to configure the sensor data subscription and expand the Mendix Logistics IoT app."
-tags: ["iot", ________]
+description: "" **[FINISH]**
+tags: ["iot", "logistics", "supply chain", "cargo", "shipment", "logistics", "sensor"]
 ---
 
-### Step 6 - Adding a New Shipment with a Sensing Device
+## 1 Introduction
 
-In this section, you are going to expand the shipments that will be tracked by the app.
+In this how-to, you are going to expand the shipments that will be tracked by the app and also improve the input form.
 
-#### Step 6.1 - Adding a New Shipment
+**This how-to will teach you how to do the following:**
+
+* Add a new shipment with a sensing device
+* Improve the input form
+
+## 2 Prerequisites
+
+Before starting with this how-to, make sure you have completed the following prerequisite:
+
+* Use the previous how-to in this series: [How to Build an IoT App 5: Create Alerts](build-an-iot-app-5)
+
+## 3 Adding a New Shipment (Step 6) **[NEED MORE GENERIC TITLE - VERIFY WITH ROELAND; HE NEEDS TO UPDATE NAMING IN MODEL BASED ON STEPS 4 AND 6]**
+
+### 3.1 Adding a New Shipment with a Sensing Device (Step 6.1) **[NEED MORE GENERIC TITLE - VERIFY WITH ROELAND; HE NEEDS TO UPDATE NAMING IN MODEL BASED ON STEPS 4 AND 6]**
 
 To add a new shipment, follow these steps:
 
@@ -25,11 +38,11 @@ To add a new shipment, follow these steps:
 9. On this new form, delete the input fields that you don't want to provide yet: **Lat**, **Lng**, **Is alerted for temperature**, **Latest sensor update**, and **Sensor view**.
 10. Right-click the drop zone below **Cargo value** and in the **Connector**, double-click **Shipment_CargoType** > **Cargo Type** > **Description**.
 11. Right-click the drop zone below **Cargo Type** and in the **Connector**, double-click **Shipment_Topic** > **Topic** > **Name** .
-12. Select the whole page and in the **Properties** pane, set the **Navigation** visibility to **User**.
+12. Select the whole page and in the **Properties** pane, set **Navigation** > **Visible for** to **User**.
 13. Save the changes, click **Run Locally**, then click **View App**.
 14. On the **Global shipments** page of the app, click **New**. This adds a new shipment to the homepage. If you'd like to see a detailed shipment instance on the app homepage, you can fill in the details on the **Edit Shipment** form.
 
-#### Step 6.2 - Improving the Input Form
+### 3.2 Improving the Input Form (Step 6.2) **[THERE IS NO STEP 6 IN MODELER PROJECT; KEEP REFERENCES TO STEP 6?]**
 
 To improve the input form, follow these steps:
 
@@ -41,3 +54,12 @@ To improve the input form, follow these steps:
 6. Open the **End Event**. For the **Return value**, enter `$TopicLis`.
 7. In the **Properties** for the microflow, set **Allowed roles** to **User**.
 8. Save the changes, click **Run Locally**, and click **View App**. Observe how the **Topic** drop-down menu only includes the topics that are available.
+
+## 4 Related Content
+
+* [How to Build an IoT App](build-an-iot-app)
+* [How to Build an IoT App 1: Connect App Pages](build-an-iot-app-1)
+* [How to Build an IoT App 2: Configure the Sensor Data Subscription](build-an-iot-app-2)
+* [How to Build an IoT App 3: Handle the Sensor Data](build-an-iot-app-3)
+* [How to Build an IoT App 4: Add Another Data Dimension](build-an-iot-app-4)
+* [How to Build an IoT App 5: Create Alerts](build-an-iot-app-5)

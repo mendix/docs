@@ -1,6 +1,6 @@
 ### On Click
 
-This property specifies what action is executed when the element is clicked. There are nine options:
+This property specifies what action is executed when the element is clicked. These are the options:
 
 | Action | Effect |
 | --- | --- |
@@ -10,9 +10,9 @@ This property specifies what action is executed when the element is clicked. The
 | Open link | Trigger an action based on the link type, some of which are specific to mobile devices. |
 | Save changes | Commit all changes made on the page.  |
 | Cancel changes | Roll back all changes made on the page. |
-| Close page | Close the pop-up for pop-up pages, or navigate to the previously visited page for content pages. |
+| Close page | Close the pop-up window (for pop-up pages) or navigate to the previously visited page (for content pages). |
 | Synchronize | Synchronize the data stored locally on your device with the server database. |
-| Sign out | Sign out the currently signed in user. When no user is signed in, pressing this button has no effect. |
+| Sign out | Sign out the currently signed-in user. When no user is signed in, pressing this button has no effect. |
 
 _Default value:_ Do nothing
 
@@ -32,7 +32,7 @@ The microflow settings specify what parameters will be passed to the microflow, 
 
 See [Starting Microflows](starting-microflows).
 
-### Link type (Only for "Open link")
+### Link Type (Only for "Open link")
 
 This specifies the type of action triggered when pressing the button. The following table shows the options.
 
@@ -51,11 +51,11 @@ The address property is used differently depending on the chosen link type. It i
 
 The address can be set to either a literal value, or an attribute value.
 
-### Address value (Only for "Open link")
+### Address Value (Only for "Open link")
 
 If a literal value is chosen for the address, you can enter the value here.
 
-### Address attribute (Only for "Open link")
+### Address Attribute (Only for "Open link")
 
 If an attribute is chosen for the address, you can select the attribute here. An address attribute specifies a path to an attribute. The path starts at the entity of the data view in which the link button is contained.
 

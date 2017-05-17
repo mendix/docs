@@ -96,7 +96,7 @@ Retrieves a substring of a string. Note that the first character of a string is 
 
 A part of the original string, starting at the start position with a length equal to the desired length. If no desired length is specified, will return a substring starting at the start position and ending at the end of the string.
 
-Type: string
+* Type: string
 
 ```java
 substring('thisismystring', 6)
@@ -137,7 +137,7 @@ Finds the position of the first occurrence of the substring in the string.
 
 The first location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string.
 
-Type: integer
+* Type: integer
 
 ```java
 find('thisismystring', 'my')
@@ -190,7 +190,7 @@ Finds the position of the last occurrence of a substring in the original string.
 
 The first location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string.
 
-Type: Integer
+* Type: Integer
 
 ```java
 findLast('thisismystring', 't')
@@ -253,7 +253,7 @@ find('mystring', 'otherstring') != -1
 
 Whether the original string contains the substring.
 
-Type: Boolean
+* Type: Boolean
 
 ```java
 contains('thisismystring', 'my')
@@ -280,7 +280,7 @@ Determines whether a string starts with the specified substring.
 
 Whether the original string starts with the substring.
 
-Type: Boolean
+* Type: Boolean
 
 ```java
 startsWith('thisismystring', 'this')
@@ -307,7 +307,7 @@ Determines whether a string ends with the specified substring.
 
 Whether the original string ends with the substring.
 
-Type: Boolean
+* Type: Boolean
 
 ```java
 startsWith('thisismystring', 'ring')
@@ -332,7 +332,7 @@ Removes all the whitespace at the beginning and end of a string.
 
 Same string but without spaces at the beginning and end.
 
-Type: string
+* Type: string
 
 ```java
 trim(' this is my string     ')
@@ -358,6 +358,7 @@ Checks to see if a string matches a given regular expression.
 <div class="alert alert-warning">{% markdown %}
 
 Please note that this function call uses a regular expression language provided by the current platform:
+
 * When used inside a [microflow](microflow) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
 * When used inside [conditional formatting](conditions) – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
@@ -367,7 +368,7 @@ Please note that this function call uses a regular expression language provided 
 
 Whether the string matches or not.
 
-Type: Boolean
+* Type: Boolean
 
 This examples tests to see whether the string contains only numbers
 
@@ -414,7 +415,7 @@ Please note that this function call uses a regular expression language provided 
 
 The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
 
-Type: string
+* Type: string
 
 ```java
 replaceAll('this is a string with 75 some numbers 234 thrown in', '([0-9])', 'NUMBER')
@@ -464,7 +465,7 @@ Please note that this function call uses a regular expression language provided 
 
 The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
 
-Type: string
+* Type: string
 
 ```java
 replaceFirst('this is a string with 75 some numbers 234 thrown in', '([0-9])', 'NUMBER')
@@ -493,7 +494,7 @@ At least one of the parameters must be of type string.
 
 A new string that is the literal concatenation of the two input parameters.
 
-Type: string
+* Type: string
 
 To combine two strings:
 

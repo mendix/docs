@@ -39,7 +39,7 @@ entity1Interface.load((entity1 : domainmodels.Entity) => {
 ```
 <div class="alert alert-success">{% markdown %}
 
- You can also load units or elements using a convenience method [`loadAsPromise`](https://apidocs.mendix.com/platformsdk/latest/modules/_mendix_platform_sdk_.html#loadaspromise) which is available in mendixplatformsdk as a way to load and getting `promise` as an output instead of having to use a callback function.
+ You can also load units or elements using a convenience method [`loadAsPromise`] which is available in mendixplatformsdk as a way to load and getting `promise` as an output instead of having to use a callback function.
 
 {% endmarkdown %}</div>
 

@@ -38,13 +38,13 @@ private static String formatString(String inputString, IContext context) throws 
 }
 ```
 
-Line | Description
---- | ---
-1 | In this line, the method is defined. We'll need the input string, and we'll also need the context in which this microflow is executed.
-3 | To pass parameters to a microflow, a map is used. A `HashMap` is being used here. The map consists of a string key, which holds the name of the parameter in the microflow, and an object value, which holds the value of the parameter.
-4 | An entry is put in the `HashMap` containing the name of the parameter (`inputString`) and the value of the string.
-5 | The core method executed is called. This executes the microflow. It has the following parameters: the context, the module name and microflow name, and the parameter map. The method always returns an object which can be cast to the type that the microflow returns, in this case a string.
-6 | The microflow return value is returned by our helper method.
+| Line | Description |
+| --- | --- |
+| 1 | In this line, the method is defined. We'll need the input string, and we'll also need the context in which this microflow is executed. |
+| 3 | To pass parameters to a microflow, a map is used. A `HashMap` is being used here. The map consists of a string key, which holds the name of the parameter in the microflow, and an object value, which holds the value of the parameter. |
+| 4 | An entry is put in the `HashMap` containing the name of the parameter (`inputString`) and the value of the string. |
+| 5 | The core method executed is called. This executes the microflow. It has the following parameters: the context, the module name and microflow name, and the parameter map. The method always returns an object which can be cast to the type that the microflow returns, in this case a string. |
+| 6 | The microflow return value is returned by our helper method. |
 
 Once we have the value of the formatted string, we are going to store this in an object. This is the code between `BEGIN USER CODE` and `END USER CODE`.
 
@@ -71,13 +71,14 @@ public static List<IMendixObject> getAttachments(GenericObject object, IContext 
 	return Core.retrieveXPathQueryEscaped(context, "//%s[%s='%s']", attachmentEntityName, relationName, currentObjectID);
 }
 ```
-Line | Description
----|---
-1 | The help method is defined here. Its parameters are the `GenericObject` proxy object and the context in which we are performing the query.
-3 | The name of the `Attachment` entity is defined in a `String` by copying the `entityName` from the `Attachment` proxy class.
-4 | The name of the relation between the `Attachment` entity and `GenericObject` entity is defined in a `String` by getting it from the `MemberNames` enumeration of the `Attachment` proxy class and calling `toString()` on it.
-5 | The ID of the `currentObject` is retrieved from the `GenericObject` proxy object method `getGUID();`.
-6 | The `Core` method `retrieveXPathQueryEscaped` is executed and its result (a list of `IMendixObjects`) is immediately returned. The parameters of this method are the context in which we wish to execute this query and the actual query. By using the "escaped" version of this method, the XML characters in the parameters are being escaped. It also allows for easily readable code. The actual query `"//%s[%s='%s']"` is being passed as a parameter, and after that, a number of `Strings` are passed, which will take the place of the `%s` tokens.
+
+| Line | Description |
+| ---|--- |
+| 1 | The help method is defined here. Its parameters are the `GenericObject` proxy object and the context in which we are performing the query. |
+| 3 | The name of the `Attachment` entity is defined in a `String` by copying the `entityName` from the `Attachment` proxy class. |
+| 4 | The name of the relation between the `Attachment` entity and `GenericObject` entity is defined in a `String` by getting it from the `MemberNames` enumeration of the `Attachment` proxy class and calling `toString()` on it. |
+| 5 | The ID of the `currentObject` is retrieved from the `GenericObject` proxy object method `getGUID();`. |
+| 6 | The `Core` method `retrieveXPathQueryEscaped` is executed and its result (a list of `IMendixObjects`) is immediately returned. The parameters of this method are the context in which we wish to execute this query and the actual query. By using the "escaped" version of this method, the XML characters in the parameters are being escaped. It also allows for easily readable code. The actual query `"//%s[%s='%s']"` is being passed as a parameter, and after that, a number of `Strings` are passed, which will take the place of the `%s` tokens. |
 
 The same query could be executed using `Core.retrieveXPathQuery()`. With that method, you can enter additional parameters, such as a sorting mechanism and a maximum number of objects returned. View the JavaDoc for more information.
 
@@ -96,19 +97,19 @@ for (IMendixObject iMendixObject: getAttachments(sourceObject, context))
 	Core.storeFileDocumentContent(context, newAttachment.getMendixObject(), (String) iMendixObject.getValue(system.proxies.Document.MemberNames.Name.toString()),  inputStream);
 }
 ```
-Line | Description
---- | ---
-1 | Declaring an `Attachment` variable named `newAttachment`.
-2 | Declaring an `InputStream` variable named `inputStream`.
-3 | Starting to loop through a list of `IMendixObjects` returned by our helper method.
-5 | Here we use the `Core` method `getFileDocumentContent()`, passing our retrieved `Attachment` object to retrieve the `InputStream` of the actual file.
-6 | A new `Attachment` is instanced.
-7 | The relation to the destination object is set on our new `Attachment`.
-8 | The content of the retrieved `InputStream` is stored in our new `Attachment` using the `Core` method `storeFileDocumentContent()`. This method takes a number of parameters: the context in which you are performing this store; the `IMendixObject` of the `Attachment` proxy, which is retrieved by calling `getMendixObject()` on the `Attachment` proxy; the file name of the `FileDocument` in string format, which is copied from the attachment you're copying from by using the `getValue()` method passing the member name you wish to know the value of; and the `InputStream` containing the actual file.
+| Line | Description |
+| --- | --- |
+| 1 | Declaring an `Attachment` variable named `newAttachment`. |
+| 2 | Declaring an `InputStream` variable named `inputStream`. |
+| 3 | Starting to loop through a list of `IMendixObjects` returned by our helper method. |
+| 5 | Here we use the `Core` method `getFileDocumentContent()`, passing our retrieved `Attachment` object to retrieve the `InputStream` of the actual file. |
+| 6 | A new `Attachment` is instanced. |
+| 7 | The relation to the destination object is set on our new `Attachment`. |
+| 8 | The content of the retrieved `InputStream` is stored in our new `Attachment` using the `Core` method `storeFileDocumentContent()`. This method takes a number of parameters: the context in which you are performing this store; the `IMendixObject` of the `Attachment` proxy, which is retrieved by calling `getMendixObject()` on the `Attachment` proxy; the file name of the `FileDocument` in string format, which is copied from the attachment you're copying from by using the `getValue()` method passing the member name you wish to know the value of; and the `InputStream` containing the actual file. |
 
 After this, all `Attachments` belonging to one `GenericObject` have been copied to another.
 
-## 4 Related Content
+## 5 Related Content
 
 * [How to Create a Custom Save Button](create-a-custom-save-button)
 * [How to Create Your First Microflow: Hello World!](create-your-first-microflow-hello-world)

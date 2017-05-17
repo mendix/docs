@@ -9,5 +9,4 @@ Button widgets perform an action when clicked. They can be rendered as a button 
 
 *   [Action Button](action-button)
 *   [Drop Down Button](drop-down-button)
-*   [Link Button](link-button)
 *   [Create Button](new-button)

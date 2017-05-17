@@ -11,5 +11,5 @@ Authentication widgets are used to sign users in and out. The following list sho
 * [Login Id Text Box](login-id-text-box)
 * [Password Text Box](password-text-box)
 * [Sign-In Button](sign-in-button)
-* [Sign-Out Button](sign-out-button)
+* [Sign-Out Button](action-button)
 * [Validation Message](validation-message)

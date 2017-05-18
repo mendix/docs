@@ -1,7 +1,7 @@
 ---
 title: "Element States"
 space: "API & SDK"
-parent: "your-learning-path-for-the-mendix-sdk"
+parent: "changing-things-in-the-model"
 ---
 # Element States
 

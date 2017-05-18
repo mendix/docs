@@ -2,11 +2,12 @@
 title: "Expose a Web Service"
 space: "Mendix 7 How-To's"
 category: "Integration"
+description: "Describes how Mendix supports exposing the functionality and data of your app using web services."
 ---
 
 ## 1 Introduction
 
-Mendix supports many ways to expose the functionality or data of your application to others. The easiest way is to use web services. A web service can contain multiple operations.
+Mendix supports many ways to expose the functionality and data of your application to others. The easiest way is to use web services. A web service can contain multiple operations.
 
 **This how-to will teach you how to do the following:**
 

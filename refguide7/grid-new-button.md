@@ -55,8 +55,4 @@ See [Opening Pages](opening-pages).
 
 ## Visibility Properties
 
-<div class="alert alert-info">{% markdown %}
-Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
-
 {% snippet Visible+Property.md %}

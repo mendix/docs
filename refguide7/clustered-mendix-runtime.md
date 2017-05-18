@@ -104,7 +104,7 @@ To make sure the session state does not become too big when the above scenarios 
 
 {% endmarkdown %}</div>
 
-## Associating Entites with `System.Session` or `System.User`
+## Associating Entities with `System.Session` or `System.User`
 
 The `$currentSession` variable is available in microflows so that a reference to the current session can easily be obtained. When an object needs to be stored, its association can be set to `$currentSession`, and when the object needs to be retrieved again `$currentSession` can be used as a starting point from which the desired object can be retrieved by association. The associated object can be designed so that it meets the desired needs. This same pattern applies to entities associated with `System.User`. In that case you can use the `$currentUser` variable.
 

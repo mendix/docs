@@ -99,10 +99,6 @@ module.exports = {
       to: "/apidocs-mxsdk/mxsdk/creating-your-first-script"
     },
     {
-      from: "/MXSDK/Development+Workflow",
-      to: "/apidocs-mxsdk/mxsdk/development-workflow"
-    },
-    {
       from: "/MXSDK/Domain+Model+Metamodel",
       to: "/apidocs-mxsdk/mxsdk/domain-model-metamodel"
     },
@@ -1246,10 +1242,6 @@ module.exports = {
       to: "/howto50/deploying-a-mendix-app-to-cloud-foundry"
     },
     {
-      from: "/howto50/Deploying+a+Mendix+App+to+HP+Helion",
-      to: "/howto50/deploying-a-mendix-app-to-hp-helion"
-    },
-    {
       from: "/howto50/Deploying+a+Mendix+App+to+Pivotal",
       to: "/howto50/deploying-a-mendix-app-to-pivotal"
     },
@@ -1765,10 +1757,6 @@ module.exports = {
       to: "/howto6/denormalize-data-to-improve-performance"
     },
     {
-      from: "/howto6/Deploy+a+Mendix+App+to+HP+Helion",
-      to: "/howto6/deploy-a-mendix-app-to-hp-helion"
-    },
-    {
       from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",
       to: "/howto6/deploy-a-mendix-app-to-ibm-bluemix"
     },
@@ -2186,10 +2174,6 @@ module.exports = {
     {
       from: "/mendixcloud/Custom+Domains",
       to: "/howtogeneral/mendixcloud/custom-domains"
-    },
-    {
-      from: "/mendixcloud/Deploying+to+a+Free+App",
-      to: "/howtogeneral/mendixcloud/deploying-to-a-free-app"
     },
     {
       from: "/mendixcloud/Deploying+to+the+cloud",
@@ -7049,10 +7033,6 @@ module.exports = {
       "to": "/refguide7/container-widgets"
     },
     {
-      "from": "/refguide7/Context+Mechanism",
-      "to": "/refguide7/context-mechanism"
-    },
-    {
       "from": "/refguide7/Continue+Event",
       "to": "/refguide7/continue-event"
     },
@@ -7341,10 +7321,6 @@ module.exports = {
       "to": "/refguide7/grid-action-button"
     },
     {
-      "from": "/refguide7/Grid+microflow+button",
-      "to": "/refguide7/grid-microflow-button"
-    },
-    {
       "from": "/refguide7/Grid+New+Button",
       "to": "/refguide7/grid-new-button"
     },
@@ -7475,10 +7451,6 @@ module.exports = {
     {
       "from": "/refguide7/Line+Break+Document+Template",
       "to": "/refguide7/line-break-document-template"
-    },
-    {
-      "from": "/refguide7/Link+button",
-      "to": "/refguide7/link-button"
     },
     {
       "from": "/refguide7/List+Activities",
@@ -7973,10 +7945,6 @@ module.exports = {
       "to": "/refguide7/retrieve"
     },
     {
-      "from": "/refguide7/Review+log+files+-+MS+IIS+Server",
-      "to": "/refguide7/review-log-files-ms-iis-server"
-    },
-    {
       "from": "/refguide7/Review+log+files+-+MS+SQL+Server",
       "to": "/refguide7/review-log-files-ms-sql-server"
     },
@@ -8063,10 +8031,6 @@ module.exports = {
     {
       "from": "/refguide7/Sign+In+Dialog",
       "to": "/refguide7/sign-in-dialog"
-    },
-    {
-      "from": "/refguide7/Sign+out+button",
-      "to": "/refguide7/sign-out-button"
     },
     {
       "from": "/refguide7/Simple+Menu+Bar",

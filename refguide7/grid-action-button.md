@@ -4,13 +4,6 @@ space: "Mendix 7 Reference Guide"
 parent: "control-bar"
 ---
 
-
-<div class="alert alert-info">{% markdown %}
-
-Added in Mendix 5.17\. It replaced the microflow button.
-
-{% endmarkdown %}</div>
-
 An action button can call a microflow, open a page or do nothing. 
 
 Common properties
@@ -37,8 +30,6 @@ Common properties
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
-Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{% snippet Visibility+Property.md %}
 
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

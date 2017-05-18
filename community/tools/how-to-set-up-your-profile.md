@@ -30,6 +30,12 @@ When you access your profile page through the My Community Profile link, it is a
 
 ![](attachments/how-to-set-up-your-profile/icon.png)
 
+<div class="alert alert-info">{% markdown %}
+
+In order to receive Mendix points for your contributions to the Mendix documentation, you must authorize the connection to your GitHub profile. For more details, see [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation).
+
+{% endmarkdown %}</div>
+
 If you access your profile through the **Developers** or **Leaderboards** tabs of the [Our Community](https://developer.mendixcloud.com/link/community) page, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
 
 ![](attachments/how-to-set-up-your-profile/edit.png)
@@ -72,22 +78,7 @@ After you make your profile public, a new tab will be available on your public p
 
 ![](attachments/how-to-set-up-your-profile/public_activity.png)
 
-This tab lists the following activities for which you can gain points:
-
-* Presentation given
-* Webinar attended
-* Mendix World 2016 attended
-* Meetup organized
-* Meetup attended
-* Hackathon winner
-* Hackathon finalist
-* Hackathon attended
-* Blog post added
-* App review added
-* MVP status reached
-* Expert course completed
-* Advanced course completed
-* Introduction course completed
+This tab lists the activities for which you have gained Mendix points. For details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq).
 
 ## 8 Merging Your Accounts
 

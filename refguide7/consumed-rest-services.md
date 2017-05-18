@@ -2,21 +2,24 @@
 title: "Consumed REST Services"
 space: "Mendix 7 Reference Guide"
 parent: "integration"
+description: "Presents an overview of consumed REST services and JSON in Mendix."
 ---
 
 ## REST
 
-Representational State Transfer (REST) is an approach to consume or expose resources. Over recent years it has gained popularity because of it's simplicity, because no extensive schemas or contracts are needed to transfer data between endpoints. It uses
+Representational state transfer (REST) is an approach to consuming or exposing resources. It has gained popularity because of its simplicity, because no extensive schemas or contracts are needed to transfer data between endpoints. It uses the following:
 
-*   HTTP URLs to locate resources, 
-*   HTTP headers to authenticate and specify content types (such as XML or JSON)
-*   HTTP methods to identify operations on resources, such as GET (retrieve data) or POST (send data).
+* HTTP URLs to locate resources
+* HTTP headers to authenticate and specify content types (such as XML or JSON)
+* HTTP methods to identify operations on resources, such as GET (retrieve data) or POST (send data)
 
-Lack of contracts and schemas give you an easy start using REST. Many REST endpoints return complex data however. The [JSON Structure](json-structures) document helps with giving structure to JSON data: from an example JSON snippet, a lightweight schema is extracted that is used in [Mapping Documents](mapping-documents). An [Import Mapping](import-mappings) document converts JSON (or XML) to Mendix objects, and an [Export Mapping](export-mappings) document serializes Mendix objects to JSON (or XML).
+Lack of contracts and schemas give you an easy start to using REST. However, many REST endpoints return complex data.
+
+The [JSON Structure](json-structures) document helps with giving structure to JSON data: from an example JSON snippet, a lightweight schema is extracted that is used in [Mapping Documents](mapping-documents). The [Import Mapping](import-mappings) document converts JSON (or XML) to Mendix objects, and the [Export Mapping](export-mappings) document serializes Mendix objects to JSON (or XML).
 
 ## JSON
 
-JavaScript Object Notation (JSON) is a lightweight representation of data. 
+JavaScript object notation (JSON) is a lightweight representation of data. 
 
 ```js
 {
@@ -30,4 +33,4 @@ JavaScript Object Notation (JSON) is a lightweight representation of data.
 }
 ```
 
-Above the object 'person' is described with the corresponding values for the attributes 'name', 'age' and the referred object 'address'.
+Above, the object `person` is described with the corresponding values for the attributes `name`, `age`, and the referred object `address`.

@@ -30,7 +30,7 @@ All Mendix runtime instances are to be installed and executed separately. Mendix
 
 It is possible to keep the configuration synchronized between the Mendix runtimes (for example, the *m2ee.yaml* file, which holds all the configuration).
 
-If you are using custom settings to influence the runtime behavior, it is critical that you keep those in sync over the different instances. Having different settings in different instances will create unpredictable behavior.
+If you are using custom settings to influence the runtime behavior, it is critical that you keep those synchronized over the different instances. Having different settings in different instances will create unpredictable behavior.
 
 These are some important details:
 
@@ -39,12 +39,12 @@ These are some important details:
 * File share and document upload – images and uploaded files should be stored on HA shared storage
 * Application root URL setting – must be identical on each instance
 * The keep-alive port, health check, and monitoring – the Mendix runtime admin port can be used for a health check from the load balancer
-    * To identify if the server is still available, the load balancer should check the keep-alive port in the configuration (the health check microflow)
+    * To identify if the server is still available, the load balancer should check the keep-alive port in the configuration (the health-check microflow)
     * An HTTP status code of `200 OK` means the server is still available
 * The IP addresses of end users – Mendix runtime does not require the IP addresses of the end-users
-    * The application log shows the users that logged in, and it is possible to develop custom logic based on the IP address
-    * It is useful to configure the IP address forwarding in the load balancer as well so that the information is still usable
-* Mnedix runtime sessions – in case an instance goes down and that instance was facilitating any end-user sessions, it often isn’t desirable that those users are logged out
+    * The application log shows the users who logged in, and it is possible to develop custom logic based on the IP address
+    * It is useful to configure the IP address forwarding in the load balancer as well, so that the information is still usable
+* Mendix runtime sessions – in case an instance goes down and that instance was facilitating any end-user sessions, it often isn’t desirable that those users are logged out
     * To allow this, you need to enable persistent sessions by setting the `PersistentSessions` custom setting to true
     * This will make the Mendix runtime store all the session information in the database so it can be picked up by other instances
 * Scheduled event – running events on all instances 

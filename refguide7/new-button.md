@@ -1,13 +1,12 @@
 ---
-title: "Create button"
+title: "Create Button"
 space: "Mendix 7 Reference Guide"
 parent: "button-widgets"
 ---
 
-
 When the user presses the **Create** button, the Mendix application will create a new object and open a page to edit the new object.
 
-## Button properties
+## Button Properties
 
 {% snippet Caption+Property.md %}
 
@@ -19,7 +18,7 @@ When the user presses the **Create** button, the Mendix application will create 
 
 {% snippet Button+Style+Property.md %}
 
-## Common properties
+## Common Properties
 
 {% snippet Name+Property.md %}
 
@@ -29,7 +28,7 @@ When the user presses the **Create** button, the Mendix application will create 
 
 {% snippet Tab+index+Property.md %}
 
-## General properties
+## General Properties
 
 ### Page
 
@@ -37,30 +36,12 @@ This property specifies the page that is opened when the end user presses this b
 
 See [Opening Pages](opening-pages).
 
-### Entity
-
-<div class="alert alert-info">{% markdown %}
-
-Replaced by the property 'EntityPath' in Mendix 6.3.
-
-{% endmarkdown %}</div>
-
-This property specifies the entity of which an object will be created when the user presses the button.
-
-### Entity (path)
-
-<div class="alert alert-info">{% markdown %}
-
-Added in Mendix 6.3.
-
-{% endmarkdown %}</div>
+### Entity (Path)
 
 Specifies which type of object will be created when the button is clicked. It is possible to create an object which has an association to an object in an enclosing data view or to the object passed as the caller of the page. The association will be set automatically when the new object is created. Only one to one or one to many associations are supported.
 
-## Visibility properties
+## Visibility Properties
 
-<div class="alert alert-info">{% markdown %}
-Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{% snippet Visibility+Property.md %}
 
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

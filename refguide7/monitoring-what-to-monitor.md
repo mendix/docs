@@ -14,7 +14,6 @@ Application and system monitoring forms an integral part of on-premise hosting o
 This document is based upon the following assumptions:
 
 *   User is familiar with the logging guidelines defined in:
-    *   [Review log files - MS IIS Server](review-log-files-ms-iis-server)
     *   [Review log files - MS SQL Server](review-log-files-ms-sql-server)
     *   [Monitoring - Mendix Runtime](monitoring-mendix-runtime)
     *   [Logging](logging)

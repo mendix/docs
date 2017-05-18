@@ -44,7 +44,7 @@ To add content to the App Store, follow these steps:
 
         d. Select the **release** by clicking **Select**. If there are various releases of the *.mpk* file available, the system will present them to you on the **Please select a release** pop-up window. When you find the correct release, click **Select** on this window.
 
-        e. Check the **Use GitHub readme.md** check-box if you want the *readme.md* file to be included with the content.
+        e. Check the **Use GitHub readme.md** check box if you want the *readme.md* file to be included with the content.
 
         f. Note that the **Release notes** section is only available for updating a new version of the content (for more information, see [4 Updating Existing App Store Content](#UpdatingExistingAppStoreContent)).
 
@@ -81,7 +81,7 @@ To add content to the App Store, follow these steps:
 
         ![](attachments/share-app-store-content/add_content_4.png)
 
-7. On the **Documentation** tab, you can write any documentation in the editor that should accompany your app.
+7. On the **Documentation** tab, you can write or edit the documentation that should accompany your app in the editor. Note that this is only applicable when the **Use GitHub readme.md** check box is not checked, and you are only able to edit the documentation of your own and your company's content.
     * The documentation template includes the following sections that you must fill out in order to submit your content:
         * An extended **Description** of the content
         * The **Typical usage scenario** for the content

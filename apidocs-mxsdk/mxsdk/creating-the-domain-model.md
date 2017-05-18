@@ -2,7 +2,9 @@
 title: "Creating the Domain Model"
 space: "API & SDK"
 parent: "your-learning-path-for-the-mendix-sdk"
+description: "Explains how to create a domain model with inheritance and what the relation is between the metamodel and the SDK."
 ---
+
 In this tutorial you will learn:
 
 *   how to create a domain model with inheritance
@@ -96,7 +98,7 @@ The Desktop Modeler reference guide explains that [Associations](/refguide6/asso
 
 So those two properties need to be set to point to the correct entities. The exact overview of all available properties for associations can be found in the Model SDK API documentation of the relevant object, in this case [`Association`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html) .
 
-To create a standard reference (one-to-many) association, you instantiate one Association instance, set its name, and define the `child` and `parent` properties. The `child` property points to the '1'-side of the association, and the `parent` property points to the 'many'-side of the association. They can be set with any entity reference from the domain model of the same module (for cross-module associations, use `[CrossAssociation](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.crossassociation.html)`).
+To create a standard reference (one-to-many) association, you instantiate one Association instance, set its name, and define the `child` and `parent` properties. The `child` property points to the '1'-side of the association, and the `parent` property points to the 'many'-side of the association. They can be set with any entity reference from the domain model of the same module (for cross-module associations, use [`CrossAssociation`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.crossassociation.html)).
 
 The following code snippet creates an association between the `Customer` and `Invoice` associations:
 
@@ -147,7 +149,7 @@ Finally, you want to configure the `Customer` entity to be a specialization of `
 
 The metamodel in the  reference guide contains a section 'Generalization relationships' with a diagram that shows how the metamodel for inheritance is structured.
 
-In the Model SDK, the [`Entity.generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#generalization)  property is used to configure this behavior. When it is set to a `[NoGeneralization](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html) `instance, the entity does not have a generalization. When it is set to a [`Generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)  instance, the entity is a specialization of the entity that is set with the  [`Generalization.generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization) property.
+In the Model SDK, the [`Entity.generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#generalization)  property is used to configure this behavior. When it is set to a [`NoGeneralization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html) instance, the entity does not have a generalization. When it is set to a [`Generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)  instance, the entity is a specialization of the entity that is set with the  [`Generalization.generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization) property.
 
 So, to set up entity `Customer` as a specialization of entity `Administration.Account`, you first need to look up the `Account` entity which [can be done in several ways](finding-things-in-the-model). The following snippet looks up the `Account` entity in the `Administration` domain model, using the `findEntityByQualifiedName` function:
 

@@ -9,7 +9,7 @@ category: "Mendix Support"
 
 ## 1 Introduction
 
-The "Running now" tab can be found in the "Monitor" page of your Cloud node. It can be used to monitor all actions that are currently running in your environment.
+The "Running now" tab can be found on the "Metrics" page of your Cloud node. It can be used to monitor all actions that are currently running in your environment.
 
 ## 2 About the "Running now" tab in the Mendix Cloud
 

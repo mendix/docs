@@ -4,16 +4,15 @@ space: "Mendix 7 Reference Guide"
 parent: "control-bar"
 ---
 
-
 The select all button allows the end-user to select all objects in a grid, or reference set selector. With the selection type property you can determine whether this button should select the objects on the current page, or the objects on all pages.
 
-## Common properties
+## Common Properties
 
 {% snippet Class+Property.md %}
 
 {% snippet Style+Property.md %}
 
-## General properties
+## General Properties
 
 {% snippet Caption+Property.md %}
 
@@ -25,7 +24,7 @@ The select all button allows the end-user to select all objects in a grid, or re
 
 {% snippet Is+default+button+Property.md %}
 
-### Selection type
+### Selection Type
 
 | Value | Description |
 | --- | --- |
@@ -40,10 +39,8 @@ Due to technical limitations, a button with selection type 'Select all' cannot b
 
 _Default value:_ Select page
 
-## Visibility properties
+## Visibility Properties
 
-<div class="alert alert-info">{% markdown %}
-Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{% snippet Visibility+Property.md %}
 
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

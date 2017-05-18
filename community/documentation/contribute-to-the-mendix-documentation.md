@@ -14,28 +14,42 @@ All of the Mendix documentation is stored in GitHub. With a GitHub profile, you 
 
 To work on the documentation in GitHub, you will be using Markdown. For details on this easy-to-use syntax, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
-<div class="alert alert-info">
+<div class="alert alert-info">{% markdown %}
 
 All documentation contributions may undergo changes after editing according to our internal style guide.
 
-</div>
+{% endmarkdown %}</div>
 
 **This how-to will teach you how to do the following:**
 
 * Add to and edit existing documentation
 * Create a new how-to or reference guide page using a template
 
-## 2 Prerequisites
+## 2 Prerequisites and Other Information
+
+### 2.1 Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Have a GitHub account (sign up [here](https://github.com/join))
 * Fork the [**mendix/docs** repository](https://github.com/mendix/docs) on GitHub (for details on how to do this, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/))
 
+### 2.2 Tools
+
 We recommend the use of the following tools for contributing to the Mendix documentation:
 
 * For writing and editing documentation – [Visual Studio Code](https://code.visualstudio.com) (with which you can preview your Markdown styling)
 * For committing your documentation – [SourceTree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
+
+### 2.3 Contributor License Agreement
+
+The first time you make a contribution to the Mendix documentation (via a pull request), you will have to sign the [Contributor License Agreement for mendix/docs](https://www.clahub.com/agreements/mendix/docs) via CLAHub.
+
+To access the license agreement, go to the **Conversation** tab of the pull request and click **Details** for **clahub**:
+
+![](attachments/contribute-to-the-mendix-documentation/license_agreement.png)
+
+This only needs to be done once.
 
 ## 3 Editing the Existing Documentation
 
@@ -88,7 +102,20 @@ Make sure the image files comply with these naming conventions:
   * For example, the `project-setup` image file is located in the **new-project** sub-folder (named after the document) in the **attachments** folder of the **getting-started** how-to category folder
 * The following image file types are allowed: `.jpg`, `.png`, `.gif`
 
-## 6 Related Content
+## 6 Gaining Mendix Points
+
+As you add knowledge to the documentation that will help your fellow Mendix developers, for each contribution, you will gain Mendix points!
+
+Before you can gain Mendix points for your documentation contributions, you must authorize the connection of your GitHub profile to your Mendix Community Profile. For details on this, see [How to Set Up Your Community Profile](../tools/how-to-set-up-your-profile).
+
+The amount of points you gain depends on the size of the documentation contribution you make. This is calculated per pull request and is based on the number of lines changed:
+
+* For a small contribution to the documentation – 5 points
+* For a large contribution to the documentation – 15 points
+
+The points are awarded when the pull request is merged. For more details on Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq).
+
+## 7 Related Content
 
 * [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)
 * [How-To Template](the-how-to-template-page)

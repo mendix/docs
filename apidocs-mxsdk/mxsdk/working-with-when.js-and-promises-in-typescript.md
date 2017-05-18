@@ -9,9 +9,9 @@ On this page you will find an explanation about the use of _promises_ in the Men
 
 Some of the operations you perform when, for instance, loading a working copy in the Model Server, take some time to complete. In regular (synchronous) programming, you would have to wait for each operation to complete before you could start with the next one.
 
-In an asynchronous programming paradigm, you can start operations in the background and continue with other stuff while you are waiting for the background jobs to complete. Traditional JavaScript uses [callback functions](http://recurial.com/programming/understanding-callback-functions-in-javascript/) to achieve this. However, these tend to become [very complicated](http://know.cujojs.com/tutorials/async/async-programming-is-messy.html.md) when you have multiple nested, callbacks. This phenomenon is known as _callback hell_. Hence, the need for [_promise_s](http://know.cujojs.com/tutorials/async/simplifying-async-with-promises).
+In an asynchronous programming paradigm, you can start operations in the background and continue with other stuff while you are waiting for the background jobs to complete. Traditional JavaScript uses [callback functions](http://recurial.com/programming/understanding-callback-functions-in-javascript/) to achieve this. However, these tend to become [very complicated](http://know.cujojs.com/tutorials/async/async-programming-is-messy.html.md) when you have multiple nested, callbacks. This phenomenon is known as _callback hell_. Hence, the need for [ _promises_ ](http://know.cujojs.com/tutorials/async/simplifying-async-with-promises).
 
-A _promise_ is an object that will eventually either get a value (the promise is _fulfilled_), or it will be _reject_ed if something goes wrong. Promises can be _chain_ed, meaning that a command _y_ will only be executed once the promise for _x_ is fulfilled.
+A _promise_ is an object that will eventually either get a value (the promise is _fulfilled_), or it will be _rejected_ if something goes wrong. Promises can be _chained_ , meaning that a command _y_ will only be executed once the promise for _x_ is fulfilled.
 
 There are multiple libraries that implement promises in JavaScript; in the Mendix SDK we have chosen to use [when.js](https://github.com/cujojs#usage).
 
@@ -47,7 +47,7 @@ As you can see, specifying the `function` keyword isn't required here. In TypeSc
 
 ## How do you use promises?
 
-The returning pattern is that each time you receive a Promise object from a function call, you call `then` on it, until you end the chain with `done`. In `done`, you handle either the result if everything worked correctly, or you handle the error in case a promise was rejected somewhere along the way. Please have a look at the [CRUD example](https://github.com/mendix/mendixplatformsdk-examples/blob/master/crud/script.ts#L50) to see how you use this pattern in practice.
+The returning pattern is that each time you receive a Promise object from a function call, you call `then` on it, until you end the chain with `done`. In `done`, you handle either the result if everything worked correctly, or you handle the error in case a promise was rejected somewhere along the way.
 
 ```js
 client.platform()
@@ -120,15 +120,15 @@ In the snippet above, `documents.map( doc => loadAsPromise(doc))` transforms the
 
 <div class="alert alert-success">{% markdown %}
 
-You can load model units or elements using a convenience method [`loadAsPromise`](https://apidocs.mendix.com/platformsdk/latest/modules/_mendix_platform_sdk_.html#loadaspromise) which is available in mendixplatformsdk as a way to load and getting `promise` as an output instead of having to use a callback function.
+You can load model units or elements using the convenience method `loadAsPromise`, which is available in the Mendix platform SDK as a way to load and get `promise` as an output instead of having to use a callback function.
 
 {% endmarkdown %}</div>
 
-### `This` binding
+### `this` binding
 
-In an arrow function, the object `this` points to is different than what it would be in a regular function declaration.
+In an arrow function, the object `this` points to is different from what it would be in a regular function declaration.
 
-In practice this sometimes makes us prefer the function notation, for instance when you [want to put a timeout on an integration test](https://github.com/mendix/mendixplatformsdk/blob/master/test/smoke-test.ts#L25).
+In practice, this sometimes makes you prefer the function notation (for example, when you want to put a timeout on an integration test).
 
 ### Potentially unhandled rejection
 

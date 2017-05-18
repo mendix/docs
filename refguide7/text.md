@@ -43,6 +43,8 @@ _Default value:_ Text
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}
 
 ## Common properties

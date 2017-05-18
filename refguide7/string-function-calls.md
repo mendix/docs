@@ -1,21 +1,22 @@
 ---
-title: "String function calls"
+title: "String Function Calls"
 space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
+description: "Describes the functions for converting and inspecting strings in Mendix."
 ---
 
 These are functions to convert and inspect [strings](data-types). Note that these functions never change the string itself, they only return a new value.
 
-Strings are surrounded by quotes. If the string contains a quote, it should be escaped by another quote. For example: 'this isn't funny'
+Strings are surrounded by quotes. If the string contains a quote, it should be escaped by another quote. For example: `'this isn't funny'`.
 
 ## toLowerCase
 
 Converts all characters in the string to lowercase.
 
-### Input parameters
+### Input Parameters
 
 * String to convert
-* Type: String
+* Type: string
 
 ### Output
 
@@ -35,10 +36,10 @@ returns:
 
 Converts all characters in the string to uppercase.
 
-### Input parameters
+### Input Parameters
 
 * String to convert
-* Type: String
+* Type: string
 
 ### Output
 
@@ -58,15 +59,15 @@ returns:
 
 Determines the length of a string.
 
-### Input parameters
+### Input Parameters
 
 * A string
-* Type: String
+* Type: string
 
 ### Output
 
 * Length of the string
-* Type: Integer
+* Type: integer
 
 ```java
 length('thisismystring')
@@ -80,22 +81,22 @@ returns:
 
 ## substring
 
-Retrieves a substring of a string. Note that the first character of a string is located at position '0', and the last character is located at position `length(string)-1`.
+Retrieves a substring of a string. Note that the first character of a string is located at position `'0'`, and the last character is located at position `length(string)-1`.
 
-### Input parameters
+### Input Parameters
 
 * Subject
-   * Type: String
+   * Type: string
 * Start position of the substring
-   * Type: Integer
-* (Optional) Desired length of the result
-   * Type: Integer
+   * Type: integer
+* Desired length of the result (optional)
+   * Type: integer
 
 ### Output
 
-A part of the original string, starting at start position with length equal to the desired length. If no desired length is specified, will return a substring starting at start position and ending at the end of the string.
+A part of the original string, starting at the start position with a length equal to the desired length. If no desired length is specified, will return a substring starting at the start position and ending at the end of the string.
 
-Type: String
+* Type: string
 
 ```java
 substring('thisismystring', 6)
@@ -123,19 +124,20 @@ returns:
 
 Finds the position of the first occurrence of the substring in the string.
 
-### Input parameters
+### Input Parameters
 
-* Original string. This is the string that you want to search _in_.
-    * Type: String
-* Substring that you want to search _for_.
-    * Type: String
-* (Optional) Start location to begin search from
-    * Type: Integer
+* Original string, the string that you want to search in
+    * Type: string
+* Substring that you want to search for
+    * Type: string
+* Start location to begin the search from (optional)
+    * Type: integer
 
 ### Output
 
-The first location of the substring in the original string. Will return '-1' if the substring does not occur at all in the original string.
-Type: Integer
+The first location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string.
+
+* Type: integer
 
 ```java
 find('thisismystring', 'my')
@@ -159,7 +161,7 @@ returns:
 -1
 ```
 
-With third parameter:
+With the third parameter:
 
 ```java
 find('thisismystring', 'i', 5)
@@ -173,20 +175,22 @@ returns:
 
 ## findLast
 
-Finds the position of the last occurrence of substring in the original string.
+Finds the position of the last occurrence of a substring in the original string.
 
-### Input parameters
+### Input Parameters
 
-* Original string. This is the string that you want to search _in_.
-    * Type: String
-* Substring that you want to search _for_.
-    * Type: String
-* (Optional) Last location to be searched
-    * Type: Integer
+* Original string, the string that you want to search in
+    * Type: string
+* Substring that you want to search for
+    * Type: string
+* Last location to be searched (optional)
+    * Type: integer
 
 ### Output
 
-The first location of the substring in the original string. Will return '-1' if the substring does not occur at all in the original string. Type: Integer
+The first location of the substring in the original string. Will return `'-1'` if the substring does not occur at all in the original string.
+
+* Type: Integer
 
 ```java
 findLast('thisismystring', 't')
@@ -210,7 +214,7 @@ returns:
 -1
 ```
 
-With third parameter:
+With the third parameter:
 
 ```java
 findLast('thisismystring', 'i', 5)
@@ -226,7 +230,7 @@ returns:
 
 Determines whether a substring occurs in the original string.
 
-The expression 
+This expression: 
 
 ```java
 contains('mystring', 'otherstring')
@@ -238,17 +242,18 @@ is equivalent to the following expression:
 find('mystring', 'otherstring') != -1
 ```
 
-Input parameters
+### Input Parameters
 
-* Original string. This is the string that you want to search _in_.
-    * Type: String
-* Substring that you want to search _for_.
-    * Type: String
+* Original string, the string that you want to search in
+    * Type: string
+* Substring that you want to search for
+    * Type: string
 
 ### Output
 
-Whether the original string contains the substring
-Type: Boolean
+Whether the original string contains the substring.
+
+* Type: Boolean
 
 ```java
 contains('thisismystring', 'my')
@@ -264,17 +269,18 @@ true
 
 Determines whether a string starts with the specified substring.
 
-### Input parameters
+### Input Parameters
 
-* Original string. This is the string that you want to search _in_.
-    * Type: String
-* Substring that you want to search _for_.
-    * Type: String
+* Original string, the string that you want to search in
+    * Type: string
+* Substring that you want to search for
+    * Type: string
 
 ### Output
 
-Whether the original string starts with the substring
-Type: Boolean
+Whether the original string starts with the substring.
+
+* Type: Boolean
 
 ```java
 startsWith('thisismystring', 'this')
@@ -290,17 +296,18 @@ true
 
 Determines whether a string ends with the specified substring.
 
-### Input parameters
+### Input Parameters
 
-* Original string. This is the string that you want to search _in_.
-    * Type: String
-* Substring that you want to search _for_.
-    * Type: String
+* Original string, the string that you want to search in
+    * Type: string
+* Substring that you want to search for
+    * Type: string
 
 ### Output
 
-Whether the original string ends with the substring
-Type: Boolean
+Whether the original string ends with the substring.
+
+* Type: Boolean
 
 ```java
 startsWith('thisismystring', 'ring')
@@ -314,16 +321,18 @@ true
 
 ## trim
 
-Removes all whitespace at the beginning and end of a string.
+Removes all the whitespace at the beginning and end of a string.
 
-### Input parameters
+### Input Parameters
 
 * A string
-* Type: String
+* Type: string
 
 ### Output
 
-Same string but without spaces at the beginning and end. Type: String.
+Same string but without spaces at the beginning and end.
+
+* Type: string
 
 ```java
 trim(' this is my string     ')
@@ -339,23 +348,27 @@ returns:
 
 Checks to see if a string matches a given regular expression.
 
-### Input parameters
+### Input Parameters
 
-* String to try and match on
-    * Type: String
+* String to try and match
+    * Type: string
 * Regular expression to match
-    * Type: String
+    * Type: string
 
 <div class="alert alert-warning">{% markdown %}
 
-Please note that this function call uses a Java regular expression. For more information about regular expressions in Java, see [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html).
+Please note that this function call uses a regular expression language provided by the current platform:
+
+* When used inside a [microflow](microflow) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
+* When used inside [conditional formatting](conditions) – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {% endmarkdown %}</div>
 
 ### Output
 
 Whether the string matches or not.
-Type: Boolean
+
+* Type: Boolean
 
 This examples tests to see whether the string contains only numbers
 
@@ -369,28 +382,32 @@ returns:
 False
 ```
 
-In isMatch() the regex is implicitly anchored at ^ and $.
+In `isMatch()`, the regex is implicitly anchored at `^` and `$`.
 
 **Example**
-isMatch('NLG 123.45', '[0-9]') returns false
-isMatch('NLG 123.45', '.*[0-9].*') returns true
+
+* `isMatch('NLG 123.45', '[0-9]')` returns false
+* `isMatch('NLG 123.45', '.*[0-9].*')` returns true
 
 ## replaceAll
 
 Replaces all occurrences of a regular expression with another string.
 
-### Input parameters
+### Input Parameters
 
 * The string to search in
-    * Type: String
-* The regular expression to match on
-    * Type: String
+    * Type: string
+* The regular expression to match
+    * Type: string
 * The replacement value
-    * Type: String
+    * Type: string
 
 <div class="alert alert-warning">{% markdown %}
 
-Please note that this function call uses a Java regular expression. For more information about regular expressions in Java, see [this page](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)   .
+Please note that this function call uses a regular expression language provided by the current platform:
+
+* When used inside [microflows](microflows) – Java's regular expressions (for details, see [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
+* When used inside [conditional formatting](conditions) – JavaScript's regular expressions (for details, see [Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {% endmarkdown %}</div>
 
@@ -398,7 +415,7 @@ Please note that this function call uses a Java regular expression. For more inf
 
 The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
 
-Type: String
+* Type: string
 
 ```java
 replaceAll('this is a string with 75 some numbers 234 thrown in', '([0-9])', 'NUMBER')
@@ -426,18 +443,21 @@ returns:
 
 Replaces the first occurrence of the regular expression with a replacement string.
 
-### Input parameters
+### Input Parameters
 
 * The string to search in
-    * Type: String
-* The regular expression to match on
-    * Type: String
+    * Type: string
+* The regular expression to match
+    * Type: string
 * The replacement value
-    * Type: String
+    * Type: string
 
 <div class="alert alert-warning">{% markdown %}
 
-Please note that this function call uses a Java regular expression. For more information about regular expressions in Java, see [this page](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html)   .
+Please note that this function call uses a regular expression language provided by the current platform:
+
+* When used inside a [microflow](microflow) – Java's regular expressions (for details, see [Class Pattern documentation](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html))
+* When used inside [conditional formatting](conditions) – JavaScript's regular expressions (for details, see [Regular Expressions documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions))
 
 {% endmarkdown %}</div>
 
@@ -445,7 +465,7 @@ Please note that this function call uses a Java regular expression. For more inf
 
 The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
 
-Type: String
+* Type: string
 
 ```java
 replaceFirst('this is a string with 75 some numbers 234 thrown in', '([0-9])', 'NUMBER')
@@ -457,24 +477,24 @@ returns:
 'this is a string with NUMBER5 some numbers 234 thrown in'
 ```
 
-## String concatenation ( + )
+## String Concatenation ( + )
 
-The + operator can be used to concatenate two strings or a string and a number.
+The `+` operator can be used to concatenate two strings or a string and a number.
 
-### Input parameters
+### Input Parameters
 
 * First parameter
-    * Type: String, Integer/Long, Float or Decimal
+    * Type: string, integer/long, float, or decimal
 * Second parameter
-    * Type: String, Integer/Long, Float or Decimal
+    * Type: string, integer/long, float, or decimal
 
-At least one of the parameters must be of type String.
+At least one of the parameters must be of type string.
 
 ### Output
 
 A new string that is the literal concatenation of the two input parameters.
 
-Type: String
+* Type: string
 
 To combine two strings:
 
@@ -502,17 +522,18 @@ returns:
 
 ## <a name="urlEncode"></a>urlEncode
 
-Converts a string to be used in a URL. This function is useful when you want to use the
-string as part of a URL, for instance:
+Converts a string to be used in a URL. This function is useful when you want to use the string as part of the URL.
+
+For example:
 
 ```java
 'http://google.com/search?q=' + urlEncode($myQuery)
 ```
 
-### Input parameters
+### Input Parameters
 
 * String to convert
-* Type: String
+* Type: string
 
 ### Output
 
@@ -532,10 +553,10 @@ returns:
 
 Converts a string back from a URL. The opposite of [urlEncode](#urlEncode).
 
-### Input parameters
+### Input Parameters
 
-* A url-encoded String to convert
-* Type: String
+* A URL-encoded string to convert
+* Type: string
 
 ### Output
 
@@ -549,3 +570,4 @@ returns:
 
 ```java
 'Hello, world!'
+```

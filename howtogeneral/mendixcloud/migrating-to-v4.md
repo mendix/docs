@@ -28,7 +28,7 @@ Follow the instructions below to migrate your App from Mendix Cloud v3 to v4.
 
 First, you need to create a new Free App.
 
-<div class="alert alert-alert">{% markdown %}
+<div class="alert alert-info">{% markdown %}
 
 Create a new app in [Developer Portal](https://home.mendix.com) to create a new app without a Sandbox.
 

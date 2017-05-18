@@ -22,7 +22,7 @@ The Cloud Portal Management API requires its users to authenticate themselves. T
 
 ```java
 HTTP Method: GET
- URL: [https://deploy.mendix.com/api/1/apps/<AppId>/branches/ (https://deploy.mendix.com/api/1/apps/<AppId>/branches/)]
+ URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/
 ```
 
 ### <a name="TeamServerAPI-Request" rel="nofollow"></a>Request
@@ -80,7 +80,7 @@ Retrieves a specific branch that belongs to the team server project of a specifi
 
 ```java
  HTTP Method: GET
- URL: [https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name> (https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>)]
+ URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>
 ```
 
 ### Request
@@ -135,7 +135,7 @@ Retrieves all revisions of a specific branch that belongs to the team server pro
 
 ```java
 HTTP Method: GET
- URL: [https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>/revisions/ (https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>/revisions/)]
+ URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>/revisions/ 
 ```
 
 ### Request

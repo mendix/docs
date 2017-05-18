@@ -17,7 +17,7 @@ The AppCloudServices module requires version 5.3.2 of the Mendix Modeler. If you
 
 This how-to uses version 3.0 of the Company Expenses (CE) app, which does not yet contain the AppCloudServices module. This version can be found in the Modeler AppStore by going to the app page and opening the versions tab. Company Expenses 3.0 was built in an older version of Mendix, so it should first be converted to Mendix 5.3.2.
 
-1.  Start the **Mendix** **Mendix Modeler** and open your existing app that has been converted to Mendix 5.3.2 or newer.
+1.  Start the **Mendix Modeler** and open your existing app that has been converted to Mendix 5.3.2 or newer.
 2.  Open the **App Store** inside the Mendix Modeler.
 3.  Search for _AppCloudServices,_ click on the **AppCloudServices** module created by Mendix and click **Download**.
 4.  Select **Add as a new module** and click on **Import**. The module should now be visible in the project explorer:
@@ -67,12 +67,10 @@ This how-to uses version 3.0 of the Company Expenses (CE) app, which does not ye
 
 *   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
 *   [Trends](trends)
-*   [Deploying to the cloud](deploying-to-the-cloud)
+*   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
 *   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
 *   [Sending Email](sending-email)
 *   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)
-*   [Deploying to a Free App](deploying-to-a-free-app)
-
 
 
 After completing this how to on configuring AppCloud services, you might want to check out [how to improve logging in with different types of user accounts](different-user-logins-when-integrated-with-mendix-sso).

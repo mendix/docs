@@ -81,6 +81,8 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 ## Visibility properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}
 
 ## Events properties

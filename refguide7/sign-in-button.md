@@ -39,4 +39,6 @@ Default value: None
 
 ## Visibility Properties
 
+{% snippet Visibility+Property.md %}
+
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

@@ -27,6 +27,9 @@ To download a backup of a Free App, follow these steps:
 2. Select the app from which you want to download the backup.
 3. Click **Backups** under the **Operate** category.
 4. Select the backup you want to download and click **Download Backup**.
+
+    ![](attachments/operate/backupoptions.jpg)
+
 5. Select the backup type **Full Snapshot**, **Database Only**, or **Files Only**
 
 ## 4 Downloading a Licensed Cloud Node Backup
@@ -39,9 +42,12 @@ To download a backup of a licensed app, follow these steps:
 4. Click **Backups** under the **Operate** category.
 5. Select the environment from which you want to download the backup.
 
-    ![](attachments/environment.jpg)
+    ![](attachments/developerportal/environment.jpg)
 
 6. If you want to create a backup first, click **Create Backup**.
+
+    ![](attachments/operate/backupoptions.jpg)
+
 7. Select a backup and click **Download Backup**.
 8. Select the backup type **Full Snapshot**, **Database Only**, or **Files Only**
 

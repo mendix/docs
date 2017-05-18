@@ -2,6 +2,7 @@
 title: "Build a Simple HRM App 1: Create, Manage, and Deploy the App"
 space: "Mendix 7 How-To's"
 parent: "build-a-simple-hrm-app"
+description: "Presents details on how to create, deploy, and manage a simple HRM app."
 tags: ["HRM", "build", "app", "developer portal"]
 ---
 
@@ -13,9 +14,9 @@ This is the first how-to in a series of five on how to create a simple human res
 
 **This how-to will teach you how to do the following:**
 
-* How to create an app
-* How to manage an app
-* How to deploy an app
+* Create an app
+* Manage an app
+* Deploy an app
 
 ## 2 Prerequisites
 

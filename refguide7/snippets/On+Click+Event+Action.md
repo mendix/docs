@@ -1,16 +1,18 @@
-### On Click
+### On Click<a name="OnClick"></a>
 
-This property specifies what action is executed when the element is clicked. There are three options:
+This property specifies what action is executed when the element is clicked. These are the options:
 
 | Action | Effect |
 | --- | --- |
 | Do nothing | Nothing happens. This is useful for setting up a page without defining the underlying functionality yet. |
 | Show a page | The specified page is shown. |
 | Call a microflow | The specified microflow is executed. |
-| Save changes | Commit all changes made on the page.  |
-| Cancel changes | Roll back all changes made on the page. |
-| Close page | Close the pop-up for pop-up pages, or navigate to the previously visited page for content pages. |
-| Synchronize | Synchronize the data stored locally on your device with the server database. |
+| Open link | Triggers an action based on the link type, some of which are specific to mobile devices. |
+| Save changes | Commits all changes made on the page.  |
+| Cancel changes | Rolls back all changes made on the page. |
+| Close page | Closes the pop-up window (for pop-up pages) or navigates to the previously visited page (for content pages). |
+| Synchronize | Synchronizes the data stored locally on your device with the server database. |
+| Sign out | Signs out the currently signed-in user. When no user is signed in, pressing this button has no effect. |
 
 _Default value:_ Do nothing
 
@@ -30,9 +32,36 @@ The microflow settings specify what parameters will be passed to the microflow, 
 
 See [Starting Microflows](starting-microflows).
 
+### Link Type (Only for "Open link")
+
+This specifies the type of action triggered when pressing the button. These are the options:
+
+| Value | Description |
+| --- | --- |
+| Web | Navigate to a website URL. |
+| Email | Compose an email. |
+| Call | Start a phone call. |
+| Text | Send a text message. |
+
+_Default value:_ Web
+
+### Address (Only for "Open link")
+
+Usage of the address property depends on the chosen link type. The property is used either as a URL (Web), as an email address (Email), or as a phone number (Call/Text).
+
+The address can be set to either a literal value, or an attribute value.
+
+### Address Value (Only for "Open link")
+
+If a literal value is chosen for the address, you can enter the value here.
+
+### Address Attribute (Only for "Open link")
+
+If an attribute is chosen for the address, you can select the attribute here. An address attribute specifies a path to an attribute. The path starts at the entity of the data view in which the link button is contained.
+
 ### Close Page (Only for "Save changes" and "Cancel changes")
 
-This flag indicates whether the current page should be closed. See the **Close page** action above.
+This flag indicates whether the current page should be closed. For details, see [Close page](#OnClick) above.
 
 ### Sync Automatically (Only for "Save changes")
 

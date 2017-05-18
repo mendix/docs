@@ -65,7 +65,7 @@ Converts a decimal value to a string value according to a specified format.
 
 * Value to convert
     * Type: decimal
-* Format for the result
+* Format for the result based on the java library DecimalFormat (see Javadoc here: https://docs.oracle.com/javase/8/docs/api/java/text/DecimalFormat.html)
     * Type: string
 * Locale in which the results should be formated (optional). For the supported values, see [forLanguageTag](https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html#forLanguageTag-java.lang.String-). When omitted, the user configured locale is used. Supported since Mendix 7.3.
     * Type: string
@@ -79,8 +79,28 @@ A string representation of the decimal in the format specified by the `format` p
 formatDecimal(1234.56, '#,###.#')
 ```
 
+returns depending on the language settings:
+
+```java
+'1,234.5' or '1.234,5'
+```
+
+```java
+formatDecimal(1234.56, '¤ #,##0.00')
+```
+
+returns depending on language settings:
+
+```java
+'€ 1.234,50' or '$ 1,234.50'
+```
+
+```java
+formatDecimal(0.56, '% ##0')
+```
+
 returns:
 
 ```java
-'1,234.5'
+'% 56' 
 ```

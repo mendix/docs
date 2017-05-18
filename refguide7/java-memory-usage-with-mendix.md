@@ -21,8 +21,7 @@ For all Mendix applications the value for init and max start with identical valu
 
 #### **_Perm Gen & Code Cache    _**
 
-The Permanent Generation space is allocated to all classes and libraries. The allocated memory to the Perm Gen stays fairly static and only increases when new libraries or classes are loaded into the application. The Perm Gen is not part of the Java Heap, it is added on top of the assigned heap.
-[_https://blogs.oracle.com/jonthecollector/entry/presenting_the_permanent_generation_](https://blogs.oracle.com/jonthecollector/entry/presenting_the_permanent_generation)
+The Permanent Generation space is allocated to all classes and libraries. The allocated memory to the Perm Gen stays fairly static and only increases when new libraries or classes are loaded into the application. The Perm Gen is not part of the Java Heap, it is added on top of the assigned heap. For more details, see [Presenting the Permanent Generation](https://blogs.oracle.com/jonthecollector/presenting-the-permanent-generation).
 
 This image on the right shows shows in detail how data moves through the memory. The Stack is made up out of all threads, classes and in case of Mendix also contains all information about microflows domain model and all other Mendix specific information.
 

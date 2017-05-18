@@ -137,7 +137,7 @@ There are 2 methods to renew a Custom Domain Certificate:
 1. Renew by creating a new Custom Domain Certificate (recommended).
 2. Renew by updating an existing Custom Domain Certificate.
 
-### 6.1 Menthod 1: Renew by creating a new Custom Domain Certificate (recommended)
+### 6.1 Method 1: Renew by creating a new Custom Domain Certificate (recommended)
 
 When a Custom Domain Certificate is about to expire, you can renew it by generating a new Certificate Request (See: "4. Generating a Certificate Request for your Custom Domain") or by uploading a new Custom Domain Certificate (See: "5. Uploading your own Custom Domain Certificate").
 

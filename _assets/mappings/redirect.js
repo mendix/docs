@@ -7452,10 +7452,10 @@ module.exports = {
       "from": "/refguide7/Line+Break+Document+Template",
       "to": "/refguide7/line-break-document-template"
     },
-    {
+	{
       "from": "/refguide7/Link+button",
-      "to": "/refguide7/link-button"
-    },
+      "to": "/refguide7/action-button"
+	},
     {
       "from": "/refguide7/List+Activities",
       "to": "/refguide7/list-activities"
@@ -8036,10 +8036,10 @@ module.exports = {
       "from": "/refguide7/Sign+In+Dialog",
       "to": "/refguide7/sign-in-dialog"
     },
-    {
-      "from": "/refguide7/Sign+out+button",
-      "to": "/refguide7/sign-out-button"
-    },
+	{
+	  "from": "/refguide7/Sign+out+button",
+	  "to": "/refguide7/action-button"
+	},
     {
       "from": "/refguide7/Simple+Menu+Bar",
       "to": "/refguide7/simple-menu-bar"

@@ -54,7 +54,7 @@ With these ingredients, you can create the two entities. Replace the snippet tha
 ```js
 workingCopy => {
 	const dm = pickDomainModel(workingCopy);
-	const domainModel = dm.load();
+	const domainModel = dm.asLoaded();
 
 	const customer = domainmodels.Entity.createIn(domainModel);
 	customer.name = `Customer`;

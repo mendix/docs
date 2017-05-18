@@ -145,7 +145,8 @@ When 'Database' is selected, attributes and associations will be validated for u
 'Database' is also the recommended setting since it ensures Data Accuracy at the highest level.
 
 #### Runtime
-Uniqueness validation requires a database query to be executed per object and the results are verified in memory.   
+
+'Runtime' used to be the default setting prior to Mendix 7.3. This meant that the uniqueness of attributes and associations was handled in the Mendix Runtime and not at the database level.
 
 #### Switching Uniqueness Validation Values
 You can always switch between 'Runtime' and 'Database'.

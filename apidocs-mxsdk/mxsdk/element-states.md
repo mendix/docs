@@ -1,3 +1,8 @@
+---
+title: "Element States"
+space: "API & SDK"
+parent: "your-learning-path-for-the-mendix-sdk"
+---
 # Element States
 
 Elements can be in four different states.

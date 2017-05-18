@@ -9,6 +9,10 @@ To create new units, you need to pass the parent structural unit to the construc
 
 To create new elements use the parameterless constructors. Please note that after creating an element you have to assign it to some property before it becomes actually part of your model. For example, a new `Attribute` element should be pushed onto the `attributes` array of an Entity.
 
+Elements is always in a specific _state_: _new_, _attached_, _detached_  or _deleted_.
+The state of an element determines what changes can be applied to an element.
+A full description of these states and their characteristics can be found in [element states](element-states).
+
 All non-list-like properties can be altered simply using assignments. List-like properties are essentially JavaScript arrays, so to alter them you can just replace them or use JavaScript's built-in [array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) functions such as `push`.
 
 References are automatically resolved by the SDK. This means you can just assign or read references directly using fully-typed objects. For each property that refers to a concept in another unit, there is also a read-only property available with `<propertyName>QualifiedName` (or `<propertyName>QualifiedNames` for list-like properties) that gives the string representation of the references.

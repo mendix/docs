@@ -4,6 +4,13 @@ space: "Release Notes"
 toc-level: "1"
 ---
 
+## May 17th, 2017
+
+### Improvements
+
+* We upgraded the SSL/TLS ciphers for connections to apps in Mendix Cloud v4. These included dropping block-based ciphers (3DES), moving to 2048 bit DH params. Mendix Cloud v4 now has an [A+ rating at SSL Labs](https://www.ssllabs.com/ssltest/index.html).
+* We added HTTP/2 support for connections to all apps in Mendix Cloud v3 and Mendix Cloud v4. HTTP/2 is supported by all major browsers and results in more efficient network connections. [Read more about HTTP/2 here](https://http2.github.io/faq/).
+
 ## May 4th, 2017
 
 ### Improvements

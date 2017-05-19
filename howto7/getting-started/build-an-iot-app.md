@@ -27,7 +27,7 @@ The following how-to's will guide you through the process of building and expand
 
 ## 3 Prerequisites
 
-Before starting these how-to's, create a new instance of the **Logistics IoT** app on the [Mendix platform](https://sprintr.home.mendix.com/link/startnewproject). After the app has been created, you can open it in the Modeler (download the Modeler [here](https://appstore.mendix.com/link/modelers) and install it in case you haven't done so already).
+Before starting these how-to's, create a new instance of the **Logistics IoT** app on the [Mendix platform](https://sprintr.home.mendix.com/link/startnewproject) (via the **Getting Started** tab). After the app has been created, you can open it in the Modeler (download the Modeler [here](https://appstore.mendix.com/link/modelers) and install it in case you haven't done so already).
 
 Please note the following:
 

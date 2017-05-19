@@ -60,7 +60,7 @@ All the parts of a *deleted* element are also *deleted* and cannot be accessed. 
 
 ## Overview of Allowed State Changes
 
-| start state | to *new*    | to *attached* | to *detached* | to *deleted* |
+| Starting state | To *new*    | To *attached* | To *detached* | To *deleted* |
 |---|---|---|---|---|
 | *new*       |             | allowed       | not allowed   | allowed |
 | *attached*  | not allowed |               |     allowed   | allowed |

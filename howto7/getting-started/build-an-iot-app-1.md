@@ -46,13 +46,13 @@ In this section, you are going to observe the app in the development environment
 To connect an app page, follow these steps:
 
 1. In the **Tutorial_Workspace** module, open **Step 1 - Connect pages** > **Homepage**. This is the homepage of the **Global shipments** app that you will be expanding and improving.
-2. Inspect how this page is built. Notice that there is a listview element that represents the overview of the shipments. On the right there is a menu, which takes you to the pages where you can configure and edit the shipment details, sensor data, and cloud platform configuration.
-3. The button with the **>** icon, which you can find in the listview, is not connected to a page, so right-click the button and select **Edit action** > **Show a page**.
+2. Inspect how this page is built. Notice that there is a list view element that represents the overview of the shipments. On the right there is a menu, which takes you to the pages where you can configure and edit the shipment details, sensor data, and cloud platform configuration.
+3. The button with the **>** icon (which you can find in the list view) is not connected to a page, so right-click the button and select **Edit action** > **Show a page**.
 4. In the **Select page** dialog box, select the **Shipment_Detail** page (which has already been prepared for you).
-5. Click **Show** to display the **Shipment_Detail** page and then **OK** to inspect to which page the **>** button is directing.
+5. Click **Show** to display the **Shipment_Detail** page and then **OK** to inspect the page to which the **>** button is directing.
 6. Save the changes, click **Run Locally** to deploy the app, then click **View App** to view the app in your browser.
-7. Inspect how this **Shipment_Detail** page looks like in the browser by clicking the **>** button of the available shipment.
-8. Great! You've made your first change to an app. The **Shipment_Detail** page looks good but it really needs some data. So head over to the next step and get some data pushed over from an IoT server to this app.
+7. Inspect how this **Shipment_Detail** page looks in the browser by clicking the **>** button of the available shipment.
+8. Great! You've made your first change to the app. The **Shipment_Detail** page looks good, but it really needs some data. So, move on to [How to Build an IoT App 2: Configure the Sensor Data Subscription](build-an-iot-app-2) and get some data pushed over from an IoT server to the app.
 
 ## 5 Related Content
 

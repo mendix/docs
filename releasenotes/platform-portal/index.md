@@ -8,8 +8,8 @@ toc-level: "1"
 
 ### Fixes
 
-* We corrected the backup retention scheme for paid applications on Mendix Cloud v4, it is now the same as Mendix Cloud v3.
-* The "view current log" functionality for Mendix Cloud v4 applications was empty by default and the "Show all" button needed to be used. It now shows the content right away.
+* We corrected the backup retention scheme for paid applications on Mendix Cloud v4, and it is now the same as on Mendix Cloud v3.
+* The "view current log" functionality for Mendix Cloud v4 applications was empty by default and the **Show all** button needed to be used. It now shows the content right away.
 
 ## May 17th, 2017
 

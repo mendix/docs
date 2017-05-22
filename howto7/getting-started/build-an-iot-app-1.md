@@ -46,13 +46,13 @@ In this section, you are going to observe the app in the development environment
 To connect an app page, follow these steps:
 
 1. In the **Tutorial_Workspace** module, open **Step 1 - Connect pages** > **Homepage**. This is the homepage of the **Global shipments** app that you will be expanding and improving.
-2. Inspect how this page is built. Notice that there is a grid that represents the overview of the shipments. On the right there is a menu, which takes you to the pages where you can configure and edit the shipment details, sensor data, and cloud platform configuration.
-3. The **Action [default]** button in the grid is not connected to a page, so right-click the button and select **Edit action** > **Show a page**.
+2. Inspect how this page is built. Notice that there is a listview element that represents the overview of the shipments. On the right there is a menu, which takes you to the pages where you can configure and edit the shipment details, sensor data, and cloud platform configuration.
+3. The button with the **>** icon, which you can find in the listview, is not connected to a page, so right-click the button and select **Edit action** > **Show a page**.
 4. In the **Select page** dialog box, select the **Shipment_Detail** page (which has already been prepared for you).
-5. Click **Show** to display the **Shipment_Detail** page and then **OK**.
+5. Click **Show** to display the **Shipment_Detail** page and then **OK** to inspect to which page the **>** button is directing.
 6. Save the changes, click **Run Locally** to deploy the app, then click **View App** to view the app in your browser.
-7. Click the menu button in the top-right corner of the app and select **Shipments**.
-8. Click **Edit** on the preconfigured shipment, which will bring you to the **Shipment** form, where you can edit the details about the shipment.
+7. Inspect how this page looks like in the browser by clicking the **>** button of the available shipment.
+8. Great! You've made your first change to an app. There isn't happening much on this page yet so head over to the next step and get some data pushed over from an IoT server to this app.
 
 ## 5 Related Content
 

@@ -51,8 +51,8 @@ To connect an app page, follow these steps:
 4. In the **Select page** dialog box, select the **Shipment_Detail** page (which has already been prepared for you).
 5. Click **Show** to display the **Shipment_Detail** page and then **OK** to inspect to which page the **>** button is directing.
 6. Save the changes, click **Run Locally** to deploy the app, then click **View App** to view the app in your browser.
-7. Inspect how this page looks like in the browser by clicking the **>** button of the available shipment.
-8. Great! You've made your first change to an app. The page looks good but it really needs some data. So head over to the next step and get some data pushed over from an IoT server to this app.
+7. Inspect how this **Shipment_Detail** page looks like in the browser by clicking the **>** button of the available shipment.
+8. Great! You've made your first change to an app. The **Shipment_Detail** page looks good but it really needs some data. So head over to the next step and get some data pushed over from an IoT server to this app.
 
 ## 5 Related Content
 

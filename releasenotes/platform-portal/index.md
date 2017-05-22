@@ -4,6 +4,14 @@ space: "Release Notes"
 toc-level: "1"
 ---
 
+## May 19th, 2017
+
+### Fixes
+
+* Corrected the backup retention scheme for paid applications on Mendix Cloud v4, it is now the same as Mendix Cloud v3
+* The "view current log" functionality for Mendix Cloud v4 applications was empty by default.
+
+
 ## May 17th, 2017
 
 ### Improvements

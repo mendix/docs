@@ -26,7 +26,7 @@ Start by running the application so that you can experience how the app looks. Y
 
 To deploy and view the app, follow these steps:
 
-1. In the Modeler, click **Run Locally** and then click **View App** to see the app in your browser.
+1. In the Modeler, click **Run Locally** and confirm to create a new database. Click **View App** to see the app in your browser.
 
     ![](attachments/build-an-iot-app/deploy-and-view-blurred.png)
 
@@ -45,7 +45,7 @@ In this section, you are going to observe the app in the development environment
 
 To connect an app page, follow these steps:
 
-1. In the **Tutorial_Workspace** module, open **Step 1 - Connect pages** > **Homepage**. This is the homepage of the **Global shipments** app that you will be expanding and improving.
+1. In the **Tutorial_Workspace** module, open **Step 1 - Connect App Pages** > **Homepage**. This is the homepage of the app that you will be expanding and improving.
 2. Inspect how this page is built. Notice that there is a list view element that represents the overview of the shipments. On the right there is a menu, which takes you to the pages where you can configure and edit the shipment details, sensor data, and cloud platform configuration.
 3. The button with the **>** icon (which you can find in the list view) is not connected to a page, so right-click the button and select **Edit action** > **Show a page**.
 4. In the **Select page** dialog box, select the **Shipment_Detail** page (which has already been prepared for you).

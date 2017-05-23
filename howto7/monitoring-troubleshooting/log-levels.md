@@ -74,7 +74,7 @@ This section will define how to configure both the log levels in custom logging 
 
 To access the advanced features of the console, follow these steps:
 
-1. Open the console.
+1. Open the **Console**.
 2. Click **Advanced** to open the drop-down menu of advanced options.
 3. Click **Set log levels...**.
 

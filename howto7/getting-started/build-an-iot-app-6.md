@@ -36,8 +36,8 @@ To add a new shipment, follow these steps:
 7. Select **Forms** > **Form basic horizontal**, then click **OK**.
 8. Right-click the **New** button and select **Go to page**.
 9. On this new form, delete the input fields that you don't want to provide yet: **Lat**, **Lng**, **Is alerted for temperature**, **Latest sensor update**, and **Sensor view**.
-10. Right-click the drop zone below **Cargo value** and in the **Connector**, double-click **Shipment_CargoType** and select **Cargo Type** > **Description**.
-11. Right-click the drop zone below **Cargo Type** and in the **Connector**, double-click **Shipment_Topic** and select **Topic** > **Name** .
+10. Select the drop zone below **Cargo value** and in the **Connector**, expand **Shipment_CargoType** and double-click **Cargo Type** > **Description** to create a reference selector.
+11. Select the drop zone below **Cargo Type** and in the **Connector**, expand **Shipment_Topic** and double click **Topic** > **Name** to create another reference selector.
 12. Select the whole page and in the **Properties** pane, set **Navigation** > **Visible for** to **User**.
 13. Save the changes, click **Run Locally**, then click **View App**.
 14. On the **Global shipments** page of the app, click **New**. This adds a new shipment to the homepage. If you'd like to see a detailed shipment instance on the app homepage, you can fill in the details on the **Edit Shipment** form.
@@ -48,10 +48,10 @@ To improve the input form, follow these steps:
 
 1. In the Modeler, open the **Shipment_New** form and select **Topic**.
 2. In the **Properties** pane, select **Selectable objects** > **Source** > **Microflow**.
-3. Click **Microflow** and then click **New** to create a new microflow. Name the new microflow **GetAvailableTopics**.
-4. Add a **Retrieve** activity, and set the **Entity** to **Topic**.
+3. Click **Microflow** and then click **New** to create a new microflow. Name the new microflow **GetAvailableTopics**. Make sure you open this new microflow.
+4. Add a **Retrieve**  activity to the microflow, select **From database** as source and set and set the **Entity** to **Topic**.
 5. For the **XPath constraint**, enter `[not(Tutorial_Workspace.Shipment_Topic/Tutorial_Workspace.Shipment)]`.
-6. Open the **End Event**. For the **Return value**, enter `$TopicLis`.
+6. Open the **End Event**. For the **Return value**, enter `$TopicList`.
 7. In the **Properties** for the microflow, set **Allowed roles** to **User**.
 8. Save the changes, click **Run Locally**, and click **View App**. Observe how the **Topic** drop-down menu only includes the topics that are available.
 

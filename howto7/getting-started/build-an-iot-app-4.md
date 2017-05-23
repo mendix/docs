@@ -1,5 +1,5 @@
 ---
-title: "Build an IoT App 4: Add Another Data Dimension"
+title: "Build an IoT App Step 4: Add Another Data Dimension"
 space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
 description: "Describes how to add another data dimension to the Mendix Logistics IoT app."

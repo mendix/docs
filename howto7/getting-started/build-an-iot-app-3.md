@@ -1,5 +1,5 @@
 ---
-title: "Build an IoT App 3: Handle the Sensor Data"
+title: "Build an IoT App Step 3: Handle the Sensor Data"
 space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
 description: "Describes how to handle the temperature sensor data in the Mendix Logistics IoT app."

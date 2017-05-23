@@ -1,5 +1,5 @@
 ---
-title: "Build an IoT App 2: Configure the Sensor Data Subscription"
+title: "Build an IoT App Step 2: Configure the Sensor Data Subscription"
 space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
 description: "Describes how to configure the sensor data subscription in the Mendix Logistics IoT app."

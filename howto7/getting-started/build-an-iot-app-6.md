@@ -1,5 +1,5 @@
 ---
-title: "Build an IoT App 6: Expand the IoT App Tracking"
+title: "Build an IoT App Step 6: Expand the IoT App Tracking"
 space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
 description: "Describes how to extend the shipments that the Mendix Logistics IoT app will track."

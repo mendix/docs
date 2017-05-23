@@ -33,7 +33,7 @@ To deploy and view the app, follow these steps:
 2. The app starts on the homepage in the workspace section, which is an overview of all the shipments.
 3. Click the menu button in the top-right corner of the app to open the side menu. From here, you can navigate to other pages where you can edit the app data.
 4. Select **Shipments** and click **Edit** on the preconfigured shipment, which will bring you to the **Shipment** form. Here you can edit the details about the shipment.
-5. On the right side of the screen, click the toggle with the user icon (located above the **Feedback** button). Switch to the **Tutorial_Completed** section of the app, which contains the completed pages for you to use as a reference. Both **Tutorial_Completed** and **Tutorial_Workspace** have their own data set.
+5. On the right side of the screen, click the toggle with the user icon. Switch to the **Tutorial_Completed** section of the app, which contains the completed pages for you to use as a reference. Both **Tutorial_Completed** and **Tutorial_Workspace** have their own data set.
 
     ![](attachments/build-an-iot-app/user-switcher.png)
 
@@ -51,8 +51,9 @@ To connect an app page, follow these steps:
 4. In the **Select page** dialog box, select the **Shipment_Detail** page (which has already been prepared for you).
 5. Click **Show** to display the **Shipment_Detail** page and then **OK** to inspect the page to which the **>** button is directing.
 6. Save the changes, click **Run Locally** to deploy the app, then click **View App** to view the app in your browser.
-7. Inspect how this **Shipment_Detail** page looks in the browser by clicking the **>** button of the available shipment.
-8. Great! You've made your first change to the app. The **Shipment_Detail** page looks good, but it really needs some data. So, move on to [How to Build an IoT App 2: Configure the Sensor Data Subscription](build-an-iot-app-2) and get some data pushed over from an IoT server to the app.
+7. Make sure that your are switched back to the **Tutorial_Workspace** user, use the user toggle on the right side of the screen for this.
+8. Inspect how this **Shipment_Detail** page looks in the browser by clicking the **>** button of the available shipment.
+9. Great! You've made your first change to the app. The **Shipment_Detail** page looks good, but it really needs some data. So, move on to [How to Build an IoT App 2: Configure the Sensor Data Subscription](build-an-iot-app-2) and get some data pushed over from an IoT server to the app.
 
 ## 5 Related Content
 

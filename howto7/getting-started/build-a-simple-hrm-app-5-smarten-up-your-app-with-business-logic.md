@@ -1,5 +1,5 @@
 ---
-title: "Build a Simple HRM App 5: Smarten Up Your App with Business Logic"
+title: "Build a Simple HRM App Step 5: Smarten Up Your App with Business Logic"
 space: "Mendix 7 How-To's"
 parent: "build-a-simple-hrm-app"
 tags: ["HRM", "build", "app", "developer portal"]

@@ -1,5 +1,5 @@
 ---
-title: "Build an IoT App 5: Create Alerts"
+title: "Build an IoT App Step 5: Create Alerts"
 space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
 description: "Describes how to extend the Mendix Logistics IoT app to create alerts."

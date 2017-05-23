@@ -77,8 +77,8 @@ To add the cargo type pages, follow these steps:
 18. Back on **CargoType_Overview**, right-click the **New** button and select **Go to page**.
 19. On the **CargoType_NewEdit** form, click the **Cancel** button and in the **Properties** pane, change the **Button style** to **Danger**.
 20. Click in the page so that its properties become visible in the **Properties** pane. Set **Navigation** > **Visible for** to **User**.
-21. Return to **CargoType_Overview**, which needs the same look and feel as the other pages. Right-click the left-side column in the grid and select **Add column right**. Please note that the layout grid is based on the [Bootstrap Grid system](http://getbootstrap.com/css/#grid), which enables easy responsive layout options.
-22. Click the left-side column to edit it and change the **(Column) Weight** to **1** (because the weight of the columns in a layout grid has to add up to 12).<br>
+21. Return to **CargoType_Overview**, which needs the same look and feel as the other pages. Right-click the right-side column in the grid and select **Add column right**. Please note that the layout grid is based on the [Bootstrap Grid system](http://getbootstrap.com/css/#grid), which enables easy responsive layout options.
+22. Click the column in the middle and change the **(Column) Weight** to **6**. Change the right-side **(Column) Weight** to **4** (because the weight of the columns in a layout grid has to add up to 12).<br>
 
     ![](attachments/build-an-iot-app/layout-grid-column-weights.png)
 

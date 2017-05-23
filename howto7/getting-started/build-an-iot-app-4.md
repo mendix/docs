@@ -123,7 +123,7 @@ To add a new input to the page, follow these steps:
 
 1. Select the **Shipment_NewEdit** page (from the **Step 4.3** folder).
 2. Select the area below the **Cargo value** input.
-3. In the **Connector** pane, double-click **Shipment_CargoType** and select **CargoType** > **Description**.
+3. In the **Connector** pane, double-click **Shipment_CargoType** and double click **CargoType** > **Description** to create a reference selector in the page.
 4. Save the changes, click **Run Locally**, then click **View App**.
 5. In the app, choose the **Shipments** page from the right-side menu.
 6. Click **Edit** for the **TK124097987** shipment.

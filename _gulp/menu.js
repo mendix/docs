@@ -14,7 +14,15 @@ const white = str => gutil.colors.white(str);
 
 const menu_indicator = cyan("[MENU]");
 
-const readJSON = files => Promise.all(files.map(file => helpers.readFile(file).then(content => JSON.parse(content))));
+const readJSON = files => Promise.all(files.map(file => helpers.readFile(file).then(content => {
+  let json;
+  try {
+    json = JSON.parse(content);
+    return json;
+  } catch (e) {
+    throw new Error(`${cyan(file)}: ${red(e)}`);
+  }
+})));
 const checkJSON = jsonArr => Promise.all(jsonArr.map(jsonFile => parseAndCheck(jsonFile)))
 
 const parseAndCheck = menuJSON => new Promise((resolve, reject) => {
@@ -45,6 +53,8 @@ const checkMenus = (path, cb) => {
       cb(false)
     })
     .catch(err => {
+      gutil.log(`${menu_indicator} ${red("ERROR  ")} ${err}`);
+      gutil.log(`${menu_indicator} ${red("ERROR  ")} It seems one of the JSON files cannot be read. Might be a comma left somewhere? Please check the files in ${cyan('/json/menu')}`);
       cb(true);
     })
 }

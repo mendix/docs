@@ -19,7 +19,7 @@ In this how-to, you are going to expand the shipments that will be tracked by th
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Use the previous how-to in this series: [How to Build an IoT App 5: Create Alerts](build-an-iot-app-5)
+* Use the previous how-to in this series: [How to Build an IoT App Step 5: Create Alerts](build-an-iot-app-5)
 
 ## 3 Expanding the IoT App Tracking (Step 6)
 
@@ -58,8 +58,8 @@ To improve the input form, follow these steps:
 ## 4 Related Content
 
 * [How to Build an IoT App](build-an-iot-app)
-* [How to Build an IoT App 1: Connect App Pages](build-an-iot-app-1)
-* [How to Build an IoT App 2: Configure the Sensor Data Subscription](build-an-iot-app-2)
-* [How to Build an IoT App 3: Handle the Sensor Data](build-an-iot-app-3)
-* [How to Build an IoT App 4: Add Another Data Dimension](build-an-iot-app-4)
-* [How to Build an IoT App 5: Create Alerts](build-an-iot-app-5)
+* [How to Build an IoT App Step 1: Connect App Pages](build-an-iot-app-1)
+* [How to Build an IoT App Step 2: Configure the Sensor Data Subscription](build-an-iot-app-2)
+* [How to Build an IoT App Step 3: Handle the Sensor Data](build-an-iot-app-3)
+* [How to Build an IoT App Step 4: Add Another Data Dimension](build-an-iot-app-4)
+* [How to Build an IoT App Step 5: Create Alerts](build-an-iot-app-5)

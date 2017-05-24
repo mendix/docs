@@ -1,5 +1,5 @@
 ---
-title: "Build a Simple HRM App 4: Enrich the GUI with Filter Options"
+title: "Build a Simple HRM App Step 4: Enrich the GUI with Filter Options"
 space: "Mendix 7 How-To's"
 parent: "build-a-simple-hrm-app"
 tags: ["HRM", "build", "app", "developer portal"]

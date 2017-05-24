@@ -1,5 +1,5 @@
 ---
-title: "Build an IoT App 4: Add Another Data Dimension"
+title: "Build an IoT App Step 4: Add Another Data Dimension"
 space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
 description: "Describes how to add another data dimension to the Mendix Logistics IoT app."
@@ -128,6 +128,8 @@ To add a new input to the page, follow these steps:
 5. In the app, choose the **Shipments** page from the right-side menu.
 6. Click **Edit** for the **TK124097987** shipment.
 7. In the new **Cargo type** field in the **Shipment** editor, select **Bananas** from the drop-down menu, then click **Save**.
+
+With these app improvements, go through [How to Build an IoT App 5: Create Alerts](build-an-iot-app-5) and implement alerts that will act on any outliers in the data.
 
 ## 4 Related Content
 

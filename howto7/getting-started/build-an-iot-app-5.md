@@ -1,5 +1,5 @@
 ---
-title: "Build an IoT App 5: Create Alerts"
+title: "Build an IoT App Step 5: Create Alerts"
 space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
 description: "Describes how to extend the Mendix Logistics IoT app to create alerts."
@@ -29,24 +29,26 @@ Before starting with this how-to, make sure you have completed the following pre
 
 If the temperature threshold has been exceeded, an alert needs to be created. To extend the OnMessage microflow to create alerts, follow these steps:
 
-1. Open the **IVK_OnMessage_HandleData_CreateTemperatureAlert** microflow (from the **Step 5.1** folder).
-2. Add a **Retrieve** activity and keep the **Source** as **By association**.
-3. To see what the threshold is for the shipment, the **CargoType** object needs to be retrieved. So, for the **Association**, select **Shipment** > **Shipment_CargoType** and click **OK**.
-4. Insert an **Exclusive split** to check that the object is available (as in, not empty). In the **Expression** editor, add `$CargoType != empty`.
-5. Insert another **Exclusive split** that will check that the temperature threshold exists. In the **Expression** editor, add `$CargoType/HasTemperatureThreshold`.
-6. Set the condition value on this flow as **true**.
-7. Insert one more **Exclusive split** that will check if the temperature is higher than the threshold. In the **Expression** editor, add `$SensorData/AmbientTemp > $CargoType/TemperatureThreshold`.
+1. Return to the **IVK_Subscribe** microflow and double-click the **Data - Subscribe to MQTT topic** activity.
+2. Change the **On message** microflow to **IVK_OnMessage_HandleData_CreateTemperatureAlert** (located in the **Step 5.1** folder)
+3. Open the **IVK_OnMessage_HandleData_CreateTemperatureAlert** microflow.
+4. Add a **Retrieve** activity and keep the **Source** as **By association**.
+5. To see what the threshold is for the shipment, the **CargoType** object needs to be retrieved. So, for the **Association**, select **Shipment** > **Shipment_CargoType** and click **OK**.
+6. Insert an **Exclusive split** to check that the object is available (as in, not empty). In the **Expression** editor, add `$CargoType != empty`.
+7. Insert another **Exclusive split** that will check that the temperature threshold exists. In the **Expression** editor, add `$CargoType/HasTemperatureThreshold`.
 8. Set the condition value on this flow as **true**.
-9. Add a **Create object** activity on this flow.
-10. Select **Alert** for the **Entity** and set **Commit** to **Yes**.
-11. Click **New** to add a new attribute. Set the **Member** to **Message** and set the **Value** as `'Temperature is too high'`.
-12. Add another attribute. Set the **Member** to **AlertType** and click **Generate** to verify that the expression value is set to **Constant** > **Temp**.
-13. Add one more attribute. Set the **Member** to **Tutorial_Workspace.Alert_Shipment**. Set the **Value** as `$Shipment`.
-14. You still need to handle the outgoing sequence flows from the exlusive splits, so insert a **Merge** after the **NewAlert** entity.
-15. Drag the **false** flow from each exclusive split to the merge.
-16. Save the changes, click **Run Locally**, then click **View App**.
-17. On the shipment overview page of the app, select **Container Bananas**, then click **Subscribe**. The data will now come into the indicators.
-18. In order to generate alerts, you need to make sure that the temperature threshold (which you can configure on the **CargoType** edit page) is lower than the temperature data being pushed to the app. The temperature threshold was set to 23 degrees in this example, so when the temperature goes above 23, you will get an alert. Click the alerts icon in the upper-right side of the screen. This will open the **Current alerts** panel, where you will see the newest alert.
+9. Insert one more **Exclusive split** that will check if the temperature is higher than the threshold. In the **Expression** editor, add `$SensorData/AmbientTemp > $CargoType/TemperatureThreshold`.
+10. Set the condition value on this flow as **true**.
+11. Add a **Create object** activity on this flow.
+12. Select **Alert** for the **Entity** and set **Commit** to **Yes**.
+13. Click **New** to add a new attribute. Set the **Member** to **Message** and set the **Value** as `'Temperature is too high'`.
+14. Add another attribute. Set the **Member** to **AlertType** and click **Generate** to verify that the expression value is set to **Constant** > **Temp**.
+15. Add one more attribute. Set the **Member** to **Tutorial_Workspace.Alert_Shipment**. Set the **Value** as `$Shipment`.
+16. You still need to handle the outgoing sequence flows from the exlusive splits, so insert a **Merge** after the **NewAlert** entity.
+17. Drag the **false** flow from each exclusive split to the merge.
+18. Save the changes, click **Run Locally**, then click **View App**.
+19. On the shipment overview page of the app, select **Container Bananas**, then click **Subscribe**. The data will now come into the indicators.
+20. In order to generate alerts, you need to make sure that the temperature threshold (which you can configure on the **CargoType** edit page) is lower than the temperature data being pushed to the app. The temperature threshold was set to 23 degrees in this example, so when the temperature goes above 23, you will get an alert. Click the alerts icon in the upper-right side of the screen. This will open the **Current alerts** panel, where you will see the newest alert.
 
 ### 3.2 Improving the Alert Mechanism (Step 5.2)
 
@@ -65,6 +67,8 @@ To improve the alert mechanism, follow these steps:
 9. Save the changes, click **Run Locally**, and click **View App**.
 10. On the shipment overview page of the app, select **Container Bananas**, then click **Subscribe**.
 11. Open the **Current alerts** panel by clicking the exclamation mark icon in the top right of the page. You will see a message like this: **Temperature is too high: 15**.
+
+Excellent! Now that you have configured the alert mechanism, you can move on to the final how-to in this tutorial: [How to Build an IoT App 6: Expand the IoT App Tracking](build-an-iot-app-6).
 
 ## 4 Related Content
 

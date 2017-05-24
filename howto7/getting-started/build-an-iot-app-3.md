@@ -1,5 +1,5 @@
 ---
-title: "Build an IoT App 3: Handle the Sensor Data"
+title: "Build an IoT App Step 3: Handle the Sensor Data"
 space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
 description: "Describes how to handle the temperature sensor data in the Mendix Logistics IoT app."
@@ -35,10 +35,11 @@ To configure the handling of the sensor data, follow these steps:
     b. Set **Commit** to **Yes**.<br>
     c. Click **New** to add a new change item. Set the **Member** to **LatestSensorUpdate**.<br>
     d. Click **Generate** to set the **Expression value** to **Token** with **CurrentDateTime**.<br>
-5. Click **OK**. This new microflow action will allow you to see the last date a message from AWS was recieved on the **Shipment_Detail** page.
+5. Click **OK**. This new microflow action will allow you to see the last date a message from AWS was received on the **Shipment_Detail** page.
 6. Save the changes, click **Run Locally**, then click **View App**.
 7. In the app, click **Subscribe** and observe the temperature chart updating as data is being pushed to the app!
 
+The sensor data handling has been configured, so go to [How to Build an IoT App 4: Add Another Data Dimension](build-an-iot-app-4) to learn how you can expand the app even more.
 ## 4 Related Content
 
 * [How to Build an IoT App](build-an-iot-app)

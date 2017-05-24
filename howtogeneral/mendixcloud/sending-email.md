@@ -37,7 +37,7 @@ Frequently used providers (A-Z) are:
 *   [Mandrill](https://www.mandrill.com/) [[settings](http://help.mandrill.com/categories/20090941-SMTP-Integration)]
 *   [SendGrid](https://sendgrid.com/) [[settings](https://support.sendgrid.com/hc/en-us/articles/200328026-Recommended-SMTP-settings)]
 
-Please note that sending email from Mendix Cloud v4 can not happen over port 25 as this port is blocked in our infrastructure. Your SMTP provider needs to expose a secure port like 587, which is a best-practice that most modern providers offer out of the box.
+Please note that sending email from Mendix Cloud v4 can not happen over port 25, as this port is blocked in our infrastructure. Your SMTP provider needs to expose a secure port like 587, which is a best practice that most modern providers offer out of the box.
 
 Many users of our free tier use the settings of their own GMail account for convenience. There are many more email providers, most of which have SMTP compatibility.
 

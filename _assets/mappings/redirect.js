@@ -7597,10 +7597,6 @@ module.exports = {
       "to": "/refguide7/monitoring-mendix-runtime"
     },
     {
-      "from": "/refguide7/Monitoring+-+What+to+monitor",
-      "to": "/refguide7/monitoring-what-to-monitor"
-    },
-    {
       "from": "/refguide7/Moving+from+6+to+7",
       "to": "/refguide7/moving-from-6-to-7"
     },
@@ -7845,10 +7841,6 @@ module.exports = {
       "to": "/refguide7/preferences-dialog"
     },
     {
-      "from": "/refguide7/Proactive+Maintenance",
-      "to": "/refguide7/proactive-maintenance"
-    },
-    {
       "from": "/refguide7/Project",
       "to": "/refguide7/project"
     },
@@ -7947,10 +7939,6 @@ module.exports = {
     {
       "from": "/refguide7/Retrieve",
       "to": "/refguide7/retrieve"
-    },
-    {
-      "from": "/refguide7/Review+log+files+-+MS+SQL+Server",
-      "to": "/refguide7/review-log-files-ms-sql-server"
     },
     {
       "from": "/refguide7/Rollback+Object",

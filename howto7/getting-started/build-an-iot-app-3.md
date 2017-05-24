@@ -35,7 +35,7 @@ To configure the handling of the sensor data, follow these steps:
     b. Set **Commit** to **Yes**.<br>
     c. Click **New** to add a new change item. Set the **Member** to **LatestSensorUpdate**.<br>
     d. Click **Generate** to set the **Expression value** to **Token** with **CurrentDateTime**.<br>
-5. Click **OK**. This new microflow action will allow you to see the last date a message from AWS was recieved on the **Shipment_Detail** page.
+5. Click **OK**. This new microflow action will allow you to see the last date a message from AWS was received on the **Shipment_Detail** page.
 6. Save the changes, click **Run Locally**, then click **View App**.
 7. In the app, click **Subscribe** and observe the temperature chart updating as data is being pushed to the app!
 

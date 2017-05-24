@@ -10,7 +10,7 @@ sitemap: false
     "Runtime",
     "Java Programming",
     "Deployment",
-    "Mobile",
+    "Mobile"
   ],
   "pages": {% include json-snippets/get_pages.inc dir="refguide7" %}
 }

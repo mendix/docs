@@ -29,8 +29,8 @@ Before starting with this how-to, make sure you have completed the following pre
 
 If the temperature threshold has been exceeded, an alert needs to be created. To extend the OnMessage microflow to create alerts, follow these steps:
 
-1.	Return to the **IVK_Subscribe** microflow and double-click the **Data - Subscribe to MQTT topic** activity.
-2. Change the On message microflow to **IVK_OnMessage_HandleData_CreateTemperatureAlert** (located in the Step 5.1 folder)
+1. Return to the **IVK_Subscribe** microflow and double-click the **Data - Subscribe to MQTT topic** activity.
+2. Change the **On message** microflow to **IVK_OnMessage_HandleData_CreateTemperatureAlert** (located in the **Step 5.1** folder)
 3. Open the **IVK_OnMessage_HandleData_CreateTemperatureAlert** microflow.
 4. Add a **Retrieve** activity and keep the **Source** as **By association**.
 5. To see what the threshold is for the shipment, the **CargoType** object needs to be retrieved. So, for the **Association**, select **Shipment** > **Shipment_CargoType** and click **OK**.

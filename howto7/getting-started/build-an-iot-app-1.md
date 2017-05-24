@@ -51,7 +51,7 @@ To connect an app page, follow these steps:
 4. In the **Select page** dialog box, select the **Shipment_Detail** page (which has already been prepared for you).
 5. Click **Show** to display the **Shipment_Detail** page and then **OK** to inspect the page to which the **>** button is directing.
 6. Save the changes, click **Run Locally** to deploy the app, then click **View App** to view the app in your browser.
-7. Make sure that your are switched back to the **Tutorial_Workspace** user, use the user toggle on the right side of the screen for this.
+7. Make sure you are switched back to the **Tutorial_Workspace** user (use the user toggle on the right side of the screen for this).
 8. Inspect how this **Shipment_Detail** page looks in the browser by clicking the **>** button of the available shipment.
 9. Great! You've made your first change to the app. The **Shipment_Detail** page looks good, but it really needs some data. So, move on to [How to Build an IoT App 2: Configure the Sensor Data Subscription](build-an-iot-app-2) and get some data pushed over from an IoT server to the app.
 

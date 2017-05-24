@@ -129,6 +129,8 @@ To add a new input to the page, follow these steps:
 6. Click **Edit** for the **TK124097987** shipment.
 7. In the new **Cargo type** field in the **Shipment** editor, select **Bananas** from the drop-down menu, then click **Save**.
 
+With these app improvements, go through [How to Build an IoT App 5: Create Alerts](build-an-iot-app-5) and implement alerts that will act on any outliers in the data.
+
 ## 4 Related Content
 
 * [How to Build an IoT App](build-an-iot-app)

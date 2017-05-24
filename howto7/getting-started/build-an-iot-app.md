@@ -33,3 +33,7 @@ Please note the following:
 
 * **Tutorial_Workspace** is the module in which you will be making the changes
 * **Tutorial_Completed** has the full final version of the app model to use as an example
+
+## 4 Next Step
+
+Start the IoT app tutorial by checking out [How to Build an IoT App 1: Connect App Pages](build-an-iot-app-1)!

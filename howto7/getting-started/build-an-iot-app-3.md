@@ -39,6 +39,7 @@ To configure the handling of the sensor data, follow these steps:
 6. Save the changes, click **Run Locally**, then click **View App**.
 7. In the app, click **Subscribe** and observe the temperature chart updating as data is being pushed to the app!
 
+The sensor data handling has been configured, so go to [How to Build an IoT App 4: Add Another Data Dimension](build-an-iot-app-4) to learn how you can expand the app even more.
 ## 4 Related Content
 
 * [How to Build an IoT App](build-an-iot-app)

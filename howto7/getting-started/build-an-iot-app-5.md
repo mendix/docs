@@ -68,6 +68,8 @@ To improve the alert mechanism, follow these steps:
 10. On the shipment overview page of the app, select **Container Bananas**, then click **Subscribe**.
 11. Open the **Current alerts** panel by clicking the exclamation mark icon in the top right of the page. You will see a message like this: **Temperature is too high: 15**.
 
+Excellent! Now that you have configured the alert mechanism, you can move on to the final how-to in this tutorial: [How to Build an IoT App 6: Expand the IoT App Tracking](build-an-iot-app-6).
+
 ## 4 Related Content
 
 * [How to Build an IoT App](build-an-iot-app)

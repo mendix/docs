@@ -48,8 +48,8 @@ To improve the input form, follow these steps:
 
 1. In the Modeler, open the **Shipment_New** form and select **Topic**.
 2. In the **Properties** pane, select **Selectable objects** > **Source** > **Microflow**.
-3. Click **Microflow** and then click **New** to create a new microflow. Name the new microflow **GetAvailableTopics**. Make sure you open this new microflow.
-4. Add a **Retrieve**  activity to the microflow, select **From database** as source and set and set the **Entity** to **Topic**.
+3. Click **Microflow** and then click **New** to create a new microflow. Name the new microflow **GetAvailableTopics**, and then open this new microflow.
+4. Add a **Retrieve** activity to the microflow. Select **From database** as sthe ource and set the **Entity** to **Topic**.
 5. For the **XPath constraint**, enter `[not(Tutorial_Workspace.Shipment_Topic/Tutorial_Workspace.Shipment)]`.
 6. Open the **End Event**. For the **Return value**, enter `$TopicList`.
 7. In the **Properties** for the microflow, set **Allowed roles** to **User**.

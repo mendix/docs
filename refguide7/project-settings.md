@@ -160,7 +160,7 @@ Moving from **Runtime** to **Database** means that the unique constraints will b
 
 Before switching to the Database option, the `DataStorage.EnableDiagnostics` custom runtime setting can be used to generate a uniqueness violation report. The unique constraint migration will need to be done if the generated report shows violations.
 
-For more information on migration, see https://docs.mendix.com/refguide7/uniqueness-constraint-migration.
+For more details on migration, see [Uniqueness Constraint Migration](/refguide7/uniqueness-constraint-migration).
 
 ##### Switching from Database to Runtime
 

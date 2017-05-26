@@ -4,26 +4,27 @@ space: "Mendix 7 Reference Guide"
 parent: "mapping-documents"
 ---
 
+## 1 Overview
 
-For both [import](import-mappings)and [export mappings](export-mappings) you need to specify the elements structure you want to map. You do this in the **Select schema elements** window. An example of this screen is shown below.
+For both [import](import-mappings) and [export mappings](export-mappings), you need to specify the schema structure that you want to map. You do this in the **Select schema elements** window, an example of which is shown below.
 
 ![](attachments/16713729/19399143.png)
 
 Perform the following steps in the **Select schema elements** window:
 
-1.  Depending on whether you want to make a mapping for an [XML schema](xml-schemas), a [Consumed web service](consumed-web-services) or a [JSON structure](json-structures) documents you need to select an **XML schema**, **Web service operation** or **JSON structure** as the source.
-2.  If source is XML schema then select the root element of the mapping. This is done by selecting the **Start at** element for the XML schema or the **request part** for the web service operation. **Start at **lists the root elements in an XML schema. You can select one root element to base your mapping on. If source is Web service operation, **Request part **lists the header and body element of the request part of an operation. If an operation has multiple parameters, these are listed in the Request part as well. **Request part** is only applicable to export mappings.
-3.  Finally, select specific elements in the tree explorer below. Typically you do not need to map an entire source, since they can be quite large.
+1.  Select the schema source on which you want to base the mapping. This can be either an [XML schema](xml-schemas), a [Consumed web service](consumed-web-services), a [JSON structure](json-structures), or an [Entity structure](entity-structures).
+2.  If you selected an XML schema or a web service operation as the source, then select the root element of the mapping. Do this by selecting the **Start at** element for the XML schema or the **Request part** for the web service operation. **Start at** lists the root elements in an XML schema. You can select one root element to base your mapping on. If the source is a web service operation, the **Request part** lists the header and body element of the request part of an operation. If an operation has multiple parameters, these are listed in the **Request part** as well. The **Request part** is only applicable to export mappings.
+3.  Select the specific elements in the tree explorer. Typically, you do not need to map an entire source, since they can be quite large.
 
 <div class="alert alert-success">{% markdown %}
 
-If the contents of the used schema source change, the mapping document does not match with the schema anymore and a consistency error is shown. This consistency error is easily fixed by right-clicking the consistency error itself and selecting 'Resolve by updating from schema'.
+If the contents of the used schema source change, the mapping document does not match the schema anymore and a consistency error is shown. This consistency error is easily fixed by right-clicking the consistency error itself and selecting **Resolve by updating from schema**.
 
-Schema contents can change by importing a changed XML schema, WSDL or by changing a JSON structure.
+Schema contents can change by importing a changed XML schema or an WSDL, or by changing the JSON structure or entity structure.
 
 {% endmarkdown %}</div>
 
-## Rules and Restrictions
+## 2 Rules and Restrictions
 
 Keep in mind the following rules and restrictions for element selection:
 
@@ -47,7 +48,7 @@ You may encounter element selection checkboxes that are greyed out. If you hover
 
 {% endmarkdown %}</div>
 
-## Convenience functions
+## 3 Convenience Functions
 
 <div class="alert alert-info">{% markdown %}
 

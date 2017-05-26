@@ -137,29 +137,34 @@ _Default value_: No
 
 ### Uniqueness Validation
 
-This option can have two different values 'Runtime' and 'Database'. For Mendix 7.3 or later, 'Database' will be the default value for new projects but old projects will still have 'Runtime' as the default value.
-<br>
+This option can have two different values: **Runtime** and **Database**. For Mendix 7.3 and higher, **Database** will be the default value for new projects, but old projects will still have **Runtime** as the default value.
+
+
 #### Database
 
-When 'Database' is selected, attributes and associations will be validated for uniqueness at the database level. This will ensure that the data doesn't get corrupted even in the case of high concurrency transactions.   
-'Database' is also the recommended setting since it ensures Data Accuracy at the highest level.
+When **Database** is selected, attributes and associations will be validated for uniqueness at the database level. This will ensure that the data doesn't get corrupted even in the case of high concurrency transactions.
+
+Database is also the recommended setting, since it ensures data accuracy at the highest level.
 
 #### Runtime
 
-'Runtime' used to be the default setting prior to Mendix 7.3. This meant that the uniqueness of attributes and associations was handled in the Mendix Runtime and not at the database level.
+**Runtime** used to be the default setting prior to Mendix 7.3. This meant that the uniqueness of attributes and associations was handled in the Mendix Runtime and not at the database level.
 
 #### Switching Uniqueness Validation Values
-You can always switch between 'Runtime' and 'Database'.
 
-##### 'Runtime' to 'Database'
-Moving from 'Runtime' to 'Database' will mean that the unique constraints will be added to the database and uniqueness responsibility will belong to the database.   
-Before switching to the 'Database' option, "DataStorage.EnableDiagnostics" custom runtime setting can be used to generate uniqueness violation report.   
-Unique Constraint Migration needs to be done if the generated report shows violations.    
-See https://docs.mendix.com/refguide7/uniqueness-constraint-migration for more information on migration.
+You can always switch between **Runtime** and **Database**.
 
-##### 'Database' to 'Runtime'
-Falling back to the 'Runtime' option will remove the unique constraints from the database and uniqueness rules will not be checked at the database level anymore.
-Hence, data accuracy can't be guaranteed at the highest level especially in the case of high concurrency transactions.
+##### Switching from Runtime to Database
+
+Moving from **Runtime** to **Database** means that the unique constraints will be added to the database and the uniqueness responsibility will belong to the database.
+
+Before switching to the Database option, the `DataStorage.EnableDiagnostics` custom runtime setting can be used to generate a uniqueness violation report. The unique constraint migration will need to be done if the generated report shows violations.
+
+For more information on migration, see https://docs.mendix.com/refguide7/uniqueness-constraint-migration.
+
+##### Switching from Database to Runtime
+
+Falling back to the **Runtime** option will remove the unique constraints from the database, and uniqueness rules will not be checked at the database level anymore. Hence, data accuracy cannnot be guaranteed at the highest level, especially in the case of high concurrency transactions.
 
 ## Modeler
 

@@ -20,7 +20,7 @@ In this how-to, you are going to process the data you receive in order to make i
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Use the previous how-to in this series: [How to Build an IoT App 2: Configure the Sensor Data Subscription](build-an-iot-app-2)
+* Use the previous how-to in this series: [How to Build an IoT App Step 2: Configure the Sensor Data Subscription](build-an-iot-app-2)
 
 ### 3 Handling the Sensor Data (Step 3)
 
@@ -39,12 +39,12 @@ To configure the handling of the sensor data, follow these steps:
 6. Save the changes, click **Run Locally**, then click **View App**.
 7. In the app, click **Subscribe** and observe the temperature chart updating as data is being pushed to the app!
 
-The sensor data handling has been configured, so go to [How to Build an IoT App 4: Add Another Data Dimension](build-an-iot-app-4) to learn how you can expand the app even more.
+The sensor data handling has been configured, so go to [How to Build an IoT App Step 4: Add Another Data Dimension](build-an-iot-app-4) to learn how you can expand the app even more.
 ## 4 Related Content
 
 * [How to Build an IoT App](build-an-iot-app)
-* [How to Build an IoT App 1: Connect App Pages](build-an-iot-app-1)
-* [How to Build an IoT App 2: Configure the Sensor Data Subscription](build-an-iot-app-2)
-* [How to Build an IoT App 4: Add Another Data Dimension](build-an-iot-app-4)
-* [How to Build an IoT App 5: Create Alerts](build-an-iot-app-5)
-* [How to Build an IoT App 6: Expand the IoT App Tracking](build-an-iot-app-6)
+* [How to Build an IoT App Step 1: Connect App Pages](build-an-iot-app-1)
+* [How to Build an IoT App Step 2: Configure the Sensor Data Subscription](build-an-iot-app-2)
+* [How to Build an IoT App Step 4: Add Another Data Dimension](build-an-iot-app-4)
+* [How to Build an IoT App Step 5: Create Alerts](build-an-iot-app-5)
+* [How to Build an IoT App Step 6: Expand the IoT App Tracking](build-an-iot-app-6)

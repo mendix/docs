@@ -14,7 +14,7 @@ The following rules will also be validated in the database as of Mendix 7:
 * Unique rules on entity attributes,
 * The many side of one-to-many associations and both sides of one-to-one associations.
 
-A [migration toolkit](uniqueness-constraint-migration-toolkit.md) is available to help you fix any inconsistencies between data in your database and validation rules defined in your model.
+A migration toolkit is available to help you fix any inconsistencies between data in your database and validation rules defined in your model.
 
 ## Unique attributes
 
@@ -66,4 +66,4 @@ We enforce the new, stricter, association on existing data to avoid easily overl
 ## Help with Migration
 
 To help with migrating your old data, Mendix has developed a Migration Toolkit for Mendix 6 and Mendix 7.   
-For more detailed information, see the [migration toolkit](uniqueness-constraint-migration-toolkit.md) page.
+For more detailed information, please contact our support team at [support.mendix.com](http://support.mendix.com).

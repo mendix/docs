@@ -15,9 +15,9 @@ This how-to describes how to link a **different app** to your **licensed cloud n
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
-*   The app has the **Team Server** enabled. Read [this](/howto7/getting-started/create-and-deploy-your-first-app) how-to to learn how to create a collaboration app.
+*   The app has the **Team Server** enabled. Read [this](/howto/getting-started/create-and-deploy-your-first-app) how-to to learn how to create a collaboration app.
 
-In case you have created an app in the **Mendix Modeler**, you can upload it to the **Team Server** (see [Upload To Team Server Dialog](/refguide7/upload-to-team-server-dialog)) and a repository will be created automatically.
+In case you have created an app in the **Mendix Modeler**, you can upload it to the **Team Server** (see [Upload To Team Server Dialog](/refguide/upload-to-team-server-dialog)) and a repository will be created automatically.
 
 *   Make sure no **Sandbox** is linked to your app. (Every **Team Server** app is linked to a **Sandbox** automatically).
 Read [this](how-to-unlink-sandbox) how-to to learn how to **unlink your Sandbox** from your app. 

@@ -160,7 +160,7 @@ Moving from **Runtime** to **Database** means that the unique constraints will b
 
 Before switching to the Database option, the `DataStorage.EnableDiagnostics` custom runtime setting can be used to generate a uniqueness violation report. The unique constraint migration will need to be done if the generated report shows violations.
 
-For more details on migration, see [Uniqueness Constraint Migration](/refguide7/uniqueness-constraint-migration).
+For more details on migration, see [Uniqueness Constraint Migration](uniqueness-constraint-migration).
 
 ##### Switching from Database to Runtime
 
@@ -172,7 +172,7 @@ These settings determine the behavior of the Modeler for this project. The setti
 
 ### Bundle Widgets When Running Locally
 
-When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate start-up duration. In some cases, this may obfuscate errors triggered by faulty custom widgets. 
+When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate start-up duration. In some cases, this may obfuscate errors triggered by faulty custom widgets.
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 

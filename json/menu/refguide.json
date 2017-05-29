@@ -12,5 +12,5 @@ sitemap: false
     "Deployment",
     "Mobile"
   ],
-  "pages": {% include json-snippets/get_pages.inc dir="refguide7" %}
+  "pages": {% include json-snippets/get_pages.inc dir="refguide" %}
 }

@@ -224,7 +224,7 @@ You only want tosee this **Badge** when the **DueDate** is passed, so let's add 
 3.6.17 Add this expression ```$currentObject/DueDate < [%CurrentDateTime%]``` which will make sure the **Badge** shows up when an to-do is overdue.
 3.6.18 Click **OK** twice to close the pop-ups. This is how your page eventually should look like:
 
-![](attachments/create-a-to-do-app/naamvanplaatjre.png)
+![](attachments/create-a-to-do-app/final-screen.JPG)
 
 ### 4.6 Adding logic to the microflows
 The List view swipe widget is configured, but you added two microflows that do not gave logic yet. Let's add some logic so they execute the behavior we want when they are triggered.

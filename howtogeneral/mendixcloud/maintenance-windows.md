@@ -15,7 +15,7 @@ In the Mendix Cloud you can define a Maintenance Window for all your application
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
-*   Have a Mendix Cloud application where you have transport, monitor or backups rights.
+*   Have a Mendix Cloud application where you have transport, monitor or backup access.
 
 ## 2\. Maintenance Operations
 

@@ -175,4 +175,4 @@ To import the XML file, follow these steps:
 * [How to Synchronize User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [How to Consume a REST Service](consume-a-rest-service)
 * [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
-* [Exporting to a CSV Button](/refguide/export-to-csv-button)
+* [Exporting to a CSV Button](/refguide7/export-to-csv-button)

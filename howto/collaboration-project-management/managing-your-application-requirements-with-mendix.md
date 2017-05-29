@@ -213,5 +213,5 @@ To expot sprints and stories, follow these steps:
 * [How to Gather User Feedback](gathering-user-feedback)
 * [How to Share the Development Database](sharing-the-development-database)
 * [How to Use the Excel Exporter](../integration/using-the-excel-exporter)
-* [App Platform](/refguide/app-platform)
-* [Team Server](/refguide/team-server)
+* [App Platform](/refguide7/app-platform)
+* [Team Server](/refguide7/team-server)

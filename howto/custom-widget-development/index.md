@@ -60,7 +60,7 @@ Widgets have the ability to get data from the Runtime, manipulate objects, show 
 
 Mendix has a specific way of configuring your widget through the use of an XML file. For more information and an example, see [WidgetName](https://github.com/mendix/AppStoreWidgetBoilerplate/blob/master/src/WidgetName/WidgetName.xml) in the AppStoreWidgetBoilerplate repository.
 
-For the full reference on writing a widget XML, see the [XML Reference Guide](/refguide/xml-reference-guide).
+For the full reference on writing a widget XML, see the [XML Reference Guide](/refguide7/xml-reference-guide).
 
 ### 3.7 Boilerplate
 

@@ -237,4 +237,4 @@ Once you have completed an Excel template you can export the template for exampl
 
 
 
-*   [Export to CSV button](/refguide/export-to-csv-button)
+*   [Export to CSV button](/refguide7/export-to-csv-button)

@@ -25,7 +25,7 @@ To fix this, make sure the **AppCloudServices.StartAppCloudServices** microflow 
 
 ## 3 Realm Verification Errors
 
-These are commonly caused by compatibility issues with JAR files in the `<projectpath>/userlib` directory of your project. For details on the most common compatibility issues, refer to [Troubleshooting](/refguide/troubleshooting) in the Mendix Reference Guide.
+These are commonly caused by compatibility issues with JAR files in the `<projectpath>/userlib` directory of your project. For details on the most common compatibility issues, refer to [Troubleshooting](/refguide7/troubleshooting) in the Mendix Reference Guide.
 
 ## 4 Related Content
 

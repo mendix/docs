@@ -164,5 +164,5 @@ In microflows that apply entity access, which are recognizable by their yellow b
 
 If you want to see what happens while a microflow is executing, you can use the microflow debugger. See the following how-tos:
 
-*   [Debugging Microflows](/howto/monitoring-troubleshooting/debug-microflows)
-*   [Debugging Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
+*   [Debugging Microflows](/howto7/monitoring-troubleshooting/debug-microflows)
+*   [Debugging Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)

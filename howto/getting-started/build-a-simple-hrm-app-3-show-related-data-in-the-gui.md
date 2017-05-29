@@ -48,7 +48,7 @@ To create an association, click the border of the **Employee** entity and drag a
 
 ![](attachments/18448673/18580928.png)
 
-This creates an association between the two entities so they can use each other's data. To learn more about associations, see [Associations](/refguide/associations) in the Mendix Reference Guide.
+This creates an association between the two entities so they can use each other's data. To learn more about associations, see [Associations](/refguide7/associations) in the Mendix Reference Guide.
 
 ### 3.3 Creating Pages for the Department Entity
 

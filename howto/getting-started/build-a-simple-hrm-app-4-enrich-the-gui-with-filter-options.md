@@ -32,7 +32,7 @@ To create an enumeration, follow these steps:
 
 1. Right-click the **MyFirstModule** module and select **Add** > **Enumeration**:
     ![](attachments/18448669/18580795.png)
-    To learn more about enumerations, see the [Enumerations](/refguide/enumerations) in the Mendix Reference Guide.
+    To learn more about enumerations, see the [Enumerations](/refguide7/enumerations) in the Mendix Reference Guide.
 2. Enter *Level* in the **Name** field of the **Add Enumeration** dialog box, and then click **OK**:
     ![](attachments/18448669/18580794.png) 
 3. On the **Enumeration** dialog box, click **New** to add a new enumeration value:

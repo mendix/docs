@@ -32,14 +32,14 @@ To create a domain model, follow these steps:
     ![](attachments/18448671/18580883.png) 
 2. Click **Entity** to create a new entity:
     ![](attachments/18448671/18580882.png)
-    For more information about entities, see [Entities](/refguide/entities) in the Mendix Reference Guide.
+    For more information about entities, see [Entities](/refguide7/entities) in the Mendix Reference Guide.
 3. Double-click the new entity:
     ![](attachments/18448671/18580878.png)
 4. In the **Name** field, enter *Employee*:
     ![](attachments/18448671/18580877.png)
 5. Click **New** to add a new attribute:
     ![](attachments/18448671/18580879.png)
-    For more information on attributes, see [Attributes](/refguide/attributes) in the Mendix Reference Guide.
+    For more information on attributes, see [Attributes](/refguide7/attributes) in the Mendix Reference Guide.
 6. In the **Name** field, enter *Name*:
     ![](attachments/18448671/18580876.png)
 7. Select **String** as the **Type**:

@@ -33,12 +33,12 @@ To add an action button that calls a microflow, follow these steps:
 1. Open the **Employee_Overview** page of the MyFirstModule module.
 2. Right-click the grid control bar of the data grid in the **Master Detail** container and select **Add button** > **Action**.
     ![](attachments/18448670/18580844.png) 
-    To learn more about action buttons, see [Action Button](/refguide/action-button) in the Mendix Reference Guide.
+    To learn more about action buttons, see [Action Button](/refguide7/action-button) in the Mendix Reference Guide.
 3. Double-click the new button and change the caption of the button to *Promote*.
     ![](attachments/18448670/18580843.png)
 4. Select **Call a microflow** as the on click event:
     ![](attachments/18448670/18580842.png)
-    To learn more about a microflow, see [Microflows](/refguide/microflows) in the Mendix Reference Guide.
+    To learn more about a microflow, see [Microflows](/refguide7/microflows) in the Mendix Reference Guide.
 5. Click **Select** to select a microflow:
     ![](attachments/18448670/18580841.png) 
 6. Click the **MyFirstModule** module, and then click **New** to add a new microflow to the Responsive module:
@@ -57,7 +57,7 @@ To add an exclusive split, follow these steps:
 
 1. Select an exclusive split from the toolbar of the microflow editor:
     ![](attachments/18448670/18580836.png) 
-     To learn more about exclusive splits, see [Exclusive Split](/refguide/exclusive-split) in the Mendix Reference Guide.
+     To learn more about exclusive splits, see [Exclusive Split](/refguide7/exclusive-split) in the Mendix Reference Guide.
 2. Click a point on the line to add the exclusive split to the flow:
     ![](attachments/18448670/18580835.png) 
 3. Double-click the new exclusive split to open the properties editor:
@@ -65,7 +65,7 @@ To add an exclusive split, follow these steps:
 4. Enter *Level?* in the **Caption** field. 
 5. Place your cursor in the **Expression** field and then press **CTRL + SPACE** to bring up a list of suggestions:
     ![](attachments/18448670/18580826.png) 
-    To learn more about microflow expressions, see [Microflow Expressions](/refguide/microflow-expressions) in the Mendix Reference Guide.
+    To learn more about microflow expressions, see [Microflow Expressions](/refguide7/microflow-expressions) in the Mendix Reference Guide.
 6. Select **$Employee (MyFirstModule.Employee)** from the list of suggestions. This employee object corresponds to the input object of the microflow:
     ![](attachments/18448670/18580796.png)
 7. Add a forward slash ("/") to the value in the **Expression** field. This will show all the attributes of the employee object:
@@ -80,7 +80,7 @@ To add an exclusive split, follow these steps:
     ![](attachments/18448670/18580821.png)
 12. Select an end event from the toolbar of the microflow editor:
     ![](attachments/18448670/18580820.png)
-    To learn more about an end event, see [End Event](/refguide/end-event) in the Mendix Reference Guide.
+    To learn more about an end event, see [End Event](/refguide7/end-event) in the Mendix Reference Guide.
 13. Add an end event to the flow:
     ![](attachments/18448670/18580816.png)
 14. Drag a line from the exclusive split to the new end event.
@@ -97,7 +97,7 @@ To add activities to the microflow, follow these steps:
 
 1. Drag a **Change object** activity from the **Toolbox** to the **Junior** path:
     ![](attachments/18448670/18580810.png)
-    To learn more about activities, see [Activities](/refguide/activities) in the Mendix Reference Guide.
+    To learn more about activities, see [Activities](/refguide7/activities) in the Mendix Reference Guide.
     ![](attachments/18448670/18580809.png)
 2. Double-click the new change object activity to open the **Change Object** properties editor:
     ![](attachments/18448670/18580808.png)

@@ -18,7 +18,7 @@ From within the Business Modeler you can view the cloud slots you have available
 
 ## Cloud Foundry
 
-From within the Mendix Business Modeler you can deploy directly to Cloud Foundry based platforms such as [IBM Bluemix](/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix) or [Pivotal Web Services, Pivotal Cloud Foundry](/howto/cloud-foundry/deploy-a-mendix-app-to-pivotal). See the [documentation on the open source buildpack](https://github.com/mendix/cf-mendix-buildpack) and [how-to](/howto/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry) to get started.
+From within the Mendix Business Modeler you can deploy directly to Cloud Foundry based platforms such as [IBM Bluemix](/howto7/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix) or [Pivotal Web Services, Pivotal Cloud Foundry](/howto7/cloud-foundry/deploy-a-mendix-app-to-pivotal). See the [documentation on the open source buildpack](https://github.com/mendix/cf-mendix-buildpack) and [how-to](/howto7/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry) to get started.
 
 ## Azure
 
@@ -26,7 +26,7 @@ Deploying to a Azure is possible from the [Azure Marketplace](https://azure.micr
 
 ## On-premise
 
-Visit the [Mendix on Windows](/howto/on-premises-deployment/deploy-mendix-on-microsoft-windows), [Mendix on GNU/Linux](/howto/on-premises-deployment/installing-mendix-on-debian-gnu-linux) and [Installing Mendix on RedHat and CentOS](/howto/on-premises-deployment/installing-mendix-on-redhat-and-centos) sections to learn how to deploy your Mendix application to servers running on these platforms.
+Visit the [Mendix on Windows](/howto7/on-premises-deployment/deploy-mendix-on-microsoft-windows), [Mendix on GNU/Linux](/howto7/on-premises-deployment/installing-mendix-on-debian-gnu-linux) and [Installing Mendix on RedHat and CentOS](/howto7/on-premises-deployment/installing-mendix-on-redhat-and-centos) sections to learn how to deploy your Mendix application to servers running on these platforms.
 
 ## Documents in This Category
 

@@ -49,7 +49,7 @@ To properly register your device with a third-party remote push service (FCM or 
 dragging the **PushNotification_Snippet** (located in the *_USE ME* folder in the PushNotifications module) into the layouts used by your app. Note that push notifications do not currently work on
 the desktop.
 
-If your app is offline-compatible, ensure that a sync button is available to the user so that device registration requests will be synchronized with the server. Also, make sure your app has an offline device profile (for details, see [Offline Device Profile](/refguide/offline-device-profile) in the Mendix Reference Guide).
+If your app is offline-compatible, ensure that a sync button is available to the user so that device registration requests will be synchronized with the server. Also, make sure your app has an offline device profile (for details, see [Offline Device Profile](/refguide7/offline-device-profile) in the Mendix Reference Guide).
 
 <div class="alert alert-warning">
 

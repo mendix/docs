@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have an iOS device (iPhone or iPad) for testing the iOS package that will be produced
 * Have an iOS deployment certificate for which your test device is activated
     * You need both a *.p12* certificate file and a *.mobileprovision* profile file
-    * For details on how to obtain app signing keys, see [Managing App Signing Keys](/refguide/managing-app-signing-keys) in the Mendix Reference Guide
+    * For details on how to obtain app signing keys, see [Managing App Signing Keys](/refguide7/managing-app-signing-keys) in the Mendix Reference Guide
 * Have Apple iTunes installed on your computer for deploying the iOS package that will be produced on your test device
 
 ## 3 Starting the Packaging Process<a name="StartingthePackagingProcess"></a>
@@ -54,7 +54,7 @@ To start the packaging process, follow these steps:
 9. Select the environment that you want to publish:
     * For Community Edition apps, the only option is **Sandbox** (for example, for a free app)
     * For apps running on a licensed cloud node, you can choose from **Test**, **Acceptance**, and **Production** (depending on what is available on your cloud node)
-10. Leave the default choice of how to build the package: **Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build**. You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages) in the Mendix Reference Guide). Please note that this is unnecessary in almost all scenarios.
+10. Leave the default choice of how to build the package: **Build Mobile App Store packages for me by sending the build configuration to Adobe PhoneGap Build**. You can use the alternative option to manually download a PhoneGap Build package, which you can then inspect, modify, and upload manually to Adobe PhoneGap Build (for more information, see [Customizing PhoneGap Build Packages](/refguide7/customizing-phonegap-build-packages) in the Mendix Reference Guide). Please note that this is unnecessary in almost all scenarios.
 11. Start the actual hybrid mobile app package building process by clicking **Start PhoneGap Build job**, which will initiate the packaging process.
 12. The first time you start this process, you will need to authorize the Mendix Developer Portal to act on your behalf with the Adobe PhoneGap Build service. You will be presented with a pop-up window to start the redirect to Adobe PhoneGap. To build for the authorization, click **Authorize use of Adobe PhoneGap Build**, and you will be temporarily redirected to the website of Adobe PhoneGap Build.
 13. On the Adobe PhoneGap Build service page, you will be asked whether you want to authorize the **Mendix Developer Portal** to act on your behalf. Choose **Yes** to allow the start of building jobs using your account. You will then be redirected back to the Mendix Developer Portal.
@@ -71,7 +71,7 @@ The **PhoneGap Build: Signing Key Required** page asks you to go to the PhoneGap
 2. Set up the app signing key for your app in your account.
 3. Configure the app to be built by going to your PhoneGap Build account details. Click the avatar icon at the top-right of the page, and then click **Edit account**.
 4. Click the **Signing Keys** tab, and under **iOS**, click **add a key ...**.
-5. A pop-up window will be shown where you must upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide/managing-app-signing-keys) in the Mendix Reference Guide.
+5. A pop-up window will be shown where you must upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide7/managing-app-signing-keys) in the Mendix Reference Guide.
 6. Give the key a title that you can easily recognize, and upload the files.<br>
 
     <div class="alert alert-warning">

@@ -6,7 +6,7 @@ description: "Teaches you how to work with a list of objects in a microflow as w
 tags: []
 ---
 
-In this how-to, you will learn how to work with a list of objects in a microflow. To manage this list you will first retrieve a filtered list of objects from the database. Mendix utilizes XPath constraints to apply filters. To learn more about XPath, see [XPath Contains](/refguide/xpath-contains) in the Mendix Reference Guide. Secondly, you will iterate over the retrieved list of objects and calculate the total price of all the orders in a [Loop](/refguide/loop). You will end this how-to with an alternative to calculating aggregated values over a list of objects.
+In this how-to, you will learn how to work with a list of objects in a microflow. To manage this list you will first retrieve a filtered list of objects from the database. Mendix utilizes XPath constraints to apply filters. To learn more about XPath, see [XPath Contains](/refguide7/xpath-contains) in the Mendix Reference Guide. Secondly, you will iterate over the retrieved list of objects and calculate the total price of all the orders in a [Loop](/refguide7/loop). You will end this how-to with an alternative to calculating aggregated values over a list of objects.
 
 ## 1\. Preparing the Data Structure, GUI and Example Data
 
@@ -90,7 +90,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
     For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events.
 
-    The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue. For more information take a look at this [documentation](/refguide/loop?utm_source=businessmodeler&utm_medium=software&utm_campaign=modeler)
+    The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue. For more information take a look at this [documentation](/refguide7/loop?utm_source=businessmodeler&utm_medium=software&utm_campaign=modeler)
 
     </div>
 3.  Double click the loop activity and select the **OrderProcessingList **to iterate over.
@@ -194,7 +194,7 @@ In the previous section you iterated over a list to add the value of single obje
 
     <div class="alert alert-info">
 
-    See the [documentation](/refguide/aggregate-list) for the description of the other functions.
+    See the [documentation](/refguide7/aggregate-list) for the description of the other functions.
 
     </div>
     c. For **Attribute** select _TotalPrice_<br>
@@ -242,6 +242,6 @@ In the previous sections you filtered the list of orders from database on attrib
 *   [Error Handling](set-up-error-handling)
 *   [Optimizing Microflow Aggregates](optimizing-microflow-aggregates)
 *   [Extract and use sub microflows](extract-and-use-sub-microflows)
-*   [XPath](/refguide/xpath)
-*   [XPath Constraints](/refguide/xpath-constraints)
-*   [Aggregate List](/refguide/aggregate-list)
+*   [XPath](/refguide7/xpath)
+*   [XPath Constraints](/refguide7/xpath-constraints)
+*   [Aggregate List](/refguide7/aggregate-list)

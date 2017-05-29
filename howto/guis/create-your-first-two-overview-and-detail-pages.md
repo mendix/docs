@@ -73,4 +73,4 @@ You should now have an overview page like this:
 * [How to Set Up the Mendix UI Framework](setup-mendix-ui-framework)
 * [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-* [Page](/refguide/page)
+* [Page](/refguide7/page)

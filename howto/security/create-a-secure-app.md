@@ -212,7 +212,7 @@ To create access roles for the User module role, follow these steps:
 
 In the previous section you set some access rules on your domain model. In this section you you will define the access rules on the Order entity so that orders can only be viewed by a user if the payment status of the order is set to open. You will do this by adding an XPath constraint to the Order entity for the User module role. 
 
-An XPath constraint can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all the objects of the entity. For more information, see [XPath Constraints](/refguide/xpath-constraints) in the Mendix Reference Guide.
+An XPath constraint can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all the objects of the entity. For more information, see [XPath Constraints](/refguide7/xpath-constraints) in the Mendix Reference Guide.
 
 ### 6.1 Adding an Account with the User User Role
 

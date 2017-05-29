@@ -94,4 +94,4 @@ The extra sub microflow option is based on the Mendix reusability principle. You
 * [How to Optimize Retrieve Activities](optimizing-retrieve-activities)
 * [How to Set Up Error Handling](set-up-error-handling)
 * [How to Optimize Microflow Aggregates](optimizing-microflow-aggregates)
-* [Microflows](/refguide/microflows)
+* [Microflows](/refguide7/microflows)

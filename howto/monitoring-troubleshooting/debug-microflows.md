@@ -115,4 +115,4 @@ To use breakpoint conditions, follow these steps:
 * [How to Debug Java Actions](debug-java-actions)
 * [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [How to Debug Microflows Remotely](debug-microflows-remotely)
-* [Microflow Element Common Properties](/refguide/microflow-element-common-properties)
+* [Microflow Element Common Properties](/refguide7/microflow-element-common-properties)

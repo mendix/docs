@@ -179,4 +179,4 @@ Variable ‘Variable’ is never used.
 * [How to Handle Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [How to Debug Microflows Remotely](debug-microflows-remotely)
 
-Several warnings relate to improper security. For more information on this, see [Project Security](/refguide/project-security) in the Mendix Reference Guide.
+Several warnings relate to improper security. For more information on this, see [Project Security](/refguide7/project-security) in the Mendix Reference Guide.

@@ -71,4 +71,4 @@ Before starting this how-to, make sure you have completed the following prerequi
 * [How to Debug Microflows](debug-microflows)
 * [How to Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 * [How to Debug Microflows Remotely](debug-microflows-remotely)
-* [Java Actions](/refguide/java-actions)
+* [Java Actions](/refguide7/java-actions)

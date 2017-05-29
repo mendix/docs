@@ -71,7 +71,7 @@ When finished the wizard will add to your model based on the options selected:
 
 ## 3 Importing a Web Service Directly
 
-An alternative to using the wizard described above is to import a web service document directly into your project. For more information, see [Consumed Web Services](/refguide/consumed-web-services) in the Mendix Reference Guide.
+An alternative to using the wizard described above is to import a web service document directly into your project. For more information, see [Consumed Web Services](/refguide7/consumed-web-services) in the Mendix Reference Guide.
 
 To import a web service directly, follow these steps:
 
@@ -101,7 +101,7 @@ To configure the web service call, follow these steps:
 
     </div>
 
-2. If you are creating your own microflow, add the Call Web Service activity to the microflow. For details on how to add activities to microflows, see [Activities](/refguide/activities) in the Mendix Reference Guide.
+2. If you are creating your own microflow, add the Call Web Service activity to the microflow. For details on how to add activities to microflows, see [Activities](/refguide7/activities) in the Mendix Reference Guide.
 3. Click **Select...** in the **Web service operation** section of the **Call Web Service** dialog box:
 
     ![](attachments/18448730/18581796.png)

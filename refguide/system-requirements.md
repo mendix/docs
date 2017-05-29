@@ -11,8 +11,9 @@ The Mendix Modeler supports Windows 7, 8, and 10. It supports both 32-bit and 64
 
 The following frameworks are automatically installed (if necessary):
 
-* Microsoft .NET Framework 4.5
+* Microsoft .NET Framework 4.6.2
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
+* Microsoft Visual C++ 2013 Redistributable Package
 * Java Development Kit 1.8
 
 <div class="alert alert-warning">{% markdown %}

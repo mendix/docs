@@ -27,8 +27,7 @@ In this section, you will connect a shipment to an IoT device so the data that t
 To configure the sensor data subscription, follow these steps:
 
 1. In the Modeler, open the **Shipment_Detail** page.
-2. Right-click the left-side column of the layout grid (in which **Movement** and **Temperature** are also located) and select **Add widget** > **Button** > **Call microflow button**.
-    * Microflows allow you to express the logic of your application and it is a visual way of expressing what traditionally ends up in textual program code.
+2. Right-click the left-side column of the layout grid (in which **Movement** and **Temperature** are also located) and select **Add widget** > **Button** > **Call microflow button** (note that a microflow allow you to express the logic of your application and functions as a visual way of expressing what traditionally ends up in textual program code):
 
     ![](attachments/build-an-iot-app/select-layoutgrid-column.png)
 

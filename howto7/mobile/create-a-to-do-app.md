@@ -42,9 +42,9 @@ The basis for the to-do app is the Mobile Quick Starter App. Follow these steps 
 
 ![](attachments/how-to-create-a-to-do-app/todo-01.jpg)
 
-<div class="alert alert-warning">{% markdown %}
+<div class="alert alert-warning">
 Switching the security level to *Off* is done for fast development. Make sure you change it back to *Production* and configure the security of your app when you are going to use the app in a production environment.
-{% endmarkdown %}</div>
+</div>
 
 ## 4 Create a New Module
 The to-do app will use a separate module, so you can keep all the to-do app documents in one location. Follow these steps to create a new module:
@@ -280,9 +280,10 @@ The **List view swipe** widget has been configured, but you added two microflows
 3. Open the **ACT_ToDo_MarkAsCompleted** microlfow.
 4. Add an **Activity** that changes the **Completed** attributed of the **ToDo** object to *true* and set **Commit** to *Yes*.
 <iframe width='100%' height='350px' frameborder='0' src='https://modelshare.mendix.com/models/adbe2dd5-2e27-41ab-8f67-3a728917f01b/act_todo_markascompleted?embed=true' allowfullscreen></iframe>
-<div class="alert alert-info">{% markdown %}
+
+<div class="alert alert-info">
 There is no need to refresh in the client due to the *Move out, hide* behavior of the List view swipe widget.
-{% markdown %}</div>
+</div>
 
 ## 9 Run the App and Simulate Touch Behavior of Mobile Device
 The app is now finished. Follow these steps to run the app and view it on a simulated mobile device:

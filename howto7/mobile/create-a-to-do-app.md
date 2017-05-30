@@ -3,7 +3,8 @@ title: How To Create A To-do App In Minutes Based On The Mobile Quick Starter Ap
 space: "Mendix 7 How-to's"
 category: "Mobile"
 description: "This how-to will teach you how to create a to-do app in 20 minutes using the Mobile Quick Starter app."
-toc-level: "3"
+tags: ["Mobile", "Quick", "Starter", "App", "To-do", "Kickstart", "Development"]
+toc-level: "4"
 ---
 
 ## 1 Introduction
@@ -43,7 +44,7 @@ The basis for the to-do app is the Mobile Quick Starter App. Follow these steps 
 
 <div class="alert alert-warning">{% markdown %}
 Switching the security level to *Off* is done for fast development. Make sure you change it back to *Production* and configure the security of your app when you are going to use the app in a production environment.
-{% markdown %}</div>
+{% endmarkdown %}</div>
 
 ## 4 Create a New Module
 The to-do app will use a separate module, so you can keep all the to-do app documents in one location. Follow these steps to create a new module:

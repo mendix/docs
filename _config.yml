@@ -42,17 +42,17 @@ defaults:
   # VERSION SPECIFIC CONTENT
   # Mendix 7
   - scope:
-      path: 'howto7'
+      path: 'howto'
       type: pages
     values:
       menus:
-        - "howto7"
+        - "howto"
   - scope:
-      path: 'refguide7'
+      path: 'refguide'
       type: pages
     values:
       menus:
-        - "refguide7"
+        - "refguide"
   # Mendix 6
   - scope:
       path: 'howto6'

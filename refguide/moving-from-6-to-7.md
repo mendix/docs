@@ -133,7 +133,7 @@ Note that while the tool is definitely awesome, it is not perfect. The resulting
 
 Support for navigation layouts of the **Legacy** type has been dropped. Layout types define how pages are opened in the web client: in a (modal) pop-up window or in the content. For navigation layouts of the Legacy type, that behavior was defined via the button (or microflow) opening the page, which could result in inconsistent behavior. All the navigation layouts of the Legacy type result in errors in the Modeler now.
 
-For more information, see [Layouts](/refguide7/layout#layout-type) and the blog post titled [Layouts Have Types](https://www.mendix.com/blog/layouts-have-types/).
+For more information, see [Layouts](layout#layout-type) and the blog post titled [Layouts Have Types](https://www.mendix.com/blog/layouts-have-types/).
 
 #### Apply Context and Remove from Context
 
@@ -232,8 +232,8 @@ The state has been moved to the client in Mendix 7, and because of that, the fol
 
 | Method Name | Alternative |
 | --- | --- |
-| `retain` | - | 
-| `release` | - | 
+| `retain` | - |
+| `release` | - |
 | `addToClientRoots` | - |
 | `removeFromClientRoots` | - |
 | `getClientRoots` | - |

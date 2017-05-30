@@ -25,7 +25,7 @@ The sample app is equiped with new widgets, preconfigured modules, best practice
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* [Mendix Desktop Modeler 7.3 or later](appstore.home.mendix.com/link/modeler/)
+* [Mendix Desktop Modeler 7.3 or later](https://appstore.home.mendix.com/link/modeler/)
 
 ## 3 Create and Prepare a New Project
 

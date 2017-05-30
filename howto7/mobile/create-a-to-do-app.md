@@ -19,7 +19,7 @@ The sample app is equiped with new widgets, preconfigured modules, best practice
 * Build a to-do app
 * Configure several widgets to realize a rich mobile app with a native look and feel
 
-![](attachments/how-to-create-a-to-do-app/todo-00.jpg)
+![](attachments/create-a-to-do-app/todo-00.jpg)
 
 ## 2 Prerequisites
 
@@ -40,7 +40,7 @@ The basis for the to-do app is the Mobile Quick Starter App. Follow these steps 
 7. Open the **Security** settings of your project.
 8. Switch the **Securiy level** to **Off** and click **OK**.
 
-![](attachments/how-to-create-a-to-do-app/todo-01.jpg)
+![](attachments/create-a-to-do-app/todo-01.jpg)
 
 <div class="alert alert-warning">
 Switching the security level to *Off* is done for fast development. Make sure you change it back to *Production* and configure the security of your app when you are going to use the app in a production environment.
@@ -63,7 +63,7 @@ The domain for the to-do app is pretty simple. It contains one entity with some 
   * *DueDate* (Date and time)
   * *Completed* (Boolean with default value *False*)
 
-  ![](attachments/how-to-create-a-to-do-app/todo-02.jpg)
+  ![](attachments/create-a-to-do-app/todo-02.jpg)
 
 ## 6 Create the Pages
 In this chapter you will create the Homepage and NewEdit pages to create and adjust to-do's.
@@ -90,7 +90,7 @@ Let's add some content to the home page so it can show a list of to-do's. Follow
 6. Click **OK** and then **Yes** to automatically fill the content of the list view.
 7. Remove the **Completed** attribute.
 8. Double-click the **Sort order: (default)** and add the **DueDate** attribute with the **Ascending** sort direction.
-![](attachments/how-to-create-a-to-do-app/todo-03.jpg)
+![](attachments/create-a-to-do-app/todo-03.jpg)
 
 You can now see a list of to-do's on your home page. Let's configure a page to create to-do's.
 
@@ -104,16 +104,16 @@ Users also need to be able to add new to-do's to the list, that's why you're goi
 5. Right-click the **New** button and select **Go to page**.
 6. Delete the **Completed** attribute.
 
-  ![](attachments/how-to-create-a-to-do-app/todo-04.jpg)
+  ![](attachments/create-a-to-do-app/todo-04.jpg)
 7. Run the app locally. Click **Save and continue** if you did not save your page(s) yet.
 8. Click **Yes** to create a default database if this is asked.
 9. Open the **View App** dropdown and select **View Hybrid Mobile App**.
 10. Select the **Profile** profile and click the iPhone form factor for **Preview in browser**.
-  ![](attachments/how-to-create-a-to-do-app/todo-05.jpg)
+  ![](attachments/create-a-to-do-app/todo-05.jpg)
 
 This is an easy way to see your app. There is also a way to simulate the touch behavior of a user on a mobile device. This is explained later on in this how-to.
 
-![](attachments/how-to-create-a-to-do-app/todo-06.jpg)
+![](attachments/create-a-to-do-app/todo-06.jpg)
 
 ## 7 Improve the Mobile Look and Feel
 The following steps improve the mobile look and feel by adding and configuring widgets in your project.
@@ -145,7 +145,7 @@ Follow these steps to improve the look and feel of the home page:
   * Add the **flip-right** class to the **Class** option
 11. Click **OK** to save the properties.
 
-![](attachments/how-to-create-a-to-do-app/todo-07.jpg)
+![](attachments/create-a-to-do-app/todo-07.jpg)
 
 ### 7.2 Enhance the NewEdit Page
 Follow these steps to improve the look and feel of the ToDo_NewEdit page:
@@ -193,7 +193,7 @@ Follow these steps to add the MarkAsCompleted snippet to your app:
 4. Add a **Container** below the **ListViewSwipe_MarkAsCompleted** snippet and within the **Todo list view**.
 5. Change the name of the container to **Buttons**.
 
-  ![](attachments/how-to-create-a-to-do-app/todo-08.jpg)
+  ![](attachments/create-a-to-do-app/todo-08.jpg)
 
 ### 7.6 Adding a Delete Button
 Follow these steps to add a delete button to the list view swipe widget:
@@ -218,7 +218,7 @@ Follow these steps to add and configure a share button to the list view swipe wi
 6. Add the **btn-lg** class to make the button larger.
 7. Click **OK** to save the properties.
 
-  ![](attachments/how-to-create-a-to-do-app/todo-09.jpg)
+  ![](attachments/create-a-to-do-app/todo-09.jpg)
 
 ### 7.8 Adding the Native Share Widget
 Follow these steps to add the native share widget to the page:
@@ -254,7 +254,7 @@ Follow these steps to add the **Badge** widget to your project:
 12. Set the **Default value** of the badge to **Too late!**.
 13. Go to the **Display** tab and set the **Badge style** to **Warning**.
 
-  ![](attachments/how-to-create-a-to-do-app/todo-10.jpg)
+  ![](attachments/create-a-to-do-app/todo-10.jpg)
 
 
 ### 7.10 Adding Conditional Visibility with Client-Side Expressions
@@ -269,7 +269,7 @@ Follow these steps to only show the **Badge** when the **DueDate** has passed:
 
 This is what your page eventually should look like:
 
-![](attachments/how-to-create-a-to-do-app/todo-11.jpg)
+![](attachments/create-a-to-do-app/todo-11.jpg)
 
 ## 8 Adding Logic to the Microflows
 The **List view swipe** widget has been configured, but you added two microflows that do not have any logic yet. Follow these steps to add some logic and make them execute the behavior we want when they are triggered:
@@ -280,7 +280,6 @@ The **List view swipe** widget has been configured, but you added two microflows
 3. Open the **ACT_ToDo_MarkAsCompleted** microlfow.
 4. Add an **Activity** that changes the **Completed** attributed of the **ToDo** object to *true* and set **Commit** to *Yes*.
 <iframe width='100%' height='350px' frameborder='0' src='https://modelshare.mendix.com/models/adbe2dd5-2e27-41ab-8f67-3a728917f01b/act_todo_markascompleted?embed=true' allowfullscreen></iframe>
-
 <div class="alert alert-info">
 There is no need to refresh in the client due to the *Move out, hide* behavior of the List view swipe widget.
 </div>
@@ -293,7 +292,7 @@ The app is now finished. Follow these steps to run the app and view it on a simu
 3. Choose the **Profile** navigation profile.
 4. Click on the laptop icon under **Preview in browser**.
 
-![](attachments/how-to-create-a-to-do-app/todo-00.jpg)
+![](attachments/create-a-to-do-app/todo-00.jpg)
 
 ## 10 Related Content
 

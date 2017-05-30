@@ -135,13 +135,44 @@ TODO
 
 _Default value_: No
 
+### Uniqueness Validation
+
+This option can have two different values: **Runtime** and **Database**. For Mendix 7.3 and higher, **Database** will be the default value for new projects, but old projects will still have **Runtime** as the default value.
+
+
+#### Database
+
+When **Database** is selected, attributes and associations will be validated for uniqueness at the database level. This will ensure that the data doesn't get corrupted even in the case of high concurrency transactions.
+
+Database is also the recommended setting, since it ensures data accuracy at the highest level.
+
+#### Runtime
+
+**Runtime** used to be the default setting prior to Mendix 7.3. This meant that the uniqueness of attributes and associations was handled in the Mendix Runtime and not at the database level.
+
+#### Switching Uniqueness Validation Values
+
+You can always switch between **Runtime** and **Database**.
+
+##### Switching from Runtime to Database
+
+Moving from **Runtime** to **Database** means that the unique constraints will be added to the database and the uniqueness responsibility will belong to the database.
+
+Before switching to the Database option, the `DataStorage.EnableDiagnostics` custom runtime setting can be used to generate a uniqueness violation report. The unique constraint migration will need to be done if the generated report shows violations.
+
+For more details on migration, see [Uniqueness Constraint Migration](uniqueness-constraint-migration).
+
+##### Switching from Database to Runtime
+
+Falling back to the **Runtime** option will remove the unique constraints from the database, and uniqueness rules will not be checked at the database level anymore. Hence, data accuracy cannnot be guaranteed at the highest level, especially in the case of high concurrency transactions.
+
 ## Modeler
 
 These settings determine the behavior of the Modeler for this project. The settings apply to everyone that is working on this project.
 
 ### Bundle Widgets When Running Locally
 
-When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate start-up duration. In some cases, this may obfuscate errors triggered by faulty custom widgets. 
+When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate start-up duration. In some cases, this may obfuscate errors triggered by faulty custom widgets.
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 

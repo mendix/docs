@@ -34,7 +34,7 @@ Create a new app in [Developer Portal](https://home.mendix.com) to create a new 
 
 {% endmarkdown %}</div>
 
-Learn how to [Create and Deploy Your First App](/howto7/getting-started/create-and-deploy-your-first-app).
+Learn how to [Create and Deploy Your First App](/howto/getting-started/create-and-deploy-your-first-app).
 
 ### 3.2 Link the new Free App to the v4 Node
 

@@ -185,11 +185,11 @@ The **Apply context** and **Remove from context** options of the reference selec
 | `com.mendix.core.conf.CoreConstants` | - |
 | `com.mendix.core.conf.AdminActionConstants` | - |
 | `com.mendix.core.conf.Tokens` | - |
-| `com.mendix.externalinterface.connector.RequestHandler.XAS\_SESSION\_ID`| *Used in RequestHandler:* `com.mendix.externalinterface.connector.RequestHandler.getSessionCookieName()`<br> *Used as a constant:* `com.mendix.core.Core.getConfiguration().getSessionIdCookieName()` |
+| `com.mendix.externalinterface.connector.RequestHandler.XAS\_SESSION\_ID`| Used in RequestHandler: `com.mendix.externalinterface.connector.RequestHandler.getSessionCookieName()`<br> Used as a constant: `com.mendix.core.Core.getConfiguration().getSessionIdCookieName()` |
 
 #### 6.3.3 Removed Methods
 
-##### 6.3.3.1 From `com.mendix.core.Configuration`
+##### 6.3.3.1 From com.mendix.core.Configuration
 
 | Method Name | Alternative |
 | --- | --- |
@@ -207,7 +207,7 @@ The **Apply context** and **Remove from context** options of the reference selec
 | `getConstantValue(Object component, String key)` | - |
 | `getDefaultHashAlgorithm()` | - |
 
-##### 6.3.3.2 From `com.mendix.modules.exportmanager.excel.ExcelExporter`
+##### 6.3.3.2 From com.mendix.modules.exportmanager.excel.ExcelExporter
 
 | Method Name | Alternative |
 | --- | --- |
@@ -215,7 +215,7 @@ The **Apply context** and **Remove from context** options of the reference selec
 | `generateXLS(com.mendix.core.component.LocalComponent component, IContext context, IMendixObject fileObject, String fileName, List<IExcelGrid> grids)` | `generateXLS(IContext context, IMendixObject fileObject, String fileName, List<IExcelGrid> grids)` |
 | `generateXLS(com.mendix.core.component.LocalComponent component, IContext context, IMendixObject fileObject, String fileName, List<String> oqlQueries, boolean autoSizeColumns, List<String> headerNames)` | `generateXLS(IContext context, IMendixObject fileObject, String fileName, List<String> oqlQueries, boolean autoSizeColumns, List<String> headerNames)` |
 
-##### 6.3.3.3 From `com.mendix.systemwideinterfaces.core.IContext`
+##### 6.3.3.3 From com.mendix.systemwideinterfaces.core.IContext
 
 | Method Name | Alternative |
 | --- | --- |
@@ -224,7 +224,7 @@ The **Apply context** and **Remove from context** options of the reference selec
 | `setSudo(boolean sudo)` | - |
 | `getSudoContext()` | `createSudoClone()` |
 
-##### 6.3.3.4 From `com.mendix.core.Core`
+##### 6.3.3.4 From com.mendix.core.Core
 
 | Method Name | Alternative |
 | --- | --- |
@@ -232,7 +232,7 @@ The **Apply context** and **Remove from context** options of the reference selec
 | `importXmlStream()` | Use `com.mendix.core.integration().importStream()` instead. |
 | `getComponent().runtime().about().get("model_version")` | `getModelVersion()` |
 
-##### 6.3.3.5 From `com.mendix.systemwideinterfaces.core.ISession`
+##### 6.3.3.5 From com.mendix.systemwideinterfaces.core.ISession
 
 The state has been moved to the client in Mendix 7, and because of that, the following methods are now obsolete:
 

@@ -20,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have an account with Mendix (register [here](https://www.mendix.com/try-now/))
 
-## 3 My Community Profile
+## 3 My Community Profile<a name="MyCommunityProfile"></a>
 
 The first thing you want to check out is your [Community Profile](https://developer.mendixcloud.com/link/profile) page. To get there, mouse over your picture in the navigation bar and click **My Community Profile**. This overview page shows the main page of your profile, including your summary, skills, industry experience, and badges.
 
@@ -32,7 +32,7 @@ When you access your profile page through the My Community Profile link, it is a
 
 <div class="alert alert-info">{% markdown %}
 
-In order to receive Mendix points for your contributions to the Mendix documentation, you must authorize the connection to your GitHub profile. For more details, see [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation).
+In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information on receiving Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq) and [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation).
 
 {% endmarkdown %}</div>
 

@@ -102,7 +102,7 @@ Make sure the image files comply with these naming conventions:
   * For example, the `project-setup` image file is located in the **new-project** sub-folder (named after the document) in the **attachments** folder of the **getting-started** how-to category folder
 * The following image file types are allowed: `.jpg`, `.png`, `.gif`
 
-## 6 Gaining Mendix Points
+## 6 Gaining Mendix Points<a name="GainingMendixPoints"></a>
 
 As you add knowledge to the documentation that will help your fellow Mendix developers, for each contribution, you will gain Mendix points!
 

@@ -22,3 +22,4 @@ Get off to a flying start with these introductory how-to's.
     * [How to Build an IoT App Step 4: Add Another Data Dimension](build-an-iot-app-4)
     * [How to Build an IoT App Step 5: Create Alerts](build-an-iot-app-5)
     * [How to Build an IoT App Step 6: Expand the IoT App Tracking](build-an-iot-app-6)
+* [How to Create a Mobile To-Do App](create-a-to-do-app)

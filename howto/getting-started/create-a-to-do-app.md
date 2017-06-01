@@ -296,6 +296,6 @@ The app is now finished. Follow these steps to run the app and view it on a simu
 
 ## 10 Related Content
 
-* [How to Deploy Your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
-* [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
-* [Push Notifications](push-notifications)
+* [How to Deploy Your First Hybrid Mobile App](../mobile/deploy-your-first-hybrid-mobile-app)
+* [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](../mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
+* [Push Notifications](../mobile/push-notifications)

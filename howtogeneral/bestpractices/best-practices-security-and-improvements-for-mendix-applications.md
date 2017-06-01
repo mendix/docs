@@ -22,6 +22,7 @@ When designing an application, a developer can specify access rules on an entity
 * Don’t set a default rule to read and write access, this forces a developer to think about each attribute that is added to an entity
 * Security constraints should be formed as entity access rules, visibility constraints in page components (grids, list views, data views)
 * Keep your attributes editable within data views. If an access rule prohibits write access, your client will display it as non-editable. This way you are aware, as developer, about the (correct) working of an access rule
+* Apply entity access on the specialization when dealing with inheritance. The Mendix Runtime will look to the lowest subclass of the object for access rules
 
 ## Avoid Injection
 

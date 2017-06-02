@@ -25,11 +25,11 @@ For details on this release, see [7.1 release notes](7.1).
 
 ### 7.1.0<a name="710"></a>
 
-#### Advanced conditional visibility/editability known issue
+#### Advanced conditional visibility/editability known issues
 
 * Currently you can configure expression-based conditional visibilitity/editability on any element. But this will be ignored on elements outside of a data container: on data views, list views, and template grids. Note that you still cannot configure attribute-based conditions on such elements.
 
-#### Other known issue
+#### Other known issues
 
 * The offline functionality for mobile apps is broken.
     * Fixed in [7.1.1](7.1#711).

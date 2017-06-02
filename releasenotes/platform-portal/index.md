@@ -7,7 +7,7 @@ toc-level: "1"
 
 ### Fixes
 
-* We fixed an issue with the input of Japanese characters in the feedback widget.
+* We fixed the issue with the input of Japanese characters in the feedback widget.
 
 ## May 19th, 2017
 

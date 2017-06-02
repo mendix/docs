@@ -8,7 +8,7 @@ tags: ["HRM", "build", "app", "developer portal"]
 
 ## 1 Introduction
 
-This how-to takes you through the basics of development in Mendix and teaches you how to build a simple HRM app.
+This how-to takes you through the basics of development in Mendix and teaches you how to build a simple human resources management (HRM) app.
 
 **This how-to will teach you how to do the following:**
 
@@ -36,7 +36,8 @@ To create your app, follow these steps:
 
     ![](attachments/18448672/18580906.png) 
 
-3. On the **THEMES** tab, select a theme. We use the **Blue Wave** theme in this how-to. To learn more about themes, see [The Eye-Catching Mendix UI Framework](https://www.mendix.com/blog/the-eye-catching-mendix-ui-framework/).
+3. On the **THEMES** tab, select a theme. We use the **Blue Wave** theme in this how-to. To learn more about themes, see the blog post entitled [The Eye-Catching Mendix UI Framework](https://www.mendix.com/blog/the-eye-catching-mendix-ui-framework/).
+
 4. Click **Use this app**, enter the name of your application, and click **Create App**:
 
     ![](attachments/18448672/create-blue-wave-app.gif) <br>

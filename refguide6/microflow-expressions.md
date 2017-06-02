@@ -67,8 +67,8 @@ An overview of the possibilities with expressions can be found below.
 *   [`find`](string-function-calls) - Get substring position
 *   [`findLast`](string-function-calls) - Get last substring position
 *   [`contains`](string-function-calls) - Contains substring
-*   `[startsWith](string-function-calls)`  - Determine whether a string starts with the specified substring
-*   `[endsWith](string-function-calls)`  - Determine whether a string ends with the specified substring
+*   [`startsWith`](string-function-calls)  - Determine whether a string starts with the specified substring
+*   [`endsWith`](string-function-calls)  - Determine whether a string ends with the specified substring
 *   [`trim`](string-function-calls) - Remove leading and trailing whitespace
 *   [`isMatch`](string-function-calls) - Match regular expression
 *   [`replaceAll`](string-function-calls) - Replace occurences of substring

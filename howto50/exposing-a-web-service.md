@@ -86,8 +86,8 @@ You need a WSDL to allow others to interact with the web service you just create
 
 1.  Run the application locally or in a sandbox.
 2.  View the application in your browser.
-    If you run the application locally, the application url should look like this: [http://localhost:8080/index.html](http://localhost:8080/index.html)
-    If you run the application in a sandbox, the application url should look like this: [https://myfirstapp.mendixcloud.com/index.html](https://myfirstapp.mendixcloud.com/index.html)
+    If you run the application locally, the application url should look like this: `http://localhost:8080/index.html`.
+    If you run the application in a sandbox, the application url should look like this: `https://myfirstapp.mendixcloud.com/index.html`.
 3.  In both cases you can replace _/index.html_ with _/ws-doc/_ to open the web service documentation page.
     ![](attachments/2949205/16285930.png)
     You should see the name of your web service in the list.

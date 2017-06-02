@@ -16,7 +16,7 @@ Converts all characters in the string to lowercase.
 
 ### Input parameters
 
-*   String to convert
+*   String to convert  
     Type: String
 
 ### Output
@@ -39,7 +39,7 @@ Converts all characters in the string to uppercase.
 
 ### Input parameters
 
-*   String to convert
+*   String to convert  
     Type: String
 
 ### Output
@@ -62,12 +62,12 @@ Determines the length of a string.
 
 ### Input parameters
 
-*   a string
+*   a string  
     Type: String
 
 ### Output
 
-Length of the string
+Length of the string  
 Type: Integer
 
 ```java
@@ -86,11 +86,11 @@ Retrieves a substring of a string. Note that the first character of a string is 
 
 ### Input parameters
 
-*   Subject
+*   Subject  
     Type: String
-*   Start position of the substring
+*   Start position of the substring  
     Type: Integer
-*   (Optional) Desired length of the result
+*   (Optional) Desired length of the result  
     Type: Integer
 
 ### Output
@@ -126,11 +126,11 @@ Finds the position of the first occurrence of the substring in the string.
 
 ### Input parameters
 
-*   Original string. This is the string that you want to search _in_.
+*   Original string. This is the string that you want to search _in_.  
     Type: String
-*   Substring that you want to search _for_.
+*   Substring that you want to search _for_.  
     Type: String
-*   (Optional) Start location to begin search from
+*   (Optional) Start location to begin search from  
     Type: Integer
 
 ### Output
@@ -178,11 +178,11 @@ Finds the position of the last occurrence of substring in the original string.
 
 ### Input parameters
 
-*   Original string. This is the string that you want to search _in_.
+*   Original string. This is the string that you want to search _in_.  
     Type: String
-*   Substring that you want to search _for_.
+*   Substring that you want to search _for_.  
     Type: String
-*   (Optional) Last location to be searched
+*   (Optional) Last location to be searched  
     Type: Integer
 
 ### Output
@@ -242,9 +242,9 @@ find('mystring', 'otherstring') != -1
 
 Input parameters
 
-*   Original string. This is the string that you want to search _in_.
+*   Original string. This is the string that you want to search _in_.  
     Type: String
-*   Substring that you want to search _for_.
+*   Substring that you want to search _for_.  
     Type: String
 
 ### Output
@@ -268,14 +268,14 @@ Determines whether a string starts with the specified substring.
 
 ### Input parameters
 
-*   Original string. This is the string that you want to search _in_.
+*   Original string. This is the string that you want to search _in_.  
     Type: String
-*   Substring that you want to search _for_.
+*   Substring that you want to search _for_.  
     Type: String
 
 ### Output
 
-Whether the original string starts with the substring
+Whether the original string starts with the substring  
 Type: Boolean
 
 ```java
@@ -294,9 +294,9 @@ Determines whether a string ends with the specified substring.
 
 ### Input parameters
 
-*   Original string. This is the string that you want to search _in_.
+*   Original string. This is the string that you want to search _in_.  
     Type: String
-*   Substring that you want to search _for_.
+*   Substring that you want to search _for_.  
     Type: String
 
 ### Output
@@ -320,12 +320,12 @@ Removes all whitespace at the beginning and end of a string.
 
 ### Input parameters
 
-*   A string
+*   A string  
     Type: String
 
 ### Output
 
-Same string but without spaces at the beginning and end.
+Same string but without spaces at the beginning and end.  
 Type: String
 
 ```java
@@ -344,9 +344,9 @@ Checks to see if a string matches a given regular expression.
 
 ### Input parameters
 
-*   String to try and match on
+*   String to try and match on  
     Type: String
-*   Regular expression to match
+*   Regular expression to match  
     Type: String
 
 <div class="alert alert-warning">{% markdown %}
@@ -374,9 +374,9 @@ False
 
 In isMatch() the regex is implicitly anchored at ^ and $.
 
-**Example**
-isMatch('NLG 123.45', '[0-9]') returns false
-isMatch('NLG 123.45', '.*[0-9].*') returns true
+**Example**  
+`isMatch('NLG 123.45', '[0-9]')` returns false  
+`isMatch('NLG 123.45', '.*[0-9].*')` returns true  
 
 ## replaceAll
 
@@ -384,11 +384,11 @@ Replaces all occurrences of a regular expression with another string.
 
 ### Input parameters
 
-*   The string to search in
+*   The string to search in  
     Type: String
-*   The regular expression to match on
+*   The regular expression to match on  
     Type: String
-*   The replacement value
+*   The replacement value  
     Type: String
 
 <div class="alert alert-warning">{% markdown %}
@@ -399,8 +399,7 @@ Please note that this function call uses a Java regular expression. For more inf
 
 ### Output
 
-The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.
-
+The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned.  
 Type: String
 
 ```java
@@ -431,11 +430,11 @@ Replaces the first occurrence of the regular expression with a replacement strin
 
 ### Input parameters
 
-*   The string to search in
+*   The string to search in  
     Type: String
-*   The regular expression to match on
+*   The regular expression to match on  
     Type: String
-*   The replacement value
+*   The replacement value  
     Type: String
 
 <div class="alert alert-warning">{% markdown %}
@@ -466,9 +465,9 @@ The + operator can be used to concatenate two strings or a string and a number.
 
 ### Input parameters
 
-*   First parameter
+*   First parameter  
     Type: String, Integer/Long, Float or Decimal
-*   Second parameter
+*   Second parameter  
     Type: String, Integer/Long, Float or Decimal
 
 At least one of the parameters must be of type String.

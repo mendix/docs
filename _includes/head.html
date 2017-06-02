@@ -24,7 +24,27 @@
     {% include asset.html type="css" filename="search_autocomplete.css" %}
 
     <meta name="google-site-verification" content="aMsqgUmbPjh3W_nNVxtQEkUEdMcxM-EULoGHGBDGpYo" />
-    {% if jekyll.environment == "production" and page.sitemap != false  %}<meta name="ROBOTS" content="INDEX, FOLLOW">{% else %}<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">{% endif %}
-
     <link rel="search" type="application/opensearchdescription+xml" href="/search/opensearch.xml" title="Mendix Documentation"/>
+
+    {% if jekyll.environment == "production" %}
+    {% if page.sitemap != false %}{% if page.noindex != true %}<meta name="ROBOTS" content="INDEX, FOLLOW">{% else %}<meta name="ROBOTS" content="NOINDEX, FOLLOW">{% endif %}{% else %}<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">{% endif %}
+    <script type="text/javascript">
+      window.__IntercomAppId = "{{ site.intercom.live_id }}"
+      window.intercomSettings = {
+        app_id: window.__IntercomAppId
+      };
+    </script>
+    {% include asset.html type="js" filename="intercom.js" %}
+    {% elsif jekyll.environment == "test" %}
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <script type="text/javascript">
+      window.__IntercomAppId = "{{ site.intercom.test_id }}"
+      window.intercomSettings = {
+        app_id: window.__IntercomAppId
+      };
+    </script>
+    {% include asset.html type="js" filename="intercom.js" %}
+    {% else %}
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    {% endif %}
 </head>

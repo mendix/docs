@@ -9,6 +9,8 @@
     this.domain = 'https://docs.mendix.com';
     if (location.hostname === 'localhost') {
       this.domain = 'http://localhost:4000';
+    } else if (location.hostname === 'documentation-accp.cfapps.io') {
+      this.domain = 'https://documentation-accp.cfapps.io';
     }
     if (!window.ALGOLIA_CONFIG) {
       console.warn('Mendix search: NO Algolia config for Mendix Documentation, no search possible');
@@ -67,6 +69,8 @@
         }]
     );
 
+    $el.trigger('focus');
+
     this.autocomplete
       .on('autocomplete:selected', function(event, suggestion, dataset) {
         event.stopPropagation();
@@ -99,6 +103,7 @@
 
   window.__searchClient = searchClient;
 
+  /* Zendesk autocomplete */
   if ($('#mendix_search').length === 1) {
     new searchClient('#mendix_search', {
       debug: false,
@@ -106,13 +111,19 @@
     });
   }
 
-  if ($('.not-found-suggestion')) {
+  /* 404 pages */
+  if ($('.not-found-suggestion').length !== 0) {
     var $el = $('.not-found-suggestion'),
         splitted = location.pathname.split('/'),
         last = splitted.slice(-1)[0] === "" ? -2 : -1,
         path = decodeURIComponent(splitted.slice(last)[0]).replace(/[\ \/\-\+]/g, ' '),
         client = algoliasearch(ALGOLIA_CONFIG.appId, ALGOLIA_CONFIG.apiKey),
         index = client.initIndex(ALGOLIA_CONFIG.indexName);
+
+    var metadata = {
+      path: location.href
+    };
+    window.Intercom && __trackIntercomEvent('page-not-found', metadata);
 
     index.search(path, function searchDone(err, content) {
       if (err) {
@@ -121,7 +132,7 @@
       }
       if (content.hits && content.hits.length > 0) {
         var suggestions = content.hits.slice(0, 5),
-            searchUrl = (location.hostname === 'localhost' ? '/search?' : 'https://docs.mendix.com/search?') +  content.params;
+            searchUrl = (location.hostname === 'localhost' ? '/search/?' : 'https://docs.mendix.com/search/?') +  content.params;
 
         $el.empty();
         $el.append('<p class="text-center lead">We have the following suggestions:</p><ul class="suggestions"></ul><p class="text-center lead">Or use the <a href="' + searchUrl + '">full search</a>.</p>');

@@ -28,7 +28,7 @@ For more information, see:
 Virtually all certificate formats can be converted to the PKCS12 format. For more information, see these links:
 
 *   [https://www.tbs-certificates.co.uk/FAQ/en/288.html](https://www.tbs-certificates.co.uk/FAQ/en/288.html)
-*   [http://www.openssl.org/docs/apps/openssl.html](http://www.openssl.org/docs/apps/openssl.html)
+*   [https://www.openssl.org/docs/manmaster/](https://www.openssl.org/docs/manmaster/)
 
 ## Certificate Authorities
 

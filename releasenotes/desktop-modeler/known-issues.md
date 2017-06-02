@@ -14,7 +14,7 @@ This document describes known issues starting with Mendix version 7.0.2. For kno
 
 For details on this release, see [7.2 release notes](7.2).
 
-### 7.2.0
+### 7.2.0<a name="720"></a>
 
 * Changes for reference set members that are read-only for the user are not correctly serialized from the server to the client (browser). This can lead to an `IllegalArgumentException` with this message: “Global identifier should be a number.”
 
@@ -22,7 +22,7 @@ For details on this release, see [7.2 release notes](7.2).
 
 For details on this release, see [7.1 release notes](7.1).
 
-### 7.1.0
+### 7.1.0<a name="710"></a>
 
 * The offline functionality for mobile apps is broken.
     * Fixed in [7.1.1](7.1#711).
@@ -31,7 +31,17 @@ For details on this release, see [7.1 release notes](7.1).
 
 For details on this release, see [7.0 release notes](7.0).
 
-### 7.0.2
+### 7.0.2<a name="702"></a>
+
+#### Stateless runtime known issues
+
+* The `RuntimeStatistics` page in the administration module is broken, as the `System.Statistics` entity is not created anymore. This was used for an earlier version of horizontal scalability and has become obsolete. In a future version, the `System.Statistics` entity will be removed from the `System` module, and the `Administration.RuntimeStatistics` page and the `Administration.ViewStatistics` microflow will be removed automatically from the `Administration` module.
+* Upgrading an anonymous user to a signed-in user does not transfer the session state yet.
+* Pages showing objects that contain accessible hashed string attributes with empty values are broken. You cannot call a microflow or open a different page. Please note that this is not easy to model, so you might not encounter this issue.
+* Hybrid apps will not start if they contain a reporting widget.
+* Offline hybrid apps are not supported yet.
+
+#### Other known issues
 
 * Some users working on Windows 7 and 8.1 might experience issues during installation of the .NET Framework bundled with the Modeler installer. Installing .NET Framework from the [official Microsoft website](https://www.microsoft.com/en-us/download/details.aspx?id=53345) resolves these issues.
 * Upgrading an anonymous user to a signed-in user does not transfer the state yet.

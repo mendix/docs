@@ -61,7 +61,6 @@ Congratulations! You have completed this how-to.
 
 We are very interested in your feedback. Please take [this short survey](https://www.surveymonkey.com/r/ZCRJSP3) to let us know what you think about this how-to.
 
-
 ## 5 Related Content
 
 * [How to Build an IoT App](build-an-iot-app)

@@ -123,7 +123,7 @@ To add attributes to your page, follow these steps:
    
 8. Select the **Name** attribute, click **Select**, and then click **OK**.
 9. Repeat steps 6–8 for the second text box and select the **Email** attribute.
-10. Delete the element with the caption __**{1}**__, which represents a **Link button**:
+10. Delete the element with the caption **{1}**, which represents a **Link button**:
 
     ![](attachments/18448671/18580847.png)
     

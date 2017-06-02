@@ -55,12 +55,18 @@ These are the release notes for the Mendix Desktop Modeler:
 
 <div class="alert alert-info">
 
-The patch release notes are also included here.
+The patch release notes are included here.
 
 </div>
 
 <div class="alert alert-info">{% markdown %}
 
-The [Windows Service](windows-service) release notes are also included here.
+The known issues for each release are described in [Known Issues](windows-service).
+
+{% endmarkdown %}</div>
+
+<div class="alert alert-info">{% markdown %}
+
+The Windows Service release notes can be found in [Windows Service](windows-service).
 
 {% endmarkdown %}</div>

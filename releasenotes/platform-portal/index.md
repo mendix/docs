@@ -3,6 +3,11 @@ title: "Platform Portal"
 space: "Release Notes"
 toc-level: "1"
 ---
+## June 7th, 2017
+
+### Fixes
+
+* We fixed an issue with the input of Japanese characters in the feedback widget.
 
 ## May 19th, 2017
 

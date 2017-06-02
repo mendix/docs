@@ -7,20 +7,18 @@ tags: ["HRM", "build", "app", "developer portal"]
 
 ## 1 Introduction
 
-This how-to is based on the video "Build a simple HRM app: Smarten up your app with business logic," which is part of the [Getting Started videos](http://gettingstarted.mendixcloud.com/link/courses/gettingstarted).
-
 This is the last how-to in a series of five on how to create a simple human resource management (HRM) application. In this how-to, you learn how to smarten up your application by adding business logic.
 
 **This how-to will teach you how to do the following:**
 
-*   How to create a microflow
-*   How to build business logic
+*   Create a microflow
+*   Build business logic
 
 ## 2 Prerequisites
 
 Before you can start with this how-to, make sure you have completed the following prerequisite:
 
-* Use the fourth how-to in this series: [Build a Simple HRM App 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+* Use the fourth how-to in this series: [Build a Simple HRM App Step 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
 
 ## 3 Creating a Microflow
 
@@ -137,9 +135,9 @@ To view your app, follow these steps:
 
 ## 5 Related Content
 
-* [Build a Simple HRM App 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-* [Build a Simple HRM App 2: First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-* [Build a Simple HRM App 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-* [Build a Simple HRM App 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
+* [Build a Simple HRM App Step 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
+* [Build a Simple HRM App Step 2: First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
+* [Build a Simple HRM App Step 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
+* [Build a Simple HRM App Step 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
 * [Create and Deploy Your First App](create-and-deploy-your-first-app)
 * [Testing Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)

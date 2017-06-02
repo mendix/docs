@@ -28,6 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Complete [Create a Mobile To-Do App Step 3: ]()
 
 ## 3 Adding Logic to the Microflows
+
 The **List view swipe** widget has been configured, but you added two microflows that do not have any logic yet. Follow these steps to add some logic and make them execute the behavior we want when they are triggered:
 
 1. Open the **ACT_ToDo_Delete** microflow.
@@ -40,7 +41,8 @@ The **List view swipe** widget has been configured, but you added two microflows
 There is no need to refresh in the client due to the *Move out, hide* behavior of the List view swipe widget.
 </div>
 
-## 4 Run the App and Simulate Touch Behavior of Mobile Device
+## 4 Running the App and Simulating Touch Behavior of Mobile Device
+
 The app is now finished. Follow these steps to run the app and view it on a simulated mobile device:
 
 1. Save all changes and run the app locally.

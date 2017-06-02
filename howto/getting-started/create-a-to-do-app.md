@@ -11,6 +11,8 @@ This series of how-to's will guide you in building a to-do app based on the new 
 
 The sample app is equiped with new widgets, preconfigured modules, best practices, and an example inspection module to kick start your mobile development by default.
 
+![](attachments/create-a-to-do-app/todo-00.jpg)
+
 ## Documents in This Category
 
 ______________

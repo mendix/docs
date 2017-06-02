@@ -27,10 +27,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Complete [Create a Mobile To-Do App Step 2: ]()
 
-## 3 Improve the Mobile Look and Feel
+## 3 Improving the Mobile Look and Feel
 The following steps improve the mobile look and feel by adding and configuring widgets in your project.
 
-### 3.1 Enhance the Home Page
+### 3.1 Enhancing the Home Page
 Follow these steps to improve the look and feel of the home page:
 
 1. Go back to the **Modeler**.
@@ -59,7 +59,7 @@ Follow these steps to improve the look and feel of the home page:
 
 ![](attachments/create-a-to-do-app/todo-07.jpg)
 
-### 3.2 Enhance the NewEdit Page
+### 3.2 Enhancing the NewEdit Page
 Follow these steps to improve the look and feel of the ToDo_NewEdit page:
 
 1. Open the **ToDo_NewEdit** page.
@@ -68,7 +68,7 @@ Follow these steps to improve the look and feel of the ToDo_NewEdit page:
 4. Add a (full) **Layout grid** to the **ToDo data view**.
 5. Move the **Description** and **DueDate** attributes into the **Layout grid**.
 
-### 3.3 Add the Pull-to-Refresh Widget
+### 3.3 Adding the Pull-to-Refresh Widget
 Follow these steps to enable pull-to-refresh functionality to your app:
 
 1. Open the **Home_Phone_Default** page.
@@ -76,7 +76,7 @@ Follow these steps to enable pull-to-refresh functionality to your app:
 
 This is all you need to do to refresh your list of to-do's. If you want, you can change some messages the widget generates when you pull to refresh on your phone.
 
-### 3.4 Add and Configure the List View Swipe Widget
+### 3.4 Adding and Configuring the List View Swipe Widget
 Follow these steps to add the list view swipe widget to your app:
 
 1. Open the **Home_Phone_Default** page.
@@ -167,7 +167,6 @@ Follow these steps to add the **Badge** widget to your project:
 13. Go to the **Display** tab and set the **Badge style** to **Warning**.
 
   ![](attachments/create-a-to-do-app/todo-10.jpg)
-
 
 ### 3.10 Adding Conditional Visibility with Client-Side Expressions
 Follow these steps to only show the **Badge** when the **DueDate** has passed:

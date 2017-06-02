@@ -30,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 3 Creating the Pages
 In this chapter you will create the Homepage and NewEdit pages to create and adjust to-do's.
 
-### 3.1 Create the Home Page
+### 3.1 Creating the Home Page
 The app will use the home page as the landing page when users open the to-do app. It contains a list of their to-do's. Follow these steps to create the home page:
 
 1. Right click your newly created ToDo module and select **Add > Page**.
@@ -41,7 +41,7 @@ The app will use the home page as the landing page when users open the to-do app
 6. Click **OK** to create the page.
 7. Open your project's **Navigation** and set the **Home_Phone_Default page** in the ToDo module as default home page.
 
-### 3.2 Configure the Home Page
+### 3.2 Configuring the Home Page
 Let's add some content to the home page so it can show a list of to-do's. Follow these steps to add a list view to the home page:
 
 1. Change the page title to **My to-do's** in the **Properties** pane on the right side of the Modeler.
@@ -56,7 +56,7 @@ Let's add some content to the home page so it can show a list of to-do's. Follow
 
 You can now see a list of to-do's on your home page. Let's configure a page to create to-do's.
 
-### 3.4 Create and Configure the New and Edit Page
+### 3.4 Creating and Configuring the New and Edit Page
 Users also need to be able to add new to-do's to the list, that's why you're going to add a page that lets them do this. Follow these steps to create a new and edit page:
 
 1. Add a **Create button** to the **HeaderRight** placeholder on the page.

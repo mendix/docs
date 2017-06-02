@@ -8,7 +8,7 @@ tags: ["HRM", "build", "app", "developer portal"]
 
 ## 1 Introduction
 
-This how-to takes you through the basics of development in Mendix and teaches you how to build a simple HRM app.
+This how-to takes you through the basics of development in Mendix and teaches you how to build a simple human resources management (HRM) app.
 
 **This how-to will teach you how to do the following:**
 

@@ -1,7 +1,7 @@
 ---
 title: "How to Unlink Your Free App from a Sandbox Environment"
 space: "Developer Portal"
-category: "Deploy"
+category: "How-To's"
 description: "This page describes how to unlink a Free App from a Sandbox Environment."
 tags: ["App","Sandbox","Developer Portal","Unlink","Delete"]
 ---
@@ -31,7 +31,7 @@ Please note that because you are going to unlink the Sandbox from your Free App,
 
 {% endmarkdown %}</div>
 
-The documentation on how to download a backup can be found [here](../operate/how-to-download-a-backup).
+The documentation on how to download a backup can be found [here](how-to-download-a-backup).
 
 ## 4 Unlink a Free App From a Sandbox
 
@@ -51,9 +51,9 @@ The Free App has now been unlinked from the Sandbox environment.
 
 *   [How to Configure Custom Domains](custom-domains)
 *   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
-*   [How To Download a Backup](../operate/how-to-download-a-backup)
+*   [How To Download a Backup](how-to-download-a-backup)
 *   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 *   [How To Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node) 
-*   [How To Restore a Backup](../operate/how-to-restore-a-backup)
+*   [How To Restore a Backup](how-to-restore-a-backup)
 *   [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
 *   [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)

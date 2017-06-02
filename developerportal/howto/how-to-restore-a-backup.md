@@ -1,7 +1,7 @@
 ---
 title: "How to Restore a Backup"
 space: "Developer Portal"
-category: "Operate"
+category: "How-To's"
 description: "This page describes how to restore a backup."
 tags: ["Backup","Restore","Mendix Cloud","Developer Portal"]
 ---
@@ -33,7 +33,7 @@ The process for restoring a backup from a Free App and a licensed cloud node are
 4. Click **Backups** under the **Operate** category.
 5. Select the backup you want to restore and click **Restore Backup**.
 
-[](attachments/backupoptions.jpg)
+[](attachments/operate/backupoptions.jpg)
 
 6. Click **Yes** to confirm the restoration.
 
@@ -52,11 +52,11 @@ To restore a backup that is stored in the Mendix Cloud, follow these steps:
 5. Click **Backups** under the **Operate** category.
 6. Select the environment to which the backup should be restored.
 
-[](attachments/environment.jpg)
+[](attachments/general/environment.jpg)
 
 7. Select the backup you want to restore and click **Restore Backup**.
 
-[](attachments/backupoptions.jpg)
+[](attachments/operate/backupoptions.jpg)
 
 8. Confirm the backup restore by clicking **Restore Backup**.
 
@@ -77,7 +77,7 @@ If you already have a downloaded backup file (*.db* or *.gz*) stored locally on 
 5. Click **Backups** under the **Operate** category.
 6. Select the environment to which the backup should be restored.
 
-[](attachments/environment.jpg)
+[](attachments/general/environment.jpg)
 
 7. Click **Upload Archive**.
 8. Because this action will immidiately stop your app, confirm this by clicking **Yes**.
@@ -87,7 +87,7 @@ The backup file is immediately uploaded to the database.
 
 ## 4 Related Content
 
-* [How To Connect an App to a Licensed Cloud Node](../deploy/how-to-link-app-to-node)
+* [How To Connect an App to a Licensed Cloud Node](how-to-link-app-to-node)
 * [How To Create a Backup](how-to-create-backup)
 * [How To Download a Backup](how-to-download-a-backup)
-* [How To Unlink Your Free App from a Sandbox Environment](../deploy/how-to-unlink-sandbox)
+* [How To Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

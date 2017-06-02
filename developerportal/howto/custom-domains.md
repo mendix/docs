@@ -1,7 +1,7 @@
 ---
 title: "How to Configure Custom Domains"
 space: "Developer Portal"
-category: "Deploy"
+category: "How-To's"
 description: "Describes how to configure custom domains as well as generate, upload, and renew certificates in Mendix."
 tags: ["Custom Domain","Mendix Cloud","Developer Portal"]
 ---
@@ -36,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Before configuring your Custom Domain in the Mendix Cloud Platform you will need to configure a DNS record for your Custom Domain at your Domain Registrar / DNS provider.
 
-![](attachments/21168230.png)
+![](attachments/deploy/21168230.png)
 
 Please create a CNAME record and point it to "[YOUR-CUSTOM-DOMAIN].cname.mendix.net.". So when your Custom Domain is for example "myapp.mycompany.com", create a CNAME record to "myapp.mycompany.com.cname.mendix.net.". This way we are able to point your Custom Domain to your Mendix App.
 
@@ -51,7 +51,7 @@ Note: It's not possible to create a CNAME record for an Apex/Naked domain (domai
 
 Custom Domain Certificates (or just "Certificates") and Custom Domains are managed in separate locations in the Mendix Cloud Platform. Certificates are currently managed on Application level. You can have a collection of Certificates. For example when your Certificate expires, you can upload a new Certificate next to your old Certificate. Those can be chosen when you configure a Custom Domain. This is done on Environment level (Test, Acceptance, Production).
 
-![](attachments/21168233.png)
+![](attachments/deploy/21168233.png)
 
 To manage custom domains, follow these steps:
 
@@ -70,12 +70,12 @@ To create a Certificate Request, follow these steps:
 
 1.  Click **New**.
 
-![](attachments/newcustomdomain.jpg)
+![](attachments/deploy/newcustomdomain.jpg)
 
 2.  Click **Create a Certificate Request**.
 3.  Fill in and submit the provided fields.
 
-![](attachments/21168225.png)
+![](attachments/deploy/21168225.png)
 
 4. Click **Generate**. A SSL/TLS Private Key and a Certificate Request is generated. The Certificate Request will be shown in PEM format.
 
@@ -85,7 +85,7 @@ The "SSL/TLS Private Key" will be stored in our Secure Keystore. It will not be 
 
 {% endmarkdown %}</div>
 
-![](attachments/21168226.png)
+![](attachments/deploy/21168226.png)
 
 ### 4.1 Upload Signed Certificate 
 
@@ -96,11 +96,11 @@ When you have received the Signed SSL/TLS Certificate from your Certificate Auth
 1. Select the Custom Domain Certificate.
 2. Click **Upload Signed Certificate**. 
 
-![](attachments/certificate.jpg)
+![](attachments/deploy/certificate.jpg)
 
 Here you can change the description of your Certificate and upload the Signed SSL/TLS Certificate. You can also upload an Intermediate Certificate Chain. The Intermediate Certificate Chain is often provided by your Certificate Authority as well.
 
-![](attachments/21168227.png)
+![](attachments/deploy/21168227.png)
 
 
 ## 5 Uploading your own Custom Domain Certificate
@@ -115,12 +115,12 @@ To upload the Custom Domain Certificate, follow these steps:
 
 1. Click **New**.
 
-![](attachments/newcustomdomain.jpg)
+![](attachments/deploy/newcustomdomain.jpg)
 
 2. Click **Upload Certificate, Chain and Key**.
 3. Enter the "SSL/TLS Certificate", "Intermediate Certificate Chain" and "SSL/TLS Private Key" in the provided fields. Optionally you can give your Custom Domain Certificate a description. The description is used when selecting the Custom Domain Certificate when configuring a Custom Domain later on.
 
-![](attachments/21168228.png)
+![](attachments/deploy/21168228.png)
 
 4. Click **Save** to save your new Custom Domain Certificate. It will be uploaded to the Mendix Cloud Platform automatically.
 
@@ -158,11 +158,11 @@ To configure a custom domain on your application environment, follow these steps
 1. Click **Environments** under the **Deploy** category.
 2. Click **Details** of the environment you want to configure.
 
-![](attachments/environmentdetails.jpg)
+![](attachments/deploy/environmentdetails.jpg)
 
 3. Go to the **Network** tab. 
 
-![](attachments/network.jpg)
+![](attachments/deploy/network.jpg)
 
 4. Under **Custom Domains** you can manage your Custom Domains.
 
@@ -171,7 +171,7 @@ To configure a custom domain on your application environment, follow these steps
 *   Providing a Domainname (like "myapp.mycompany.com" from the example at the top of this page)
 *   Selecting a Custom Domain Certificate you have uploaded above
 
-![](attachments/21168229.png)
+![](attachments/deploy/21168229.png)
 
 6. Click **Save** to save your Custom Domain. It will be configured for your Application Environment automatically.
 

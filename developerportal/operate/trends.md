@@ -29,7 +29,7 @@ Assign this permission by following these steps:
 5. Go to the **Node Permissions** tab.
 6. Check **Access the Monitoring** next to the name of the person who is granted this permission.
 
-![](attachments/nodepermission.jpg)
+![](attachments/howto/settingsnodepermission.jpg)
 
 ## 2 Find the Trends
 
@@ -41,7 +41,7 @@ You can find the trends by following these steps:
 4. Click **Metrics** under the **Operate** category.
 5. Select the environment you want to monitor under the tab **Trends**.
 
-![](attachments/environment.jpg)
+![](attachments/howto/general/environment.jpg)
 
 ## 3 Application Statistics
 
@@ -165,8 +165,8 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 
 *   [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
 *   [How to deploy a Mendix app on Azure](/howtogeneral/mendixcloud/how-to-deploy-a-mendix-app-on-azure)
-*   [How to Deploy to the Mendix Cloud](../deploy/deploying-to-the-cloud)
+*   [How to Deploy to the Mendix Cloud](../howto/deploying-to-the-cloud)
 *   [Sending Email](/howtogeneral/mendixcloud/sending-email)
-*   [Monitoring application health](monitoring-application-health)
+*   [Alerts](monitoring-application-health)
 *   [Different user logins when integrated with Mendix SSO](/howtogeneral/mendixcloud/different-user-logins-when-integrated-with-mendix-sso)
 *   [Integrate your app with Mendix SSO](/howtogeneral/mendixcloud/integrate-your-app-with-mendix-sso)

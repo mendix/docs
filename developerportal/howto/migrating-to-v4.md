@@ -1,7 +1,7 @@
 ---
 title: "How to Migrate to Mendix Cloud v4"
 space: "Developer Portal"
-category: "Deploy"
+category: "How-To's"
 description: "This page describes how to migrate your App from a Mendix Cloud v3 node to a Mendix Cloud v4 node."
 tags: ["App","Migrate","Developer Portal","v3","v4","Node"]
 ---
@@ -20,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 *   You have an available v4 Cloud Node. To request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM)
 *   You are the Technical Contact of both v3 and v4 Cloud Nodes
-*   Downloaded a Deployment Package and the data of your v3 Node. See, [How to Download a Backup](../operate/how-to-download-a-backup)
+*   Downloaded a Deployment Package and the data of your v3 Node. See, [How to Download a Backup](how-to-download-a-backup)
 
 ## 3 The migration
 
@@ -48,8 +48,8 @@ Learn how to [Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-no
 
 The next step is to transfer the data of the app on Mendix Cloud v3 to the App on Mendix Cloud v4.
 
-Learn [How to Download a Backup](../operate/how-to-download-a-backup) of your app on Mendix Cloud v3.
-Learn [How to Restore a Backup](../operate/how-to-restore-a-backup).
+Learn [How to Download a Backup](how-to-download-a-backup) of your app on Mendix Cloud v3.
+Learn [How to Restore a Backup](how-to-restore-a-backup).
 
 ### 3.4 Deploy the Deployment Package to an Environment
 
@@ -100,8 +100,8 @@ No. In the previous generation we used the Java Security Manager to enforce stan
 *   [Create and Deploy Your First App](/howto/getting-started/create-and-deploy-your-first-app)
 *   [How to Configure Custom Domains](custom-domains)
 *   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
-*   [How to Download a Backup](../operate/how-to-download-a-backup)
+*   [How to Download a Backup](how-to-download-a-backup)
 *   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 *   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
-*   [How to Restore a Backup](../operate/how-to-restore-a-backup)
+*   [How to Restore a Backup](how-to-restore-a-backup)
 *   [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

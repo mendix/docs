@@ -1,7 +1,7 @@
 ---
 title: "How to Create a Backup"
 space: "Developer Portal"
-category: "Operate"
+category: "How-To's"
 description: "This page describes how to create a backup."
 tags: ["Backup","Mendix Cloud","Developer Portal"]
 ---
@@ -32,17 +32,17 @@ Follow these steps to create a backup of a licensed app:
 4. Click **Backups** under the **Operate** category.
 5. Select the environment from which you want to download the backup.
 
-    ![](attachments/environment.jpg)
+    ![](attachments/general/environment.jpg)
 
 6. Click **Create Backup**.
 
-    ![](attachments/backupoptions.jpg)
+    ![](attachments/operate/backupoptions.jpg)
 
 
 ## 4 Related Content
 
-* [How to Deploy to the Mendix Cloud](../deploy/deploying-to-the-cloud)
+* [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
 * [How to Download a Backup](how-to-download-a-backup)
-* [How to Link an App to a Licensed Cloud Node](../deploy/how-to-link-app-to-node)
+* [How to Link an App to a Licensed Cloud Node](how-to-link-app-to-node)
 * [How to Restore a Backup](how-to-restore-a-backup)
-* [How to Unlink Your Free App from a Sandbox Environment](../deploy/how-to-unlink-sandbox)
+* [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

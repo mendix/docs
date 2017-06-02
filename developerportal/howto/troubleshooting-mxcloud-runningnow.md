@@ -1,26 +1,26 @@
 ---
 title: "Troubleshooting your application in the Mendix Cloud: Running now"
-space: "Deverloper Portal"
-category: "Deploy"
+space: "Developer Portal"
+category: "How-To's"
 description: "This page describes how to troubleshoot the running now in your node."
 tags: ["App","Troubleshoot","Developer Portal","Running now","Mendix Cloud"]
 ---
 
 ## 1 Introduction
 
-The "Running now" tab can be found on the "Metrics" page of your Cloud node. It can be used to monitor all actions that are currently running in your environment.
+The "Running now" tab can be found on the **Metrics** page of your Cloud node. It can be used to monitor all actions that are currently running in your environment.
 
 ## 2 About the "Running now" tab in the Mendix Cloud
 
 It looks something like this:
 
-![](attachments/troubleshooting-mxcloud-runningnow/troubleshooting-mxcloud-runningnow-img1.png)
+![](attachments/deploy/troubleshooting-mxcloud-runningnow/troubleshooting-mxcloud-runningnow-img1.png)
 
 This page shows all actions currently running the application. And some general information of each action.
 
 The “Details” button allows you to zoom in on the selected action:
 
-![](attachments/troubleshooting-mxcloud-runningnow/troubleshooting-mxcloud-runningnow-img2.png)
+![](attachments/deploy/troubleshooting-mxcloud-runningnow/troubleshooting-mxcloud-runningnow-img2.png)
 
 And finally the “Kill request” allows you to try and stop the action which, if successful, will lead to the user executing the action to end up with an error.
 

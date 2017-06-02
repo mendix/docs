@@ -7,5 +7,3 @@ space: "Developer Portal"
 
 
 ##
-
-* [How to Configure Custom Domains](custom-domains)

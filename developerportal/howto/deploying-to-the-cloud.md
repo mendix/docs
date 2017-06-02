@@ -1,7 +1,7 @@
 ---
 title: "How to Deploy to the Mendix Cloud"
 space: "Developer Portal"
-category: "Deploy"
+category: "How-To's"
 description: "This page describes how to deploy to the Mendix CLoud."
 tags: ["Deploy","Mendix Cloud","Developer Portal"]
 ---
@@ -32,15 +32,15 @@ There are two methods of deploying your app to the Mendix Cloud. The first optio
 2.  Open the licensed app.
 3.  Click **Project** in the menu and select **Deploy to licensed cloud node** (Ctrl+F5).
 
-    [](attachments/18581233.png)
+    [](attachments/deploy/18581233.png)
 
 4.  Click **Deploy**.
 
-    ![](attachments/18581232.png)
+    ![](attachments/deploy/18581232.png)
 
 5.  The deployment is now in progress. Click **Show online**, to see the uploaded package.
 
-    ![](attachments/18581231.png)
+    ![](attachments/deploy/18581231.png)
 
 ### 3.2 Create a Package from Team Server in the Developer Portal
 
@@ -81,13 +81,13 @@ With a Free App it's only possible to deploy your App to a sandbox environment u
 
 Once you have created and worked on your App, you will want to share it with others in the Free App. You can deploy your Free App to a sandbox environment by clicking **Run** at the top of your Mendix Modeler. It will automatically deploy your app to a sandbox.
 
-![](attachments/runapp2.jpg)
+![](attachments/deploy/runapp2.jpg)
 
 ### Method 2
 
 If you want to choose whether you want to run your app locally or in the sandbox, you can enable the sandbox option by clicking **Run**.
 
-![](attachments/runapp.jpg)
+![](attachments/deploy/runapp.jpg)
 
 ## 6 Related content
 

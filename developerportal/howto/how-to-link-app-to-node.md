@@ -1,7 +1,7 @@
 ---
 title: "How to Link Your Free App to a Licensed Cloud Node"
 space: "Developer Portal"
-category: "Deploy"
+category: "How-To's"
 description: "This page describes how to link an App to a licensed cloud node."
 tags: ["App","Node","Developer Portal","Deploy"]
 ---
@@ -49,8 +49,8 @@ The app is now connected to the licensed cloud node.
 
 *   [How to Configure Custom Domains](custom-domains)
 *   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
-*   [How To Download A Backup](../operate/how-to-download-a-backup)
+*   [How To Download A Backup](how-to-download-a-backup)
 *   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
-*   [How To Restore A Backup](../operate/how-to-restore-a-backup)
+*   [How To Restore A Backup](how-to-restore-a-backup)
 *   [How To Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
 *   [How To Set Up Google Two Factor Authentication](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)

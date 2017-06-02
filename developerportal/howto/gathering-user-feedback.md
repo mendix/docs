@@ -1,7 +1,7 @@
 ---
 title: "How to Use the Feedback Widget"
 space: "Developer Portal"
-category: "Collaborate"
+category: "How-To's"
 description: "This page describes how to use the feedback widget."
 tags: ["Feedback","Widget","Developer Portal"]
 ---
@@ -31,11 +31,11 @@ To ensure you have the lastest version of the Feedback Widget included in your A
 1. Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/Mendix/Mendix-Feedback-Widget) from the Mendix App Store.
 2. When the latest Mendix Feedback Widget is included in your App, you need to ensure that the widget is added to the homepage of your application. Open the homepage from your App navigation:
 
-    ![](attachments/18580455.png)
+    ![](attachments/collaborate/18580455.png)
 
 3. If the Feedback Widget has not been added to the page, add the widget to the page or layout by selecting the Feedback Widget under **Add-on** and dropping the widget into any position in the document:
 
-    ![](attachments/18580453.png)
+    ![](attachments/collaborate/18580453.png)
 
 ## 4 Configuring the Feedback Widget
 
@@ -53,7 +53,7 @@ Note that this object must be a specialization of the User entitiy within the Sy
 3. Select the **Username attribute** that stores the name of the user and the email address attribute. This will be used to automatically fill the name and the email address of the user that is logged in when submitting feedback within the application.
 4. Decide whether you want to **allow users to upload a file** to the feedback item and whether you want to **allow to include a screenshot** of the page. 
 
-![](attachments/18580452.png)
+![](attachments/collaborate/18580452.png)
 
 5. Open the **Configuration** tab of the Feedback Widget properties.
 6. Ensure that the **feedback server** is set to `https://sprintr.home.mendix.com/`.
@@ -65,7 +65,7 @@ If necessary, you can find the identifier (App ID) of your App in the [Developer
 
 {% endmarkdown %}</div>
 
-![](attachments/generalsettings.jpg)
+![](attachments/collaborate/generalsettings.jpg)
 
 8. If you have configured multiple home pages for different user roles, you need to add the Mendix Feedback Widget to each home page for the user role from which you want to gather feedback. This can easily be done by copying the configured widget to the other relevant layouts and/or pages.
 
@@ -77,7 +77,7 @@ When a user is logged into the application, the feedback button will appear on t
 
 Clicking the feedback button will open the **Provide feedback** dialog box that allows the user to enter feedback:
 
-![](attachments/18580450.png)
+![](attachments/collaborate/18580450.png)
 
 ## 6 Processing Feedback in the Developer Portal
 
@@ -88,12 +88,12 @@ To process the feedback, follow these steps:
 1. Open the App in the [Developer Portal](http://home.mendix.com).
 2. Click **Feedback** under the **Collaborate** category:
 
-    ![](attachments/feedbacklist.jpg)
+    ![](attachments/collaborate/feedbacklist.jpg)
 
 3. Click **Details** for a feedback item to open its details.
 4. Process the item by commenting on it (for example, asking for clarification), or by choosing one of the actions displayed in the menu on the right:
 
-    ![](attachments/feedbackdetails.jpg)
+    ![](attachments/collaborate/feedbackdetails.jpg)
 
     These are the response and commenting action options:
 
@@ -117,7 +117,7 @@ After clicking **Accept feedback**, you can create a story on the basis of the f
 3. Select the sprint/backlog to which you want to add the story.
 4. Select any label (if you have any) that you want to add to the story.
 
-    ![](attachments/acceptfeedback.jpg)
+    ![](attachments/collaborate/acceptfeedback.jpg)
 
 ## 7 Providing Feedback to the User
 
@@ -134,6 +134,6 @@ You can view your own submitted feedback items in the feedback list in your prof
 2. Click **Show Profile**.
 3. Go to the **Feedback** tab.
 
-    ![](attachments/feedbackoverview.jpg)
+    ![](attachments/collaborate/feedbackoverview.jpg)
 
 ## 9 Related Content

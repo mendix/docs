@@ -1790,7 +1790,7 @@ module.exports = {
     },
     {
       from: "/howto6/deploying+to+the+cloud",
-      to: "/developerportal/deploy/deploying-to-the-cloud"
+      to: "/developerportal/howto/deploying-to-the-cloud"
     },
     {
       from: "/howto6/Design+the+Architecture",
@@ -2181,11 +2181,11 @@ module.exports = {
      ****************************************************/
     {
       from: "/mendixcloud/Custom+Domains",
-      to: "/developerportal/deploy/custom-domains"
+      to: "/developerportal/howto/custom-domains"
     },
     {
       from: "/mendixcloud/Deploying+to+the+cloud",
-      to: "/developerportal/deploy/deploying-to-the-cloud"
+      to: "/developerportal/howto/deploying-to-the-cloud"
     },
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
@@ -2221,7 +2221,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/migrating+to+v4",
-      to: "/developerportal/deploy/migrating-to-v4"
+      to: "/developerportal/howto/migrating-to-v4"
     },
     {
       from: "/mendixcloud/Monitoring+application+health",

@@ -1,7 +1,7 @@
 ---
 title: "How to Download a Backup"
 space: "Developer Portal"
-category: "Operate"
+category: "How-To's"
 description: "This page describes how to download a backup."
 tags: ["Backup","Download","Mendix Cloud","Developer Portal"]
 ---
@@ -30,7 +30,7 @@ To download a backup of a Free App, follow these steps:
 3. Click **Backups** under the **Operate** category.
 4. Select the backup you want to download and click **Download Backup**.
 
-    ![](attachments/backupoptions.jpg)
+    ![](attachments/operate/backupoptions.jpg)
 
 5. Select the backup type **Full Snapshot**, **Database Only**, or **Files Only**
 
@@ -44,11 +44,11 @@ To download a backup of a licensed app, follow these steps:
 4. Click **Backups** under the **Operate** category.
 5. Select the environment from which you want to download the backup.
 
-    ![](attachments/environment.jpg)
+    ![](attachments/general/environment.jpg)
 
 6. If you want to create a backup first, click **Create Backup**.
 
-    ![](attachments/backupoptions.jpg)
+    ![](attachments/operate/backupoptions.jpg)
 
 7. Select a backup and click **Download Backup**.
 8. Select the backup type **Full Snapshot**, **Database Only**, or **Files Only**
@@ -56,6 +56,6 @@ To download a backup of a licensed app, follow these steps:
 ## 5 Related Content
 
 * [How to Create a Backup](how-to-create-backup)
-* [How to Link an App to a Licensed Cloud Node](../deploy/how-to-link-app-to-node)
+* [How to Link an App to a Licensed Cloud Node](how-to-link-app-to-node)
 * [How to Restore a Backup](how-to-restore-a-backup)
-* [How to Unlink Your Free App from a Sandbox Environment](../deploy/how-to-unlink-sandbox)
+* [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

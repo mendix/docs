@@ -1,7 +1,7 @@
 ---
 title: "How to Link a Different App to a Cloud Node"
 space: "Developer Portal"
-category: "Deploy"
+category: "How-To's"
 description: "This page describes how to link a cloud node to a different app."
 tags: ["App","Node","Developer Portal","Deploy"]
 ---

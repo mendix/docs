@@ -4,26 +4,32 @@ space: "Release Notes"
 category: "Modeler"
 ---
 
+<div class="alert alert-info">{% markdown %}
+
+This document describes known issues starting with Mendix version 7.0.2. For known issues in earlier Mendix versions, see the [Modeler release notes](index).
+
+{% endmarkdown %}</div>
+
 ## 7.2
 
-For details on this release, see [7.2](7.2).
+For details on this release, see [7.2 release notes](7.2).
 
 ### 7.2.0
 
-* Changes for reference set members that are read-only for the user are not correctly serialized from the server to the client (browser). This can lead to an `IllegalArgumentException` with this message: “Global identifier should be a number.” [TICKET 52317 FIXED IN 7.3? IF SO, DOCUMENT AND LINK]
+* Changes for reference set members that are read-only for the user are not correctly serialized from the server to the client (browser). This can lead to an `IllegalArgumentException` with this message: “Global identifier should be a number.”
 
 ## 7.1
 
-For details on this release, see [7.1](7.1).
+For details on this release, see [7.1 release notes](7.1).
 
 ### 7.1.0
 
 * The offline functionality for mobile apps is broken.
-    * Fixed in [7.1.1](7.1#711). [EXAMPLE OF DOCUMENTED KNOWN ISSUE THAT WAS FIXED]
+    * Fixed in [7.1.1](7.1#711).
 
 ## 7.0 
 
-For details on this release, see [7.0](7.0).
+For details on this release, see [7.0 release notes](7.0).
 
 ### 7.0.2
 

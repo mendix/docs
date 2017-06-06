@@ -46,11 +46,11 @@ To create your app, follow these steps:
 
 5. Your app is now being created! When it is ready, you will land on the **Buzz** page, where you can see and share ideas as well as collaborate with your team.<br>
 
-    <div class="alert alert-info">{% markdown %}
+    <div class="alert alert-info">
 
     In the tile on the right side of the screen, you can see your team and invite colleagues to join the project.
 
-    {% endmarkdown %}</div>
+    </div>
 
     ![](attachments/18448672/18580902.png)
 

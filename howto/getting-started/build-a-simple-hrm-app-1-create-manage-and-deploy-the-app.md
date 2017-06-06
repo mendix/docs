@@ -29,7 +29,9 @@ To create your app, follow these steps:
 1. Go to the [Mendix Platform Portal](http://home.mendix.com) and log in if you are not already logged in. 
 
     <div class="alert alert-info">{% markdown %}
+
     The Mendix Platform Portal is the central starting point for using, sharing, and building apps.
+
     {% endmarkdown %}</div>
 
 2. In the Mendix Developer Portal, click **Create App**:
@@ -45,9 +47,11 @@ To create your app, follow these steps:
 5. Your app is now being created! When it is ready, you will land on the **Buzz** page, where you can see and share ideas as well as collaborate with your team. 
 
     <div class="alert alert-info">{% markdown %}
+
     In the tile on the right side of the screen, you can see your team and invite colleagues to join the project.
+
     {% endmarkdown %}</div>
-    
+
     ![](attachments/18448672/18580902.png)
 
 ## 4 Downloading the Modeler and Editing Your App
@@ -60,8 +64,8 @@ To edit your app, follow these steps:
     ![](attachments/18448672/18580895.png) 
 
 When your app is loaded into the Modeler, you will find the **Project Explorer** pane on the left side. This pane lists all of the developer content of your app. You can add pages, logic, and other content here.
-    
-    ![](attachments/18448672/18580892.png)
+
+![](attachments/18448672/18580892.png)
 
 ## 5 Deploying Your App
 

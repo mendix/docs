@@ -13,6 +13,9 @@ The sample app is equiped with new widgets, preconfigured modules, best practice
 
 ![](attachments/create-a-to-do-app/todo-00.jpg)
 
-## Documents in This Category
+## Documents in This Series
 
-______________
+* [How to Create a Mobile To-Do App Step 1: Create a New Project, Module, and Domain Model](create-a-to-do-app-1)
+* [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2)
+* [How to Create a Mobile To-Do App Step 3: Improve the Look and Feel of the App](create-a-to-do-app-3)
+* [How to Create a Mobile To-Do App Step 4: Add Logic to the Microflows](create-a-to-do-app-4)

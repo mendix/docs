@@ -1,5 +1,5 @@
 ---
-title: "Create a Mobile To-Do App Step 4: _________"
+title: "Create a Mobile To-Do App Step 4: Add Logic to the Microflows"
 space: "Mendix 7 How-To's"
 parent: "create-a-to-do-app"
 description: "This is the fourth how-to for creating a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
@@ -9,23 +9,18 @@ toc-level: "4"
 
 ## 1 Introduction
 
-_______
+This is the final how-to in the series for creating a to-do app based on the Mendix Mobile Quick Starter app.
 
 **This how-to will teach you how to do the following:**
 
-[EDIT - WHICH TO INCLUDE?]
-
-* Create a project that will speed up and simplify your mobile app development
-* Build a to-do app
-* Configure several widgets to realize a rich mobile app with a native look and feel
-
-![](attachments/create-a-to-do-app/todo-00.jpg)
+* Add logic to the microflows
+* Simulate touch behavior of mobile device
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Complete [Create a Mobile To-Do App Step 3: ]()
+* Complete * [How to Create a Mobile To-Do App Step 3: Improve the Look and Feel of the App](create-a-to-do-app-3).
 
 ## 3 Adding Logic to the Microflows
 
@@ -52,8 +47,13 @@ The app is now finished. Follow these steps to run the app and view it on a simu
 
 ![](attachments/create-a-to-do-app/todo-00.jpg)
 
+Fantastic! You've finished this how-to series and you now have a mobile to-do app that works well and looks great.
+
 ## 5 Related Content
 
+* [How to Create a Mobile To-Do App Step 1: Create a New Project, Module, and Domain Model](create-a-to-do-app-1)
+* [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2)
+* [How to Create a Mobile To-Do App Step 3: Improve the Look and Feel of the App](create-a-to-do-app-3)
 * [How to Deploy Your First Hybrid Mobile App](../mobile/deploy-your-first-hybrid-mobile-app)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](../mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Push Notifications](../mobile/push-notifications)

@@ -1,5 +1,5 @@
 ---
-title: "Create a Mobile To-Do App Step 1: _________"
+title: "Create a Mobile To-Do App Step 1: Create a New Project, Module, and Domain Model"
 space: "Mendix 7 How-To's"
 parent: "create-a-to-do-app"
 description: "This is the first how-to for creating a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
@@ -9,15 +9,11 @@ toc-level: "4"
 
 ## 1 Introduction
 
-_______
+In this how-to, you will create and prepare a new project, module, and domain model. This is the first how-to in the series for creating a to-do app in 20 minutes using the Mendix Mobile Quick Starter app.
 
 **This how-to will teach you how to do the following:**
 
-[EDIT - WHICH TO INCLUDE?]
-
 * Create a project that will speed up and simplify your mobile app development
-* Build a to-do app
-* Configure several widgets to realize a rich mobile app with a native look and feel
 
 ## 2 Prerequisites
 
@@ -41,7 +37,9 @@ The basis for the to-do app is the Mobile Quick Starter App. Follow these steps 
 ![](attachments/create-a-to-do-app/todo-01.jpg)
 
 <div class="alert alert-warning">
+
 Switching the security level to *Off* is done for fast development. Make sure you change it back to *Production* and configure the security of your app when you are going to use the app in a production environment.
+
 </div>
 
 ## 4 Creating a New Module
@@ -65,10 +63,13 @@ The domain for the to-do app is pretty simple. It contains one entity with some 
 
   ![](attachments/create-a-to-do-app/todo-02.jpg)
 
+For the next step in this series, move on to [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2).
+
 ## 6 Related Content
 
-[EDIT]
-
+* [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2)
+* [How to Create a Mobile To-Do App Step 3: Improve the Look and Feel of the App](create-a-to-do-app-3)
+* [How to Create a Mobile To-Do App Step 4: Add Logic to the Microflows](create-a-to-do-app-4)
 * [How to Deploy Your First Hybrid Mobile App](../mobile/deploy-your-first-hybrid-mobile-app)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](../mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Push Notifications](../mobile/push-notifications)

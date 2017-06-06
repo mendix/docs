@@ -1,5 +1,5 @@
 ---
-title: "Create a Mobile To-Do App Step 3: _________"
+title: "Create a Mobile To-Do App Step 3: Improve the Look and Feel of the App"
 space: "Mendix 7 How-To's"
 parent: "create-a-to-do-app"
 description: "This is the third how-to for creating a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
@@ -9,57 +9,58 @@ toc-level: "4"
 
 ## 1 Introduction
 
-_______
+In this how-to, you will improve the mobile look and feel by adding and configuring widgets in your project.
 
 **This how-to will teach you how to do the following:**
 
-[EDIT - WHICH TO INCLUDE?]
-
-* Create a project that will speed up and simplify your mobile app development
-* Build a to-do app
 * Configure several widgets to realize a rich mobile app with a native look and feel
-
-![](attachments/create-a-to-do-app/todo-00.jpg)
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Complete [Create a Mobile To-Do App Step 2: ]()
+* Complete [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2).
 
-## 3 Improving the Mobile Look and Feel
-The following steps improve the mobile look and feel by adding and configuring widgets in your project.
+## 3 Enhancing the Home Page
 
-### 3.1 Enhancing the Home Page
 Follow these steps to improve the look and feel of the home page:
 
 1. Go back to the **Modeler**.
 2. Open the **Home_Phone_Default** of the *ToDo* module.
 3. Open the properties of the **Description** attribute and change the following settings:
+
   * On the **General** tab, set **Show label** to **No**
   * On the **Common** tab, add the **text-bold** class.
+
 4. Open the properties of the **DueDate** attribute and change the following settings:
+
   * Select **Custom** for **Date format**, and set the custom format to **dd-MMM-yyyy**.
   * Set **Show label** to **No**
+
 5. Open the properties of the **List view** and change the following settings:
+
   * Select **Show a page** for **On click**
   * Select the **ToDo_NewEdit** page and click **Select**
   * Go to the **Data source** tab and add a constraint for the **Completed** attribute that equals **false**.
   * Go to the **Common** tab and change the **Name** to **ToDo**
+
 6. Add a (full) **Layout grid** to the **ToDo** list view.
 7. Move the **Description** and **DueDate** attributes into the **Layout grid**. This will create some spacing around the borders of your mobile screen.
 8. Open the **Properties** of the **Layout grid** and add the **slide-left** class. This class will activate a page transition and, in this case, slides the page to the left when you hit the **New** button. Look at the **Mobile features** widget in the **Page layout** to see which classes are available for page transitions.
 9. Open the properties of **New** button in the top-right corner of the page.
 10. Change the following properties:
+
   * Check **Override page title** and change the title to **Create to do**
   * Use the **plus** icon for the **Icon** option
   * Select **Link** for the **Render mode**
   * Add the **flip-right** class to the **Class** option
+
 11. Click **OK** to save the properties.
 
 ![](attachments/create-a-to-do-app/todo-07.jpg)
 
-### 3.2 Enhancing the NewEdit Page
+## 4 Enhancing the NewEdit Page
+
 Follow these steps to improve the look and feel of the ToDo_NewEdit page:
 
 1. Open the **ToDo_NewEdit** page.
@@ -68,7 +69,8 @@ Follow these steps to improve the look and feel of the ToDo_NewEdit page:
 4. Add a (full) **Layout grid** to the **ToDo data view**.
 5. Move the **Description** and **DueDate** attributes into the **Layout grid**.
 
-### 3.3 Adding the Pull-to-Refresh Widget
+## 5 Adding the Pull-to-Refresh Widget
+
 Follow these steps to enable pull-to-refresh functionality to your app:
 
 1. Open the **Home_Phone_Default** page.
@@ -76,27 +78,35 @@ Follow these steps to enable pull-to-refresh functionality to your app:
 
 This is all you need to do to refresh your list of to-do's. If you want, you can change some messages the widget generates when you pull to refresh on your phone.
 
-### 3.4 Adding and Configuring the List View Swipe Widget
+## 6 Adding and Configuring the List View Swipe Widget
+
 Follow these steps to add the list view swipe widget to your app:
 
 1. Open the **Home_Phone_Default** page.
 2. Add the **List view swipe** widget below the **ToDo list view**, inside the **ToDo data view**.
 3. Open the **Properties** of the widget and configure the following settings on the **General** tab:
+
   * Enter **ToDo** for the **Target list view**
   * Select the **ToDo** entity for the **List view entity**
+
 4. Configure the following settings on the **Swipe to left** tab:
+
   * On swipe action: **No action**
   * Swipe container left: **Buttons**
   * After swipe left: **Stick to button(s)**
+
 5. Configure the following settings on the **Swipe to right** tab:
+
   * On swipe action: **Call a microflow**
   * Microflow right: **Select** > **New** > **ACT_ToDo_MarkAsCompleted** (you'll add the logic to the microflow later)
   * Swipe container right: **MarkAsCompleted**
   * Transparent swipe: **yes**
   * Hide container right: **MarkingAsCompleted**
+
 6. Click **OK** to save the properties.
 
-### 3.5 Adding List View Swipe MarkAsCompleted Snippet
+## 7 Adding List View Swipe MarkAsCompleted Snippet
+
 Follow these steps to add the MarkAsCompleted snippet to your app:
 
 1. Open the **Home_Phone_Default** page.
@@ -107,7 +117,8 @@ Follow these steps to add the MarkAsCompleted snippet to your app:
 
   ![](attachments/create-a-to-do-app/todo-08.jpg)
 
-### 3.6 Adding a Delete Button
+## 8 Adding a Delete Button
+
 Follow these steps to add a delete button to the list view swipe widget:
 
 1. Add a **Button** to the **Container**.
@@ -119,7 +130,8 @@ Follow these steps to add a delete button to the list view swipe widget:
 7. Set **Ask confirmation** to **Yes** and click **OK**.
 8. Add the **btn-lg** class to make the button larger.
 
-### 3.7 Adding a Share Button
+### 9 Adding a Share Button
+
 Follow these steps to add and configure a share button to the list view swipe widget:
 
 1. Drag and drop a second **Button** in the **Container**.
@@ -130,15 +142,15 @@ Follow these steps to add and configure a share button to the list view swipe wi
 6. Add the **btn-lg** class to make the button larger.
 7. Click **OK** to save the properties.
 
-  ![](attachments/create-a-to-do-app/todo-09.jpg)
+![](attachments/create-a-to-do-app/todo-09.jpg)
 
-### 3.8 Adding the Native Share Widget
+## 10 Adding the Native Share Widget
+
 Follow these steps to add the native share widget to the page:
 
 1. Open the **App Store** in the Modeler.
 2. Search for **share**.
 3. Open the **Native Share** widget in the search results and click **Download**.
-
 4. Go back to the **Home_Phone_Default** page.
 5. Add the **Native share** widget above the **Delete** and **Share** buttons in the same container.
 6. Open the **Properties** of the native share widget.
@@ -148,13 +160,13 @@ Follow these steps to add the native share widget to the page:
 10. Select the **Description** attribute for the **Message**.
 11. Click **OK** to save and close the settings.
 
-### 3.9 Adding the Badge Widget
+## 11 Adding the Badge Widget
+
 Follow these steps to add the **Badge** widget to your project:
 
 1. Open the **App Store** in the Modeler.
 2. Search for **badge**.
 3. Open the **Badge** widget in the search results and click **Download**.
-
 4. Go back to the **Home_Phone_Default** page.
 5. Add a new column to the right in the layout grid.
 6. Open the properties of the left column.
@@ -166,9 +178,10 @@ Follow these steps to add the **Badge** widget to your project:
 12. Set the **Default value** of the badge to **Too late!**.
 13. Go to the **Display** tab and set the **Badge style** to **Warning**.
 
-  ![](attachments/create-a-to-do-app/todo-10.jpg)
+![](attachments/create-a-to-do-app/todo-10.jpg)
 
-### 3.10 Adding Conditional Visibility with Client-Side Expressions
+## 12 Adding Conditional Visibility with Client-Side Expressions
+
 Follow these steps to only show the **Badge** when the **DueDate** has passed:
 
 1. Add a **Container** to the right column and drag and drop the **Badge** into it.
@@ -182,8 +195,13 @@ This is what your page eventually should look like:
 
 ![](attachments/create-a-to-do-app/todo-11.jpg)
 
-## 4 Related Content
+For the next step in this series, move on to [How to Create a Mobile To-Do App Step 4: Add Logic to the Microflows](create-a-to-do-app-4).
 
+## 13 Related Content
+
+* [How to Create a Mobile To-Do App Step 1: Create a New Project, Module, and Domain Model](create-a-to-do-app-1)
+* [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2)
+* [How to Create a Mobile To-Do App Step 4: Add Logic to the Microflows](create-a-to-do-app-4)
 * [How to Deploy Your First Hybrid Mobile App](../mobile/deploy-your-first-hybrid-mobile-app)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](../mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Push Notifications](../mobile/push-notifications)

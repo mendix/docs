@@ -71,7 +71,7 @@ END;
 
 ## 3\. Related content
 
-*   [How to execute an SQL statement on an external database](/bestpractices/how-to-execute-an-sql-statement-on-an-external-database)
+*   [How to execute an SQL statement on an external database](/howtogeneral/bestpractices/how-to-execute-an-sql-statement-on-an-external-database)
 *   [Troubleshooting](troubleshooting)
 *   [Setting up the database user](setting-up-the-database-user)
 *   [Sharing the Development Database](sharing-the-development-database)

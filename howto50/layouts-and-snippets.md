@@ -1,6 +1,6 @@
 ---
 title: "Layouts and Snippets"
-category: "GUI's"
+category: "GUIs"
 space: "Mendix 5 How-to's"
 ---
 

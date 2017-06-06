@@ -2,24 +2,13 @@
 title: 'Mendix Documentation'
 layout: mxoverview
 maintitle: 'Mendix Documentation'
-description: "The Mendix Documentation helps you become a better developer. We provide reference guides, how-to's, support docs, and more. Learn, and build better apps."
-priority: 10
+description: 'You can browse all the documentation for the Mendix platform here.'
 ---
-{% assign howto = "/howtoX/" | replace: "X", site.latest_major_version %}
-{% assign refguide = "/refguideX/" | replace: "X", site.latest_major_version %}
+{% assign howto = "/howto/" %}
+{% assign refguide = "/refguide/" %}
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="{{ howto }}" title="Mendix {{ site.latest_major_version }} How-to's">How-to's</a></h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    {% include blocks/howto-general.html dir=howto %}
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="{{ refguide }}" title="Reference Guide for Mendix {{ site.latest_major_version }}">Reference Guide</a></h1>
+    <h1 class="header-link"><a href="{{ refguide }}">Mendix Reference Guide</a></h1>
   </div>
 </div>
 <div class="row">
@@ -29,7 +18,37 @@ priority: 10
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/apidocs/" title="API Documentation Overview">API &amp; SDK</a></h1>
+    <h1 class="header-link"><a href="{{ howto }}">Mendix How-To's</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/howto-general.html dir=howto %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/howtogeneral/">General How-To's</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/howto-general-space.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/releasenotes/">Release Notes</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/releasenotes.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/apidocs-mxsdk/">API & SDK</a></h1>
   </div>
 </div>
 <div class="row">
@@ -39,31 +58,41 @@ priority: 10
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/community/" title="Community">Community</a></h1>
+    <h1 class="header-link"><a href="/developerportal/">Developer Portal</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/developer-portal.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/ATS/">ATS Add-On</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/ats-addon.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/addons/">Other Add-Ons</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/other-addons.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/community/">Community</a></h1>
   </div>
 </div>
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
     {% include blocks/community.html %}
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link"><a href="/support/" title="Mendix Support Documentation">Support</a></h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    {% include blocks/support.html %}
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    <h1 class="header-link">Tools</h1>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-offset-1 col-md-10 col-sm-12">
-    {% include blocks/tools.html %}
   </div>
 </div>

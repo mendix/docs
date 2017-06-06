@@ -17,7 +17,8 @@ The Mendix developer app and generated hybrid mobile apps contain their own `ind
             "css/theme.css"
         ],
         "js": [ "mxclientsystem/mxui/mxui.js" ]
-    }
+    },
+    "cachebust": "{% raw %}{{cachebust}}{% endraw %}"
 }
 
 {% endhighlight %}
@@ -37,6 +38,7 @@ If you want to include more resources, you can add your own `components.json` fi
             "mxclientsystem/mxui/mxui.js",
             "myOwnCode.js"
         ]
-    }
+    },
+    "cachebust": "{% raw %}{{cachebust}}{% endraw %}"
 }
 {% endhighlight %}

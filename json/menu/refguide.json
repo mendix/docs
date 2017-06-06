@@ -1,0 +1,16 @@
+---
+layout: json
+sitemap: false
+---
+{
+  "categories": [
+    "General",
+    "Team Server",
+    "Modeler",
+    "Runtime",
+    "Java Programming",
+    "Deployment",
+    "Mobile"
+  ],
+  "pages": {% include json-snippets/get_pages.inc dir="refguide" %}
+}

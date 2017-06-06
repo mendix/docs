@@ -23,3 +23,11 @@ $border-color: #d7d7d7;
   -o-border-radius: $radius;
   border-radius: $radius;
 }
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

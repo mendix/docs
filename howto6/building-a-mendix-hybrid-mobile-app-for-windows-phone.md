@@ -29,10 +29,10 @@ To create a Phonegap Build package using a provided template, follow these steps
 1. Download the Phonegap Build template [here (55KB)](./attachments/wp8_phonegap_build_template.zip).
 2. Extract the archive so you can change some files within it. <br>
 3. Replace these variables in the `config.xml` file:
-    * {{identifier}} - The app identifier. Must be unique for your application and must be reverse-domain name style (e.g. com.yourcompany.yourapp)
-    * {{version}} - A major/minor/patch style version for the app with three numbers. For example 0.0.1
-    * {{name}} - The name of your app
-    * {{description}} - The description of your app
+    * {% raw %}{{identifier}}{% endraw %} - The app identifier. Must be unique for your application and must be reverse-domain name style (e.g. com.yourcompany.yourapp)
+    * {% raw %}{{version}}{% endraw %} - A major/minor/patch style version for the app with three numbers. For example 0.0.1
+    * {% raw %}{{name}}{% endraw %} - The name of your app
+    * {% raw %}{{description}}{% endraw %} - The description of your app
 
     After changing these variables, the `config.xml` will look similar to this:
     {% highlight xml %}
@@ -48,7 +48,7 @@ To create a Phonegap Build package using a provided template, follow these steps
 
         .....{% endhighlight %}
 4. Save the file.
-5. Open the `index.html` file and change the `{{url}}` to the address where your application is
+5. Open the `index.html` file and change the {% raw %}`{{url}}`{% endraw %} to the address where your application is
 running (for example, `https://com.mendixcloud.myapp`).
 6. Save the file. The part where the URL is used will now look similar to this:
     {% highlight js %}

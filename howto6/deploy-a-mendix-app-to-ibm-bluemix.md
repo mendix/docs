@@ -66,7 +66,7 @@ To configure Cloud Foundry in the Modeler, follow these steps:
 
 To configure the IBM Bluemix environment, go to [IBM Bluemix](https://console.ng.bluemix.net/) and log in with your IBM Bluemix credentials:
 
-![](attachments/19202595/bmsignin.PNG)
+![](attachments/19202595/bmsignin.png)
 
 After logging in, you will see the Bluemix home screen. The following details on this screen are important:
 
@@ -74,7 +74,7 @@ After logging in, you will see the Bluemix home screen. The following details on
 * You can see that you are logged in at the top-right corner of the screen
 * You can see the organization you have access to and the spaces within that organization at the top-right side of the screen
 
-![](attachments/19202595/bmappoverview.PNG)
+![](attachments/19202595/bmappoverview.png)
 
 ## 5 <a name="5"></a>Add a Database Service to Your App
 
@@ -82,16 +82,16 @@ Apps make use of services (for example, databases, load balancers, and memory to
 
 1. Click **Create Service**:
 
-    ![](attachments/19202595/bmselectcreateservice.PNG)
+    ![](attachments/19202595/bmselectcreateservice.png)
 
 2. Mendix has support for DB2, DashDB, Compose For PostgreSQL, ClearDB MySQL, and ElephantSQL on Bluemix. Select  **ElephantSQL** for this setup:
 
-    ![](attachments/19202595/selectdataabase.PNG)
+    ![](attachments/19202595/selectdataabase.png)
 
 
 3. Select the plan that fits your needs. This example will use the **Free** option:
 
-    ![](attachments/19202595/bmselectappbinding.PNG)
+    ![](attachments/19202595/bmselectappbinding.png)
 
 4. In the **Add Service** section of the screen, do the following:
     * Select the app to which you want to bind the database instance (for example, **company-expenses**) for **App**
@@ -107,7 +107,7 @@ To enable persistent file storage, you need to configure the IBM Swift Object St
 
 2. Open your app from the list on the home screen:
 
-    ![](attachments/19202595/selectappsingle.PNG)
+    ![](attachments/19202595/selectappsingle.png)
 
 3. Go to the **Connections** menu item and click **Connect new**:
 
@@ -119,7 +119,7 @@ To enable persistent file storage, you need to configure the IBM Swift Object St
 
 5. Create the service:
 
-	![](attachments/19202595/bmselectcreateservice.PNG)
+	![](attachments/19202595/bmselectcreateservice.png)
 
   This can take a few seconds. After the service is created, you can check if it is connected.
 
@@ -143,16 +143,16 @@ If you encounter any problems, you should consult the application logs:
 1. Go to the IBM Bluemix environment.
 2. Open your app from the top menu:
 
-    ![](attachments/19202595/selectappsingle.PNG)
+    ![](attachments/19202595/selectappsingle.png)
 
 3. Go to the **Logs** menu item and view the most recent log lines in real time:
 
-    ![](attachments/19202595/bmlogging.PNG)
+    ![](attachments/19202595/bmlogging.png)
 
 ## 9 Related Content
 
+* [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack)
 * [How to Deploy a Mendix App to IBM Bluemix](deploy-a-mendix-app-to-ibm-bluemix)
 * [How to Deploy a Mendix App to Pivotal](deploy-a-mendix-app-to-pivotal)
-* [How to Deploy a Mendix App to HP Helion](deploy-a-mendix-app-to-hp-helion)
 * [How to Deploy a Mendix App to Cloud Foundry](deploying-a-mendix-app-to-cloud-foundry)
 * [IBM Bluemix documentation](https://www.eu-gb.bluemix.net/docs)

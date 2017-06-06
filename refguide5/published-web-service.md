@@ -49,7 +49,7 @@ It is important to correctly configure the target namespace before publishing yo
 
 ### Export WSDL file & Export XML schema definition
 
-By using this button, you can save the generated WSDL file, and its XML schema definition on your local hard drive. You can do this already before running your project, unlike when you download it from [http://localhost:8080/ws-doc/](http://localhost:8080/ws-doc/) .
+By using this button, you can save the generated WSDL file, and its XML schema definition on your local hard drive. You can do this already before running your project, unlike when you download it from `http://localhost:8080/ws-doc/` .
 
 ### Documentation
 

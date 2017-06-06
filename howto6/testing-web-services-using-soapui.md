@@ -17,7 +17,7 @@ You can publish your own webservices in a Mendix application. These webservices 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
 *   Download and install [SoapUI](https://www.soapui.org/downloads/soapui.html)
-*   Complete the how-to [Exposing a web service](expose-a-web-service)
+*   Read [How to Expose a Web Service](expose-a-web-service)
 
 | Software | Version used in this how-to |
 | --- | --- |
@@ -32,10 +32,10 @@ All images, names and steps in this how-to are based on these versions. When usi
 
 ## 2\. Publish more microflows as web service operation
 
-In the how-to [Exposing a web service](expose-a-web-service) you already published the microflow _GetCustomers _as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
+In the how-to [Exposing a web service](expose-a-web-service) you already published the microflow _GetCustomers_ as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
 
 1.  Open the **Mendix Modeler**.
-2.  Open the project you created in the how-to [Exposing a web service](expose-a-web-service).
+2.  Open the project you created in [How to Expose a Web Service](expose-a-web-service).
 3.  Create a **Microflow** that creates a customer and returns a boolean. 
 
     <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/27dedcb6-38d2-48e4-a77d-68e1d5bde73a/createcustomer?embed=true"></iframe>
@@ -229,8 +229,6 @@ Congratulations! You have just created your first automated test with SoapUI.
 *   [Common Mendix SSO Errors](handle-common-mendix-sso-errors)
 *   [Debugging Microflows](debug-microflows)
 *   [Debugging Microflows Remotely](debug-microflows-remotely)
-
-
 
 Learn more about this topic using the following helpful links:
 

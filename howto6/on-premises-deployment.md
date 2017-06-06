@@ -1,10 +1,10 @@
 ---
-title: "On-premises Deployment"
+title: "On-Premises Deployment"
 space: "Mendix 6 How-to's"
 ---
 Learn how to deploy your app on your own hardware.
 
-**How-to's**:
+**How-To's**:
 
 *   [Security checklist for your on-premises installation](security-checklist-for-your-on-premises-installation)
 *   [Installing Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)

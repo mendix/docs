@@ -1,9 +1,9 @@
 {% strip %}
   <div class="overview">
     <div class="row">
-      {% include blocks/overview_page_block.html dir="/community/" title="Tools" page="community-tools" icon="apidocs/-icon-sdk.png" %}
-      {% include blocks/overview_page_block.html dir="/community/" title="Documentation" page="community-documentation" icon="howto/-icon-gettingstarted.png" %}
-      {% include blocks/overview_page_block.html dir="/community/" title="App Store" page="app-store" icon="howto/-icon-appstore.png" %}
+    {% include blocks/overview_block.html overview=true dir="/community/tools/" category="Tools" icon="apidocs/-icon-sdk.png" %}
+    {% include blocks/overview_block.html overview=true dir="/community/documentation/" category="Documentation" icon="howto/-icon-gettingstarted.png" %}
+    {% include blocks/overview_block.html overview=true dir="/community/app-store/" category="App Store" icon="howto/-icon-appstore.png" %}
     </div>
   </div>
 {% endstrip %}

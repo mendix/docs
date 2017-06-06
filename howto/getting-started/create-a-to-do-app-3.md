@@ -116,7 +116,7 @@ Follow these steps to add a delete button to the list view swipe widget:
 7. Set **Ask confirmation** to **Yes** and click **OK**.
 8. Add the **btn-lg** class to make the button larger.
 
-### 9 Adding a Share Button
+## 9 Adding a Share Button
 
 Follow these steps to add and configure a share button to the list view swipe widget:
 

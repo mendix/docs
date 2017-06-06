@@ -28,33 +28,25 @@ Follow these steps to improve the look and feel of the home page:
 1. Go back to the **Modeler**.
 2. Open the **Home_Phone_Default** of the *ToDo* module.
 3. Open the properties of the **Description** attribute and change the following settings:
-
   * On the **General** tab, set **Show label** to **No**
   * On the **Common** tab, add the **text-bold** class.
-
 4. Open the properties of the **DueDate** attribute and change the following settings:
-
   * Select **Custom** for **Date format**, and set the custom format to **dd-MMM-yyyy**.
   * Set **Show label** to **No**
-
 5. Open the properties of the **List view** and change the following settings:
-
   * Select **Show a page** for **On click**
   * Select the **ToDo_NewEdit** page and click **Select**
   * Go to the **Data source** tab and add a constraint for the **Completed** attribute that equals **false**.
   * Go to the **Common** tab and change the **Name** to **ToDo**
-
 6. Add a (full) **Layout grid** to the **ToDo** list view.
 7. Move the **Description** and **DueDate** attributes into the **Layout grid**. This will create some spacing around the borders of your mobile screen.
 8. Open the **Properties** of the **Layout grid** and add the **slide-left** class. This class will activate a page transition and, in this case, slides the page to the left when you hit the **New** button. Look at the **Mobile features** widget in the **Page layout** to see which classes are available for page transitions.
 9. Open the properties of **New** button in the top-right corner of the page.
 10. Change the following properties:
-
   * Check **Override page title** and change the title to **Create to do**
   * Use the **plus** icon for the **Icon** option
   * Select **Link** for the **Render mode**
   * Add the **flip-right** class to the **Class** option
-
 11. Click **OK** to save the properties.
 
 ![](attachments/create-a-to-do-app/todo-07.jpg)
@@ -85,24 +77,18 @@ Follow these steps to add the list view swipe widget to your app:
 1. Open the **Home_Phone_Default** page.
 2. Add the **List view swipe** widget below the **ToDo list view**, inside the **ToDo data view**.
 3. Open the **Properties** of the widget and configure the following settings on the **General** tab:
-
   * Enter **ToDo** for the **Target list view**
   * Select the **ToDo** entity for the **List view entity**
-
 4. Configure the following settings on the **Swipe to left** tab:
-
   * On swipe action: **No action**
   * Swipe container left: **Buttons**
   * After swipe left: **Stick to button(s)**
-
 5. Configure the following settings on the **Swipe to right** tab:
-
   * On swipe action: **Call a microflow**
   * Microflow right: **Select** > **New** > **ACT_ToDo_MarkAsCompleted** (you'll add the logic to the microflow later)
   * Swipe container right: **MarkAsCompleted**
   * Transparent swipe: **yes**
   * Hide container right: **MarkingAsCompleted**
-
 6. Click **OK** to save the properties.
 
 ## 7 Adding List View Swipe MarkAsCompleted Snippet

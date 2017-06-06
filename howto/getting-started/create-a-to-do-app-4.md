@@ -28,13 +28,13 @@ The **List view swipe** widget has been configured, but you added two microflows
 
 1. Open the **ACT_ToDo_Delete** microflow.
 2. Add an **Activity** that deletes the **ToDo** object and refreshes the client.
-<iframe width='100%' height='350px' frameborder='0' src='https://modelshare.mendix.com/models/83d0f300-356e-4a6b-9ea3-7625284a6937/act_todo_delete?embed=true' allowfullscreen></iframe>
+    <iframe width='100%' height='350px' frameborder='0' src='https://modelshare.mendix.com/models/83d0f300-356e-4a6b-9ea3-7625284a6937/act_todo_delete?embed=true' allowfullscreen></iframe>
 3. Open the **ACT_ToDo_MarkAsCompleted** microlfow.
 4. Add an **Activity** that changes the **Completed** attributed of the **ToDo** object to *true* and set **Commit** to *Yes*.
-<iframe width='100%' height='350px' frameborder='0' src='https://modelshare.mendix.com/models/adbe2dd5-2e27-41ab-8f67-3a728917f01b/act_todo_markascompleted?embed=true' allowfullscreen></iframe>
-<div class="alert alert-info">
-There is no need to refresh in the client due to the *Move out, hide* behavior of the List view swipe widget.
-</div>
+    <iframe width='100%' height='350px' frameborder='0' src='https://modelshare.mendix.com/models/adbe2dd5-2e27-41ab-8f67-3a728917f01b/act_todo_markascompleted?embed=true' allowfullscreen></iframe>
+    <div class="alert alert-info">
+    There is no need to refresh in the client due to the *Move out, hide* behavior of the List view swipe widget.
+    </div>
 
 ## 4 Running the App and Simulating Touch Behavior of Mobile Device
 

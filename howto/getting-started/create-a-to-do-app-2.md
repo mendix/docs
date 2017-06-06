@@ -65,7 +65,7 @@ Users also need to be able to add new to-do's to the list, that's why you're goi
 6. Delete the **Completed** attribute.
 
   ![](attachments/create-a-to-do-app/todo-04.jpg)
-  
+
 7. Run the app locally. Click **Save and continue** if you did not save your page(s) yet.
 8. Click **Yes** to create a default database if this is asked.
 9. Open the **View App** dropdown and select **View Hybrid Mobile App**.

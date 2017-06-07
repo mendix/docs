@@ -10,6 +10,14 @@ This document describes known issues starting with Mendix version 7.0.2. For kno
 
 {% endmarkdown %}</div>
 
+## 7.3
+
+For details on this release, see [7.3 release notes](7.3).
+
+### 7.3.0<a name="730"></a>
+
+* When you have a conditionally visible container that contains a conditionally visible widget, the widget is not always initialized properly.
+
 ## 7.2
 
 For details on this release, see [7.2 release notes](7.2).

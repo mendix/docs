@@ -8,7 +8,7 @@ toc-level: "2"
 
 ## 1 Introduction
 
-The Mendix Desktop Modeler enables you to build apps on the Mendix Platform. This how-to will guide you through the steps to installing the Mendix Desktop Modeler.
+The Mendix Desktop Modeler enables you to build apps on the Mendix Platform. This how-to will guide you through the steps of installing the Mendix Desktop Modeler.
 
 **This how-to will teach you how to do the following:**
 

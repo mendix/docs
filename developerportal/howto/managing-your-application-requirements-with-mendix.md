@@ -155,7 +155,7 @@ Besides entering your stories manually, you can import them easily with an Excel
 
 To import stories, follow these steps:
 
-1. Download this [example Excel](attachments/18580488.xls).
+1. Download this [example Excel](attachments/collaborate/18580488.xls).
 2. Click **Import/Export** on the **Stories** page and select **Update stories from Excel**:
 
     ![](attachments/collaborate/18580502.png)

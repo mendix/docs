@@ -63,14 +63,3 @@ Pressing a delete button or triggering a Delete activity will initiate the Delet
 
 ![](attachments/18448744/18582171.png)
 
-## 5\. Related content
-
-*   [Working with images and files](working-with-images-and-files)
-*   [Creating a basic data layer](create-a-basic-data-layer)
-*   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
-*   [Setting up data validation](setting-up-data-validation)
-*   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-*   [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-*   [Scout and Windows 10 Workaround](../guis/scout-and-windows-10-workaround)
-*   [Generating a personal SSH2 key pair](../security/generating-a-personal-ssh2-key-pair)
-*   [Creating a chainable Custom Widget](../custom-widget-development/create-a-chainable-custom-widget)

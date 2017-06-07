@@ -13,6 +13,7 @@ Stay updated on the health of your app and troubleshoot when needed.
 | [Clearing Warning Messages in Mendix](clearing-warning-messages-in-mendix)
 | [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 | [Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)
+| [Alerts](/developerportal/operate/monitoring-application-health)
 
 | Advanced
 | -----------------------------------------------------------------------------------

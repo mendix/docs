@@ -215,11 +215,3 @@ The Mendix instance on Azure is now fully configured and ready for use. Let's tr
 **Congratulations! You have successfully deployed a Mendix app on Microsoft Azure.**
 ![](attachments/19202584/19398863.png)
 
-## 7\. Related content
-
-*   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
-*   [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
-*   [How to Deploying to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud)
-*   [Sending Email](sending-email)
-*   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
-*   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)

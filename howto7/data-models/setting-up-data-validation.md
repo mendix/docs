@@ -85,16 +85,3 @@ Validating user input can also be achieved by overriding the default save button
 17.  Select the **input parameter** as variable.
 18.  Select for example **Name** as member.
 19.  Enter an error message in the **Template** field. You can use indexes to dynamically insert parameters in the template.
-
-## 5\. Related content
-
-* [Working with images and files](working-with-images-and-files)
-* [Creating a basic data layer](create-a-basic-data-layer)
-* [Working With Object Events](working-with-object-events)
-* [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
-* [Setting up data validation](setting-up-data-validation)
-* [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-* [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-* [How to Configure the Scout and Windows 10 Workaround](../guis/scout-and-windows-10-workaround)
-* [How to Generate a Personal SSH2 Key Pair](../security/generating-a-personal-ssh2-key-pair)
-* [Creating a chainable Custom Widget](../custom-widget-development/create-a-chainable-custom-widget)

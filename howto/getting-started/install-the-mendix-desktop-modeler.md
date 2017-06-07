@@ -28,7 +28,7 @@ The Mendix Desktop Modeler can be installed on your machine with a Windows exect
 1. Go to the Modeler download page in the **Mendix App Store** at [https://appstore.home.mendix.com/link/modeler/](https://appstore.home.mendix.com/link/modeler/).
 2. Click **Download** to download the latest Mendix Desktop Modeler.
 
-   ![](attachments/install-the-mendix-desktop-modeler/mendix-modeler-1.jpg)
+   ![https://appstore.home.mendix.com/link/modeler/](attachments/install-the-mendix-desktop-modeler/mendix-modeler-1.jpg)
 
 ## 4 Install the Mendix Desktop Modeler
 

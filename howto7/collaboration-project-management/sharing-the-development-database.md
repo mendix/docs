@@ -83,10 +83,3 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 
 </div>
 
-## 8\. Related content
-
-*   [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-*   [Contributing to a GitHub repository](contribute-to-a-github-repository)
-*   [Starting your own repository](starting-your-own-repository)
-*   [Using Team Server - Version Control](using-team-server-_-version-control)
-*   [How to Use the Feedback Widget](/developerportal/howto/gathering-user-feedback)

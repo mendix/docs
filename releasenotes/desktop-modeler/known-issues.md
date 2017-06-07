@@ -14,7 +14,7 @@ This document describes known issues starting with Mendix version 7.0.2. For kno
 
 For details on this release, see [7.3 release notes](7.3).
 
-### 7.3.0<a name="730"></a>
+### 7.3.0<a name="KI730"></a>
 
 * When you have a conditionally visible container that contains a conditionally visible widget, the widget is not always initialized properly.
 
@@ -22,16 +22,16 @@ For details on this release, see [7.3 release notes](7.3).
 
 For details on this release, see [7.2 release notes](7.2).
 
-### 7.2.0<a name="720"></a>
+### 7.2.0<a name="KI720"></a>
 
 * Changes for reference set members that are read-only for the user are not correctly serialized from the server to the client (browser). This can lead to an `IllegalArgumentException` with this message: “Global identifier should be a number.” (Ticket 52317)
-    * Fixed in [7.3.0](7.3#730).
+    * Fixed in [7.3.0](7.3#RN730).
 
 ## 7.1
 
 For details on this release, see [7.1 release notes](7.1).
 
-### 7.1.0<a name="710"></a>
+### 7.1.0<a name="KI710"></a>
 
 #### Advanced conditional visibility/editability known issues
 
@@ -40,13 +40,13 @@ For details on this release, see [7.1 release notes](7.1).
 #### Other known issues
 
 * The offline functionality for mobile apps is broken.
-    * Fixed in [7.1.1](7.1#711).
+    * Fixed in [7.1.1](7.1#RN711).
 
 ## 7.0 
 
 For details on this release, see [7.0 release notes](7.0).
 
-### 7.0.2<a name="702"></a>
+### 7.0.2<a name="KI702"></a>
 
 #### Stateless runtime known issues
 

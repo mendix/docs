@@ -64,11 +64,3 @@ When using Mendix mail servers and a sender address in a domain that has a restr
 *   Sender or recipient addresses which contain a domain name that does not exist on the internet may be rejected by the outgoing mail server.
 *   Sender or recipient addresses which do not contain a domain name at all will be rejected by the outgoing mail server.
 *   Do not invent your own email addresses for testing purposes. Domain names like 'domain.com', 'email.com', 'test.com' are actually real domain names. Likely there's someone reading the mailbox for 'test@domain.com', who will receive email you send from your test environment if you send it there.
-
-## 4\. Related content
-
-*   [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
-*   [How to Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud)
-*   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
-*   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
-*   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)

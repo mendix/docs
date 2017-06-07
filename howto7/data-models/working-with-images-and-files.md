@@ -49,15 +49,3 @@ Before you start with this how-to please follow these prerequisites:
 1.  Create a navigation item for your overview page to start using it. If you don't know how to setup the navigation structure, take a look at [this](../guis/setting-up-the-navigation-structure) how-to.
 2.  If you turned on security for this application you need to configure page access on both the overview and detail pages. If you don't know how to configure page access, take a look at [this](../security/create-a-secure-app) how-to.
 
-## 5\. Related content
-
-*   [Working with images and files](working-with-images-and-files)
-*   [Creating a basic data layer](create-a-basic-data-layer)
-*   [Working With Object Events](working-with-object-events)
-*   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
-*   [Setting up data validation](setting-up-data-validation)
-*   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-*   [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-*   [Scout and Windows 10 Workaround](../guis/scout-and-windows-10-workaround)
-*   [Generating a personal SSH2 key pair](../security/generating-a-personal-ssh2-key-pair)
-*   [Creating a chainable Custom Widget](../custom-widget-development/create-a-chainable-custom-widget)

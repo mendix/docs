@@ -28,15 +28,15 @@ To create a new App, follow these steps:
 1. Go to [Mendix app platform](https://home.mendix.com/) and log in (create an account [here](https://developers.mendix.com/start-for-free/) if you don't have one yet).
 2. Click **Create New App** in the top-left of the screen:
 
-    ![](attachments/18580496.png)
+    ![](attachments/collaborate/18580496.png)
 
 3. Select a theme or sample app. The "Blue Wave" how-to is used for this how-to:
 
-    ![](attachments/18580495.png)
+    ![](attachments/collaborate/18580495.png)
 
 4. Click **Use This Theme**:
 
-    ![](attachments/18580494.png)
+    ![](attachments/collaborate/18580494.png)
 
 5. Name the project *Company Expenses Demo*.
 6. Click **Create App**. You will then be taken to the project dashboard.
@@ -49,11 +49,11 @@ To add a sprint, follow these steps:
 
 1. Click **Capture** in the top menu:
 
-    ![](attachments/18580518.png)
+    ![](attachments/collaborate/18580518.png)
 
     On the capture page you can add sprints, stories, planning, and documents that can be used in your project. The **Stories** tab shows the existing stories and sprints.
 
-    ![](attachments/18580517.png)
+    ![](attachments/collaborate/18580517.png)
 
 2. There is one default sprint called **Get started**, which is automatically created when you create a new project. You need a clean project, so select the **Get started** sprint, click the delete button, and then click **OK** to delete the sprint.
 3. Click **New sprint** in the **Stories** tab.
@@ -63,7 +63,7 @@ To add a sprint, follow these steps:
     * Leave the **This sprint comes after** field empty (if there are existing sprints, you can place the new sprint before or after a selected sprint)
     * Set the **Duration** to **2** (weeks)
 
-    ![](attachments/18580514.png)
+    ![](attachments/collaborate/18580514.png)
 
     <div class="alert alert-info">
 
@@ -72,7 +72,7 @@ To add a sprint, follow these steps:
     </div>
 9. Click **Save**, and the new sprint will be added to your stories overview:
 
-    ![](attachments/18580513.png)
+    ![](attachments/collaborate/18580513.png)
 
 ### 4.1 Adding Story Points
 
@@ -88,7 +88,7 @@ To add story points, follow these steps:
     * **User expenses** for **Labels** (this will add a new label that can be reused in other stories)
     * Enter *Create an expenses overview page for company employees* for the **Description**
 
-    ![](attachments/18580493.png)
+    ![](attachments/collaborate/18580493.png)
 3.  Click **Post story**.
 
     <div class="alert alert-info">
@@ -99,7 +99,7 @@ To add story points, follow these steps:
 
     The new story point is now added to Sprint 1:
 
-    ![](attachments/18580509.png)
+    ![](attachments/collaborate/18580509.png)
 
 ### 4.2 Adding Tasks to a Story
 
@@ -109,11 +109,11 @@ To add a task to the story, follow these steps:
 
 1. Select the story you created and click **Add task**:
 
-    ![](attachments/18580507.png)
+    ![](attachments/collaborate/18580507.png)
 
 2. Enter *Add a list view of an employee's expenses*, and then click **Post task**:
 
-    ![](attachments/18580506.png)
+    ![](attachments/collaborate/18580506.png)
 
     Ticking the check box on the right will mark the task as completed. You can also add sub-tasks to tasks, which will create a nested structure of stories with tasks.
 
@@ -125,21 +125,21 @@ To manage stories in the Modeler, follow these steps:
 
 1. Go to the overview page of your project and click **Edit in Modeler**:
 
-    ![](attachments/18580491.png)
+    ![](attachments/collaborate/18580491.png)
 
 2. Select a Modeler version when asked, and then log in to the Modeler.
 3. You will now see your sprints in the **Stories** tab at the bottom:
 
-    ![](attachments/18580490.png)
+    ![](attachments/collaborate/18580490.png)
 
 4. Click the **To-do** status for the first item to change the status to **Running**:
 
-    ![](attachments/18580504.png)
+    ![](attachments/collaborate/18580504.png)
 
 5. Go back to the **Capture** page of the project dashboard in your browser.
 6. Expand the first sprint and check the status of the first entry:
 
-    ![](attachments/18580489.png)
+    ![](attachments/collaborate/18580489.png)
 
     It is now **Running**, because you changed the status in the Modeler.
 
@@ -158,16 +158,16 @@ To import stories, follow these steps:
 1. Download this [example Excel](attachments/18580488.xls).
 2. Click **Import/Export** on the **Stories** page and select **Update stories from Excel**:
 
-    ![](attachments/18580502.png)
+    ![](attachments/collaborate/18580502.png)
 
 3. Click **Browse** to select the example Excel file that contains your user stories.
 4. Click **Import**, and then scroll to the bottom of the page and click **Next**:
 
-    ![](attachments/18580501.png)
+    ![](attachments/collaborate/18580501.png)
 
     The **Stories** tab will now list your imported content:
 
-    ![](attachments/18580500.png)
+    ![](attachments/collaborate/18580500.png)
 
 ## 7 Moving Stories
 
@@ -183,11 +183,11 @@ There are two ways to move the story:
 
 * Select the story you want to move, select **Move to** from the menu, and then select **Sprint 2**:
 
-    ![](attachments/18580499.png)
+    ![](attachments/collaborate/18580499.png)
 
 * Click and drag the story into another sprint or to the **Backlog**:
 
-    ![](attachments/18580498.png)
+    ![](attachments/collaborate/18580498.png)
 
 ## 8 Exporting Stories
 
@@ -197,7 +197,7 @@ To expot sprints and stories, follow these steps:
 
 1. Go to **Capture** in your project, then to **Stories** > **Import/Export**:
 
-    ![](attachments/18580497.png)
+    ![](attachments/collaborate/18580497.png)
 
     There are three options to choose from, depending on which data you want to export.
 

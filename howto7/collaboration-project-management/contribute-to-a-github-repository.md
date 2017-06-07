@@ -41,11 +41,3 @@ To submit changes, follow these guidelines:
 * Mention the ID's for any issues that are fixed by the changes (for more information, see [https://help.github.com/articles/closing-issues-via-commit-messages#closing-issues-with-pull-requests](https://help.github.com/articles/closing-issues-via-commit-messages#closing-issues-with-pull-requests))
 * After feedback has been given, Mendix expects a response within two weeks
     * After two weeks, we may close the pull request if it isn't showing any activity
-
-## 5 Related Content
-
-* [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-* [How to Start Your Own Repository](starting-your-own-repository)
-* [How to Use Team Server – Version Control](using-team-server-_-version-control)
-* [How to Use the Feedback Widget](/developerportal/howto/gathering-user-feedback)
-* [How to Share the Development Database](sharing-the-development-database)

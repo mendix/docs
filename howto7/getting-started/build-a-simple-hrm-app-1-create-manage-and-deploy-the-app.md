@@ -53,7 +53,6 @@ To manage your app, follow these steps:
 
 1. In the dev portal, click **Capture**:
     ![](attachments/18448672/18580900.png)
-    On this tab you can plan the development of your app by adding sprints and stories. For details on how to manage your application requirements in Mendix by creating and configuring sprints and stories, see [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix).
 2. Click **Develop**:
     ![](attachments/18448672/18580899.png)
     On this tab you can see the latest revisions to your app made through the use of version control.
@@ -90,13 +89,3 @@ To deploy your app to a sandbox in the Mendix cloud so others can view and test 
 Wow, you deployed your first app!
 
 To use the second how-to for creating a simple HRM application, see [Build a Simple HRM App 2: Perform the First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui).
-
-## 6 Related Content
-
-* [Build a Simple HRM App 2: Perform the First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-* [Build a Simple HRM App 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-* [Build a Simple HRM App 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
-* [Build a Simple HRM App 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
-* [Create and Deploy Your First App](create-and-deploy-your-first-app)
-* [Testing Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)
-* [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)

@@ -133,14 +133,3 @@ Sometimes additional widgets are added when you download a module, for example t
 
 {% endmarkdown %}</div>
 
-## 3\. Related content
-
-*   [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-*   [Starting your own repository](starting-your-own-repository)
-*   [Contributing to a GitHub repository](contributing-to-a-github-repository)
-*   [Using Team Server - Version Control](using-team-server-version-control)
-*   [How to Use the Feedback Widget](/developerportal/howto/gathering-user-feedback)
-*   [Creating a basic "hello world" custom widget](creating-a-basic-hello-world-custom-widget)
-*   [Blog post on useful widgets](http://www.mendix.com/blog/top-5-mendix-widgets-speeding-application-development/)
-*   [Common Widget Properties](/refguide5/common-widget-properties)
-*   [Blog post on feedback widget](http://www.mendix.com/blog/feedback-widget-bridging-the-gap-between-users/)

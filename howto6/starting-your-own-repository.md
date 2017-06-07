@@ -34,9 +34,9 @@ If you want to make a new release for the App Store, we advise you start off wit
 
 ## 5\. Related content
 
-*   [Managing your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
+*   [Managing your Application Requirements with Mendix](/developerportal/howto/managing-your-application-requirements-with-mendix)
 *   [Contributing to a GitHub repository](contribute-to-a-github-repository)
 *   [Starting your own repository](starting-your-own-repository)
 *   [Using Team Server - Version Control](using-team-server-version-control)
-*   [Gathering user feedback](gathering-user-feedback)
+*   [Gathering user feedback](/developerportal/howto/gathering-user-feedback)
 *   [Sharing the Development Database](sharing-the-development-database)

@@ -124,17 +124,3 @@ Now the application is ready to store redundant data, but you still need to keep
     ![](attachments/18448743/18582150.png)
 
 20. Run the application and create some customers and orders. You should now see an up-to-date value for the TotalOrderAmount.
-
-## 5 Related Content
-
-* [How to Work with Images and Files](working-with-images-and-files)
-* [How to Create a Basic Data Layer](create-a-basic-data-layer)
-* [How to Set Up Data Validation](setting-up-data-validation)
-* [How to Work with Object Events](working-with-object-events)
-* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-* [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-* [How to Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
-* [How to Configure the Scout and Windows 10 Workaround](../guis/scout-and-windows-10-workaround)
-* [How to Generate a Personal SSH2 Key Pair](../security/generating-a-personal-ssh2-key-pair)
-* [Attributes](/refguide7/attributes)
-* [Event Handlers](/refguide7/event-handlers)

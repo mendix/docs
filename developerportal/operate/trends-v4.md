@@ -245,4 +245,3 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 *   [How to Deploy Your Licensed App to the Cloud](../howto/deploying-to-the-cloud)
 *   [How to Migrate to Mendix Cloud v4](../howto/migrating-to-v4)
 *   [Alerts](monitoring-application-health)
-*   [Node permissions](../settings/node-permissions)

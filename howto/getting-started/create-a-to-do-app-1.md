@@ -44,7 +44,7 @@ Switching the security level to *Off* is done for fast development. Make sure yo
 
 ## 4 Creating a New Module
 
-The development of your app stays comprehensible when the functionality of your app is split into separate modules.
+The development of your app stays comprehensible when its functionality is split into separate modules.
 Follow these steps to create a new module where you can add the to-do implementation of your app:
 
 1. Right-click your **ProjectName** in the Project Explorer.
@@ -52,11 +52,11 @@ Follow these steps to create a new module where you can add the to-do implementa
 
 ## 5 Creating the Domain Model
 The domain model is a data model that describes the information in your application domain in an abstract way.
-The domain for the to-do app will be pretty simple. It'll contain one entity with three attributes. Follow these steps to create the entity and attributes:
+The domain model for the to-do app will be pretty simple. It'll contain one entity with three attributes. Follow these steps to create the entity and attributes:
 
 1. Open the **Domain Model** in the **ToDo** module.
 2. Add a new **Entity** to the Domain Model.
-2. Rename the entity to **ToDo***.
+2. Rename the entity to **ToDo**.
 3. Add the following three attributes:
   * *Description* (String)
   * *DueDate* (Date and time)

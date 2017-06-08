@@ -4,11 +4,11 @@ space: "Release Notes"
 category: "Modeler"
 ---
 
-<div class="alert alert-info">
+<div class="alert alert-info">{% markdown %}
 
-This document describes known issues starting with Mendix version 7.0.2. For known issues in earlier Mendix versions, see the [Modeler release notes](desktop-modeler).
+This document describes known issues starting with Mendix version 7.0.2. For known issues in earlier Mendix versions, see the [Modeler release notes](index).
 
-</div>
+{% endmarkdown %}</div>
 
 ## 7.3
 

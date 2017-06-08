@@ -1,5 +1,5 @@
 ---
-title: "How-To"
+title: "How-To's"
 space: "Developer Portal"
 ---
 

@@ -1,7 +1,9 @@
 ---
-title: "Maintenance Windows"
-space: "General How-To's"
-category: "Mendix Cloud"
+title: "How to Configure Maintenance Windows"
+space: "Developer Portal"
+category: "How-To's"
+description: "This page describes how to cofigure the maintenance windows for your node environment."
+tags: ["Deploy","App","Developer Portal"]
 ---
 
 In the Mendix Cloud you can define a Maintenance Window for all your applications in the Professional and Enterprise plans.
@@ -30,12 +32,27 @@ Your "Preferred Maintenance Windows" is a weekly time range where system mainten
 
 ## 3 Configuring the Maintenance Window for your application
 
-1.  Go to the "Environment Details" Page of the environment you want to configure the maintenance window for
-2.  Go to the "Maintenance" tab
-3.  Here you can configure your preferred maintenance window. Transport rights for this environment are required. Click the Change button to modify the preferred maintenance window of your environment. All windows are defined in UTC time format. Please see the table below for the time in other time zones.
-4.  When a maintenance operation is planned, it will show up under "Planned Maintenance". By default it will be planned in your preferred maintenance window. You can override the maintenance window of a specific maintenance operation by clicking "Override".
+1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
+2. Click **My Apps** and select **Nodes**.
+3. Select the node of the environment that you want to configure
+4. Click **Environment Details** under the **Deploy** category
+5. Go to the **Maintenance** tab
 
-# ![](attachments/19203296/19399087.png)
+<div class="alert alert-warning">{% markdown %}
+
+Here you can configure your preferred maintenance window. Transport rights for this environment are required. 
+
+{% endmarkdown %}</div>
+
+6. Click **Change** to modify the preferred maintenance window of your environment. All windows are defined in UTC time format. Please see the table below for the time in other time zones.
+
+<div class="alert alert-info">{% markdown %}
+
+When a maintenance operation is planned, it will show up under "Planned Maintenance". By default it will be planned in your preferred maintenance window. You can override the maintenance window of a specific maintenance operation by clicking **Override**.
+
+{% endmarkdown %}</div>
+
+# ![](attachments/deploy/19399087.png)
 
 ## 4 Maintenance Timetable
 

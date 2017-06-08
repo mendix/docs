@@ -1,5 +1,5 @@
 --
-title: "Node Permissions"
+title: "Security - Node Permissions"
 space: "Developer Portal"
 category: "Settings"
 description: "This page describes the permission settings of your node."
@@ -59,7 +59,7 @@ The Technical Contact will receive the following alerts from the cloud node:
 *   Notifications for maintenance from **Mendix Support**
 *   Alerts from the node when problems arise (CPU load is high, running out of disk space, etc.). The Technical Contact cannot turn these off
 
-To find more information about **Alerts**, read paragraph **2 Alerting Categories and Thresholds**. of the [Monitoring Application Health](monitoring-application-health) documentation. 
+To find more information about **Alerts**, read paragraph **2 Alerting Categories and Thresholds**. of the [Alerts](monitoring-application-health) documentation. 
 
 ### 4.2 Mendix Support
 
@@ -103,12 +103,6 @@ With the API rights you can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-a
 
 With this permission you can view the application metrics, logs, and alerts under the **Operate** category in the [Developer Portal](http://home.mendix.com). This allows you to successfully operate your Mendix Cloud environments.
 
-For more information, see [Monitoring Application Health](/howtogeneral/mendixcloud/monitoring-application-health)
+For more information, see [Alerts](/developerportal/operate/monitoring-application-health)
 
-# 6 Related Content
-
-*   [Deploy API](/apidocs-mxsdk/apidocs/deploy-api)
-*   [Monitoring Application Health](/howtogeneral/mendixcloud/monitoring-application-health)
-*   [How To Create a Backup](/howtogeneral/mendixcloud/how-to-create-backup)
-*   [How To Download a Backup](/howtogeneral/mendixcloud/how-to-download-a-backup)
-*   [How To Restore a Backup](/howtogeneral/mendixcloud/how-to-restore-a-backup)
+## 6 Related Content

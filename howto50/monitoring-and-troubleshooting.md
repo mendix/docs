@@ -7,13 +7,12 @@ Stay updated on the health of your app and troubleshoot when needed.
 
 | Basic
 | -----------------------------------------------------------------------------------
-| [Monitoring application health](/howtogeneral/mendixcloud/monitoring-application-health)
+| [Alerts](/developerportal/operate/monitoring-application-health)
 | [Log Levels](log-levels)
 | [Error Handling (webinar)](http://ww2.mendix.com/Expert-Webinar.Error-Handling.html)
 | [Clearing Warning Messages in Mendix](clearing-warning-messages-in-mendix)
 | [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
 | [Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)
-| [Alerts](/developerportal/operate/monitoring-application-health)
 
 | Advanced
 | -----------------------------------------------------------------------------------

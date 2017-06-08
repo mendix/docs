@@ -72,7 +72,7 @@ This is all you need to do to refresh your list of to-do's. If you want, you can
 
 ## 6 Adding and Configuring the List View Swipe Widget
 
-Follow these steps to add swiping functionality to the items appearing in the list view:
+Follow these steps to add swiping functionality to the items in the list view:
 
 1. Open the **Home_Phone_Default** page.
 2. Add the **List view swipe** widget below the **ToDo list view**, inside the **ToDo data view**.
@@ -93,7 +93,7 @@ Follow these steps to add swiping functionality to the items appearing in the li
 
 ## 7 Adding List View Swipe MarkAsCompleted Snippet
 
-Follow these steps to add a predefined snippet which contains the UI for the 'mark as completed' functionality:
+Follow these steps to add a predefined snippet which contains the UI for the *mark as completed* functionality:
 
 1. Open the **Home_Phone_Default** page.
 2. Expand the **MobileGeneric** module in the Project Explorer.
@@ -107,15 +107,15 @@ Follow these steps to add a predefined snippet which contains the UI for the 'ma
 
 Follow these steps to add a delete button to the list view swipe widget:
 
-1. Add a **Call a microflow button** widget to the **Container** you named *Buttons*.
+1. Add a **Call microflow button** widget to the **Container** you named *Buttons*.
 2. Create a new microflow from the **Select microflow** dialog and name it **ACT_ToDo_Delete** (you'll add the logic to the microflow later).
 3. Double-click the button you just created to open its properties dialog.
-    1. Remove the caption from the button.
-    2. Select the **trash** icon for the button.
-    3. Change the **Button style** to **Danger**.
-    4. Click **Edit** for the **Microflow settings**.
-        * Set **Ask confirmation** to **Yes** and click **OK**.
-    5. Add the **btn-lg** class to make the button larger and close the properties dialog.
+4. Remove the caption from the button.
+5. Select the **trash** icon for the button.
+6. Change the **Button style** to **Danger**.
+7. Click **Edit** for the **Microflow settings**.
+8. Set **Ask confirmation** to **Yes** and click **OK**.
+9. Add the **btn-lg** class to make the button larger and close the properties dialog.
 
 ## 9 Adding a Share Button
 
@@ -149,12 +149,14 @@ Follow these steps to integrate native share functionality into the page:
 
 ## 11 Adding the Badge Widget
 
-To show which to-do items have passed their deadline you can make use of the custom **Badge** widget, available in the Mendix App Store. 
+To show which to-do items have passed their deadline you can make use of the custom **Badge** widget, available in the [Mendix App Store](https://appstore.home.mendix.com/link/app/50325/Mendix/Badge). 
 Follow these steps to add the **Badge** widget to your project:
 
 1. Open the **App Store** in the Modeler.
 2. Search for **badge**.<br>
-![](attachments/create-a-to-do-app/badge-logo.png)
+
+   ![](attachments/create-a-to-do-app/badge-logo.png)
+
 3. Open the **Badge** widget in the search results and click **Download**.
 4. Go back to the **Home_Phone_Default** page.
 5. Add a new column to the right in the layout grid.
@@ -167,7 +169,7 @@ Follow these steps to add the **Badge** widget to your project:
 12. Set the **Default value** of the badge to **Too late!**.
 13. Go to the **Display** tab and set the **Badge style** to **Warning**.
 
-![](attachments/create-a-to-do-app/todo-10.jpg)
+    ![](attachments/create-a-to-do-app/todo-10.jpg)
 
 ## 12 Adding Conditional Visibility with Client-Side Expressions
 

@@ -23,32 +23,35 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating the Home Page
 
-The app will use the home page as the landing page when users open the to-do app. It contains a list of their to-do's. Follow these steps to create the home page:
+When users open the to-do app they will land on the homepage of the app. Follow these steps to create and configure the home page:
 
 1. Right click your newly created ToDo module and select **Add > Page**.
-2. Go to the **Phone Specific** tab and click **Yes** when you're asked to create a new Phone Profile.
+2. Go to the **Phone Specific** tab and click **No** when you're asked to create a new Phone Profile.
 3. Name the page **Home_Phone_Default**.
 4. Select *Phone_HeaderOnly* as **Navigation layout**.
 5. Click **Blank** on the left side and select the *Blank* page template.
 6. Click **OK** to create the page.
-7. Open your project's **Navigation** and set the **Home_Phone_Default page** in the ToDo module as default home page.
+7. Open the **HybridPhone** profile available in your project's **Navigation** and set the **Home_Phone_Default page** in the ToDo module as default home page.
+8. Change the **Home** menu item so that it also directs to **Home_Phone_Default page** in the ToDo module. 
+
 
 ## 4 Configuring the Home Page
 
-Let's add some content to the home page so it can show a list of to-do's. Follow these steps to add a list view to the home page:
+Let's create the user interface for the home page so that it shows a list of available to-do's. Follow these steps to set up the user interface and connect it to the new entity in the domain model:
 
-1. Change the page title to **My to-do's** in the **Properties** pane on the right side of the Modeler.
-2. Remove the **Layout grid** from the page.
-3. Add a **List view** to the page.
-4. Right-click the **List view** and select **Select data soure**.
-5. Click **Select** and select the **ToDo** entity for the **Entity (path)**.
-6. Click **OK** and then **Yes** to automatically fill the content of the list view.
-7. Remove the **Completed** attribute.
-8. Double-click the **Sort order: (default)** and add the **DueDate** attribute with the **Ascending** sort direction.
+1. Open **Home_Phone_Default page** you've just created in the ToDo module.
+2. Change the page title to **My to-do's** in the **Properties** pane on the right side of the Modeler.
+3. Remove the **Layout grid** from the page.
+4. Right-click the area you just cleared and select **Add widget > List view** to add a List view to the page that will take the place of the layout grid.
+5. Right-click the **List view** and select **Select data soure**.
+6. Click **Select** and select the **ToDo** entity for the **Entity (path)**.
+7. Click **OK** and then **Yes** to automatically fill the content of the list view.
+8. Remove the **Completed** attribute.
+9. Double-click the **Sort order: (default)** and add the **DueDate** attribute with the **Ascending** sort direction.
 
     ![](attachments/create-a-to-do-app/todo-03.jpg)
 
-You can now see a list of to-do's on your home page. Let's configure a page to create to-do's.
+Great! You can now see a list of to-do's on your home page, but only after you have created them. Let's configure a page to create to-do's.
 
 ## 5 Creating and Configuring the New and Edit Page
 

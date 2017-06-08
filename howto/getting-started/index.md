@@ -6,20 +6,12 @@ description: "These introductory how-to's describe how to create and deploy your
 
 Get off to a flying start with these introductory how-to's.
 
-## Documents in This Category
+- [**Mobile To-Do App**](create-a-to-do-app) learns the basics of building an app for a mobile device.
+- [**Build an IoT App**](build-an-iot-app) lets you experience how to consume IoT services from an IoT Cloud platform.
+- [**Build a simple HRM App**](build-a-simple-hrm-app) learns the basic aspects of development with Mendix.
 
-* [How to Create and Deploy Your First App](create-and-deploy-your-first-app)
-* [How to Build a Simple HRM App](build-a-simple-hrm-app)
-    * [How to Build a Simple HRM App Step 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
-    * [How to Build a Simple HRM App Step 2: First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
-    * [How to Build a Simple HRM App Step 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
-    * [How to Build a Simple HRM App Step 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
-    * [How to Build a Simple HRM App Step 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
-* [How to Build an IoT App](build-an-iot-app)
-    * [How to Build an IoT App Step 1: Connect App Pages](build-an-iot-app-1)
-    * [How to Build an IoT App Step 2: Configure the Sensor Data Subscription](build-an-iot-app-2)
-    * [How to Build an IoT App Step 3: Handle the Sensor Data](build-an-iot-app-3)
-    * [How to Build an IoT App Step 4: Add Another Data Dimension](build-an-iot-app-4)
-    * [How to Build an IoT App Step 5: Create Alerts](build-an-iot-app-5)
-    * [How to Build an IoT App Step 6: Expand the IoT App Tracking](build-an-iot-app-6)
-* [How to Create a Mobile To-Do App](create-a-to-do-app)
+
+| [![](attachments/overview/mobilequickstart.jpg)](create-a-to-do-app) | [![](attachments/overview/logo.png)](build-an-iot-app) | [![](attachments/overview/bluewave.png)](build-a-simple-hrm-app) |
+|------ | ----- | ------|
+| [Create a Mobile To-Do App](create-a-to-do-app) | [Build an IoT App](build-an-iot-app) | [Build a Simple HRM App](build-a-simple-hrm-app) |
+

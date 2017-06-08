@@ -6,9 +6,16 @@ description: "This page describes how to monitor the application health."
 tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health"]
 ---
 
+## 1 Introduction
+
 When your application has reached production status, it's important to keep track of its status and health. This how-to will teach you how to inspect your application's health in the Mendix platform. You will learn how to access the application status page, what the information on this page means, and how to look at the alerts for your app.
 
-## 1 Application Status
+When you click **Alerts** in the **Operate** category of the **Developer Portal**, you will see:
+
+*   The Application status
+*   The Platform status
+
+## 2 Application Status
 
 The Mendix platform automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
 
@@ -33,11 +40,11 @@ The Mendix platform automatically monitors the health and status of apps that ar
 
 This will tell you important information that you either need in order to resolve the issue, or that needs to be included when submitting a support request with Mendix Support. Any status that could cause your app to stop functioning will result in an alert (which will be sent).
 
-## 2 Alerting Categories and Thresholds
+## 3 Alerting Categories and Thresholds
 
 There are a number of categories on the status overview that are related to various technical parts of your application environment. Any category that does not display as *OK* needs to be investigated. Each category indicates a different part of the app infrastructure that is monitored.
 
-### 2.1 Application Status
+### 3.1 Application Status
 
 CPU | |
 :---|:---|
@@ -71,7 +78,7 @@ Warning Threshold | Not used.
 Critical Threshold | If the application process should be running but completely disappeared, or if the JVM process does not respond to any signal any more.
 First actions to take | Review the application state for Out Of Memory errors and/or review OS memory trends for a OS-level memory problem. If unavailable, restart the application.
 
-### 2.2 Platform Status
+### 3.2 Platform Status
 
 Application Server Up | |
 :---|:---|
@@ -113,7 +120,7 @@ Warning Threshold | The application URL is not reachable.
 Critical Threshold | Not used.
 First actions to take | If this alert triggers, and visiting the application url results in slow loading or unresponsiveness, visit https://status.mendix.com/ to see if there is an outage. This condition might point to an internal networking connectivity problem.
 
-## 3 Alerts History
+## 4 Alerts History
 
 The monitoring information from the previous chapter showed that one of the status indicators was *Critical*. When this happens to one of your nodes, all users that are subscribed to alerts will receive an email alert. Alerts are also stored in the app monitoring part of the Mendix platform. To access the alerts for your app, follow these steps:
 
@@ -133,7 +140,7 @@ The monitoring information from the previous chapter showed that one of the stat
 
     ![](attachments/18579995.png)
 
-## 4 Related content
+## 5 Related content
 
 *   [Mendix Cloud Status](mendix-cloud-status)
 *   [Application Trends in Mendix Cloud v3](trends)

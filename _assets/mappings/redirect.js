@@ -1307,7 +1307,7 @@ module.exports = {
     },
     {
       from: "/howto50/Gathering+user+feedback",
-      to: "/howto50/gathering-user-feedback"
+      to: "/developerportal/howto/gathering-user-feedback"
     },
     {
       from: "/howto50/Generating+a+personal+SSH2+key+pair",
@@ -1387,7 +1387,7 @@ module.exports = {
     },
     {
       from: "/howto50/Managing+your+Application+Requirements+with+Mendix",
-      to: "/howto50/managing-your-application-requirements-with-mendix"
+      to: "/developerportal/howto/managing-your-application-requirements-with-mendix"
     },
     {
       from: "/howto50/Mendix+Hosting+Enviroment+project+structure+and+commands",
@@ -1782,7 +1782,7 @@ module.exports = {
     },
     {
       from: "/howto6/deploying+to+the+cloud",
-      to: "/howtogeneral/mendixcloud/deploying-to-the-cloud"
+      to: "/developerportal/howto/deploying-to-the-cloud"
     },
     {
       from: "/howto6/Design+the+Architecture",
@@ -1846,7 +1846,7 @@ module.exports = {
     },
     {
       from: "/howto6/Gathering+user+feedback",
-      to: "/howto6/gathering-user-feedback"
+      to: "/developerportal/howto/gathering-user-feedback"
     },
     {
       from: "/howto6/Generating+a+personal+SSH2+key+pair",
@@ -1942,7 +1942,7 @@ module.exports = {
     },
     {
       from: "/howto6/Managing+your+Application+Requirements+with+Mendix",
-      to: "/howto6/managing-your-application-requirements-with-mendix"
+      to: "/developerportal/howto/managing-your-application-requirements-with-mendix"
     },
     {
       from: "/howto6/Mendix+on+Windows+-+Microsoft+SQL+Server",
@@ -2173,11 +2173,11 @@ module.exports = {
      ****************************************************/
     {
       from: "/mendixcloud/Custom+Domains",
-      to: "/howtogeneral/mendixcloud/custom-domains"
+      to: "/developerportal/howto/custom-domains"
     },
     {
       from: "/mendixcloud/Deploying+to+the+cloud",
-      to: "/howtogeneral/mendixcloud/deploying-to-the-cloud"
+      to: "/developerportal/howto/deploying-to-the-cloud"
     },
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
@@ -2213,7 +2213,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/migrating+to+v4",
-      to: "/howtogeneral/mendixcloud/migrating-to-v4"
+      to: "/developerportal/howto/migrating-to-v4"
     },
     {
       from: "/mendixcloud/Monitoring+application+health",

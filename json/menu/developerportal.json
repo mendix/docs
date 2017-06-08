@@ -4,7 +4,13 @@ sitemap: false
 ---
 {
   "categories": [
-    "Company Admin"
+    "Company Admin",
+	"Collaborate",
+	"Develop",
+	"Deploy",
+	"Operate",
+	"Settings",
+	"How-To's"
   ],
   "pages": {% include json-snippets/get_pages.inc dir="developerportal" %}
 }

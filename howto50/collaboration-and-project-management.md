@@ -7,10 +7,10 @@ Learn how to build apps in a team, share your code base and manage your projects
 
 | Basic
 | ------------------------------------------------------------
-| [Gathering user feedback](gathering-user-feedback)
+| [Gathering user feedback](/developerportal/howto/gathering-user-feedback)
 | [Sharing the development database](sharing-the-development-database)
 | [How to Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler)
-| [Managing your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
+| [Managing your Application Requirements with Mendix](/developerportal/howto/managing-your-application-requirements-with-mendix)
 
 | Advanced
 | ------------------------------------------------------------

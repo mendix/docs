@@ -1555,7 +1555,7 @@ module.exports = {
     },
     {
       from: "/howto50/Trends",
-      to: "/howtogeneral/mendixcloud/trends"
+      to: "/developerportal/operate/trends"
     },
     {
       from: "/howto50/Triggering+Logic+using+Microflows",
@@ -2233,7 +2233,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Trends",
-      to: "/howtogeneral/mendixcloud/trends"
+      to: "/developerportal/operate/trends"
     },
     /****************************************************
      * SUPPORT

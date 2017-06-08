@@ -18,7 +18,7 @@ If you would like to be a client and use a licensed cloud node you can contact o
 
 In our free tier, your app will go to sleep after a couple of minutes of inactivity. When it is inactive, you will see the image below. If you wait for a couple of minutes and the app does not come up, please contact our support team at [support.mendix.com](http://support.mendix.com).
 
-![](attachments/deploy/appresumed.jpg)
+![](attachments/index/appresumed.jpg)
 
 ## Node
 

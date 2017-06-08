@@ -1,4 +1,4 @@
---
+---
 title: "API Key"
 space: "Developer Portal"
 category: "Settings"
@@ -8,7 +8,7 @@ tags: ["Settings","App","API","Key","Developer Portal"]
 
 ## 1 Introduction
 
-In **API Keys** there is an overview of the created API Keys for your App with the following information:
+In **API Keys** under the **Settings** category, there is an overview of the created API Keys for your App with the following information:
 
 *   API Key Name
 *   Creation date

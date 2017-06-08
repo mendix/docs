@@ -1,4 +1,4 @@
---
+---
 title: "General"
 space: "Developer Portal"
 category: "Settings"
@@ -8,7 +8,7 @@ tags: ["Settings","App","Developer Portal"]
 
 ## 1 Introduction
 
-In **General** there is an overview about the App:
+In **General** under the **Settings** category, there is an overview about the App:
 
 *   App name
 *   Description

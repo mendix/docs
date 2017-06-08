@@ -6,7 +6,7 @@ category: "Operate"
 
 ## 1 Introduction
 
-To monitor the application health and performance you can view the trends.
+To track the usage growth of your app and to debug performance problems, the **Mendix Cloud v4** includes detailed graphs on both infrastructure and application level. These graphs show various performance trends of all your apps in the paid editions of the Mendix Platform. In case you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**.
 
 ## 2 Monitor Trends Access
 
@@ -245,4 +245,3 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 *   [How to Deploy Your Licensed App to the Cloud](../howto/deploying-to-the-cloud)
 *   [How to Migrate to Mendix Cloud v4](../howto/migrating-to-v4)
 *   [Alerts](monitoring-application-health)
-*   [Node permissions](../settings/node-permissions)

@@ -37,20 +37,21 @@ When users open the to-do app they will land on the homepage of the app. Follow 
 
 ## 4 Configuring the Home Page
 
-Let's create the user interface for the home page so it shows a list of available to-do's. Follow these steps to set up the user interface and connect it to the new entity in the domain model:
+Let's create the user interface for the home page so that it shows a list of available to-do's. Follow these steps to set up the user interface and connect it to the new entity in the domain model:
 
-1. Make sure you open **Home_Phone_Default page** you've just created in the ToDo module. Change the page title to **My to-do's** in the **Properties** pane on the right side of the Modeler.
-2. Remove the **Layout grid** from the page.
-3. Add a **List view** to the page which will take the place of the layout grid. Right-click the area you just cleared and select **Add widget > List view**
-4. Right-click the **List view** and select **Select data soure**.
-5. Click **Select** and select the **ToDo** entity for the **Entity (path)**.
-6. Click **OK** and then **Yes** to automatically fill the content of the list view.
-7. Remove the **Completed** attribute.
-8. Double-click the **Sort order: (default)** and add the **DueDate** attribute with the **Ascending** sort direction.
+1. Open **Home_Phone_Default page** you've just created in the ToDo module.
+2. Change the page title to **My to-do's** in the **Properties** pane on the right side of the Modeler.
+3. Remove the **Layout grid** from the page.
+4. Right-click the area you just cleared and select **Add widget > List view** to add a List view to the page that will take the place of the layout grid.
+5. Right-click the **List view** and select **Select data soure**.
+6. Click **Select** and select the **ToDo** entity for the **Entity (path)**.
+7. Click **OK** and then **Yes** to automatically fill the content of the list view.
+8. Remove the **Completed** attribute.
+9. Double-click the **Sort order: (default)** and add the **DueDate** attribute with the **Ascending** sort direction.
 
     ![](attachments/create-a-to-do-app/todo-03.jpg)
 
-Great! You can now see a list of to-do's on your home page but only after you have created them. Let's configure a page to create to-do's.
+Great! You can now see a list of to-do's on your home page, but only after you have created them. Let's configure a page to create to-do's.
 
 ## 5 Creating and Configuring the New and Edit Page
 

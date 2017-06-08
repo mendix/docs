@@ -6,7 +6,7 @@ category: "Modeler"
 
 <div class="alert alert-info">
 
-This document describes known issues starting with Mendix version 7.0.2. For known issues in earlier Mendix versions, see the [Modeler release notes](index).
+This document describes known issues starting with Mendix version 7.0.2. For known issues in earlier Mendix versions, see the [Modeler release notes](desktop-modeler).
 
 </div>
 

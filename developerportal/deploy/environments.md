@@ -8,7 +8,7 @@ tags: ["Deploy","App","Developer Portal"]
 
 ## 1 Introduction
 
-In **Environments** there is an overview of two pages:
+In **Environments** of the **Deploy** category there is an overview of two pages:
 
 1. Deploy
 *   Deployment Package Repository

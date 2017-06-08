@@ -1411,7 +1411,7 @@ module.exports = {
     },
     {
       from: "/howto50/Monitoring+application+health",
-      to: "/howto50/monitoring-application-health"
+      to: "/developerportal/operate/monitoring-application-health"
     },
     {
       from: "/howto50/Monitoring+Mendix+using+JMX",
@@ -1555,7 +1555,7 @@ module.exports = {
     },
     {
       from: "/howto50/Trends",
-      to: "/howtogeneral/mendixcloud/trends"
+      to: "/developerportal/operate/trends"
     },
     {
       from: "/howto50/Triggering+Logic+using+Microflows",
@@ -1966,7 +1966,7 @@ module.exports = {
     },
     {
       from: "/howto6/monitoring+application+health",
-      to: "/howtogeneral/mendixcloud/monitoring-application-health"
+      to: "/developerportal/operate/monitoring-application-health"
     },
     {
       from: "/howto6/On-premises+Deployment",
@@ -2209,7 +2209,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Maintenance+Windows",
-      to: "/howtogeneral/mendixcloud/maintenance-windows"
+      to: "/developerportal/howto/maintenance-windows"
     },
     {
       from: "/mendixcloud/migrating+to+v4",
@@ -2217,7 +2217,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Monitoring+application+health",
-      to: "/howtogeneral/mendixcloud/monitoring-application-health"
+      to: "/developerportal/operate/monitoring-application-health"
     },
     {
       from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
@@ -2233,7 +2233,7 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Trends",
-      to: "/howtogeneral/mendixcloud/trends"
+      to: "/developerportal/operate/trends"
     },
     /****************************************************
      * SUPPORT

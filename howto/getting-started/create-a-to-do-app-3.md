@@ -53,7 +53,7 @@ Follow these steps to improve the look and feel of the home page:
 
 ## 4 Enhancing the NewEdit Page
 
-Follow these steps to improve the look and feel of the ToDo_NewEdit page:
+Follow these steps to add special page transitions to the action buttons. 
 
 1. Open the **ToDo_NewEdit** page.
 2. Open the **Properties** of the **< Back** button and add the **flip-left** class.
@@ -72,7 +72,7 @@ This is all you need to do to refresh your list of to-do's. If you want, you can
 
 ## 6 Adding and Configuring the List View Swipe Widget
 
-Follow these steps to add the list view swipe widget to your app:
+Follow these steps to add swiping functionality to the items in the list view:
 
 1. Open the **Home_Phone_Default** page.
 2. Add the **List view swipe** widget below the **ToDo list view**, inside the **ToDo data view**.
@@ -93,11 +93,11 @@ Follow these steps to add the list view swipe widget to your app:
 
 ## 7 Adding List View Swipe MarkAsCompleted Snippet
 
-Follow these steps to add the MarkAsCompleted snippet to your app:
+Follow these steps to add a predefined snippet which contains the UI for the *mark as completed* functionality:
 
 1. Open the **Home_Phone_Default** page.
 2. Expand the **MobileGeneric** module in the Project Explorer.
-3. Drag and drop the **ListViewSwipe_MarkAsCompleted** snippet below the **Layout grid**. This is where the **MarkAsCompleted** and **MarkingAsCompleted** in the widget configuration comes from. The containers in the snippet have the same name as the text in it. You can add your own containers with different text, but make sure you set the correct names of the containers in the widget.
+3. Drag and drop the **ListViewSwipe_MarkAsCompleted** snippet below the **Layout grid**. The values you configured in the List view Swipe widget(**MarkAsCompleted** and **MarkingAsCompleted**) match the names of the containters in the snippet. You can modify the text in the containers, but make sure the container names correspond with the container names configuration in the widget.
 4. Add a **Container** below the **ListViewSwipe_MarkAsCompleted** snippet and within the **Todo list view**.
 5. Change the name of the container to **Buttons**.
 
@@ -107,18 +107,19 @@ Follow these steps to add the MarkAsCompleted snippet to your app:
 
 Follow these steps to add a delete button to the list view swipe widget:
 
-1. Add a **Button** to the **Container**.
-2. Remove the caption from the button.
-3. Add the **trash** to the button.
-4. Change the **Button style** to **Danger**.
-5. Add an **On click** click event: **Call a microflow** > **New** > **ACT_ToDo_Delete** and click **OK** (you'll add the logic to the microflow later).
-6. Click **Edit** for the **Microflow settings**.
-7. Set **Ask confirmation** to **Yes** and click **OK**.
-8. Add the **btn-lg** class to make the button larger.
+1. Add a **Call microflow button** widget to the **Container** you named *Buttons*.
+2. Create a new microflow from the **Select microflow** dialog and name it **ACT_ToDo_Delete** (you'll add the logic to the microflow later).
+3. Double-click the button you just created to open its properties dialog.
+4. Remove the caption from the button.
+5. Select the **trash** icon for the button.
+6. Change the **Button style** to **Danger**.
+7. Click **Edit** for the **Microflow settings**.
+8. Set **Ask confirmation** to **Yes** and click **OK**.
+9. Add the **btn-lg** class to make the button larger and close the properties dialog.
 
 ## 9 Adding a Share Button
 
-Follow these steps to add and configure a share button to the list view swipe widget:
+Follow these steps to add and configure a native share button to the list view swipe widget:
 
 1. Drag and drop a second **Button** in the **Container**.
 2. Remove the caption from the button.
@@ -132,7 +133,7 @@ Follow these steps to add and configure a share button to the list view swipe wi
 
 ## 10 Adding the Native Share Widget
 
-Follow these steps to add the native share widget to the page:
+Follow these steps to integrate native share functionality into the page:
 
 1. Open the **App Store** in the Modeler.
 2. Search for **share**.
@@ -148,10 +149,14 @@ Follow these steps to add the native share widget to the page:
 
 ## 11 Adding the Badge Widget
 
+To show which to-do items have passed their deadline you can make use of the custom **Badge** widget, available in the [Mendix App Store](https://appstore.home.mendix.com/link/app/50325/Mendix/Badge). 
 Follow these steps to add the **Badge** widget to your project:
 
 1. Open the **App Store** in the Modeler.
-2. Search for **badge**.
+2. Search for **badge**.<br>
+
+   ![](attachments/create-a-to-do-app/badge-logo.png)
+
 3. Open the **Badge** widget in the search results and click **Download**.
 4. Go back to the **Home_Phone_Default** page.
 5. Add a new column to the right in the layout grid.
@@ -164,7 +169,7 @@ Follow these steps to add the **Badge** widget to your project:
 12. Set the **Default value** of the badge to **Too late!**.
 13. Go to the **Display** tab and set the **Badge style** to **Warning**.
 
-![](attachments/create-a-to-do-app/todo-10.jpg)
+    ![](attachments/create-a-to-do-app/todo-10.jpg)
 
 ## 12 Adding Conditional Visibility with Client-Side Expressions
 

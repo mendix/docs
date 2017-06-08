@@ -1,5 +1,5 @@
 ---
-title: "Application Trends in Mendix Cloud v4"
+title: "Trends in Mendix Cloud v4"
 space: "Developer Portal"
 category: "Operate"
 ---
@@ -242,7 +242,7 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 ## 6 Related content
 
 *   [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
-*   [How to Deploy Your Licensed App to the Cloud](deploying-to-the-cloud)
-*   [How to Migrate to Mendix Cloud v4](../deploy/migrating-to-v4)
-*   [Monitoring application health](monitoring-application-health)
+*   [How to Deploy Your Licensed App to the Cloud](../howto/deploying-to-the-cloud)
+*   [How to Migrate to Mendix Cloud v4](../howto/migrating-to-v4)
+*   [Alerts](../howto/monitoring-application-health)
 *   [Node permissions](../settings/node-permissions)

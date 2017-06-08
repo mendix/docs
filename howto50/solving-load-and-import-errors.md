@@ -53,12 +53,12 @@ Finally, in the unlikely event that you encounter this error while working on yo
 
 ## 4\. Related content
 
-*   [Clearing Warning Messages in Mendix](clearing-warning-messages-in-mendix)
-*   [Common Mendix SSO Errors](common-mendix-sso-errors)
-*   [Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)
-*   [Debugging Java Actions](debugging-java-actions)
-*   [Debugging Java Actions Remotely](debugging-java-actions-remotely)
-*   [Debugging Microflows](debugging-microflows)
-*   [Debugging Microflows Remotely](debugging-microflows-remotely)
-*   [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-*   [How to Connect a Different App to a Node](/howtogeneral/mendixcloud/how-to-link-a-different-app-to-a-node)
+* [Clearing Warning Messages in Mendix](clearing-warning-messages-in-mendix)
+* [Common Mendix SSO Errors](common-mendix-sso-errors)
+* [Debug a Hybrid Mobile Application](debug-a-hybrid-mobile-application)
+* [Debugging Java Actions](debugging-java-actions)
+* [Debugging Java Actions Remotely](debugging-java-actions-remotely)
+* [Debugging Microflows](debugging-microflows)
+* [Debugging Microflows Remotely](debugging-microflows-remotely)
+* [Finding the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
+* [How to Link a Different App to a Cloud Node](/developerportal/howto/how-to-link-a-different-app-to-a-node)

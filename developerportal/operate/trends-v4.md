@@ -14,7 +14,7 @@ To view the **Trends** you must have permission to **Access the Monitoring**.
 
 <div class="alert alert-info">{% markdown %}
 
-Note that only the **Technical Contact** is allowed to grand the [node permissions](../settings/node-permissions).
+Note that only the **Technical Contact** is allowed to grand the node permissions.
 
 {% endmarkdown %}</div>
 

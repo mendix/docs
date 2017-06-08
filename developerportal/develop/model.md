@@ -6,6 +6,13 @@ description: "This page describes the options available to edit your Aoo."
 tags: ["Edit","Modeler","Developer Portal"]
 ---
 
+## 1 Introduction
+
+When you click **Model** in the **Develop** category of the **Developer Portal**, you will have two options to open your model:
+
+*   Open the App model in the **Desktop Modeler**
+*   Open the App model in the **Web Modeler**
+
 ## 1 Desktop Modeler
 
 Use our powerful Desktop Modeler to rapidly build enterprise-ready business apps. Visually model your app’s UI, logic for your business rules, the domain model and integrations with REST & other complex back-end services.

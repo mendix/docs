@@ -57,7 +57,7 @@ To improve the input form, follow these steps:
 
 Congratulations! You have completed this how-to.
 
-### 4 Feedback
+## 4 Feedback
 
 We are very interested in your feedback. Please take [this short survey](https://www.surveymonkey.com/r/ZCRJSP3) to let us know what you think about this how-to.
 

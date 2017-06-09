@@ -1,7 +1,6 @@
 ---
 title: "Operate"
 space: "Developer Portal"
-category: "Operate"
 description: "This page describes the Operate category of the Developer Portal."
 tags: ["Operate","App","Developer Portal"]
 ---

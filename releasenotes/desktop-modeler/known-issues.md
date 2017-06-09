@@ -1,12 +1,12 @@
 ---
 title: "Known Issues"
 space: "Release Notes"
-category: "Modeler"
+category: "Desktop Modeler"
 ---
 
 <div class="alert alert-info">{% markdown %}
 
-This document describes known issues starting with Mendix version 7.0.2. For known issues in earlier Mendix versions, see the [Modeler release notes](index).
+This document describes known issues starting with Mendix version 7.0.2. For known issues in earlier Mendix versions, see the [Desktop Modeler release notes](index).
 
 {% endmarkdown %}</div>
 

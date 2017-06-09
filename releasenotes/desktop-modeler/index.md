@@ -61,7 +61,7 @@ The patch release notes are included here.
 
 <div class="alert alert-info">{% markdown %}
 
-The known issues for each release are described in [Known Issues](windows-service).
+The known issues for each release are described in [Known Issues](known-issues).
 
 {% endmarkdown %}</div>
 

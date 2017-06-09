@@ -206,7 +206,11 @@ To view your app, follow these steps:
 
 Great! You completed all of the how-to's!
 
-## 5 Related Content
+## 5 Feedback
+
+We are very interested in your feedback. Please take [this short survey](https://www.surveymonkey.com/r/6YJ89K7) to let us know what you think about this how-to.
+
+## 6 Related Content
 
 * [Build a Simple HRM App Step 1: Create, Manage, and Deploy the App](build-a-simple-hrm-app-1-create-manage-and-deploy-the-app)
 * [Build a Simple HRM App Step 2: First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)

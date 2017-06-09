@@ -53,7 +53,7 @@ Let's create the user interface for the home page so that it shows a list of ava
 
 Great! You can now see a list of to-do's on your home page, but only after you have created them. Let's configure a page to create to-do's.
 
-## 5 Creating and Configuring the New and Edit Page
+## 5 Creating and Configuring the New and Edit Page<a name="5"></a>
 
 Users also need to be able to add new to-do's to the list, that's why you're going to add a page that lets them do this. Follow these steps to create a new and edit page:
 

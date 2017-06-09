@@ -49,7 +49,11 @@ The app is now finished. Follow these steps to run the app and view it on a simu
 
 Fantastic! You've finished this how-to series and you now have a mobile to-do app that works well and looks great.
 
-## 5 Related Content
+### 5 Feedback
+
+We are very interested in your feedback. Please take [this short survey](https://www.surveymonkey.com/r/6CPC8SK) to let us know what you think about this how-to.
+
+## 6 Related Content
 
 * [How to Create a Mobile To-Do App Step 1: Create a New Project, Module, and Domain Model](create-a-to-do-app-1)
 * [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2)

@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Adding Logic to the Microflows
 
-The **List view swipe** widget has been configured, but the two microflows you created do not have any logic yet. Follow these steps to add the logic to the microflows so they will execute the behavior we want:
+The **List view swipe** widget has been configured, but the two microflows you created do not have any logic yet. Follow these steps to add logic to the microflows so they will execute the behavior we want:
 
 1. Open the **ACT_ToDo_Delete** microflow.
 2. Add an **Activity** that deletes the **ToDo** object and refreshes the client.

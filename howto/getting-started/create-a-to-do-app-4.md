@@ -38,14 +38,14 @@ The **List view swipe** widget has been configured, but the two microflows you c
 
 ## 4 Running the App and Simulating Touch Behavior of Mobile Device
 
-The app is now finished. Follow these steps to run the app and view it on a simulated mobile device. This is the way to emulate the touch behavior of a user on a mobile device what is mentioned in Step 2 Chapter 5.10:
+The app is now finished, so you are going to view it on a simulated mobile device. To emulate the touch behavior of a user on a mobile device (which is mentioned in [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2#5)), follow these steps: 
 
 1. Save all changes and run the app locally.
 2. Open the **View App** dropdown and select **View Hybrid Mobile App**.
 3. Choose the **Profile** navigation profile.
 4. Click on the laptop icon under **Preview in browser**.
-5. Press **F12** to open the Developer Tool
-6. You can select the device you want to simlate and your mouse will act like a finger on a screen.
+5. Press **F12** to open the developer tool.
+6. Select the device you want to simlate, and your mouse will act like a finger on the screen.
 
 ![](attachments/create-a-to-do-app/todo-12.jpg)
 

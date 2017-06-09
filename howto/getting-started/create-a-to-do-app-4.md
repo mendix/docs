@@ -44,12 +44,12 @@ The app is now finished, so you are going to view it on a simulated mobile devic
 2. Open the **View App** dropdown and select **View Hybrid Mobile App**.
 3. Choose the **Profile** navigation profile.
 4. Click on the laptop icon under **Preview in browser**.
-5. Press **F12** to open the developer tool.
+5. Press **F12** to open the browser's Developer Tools.
 6. Select the device you want to simlate, and your mouse will act like a finger on the screen.
 
     ![](attachments/create-a-to-do-app/todo-12.png)
 
-Fantastic! You've finished this how-to series and you now have a mobile to-do app that works well and looks great.
+Fantastic! You've finished this how-to series and now have a mobile to-do app that works well and looks great.
 
 ### 5 Feedback
 

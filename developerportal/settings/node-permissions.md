@@ -1,4 +1,4 @@
---
+---
 title: "Security - Node Permissions"
 space: "Developer Portal"
 category: "Settings"
@@ -59,7 +59,7 @@ The Technical Contact will receive the following alerts from the cloud node:
 *   Notifications for maintenance from **Mendix Support**
 *   Alerts from the node when problems arise (CPU load is high, running out of disk space, etc.). The Technical Contact cannot turn these off
 
-To find more information about **Alerts**, read paragraph **2 Alerting Categories and Thresholds**. of the [Alerts](monitoring-application-health) documentation. 
+To find more information about **Alerts**, read paragraph **2 Alerting Categories and Thresholds**. of the [Alerts](/developerportal/operate/monitoring-application-health) documentation. 
 
 ### 4.2 Mendix Support
 
@@ -89,7 +89,7 @@ With transport rights you can deploy new versions of the application to the node
 
 ### 5.2 Access to Backups
 
-This permission grants access to the backups of the environment. You can view, [create](/howtogeneral/mendixcloud/how-to-create-backup), [download](/howtogeneral/mendixcloud/how-to-download-a-backup), and [restore a backup](/howtogeneral/mendixcloud/how-to-restore-a-backup).
+This permission grants access to the backups of the environment. You can view, [create](/developerportal/howto/how-to-create-backup), [download](/developerportal/howto/how-to-download-a-backup), and [restore a backup](/developerportal/howto/how-to-restore-a-backup).
 
 ### 5.3 Receive Alerts
 

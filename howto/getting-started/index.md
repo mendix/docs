@@ -6,12 +6,12 @@ description: "These introductory how-to's describe how to create and deploy your
 
 Get off to a flying start with these introductory how-to's.
 
-- [**Mobile To-Do App**](create-a-to-do-app) learns the basics of building an app for a mobile device.
-- [**Build an IoT App**](build-an-iot-app) lets you experience how to consume IoT services from an IoT Cloud platform.
-- [**Build a simple HRM App**](build-a-simple-hrm-app) learns the basic aspects of development with Mendix.
+| [![](attachments/overview/Mobile_to_do.png)](create-a-to-do-app) | [Create a Mobile To-Do App](create-a-to-do-app)<br>This how-to teaches the basics of building an app for mobile devices. You'll make use of the Mobile Quick Starter app and use handy widgets to add swipe gestures and use native device capabilities like sharing, taking a picture, and more. |
+|------|:-----|
+| [![](attachments/overview/Iot.png)](build-an-iot-app) | **[Build an IoT App](build-an-iot-app)<br> Lets you experience how to consume IoT services from an IoT Cloud platform.** |
+| [![](attachments/overview/HRM_app.png)](build-a-simple-hrm-app) | **[Build a Simple HRM App](build-a-simple-hrm-app)<br> Learn the basics of app development with Mendix by building a simple HRM app.** |
 
+Here are some other how-to's to get you started:
 
-| [![](attachments/overview/mobilequickstart.jpg)](create-a-to-do-app) | [![](attachments/overview/logo.png)](build-an-iot-app) | [![](attachments/overview/bluewave.png)](build-a-simple-hrm-app) |
-|------ | ----- | ------|
-| [Create a Mobile To-Do App](create-a-to-do-app) | [Build an IoT App](build-an-iot-app) | [Build a Simple HRM App](build-a-simple-hrm-app) |
-
+* [How to Install the Mendix Desktop Modeler](install-the-mendix-desktop-modeler)
+* [How to Create and Deploy Your First App](create-and-deploy-your-first-app)

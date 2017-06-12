@@ -1,7 +1,8 @@
 ---
-title: "Modeler"
+title: "Desktop Modeler"
 space: "Release Notes"
-description: "Presents all of the available release notees for the Mendix Desktop Modeler."
+toc-level: 1
+description: "Presents all of the available release notes for the Mendix Desktop Modeler."
 ---
 
 These are the release notes for the Mendix Desktop Modeler:
@@ -53,15 +54,9 @@ These are the release notes for the Mendix Desktop Modeler:
 * [4.1](4.1)
 * [4.0](4.0)
 
-<div class="alert alert-info">
-
-The patch release notes are included here.
-
-</div>
-
 <div class="alert alert-info">{% markdown %}
 
-The known issues for each release are described in [Known Issues](windows-service).
+The known issues for each release are described in [Known Issues](known-issues).
 
 {% endmarkdown %}</div>
 

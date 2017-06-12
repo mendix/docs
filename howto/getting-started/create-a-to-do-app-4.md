@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Adding Logic to the Microflows
 
-The **List view swipe** widget has been configured, but the two microflows you created do not have any logic yet. Follow these steps to add the logic to the microflows so they will execute the behavior we want:
+The **List view swipe** widget has been configured, but the two microflows you created do not have any logic yet. Follow these steps to add logic to the microflows so they will execute the behavior we want:
 
 1. Open the **ACT_ToDo_Delete** microflow.
 2. Add an **Activity** that deletes the **ToDo** object and refreshes the client.
@@ -38,18 +38,24 @@ The **List view swipe** widget has been configured, but the two microflows you c
 
 ## 4 Running the App and Simulating Touch Behavior of Mobile Device
 
-The app is now finished. Follow these steps to run the app and view it on a simulated mobile device:
+The app is now finished, so you are going to view it on a simulated mobile device. To emulate the touch behavior of a user on a mobile device (which is mentioned in [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2#5)), follow these steps: 
 
 1. Save all changes and run the app locally.
 2. Open the **View App** dropdown and select **View Hybrid Mobile App**.
 3. Choose the **Profile** navigation profile.
 4. Click on the laptop icon under **Preview in browser**.
+5. Press **F12** to open the browser's Developer Tools.
+6. Select the device you want to simlate, and your mouse will act like a finger on the screen.
 
-![](attachments/create-a-to-do-app/todo-00.jpg)
+    ![](attachments/create-a-to-do-app/todo-12.png)
 
-Fantastic! You've finished this how-to series and you now have a mobile to-do app that works well and looks great.
+Fantastic! You've finished this how-to series and now have a mobile to-do app that works well and looks great.
 
-## 5 Related Content
+### 5 Feedback
+
+We are very interested in your feedback. Please take [this short survey](https://www.surveymonkey.com/r/6CPC8SK) to let us know what you think about this how-to.
+
+## 6 Related Content
 
 * [How to Create a Mobile To-Do App Step 1: Create a New Project, Module, and Domain Model](create-a-to-do-app-1)
 * [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2)

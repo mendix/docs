@@ -88,7 +88,7 @@ The Cache holds a list of all the Objects that have been put in there. Even if t
 ## Removing Objects from Cache
 
 Whenever a Transient Object is no longer used you should remove the Object from Cache. If an Object is removed from Cache it allows the Garbage Collector to reuse the allocated memory and increase the applications performance. 
-Objects can be removed from Cache either by deleting it or by performing a rollback. ToDo: Analyze if this statement is supposed to be true.
+Objects can be removed from Cache either by deleting it or by performing a rollback.
 
 There is no difference in the behavior of a Rollback and a Delete when it’s executed for Transient Objects compared to Objects in the database. If you delete a Transient Object, it will also execute any delete behavior or prevention that is configured. Even if all the Objects are non-persistable.
 

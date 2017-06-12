@@ -4,18 +4,18 @@ space: "General How-To's"
 category: "Mendix Cloud"
 ---
 
-You may want to send email in the Mendix Cloud via, for instance, the [Email Module](https://appstore.home.mendix.com/link/app/259/Mendix/E-mail-module-with-templates). After you have installed this you will need to configure an SMTP server in your application. There are several options:
+You may want to send email from your apps running in the Mendix Cloud via, for instance, the [Email Module](https://appstore.home.mendix.com/link/app/259/Mendix/E-mail-module-with-templates). After you have installed this you will need to configure an SMTP server in your application. There are several options:
 
-|   | Enterprise/Professional Plans | Free Plan (sandbox) |
+|   | Mendix Cloud v3 | Mendix Cloud v4 | Free Plan (sandbox) |
 | --- | --- | --- |
-| **Amazon Simple Email Service** | &#x2713; | &#x2713; |
-| **Gmail** | &#x2713; | &#x2713; |
-| **MailGun** | &#x2713; | &#x2713; |
-| **SendGrid** | &#x2713; | &#x2713; |
-| **Other SMTP compatible services** | &#x2713; | &#x2713; |
-| **Mendix Mail Servers** | &#x2713; | &#x2717; |
+| **Amazon Simple Email Service** | &#x2713; | &#x2713; | &#x2713; |
+| **Gmail** | &#x2713; | &#x2713; | &#x2713; |
+| **MailGun** | &#x2713; | &#x2713; | &#x2713; |
+| **SendGrid** | &#x2713; | &#x2713; | &#x2713; |
+| **Other SMTP compatible services** | &#x2713; | &#x2713; | &#x2713; |
+| **Mendix Mail Servers** | &#x2713; | &#x2717; | &#x2717; |
 
-In our paid plans we include a local mail server for convenience and backwards compatibility. For new applications, or applications that send large amounts of e-mail we recommend using an external e-mail service.
+In Mendix Cloud v3 we include a local mail server for convenience and backwards compatibility. For new applications, or applications that send large amounts of e-mail we recommend using an external e-mail service.
 
 ## 1. External Email Providers
 
@@ -37,11 +37,13 @@ Frequently used providers (A-Z) are:
 *   [Mandrill](https://www.mandrill.com/) [[settings](http://help.mandrill.com/categories/20090941-SMTP-Integration)]
 *   [SendGrid](https://sendgrid.com/) [[settings](https://support.sendgrid.com/hc/en-us/articles/200328026-Recommended-SMTP-settings)]
 
+Please note that sending email from Mendix Cloud v4 can not happen over port 25, as this port is blocked in our infrastructure. Your SMTP provider needs to expose a secure port like 587, which is a best practice that most modern providers offer out of the box.
+
 Many users of our free tier use the settings of their own GMail account for convenience. There are many more email providers, most of which have SMTP compatibility.
 
 ## 2\. Mendix Mail Servers
 
-The Mendix mail servers are only available in our paid plans. If you are using more than 1000 messages per day we recommend you use an external mail service as described above. The settings for the Mendix mail servers are as follows:
+The Mendix mail servers are only available in Mendix Cloud v3. If you are using Mendix Cloud v3 and are sending more than 1000 messages per day we recommend you use an external mail service as described above. The settings for the Mendix mail servers are as follows:
 
 **Servername:** localhost
 **Port:** 25
@@ -67,9 +69,8 @@ When using Mendix mail servers and a sender address in a domain that has a restr
 
 ## 4\. Related content
 
-*   [Trends](trends)
-*   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
+*   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
+*   [How to Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud)
 *   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
-*   [Sending Email](sending-email)
 *   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
 *   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)

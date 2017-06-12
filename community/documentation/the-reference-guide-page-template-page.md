@@ -1,5 +1,5 @@
 ---
-title: "The Reference Guide Page Template"
+title: "Reference Guide Page Template"
 space: "Community"
 category: "Documentation"
 ---

@@ -99,12 +99,12 @@ const parseHtmlFiles = files => {
 };
 
 const getLinkPaths = link => {
-  // TODO: GET THIS FROM CONFIG
-  if (link.indexOf('/howto/') !== -1) {
-    link = link.replace(/\/howto\//g, '/howto7/');
+  //TODO: GET THIS FROM CONFIG
+  if (link.indexOf('/howto7/') !== -1) {
+    link = link.replace(/\/howto7\//g, '/howto/');
   }
-  if (link.indexOf('/refguide/') !== -1) {
-    link = link.replace(/\/refguide\//g, '/refguide7/');
+  if (link.indexOf('/refguide7/') !== -1) {
+    link = link.replace(/\/refguide7\//g, '/refguide/');
   }
 
   return [

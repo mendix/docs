@@ -32,7 +32,7 @@ howto6:
   priority: 5
   mendix_version: 6
   noindex: true
-howto7:
+howto:
   space: "Mendix 7 How-To's"
   priority: 6
   mendix_version: 7
@@ -51,7 +51,7 @@ refguide6:
   priority: 6
   mendix_version: 6
   noindex: true
-refguide7:
+refguide:
   space: "Mendix 7 Reference Guide"
   priority: 7
   mendix_version: 7
@@ -60,4 +60,7 @@ howtogeneral:
   priority: 6
 releasenotes:
   space: "Release Notes"
+  priority: false
+developerportal:
+  space: "Developer Portal"
   priority: false

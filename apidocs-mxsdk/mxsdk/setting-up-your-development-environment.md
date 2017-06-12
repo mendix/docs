@@ -5,79 +5,56 @@ parent: "your-learning-path-for-the-mendix-sdk"
 ---
 This tutorial will lead you through the process of setting up everything you need to start working with the Mendix Platform SDK. This includes setting up development tools and creating a first SDK script that automatically bootstraps a new Mendix app.
 
-### Contents of this page
-
 ## Quick Installation
 
 If you know what you are doing, the quick installation instructions below are for you. Otherwise, please skip this paragraph and continue with [Setting up your development tools](setting-up-your-development-environment).
 
 **Quick installation instructions**
 
-Set up a new `node` project and install the dependencies:
+For the quick installation, we assume that you have `node` already installed. 
+Set up a new `node` project and install the dependencies using the following steps:
 
 ```bash
 $ mkdir my-app-generator
 $ cd my-app-generator
 $ npm init --yes
-$ npm install -g typescript tsd
-$ npm install mendixmodelsdk mendixplatformsdk when --save
-$ tsd install when --save
-$ curl -o tsconfig.json -sL http://tinyurl.com/mxsdk-tsconfig
+$ npm install -g typescript
+$ npm install mendixmodelsdk mendixplatformsdk when @types/when --save
+$ tsc --init
 ```
 
-We use [curl](http://curl.haxx.se/download.html#Win32) to download a `tsconfig.json` file (see below) that we've already set up for you.
+## Setting Up Your Development Tools
 
-## Setting up your development tools
-
-1.  Install [Node.js](https://nodejs.org/). Make sure that version 4.2._x_ is installed. If you need to download it, you can find it on [this page](https://nodejs.org/en/download/releases/).
+1.  Install the latest LTS version of [Node.js](https://nodejs.org/). If you need to download it, you can find it on [this page](https://nodejs.org/en/download/releases/).
 
 2.  Open a terminal, on Windows e.g. [Command Prompt](http://windows.microsoft.com/en-us/windows/command-prompt-faq), and run the following command:
 
     ```text
     $ node --version
-    v4.2.2
+    v6.0.0
     ```
-
+` 
     For Debian-based Linux distributions such as Ubuntu, please refer to [this article](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
 
     In the rest of the tutorial, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
 
-3.  Install [Visual Studio Code](https://code.visualstudio.com/) - not to be confused with Visual Studio - a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v0.7.0+); check the version you are using through Help > About when you have Code opened.
-4.  Install TypeScript 1.6.2 with [`npm`](https://www.npmjs.com/) , Node.js' package manager:
+3.  Install [Visual Studio Code](https://code.visualstudio.com/) - not to be confused with Visual Studio - a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+); check the version you are using through Help > About when you have Code opened.
+4.  Install TypeScript 2.*.* with [`npm`](https://www.npmjs.com/) , Node.js' package manager:
 
     ```text
-    $ npm install -g typescript@1.6.2
+    $ npm install -g typescript@2.2.2
     ```
 
 5.  Use the following command to check the TypeScript compiler version on your PATH:
 
     ```text
     $ tsc --version
-    message TS6029: Version 1.6.2
+    Version 2.2.2
     ```
 
     If the version number is much lower, it could be that you also have an outdated TypeScript SDK on your system, left over from a previous installation. You can either uninstall the old TypeScript SDK, or bypass it by removing the old TypeScript SDK from your system's PATH environment variable.
 
-6.  Use the following command to install the [TypeScript Definition Manager for DefinitelyTyped](http://definitelytyped.org/tsd/). From the tsd homepage: "TSD is a package manager to search and install TypeScript definition files directly from the community driven [DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped) repository".
-
-    ```text
-    $ npm install -g tsd
-    ```
-
-7.  Use the following command to verify that a recent version is properly installed:
-
-    ```text
-    $ tsd --version
-    >> tsd 0.6.5
-    ```
-
-    A lot of libraries have been written in JavaScript, and require [custom typings](http://www.typescriptlang.org/Handbook#writing-dts-files) so that the TypeScript compiler can check for type correctness of the code that uses those libraries. Fortunately, the TypeScript community has already created those custom typings for many open source JavaScript libraries. See the [DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped) repository for typings for (at the time of writing) more than 1000 libraries.
-
-    Sometimes, invoking `tsd` will fail because the GitHub API usage limit has been reached. To fix this, create a `.tsdrc` file in your user (home) directory or in your project directory that contains a `{ "token": "your_github_token" }` GitHub OAuth token.
-
-    Please refer to the [tsd documentation](https://github.com/Definitelytyped/tsd#tsdrc) for further details.
-
-## Setting up a working directory for your script
+## Setting Up a Working Directory for Your Script
 
 1.  First, create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a  [`package.json`](https://docs.npmjs.com/files/package.json)with default contents. Through this file you control your `npm` package. 
 
@@ -100,9 +77,10 @@ We use [curl](http://curl.haxx.se/download.html#Win32) to download a `tsconfig.j
 
     ```text
     "dependencies": {
-      "mendixmodelsdk": "~2.0.0",
-      "mendixplatformsdk": "~2.0.0",
-      "when": "^3.7.3"
+      "@types/when": "^2.4.28",
+      "mendixmodelsdk": "~3.2.0",
+      "mendixplatformsdk": "~3.0.0",
+      "when": "^2.4.28"
     }
     ```
 
@@ -121,7 +99,9 @@ We use [curl](http://curl.haxx.se/download.html#Win32) to download a `tsconfig.j
     {
     	"compilerOptions" : {
     		"module" : "commonjs",
-    		"target" : "es5"
+    		"target" : "es5",
+            "noImplicitAny": false,
+            "sourceMap": false
     	},
     	"files" : [
     		"script.ts"
@@ -133,18 +113,6 @@ We use [curl](http://curl.haxx.se/download.html#Win32) to download a `tsconfig.j
 
     Create new files in your project directory with Visual Studio Code by hovering with the mouse cursor over the name of the working directory in the left side pane. A "new file" icon appears. Click it to create a new file. For more information on basic editing with Visual Studio Code, check the [manual](https://code.visualstudio.com/Docs/editor/codebasics).
 
-6.  Install the typings for the when.js library.
+## Next Step
 
-    ```java
-    $ tsd install when --save
-    ```
-
-    This creates a `typings` directory in your project directory, which will contain subdirectories with imported typings, and a `tsd.d.ts` which can be referenced from your script to import all those typings. Again, add this `typings` directory to your version control system's ignore list if you use a VCS. 
-
-    These typings will be added automatically to the list in the `tsd.json` file created in the previous step.
-
-    Use the following command to re-install configured typings, e.g. after checking out the repository from version control, or if you cleaned up/deleted the `typings` directory: `tsd install`
-
-## Next step
-
-Continue with [Getting started - Creating your first script](creating-your-first-script)
+Continue with [Getting started - Creating Your First Script](creating-your-first-script)

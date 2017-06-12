@@ -3,6 +3,39 @@ title: "Platform Portal"
 space: "Release Notes"
 toc-level: "1"
 ---
+## June 7th, 2017
+
+### Fixes
+
+* We fixed the issue with the input of Japanese characters in the feedback widget.
+
+## May 19th, 2017
+
+### Fixes
+
+* We corrected the backup retention scheme for paid applications on Mendix Cloud v4, and it is now the same as on Mendix Cloud v3.
+* The "view current log" functionality for Mendix Cloud v4 applications was empty by default and the **Show all** button needed to be used. It now shows the content right away.
+
+## May 17th, 2017
+
+### Improvements
+
+* We upgraded the SSL/TLS ciphers for connections to apps in Mendix Cloud v4. These included dropping block-based ciphers (3DES), moving to 2048 bit DH params. Mendix Cloud v4 now has an [A+ rating at SSL Labs](https://www.ssllabs.com/ssltest/index.html).
+* We added HTTP/2 support for connections to all apps in Mendix Cloud v3 and Mendix Cloud v4. HTTP/2 is supported by all major browsers and results in more efficient network connections. [Read more about HTTP/2 here](https://http2.github.io/faq/).
+
+## May 4th, 2017
+
+### Improvements
+
+* Transporting a new deployment package dead-ended in a "Deploy successful" screen. Users are redirected to the environment details screen, which is much more useful.
+
+### Fixes
+
+* We fixed the failing of large backups in Mendix Cloud v4. Backups will now only fail when the disk of the database is filled up.
+* Alert Details now highlights the right menu item.
+* Fixed a race condition where two apps created at the same time could get the same domain name.
+* Added a warning message before restore backup, to prevent users clearing their environment. Clearing the environment before restoring resulted in a much slower non-incremental restore operation.
+* Disabled automatic copying of "Data Snapshots" to empty environments in Mendix Cloud v4 Pro/Enterprise environments. This features is only used in Free Apps. Weak admin passwords in the database snapshot would prevent the app from starting.
 
 ## April 5th, 2017
 

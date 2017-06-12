@@ -30,8 +30,8 @@ We like to work with our community and encourage you to create and contribute us
 
 ## 4\. Related content
 
-*   [Managing your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
+*   [Managing your Application Requirements with Mendix](/developerportal/howto/managing-your-application-requirements-with-mendix)
 *   [Starting your own repository](starting-your-own-repository)
 *   [Contributing to a GitHub repository](contributing-to-a-github-repository)
 *   [Using Team Server - Version Control](using-team-server-version-control)
-*   [Gathering user feedback](gathering-user-feedback)
+*   [Gathering user feedback](/developerportal/howto/gathering-user-feedback)

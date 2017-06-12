@@ -5,7 +5,7 @@ parent: "your-learning-path-for-the-mendix-sdk"
 ---
 This tutorial will guide you through the process of setting up everything you need to start working with the Mendix Platform SDK. In [the previous part](setting-up-your-development-environment) you set up all the development tools. Let's create an SDK script that automatically bootstraps a new Mendix app.
 
-## Writing a first script
+## Writing a First Script
 
 After setting up all the prerequisites, you can start writing a first script that will use the Mendix Platform SDK.
 
@@ -15,8 +15,6 @@ After setting up all the prerequisites, you can start writing a first script tha
 2.  Copy the following code to the  `script.ts` file:
 
     ```js
-    /// <reference path='./typings/tsd.d.ts' />
-
     import {MendixSdkClient, Project, OnlineWorkingCopy} from 'mendixplatformsdk';
     import {IModel, domainmodels} from 'mendixmodelsdk';
     import when = require('when');
@@ -30,7 +28,7 @@ After setting up all the prerequisites, you can start writing a first script tha
         .then(workingCopy => loadDomainModel(workingCopy))
         .then(workingCopy => {
             const dm = pickDomainModel(workingCopy);
-            const domainModel = dm.load();
+            const domainModel = dm.asLoaded();
             let entity = domainmodels.Entity.createIn(domainModel);
             entity.name = `NewEntity_${Date.now() }`;
             entity.location = { x: 100, y: 100 };
@@ -79,16 +77,14 @@ client.platform().createNewApp(`NewApp-${Date.now() }`)
 
 The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix platform which will also create a commit in the Team Server repository. The result of this call will be accessible via the Mendix Modeler but in order to be able to manipulate it using the SDK you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
 
-<div class="alert alert-info">{% markdown %}
+If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Desktop Modeler version. Earlier versions might not be supported!
 
-If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the Mendix Modeler version 5.20 or later. Earlier versions are not supported!
-
-{% endmarkdown %}</div>**lines 13-21**
+**lines 13-21**
 ```js
     .then(workingCopy => loadDomainModel(workingCopy))
     .then(workingCopy => {
         const dm = pickDomainModel(workingCopy);
-        const domainModel = dm.load();
+        const domainModel = dm.asLoaded();
         let entity = domainmodels.Entity.createIn(domainModel);
         entity.name = `NewEntity_${Date.now() }`;
         entity.location = { x: 100, y: 100 };
@@ -96,7 +92,7 @@ If you create an online working copy from an existing app on the Team Server, be
     })
 ```
 
-Now that you have an online working copy, you can start manipulating the model. In this example, first you grab the default module named "MyFirstModule" (see the functions `loadDomainModel()` and `pickDomainModel()` on lines 32-40). Once you have loaded the domain model in memory with the function `dm.load()`, you create a new Entity in the domain model and give it a name and coordinates.
+Now that you have an online working copy, you can start manipulating the model. In this example, first you grab the default module named "MyFirstModule" (see the functions `loadDomainModel()` and `pickDomainModel()` on lines 32-40). Once you have loaded the domain model in memory with the function `dm.asLoaded()`, you create a new Entity in the domain model and give it a name and coordinates.
 
 **lines 22-29**
 ```js
@@ -111,15 +107,11 @@ Now that you have an online working copy, you can start manipulating the model. 
 
 Once you are done with the model changes, you can commit the changes back to the Team Server by calling `workingCopy.commit()`. Finally, in the done block you print a success message if things went OK, or handle the error otherwise. 
 
-<div class="alert alert-success">{% markdown %}
-
 You may have noticed that the script above uses `then()` and `done()` methods instead of callback functions. These can be called on the Promises that the Platform SDK returns to enable you to handle the result of asynchronous calls.
 
 Read more about [consuming promises](http://know.cujojs.com/tutorials/promises/consuming-promises) with [when.js](https://github.com/cujojs/when).
 
-{% endmarkdown %}</div>
-
-## Compiling and running the script
+## Compiling and Running the Script
 
 1.  Compile the script with the TypeScript compiler into JavaScript using the following command:
 
@@ -152,16 +144,14 @@ Read more about [consuming promises](http://know.cujojs.com/tutorials/promises/c
     Successfully committed revision: 3\. Done.
     ```
 
-    Note that the steps for project creation (line 3) and committing to the Team Server (line 10) can take some time, so please be patient. Be aware that 'revision -1' refers to the latest revision, and that 'branch null' is equal to mainline.
+Note that the steps for project creation (line 3) and committing to the Team Server (line 10) can take some time, so please be patient. Be aware that 'revision -1' refers to the latest revision, and that 'branch null' is equal to mainline.
 
-## Opening the app in the Mendix Modeler
+## Opening the App in the Mendix Modeler
 
-1.  In the Mendix [Development Portal](https://sprintr.home.mendix.com/), navigate to your Projects. The app you just created should be visible at the top of the list.
+1.  In the Mendix [Developer Portal](https://sprintr.home.mendix.com/), navigate to your Projects. The app you just created should be visible at the top of the list.
+2.  Open the new project, and on the right hand side click on **Edit in Modeler**.
+3.  If you have the latest [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/), it will start and load the app you just created from the Team Server.
 
-2.  Open the new project, and on the right hand side click on the **Edit in Modeler** button.
+## Next Step
 
-3.  If you have the [Mendix Modeler](https://appstore.home.mendix.com/link/modelers/) 6.0 or later, it will start and load the app you just created from the Team Server.
-
-## Next step
-
-Continue with [Creating the domain model](creating-the-domain-model)
+Continue with [Creating the Domain Model](creating-the-domain-model)

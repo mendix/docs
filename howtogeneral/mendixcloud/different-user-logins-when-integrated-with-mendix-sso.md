@@ -272,10 +272,9 @@ The custom login page can be created in a similar manner as in scenario 2, with 
 You can view the implementation by deploying your app to the Mendix Cloud and going to your app, e.g. `https://yourapp.mendixcloud.com/`, and going to the page where you inserted the link. Click on the link, and you should see the custom login page. Test the local account login, and logout. Then test the Mendix account login.
 
 ## 6\. Related content
-
 *   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
-*   [Trends](trends)
-*   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
+*   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
+*   [How to Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud)
 *   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
 *   [Sending Email](sending-email)
 *   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)

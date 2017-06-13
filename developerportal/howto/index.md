@@ -22,7 +22,7 @@ This category contains documents about the use of specific tasks in the [Develop
 **Configuration**
 
 *   [How to Configure Custom Domains](/developerportal/howto/custom-domains)
-*   [How to Configure Maintenance Windows](developerportal/howto/maintenance-windows)
+*   [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
 
 **Connecting to a Cloud Node**
 

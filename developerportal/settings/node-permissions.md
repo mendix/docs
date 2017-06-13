@@ -115,4 +115,4 @@ For more information, see [Alerts](/developerportal/operate/monitoring-applicati
 *   [Metrics](/developerportal/operate/metrics)
 *   [Logs](/developerportal/operate/logs)
 *   [Settings](/developerportal/settings)
-*   [Technical Contact](/developerportal/technical-contact)
+*   [Technical Contact](/developerportal/settings/technical-contact)

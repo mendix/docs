@@ -10,7 +10,7 @@ tags: ["Node","Permission","Developer Portal"]
 
 Fine grained access management for your Mendix Cloud environments is handled in the **Node Security** tab under **Security**. Each team member can subscribe or unsubscribe to the alerts, and the **Technical Contact** can manage various permissions of each team member per environment.
 
-Find out more about [Settings](settings)
+Learn more about [Settings](settings)
 
 <div class="alert alert-info">{% markdown %}
 
@@ -63,7 +63,7 @@ The Technical Contact will receive the following alerts from the cloud node:
 *   Notifications for maintenance from **Mendix Support**
 *   Alerts from the node when problems arise (CPU load is high, running out of disk space, etc.). The Technical Contact cannot turn these off
 
-To find more information about **Alerts**, read paragraph **2 Alerting Categories and Thresholds**. of the [Alerts](/operate/monitoring-application-health) documentation. 
+To learn more about **Alerts**, read paragraph **2 Alerting Categories and Thresholds** of the [Alerts](/operate/monitoring-application-health) documentation. 
 
 ### 4.2 Mendix Support
 

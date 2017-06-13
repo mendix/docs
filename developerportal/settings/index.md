@@ -7,9 +7,10 @@ space: "Developer Portal"
 
 In the category **Settings** you can find the following:
 
-*   General settings
-*   Security settings
-*   API Key settings
+*  [General](/developerportal/settings/general-settings) settings
+*  Security-App Team settings
+*  [Security-Node](/developerportal/settings/node-permissions) settings
+*  [API Key](/developerportal/settings/api-key) settings
 
 <div class="alert alert-info">{% markdown %}
 
@@ -86,3 +87,8 @@ Here you can grand those team members with the following permissions:
 Here you can view and create a new API key's by clicking **Create API key**.
 
 ## 5 Related Content
+
+*  [API Key](/developerportal/settings/api-key) settings
+*  [General](/developerportal/settings/general-settings) settings
+*  [Security-Node](/developerportal/settings/node-permissions) settings
+*  [Technical Contact](/developerportal/settings/technical-contact)

@@ -18,6 +18,9 @@ Note that you need to have an **MxID** to get access to the [Developer Portal](h
 
 {% endmarkdown %}</div>
 
+
+## 2 Node Settings
+
 In this section you will learn about configuring the user roles and permissions of the cloud node. Follow these steps to access the node permissions:
 
 1.  Go to the [Developer Portal](http://home.mendix.com).
@@ -27,24 +30,19 @@ In this section you will learn about configuring the user roles and permissions 
 5.  Click **Security** in the left navigation panel.
 6.  Go to the **Node Permissions** tab.
 
-![](attachments/nodepermission.jpg)
+## 3 User Roles
 
-## 2 User Roles
-
-All the settings in the cloud node can be managed by the **Technical Contact**, other members are restricted in what they can manage.
+Users with the Technical Contact role can manage all the settings in the cloud node, other members are restricted in what they can manage.
 
 A cloud node always has:
-
-*   only one **Technical Contact**
-*   any number of app team members with **View Deploy and Monitor** permissions in the **App Team** security settings
-
+* only one Technical Contact
+* any number of app team members with **View Deploy and Monitor** permissions
 
 <div class="alert alert-info">{% markdown %}
 
-Note that only app team members with the **View Deploy and Monitor** permissions show up in the list of **Node Permissions**. These permissions are available in the **App Team** tab of **Security**. A SCRUM Master of the app can assign the **View Deploy and Monitor** permissions in the **App Team permissions** to any team member by selecting one of the following app team user roles: **Application Operator**, **Business Engineer**, **Performance Engineer/Tester**, **SCRUM Master**.
+Note that only app team members with the **View Deploy and Monitor** permissions show up in the list of **Node Permissions**. These permissions are available in **App Team**. A SCRUM Master of the app can assign the **View Deploy and Monitor** permissions in the **App Team permissions** to any team member by selecting one of the following app team user roles: **Application Operator**, **Business Engineer**, **Performance Engineer/Tester**, **SCRUM Master**.
 
 {% endmarkdown %}</div>
-
 
 ### 4 Technical Contact
 
@@ -63,7 +61,8 @@ The Technical Contact will receive the following alerts from the cloud node:
 *   Notifications for maintenance from **Mendix Support**
 *   Alerts from the node when problems arise (CPU load is high, running out of disk space, etc.). The Technical Contact cannot turn these off
 
-To learn more about **Alerts**, read paragraph **2 Alerting Categories and Thresholds** of the [Alerts](/developerportal/operate/monitoring-application-health) documentation. 
+
+To learn more about **Alerts**, read paragraph **2 Alerting Categories and Thresholds** of the [Alerts](/developerportal/operate/monitoring-application-health) documentation.
 
 ### 4.2 Mendix Support
 
@@ -78,15 +77,14 @@ Note that any change that are affects the license must first be discussed with t
 
 {% endmarkdown %}</div>
 
-## 5 Permission types
+## 5 Node Permissions
 
-There are five types of permissions that can be provided to users:
+The node permissions can be:
 
-*   Transport rights
-*   Access to backups
-*   Receive alers
-*   API rights
-*   Access to monitoring
+* Managed only by the Technical Contact
+* Accessed by regular team members who have the permission to **View Deploy and Monitor**
+
+![](attachments/nodepermission.jpg)
 
 ### 5.1 Transport Rights
 
@@ -106,8 +104,9 @@ With the API rights you can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-a
 
 ### 5.5 Access to Monitoring
 
-With this permission you can view the application **Metrics**, **Logs**, and **Alerts** under the **Operate** category in the [Developer Portal](http://home.mendix.com). This allows you to successfully operate your Mendix Cloud environments.
+With this permission you can view the application metrics, logs, and alerts under the **Operate** category in the [Developer Portal](http://home.mendix.com). This allows you to successfully operate your Mendix Cloud environments.
 
+For more information, see [Alerts](/developerportal/operate/monitoring-application-health)
 
 ## 6 Related Content
 

@@ -10,7 +10,7 @@ tags: ["Node","Permission","Developer Portal"]
 
 Fine grained access management for your Mendix Cloud environments is handled in the **Node Security** tab under **Security**. Each team member can subscribe or unsubscribe to the alerts, and the **Technical Contact** can manage various permissions of each team member per environment.
 
-Learn more about [Settings](settings)
+Learn more about [Settings](/developerportal/settings)
 
 <div class="alert alert-info">{% markdown %}
 
@@ -63,7 +63,7 @@ The Technical Contact will receive the following alerts from the cloud node:
 *   Notifications for maintenance from **Mendix Support**
 *   Alerts from the node when problems arise (CPU load is high, running out of disk space, etc.). The Technical Contact cannot turn these off
 
-To learn more about **Alerts**, read paragraph **2 Alerting Categories and Thresholds** of the [Alerts](/operate/monitoring-application-health) documentation. 
+To learn more about **Alerts**, read paragraph **2 Alerting Categories and Thresholds** of the [Alerts](/developerportal/operate/monitoring-application-health) documentation. 
 
 ### 4.2 Mendix Support
 
@@ -94,7 +94,7 @@ With transport rights you can deploy new versions of the application to the node
 
 ### 5.2 Access to Backups
 
-This permission grants access to the backups of the environment. You can view, [create](/howto/how-to-create-backup), [download](/howto/how-to-download-a-backup), and [restore a backup](/howto/how-to-restore-a-backup).
+This permission grants access to the backups of the environment. You can view, [create](/developerportal/howto/how-to-create-backup), [download](/developerportal/howto/how-to-download-a-backup), and [restore a backup](/developerportal/howto/how-to-restore-a-backup).
 
 ### 5.3 Receive Alerts
 
@@ -111,9 +111,9 @@ With this permission you can view the application **Metrics**, **Logs**, and **A
 
 ## 6 Related Content
 
-*   [Alerts](/operate/monitoring-application-health)
-*   [Backups](/operate/backups)
-*   [Metrics](/operate/metrics)
-*   [Logs](/operate/logs)
-*   [Settings](settings)
-*   [Technical Contact](technical-contact)
+*   [Alerts](/developerportal/operate/monitoring-application-health)
+*   [Backups](/developerportal/operate/backups)
+*   [Metrics](/developerportal/operate/metrics)
+*   [Logs](/developerportal/operate/logs)
+*   [Settings](/developerportal/settings)
+*   [Technical Contact](/developerportal/technical-contact)

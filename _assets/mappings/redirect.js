@@ -2200,6 +2200,10 @@ module.exports = {
       to: "/howtogeneral/mendixcloud/how-to-deploy-a-mendix-app-on-azure"
     },
     {
+      from: "/mendixcloud/how-to-link-app-to-node",
+      to: "/developerportal/howto/how-to-link-app-to-node"
+    },
+    {
       from: "/mendixcloud/Mendix+Cloud",
       to: "/howtogeneral/mendixcloud/"
     },

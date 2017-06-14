@@ -5,43 +5,43 @@ space: "Developer Portal"
 
 ## 1 Introduction
 
-The **Collaborate** category is intended to collaborate with your team and together keep track on the work progress of the App.
+The **Collaborate** category supports collaboration with your team and the tracking of the sprints and other tasks of the app.
 This category is divided into five pages:
 
 *   (App) Buzz
 *   Team
 *   Stories
-*   Feedback (off your App)
+*   Feedback (about your app)
 *   Documents
 
 ## 2 Buzz
 
-Here you can see and share ideas as well as collaborate with your team. You will get an overview of new team members, new stories or changes on them and added/completed sprints.
+The Buzz lets you see and share ideas as well as collaborate with your team. You will get an overview of new team members, new stories and their changes, and added or completed sprints.
 
 ## 3 Team
 
-On this page you can find your team members. Here you can also **Invite Members** and **Manage your team**. 
+The Team page shows an overview of your team members. It's also the place to **Invite Members** and **Manage your team**.
 
-You can clicking **Name** or **Role** to filter in an ascending or descending order.
+Click **Name** or **Role** to filter in an ascending or descending order. The default sorting order is ascending by **Name**.
 
 ## 4 Stories
 
-In Stories you can add/edit/delete stories, sprints and labels. There is also a possibility to import/export from/to Excel and view the history. 
+The Stories page lets you add, edit, and delete stories, sprints, and labels. You can also import and export from and to Excel and view the history. 
 
 ## 5 Feedback
 
-On this page you can view and manage all feedback provided on the App. There are two ways of adding feedback on your App:
+The Feedback pages shows an overview of the feedback provided about the app. There are two ways of submitting feedback:
 
-1. Add feedback on the **Feedback** page in the Developer Portal
-2. Add feedback by going to the App. To go to the App, click **View App**
+1. Add feedback on the **Feedback** page in the Developer Portal.
+2. Add feedback by going to the app. To go to the app, click **View App**.
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
-The **Feedback button** in the **Developer Portal** is to provide feedback on the Mendix Platform. It is intended for low priority issues, questions and ideas on how to improve the Mendix Platform.
+The **Feedback button** in the **Developer Portal** is is used to provide feedback on the Mendix Platform. It is intended for low priority issues, questions, and ideas on how to improve the Mendix Platform.
 
-{% endmarkdown %}</div>
+</div>
 
 
 ## 6 Documents
 
-Here you can upload files concerning the App. It is possible to replace a current file with a newer version, add labels, comment and download files. 
+The Documents pages lets you upload files related to the app. It is possible to replace a current file with a newer version, add labels, comment, and download files. 

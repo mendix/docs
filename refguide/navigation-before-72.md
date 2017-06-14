@@ -7,9 +7,9 @@ description: "Describes the concept of navigation in apps and the properties of 
 
 ## 1 Introduction
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-warning">{% markdown %}
 
-This document describes the concept of navigation in Mendix applications and the properties of a profile. For details on how this works in Mendix version 7.2 and higher, see [Navigation](navigation).
+This document describes the concept of navigation in Mendix applications and the properties of a profile. Applicable for Mendix versions 7.0 and 7.1. For details on how this works in Mendix versions 7.2 and 7.3, see [Navigation In 7.2 and 7.3](navigation-in-72-and-73). For Mendix version 7.4 and higher, see [Navigation](navigation).
 
 {% endmarkdown %}</div>
 

@@ -5,9 +5,9 @@ parent: "navigation-before-72"
 description: "Describes usage of the Hybrid Tablet profile in a Mendix app for Mendix versions 7.0 and 7.1."
 ---
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-warning">{% markdown %}
 
-For details on how this works in Mendix version 7.2 and higher, see [Navigation Profile](navigation-profile).
+For details on how this works in Mendix versions 7.2 and 7.3, see [Navigation In 7.2 and 7.3](navigation-in-72-and-73). For Mendix version 7.4 and higher, see [Navigation](navigation).
 
 {% endmarkdown %}</div>
 

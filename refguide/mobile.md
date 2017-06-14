@@ -7,7 +7,7 @@ Mendix allows you to quickly build apps for mobile devices. This document gives 
 
 ## Navigation
 
-Every app starts at the home page. You can specify different home pages for phones and tablets in the [Navigation](navigation) document. The mobile profiles can be enabled and disabled separately. If you enable a profile, you also have to provide its home page. Apart from the home page, different home page for different user roles can be specified. Also, there is a default menu that can be used in [menu widgets](menu-widgets).
+Every app starts at the home page. You can specify different home pages for phones and tablets in the [Navigation](navigation) document. The mobile profiles can be added and removed separately. If you add a profile, you also have to provide its home page. Apart from the home page, different home page for different user roles can be specified. Also, there is a default menu that can be used in [menu widgets](menu-widgets).
 
 ![](attachments/16714058/18582284.png)
 
@@ -37,7 +37,8 @@ To access native functions of the device, we provide a number of PhoneGap widget
 
 The documentation in this section describes a new feature that is still in beta, and is subject to change before the final release.
 
-{% endmarkdown %}</div>A separate profile is available for building [offline apps](offline). These apps can run even when there is no network connection available, because they store their data on the device itself. When the device connects to the network, the user can synchronize with the main application. Note that there are some restrictions compared to connected apps.
+{% endmarkdown %}</div>
+Separate profiles are available for building [offline apps](offline). These apps can run even when there is no network connection available, because they store their data on the device itself. When the device connects to the network, the user can synchronize with the main application. Note that there are some restrictions compared to connected apps.
 
 ## Documents in This Category
 

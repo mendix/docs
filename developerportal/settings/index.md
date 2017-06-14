@@ -5,7 +5,7 @@ space: "Developer Portal"
 
 ## 1 Introduction
 
-In the category **Settings** you can find the following:
+The **Settings** category contains the following docs:
 
 *  [General](/developerportal/settings/general-settings) settings
 *  Security-App Team settings
@@ -22,12 +22,12 @@ Follow these steps to find the **Settings** category:
 
 1.  Go to the [Developer Portal](http://home.mendix.com).
 2.  Click **Apps** in the top navigation panel.
-4.  Select the App you want to manage.
+4.  Select the app you want to manage.
 5.  Click **Security** in the left navigation panel.
 
 ## 2 General
 
-In **General** there is an overview about the App:
+The **General** page displays an overview of the app's information:
 
 *   App name
 *   Description
@@ -37,8 +37,8 @@ In **General** there is an overview about the App:
 
 There are two actions you can take:
 
-*   Edit the App by clicking **Edit settings**
-*   Leave the App by clicking **Leave app**
+1. Edit the app by clicking **Edit settings**
+2. Leave the app by clicking **Leave app**
 
 ## 3 Security
 
@@ -49,8 +49,8 @@ In **Security** there are two tabs:
 
 ### 3.1 App Team
 
-In **App Team** you can view and delete the team members that are currently working on the App. Each member has a **Role**.
-You can change here the role of each team member into:
+The **App Team** page lets you view and delete the team members that are currently working on the app. Each member has a **Role**.
+You can change the role of each team member into:
 
 *   Application Operator
 *   Business Engineer
@@ -66,7 +66,7 @@ There are two actions you can take:
 
 ### 3.2 Node Permissions
 
-In **Node Permissions** you can view the team members that have the **App Team** permission to **View Deploy and Monitor** the node. It is possible to grand di
+The **Node Permissions** page lets you view the team members that have the **App Team** permission to **View Deploy and Monitor** the node.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -74,7 +74,7 @@ Note Node Permissions are only available for Licensed Apps.
 
 {% endmarkdown %}</div>
 
-Here you can grand those team members with the following permissions:
+You can grant those team members the following permissions:
 
 *   Transport rights
 *   Access to backup
@@ -84,7 +84,7 @@ Here you can grand those team members with the following permissions:
 
 ## 4 API Keys
  
-Here you can view and create a new API key's by clicking **Create API key**.
+The **API Keys** page lists the existing API keys and lets you create new keys by clicking **Create API key**.
 
 ## 5 Related Content
 

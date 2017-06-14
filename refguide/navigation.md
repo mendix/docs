@@ -30,6 +30,12 @@ In Mendix 7.4.0, separation for Tablet and Phone were introduced for both Hybrid
 
 {% endmarkdown %}</div>
 
+<div class="alert alert-warning">{% markdown %}
+
+In case of trubbles with converting profiles from Mendix 7.2 and 7.3 to Mendix 7.4 see [Solving Issues with Navigation Profiles Conversion to 7.4](navigation-conversion-to-74)
+
+{% endmarkdown %}</div>
+
 The device type of the currently logged-in user is available in [microflows](microflows) as the `$currentDeviceType` variable. The type of this variable is the [enumeration](enumerations) `System.DeviceType`, which has the values `Phone`, `Tablet`, and `Desktop`. You can use the `$currentDeviceType` variable to perform different actions based on the device type. A typical example is to show different pages based on the device type.
 
 ### 2.1 Responsive

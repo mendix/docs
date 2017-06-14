@@ -2,28 +2,34 @@
 title: "Navigation Profile"
 space: "Mendix 7 Reference Guide"
 parent: "navigation"
-description: "Describes the profile properties and profile buttons for Mendix version 7.2 and higher."
+description: "Describes the profile properties and profile buttons for Mendix version 7.4 and higher."
 ---
 
 <div class="alert alert-info">{% markdown %}
 
-For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72).
+For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For 7.2 and 7.3 see [Navigation In Mendix Versions 7.2 and 7.3](navigation-in-72-and-73)
 
 {% endmarkdown %}</div>
 
-## 1 Profile Properties
+## 1 Overview
 
-### 1.1 General
+Managment of profiles is available from Navigation section of a project.
 
-**Profile name**
+![](attachments/Navigation+Profiles/navigation_profile_74.png)
 
-The name to uniquely identify a profile. [Menu widgets](menu-widgets) using the menu of a profile refer to this name.
+Profile could be added with Add navigation profile button. Only one profile per type is allowed. While adding profile it is possible to copy settings from existing profile.
+
+![](attachments/Navigation+Profiles/add_navigation_profile_dialog_74.png)
+
+## 2 Profile Properties
+
+### 2.1 General
 
 **Application Title**
 
 Specifies the application title. This title is shown in the title bar of the browser.
 
-### 1.2 Home Pages
+### 2.2 Home Pages
 
 **Default Home Page**
 
@@ -35,13 +41,13 @@ By using role-based home pages, you can show different home pages for different 
 
 For each role-based home page, you can specify the user role it applies to and the target (page or microflow) that will be opened.
 
-### 1.3 Authentication
+### 2.3 Authentication
 
 If an [anonymous user](anonymous-users) tries to access a resource to which the user has no access, the configured [sign-in page](authentication-widgets) will be displayed, prompting the user to sign in.
 
 If the sign-in page is set to none, a built-in pop-up window will appear instead. The page title is translatable and may be overridden.
 
-### 1.4 Menu
+### 2.4 Menu
 
 Each device type contains a default menu. You can use these menus in [menu widgets](menu-widgets). Defining the menu for a device type works the same as when editing a menu document. For more details, see [Menu](menu).
 
@@ -51,18 +57,12 @@ If [security](project-security) is enabled, the menu will only show the items to
 
 {% endmarkdown %}</div>
 
-## 2 Profile Buttons
+## 3 Profile Buttons
 
-### 2.1 Add
+### 3.2 Change Profile Type
 
-Allows for adding new profiles. The profile name and profile kind can be provided. 
+Allows for changing the [profile type](navigation).
 
-The **Copy settings from profile 'Profile'** check box enables creating a duplicate of the current profile. It copies over all the settings except the profile name and profile kind.
-
-### 2.2 Change Kind
-
-Allows for changing the [profile kind](navigation).
-
-### 2.3 Delete
+### 3.3 Delete
 
 Deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.

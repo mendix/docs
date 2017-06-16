@@ -7,7 +7,7 @@ description: "Describes usage of the Tablet profile in a Mendix app for Mendix v
 
 <div class="alert alert-warning">{% markdown %}
 
-For details on how this works in Mendix versions 7.2 and 7.3, see [Navigation In 7.2 and 7.3](navigation-in-72-and-73). For Mendix version 7.4 and higher, see [Navigation](navigation).
+For details on how this works in Mendix versions 7.2 and 7.3, see [Navigation in 7.2 and 7.3](navigation-in-72-and-73). For Mendix version 7.4 and higher, see [Navigation](navigation).
 
 {% endmarkdown %}</div>
 

@@ -9,17 +9,17 @@ description: "Describes the concept of navigation in apps and the properties of 
 
 <div class="alert alert-warning">{% markdown %}
 
-This document describes the concept of navigation in Mendix applications and the properties of a profile. Applicable for Mendix versions 7.2 and 7.3. For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For Mendix version 7.4 and higher, see [Navigation](navigation).
+This document describes the concept of navigation in Mendix applications and the properties of a profile. This is applicable to Mendix versions 7.2 and 7.3. For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For Mendix version 7.4 and higher, see [Navigation](navigation).
 
 {% endmarkdown %}</div>
 
 <div class="alert alert-info">{% markdown %}
 
-This document describes the concept of navigation in Mendix applications and the properties of a profile. In Mendix 7.2.0, and in Mendix 7.4.0 the profiles have received an updates. For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For 7.2 and 7.3 see [Navigation In 7.2 and 7.3](navigation-in-72-and-73)
+This document describes the concept of navigation in Mendix applications and the properties of a profile. In Mendix 7.2.0 and in Mendix 7.4.0, the profiles received updates. For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For 7.2 and 7.3 see [Navigation in 7.2 and 7.3](navigation-in-72-and-73).
 
 {% endmarkdown %}</div>
 
-The Navigation document can be found by expanding the Project node in the Project Explorer. It defines the navigation structure of the application for users. It allows you to set the home page of your application and to define the menu structures that can be used in [menu widgets](menu-widgets). A user's home page can vary based on their [user roles](user-roles).
+The **Navigation** document can be found by expanding the **Project** node in the Project Explorer. It defines the navigation structure of the application for users. It allows you to set the home page of your application and to define the menu structures that can be used in [menu widgets](menu-widgets). A user's home page can vary based on their [user roles](user-roles).
 
 ## 2 Profiles
 
@@ -27,9 +27,9 @@ At the heart of the navigation model in Mendix, there are five kinds of profiles
 
 <div class="alert alert-info">{% markdown %}
 
-As of Mendix 7.0.2, the Offline device profile is replaced by the [Hybrid Phone profile](hybrid-phone-profile). In addition to this, a new device profile is now available, which is called the [Hybrid Tablet profile](hybrid-tablet-profile). All the settings from the Offline device profile are automatically copied to the Hybrid Phone profile.
+In Mendix 7.0.2, the Offline device profile was replaced by the [Hybrid Phone profile](hybrid-phone-profile). In addition to this, a new device profile was made available, which was called the [Hybrid Tablet profile](hybrid-tablet-profile). All the settings from the Offline device profile were automatically copied to the Hybrid Phone profile.
 
-In Mendix 7.2.0, the Hybrid Tablet and Hybrid Phone profiles are converted to profiles of the Hybrid app or Hybrid offline app type, based on the offline enabled option.
+In Mendix 7.2.0, the Hybrid Tablet and Hybrid Phone profiles were converted to profiles of the Hybrid app or Hybrid offline app type, based on the offline enabled option.
 
 {% endmarkdown %}</div>
 
@@ -41,11 +41,11 @@ Every app always has one profile of a Responsive type which cannot be deleted. T
 
 ### 2.2 Tablet (Browser)
 
-All the users accessing the Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet type. If no profile exists of that type, the user will be redirected to the Responsive profile. Only one profile of the Tablet (browser) type may exist.
+All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet type. If no profile exists of that type, the user will be redirected to the Responsive profile. Only one profile of the Tablet (browser) type may exist.
 
 ### 2.3 Phone (Browser)
 
-All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone type. If no profile exists of that type, the user will be redirected to the Responsive profile. Only one profile of the Phone (browser) type may exist.
+All the users accessing a Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone type. If no profile exists of that type, the user will be redirected to the Responsive profile. Only one profile of the Phone (browser) type may exist.
 
 ### 2.4 Hybrid App
 
@@ -73,5 +73,4 @@ It is also possible to force the client to use a specific profile by adding a `p
 
 ```html
 https://myapp.mendixcloud.com/index.html?profile=Responsive
-
 ```

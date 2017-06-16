@@ -7,17 +7,17 @@ description: "Describes the profile properties and profile buttons for Mendix ve
 
 <div class="alert alert-info">{% markdown %}
 
-For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For 7.2 and 7.3 see [Navigation In Mendix Versions 7.2 and 7.3](navigation-in-72-and-73)
+For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For 7.2 and 7.3, see [Navigation in Mendix Versions 7.2 and 7.3](navigation-in-72-and-73)
 
 {% endmarkdown %}</div>
 
 ## 1 Overview
 
-Managment of profiles is available from Navigation section of a project.
+Managment of profiles is available from the **Navigation** section of a project.
 
 ![](attachments/Navigation+Profiles/navigation_profile_74.png)
 
-Profile could be added with Add navigation profile button. Only one profile per type is allowed. While adding profile it is possible to copy settings from existing profile.
+A profile can be added with the **Add navigation profile** button. Only one profile per type is allowed. While adding the profile, it is possible to copy the settings from an existing profile.
 
 ![](attachments/Navigation+Profiles/add_navigation_profile_dialog_74.png)
 
@@ -27,15 +27,15 @@ Profile could be added with Add navigation profile button. Only one profile per 
 
 **Application Title**
 
-Specifies the application title. This title is shown in the title bar of the browser.
+This specifies the application title. This title is shown in the title bar of the browser.
 
 ### 2.2 Home Pages
 
-**Default Home Page**
+#### 2.2.1 Default Home Page
 
 The default home page indicates which [page](page) or [microflow](microflow) is opened after a user signs in. If role-based home pages (see below) are specified for one of the [user roles](user-roles) of the user, then that home page will be used instead.
 
-**Role-Based Home Pages**
+#### 2.2.2 Role-Based Home Pages
 
 By using role-based home pages, you can show different home pages for different users. If a user logs in, the first role-based home page of which the user role matches the user role of the user is displayed. If no match is found, the default home page is used.
 
@@ -65,4 +65,4 @@ Allows for changing the [profile type](navigation).
 
 ### 3.3 Delete
 
-Deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
+This deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.

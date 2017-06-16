@@ -25,7 +25,7 @@ A profile can be added with the **Add navigation profile** button. Only one prof
 
 ### 2.1 General
 
-**Application Title**
+#### 2.1.1 Application Title
 
 This specifies the application title. This title is shown in the title bar of the browser.
 

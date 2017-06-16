@@ -7,7 +7,7 @@ description: "Describes the profile properties and profile buttons for Mendix ve
 
 <div class="alert alert-warning">{% markdown %}
 
-Applicable for Mendix versions 7.2 and 7.3. For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For Mendix version 7.4 and higher, see [Navigation](navigation).
+This is applicable to Mendix versions 7.2 and 7.3. For details on how this works in Mendix versions 7.0 and 7.1, see [Navigation Before Mendix Version 7.2](navigation-before-72). For Mendix version 7.4 and higher, see [Navigation](navigation).
 
 {% endmarkdown %}</div>
 
@@ -15,21 +15,21 @@ Applicable for Mendix versions 7.2 and 7.3. For details on how this works in Men
 
 ### 1.1 General
 
-**Profile name**
+#### 1.1.1 Profile Name
 
-The name to uniquely identify a profile. [Menu widgets](menu-widgets) using the menu of a profile refer to this name.
+This is the name to uniquely identify a profile. [Menu widgets](menu-widgets) using the menu of a profile refer to this name.
 
-**Application Title**
+#### 1.1.2 Application Title
 
-Specifies the application title. This title is shown in the title bar of the browser.
+This specifies the application title. This title is shown in the title bar of the browser.
 
 ### 1.2 Home Pages
 
-**Default Home Page**
+#### 1.2.1 Default Home Page
 
 The default home page indicates which [page](page) or [microflow](microflow) is opened after a user signs in. If role-based home pages (see below) are specified for one of the [user roles](user-roles) of the user, then that home page will be used instead.
 
-**Role-Based Home Pages**
+#### 1.2.2 Role-Based Home Pages
 
 By using role-based home pages, you can show different home pages for different users. If a user logs in, the first role-based home page of which the user role matches the user role of the user is displayed. If no match is found, the default home page is used.
 
@@ -55,14 +55,14 @@ If [security](project-security) is enabled, the menu will only show the items to
 
 ### 2.1 Add
 
-Allows for adding new profiles. The profile name and profile kind can be provided. 
+This allows for adding new profiles. The profile name and profile kind can be provided. 
 
 The **Copy settings from profile 'Profile'** check box enables creating a duplicate of the current profile. It copies over all the settings except the profile name and profile kind.
 
 ### 2.2 Change Kind
 
-Allows for changing the [profile kind](navigation).
+This allows for changing the [profile kind](navigation).
 
 ### 2.3 Delete
 
-Deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
+This deletes the profile. If [menu widgets](menu-widgets) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.

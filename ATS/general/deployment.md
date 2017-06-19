@@ -174,18 +174,26 @@ Before you start, make sure that your server has internet access to download the
         - 4444:4444
 
     firefoxnode:
-        image: selenium/node-firefox:2.53.0
+        image: selenium/node-firefox-debug:2.53.0
         ports:
         - 5900
         links:
         - seleniumhub:hub
+        environment:
+        - SCREEN_HEIGHT=1080
+        - SCREEN_WIDTH=1920
+        - SCREEN_DEPTH=24
 
     chromenode:
-        image: selenium/node-chrome:2.53.0
+        image: selenium/node-chrome-debug:2.53.0
         ports:
         - 5900
         links:
         - seleniumhub:hub
+        environment:
+        - SCREEN_HEIGHT=1080
+        - SCREEN_WIDTH=1920
+        - SCREEN_DEPTH=24
     ```
 5. Start up the Selenium grid with this command:
 

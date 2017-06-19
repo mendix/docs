@@ -71,7 +71,12 @@ Rounds a number to a certain precision.
 
 ### Output
 
-Rounds using "half to even" rounding (also called bankers' rounding). This is the default rounding mode used in  [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point "IEEE floating point")  computing functions and operators. For example, +23.5 becomes +23, as does +22.5; while −23.5 becomes −23, as does −22.5. The second optional parameter determines the precision of the rounding, the default value is 0. The result will be of the most precise type possible. For a precision of 0 the result will be of type Integer/Long and for all other precision values of type Decimal.
+In the **Settings**, your option for **Round numbers** can be set:
+    * For the **Half away from zero** option (also called "commercial rounding"), 2.5 becomes 3 and -1.5 becomes -2
+    * The **Half to the nearest even number** option (also called "bankers' rounding") is the default rounding mode used in  [IEEE 754](http://en.wikipedia.org/wiki/IEEE_floating_point "IEEE floating point")  computing functions and operators
+        * For example, 23.5 becomes 23, as does 22.5, and −23.5 becomes −23, as does −22.5
+
+The second optional parameter determines the precision of the rounding. The default value is 0. The result will be of the most precise type possible. For a precision of 0, the result will be of integer/long type, and for all other precision values, the result will be of the decimal type.
 
 Type: Integer/Long or Decimal
 
@@ -99,7 +104,7 @@ returns:
 88.72
 ```
 
-of type "Decimal"
+of type Decimal
 
 ## random
 

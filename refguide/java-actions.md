@@ -80,6 +80,8 @@ By selecting the 'Expose as microflow action', it is possible to expose the Java
 
 The caption and category of the microflow action are required, but the icon is optional. When no icon is selected, the default Java action icon is used.
 
+The recommended size for the icon is 16x16.
+
 ## Documentation
 
 In the documentation tab of the Java action dialog you can document the Java action. The documentation is copied into the Javadoc of the class of the corresponding .java file.

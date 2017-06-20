@@ -62,36 +62,54 @@ gulp.task('clean', `Cleanup the ${DIST_FOLDER} directory`, () => {
 });
 
 gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json to ${DIST_FOLDER}/mappings/redirect.map`, done => {
-  mappings.run({
-    write: true,
-    src: path.join(CURRENTFOLDER, '/_assets/mappings/redirect.json'),
-    dest: path.join(CURRENTFOLDER, '/_site/mappings/redirect.map'),
-    callback: function (err) {
-      if (err) {
-        process.exit(2);
-      } else {
-        done();
-      }
-    }
-  });
+  helpers.touch(path.join(CURRENTFOLDER, '/_site/mappings/indexes.map'));
+  mappings
+    .run({
+      write: true,
+      type: 'js',
+      src: path.join(CURRENTFOLDER, '/_assets/mappings/redirect.js'),
+      dest: path.join(CURRENTFOLDER, '/_site/mappings/redirect.map')
+    })
+    .then(done)
+    .catch(err => {
+      helpers.gulpErr('write:mapping', err);
+      return process.exit(1);
+    });
 });
 
 gulp.task('write:githistory', `Write git_history to data`, done => {
-  git.getCommits(CURRENTFOLDER, true)
-    .then(commits => {
-      yaml('_data/history.yml', commits, err => {
-        if (err) {
-          throwErr('write:githistory', `Error writing githistory: ${err}`);
-          return process.exit(2);
-        }
-        gutil.log(gutil.colors.cyan('[GIT-HISTORY]') + ` Git history written to ${gutil.colors.cyan(path.join(CURRENTFOLDER, '/_data/history.yml'))}`)
-        done();
-      });
+  if (process.env['JEKYLL_ENV'] === 'production') {
+    git.getCommits(CURRENTFOLDER, true)
+      .then(commits => {
+        yaml('_data/history.yml', commits, err => {
+          if (err) {
+            throwErr('write:githistory', `Error writing githistory: ${err}`);
+            return process.exit(2);
+          }
+          gutil.log(gutil.colors.cyan('[GIT-HISTORY]') + ` Git history written to ${gutil.colors.cyan(path.join(CURRENTFOLDER, '/_data/history.yml'))}`)
+          done();
+        });
+      })
+      .catch(err => {
+        helpers.gulpErr('write:githistory', `Error with reading git history:`, err);
+        return process.exit(2);
+      })
+  } else {
+    gutil.log(gutil.colors.cyan("[GIT-HISTORY]") + ' skipping history on tests, use environment variable: JEKYLL_ENV=production');
+    helpers.touch(path.join(CURRENTFOLDER, '/_data/history.yml'));
+    done();
+  }
+});
+
+gulp.task('write:assetmappings', `Write asset mappings to ${DIST_FOLDER}/mappings/assets.map`, done => {
+  helpers
+    .writeAssetMappings(CURRENTFOLDER)
+    .then(() => {
+      done();
     })
-    .catch(err => {
-      helpers.gulpErr('write:githistory', `Error with reading git history:`, err);
+    .catch((e) => {
       return process.exit(2);
-    })
+    });
 });
 
 gulp.task('copy:images', `Copy images from _assets folder`, () => {
@@ -208,11 +226,24 @@ gulp.task('algolia', `Push Algolia indexes (not production ready)`, done => {
 });
 
 gulp.task('build', `Jekyll build, using ${CONFIG}. Used for production`, done => {
-  runSequence('clean', 'write:githistory', ['sass:build', 'copy:images', 'compress:js', 'write:mappings'], 'jekyll:build', done);
+  runSequence('clean', 'write:mappings', 'write:githistory', ['sass:build', 'copy:images', 'compress:js'], 'write:assetmappings', 'jekyll:build', 'test', (err) => {
+      //if any error happened in the previous tasks, exit with a code > 0
+      if (err) {
+        var exitCode = 2;
+        console.log('[ERROR] gulp build task failed', err);
+        console.log('[FAIL] gulp build task failed - exiting with code ' + exitCode);
+        return process.exit(exitCode);
+      }
+      else {
+        return done();
+      }
+    });
 });
 
 gulp.task('build-test', `Jekyll build, using ${CONFIG_TEST}. Used for test`, done => {
   runSequence('clean', 'write:githistory', ['jekyll:build-test', 'sass:build', 'copy:images', 'compress:js', 'write:mappings'], done);
 });
 
-gulp.task('test', `Test the html and menu`, ['check:html', 'check:menu']);
+gulp.task('test', `Test the html and menu`, done => {
+  runSequence('check:html', 'check:menu', done);
+});

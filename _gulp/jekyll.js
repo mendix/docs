@@ -11,6 +11,7 @@ const spawnJekyll = (config, watch, cb, bsync) => {
     'exec',
     'jekyll',
     'build',
+    //'--profile',
     '--config',
     config,
     (watch ? '-w' : '')

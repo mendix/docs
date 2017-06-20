@@ -1,5 +1,5 @@
 ---
-title: On-premises Deployment
+title: On-Premises Deployment
 space: "Mendix 5 How-to's"
 ---
 

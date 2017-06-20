@@ -4,12 +4,11 @@ space: "Mendix 6 How-to's"
 ---
 Testing is a vital component when creating a Mendix application. On this page you can find all the test-related how-to's and blogs written by experienced Mendix professionals.
 
-## How-to's
+## How-To's
 
-
-*   [Application Performance Monitor](/APM/)
-*   [Application Test Suite](/ATS/)
-*   [Application Quality Monitor](/AQM/)
+*   [Application Performance Monitor](/addons/APM/index)
+*   [Application Test Suite](/ATS/index)
+*   [Application Quality Monitor](/addons/AQM/index)
 *   [Testing microflows using the UnitTesting module](testing-microflows-using-the-unittesting-module)
 *   [Testing web services using SoapUI](testing-web-services-using-soapui)
 *   [Testing Mendix applications using Selenium IDE](testing-mendix-applications-using-selenium-ide)

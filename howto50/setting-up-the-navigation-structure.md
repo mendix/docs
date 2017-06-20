@@ -1,6 +1,6 @@
 ---
 title: "Setting Up the Navigation Structure"
-category: "GUI's"
+category: "GUIs"
 space: "Mendix 5 How-to's"
 ---
 

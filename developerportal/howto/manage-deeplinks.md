@@ -20,7 +20,7 @@ In the Developer Portal, you can use deep links as a shortcut to go directly to 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Be a member of the app team
-* Have sufficient permissions (for details, see [Security - Node Permissions](../settings/node-permissions)
+* Have sufficient permissions (for details, see [Security - Node Permissions](../settings/node-permissions))
 
 ## 3 AppID, storyID, feedbackItemNr
 

@@ -1091,7 +1091,7 @@ module.exports = {
     },
     {
       from: "/howto50/Adding+App+Store+content+to+your+app",
-      to: "/howto50/adding-app-store-content-to-your-app"
+      to: "/community/app-store/use-app-store-content-in-the-modeler"
     },
     {
       from: "/howto50/Anonymous+User+Security",

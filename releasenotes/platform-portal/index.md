@@ -6,7 +6,6 @@ toc-level: "1"
 ## June 21st, 2017
 
 * Company private appstore content is now indicated in the Template browser with a lock icon.
-* We tightened some bolts and screws under the hood in preparation for the Web Modeler public beta. :)
 
 ## June 7th, 2017
 

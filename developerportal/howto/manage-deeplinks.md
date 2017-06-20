@@ -48,7 +48,7 @@ The following deep links can be used:
 * Feedback for app: `https://sprintr.home.mendix.com/link/feedback/<appID>`
 * Specific feedback item: `https://sprintr.home.mendix.com/link/showfeedback/<feedbackItemNr>`
 * Environments for app: `https://cloud.home.mendix.com/link/deploy/<appID>`
-* Metrics for app: `https://cloud.home.mendix.com/link/metrics/<appID>
+* Metrics for app: `https://cloud.home.mendix.com/link/metrics/<appID>`
 * Alerts for app: `https://cloud.home.mendix.com/link/monitor/<appID>`
 * Logs for app: `https://cloud.home.mendix.com/link/logs/<appID>`
 

@@ -5,7 +5,7 @@ toc-level: "1"
 ---
 ## June 21st, 2017
 
-* Company private appstore content is now indicated in the Template browser with a lock icon.
+* Private company App Store content is now indicated in the **Template** browser with a lock icon.
 
 ## June 7th, 2017
 

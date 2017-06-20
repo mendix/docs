@@ -108,3 +108,17 @@ The Platform SDK is an open source TypeScript-based and JavaScript-based SDK tha
 The Model SDK enables you to modify your Mendix app, and is used as part of the Platform SDK.
 
 *   [Model SDK](https://apidocs.mendix.com/modelsdk/latest/index.html)
+
+## Sprintr deeplinks
+
+If you want to provide links directly to a specific page on Sprintr the following deeplinks can be used:
+
+Specific app: https://sprintr.home.mendix.com/link/project/<appID>
+Stories overview for app: https://sprintr.home.mendix.com/link/capture/<appID>
+Specific story ID: https://sprintr.home.mendix.com/link/story/<storyID>
+Feedback for app: https://sprintr.home.mendix.com/link/feedback/<appID>
+Specific feedback item: https://sprintr.home.mendix.com/link/showfeedback/<feedbackItemNr>
+Environments for app: https://cloud.home.mendix.com/link/deploy/<appID>
+Metrics for app: https://cloud.home.mendix.com/link/metrics/<appID>
+Alerts for app: https://cloud.home.mendix.com/link/monitor/<appID>
+Logs for app: https://cloud.home.mendix.com/link/logs/<appID>

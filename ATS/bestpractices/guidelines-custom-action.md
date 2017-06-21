@@ -1,7 +1,7 @@
 ---
-title: The Guidelines for Creating a Custom Action
-space: ATS Add-On
-category: ATS Best Practices
+title: "Guidelines for Creating a Custom Action"
+space: "ATS Add-On"
+category: "Best Practices"
 ---
 
 ## Guidelines for building a custom action

@@ -8,37 +8,38 @@ tags: ["Team","Developer Portal"]
 
 ## 1 Introduction
 
-To view, manage and invite team members of an App, follow these steps:
+To invite team members to an app as well as view and manage them, follow these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com). 
-2. Click **Apps** in the top navigation panel and select the App you want to manage.
+2. Click **Apps** in the top navigation panel and select the app you want to manage.
 3. Click **Team** under the **Collaborate** category.
 
 ## 2 Team
 
-On the **Team** page you will see an overview of the following information about the team members:
+On the **Team** page, you will see an overview of the following information about the team members:
 
 *   Name
 *   Role
 
-### 2.1 Manage team
+### 2.1 Managing the Team
 
-If you click **Manage team** you will be forwarded to the **Security** page of the **Settings** category. 
-There you can change the **Role** of the team members and edit the **Role settings**. 
+When you click **Manage Team**, you will be forwarded to the **Security** page of the **Settings** category. On that page, you can change the **Role** of the team members and edit the **Role settings**. 
 
-### 2.2 Invite Member
+### 2.2 Inviting Members
 
-**App Invitation Guide**
+#### 2.2.1 App Invitation Guide
 
-Enter the email addresses of all co-workers you want to invite to your app. It is possible to paste a list of email addresses as well. 
-The parts of this app which can be accessed by the invitees will be based on the role you select for each invitee.
+On this page, you can enter the email addresses of all the co-workers you want to invite to your app. It is possible to paste a list of email addresses as well. 
 
-**Who will join my company?**
+The parts of the app that can be accessed by the invitees will be based on the role you select for each invitee.
 
-Invitees with the following email domains will be automatically added to your company. 
+#### 2.2.2 Who Will Join My Company?
+
+In this section, invitees with the listed email domains will be automatically added to your company.
+
 All others will only be granted access to this specific app.
 
-## 3 Related content
+## 3 Related Content
 
 *   [Collaborate](/developerportal/collaborate)
 *   [Settings](/developerportal/settings)

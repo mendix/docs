@@ -7,7 +7,7 @@ sitemap: false
     "General",
     "ATS Reference Guide 1",
     "ATS How-To's",
-	"ATS Best Practices"
+    "Best Practices"
   ],
   "pages": {% include json-snippets/get_pages.inc dir="ATS" %}
 }

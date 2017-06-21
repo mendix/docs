@@ -1,5 +1,5 @@
 ---
-title: "ATS How-To's"
+title: "How-To's"
 space: "ATS Add-On"
 ---
 

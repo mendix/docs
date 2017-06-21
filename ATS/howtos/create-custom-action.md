@@ -1,7 +1,7 @@
 ---
 title: "Create Custom Action"
 space: "ATS Add-On"
-category: "ATS How-To's"
+category: "How-To's"
 ---
 
 ## 1 Introduction

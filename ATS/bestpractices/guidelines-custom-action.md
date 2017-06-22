@@ -11,9 +11,9 @@ For a details on custom actions, please see [Custom Actions](../refguide-ats-1/c
 In addition, take a look at the how-to's for building a custom action:
 
 * [How to Create a Combined Action](../refguide-ats-1/create-a-combined-action)
-* [How to Create a Search Context Action](../howtos-ats-1/create-search-context-action)
+* [How to Create a Search Context Action](../howtos/create-search-context-action)
 * [How to Create an Unsupported Widget Action](../refguide-ats-1/create-unsupported-widget-action)
-* [How to Create a Function Action](../howtos-ats-1/create-function-action)
+* [How to Create a Function Action](../howtos/create-function-action)
 
 These are the definitions of Mendix actions and Core actions:
 

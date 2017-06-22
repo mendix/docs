@@ -8,13 +8,6 @@ category: "Best Practices"
 
 For a details on custom actions, please see [Custom Actions](../refguide-ats-1/custom-actions) in the ATS Reference Guide 1.
  
-In addition, take a look at the how-to's for building a custom action:
-
-* [How to Create a Combined Action](../refguide-ats-1/create-a-combined-action)
-* [How to Create a Search Context Action](../howtos/create-search-context-action)
-* [How to Create an Unsupported Widget Action](../refguide-ats-1/create-unsupported-widget-action)
-* [How to Create a Function Action](../howtos/create-function-action)
-
 These are the definitions of Mendix actions and Core actions:
 
 * Mendix actions are a combination [Mendix actions](../refguide-ats-1/mendix-actions) and [Mendix App Store widget actions](../refguide-ats-1/mendix-appstore-widgets-actions)

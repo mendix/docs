@@ -1,5 +1,5 @@
 ---
-title: "ATS Reference Guide 1"
+title: "Reference Guide 1"
 space: "ATS Add-On"
 ---
 

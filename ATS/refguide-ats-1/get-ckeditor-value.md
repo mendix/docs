@@ -3,6 +3,7 @@ title: "Get CKEditor Value"
 space: "ATS Add-On" 
 parent: "ckeditor"
 ---
+
 ## Description
 Returns the CKEditor value as HTML code.
 

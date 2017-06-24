@@ -8,7 +8,7 @@ tags: ["Feedback","Developer Portal"]
 
 ## 1 Introduction
 
-Within Mendix, there are two use-cases for the Feedback Widget:
+Within Mendix, there are two use-cases for the Feedback widget:
 
 * To provide feedback on Mendix
 * To provide feedback on your own app
@@ -27,7 +27,7 @@ You can divide the feedback into the following four stages:
 You can click the following buttons:
 
 * **Add feedback**
-* **Export to Excel**, which will export feedback items into an .xls file (you can filter on date, label, status and type)
+* **Export to Excel**, which will export feedback items into an *.xls* file (you can filter on date, label, status, and type)
 
 ### 1.2 Filters
 
@@ -37,7 +37,7 @@ When you click **Show filter**, you can filter on the following:
 * Question
 * Issue
 
-## 2 Feedback details
+## 2 Feedback Details
 
 Click **Details** for more information about this particular feedback item. On the detail page, click the plus sign (+) to see the following:
 
@@ -78,6 +78,6 @@ You are only allowed to move a feedback item to an app in which you are already 
 
 ### 2.4 Delete
 
-When clicking **Delete feedback**, be sure that you want to delete that feedback item, because this will remove all associated messages as well.
+When clicking **Delete feedback**, be sure that you want to delete that feedback item, because this will remove all the associated messages as well.
 
 This action cannot be undone. 

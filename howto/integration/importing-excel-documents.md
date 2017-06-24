@@ -85,7 +85,7 @@ Based on the structure of the file you want to import, you will setup your templ
 
     </div>
 8.  Set **Import Action** to **Synchronize objects**.
-    ![] (attachments/18448735/18581965.png)
+    ![](attachments/18448735/18581965.png)
 
     <div class="alert alert-warning">
 

@@ -13,7 +13,7 @@ We want to create a large network of Mendix apps, so start integrating!
 * [How to Import and Export Objects](importing-and-exporting-objects)
 * [How to Consume a Complex Web Service](consume-a-complex-web-service)
 * [How to Consume a REST Service (for Versions 6.0–6.10)](consume-a-rest-service)
-* [How to Consume a REST Service (for Versions 6.6–6.10)](consume-a-rest-service)
+* [How to Consume a REST Service (for Versions 6.6–6.10)](consume-a-rest-service_66)
 * [How to Expose Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)
 * [How to Expose a Web Service](expose-a-web-service)
 * [How to Import XML Documents](importing-xml-documents)

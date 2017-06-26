@@ -50,7 +50,7 @@ The Technical Contact manages the cloud node and can edit the privileges of regu
 
 <div class="alert alert-info">{% markdown %}
 
-The Technical Contact of the app is the first point of contact for [Mendix Support](https://www.support.mendix.com), and will receive alerts regarding the cloud node.
+The Technical Contact of the app is the first point of contact for [Mendix Support](https://support.mendix.com/hc/en-us), and will receive alerts regarding the cloud node.
 
 {% endmarkdown %}</div>
 

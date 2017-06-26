@@ -9,11 +9,11 @@ tags: []
 
 With the REST services module from the Mendix App Store, the full power of JSON-based REST APIs is available to Mendix developers. The module serves three goals: to consume services, publish services, and synchronize data between (Mendix) apps by combining consuming and publishing. 
 
-<div class="alert alert-info">
+<div class="alert alert-info">{% markdown %}
 
 Starting with Mendix 6.6, there is an easier way to consume a REST service. For details, see [How to Consume a REST Service (for Versions 6.6–6.10)](consume-a-rest-service_66).
 
-</div>
+{% endmarkdown %}</div>
 
 In this how-to, you will consume a JSON-based REST services by integrating with the API of the world famous Rijksmuseum that allows us to search for art.
 
@@ -148,7 +148,7 @@ To consume the service using a Get request, follow these steps:
     Name | Argument
     --- | ---
     method | RestServices.HttpMethod.GET
-    url | '[https://www.rijksmuseum.nl/api/en/collection/?key=](https://www.rijksmuseum.nl/api/en/collection/?key=)' + <API_Key> + '&format=json'
+    url | 'https://www.rijksmuseum.nl/api/en/collection/?key=' + <API_Key> + '&format=json'
     optRequestData | $Query
     optResponseData | $newResults
     sendWithFormEncoding | false

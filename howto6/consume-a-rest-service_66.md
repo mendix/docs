@@ -33,17 +33,17 @@ We will start by providing the Modeler as an example of what the REST service re
     ![Screenshot of the result of the rest call](attachments/consume-a-rest-service_66/get-call-result.png)
 
 2. Copy the whole JSON snippet.
-3. Add a new **JSON Structure** to your app. A [JSON structure](../refguide/json-structures) contains sample JSON that you can use in your app.
+3. Add a new **JSON Structure** to your app. A [JSON structure](../refguide6/json-structures) contains sample JSON that you can use in your app.
 4. Paste the JSON snippet.
 5. Click **Refresh**. This analyzes the structure of the JSON snippet so we can use later.
 
     ![](attachments/consume-a-rest-service_66/json-structure.png)
 
-6. Click **OK**
+6. Click **OK**.
 
 ## 4 Creating an Import Mapping
 
-An [import mapping](../refguide/import-mappings) specifies how the JSON relates to [entities](../refguide/entities). Here we will generate those entities, but generally you can map the JSON to any entity you like.
+An [import mapping](../refguide6/import-mappings) specifies how the JSON relates to [entities](../refguide6/entities). Here we will generate those entities, but generally you can map the JSON to any entity you like.
 
 To create an import mapping:
 

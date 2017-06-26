@@ -1,5 +1,5 @@
 ---
-title: "Consume a REST Service"
+title: "Consume a REST Service (for Versions 6.0–6.10)"
 space: "Mendix 6 How-to's"
 category: "Integration"
 tags: []
@@ -11,7 +11,7 @@ With the REST services module from the Mendix App Store, the full power of JSON-
 
 <div class="alert alert-info">
 
-Starting with Mendix 6.6, there is an easier way to consume a REST service. For details, see [How to Consume a REST Service](../howto/integration/consume-a-rest-service).
+Starting with Mendix 6.6, there is an easier way to consume a REST service. For details, see [How to Consume a REST Service (for Versions 6.6–6.10)](../howto/integration/consume-a-rest-service).
 
 </div>
 

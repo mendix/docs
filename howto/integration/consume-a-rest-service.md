@@ -14,13 +14,6 @@ In your Mendix app, you can use information from REST services. This how-to show
 
 * Call the REST service in a microflow
 
-## 2 Prerequisites
-
-Before starting this how-to, make sure you have completed the following prerequisites:
-
-* Install Modeler version 6.6 or higher (for details on how to do this, see [How to Install the Mendix Desktop Modeler](../getting-started/install-the-mendix-desktop-modeler)
-  * If you need to use an older version of the Modeler, you can follow [How to Consume a Rest Service](../../howto6/consume-a-rest-service) for Mendix versions prior to 6.6
-
 ## 2 Creating a JSON Structure
 
 The Wikipedia REST service allows you to retrieve the summary of a page. This service can be reached at `https://en.wikipedia.org/api/rest_v1/page/summary/{title}`, where `{title}` is the title of a page.

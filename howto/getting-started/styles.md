@@ -1,10 +1,10 @@
 ---
 title: "Implement Styles"
 space: "Mendix 7 How-To's"
+category: "Getting Started"
 description: "Presents details on using class names for text colors, buttons, and other style elements."
 tags: ["style", "class name", "user interface"]
 ---
-
 
 ## 1 Introduction
 
@@ -36,7 +36,7 @@ These are standard useful text colors
 * `text-gray-light`: light gray text
 * `text-gray-lighter`: lighter gray text
 
-## Background Colors
+## 3 Background Colors
 
 The background colors are based on your theme colors. These are the same colors as for the buttons:
 
@@ -64,7 +64,7 @@ These are background colors for your layout:
 * `background-default-light`: light layout background
 * `background-default-lighter`: lighter layout background
 
-## Typography
+## 4 Typography
 
 These are useful classes for text items:
 
@@ -87,7 +87,7 @@ Other:
 
 * `nowrap`: don't wrap texts
 
-## Buttons
+## 5 Buttons
 
 * `btn-lg`: large button
 * `btn-sm`: small button
@@ -101,7 +101,7 @@ Other:
 * `btn-attached-bottom`: adds top margin
 * `btn-attached-top`: adds bottom margin
 
-## Layout
+## 6 Layout
 
 * `v-center`: vertically aligns elements in a Bootstrap row; add this class on a row in a layout grid
 * `no-gutter`: removes padding for Bootstrap columns; add this class on a row in a layout grid
@@ -110,14 +110,14 @@ For phones, also add `col-x-N` (where `N` is the size of the column) to the layo
 
 Also see [Bootstrap CSS Grid Options](http://getbootstrap.com/css/#grid-options).
 
-## List View
+## 7 List View
 
 * `listview-lined`: list view widget with only a bordered bottom in a list view item
 * `listview-striped`: list view widget with striped listview items
 * `listview-seperated`: list view widget with list view items seperated
 * `listview-stylingless`: list view widget without spacing and background
 
-## Alerts
+## 8 Alerts
 
 Create alerts with standard containers.
 
@@ -129,10 +129,10 @@ Create alerts with standard containers.
 
 Also see [Bootstrap Alert Component](http://getbootstrap.com/components/#alerts).
 
-## Other
+## 9 Other
 
 * `tab-mobile`: makes the tab full width and stick to the header
 
-## More Bootstrap
+## 10 More Bootstrap
 
 Many of these classes are part of Bootstrap. For more information about classes and Bootstrap, see [Bootstrap CSS](http://getbootstrap.com/css/).

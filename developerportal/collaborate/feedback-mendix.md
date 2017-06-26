@@ -41,21 +41,18 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Providing Feedback on Mendix
 
-1. Click on the **Feedback Button** on the right side of the screen.
-2. Fill in the feedback you want to send to Mendix. A description of the feedback and a screenshot of the screen are optional but also recommended.
-3. Click **Send Feedback**
+1. Click the **Feedback** button on the right side of the screen.
+2. Fill in the feedback you want to send to Mendix. A description of the feedback and a screenshot of the screen are optional but recommended.
+3. Click **Send Feedback**:
 
     ![](attachments/feedbackmendix.jpg)
 
 ## 4 Viewing Your Provided Feedback Items
 
-You can view your own submitted feedback items in the feedback list in your profile settings. Follow these steps to find the list of the provided feedback items:
+You can view your own submitted feedback items in the feedback list in your profile settings. Follow these steps to find the list of provided feedback items:
 
-1. Click on your profile in the right top corner in the [Developer Portal](http://home.mendix.com).
+1. Click your profile in the right top corner in the [Developer Portal](http://home.mendix.com).
 2. Click **Show Profile**.
-3. Go to the **Feedback** tab.
+3. Go to the **Feedback** tab:
 
     ![](attachments/feedbackoverview.jpg)
-
-
-

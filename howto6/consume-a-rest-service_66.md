@@ -88,7 +88,7 @@ To call the REST service in a microflow, follow these steps:
 3. From the **Toolbox**, drag a **Call REST service** activity onto the microflow and double-click it.
 4. Edit the location to `https://en.wikipedia.org/api/rest_v1/page/summary/{1}`, with the parameter `$Input/Title`.
 
-    ![](attachments/consume-a-rest-servic_66e/location.png)
+    ![](attachments/consume-a-rest-service_66/location.png)
 
 5. On the **Response** tab, set **Response handling** to **Apply import mapping** (or to **Import mapping for the entire response**, depending on your version).
 6. Click **Select** and double-click **Import_mapping**.

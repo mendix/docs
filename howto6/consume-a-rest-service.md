@@ -9,12 +9,18 @@ tags: []
 
 With the REST services module from the Mendix App Store, the full power of JSON-based REST APIs is available to Mendix developers. The module serves three goals: to consume services, publish services, and synchronize data between (Mendix) apps by combining consuming and publishing. 
 
+<div class="alert alert-info">
+
+Starting with Mendix 6.6, there is an easier way to consume a REST service. For details, see [How to Consume a REST Service](../howto/integration/consume-a-rest-service).
+
+</div>
+
 In this how-to, you will consume a JSON-based REST services by integrating with the API of the world famous Rijksmuseum that allows us to search for art.
 
-**After using this how-to, you will know how to do the following:**  
+**This how-to will teach you how to do the following:**
 
-* How to create a GET REST Service
-* How to create a POST REST Service
+* Create a GET REST Service
+* Create a POST REST Service
 
 ## 2 Prerequisites
 
@@ -189,5 +195,4 @@ In this section, you will create a microflow to hypothetically send data back to
 * [Selenium Support](selenium-support)
 * [Synchronizing User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Importing XML Documents](importing-xml-documents)
-* [Consuming a REST Service](consume-a-rest-service)
 * [Exposing Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

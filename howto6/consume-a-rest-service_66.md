@@ -79,7 +79,7 @@ To add an input entity to the domain model, follow these steps:
 
 ## 6 Calling the REST Service in a Microflow
 
-You will now call the REST service in a [microflow](../refguide/microflows). The microflow takes an **Input** as a parameter and sets the associated **Summary**.
+You will now call the REST service in a [microflow](../refguide6/microflows). The microflow takes an **Input** as a parameter and sets the associated **Summary**.
 
 To call the REST service in a microflow, follow these steps:
 

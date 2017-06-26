@@ -162,7 +162,7 @@ To consume the service using a Get request, follow these steps:
 5. Run your application and search for _van Gogh_. You will see the following results:
     ![](attachments/18448729/18581755.png)
 
-## 5 Consuming the REST Service with a POST Request
+## 6 Consuming the REST Service with a POST Request
 
 In this section, you will create a microflow to hypothetically send data back to the Rijksmuseum. There is no POST service available, but this example demonstrates how you would setup a POST request if the service was available.
 
@@ -185,7 +185,7 @@ In this section, you will create a microflow to hypothetically send data back to
     **![](attachments/18448729/18581753.png)**
     If you now change the data of one of the objects linked to the **Results** object that you are passing on to the microflow, the POST request will update the other system accordingly.
 
-## 6 Related Content
+## 7 Related Content
 
 * [Consuming a Complex Web Service](consume-a-complex-web-service)
 * [Consuming a Simple Web Service](consume-a-simple-web-service)

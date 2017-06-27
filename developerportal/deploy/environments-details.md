@@ -8,60 +8,56 @@ tags: ["Deploy","App","Developer Portal"]
 
 ## 1 General
 
-In **General** you can find the following information about your node environment:
+In **General**, you can find the following information about your node environment:
 
-*   Status
-*   Running since date
-*   Mode
-*   URL
-*   Java version
-*   Runtime version
-*   Administrator user name
-*   Database Status
-*   Database Version
-*   Region
-*   Mendix Cloud Version
-
+* Status
+* Running since date
+* Mode
+* URL
+* Java version
+* Runtime version
+* Administrator user name
+* Database status
+* Database version
+* Region
+* Mendix Cloud version
 
 ### 1.1 Actions
 
-On the right side of the screen you can find the following action buttons:
+On the right side of the screen, you can find the following action buttons:
 
-*   Start/Stop Application
-*   Show Logged in Users
-*   Change Admin Password
-*   View Current Log
-*   Disable Debugging - for more information about enabling the debugger, read the documentation [Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
-
+* **Start/Stop Application**
+* **Show Logged in Users**
+* **Change Admin Password**
+* **View Current Log**
+* **Disable Debugging**
+    * For more information about enabling the debugger, see [Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
 
 ### 1.2 Overviews
 
-At the bottom of the page there are two overview grids with information about the:
+At the bottom of the page, there are two overview grids with information about the following:
 
-*   License
-*   Loaded deployment package
-
+* License
+* Deployment package that is loaded
 
 ### 1.3 License
 
 The license overview contains the following information:
 
-*   Company owning the license
-*   License type
-*   Expiration date
-*   Runtime mode: Production/Acceptance/Test
-*   Limitations
-    *   Limitation type
-    *   Amount type
-    *   Number of allowed users
-
+* Company owning the license
+* License type
+* Expiration date
+* Runtime mode (Production/Acceptance/Test)
+* Limitations
+    * Limitation type
+    * Amount type
+    * Number of allowed users
 
 Limitation types:
 
-*   Concurrent - the amount of named users that are logged in simultaneously
-*   Concurrent anonymous - the amount of anonymous users that are logged in simultaneously
-*   Named - the amount of named users registered in the database that are allowed to use the application
-
+* Concurrent – the amount of named users that are logged in simultaneously
+* Concurrent anonymous – the amount of anonymous users that are logged in simultaneously
+* Named – the amount of named users registered in the database that are allowed to use the application
 
 ### 1.4 Loaded Deployment Package
 

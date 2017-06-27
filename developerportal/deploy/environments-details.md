@@ -93,9 +93,9 @@ For more information, see [Scheduled Events](../../refguide/scheduled-events).
 
 ### 2.2 Constants
 
-In this section you can view the configured constants. 
-Constants are used to define configuration values that can differ per environment.
-If you select a constant and click **Edit**, you can fill in the new value. 
+In this section, you can view the configured constants. Constants are used to define configuration values that can differ per environment.
+
+To fill in a new value, select the constant and click **Edit**.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -103,64 +103,64 @@ You have to restart your application before the changes will be made.
 
 {% endmarkdown %}</div>
 
-For more information, read the documentation about [Constants](https://docs.mendix.com/refguide7/constants)
+For more information, see [Constants](../../refguide/constants).
 
 ## 3 Network
 
-On the third tab of the **Environment details** page you can manage the following:
+On the third tab of the **Environment details** page, you can manage the following elements:
 
-*   Custom domains
-*   Prevent embedding your app in an IFrame
-*   Request Handlers
-*   Access Restriction Profiles
-*   Environment Access Restrictions
-*   Request Handler Resttrictions
-*   Outgoing Connections Certificates
+* Custom domains
+* Preventing embedding your app in an IFrame
+* Request handlers
+* Access restriction profiles
+* Environment access restrictions
+* Request handler restrictions
+* Outgoing connections certificates
 
 ### 3.1 Custom Domains
 
-*   Domain name
-*   Certificate
-*   Expire
+* Domain name
+* Certificate
+* Expire
 
-You can take the following actions:
+You can perform the following actions:
 
-*   Create. Here you have to provide the **domainname** and select the **certificate** from a dropdown
-*   Edit
-*   Delete
+* Create (here you have to provide the **domainname** and select the **certificate** from a drop-down menu)
+* Edit
+* Delete
 
-### 3.2 Prevent embedding your app in an IFrame
+### 3.2 Prevent Embedding Your App in an IFrame
 
-Your application can be embedded in another site using an IFrame. To prevent this, you can deny embedding using the setting below. This will set an X-Frame-Options header for each HTTP response from your app. Please note that Chrome will ignore the "Allow from specific domain" option.
+Your application can be embedded in another site using an IFrame. To prevent this, you can deny embedding using the setting below. This will set an X-Frame-Options header for each HTTP response from your app. Please note that Chrome will ignore the **Allow from specific domain** option.
 
 The embedding options are:
 
-*   Allow
-*   Never allow
-*   Allow on the same domain
-*   Allow from specific domain
+* Allow
+* Never allow
+* Allow on the same domain
+* Allow from specific domain
 
 ### 3.3 Request Handlers
 
-Configure Custom Request Handlers for requests that will be sent to the runtime. If you enable /ws/, these requests will end up at the runtime. Everything not specified here, except for /xas/ and /file will end up at the static file server which serves the web folder from disk.
+Configure custom request handlers for requests that will be sent to the runtime. If you enable `/ws/`, these requests will end up at the runtime. Everything not specified here (except for `/xas/` and `/file/`) will end up at the static file server which serves the web folder from disk.
 
 *   Path
 *   Match type
-*   Enabled in
+*   Enabled in the following:
     *   Environment: Production, Acceptance, Test
     *   N/A
 
 <div class="alert alert-info">{% markdown %}
 
-If you are configuring the request handlers for example in the acceptance environment and the request handlers are only enabled in for example the production environment, select the request handler and click **Toggle** to enable it in the environment that you are configuring.
+If you are configuring the request handlers in, for example, the acceptance environment, and the request handlers are only enabled in, for example, the production environment, select the request handler and click **Toggle** to enable it in the environment that you are configuring.
 
 {% endmarkdown %}</div>
 
-You can take the following actions:
+You can perform the following actions:
 
-*   Toggle
-*   New request handler. You must provide the path and choose the match type between 'starts with' and 'exact match'
-*   Delete the request handler
+* Toggle
+* New request handler — you must provide the path and choose the match type between `starts with` and `exact match`
+* Delete the request handler
 
 ### 3.4 Access Restriction Profiles
 

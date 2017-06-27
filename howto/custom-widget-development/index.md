@@ -65,7 +65,7 @@ The Yeoman widget generator ships two versions of a boilerplate created by Mendi
 
 ## 4 Further Reading
 
-The [Custom Widget Development](https://docs.mendix.com/) how-to category presents in-depth information on how to build your own widgets. A few more tips are below.
+This category of how-to's presents in-depth information on how to build your own widgets. A few more tips are below.
 
 ### 4.1 Learn by Example
 

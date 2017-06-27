@@ -34,3 +34,4 @@ Visit the [Mendix on Windows](/howto7/on-premises-deployment/deploy-mendix-on-mi
 * [Microsoft SQL Server Maintenance](microsoft-sql-server-maintenance)
 * [MxBuild](mxbuild)
 * [Two-Factor Authentication](two-factor-authentication)
+* [Version Downgrade Prevention](version-downgrade-prevention)

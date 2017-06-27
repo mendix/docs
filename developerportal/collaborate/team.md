@@ -8,18 +8,18 @@ tags: ["Team","Developer Portal"]
 
 ## 1 Introduction
 
-To invite team members to an app as well as view and manage them, follow these steps:
+To invite team members to an app as well as to view and manage an app, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com). 
+1. Go to the [Developer Portal](http://home.mendix.com).
 2. Click **Apps** in the top navigation panel and select the app you want to manage.
 3. Click **Team** under the **Collaborate** category.
 
 ## 2 Team
 
-On the **Team** page, you will see an overview of the following information about the team members:
+On the **Team** page, you will see an overview with the following information about the team members:
 
-*   Name
-*   Role
+* Name
+* Role
 
 ### 2.1 Managing the Team
 
@@ -35,11 +35,9 @@ The parts of the app that can be accessed by the invitees will be based on the r
 
 #### 2.2.2 Who Will Join My Company?
 
-In this section, invitees with the listed email domains will be automatically added to your company.
-
-All others will only be granted access to this specific app.
+In this section, invitees with the listed email domains will be automatically added to your company. All others will only be granted access to this specific app.
 
 ## 3 Related Content
 
-*   [Collaborate](/developerportal/collaborate)
-*   [Settings](/developerportal/settings)
+* [Collaborate](/developerportal/collaborate)
+* [Settings](/developerportal/settings)

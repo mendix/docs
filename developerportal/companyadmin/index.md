@@ -46,21 +46,21 @@ Method #2:
 
 A company admin can manage four categories of settings:
 
-* Company settings
+* **Company** settings
   * Edit company profile
   * Add and delete administrators
   * Manage the launchpad settings
-* User settings
+* **User** settings
   * View all company users
   * Activate/deactivate users
   * Change password expiration settings
   * Accept company join requests
-* App settings
+* **App** settings
   * View all company apps
   * Activate/deactivate apps
   * View app details
   * Delete apps
-* Node settings
+* **Node** settings
   * View all company nodes
 
 ![](attachments/companycategory.jpg)

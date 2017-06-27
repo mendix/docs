@@ -57,7 +57,7 @@ This query retrieves all customers who have the same name as the city they live 
 
 This query retrieves the customer who placed the order with the given unique identification number.
 
-<div class="alert alert-warning">{% markdown %}
+{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
 
 The same result can be retrieved by doing the following query:
 
@@ -67,7 +67,6 @@ The same result can be retrieved by doing the following query:
 
 However, it is strongly recommended not to use this notation. This is because its execution is inefficient and results in a lower performance due to manner in which it is processed by the database.
 
-{% endmarkdown %}</div>
 {% endmarkdown %}</div>
 
 ## Functions

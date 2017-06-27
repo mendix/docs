@@ -15,3 +15,4 @@ Here are some other how-to's to get you started:
 
 * [How to Install the Mendix Desktop Modeler](install-the-mendix-desktop-modeler)
 * [How to Create and Deploy Your First App](create-and-deploy-your-first-app)
+* [How to Implement Styles](styles)

@@ -23,10 +23,7 @@ The sections below describe the Mendix resources that can help you understand ho
 
 ### 3.1 Introduction Videos
 
- * [Expert Webinar: Custom Widget Creation](https://www.youtube.com/watch?v=Jy_BnR06hwk)
-   * This video explains how a widget is created using Brackets
-   * With the release of our Yeoman widget generator, this way of building a widget is considered deprecated
- * [Expert Series: Kickstart Your Widget Development](https://www.youtube.com/watch?v=MZ0Ihu2QGYY)
+* [Expert Series: Kickstart Your Widget Development](https://www.youtube.com/watch?v=MZ0Ihu2QGYY)
 
 ### 3.2 Dojo
 

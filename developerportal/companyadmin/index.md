@@ -65,13 +65,13 @@ A company admin can manage four categories of settings:
 
 ![](attachments/companycategory.jpg)
 
-A Company Admin can change the **Company settings** by following these steps:
+A company admin can change the **Company settings** by following these steps:
 
-1.  Go to the [Developer Portal](http://home.mendix.com).
-2.  Click on your **Avatar** (top right).
-3.  Click **Company Admin**.
+1. Go to the [Developer Portal](http://home.mendix.com).
+2. Click your avatar in the top-right of the screen.
+3. Click **Company Admin**.
 
-  ![](attachments/companyadmin.jpg)
+![](attachments/companyadmin.jpg)
 
 ## 4 Documents in This Category
 

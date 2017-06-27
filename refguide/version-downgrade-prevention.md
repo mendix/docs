@@ -1,7 +1,7 @@
 ---
 title: "Version Downgrade Prevention"
 space: "Mendix 7 Reference Guide"
-parent: "Deployment"
+category: "Deployment"
 ---
 
 When downgrading to an older version of Mendix, during the migration phase, the data storage layer will first check whether any Mendix system tables have changed. It does this by comparing the pre-analysis phase migration version number in the database with the same version number in the runtime. If the existing database version number is bigger than the runtime version number to which you are downgrading, then the migration will be canceled, and an error message will be shown.

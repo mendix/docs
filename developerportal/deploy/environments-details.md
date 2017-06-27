@@ -61,25 +61,25 @@ Limitation types:
 
 ### 1.4 Loaded Deployment Package
 
-Below you can find information about the deployment package that is currently loaded into the environment:
+In this section, you can find information about the deployment package that is currently loaded into the environment:
 
-*   The size of the deployment package
-*   The upload date
-*   The version of the deployment package
-*   The name of the deployment package
-
+* Size of the deployment package
+* Upload date
+* Version of the deployment package
+* Name of the deployment package
 
 ## 2 Model Options
 
-On the second tab of the **Environment details** page you can edit the following model options:
+On the second tab of the **Environment details** page, you can edit the following model options:
 
-*   Scheduled events
-*   Constants
+* Scheduled events
+* Constants
 
-### 2.1 Schedulded events
+### 2.1 Scheduled Events
 
 In this section you can view your configured scheduled events.
-If you select a scheduled event and click **Toggle**, you can switch the scheduled event off/on. 
+
+If you select a scheduled event and click **Toggle**, you can switch the scheduled event off and on. 
 
 <div class="alert alert-info">{% markdown %}
 
@@ -87,9 +87,9 @@ You have to restart your application before the changes will be made.
 
 {% endmarkdown %}</div>
 
-With scheduled events you can let the runtime execute a microflow at a specific moment in time. The event can also be repeated with a given interval, for example every day.
+With scheduled events, you can let the Runtime execute a microflow at a specific moment in time. The event can also be repeated with a given interval (for example, every day).
 
-For more information, read the documentation about [Scheduled Events](https://docs.mendix.com/refguide7/scheduled-events)
+For more information, see [Scheduled Events](../../refguide/scheduled-events).
 
 ### 2.2 Constants
 

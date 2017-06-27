@@ -58,8 +58,8 @@ In the previous section you have set up a basic data structure and created some 
 11.  Select **From database** as _source_ option.
     ![](attachments/18448686/18581089.png)
 12. Set the following properties:<br>
-    a. For _Entity _select **Order**<br>
-    b. For _Name_ enter **OrderList**<div class="alert alert-info"><br>
+    a. For _Entity _select **Order**_<br>
+    b. For _Name_ enter **OrderList**<br>
 
     <div class="alert alert-info">
     With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.

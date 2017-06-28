@@ -76,7 +76,7 @@ On the **Selenium** tab, you can see a list of the Selenium hubs configured for 
 
 To add a new Selenium hub, follow these steps:
 
-1. Click **New** in the top bar, which opens the** Selenium hub** dialog box:
+1. Click **New** in the top bar, which opens the **Selenium hub** dialog box:
 
       ![](attachments/getting-started/selenium-hub-dialog.png)
 

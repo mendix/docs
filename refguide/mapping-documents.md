@@ -51,7 +51,11 @@ To specify an import or export mapping, the user needs to do a number of things:
 
     It is possible to include a parameter entity in mapping documents. Mapping documents with a parameter entity need to be invoked (in a [Call Web Service Action](call-web-service-action) or [Export with Mapping](export-mapping-action) action) by passing a parameter of the configured type. Mapping documents without a parameter entity can be invoked without passing a parameter. For import mappings, a parameter entity can be included by dragging one onto the placeholder in the created structure using the Connector tool. Export mappings always need to have a parameter entity (the object that is being exported) and the mapped root element is used for this. In both cases, the parameter entity is depicted as a yellow arrow parameter symbol.
 
-4.  Map child elements of the schema. Entities are obtained (a) by associations, (b) from a custom microflow, or (c) by entity specializations in the case of choice or inheritance XML elements. Configuring how to obtain an object is explained in more detail in the sections and .
+4.  Map child elements of the schema. Entities can be obtained in four ways:
+   a. from a mapping parameter 
+   b. by associations
+   c. from a custom microflow, or 
+   d. by entity specializations in the case of choice or inheritance XML elements.
 
 5.  Finally the user needs to configure how entity attributes should be transformed into the XML or JSON structure. This is explained in more detail in the sections and .
 
@@ -94,13 +98,7 @@ Mapping documents rely heavily on two windows. If they are not visible in the Mo
 | XML Schema Properties | This category is only filled in if the mapping is for an XML schema and not for a web service call. |
 | XML Schema | The name of the XML Schema that this mapping is for. |
 | Start at | Determines which part of the XML structure this mapping defines. |
-| Send empty values |
-
-Only applicable for Export Mappings. If a mapping element is optional and nillable, you need to select whether or not to send the empty values.
-
-_Default:_ do not send the empty values.
-
- |
+| Send empty values | Only applicable for Export Mappings. If a mapping element is optional and nillable, you need to select whether or not to send the empty values. _Default:_ do not send the empty values. |
 
 ## Read more
 

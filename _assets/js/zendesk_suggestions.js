@@ -5,7 +5,7 @@
     console.log('[MENDIX SUPPORT REQUEST FORM] request form found');
     var $subject = $('input[type=text]#request_subject', $form);
     if ($subject.length === 1) {
-      var initialValue = $suggestion.val();
+      var initialValue = $subject.val();
       var $suggestion = $('.suggestion-list');
       if ($suggestion.length === 1) {
         var DEBOUNCE;

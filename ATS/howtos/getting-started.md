@@ -114,7 +114,7 @@ To add a new application, follow these steps:
 
 3. Click **Save** to save the settings.
 
-## 5. Repository
+## 5 Repository
 
 The repository is where you create and store all your test cases, test suites, and custom actions. It is the ATS filing system, the heart of ATS.
 
@@ -144,8 +144,7 @@ To create a test case, follow these steps:
 5. When the **Test Case** page opens, you are now in the actual test case. In the top left corner of the page, you can see the name and description of your test case. The **Test Case** page also displays the following buttons:
 
    * **Run** – brings you to the **Run Configuration** screen
-   * **Quickrun** – immediately executes a test case with the last set of run configurations
-    * Use this option to check your test case while building
+   * **Quickrun** – immediately executes a test case with the last set of run configurations (use this option to check your test case while building)
    * **Export** – exports the test case as a XML file (this file can be uploaded into another ATS environment)
    * **PDF** – extracts a PDF report of your test case
 
@@ -168,112 +167,115 @@ Before you start building your test script, add the following tools:
 
 With the ATS Recorder plugin installed, you can start a recording session at anytime.
 
-Step 1. Click **Record** while inside a test case in ATS.
+To use the recorder function, follow these steps:
 
-Step 2. The page _Recording Session_ opens. On this page you can manage your recording sessions.
+1. Click **Record** while inside a test case in ATS, which opens the **Recording Session** page. On this page you can manage your recording sessions.
+2. You can now open the Mendix application you want to test in another tab of the browser and start testing the application manually. The test steps you take will now be recorded and saved in the chosen test case.
 
-Step 3. You can now open the Mendix application you want to test in another tab of the browser and start testing the application manually. The test steps you take will now be recorded and saved in the chosen test case.
+      ![](/howtos/attachments/getting-started/recording-session-cp.png)
 
-![](/howtos/attachments/getting-started/recording-session-cp.png)
-
-Step 4. Click **Save** to save your actions for this event.
+3. Click **Save** to save your actions for this event.
 
 | Field | Description |
 | --- | --- |
-| Recorded event | all registered clicks/entering text will show up here in the sequence they were done. Select an event to open the _Action mapping_ menu of that particular event. The ATS recorder selects the actions for you. |
-| Action mapping | shows all available actions for this event. Click  **Select** if you want to choose a different action. |
+| **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS recorder selects the actions for you. |
+| **Action mapping** | This shows all the available actions for this event. Click  **Select** if you want to choose a different action. |
 
 ![](/howtos/attachments/getting-started/recorded-test-steps.png)
 
-All test steps are numbered for easy identification. The up and down arrows can be used to change the sequence of the test steps. You can **delete**, **copy** or **paste** a selected test step. With **Extract action **you can combine actions of multiple steps into one step.  Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Extract Action](refguide-ats-1/custom-actions)
+All the test steps are numbered for easy identification. The up and down arrows can be used to change the sequence of the test steps. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Extract Action](refguide-ats-1/custom-actions).
 
-#### **Test Data tab**
+#### 5.2.2 Test Data Tab
 
-In this tab you can connect your data sets to a test case. Use the arrow to select the data set you need and click **Save**. A new menu will appear in which you can see the data set fields that are available to select. You can also use this menu to check if you selected the correct data set.
+In this tab, you can connect your data sets to a test case. Use the arrow to select the data set you need and click **Save**. A new menu will appear in which you can see the data set fields that are available to select. You can also use this menu to check if you selected the correct data set.
 
 ![](/howtos/attachments/getting-started/data-set-test-case.png)
 
-**Note**_: If you do not use the data set, make sure to disconnect it. ATS will remember where you selected the data set fields as input, so if you reconnect the data set, ATS will automatically set the correct input. _
+<div class="alert alert-info">{% markdown %}
 
-#### **Show usages tab**
+If you do not use the data set, make sure to disconnect it. ATS will remember where you selected the data set fields as input, so if you reconnect the data set, ATS will automatically set the correct input.
 
-This tab shows you the actions used in this test case and the test suites that are using this test case. Use this screen to  that if you make a change to a custom action, it does not affect another test case or test suite.
+{% endmarkdown %}</div>
+
+#### 5.2.3 Show Usages Tab
+
+This tab shows you the actions used in this test case and the test suites that are using this test case. Use this screen to verify that if you make a change to a custom action, it does not affect another test case or test suite.
 
 ![](/howtos/attachments/getting-started/show-usages-test-case.png)
 
-#### **Stories tab**
+#### 5.2.4 Stories Tab
 
-This tab displays the user stories that are connected to your test case, the test cases within that story and the success rate of the user story.
+This tab displays the user stories that are connected to your test case, the test cases within that story, and the success rate of the user story.
 
 ![](/howtos/attachments/getting-started/stories-test-case.png)
 
 For more information on test cases, see [Test Case](refguide-ats-1/test-case)
 
-### 5.3 How to create a test suite
+### 5.3 Creating a Test Suite
 
-Step 1. Click **Add Test** and select Test Suite in the dropdown menu. The page _Create new_ opens.
-Step 2. Enter a name for your test suite. Since you are likely to create multiple test cases and test suites, we advice you use a predefined naming structure.
-Step 3. Enter a clear description for your test suite. Others may need to know what your test suite does. It might be handy to use a template to make sure all aspects of the suite are present.
+To create a test suite, follow these steps:
 
-![](/howtos/attachments/getting-started/create-new-test-suite.png)
+1. Click **Add Test** and select **Test Suite** in the drop-down menu. The page **Create new** will open.
+2. Enter a name for your test suite. Since you are likely to create multiple test cases and test suites, using a predefined naming structure is advised.
+3. Enter a clear description for your test suite. Others may need to know what your test suite does. It might be handy to use a template to make sure all aspects of the suite are present.
 
-Step 4. Click **Create**. 
-Step 5. The page _Test Suite_ looks similar to the page _Test Case_ but with fewer options. The page _Test Suite_ also displays the following buttons:
+      ![](/howtos/attachments/getting-started/create-new-test-suite.png)
 
-_**Run**_ - click this button to go to the run configuration screen.
+4. Click **Create**. 
+5. The **Test Suite** page looks similar to the **Test Case** page, but with fewer options. The **Test Suite** page also displays the following buttons:
 
-_**Quickrun**_ - to immediately execute a test suite with the last set of run configurations. Use this option to check your test case while building.
-
-_**Export**_ - exports the test suite as a XML file. This file can be uploaded into another ATS environment.
+      * **Run** – takes you to the **Run configuration** screen
+      * **Quickrun** – immediately executes a test suite with the last set of run configurations (use this option to check your test case while building)
+      * **Export** – exports the test suite as a XML file (this file can be uploaded into another ATS environment)
 
 ![](/howtos/attachments/getting-started/test-suite-page.png)
 
-#### Test Cases/Suites tab
+#### 5.3.1 Test Cases/Suites Tab
 
-You can see all the steps that are in your test suite. Each step is either a test suite or a test step.
+Here you can see all the steps that are in your test suite. Each step is either a test suite or a test step.
 
-**Add - **Add a test case to your test suite. Enter a clear description for this step and **Search** for a test case you want to add to your test suite or **Create a new Test Case** if you want to add a complete new test case to your test suite.
+Clicking **Add** adds a test case to your test suite. Enter a clear description for this step and **Search** for a test case you want to add to your test suite. You can **Create a new Test Case** if you want to add a complete new test case to your test suite.
 
 ![](/howtos/attachments/getting-started/select-test.png)
 
-#### **Show Usages tab**
+#### 5.3.2 Show Usages Tab
 
-This tab shows you all _Test Cases used by this Test Suite_, all _Test Suites used by this Test Suite_ and _Test Suites using this Test Suite_. Use this screen to make sure that if you make a change it does not affect other test cases or test suites.
+This tab shows you all the **Test Cases used by this Test Suite**, all the **Test Suites used by this Test Suite**, and the **Test Suites using this Test Suite**. Use this screen to make sure that if you make a change, it does not affect other test cases or test suites.
 
 ![](/howtos/attachments/getting-started/show-usages-test-suite.png)
 
-#### **Stories tab**
+#### 5.3.3 Stories Tab
 
-This tab displays the user stories that are connected to your test suite, the test cases within that story and the success rate of the user story. You can _Open_, _Unlink_ or _Link_ a user story to your test suite.
+This tab displays the user stories that are connected to your test suite, the test cases within that story, and the success rate of the user story. You can **Open**, **Unlink**, or **Link** a user story to your test suite.
 
 ![](/howtos/attachments/getting-started/stories-test-suite.png)
 
-For more information on test suites go to [Test Suite](refguide-ats-1/test-suite).
+For more information on test suites, go to [Test Suite](refguide-ats-1/test-suite).
 
-## 6. **Run Configuration**
+## 6 Run Configuration
 
-Once you click **Run** in the upper right corner of your test case, the run configuration page will open.
+When you click **Run** in the upper-right corner of your test case, the **Select Run Configuration** page will open.
 
 ![](/howtos/attachments/getting-started/run-configuration.png)
-Here you can select your AUT and selenium hub for ATS to use.
+
+Here, you can select your AUT and Selenium hub for ATS to use.
 
 | Field | Description |
 | --- | --- |
-| Application | Select the App you want to test. |
-| Selenium Hub | Select the Selenium Hub you want to use to execute the test case. |
-| Browser | Select the Browser the Selenium Hub uses to execute the test case.<br> **Note**: These are the supported browsers. | 
+| **Application** | Select the app you want to test. |
+| **Selenium Hub** | Select the Selenium Hub you want to use to execute the test case. |
+| **Browser** | Select the browser that the Selenium Hub uses to execute the test case. Please note that these are the supported browsers. | 
 
-Now click **Run** again in the upper right corner to execute the test case against the provided parameters. For more information on the run configuration, see [Run Configuration](refguide-ats-1/test-run).
+Now click **Run** again in the upper-right corner to execute the test case against the provided parameters. For more information on the run configuration, see [Run Configuration](refguide-ats-1/test-run).
 
-## 7. **Result**
-After you clicked **Run** the monitoring/results page will open.
+## 7 Result
+
+When you click **Run**, the **Monitoring / Results** page will open.
 
 ![](/howtos/attachments/getting-started/monitoring-results-pending.png)
 
-Once your test case is executed the result is shown here. For more information on results, see [Monitoring](refguide-ats-1/monitoring).
+Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](refguide-ats-1/monitoring).
 
-Now you finished the getting started guide for ATS. Please check our [How To](howtos) and [Best Practice](bestpractices) sections for more information.<br> 
+Now you finished the getting started guide for ATS. Please check our [how-to's](howtos) and [best practice](bestpractices) for more information.
 
 Good luck testing your Mendix App with ATS!
-
-

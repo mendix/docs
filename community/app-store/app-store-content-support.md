@@ -11,7 +11,6 @@ Support for App Store content is determined by the content support category and 
 Support Category | Description
 --- | ---
 Mendix Platform | Mendix supports all the content in this category when you are equipped with an SLA (**platform**, **gold**, or **platinum**) with Mendix. Content in this category is proactively incorporated into R&D test cycles as part of our platform release management.
-Mendix Extended | Though developed by the Mendix Community, Mendix supports all the content in this category when you are equipped with a **gold** or **platinum** SLA. Content in this category is proactively tested for compatibility with every Mendix Modeler release.
 Community | Content is provided as-is by members of our Community and support depends on the availability and effort of the owner.
 
 ## 2 Support Category and Feedback Process
@@ -40,7 +39,6 @@ The level of support depends on the availability and effort of the developer and
 | Support Category  | Gold/Platinum SLA | Platform SLA | No SLA |
 | --- | --- | --- | --- |
 | Mendix Platform content | [Mendix Support](https://developers.mendix.com/support/)   | [Mendix Support](https://developers.mendix.com/support/) | Mendix Community |
-| Mendix Extended content | [Mendix Support](https://developers.mendix.com/support/)   | Mendix Community | Mendix Community |
 | Community content | Mendix Community | Mendix Community | Mendix Community |
 
 ## 3 Related Content

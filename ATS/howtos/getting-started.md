@@ -50,7 +50,7 @@ To create a new project, follow these steps:
    **Project Users** | Enter the people that need access to this project. This project will then appear in their **My Projects** menu. You can always edit this later. There are two different roles for a project user: a **Tester** can only test, create tests, and monitor results; a **Project Administrator** has the same rights as the tester but has also editing rights to the configuration settings of a project.
    **Action Libraries** | Make sure that the action libraries **Core** and **Mendix** are included. Please note that without libraries, it is not possible to select actions for the test script. For more information on action libraries, see [Standard Actions Reference](../refguide-ats-1/standard-actions-reference).
 
-3. Click **Save & Open** at the bottom of the page to open the **Project Dashboard**. For information on this, see [Project Dashboard](../refguide-ats-1/project-dashboard).
+3. Click **Save & Open** at the bottom of the page to open the **Project Dashboard**.
 
 ![](attachments/getting-started/project-dashboard-empty.png)
 
@@ -209,8 +209,6 @@ This tab displays the user stories that are connected to your test case, the tes
 
 ![](attachments/getting-started/stories-test-case.png)
 
-For more information on test cases, see [Test Case](../refguide-ats-1/test-case)
-
 ### 5.3 Creating a Test Suite
 
 To create a test suite, follow these steps:
@@ -249,8 +247,6 @@ This tab shows you all the **Test Cases used by this Test Suite**, all the **Tes
 This tab displays the user stories that are connected to your test suite, the test cases within that story, and the success rate of the user story. You can **Open**, **Unlink**, or **Link** a user story to your test suite.
 
 ![](attachments/getting-started/stories-test-suite.png)
-
-For more information on test suites, go to [Test Suite](../refguide-ats-1/test-suite).
 
 ## 6 Run Configuration
 

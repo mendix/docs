@@ -129,12 +129,6 @@ In production this only works with licenses based on concurrent users.
 
 _Default value_: Yes
 
-### Enable Clustering Support
-
-TODO
-
-_Default value_: No
-
 ### Uniqueness Validation
 
 This option can have two different values: **Runtime** and **Database**. For Mendix 7.3 and higher, **Database** will be the default value for new projects, but old projects will still have **Runtime** as the default value.

@@ -45,7 +45,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 2. Fill in the feedback you want to send to Mendix. A description of the feedback and a screenshot of the screen are optional but recommended.
 3. Click **Send Feedback**:
 
-    ![](attachments/feedbackmendix.jpg)
+    ![](attachments/collaborate/feedbackmendix.jpg)
 
 ## 4 Viewing Your Provided Feedback Items
 
@@ -55,4 +55,4 @@ You can view your own submitted feedback items in the feedback list in your prof
 2. Click **Show Profile**.
 3. Go to the **Feedback** tab:
 
-    ![](attachments/feedbackoverview.jpg)
+    ![](attachments/collaborate/feedbackoverview.jpg)

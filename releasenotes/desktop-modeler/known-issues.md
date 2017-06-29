@@ -17,7 +17,7 @@ For details on this release, see [7.3 release notes](7.3).
 
 ### 7.3.0<a name="KI730"></a>
 
-* When you have a conditionally visible container that contains a conditionally visible widget, the widget is not always initialized properly.
+* When you have a conditionally visible container that contains a conditionally visible widget, the widget is not always initialized properly. This issue is fixed in [7.4.0](7.4#fix_730)
 
 ## 7.2
 

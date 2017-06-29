@@ -8,13 +8,13 @@ tags: ["Deploy","App","Developer Portal"]
 
 ## 1 Introduction
 
-In **Environments** section of the **Deploy** category, there is an overview of two pages:
+In the **Environments** section of the **Deploy** category, there is an overview of two pages:
 
-* Deploy
+* **Deploy**
     * Deployment Package Repository
     * Environments 
     * Activities
-* Custom Domain
+* **Custom Domain**
     * Certificates
     * Linked Custom Domains
 

@@ -12,6 +12,7 @@ This category contains documents about the use of specific tasks in the [Develop
 **Feedback** 
 
 *   [How to Use the Feedback Widget](/developerportal/howto/gathering-user-feedback)
+*   [How to Provide Feedback on Mendix](/howto/feedback-mendix)
 
 **Stories**
 

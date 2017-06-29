@@ -17,7 +17,7 @@ Community | Content is provided as-is by members of our Community and support de
 
 We're always curious about and grateful for your feedback. The way you communicate your feedback to us depends on the support category of the content.
 
-### 2.1 Mendix Platform and Mendix Extended Categories
+### 2.1 Mendix Platform Category
 
 The applicable level of service for Mendix-supported App Store content is equal to the Mendix SLA you have acquired. In other words, the same SLA conditions apply for support on App Store content.
 

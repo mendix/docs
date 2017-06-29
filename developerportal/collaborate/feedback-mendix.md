@@ -1,7 +1,7 @@
 ---
-title: "Provide Feedback on Mendix"
+title: "How to Provide Feedback on Mendix"
 space: "Developer Portal"
-category: "Collaborate"
+category: "How-To's"
 description: "This page describes how to provide feedback on Mendix."
 tags: ["Feedback","Widget","Developer Portal","Mendix"]
 ---

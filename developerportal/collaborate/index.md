@@ -40,7 +40,7 @@ The **Feedback** button in the **Developer Portal** is used to provide feedback 
 
 {% endmarkdown %}</div>
 
-For more details, see [Feedback](feedback) and [How to Provide Feedback on Mendix](/developerportal/howto/feedback-mendix).
+For more details, see [Feedback](feedback) and [How to Provide Feedback on Mendix](../howto/feedback-mendix).
 
 ## 6 Documents
 

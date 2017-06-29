@@ -8,28 +8,28 @@ tags: ["Custom Domain","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-The Mendix Cloud supports adding custom domains such as https://myapp.mycompany.com/ to your environments. As we only allow HTTPS connections, you have to provide a Custom Domain Certificate (a SSL/TLS Certificate). This how-to walks you through the process.
+The Mendix Cloud supports adding custom domains such as `https://myapp.mycompany.com/` to your environments. As we only allow HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). This how-to walks you through the process.
 
-This option is available for free for licensed apps. You can not add custom domains to your free apps.
+This option is available for free for licensed apps. You cannot add custom domains to free apps.
 
 **This how-to will teach you how to do the following:**
 
-*   How to generate a Certificate Request for your Custom Domain
-*   How to upload a Custom Domain Certificate to the Mendix Cloud Platform
-*   How to renew a Custom Domain Certificate
-*   How to configure a Custom Domain for your Environment
+* Generate a certificate request for your custom domain
+* Upload a custom domain certificate to the Mendix Cloud platform
+* Renew a custom domain certificate
+* Configure a custom domain for your environment
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-*   You have basic knowledge about DNS
-*   You have basic knowledge about SSL/TLS certificates
-    *   You know what a "SSL/TLS Certificate" is and what it is used for
-    *   You know what a "Intermediate Certificate Chain" is and what it is used for
-    *   You know what a "SSL/TLS Private Key" is and what it is used for
-    *   You know what a "Certificate Request" is and what it is used for
-*   You have basic knowledge about Certificate Authorities (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, Comodo)
+* Have basic knowledge of DNS
+* You have basic knowledge about SSL/TLS certificates
+    * You know what a "SSL/TLS Certificate" is and what it is used for
+    * You know what a "Intermediate Certificate Chain" is and what it is used for
+    * You know what a "SSL/TLS Private Key" is and what it is used for
+    * You know what a "Certificate Request" is and what it is used for
+* You have basic knowledge about Certificate Authorities (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, Comodo)
 
 
 ### 2.1 Domain Registrar / DNS provider

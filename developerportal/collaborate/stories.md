@@ -30,63 +30,64 @@ Above the stories, you can find the following action buttons:
 
 ### 2.1 New Story
 
-To create a **new story** , you must first select the correct **Sprint** and provide the following information:
+To create a new story , you must first select the correct **Sprint** and provide the following information:
 
-*   The title of the story
-*   Story type
-    *   Feature
-    *   Bug
-*   The amount of story points
-*   Add a label or use existing label
-*   A description of the story
-*   Add default tasks based on story template - the default tasks created in the **Story template** will automatically appear as subtasks in this story
+* The title of the story
+* **Story type**
+    * **Feature**
+    * **Bug**
+* The number of **Story points**
+* Add **Labels** or use existing labels
+* A **Description** of the story
+* **Add default tasks based on story template** (if necessary)
+  * The default tasks created in the **Story template** will automatically appear as sub-tasks in this story
 
-### 2.2 New sprint
+### 2.2 New Sprint
 
-You are able to plan the following:
+In this section, you are able to plan the following:
 
-*   Sprint
-    *   Name
-    *   The order of the sprint
-    *   The duration of the sprint
-    *   The start date of the sprint
-*   Release
-    *   Name
-    *   Date
-    *   Description
-*   Other
-    *   Name
-    *   Date 
-    *   Description
-    *   Responsible team member
+* **Sprint**
+    * **Name**
+    * The order of the sprint
+    * The **Duration** of the sprint
+    * The start date of the sprint
+* **Release**
+    * **Name**
+    * **Date**
+    * **Description**
+* **Other**
+    * **Name**
+    * **Date**
+    * **Description**
+    * **Who is responsible?**
 
-### 2.3 Import/Export
+### 2.3 Import / Export to Excel
 
-The export options are:
+The export options are the following:
 
-*   Export all stories to Excel (including completed sprints)
-*   Export all stories to Excel
-*   Export single sprint to Excel
-*   Update stories from Excel
+* **Export all stories to Excel (including completed sprints)**
+* **Export all stories to Excel**
+* **Export single sprint to Excel**
+* **Update stories from Excel**
 
 ## 3 Filter
 
 It is possible to filter on the following:
 
-*   Sprints
-    *   Archived
-    *   Current
-    *   Upcoming
-    *   Backlog
-*   Story
-    *   Done
-    *   Feature
-    *   Bug
+* **Sprints**
+    * **Archived**
+    * **Current**
+    * **Upcoming**
+    * **Backlog**
+* **Story**
+    * **Done**
+    * **Feature**
+    * **Bug**
 
 ## 4 Related Content
 
-*   [App Buzz](/developerportal/collaborate/appbuzz)
-*   [Collaborate](/developerportal/collaborate)
-*   [Develop](/developerportal/develop)
-*   [Feedback](/developerportal/collaborate/feedback)
-*   [Team](/developerportal/collaborate/team)
+* [App Buzz](/developerportal/collaborate/appbuzz)
+* [Collaborate](/developerportal/collaborate)
+* [Develop](/developerportal/develop)
+* [Feedback](/developerportal/collaborate/feedback)
+* [Team](/developerportal/collaborate/team)

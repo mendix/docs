@@ -86,7 +86,7 @@ There are two actions you can take :
 * Transport the environment to the acceptance/production environment
 * View the details of the environment
 
-After clicking the **Details** of the environment, you can see the following tabs:
+After clicking [Details](/developerportal/deploy/environments-details) of the selected environment, you can see the following tabs:
 
 * General
 * Model Options
@@ -125,3 +125,11 @@ On this page, you can manage your custom domain certificates.
 When your Mendix App needs to be accessible via your own URL (for example, `https://myapp.mycompany.com/`), you have to provide a custom domain certificate (an SSL/TLS certificate) so that we can keep serving your Mendix app via a secure connection.
 
 There is also a section with an overview of linked custom domains.
+
+For more information, see [How to Configure Custom Domains](/developerportal/howto/custom-domains).
+
+## 7 Related Content 
+
+*  [Deploy](/developerportal/deploy)
+*  [Environment Details](/developerportal/deploy/environments-details)
+*  [How to Configure Custom Domains](/developerportal/howto/custom-domains)

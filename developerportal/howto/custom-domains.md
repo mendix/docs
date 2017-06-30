@@ -15,7 +15,7 @@ This option is available for free for licensed apps. You cannot add custom domai
 **This how-to will teach you how to do the following:**
 
 * Generate a certificate request for your custom domain
-* Upload a custom domain certificate to the Mendix Cloud platform
+* Upload a custom domain certificate to the Mendix Cloud
 * Renew a custom domain certificate
 * Configure a custom domain for your environment
 
@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ### 2.1 Domain Registrar / DNS provider
 
-Before configuring your custom domain in the Mendix Cloud Platform, you will need to configure a DNS record for your custom domain at your domain registrar/DNS provider.
+Before configuring your custom domain in the Mendix Cloud, you will need to configure a DNS record for your custom domain at your domain registrar/DNS provider.
 
 ![](attachments/deploy/21168230.png)
 
@@ -45,9 +45,9 @@ It's not possible to create a CNAME record for an apex/naked domain (meaning, a 
 
 {% endmarkdown %}</div>
 
-## 3 Managing Custom Domains in the Mendix Cloud Platform
+## 3 Managing Custom Domains in the Mendix Cloud
 
-Custom domain certificates (or just "certificates") and custom domains are managed in separate locations in the Mendix Cloud Platform. Certificates are currently managed on the application level.
+Custom domain certificates (or just "certificates") and custom domains are managed in separate locations in the Mendix Cloud. Certificates are currently managed on the application level.
 
 You can have a collection of certificates. For example when your certificate expires, you can upload a new certificate next to your old certificate. Those can be chosen when you configure a custom domain. This is done on the environment level (test, acceptance, production).
 
@@ -63,7 +63,7 @@ To manage custom domains, follow these steps:
 
 ## 4 Generating a Certificate Request for your Custom Domain<a name="Generating"></a>
 
-When you do not have an SSL/TLS certificate or an SSL/TLS private key for your custom domain yet, you have to order one at a certificate authority (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, or Comodo). In order to get a signed SSL/TLS certificate from a certificate authority, you need to provide a certificate request. A certificate request can be created in the Mendix Cloud Platform.
+When you do not have an SSL/TLS certificate or an SSL/TLS private key for your custom domain yet, you have to order one at a certificate authority (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, or Comodo). In order to get a signed SSL/TLS certificate from a certificate authority, you need to provide a certificate request. A certificate request can be created in the Mendix Cloud.
 
 To create a certificate request, follow these steps:
 
@@ -116,7 +116,7 @@ To upload the custom domain certificate, follow these steps:
 
     ![](attachments/deploy/21168228.png)
 
-3. Click **Save** to save your new custom domain certificate. It will be uploaded to the Mendix Cloud Platform automatically.
+3. Click **Save** to save your new custom domain certificate. It will be uploaded to the Mendix Cloud automatically.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -178,7 +178,7 @@ Please make sure you've configured a CNAME record for your Custom Domain at your
 
 ### 8.1 Can I create a wildcard certificate _*.mycompany.com_?
 
-Yes. However, when you create the Certificate Request via the Mendix Cloud Platform you will only be able to use the wildcard certificate for all environments of only 1 application. When you have your own Custom Domain Certificate, you can upload it to all of your applications and use it for all environments of all of your applications. You can select the same wildcard certificate per environment by specifying different subdomains. Example _test.mycompany.com_ _accp.mycompany.com_ and _app.mycompany.com._
+Yes. However, when you create the Certificate Request via the Mendix Cloud you will only be able to use the wildcard certificate for all environments of only 1 application. When you have your own Custom Domain Certificate, you can upload it to all of your applications and use it for all environments of all of your applications. You can select the same wildcard certificate per environment by specifying different subdomains. Example _test.mycompany.com_ _accp.mycompany.com_ and _app.mycompany.com._
 
 ### 8.2 How do I properly construct a Intermediate Certificate Chain?
 
@@ -191,5 +191,7 @@ An Intermediate Certificate Chain chain could look like this from top to bottom:
 *   Root Certificate (optional)
 
 ## 9 Related Content
-[How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
-[How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
+
+*  [Deploy](/developerportal/deploy)
+*  [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
+*  [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)

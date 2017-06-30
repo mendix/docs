@@ -3,7 +3,7 @@ title: "Documents"
 space: "Developer Portal"
 category: "Collaborate"
 description: "Describes how to manage your documents."
-tags: ["Documents, "Developer Portal"]
+tags: ["Documents," "Developer Portal"]
 ---
 
 ## 1 Introduction

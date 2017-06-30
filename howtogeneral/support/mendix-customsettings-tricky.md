@@ -106,4 +106,4 @@ Also keep in mind that changing this value for an application running in the Men
 
 ## 3 Related Content
 
-[Custom settings](https://docs.mendix.com/refguide/custom-settings)
+* [Custom Settings](/refguide/custom-settings)

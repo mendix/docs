@@ -9,10 +9,10 @@ tags: ["Operate","App","Developer Portal"]
 
 The category **Operate** is devided into four pages:
 
-*   Metrics
-*   Alerts
-*   Logs 
-*   Backups
+*   [Metrics](/developerportal/operate/metrics)
+*   [Alerts](/developerportal/operate/monitoring-application-health)
+*   [Logs](/developerportal/operate/logs) 
+*   [Backups](/developerportal/operate/backups)
 
 ## 2 Metrics
 
@@ -78,3 +78,10 @@ This pruning schedule applies to nightly backups and backups initiated by users.
 
 
 ## 6 Related Content
+
+*   [Alerts](/developerportal/operate/monitoring-application-health)
+*   [Backups](/developerportal/operate/backups)
+*   [Logs](/developerportal/operate/logs)
+*   [Mendix Cloud Status](/developerportal/operate/mendix-cloud-status)
+*   [Metrics](/developerportal/operate/metrics)
+*   [Trends in Mendix Cloud v3](/developerportal/operate/trends)

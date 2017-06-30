@@ -3,6 +3,11 @@ title: "Platform Portal"
 space: "Release Notes"
 toc-level: "1"
 ---
+
+## June 21st, 2017
+
+* Private company App Store content is now indicated in the **Template** browser with a lock icon.
+
 ## June 7th, 2017
 
 ### Fixes

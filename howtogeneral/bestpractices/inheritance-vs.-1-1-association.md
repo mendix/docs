@@ -1,5 +1,5 @@
 ---
-title: "Inheritance vs. 1-1 association"
+title: "Inheritance vs. 1-1 Association"
 space: "General How-To's"
 category: "Best Practices"
 ---

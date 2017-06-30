@@ -1,9 +1,9 @@
 ---
-title: "Best Practices for Component Based Development"
+title: "Best Practices for Component-Based Development"
 space: "General How-To's"
 category: "Best Practices"
 ---
-## What is Component Based Development?
+## What is Component-Based Development?
 
 The definition of Component Based Development as given by [Wikipedia](https://en.wikipedia.org/wiki/Component-based_software_engineering) is:
 

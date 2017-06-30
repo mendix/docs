@@ -150,9 +150,9 @@ The **MY APP STORE** section of the sidebar menu contains the following options:
 
 * **Published** – click this to see the content you have published as well as the content your company has published on the **Published content** page
     * On the **Published by me** tab, you can see the last version of the content you published
-        * Click **Manage** to edit and unpublish content
+        * Click **Manage** to edit the current draft version, create a new draft version (for more information, see [How to Share App Store Content](share-app-store-content)), or unpublish content
     * On the **Published by my company** tab, you can see all of the content published by your company
-        * Click **Manage** to edit any of the content and to unpublish the content version you had published (if you are an organization administrator, you can unpublish any content)
+        * Click **Manage** to edit content, create a new draft version (for more information, see [How to Share App Store Content](share-app-store-content)), or unpublish the content version you had published (if you are an organization administrator, you can unpublish any content)
 * **Favorites** – click this to see the content you have favorited
 * **Stats** – click this to see the content that has been downloaded the most in the previous month on the **Downloads overview** page
     * Clicking specific App Store content on this page will show you a **Downloads per month** graph as well as **User Reviews**

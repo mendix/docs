@@ -1091,7 +1091,7 @@ module.exports = {
     },
     {
       from: "/howto50/Adding+App+Store+content+to+your+app",
-      to: "/howto50/adding-app-store-content-to-your-app"
+      to: "/community/app-store/use-app-store-content-in-the-modeler"
     },
     {
       from: "/howto50/Anonymous+User+Security",
@@ -2176,9 +2176,17 @@ module.exports = {
       to: "/developerportal/howto/custom-domains"
     },
     {
+      from: "/mendixcloud/custom-domains",
+      to: "/developerportal/howto/custom-domains"
+    },	  
+    {
       from: "/mendixcloud/Deploying+to+the+cloud",
       to: "/developerportal/howto/deploying-to-the-cloud"
     },
+    {
+      from: "/mendixcloud/deploying-to-the-cloud",
+      to: "/developerportal/howto/deploying-to-the-cloud"
+    },	  
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
       to: "/howtogeneral/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
@@ -2190,6 +2198,10 @@ module.exports = {
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
       to: "/howtogeneral/mendixcloud/how-to-deploy-a-mendix-app-on-azure"
+    },
+    {
+      from: "/mendixcloud/how-to-link-app-to-node",
+      to: "/developerportal/howto/how-to-link-app-to-node"
     },
     {
       from: "/mendixcloud/Mendix+Cloud",
@@ -2212,13 +2224,25 @@ module.exports = {
       to: "/developerportal/howto/maintenance-windows"
     },
     {
+      from: "/mendixcloud/maintenance-windows",
+      to: "/developerportal/howto/maintenance-windows"
+    },
+    {
       from: "/mendixcloud/migrating+to+v4",
       to: "/developerportal/howto/migrating-to-v4"
     },
     {
+      from: "/mendixcloud/migrating-to-v4",
+      to: "/developerportal/howto/migrating-to-v4"
+    },	  
+    {
       from: "/mendixcloud/Monitoring+application+health",
       to: "/developerportal/operate/monitoring-application-health"
     },
+    {
+      from: "/mendixcloud/monitoring-application-health",
+      to: "/developerportal/operate/monitoring-application-health"
+    },	  
     {
       from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
       to: "/howtogeneral/mendixcloud/securing-outgoing-connections-from-your-application"
@@ -2267,6 +2291,10 @@ module.exports = {
       from: "/mxsupport/Technical+Contact+Definition",
       to: "/developerportal/settings/technical-contact"
     },
+ {
+      from: "/mxsupport/technical-contact",
+      to: "/developerportal/settings/technical-contact"
+    },	  
     /****************************************************
      * REFERENCE GUIDE MENDIX 4
      ****************************************************/

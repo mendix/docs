@@ -168,7 +168,7 @@ exclude:
   - _data/assetsjs.json
   - _data/assetscss.json
   - CONTRIBUTING.md
-  - scripts
+  - _scripts
 
 markdown: kramdown
 kramdown:

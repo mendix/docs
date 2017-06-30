@@ -110,7 +110,7 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 * [Set Up Data Validation](setting-up-data-validation)
 * [Work with Object Events](working-with-object-events)
 * [Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [Manage Your Application Requirements with Mendix](managing-your-application-requirements-with-mendix)
+* [Manage Your Application Requirements with Mendix](/developerportal/howto/managing-your-application-requirements-with-mendix)
 * [Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 * [Generate a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)

@@ -1,7 +1,7 @@
 ---
 title: "Create Custom Action"
 space: "ATS Add-On"
-category: "ATS How-To's"
+category: "How-To's"
 ---
 
 ## 1 Introduction
@@ -123,7 +123,7 @@ Now that you have completed the groundwork, you can add sub-actions to your cust
 
 ![](attachments/create-custom-action/addsubaction.png)  
 
-The **Test Step Setup** dialog box will open. Enter *Select active span* for **Describe Test Step** and *Find Widget Child Node* for **Secarch Action**, then press **Search**. The [Find Widget Child Node](../refguide-ats-1/find-widget-child-node) action will appear in the search results table. Select the action by clicking the corresponding row in the table and click **Save**. You have now succesfully added the Find Widget Child Node action as a sub-action.
+The **Test Step Setup** dialog box will open. Enter *Select active span* for **Describe Test Step** and *Find Widget Child Node* for **Search Action**, then press **Search**. The [Find Widget Child Node](../refguide-ats-1/find-widget-child-node) action will appear in the search results table. Select the action by clicking the corresponding row in the table and click **Save**. You have now succesfully added the Find Widget Child Node action as a sub-action.
 
 ![](attachments/create-custom-action/addfindwidgetchildnode.png)
 

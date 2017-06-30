@@ -11,7 +11,6 @@ Before the Mendix SDK can make your life easier, there's some learning to do. Fo
 *   [Setting up your development environment](setting-up-your-development-environment)
 *   [Creating your first script](creating-your-first-script)
 *   [Creating the domain model](creating-the-domain-model)
-*   [Development Workflow](development-workflow)
 *   [Manipulating existing models](manipulating-existing-models)
     *   [Changing things in the model](changing-things-in-the-model)
     *   [Closing the server connection](closing-the-server-connection)
@@ -46,12 +45,6 @@ Browse the compiled documentation about the Mendix Metamodel, as well as externa
 *   [JavaScript & TypeScript resources](javascript-typescript-resources)
 *   [Mendix Platform SDK API docs](https://apidocs.mendix.com/platformsdk/latest/)
 *   [FAQ](faq)
-
-### Example Code
-
-*   [Example scripts](https://github.com/mendix/mendixplatformsdk-examples) (generate crud app, generate textual representation for microflow, and reverse engineering) (github)
-*   [Components library](https://github.com/mendix/mendixmodelcomponents) to help you generate basic CRUD pages for entities
-*   [Use case examples](use-case-examples) for the different use cases such as Analyzing and Exporting models.
 
 ## Need Help?
 

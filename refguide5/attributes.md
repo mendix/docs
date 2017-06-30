@@ -110,7 +110,7 @@ AutoNumber            | 1                                           | Starting v
 Binary                | <span>N/A</span>                            |
 Boolean               | False                                       |
 Currency              | 0                                           |
-DateTime              | <span>(empty)</span>                        | The default value should either comply with the format year-month-day (eventually postfixed by hour:minute, eventually postfixed by :second), or be [%CurrentDateTime%] (which means that when an object is created the value of this attribute is the date and time when the object is created).
+DateTime              | <span>(empty)</span>                        | The default value should either comply with the format year-month-day (eventually postfixed by hour:minute, eventually postfixed by :second), or be `[%CurrentDateTime%]` (which means that when an object is created the value of this attribute is the date and time when the object is created).
 Decimal               | 0                                           |
 Enum                  | <span>(empty)</span>                        |
 Float                 | 0                                           |

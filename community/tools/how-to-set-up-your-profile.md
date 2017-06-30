@@ -20,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have an account with Mendix (register [here](https://www.mendix.com/try-now/))
 
-## 3 My Community Profile
+## 3 My Community Profile<a name="MyCommunityProfile"></a>
 
 The first thing you want to check out is your [Community Profile](https://developer.mendixcloud.com/link/profile) page. To get there, mouse over your picture in the navigation bar and click **My Community Profile**. This overview page shows the main page of your profile, including your summary, skills, industry experience, and badges.
 
@@ -29,6 +29,12 @@ The first thing you want to check out is your [Community Profile](https://develo
 When you access your profile page through the My Community Profile link, it is automatically in edit mode so that you can easily update your profile. To add a summary, new skills, industry experience, and links to your social media profiles, click this icon:
 
 ![](attachments/how-to-set-up-your-profile/icon.png)
+
+<div class="alert alert-info">{% markdown %}
+
+In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information on gaining Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq) and [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation#GainingMendixPoints).
+
+{% endmarkdown %}</div>
 
 If you access your profile through the **Developers** or **Leaderboards** tabs of the [Our Community](https://developer.mendixcloud.com/link/community) page, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
 
@@ -58,10 +64,12 @@ When you’re done setting up your Community Profile, click the big blue **Make 
 
 Make sure you meet all the requirements before making your profile public:
 
+* You added an avatar
+* You entered a **Function**
+* You entered a **Location**
 * You entered a **Summary**
 * You added at least 1 skill
 * You added at least 1 industry experience item
-* You have 100 or more points
 * Confirm if you are looking for a job or project
 
 ## 7 Public Activity
@@ -70,22 +78,7 @@ After you make your profile public, a new tab will be available on your public p
 
 ![](attachments/how-to-set-up-your-profile/public_activity.png)
 
-This tab lists the following activities for which you can gain points:
-
-* Presentation given
-* Webinar attended
-* Mendix World 2016 attended
-* Meetup organized
-* Meetup attended
-* Hackathon winner
-* Hackathon finalist
-* Hackathon attended
-* Blog post added
-* App review added
-* MVP status reached
-* Expert course completed
-* Advanced course completed
-* Introduction course completed
+This tab lists the activities for which you have gained Mendix points. For details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq).
 
 ## 8 Merging Your Accounts
 

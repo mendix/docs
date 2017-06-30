@@ -2,10 +2,10 @@
 title: 'Mendix Documentation'
 layout: mxoverview
 maintitle: 'Mendix Documentation'
-description: 'Documentation for Mendix'
+description: 'You can browse all the documentation for the Mendix platform here.'
 ---
-{% assign howto = "/howtoX/" | replace: "X", site.latest_major_version %}
-{% assign refguide = "/refguideX/" | replace: "X", site.latest_major_version %}
+{% assign howto = "/howto/" %}
+{% assign refguide = "/refguide/" %}
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
     <h1 class="header-link"><a href="{{ refguide }}">Mendix Reference Guide</a></h1>
@@ -54,6 +54,16 @@ description: 'Documentation for Mendix'
 <div class="row">
   <div class="col-md-offset-1 col-md-10 col-sm-12">
     {% include blocks/api-sdk.html %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    <h1 class="header-link"><a href="/developerportal/">Developer Portal</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-offset-1 col-md-10 col-sm-12">
+    {% include blocks/developer-portal.html %}
   </div>
 </div>
 <div class="row">

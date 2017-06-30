@@ -1,9 +1,10 @@
 ---
 layout: json
+sitemap: false
 ---
 {
   "categories": [
-    "Modeler",
+    "Desktop Modeler",
     "Platform Portal",
     "Model SDK",
     "Platform SDK",
@@ -12,5 +13,5 @@ layout: json
     "AQM",
     "Beta Features"
   ],
-"pages": {% include json-snippets/get_pages.inc dir="releasenotes" %}
+  "pages": {% include json-snippets/get_pages.inc dir="releasenotes" %}
 }

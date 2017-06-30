@@ -1,5 +1,5 @@
 ---
-title: "The How-To Template"
+title: "How-To Template"
 space: "Community"
 category: "Documentation"
 ---

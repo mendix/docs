@@ -2,8 +2,8 @@
 title: "Security Best Practices and Improvements for Mendix Applications"
 space: "General How-To's"
 category: "Best Practices"
-description: "A set of security aspects and checks to think of when developing your application."
-tags: "Best Practices Security"
+description: "A set of security aspects and checks to use when developing your application."
+tags: ["Best Practices Security"]
 toc-level: "3"
 ---
 
@@ -62,7 +62,7 @@ When publishing a web or REST service, you should consider whether this service 
 * Log usage of your service
 
 Mendix offers the following options to provide authentication for your services:
-* Username and password validation, specified within the Mendix Modeler, see [Published Web Services](/refguide7/published-web-services)
+* Username and password validation, specified within the Mendix Modeler, see [Published Web Services](/refguide/published-web-services)
 * Client certificates and IP ranges, which are specified in the Mendix Cloud. This can be found at the network tab of your node’s environment details as *Access Restriction Profiles*
 
 ## Use the Encryption Module When Storing Sensitive Information
@@ -93,7 +93,7 @@ Your application can gain several benefits from using an identity provider, like
 
 By default Mendix forces a strong password policy. The same password policy that is configured in the Mendix Modeler is also used for apps running in a hosted environment (for example, on test/acceptance/production).
 It is very tempting to simplify the password constraints for development purposes (making it possible to use a single character to login). However, we recommend avoiding this approach so deployments will continue to force a strong password policy.
-The password policy can be set by following the [Password Policy Guide](/refguide7/password-policy).
+The password policy can be set by following the [Password Policy Guide](/refguide/password-policy).
 
 ## Rename the Administrator User
 
@@ -113,7 +113,7 @@ By using an SSL connection and adding the public key of the endpoint within your
 
 There are several scenarios possible for protecting your outgoing connections using encryption, that depend on the infrastructure possibilities and protocols used. This article describes it perfectly: [Securing Outgoing Connections For Your Application](/howtogeneral/mendixcloud/securing-outgoing-connections-from-your-application).
 
-You can add individual certificates in your project’s settings in the Mendix Modeler. Test, acceptance and production environments require their certificates to be uploaded to the [Mendix Cloud](/refguide7/certificates).
+You can add individual certificates in your project’s settings in the Mendix Modeler. Test, acceptance and production environments require their certificates to be uploaded to the [Mendix Cloud](/refguide/certificates).
 
 ## Prevent Embedding of Your App Within an IFrame
 

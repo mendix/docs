@@ -17,7 +17,7 @@ Let us say part of our domain model looks like the image below.
 
 An order is associated with (at most) one customer, but a customer can have many orders. In a typical application you would have a data grid showing the list of customers. Double clicking a customer would take you to a form with a data view showing one customer. Additionaly, the selected customer is stored in the context for later use.
 
-Let us say that the Customer data view also shows a data grid that is connected to the Order entity. By default this grid will show all orders of all customers will be shown here. The context mechanism can be used to constrain the orders to just the orders of the customer in the data view. By setting the 'Apply context' property to true the list of orders will be constrained. Under the hood an XPath constraint will be created for the Order grid: [Order_Customer=42] (assuming 42 is the internal identifier of the customer).
+Let us say that the Customer data view also shows a data grid that is connected to the Order entity. By default this grid will show all orders of all customers will be shown here. The context mechanism can be used to constrain the orders to just the orders of the customer in the data view. By setting the 'Apply context' property to true the list of orders will be constrained. Under the hood an XPath constraint will be created for the Order grid: `[Order_Customer=42]` (assuming 42 is the internal identifier of the customer).
 
 In general, starting from the grid entity all associations of type reference are considered and if the context contains an object of the entity on the other side of the association, a constraint is added to the grid.
 

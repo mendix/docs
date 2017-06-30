@@ -1,15 +1,73 @@
 ---
 title: "Platform Portal"
 space: "Release Notes"
+toc-level: "1"
 ---
+
+## June 21st, 2017
+
+* Private company App Store content is now indicated in the **Template** browser with a lock icon.
+
+## June 7th, 2017
+
+### Fixes
+
+* We fixed the issue with the input of Japanese characters in the feedback widget.
+
+## May 19th, 2017
+
+### Fixes
+
+* We corrected the backup retention scheme for paid applications on Mendix Cloud v4, and it is now the same as on Mendix Cloud v3.
+* The "view current log" functionality for Mendix Cloud v4 applications was empty by default and the **Show all** button needed to be used. It now shows the content right away.
+
+## May 17th, 2017
+
+### Improvements
+
+* We upgraded the SSL/TLS ciphers for connections to apps in Mendix Cloud v4. These included dropping block-based ciphers (3DES), moving to 2048 bit DH params. Mendix Cloud v4 now has an [A+ rating at SSL Labs](https://www.ssllabs.com/ssltest/index.html).
+* We added HTTP/2 support for connections to all apps in Mendix Cloud v3 and Mendix Cloud v4. HTTP/2 is supported by all major browsers and results in more efficient network connections. [Read more about HTTP/2 here](https://http2.github.io/faq/).
+
+## May 4th, 2017
+
+### Improvements
+
+* Transporting a new deployment package dead-ended in a "Deploy successful" screen. Users are redirected to the environment details screen, which is much more useful.
+
+### Fixes
+
+* We fixed the failing of large backups in Mendix Cloud v4. Backups will now only fail when the disk of the database is filled up.
+* Alert Details now highlights the right menu item.
+* Fixed a race condition where two apps created at the same time could get the same domain name.
+* Added a warning message before restore backup, to prevent users clearing their environment. Clearing the environment before restoring resulted in a much slower non-incremental restore operation.
+* Disabled automatic copying of "Data Snapshots" to empty environments in Mendix Cloud v4 Pro/Enterprise environments. This features is only used in Free Apps. Weak admin passwords in the database snapshot would prevent the app from starting.
+
+## April 5th, 2017
+
+### Improvements
+
+* Posting comments to a discussion on the Buzz sometimes took a long time to complete. We made a change so that comments now appear almost instantly after hitting the **Post Comment** button. This change will also speed up completing sprints with stories which have associated feedback items.
+
+### Fixes
+
+* We fixed the issue where invitation dialogs would be shown twice in some situations. They are now shown just once.
+
+## April 1st, 2017
+
+* We added list backups/download backup operations to the [Deploy API](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api#DeployAPI-ListBackups).
+* We fixed the status page link in alert emails.
+* We updated the **Security** link from the Deploy/Operate tabs. It now goes to the same page on all pages in the platform.
+* We fixed the issue where the Free Apps backups page was very slow or resulted in an error in some cases.
+* We fixed the issue where the log viewer for Free Apps did not escape HTML, so if the application logged plain HTML, it was interpreted in the browser.
+* We fixed the issue where simultaneous snapshot restore jobs from the same environment to two others could lock one of the environments.
+* We updated links from *world.mendix.com* to *docs.mendix.com*.
 
 ## March 20th, 2017
 
-* The Deploy / Operate sections in the Platform Portal were broken on Internet Explorer 11 due to widget incompatability, introduced in the previous release. This was already hot-patched in production on March 16th.
+* The Deploy / Operate sections in the Platform Portal were broken on Internet Explorer 11 due to widget incompatibility, introduced in the previous release. This was already hot-patched in production on March 16th.
 
 ## March 13th, 2017
 
-### Bug fixes
 * The highlighted menu state was fixed, the wrong items were highlighted in some instances
 * AppStore links clicked from within the Deploy/Operate sections now open in the same tab
 * The **Show Profile** link was broken in some parts of the platform
@@ -72,13 +130,11 @@ space: "Release Notes"
 
 ## December 1st, 2015
 
-### Bug fixes
 * The Mendix Cloud switched from the Jetty blocking I/O connector to a selector based non-blocking I/O connector for all applications. Due to a bug in the blocking I/O connector HTTP requests could be fired multiple times for long-running (> 2 minutes) requests, which would result in strange results in the Mendix Debugger (ticket 462699). If you want to apply this fix you can simply restart your application.
 * Fixed bug that occurs when a which contains a large SVN directory is exposed into an Online Working Copy using Mendix Platform SDK.
 
 ## November 30th, 2015
 
-### Improvements
 * The story details page now provides more context, by showing comments, tasks and feedback when applicable.
 * It is now easier to swap the priority of stories, using the arrow buttons at the left of each story and task.
 
@@ -94,7 +150,6 @@ space: "Release Notes"
 
 ## September 17th, 2015
 
-### Bug fixes
 * Fixed issue which caused collapsed/expanded state of sprints and stories to be forgotten when switching between the stories overview of a project and a story's details page.
 
 ## September 3rd, 2015
@@ -112,7 +167,6 @@ space: "Release Notes"
 
 ## August 6th, 2015
 
-### New feature
 * We have rolled out our new project creation flow to all users. When creating a new project from the Portal, you are presented with a set of themes and sample apps that you can use as a basis for your new application.
 
 ## July 31st, 2015
@@ -149,7 +203,6 @@ space: "Release Notes"
 
 ## May 29th, 2015
 
-### Fixes
 * Some users experienced stability issues when filtering projects on the Buzz. These issues has now been resolved.
 * Several small fixes related to the UI and stability of Sprintr
 
@@ -183,7 +236,6 @@ space: "Release Notes"
 
 ## February 26th, 2015
 
-### Improvements
 * Searching for a term on the Capture page no longer causes spaces to be added within the results list.
 * Various small UX fixes.
 
@@ -205,7 +257,6 @@ space: "Release Notes"
 
 ## December 30th, 2014
 
-### Improvements
 * The loading time of the Deploy tab of a project has been decreased dramatically.
 * The "Create package from teamserver" button is now always visible. Previously it was only visible for projects that are on Mendix 5, but as most users are on Mendix 5 we dropped this restriction. Users that are not on Mendix 5 or do not have data in their Teamserver repository will be shown a pop up message stating that the feature is only available after an upgrade.
 

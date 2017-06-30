@@ -12,14 +12,8 @@ The longer an organization exists, the larger its installed base of legacy softw
 Some of the possibilities:
 
 *   Bootstrap new apps & modify existing apps
-
 *   Automatically generate CRUD pages for your entities
-
 *   Transform legacy business logic to microflows
-
-### Example
-
- Creating a basic app: [example on GitHub](https://github.com/mendix/mendixplatformsdk-examples/tree/master/crud)
 
 ## ![](attachments/16714511/16844117.png) Analyzing your apps
 
@@ -31,10 +25,6 @@ Some of the possibilities are:
 *   Creating a "Death Star" architecture diagram of your app.
 *   Calculating industry standard software metrics like [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) and [fan-in/out](https://en.wikipedia.org/wiki/Fan-out_%28software%29) of microflows.
 
-### Example
-
-To be released in the near future.
-
 ## ![](attachments/16714511/16844114.png) Exporting your apps
 
 The SDK allows you to export your Mendix app model and then take it basically anywhere. Every model element (pages, microflows, entities, etc.) and its properties are open and accessible via the Mendix SDK. So take any (or all) of these, and generate whole new representations of your app model.
@@ -42,14 +32,9 @@ The SDK allows you to export your Mendix app model and then take it basically an
 Some of the possibilities are:
 
 *   Generating documentation.
-
 *   Transforming microflows into Java method.
-
 *   Setting up scaffolding for Selenium page objects.
 
-### Example
-
-Exporting your app's microflows to a textual representation: [example on GitHub](https://github.com/mendix/mendixplatformsdk-examples/tree/master/export)
 
 ## ![](attachments/16714511/16844115.png) Modifying your apps
 
@@ -58,10 +43,5 @@ Your existing Mendix apps will likely need updates and changes. Some of these ch
 Some of the possibilities are:
 
 *   Batch updating page elements and labels
-
 *   Reorganizing the layout of your app model in the blink of an eye
 *   Exposing your microflows as Web Service/App Service and your entities as OData resources
-
-### Example
-
-To be released in the near future.

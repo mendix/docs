@@ -1,11 +1,13 @@
 ---
 layout: json
+sitemap: false
 ---
 {
   "categories": [
     "General",
-    "ATS Reference Guide 1",
-    "ATS How-To's"
+    "Reference Guide 1",
+    "How-To's",
+    "Best Practices"
   ],
   "pages": {% include json-snippets/get_pages.inc dir="ATS" %}
 }

@@ -2,42 +2,40 @@
 title: "Tricky custom settings in the Mendix Runtime"
 space: "General How-To's"
 category: "Mendix Support"
-#parent: ""
 #description: ""
-#tags: []
+#tags: ["Support", "custom settings"]
 ---
 
 ## 1 Introduction
 
-There are many custom settings and most of them are self-explanatory after reading the description in our documentation [here](https://docs.mendix.com/refguide/custom-settings).
+There are many custom settings, and most of them are self-explanatory after reading the description in [Custom Settings](/refguide/custom-settings) in the Mendix Reference Guide.
 
-However a few of the more commonly used custom settings can be misunderstood or have effects one might not necessarily expect. That is why we would like to give these a bit of special attention and more thoroughly explain the consequences of changing these settings so it becomes easier to understand what should be taken into consideration when making changes to the values of these custom settings.
+However, a few of the more commonly used custom settings can be misunderstood or have effects one might not expect. That is why we would like to give these a bit of special attention and more thoroughly explain the consequences of changing these settings so it becomes easier to understand what should you should consider when making changes to their values.
 
-## 2 Tricky custom settings
+## 2 Tricky Custom Settings
 
 ## 2.1 Session Duration
 
-### Web client settings
+### 2.1.1 Web Client Settings
 
-The following settings influence the behavior of the Mendix web client.
+The following settings influence the behavior of the Mendix web client:
 
 | Name | Description | Default value |
 | --- | --- | --- |
-| EnableKeepAlive | Defines whether the web client sends a keep alive request every SessionTimeout/2 milliseconds, to prevent a session timeout. Each click in the browser also acts as KeepAlive. Disabling this property will result in a user being logged out automatically after 10 minutes of inactivity, even if the browser remains open. | true |
+| `EnableKeepAlive` | Defines whether the web client sends a keep alive request every `SessionTimeout`/2 milliseconds in order to prevent a session timeout. Each click in the browser also acts as `KeepAlive`. Disabling this property will result in a user being logged out automatically after 10 minutes of inactivity, even if the browser remains open. | true |
 
-### General settings
+### 2.1.2 General Settings
 
 The following custom settings can be configured:
 
 | Name | Description | Default value |
 | --- | --- | --- |
-| SessionTimeout | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
-| ClusterManagerActionInterval | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the SessionTimeout. | 300000 |
+| `SessionTimeout` | Defines after how much time the session becomes invalid (in milliseconds). After that timeout, a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
+| `ClusterManagerActionInterval` | The interval (in milliseconds) used for performing all cluster manager actions. These actions include unblocking users and removing invalid sessions. If nothing is specified, the interval is half the `SessionTimeout`. | 300000 |
 
+Increasing the session timeout can improve the user experience, especially on mobile devices. It is important to keep in mind that entities used to present data to the user or entities that are created or retrieved when a user executes a microflow are tied to the session of that user, and they can remain in memory for long periods of time. When a user logs out, these entities will be removed from memory, but in case the user idles but does not log out (for example, leaves the browser tab open while executing other tasks or simply closes the browser without logging out), the session timeout can act as a safeguard that prevents memory usage being tied up by idle sessions. The first case can also be mitigated by setting the `KeepAliveEnabled` custom setting to false. On most browsers, this setting will ensure that any idle browser tab will be affected by the session timeout as well.
 
-Increasing the session timeout can make for an improvement user experience, especially on mobile devices. It is important to keep in mind that entities, used to present data to the user or that are created or retrieved when a user executes a microflow, are tied to the session of that user and can remain in memory for long periods of time. When a user logs out these entities will be removed from memory, but in case the user idles but does not log out (e.g. leaves the browser tab open while executing other tasks or simply closes the browser without logging out) the session timeout can act as a safeguard that prevents memory usage being tied up by idle sessions. The first case can also be mitigated by setting the custom setting KeepAliveEnabled to false. On most browsers this setting will ensure that any idle browser tab will be affected by the session timeout as well.
-
-Since the frequency of the sessions timeout checks, and other important events, is tied to the ClusterManagerActionInterval it makes sense to not use the default of half the session timeout when the value is increased by a lot, say to 24 hours or more. It might make sense to put a max value on the ClusterManagerActionInterval regardless of how high the value of the SessionTimeout is set. A ballpark figure would be something like 15 minutes but of course, ultimately this will depend on the functional requirements of the application.
+Since the frequency of the session timeout checks and other important events is tied to the `ClusterManagerActionInterval`, it makes sense to not use the default of half the session timeout when the value is increased by a lot (for example, 24 hours or more). It might make sense to put a max value on `ClusterManagerActionInterval`, regardless of how high the value of `SessionTimeout` is set. An approximate figure is 15 minutes, but ultimately this will depend on the functional requirements of the application.
 
 With the introduction of the stateless runtime in Mendix 7 the potential of this memory usage to lead to problems has been reduced for two reasons. The first reason is the ability to run in a horizontally scaled environment. Multiple runtimes will mean the unintended memory usage is also divided over those runtimes, reducing the impact of any one idle user session. But the main, and second, reason is that most of the memory usage has been moved to the client. So instead of all entities in memory ending up on the application node, a large share of them will end up in the browser of the client. This should significantly reduce the potential strain on the application node that can be caused by increasing the SessionTimeout default value to a much higher value. If setting the timeout value to a very high value in Mendix 6 it might be a good idea to consider using one node size larger than one would use otherwise.
 

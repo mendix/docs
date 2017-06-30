@@ -67,7 +67,8 @@ To configure client certificates in the Mendix Cloud, follow these steps:
 4. Click **Add client certificate**. Upload the certificate files.
 5. Only follow these steps if you are using more than one client certificate in your app:<br>
     a. After the files have been uploaded, they appear in the list. Double-click an item in the list.<br>
-    b. In the **Pin Client Certificate to Web Services** section of the **Details** screen, add the names of the web services for which you want to use this certificate.<br>
-    c. Enter these names in the **ModuleName.WebServiceName** form.<br>
+    b. In the **Pin Client Certificate to Web Services** section of the **Details** screen, you can specify which client certificate belongs to which service:<br>
+       * For web services, enter the name of the webservice (something like _ModuleName.WebServiceName_)<br>
+       * For REST services, enter the hostname of the endpoint (something like _example.com_)<br>
     d. Close the **Details** screen.<br>
 6. Click **Stop application** and then **Start application**.

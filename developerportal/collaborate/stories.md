@@ -1,0 +1,92 @@
+---
+title: "Stories"
+space: "Developer Portal"
+category: "Collaborate"
+description: "This page describes how to manage your stories."
+tags: ["Stories","Developer Portal"]
+---
+
+## 1 Introduction
+
+In **Stories** you are able to manage sprints, stories and labels. 
+
+![](attachments/stories.jpg)
+
+## 2 Actions
+
+Above the stories you can find the following action buttons:
+
+*   New story - add a new story
+*   New sprint - add a new sprint
+*   Move to - move the selected story to a different sprint
+*   Label - use existing labels or create a new one for the selected story
+*   More
+   *  Delete section - delete the selected story
+   *  Complete current sprint - all stories have to be **Done** before completing the current sprint 
+   *  Import/Export - import/export to Excel
+   *  Manage labels - rename, merge or delete a label
+   *  Manage story template - create and edit default tasks that you can add as a task to every new story
+   *  History - show the details of a story and revert changes
+
+### 2.1 New story
+
+To create a **new story** , you must first select the correct **Sprint** and provide the following information:
+
+*   The title of the story
+*   Story type
+    *   Feature
+    *   Bug
+*   The amount of story points
+*   Add a label or use existing label
+*   A description of the story
+*   Add default tasks based on story template - the default tasks created in the **Story template** will automatically appear as subtasks in this story
+
+### 2.2 New sprint
+
+You are able to plan the following:
+
+*   Sprint
+    *   Name
+    *   The order of the sprint
+    *   The duration of the sprint
+    *   The start date of the sprint
+*   Release
+    *   Name
+    *   Date
+    *   Description
+*   Other
+    *   Name
+    *   Date 
+    *   Description
+    *   Responsible team member
+
+### 2.3 Import/Export
+
+The export options are:
+
+*   Export all stories to Excel (including completed sprints)
+*   Export all stories to Excel
+*   Export single sprint to Excel
+*   Update stories from Excel
+
+## 3 Filter
+
+It is possible to filter on the following:
+
+*   Sprints
+    *   Archived
+    *   Current
+    *   Upcoming
+    *   Backlog
+*   Story
+    *   Done
+    *   Feature
+    *   Bug
+
+## 4 Related Content
+
+*   [App Buzz](/developerportal/collaborate/appbuzz)
+*   [Collaborate](/developerportal/collaborate)
+*   [Develop](/developerportal/develop)
+*   [Feedback](/developerportal/collaborate/feedback)
+*   [Team](/developerportal/collaborate/team)

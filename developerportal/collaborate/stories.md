@@ -2,7 +2,7 @@
 title: "Stories"
 space: "Developer Portal"
 category: "Collaborate"
-description: "This page describes how to manage your stories."
+description: "Describes how to manage your stories."
 tags: ["Stories","Developer Portal"]
 ---
 

@@ -29,7 +29,11 @@ const getCommits = (gitPath, file) => {
         }).on('error', err => {
           reject(err);
         }).on('end', () => {
-          resolve(commits);
+          if (commits.length === 0) {
+            reject(`Not getting commits for ${gutil.colors.cyan(file)}, this should not happen. Is the file empty?`);
+          } else {
+            resolve(commits);
+          }
         });
       } catch (e) {
         reject(`Error getting commits for ${gitPath}`);
@@ -75,6 +79,7 @@ const getLastCommit = (folder, filename) => {
           gutil.log(`${git_indicator} No history found for ${gutil.colors.cyan(filename)}, skipping`);
           resolve({})
         } else {
+          gutil.log(`${git_indicator} ${err}`);
           reject(err);
         }
       });

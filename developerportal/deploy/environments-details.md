@@ -184,70 +184,68 @@ You can take the following actions:
 
 ### 3.5 Environment Access Restrictions
 
-You can restrict access to your application by means of Client Certificates or IP ranges. To enable this, first **create an access restriction profile** before selecting it from the dropdown menu below.
+You can restrict access to your application by means of client certificates or IP ranges. To enable this, first create an access restriction profile before selecting it from the drop-down menu below.
 
 ### 3.6 Request Handler Access Restrictions
 
-Advanced: You can override access restrictions for specific Request Handlers. To do this, please specify an access restriction per Request Handler in the list below.
+Advanced users can override access restrictions for specific request handlers. To do this, please specify an access restriction per request handler in the list.
 
 ### 3.7 Outgoing Connections Certificates
 
-Add client certificates (in PKCS12 format) or certificate authorites (in PEM format). These will be used when your application initiates SSL/TLS connections.
+Add client certificates (in the PKCS12 format) or certificate authorites (in the PEM format). These will be used when your application initiates SSL/TLS connections.
 
-## 4 Loglevels
+## 4 Log Levels
 
 Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require.
 
-At this tab of the **Environment details** you can do the following:
+On this tab of **Environment details**, you can perform the following actions:
 
-*   Retreive the current loglevels by clicking the **Refresh** button
-*   Change the loglevel type by clicking on the specific level
-*   Click the **Set all to INFO** button to revert all the changes
+* Retreive the current log levels by clicking the **Refresh** button
+* Change the log level type by clicking the specific level
+* Click the **Set all to INFO** button to revert all the changes
 
 ![](attachments/loglevels.jpg)
 
-The loglevel types are:
+The log level types are:
 
-*   None
-*   Critical
-*   Error
-*   Warning
-*   Info
-*   Debug
-*   Trace
+* None
+* Critical
+* Error
+* Warning
+* Info
+* Debug
+* Trace
 
-For more information about loglevels, read the [Set Log Levels](/howto/monitoring-troubleshooting/log-levels) documentation.
+For more information about log levels, see [How to Set Log Levels](/howto/monitoring-troubleshooting/log-levels).
 
 
 ## 5 Runtime
 
-At this tab of the **Environment details** you can do the following:
+On this tab of the **Environment details**, you can perform the following actions:
 
-*   **Add** a new runtime **setting** with a new **value**
-*   **Edit** the runtime setting
-*   **Delete** the runtime settings
+* **Add** a new runtime **setting** with a new **value**
+* **Edit** the runtime setting
+* **Delete** the runtime settings
 
 For more information about runtime settings, read the [Custom Settings](/refguide/custom-settings) documentation.
-
 
 ## 6 Maintenance 
 
 There are two types of maintenance:
 
-*   Regular weekly maintenance which is not affecting your App where you can change the preffered maintenance window
-*   Planned maintenance that will affect your App in some ways. You will automatically receive an **email** about this and you can override the maintenance window.
+*  Regular weekly maintenance, which does not affect your app
+    * Where you can change the preferred maintenance window
+* Planned maintenance, which will affect your app in some ways
+    * You will automatically receive an **email** about this and you can override the maintenance window
 
-For more information about the maintenance, read the [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows) documentation.
+For more information about maintenance, see [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows).
 
-### 6.1 Preffered maintenance window
+### 6.1 Preferred Maintenance Window
 
-You can view and change the preffered maintenance. 
+You can view and change the preferred maintenance. 
 
-### 6.2 Planned maintenance
+### 6.2 Planned Maintenance
 
-When a maintenance operation is planned, it will show up under **Planned Maintenance**. By default it will be planned in your preferred maintenance window. You can override the maintenance window of a specific maintenance operation by clicking **Override**.
+When a maintenance operation is planned, it will show up under **Planned Maintenance**. By default, this will be planned in your preferred maintenance window. You can override the maintenance window of a specific maintenance operation by clicking **Override**.
 
-You will automatically receive **email notifications** about planned maintenances. 
-
-
-## 7 Related Content
+You will automatically receive **email notifications** about planned maintenance.

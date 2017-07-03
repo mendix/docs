@@ -58,5 +58,5 @@ All the changes made on this page are directly passed on to the **Stories** page
 
 ## 5 Related Content
 
-* [Develop](/developerportal/develop)
-* [Model](/developerportal/develop/model)
+* [Develop](develop)
+* [Model](develop/model)

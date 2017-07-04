@@ -78,7 +78,7 @@ Jetty is built into the Mendix Runtime, an application server is not required.
 * Google Chrome
 * Apple Safari
 * Microsoft Edge
-* Microsoft Internet Explorer 10 - 11
+* Microsoft Internet Explorer 11
 
 ## Mobile Browsers
 

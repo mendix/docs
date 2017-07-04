@@ -67,9 +67,9 @@ If you choose 'Custom' as the date format (see above) this property determines h
 
 The placeholder text is shown if the date attribute is empty. It can be used to give the end user a hint as to the expected format. Note: placeholder texts will not work if a native date picker is available (e.g. iOS and Android versions 4.0 and higher).
 
-{{% snippet file="refguide/Required+Property.md" %}}
+## Validation Properties
 
-{{% snippet file="refguide/Required+message+Property.md" %}}
+{{% snippet file="refguide/Widget+Validation.md" %}}
 
 ## Data source properties
 

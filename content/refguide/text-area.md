@@ -60,9 +60,9 @@ _Default value: Attribute length_
 
 The placeholder text is shown when no text has been entered yet. It can be used to give a hint to the user what kind of text should be entered.
 
-{{% snippet file="refguide/Required+Property.md" %}}
+## Validation Properties
 
-{{% snippet file="refguide/Required+message+Property.md" %}}
+{{% snippet file="refguide/Widget+Validation.md" %}}
 
 ## Data source properties
 

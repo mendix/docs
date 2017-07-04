@@ -22,9 +22,9 @@ This property defines whether the radio buttons are rendered horizontally or ver
 
 _Default value:_ Horizontal
 
-{{% snippet file="refguide/Required+Property.md" %}}
+## Validation Properties
 
-{{% snippet file="refguide/Required+message+Property.md" %}}
+{{% snippet file="refguide/Widget+Validation.md" %}}
 
 ## Data source properties
 

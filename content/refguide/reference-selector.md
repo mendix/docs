@@ -69,10 +69,6 @@ You can generate a new page to show by right-clicking the widget and selecting '
 
 {{% /alert %}}
 
-{{% snippet file="refguide/Required+Property.md" %}}
-
-{{% snippet file="refguide/Required+message+Property.md" %}}
-
 ### Go-To Page
 
 The go-to page gives end users quick access to a more detailed overview of the object being selected. This property determines which page is shown to the user. The page should contain a data view with the same entity as the one that is selected by the reference selector.
@@ -82,6 +78,10 @@ The go-to page gives end users quick access to a more detailed overview of the o
 These settings specify how the page is opened.
 
 See [Opening Pages](opening-pages) for more details.
+
+## Validation properties
+
+{{% snippet file="refguide/Widget+Validation.md" %}}
 
 ## Formatting Properties
 

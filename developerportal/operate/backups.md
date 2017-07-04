@@ -3,23 +3,50 @@ title: "Backups"
 space: "Developer Portal"
 category: "Operate"
 description: "This page describes the Backups page of the Developer Portal."
-tags: ["Operate","App","Developer Portal"]
+tags: ["Operate","App","Developer Portal","Backup"]
 ---
 
-## 1 Backups 
+## 1 Automatic Backups 
 
-On this page under the **Operate** category, you have the following options to your backups:
+This pruning schedule applies to nightly backups and backups initiated by users. If you want to keep a backup for longer than scheduled, you will have to download it.
+
+The following backups are retained:
+
+*   Nightly Backups: maximum 2 weeks history (counting from yesterday)
+*   Sunday Backups: maximum 3 months history (counting from yesterday)
+*   Monthly Backups (1st Sunday of each month): maximum 1 year history
+
+The starttime of the backup creation depends on the region and the Mendix Cloud version:
+
+| Europe |  UTC (UTC) | CET (CET) |
+| --- | --- | --- |
+| Cloud v3 | 22:00 | 00:00 |
+| Cloud v4 | 19:00 | 21:00 |
+
+| US East |  UTC (UTC) | EST (EST) |
+| --- | --- | --- |
+| Cloud v3 | 05:00 | 01:00 |
+| Cloud v4 | 01:00 | 21:00 |
+
+| Asia Pacific |  UTC (UTC) | JST (JST) |
+| --- | --- | --- |
+| Cloud v4 | 16:00 | 01:00 |
+
+
+## 2 Backups
+
+On the **Backups** page under the **Operate** category, you have the following options to manage your backups:
 
 *   Create a backup
 *   Upload data
 *   Restore a backup
 *   Download a backup
 
-### 1.1 Create a backup
+## 3 Create a backup
 
 This will automatically generate a backup from your application data.
 
-### 1.2 Upload data
+## 4 Upload data
 
 You must stop the application before executing this process. This functionality is used to transfer data from your local or on-premises application to the cloud environment. This will not add a backup to the backup list but directly update the application with the newly uploaded data. Your environment will be cleared completely. The Deployment Package, Uploaded Files and Database will be removed. If you are uploading data to the production environment, any published AppServices will be unpublished.
 
@@ -28,18 +55,18 @@ You can upload to types of data:
 *   Database
 *   Uploaded files - zip or tar.gz
 
-### 1.3 Restore a backup
+## 5 Restore a backup
 
 You can choose the environment you want to restore the backup to.
 If you restore a backup that was originally deployed on an older model version, you will get a warning. You can still restore the backup but you have to deploy the older model later on. 
 
-### 1.4 Download a backup
+## 6 Download a backup
 
 *   Full backup
 *   Uploaded files
 *   Database
 
-### 1.5 Backup details
+## 7 Backup details
 
 If you click on **Details** you can view the following information:
 
@@ -50,4 +77,9 @@ If you click on **Details** you can view the following information:
 *   Model version: used version of the Deployment Package during backup creation.
 *   Comment: add a specific comment to this backup.
 
-## 6 Related Content
+## 8 Related Content
+
+*   [Alerts](/developerportal/operate/monitoring-application-health)
+*   [Logs](/developerportal/operate/logs)
+*   [Metrics](/developerportal/operate/metrics)
+*   [Operate](/developerportal/operate)

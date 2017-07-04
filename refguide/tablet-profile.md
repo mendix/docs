@@ -11,6 +11,6 @@ For details on how this works in Mendix versions 7.2 and 7.3, see [Navigation in
 
 {% endmarkdown %}</div>
 
-When enabled, all users accessing the Mendix application from a tablet device will automatically be redirected to this profile. If disabled, tablet users will be redirected to the [Phone profile.](phone-profile) Lacking that, the user will be redirected to the [Desktop profile.](desktop-profile) 
+When enabled, a user accessing a Mendix application from a tablet device will automatically be redirected to this profile. If disabled, a tablet user will be redirected to the [phone profile](phone-profile). Lacking that, the user will be redirected to the [desktop profile](desktop-profile).
 
 {% snippet Profile+properties.md %}

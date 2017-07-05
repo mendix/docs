@@ -10,9 +10,9 @@ tags: ["Developer Portal", "App Services", "Deploy"]
 
 The **App Services** page provides an overview of possible resources that can be published to the [Mendix App Store](https://appstore.home.mendix.com/):
 
-* App service
-* Application
-* Widget
+* **App Service**
+* **Application**
+* **Widget**
 
 ## 2 App Service
 

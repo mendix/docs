@@ -3,18 +3,11 @@ title: "Offline"
 space: "Mendix 7 Reference Guide"
 category: "General"
 ---
-<div class="alert alert-warning">{% markdown %}
-
-The documentation in this section describes a new feature that is still in beta, and is subject to change before the final release.
-
-{% endmarkdown %}</div>
-
-
 We define an offline application as the portion of a Mendix app that is accessible through the [Hybrid Tablet profile](hybrid-tablet-profile) and/or the [Hybrid Phone profile](hybrid-phone-profile). Offline support must be enabled. Pages available in these profiles can be viewed without an Internet connection. Consequently, they are subject to a number of restrictions which are explained below.
 
 ## Availability
 
-To access the offline application, you need to have a mobile device that runs a correctly configured [PhoneGap](http://phonegap.com/) hybrid application. The app will require an Internet connection the first time it is opened in order to download the necessary resources from the server. After the initial synchronization the data will remain available in the app, even without an Internet connection. Please note that the Offline Profile will be used, even if there is an Internet connection available. Which profile is used depends on the PhoneGap app settings, not the connection status of the device.
+To access the offline application, you need to have a mobile device that runs a correctly configured [PhoneGap](http://phonegap.com/) hybrid application. The app will require an Internet connection the first time it is opened in order to download the necessary resources from the server. After the initial synchronization the data will remain available in the app, even without an Internet connection. Please note that the Offline Profile will be used, even if there is an Internet connection available.
 
 ## Synchronization
 
@@ -42,19 +35,16 @@ Because our search behavior relies on database queries, searching is currently n
 
 ### Data Manipulation
 
-To simplify the synchronization process, offline pages only support the creation of new objects. Objects imported from the online database can be viewed but not changed. Objects can only be edited in the period between creation and synchronization.
+Before Mendix 7.4.0, offline pages only support the creation of new objects. Objects imported from the online database can be viewed but not changed. Objects can only be edited in the period between creation and synchronization.
+From Mendix 7.4.0 on, objects can also be edited after synchronization.
 
 ### Autonumbers and Calculated Attributes
 
 Both autonumbers and calculated attributes require server intervention, and are therefore disallowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
 
-### Files
-
-Storing and uploading files offline is not supported. Specializations of the System.FileDocument can still be viewed and created offline but files cannot be uploaded or displayed. Please note that, as a specialization of System.FileDocument, this also applies to System.Image.
-
 ### Associations
 
-With the exception of data views, list views, template grids, and data grids, data displayed over an association is prohibited. This applies to everything from a data grid column that displays data in an associated object to reference selectors. In most cases, the desired goal can still be achieved by filling a nested data view with the relevant association and filling it with the required widgets.
+Attribute paths which follow references are not allowed in grid columns. In addition, reference set selectors cannot be used.
 
 ### Excel/CSV Export
 

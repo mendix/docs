@@ -1,5 +1,5 @@
 ---
-title: "Navigation In Mendix Versions 7.2 and 7.3"
+title: "Navigation in Mendix Versions 7.2 and 7.3"
 space: "Mendix 7 Reference Guide"
 parent: "project"
 description: "Describes the concept of navigation in apps and the properties of a profile for Mendix versions 7.2 and 7.3."
@@ -23,13 +23,13 @@ The **Navigation** document can be found by expanding the **Project** node in th
 
 ## 2 Profiles
 
-At the heart of the navigation model in Mendix, there are five kinds of profiles: Responsive, Tablet (browser), Phone (browser), Hybrid app, and Hybrid offline app. Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile kind (for details, see [3 Redirection to Profiles](#Redirection)).
+At the heart of the navigation model in Mendix, there are five kinds of profiles: responsive, tablet (browser), phone (browser), hybrid app, and hybrid offline app. Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile kind (for details, see [3 Redirection to Profiles](#Redirection)).
 
 <div class="alert alert-info">{% markdown %}
 
-In Mendix 7.0.2, the Offline device profile was replaced by the [Hybrid Phone profile](hybrid-phone-profile). In addition to this, a new device profile was made available, which was called the [Hybrid Tablet profile](hybrid-tablet-profile). All the settings from the Offline device profile were automatically copied to the Hybrid Phone profile.
+In Mendix 7.0.2, the offline device profile was replaced by the [hybrid phone profile](hybrid-phone-profile). In addition to this, a new device profile was made available, which was called the [hybrid tablet profile](hybrid-tablet-profile). All the settings from the offline device profile were automatically copied to the hybrid phone profile.
 
-In Mendix 7.2.0, the Hybrid Tablet and Hybrid Phone profiles were converted to profiles of the Hybrid app or Hybrid offline app type, based on the offline enabled option.
+In Mendix 7.2.0, the hybrid tablet and hybrid phone profiles were converted to profiles of the hybrid app or hybrid offline app type, based on the offline enabled option.
 
 {% endmarkdown %}</div>
 
@@ -37,19 +37,19 @@ The device type of the currently logged-in user is available in [microflows](mic
 
 ### 2.1 Responsive
 
-Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app.
+Every app always has one profile of a responsive type which cannot be deleted. This is the default profile used by a Mendix app.
 
 ### 2.2 Tablet (Browser)
 
-All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet type. If no profile exists of that type, the user will be redirected to the Responsive profile. Only one profile of the Tablet (browser) type may exist.
+All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the tablet type. If no profile exists of that type, the user will be redirected to the responsive profile. Only one profile of the tablet (browser) type may exist.
 
 ### 2.3 Phone (Browser)
 
-All the users accessing a Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone type. If no profile exists of that type, the user will be redirected to the Responsive profile. Only one profile of the Phone (browser) type may exist.
+All the users accessing a Mendix app from a browser on a phone will automatically be redirected to a profile of the phone type. If no profile exists of that type, the user will be redirected to the responsive profile. Only one profile of the phone (browser) type may exist.
 
 ### 2.4 Hybrid App
 
-A Mendix app can be installed on a tablet or phone as an app by creating a PhoneGap hybrid package. Profiles of the Hybrid app type can be accessed from such a PhoneGap app. Hybrid app profiles are requested by profile name. If no profile exists with the requested name, an error will be displayed in the app.
+A Mendix app can be installed on a tablet or phone as an app by creating a PhoneGap hybrid package. Profiles of the hybrid app type can be accessed from such a PhoneGap app. Hybrid app profiles are requested by profile name. If no profile exists with the requested name, an error will be displayed in the app.
 
 ### 2.5 Hybrid Offline App
 

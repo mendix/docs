@@ -13,15 +13,15 @@ This document describes the concept of navigation in Mendix applications and the
 
 {% endmarkdown %}</div>
 
-The Navigation document defines the navigation structure of the application for users. It allows you to set the home page of your application as well as to define menu structures that can be used in [menu widgets](menu-widgets). A user's home page can vary based on their [roles](user-roles).
+The **Navigation** document defines the navigation structure of the application for users. It allows you to set the home page of your application as well as to define menu structures that can be used in [menu widgets](menu-widgets). A user's home page can vary based on their [roles](user-roles).
 
 ## 2 Profiles
 
-At the heart of the navigation model in Mendix are four navigation profiles: Desktop, Tablet, Phone, and Offline device. You can define separate home pages and menus for each of these profiles. The Desktop profile is always enabled, while Tablet, Phone, and Offline device can be disabled if you do not want to use them. Users that access the application via a particular device type are automatically redirected to the home page of the appropriate profile (for details, see [4 Redirection to Profiles](#Redirection)).
+At the heart of the navigation model in Mendix are four navigation profiles: desktop, tablet, phone, and offline device. You can define separate home pages and menus for each of these profiles. The desktop profile is always enabled, while tablet, phone, and offline device can be disabled if you do not want to use them. Users that access the application via a particular device type are automatically redirected to the home page of the appropriate profile (for details, see [4 Redirection to Profiles](#Redirection)).
 
 <div class="alert alert-info">{% markdown %}
 
-In Mendix 7.0.2, the Offline device profile is replaced by the [Hybrid Phone profile](hybrid-phone-profile). In addition to this, a new device profile is now available, called the [Hybrid Tablet profile](hybrid-tablet-profile). All settings from the Offline device profile are automatically copied to the Hybrid Phone profile.
+In Mendix 7.0.2, the Offline device profile is replaced by the [hybrid phone profile](hybrid-phone-profile). In addition to this, a new device profile is now available, called the [hybrid tablet profile](hybrid-tablet-profile). All settings from the Offline device profile are automatically copied to the hybrid phone profile.
 
 {% endmarkdown %}</div>
 
@@ -29,7 +29,7 @@ The device type of a currently logged-in user is available in [microflows](micro
 
 ## 3 Hybrid Profiles
 
-The Hybrid Tablet and Hybrid Phone profiles are different from the other profiles in that they do more than simply redirect users based on their device type. These profiles are designed to allow users to continue using their Mendix application even when they have no Internet connection, though certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline](offline).
+The hybrid tablet and hybrid phone profiles are different from the other profiles in that they do more than simply redirect users based on their device type. These profiles are designed to allow users to continue using their Mendix application even when they have no internet connection, though certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline](offline).
 
 ## 4 Redirection to Profiles<a name="Redirection"></a>
 

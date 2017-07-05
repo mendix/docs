@@ -18,7 +18,7 @@ In the **Environments** section of the **Deploy** category, there is an overview
     * Certificates
     * Linked Custom Domains
 
-## 3 Deployment Package Repository
+## 2 Deployment Package Repository
 
 In the **Deployment Package Repository**, there is an overview of the following:
 
@@ -35,17 +35,17 @@ There are also four actions you can perform:
 *   View the details of the deployment package
 *   Deploy a deployment package
 
-### 3.1 Create a Package from Team Server
+### 2.1 Create a Package from Team Server
 
 In this section, you can select a branch containing the revision you would like to build.
 
 Only branches where the latest revision is Mendix 5 and higher will be displayed here. If you need to build other revisions, please do so manually from the Mendix Modeler.
 
-### 3.2 Uploading
+### 2.2 Uploading
 
 When you click **Upload**, you can upload an *.mda* file from your local device.
 
-### 3.3 Viewing the Details of the Deployment Package
+### 2.3 Viewing the Details of the Deployment Package
 
 Next to the already mentioned deployment package info, the following items exist:
 
@@ -59,11 +59,11 @@ There are also two action you can perform:
 * Download the package
 * Delete the package
 
-### 3.4 Deploying a Deployment Package
+### 2.4 Deploying a Deployment Package
 
 If you click **Deploy**, the package from the team server will be transported to the environment that you select to upload.
 
-## 4 Environments
+## 3 Environments
 
 Here you have the an overview of all the available environments with the following details:
 
@@ -95,7 +95,7 @@ After clicking [Details](/developerportal/deploy/environments-details) of the se
 * Runtime
 * Maintenance
 
-## 5 Activities
+## 4 Activities
 
 This section shows the following activity types:
 
@@ -118,7 +118,7 @@ This section shows the following activity types:
 * Toggled Request Handler
 * Transportation
 
-## 6 Custom Domain
+## 5 Custom Domain
 
 On this page, you can manage your custom domain certificates.
 
@@ -128,7 +128,7 @@ There is also a section with an overview of linked custom domains.
 
 For more information, see [How to Configure Custom Domains](/developerportal/howto/custom-domains).
 
-## 7 Related Content 
+## 6 Related Content 
 
 *  [Deploy](/developerportal/deploy)
 *  [Environment Details](/developerportal/deploy/environments-details)

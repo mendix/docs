@@ -176,9 +176,9 @@ Please make sure you've configured a CNAME record for your custom domain at your
 
 ## 8 Frequently Asked Questions
 
-### 8.1 Can I Create a _*.mycompany.com_ Wildcard Certificate?
+### 8.1 Can I Create a `*.mycompany.com` Wildcard Certificate?
 
-Yes. However, when you create the certificate request via the Mendix Cloud, you will only be able to use the wildcard certificate for all the environments of only one application. When you have your own custom domain certificate, you can upload it to all of your apps and use it for all the environments of all of your apps. You can select the same wildcard certificate per environment by specifying different subdomains. For example< *test.mycompany.com*, *accp.mycompany.com*, and *app.mycompany.com*.
+Yes. However, when you create the certificate request via the Mendix Cloud, you will only be able to use the wildcard certificate for all the environments of only one application. When you have your own custom domain certificate, you can upload it to all of your apps and use it for all the environments of all of your apps. You can select the same wildcard certificate per environment by specifying different subdomains. For example, `test.mycompany.com`, `accp.mycompany.com`, and `app.mycompany.com`.
 
 ### 8.2 How Do I Properly Construct an Intermediate Certificate Chain?
 

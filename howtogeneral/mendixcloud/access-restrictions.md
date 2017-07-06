@@ -34,7 +34,7 @@ The most important things you should know about configuring an Access Restrictio
 
 To apply a restriction to a specific application environment:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and select your App.
+1. Go to the [Developer Portal](http://home.mendix.com) and select your app.
 2. Click **Environment** under the **Deploy** category.
 3. Click **Details** of the desired environment.
 4. Go to the **Network** tab. 
@@ -62,7 +62,7 @@ An example scenario in which a basic IP Range restriction could be used is when 
 
 The following steps will simply restrict access to the whole application to an IP Range:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and select your App.
+1. Go to the [Developer Portal](http://home.mendix.com) and select your app.
 2. Click **Environment** under the **Deploy** category.
 3. Go to the **Access Restriction Profiles** tab of the application.
 
@@ -86,7 +86,7 @@ The second example scenario is an extended version of the first scenario above. 
 
 By adding an additional Access Restriction Profile and applying it on the path '/ws/' only, we can however specifically grant access to the webservice endpoints. Moreover, the example company decides to standardize on the usage of TLS Client Certificates, so they do not have to manage lists of IP ranges for each external third party.
 
-1. Go to the [Developer Portal](http://home.mendix.com) and select your App.
+1. Go to the [Developer Portal](http://home.mendix.com) and select your app.
 2. Click **Environment** under the **Deploy** category.
 3. Go to the **Access Restriction Profiles** tab of the application.
 

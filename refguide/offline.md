@@ -24,7 +24,7 @@ Without a server to process all the necessary logic, microflows run from the Men
 
 ### XPath
 
-The database used to store data on your mobile device for offline use does not support complex queries. As such, the XPath setting is disallowed on all the widgets accessible through the Offline Device profile. Alternatively, the simple constraints found in the database data source can be used, as well as modeling complex queries using entity access.
+The database used to store data on your mobile device for offline use does not support complex queries. As such, the XPath setting is disallowed on all the widgets accessible through the offline device profile. Alternatively, the simple constraints found in the database data source can be used, as well as modeling complex queries using entity access.
 
 ### Data Sources
 
@@ -36,7 +36,8 @@ Because our search behavior relies on database queries, searching is currently n
 
 ### Data Manipulation
 
-Before Mendix 7.4.0, offline pages only support the creation of new objects. Objects imported from the online database can be viewed but not changed. Objects can only be edited in the period between creation and synchronization.
+Before Mendix 7.4.0, offline pages only supported the creation of new objects. Objects imported from the online database could be viewed but not changed. Objects could only be edited in the period between creation and synchronization.
+
 From Mendix 7.4.0 on, objects can also be edited after synchronization.
 
 ### Autonumbers and Calculated Attributes
@@ -53,8 +54,6 @@ Spreadsheets are generated through direct database interaction, which is not ava
 
 ### Platforms
 
-Offline enabled apps are only supported on the iOS and Android platforms.
+Offline-enabled apps are only supported on the iOS and Android platforms.
 
-For more information on offline apps, see:
-
-*   [Configuring Hybrid Mobile Apps to Run Offline](configuring-hybrid-mobile-apps-to-run-offline)
+For more information on offline apps, see [Configuring Hybrid Mobile Apps to Run Offline](configuring-hybrid-mobile-apps-to-run-offline).

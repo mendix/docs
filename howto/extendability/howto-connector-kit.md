@@ -122,46 +122,38 @@ Microflow parameters are especially useful for handling events. For example, the
   
 ## 4 Using Import and Export Mappings
 
-Finally an example how you can use Mappings in your Java actions. In this
-example we'll create an action to import a string using an import mapping. This
-is not particulairly useful, seeing there is a default action in your toolbox
-already that provides this functionality, *Import with mapping*. However, as an
-example it illustrates how to use mappings.
+Now we will discuss an example of how you can use mappings in your Java actions. In this example, you'll create an action to import a string using an import mapping. This is not particulairly useful, seeing there is a default action in your toolbox already that provides this functionality called **Import with mapping**. However, as an example, it illustrates how to use mappings.
 
-First a screenshot of what we are building: an action to import JSON
-strings. The action requires the user to provide a string with the JSON to
-import, select an import mapping, and define the entity of the result. Finally a
-name needs to be provided for the result of the import mapping.
+This is an image of what we are building: an action to import JSON strings:
 
- ![Example import string use][19]
+![Example import string use](attachments/how-to-connector-kit/example_import_string_use.png)
+ 
+The action requires the user to provide a string with the JSON to import, select an import mapping, and define the entity of the result. Finally, a name needs to be provided for the result of the import mapping.
 
 The action is defined as follows:
 
-* **InputString** - A string parameter containing the JSON to be imported.
-* **ImportMapping** - The name of the mapping to be used for importing the JSON.
-* **ResultEntity** - Type of the object that will be the result of the import.
-* **Return type** - An object of the type specified with ResultEntity.
+* **InputString** – a string parameter containing the JSON to be imported
+* **ImportMapping** – the name of the mapping to be used for importing the JSON
+* **ResultEntity** – the type of object that will be the result of the import
+* **Return type** – an object of the type specified with `ResultEntity`
 
- ![Import String with mapping java action parameters][16]
+ ![Import String with mapping java action parameters](attachments/how-to-connector-kit/import_string_action_pars.png)
  
-The actions is implemented in java as follows:
+The action is implemented in Java as follows:
 
 1. Create an InputStream from the the JSON input so it can be read by the import mapping.
-2. Use *Core.integration().importStream()* to import the JSON with the specified mapping.
+2. Use `Core.integration().importStream()` to import the JSON with the specified mapping.
 3. Return the first object imported.
  
- ![Import String java action][20]
+![Import String java action][attachments/how-to-connector-kit/import_string_java.png]
  
 ## 5 Some Development Tips
 
 ### 5.1 Unit Testing
 
-When developing connector modules you can use the unit test module to test the actions
-you are implementing.
+When developing connector modules, you can use the unit test module to test the actions you are implementing.
 
-If you want to publish your module with custom microflow actions to the AppStore
-for easy reuse it's best to have a module containing only the reusable part. Add
-another module to your project with all the test Microflows, and anything else you need
+If you want to publish your module with custom microflow actions to the Mendix App Store for easy reuse, it's best to have a module containing only the reusable part. Add another module to your project with all the test microflows and anything else you need
 while developing your application.
 
 The screenshot below illustrates this:

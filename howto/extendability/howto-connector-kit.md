@@ -1,156 +1,126 @@
 ---
-title: "Building Microflow actions using the Mendix Connector Kit"
-space: "Mendix 7 How-to's"
+title: "Build Microflow Actions Using the Mendix Connector Kit"
+space: "Mendix 7 How-To's"
 category: "Extendability"
-parent: 
-description: "Create custom Microflow actions using advanced Connector Kit options"
-tags: ["Java","Connector Kit","Microflow action","Parameter type"]
-toc-level: 1
+description: "Describes creating custom Microflow actions using advanced Connector Kit options."
+tags: ["Java","Connector Kit","microflow action","parameter type"]
 output:
   word_document: default
   html_document: default
 ---
+
 ## 1 Introduction
 
-Last year with Mendix 6.6 we introduced [the Connector Kit][4]. The goal of this
-enhancement is to enable Java developers to easily add powerful and robust new
-Microflow actions to their Mendix toolbox. These Microflow actions can be shared
-in the Mendix AppStore so anyone can benefit from these Microflow actions without having
-to know Java.
+In version 6.6, Mendix introduced [the Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/). The goal of this enhancement was to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix App Store, so anyone can benefit from them without having to know Java.
 
-To illustrate the power of the Connector Kit, here's a high-level design diagram
-for an application we recently built: a Slack bot which enables users to
-determine things and people in pictures taken with a mobile Slack app.
+To illustrate the power of the Connector Kit, here's a high-level design diagram for an application Mendix recently built: a Slack bot that enables users to determine things and people in pictures taken with a mobile Slack app:
 
- ![Slack Rekognition Bot design][1]
+![Slack Rekognition Bot design](attachments/how-to-connector-kit/slack-rekogition-bot-architecture.png)
 
-The Mendix application consists of a small number of microflows that use Mendix 
-Microflow actions to offer a conversational user interface using [Slack][27] and
-different Amazon services: [S3][28], [Rekognition][30] and [Lex][29].
+A Mendix application consists of a small number of microflows that use Mendix microflow actions to offer a conversational user interface using [Slack](https://slack.com/) and different Amazon services: [S3][(https://aws.amazon.com/s3/), [Rekognition](https://aws.amazon.com/rekognition/), and [Lex](https://aws.amazon.com/lex/).
 
-The following screenshot shows what the microflow toolbox looks like after
-including all the modules providing connectors to the services used.
+This image shows what the microflow toolbox looks like after including all the modules that provide connectors to the services used:
  
- ![Slack Rekognition bot toolbox][2]
+ ![Slack Rekognition bot toolbox](attachments/how-to-connector-kit/slack-rekogition-bot-toolkit.png)
 
-For the basics of building toolbox actions you can read the [Connector Kit
-introduction blogpost][4]. This how-to will explain some of the more advanced
-features that you can use when creating your own Microflow actions. We will describe how to create the three actions illustrated below: *create object list*, *import string*, *Join objects in list*.
+For the basics of building toolbox actions, see the [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) blog post. 
 
- ![Connectorkit demo toolbox][15]
+**This how-to will teach you how to do the following:**
 
-## 2 Creating generic actions using Type Parameters
+* Use advanced features when creating your own microflow actions
+* Create the **Create object list** action
+* Create the **Import string** action
+* Create the **Join objects in list** action
 
-Lets start with *Type Parameters*. Mendix 6.6 introduced a new type parameters 
-tab in the java action definition dialog, as illustrated below.  You can use a 
-type parameter if you want to ensure that certain parameters of your action 
-share the same entity, but you do not know the name of this entity when defining
-the actions.
+![Connectorkit demo toolbox][attachments/how-to-connector-kit/toolkit-connector-kit-demo.png]
 
-For example: suppose you want to create an action that takes two objects of the
-same entity and returns a list containing both objects. You can use a type
-parameter to guarantuee that both the input parameters for specifying the
-objects, and the resulting list all use the same entity.
+## 2 Creating Generic Actions Using Type Parameters
 
-First you define the type parameter to hold the entity used by all the parameters.
+Let's start with type parameters. Mendix 6.6 introduced a new **Type parameters** tab in the Java action definition dialog box, as illustrated in the image below. You can use a type parameter if you want to ensure that certain parameters of your action share the same entity but you do not know the name of this entity when defining the actions.
 
- ![Type parameter tab][7]
+For example, suppose you want to create an action that takes two objects of the same entity and returns a list containing both objects. You can use a type parameter to guarantee that both the input parameters for specifying the objects and the resulting list all use the same entity.
+
+To create a generic action using type parameters, follow these steps:
+
+1. Define the type parameter to hold the entity used by all the parameters:
+
+    ![Type parameter tab](attachments/how-to-connector-kit/join_objects_type_par.png)
  
-Next you can create parameters using the previously defined type parameter *EntityToJoin*. 
+2. Create parameters using the previously defined type parameter *EntityToJoin*:
 
- ![Type parameter use][6]
+    ![Type parameter use][attachments/how-to-connector-kit/join_objects_pars.png]
  
-The action needs the following parameters:
+3. The action needs the following parameters:
 
-* **Entity** - This is used to specify the entity of the objects to join. The entity
-selected by the user will be stored in the type parameter *EntityToJoin*.
+  * **Entity** – this is used to specify the entity of the objects to join
+    * The entity selected by the user will be stored in the type parameter *EntityToJoin*
 
- ![Type parameter use definition][8]
+    ![Type parameter use definition](attachments/how-to-connector-kit/join_objects_type_par_def.png)
  
-* **Object1** - The first object to be added to the new list. It needs to be an 
-object of entity EntityToJoin
-* **Object2** - The second object to be added to the new list.
-* **Return type** - the result of the action will be a list of *EntityToJoin* objects.
+  * **Object1** – the first object to be added to the new list
+    * This needs to be an object of the `EntityToJoin` entity
+  * **Object2** – the second object to be added to the new list
+  * **Return type** – the result of the action will be a list of `EntityToJoin` objects
 
-The java implementation still uses strings to specify the name of an entity,
-which means that you can upgrade your existing java actions to use these new
-parameter types without having to refactor your existing code.
+The Java implementation still uses strings to specify the name of an entity, which means that you can upgrade your existing Java actions to use these new parameter types without having to refactor your existing code.
 
-Finally, here's the actual java implementation of the action defined:
+Finally, here's the actual Java implementation of the action defined:
 
- ![Java implementation join object][9]
+![Java implementation join object](attachments/how-to-connector-kit/join_objects_javacode.png)
  
-You now have a reusable action in your toolbox that will join two objects into a
-list, as illustrated by the following example.
+You now have a reusable action in your toolbox that will join two objects into a list as illustrated by this example:
 
- ![Join objects use][11]
+![Join objects use](attachments/how-to-connector-kit/join_objects_use.png)
  
-As you can see, *type parameters* enable you to create typesafe generic actions.
+As you can see, type parameters enable creating typesafe generic actions.
 
-## 3 Executing microflows
+## 3 Executing Microflows
 
-The following example illustrates how you can use microflow parameters. The
-microflow below creates a list of Product objects and calls a microflow for
-every project object to initialize it.
+The following example illustrates how you can use microflow parameters. The microflow below creates a list of **Product** objects and calls a microflow for every project object to initialize it:
 
- ![Init loop][3]
+![Init loop](attachments/how-to-connector-kit/init-loop.png)
  
-Lets see if we can create a custom reusable Microflow action to make this
-Microflow more concise.
+Here's an alternative to the microflow above that uses a custom Java action to replace the loop, instantiation, and initialization of the objects with a Java action:
 
-Here's a alternative to the Microflow above, but now using a custom java action
-to replace the loop and instantiation and initialization of the objects with a
-java action:
-
- ![Init list loop with action][12]
+![Init list loop with action](attachments/how-to-connector-kit/init-list-use.png)
  
 The action uses the following parameters:
 
-* **ResultEntity** - entity used for the default object, and the result list
-* **DefaultObject** - default value for the objects to be instantiated
-* **InitializationMicroflow** - a Microflow that will be called for every new
-object to initialize it
-* **ListSize** - the number of objects to be created in the list
+* **ResultEntity** – the entity used for the default object and the result list
+* **DefaultObject** – the default value for the objects to be instantiated
+* **InitializationMicroflow** – a microflow that will be called for every new object to initialize it
+* **ListSize** – the number of objects to be created in the list
 
 The return type is a list of new initialized objects.
 
-As you can see below, this action uses a new parameter type, Microflow, to
-indicate that the user needs to specify a Microflow. When using the action, the
-modeler will show a list of Microflows to make this as easy to use as possible.
+As you can see below, this action uses a new parameter type (**Microflow**) to indicate that the user needs to specify a microflow. When using the action, the Modeler will show a list of microflows to make this as easy to use as possible.
  
- ![Initialize list using microflow action parameters][10]
+![Initialize list using microflow action parameters](attachments/how-to-connector-kit/initialize_list_mf_pars.png)
  
-In the java implementation for this action you'll see the following for the parameters:
+In the Java implementation for this action, you'll see the following details for the parameters:
 
-* **ResultEntity** - a string with the entity name used for the default object and the result list
-* **DefaultObject** - a IMendixObject instance containing the default object.
-* **InitializationMicroflow** - a string containing the name of the initializing microflow
-* **ListSize** - a long containing the number of objects desired in the list
+* **ResultEntity** – a string with the entity name used for the default object and the result list
+* **DefaultObject** – an IMendixObject instance containing the default object
+* **InitializationMicroflow** – a string containing the name of the initializing microflow
+* **ListSize** – a long variable containing the number of objects desired in the list
 
-
- ![Initialize list java implementation 1][13]
+![Initialize list java implementation 1](attachments/how-to-connector-kit/initilialize_list_java_1.png)
  
-The executeAction method is where all the magic happens:
+The `executeAction` method is where all the magic happens:
 
-1. It first initializes an ArrayList for the result.
-2. Then it has a for loop to create the desired number of objects.
-3. The objects are created using *Core.instantiate()*. The entity name specified
-in the action is used as input to specify what entity to instantiate.
-4. Next determine if a default object was specified. If so, copy all attribute 
-values to the new object.
-5. Execute the initialization microflow using *Core.execute()*.
+1. It initializes an ArrayList for the result.
+2. It has a for-loop to create the desired number of objects.
+3. The objects are created using `Core.instantiate()`. The entity name specified in the action is used as the input to specify what entity to instantiate.
+4. The system determines if a default object was specified. If so, it copies all the attribute values to the new object.
+5. The system executes the initialization microflow using `Core.execute()`.
 6. Add the newly instantiated and initialized object to the result list.
-7. Finally return the list of new objects.
+7. The list of new objects is returned.
 
-
- ![Initialize list java implementation 2][14]
+![Initialize list java implementation 2](attachments/how-to-connector-kit/initilialize_list_java_2.png)
  
-Microflow parameters are especially usefull for handling events. For example, 
-the [MQTT connector][18] ([GitHub MQTT Connector project][17]) will execute a 
-Microflow when receiving an IoT sensor event so it can be handled using a user
-specified Microflow.
+Microflow parameters are especially useful for handling events. For example, the [MQTT connector](https://appstore.home.mendix.com/link/app/3066/Mendix/MQTT-Client) ([GitHub MQTT Connector project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.
   
-## 4 Using import and export mappings
+## 4 Using Import and Export Mappings
 
 Finally an example how you can use Mappings in your Java actions. In this
 example we'll create an action to import a string using an import mapping. This
@@ -182,10 +152,9 @@ The actions is implemented in java as follows:
  
  ![Import String java action][20]
  
-## 5 Some development tips
+## 5 Some Development Tips
 
-
-### 5.1 Unit testing
+### 5.1 Unit Testing
 
 When developing connector modules you can use the unit test module to test the actions
 you are implementing.
@@ -207,7 +176,7 @@ the unit test module: *Test_InitProduct*.
 
  ![Mendix Connector kit module project with tests][21]
  
-### 5.2 Managing libraries
+### 5.2 Managing Libraries
 
 When you export the module package for publishing in the AppStore you only want
 to include the relevant Java libraries. The easiest way to manage this is to use

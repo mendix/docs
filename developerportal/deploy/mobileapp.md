@@ -2,52 +2,54 @@
 title: "Mobile App"
 space: "Developer Portal"
 category: "Deploy"
-description: "Describes the Mobile App page."
+description: "Describes the Mobile App page in the Mendix Developer Portal."
 tags: ["Developer Portal", "Mobile", "Deploy"]
 ---
 
 ## 1 Introduction
 
-The **Mobile App** page enables you to publish your App in the iOS/Android Mobile App Stores.
+The **Mobile App** page enables publishing your app in the Apple App Store (for iOS) and Google Play (for Android).
 
-This page is divided into 3 tabs:
+This page is divided into three tabs:
 
-*   App Info
-*   iOS
-*   Android
+* **App Info**
+* **iOS**
+* **Android**
 
 ## 2 App Info
 
-In this tab you can find the following configurations:
+In this tab, you can find the following sections:
 
-*   General settings
-*   Profile settings
-*   Permissions
-*   Custom Phonegap/Cordova configuration
+* **General settings**
+* **Profile settings**
+* **Permissions**
+* **Custom Phonegap/Cordova configuration**
 
-### 2.1 General settings
+### 2.1 General Settings
 
-In **general settings** you must provide the following information:
+In the **General settings** section, you must provide the following information:
 
-*   Name of the App
-*   The unique App Identifier, *for example, com.example.CompanyExpenses*
-*   The desciption of the App
-*   5 digits PIN enabled/disabled
+* The **Name** of the app
+* The unique **App Identifier** (for example, `com.example.CompanyExpenses`)
+* A **Desciption** of the app
+* Whether a 5 digit PIN is enabled or disabled via the **PIN required?** check box
 
-### 2.2 Profile settings
+### 2.2 Profile Settings
 
 If you are targetting Mendix 7.2.0 or above, please specify the navigation profiles to use on phones and tablets. 
-Make sure the profile identifier corresponds with the one defined in the modeler.
 
-*   Phone profile
-*   Tablet profile
-*   Enable offline capabilities - available offline App
+Make sure the profile identifier corresponds with the one defined in the Modeler.
 
-For more information, see **Availability** in [Offline](https://docs.mendix.com/refguide/offline)
+* **Phone profile**
+* **Tablet profile**
+* **Enable offline capabilities?** (available offline apps)
+
+For more information, see **Availability** in [Offline](/refguide/offline).
 
 ### 2.3 Permissions
 
-By default, Mendix hybrid applications require a set of device permissions. 
+By default, Mendix hybrid applications require a set of device permissions.
+
 When users install the app or open the app for the first time, they will be asked to grant these permissions. 
 Use the checkboxes below to control which permissions are requested. 
 Some functionality might not be available when you disable these permissions, e.g. your app cannot use the camera widget when you disable it.

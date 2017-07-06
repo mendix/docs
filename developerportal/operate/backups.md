@@ -6,17 +6,17 @@ description: "This page describes the Backups page of the Developer Portal."
 tags: ["Operate","App","Developer Portal","Backup"]
 ---
 
-## 1 Automatic Backups 
+## 1 Nightly Backups 
 
 This pruning schedule applies to nightly backups and backups initiated by users. If you want to keep a backup for longer than scheduled, you will have to download it.
 
 The following backups are retained:
 
-*   Nightly Backups: maximum 2 weeks history (counting from yesterday)
-*   Sunday Backups: maximum 3 months history (counting from yesterday)
-*   Monthly Backups (1st Sunday of each month): maximum 1 year history
+*   Last two weeks: every day
+*   Last three months: every Sunday
+*   Last year: every first Sunday of the month
 
-The starttime of the backup creation depends on the region and the Mendix Cloud version:
+The start time of the backup creation depends on the region and the Mendix Cloud version:
 
 | Europe |  UTC (UTC) | CET (CET) |
 | --- | --- | --- |

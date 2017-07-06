@@ -8,13 +8,13 @@ tags: ["Operate","App","Developer Portal","Backup"]
 
 ## 1 Nightly Backups 
 
-This pruning schedule applies to nightly backups and backups initiated by users. If you want to keep a backup for longer than scheduled, you will have to download it.
+The pruning schedule applies to nightly backups and backups initiated by users. If you want to keep a backup for longer than scheduled, you will have to download it.
 
 The following backups are retained:
 
-*   Last two weeks: every day
-*   Last three months: every Sunday
-*   Last year: every first Sunday of the month
+* Last two weeks: every day
+* Last three months: every Sunday
+* Last year: every first Sunday of the month
 
 The start time of the backup creation depends on the region and the Mendix Cloud version:
 
@@ -32,54 +32,53 @@ The start time of the backup creation depends on the region and the Mendix Cloud
 | --- | --- | --- |
 | Cloud v4 | 16:00 | 01:00 |
 
-
 ## 2 Backups
 
-On the **Backups** page under the **Operate** category, you have the following options to manage your backups:
+The **Backups** page under the **Operate** category presents options for managing your backups. These are described below.
 
-*   Create a backup
-*   Upload data
-*   Restore a backup
-*   Download a backup
-
-## 3 Create a backup
+### 2.1 Create a Backup
 
 This will automatically generate a backup from your application data.
 
-## 4 Upload data
+### 2.2 Upload Data
 
-You must stop the application before executing this process. This functionality is used to transfer data from your local or on-premises application to the cloud environment. This will not add a backup to the backup list but directly update the application with the newly uploaded data. Your environment will be cleared completely. The Deployment Package, Uploaded Files and Database will be removed. If you are uploading data to the production environment, any published AppServices will be unpublished.
+You must stop the application before executing this process. This functionality is used to transfer data from your local or on-premises application to the cloud environment. This will not add a backup to the backup list but directly update the application with the newly uploaded data. Your environment will be cleared completely. The deployment package, uploaded files, and database will be removed. If you are uploading data to the production environment, any published app services will be unpublished.
 
-You can upload to types of data:
+You can upload two types of data:
 
-*   Database
-*   Uploaded files - zip or tar.gz
+* **Database**
+* **Uploaded files** (*zip* or *tar.gz*)
 
-## 5 Restore a backup
+### 2.3 Restore a Backup
 
-You can choose the environment you want to restore the backup to.
-If you restore a backup that was originally deployed on an older model version, you will get a warning. You can still restore the backup but you have to deploy the older model later on. 
+You can choose the environment to which you want to restore the backup.
 
-## 6 Download a backup
+If you restore a backup that was originally deployed on an older Modeler version, you will get a warning. You can still restore the backup, but you have to deploy the older model later on. 
 
-*   Full backup
-*   Uploaded files
-*   Database
+### 2.4 Download a Backup
 
-## 7 Backup details
+These are the options:
 
-If you click on **Details** you can view the following information:
+* **Full backup**
+* **Uploaded files**
+* **Database**
 
-*   Status: The status of this backup. Backup have the status ‘Queued’ of ‘Running’. If not the backup has Failed or is Completed.
-*   Created by: The name of the person who created the backup. Automated system backups are named ‘Nightly’.
-*   Date: Creation date of the backup.
-*   Expires on: The date on which the backup will be removed from the system.
-*   Model version: used version of the Deployment Package during backup creation.
-*   Comment: add a specific comment to this backup.
+## 7 Backup Details
+
+When you click **Details**, you can view the following details:
+
+* **Status** – the status of the backup
+  * Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed**
+* **Created by** – the name of the person who created the backup
+  * Automated system backups are named **Nightly**
+* **Date** – the creation date of the backup
+* **Expires on** – the date on which the backup will be removed from the system
+* **Model version** – the version of the deployment package used during backup creation
+* **Comment** – a specific comment added to the backup
 
 ## 8 Related Content
 
-*   [Alerts](/developerportal/operate/monitoring-application-health)
-*   [Logs](/developerportal/operate/logs)
-*   [Metrics](/developerportal/operate/metrics)
-*   [Operate](/developerportal/operate)
+* [Alerts](/developerportal/operate/monitoring-application-health)
+* [Logs](/developerportal/operate/logs)
+* [Metrics](/developerportal/operate/metrics)
+* [Operate](/developerportal/operate)

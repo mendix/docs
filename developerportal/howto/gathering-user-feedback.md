@@ -2,7 +2,7 @@
 title: "Use the Feedback Widget"
 space: "Developer Portal"
 category: "How-To's"
-description: "This page describes how to use the feedback widget."
+description: "Describes how to use the Feedback Widget."
 tags: ["Feedback","Widget","Developer Portal"]
 ---
 
@@ -14,14 +14,14 @@ With Mendix, you can make use of the fully integrated feedback cycle functionali
 
 * Configure the widget
 * Gather, receive, and process feedback
-* Add a feedback story to the App backlog
+* Add a feedback story to the app backlog
 * View a list of your own provided feedback
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Create an App containing a working application model
+* Create an app containing a working application model
 
 ## 3 Adding the Mendix Feedback Widget to Your App
 
@@ -135,5 +135,3 @@ You can view your own submitted feedback items in the feedback list in your prof
 3. Go to the **Feedback** tab.
 
     ![](attachments/collaborate/feedbackoverview.jpg)
-
-## 9 Related Content

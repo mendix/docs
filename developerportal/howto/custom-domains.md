@@ -1,5 +1,5 @@
 ---
-title: "How to Configure Custom Domains"
+title: "Configure Custom Domains"
 space: "Developer Portal"
 category: "How-To's"
 description: "Describes how to configure custom domains as well as generate, upload, and renew certificates in Mendix."

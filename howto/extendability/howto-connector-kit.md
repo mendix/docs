@@ -153,75 +153,27 @@ The action is implemented in Java as follows:
 
 When developing connector modules, you can use the unit test module to test the actions you are implementing.
 
-If you want to publish your module with custom microflow actions to the Mendix App Store for easy reuse, it's best to have a module containing only the reusable part. Add another module to your project with all the test microflows and anything else you need
+If you want to publish your module with custom microflow actions to the Mendix App Store for easy reuse, it's best to have a module containing only the reusable parts. Add another module to your project with all the test microflows and anything else you need
 while developing your application.
 
-The screenshot below illustrates this:
+In the screenshot below, observe two important points. First, the **ConnectorKitDemo** module only contains the actions you want to publish to the App Store. To do this, right-click the module and select **Export module package...**. Second, the **ConnectorKitDemoTests** module contains all the functionality you need while developing the reusable module: a small domain model with some sample data and some test pages. It also contains the unit test microflow **Test_InitProduct**, which will be called by the unit test module.
 
-* The *ConnectorKitDemo* module only contains the actions you want to publish to
-the appstore. You can do this by selecting *export module package...* from the
-context menu.
-* The *ConnectorKitDemoTests* module contains all functionality you need while
-developing the reusable module: a small domain model with some sample data and
-some test pages. It also contains one unit test microflow that will be called by
-the unit test module: *Test_InitProduct*.
-
- ![Mendix Connector kit module project with tests][21]
+![Mendix Connector kit module project with tests](attachments/how-to-connector-kit/project_test.png)
  
 ### 5.2 Managing Libraries
 
-When you export the module package for publishing in the AppStore you only want
-to include the relevant Java libraries. The easiest way to manage this is to use
-a build tool to specify and download the relevant dependencies.
+When you export the module package for publishing in the App Store, you only want to include the relevant Java libraries. The easiest way to manage this is to use a build tool to specify and download the relevant dependencies.
 
-The [ConnectorKitDemo][22] project on Github contains 2 examples how to do this:
+The [ConnectorKitDemo](https://github.com/ako/ConnectorKitDemo) project on GitHub contains two examples of how to do this, which are described below.
 
-* **Ivy** - [Apache Ivy][23] is a java library specifically created for managing
-dependencies. Ivy is small enough that you can include it in your Mendix
-project. You can create two configurations in an ivy.xml configuration file. One
-to specify all jars needed to run the project and execute the tests. One to just
-specify the libraries that should be included when publishing the module for
-reuse in the AppStore. The demo project contains two configurations called
-*default* and *export* in the [ivy.xml][24] configuration file.
-* **Gradle** - [Gradle][25] is a full fledged build tool where you can define tasks
-to build your project. The example in the demo project uses gradle only to
-manage the dependencies. Again it defines [two build configurations][26], one
-requiring all dependencies, one just the libraries needed for exporting the
-module (in this case just a library to call Slack).
+The first example is [Apache Ivy](http://ant.apache.org/ivy/), which is a Java library specifically created for managing dependencies. Ivy is small enough that you can include it in your Mendix project. You can create two configurations in an *ivy.xml* configuration file: one
+to specify all the jars needed to run the project and execute the tests, and one to specify the libraries that should be included when publishing the module for reuse in the App Store. The demo project contains two configurations called **default** and **export** in the [ivy.xml](https://github.com/ako/ConnectorKitDemo/blob/master/ivy.xml) configuration file.
 
-Before developing custom java actions you can run the build tool to download all
-dependencies. When you are done, you run the build tool to delete all libraries
-in your userlibs folder and download only the jars to be included in the
-published module. Next you export the module and upload it to the AppStore.
+The second example is [Gradle](https://gradle.org/), which is a full-fledged build tool where you can define tasks to build your project. The example in the demo project uses Gradle only to manage the dependencies. Again, it defines [two build configurations](https://github.com/ako/ConnectorKitDemo/blob/master/build.gradle): one requiring all the dependencies, and one requiring the libraries needed for exporting the module (in this case, just a library to call Slack).
 
- [1]: attachments/how-to-connector-kit/slack-rekogition-bot-architecture.png
- [2]: attachments/how-to-connector-kit/slack-rekogition-bot-toolkit.png
- [3]: attachments/how-to-connector-kit/init-loop.png
- [4]: https://www.mendix.com/blog/introducing-mendix-connector-kit/
- [5]: attachments/how-to-connector-kit/type-parameter-tab.png
- [6]: attachments/how-to-connector-kit/join_objects_pars.png
- [7]: attachments/how-to-connector-kit/join_objects_type_par.png
- [8]: attachments/how-to-connector-kit/join_objects_type_par_def.png
- [9]: attachments/how-to-connector-kit/join_objects_javacode.png
- [10]: attachments/how-to-connector-kit/initialize_list_mf_pars.png
- [11]: attachments/how-to-connector-kit/join_objects_use.png
- [12]: attachments/how-to-connector-kit/init-list-use.png
- [13]: attachments/how-to-connector-kit/initilialize_list_java_1.png
- [14]: attachments/how-to-connector-kit/initilialize_list_java_2.png
- [15]: attachments/how-to-connector-kit/toolkit-connector-kit-demo.png
- [17]: https://github.com/ako/MqttClient
- [18]: https://appstore.home.mendix.com/link/app/3066/Mendix/MQTT-Client
- [16]: attachments/how-to-connector-kit/import_string_action_pars.png
- [19]: attachments/how-to-connector-kit/example_import_string_use.png
- [20]: attachments/how-to-connector-kit/import_string_java.png
- [21]: attachments/how-to-connector-kit/project_test.png
- [22]: https://github.com/ako/ConnectorKitDemo
- [23]: http://ant.apache.org/ivy/
- [24]: https://github.com/ako/ConnectorKitDemo/blob/master/ivy.xml
- [25]: https://gradle.org/
- [26]: https://github.com/ako/ConnectorKitDemo/blob/master/build.gradle
- [27]: https://slack.com/
- [28]: https://aws.amazon.com/s3/
- [29]: https://aws.amazon.com/lex/
- [30]: https://aws.amazon.com/rekognition/
- 
+Before developing custom Java actions, follow these steps:
+
+1. Run the build tool to download all the dependencies.
+2. Run the build tool to delete all the libraries in your *userlibs* folder.
+3. Download only the jars to be included in the published module.
+4. Export the module and upload it to the Mendix App Store.

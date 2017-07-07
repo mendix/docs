@@ -11,7 +11,7 @@ output:
 
 ## 1 Introduction
 
-In version 6.6, Mendix introduced [the Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/). The goal of this enhancement was to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix App Store, so anyone can benefit from them without having to know Java.
+In version 6.6, Mendix introduced the [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/). The goal of this enhancement was to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix App Store, so anyone can benefit from them without having to know Java.
 
 To illustrate the power of the Connector Kit, here's a high-level design diagram for an application Mendix recently built: a Slack bot that enables users to determine things and people in pictures taken with a mobile Slack app:
 

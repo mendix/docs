@@ -51,16 +51,15 @@ To create a generic action using type parameters, follow these steps:
     ![Type parameter use](attachments/how-to-connector-kit/join_objects_pars.png)
  
 3. The action needs the following parameters:
+    * **Entity** – this is used to specify the entity of the objects to join
+      * The entity selected by the user will be stored in the type parameter *EntityToJoin*
 
-  * **Entity** – this is used to specify the entity of the objects to join
-    * The entity selected by the user will be stored in the type parameter *EntityToJoin*
-
-    ![Type parameter use definition](attachments/how-to-connector-kit/join_objects_type_par_def.png)
+      ![Type parameter use definition](attachments/how-to-connector-kit/join_objects_type_par_def.png)
  
-  * **Object1** – the first object to be added to the new list
-    * This needs to be an object of the `EntityToJoin` entity
-  * **Object2** – the second object to be added to the new list
-  * **Return type** – the result of the action will be a list of `EntityToJoin` objects
+    * **Object1** – the first object to be added to the new list
+      * This needs to be an object of the `EntityToJoin` entity
+    * **Object2** – the second object to be added to the new list
+    * **Return type** – the result of the action will be a list of `EntityToJoin` objects
 
 The Java implementation still uses strings to specify the name of an entity, which means that you can upgrade your existing Java actions to use these new parameter types without having to refactor your existing code.
 

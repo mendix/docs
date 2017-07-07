@@ -40,4 +40,4 @@ A node has a minimum of two environments: production and acceptance. A test envi
 *   [Securing Outgoing Connections from your Application](securing-outgoing-connections-from-your-application)
 *   [Security constraints in the Mendix Cloud](security-constraints-in-the-mendix-cloud)
 *   [Sending Email](sending-email)
-*	[Mendix Cloud v4 - FAQ](mxcloudv4)
+*   [Mendix Cloud v4 - FAQ](mxcloudv4)

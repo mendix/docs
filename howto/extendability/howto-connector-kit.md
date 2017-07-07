@@ -11,13 +11,13 @@ output:
 
 ## 1 Introduction
 
-In version 6.6, Mendix introduced [the Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/). The goal of this enhancement was to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix App Store, so anyone can benefit from them without having to know Java.
+In version 6.6, Mendix introduced the [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/). The goal of this enhancement was to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix App Store, so anyone can benefit from them without having to know Java.
 
 To illustrate the power of the Connector Kit, here's a high-level design diagram for an application Mendix recently built: a Slack bot that enables users to determine things and people in pictures taken with a mobile Slack app:
 
 ![Slack Rekognition Bot design](attachments/how-to-connector-kit/slack-rekogition-bot-architecture.png)
 
-A Mendix application consists of a small number of microflows that use Mendix microflow actions to offer a conversational user interface using [Slack](https://slack.com/) and different Amazon services: [S3][(https://aws.amazon.com/s3/), [Rekognition](https://aws.amazon.com/rekognition/), and [Lex](https://aws.amazon.com/lex/).
+A Mendix application consists of a small number of microflows that use Mendix microflow actions to offer a conversational user interface using [Slack](https://slack.com/) and different Amazon services: [S3](https://aws.amazon.com/s3/), [Rekognition](https://aws.amazon.com/rekognition/), and [Lex](https://aws.amazon.com/lex/).
 
 This image shows what the microflow toolbox looks like after including all the modules that provide connectors to the services used:
  
@@ -32,7 +32,7 @@ For the basics of building toolbox actions, see the [Introducing the Mendix Conn
 * Create the **Import string** action
 * Create the **Join objects in list** action
 
-![Connectorkit demo toolbox][attachments/how-to-connector-kit/toolkit-connector-kit-demo.png]
+![Connectorkit demo toolbox](attachments/how-to-connector-kit/toolkit-connector-kit-demo.png)
 
 ## 2 Creating Generic Actions Using Type Parameters
 
@@ -48,7 +48,7 @@ To create a generic action using type parameters, follow these steps:
  
 2. Create parameters using the previously defined type parameter *EntityToJoin*:
 
-    ![Type parameter use][attachments/how-to-connector-kit/join_objects_pars.png]
+    ![Type parameter use](attachments/how-to-connector-kit/join_objects_pars.png)
  
 3. The action needs the following parameters:
 
@@ -145,7 +145,7 @@ Implement the action in Java as follows:
 2. Use `Core.integration().importStream()` to import the JSON with the specified mapping.
 3. Return the first object imported.
  
-![Import String java action][attachments/how-to-connector-kit/import_string_java.png]
+![Import String java action](attachments/how-to-connector-kit/import_string_java.png)
  
 ## 5 Some Development Tips
 

@@ -1,5 +1,5 @@
 ---
-title: "How to Use the Feedback Widget"
+title: "Use the Feedback Widget"
 space: "Developer Portal"
 category: "How-To's"
 description: "This page describes how to use the feedback widget."

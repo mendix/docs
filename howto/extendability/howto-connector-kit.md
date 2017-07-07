@@ -139,7 +139,7 @@ The action is defined as follows:
 
  ![Import String with mapping java action parameters](attachments/how-to-connector-kit/import_string_action_pars.png)
  
-The action is implemented in Java as follows:
+Implement the action in Java as follows:
 
 1. Create an InputStream from the the JSON input so it can be read by the import mapping.
 2. Use `Core.integration().importStream()` to import the JSON with the specified mapping.

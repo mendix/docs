@@ -11,7 +11,6 @@ This how-to will teach you how to do the following:
 * Restruct access for incoming requests to your app
 * Configure an access restriction profile
 * Apply a restriction to an app environment
-* 
 
 ## 2 Restricting Access for Incoming Requests to Your Application
 

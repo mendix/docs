@@ -2,22 +2,22 @@
 title: "Apps"
 space: "Developer Portal"
 category: "Company Admin"
-description: "This page describes the options available to company administrators in a Mendix app."
+description: "Describes the options available to company administrators in a Mendix app."
 tags: ["Company","Admin","Developer Portal"]
 ---
 
-## 1 Apps
+## 1 Apps Section
 
-A Company Admin can manage the following items in the **Apps** section:
+A company admin can manage the following items in the **Apps** section:
 
-*   Apps
-*   Roles
+* Apps
+* Roles
 
 ![](attachments/appsettings.jpg)
 
-## 2 Apps
+## 2 Apps Tab
 
-A Company Admin can manage the following items at the **Apps** tab:
+A company admin perform the following actions on the **Apps** tab:
 
 * Activate/deactivate apps
 * Delete apps
@@ -25,7 +25,7 @@ A Company Admin can manage the following items at the **Apps** tab:
 
 ## 3 Roles
 
-A Company Admin can edit user roles and add new user roles at the **Roles** tab.
+A company admin can edit user roles and add new user roles on the **Roles** tab.
 
 ## 4 Related Content
 

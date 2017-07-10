@@ -3,7 +3,7 @@ title: "Metrics"
 space: "Developer Portal"
 category: "Operate"
 description: "This page describes the Metrics page of the Developer Portal."
-tags: ["Operate","App","Developer Portal"]
+tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Portal"]
 ---
 
 ## 1  Metrics
@@ -24,6 +24,13 @@ In this section you can view the graphs of the App about:
 *   Application Node Statistics
 *   Database Node Statistics
 
+
+There are two types of **Trends** depending on which **Mendix Cloud version** the App is running on:
+
+*   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
+*   [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
+
+You can find the Mendix Cloud version of your App in the **environment details**.
 
 ## 3 Running now
 
@@ -58,3 +65,8 @@ Mendix 4 and up have an object cache for non-persistent objects. Here you can se
 
 
 ## 5 Related Content
+
+*   [Environment details](/developerportal/deploy/environments-details)
+*   [Operate](/developerportal/operate)
+*   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
+*   [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)

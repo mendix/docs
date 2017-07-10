@@ -3,7 +3,7 @@ title: "Monitoring Mendix Runtime"
 space: "Mendix 7 Reference Guide"
 category: "Runtime"
 description: "This page describes the supported Mendix Runtime monitoring actions."
-tags: "runtime, json"
+tags: ["runtime, json"]
 ---
 The Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration.
 The JSON request should be accompanied by a base64 encoded monitoring password (the password should also be specified in the application configuration) and put in the request header "X-M2EE-Authentication". The content type of the request should be "application/json".

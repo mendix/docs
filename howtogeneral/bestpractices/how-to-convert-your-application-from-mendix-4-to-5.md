@@ -1,5 +1,5 @@
 ---
-title: "How to convert your application from Mendix 4 to Mendix 5"
+title: "Convert Your Application from Mendix 4 to Mendix 5"
 space: "General How-To's"
 category: "Best Practices"
 ---

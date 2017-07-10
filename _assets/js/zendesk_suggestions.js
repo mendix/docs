@@ -5,6 +5,7 @@
     console.log('[MENDIX SUPPORT REQUEST FORM] request form found');
     var $subject = $('input[type=text]#request_subject', $form);
     if ($subject.length === 1) {
+      var initialValue = $subject.val();
       var $suggestion = $('.suggestion-list');
       if ($suggestion.length === 1) {
         var DEBOUNCE;
@@ -44,23 +45,27 @@
         );
 
         search.addWidget(
-            instantsearch.widgets.hits({
-              container: $suggestion_list[0],
-              hitsPerPage: 6,
-              templates: {
-                item: '<li><a target="_blank" href="{{{url}}}">{{{_highlightResult.title.value}}}</a> <span class="space">({{{space}}})</span><li>'
-              },
-              transformData : function(hit) {
-                if (hit && hit.url) {
-                  hit.url = 'https://docs.mendix.com' + hit.url.replace('.html', '');
-                }
-                return hit;
+          instantsearch.widgets.hits({
+            container: $suggestion_list[0],
+            hitsPerPage: 6,
+            templates: {
+              item: '<li><a target="_blank" href="{{{url}}}">{{{_highlightResult.title.value}}}</a> <span class="space">({{{space}}})</span><li>'
+            },
+            transformData : function(hit) {
+              if (hit && hit.url) {
+                hit.url = 'https://docs.mendix.com' + hit.url.replace('.html', '');
               }
-            })
-          );
+              return hit;
+            }
+          })
+        );
 
         search.start();
         $searchbox.hide();
+
+        if (initialValue !== '') {
+          search.helper.setQuery(initialValue).search();
+        }
       }
     }
   }

@@ -5,7 +5,7 @@ title: "ATS"
 This space contains all the documentation for ATS. These are the main ATS documents:
 
 * [Introduction to ATS](general/introduction)
-* [Compatability](general/compatibility)
+* [Compatibility](general/compatibility)
 * [Projects](refguide-ats-1/projects)
 * [Data Management](refguide-ats-1/data-management)
 * [Monitoring](refguide-ats-1/monitoring)

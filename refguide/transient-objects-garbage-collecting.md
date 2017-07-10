@@ -3,7 +3,7 @@ title: "Transient Objects and Garbage Collecting"
 space: "Mendix 7 Reference Guide"
 category: "Runtime"
 description: "This page will explain the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory."
-tags: "persistable, non-persistable, transient, objects, garbage, collecing"
+tags: ["persistable", "non-persistable", "transient", "objects", "garbage", "collecing"]
 ---
 This page will explain the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory. In order to understand the behavior of transient objects there are a few facts that you need to be aware off:
 

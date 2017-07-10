@@ -57,7 +57,7 @@ In the previous section you have set up a basic data structure and created some 
     ![](attachments/18448686/18581089.png)
 12. Set the following properties:<br>
     a. For _Entity_, select **Order**<br>
-    b. For _Name_, enter **OrderList**<div class="alert alert-info"><br>
+    b. For _Name_, enter **OrderList**<br>
 
     <div class="alert alert-info">
     With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.
@@ -91,7 +91,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
     The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue. For more information take a look at this [documentation](/refguide6/loop?utm_source=businessmodeler&utm_medium=software&utm_campaign=modeler)
 
     </div>
-    
+
 3.  Double click the loop activity and select the **OrderProcessingList** to iterate over.
     ![](attachments/18448686/18581085.png)
 4.  Drag a **Change object** activity inside the loop:
@@ -192,13 +192,13 @@ In the previous section you iterated over a list to add the value of single obje
     b. For **Function**, select _Sum_.<br>
     c. For **Attribute**, select _TotalPrice_.<br>
     d. For **Variable**, enter a descriptive name like _SumTotalPrice_.<br>
-    
+
     <div class="alert alert-info">
 
     See the [documentation](/refguide6/aggregate-list) for the description of the other functions.
 
     </div>
-    
+
     ![](attachments/18448686/18581059.png)
 
 5.  Click **OK**.

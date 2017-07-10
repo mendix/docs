@@ -3,9 +3,9 @@ title: "Integration"
 space: "Mendix 7 How-To's"
 ---
 
-Do you want to connect your app to the internet?
+Do you want to connect your app to the internet? Learn how to do this by following these how-to's.
 
-Learn how to do this by following these how-to's. We also want to create a large network of Mendix apps. So start integrating!
+We want to create a large network of Mendix apps, so start integrating!
 
 ## Documents in This Category
 

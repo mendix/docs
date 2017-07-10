@@ -10,6 +10,8 @@ tags: ["Node","Permission","Developer Portal"]
 
 Fine grained access management for your Mendix Cloud environments is handled in the **Node Security** tab under **Security**. Each team member can subscribe or unsubscribe to the alerts, and the **Technical Contact** can manage various permissions of each team member per environment.
 
+Learn more about [Settings](/developerportal/settings)
+
 <div class="alert alert-info">{% markdown %}
 
 Note that you need to have an **MxID** to get access to the [Developer Portal](http://home.mendix.com). To create an MxID, click [here](http://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup).
@@ -48,7 +50,7 @@ The Technical Contact manages the cloud node and can edit the privileges of regu
 
 <div class="alert alert-info">{% markdown %}
 
-The Technical Contact of the app is the first point of contact for [Mendix Support](https://www.support.mendix.com), and will receive alerts regarding the cloud node.
+The Technical Contact of the app is the first point of contact for [Mendix Support](https://support.mendix.com/hc/en-us), and will receive alerts regarding the cloud node.
 
 {% endmarkdown %}</div>
 
@@ -59,11 +61,11 @@ The Technical Contact will receive the following alerts from the cloud node:
 *   Notifications for maintenance from **Mendix Support**
 *   Alerts from the node when problems arise (CPU load is high, running out of disk space, etc.). The Technical Contact cannot turn these off
 
-To find more information about **Alerts**, read paragraph **2 Alerting Categories and Thresholds**. of the [Alerts](/developerportal/operate/monitoring-application-health) documentation. 
+To learn more about **Alerts**, read paragraph **2 Alerting Categories and Thresholds** of the [Alerts](/developerportal/operate/monitoring-application-health) documentation.
 
 ### 4.2 Mendix Support
 
-The Technical Contact is the first point of contact for the app for [Mendix Support](https://www.support.mendix.com). The Technical Contact can submit requests for the cloud node with the following request types:
+The Technical Contact is the first point of contact for the app for [Mendix Support](https://support.mendix.com/hc/en-us). The Technical Contact can submit requests for the cloud node with the following request types:
 
 *   Incidents: If incidents arise (for example, when the app is down)
 *   Standard changes: **Add Cloud Resources**, **Change Mendix URL**, **New App**, **(Re)new license**, **Reset Google authenticator**
@@ -106,3 +108,10 @@ With this permission you can view the application metrics, logs, and alerts unde
 For more information, see [Alerts](/developerportal/operate/monitoring-application-health)
 
 ## 6 Related Content
+
+*   [Alerts](/developerportal/operate/monitoring-application-health)
+*   [Backups](/developerportal/operate/backups)
+*   [Metrics](/developerportal/operate/metrics)
+*   [Logs](/developerportal/operate/logs)
+*   [Settings](/developerportal/settings)
+*   [Technical Contact](/developerportal/settings/technical-contact)

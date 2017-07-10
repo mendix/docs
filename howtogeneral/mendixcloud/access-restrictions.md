@@ -25,7 +25,7 @@ In addition, custom profiles can be assembled using IP range filters and a clien
 <div class="alert alert-info">{% markdown %}
 
 * This feature is available from July 11, 2017 for **Mendix Cloud v4** environments
-* **Mendix Cloud v3** environments will be converted from the current request handlers-based configuration on August 15th, 2017 (for more information, see [How to Convert to Path-Based Access Restrictions](request-handlers-to-pbar))
+* **Mendix Cloud v3** environments will be converted from the current request handlers-based configuration on August 15, 2017 (for more information, see [How to Convert to Path-Based Access Restrictions](request-handlers-to-pbar))
 
 {% endmarkdown %}</div>
 

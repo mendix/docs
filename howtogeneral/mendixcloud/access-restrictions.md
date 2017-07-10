@@ -85,17 +85,17 @@ To restrict access to the app to an IP range, follow these steps:
 2. Click **Environment** under the **Deploy** category.
 3. Go to the **Access Restriction Profiles** tab of the application.
 
-    ![](attachments/app-restriction.png)
+    ![](attachments/accessrestrict/app-restriction.png)
 
 4. Create a restriction profile.
 5. Add one or more IP ranges to the restriction profile.
 
-    ![](attachments/scenario1.png)
+    ![](attachments/accessrestrict/scenario1.png)
 
 6. Go to the **Deploy** tab and click the **Details** of the desired environment.
 7. Select the **Network** tab of an application environment.
 
-    ![](attachments/environment-restriction.png)
+    ![](attachments/accessrestrict/environment-restriction.png)
 
 8. Apply the profile to the top level path `/`. All other more specific paths will inherit this profile if they do not have a setting of their own.
 
@@ -111,17 +111,17 @@ To add this additional access restriction profile, follow these steps:
 2. Click **Environment** under the **Deploy** category.
 3. Go to the **Access Restriction Profiles** tab of the application.
 
-    ![](attachments/app-restriction.png)
+    ![](attachments/accessrestrict/app-restriction.png)
 
 4. Create a restriction profile.
 5. Add the certificate of the internal certificate authority that is used to sign the client certificates to the restriction profile.
 
-    ![](attachments/scenario2.png)
+    ![](attachments/accessrestrict/scenario2.png)
 
 6. Go to the **Deploy** tab and click the **Details** of the desired environment.
 7. Select the **Network** tab of an application environment.
 
-    ![](attachments/environment-restriction.png)
+    ![](attachments/accessrestrict/environment-restriction.png)
 
 8. Apply the restriction profile to the `/ws/` path of the environment. For this specific path, the profile that was chosen for the top level `/` will now be overridden.
 

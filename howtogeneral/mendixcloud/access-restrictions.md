@@ -4,7 +4,16 @@ space: "General How-To's"
 category: "Mendix Cloud"
 ---
 
-## 1 Restricting Access for Incoming Requests to Your Application
+## 1 Introduction
+
+This how-to will teach you how to do the following:
+
+* Restruct access for incoming requests to your app
+* Configure an access restriction profile
+* Apply a restriction to an app environment
+* 
+
+## 2 Restricting Access for Incoming Requests to Your Application
 
 By configuring access restrictions, you have fine-grained control over external access to your application.
 
@@ -21,7 +30,7 @@ In addition, custom profiles can be assembled using IP range filters and a clien
 
 {% endmarkdown %}</div>
 
-## 2 Configuring an Access Restriction Profile
+## 3 Configuring an Access Restriction Profile
 
 These are the most important things you should know about configuring an access restriction profile:
 
@@ -29,7 +38,7 @@ These are the most important things you should know about configuring an access 
 * Access restriction profiles can contain any number of IPv4 and IPv6 address ranges, or a client certificate authority, or both
 * If an access restriction profiles contains both IP address ranges and a client certificate authority, then any match on either the IP range or the client certificate will grant access
 
-### 2.1 Known Limitations
+### 3.1 Known Limitations
 
 These are the known limitations:
 
@@ -37,7 +46,7 @@ These are the known limitations:
 * The IP range filter option is not available in Mendix Cloud v3 environments hosted outside of the Netherlands
 * When using client certificate restrictions, the client certifcate CA in all active profiles must be identical (in other words, it's only possible to use a single CA for the entire application environment)
 
-## 3 Applying a Restriction to an Application Environment
+## 4 Applying a Restriction to an Application Environment
 
 To apply a restriction to a specific application environment, follow these steps:
 
@@ -55,7 +64,7 @@ To apply a restriction to a specific application environment, follow these steps
 
 {% endmarkdown %}</div>
 
-### 3.1 Default Settings
+### 4.1 Default Settings
 
 These are the default settings:
 
@@ -63,11 +72,11 @@ These are the default settings:
 * All paths ending in `-doc` will have a preset **Deny all access** profile set by default
 * All the remaining paths will have no restriction applied by default
 
-## 4 Use Cases for Access Restrictions
+## 5 Use Cases for Access Restrictions
 
 The two scenarios in which you can use access restrictions are described below.
 
-### 4.1 Example Scenario 1 – Restricting Access Based on an IP Range
+### 5.1 Example Scenario 1 – Restricting Access Based on an IP Range
 
 An example scenario in which a basic IP range restriction could be used is when an app running in the Mendix Cloud is only to be accessed from a single office. The interactive web browser interface of the app should only be accessible to employees in the office of the company running the app. From the rest of the internet, the login screen of the application should not even be visible.
 
@@ -91,7 +100,7 @@ To restrict access to the app to an IP range, follow these steps:
 
 8. Apply the profile to the top level path `/`. All other more specific paths will inherit this profile if they do not have a setting of their own.
 
-### 4.2 Example Scenario 2 – Backend Administration with Third-Party Web Service Integrations
+### 5.2 Example Scenario 2 – Backend Administration with Third-Party Web Service Integrations
 
 The second example scenario is an extended version of the first scenario. The app that was protected with the IP range restriction now starts to provide web service integrations that will be called by third-parties. Since the IP range restriction is in place already, the web service endpoints are not reachable by external parties.
 
@@ -123,7 +132,7 @@ If it is desired that the `/ws/` path can still be reached from the office locat
 
 {% endmarkdown %}</div>
 
-## 5 Related Content
+## 6 Related Content
 
 * [Certificates](/refguide/certificates)
 * [Deploy](/developerportal/deploy)

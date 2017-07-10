@@ -1,5 +1,5 @@
 ---
-title: "Use the Feedback Widget"
+title: "Use the Mendix Feedback Widget"
 space: "Developer Portal"
 category: "How-To's"
 description: "Describes how to use the Feedback Widget."
@@ -12,7 +12,7 @@ With Mendix, you can make use of the fully integrated feedback cycle functionali
 
 **This how-to will teach you how to do the following:**
 
-* Configure the widget
+* Configure the Mendix Feedback widget
 * Gather, receive, and process feedback
 * Add a feedback story to the app backlog
 * View a list of your own provided feedback

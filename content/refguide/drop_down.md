@@ -31,7 +31,7 @@ The empty option caption is available from Mendix 7.2.0.
 
 {{% /alert %}}
 
-## Validation properties
+## Validation Properties
 
 {{% snippet file="refguide/Widget+Validation.md" %}}
 
@@ -49,7 +49,7 @@ The empty option caption is available from Mendix 7.2.0.
 
 {{% snippet file="refguide/Condition+Property.md" %}}
 
-## Visibility properties
+## Visibility Properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}
 

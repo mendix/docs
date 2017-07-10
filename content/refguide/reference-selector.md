@@ -57,7 +57,7 @@ The empty option caption is available from Mendix 7.2.0.
 
 {{% /alert %}}
 
-### Select page
+### Select Page
 
 The select page property determines which page is opened when the select page button is used. This page can be used to select associated objects from the list of all possible objects. This page should contain a data grid, template grid or list view connected to the same entity as the input reference set selector.
 
@@ -79,7 +79,7 @@ These settings specify how the page is opened.
 
 See [Opening Pages](opening-pages) for more details.
 
-## Validation properties
+## Validation Properties
 
 {{% snippet file="refguide/Widget+Validation.md" %}}
 
@@ -210,7 +210,7 @@ Keep in mind that even though you connect an attribute to the reference selector
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Related Articles
+## Related Content
 
 *   [Data view](data-view)
 *   [Entities](entities)

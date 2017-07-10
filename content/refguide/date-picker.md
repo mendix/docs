@@ -13,9 +13,9 @@ This date picker allows the end-user to set the birth date of the customer.
 
 {{% /alert %}}
 
-## General properties
+## General Properties
 
-### Date format
+### Date Format
 
 The date format determines whether the date picker displays the date, time, date and time, or a custom variation of the linked attribute. This does not affect how data is stored; in all cases both a date and a time will be recorded. It merely affects how the data is displayed. How the date and/or time are formatted depend on the localization of the user viewing the data.
 
@@ -23,7 +23,7 @@ Possible values: 'Date', 'Time', 'Date and time' and 'Custom'.
 
 _Default value:_ Date
 
-### Custom date format
+### Custom Date Format
 
 If you choose 'Custom' as the date format (see above) this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
@@ -71,13 +71,13 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/Widget+Validation.md" %}}
 
-## Data source properties
+## Data Source Properties
 
 {{% snippet file="refguide/Attribute+Path+Property.md" %}}
 
 {{% snippet file="refguide/Label+Property.md" %}}
 
-## Editability properties
+## Editability Properties
 
 {{% snippet file="refguide/Editable+Property.md" %}}
 
@@ -85,13 +85,13 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/Condition+Property.md" %}}
 
-## Visibility properties
+## Visibility Properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}
 
 {{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
-## Events properties
+## Events Properties
 
 {{% snippet file="refguide/On+Change+Event.md" %}}
 
@@ -99,7 +99,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/On+Leave+Event.md" %}}
 
-## Common properties
+## Common Properties
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
@@ -109,7 +109,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Related articles
+## Related Content
 
 *   [Data view](data-view)
 *   [Attributes](attributes)

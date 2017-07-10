@@ -12,9 +12,7 @@ On August 15, 2017, all current settings of Mendix Cloud v3 applications will be
 
 **This how-to will teach you how to do the following:**
 
-* Create...
-* Build...
-* Configure...
+* Convert to path-based access restrictions via examples
 
 ## 2 Changes
 

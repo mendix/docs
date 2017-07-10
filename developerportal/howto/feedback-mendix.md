@@ -2,7 +2,7 @@
 title: "Provide Feedback on Mendix"
 space: "Developer Portal"
 category: "How-To's"
-description: "This page describes how to provide feedback on Mendix."
+description: "Describes how to provide feedback on Mendix."
 tags: ["Feedback","Widget","Developer Portal","Mendix"]
 ---
 
@@ -17,7 +17,7 @@ The purpose of the feedback on Mendix is to provide low priority issues, questio
 
 <div class="alert alert-warning">{% markdown %}
 
-The **Feedback** button is not a Support option. If there are any platform problems, contact [Mendix Support](http://support.mendix.com).
+The **Feedback** button is not a support option. If there are any platform problems, contact [Mendix Support](http://support.mendix.com).
 
 {% endmarkdown %}</div>
 

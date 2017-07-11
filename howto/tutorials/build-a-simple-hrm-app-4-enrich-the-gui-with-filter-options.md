@@ -157,5 +157,5 @@ To use the final how-to for creating a simple HRM application, see [Build a Simp
 * [Build a Simple HRM App Step 2: First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui)
 * [Build a Simple HRM App Step 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
 * [Build a Simple HRM App Step 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
-* [Create and Deploy Your First App](create-and-deploy-your-first-app)
+* [Create and Deploy Your First App](../getting-started/create-and-deploy-your-first-app)
 * [Testing Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)

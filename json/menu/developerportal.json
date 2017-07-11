@@ -4,7 +4,8 @@ sitemap: false
 ---
 {
   "categories": [
-    "Company Admin",
+		"General",	
+  "Company Admin",
 	"Collaborate",
 	"Develop",
 	"Deploy",

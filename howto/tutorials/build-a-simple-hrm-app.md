@@ -1,7 +1,7 @@
 ---
 title: "Build a Simple HRM App"
 space: "Mendix 7 How-To's"
-category: "Getting Started"
+category: "Tutorials"
 description: "This series of Mendix How-To's will guide you through the process of creating a simple human resource management (HRM) application."
 ---
 

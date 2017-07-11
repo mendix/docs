@@ -31,7 +31,7 @@ To quickly start building your new app, follow these steps:
 
 At the bottom of the page, the **What's next** category presents the following options:
 
-* **Show me the basics** includes a link to the [Mendix Getting Started training course](https://gettingstarted.mendixcloud.com/link/courses/getting started)
+* **Show me the basics** includes a link to the [Mendix Getting Started training course](https://gettingstarted.mendixcloud.com/link/courses/gettingstarted)
 * **I've got a question** includes links to the [Mendix Forum](https://gettingstarted.mendixcloud.com/index3.html) and the [Mendix documentation](https://docs.mendix.com/)
 * **I'm ready to get serious** includes a link to the [Mendix Introduction Course](https://gettingstarted.mendixcloud.com/link/courses/introductioncourse)
 

@@ -1,5 +1,5 @@
 ---
-title: "How to Restore a Backup"
+title: "Restore a Backup"
 space: "Developer Portal"
 category: "How-To's"
 description: "This page describes how to restore a backup."

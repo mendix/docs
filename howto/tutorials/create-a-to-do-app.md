@@ -1,7 +1,7 @@
 ---
 title: "Create a Mobile To-Do App"
 space: "Mendix 7 How-To's"
-category: "Getting Started"
+category: "Tutorials"
 description: "This how-to series will teach you how to create a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
 tags: ["Mobile", "Quick", "Starter", "App", "To-do", "Kickstart", "Development"]
 toc-level: "4"

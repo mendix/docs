@@ -1,5 +1,5 @@
 ---
-title: "How to Upgrade Your Free App to a Licensed App"
+title: "Upgrade Your Free App to a Licensed App"
 space: "Developer Portal"
 category: "How-To's"
 description: "This page describes how to upgrade a Free App to a Licensed App."

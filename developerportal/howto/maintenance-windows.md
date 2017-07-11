@@ -1,5 +1,5 @@
 ---
-title: "How to Configure Maintenance Windows"
+title: "Configure Maintenance Windows"
 space: "Developer Portal"
 category: "How-To's"
 description: "This page describes how to cofigure the maintenance windows for your node environment."

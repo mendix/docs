@@ -1,18 +1,12 @@
 ---
-title: "Convert to Path-Based Access Restrictions"
+title: "Converting to Path-Based Access Restrictions"
 space: "General How-To's"
 category: "Mendix Cloud"
 ---
 
 ## 1 Introduction
 
-This how-to describes converting from request handlers to path-based access restrictions.
-
-On August 15, 2017, all current settings of Mendix Cloud v3 applications will be converted to the new Path Based Access Restrictions model.
-
-**This how-to will teach you how to do the following:**
-
-* Convert to path-based access restrictions via examples
+On August 15, 2017, all current settings of Mendix Cloud v3 applications will be converted from request handlers to the new path-based access restrictions model.
 
 ## 2 Changes
 

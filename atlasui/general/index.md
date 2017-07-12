@@ -36,3 +36,5 @@ Widgets are small user interface elements (alerts, buttons, charts, etc.) used t
 ### 2.5 Design Properties
 
 You can further customize widgets by changing their design properties. Colors, text, and many other variables can be altered to make the widget what you need it to be.
+
+.

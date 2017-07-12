@@ -12,7 +12,7 @@ Get off to a flying start with these introductory how-to's:
 
 <div class="alert alert-info">{% markdown %}
 
-If you are lookin for the Mendix tutorials (for creating a mobile to-do app, building an IoT app, etc.), you can find them in [Tutorials](../tutorials/index).
+If you are looking for the Mendix tutorials (for creating a mobile to-do app, building an IoT app, etc.), you can find them in [Tutorials](../tutorials/index).
 
 {% endmarkdown %}</div>
 

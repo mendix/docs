@@ -25,7 +25,7 @@ The name property defines the name of the attribute. This name is used to refer 
 The type property defines the type of data that can be stored in the attribute. An attribute has one of the following types:
 
 | Type | Possible values | Note
-| --- | --- | --- | 
+| --- | --- | --- |
 | AutoNumber | A positive or negative whole number. | AutoNumber attributes are automatically generated numbers. The default value of the attribute determines the first number that will be generated. Each created object will have an AutoNumber that is one greater than the previous one. AutoNumbers can only be used for persistable entities as the AutoNumber value is computed in the database. |
 | Binary | Binary data. Can only be used for persistable entities as the data is stored in the database. For example an entire file. | In most cases you want to use an association to a FileDocument or Image to store file contents. |
 | Boolean | True or false. |
@@ -96,7 +96,7 @@ The default value property defines the value of this attribute when an object is
 | Binary |   |   |
 | Boolean | False |   |
 | Currency | 0.00 |   |
-| DateTime |   | The default value should either comply with the format year-month-day (eventually postfixed by hour:minute, eventually postfixed by :second), or be [%CurrentDateTime%] (which means that when an object is created the value of this attribute is the date and time when the object is created). |
+| DateTime |   | The default value should either comply with the format year-month-day (eventually postfixed by hour:minute, eventually postfixed by :second), or be `[%CurrentDateTime%]` (which means that when an object is created the value of this attribute is the date and time when the object is created). |
 | Enum |   |   |
 | Float | 0.0 |   |
 | HashString |   |   |

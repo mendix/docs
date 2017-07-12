@@ -1,5 +1,5 @@
 ---
-title: "How to Download a Backup"
+title: "Download a Backup"
 space: "Developer Portal"
 category: "How-To's"
 description: "This page describes how to download a backup."

@@ -1,5 +1,5 @@
 ---
-title: "How to Manage Developer Portal Deep Links"
+title: "Manage Developer Portal Deep Links"
 space: "Developer Portal"
 category: "How-To's"
 description: "This document describes how to use shortcuts and deep links in the Developer Portal."
@@ -20,7 +20,7 @@ In the Developer Portal, you can use deep links as a shortcut to go directly to 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Be a member of the app team
-* Have sufficient permissions
+* Have sufficient permissions (for details, see [Security - Node Permissions](../settings/node-permissions))
 
 ## 3 AppID, storyID, feedbackItemNr
 
@@ -38,19 +38,19 @@ If you want to provide links directly to a specific page on the Developer Portal
 
 1. Go to your browser.
 2. Paste the link in the browser's address bar.
-3. Paste the AppID, storyID or the feedbackItemNr after the slash.
+3. Paste the AppID, storyID or the feedbackItemNr after the final slash.
  
 The following deep links can be used:
  
-* Specific app: https://sprintr.home.mendix.com/link/project/<appID>
-* Stories overview for app: https://sprintr.home.mendix.com/link/capture/<appID>
-* Specific story ID: https://sprintr.home.mendix.com/link/story/<storyID>
-* Feedback for app: https://sprintr.home.mendix.com/link/feedback/<appID>
-* Specific feedback item: https://sprintr.home.mendix.com/link/showfeedback/<feedbackItemNr>
-* Environments for app: https://cloud.home.mendix.com/link/deploy/<appID>
-* Metrics for app: https://cloud.home.mendix.com/link/metrics/<appID>
-* Alerts for app: https://cloud.home.mendix.com/link/monitor/<appID>
-* Logs for app: https://cloud.home.mendix.com/link/logs/<appID>
+* Specific app: `https://sprintr.home.mendix.com/link/project/<appID>`
+* Stories overview for app: `https://sprintr.home.mendix.com/link/capture/<appID>`
+* Specific story ID: `https://sprintr.home.mendix.com/link/story/<storyID>`
+* Feedback for app: `https://sprintr.home.mendix.com/link/feedback/<appID>`
+* Specific feedback item: `https://sprintr.home.mendix.com/link/showfeedback/<feedbackItemNr>`
+* Environments for app: `https://cloud.home.mendix.com/link/deploy/<appID>`
+* Metrics for app: `https://cloud.home.mendix.com/link/metrics/<appID>`
+* Alerts for app: `https://cloud.home.mendix.com/link/monitor/<appID>`
+* Logs for app: `https://cloud.home.mendix.com/link/logs/<appID>`
 
 ## 4 Related Content
 

@@ -25,7 +25,8 @@ A comparison expression consists of two attributes or values, separated by a com
 
 This query retrieves all customers whose name is 'Jansen'.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{% endmarkdown %}</div>
+<div class="alert alert-info">{% markdown %}
 
 ```
 //Sales.Order[TotalPrice < 50.00]
@@ -33,7 +34,8 @@ This query retrieves all customers whose name is 'Jansen'.
 
 This query retrieves all orders for which the total price is less than 50.00 euros.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{% endmarkdown %}</div>
+<div class="alert alert-info">{% markdown %}
 
 ```
 //Sales.Customer[Sales.Customer_Order/Sales.Order/HasPayed = false()]
@@ -41,7 +43,8 @@ This query retrieves all orders for which the total price is less than 50.00 eur
 
 This query retrieves all customers who have at least one unpaid order.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{% endmarkdown %}</div>
+<div class="alert alert-info">{% markdown %}
 
 ```
 //Sales.Customer[Name = City]
@@ -49,7 +52,8 @@ This query retrieves all customers who have at least one unpaid order.
 
 This query retrieves all customers who have the same name as the city they live in.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{% endmarkdown %}</div>
+<div class="alert alert-info">{% markdown %}
 
 ```
 //Sales.Customer[Sales.Customer_Order = 'ID_124123512341']
@@ -57,6 +61,7 @@ This query retrieves all customers who have the same name as the city they live 
 
 This query retrieves the customer who placed the order with the given unique identification number.
 
+{% endmarkdown %}</div>
 <div class="alert alert-warning">{% markdown %}
 
 The same result can be retrieved by doing the following query:
@@ -67,7 +72,6 @@ The same result can be retrieved by doing the following query:
 
 However, it is strongly recommended not to use this notation. This is because its execution is inefficient and results in a lower performance due to manner in which it is processed by the database.
 
-{% endmarkdown %}</div>
 {% endmarkdown %}</div>
 
 ## Functions

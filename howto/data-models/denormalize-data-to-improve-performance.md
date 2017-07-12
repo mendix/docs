@@ -57,7 +57,7 @@ Now the application is ready to store redundant data, but you still need to keep
     * Click **Select...** to open the microflow selector
  
     ![](attachments/18448743/18582166.png)
-4. On the microrflow selector, click **New** and enter a name for the new microflow (for example, *Order_AfterCommit*).
+4. On the microflow selector, click **New** and enter a name for the new microflow (for example, *Order_AfterCommit*).
 5. Click **OK** to create the new microflow, and then click **OK** again to save the event handler.
 6. Open the new microflow, which should look like this:
 

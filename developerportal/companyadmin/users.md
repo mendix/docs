@@ -8,17 +8,17 @@ tags: ["Company","Admin","Developer Portal"]
 
 ## 1 Introduction
 
-A Company Admin can manage the following items in the **Users** category:
+A company admin can manage the following items in the **Users** category:
 
-* Users
-* Security Groups
-* Security History
+* **Users**
+* **Security Groups**
+* **Security History**
 
 ![](attachments/usersettings.jpg)
 
 ## 2 Users
 
-A Company Admin can manage the following items at the **Users** tab:
+A company admin can perform the following actions on the **Users** tab:
 
 * View all company users
 * Activate/deactivate users
@@ -26,18 +26,21 @@ A Company Admin can manage the following items at the **Users** tab:
 
 ## 3 Security Groups
 
-This tab lists the security groups that are defined for your company. Users who are assigned to security groups will automatically be granted access to specified appcloud apps. Company Admins can set up security groups and specific app permissions for security groups.
+This tab lists the security groups that are defined for your company. Users who are assigned to security groups will automatically be granted access to specified AppCloud apps. Company admins can set up security groups and specific app permissions for security groups.
 
-A Company Admin can manage the following items at the **Security Groups** tab:
+A company admin can perform the following actions on the **Security Groups** tab:
 
 *   Add/remove security groups
-*   Set up a security group by clicking **Details** for a group. There you can:
+*   Set up a security group by clicking **Details** for a group, where you can do the following:
     * Add a member by clicking **Add**
-    * Set up the access of a security group to apps by going to the **Access To**. Members of this security group will be granted access to the following apps automatically. Note that it is only possible to create policies for licensed, AppCloud-enabled apps. It is possible to select specific Node evironments and User Roles.
+    * Set up the access of a security group to apps by going to **Access To**
+        * Members of this security group will be granted access to these apps automatically
+        * Note that it is only possible to create policies for licensed, AppCloud-enabled apps
+        * It is possible to select specific node evironments and user roles
 
 ## 4 Security History
 
-A Company Admin can view all changes made in the company at the **Security History** tab.
+A company admin can view all the changes made in the company on the **Security History** tab.
 
 ## 5 Related Content
 

@@ -11,6 +11,14 @@ This document describes known issues starting with Mendix version 7.0.2. For kno
 
 {% endmarkdown %}</div>
 
+## 7.4
+
+For details on this release, see [7.4 release notes](7.4).
+
+### 7.4.0<a name="KI740"></a>
+
+* Downloading FileDocuments (as in, images) on Mendix Cloud V4 is broken. The FileDocument download functionality in combination with AWS S3 storage has an issue that prevents files from being found; therefore, images are not being shown. (Ticket 54305)
+
 ## 7.3
 
 For details on this release, see [7.3 release notes](7.3).
@@ -18,6 +26,7 @@ For details on this release, see [7.3 release notes](7.3).
 ### 7.3.0<a name="KI730"></a>
 
 * When you have a conditionally visible container that contains a conditionally visible widget, the widget is not always initialized properly.
+   * Fixed in [7.4.0](7.4#RN740).
 
 ## 7.2
 

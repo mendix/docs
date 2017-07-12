@@ -9,3 +9,10 @@ Get off to a flying start with these introductory how-to's:
 * [How to Install the Mendix Desktop Modeler](install-the-mendix-desktop-modeler)
 * [How to Create and Deploy Your First App](create-and-deploy-your-first-app)
 * [How to Implement Styles](styles)
+
+<div class="alert alert-info">{% markdown %}
+
+If you are looking for the Mendix tutorials (for creating a mobile to-do app, building an IoT app, etc.), you can find them in [Tutorials](../tutorials/index).
+
+{% endmarkdown %}</div>
+

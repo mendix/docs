@@ -6,7 +6,7 @@ category: "General"
 
 ## 1 Introduction
 
-{Add the introduction text here. Write about what this Mendix Reference Guide page will cover and what the user will learn.}
+You can create new apps in one click and leave them just as easy if you don't use them anymore. However, consider wheater you want to use those apps later on or not. There are three types of 'leaving the app'.
 
 ## 2 Leaving, Deleting, or Deactivating Your App
 

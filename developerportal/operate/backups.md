@@ -63,7 +63,7 @@ These are the options:
 * **Uploaded files**
 * **Database**
 
-## 7 Backup Details
+## 3 Backup Details
 
 When you click **Details**, you can view the following details:
 
@@ -76,7 +76,7 @@ When you click **Details**, you can view the following details:
 * **Model version** – the version of the deployment package used during backup creation
 * **Comment** – a specific comment added to the backup
 
-## 8 Related Content
+## 4 Related Content
 
 * [Alerts](/developerportal/operate/monitoring-application-health)
 * [Logs](/developerportal/operate/logs)

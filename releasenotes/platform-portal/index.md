@@ -3,6 +3,16 @@ title: "Platform Portal"
 space: "Release Notes"
 toc-level: "1"
 ---
+## July 12th, 2017
+
+### Improvements
+
+* Every Platform user is now enabled to create WebModeler apps!
+
+### Fixes
+
+* Stories in completed sprints no longer disappear when you open their details view.
+* The Feedback widget now supports reporting feedback from pages with very long URLs.
 
 ## June 21st, 2017
 

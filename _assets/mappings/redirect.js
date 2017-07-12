@@ -2168,6 +2168,21 @@ module.exports = {
       from: "/howto6/Working+With+Object+Events",
       to: "/howto6/working-with-object-events"
     },
+	/****************************************************
+     * HOWTO MENDIX 7
+     ****************************************************/
+	{
+      from: "/howto/getting-started/build-an-iot-app",
+      to: "/howto/tutorials/build-an-iot-app"
+    },
+    {
+      from: "/howto/getting-started/build-a-simple-hrm-app",
+      to: "/howto/tutorials/build-a-simple-hrm-app"
+    },
+    {
+      from: "/howto/getting-started/create-a-to-do-app",
+      to: "/howto/tutorials/create-a-to-do-app"
+    },	
     /****************************************************
      * Mendix Cloud
      ****************************************************/

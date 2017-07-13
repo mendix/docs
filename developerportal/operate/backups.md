@@ -8,9 +8,11 @@ tags: ["Operate","App","Developer Portal","Backup"]
 
 ## 1 Introduction
 
-Backups in the Mendix Cloud have two parts: database and file documents. A backup is created every night or on-demand as described in the **Create a Backup** section below. For the database a full backup is made. File documents are backed up incrementally. Additionally, a replication/failover add-on can be purchased which will enable incremental backups with a 15 minute interval for the database and file documents.
+Backups in the Mendix Cloud have two parts: database and file documents. A backup is created every night or on-demand, as described in [3 Backups](#Backups). For the database, a full backup is made. File documents are backed up incrementally. 
 
-## 2 Nightly Backups - creation and retention schedules
+Additionally, a replication/failover add-on can be purchased that will enable incremental backups with a 15 minute interval for the database and file documents.
+
+## 2 Nightly Backups – Creation and Retention Schedules
 
 The pruning schedule applies to nightly backups and backups initiated by users. If you want to keep a backup for longer than scheduled, you will have to download it.
 
@@ -36,15 +38,15 @@ The start time of the backup creation depends on the region and the Mendix Cloud
 | --- | --- | --- |
 | Cloud v4 | 16:00 | 01:00 |
 
-## 3 Backups
+## 3 Backups<a name="Backups"></a>
 
 The **Backups** page under the **Operate** category presents options for managing your backups. These are described below.
 
-### 3.1 Create a Backup
+### 3.1 Creating a Backup
 
 This will automatically generate a backup from your application data.
 
-### 3.2 Upload Data
+### 3.2 Uploading Data
 
 You must stop the application before executing this process. This functionality is used to transfer data from your local or on-premises application to the cloud environment. This will not add a backup to the backup list but directly update the application with the newly uploaded data. Your environment will be cleared completely. The deployment package, uploaded files, and database will be removed. If you are uploading data to the production environment, any published app services will be unpublished.
 
@@ -53,19 +55,19 @@ You can upload two types of data:
 * **Database**
 * **Uploaded files** (*zip* or *tar.gz*)
 
-### 3.3 Restore a Backup
+### 3.3 Restoring a Backup
 
 You can choose the environment to which you want to restore the backup.
 
 If you restore a backup that was originally deployed on an older Modeler version, you will get a warning. You can still restore the backup, but you have to deploy the older model later on. 
 
-### 3.4 Download a Backup
+### 3.4 Downloading a Backup
 
 These are the options:
 
-* **Full backup**
-* **Uploaded files**
-* **Database**
+* **Full Snapshot**
+* **Database Only**
+* **Files Only**
 
 ## 4 Backup Details
 

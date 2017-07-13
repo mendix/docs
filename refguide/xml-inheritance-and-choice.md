@@ -14,14 +14,14 @@ There are two special cases for XSD elements in mapping documents: choice and in
 
 In Mendix, both inheritance and choice are mapped by entity specialization.
 
-*   The base inheritance or choice element is mapped to a generalization entity. For export mappings, the base mapping contains the setting on how to obtain the Mendix object (by association, microflow, or key) as explained in [Export Mappings](export-mappings).
+*   The base inheritance or choice element is mapped to a generalization entity. For export mappings, the base mapping contains the setting on how to obtain the Mendix object (from parameter, by association, microflow, or key) as explained in [Export Mappings](export-mappings).
 *   Child elements of inheritance or choice are mapped by entity specialization. For export mappings, you cannot specify how to obtain an object because that is already defined one level up at the base mapping element. For import mappings however, you do need to specify how to obtain the Mendix object as explained in [Import Mappings](import-mappings). 
 
 ## XML Inheritance
 
 In figure 1 an example of an Export Mapping with inheritance is shown. For Import Mappings, the structure is the same, only the direction of the arrows is reversed. One _Persons_ object has a one-to-many association to _Person._ The person can be either a Customer or Employee.
 
-**![](attachments/16713728/16843946.png)
+![](attachments/16713728/16843946.png)
 **Figure 1**
 
 For import mappings, mapping the incoming XML to a specific XSD type is defined by the attribute _xsi:type_. However, this attribute is optional. When the _xsi:type_ attribute is **not** present and the base type of the element is **not** abstract, that type will be used (in the example that is Person). If the base type does not have a mapping defined in the import mapping document, it will be skipped. When the base type is abstract, an error will be thrown.

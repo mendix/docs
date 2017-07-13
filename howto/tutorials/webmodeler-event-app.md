@@ -211,16 +211,19 @@ The Program List page is now finished!
 
 The ItemDetail page will contain two items next to each other and another item below that. This means that you need two more rows.
 
-1. Select the layout grid and click **Add Row** three times to add three new rows.
+1. Add a **Data View** to the page.
+2. Click **Select an entity** and select the *ProgramItem* entity.
+2. Move the layout grid into the **DATA VIEW CONTENT** block.
+3. Select the layout grid and click **Add Row** three times to add three new rows.
 
     ![](attachments/wm-step18.png)
 
-2. Open the Toolbox and search for *Text*.
-3. Drag and drop the **Text** widget onto the first column.
+4. Open the Toolbox and search for *Text*.
+5. Drag and drop the **Text** widget onto the first column.
 
     ![](attachments/wm-step19.png)
 
-4. Change **Text** into *Details* and configure the following properties:
+6. Change **Text** into *Details* and configure the following properties:
     a. Render mode: H2
     b. Weight: Bold
     c. Color: Header color
@@ -228,78 +231,64 @@ The ItemDetail page will contain two items next to each other and another item b
 
     ![](attachments/wm-step19b.png)
 
-## 14 Search for Content in the Modeler and the App Store
+## 14 Add Content from the Modeler and the App Store
 
-You can explore the options by looking into the **Building blocks** and **Widgets**, but you can also search for content that can be downloaded from the **App Store**.
+You can find elements for your pages by looking in the **Building blocks** and **Widgets** tab, but you can also search for additional content in the **Mendix App Store**. The Mendix App Store contains many custom themes, modules, and widgets, created by Mendix as well as the Mendix community. Follow these steps to download a widget from the Mendix App Store and add it to your page:
 
-40. Select the second column and drag and drop the **flex container left** into it. You can find it by searching for it.
-41. Add a button to the right column. Name it *Book seat*.
-42. Change the **Render mode** to **Link**.
+1. Add the **Flex Container Left** to the second column on the **ProgramItem** page.
+2. Add a **Call Microflow** button to the container on the right and name it *Book seat*.
+3. Change the **Render Mode** to **Link**.
+4. Change the **On Click Action** to *Nothing*.
 
     ![](attachments/wm-step21.png)
 
-43. Search for the progress bar and click on it to download it from the App Store.
+5. Search for *progress bar* and click in the top left corner of the **Progress Bar** widget to download it from the App Store.
 
-    ![](attachments/wm-step22.jpg)
+    ![](attachments/wm-step22.png)
 
-44. Drag and drop the progress bar to the left column.
-45. In the third column drag and drop the **Card Map** from **Cards** in the **Building Blocks**.
+6. Add the **Progress Bar** widget to the left container.
+7. Click ** Select an attribute** for the **Progress Attribute**.
+8. Create a new attribute called *Progress*.
+7. Set the **Bart Style** to *Info*.
+8. Add the **Card Map** widget to the third column.
 
-    ![](attachments/wm-step17.jpg)
+    ![](attachments/wm-step22b.jpg)
 
-## 14 Adding extra rows
-
-In case you forgot an item on your page and you want to add it:
-
-46. Select the layout grid of the page.
-47. Click **Add a row**.
-48. In the new column drag and drop the **Card User** from **Cards** in the **Building Blocks**.
-49. Remove the details button from the Card User.
-
-## 15 Styling the buttons
-
-To close the *Details* page and return to the *Timeline* page, you will need a back button.
-
-50. Drag and drop the **Close button** from **Widgets** and set it to:
-
-*   Caption - Back
-*   Icon - Chevron left
-*   Full Width - on
+9. Add the **Card User** widget to the bottom column.
+10. Remove the **Details** button and its container from the **Card User** widget.
+11. Add a **Close Page** button widget to the **DATA VIEW FOOTER** with the following properties:
+    a. Caption: Back
+    b. Icon: Chevron left
+    c. Full Width: on
 
 The ItemDetail page is now finished!
 
 ![](attachments/wm-step23.png)
 
-## 16 Add microflows
+## 17 Add Logic to the App with Microflows
 
-Now everything on the *Details* page is set, the *Book seat* button has to have an action:
+Now that everything on the Item Detail page is set, the *Book seat* button has to have an action:
 
-51. Click on the **Book seat** button.
-52. Set the **On click action** to **Microflow** and click on **Select Microflow** below it.
-53. Create a new microflow and name it *BookSeat*.
-54. Add a **Parameter** from the **Toolbox**.
-55. Select the **Entity** and set it to *ProgramItem*.
-56. Add to the **Annotation**  information about the TODO task for the integration specialists to add to the microflow in the **Desktop Modeler**.
+1. Select the **Book seat** button.
+2. Click **Select microflow**.
+3. Create a new microflow and name it *BookSeat*.
+4. Add a **Parameter** to the microflow.
+5. Click **Select an entity** and select it to *ProgramItem* entity.
+6. Change the caption of the **Annotation** to *This microflow will book a seat for users of the event app.*.
 
 ![](attachments/wm-step24.jpg)
 
-## 17 Publish and view your App
+## 18 Publish and View Your App
 
-To view how your page looks like:
+You app is now finished! Follow these steps to view your app in the browser:
 
-57. Click **Publish**
-58. Click **Update**
-59. Click **View on mobile device**
+1. Click **Publish**, then **Update**.
+3. Click **View on mobile device**
 
     ![](attachments/wm-step9.jpg)
 
-60. Scan the QR-code with your [Mendix Developer App](/refguide/getting-the-mendix-developer-app).
+4. Scan the QR-code with your Mendix App (Get it here for [iOS](https://itunes.apple.com/nl/app/mendix/id458058946?l=en&mt=8) or [Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile&hl=en).
 
     ![](attachments/wm-step10.jpg)
 
 
-You can now finish the rest of the app. 
-
-## 18 Related Content
-
-{Do not enter anything here, this will be generated by Mendix}

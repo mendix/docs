@@ -135,7 +135,16 @@ The program list page is coming along nicely. The timeline will need to display 
 4. Select the *Today* text widget .
 5. Delete the *Today* text fron the **Content**.
 6. Click **Add parameter** and then **New Attribute**.
-7. Name the new attribute *Date* and set the **Type** as *String*.
+7. Name the new attribute *Date* and select *String* as type.
+8. Click **Create** to add the attribute.
+
+
+## 9 View Your Domain Model, Create an Entity, and Set Associations
+
+After you have added new entities and attributes to the page, it's always good to take a look into the **Domain Model** for a structured overview. Here you can also set the **associations** between the entities.
+
+32. Click **Domain Models** in the left navigation panel.
+
 . Click on the outer list view and add a new enitity named *ProgramItem*.
 . Click on the inner list view and select the entity *ProgramItem*.
 . Replace *Title* with a new attribute *Speaker*.
@@ -146,11 +155,7 @@ Make sure that at the end the entities are set correctly:
 * Outer list view - *Day* entity
 * Inner list view - *ProgramItem* entity
 
-## 9 Viewing your Domain Model and setting associations
 
-After you have added new entities and attributes to the page, it's always good to take a look into the **Domain Model** for a structured overview. Here you can also set the **associations** between the entities.
-
-32. Click **Domain Models** in the left navigation panel.
 33. Select the *ProgramItem* entity and click on the arrow to set an association with the *Day* enitity.
 
 ![](attachments/wm-step15.jpg)

@@ -159,7 +159,7 @@ After adding new entities and attributes to a page, it's always good to verify t
 7. Select the **ProgramItem** entity and click on the arrow to set an association.
 8. Select the **Day** entity and click **Select**.
 
-![](attachments/event-app/wm-step15.jpg)
+![](attachments/event-app/wm-step15.png)
 
 ## 10 Add the ProgramItem Entity to the List View
 
@@ -285,7 +285,7 @@ You app is now finished! Follow these steps to view your app in the browser:
 1. Click **Publish**, then **Update**.
 3. Click **View on mobile device**
 
-    ![](attachments/event-app/wm-step9.jpg)
+    ![](attachments/event-app/wm-step9.png)
 
 4. Scan the QR-code with your Mendix App (Get it here for [iOS](https://itunes.apple.com/nl/app/mendix/id458058946?l=en&mt=8) or [Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile&hl=en).
 

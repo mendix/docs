@@ -114,7 +114,7 @@ If you create a page in **Pages** (in the left navigation panel), make sure that
 
 4. Replace the header with the **Heroheader1** like you did on the Home page.
 5. Change the header title to *Program List*.
-6. Change the subtitle to *Upcoming events*.
+6. Change the subtitle to *Upcoming events*, and color to *Warning*.
 7. Delete the **New** button and its container.
 
 ## 8 Add Entities and Attributes to a Building Block
@@ -138,27 +138,58 @@ The program list page is coming along nicely. The timeline will need to display 
 7. Name the new attribute *Date* and select *String* as type.
 8. Click **Create** to add the attribute.
 
+The timeline is now connected to the Day entity in your domain model.
 
 ## 9 View Your Domain Model, Create an Entity, and Set Associations
 
-After you have added new entities and attributes to the page, it's always good to take a look into the **Domain Model** for a structured overview. Here you can also set the **associations** between the entities.
+After adding new entities and attributes to a page, it's always good to verify them in the domain model. You can also use the domain model editor to set the **associations** between the entities. Follow these steps to create a new entity with several attributes, and associate the new entity with the Day entity:
 
-32. Click **Domain Models** in the left navigation panel.
+1. Click **Domain Models** in the sidebar on the and click **MyFirstModule**. The **Day** entity you created on the Program List page is already there.
+2. Drag and drop a **New Entity** into the editor.
 
-. Click on the outer list view and add a new enitity named *ProgramItem*.
-. Click on the inner list view and select the entity *ProgramItem*.
-. Replace *Title* with a new attribute *Speaker*.
-. Replace *This is your timeline detail text* with a new attribute *Title*.
+    ![](attachments/wm-step14b.png)
 
-Make sure that at the end the entities are set correctly:
-
-* Outer list view - *Day* entity
-* Inner list view - *ProgramItem* entity
-
-
-33. Select the *ProgramItem* entity and click on the arrow to set an association with the *Day* enitity.
+3. Name the new entity *ProgramItem* and click **Create**.
+4. Click **New attribute** to add a new attribute.
+5. Name the attribute **Speaker** and click **Create**.
+6. Add three more attributes:
+    a. Title
+    b. Description
+    c. Address
+7. Select the **ProgramItem** entity and click on the arrow to set an association.
+8. Select the **Day** entity and click **Select**.
 
 ![](attachments/wm-step15.jpg)
+
+## 10 Add the ProgramItem Entity to the List View
+
+The ProgramItem entity contains four attributes that you can use on the Program List page. Follow these steps to apply these attributes to the list view elements on the Program List page:
+
+1. Open the **ProgramList** page.
+2. Click on the white space just below the **{Date}** text to select the inner list view.
+
+    ![](attachments/wm-step15b.png)
+
+3. Click **Select an entity** and select the **ProgramItem** entity.
+4. Select the **Title** text widget and delete its content.
+5. Type *@* to get a list of available attributes you can use for this widget.
+
+    ![](attachments/wm-step15c.png)
+
+6. Select **Speaker**. This text widget will now show the speaker for an event.
+7. Select the **This is your timeline detail text** widget and replace the content with the *Title* attribute.
+
+## 11 Publish and View Your App
+
+You've already completed 10 chapters, so it's time to publish your app and see what it looks like when it's deployed. Follow these steps to deploy your app:
+
+1. Click **Publish** in the top right corner.
+2. Click **Update** to deploy the latest changes.
+3. Click **View app** when the update has completed. Your app will now open in a new browser tab.
+
+    ![](attachments/wm-step15d.png)
+
+The app is running, but doesn't have a lot of functionality yet. Continue with the next chapters to add more content, pages, and functionality.
 
 ## 10 Changing the On Click Actions
 

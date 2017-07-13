@@ -1,7 +1,7 @@
 ---
 title: "How to Build an Event App in the Web Modeler"
-# space: "Enter the space in which the document should be published (for example, "Mendix 7 How-to's")"
-# category: "Enter the category under which the document should be published (for example, "Mobile")"
+space: "Mendix 7 How-To's"
+category: "Tutorials"
 ---
 
 ## 1 Introduction

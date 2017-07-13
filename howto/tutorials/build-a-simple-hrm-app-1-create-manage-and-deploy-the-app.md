@@ -26,7 +26,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 To create your app, follow these steps:
 
-1. Go to the [Mendix Platform Portal](http://home.mendix.com) and log in if you are not already logged in.<br>
+1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in if you are not already logged in.<br>
 
     <div class="alert alert-info">
 

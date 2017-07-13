@@ -30,7 +30,7 @@ To create your app, follow these steps:
 
     <div class="alert alert-info">
 
-    The Mendix Platform Portal is the central starting point for using, sharing, and building apps.
+    The Mendix Developer Portal is the central starting point for using, sharing, and building apps.
 
     </div>
 

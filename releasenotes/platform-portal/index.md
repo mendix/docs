@@ -4,6 +4,17 @@ space: "Release Notes"
 toc-level: "1"
 ---
 
+## July 12th, 2017
+
+### Improvements
+
+* Every platform user is now enabled to create Web Modeler apps!
+
+### Fixes
+
+* A story in a completed sprint no longer disappears when you open the details view.
+* The Mendix Feedback Widget now supports reporting feedback from pages with very long URLs.
+
 ## June 21st, 2017
 
 * Private company App Store content is now indicated in the **Template** browser with a lock icon.

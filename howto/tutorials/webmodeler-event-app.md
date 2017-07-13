@@ -6,12 +6,12 @@ category: "Tutorials"
 
 ## 1 Introduction
 
-The new Web Modeler offers a lot of new features. This document will explain them while building a simple app step by step from the beginning.
+The new Web Modeler offers a lot of new features. This document will explain these features while you build a simple event app.
 
 **This how-to will teach you how to do the following:**
 
-* Create an app, pages, entities and attributes
-* Add headers, buttons and building blocks 
+* Create an app, pages, entities, and attributes
+* Add headers, buttons, and building blocks 
 * Configure text and building blocks content
 * Build microflows
 * Publish your App
@@ -20,34 +20,34 @@ The new Web Modeler offers a lot of new features. This document will explain the
 
 1. Go to the [Developer Portal](http://home.mendix.com).
 2. Click **Create App** in the top right corner of the screen.
-3. Select **Starter Apps**.
-4. Choose the **Blank** AtlasUI theme.
-5. Click **Use this theme**.
-6. Choose a name for the app.
+4. Select the **Blank App** AtlasUI theme.
+5. Click **Use this app**.
+6. Name your new app *Event App* and click **Create App**.
+7. When you're new app has been created, click **Edit App** on the **Buzz** page. This will open your new app in the Mendix Web MOdeler.
 
-Once in the the **Buzz** page has opened, click **Edit App** to build the App.
+    ![](attachments/wm-step0.png)
 
-## 3 Add a header
+## 3 Add a Header
 
-When the Web Modeler has opened, you will see a blank page with a default header.
+When the Web Modeler has opened, you will see a blank page with a default header. Follow these steps to add a new header to the page:
 
 1. Select the layout grid of the header.
 
     ![](attachments/wm-step1.jpg)
 
-2. Click **Delete** button on the right side of the screen.
-3. Drag and drop **Header1** from the **Building Blocks** in the **Toolbox**.
-4. Select the title of the header and change the **Caption** into *My Event App* in the **Properties**.
+2. Click **Delete** in the bottom right of the screen.
+3. Drag and drop **HeroHeader1** from the **Building Blocks** in the **Toolbox** tab onto the container.
+4. Select the title of the header and change the **Caption** to *My Event App* in the **Properties**.
 
     ![](attachments/wm-step2.jpg)
 
-## 4 Text design
+## 4 Text Design
 
-In **Properties** you can find various options to style your text. 
+In **Properties** you can find various options to style your text. Follow these steps to change the styling of the subtitle:
 
-5. Change the subtitle of the header in the **Caption** to *September 18-20 2017*.    
-6. Select **Color** and make it *Danger*.
-7. Under **Transform** make it *Uppercase*.
+1. Change the subtitle of the header to *September 18-20 2017*.
+2. Set **Color** to *Warning*.
+3. Set **Transform** to *Uppercase*.
 
     ![](attachments/wm-step3.jpg)
 

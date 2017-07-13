@@ -18,6 +18,7 @@ For details on this release, see [7.4 release notes](7.4).
 ### 7.4.0<a name="KI740"></a>
 
 * Downloading FileDocuments (as in, images) on Mendix Cloud V4 is broken. The FileDocument download functionality in combination with AWS S3 storage has an issue that prevents files from being found; therefore, images are not being shown. (Ticket 54305)
+  * Fixed in [7.5.0](7.5#RN750).
 
 ## 7.3
 

@@ -41,7 +41,7 @@ When the Web Modeler has opened, you will see a blank page with a default header
 
     ![](attachments/wm-step2.jpg)
 
-## 4 Text Design
+## 4 Update the Text Design
 
 In **Properties** you can find various options to style your text. Follow these steps to change the styling of the subtitle:
 
@@ -51,11 +51,11 @@ In **Properties** you can find various options to style your text. Follow these 
 
     ![](attachments/wm-step3.jpg)
 
-## 5 Layout rows in the device viewer
+## 5 Add Layout Rows in the Device Viewer
 
-On the Home page underneath the header, add four **Action Cards** to open new pages by following these steps:
+On the Home page, below the header, add four **Action Cards** to open new pages by following these steps:
 
-8. Select the **Container** in the layout grid below the header.
+1. Select the **Column** in the layout grid below the header.
 
 <div class="alert alert-info">{% markdown %}
 
@@ -63,82 +63,83 @@ The layout grid is a widget that gives structure to your pages. A layout grid co
 
 {% endmarkdown %}</div>
 
-9. Change it to 4 rows under the **Row layout** for Desktop, Tablet and Phone view.
+2. Change it to four rows under the **Row layout** for Desktop.
+3. Select four blocks for Tablet and Phone.
 
     ![](attachments/wm-step4.jpg)
 
-10. Switch between the devices to see the layout by clicking on the **Device icons** above the app page.  
+3. Switch between the devices profiles to preview the layout by clicking on the **device icons** at the top of the Web Modeler.
+
+    ![](attachments/wm-step4b.jpg)
 
 ### 6 Add Action Cards
 
-Now the rows are set, it's time to add **Action Cards** to the columns.
+Now that the rows are set, it's time to add **Action Cards** to the columns that will serve as buttons to navigate to other pages. Follow these steps to add the action cards to the Home page:
 
-11. Click on **Toolbox** and select **Building blocks**
-12. Open the section named **Cards**.
+1. Open the **Toolbox** and select **Building Blocks**
+2. Open the **Cards** section.
 
     ![](attachments/wm-step6.jpg) 
 
-13. Drag and drop the **Card Action** to the empty containers.
+3. Drag and drop the **Card Action** to all four empty columns.
 
-    ![](attachments/wm-step7.jpg)
+    ![](attachments/wm-step7.png)
 
-14. Select the title and change it under **Caption** to *Program*.
-15. Select the button icon and change under **Icon**; select *List alt*.
-16. Set the **On click action** in **Properties** to **Page**. If the user will click on this card, a new page will be opened.
+4. Select the **Open page** button for the first card and change its **Caption** to *Program*.
+5. Select the **Signal** button and change to icon to *List alt*.
+6. Set the **On Click Action** to **Page**. If the user clicks this card, a new page will be opened. You will create the page that will be opened in the next chapter.
 
     ![](attachments/wm-step8.jpg)
 
 The Home page is now finished!
 
-     ![](attachments/wm-step25.jpg)
+   ![](attachments/wm-step8b.png)
 
-## 7 Add a new page
+## 7 Add a New Page
 
-Now the **Action Cards** are set, they must open new pages. There are two ways to create a new page: 
+Now that the **Action Cards** are set, they must be configured to open new pages. Follow these steps to create a new page that will be opened when the Program card is clicked:
 
-    *  Below the **On click action** click **Select page**
-    *  In the left navigation panel click **Pages**
-
-    ![](attachments/wm-step11.jpg)        
-
-17. Click **New page**.
-18. Type in the title of the page.
-19. In the section **Dashboards** select **Dashboards timeline** and click **Create**.
+1. Select the **List alt** button and click **Select page**.
+2. Click **New page** in the dialog window that opens up.
+2. Name the new page *ProgramList*.
+3. Select the **Dashboard Timeline** template and click **Create**.
 
     ![](attachments/wm-step12.jpg) 
 
 <div class="alert alert-info">{% markdown %}
 
-If you create a page in **Pages** (in the left navigation panel), make sure that the Action Card on the Home Page is reffering in the **on click action** to the newly created page.    
+If you create a page in **Pages** (in the left navigation panel), make sure that the Action Card on the Home Page refs to it in the **On Click Action**.
 
 {% endmarkdown %}</div>
 
+4. Replace the header with the **Heroheader1** like you did on the Home page.
+5. Change the header title to *Program List*.
+6. Change the subtitle to *Upcoming events*.
+7. Delete the **New** button and its container.
 
-20. Replace the header with the same header as on the Home page and change the titles.
-21. Delete the *New Button* by selecting the button and clicking **Delete** it in **Properties**. Remove also its *container* by selecting it and clicking **Delete** in **Properties**. 
+## 8 Add Entities and Attributes to a Building Block
 
-At this point, you can preview your results by publishing the app. See paragraph 17 how to do it.
+The program list page is coming along nicely. The timeline will need to display a list of events, so follow these steps to add entities and attributes to the list view:
 
-## 8 Adding entities and attributes into a building block
-
-Now the new page has a header, it's time to fill the timeline with data.
-
-22. Click on an empty space of the new page to see the **List view**.
+1. Click to the right of the **Today** text to select the **List view**.
 
     ![](attachments/wm-step13.png) 
 
-23. Select first the outer list view and click in **Properties** on **Entity** to create a new entity.
+2. In the **Properties**, click **Select an entity**.
 
     ![](attachments/wm-step14.jpg)
+    
+3. Click **New Entity** to create a new entity.
 
-24. Name the entity *Day*.
-25. Remove *Today* from the **Date indicator** in the list view in **Content** .
-26. Click **Add parameter** and click **Add attribute**.
-27. Name the new attribute *Date* and set the **Type** as a *String*.
-28. Click on the outer list view and add a new enitity named *ProgramItem*.
-29. Click on the inner list view and select the entity *ProgramItem*.
-30. Replace *Title* with a new attribute *Speaker*.
-31. Replace *This is your timeline detail text* with a new attribute *Title*.
+3. Name the entity *Day* and click **Create**.
+4. Select the *Today* text widget .
+5. Delete the *Today* text fron the **Content**.
+6. Click **Add parameter** and then **New Attribute**.
+7. Name the new attribute *Date* and set the **Type** as *String*.
+. Click on the outer list view and add a new enitity named *ProgramItem*.
+. Click on the inner list view and select the entity *ProgramItem*.
+. Replace *Title* with a new attribute *Speaker*.
+. Replace *This is your timeline detail text* with a new attribute *Title*.
 
 Make sure that at the end the entities are set correctly:
 

@@ -187,49 +187,48 @@ You've already completed 10 chapters, so it's time to publish your app and see w
 2. Click **Update** to deploy the latest changes.
 3. Click **View app** when the update has completed. Your app will now open in a new browser tab.
 
-    ![](attachments/wm-step15d.png)
+![](attachments/wm-step15d.png)
 
 The app is running, but doesn't have a lot of functionality yet. Continue with the next chapters to add more content, pages, and functionality.
 
-## 10 Changing the On Click Actions
+## 12 Change the On Click Actions
 
-Now the domain model looks good, the new items of the ProgramItem page need to show details in a separate page.
+Now that you've expanded the domain model looks, the details of new items of the ProgramItem page need to be shown on a separate page. Follow these steps to add another page to show the item details:
 
-34. Select in **Pages** the *ProgramItem* page.
-35. Click on the inner list view and set the **on click action** to **Page**.
+1. Open the the **ProgramItem** page.
+2. Click on the inner list view and set the **On Click Action** to **Page**.
 
-    ![](attachments/wm-step16.jpg)
+    ![](attachments/wm-step16.png)
 
-36. Create a new **blank** page and name it *ItemDetail*.
+3. Click **Select page**.
+4. Create a new **blank** page and name it *ItemDetail*.
 
-The ProgramList page is now finished!
+The Program List page is now finished!
 
-    ![](attachments/wm-step26.jpg)
+    ![](attachments/wm-step26.png)
 
-## 11 Adding rows to a blank layout grid
+## 13 Build the ItemDetail Page
 
-On the new page there will be two items next to each other and another item underneath it. This means you need two more rows.
+The ItemDetail page will contain two items next to each other and another item below that. This means that you need two more rows.
 
-37. Select the layout grid and add two rows to the layout grids by clicking **Add rows**.
+1. Select the layout grid and click **Add Row** three times to add three new rows.
 
-    ![](attachments/wm-step18.jpg)
+    ![](attachments/wm-step18.png)
 
-## 12 Changing the text
+2. Open the Toolbox and search for *Text*.
+3. Drag and drop the **Text** widget onto the first column.
 
-Instead of using a header, you can use normal text and style it.
+    ![](attachments/wm-step19.png)
 
-38. Select the first column and drag and drop the from the **Toolbox** the Text **Widget** of the **Typography** section.
+4. Change **Text** into *Details* and configure the following properties:
+    a. Render mode: H2
+    b. Weight: Bold
+    c. Color: Header color
+    d. Alignment: Center
 
-    ![](attachments/wm-step19.jpg)
+    ![](attachments/wm-step19b.png)
 
-39. Change *Text* into *Details* and set:
-
-*   Render mode - H2
-*   Weight - Bold
-*   Color - Header color
-*   Alignment - Center
-
-## 13 Searching for content in the Modeler and the App Store
+## 14 Search for Content in the Modeler and the App Store
 
 You can explore the options by looking into the **Building blocks** and **Widgets**, but you can also search for content that can be downloaded from the **App Store**.
 

@@ -2,10 +2,11 @@
 title: "Generate Document"
 space: "Mendix 7 Reference Guide"
 parent: "document-generation-activities"
+description: "Describes generating documents from a microflow. "
+tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT"]
 ---
 
-
-The generate-document action can be used to create a document based on a [template](document-templates).
+The generate-document microflow action can be used to create a document based on a [template](document-templates).
 
 <div class="alert alert-info">{% markdown %}
 

@@ -11,6 +11,13 @@ This document describes known issues starting with Mendix version 7.0.2. For kno
 
 {% endmarkdown %}</div>
 
+## 7.5
+For details on this release, see [7.5 release notes](7.5).
+
+### 7.5.0<a name="KI750"></a>
+
+* The Mendix Web Modeler is not enabled when you create an Atlas UI-based app in the Mendix Desktop Modeler. Here is a workaround: Atlas UI-based apps created in the [Mendix Portal](https://home.mendix.com) do have the Mendix Web Modeler enabled.
+
 ## 7.4
 
 For details on this release, see [7.4 release notes](7.4).

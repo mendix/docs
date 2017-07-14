@@ -100,11 +100,7 @@ To make a small change to the look and feel of your app, follow these steps:
  
     ![](attachments/build-an-employee-directory-app/theme-customizer-orange.png)
  
-    <div class="alert alert-info">{% markdown %}
-  
     Clicking **Reset Style** in **Theme Customizer** will undo the changes.
-
-    {% endmarkdown %}</div>
      
 Well done! Continue with [How to Build an Employee Directory App Step 3: Update Viewing Your App](build-an-employee-directory-app-3-publish-and-view-your-app).
 

@@ -5,7 +5,7 @@ parent: "document-generation-activities"
 ---
 
 
-The generate-document action can be used to create a document based on a [template](document-templates).
+The generate-document microflow action can be used to create a document based on a [template](document-templates).
 
 <div class="alert alert-info">{% markdown %}
 

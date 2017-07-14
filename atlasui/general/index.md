@@ -13,6 +13,18 @@ Mendix Atlas UI is the design framework that makes building elegant user experie
 
 The Mendix Web Modeler brings the collaborative Mendix platform to the browser, making it easier than ever to share and collaborate on application models. Every app built in the Web Modeler is styled with the Atlas UI Framework. Try the Atlas UI Starter App and get running in minutes.
 
+### 1.3 Design principles
+Atlas UI has a philosophy based on three core principles. These principles guide all our design decisions at Mendix, and we encourage every Mendix user to adopt them when building their own apps.
+
+#### Simplicity
+Freedom from complexity, we strive for simplicity to help you focus on what is important.
+
+#### Harmony
+Create familiarity and consistency throughout your apps landscape, regardless of the device you use.
+
+#### Flexibility
+Design apps that look good and scale in all situations without losing a intuitive and consistent experience.
+
 ## 2 Design Elements
 
 Our UI library is fully integrated into the Mendix Web Modeler. After choosing a navigation layout in the modeler, you can find page templates, building blocks, and widgets directly in your toolbox. These UI elements form the foundation of your app.

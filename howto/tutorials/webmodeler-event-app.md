@@ -1,5 +1,5 @@
 ---
-title: "How to Build an Event App in the Web Modeler"
+title: "Build an Event App in the Web Modeler"
 space: "Mendix 7 How-To's"
 category: "Tutorials"
 ---

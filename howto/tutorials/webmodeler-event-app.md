@@ -205,7 +205,7 @@ Now that you've expanded the domain model looks, the details of new items of the
 
 The Program List page is now finished!
 
-    ![](attachments/event-app/wm-step26.png)
+   ![](attachments/event-app/wm-step26.png)
 
 ## 13 Build the ItemDetail Page
 

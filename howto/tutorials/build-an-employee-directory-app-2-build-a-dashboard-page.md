@@ -21,7 +21,7 @@ This is the second how-to in a series of four on how to create an employee direc
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Use the first how-to in this series: [Build an Employee Directory App Step 1: Create the App](build-an-employee-directory-app-1-create-manage-and-deploy-the-app)
+* Use the first how-to in this series: [Build an Employee Directory App Step 1: Create the App](build-an-employee-directory-app-1-create-the-app)
 
 ## 3 Building Up a Dashboard Page
 
@@ -106,7 +106,7 @@ To make a small change to the look and feel of your app, follow these steps:
 
     {% endmarkdown %}</div>
      
-Well done! Continue with [How to Build an Employee Directory App Step 3: Update Viewing Your App](build-an-employee-directory-app-3-update-viewing-your-app).
+Well done! Continue with [How to Build an Employee Directory App Step 3: Update Viewing Your App](build-an-employee-directory-app-3-publish-and-view-your-app).
 
 ## 6 Related Content
 

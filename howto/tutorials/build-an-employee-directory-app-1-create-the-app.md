@@ -32,7 +32,7 @@ To create your app, follow these steps:
 
     The Mendix Developer Portal is the central starting point for using, sharing, and building apps.
 
-     {% endmarkdown %}</div>
+    {% endmarkdown %}</div>
 
 2. Click **Create App** in the upper-right side of the screen:
 
@@ -47,7 +47,7 @@ To create your app, follow these steps:
 
     In the **Team** section on the right side of the screen, you can see your team and invite colleagues to join the app project.
 
-     {% endmarkdown %}</div>
+    {% endmarkdown %}</div>
 
     ![](attachments/build-an-employee-directory-app/app-buzz.png)
 

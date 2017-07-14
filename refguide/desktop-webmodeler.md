@@ -32,21 +32,21 @@ To sync the Web Modeler with the Desktop Modeler, follow these steps:
 
 1. Navigate to the Developer Portal by clicking the Mendix icon and then the arrow in the upper-left of the Web Modeler:
 
-  ![](attachments/desktop-howto/developer-portal.png)
+    ![](attachments/desktop-howto/developer-portal.png)
 
 2. Click the drop-down arrow on **Edit App** to select **Edit in Desktop Modeler**:
 
-  ![](attachments/desktop-howto/edit-app.png)
+    ![](attachments/desktop-howto/edit-app.png)
 
 3. In the top menu, click **Team**, and then click **Sync with Web Modeler**.
 
-  ![](attachments/desktop-howto/sync-webmodeler.png)
+    ![](attachments/desktop-howto/sync-webmodeler.png)
 
-  <div class="alert alert-info">{% markdown %}
+    <div class="alert alert-info">{% markdown %}
 
-  If you have uncommited changes in the Desktop Modeler, click **Commit** before syncing with the Web Modeler.
+    If you have uncommited changes in the Desktop Modeler, click **Commit** before syncing with the Web Modeler.
 
-  {% endmarkdown %}</div>
+    {% endmarkdown %}</div>
 
 4. The latest updates from the Web Modeler will now be retrieved and merged into your model. When there are no Web Modeler changes received, all changes from the Desktop Modeler will be synced to the Web Modeler. The sync process is then finished and both Modelers are ready to continue modeling. 
 

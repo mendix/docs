@@ -94,11 +94,11 @@ To make a small change to the look and feel of your app, follow these steps:
 3. Make a change that will have significant impact by setting the **Primary** color in the **Brand Colors** section to to orange.
 4. At the bottom-right of the screen, click **Apply Style** to confirm the changes:
 
-   ![](attachments/build-an-employee-directory-app/apply-style.png)
+    ![](attachments/build-an-employee-directory-app/apply-style.png)
 
     This will take you back to the main window of the Web Modeler, where you can see your new styling:
  
-     ![](attachments/build-an-employee-directory-app/theme-customizer-orange.png)
+    ![](attachments/build-an-employee-directory-app/theme-customizer-orange.png)
  
     <div class="alert alert-info">{% markdown %}
   

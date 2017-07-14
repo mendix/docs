@@ -6,7 +6,7 @@ description: "This series of Mendix How-To's will guide you in creating an emplo
 tags: ["build", "app", "developer portal", "web modeler"]
 ---
 
-The following how-to's will guide you through the process of creating a simple human resource management (HRM) application in the Mendix Web Modeler (WM):
+The following how-to's will guide you through the process of creating an employee directory application in the Mendix Web Modeler:
 
 * [How to Build an Employee Directory App Step 1: Create the App](build-an-employee-directory-app-1-create-the-app)
 * [How to Build an Employee Directory App Step 2: Build a Dashboard Page](build-an-employee-directory-app-2-build-a-dashboard-page)

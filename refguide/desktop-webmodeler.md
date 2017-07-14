@@ -2,6 +2,7 @@
 title: "Syncing the Web Modeler with the Desktop Modeler"
 space: "Mendix 7 Reference Guide"
 category: "Modeler"
+tags: ["web modeler"]
 ---
 
 ## 1 Introduction
@@ -75,4 +76,5 @@ If you do not have anything to commit, you can also click **Cancel sync/Unlock W
 
 ## 4 Related Content
 
+* [How to Build an Event App in the Web Modeler](/howto/tutorials/webmodeler-event-app)
 * [How to Build an Employee Directory App](/howto/tutorials/build-an-employee-directory-app)

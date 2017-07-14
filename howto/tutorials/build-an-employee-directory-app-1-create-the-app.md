@@ -26,14 +26,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 To create your app, follow these steps:
 
-1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in if you are not already logged in.
-
-    <div class="alert alert-info">{% markdown %}
-
-    The Mendix Developer Portal is the central starting point for using, sharing, and building apps.
-
-    {% endmarkdown %}</div>
-
+1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in if you are not already logged in. The Mendix Developer Portal is the central starting point for using, sharing, and building apps.
 2. Click **Create App** in the upper-right side of the screen:
 
     ![](attachments/build-an-employee-directory-app/create-app.png) 
@@ -41,13 +34,7 @@ To create your app, follow these steps:
 3. On the **Tutorials** tab, select the **Build an Employee Directory App**.
 
 4. Click **Use this app**, enter a name for your application, and click **Create App**.
-5. Your app is now created! When it is ready, you will land on the **Buzz** page for the app, where you can see and share ideas as well as collaborate with your team.
-
-    <div class="alert alert-info">{% markdown %}
-
-    In the **Team** section on the right side of the screen, you can see your team and invite colleagues to join the app project.
-
-    {% endmarkdown %}</div>
+5. Your app is now created! When it is ready, you will land on the **Buzz** page for the app, where you can see and share ideas as well as collaborate with your team. In the **Team** section on the right side of the screen, you can see your team and invite colleagues to join the app project.
 
     ![](attachments/build-an-employee-directory-app/app-buzz.png)
 

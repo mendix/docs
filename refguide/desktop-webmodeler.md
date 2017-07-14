@@ -20,12 +20,6 @@ To do that, you must sync the app from the Web Modeler with the Desktop Modeler.
 
 To sync the Web Modeler with the Desktop Modeler, you must be using [Mendix Desktop Modeler 7.5](https://appstore.home.mendix.com) or higher.
 
-<div class="alert alert-warning">{% markdown %}
-
-Remember to always update and publish your changes in the Web Modeler before opening the app in the Desktop Modeler.
-
-{% endmarkdown %}</div>
-
 ## 3 Syncing the Web Modeler with the Desktop Modeler
 
 To sync the Web Modeler with the Desktop Modeler, follow these steps:

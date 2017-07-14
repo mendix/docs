@@ -33,11 +33,11 @@ Remember to always update and publish your changes in the **Web Modeler** before
 
 1. Go back from the **Web Modeler** to the **Developer Portal** by clicking the Mendix icon in the left corner.
 
-  ![](attachments/desktop-howto/Mx Platform.png)
+  ![](attachments/desktop-howto/developer-portal.png)
 
 2. Click on the arrow on **Edit App** to select **Edit in Desktop Modeler**.
 
-  ![](attachments/desktop-howto/Edit app.png)
+  ![](attachments/desktop-howto/edit-app.png)
 
 3. In the top navigation panel click **Team** and click **Sync with Web Modeler**.
 

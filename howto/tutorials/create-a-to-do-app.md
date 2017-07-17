@@ -1,5 +1,5 @@
 ---
-title: "Create a Mobile To-Do App"
+title: "Build a Mobile To-Do App"
 space: "Mendix 7 How-To's"
 category: "Tutorials"
 description: "This how-to series will teach you how to create a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
@@ -21,7 +21,7 @@ Check out the [Kick-Starting Your Mobile App Development](http://ww2.mendix.com/
 
 ## Documents in This Series
 
-* [How to Create a Mobile To-Do App Step 1: Create a New Project, Module, and Domain Model](create-a-to-do-app-1)
-* [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2)
-* [How to Create a Mobile To-Do App Step 3: Improve the Look and Feel of the App](create-a-to-do-app-3)
-* [How to Create a Mobile To-Do App Step 4: Add Logic to the Microflows](create-a-to-do-app-4)
+* [How to Build a Mobile To-Do App Step 1: Create a New Project, Module, and Domain Model](create-a-to-do-app-1)
+* [How to Build a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2)
+* [How to Build a Mobile To-Do App Step 3: Improve the Look and Feel of the App](create-a-to-do-app-3)
+* [How to Build a Mobile To-Do App Step 4: Add Logic to the Microflows](create-a-to-do-app-4)

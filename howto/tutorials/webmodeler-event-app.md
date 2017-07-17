@@ -6,24 +6,25 @@ category: "Tutorials"
 
 ## 1 Introduction
 
-The new Web Modeler offers a lot of new features. This document will explain these features while you build a simple event app.
+The new Web Modeler offers you a lot of new features. This document will explain these features while you build a simple event app.
 
 **This how-to will teach you how to do the following:**
 
 * Create an app, pages, entities, and attributes
 * Add headers, buttons, and building blocks
-* Configure text and building blocks content
+* Configure text and building block content
 * Build microflows
-* Publish your App
+* Publish your app
 
-## 2 Create a new App
+## 2 Creating a New App
 
-1. Go to the [Developer Portal](http://home.mendix.com).
-2. Click **Create App** in the top right corner of the screen.
-4. Select the **Blank App** AtlasUI theme.
-5. Click **Use this app**.
-6. Name your new app *Event App* and click **Create App**.
-7. When you're new app has been created, click **Edit App** on the **Buzz** page. This will open your new app in the Mendix Web Modeler.
+To create a new app in the Web Modeler, follow these steps:
+
+1. Go to the [Developer Portal](http://home.mendix.com) and click **Create App** in the top-right of the screen.
+2. Select the **Blank App** Atlas UI theme.
+3. Click **Use this app**.
+4. Enter *Event App* for the name of the new app, and then click **Create App**.
+5. After your new app has been created, click **Edit App** on the **Buzz** page. This will open your new app in the Mendix Web Modeler.
 
     ![](attachments/event-app/wm-step0.png)
 

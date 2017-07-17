@@ -62,7 +62,7 @@ In the **Properties** on the right side fo the Web Modeler, you can find various
 
 On the **Home** page, below the header, add four **Action Cards** to open new pages by following these steps:
 
-1. Select the **COLUMN** in the layout grid below the header:
+1. Select the **COLUMN** in the layout grid below the header:<br>
 
     <div class="alert alert-info">{% markdown %}
 
@@ -110,7 +110,7 @@ Now that the action cards are set, they must be configured to open new pages. Fo
 3. Enter *ProgramList* for the **Title** of the new page.
 4. Select **Dashboards** > **Dashboard Timeline** for the template, and then click **Create**.
 
-    ![](attachments/event-app/wm-step12.jpg)
+    ![](attachments/event-app/wm-step12.jpg)<br>
 
     <div class="alert alert-info">{% markdown %}
 

@@ -1,5 +1,5 @@
 ---
-title: "Create a Mobile To-Do App Step 4: Add Logic to the Microflows"
+title: "Build a Mobile To-Do App Step 4: Add Logic to the Microflows"
 space: "Mendix 7 How-To's"
 parent: "create-a-to-do-app"
 description: "This is the fourth how-to for creating a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
@@ -20,7 +20,7 @@ This is the final how-to in the series for creating a to-do app based on the Men
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Complete [How to Create a Mobile To-Do App Step 3: Improve the Look and Feel of the App](create-a-to-do-app-3).
+* Complete [How to Build a Mobile To-Do App Step 3: Improve the Look and Feel of the App](create-a-to-do-app-3).
 
 ## 3 Adding Logic to the Microflows
 
@@ -38,7 +38,7 @@ The **List view swipe** widget has been configured, but the two microflows you c
 
 ## 4 Running the App and Simulating Touch Behavior of Mobile Device
 
-The app is now finished, so you are going to view it on a simulated mobile device. To emulate the touch behavior of a user on a mobile device (which is mentioned in [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2#5)), follow these steps: 
+The app is now finished, so you are going to view it on a simulated mobile device. To emulate the touch behavior of a user on a mobile device (which is mentioned in [How to Build a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2#5)), follow these steps: 
 
 1. Save all changes and run the app locally.
 2. Open the **View App** dropdown and select **View Hybrid Mobile App**.
@@ -57,9 +57,9 @@ We are very interested in your feedback. Please take [this short survey](https:/
 
 ## 6 Related Content
 
-* [How to Create a Mobile To-Do App Step 1: Create a New Project, Module, and Domain Model](create-a-to-do-app-1)
-* [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2)
-* [How to Create a Mobile To-Do App Step 3: Improve the Look and Feel of the App](create-a-to-do-app-3)
+* [How to Build a Mobile To-Do App Step 1: Create a New Project, Module, and Domain Model](create-a-to-do-app-1)
+* [How to Build a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2)
+* [How to Build a Mobile To-Do App Step 3: Improve the Look and Feel of the App](create-a-to-do-app-3)
 * [How to Deploy Your First Hybrid Mobile App](../mobile/deploy-your-first-hybrid-mobile-app)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](../mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Push Notifications](../mobile/push-notifications)

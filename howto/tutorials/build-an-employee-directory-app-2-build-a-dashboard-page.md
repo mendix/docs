@@ -31,7 +31,7 @@ Pages define the user interface of your Mendix app. Each page consists of widget
 
 You can change the layout of the page by editing the layout grid. To change the layout grid to influence the look and feel for different devices, follow these steps:
 
-1. Select the column:
+1. Select the **COLUMN**:
 
     ![](attachments/build-an-employee-directory-app/select-column.png)
 
@@ -62,7 +62,7 @@ To fill up the column placeholders in order to create a dashboard menu, follow t
     ![](attachments/build-an-employee-directory-app/card-action.png)
 
 3. Drag a **Card Action** building block into every column.
-4. Select the button of the top-left card action:
+4. Select the **BUTTON** of the top-left card action:
     
     ![](attachments/build-an-employee-directory-app/select-button-action-card.png)
 
@@ -76,7 +76,7 @@ To fill up the column placeholders in order to create a dashboard menu, follow t
 
 7. Select the **Title** text widget and enter *My First App* in the **Content** field in **Properties**.
 8. Select the **subtitle** text widget and rename the content to **An Employee Directory App**.
-9. Select the **Layout Grid** of the default header (**Home**) and click **Delete** on the bottom-right of the page to remove it:
+9. Select the **LAYOUT GRID** of the default header and click **Delete** on the bottom-right of the page to remove it:
 
     ![](attachments/build-an-employee-directory-app/remove-current-header.png)
 
@@ -91,7 +91,7 @@ To make a small change to the look and feel of your app, follow these steps:
     ![](attachments/build-an-employee-directory-app/theme-customizer.png)
 
 2. You can play around with the different configuration options **Brand Colors**, **UI Customization**, and **Typography**.
-3. Make a change that will have significant impact by setting the **Primary** color in the **Brand Colors** section to to orange.
+3. Make a change that will have significant impact by setting the **Primary** color in the **Brand Colors** section to orange.
 4. At the bottom-right of the screen, click **Apply Style** to confirm the changes:
 
     ![](attachments/build-an-employee-directory-app/apply-style.png)
@@ -102,7 +102,7 @@ To make a small change to the look and feel of your app, follow these steps:
  
     Clicking **Reset Style** in **Theme Customizer** will undo the changes.
      
-Well done! Continue with [How to Build an Employee Directory App Step 3: Update Viewing Your App](build-an-employee-directory-app-3-publish-and-view-your-app).
+Well done! Continue with [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app).
 
 ## 4 Related Content
 

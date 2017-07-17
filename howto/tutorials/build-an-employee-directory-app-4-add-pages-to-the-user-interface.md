@@ -31,7 +31,7 @@ Pages define the user interface of your Mendix app. Each page consists of widget
 
 Now that you have created a basic dashboard, you need to add a new page that can be opened from a dashboard item that reflects its purpose. To achieve this, follow these steps: 
 
-1. Select the top-left **Button** image:
+1. Select the top-left **BUTTON** image:
     
     ![](attachments/build-an-employee-directory-app/select-card-item-button.png)
 
@@ -76,13 +76,13 @@ To edit the widgets, follow these steps:
 
     ![](attachments/build-an-employee-directory-app/recent-documents.png)
 
-2. Select the **Text** widget with **Title**:
+2. Select the **TEXT** widget with **Title**:
 
     ![](attachments/build-an-employee-directory-app/text-widget.png)
 
 3. Change the **Content** property to **Employees**.
 4. Delete the **Text** widget with the subtitle.
-5. Select the **Container** where the **Add** button is located:
+5. Select the **CONTAINER** where the **Add** button is located:
 
     ![](attachments/build-an-employee-directory-app/add-button.png)
 
@@ -100,7 +100,7 @@ If one of the available building blocks is more similar to your requirement than
 
 To switch building blocks, follow these steps:
     
-1. Select the **List View** widget and delete it:
+1. Select the **LIST VIEW** widget and delete it:
 
     ![](attachments/build-an-employee-directory-app/listview-delete.png)
 
@@ -114,7 +114,7 @@ This page has several widgets to display records from your database. In Mendix, 
 
 To create the entity for an employee, follow these steps:
 
-1. Select the **List View**, which groups all the user cards together:
+1. Select the **LIST VIEW**, which groups all the user cards together:
 
     ![](attachments/build-an-employee-directory-app/listview-select.png)
 
@@ -126,7 +126,7 @@ To create the entity for an employee, follow these steps:
     a. Click **New Entity**.<br>
     b. Enter *Employee* for the **Name**.
 
-4. Select the **Text** widget of the top user card and clear the **Content** property:
+4. Select the **TEXT** widget of the top user card and clear the **Content** property:
 
     ![](attachments/build-an-employee-directory-app/select-text-widget2.png)
 
@@ -138,7 +138,7 @@ To create the entity for an employee, follow these steps:
     a. Enter *Name* for the attribute **Name**.<br>
     b. Set the attribute **Type** to **String**.
 
-7. In the subtitle **Text** widget, repeat steps 4-6 to add an attribute for **Email [String]**:
+7. In the subtitle **TEXT** widget, repeat steps 4-6 to add an attribute for **Email [String]**:
 
     ![](attachments/build-an-employee-directory-app/list-view.png)
 
@@ -215,7 +215,7 @@ To add the Google Maps widget to the page, follow these steps:
 
 The last thing you have to do is finish up the employees page. To connect a list view to this page, follow these steps:
 
-1. Open the **Employees** page and then select the **List View**:
+1. Open the **Employees** page and then select the **LIST VIEW**:
 
     ![](attachments/build-an-employee-directory-app/listview-select.png)
 

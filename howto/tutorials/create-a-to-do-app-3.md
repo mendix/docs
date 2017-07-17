@@ -1,5 +1,5 @@
 ---
-title: "Create a Mobile To-Do App Step 3: Improve the Look and Feel of the App"
+title: "Build a Mobile To-Do App Step 3: Improve the Look and Feel of the App"
 space: "Mendix 7 How-To's"
 parent: "create-a-to-do-app"
 description: "This is the third how-to for creating a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
@@ -19,7 +19,7 @@ In this how-to, you will improve the mobile look and feel by adding and configur
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Complete [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2).
+* Complete [How to Build a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2).
 
 ## 3 Enhancing the Home Page
 
@@ -190,9 +190,9 @@ For the next step in this series, move on to [How to Create a Mobile To-Do App S
 
 ## 13 Related Content
 
-* [How to Create a Mobile To-Do App Step 1: Create a New Project, Module, and Domain Model](create-a-to-do-app-1)
-* [How to Create a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2)
-* [How to Create a Mobile To-Do App Step 4: Add Logic to the Microflows](create-a-to-do-app-4)
+* [How to Build a Mobile To-Do App Step 1: Create a New Project, Module, and Domain Model](create-a-to-do-app-1)
+* [How to Build a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2)
+* [How to Build a Mobile To-Do App Step 4: Add Logic to the Microflows](create-a-to-do-app-4)
 * [How to Deploy Your First Hybrid Mobile App](../mobile/deploy-your-first-hybrid-mobile-app)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](../mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Push Notifications](../mobile/push-notifications)

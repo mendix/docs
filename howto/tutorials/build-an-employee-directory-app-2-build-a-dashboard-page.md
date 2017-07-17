@@ -91,7 +91,7 @@ To make a small change to the look and feel of your app, follow these steps:
     ![](attachments/build-an-employee-directory-app/theme-customizer.png)
 
 2. You can play around with the different configuration options **Brand Colors**, **UI Customization**, and **Typography**.
-3. Make a change that will have significant impact by setting the **Primary** color in the **Brand Colors** section to to orange.
+3. Make a change that will have significant impact by setting the **Primary** color in the **Brand Colors** section to orange.
 4. At the bottom-right of the screen, click **Apply Style** to confirm the changes:
 
     ![](attachments/build-an-employee-directory-app/apply-style.png)

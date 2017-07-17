@@ -73,7 +73,7 @@ The layout grid is a widget that gives structure to your pages. A layout grid co
 
     ![](attachments/event-app/wm-step4b.jpg)
 
-### 6 Add Action Cards
+## 6 Add Action Cards
 
 Now that the rows are set, it's time to add **Action Cards** to the columns that will serve as buttons to navigate to other pages. Follow these steps to add the action cards to the Home page:
 
@@ -109,7 +109,7 @@ Now that the **Action Cards** are set, they must be configured to open new pages
 
 <div class="alert alert-info">{% markdown %}
 
-If you create a page in **Pages** (in the left navigation panel), make sure that the Action Card on the Home Page refs to it in the **On Click Action**.
+If you create a page in **Pages** (in the left navigation panel), make sure that the Action Card on the Home Page refers to it in the **On Click Action**.
 
 {% endmarkdown %}</div>
 
@@ -194,9 +194,9 @@ The app is running, but doesn't have a lot of functionality yet. Continue with t
 
 ## 12 Change the On Click Actions
 
-Now that you've expanded the domain model looks, the details of new items of the ProgramItem page need to be shown on a separate page. Follow these steps to add another page to show the item details:
+Now that you've expanded the domain model looks, the details of new items of the Program List page need to be shown on a separate page. Follow these steps to add another page to show the item details:
 
-1. Open the the **ProgramItem** page.
+1. Open the the **Program List** page.
 2. Click on the inner list view and set the **On Click Action** to **Page**.
 
     ![](attachments/event-app/wm-step16.png)
@@ -236,7 +236,7 @@ The ItemDetail page will contain two items next to each other and another item b
 
 You can find elements for your pages by looking in the **Building blocks** and **Widgets** tab, but you can also search for additional content in the **Mendix App Store**. The Mendix App Store contains many custom themes, modules, and widgets, created by Mendix as well as the Mendix community. Follow these steps to download a widget from the Mendix App Store and add it to your page:
 
-1. Add the **Flex Container Left** to the second column on the **ProgramItem** page.
+1. Add the **Flex Container Left** to the second column on the **Program** page.
 2. Add a **Call Microflow** button to the container on the right and name it *Book seat*.
 3. Change the **Render Mode** to **Link**.
 4. Change the **On Click Action** to *Nothing*.

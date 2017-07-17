@@ -102,7 +102,7 @@ To make a small change to the look and feel of your app, follow these steps:
  
     Clicking **Reset Style** in **Theme Customizer** will undo the changes.
      
-Well done! Continue with [How to Build an Employee Directory App Step 3: Update Viewing Your App](build-an-employee-directory-app-3-publish-and-view-your-app).
+Well done! Continue with [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app).
 
 ## 4 Related Content
 

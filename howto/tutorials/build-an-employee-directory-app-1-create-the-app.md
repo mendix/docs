@@ -56,7 +56,7 @@ Clicking **Edit App** will open your app for editing in the Web Modeler by defau
 
 Are you ready to develop your app using the Web Modeler? Let's go briefly through the interface, and we will go into detail later in this tutorial.
 
-On the left side of the Web Moddler is the main menu. Via the icons in this menu, you can navigate to the following locations:
+On the left side of the Web Modeler is the main menu. Via the icons in this menu, you can navigate to the following locations:
 
 * **Pages** (for the UI)
 * **Navigation Document** (for the menu)

@@ -1,5 +1,5 @@
 ---
-title: "Build an Employee Directory App"
+title: "Build an Employee Directory App in the Web Modeler"
 space: "Mendix 7 How-To's"
 category: "Tutorials"
 description: "This series of Mendix How-To's will guide you in creating an employee directory app in the Mendix Web Modeler."

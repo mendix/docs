@@ -225,7 +225,7 @@ You're done! Time to view the effects of all your changes.
 
 ## 4 Viewing Your App
 
-1. Update and view your app, just like you did in [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app).
+Update and view your app, just like you did in [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app).
 
 You can now use your app to add and edit employees!
     

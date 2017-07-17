@@ -1,8 +1,8 @@
 ---
 title: "Syncing the Web Modeler with the Desktop Modeler"
 space: "Mendix 7 Reference Guide"
-category: "Modeler"
-tags: ["web modeler"]
+parent: "web-modeler"
+tags: ["web modeler", "desktop modeler"]
 ---
 
 ## 1 Introduction

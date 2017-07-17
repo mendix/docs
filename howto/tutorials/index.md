@@ -10,4 +10,9 @@ These tutorials will teach you how to build various apps:
 |------|:-----|
 | [![](attachments/overview/Iot.png)](build-an-iot-app) | **[Build an IoT App](build-an-iot-app)<br> Lets you experience how to consume IoT services from an IoT Cloud platform.** |
 | [![](attachments/overview/HRM_app.png)](build-a-simple-hrm-app) | **[Build a Simple HRM App](build-a-simple-hrm-app)<br> Learn the basics of app development in the Mendix Desktop Modeler by building a simple HRM app.** |
-| [![](attachments/overview/Employee_directory.png)](build-a-simple-hrm-app) | **[Build an Employee Directory App](build-an-employee-directory-app)<br> Learn the basics of app development in the Mendix Web Modeler by building an employee directory app.** |
+| [![](attachments/overview/Employee_directory.png)](build-a-simple-hrm-app) | **[Build an Employee Directory App in the Web Modeler](build-an-employee-directory-app)<br> Learn the basics of app development in the Mendix Web Modeler by building an employee directory app.** |
+
+Other documents in this category:
+
+* [How to Build an Event App in the Web Modeler](webmodeler-event-app)
+

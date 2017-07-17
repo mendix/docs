@@ -104,7 +104,7 @@ To make a small change to the look and feel of your app, follow these steps:
      
 Well done! Continue with [How to Build an Employee Directory App Step 3: Update Viewing Your App](build-an-employee-directory-app-3-publish-and-view-your-app).
 
-## 6 Related Content
+## 4 Related Content
 
 * [How to Build an Employee Directory App Step 1: Create the App](build-an-employee-directory-app-1-create-the-app)
 * [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app)

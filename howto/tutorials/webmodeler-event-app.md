@@ -201,7 +201,7 @@ The **Program List** page is now finished!
 
    ![](attachments/event-app/wm-step26.png)
 
-## 13 Build the ItemDetail Page
+## 13 Building the ItemDetail Page
 
 The **ItemDetail** page will contain two items next to each other and another item below that. This means that you need two more rows.
 
@@ -228,7 +228,7 @@ To build the **ItemDetail** page, follow these steps:
 
     ![](attachments/event-app/wm-step19b.png)
 
-## 14 Add Content from the Modeler and the App Store
+## 14 Adding Content from the Modeler and the App Store
 
 You can find elements for your pages by looking in the **Building blocks** and **Widgets** tabs in the **Toolbox**, but you can also search for additional content in the Mendix App Store. The Mendix App Store contains different custom themes, modules, and widgets created by Mendix as well as the Mendix community.
 
@@ -264,7 +264,7 @@ The **ItemDetail** page is now finished!
 
 ![](attachments/event-app/wm-step23.png)
 
-## 15 Add Logic to the App with Microflows
+## 15 Adding Logic to the App with Microflows
 
 Now that everything on the **ItemDetail** page is set, the **Book seat** button needs to have an action.
 
@@ -279,7 +279,7 @@ Follow these steps to add logic with microflows:
 
 To expand the logic of the microflow, you will have to edit the microflow in the Desktop Modeler. For more information on working with the Web Modeler and Desktop Modeler, see [Syncing the Web Modeler with the Desktop Modeler](/refguide/desktop-webmodeler).
 
-## 16 Publish and View Your App
+## 16 Publishing and Viewing Your App
 
 You app is now finished! Follow these steps to view your app in the browser:
 

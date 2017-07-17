@@ -64,11 +64,9 @@ On the **Home** page, below the header, add four **Action Cards** to open new pa
 
 1. Select the **COLUMN** in the layout grid below the header:
 
-        <div class="alert alert-info">{% markdown %}
-
-        The layout grid is a widget that gives structure to your pages. A layout grid contains one or more rows, and each row can contain up to twelve columns.
-
-        {% endmarkdown %}</div>
+    <div class="alert alert-info">{% markdown %}
+    The layout grid is a widget that gives structure to your pages. A layout grid contains one or more rows, and each row can contain up to twelve columns.
+    {% endmarkdown %}</div>
 
 2. Change it to four columns under **Row Layout** > **Desktop**.
 3. Select four blocks for **Tablet** and **Phone**:
@@ -113,9 +111,7 @@ Now that the action cards are set, they must be configured to open new pages. Fo
     ![](attachments/event-app/wm-step12.jpg)<br>
 
         <div class="alert alert-info">{% markdown %}
-
         If you create a page in **Pages** (in the left navigation panel), make sure that the action card on the **Home** page refers to it in the **On Click Action**.
-
         {% endmarkdown %}</div>
 
 5. Replace the header with the **Heroheader1**, like you did for the **Home** page.

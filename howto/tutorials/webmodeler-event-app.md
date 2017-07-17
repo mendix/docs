@@ -6,7 +6,7 @@ category: "Tutorials"
 
 ## 1 Introduction
 
-The new Web Modeler offers you a lot of new features. This document will explain these features while you build a simple event app.
+The new Web Modeler offers you a lot of new features. This document will explain these features as you build a simple event app.
 
 **This how-to will teach you how to do the following:**
 
@@ -16,7 +16,13 @@ The new Web Modeler offers you a lot of new features. This document will explain
 * Build microflows
 * Publish your app
 
-## 2 Creating a New App
+## 2 Prerequisites
+
+Before starting with this how-to, make sure you have completed the following prerequisite:
+
+* Create a [Mendix account](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup)
+
+## 3 Creating a New App
 
 To create a new app in the Web Modeler, follow these steps:
 
@@ -28,7 +34,7 @@ To create a new app in the Web Modeler, follow these steps:
 
     ![](attachments/event-app/wm-step0.png)
 
-## 3 Adding a Header
+## 4 Adding a Header
 
 When the Web Modeler opens, you will see a blank page with a default header. To add a new header to the page, follow these steps:
 
@@ -42,7 +48,7 @@ When the Web Modeler opens, you will see a blank page with a default header. To 
 
     ![](attachments/event-app/wm-step2.jpg)
 
-## 4 Updating the Text Design
+## 5 Updating the Text Design
 
 In the **Properties** on the right side fo the Web Modeler, you can find various options for styling your text. To update the text design, follow these steps to change the styling of the subtitle:
 
@@ -52,7 +58,7 @@ In the **Properties** on the right side fo the Web Modeler, you can find various
 
     ![](attachments/event-app/wm-step3.jpg)
 
-## 5 Adding Layout Rows in the Device Viewer
+## 6 Adding Layout Rows in the Device Viewer
 
 On the **Home** page, below the header, add four **Action Cards** to open new pages by following these steps:
 
@@ -73,7 +79,7 @@ On the **Home** page, below the header, add four **Action Cards** to open new pa
 
     ![](attachments/event-app/wm-step4b.jpg)
 
-## 6 Adding Action Cards
+## 7 Adding Action Cards
 
 Now that the rows are set, it's time to add action cards to the columns that will serve as buttons to navigate to other pages. Follow these steps to add the action cards to the **Home** page:
 
@@ -95,7 +101,7 @@ The **Home** page is now finished!
 
    ![](attachments/event-app/wm-step8b.png)
 
-## 7 Adding a New Page
+## 8 Adding a New Page
 
 Now that the action cards are set, they must be configured to open new pages. Follow these steps to create a new page that will be opened when the **Program** card is clicked:
 
@@ -117,7 +123,7 @@ Now that the action cards are set, they must be configured to open new pages. Fo
 7. Enter *Upcoming events* for the subtitle, and change the color to **Warning**.
 8. Delete the **New** button and its container.
 
-## 8 Adding Entities and Attributes to a Building Block
+## 9 Adding Entities and Attributes to a Building Block
 
 The **ProgramList** page is coming along nicely. The timeline will need to display a list of events, so follow these steps to add entities and attributes to the list view:
 
@@ -138,7 +144,7 @@ The **ProgramList** page is coming along nicely. The timeline will need to displ
 
 The timeline is now connected to the **Day** entity in your domain model.
 
-## 9 Viewing Your Domain Model, Creating an Entity, and Setting Associations
+## 10 Viewing Your Domain Model, Creating an Entity, and Setting Associations
 
 After adding new entities and attributes to a page, it's always good to verify them in the domain model. You can also use the domain model editor to set the associations between the entities.
 
@@ -161,7 +167,7 @@ Follow these steps to create a new entity with several attributes and associate 
 
 ![](attachments/event-app/wm-step15.png)
 
-## 10 Adding the ProgramItem Entity to the List View
+## 11 Adding the ProgramItem Entity to the List View
 
 The **ProgramItem** entity contains four attributes that you can use on the **ProgramList** page. Follow these steps to apply these attributes to the list view elements on that page:
 
@@ -178,18 +184,6 @@ The **ProgramItem** entity contains four attributes that you can use on the **Pr
 
 6. Select **Speaker**. This text widget will now show the speaker for an event.
 7. Select the **This is your timeline detail text** text widget and replace the content with the **Title** attribute.
-
-## 11 Publishing and Viewing Your App
-
-It's time to publish your app and see what it looks like when it's deployed. Follow these steps to deploy your app:
-
-1. Click **Publish** in the top right corner.
-2. Click **Update** to deploy the latest changes.
-3. Click **View app** when the update has completed. Your app will now open in a new browser tab:
-
-![](attachments/event-app/wm-step15d.png)
-
-The app is running, but it doesn't have a lot of functionality yet. Continue with the next sections to add more content, pages, and functionality.
 
 ## 12 Changing the On Click Actions
 
@@ -278,15 +272,12 @@ Follow these steps to add logic with microflows:
 
 1. Select the **Book seat** button.
 2. set the **On Click Action** to **Microflow**, then click **Select microflow**.
-3. Create a new microflow and name it *BookSeat*.
-4. Add a **Parameter** to the microflow.
-
-**[WHEN CREATING THIS MICROFLOW, PARAMETER ALREADY EXISTS AND IS ALREADY SET TO PROGRAMITEM ENTITY]**
-
-5. Under **Entity** for the parameter, click **Select an entity** and set it to the **ProgramItem** entity.
-6. For the **Caption** of the **Annotation**, enter *This microflow will book a seat for users of the event app.*.
+3. Create a new microflow and name it *BookSeat*. Notice that the microflow already has the **ProgramItem** parameter, which is set to the **ProgramItem** entity.
+4. For the **Caption** of the **Annotation**, enter *This microflow will book a seat for users of the event app.*.
 
 ![](attachments/event-app/wm-step24.jpg)
+
+To expand the logic of the microflow, you will have to edit the microflow in the Desktop Modeler. For more information on working with the Web Modeler and Desktop Modeler, see [Syncing the Web Modeler with the Desktop Modeler](/refguide/desktop-webmodeler).
 
 ## 16 Publish and View Your App
 
@@ -301,4 +292,9 @@ You app is now finished! Follow these steps to view your app in the browser:
 
     ![](attachments/event-app/wm-step10.jpg)
 
-You have successfully built an event app in the Web Modeler!
+Congratulations! You have successfully built an event app in the Web Modeler.
+
+## 18 Related Content
+
+* [Web Modeler](/refguide/web-modeler)
+* [Syncing the Web Modeler with the Desktop Modeler](/refguide/desktop-webmodeler)

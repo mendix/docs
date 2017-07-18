@@ -5,7 +5,7 @@ category: "Mendix Cloud"
 ---
 
 
-Projects with Java actions can be deployed to the Mendix Cloud. For security reasons the capabilities of Java actions in the Cloud are constrained. Applications should not be able to access resources of other applications or compromise the cloud server in any way.
+Projects with Java actions can be deployed to the Mendix Cloud. For security reasons the capabilities of Java actions in Mendix Cloud v3 are constrained. Applications should not be able to access resources of other applications or compromise the cloud server in any way. In Mendix Cloud v4 there are no restrictions on Java actions.
 
 Java offers the [Java Security Manager](http://download.oracle.com/javase/tutorial/essential/environment/security.html "Java Security Manager") to configure programs to behave correctly. For each application a policy file is created to instruct the correct behavior.
 

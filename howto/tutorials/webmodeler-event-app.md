@@ -62,13 +62,13 @@ In the **Properties** on the right side fo the Web Modeler, you can find various
 
 On the **Home** page, below the header, add four **Action Cards** to open new pages by following these steps:
 
-1. Select the **COLUMN** in the layout grid below the header:
+1. Select the **COLUMN** in the layout grid below the header:<br />
 
-    <div class="alert alert-info">{% markdown %}
+    <div class="alert alert-info">
 
     The layout grid is a widget that gives structure to your pages. A layout grid contains one or more rows, and each row can contain up to twelve columns.
-
-    {% endmarkdown %}</div>
+    
+   </div>
 
 2. Change it to four columns under **Row Layout** > **Desktop**.
 3. Select four blocks for **Tablet** and **Phone**:
@@ -110,13 +110,13 @@ Now that the action cards are set, they must be configured to open new pages. Fo
 3. Enter *ProgramList* for the **Title** of the new page.
 4. Select **Dashboards** > **Dashboard Timeline** for the template, and then click **Create**.
 
-    ![](attachments/event-app/wm-step12.jpg)
+    ![](attachments/event-app/wm-step12.jpg)<br />
 
-    <div class="alert alert-info">{% markdown %}
-
-    If you create a page in **Pages** (in the left navigation panel), make sure that the action card on the **Home** page refers to it in the **On Click Action**.
-
-    {% endmarkdown %}</div>
+    <div class="alert alert-info">
+    
+    If you create a page in Pages (in the left navigation panel), make sure that the action card on the Home page refers to it in the On Click Action.
+    
+    </div>
 
 5. Replace the header with the **Heroheader1**, like you did for the **Home** page.
 6. Enter *Program List* for the the header **Title**.
@@ -201,7 +201,7 @@ The **Program List** page is now finished!
 
    ![](attachments/event-app/wm-step26.png)
 
-## 13 Build the ItemDetail Page
+## 13 Building the ItemDetail Page
 
 The **ItemDetail** page will contain two items next to each other and another item below that. This means that you need two more rows.
 
@@ -228,7 +228,7 @@ To build the **ItemDetail** page, follow these steps:
 
     ![](attachments/event-app/wm-step19b.png)
 
-## 14 Add Content from the Modeler and the App Store
+## 14 Adding Content from the Modeler and the App Store
 
 You can find elements for your pages by looking in the **Building blocks** and **Widgets** tabs in the **Toolbox**, but you can also search for additional content in the Mendix App Store. The Mendix App Store contains different custom themes, modules, and widgets created by Mendix as well as the Mendix community.
 
@@ -264,7 +264,7 @@ The **ItemDetail** page is now finished!
 
 ![](attachments/event-app/wm-step23.png)
 
-## 15 Add Logic to the App with Microflows
+## 15 Adding Logic to the App with Microflows
 
 Now that everything on the **ItemDetail** page is set, the **Book seat** button needs to have an action.
 
@@ -279,7 +279,7 @@ Follow these steps to add logic with microflows:
 
 To expand the logic of the microflow, you will have to edit the microflow in the Desktop Modeler. For more information on working with the Web Modeler and Desktop Modeler, see [Syncing the Web Modeler with the Desktop Modeler](/refguide/desktop-webmodeler).
 
-## 16 Publish and View Your App
+## 16 Publishing and Viewing Your App
 
 You app is now finished! Follow these steps to view your app in the browser:
 

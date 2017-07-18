@@ -52,7 +52,7 @@ Now that you have created a basic dashboard, you need to add a new page that can
     ![](attachments/build-an-employee-directory-app/select-page.png)
 
 6. To create a new page in the **Select Page** dialog box, do the following:<br>
-    a  Click **New page**.<br>
+    a. Click **New page**.<br>
     b. Change the title of the page to **Employees**.<br>
     c. Select **Lists** > **Lists Default** for the  template.
 
@@ -233,7 +233,7 @@ You can now use your app to add and edit employees!
 
 In the previous steps, you created the employee entity and its attributes from different widgets. So, you must be thinking, how do I edit them in case I want to change something? Don't worry, you can view and edit your entities in the domain model.
 
-Toe vie wthe structure of **Employee** entity, follow these steps:
+To view the structure of **Employee** entity, follow these steps:
 
 1. Click the **Domain Models** icon in the left menu:
 

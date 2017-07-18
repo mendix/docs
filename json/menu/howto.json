@@ -5,7 +5,7 @@ sitemap: false
 {
   "categories": [
     "Getting Started",
-	"Tutorials",
+	  "Tutorials",
     "Data Models",
     "GUIs",
     "Logic & Business Rules",

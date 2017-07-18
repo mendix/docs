@@ -11,7 +11,7 @@ Every company using Mendix can set up specific settings for apps, teams, and nod
 
 To see the **Company Admin** settings, you need to fulfill the following prerequisites:
 
-* Have a **MxID** (to create a MxID, click [here](https://www.mendix.com/try-now/)
+* Have a **MxID** (to create a MxID, click [here](https://www.mendix.com/try-now/))
 * Be a company admin (you can request information about the current company admin from [Mendix Support](https://support.mendix.com/hc/en-us)
 
 <div class="alert alert-info">{% markdown %}

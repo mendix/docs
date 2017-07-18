@@ -29,7 +29,7 @@ If you click **Details** of a specific environments, you will be able to manage 
 
    ![](attachments/environmentdetails.jpg)
    
-For more details, see [Environment details](environment-details).       
+For more details, see [Environment details](environments-details).       
 
 ## 3 Mobile App
 

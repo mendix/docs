@@ -1,7 +1,7 @@
 ---
 title: "Leave App Types"
 space: "Developer Portal"
-category: "General"
+category: "Developer Portal General"
 ---
 
 ## 1 Introduction

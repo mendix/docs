@@ -7,20 +7,17 @@ tags: ["Operate","App","Developer Portal"]
 
 ## 1 Introduction
 
-The category **Operate** is devided into four pages:
+The category **Operate** is devided into four pages described below:
 
-*   [Metrics](/developerportal/operate/metrics)
-*   [Alerts](/developerportal/operate/monitoring-application-health)
-*   [Logs](/developerportal/operate/logs) 
-*   [Backups](/developerportal/operate/backups)
+  ![](attachments/operate.png)
 
 ## 2 Metrics
 
-On this page you can monitor the performance and health of your App. This page is divided into three subpages:
+On this page you can monitor the performance and health of your App. 
 
-*   Trends
-*   Running now
-*   Cache
+For more information, see [Metrics](/developerportal/operate/metrics).
+
+This page is divided into three subpages described below:
 
 ### 2.1 Trends
 
@@ -31,16 +28,21 @@ In this section you can view the graphs of the App about:
 *   Application Node Statistics
 *   Database Node Statistics
 
+The **Trends** are different for the Mendix Cloud versions:
+
+*   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
+*   [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
+
 ### 2.2 Running now
 
 Running requests are all requests that are currently in progress for this environment. Please note that interrupting a request will actually stop it, and the end user may receive an error.
 
 At this section you can view the following information about the running requests:
 
-*   User
-*   Action
-*   Type
-*   Duration
+*   User - the user that is running the request
+*   Action - the currently running actions
+*   Type - the action type that is running
+*   Duration - how long the request is running until the **Refresh** button has been clicked
 
 ### 2.3 Cache
 
@@ -51,7 +53,6 @@ At this section you can view the following:
 *   Entity in cache
 *   User sessions
 
-
 ## 3 Alerts
 
 On this page you can view the following:
@@ -59,11 +60,13 @@ On this page you can view the following:
 *   The status of the Application and the Platform
 *   The history of the alerts
 
+For more information, see [Alerts](/developerportal/operate/monitoring-application-health)
 
 ## 4 Logs
 
 On this page you can **Fetch the current log**. Logs are rotated and archived every 5MB. The logs are kept for at least 3 months. Besides archived logs, the current log file can be fetched at any time.
 
+For more information, see [Logs](/developerportal/operate/logs)
 
 ## 5 Backups 
 
@@ -76,12 +79,4 @@ Monthly Backups (1st Sunday of each month): maximum 1 year history
 
 This pruning schedule applies to nightly backups and backups initiated by users. If you want to keep a backup for longer than the schedule, you will have to download it.
 
-
-## 6 Related Content
-
-*   [Alerts](/developerportal/operate/monitoring-application-health)
-*   [Backups](/developerportal/operate/backups)
-*   [Logs](/developerportal/operate/logs)
-*   [Mendix Cloud Status](/developerportal/operate/mendix-cloud-status)
-*   [Metrics](/developerportal/operate/metrics)
-*   [Trends in Mendix Cloud v3](/developerportal/operate/trends)
+For more information, see [Backups](/developerportal/operate/backups)

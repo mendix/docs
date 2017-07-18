@@ -4,9 +4,10 @@ space: "Mendix 7 Reference Guide"
 description: "Describes the various features of the Mendix Modeler, including document templates, the domain model, microflows, modules, pages, and security."
 ---
 
-This part of the Mendix Reference Guide gescribes the various features of the Mendix Modeler, including document templates, the domain model, microflows, modules, pages, and security.
+This section of the Mendix Reference Guide describes the various features of the Mendix Modeler, including document templates, the domain model, microflows, modules, pages, and security.
 
 ## Main Documents in This Category
+
 * [Constants](constants)
 * [Data Sets](data-sets)
 * [Data Types](data-types)

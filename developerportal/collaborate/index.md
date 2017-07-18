@@ -7,6 +7,8 @@ space: "Developer Portal"
 
 The **Collaborate** category supports collaboration with your team and the tracking of sprints and other tasks in the app.
 
+![](attachments/collaborate.png)
+
 This category is divided into the five pages presented below.
 
 ## 2 Buzz
@@ -27,6 +29,8 @@ For more details, see [Team](team).
 
 The **Stories** page lets you add, edit, and delete stories, sprints, and labels. You can also import to and export from Excel and view the history.
 
+For more details, see [Stories](stories).
+
 ## 5 Feedback
 
 The **Feedback** pages show an overview of the feedback provided about the app. There are two ways of submitting feedback:
@@ -45,3 +49,5 @@ For more details, see [Feedback](feedback) and [How to Provide Feedback on Mendi
 ## 6 Documents
 
 The **Documents** pages lets you upload files related to the app. It is possible to replace a current file with a newer version, add labels, comment, and download files.
+
+For more details, see [Documents](documents).

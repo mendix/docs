@@ -8,7 +8,7 @@ category: "Mendix Cloud"
 
 This how-to will teach you how to do the following:
 
-* Restruct access for incoming requests to your app
+* Restrict access for incoming requests to your app
 * Configure an access restriction profile
 * Apply a restriction to an app environment
 

@@ -114,7 +114,7 @@ Now that the action cards are set, they must be configured to open new pages. Fo
 
     <div class="alert alert-info">
     
-    If you create a page in **Pages** (in the left navigation panel), make sure that the action card on the **Home** page refers to it in the **On Click Action**.
+    If you create a page in Pages (in the left navigation panel), make sure that the action card on the Home page refers to it in the On Click Action.
     
     </div>
 

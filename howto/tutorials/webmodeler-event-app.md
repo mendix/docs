@@ -90,31 +90,40 @@ Now that the rows are set, it's time to add action cards to the columns that wil
 2. Drag the **Card Action** to all four empty columns:
 
     ![](attachments/event-app/wm-step7.png)
+    
+## Publishing and Viewing Your App
 
-4. Select the **Open Page** button for the first card and enter *Program* for its **Caption**.
-5. Select the signal icon **Button** and in **General** > **Icon**, change the icon to **List alt**.
-6. Set the **On Click Action** to **Page**. If the user clicks this card, a new page will be opened. You will create the page that will be opened in the next chapter.
+Your first page is now finished! Let's see the result on your mobile phone:
 
-    ![](attachments/event-app/wm-step8.jpg)
+1. Click **Publish**, then **Update**.
+2. Click **View on mobile device**.
 
-The **Home** page is now finished!
+    ![](attachments/event-app/wm-step9.png)
 
-   ![](attachments/event-app/wm-step8b.png)
+3. Scan the QR-code with your **Mendix Mobile** app (get it for [iOS](https://itunes.apple.com/nl/app/mendix/id458058946?l=en&mt=8) or [Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile&hl=en).
+
+    ![](attachments/event-app/wm-step10.jpg)
 
 ## 8 Adding a New Page
 
 Now that the action cards are set, they must be configured to open new pages. Follow these steps to create a new page that will be opened when the **Program** card is clicked:
 
-1. Select the list alt icon **BUTTON** and under **Events** > **Page**, click **Select page**.
-2. In the **Select Page** dialog box, click **New page**.
-3. Enter *ProgramList* for the **Title** of the new page.
-4. Select **Dashboards** > **Dashboard Timeline** for the template, and then click **Create**.
+1. Select the **Open Page** button for the first card and enter *Program* for its **Caption**.
+2. Select the signal icon **Button** and in **General** > **Icon**, change the icon to **List alt**.
+3. Set the **On Click Action** to **Page**. If the user clicks this card, a new page will be opened. 
+
+    ![](attachments/event-app/wm-step8.jpg)
+
+4. Select the list alt icon **BUTTON** and under **Events** > **Page**, click **Select page**.
+5. In the **Select Page** dialog box, click **New page**.
+6. Enter *ProgramList* for the **Title** of the new page.
+7. Select **Dashboards** > **Dashboard Timeline** for the template, and then click **Create**.
 
     ![](attachments/event-app/wm-step12.jpg)<br />
 
     <div class="alert alert-info">
     
-    If you create a page in Pages (in the left navigation panel), make sure that the action card on the Home page refers to it in the On Click Action.
+    If you create a page in **Pages** (in the left navigation panel), make sure that the action card on the **Home** page refers to it in the **On Click Action**.
     
     </div>
 
@@ -281,7 +290,7 @@ To expand the logic of the microflow, you will have to edit the microflow in the
 
 ## 16 Publishing and Viewing Your App
 
-You app is now finished! Follow these steps to view your app in the browser:
+You app is now finished! Follow these steps to view your app on your mobile phone:
 
 1. Click **Publish**, then **Update**.
 2. Click **View on mobile device**.

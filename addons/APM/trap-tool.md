@@ -23,15 +23,13 @@ When you select a trap, you get to see all the messages in that trap.
 
  ![](attachments/Trap_Tool/Individual_Trap.png)
 
-The search parameters to include or exclude **Connection Bus** messages and 
-**Microflow Engine** messages are available to show or hide the most occurring messages.
+The search parameters to include or exclude **Connection Bus** messages and **Microflow Engine** messages are available to show or hide the most occurring messages.
 
 Also, a list of selected records can be sent to the performance tool. If the performance tool is already running, you will get a warning that you can only send a trap to the performance tool if it is not running.
 
 ## Manual Trap
 
-You can manually send a trap and get logging output. This can be useful when there might be a microflow 
-hanging or if an issue occurs but no error is generated.
+You can manually send a trap and get logging output. This can be useful when there might be a microflow hanging or if an issue occurs but no error is generated.
 
 This is the **Output Queue Size** counter. 
 
@@ -77,8 +75,7 @@ a warning, or a critical message in either the log tool or the trap tool, viewin
 The regular expression can be tested against the traps and log messages in the database, so if the tool currently records a message that needs to be excluded the next time it occurs, then the test button should give a result.
 
 ### Triggers Tab
-On the **Triggers** tab, you can define message triggers that fire on messages of level
- INFO and above. 
+On the **Triggers** tab, you can define message triggers that fire on messages of level INFO and above. 
 
 ![](attachments/Trap_Tool/Options_Triggers.png)
 

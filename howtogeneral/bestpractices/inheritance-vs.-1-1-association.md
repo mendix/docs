@@ -1,11 +1,10 @@
 ---
-title: "Inheritance vs. 1-1 association"
+title: "Inheritance vs. 1-1 Association"
 space: "General How-To's"
 category: "Best Practices"
 ---
-# Inheritance vs. 1-1 association
 
-
+# Inheritance vs. 1-1 Association
 
 Every Mendix developer has to choose on a daily basis whether or not he wants to use inheritance. It starts the moment you initiate a new project; how do you want to setup your users? Are you going to keep using the already available Account entity in the Administration module? Or are you going to work with separate entities with a 1-1 association to the user account? Or are you going to add (multiple) entities that inherit from System.User?
 
@@ -23,7 +22,7 @@ In order to understand the impact and behavior of the application, you need to u
 
 The Mendix platform uses the transaction level [Read Committed](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed), which means, as the name suggests, that only committed objects are visible outside the transaction. Any other microflows trying to access an object that is being changed at the same time, will have to wait until the transaction has completed. This is important to know, since this has significant impact on your choice between inheritance or associated objects.
 
-### Creating and Changing objects
+### Creating and Changing Objects
 
 When changing an object, the Mendix platform will write those changes to the database as soon as you execute the commit activity. The update or insert query will be performed based on the values you've changed. This behavior varies per database, but most likely this will lock the record and prevent other users from reading it until the transaction has been completed (either finished or rolled back).
 
@@ -37,7 +36,7 @@ When changing an object, none of the associated objects will be changed. There a
 
 Whenever you have a high number of write transactions in your application, it is far better to choose for a 1-1 association, since this limits the number of tables that are being changed/locked during a transaction. However, if you do more inserts than updates it might be worth using inheritance again. Inheritance uses one less table to store the relationship, it doesn't have the association table. Therefore any inserts require 1 indexed table less to be updated.
 
-### Retrieving objects
+### Retrieving Objects
 
 Mendix is optimized to only retrieve the data that is required for the action that is being executed. That means, for example: if you do not show any associated or inherited attributes, those objects will not be included in the retrieve queries.
 
@@ -80,7 +79,7 @@ _Never use 1-1 association for entities:_
 
 *   _That always require the information from the associated objects, and users intensively search and sort on the associated attributes._
 
-## Related content
+## Related Content
 
 * [Best Practices for Component Based Development](best-practices-for-component-based-development)
-* [Naming Conventions](naming-conventions)
+* [Development Best Practices](dev-best-practices)

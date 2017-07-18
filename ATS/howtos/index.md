@@ -1,8 +1,12 @@
 ---
-title: "ATS How-To's"
+title: "How-To's"
 space: "ATS Add-On"
 ---
 
 This is the main document in this category:
 
-* [How to Create a Custom Action](create-custom-action)
+* [Get Started](getting-started)
+* [Create a Custom Action](create-custom-action)
+
+
+

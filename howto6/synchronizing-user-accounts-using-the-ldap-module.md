@@ -27,11 +27,10 @@ Your client might already have a centralized identity management solution in pla
     ![](attachments/18448733/18581930.png)
 4.  Add the **LdapAdmin** module role to your Administrator role. This will grant users with the Administrator role access to the LDAP admin functionality.
     ![](attachments/18448733/18581913.png)
-5.  Locate the constant** EncryptionKey**, which should be in the **Encryption** module.
+5.  Locate the constant **EncryptionKey**, which should be in the **Encryption** module.
 6.  Set the **Default value** to a random value of exactly 16 characters.
     ![](attachments/18448733/18581928.png)\
-7.  Click **OK.
-     **
+7.  Click **OK**.
 
 ## 3\. Configure the LDAP server information
 
@@ -61,11 +60,11 @@ In this chapter you will run the application and complete the LDAP configuration
 6.  Click **Test connection**. The module will now try to connect to the LDAP server using the credentials you provided. If the test was successful you should see the following message: **Connection established**. If not, check the error message in the console log for possible causes and fix the issue(s).
 
     You will now configure the user path of the LDAP module so that it can find the user information on the server.
-7.  Click **Browse LDAP** in the **User paths **section. This opens a popup that displays the contents of the LDAP root directory.
+7.  Click **Browse LDAP** in the **User paths** section. This opens a popup that displays the contents of the LDAP root directory.
     ![](attachments/18448733/18581925.png)
 8.  Navigate to the directory that contains the users you want to import. 
-9.  Once you have found the directory that contains the users, click **Use this directory as user import location.
-    **![](attachments/18448733/18581924.png)
+9.  Once you have found the directory that contains the users, click **Use this directory as user import location**.
+    ![](attachments/18448733/18581924.png)
 10.  Close all popups. You should now see the selected path in the User Paths overview.
     ![](attachments/18448733/18581923.png)
 

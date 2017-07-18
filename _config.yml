@@ -42,17 +42,17 @@ defaults:
   # VERSION SPECIFIC CONTENT
   # Mendix 7
   - scope:
-      path: 'howto7'
+      path: 'howto'
       type: pages
     values:
       menus:
-        - "howto7"
+        - "howto"
   - scope:
-      path: 'refguide7'
+      path: 'refguide'
       type: pages
     values:
       menus:
-        - "refguide7"
+        - "refguide"
   # Mendix 6
   - scope:
       path: 'howto6'
@@ -109,11 +109,11 @@ defaults:
       menus:
         - "releasenotes"
   - scope:
-      path: 'apidocs'
+      path: 'apidocs-mxsdk'
       type: pages
     values:
       menus:
-        - "apidocs"
+        - "apidocs-mxsdk"
   - scope:
       path: 'addons'
       type: pages
@@ -127,17 +127,17 @@ defaults:
       menus:
         - "ATS"
   - scope:
-      path: 'MXSDK'
-      type: pages
-    values:
-      menus:
-        - "MXSDK"
-  - scope:
       path: 'howtogeneral'
       type: pages
     values:
       menus:
         - "howtogeneral"
+  - scope:
+      path: 'developerportal'
+      type: pages
+    values:
+      menus:
+        - 'developerportal'
 
 ####################################
 
@@ -168,10 +168,11 @@ exclude:
   - _data/assetsjs.json
   - _data/assetscss.json
   - CONTRIBUTING.md
-  - scripts
+  - _scripts
 
 markdown: kramdown
 kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
   hard_wrap: false
   syntax_highlighter: rouge
+  auto_id_stripping: false

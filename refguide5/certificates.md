@@ -28,7 +28,7 @@ For more information, see:
 Virtually all certificate formats can be converted to the PKCS12 format. For more information, see these links:
 
 *   [https://www.ssl.com/how-to/create-a-pfx-p12-certificate-file-using-openssl/](https://www.ssl.com/how-to/create-a-pfx-p12-certificate-file-using-openssl/)
-*   [https://www.openssl.org/docs/man1.0.1/apps/pkcs12.html](https://www.openssl.org/docs/man1.0.1/apps/pkcs12.html)
+*   [https://www.openssl.org/docs/manmaster/man1/openssl.html](https://www.openssl.org/docs/manmaster/man1/openssl.html)
 
 ## Certificate Authorities
 

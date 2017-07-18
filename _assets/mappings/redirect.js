@@ -12,75 +12,159 @@ module.exports = {
       to: "/"
     },
     /****************************************************
-     * API DOCS
+     * API & SDK
      ****************************************************/
     {
       from: "/apidocs/Home",
-      to: "/apidocs/"
+      to: "/apidocs-mxsdk/apidocs/index"
     },
     {
       from: "/apidocs/Authentication",
-      to: "/apidocs/authentication"
+      to: "/apidocs-mxsdk/apidocs/authentication"
     },
     {
       from: "/apidocs/Build+API",
-      to: "/apidocs/build-api"
+      to: "/apidocs-mxsdk/apidocs/build-api"
     },
     {
       from: "/apidocs/Deploy+API",
-      to: "/apidocs/deploy-api"
+      to: "/apidocs-mxsdk/apidocs/deploy-api"
     },
     {
       from: "/apidocs/Example+implementation",
-      to: "/apidocs/example-implementation"
+      to: "/apidocs-mxsdk/apidocs/example-implementation"
     },
     {
       from: "/apidocs/Feedback+API",
-      to: "/apidocs/feedback-api"
+      to: "/apidocs-mxsdk/apidocs/feedback-api"
     },
     {
       from: "/apidocs/API+documentation",
-      to: "/apidocs/"
+      to: "/apidocs-mxsdk/apidocs/index"
     },
     {
       from: "/apidocs/Invite+API",
-      to: "/apidocs/invite-api"
+      to: "/apidocs-mxsdk/apidocs/invite-api"
     },
     {
       from: "/apidocs/Moving+From+6+to+7",
-      to: "/refguide7/moving-from-6-to-7"
+      to: "/refguide/moving-from-6-to-7"
     },
     {
       from: "/apidocs/Permissions+API",
-      to: "/apidocs/permissions-api"
+      to: "/apidocs-mxsdk/apidocs/permissions-api"
     },
     {
       from: "/apidocs/Profile+API",
-      to: "/apidocs/profile-api"
+      to: "/apidocs-mxsdk/apidocs/profile-api"
     },
     {
       from: "/apidocs/Projects+API",
-      to: "/apidocs/projects-api"
+      to: "/apidocs-mxsdk/apidocs/projects-api"
     },
     {
       from: "/apidocs/Runtime+API+changes",
-      to: "/refguide7/moving-from-6-to-7"
+      to: "/refguide/moving-from-6-to-7"
     },
     {
       from: "/apidocs/Single+Sign-On+API",
-      to: "/apidocs/single-sign-on-api"
+      to: "/apidocs-mxsdk/apidocs/single-sign-on-api"
     },
     {
       from: "/apidocs/Stories+API",
-      to: "/apidocs/stories-api"
+      to: "/apidocs-mxsdk/apidocs/stories-api"
     },
     {
       from: "/apidocs/Team+Server+API",
-      to: "/apidocs/team-server-api"
+      to: "/apidocs-mxsdk/apidocs/team-server-api"
     },
     {
       from: "/apidocs/User+Management+API",
-      to: "/apidocs/user-management-api"
+      to: "/apidocs-mxsdk/apidocs/user-management-api"
+    },
+    {
+      from: "/MXSDK/Changing+things+in+the+model",
+      to: "/apidocs-mxsdk/mxsdk/changing-things-in-the-model"
+    },
+    {
+      from: "/MXSDK/Closing+the+server+connection",
+      to: "/apidocs-mxsdk/mxsdk/closing-the-server-connection"
+    },
+    {
+      from: "/MXSDK/Creating+the+domain+model",
+      to: "/apidocs-mxsdk/mxsdk/creating-the-domain-model"
+    },
+    {
+      from: "/MXSDK/Creating+your+first+script",
+      to: "/apidocs-mxsdk/mxsdk/creating-your-first-script"
+    },
+    {
+      from: "/MXSDK/Domain+Model+Metamodel",
+      to: "/apidocs-mxsdk/mxsdk/domain-model-metamodel"
+    },
+    {
+      from: "/MXSDK/FAQ",
+      to: "/apidocs-mxsdk/mxsdk/faq"
+    },
+    {
+      from: "/MXSDK/Finding+things+in+the+model",
+      to: "/apidocs-mxsdk/mxsdk/finding-things-in-the-model"
+    },
+    {
+      from: "/MXSDK/Generating+code+from+the+model",
+      to: "/apidocs-mxsdk/mxsdk/generating-code-from-the-model"
+    },
+    {
+      from: "/MXSDK/Mendix+SDK+Home",
+      to: "/apidocs-mxsdk/mxsdk/index"
+    },
+    {
+      from: "/MXSDK/JavaScript+TypeScript+Resources",
+      to: "/apidocs-mxsdk/mxsdk/javascript-typescript-resources"
+    },
+    {
+      from: "/MXSDK/Loading+units+and+elements",
+      to: "/apidocs-mxsdk/mxsdk/loading-units-and-elements"
+    },
+    {
+      from: "/MXSDK/Manipulating+existing+models",
+      to: "/apidocs-mxsdk/mxsdk/manipulating-existing-models"
+    },
+    {
+      from: "/MXSDK/Microflows+Metamodel",
+      to: "/apidocs-mxsdk/mxsdk/microflows-metamodel"
+    },
+    {
+      from: "/MXSDK/Pages+Metamodel",
+      to: "/apidocs-mxsdk/mxsdk/pages-metamodel"
+    },
+    {
+      from: "/MXSDK/Projects+Metamodel",
+      to: "/apidocs-mxsdk/mxsdk/projects-metamodel"
+    },
+    {
+      from: "/MXSDK/Reference+Documentation",
+      to: "/apidocs-mxsdk/mxsdk/reference-documentation"
+    },
+    {
+      from: "/MXSDK/Setting+up+your+development+environment",
+      to: "/apidocs-mxsdk/mxsdk/setting-up-your-development-environment"
+    },
+    {
+      from: "/MXSDK/Understanding+the+metamodel",
+      to: "/apidocs-mxsdk/mxsdk/understanding-the-metamodel"
+    },
+    {
+      from: "/MXSDK/Use+case+examples",
+      to: "/apidocs-mxsdk/mxsdk/use-case-examples"
+    },
+    {
+      from: "/MXSDK/Working+with+when.js+and+promises+in+TypeScript",
+      to: "/apidocs-mxsdk/mxsdk/working-with-when.js-and-promises-in-typescript"
+    },
+    {
+      from: "/MXSDK/Your+learning+path+for+the+Mendix+SDK",
+      to: "/apidocs-mxsdk/mxsdk/your-learning-path-for-the-mendix-sdk"
     },
     /****************************************************
      * APPSTORE
@@ -138,11 +222,15 @@ module.exports = {
     },
     {
       from: "/bestpractices/Naming+conventions",
-      to: "/howtogeneral/bestpractices/naming-conventions"
+      to: "/howtogeneral/bestpractices/dev-best-practices"
     },
     {
       from: "/bestpractices/Naming+conventions+in+Mendix+5",
-      to: "/howtogeneral/bestpractices/naming-conventions"
+      to: "/howtogeneral/bestpractices/dev-best-practices"
+    },
+    {
+      from: "/howtogeneral/bestpractices/naming-conventions",
+      to: "/howtogeneral/bestpractices/dev-best-practices"
     },
     {
       from: "/bestpractices/SIG+-+Mendix+performance+subjects+explanation",
@@ -1003,7 +1091,7 @@ module.exports = {
     },
     {
       from: "/howto50/Adding+App+Store+content+to+your+app",
-      to: "/howto50/adding-app-store-content-to-your-app"
+      to: "/community/app-store/use-app-store-content-in-the-modeler"
     },
     {
       from: "/howto50/Anonymous+User+Security",
@@ -1154,10 +1242,6 @@ module.exports = {
       to: "/howto50/deploying-a-mendix-app-to-cloud-foundry"
     },
     {
-      from: "/howto50/Deploying+a+Mendix+App+to+HP+Helion",
-      to: "/howto50/deploying-a-mendix-app-to-hp-helion"
-    },
-    {
       from: "/howto50/Deploying+a+Mendix+App+to+Pivotal",
       to: "/howto50/deploying-a-mendix-app-to-pivotal"
     },
@@ -1223,7 +1307,7 @@ module.exports = {
     },
     {
       from: "/howto50/Gathering+user+feedback",
-      to: "/howto50/gathering-user-feedback"
+      to: "/developerportal/howto/gathering-user-feedback"
     },
     {
       from: "/howto50/Generating+a+personal+SSH2+key+pair",
@@ -1303,7 +1387,7 @@ module.exports = {
     },
     {
       from: "/howto50/Managing+your+Application+Requirements+with+Mendix",
-      to: "/howto50/managing-your-application-requirements-with-mendix"
+      to: "/developerportal/howto/managing-your-application-requirements-with-mendix"
     },
     {
       from: "/howto50/Mendix+Hosting+Enviroment+project+structure+and+commands",
@@ -1327,7 +1411,7 @@ module.exports = {
     },
     {
       from: "/howto50/Monitoring+application+health",
-      to: "/howto50/monitoring-application-health"
+      to: "/developerportal/operate/monitoring-application-health"
     },
     {
       from: "/howto50/Monitoring+Mendix+using+JMX",
@@ -1471,7 +1555,7 @@ module.exports = {
     },
     {
       from: "/howto50/Trends",
-      to: "/howtogeneral/mendixcloud/trends"
+      to: "/developerportal/operate/trends"
     },
     {
       from: "/howto50/Triggering+Logic+using+Microflows",
@@ -1673,10 +1757,6 @@ module.exports = {
       to: "/howto6/denormalize-data-to-improve-performance"
     },
     {
-      from: "/howto6/Deploy+a+Mendix+App+to+HP+Helion",
-      to: "/howto6/deploy-a-mendix-app-to-hp-helion"
-    },
-    {
       from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",
       to: "/howto6/deploy-a-mendix-app-to-ibm-bluemix"
     },
@@ -1702,7 +1782,7 @@ module.exports = {
     },
     {
       from: "/howto6/deploying+to+the+cloud",
-      to: "/howtogeneral/mendixcloud/deploying-to-the-cloud"
+      to: "/developerportal/howto/deploying-to-the-cloud"
     },
     {
       from: "/howto6/Design+the+Architecture",
@@ -1766,7 +1846,7 @@ module.exports = {
     },
     {
       from: "/howto6/Gathering+user+feedback",
-      to: "/howto6/gathering-user-feedback"
+      to: "/developerportal/howto/gathering-user-feedback"
     },
     {
       from: "/howto6/Generating+a+personal+SSH2+key+pair",
@@ -1862,7 +1942,7 @@ module.exports = {
     },
     {
       from: "/howto6/Managing+your+Application+Requirements+with+Mendix",
-      to: "/howto6/managing-your-application-requirements-with-mendix"
+      to: "/developerportal/howto/managing-your-application-requirements-with-mendix"
     },
     {
       from: "/howto6/Mendix+on+Windows+-+Microsoft+SQL+Server",
@@ -1886,7 +1966,7 @@ module.exports = {
     },
     {
       from: "/howto6/monitoring+application+health",
-      to: "/howtogeneral/mendixcloud/monitoring-application-health"
+      to: "/developerportal/operate/monitoring-application-health"
     },
     {
       from: "/howto6/On-premises+Deployment",
@@ -2088,21 +2168,40 @@ module.exports = {
       from: "/howto6/Working+With+Object+Events",
       to: "/howto6/working-with-object-events"
     },
+	/****************************************************
+     * HOWTO MENDIX 7
+     ****************************************************/
+	{
+      from: "/howto/getting-started/build-an-iot-app",
+      to: "/howto/tutorials/build-an-iot-app"
+    },
+    {
+      from: "/howto/getting-started/build-a-simple-hrm-app",
+      to: "/howto/tutorials/build-a-simple-hrm-app"
+    },
+    {
+      from: "/howto/getting-started/create-a-to-do-app",
+      to: "/howto/tutorials/create-a-to-do-app"
+    },	
     /****************************************************
      * Mendix Cloud
      ****************************************************/
     {
       from: "/mendixcloud/Custom+Domains",
-      to: "/howtogeneral/mendixcloud/custom-domains"
+      to: "/developerportal/howto/custom-domains"
     },
     {
-      from: "/mendixcloud/Deploying+to+a+Free+App",
-      to: "/howtogeneral/mendixcloud/deploying-to-a-free-app"
-    },
+      from: "/mendixcloud/custom-domains",
+      to: "/developerportal/howto/custom-domains"
+    },	  
     {
       from: "/mendixcloud/Deploying+to+the+cloud",
-      to: "/howtogeneral/mendixcloud/deploying-to-the-cloud"
+      to: "/developerportal/howto/deploying-to-the-cloud"
     },
+    {
+      from: "/mendixcloud/deploying-to-the-cloud",
+      to: "/developerportal/howto/deploying-to-the-cloud"
+    },	  
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
       to: "/howtogeneral/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
@@ -2114,6 +2213,10 @@ module.exports = {
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
       to: "/howtogeneral/mendixcloud/how-to-deploy-a-mendix-app-on-azure"
+    },
+    {
+      from: "/mendixcloud/how-to-link-app-to-node",
+      to: "/developerportal/howto/how-to-link-app-to-node"
     },
     {
       from: "/mendixcloud/Mendix+Cloud",
@@ -2133,16 +2236,28 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Maintenance+Windows",
-      to: "/howtogeneral/mendixcloud/maintenance-windows"
+      to: "/developerportal/howto/maintenance-windows"
+    },
+    {
+      from: "/mendixcloud/maintenance-windows",
+      to: "/developerportal/howto/maintenance-windows"
     },
     {
       from: "/mendixcloud/migrating+to+v4",
-      to: "/howtogeneral/mendixcloud/migrating-to-v4"
+      to: "/developerportal/howto/migrating-to-v4"
     },
     {
+      from: "/mendixcloud/migrating-to-v4",
+      to: "/developerportal/howto/migrating-to-v4"
+    },	  
+    {
       from: "/mendixcloud/Monitoring+application+health",
-      to: "/howtogeneral/mendixcloud/monitoring-application-health"
+      to: "/developerportal/operate/monitoring-application-health"
     },
+    {
+      from: "/mendixcloud/monitoring-application-health",
+      to: "/developerportal/operate/monitoring-application-health"
+    },	  
     {
       from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
       to: "/howtogeneral/mendixcloud/securing-outgoing-connections-from-your-application"
@@ -2157,121 +2272,15 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Trends",
-      to: "/howtogeneral/mendixcloud/trends"
-    },
-    /****************************************************
-     * Mendix SDK
-     ****************************************************/
-    {
-      from: "/MXSDK/Changing+things+in+the+model",
-      to: "/MXSDK/changing-things-in-the-model"
-    },
-    {
-      from: "/MXSDK/Closing+the+server+connection",
-      to: "/MXSDK/closing-the-server-connection"
-    },
-    {
-      from: "/MXSDK/Creating+the+domain+model",
-      to: "/MXSDK/creating-the-domain-model"
-    },
-    {
-      from: "/MXSDK/Creating+your+first+script",
-      to: "/MXSDK/creating-your-first-script"
-    },
-    {
-      from: "/MXSDK/Development+Workflow",
-      to: "/MXSDK/development-workflow"
-    },
-    {
-      from: "/MXSDK/Domain+Model+Metamodel",
-      to: "/MXSDK/domain-model-metamodel"
-    },
-    {
-      from: "/MXSDK/FAQ",
-      to: "/MXSDK/faq"
-    },
-    {
-      from: "/MXSDK/Finding+things+in+the+model",
-      to: "/MXSDK/finding-things-in-the-model"
-    },
-    {
-      from: "/MXSDK/Generating+code+from+the+model",
-      to: "/MXSDK/generating-code-from-the-model"
-    },
-    {
-      from: "/MXSDK/Mendix+SDK+Home",
-      to: "/MXSDK/"
-    },
-    {
-      from: "/MXSDK/JavaScript+TypeScript+Resources",
-      to: "/MXSDK/javascript-typescript-resources"
-    },
-    {
-      from: "/MXSDK/Loading+units+and+elements",
-      to: "/MXSDK/loading-units-and-elements"
-    },
-    {
-      from: "/MXSDK/Manipulating+existing+models",
-      to: "/MXSDK/manipulating-existing-models"
-    },
-    {
-      from: "/MXSDK/Microflows+Metamodel",
-      to: "/MXSDK/microflows-metamodel"
-    },
-    {
-      from: "/MXSDK/Pages+Metamodel",
-      to: "/MXSDK/pages-metamodel"
-    },
-    {
-      from: "/MXSDK/Projects+Metamodel",
-      to: "/MXSDK/projects-metamodel"
-    },
-    {
-      from: "/MXSDK/Reference+Documentation",
-      to: "/MXSDK/reference-documentation"
-    },
-    {
-      from: "/MXSDK/Setting+up+your+development+environment",
-      to: "/MXSDK/setting-up-your-development-environment"
-    },
-    {
-      from: "/MXSDK/Understanding+the+metamodel",
-      to: "/MXSDK/understanding-the-metamodel"
-    },
-    {
-      from: "/MXSDK/Use+case+examples",
-      to: "/MXSDK/use-case-examples"
-    },
-    {
-      from: "/MXSDK/Working+with+when.js+and+promises+in+TypeScript",
-      to: "/MXSDK/working-with-when.js-and-promises-in-typescript"
-    },
-    {
-      from: "/MXSDK/Your+learning+path+for+the+Mendix+SDK",
-      to: "/MXSDK/your-learning-path-for-the-mendix-sdk"
+      to: "/developerportal/operate/trends"
     },
     /****************************************************
      * SUPPORT
      ****************************************************/
-    {
-      from: "/mxsupport/Connecting+Project+to+a+Licensed+Node",
-      to: "/howtogeneral/support/how-to-connect-a-project-to-a-licensed-node"
-    },
+
     {
       from: "/mxsupport/Google+Authenticator+and+SMS+Installation",
       to: "/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator"
-    },
-    {
-      from: "/mxsupport/How+to+connect+a+different+project+to+a+node",
-      to: "/howtogeneral/support/how-to-connect-a-different-project-to-a-node"
-    },
-    {
-      from: "/mxsupport/How+to+download+a+backup",
-      to: "/howtogeneral/support/how-to-download-a-backup"
-    },
-    {
-      from: "/mxsupport/How+to+restore+a+backup",
-      to: "/howtogeneral/support/how-to-restore-a-backup"
     },
     {
       from: "/mxsupport/Mendix+Support+Home",
@@ -2295,8 +2304,12 @@ module.exports = {
     },
     {
       from: "/mxsupport/Technical+Contact+Definition",
-      to: "/howtogeneral/support/technical-contact"
+      to: "/developerportal/settings/technical-contact"
     },
+ {
+      from: "/mxsupport/technical-contact",
+      to: "/developerportal/settings/technical-contact"
+    },	  
     /****************************************************
      * REFERENCE GUIDE MENDIX 4
      ****************************************************/
@@ -6832,1599 +6845,1575 @@ module.exports = {
      ****************************************************/
     {
       "from": "/refguide7/Reference+Guide+7",
-      "to": "/refguide7/"
+      "to": "/refguide/"
     },
     {
       "from": "/refguide7/TreeNavigation",
-      "to": "/refguide7/"
+      "to": "/refguide/"
     },
     {
       "from": "/refguide7/Access+Rules",
-      "to": "/refguide7/access-rules"
+      "to": "/refguide/access-rules"
     },
     {
       "from": "/refguide7/Action+Button",
-      "to": "/refguide7/action-button"
+      "to": "/refguide/action-button"
     },
     {
       "from": "/refguide7/Action+Call+Activities",
-      "to": "/refguide7/action-call-activities"
+      "to": "/refguide/action-call-activities"
     },
     {
       "from": "/refguide7/Actions",
-      "to": "/refguide7/actions"
+      "to": "/refguide/actions"
     },
     {
       "from": "/refguide7/Activities",
-      "to": "/refguide7/activities"
+      "to": "/refguide/activities"
     },
     {
       "from": "/refguide7/Add+button",
-      "to": "/refguide7/add-button"
+      "to": "/refguide/add-button"
     },
     {
       "from": "/refguide7/Add+date+function+calls",
-      "to": "/refguide7/add-date-function-calls"
+      "to": "/refguide/add-date-function-calls"
     },
     {
       "from": "/refguide7/Administrator",
-      "to": "/refguide7/administrator"
+      "to": "/refguide/administrator"
     },
     {
       "from": "/refguide7/Aggregate+List",
-      "to": "/refguide7/aggregate-list"
+      "to": "/refguide/aggregate-list"
     },
     {
       "from": "/refguide7/Annotation",
-      "to": "/refguide7/annotation"
+      "to": "/refguide/annotation"
     },
     {
       "from": "/refguide7/Annotation+flow",
-      "to": "/refguide7/annotation-flow"
+      "to": "/refguide/annotation-flow"
     },
     {
       "from": "/refguide7/Annotations",
-      "to": "/refguide7/annotations"
+      "to": "/refguide/annotations"
     },
     {
       "from": "/refguide7/Anonymous+Users",
-      "to": "/refguide7/anonymous-users"
+      "to": "/refguide/anonymous-users"
     },
     {
       "from": "/refguide7/App+Platform",
-      "to": "/refguide7/app-platform"
+      "to": "/refguide/app-platform"
     },
     {
       "from": "/refguide7/App+Settings+Dialog",
-      "to": "/refguide7/app-settings-dialog"
+      "to": "/refguide/app-settings-dialog"
     },
     {
       "from": "/refguide7/Arithmetic+expressions",
-      "to": "/refguide7/arithmetic-expressions"
+      "to": "/refguide/arithmetic-expressions"
     },
     {
       "from": "/refguide7/Association+Source",
-      "to": "/refguide7/association-source"
+      "to": "/refguide/association-source"
     },
     {
       "from": "/refguide7/Associations",
-      "to": "/refguide7/associations"
+      "to": "/refguide/associations"
     },
     {
       "from": "/refguide7/Attributes",
-      "to": "/refguide7/attributes"
+      "to": "/refguide/attributes"
     },
     {
       "from": "/refguide7/Between+date+function+calls",
-      "to": "/refguide7/between-date-function-calls"
+      "to": "/refguide/between-date-function-calls"
     },
     {
       "from": "/refguide7/Boolean+expressions",
-      "to": "/refguide7/boolean-expressions"
+      "to": "/refguide/boolean-expressions"
     },
     {
       "from": "/refguide7/Branch+Line+Manager+Dialog",
-      "to": "/refguide7/branch-line-manager-dialog"
+      "to": "/refguide/branch-line-manager-dialog"
     },
     {
       "from": "/refguide7/Break+Event",
-      "to": "/refguide7/break-event"
+      "to": "/refguide/break-event"
     },
     {
       "from": "/refguide7/Button+Widgets",
-      "to": "/refguide7/button-widgets"
+      "to": "/refguide/button-widgets"
     },
     {
       "from": "/refguide7/Call+Rest+Action",
-      "to": "/refguide7/call-rest-action"
+      "to": "/refguide/call-rest-action"
     },
     {
       "from": "/refguide7/Call+Web+Service",
-      "to": "/refguide7/call-web-service"
+      "to": "/refguide/call-web-service"
     },
     {
       "from": "/refguide7/Call+Web+Service+Action",
-      "to": "/refguide7/call-web-service-action"
+      "to": "/refguide/call-web-service-action"
     },
     {
       "from": "/refguide7/Cast+Object",
-      "to": "/refguide7/cast-object"
+      "to": "/refguide/cast-object"
     },
     {
       "from": "/refguide7/Cell+Document+Template",
-      "to": "/refguide7/cell-document-template"
+      "to": "/refguide/cell-document-template"
     },
     {
       "from": "/refguide7/Certificates",
-      "to": "/refguide7/certificates"
+      "to": "/refguide/certificates"
     },
     {
       "from": "/refguide7/Change+List",
-      "to": "/refguide7/change-list"
+      "to": "/refguide/change-list"
     },
     {
       "from": "/refguide7/Change+Object",
-      "to": "/refguide7/change-object"
+      "to": "/refguide/change-object"
     },
     {
       "from": "/refguide7/Change+Variable",
-      "to": "/refguide7/change-variable"
+      "to": "/refguide/change-variable"
     },
     {
       "from": "/refguide7/Check+box",
-      "to": "/refguide7/check-box"
+      "to": "/refguide/check-box"
     },
     {
       "from": "/refguide7/Client+Activities",
-      "to": "/refguide7/client-activities"
+      "to": "/refguide/client-activities"
     },
     {
       "from": "/refguide7/Close+Form",
-      "to": "/refguide7/close-form"
+      "to": "/refguide/close-form"
     },
     {
       "from": "/refguide7/Clustered+Mendix+Runtime",
-      "to": "/refguide7/clustered-mendix-runtime"
+      "to": "/refguide/clustered-mendix-runtime"
     },
     {
       "from": "/refguide7/Clustered+Mendix+Business+Server",
-      "to": "/refguide7/clustered-mendix-runtime"
+      "to": "/refguide/clustered-mendix-runtime"
     },
     {
       "from": "/refguide7/Columns",
-      "to": "/refguide7/columns"
+      "to": "/refguide/columns"
     },
     {
       "from": "/refguide7/Columns+Document+Template",
-      "to": "/refguide7/columns-document-template"
+      "to": "/refguide/columns-document-template"
     },
     {
       "from": "/refguide7/Commit+Dialog",
-      "to": "/refguide7/commit-dialog"
+      "to": "/refguide/commit-dialog"
     },
     {
       "from": "/refguide7/Commit+Object(s)",
-      "to": "/refguide7/committing-objects"
+      "to": "/refguide/committing-objects"
     },
     {
       "from": "/refguide7/Committing+Objects",
-      "to": "/refguide7/committing-objects"
+      "to": "/refguide/committing-objects"
     },
     {
       "from": "/refguide7/Common+Widget+Properties",
-      "to": "/refguide7/common-widget-properties"
+      "to": "/refguide/common-widget-properties"
     },
     {
       "from": "/refguide7/Common+Widgets",
-      "to": "/refguide7/common-widgets"
+      "to": "/refguide/common-widgets"
     },
     {
       "from": "/refguide7/Comparison+Search+Field",
-      "to": "/refguide7/comparison-search-field"
+      "to": "/refguide/comparison-search-field"
     },
     {
       "from": "/refguide7/Conditions",
-      "to": "/refguide7/conditions"
+      "to": "/refguide/conditions"
     },
     {
       "from": "/refguide7/Configuration",
-      "to": "/refguide7/configuration"
+      "to": "/refguide/configuration"
     },
     {
       "from": "/refguide7/Configuring+Hybrid+Mobile+Apps+To+Run+Offline",
-      "to": "/refguide7/configuring-hybrid-mobile-apps-to-run-offline"
+      "to": "/refguide/configuring-hybrid-mobile-apps-to-run-offline"
     },
     {
       "from": "/refguide7/Constants",
-      "to": "/refguide7/constants"
+      "to": "/refguide/constants"
     },
     {
       "from": "/refguide7/Consumed+App+Services",
-      "to": "/refguide7/consumed-app-services"
+      "to": "/refguide/consumed-app-services"
     },
     {
       "from": "/refguide7/Consumed+REST+Services",
-      "to": "/refguide7/consumed-rest-services"
+      "to": "/refguide/consumed-rest-services"
     },
     {
       "from": "/refguide7/Consumed+web+service",
-      "to": "/refguide7/consumed-web-service"
+      "to": "/refguide/consumed-web-service"
     },
     {
       "from": "/refguide7/Consumed+Web+Services",
-      "to": "/refguide7/consumed-web-services"
+      "to": "/refguide/consumed-web-services"
     },
     {
       "from": "/refguide7/Container",
-      "to": "/refguide7/container"
+      "to": "/refguide/container"
     },
     {
       "from": "/refguide7/Container+Widgets",
-      "to": "/refguide7/container-widgets"
-    },
-    {
-      "from": "/refguide7/Context+Mechanism",
-      "to": "/refguide7/context-mechanism"
+      "to": "/refguide/container-widgets"
     },
     {
       "from": "/refguide7/Continue+Event",
-      "to": "/refguide7/continue-event"
+      "to": "/refguide/continue-event"
     },
     {
       "from": "/refguide7/Control+Bar",
-      "to": "/refguide7/control-bar"
+      "to": "/refguide/control-bar"
     },
     {
       "from": "/refguide7/Create+Branch+Line+Dialog",
-      "to": "/refguide7/create-branch-line-dialog"
+      "to": "/refguide/create-branch-line-dialog"
     },
     {
       "from": "/refguide7/Create+Deployment+Package+Dialog",
-      "to": "/refguide7/create-deployment-package-dialog"
+      "to": "/refguide/create-deployment-package-dialog"
     },
     {
       "from": "/refguide7/Create+List",
-      "to": "/refguide7/create-list"
+      "to": "/refguide/create-list"
     },
     {
       "from": "/refguide7/Create+Object",
-      "to": "/refguide7/create-object"
+      "to": "/refguide/create-object"
     },
     {
       "from": "/refguide7/Create+Variable",
-      "to": "/refguide7/create-variable"
+      "to": "/refguide/create-variable"
     },
     {
       "from": "/refguide7/Custom+Settings",
-      "to": "/refguide7/custom-settings"
+      "to": "/refguide/custom-settings"
     },
     {
       "from": "/refguide7/Customizing+Hybrid+Mobile+Apps",
-      "to": "/refguide7/customizing-hybrid-mobile-apps"
+      "to": "/refguide/customizing-hybrid-mobile-apps"
     },
     {
       "from": "/refguide7/Customizing+PhoneGap+Build+packages",
-      "to": "/refguide7/customizing-phonegap-build-packages"
+      "to": "/refguide/customizing-phonegap-build-packages"
     },
     {
       "from": "/refguide7/Data+grid",
-      "to": "/refguide7/data-grid"
+      "to": "/refguide/data-grid"
     },
     {
       "from": "/refguide7/Data+Grid+Document+Template",
-      "to": "/refguide7/data-grid-document-template"
+      "to": "/refguide/data-grid-document-template"
     },
     {
       "from": "/refguide7/Data+Sets",
-      "to": "/refguide7/data-sets"
+      "to": "/refguide/data-sets"
     },
     {
       "from": "/refguide7/Data+Sources",
-      "to": "/refguide7/data-sources"
+      "to": "/refguide/data-sources"
     },
     {
       "from": "/refguide7/Data+Storage",
-      "to": "/refguide7/data-storage"
+      "to": "/refguide/data-storage"
     },
     {
       "from": "/refguide7/Data+Types",
-      "to": "/refguide7/data-types"
+      "to": "/refguide/data-types"
     },
     {
       "from": "/refguide7/Data+view",
-      "to": "/refguide7/data-view"
+      "to": "/refguide/data-view"
     },
     {
       "from": "/refguide7/Data+View+Document+Template",
-      "to": "/refguide7/data-view-document-template"
+      "to": "/refguide/data-view-document-template"
     },
     {
       "from": "/refguide7/Data+Widgets",
-      "to": "/refguide7/data-widgets"
+      "to": "/refguide/data-widgets"
     },
     {
       "from": "/refguide7/Database+Source",
-      "to": "/refguide7/database-source"
+      "to": "/refguide/database-source"
     },
     {
       "from": "/refguide7/Date+and+Time+Handling+in+3.0",
-      "to": "/refguide7/date-and-time-handling"
+      "to": "/refguide/date-and-time-handling"
     },
     {
       "from": "/refguide7/Date+creation",
-      "to": "/refguide7/date-creation"
+      "to": "/refguide/date-creation"
     },
     {
       "from": "/refguide7/Date+picker",
-      "to": "/refguide7/date-picker"
+      "to": "/refguide/date-picker"
     },
     {
       "from": "/refguide7/Date+Range+Field",
-      "to": "/refguide7/date-range-field"
+      "to": "/refguide/date-range-field"
     },
     {
       "from": "/refguide7/DateTime+handling+FAQ",
-      "to": "/refguide7/datetime-handling-faq"
+      "to": "/refguide/datetime-handling-faq"
     },
     {
       "from": "/refguide7/DB2",
-      "to": "/refguide7/db2"
+      "to": "/refguide/db2"
     },
     {
       "from": "/refguide7/Delete+button",
-      "to": "/refguide7/delete-button"
+      "to": "/refguide/delete-button"
     },
     {
       "from": "/refguide7/Delete+Object(s)",
-      "to": "/refguide7/deleting-objects"
+      "to": "/refguide/deleting-objects"
     },
     {
       "from": "/refguide7/Deleting+Objects",
-      "to": "/refguide7/deleting-objects"
+      "to": "/refguide/deleting-objects"
     },
     {
       "from": "/refguide7/Demo+Users",
-      "to": "/refguide7/demo-users"
+      "to": "/refguide/demo-users"
     },
     {
       "from": "/refguide7/Deploy+To+The+Cloud+Dialog",
-      "to": "/refguide7/deploy-to-the-cloud-dialog"
+      "to": "/refguide/deploy-to-the-cloud-dialog"
     },
     {
       "from": "/refguide7/Deployment",
-      "to": "/refguide7/deployment"
+      "to": "/refguide/deployment"
     },
     {
       "from": "/refguide7/Deselect+all+button",
-      "to": "/refguide7/deselect-all-button"
+      "to": "/refguide/deselect-all-button"
     },
     {
       "from": "/refguide7/Desktop+profile",
-      "to": "/refguide7/desktop-profile"
+      "to": "/refguide/desktop-profile"
     },
     {
       "from": "/refguide7/Developing+Hybrid+Mobile+Apps",
-      "to": "/refguide7/developing-hybrid-mobile-apps"
+      "to": "/refguide/developing-hybrid-mobile-apps"
     },
     {
       "from": "/refguide7/Dialogs",
-      "to": "/refguide7/dialogs"
+      "to": "/refguide/dialogs"
     },
     {
       "from": "/refguide7/Document+Generation+Activities",
-      "to": "/refguide7/document-generation-activities"
+      "to": "/refguide/document-generation-activities"
     },
     {
       "from": "/refguide7/Document+Template",
-      "to": "/refguide7/document-template"
+      "to": "/refguide/document-template"
     },
     {
       "from": "/refguide7/Document+Templates",
-      "to": "/refguide7/document-templates"
+      "to": "/refguide/document-templates"
     },
     {
       "from": "/refguide7/Domain+Model",
-      "to": "/refguide7/domain-model"
+      "to": "/refguide/domain-model"
     },
     {
       "from": "/refguide7/Download+File",
-      "to": "/refguide7/download-file"
+      "to": "/refguide/download-file"
     },
     {
       "from": "/refguide7/Download+From+Team+Server+Dialog",
-      "to": "/refguide7/download-from-team-server-dialog"
+      "to": "/refguide/download-from-team-server-dialog"
     },
     {
       "from": "/refguide7/Drop-down",
-      "to": "/refguide7/drop_down"
+      "to": "/refguide/drop_down"
     },
     {
       "from": "/refguide7/Drop+Down+Widget",
-      "to": "/refguide7/drop_down"
+      "to": "/refguide/drop_down"
     },
     {
       "from": "/refguide7/Drop+Down Widget",
-      "to": "/refguide7/drop_down"
+      "to": "/refguide/drop_down"
     },
     {
       "from": "/refguide7/Drop+down+button",
-      "to": "/refguide7/drop-down-button"
+      "to": "/refguide/drop-down-button"
     },
     {
       "from": "/refguide7/Drop+Down+Search+Field",
-      "to": "/refguide7/drop-down-search-field"
+      "to": "/refguide/drop-down-search-field"
     },
     {
       "from": "/refguide7/Dynamic+Image+Document+Template",
-      "to": "/refguide7/dynamic-image-document-template"
+      "to": "/refguide/dynamic-image-document-template"
     },
     {
       "from": "/refguide7/Dynamic+Label+Document+Template",
-      "to": "/refguide7/dynamic-label-document-template"
+      "to": "/refguide/dynamic-label-document-template"
     },
     {
       "from": "/refguide7/Edit+button",
-      "to": "/refguide7/edit-button"
+      "to": "/refguide/edit-button"
     },
     {
       "from": "/refguide7/Edit+Cloud+Foundry+Settings+Dialog",
-      "to": "/refguide7/edit-cloud-foundry-settings-dialog"
+      "to": "/refguide/edit-cloud-foundry-settings-dialog"
     },
     {
       "from": "/refguide7/End+Event",
-      "to": "/refguide7/end-event"
+      "to": "/refguide/end-event"
     },
     {
       "from": "/refguide7/Entities",
-      "to": "/refguide7/entities"
+      "to": "/refguide/entities"
     },
     {
       "from": "/refguide7/Entity+Path+Source",
-      "to": "/refguide7/entity-path-source"
+      "to": "/refguide/entity-path-source"
     },
     {
       "from": "/refguide7/Enumeration+Values",
-      "to": "/refguide7/enumeration-values"
+      "to": "/refguide/enumeration-values"
     },
     {
       "from": "/refguide7/Enumerations",
-      "to": "/refguide7/enumerations"
+      "to": "/refguide/enumerations"
     },
     {
       "from": "/refguide7/Enumerations+in+microflow+expressions",
-      "to": "/refguide7/enumerations-in-microflow-expressions"
+      "to": "/refguide/enumerations-in-microflow-expressions"
     },
     {
       "from": "/refguide7/Error+Event",
-      "to": "/refguide7/error-event"
+      "to": "/refguide/error-event"
     },
     {
       "from": "/refguide7/Event+Handlers",
-      "to": "/refguide7/event-handlers"
+      "to": "/refguide/event-handlers"
     },
     {
       "from": "/refguide7/Exclusive+Split",
-      "to": "/refguide7/exclusive-split"
+      "to": "/refguide/exclusive-split"
     },
     {
       "from": "/refguide7/Export+Mapping+Action",
-      "to": "/refguide7/export-mapping-action"
+      "to": "/refguide/export-mapping-action"
     },
     {
       "from": "/refguide7/Export+Mappings",
-      "to": "/refguide7/export-mappings"
+      "to": "/refguide/export-mappings"
     },
     {
       "from": "/refguide7/Export+to+CSV+button",
-      "to": "/refguide7/export-to-csv-button"
+      "to": "/refguide/export-to-csv-button"
     },
     {
       "from": "/refguide7/Export+to+excel+button",
-      "to": "/refguide7/export-to-excel-button"
+      "to": "/refguide/export-to-excel-button"
     },
     {
       "from": "/refguide7/Export+XML",
-      "to": "/refguide7/export-xml"
+      "to": "/refguide/export-xml"
     },
     {
       "from": "/refguide7/File+manager",
-      "to": "/refguide7/file-manager"
+      "to": "/refguide/file-manager"
     },
     {
       "from": "/refguide7/File+Widgets",
-      "to": "/refguide7/file-widgets"
+      "to": "/refguide/file-widgets"
     },
     {
       "from": "/refguide7/Footer+Document+Template",
-      "to": "/refguide7/footer-document-template"
+      "to": "/refguide/footer-document-template"
     },
     {
       "from": "/refguide7/General",
-      "to": "/refguide7/general"
+      "to": "/refguide/general"
     },
     {
       "from": "/refguide7/Generate+Document",
-      "to": "/refguide7/generate-document"
+      "to": "/refguide/generate-document"
     },
     {
       "from": "/refguide7/Getting+the+Mendix+Developer+App",
-      "to": "/refguide7/getting-the-mendix-developer-app"
+      "to": "/refguide/getting-the-mendix-developer-app"
     },
     {
       "from": "/refguide7/Grid+action+button",
-      "to": "/refguide7/grid-action-button"
-    },
-    {
-      "from": "/refguide7/Grid+microflow+button",
-      "to": "/refguide7/grid-microflow-button"
+      "to": "/refguide/grid-action-button"
     },
     {
       "from": "/refguide7/Grid+New+Button",
-      "to": "/refguide7/grid-new-button"
+      "to": "/refguide/grid-new-button"
     },
     {
       "from": "/refguide7/Group+box",
-      "to": "/refguide7/group-box"
+      "to": "/refguide/group-box"
     },
     {
       "from": "/refguide7/Section",
-      "to": "/refguide7/group-box"
+      "to": "/refguide/group-box"
     },
     {
       "from": "/refguide7/Header",
-      "to": "/refguide7/header"
+      "to": "/refguide/header"
     },
     {
       "from": "/refguide7/Header+Document+Template",
-      "to": "/refguide7/header-document-template"
+      "to": "/refguide/header-document-template"
     },
     {
       "from": "/refguide7/History+Dialog",
-      "to": "/refguide7/history-dialog"
+      "to": "/refguide/history-dialog"
     },
     {
       "from": "/refguide7/If+expressions",
-      "to": "/refguide7/if-expressions"
+      "to": "/refguide/if-expressions"
     },
     {
       "from": "/refguide7/Image",
-      "to": "/refguide7/image"
+      "to": "/refguide/image"
     },
     {
       "from": "/refguide7/Image+uploader",
-      "to": "/refguide7/image-uploader"
+      "to": "/refguide/image-uploader"
     },
     {
       "from": "/refguide7/Image+viewer",
-      "to": "/refguide7/image-viewer"
+      "to": "/refguide/image-viewer"
     },
     {
       "from": "/refguide7/Images+refguide",
-      "to": "/refguide7/images"
+      "to": "/refguide/images"
     },
     {
       "from": "/refguide7/Images",
-      "to": "/refguide7/images"
+      "to": "/refguide/images"
     },
     {
       "from": "/refguide7/Image+Property",
-      "to": "/refguide7/image-property"
+      "to": "/refguide/image-property"
     },
     {
       "from": "/refguide7/Import+Mapping+Action",
-      "to": "/refguide7/import-mapping-action"
+      "to": "/refguide/import-mapping-action"
     },
     {
       "from": "/refguide7/Import+Mappings",
-      "to": "/refguide7/import-mappings"
+      "to": "/refguide/import-mappings"
     },
     {
       "from": "/refguide7/Import+XML",
-      "to": "/refguide7/import-xml"
+      "to": "/refguide/import-xml"
     },
     {
       "from": "/refguide7/Inheritance+Split",
-      "to": "/refguide7/inheritance-split"
+      "to": "/refguide/inheritance-split"
     },
     {
       "from": "/refguide7/Indexes",
-      "to": "/refguide7/indexes"
+      "to": "/refguide/indexes"
     },
     {
       "from": "/refguide7/Input+reference+set+selector",
-      "to": "/refguide7/input-reference-set-selector"
+      "to": "/refguide/input-reference-set-selector"
     },
     {
       "from": "/refguide7/Input+Widgets",
-      "to": "/refguide7/input-widgets"
+      "to": "/refguide/input-widgets"
     },
     {
       "from": "/refguide7/Integration",
-      "to": "/refguide7/integration"
+      "to": "/refguide/integration"
     },
     {
       "from": "/refguide7/Integration+Activities",
-      "to": "/refguide7/integration-activities"
+      "to": "/refguide/integration-activities"
     },
     {
       "from": "/refguide7/Java+Action+Call",
-      "to": "/refguide7/java-action-call"
+      "to": "/refguide/java-action-call"
     },
     {
       "from": "/refguide7/Java+Actions",
-      "to": "/refguide7/java-actions"
+      "to": "/refguide/java-actions"
     },
     {
       "from": "/refguide7/Java+Memory+Usage+With+Mendix",
-      "to": "/refguide7/java-memory-usage-with-mendix"
+      "to": "/refguide/java-memory-usage-with-mendix"
     },
     {
       "from": "/refguide7/Java+Programming",
-      "to": "/refguide7/java-programming"
+      "to": "/refguide/java-programming"
     },
     {
       "from": "/refguide7/JSON+Structures",
-      "to": "/refguide7/json-structures"
+      "to": "/refguide/json-structures"
     },
     {
       "from": "/refguide7/Label",
-      "to": "/refguide7/label"
+      "to": "/refguide/label"
     },
     {
       "from": "/refguide7/Layout",
-      "to": "/refguide7/layout"
+      "to": "/refguide/layout"
     },
     {
       "from": "/refguide7/Layouts",
-      "to": "/refguide7/layout"
+      "to": "/refguide/layout"
     },
     {
       "from": "/refguide7/Layout+grid",
-      "to": "/refguide7/layout-grid"
+      "to": "/refguide/layout-grid"
     },
     {
       "from": "/refguide7/Layout+Widgets",
-      "to": "/refguide7/layout-widgets"
+      "to": "/refguide/layout-widgets"
     },
     {
       "from": "/refguide7/Line+Break+Document+Template",
-      "to": "/refguide7/line-break-document-template"
+      "to": "/refguide/line-break-document-template"
     },
-    {
+	{
       "from": "/refguide7/Link+button",
-      "to": "/refguide7/link-button"
-    },
+      "to": "/refguide/action-button"
+	},
     {
       "from": "/refguide7/List+Activities",
-      "to": "/refguide7/list-activities"
+      "to": "/refguide/list-activities"
     },
     {
       "from": "/refguide7/List+Operation",
-      "to": "/refguide7/list-operation"
+      "to": "/refguide/list-operation"
     },
     {
       "from": "/refguide7/List+view",
-      "to": "/refguide7/list-view"
+      "to": "/refguide/list-view"
     },
     {
       "from": "/refguide7/Listen+To+Grid+Source",
-      "to": "/refguide7/listen-to-grid-source"
+      "to": "/refguide/listen-to-grid-source"
     },
     {
       "from": "/refguide7/Log+Message",
-      "to": "/refguide7/log-message"
+      "to": "/refguide/log-message"
     },
     {
       "from": "/refguide7/Logging",
-      "to": "/refguide7/logging"
+      "to": "/refguide/logging"
     },
     {
       "from": "/refguide7/Logging+Activities",
-      "to": "/refguide7/logging-activities"
+      "to": "/refguide/logging-activities"
     },
     {
       "from": "/refguide7/Loop",
-      "to": "/refguide7/loop"
+      "to": "/refguide/loop"
     },
     {
       "from": "/refguide7/Managing+App+Signing+Keys",
-      "to": "/refguide7/managing-app-signing-keys"
+      "to": "/refguide/managing-app-signing-keys"
     },
     {
       "from": "/refguide7/Map+Automatically",
-      "to": "/refguide7/map-automatically"
+      "to": "/refguide/map-automatically"
     },
     {
       "from": "/refguide7/Mapping+Documents",
-      "to": "/refguide7/mapping-documents"
+      "to": "/refguide/mapping-documents"
     },
     {
       "from": "/refguide7/Mathematical+function+calls",
-      "to": "/refguide7/mathematical-function-calls"
+      "to": "/refguide/mathematical-function-calls"
     },
     {
       "from": "/refguide7/Menu",
-      "to": "/refguide7/menu"
+      "to": "/refguide/menu"
     },
     {
       "from": "/refguide7/Menu+Bar",
-      "to": "/refguide7/menu-bar"
+      "to": "/refguide/menu-bar"
     },
     {
       "from": "/refguide7/Menu+Item",
-      "to": "/refguide7/menu-item"
+      "to": "/refguide/menu-item"
     },
     {
       "from": "/refguide7/Menu+Widgets",
-      "to": "/refguide7/menu-widgets"
+      "to": "/refguide/menu-widgets"
     },
     {
       "from": "/refguide7/Merge",
-      "to": "/refguide7/merge"
+      "to": "/refguide/merge"
     },
     {
       "from": "/refguide7/Merge+Dialog",
-      "to": "/refguide7/merge-dialog"
+      "to": "/refguide/merge-dialog"
     },
     {
       "from": "/refguide7/Microflow",
-      "to": "/refguide7/microflow"
+      "to": "/refguide/microflow"
     },
     {
       "from": "/refguide7/Microflow+Activities",
-      "to": "/refguide7/microflow-activities"
+      "to": "/refguide/microflow-activities"
     },
     {
       "from": "/refguide7/Microflow+Call",
-      "to": "/refguide7/microflow-call"
+      "to": "/refguide/microflow-call"
     },
     {
       "from": "/refguide7/Microflow+Element+Common+Properties",
-      "to": "/refguide7/microflow-element-common-properties"
+      "to": "/refguide/microflow-element-common-properties"
     },
     {
       "from": "/refguide7/Microflow+Expressions",
-      "to": "/refguide7/microflow-expressions"
+      "to": "/refguide/microflow-expressions"
     },
     {
       "from": "/refguide7/Microflow+Source",
-      "to": "/refguide7/microflow-source"
+      "to": "/refguide/microflow-source"
     },
     {
       "from": "/refguide7/Microflows",
-      "to": "/refguide7/microflows"
+      "to": "/refguide/microflows"
     },
     {
       "from": "/refguide7/Microsoft+SQL+Server+maintenance",
-      "to": "/refguide7/microsoft-sql-server-maintenance"
+      "to": "/refguide/microsoft-sql-server-maintenance"
     },
     {
       "from": "/refguide7/Mobile",
-      "to": "/refguide7/mobile"
+      "to": "/refguide/mobile"
     },
     {
       "from": "/refguide7/Model+Share",
-      "to": "/refguide7/model-share"
+      "to": "/refguide/model-share"
     },
     {
       "from": "/refguide7/Modeler",
-      "to": "/refguide7/modeler"
+      "to": "/refguide/modeler"
     },
     {
       "from": "/refguide7/Module+Role",
-      "to": "/refguide7/module-role"
+      "to": "/refguide/module-role"
     },
     {
       "from": "/refguide7/Module+Security",
-      "to": "/refguide7/module-security"
+      "to": "/refguide/module-security"
     },
     {
       "from": "/refguide7/Module+Status",
-      "to": "/refguide7/module-status"
+      "to": "/refguide/module-status"
     },
     {
       "from": "/refguide7/Modules",
-      "to": "/refguide7/modules"
+      "to": "/refguide/modules"
     },
     {
       "from": "/refguide7/Monitoring+-+Mendix+Runtime",
-      "to": "/refguide7/monitoring-mendix-runtime"
+      "to": "/refguide/monitoring-mendix-runtime"
     },
     {
       "from": "/refguide7/Monitoring+-+Mendix+Business+Server",
-      "to": "/refguide7/monitoring-mendix-runtime"
-    },
-    {
-      "from": "/refguide7/Monitoring+-+What+to+monitor",
-      "to": "/refguide7/monitoring-what-to-monitor"
+      "to": "/refguide/monitoring-mendix-runtime"
     },
     {
       "from": "/refguide7/Moving+from+6+to+7",
-      "to": "/refguide7/moving-from-6-to-7"
+      "to": "/refguide/moving-from-6-to-7"
     },
     {
       "from": "/refguide7/MxBuild",
-      "to": "/refguide7/mxbuild"
+      "to": "/refguide/mxbuild"
     },
     {
       "from": "/refguide7/MySQL",
-      "to": "/refguide7/mysql"
+      "to": "/refguide/mysql"
     },
     {
       "from": "/refguide7/Navigation",
-      "to": "/refguide7/navigation"
+      "to": "/refguide/navigation"
     },
     {
       "from": "/refguide7/Navigation+list",
-      "to": "/refguide7/navigation-list"
+      "to": "/refguide/navigation-list"
     },
     {
       "from": "/refguide7/Navigation+Tree",
-      "to": "/refguide7/navigation-tree"
+      "to": "/refguide/navigation-tree"
     },
     {
       "from": "/refguide7/New+button",
-      "to": "/refguide7/new-button"
+      "to": "/refguide/new-button"
     },
     {
       "from": "/refguide7/NULL+Ordering+Behavior",
-      "to": "/refguide7/null-ordering-behavior"
+      "to": "/refguide/null-ordering-behavior"
     },
     {
       "from": "/refguide7/Numeric+formatting",
-      "to": "/refguide7/numeric-formatting"
+      "to": "/refguide/numeric-formatting"
     },
     {
       "from": "/refguide7/Object+Activities",
-      "to": "/refguide7/object-activities"
+      "to": "/refguide/object-activities"
     },
     {
       "from": "/refguide7/OData+Query+Options",
-      "to": "/refguide7/odata-query-options"
+      "to": "/refguide/odata-query-options"
     },
     {
       "from": "/refguide7/OData+Representation",
-      "to": "/refguide7/odata-representation"
+      "to": "/refguide/odata-representation"
     },
     {
       "from": "/refguide7/Offline",
-      "to": "/refguide7/offline"
+      "to": "/refguide/offline"
     },
     {
       "from": "/refguide7/Offline+device+profile",
-      "to": "/refguide7/offline-device-profile"
+      "to": "/refguide/offline-device-profile"
     },
     {
       "from": "/refguide7/On+Click+Event",
-      "to": "/refguide7/on-click-event"
+      "to": "/refguide/on-click-event"
     },
     {
       "from": "/refguide7/Open+Project+Dialog",
-      "to": "/refguide7/open-project-dialog"
+      "to": "/refguide/open-project-dialog"
     },
     {
       "from": "/refguide7/Opening+Pages",
-      "to": "/refguide7/opening-pages"
+      "to": "/refguide/opening-pages"
     },
     {
       "from": "/refguide7/Operations",
-      "to": "/refguide7/operations"
+      "to": "/refguide/operations"
     },
     {
       "from": "/refguide7/OQL",
-      "to": "/refguide7/oql"
+      "to": "/refguide/oql"
     },
     {
       "from": "/refguide7/OQL+Aggregation",
-      "to": "/refguide7/oql-aggregation"
+      "to": "/refguide/oql-aggregation"
     },
     {
       "from": "/refguide7/OQL+Case+Expression",
-      "to": "/refguide7/oql-case-expression"
+      "to": "/refguide/oql-case-expression"
     },
     {
       "from": "/refguide7/OQL+CAST",
-      "to": "/refguide7/oql-cast"
+      "to": "/refguide/oql-cast"
     },
     {
       "from": "/refguide7/OQL+COALESCE",
-      "to": "/refguide7/oql-coalesce"
+      "to": "/refguide/oql-coalesce"
     },
     {
       "from": "/refguide7/OQL+DATEDIFF",
-      "to": "/refguide7/oql-datediff"
+      "to": "/refguide/oql-datediff"
     },
     {
       "from": "/refguide7/OQL+DATEPART",
-      "to": "/refguide7/oql-datepart"
+      "to": "/refguide/oql-datepart"
     },
     {
       "from": "/refguide7/OQL+Expressions",
-      "to": "/refguide7/oql-expressions"
+      "to": "/refguide/oql-expressions"
     },
     {
       "from": "/refguide7/OQL+From+Clause",
-      "to": "/refguide7/oql-from-clause"
+      "to": "/refguide/oql-from-clause"
     },
     {
       "from": "/refguide7/OQL+FULL+OUTER+JOIN",
-      "to": "/refguide7/oql-full-outer-join"
+      "to": "/refguide/oql-full-outer-join"
     },
     {
       "from": "/refguide7/OQL+Functions",
-      "to": "/refguide7/oql-functions"
+      "to": "/refguide/oql-functions"
     },
     {
       "from": "/refguide7/OQL+Group+by+Clause",
-      "to": "/refguide7/oql-group-by-clause"
+      "to": "/refguide/oql-group-by-clause"
     },
     {
       "from": "/refguide7/OQL+INNER+JOIN",
-      "to": "/refguide7/oql-inner-join"
+      "to": "/refguide/oql-inner-join"
     },
     {
       "from": "/refguide7/OQL+LEFT+OUTER+JOIN",
-      "to": "/refguide7/oql-left-outer-join"
+      "to": "/refguide/oql-left-outer-join"
     },
     {
       "from": "/refguide7/OQL+LENGTH",
-      "to": "/refguide7/oql-length"
+      "to": "/refguide/oql-length"
     },
     {
       "from": "/refguide7/OQL+Limit+Clause",
-      "to": "/refguide7/oql-limit-clause"
+      "to": "/refguide/oql-limit-clause"
     },
     {
       "from": "/refguide7/OQL+Operators",
-      "to": "/refguide7/oql-operators"
+      "to": "/refguide/oql-operators"
     },
     {
       "from": "/refguide7/OQL+Order+by+Clause",
-      "to": "/refguide7/oql-order-by-clause"
+      "to": "/refguide/oql-order-by-clause"
     },
     {
       "from": "/refguide7/OQL+Parameters",
-      "to": "/refguide7/oql-parameters"
+      "to": "/refguide/oql-parameters"
     },
     {
       "from": "/refguide7/OQL+RANGEBEGIN",
-      "to": "/refguide7/oql-rangebegin"
+      "to": "/refguide/oql-rangebegin"
     },
     {
       "from": "/refguide7/OQL+RANGEEND",
-      "to": "/refguide7/oql-rangeend"
+      "to": "/refguide/oql-rangeend"
     },
     {
       "from": "/refguide7/OQL+RIGHT+OUTER+JOIN",
-      "to": "/refguide7/oql-right-outer-join"
+      "to": "/refguide/oql-right-outer-join"
     },
     {
       "from": "/refguide7/OQL+ROUND",
-      "to": "/refguide7/oql-round"
+      "to": "/refguide/oql-round"
     },
     {
       "from": "/refguide7/OQL+Select+Clause",
-      "to": "/refguide7/oql-select-clause"
+      "to": "/refguide/oql-select-clause"
     },
     {
       "from": "/refguide7/OQL+Where+Clause",
-      "to": "/refguide7/oql-where-clause"
+      "to": "/refguide/oql-where-clause"
     },
     {
       "from": "/refguide7/Oracle",
-      "to": "/refguide7/oracle"
+      "to": "/refguide/oracle"
     },
     {
       "from": "/refguide7/Packaging+Hybrid+Mobile+Apps",
-      "to": "/refguide7/packaging-hybrid-mobile-apps"
+      "to": "/refguide/packaging-hybrid-mobile-apps"
     },
     {
       "from": "/refguide7/Page",
-      "to": "/refguide7/page"
+      "to": "/refguide/page"
     },
     {
       "from": "/refguide7/Page+Break+Document+Template",
-      "to": "/refguide7/page-break-document-template"
+      "to": "/refguide/page-break-document-template"
     },
     {
       "from": "/refguide7/Page+Concepts",
-      "to": "/refguide7/page-concepts"
+      "to": "/refguide/page-concepts"
     },
     {
       "from": "/refguide7/Page+Templates",
-      "to": "/refguide7/page-templates"
+      "to": "/refguide/page-templates"
     },
     {
       "from": "/refguide7/Page+title",
-      "to": "/refguide7/page-title"
+      "to": "/refguide/page-title"
     },
     {
       "from": "/refguide7/Pages",
-      "to": "/refguide7/pages"
+      "to": "/refguide/pages"
     },
     {
       "from": "/refguide7/Parameter",
-      "to": "/refguide7/parameter"
+      "to": "/refguide/parameter"
     },
     {
       "from": "/refguide7/Parse+and+format+date+function+calls",
-      "to": "/refguide7/parse-and-format-date-function-calls"
+      "to": "/refguide/parse-and-format-date-function-calls"
     },
     {
       "from": "/refguide7/Parse+and+format+decimal+function+calls",
-      "to": "/refguide7/parse-and-format-decimal-function-calls"
+      "to": "/refguide/parse-and-format-decimal-function-calls"
     },
     {
       "from": "/refguide7/Parse+and+format+float+function+calls",
-      "to": "/refguide7/parse-and-format-float-function-calls"
+      "to": "/refguide/parse-and-format-float-function-calls"
     },
     {
       "from": "/refguide7/Parse+integer",
-      "to": "/refguide7/parse-integer"
+      "to": "/refguide/parse-integer"
     },
     {
       "from": "/refguide7/Password+Policy",
-      "to": "/refguide7/password-policy"
+      "to": "/refguide/password-policy"
     },
     {
       "from": "/refguide7/Persistability",
-      "to": "/refguide7/persistability"
+      "to": "/refguide/persistability"
     },
     {
       "from": "/refguide7/Phone+profile",
-      "to": "/refguide7/phone-profile"
+      "to": "/refguide/phone-profile"
     },
     {
       "from": "/refguide7/Placeholder",
-      "to": "/refguide7/placeholder"
+      "to": "/refguide/placeholder"
     },
     {
       "from": "/refguide7/Preferences+Dialog",
-      "to": "/refguide7/preferences-dialog"
-    },
-    {
-      "from": "/refguide7/Proactive+Maintenance",
-      "to": "/refguide7/proactive-maintenance"
+      "to": "/refguide/preferences-dialog"
     },
     {
       "from": "/refguide7/Project",
-      "to": "/refguide7/project"
+      "to": "/refguide/project"
     },
     {
       "from": "/refguide7/Project+Security",
-      "to": "/refguide7/project-security"
+      "to": "/refguide/project-security"
     },
     {
       "from": "/refguide7/Project+Settings",
-      "to": "/refguide7/project-settings"
+      "to": "/refguide/project-settings"
     },
     {
       "from": "/refguide7/Publish+Packages+To+Mobile+Stores",
-      "to": "/refguide7/publish-packages-to-mobile-stores"
+      "to": "/refguide/publish-packages-to-mobile-stores"
     },
     {
       "from": "/refguide7/Published+App+Service",
-      "to": "/refguide7/published-app-service"
+      "to": "/refguide/published-app-service"
     },
     {
       "from": "/refguide7/Published+App+Services",
-      "to": "/refguide7/published-app-services"
+      "to": "/refguide/published-app-services"
     },
     {
       "from": "/refguide7/Published+OData+resource",
-      "to": "/refguide7/published-odata-resource"
+      "to": "/refguide/published-odata-resource"
     },
     {
       "from": "/refguide7/Published+OData+Services",
-      "to": "/refguide7/published-odata-services"
+      "to": "/refguide/published-odata-services"
     },
     {
       "from": "/refguide7/Published+web+service",
-      "to": "/refguide7/published-web-service"
+      "to": "/refguide/published-web-service"
     },
     {
       "from": "/refguide7/Published+Web+Services",
-      "to": "/refguide7/published-web-services"
+      "to": "/refguide/published-web-services"
     },
     {
       "from": "/refguide7/Radio+buttons",
-      "to": "/refguide7/radio-buttons"
+      "to": "/refguide/radio-buttons"
     },
     {
       "from": "/refguide7/Range+Search+Field",
-      "to": "/refguide7/range-search-field"
+      "to": "/refguide/range-search-field"
     },
     {
       "from": "/refguide7/Reference+selector",
-      "to": "/refguide7/reference-selector"
+      "to": "/refguide/reference-selector"
     },
     {
       "from": "/refguide7/Reference+set+selector",
-      "to": "/refguide7/reference-set-selector"
+      "to": "/refguide/reference-set-selector"
     },
     {
       "from": "/refguide7/Regular+Expressions",
-      "to": "/refguide7/regular-expressions"
+      "to": "/refguide/regular-expressions"
     },
     {
       "from": "/refguide7/Relational+expressions",
-      "to": "/refguide7/relational-expressions"
+      "to": "/refguide/relational-expressions"
     },
     {
       "from": "/refguide7/Remove+button",
-      "to": "/refguide7/remove-button"
+      "to": "/refguide/remove-button"
     },
     {
       "from": "/refguide7/Report+Button",
-      "to": "/refguide7/report-button"
+      "to": "/refguide/report-button"
     },
     {
       "from": "/refguide7/Report+Chart",
-      "to": "/refguide7/report-chart"
+      "to": "/refguide/report-chart"
     },
     {
       "from": "/refguide7/Report+Date+Parameter",
-      "to": "/refguide7/report-date-parameter"
+      "to": "/refguide/report-date-parameter"
     },
     {
       "from": "/refguide7/Report+Grid",
-      "to": "/refguide7/report-grid"
+      "to": "/refguide/report-grid"
     },
     {
       "from": "/refguide7/Report+Parameter",
-      "to": "/refguide7/report-parameter"
+      "to": "/refguide/report-parameter"
     },
     {
       "from": "/refguide7/Report+Widgets",
-      "to": "/refguide7/report-widgets"
+      "to": "/refguide/report-widgets"
     },
     {
       "from": "/refguide7/Reporting",
-      "to": "/refguide7/report-widgets"
+      "to": "/refguide/report-widgets"
     },
     {
       "from": "/refguide7/Retrieve",
-      "to": "/refguide7/retrieve"
-    },
-    {
-      "from": "/refguide7/Review+log+files+-+MS+IIS+Server",
-      "to": "/refguide7/review-log-files-ms-iis-server"
-    },
-    {
-      "from": "/refguide7/Review+log+files+-+MS+SQL+Server",
-      "to": "/refguide7/review-log-files-ms-sql-server"
+      "to": "/refguide/retrieve"
     },
     {
       "from": "/refguide7/Rollback+Object",
-      "to": "/refguide7/rollback-object"
+      "to": "/refguide/rollback-object"
     },
     {
       "from": "/refguide7/Row+Document+Template",
-      "to": "/refguide7/row-document-template"
+      "to": "/refguide/row-document-template"
     },
     {
       "from": "/refguide7/Rules",
-      "to": "/refguide7/rules"
+      "to": "/refguide/rules"
     },
     {
       "from": "/refguide7/Runtime",
-      "to": "/refguide7/runtime"
+      "to": "/refguide/runtime"
     },
     {
       "from": "/refguide7/Scheduled+Events",
-      "to": "/refguide7/scheduled-events"
+      "to": "/refguide/scheduled-events"
     },
     {
       "from": "/refguide7/Scroll+Container",
-      "to": "/refguide7/scroll-container"
+      "to": "/refguide/scroll-container"
     },
     {
       "from": "/refguide7/Scroll+Container+Region",
-      "to": "/refguide7/scroll-container-region"
+      "to": "/refguide/scroll-container-region"
     },
     {
       "from": "/refguide7/Search+Bar",
-      "to": "/refguide7/search-bar"
+      "to": "/refguide/search-bar"
     },
     {
       "from": "/refguide7/Search+button",
-      "to": "/refguide7/search-button"
+      "to": "/refguide/search-button"
     },
     {
       "from": "/refguide7/Security",
-      "to": "/refguide7/security"
+      "to": "/refguide/security"
     },
     {
       "from": "/refguide7/Select++Elements",
-      "to": "/refguide7/select--elements"
+      "to": "/refguide/select--elements"
     },
     {
       "from": "/refguide7/Select+all+button",
-      "to": "/refguide7/select-all-button"
+      "to": "/refguide/select-all-button"
     },
     {
       "from": "/refguide7/Select+app+service",
-      "to": "/refguide7/select-app-service"
+      "to": "/refguide/select-app-service"
     },
     {
       "from": "/refguide7/Select+button",
-      "to": "/refguide7/select-button"
+      "to": "/refguide/select-button"
     },
     {
       "from": "/refguide7/Sequence+Flow",
-      "to": "/refguide7/sequence-flow"
+      "to": "/refguide/sequence-flow"
     },
     {
       "from": "/refguide7/Settings",
-      "to": "/refguide7/settings"
+      "to": "/refguide/settings"
     },
     {
       "from": "/refguide7/Show+Home+Page",
-      "to": "/refguide7/show-home-page"
+      "to": "/refguide/show-home-page"
     },
     {
       "from": "/refguide7/Show+Message",
-      "to": "/refguide7/show-message"
+      "to": "/refguide/show-message"
     },
     {
       "from": "/refguide7/Show+Page",
-      "to": "/refguide7/show-page"
+      "to": "/refguide/show-page"
     },
     {
       "from": "/refguide7/Sidebar+toggle+button",
-      "to": "/refguide7/sidebar-toggle-button"
+      "to": "/refguide/sidebar-toggle-button"
     },
     {
       "from": "/refguide7/Sign+In+Dialog",
-      "to": "/refguide7/sign-in-dialog"
+      "to": "/refguide/sign-in-dialog"
     },
-    {
-      "from": "/refguide7/Sign+out+button",
-      "to": "/refguide7/sign-out-button"
-    },
+	{
+	  "from": "/refguide7/Sign+out+button",
+	  "to": "/refguide/action-button"
+	},
     {
       "from": "/refguide7/Simple+Menu+Bar",
-      "to": "/refguide7/simple-menu-bar"
+      "to": "/refguide/simple-menu-bar"
     },
     {
       "from": "/refguide7/Snippet",
-      "to": "/refguide7/snippet"
+      "to": "/refguide/snippet"
     },
     {
       "from": "/refguide7/Snippet+Call",
-      "to": "/refguide7/snippet-call"
+      "to": "/refguide/snippet-call"
     },
     {
       "from": "/refguide7/Sort+Bar",
-      "to": "/refguide7/sort-bar"
+      "to": "/refguide/sort-bar"
     },
     {
       "from": "/refguide7/Special+checks",
-      "to": "/refguide7/special-checks"
+      "to": "/refguide/special-checks"
     },
     {
       "from": "/refguide7/Start+Event",
-      "to": "/refguide7/start-event"
+      "to": "/refguide/start-event"
     },
     {
       "from": "/refguide7/Starting+Microflows",
-      "to": "/refguide7/starting-microflows"
+      "to": "/refguide/starting-microflows"
     },
     {
       "from": "/refguide7/Static+Image+Document+Template",
-      "to": "/refguide7/static-image-document-template"
+      "to": "/refguide/static-image-document-template"
     },
     {
       "from": "/refguide7/Static+Label+Document+Template",
-      "to": "/refguide7/static-label-document-template"
+      "to": "/refguide/static-label-document-template"
     },
     {
       "from": "/refguide7/String+function+calls",
-      "to": "/refguide7/string-function-calls"
+      "to": "/refguide/string-function-calls"
     },
     {
       "from": "/refguide7/Style",
-      "to": "/refguide7/style"
+      "to": "/refguide/style"
     },
     {
       "from": "/refguide7/Summary",
-      "to": "/refguide7/summary"
+      "to": "/refguide/summary"
     },
     {
       "from": "/refguide7/System+Requirements",
-      "to": "/refguide7/system-requirements"
+      "to": "/refguide/system-requirements"
     },
     {
       "from": "/refguide7/System+Texts",
-      "to": "/refguide7/system-texts"
+      "to": "/refguide/system-texts"
     },
     {
       "from": "/refguide7/Tab+container",
-      "to": "/refguide7/tab-container"
+      "to": "/refguide/tab-container"
     },
     {
       "from": "/refguide7/Tab+page",
-      "to": "/refguide7/tab-page"
+      "to": "/refguide/tab-page"
     },
     {
       "from": "/refguide7/Table",
-      "to": "/refguide7/table"
+      "to": "/refguide/table"
     },
     {
       "from": "/refguide7/Table+cell",
-      "to": "/refguide7/table-cell"
+      "to": "/refguide/table-cell"
     },
     {
       "from": "/refguide7/Table+Document+Template",
-      "to": "/refguide7/table-document-template"
+      "to": "/refguide/table-document-template"
     },
     {
       "from": "/refguide7/Table+row",
-      "to": "/refguide7/table-row"
+      "to": "/refguide/table-row"
     },
     {
       "from": "/refguide7/Tablet+profile",
-      "to": "/refguide7/tablet-profile"
+      "to": "/refguide/tablet-profile"
     },
     {
       "from": "/refguide7/Team+Server",
-      "to": "/refguide7/team-server"
+      "to": "/refguide/team-server"
     },
     {
       "from": "/refguide7/Team+Server+FAQ",
-      "to": "/refguide7/team-server-faq"
+      "to": "/refguide/team-server-faq"
     },
     {
       "from": "/refguide7/Template+grid",
-      "to": "/refguide7/template-grid"
+      "to": "/refguide/template-grid"
     },
     {
       "from": "/refguide7/Template+Grid+Document+Template",
-      "to": "/refguide7/template-grid-document-template"
+      "to": "/refguide/template-grid-document-template"
     },
     {
       "from": "/refguide7/Text",
-      "to": "/refguide7/text"
+      "to": "/refguide/text"
     },
     {
       "from": "/refguide7/Text+area",
-      "to": "/refguide7/text-area"
+      "to": "/refguide/text-area"
     },
     {
       "from": "/refguide7/Text+box",
-      "to": "/refguide7/text-box"
+      "to": "/refguide/text-box"
     },
     {
       "from": "/refguide7/Third+Party+Licenses",
-      "to": "/refguide7/third-party-licenses"
+      "to": "/refguide/third-party-licenses"
     },
     {
       "from": "/refguide7/Title+Document+Template",
-      "to": "/refguide7/title-document-template"
+      "to": "/refguide/title-document-template"
     },
     {
       "from": "/refguide7/To+float",
-      "to": "/refguide7/to-float"
+      "to": "/refguide/to-float"
     },
     {
       "from": "/refguide7/To+string",
-      "to": "/refguide7/to-string"
+      "to": "/refguide/to-string"
     },
     {
       "from": "/refguide7/Transient+Objects+Garbage+Collecting",
-      "to": "/refguide7/transient-objects-garbage-collecting"
+      "to": "/refguide/transient-objects-garbage-collecting"
     },
     {
       "from": "/refguide7/Translatable+Texts",
-      "to": "/refguide7/translatable-texts"
+      "to": "/refguide/translatable-texts"
     },
     {
       "from": "/refguide7/Trim+to+date",
-      "to": "/refguide7/trim-to-date"
+      "to": "/refguide/trim-to-date"
     },
     {
       "from": "/refguide7/Troubleshooting",
-      "to": "/refguide7/troubleshooting"
+      "to": "/refguide/troubleshooting"
     },
     {
       "from": "/refguide7/Two+Factor+Authentication",
-      "to": "/refguide7/two-factor-authentication"
+      "to": "/refguide/two-factor-authentication"
     },
     {
       "from": "/refguide7/Unary+expressions",
-      "to": "/refguide7/unary-expressions"
+      "to": "/refguide/unary-expressions"
     },
     {
       "from": "/refguide7/Upload+To+Team+Server+Dialog",
-      "to": "/refguide7/upload-to-team-server-dialog"
+      "to": "/refguide/upload-to-team-server-dialog"
     },
     {
       "from": "/refguide7/User+Roles",
-      "to": "/refguide7/user-roles"
+      "to": "/refguide/user-roles"
     },
     {
       "from": "/refguide7/User+Role",
-      "to": "/refguide7/user-roles"
+      "to": "/refguide/user-roles"
     },
     {
       "from": "/refguide7/Using+a+proxy+to+call+a+webservice",
-      "to": "/refguide7/using-a-proxy-to-call-a-webservice"
+      "to": "/refguide/using-a-proxy-to-call-a-webservice"
     },
     {
       "from": "/refguide7/Using+Eclipse",
-      "to": "/refguide7/using-eclipse"
+      "to": "/refguide/using-eclipse"
     },
     {
       "from": "/refguide7/Validation+Feedback",
-      "to": "/refguide7/validation-feedback"
+      "to": "/refguide/validation-feedback"
     },
     {
       "from": "/refguide7/Validation+Rules",
-      "to": "/refguide7/validation-rules"
+      "to": "/refguide/validation-rules"
     },
     {
       "from": "/refguide7/Variable+Activities",
-      "to": "/refguide7/variable-activities"
+      "to": "/refguide/variable-activities"
     },
     {
       "from": "/refguide7/Version+Control",
-      "to": "/refguide7/version-control"
+      "to": "/refguide/version-control"
     },
     {
       "from": "/refguide7/Version+Control+Concepts",
-      "to": "/refguide7/version-control-concepts"
+      "to": "/refguide/version-control-concepts"
     },
     {
       "from": "/refguide7/Version+Control+Scenarios",
-      "to": "/refguide7/version-control-scenarios"
+      "to": "/refguide/version-control-scenarios"
     },
     {
       "from": "/refguide7/XML+Inheritance+and+Choice",
-      "to": "/refguide7/xml-inheritance-and-choice"
+      "to": "/refguide/xml-inheritance-and-choice"
     },
     {
       "from": "/refguide7/XML+Reference+Guide",
-      "to": "/refguide7/xml-reference-guide"
+      "to": "/refguide/xml-reference-guide"
     },
     {
       "from": "/refguide7/XML+Schema+Support",
-      "to": "/refguide7/xml-schema-support"
+      "to": "/refguide/xml-schema-support"
     },
     {
       "from": "/refguide7/XML+Schemas",
-      "to": "/refguide7/xml-schemas"
+      "to": "/refguide/xml-schemas"
     },
     {
       "from": "/refguide7/XPath",
-      "to": "/refguide7/xpath"
+      "to": "/refguide/xpath"
     },
     {
       "from": "/refguide7/XPath+avg",
-      "to": "/refguide7/xpath-avg"
+      "to": "/refguide/xpath-avg"
     },
     {
       "from": "/refguide7/XPath+Constraint+Functions",
-      "to": "/refguide7/xpath-constraint-functions"
+      "to": "/refguide/xpath-constraint-functions"
     },
     {
       "from": "/refguide7/XPath+Constraints",
-      "to": "/refguide7/xpath-constraints"
+      "to": "/refguide/xpath-constraints"
     },
     {
       "from": "/refguide7/XPath+contains",
-      "to": "/refguide7/xpath-contains"
+      "to": "/refguide/xpath-contains"
     },
     {
       "from": "/refguide7/XPath+count",
-      "to": "/refguide7/xpath-count"
+      "to": "/refguide/xpath-count"
     },
     {
       "from": "/refguide7/XPath+day+from+dateTime",
-      "to": "/refguide7/xpath-day-from-datetime"
+      "to": "/refguide/xpath-day-from-datetime"
     },
     {
       "from": "/refguide7/XPath+day+of+year+from+dateTime",
-      "to": "/refguide7/xpath-day-of-year-from-datetime"
+      "to": "/refguide/xpath-day-of-year-from-datetime"
     },
     {
       "from": "/refguide7/XPath+ends+with",
-      "to": "/refguide7/xpath-ends-with"
+      "to": "/refguide/xpath-ends-with"
     },
     {
       "from": "/refguide7/XPath+Expressions",
-      "to": "/refguide7/xpath-expressions"
+      "to": "/refguide/xpath-expressions"
     },
     {
       "from": "/refguide7/XPath+false",
-      "to": "/refguide7/xpath-false"
+      "to": "/refguide/xpath-false"
     },
     {
       "from": "/refguide7/XPath+hours+from+dateTime",
-      "to": "/refguide7/xpath-hours-from-datetime"
+      "to": "/refguide/xpath-hours-from-datetime"
     },
     {
       "from": "/refguide7/XPath+id",
-      "to": "/refguide7/xpath-id"
+      "to": "/refguide/xpath-id"
     },
     {
       "from": "/refguide7/XPath+Keywords+and+System+Variables",
-      "to": "/refguide7/xpath-keywords-and-system-variables"
+      "to": "/refguide/xpath-keywords-and-system-variables"
     },
     {
       "from": "/refguide7/XPath+length",
-      "to": "/refguide7/xpath-length"
+      "to": "/refguide/xpath-length"
     },
     {
       "from": "/refguide7/XPath+max",
-      "to": "/refguide7/xpath-max"
+      "to": "/refguide/xpath-max"
     },
     {
       "from": "/refguide7/XPath+min",
-      "to": "/refguide7/xpath-min"
+      "to": "/refguide/xpath-min"
     },
     {
       "from": "/refguide7/XPath+minutes+from+dateTime",
-      "to": "/refguide7/xpath-minutes-from-datetime"
+      "to": "/refguide/xpath-minutes-from-datetime"
     },
     {
       "from": "/refguide7/XPath+month+from+dateTime",
-      "to": "/refguide7/xpath-month-from-datetime"
+      "to": "/refguide/xpath-month-from-datetime"
     },
     {
       "from": "/refguide7/XPath+not",
-      "to": "/refguide7/xpath-not"
+      "to": "/refguide/xpath-not"
     },
     {
       "from": "/refguide7/XPath+Operators",
-      "to": "/refguide7/xpath-operators"
+      "to": "/refguide/xpath-operators"
     },
     {
       "from": "/refguide7/XPath+quarter+from+dateTime",
-      "to": "/refguide7/xpath-quarter-from-datetime"
+      "to": "/refguide/xpath-quarter-from-datetime"
     },
     {
       "from": "/refguide7/XPath+Query+Functions",
-      "to": "/refguide7/xpath-query-functions"
+      "to": "/refguide/xpath-query-functions"
     },
     {
       "from": "/refguide7/XPath+seconds+from+dateTime",
-      "to": "/refguide7/xpath-seconds-from-datetime"
+      "to": "/refguide/xpath-seconds-from-datetime"
     },
     {
       "from": "/refguide7/XPath+Source",
-      "to": "/refguide7/xpath-source"
+      "to": "/refguide/xpath-source"
     },
     {
       "from": "/refguide7/XPath+starts+with",
-      "to": "/refguide7/xpath-starts-with"
+      "to": "/refguide/xpath-starts-with"
     },
     {
       "from": "/refguide7/XPath+string+length",
-      "to": "/refguide7/xpath-string-length"
+      "to": "/refguide/xpath-string-length"
     },
     {
       "from": "/refguide7/XPath+sum",
-      "to": "/refguide7/xpath-sum"
+      "to": "/refguide/xpath-sum"
     },
     {
       "from": "/refguide7/XPath+Tokens",
-      "to": "/refguide7/xpath-tokens"
+      "to": "/refguide/xpath-tokens"
     },
     {
       "from": "/refguide7/XPath+true",
-      "to": "/refguide7/xpath-true"
+      "to": "/refguide/xpath-true"
     },
     {
       "from": "/refguide7/XPath+week+from+dateTime",
-      "to": "/refguide7/xpath-week-from-datetime"
+      "to": "/refguide/xpath-week-from-datetime"
     },
     {
       "from": "/refguide7/XPath+weekday+from+dateTime",
-      "to": "/refguide7/xpath-weekday-from-datetime"
+      "to": "/refguide/xpath-weekday-from-datetime"
     },
     {
       "from": "/refguide7/XPath+year+from+dateTime",
-      "to": "/refguide7/xpath-year-from-datetime"
+      "to": "/refguide/xpath-year-from-datetime"
     },
     /****************************************************
      * TIPS & TRICKS
@@ -8674,111 +8663,111 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Release+Notes+2016-10-05",
-      to: "/releasenotes/platform-portal/2016-10-05"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2016-05-12",
-      to: "/releasenotes/platform-portal/2016-05-12"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2016-03-24",
-      to: "/releasenotes/platform-portal/2016-03-24"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2016-02-18",
-      to: "/releasenotes/platform-portal/2016-02-18"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2016-01-13",
-      to: "/releasenotes/platform-portal/2016-01-13"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-12-01",
-      to: "/releasenotes/platform-portal/2015-12-01"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-11-30",
-      to: "/releasenotes/platform-portal/2015-11-30"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-10-16",
-      to: "/releasenotes/platform-portal/2015-10-16"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-09-17",
-      to: "/releasenotes/platform-portal/2015-09-17"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-09-03",
-      to: "/releasenotes/platform-portal/2015-09-03"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-08-06",
-      to: "/releasenotes/platform-portal/2015-08-06"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-07-31",
-      to: "/releasenotes/platform-portal/2015-07-31"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-07-24",
-      to: "/releasenotes/platform-portal/2015-07-24"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-07-16",
-      to: "/releasenotes/platform-portal/2015-07-16"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-07-03",
-      to: "/releasenotes/platform-portal/2015-07-03"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-06-16",
-      to: "/releasenotes/platform-portal/2015-06-16"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-06-02",
-      to: "/releasenotes/platform-portal/2015-06-02"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-05-29",
-      to: "/releasenotes/platform-portal/2015-05-29"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-04-21",
-      to: "/releasenotes/platform-portal/2015-04-21"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-04-16",
-      to: "/releasenotes/platform-portal/2015-04-16"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-03-31",
-      to: "/releasenotes/platform-portal/2015-03-31"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-02-26",
-      to: "/releasenotes/platform-portal/2015-02-26"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-02-19",
-      to: "/releasenotes/platform-portal/2015-02-19"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-02-05",
-      to: "/releasenotes/platform-portal/2015-02-05"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2015-01-22",
-      to: "/releasenotes/platform-portal/2015-01-22"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2014-12-30",
-      to: "/releasenotes/platform-portal/2014-12-30"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Release+notes+2014-12-23",
-      to: "/releasenotes/platform-portal/2014-12-23"
+      to: "/releasenotes/platform-portal/"
     },
     {
       from: "/ReleaseNotes/Model+SDK+3.0.1",

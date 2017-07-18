@@ -20,8 +20,8 @@ This section will explain how to set the default home page. Please note that thi
 1.  Open the **Navigation** editor.
     ![](attachments/18448703/18581313.png)
     ![](attachments/18448703/18581311.png)
-2.  Select either **Desktop,****Tablet** or **Phone** navigation, depending on the device interface you're working on.
-3.  Click **Select... **to select a default home page.
+2.  Select either **Desktop**, **Tablet** or **Phone** navigation, depending on the device interface you're working on.
+3.  Click **Select...** to select a default home page.
     ![](attachments/18448703/18581310.png) 
 4.  Select the page you want to use as default home page. In this case, we use _Homepage._
     ![](attachments/18448703/18581309.png)
@@ -40,7 +40,7 @@ This section will explain how to set the default home page. Please note that thi
 In many cases you want users with different roles to see different home pages. This can be easily achieved with Mendix by use of Role-based home pages. You don't need to configure home pages for every role, because the default home page works as a fall-back mechanism. This section will explain how to set role based home pages.
 
 1.  Open the **Navigation** editor.
-2.  Select either **Desktop,****Tablet,** or **Phone** navigation, depending on the device interface you're working on.
+2.  Select either **Desktop**, **Tablet**, or **Phone** navigation, depending on the device interface you're working on.
 3.  Locate the **Role-based home pages** setting and click **Edit...**
     ![](attachments/18448703/18581308.png)
 4.  In the overview click **New**.
@@ -59,7 +59,7 @@ In many cases you want users with different roles to see different home pages. T
 
 This section will explain how to create menu items.
 
-1.  Open the N**avigation** editor.
+1.  Open the **Navigation** editor.
 2.  Select either **Desktop,****Tablet,** or **Phone** navigation, depending on the device interface you're working on.
 3.  Locate the Menu section.
 4.  Click **New Item** to create a top level menu item.

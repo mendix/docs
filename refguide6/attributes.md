@@ -104,7 +104,7 @@ The default value property defines the value of this attribute when an object is
 | Binary | N/A |   |
 | Boolean | False |   |
 | Currency | 0 |   |
-| DateTime | (empty) | The default value should either comply with the format year-month-day (eventually postfixed by hour:minute, eventually postfixed by :second), or be [%CurrentDateTime%] (which means that when an object is created the value of this attribute is the date and time when the object is created). |
+| DateTime | (empty) | The default value should either comply with the format year-month-day (eventually postfixed by hour:minute, eventually postfixed by :second), or be `[%CurrentDateTime%]` (which means that when an object is created the value of this attribute is the date and time when the object is created). |
 | Decimal | 0 |   |
 | Enum | (empty) |   |
 | Float | 0 |   |
@@ -138,4 +138,4 @@ In a webshop you want to show the total expenses for each customer. These are ca
 ![](attachments/819203/917570.png)
 
 ## Effects of data type changes on existing attributes
-See [Data Migration](data-migration)
+See [Attributes Type Migration](attributes-type-migration)

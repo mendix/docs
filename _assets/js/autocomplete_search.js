@@ -69,6 +69,8 @@
         }]
     );
 
+    $el.trigger('focus');
+
     this.autocomplete
       .on('autocomplete:selected', function(event, suggestion, dataset) {
         event.stopPropagation();
@@ -101,6 +103,7 @@
 
   window.__searchClient = searchClient;
 
+  /* Zendesk autocomplete */
   if ($('#mendix_search').length === 1) {
     new searchClient('#mendix_search', {
       debug: false,
@@ -108,6 +111,7 @@
     });
   }
 
+  /* 404 pages */
   if ($('.not-found-suggestion').length !== 0) {
     var $el = $('.not-found-suggestion'),
         splitted = location.pathname.split('/'),

@@ -1,7 +1,7 @@
 ---
 title: "Administration"
 space: "ATS Add-On" 
-category: "ATS Reference Guide 1"
+category: "Reference Guide 1"
 ---
 
 As an administrator in the ATS, you have access to additional functionality:

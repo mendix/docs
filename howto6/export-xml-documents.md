@@ -7,7 +7,7 @@ tags: []
 
 ## 1 Introduction
 
-In enterprise software, it is not likely that you work in a [greenfield](https://en.wikipedia.org/wiki/Greenfield_project, because in almost every situation, you will need to integrate with existing systems. Mendix supports many ways of integration, but this how-to focuses on how you can export XML documents with Mendix.
+In enterprise software, it is not likely that you work in a [greenfield](https://en.wikipedia.org/wiki/Greenfield_project), because in almost every situation, you will need to integrate with existing systems. Mendix supports many ways of integration, but this how-to focuses on how you can export XML documents with Mendix.
 
 **This how-to will teach you how to do the following:**
 
@@ -64,7 +64,7 @@ Whether you plan to import documents or export documents, working with XML means
 
 The XML schema describes what the contents of an XML document should be. We need to create domain-to-XML mapping to define how the data in our application is transformed into a XML document.
 
-1. Right-click a module in the **Project Explorer** and select**Add* > **Document**:
+1. Right-click a module in the **Project Explorer** and select **Add** > **Document**:
 
     ![](attachments/18448731/18581853.png)
 

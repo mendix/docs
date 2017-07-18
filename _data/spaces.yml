@@ -2,9 +2,9 @@
 #  space: 'Space for this folder'
 #  mendix_version: 6 #optional, used for searches
 #  priority: 1 - 9 (used for sitemap). If omitted this will not be included, which defaults to 0.5
-apidocs:
-  space: "API Documentation"
-  priority: 6
+apidocs-mxsdk:
+  space: "API & SDK"
+  priority: false
 addons:
   space: "Other Add-Ons"
   priority: false
@@ -21,40 +21,46 @@ howto40:
   space: "Mendix 4 How-To's"
   priority: false
   mendix_version: 4
+  noindex: true
 howto50:
   space: "Mendix 5 How-To's"
   priority: false
   mendix_version: 5
+  noindex: true
 howto6:
   space: "Mendix 6 How-To's"
   priority: 5
   mendix_version: 6
-howto7:
+  noindex: true
+howto:
   space: "Mendix 7 How-To's"
   priority: 6
   mendix_version: 7
-MXSDK:
-  space: "Mendix Platform SDK"
-  priority: false
 refguide4:
   space: "Mendix 4 Reference Guide"
   priority: false
   mendix_version: 4
+  noindex: true
 refguide5:
   space: "Mendix 5 Reference Guide"
   priority: false
   mendix_version: 5
+  noindex: true
 refguide6:
   space: "Mendix 6 Reference Guide"
   priority: 6
   mendix_version: 6
-refguide7:
+  noindex: true
+refguide:
   space: "Mendix 7 Reference Guide"
   priority: 7
   mendix_version: 7
 howtogeneral:
   space: "General How-To's"
-  priority: false
+  priority: 6
 releasenotes:
   space: "Release Notes"
+  priority: false
+developerportal:
+  space: "Developer Portal"
   priority: false

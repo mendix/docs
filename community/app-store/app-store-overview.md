@@ -136,7 +136,7 @@ For further information on the content compatibility, you can see how many **peo
 
 ## 4 Other Pages
 
-## 4.1 My App Store<a name="MyAppStore"></a>
+### 4.1 My App Store<a name="MyAppStore"></a>
 
 The **My App Store** page presents all of your App Store activity:
 
@@ -146,17 +146,25 @@ The **My App Store** page presents all of your App Store activity:
 
 ![](attachments/app-store-overview/my_app_store.png)
 
-In the sidebar menu, you can see the following:
+The **MY APP STORE** section of the sidebar menu contains the following options:
 
-* **MY  APP STORE**
-    * **Published** – the content you have published as well as the content your company has published
-    * **Favorites** – the content you have favorited
-    * **Stats** – the content that has been downloaded the most in the previous month
-* **REVIEWS**
-    * **Submitted** – the reviews that you have submitted as well as the reviews your company has submitted
-    * **Received** – the reviews that your content has received as well as the reviews that your company's content has received
-* **MY COMPANY**
-    * **Profile** – the profile of your company (the same profile that appears on the [Partners Tab](#PartnersTab) for your company)
+* **Published** – click this to see the content you have published as well as the content your company has published on the **Published content** page
+    * On the **Published by me** tab, you can see the last version of the content you published
+        * Click **Manage** to edit the current draft version, create a new draft version (for more information, see [How to Share App Store Content](share-app-store-content)), or unpublish content
+    * On the **Published by my company** tab, you can see all of the content published by your company
+        * Click **Manage** to edit content, create a new draft version (for more information, see [How to Share App Store Content](share-app-store-content)), or unpublish the content version you had published (if you are an organization administrator, you can unpublish any content)
+* **Favorites** – click this to see the content you have favorited
+* **Stats** – click this to see the content that has been downloaded the most in the previous month on the **Downloads overview** page
+    * Clicking specific App Store content on this page will show you a **Downloads per month** graph as well as **User Reviews**
+
+The **REVIEWS** section of the sidebar menu contains the following options:
+
+* **Submitted** – click this to see the reviews that you have submitted as well as the reviews your company has submitted
+* **Received** – click this to see the reviews that your content has received as well as the reviews that your company's content has received
+
+The **MY COMPANY** section of the sidebar menu contains the following options:
+
+* **Profile** – click this to see the profile of your company (the same profile that appears on the [Partners Tab](#PartnersTab))
 
 ### 4.2 Modeler
 
@@ -164,11 +172,11 @@ On the **Modeler** page, you can download any version of the Modeler you need by
 
 ![](attachments/app-store-overview/modeler.png)
 
-Clicking the **Release notes** icon will open the [Modeler release notes](//releasenotes/desktop-modeler/) for that particular version.
+Clicking the **Release notes** icon will open the [Modeler release notes](/releasenotes/desktop-modeler/) for that particular version.
 
 Clicking the **Related downloads** option will open a page with information relating to that Modeler version.
 
-### 4.4 Solutions
+### 4.3 Solutions
 
 The **Solutions** page lists off-the-shelf products that are available for reference:
 
@@ -180,7 +188,7 @@ Hovering your mouse pointer over a solution tile will bring up a summary of the 
 
 Solutions are not available for download. However, they contain a details section, **Overview** and **Documentation** tabs, and an **Additional info** section. For more information on these sections, see [Add-On Details Page](#AddonDetailsPage).
 
-### 4.5 Partners<a name="PartnersTab"></a>
+### 4.4 Partners<a name="PartnersTab"></a>
 
 The **Partners** page lists selected App Store partner companies:
 

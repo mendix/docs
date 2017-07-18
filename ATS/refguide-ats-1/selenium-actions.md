@@ -12,3 +12,4 @@ parent: "standard-actions-reference"
 * [Find](find)
 * [Get](get)
 * [Send Keys](send-keys)
+* [Click Coordinates](click-coordinates)

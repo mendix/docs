@@ -14,8 +14,8 @@ Let's start with the Layouts. What does a Layout consist of and what is the actu
 
 When you look at a page, you can state that a page exists out of two important components:
 
-*   **Layout: **Structure of the page (just like PowerPoint has one or more layout presets)
-*   **Content: **What is displayed within the structure of the page
+*   **Layout**: Structure of the page (just like PowerPoint has one or more layout presets)
+*   **Content**: What is displayed within the structure of the page
 
 ![](attachments/18448710/18581449.jpg)
 

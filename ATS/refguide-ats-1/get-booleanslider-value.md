@@ -3,6 +3,7 @@ title: "Get BooleanSlider Value"
 space: "ATS Add-On" 
 parent: "booleanslider"
 ---
+
 ## Description
 Returns the current active text value from the BooleanSlider Appstore Widget.
 

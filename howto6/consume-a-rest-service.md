@@ -1,5 +1,5 @@
 ---
-title: "Consume a REST Service"
+title: "Consume a REST Service (for Versions 6.0–6.10)"
 space: "Mendix 6 How-to's"
 category: "Integration"
 tags: []
@@ -9,12 +9,18 @@ tags: []
 
 With the REST services module from the Mendix App Store, the full power of JSON-based REST APIs is available to Mendix developers. The module serves three goals: to consume services, publish services, and synchronize data between (Mendix) apps by combining consuming and publishing. 
 
+<div class="alert alert-info">{% markdown %}
+
+Starting with Mendix 6.6, there is an easier way to consume a REST service. For details, see [How to Consume a REST Service (for Versions 6.6–6.10)](consume-a-rest-service_66).
+
+{% endmarkdown %}</div>
+
 In this how-to, you will consume a JSON-based REST services by integrating with the API of the world famous Rijksmuseum that allows us to search for art.
 
-**After using this how-to, you will know how to do the following:**  
+**This how-to will teach you how to do the following:**
 
-* How to create a GET REST Service
-* How to create a POST REST Service
+* Create a GET REST Service
+* Create a POST REST Service
 
 ## 2 Prerequisites
 
@@ -142,7 +148,7 @@ To consume the service using a Get request, follow these steps:
     Name | Argument
     --- | ---
     method | RestServices.HttpMethod.GET
-    url | '[https://www.rijksmuseum.nl/api/en/collection/?key=](https://www.rijksmuseum.nl/api/en/collection/?key=)' + <API_Key> + '&format=json'
+    url | 'https://www.rijksmuseum.nl/api/en/collection/?key=' + <API_Key> + '&format=json'
     optRequestData | $Query
     optResponseData | $newResults
     sendWithFormEncoding | false
@@ -156,7 +162,7 @@ To consume the service using a Get request, follow these steps:
 5. Run your application and search for _van Gogh_. You will see the following results:
     ![](attachments/18448729/18581755.png)
 
-## 5 Consuming the REST Service with a POST Request
+## 6 Consuming the REST Service with a POST Request
 
 In this section, you will create a microflow to hypothetically send data back to the Rijksmuseum. There is no POST service available, but this example demonstrates how you would setup a POST request if the service was available.
 
@@ -179,7 +185,7 @@ In this section, you will create a microflow to hypothetically send data back to
     **![](attachments/18448729/18581753.png)**
     If you now change the data of one of the objects linked to the **Results** object that you are passing on to the microflow, the POST request will update the other system accordingly.
 
-## 6 Related Content
+## 7 Related Content
 
 * [Consuming a Complex Web Service](consume-a-complex-web-service)
 * [Consuming a Simple Web Service](consume-a-simple-web-service)
@@ -189,5 +195,4 @@ In this section, you will create a microflow to hypothetically send data back to
 * [Selenium Support](selenium-support)
 * [Synchronizing User Accounts Using the LDAP Module](synchronizing-user-accounts-using-the-ldap-module)
 * [Importing XML Documents](importing-xml-documents)
-* [Consuming a REST Service](consume-a-rest-service)
 * [Exposing Data to BI Tools Using OData](exposing-data-to-bi-tools-using-odata)

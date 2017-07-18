@@ -121,9 +121,10 @@ Build Mendix apps on top of your [Salesforce.com](http://Salesforce.com) environ
 
 ## 19 Google analytics
 
-[![](attachments/18448690/19399078.png)](https://appstore.home.mendix.com/link/app/105/Mendix/Google-Analytics)This module is a connector for the LoRa devices and enables receiving incoming messages through the LoRa network, as it is provided by KPN in the Netherlands.
+[![](attachments/18448690/19399078.png)](https://appstore.home.mendix.com/link/app/105/Mendix/Google-Analytics)
+This widget lets you track events, pages, and transactions on your own Google Analytics account.
+[Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/105/Mendix/Google-Analytics)
 
-[Click to download in the Mendix App Store..](https://appstore.home.mendix.com/link/app/105/Mendix/Google-Analytics)
 
 # 20 Related Content
 

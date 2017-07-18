@@ -1,7 +1,7 @@
 ---
 title: "Data Management"
 space: "ATS Add-On" 
-category: "ATS Reference Guide 1"
+category: "Reference Guide 1"
 ---
 
 ## Repository

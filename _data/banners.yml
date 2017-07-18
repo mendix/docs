@@ -6,4 +6,4 @@ mendix4refguide:
   text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>'
 mendix4howto:
   type: 'warning'
-  text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the How-To&quot;s <a href="/howto/">here</a>.'
+  text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the How-To&#39;s <a href="/howto/">here</a>.'

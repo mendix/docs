@@ -34,7 +34,7 @@ In this chapter you will set up the unit testing module and run the example test
 1.  Create a new project.
 2.  Download the **UnitTesting module**.
 3.  Download the **Community Commons Function Library module**.
-4.  Open the **Settings **of the project.
+4.  Open the **Settings** of the project.
     ![](attachments/18448633/18580371.png)
 5.  Click tab **Model**.
 6.  Click the **Select** button to select an after startup microflow.
@@ -74,7 +74,7 @@ In this chapter you will learn how to create a microflow test. To create a new m
 1.  Create a new enumeration **Level** with three enumeration values; **Junior**, **Medior** and **Senior**.
     ![](attachments/18448633/18580356.png)
 2.  Open the Domain Model of **MyFirstModule**.
-3.  Create an entity **Employee **with two attributes, **Name** (String(200)) and **Level** (Enumeration 'Level').
+3.  Create an entity **Employee** with two attributes, **Name** (String(200)) and **Level** (Enumeration 'Level').
     ![](attachments/18448633/18580355.png)
 4.  Create a microflow **Promote**.
 

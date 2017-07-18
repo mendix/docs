@@ -2,11 +2,12 @@
 title: "Use App Store Content in the Modeler"
 space: "Community"
 category: "App Store"
+description: "Covers the basics of how to access the App Store from the Modeler and provides examples of how to add a widget and module to your app."
 ---
 
 ## 1 Introduction
 
-This Community tool how-to will cover the basics of how to access the App Store from the Modeler and will provide examples of how to add a widget and a module to your application.
+This Community tool how-to covers the basics of how to access the App Store from the Modeler and provides examples of how to add a widget and a module to your application.
 
 **This how-to will teach you how to do the following:**
 

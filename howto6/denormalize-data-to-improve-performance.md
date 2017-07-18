@@ -102,7 +102,7 @@ Now the application is ready to store redundant data, but you still need to keep
     * Select **OrderList** as the **Input Variable**
     * Select **Sum** as the **Function**
     * Select **TotalPrice** as the **Attribute**
-    * Emter *SumTotalPrice* as the **Output Variable** name
+    * Enter *SumTotalPrice* as the **Output Variable** name
 
     ![](attachments/18448743/18582153.png)
 16. Click **OK** to save the activity. Your microflow should now look like this:
@@ -132,7 +132,7 @@ Now the application is ready to store redundant data, but you still need to keep
 * [How to Set Up Data Validation](setting-up-data-validation)
 * [How to Work with Object Events](working-with-object-events)
 * [How to Find the Root Cause of Runtime Errors](finding-the-root-cause-of-runtime-errors)
-* [How to Manage Your Application Requirements](managing-your-application-requirements-with-mendix)
+* [How to Manage Your Application Requirements](/developerportal/howto/managing-your-application-requirements-with-mendix)
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Configure the Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 * [How to Generate a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)

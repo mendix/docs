@@ -63,7 +63,7 @@ For details on the Markdown syntax, see the [GitHub Guide to Mastering Markdown]
 
 ## 4.2 Text Styling
 
-Use **bold** when identifying buttons, windows, fields, and other entities that appear in the UI. For example: "Add a **Retrieve** activity to the Microflow."
+Use **bold** when identifying buttons, windows, fields, and other entities that appear in the UI. For example: "Add a **Retrieve** activity to the microflow."
 
 Use *italics* when the user needs to enter text. For example: "In the **Name** field, enter *Customer_NewEdit_Commit*."
 
@@ -72,8 +72,12 @@ Use *italics* when the user needs to enter text. For example: "In the **Name** f
 To embed a modelshare in the documentation, paste the `iframe`. For example:
 
 ```html
-<iframe width='100%' height='491px' frameborder='0' src=https://modelshare.mendix.com/models/a0e6fba1-aa44-4d95-ac06-3f9fccca082/new-car-rental-validation?embed=true'></iframe>
+<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/fb092960-6fc1-41c0-bb64-d9e70c012bc5/save-example?embed=true' allowfullscreen></iframe>
 ```
+
+This will render as:
+
+<iframe width='100%' height='491px' frameborder='0' src='https://modelshare.mendix.com/models/fb092960-6fc1-41c0-bb64-d9e70c012bc5/save-example?embed=true' allowfullscreen></iframe>
 
 ## 4.4 Specific Formatting Tips
 
@@ -83,7 +87,27 @@ Some tips to consider when formatting Markdown are listed below.
 
 To format note styles, implement the following:
 
-![](attachments/content-writing-and-formatting-guidelines/note_styles.png)
+```html
+<div class="alert alert-info">{% raw %}{% markdown %}
+Your note
+{% endmarkdown %}{% endraw %}</div>
+```
+
+<div class="alert alert-info">{% markdown %}
+Your note
+{% endmarkdown %}</div>
+
+and
+
+```html
+<div class="alert alert-warning">{% raw %}{% markdown %}
+Your note
+{% endmarkdown %}{% endraw %}</div>
+```
+
+<div class="alert alert-warning">{% markdown %}
+Your note
+{% endmarkdown %}</div>
 
 ### 4.4.2 Class
 
@@ -134,8 +158,7 @@ For example:
 "Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Start a GitHub account
-* Fork the repository on GitHub
-* Create a Basic Data Layer"
+* Fork the repo on GitHub"
 
 ### 5.1.4 Exercises
 
@@ -151,7 +174,7 @@ For example:
 
 1. "Open the **Activity** properties.
 2. Click **Select** for the source.
-3. Select the Microflow you created earlier, and click **OK**."
+3. Select the microflow you created earlier, and click **OK**."
 
 If you want to use an image in your numbered list, add it after the related exercise step.
 
@@ -166,6 +189,10 @@ Add boxes, indicators, arrows, and other information to an image only if it make
 ![](attachments/content-writing-and-formatting-guidelines/highlighting_image_example.png)
 
 Keep the images as simple as possible, because having too many arrows on an image can make it confusing!
+
+Place images in a folder with the same name as the document that uses the images, and place that folder in the attachment folder that is located in the same folder as the file you're editing.
+
+For example, if you are adding an image to the Content Writing and Formatting Guidelines document, located at */community/documentation/*, you would place the images in the */community/documentation/attachments/content-writing-and-formatting-guidelines/* folder. That way, you can group images for the same document nicely together.
 
 ## 5.2 How-To Content
 

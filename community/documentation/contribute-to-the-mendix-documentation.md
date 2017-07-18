@@ -14,34 +14,49 @@ All of the Mendix documentation is stored in GitHub. With a GitHub profile, you 
 
 To work on the documentation in GitHub, you will be using Markdown. For details on this easy-to-use syntax, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
-<div class="alert alert-info">
+<div class="alert alert-info">{% markdown %}
 
 All documentation contributions may undergo changes after editing according to our internal style guide.
 
-</div>
+{% endmarkdown %}</div>
 
 **This how-to will teach you how to do the following:**
 
 * Add to and edit existing documentation
 * Create a new how-to or reference guide page using a template
 
-## 2 Prerequisites
+## 2 Prerequisites and Other Information
+
+### 2.1 Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Have a GitHub account (sign up [here](https://github.com/join))
+* Fork the [**mendix/docs** repository](https://github.com/mendix/docs) on GitHub (for details on how to do this, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/))
+
+### 2.2 Tools
 
 We recommend the use of the following tools for contributing to the Mendix documentation:
 
 * For writing and editing documentation – [Visual Studio Code](https://code.visualstudio.com) (with which you can preview your Markdown styling)
 * For committing your documentation – [SourceTree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
 
+### 2.3 Contributor License Agreement
+
+The first time you make a contribution to the Mendix documentation (via a pull request), you will have to sign the [Contributor License Agreement for mendix/docs](https://www.clahub.com/agreements/mendix/docs) via CLAHub.
+
+To access the license agreement, go to the **Conversation** tab of the pull request and click **Details** for **clahub**:
+
+![](attachments/contribute-to-the-mendix-documentation/license_agreement.png)
+
+This only needs to be done once.
+
 ## 3 Editing the Existing Documentation
 
 To edit the existing documentation (for example, a how-to or reference guide page), follow these steps:
 
 1. Click **Edit on GitHub** in the upper-right corner of the specific Mendix documentation page that you want to work on.
-2. Find the files in the repository and make your changes (make sure your changes align with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)).
+2. Make your changes (make sure the changes align with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)).
 3. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
 
 <div class="alert alert-info">
@@ -61,7 +76,7 @@ To submit a new how-to or reference guide page to our documentation, follow thes
 1. Save a copy of the [How-To Template](the-how-to-template-page) or [Reference Guide Page Template](the-reference-guide-page-template-page) locally in order to use it.
 2. Follow the guidelines in the template for writing your document, and make sure the text aligns with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines).
 3. Take screenshots for the new document and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [5 Naming New Files and Images](#NamingNewFilesandImages).
-4. To merge your new document files, fork the GitHub repository, and add your files.
+4. To merge your new document files, add your files to the GitHub repository.
 5. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
 
 <div class="alert alert-info">
@@ -70,18 +85,37 @@ You may receive a response to your pull request asking for verification of speci
 
 </div>
 
-## <a name="NamingNewFilesandImages"></a>5 Naming New Files and Images
+## <a name="NamingNewFilesandImages"></a>5 Naming New Document Files, Image Files, and Attachment Sub-Folders
 
-When writing a new how-to or contributing to the documentation, make sure the files comply with our naming conventions:
+When contributing to the documentation, make sure the document files comply with these naming conventions:
 
- * Markdown file names should have the same name as the title of the page (for example, if the page is titled "Set Up Your Project," the filename should be ``setup-your-project.md``)
- * File names should always be lower-case, with a hyphen (`-`) between each word
-  * Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
- * Images should be named in the same way: lower-case with a dash between each word
-  * Make sure the image files have names that make sense, so it's easier to find them later on
- * The following image file types are allowed: `.jpg`, `.png`, `.gif`
+* Markdown file names should have the same name as the title of the page (for example, if the page is titled "Set Up Your Project," the filename should be `setup-your-project.md`)
+* Document file names should always be lower-case with a hyphen (`-`) between each word
+ * Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 
-## 6 Related Content
+Make sure the image files comply with these naming conventions:
+
+* Image file names should always be lower-case with a hyphen (`-`) between each word
+ * Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
+* Make sure the image files have names that make sense, so it's easier to find them later on
+* Save the image files in a sub-folder in the **attachments** folder for the category in which the document is located; this sub-folder should have the same name as the document file name you are working on
+  * For example, the `project-setup` image file is located in the **new-project** sub-folder (named after the document) in the **attachments** folder of the **getting-started** how-to category folder
+* The following image file types are allowed: `.jpg`, `.png`, `.gif`
+
+## 6 Gaining Mendix Points<a name="GainingMendixPoints"></a>
+
+As you add knowledge to the documentation that will help your fellow Mendix developers, for each contribution, you will gain Mendix points!
+
+Before you can receive Mendix points for your documentation contributions, you must authorize the connection of your GitHub profile to your Mendix Community Profile. For more information, see [How to Set Up Your Community Profile](../tools/how-to-set-up-your-profile#MyCommunityProfile).
+
+The amount of points you gain depends on the size of the documentation contribution you make. This is calculated per pull request and is based on the number of lines changed:
+
+* For a small contribution to the documentation – 5 points
+* For a large contribution to the documentation – 15 points
+
+The points are awarded when the pull request is merged. For more details on Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq).
+
+## 7 Related Content
 
 * [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)
 * [How-To Template](the-how-to-template-page)

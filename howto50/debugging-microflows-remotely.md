@@ -30,7 +30,7 @@ It is not recommended to debug in production. However, if you are debugging in t
 6.  Click **Enable Debugging**.
     ![](attachments/8782780/8946042.png)![](attachments/8782780/8946043.png)
 
-The debugging settings will show up. Usually, it will be a URL such as [http://yourapp.mendixcloud.com](http://yourapp.mendixcloud.com) and a secure password that changes each time you enable and disable the debugger.
+The debugging settings will show up. Usually, it will be a URL such as `http://yourapp.mendixcloud.com` and a secure password that changes each time you enable and disable the debugger.
 
 If you want to disable the debugger, simply click on Disable Debugging.
 

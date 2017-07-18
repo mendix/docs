@@ -5,11 +5,11 @@ space: "Developer Portal"
 
 ## 1 Introduction
 
-The **Develop** category contains the following pages:
+The **Develop** category is focused around planning and developing your app. 
 
-* **Model**
-* **Team Server**
-* **Planning**
+  ![](attachments/develop.png)
+
+This category is divided into the three pages presented below.
 
 ## 2 Model
 
@@ -27,11 +27,13 @@ Changes made through the Desktop Modeler are stored in the Mendix Team Server. T
 
 Here you can also find the Team Server URL (for example, `https://teamserver.sprintr.com/<your AppID>`).
 
-For more information, see [Team Server](https://docs.mendix.com/refguide/team-server).
+For more information, see [Team Server](/refguide/team-server).
 
 ## 4 Planning
 
 The **Planning** page provides an overview of the progression of the **Stories** in the **Collaborate** category. This page has three tabs, which are described below.
+
+For more details, see [Planning](/developerportal/develop/planning).
 
 ### 4.1 Sprint Status Tab
 
@@ -53,4 +55,4 @@ All the changes made on this page are directly passed on to the **Stories** page
 
 ## 4 Related Content
 
-* [Model](/developerportal/develop/model)
+* [Stories](/developerportal/collaborate/stories)

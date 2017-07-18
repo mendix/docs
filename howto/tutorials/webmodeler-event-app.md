@@ -75,7 +75,7 @@ On the **Home** page, below the header, add four **Action Cards** to open new pa
 
     ![](attachments/event-app/wm-step4.jpg)
 
-4. Switch between the device profiles to preview the layout by clicking the device icons at the top of the main Web Modeler window:
+4. Switch between the device profiles to preview the layout per device by clicking the device icons at the top of the main Web Modeler window:
 
     ![](attachments/event-app/wm-step4b.jpg)
 
@@ -108,16 +108,15 @@ Your first page is now finished! Let's see the result on your mobile phone:
 
 Now that the action cards are set, they must be configured to open new pages. Follow these steps to create a new page that will be opened when the **Program** card is clicked:
 
-1. Select the **Open Page** button for the first card and enter *Program* for its **Caption**.
-2. Select the signal icon **Button** and in **General** > **Icon**, change the icon to **List alt**.
-3. Set the **On Click Action** to **Page**. If the user clicks this card, a new page will be opened. 
+1. Select the **Open Page** text of the first card and enter *Program* for its **Caption** property.
+2. Select the signal icon and configure for the **Icon** property the icon **List alt**.
+3. Set the **On Click Action** property to **Page**. If the user clicks this card, a new page will be opened. 
 
     ![](attachments/event-app/wm-step8.jpg)
 
-4. Select the list alt icon **BUTTON** and under **Events** > **Page**, click **Select page**.
-5. In the **Select Page** dialog box, click **New page**.
-6. Enter *ProgramList* for the **Title** of the new page.
-7. Select **Dashboards** > **Dashboard Timeline** for the template, and then click **Create**.
+4. In the **Select Page** dialog box, click **New page**.
+5. Enter *ProgramList* for the **Title** of the new page.
+6. Select **Dashboards** > **Dashboard Timeline** for the template, and then click **Create**.
 
     ![](attachments/event-app/wm-step12.jpg)<br />
 
@@ -127,10 +126,12 @@ Now that the action cards are set, they must be configured to open new pages. Fo
     
     </div>
 
-5. Replace the header with the **Heroheader1**, like you did for the **Home** page.
-6. Enter *Program List* for the the header **Title**.
-7. Enter *Upcoming events* for the subtitle, and change the color to **Warning**.
-8. Delete the **New** button and its container.
+**Configure the Program List page**
+
+8. Replace the header with the **Heroheader1**, like you did for the **Home** page.
+9. Enter *Program List* for the the header **Title**.
+10. Enter *Upcoming events* for the subtitle, and change the color to **Warning**.
+11. Delete the **New** button and its container.
 
 ## 9 Adding Entities and Attributes to a Building Block
 

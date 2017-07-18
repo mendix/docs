@@ -46,7 +46,7 @@ The Technical Contact manages the settings of the the technical deployment aspec
 
 ## 4. Team Member Roles
 
-Within an App Team there are six predefined roles that can be provisioned to Team Members. Those roles are described below:
+Within an App Team there are six predefined roles that can be provisioned to Team Members. You can also create new team roles within your company. The predefined team member roles are described below:
 
 #### Application Operator
 
@@ -67,18 +67,17 @@ Can view 'Deploy, Publish and Monitor'
 
 Can view 'Overview, Capture, Develop, Feedback & Settings'
 
-#### Performance Engineer/Tester
-
-Can view 'Overview, Capture, Develop, Feedback & Settings'
-Can view 'Deploy, Publish and Monitor'
-
 #### Product Owner
+
+The Product Owner is not a developer. This person can add stories to the backlog.
 
 Can view 'Overview, Capture, Develop, Feedback & Settings'
 Can invite members
 Can edit 'Stories, Documents and Feedback'
 
 #### SCRUM Master
+
+A SCRUM Master is responsible for the development process. He/she can manage all settings within the app.
 
 Can view 'Overview, Capture, Develop, Feedback & Settings'
 Can edit 'App settings'

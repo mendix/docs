@@ -1,5 +1,5 @@
 ---
-title: "Developer Portal General"
+title: "General"
 space: "Developer Portal"
 ---
 

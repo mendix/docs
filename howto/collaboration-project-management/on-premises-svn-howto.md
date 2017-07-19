@@ -22,7 +22,10 @@ For version control, the Mendix Modeler uses the [Subversion](https://subversion
 ## Repositories
 Subversion uses so-called *repositories* for storing all the data of your version-controlled project. Each Subversion server can contain many different repositories.
 
-For the purposes of this how-to, the most important thing to know about repositories is that Mendix requires you to **store each Mendix application in a separate repository**. It's not possible to share a single repository with different mendix applications. Also, when uploading a project to a repository, the Mendix Modeler requires this repository to be empty.
+For the purposes of this how-to, there're two important things to know about repositories:
+
+1. Mendix requires you to **store each Mendix application in a separate repository**. It's not possible to share a single repository with different mendix applications.
+2. When uploading a project to a repository, the Mendix Modeler requires this repository to be empty, except for the recommended SVN layout as described in the [SVN manual](http://svnbook.red-bean.com/en/1.7/svn.tour.importing.html#svn.tour.importing.layout). Specifically, this means that the repository should contain only three empty folders called `branches`, `tags` and `trunk`.
 
 Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories see [this chapter](http://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin) of the SVN manual. In the following sections of this how-to we assume that you have a repository available for your application.
 

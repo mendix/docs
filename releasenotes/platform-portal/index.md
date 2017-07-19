@@ -4,6 +4,23 @@ space: "Release Notes"
 toc-level: "1"
 ---
 
+## July 18th, 2017
+
+### Improvements
+
+* For all apps running on the Mendix Cloud, the following HTTP Headers are now available: X-SSL-Version (possible values: TLSv1, TLSv1.1 and TLSv1.2) and X-SSL-Cipher (e.g. ECDHE-RSA-AES256-GCM-SHA384). These can be used to block login attempts for for example TLSv1.0 connections.
+* Modern browsers are caching static html resources aggressively which could lead to end user problems after deploying new versions of applications. Clearing the cache solved this, but that is a very bad user experience. For all apps running on Mendix Cloud v3 we added an explicit `no-cache` header to the resources `/` and `/index.html`, `/login.html` and `/index[0-9]+.html`. For Mendix Cloud v4, an `expires` with a negative value was already used, so no changes were required here. We believe this change eliminates most of browser caching issues we have seen so far.
+* You can now restrict acces to your Mendix Cloud v4 applications based on IP ranges. This is available for all Mendix Cloud v4 regions and can be configured from the Network tab of your cloud environment.
+
+### Fixes
+
+We fixed the following problems:
+
+* When updating the admin user password in the Mendix Cloud, the password policy description was wrong, which could lead to confusing situations. We updated the text.
+* When navigating to Node Security, the App Team tab disappeared.
+* Due to a zip file encoding change in Mendix 7.5.0, AppServices could not be parsed when deploying to the Mendix Cloud.
+* View Current Log button was hidden for Free Apps
+
 ## July 12th, 2017
 
 ### Improvements

@@ -11,10 +11,10 @@ When developing Mendix applications, changes to these applications are stored in
 
 While this is the recommended way of working for almost all Mendix developers, you may prefer storing your application's files in a system that is controlled by your own organization.
 
-This howto describes how to configure your Mendix projects to work with your own (on-premises) version control system.
+This how-to describes how to configure your Mendix projects to work with your own (on-premises) version control system.
 
 ## On-premises version control server
-For version control, the Mendix Modeler uses the [Subversion](https://subversion.apache.org) system (also known as SVN). This howto will **not** describe how to set up an SVN server from scratch; it assumes that you have one already at your disposal. Typically this has been taken care of by the IT department of your organization. This means that:
+For version control, the Mendix Modeler uses the [Subversion](https://subversion.apache.org) system (also known as SVN). This how-to will **not** describe how to set up an SVN server from scratch; it assumes that you have one already at your disposal. Typically this has been taken care of by the IT department of your organization. This means that:
 
 * You know the location of the SVN server. Usually this is an address similar to an internet URL, for example: `https://svn.example.com:9876/repos/myapp`.
 * You possess credentials (a username and a password) that give you access to the SVN server.
@@ -22,9 +22,9 @@ For version control, the Mendix Modeler uses the [Subversion](https://subversion
 ## Repositories
 Subversion uses so-called *repositories* for storing all the data of your version-controlled project. Each Subversion server can contain many different repositories.
 
-For the purposes of this howto, the most important thing to know about repositories is that Mendix requires you to **store each Mendix application in a separate repository**. It's not possible to share a single repository with different mendix applications. Also, when uploading a project to a repository, the Mendix Modeler requires this repository to be empty.
+For the purposes of this how-to, the most important thing to know about repositories is that Mendix requires you to **store each Mendix application in a separate repository**. It's not possible to share a single repository with different mendix applications. Also, when uploading a project to a repository, the Mendix Modeler requires this repository to be empty.
 
-Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories see [this chapter](http://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin) of the SVN manual. In the following sections of this howto we assume that you have a repository available for your application.
+Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories see [this chapter](http://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin) of the SVN manual. In the following sections of this how-to we assume that you have a repository available for your application.
 
 ## SVN versions
 The Mendix Modeler has a (built-in) Subversion client that uses the 1.7 version of the SVN working copy format. This client should be compatible with any 1.x version of the SVN server, so you could use for example a 1.6.x or 1.9.x SVN server as well.

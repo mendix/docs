@@ -287,7 +287,7 @@ Follow these steps to add logic with microflows:
 
 To expand the logic of the microflow, you will have to edit the microflow in the Desktop Modeler. For more information on working with the Web Modeler and Desktop Modeler, see [Syncing the Web Modeler with the Desktop Modeler](/refguide/desktop-webmodeler).
 
-## 17 Viewing Your App Again
+## 17 Publishing and Viewing Your App Again
 
 You app is now finished! View the app on your mobile phone again, just like you did in 
 [8 Publishing and Viewing Your App](#PublishingViewingApp).

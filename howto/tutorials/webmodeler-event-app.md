@@ -75,7 +75,7 @@ On the **Home** page, below the header, add four **Action Cards** to open new pa
 
     ![](attachments/event-app/wm-step4.jpg)
 
-4. Switch between the device profiles to preview the layout by clicking the device icons at the top of the main Web Modeler window:
+4. Switch between the device profiles to preview the layout per device by clicking the device icons at the top of the main Web Modeler window:
 
     ![](attachments/event-app/wm-step4b.jpg)
 
@@ -90,25 +90,33 @@ Now that the rows are set, it's time to add action cards to the columns that wil
 2. Drag the **Card Action** to all four empty columns:
 
     ![](attachments/event-app/wm-step7.png)
+    
+## 8 Publishing and Viewing Your App<a name="PublishingViewingApp"></a>
 
-4. Select the **Open Page** button for the first card and enter *Program* for its **Caption**.
-5. Select the signal icon **Button** and in **General** > **Icon**, change the icon to **List alt**.
-6. Set the **On Click Action** to **Page**. If the user clicks this card, a new page will be opened. You will create the page that will be opened in the next chapter.
+Your first page is now finished! Let's see the result on your mobile phone:
 
-    ![](attachments/event-app/wm-step8.jpg)
+1. Click **Publish**, then **Update**.
+2. Click **View on mobile device**.
 
-The **Home** page is now finished!
+    ![](attachments/event-app/wm-step9.png)
 
-   ![](attachments/event-app/wm-step8b.png)
+3. Scan the QR-code with your **Mendix Mobile** app (get it for [iOS](https://itunes.apple.com/nl/app/mendix/id458058946?l=en&mt=8) or [Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile&hl=en).
 
-## 8 Adding a New Page
+    ![](attachments/event-app/wm-step10.jpg)
+
+## 9 Adding a New Page
 
 Now that the action cards are set, they must be configured to open new pages. Follow these steps to create a new page that will be opened when the **Program** card is clicked:
 
-1. Select the list alt icon **BUTTON** and under **Events** > **Page**, click **Select page**.
-2. In the **Select Page** dialog box, click **New page**.
-3. Enter *ProgramList* for the **Title** of the new page.
-4. Select **Dashboards** > **Dashboard Timeline** for the template, and then click **Create**.
+1. Select the **Open Page** text of the first card and enter *Program* for its **Caption** property.
+2. Select the signal icon and for the **Icon** property, select **List alt**.
+3. Set the **On Click Action** property to **Page**. If the user clicks this card, a new page will be opened. 
+
+    ![](attachments/event-app/wm-step8.jpg)
+
+4. In the **Select Page** dialog box, click **New page**.
+5. Enter *ProgramList* for the **Title** of the new page.
+6. Select **Dashboards** > **Dashboard Timeline** for the template, and then click **Create**.
 
     ![](attachments/event-app/wm-step12.jpg)<br />
 
@@ -118,12 +126,12 @@ Now that the action cards are set, they must be configured to open new pages. Fo
     
     </div>
 
-5. Replace the header with the **Heroheader1**, like you did for the **Home** page.
-6. Enter *Program List* for the the header **Title**.
-7. Enter *Upcoming events* for the subtitle, and change the color to **Warning**.
-8. Delete the **New** button and its container.
+8. To configure the **Program List** page, replace the header with the **Heroheader1** (like you did for the **Home** page).
+9. Enter *Program List* for the the header **Title**.
+10. Enter *Upcoming events* for the subtitle, and change the color to **Warning**.
+11. Delete the **New** button and its container.
 
-## 9 Adding Entities and Attributes to a Building Block
+## 10 Adding Entities and Attributes to a Building Block
 
 The **ProgramList** page is coming along nicely. The timeline will need to display a list of events, so follow these steps to add entities and attributes to the list view:
 
@@ -144,7 +152,7 @@ The **ProgramList** page is coming along nicely. The timeline will need to displ
 
 The timeline is now connected to the **Day** entity in your domain model.
 
-## 10 Viewing Your Domain Model, Creating an Entity, and Setting Associations
+## 11 Viewing Your Domain Model, Creating an Entity, and Setting Associations
 
 After adding new entities and attributes to a page, it's always good to verify them in the domain model. You can also use the domain model editor to set the associations between the entities.
 
@@ -167,7 +175,7 @@ Follow these steps to create a new entity with several attributes and associate 
 
 ![](attachments/event-app/wm-step15.png)
 
-## 11 Adding the ProgramItem Entity to the List View
+## 12 Adding the ProgramItem Entity to the List View
 
 The **ProgramItem** entity contains four attributes that you can use on the **ProgramList** page. Follow these steps to apply these attributes to the list view elements on that page:
 
@@ -184,18 +192,6 @@ The **ProgramItem** entity contains four attributes that you can use on the **Pr
 
 6. Select **Speaker**. This text widget will now show the speaker for an event.
 7. Select the **This is your timeline detail text** text widget and replace the content with the **Title** attribute.
-
-## 12 Publishing and Viewing Your App
-
-You've already completed many different steps, so it's time to publish your app and see what it looks like when it's deployed. Follow these steps to deploy your app:
-
-1. Click **Publish** in the top-right corner of the Web Modeler.
-2. Click **Update** to deploy the latest changes.
-3. Click **View app** when the update has completed. Your app will now open in a new browser tab.
-
-![](attachments/event-app/wm-step15d.png)
-
-The app is running, but it doesn't have a lot of functionality yet. Continue with the next sections to add more content, pages, and functionality.
 
 ## 13 Changing the On Click Actions
 
@@ -291,18 +287,10 @@ Follow these steps to add logic with microflows:
 
 To expand the logic of the microflow, you will have to edit the microflow in the Desktop Modeler. For more information on working with the Web Modeler and Desktop Modeler, see [Syncing the Web Modeler with the Desktop Modeler](/refguide/desktop-webmodeler).
 
-## 17 Continuing to Publish and View Your App
+## 17 Publishing and Viewing Your App Again
 
-You app is now finished! Follow these steps to view your app in the browser:
-
-1. Click **Publish**, then **Update**.
-2. Click **View on mobile device**.
-
-    ![](attachments/event-app/wm-step9.png)
-
-3. Scan the QR-code with your **Mendix Mobile** app (get it for [iOS](https://itunes.apple.com/nl/app/mendix/id458058946?l=en&mt=8) or [Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile&hl=en).
-
-    ![](attachments/event-app/wm-step10.jpg)
+You app is now finished! View the app on your mobile phone again, just like you did in 
+[8 Publishing and Viewing Your App](#PublishingViewingApp).
 
 Congratulations! You have successfully built an event app in the Web Modeler.
 

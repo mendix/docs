@@ -43,3 +43,7 @@ Now, please wait for confirmation from Mendix before continuing the process.
 4. Open the folder in which your project is stored, and delete the `.svn` and `.mendix-cache` folders. Note that these folders may be hidden, in which case you'll need to enable an option in your file explorer to make them visible. By deleting these folders, any references to the Mendix Team Server are removed. Now your app is ready to be uploaded to your own SVN server.
 5. Double-click the `mpr` file in the same folder to open the project again in the Mendix Modeler. For example, if your app is called `MyApp` then this file will have the name `MyApp.mpr`. Alternatively, you can start the Modeler, click the 'Open App' button and browse to the abovementioned `mpr` file to open your project.
 6. When the project is opened, select the menu item 'Upload to Team Server...' from the Modeler's 'Team' menu. In the dialog that now appears, select the option 'Existing repository' and the name of your project (for example `MyApp`), and press 'OK'. The application should now upload to your on-premises SVN server.
+
+## See also
+* [How to Use Team Server and Version Control](using-team-server-_-version-control)
+* [Team Server Reference Guide](/refguide/team-server)

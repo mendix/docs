@@ -1,5 +1,5 @@
 ---
-title: "Leave App Types"
+title: "Leave App Scenarios"
 space: "Developer Portal"
 category: "General"
 ---

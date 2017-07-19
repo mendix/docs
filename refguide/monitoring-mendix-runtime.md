@@ -20,7 +20,7 @@ Read the next sections to find out which monitoring actions are supported.
 
 **Request**
 
-```json
+```java
 "{"action" : "get_current_runtime_requests", "params":{} }"
 
 ```

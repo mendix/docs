@@ -15,6 +15,8 @@ This document describes the goal and the fuctionality of the Google Two-Factor A
 
 The **production environment** contains very sentative data. Every little change on this environment has a visible impact. It is important that only authorized persons can enter this environment. To make sure that the person is who authorized, there is a second check.
 
+    ![](attachments/production.png)
+
 For more information, see [Google Authentication](https://www.google.com/landing/2step/#tab=how-it-protects)
 
 ## 3 How it Works

@@ -27,14 +27,14 @@ Before starting with this how-to, make sure you have completed the following pre
 To create your app, follow these steps:
 
 1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in if you are not already logged in. The Mendix Developer Portal is the central starting point for using, sharing, and building apps.
-2. Click **Create App** in the upper-right side of the screen:
+2. Click **Create App** in the top right of the screen:
 
     ![](attachments/build-an-employee-directory-app/create-app.png) 
 
-3. On the **Tutorials** tab, select the **Build an Employee Directory App**.
+3. On the **Tutorials** tab, select **Build an Employee Directory App**.
 
 4. Click **Use this app**, enter a name for your application, and click **Create App**.
-5. Your app is now created! When it is ready, you will land on the **Buzz** page for the app, where you can see and share ideas as well as collaborate with your team. In the **Team** section on the right side of the screen, you can see your team and invite colleagues to join the app project.
+5. Your app is now created! When it is ready, you will land on the **Buzz** page for the app, where you can see and share ideas as well as collaborate with your team. In the **Team** section on the right, you can see your team and invite colleagues to join the app project.
 
     ![](attachments/build-an-employee-directory-app/app-buzz.png)
 
@@ -66,13 +66,15 @@ On the left side of the Web Modeler is the main menu. Via the icons in this menu
 * **Theme Customizer**
 * **Feedback**
 
+You can click on the Mendix logo to go back to the **Developer Portal**.
+
 ![](attachments/build-an-employee-directory-app/main-menu.png)
 
-The main window of the Web Modeler that you are currently viewing is the home page. Here you will be developing the app by editing pages, microflows, and the domain models.
+The main window of the Web Modeler is you’ll be developing the app by editing pages, microflows, and domain models.
 
 ![](attachments/build-an-employee-directory-app/main-window.png)
 
-On the right of the Web Modeler is the toolbox and the properties of the element you have selected in the editing area. The toolbox contains widgets, building blocks, or microflow activities that you can drag into your app.
+On the right side of the Web Modeler you can find the toolbox and properties of elements you select in the editing area. The toolbox contains widgets, building blocks, or microflow activities that you can add to your app.
 
 ![](attachments/build-an-employee-directory-app/toolbox.png)
 

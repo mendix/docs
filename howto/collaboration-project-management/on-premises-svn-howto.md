@@ -41,7 +41,9 @@ The first point is that Mendix requires you to store each Mendix application in 
 
 The second point is that, when uploading a project to a repository, the Mendix Modeler requires this repository to be empty (except for the recommended SVN layout as described in [Recommended Repository Layout](http://svnbook.red-bean.com/en/1.7/svn.tour.importing.html#svn.tour.importing.layout) in *Version Control with Subversion*). Specifically, this means that the repository should contain only three empty folders, called **branches**, **tags**, and **trunk**.
 
-Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories, see [Repository Administration](http://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin) in *Version Control with Subversion*. In the following sections of this how-to, it is assumed that you have a repository available for your application.
+Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories, see [Repository Administration](http://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin) in *Version Control with Subversion*.
+
+In the following sections of this how-to, it is assumed that you have a repository available for your application.
 
 ## 5 SVN Versions
 

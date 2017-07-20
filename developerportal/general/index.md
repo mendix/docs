@@ -5,5 +5,5 @@ space: "Developer Portal"
 
 ## Documents in This Category
 
-* [Leave App Types](leave-app)
+* [Leave App Scenarios](leave-app)
 * [Mendix Profile](mendixprofile)

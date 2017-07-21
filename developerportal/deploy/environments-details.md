@@ -206,7 +206,7 @@ Add client certificates (in the PKCS12 format) or certificate authorites (in the
 
 ## 5 Log Levels
 
-   ![](attachments/loglevels.png)   
+   ![](attachments/loglevels-tab.png)   
 
 Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require.
 

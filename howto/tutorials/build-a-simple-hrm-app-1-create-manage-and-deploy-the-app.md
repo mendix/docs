@@ -26,29 +26,21 @@ Before starting with this how-to, make sure you have completed the following pre
 
 To create your app, follow these steps:
 
-1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in if you are not already logged in.<br>
+1.  Go to the [Mendix Developer Portal](http://home.mendix.com) and log in if you are not already logged in.
 
-    <div class="alert alert-info">{% markdown %}
+    <div class="alert alert-info">The Mendix Developer Portal is the central starting point for using, sharing, and building apps.</div>
 
-    The Mendix Developer Portal is the central starting point for using, sharing, and building apps.
+2.  In the Mendix Developer Portal, click **Create App**:
 
-    {% endmarkdown %}</div>
+    ![](attachments/18448672/18580906.png)
 
-2. In the Mendix Developer Portal, click **Create App**:
+3.  On the **Getting Started** tab, select the **Build a Simple HRM Tutorial** app.
 
-    ![](attachments/18448672/18580906.png) 
+4.  Click **Use this app**, enter the name of your application, and click **Create App**:
 
-3. On the **Getting Started** tab, select the **Build a Simple HRM Tutorial** app. 
+5.  Your app is now being created! When it is ready, you will land on the **Buzz** page for your app, where you can see and share ideas as well as collaborate with your team.
 
-4. Click **Use this app**, enter the name of your application, and click **Create App**:
-
-5. Your app is now being created! When it is ready, you will land on the **Buzz** page for your app, where you can see and share ideas as well as collaborate with your team.<br>
-
-    <div class="alert alert-info">{% markdown %}
-
-    In the **Team** section on the right side of the screen, you can see your team and invite colleagues to join the app project.
-
-    {% endmarkdown %}</div>
+    <div class="alert alert-info">In the <strong>Team</strong> section on the right side of the screen, you can see your team and invite colleagues to join the app project.</div>
 
     ![](attachments/18448672/18580902.png)
 
@@ -56,14 +48,14 @@ To create your app, follow these steps:
 
 To edit your app, follow these steps:
 
-1. Make sure you have downloaded the latest Desktop Modeler [here](https://appstore.home.mendix.com/link/modelers/) and installed it. Note that this tutorial was created with Mendix Desktop Modeler 7.2.0.
-2. You can open your app from the **My Apps** overview in the Desktop Modeler. You can also go back to the **Buzz** page in the Mendix Developer Portal and click **Edit App** to open your app in the Desktop Modeler.
+1.  Make sure you have downloaded the latest Desktop Modeler [here](https://appstore.home.mendix.com/link/modelers/) and installed it. Note that this tutorial was created with Mendix Desktop Modeler 7.2.0.
+2.  You can open your app from the **My Apps** overview in the Desktop Modeler. You can also go back to the **Buzz** page in the Mendix Developer Portal and click **Edit App** to open your app in the Desktop Modeler.
 
-    ![](attachments/18448672/18580895.png) 
+    ![](attachments/18448672/18580895.png)
 
-When your app is loaded into the Desktop Modeler, you will find the **Project Explorer** pane on the left side. This pane lists all of the developer content of your app. You can add pages, logic, and other content here.
+    When your app is loaded into the Desktop Modeler, you will find the **Project Explorer** pane on the left side. This pane lists all of the developer content of your app. You can add pages, logic, and other content here.
 
-![](attachments/18448672/18580892.png)
+    ![](attachments/18448672/18580892.png)
 
 ## 5 Deploying Your App
 

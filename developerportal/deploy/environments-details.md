@@ -1,5 +1,5 @@
 ---
-title: "Environment Details in Cloud v3"
+title: "Environment Details"
 space: "Developer Portal"
 category: "Deploy"
 description: "This page describes the environmental details of your App."
@@ -16,7 +16,7 @@ This document will explain the view of the **Environment details** page of a Men
 
 ## 2 General
 
-   ![](attachments/environment-v3.png)   
+   ![](attachments/.png)   
 
 In **General**, you can find the following information about your environment:
 
@@ -48,14 +48,39 @@ On the right side of the screen, you can find the following action buttons:
 * **Show Logged in Users**
 * **Change Admin Password**
 * **View Current Log**
-* **Disable Debugging**
-    * For more information about enabling the debugger, see [Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
 
-### 2.2 Overviews
+#### Debugger in Mendix Cloud v3
+
+   ![](attachments/actions-v3.png)
+
+In Mendix Cloud v3 environments you can click **Enable/Disable Debugging** to enable or disable the debugger option.
+    * For more information about enabling the debugger, see [Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
+    
+#### Debugger in Mendix Cloud v4
+
+![](attachments/actions-v4.png)
+
+In Mendix Cloud v4 environments the debugger is always enabled. You can click **Show debugger information** to show settings to connect the debugger in your Mendix Desktop Modeler to your app.
+
+## 2.2 Scaling
+
+![](attachments/scale.png)
+
+In **Scaling** there are two sliders that you can control:
+
+* The **Instances** slider to increase or decrease the amount from one to four instances by sliding the slider. The instances are meant for spreading your memory out. You can spread the RAM memory among 4 instances if you have more than 1GB of RAM memory.
+* The **Memory per instance** slider to increase or decrease the memory amount per instance by sliding the slider. 
+
+The **Total Allocated Memory** is a process cirkle that shows how much memory is currently used for scaling. 
+
+If you have 1GB RAM of the **Total Allocated Memory**, you have 1 **instance** available to store your memory. 
+To scale your memory over multiple instances you need more memory.
+
+### 2.3 Overviews
 
 At the bottom of the page, there are two overview grids with information about the following:
 
-#### 2.3 License
+#### License
 
 The license overview contains the following information:
 
@@ -74,7 +99,7 @@ The limitation types are:
 * Concurrent anonymous – the amount of anonymous users that are logged in simultaneously
 * Named – the amount of named users registered in the database that are allowed to use the application
 
-#### 2.4 Loaded Deployment Package
+#### Loaded Deployment Package
 
 In this section, you can find information about the deployment package that is currently loaded into the environment:
 

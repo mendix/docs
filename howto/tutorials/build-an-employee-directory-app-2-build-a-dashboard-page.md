@@ -75,7 +75,7 @@ To fill up the column placeholders to create a dashboard menu, follow these step
     ![](attachments/build-an-employee-directory-app/heroheader1.png)
 
 7. Select the **Hero Header Title** text widget and change the text in the **Content** field to *My First App* in the Properties.
-8. Select the **subtitle** text widget and rename the content to **An Employee Directory App**.
+8. Select the **subtitle** text widget and rename the content to *An Employee Directory App*.
 9. Select the **LAYOUT GRID** of the default header and click **Delete** in the bottom-right of the page to remove it:
 
     ![](attachments/build-an-employee-directory-app/remove-current-header.png)

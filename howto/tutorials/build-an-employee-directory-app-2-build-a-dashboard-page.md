@@ -43,7 +43,7 @@ You can change the layout of the page by editing the layout grid. To change the 
     
     ![](attachments/build-an-employee-directory-app/change-devices.png) 
 
-4. For the phone device, the columns now have a full widget. Change the phone **Row Layout** to the 2x2 layout and view how this changes the layout for the different devices:
+4. For the phone device, the columns now have a full widget. Change the **Phone** **Row Layout** to the 2x2 layout and view how this changes the layout for the different devices:
     
     ![](attachments/build-an-employee-directory-app/change-phone-layout.png)
 
@@ -66,11 +66,16 @@ To fill up the column placeholders to create a dashboard menu, follow these step
     
     ![](attachments/build-an-employee-directory-app/select-button-action-card.png)
 
-5. Now that you've gotten the hang of it, you will replace the current header with **HeroHeader1**. Locate this in the **Header** building blocks section:
+5. Change the **Icon** to **User**:
+
+    ![](attachments/build-an-employee-directory-app/user-icon.png)
+
+6. Select the **Open Page** button and enter *Employees* for the **Caption**.
+6. Now that you've gotten the hang of it using building blocks, you will replace the current header with **HeroHeader1**. Locate this in the **Header** building blocks section:
     
     ![](attachments/build-an-employee-directory-app/header-section.png)
 
-6. Drag the **HeroHeader1** building block and drop it just below the top header:
+7. Drag the **HeroHeader1** building block and drop it just below the top header:
     
     ![](attachments/build-an-employee-directory-app/heroheader1.png)
 

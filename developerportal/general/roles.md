@@ -59,17 +59,35 @@ Only the **Technical Contact** is allowed to:
 * manage licenses (renewals/activation/upgrades)
 * configure the alert settings
 
+For more information, see [Technical Contact](/developerportal/settings/technical-contact) and [Security - Node Permissions](/developerportal/settings/node-permissions),
+
 ## 4. Team Member Roles
 
-Within an App Team there are six predefined roles that can be provisioned to Team Members. You can also create new team roles within your company. The predefined team member roles are described below:
+Within an App Team there are six predefined roles that can be provisioned to Team Members. You can also create new team roles within your company. 
 
-* Application Operator - is mainly responsible for the deploying new versions of the application. The node permissions must be provisioned by the Technical Contact.
-* Business Engineer - is able to use almost all features in the Developer Portal, but is not able to change the settings. The node permissions must be provisioned by the Technical Contact.
-* End-user - has a limited view of the Developer Portal. The end-user can only add feedback and documents.
-* Product Owner - can edit the most of the features of the app, but has no access to the model or the node.
-* SCRUM Master - if you create a new app, you will automatically become a SCRUM Master. A SCRUM Master is responsible for the development process. He/she can manage all settings within the app. The node permissions must be provisioned by the Technical Contact.
+The Team Member Roles have access to different permission areas:
 
-## 5 Related Content
+* who can edit the backlog and current sprint
+* who can edit the app model
+* who has access to node information
+* who can change the app settings
 
-*   [Company Admin](/developerportal/companyadmin)
-*   [Settings](/developerportal/settings)
+<div class="alert alert-info">{% markdown %}
+
+Note that the **Node Permissions** must be provisioned by the **Technical Contact**.
+
+{% endmarkdown %}</div>
+
+The predefined roles can be changed in two places:
+1.	As Company Admin you can change them. Changes will have effect on every app created after the change.
+2.	As Scrum Master you can change them for the specific app you are a Scrum Master of.
+
+The predefined team member roles are described below:
+
+* Application Operator - A member who does not actively develop on the application, but is responsible for operations on the application's cloud node. 
+* Business Engineer - A member of the app team who contributes to the development of the application.  
+* End-user - A user of the application who should have insight into the backlog but doesn't actively participate in development. For example a stakeholder.
+* Product Owner - The product owner of the Scrum team who is responsible for managing the application's backlog.
+* Scrum Master - The Scrum master of the agile app team. In addition to contributing to development, the SCRUM Master manages all settings within the app. If you create a new app, you will automatically become a SCRUM Master.
+
+For more information, see [Settings](/developerportal/settings).

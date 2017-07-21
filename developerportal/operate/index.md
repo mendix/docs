@@ -17,7 +17,7 @@ On this page you can monitor the performance and health of your App.
 
 For more information, see [Metrics](/developerportal/operate/metrics).
 
-This page is divided into three subpages described below:
+This page is divided into three tabs described below:
 
 ### 2.1 Trends
 
@@ -39,10 +39,10 @@ Running requests are all requests that are currently in progress for this enviro
 
 At this section you can view the following information about the running requests:
 
-*   User - the user that is running the request
+*   User - the user that is running the action
 *   Action - the currently running actions
 *   Type - the action type that is running
-*   Duration - how long the request is running until the **Refresh** button has been clicked
+*   Duration - for how long the action has been running
 
 ### 2.3 Cache
 

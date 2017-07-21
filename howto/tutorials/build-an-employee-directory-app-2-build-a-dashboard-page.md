@@ -62,26 +62,17 @@ To fill up the column placeholders to create a dashboard menu, follow these step
     ![](attachments/build-an-employee-directory-app/card-action.png)
 
 3. Drag a **Card Action** building block into every column.
-4. Select the **BUTTON** with the signal icon of the top-left card action:
-    
-    ![](attachments/build-an-employee-directory-app/select-button-action-card.png)
-
-5. Change the **Icon** to **User**:
-
-    ![](attachments/build-an-employee-directory-app/user-icon.png)
-
-6. Select the **Open Page** button and enter *Employees* for the **Caption**.
-6. Now that you've gotten the hang of it using building blocks, you will replace the current header with **HeroHeader1**. Locate this in the **Header** building blocks section:
+4. Now that you've gotten the hang of it using building blocks, you will replace the current header with **HeroHeader1**. Locate this in the **Header** building blocks section:
     
     ![](attachments/build-an-employee-directory-app/header-section.png)
 
-7. Drag the **HeroHeader1** building block and drop it just below the top header:
+5. Drag the **HeroHeader1** building block and drop it just below the top header:
     
     ![](attachments/build-an-employee-directory-app/heroheader1.png)
 
-7. Select the **Hero Header Title** text widget and change the text in the **Content** field to *My First App* in the Properties.
-8. Select the **subtitle** text widget and rename the content to *An Employee Directory App*.
-9. Select the **LAYOUT GRID** of the default header and click **Delete** in the bottom-right of the page to remove it:
+6. Select the **Hero Header Title** text widget and change the text in the **Content** field to *My First App* in the Properties.
+7. Select the **subtitle** text widget and rename the content to *An Employee Directory App*.
+8. Select the **LAYOUT GRID** of the default header and click **Delete** in the bottom-right of the page to remove it:
 
     ![](attachments/build-an-employee-directory-app/remove-current-header.png)
     

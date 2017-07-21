@@ -118,7 +118,7 @@ To create the entity for an employee, follow these steps:
 
     ![](attachments/build-an-employee-directory-app/listview-select.png)
 
-2. Click the **Entity** property to create a new entity:
+2. You want to create a new entity, so click the **Entity** property:
     
     ![](attachments/build-an-employee-directory-app/select-entity.png)
 
@@ -142,15 +142,16 @@ To create the entity for an employee, follow these steps:
 
     ![](attachments/build-an-employee-directory-app/list-view.png)
 
-The Desktop Modeler is required for editing image widgets. You will do this later in another how-to.
-
 ### 3.5 Adding an Input Employee Page
 
 Now that you have created an entity representing the employees, you also need to populate that entity with data. The quickest way to add data to your app is to create an input page.
 
 To add a page for inputting employees, follow these steps:
 
-1. Select the **Add** button.
+1. Select the **Add** button on the **Employees** page:
+
+    ![](attachments/build-an-employee-directory-app/employees-add.png)
+
 2. Select **Employee** for the **Entity** property of the button:
 
     ![](attachments/build-an-employee-directory-app/select-entity2.png)
@@ -203,11 +204,12 @@ To add the Google Maps widget to the page, follow these steps:
     ![](attachments/build-an-employee-directory-app/googlemaps.png)
 
 3. Drag the **Google Maps** widget from the **Display** properties category onto the page below the **Bio** text box.
-4. The Google Maps widget requires an **Address attribute** or both the **Latitude attribute** and **Longitude attribute**. So, add an additional text box to the page, and connect it to a new attribute named **Address**.
+4. The Google Maps widget requires an **Address attribute** or both the **Latitude attribute** and **Longitude attribute**. So, search for "Text" in the **Toolbox** and drag the additional **Text Box** widget above the map.
+5. Connect the new text box to a new attribute named **Address**:
 
     ![](attachments/build-an-employee-directory-app/address.png)
 
-5. Select the Google Maps widget, open the **Data source** properties category, and do the following:<br>
+6. Select the Google Maps widget, open the **Data source** properties category, and do the following:<br>
     a. Set the **Locations Entity** to **Employee**.<br>
     b. Set the **Address Attribute** to **Address**.
 

@@ -9,8 +9,7 @@ ALTER DATABASE [YourDatabase] SET READ_COMMITTED_SNAPSHOT ON;
 CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM [a dll file] WITH PERMISSION_SET = SAFE;
 ```
 
-In order to set Read Committed Snapshot or to create an Assembly the user will need to have the db_ddladmin role. For each new Mendix databasea the Read Committed Snapshot must be enabled. 
-The Assembly query is only executed once per database server instance, and used by all Mendix applications.
+In order to set "Read Committed Snapshot" or to create an Assembly the user will need to have the `db_ddladmin` role. For each new Mendix database the "Read Committed Snapshot" configuration must be enabled. The Assembly query is only executed once per database server instance, and used by all Mendix applications.
 
 
 ```
@@ -18,9 +17,9 @@ Error while executing query
 CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone nvarchar(50)) RETURNS datetime AS EXTERNAL NAME [Mendix.SqlServerExtensions].[Mendix.SqlServerExtensions.DateTimeLocalizer].[ConvertToLocalDateTime];
 ```
 
-This permission is granted implicitly to the db_ddladmin and db_owner fixed database roles. In SQL Server 2005 or higher, the user will still need ALTER SCHEMA rights to create the function in a particular schema.
+This permission is granted implicitly to the `db_ddladmin` and `db_owner` fixed database roles. In SQL Server 2005 or higher, the user will still need `ALTER SCHEMA` rights to create the function in a particular schema.
 
-In general if the user has the the db_owner role for the database he will have sufficient privileges to executing this query. 
+In general if the user has the the `db_owner` role for the database he will have sufficient privileges to executing this query. 
 
 ```
 Opening JDBC connection to yourServerAddress\YourInstanceName:0 failed with SQLState: 08S01 Error code: 0 Message: The connection to the host localhost, named instance sqlexpress2008 failed.

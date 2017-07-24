@@ -35,14 +35,14 @@ branches:
   only:
   - master
   - development
-# deploy:
-# - provider: script
-#   script:
-#     - ./_scripts/deploy.sh
-#   skip_cleanup: true
-#   on:
-#     branch:
-#       - master
-#       - development
-# after_deploy:
-#   - ./_scripts/algolia.sh
+deploy:
+- provider: script
+  script:
+    - ./_scripts/deploy.sh
+  skip_cleanup: true
+  on:
+    branch:
+      - master
+      - development
+after_deploy:
+  - ./_scripts/algolia.sh

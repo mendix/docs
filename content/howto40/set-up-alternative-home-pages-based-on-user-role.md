@@ -1,6 +1,6 @@
 ---
 title: "Set Up Alternative Home Pages Based On User Role"
-parent: "Navigation"
+parent: "navigation"
 space: "Mendix 4 How-to's"
 ---
 ## Description

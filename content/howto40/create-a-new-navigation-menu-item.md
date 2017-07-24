@@ -1,6 +1,6 @@
 ---
 title: "Create a New Navigation Menu Item"
-parent: "Navigation"
+parent: "navigation"
 space: "Mendix 4 How-to's"
 ---
 ## Description

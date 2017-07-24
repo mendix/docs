@@ -145,7 +145,7 @@ Next, you have to add the selector for the current active span child node. To se
 
 ![](attachments/create-custom-action/childnodeselector.png)
 
-The Find Widget Child Node action will now select the first active ``<span>-element``, which is a child node of the widget with the name "Widget Name." To get the text inside the ``<span>-element``, you will use the [Get Text](/ATS/refguide-ats-1/get-text) action. Click **Add** on the **Test Steps** tab, and in the openend **Test Step Setup** dialog box, enter *Get Text* in the second text field.  Make sure that **Search private folders** is checked. Select the **Get Text** row in the search results tab, and click **Save**.
+The Find Widget Child Node action will now select the first active ``<span>-element``, which is a child node of the widget with the name "Widget Name." To get the text inside the ``<span>-element``, you will use the [Get Text](/ats/refguide-ats-1/get-text) action. Click **Add** on the **Test Steps** tab, and in the openend **Test Step Setup** dialog box, enter *Get Text* in the second text field.  Make sure that **Search private folders** is checked. Select the **Get Text** row in the search results tab, and click **Save**.
 
 ![](attachments/create-custom-action/gettext.png)
 

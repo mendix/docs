@@ -32,47 +32,47 @@ The empty option caption is available from Mendix 7.2.0.
 
 {{% /alert %}}
 
-{% snippet Required+Property.md %}
+{{% snippet file="refguide/Required+Property.md" %}}
 
-{% snippet Required+message+Property.md %}
+{{% snippet file="refguide/Required+message+Property.md" %}}
 
 ## Data Source Properties
 
-{% snippet Attribute+Path+Property.md %}
+{{% snippet file="refguide/Attribute+Path+Property.md" %}}
 
-{% snippet Label+Property.md %}
+{{% snippet file="refguide/Label+Property.md" %}}
 
 ## Editability Properties
 
-{% snippet Editable+Property.md %}
+{{% snippet file="refguide/Editable+Property.md" %}}
 
-{% snippet Read+Only+Style.md %}
+{{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{% snippet Condition+Property.md %}
+{{% snippet file="refguide/Condition+Property.md" %}}
 
 ## Visibility properties
 
-{% snippet Visibility+Property.md %}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Events Properties
 
-{% snippet On+Change+Event.md %}
+{{% snippet file="refguide/On+Change+Event.md" %}}
 
-{% snippet On+Enter+event.md %}
+{{% snippet file="refguide/On+Enter+event.md" %}}
 
-{% snippet On+Leave+Event.md %}
+{{% snippet file="refguide/On+Leave+Event.md" %}}
 
 ## Common Properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
-{% snippet Tab+index+Property.md %}
+{{% snippet file="refguide/Tab+index+Property.md" %}}
 
 ## Related Content
 

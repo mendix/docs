@@ -7,9 +7,9 @@ parent: "data-grid"
 
 
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## Data Source Properties
 

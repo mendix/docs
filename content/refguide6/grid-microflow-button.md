@@ -9,9 +9,9 @@ The microflow button allows you to create a button with custom behavior. The sel
 
 ## Common properties
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide6/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide6/Style+Property.md" %}}
 
 ## Events
 
@@ -25,13 +25,13 @@ With the on click settings you can customize which parameters to pass to the mic
 
 ## General properties
 
-{% snippet Caption+Property.md %}
+{{% snippet file="refguide6/Caption+Property.md" %}}
 
-{% snippet Tooltip+Property.md %}
+{{% snippet file="refguide6/Tooltip+Property.md" %}}
 
-{% snippet Image+Property.md %}
+{{% snippet file="refguide6/Image+Property.md" %}}
 
-{% snippet Is+default+button+Property.md %}
+{{% snippet file="refguide6/Is+default+button+Property.md" %}}
 
 ## Visibility properties
 
@@ -39,4 +39,4 @@ With the on click settings you can customize which parameters to pass to the mic
 Conditional visibility settings were added in version 5.10.0.
 {{% /alert %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Extended.md %}
+{{% snippet file="refguide6/Visibility+Property+With+Module+Roles+Extended.md" %}}

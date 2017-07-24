@@ -64,7 +64,7 @@ results in the following text
 
 ## Common Properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
 ## Data Source Properties
 

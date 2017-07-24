@@ -16,14 +16,14 @@ An empty container.
 
 ## Common properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## General properties
 
-{% snippet Visibility+Property.md %}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}

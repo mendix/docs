@@ -16,9 +16,9 @@ A navigation list with three empty rows.
 
 ## Common properties
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide6/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide6/Style+Property.md" %}}
 
 # Navigation list item
 
@@ -32,4 +32,4 @@ Action defines what action is performed when a navigation list item is 'clicked'
 
 ## Visibility properties
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide6/Visibility+Property+With+Module+Roles+Simple.md" %}}

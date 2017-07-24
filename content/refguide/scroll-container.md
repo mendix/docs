@@ -17,11 +17,11 @@ The scroll container splits the layout in three parts: a header containing a log
 
 ## Common Properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## General Properties
 

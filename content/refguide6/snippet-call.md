@@ -9,7 +9,7 @@ The snippet call widget allows you to use a [snippet](snippet) on another snippe
 
 ## Common Properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide6/Name+Property.md" %}}
 
 ## General Properties
 

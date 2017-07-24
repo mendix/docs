@@ -15,22 +15,22 @@ The close button closes the page with the data view. This button can only be use
 
 ## Common properties
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide6/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide6/Style+Property.md" %}}
 
 ## General properties
 
-{% snippet Caption+Property.md %}
+{{% snippet file="refguide6/Caption+Property.md" %}}
 
-{% snippet Tooltip+Property.md %}
+{{% snippet file="refguide6/Tooltip+Property.md" %}}
 
-{% snippet Image+Property.md %}
+{{% snippet file="refguide6/Image+Property.md" %}}
 
-{% snippet Button+Style+Property.md %}
+{{% snippet file="refguide6/Button+Style+Property.md" %}}
 
-{% snippet Is+close+button+Property.md %}
+{{% snippet file="refguide6/Is+close+button+Property.md" %}}
 
 ## Visibility properties
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide6/Visibility+Property+With+Module+Roles+Simple.md" %}}

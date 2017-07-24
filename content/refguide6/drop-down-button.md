@@ -9,25 +9,25 @@ Clicking a drop down button shows a list of items. Each item has a caption and a
 
 ## Button properties
 
-{% snippet Caption+Property.md %}
+{{% snippet file="refguide6/Caption+Property.md" %}}
 
-{% snippet Tooltip+Property.md %}
+{{% snippet file="refguide6/Tooltip+Property.md" %}}
 
-{% snippet Image+Property.md %}
+{{% snippet file="refguide6/Image+Property.md" %}}
 
-{% snippet Render+Mode+Property.md %}
+{{% snippet file="refguide6/Render+Mode+Property.md" %}}
 
-{% snippet Button+Style+Property.md %}
+{{% snippet file="refguide6/Button+Style+Property.md" %}}
 
 ## Common properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide6/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide6/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide6/Style+Property.md" %}}
 
-{% snippet Tab+index+Property.md %}
+{{% snippet file="refguide6/Tab+index+Property.md" %}}
 
 ## Items
 
@@ -43,4 +43,4 @@ The action of a drop down button item can specify a page or a microflow to execu
 Conditional visibility settings were added in version 5.10.0.
 {{% /alert %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Extended.md %}
+{{% snippet file="refguide6/Visibility+Property+With+Module+Roles+Extended.md" %}}

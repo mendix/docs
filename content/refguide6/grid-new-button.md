@@ -9,9 +9,9 @@ The new button allows the end-user to create new objects in a grid or reference 
 
 ## Common Properties
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide6/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide6/Style+Property.md" %}}
 
 ## Data Source Properties
 
@@ -27,15 +27,15 @@ Let us say you have an entity Vehicle and two specializations, namely Bicycle an
 
 ## General Properties
 
-{% snippet Caption+Property.md %}
+{{% snippet file="refguide6/Caption+Property.md" %}}
 
-{% snippet Tooltip+Property.md %}
+{{% snippet file="refguide6/Tooltip+Property.md" %}}
 
-{% snippet Image+Property.md %}
+{{% snippet file="refguide6/Image+Property.md" %}}
 
-{% snippet Button+Style+Property.md %}
+{{% snippet file="refguide6/Button+Style+Property.md" %}}
 
-{% snippet Is+default+button+Property.md %}
+{{% snippet file="refguide6/Is+default+button+Property.md" %}}
 
 ### Edit location
 
@@ -59,4 +59,4 @@ See [Opening Pages](opening-pages).
 Conditional visibility settings were added in version 5.10.0.
 {{% /alert %}}
 
-{% snippet Visible+Property.md %}
+{{% snippet file="refguide6/Visible+Property.md" %}}

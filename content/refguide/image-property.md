@@ -4,4 +4,4 @@ space: "Mendix 7 Reference Guide"
 parent: "button-widgets"
 ---
 
-{% snippet Image+Property.md %}
+{{% snippet file="refguide/Image+Property.md" %}}

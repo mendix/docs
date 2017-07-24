@@ -23,43 +23,43 @@ This property defines whether the radio buttons are rendered horizontally or ver
 
 _Default value:_ Horizontal
 
-{% snippet Required+Property.md %}
+{{% snippet file="refguide/Required+Property.md" %}}
 
-{% snippet Required+message+Property.md %}
+{{% snippet file="refguide/Required+message+Property.md" %}}
 
 ## Data source properties
 
-{% snippet Attribute+Path+Property.md %}
+{{% snippet file="refguide/Attribute+Path+Property.md" %}}
 
-{% snippet Label+Property.md %}
+{{% snippet file="refguide/Label+Property.md" %}}
 
 ## Editability properties
 
-{% snippet Editable+Property.md %}
+{{% snippet file="refguide/Editable+Property.md" %}}
 
-{% snippet Read+Only+Style.md %}
+{{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{% snippet Condition+Property.md %}
+{{% snippet file="refguide/Condition+Property.md" %}}
 
 ## Visibility properties
 
-{% snippet Visibility+Property.md %}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Events properties
 
-{% snippet On+Change+Event.md %}
+{{% snippet file="refguide/On+Change+Event.md" %}}
 
 ## Common properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %} 
+{{% snippet file="refguide/Class+Property.md" %}} 
 
-{% snippet Style+Property.md %} 
+{{% snippet file="refguide/Style+Property.md" %}} 
 
-{% snippet Tab+index+Property.md %}
+{{% snippet file="refguide/Tab+index+Property.md" %}}
 
 ## Related articles
 

@@ -7,17 +7,17 @@ parent: "search-bar"
 
 ## Common Properties
 
-{% snippet Search+Field+Caption+Property.md %}
+{{% snippet file="refguide6/Search+Field+Caption+Property.md" %}}
 
-{% snippet Search+Field+Type+Property.md %}
+{{% snippet file="refguide6/Search+Field+Type+Property.md" %}}
 
-{% snippet Search+Field+Default+Value+Property.md %}
+{{% snippet file="refguide6/Search+Field+Default+Value+Property.md" %}}
 
 ## General properties
 
-{% snippet Search+Field+Attribute+Path+Property.md %}
+{{% snippet file="refguide6/Search+Field+Attribute+Path+Property.md" %}}
 
-{% snippet Search+Field+Comparison+Property.md %}
+{{% snippet file="refguide6/Search+Field+Comparison+Property.md" %}}
 
 ### Allow multi-select
 

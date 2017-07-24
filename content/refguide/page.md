@@ -19,7 +19,7 @@ Pages define the end user interface of a Mendix application. Every page is based
 
 The name of the page. You can change the name via the project explorer.
 
-{% snippet Documentation+Property.md %}
+{{% snippet file="refguide/Documentation+Property.md" %}}
 
 ### Class
 

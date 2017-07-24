@@ -9,21 +9,21 @@ The delete button allows end-users to delete objects from the database that are 
 
 ## Common properties
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## General properties
 
-{% snippet Caption+Property.md %}
+{{% snippet file="refguide/Caption+Property.md" %}}
 
-{% snippet Tooltip+Property.md %}
+{{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{% snippet Image+Property.md %}
+{{% snippet file="refguide/Image+Property.md" %}}
 
-{% snippet Button+Style+Property.md %}
+{{% snippet file="refguide/Button+Style+Property.md" %}}
 
-{% snippet Is+default+button+Property.md %}
+{{% snippet file="refguide/Is+default+button+Property.md" %}}
 
 ## Visibility properties
 
@@ -31,6 +31,6 @@ The delete button allows end-users to delete objects from the database that are 
 Conditional visibility settings were added in version 5.10.0.
 {{% /alert %}}
 
-{% snippet Visibility+Property.md %}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Extended.md %}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Extended.md" %}}

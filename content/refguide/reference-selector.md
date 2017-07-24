@@ -70,9 +70,9 @@ You can generate a new page to show by right-clicking the widget and selecting '
 
 {{% /alert %}}
 
-{% snippet Required+Property.md %}
+{{% snippet file="refguide/Required+Property.md" %}}
 
-{% snippet Required+message+Property.md %}
+{{% snippet file="refguide/Required+message+Property.md" %}}
 
 ### Go-To Page
 
@@ -181,35 +181,35 @@ Keep in mind that even though you connect an attribute to the reference selector
 
 {{% /alert %}}
 
-{% snippet Label+Property.md %}
+{{% snippet file="refguide/Label+Property.md" %}}
 
 ## Editability Properties
 
-{% snippet Editable+Property.md %}
+{{% snippet file="refguide/Editable+Property.md" %}}
 
-{% snippet Read+Only+Style.md %}
+{{% snippet file="refguide/Read+Only+Style.md" %}}
 
-{% snippet Condition+Property.md %}
+{{% snippet file="refguide/Condition+Property.md" %}}
 
 ## Visibility Properties
 
-{% snippet Visibility+Property.md %}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Events Properties
 
-{% snippet On+Change+Event.md %}
+{{% snippet file="refguide/On+Change+Event.md" %}}
 
 ## Common Properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
-{% snippet Tab+index+Property.md %}
+{{% snippet file="refguide/Tab+index+Property.md" %}}
 
 ## Related Articles
 

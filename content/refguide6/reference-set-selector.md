@@ -45,13 +45,13 @@ See [Columns](columns) for more information.
 
 ## Common properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide6/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide6/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide6/Style+Property.md" %}}
 
-{% snippet Tab+index+Property.md %}
+{{% snippet file="refguide6/Tab+index+Property.md" %}}
 
 ## Appearance properties
 
@@ -139,7 +139,7 @@ With the reference selector you are editing an association of type reference set
 
 ## Events properties
 
-{% snippet On+Change+Event.md %}
+{{% snippet file="refguide6/On+Change+Event.md" %}}
 
 ## Selectable objects properties
 
@@ -163,7 +163,7 @@ See [Selectable Objects Properties](reference-selector) of the reference selecto
 
 ## Visibility properties
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide6/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Related Articles
 

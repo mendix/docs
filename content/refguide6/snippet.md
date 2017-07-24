@@ -17,7 +17,7 @@ When an entity is defined on a snippet, any usages of the snippet need to be pla
 
 The name of the snippet. You can change the name via the project explorer.
 
-{% snippet Documentation+Property.md %}
+{{% snippet file="refguide6/Documentation+Property.md" %}}
 
 ## Designer Properties
 

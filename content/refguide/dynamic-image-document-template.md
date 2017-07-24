@@ -34,4 +34,4 @@ The height defines the height of the image in the document. This is set in pixel
 
 ## Common Properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}

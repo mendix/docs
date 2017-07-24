@@ -24,16 +24,16 @@ A label placed in a cell with render mode header.
 
 ## General properties
 
-{% snippet Caption+Property.md %}
+{{% snippet file="refguide6/Caption+Property.md" %}}
 
 ## Visibility properties
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide6/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Common properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide6/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide6/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide6/Style+Property.md" %}}

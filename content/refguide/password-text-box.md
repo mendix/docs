@@ -8,13 +8,13 @@ The password text box is a widget that can be used to provide a password for aut
 
 ## Common Properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
-{% snippet Tab+index+Property.md %}
+{{% snippet file="refguide/Tab+index+Property.md" %}}
 
 ## General Properties
 
@@ -22,4 +22,4 @@ The password text box is a widget that can be used to provide a password for aut
 
 The placeholder text is shown when no text has been entered yet. It can be used to give a hint to the user about what kind of text should be entered.
 
-{% snippet Login+Label+Properties.md %}
+{{% snippet file="refguide/Login+Label+Properties.md" %}}

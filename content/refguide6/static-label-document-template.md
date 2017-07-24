@@ -26,7 +26,7 @@ Will print: Page 2 of 4
 
 ## Common Properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide6/Name+Property.md" %}}
 
 ## Appearance Properties
 

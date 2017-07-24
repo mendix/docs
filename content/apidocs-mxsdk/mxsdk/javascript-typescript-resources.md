@@ -29,7 +29,7 @@ If you have any additional useful resources, feel free to mention them in the co
 
 ## Videos
 
-<iframe class="youtube-player" type="text/html" src="//www.youtube.com/embed/h7NLi2w8ytg?wmode=opaque" frameborder="0"></iframe>
+{{% youtube h7NLi2w8ytg %}}
 
 ## Other
 

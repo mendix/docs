@@ -28,13 +28,13 @@ The footer of the data view is the section at the bottom of the data view that o
 
 ## 3 Common Properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
-{% snippet Tab+index+Property.md %}
+{{% snippet file="refguide/Tab+index+Property.md" %}}
 
 ## 3 General Properties
 
@@ -113,9 +113,9 @@ Curently this has no effect.
 
 ## 6 Visibility Properties
 
-{% snippet Visibility+Property.md %}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## 7 Related Content
 

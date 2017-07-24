@@ -68,45 +68,45 @@ If you choose 'Custom' as the date format (see above) this property determines h
 
 The placeholder text is shown if the date attribute is empty. It can be used to give the end user a hint as to the expected format. Note: placeholder texts will not work if a native date picker is available (e.g. iOS and Android versions 4.0 and higher).
 
-{% snippet Required+Property.md %}
+{{% snippet file="refguide6/Required+Property.md" %}}
 
-{% snippet Required+message+Property.md %}
+{{% snippet file="refguide6/Required+message+Property.md" %}}
 
 ## Data source properties
 
-{% snippet Attribute+Path+Property.md %}
+{{% snippet file="refguide6/Attribute+Path+Property.md" %}}
 
-{% snippet Label+Property.md %}
+{{% snippet file="refguide6/Label+Property.md" %}}
 
 ## Editability properties
 
-{% snippet Editable+Property.md %}
+{{% snippet file="refguide6/Editable+Property.md" %}}
 
-{% snippet Read+Only+Style.md %}
+{{% snippet file="refguide6/Read+Only+Style.md" %}}
 
-{% snippet Condition+Property.md %}
+{{% snippet file="refguide6/Condition+Property.md" %}}
 
 ## Visibility properties
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide6/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Events properties
 
-{% snippet On+Change+Event.md %}
+{{% snippet file="refguide6/On+Change+Event.md" %}}
 
-{% snippet On+Enter+event.md %}
+{{% snippet file="refguide6/On+Enter+event.md" %}}
 
-{% snippet On+Leave+Event.md %}
+{{% snippet file="refguide6/On+Leave+Event.md" %}}
 
 ## Common properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide6/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide6/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide6/Style+Property.md" %}}
 
-{% snippet Tab+index+Property.md %}
+{{% snippet file="refguide6/Tab+index+Property.md" %}}
 
 ## Related articles
 

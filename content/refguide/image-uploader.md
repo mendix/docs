@@ -38,29 +38,29 @@ This property determines the width of the generated thumbnail in pixels. However
 
 This property determines the height of the generated thumbnail in pixels. However, the aspect ratio of the image will remain the same during thumbnail generation.
 
-{% snippet Label+Property.md %}
+{{% snippet file="refguide/Label+Property.md" %}}
 
 ## Editability properties
 
-{% snippet Editable+Property.md %}
+{{% snippet file="refguide/Editable+Property.md" %}}
 
-{% snippet Condition+Property.md %}
+{{% snippet file="refguide/Condition+Property.md" %}}
 
 ## Visibility properties
 
-{% snippet Visibility+Property.md %}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Common properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
-{% snippet Tab+index+Property.md %}
+{{% snippet file="refguide/Tab+index+Property.md" %}}
 
 ## Related articles
 

@@ -17,4 +17,4 @@ In Mendix 6.10.4 the Offline Device profile is replaced by the [Hybrid Phone pro
 
 {{% /alert %}}
 
-{% snippet Profile+properties.md %}
+{{% snippet file="refguide6/Profile+properties.md" %}}

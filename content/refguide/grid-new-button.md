@@ -9,9 +9,9 @@ The **Create** button allows the user to create new objects in a grid or referen
 
 ## Common Properties
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## Data Source Properties
 
@@ -27,15 +27,15 @@ Let us say you have an entity Vehicle and two specializations, namely Bicycle an
 
 ## General Properties
 
-{% snippet Caption+Property.md %}
+{{% snippet file="refguide/Caption+Property.md" %}}
 
-{% snippet Tooltip+Property.md %}
+{{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{% snippet Image+Property.md %}
+{{% snippet file="refguide/Image+Property.md" %}}
 
-{% snippet Button+Style+Property.md %}
+{{% snippet file="refguide/Button+Style+Property.md" %}}
 
-{% snippet Is+default+button+Property.md %}
+{{% snippet file="refguide/Is+default+button+Property.md" %}}
 
 ### Edit location
 
@@ -55,4 +55,4 @@ See [Opening Pages](opening-pages).
 
 ## Visibility Properties
 
-{% snippet Visible+Property.md %}
+{{% snippet file="refguide/Visible+Property.md" %}}

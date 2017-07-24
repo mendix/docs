@@ -29,15 +29,15 @@ Tables allow for a number of keyboard interactions. Examples include navigating 
 
 ## Common properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## General properties
 
-{% snippet Column+Width+Properties.md %}
+{{% snippet file="refguide/Column+Width+Properties.md" %}}
 
 {{% alert type="info" %}}
 
@@ -48,6 +48,6 @@ A table with widths 30% and 70%
 
 ## Visibility properties
 
-{% snippet Visibility+Property.md %}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}

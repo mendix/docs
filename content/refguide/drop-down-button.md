@@ -9,25 +9,25 @@ Clicking a drop down button shows a list of items. Each item has a caption and a
 
 ## Button properties
 
-{% snippet Caption+Property.md %}
+{{% snippet file="refguide/Caption+Property.md" %}}
 
-{% snippet Tooltip+Property.md %}
+{{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{% snippet Image+Property.md %}
+{{% snippet file="refguide/Image+Property.md" %}}
 
-{% snippet Render+Mode+Property.md %}
+{{% snippet file="refguide/Render+Mode+Property.md" %}}
 
-{% snippet Button+Style+Property.md %}
+{{% snippet file="refguide/Button+Style+Property.md" %}}
 
 ## Common properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
-{% snippet Tab+index+Property.md %}
+{{% snippet file="refguide/Tab+index+Property.md" %}}
 
 ## Items
 
@@ -39,6 +39,6 @@ The action of a drop down button item can specify a page or a microflow to execu
 
 ## Visibility properties
 
-{% snippet Visibility+Property.md %}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Extended.md %}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Extended.md" %}}

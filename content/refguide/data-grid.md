@@ -16,13 +16,13 @@ A data grid showing accounts.
 
 # Common properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
-{% snippet Tab+index+Property.md %}
+{{% snippet file="refguide/Tab+index+Property.md" %}}
 
 ## General properties
 
@@ -44,7 +44,7 @@ This property indicates with the buttons to page through the information in the 
 
 _Default value:_ True
 
-{% snippet Column+Width+Properties.md %}
+{{% snippet file="refguide/Column+Width+Properties.md" %}}
 
 {{% alert type="info" %}}
 
@@ -125,9 +125,9 @@ See the corresponding data source for its properties:
 
 ## Visibility properties
 
-{% snippet Visibility+Property.md %}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 # Components
 

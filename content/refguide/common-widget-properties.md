@@ -35,25 +35,25 @@ The tab index influences the order in which the end user navigates through the f
 
 _Default value:_ 0
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## Data Source Properties
 
-{% snippet Attribute+Path+Property.md %}
+{{% snippet file="refguide/Attribute+Path+Property.md" %}}
 
 ## Visibility Properties
 
-{% snippet Visibility+Property.md %}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Editability Properties
 
-{% snippet Editable+Property.md %}
+{{% snippet file="refguide/Editable+Property.md" %}}
 
 ### Condition
 

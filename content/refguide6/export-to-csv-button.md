@@ -11,9 +11,9 @@ The csv export function relies on a specific data retrieval method. As such, it 
 
 ## Common properties
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide6/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide6/Style+Property.md" %}}
 
 ## Formatting properties
 
@@ -37,15 +37,15 @@ _Default value:_ ;
 
 ## General properties
 
-{% snippet Caption+Property.md %}
+{{% snippet file="refguide6/Caption+Property.md" %}}
 
-{% snippet Tooltip+Property.md %}
+{{% snippet file="refguide6/Tooltip+Property.md" %}}
 
-{% snippet Image+Property.md %}
+{{% snippet file="refguide6/Image+Property.md" %}}
 
-{% snippet Button+Style+Property.md %}
+{{% snippet file="refguide6/Button+Style+Property.md" %}}
 
-{% snippet Is+default+button+Property.md %}
+{{% snippet file="refguide6/Is+default+button+Property.md" %}}
 
 ### Maximum number of rows
 
@@ -65,4 +65,4 @@ If true, the date format of the column is used, otherwise a format that is recog
 Conditional visibility settings were added in version 5.10.0.
 {{% /alert %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide6/Visibility+Property+With+Module+Roles+Simple.md" %}}

@@ -15,11 +15,11 @@ You can specify whether the range boundaries are inclusive or exclusive using th
 
 ## Common Properties
 
-{% snippet Search+Field+Caption+Property.md %}
+{{% snippet file="refguide6/Search+Field+Caption+Property.md" %}}
 
-{% snippet Search+Field+Type+Property.md %}
+{{% snippet file="refguide6/Search+Field+Type+Property.md" %}}
 
-{% snippet Search+Field+Default+Value+Property.md %}
+{{% snippet file="refguide6/Search+Field+Default+Value+Property.md" %}}
 
 ## General Properties
 

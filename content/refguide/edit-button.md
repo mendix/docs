@@ -9,21 +9,21 @@ The edit button allows user to edit, or view, an object selected in the grid or 
 
 ## Common properties
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## General properties
 
-{% snippet Caption+Property.md %}
+{{% snippet file="refguide/Caption+Property.md" %}}
 
-{% snippet Tooltip+Property.md %}
+{{% snippet file="refguide/Tooltip+Property.md" %}}
 
-{% snippet Image+Property.md %}
+{{% snippet file="refguide/Image+Property.md" %}}
 
-{% snippet Button+Style+Property.md %}
+{{% snippet file="refguide/Button+Style+Property.md" %}}
 
-{% snippet Is+default+button+Property.md %}
+{{% snippet file="refguide/Is+default+button+Property.md" %}}
 
 ### Page
 
@@ -43,6 +43,6 @@ Let us say you have an entity Vehicle and two specializations thereof: Bicycle a
 
 ## Visibility properties
 
-{% snippet Visibility+Property.md %}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Extended.md %}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Extended.md" %}}

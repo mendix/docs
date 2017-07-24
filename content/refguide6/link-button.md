@@ -9,25 +9,25 @@ Pressing a link button can trigger a variety of actions, some of which are speci
 
 ## Button properties
 
-{% snippet Caption+Property.md %}
+{{% snippet file="refguide6/Caption+Property.md" %}}
 
-{% snippet Tooltip+Property.md %}
+{{% snippet file="refguide6/Tooltip+Property.md" %}}
 
-{% snippet Image+Property.md %}
+{{% snippet file="refguide6/Image+Property.md" %}}
 
-{% snippet Render+Mode+Property.md %}
+{{% snippet file="refguide6/Render+Mode+Property.md" %}}
 
-{% snippet Button+Style+Property.md %}
+{{% snippet file="refguide6/Button+Style+Property.md" %}}
 
 ## Common properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide6/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide6/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide6/Style+Property.md" %}}
 
-{% snippet Tab+index+Property.md %}
+{{% snippet file="refguide6/Tab+index+Property.md" %}}
 
 ## General properties
 
@@ -60,4 +60,4 @@ If an attribute is chosen for the address, you can select the attribute here. An
 
 ## Visibility properties
 
-{% snippet Visibility+Property+With+Module+Roles+Extended.md %}
+{{% snippet file="refguide6/Visibility+Property+With+Module+Roles+Extended.md" %}}

@@ -3,4 +3,4 @@ title: "Layouts"
 space: "Reference Guide 6"
 parent: "pages"
 ---
-{% snippet Layout.md %}
+{{% snippet file="refguide6/Layout.md" %}}

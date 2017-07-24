@@ -9,9 +9,9 @@ Each section of a table row or column is called a cell. Cells can contain a wide
 
 ## Common properties
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## General properties
 

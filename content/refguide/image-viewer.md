@@ -18,11 +18,11 @@ An image viewer must be placed in a data view or template grid.
 
 ## Common properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
 ## Data source properties
 
@@ -60,23 +60,23 @@ See [Starting Microflows](starting-microflows).
 
 This is the image that is displayed if no image is uploaded.
 
-{% snippet Image+Width+Unit.md %}
+{{% snippet file="refguide/Image+Width+Unit.md" %}}
 
 _Default value_: Percentage
 
-{% snippet Image+Width.md %}
+{{% snippet file="refguide/Image+Width.md" %}}
 
 _Default value_: 100
 
-{% snippet Image+Height+Unit.md %}
+{{% snippet file="refguide/Image+Height+Unit.md" %}}
 
 _Default value_: Auto
 
-{% snippet Image+Height.md %}
+{{% snippet file="refguide/Image+Height.md" %}}
 
 _Default value_: not applicable
 
-{% snippet Image+Responsive.md %}
+{{% snippet file="refguide/Image+Responsive.md" %}}
 
 ### Show
 
@@ -86,9 +86,9 @@ _Default value:_ Thumbnail
 
 ## Visibility properties
 
-{% snippet Visibility+Property.md %}
+{{% snippet file="refguide/Visibility+Property.md" %}}
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
 ## Related articles
 

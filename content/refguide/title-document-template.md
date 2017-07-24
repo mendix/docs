@@ -19,4 +19,4 @@ See [Style](style)
 
 ## Common Properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}

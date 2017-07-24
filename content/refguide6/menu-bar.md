@@ -15,12 +15,12 @@ The menu bar widget shows a configured menu in the form of a horizontal bar with
 
 ## Common Properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide6/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide6/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide6/Style+Property.md" %}}
 
 ## General Properties
 
-{% snippet Menu+Source+Properties.md %}
+{{% snippet file="refguide6/Menu+Source+Properties.md" %}}

@@ -15,15 +15,15 @@ If you want to dynamically show different images based on data, please take a lo
 
 ## Common properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide6/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide6/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide6/Style+Property.md" %}}
 
 ## Events properties
 
-{% snippet On+Click+Event+Action.md %}
+{{% snippet file="refguide6/On+Click+Event+Action.md" %}}
 
 ## General properties
 
@@ -33,24 +33,24 @@ The actual image that this widget shows.
 
 See [Images](images).
 
-{% snippet Image+Width+Unit.md %}
+{{% snippet file="refguide6/Image+Width+Unit.md" %}}
 
 _Default value_: Auto
 
-{% snippet Image+Width.md %}
+{{% snippet file="refguide6/Image+Width.md" %}}
 
 _Default value_: not applicable
 
-{% snippet Image+Height+Unit.md %}
+{{% snippet file="refguide6/Image+Height+Unit.md" %}}
 
 _Default value_: Auto
 
-{% snippet Image+Height.md %}
+{{% snippet file="refguide6/Image+Height.md" %}}
 
 _Default value_: not applicable
 
-{% snippet Image+Responsive.md %}
+{{% snippet file="refguide6/Image+Responsive.md" %}}
 
 ### Visibility properties
 
-{% snippet Visibility+Property+With+Module+Roles+Simple.md %}
+{{% snippet file="refguide6/Visibility+Property+With+Module+Roles+Simple.md" %}}

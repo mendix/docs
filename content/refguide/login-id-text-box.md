@@ -11,13 +11,13 @@ It must be placed on a page together with a [login id text box](login-id-text-bo
 
 ## Common Properties
 
-{% snippet Name+Property.md %}
+{{% snippet file="refguide/Name+Property.md" %}}
 
-{% snippet Class+Property.md %}
+{{% snippet file="refguide/Class+Property.md" %}}
 
-{% snippet Style+Property.md %}
+{{% snippet file="refguide/Style+Property.md" %}}
 
-{% snippet Tab+index+Property.md %}
+{{% snippet file="refguide/Tab+index+Property.md" %}}
 
 ## General Properties
 
@@ -25,4 +25,4 @@ It must be placed on a page together with a [login id text box](login-id-text-bo
 
 The placeholder text is shown when no text has been entered yet. It can be used to give a hint to the user about what kind of text should be entered.
 
-{% snippet Login+Label+Properties.md %}
+{{% snippet file="refguide/Login+Label+Properties.md" %}}

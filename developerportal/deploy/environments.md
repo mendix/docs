@@ -8,7 +8,7 @@ tags: ["Deploy","App","Developer Portal"]
 
 ## 1 Introduction
 
-In the **Environments** section of the **Deploy** category, there is an overview of two pages:
+In the **Environments** section of the **Deploy** category, there is an overview of three tabs:
 
 * **Deploy**
     * Deployment Package Repository
@@ -17,37 +17,41 @@ In the **Environments** section of the **Deploy** category, there is an overview
 * **Custom Domain**
     * Certificates
     * Linked Custom Domains
+* **Access Restriction Profiles**
+    * IP Address Filtering
+    * TLS Client Certificate Verification
+    
+   ![](attachments/environment-tab.png)       
 
-## 2 Deployment Package Repository
+## 2 Deploy
+
+### 2.1 Deployment Package Repository
+
+   ![](attachments/deployment-package.png)
 
 In the **Deployment Package Repository**, there is an overview of the following:
 
 *   Deployment Package
-*   Version
-*   Creation date
+*   Version of the deployment package
+*   Creation date of the deployment package
 *   Uploaded by
 *   Expire date
 
 There are also four actions you can perform:
 
-*   Create a package from Team Server
-*   Upload a deployment package
-*   View the details of the deployment package
-*   Deploy a deployment package
+#### Create a Package from Team Server
 
-### 2.1 Create a Package from Team Server
-
-In this section, you can select a branch containing the revision you would like to build.
+In this section, you can click **Create a Package from Team Server** and select a branch containing the revision you would like to build.
 
 Only branches where the latest revision is Mendix 5 and higher will be displayed here. If you need to build other revisions, please do so manually from the Mendix Modeler.
 
-### 2.2 Uploading
+#### Uploading
 
 When you click **Upload**, you can upload an *.mda* file from your local device.
 
-### 2.3 Viewing the Details of the Deployment Package
+#### Viewing the Details of the Deployment Package
 
-Next to the already mentioned deployment package info, the following items exist:
+Next to the already mentioned deployment package info, if you click **Details** the following items will be displayed:
 
 * Size of the package
 * Description of the package
@@ -59,11 +63,13 @@ There are also two action you can perform:
 * Download the package
 * Delete the package
 
-### 2.4 Deploying a Deployment Package
+#### Deploying a Deployment Package
 
 If you click **Deploy**, the package from the team server will be transported to the environment that you select to upload.
 
-## 3 Environments
+### 2.2 Environments
+
+   ![](attachments/environments.png)
 
 Here you have the an overview of all the available environments with the following details:
 
@@ -95,14 +101,16 @@ After clicking [Details](/developerportal/deploy/environments-details) of the se
 * Runtime
 * Maintenance
 
-## 4 Activities
+### 2.3 Activity
+
+   ![](attachments/activity.png)
 
 This section shows the following activity types:
 
-* Backup Created
+* Backup Created - a backup has been manually created
 * Backup Expired
-* Backup Restore Started
-* Backup Restored
+* Backup Restore Started - a backup restore has been manually started
+* Backup Restored - the backup restore has been restored
 * Clean
 * Custom Domain
 * Database Backup Downloaded
@@ -118,9 +126,9 @@ This section shows the following activity types:
 * Toggled Request Handler
 * Transportation
 
-## 5 Custom Domain
+## 3 Custom Domain
 
-On this page, you can manage your custom domain certificates.
+In this tab you can manage your custom domain certificates on a application level.
 
 When your Mendix App needs to be accessible via your own URL (for example, `https://myapp.mycompany.com/`), you have to provide a custom domain certificate (an SSL/TLS certificate) so that we can keep serving your Mendix app via a secure connection.
 
@@ -128,8 +136,11 @@ There is also a section with an overview of linked custom domains.
 
 For more information, see [How to Configure Custom Domains](/developerportal/howto/custom-domains).
 
-## 6 Related Content 
+## 4 Access Restriction Profiles
+
+In this tab you can manage custom Access Restriction Profiles. These profiles can combine IP Range filters and Client Certificate Verification. Access Restriction Profiles can be applied to Path Based Access Restrictions in specific environments of the application.
+
+## 5 Related Content 
 
 *  [Deploy](/developerportal/deploy)
 *  [Environment Details](/developerportal/deploy/environments-details)
-*  [How to Configure Custom Domains](/developerportal/howto/custom-domains)

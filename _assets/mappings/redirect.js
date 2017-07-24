@@ -1758,11 +1758,11 @@ module.exports = {
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",
-      to: "/howto6/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
     },
     {
       from: "/howto6/deploying+a+mendix+app+to+ibm+bluemix",
-      to: "/howto6/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+Pivotal",

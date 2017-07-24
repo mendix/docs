@@ -17,7 +17,7 @@ From within the Mendix Modeler you can view the cloud slots you have available i
 
 ## Cloud Foundry
 
-From within the Mendix Modeler you can deploy directly to Cloud Foundry based platforms such as [IBM Bluemix](/howto6/deploy-a-mendix-app-to-ibm-bluemix) or [Pivotal Web Services, Pivotal Cloud Foundry](/howto6/deploy-a-mendix-app-to-pivotal). See the [documentation on the open source buildpack](https://github.com/mendix/cf-mendix-buildpack) and [how-to](/howto6/deploying-a-mendix-app-to-cloud-foundry) to get started.
+From within the Mendix Modeler you can deploy directly to Cloud Foundry based platforms such as [IBM Bluemix](/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix) or [Pivotal Web Services, Pivotal Cloud Foundry](/howto6/deploy-a-mendix-app-to-pivotal). See the [documentation on the open source buildpack](https://github.com/mendix/cf-mendix-buildpack) and [how-to](/howto6/deploying-a-mendix-app-to-cloud-foundry) to get started.
 
 ## Azure
 

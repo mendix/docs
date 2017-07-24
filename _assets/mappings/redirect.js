@@ -8880,67 +8880,67 @@ module.exports = {
     {
       from: "https://docs.mendix.com/releasenotes/APM/1",
       to: "https://docs.mendix.com/releasenotes/apm/1"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/ATS/1",
       to: "https://docs.mendix.com/releasenotes/ats/1"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/APM/1.10",
       to: "https://docs.mendix.com/releasenotes/apm/1.10"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/APM/1.11",
       to: "https://docs.mendix.com/releasenotes/apm/1.11"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/APM/1.12",
       to: "https://docs.mendix.com/releasenotes/apm/1.12"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/ATS/1.5",
       to: "https://docs.mendix.com/releasenotes/ats/1.5"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/APM/1.6",
       to: "https://docs.mendix.com/releasenotes/apm/1.6"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/ATS/1.6",
       to: "https://docs.mendix.com/releasenotes/ats/1.6"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/APM/1.7",
       to: "https://docs.mendix.com/releasenotes/apm/1.7"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/APM/1.8",
       to: "https://docs.mendix.com/releasenotes/apm/1.8"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/ATS/1.8",
       to: "https://docs.mendix.com/releasenotes/ats/1.8"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/APM/1.9",
       to: "https://docs.mendix.com/releasenotes/apm/1.9"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/AQM/2",
       to: "https://docs.mendix.com/releasenotes/aqm/2"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/AQM/2.0",
       to: "https://docs.mendix.com/releasenotes/aqm/2.0"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/APM/",
       to: "https://docs.mendix.com/releasenotes/apm/"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/AQM/",
       to: "https://docs.mendix.com/releasenotes/aqm/"
-    }
+    },
     {
       from: "https://docs.mendix.com/releasenotes/ATS/",
       to: "https://docs.mendix.com/releasenotes/ats/"

@@ -3,7 +3,7 @@ title: "Build a Mobile To-Do App"
 category: "Tutorials"
 description: "This how-to series will teach you how to create a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
 tags: ["Mobile", "Quick", "Starter", "App", "To-do", "Kickstart", "Development"]
-toc-level: "4"
+frontpage_featured: true
 ---
 
 This series of how-to's will guide you in building a to-do app based on the new Mobile Quick Starter sample app. This sample app was introduced in Mendix 7.2 and helps you to quickly and easily build rich mobile apps with a native look and feel while following best practices.

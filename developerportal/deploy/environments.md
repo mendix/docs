@@ -25,11 +25,13 @@ In the **Environments** section of the **Deploy** category, there is an overview
 
 ## 2 Deploy
 
+In the **Deploy** tab you can find the following information about your environment:
+
 ### 2.1 Deployment Package Repository
 
    ![](attachments/deployment-package.png)
 
-In the **Deployment Package Repository**, there is an overview of the following:
+In the **Deployment Package Repository** section, there is an overview of the following:
 
 *   Deployment Package
 *   Version of the deployment package
@@ -69,9 +71,9 @@ If you click **Deploy**, the package from the team server will be transported to
 
 ### 2.2 Environments
 
-   ![](attachments/environments.png)
+   ![](attachments/deploy-environments.png)
 
-Here you have the an overview of all the available environments with the following details:
+In this section you have the an overview of all the available environments with the following details:
 
 * Name of the deployment package
 * The version of the deployment package

@@ -35,15 +35,15 @@ You can change the layout of the page by editing the layout grid. To change the 
 
     ![](attachments/build-an-employee-directory-app/select-column.png)
 
-2. Change the **Row Layout** to a four column layout:
+2. Change the **Row Layout** to a four-column layout:
 
     ![](attachments/build-an-employee-directory-app/change-row-layout.png)
 
-3. See how this influences the behaviour on a phone, tablet, and desktop devices by changing the device icons on top of view of your page:
+3. See how this influences the behavior on a phone, tablet, and desktop devices by changing the device icons on top of view of your page:
     
     ![](attachments/build-an-employee-directory-app/change-devices.png) 
 
-4. For the phone device, the columns now have a full widget. Change the phone **Row Layout** to the 2x2 layout and view how this changes the layout for the different devices:
+4. For the phone device, the columns now have a full widget. Change the **Phone** **Row Layout** to the 2x2 layout and view how this changes the layout for the different devices:
     
     ![](attachments/build-an-employee-directory-app/change-phone-layout.png)
 
@@ -51,9 +51,9 @@ You can change the layout of the page by editing the layout grid. To change the 
 
 A building block in Atlas UI is a combination of widgets. Using building blocks greatly speeds up your app development.
 
-To fill up the column placeholders in order to create a dashboard menu, follow these steps:
+To fill up the column placeholders to create a dashboard menu, follow these steps:
 
-1. Select the **Toolbox** tab and make sure **Building Blocks** is selected:
+1. Open the **Toolbox** tab and make sure **Building Blocks** is selected:
     
     ![](attachments/build-an-employee-directory-app/select-toolbox.png) 
 
@@ -62,23 +62,21 @@ To fill up the column placeholders in order to create a dashboard menu, follow t
     ![](attachments/build-an-employee-directory-app/card-action.png)
 
 3. Drag a **Card Action** building block into every column.
-4. Select the **BUTTON** of the top-left card action:
-    
-    ![](attachments/build-an-employee-directory-app/select-button-action-card.png)
-
-5. Now that you've gotten the hang of it, you will replace the current header with the **HeroHeader1**. Locate this in the **Header** building blocks section:
+4. Now that you've gotten the hang of it using building blocks, you will replace the current header with **HeroHeader1**. Locate this in the **Header** building blocks section:
     
     ![](attachments/build-an-employee-directory-app/header-section.png)
 
-6. Drag the **HeroHeader1** building block and drop it just below the top header:
+5. Drag the **HeroHeader1** building block and drop it just below the top header:
     
     ![](attachments/build-an-employee-directory-app/heroheader1.png)
 
-7. Select the **Title** text widget and enter *My First App* in the **Content** field in **Properties**.
-8. Select the **subtitle** text widget and rename the content to **An Employee Directory App**.
-9. Select the **LAYOUT GRID** of the default header and click **Delete** on the bottom-right of the page to remove it:
+6. Select the **Hero Header Title** text widget and change the text in the **Content** field to *My First App* in the Properties.
+7. Select the **subtitle** text widget and rename the content to *An Employee Directory App*.
+8. Select the **LAYOUT GRID** of the default header and click **Delete** in the bottom-right of the page to remove it:
 
     ![](attachments/build-an-employee-directory-app/remove-current-header.png)
+    
+10. Also delete the remaining **container**.
 
 ### 3.3 Changing the Look and Feel with the Theme Customizer
 
@@ -86,11 +84,11 @@ On the **Theme Customizer** page, you can quickly update the look and feel of yo
 
 To make a small change to the look and feel of your app, follow these steps:
 
-1. Open the theme customizer by clicking the paintbrush icon at the bottom of the left menu bar.
+1. Open the **Theme Customizer** by clicking the paintbrush icon at the bottom of the left menu bar.
 
     ![](attachments/build-an-employee-directory-app/theme-customizer.png)
 
-2. You can play around with the different configuration options **Brand Colors**, **UI Customization**, and **Typography**.
+2. You can play around with the different configuration options, like **Brand Colors**, **UI Customization**, and **Typography**.
 3. Make a change that will have significant impact by setting the **Primary** color in the **Brand Colors** section to orange.
 4. At the bottom-right of the screen, click **Apply Style** to confirm the changes:
 

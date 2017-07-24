@@ -1,15 +1,15 @@
 ---
-title: "Java in the Cloud"
+title: "Java in Mendix Cloud v3"
 space: "General How-To's"
 category: "Mendix Cloud"
 ---
 
 
-Projects with Java actions can be deployed to the Mendix 5.0 Cloud. For security reasons the capabilities of Java actions in the Cloud are constrained. Applications should not be able to access resources of other applications or compromise the cloud server in any way.
+Projects with Java actions can be deployed to the Mendix Cloud. For security reasons, the capabilities of Java actions in Mendix Cloud v3 are constrained. Applications should not be able to access resources of other applications or compromise the cloud server in any way. In Mendix Cloud v4, there are no restrictions on Java actions.
 
 Java offers the [Java Security Manager](http://download.oracle.com/javase/tutorial/essential/environment/security.html "Java Security Manager") to configure programs to behave correctly. For each application a policy file is created to instruct the correct behavior.
 
-## Restrictions For Java Actions
+## 1 Restrictions For Java Actions
 
 To ensure application safety the following permissions are disabled for Java actions in the cloud:
 
@@ -32,11 +32,11 @@ Exceptions on these restrictions are:
 
 Most applications should be able to function fully with these restrictions. However if you feel your application needs extra capabilities please [log a support ticket](https://support.mendix.com/), so that we can address your specific needs.
 
-## Requesting property permissions
+## 2 Requesting Property Permissions
 
 In case your application needs to access certain PropertyPermissions from java actions, you can use the [Mendix Support Portal](https://support.mendix.com/) to send us a list of required properties. We will then make a security exception.
 
-## Emulate Cloud Security
+## 3 Emulating Cloud Security
 
 Before deploying to the cloud, it is strongly recommended to first locally test your Java actions by emulating cloud security. This will make sure you encounter no surprises with regard to cloud security when the application is actually deployed to the Cloud. This will potentially save a lot of time, as it is much harder to debug these kind of issues in the Cloud than locally.
 

@@ -10,3 +10,4 @@ space: "Mendix 7 How-To's"
 * [How to Start Your Own Repository](starting-your-own-repository)
 * [How to Translate Your App Content](translate-your-app-content)
 * [How to Use Team Server and Version Control](using-team-server-_-version-control)
+* [How to Work with an On-Premises Version Control Server](on-premises-svn-howto)

@@ -1,5 +1,5 @@
 ---
-title: "Leave App Types"
+title: "Three Ways to Leave Your App"
 space: "Developer Portal"
 category: "General"
 ---

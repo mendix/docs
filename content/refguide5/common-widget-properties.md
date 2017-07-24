@@ -1,11 +1,10 @@
 ---
-title: "Common Widget Properties"
-parent: "common-widgets"
-space: "Reference Guide 5"
+title: Common Widget Properties
+parent: common-widgets
+space: Reference Guide 5
 ---
+
 # Common Widget Properties
-
-
 
 Here we discuss properties that are shared by many widgets in the form builder. Note: not all widgets have all of these properties. Look at the widget you are interested in for a complete list of applicable properties.
 
@@ -29,7 +28,7 @@ For example, if an address field is required, the required message for the text 
 
 {{% /alert %}}
 
-## Common Properties 
+## Common Properties
 
 ### Tab index (only in web forms)
 
@@ -49,9 +48,9 @@ The class property allows you to specify a cascading style sheet (CSS) class for
 
 Note that the styling is applied in the following order:
 
-1.  Default styling defined by the theme the project uses.
-2.  The 'Class' property of the widget.
-3.  The 'Style' property of the widget.
+1. Default styling defined by the theme the project uses.
+2. The 'Class' property of the widget.
+3. The 'Style' property of the widget.
 
 {{% /alert %}}
 
@@ -61,19 +60,18 @@ The style property allows you to specify additional CSS styling. If a class is a
 
 {{% alert type="info" %}}
 
-background-color:blue;
-This will result in a blue background
+background-color:blue; This will result in a blue background
 
 {{% /alert %}}
 
-## Data Source Properties 
+## Data Source Properties
 
 ### Attribute (path)
 
 Many input widgets, like text boxes and drop-down widgets, can be connected to:
 
-1.  an attribute of the entity of the data view that contains the widget
-2.  an attribute of an entity associated with the data view entity by following one or more associations of type reference through the domain model.
+1. an attribute of the entity of the data view that contains the widget
+2. an attribute of an entity associated with the data view entity by following one or more associations of type reference through the domain model.
 
 In the first case we say the widget is connected to an attribute and in the second case to an attribute path.
 
@@ -83,15 +81,13 @@ An input widget connected to an attribute _path_ must be read-only. The Modeler 
 
 {{% /alert %}}
 
-## Visibility Properties
+## Visibility Properties
 
-{{% alert type="info" %}}
-Conditional visibility settings were added in version 5.10.0.
-{{% /alert %}}
+{{% alert type="info" %}} Conditional visibility settings were added in version 5.10.0. {{% /alert %}}
 
 ### Visible
 
-By default, whether or not an element is displayed in the browser is determined by how the page is designed and the user's roles within the application. However, the page can be configured to hide the element unless a certain condition is met. 
+By default, whether or not an element is displayed in the browser is determined by how the page is designed and the user's roles within the application. However, the page can be configured to hide the element unless a certain condition is met.
 
 ## Attribute Condition
 
@@ -111,7 +107,11 @@ The widget can be made visible to a subset of the user roles available in your a
 
 The editable property indicates whether the end user will be able to change the value displayed by the widget.
 
-<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Default</td><td class="confluenceTd">The value is editable if security allows it (i.e. if the user that is signed in has write rights to the selected attribute).</td></tr><tr><td class="confluenceTd">Never</td><td class="confluenceTd">The value is never editable.</td></tr><tr><td class="confluenceTd">Conditional</td><td class="confluenceTd">The value is editable if security allows it and the specified condition holds. (see below)</td></tr></tbody></table>
+Value       | Description
+----------- | ----------------------------------------------------------------------------------------------------------------------------
+Default     | The value is editable if security allows it (i.e. if the user that is signed in has write rights to the selected attribute).
+Never       | The value is never editable.
+Conditional | The value is editable if security allows it and the specified condition holds. (see below)
 
 _Default value:_ Default
 

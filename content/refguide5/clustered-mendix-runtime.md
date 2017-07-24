@@ -15,7 +15,21 @@ Clustering Support is **beta** feature. This means that it is _not supported_ in
 
 ## Working features
 
-<table><thead><tr><th class="confluenceTh">Feature</th><th class="confluenceTh">Status</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd"><span>Sticky Sessions Disabled</span></td><td colspan="1" class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-success">DONE</span></td></tr><tr><td class="confluenceTd"><span>File Upload</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-success">DONE</span></td></tr><tr><td class="confluenceTd"><span>File Download</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-success">DONE</span></td></tr><tr><td colspan="1" class="confluenceTd">Session Expiration</td><td colspan="1" class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-current">LIMITED</span></td></tr><tr><td class="confluenceTd"><span>HSQLDB</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-current">LIMITED</span></td></tr><tr><td class="confluenceTd">After startup/Before shutdown Microflows</td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr><tr><td class="confluenceTd"><span>Long Running Microflows</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr><tr><td class="confluenceTd"><span>Scheduled Events</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr><tr><td class="confluenceTd"><span>Microflow Debugger</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr><tr><td colspan="1" class="confluenceTd">Global Locking (cluster-wide)</td><td colspan="1" class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr></tbody></table>{{% alert type="info" %}}
+Feature                                  | Status
+---------------------------------------- | -------------------------------------------------------------------------
+<span>Sticky Sessions Disabled</span>    | <span class="status-macro aui-lozenge aui-lozenge-success">DONE</span>
+<span>File Upload</span>                 | <span class="status-macro aui-lozenge aui-lozenge-success">DONE</span>
+<span>File Download</span>               | <span class="status-macro aui-lozenge aui-lozenge-success">DONE</span>
+Session Expiration                       | <span class="status-macro aui-lozenge aui-lozenge-current">LIMITED</span>
+<span>HSQLDB</span>                      | <span class="status-macro aui-lozenge aui-lozenge-current">LIMITED</span>
+After startup/Before shutdown Microflows | <span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span>
+<span>Long Running Microflows</span>     | <span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span>
+<span>Scheduled Events</span>            | <span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span>
+<span>Microflow Debugger</span>          | <span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span>
+Global Locking (cluster-wide)            | <span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span>
+
+
+{{% alert type="info" %}}
 
  Sessions will be expired correctly for all instances in most circumstances, but is not guaranteed at this moment. This will be improved in future versions.
 
@@ -102,13 +116,24 @@ By default the Mendix Runtime uses the Mendix Database to store the Dirty State 
 
 This can be achieved by configuring the Mendix Runtime with the following parameters:
 
-<table><thead><tr><th class="confluenceTh">Configuration Parameter</th><th class="confluenceTh">Possible values</th><th colspan="1" class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd"><code>com.mendix.core.state.Implementation</code></td><td class="confluenceTd"><code>mxdb</code> (default) or <code>redis</code></td><td colspan="1" class="confluenceTd">Chooses between the Mendix Database (<code>mxdb</code>) or Redis (<code>redis</code>). In case of Redis, additional parameters are required to identify the Redis server.</td></tr><tr><td colspan="1" class="confluenceTd"><code>com.mendix.core.state.redis.Host</code></td><td colspan="1" class="confluenceTd">host name/ IP address</td><td colspan="1" class="confluenceTd">The host name or IP address of the Redis Server. This parameter is mandatory for Redis.</td></tr><tr><td colspan="1" class="confluenceTd"><code>com.mendix.core.state.redis.Port</code></td><td colspan="1" class="confluenceTd">port number</td><td colspan="1" class="confluenceTd">The port number of the Redis server (usually <code>6379</code>). This parameter is mandatory for Redis.</td></tr><tr><td colspan="1" class="confluenceTd"><code>com.mendix.core.state.redis.Secret</code></td><td colspan="1" class="confluenceTd">password</td><td colspan="1" class="confluenceTd">The password used to authenticate with the Redis server. This parameter is optional.</td></tr><tr><td colspan="1" class="confluenceTd"><code>com.mendix.core.state.redis.MaxConnections</code></td><td colspan="1" class="confluenceTd">amount of connections (default is <code>50</code>)</td><td colspan="1" class="confluenceTd">Allowing the Mendix Runtime instance to use the specified amount of connections to communicate with Redis.</td></tr></tbody></table>
+Configuration Parameter                      | Possible values                         | Description
+-------------------------------------------- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------
+`com.mendix.core.state.Implementation`       | `mxdb` (default) or `redis`             | Chooses between the Mendix Database (`mxdb`) or Redis (`redis`). In case of Redis, additional parameters are required to identify the Redis server.
+`com.mendix.core.state.redis.Host`           | host name/ IP address                   | The host name or IP address of the Redis Server. This parameter is mandatory for Redis.
+`com.mendix.core.state.redis.Port`           | port number                             | The port number of the Redis server (usually `6379`). This parameter is mandatory for Redis.
+`com.mendix.core.state.redis.Secret`         | password                                | The password used to authenticate with the Redis server. This parameter is optional.
+`com.mendix.core.state.redis.MaxConnections` | amount of connections (default is `50`) | Allowing the Mendix Runtime instance to use the specified amount of connections to communicate with Redis.
+
 
 ### Mapping of environment variables to config parameters on Pivotal Web Services
 
 On Pivotal Web Services these configuration parameters can be configured using environment variables. The following mapping applies:
 
-<table><thead><tr><th class="confluenceTh">Pivotal Environment Variable</th><th class="confluenceTh">Maps to Mendix Configuration Parameter</th></tr></thead><tbody><tr><td class="confluenceTd"><code><span>CLUSTER_STATE_IMPLEMENTATION</span></code></td><td class="confluenceTd"><code><span>com.mendix.core.state.Implementation</span></code></td></tr><tr><td colspan="1" class="confluenceTd"><code><span>CLUSTER_STATE_REDIS_MAX_CONNECTIONS</span></code></td><td colspan="1" class="confluenceTd"><code><span>com.mendix.core.state.redis.MaxConnections</span></code></td></tr></tbody></table>
+Pivotal Environment Variable                       | Maps to Mendix Configuration Parameter
+-------------------------------------------------- | ---------------------------------------------------------
+`<span>CLUSTER_STATE_IMPLEMENTATION</span>`        | `<span>com.mendix.core.state.Implementation</span>`
+`<span>CLUSTER_STATE_REDIS_MAX_CONNECTIONS</span>` | `<span>com.mendix.core.state.redis.MaxConnections</span>`
+
 
 Configuring the REDIS host, port and secret is done automatically by binding a REDIS service from the Pivotal Marketplace to the Pivotal App.
 

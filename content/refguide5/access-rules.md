@@ -1,9 +1,8 @@
 ---
-title: "Access Rules"
-parent: "entities"
-space: "Reference Guide 5"
+title: Access Rules
+parent: entities
+space: Reference Guide 5
 ---
-
 
 The access rules of an entity define what a user is allowed to do with objects of the entity. Users can be allowed to create and/or delete objects, and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing and removing can be limited by means of an [XPath constraint](xpath-constraints).
 
@@ -15,31 +14,35 @@ Access rules are not inherited from an entity's generalization; rather, the secu
 
 {{% /alert %}}
 
-## Properties
+# Properties
 
-### Documentation
+## Documentation
 
 In this property you can describe the intention of the access rule. This helps to keep access rules comprehensible, especially in case of non-trivial XPath constraints.
 
-### Rule applies to the following module roles
+## Rule applies to the following module roles
 
 The module roles to which this access rule applies have a checkmark in the box before them. All users that have at least one of the checked module roles get the access rights that the rule defines.
 
-### Allow creating new objects
+## Allow creating new objects
 
 If this check box is checked, users are allowed to create new objects of this entity.
 
-### Allow deleting existing objects
+## Allow deleting existing objects
 
 If this checkbox is checked, users are allowed to delete existing objects of this entity.
 
 The set of objects that can be deleted can be limited by using an XPath constraint (see below).
 
-### Member read and write rights
+## Member read and write rights
 
 Member read and write rights define the access rights for every member (attribute or association) of the entity. These access rights indicate whether users are allowed to view and/or edit the member's value.
 
-<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">-</td><td class="confluenceTd">Users are not allowed to view or edit the value of the member.</td></tr><tr><td class="confluenceTd">Read</td><td class="confluenceTd">Users are allowed to view the value of this member, but cannot edit it.</td></tr><tr><td class="confluenceTd">Read, Write</td><td class="confluenceTd">Users are allowed to view and edit the value of this member.</td></tr></tbody></table>
+Value       | Description
+----------- | -----------------------------------------------------------------------
+-           | Users are not allowed to view or edit the value of the member.
+Read        | Users are allowed to view the value of this member, but cannot edit it.
+Read, Write | Users are allowed to view and edit the value of this member.
 
 The set of objects to which the member access rights apply can be limited by using an XPath constraint (see below).
 
@@ -51,7 +54,7 @@ A customer is allowed to view her discount, but is not allowed to edit it. The a
 
 {{% /alert %}}
 
-### XPath constraint
+## XPath constraint
 
 The [XPath constraint](xpath-constraints) can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all objects of the entity.
 

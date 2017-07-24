@@ -18,7 +18,6 @@ See the following query:
 
 ```
 //Sales.Customer[Name = NULL]
-
 ```
 
 This query returns all customers whose name is not known to the system.
@@ -54,28 +53,24 @@ These variables must be used as string values, placed between two quotes. Time r
 
 ```
 //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]']
-
 ```
 
 This query returns only customers who have registered since the beginning of this week.
 
 ```
 //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]' and DateRegistered < '[%EndOfCurrentWeek%]']
-
 ```
 
 This query returns only customers who have registered this week.
 
 ```
 //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
-
 ```
 
 This query returns only customers who have registered in the past three years.
 
 ```
 //System.User[System.UserRoles = '[%UserRole_Administrator%]']
-
 ```
 
 This query returns users with the role Administrator

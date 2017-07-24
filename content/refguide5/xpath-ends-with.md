@@ -1,7 +1,6 @@
 ---
 title: "XPath ends-with"
 parent: "xpath-constraint-functions"
-space: "Reference Guide 5"
 ---
 
 

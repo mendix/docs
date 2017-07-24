@@ -1,7 +1,6 @@
 ---
 title: "Add and Configure an Image Viewer"
 parent: "image-viewer"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

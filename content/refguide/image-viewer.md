@@ -1,6 +1,5 @@
 ---
 title: "Image viewer"
-space: "Mendix 7 Reference Guide"
 parent: "file-widgets"
 ---
 

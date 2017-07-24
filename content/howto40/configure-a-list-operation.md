@@ -1,7 +1,6 @@
 ---
 title: "Configure a List Operation"
 parent: "list-activities"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

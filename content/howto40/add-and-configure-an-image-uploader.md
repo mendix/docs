@@ -1,7 +1,6 @@
 ---
 title: "Add and Configure an Image Uploader"
 parent: "image-uploader"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

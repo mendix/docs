@@ -1,6 +1,5 @@
 ---
 title: "Actions"
-space: "Reference Guide 6"
 parent: "published-app-services"
 ---
 

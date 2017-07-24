@@ -1,6 +1,5 @@
 ---
 title: "OData Representation"
-space: "Mendix 7 Reference Guide"
 parent: "published-odata-services"
 ---
 

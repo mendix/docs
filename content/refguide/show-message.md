@@ -1,6 +1,5 @@
 ---
 title: "Show Message"
-space: "Mendix 7 Reference Guide"
 parent: "client-activities"
 ---
 

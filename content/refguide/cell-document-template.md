@@ -1,6 +1,5 @@
 ---
 title: "Cell (document template)"
-space: "Mendix 7 Reference Guide"
 parent: "row-document-template"
 ---
 

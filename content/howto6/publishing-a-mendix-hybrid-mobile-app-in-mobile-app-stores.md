@@ -1,6 +1,5 @@
 ---
 title: "Publishing a Mendix Hybrid Mobile App in Mobile App Stores"
-space: "Mendix 6 How-to's"
 category: "Mobile"
 tags: []
 ---

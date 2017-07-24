@@ -1,6 +1,5 @@
 ---
 title: "Published App Services"
-space: "Reference Guide 6"
 parent: "integration"
 ---
 

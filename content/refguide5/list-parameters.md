@@ -1,7 +1,6 @@
 ---
 title: "List Parameters"
 parent: "published-app-service"
-space: "Reference Guide 5"
 ---
 
 

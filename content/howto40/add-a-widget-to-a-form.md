@@ -1,7 +1,6 @@
 ---
 title: "Add a Widget to a Form"
 parent: "forms"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

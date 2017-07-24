@@ -1,7 +1,6 @@
 ---
 title: "Preferences Dialog"
 parent: "dialogs"
-space: "Reference Guide 5"
 ---
 This dialog contains Modeler-wide user-specific settings.
 

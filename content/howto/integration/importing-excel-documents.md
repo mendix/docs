@@ -1,6 +1,5 @@
 ---
 title: "Importing Excel Documents"
-space: "Mendix 7 How-To's"
 category: "Integration"
 description: "Describes how to set up import templates and import data into your app using the Excel Importer module."
 tags: []

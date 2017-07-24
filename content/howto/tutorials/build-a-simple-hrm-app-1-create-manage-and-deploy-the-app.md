@@ -1,6 +1,5 @@
 ---
 title: "Build a Simple HRM App Step 1: Create, Manage, and Deploy the App"
-space: "Mendix 7 How-To's"
 parent: "build-a-simple-hrm-app"
 description: "Presents details on how to create, deploy, and manage a simple HRM app."
 tags: ["HRM", "build", "app", "developer portal"]

@@ -1,7 +1,6 @@
 ---
 title: "Configure an Exclusive Split"
 parent: "exclusive-split"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

@@ -1,6 +1,5 @@
 ---
 title: "Guidelines for Creating a Custom Action"
-space: "ATS Add-On"
 category: "Best Practices"
 ---
 

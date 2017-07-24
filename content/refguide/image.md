@@ -1,6 +1,5 @@
 ---
 title: "Image"
-space: "Mendix 7 Reference Guide"
 parent: "common-widgets"
 ---
 

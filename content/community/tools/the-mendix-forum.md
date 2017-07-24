@@ -1,6 +1,5 @@
 ---
 title: "The Mendix Forum"
-space: "Community"
 category: "Tools"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "XPath avg"
 parent: "xpath-query-functions"
-space: "Reference Guide 4"
 ---
 The avg()-function returns the average of its argument.
 This function requires an XPath query as argument. The query must select one attribute of type Float, Integer, Currency or Long.

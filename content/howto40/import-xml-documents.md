@@ -1,7 +1,6 @@
 ---
 title: "Import XML Documents"
 parent: "integration-activities"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

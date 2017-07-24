@@ -1,7 +1,6 @@
 ---
 title: "Update App Form"
 parent: "set-up-a-mendix-app"
-space: "Mendix 4 How-to's"
 ---
 <This preliminary documentation is subject to change. It will be finished as soon as possible.>
 

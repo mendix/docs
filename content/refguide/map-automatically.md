@@ -1,6 +1,5 @@
 ---
 title: "Map Automatically"
-space: "Mendix 7 Reference Guide"
 parent: "mapping-documents"
 ---
 

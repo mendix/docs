@@ -1,7 +1,6 @@
 ---
 title: "XML Schema Support"
 parent: "integration"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "Mendix 4 How-to's"
-space: "Mendix 4 How-to's"
 notoc: true
 priority: 5
 ---

@@ -1,6 +1,5 @@
 ---
 title: "Validation Feedback"
-space: "Mendix 7 Reference Guide"
 parent: "client-activities"
 ---
 

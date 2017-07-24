@@ -1,7 +1,6 @@
 ---
 title: "OQL RANGEEND"
 parent: "oql-functions"
-space: "Reference Guide 5"
 ---
 
 

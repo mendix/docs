@@ -1,6 +1,5 @@
 ---
 title: "Menu Bar"
-space: "Mendix 7 Reference Guide"
 parent: "menu-widgets"
 ---
 

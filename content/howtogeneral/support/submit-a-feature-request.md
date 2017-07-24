@@ -1,6 +1,5 @@
 ---
 title: "Submit a Feature Request"
-space: "General How-To's"
 category: "Mendix Support"
 #parent: ""
 #description: ""

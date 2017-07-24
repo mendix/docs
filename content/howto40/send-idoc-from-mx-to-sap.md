@@ -1,7 +1,6 @@
 ---
 title: "Send IDoc from Mendix to SAP"
 parent: "sap-integration"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

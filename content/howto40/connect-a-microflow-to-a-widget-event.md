@@ -1,7 +1,6 @@
 ---
 title: "Connect a Microflow to a Widget Event"
 parent: "widget-events"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

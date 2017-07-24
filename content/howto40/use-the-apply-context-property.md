@@ -1,7 +1,6 @@
 ---
 title: "Use the 'Apply Context' Property"
 parent: "context-mechanism"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

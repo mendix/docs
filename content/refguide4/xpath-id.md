@@ -1,7 +1,6 @@
 ---
 title: "XPath id"
 parent: "xpath-query-functions"
-space: "Reference Guide 4"
 ---
 This function replaces the default XPath query syntax. It retrieves data based upon the unique identification number supplied. Each individual mendix object generated in a project is automatically provided with an ID.
 

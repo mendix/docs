@@ -1,7 +1,6 @@
 ---
 title: "Finding the Root Cause of Runtime Errors"
 category: 'Monitoring & Troubleshooting'
-space: "Mendix 5 How-to's"
 ---
 
 This how to will show how to find the information necessary to locate the root cause of a runtime error.  The message displayed in the application is often vague and non-descript.  Depending on the environment the error occurred in, there are two methods to find this information.

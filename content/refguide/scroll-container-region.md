@@ -1,6 +1,5 @@
 ---
 title: "Scroll Container Region"
-space: "Mendix 7 Reference Guide"
 parent: "scroll-container"
 ---
 

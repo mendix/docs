@@ -1,6 +1,5 @@
 ---
 title: "XPath Tokens"
-space: "Mendix 7 Reference Guide"
 parent: "xpath"
 ---
 

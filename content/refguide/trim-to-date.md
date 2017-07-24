@@ -1,6 +1,5 @@
 ---
 title: "Trim to date"
-space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 ---
 

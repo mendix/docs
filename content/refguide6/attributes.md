@@ -1,6 +1,5 @@
 ---
 title: "Attributes"
-space: "Reference Guide 6"
 parent: "entities"
 ---
 

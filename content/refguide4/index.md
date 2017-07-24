@@ -1,6 +1,5 @@
 ---
 title: "Reference Guide 4"
-space: "Reference Guide 4"
 ---
 This is the reference guide for version 4 of the Mendix technology.
 

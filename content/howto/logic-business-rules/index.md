@@ -1,6 +1,5 @@
 ---
 title: "Logic & Business Rules"
-space: "Mendix 7 How-To's"
 ---
 
 Application logic is created in Mendix in the form of microflows. A microflow allows you to express the logic of your application. This is a visual way of expressing what traditionally ends up in textual program code. In other words, microflows allow you to easily add complex business logic to the processes in your application without having to write code.

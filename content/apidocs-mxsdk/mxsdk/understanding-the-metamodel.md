@@ -1,6 +1,5 @@
 ---
 title: "Understanding the Metamodel"
-space: "API & SDK"
 parent: "reference-documentation"
 ---
 ## Units

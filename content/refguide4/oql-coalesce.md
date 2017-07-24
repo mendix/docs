@@ -1,7 +1,6 @@
 ---
 title: "OQL COALESCE"
 parent: "oql-functions"
-space: "Reference Guide 4"
 ---
 The COALESCE function returns the first of its arguments that is not null.
 

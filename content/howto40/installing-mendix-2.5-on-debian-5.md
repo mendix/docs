@@ -1,7 +1,6 @@
 ---
 title: "Installing Mendix 2.5 on Debian 5"
 category: "General"
-space: "Mendix 4 How-to's"
 ---
 ## Installing Mendix 2.5 on Debian Lenny
 

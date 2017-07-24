@@ -1,7 +1,6 @@
 ---
 title: "Two Factor Authentication"
 category: "Deployment"
-space: "Reference Guide 5"
 ---
 
 

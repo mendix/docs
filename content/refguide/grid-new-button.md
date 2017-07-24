@@ -1,6 +1,5 @@
 ---
 title: "Grid Create Button"
-space: "Mendix 7 Reference Guide"
 parent: "control-bar"
 ---
 

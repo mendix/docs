@@ -1,7 +1,6 @@
 ---
 title: "OQL INNER JOIN"
 parent: "oql-from-clause"
-space: "Reference Guide 4"
 ---
 An inner join is the most common join operation between entities and represents the default join-type. The query compares each row of entity A with each row of entity B to find all pairs of rows that have an association and satisfy the join-predicate. If the association exists and the join-predicate is satisfied, column values for each matched pair of rows of A and B are combined into a result row.
 

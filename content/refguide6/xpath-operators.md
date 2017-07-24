@@ -1,6 +1,5 @@
 ---
 title: "XPath Operators"
-space: "Reference Guide 6"
 parent: "xpath-constraints"
 ---
 

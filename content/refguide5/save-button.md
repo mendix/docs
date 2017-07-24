@@ -1,7 +1,6 @@
 ---
 title: "Save button"
 parent: "button-widgets"
-space: "Reference Guide 5"
 ---
 
 

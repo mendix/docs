@@ -1,6 +1,5 @@
 ---
 title: "License Key Activation on Linux"
-space: "General How-To's"
 category: "Mendix Support"
 #parent: ""
 #description: ""

@@ -1,7 +1,6 @@
 ---
 title: "Integration"
 category: "Modeler"
-space: "Reference Guide 5"
 ---
 
 

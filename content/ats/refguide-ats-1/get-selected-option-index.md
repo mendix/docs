@@ -1,6 +1,5 @@
 ---
 title: "Get Selected Option Index"
-space: "ATS Add-On" 
 parent: "get"
 ---
 

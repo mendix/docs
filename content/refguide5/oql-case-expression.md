@@ -1,7 +1,6 @@
 ---
 title: "OQL Case Expression"
 parent: "oql-operators"
-space: "Reference Guide 5"
 ---
 
 

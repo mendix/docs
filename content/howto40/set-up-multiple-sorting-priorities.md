@@ -1,7 +1,6 @@
 ---
 title: "Set Up Multiple Sorting Priorities"
 parent: "sort-bar"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

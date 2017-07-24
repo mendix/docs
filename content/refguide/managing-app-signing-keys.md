@@ -1,6 +1,5 @@
 ---
 title: "Managing App Signing Keys"
-space: "Mendix 7 Reference Guide"
 category: "Mobile"
 ---
 

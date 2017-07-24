@@ -1,6 +1,5 @@
 ---
 title: "Build a Logistics IoT App Step 5: Create Alerts"
-space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
 description: "Describes how to extend the Mendix Logistics IoT app to create alerts."
 tags: ["iot", "logistics", "supply chain", "cargo", "shipment", "logistics", "sensor"]

@@ -1,6 +1,5 @@
 ---
 title: "Between Date Function Calls"
-space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 ---
 

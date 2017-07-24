@@ -1,7 +1,6 @@
 ---
 title: "Mobile"
 category: "Modeler"
-space: "Reference Guide 5"
 ---
 
 

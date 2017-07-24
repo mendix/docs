@@ -1,6 +1,5 @@
 ---
 title: "Select Elements"
-space: "Mendix 7 Reference Guide"
 parent: "mapping-documents"
 ---
 

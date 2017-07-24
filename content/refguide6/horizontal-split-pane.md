@@ -1,6 +1,5 @@
 ---
 title: "Horizontal Split Pane"
-space: "Reference Guide 6"
 parent: "container-widgets"
 ---
 

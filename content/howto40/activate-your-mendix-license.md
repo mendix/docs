@@ -1,7 +1,6 @@
 ---
 title: "Activate your Mendix license"
 category: "Deployment"
-space: "Mendix 4 How-to's"
 ---
 ## Introduction
 

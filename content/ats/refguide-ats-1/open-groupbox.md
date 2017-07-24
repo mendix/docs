@@ -1,6 +1,5 @@
 ---
 title: "Open GroupBox"
-space: "ATS Add-On" 
 parent: "groupbox"
 ---
 

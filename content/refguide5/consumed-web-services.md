@@ -1,7 +1,6 @@
 ---
 title: "Consumed Web Services"
 parent: "integration"
-space: "Reference Guide 5"
 ---
 {{% alert type="warning" %}}
 

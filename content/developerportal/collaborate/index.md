@@ -1,6 +1,5 @@
 ---
 title: "Collaborate"
-space: "Developer Portal"
 ---
 
 ## 1 Introduction

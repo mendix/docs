@@ -1,6 +1,5 @@
 ---
 title: "MySQL/MariaDB"
-space: "Mendix 7 Reference Guide"
 parent: "data-storage"
 ---
 Mendix only supports the InnoDB storage engine, with row-based logging enabled.

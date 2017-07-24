@@ -1,6 +1,5 @@
 ---
 title: "Microflow Expressions"
-space: "Reference Guide 6"
 parent: "microflows"
 ---
 

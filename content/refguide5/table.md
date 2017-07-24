@@ -1,7 +1,6 @@
 ---
 title: "Table"
 parent: "container-widgets"
-space: "Reference Guide 5"
 ---
 
 

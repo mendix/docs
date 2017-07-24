@@ -1,6 +1,5 @@
 ---
 title: "Unlink Your Free App from a Sandbox Environment"
-space: "Developer Portal"
 category: "How-To's"
 description: "This page describes how to unlink a Free App from a Sandbox Environment."
 tags: ["App","Sandbox","Developer Portal","Unlink","Delete"]

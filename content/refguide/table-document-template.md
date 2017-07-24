@@ -1,6 +1,5 @@
 ---
 title: "Table (document template)"
-space: "Mendix 7 Reference Guide"
 parent: "document-templates"
 ---
 

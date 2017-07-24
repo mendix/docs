@@ -1,7 +1,6 @@
 ---
 title: "Published Web Services"
 parent: "integration"
-space: "Reference Guide 5"
 ---
 
 

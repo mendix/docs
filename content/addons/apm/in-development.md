@@ -1,6 +1,5 @@
 ---
 title: "In development"
-space: "Other Add-Ons"
 parent: "use-cases"
 ---
 During the development the performance tool is used when a function is seen as slow. Also it can be used to verify the expected flow/path is followed.

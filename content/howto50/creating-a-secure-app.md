@@ -1,7 +1,6 @@
 ---
 title: "Creating a secure app"
 category: "Security"
-space: "Mendix 5 How-to's"
 ---
 
 Each application must have proper security in order to have its data secured. This How-To will teach you how to turn the security on and configure it. You will start with the configuration of user and module roles and their access to page and microflows. Therefore we’ll turn on the prototype/demo security. Next you will deal with production security.

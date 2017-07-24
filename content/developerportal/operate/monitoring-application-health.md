@@ -1,6 +1,5 @@
 ---
 title: "Alerts"
-space: "Developer Portal"
 category: "Operate"
 description: "This page describes how to monitor the application health."
 tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health"]

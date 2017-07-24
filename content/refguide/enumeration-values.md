@@ -1,6 +1,5 @@
 ---
 title: "Enumeration Values"
-space: "Mendix 7 Reference Guide"
 parent: "enumerations"
 ---
 

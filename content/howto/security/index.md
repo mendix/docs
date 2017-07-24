@@ -1,6 +1,5 @@
 ---
 title: "Security"
-space: "Mendix 7 How-To's"
 ---
 
 This category presents details on how to secure your data and make sure that the right user is seeing the data that they're allowed to see.

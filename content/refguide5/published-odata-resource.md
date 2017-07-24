@@ -1,7 +1,6 @@
 ---
 title: "Published OData resource"
 parent: "published-odata-services"
-space: "Reference Guide 5"
 ---
 {{% alert type="warning" %}}
 

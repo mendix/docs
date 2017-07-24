@@ -1,7 +1,6 @@
 ---
 title: "Menu Item"
 parent: "menu"
-space: "Reference Guide 5"
 ---
 
 

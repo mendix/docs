@@ -1,6 +1,5 @@
 ---
 title: "Grid Selector"
-space: "ATS Add-On" 
 parent: "mendix-appstore-widgets-actions"
 ---
 

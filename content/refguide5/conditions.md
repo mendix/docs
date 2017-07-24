@@ -1,7 +1,6 @@
 ---
 title: "Conditions"
 parent: "page-concepts"
-space: "Reference Guide 5"
 ---
 
 

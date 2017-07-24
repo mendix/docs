@@ -1,6 +1,5 @@
 ---
 title: "Manage Sprints and Stories"
-space: "Developer Portal"
 category: "How-To's"
 description: "This page describes how to use manage sprints and stories."
 tags: ["Sprint","Stories","Developer Portal"]

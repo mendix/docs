@@ -1,6 +1,5 @@
 ---
 title: "Event Handlers"
-space: "Mendix 7 Reference Guide"
 parent: "entities"
 ---
 

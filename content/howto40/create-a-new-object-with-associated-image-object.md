@@ -1,7 +1,6 @@
 ---
 title: "Create a New Object with Associated Image Object"
 parent: "image-uploader"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

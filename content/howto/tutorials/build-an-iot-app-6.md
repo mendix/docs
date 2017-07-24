@@ -1,6 +1,5 @@
 ---
 title: "Build a Logistics IoT App Step 6: Expand the IoT App Tracking"
-space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
 description: "Describes how to extend the shipments that the Mendix Logistics IoT app will track."
 tags: ["iot", "logistics", "supply chain", "cargo", "shipment", "logistics", "sensor"]

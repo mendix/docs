@@ -1,6 +1,5 @@
 ---
 title: "Build a Mobile To-Do App Step 3: Improve the Look and Feel of the App"
-space: "Mendix 7 How-To's"
 parent: "create-a-to-do-app"
 description: "This is the third how-to for creating a to-do app in 20 minutes using the Mendix Mobile Quick Starter app."
 tags: ["Mobile", "Quick", "Starter", "App", "To-do", "Kickstart", "Development"]

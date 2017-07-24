@@ -1,6 +1,5 @@
 ---
 title: "App Buzz"
-space: "Developer Portal"
 category: "Collaborate"
 description: "This page describes the app Buzz, which is the landing page for an app."
 tags: ["Buzz","Developer Portal"]

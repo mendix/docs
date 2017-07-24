@@ -1,6 +1,5 @@
 ---
 title: "Show Home Page"
-space: "Reference Guide 6"
 parent: "client-activities"
 ---
 

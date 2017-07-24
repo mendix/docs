@@ -1,6 +1,5 @@
 ---
 title: "OQL Parameters"
-space: "Mendix 7 Reference Guide"
 parent: "oql-expressions"
 ---
 

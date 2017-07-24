@@ -1,7 +1,6 @@
 ---
 title: "Activities"
 parent: "microflows"
-space: "Reference Guide 5"
 ---
 
 

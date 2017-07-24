@@ -1,6 +1,5 @@
 ---
 title: "OQL Aggregation"
-space: "Mendix 7 Reference Guide"
 parent: "oql-expressions"
 ---
 

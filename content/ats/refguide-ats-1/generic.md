@@ -1,6 +1,5 @@
 ---
 title: "Generic"
-space: "ATS Add-On" 
 parent: "mendix-actions"
 ---
 

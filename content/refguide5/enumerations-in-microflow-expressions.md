@@ -1,7 +1,6 @@
 ---
 title: "Enumerations in microflow expressions"
 parent: "microflow-expressions"
-space: "Reference Guide 5"
 ---
 
 

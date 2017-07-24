@@ -1,6 +1,5 @@
 ---
 title: "Team Server"
-space: "Reference Guide 6"
 ---
 
 

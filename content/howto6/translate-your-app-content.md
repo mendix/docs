@@ -1,7 +1,6 @@
 ---
 title: Translate Your App Content
 category: "Collaboration & Project Management"
-space: "Mendix 6 How-to's"
 ---
 
 ## 1 Introduction

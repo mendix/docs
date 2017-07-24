@@ -1,6 +1,5 @@
 ---
 title: "Developing Hybrid Mobile Apps"
-space: "Mendix 7 Reference Guide"
 category: "Mobile"
 ---
 

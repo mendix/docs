@@ -1,6 +1,5 @@
 ---
 title: "Tab page"
-space: "Mendix 7 Reference Guide"
 parent: "tab-container"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Change Variable"
 parent: "variable-activities"
-space: "Reference Guide 5"
 ---
 
 

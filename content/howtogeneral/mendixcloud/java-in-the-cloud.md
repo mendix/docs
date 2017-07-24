@@ -1,6 +1,5 @@
 ---
 title: "Java in Mendix Cloud v3"
-space: "General How-To's"
 category: "Mendix Cloud"
 ---
 

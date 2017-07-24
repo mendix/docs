@@ -1,7 +1,6 @@
 ---
 title: "'Constrained by' Functionality for a Reference Set Selector"
 parent: "reference-set-selector"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

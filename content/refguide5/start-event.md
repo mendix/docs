@@ -1,7 +1,6 @@
 ---
 title: "Start Event"
 parent: "microflows"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "Export To Excel Button"
 parent: "control-bar"
-space: "Reference Guide 4"
 ---
 This button allows end-users to export the contents of the grid or reference set selector to an excel file. Please note that constraints by use of search fields and sorting will also be exported.
 

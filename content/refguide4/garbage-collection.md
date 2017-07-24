@@ -1,7 +1,6 @@
 ---
 title: "Garbage collection"
 category: "Java Programming"
-space: "Reference Guide 4"
 ---
 With the introduction of non-persistable objects a lot more objects will live in memory. Applications can run faster, because they do not have to access the database for all objects, but memory consumption will increase.
 To mitigate the risk of unnecessary high memory usage version 4 of the Mendix Platform features a garbage collector which will dispose of unreferenced objects in the cache.

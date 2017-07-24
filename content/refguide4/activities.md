@@ -1,7 +1,6 @@
 ---
 title: "Activities"
 parent: "microflows"
-space: "Reference Guide 4"
 ---
 Activities are the actions that are executed in a microflow.
 

@@ -1,6 +1,5 @@
 ---
 title: "Feedback"
-space: "Developer Portal"
 category: "Collaborate"
 description: "This page describes how to manage feedback."
 tags: ["Feedback","Developer Portal"]

@@ -1,6 +1,5 @@
 ---
 title: "Starting Microflows"
-space: "Reference Guide 6"
 parent: "page-concepts"
 ---
 

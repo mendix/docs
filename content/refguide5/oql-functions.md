@@ -1,7 +1,6 @@
 ---
 title: "OQL Functions"
 parent: "oql-expressions"
-space: "Reference Guide 5"
 ---
 
 

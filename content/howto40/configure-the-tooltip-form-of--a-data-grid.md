@@ -1,7 +1,6 @@
 ---
 title: "Configure the Tooltip Form of a Data Grid"
 parent: "data-grid"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

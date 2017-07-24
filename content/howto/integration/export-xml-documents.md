@@ -1,6 +1,5 @@
 ---
 title: "Export XML documents"
-space: "Mendix 7 How-To's"
 category: "Integration"
 tags: []
 ---

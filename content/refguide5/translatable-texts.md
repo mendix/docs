@@ -1,7 +1,6 @@
 ---
 title: "Translatable Texts"
 category: "Modeler"
-space: "Reference Guide 5"
 ---
 
 

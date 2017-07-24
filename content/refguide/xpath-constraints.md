@@ -1,6 +1,5 @@
 ---
 title: "XPath Constraints"
-space: "Mendix 7 Reference Guide"
 parent: "xpath"
 ---
 

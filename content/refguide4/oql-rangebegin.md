@@ -1,7 +1,6 @@
 ---
 title: "OQL RANGEBEGIN"
 parent: "oql-functions"
-space: "Reference Guide 4"
 ---
 The RANGEBEGIN function extracts the initial value of a range parameter.
 

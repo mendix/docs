@@ -1,7 +1,6 @@
 ---
 title: "Use a Specialization of an Entity"
 parent: "inheritance-split"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

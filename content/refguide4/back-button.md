@@ -1,7 +1,6 @@
 ---
 title: "Back Button"
 parent: "mobile-form-buttons"
-space: "Reference Guide 4"
 ---
 Pressing this button will navigate to the previously visited mobile form.
 

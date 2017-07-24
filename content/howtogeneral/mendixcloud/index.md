@@ -1,6 +1,5 @@
 ---
 title: "Mendix Cloud"
-space: "General How-To's"
 ---
 The Mendix Cloud is the public cloud service and the default deployment option for Mendix applications.
 

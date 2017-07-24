@@ -1,7 +1,6 @@
 ---
 title: "Connect a basic report to a data set"
 parent: "basic-reports"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

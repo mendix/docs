@@ -1,7 +1,6 @@
 ---
 title: "Report Chart"
 parent: "reporting"
-space: "Reference Guide 4"
 ---
 ### Report Chart
 

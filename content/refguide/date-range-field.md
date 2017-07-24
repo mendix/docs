@@ -1,6 +1,5 @@
 ---
 title: "Date Range Field"
-space: "Mendix 7 Reference Guide"
 parent: "report-widgets"
 ---
 

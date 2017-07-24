@@ -1,7 +1,6 @@
 ---
 title: "Configuration"
 parent: "project-settings"
-space: "Reference Guide 5"
 ---
 
 

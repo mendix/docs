@@ -1,6 +1,5 @@
 ---
 title: "XML Inheritance and Choice"
-space: "Mendix 7 Reference Guide"
 parent: "mapping-documents"
 ---
 

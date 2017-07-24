@@ -1,6 +1,5 @@
 ---
 title: "DB2"
-space: "Reference Guide 6"
 parent: "data-storage"
 ---
 

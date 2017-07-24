@@ -1,7 +1,6 @@
 ---
 title: "OQL FULL OUTER JOIN"
 parent: "oql-from-clause"
-space: "Reference Guide 4"
 ---
 With a FULL OUTER JOIN construction, the query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the join-predicate. When the association exists and the join-predicate is satisfied, column values for each matched pair of rows from A and B are combined into a result row.
 However, in contrast to the INNER JOIN construction, data from entities that do _not_ match will also be returned. For these rows, columns of missing entities will contain null values.

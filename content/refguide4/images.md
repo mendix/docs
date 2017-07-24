@@ -1,7 +1,6 @@
 ---
 title: "Images"
 parent: "modules"
-space: "Reference Guide 4"
 ---
 Images can be used to brighten up your application. Navigation items and the various kinds of buttons have small images (icons) to left of their captions. Images can also be used in the image viewer widgets in [Web Forms](web-forms) and [Document Templates](document-templates). Finally, [enumeration values](enumeration-values) can have images that can then be shown in data grid columns.
 

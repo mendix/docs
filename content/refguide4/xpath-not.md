@@ -1,7 +1,6 @@
 ---
 title: "XPath not"
 parent: "xpath-constraint-functions"
-space: "Reference Guide 4"
 ---
 The not() function inverts the meaning (and as such; the result) of the argument.
 

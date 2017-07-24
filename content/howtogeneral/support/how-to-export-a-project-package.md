@@ -1,6 +1,5 @@
 ---
 title: "How to Export a Mendix Project Package"
-space: "General How-To's"
 category: "Mendix Support"
 #parent: ""
 #description: ""

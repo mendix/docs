@@ -1,6 +1,5 @@
 ---
 title: "Consumed REST Services"
-space: "Mendix 7 Reference Guide"
 parent: "integration"
 description: "Presents an overview of consumed REST services and JSON in Mendix."
 ---

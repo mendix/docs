@@ -1,7 +1,6 @@
 ---
 title: "Between date function calls"
 parent: "microflow-expressions"
-space: "Reference Guide 4"
 ---
 Functions for calculating the differences between two dates.
 

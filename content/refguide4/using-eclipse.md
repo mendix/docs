@@ -1,7 +1,6 @@
 ---
 title: "Using Eclipse"
 category: "Java Programming"
-space: "Reference Guide 4"
 ---
 Using Eclipse to write and debug the Java actions in your Mendix project is really easy. When the Mendix model is deployed, an Eclipse project file, classpath file and launch configuration are generated.
 

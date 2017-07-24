@@ -1,6 +1,5 @@
 ---
 title: "Get Started with the Widget Development Plugin for Adobe Brackets"
-space: "Mendix 7 How-To's"
 category: "Custom Widget Development"
 tags: []
 ---

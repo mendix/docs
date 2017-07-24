@@ -1,6 +1,5 @@
 ---
 title: "Import Mapping Action"
-space: "Mendix 7 Reference Guide"
 parent: "microflow-activities"
 ---
 

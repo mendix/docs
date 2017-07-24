@@ -1,7 +1,6 @@
 ---
 title: "Columns"
 parent: "data-grid"
-space: "Reference Guide 4"
 ---
 ## Appearance Properties
 

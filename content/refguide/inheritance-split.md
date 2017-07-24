@@ -1,6 +1,5 @@
 ---
 title: "Inheritance Split"
-space: "Mendix 7 Reference Guide"
 parent: "microflows"
 ---
 

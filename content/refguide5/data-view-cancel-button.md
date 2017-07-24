@@ -1,7 +1,6 @@
 ---
 title: "Data view cancel button"
 parent: "data-view-control-bar"
-space: "Reference Guide 5"
 ---
 
 

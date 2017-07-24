@@ -1,6 +1,5 @@
 ---
 title: "Collaboration & Project Management"
-space: "Mendix 7 How-To's"
 ---
 
 ## Documents in This Category

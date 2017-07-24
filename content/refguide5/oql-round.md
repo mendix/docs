@@ -1,7 +1,6 @@
 ---
 title: "OQL ROUND"
 parent: "oql-functions"
-space: "Reference Guide 5"
 ---
 
 

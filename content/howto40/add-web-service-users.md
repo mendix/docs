@@ -1,7 +1,6 @@
 ---
 title: "Add Web Service Users"
 parent: "integration"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

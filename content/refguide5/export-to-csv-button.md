@@ -1,7 +1,6 @@
 ---
 title: "Export to CSV button"
 parent: "control-bar"
-space: "Reference Guide 5"
 ---
 
 

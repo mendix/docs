@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting"
 category: "On-premises Deployment"
-space: "Mendix 5 How-to's"
 ---
 
 ## 1. IIS Troubleshooting

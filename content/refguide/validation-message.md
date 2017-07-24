@@ -1,6 +1,5 @@
 ---
 title: "Validation Message"
-space: "Mendix 7 Reference Guide"
 parent: "authentication-widgets"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Get Checkbox Set Selector Value"
-space: "ATS Add-On" 
 parent: "checkbox-set-selector"
 ---
 

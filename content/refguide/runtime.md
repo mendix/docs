@@ -1,6 +1,5 @@
 ---
 title: "Runtime"
-space: "Mendix 7 Reference Guide"
 ---
 
 The Mendix Runtime executes the model created in the Modeler. It serves pages to the Client and executes microflows, calls web services, generates documents, communicates with the database and much more.

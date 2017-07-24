@@ -1,7 +1,6 @@
 ---
 title: "List view"
 parent: "data-widgets"
-space: "Reference Guide 5"
 ---
 
 

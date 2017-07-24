@@ -1,6 +1,5 @@
 ---
 title: "Work with Images and Files"
-space: "Mendix 7 How-To's"
 category: "Data Models"
 tags: []
 ---

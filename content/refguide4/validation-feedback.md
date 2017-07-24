@@ -1,7 +1,6 @@
 ---
 title: "Validation Feedback"
 parent: "client-activities"
-space: "Reference Guide 4"
 ---
 With the validation-feedback action you can display a red text below a widget that displays an attribute or association.
 

@@ -1,7 +1,6 @@
 ---
 title: "Updating a Mendix Application"
 category: "On-premises Deployment"
-space: "Mendix 5 How-to's"
 ---
 # Updating a Mendix Application with a new Release
 

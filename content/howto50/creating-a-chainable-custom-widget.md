@@ -1,7 +1,6 @@
 ---
 title: "Creating a chainable Custom Widget"
 category: "Custom Widget Development"
-space: "Mendix 5 How-to's"
 ---
 
 This how-to is an introduction on building a custom widget that is chainable in your Mendix application. At the end of this tutorial you will have a basic understanding of the structure and setup of a chainable Mendix custom widget.

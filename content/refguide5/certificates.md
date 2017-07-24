@@ -1,7 +1,6 @@
 ---
 title: "Certificates"
 category: "Deployment"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "Starting your own repository"
-space: "Mendix 7 How-To's"
 category: "Collaboration & Project Management"
 tags: []
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Set Up a Rule"
 parent: "rules"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

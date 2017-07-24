@@ -1,6 +1,5 @@
 ---
 title: "Clear Warning Messages"
-space: "Mendix 7 How-To's"
 category: "Monitoring & Troubleshooting"
 tags: ["monitoring", "troubleshooting", "warning", "error"]
 ---

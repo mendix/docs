@@ -1,7 +1,6 @@
 ---
 title: "System Texts"
 parent: "project"
-space: "Reference Guide 4"
 ---
 System texts are texts that are shown to end users by the server or the client. For example, if you enter invalid text into a field that expects a number, the system will give the message 'This value should be a number without fractions'. This text can be changed and translated to other languages in the system texts editor.
 

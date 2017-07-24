@@ -1,7 +1,6 @@
 ---
 title: "Mobile Form Buttons"
 parent: "mobile-forms"
-space: "Reference Guide 4"
 ---
 All buttons placed on mobile forms contain the following properties.
 

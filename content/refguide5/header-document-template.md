@@ -1,7 +1,6 @@
 ---
 title: "Header (document template)"
 parent: "document-templates"
-space: "Reference Guide 5"
 ---
 
 

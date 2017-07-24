@@ -1,7 +1,6 @@
 ---
 title: "OQL Order by Clause"
 parent: "oql"
-space: "Reference Guide 5"
 ---
 
 

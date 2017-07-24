@@ -1,6 +1,5 @@
 ---
 title: "Closing the Server Connection"
-space: "API & SDK"
 parent: "manipulating-existing-models"
 ---
 The SDK observes the complete model using the [mobx](https://github.com/mobxjs/mobx) library. This means that any change you make to the model is immediately synced with the working copy on the server. Sending changes to the server happens in the background and automatically, so there is no explicit commit. However, sending changes might take a while and your script should not end before all changes are flushed. In particular, changes are by default sent in batches of 1000 or after 200ms - whatever happens first. To wait until all changes are submitted to the server, use the [`closeConnection`](https://apidocs.mendix.com/modelsdk/latest/classes/model.html#closeconnection) function of the `model` object.

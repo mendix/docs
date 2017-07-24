@@ -1,7 +1,6 @@
 ---
 title: "Regular Expressions"
 parent: "modules"
-space: "Reference Guide 4"
 ---
 A regular expression describes a set of criteria that a string can match. In the [validation rules](validation-rules) of an entity a regular expression can be used to validate whether an attribute of type String matches these criteria.
 

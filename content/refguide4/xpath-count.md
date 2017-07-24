@@ -1,7 +1,6 @@
 ---
 title: "XPath count"
 parent: "xpath-query-functions"
-space: "Reference Guide 4"
 ---
 The count()-function counts all objects retrieved by the enclosed query and returns the value as an integer.
 

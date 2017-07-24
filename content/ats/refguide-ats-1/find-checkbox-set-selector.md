@@ -1,6 +1,5 @@
 ---
 title: "Find Checkbox Set Selector (All)"
-space: "ATS Add-On" 
 parent: "checkbox-set-selector"
 ---
 ## Description

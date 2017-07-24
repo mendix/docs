@@ -1,7 +1,6 @@
 ---
 title: "Add an Activity to a Microflow"
 parent: "microflows"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

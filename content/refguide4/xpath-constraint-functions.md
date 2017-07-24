@@ -1,7 +1,6 @@
 ---
 title: "XPath Constraint Functions"
 parent: "xpath-constraints"
-space: "Reference Guide 4"
 ---
 The following functions can be executed within constraints:
 

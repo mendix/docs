@@ -1,7 +1,6 @@
 ---
 title: "Layout Container"
 parent: "layout-widgets"
-space: "Reference Guide 5"
 ---
 
 

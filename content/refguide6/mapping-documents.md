@@ -1,6 +1,5 @@
 ---
 title: "Mapping Documents"
-space: "Reference Guide 6"
 parent: "integration"
 ---
 

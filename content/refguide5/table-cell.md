@@ -1,7 +1,6 @@
 ---
 title: "Table cell"
 parent: "table"
-space: "Reference Guide 5"
 ---
 
 

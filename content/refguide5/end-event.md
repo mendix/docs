@@ -1,7 +1,6 @@
 ---
 title: "End Event"
 parent: "microflows"
-space: "Reference Guide 5"
 ---
 
 

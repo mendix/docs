@@ -1,6 +1,5 @@
 ---
 title: "Build a Simple HRM App 4: Enrich the GUI with Filter Options"
-space: "Mendix 6 How-to's"
 parent: "build-a-simple-hrm-app"
 ---
 

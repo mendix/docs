@@ -1,7 +1,6 @@
 ---
 title: "Consuming a complex web service"
 category: "Integration"
-space: "Mendix 5 How-to's"
 ---
 
 This how-to explains how you can consume a (third party) web service to integrate your Mendix application with, and reuse functionality and data from other applications. Web services are the preferred way of integrating a Mendix application with external systems. They can be used to retrieve data, send updates and perform operations. In Mendix, calling a web service is something you do in a microflow using the Call Web Service action.

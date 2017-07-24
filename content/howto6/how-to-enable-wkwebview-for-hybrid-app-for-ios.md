@@ -1,6 +1,5 @@
 ---
 title: "How To Enable WKWebView for Hybrid Apps on iOS"
-space: "Mendix 6 How-to's"
 category: "Mobile"
 tags: []
 ---

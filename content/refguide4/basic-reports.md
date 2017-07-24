@@ -1,7 +1,6 @@
 ---
 title: "Basic Reports"
 parent: "reporting"
-space: "Reference Guide 4"
 ---
 A basic report shows the reported data in a grid.
 

@@ -1,7 +1,6 @@
 ---
 title: "Client Activities"
 parent: "activities"
-space: "Reference Guide 5"
 ---
 
 

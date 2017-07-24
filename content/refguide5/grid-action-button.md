@@ -1,7 +1,6 @@
 ---
 title: "Grid action button"
 parent: "control-bar"
-space: "Reference Guide 5"
 ---
 
 

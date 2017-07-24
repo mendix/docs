@@ -1,6 +1,5 @@
 ---
 title: "Finding your way through a project"
-space: "General How-To's"
 category: "Tips & Tricks"
 ---
 

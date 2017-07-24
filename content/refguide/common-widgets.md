@@ -1,6 +1,5 @@
 ---
 title: "Common Widgets"
-space: "Mendix 7 Reference Guide"
 parent: "pages"
 ---
 

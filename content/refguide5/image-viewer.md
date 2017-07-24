@@ -1,7 +1,6 @@
 ---
 title: "Image viewer"
 parent: "file-widgets"
-space: "Reference Guide 5"
 ---
 
 

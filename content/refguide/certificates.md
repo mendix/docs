@@ -1,6 +1,5 @@
 ---
 title: "Certificates"
-space: "Mendix 7 Reference Guide"
 category: "Deployment"
 ---
 

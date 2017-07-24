@@ -1,6 +1,5 @@
 ---
 title: "GUIs"
-space: "Mendix 6 How-to's"
 ---
 Want to create a user-friendly Graphical User Interface for your app?
 

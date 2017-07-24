@@ -1,6 +1,5 @@
 ---
 title: "Document Templates"
-space: "Reference Guide 6"
 category: "Modeler"
 ---
 

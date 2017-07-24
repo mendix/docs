@@ -1,6 +1,5 @@
 ---
 title: "Deployment Options"
-space: "ATS Add-On"
 category: "General"
 ---
 

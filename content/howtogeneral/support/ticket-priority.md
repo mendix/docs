@@ -1,6 +1,5 @@
 ---
 title: "Ticket Priority"
-space: "General How-To's"
 category: "Mendix Support"
 #parent: ""
 #description: ""

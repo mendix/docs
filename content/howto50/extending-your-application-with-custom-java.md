@@ -1,7 +1,6 @@
 ---
 title: "Extending Your Application with Custom Java"
 category: "Logic & Business Rules"
-space: "Mendix 5 How-to's"
 ---
 
 Most application logic can be developed using Microflows. They are very powerful and contain a lot of features that you need in every application. To prevent you from getting stuck because of a missing feature, we made Microflows extendable. So whenever you feel something is missing you can add it yourself by use of Java actions. In this how-to you will extend your application with custom java code.

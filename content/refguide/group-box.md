@@ -1,6 +1,5 @@
 ---
 title: "Group box"
-space: "Mendix 7 Reference Guide"
 parent: "container-widgets"
 ---
 

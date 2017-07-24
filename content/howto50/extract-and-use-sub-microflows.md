@@ -1,7 +1,6 @@
 ---
 title: "Extract and use sub microflows"
 category: "Logic & Business Rules"
-space: "Mendix 5 How-to's"
 ---
 
 When you are building large microflows that span multiple functions, it is a good practice to break the large microflow down into more manageable parts, based on those functions. To better manage your logic, you can create sub microflows. 

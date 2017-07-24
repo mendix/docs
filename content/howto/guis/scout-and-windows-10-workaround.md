@@ -1,6 +1,5 @@
 ---
 title: "Perform the Scout and Windows 10 Workaround"
-space: "Mendix 7 How-To's"
 parent: "setup-mendix-ui-framework"
 ---
 

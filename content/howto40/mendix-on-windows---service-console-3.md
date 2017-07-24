@@ -1,7 +1,6 @@
 ---
 title: "Mendix on Windows - Service Console 3"
 category: "Deployment"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

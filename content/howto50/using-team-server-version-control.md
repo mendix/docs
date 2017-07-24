@@ -1,7 +1,6 @@
 ---
 title: "Using Team Server - Version Control"
 category: 'Collaboration & Project Management'
-space: "Mendix 5 How-to's"
 ---
 
 ## 1. Team server

@@ -1,7 +1,6 @@
 ---
 title: "Add an Event Handler"
 parent: "event-handlers"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

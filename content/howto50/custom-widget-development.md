@@ -1,6 +1,5 @@
 ---
 title: Custom Widget Development
-space: "Mendix 5 How-to's"
 ---
 
 Learn how to build custom widgets.

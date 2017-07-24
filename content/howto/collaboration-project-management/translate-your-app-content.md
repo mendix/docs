@@ -1,6 +1,5 @@
 ---
 title: "Translate Your App Content"
-space: "Mendix 7 How-To's"
 category: "Collaboration & Project Management"
 tags: []
 ---

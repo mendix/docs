@@ -1,6 +1,5 @@
 ---
 title: "If expressions"
-space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 ---
 ### If expressions

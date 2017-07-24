@@ -1,6 +1,5 @@
 ---
 title: "Build a Simple HRM App 5: Smarten Up Your App with Business Logic"
-space: "Mendix 6 How-to's"
 parent: "build-a-simple-hrm-app"
 ---
 

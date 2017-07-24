@@ -1,6 +1,5 @@
 ---
 title: "Security"
-space: "Mendix 7 Reference Guide"
 category: "Modeler"
 ---
 

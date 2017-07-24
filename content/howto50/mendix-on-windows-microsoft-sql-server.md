@@ -1,7 +1,6 @@
 ---
 title: "Mendix on Windows - Microsoft SQL Server"
 category: "On-premises Deployment"
-space: "Mendix 5 How-to's"
 ---
 
 

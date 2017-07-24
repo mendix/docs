@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting"
 parent: "mendix-on-windows---service-console-4"
-space: "Mendix 4 How-to's"
 ---
 ![(warning)](images/icons/emoticons/warning.png) _Error while updating an app (1)_
 Sometimes, shortly after the update process began, a popup tells you that the directory was not empty. Normally, before the app is updated, a backup is created and the current app files are removed. Sometimes, not all files can be removed, due to a lock by a Windows Explorer window or another process. Please install Mendix Service Console 4.1 or later to reduce the chance this error occurs.

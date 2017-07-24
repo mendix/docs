@@ -1,6 +1,5 @@
 ---
 title: "Create a Basic Data Layer"
-space: "Mendix 7 How-To's"
 category: "Data Models"
 tags: ["data layer", "domain model"]
 ---

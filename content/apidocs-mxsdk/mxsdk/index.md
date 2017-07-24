@@ -1,6 +1,5 @@
 ---
 title: "Mendix Platform SDK"
-space: "API & SDK"
 ---
 ## Your Learning Path for the Mendix SDK
 

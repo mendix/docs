@@ -1,6 +1,5 @@
 ---
 title: "Creating a Secure App"
-space: "Mendix 6 How-to's"
 category: "Security"
 tags: []
 ---

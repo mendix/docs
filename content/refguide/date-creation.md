@@ -1,6 +1,5 @@
 ---
 title: "Date creation"
-space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Configuring Hybrid Mobile Apps To Run Offline"
-space: "Mendix 7 Reference Guide"
 category: "Mobile"
 ---
 

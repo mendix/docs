@@ -1,6 +1,5 @@
 ---
 title: "In production"
-space: "Other Add-Ons"
 parent: "use-cases"
 ---
 The trap tool is used to have all needed logging immediately available when something unwanted occurs. Off course the first day the trap log is monitored and exclusions are made for often occurring warnings or known errors.

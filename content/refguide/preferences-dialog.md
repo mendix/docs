@@ -1,6 +1,5 @@
 ---
 title: "Preferences Dialog"
-space: "Mendix 7 Reference Guide"
 parent: "dialogs"
 ---
 This dialog contains Modeler-wide user-specific settings.

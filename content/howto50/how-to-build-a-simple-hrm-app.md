@@ -1,7 +1,6 @@
 ---
 title: "How to build a simple HRM app"
 category: "Getting Started"
-space: "Mendix 5 How-to's"
 ---
 The following how-to's will guide you through the process of creating a simple HRM application with Mendix.
 

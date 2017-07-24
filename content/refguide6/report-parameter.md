@@ -1,6 +1,5 @@
 ---
 title: "Report Parameter"
-space: "Reference Guide 6"
 parent: "report-widgets"
 ---
 

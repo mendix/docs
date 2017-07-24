@@ -1,6 +1,5 @@
 ---
 title: "Set Up a New SQL Server Database"
-space: "Mendix 7 How-To's"
 parent: "mendix-on-windows-_-microsoft-sql-server"
 ---
 

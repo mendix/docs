@@ -1,6 +1,5 @@
 ---
 title: "Filter Data on an Overview Page"
-space: "Mendix 6 How-to's"
 category: "GUIs"
 tags: []
 ---

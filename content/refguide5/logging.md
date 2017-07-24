@@ -1,7 +1,6 @@
 ---
 title: "Logging"
 category: "Runtime"
-space: "Reference Guide 5"
 ---
 
 

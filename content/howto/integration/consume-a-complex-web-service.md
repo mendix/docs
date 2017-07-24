@@ -1,6 +1,5 @@
 ---
 title: "Consume a Complex Web Service"
-space: "Mendix 7 How-To's"
 category: "Integration"
 tags: ["web service", "integration"]
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Create a List"
 parent: "list-activities"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

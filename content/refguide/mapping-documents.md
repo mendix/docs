@@ -1,6 +1,5 @@
 ---
 title: "Mapping Documents"
-space: "Mendix 7 Reference Guide"
 parent: "integration"
 ---
 

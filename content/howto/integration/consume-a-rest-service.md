@@ -1,6 +1,5 @@
 ---
 title: "Consume a REST Service"
-space: "Mendix 7 How-To's"
 category: "Integration"
 tags: ["integration", "rest service", "data model"]
 description: "Describes how to get information from a REST service."

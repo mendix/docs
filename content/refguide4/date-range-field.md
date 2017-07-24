@@ -1,7 +1,6 @@
 ---
 title: "Date Range Field"
 parent: "date-range-selector"
-space: "Reference Guide 4"
 ---
 A date range field can be placed inside a date range selector to enable the end user to select a period in a date range. The begin and end of the selected period are stored in the from and to field of the date range selector.
 

@@ -1,6 +1,5 @@
 ---
 title: "Consume a Simple Web Service"
-space: "Mendix 7 How-To's"
 category: "Integration"
 tags: ["integration", "wsdl", "web service"]
 ---

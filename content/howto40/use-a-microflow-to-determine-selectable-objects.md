@@ -1,7 +1,6 @@
 ---
 title: "Use a Microflow to Determine Selectable Objects"
 parent: "reference-selector"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

@@ -1,6 +1,5 @@
 ---
 title: "Click Widget"
-space: "ATS Add-On" 
 parent: "generic"
 ---
 

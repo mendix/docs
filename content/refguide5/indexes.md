@@ -1,7 +1,6 @@
 ---
 title: "Indexes"
 parent: "entities"
-space: "Reference Guide 5"
 ---
 
 

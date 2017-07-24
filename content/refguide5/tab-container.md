@@ -1,7 +1,6 @@
 ---
 title: "Tab container"
 parent: "container-widgets"
-space: "Reference Guide 5"
 ---
 
 

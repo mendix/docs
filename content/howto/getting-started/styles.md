@@ -1,6 +1,5 @@
 ---
 title: "Implement Styles"
-space: "Mendix 7 How-To's"
 category: "Getting Started"
 description: "Presents details on using class names for text colors, buttons, and other style elements."
 tags: ["style", "class name", "user interface"]

@@ -1,7 +1,6 @@
 ---
 title: "Image Uploader"
 parent: "common-widgets"
-space: "Reference Guide 4"
 ---
 {{% alert type="info" %}}
 

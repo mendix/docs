@@ -1,7 +1,6 @@
 ---
 title: "Drop-Down Search Field"
 parent: "search-bar"
-space: "Reference Guide 5"
 ---
 
 

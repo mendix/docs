@@ -1,6 +1,5 @@
 ---
 title: "Parse and format float function calls"
-space: "Reference Guide 6"
 parent: "microflow-expressions"
 ---
 

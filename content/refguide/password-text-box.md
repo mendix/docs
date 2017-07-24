@@ -1,6 +1,5 @@
 ---
 title: "Password Text Box"
-space: "Mendix 7 Reference Guide"
 parent: "authentication-widgets"
 ---
 

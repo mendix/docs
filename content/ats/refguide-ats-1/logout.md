@@ -1,6 +1,5 @@
 ---
 title: "Logout"
-space: "ATS Add-On" 
 parent: "generic"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Deploy to the Mendix Cloud"
-space: "Developer Portal"
 category: "How-To's"
 description: "Describes how to deploy to the Mendix Cloud."
 tags: ["Deploy","Mendix Cloud","Developer Portal"]

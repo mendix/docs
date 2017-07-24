@@ -1,6 +1,5 @@
 ---
 title: "Custom Widget Development"
-space: "Mendix 7 How-to's"
 ---
 
 ## 1 Introduction

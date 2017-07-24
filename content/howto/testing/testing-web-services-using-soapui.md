@@ -1,6 +1,5 @@
 ---
 title: "Test Web Services Using SoapUI"
-space: "Mendix 7 How-To's"
 category: "Testing"
 tags: []
 ---

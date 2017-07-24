@@ -1,6 +1,5 @@
 ---
 title: "XML"
-space: "Mendix 7 Reference Guide"
 category: "Modeler"
 ---
 # Widgets - XML reference guide

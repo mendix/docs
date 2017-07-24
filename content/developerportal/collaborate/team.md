@@ -1,6 +1,5 @@
 ---
 title: "Team"
-space: "Developer Portal"
 category: "Collaborate"
 description: "This page describes the Team page of the Developer Portal."
 tags: ["Team","Developer Portal"]

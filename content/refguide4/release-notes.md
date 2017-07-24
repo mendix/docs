@@ -1,6 +1,5 @@
 ---
 title: "Release Notes"
-space: "Reference Guide 4"
 ---
 The Spring 2012 Release of the Mendix App Platform includes a new unified and redesigned platform experience enabling social productivity, enhanced enterprise integration with app mash-ups, and a new, highly efficient way to build mobile apps for the Enterprise; plus we have improved performance and added all kinds of other features large and small.
 

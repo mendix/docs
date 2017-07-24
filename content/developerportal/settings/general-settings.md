@@ -1,6 +1,5 @@
 ---
 title: "General"
-space: "Developer Portal"
 category: "Settings"
 description: "This page describes general settings of your App."
 tags: ["Settings","App","Developer Portal"]

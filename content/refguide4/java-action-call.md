@@ -1,7 +1,6 @@
 ---
 title: "Java Action Call"
 parent: "action-call-activities"
-space: "Reference Guide 4"
 ---
 Java action call can be used to call a Java action. Arguments can be passed to the action and the result can be stored in a variable. Java actions can be found in the resources section of a model.
 

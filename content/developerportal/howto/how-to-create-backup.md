@@ -1,6 +1,5 @@
 ---
 title: "Create a Backup"
-space: "Developer Portal"
 category: "How-To's"
 description: "This page describes how to create a backup."
 tags: ["Backup","Mendix Cloud","Developer Portal"]

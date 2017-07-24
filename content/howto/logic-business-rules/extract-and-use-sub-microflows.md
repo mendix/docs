@@ -1,6 +1,5 @@
 ---
 title: "Extract and use sub microflows"
-space: "Mendix 7 How-To's"
 category: "Logic & Business Rules"
 tags: []
 ---

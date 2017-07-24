@@ -1,7 +1,6 @@
 ---
 title: "Log Message"
 parent: "logging-activities"
-space: "Reference Guide 4"
 ---
 With the log-message action you can create messages that appear in the log of your Mendix application.
 

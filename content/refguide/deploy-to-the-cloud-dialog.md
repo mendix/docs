@@ -1,6 +1,5 @@
 ---
 title: "Deploy To The Cloud Dialog"
-space: "Mendix 7 Reference Guide"
 parent: "dialogs"
 ---
 Use this dialog to create a versioned deployment package and upload it to your app in the Mendix Cloud.

@@ -1,6 +1,5 @@
 ---
 title: "Oracle"
-space: "Mendix 7 Reference Guide"
 parent: "data-storage"
 ---
 ## Known issue

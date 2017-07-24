@@ -1,7 +1,6 @@
 ---
 title: "Page Templates"
 parent: "pages"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "Assert Checkbox Value"
-space: "ATS Add-On" 
 parent: "input"
 ---
 

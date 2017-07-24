@@ -1,7 +1,6 @@
 ---
 title: "Synchronizing user accounts using the LDAP module"
 category: "Integration"
-space: "Mendix 5 How-to's"
 ---
 
 Your client might already have a centralized identity management solution in place, which houses information for all users in the company. If you want to make use of that information in your Mendix app, you can use the LDAP module available in the App Store. This module will allow you to synchronize user data from your LDAP-compatible identity manager to your Mendix app, for example to keep user names consistent across applications, or to allow users to use the same password for multiple apps. The LDAP module supports any LDAP-compatible identity manager. This how-to will teach you how to set up the LDAP module to work with your app, focusing on Microsoft Active Directory. It will give you a basic understanding of the LDAP module, but will skip over some advanced details. The document assumes basic Mendix knowledge, and some basic knowledge of what LDAP is and how it works.

@@ -1,6 +1,5 @@
 ---
 title: "Assert Value"
-space: "ATS Add-On" 
 parent: "input"
 ---
 

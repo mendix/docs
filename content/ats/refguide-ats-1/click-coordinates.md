@@ -1,6 +1,5 @@
 ---
 title: "Click Coordinates"
-space: "ATS Add-On" 
 parent: "selenium-actions"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "OQL Case Expression"
-space: "Mendix 7 Reference Guide"
 parent: "oql-operators"
 ---
 

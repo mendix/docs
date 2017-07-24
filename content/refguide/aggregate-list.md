@@ -1,6 +1,5 @@
 ---
 title: "Aggregate List"
-space: "Mendix 7 Reference Guide"
 parent: "list-activities"
 ---
 

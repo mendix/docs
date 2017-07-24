@@ -1,6 +1,5 @@
 ---
 title: "XPath Expressions"
-space: "Mendix 7 Reference Guide"
 parent: "xpath-constraints"
 ---
 

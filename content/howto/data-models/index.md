@@ -1,6 +1,5 @@
 ---
 title: "Data Models"
-space: "Mendix 7 How-To's"
 ---
 
 ## Documents in This Category

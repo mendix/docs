@@ -1,7 +1,6 @@
 ---
 title: "Deploying a Mendix App to Cloud Foundry"
 category: "Cloud Foundry"
-space: "Mendix 5 How-to's"
 ---
 
 [![](attachments/18448647/19398951.png)](/howto6/deploy-a-mendix-app-to-ibm-bluemix)

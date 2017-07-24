@@ -1,6 +1,5 @@
 ---
 title: "Back button"
-space: "Mendix 7 Reference Guide"
 parent: "button-widgets"
 ---
 

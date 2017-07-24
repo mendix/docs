@@ -1,7 +1,6 @@
 ---
 title: "XPath Constraints"
 parent: "xpath"
-space: "Reference Guide 5"
 ---
 
 

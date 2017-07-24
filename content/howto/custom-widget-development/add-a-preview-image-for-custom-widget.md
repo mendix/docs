@@ -1,6 +1,5 @@
 ---
 title: "Add a Preview Image for a Custom Widget"
-space: "Mendix 7 How-To's"
 category: "Custom Widget Development"
 tags: ["image", "preview", "widget"]
 ---

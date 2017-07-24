@@ -1,7 +1,6 @@
 ---
 title: "Commit Dialog"
 parent: "dialogs"
-space: "Reference Guide 4"
 ---
 The commit dialog is used for committing changes to the Team Server. You can enter a message and - if applicable - select related sprintr™ stories.
 

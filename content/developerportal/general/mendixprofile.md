@@ -1,6 +1,5 @@
 ---
 title: "Mendix Profile"
-space: "Developer Portal"
 category: "General"
 description: "This page describes 'Show Profile' page of the Developer Portal."
 tags: ["Profile","MxID","Developer Portal","Account"]

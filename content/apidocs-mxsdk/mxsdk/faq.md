@@ -1,6 +1,5 @@
 ---
 title: "FAQ"
-space: "API & SDK"
 category: "Mendix Platform SDK"
 ---
 ## General questions

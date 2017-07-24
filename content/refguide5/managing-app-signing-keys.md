@@ -1,7 +1,6 @@
 ---
 title: "Managing App Signing Keys"
 category: "Mobile"
-space: "Reference Guide 5"
 ---
 Managin App Signing Keys
 

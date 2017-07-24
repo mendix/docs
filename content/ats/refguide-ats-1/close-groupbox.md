@@ -1,6 +1,5 @@
 ---
 title: "Close GroupBox"
-space: "ATS Add-On" 
 parent: "groupbox"
 ---
 

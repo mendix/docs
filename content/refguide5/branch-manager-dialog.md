@@ -1,7 +1,6 @@
 ---
 title: "Branch Manager Dialog"
 parent: "dialogs"
-space: "Reference Guide 5"
 ---
 Used to manage the branches of a Team Server project. From this dialog new [branches](version-control-concepts) can be created and existing branches can be deleted. A branch allows independent development from other development lines. There are two main reasons for creating a branch line. The first is to do maintenance development on a version that is running in production. You can keep on developing in the main line while you fix issues in the branch line. The second reason for creating a branch is if you are starting the development of a very large feature, a feature that will probably take more than a day to develop. By doing this in a branch line you can commit the half implemented feature (possibly even with errors) without disturbing other development in the main line.
 

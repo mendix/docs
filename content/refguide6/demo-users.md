@@ -1,6 +1,5 @@
 ---
 title: "Demo Users"
-space: "Reference Guide 6"
 parent: "project-security"
 ---
 

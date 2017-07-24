@@ -1,6 +1,5 @@
 ---
 title: "Get BooleanSlider Value"
-space: "ATS Add-On" 
 parent: "booleanslider"
 ---
 

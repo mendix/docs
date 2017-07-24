@@ -1,7 +1,6 @@
 ---
 title: "Columns (document template)"
 parent: "data-grid-document-template"
-space: "Reference Guide 4"
 ---
 ## Appearance Properties
 

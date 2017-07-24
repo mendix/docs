@@ -1,6 +1,5 @@
 ---
 title: "String Function Calls"
-space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 description: "Describes the functions for converting and inspecting strings in Mendix."
 ---

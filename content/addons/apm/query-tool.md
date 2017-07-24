@@ -1,6 +1,5 @@
 ---
 title: "Query Tool"
-space: "Other Add-Ons"
 parent: "user-manual"
 ---
 To collect database or application information the Query Tool has been introduced.

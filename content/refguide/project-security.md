@@ -1,6 +1,5 @@
 ---
 title: "Project Security"
-space: "Mendix 7 Reference Guide"
 parent: "project"
 ---
 

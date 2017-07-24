@@ -1,7 +1,6 @@
 ---
 title: "Denormalize Data to Improve Performance"
 category: "Data Models"
-space: "Mendix 5 How-to's"
 ---
 
 This how-to explains how you can improve performance by de-normalizing data in Mendix. Before you can start with this how-to you need to create a basic data structure so that you have data to work with.

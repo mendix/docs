@@ -1,6 +1,5 @@
 ---
 title: "Input"
-space: "ATS Add-On" 
 parent: "mendix-actions"
 ---
 

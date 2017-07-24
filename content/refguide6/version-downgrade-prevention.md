@@ -1,6 +1,5 @@
 ---
 title: "Version Downgrade Prevention"
-space: "Mendix 6 Reference Guide"
 category: "Deployment"
 ---
 

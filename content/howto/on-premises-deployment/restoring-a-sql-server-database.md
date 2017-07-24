@@ -1,6 +1,5 @@
 ---
 title: "Restoring a SQL Server database"
-space: "Mendix 7 How-To's"
 parent: "mendix-on-windows-_-microsoft-sql-server"
 ---
 ## 1 Introduction

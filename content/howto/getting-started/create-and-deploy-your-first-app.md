@@ -1,6 +1,5 @@
 ---
 title: "Create and Deploy Your First App"
-space: "Mendix 7 How-To's"
 category: "Getting Started"
 description: "Presents how to build your first app in Mendix and deploy it to the cloud."
 tags: []

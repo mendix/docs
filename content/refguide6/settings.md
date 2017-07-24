@@ -1,6 +1,5 @@
 ---
 title: "Settings"
-space: "Reference Guide 6"
 parent: "consumed-app-services"
 ---
 

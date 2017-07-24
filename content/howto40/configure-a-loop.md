@@ -1,7 +1,6 @@
 ---
 title: "Configure a Loop"
 parent: "loop"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

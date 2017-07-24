@@ -1,6 +1,5 @@
 ---
 title: "Configure Selenium Support"
-space: "Mendix 7 How-To's"
 category: "Integration"
 tags: []
 ---

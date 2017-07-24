@@ -1,7 +1,6 @@
 ---
 title: "Select All Button"
 parent: "control-bar"
-space: "Reference Guide 4"
 ---
 The select all button allows the end-user to select all objects in a grid, or reference set selector. With the selection type property you can determine whether this button should select the objects on the current page, or the objects on all pages.
 

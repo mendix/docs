@@ -1,6 +1,5 @@
 ---
 title: "System Texts"
-space: "Mendix 7 Reference Guide"
 parent: "project"
 ---
 

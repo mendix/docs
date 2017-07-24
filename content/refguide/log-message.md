@@ -1,6 +1,5 @@
 ---
 title: "Log Message"
-space: "Mendix 7 Reference Guide"
 parent: "logging-activities"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Finding Object Activities"
-space: "General How-To's"
 category: "Tips & Tricks"
 ---
 

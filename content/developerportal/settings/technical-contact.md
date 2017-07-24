@@ -1,6 +1,5 @@
 ---
 title: "Technical Contact"
-space: "Developer Portal"
 category: "Settings"
 description: "This page describes the role of a technical contact."
 tags: ["Technical Contact","Settings","Developer Portal"]

@@ -1,7 +1,6 @@
 ---
 title: "Connect Parameter Widgets to a Data Set"
 parent: "reporting"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

@@ -1,7 +1,6 @@
 ---
 title: "Input Widgets"
 parent: "pages"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "Access a Samba share from the MxCloud"
 category: "Extendability"
-space: "Mendix 5 How-to's"
 ---
 
 Using the Mendix Cloud and a VPN connection you will be able to use a Samba connection to pull or push files to a windows share. When doing this you need to use the static ip address in the connection string. The library could support the usage of a Server name, however that requires some extensive configuration to specify the DNS server location, DFS address, etc. It is far more efficient to use the IP Address.

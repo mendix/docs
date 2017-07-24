@@ -1,6 +1,5 @@
 ---
 title: "NULL Order Behavior"
-space: "Mendix 7 Reference Guide"
 parent: "data-storage"
 ---
 

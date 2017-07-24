@@ -1,7 +1,6 @@
 ---
 title: "Testing microflows using the UnitTesting module"
 category: "Testing"
-space: "Mendix 5 How-to's"
 ---
 
 To smarten up your app with business logic you can use microflows. To verify that your microflow works as expected you can create unit tests using the UnitTesting module. The UnitTesting module provides an easy to use interface to manage and run unit tests. The module supports unit tests that are created using microflows and unit tests that are created using JUnit.

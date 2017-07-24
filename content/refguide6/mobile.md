@@ -1,6 +1,5 @@
 ---
 title: "Mobile"
-space: "Reference Guide 6"
 ---
 
 

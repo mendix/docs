@@ -1,6 +1,5 @@
 ---
 title: "Troubleshoot Network Issue for Connecting to Team Server"
-space: "General How-To's"
 category: "Mendix Support"
 #parent: ""
 #description: ""

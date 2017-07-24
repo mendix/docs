@@ -1,7 +1,6 @@
 ---
 title: "Publish an App in the App Store"
 category: "Custom Widgets"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

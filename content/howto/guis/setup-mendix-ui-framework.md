@@ -1,6 +1,5 @@
 ---
 title: "Setup Mendix UI Framework"
-space: "Mendix 7 How-To's"
 category: "GUIs"
 tags: []
 ---

@@ -1,6 +1,5 @@
 ---
 title: "Use Case Examples"
-space: "API & SDK"
 category: "Mendix Platform SDK"
 ---
 Since the Mendix SDK gives you full access to all aspects of your app model, there's an almost infinite number of things you can do with it. We can however distinguish four basic categories: analyzing, exporting, modifying and importing. To inspire you to build your own scripts and tools, you can find an example for each category below.

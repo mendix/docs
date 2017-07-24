@@ -1,7 +1,6 @@
 ---
 title: "Configure a Microflow Button"
 parent: "starting-microflows"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

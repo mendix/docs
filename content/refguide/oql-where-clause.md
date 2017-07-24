@@ -1,6 +1,5 @@
 ---
 title: "OQL Where Clause"
-space: "Mendix 7 Reference Guide"
 parent: "oql"
 ---
 

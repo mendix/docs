@@ -1,7 +1,6 @@
 ---
 title: "Scheduled Events"
 category: "Modeler"
-space: "Reference Guide 5"
 ---
 
 

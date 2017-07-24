@@ -1,7 +1,6 @@
 ---
 title: "Integration Activities"
 parent: "activities"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "Getting Started"
-space: "Mendix 5 How-to's"
 ---
 How to start a new Mendix Project. What do you run into? What's needed to successfully start your project?
 

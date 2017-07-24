@@ -1,6 +1,5 @@
 ---
 title: "Edit Cloud Foundry Settings Dialog"
-space: "Mendix 7 Reference Guide"
 parent: "dialogs"
 ---
 Use this dialog to specify the information necessary for deploying your app to a Cloud Foundry instance.

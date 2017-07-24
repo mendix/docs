@@ -1,7 +1,6 @@
 ---
 title: "Date Range Field"
 parent: "date-range-selector"
-space: "Reference Guide 5"
 ---
 
 

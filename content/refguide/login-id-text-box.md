@@ -1,6 +1,5 @@
 ---
 title: "Login Id Text Box"
-space: "Mendix 7 Reference Guide"
 parent: "authentication-widgets"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Scout and Windows 10 Workaround"
-space: "Mendix 6 How-to's"
 parent: "setup-mendix-ui-framework"
 ---
 Scout has not been updated for Windows 10 and therefor Windows 10 users need to use the following workaround:

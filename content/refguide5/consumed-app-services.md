@@ -1,7 +1,6 @@
 ---
 title: "Consumed App Services"
 parent: "integration"
-space: "Reference Guide 5"
 ---
 
 

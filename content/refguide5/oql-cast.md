@@ -1,7 +1,6 @@
 ---
 title: "OQL CAST"
 parent: "oql-functions"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "Set Up Your Partner Profile"
-space: "Community"
 category: "Tools"
 ---
 

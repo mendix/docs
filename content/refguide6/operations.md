@@ -1,6 +1,5 @@
 ---
 title: "Operations"
-space: "Reference Guide 6"
 parent: "published-web-services"
 ---
 

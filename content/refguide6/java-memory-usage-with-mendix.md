@@ -1,6 +1,5 @@
 ---
 title: "Java Memory Usage With Mendix"
-space: "Reference Guide 6"
 parent: "transient-objects-garbage-collecting"
 ---
 # Java Memory Usage With Mendix

@@ -1,6 +1,5 @@
 ---
 title: "Parsing and Formatting Decimal Function Calls"
-space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 ---
 

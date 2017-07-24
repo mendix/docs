@@ -1,7 +1,6 @@
 ---
 title: "Exclusive Split"
 parent: "microflows"
-space: "Reference Guide 4"
 ---
 An exclusive split is an element that makes a choice based on a condition and follows (exactly) one of the outgoing sequence flows.
 

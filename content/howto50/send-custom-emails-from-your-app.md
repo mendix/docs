@@ -1,7 +1,6 @@
 ---
 title: "Send Custom Emails From Your App"
 category: "Extendability"
-space: "Mendix 5 How-to's"
 ---
 
 Each application can leverage Mendix App Store content to create and send custom emails based off of configurable templates. To achieve this, the app will require three Mendix App Store modules and configuration settings for the SMTP server that will be used to relay the messages.

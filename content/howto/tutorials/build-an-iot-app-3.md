@@ -1,6 +1,5 @@
 ---
 title: "Build a Logistics IoT App Step 3: Handle the Sensor Data"
-space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
 description: "Describes how to handle the temperature sensor data in the Mendix Logistics IoT app."
 tags: ["iot", "logistics", "supply chain", "cargo", "shipment", "logistics", "sensor"]

@@ -1,6 +1,5 @@
 ---
 title: "Microflow Expressions"
-space: "Mendix 7 Reference Guide"
 parent: "microflows"
 description: "Describes the expressions that can be used in Mendix for a variety of purposes (for example, to change a member of an object based on logic)."
 ---

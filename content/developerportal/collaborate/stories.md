@@ -1,6 +1,5 @@
 ---
 title: "Stories"
-space: "Developer Portal"
 category: "Collaborate"
 description: "Describes how to manage your stories."
 tags: ["Stories","Developer Portal"]

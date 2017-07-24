@@ -1,6 +1,5 @@
 ---
 title: "Build a Simple HRM App Step 2: Perform the First Steps to Build a Rich GUI"
-space: "Mendix 7 How-To's"
 parent: "build-a-simple-hrm-app"
 tags: ["HRM", "build", "app", "developer portal"]
 ---

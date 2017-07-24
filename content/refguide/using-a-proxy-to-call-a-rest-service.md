@@ -1,6 +1,5 @@
 ---
 title: "Using a Proxy to Call a REST Service"
-space: "Mendix 7 Reference Guide"
 parent: "consumed-rest-services"
 ---
 

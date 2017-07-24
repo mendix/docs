@@ -1,6 +1,5 @@
 ---
 title: "Mobile"
-space: "Mendix 7 Reference Guide"
 ---
 
 Mendix allows you to quickly build apps for mobile devices. This document gives an overview of mobile app development with Mendix and points to relevant documentation pages.

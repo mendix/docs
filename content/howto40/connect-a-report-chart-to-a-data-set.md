@@ -1,7 +1,6 @@
 ---
 title: "Connect a Report Chart to a Data Set"
 parent: "report-chart"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

@@ -1,7 +1,6 @@
 ---
 title: "Start Event"
 parent: "microflows"
-space: "Reference Guide 4"
 ---
 A start event defines the location where the microflow will start from. A microflow can only start from one location. Therefore a microflow can only contain one start event.
 

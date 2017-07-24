@@ -1,7 +1,6 @@
 ---
 title: "Input Reference Set Selector"
 parent: "mobile-forms"
-space: "Reference Guide 4"
 ---
 The input reference set selector can be used to select the items for the reference set connected to the enclosing object.
 

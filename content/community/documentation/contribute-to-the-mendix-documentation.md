@@ -1,6 +1,5 @@
 ---
 title: "Contribute to the Mendix Documentation"
-space: "Community"
 category: "Documentation"
 ---
 

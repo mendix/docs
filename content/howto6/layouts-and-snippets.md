@@ -1,6 +1,5 @@
 ---
 title: "Layouts and Snippets"
-space: "Mendix 6 How-to's"
 category: "GUIs"
 tags: []
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Service Form"
 parent: "set-up-a-mendix-app"
-space: "Mendix 4 How-to's"
 ---
 This form is important, especially for a correct installation of the Windows service for this app.
 

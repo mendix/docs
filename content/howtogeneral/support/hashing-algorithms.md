@@ -1,6 +1,5 @@
 ---
 title: "Hashing Algorithms"
-space: "General How-To's"
 category: "Mendix Support"
 #parent: ""
 #description: ""

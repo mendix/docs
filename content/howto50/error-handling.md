@@ -1,7 +1,6 @@
 ---
 title: Error Handling
 category: 'Logic & Business Rules'
-space: "Mendix 5 How-to's"
 ---
 
 When working with microflows it is important to realize that we always have transactions. These transactions help is in achieving the correct result, and in case something goes wrong they also help us to keep all information in our application consistent.

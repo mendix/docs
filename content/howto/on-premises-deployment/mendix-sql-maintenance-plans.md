@@ -1,6 +1,5 @@
 ---
 title: "Set Up Mendix SQL Maintenance Plans"
-space: "Mendix 7 How-To's"
 category: "On-Premises Deployment"
 ---
 

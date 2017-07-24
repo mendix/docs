@@ -1,7 +1,6 @@
 ---
 title: "Starting your own repository"
 category: 'Collaboration & Project Management'
-space: "Mendix 5 How-to's"
 ---
 
 In this how-to you will learn how to set up a GitHub repository. The repository will contain your development content and can be shared with others, in order to contribute to the application.

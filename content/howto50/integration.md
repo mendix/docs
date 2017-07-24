@@ -1,6 +1,5 @@
 ---
 title: Integration
-space: "Mendix 5 How-to's"
 ---
 
 Wanting to connect your app to the internet?

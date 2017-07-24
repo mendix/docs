@@ -1,7 +1,6 @@
 ---
 title: "Create an Association"
 parent: "associations"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

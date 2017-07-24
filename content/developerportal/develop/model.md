@@ -1,6 +1,5 @@
 ---
 title: "Model"
-space: "Developer Portal"
 category: "Develop"
 description: "This page describes the options available to edit your Aoo."
 tags: ["Edit","Modeler","Developer Portal"]

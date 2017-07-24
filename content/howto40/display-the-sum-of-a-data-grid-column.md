@@ -1,7 +1,6 @@
 ---
 title: "Display the Sum of a Data Grid Column"
 parent: "columns"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

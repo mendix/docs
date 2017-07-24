@@ -1,7 +1,6 @@
 ---
 title: "Explore our connectors and adapters"
 category: "Extendability"
-space: "Mendix 5 How-to's"
 ---
 
 One of the strengths of Mendix is that it’s easy to connect your Mendix application with other systems. Our App Store is filled with all kinds of connectors and adapters. Here is an overview of some of our connectors:

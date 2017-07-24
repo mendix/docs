@@ -1,7 +1,6 @@
 ---
 title: "Data View Save Button"
 parent: "data-view-control-bar"
-space: "Reference Guide 4"
 ---
 The save button commits the changes that were made to the object by input fields in the data view. First, validations are performed and if all is well, the object is saved. If validations fail, the feedback will be sent to the user in the form of red text below the input widget with problematic content. The form showing the data view will be closed if the data view property 'Close on Save/Cancel' is true.
 

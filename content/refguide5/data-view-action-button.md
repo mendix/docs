@@ -1,7 +1,6 @@
 ---
 title: "Data view action button"
 parent: "data-view-control-bar"
-space: "Reference Guide 5"
 ---
 
 

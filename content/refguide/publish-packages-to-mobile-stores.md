@@ -1,6 +1,5 @@
 ---
 title: "Publishing Packages To Mobile Stores"
-space: "Mendix 7 Reference Guide"
 category: "Mobile"
 ---
 

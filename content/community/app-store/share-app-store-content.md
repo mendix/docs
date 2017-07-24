@@ -1,6 +1,5 @@
 ---
 title: "Share App Store Content"
-space: "Community"
 category: "App Store"
 ---
 

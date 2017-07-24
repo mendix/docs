@@ -1,6 +1,5 @@
 ---
 title: "Using the Excel Exporter"
-space: "Mendix 7 How-To's"
 category: "Integration"
 tags: []
 ---

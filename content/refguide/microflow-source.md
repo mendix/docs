@@ -1,6 +1,5 @@
 ---
 title: "Microflow Source"
-space: "Mendix 7 Reference Guide"
 parent: "data-sources"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Execute an SQL Statement on an External Database"
-space: "General How-To's"
 category: "Best Practices"
 ---
 

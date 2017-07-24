@@ -1,6 +1,5 @@
 ---
 title: "OQL Limit Clause"
-space: "Mendix 7 Reference Guide"
 parent: "oql"
 ---
 

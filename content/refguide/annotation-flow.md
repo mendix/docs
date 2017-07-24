@@ -1,6 +1,5 @@
 ---
 title: "Annotation flow"
-space: "Mendix 7 Reference Guide"
 parent: "microflows"
 ---
 

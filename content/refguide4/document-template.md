@@ -1,7 +1,6 @@
 ---
 title: "Document Template"
 parent: "document-templates"
-space: "Reference Guide 4"
 ---
 {{% alert type="warning" %}}
 

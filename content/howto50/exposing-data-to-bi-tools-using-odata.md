@@ -1,7 +1,6 @@
 ---
 title: "Exposing data to BI tools using OData"
 category: "Integration"
-space: "Mendix 5 How-to's"
 ---
 
 **Introduction**

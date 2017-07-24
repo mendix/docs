@@ -1,6 +1,5 @@
 ---
 title: "Get InputReferenceSelector Value"
-space: "ATS Add-On" 
 parent: "input-reference-selector"
 ---
 ## Description

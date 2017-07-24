@@ -1,6 +1,5 @@
 ---
 title: "XPath Tokens"
-space: "Reference Guide 6"
 parent: "xpath"
 ---
 

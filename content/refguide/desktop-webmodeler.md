@@ -1,6 +1,5 @@
 ---
 title: "Syncing the Web Modeler with the Desktop Modeler"
-space: "Mendix 7 Reference Guide"
 parent: "web-modeler"
 tags: ["web modeler", "desktop modeler"]
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Export XML"
 parent: "integration-activities"
-space: "Reference Guide 5"
 ---
 
 

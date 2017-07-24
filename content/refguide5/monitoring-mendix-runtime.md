@@ -1,7 +1,6 @@
 ---
 title: "Monitoring - Mendix Runtime"
 category: "Proactive Maintenance"
-space: "Reference Guide 5"
 ---
 ## Call runtime statistics monitoring action
 

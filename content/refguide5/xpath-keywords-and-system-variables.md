@@ -1,7 +1,6 @@
 ---
 title: "XPath Keywords and System Variables"
 parent: "xpath-constraints"
-space: "Reference Guide 5"
 ---
 
 

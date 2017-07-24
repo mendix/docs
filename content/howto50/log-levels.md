@@ -1,7 +1,6 @@
 ---
 title: "Log Levels"
 category: 'Monitoring & Troubleshooting'
-space: "Mendix 5 How-to's"
 ---
 
 Each application has a log and log-messages to monitor the health of the running of the application. Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require. This How-To will therefore teach you how to configure the log levels for the various occurrence of logging within your application. You will start with the basics around logging and its uses. Moving onto the practices around configuring the log levels.

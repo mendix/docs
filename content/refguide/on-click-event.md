@@ -1,6 +1,5 @@
 ---
 title: "On Click Event"
-space: "Mendix 7 Reference Guide"
 parent: "page-concepts"
 ---
 ### On click

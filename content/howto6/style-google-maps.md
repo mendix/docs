@@ -1,6 +1,5 @@
 ---
 title: "Style Google Maps"
-space: "Mendix 6 How-to's"
 category: "GUIs"
 tags: []
 ---

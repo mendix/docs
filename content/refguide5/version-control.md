@@ -1,7 +1,6 @@
 ---
 title: "Version Control"
 category: "Team Server"
-space: "Reference Guide 5"
 ---
 
 

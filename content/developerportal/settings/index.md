@@ -1,6 +1,5 @@
 ---
 title: "Settings"
-space: "Developer Portal"
 ---
 
 ## 1 Introduction

@@ -1,7 +1,6 @@
 ---
 title: "Oracle"
 category: "System Requirements"
-space: "Reference Guide 4"
 ---
 There is a known issue with backups of your Oracle databases. If you restore a backup, then the database is not exactly the same as the original. This is caused by the way Mendix creates primary keys.
 Many indexes are lost in the restored database and many other indices are strongly coupled to primary keys without Mendix expecting that. This can result in overall performance degradation and in errors if you synchronize your database with new versions of your model.

@@ -1,7 +1,6 @@
 ---
 title: "Anonymous User Security"
 category: "Security"
-space: "Mendix 5 How-to's"
 ---
 # Anonymous User Security
 

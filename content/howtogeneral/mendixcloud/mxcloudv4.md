@@ -1,6 +1,5 @@
 ---
 title: "Mendix Cloud v4 - FAQ"
-space: "General How-To's"
 category: "Mendix Cloud"
 ---
 

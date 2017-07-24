@@ -1,6 +1,5 @@
 ---
 title: "Monitoring - What to monitor"
-space: "Reference Guide 6"
 category: "Proactive Maintenance"
 ---
 

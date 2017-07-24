@@ -1,6 +1,5 @@
 ---
 title: "Common Widget Properties"
-space: "Mendix 7 Reference Guide"
 parent: "common-widgets"
 ---
 # Common Widget Properties

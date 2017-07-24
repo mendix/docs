@@ -1,6 +1,5 @@
 ---
 title: "Community"
-space: "Community"
 priority: 7
 ---
 

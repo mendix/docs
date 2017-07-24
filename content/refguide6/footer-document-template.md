@@ -1,6 +1,5 @@
 ---
 title: "Footer (document template)"
-space: "Reference Guide 6"
 parent: "document-templates"
 ---
 

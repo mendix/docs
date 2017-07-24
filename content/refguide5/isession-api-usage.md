@@ -1,7 +1,6 @@
 ---
 title: "ISession.getData() API usage"
 category: "Runtime"
-space: "Reference Guide 5"
 ---
 ## ISession.getData() API usage
 

@@ -1,6 +1,5 @@
 ---
 title: "Grid New Button"
-space: "Reference Guide 6"
 parent: "control-bar"
 ---
 

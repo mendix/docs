@@ -1,6 +1,5 @@
 ---
 title: "Settings"
-space: "Mendix 7 Reference Guide"
 parent: "consumed-app-services"
 ---
 

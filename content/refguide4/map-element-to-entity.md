@@ -1,7 +1,6 @@
 ---
 title: "Map element to entity"
 parent: "xml-to-domain-mappings"
-space: "Reference Guide 4"
 ---
 This describes how to map an xml element to a domain model entity for a XML-to-Domain mapping.
 

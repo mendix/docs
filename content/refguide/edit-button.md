@@ -1,6 +1,5 @@
 ---
 title: "Edit button"
-space: "Mendix 7 Reference Guide"
 parent: "control-bar"
 ---
 

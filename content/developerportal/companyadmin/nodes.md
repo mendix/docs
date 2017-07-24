@@ -1,6 +1,5 @@
 ---
 title: "Nodes"
-space: "Developer Portal"
 category: "Company Admin"
 description: "Developer Portal Cloud Noces"
 tags: ["Company","Admin","Developer Portal"]

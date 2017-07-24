@@ -1,6 +1,5 @@
 ---
 title: "Download a Backup"
-space: "Developer Portal"
 category: "How-To's"
 description: "This page describes how to download a backup."
 tags: ["Backup","Download","Mendix Cloud","Developer Portal"]

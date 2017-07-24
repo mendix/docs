@@ -1,7 +1,6 @@
 ---
 title: "Configure a Domain-to-XML Mapping"
 parent: "integration"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

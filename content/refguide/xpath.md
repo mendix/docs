@@ -1,6 +1,5 @@
 ---
 title: "XPath"
-space: "Mendix 7 Reference Guide"
 category: "Modeler"
 description: "Describes how the XPath query langauge is used in Mendix by presenting functions and examples."
 ---

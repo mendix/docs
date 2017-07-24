@@ -1,7 +1,6 @@
 ---
 title: "Use the Batch Replace Function"
 parent: "translatable-texts"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

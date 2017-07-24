@@ -1,6 +1,5 @@
 ---
 title: "Text"
-space: "Mendix 7 Reference Guide"
 parent: "common-widgets"
 ---
 

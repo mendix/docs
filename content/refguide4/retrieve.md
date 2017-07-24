@@ -1,7 +1,6 @@
 ---
 title: "Retrieve"
 parent: "object-activities"
-space: "Reference Guide 4"
 ---
 Retrieve can be used to get one (or more) associated objects of another object. Furthermore the activity can also get one (or more) objects directly from the database.
 

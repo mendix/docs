@@ -1,6 +1,5 @@
 ---
 title: "Context Source"
-space: "Mendix 7 Reference Guide"
 parent: "data-sources"
 ---
 

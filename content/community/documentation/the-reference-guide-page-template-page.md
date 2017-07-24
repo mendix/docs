@@ -1,6 +1,5 @@
 ---
 title: "Reference Guide Page Template"
-space: "Community"
 category: "Documentation"
 ---
 

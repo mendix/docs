@@ -1,6 +1,5 @@
 ---
 title: "Platform Portal"
-space: "Release Notes"
 toc-level: "1"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Using a proxy to call a webservice"
-space: "Mendix 7 Reference Guide"
 parent: "consumed-web-services"
 ---
 

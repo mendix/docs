@@ -1,7 +1,6 @@
 ---
 title: "Microflow Element Common Properties"
 parent: "microflows"
-space: "Reference Guide 5"
 ---
 
 

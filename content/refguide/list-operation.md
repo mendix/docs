@@ -1,6 +1,5 @@
 ---
 title: "List Operation"
-space: "Mendix 7 Reference Guide"
 parent: "list-activities"
 ---
 

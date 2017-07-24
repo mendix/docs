@@ -1,7 +1,6 @@
 ---
 title: "Tab page"
 parent: "tab-container"
-space: "Reference Guide 5"
 ---
 
 

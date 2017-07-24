@@ -1,6 +1,5 @@
 ---
 title: "Find Grid Selector Box"
-space: "ATS Add-On" 
 parent: "grid-selector"
 ---
 ## Description

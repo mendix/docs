@@ -1,6 +1,5 @@
 ---
 title: "Navigation Menu"
-space: "ATS Add-On" 
 parent: "mendix-actions"
 ---
 

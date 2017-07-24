@@ -1,6 +1,5 @@
 ---
 title: "Build Microflow Actions Using the Mendix Connector Kit"
-space: "Mendix 7 How-To's"
 category: "Extendability"
 description: "Describes creating custom Microflow actions using advanced Connector Kit options."
 tags: ["Java","Connector Kit","microflow action","parameter type"]

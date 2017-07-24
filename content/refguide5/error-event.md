@@ -1,7 +1,6 @@
 ---
 title: "Error Event"
 parent: "microflows"
-space: "Reference Guide 5"
 ---
 
 

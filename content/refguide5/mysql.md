@@ -1,7 +1,6 @@
 ---
 title: "MySQL"
 category: "General"
-space: "Reference Guide 5"
 ---
 Mendix introduced support for MySQL 5.5 in Mendix 5.12, and support for MariaDB 5.5\. in Mendix 5.16.
 

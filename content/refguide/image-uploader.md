@@ -1,6 +1,5 @@
 ---
 title: "Image uploader"
-space: "Mendix 7 Reference Guide"
 parent: "file-widgets"
 ---
 

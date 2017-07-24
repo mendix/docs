@@ -1,7 +1,6 @@
 ---
 title: "Build a Template Grid"
 parent: "template-grid"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

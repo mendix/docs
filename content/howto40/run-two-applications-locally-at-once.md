@@ -1,7 +1,6 @@
 ---
 title: "Run Two Applications Locally at Once"
 parent: "project-settings"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

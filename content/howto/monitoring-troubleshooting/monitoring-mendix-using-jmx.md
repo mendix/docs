@@ -1,6 +1,5 @@
 ---
 title: "Monitor Mendix Using JMX"
-space: "Mendix 7 How-To's"
 category: "Monitoring & Troubleshooting"
 tags: []
 ---

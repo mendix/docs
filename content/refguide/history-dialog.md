@@ -1,6 +1,5 @@
 ---
 title: "History Dialog"
-space: "Mendix 7 Reference Guide"
 parent: "dialogs"
 ---
 Use this dialog to look at all the changes that have been committed to a development line of a project. The form is also used when selecting a revision: to merge from, to create a branch line of or to create a deployment archive of.

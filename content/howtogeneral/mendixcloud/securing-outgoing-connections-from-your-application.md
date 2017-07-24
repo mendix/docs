@@ -1,6 +1,5 @@
 ---
 title: "Securing Outgoing Connections from your Application"
-space: "General How-To's"
 category: "Mendix Cloud"
 ---
 # Securing Outgoing Connections from your Application

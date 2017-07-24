@@ -1,6 +1,5 @@
 ---
 title: "Open Application"
-space: "ATS Add-On" 
 parent: "generic"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Set Up Visibility Based On an Module Role"
 parent: "conditions"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

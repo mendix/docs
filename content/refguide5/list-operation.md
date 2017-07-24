@@ -1,7 +1,6 @@
 ---
 title: "List Operation"
 parent: "list-activities"
-space: "Reference Guide 5"
 ---
 
 

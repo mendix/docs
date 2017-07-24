@@ -1,6 +1,5 @@
 ---
 title: "User Management API"
-space: "API & SDK"
 category: "API Documentation"
 ---
 

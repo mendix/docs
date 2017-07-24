@@ -1,6 +1,5 @@
 ---
 title: "Microflow Activities"
-space: "Mendix 7 Reference Guide"
 parent: "integration"
 ---
 ## Integration Activitities

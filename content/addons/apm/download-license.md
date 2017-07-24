@@ -1,6 +1,5 @@
 ---
 title: "Download and License"
-space: "Other Add-Ons"
 parent: "user-manual"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Image"
 parent: "common-widgets"
-space: "Reference Guide 5"
 ---
 
 

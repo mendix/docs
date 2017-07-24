@@ -1,6 +1,5 @@
 ---
 title: "Java Actions"
-space: "Mendix 7 Reference Guide"
 category: "Modeler"
 description: "Describes using Java Actions to extend the functionality of your Mendix app."
 ---

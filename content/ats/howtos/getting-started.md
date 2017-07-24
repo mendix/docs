@@ -1,6 +1,5 @@
 ---
 title: "Get Started"
-space: "ATS Add-On"
 category: "How-To's"
 description: "Describes the initial steps for automatically testing your apps using ATS."
 tags: ["ATS", "testing"]

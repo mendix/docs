@@ -1,6 +1,5 @@
 ---
 title: "Push Notifications"
-space: "Mendix 7 How-To's"
 category: "Mobile"
 tags: ["wdf","3rfr3"]
 ---

@@ -1,6 +1,5 @@
 ---
 title: "Navigation in Mendix Versions 7.2 and 7.3"
-space: "Mendix 7 Reference Guide"
 parent: "project"
 description: "Describes the concept of navigation in apps and the properties of a profile for Mendix versions 7.2 and 7.3."
 ---

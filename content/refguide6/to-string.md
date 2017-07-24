@@ -1,6 +1,5 @@
 ---
 title: "To string"
-space: "Reference Guide 6"
 parent: "microflow-expressions"
 ---
 

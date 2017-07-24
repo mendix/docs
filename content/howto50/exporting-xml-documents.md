@@ -1,7 +1,6 @@
 ---
 title: "Exporting XML documents"
 category: "Integration"
-space: "Mendix 5 How-to's"
 ---
 # Exporting XML documents
 

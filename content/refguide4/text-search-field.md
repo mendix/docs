@@ -1,7 +1,6 @@
 ---
 title: "Text Search Field"
 parent: "search-bar"
-space: "Reference Guide 4"
 ---
 ## Common Properties
 

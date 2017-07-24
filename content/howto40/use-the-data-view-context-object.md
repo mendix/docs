@@ -1,7 +1,6 @@
 ---
 title: "Use the Data View Context Object"
 category: "Custom Widgets"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

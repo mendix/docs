@@ -1,6 +1,5 @@
 ---
 title: "Microsoft SQL Server maintenance"
-space: "Mendix 7 Reference Guide"
 category: "Deployment"
 ---
 

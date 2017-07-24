@@ -1,6 +1,5 @@
 ---
 title: "Download File"
-space: "Reference Guide 6"
 parent: "client-activities"
 ---
 

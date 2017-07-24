@@ -1,7 +1,6 @@
 ---
 title: "Add a New Language to Your Project"
 parent: "project-settings"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

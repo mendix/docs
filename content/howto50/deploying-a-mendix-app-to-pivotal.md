@@ -1,7 +1,6 @@
 ---
 title: "Deploying a Mendix App to Pivotal"
 category: "Cloud Foundry"
-space: "Mendix 5 How-to's"
 ---
 
 ![](attachments/18448647/18580547.png)

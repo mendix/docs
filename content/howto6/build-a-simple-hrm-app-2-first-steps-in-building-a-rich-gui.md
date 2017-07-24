@@ -1,6 +1,5 @@
 ---
 title: "Build a Simple HRM App 2: Perform the First Steps to Build a Rich GUI"
-space: "Mendix 6 How-to's"
 parent: "build-a-simple-hrm-app"
 ---
 

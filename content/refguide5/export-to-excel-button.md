@@ -1,7 +1,6 @@
 ---
 title: "Export to excel button"
 parent: "control-bar"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "Model Share"
 category: "General"
-space: "Reference Guide 5"
 ---
 
 

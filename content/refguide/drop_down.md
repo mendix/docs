@@ -1,6 +1,5 @@
 ---
 title: "Drop-Down"
-space: "Mendix 7 Reference Guide"
 parent: "input-widgets"
 ---
 

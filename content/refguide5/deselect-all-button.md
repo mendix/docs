@@ -1,7 +1,6 @@
 ---
 title: "Deselect all button"
 parent: "control-bar"
-space: "Reference Guide 5"
 ---
 
 

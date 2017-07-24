@@ -1,6 +1,5 @@
 ---
 title: "Microflow"
-space: "Reference Guide 6"
 parent: "microflows"
 ---
 

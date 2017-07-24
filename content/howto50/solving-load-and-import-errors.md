@@ -1,7 +1,6 @@
 ---
 title: "Solving Load and Import Errors"
 category: 'Monitoring & Troubleshooting'
-space: "Mendix 5 How-to's"
 ---
 
 This how-to will help you to solve problems that may occur when opening a project in the Mendix Modeler.

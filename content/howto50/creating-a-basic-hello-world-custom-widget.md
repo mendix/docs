@@ -1,7 +1,6 @@
 ---
 title: "Creating a Basic Hello World Custom Widget"
 category: "Custom Widget Development"
-space: "Mendix 5 How-to's"
 ---
 
 This tutorial is a quick introduction on how to build a custom widget to extend your Mendix application. We’re using the famous “Hello World” example to get you started. At the end of this tutorial you will have a basic understanding of the structure and setup of a Mendix widget.

@@ -1,6 +1,5 @@
 ---
 title: "XPath hours-from-dateTime"
-space: "Mendix 7 Reference Guide"
 parent: "xpath-constraint-functions"
 ---
 

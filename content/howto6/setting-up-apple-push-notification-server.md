@@ -1,6 +1,5 @@
 ---
 title: "Setting up Apple Push Notification Server"
-space: "Mendix 6 How-to's"
 parent: "push-notifications"
 ---
 In order to proceed you need an Apple developer license and a device running Mac OS X.

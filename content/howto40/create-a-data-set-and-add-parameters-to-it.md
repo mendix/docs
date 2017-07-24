@@ -1,7 +1,6 @@
 ---
 title: "Create a Data Set and Add Parameters to It"
 parent: "data-sets"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

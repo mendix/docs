@@ -1,6 +1,5 @@
 ---
 title: "Published web service"
-space: "Mendix 7 Reference Guide"
 parent: "published-web-services"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "XML Schema Support"
-space: "Reference Guide 6"
 parent: "xml-schemas"
 ---
 

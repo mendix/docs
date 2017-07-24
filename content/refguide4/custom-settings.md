@@ -1,7 +1,6 @@
 ---
 title: "Custom Settings"
 category: "Runtime"
-space: "Reference Guide 4"
 ---
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by the Modeler.
 

@@ -1,6 +1,5 @@
 ---
 title: "Triggers"
-space: "Other Add-Ons"
 parent: "user-manual"
 ---
 

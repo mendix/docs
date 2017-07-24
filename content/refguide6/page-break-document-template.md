@@ -1,6 +1,5 @@
 ---
 title: "Page Break (document template)"
-space: "Reference Guide 6"
 parent: "document-templates"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Configuration"
-space: "Mendix 7 Reference Guide"
 parent: "project-settings"
 ---
 

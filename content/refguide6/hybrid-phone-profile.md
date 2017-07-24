@@ -1,6 +1,5 @@
 ---
 title: "Hybrid Phone Profile"
-space: "Reference Guide 6"
 parent: "navigation"
 ---
 {{% alert type="warning" %}}

@@ -1,6 +1,5 @@
 ---
 title: "OQL Expressions"
-space: "Mendix 7 Reference Guide"
 parent: "oql"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "File manager"
 parent: "file-widgets"
-space: "Reference Guide 5"
 ---
 
 

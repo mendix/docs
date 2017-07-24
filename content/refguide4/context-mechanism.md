@@ -1,7 +1,6 @@
 ---
 title: "Context Mechanism"
 parent: "form-concepts"
-space: "Reference Guide 4"
 ---
 The context mechanism of the client keeps track of where the user is and has been in an application in relation to the domain model. This information can then be used to constrain the list of objects in data/template grids and to automatically set associations of objects that were created with the use of a standard New button. In version 2.5 we provide alternatives for the context mechanism that are more explicit.
 

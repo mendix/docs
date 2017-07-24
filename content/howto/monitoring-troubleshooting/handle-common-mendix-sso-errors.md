@@ -1,6 +1,5 @@
 ---
 title: "Handle Common Mendix SSO Errors"
-space: "Mendix 7 How-To's"
 category: "Monitoring & Troubleshooting"
 tags: []
 ---

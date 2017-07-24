@@ -1,7 +1,6 @@
 ---
 title: "High Availability"
 parent: "architecture-options"
-space: "Mendix 5 How-to's"
 ---
 
 

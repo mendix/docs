@@ -1,6 +1,5 @@
 ---
 title: "Scheduling"
-space: "ATS Add-On" 
 category: "Reference Guide 1"
 ---
 Scheduling allows to plan the execution of test cases and test suites at defined dates. You can add test cases and test suites by clicking the respective button.

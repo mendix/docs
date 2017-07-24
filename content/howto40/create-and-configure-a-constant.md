@@ -1,7 +1,6 @@
 ---
 title: "Create and Configure a Constant"
 parent: "constants"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

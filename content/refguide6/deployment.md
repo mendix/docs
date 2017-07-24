@@ -1,6 +1,5 @@
 ---
 title: "Deployment"
-space: "Reference Guide 6"
 ---
 
 

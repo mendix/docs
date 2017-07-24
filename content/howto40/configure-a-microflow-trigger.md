@@ -1,7 +1,6 @@
 ---
 title: "Configure a Microflow Trigger"
 parent: "microflow-trigger"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

@@ -1,7 +1,6 @@
 ---
 title: "Add an Attribute"
 parent: "attributes"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

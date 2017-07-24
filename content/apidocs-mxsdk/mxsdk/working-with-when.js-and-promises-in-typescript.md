@@ -1,6 +1,5 @@
 ---
 title: "Working with when.js and Promises in TypeScript"
-space: "API & SDK"
 category: "Mendix Platform SDK"
 ---
 On this page you will find an explanation about the use of _promises_ in the Mendix SDK.

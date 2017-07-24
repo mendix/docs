@@ -1,6 +1,5 @@
 ---
 title: "XML Schema Support"
-space: "Mendix 7 Reference Guide"
 parent: "xml-schemas"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Consume a REST Service (for Versions 6.0–6.10)"
-space: "Mendix 6 How-to's"
 category: "Integration"
 tags: []
 ---

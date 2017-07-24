@@ -1,7 +1,6 @@
 ---
 title: "System Texts"
 parent: "project"
-space: "Reference Guide 5"
 ---
 
 

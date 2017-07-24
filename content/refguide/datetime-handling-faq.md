@@ -1,6 +1,5 @@
 ---
 title: "DateTime handling FAQ"
-space: "Mendix 7 Reference Guide"
 category: "Runtime"
 ---
 

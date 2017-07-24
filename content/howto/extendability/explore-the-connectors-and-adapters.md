@@ -1,6 +1,5 @@
 ---
 title: "Explore the Connectors and Adapters"
-space: "Mendix 7 How-To's"
 category: "Extendability"
 tags: []
 ---

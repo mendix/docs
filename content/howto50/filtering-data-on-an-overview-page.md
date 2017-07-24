@@ -1,7 +1,6 @@
 ---
 title: "Filtering Data on an Overview Page"
 category: "GUIs"
-space: "Mendix 5 How-to's"
 ---
 
 To filter data on your page you can use the search bar functionality or you can add an XPath constraint to your data grid. The search bar contains search fields that allow the end-user to quickly find the information he or she needs. XPath is a hard coded constraint on your data grid to filter data. The how-to will start with preparing a data structure and some example data. After this set up you will filter your data with a search bar, followed by filtering your data using different XPath constraints.  

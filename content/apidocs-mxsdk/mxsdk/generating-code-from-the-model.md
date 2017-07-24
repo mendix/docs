@@ -1,6 +1,5 @@
 ---
 title: "Generating Code from the Model"
-space: "API & SDK"
 parent: "your-learning-path-for-the-mendix-sdk"
 ---
 ## Introduction

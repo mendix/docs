@@ -1,7 +1,6 @@
 ---
 title: "Snippet"
 parent: "pages"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "XPath min"
-space: "Mendix 7 Reference Guide"
 parent: "xpath-query-functions"
 ---
 

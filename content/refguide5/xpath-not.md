@@ -1,7 +1,6 @@
 ---
 title: "XPath not"
 parent: "xpath-constraint-functions"
-space: "Reference Guide 5"
 ---
 
 

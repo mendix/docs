@@ -1,7 +1,6 @@
 ---
 title: "List Operation"
 parent: "list-activities"
-space: "Reference Guide 4"
 ---
 List operations perform various actions on a list. See below for details on these actions.
 

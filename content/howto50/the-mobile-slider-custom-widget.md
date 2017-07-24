@@ -1,7 +1,6 @@
 ---
 title: "The Mobile Slider Custom Widget"
 category: "Custom Widget Development"
-space: "Mendix 5 How-to's"
 ---
 
 This how-to is about using the Mobile Slider widget in your Mendix hybrid mobile project, and creating the latest type of mobile interactivity. At the end of this tutorial you will have a basic understanding of the structure and setup of the custom widget and how to configure and prepare your Mendix app to use it. 

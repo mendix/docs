@@ -1,6 +1,5 @@
 ---
 title: "Range Search Field"
-space: "Reference Guide 6"
 parent: "search-bar"
 ---
 

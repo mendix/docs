@@ -1,6 +1,5 @@
 ---
 title: "Single Sign-On API"
-space: "API & SDK"
 category: "API Documentation"
 ---
 

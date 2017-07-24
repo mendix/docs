@@ -1,6 +1,5 @@
 ---
 title: "Compatibility"
-space: "ATS Add-On"
 category: "General"
 ---
 

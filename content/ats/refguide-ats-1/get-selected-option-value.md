@@ -1,6 +1,5 @@
 ---
 title: "Get Selected Option Value"
-space: "ATS Add-On" 
 parent: "get"
 ---
 

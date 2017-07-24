@@ -1,6 +1,5 @@
 ---
 title: "Scroll Container Region"
-space: "Reference Guide 6"
 parent: "scroll-container"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Attributes"
-space: "Mendix 7 Reference Guide"
 parent: "entities"
 ---
 

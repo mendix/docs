@@ -1,7 +1,6 @@
 ---
 title: "Drag and Drop Microflows/Pages into Microflow"
 category: "Logic & Business Rules"
-space: "Mendix 5 How-to's"
 ---
 
 Coming home with sore hands from using the mouse too much during the day is very uncomfortable. Therefore this how-to will teach you how to use the mouse more efficiently while modeling a Mendix app. 

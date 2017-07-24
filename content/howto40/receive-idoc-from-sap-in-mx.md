@@ -1,7 +1,6 @@
 ---
 title: "Receive IDoc from SAP in Mendix"
 parent: "sap-integration"
-space: "Mendix 4 How-to's"
 ---
 To learn how you can receive IDocs from SAP into Mendix, you can execute the following scenario.
 (To make the total scenario, including sending IDocs from Mendix to SAP, as short as possible, the steps below include some steps for sending IDocs from Mendix to SAP.)

@@ -1,6 +1,5 @@
 ---
 title: "Java Programming"
-space: "Mendix 7 Reference Guide"
 description: "Describes how to use the Mendix Java library and use Eclipse as an environment to write your Mendix Java Actions."
 ---
 

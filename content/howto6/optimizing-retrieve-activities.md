@@ -1,6 +1,5 @@
 ---
 title: "Optimizing Retrieve Activities"
-space: "Mendix 6 How-to's"
 category: "Logic & Business Rules"
 tags: []
 ---

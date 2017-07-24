@@ -1,6 +1,5 @@
 ---
 title: "Cast Object"
-space: "Mendix 7 Reference Guide"
 parent: "object-activities"
 ---
 

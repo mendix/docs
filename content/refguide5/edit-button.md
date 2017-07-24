@@ -1,7 +1,6 @@
 ---
 title: "Edit button"
 parent: "control-bar"
-space: "Reference Guide 5"
 ---
 
 

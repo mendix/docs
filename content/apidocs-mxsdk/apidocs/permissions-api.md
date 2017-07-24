@@ -1,6 +1,5 @@
 ---
 title: "Permissions API"
-space: "API & SDK"
 category: "API Documentation"
 ---
 

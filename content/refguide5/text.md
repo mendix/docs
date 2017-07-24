@@ -1,7 +1,6 @@
 ---
 title: "Text"
 parent: "common-widgets"
-space: "Reference Guide 5"
 ---
 
 

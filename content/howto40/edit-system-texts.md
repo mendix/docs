@@ -1,7 +1,6 @@
 ---
 title: "Edit System Texts"
 parent: "system-texts"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

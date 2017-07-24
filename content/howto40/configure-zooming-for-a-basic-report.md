@@ -1,7 +1,6 @@
 ---
 title: "Configure Zooming for a Basic Report"
 parent: "basic-reports"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

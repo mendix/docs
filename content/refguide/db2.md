@@ -1,6 +1,5 @@
 ---
 title: "DB2"
-space: "Mendix 7 Reference Guide"
 parent: "data-storage"
 ---
 

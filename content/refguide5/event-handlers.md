@@ -1,7 +1,6 @@
 ---
 title: "Event Handlers"
 parent: "entities"
-space: "Reference Guide 5"
 ---
 
 

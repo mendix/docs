@@ -1,6 +1,5 @@
 ---
 title: "Upload To Team Server Dialog"
-space: "Reference Guide 6"
 parent: "dialogs"
 ---
 Use this dialog to upload a project that is not yet under version control to the Team Server. You can upload to a new repository (and create a new Team Server project at the same time) or to an existing repository.

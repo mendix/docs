@@ -1,6 +1,5 @@
 ---
 title: "Different user logins when integrated with Mendix SSO"
-space: "General How-To's"
 category: "Mendix Cloud"
 ---
 

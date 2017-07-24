@@ -1,7 +1,6 @@
 ---
 title: "Annotation flow"
 parent: "microflows"
-space: "Reference Guide 4"
 ---
 An annotation flow is a connection that can be used to link an annotation to a microflow activity.
 

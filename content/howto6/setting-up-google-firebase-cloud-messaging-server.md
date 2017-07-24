@@ -1,6 +1,5 @@
 ---
 title: "How to Set Up the Google Firebase Cloud Messaging Server"
-space: "Mendix 6 How-to's"
 parent: "push-notifications"
 ---
 

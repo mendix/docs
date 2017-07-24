@@ -1,6 +1,5 @@
 ---
 title: "Define Access Rules Using XPath"
-space: "Mendix 7 How-To's"
 category: "Logic & Business Rules"
 tags: []
 ---

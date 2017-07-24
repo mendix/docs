@@ -1,6 +1,5 @@
 ---
 title: "Set Up Error Handling"
-space: "Mendix 7 How-To's"
 category: "Logic & Business Rules"
 tags: []
 ---

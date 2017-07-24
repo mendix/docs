@@ -1,7 +1,6 @@
 ---
 title: "Consumed web service"
 parent: "consumed-web-services"
-space: "Reference Guide 5"
 ---
 
 

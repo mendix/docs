@@ -1,6 +1,5 @@
 ---
 title: "Security"
-space: "Reference Guide 6"
 category: "Modeler"
 ---
 

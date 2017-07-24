@@ -1,6 +1,5 @@
 ---
 title: "Drop-Down Search Field"
-space: "Mendix 7 Reference Guide"
 parent: "search-bar"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Create Your First Microflow: Hello World!"
-space: "Mendix 6 How-to's"
 category: "Logic & Business Rules"
 tags: []
 ---

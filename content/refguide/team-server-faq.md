@@ -1,6 +1,5 @@
 ---
 title: "Team Server FAQ"
-space: "Mendix 7 Reference Guide"
 category: "Team Server"
 ---
 

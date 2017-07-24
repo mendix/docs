@@ -1,6 +1,5 @@
 ---
 title: "Show Page"
-space: "Mendix 7 Reference Guide"
 parent: "client-activities"
 ---
 

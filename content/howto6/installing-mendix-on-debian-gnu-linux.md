@@ -1,6 +1,5 @@
 ---
 title: "Installing Mendix on Debian GNU Linux"
-space: "Mendix 6 How-to's"
 category: "On-Premises Deployment"
 tags: []
 ---

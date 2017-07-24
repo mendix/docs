@@ -1,7 +1,6 @@
 ---
 title: "Conditions"
 parent: "form-concepts"
-space: "Reference Guide 4"
 ---
 In forms certain elements can be shown or hidden or made editable or read-only based on the value of an attribute and/or the roles of the user that is signed in. Using this feature you can reuse one form for different purposes. For example, a form can hide tab pages for people who have no rights to view or edit the information in those tab pages.
 

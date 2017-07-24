@@ -1,7 +1,6 @@
 ---
 title: "Drop Down"
 parent: "report-widgets"
-space: "Reference Guide 5"
 ---
 
 

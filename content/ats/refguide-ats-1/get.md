@@ -1,6 +1,5 @@
 ---
 title: "Get"
-space: "ATS Add-On" 
 parent: "selenium-actions"
 ---
 

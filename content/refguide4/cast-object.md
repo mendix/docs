@@ -1,7 +1,6 @@
 ---
 title: "Cast Object"
 parent: "object-activities"
-space: "Reference Guide 4"
 ---
 Cast Object can be used in combination with an [inheritance split](inheritance-split) to use the specialized members of the object.
 

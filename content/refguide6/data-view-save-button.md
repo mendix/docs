@@ -1,6 +1,5 @@
 ---
 title: "Data view save button"
-space: "Reference Guide 6"
 parent: "data-view-control-bar"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Module Role"
 parent: "module-security"
-space: "Reference Guide 5"
 ---
 
 

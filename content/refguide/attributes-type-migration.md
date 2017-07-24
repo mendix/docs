@@ -1,6 +1,5 @@
 ---
 title: "Attributes Type Migration"
-space: "Reference Guide 7"
 parent: "data-storage"
 ---
 

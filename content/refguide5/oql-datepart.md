@@ -1,7 +1,6 @@
 ---
 title: "OQL DATEPART"
 parent: "oql-functions"
-space: "Reference Guide 5"
 ---
 
 

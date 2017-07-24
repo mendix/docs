@@ -1,6 +1,5 @@
 ---
 title: "How-To Template"
-space: "Community"
 category: "Documentation"
 ---
 

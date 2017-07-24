@@ -1,7 +1,6 @@
 ---
 title: "Report Pane"
 parent: "report-widgets"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "Desktop Modeler"
-space: "Release Notes"
 toc-level: 1
 description: "Presents all of the available release notes for the Mendix Desktop Modeler."
 ---

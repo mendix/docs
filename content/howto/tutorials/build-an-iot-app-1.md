@@ -1,6 +1,5 @@
 ---
 title: "Build a Logistics IoT App Step 1: Connect App Pages"
-space: "Mendix 7 How-To's"
 parent: "build-an-iot-app"
 description: "Describes how to connect app pages in the Mendix Logistics IoT app."
 tags: ["iot", "logistics", "supply chain", "cargo", "shipment", "logistics", "sensor"]

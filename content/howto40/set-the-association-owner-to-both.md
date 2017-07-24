@@ -1,7 +1,6 @@
 ---
 title: "Set the Association Owner to 'both'"
 parent: "associations"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

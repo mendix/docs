@@ -1,6 +1,5 @@
 ---
 title: "Drag Microflows and Pages into a Microflow"
-space: "Mendix 6 How-to's"
 category: "Logic & Business Rules"
 tags: []
 ---

@@ -1,6 +1,5 @@
 ---
 title: "OQL FULL OUTER JOIN"
-space: "Reference Guide 6"
 parent: "oql-from-clause"
 ---
 

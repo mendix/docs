@@ -1,7 +1,6 @@
 ---
 title: "Widget Events"
 parent: "form-concepts"
-space: "Reference Guide 4"
 ---
 ### On change
 

@@ -1,6 +1,5 @@
 ---
 title: "How to Build a Mendix Hybrid Mobile App for Windows Phone"
-space: "Mendix 6 How-to's"
 category: "Mobile"
 tags: []
 ---

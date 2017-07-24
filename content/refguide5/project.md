@@ -1,7 +1,6 @@
 ---
 title: "Project"
 category: "Modeler"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "Add Documents to a Module"
 parent: "modules"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

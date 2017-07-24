@@ -1,7 +1,6 @@
 ---
 title: "Creating a Custom Save Button"
 category: "Logic & Business Rules"
-space: "Mendix 5 How-to's"
 ---
 
 Mendix uses visual models to define the logic of your application, we call those models Microflows. A Microflow is a visual way of expressing what traditionally would be written in code. This how-to explains how you can create a custom save button on a detail page by utilizing Microflows.

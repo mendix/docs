@@ -1,6 +1,5 @@
 ---
 title: "Documentation"
-space: "Community"
 ---
 
 These pages provide details on how you can contribute to the Mendix documentation:

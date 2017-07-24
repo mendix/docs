@@ -1,6 +1,5 @@
 ---
 title: "Element States"
-space: "API & SDK"
 parent: "changing-things-in-the-model"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Configure the Default Button of a Data Grid"
 parent: "data-grid"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

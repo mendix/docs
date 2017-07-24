@@ -1,6 +1,5 @@
 ---
 title: "Create a Basic Hello World Custom Widget"
-space: "Mendix 7 How-To's"
 category: "Custom Widget Development"
 tags: ["widget", "app store", "custom"]
 description: "Provides a quick introduction to building a custom widget to extend your Mendix app."

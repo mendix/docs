@@ -1,7 +1,6 @@
 ---
 title: "Version Control Concepts"
 parent: "version-control"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "OQL COALESCE"
-space: "Mendix 7 Reference Guide"
 parent: "oql-functions"
 ---
 

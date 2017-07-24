@@ -1,7 +1,6 @@
 ---
 title: "Common Mendix SSO Errors"
 category: 'Monitoring & Troubleshooting'
-space: "Mendix 5 How-to's"
 ---
 
 Below you will find solutions for some of the most common problems you may encounter when developing an AppCloud-enabled app.

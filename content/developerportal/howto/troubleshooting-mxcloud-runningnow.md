@@ -1,6 +1,5 @@
 ---
 title: "Troubleshoot Your Application in the Mendix Cloud: Running Now"
-space: "Developer Portal"
 category: "How-To's"
 description: "This page describes how to troubleshoot the running now in your node."
 tags: ["App","Troubleshoot","Developer Portal","Running now","Mendix Cloud"]

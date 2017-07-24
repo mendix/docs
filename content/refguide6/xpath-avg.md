@@ -1,6 +1,5 @@
 ---
 title: "XPath avg"
-space: "Reference Guide 6"
 parent: "xpath-query-functions"
 ---
 

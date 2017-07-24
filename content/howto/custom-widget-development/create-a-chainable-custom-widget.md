@@ -1,6 +1,5 @@
 ---
 title: "Create a Chainable Custom Widget"
-space: "Mendix 7 How-To's"
 category: "Custom Widget Development"
 tags: ["chainable", "custom", "widget"]
 ---

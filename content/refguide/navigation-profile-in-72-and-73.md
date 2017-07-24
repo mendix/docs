@@ -1,6 +1,5 @@
 ---
 title: "Navigation Profile In Mendix Versions 7.2 and 7.3"
-space: "Mendix 7 Reference Guide"
 parent: "navigation-in-72-and-73"
 description: "Describes the profile properties and profile buttons for Mendix version 7.2 and 7.3."
 ---

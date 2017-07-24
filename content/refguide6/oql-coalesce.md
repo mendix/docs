@@ -1,6 +1,5 @@
 ---
 title: "OQL COALESCE"
-space: "Reference Guide 6"
 parent: "oql-functions"
 ---
 

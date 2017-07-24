@@ -1,7 +1,6 @@
 ---
 title: "Unary expressions"
 parent: "microflow-expressions"
-space: "Reference Guide 4"
 ---
 A unary minus operator is used to convert a number from negative to positive or vice versa. Note: there is no unary plus.
 

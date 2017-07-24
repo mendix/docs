@@ -1,7 +1,6 @@
 ---
 title: "Cast an Object"
 parent: "object-activities"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

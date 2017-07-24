@@ -1,7 +1,6 @@
 ---
 title: "Data Sets"
 parent: "modules"
-space: "Reference Guide 4"
 ---
 A data set can be used for [reporting](reporting).
 

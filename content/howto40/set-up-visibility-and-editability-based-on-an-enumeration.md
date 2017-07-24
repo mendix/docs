@@ -1,7 +1,6 @@
 ---
 title: "Set Up Visibility and Editability Based On an Enumeration"
 parent: "conditions"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

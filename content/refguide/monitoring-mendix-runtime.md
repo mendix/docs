@@ -1,6 +1,5 @@
 ---
 title: "Monitoring Mendix Runtime"
-space: "Mendix 7 Reference Guide"
 category: "Runtime"
 description: "This page describes the supported Mendix Runtime monitoring actions."
 tags: ["runtime, json"]

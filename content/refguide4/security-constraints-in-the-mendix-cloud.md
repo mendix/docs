@@ -1,7 +1,6 @@
 ---
 title: "Security constraints in the Mendix Cloud"
 category: "Deployment"
-space: "Reference Guide 4"
 ---
 To ensure our and your safety, there are stringent security policies in the standard cloud. Although these might seem limiting at first, we have thought a great deal about possible use cases and provide workarounds as much as possible. The constraints can be divided into a number of sections:
 

@@ -1,6 +1,5 @@
 ---
 title: "Indexes"
-space: "Mendix 7 Reference Guide"
 parent: "entities"
 ---
 

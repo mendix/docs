@@ -1,6 +1,5 @@
 ---
 title: "Published App Service"
-space: "Reference Guide 6"
 parent: "published-app-services"
 ---
 

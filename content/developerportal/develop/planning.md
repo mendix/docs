@@ -1,6 +1,5 @@
 ---
 title: "Planning"
-space: "Developer Portal"
 category: "Develop"
 description: "Describes the planning of your app development."
 tags: ["Developer Portal", "Planning", "Develop"]

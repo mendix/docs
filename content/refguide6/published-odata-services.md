@@ -1,6 +1,5 @@
 ---
 title: "Published OData Services"
-space: "Reference Guide 6"
 parent: "integration"
 ---
 In the Modeler, entities can be exposed as OData resources by adding a new 'Published OData service' document. You can expose any number of related resources in a Published OData service document. By default, the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well.

@@ -1,5 +1,5 @@
 ---
 title: "Mendix Documentation Search"
-layout: search
-space: Search
+type: search
+disable_sitemap: true
 ---

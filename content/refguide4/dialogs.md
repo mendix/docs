@@ -1,7 +1,6 @@
 ---
 title: "Dialogs"
 category: "Modeler"
-space: "Reference Guide 4"
 ---
 *   [Sign In Dialog](sign-in-dialog)
 *   [New Project Dialog](new-project-dialog)

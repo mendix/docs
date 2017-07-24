@@ -1,7 +1,6 @@
 ---
 title: "Team Server FAQ"
 category: "Team Server"
-space: "Reference Guide 4"
 ---
 ## General Questions
 

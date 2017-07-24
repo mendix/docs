@@ -1,6 +1,5 @@
 ---
 title: "Assert Grid Selector Value"
-space: "ATS Add-On" 
 parent: "grid-selector"
 ---
 ## Description

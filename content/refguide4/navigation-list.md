@@ -1,7 +1,6 @@
 ---
 title: "Navigation List"
 parent: "mobile-forms"
-space: "Reference Guide 4"
 ---
 A navigation list can be used to attach an action to an entire row. Such a row is called a navigation list item.
 

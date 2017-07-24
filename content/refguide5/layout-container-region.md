@@ -1,7 +1,6 @@
 ---
 title: "Layout Container Region"
 parent: "layout-container"
-space: "Reference Guide 5"
 ---
 
 

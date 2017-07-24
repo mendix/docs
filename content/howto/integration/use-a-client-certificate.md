@@ -1,6 +1,5 @@
 ---
 title: "Use a Client Certificate"
-space: "Mendix 7 How-To's"
 category: "Integration"
 tags: ["integration", "web service"]
 ---

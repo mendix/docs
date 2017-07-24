@@ -1,6 +1,5 @@
 ---
 title: "Sign In Button"
-space: "Mendix 7 Reference Guide"
 parent: "authentication-widgets"
 ---
 

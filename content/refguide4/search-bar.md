@@ -1,7 +1,6 @@
 ---
 title: "Search Bar"
 parent: "data-grid"
-space: "Reference Guide 4"
 ---
 The search bar contains search fields that allow the end-user to quickly find the information he or she needs.
 

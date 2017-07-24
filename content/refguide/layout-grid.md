@@ -1,6 +1,5 @@
 ---
 title: "Layout grid"
-space: "Mendix 7 Reference Guide"
 parent: "container-widgets"
 ---
 

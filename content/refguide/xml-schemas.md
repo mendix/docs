@@ -1,6 +1,5 @@
 ---
 title: "XML Schemas"
-space: "Mendix 7 Reference Guide"
 parent: "integration"
 ---
 

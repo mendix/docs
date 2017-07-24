@@ -1,7 +1,6 @@
 ---
 title: "Dialogs"
 category: "Modeler"
-space: "Reference Guide 5"
 ---
 
 

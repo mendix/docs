@@ -1,6 +1,5 @@
 ---
 title: "Microsoft SQL Server maintenance"
-space: "Reference Guide 6"
 category: "Deployment"
 ---
 

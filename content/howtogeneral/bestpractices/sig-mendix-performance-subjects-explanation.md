@@ -1,6 +1,5 @@
 ---
 title: "SIG - Mendix Performance Subjects"
-space: "General How-To's"
 category: "Best Practices"
 ---
 

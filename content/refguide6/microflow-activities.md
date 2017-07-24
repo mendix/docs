@@ -1,6 +1,5 @@
 ---
 title: "Microflow Activities"
-space: "Reference Guide 6"
 parent: "integration"
 ---
 ## Integration Activitities

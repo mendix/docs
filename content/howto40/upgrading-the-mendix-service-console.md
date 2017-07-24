@@ -1,7 +1,6 @@
 ---
 title: "Upgrading the Mendix Service Console"
 parent: "preparation-of-the-environment"
-space: "Mendix 4 How-to's"
 ---
 On each machine, there is one instance of Mendix Service Console 4 or later. If you install a new version, the old version will be replaced by the new version.
 

@@ -1,6 +1,5 @@
 ---
 title: "Monitoring & Troubleshooting"
-space: "Mendix 7 How-To's"
 ---
 
 Stay updated on the health of your app and reference these documents to troubleshoot when needed.

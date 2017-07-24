@@ -1,7 +1,6 @@
 ---
 title: "Clearing Warning Messages in Mendix"
 category: 'Monitoring & Troubleshooting'
-space: "Mendix 5 How-to's"
 ---
 # Clearing Warning Messages in Mendix
 

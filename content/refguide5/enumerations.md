@@ -1,7 +1,6 @@
 ---
 title: "Enumerations"
 category: "Modeler"
-space: "Reference Guide 5"
 ---
 
 

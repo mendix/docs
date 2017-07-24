@@ -1,6 +1,5 @@
 ---
 title: "Using Eclipse"
-space: "Mendix 7 Reference Guide"
 category: "Java Programming"
 ---
 

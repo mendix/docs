@@ -1,7 +1,6 @@
 ---
 title: "XPath Expressions"
 parent: "xpath-constraints"
-space: "Reference Guide 4"
 ---
 Expressions are used within constraints to generate a value that is true.
 

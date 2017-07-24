@@ -1,7 +1,6 @@
 ---
 title: "Placeholder"
 parent: "layout-widgets"
-space: "Reference Guide 5"
 ---
 
 

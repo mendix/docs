@@ -1,6 +1,5 @@
 ---
 title: "Link Your Free App to a Licensed Cloud Node"
-space: "Developer Portal"
 category: "How-To's"
 description: "This page describes how to link an App to a licensed cloud node."
 tags: ["App","Node","Developer Portal","Deploy"]

@@ -1,7 +1,6 @@
 ---
 title: "String Concatenation"
 category: "Logic & Business Rules"
-space: "Mendix 5 How-to's"
 ---
 # String Concatenation
 

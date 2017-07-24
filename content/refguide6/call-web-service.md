@@ -1,6 +1,5 @@
 ---
 title: "Call Web Service"
-space: "Reference Guide 6"
 parent: "integration-activities"
 ---
 

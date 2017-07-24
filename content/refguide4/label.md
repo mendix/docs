@@ -1,7 +1,6 @@
 ---
 title: "Label"
 parent: "common-widgets"
-space: "Reference Guide 4"
 ---
 A label shows a line of static text. You can use it to place custom text on your form. You can change the look of the label by changing the render mode of the [Table Cell](table-cell) in which it is placed.
 

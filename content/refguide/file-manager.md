@@ -1,6 +1,5 @@
 ---
 title: "File manager"
-space: "Mendix 7 Reference Guide"
 parent: "file-widgets"
 ---
 

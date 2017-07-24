@@ -1,7 +1,6 @@
 ---
 title: "Simple Menu Bar"
 parent: "menu-widgets"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "Published web service"
 parent: "published-web-services"
-space: "Reference Guide 4"
 ---
 {{% alert type="warning" %}}
 

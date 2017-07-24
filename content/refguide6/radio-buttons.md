@@ -1,6 +1,5 @@
 ---
 title: "Radio buttons"
-space: "Reference Guide 6"
 parent: "input-widgets"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Header (document template)"
 parent: "document-templates"
-space: "Reference Guide 4"
 ---
 When enabled, the header will be inserted at the top of every page. Other widgets can be put in the header.
 

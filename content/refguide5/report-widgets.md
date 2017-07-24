@@ -1,7 +1,6 @@
 ---
 title: "Report Widgets"
 parent: "pages"
-space: "Reference Guide 5"
 ---
 
 

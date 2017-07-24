@@ -1,6 +1,5 @@
 ---
 title: "Review log files - MS IIS Server"
-space: "Reference Guide 6"
 category: "Proactive Maintenance"
 ---
 

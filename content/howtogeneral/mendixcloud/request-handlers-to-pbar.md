@@ -1,6 +1,5 @@
 ---
 title: "Converting to Path-Based Access Restrictions"
-space: "General How-To's"
 category: "Mendix Cloud"
 ---
 

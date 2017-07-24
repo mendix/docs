@@ -1,7 +1,6 @@
 ---
 title: "Data Types"
 category: "Modeler"
-space: "Reference Guide 5"
 ---
 
 

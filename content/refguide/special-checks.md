@@ -1,6 +1,5 @@
 ---
 title: "Special checks"
-space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 ---
 

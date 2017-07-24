@@ -1,7 +1,6 @@
 ---
 title: "Java API Tutorial"
 category: "Logic & Business Rules"
-space: "Mendix 5 How-to's"
 ---
 This tutorial contains some examples on how to use the Java API provided by the Mendix Runtime. The tutorial assumes you have basic Java knowledge, as well as basic Mendix modeling knowledge.
 

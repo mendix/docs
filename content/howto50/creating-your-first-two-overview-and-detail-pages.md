@@ -1,7 +1,6 @@
 ---
 title: "Creating your first two Overview and Detail pages"
 category: "GUIs"
-space: "Mendix 5 How-to's"
 ---
 
 This how-to explains how you can create overview and detail pages in Mendix. 

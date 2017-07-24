@@ -1,7 +1,6 @@
 ---
 title: "Association Source"
 parent: "data-sources"
-space: "Reference Guide 5"
 ---
 
 

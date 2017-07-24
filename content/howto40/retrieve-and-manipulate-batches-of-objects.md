@@ -1,7 +1,6 @@
 ---
 title: "Retrieve and Manipulate Batches of Objects"
 parent: "object-activities"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

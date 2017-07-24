@@ -1,6 +1,5 @@
 ---
 title: "Importing and Exporting Objects"
-space: "Mendix 6 How-to's"
 category: "Integration"
 tags: []
 ---

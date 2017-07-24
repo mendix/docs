@@ -1,7 +1,6 @@
 ---
 title: "Consuming a REST Service"
 category: "Integration"
-space: "Mendix 5 How-to's"
 ---
 
 With the REST services module from the Mendix Appstore, the full power of JSON-based REST APIs is available to Mendix developers. The module serves three goals: consuming services, publishing services and synchronizing data between (Mendix) apps by combining consume and publish. In this how-to, you will consume a JSON-based REST services by integrating with the API of the world famous Rijksmuseum which allows us to search for art.

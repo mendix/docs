@@ -1,6 +1,5 @@
 ---
 title: "Generate Document"
-space: "Mendix 7 Reference Guide"
 parent: "document-generation-activities"
 description: "Describes generating documents from a microflow. "
 tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT"]

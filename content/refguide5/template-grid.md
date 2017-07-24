@@ -1,7 +1,6 @@
 ---
 title: "Template grid"
 parent: "data-widgets"
-space: "Reference Guide 5"
 ---
 
 

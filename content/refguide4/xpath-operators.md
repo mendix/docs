@@ -1,7 +1,6 @@
 ---
 title: "XPath Operators"
 parent: "xpath-constraints"
-space: "Reference Guide 4"
 ---
 The following operators can be used in XPath query constraints:
 

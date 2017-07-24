@@ -1,7 +1,6 @@
 ---
 title: "Configure the Date Range Selector"
 parent: "date-range-selector"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

@@ -1,7 +1,6 @@
 ---
 title: "Create List"
 parent: "list-activities"
-space: "Reference Guide 4"
 ---
 The create-list action creates a list variable containing an empty list.
 

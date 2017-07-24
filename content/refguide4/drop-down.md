@@ -1,7 +1,6 @@
 ---
 title: "Drop Down"
 parent: "reporting"
-space: "Reference Guide 4"
 ---
 With a drop down the end user can filter a report on a specific parameter of the data set.
 

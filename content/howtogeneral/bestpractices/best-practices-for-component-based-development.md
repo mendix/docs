@@ -1,6 +1,5 @@
 ---
 title: "Best Practices for Component-Based Development"
-space: "General How-To's"
 category: "Best Practices"
 ---
 ## What is Component-Based Development?

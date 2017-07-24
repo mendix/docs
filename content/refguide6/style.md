@@ -1,6 +1,5 @@
 ---
 title: "Style"
-space: "Reference Guide 6"
 parent: "document-templates"
 ---
 

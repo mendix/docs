@@ -1,6 +1,5 @@
 ---
 title: "Integration"
-space: "Mendix 6 How-to's"
 ---
 
 Do you want to connect your app to the internet? Learn how to do this by following these how-to's.

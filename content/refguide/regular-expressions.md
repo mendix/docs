@@ -1,6 +1,5 @@
 ---
 title: "Regular Expressions"
-space: "Mendix 7 Reference Guide"
 category: "Modeler"
 ---
 

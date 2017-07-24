@@ -1,7 +1,6 @@
 ---
 title: "Image Viewer"
 parent: "common-widgets"
-space: "Reference Guide 4"
 ---
 An image viewer can be used to display an image or its thumbnail.
 

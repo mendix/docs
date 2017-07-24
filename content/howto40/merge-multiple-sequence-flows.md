@@ -1,7 +1,6 @@
 ---
 title: "Merge Multiple Sequence Flows"
 parent: "merge"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

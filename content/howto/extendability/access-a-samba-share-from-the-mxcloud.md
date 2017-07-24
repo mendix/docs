@@ -1,6 +1,5 @@
 ---
 title: "Access a Samba Share"
-space: "Mendix 7 How-To's"
 category: "Extendability"
 tags: ["Samba", "share"]
 ---

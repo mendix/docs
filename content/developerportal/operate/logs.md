@@ -1,6 +1,5 @@
 ---
 title: "Logs"
-space: "Developer Portal"
 category: "Operate"
 description: "This page describes the Logs page of the Developer Portal."
 tags: ["Operate","App","Developer Portal"]

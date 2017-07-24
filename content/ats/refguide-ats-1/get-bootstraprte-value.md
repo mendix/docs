@@ -1,6 +1,5 @@
 ---
 title: "Get BootstrapRTE Value"
-space: "ATS Add-On" 
 parent: "bootstraprte"
 ---
 

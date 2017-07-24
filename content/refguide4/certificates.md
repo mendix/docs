@@ -1,7 +1,6 @@
 ---
 title: "Certificates"
 category: "Deployment"
-space: "Reference Guide 4"
 ---
 You may want to use certificates to integrate with third parties that require SSL/TLS. There are two scenarios:
 

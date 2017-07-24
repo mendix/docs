@@ -1,6 +1,5 @@
 ---
 title: "Creating the Domain Model"
-space: "API & SDK"
 parent: "your-learning-path-for-the-mendix-sdk"
 description: "Explains how to create a domain model with inheritance and what the relation is between the metamodel and the SDK."
 ---

@@ -1,7 +1,6 @@
 ---
 title: "OQL Order by Clause"
 parent: "oql"
-space: "Reference Guide 4"
 ---
 The ORDER BY clause specifies the sort order used on columns returned in a SELECT statement. Multiple columns can be specified. Columns are ordered in the sequence of the items in the ORDER BY clause.
 This clause can include items that do not appear in the SELECT clause, except when SELECT DISTINCT is specified or when an GROUP BY clause exists. When UNION is used, the column names or aliases must be those specified in the SELECT clause of the first part of the query.

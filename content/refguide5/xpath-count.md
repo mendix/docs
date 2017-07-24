@@ -1,7 +1,6 @@
 ---
 title: "XPath count"
 parent: "xpath-query-functions"
-space: "Reference Guide 5"
 ---
 
 

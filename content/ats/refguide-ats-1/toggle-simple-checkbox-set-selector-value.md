@@ -1,6 +1,5 @@
 ---
 title: "Toggle Simple Checkbox Set Selector Value"
-space: "ATS Add-On" 
 parent: "simple-checkbox-set-selector"
 ---
 ## Description

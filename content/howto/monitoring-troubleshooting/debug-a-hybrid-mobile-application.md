@@ -1,6 +1,5 @@
 ---
 title: "Debug a Hybrid Mobile Application"
-space: "Mendix 7 How-To's"
 category: "Monitoring & Troubleshooting"
 tags: []
 ---

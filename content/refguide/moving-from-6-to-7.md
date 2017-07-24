@@ -1,6 +1,5 @@
 ---
 title: "Moving from Modeler Version 6 to 7"
-space: "Mendix 7 Reference Guide"
 category: "General"
 description: "Provides details on updating your project from Mendix 6 to Mendix 7, including sections on converting your project and deprecated features."
 ---

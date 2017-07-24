@@ -1,6 +1,5 @@
 ---
 title: "Mendix Support"
-space: "General How-To's"
 ---
 
 ## What You Can Expect from Mendix Support

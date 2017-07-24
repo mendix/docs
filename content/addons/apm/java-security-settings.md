@@ -1,6 +1,5 @@
 ---
 title: "Java security settings"
-space: "Other Add-Ons"
 parent: "pre-requisites"
 ---
 This appendix describes how to simulate security in the Mendix Modeler and what java permissions are needed.

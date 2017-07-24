@@ -1,6 +1,5 @@
 ---
 title: "Create Variable"
-space: "Mendix 7 Reference Guide"
 parent: "variable-activities"
 ---
 

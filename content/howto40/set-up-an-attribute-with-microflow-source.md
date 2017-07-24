@@ -1,7 +1,6 @@
 ---
 title: "Set Up an Attribute With Microflow Source"
 parent: "attributes"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

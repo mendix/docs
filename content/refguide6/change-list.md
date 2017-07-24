@@ -1,6 +1,5 @@
 ---
 title: "Change List"
-space: "Reference Guide 6"
 parent: "list-activities"
 ---
 

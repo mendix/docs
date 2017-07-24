@@ -1,6 +1,5 @@
 ---
 title: "Menu Item"
-space: "Mendix 7 Reference Guide"
 parent: "menu"
 ---
 

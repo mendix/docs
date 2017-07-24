@@ -1,6 +1,5 @@
 ---
 title: "Parse integer"
-space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 ---
 

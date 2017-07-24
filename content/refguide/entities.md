@@ -1,6 +1,5 @@
 ---
 title: "Entities"
-space: "Mendix 7 Reference Guide"
 parent: "domain-model"
 ---
 

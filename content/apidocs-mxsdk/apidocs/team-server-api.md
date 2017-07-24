@@ -1,6 +1,5 @@
 ---
 title: "Team Server API"
-space: "API & SDK"
 category: "API Documentation"
 ---
 # <a name="TeamServerAPI-Introduction" rel="nofollow"></a>Introduction

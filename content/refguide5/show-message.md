@@ -1,7 +1,6 @@
 ---
 title: "Show Message"
 parent: "client-activities"
-space: "Reference Guide 5"
 ---
 
 

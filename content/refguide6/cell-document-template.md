@@ -1,6 +1,5 @@
 ---
 title: "Cell (document template)"
-space: "Reference Guide 6"
 parent: "row-document-template"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Version Control Concepts"
-space: "Mendix 7 Reference Guide"
 parent: "version-control"
 ---
 

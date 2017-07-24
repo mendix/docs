@@ -1,7 +1,6 @@
 ---
 title: "Create a Multi-Language Enumeration"
 parent: "enumerations"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

@@ -1,6 +1,5 @@
 ---
 title: "Example implementation"
-space: "API & SDK"
 parent: "deploy-api"
 ---
 

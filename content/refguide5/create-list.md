@@ -1,7 +1,6 @@
 ---
 title: "Create List"
 parent: "list-activities"
-space: "Reference Guide 5"
 ---
 
 

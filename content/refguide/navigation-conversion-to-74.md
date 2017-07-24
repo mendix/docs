@@ -1,6 +1,5 @@
 ---
 title: "Solving Issues with Navigation Profiles Conversion to 7.4"
-space: "Mendix 7 Reference Guide"
 parent: "project"
 description: "Describes requirements and possible fixes for navigation profile conversion from Mendix versions 7.2 and 7.3 to Mendix 7.4."
 ---

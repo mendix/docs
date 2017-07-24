@@ -1,7 +1,6 @@
 ---
 title: "Project"
 category: "Modeler"
-space: "Reference Guide 4"
 ---
 A Mendix project consists of some project-level documents and a number of modules. Each module can contain many documents again. At the project level there are some settings and documents that apply to your project as a whole. For example, navigation is a project-level document; the menu bar is project-wide and can refer to functionality in all modules. Most documents, however, live at the level of a [module](modules).
 

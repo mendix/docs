@@ -1,6 +1,5 @@
 ---
 title: "Company"
-space: "Developer Portal"
 category: "Company Admin"
 description: "Describes the page that enables managing a company's details."
 tags: ["Company","Admin","Developer Portal"]

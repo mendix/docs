@@ -1,6 +1,5 @@
 ---
 title: "OQL LENGTH"
-space: "Mendix 7 Reference Guide"
 parent: "oql-functions"
 ---
 

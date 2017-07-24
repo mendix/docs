@@ -1,6 +1,5 @@
 ---
 title: "Moving from 3 to 4"
-space: "Reference Guide 4"
 ---
 Please read the [Release Notes](release-notes) to see what new major improvements we added in the version 4 release.
 

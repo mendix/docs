@@ -1,6 +1,5 @@
 ---
 title: "OQL DATEPART"
-space: "Mendix 7 Reference Guide"
 parent: "oql-functions"
 ---
 

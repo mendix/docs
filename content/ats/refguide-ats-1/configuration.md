@@ -1,6 +1,5 @@
 ---
 title: "Configuration"
-space: "ATS Add-On" 
 category: "Reference Guide 1"
 ---
 

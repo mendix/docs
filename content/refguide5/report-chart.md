@@ -1,7 +1,6 @@
 ---
 title: "Report Chart"
 parent: "report-widgets"
-space: "Reference Guide 5"
 ---
 
 

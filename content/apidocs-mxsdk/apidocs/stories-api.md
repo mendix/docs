@@ -1,6 +1,5 @@
 ---
 title: "Stories API"
-space: "API & SDK"
 category: "API Documentation"
 ---
 

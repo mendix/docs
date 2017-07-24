@@ -1,6 +1,5 @@
 ---
 title: "Migrate to Mendix Cloud v4"
-space: "Developer Portal"
 category: "How-To's"
 description: "This page describes how to migrate your App from a Mendix Cloud v3 node to a Mendix Cloud v4 node."
 tags: ["App","Migrate","Developer Portal","v3","v4","Node"]

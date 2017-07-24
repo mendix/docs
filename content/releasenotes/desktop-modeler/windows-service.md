@@ -1,6 +1,5 @@
 ---
 title: "Windows Service"
-space: "Release Notes"
 category: "Desktop Modeler"
 ---
 

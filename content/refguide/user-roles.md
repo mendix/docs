@@ -1,6 +1,5 @@
 ---
 title: "User Roles"
-space: "Mendix 7 Reference Guide"
 parent: "project-security"
 ---
 A user role aggregates a number of access rights on data, forms and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent.

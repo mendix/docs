@@ -1,7 +1,6 @@
 ---
 title: "Build a simple HRM app 1: Create, manage and deploy the app"
 parent: "how-to-build-a-simple-hrm-app"
-space: "Mendix 5 How-to's"
 ---
 
 This how-to is based on the video "Build a simple HRM app: Create, manage and deploy the app", which is part of the [Getting Started videos](http://gettingstarted.mendixcloud.com/link/courses/gettingstarted).

@@ -1,7 +1,6 @@
 ---
 title: "Debugging Java Actions"
 category: 'Monitoring & Troubleshooting'
-space: "Mendix 5 How-to's"
 ---
 # Debugging Java Actions
 

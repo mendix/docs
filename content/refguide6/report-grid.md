@@ -1,6 +1,5 @@
 ---
 title: "Report Grid"
-space: "Reference Guide 6"
 parent: "report-widgets"
 ---
 {{% alert type="info" %}}

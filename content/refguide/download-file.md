@@ -1,6 +1,5 @@
 ---
 title: "Download File"
-space: "Mendix 7 Reference Guide"
 parent: "client-activities"
 ---
 

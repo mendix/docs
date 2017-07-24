@@ -1,7 +1,6 @@
 ---
 title: "Using Eclipse"
 category: "Java Programming"
-space: "Reference Guide 5"
 ---
 
 

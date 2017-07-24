@@ -1,7 +1,6 @@
 ---
 title: "Mobile New Button"
 parent: "mobile-form-buttons"
-space: "Reference Guide 4"
 ---
 Pressing this button will create a new object and open a form to edit the new object.
 

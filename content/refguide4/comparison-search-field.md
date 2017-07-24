@@ -1,7 +1,6 @@
 ---
 title: "Comparison Search Field"
 parent: "search-bar"
-space: "Reference Guide 4"
 ---
 This search field was added in 4.3.0 as a replacement for the Text and Date search field.
 

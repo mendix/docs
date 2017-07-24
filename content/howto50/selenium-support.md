@@ -1,7 +1,6 @@
 ---
 title: "Selenium Support"
 category: "Integration"
-space: "Mendix 5 How-to's"
 ---
 
 Mendix 5 uses CSS classes to identify page content like widgets and popups. You can use these classes in Selenium to manipulate pages and verify data.

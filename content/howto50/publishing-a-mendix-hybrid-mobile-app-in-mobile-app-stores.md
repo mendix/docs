@@ -1,7 +1,6 @@
 ---
 title: "Publishing a Mendix Hybrid Mobile App in Mobile App Stores"
 category: "Mobile"
-space: "Mendix 5 How-to's"
 ---
 
 Once you have developed your Mendix Mobile App, you want to make it available as an app for mobile platforms such as Apple's iOS, Google Android and Windows Phone. We provide the possibility to produce a platform-specific native app for your Mendix Apps under the Publish section of the Mendix Developer Portal.

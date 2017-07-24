@@ -1,6 +1,5 @@
 ---
 title: "Set Value (by Index)"
-space: "ATS Add-On" 
 parent: "input"
 ---
 

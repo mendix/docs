@@ -1,6 +1,5 @@
 ---
 title: "Data Widgets"
-space: "Reference Guide 6"
 parent: "pages"
 ---
 

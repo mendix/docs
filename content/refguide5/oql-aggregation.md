@@ -1,7 +1,6 @@
 ---
 title: "OQL Aggregation"
 parent: "oql-expressions"
-space: "Reference Guide 5"
 ---
 
 

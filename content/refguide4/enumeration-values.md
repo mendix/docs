@@ -1,7 +1,6 @@
 ---
 title: "Enumeration Values"
 parent: "enumerations"
-space: "Reference Guide 4"
 ---
 An [enumeration](enumerations) has one or more enumeration values. Each value represents one of the options.
 

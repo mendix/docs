@@ -1,6 +1,5 @@
 ---
 title: "XML"
-space: "Reference Guide 6"
 category: "Modeler"
 # toc-level: 1 # set Table of contents maximum depth
 ---

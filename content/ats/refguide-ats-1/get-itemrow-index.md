@@ -1,6 +1,5 @@
 ---
 title: "Get Item/Row Index"
-space: "ATS Add-On" 
 parent: "datagrid-templategrid-listview"
 ---
 

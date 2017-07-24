@@ -1,6 +1,5 @@
 ---
 title: "Debug Microflows Remotely"
-space: "Mendix 7 How-To's"
 category: "Monitoring & Troubleshooting"
 tags: []
 ---

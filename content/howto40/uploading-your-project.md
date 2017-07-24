@@ -1,7 +1,6 @@
 ---
 title: "Uploading Your Project"
 parent: "mendix-on-the-mendix-cloud"
-space: "Mendix 4 How-to's"
 ---
 ## Uploading Your Project
 

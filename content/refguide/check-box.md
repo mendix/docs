@@ -1,6 +1,5 @@
 ---
 title: "Check box"
-space: "Mendix 7 Reference Guide"
 parent: "input-widgets"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Create Automated Tests with TestNG"
-space: "Mendix 6 How-to's"
 category: "Testing"
 tags: []
 ---

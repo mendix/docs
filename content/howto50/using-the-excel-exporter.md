@@ -1,7 +1,6 @@
 ---
 title: "Using the Excel Exporter"
 category: "Integration"
-space: "Mendix 5 How-to's"
 ---
 
 Each application can export items to Excel format from a Data Grid as standard functionality in the platform (add an Export to Excel button on a Data Grid). However, in instances where more customized Excel documents are required, applications can leverage Mendix App Store content to create custom Excel documents based off of configurable templates. To achieve this, the app will require two Mendix App Store modules and the subsequent configuration of the documents.

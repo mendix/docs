@@ -1,7 +1,6 @@
 ---
 title: "Imported Web Services"
 parent: "integration"
-space: "Reference Guide 4"
 ---
 
 This document describes imported web services. If you're looking for specific information on the imported web services screen, you can check the [Imported web service](imported-web-service) documentation.

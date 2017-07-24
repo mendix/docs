@@ -1,6 +1,5 @@
 ---
 title: "Community Best Practices for App Performance"
-space: "General How-To's"
 category: "Best Practices"
 ---
 

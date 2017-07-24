@@ -1,6 +1,5 @@
 ---
 title: "Authentication Widgets"
-space: "Mendix 7 Reference Guide"
 parent: "pages"
 tags: ["authentication", "widgets"]
 ---

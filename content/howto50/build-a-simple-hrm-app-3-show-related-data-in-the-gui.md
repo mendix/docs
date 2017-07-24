@@ -1,7 +1,6 @@
 ---
 title: "Build a simple HRM app 3: Show related data in the GUI"
 parent: "how-to-build-a-simple-hrm-app"
-space: "Mendix 5 How-to's"
 ---
 
 This how-to is based on the video "Build a simple HRM app: Show related data in the GUI", which is part of the [Getting Started videos](http://gettingstarted.mendixcloud.com/link/courses/gettingstarted).

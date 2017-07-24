@@ -1,7 +1,6 @@
 ---
 title: "Clustered Mendix Runtime"
 category: "Runtime"
-space: "Reference Guide 5"
 ---
 This page describes the impact of running Mendix Runtime as a Cluster on its behavior. This feature is not finished completely yet, therefore it starts with an overview of what features should work at this moment and what features will not. It describes how to configure it, how to start it and, what is required for running the Mendix Runtime in a Cluster. After that you'll find some background information on how specific topics behave in a cluster. It's important to read this document completely to get a grasp on the impact of clustering on your application.
 

@@ -1,6 +1,5 @@
 ---
 title: "Importing Excel Documents"
-space: "Mendix 6 How-to's"
 category: "Integration"
 tags: []
 ---

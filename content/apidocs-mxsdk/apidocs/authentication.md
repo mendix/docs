@@ -1,6 +1,5 @@
 ---
 title: "Authentication"
-space: "API & SDK"
 category: "API Documentation"
 ---
 

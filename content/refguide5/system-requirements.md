@@ -1,7 +1,6 @@
 ---
 title: "System Requirements"
 category: "General"
-space: "Reference Guide 5"
 ---
 
 

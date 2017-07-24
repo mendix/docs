@@ -1,6 +1,5 @@
 ---
 title: "Expose Data to BI Tools Using OData"
-space: "Mendix 7 How-To's"
 category: "Integration"
 description: "Presents how to create a published OData service with resources, add the OData server to Tableau and Excel, combine resources in Tableau, and create qustom queries."
 ---

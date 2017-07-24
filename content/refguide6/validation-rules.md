@@ -1,6 +1,5 @@
 ---
 title: "Validation Rules"
-space: "Reference Guide 6"
 parent: "entities"
 ---
 

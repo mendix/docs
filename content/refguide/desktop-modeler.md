@@ -1,6 +1,5 @@
 ---
 title: "Desktop Modeler"
-space: "Mendix 7 Reference Guide"
 parent: "modeler-products"
 ---
 

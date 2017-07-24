@@ -1,7 +1,6 @@
 ---
 title: "Merge"
 parent: "microflows"
-space: "Reference Guide 4"
 ---
 A merge can be used to combine multiple sequence flows into one sequence flow. Imagine a situation where the microflow has been separated in the part preceding the merge to execute specific actions. After this the same action needs to be executed for all the separated flows. In this situation a merge can be used to avoid redundancy.
 

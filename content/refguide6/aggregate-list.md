@@ -1,6 +1,5 @@
 ---
 title: "Aggregate List"
-space: "Reference Guide 6"
 parent: "list-activities"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Delete Object(s)"
-space: "Reference Guide 6"
 parent: "object-activities"
 ---
 

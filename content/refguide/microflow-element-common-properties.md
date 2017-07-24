@@ -1,6 +1,5 @@
 ---
 title: "Microflow Element Common Properties"
-space: "Mendix 7 Reference Guide"
 parent: "microflows"
 ---
 

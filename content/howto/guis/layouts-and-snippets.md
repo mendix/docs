@@ -1,6 +1,5 @@
 ---
 title: "Use Layouts and Snippets"
-space: "Mendix 7 How-To's"
 category: "GUIs"
 tags: []
 ---

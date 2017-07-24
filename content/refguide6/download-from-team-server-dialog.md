@@ -1,6 +1,5 @@
 ---
 title: "Download From Team Server Dialog"
-space: "Reference Guide 6"
 parent: "dialogs"
 ---
 Use this dialog to download a project from the Team Server. Note that you can use the [Open Project Dialog](open-project-dialog) for this, too. You only need to use this form in the specialized case that you want a second download of the same project (and development line).

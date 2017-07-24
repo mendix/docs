@@ -1,6 +1,5 @@
 ---
 title: "OQL Limit Clause"
-space: "Reference Guide 6"
 parent: "oql"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Working With Lists in a Microflow"
 category: "Logic & Business Rules"
-space: "Mendix 5 How-to's"
 ---
 
 In this how-to you will learn how to work with a list of objects in a Microflow. To manage this list you will first retrieve a filtered list of objects from the database. Mendix utilizes XPath constraints to apply filters. To learn more about XPath, take a look at this [documentation](/refguide5/xpath-contains). Secondly, you will iterate over the retrieved list of objects and calculate the total price of all the orders in a [Loop](/refguide5/loop). You will end this how-to with an alternative to calculating aggregated values over a list of objects.

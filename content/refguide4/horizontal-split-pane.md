@@ -1,7 +1,6 @@
 ---
 title: "Horizontal Split Pane"
 parent: "web-forms"
-space: "Reference Guide 4"
 ---
 A horizontal split pane creates a region that is split in two by a horizontal divider. In the client the divider can be moved up and down by the end user.
 

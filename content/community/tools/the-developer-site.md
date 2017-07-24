@@ -1,6 +1,5 @@
 ---
 title: "The Developers Site"
-space: "Community"
 category: "Tools"
 ---
 

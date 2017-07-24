@@ -1,6 +1,5 @@
 ---
 title: "Environment Details"
-space: "Developer Portal"
 category: "Deploy"
 description: "This page describes the environmental details of your App."
 tags: ["Deploy","App","Developer Portal"]

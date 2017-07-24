@@ -1,7 +1,6 @@
 ---
 title: "Retrieve a List of Objects"
 parent: "object-activities"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

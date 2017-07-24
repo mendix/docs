@@ -1,7 +1,6 @@
 ---
 title: "Set Up Access Rules"
 parent: "access-rules"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

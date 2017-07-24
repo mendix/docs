@@ -1,6 +1,5 @@
 ---
 title: "System Requirements"
-space: "Mendix 7 Reference Guide"
 category: "General"
 description: "Presents the system requirements for using the Mendix platform."
 ---

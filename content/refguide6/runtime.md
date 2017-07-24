@@ -1,6 +1,5 @@
 ---
 title: "Runtime"
-space: "Reference Guide 6"
 ---
 
 

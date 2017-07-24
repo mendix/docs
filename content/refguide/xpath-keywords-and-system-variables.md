@@ -1,6 +1,5 @@
 ---
 title: "XPath Keywords and System Variables"
-space: "Mendix 7 Reference Guide"
 parent: "xpath-constraints"
 ---
 

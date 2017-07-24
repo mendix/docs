@@ -1,7 +1,6 @@
 ---
 title: "Connect Forms Using Buttons"
 parent: "opening-forms"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

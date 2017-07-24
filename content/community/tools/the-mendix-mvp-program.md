@@ -1,6 +1,5 @@
 ---
 title: "The Mendix MVP Program"
-space: "Community"
 category: "Tools"
 ---
 

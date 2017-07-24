@@ -1,6 +1,5 @@
 ---
 title: "Create Variable"
-space: "Reference Guide 6"
 parent: "variable-activities"
 ---
 

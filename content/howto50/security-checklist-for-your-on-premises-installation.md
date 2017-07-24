@@ -1,7 +1,6 @@
 ---
 title: "Security checklist for your on-premises installation"
 category: "On-premises Deployment"
-space: "Mendix 5 How-to's"
 ---
 
 ## Use a Mendix version containing the latest security patches

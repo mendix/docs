@@ -1,6 +1,5 @@
 ---
 title: "App Store Overview"
-space: "Community"
 category: "App Store"
 ---
 

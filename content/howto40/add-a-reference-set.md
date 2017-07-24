@@ -1,7 +1,6 @@
 ---
 title: "Add a Reference Set"
 parent: "associations"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

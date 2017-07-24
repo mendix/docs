@@ -1,6 +1,5 @@
 ---
 title: "Opening Pages"
-space: "Mendix 7 Reference Guide"
 parent: "page-concepts"
 ---
 

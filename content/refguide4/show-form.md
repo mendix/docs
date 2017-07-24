@@ -1,7 +1,6 @@
 ---
 title: "Show Form"
 parent: "client-activities"
-space: "Reference Guide 4"
 ---
 With the show-form action you can show a form to the end user.
 

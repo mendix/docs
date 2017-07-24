@@ -1,6 +1,5 @@
 ---
 title: "Associations"
-space: "Reference Guide 6"
 parent: "domain-model"
 ---
 

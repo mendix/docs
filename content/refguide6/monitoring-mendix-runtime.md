@@ -1,6 +1,5 @@
 ---
 title: "Monitoring - Mendix Runtime"
-space: "Reference Guide 6"
 category: "Proactive Maintenance"
 ---
 The Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration.

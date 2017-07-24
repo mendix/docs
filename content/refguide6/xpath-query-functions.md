@@ -1,6 +1,5 @@
 ---
 title: "XPath Query Functions"
-space: "Reference Guide 6"
 parent: "xpath"
 ---
 

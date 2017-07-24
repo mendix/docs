@@ -1,6 +1,5 @@
 ---
 title: "Enumerations in microflow expressions"
-space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 ---
 

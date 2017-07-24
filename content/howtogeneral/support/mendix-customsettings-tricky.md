@@ -1,6 +1,5 @@
 ---
 title: "Tricky Custom Settings in Mendix Runtime"
-space: "General How-To's"
 category: "Mendix Support"
 description: " Describes custom settings that are a little more difficult to configure than normal."
 tags: ["Support", "custom settings"]

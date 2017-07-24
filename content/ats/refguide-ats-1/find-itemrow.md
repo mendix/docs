@@ -1,6 +1,5 @@
 ---
 title: "Find Item/Row"
-space: "ATS Add-On" 
 parent: "datagrid-templategrid-listview"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Report Parameter"
-space: "Mendix 7 Reference Guide"
 parent: "report-widgets"
 ---
 

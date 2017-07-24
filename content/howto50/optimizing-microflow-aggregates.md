@@ -1,7 +1,6 @@
 ---
 title: "Optimizing Microflow Aggregates"
 category: "Logic & Business Rules"
-space: "Mendix 5 How-to's"
 ---
 
 In some projects it is necessary to evaluate and large datasets in a microflow, for example for reporting purposes. If all those microflows do many retrieves and aggregates on large datasets it is easy to run into performance or memory problems. 

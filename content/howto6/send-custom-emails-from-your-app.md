@@ -1,6 +1,5 @@
 ---
 title: "Send Custom Emails From Your App"
-space: "Mendix 6 How-to's"
 category: "Extendability"
 tags: []
 ---

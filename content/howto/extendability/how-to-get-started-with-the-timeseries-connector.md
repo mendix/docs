@@ -1,6 +1,5 @@
 ---
 title: "Get Started with the TimeSeries Connector"
-space: "Mendix 7 How-to's"
 category: "Extendability"
 tags: ["IoT", "Connector", "TimeSeries", "Big Data", "Analytics"]
 ---

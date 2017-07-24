@@ -1,7 +1,6 @@
 ---
 title: "Table Cell"
 parent: "table"
-space: "Reference Guide 4"
 ---
 A table row consists of a number of cells. Cells have the following properties.
 

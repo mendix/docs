@@ -1,7 +1,6 @@
 ---
 title: "Debugging (4.2 and Before)"
 category: "Debugging"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

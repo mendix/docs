@@ -1,6 +1,5 @@
 ---
 title: "Add date function calls"
-space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 ---
 

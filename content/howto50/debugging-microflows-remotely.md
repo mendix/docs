@@ -1,7 +1,6 @@
 ---
 title: "Debugging Microflows Remotely"
 category: 'Monitoring & Troubleshooting'
-space: "Mendix 5 How-to's"
 ---
 
 You can also debug applications that are already in the cloud, either in acceptance or production environment. In this how-to article you will learn how to connect your debugger to your cloud environment. 

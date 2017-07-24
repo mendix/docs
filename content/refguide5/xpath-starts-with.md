@@ -1,7 +1,6 @@
 ---
 title: "XPath starts-with"
 parent: "xpath-constraint-functions"
-space: "Reference Guide 5"
 ---
 The starts-with() function tests whether a String attribute starts with a specific string.
 

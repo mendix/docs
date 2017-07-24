@@ -1,7 +1,6 @@
 ---
 title: "Rollback Object"
 parent: "object-activities"
-space: "Reference Guide 5"
 ---
 
 

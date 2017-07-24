@@ -1,6 +1,5 @@
 ---
 title: "Generate Document"
-space: "Reference Guide 6"
 parent: "document-generation-activities"
 ---
 

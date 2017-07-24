@@ -1,6 +1,5 @@
 ---
 title: "Tutorials"
-space: "Mendix 7 How-To's"
 description: "These tutorials will teach you to build an HRM app, mobile to-do app, and an IoT app."
 ---
 

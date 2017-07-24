@@ -1,6 +1,5 @@
 ---
 title: "Data Widgets"
-space: "Mendix 7 Reference Guide"
 parent: "pages"
 ---
 

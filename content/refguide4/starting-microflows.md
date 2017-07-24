@@ -1,7 +1,6 @@
 ---
 title: "Starting Microflows"
 parent: "form-concepts"
-space: "Reference Guide 4"
 ---
 In places where microflows are started from forms there are a number of properties that can be set. The following components can start microflows. The first column is the component that triggers the microflow; the second column tells you when the microflow is started. Finally, the third column shows what the first parameter of the microflow will be (see the category Parameters below).
 

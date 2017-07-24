@@ -1,6 +1,5 @@
 ---
 title: "Escalation Management Process"
-space: "General How-To's"
 category: "Mendix Support"
 description: "This document describes the types of Mendix Support escalation and how the escalation process works."
 tags: ["support", "escalation management"]

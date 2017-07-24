@@ -1,6 +1,5 @@
 ---
 title: "Microflow Call"
-space: "Mendix 7 Reference Guide"
 parent: "action-call-activities"
 ---
 

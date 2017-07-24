@@ -1,7 +1,6 @@
 ---
 title: "Sign Out Button"
 parent: "mobile-form-buttons"
-space: "Reference Guide 4"
 ---
 Pressing a sign out button will sign out the currently signed in user. When no user is signed in, pressing this button has no effect.
 

@@ -1,7 +1,6 @@
 ---
 title: "XPath min"
 parent: "xpath-query-functions"
-space: "Reference Guide 4"
 ---
 The min()-function returns the minimum value of its argument.
 This function requires an XPath query as argument. The query must specify one attribute of type Long, Integer, Float or Currency.

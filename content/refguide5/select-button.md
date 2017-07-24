@@ -1,7 +1,6 @@
 ---
 title: "Select button"
 parent: "control-bar"
-space: "Reference Guide 5"
 ---
 
 

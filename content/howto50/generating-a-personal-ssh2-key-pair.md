@@ -1,7 +1,6 @@
 ---
 title: "Generating a personal SSH2 key pair"
 category: "Security"
-space: "Mendix 5 How-to's"
 ---
 
 This section describes how to generate a personal SSH2 keypair for use in the Mendix hosting environment.

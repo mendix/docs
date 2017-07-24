@@ -1,7 +1,6 @@
 ---
 title: "End Event"
 parent: "microflows"
-space: "Reference Guide 4"
 ---
 An end event defines the location where the microflow will stop. If the return type of the microflow is not `Nothing` a return value should be specified.
 

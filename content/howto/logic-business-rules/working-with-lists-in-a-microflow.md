@@ -1,6 +1,5 @@
 ---
 title: "Working With Lists in a Microflow"
-space: "Mendix 7 How-To's"
 category: "Logic & Business Rules"
 description: "Teaches you how to work with a list of objects in a microflow as well retrieve a filtered list of objects from the database."
 tags: []

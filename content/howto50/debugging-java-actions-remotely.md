@@ -1,7 +1,6 @@
 ---
 title: "Debugging Java actions remotely"
 category: 'Monitoring & Troubleshooting'
-space: "Mendix 5 How-to's"
 ---
 
 To debug Java Actions used in a Mendix Microflow you need to make some configuration changes to the way you start the Mendix runtime.

@@ -1,6 +1,5 @@
 ---
 title: "Customizing PhoneGap Build packages"
-space: "Mendix 7 Reference Guide"
 category: "Mobile"
 ---
 

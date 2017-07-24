@@ -1,7 +1,6 @@
 ---
 title: "XPath id"
 parent: "xpath-query-functions"
-space: "Reference Guide 5"
 ---
 
 

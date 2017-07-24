@@ -1,7 +1,6 @@
 ---
 title: "Consuming a simple Web Service"
 category: "Integration"
-space: "Mendix 5 How-to's"
 ---
 
 Mendix is "The App Platform for the Enterprise" and in enterprise software it is not likely that you work in a [green field](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation you will need to integrate with existing systems. Mendix supports many ways of integration and this how-to focuses on how you can consume web services with Mendix. For this how-to we'll be using an example web service of w3schools. Please note that this is a very simple web service that converts temperatures from Celsius to Fahrenheit and backwards. The converted temperature will be returned as a string value that can be stored in a variable directly. If you want to invoke a web service that returns a complex XML message you can use XML-to-Domain mappings explained in this [how-to](importing-xml-documents).

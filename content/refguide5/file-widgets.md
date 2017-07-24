@@ -1,7 +1,6 @@
 ---
 title: "File Widgets"
 parent: "pages"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "Monitoring client state"
-space: "Mendix 7 Reference Guide"
 parent: "runtime"
 ---
 

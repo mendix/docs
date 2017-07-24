@@ -1,7 +1,6 @@
 ---
 title: "Select elements"
 parent: "xml-to-domain-mappings"
-space: "Reference Guide 5"
 ---
 
 

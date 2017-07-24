@@ -1,7 +1,6 @@
 ---
 title: "Data view close button"
 parent: "data-view-control-bar"
-space: "Reference Guide 5"
 ---
 
 

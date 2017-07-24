@@ -1,6 +1,5 @@
 ---
 title: Mobile
-space: "Mendix 5 How-to's"
 ---
 
 Our vision for mobile app development is that enterprises can greatly benefit from a single platform that supports the various styles of mobile app development (web, native and hybrid) for multiple devices and provides common mobile back-end services.

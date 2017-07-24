@@ -1,7 +1,6 @@
 ---
 title: "Layout"
 parent: "pages"
-space: "Reference Guide 5"
 ---
 
 

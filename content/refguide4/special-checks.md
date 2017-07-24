@@ -1,7 +1,6 @@
 ---
 title: "Special checks"
 parent: "microflow-expressions"
-space: "Reference Guide 4"
 ---
 ## Checking for an empty object
 

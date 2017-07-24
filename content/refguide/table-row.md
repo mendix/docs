@@ -1,6 +1,5 @@
 ---
 title: "Table row"
-space: "Mendix 7 Reference Guide"
 parent: "table"
 ---
 

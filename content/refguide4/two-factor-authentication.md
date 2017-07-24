@@ -1,7 +1,6 @@
 ---
 title: "Two Factor Authentication"
 category: "Deployment"
-space: "Reference Guide 4"
 ---
 The Cloud Portal supports **two factor authentication** using cell phones to protect your applications when your password or computer has been compromised.
 

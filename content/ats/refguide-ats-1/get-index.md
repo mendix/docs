@@ -1,6 +1,5 @@
 ---
 title: "Get Index"
-space: "ATS Add-On" 
 parent: "input"
 ---
 

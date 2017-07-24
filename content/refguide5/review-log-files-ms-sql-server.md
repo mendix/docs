@@ -1,7 +1,6 @@
 ---
 title: "Review log files - MS SQL Server"
 category: "Proactive Maintenance"
-space: "Reference Guide 5"
 ---
 
 

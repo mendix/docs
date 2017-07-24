@@ -1,7 +1,6 @@
 ---
 title: "Release Notes"
 category: "General"
-space: "Reference Guide 5"
 ---
 
 

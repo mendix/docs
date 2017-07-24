@@ -1,6 +1,5 @@
 ---
 title: "Using Team Server - Version Control"
-space: "Mendix 7 How-To's"
 category: "Collaboration & Project Management"
 tags: []
 ---

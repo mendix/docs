@@ -1,6 +1,5 @@
 ---
 title: "Set Up Anonymous User Security"
-space: "Mendix 6 How-to's"
 category: "Security"
 tags: []
 ---

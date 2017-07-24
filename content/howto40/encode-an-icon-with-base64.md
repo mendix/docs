@@ -1,7 +1,6 @@
 ---
 title: "Encode an Icon with Base64"
 category: "Custom Widgets"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

@@ -1,6 +1,5 @@
 ---
 title: "Debug Java Actions Remotely"
-space: "Mendix 7 How-To's"
 category: "Monitoring & Troubleshooting"
 tags: []
 ---

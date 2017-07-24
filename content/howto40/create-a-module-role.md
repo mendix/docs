@@ -1,7 +1,6 @@
 ---
 title: "Create a Module Role"
 parent: "module-security"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

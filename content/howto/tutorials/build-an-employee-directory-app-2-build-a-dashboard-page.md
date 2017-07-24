@@ -1,6 +1,5 @@
 ---
 title: "Build an Employee Directory App Step 2: Build a Dashboard Page"
-space: "Mendix 7 How-To's"
 parent: "build-an-employee-directory-app"
 description: "Presents details on the first steps in building a dashboard in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]

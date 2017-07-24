@@ -1,6 +1,5 @@
 ---
 title: "Scheduled Events"
-space: "Mendix 7 Reference Guide"
 category: "Modeler"
 ---
 

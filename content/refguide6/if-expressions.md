@@ -1,6 +1,5 @@
 ---
 title: "If expressions"
-space: "Reference Guide 6"
 parent: "microflow-expressions"
 ---
 ### If expressions

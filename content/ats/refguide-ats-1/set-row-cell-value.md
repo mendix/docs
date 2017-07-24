@@ -1,6 +1,5 @@
 ---
 title: "Set Row Cell Value"
-space: "ATS Add-On" 
 parent: "datagrid-templategrid-listview"
 ---
 

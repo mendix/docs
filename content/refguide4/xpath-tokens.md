@@ -1,7 +1,6 @@
 ---
 title: "XPath Tokens"
 parent: "xpath"
-space: "Reference Guide 4"
 ---
 The following tokens are used in XPath queries:
 

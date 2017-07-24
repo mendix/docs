@@ -1,7 +1,6 @@
 ---
 title: "Installing Mendix on Debian GNU Linux"
 category: "On-premises Deployment"
-space: "Mendix 5 How-to's"
 ---
 # Installing Mendix on Debian GNU/Linux
 

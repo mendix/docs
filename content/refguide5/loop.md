@@ -1,7 +1,6 @@
 ---
 title: "Loop"
 parent: "microflows"
-space: "Reference Guide 5"
 ---
 
 

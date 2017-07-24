@@ -1,6 +1,5 @@
 ---
 title: "Get Text"
-space: "ATS Add-On" 
 parent: "get"
 ---
 

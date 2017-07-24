@@ -1,6 +1,5 @@
 ---
 title: "Numeric formatting"
-space: "Mendix 7 Reference Guide"
 parent: "consumed-web-services"
 ---
 ## Behavior in your Mendix application

@@ -1,7 +1,6 @@
 ---
 title: "Version Control Scenarios"
 parent: "version-control"
-space: "Reference Guide 5"
 ---
 
 

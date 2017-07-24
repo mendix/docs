@@ -1,6 +1,5 @@
 ---
 title: "Install and Configure the SMTP Module"
-space: "Mendix 7 How-To's"
 category: "Extendability"
 tags: []
 ---

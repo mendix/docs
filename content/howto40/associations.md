@@ -1,7 +1,6 @@
 ---
 title: "Associations"
 parent: "domain-model"
-space: "Mendix 4 How-to's"
 ---
 Please select a how-to:
 

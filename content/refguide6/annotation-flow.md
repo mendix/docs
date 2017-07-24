@@ -1,6 +1,5 @@
 ---
 title: "Annotation flow"
-space: "Reference Guide 6"
 parent: "microflows"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Removed APIs"
-space: "Reference Guide 6"
 parent: "moving-from-5-to-6"
 ---
 The following Mendix Client API calls that were deprecated have been removed in Mendix 6:

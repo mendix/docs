@@ -1,7 +1,6 @@
 ---
 title: "Date Range Selector"
 parent: "report-widgets"
-space: "Reference Guide 5"
 ---
 
 

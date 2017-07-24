@@ -1,6 +1,5 @@
 ---
 title: "Database Maintenance: Size Reduction"
-space: "General How-To's"
 category: "Mendix Support"
 #parent: ""
 #description: ""

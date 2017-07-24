@@ -1,6 +1,5 @@
 ---
 title: "Upgrade Your Free App to a Licensed App"
-space: "Developer Portal"
 category: "How-To's"
 description: "This page describes how to upgrade a Free App to a Licensed App."
 tags: ["App","Sandbox","Developer Portal","Upgrade","Node"]

@@ -1,6 +1,5 @@
 ---
 title: "Upgrade Steps"
-space: "Other Add-Ons"
 parent: "installation"
 ---
 This document describes the upgrade steps for version 1.5.5 and above.

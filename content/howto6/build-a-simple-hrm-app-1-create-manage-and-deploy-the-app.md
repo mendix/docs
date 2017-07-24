@@ -1,6 +1,5 @@
 ---
 title: "Build a Simple HRM App 1: Create, Manage, and Deploy the App"
-space: "Mendix 6 How-to's"
 parent: "build-a-simple-hrm-app"
 ---
 

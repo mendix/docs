@@ -1,6 +1,5 @@
 ---
 title: "Add Button"
-space: "Reference Guide 7"
 parent: "control-bar"
 ---
 

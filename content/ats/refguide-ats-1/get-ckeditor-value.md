@@ -1,6 +1,5 @@
 ---
 title: "Get CKEditor Value"
-space: "ATS Add-On" 
 parent: "ckeditor"
 ---
 

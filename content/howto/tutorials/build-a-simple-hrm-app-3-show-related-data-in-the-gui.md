@@ -1,6 +1,5 @@
 ---
 title: "Build a Simple HRM App Step 3: Show Related Data in the GUI"
-space: "Mendix 7 How-To's"
 parent: "build-a-simple-hrm-app"
 tags: ["HRM", "build", "app", "developer portal"]
 ---

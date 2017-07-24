@@ -1,6 +1,5 @@
 ---
 title: "Search Bar"
-space: "Mendix 7 Reference Guide"
 parent: "data-grid"
 ---
 

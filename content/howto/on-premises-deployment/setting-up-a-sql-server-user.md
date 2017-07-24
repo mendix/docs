@@ -1,6 +1,5 @@
 ---
 title: "Setting up a SQL Server user"
-space: "Mendix 7 How-To's"
 parent: "mendix-on-windows-_-microsoft-sql-server"
 ---
 ## 1. Description

@@ -1,6 +1,5 @@
 ---
 title: "Mendix Cloud Status"
-space: "Developer Portal"
 category: "Operate"
 description: "This page describes where to find the current status of the Mendix Cloud."
 tags: ["Status","Mendix Cloud","Developer Portal"]

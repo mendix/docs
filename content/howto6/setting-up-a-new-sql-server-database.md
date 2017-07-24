@@ -1,6 +1,5 @@
 ---
 title: "Setting up a new SQL Server database"
-space: "Mendix 6 How-to's"
 parent: "mendix-on-windows-microsoft-sql-server"
 ---
 ## 1. Requirements

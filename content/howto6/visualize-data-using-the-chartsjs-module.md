@@ -1,6 +1,5 @@
 ---
 title: "Visualize Data using the ChartsJS Module"
-space: "Mendix 6 How-to's"
 category: "Extendability"
 tags: []
 ---

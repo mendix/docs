@@ -1,7 +1,6 @@
 ---
 title: "DateTime handling FAQ"
 category: "Runtime"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "OQL RANGEBEGIN"
 parent: "oql-functions"
-space: "Reference Guide 5"
 ---
 
 

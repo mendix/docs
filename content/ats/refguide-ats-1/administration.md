@@ -1,6 +1,5 @@
 ---
 title: "Administration"
-space: "ATS Add-On" 
 category: "Reference Guide 1"
 ---
 

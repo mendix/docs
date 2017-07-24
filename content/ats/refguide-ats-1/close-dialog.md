@@ -1,6 +1,5 @@
 ---
 title: "Close Dialog"
-space: "ATS Add-On" 
 parent: "dialog"
 ---
 

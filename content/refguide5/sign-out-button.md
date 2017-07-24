@@ -1,7 +1,6 @@
 ---
 title: "Sign out button"
 parent: "button-widgets"
-space: "Reference Guide 5"
 ---
 
 

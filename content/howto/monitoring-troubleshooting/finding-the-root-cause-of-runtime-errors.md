@@ -1,6 +1,5 @@
 ---
 title: "Finding the Root Cause of Runtime Errors"
-space: "Mendix 7 How-To's"
 category: "Monitoring & Troubleshooting"
 tags: []
 ---

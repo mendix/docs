@@ -1,7 +1,6 @@
 ---
 title: "Text Box"
 parent: "common-widgets"
-space: "Reference Guide 4"
 ---
 A text box can be used to display and/or edit a textual value.
 

@@ -1,7 +1,6 @@
 ---
 title: "Layout grid"
 parent: "container-widgets"
-space: "Reference Guide 5"
 ---
 
 

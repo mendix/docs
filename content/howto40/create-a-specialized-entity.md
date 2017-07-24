@@ -1,7 +1,6 @@
 ---
 title: "Create a Specialized Entity"
 parent: "entities"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

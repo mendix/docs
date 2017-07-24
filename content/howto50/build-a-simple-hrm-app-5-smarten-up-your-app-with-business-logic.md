@@ -1,7 +1,6 @@
 ---
 title: "Build a simple HRM app 5: Smarten up your app with business logic"
 parent: "how-to-build-a-simple-hrm-app"
-space: "Mendix 5 How-to's"
 ---
 
 This how-to is based on the video "Build a simple HRM app: Smarten up your app with business logic", which is part of the [Getting Started videos](http://gettingstarted.mendixcloud.com/link/courses/gettingstarted).

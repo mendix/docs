@@ -1,7 +1,6 @@
 ---
 title: "Object Activities"
 parent: "activities"
-space: "Reference Guide 4"
 ---
 ## Cast
 

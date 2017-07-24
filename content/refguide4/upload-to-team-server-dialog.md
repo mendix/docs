@@ -1,7 +1,6 @@
 ---
 title: "Upload To Team Server Dialog"
 parent: "dialogs"
-space: "Reference Guide 4"
 ---
 Use this dialog to upload a project that is not yet under version control to the Team Server. You can upload to a new repository (and create a sprintr™ project at the same time) or to an existing repository.
 

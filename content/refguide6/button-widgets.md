@@ -1,6 +1,5 @@
 ---
 title: "Button Widgets"
-space: "Reference Guide 6"
 parent: "pages"
 ---
 

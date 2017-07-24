@@ -1,6 +1,5 @@
 ---
 title: "Sort DataGrid"
-space: "ATS Add-On" 
 parent: "datagrid-templategrid-listview"
 ---
 

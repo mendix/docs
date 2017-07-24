@@ -1,7 +1,6 @@
 ---
 title: "Opening Pages"
 parent: "page-concepts"
-space: "Reference Guide 5"
 ---
 
 

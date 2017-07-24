@@ -1,7 +1,6 @@
 ---
 title: "Row (document template)"
 parent: "table-document-template"
-space: "Reference Guide 4"
 ---
 Rows are part of a table. They contain cells which in turn can contain other widgets.
 

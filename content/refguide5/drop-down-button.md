@@ -1,7 +1,6 @@
 ---
 title: "Drop down button"
 parent: "button-widgets"
-space: "Reference Guide 5"
 ---
 
 

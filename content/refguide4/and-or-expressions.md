@@ -1,7 +1,6 @@
 ---
 title: "And Or expressions"
 parent: "microflow-expressions"
-space: "Reference Guide 4"
 ---
 ### And/Or expressions
 

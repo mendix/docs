@@ -1,7 +1,6 @@
 ---
 title: "Oracle"
 category: "General"
-space: "Reference Guide 5"
 ---
 ## Known issue
 

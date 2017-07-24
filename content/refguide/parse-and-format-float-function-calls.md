@@ -1,6 +1,5 @@
 ---
 title: "Parse and format float function calls"
-space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 ---
 

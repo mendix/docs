@@ -1,7 +1,6 @@
 ---
 title: "Java Actions"
 parent: "modules"
-space: "Reference Guide 4"
 ---
 With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow using the [Java Action Call](java-action-call).
 

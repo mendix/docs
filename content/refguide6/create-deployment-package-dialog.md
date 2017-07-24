@@ -1,6 +1,5 @@
 ---
 title: "Create Deployment Package Dialog"
-space: "Reference Guide 6"
 parent: "dialogs"
 ---
 A deployment package can be deployed on the Cloud Portal or on a server that is configured to run Mendix software. While developing you can deploy and run on your local machine, but once you are ready to deploy your project on a real server you will need to create a deployment package.

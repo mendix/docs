@@ -1,7 +1,6 @@
 ---
 title: "Project Security"
 parent: "project"
-space: "Reference Guide 5"
 ---
 
 

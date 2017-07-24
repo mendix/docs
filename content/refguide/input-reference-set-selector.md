@@ -1,6 +1,5 @@
 ---
 title: "Input Reference Set Selector"
-space: "Mendix 7 Reference Guide"
 parent: "input-widgets"
 ---
 

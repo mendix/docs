@@ -1,6 +1,5 @@
 ---
 title: "Two Factor Authentication"
-space: "Mendix 7 Reference Guide"
 category: "Deployment"
 ---
 

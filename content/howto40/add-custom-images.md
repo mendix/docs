@@ -1,7 +1,6 @@
 ---
 title: "Add Custom Images"
 parent: "images"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

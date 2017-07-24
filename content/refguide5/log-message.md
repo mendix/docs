@@ -1,7 +1,6 @@
 ---
 title: "Log Message"
 parent: "logging-activities"
-space: "Reference Guide 5"
 ---
 
 

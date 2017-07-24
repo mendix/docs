@@ -1,7 +1,6 @@
 ---
 title: "XPath min"
 parent: "xpath-query-functions"
-space: "Reference Guide 5"
 ---
 
 

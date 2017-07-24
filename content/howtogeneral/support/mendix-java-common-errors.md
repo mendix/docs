@@ -1,6 +1,5 @@
 ---
 title: "Mendix and Java Part 2 – Common Errors"
-space: "Best Practices"
 category: "Mendix Support"
 #parent: ""
 #description: ""

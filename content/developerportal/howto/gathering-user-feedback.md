@@ -1,6 +1,5 @@
 ---
 title: "Use the Mendix Feedback Widget"
-space: "Developer Portal"
 category: "How-To's"
 description: "Describes how to use the Feedback Widget."
 tags: ["Feedback","Widget","Developer Portal"]

@@ -1,7 +1,6 @@
 ---
 title: "Select app service"
 parent: "consumed-app-services"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "Add and Configure an XML Schema"
 parent: "integration"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

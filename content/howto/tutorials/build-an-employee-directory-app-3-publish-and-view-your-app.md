@@ -1,6 +1,5 @@
 ---
 title: "Build an Employee Directory App Step 3: Publish and View Your App"
-space: "Mendix 7 How-To's"
 parent: "build-an-employee-directory-app"
 description: "Presents details on how to publish your app from the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]

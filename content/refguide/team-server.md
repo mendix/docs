@@ -1,6 +1,5 @@
 ---
 title: "Team Server"
-space: "Mendix 7 Reference Guide"
 ---
 
 ## Team Server

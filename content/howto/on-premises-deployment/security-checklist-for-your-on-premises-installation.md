@@ -1,6 +1,5 @@
 ---
 title: "Implement Security for Your On-Premises Installation"
-space: "Mendix 7 How-To's"
 category: "On-Premises Deployment"
 tags: []
 ---

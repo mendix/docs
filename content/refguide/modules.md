@@ -1,6 +1,5 @@
 ---
 title: "Modules"
-space: "Mendix 7 Reference Guide"
 category: "Modeler"
 ---
 

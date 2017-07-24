@@ -1,7 +1,6 @@
 ---
 title: "Java in the Cloud"
 category: "Java Programming"
-space: "Reference Guide 4"
 ---
 Projects with Java actions can be deployed to the Mendix 3.0 Cloud. For security reasons the capabilities of Java actions in the Cloud are constrained. Applications should not be able to access resources of other applications or compromise the cloud server in any way.
 

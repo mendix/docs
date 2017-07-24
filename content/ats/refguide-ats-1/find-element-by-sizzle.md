@@ -1,6 +1,5 @@
 ---
 title: "Find Element by Sizzle"
-space: "ATS Add-On" 
 parent: "find"
 ---
 

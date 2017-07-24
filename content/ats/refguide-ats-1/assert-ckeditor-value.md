@@ -1,6 +1,5 @@
 ---
 title: "Assert CKEditor Value"
-space: "ATS Add-On" 
 parent: "ckeditor"
 ---
 ## Description

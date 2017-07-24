@@ -1,6 +1,5 @@
 ---
 title: "Users"
-space: "Developer Portal"
 category: "Company Admin"
 description: "Developer Portal Users"
 tags: ["Company","Admin","Developer Portal"]

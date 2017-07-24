@@ -1,6 +1,5 @@
 ---
 title: "Contribute to a GitHub Repository"
-space: "Mendix 6 How-to's"
 category: "Collaboration & Project Management"
 tags: []
 ---

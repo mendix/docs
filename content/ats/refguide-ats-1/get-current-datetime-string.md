@@ -1,6 +1,5 @@
 ---
 title: "Get Current DateTime String"
-space: "ATS Add-On" 
 parent: "ats-core-actions"
 ---
 

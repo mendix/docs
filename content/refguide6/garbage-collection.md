@@ -1,6 +1,5 @@
 ---
 title: "Garbage collection"
-space: "Reference Guide 6"
 category: "Java Programming"
 ---
 

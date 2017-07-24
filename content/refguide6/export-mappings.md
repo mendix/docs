@@ -1,6 +1,5 @@
 ---
 title: "Export Mappings"
-space: "Reference Guide 6"
 parent: "mapping-documents"
 ---
 

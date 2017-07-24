@@ -1,7 +1,6 @@
 ---
 title: "Contributing to a GitHub repository"
 category: 'Collaboration & Project Management'
-space: "Mendix 5 How-to's"
 ---
 
 We like to work with our community and encourage you to create and contribute using pull requests!

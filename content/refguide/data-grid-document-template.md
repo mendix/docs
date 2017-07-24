@@ -1,7 +1,6 @@
 ---
 title: "Data Grid (document template)"
 parent: "document-templates"
-space: "Mendix 7 Reference Guide"
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "Regular Expressions"
 category: "Modeler"
-space: "Reference Guide 5"
 ---
 
 

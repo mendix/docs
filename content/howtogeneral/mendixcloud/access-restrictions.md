@@ -1,6 +1,5 @@
 ---
 title: "Restrict Access for Incoming Requests"
-space: "General How-To's"
 category: "Mendix Cloud"
 ---
 

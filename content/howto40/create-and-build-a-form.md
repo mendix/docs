@@ -1,7 +1,6 @@
 ---
 title: "Create and Build a Form"
 parent: "forms"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

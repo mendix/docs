@@ -1,7 +1,6 @@
 ---
 title: "Configure a Java Action Call"
 parent: "action-call-activities"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

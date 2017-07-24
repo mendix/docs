@@ -1,7 +1,6 @@
 ---
 title: "Connect an Attribute to a Search Field"
 parent: "search-bar"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

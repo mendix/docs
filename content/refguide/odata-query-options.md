@@ -1,6 +1,5 @@
 ---
 title: "OData Query Options"
-space: "Mendix 7 Reference Guide"
 parent: "published-odata-services"
 ---
 This is a list of query options for OData. Note that when something is not in this list, we currently don't support it (yet).

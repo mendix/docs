@@ -1,6 +1,5 @@
 ---
 title: "Set Checkbox Set Selector Value"
-space: "ATS Add-On" 
 parent: "grid-selector"
 ---
 ## Description

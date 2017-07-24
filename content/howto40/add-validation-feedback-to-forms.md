@@ -1,7 +1,6 @@
 ---
 title: "Add Validation Feedback to Forms"
 parent: "client-activities"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

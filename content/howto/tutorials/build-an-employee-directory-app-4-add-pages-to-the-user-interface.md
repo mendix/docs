@@ -1,6 +1,5 @@
 ---
 title: "Build an Employee Directory App Step 4: Add Pages to the User Interface"
-space: "Mendix 7 How-To's"
 parent: "build-an-employee-directory-app"
 description: "Presents details on add pages to your app's UI in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]

@@ -1,6 +1,5 @@
 ---
 title: "Optimize Microflow Aggregates"
-space: "Mendix 7 How-To's"
 category: "Logic & Business Rules"
 tags: []
 ---

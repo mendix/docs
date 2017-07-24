@@ -1,6 +1,5 @@
 ---
 title: "GroupBox"
-space: "ATS Add-On" 
 parent: "mendix-actions"
 ---
 

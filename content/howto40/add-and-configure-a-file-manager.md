@@ -1,7 +1,6 @@
 ---
 title: "Add and Configure a File Manager"
 parent: "file-manager"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

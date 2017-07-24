@@ -1,7 +1,6 @@
 ---
 title: "Install an App From the App Store"
 category: "Custom Widgets"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

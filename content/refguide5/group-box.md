@@ -1,7 +1,6 @@
 ---
 title: "Group box"
 parent: "container-widgets"
-space: "Reference Guide 5"
 ---
 
 

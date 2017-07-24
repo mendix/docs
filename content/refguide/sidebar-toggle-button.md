@@ -1,6 +1,5 @@
 ---
 title: "Sidebar toggle button"
-space: "Mendix 7 Reference Guide"
 parent: "layout-widgets"
 ---
 

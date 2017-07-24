@@ -1,6 +1,5 @@
 ---
 title: "Tips & Tricks"
-space: "General How-To's"
 ---
 This is where our experts reveal their tips and tricks.
 

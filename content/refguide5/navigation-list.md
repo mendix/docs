@@ -1,7 +1,6 @@
 ---
 title: "Navigation list"
 parent: "container-widgets"
-space: "Reference Guide 5"
 ---
 
 

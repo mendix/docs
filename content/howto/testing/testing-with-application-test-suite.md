@@ -1,6 +1,5 @@
 ---
 title: "Test with Application Test Suite (ATS)"
-space: "Mendix 7 How-To's"
 category: "Testing"
 tags: []
 ---

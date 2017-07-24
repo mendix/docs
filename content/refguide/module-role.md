@@ -1,6 +1,5 @@
 ---
 title: "Module Role"
-space: "Mendix 7 Reference Guide"
 parent: "module-security"
 ---
 

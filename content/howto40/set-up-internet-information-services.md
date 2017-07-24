@@ -1,7 +1,6 @@
 ---
 title: "Set up Internet Information Services"
 parent: "mendix-on-windows---service-console-3"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

@@ -1,7 +1,6 @@
 ---
 title: "Monitoring application health"
 category: 'Monitoring & Troubleshooting'
-space: "Mendix 5 How-to's"
 ---
 
 When your application has reached production status, it's important to keep track of its status and health. This How-To will teach you how to inspect your application's health in the Mendix app platform. You will learn how to access the application status page, what the information on this page means and how to look at the alerts for your app. 

@@ -1,6 +1,5 @@
 ---
 title: "Configure High Availability"
-space: "Mendix 7 How-To's"
 parent: "design-the-architecture"
 ---
 

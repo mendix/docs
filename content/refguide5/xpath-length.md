@@ -1,7 +1,6 @@
 ---
 title: "XPath length"
 parent: "xpath-constraint-functions"
-space: "Reference Guide 5"
 ---
 
 

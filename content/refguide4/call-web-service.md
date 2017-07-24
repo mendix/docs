@@ -1,7 +1,6 @@
 ---
 title: "Call Web Service"
 parent: "integration-activities"
-space: "Reference Guide 4"
 ---
 The call-web-service activity can be used to call one of the [imported web service](imported-web-services) operations. You can specify whether or not to use authentication, what the request should look like and how the response of the web service should be handled.
 

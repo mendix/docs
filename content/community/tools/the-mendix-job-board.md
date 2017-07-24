@@ -1,6 +1,5 @@
 ---
 title: "The Mendix Job Board"
-space: "Community"
 category: "Tools"
 ---
 

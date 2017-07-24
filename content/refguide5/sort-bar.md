@@ -1,7 +1,6 @@
 ---
 title: "Sort Bar"
 parent: "data-grid"
-space: "Reference Guide 5"
 ---
 
 

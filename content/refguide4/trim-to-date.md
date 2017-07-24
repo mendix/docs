@@ -1,7 +1,6 @@
 ---
 title: "Trim to date"
 parent: "microflow-expressions"
-space: "Reference Guide 4"
 ---
 Functions to round off dates to different time units.
 

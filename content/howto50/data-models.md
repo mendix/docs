@@ -1,6 +1,5 @@
 ---
 title: Data Models
-space: "Mendix 5 How-to's"
 ---
 
 What is a Data Model?

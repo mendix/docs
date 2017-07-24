@@ -1,6 +1,5 @@
 ---
 title: "Debugging"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

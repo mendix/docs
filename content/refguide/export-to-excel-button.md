@@ -1,6 +1,5 @@
 ---
 title: "Export to excel button"
-space: "Mendix 7 Reference Guide"
 parent: "control-bar"
 ---
 

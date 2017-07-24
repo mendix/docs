@@ -1,7 +1,6 @@
 ---
 title: "Architecture Options"
 category: "On-premises Deployment"
-space: "Mendix 5 How-to's"
 ---
 # Architecture Options
 

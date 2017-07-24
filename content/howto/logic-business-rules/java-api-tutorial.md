@@ -1,6 +1,5 @@
 ---
 title: "Use the Java API"
-space: "Mendix 7 How-To's"
 category: "Logic & Business Rules"
 tags: []
 ---

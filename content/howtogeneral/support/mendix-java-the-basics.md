@@ -1,6 +1,5 @@
 ---
 title: "Mendix and Java Part 1 – The Basics"
-space: "General How-To's"
 category: "Mendix Support"
 #parent: ""
 #description: ""

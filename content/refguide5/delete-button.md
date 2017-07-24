@@ -1,7 +1,6 @@
 ---
 title: "Delete button"
 parent: "control-bar"
-space: "Reference Guide 5"
 ---
 
 

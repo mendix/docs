@@ -1,6 +1,5 @@
 ---
 title: "Updating a Mendix Application"
-space: "Mendix 7 How-To's"
 category: "On-Premises Deployment"
 tags: []
 ---

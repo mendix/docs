@@ -1,7 +1,6 @@
 ---
 title: "Deploying Mendix on Microsoft Windows"
 category: "On-premises Deployment"
-space: "Mendix 5 How-to's"
 ---
 <table><thead><tr><th class="confluenceTh">Mendix Version</th><th class="confluenceTh">Create Date</th><th colspan="1" class="confluenceTh">Modified Date</th></tr></thead><tbody><tr><td class="confluenceTd">5</td><td class="confluenceTd">Mar 10, 2015 15:49</td><td colspan="1" class="confluenceTd">Nov 18, 2015 10:00</td></tr></tbody></table>
 

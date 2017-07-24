@@ -1,7 +1,6 @@
 ---
 title: "Connect an Attribute to a Column"
 parent: "columns"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

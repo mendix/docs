@@ -1,7 +1,6 @@
 ---
 title: "Persistability"
 parent: "entities"
-space: "Reference Guide 5"
 ---
 
 

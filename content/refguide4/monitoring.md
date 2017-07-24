@@ -1,7 +1,6 @@
 ---
 title: "Monitoring"
 category: "Deployment"
-space: "Reference Guide 4"
 ---
 The runtime statistics monitoring action can be called by sending a JSON request to the admin handler of the runtime. This is accomplished by sending a request to the admin port which is specified in the application configuration.
 The JSON request should be accompanied by a base64 encoded monitoring password (the password should also be specified in the application configuration) in the request header "X-M2EE-Authentication". The content type of the request should be "application/json".

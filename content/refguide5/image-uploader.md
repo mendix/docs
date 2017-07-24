@@ -1,7 +1,6 @@
 ---
 title: "Image uploader"
 parent: "file-widgets"
-space: "Reference Guide 5"
 ---
 
 

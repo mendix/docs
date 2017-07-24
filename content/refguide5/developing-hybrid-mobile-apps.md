@@ -1,7 +1,6 @@
 ---
 title: "Developing Hybrid Mobile Apps"
 category: "Mobile"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "Connect an Antity to a Data Grid"
 parent: "data-grid"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

@@ -1,7 +1,6 @@
 ---
 title: "Reporting"
 parent: "web-forms"
-space: "Reference Guide 4"
 ---
 With reporting you can create reports over the database data. Reporting is used for creating aggregated information, e.g. total sales per customer.
 

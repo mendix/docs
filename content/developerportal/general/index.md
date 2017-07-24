@@ -1,6 +1,5 @@
 ---
 title: "General"
-space: "Developer Portal"
 ---
 
 ## Documents in This Category

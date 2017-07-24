@@ -1,7 +1,6 @@
 ---
 title: "Generate Documents Using Document Templates"
 parent: "integration-activities"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

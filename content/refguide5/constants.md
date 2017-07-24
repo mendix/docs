@@ -1,7 +1,6 @@
 ---
 title: "Constants"
 category: "Modeler"
-space: "Reference Guide 5"
 ---
 
 

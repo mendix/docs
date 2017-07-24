@@ -1,7 +1,6 @@
 ---
 title: "Configure a Scheduled Event"
 parent: "scheduled-events"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

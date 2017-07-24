@@ -1,6 +1,5 @@
 ---
 title: "General"
-space: "ATS Add-On"
 ---
 
 These are the documents in this category:

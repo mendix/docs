@@ -1,6 +1,5 @@
 ---
 title: "Best Practices for App Performance in Mendix 7"
-space: "General How-To's"
 category: "Best Practices"
 ---
 

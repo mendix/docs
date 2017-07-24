@@ -1,6 +1,5 @@
 ---
 title: "Offline"
-space: "Reference Guide 6"
 category: "General"
 ---
 {{% alert type="warning" %}}

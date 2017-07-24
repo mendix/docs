@@ -1,7 +1,6 @@
 ---
 title: "Link button"
 parent: "button-widgets"
-space: "Reference Guide 5"
 ---
 
 

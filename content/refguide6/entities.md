@@ -1,6 +1,5 @@
 ---
 title: "Entities"
-space: "Reference Guide 6"
 parent: "domain-model"
 ---
 

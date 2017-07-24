@@ -1,7 +1,6 @@
 ---
 title: "Configure an XML-to-Domain Mapping"
 parent: "integration"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

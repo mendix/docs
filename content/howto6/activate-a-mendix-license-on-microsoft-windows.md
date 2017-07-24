@@ -1,6 +1,5 @@
 ---
 title: "Activate a Mendix License on Microsoft Windows"
-space: "Mendix 6 How-to's"
 category: "On-Premises Deployment"
 tags: []
 ---

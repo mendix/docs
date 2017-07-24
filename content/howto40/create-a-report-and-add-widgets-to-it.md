@@ -1,7 +1,6 @@
 ---
 title: "Create a Report and Add Widgets to It"
 parent: "reporting"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

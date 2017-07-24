@@ -1,6 +1,5 @@
 ---
 title: "Metrics"
-space: "Developer Portal"
 category: "Operate"
 description: "This page describes the Metrics page of the Developer Portal."
 tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Portal"]

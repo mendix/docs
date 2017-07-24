@@ -1,6 +1,5 @@
 ---
 title: "Deploy Your First Hybrid Mobile App"
-space: "Mendix 7 How-To's"
 category: "Mobile"
 tags: []
 ---

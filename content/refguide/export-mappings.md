@@ -1,6 +1,5 @@
 ---
 title: "Export Mappings"
-space: "Mendix 7 Reference Guide"
 parent: "mapping-documents"
 ---
 

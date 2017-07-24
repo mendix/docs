@@ -1,7 +1,6 @@
 ---
 title: "Row (document template)"
 parent: "table-document-template"
-space: "Reference Guide 5"
 ---
 
 

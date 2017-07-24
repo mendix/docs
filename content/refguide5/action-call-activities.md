@@ -1,7 +1,6 @@
 ---
 title: "Action Call Activities"
 parent: "activities"
-space: "Reference Guide 5"
 ---
 
 

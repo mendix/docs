@@ -1,7 +1,6 @@
 ---
 title: "Create Variable"
 parent: "variable-activities"
-space: "Reference Guide 4"
 ---
 With the create-variable action you can create a variable of type Boolean, DateTime, Enumeration, Float/Currency, Integer/Long or String.
 

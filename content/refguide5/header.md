@@ -1,7 +1,6 @@
 ---
 title: "Header"
 parent: "layout-widgets"
-space: "Reference Guide 5"
 ---
 
 A header combines the functionality of a page title and a control bar for your page. Due to its compact design and versatility it is often used in mobile pages. As a lay-out feature it can only be used in a layout.

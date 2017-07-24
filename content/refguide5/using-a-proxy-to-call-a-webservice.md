@@ -1,7 +1,6 @@
 ---
 title: "Using a proxy to call a webservice"
 parent: "consumed-web-services"
-space: "Reference Guide 5"
 ---
 
 

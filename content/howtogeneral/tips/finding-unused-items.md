@@ -1,6 +1,5 @@
 ---
 title: "Finding Unused Items"
-space: "General How-To's"
 category: "Tips & Tricks"
 ---
 # Finding Unused Items

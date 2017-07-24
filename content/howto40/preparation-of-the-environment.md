@@ -1,7 +1,6 @@
 ---
 title: "Preparation of the Environment"
 parent: "mendix-on-windows---service-console-4"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

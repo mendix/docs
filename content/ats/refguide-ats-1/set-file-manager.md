@@ -1,6 +1,5 @@
 ---
 title: "Set File Manager"
-space: "ATS Add-On" 
 parent: "file-manager"
 ---
 

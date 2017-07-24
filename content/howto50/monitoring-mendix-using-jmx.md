@@ -1,7 +1,6 @@
 ---
 title: "Monitoring Mendix using JMX"
 category: 'Monitoring & Troubleshooting'
-space: "Mendix 5 How-to's"
 ---
 
 The following is only relevant if you run [Mendix](http://www.mendix.com/) on-premises. If you do, you probably have standard monitoring tooling that you use to monitor all your applications.

@@ -1,6 +1,5 @@
 ---
 title: "Page"
-space: "Reference Guide 6"
 parent: "pages"
 ---
 

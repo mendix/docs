@@ -1,6 +1,5 @@
 ---
 title: "Web Modeler"
-space: "Mendix 7 Reference Guide"
 parent: "modeler-products"
 tags: ["web modeler"]
 ---

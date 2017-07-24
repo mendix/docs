@@ -1,6 +1,5 @@
 ---
 title: "Manipulating Existing Models"
-space: "API & SDK"
 parent: "your-learning-path-for-the-mendix-sdk"
 ---
 Please choose one of the following subjects:

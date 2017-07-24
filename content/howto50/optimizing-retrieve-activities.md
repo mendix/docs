@@ -1,7 +1,6 @@
 ---
 title: "Optimizing Retrieve Activities"
 category: "Logic & Business Rules"
-space: "Mendix 5 How-to's"
 ---
 
 Often in processes you need to retrieve objects in order to complete the process. But what if those objects could not be found? Usually additional actions are required, but since the objects you retrieve and create are assigned different variable names you often can't merge back to a single flow.

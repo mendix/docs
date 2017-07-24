@@ -1,7 +1,6 @@
 ---
 title: "XPath day-from-dateTime"
 parent: "xpath-constraint-functions"
-space: "Reference Guide 4"
 ---
 The day-from-dateTime() function extracts the amount of days from a DateTime attribute so it can be used to compare to a value.
 

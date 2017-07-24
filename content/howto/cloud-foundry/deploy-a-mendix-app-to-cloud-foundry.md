@@ -1,6 +1,5 @@
 ---
 title: "Deploy a Mendix App to Cloud Foundry"
-space: "Mendix 7 How-To's"
 category: "Cloud Foundry"
 tags: []
 ---

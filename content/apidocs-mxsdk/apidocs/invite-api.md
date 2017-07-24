@@ -1,6 +1,5 @@
 ---
 title: "Invite API"
-space: "API & SDK"
 category: "API Documentation"
 ---
 

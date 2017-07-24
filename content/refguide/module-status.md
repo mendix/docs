@@ -1,6 +1,5 @@
 ---
 title: "Module Status"
-space: "Mendix 7 Reference Guide"
 parent: "project-security"
 ---
 

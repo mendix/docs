@@ -1,6 +1,5 @@
 ---
 title: "Access Rules"
-space: "Reference Guide 6"
 parent: "entities"
 ---
 

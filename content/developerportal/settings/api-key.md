@@ -1,6 +1,5 @@
 ---
 title: "API Key"
-space: "Developer Portal"
 category: "Settings"
 description: "This page describes the API Key settings of your App."
 tags: ["Settings","App","API","Key","Developer Portal"]

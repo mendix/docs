@@ -1,6 +1,5 @@
 ---
 title: "Migrating your Mendix database"
-space: "General How-To's"
 category: "Tips & Tricks"
 ---
 

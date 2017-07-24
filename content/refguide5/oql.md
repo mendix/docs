@@ -1,7 +1,6 @@
 ---
 title: "OQL"
 parent: "data-sets"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,7 +1,6 @@
 ---
 title: "Report Button"
 parent: "report-widgets"
-space: "Reference Guide 5"
 ---
 
 

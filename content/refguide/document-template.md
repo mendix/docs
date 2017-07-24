@@ -1,6 +1,5 @@
 ---
 title: "Document Template"
-space: "Mendix 7 Reference Guide"
 parent: "document-templates"
 ---
 

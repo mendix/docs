@@ -1,7 +1,6 @@
 ---
 title: "Setting up the database user"
 parent: "setting-up-a-sql-server-user"
-space: "Mendix 5 How-to's"
 ---
 # Setting up the database user
 

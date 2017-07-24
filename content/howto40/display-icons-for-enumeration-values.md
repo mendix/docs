@@ -1,7 +1,6 @@
 ---
 title: "Display Icons for Enumeration Values"
 parent: "columns"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

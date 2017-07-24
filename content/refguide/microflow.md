@@ -1,6 +1,5 @@
 ---
 title: "Microflow"
-space: "Mendix 7 Reference Guide"
 parent: "microflows"
 ---
 

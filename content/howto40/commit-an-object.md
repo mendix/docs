@@ -1,7 +1,6 @@
 ---
 title: "Commit an Object"
 category: "Custom Widgets"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

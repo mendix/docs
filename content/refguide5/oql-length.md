@@ -1,7 +1,6 @@
 ---
 title: "OQL LENGTH"
 parent: "oql-functions"
-space: "Reference Guide 5"
 ---
 
 

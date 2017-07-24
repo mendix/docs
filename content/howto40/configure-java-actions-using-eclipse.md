@@ -1,7 +1,6 @@
 ---
 title: "Configure Java Actions Using Eclipse"
 category: "Java Programming"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

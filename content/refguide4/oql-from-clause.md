@@ -1,7 +1,6 @@
 ---
 title: "OQL From Clause"
 parent: "oql"
-space: "Reference Guide 4"
 ---
 The FROM clause specifies the entities or other source from which the data must be retrieved. This clause starts with the FROM keyword, following by an entity name. To select data from other entities as well, add these entities via the JOIN keywords. This syntax is a little more strict than the official SQL FROM clause syntax.
 

@@ -1,6 +1,5 @@
 ---
 title: "The Mobile Slider Custom Widget"
-space: "Mendix 7 How-To's"
 category: "Custom Widget Development"
 tags: []
 ---

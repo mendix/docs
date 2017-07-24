@@ -1,6 +1,5 @@
 ---
 title: "Client Activities"
-space: "Mendix 7 Reference Guide"
 parent: "activities"
 ---
 

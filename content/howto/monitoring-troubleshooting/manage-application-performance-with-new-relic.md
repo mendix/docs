@@ -1,6 +1,5 @@
 ---
 title: "Manage Application Performance with New Relic"
-space: "Mendix 7 How-To's"
 category: "Monitoring & Troubleshooting"
 tags: []
 ---

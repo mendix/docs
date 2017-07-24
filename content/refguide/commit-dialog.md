@@ -1,6 +1,5 @@
 ---
 title: "Commit Dialog"
-space: "Mendix 7 Reference Guide"
 parent: "dialogs"
 ---
 The commit dialog is used for committing changes to the Team Server. You can enter a message and - if applicable - select related stories.

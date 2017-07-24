@@ -1,7 +1,6 @@
 ---
 title: "XPath Keywords and System Variables"
 parent: "xpath-constraints"
-space: "Reference Guide 4"
 ---
 In XPath, several keywords and system variables can be used called as a comparison.
 

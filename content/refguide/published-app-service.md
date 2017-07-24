@@ -1,6 +1,5 @@
 ---
 title: "Published App Service"
-space: "Mendix 7 Reference Guide"
 parent: "published-app-services"
 ---
 

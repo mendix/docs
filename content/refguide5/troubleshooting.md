@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting"
 category: "Java Programming"
-space: "Reference Guide 5"
 ---
 
 

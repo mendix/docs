@@ -1,7 +1,6 @@
 ---
 title: "Show Message"
 parent: "client-activities"
-space: "Reference Guide 4"
 ---
 With the show-message action you can show a blocking or non-blocking message to the user.
 

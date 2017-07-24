@@ -1,6 +1,5 @@
 ---
 title: "Known Issues"
-space: "Release Notes"
 toc-level: 1
 category: "Desktop Modeler"
 ---

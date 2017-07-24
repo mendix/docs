@@ -1,6 +1,5 @@
 ---
 title: "Setting up data validation"
-space: "Mendix 6 How-to's"
 category: "Data Models"
 tags: []
 ---

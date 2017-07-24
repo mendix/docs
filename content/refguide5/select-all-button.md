@@ -1,7 +1,6 @@
 ---
 title: "Select all button"
 parent: "control-bar"
-space: "Reference Guide 5"
 ---
 
 

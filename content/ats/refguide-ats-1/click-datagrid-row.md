@@ -1,6 +1,5 @@
 ---
 title: "Click DataGrid Row"
-space: "ATS Add-On" 
 parent: "datagrid-templategrid-listview"
 ---
 

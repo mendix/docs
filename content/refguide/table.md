@@ -1,6 +1,5 @@
 ---
 title: "Table"
-space: "Mendix 7 Reference Guide"
 parent: "container-widgets"
 ---
 

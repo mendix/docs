@@ -1,7 +1,6 @@
 ---
 title: "Map element to entity"
 parent: "xml-to-domain-mappings"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "Develop"
-space: "Developer Portal"
 ---
 
 ## 1 Introduction

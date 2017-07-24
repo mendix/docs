@@ -1,7 +1,6 @@
 ---
 title: "Consume a Web Service"
 parent: "integration"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

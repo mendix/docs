@@ -1,7 +1,6 @@
 ---
 title: "Drop-Down Widget"
 parent: "common-widgets"
-space: "Reference Guide 4"
 ---
 A drop-down widget can be used to display and/or select an enumeration value.
 

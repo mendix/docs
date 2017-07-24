@@ -1,6 +1,5 @@
 ---
 title: "Report Grid"
-space: "Mendix 7 Reference Guide"
 parent: "report-widgets"
 ---
 

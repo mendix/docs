@@ -1,6 +1,5 @@
 ---
 title: "GUIs"
-space: "Mendix 7 How-To's"
 ---
 
 Looking to create a user-friendly graphical user interface (GUI) for your app? You will find all the information you need here, from how to create pages to how to set up the navigation structure.

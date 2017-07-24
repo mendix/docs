@@ -1,6 +1,5 @@
 ---
 title: "How-To's"
-space: "Developer Portal"
 ---
 
 ## 1 Introduction

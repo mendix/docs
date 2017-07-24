@@ -1,6 +1,5 @@
 ---
 title: "Deploy API"
-space: "API & SDK"
 category: "API Documentation"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Reference set selector"
 parent: "input-widgets"
-space: "Reference Guide 5"
 ---
 
 

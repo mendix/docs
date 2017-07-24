@@ -1,7 +1,6 @@
 ---
 title: "Container"
 parent: "container-widgets"
-space: "Reference Guide 5"
 ---
 
 

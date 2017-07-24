@@ -1,6 +1,5 @@
 ---
 title: "Debug Microflows"
-space: "Mendix 6 How-to's"
 category: "Monitoring & Troubleshooting"
 tags: []
 ---

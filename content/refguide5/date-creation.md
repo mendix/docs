@@ -1,7 +1,6 @@
 ---
 title: "Date creation"
 parent: "microflow-expressions"
-space: "Reference Guide 5"
 ---
 
 

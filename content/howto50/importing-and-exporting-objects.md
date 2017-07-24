@@ -1,7 +1,6 @@
 ---
 title: "Importing and Exporting Objects"
 category: "Integration"
-space: "Mendix 5 How-to's"
 ---
 
 Don't re-invent the wheel. Save time by importing modules others have already created, and exporting new modules for others to use. The App Store provides this functionality on a macro-level, but you can use the modeler's built-in import and export functions to share content between your own apps, import unofficial modules, and share entire projects.

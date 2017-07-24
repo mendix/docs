@@ -1,6 +1,5 @@
 ---
 title: "Data grid"
-space: "Reference Guide 6"
 parent: "data-widgets"
 ---
 

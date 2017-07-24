@@ -1,6 +1,5 @@
 ---
 title: "Offline"
-space: "Mendix 7 Reference Guide"
 category: "General"
 ---
 

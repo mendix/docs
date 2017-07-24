@@ -1,6 +1,5 @@
 ---
 title: 'Collaboration & Project Management'
-space: "Mendix 5 How-to's"
 ---
 
 Learn how to build apps in a team, share your code base and manage your projects.

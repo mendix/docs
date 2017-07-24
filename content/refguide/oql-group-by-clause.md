@@ -1,6 +1,5 @@
 ---
 title: "OQL Group by Clause"
-space: "Mendix 7 Reference Guide"
 parent: "oql"
 ---
 

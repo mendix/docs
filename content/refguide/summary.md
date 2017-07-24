@@ -1,6 +1,5 @@
 ---
 title: "Summary"
-space: "Mendix 7 Reference Guide"
 category: "General"
 ---
 

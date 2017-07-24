@@ -1,6 +1,5 @@
 ---
 title: "Getting Started"
-space: "Mendix 7 How-To's"
 description: "These introductory how-to's describe how to get started with the Mendix Modeler as well as how to create and deploy your first app and how to implement styles."
 ---
 

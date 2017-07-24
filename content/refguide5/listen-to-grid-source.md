@@ -1,7 +1,6 @@
 ---
 title: "Listen To Grid Source"
 parent: "data-sources"
-space: "Reference Guide 5"
 ---
 
 

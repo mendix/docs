@@ -1,7 +1,6 @@
 ---
 title: "Grid microflow button"
 parent: "control-bar"
-space: "Reference Guide 5"
 ---
 
 

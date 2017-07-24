@@ -1,7 +1,6 @@
 ---
 title: "Context Mechanism"
 parent: "page-concepts"
-space: "Reference Guide 5"
 ---
 
 

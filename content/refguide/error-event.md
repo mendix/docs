@@ -1,6 +1,5 @@
 ---
 title: "Error Event"
-space: "Mendix 7 Reference Guide"
 parent: "microflows"
 ---
 

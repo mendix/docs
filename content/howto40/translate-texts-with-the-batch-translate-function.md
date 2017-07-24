@@ -1,7 +1,6 @@
 ---
 title: "Translate Texts With the Batch Translate Function"
 parent: "translatable-texts"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

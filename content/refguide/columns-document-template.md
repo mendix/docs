@@ -1,6 +1,5 @@
 ---
 title: "Columns (document template)"
-space: "Mendix 7 Reference Guide"
 parent: "data-grid-document-template"
 ---
 

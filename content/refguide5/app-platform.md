@@ -1,7 +1,6 @@
 ---
 title: "App Platform"
 category: "General"
-space: "Reference Guide 5"
 ---
 
 

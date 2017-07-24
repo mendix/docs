@@ -1,6 +1,5 @@
 ---
 title: "JSON Structures"
-space: "Mendix 7 Reference Guide"
 parent: "integration"
 ---
 

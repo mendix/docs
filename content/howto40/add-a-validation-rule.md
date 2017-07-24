@@ -1,7 +1,6 @@
 ---
 title: "Add a Validation Rule"
 parent: "validation-rules"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

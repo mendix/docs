@@ -1,6 +1,5 @@
 ---
 title: "API & SDK"
-space: "API & SDK"
 description: "Presents the Mendix API documentation as well as the documentation for the Mendix platform SDK."
 ---
 

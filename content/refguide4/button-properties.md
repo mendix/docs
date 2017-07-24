@@ -1,7 +1,6 @@
 ---
 title: "Button Properties"
 parent: "control-bar"
-space: "Reference Guide 4"
 ---
 ## Appearance Properties
 

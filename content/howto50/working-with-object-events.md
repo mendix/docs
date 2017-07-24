@@ -1,7 +1,6 @@
 ---
 title: "Working With Object Events"
 category: "Data Models"
-space: "Mendix 5 How-to's"
 ---
 
 When working with the Platform, objects are being created, removed, or reverted back to the original. Based on the state of the object and the 'Object Events' that are specified in the domain model, different actions are taken by the platform to guarantee data consistency. 

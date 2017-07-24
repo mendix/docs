@@ -1,7 +1,6 @@
 ---
 title: "Connect an Entity to a Data View"
 parent: "data-view"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

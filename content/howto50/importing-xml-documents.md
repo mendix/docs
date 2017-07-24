@@ -1,7 +1,6 @@
 ---
 title: "Importing XML documents"
 category: "Integration"
-space: "Mendix 5 How-to's"
 ---
 
 Mendix is "The App Platform for the Enterprise" and in enterprise software it is not likely that you work in a [green field](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation you will need to integrate with existing systems. Mendix supports many ways of integration but this how-to focuses on how you can import XML documents with Mendix.

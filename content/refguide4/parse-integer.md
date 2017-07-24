@@ -1,7 +1,6 @@
 ---
 title: "Parse integer"
 parent: "microflow-expressions"
-space: "Reference Guide 4"
 ---
 Try to convert a string to an integer.
 

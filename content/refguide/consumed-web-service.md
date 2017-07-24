@@ -1,6 +1,5 @@
 ---
 title: "Consumed web service"
-space: "Mendix 7 Reference Guide"
 parent: "consumed-web-services"
 ---
 

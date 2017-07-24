@@ -1,7 +1,6 @@
 ---
 title: "Configure Delete Behavior"
 parent: "associations"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

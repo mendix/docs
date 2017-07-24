@@ -1,7 +1,6 @@
 ---
 title: "Layout Widgets"
 parent: "pages"
-space: "Reference Guide 5"
 ---
 
 

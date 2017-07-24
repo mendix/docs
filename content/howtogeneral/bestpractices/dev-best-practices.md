@@ -1,6 +1,5 @@
 ---
 title: "Mendix Development Best Practices"
-space: "General How-To's"
 category: "Best Practices"
 ---
 

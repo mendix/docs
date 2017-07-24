@@ -1,6 +1,5 @@
 ---
 title: "Create Your First Two Overview and Detail Pages"
-space: "Mendix 6 How-to's"
 category: "GUIs"
 tags: []
 ---

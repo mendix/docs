@@ -1,6 +1,5 @@
 ---
 title: "Setting up monitoring with New Relic"
-space: "Mendix 6 How-to's"
 category: "On-Premises Deployment"
 tags: []
 ---

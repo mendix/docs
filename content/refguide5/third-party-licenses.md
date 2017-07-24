@@ -1,7 +1,6 @@
 ---
 title: "Third Party Licenses"
 category: "General"
-space: "Reference Guide 5"
 ---
 
 

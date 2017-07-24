@@ -1,6 +1,5 @@
 ---
 title: "Best Practices"
-space: "General How-To's"
 ---
 This category contains documents about best practices when developing with Mendix.
 

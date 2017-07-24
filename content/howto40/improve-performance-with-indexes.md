@@ -1,7 +1,6 @@
 ---
 title: "Improve Performance with Indexes"
 parent: "indexes"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

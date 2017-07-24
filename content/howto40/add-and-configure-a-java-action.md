@@ -1,7 +1,6 @@
 ---
 title: "Add and Configure a Java Action"
 parent: "java-actions"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

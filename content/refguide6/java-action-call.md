@@ -1,6 +1,5 @@
 ---
 title: "Java Action Call"
-space: "Reference Guide 6"
 parent: "action-call-activities"
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Navigation Tree"
 parent: "menu-widgets"
-space: "Reference Guide 5"
 ---
 
 

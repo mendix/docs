@@ -1,6 +1,5 @@
 ---
 title: "How to Submit Support Requests"
-space: "General How-To's"
 category: "Mendix Support"
 #parent: ""
 #description: ""

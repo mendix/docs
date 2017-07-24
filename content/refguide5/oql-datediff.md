@@ -1,7 +1,6 @@
 ---
 title: "OQL DATEDIFF"
 parent: "oql-functions"
-space: "Reference Guide 5"
 ---
 
 

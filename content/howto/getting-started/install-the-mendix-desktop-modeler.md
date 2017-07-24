@@ -1,6 +1,5 @@
 ---
 title: "Install the Mendix Desktop Modeler"
-space: "Mendix 7 How-To's"
 category: "Getting Started"
 description: "Follow this how-to to learn how to install the Mendix Desktop Modeler."
 toc-level: "2"

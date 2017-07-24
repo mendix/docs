@@ -1,6 +1,5 @@
 ---
 title: "Header"
-space: "Mendix 7 Reference Guide"
 parent: "layout-widgets"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Mendix Platform"
-space: "Mendix 7 Reference Guide"
 category: "General"
 description: "Provides an introduction to the various features of the Mendix platform."
 ---

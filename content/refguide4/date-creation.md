@@ -1,7 +1,6 @@
 ---
 title: "Date creation"
 parent: "microflow-expressions"
-space: "Reference Guide 4"
 ---
 Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between the two is that `dateTime` uses the calendar of the session used in this function call and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default but can be set in project settings.
 

@@ -1,6 +1,5 @@
 ---
 title: "XPath contains"
-space: "Reference Guide 6"
 parent: "xpath-constraint-functions"
 ---
 

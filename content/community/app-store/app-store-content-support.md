@@ -1,6 +1,5 @@
 ---
 title: "App Store Content Support"
-space: "Community"
 category: "App Store"
 ---
 

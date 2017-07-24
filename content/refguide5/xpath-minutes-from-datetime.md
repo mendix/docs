@@ -1,7 +1,6 @@
 ---
 title: "XPath minutes-from-dateTime"
 parent: "xpath-constraint-functions"
-space: "Reference Guide 5"
 ---
 
 

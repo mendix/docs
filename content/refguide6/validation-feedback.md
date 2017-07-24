@@ -1,6 +1,5 @@
 ---
 title: "Validation Feedback"
-space: "Reference Guide 6"
 parent: "client-activities"
 ---
 

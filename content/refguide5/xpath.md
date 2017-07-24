@@ -1,7 +1,6 @@
 ---
 title: "XPath"
 category: "Modeler"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "Design the Architecture"
-space: "Mendix 6 How-to's"
 category: "On-Premises Deployment"
 ---
 

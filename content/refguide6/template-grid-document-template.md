@@ -1,6 +1,5 @@
 ---
 title: "Template Grid (document template)"
-space: "Reference Guide 6"
 parent: "document-templates"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Navigation Tree"
-space: "Mendix 7 Reference Guide"
 parent: "menu-widgets"
 ---
 

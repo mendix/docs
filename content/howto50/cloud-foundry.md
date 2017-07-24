@@ -1,6 +1,5 @@
 ---
 title: Cloud Foundry
-space: "Mendix 5 How-to's"
 ---
 
 Learn how to deploy your app to a Cloud Foundry instance.

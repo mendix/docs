@@ -1,7 +1,6 @@
 ---
 title: "Rules"
 category: "Modeler"
-space: "Reference Guide 5"
 ---
 
 

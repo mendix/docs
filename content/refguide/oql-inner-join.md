@@ -1,6 +1,5 @@
 ---
 title: "OQL INNER JOIN"
-space: "Mendix 7 Reference Guide"
 parent: "oql-from-clause"
 ---
 

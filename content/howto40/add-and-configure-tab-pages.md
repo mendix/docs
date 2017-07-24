@@ -1,7 +1,6 @@
 ---
 title: "Add and Configure Tab Pages"
 parent: "tab-control"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

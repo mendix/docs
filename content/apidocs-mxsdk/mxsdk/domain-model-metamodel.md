@@ -1,6 +1,5 @@
 ---
 title: "Domain Model (Metamodel)"
-space: "API & SDK"
 parent: "understanding-the-metamodel"
 ---
 ## Overview

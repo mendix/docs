@@ -1,7 +1,6 @@
 ---
 title: "Opening Forms"
 parent: "form-concepts"
-space: "Reference Guide 4"
 ---
 In many places within forms you can open other forms. For example, the Edit button of the data grid opens a form to edit the selected object.
 

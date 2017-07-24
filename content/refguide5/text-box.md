@@ -1,7 +1,6 @@
 ---
 title: "Text box"
 parent: "input-widgets"
-space: "Reference Guide 5"
 ---
 
 

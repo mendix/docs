@@ -1,6 +1,5 @@
 ---
 title: "JavaScript & TypeScript Resources"
-space: "API & SDK"
 parent: "reference-documentation"
 ---
 # So what is this TypeScript thing?

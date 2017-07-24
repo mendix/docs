@@ -1,7 +1,6 @@
 ---
 title: "Testing Mendix applications using Selenium IDE"
 category: "Testing"
-space: "Mendix 5 How-to's"
 ---
 
 Selenium IDE is a Firefox plugin which records and plays back user interactions with the browser. 

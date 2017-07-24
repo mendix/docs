@@ -1,6 +1,5 @@
 ---
 title: "Environments"
-space: "Developer Portal"
 category: "Deploy"
 description: "This page describes the deploy options of your App."
 tags: ["Deploy","App","Developer Portal"]

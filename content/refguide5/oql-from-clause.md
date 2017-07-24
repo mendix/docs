@@ -1,7 +1,6 @@
 ---
 title: "OQL From Clause"
 parent: "oql"
-space: "Reference Guide 5"
 ---
 
 

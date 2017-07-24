@@ -1,6 +1,5 @@
 ---
 title: "OQL Where Clause"
-space: "Reference Guide 6"
 parent: "oql"
 ---
 

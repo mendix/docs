@@ -1,7 +1,6 @@
 ---
 title: "Custom Settings"
 category: "Runtime"
-space: "Reference Guide 5"
 ---
 
 

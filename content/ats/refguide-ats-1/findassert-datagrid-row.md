@@ -1,6 +1,5 @@
 ---
 title: "Find/Assert DataGrid Row"
-space: "ATS Add-On" 
 parent: "datagrid-templategrid-listview"
 ---
 

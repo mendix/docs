@@ -1,7 +1,6 @@
 ---
 title: "Security Checklist For Your On-Premises Installation"
 category: "Deployment"
-space: "Mendix 4 How-to's"
 ---
 
 ### Use a Mendix Version Containing the Latest Security Patches

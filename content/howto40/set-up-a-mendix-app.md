@@ -1,7 +1,6 @@
 ---
 title: "Set Up a Mendix App"
 parent: "mendix-on-windows---service-console-4"
-space: "Mendix 4 How-to's"
 ---
 
 ### Add an App

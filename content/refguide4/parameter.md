@@ -1,7 +1,6 @@
 ---
 title: "Parameter"
 parent: "microflows"
-space: "Reference Guide 4"
 ---
 A parameter is data that serves as input for the microflow. Parameters are filled at the location from where the microflow is triggered.
 

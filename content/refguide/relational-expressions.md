@@ -1,6 +1,5 @@
 ---
 title: "Relational expressions"
-space: "Mendix 7 Reference Guide"
 parent: "microflow-expressions"
 ---
 Relational expressions allow the user to compare variables and base changes and actions upon that information. The return type of such expressions is always boolean.

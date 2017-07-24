@@ -1,6 +1,5 @@
 ---
 title: "Uniqueness Constraint Migration"
-space: "Mendix 7 Reference Guide"
 parent: "data-storage"
 ---
 

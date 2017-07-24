@@ -1,6 +1,5 @@
 ---
 title: "Build a Logistics IoT App"
-space: "Mendix 7 How-To's"
 category: "Tutorials"
 description: "Introduces the series that will describe how to expand the Mendix Logistics IoT app."
 tags: ["iot", "logistics", "supply chain", "cargo", "shipment", "logistics", "sensor"]

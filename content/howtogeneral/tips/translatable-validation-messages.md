@@ -1,6 +1,5 @@
 ---
 title: "Translatable Validation Messages"
-space: "General How-To's"
 category: "Tips & Tricks"
 ---
 

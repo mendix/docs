@@ -1,7 +1,6 @@
 ---
 title: "Database Source"
 parent: "data-sources"
-space: "Reference Guide 5"
 ---
 
 

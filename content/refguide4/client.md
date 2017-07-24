@@ -1,6 +1,5 @@
 ---
 title: "Client"
-space: "Reference Guide 4"
 ---
 The Client creates the interface of your Mendix application. It shows pages served by the Mendix Runtime and handles user interaction.
 

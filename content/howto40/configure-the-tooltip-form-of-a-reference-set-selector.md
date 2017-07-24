@@ -1,7 +1,6 @@
 ---
 title: "Configure the Tooltip Form of a Reference Set Selector"
 parent: "reference-set-selector"
-space: "Mendix 4 How-to's"
 ---
 ## Description
 

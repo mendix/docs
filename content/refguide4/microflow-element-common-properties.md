@@ -1,7 +1,6 @@
 ---
 title: "Microflow Element Common Properties"
 parent: "microflows"
-space: "Reference Guide 4"
 ---
 Here we discuss properties that are shared by many elements in the microflow editor.
 

@@ -1,6 +1,5 @@
 ---
 title: "App Platform"
-space: "Reference Guide 4"
 ---
 The App Platform takes a lightweight, social approach to enterprise project collaboration. We believe that engaging and empowering people facilitates collaboration and therefore co-creation in any organization. The Mendix App Platformoffers a unique combination of project management tools and social activity streams, offering a way to interact with colleagues, project team members, and even external people involved in projects.
 

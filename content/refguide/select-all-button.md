@@ -1,6 +1,5 @@
 ---
 title: "Select all button"
-space: "Mendix 7 Reference Guide"
 parent: "control-bar"
 ---
 

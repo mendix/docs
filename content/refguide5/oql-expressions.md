@@ -1,7 +1,6 @@
 ---
 title: "OQL Expressions"
 parent: "oql"
-space: "Reference Guide 5"
 ---
 
 

@@ -1,6 +1,5 @@
 ---
 title: "XPath avg"
-space: "Mendix 7 Reference Guide"
 parent: "xpath-query-functions"
 ---
 

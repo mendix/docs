@@ -1,7 +1,6 @@
 ---
 title: "Date picker"
 parent: "input-widgets"
-space: "Reference Guide 5"
 ---
 
 

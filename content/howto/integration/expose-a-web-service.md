@@ -1,6 +1,5 @@
 ---
 title: "Expose a Web Service"
-space: "Mendix 7 How-To's"
 category: "Integration"
 description: "Describes how Mendix supports exposing the functionality and data of your app using web services."
 ---

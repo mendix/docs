@@ -1,6 +1,5 @@
 ---
 title: "Set Up Your Community Profile"
-space: "Community"
 category: "Tools"
 ---
 

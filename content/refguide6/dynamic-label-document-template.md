@@ -1,6 +1,5 @@
 ---
 title: "Dynamic label (document template)"
-space: "Reference Guide 6"
 parent: "document-templates"
 ---
 

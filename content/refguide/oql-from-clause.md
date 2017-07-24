@@ -1,6 +1,5 @@
 ---
 title: "OQL From Clause"
-space: "Mendix 7 Reference Guide"
 parent: "oql"
 ---
 

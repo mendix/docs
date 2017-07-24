@@ -66,15 +66,15 @@ This option is meant for customers who run their app on premises and who don't w
 
 This option is meant for customers who run their app on premises and who also want to run their own Selenium Runner. The challenging part of this option is that the customer needs to set up, maintain, and operate its own Selenium Runner.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 Selenium is an open-source third-party component and there is no active support from Mendix.
-</div>
+{{% /alert %}}
 
 Since the Selenium Runner offers fewer features compared to Selenium SaaS Providers, it is not possible to make use of the full ATS feature set.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 The feature set in this option is limited.
-</div>
+{{% /alert %}}
 
 ## 4 Comparing the Options
 
@@ -148,17 +148,17 @@ TestingBot       | TestingBot Tunnel   | [Here](https://testingbot.com/support/o
 
 This option requires you to set up your own Selenium Server on-premises.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 Selenium is an open-source third-party component and there is no active support from Mendix.
-</div>
+{{% /alert %}}
 
 #### 5.4.1 Selenium Runner Setup
 
 We provide basic installation instructions for the Selenium Runner based on Docker containers. For details, see [Get Started with Docker](https://docs.docker.com/engine/getstarted/), [Selenium Documentation](http://www.seleniumhq.org/docs/), and [Docker-Selenium](https://github.com/SeleniumHQ/docker-selenium).
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 The current ATS version requires Selenium version 2.53.0. If ATS upgrades to a newer Selenium version, the customer is obligated to upgrade its Selenium Runner to the new version as well.
-</div>
+{{% /alert %}}
 
 Before you start, make sure that your server has internet access to download the container images.
 

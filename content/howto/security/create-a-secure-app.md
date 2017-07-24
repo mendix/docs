@@ -171,11 +171,11 @@ To create access roles for the Administrator module role, follow these steps:
 
 3. Click **OK**.
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
     A separate access rule will be created for all entities when the module role is set to Administrator. It is possible to adjust each rule individually later.
 
-    </div>
+    {{% /alert %}}
 
 ### 5.3 Creating Access Rules for the User Module Role
 

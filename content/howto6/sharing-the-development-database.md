@@ -77,11 +77,11 @@ To import a data snapshot into the model, the project has to be updated since th
     ![](attachments/18448637/18580417.png)
 3.  Now copy the data directory to the data directory in the deployment directory
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Make sure the names of the databases aren't the same or make a copy of your own database first so it will not be overwritten
 
-</div>
+{{% /alert %}}
 
 ## 8\. Related content
 

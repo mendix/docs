@@ -7,13 +7,13 @@ parent: "input-widgets"
 
 The radio buttons widget is an [input widget](input-widgets) that can be used to display and edit boolean and enumeration attributes.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713885/16844015.png)
 
 These radio buttons are used to indicate whether the user wants to receive the newsletter (boolean, rendered horizontally) and to select his/her favorite color (enumeration, rendered vertically).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General properties
 

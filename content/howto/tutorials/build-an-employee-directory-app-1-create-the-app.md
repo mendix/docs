@@ -46,11 +46,11 @@ In the app's **Buzz** page in the Developer Portal, click **Edit App** to open y
 
 ![](attachments/build-an-employee-directory-app/edit-app.png)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Clicking **Edit App** will open your app for editing in the Web Modeler by default. If you want to edit your app in the Desktop Modeler, click the drop-down arrow on the right side of the **Edit App** button and select **Edit in Desktop Modeler**.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 5 Welcome to the Web Modeler
 

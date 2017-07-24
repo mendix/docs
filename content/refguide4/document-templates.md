@@ -5,11 +5,11 @@ space: "Reference Guide 4"
 ---
 Document Templates are used to model a template required as input for a document export action which can generate all kinds of documents based on application data. They are composed much in the same way as [Web Forms](web-forms).
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This page describes what document templates are for and what kind of widgets can be placed on them. If you want to see the properties of the document template you can check the documentation for a [Document Template](document-template) itself.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The document templates also contain components, also know as _widgets_. Below is a categorized overview of all widgets. The following categories are used:
 

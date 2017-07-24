@@ -75,11 +75,11 @@ Whenever your public key is known, anyone who is authorized to grant access to o
 4.  Click **Open.** A login prompt will appear.
 5.  Enter the **username** of the login account and the system should should grant you access, informing you you've been authenticated using your keys.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 As an alternative you can directly enter the username in the server name edit field by specifying it in the user@server format, e.g. "myappdev@[example.mendix.net](http://example.mendix.net)". When opening this 'session', no username login prompt will appear.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 5\. Related content
 

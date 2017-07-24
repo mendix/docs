@@ -19,11 +19,11 @@ The new button allows the end-user to create new objects in a grid or reference 
 
 This property determines of which entity this button should create an instance. If the entity that is connected to the grid or reference set selector has no specializations, the page builder will automatically set this property for you. Otherwise, you will have to select one of the specializations yourself.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say you have an entity Vehicle and two specializations, namely Bicycle and Car. In a grid on Vehicle you have to specify for the New button whether a Vehicle, a Bicycle or a Car will be created. You can even have three new buttons, one for each possibility.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General Properties
 
@@ -55,8 +55,8 @@ See [Opening Pages](opening-pages).
 
 ## Visibility Properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 {% snippet Visible+Property.md %}

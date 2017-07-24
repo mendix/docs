@@ -4,11 +4,11 @@ space: "Reference Guide 6"
 parent: "report-widgets"
 ---
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This has been removed in version 6.10.0 as it is unnecessary.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Reports are defined in a report pane, which is inserted in a [page](pages).
 

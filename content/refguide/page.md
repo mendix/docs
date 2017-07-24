@@ -5,11 +5,11 @@ parent: "pages"
 ---
 
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes the properties of a page. If you want to see what pages are for and what kind of widgets can be placed on them, please read the [Pages](pages) overview documentation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Pages define the end user interface of a Mendix application. Every page is based on a [layout](layout). A page fills the 'gaps' defined by a layout with widgets such as the [data view](data-view) and the [data grid](data-grid).
 
@@ -29,10 +29,10 @@ The class property allows you to specify a cascading style sheet (CSS) class for
 
 The style property allows you to specify custom cascading style sheet (CSS) rules for this page. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 `background-color:blue;`
 This will result in a blue background
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Designer Properties
 

@@ -36,11 +36,11 @@ In this section, you will install the SMTP email module and integrate it into an
 
 2. Download and set up the [Encryption Module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption), which will allow for protected passwords. 
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
     As with all app store modules, it is important that you do NOT modify any contents within the module itself. If you do, you run the risk of having your changes overwritten upon the next update.
 
-    </div>
+    {{% /alert %}}
 3. Create a new module called **EmailCustomizations** to house the project-specific pages and flows:
 
     ![](attachments/19202956/19398975.png)
@@ -61,11 +61,11 @@ In this section, you will install the SMTP email module and integrate it into an
 
 2. Click **Save** to commit the settings to the database.
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
     Send a test email. The module includes a Test button at the bottom of the settings page. This will allow you to enter a destination email address that should receive a test message to make sure things are working correctly.
 
-    </div>
+    {{% /alert %}}
 
 ## 4 Sending an Email in a Microflow
 
@@ -99,11 +99,11 @@ To send an email in a microflow, follow these steps:
 
     ![](attachments/19202956/19398983.png)
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
     Don’t forget to put a progress bar on the call for your action button. In the time it takes to send the email, you want users to know that the app is still working.
 
-    </div>
+    {{% /alert %}}
 5. In the microflow **IVK_UserManualEmailSend**, call the **IVK_SendEmail** sub microflow in the SMTP module, and then close the page:
 
     ![](attachments/19202956/19398984.png)

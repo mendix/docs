@@ -3,11 +3,11 @@ title: "Document Template"
 parent: "document-templates"
 space: "Reference Guide 4"
 ---
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes the properties of a document template. If you want to see what document templates are for and what kind of widgets can be placed on them, you can check the [Document Templates](document-templates) overview documentation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Appearance Properties
 

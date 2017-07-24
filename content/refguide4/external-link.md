@@ -64,21 +64,21 @@ See [Widget Properties](widget-properties).
 
 This property specifies the attribute (path) whose value will be shown in the external link as the caption. It can be either an attribute of the data view entity, or an attribute of an entity that is associated to the data view entity by following associations of type reference.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If the attribute is set, the static caption is ignored.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### URL attribute (path)
 
 This property specifies the attribute (path) whose value will be the URL of the external link. It can be either an attribute of the data view entity, or an attribute of an entity that is associated to the data view entity by following associations of type reference.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If the attribute is set, the static URL is ignored.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## See also
 

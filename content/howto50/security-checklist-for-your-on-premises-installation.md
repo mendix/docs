@@ -8,11 +8,11 @@ space: "Mendix 5 How-to's"
 
 Use either Mendix version 3.3.3 or 4.3.0 or any newer 3.x or 4.x release. These releases contain important security fixes. If you're running on older versions before 3.3.3, 4.3.0 or even on 2.5.x, upgrade as soon as possible.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 _If your app runs in the Mendix Cloud and uses Mendix version 3.3.3, 4.3.0 or newer it will automatically comply with this checklist once it is deployed._
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Use an unprivileged dedicated user account for every application
 

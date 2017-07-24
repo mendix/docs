@@ -98,10 +98,10 @@ Required/Optional | Sets if the parameter is required to be set.
 
 After an output parameter has been set, this parameter needs to be returned manually by using the _Set Return Value_ action.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 To return a value from an action, you need use the **Set Return Value in a test step**.
 
-</div>
+{{% /alert %}}
 
 ![Set return Value action to return output parameter](attachments/custom-actions/21168189.png)

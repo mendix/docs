@@ -37,11 +37,11 @@ The form settings specify how the form is opened. See [Opening Forms](opening-fo
 
 If the entity that is connected to the grid or reference set selector has specializations you can optionally specify forms for each specialization. When you edit a row in the data grid the most specific form is opened. For each specialization you specify the form to open, where to open it and a title for the form.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say you have an entity Vehicle and two specializations thereof: Bicycle and Car. And there is a specialization of Car called SportsCar. You create a data grid that is connected to Vehicle. With the form property of the data grid you specify what form to open for arbitrary Vehicles. For the specializations Bicycle and Car you create separate forms to edit them. If you now edit a row of type Bicycle the form specific for bicycles will be opened. If you edit a Car, you get the form for cars. If you edit a SportsCar, the form for cars will be opened! There is no form specific for sports cars (in this example) and car is the 'closest' generalization for which there is a form.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Default button
 

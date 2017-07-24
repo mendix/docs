@@ -25,8 +25,8 @@ For more information about development lines, see [Version Control Concepts](ver
 
 If you already have the development line of the project on disk, you will see the message "You already have this project on disk" and the directory will be shown. If you do not have it yet, you can now choose the directory where you want to download the Team Server project to. The suggested name includes the name of the development line ('main' or the name of the branch line).
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The Modeler remembers all projects that you open. In this way it can point you to existing downloads of Team Server projects. If you move a project directory, the Modeler will not see that directory anymore and offer to download a fresh copy. If you want to continue using the existing download, you will have to open it via the 'Disk' option.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

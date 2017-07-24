@@ -7,12 +7,12 @@ space: "Reference Guide 5"
 
 The data view is a central component in Mendix applications. It is the starting point for showing the contents of exactly one object. If, for example, you want to show details of a single customer you would use a data view to do this. The data view typically contains input widgets like text boxes with labels. In more complex screens, a data view can contain tab controls per topic (address, payment information) and data views and data grids for related objects (order history, wish list).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/4522281/14385322.png)
 A more advanced data view with a tab control and a data grid inside.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Components
 
@@ -36,7 +36,7 @@ The internal name of the widget. You can use this to give sensible names to widg
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -44,18 +44,18 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Tab index
 
@@ -101,9 +101,9 @@ _Default value:_ True
 
 ### Empty entity message
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 This property was added in version 5.10.  
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 If this message is specified, a data view that receives no source data will show this message instead of its content. Otherwise, the data view will show its static content and disabled input widgets. This property is a translable text. See [Translatable Texts](translatable-texts).
 
@@ -111,12 +111,12 @@ There are number of ways a data view can end up without source data. For instanc
 
 _Default value:_ empty
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The next two screenshots demonstrate the behavior of an empty data view with and without an empty entity message:
 
 <table><thead><tr><th class="confluenceTh"></th><th class="confluenceTh"></th></tr></thead><tbody></tbody></table>
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Data source properties
 
@@ -144,19 +144,19 @@ The microflow settings specify which parameters to pass to the microflow. See [S
 
 ### Listen target (only for data source type "Listen to widget")
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 The option to select list views as listen targets was added in version 5.10. 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 This property specifies the template grid, data grid, reference set selector or list view that the data view listens to. Whenever an item is selected in the designated widget, the data view displays data corresponding to that item.
 
 All available widgets are listed in the resulting drop-down based on their 'name' property. Data view can only listen to widgets placed on the same page or inside the same snippet.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 A common use case of 'Listen to widget' data source is a page with a data grid showing orders and a data view showing detailed information about the order in the same page.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Use schema
 
@@ -164,9 +164,9 @@ This defines whether only the required attributes and associations for the objec
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added to the data view in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Visible
 

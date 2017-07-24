@@ -7,12 +7,12 @@ parent: "file-widgets"
 
 An image viewer can be used to display an image or its thumbnail.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/918195.png)
 This image viewer shows the product image.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 An image viewer must be placed in a data view or template grid.
 

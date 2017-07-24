@@ -51,11 +51,11 @@ To use the APM tools, you need to call the APM tool UI. Use the **APMAgent/USE_M
 
 ## Optional: Add to After Startup and Before Shutdown
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Using the AfterStartup and BeforeShutdown microflows is advised. If you do not use them and the tool is running, shutting down your Mendix application will take some time waiting for timeouts.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Call `APMAgent\USE_ME\AfterStartup` from an after startup microflow. This feature is runtime-configurable and, by default, none of the tools are started.
 

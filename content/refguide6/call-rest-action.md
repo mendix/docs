@@ -5,9 +5,9 @@ parent: "microflow-activities"
 ---
 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 The Call Rest Action is available since Mendix 6.6.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The Call Rest activity can be used to call a Rest endpoint. You can specify the location and how the response of the rest call should be handled.
 
@@ -57,9 +57,9 @@ Using this option, a single [Export Mapping](export-mappings) can be used to gen
 
 This option allows you to send binary data (for example, the contents of FileDocument) as a request.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 The 'Binary for the entire request' option is available from Mendix 6.9.0.
-</div>
+{{% /alert %}}
 
 ### Custom request template
 
@@ -75,9 +75,9 @@ The response tab offers 4 options, accessible through a dropdown:
 *   Store the response in a string variable. If the response is a string, such as CSV, it can be stored directly in a string variable.
 *   Store the response in a file document. If the response is a binary content, such as PDF, it can be stored directly to a file document. From version 6.10.0 onwards you are required to specify the type of entity to store it in. This entity should inherit from System.FileDocument.
 
-	<div class="alert alert-info">
+	{{% alert type="info" %}}
     The 'Store the response in a file document' option is available from Mendix 6.9.0.
-	</div>
+	{{% /alert %}}
 
 *   Ignore the response. The response does not have to be used though; it can also be ignored if you are not interested in it.
 

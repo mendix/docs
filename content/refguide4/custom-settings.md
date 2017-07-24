@@ -5,11 +5,11 @@ space: "Reference Guide 4"
 ---
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by the Modeler.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Only use this functionality if you know exactly what you are doing. Wrong values can prevent the Runtime from starting.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`.
 

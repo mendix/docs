@@ -5,23 +5,23 @@ space: "Reference Guide 4"
 ---
 A static label shows a line of static text. You can use it to place custom text inside a data view, template grid or table.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 [![](attachments/819203/918130.png)](static-label-document-template)
 
 A label with text 'Customer name'.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 If you want to insert the current page number or the total page count in your document, you can use a token inside a static label (and only in a static label).
 Before version 2.5.4, spaces were automatically inserted on either side of the token. This is no longer the case.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Static label content: Page [%pageNumber%] of [%totalPageCount%]
 Will print: Page 2 of 4
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Appearance Properties
 

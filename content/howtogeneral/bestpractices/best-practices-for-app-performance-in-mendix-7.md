@@ -22,11 +22,11 @@ The following diagram shows the flow of objects in the new architecture in detai
 
 Because all objects necessary for a microflow are transferred between client and server for each request, the network traffic will grow when more objects are used at the same time. Especially on mobile devices, this can become a bottleneck. This leads us to the primary new best practice for Mendix 7.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Minimize the number of in-use objects in your session.
 
-</div>
+{{% /alert %}}
 
 By in-use objects we mean non-persistable objects and uncommitted persistable objects.
 
@@ -36,11 +36,11 @@ Of course, it is not possible to eliminate the need for in-use objects entirely,
 
 To the Mendix Runtime there is very little difference between a non-persistable object and a persistable object that is changed but not committed. Any changes that are not committed at the end of a browser request will be sent to the client for use in future requests. To minimize the number of objects for which this is the case, we recommend the following:
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Commit or roll back the changes to persistable objects before the end of the main microflow.
 
-</div>
+{{% /alert %}}
 
 Any changes that are not committed when a main microflow ends will be sent to the client and become part of the client state which is stored there. In that case, they will also contribute to the size of future requests where they need to be sent back to the Runtime.
 
@@ -54,11 +54,11 @@ If an object is used during a workflow that spans multiple pages, but is not dis
 
 To prevent this from occurring, you can:
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Link non-persistable objects that have long life spans to the current Session object.
 
-</div>
+{{% /alert %}}
 
 To do this, first create a reference between your entity and the Session entity in the System module, as shown in the following image:
 
@@ -78,21 +78,21 @@ When dealing with web- or app-service integrations, you will often use non-persi
 
 In Mendix 7, building an integration as described above will cause all objects that are created to be sent to the client as well. We recommend to:
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Map only those parts of a web service integration that are necessary.
 
-</div>
+{{% /alert %}}
 
 By minimizing the number and size of objects that are created, you reduce the amount of objects that are necessary for the client.
 
 In some cases, there will be objects that are necessary for a microflow to function, but that are not shown on any page in the app. In that case, they will still be sent to the client, since Mendix cannot always determine if they will not be used by widgets and such. For that reason, we also recommend to:
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Delete non-persistable objects as soon as they are no longer necessary.
 
-</div>
+{{% /alert %}}
 
 This goes especially for microflows related to integrations: as soon as the message has been sent, or the response has been processed, remove the objects related to the call. Of course, you should keep objects that are subsequently displayed on a page, but be aware of what was said in the chapter on [Workflow Objects](#workflow-objects). A useful way to easily remove everything related to a service call is to apply delete behavior in your domain model.
 
@@ -100,11 +100,11 @@ This goes especially for microflows related to integrations: as soon as the mess
 
 Be careful when using non-persistable objects in layouts. Since layouts can be used for many pages in your app, objects in layouts can be on the screen for a long time. If you use non-persistable objects here, these will be sent back and forth between the client and Runtime very often, since they are always available. We recommend the following:
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Don’t use non-persistable objects in layouts.
 
-</div>
+{{% /alert %}}
 
 This will reduce the number of in-use objects. The same goes for non-persistable objects that are not directly used in a layout, but have a reference to objects in a layout. Since they can be retrieved via the object in the layout, they will live as long as that object. This too should be avoided.
 

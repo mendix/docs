@@ -133,11 +133,11 @@ Next, you have to configure the Find Widget Child node sub-action. Make sure tha
 
 The **Edit Input Value** dialog will open. Select the **Action Input Parameter** category. Make sure that **Widget Name** is selected as the **Action Input Parameter**. Now click **Save**.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In the **Action Input Parameter** category, you will find all of the input parameters you have created for the custom action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ![](attachments/create-custom-action/editinputvalue.png)
 
@@ -157,11 +157,11 @@ Next, you have to set the output value of the Get Text action as a return value 
 
 Click **Add** and search for *Set Return Value*. Add the corresponding action as sub-action. After you have added the [Set Return Value](../refguide-ats-1/set-return-value) action, double-click the **"Value"** row in **Input Values** table. In the **Edit Input Value** dialog box, click the category **Test Step Output** and select **#2 Value [String]**. Click **Save**.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The **Test Step Output** category contains all output values of your test/action steps. You can identify the number of the test/action step by the number with the leading `#`.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ![](attachments/create-custom-action/setreturnvalue.png)
 

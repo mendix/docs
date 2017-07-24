@@ -15,13 +15,13 @@ If a vertical split pane is placed as a top-level widget in a form, it must be t
 
 This property determines the ratio of the panes in percentages. Both panes are presented by an integer value in this semi-colon separated list. Please note that the sum of the two values in this list must be exactly 100.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 40;60
 
 This will result in a vertical split pane with 40 percent of the width reserved for the left pane and 60 percent reserved for the right pane.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Animated resize
 
@@ -33,11 +33,11 @@ _Default value:_ False
 
 The height property determines the height of the split pane. A height of zero means that the split pane will get the default height that is defined in the theme.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This property only has effect if the split pane is placed in a web-layout theme. In themes with application layout the split pane will always take 100% of the available height.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value:_ 0
 

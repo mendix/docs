@@ -34,11 +34,11 @@ To access native functions of the device, we provide a number of PhoneGap widget
 
 ### Offline Apps
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The documentation in this section describes a new feature that is still in beta, and is subject to change before the final release.
 
-{% endmarkdown %}</div>A separate profile is available for building [offline apps](offline). These apps can run even when there is no network connection available, because they store their data on the device itself. When the device connects to the network, the user can synchronize with the main application. Note that there are some restrictions compared to connected apps.
+{{% /alert %}}A separate profile is available for building [offline apps](offline). These apps can run even when there is no network connection available, because they store their data on the device itself. When the device connects to the network, the user can synchronize with the main application. Note that there are some restrictions compared to connected apps.
 
 For more information on hybrid mobile apps, see:
 

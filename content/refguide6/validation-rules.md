@@ -9,17 +9,17 @@ Validation rules are conditions that should be satisfied before an object is com
 
 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 For entity 'Customer' the name and credit need to be filled in at all times, and the expenses cannot be higher than the credit. This is visualized in the domain model editor as follows:
 
 ![](attachments/819203/917546.png)
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+{{% /alert %}}{{% alert type="warning" %}}
 
 Only persistable entities can define validation rules as they say something about database integrity. Therefore, validation rules are disabled for non-persistable entities.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General Properties
 
@@ -48,11 +48,11 @@ The rule defines which condition an attribute should satisfy.
 
 _Default value:_ Required
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Date values should be entered in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format, for example 2015-07-26.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Rule Order
 
@@ -60,8 +60,8 @@ Validation rules can be ordered in the modeler. The order of the rules determine
 
 The `uniqueness` validations do not comply to the defined order. This validation requires a database query and is executed only when the complete object satisfies to all the other validation rules. 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 From Mendix 6.6 onwards, the behavior of validation has changed slightly: The `uniqueness` validations are all shown at once (previously the first uniqueness violation stopped further validations).
 
-{% endmarkdown %}</div>
+{{% /alert %}}

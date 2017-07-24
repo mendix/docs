@@ -27,12 +27,12 @@ Note that the styling is applied in the following order:
 
 The style property allows you to specify additional CSS styling for the button. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 font-size:40px;background-color:blue;color:orange;
 This will result in a orange label with a font size of 40 pixels on a blue background.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Behavior Properties
 

@@ -122,11 +122,11 @@ In this section, you are going to create a new maintenance plan called **MP_USER
 
     ![](attachments/18448653/18580658.png) .
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 You should adapt the times set to your desired backup retention time. The cleanup might be set to smaller intervals in order to save disk space.
 
-</div>
+{{% /alert %}}
 
 ### 3.4 System Databases
 

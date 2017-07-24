@@ -7,12 +7,12 @@ space: "Reference Guide 5"
 
 A navigation list can be used to attach an action to an entire row. Such a row is called a navigation list item.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/4522249/4751365.png)
 A navigation list with three empty rows.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common properties
 
@@ -20,7 +20,7 @@ A navigation list with three empty rows.
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -28,18 +28,18 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 # Navigation list item
 
@@ -53,9 +53,9 @@ Action defines what action is performed when a navigation list item is 'clicked'
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Visible
 

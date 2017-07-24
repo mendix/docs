@@ -5,11 +5,11 @@ toc-level: 1
 category: "Desktop Modeler"
 ---
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This document describes known issues starting with Mendix version 7.0.2. For known issues in earlier Mendix versions, see the [Desktop Modeler release notes](index).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 7.5
 

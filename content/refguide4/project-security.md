@@ -3,11 +3,11 @@ title: "Project Security"
 parent: "project"
 space: "Reference Guide 4"
 ---
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 For more general information on security, see [Security](security).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 In the project security dialog you can configure security settings related to the project, such as the security level, user roles, administrator access, and anonymous users.
 
@@ -23,15 +23,15 @@ The security level defines how security is applied and which security settings n
 | Prototype / demo | Security is applied to signing in, forms, and microflows. Users can access all data. | Administrator and anonymous access, user roles, and security for forms and microflows. |
 | Production | Full security is applied. | Administrator and anonymous access, user roles, and security for forms, microflows, entities, and reports. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Security levels 'Off' and 'Prototype / demo' are only allowed in development and test; for acceptance and production you need to use the 'Production' security level and configure all security settings accordingly.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 All other security settings are only visible if the security level is 'Prototype / demo' or 'Production'.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Check security (only for security level Production)
 
@@ -98,11 +98,11 @@ The sign-in microflow has two parameters.
 | AnonymousUser | Object of entity 'System.User' | The 'User' object of the anonymous user. This object will be automatically deleted after the execution of the sign-in microflow. |
 | SignedInUser | Object of entity 'System.User' | The 'User' object of the signed-in user. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Clean up objects that were attached to the anonymous user and that you do _not_ transfer to the signed-in user. Since the anonymous user is deleted after running the sign-in microflow, you can use [delete behavior](associations) to automatically clean objects that were attached to the anonymous user.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The sign-in microflow is executed when an end-user:
 
@@ -110,11 +110,11 @@ The sign-in microflow is executed when an end-user:
 2.  clicks a button for which she does not have access, which causes a sign-in screen to appear, and then
 3.  signs in to your application.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 An anonymous user in a web shop adds some items to her shopping cart and then clicks the 'Check out' button. A sign-in screen appears, and the user signs in. The sign-in microflow is executed and transfers the shopping cart of the anonymous user to the signed-in user.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Password policy
 

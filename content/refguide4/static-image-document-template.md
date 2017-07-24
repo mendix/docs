@@ -5,13 +5,13 @@ space: "Reference Guide 4"
 ---
 A static image shows a predefined image. It can be put either in- or outside a data view or templategrid.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 [![](attachments/819203/918133.png)](static-image-document-template)
 
 A static image inside a table cell.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Appearance Properties
 

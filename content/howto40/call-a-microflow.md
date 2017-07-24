@@ -25,11 +25,11 @@ In order to call a microflow from our widget, we first need to assign it to the 
 
 In this example, our microflow will use the entity context from the Dataview our widget is in and return a string variable. To learn how to retrieve the context object in JavaScript, read this how-to: [Use the Data View context object](use-the-data-view-context-object).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 You can use a _entityProperty="MyEntity"_ argument to have your microflow require a different entity.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
  **Create your microflow.**
 

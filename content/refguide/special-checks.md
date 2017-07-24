@@ -71,13 +71,13 @@ isNew($object1)
 
 ## Checking Whether an Object Is Synced
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This function is available only in expressions for [conditional visibility or editability](conditions), as only they are evaluated client-side.
 
 This was added in Mendix 7.1.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Input
 

@@ -51,11 +51,11 @@ the desktop.
 
 If your app is offline-compatible, ensure that a sync button is available to the user so that device registration requests will be synchronized with the server. Also, make sure your app has an offline device profile (for details, see [Offline Device Profile](/refguide7/offline-device-profile) in the Mendix Reference Guide).
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Please do not remove the buttons with the caption "GCM Settings reference" and "Device Registration reference" from the PushNotification_Snippet. They are necessary to make the widget offline-compatible. Please note that both buttons are invisible to the user.
 
-</div>
+{{% /alert %}}
 
 ![](attachments/19955732/20217888.jpg)
 
@@ -74,11 +74,11 @@ Add the **PushNotifications_Administration** page to the project navigation, so 
 * **Devices** – contains a list of all the devices registered with the application and is useful for testing purposes
 * **Configuration** – used to configure your application so that it can reach the respective services (APNs and FCM) later on
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Do not add the administration pages to the navigation layout of offline devices. The administration pages are not offline-compatible.
 
-</div>
+{{% /alert %}}
 
 ### 3.6 Step 6 – Set Up the Project Security for Your Module
 
@@ -93,11 +93,11 @@ On the **User roles** tab of the **Project Security** dialog box, include the fo
 
 At this point, all the implementation steps are done and you can deploy your application to the Mendix Cloud. If you are using a free app, simply click **Run**.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a NullPointerException when you try to send a notification to APNs. If you are using a free app, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Cloud portal.
 
-</div>
+{{% /alert %}}
 
 ### 3.8 Step 8 – Set Up Access to APNs and FCM
 

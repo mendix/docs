@@ -271,11 +271,11 @@ both return:
 
 Compares the two numbers to decimal point p, which is equal to Precision.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This function is deprecated together with the Float type. Use the high-precision Decimal type instead.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Input
 
@@ -318,8 +318,8 @@ false
 
 See floatsEqual.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This function is deprecated together with the Float type. Use the high-precision Decimal type instead.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

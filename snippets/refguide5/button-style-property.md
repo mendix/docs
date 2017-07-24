@@ -1,9 +1,9 @@
 ### Button Style
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
 Added in Mendix 5.18.
 
-{% endmarkdown %}</div>
+</div>
 
 This property applies a predefined styling to the button.

@@ -20,11 +20,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Read [How to Create and Deploy Your First App](../getting-started/create-and-deploy-your-first-app)
 * You need Eclipse: download it [here](https://eclipse.org/)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 You can use any text editor to create custom Java actions, but we highly recommend using Eclipse. The Modeler contains a **Deploy for Eclipse** feature verifying that everything that needs to be configured in Eclipse is done automatically. All you have to do is import the project into your Eclipse working environment.
 
-</div>
+{{% /alert %}}
 
 ## 3 Adding Java Actions in the Modeler
 

@@ -9,11 +9,11 @@ The association source is a data source available to nested [data grids](data-gr
 
 Data widgets that can function as a container for other data widgets are the [template grid](template-grid), [list view](list-view), and [data view](data-view).
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Sorting columns and searching is not possible in data widgets with an association data source. This is because these features require a database call to function, which an association data source does not necessarily initiate.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Properties
 

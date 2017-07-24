@@ -7,13 +7,13 @@ space: "Reference Guide 5"
 
 An end event defines the location where the microflow will stop. If the return type of the microflow is not `Nothing` a return value should be specified.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 If you want to stop your microflow after an activity, you link the activity, using a sequence flow with a stop event. In this case the microflow is called from another microflow that expects the buyer to be returned.
 
 ![](attachments/819203/917940.png)
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Output Properties
 

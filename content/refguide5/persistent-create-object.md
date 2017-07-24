@@ -9,11 +9,11 @@ The persistent-create-object action is the result of converting a create-object 
 
 In obscure cases you can detect the difference between the old and the new create action. For example, if you look at the database after the create action but before a corresponding commit action, the object will not be in the database if you used the new create action. Because we cannot guarantee 100% backward compatibility we do not convert the persistent create actions automatically.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Action Properties
 

@@ -4,21 +4,21 @@ space: "Reference Guide 6"
 parent: "report-widgets"
 ---
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This has been introduced in version 6.10.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 With the report parameter, the user can specify a parameter of the data set that is then used for filtering the data displayed in the [Report](report-widgets).
 
 Note that if you have a report parameter widget on the page, you must also add a [Report Button](report-button) widget so that it is possible for the user to regenerate the report after specifying the parameter.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 A drop-down menu can be used for a data set parameter of any type except DateTime. DataTime parameters can be filtered by a [Report Date Parameter](report-date-parameter).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General Properties
 

@@ -7,12 +7,12 @@ space: "Reference Guide 5"
 
 The template grid shows a list of objects in a tile view. For example, a template grid can show a list of products. Using controls provided by the template grid you can browse, search and manipulate those objects. The template grid has a lot in common with the data grid. The main difference is that the objects are shown in templates (a sort of small data view) instead of rows.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/4522099/14385321.png)
 A template grid showing products with an image, name and description.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common properties
 
@@ -24,7 +24,7 @@ The internal name of the widget. You can use this to give sensible names to widg
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -32,18 +32,18 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Tab index
 
@@ -71,11 +71,11 @@ See [Sort Bar](sort-bar).
 
 This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [grid buttons](control-bar) for more information.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value:_ True
 
@@ -141,11 +141,11 @@ The template grid supports the following types of data sources: Database Source,
 
 The entity (path) property specifies of which entity instances will be shown in the grid. A top-level grid is always connected to an entity. A nested grid can either be connected to an entity or to an entity path starting in the entity of the containing data view.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say the domain model contains entities Order and OrderLine with a reference from OrderLine to Order. You can then create a data view on Order and inside it a grid on OrderLine that is connected to the entity path OrderLine_Order/OrderLine. This will ensure that the grid will only show order lines of the order in the data view.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Show search bar (for data source type "Database")
 
@@ -177,9 +177,9 @@ The microflow settings specify which parameters to pass to the microflow. See [S
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Visible
 

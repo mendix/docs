@@ -7,11 +7,11 @@ Java action call can be used to call a Java action. Arguments can be passed to t
 
 See [Java Actions](java-actions) for information on how to use this section.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Action Properties
 

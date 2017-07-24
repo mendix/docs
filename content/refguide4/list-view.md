@@ -31,11 +31,11 @@ The list view supports the following types of data sources: Database Source, Ass
 
 The entity (path) property specifies of which entity instances will be shown in the list view. A top-level list view is always connected to an entity. A nested list view can either be connected to an entity or to an entity path starting in the entity of the containing data view.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say the domain model contains entities Order and OrderLine with a reference from OrderLine to Order. You can then create a data view on Order and inside it a grid on OrderLine that is connected to the entity path OrderLine_Order/OrderLine. This will ensure that the grid will only show order lines of the order in the data view.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### XPath constraint (for data source type "Database")
 

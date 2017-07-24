@@ -15,10 +15,10 @@ When using an XML schema as source, you must select which XML element to start a
 
 In this part you can select which elements from the XML you wish to map to your domain model. It is possible to skip certain elements of complex XML schemas and start the mapping at the element you need.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/918232.png)
 
 The select elements screen.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

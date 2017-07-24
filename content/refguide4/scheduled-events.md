@@ -31,13 +31,13 @@ The microflow is only executed if the scheduled event is enabled. This setting o
 
 The date and time when the scheduled event is executed the first time.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If the start date/time is UTC time the scheduled event is executed when it is the indicated time in UTC (Universal Coordinated Time).
 
 If the start date/time is server time, the scheduled event is executed when it is the indicated time on the server on which your application runs.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Repeat
 

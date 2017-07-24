@@ -5,25 +5,25 @@ space: "Reference Guide 5"
 ---
 This page describes the impact of running Mendix Runtime as a Cluster on its behavior. This feature is not finished completely yet, therefore it starts with an overview of what features should work at this moment and what features will not. It describes how to configure it, how to start it and, what is required for running the Mendix Runtime in a Cluster. After that you'll find some background information on how specific topics behave in a cluster. It's important to read this document completely to get a grasp on the impact of clustering on your application.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Clustering Support is **beta** feature. This means that it is _not supported_ in production environments.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Topics on this page
 
 ## Working features
 
-<table><thead><tr><th class="confluenceTh">Feature</th><th class="confluenceTh">Status</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd"><span>Sticky Sessions Disabled</span></td><td colspan="1" class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-success">DONE</span></td></tr><tr><td class="confluenceTd"><span>File Upload</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-success">DONE</span></td></tr><tr><td class="confluenceTd"><span>File Download</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-success">DONE</span></td></tr><tr><td colspan="1" class="confluenceTd">Session Expiration</td><td colspan="1" class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-current">LIMITED</span></td></tr><tr><td class="confluenceTd"><span>HSQLDB</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-current">LIMITED</span></td></tr><tr><td class="confluenceTd">After startup/Before shutdown Microflows</td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr><tr><td class="confluenceTd"><span>Long Running Microflows</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr><tr><td class="confluenceTd"><span>Scheduled Events</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr><tr><td class="confluenceTd"><span>Microflow Debugger</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr><tr><td colspan="1" class="confluenceTd">Global Locking (cluster-wide)</td><td colspan="1" class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr></tbody></table><div class="alert alert-info">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Feature</th><th class="confluenceTh">Status</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd"><span>Sticky Sessions Disabled</span></td><td colspan="1" class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-success">DONE</span></td></tr><tr><td class="confluenceTd"><span>File Upload</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-success">DONE</span></td></tr><tr><td class="confluenceTd"><span>File Download</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-success">DONE</span></td></tr><tr><td colspan="1" class="confluenceTd">Session Expiration</td><td colspan="1" class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-current">LIMITED</span></td></tr><tr><td class="confluenceTd"><span>HSQLDB</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-current">LIMITED</span></td></tr><tr><td class="confluenceTd">After startup/Before shutdown Microflows</td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr><tr><td class="confluenceTd"><span>Long Running Microflows</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr><tr><td class="confluenceTd"><span>Scheduled Events</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr><tr><td class="confluenceTd"><span>Microflow Debugger</span></td><td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr><tr><td colspan="1" class="confluenceTd">Global Locking (cluster-wide)</td><td colspan="1" class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-error">NOT YET</span></td></tr></tbody></table>{{% alert type="info" %}}
 
  Sessions will be expired correctly for all instances in most circumstances, but is not guaranteed at this moment. This will be improved in future versions.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 To use HSQLDB in the clustered mode, it should be started as a service and have all the clustered Mendix Runtime instances connected to it. Note that this has been tested only with basic scenarios and the behaviour is not known for complex applications/scenarios.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Cluster startup
 
@@ -88,11 +88,11 @@ Reading objects from the Mendix Database and deleting (unchanged) objects from t
 
 The more objects being part of 'Dirty State', the more data has to be synchronized between the Mendix Runtime instances. As such it has an impact on performance. In cluster environments it is advised to minimize the amount of 'Dirty State' to minimize the impact of the synchronization on performance.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
  It's important to realize that when calling external webservices in Mendix or using the OData integrations to fetch external data, the responses of those actions are converted into Mendix Entities. As long as they are not persisted in the Mendix Database, they will be part of `Dirty State` and have a negative impact on the performance of the application. To reduce this impact, this behavior is likely to change in the future.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Using REDIS for Dirty State storage
 
@@ -134,8 +134,8 @@ Keep alive mechanism for Persistent Sessions
 
 Persistent Sessions used to store a 'last active' date upon each request. This is a known performance bottleneck. To improve this particular aspect of the performance, the 'last active' date attribute of a session is no longer committed to the database immediately on each request. Instead, this information is remembered until the time the ClusterManagerAction runs. This action verifies whether the session has not been logged out by another instance and whether the last active date is more recent than the one in the database.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Overriding the default values for SessionTimeout and ClusterManagerActionInterval custom settings can impact the behaviour of keep alive and results in unexpected session logout. In particular, the best practice is to set the ClusterManagerActionInterval to half of the SessionTimeout so that ClusterManager on each node gets the chance to run at least once before another instance attempts to delete a session.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

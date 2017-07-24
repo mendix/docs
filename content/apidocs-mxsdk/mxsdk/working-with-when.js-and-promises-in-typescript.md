@@ -80,11 +80,11 @@ client.platform()
 
 Note that `workingCopy.commit()` returns a `Promise<[Revision](https://apidocs.mendix.com/platformsdk/latest/classes/_mendix_platform_sdk_.revision.html)``>`. You ignore this value in our success handler (line 68), but you could have used it for instance to show the revision number to the user.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 Always either [return a promise to a caller, or end it with `done`](https://github.com/cujojs/when/blob/master/docs/api.md#promisethen-vs-promisedone) (From the when.js documentation).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common pitfalls
 
@@ -118,11 +118,11 @@ function loadAllDocumentsAsPromise(documents: projects.IDocument[]): when.Promis
 
 In the snippet above, `documents.map( doc => loadAsPromise(doc))` transforms the documents[] array into a Promise of an array of Documents. Using [when.all](https://github.com/cujojs/when/wiki/Examples#whenall), you return a promise that resolves only when all documents have been loaded. Only then you can make sure that you do not enter `done()` before the promise has been resolved.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 You can load model units or elements using the convenience method `loadAsPromise`, which is available in the Mendix platform SDK as a way to load and get `promise` as an output instead of having to use a callback function.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### `this` binding
 

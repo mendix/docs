@@ -59,11 +59,11 @@ The permssions that can be enabled/disabled:
 * **Microphone**
 * **Photo Library**
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Some functionality might not be available when you disable these permissions (for example, your app will not be able to use the camera widget when you disable it).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 2.4 Custom Phonegap/Cordova Configuration
 

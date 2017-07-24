@@ -49,11 +49,11 @@ In the following sections of this how-to, it is assumed that you have a reposito
 
 The Mendix Modeler has a (built-in) Subversion client that uses version 1.7 of the SVN working copy format. This client should be compatible with any 1.x version of the SVN server, so you could use, for example, a 1.6.x or 1.9.x SVN server as well.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 SVN clients newer than 1.7 use an updated working copy format, which means that when you use a separate SVN client (for example [TortoiseSVN](https://tortoisesvn.net/)) to work on your Mendix project, you cannot use a 1.8.x or 1.9.x (or newer) version of this client. That is because it would upgrade your working copy, and then the Mendix Modeler would not be able read it anymore.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 6 Creating a New Application
 

@@ -17,11 +17,11 @@ Before you can start with this how-to, make sure you have completed the followin
 
 *   Download the Mendix Modeler.
 
-<table><thead><tr><th class="confluenceTh">Software</th><th class="confluenceTh">Version used in this how-to</th></tr></thead><tbody><tr><td class="confluenceTd">Mendix Modeler</td><td class="confluenceTd">5.20.0</td></tr></tbody></table><div class="alert alert-warning">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Software</th><th class="confluenceTh">Version used in this how-to</th></tr></thead><tbody><tr><td class="confluenceTd">Mendix Modeler</td><td class="confluenceTd">5.20.0</td></tr></tbody></table>{{% alert type="warning" %}}
 
 All images, names and steps in this how-to are based on these versions. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 2\. Data structure and GUI
 
@@ -107,19 +107,19 @@ Mendix allows you to create your own user management functionality as long as yo
 
 ## 8\. Considerations
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In the modeler some words reserved, such as the words: type, enum, etc.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 Sometimes you don't wont to publishe a _type attribute with the _ character infront of it. You can change the wsdl name by changing the last column in the select attribute popup.
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+{{% /alert %}}{{% alert type="warning" %}}
 
 If an attribute is renamed after it is published, the name in the wsdl does not automatically change (that would break a customer's implementation).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 9\. Related content
 

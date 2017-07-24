@@ -23,9 +23,9 @@ Before you can start with this how-to, make sure you have completed the followin
 | UnitTesting module | 4.2 |
 | Community Commons Function Library module | 5.4 |
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 All images, names and steps in this how-to are based on these versions. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
-</div>
+{{% /alert %}}
 
 ## 2\. The UnitTesting module
 
@@ -139,11 +139,11 @@ In this chapter you will learn how to create a microflow test. To create a new m
 
 Congratulations! You created your first unit tests using the UnitTesting module.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 It is possible to create a Setup and TearDown microflow per module. The Setup microflow is invoked once before each test run and the TearDown microflow is invoked once after each test run (regardless whether the test run consists of one or multiple unit tests).
 
-</div>
+{{% /alert %}}
 
 Do not test everything, focus on the most used and complex microflows.
 

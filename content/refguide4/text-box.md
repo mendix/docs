@@ -5,13 +5,13 @@ space: "Reference Guide 4"
 ---
 A text box can be used to display and/or edit a textual value.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/917554.png)
 
 This text box allows the end-user to set the name of the customer.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 A text box must be placed in a table cell within a data view or template grid and connected to an attribute of type String. The connected attribute is shown in blue and between brackets inside the text box.
 

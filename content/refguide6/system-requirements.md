@@ -15,11 +15,11 @@ The following frameworks are automatically installed (if necessary):
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Java Development Kit 1.8
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 You can choose which JDK is used for building and running locally through the 'Edit > Preferences' menu item.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 If you want to use TortoiseSVN in combination with the Modeler, download the latest version 1.7.x from the [Sourceforge page](http://sourceforge.net/projects/tortoisesvn/files/?source=navbar).
 

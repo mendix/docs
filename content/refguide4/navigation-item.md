@@ -21,8 +21,8 @@ The image will appear before the caption in the menu or navigation tree. Note th
 
 The target of the navigation item is the form or microflow that will be opened when the item is clicked.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 You can open a form that contains a data view from a navigation item by setting as target a microflow that first retrieves an object for the data view and then opens the form.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

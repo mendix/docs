@@ -37,11 +37,11 @@ The range determines how many objects are mapped and returned.
 | First | Map and return only the first object. The result of the action will be a single object instead of a list. |
 | Custom | Map and return a given number of objects (limit). The limit is a microflow expression that should result in a number. |
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Validation properties are only applicable if an Import Mapping is selected that maps from XML.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Validation properties
 

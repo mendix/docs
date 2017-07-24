@@ -5,9 +5,9 @@ parent: "integration"
 ---
 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 [Call Rest Action](call-rest-action) and JSON support in [Mapping Documents](mapping-documents) are available since Mendix 6.6.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## REST
 

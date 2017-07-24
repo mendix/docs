@@ -5,11 +5,11 @@ parent: "consumed-web-services"
 ---
 
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes the properties of an imported web service. If you want a general overview of imported web services, you can check the [Consumed Web Services](consumed-web-services) overview documentation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ![](attachments/16713734/16843949.png)
 
@@ -19,15 +19,15 @@ This document describes the properties of an imported web service. If you want a
 
 You can load the WSDL from an URL or from a WSDL file saved on your disk. After selecting an option and adding the required url or file location, press import to fetch the services/operations in this WSDL.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 A dialog will ask for a username and password if you try to load a WSDL file from a URL that requires authentication.
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+{{% /alert %}}{{% alert type="warning" %}}
 
 A WSDL file can contain multiple services. A service can contain multiple ports. Upon loading a WSDL, a dialog will ask you to select a port for each service if a service contains multiple ports.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Services
 

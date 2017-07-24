@@ -4,19 +4,19 @@ space: "Reference Guide 6"
 parent: "report-widgets"
 ---
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This has been renamed to [Report Parameter](report-parameter) in version 6.10.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 With a drop down the end user can filter a report on a specific parameter of the data set.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 A drop down can be used for a data set parameter of any type except DateTime. DataTime parameters can be filtered by a [date range selector](date-range-selector).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Behavior Properties
 

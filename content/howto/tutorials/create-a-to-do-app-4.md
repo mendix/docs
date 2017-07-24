@@ -32,9 +32,9 @@ The **List view swipe** widget has been configured, but the two microflows you c
 3. Open the **ACT_ToDo_MarkAsCompleted** microlfow.
 4. Add an **Activity** that changes the **Completed** attributed of the **ToDo** object to *true* and set **Commit** to *Yes*.
     <iframe width='100%' height='350px' frameborder='0' src='https://modelshare.mendix.com/models/adbe2dd5-2e27-41ab-8f67-3a728917f01b/act_todo_markascompleted?embed=true' allowfullscreen></iframe>
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
     There is no need to refresh in the client due to the "Move out, hide" behavior of the List view swipe widget.
-    </div>
+    {{% /alert %}}
 
 ## 4 Running the App and Simulating Touch Behavior of Mobile Device
 

@@ -17,11 +17,11 @@ The following frameworks are automatically installed (if necessary):
 *   Java Development Kit 7 (Mendix 5.0 up to 5.16)
 *   Java Development Kit 8 (Mendix 5.16 and later)
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 You can choose which JDK is used through the 'Edit > Preferences' menu item.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 If you want to use TortoiseSVN in combination with the Modeler, download the version 1.7.x from the [Sourceforge page](http://sourceforge.net/projects/tortoisesvn/files/?source=navbar).
 

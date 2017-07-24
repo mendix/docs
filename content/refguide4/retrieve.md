@@ -5,11 +5,11 @@ space: "Reference Guide 4"
 ---
 Retrieve can be used to get one (or more) associated objects of another object. Furthermore the activity can also get one (or more) objects directly from the database.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Action Properties
 
@@ -22,11 +22,11 @@ Retrieve type defines the way the objects are retrieved.
 | Association | Retrieve the object(s) associated to an object by following an association. Changes to the association that have not been committed to the database can be retrieved only by using this type of retrieval. |
 | From database | Retrieve objects from the database. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 When objects and/or its associations are changed and not committed, the data is not available in the database yet. By retrieving by association the data that is not committed can be retrieved.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Retrieve By Association Properties
 
@@ -50,11 +50,11 @@ The range determines how many objects are retrieved.
 | First | Retrieve only the first object. The result of the retrieve action will be a single object instead of a list. |
 | Custom | Retrieve a given number of objects (limit) starting at a given index (offset). Limit and offset are microflow expressions that should result in a number. Note: the first object has offset 0. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 When you know you have only one object or you only want to use the first object in your list, use 'first' to get a result of type object (as opposed to list).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### XPath constraint
 

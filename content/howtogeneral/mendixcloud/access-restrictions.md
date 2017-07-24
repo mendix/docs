@@ -22,12 +22,12 @@ Presets are available to simply allow or deny all access.
 
 In addition, custom profiles can be assembled using IP range filters and a client certificate authority.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 * This feature is available from July 11, 2017 for **Mendix Cloud v4** environments
 * **Mendix Cloud v3** environments will be converted from the current request handlers-based configuration on August 15, 2017 (for more information, see [How to Convert to Path-Based Access Restrictions](request-handlers-to-pbar))
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 3 Configuring an Access Restriction Profile
 
@@ -55,13 +55,13 @@ To apply a restriction to a specific application environment, follow these steps
 4. Go to the **Network** tab.
 5. The section **Path Based Access Restrictions** allows for applying access restrictions to a single environment.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 * The top level path `/` restricts access to the entire application
 * The settings for specific paths override the implicitly inherited profile for the top level
 * Besides being able to apply a customized access restriction profile, there are also presets available for simply allowing or denying all access
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 4.1 Default Settings
 
@@ -125,11 +125,11 @@ To add this additional access restriction profile, follow these steps:
 
 8. Apply the restriction profile to the `/ws/` path of the environment. For this specific path, the profile that was chosen for the top level `/` will now be overridden.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 If it is desired that the `/ws/` path can still be reached from the office location without using a client certificate, then also add the IP ranges of the office location to the profile that is used on `/ws/`.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 6 Related Content
 

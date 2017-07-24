@@ -47,7 +47,7 @@ At the moment there is only a button with no Microflow behind it yet. In this ex
 | Name | This property specifies the name of the microflow in the page builderClass: The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget. |
 | Style | The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The styling is applied in the following order:
 
@@ -55,7 +55,7 @@ The styling is applied in the following order:
 *   The 'Class' property of the widget
 *   The 'Style' property of the widget
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Click **OK** to save the properties. If you single click the microflow button the properties can also be configured on the right side, in the properties section.
 
@@ -86,20 +86,20 @@ The properties in the 'General' section determine which information is sent to t
 
 *   Pass enclosing data view object: If the data grid that refers to the microflow is part of another data view, you can also choose to send the object of that data view to the microflow.
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     If you have a grid showing orders inside a data view showing a customer. The control bar of the grid contains a microflow button. Apart from being able to pass the grid selection as a parameter you can choose to send the customer to the microflow as well.
 
-    </div>
+    {{% /alert %}}
 
 *   Microflow: This is the microflow that will be executed. Its parameters should match the parameters that are passed to it.
 
-	<div class="alert alert-info">
+	{{% alert type="info" %}}
 
     If you create the microflow using the New button in the Select page, a microflow will be created with the correct parameters. Make sure you first select what you want to pass as parameter in the parameter properties.
     Maintain selection after microflow (only for grid microflow buttons).
 
-    </div>
+    {{% /alert %}}
 
 *   Maintain selection after microflow: This property specifies whether the selection of the data should be maintained after executing the microflow.
 
@@ -163,11 +163,11 @@ A progress bar is shown and the end user must wait until the microflow is done.
 *   Progress message:The progress message is shown along with the progress bar if the progress bar is either non-blocking or blocking (see above).
 *   Microflow call type: This property indicates whether the connected microflow is executed synchronously or asynchronously. With synchronously executed microflows the microflow is started and the client waits for the result. With asynchronously called microflows the microflow is started on the server but the client does not wait for the result. It will check the server every ten seconds to see if the microflow is done executing.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Set the duration only to asynchronous if you experience problems. Sometimes if a request takes too long to handle, the request will be sent again by an (impatient) proxy server.
 
-</div>
+{{% /alert %}}
 
 3\. Click **OK** to save the settings.
 

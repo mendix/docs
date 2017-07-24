@@ -33,11 +33,11 @@ See [Sort Bar](sort-bar).
 
 This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [data grid buttons](control-bar) for more information.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value:_ True
 
@@ -51,11 +51,11 @@ _Default value:_ True
 
 The column weights are percentages separated by semi-colons that determine the widths of the columns. The weights have to add up to 100\. An alternative way of changing the widths of columns is by dragging the separating line between columns.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In the screenshot above the column weights are 63;37.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Number of rows
 
@@ -121,11 +121,11 @@ The data grid supports the following types of data sources: Database Source, Ass
 
 The entity (path) property specifies of which entity instances will be shown in the grid. A top-level grid is always connected to an entity. A nested grid can either be connected to an entity or to an entity path starting in the entity of the containing data view.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say the domain model contains entities Order and OrderLine with a reference from OrderLine to Order. You can then create a data view on Order and inside it a grid on OrderLine that is connected to the entity path OrderLine_Order/OrderLine. This will ensure that the grid will only show order lines of the order in the data view.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Show search bar (for data source type "Database")
 

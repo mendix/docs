@@ -22,9 +22,9 @@ The domain model editor uses the following symbols for visualization of attribut
 
 The name property defines the name of the attribute. This name is used to refer to the attribute from forms, microflows, queries, constraints etcetera.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 If you delete an attribute in your entity and then create a new attribute with the same name, Mendix will consider it a new and different attribute. This means that upon deployment the old column will be dropped, including its data. Then a new, empty, column with the same name will be created.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Type
 
@@ -117,7 +117,7 @@ The default value property defines the value of this attribute when an object is
 
 The source determines whether the value of the attribute is stored in the database or calculated by a microflow.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Take note of the following things when using calculated attributes:
 
@@ -127,7 +127,7 @@ Take note of the following things when using calculated attributes:
 
 *   It is not possible to sort on an attribute for which this property is used, because sorting is done by the database engine.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Microflow (only if source is microflow)
 

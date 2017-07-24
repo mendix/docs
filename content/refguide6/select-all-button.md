@@ -32,18 +32,18 @@ The select all button allows the end-user to select all objects in a grid, or re
 | Select page | Clicking on this button selects all objects on the current page. |
 | Select all | Clicking on this button selects all objects. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Due to technical limitations, a button with selection type 'Select all' cannot be combined with remove, delete or select buttons.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value:_ Select page
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

@@ -17,11 +17,11 @@ The data view supports the following data sources:
 *   [Microflow](microflow-source): the data view object is determined by the result of calling the specified microflow. The microflow can take objects in the context as parameter and needs to return a single object.
 *   [Listen to widget](listen-to-grid-source): the data view object depends on the selection in a list widget. Each time the selection changes, the data view will show that selected object.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The microflow source is not supported in offline applications because it implies a call to the server.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## List Widgets (data grid, template grid, list view)
 
@@ -32,8 +32,8 @@ List widgets support the data sources listed below. The data source also determi
 *   [Microflow](microflow-source): the objects in the list are determined by the result of calling the specified microflow. The microflow can take objects in the context as parameter and needs to return a list of objects.
 *   [Association](association-source): the objects are retrieved by following an association from the object in the context. As such this data source is only available when the when a widget is nested in an existing context, such as a data view. 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The database source is the only data source that is also supported offline. If a list widget has a database data source in an offline application, the data will come from the database that is situated on the device. This database can be synced with the [create button](new-button).
 
-{% endmarkdown %}</div>
+{{% /alert %}}

@@ -11,11 +11,11 @@ The rollback-object action can be used to undo changes (that have not been commi
 
 When the rollback-object action is performed in a sub microflow it will roll back the changes in the sub microflow, as well as its parent microflow.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Input Properties
 

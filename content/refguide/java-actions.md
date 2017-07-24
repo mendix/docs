@@ -7,13 +7,13 @@ description: "Describes using Java Actions to extend the functionality of your M
 
 With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow using the [Java Action Call](java-action-call).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Each Java action, defined in the modeler, corresponds with a file <name of Java action>.java in subdirectory javasource/<module name>/actions of the project directory.
 
 The skeletons of these .java files are generated automatically when you deploy for Eclipse (in the Project menu). For more information about creating the Java code in these files see [Java Programming](java-programming).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General
 
@@ -46,21 +46,21 @@ The 'Microflow' parameter type allows users of Java Actions to pass a microflow 
 
 The 'Import mapping' parameter type allows users of Java Actions to pass an import mapping into a Java Action. In the generated Java Action template code, this type is represented as a string (the name of the import mapping).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The 'Import mapping' parameter type was introduced in version 7.2.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 #### Export Mapping Type
 
 The 'Export mapping' parameter type allows users of Java Actions to pass an export mapping into a Java Action. In the generated Java Action template code, this type is represented as a string (the name of the export mapping).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The 'Export mapping' parameter type was introduced in version 7.2.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 #### Return Type
 

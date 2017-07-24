@@ -12,11 +12,11 @@ This How-to covers the basics of how to import and export modeler objects: packa
 
 ## Importing Objects
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Be careful when importing objects, as you can overwrite your existing work. Pay attention to prompts and warnings along the way!
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Importing Entire Project Packages
 

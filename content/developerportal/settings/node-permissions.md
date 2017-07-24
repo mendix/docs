@@ -12,11 +12,11 @@ Fine grained access management for your Mendix Cloud environments is handled in 
 
 Learn more about [Settings](/developerportal/settings)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Note that you need to have an **MxID** to get access to the [Developer Portal](http://home.mendix.com). To create an MxID, click [here](http://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 
 ## 2 Node Settings
@@ -38,21 +38,21 @@ A cloud node always has:
 * only one Technical Contact
 * any number of app team members with **View Deploy and Monitor** permissions
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Note that only app team members with the **View Deploy and Monitor** permissions show up in the list of **Node Permissions**. These permissions are available in **App Team**. A SCRUM Master of the app can assign the **View Deploy and Monitor** permissions in the **App Team permissions** to any team member by selecting one of the following app team user roles: **Application Operator**, **Business Engineer**, **Performance Engineer/Tester**, **SCRUM Master**.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 4 Technical Contact
 
 The Technical Contact manages the cloud node and can edit the privileges of regular team members with the **View Deploy and Monitor** permissions. Only the Technical Contact can give his user role to another team member by clicking **Change to Technical Contact**. After this, the new user has the Technical Contact role, the old user does not.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The Technical Contact of the app is the first point of contact for [Mendix Support](https://support.mendix.com/hc/en-us), and will receive alerts regarding the cloud node.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 4.1 Alerts
 
@@ -70,11 +70,11 @@ The Technical Contact is the first point of contact for the app for [Mendix Supp
 *   Incidents: If incidents arise (for example, when the app is down)
 *   Standard changes: **Add Cloud Resources**, **Change Mendix URL**, **New App**, **(Re)new license**, **Reset Google authenticator**
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that any change that are affects the license must first be discussed with the **Customer Success Manager (CSM)** before contacting Mendix Support. For example: expanding the existing license or requesting a new license for a node, additional file storage, or upgrading the app container.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 5 Node Permissions
 

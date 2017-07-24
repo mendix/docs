@@ -38,19 +38,19 @@ Your "Preferred Maintenance Windows" is a weekly time range where system mainten
 4. Click **Environment Details** under the **Deploy** category
 5. Go to the **Maintenance** tab
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Here you can configure your preferred maintenance window. Transport rights for this environment are required. 
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 6. Click **Change** to modify the preferred maintenance window of your environment. All windows are defined in UTC time format. Please see the table below for the time in other time zones.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 When a maintenance operation is planned, it will show up under "Planned Maintenance". By default it will be planned in your preferred maintenance window. You can override the maintenance window of a specific maintenance operation by clicking **Override**.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 # ![](attachments/deploy/19399087.png)
 

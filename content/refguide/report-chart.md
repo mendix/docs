@@ -4,11 +4,11 @@ space: "Mendix 7 Reference Guide"
 parent: "report-widgets"
 ---
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This widget been deprecated in version 6.10.0 and is marked for removal in version 8.0.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 A report chart is used to display a data set graphically as a set of vertical bars.
 
@@ -46,11 +46,11 @@ With this property you can choose the type of the report chart. The following ty
 
 ### Horizontal Axis Properties
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If the chart type is HorizontalBars, the axisses are swapped, and these properties apply to the vertical axis instead of the horizontal axis.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Caption
 
@@ -66,11 +66,11 @@ If the data set column of the horizontal axis has type DateTime, through this pr
 
 ## Vertical Axis Properties
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If the chart type is HorizontalBars, the axisses are swapped, and these properties apply to the horizontal axis instead of the vertical axis.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Caption
 

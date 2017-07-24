@@ -7,21 +7,21 @@ space: "Reference Guide 5"
 
 Tables can be used to lend structure to a page. They contain a number of [rows](table-row) and columns, the intersection of which is called a [cell](table-cell). Each cell can contain widgets.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/4522260/4751424.jpg)
 An example of how you can create a structured page with a table.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Cells can be merged horizontally and vertically to allow for asymmetric lay-outs. To merge cells the cell you wish to merge to must be empty. A merge can then be initiated either in a cell's context menu or by clicking the merge button that will automatically appear if you select an eligible cell.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/4522260/4751426.jpg)
 The merge button
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Tables can be selected by clicking the white square in the top-left corner.
 
@@ -37,7 +37,7 @@ The internal name of the widget. You can use this to give sensible names to widg
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -45,28 +45,28 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General properties
 
 ### Width Unit
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In earlier Mendix versions, only percentages where supported.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The width unit specifies the unit of the specified column widths (see property 'Column Widths' below). There are two possible values for the unit:
 
@@ -76,28 +76,28 @@ _Default value:_ Percentage
 
 ### Column Widths
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In earlier Mendix versions, only percentages where supported.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The column widths property describes the widths of each of the columns as a list of numbers separated by semi-colons. The unit (see above) determines what these numbers mean: percentages or pixels. In the case of pixels, 'auto' is also a valid value for the width of a column. Auto columns evenly divide space that remains after giving the pixel width columns their desired width.
 
 Examples:
 
-<table><thead><tr><th class="confluenceTh">Widths</th><th class="confluenceTh">Unit</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">30;70</td><td class="confluenceTd">Percentage</td><td class="confluenceTd">Two columns of which the first is 30% and the second is 70%</td></tr><tr><td class="confluenceTd">20;200;auto</td><td class="confluenceTd">Pixels</td><td class="confluenceTd">Three columns of which the first is 20 pixels wide, the second is 200 pixels and the last one is 'auto' which means that it will take up the rest of the space.</td></tr></tbody></table><div class="alert alert-info">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Widths</th><th class="confluenceTh">Unit</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">30;70</td><td class="confluenceTd">Percentage</td><td class="confluenceTd">Two columns of which the first is 30% and the second is 70%</td></tr><tr><td class="confluenceTd">20;200;auto</td><td class="confluenceTd">Pixels</td><td class="confluenceTd">Three columns of which the first is 20 pixels wide, the second is 200 pixels and the last one is 'auto' which means that it will take up the rest of the space.</td></tr></tbody></table>{{% alert type="info" %}}
 
 ![](attachments/4522260/4751361.png)
 A table with widths 30% and 70%
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Visible
 

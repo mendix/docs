@@ -55,28 +55,28 @@ Defines the name of the parameter in the webservice call. This is initially copi
 
 Is available when the parameter is a list, and can be used to name the object in the list.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The CountCarsAndHp operation. It takes a non-optional list of Vehicle as a parameter which is called VehicleList and consists of objects called Vehicle. This information is based on the microflow and entity model but can be modified.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 ![](attachments/819203/918221.png)
 The microflow attached to the CountCarsAndHp operation. It takes a list of objects of the entity Vehicle as input and returns an object that holds the number of cars and the total amount of horsepower of those cars.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Exposed attributes and associations
 
 If you click 'Select...' in the parameter tab, you can select individual members of the entity that is being passed as a parameter. The toolbar buttons are available to help you quickly perform operations that would otherwise be laborious.
 
-<table><thead><tr><td class="confluenceTd">Collapse all</td><td class="confluenceTd">Collapses the entire tree, so that only the root node remains visible</td></tr></thead><tbody><tr><td class="confluenceTd">Check all</td><td class="confluenceTd">Checks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected.</td></tr><tr><td class="confluenceTd">Uncheck all</td><td class="confluenceTd">Unchecks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected.</td></tr><tr><td class="confluenceTd">All optional</td><td class="confluenceTd">Checks the Optional box on every expanded node and visible leaf node.</td></tr><tr><td class="confluenceTd">All non-optional</td><td class="confluenceTd">Unchecks the Optional box on every expanded node and visible leaf node.</td></tr><tr><td class="confluenceTd">All nillable</td><td class="confluenceTd">Checks the Nillable box on every expanded node and visible leaf node.</td></tr><tr><td class="confluenceTd">All non-nillable</td><td class="confluenceTd">Unchecks the Nillable box on every expanded node and visible leaf node.</td></tr></tbody></table><div class="alert alert-info">{% markdown %}
+<table><thead><tr><td class="confluenceTd">Collapse all</td><td class="confluenceTd">Collapses the entire tree, so that only the root node remains visible</td></tr></thead><tbody><tr><td class="confluenceTd">Check all</td><td class="confluenceTd">Checks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected.</td></tr><tr><td class="confluenceTd">Uncheck all</td><td class="confluenceTd">Unchecks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected.</td></tr><tr><td class="confluenceTd">All optional</td><td class="confluenceTd">Checks the Optional box on every expanded node and visible leaf node.</td></tr><tr><td class="confluenceTd">All non-optional</td><td class="confluenceTd">Unchecks the Optional box on every expanded node and visible leaf node.</td></tr><tr><td class="confluenceTd">All nillable</td><td class="confluenceTd">Checks the Nillable box on every expanded node and visible leaf node.</td></tr><tr><td class="confluenceTd">All non-nillable</td><td class="confluenceTd">Unchecks the Nillable box on every expanded node and visible leaf node.</td></tr></tbody></table>{{% alert type="info" %}}
 
 ![](attachments/4522016/13402513.png)
 
 Here you can select which members of the entity can be passed and/or are optional or nillable, as well as set their names. Note that checking Optional or Nillable on the root element has no effect; you should set these values in the operation editor.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 The order of XML elements in the WSDL does not by definition reflect the order of attributes in entities in the domain model. Prior to version 5.16.0, the members in the dialog were shown in the order as they appeared in entities. This could be confusing.
 
@@ -84,11 +84,11 @@ From version 5.16.0 and on, the order of members in the dialog is the same as th
 
 New attributes from entities will appear as new elements _below_ members that are already in the WSDL. This will prevent breaking the WSDL contract, because if you insert new XML elements inside a XML _Sequence_ container, existing web service consumers that strictly validate against the WSDL may break.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 If you expose the Password (hashed string) attribute of a System.User entity (or a specialization thereof), a warning appears that there is a risk that someone does a brute-force attack to obtain the original plain-text password. The risk is considerably less when you use a strong hashing algorithm (preferably 'BCrypt'). The hashing algorithm can be set in the Project settings.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Return Type
 
@@ -112,10 +112,10 @@ This determines if the element in the XML is sent as nil if the return value is 
 
 Optional and Nillable cannot be checked both.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/4522016/13402143.png)
 
 Here, you can see an optional Order entity set as the return type of the operation ReturnsOrder.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

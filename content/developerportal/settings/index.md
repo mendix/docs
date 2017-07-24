@@ -12,11 +12,11 @@ The **Settings** category contains the following docs:
 *  [Security-Node](/developerportal/settings/node-permissions) settings
 *  [API Key](/developerportal/settings/api-key) settings
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Note that you need to have an **MxID** to get access to the [Developer Portal](http://home.mendix.com). To create an MxID, click [here](http://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Follow these steps to find the **Settings** category:
 
@@ -68,11 +68,11 @@ There are two actions you can take:
 
 The **Node Permissions** page lets you view the team members that have the **App Team** permission to **View Deploy and Monitor** the node.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Note Node Permissions are only available for Licensed Apps.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 You can grant those team members the following permissions:
 

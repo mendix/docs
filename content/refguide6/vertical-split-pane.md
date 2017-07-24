@@ -9,12 +9,12 @@ The vertical split pane is deprecated in version 5.18.0 in favor of the more pow
 
 A vertical split pane creates a region that is split in two by a vertical divider. In the client the divider can be dragged up and down by the end user.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/918040.png)
 An empty vertical split pane.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common Properties
 

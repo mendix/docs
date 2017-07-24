@@ -39,8 +39,8 @@ The action of a drop down button item can specify a page or a microflow to execu
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

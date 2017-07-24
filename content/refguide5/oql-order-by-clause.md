@@ -27,7 +27,7 @@ Specifies that the results must be ordered ascending, from the lowest to the hig
 **DESC**
 Specifies that the results must be ordered descending, from the highest to the lowest value.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ```
 SELECT FirstName FROM Sales.Customer
@@ -36,7 +36,7 @@ ORDER BY LastName
 
 This query retrieves all customers and returns the first names sorted on the last name, ascending.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 ```
 SELECT FirstName + ' ' + LastName FROM Sales.Customer
@@ -45,4 +45,4 @@ ORDER BY LastName DESC
 
 This query retrieves all customers and returns the first and last name sorted on the last name, descending.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

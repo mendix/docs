@@ -7,11 +7,11 @@ description: "Describes the concept of navigation in apps and the properties of 
 
 ## 1 Introduction
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes the concept of navigation in Mendix applications and the properties of a profile. Applicable for Mendix versions 7.0 and 7.1. For details on how this works in Mendix versions 7.2 and 7.3, see [Navigation in 7.2 and 7.3](navigation-in-72-and-73). For Mendix version 7.4 and higher, see [Navigation](navigation).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The **Navigation** document defines the navigation structure of the application for users. It allows you to set the home page of your application as well as to define menu structures that can be used in [menu widgets](menu-widgets). A user's home page can vary based on their [roles](user-roles).
 
@@ -19,11 +19,11 @@ The **Navigation** document defines the navigation structure of the application 
 
 At the heart of the navigation model in Mendix are four navigation profiles: desktop, tablet, phone, and offline device. You can define separate home pages and menus for each of these profiles. The desktop profile is always enabled, while tablet, phone, and offline device can be disabled if you do not want to use them. Users that access the application via a particular device type are automatically redirected to the home page of the appropriate profile (for details, see [4 Redirection to Profiles](#Redirection)).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In Mendix 7.0.2, the Offline device profile is replaced by the [hybrid phone profile](hybrid-phone-profile). In addition to this, a new device profile is now available, called the [hybrid tablet profile](hybrid-tablet-profile). All settings from the Offline device profile are automatically copied to the hybrid phone profile.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The device type of a currently logged-in user is available in [microflows](microflows) as the `$currentDeviceType` variable. The type of this variable is the [enumeration](enumerations) `System.DeviceType`, which has the values `Phone`, `Tablet`, and `Desktop`. You can use the `$currentDeviceType` variable to perform different actions based on the device type. A typical example is to show different pages based on the device type.
 

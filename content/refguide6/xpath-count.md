@@ -7,7 +7,7 @@ parent: "xpath-query-functions"
 
 The count()-function counts all objects retrieved by the enclosed query and returns the value as an integer.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ```java
 count(//Sales.Order)
@@ -21,4 +21,4 @@ count(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen'])
 
 This query returns a count of all orders placed by a customer named Jansen.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

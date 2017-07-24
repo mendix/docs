@@ -8,11 +8,11 @@ Many indexes are lost in the restored database and many other indices are strong
 
 Mendix will resolve this issue in a future version. For now, you have to repair the database each time you restore a backup, with the following SQL script.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This script only works on Oracle Database 11_g_ Release 2 or higher!
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ```sql
 BEGIN

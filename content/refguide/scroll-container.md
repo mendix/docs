@@ -8,12 +8,12 @@ A scroll container is used to divide the layout in regions (for details on regio
 
 Scroll containers may be placed on navigation layouts as well as on pages.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713863/16843979.png)
 The scroll container splits the layout in three parts: a header containing a logo, a content part with a placeholder and a footer.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common Properties
 

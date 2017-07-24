@@ -5,25 +5,25 @@ space: "Reference Guide 4"
 ---
 The data view is a central component in Mendix applications. It is the starting point for showing the contents of exactly one object. If, for example, you want to show details of a single customer you would use a data view to do this. The data view typically contains a table with labels and input widgets like text boxes. In more complex screens, a data view can contain tab controls per topic (address, payment information) and data views and data grids for related objects (order history, wish list).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/917891.png)
 
 An empty data view.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 ![](attachments/819203/917889.png)
 
 A simple data view showing the number and name of one customer.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 ![](attachments/819203/917888.png)
 
 A more advanced data view with a tab control and a data grid inside.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Components
 

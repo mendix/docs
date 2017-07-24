@@ -30,11 +30,11 @@ Follow the instructions below to migrate your App from Mendix Cloud v3 to v4.
 
 First, you need to create a new Free App.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Create a new app in [Developer Portal](https://home.mendix.com) to create a new app without a Sandbox.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Learn how to [Create and Deploy Your First App](/howto7/getting-started/create-and-deploy-your-first-app).
 
@@ -55,11 +55,11 @@ Learn [How to Restore a Backup](how-to-restore-a-backup).
 
 Now that the app on Mendix Cloud v4 contains your data, you only have to deploy the deployment package to an evironment and start your app.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Before starting your App in Mendix Cloud v4, make sure it has the same configurations as the v3 node. You can find the node settings on the **environment details** page under **Model Options**, **Network**, **Runtime**, and **Maintenance**.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Learn how to [Deploy to the Mendix Cloud](deploying-to-the-cloud).
 

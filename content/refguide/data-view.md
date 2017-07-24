@@ -8,13 +8,13 @@ parent: "data-widgets"
 
 The data view is a central component in Mendix applications. It is the starting point for showing the contents of exactly one object. For example, if you want to show the details of a single customer, you can use a data view to do this. The data view typically contains input widgets like text boxes with labels. In more complex screens, a data view can contain tab controls per topic (address, payment information) and data views and data grids for related objects (order history, wish list).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713914/16844032.png)
 
 A more advanced data view with a tab control and a data grid inside.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 2 Components
 
@@ -103,11 +103,11 @@ See the corresponding data source for specific properties:
 
 ### 5.3 Use Schema
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This property has been deprecated in version 7.2.0 and is marked for removal in version 8.0.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Curently this has no effect.
 

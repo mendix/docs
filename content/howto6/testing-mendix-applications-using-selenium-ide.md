@@ -30,11 +30,11 @@ Before starting with this how-to, make sure you have completed the following pre
 | Firebug | 2.0.18 |
 | FirePath | 0.9.7.1.1 |
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 All images, names and steps in this how-to are based on these versions. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
 
-</div>
+{{% /alert %}}
 
 ## 3 Install and Run the Company Expenses App
 
@@ -176,11 +176,11 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
 
       in Selenium.
 
-        <div class="alert alert-info">
+        {{% alert type="info" %}}
 
         Because it is an input field, you have to add _input_ to the target.
 
-        </div>
+        {{% /alert %}}
 
 22.  Click the **Run current test case** button. The test will fail because it can not find the element with target _css=.mx-name-textBox6 input_. The element can't be found because the page with the element is not loaded yet.
 23.  Switch the speed control to slow. The speed control determines how fast your test script runs. Default the speed control is set to the maximum speed. When the test runs too fast, it is possible that the test started asserting for an element on the page even before the page is fully loaded by the browser. Try to run your test script as fast as possible.
@@ -206,22 +206,22 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
 
       in Selenium.
 
-        <div class="alert alert-info">
+        {{% alert type="info" %}}
 
         Because it is a dropdown list, you have to add _select_ to the target.
 
-        </div>
+        {{% /alert %}}
 30.  Click the **Run current test case** button. The test will pass.
 
     ![](attachments/18448631/18580286.png)
 
 Congratulations! You have just created your second automated test.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Some widgets, like a Grid or a Listview, can show multiple items. Every item has a CSS class `mx-name-index-[indexNumber].` The index number starts at 0.
 
-</div>
+{{% /alert %}}
 
 ### 4.2 Install the Selenium Mendix Locator Builder Plugin
 

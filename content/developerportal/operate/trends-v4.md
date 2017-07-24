@@ -14,11 +14,11 @@ To monitor the application health and performance you can view the trends.
 
 To view the **Trends** you must have permission to **Access the Monitoring**.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Note that only the **Technical Contact** is allowed to grand the node permissions.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Assign this permission by following these steps:
 

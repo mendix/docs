@@ -9,11 +9,11 @@ The access rules of an entity define what a user is allowed to do with objects o
 
 Every access rule is applicable to one or more [module roles](module-role). An access rule grants certain access rights to those roles. Rules are additive, which means that if multiple access rules apply to the same module role, all access rights of those rules are combined for that module role.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Access rules are not inherited from an entity's generalization; rather, the security for every entity is specified explicitly. This means that when adding an access rule to an entity, always make sure that all required XPath constraints are applied. The generalization's access rules, that might already define XPath constraints, do not apply to its specializations and will therefore not limit their visibility.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Properties
 
@@ -47,19 +47,19 @@ Member read and write rights define the access rights for every member (attribut
 
 The set of objects to which the member access rights apply can be limited by using an XPath constraint (see below).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 A customer is allowed to view her discount, but is not allowed to edit it. The access rights for the discount attribute are 'Read'.
 
 ![](attachments/819203/917534.png)
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### XPath constraint
 
 The [XPath constraint](xpath-constraints) can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all objects of the entity.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Entity 'Customer' is a specialization of entity 'User'. Entity 'Order' is associated to entity 'Customer'.
 
@@ -73,12 +73,12 @@ A logged in customer is allowed to view her own orders, but she is not allowed t
 
 Because of this XPath constraint, the access rule only applies to orders of which the customer is the currently signed in user.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 The checkbox 'Show XPath constraint' only indicates whether you can see the XPath constraint in the access rule dialog, it does not influence the behavior of your application.
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+{{% /alert %}}{{% alert type="warning" %}}
 
 XPath constraints can only be applied to persistable entities as they are computed in the database. Defining XPath constraints for non-persistable entities results in consistency check errors.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

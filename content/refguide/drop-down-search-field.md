@@ -27,12 +27,12 @@ If this property is set to 'Yes', the resulting drop-down allows you to select m
 
 If the 'drop-down' search field is connected to an attribute of an associated entity (as opposed to the grid entity itself) the XPath constraint can be used to limit  objects shown in the drop-down.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say you have a grid showing bicycles. In the domain model the bicycle has an association to the shops where you can buy those bicycles. You can add a search field to the grid allowing the end user to select a shop by name. The XPath can then be used to limit the shops to those that are in a given country.
 `[MyWebshop.Bicycle_Shop/MyWebshop.Shop/Country='Netherlands']`
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Sort order
 

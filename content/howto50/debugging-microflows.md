@@ -32,11 +32,11 @@ The variables dock window shows the variables involved in your Microflow and how
 
 ![](attachments/8784357/8946401.png)
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 It is best practice to have the debugger and variables windows at different docks. Usually the debugger should be at the bottom of your development dock and the variables can be either on the left or side dock – whichever side you prefer. The reason for this is that you want to be aware of how the variables are being changed in the Microflow. It is hard to see those changes if both windows are tabs within the same dock.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 3\. Using Breakpoints
 

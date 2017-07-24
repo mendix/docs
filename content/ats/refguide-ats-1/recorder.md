@@ -5,11 +5,11 @@ parent: "test-development"
 ---
 The recorder is a function/plugin within ATS which will record the actions behind your test steps during manually testing an application. After saving your recorded actions they are directly added to your active test case.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 To use the recorder function you will need to have the Google Chrome browser installed on your system and install the _ATS Recorder_ Chrome plugin.
 
-</div>
+{{% /alert %}}
 
 To install the Chrome _ATS Recorder_ plugin click the _Show info_ button in the top right corner of the ATS and follow the _ATS Recorder_ link to the Chrome webstore to add the plugin to your browser.
 
@@ -19,7 +19,7 @@ With the _ATS Recorder_ plugin installed, you can start a recording session at a
 
 Some recorded test steps offer you multiple actions to choose from, for example when setting the value of a text box. Here you can either have an action to change the value of the text box or choose to assert the value of the text box. To change the selected action click on the recorded test step under _Recorded Events_. On the right-hand side, if multiple actions are proposed, select the action you want to execute by clicking the _Select_ button.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Current limitations on recording:
 
@@ -29,4 +29,4 @@ Current limitations on recording:
 *   Assertions cannot be recorded yet
 *   Generating nice descriptions with labels only works if you use the new label function in Mendix
 
-</div>
+{{% /alert %}}

@@ -17,9 +17,9 @@ Before you can start with this how-to, make sure you have completed the followin
 
 *   Download the Mendix Modeler.
 
-<table><thead><tr><th class="confluenceTh">Software</th><th class="confluenceTh">Version used in this how-to</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd">Mendix Modeler</td><td colspan="1" class="confluenceTd">5.18.0</td></tr><tr><td class="confluenceTd">UnitTesting module</td><td class="confluenceTd">4.2</td></tr><tr><td colspan="1" class="confluenceTd">Community Commons Function Library module</td><td colspan="1" class="confluenceTd">5.4</td></tr></tbody></table><div class="alert alert-warning">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Software</th><th class="confluenceTh">Version used in this how-to</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd">Mendix Modeler</td><td colspan="1" class="confluenceTd">5.18.0</td></tr><tr><td class="confluenceTd">UnitTesting module</td><td class="confluenceTd">4.2</td></tr><tr><td colspan="1" class="confluenceTd">Community Commons Function Library module</td><td colspan="1" class="confluenceTd">5.4</td></tr></tbody></table>{{% alert type="warning" %}}
 All images, names and steps in this how-to are based on these versions. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 2\. The UnitTesting module
 
@@ -144,10 +144,10 @@ In this chapter you will learn how to create a microflow test. To create a new m
 
 Congratulations! You created your first unit tests using the UnitTesting module.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 It is possible to create a Setup and TearDown microflow per module. The Setup microflow is invoked once before each test run and the TearDown microflow is invoked once after each test run (regardless whether the test run consists of one or multiple unit tests).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Do not test everything, focus on the most used and complex microflows.

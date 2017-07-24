@@ -83,11 +83,11 @@ By default, the desktop & phone layouts are already available, the design of the
 
 ![](attachments/18448710/18581461.png)
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 By adjusting the canvas width, you can emulate the end user view of the page in the modeler. For example desktop layout have a canvas width of 800, though the default phone layouts have a width of 500\. The property canvas width only applies on the view in the modeler. The actual width of the page depends on the opened browser or the optional popup size.
 
-</div>
+{{% /alert %}}
 
 After defining the structure of the layout with the layout container(s), the regions content must be defined. This can either be done per page, with page specific elements. For instance by adding data widgets in the empty areas. Or this can be done within the layout, in order to define elements which will be used on each page with this layout. Commonly this will be the general app navigation or specific navigation for a specific function. All widgets can be used, except data & input widgets, since the need a source. Two most useful widgets types are menu widgets & snippets. Let’s learn more about these two.
 

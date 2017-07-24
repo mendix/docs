@@ -23,7 +23,7 @@ This is for documentation purpose only; it is not visible in the end-user applic
 
 The expression defines the criteria that a string should be checked against in a formal, internationally standardized regular expression language.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Expression: [1-9][0-9][0-9][0-9] ?[A-Za-z][A-Za-z]
 Examples (excluding the quotes): "3024EL" and "7500 AH"
@@ -34,7 +34,7 @@ Criteria:
 *   The last two characters are letters, as expressed by the last two subexpression [A-Za-z], which indicate that the last two characters should be in the range A-Z or the range a-z.
 *   Between the digits and the letters there can be a space, as expressed by the subexpression which consists of a space and a question mark. The question mark indicates that the space occurs never or once.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Subexpressions
 

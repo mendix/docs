@@ -10,11 +10,11 @@ This How-to covers the basics of how to import and export modeler objects: packa
 
 ## Importing Objects
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Be careful when importing objects, as you can overwrite your existing work. Pay attention to prompts and warnings along the way!
 
-</div>
+{{% /alert %}}
 
 ### Importing Entire Project Packages
 
@@ -47,11 +47,11 @@ Mendix module packages are stored as Mendix Package (.mpk) files.
 3.  Choose a name for your module and select whether to replace an existing module or create a new one.
     ![](attachments/18448739/18582113.png) ![](attachments/18448739/18582112.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     If you replace a module with a new version, existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.
 
-    </div>
+    {{% /alert %}}
 4.  Click **Import.**
     You may see another dialogue box, informing you of any included module dependencies that will be overwritten in your project.
     ![](attachments/18448739/18582111.png)
@@ -75,11 +75,11 @@ Mendix module object packages are stored as Mendix Package (.mpk) files. An obje
 5.  Click OK to import the object into your module:
     ![](attachments/18448739/18582096.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     You may need to update the new object's permissions, depending on where it was originally exported from. For consistency, be sure to check permissions on any objects imported.
 
-    </div>
+    {{% /alert %}}
 
 ### Importing Widgets
 
@@ -93,11 +93,11 @@ Mendix module packages are stored as Mendix Package (.mpk) files. However, you n
 3.  Open the **Project** menu and select **Synchronize Project Directory** to synchronize the changes in the project directory.
     ![](attachments/18448739/18582106.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     You can also press **F4** to synchronize your project directory.
 
-    </div>
+    {{% /alert %}}
 4.  Add your newly imported widget from the **Toolbox** or **Add Widget** context menu:
     ![](attachments/18448739/18582105.png)
 
@@ -131,11 +131,11 @@ This part will go through the steps required to export projects.
     ![](attachments/18448739/18582093.png)
     Here you can select files you would like to include in your package. This list includes any files in your **userlib** or **resources** folders in your project directory. If you don't want to include these files, you can uncheck the boxes.
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     To quickly uncheck all files, press _CTRL+a_ to select all of the items, then press the _Spacebar_ key to uncheck all objects.
 
-    </div>
+    {{% /alert %}}
 
 ### Exporting Widgets
 

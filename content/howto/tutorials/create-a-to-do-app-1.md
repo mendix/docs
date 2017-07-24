@@ -36,11 +36,11 @@ The basis for the to-do app is the Mobile Quick Starter App. Follow these steps 
 
 ![](attachments/create-a-to-do-app/todo-01.jpg)
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Switching the security level to *Off* is done for fast development. Make sure you change it back to *Production* and configure the security of your app when you are going to use the app in a production environment.
 
-</div>
+{{% /alert %}}
 
 ## 4 Creating a New Module
 

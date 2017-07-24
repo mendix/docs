@@ -3,11 +3,11 @@ title: "Module Security"
 parent: "modules"
 space: "Reference Guide 4"
 ---
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 For more general information on security, see [Security](security).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Within a module you can define module roles and specify security settings of those module roles for forms, microflows, entities and data sets.
 
@@ -23,11 +23,11 @@ Microflow Access defines which microflows can be executed by users with a certai
 
 Microflow access takes the shape of a large matrix showing microflows and modules roles. For each combination you can indicate whether or not the module role has access to the microflow. You can also edit this information in a [microflow](microflow) using the property 'Allowed roles'.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that these roles are only checked when the microflow is executed from the client. A microflow is always allowed to call another microflow and these roles are not checked then.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Entity Access
 
@@ -45,9 +45,9 @@ Data Set Access shows for each [data set](data-sets) (used for [reporting](repor
 | Limited access | At least one constraint applies to the parameters for the data set, or at least one range parameter is not allowed. |
 | No access | Users with this module role have no access to the data set. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The constraints are defined in the parameter definitions of the data set. Whether they apply is defined in the data set access.
 The ranges are defined in the parameters of the data set. Whether values in these ranges are allowed is defined in the data set access.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

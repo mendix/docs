@@ -7,11 +7,11 @@ category: "Modeler"
 
 Document Templates are used to model a template required as input for a document export action which can generate all kinds of documents based on application data. They are composed much in the same way as [Pages](pages).
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This page describes what document templates are for and what kind of widgets can be placed on them. If you want to see the properties of the document template you can check the documentation for a [Document Template](document-template) itself.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The document templates also contain components, also know as _widgets_. Below is a categorized overview of all widgets. The following categories are used:
 
@@ -33,13 +33,13 @@ The data grid shows a list of objects in a grid. For example, a data grid can sh
 
 See [Data Grid (document template)](data-grid).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 [![](attachments/819203/918138.png)](data-grid)
 
 A data grid showing a list of orders with a description and the referenced customer name.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Data view
 
@@ -47,12 +47,12 @@ The data view is used for showing the contents of exactly one object. If, for ex
 
 See [Data View (document template)](data-view).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 [![](attachments/819203/918139.png)](data-view)
 A data view showing orderline information.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Template grid
 
@@ -60,12 +60,12 @@ The template grid shows a list of objects in a tile view. For example, a templat
 
 See [Template Grid (document template)](template-grid).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 [![](attachments/819203/918137.png)](template-grid)
 A template grid showing products with name and description.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Layout widgets
 
@@ -78,12 +78,12 @@ Tables can be used both inside and outside data view or templategrid widgets.
 
 See [Table (document template)](table).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 [![](attachments/819203/918134.png)](table)
 A table with four rows and three columns. Last row containing a data view with another table.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Page break
 
@@ -91,12 +91,12 @@ When inserting a page break, the current page will be cut off after the break an
 
 See [Page Break (document template)](page-break-document-template).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 [![](attachments/819203/918135.png)](page-break-document-template)
 A page break
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Line break
 
@@ -114,12 +114,12 @@ A dynamic label would be used for the same attributetypes as a text box in form 
 
 See [Dynamic label (document template)](dynamic-label-document-template).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 [![](attachments/819203/918131.png)](dynamic-label-document-template)
 A dynamic label linking to a customer name.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Dynamic image
 
@@ -127,12 +127,12 @@ A dynamic image can be used to show a System.Image. If the image is not availabl
 
 See [Dynamic Image (document template)](dynamic-image-document-template).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 [![](attachments/819203/918132.png)](dynamic-image-document-template)
 A dynamic image inside a table cell, showing the preset default image.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Static data widgets
 
@@ -144,12 +144,12 @@ A static label shows a line of static text. You can use it to place custom text 
 
 See [Static Label (document template)](static-label-document-template).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 [![](attachments/819203/918130.png)](static-label-document-template)
 A label with text 'Customer name'.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Title
 
@@ -163,12 +163,12 @@ A static image shows a predefined image. It can be put either in- or outside a d
 
 See [Static Image (document template)](static-image-document-template).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 [![](attachments/819203/918133.png)](static-image-document-template)
 A static image inside a table cell.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Style
 

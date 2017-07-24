@@ -38,11 +38,11 @@ See [Widget Properties](common-widget-properties).
 
 ### Horizontal axis Properties
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If the chart type is HorizontalBars, the axisses are swapped, and these properties apply to the vertical axis instead of the horizontal axis.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Caption
 
@@ -58,11 +58,11 @@ If the data set column of the horizontal axis has type DateTime, through this pr
 
 ## Vertical axis Properties
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If the chart type is HorizontalBars, the axisses are swapped, and these properties apply to the horizontal axis instead of the vertical axis.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Caption
 

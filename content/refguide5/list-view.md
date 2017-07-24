@@ -7,12 +7,12 @@ space: "Reference Guide 5"
 
 The list view is similar to the template grid. The list view shows a list of objects arranged vertically. Each object is shown using a template. During development, the object template is defined by placing a widget inside the list view's dropzone. The list of objects shown is determined by a datasource.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/4522252/14385320.png)
 A read-only list view showing all available products.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common properties
 
@@ -24,7 +24,7 @@ The internal name of the widget. You can use this to give sensible names to widg
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -32,18 +32,18 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General properties
 
@@ -71,11 +71,11 @@ The list view supports the following types of data sources: Database Source, Ass
 
 The entity (path) property specifies of which entity instances will be shown in the list view. A top-level list view is always connected to an entity. A nested list view can either be connected to an entity or to an entity path starting in the entity of the containing data view.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say the domain model contains entities Order and OrderLine with a reference from OrderLine to Order. You can then create a data view on Order and inside it a grid on OrderLine that is connected to the entity path OrderLine_Order/OrderLine. This will ensure that the grid will only show order lines of the order in the data view.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### XPath constraint (for data source type "Database")
 
@@ -95,19 +95,19 @@ The microflow settings specify which parameters to pass to the microflow. See [S
 
 If the entity that is connected to the list view has specializations, you can optionally specify templates for each specialization. For each row in the list view the most specific template is shown. The different templates can be selected by clicking the extra header that appears when a specialization template is added.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say you have an entity Vehicle and two specializations thereof: Bicycle and Car. And there is a specialization of Car called SportsCar. You create a list view that is connected to Vehicle. With the templates property of the list view you specify what template to show for arbitrary Vehicles. For the specializations Bicycle and Car you create separate templates to show them.
 
 Now if there is a row of type Bicycle the template specific for bicycles will be shown. A row of type Car will be shown in the template for Car. A row of type SportsCar is shown in the template for Car. There is no template specific for sports cars (in this example) and Car is the 'closest' generalization for which there is a template.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Visible
 

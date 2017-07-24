@@ -5,22 +5,22 @@ parent: "common-widgets"
 ---
 
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 For input widgets it is recommended to use the more powerful [label property](text-box) to describe their purpose.
 
 For all other text use the [text widget](text) as it provides more features, e.g. text templates, and generates semantically correct HTML.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 A label shows static text, which intent is to describe the purpose of a specific widget to the user.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713817/16843959.jpg)
 A label placed in a cell with render mode header.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General properties
 

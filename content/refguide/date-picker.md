@@ -7,12 +7,12 @@ parent: "input-widgets"
 
 A date picker is an [input widget](input-widgets) that can be used to display and edit date/time attributes. It takes into account the language setting to display a localized calendar.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713882/16844001.png)
 This date picker allows the end-user to set the birth date of the customer.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General properties
 
@@ -52,7 +52,7 @@ If you choose 'Custom' as the date format (see above) this property determines h
 | z | 4 | Pacific Standard Time | Time zone |
 | Z | 4 | GMT-04:0 0 | Time zone offset |
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 | Format | Example output |
 | --- | --- |
@@ -62,7 +62,7 @@ If you choose 'Custom' as the date format (see above) this property determines h
 | `EEEE MMMM d yyy` | Tuesday March 29 2011 |
 | `EEE, MMM d, ''yy` | Wed, Jul 4, '01 |
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Placeholder Text
 

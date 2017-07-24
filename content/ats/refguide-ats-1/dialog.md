@@ -4,13 +4,13 @@ space: "ATS Add-On"
 parent: "mendix-actions"
 ---
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 A <i>Window</i> is rendered when a page is opened as a popup.
 
 A <i>ConfirmationDialog</i> is shown when a delete or microflow action requires a confirmation. Show message actions in microflows result in <i>DialogMessage</i> widgets.
 
-</div>
+{{% /alert %}}
 
 **Dialog** contains these documents:
 

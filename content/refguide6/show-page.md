@@ -7,11 +7,11 @@ parent: "client-activities"
 
 With the 'Show page' action you can show a page to the end user.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Input Properties
 
@@ -25,21 +25,21 @@ Object that will be passed to the opened page. This object will be used by [data
 
 The [page](page) to show to the end user. If the Object to pass is specified, the page must contain a data view connected to the same entity as the passed object (or its generalization).
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 You can generate a new page to show by clicking 'Select...' and then 'New'. If you have selected an Object to pass the Modeler will automatically generate a data view to edit that object.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Page title
 
 By default the title of the page is determined by the page title property of the page. You can replace this title with a custom title if necessary.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 This feature allows you to re-use the same page for the New and Edit buttons of a data grid. By simply setting the titles to, for example, 'New customer' and 'Edit customer', you can save yourself the trouble of duplicating the rest of the page.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Location
 

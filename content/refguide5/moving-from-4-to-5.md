@@ -25,11 +25,11 @@ Before converting your project we advise you to look at the following points.
 
 If you are not using the team server, make a backup of your project. Check that the backup was successful by opening the project.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 Really make a backup!
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Convert to latest 4.x.
 

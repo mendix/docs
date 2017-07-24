@@ -54,14 +54,14 @@ These are the release notes for the Mendix Desktop Modeler:
 * [4.1](4.1)
 * [4.0](4.0)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The known issues for each release are described in [Known Issues](known-issues).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The Windows Service release notes can be found in [Windows Service](windows-service).
 
-{% endmarkdown %}</div>
+{{% /alert %}}

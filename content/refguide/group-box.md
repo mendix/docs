@@ -7,12 +7,12 @@ parent: "container-widgets"
 
 A group box can be used to visually group related widgets together. Group boxes are displayed as a frame around nested widgets with an optional header. Group boxes can be configured to collapse and expand dynamically.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713857/16843974.jpg)
 An empty group box.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common properties
 

@@ -27,11 +27,11 @@ This section will explain how to set the default home page. Please note that thi
     ![](attachments/18448703/18581309.png)
 5.  Click **Select**.
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     You can also select a microflow as default home page. Make sure that the microflow contains a 'Show Form' activity, otherwise the user won't see anything.
 
-    </div>
+    {{% /alert %}}
 
     Now every time a user signs in to the application, the selected page/microflow is shown/triggered.
 
@@ -65,11 +65,11 @@ This section will explain how to create menu items.
 4.  Click **New Item** to create a top level menu item.
     ![](attachments/18448703/18581303.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     You can also select an existing menu item and click New subitem to create a sub menu item.
 
-    </div>
+    {{% /alert %}}
 5.  Enter a **caption**. In this case, we enter _Customer Overview_.
 
 6.  Select a page or microflow as target. In this case, we select the page _CustomerOverview.

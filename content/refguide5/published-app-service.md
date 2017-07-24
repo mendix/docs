@@ -19,13 +19,13 @@ App services are explicitly versioned, because once the app service is consumabl
 A newly created version will have the status set to 'Draft' by default. With 'Draft' status, changes and additions can be made to the app service. When the version is ready to be published, the status must be set to 'Consumable'.
 Once the status is set to 'Consumable', you cannot edit the app service anymore. App service versions are only editable when the version is in 'Draft'. Only one version of app service is allowed to be in 'Draft' status.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 In Mendix version 5.11 and before, only versions with status 'Consumable' are available for consumption. In newer releases, it is possible to consume Draft versions during development.
 
-{% endmarkdown %}</div><div class="alert alert-success">{% markdown %}
+{{% /alert %}}{{% alert type="success" %}}
 Always remember to set at least one app service version to Consumable before going to production. Only Consumable app service versions will be available in production.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Icon
 
@@ -45,11 +45,11 @@ Can be used to describe what the app service is used for.
 
 Provide the actual actions of which the app service is composed. Each of these actions is coupled to a microflow. See [Actions](actions).
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 From Mendix 5.4.0, app service microflows cannot have Lists as input parameters! For more information, please refer to [List parameters](list-parameters).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Settings
 
@@ -70,11 +70,11 @@ The 'Target namespace' is a technical term, that provides an XML namespace.
 
 The button 'Export Mendix Service Definition' creates an MSD-file with the definition of the App service. It can be imported by a consumer of your service. You can test your app service on the local machine by importing this MSD file in another app, and running the provider and consumer apps simultaneously.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This MSD file contains a default location: the Application Root URL of the default configuration in the project settings. For example: [http://localhost:8080/](http://localhost:8080/). This endpoint address is overwritten if you deploy your app in the cloud, and will be set to the cloud location where your app is running.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Documentation
 

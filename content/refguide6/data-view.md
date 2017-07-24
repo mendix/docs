@@ -7,12 +7,12 @@ parent: "data-widgets"
 
 The data view is a central component in Mendix applications. It is the starting point for showing the contents of exactly one object. If, for example, you want to show details of a single customer you would use a data view to do this. The data view typically contains input widgets like text boxes with labels. In more complex screens, a data view can contain tab controls per topic (address, payment information) and data views and data grids for related objects (order history, wish list).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713914/16844032.png)
 A more advanced data view with a tab control and a data grid inside.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Components
 
@@ -22,21 +22,21 @@ The data view contents area is the place where all the layout and input widgets 
 
 ### Data view footer
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Added in version 6.7.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The footer of the data view is the section at the bottom of the data view which often contains buttons to confirm or cancel the page. However, arbitrary widgets are allowed. The footer will stick to the bottom if the data view is the only top-level widget.
 
 ### Data view control bar
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. See [Data view footer](data-view).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The control bar of the data view is the bar with buttons at the bottom of the component. By default, it contains a Save and a Cancel button but the bar can be customized. A read-only data view would typically provide only a Close button. You can add buttons with custom behavior through the use of a microflow button.
 
@@ -70,11 +70,11 @@ _Default value:_ 3
 
 ### Close on Save/Cancel
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This property is removed in version 6.7.0\. Use the 'Close page' property of the [Save button](save-button) or [Cancel button](cancel-button) instead.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Using this property you can specify whether you want the current page to be closed when the Save or Cancel button is clicked. After closing the current page, the client will return to the previous screen. This property only has effect for data views that are shown in the content pane (as opposed to in a popup).
 
@@ -84,11 +84,11 @@ _Default value_: True
 
 ### Show footer
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Added in version 6.7.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 With this property you can specify whether you want the footer of the data view to be visible. The footer of nested data views is invisible by default regardless of the value of this property.
 
@@ -96,11 +96,11 @@ _Default value:_ True
 
 ### Show control bar
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. Use the [Show footer property](data-view) instead.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 With this property you can specify whether you want the control bar of the data view to be visible. The control bar of nested data views is invisible by default regardless of the value of this property.
 
@@ -114,14 +114,14 @@ There are number of ways a data view can end up without source data. For instanc
 
 _Default value:_ empty
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The next two screenshots demonstrate the behavior of an empty data view with and without an empty entity message:
 
 |  |  |
 | --- | --- |
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Editability properties
 

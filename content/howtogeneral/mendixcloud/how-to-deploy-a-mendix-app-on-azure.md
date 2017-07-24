@@ -88,11 +88,11 @@ Now that you've got your Mendix instance up and running, it's time to run an app
 
 5.  The deployment package will be stored in the **releases** folder of your project folder.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Your app must be converted to Mendix 5.18 or higher before it can run on Azure.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 3\. Uploading the Deployment Package to Azure
 

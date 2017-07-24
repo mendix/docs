@@ -96,11 +96,11 @@ This is what it would look like when breaking on a nested loop.
 After stepping into the loop.
 ![](attachments/819203/917621.png)
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 When you cannot step into something, so for activities other than microflow calls and nested loop, step into will simply perform a step over.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 **Step out**
 

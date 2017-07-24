@@ -9,17 +9,17 @@ Validation rules are conditions that should be satisfied before an object is com
 
 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 For entity 'Customer' the name and credit need to be filled in at all times, and the expenses cannot be higher than the credit. This is visualized in the domain model editor as follows:
 
 ![](attachments/819203/917546.png)
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+{{% /alert %}}{{% alert type="warning" %}}
 
 Only persistable entities can define validation rules as they say something about database integrity. Therefore, validation rules are disabled for non-persistable entities.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General Properties
 
@@ -49,8 +49,8 @@ Maximum length     | The attribute may have no more than the specified number of
 
 _Default value:_ Required
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Date values should be entered in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format, for example 2015-07-26.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

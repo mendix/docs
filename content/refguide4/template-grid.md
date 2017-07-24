@@ -5,13 +5,13 @@ space: "Reference Guide 4"
 ---
 The template grid shows a list of objects in a tile view. For example, a template grid can show a list of products. Using controls provided by the template grid you can browse, search and manipulate those objects. The template grid has a lot in common with the data grid. The main difference is that the objects are shown in templates (a sort of small data view) instead of rows.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/917977.png)
 
 A template grid showing products with an image, name and description.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Components
 
@@ -33,11 +33,11 @@ See [Sort Bar](sort-bar).
 
 This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [grid buttons](control-bar) for more information.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value:_ True
 
@@ -111,11 +111,11 @@ The template grid supports the following types of data sources: Database Source,
 
 The entity (path) property specifies of which entity instances will be shown in the grid. A top-level grid is always connected to an entity. A nested grid can either be connected to an entity or to an entity path starting in the entity of the containing data view.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say the domain model contains entities Order and OrderLine with a reference from OrderLine to Order. You can then create a data view on Order and inside it a grid on OrderLine that is connected to the entity path OrderLine_Order/OrderLine. This will ensure that the grid will only show order lines of the order in the data view.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Show search bar (for data source type "Database")
 

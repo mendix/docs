@@ -7,11 +7,11 @@ parent: "common-widgets"
 
 The image widget can be used to show a predefined image on a page, layout or snippet.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 If you want to dynamically show different images based on data, please take a look at the [image viewer](image-viewer).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common properties
 

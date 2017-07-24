@@ -5,11 +5,11 @@ space: "Reference Guide 5"
 ---
 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This document describes the general concept of navigation in Mendix applications and the properties of a device type.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Table of Contents
 
@@ -49,11 +49,11 @@ It is also possible to force the client to use a specific device type by adding 
 
 Specifies whether the device type is enabled. If a device type is enabled, it can be used for determining the home page when a user logs into the application. If it is disabled, it will have no effect on the application whatsoever.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The Desktop device type is always enabled.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 **Application title**
 
@@ -77,8 +77,8 @@ Each device type contains a default menu. You can use these menus in [menu widg
 
 See [Menu](menu).
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If [security](project-security) is enabled, the menu will only show items that the user has access to.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

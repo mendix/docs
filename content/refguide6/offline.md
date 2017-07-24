@@ -3,11 +3,11 @@ title: "Offline"
 space: "Reference Guide 6"
 category: "General"
 ---
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The documentation in this section describes a new feature that is still in beta, and is subject to change before the final release.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 We define an offline application as the portion of a Mendix app that is accessible through the [Offline Device](offline-device-profile) [profile](navigation). For Mendix 6.10.4 or later, the Offline Device profile is replaced by the [Hybrid Tablet profile](hybrid-tablet-profile) and the [Hybrid Phone profile](hybrid-phone-profile). Offline support must be enabled for the Hybrid Tablet and Hybrid Phone profiles. Pages available in these profiles can be viewed without an internet connection. Consequently, they are subject to a number of restrictions, explained below.
 

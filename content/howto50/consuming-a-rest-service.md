@@ -15,11 +15,11 @@ With the REST services module from the Mendix Appstore, the full power of JSON-b
 
 In this chapter you will download the REST module from the App store and test your service in the browser first. The service tested in this how-to is the API of the Rijksmuseum to search for art. You will be consuming the following endpoint https://www.rijksmuseum.nl/api/en/collection/?key=<key>&format=json&q=<search query>.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 To use this service you need to create an account at [https://www.rijksmuseum.nl](https://www.rijksmuseum.nl/) to obtain an API key at their website. You can also perform the steps of this how-to using your own REST service.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 1.  Open the **Mendix Modeler**.
 2.  Open the **App Store**.
@@ -66,11 +66,11 @@ Your Domain Model should look similar to this:
 
 ![](attachments/12879450/13402447.png)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The Association name needs to match the name in the JSON exactly. The name of the entity can be anything you want.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ![](attachments/12879450/13402445.png) 
 

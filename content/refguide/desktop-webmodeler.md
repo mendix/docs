@@ -36,7 +36,7 @@ To sync the Web Modeler with the Desktop Modeler, follow these steps:
 
     ![](attachments/desktop-howto/sync-webmodeler.png)
 
-4. The latest updates from the Web Modeler will now be retrieved and merged into your model. When there are no Web Modeler changes received, all changes from the Desktop Modeler will be synced to the Web Modeler. The sync process is then finished and both Modelers are ready to continue modeling. 
+4. The latest updates from the Web Modeler will now be retrieved and merged into your model. When there are no Web Modeler changes received, all changes from the Desktop Modeler will be synced to the Web Modeler. The sync process is then finished and both Modelers are ready to continue modeling.
 
 When the progress is finished and there are changes received from the Web Modeler, you will receive an information pop-up message that the Web Modeler has been locked for the time that you are reviewing the changes.
 
@@ -56,11 +56,11 @@ A **Commit** dialog box will appear for you to commit the changes you have made.
 
 ![](attachments/desktop-howto/commit.png)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 If you do not have anything to commit, you can also click **Cancel sync/Unlock Web Modeler** instead of **Finish sync with Web Modeler**. The Web Modeler will be unlocked.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 4 Related Content
 

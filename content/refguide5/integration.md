@@ -25,7 +25,7 @@ To expose functionality in a Mendix server (thus enabling other systems to make 
 
 To enable systems to understand each other, a standard way of "encoding" data is needed. XML (eXtensible Markup Language) is a format in which data is encoded (or wrapped) so that both parties understand what the message means. A simple example:
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 {% highlight xml %}
 <person>
@@ -41,7 +41,7 @@ To enable systems to understand each other, a standard way of "encoding" data is
 
 Above the object 'person' is described with the corresponding values for the attributes 'name', 'age' and the referred object 'address'.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 XML can be used in Mendix for serialization and deserialization, in order to export and import data.
 

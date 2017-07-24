@@ -29,8 +29,8 @@ _Default value:_ Pop-up
 
 By default the title of the form is taken from the title property of the selected form. You can replace this title with a custom title if necessary.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 You can use the same form for the New and Edit buttons of a data grid. By replacing the pop-up title with a custom title, you can still have different titles for these pop-ups, e.g. 'New customer' and 'Edit customer'.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

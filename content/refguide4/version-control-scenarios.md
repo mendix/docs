@@ -15,11 +15,11 @@ To start a new project with version control you simply choose 'New Project' in t
 
 If someone else has already created a Team Server enabled project you can join it by choosing 'Open Project' in the Modeler. Select the desired Team Server project and the development line you are interested in. The project will be downloaded from the Team Server and opened.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If you already have a sprintr™ project that was created by hand, you can enable the Team Server for that project in sprintr™ by adding the Team Server plugin.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ![](attachments/4194617/4325440.png)
 
@@ -27,19 +27,19 @@ If you already have a sprintr™ project that was created by hand, you can enabl
 
 Let us say you have a working copy of a project on disk; you can now start making changes as you would normally do. Saved changes are not immediately visible to others like they were with the multi-developer databases in 2.x. Only when you are happy with a set of changes, you commit them to the repository. Others can then choose to update and retrieve those changes.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 We recommend you commit your changes often. In general, you can commit after implementing one feature or fixing one bug. By committing often your work is integrated with the work of others regularly and if any conflicts come up the changes are still fresh in your mind and that of your colleagues. Committing often also helps you to commit small sets of changes. This makes the revisions easier to understand and if you ever need to revert something you can revert a small amount of work instead of a day's worth.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 If you are about to commit and others have committed changes in the meantime, you first have to retrieve those changes by updating. Updating will combine the changes made by others with your changes. Oftentimes the changes can be combined with no problem. If, however, the changes are too close to each other a conflict may arise.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 If everyone is committig often you will automatically have to update often. Before you can send your changes to the repository you will have to incorporate changes made by others that are not yet in your working copy. Updating often has the benefit that you receive fewer changes than if you wait a day and integrating those changes with your work is easier to do.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Reverting Changes
 
@@ -80,11 +80,11 @@ If you are using a different hosting environment, you create a deployment archiv
 
 You can choose a development line and revision to create an archive from. The Modeler will create a fresh checkout of that revision so that creating this deployment archive can always be reproduced by you or by other people. In other words, the Modeler does not rely on your local files for creating a versioned deployment archive.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 You can only create a versioned deployment archive of changes that have been committed. If you have local changes that you want to deploy, commit them first.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Along with creating the archive the Modeler will also create a tag representing this version of your project. If you later want to make modifications to this version independently of other development you can create a branch based on this tag. The name of the tag is simply a version number that you choose.
 
@@ -94,11 +94,11 @@ If you want to add some functionality to a deployed application or you want to f
 
 Once you know the version number you create a branch based on the tag with the that version number as its name. You can then add the functionality or fix the bug in this newly created branch. After testing that things work as intended you can create a new deployment archive with a higher version number (increase patch or minor version).
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 After applying a fix to a maintenance branch line we advise you to quickly merge it to the main line. The changes are still fresh in your mind and if the merge is too complicated because the main line changed too much you will still know how to apply the fix by hand to the main line. Of course, not all maintenance fixes need to be merged to the main line. Sometimes, it is a fix of something that was completely redesigned or eliminated in the main line and then merging is unnecessary.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Developing A New Feature Independently
 

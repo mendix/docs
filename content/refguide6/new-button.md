@@ -39,28 +39,28 @@ See [Opening Pages](opening-pages).
 
 ### Entity
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Replaced by the property 'EntityPath' in Mendix 6.3.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 This property specifies the entity of which an object will be created when the user presses the button.
 
 ### Entity (path)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Added in Mendix 6.3.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Specifies which type of object will be created when the button is clicked. It is possible to create an object which has an association to an object in an enclosing data view or to the object passed as the caller of the page. The association will be set automatically when the new object is created. Only one to one or one to many associations are supported.
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 {% snippet Visibility+Property+With+Module+Roles+Extended.md %}

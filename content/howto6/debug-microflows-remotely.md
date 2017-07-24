@@ -23,11 +23,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To enable the cloud debugging, you need to get a URL and a password from the cloud and add that information to the Modeler. The steps below will explain where you can gather all the necessary information. 
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Be aware of other application end-users. Debugging in production is not recommended. However, if you are debugging in the cloud, be aware of other system end-users. The debugger will stop processes from moving on for other users.
 
-</div>
+{{% /alert %}}
 
 ### <a name="EnablingDebuggingintheCloud"></a>3.1 Enabling Debugging in the Cloud
 
@@ -52,11 +52,11 @@ Be aware of other application end-users. Debugging in production is not recommen
 
 Once you have the unique URL and password, there are two methods for connecting the modeler to the cloud environment. 
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 If you do not see an overview similar to the one below, then you do not have sufficient cloud permissions to deploy packages into the cloud or to debug in the cloud. Contact the technical contact or the project SCRUM master in your project to get sufficient permissions.
 
-</div>
+{{% /alert %}}
 
 #### 3.2.1 First Method for Connecting the Modeler to the Cloud Environment
 

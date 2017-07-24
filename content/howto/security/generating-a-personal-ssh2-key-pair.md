@@ -70,11 +70,11 @@ Using the tools provided with the free **PuTTY** program, you can create and use
 
 6. Copy the text listed in the **Public key for pasting into OpenSSH authorized keys file** section. This is the exact text you have to use in the next section.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Do not ever share your private key (*.ppk* file) with anyone!
 
-</div>
+{{% /alert %}}
 
 ## 5 Getting Login Access to Server Accounts
 

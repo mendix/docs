@@ -88,11 +88,11 @@ The following files are required to create a widget:
 * You have to make a proper starting point, so make your widget configurable for a particular situation within your app
     * Make this as generic as possible so you can reuse the widget in other places in your apps
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 A property will contain the end-result of something that is configured/provided by Mendix. You must always create a starting situation where you gather what you need before continuing with the logic inside your widget and/or inside the Mendix platform.
 
-</div>
+{{% /alert %}}
 
 #### 3.3.3 Loading Data in Your Custom Widget
 
@@ -657,11 +657,11 @@ Within `this._contextObj`, we hold the object that is sent to the update functio
         },
 ```
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 An object sent to the update function can also be null! You must handle these exceptions in your widget code. 
 
-</div>
+{{% /alert %}}
 
 ### 6.8 The _updateRendering and _resetSubscriptions Functions
 

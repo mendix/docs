@@ -55,11 +55,11 @@ This property specified the master layout on which this layout is based. If no m
 
 ### Use main placeholder for pop-ups
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This property was introduced to remain compatible with version 4, in which there was no distinction between pop-up pages and in-content pages. It will be removed in version 6.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 When this property is enabled, pages based on this layout will only show the contents of the main placeholder (see below) when they are shown as pop-up.
 

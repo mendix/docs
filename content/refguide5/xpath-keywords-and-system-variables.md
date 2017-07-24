@@ -23,11 +23,11 @@ See the following query:
 
 This query returns all customers whose name is not known to the system.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. Read [this page](xpath) for more information on how to constrain on associations.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## System variables
 

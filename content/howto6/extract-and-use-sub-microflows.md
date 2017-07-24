@@ -59,11 +59,11 @@ To create a sub microflow for the validation steps, follow these steps:
 
     ![](attachments/18448683/18581017.png)
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
     The best practice is to identify sub microflows by their name. You can use "Sub_MicroflowDescriptionHere", "Subflow_MicrocflowDescriptionHere", or any other notation you feel works best. The key is to be consistent when you name your microflows so that it is easy for other team members to understand and find the microflows they need.
 
-    </div>
+    {{% /alert %}}
 4. Click **OK** to create your first sub microflow:
 
     ![](attachments/18448683/18581016.png)

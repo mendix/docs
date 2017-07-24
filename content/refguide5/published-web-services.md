@@ -5,11 +5,11 @@ space: "Reference Guide 5"
 ---
 
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes published web services. If you're looking for specific information on the published web services screen, you can check the [Published web service](published-web-service) documentation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 You can publish your own webservices in a Mendix application. These webservices consist of operations. Other applications can then call operations of this webservice and you can return a result. This result is based on a microflow that will be executed when the webservice is called.
 
@@ -68,18 +68,18 @@ Once the parameters have been parsed from the XML, the microflow call proceeds a
 
 If the microflow has a return value, it will be returned as a result of the webservice call. As with the parameters, basic types will be returned directly, and Domain Entities require a mapping to be converted to XML.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 From this version onwards, formatting of numbers is consistent between consumed and published web services and some improvements have been made. For published web services this means that trailing zeroes are removed from numbers and that we no longer use scientific notation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Response statuses
 
 The default HTTP status code in the response is 200 (OK).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 When the client sends a malformed request, or when an internal server error occurs, the runtime responds with a SOAP fault. The HTTP header will now contain status 500 in these cases.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

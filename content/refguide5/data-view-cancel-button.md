@@ -13,7 +13,7 @@ The cancel button cancels all changes that were made to the object in de data vi
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -21,28 +21,28 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General properties
 
 ### Caption
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Changed in Mendix 5.19: button captions are based on templates with parameters that will be replaced by attribute values.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The caption defines the text that will be shown. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera. Note that to use template parameters the widget must be placed in a context of an entity, e.g. inside a [data view](data-view) or [list view](list-view). The parameters will be replaced by the values of the attributes.
 
@@ -52,41 +52,41 @@ This property indicates what text will be shown on this widget or part of the wi
 
 ### Tooltip
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Added in Mendix 5.8.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The tooltip property determines the text you will see in the tooltip that appears when you hover over the button. The tooltip text is translatable. See [Translatable Texts](translatable-texts). If the tooltip is not specified, no tooltip will be shown when hovering over the button.
 
 ### Image
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Replaced by the property 'Icon' in Mendix 5.16.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 This property indicates which image will be shown in front of the caption of the button.
 
 ### Icon
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Added in Mendix 5.16.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The icon property determines the icon that will be shown in front of the caption of the button. There are three options: no icon, a glyph icon or a (bitmap) image. Glyph icons come from the Bootstrap Halflings collection. The advantages of a glyph icon over a bitmap image are that glyphs are scalable, look sharp on high-resolution screens and their color can be changed by changing the font color. The advantage of an image icon is that it can have multiple colors.
 
 ### Button Style
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Added in Mendix 5.18.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 This property applies a predefined styling to the button.
 
@@ -98,9 +98,9 @@ _Default value:_ False
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Visible
 

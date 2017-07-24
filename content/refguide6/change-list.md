@@ -7,11 +7,11 @@ parent: "list-activities"
 
 With the Change List activity you can change a list that is stored in a variable.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Input Properties
 

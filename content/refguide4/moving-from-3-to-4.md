@@ -17,11 +17,11 @@ Before converting your project we advise you to look at the following points.
 
 If you are not using the team server, make a backup of your project. Check that the backup was successful by opening the project.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 Really make a backup!
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Convert to latest 3.x.
 
@@ -35,25 +35,25 @@ Fix errors and warnings as far as possible. Take special note of the 'Deprecated
 
 Now you are ready to convert. Simply open your project in the new version 4 modeler and you can choose to convert your project. It is **strongly** recommended to open your project in **Mendix 4.5** or higher, due to an improved migration procedure. If it is needed for you to migrate to Mendix 4.4.* or earlier, please contact Mendix Support to inform you about possible issues with file migrations in your case.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If you migrate your database separately from your files, the files and database will be out of sync after the migration. The same problem occur if you execute the database synchronisation SQL script manually. This can mean that FileDocument objects in the database point to the wrong files!
 
 Another problem is that migration to a version before Mendix 4.5 can lead to a huge amount of files to be renamed, which can cause large backup sizes.
 In Mendix 4.5, these problems cannot occur anymore.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Migrating your database
 
 The Enterprise Integration features introduced in version 4 feature a more efficient database format for storing your application data. As a consequence, the entire application database will be converted when first running the application in version 4\. This conversion process can take a long time (sometimes hours), depending on the size of your database. Additionally, the process can take up a significant amount of disk space, 2 to 4 times as much as your current database (for data and log files). This extra space can mostly be regained (see note)
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 After converting your _production_ database (which is probably also the largest), for PostgresSQL and SQL Server it is recommended to make a backup of your data and restore it immediately. This "resets" the database so that extra space reserved during the conversion process will be released.
 For SQL Server, a shrink of the database may be enough.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Though it is possible to migrate from Mendix 2.5 to Mendix 4, to reduce the chance of database errors, it is safer to upgrade model and production database from 2.5 to 4.* with no changes made in the application model. After that migration, model changes will be safely handled. The reason for this is that the migration from 2.5 uses the legacy 2.5 synchronization process which could not handle each model change correctly. After having converted the database to Mendix 3.* or 4.*, each model change is handled correctly.
 

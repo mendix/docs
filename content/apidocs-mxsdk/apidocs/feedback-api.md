@@ -9,14 +9,14 @@ category: "API Documentation"
 
 The Mendix Feedback API allows you to retrieve, add and manage feedback for your Mendix projects.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Each call also requires the parameters 'username' and 'password'. These are the public credentials you will find below; actual authentication of requests is done through API keys.
 
 * username: PlatformAPIUser
 * password: PlatformAPIPassword
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 **[Get WSDL](attachments/9535499/19398864.wsdl)**
 

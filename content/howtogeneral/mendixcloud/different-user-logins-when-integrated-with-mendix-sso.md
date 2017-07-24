@@ -23,11 +23,11 @@ This leads to four scenarios, for which different solutions should be implemente
 
 Based on your need to support local users and/or anonymous users, implement the solution mentioned in the table. The final four sections of this How To each describe one of the solutions.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Anonymous users are not supported on Sandboxes, only on non-free editions.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 2\. Automatically log users in with their Mendix account
 

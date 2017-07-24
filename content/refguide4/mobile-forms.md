@@ -3,15 +3,15 @@ title: "Mobile Forms"
 parent: "forms"
 space: "Reference Guide 4"
 ---
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes what mobile forms are for and what kind of widgets can be placed on them. If you want to see the properties of the mobile form you can check the documentation for a [Mobile Form](mobile-form) itself.
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+{{% /alert %}}{{% alert type="warning" %}}
 
 It is possible to wrap a Mendix application in a native app for iOS and Android. This also allows custom widgets to access native device functionality, e.g. the camera and GPS. You can find more information in the [Cordova tutorial](#).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Mobile Forms are used to create a user interface for the end user. They are composed of components that are called _widgets_. Below is a categorized overview of all the widgets. The following categories are used:
 
@@ -169,8 +169,8 @@ If the project directory of your project has a widget directory with custom widg
 
 For more information, see the [tutorials](/howto40/custom-widgets) for custom widgets.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Custom widgets that require the context of an entity should be inserted in a data view or list view.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

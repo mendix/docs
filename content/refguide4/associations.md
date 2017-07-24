@@ -57,11 +57,11 @@ Type defines whether an association is a reference (single) or a reference set (
 
 _Default value:_ Reference
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The examples for this property are combined with the example of the owner property below.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Owner
 

@@ -11,11 +11,11 @@ Some services require you to authenticate using a client certificate. This how-t
 
 Let's assume that you already have an app that calls a service. For details on how to configure this, have a look at [How to Consume a REST Service](consume-a-rest-service) or [How to Consume a Simple Web Service](consume-a-simple-web-service).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Client certificates for REST services were introduced in version 7.2.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 This how-to will teach you how to do the following:
 
@@ -53,11 +53,11 @@ A complete configuration may look like this:
 
 ## 4 Running in the Cloud
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 You will only be able to follow the steps below if you have the correct access rights for the client certificates.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 To configure client certificates in the Mendix Cloud, follow these steps:
 

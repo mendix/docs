@@ -9,12 +9,12 @@ When enabled, the header will be inserted at the top of every page. Other widget
 
 For inserting page numbers, see [Static Label](static-label-document-template)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/918236.png)
 A header
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Appearance
 

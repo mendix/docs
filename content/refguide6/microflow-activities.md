@@ -7,9 +7,9 @@ parent: "integration"
 
 Integration activities can be used to integrate with other systems, for example by calling a web service.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 The Call Rest Action is available since Mendix 6.6.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 | Graphic | Name | Description |
 | --- | --- | --- |

@@ -5,11 +5,11 @@ parent: "published-web-services"
 ---
 
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes the properties of a published web service. If you want a general overview of how Mendix publishes microflows as web services, you can check the [Published Web Services](published-web-services) overview documentation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Operations
 

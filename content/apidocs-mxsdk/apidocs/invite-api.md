@@ -9,11 +9,11 @@ category: "API Documentation"
 
 The Invite API is an [App Service](/refguide6/consumed-app-services) that enables invitation of new users to your AppCloud application directly from the application. You can use it to allow your users to invite others to the application.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The Invite API will require the EnvironmentUUID and EnvironmentPassword parameters to authenticate and authorize requests; the values for these should come from constants from the AppCloudServices module with the same name. The Mendix Cloud Portal will automatically set these constants; you do not need to set these yourself. For this reason, the Invite API will however only function for applications which use the AppCloudServices module and are deployed through the Mendix Cloud Portal.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The service is part of the [AppCloudServices module](https://appstore.home.mendix.com/link/app/934/Mendix/AppCloudServices), which is available from the App Store, and it's included in the default themes when creating a new application. Both of these options include a default implementation of the Invite API.
 

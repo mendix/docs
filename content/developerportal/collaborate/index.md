@@ -38,11 +38,11 @@ The **Feedback** pages show an overview of the feedback provided about the app. 
 1. Add feedback on the **Feedback** page in the Developer Portal.
 2. Add feedback by going to the app (to go to the app, click **View App**).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The **Feedback** button in the **Developer Portal** is used to provide feedback on the Mendix platform. It is intended for low priority issues, questions, and ideas on how to improve the Mendix platform.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 For more details, see [Feedback](feedback) and [How to Provide Feedback on Mendix](../howto/feedback-mendix).
 

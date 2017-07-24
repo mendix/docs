@@ -37,16 +37,16 @@ Defines how dates will be exported. When _Date value_ is selected, date values w
 
 _Default value:_ Date value
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 When choosing _Date value_, dates will be shown only in the time zone of your Windows account, because Excel does not support defining specific time zones.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

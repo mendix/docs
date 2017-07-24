@@ -5,11 +5,11 @@ space: "Reference Guide 5"
 ---
 ## ISession.getData() API usage
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Only for Mendix 5.21 and higher.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The Mendix Runtime has an (Java) API to store Java objects into the Session. By using `ISession.getData()` to store those objects, they get a Session scope (lifetime) and could be accessed in the subsequent requests (in combination with `ISession.retain()` and `ISession.release()` calls, depending on if the object has associations with objects which should not be garbage collected). With the introduction of Cluster support for the Mendix Runtime this API is deprecated and not supported in cluster mode. `ISession.getData()` only allows the object to be stored in memory on a particular Mendix Runtime instance, other instances will have no knowledge about this. This API will remain working for non-clustered setups (for backward compatibility reasons, but all of `ISession.getData()`, `ISession.retain()` and `ISession.release()` have been deprecated now).
 

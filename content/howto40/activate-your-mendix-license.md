@@ -25,15 +25,15 @@ To generate the activation key you will need the server ID of your application. 
 
 ![](attachments/2621647/2752949.png)
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The server ID is Windows user specific, so if you deploy under Windows please make sure you do so under the correct user.
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+{{% /alert %}}{{% alert type="warning" %}}
 
 If you cannot find your License Information menu, locate the License information folder in the modeler, under the system module. Create a navigation item for the System.ShowActivateLicenseForm micoflow and redeploy the application.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 When you have retrieved your server ID you can enter this ID in the Partner Portal and generate your license key.
 
@@ -55,18 +55,18 @@ Mendix will contact you after the conversion request, so you can continue activa
 
 If your server ID changes, you can request a new activation key by opening your license in the Partner Portal and requesting a key change. You will need to fill in the new server ID. If the key change is approved, a new license key will be automatically generated for the new server ID and will have replaced the old license key.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Server ID change requests are never needed when using the Mendix Cloud.
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+{{% /alert %}}{{% alert type="warning" %}}
 
 Server ID change requests will not be approved, unless a valid reason is provided.
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+{{% /alert %}}{{% alert type="warning" %}}
 
 Your old license key becomes invalid once the server ID change has been granted.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ![](attachments/2621647/2752925.png)

@@ -34,11 +34,11 @@ The configuration section in m2ee.yaml should look something like this:
 
 ![](attachments/12879935/13402537.png)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 After you restart the application your data should show up in New Relic. Note that this requires the application to send data to New Relic servers, so your firewalls should be configured to allow this traffic.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Related content
 

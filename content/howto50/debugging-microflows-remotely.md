@@ -34,11 +34,11 @@ The debugging settings will show up. Usually, it will be a URL such as `http://
 
 If you want to disable the debugger, simply click on Disable Debugging.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If you do not see an overview similar to the one below, then you do not have sufficient cloud permissions to deploy packages into the cloud or be able to debug in the cloud. Contact the technical contact or the project SCRUM master in your organization and project to get sufficient permissions.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 2.2 How to enable cloud debugging in your modeler
 

@@ -7,11 +7,11 @@ space: "Reference Guide 5"
 
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by the Modeler.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Only use this functionality if you know exactly what you are doing. Wrong values can prevent the Runtime from starting.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`.
 
@@ -64,11 +64,11 @@ The following settings influence the behavior of the Mendix web client.
 
 ## Parallelism settings
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This setting is only relevant for Mendix 5.19 and higher. Adjusting parallelism setting parameters may drastically impact your system behaviour and performance. Only advanced users should modify these parameters.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Internally Mendix uses an actor system to dispatch and process requests. This actor system uses a thread pool to process these requests in parallel.
 The amount of parallelism / number of threads provided by this thread pool is configurable.
@@ -84,8 +84,8 @@ This parameter specifies the number of threads the thread pool can assign to exe
 
 The default value should be more than enough for most use cases. If your application experiences extremely high load and it runs out of threads you can try to increase this number.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 If you want to inspect the configuration being used, you can set the system or config property 'akka.log-config-on-start' to 'on'. This will then print the complete configuration at INFO level when the actor system is started.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

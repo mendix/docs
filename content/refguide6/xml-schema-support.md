@@ -87,11 +87,11 @@ Mendix fully supports elements with primitive content, i.e., simple types or com
 
 Usually, elements with primitive content are translated to value elements in the mapping. If for some reason an element with primitive content is translated to an object element in the mapping, for instance because it occurs more than once, or because it has a complex type that also defines attributes, the contents of the element are translated to an extra value element called '(Contents)'.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Hex binary type is recognized as a string so operations on binary types are not applicable for hex binary (e.g. MTOM attachment)
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Complex Types with Complex Content
 

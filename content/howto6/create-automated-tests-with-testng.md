@@ -266,11 +266,11 @@ Now that you are on the **Expenses** tab, you will want to create a new expense.
     | Description dropdown | `referenceSelector1` |
     | Save button | `saveButton1` |
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     The name of an element in your app may be different than the name shown in the Name column. In step 7, use the name of the element of your app.
 
-    </div>
+    {{% /alert %}}
 5. Go back to **Eclipse**.
 6.  Add a new test method called `createExpense`. Use the following code:
 

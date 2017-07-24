@@ -86,7 +86,7 @@ We have an "AppFlow", "Car", "Coachwork", "CarColor", "CarImage", "CoachworkImag
     *   The attribute "HasCar" / "HasCoachwork" / "HasColorCar" booleans are set by the widget if a selection has been made.
     *   The many to one association from "AppFlow" to "Car" / "CoachWork" / "CarColor" will actually save the reference to a "Car" / "Coachwork" / "CarColor" that a user has selected.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/10813523/11632651.png)
 
@@ -101,7 +101,7 @@ For the "Car" entity the settings look like this:
 
 ![](attachments/10813523/11632652.png)
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 5\. Configuration options of the widget
 

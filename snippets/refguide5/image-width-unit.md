@@ -1,10 +1,10 @@
 ### Width Unit
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
 Added in Mendix 5.18\. Before, the only option was to specify the width in pixels where zero (0) meant auto.
 
-{% endmarkdown %}</div>
+</div>
 
 The width of an image can be specified in three ways: pixels, percentage or auto. 
 

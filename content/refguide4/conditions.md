@@ -26,11 +26,11 @@ Module role conditions can only be used for visibility of table rows and tab pag
 
 By checking this box the visibility or editability becomes conditional based on the attribute that is selected.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say you have a boolean indicating whether a person wants to receive e-mail. You can create a check box to edit the value of this boolean. The row that asks for an e-mail address can be shown only if the check box is checked.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Attribute
 
@@ -46,21 +46,21 @@ For each value of the attribute you can specify whether the element is editable/
 
 By checking this box the visibility becomes conditional based on the module roles of the user that is signed in.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say you have a form that has a tab page containing current orders of a customer and a tab page containing an order history. You can hide the order history tab for certain roles so that you only need to build one form for different kinds of users.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Conditions
 
 For each module role you can specify whether the table row or tab page is visible or not.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Do not rely on hiding tab pages and table rows for security! Also use domain model security to give roles appropriate access to data.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Ignore security (only for buttons)
 

@@ -15,13 +15,13 @@ Perform the following steps in the **Select schema elements** window:
 2.  If source is XML schema then select the root element of the mapping. This is done by selecting the **Start at** element for the XML schema or the **request part** for the web service operation. **Start at **lists the root elements in an XML schema. You can select one root element to base your mapping on. If source is Web service operation, **Request part **lists the header and body element of the request part of an operation. If an operation has multiple parameters, these are listed in the Request part as well. **Request part** is only applicable to export mappings.
 3.  Finally, select specific elements in the tree explorer below. Typically you do not need to map an entire source, since they can be quite large.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 If the contents of the used schema source change, the mapping document does not match with the schema anymore and a consistency error is shown. This consistency error is easily fixed by right-clicking the consistency error itself and selecting 'Resolve by updating from schema'.
 
 Schema contents can change by importing a changed XML schema, WSDL or by changing a JSON structure.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Rules and Restrictions
 
@@ -41,15 +41,15 @@ For ease of use, some elements will automatically be checked or unchecked:
 
 When working on an import mapping you are allowed to skip elements in the hierarchy but still select the children. You can do this when you're not interested in the information stored in the intermediary elements.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 You may encounter element selection checkboxes that are greyed out. If you hover the mouse over the checkbox, you see which rule or restriction prevents you from changing the checkbox value. For example, you may need to select a parent node first before you can select a child node.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Convenience functions
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 | Function | Description |
 | --- | --- |
@@ -59,4 +59,4 @@ You may encounter element selection checkboxes that are greyed out. If you hover
 | Check all | Checks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected. |
 | Uncheck all | Unchecks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected. |
 
-{% endmarkdown %}</div>
+{{% /alert %}}

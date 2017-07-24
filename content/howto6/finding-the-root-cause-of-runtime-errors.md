@@ -39,11 +39,11 @@ With these three pieces of information, you should be able to find the cause of 
 
 If the application is deployed from the service console or in the cloud, the information is available in the application logs. 
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 You need to have the timestamp of when the error occurred. The logs can contain a lot of information, and this timestamp will make searching through them much easier. Once you navigate to the log file, you can search for the error.
 
-</div>
+{{% /alert %}}
 
 ![](attachments/18448574/18580022.png)
 

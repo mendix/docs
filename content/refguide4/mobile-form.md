@@ -3,11 +3,11 @@ title: "Mobile Form"
 parent: "mobile-forms"
 space: "Reference Guide 4"
 ---
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes the properties of a mobile form. If you want to see what mobile forms are for and what kind of widgets can be placed on them, you can check the [Mobile Forms](mobile-forms) overview documentation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Appearance Properties
 

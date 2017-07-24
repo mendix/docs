@@ -10,11 +10,11 @@ The data source properties determine which objects will be shown in the data gri
 3.  With the XPath constraint property you can manually limit the objects in the data grid.
 4.  If the context is applied (property 'Apply Context'), the [context mechanism](context-mechanism) limits the object based on references they have to objects in the context.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 Use access rules whenever possible to limit data in data grids. This way you know that the objects will always be constrained by these rules (as opposed to an XPath constraint on a single data grid). The access rules will also be applied when executing microflows which saves you from repeating XPath constraints there, too.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Components
 
@@ -32,11 +32,11 @@ See [Sort Bar](sort-bar).
 
 The entity (path) property specifies of which entity instances will be shown in the data grid. A top-level data grid is always connected to an entity. A nested data grid can either be connected to an entity or to an entity path starting in the entity of the containing data view. The entity path follows one association of type reference starting at the side where the '0' is.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say the domain model contains entities Order and OrderLine with a reference from OrderLine to Order, i.e. the 1 is at the side of the OrderLine and the 0 is at the side of the Order. You can then create a data view on Order and inside it a data grid on OrderLine that is connected to the entity path OrderLine_Order/OrderLine. This will ensure that the data grid will only show order lines of the order in the data view.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Show search bar
 
@@ -65,11 +65,11 @@ With the XPath constraint, you can add a manual constraint to your data grid. Th
 
 The property 'Apply context' indicates whether the context mechanism will be used to constrain the list of objects in the grid. See [Context Mechanism](context-mechanism) for more information.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 Using an entity path also constrains the list of objects in the grid and this is more explicit and easier to understand than using the context mechanism. Make sure that in that case 'Apply context' is set to false.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value_: False
 

@@ -50,11 +50,11 @@ In the case of a grid button you can choose whether to send the selection, all o
 
 If the data grid or data view that refers to the microflow is contained by another data view, you can also choose to send the object of that data view to the microflow.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say you have a grid showing orders inside a data view showing a customer. The control bar of the grid contains a microflow button. Apart from being able to pass the grid selection as a parameter you can choose to send the customer to the microflow as well.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 | Value | Description |
 | --- | --- |
@@ -67,11 +67,11 @@ _Default value:_ No
 
 This is the microflow that will be executed. Its parameters should match the parameters that are passed to it.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 If you create the microflow using the New button in the Select form, a microflow will be created with the correct parameters. Make sure you first select what you want to pass as parameter in the parameter properties.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Maintain selection after microflow
 
@@ -140,11 +140,11 @@ The progress message is shown along with the progress bar if the progress bar is
 
 This property indicates whether the connected microflow is executed synchronously or asynchronously. With synchronously executed microflows the microflow is started and the client waits for the result. With asynchronously called microflows the microflow is started on the server but the client does not wait for the result. It will check the server every ten seconds to see whether the microflow is done executing.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Set the duration only to asynchronous if you experience problems. Sometimes if a request takes too long to handle, the request will be sent again by an (impatient) proxy server.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 | Value | Description |
 | --- | --- |

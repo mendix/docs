@@ -60,9 +60,9 @@ Once a context object is received by the widget, it will automatically call on t
 
 Our function uses 2 input arguments, the context object and a callback stack. The context variable is a special type of object used by the Client containing the GUID of the actual object we want. We can use **context.getActiveGUID()** to grab the GUID and use this with **mx.processor.getObject()** function to get the object and pass it to our **processObject** function.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the **applyContext** function can be called upon multiple times, each time the context is send to the Data View.
 **Example:** If you have a Data grid above your Data View, where the Data View listens to the Data grid. Every time a different object is selected in the Data Grid, a new object is send to the Data View.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

@@ -23,9 +23,9 @@ It the variable is a file document, it should be an object of entity 'System.Fil
 
 The [Import Mapping](import-mappings) defines how to transform the XML or JSON string (or file document) to objects.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Importing from JSON is available since Mendix 6.6.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Parameter
 
@@ -41,11 +41,11 @@ The range determines how many objects are mapped and returned.
 | First | Map and return only the first object. The result of the action will be a single object instead of a list. |
 | Custom | Map and return a given number of objects (limit). The limit is a microflow expression that should result in a number. |
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Validation properties are only applicable if an Import Mapping is selected that maps from XML.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Validation properties
 

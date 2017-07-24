@@ -34,11 +34,11 @@ The height of the region, either in pixels or a percentage, depending on the val
 
 This setting determines whether the region is always visible or can be hidden from view. The different options allow the sidebar to interact with the page in a variety of ways when moving in and out of view. The visibility of the region is triggered by the [sidebar+toggle](sidebar-toggle-button).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This setting used to be configured in the sidebar toggle button itself. It was moved to the scroll container region to improve transparency in Mendix 6.10.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Option | Description
 --- | ---

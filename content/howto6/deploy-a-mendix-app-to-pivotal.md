@@ -145,11 +145,11 @@ To enable persistent file storage, you need to configure the S3 object store (wh
 
 5. Add any optional variables:
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     When adding environment variables to a running application, you need to restart it for the changes to take effect.
 
-    </div>
+    {{% /alert %}}
 
     After deploying an app from the Modeler, two variables will be added automatically: `DEVELOPEMENT_MODE` and `ADMIN_PASSWORD`. The development mode is true by befault; change this to false to run the app in production. The admin password is the password of the default admin of your Mendix app.
 

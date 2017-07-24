@@ -27,11 +27,11 @@ Mendix allows for microflows to be triggered in pages by a variety of methods. T
 
 This is the microflow that will be executed. Its parameters should match the available arguments.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 You can create a new microflow by clicking 'Select...' and then 'New'. Modeler will generate a microflow with parameters matching all available arguments. If a parameter is not used it can simply be deleted.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Microflow arguments
 
@@ -45,11 +45,11 @@ The arguments available to a data or template grid control bar button are determ
 
 This property indicates whether the connected microflow is executed synchronously or asynchronously. With synchronously executed microflows the microflow is started and the client waits for the result. With asynchronously called microflows the microflow is started on the server but the client does not wait for the result. It will check the server every ten seconds to see whether the microflow is done executing.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Set the duration only to asynchronous if you experience problems. Sometimes if a request takes too long to handle, the request will be sent again by an (impatient) proxy server.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 | Value | Description |
 | --- | --- |

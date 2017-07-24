@@ -350,11 +350,11 @@ Replaces all occurrences of a regular expression with another string.
 *   The replacement value
     Type: String
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Please note that this function call uses a regular expression.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Output
 

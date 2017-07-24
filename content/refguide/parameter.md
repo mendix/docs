@@ -7,13 +7,13 @@ parent: "microflows"
 
 A parameter is data that serves as input for the microflow. Parameters are filled at the location from where the microflow is triggered.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 When you have an object of the entity 'Customer' that you want to use in a microflow, a parameter is used. The variable name is 'EnclosingCustomer' and is shown in black. The data type is object, therefore the entity name is shown underneath the variable name in blue.
 
 ![](attachments/819203/917903.png)
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Output Properties
 

@@ -3,11 +3,11 @@ title: "Consumed Web Services"
 space: "Reference Guide 6"
 parent: "integration"
 ---
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes imported web services. If you're looking for specific information on the consumed web services screen, you can check the [Consumed web service](consumed-web-service) documentation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Web Services
 

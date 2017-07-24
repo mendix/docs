@@ -8,11 +8,11 @@ The Mendix Desktop Modeler is the place where you create, view and edit your Men
 
 This documentation describes the graphical user interface of the Modeler. The rest of the documentation follows the structure of the project explorer.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 Use F1 in the Modeler to quickly jump to the right page in the documentation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Dockable Windows
 

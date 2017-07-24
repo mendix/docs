@@ -45,29 +45,29 @@ Defines the name of the parameter in the webservice call. This is initially copi
 
 Is available when the parameter is a list, and can be used to name the object in the list.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/918223.png)
 
 The CountCarsAndHp operation. It takes a non-optional list of Vehicle as a parameter which is called VehicleList and consists of objects called Vehicle. This information is based on the microflow and entity model but can be modified.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 ![](attachments/819203/918221.png)
 
 The microflow attached to the CountCarsAndHp operation. It takes a list of objects of the entity Vehicle as input and returns an object that holds the number of cars and the total amount of horsepower of those cars.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 If you click 'edit' in the parameter menu, you can select individual members of the entity that is being passed as a parameter.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/918226.png)
 
 Here you can select which members of the entity can be passed and/or are optional, as well as set their names.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Return value
 

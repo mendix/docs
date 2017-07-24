@@ -3,11 +3,11 @@ title: "Image Uploader"
 parent: "common-widgets"
 space: "Reference Guide 4"
 ---
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The possibility to add the image uploader to mobile forms was added in 4.3.0\. Before that it could only be placed on web forms.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 An image uploader is used to upload images to the server. It also generates a thumbnail of the uploaded image. The uploaded image or its thumbnail can be shown by use of the image viewer.
 

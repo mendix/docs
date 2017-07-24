@@ -21,11 +21,11 @@ You can delete an API Key by clicking **Revoke**.
 When you click on **Create API Key** you have to fill in the **API Key name**. After cliking **Generate API Key** you are able to use the API key.
 
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 For security reasons, the API key will be only displayed once. It will not be displayed again.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 
 ## 2 Related Content

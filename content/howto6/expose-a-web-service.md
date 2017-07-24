@@ -19,11 +19,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Download the latest version of the [Mendix Modeler](https://appstore.home.mendix.com/index3.html)
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 This how-to was written based on Modeler version 5.20. All the images, names, and steps in this how-to are based on this version. When using other versions, the images and/or names on your screen may be different than the images and names used in this how-to.
 
-</div>
+{{% /alert %}}
 
 ## 3 Data Structure and GUI
 

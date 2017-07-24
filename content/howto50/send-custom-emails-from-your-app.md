@@ -10,11 +10,11 @@ Each application can leverage Mendix App Store content to create and send custom
 
 Within this part of the how to you will learn how to download the necessary modules from the Mendix App Store. This is a very quick process, in that in just a few clicks the modules will be imported into your project. The modules that are required for this process are the **MxModelReflection, Encyption,** and **Email Module with Templates** modules.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The MxModelReflection module is a commonly used module in most apps. The purpose of this module is to allow the app to reflect into the domain model (entities and attributes) and microflow definitions at runtime.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 1.1 Download the 'MxModelReflection' Module
 
@@ -36,11 +36,11 @@ The MxModelReflection module is a commonly used module in most apps. The purpose
 2.  Search for the keywords **Email Template**.
 3.  Click the **Download** button and include the module as a new module.![](attachments/8782771/8946048.png)
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Depending on the layout selected when the project was created, errors in the modeler may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 2\. Add Navigation Items to Allow Users to Configure Settings
 
@@ -51,11 +51,11 @@ In this part of the how to you will learn how to add the required pages into the
 3.  Add a new item to the Navigation for **Administrator** to access **EmailTemplate.IVK_OpenEmailSettings**.![](attachments/8782771/8946049.png)
 4.  Add a new item to the Navigation for **Administrator** to access **EmailTemplate.EmailTemplate_Overview**.![](attachments/8782771/8946050.png) 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Within the EmailTemplate module, there are several useful pages that can help in tracking email logs and failures. Add those pages to the Navigation as well for additional information on the email history.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 3\. Configuration
 
@@ -78,11 +78,11 @@ In this part of the how to you will learn how to run the MxModelReflection synch
 7.  **Save** the SMTP configuration settings.
     ![](attachments/8782771/8946057.png)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Make sure to allow a administrator to access this page and has read/write the configuration settings entity.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 3.3 Configuring Email Templates
 
@@ -128,11 +128,11 @@ In this part of the how to you will learn how to utilize the previous configurat
 7.  Customize the Action **Set email data based on the customer and template** to the necessary attributes from the microflow parameters.![](attachments/8782771/8946067.png)
 8.  Test the functionality to ensure SMTP and templates are configured correctly.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 It is very important to setup Log Activities within the microflows to capture errors or other key events in the log for ease of debugging.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 5\. Related content
 

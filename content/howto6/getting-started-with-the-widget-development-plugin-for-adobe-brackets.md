@@ -68,11 +68,11 @@ Information about the settings:
 
 1.  Open the widget source directory. This is the directory you entered when creating the widget.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Because the boilerplate is used you will have a widget that is compliant with the standards we have defined for a GitHub Custom Widget repository.
 
-</div>
+{{% /alert %}}
 
 The new widget source contains the following directories:
 

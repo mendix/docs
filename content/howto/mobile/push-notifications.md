@@ -34,11 +34,11 @@ To use push notifications, make sure you have the following:
 
 In the Mendix App Store, you can find an example implementation of the [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3020/Mendix/Push-Notifications-Connector-Demo). To start sending push notifications to your Android or iOS device, download the project, deploy it to a free app, and follow the on-screen instructions.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 The Push Notifications Connector assumes that the mobile app and the "back-end" part will reside in the same project.
 
-</div>
+{{% /alert %}}
 
 ## 5 GCM vs. FCM
 

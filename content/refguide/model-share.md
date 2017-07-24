@@ -17,11 +17,11 @@ Mendix Model Share is supported in Mendix 5.14 and higher.
 
 A Model Share can be quickly created from within the Mendix Business Modeler. Open the document (currently, only microflows are supported) you want to share and press the 'Share' button. Optionally provide a title and description for the new Model Share - these are used as meta data. After filling out the details, confirm your input by clicking the 'Share' button and a new Model Share will be created. Model Shares will be bound to your personal Mendix Account.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Please note that all information inside the selected document is publicly readable. So make sure that your microflow doesn't contain hardcoded passwords, endpoints and other sensitive data.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 After finishing the upload, the Mendix Business Modeler will show the URL of your Model Share. You can use this URL to point your colleagues to your Model Share, use it to ask questions on the Mendix forum, or paste it inside the Mendix Business Modeler (after which the document will be imported automatically).
 

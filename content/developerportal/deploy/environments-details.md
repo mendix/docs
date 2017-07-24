@@ -81,11 +81,11 @@ In this section you can view your configured scheduled events.
 
 If you select a scheduled event and click **Toggle**, you can switch the scheduled event off and on. 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 You have to restart your application before the changes will be made.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 With scheduled events, you can let the Runtime execute a microflow at a specific moment in time. The event can also be repeated with a given interval (for example, every day).
 
@@ -97,11 +97,11 @@ In this section, you can view the configured constants. Constants are used to de
 
 To fill in a new value, select the constant and click **Edit**.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 You have to restart your application before the changes will be made.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 For more information, see [Constants](../../refguide/constants).
 
@@ -150,11 +150,11 @@ Configure custom request handlers for requests that will be sent to the runtime.
     *   Environment: Production, Acceptance, Test
     *   N/A
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 If you are configuring the request handlers in, for example, the acceptance environment, and the request handlers are only enabled in, for example, the production environment, select the request handler and click **Toggle** to enable it in the environment that you are configuring.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 You can perform the following actions:
 

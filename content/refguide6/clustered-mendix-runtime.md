@@ -7,11 +7,11 @@ This page describes the impact of running Mendix Runtime as a Cluster on its beh
 
 This feature is not finished completely yet, therefore it starts with an overview of what features should work at this moment and what features will not. It describes how to configure it, how to start it and, what is required for running the Mendix Runtime in a Cluster. After that you'll find some background information on how specific topics behave in a cluster. It's important to read this document completely to get a grasp on the impact of clustering on your application.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Clustering Support is **beta** feature. This means that it is _not supported_ in production environments. We recommend skipping this clustering implementation beccause this feature has been redesigned completely in Mendix 7.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Topics on this page
 
@@ -31,19 +31,19 @@ Clustering Support is **beta** feature. This means that it is _not supported_ in
 | Microflow Debugger | NOT YET |
 | Global Locking (cluster-wide) | NOT YET |
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
  Sessions will be expired correctly for all instances in most circumstances, but is not guaranteed at this moment. In particular, if at the expiry of a session there are user actions running on different nodes than the one which received the logout request, the session is still expired and the result of those actions can't be retrieved. This will be improved in future versions.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 To use HSQLDB in the clustered mode, it should be started as a service and have all the clustered Mendix Runtime instances connected to it. Note that this has been tested only with basic scenarios and the behaviour is not known for complex applications/scenarios.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 Monitoring information such as runtime statistics (e.g. number of sessions, memory usage), running microflows, logged in users are gathered for only one instance at the moment.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Cluster startup
 
@@ -108,11 +108,11 @@ Reading objects from the Mendix Database and deleting (unchanged) objects from t
 
 The more objects being part of 'Dirty State', the more data has to be synchronized between the Mendix Runtime instances. As such it has an impact on performance. In cluster environments it is advised to minimize the amount of 'Dirty State' to minimize the impact of the synchronization on performance.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
  It's important to realize that when calling external webservices in Mendix to fetch external data, the responses of those actions are converted into Mendix Entities. As long as they are not persisted in the Mendix Database, they will be part of `Dirty State` and have a negative impact on the performance of the application. To reduce this impact, this behavior is likely to change in the future.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Below are the number of scenarios which can generate big amount of non persistent entities and thus, cause memory issues.
 
@@ -121,11 +121,11 @@ Below are the number of scenarios which can generate big amount of non persisten
 | Microflow which creates a large number of Non Persistent Entities and shows them in a page. |
 | Microflow which calls a Webservice/Appservice to retrieve external data and convert them to Non Persistent Entities. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 To make sure the session state does not become too big when the above scenario's apply for your app, it's recommended to explicitly delete these objects after usage, so that they are not part of the state anymore. This frees up memory for the Mendix Runtime instances handling requests for this session and improves performance.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Using REDIS for Dirty State storage
 
@@ -176,8 +176,8 @@ The `Value` values can easily be obtained by performing a find on the `Key` valu
 
 Persistent Sessions used to store a 'last active' date upon each request. This is a known performance bottleneck. To improve this particular aspect of the performance, the 'last active' date attribute of a session is no longer committed to the database immediately on each request. Instead, this information is remembered until the time the ClusterManagerAction runs. This action verifies whether the session has not been logged out by another instance and whether the last active date is more recent than the one in the database.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Overriding the default values for SessionTimeout and ClusterManagerActionInterval custom settings can impact the behaviour of keep alive and results in unexpected session logout. In particular, the best practice is to set the ClusterManagerActionInterval to half of the SessionTimeout so that ClusterManager on each node gets the chance to run at least once before another instance attempts to delete a session.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

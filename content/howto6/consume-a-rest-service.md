@@ -9,11 +9,11 @@ tags: []
 
 With the REST services module from the Mendix App Store, the full power of JSON-based REST APIs is available to Mendix developers. The module serves three goals: to consume services, publish services, and synchronize data between (Mendix) apps by combining consuming and publishing. 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Starting with Mendix 6.6, there is an easier way to consume a REST service. For details, see [How to Consume a REST Service (for Versions 6.6–6.10)](consume-a-rest-service_66).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 In this how-to, you will consume a JSON-based REST services by integrating with the API of the world famous Rijksmuseum that allows us to search for art.
 
@@ -74,11 +74,11 @@ Your Domain Model should look similar to this:
 
 ![](attachments/18448729/18581767.png)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 The association name needs to match the name in the JSON exactly. The name of the entity can be anything you want.
 
-</div>
+{{% /alert %}}
 
 ![](attachments/18448729/18581769.png)
 

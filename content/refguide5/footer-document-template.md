@@ -9,12 +9,12 @@ When enabled, the footer will be inserted at the bottom of every page. Other wid
 
 For inserting page numbers, see [Static Label](static-label-document-template)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/918235.png)
 A footer
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Appearance
 

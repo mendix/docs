@@ -5,11 +5,11 @@ parent: "data-view-control-bar"
 ---
 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This special close button, that was only available in the data view control bar, has been removed in version 6.7.0. Use a normal [Close page button](close-page-button) instead.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The close button closes the page with the data view. This button can only be used in non-editable data views. In editable data views you use either save or cancel.
 

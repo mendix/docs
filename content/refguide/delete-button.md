@@ -27,9 +27,9 @@ The delete button allows end-users to delete objects from the database that are 
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 {% snippet Visibility+Property.md %}
 

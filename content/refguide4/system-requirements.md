@@ -15,11 +15,11 @@ The following frameworks are automatically installed (if necessary):
 *   Microsoft Visual C++ 2008 SP1 Redistributable Package (x86) (only for Mendix >= 4.6.0)
 *   Java Development Kit 1.6
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 You can choose which JDK is used through the 'Edit > Preferences' menu item.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 If you want to use TortoiseSVN in combination with the Modeler, download version 1.6.latest for Mendix < 4.1.0 or version 1.7.latest for Mendix >= 4.1.0 from the [Sourceforge page](http://sourceforge.net/projects/tortoisesvn/files/?source=navbar).
 

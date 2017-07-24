@@ -33,11 +33,11 @@ Indicates the maximum number of rows that can be present in the datagrid when ex
 
 If true, the date format of the column is used, otherwise a format that is recognized by Excel as a date is used (yyyy-MM-dd).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The date format of the columns is used to determine whether only the date, only the time or both date and time should be exported in this Excel compatible format.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Generate Excel seperator hint
 

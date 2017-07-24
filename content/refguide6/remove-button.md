@@ -27,8 +27,8 @@ The remove button is a button specifically made for the reference set selector. 
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 {% snippet Visibility+Property+With+Module+Roles+Simple.md %}

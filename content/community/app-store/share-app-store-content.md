@@ -107,11 +107,11 @@ To add content to the App Store, follow these steps:
 
         ![](attachments/share-app-store-content/add_content_8.png)
 
-        <div class="alert alert-info">
+        {{% alert type="info" %}}
 
         You can request other license types to be added as "License" options by pressing the "Feedback" button on the right side of the App Store screen.
 
-        </div>
+        {{% /alert %}}
 
 9. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 
@@ -152,11 +152,11 @@ To update content that has already been published, follow these steps:
 
 This section presents guidelines for developing and submitting content to the Mendix App Store.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Submitted App Store content will be reviewed within five working days.
 
-</div>
+{{% /alert %}}
 
 ### 5.1 Widget Guidelines
 

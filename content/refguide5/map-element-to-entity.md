@@ -49,23 +49,23 @@ The conversion microflow should have one parameter that matches the element type
 
 If this value element maps to an attribute, the return type of the conversion microflow must match the attribute type.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Conversion microflows of value elements are executed before these value elements are used as search keys or microflow parameters to obtain an object. This means that when using a value element with a conversion microflow as parameter for the microflow to obtain an object, the parameter type should match the return type of the conversion microflow.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Key
 
 This property specifies whether the value element is used as search key to obtain an object. If a value element is used as search key, you must specify the attribute it maps to. The XML value will be matched to the value of this attribute when searching for an object.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/918233.png)
 The map element to entity screen
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+{{% /alert %}}{{% alert type="warning" %}}
 
 Attribute with 'binary' type is not supported to be set as key.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

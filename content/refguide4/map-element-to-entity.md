@@ -55,11 +55,11 @@ The conversion microflow should have one parameter that matches the element type
 
 If this value element maps to an attribute, the return type of the conversion microflow must match the attribute type.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Conversion microflows of value elements are executed before these value elements are used as search keys or microflow parameters to obtain an object. This means that when using a value element with a conversion microflow as parameter for the microflow to obtain an object, the parameter type should match the return type of the conversion microflow.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Key
 

@@ -31,9 +31,9 @@ Follow these steps to get access to the TimeSeries connector and receive an API 
 
 1. Sign up for the connector by going to our [Connector website](http://connector.timeseries.nl/ "Click here to go to the TimeSeries website") and register for free. You will receive your API key in an email after registering.
 
-  <div class="alert alert-info">{% markdown %}
+  {{% alert type="info" %}}
   It can take up to a few hours to generate the key and send it to you. This key is used to activate and access your TimeSeries Analytics instance.
-  {% endmarkdown %}</div>
+  {{% /alert %}}
 
 2. After you receive the key, import the TimeSeries Connector module from the [Mendix App Store](https://appstore.home.mendix.com/link/app/31951/TimeSeries/TimeSeries-Connector "Click here for awesomeness") into your project.
 
@@ -48,14 +48,14 @@ There are three constants that you can configure. Follow these steps to configur
 2. Open the **TimeSeriesAccessKey** constant.
 3. Paste your TimeSeries API key in the **Default value** field and click **OK**.
 
-  <div class="alert alert-info">{% markdown %}
+  {{% alert type="info" %}}
   
   There are two more constants that don't need to be configured unless otherwise instructed.
   
   * Dateformat: Is by default set to yyyy-MM-dd'T'HH:mm:ss.SSSZ and should remain like that
   * TimeSeriesBasePath: Is by default set to https://timeseries-connector.timeseries.nl:16000/ and should remain like that unless communicated otherwise
 
-    {% endmarkdown %}</div>
+    {{% /alert %}}
 
 ### 4.2 Available Enumerations
 These are the available enumarations in the TimeSeriesConnector module:
@@ -73,11 +73,11 @@ Let's take the concept of a house. In this scenario the house is an asset, of wh
 
 The module comes with a ready-to-use domain model, which we'll also use in this how-to. Of course, this isn't a necessity, and you can also use your own domain model. All referenced microflows in this how-to can also be found in the module.
 
-  <div class="alert alert-warning">{% markdown %}
+  {{% alert type="warning" %}}
   
   If you want to use your own domain model, make sure that your entities have the necessary attributes for every action that requires a Type Parameter.
   
-  {% endmarkdown %}</div>
+  {{% /alert %}}
 
 The domain model looks like this:
 
@@ -105,11 +105,11 @@ The next step is creating a *Channel*. This *Channel* should belong to an *Asset
 2. Provide a **Channel key**. 
 3. Provide a **Measurement interval**. 
 
-  <div class="alert alert-info">{% markdown %}
+  {{% alert type="info" %}}
   
   You are free to choose the channel key name and the measurement interval. The interval is stored and can be used for analysis.
   
-  {% endmarkdown %}</div>
+  {{% /alert %}}
   
 In our example implementation we have created a page with a *Channel* object, on which the attributes and the association with an asset can be set.
 
@@ -129,11 +129,11 @@ Now that you have created an asset with a channel, you can start storing measure
 3. Provide the **Measurement type**.
 4. Provide the **Value**.
 
-  <div class="alert alert-info">{% markdown %}
+  {{% alert type="info" %}}
 
   The **Date and time** needs to be formatted in UTC to the following format: yyyy-MM-dd'T'HH:mm:ss.SSSZ. The **Measurement type** can be INTERVAL, REGISTER, or EVENT. The **Value** is a decimal.
 
-  {% endmarkdown %}</div>
+  {{% /alert %}}
 
 In our example implementation we have created a page with a *measurement* object, on which the attributes and the associations with an *Asset* and *Channel* can be set.
 

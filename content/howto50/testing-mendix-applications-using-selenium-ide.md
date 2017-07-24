@@ -22,11 +22,11 @@ Before you can start with this how-to, make sure you have completed the followin
 *   Install Firefox add-on [Firebug](https://addons.mozilla.org/nl/firefox/addon/firebug/).
 *   Install Firefox add-on [FirePath](https://addons.mozilla.org/nl/firefox/addon/firepath/).
 
-<table><thead><tr><th class="confluenceTh">Software</th><th class="confluenceTh">Version used in this how-to</th></tr></thead><tbody><tr><td class="confluenceTd">Firefox</td><td class="confluenceTd">37.0.2</td></tr><tr><td class="confluenceTd">Selenium IDE</td><td class="confluenceTd">2.9</td></tr><tr><td class="confluenceTd">Firebug</td><td class="confluenceTd">2.0.9</td></tr><tr><td colspan="1" class="confluenceTd">FirePath</td><td colspan="1" class="confluenceTd">0.9.7.1</td></tr></tbody></table><div class="alert alert-warning">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Software</th><th class="confluenceTh">Version used in this how-to</th></tr></thead><tbody><tr><td class="confluenceTd">Firefox</td><td class="confluenceTd">37.0.2</td></tr><tr><td class="confluenceTd">Selenium IDE</td><td class="confluenceTd">2.9</td></tr><tr><td class="confluenceTd">Firebug</td><td class="confluenceTd">2.0.9</td></tr><tr><td colspan="1" class="confluenceTd">FirePath</td><td colspan="1" class="confluenceTd">0.9.7.1</td></tr></tbody></table>{{% alert type="warning" %}}
 
 All images, names and steps in this how-to are based on these versions. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 2\. Install and run the Company Expenses App
 
@@ -133,11 +133,11 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
 
     in Selenium.
 
-    <div class="alert alert-info">{% markdown %}
+    {{% alert type="info" %}}
 
     Because it is an input field, you have to add _input_ to the target.
 
-    {% endmarkdown %}</div>
+    {{% /alert %}}
 22. Click the **Run current test case** button.
 
     The test will fail because it can not find the element with target _css=.mx-name-textBox3 input_. The element can't be found because the page with the element is not loaded yet.
@@ -173,11 +173,11 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
 
     in Selenium.
 
-    <div class="alert alert-info">{% markdown %}
+    {{% alert type="info" %}}
 
     Because it is a dropdown list, you have to add _select_ to the target.
 
-    {% endmarkdown %}</div>
+    {{% /alert %}}
 30. Click the **Run current test case** button.
 
     The test will pass.
@@ -185,11 +185,11 @@ Selenium IDE can be used to record tests scripts, but almost alway these scripts
 
 Congratulations! You have just created your second automated test.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Some widgets, like a Grid or a Listview, can show multiple items. Every item has a CSS class `mx-name-index-[indexNumber].` The index number starts at 0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 3.2 Install the Selenium Mendix locator builder plugin
 

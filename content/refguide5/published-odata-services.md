@@ -72,8 +72,8 @@ If security is enabled, it is required to configure which users have access righ
 
 Once your OData-enabled app is running, an overview of exposed OData resources is available on the root URL followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/` You can copy and paste the links into for instance Excel to establish a link between your OData resources and Excel.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 While the API documentation for OData resources is enabled by default, access to it may be restricted by the administrator for apps running in production.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

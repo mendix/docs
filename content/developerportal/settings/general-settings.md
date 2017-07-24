@@ -16,11 +16,11 @@ In **General** there is an overview about the App:
 *   App Contact
 *   Technical Contact
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Note that only the Technical Contact can grand other members with the Technical Contact role in **Node Permission** in **Security**.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 There are two actions you can take:
 
@@ -41,20 +41,20 @@ There are two actions you can take:
 *   Deactivate the App by clicking **Deactivate App**
 *   Delete the App by clicking **Delete App**
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that when you click **Deactivate App** only the account owner can reactivate an app in his account management screen. When you click **Delete App** the app deletion cannot be undone and means ALL DATA WILL BE LOST, including all files on the TeamServer and all data in the FreeApp node (if applicable).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 1.2 Leave App
 
 If you click **Leave App**, you will be removed from the App. If you are the last member of this app and decide to leave as well, the app will be deactivated. 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Note that you cannot leave the App if you are the **Technical Contact** of the App.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 2 Related Content

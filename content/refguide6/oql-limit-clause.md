@@ -19,7 +19,7 @@ Specifies how many rows must be returned.
 **OFFSET**
 Specifies how many rows must be skipped before returning the result rows.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ```
 SELECT FirstName FROM Sales.Customer
@@ -29,7 +29,7 @@ LIMIT 10
 
 This query retrieves the first ten customers, sorted by their last name.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 ```
 SELECT FirstName FROM Sales.Customer
@@ -39,7 +39,7 @@ OFFSET 10
 
 This query retrieves all customers, except the first ten, sorted by their last name.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 ```
 SELECT FirstName FROM Sales.Customer
@@ -49,4 +49,4 @@ LIMIT 10 OFFSET 10
 
 This query retrieves the 11the to 20the customer, sorted by their last name.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

@@ -84,11 +84,11 @@ At the end of a user session (which is terminated either by an explicit user log
 
 The more objects that are part of the 'Dirty State', the more data has to be transferred in the requests and responses between the Mendix Runtime and the client. As such, it has an impact on performance. In cluster environments it is advised to minimize the amount of 'Dirty State' to minimize the impact of the synchronization on performance.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
  It's important to realize that when calling external web services in Mendix to fetch external data, the responses of those actions are converted into Mendix entities. As long as they are not persisted in the Mendix Database, they will be part of the `Dirty State` and have a negative impact on the performance of the application. To reduce this impact, this behavior is likely to change in the future.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 To reduce the performance impact of large requests and responses, an app developer should be aware of situations that cause those. There are several scenarios which can cause these:
 
@@ -98,11 +98,11 @@ To reduce the performance impact of large requests and responses, an app develop
 | Microflow that calls a web service/app service to retrieve external data and convert them to non-persistable entities. |
 | A page has multiple microflow data source data views, each causing the state transferred to the Mendix Runtime to handle the microflow. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 To make sure the session state does not become too big when the above scenarios apply to your app, it's recommended to explicitly delete objects when they are no longer necessary, so that they are not part of the state anymore. This frees up memory for the Mendix Runtime nodes to handle requests for this session and improves performance.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Associating Entities with `System.Session` or `System.User`
 
@@ -118,11 +118,11 @@ The `Value` values can easily be obtained by performing a find on the `Key` valu
 
 ![](attachments/16714073/16844070.png)
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 When data is associated to the current user or current session it can not be automatically garbage collected. As such, this data will be sent with every request to the server and returned by the responses of those requests. Therefore, associating entity instances with current user and current session should be done when no other solutions are possible to retain this temporary data.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Sessions are Now Always Persistent
 
@@ -130,8 +130,8 @@ To support seamless clustering, sessions will always be persisted in the databas
 
 Persistent Sessions also store a 'last active' date upon each request. To improve this particular aspect of the performance, the 'last active' date attribute of a session is no longer committed to the database immediately on each request. Instead, this information is queued for an action to run at a configurable interval to be stored in the Mendix Database. This action verifies whether the session has not been logged out by another node and whether the last active date is more recent than the one in the database. The interval can be configured by setting `ClusterManagerActionInterval` (value in milliseconds).
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Overriding the default values for `SessionTimeout` and `ClusterManagerActionInterval` custom settings can impact the behavior of keep alive and results in an unexpected session logout. In particular, the best practice is to set the `ClusterManagerActionInterval` to half of the `SessionTimeout` so that each node gets the chance to run at least once before the Cluster Leader attempts to delete a session.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

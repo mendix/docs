@@ -51,12 +51,12 @@ the desktop.
 
 If your app is offline-compatible, please ensure that a sync button is available to the user, so that device registration requests will be synchronized with the server. Also, make sure your app has an [offline device profile](/refguide6/offline-device-profile).
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Please do not remove the buttons with the caption "GCM Settings reference" and "Device Registration reference" from the PushNotification_Snippet; they are necessary to make the widget offline-compatible. Note that both buttons are
 invisible to the user.
 
-</div>
+{{% /alert %}}
 
 ![](attachments/19955732/20217888.jpg)
 
@@ -71,11 +71,11 @@ If your project uses Mendix SSO, most likely the `AppCloudServices.StartAppCloud
 
 Add the `PushNotifications_Administration` page to the project navigation, so it can be reached after you deploy your app. This page contains three tabs: _`Pending Messages`_, _`Devices`_, and _Configuration_. The _Pending Messages_ tab shows all the messages that are queued either because they were sent using the `QueueMessage` action or because previous attempts to send them failed. The _Devices_ tab contains a list of all devices registered with the application and is useful for testing purposes. The _Configuration_ tab is used to configure your application to be able to reach the respective services (APNs and FCM) later on.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Do not add the administration pages to the navigation layout of offline devices; the administration pages are not offline compatible.
 
-</div>
+{{% /alert %}}
 
 ### 3.6 Step 6 – Set Up the Project Security for Your Module
 
@@ -87,13 +87,13 @@ Set the `Project security` -> `User roles` to include the `PushNotifications.Adm
 
 At this point all implementation steps are done and you can deploy your application to the Mendix cloud. If you are using a Free App, simply click the `Run` button.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 You should make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a NullPointerException when you try to send a notification to APNs.
 
 If you are using a Free App, you should set a default value for the constant in the model. Otherwise, you can configure the constant value in the Mendix Cloud Portal.
 
-</div>
+{{% /alert %}}
 
 ### 3.8 Step 8 – Set Up Access to APNs and FCM
 

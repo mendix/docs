@@ -11,11 +11,11 @@ If database is selected as the data source for a widget then the object or objec
 2.  The XPath constraint supplied in the widgets settings.
 3.  An association, if the widget is nested in another data widget and the data path described runs over an association.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 Use access rules whenever possible to limit data in data grids. This way you know that the objects will always be constrained by these rules (as opposed to an XPath constraint on a single data grid). The access rules will also be applied when executing microflows which saves you from repeating XPath constraints.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Components
 
@@ -37,7 +37,7 @@ A nested data grid can either be connected to an entity or to an entity path sta
 
 Please note that this differs from the [association data source](association-source) in that the objects are not retrieved from the client cache but directly from the database. The association is simply parsed as an extra constraint in the database query.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713835/16843965.jpg)
 The [domain model](domain-model) above describes a database in which an indeterminate number of users can be linked to a single country.
@@ -45,7 +45,7 @@ The [domain model](domain-model) above describes a database in which an indeterm
 ![](attachments/16713835/16843966.jpg)
 The data view shown contains a single country. The data grid nested inside will display only those users that are linked to that particular country.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Show Search Bar
 
@@ -70,8 +70,8 @@ _Default value:_ false
 
 The [XPath constraint](xpath-constraints) allows for custom, hard-coded limitations on the data displayed. This constraint will be appended to the constraints (if any) already applied through security and context.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 XPath constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to shield a particular subset of the data from users then [entity access rules](access-rules) are superior in that they can be tailored to each individual user role and that they apply system-wide.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

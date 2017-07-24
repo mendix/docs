@@ -46,11 +46,11 @@ This should be something like:
 ```
 “D:\Mendix\MyApplications\Servers”
 ```
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 The user that is configured as the Service Account should have Read&Execute privileges on this entire server folder. You could suffice with just granting access to the specific server distribution but that would mean that you’d have to update the folder access after every platform version update. 
 
-</div>
+{{% /alert %}}
 
 ## 3\. Related content
 

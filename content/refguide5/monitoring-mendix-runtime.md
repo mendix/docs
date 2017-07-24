@@ -79,8 +79,8 @@ Number of database requests. Distinguishes between "select", "update", "insert",
 **Memory**
 Represents the number of bytes allocated to the specified memory section. See the [memory usage](http://docs.oracle.com/javase/6/docs/api/java/lang/management/MemoryUsage.html) and the [tuning garbage collection](http://www.oracle.com/technetwork/java/gc-tuning-5-138395.html) pages for an explanation of the different sections.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Memory statistics should only be interpreted by experts, lack of detailed knowledge of the Java memory model can lead to false conclusions.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

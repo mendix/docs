@@ -14,11 +14,11 @@ To see the **Company Admin** settings, you need to fulfill the following prerequ
 * Have a **MxID** (to create a MxID, click [here](https://www.mendix.com/try-now/))
 * Be a company admin (you can request information about the current company admin from [Mendix Support](https://support.mendix.com/hc/en-us)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 You need to have a MxID to get access to the [Developer Portal](http://home.mendix.com).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 2 Company Contact
 

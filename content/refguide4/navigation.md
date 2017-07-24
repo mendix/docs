@@ -28,11 +28,11 @@ The menu bar defines the menus in the menu bar at the top of the screen. Each it
 
 Both menus and menu items are [navigation items](navigation-item).
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If [security](project-security) is enabled, the menu will only show items that the user has access.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Alternative Home Pages
 
@@ -46,8 +46,8 @@ If the option 'Show Navigation Tree' is checked, the navigation tree defines a t
 
 The navigation tree consists of [navigation items](navigation-item).
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If [security](project-security) is enabled, the navigation tree will only show items that the user has access to.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

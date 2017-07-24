@@ -37,13 +37,13 @@ In this chapter you will learn how to install the ChartsJS widget
 
 In order to leverage the ChartJS classes in Mendix in a predictable way, the widget expects a specific data model structure.  This is defined by entities and attributes in the domain model.  To get the widget to work properly, the data structure must match the widget expectations exactly.   We also need to create a data entry entity to house our data for the purpose of this exercise.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 TIP: Download the Github test project
 
 To see a working domain model already configured in an application, you can go to the GitHub repository [here](https://github.com/mendix/ChartJS), download the zip package.
 
-</div>
+{{% /alert %}}
 
 1.  make a new module named ‘Charting.
 2.  Configure your domain model to contain a Chart, Datapoint, and Dataset entities as shown below

@@ -5,11 +5,11 @@ space: "Reference Guide 4"
 ---
 With the show-form action you can show a form to the end user.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Action Properties
 

@@ -3,11 +3,11 @@ title: "Microflow"
 parent: "microflows"
 space: "Reference Guide 4"
 ---
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes the properties of a microflow. If you want to see what microflows are for and what kind of elements they contain, you can check the [Microflows](microflows) overview documentation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common Properties
 
@@ -46,11 +46,11 @@ Error microflow defines which microflow is executed when concurrent execution is
 
 The return type defines what information the microflow returns. The caller of the microflow will get a result of this type.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 A microflow could return whether or not the committing of an object should continue. In this case, a boolean would be the return type of the microflow.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Security Properties
 
@@ -58,11 +58,11 @@ A microflow could return whether or not the committing of an object should conti
 
 Allowed roles defines to which [module role](module-role) the user must have to be able to execute the microflow.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that these roles are only checked when the microflow is executed from the client. A microflow is always allowed to call another microflow and these roles are not checked then.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 See also [Module Security](module-security).
 
@@ -70,21 +70,21 @@ See also [Module Security](module-security).
 
 This property indicates whether entity access based on the current user is applied when performing operations on objects. Applying entity access limits the objects that are retrieved by the [retrieve action](retrieve) to only those that the current user is allowed to see. Similarly, to reading and writing attributes and associations the entity access of the current user is applied. If entity access is not applied on the other hand, all operations are allowed and all objects are retrieved.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Microflows that apply entity access have a yellow background; microflows that do not have a white background.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 | Option | Description |
 | --- | --- |
 | True | Entity access is applied to retrieving and manipulating objects. The rights of current user are taken into account. |
 | False | Entity access is not applied. |
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 By default entity access is not applied. Set 'apply entity access' to true if you want to perform some actions that respect the rights of the current user.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value_: False

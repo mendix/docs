@@ -3,11 +3,11 @@ title: "Report Grid"
 space: "Reference Guide 6"
 parent: "report-widgets"
 ---
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This has been introduced in version 6.10.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 This shows the reported data in a grid.
 

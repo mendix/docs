@@ -69,11 +69,11 @@ To add the Radiobutton List widget from the App Store via the Modeler, follow th
 
         ![](attachments/use-app-store-content-in-the-modeler/18580439.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     To delete a widget, remove the .mpk file from your project's widgets folder.
 
-    </div>
+    {{% /alert %}}
 
 3. Select the **Attribute Radiobutton List** widget, which will be placed within your page:
 
@@ -119,11 +119,11 @@ To add the Google Maps module from the App Store via the Modeler, follow these s
 
     ![](attachments/use-app-store-content-in-the-modeler/18580431.png)
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
     If you have made any edits or customization to a module that you have already downloaded, be aware of the "Replace existing module" option. This will override all of your changes with the standard App Store content, which will result in the creation of new entities and attributes, the deletion of renamed entities and attributes, and the deletion of their respective tables and columns represented in the database. Therefore, unless you understand the implications of your changes and you will not update your content in the future, making edits to the downloaded modules is not recommended.
 
-    </div>
+    {{% /alert %}}
 
 3. Click **Import** on the **Import Module** dialog box, and a pop-up stating that “The app was successfully imported into the project” will appear. Click **OK**.
 4. Open the **Project Explorer** to view the Google Maps module. Note that unlike a widget, a module will be visible in your Project Explorer and will contain a domain model, pages, and microflow logic. A module downloaded from the App Store will store files if the module contains files (for example, userlib or resource files). In addition, a module downloaded from the App Store will have a light blue icon to differentiate it from the development modules.
@@ -134,11 +134,11 @@ To add the Google Maps module from the App Store via the Modeler, follow these s
 
 Each module that you download from the App Store is different, and some modules might lead to errors because they are connected to other modules. For example, if you download the Excel Importer module, you will also need to download the Mx Model Reflection module to make the 336 errors disappear. If you run into any problems, always check the **Documentation** tab specific to the module for installation guidelines and details on any dependencies.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Sometimes additional widgets are added when you download a module. For example, the Google Maps widget is included when you download the Google Maps module.
 
-</div>
+{{% /alert %}}
 
 To use the Google Maps module in the Modeler, follow these steps:
 
@@ -156,11 +156,11 @@ There are also guidelines for using projects, layouts, and themes from the App S
 
 Downloading a project or layout will create a new project structure in the the location that you enter. After clicking **Download**, a pop-up window will appear where you can specify how the project should be created.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 You cannot create a new project in an existing repository that is not empty.
 
-</div>
+{{% /alert %}}
 
 ### 6.2 Using a Theme from the App Store
 

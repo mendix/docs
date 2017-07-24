@@ -32,11 +32,11 @@ See [Button Properties](button-properties)
 | Select page | Clicking on this button selects all objects on the current page. |
 | Select all | Clicking on this button selects all objects. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Due to technical limitations, a button with selection type 'Select all' cannot be combined with remove, delete or select buttons.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value:_ Select page
 

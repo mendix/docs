@@ -40,11 +40,11 @@ Choose the region that should be collapsed/expanded by clicking this button.
 | Left | The left region of the layout container will be toggled. |
 | Right | The right region of the layout container will be toggled. |
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The sidebar toggle is right-to-left-aware (RTL) which means that in RTL languages the sidebar will slide in from the right if you choose 'Left'.}
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value:_ Left
 

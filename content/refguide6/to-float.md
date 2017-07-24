@@ -7,11 +7,11 @@ parent: "microflow-expressions"
 
 Converts a value of type Decimal to type Float.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This function is deprecated together with the Float type. Use the high-precision Decimal type instead.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## toFloat
 

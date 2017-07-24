@@ -9,11 +9,11 @@ parent: "mapping-documents"
 
 Please refer to [Mapping Documents](mapping-documents) for an introduction.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 From Mendix 6.8.0, JSON Structure is fully supported in export mappings.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Obtaining objects in Export Mappings
 
@@ -62,11 +62,11 @@ For each value element that the complex schema element encompasses, an attribute
 | Convert Using (optional) | A Microflow to convert the value before performing export. |
 | Map attributes by name | If this button is clicked, an effort is made to match attributes by name. A dialog appears reporting what has been changed. |
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 It is possible to implicitly convert Mendix Decimal data type to xs:float type. In this case, it is possible that resulting value will lose precision.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Optional mapping elements 
 

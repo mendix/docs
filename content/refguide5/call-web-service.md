@@ -7,11 +7,11 @@ space: "Reference Guide 5"
 
 The call-web-service activity can be used to call one of the [imported web service](consumed-web-services) operations. You can specify whether or not to use authentication, what the request should look like and how the response of the web service should be handled.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Web Service Operation Properties
 
@@ -25,7 +25,7 @@ Operation defines which operation of the web service is called.
 
 Override location defines whether to override the location where the web service is called.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 When calling a web service using a call-web-service activity, the location of the web service is determined as follows.
 
@@ -33,7 +33,7 @@ When calling a web service using a call-web-service activity, the location of th
 2.  If the service that defines the operation has a location constant defined, the value of that constant is used.
 3.  Otherwise, the location as specified in the WSDL of the imported web service is used.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Location
 

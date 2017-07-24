@@ -5,13 +5,13 @@ space: "Reference Guide 4"
 ---
 A text area can be used to display and/or edit a long text value that can be split over several lines.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/917556.png)
 
 This text area allows the end-user to set the description of the product.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 A text area must be placed in a table cell within a data view or template grid and connected to an attribute of type String. The connected attribute is shown in blue and between brackets inside the text area.
 
@@ -44,11 +44,11 @@ _Default value: Attribute length_
 
 This is the text displayed when typing in the text area. This text has 2 placeholders. The first placeholder shows the number of characters already typed and the second placeholder shows the maximum number of characters.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 You've used {1} characters of the {2} characters that are allowed.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Text too long message (only in web forms)
 

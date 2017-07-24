@@ -23,9 +23,9 @@ Symbol                             | Description
 
 The name property defines the name of the attribute. This name is used to refer to the attribute from forms, microflows, queries, constraints etcetera.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 If you delete an attribute in your entity and then create a new attribute with the same name, Mendix will consider it a new and different attribute. This means that upon deployment the old column will be dropped, including its data. Then a new, empty, column with the same name will be created.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Type
 
@@ -57,7 +57,7 @@ HSQLDB | PostgreSQL | SQL Server | Oracle
 
 _Default value:_ String
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In a web shop you want to store the id, profile photo, level (for service quality), user name, password, activity, total of minutes spent online, year of subscription, date of birth, total amount of expenses and the standard amount of discount for a customer.
 
@@ -72,7 +72,7 @@ The password itself should not be stored, but only its hash value, thus it is st
 A customer can be active or inactive, which is stored in an attribute named 'Active' of type Boolean.
 ![](attachments/819203/917578.png)
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Localize (only attributes of type 'Date and time')
 
@@ -124,7 +124,7 @@ String                | <span>(empty)</span>                        |
 
 The source determines whether the value of the attribute is stored in the database or calculated by a microflow.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Take note of the following things when using calculated attributes:
 
@@ -134,19 +134,19 @@ Take note of the following things when using calculated attributes:
 
 *   It is not possible to sort on an attribute for which this property is used, because sorting is done by the database engine.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Microflow (only if source is microflow)
 
 If the source is a computation, the microflow property defines which microflow defines this computation to calculate the value of the attribute when the object is retrieved. The microflow should have a parameter of the type of the entity of the attribute and it should return a value with the same type as the attribute.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In a webshop you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
 
 ![](attachments/819203/917570.png)
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Effects of data type changes on existing attributes
 

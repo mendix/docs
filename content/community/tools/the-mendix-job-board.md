@@ -56,11 +56,11 @@ To apply, click **APPLY FOR JOB** at the bottom of the job details page, which w
 
 ![](attachments/mendix-job-board/apply_for_job.png)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Newly posted are also announced on the [@MendixDeveloper](https://twitter.com/MendixDeveloper) Twitter account!
 
-</div>
+{{% /alert %}}
 
 ## 3 Posting a Job
 

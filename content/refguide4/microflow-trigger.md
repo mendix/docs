@@ -5,13 +5,13 @@ space: "Reference Guide 4"
 ---
 A microflow trigger can be used to create a button that starts a microflow on a form.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/917520.png)
 
 This microflow trigger retrieves an address that belongs to the given zip code.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 A microflow trigger must always be placed in a table cell. If a microflow trigger is placed within a data view the connected microflow will receive the entity that is connected to the data view as an input parameter.
 

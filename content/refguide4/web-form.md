@@ -3,11 +3,11 @@ title: "Web Form"
 parent: "web-forms"
 space: "Reference Guide 4"
 ---
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes the properties of a web form. If you want to see what web forms are for and what kind of widgets can be placed on them, you can check the [Web Forms](web-forms) overview documentation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Appearance Properties
 

@@ -194,10 +194,10 @@ function generate(domainModel1, model) {
 
 Execute the script. You should have a new project with the generated entities.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 Instead of creating a new project, you can also reuse an existing project or even an existing online working copy.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Go back to [your learning path for the Mendix SDK](your-learning-path-for-the-mendix-sdk).

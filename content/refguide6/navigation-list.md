@@ -7,12 +7,12 @@ parent: "container-widgets"
 
 A navigation list can be used to attach an action to an entire row. Such a row is called a navigation list item.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713859/16843977.png)
 A navigation list with three empty rows.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common properties
 

@@ -121,11 +121,11 @@ _Default value_: Half away from zero
 
 If this option is enabled, users can sign in multiple times through different clients (e.g. desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 In production this only works with licenses based on concurrent users.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value_: Yes
 
@@ -195,22 +195,22 @@ Certificates are used to connect to web services over HTTPS when:
 
 These certificates can be imported into the Modeler using the 'Import' button. Certificate Authority files usually have a .crt extension and client certifcates usually have a .p12 or a .pfx extension. After importing use 'View details' to acquire more information concerning the certificate.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 When running from the Modeler or from Eclipse the certificates will be used automatically to connect over https. In server scenarios the location of the certificate files has to be specified in the configuration file.
 
-{% endmarkdown %}</div>
-<div class="alert alert-warning">{% markdown %}
+{{% /alert %}}
+{{% alert type="warning" %}}
 
 Be aware that during local deployment, the certificate files will be located in the deployment folder, under model/certificates. Therefore, do not use production certificates during development.
 
-{% endmarkdown %}</div>
-<div class="alert alert-success">{% markdown %}
+{{% /alert %}}
+{{% alert type="success" %}}
 
 Certificates can be installed in the Windows Certificate Store using the 'Install Certificate...' wizard in the 'View details' form. This can be useful when trying to access a WSDL-file using a https connection which requires a client certificate.
 
-{% endmarkdown %}</div><
-div class="alert alert-success">{% markdown %}
+{{% /alert %}}<
+div class="alert alert-success">
 
 When an SSLException occurs at runtime with the message "`HelloRequest followed by an unexpected handshake message`" or when a web service does not respond (Java 6 update 21 and higher) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](http://www.ietf.org/rfc/rfc5746.txt) compatible.
 When updating the client and server to be compatible with RFC-5746 is not feasible, the following should be added to "Extra JVM parameters" in the "Server" tab to avoid this exception: `-Dsun.security.ssl.allowUnsafeRenegotiation=true`. Be warned that this does make the client-server communication vulnerable to an exploit which has been fixed in RFC-5746.
@@ -218,4 +218,4 @@ When client and server are RFC-5746 compatible at a future point in time, this J
 
 For background information see [this](http://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html) article.
 
-{% endmarkdown %}</div>
+</div>

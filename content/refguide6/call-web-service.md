@@ -5,8 +5,8 @@ parent: "integration-activities"
 ---
 
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The documentation has moved to [Call Web Service Action](call-web-service-action)
 
-{% endmarkdown %}</div>
+{{% /alert %}}

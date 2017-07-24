@@ -44,11 +44,11 @@ In the previous section you set up a basic data structure and created some sampl
 
 1.  Open your **orders overview** and right click on the (empty) section above the **Search **button.
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
     The search bar section might be already populated if you automatically filled the contents of your data grid.
 
-    </div>
+    {{% /alert %}}
 
     ![](attachments/18448705/18581359.png)
 

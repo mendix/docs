@@ -13,11 +13,11 @@ Before you start with this how-to please complete the following prerequisites:
 *   [Create and Deploy Your First App](create-and-deploy-your-first-app)
 *   You need Eclipse: download it [here](https://eclipse.org/)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 You can use any text editor to create custom Java actions, but we highly recommend using Eclipse. The Mendix Modeler contains a 'Deploy for Eclipse' feature that makes sure that everything that needs to be configured in Eclipse is done automatically for you. You only need to import the project into your Eclipse working environment and you're done.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 2\. Adding Java Actions in the Mendix Modeler
 

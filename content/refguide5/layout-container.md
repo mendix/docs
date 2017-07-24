@@ -5,20 +5,20 @@ space: "Reference Guide 5"
 ---
 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 For Mendix 5.18 or later see the [Scroll Container](scroll-container).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 A layout container is used to divide the layout in regions such as a header, sidebar or footer. A layout container must be the only top-level widget. Apart from that, a layout container can only be placed directly in another layout container.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/4522328/4751437.png)
 The layout container splits the layout in three parts: a header containing a logo, a content part with a placeholder and a footer.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common Properties
 
@@ -30,7 +30,7 @@ The internal name of the widget. You can use this to give sensible names to widg
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -38,18 +38,18 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General Properties
 

@@ -15,11 +15,11 @@ While developing a hybrid mobile app, you cannot simply test it in your mobile b
 
 See also [this page](getting-the-mendix-developer-app) for information about how to download the Mendix Developer App.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that your mobile device has to be on the same network as your development machine for the Mendix Developer App to work. If this is the case and the connection still fails, make sure that communication between devices is allowed in the Wifi access point.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 See also:
 

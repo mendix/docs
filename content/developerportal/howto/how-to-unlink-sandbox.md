@@ -25,11 +25,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Download a Backup
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Please note that because you are going to unlink the Sandbox from your Free App, the Sandbox environment will be permanently deleted. This means that all data will be lost from the Sandbox/Free App. To keep your data, you need to download a backup.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The documentation on how to download a backup can be found [here](how-to-download-a-backup).
 

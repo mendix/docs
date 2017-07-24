@@ -24,11 +24,11 @@ Example of a data set using OQL:
 **Parameters**
 A dataset can have multiple parameters. Parameters are used to filter / manipulate data sets. [Security](security) on data sets is configured based on the parameters. In a Java action the parameters are used in the generated template.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In OQL parameters can be called using a **$** symbol, for example: **$Month**.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ![](attachments/819203/918064.png)
 

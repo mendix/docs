@@ -7,12 +7,12 @@ space: "Reference Guide 5"
 
 A dynamic image can be used to show a System.Image. If the image is not available (for example: the image was never saved) it will show the preset default image. It can be put inside a data view or templategrid.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 [![](attachments/819203/918132.png)](dynamic-image-document-template)
 A dynamic image inside a table cell, showing the preset default image.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Appearance Properties
 

@@ -32,11 +32,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 3. Place the cursor on the line that needs debugging, hold down **Ctrl+Shift**, and press **B** to enable a breakpoint. A blue dot in front of the line will appear: 
     ![](attachments/18448578/18580059.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     You can also use Ctrl+Shift+B to disable a breakpoint.
 
-    </div>
+    {{% /alert %}}
 
 ## 4 Debugging in Eclipse
 
@@ -52,11 +52,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 4. Click **Step into** (or press F5) or **Step over** (or press F6) to move on the next step in the microflow:
     ![](attachments/18448578/18580056.png)
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
     With debugger options, the difference between "Step into" and "Step over" is only noticeable if you run into a function call. "Step into" means that the debugger steps into the function, and "Step over" just moves the debugger to the next line in the same Java action. With "Step Return" (pressing F7), you can instruct the debugger to leave the function; this is basically the opposite of "Step Into." Clicking "Resume" (pressing F8) instructs the debugger to continue until it reaches another breakpoint.
 
-    </div>
+    {{% /alert %}}
 5. Place your cursor on any of the variables in the Java action to see its value in a pop-up window:
     ![](attachments/18448578/18580057.png)
 

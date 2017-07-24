@@ -67,11 +67,11 @@ This property determines the width of the layout grid.
 | Full width | The layout grid spans the full width of the available space and will stretch and shrink. |
 | Fixed width | The layout grid has a fixed width but it is still responsive to viewport changes. Note that the width is not configurable in the modeler but is determined by Bootstrap. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 As the layout grid responds to the viewport width, and not to the width of its container, a fixed width layout grid should only be used on top-level.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Visibility Properties
 

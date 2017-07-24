@@ -24,11 +24,11 @@ Before converting your project, reading the following sections is recommended.
 
 If you are not using Team Server, make a backup of your project. Check that the backup was successful by opening the project.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 Seriously, make a backup!
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 2.2 Converting to the Latest Mendix 6 Version
 

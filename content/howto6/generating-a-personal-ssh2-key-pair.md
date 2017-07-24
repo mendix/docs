@@ -72,9 +72,9 @@ To create a key pair using PuTTY, follow these steps:
 
 6.  Copy the text listed in the upper text field ('Public key for...'). This is the exact text you have to use in the next section.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 Do not ever share your private key (.ppk file) with anyone.
-</div>
+{{% /alert %}}
 
 ## 5 So, how do I get login access to server accounts?
 
@@ -92,11 +92,11 @@ Whenever your public key is known, anyone who is authorized to grant access to o
 4.  Click **Open.** A login prompt will appear.
 5.  Enter the **username** of the login account and the system should should grant you access, informing you you've been authenticated using your keys.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 As an alternative you can directly enter the username in the server name edit field by specifying it in the user@server format, e.g. "myappdev@[example.mendix.net](http://example.mendix.net)". When opening this 'session', no username login prompt will appear.
 
-</div>
+{{% /alert %}}
 
 ## 7 Related content
 

@@ -15,11 +15,11 @@ Within Mendix, there are two use cases for the Feedback widget:
 
 The purpose of the feedback on Mendix is to provide low priority issues, questions, and ideas on how to improve the Mendix platform.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The **Feedback** button is not a support option. If there are any platform problems, contact [Mendix Support](http://support.mendix.com).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 You can provide feedback on Mendix on the following pages:
 

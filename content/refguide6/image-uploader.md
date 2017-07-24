@@ -7,12 +7,12 @@ parent: "file-widgets"
 
 An image uploader is used to upload images to the server. It also generates a thumbnail of the uploaded image. The uploaded image or its thumbnail can be shown by use of the image viewer.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713874/16843989.png)
 The image uploader is placed in a nested data view here. The Profile entity is a specialization of System.Image.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 An image uploader must be placed in a data view connected to entity System.Image or a specialization thereof.
 

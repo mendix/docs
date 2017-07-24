@@ -30,11 +30,11 @@ When you access your profile page through the My Community Profile link, it is a
 
 ![](attachments/how-to-set-up-your-profile/icon.png)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information on gaining Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq) and [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation#GainingMendixPoints).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 If you access your profile through the **Developers** or **Leaderboards** tabs of the [Our Community](https://developer.mendixcloud.com/link/community) page, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
 
@@ -96,8 +96,8 @@ We’ll take things from there, and the email address of the merged account will
 
 ![](attachments/how-to-set-up-your-profile/MergeAccountsRequestApproved.png)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 With this action we only combine the accounts. We don’t deactivate the old account(s). This should be done by that company’s administrator.
 
-</div>
+{{% /alert %}}

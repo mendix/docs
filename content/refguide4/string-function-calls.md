@@ -310,11 +310,11 @@ Checks to see if a string matches a given [regular expression](regular-expressio
 *   Regular expression to match
     Type: String
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Please note that this function call uses a regular expression.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Output
 
@@ -348,11 +348,11 @@ Replaces all occurrences of a regular expression with another string.
 *   The replacement value
     Type: String
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Please note that this function call uses a regular expression.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Output
 
@@ -397,11 +397,11 @@ Replaces the first occurrence of the regular expression with a replacement strin
 *   The replacement value
     Type: String
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Please note that this function call uses a regular expression.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Output
 
@@ -455,11 +455,11 @@ true
 *   The replacement value
     Type: String
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Please note that this function call uses a regular expression.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Output
 

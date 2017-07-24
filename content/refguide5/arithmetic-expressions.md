@@ -26,7 +26,7 @@ If any of the two inputs is of type Decimal, the result is of type Decimal.
 
 if any of the two inputs is of type Float and they're both not of type Decimal, the result is of type Float.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 {% highlight java %}
 3 * 4
@@ -40,7 +40,7 @@ results in
 
 {% endhighlight %}
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Division
 
@@ -57,7 +57,7 @@ Divides two numbers. You can use either the `div` or colon ( : ) syntax, as can 
 
 If any of the two inputs is of type Decimal, the result is of type Decimal. Otherwise the result is of type Float.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 "div" syntax:
 
@@ -87,7 +87,7 @@ results in
 
 {% endhighlight %}
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Modulo
 
@@ -108,7 +108,7 @@ If any of the two inputs is of type Decimal, the result is of type Decimal.
 
 if any of the two inputs is of type Float and they're both not of type Decimal, the result is of type Float.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 {% highlight java %}
 23 mod 5
@@ -136,17 +136,17 @@ results in a Float with value
 
 {% endhighlight %}
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Addition
 
 Adds two numbers.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [String function calls](string-function-calls) for more information.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Input parameters
 
@@ -163,7 +163,7 @@ If any of the two inputs is of type Decimal, the result is of type Decimal.
 
 if any of the two inputs is of type Float and they're both not of type Decimal, the result is of type Float.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 {% highlight java %}
 -3 + 4
@@ -189,7 +189,7 @@ results in a Float with value
 
 {% endhighlight %}
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Subtraction
 
@@ -210,7 +210,7 @@ If any of the two inputs is of type Decimal, the result is of type Decimal.
 
 if any of the two inputs is of type Float and they're both not of type Decimal, the result is of type Float.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 {% highlight java %}
 5 - 4
@@ -236,4 +236,4 @@ results in a Float with value
 
 {% endhighlight %}
 
-{% endmarkdown %}</div>
+{{% /alert %}}

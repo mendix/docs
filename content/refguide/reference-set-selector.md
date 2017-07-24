@@ -7,7 +7,7 @@ parent: "input-widgets"
 
 The reference set selector allows you to set an association of type reference set by selecting objects. For example, if customers can belong to several groups, a reference set selector can be used to select the groups the customer belongs to. This requires that there is an association from customer to group of type reference set in the domain model.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/917936.png)
 In this data view on customer you can select multiple groups using the reference set selector.
@@ -15,18 +15,18 @@ In this data view on customer you can select multiple groups using the reference
 ![](attachments/819203/917934.png)
 In the domain model there is an association of type reference set from customer to group.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The reference set selector looks a lot like a [data grid](data-grid) and consequently shares many properties with the data grid. Main differences are that the reference set selector lacks a search bar and that it has different buttons by default (Add, Remove).
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The **Add** and **Remove** buttons mean something else than the **New** and **Delete** buttons that are used by default in the data grid:
 
 *   The **Add** button adds a reference to an existing object. The **Create** button, on the other hand, creates a new object and does not add references.
 *   The **Delete** button actually deletes an object for good, whereas the **Remove** button simply removes the reference to the object and leaves the object itself intact.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Components
 
@@ -58,11 +58,11 @@ See [Columns](columns) for more information.
 
 This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking on a row. See the property 'Default button trigger' and [control bar](control-bar) for more information.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value:_ True
 
@@ -76,11 +76,11 @@ _Default value:_ True
 
 The column weights are percentages separated by semi-colons. They determine the widths of the columns. The weights have to add up to 100\. An alternative way of changing the widths of columns is by dragging the separating line between columns.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In the screenshot above the column weights are 63;37.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Number of Rows
 
@@ -130,11 +130,11 @@ A tooltip page is a page that appears when you hover your mouse over a row. The 
 
 The entity path of a reference set selector is a path following one association of type 'reference set' from the entity of the containing data view to the entity on the other side of that association. In the example above the association Customer_Group from Customer to Group is followed and the path is: Customer_Group/Group.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 With the reference selector you are editing an association of type reference set (Customer_Group). Adding, and removing, objects using the selector will only add and remove references to those objects; the objects themselves are unchanged.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Events Properties
 

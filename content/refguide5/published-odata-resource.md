@@ -3,11 +3,11 @@ title: "Published OData resource"
 parent: "published-odata-services"
 space: "Reference Guide 5"
 ---
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes the properties of a published OData resource. If you want a general overview of OData services, you can check the [Published OData Services](published-odata-services) documentation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Adding or editing a resource
 

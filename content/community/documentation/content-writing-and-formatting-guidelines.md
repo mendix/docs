@@ -88,26 +88,26 @@ Some tips to consider when formatting Markdown are listed below.
 To format note styles, implement the following:
 
 ```html
-<div class="alert alert-info">{% raw %}{% markdown %}
+{{% alert type="info" %}}{% raw %}
 Your note
-{% endmarkdown %}{% endraw %}</div>
+{% endraw %}{{% /alert %}}
 ```
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Your note
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 and
 
 ```html
-<div class="alert alert-warning">{% raw %}{% markdown %}
+{{% alert type="warning" %}}{% raw %}
 Your note
-{% endmarkdown %}{% endraw %}</div>
+{% endraw %}{{% /alert %}}
 ```
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 Your note
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 4.4.2 Class
 
@@ -208,11 +208,11 @@ Provide a warning note when you are releasing documentation about a feature that
 
 For example:
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 "The documentation in this section describes a new feature that is still in beta, and is subject to change before the final release."
 
-</div>
+{{% /alert %}}
 
 ### 5.2.3 Using International Test Data
 

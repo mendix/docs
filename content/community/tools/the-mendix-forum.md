@@ -150,13 +150,13 @@ Below the answer(s), you can contribute to the forum by writing your own answer 
 
 ![](attachments/the-mendix-forum/questions_answer_editor.png)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 You can easily upload your images in the forum by dragging them directly into the text editors. In order to resize and position an image, double-click it in the editor or click the image button in the toolbar:
 
 ![](attachments/the-mendix-forum/questions_image_button.png)
 
-</div>
+{{% /alert %}}
 
 ### 3.2 Asking a Question<a name="AskingaQuestion"></a>
 

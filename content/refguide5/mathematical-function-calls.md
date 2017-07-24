@@ -254,11 +254,11 @@ returns:
 
 of type "Decimal"
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Calculation of 'pow' with a decimal exponent might be less accurate, as the standard Java libraries do not support these calculations with high precision. Use a specialized library in a custom Java action if high precision is required for this case.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## abs
 

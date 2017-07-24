@@ -7,15 +7,15 @@ parent: "menu-widgets"
 
 The simple menu bar widget shows a configured menu in the form of a horizontal or vertical bar with images and captions. Items cannot have subitems; the menu structure can only have one level. The [menu items](menu-item) points to either the page or the microflow that will opened or started when the item is clicked.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713889/16844019.png)
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 ![](attachments/16713889/16844018.png)
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common Properties
 

@@ -28,19 +28,19 @@ Reference selector      | Data source    | Data view object
 
 This is the microflow that will be executed. Its parameters should match the available arguments.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 You can create a new microflow by clicking 'Select...' and then 'New'. Modeler will generate a microflow with parameters matching all available arguments. If a parameter is not used it can simply be deleted.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Microflow arguments
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Since Mendix 5.17\. For older versions see the [following section](starting-microflows).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The arguments sent to the microflow are automatically configured based on the parameters of the selected microflow and the available arguments. Which arguments are available depends on the widget calling the microflow. For a full listing consult the table above. Additionally, if the widget calling a microflow is contained inside a nested data view, then the object of the enclosing data view is also available.
 
@@ -52,11 +52,11 @@ The arguments available to a data or template grid control bar button are determ
 
 This property indicates whether the connected microflow is executed synchronously or asynchronously. With synchronously executed microflows the microflow is started and the client waits for the result. With asynchronously called microflows the microflow is started on the server but the client does not wait for the result. It will check the server every ten seconds to see whether the microflow is done executing.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Set the duration only to asynchronous if you experience problems. Sometimes if a request takes too long to handle, the request will be sent again by an (impatient) proxy server.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Value        | Description
 ------------ | ----------------------------------------------------------------------------------------------------------
@@ -131,11 +131,11 @@ No                   | The microflow will always be executed.
 
 _Default value:_ Yes
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This following section applies to versions older than 5.17\. For newer versions see the [previous section](starting-microflows).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General
 
@@ -143,11 +143,11 @@ The properties in parameters section determine what information is sent to the m
 
 ### Pass "data view/data grid/template grid/reference set selector/image viewer" object
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Removed in Mendix 5.17
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The first parameter that can be passed to the microflow can be seen in the third column of the table above. It can be the data view object in the case of events on attribute widgets or the selection of the data grid in the case of microflow buttons in the control bar of the grid.
 
@@ -172,11 +172,11 @@ All pages | All objects will be sent to the microflow in a list.
 
 ### Pass enclosing data view object
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Removed in Mendix 5.17
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 If the data grid or data view that refers to the microflow is contained by another data view, you can also choose to send the object of that data view to the microflow.
 
@@ -192,11 +192,11 @@ _Default value:_ No
 
 This is the microflow that will be executed. Its parameters should match the parameters that are passed to it.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 If you create the microflow using the New button in the Select page, a microflow will be created with the correct parameters. Make sure you first select what you want to pass as parameter in the parameter properties.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Maintain selection after microflow (only for grid microflow buttons)
 
@@ -267,11 +267,11 @@ The progress message is shown along with the progress bar if the progress bar is
 
 This property indicates whether the connected microflow is executed synchronously or asynchronously. With synchronously executed microflows the microflow is started and the client waits for the result. With asynchronously called microflows the microflow is started on the server but the client does not wait for the result. It will check the server every ten seconds to see whether the microflow is done executing.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Set the duration only to asynchronous if you experience problems. Sometimes if a request takes too long to handle, the request will be sent again by an (impatient) proxy server.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Value        | Description
 ------------ | ----------------------------------------------------------------------------------------------------------

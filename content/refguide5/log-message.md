@@ -7,11 +7,11 @@ space: "Reference Guide 5"
 
 With the log-message action you can create messages that appear in the log of your Mendix application.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Action Properties
 
@@ -34,11 +34,11 @@ _Default value:_ Info
 
 The log node name is a microflow expression that defines the source of the log message. For example, if you log messages from an email module, the log node name could be 'Email module'.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 It is advised to use a constant for the log node name. This prevents typing errors and makes it easier to change the log node name afterwards.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Template
 
@@ -48,11 +48,11 @@ Template defines the text of the message. The template can contain parameters th
 
 For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [microflow expressions](microflow-expressions) resulting in a string.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 With parameters you can customize your message with data specific to the situation. For example, the message "An e-mail has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer to whom an e-mail has been sent.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Include latest stack trace
 

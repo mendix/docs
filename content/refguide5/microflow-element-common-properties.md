@@ -7,11 +7,11 @@ space: "Reference Guide 5"
 
 Here we discuss properties that are shared by many elements in the microflow editor.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Not every element in a microflow has all of these properties.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common Properties
 
@@ -41,10 +41,10 @@ _Default value:_ False
 
 If the property 'Break here' is set to True, the break condition can be used to define the criterion for when the microflow is paused. The condition can be entered using a [microflow expression](microflow-expressions). The expression should result in True if the microflow should be paused and in False if it should continue.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 You could use this break condition when you suspect, by for example analyzing the error message in the console, that your change activity fails because an orderline has no association with an order. This change activity is executed in a looped activity, so there are many objects. There is probably only one object that is not associated with an order. You only want to pause the microflow when iterating over an orderline without a relation with an order. This can be done by setting a break point on the change activity with the break condition given below.
 
 `$OrderLine/Module.OrderLine_Order = empty`
 
-{% endmarkdown %}</div>
+{{% /alert %}}

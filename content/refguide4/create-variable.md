@@ -5,11 +5,11 @@ space: "Reference Guide 4"
 ---
 With the create-variable action you can create a variable of type Boolean, DateTime, Enumeration, Float/Currency, Integer/Long or String.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Action Properties
 

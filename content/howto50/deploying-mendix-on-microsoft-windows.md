@@ -67,7 +67,7 @@ In this chapter you will download an install the Mendix Service Console.
 *   Enter a location for the apps and server files.
     We advise use a directory that is _not_ on the system partition, where you can easily control the security rights.
 
-    <div class="alert alert-info">{% markdown %}
+    {{% alert type="info" %}}
     The location configured in step 4 is used for storing your app files and Mendix server files.
     The app directory consists of 4 subdirectories:
     - Backup: This directory will store any database changes due to model upgrades
@@ -76,7 +76,7 @@ In this chapter you will download an install the Mendix Service Console.
     data/files that contain all of your uploaded files.
     - Service: This directory contains files for configuring the Windows Services.
     Furthermore there will be a file called “Settings.yaml” which contains your application configuration.
-    {% endmarkdown %}</div>
+    {{% /alert %}}
 
 ## 3\. Deploying a Mendix App
 
@@ -228,11 +228,11 @@ In order to use the proxy functionality within ARR you need to enable this featu
 9.  Click **Apply**.
 10.  In the Actions pane on the right-hand side, **Back to Rules**.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The reason you use the trailing slash in _^(ws-doc/)(.*)_ is because it points to an exact path, for example _/ws-doc/mydoc/1234_.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 **Rule 4 - file**
 
@@ -280,11 +280,11 @@ The reason you use the trailing slash in _^(ws-doc/)(.*)_ is because it points t
 9.  Click **Apply**.
 10.  In the Actions pane on the right-hand side, **Back to Rules**.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The reason you use the trailing slash in _^(link/)(.*)_ is because it points to an exact path, for example _/link/myentity/1234_.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 4.5 Additional Request Handlers
 

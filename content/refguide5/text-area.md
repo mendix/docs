@@ -7,13 +7,13 @@ space: "Reference Guide 5"
 
 A text area can be used to display and/or edit a long text value that can be split over several lines.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/4522259/14385226.png)
 
 This text area allows the end-user to set the description of the product.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 A text area must be placed in a data view or template grid and connected to an attribute of type String. The connected attribute is shown in blue and between brackets inside the text area.
 
@@ -35,11 +35,11 @@ _Default value:_ 5
 
 This is the text displayed when typing in the text area. This text has 2 placeholders. The first placeholder shows the number of characters already typed and the second placeholder shows the maximum number of characters.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 You've used {1} characters of the {2} characters that are allowed.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Text too long message
 
@@ -67,11 +67,11 @@ _Default value:_ False
 
 This property determines the message that is shown to the end user if the widget is empty and the 'Required' property is set to true. This is a translable text. See [Translatable Texts](translatable-texts).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 For example, if an address field is required, the required message for the text box of the address could be something like "The address is required."
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Data source properties
 
@@ -84,19 +84,19 @@ Many input widgets, like text boxes and drop-down widgets, can be connected to:
 
 In the first case we say the widget is connected to an attribute and in the second case to an attribute path.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 An input widget connected to an attribute _path_ must be read-only. The Modeler will check this for you.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Label properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Added in Mendix 5.18.0
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](http://getbootstrap.com#forms).
 
@@ -128,9 +128,9 @@ Example: you don't have to ask for the marriage date if the end user indicates t
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Added in Mendix 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Visible
 
@@ -190,7 +190,7 @@ The internal name of the widget. You can use this to give sensible names to widg
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -198,18 +198,18 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Tab index
 

@@ -12,11 +12,11 @@ Each application can export items to Excel format from a Data Grid as standard f
 
 In this part of the how to you will learn how to download the necessary modules from the Mendix App Store. This is a very quick process, in that in just a few clicks the modules will be imported into your project. The modules that are required for this process are 'MxModelReflection' and 'Excel Exporter'.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The MxModelReflection module is a commonly used module in most apps. The purpose of this module is to allow the app to reflect into the domain model (entities and attributes) and microflow definitions at runtime.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 1.1 Download the 'MxModelReflection' Module
 
@@ -35,11 +35,11 @@ The MxModelReflection module is a commonly used module in most apps. The purpose
 
 Ensure the module has downloaded successfully and is now a new module in your project.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Depending on the layout selected when the project was created, errors in the modeler may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 2\. Add Navigation Items to Allow Users to Configure Settings
 
@@ -65,11 +65,11 @@ In this part of the how to you will learn how to run the MxModelReflection synch
 
 In this part of the how to you will learn how to create a basic Excel Export template within your app. This section will cover an overview of the various configuration items to enable you to start building the desired templates.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This module has many moving pieces that allow the configurations to be as simple or complex as the user desires. This tutorial will go over the basics to get you started, but building the desired template will take a varying degree of configuration options.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 4.1 Creating an Input Object Entity
 
@@ -134,11 +134,11 @@ This module has many moving pieces that allow the configurations to be as simple
 
 In this section you will learn how to call the newly created Excel Export template in your application. 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This module has many steps that must be configured in order for the template to be used correctly. Please review all steps.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 5.1 Retrieving the Excel Template and Generating the Document
 

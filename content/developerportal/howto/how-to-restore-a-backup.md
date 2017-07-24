@@ -60,11 +60,11 @@ To restore a backup that is stored in the Mendix Cloud, follow these steps:
 
 8. Confirm the backup restore by clicking **Restore Backup**.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 If the app is still running, you have to stop it by clicking **Stop Application**. Then click **Restore Backup** again.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 #### 3.2.2 Method 2
 

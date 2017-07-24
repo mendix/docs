@@ -4,11 +4,11 @@ space: "General How-To's"
 category: "Best Practices"
 ---
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document is created by and for the Mendix Community. It collects performance best practices in the form of do's and don'ts.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Introduction
 
@@ -42,11 +42,11 @@ If you made a simple and sound design of the app's domain models, consider the f
     * Add a non-persistent layer with inheritance that is populated by your business logic.
 * Don't use temporary associations on persistent entities. Use a non-persistent entity for your screen/UI logic here.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Mendix 7 is said to have optimized the retrieves, so not every association ID is loaded on every retrieve. This needs further investigation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Indexes
 

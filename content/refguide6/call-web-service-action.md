@@ -7,11 +7,11 @@ parent: "microflow-activities"
 
 The call-web-service activity can be used to call one of the [imported web service](consumed-web-services) operations. You can specify whether or not to use authentication, what the request should look like and how the response of the web service should be handled.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In Mendix 6.5, the layout of the dialog and textual descriptions have changed.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ![](attachments/19202819/19399020.png)
 
@@ -25,7 +25,7 @@ Operation defines which operation of the web service is called.
 
 Override location defines whether to override the location where the web service is called.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 When calling a web service using a call-web-service activity, the location of the web service is determined as follows.
 
@@ -33,7 +33,7 @@ When calling a web service using a call-web-service activity, the location of th
 2.  If the service that defines the operation has a location constant defined, the value of that constant is used.
 3.  Otherwise, the location as specified in the WSDL of the imported web service is used.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Location
 
@@ -57,11 +57,11 @@ Whether the call action should validate the incoming and outgoing XML against th
 
 Setting this setting to yes can greatly decrease performance!
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 When consuming wsdl that uses encoding turning on validation will lead to consistency error because it is not WS-I compliant.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value:_ No
 
@@ -105,13 +105,13 @@ Using this option you need to supply an argument value for all elements of a pri
 
 This option can be used when all children of the XML element of the request part occur at most once. You need to supply an argument value for all top-level elements of the request (parameters). For simple parameters you can enter a microflow expression, for complex parameters you define a mapping.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If a primitive request parameter is both optional and nillable, you need to select whether or not to send the empty values.
 
 _Default:_ do not send the empty values.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Custom request template
 

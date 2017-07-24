@@ -18,11 +18,11 @@ The properties are configured as below.
 | Refresh in browser | False | Objects of the entity 'Customer' are automatically refreshed by the server when a object is committed in a form |
 | Change member action _set_ on _zipcode_ | toUpperCase($InputCustomer/zipcode) | A [microflow expression](microflow-expressions) can be used to set all characters to upper case (capitals) |
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Input Properties
 

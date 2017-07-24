@@ -9,9 +9,9 @@ parent: "mapping-documents"
 
 Please refer to [Mapping Documents](mapping-documents) for an introduction.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Importing from JSON is available since Mendix 6.6.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Obtaining objects in Import Mappings
 
@@ -53,11 +53,11 @@ This is the action that the runtime will perform when an error occurred in the s
 
 Optionally, you may set an association to the parent object. If set to Yes, a list of allowed associations is shown. If an association is selected, it is drawn in the mapping document.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Be aware that lists are not stored ordered in the Mendix database. XML Schema can prescribe that a grouping of objects is a sequence, but the order of Mendix objects in the database may differ from the order of incoming XML elements.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Mapping attributes in Import Mappings
 

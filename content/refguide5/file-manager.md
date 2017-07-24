@@ -7,11 +7,11 @@ space: "Reference Guide 5"
 
 A file manager is used to upload and/or download files.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/4522251/14385229.png)
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 It must be placed inside a data view connected to the entity System.FileDocument or a specialization thereof.
 
@@ -45,11 +45,11 @@ _Default value:_ False
 
 ## Label properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Added in Mendix 5.18.0
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](http://getbootstrap.com#forms).
 
@@ -65,9 +65,9 @@ This property is shown only when Show label is Yes. This property determines wha
 
 ## Editability properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Added in Mendix 5.18.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Editable
 
@@ -85,9 +85,9 @@ Example: you don't have to ask for the marriage date if the end user indicates t
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Added in Mendix 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Visible
 
@@ -115,7 +115,7 @@ The internal name of the widget. You can use this to give sensible names to widg
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -123,18 +123,18 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Tab index
 

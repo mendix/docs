@@ -10,11 +10,11 @@ Each application can export items to Excel format from a Data Grid as standard f
 
 In this part of the how to you will learn how to download the necessary modules from the Mendix App Store. This is a very quick process, in that in just a few clicks the modules will be imported into your project. The modules that are required for this process are 'MxModelReflection' and 'Excel Exporter'.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 The MxModelReflection module is a commonly used module in most apps. The purpose of this module is to allow the app to reflect into the domain model (entities and attributes) and microflow definitions at runtime.
 
-</div>
+{{% /alert %}}
 
 ### 1.1 Download the 'MxModelReflection' Module
 
@@ -33,11 +33,11 @@ The MxModelReflection module is a commonly used module in most apps. The purpose
 
 Ensure the module has downloaded successfully and is now a new module in your project.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Depending on the layout selected when the project was created, errors in the modeler may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
 
-</div>
+{{% /alert %}}
 
 ## 2\. Add Navigation Items to Allow Users to Configure Settings
 
@@ -63,11 +63,11 @@ In this part of the how to you will learn how to run the MxModelReflection synch
 
 In this part of the how to you will learn how to create a basic Excel Export template within your app. This section will cover an overview of the various configuration items to enable you to start building the desired templates.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 This module has many moving pieces that allow the configurations to be as simple or complex as the user desires. This tutorial will go over the basics to get you started, but building the desired template will take a varying degree of configuration options.
 
-</div>
+{{% /alert %}}
 
 ### 4.1 Creating an Input Object Entity
 
@@ -81,11 +81,11 @@ This module has many moving pieces that allow the configurations to be as simple
 2.  Click the **New** button to create a new template.
 3.  Configure the **Filename** (without extension) to be the default file name when the template is used.
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     The file name can always be changed when the template is used within a microflow.
 
-    </div>
+    {{% /alert %}}
 4.  Configure the **Input Object** to be the file document entity that is associated to your entity to be exported.
 5.  Provide a **Description** for identifying and documenting what this exact template is used for.
 6.  Specify the **Date time export format** for how the dates and times should appear in the Excel file once exported.
@@ -98,29 +98,29 @@ This module has many moving pieces that allow the configurations to be as simple
 3.  Configure the **Row Object** that you want to export and set the reference to the template input object (if input object is used).
 4.  Configure the **Start retrieved data at row** to set the ordinal number in which the data should be exported.
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     This setting will possibly trim the result set being exported, as the export will go from this value to the end of the list of data
 
-    </div>
+    {{% /alert %}}
 5.  Select if the export should export distinct only or allow duplicate data
 6.  Specify the **Column and Row Settings** for height and width, or leave as default
 7.  Specify if the extract will **Use Static Data** or not.
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     If static data is used, that will be configured in Section 4.6.
 
-    </div>
+    {{% /alert %}}
 8.  Specify if the **Default text style** that will denote the pre-defined style to be applied to the exported data.
 
 9.  Specify if the **Default header text style** that will denote the pre-defined style to be applied to the header data.
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     Specifying styles are addressed in Section 4.5.
 
-    </div>
+    {{% /alert %}}
 
 ### 4.4 Configuring Dynamic Column Data
 
@@ -133,11 +133,11 @@ This module has many moving pieces that allow the configurations to be as simple
 5.  Specify the **Select attribute** to identify the exact attribute on the row entity in which this column corresponds to.
 6.  Specify if the column should result in an aggregate.
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     Only types of Decimal, Integer, and Long can be aggregated
 
-    </div>
+    {{% /alert %}}
 
 ### 4.5 Configuring Static Data in the Sheet
 
@@ -163,11 +163,11 @@ This module has many moving pieces that allow the configurations to be as simple
 
 In this section you will learn how to call the newly created Excel Export template in your application. 
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 This module has many steps that must be configured in order for the template to be used correctly. Please review all steps.
 
-</div>
+{{% /alert %}}
 
 ### 5.1 Retrieving the Excel Template and Generating the Document
 

@@ -59,18 +59,18 @@ In the previous section you have set up a basic data structure and created some 
     a. For _Entity_, select **Order**<br>
     b. For _Name_, enter **OrderList**<br>
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
     With the currents settings your retrieve action gets every order in the database, using the XPath expression in the following steps you will filter the results that come back from the database.
 
-    </div>
+    {{% /alert %}}
 13.  Add the following XPath expression in the XPath constraint field: _[OrderStatus = 'Processing']_. This expression will filter the list to only orders with the status **Processing**.
 14. Enter a descriptive name for the list variable. Your properties screen should look like this:
     ![](attachments/18448686/18581088.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
     With the currents settings your retrieve action gets all the 'Processing' orders in the database. In the next section you will edit this list of orders.
 
-    </div>
+    {{% /alert %}}
 
     You should see a Microflow like this:
     ![](attachments/18448686/18581087.png)
@@ -84,13 +84,13 @@ In the previous section you retrieved a list of orders with the status 'Processi
 2.  Drag a **Loop** action from the toolbox to the line, behind the **OrderProcessingList** action activity.
     ![](attachments/18448686/18581086.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     For each object the flow inside the loop is executed. The flow starts at the element that has no incoming sequence flows. A loop can contain all elements used in microflows, with the exception of start and stop events. Additionally, a loop (and only a loop) can contain break events and continue events.
 
     The iterator which looks the same as an input object represents the variable that holds one element of the list for each iteration. Beneath it the name of the variable is shown in black and the type of the variable in blue. For more information take a look at this [documentation](/refguide6/loop?utm_source=businessmodeler&utm_medium=software&utm_campaign=modeler)
 
-    </div>
+    {{% /alert %}}
 
 3.  Double click the loop activity and select the **OrderProcessingList** to iterate over.
     ![](attachments/18448686/18581085.png)
@@ -110,9 +110,9 @@ In the previous section you retrieved a list of orders with the status 'Processi
     Click **OK**. Your properties screen should look like this:
     ![](attachments/18448686/18581078.png)
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
     Set 'Commit' and 'Refresh in Client' to 'Yes' to commit your changes to the database and refresh your list in the client so your changes will be visible.
-    </div>
+    {{% /alert %}}
 8.  Click **OK**. Your microflow should look like this:
     ![](attachments/18448686/18581076.png)
 9.  **Re-deploy** your application.
@@ -138,11 +138,11 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
     3.  For **Variable**, enter _CalculatedTotalPrice_
 7.  Add a **Change** variable inside the loop.
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
     It is not possible to drag an activity directly into a loop. So drag the activity first outside the loop, than drag it inside the loop.
 
-    </div>
+    {{% /alert %}}
 
     ![](attachments/18448686/18581069.png)
 
@@ -153,11 +153,11 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
     a. For **Variable**, select _CalculatedTotalPrice_<br>
     b. For **Value**, enter _$CalculatedTotalPrice + $IteratorOrder/TotalPrice_<br>
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     By iterating over the list, the price of every order will be added one by one to the 'CalculatedTotalPrice' variable
 
-    </div>
+    {{% /alert %}}
 
     Your properties screen should look like this:
 
@@ -193,11 +193,11 @@ In the previous section you iterated over a list to add the value of single obje
     c. For **Attribute**, select _TotalPrice_.<br>
     d. For **Variable**, enter a descriptive name like _SumTotalPrice_.<br>
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     See the [documentation](/refguide6/aggregate-list) for the description of the other functions.
 
-    </div>
+    {{% /alert %}}
 
     ![](attachments/18448686/18581059.png)
 

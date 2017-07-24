@@ -21,11 +21,11 @@ None.
 
 ## 3 Importing Objects
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Be careful when importing objects, as you can overwrite your existing work. Pay attention to prompts and warnings along the way!
 
-</div>
+{{% /alert %}}
 
 ### 3.1 Importing Entire Project Packages
 
@@ -76,11 +76,11 @@ To import module packages, follow these steps:
 
     ![](attachments/18448739/18582112.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.
 
-    </div>
+    {{% /alert %}}
 
 4. Click **Import**. You may see another dialog box, which will inform you of any included module dependencies that will be overwritten in your project.
 
@@ -123,11 +123,11 @@ To import module objects, follow these steps:
 
     ![](attachments/18448739/18582096.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     You may need to update the new object's permissions, depending on where it was originally exported from. For consistency, be sure to check the permissions on any objects imported.
 
-    </div>
+    {{% /alert %}}
 
 ### 3.4 Importing Widgets
 
@@ -148,11 +148,11 @@ To import widgets, follow these steps:
 
     ![](attachments/18448739/18582106.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     You can also press **F4** to synchronize your project directory.
 
-    </div>
+    {{% /alert %}}
 4. Add your newly imported widget from the **Toolbox** or the **Add Widget** context menu:
 
     ![](attachments/18448739/18582105.png)
@@ -197,11 +197,11 @@ To export modules, follow these steps:
 
     Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your project directory. If you don't want to include these files, you can uncheck the boxes.
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     To quickly uncheck all files, press **Ctrl+A** to select all of the items, then press the spacebar to uncheck all the objects.
 
-    </div>
+    {{% /alert %}}
 
 ### 4.3 Exporting Widgets
 

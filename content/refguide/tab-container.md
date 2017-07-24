@@ -7,12 +7,12 @@ parent: "container-widgets"
 
 Tab containers are used to show information categorized into multiple tab pages. This can be very useful if the amount of information that has to be displayed is larger than the amount of space on the screen.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713860/18582271.png)
 A tab control with two tab pages (Address, Orders).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Components
 

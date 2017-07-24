@@ -7,11 +7,11 @@ A configuration is a group of settings with a name. You can define any number of
 
 You can use configurations to have different database settings for different people working on your project. Maybe one person has SQL Server on their computer and the other Postgres. You can also have a shared configuration for connecting to a database server that you both have access to.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 When you are deploying your application to a server or the Mendix cloud you will have to configure settings below there. See the [Deployment](deployment) guide for more information.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Name
 
@@ -100,11 +100,11 @@ Constants have a default value that you can override per configuration. You only
 
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by the Modeler.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Only use this functionality if you know exactly what you are doing. Wrong values can prevent the Runtime from starting.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`.
 

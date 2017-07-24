@@ -89,11 +89,11 @@ Do this as generic as possible for re- using the widget in another place in your
 
 ![](attachments/8782081/9764948.png)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 A property will contain the end result of something that is configured/provided by Mendix. You must always create a starting situation where you gather what you need before you continue with logic inside your widget and/or inside the Mendix platform.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 **How to load data in your custom widget**
 
@@ -603,15 +603,15 @@ Every DIJIT widget has a function called "constructor". This functions is called
             this._objProperty = {};
         },
 ```
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 **The code for executing a custom widget is shared among its instances.** This means that variables that you define with a value are shared across all instances. Be aware of this. If you want to define a value per instance you must do so by setting the value within the 'constructor' function.
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 To clearly know which variables are internal and which are external, internal variables are defined with an '_' underscore. The same is done for internal and external functions. Internal functions also start with an '_' underscore.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 4.6 The postCreate function
 
@@ -631,11 +631,11 @@ postCreate: function(){
 	...
 } 
 ```
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 As you can clearly see "messageString" that is set as a property in the widget.xml file is available at run time in the "this" scope of the widget. So "this.messageString" will be the result configured in the Mendix modeler.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 4.7 The update function
 
@@ -666,11 +666,11 @@ Within "**this._contextObj**" we hold the object that is send to the update func
             ...
         },
 ```
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 An object send to the update function can also be null! In your widget code you must handle these exceptions. 
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 4.8 The _updateRendering and _resetSubscriptions function
 

@@ -7,12 +7,12 @@ parent: "input-widgets"
 
 A drop-down is an [input widget](input-widgets) that can be used to display and edit enumeration attributes. It should not be confused with a reference selector, which is used to select a object with which to fill an [association](associations).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
  ![](attachments/16713880/16844000.png)
 This drop-down widget allows the end user to select the state of the customer.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General properties
 

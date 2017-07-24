@@ -7,12 +7,12 @@ parent: "data-widgets"
 
 The data grid shows a list of objects in a grid. For example, a data grid can show all the orders a customer has placed. Using controls provided by the data grid you can browse, search and edit those objects.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713892/16844027.png)
 A data grid showing accounts.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 # Common properties
 
@@ -30,11 +30,11 @@ A data grid showing accounts.
 
 This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [data grid buttons](control-bar) for more information.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value:_ True
 
@@ -46,12 +46,12 @@ _Default value:_ True
 
 {% snippet Column+Width+Properties.md %}
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713892/16844028.png)
 A data grid with widths 200px and auto.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Number of rows
 
@@ -137,7 +137,7 @@ See the corresponding data source for its properties:
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -145,18 +145,18 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Style property
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Data Source Properties
 
@@ -214,7 +214,7 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 | m | 1..2 | 59 | Minute, use one or two for zero padding |
 | s | 1..2 | 12 | Second, use one or two for zero padding |
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 | Format | Example output |
 | --- | --- |
@@ -224,7 +224,7 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 | `EEEE MMMM d yyy` | Tuesday March 29 2011 |
 | `EEE, MMM d, ''yy` | Wed, Jul 4, '01 |
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### General Properties
 
@@ -249,21 +249,21 @@ The values in a column can be aggregated in several ways. The aggregate function
 | Sum | Show the sum of the values. |
 | Count | Show the count of the values. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that all objects will be taken into account, and not just the ones on the current page.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 #### Aggregate caption
 
 The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Translatable Texts](translatable-texts).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 'Total' could be an aggregate caption for a column that shows the sum of the values.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 #### Show tooltip
 

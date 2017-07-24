@@ -5,11 +5,11 @@ parent: "microflow-expressions"
 ---
 
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 These functions are deprecated together with the Float type. Use the high-precision Decimal type and related functions instead.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 See [http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html](http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html) for all pattern possibilities.
 

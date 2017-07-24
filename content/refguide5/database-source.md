@@ -12,11 +12,11 @@ If database is selected as the data source for a widget then the object or objec
 3.  Objects already in context as defined by the [context mechanism](context-mechanism), if the apply context setting is set to true.
 4.  An association, if the widget is nested in another data widget and the data path described runs over an association.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 Use access rules whenever possible to limit data in data grids. This way you know that the objects will always be constrained by these rules (as opposed to an XPath constraint on a single data grid). The access rules will also be applied when executing microflows which saves you from repeating XPath constraints.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Components
 
@@ -38,7 +38,7 @@ A nested data grid can either be connected to an entity or to an entity path sta
 
 Please note that this differs from the [association data source](association-source) in that the objects are not retrieved from the client cache but directly from the database. The association is simply parsed as an extra constraint in the database query.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/4522257/4751410.jpg)
 The [domain model](domain-model) above describes a database in which an indeterminate number of users can be linked to a single country.
@@ -46,7 +46,7 @@ The [domain model](domain-model) above describes a database in which an indeterm
 ![](attachments/4522257/4751413.jpg)
 The data view shown contains a single country. The data grid nested inside will display only those users that are linked to that particular country.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Show search bar
 
@@ -66,21 +66,21 @@ _Default value:_ false
 
 The [XPath constraint](xpath-constraints) allows for custom, hard-coded limitations on the data displayed. This constraint will be appended to the constraints (if any) already applied through security and context.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 XPath constraints are applied equally to all users and only apply to the data displayed in a single data widget. If the goal is to shield a particular subset of the data from users then [entity access rules](access-rules) are superior in that they can be tailored to each individual user role and that they apply system-wide.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Apply context
 
 The property 'Apply context' indicates whether the [context mechanism](context-mechanism) will be used to constrain the list of objects in the grid.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 The apply context setting has the disadvantage of being implicit: the effects of the constraint are not immediately visible in the modeler. Context can also be implemented explicitly by nesting the data widget in, for example, a data view. The widget can then by filled over an association. This can greatly increase the transparency of the functionality described in the modeler.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value_: False
 

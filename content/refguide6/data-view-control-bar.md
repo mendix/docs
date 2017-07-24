@@ -5,11 +5,11 @@ parent: "data-view"
 ---
 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The data view control bar has been converted to a normal drop zone, and renamed to 'footer' in version 6.7.0\. See [Data view footer](data-view).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The control bar of the data view can have the following kinds of buttons: save, cancel, close, and microflow buttons. A typical data view has a 'save' and a 'cancel' button; if it is not editable, a close button is sufficient.
 

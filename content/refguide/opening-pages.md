@@ -25,17 +25,17 @@ This is the [page](page) that is shown to the end-user. There can be a number re
 
 By default the title of the page is taken from the title property of the selected page. You can replace this title with a custom title if necessary.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 This feature allows you to re-use the same page for the New and Edit buttons of a data grid. By simply setting the titles to, for example, 'New customer' and 'Edit customer', you can save yourself the trouble of duplicating the rest of the page.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Location
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 If the [layout](layout) of the target page has a [layout type](layout) configured, the Location property will be unavailable. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 This property indicates where the page is shown.
 

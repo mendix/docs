@@ -15,11 +15,11 @@ This section describes how to retrieve batches of objects, manipulate them and c
 
  Put the meat of the microflow between the merge and the split. Retrieve a batch of objects using the defined limit and offset variables. Afterwards manipulate the objects by changing, committing or deleting them.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 When deleting batches of objects the offset should always be equal to zero as all retrieved objects are removed from the table they are in, which means the next batch starts at zero again.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
  All done! See the picture below for an example.
 

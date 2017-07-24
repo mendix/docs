@@ -19,11 +19,11 @@ Before you can start with this how-to, make sure you have completed the followin
 *   Download and install [SoapUI](https://www.soapui.org/downloads/soapui.html). 
 *   Complete the how-to [Exposing a web service](exposing-a-web-service). 
 
-<table><thead><tr><th class="confluenceTh">Software</th><th class="confluenceTh">Version used in this how-to</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd">Mendix Modeler</td><td colspan="1" class="confluenceTd">5.20.0</td></tr><tr><td class="confluenceTd">SoapUI</td><td class="confluenceTd">5.2.0</td></tr></tbody></table><div class="alert alert-warning">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Software</th><th class="confluenceTh">Version used in this how-to</th></tr></thead><tbody><tr><td colspan="1" class="confluenceTd">Mendix Modeler</td><td colspan="1" class="confluenceTd">5.20.0</td></tr><tr><td class="confluenceTd">SoapUI</td><td class="confluenceTd">5.2.0</td></tr></tbody></table>{{% alert type="warning" %}}
 
 All images, names and steps in this how-to are based on these versions. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 2\. Publish more microflows as web service operation
 

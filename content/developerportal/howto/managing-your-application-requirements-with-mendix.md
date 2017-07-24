@@ -65,11 +65,11 @@ To add a sprint, follow these steps:
 
     ![](attachments/collaborate/18580514.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     The default duration of a sprint in Mendix is two weeks, wihhc starts the moment you create the sprint. Check **customize** to select a different start date.
 
-    </div>
+    {{% /alert %}}
 9. Click **Save**, and the new sprint will be added to your stories overview:
 
     ![](attachments/collaborate/18580513.png)
@@ -91,11 +91,11 @@ To add story points, follow these steps:
     ![](attachments/collaborate/18580493.png)
 3.  Click **Post story**.
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     You can also add Bug story points this way by selecting **Bug** from the **Story type** drop-down menu. The icon in the top left will change to (![](attachments/18580492.png)).
 
-    </div>
+    {{% /alert %}}
 
     The new story point is now added to Sprint 1:
 
@@ -143,11 +143,11 @@ To manage stories in the Modeler, follow these steps:
 
     It is now **Running**, because you changed the status in the Modeler.
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     If you change a status or update story points in the Modeler or in the browser, they will automatically be synchronized and available everywhere.
 
-    </div>
+    {{% /alert %}}
 
 ## 6 Importing Stories with Excel
 
@@ -173,11 +173,11 @@ To import stories, follow these steps:
 
 This section will describe a scenario in which the story in Sprint 3 needs to be moved to Sprint 2, as the customer requires the app to be delivered sooner.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Moving a story will move any tasks and sub-tasks as well.
 
-</div>
+{{% /alert %}}
 
 There are two ways to move the story:
 

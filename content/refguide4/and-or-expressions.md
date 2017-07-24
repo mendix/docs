@@ -11,7 +11,7 @@ space: "Reference Guide 4"
 
 Combines two true/false statements and only returns True if both of the statements evaluate to True.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ```java
 (6 > 4) and (3 < 5)
@@ -25,13 +25,13 @@ evaluates to True because both of the statements are True.
 
 evaluates to False, because only the second statement is True.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## or
 
 Combines two statements, and returns True if either one or both of the statements evaluate as True.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Given a domain entity instance with name "$product" that has an integer attribute "price" with value "3" and another integer attribute "recommendedPrice" with value "2", the following expression:
 
@@ -47,4 +47,4 @@ The following example returns False, because both statements evaluate to False:
 ('hello' = 'nothello') or ('byebye' = 'stillnotbyebye')
 ```
 
-{% endmarkdown %}</div>
+{{% /alert %}}

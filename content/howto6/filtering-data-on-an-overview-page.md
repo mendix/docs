@@ -52,11 +52,11 @@ To filter a list of orders using the search bar, follow these steps:
 
 1. Open your **Orders** overview page and right-click the (empty) section above the **Search** button.
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
     The search bar section might be already populated if you automatically filled the contents of your data grid.
 
-    </div>
+    {{% /alert %}}
 
     ![](attachments/18448705/18581359.png)
 

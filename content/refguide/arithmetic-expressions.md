@@ -120,11 +120,11 @@ results in a Float with value
 
 Adds two numbers.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [String function calls](string-function-calls) for more information.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Input parameters
 

@@ -16,7 +16,7 @@ Mendix doesn’t provide any runtime or application specific MBeans, which means
 
 1.  To enable JMX on your Mendix runtime you can use the following javaopts to the m2ee.yaml for your Mendix runtime:
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 ```
 <code>javaopts: [ </code>
@@ -58,7 +58,7 @@ Mendix doesn’t provide any runtime or application specific MBeans, which means
 <code>]</code>
 ```
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 2\. MBean exposing generic Mendix statistics
 

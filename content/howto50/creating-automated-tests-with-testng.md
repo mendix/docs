@@ -270,11 +270,11 @@ Now that you are on the expenses tab, you want to create a new expense.
 
 5. Find the names of the following elements like you did in step 3:
 
-    <table><thead><tr><th class="confluenceTh">Element</th><th class="confluenceTh">Name</th></tr></thead><tbody><tr><td class="confluenceTd">Amount field</td><td class="confluenceTd">textBox6</td></tr><tr><td class="confluenceTd">Description dropdown</td><td class="confluenceTd"><span>referenceSelector1</span></td></tr><tr><td class="confluenceTd">Save button</td><td class="confluenceTd">saveButton1</td></tr></tbody></table><div class="alert alert-info">{% markdown %}
+    <table><thead><tr><th class="confluenceTh">Element</th><th class="confluenceTh">Name</th></tr></thead><tbody><tr><td class="confluenceTd">Amount field</td><td class="confluenceTd">textBox6</td></tr><tr><td class="confluenceTd">Description dropdown</td><td class="confluenceTd"><span>referenceSelector1</span></td></tr><tr><td class="confluenceTd">Save button</td><td class="confluenceTd">saveButton1</td></tr></tbody></table>{{% alert type="info" %}}
 
     The name of an element in your app may be different than the name shown in the Name column. In step 7, use the name of the element of your app.
 
-    {% endmarkdown %}</div>
+    {{% /alert %}}
 6. Go back to **Eclipse**.
 
 7.  Add a new test method called _createExpense_. Use the following code:

@@ -29,11 +29,11 @@ Of course you need the basic infrastructure probes to measure hardware parts lik
 
 We all know software contains bugs, and of course we all test before we bring something into production. For users, an error is a sign that the application is not functioning. If the error appears unexpected, the user loses trust in the system. The standard reaction of support was always to ask questions, including whether the customer can reproduce the issue, to turn on logging and to ask for a database dump, so support can investigate the issue in a safe environment.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 The APM tools provide valuable information for analyzing the behavior and performance of an application in production. A testing tool should of course also be used during development and test phases.
 
-</div>
+{{% /alert %}}
 
 ## 3 The Statistics Tool to See Performance Issues Coming
 

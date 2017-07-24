@@ -7,11 +7,11 @@ space: "Reference Guide 5"
 
 The image widget can be used to show a predefined image on a page, layout or snippet.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 If you want to dynamically show different images based on data, please take a look at the [image viewer](image-viewer).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common properties
 
@@ -23,7 +23,7 @@ The internal name of the widget. You can use this to give sensible names to widg
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -31,18 +31,18 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Events properties
 
@@ -80,11 +80,11 @@ See [Images](images).
 
 ### Width Unit
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Added in Mendix 5.18\. Before, the only option was to specify the width in pixels where zero (0) meant auto.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The width of an image can be specified in three ways: pixels, percentage or auto. 
 
@@ -100,11 +100,11 @@ _Default value_: not applicable
 
 ### Height Unit
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Added in Mendix 5.18\. Before, the only option was to specify the width in pixels where zero (0) meant auto.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The height of an image can be specified in three ways: pixels, percentage or auto. 
 
@@ -126,9 +126,9 @@ _Default value:_ Yes
 
 ### Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Visible
 

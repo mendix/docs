@@ -7,13 +7,13 @@ parent: "input-widgets"
 
 A check box is an [input widget](input-widgets) that can be used to display and edit boolean attributes. It will display a tick if the value is true and remain empty if it is false.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713879/16843996.png)
 
 This checkbox might be used to indicate whether or not a user is a customer.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Data source properties
 

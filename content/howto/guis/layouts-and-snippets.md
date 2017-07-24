@@ -97,11 +97,11 @@ These are some layout examples:
 
 ![](attachments/18448710/18581461.png)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 By adjusting the canvas width, you can emulate the end-user's view of the page in the Modeler. For example, the desktop layout has a canvas width of 800, and the default phone layouts have a width of 500. The property canvas width only applies to the view in the Modeler, and the actual width of the page depends on the opened browser or the optional pop-up window size.
 
-</div>
+{{% /alert %}}
 
 After defining the structure of the layout with the layout container(s), the region's content must be defined. This can either be done per page, with page-specific elements (for example, by adding data widgets in the empty areas), or within the layout in order to define the elements that will be used on each page with this layout. It is common that this will be the general app navigation or specific navigation for a specific function. All the widgets can be used, except data and input widgets, since they need a source. 
 

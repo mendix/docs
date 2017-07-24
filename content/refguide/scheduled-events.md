@@ -74,11 +74,11 @@ switch(scheduledEvent.getIntervalType())
 }
 ```
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If it is absolutely critical to run a scheduled event on a specific day of the month, you should schedule the event to run daily. 
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 In your microflow you should start with an exclusive split and do an expression such as:
 

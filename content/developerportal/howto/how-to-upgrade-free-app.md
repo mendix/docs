@@ -30,11 +30,11 @@ Before starting with this how-to, please make sure you have completed the follow
 
 If your Free App is linked to a Sandbox environment you will first need to create a backup of your data that is stored in the Sandbox.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Please note that because you are going to unlink the Sandbox from your Free App, the Sandbox environment will be permanently deleted. This means that all data will be lost from the Sandbox/Free app. To keep your data, you need to create a backup.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The documentation on how to download a backup can be found [here](how-to-download-a-backup).
 
@@ -42,11 +42,11 @@ The documentation on how to download a backup can be found [here](how-to-downloa
 
 Follow the instructions from paragraph **2.1 Method 1** of the [How to Connect your Free App to a Licensed Cloud Node](how-to-link-app-to-node) how-to.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 If you have just unlinked your Free App from a Sanbox, you only have to refresh the page and follow the steps 4 and 5 of the documentation about How to Unlink Your Free App from a Sandbox Environment.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The documentation on how to unlink your Free App from a Sandbox can be found [here](how-to-unlink-sandbox).
 

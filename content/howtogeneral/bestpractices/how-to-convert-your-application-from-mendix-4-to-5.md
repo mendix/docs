@@ -106,11 +106,11 @@ Please note that the App Store modules can be skipped, since those should not be
 
 We recommend removing documents and committing via the Mendix Modeler per module, so you can oversee the work done and track the changes.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Be sure to search multiple times for unused items, since the deletion of documents can result in other documents becoming unused.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 2.5 Resolve Model Deprecations and Warnings
 

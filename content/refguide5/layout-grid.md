@@ -5,11 +5,11 @@ space: "Reference Guide 5"
 ---
 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Added in Mendix 5.18.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The layout grid is a widget that gives structure to your pages. A layout grid contains one or more rows and each row contains one to twelve columns. Each column has a weight, a number from 1 to 12, and the weights of the columns in a row must add up to 12\. In the browser the layout grid is implemented by the Bootstrap grid system. Reading the official Bootstrap [documentation on the grid system](http://getbootstrap.com#grid) can help you understand what you can build with this widget.
 
@@ -64,7 +64,7 @@ The internal name of the widget. You can use this to give sensible names to widg
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -72,18 +72,18 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div> 
+{{% /alert %}} 
 
 ### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General Properties
 
@@ -91,11 +91,11 @@ This will result in a blue background
 
 This property determines the width of the layout grid. 
 
-<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Full width</td><td class="confluenceTd">The layout grid spans the full width of the available space and will stretch and shrink.</td></tr><tr><td class="confluenceTd">Fixed width</td><td class="confluenceTd">The layout grid has a fixed width but it is still responsive to viewport changes. Note that the width is not configurable in the modeler but is determined by Bootstrap.</td></tr></tbody></table><div class="alert alert-warning">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Full width</td><td class="confluenceTd">The layout grid spans the full width of the available space and will stretch and shrink.</td></tr><tr><td class="confluenceTd">Fixed width</td><td class="confluenceTd">The layout grid has a fixed width but it is still responsive to viewport changes. Note that the width is not configurable in the modeler but is determined by Bootstrap.</td></tr></tbody></table>{{% alert type="warning" %}}
 
 As the layout grid responds to the viewport width, and not to the width of its container, a fixed width layout grid should only be used on top-level.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Visibility Properties
 

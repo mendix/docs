@@ -15,9 +15,9 @@ You can extend the functionality of the runtime by writing Java actions. The API
 
 ## Integration API documentation
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Links to available API documentation such as WSDLs for published web services are available on the URL path `/api-doc` (for example: `http://localhost:8080/api-doc/`).
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Logging
 

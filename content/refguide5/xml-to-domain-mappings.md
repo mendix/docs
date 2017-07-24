@@ -17,11 +17,11 @@ When set, this property specifies the type of the parameter that needs to be pas
 
 Specifies whether separate (nested) database transactions should be used when obtaining objects via microflow.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Enabling this feature may greatly decrease performance.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value:_ False
 
@@ -29,15 +29,15 @@ _Default value:_ False
 
 Specifies whether the input XML is validated against the XSD (XML schema or web service operation) while performing the mapping. If a validation error is found, the mapping is aborted.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 In 5.12 this property is removed and replaced by an option to validate in each 'Call web service' activity and 'Import XML' activity.
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+{{% /alert %}}{{% alert type="warning" %}}
 
 Enabling this feature may greatly decrease performance.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value:_ False
 

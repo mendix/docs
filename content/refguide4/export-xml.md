@@ -5,11 +5,11 @@ space: "Reference Guide 4"
 ---
 With the export-XML action you can export the data stored in [domain model](domain-model) entities into an XML document.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Action Properties
 

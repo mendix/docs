@@ -30,8 +30,8 @@ The chosen type influences what you can fill in under Value. The type of the val
 
 Under value you can set the values of the constants for your development and test environment.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 You can specify values for development and test configurations in the Modeler. For the acceptance and production environment the values of constants need to be configured in the application.conf file.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

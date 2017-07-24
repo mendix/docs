@@ -20,11 +20,11 @@ The Mendix app platform automatically monitors the health and status of apps tha
 4.  This will take you to the application status overview, which displays the status of your app node in various categories.
     ![](attachments/8782717/8946027.png)
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The buttons "Acceptance" and "Production" at the top allow you to switch between viewing the status for either you production or acceptance node. Note that accessing production information may require additional authentication and is subject to your project's security settings.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 There are a number of categories on the status overview, related to various technical parts of your app node. Any category that does not display "OK" is a cause for investigation. Each category indicates a different part of the app infrastructure that is monitored:
 

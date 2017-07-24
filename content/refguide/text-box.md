@@ -7,12 +7,12 @@ parent: "input-widgets"
 
 A text box can be used to display and/or edit a textual value.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713878/16843994.png)
 This text box allows the end-user to set the name of the customer.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 A text box must be placed in a data view or template grid and connected to an attribute of type String. The connected attribute is shown in blue and between brackets inside the text box.
 

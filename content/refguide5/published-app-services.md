@@ -16,11 +16,11 @@ Names of Published App Service documents must be unique, also with regard to Pub
 The button 'Create version' instantiates a new app service version.
 For more information, see [Published App Service](published-app-service).
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 From Mendix 5.4.0, app service microflows cannot have Lists as input parameters! For more information, please refer to [List parameters](list-parameters).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Edit
 

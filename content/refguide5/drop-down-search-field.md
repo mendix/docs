@@ -13,11 +13,11 @@ The caption is the text that is shown in front of the actual search field. This 
 
 ### Type
 
-<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Normal</td><td class="confluenceTd">The search field is visible and editable by the end user.</td></tr><tr><td class="confluenceTd">Hidden</td><td class="confluenceTd">The search field is hidden and is only there to selectively display objects in the grid.</td></tr><tr><td class="confluenceTd">Read-only</td><td class="confluenceTd">The search field is visible but not editable by the end user.</td></tr></tbody></table><div class="alert alert-success">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Normal</td><td class="confluenceTd">The search field is visible and editable by the end user.</td></tr><tr><td class="confluenceTd">Hidden</td><td class="confluenceTd">The search field is hidden and is only there to selectively display objects in the grid.</td></tr><tr><td class="confluenceTd">Read-only</td><td class="confluenceTd">The search field is visible but not editable by the end user.</td></tr></tbody></table>{{% alert type="success" %}}
 
 A hidden search field is an easy way to selectively display the contents of a grid. For example, a grid showing cars and their colors can be limited to only showing red cars by adding a hidden search field on color with default value 'red'.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Default value
 
@@ -51,12 +51,12 @@ If this property is set to 'Yes', the resulting drop-down allows you to select m
 
 If the 'drop-down' search field is connected to an attribute of an associated entity (as opposed to the grid entity itself) the XPath constraint can be used to limit  objects shown in the drop-down.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say you have a grid showing bicycles. In the domain model the bicycle has an association to the shops where you can buy those bicycles. You can add a search field to the grid allowing the end user to select a shop by name. The XPath can then be used to limit the shops to those that are in a given country.
 `[MyWebshop.Bicycle_Shop/MyWebshop.Shop/Country='Netherlands']`
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Sort order
 

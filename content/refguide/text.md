@@ -7,13 +7,13 @@ parent: "common-widgets"
 
 The text widget shows text which can optionally contain parameters. Every parameter is replaced with the value of the attribute it refers to. The text widget is the recommended way to show text to the user.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713820/16843960.png)
 
 Text widget placed in a data view, showing a greeting message to the user.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 If you start typing in any empty container the Modeler will automatically generate a text widget to display your text.
 

@@ -1,10 +1,10 @@
 ## Label properties
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
 Added in Mendix 5.18.0
 
-{% endmarkdown %}</div>
+</div>
 
 A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](http://getbootstrap.com#forms).
 

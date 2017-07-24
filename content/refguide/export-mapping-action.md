@@ -9,11 +9,11 @@ parent: "microflow-activities"
 
 With the Export Mapping action you can export the data stored in [domain model](domain-model) entities into an XML or JSON document, or into a string variable.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Action Properties
 
@@ -21,21 +21,21 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 The [Export Mapping](export-mappings) defines in which way the data in the [domain model](domain-model) corresponds with the XML schema or JSON structure.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
  
 Export mappings support flat JSON. You can select a JSON structure document in an export mapping, and you can select JSON elements that are at most one level deep. That means that you can export simple JSON objects like `{"Name":"John", "Age":46}`.
  
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Argument
 
 If the [Export Mapping](export-mappings) requires an object as input, you can select a variable of the correct type.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Validation properties are only applicable if an Export Mapping is selected that maps to XML.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Validation properties
 

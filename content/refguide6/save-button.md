@@ -39,11 +39,11 @@ The save button works in conjunction with a top-level [Data view](data-view). Pr
 
 ### Sync automatically
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Added in Mendix 6.6.0
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 When an object is saved in a Mendix application running in an [offline profile,](offline-device-profile) this information is stored in a local database until it can be synchronized with the server. In practice, this means that uploading a new object to the server requires two distinct actions; saving the object and [syncing it.](sync-button)
 

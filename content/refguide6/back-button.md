@@ -4,11 +4,11 @@ space: "Reference Guide 6"
 parent: "button-widgets"
 ---
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The back button has been renamed to 'close page button' in version 6.7.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Pressing this button will close the popup for popup pages, or navigate to the previously visited page for content pages.
 

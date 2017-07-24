@@ -7,11 +7,11 @@ space: "Reference Guide 5"
 
 Converts a value of type Decimal to type Float.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The Float type is less precise than the Decimal type. This means that when converting values of type Decimal to type Float, you will lose precision for those values. Only use this function as a last resort, for example when you need to specify a Float value and you cannot change that type to Decimal.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## toFloat
 

@@ -3,11 +3,11 @@ title: "Published OData resource"
 space: "Mendix 7 Reference Guide"
 parent: "published-odata-services"
 ---
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes the properties of a published OData resource. If you want a general overview of OData services, you can check the [Published OData Services](published-odata-services) documentation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Adding or editing a resource
 

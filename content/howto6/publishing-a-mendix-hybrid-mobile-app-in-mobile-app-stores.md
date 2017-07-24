@@ -81,11 +81,11 @@ You will see the "PhoneGap Build: Signing Key Required" page. It asks you to go 
         You can get those files from Apple. The certificate is the ".p12" file, the provisioning profile is the ".mobileprovision" file. See our documentation on [how to obtain app signing keys](/refguide6/managing-app-signing-keys) for more information.<br>
     e. Give the key a title that you can easily recognize, and upload the files.<br>
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
     Before using the key, it must be unlocked with the passphrase that was set up for the key. Click the lock with yellow background on the same row as the key and enter the passphrase. As the pop-up mentions, the key can now be used for builds for the period of an hour. After an hour, the passphrase needs to be entered again for security reasons.
 
-    </div>
+    {{% /alert %}}
 4.  Now you are ready to configure the app. Click on "Apps" in the black bar at the top of the page to go to an overview showing your app(s). Click the logo or name of your app to go to the details of the app.
 5.  Select the correct key for your app. Next to the text "iOS", there is a dropdown box with "No key selected". Select the newly uploaded key from the dropdown box. It should be listed under "unlocked".
 

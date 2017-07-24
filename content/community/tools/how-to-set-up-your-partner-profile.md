@@ -64,15 +64,15 @@ These are some of the most important elements you can edit:
 
     ![](attachments/how-to-set-up-your-partner-profile/geo-focus.png)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 If you're missing an input option (for example, an industry), just send us a feedback message with the missing item using the Feedback button on the right side of the screen.
 
-</div><div class="alert alert-info">
+{{% /alert %}}{{% alert type="info" %}}
 
 These elements are required before you can set your profile to public: Address, Email, Summary, Geographical Focus, Type of Services, and Support Capabilities.
 
-</div>
+{{% /alert %}}
 
 ## 5 Adding Developers to the Partner Profile
 
@@ -92,11 +92,11 @@ To add developers to the Partner Profile, follow these steps:
 
     Only the certifications and points of the added developers will be counted in the Partner Profile. The highest rank of certification will be added to the overview, and the points will be added to the average Mendix Level of all your developers.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Make sure you off-board the developers who no longer work at your company through the company administration in the Mendix platform. These former employees will still be visible in the overview. It is important that you deactivate these in the Developers Portal so that they don’t have access to projects.
 
-</div>
+{{% /alert %}}
 
 ## 6 Reference Cases
 
@@ -112,11 +112,11 @@ The industry will be used on the **Meet our partners** overview page. The number
 
 ![](attachments/how-to-set-up-your-partner-profile/numbers.png)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 These fields are required before you can save a reference case: Project, Description, Customer, Industry, and Period.
 
-</div>
+{{% /alert %}}
 
 Customer can add reviews of your reference case. The average rating of all the reviews of all the projects will be shown on the **Meet our partners** overview page and the Partner Profile details page. The Mendix Partner Success managers will check and moderate the reviews.
 

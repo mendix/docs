@@ -22,11 +22,11 @@ There is also a percentage bar of the stories that are done and the deadline dat
 
 ![](attachments/sprintstatus.jpg)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 All the changes made on this page are directly passed on to the **Stories** page and vice versa.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 3 Burndown Chart Tab
 
@@ -50,11 +50,11 @@ Under this tab, you will get an overview of all the sprints. You can edit the sp
 
 You can click **Edit** to make changes in a specific sprint/release (for example, to rename, change the date, or the duration of the sprint).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 All the changes made on this page are directly passed on to the **Stories** page and vice versa.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 5 Related Content
 

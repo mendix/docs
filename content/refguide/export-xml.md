@@ -5,8 +5,8 @@ parent: "integration-activities"
 ---
 
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The documentation has moved to [Export Mapping Action](export-mapping-action)
 
-{% endmarkdown %}</div>
+{{% /alert %}}

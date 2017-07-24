@@ -25,10 +25,10 @@ The file path to the XSD file. After selecting an XSD file, hit 'Import XSD file
 
 The elements of which the XML file is comprised.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/918225.png)
 
 A simple schema
 
-{% endmarkdown %}</div>
+{{% /alert %}}

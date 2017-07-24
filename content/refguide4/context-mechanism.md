@@ -9,11 +9,11 @@ The context mechanism of the client keeps track of where the user is and has bee
 
 Let us say part of our domain model looks like the image below.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/917935.png)
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 An order is associated with (at most) one customer, but a customer can have many orders. In a typical application you would have a data grid showing the list of customers. Double clicking a customer would take you to a form with a data view showing one customer. Additionaly, the selected customer is stored in the context for later use.
 
@@ -37,11 +37,11 @@ In the example above if we remove Customer from the context on the Order data gr
 
 In version 2.5 there are alternatives for using the context mechanism that are more explicit and easier to understand. A nested data grid (like the Order grid in the Customer data view) can be explicitly connected to the entity path Order_Customer/Order. This means that only those orders will be shown that can be reached by following this path from the selected customer. By using this alternative it is clear just by looking at the data grid which objects will shown. You do not have to think about which objects have or have not been put into the context by earlier forms and whether they will constrain the grid or not.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 If you use an entity path on a nested data grid, you should ensure that 'Apply context' is set to false so that the context mechanism is not also applied. False is the default value for 'Apply context' in version 2.5!
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Apart from constraining the grid the entity path will also be used when creating new objects using the standard New button. The association used in the path will automatically be set. In the example, creating an order will automatically set the Order_Customer association of the new order to the customer in the data view.
 

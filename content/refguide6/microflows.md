@@ -5,11 +5,11 @@ category: "Modeler"
 ---
 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This part is an overview of all the elements that can be used in a microflow. For the properties of the microflow itself, see [Microflow](microflow).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Microflows allow you to express the logic of your application. A microflow can perform actions such as creating and updating objects, showing pages and making choices. It is a visual way of expressing what traditionally ends up in textual program code.
 
@@ -133,11 +133,11 @@ When an error occurs inside a microflow, under the hood a Java exception is rais
 
 In a custom error handler that is executed after an error occurs, `$latestError` is set to an object containing information about the error that occurred. If the error is a SOAP fault (an error that occurs as a result of a web service call), `$latestSoapFault` is set to an object that contains more specific information about the SOAP fault. Otherwise, `$latestSoapFault` is `empty`.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
 You can determine whether an error was a SOAP fault by checking `$latestSoapFault` for `empty`.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The following table shows the attributes of System.Error and System.SoapFault.
 
@@ -154,11 +154,11 @@ The following table shows the attributes of System.Error and System.SoapFault.
 
 Click [here](http://www.w3.org/TR#soapfault) for more information on SOAP faults.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 In microflows that apply entity access, which are recognizable by their yellow background, it is not possible to inspect the attributes of error objects for security reasons. You can pass the error object to a submicroflow that does not apply entity access and inspect the attributes there.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Microflow Debugging
 

@@ -41,11 +41,11 @@ Before configuring your custom domain in the Mendix Cloud, you will need to conf
 
 Please create a CNAME record and point it to `[YOUR-CUSTOM-DOMAIN].cname.mendix.net.`. For example, when your custom domain is `myapp.mycompany.com`, create a CNAME record to `myapp.mycompany.com.cname.mendix.net.` so that Mendix can point your custom dsomain to your Mendix app.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 It's not possible to create a CNAME record for an apex/naked domain (meaning, a domain without a subdomain, like `mycompany.com`), as custom apex/naked domains are currently not supported.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 3 Managing Custom Domains in the Mendix Cloud
 
@@ -81,11 +81,11 @@ To create a certificate request, follow these steps:
 
 ![](attachments/deploy/21168226.png)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The SSL/TLS private key will be stored in our secure keystore. It will not be available for downloadin order to keep it secure.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 4.1 Upload Signed Certificate 
 
@@ -120,11 +120,11 @@ To upload the custom domain certificate, follow these steps:
 
 3. Click **Save** to save your new custom domain certificate. It will be uploaded to the Mendix Cloud automatically.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The SSL/TLS private key will be hidden after uploading it. It will be stored in our secure keystore and will not be available for download in order to keep it secure.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## 6 Renewing a Custom Domain Certificate
 
@@ -167,11 +167,11 @@ To configure a custom domain on your application environment, follow these steps
 
 6. Click **Save** to save your custom domain. It will be configured for your application environment automatically.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Please make sure you've configured a CNAME record for your custom domain at your domain registrar/DNS provider (for details, see [2.2 Domain Registrar/DNS Provider](#DNS)).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 
 ## 8 Frequently Asked Questions

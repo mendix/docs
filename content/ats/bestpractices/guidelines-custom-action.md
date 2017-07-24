@@ -13,11 +13,11 @@ These are the definitions of Mendix actions and Core actions:
 * Mendix actions are a combination [Mendix actions](../refguide-ats-1/mendix-actions) and [Mendix App Store widget actions](../refguide-ats-1/mendix-appstore-widgets-actions)
 * Core actions are a combination of [ATS Core actions](../refguide-ats-1/ats-core-actions) and [Selenium actions](../refguide-ats-1/selenium-actions)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 These are guidelines, not rules. It is possible that you will encounter situations in which the guidelines cannot be followed.
 
-</div>
+{{% /alert %}}
 
 ### 1.1 Using Mendix Actions
 
@@ -49,11 +49,11 @@ This is a visual component:
 
 ![](attachments/guidelines-custom-action/visual-component-widget.png)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 This guideline focuses on how to find certain widgets.
 
-</div>
+{{% /alert %}}
 
 ## 3 The User Approach
 
@@ -78,11 +78,11 @@ This is the `mx-name` in the debugger:
 
 ![](attachments/guidelines-custom-action/mx-name-in-debugger.png)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 This guideline focuses on unsupported widget actions.
 
-</div>
+{{% /alert %}}
 
 ## 5 Background Processes
 
@@ -94,11 +94,11 @@ This is the Mendix Wait action:
 
 For more information, please see [Mendix wait](../refguide-ats-1/mendix-wait).
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 This guideline does not apply to the Search Context action, since it does not trigger any events.
 
-</div>
+{{% /alert %}}
 
 ## 6 Action Parameters
 
@@ -128,11 +128,11 @@ These are the three most used action parameters:
 
 Last but not least, give a description to the action parameters especially, when it requires specific information. You can also give a generic example of what the user should enter, making it more user-friendly.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Follow the naming conventions. Only deviate when there is no standard name.
 
-</div>
+{{% /alert %}}
 
 ## 7 Describing the Steps and Defining the Output
 

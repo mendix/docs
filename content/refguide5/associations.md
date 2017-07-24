@@ -13,16 +13,16 @@ The value of the association can only be viewed or edited from objects of the en
 
 The cardinality (or number of referred objects) of an association is indicated by the number one (`1`) or a star (`*`) at either side of the association.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/819203/918217.png)
 The arrow indicates that Order is the owner of the association. The number one (`1`) and the start (`*`) indicate that one customer is associated with many orders.
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+{{% /alert %}}{{% alert type="warning" %}}
 
 An association between a persistable entity and a non-persistable entity must start in the non-persistable entity and have owner "Default".
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 See below for more examples.
 
@@ -36,18 +36,18 @@ Delete behavior defines what should happen to the associated object when an obje
 
 _Default value_: delete <name of entity> object but keep <name of other entity> object(s)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This delete behavior is used if you want to delete any associated 'Profile' when a 'Customer' is deleted:
 
 ![](attachments/819203/918143.png)
 
-{% endmarkdown %}</div><div class="alert alert-info">{% markdown %}
+{{% /alert %}}{{% alert type="info" %}}
 
 This delete behavior is used if you want to be able to delete a 'Customer' only if it is not associated with any 'Order':
 ![](attachments/819203/918146.png)
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common Properties
 
@@ -65,11 +65,11 @@ Type defines whether an association is a reference (single) or a reference set (
 
 _Default value:_ Reference
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The examples for this property are combined with the example of the owner property below.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Owner
 

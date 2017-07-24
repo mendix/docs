@@ -47,7 +47,7 @@ At the moment there is only a button with no Microflow behind it yet. In this ex
 | Name | This property specifies the name of the microflow in the page builderClass: The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget. |
 | Style | The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The styling is applied in the following order:
 
@@ -55,7 +55,7 @@ The styling is applied in the following order:
 *   The 'Class' property of the widget
 *   The 'Style' property of the widget
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 3. Click **OK** to save the properties.
 
@@ -116,11 +116,11 @@ Note: the title of the confirmation pop-up is determined by a system text (categ
 *   Progress message:The progress message is shown along with the progress bar if the progress bar is either non-blocking or blocking (see above).
 *   Microflow call type: This property indicates whether the connected microflow is executed synchronously or asynchronously. With synchronously executed microflows the microflow is started and the client waits for the result. With asynchronously called microflows the microflow is started on the server but the client does not wait for the result. It will check the server every ten seconds to see if the microflow is done executing.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Set the duration only to asynchronous if you experience problems. Sometimes if a request takes too long to handle, the request will be sent again by an (impatient) proxy server.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 3\. Click **OK** to save the settings.
 

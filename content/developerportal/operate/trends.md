@@ -14,11 +14,11 @@ To track the usage growth of your app and to debug performance problems, the Men
 
 To view the **Trends** you must have permission to **Access the Monitoring**.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Note that only the [Technical Contact](../settings/technical-contact) is allowed to grand the node permissions.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Assign this permission by following these steps:
 

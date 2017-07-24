@@ -28,11 +28,11 @@ The Mendix platform automatically monitors the health and status of apps that ar
 
     ![](attachments/18580000.png)
 
-  <div class="alert alert-warning">{% markdown %}
+  {{% alert type="warning" %}}
 
   The Acceptance and Production buttons at the top let you switch between viewing the status for your production and acceptance node. Note that accessing production information may require additional authentication and is subject to your project's security settings.
 
-  {% endmarkdown %}</div>
+  {{% /alert %}}
 
 4.  If one of the status items is not listed as **OK**, click the line to show an additional information box with details about the error.
 

@@ -13,7 +13,7 @@ Boolean expressions can be used to perform logical operations such as checking i
 
 Combines two Boolean expressions and only returns True if both of the expressions evaluate to True.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ```java
 (6 > 4) and (3 < 5)
@@ -27,13 +27,13 @@ evaluates to True because both of the expressions are True.
 
 evaluates to False, because only the second expression is True.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## or
 
 Combines two Boolean expressions, and returns True if at least one of the expressions evaluates to True.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Given a domain entity instance with name "$product" that has an integer attribute "price" with value "3" and another integer attribute "recommendedPrice" with value "2", the following expression:
 
@@ -49,7 +49,7 @@ The following example returns False, because both expressions evaluate to False:
 ('hello' = 'nothello') or ('byebye' = 'stillnotbyebye')
 ```
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## not
 

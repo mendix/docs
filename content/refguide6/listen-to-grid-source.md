@@ -7,12 +7,12 @@ parent: "data-sources"
 
 The listen to grid data source allows a data view to display detailed information on an object selected from a grid on the same page. This is especially useful when displaying large amounts of data, which limits the information available per object, as it allows the user to view details concerning individual objects without having to open a new page.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713834/16843964.jpg)
 The data view on the right listens to the data grid on the left. In this example, the listening view will display the image attached to the selected product if one is selected.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Both template and data grids can be selected as a listen target.
 

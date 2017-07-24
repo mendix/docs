@@ -4,11 +4,11 @@ space: "Reference Guide 6"
 parent: "report-widgets"
 ---
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 This has been introduced in version 6.10.0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 With the report date parameter, the user can specify the DateTime parameter of the data set, which is then used for filtering the data displayed in the [Report](report-widgets).
 

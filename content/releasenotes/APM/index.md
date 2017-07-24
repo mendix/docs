@@ -12,8 +12,8 @@ These are the release notes for Mendix Application Performance Monitor (APM):
 * [1.7](1.7)
 * [1.6](1.6)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 The patch release notes are also included here.
 
-</div>
+{{% /alert %}}

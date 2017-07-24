@@ -93,7 +93,7 @@ Calculates the remainder of division of one number by another. In other words, m
 If the two inputs were both of type Integer or Autonumber, the result is of type Integer.
 If the two inputs were any other types of numbers, the operation returns a Float/Currency.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ```java
 23 mod 5
@@ -121,7 +121,7 @@ results in a Float/Currency with value
 
 ```
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Addition
 

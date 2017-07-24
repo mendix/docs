@@ -56,11 +56,11 @@ To create a new project, follow these steps:
 
 ## 4 Configuring Your Project
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Only the Project Administrator role has the rights to edit the settings in **Configuration**. For a project user, only the Tester can see these settings and not edit them.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 To start configuring your project, click **Configuration** in the navigation bar on the left to open the **Configuration** page. This page contains the **Project**, **Selenium**, and **Applications** tabs.
 
@@ -191,11 +191,11 @@ In this tab, you can connect your data sets to a test case. Use the arrow to sel
 
 ![](attachments/getting-started/data-set-test-case.png)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 If you do not use the data set, make sure to disconnect it. ATS will remember where you selected the data set fields as input, so if you reconnect the data set, ATS will automatically set the correct input.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 #### 5.2.3 Show Usages Tab
 

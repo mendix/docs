@@ -10,9 +10,9 @@ Get off to a flying start with these introductory how-to's:
 * [How to Create and Deploy Your First App](create-and-deploy-your-first-app)
 * [How to Implement Styles](styles)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 If you are looking for the Mendix tutorials (for creating a mobile to-do app, building an IoT app, etc.), you can find them in [Tutorials](../tutorials/index).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 

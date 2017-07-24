@@ -5,11 +5,11 @@ space: "Reference Guide 5"
 ---
 
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 This document describes the properties of a document template. If you want to see what document templates are for and what kind of widgets can be placed on them, you can check the [Document Templates](document-templates) overview documentation.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Appearance Properties
 
@@ -37,9 +37,9 @@ The margins specify the distance between the border of the paper and the content
 
 Indicates whether the header and/or footer are also shown on the first page.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 Note that you must use a page break widget to indicate you're no longer on the first page. This cannot be calculated while generating content.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value_: True.
 

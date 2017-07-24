@@ -1,10 +1,10 @@
 ### Width Unit
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
 In earlier Mendix versions, only percentages where supported.
 
-{% endmarkdown %}</div>
+</div>
 
 The width unit specifies the unit of the specified column widths (see property 'Column Widths' below). There are two possible values for the unit:
 
@@ -14,11 +14,11 @@ _Default value:_ Percentage
 
 ### Column Widths
 
-<div class="alert alert-info">{% markdown %}
+<div class="alert alert-info">
 
 In earlier Mendix versions, only percentages where supported.
 
-{% endmarkdown %}</div>
+</div>
 
 The column widths property describes the widths of each of the columns as a list of numbers separated by semi-colons. The unit (see above) determines what these numbers mean: percentages or pixels. In the case of pixels, 'auto' is also a valid value for the width of a column. Auto columns evenly divide space that remains after giving the pixel width columns their desired width.
 

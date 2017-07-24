@@ -65,10 +65,10 @@ Defines what kind of object will be returned by the action. This can be a simple
 
 Defines whether the return value can be **empty**.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713720/16843921.png)
 
 The Return Type tab of an app service action called 'ServeReturnObject'. An **empty** ReturnObject is disallowed here.
 
-{% endmarkdown %}</div>
+{{% /alert %}}

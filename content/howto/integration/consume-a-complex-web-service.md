@@ -95,11 +95,11 @@ To configure the web service call, follow these steps:
 
     ![](attachments/18448730/18581778.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     Make sure the microflow either creates the variables required as arguments for the web service call or has those passed to it.
 
-    </div>
+    {{% /alert %}}
 
 2. If you are creating your own microflow, add the Call Web Service activity to the microflow. For details on how to add activities to microflows, see [Activities](/refguide7/activities) in the Mendix Reference Guide.
 3. Click **Select...** in the **Web service operation** section of the **Call Web Service** dialog box:

@@ -10,11 +10,11 @@ Each application can leverage Mendix App Store content to create and send custom
 
 Within this part of the how to you will learn how to download the necessary modules from the Mendix App Store. This is a very quick process, in that in just a few clicks the modules will be imported into your project. The modules that are required for this process are the **MxModelReflection, Encyption,** and **Email Module with Templates** modules.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 The MxModelReflection module is a commonly used module in most apps. The purpose of this module is to allow the app to reflect into the domain model (entities and attributes) and microflow definitions at runtime.
 
-</div>
+{{% /alert %}}
 
 ### 1.1 Download the 'MxModelReflection' Module
 
@@ -36,11 +36,11 @@ The MxModelReflection module is a commonly used module in most apps. The purpose
 2.  Search for the keywords **Email Template**.
 3.  Click the **Download** button and include the module as a new module.![](attachments/18448688/18581178.png)
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Depending on the layout selected when the project was created, errors in the modeler may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
 
-</div>
+{{% /alert %}}
 
 ## 2\. Add Navigation Items to Allow Users to Configure Settings
 
@@ -51,11 +51,11 @@ In this part of the how to you will learn how to add the required pages into the
 3.  Add a new item to the Navigation for **Administrator** to access **EmailTemplate.IVK_OpenEmailSettings**.![](attachments/18448688/18581177.png)
 4.  Add a new item to the Navigation for **Administrator** to access **EmailTemplate.EmailTemplate_Overview**.![](attachments/18448688/18581176.png) 
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Within the EmailTemplate module, there are several useful pages that can help in tracking email logs and failures. Add those pages to the Navigation as well for additional information on the email history.
 
-</div>
+{{% /alert %}}
 
 ## 3\. Configuration
 
@@ -78,11 +78,11 @@ In this part of the how to you will learn how to run the MxModelReflection synch
 7.  **Save** the SMTP configuration settings.
     ![](attachments/18448688/18581171.png)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 Make sure to allow a administrator to access this page and has read/write the configuration settings entity.
 
-</div>
+{{% /alert %}}
 
 ### 3.3 Configuring Email Templates
 
@@ -91,11 +91,11 @@ Make sure to allow a administrator to access this page and has read/write the co
 3.  Enter a name for the template in the **Name** field.
 4.  Specify by default what the values are for 'From', 'CC', 'BCC', 'Subject', and 'Use Only Plain Text'.![](attachments/18448688/18581167.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     All of the email values for To, From, CC, BCC, and Subject can be overridden once the email functionality is implemented if those values are to be dynamic within the app. Also, attachments can be added to this process at runtime within a microflow. 
 
-    </div>
+    {{% /alert %}}
 5.  Configure both HTML Text and Plain Text formats for the email with the template text needed to be in the email body. Since the template can handle tokens (described next) go ahead and put placeholders in for those dynamic attributes needed in the email in the format of &123;%TokenSequenceNumber%&125;
     ![](attachments/18448688/18581168.png)
 6.  Specify and upload any attachments that will be sent automatically when the email is triggered
@@ -105,19 +105,19 @@ Make sure to allow a administrator to access this page and has read/write the co
 1.  Select the object that the token will need to be derived from.
     ![](attachments/18448688/18581162.png)
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     Within the context of Email Templates, the object will be the Entity in the Domain Model that the data value will be derived from.
 
-    </div>
+    {{% /alert %}}
 2.  Set the **TokenSequenceNumber** between the token characters, **Description**, the **Attribute** that will populate in the email when triggered.![](attachments/18448688/18581163.png)
 3.  Save the token and the template
 
-    <div class="alert alert-info">
+    {{% alert type="info" %}}
 
     If tokens are used within the template, it will be required that a parameter of the same entity type is passed to the email microflow so that the tokens can be read off of the correct object.
 
-    </div>
+    {{% /alert %}}
 
 ### 3.5 Configuring the Encryption Key
 
@@ -138,11 +138,11 @@ In this part of the how to you will learn how to utilize the previous configurat
 7.  Customize the Action **Set email data based on the customer and template** to the necessary attributes from the microflow parameters.![](attachments/18448688/18581161.png)
 8.  Test the functionality to ensure SMTP and templates are configured correctly.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 It is very important to setup Log Activities within the microflows to capture errors or other key events in the log for ease of debugging.
 
-</div>
+{{% /alert %}}
 
 ## 5\. Related content
 

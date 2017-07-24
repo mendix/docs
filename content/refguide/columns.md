@@ -67,7 +67,7 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 | m | 1..2 | 59 | Minute, use one or two for zero padding |
 | s | 1..2 | 12 | Second, use one or two for zero padding |
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 | Format | Example output |
 | --- | --- |
@@ -77,7 +77,7 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 | `EEEE MMMM d yyy` | Tuesday March 29 2011 |
 | `EEE, MMM d, ''yy` | Wed, Jul 4, '01 |
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## General Properties
 
@@ -102,21 +102,21 @@ The values in a column can be aggregated in several ways. The aggregate function
 | Sum | Show the sum of the values. |
 | Count | Show the count of the values. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that all objects will be taken into account, and not just the ones on the current page.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Aggregate caption
 
 The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Translatable Texts](translatable-texts).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 'Total' could be an aggregate caption for a column that shows the sum of the values.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Show tooltip
 

@@ -37,10 +37,10 @@ entity1Interface.load((entity1 : domainmodels.Entity) => {
 	var entity2 : domainmodels.Entity = fullDomainModel.entities[1];
 });
 ```
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 
  You can also load units or elements using the convenience method `loadAsPromise`, which is available in the Mendix platform SDK as a way to load and get `promise` as an output instead of having to use a callback function.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Continue your learning path with [Generating code from the model](generating-code-from-the-model).

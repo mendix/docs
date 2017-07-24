@@ -7,12 +7,12 @@ space: "Reference Guide 5"
 
 A dynamic label would be used for the same kind of attributes as a text box from the form builder. It can be used to display a text value.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 [![](attachments/819203/918131.png)](dynamic-label-document-template)
 A dynamic label linking to a customer name.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Appearance Properties
 
@@ -53,14 +53,14 @@ _Default value:_ Date
 If you choose 'Custom' as the date format (see above) the custom date format determines the way date and/or time are formatted. The custom date format is a string that follows the rules described in
 [http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html](http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The custom date format
 `EEE, MMM d, ''yy`
 results in the following text
 `Wed, Jul 4, '01`
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common Properties
 

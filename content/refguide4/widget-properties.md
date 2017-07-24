@@ -17,11 +17,11 @@ _Default value:_ False
 
 This property determines the message that is shown to the end user if the widget is empty and the 'Required' property is set to true. This is a translable text. See [Translatable Texts](translatable-texts).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 For example, if an address field is required, the required message for the text box of the address could be something like "The address is required."
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common Properties
 
@@ -49,12 +49,12 @@ Note that the styling is applied in the following order:
 
 The style property allows you to specify additional CSS styling for the widget. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 font-size:40px;background-color:blue;color:orange;
 This will result in a orange label with a font size of 40 pixels on a blue background.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Data Source Properties
 
@@ -67,11 +67,11 @@ Many input widgets, like text boxes and drop-down widgets, can be connected to:
 
 In the first case we say the widget is connected to an attribute and in the second case to an attribute path.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 An input widget connected to an attribute _path_ must be read-only. The Modeler will check this for you.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Editability Properties
 

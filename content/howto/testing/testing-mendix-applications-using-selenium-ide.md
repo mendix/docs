@@ -32,11 +32,11 @@ Before starting with this how-to, make sure you have completed the following pre
 | Firebug | 2.0.18 |
 | FirePath | 0.9.7.1.1 |
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 All images, names, and steps in this how-to are based on these versions. When using other versions, the images and/or names on your screen may be different than what is used in this how-to.
 
-</div>
+{{% /alert %}}
 
 ## 3 Installing and Running the Company Expenses App
 
@@ -183,11 +183,11 @@ In this section, you will edit some test steps by using Firebug and FirePath to 
 
 Congratulations! You have just created your second automated test.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Some widgets, like a grid or a list view, can show multiple items. Every item has the CSS class `mx-name-index-[indexNumber].` The index number starts at 0.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### 4.2 Installing the Selenium Mendix Locator Builder Plugin
 

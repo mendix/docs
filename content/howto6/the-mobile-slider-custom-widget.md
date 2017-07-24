@@ -106,11 +106,11 @@ You can also use one page as your main slide.
 
 As promised in my previous how-to [Creating a Chainable Widget](create-a-chainable-custom-widget) I would create a custom widget that is able to communicate to another custom widget with custom events. 
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 Custom widgets in the Mendix project act as isolated features. This means that custom widgets cannot and do not know anything about platform widgets _(example: the datagrid, the listview)_. It is also not possible to hook into an event from a platform widget in a custom widget.
 
-</div>
+{{% /alert %}}
 
 The MobileSlider custom widget actually communicates to the MobileSliderBackground custom widget to set the background image of the entire application. Take a look at the following source code that can be found in the MobileSlider that does just that:
 

@@ -4,19 +4,19 @@ space: "Reference Guide 4"
 ---
 This is the reference guide for version 4 of the Mendix technology.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 See the [System Requirements](system-requirements) page before installing Mendix 4\. If you have been using version 3 of our technology, we advise you to read the document [Moving from 3 to 4](moving-from-3-to-4).
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 If you miss something in the documentation, please let us know through the feedback widget on the right so we can keep extending and improving the documentation.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Visit the [Mendix 4 How To section](/howto40/) if you are looking for step-by-step guides on some of the more challenging aspects of the Mendix Framework.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 **Modeler**
 

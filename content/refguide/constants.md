@@ -7,9 +7,9 @@ category: "Modeler"
 
 Constants are used to define configuration values that can differ per environment. When running the application locally or in a sandbox, the values as defined in the Modeler are used. When running the application on a production environment such as the Mendix Cloud, the values should be configured separately in that environment.
 
-<div class="alert alert-success">{% markdown %}
+{{% alert type="success" %}}
 The value for a constant can be overridden in a [Configuration](configuration). This allows you to run locally using different values for one or more constants, without having to change the default value for the constant every time.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Constants can be used in:
 

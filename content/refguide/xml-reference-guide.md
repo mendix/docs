@@ -89,14 +89,14 @@ The different property types and their respective required attributes are discus
 
 ## <a name="Widgets-XMLreferenceguide-" rel="nofollow"></a>Property types
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Every property requires the  **key** and **type** attribute.
 Any property can have the  **isDefault**  or  **required**  attribute.
 
 Note that the **required** attribute defaults to "true".
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Attribute
 
@@ -215,12 +215,12 @@ The form property lets you pass a form to the widget. If needsEntityContext is s
  <description>Form to open</description>
 </property>
 ```
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 **Forms containing a dataview**
 Remember that calling a form  with a dataview, if needsEntityContext is set to "false" in your widget, still requires an object to work.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 
 
@@ -350,9 +350,9 @@ What it looks like in the Mendix Modeler:
 
 ![](attachments/16714046/16844045.png)
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Remember to use the correct language notation according to the [Java supported locales](http://java.sun.com/javase/6/docs/technotes/guides/intl/locale.doc.html).
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 # Related content
 

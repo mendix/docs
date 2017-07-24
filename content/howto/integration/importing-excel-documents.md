@@ -79,29 +79,29 @@ Based on the structure of the file you want to import, you will setup your templ
 6.  Click on the arrow next to **Reference to import objects** box.
 7.  Select the **MyFirstModule.Customer_XLSFile** association.
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
      By setting the association to the XLS File, the XLS file is saved on disk and the imported data is linked to the source file.
 
-    </div>
+    {{% /alert %}}
 8.  Set **Import Action** to **Synchronize objects**.
     ![](attachments/18448735/18581965.png)
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
     For this example you will be using a simple Excel file, with just one sheet and columnheaders at the first row. If a more comprehensive Excel file is used you can change these values at the Sheet nr, Header row nr, and Import from row nr boxes.
 
-    </div>
+    {{% /alert %}}
 9.  Under the **Connect columns to attributes** section, click on **New** to create a mapping from the Excel sheet column to the proper Mendix attribute.
     ![](attachments/18448735/18581964.png)
 
 10.  Add the column number, this should correspond with the column number from the value on the Excel file you want to map
 
-        <div class="alert alert-warning">
+        {{% alert type="warning" %}}
 
         The number of the first column in Excel is 0, the second 1, etc.
 
-        </div>
+        {{% /alert %}}
 11.  Define the Excel column header as the **Caption** value.
 
 12.  Choose **Attribute** as a **type**.
@@ -114,11 +114,11 @@ Based on the structure of the file you want to import, you will setup your templ
 
 15.  Repeat steps 9 to 14 for each attribute of the **Customer** object.
 
-        <div class="alert alert-warning">
+        {{% alert type="warning" %}}
 
         If the mapping is setup right, a green check will appear in front of the row.
 
-        </div>
+        {{% /alert %}}
 16.  For the mapping of attribute **Name** set the key value to **Yes**, to prevent a customer from being duplicated.
     ![](attachments/18448735/18581961.png)
 
@@ -192,18 +192,18 @@ In the previous steps you have manually added all the columns to your import tem
     ![](attachments/18448735/18581935.png)
 10.  Click on **Connecting matching attributes**.![](attachments/18448735/18581934.png)
 
-        <div class="alert alert-warning">
+        {{% alert type="warning" %}}
 
         The attributes of the selected Mendix Object which have the same name as the Caption will be automatically matched.
 
-        </div>
+        {{% /alert %}}
 11.  To complete the template repeat the same actions as performed in chapter 4.
 
-        <div class="alert alert-warning">
+        {{% alert type="warning" %}}
 
         Keep in mind that you have to set a key attribute for as well as the **Customer **object as the **Order** object
 
-        </div>
+        {{% /alert %}}
 
 ## 7\. Export/Import Template
 
@@ -216,11 +216,11 @@ Once you have completed an Excel template you can export the template for exampl
 4.  Select the downloaded file and click **Import**.**![](attachments/18448735/18581932.png)**
 5.  You have now imported a complete import template.
 
-    <div class="alert alert-warning">
+    {{% alert type="warning" %}}
 
     You will have a duplicate import template in your app, but in a real life situation you would import this template in a different environment/database where this template is not created yet.
 
-    </div>
+    {{% /alert %}}
 
 ## 8\. Related content
 

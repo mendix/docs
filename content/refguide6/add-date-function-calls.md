@@ -22,7 +22,7 @@ Add a number of milliseconds to a date.
 
 A result of type DateTime that corresponds to the initial date plus x milliseconds.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 {% highlight java %}
 addMilliseconds(dateTime(2007, 1, 1, 1, 1, 1), 1400)
@@ -34,7 +34,7 @@ results in a datetime that corresponds to
 "Mon Jan 01 01:01:02:400 CET 2007"
 {% endhighlight %}
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## addSeconds
 
@@ -51,7 +51,7 @@ Add a number of seconds to a date.
 
 A result of type DateTime that corresponds to the initial date plus x seconds.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 {% highlight java %}
 addSeconds(dateTime(2007, 1, 1, 1, 1, 1), 2)
@@ -65,7 +65,7 @@ results in a datetime that corresponds to
 
 {% endhighlight %}
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## addMinutes
 
@@ -82,7 +82,7 @@ Add a number of minutes to a date.
 
 A result of type DateTime that corresponds to the initial date plus x minutes.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 {% highlight java %}
 addMinutes(dateTime(2007, 1, 1, 1, 1, 1), 3)
@@ -96,7 +96,7 @@ results in a datetime that corresponds to
 
 {% endhighlight %}
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## addHours
 
@@ -113,7 +113,7 @@ Add a number of hours to a date.
 
 A result of type DateTime that corresponds to the initial date plus x hours.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 {% highlight java %}
 addHours(dateTime(2007, 1, 1, 1, 1, 1), 25)
@@ -127,7 +127,7 @@ results in a datetime that corresponds to
 
 {% endhighlight %}
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## addDays[UTC]
 
@@ -144,7 +144,7 @@ Add a number of days to a date. `addDays` uses the server's calendar and `addDay
 
 A result of type DateTime that corresponds to the initial date plus x days.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 {% highlight java %}
 addDays(dateTime(2007, 1, 1, 1, 1, 1), 3)
@@ -158,7 +158,7 @@ results in a datetime that corresponds to
 
 {% endhighlight %}
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## addWeeks[UTC]
 
@@ -175,7 +175,7 @@ Add a number of weeks to a date. `addWeeks` uses the server's calendar and `addW
 
 A result of type DateTime that corresponds to the initial date plus x weeks.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 {% highlight java %}
 addWeeks(dateTime(2007, 1, 1, 1, 1, 1), 2)
@@ -189,7 +189,7 @@ results in a datetime that corresponds to
 
 {% endhighlight %}
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## addMonths[UTC]
 
@@ -206,7 +206,7 @@ Add a number of months to a date. `addMonths` uses the server's calendar and `ad
 
 A result of type DateTime that corresponds to the initial date plus x months.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 {% highlight java %}
 addMonths(dateTime(2007, 1, 1, 1, 1, 1), 13)
@@ -220,7 +220,7 @@ results in a datetime that corresponds to
 
 {% endhighlight %}
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## addYears[UTC]
 
@@ -237,7 +237,7 @@ Add a number of years to a date. `addYears` uses the server's calendar and `addY
 
 A result of type DateTime that corresponds to the initial date plus x years.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 {% highlight java %}
 addYears(dateTime(2007, 1, 1, 1, 1, 1), 11)
@@ -251,7 +251,7 @@ results in a datetime that corresponds to
 
 {% endhighlight %}
 
-{% endmarkdown %}</div><div class="alert alert-warning">{% markdown %}
+{{% /alert %}}{{% alert type="warning" %}}
 
 From Mendix release 6.6, It's also possible to pass Long values to different Add date function calls:
 
@@ -265,4 +265,4 @@ results in a datetime that corresponds to
 "Tue Jan 19 04:15:47 CET 2038"
 {% endhighlight %}
 
-{% endmarkdown %}</div>
+{{% /alert %}}

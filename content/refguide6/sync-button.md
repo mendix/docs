@@ -5,11 +5,11 @@ parent: "button-widgets"
 ---
 
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 The documentation in this section describes a new feature that is still in beta, and is subject to change before the final release.
 
-{% endmarkdown %}</div> 
+{{% /alert %}} 
 
 The sync button synchronizes the data stored locally on your device with the server database. Any changes made online will transfer into your offline application and any objects created offline will be committed to the online database. After synchronization is complete any relevant widgets on the page will be updated to include the new changes. 
 

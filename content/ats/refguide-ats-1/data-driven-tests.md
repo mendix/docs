@@ -38,11 +38,11 @@ Shows parameters that require a different data type than the datatype of the fie
 
 For each error the test step and parameter are listed so they can be easily identified.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 If you change the selected data set the system will remember your set parameters and will match them again if you select a data set containing the same field names.
 
-</div>
+{{% /alert %}}
 
 When you have selected a master data set you can use the the contained field as input values for your test steps.
 

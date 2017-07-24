@@ -7,12 +7,12 @@ space: "Reference Guide 5"
 
 The data grid shows a list of objects in a grid. For example, a data grid can show all the orders a customer has placed. Using controls provided by the data grid you can browse, search and edit those objects.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/4522081/14385318.png)
 A data grid showing accounts.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 # Common properties
 
@@ -24,7 +24,7 @@ The internal name of the widget. You can use this to give sensible names to widg
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -32,18 +32,18 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div> 
+{{% /alert %}} 
 
 ### Tab index
 
@@ -57,11 +57,11 @@ _Default value:_ 0
 
 This property indicates whether the control bar will be visible in the end user interface. The control bar also includes the paging buttons.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Even if the control bar is invisible there can still be a default button that is triggered by (double) clicking a row. See the property 'Default button trigger' and [data grid buttons](control-bar) for more information.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 _Default value:_ True
 
@@ -73,11 +73,11 @@ _Default value:_ True
 
 ### Width Unit
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In earlier Mendix versions, only percentages where supported.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The width unit specifies the unit of the specified column widths (see property 'Column Widths' below). There are two possible values for the unit:
 
@@ -87,22 +87,22 @@ _Default value:_ Percentage
 
 ### Column Widths
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 In earlier Mendix versions, only percentages where supported.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The column widths property describes the widths of each of the columns as a list of numbers separated by semi-colons. The unit (see above) determines what these numbers mean: percentages or pixels. In the case of pixels, 'auto' is also a valid value for the width of a column. Auto columns evenly divide space that remains after giving the pixel width columns their desired width.
 
 Examples:
 
-<table><thead><tr><th class="confluenceTh">Widths</th><th class="confluenceTh">Unit</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">30;70</td><td class="confluenceTd">Percentage</td><td class="confluenceTd">Two columns of which the first is 30% and the second is 70%</td></tr><tr><td class="confluenceTd">20;200;auto</td><td class="confluenceTd">Pixels</td><td class="confluenceTd">Three columns of which the first is 20 pixels wide, the second is 200 pixels and the last one is 'auto' which means that it will take up the rest of the space.</td></tr></tbody></table><div class="alert alert-info">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Widths</th><th class="confluenceTh">Unit</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">30;70</td><td class="confluenceTd">Percentage</td><td class="confluenceTd">Two columns of which the first is 30% and the second is 70%</td></tr><tr><td class="confluenceTd">20;200;auto</td><td class="confluenceTd">Pixels</td><td class="confluenceTd">Three columns of which the first is 20 pixels wide, the second is 200 pixels and the last one is 'auto' which means that it will take up the rest of the space.</td></tr></tbody></table>{{% alert type="info" %}}
 
 ![](attachments/4522081/4751362.png)
 A data grid with widths 200px and auto.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Number of rows
 
@@ -160,11 +160,11 @@ The data grid supports the following types of data sources: [Database Source](d
 
 The entity (path) property specifies of which entity instances will be shown in the grid. A top-level grid is always connected to an entity. A nested grid can either be connected to an entity or to an entity path starting in the entity of the containing data view.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Let us say the domain model contains entities Order and OrderLine with a reference from OrderLine to Order. You can then create a data view on Order and inside it a grid on OrderLine that is connected to the entity path OrderLine_Order/OrderLine. This will ensure that the grid will only show order lines of the order in the data view.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Show search bar (for data source type "Database")
 
@@ -196,9 +196,9 @@ The microflow settings specify which parameters to pass to the microflow. See [
 
 ## Visibility properties
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 Conditional visibility settings were added to the data grid in version 5.10.0.
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Visible
 
@@ -226,7 +226,7 @@ The widget can be made visible to a subset of the user roles available in your a
 
 The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that the styling is applied in the following order:
 
@@ -234,18 +234,18 @@ Note that the styling is applied in the following order:
 2.  The 'Class' property of the widget.
 3.  The 'Style' property of the widget.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied _after_ the class.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 background-color:blue;
 This will result in a blue background
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Data Source Properties
 
@@ -283,9 +283,9 @@ _Default value:_ Date
 
 If you choose 'Custom' as the date format (see above) the custom date format determines the way date and/or time are formatted. The custom date format is a string that follows the rules in this table,
 
-<table><thead><tr><th class="confluenceTh">Symbol</th><th class="confluenceTh">No.</th><th class="confluenceTh">Example</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">G</td><td class="confluenceTd">1</td><td class="confluenceTd">AD</td><td class="confluenceTd">Era</td></tr><tr><td class="confluenceTd">y</td><td class="confluenceTd">1..n</td><td class="confluenceTd">2010</td><td class="confluenceTd">Year</td></tr><tr><td class="confluenceTd">M</td><td class="confluenceTd">1..2</td><td class="confluenceTd">09</td><td class="confluenceTd">Month</td></tr><tr><td class="confluenceTd">M</td><td class="confluenceTd">3</td><td class="confluenceTd">Sept</td></tr><tr><td class="confluenceTd">M</td><td class="confluenceTd">4</td><td class="confluenceTd">September</td></tr><tr><td class="confluenceTd">w</td><td class="confluenceTd">1..2</td><td class="confluenceTd">27</td><td class="confluenceTd">Week of Year</td></tr><tr><td class="confluenceTd">D</td><td class="confluenceTd">1..3</td><td class="confluenceTd">93</td><td class="confluenceTd">Day of Year</td></tr><tr><td class="confluenceTd">a</td><td class="confluenceTd">1</td><td class="confluenceTd">AM</td><td class="confluenceTd">AM or PM</td></tr><tr><td class="confluenceTd">h</td><td class="confluenceTd">1..2</td><td class="confluenceTd">11</td><td class="confluenceTd">Hour (1-12)</td></tr><tr><td class="confluenceTd">H</td><td class="confluenceTd">1..2</td><td class="confluenceTd">13</td><td class="confluenceTd">Hour (0-23)</td></tr><tr><td class="confluenceTd">k</td><td class="confluenceTd">1..2</td><td class="confluenceTd">10</td><td class="confluenceTd">Hour (1-24)</td></tr><tr><td class="confluenceTd">K</td><td class="confluenceTd">1..2</td><td class="confluenceTd">0</td><td class="confluenceTd">Hour (0-11)</td></tr><tr><td class="confluenceTd">m</td><td class="confluenceTd">1..2</td><td class="confluenceTd">59</td><td class="confluenceTd">Minute, use one or two for zero padding</td></tr><tr><td class="confluenceTd">s</td><td class="confluenceTd">1..2</td><td class="confluenceTd">12</td><td class="confluenceTd">Second, use one or two for zero padding</td></tr></tbody></table><div class="alert alert-info">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Symbol</th><th class="confluenceTh">No.</th><th class="confluenceTh">Example</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">G</td><td class="confluenceTd">1</td><td class="confluenceTd">AD</td><td class="confluenceTd">Era</td></tr><tr><td class="confluenceTd">y</td><td class="confluenceTd">1..n</td><td class="confluenceTd">2010</td><td class="confluenceTd">Year</td></tr><tr><td class="confluenceTd">M</td><td class="confluenceTd">1..2</td><td class="confluenceTd">09</td><td class="confluenceTd">Month</td></tr><tr><td class="confluenceTd">M</td><td class="confluenceTd">3</td><td class="confluenceTd">Sept</td></tr><tr><td class="confluenceTd">M</td><td class="confluenceTd">4</td><td class="confluenceTd">September</td></tr><tr><td class="confluenceTd">w</td><td class="confluenceTd">1..2</td><td class="confluenceTd">27</td><td class="confluenceTd">Week of Year</td></tr><tr><td class="confluenceTd">D</td><td class="confluenceTd">1..3</td><td class="confluenceTd">93</td><td class="confluenceTd">Day of Year</td></tr><tr><td class="confluenceTd">a</td><td class="confluenceTd">1</td><td class="confluenceTd">AM</td><td class="confluenceTd">AM or PM</td></tr><tr><td class="confluenceTd">h</td><td class="confluenceTd">1..2</td><td class="confluenceTd">11</td><td class="confluenceTd">Hour (1-12)</td></tr><tr><td class="confluenceTd">H</td><td class="confluenceTd">1..2</td><td class="confluenceTd">13</td><td class="confluenceTd">Hour (0-23)</td></tr><tr><td class="confluenceTd">k</td><td class="confluenceTd">1..2</td><td class="confluenceTd">10</td><td class="confluenceTd">Hour (1-24)</td></tr><tr><td class="confluenceTd">K</td><td class="confluenceTd">1..2</td><td class="confluenceTd">0</td><td class="confluenceTd">Hour (0-11)</td></tr><tr><td class="confluenceTd">m</td><td class="confluenceTd">1..2</td><td class="confluenceTd">59</td><td class="confluenceTd">Minute, use one or two for zero padding</td></tr><tr><td class="confluenceTd">s</td><td class="confluenceTd">1..2</td><td class="confluenceTd">12</td><td class="confluenceTd">Second, use one or two for zero padding</td></tr></tbody></table>{{% alert type="info" %}}
 <table><thead><tr><th class="confluenceTh">Format</th><th class="confluenceTh">Example output</th></tr></thead><tbody><tr><td class="confluenceTd"><code>EEEE d MMMM yyy G, h:mm a ss's</code></td><td class="confluenceTd">Tuesday 29 March 2011 AD, 1:37 PM 48s</td></tr><tr><td class="confluenceTd"><code>h:mm a</code></td><td class="confluenceTd">1:37 PM</td></tr><tr><td class="confluenceTd"><code>yyy D KK:mm</code></td><td class="confluenceTd">2011 88 01:26</td></tr><tr><td class="confluenceTd"><code>EEEE MMMM d yyy</code></td><td class="confluenceTd">Tuesday March 29 2011</td></tr><tr><td class="confluenceTd"><code>EEE, MMM d, ''yy</code></td><td class="confluenceTd">Wed, Jul 4, '01</td></tr></tbody></table>
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### General Properties
 
@@ -301,21 +301,21 @@ The editable property indicates whether the values of the column will be editabl
 
 The values in a column can be aggregated in several ways. The aggregate function determines the way in which the values are aggregated. The aggregate will be shown at the bottom of the column that precedes by the aggregate caption (see below).
 
-<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">None</td><td class="confluenceTd">Do not aggregate the values in the column.</td></tr><tr><td class="confluenceTd">Average</td><td class="confluenceTd">Show the average of the values.</td></tr><tr><td class="confluenceTd">Minimum</td><td class="confluenceTd">Show the smallest value.</td></tr><tr><td class="confluenceTd">Maximum</td><td class="confluenceTd">Show the largest value.</td></tr><tr><td class="confluenceTd">Sum</td><td class="confluenceTd">Show the sum of the values.</td></tr><tr><td class="confluenceTd">Count</td><td class="confluenceTd">Show the count of the values.</td></tr></tbody></table><div class="alert alert-warning">{% markdown %}
+<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">None</td><td class="confluenceTd">Do not aggregate the values in the column.</td></tr><tr><td class="confluenceTd">Average</td><td class="confluenceTd">Show the average of the values.</td></tr><tr><td class="confluenceTd">Minimum</td><td class="confluenceTd">Show the smallest value.</td></tr><tr><td class="confluenceTd">Maximum</td><td class="confluenceTd">Show the largest value.</td></tr><tr><td class="confluenceTd">Sum</td><td class="confluenceTd">Show the sum of the values.</td></tr><tr><td class="confluenceTd">Count</td><td class="confluenceTd">Show the count of the values.</td></tr></tbody></table>{{% alert type="warning" %}}
 
 Note that all objects will be taken into account, and not just the ones on the current page.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 #### Aggregate caption
 
 The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Translatable Texts](translatable-texts).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 'Total' could be an aggregate caption for a column that shows the sum of the values.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 #### Show tooltip
 

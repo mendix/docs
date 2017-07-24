@@ -25,8 +25,8 @@ These are the release notes for the Mendix Model SDK:
 * [1.1](1.1)
 * [1.0](1.0)
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 The patch release notes are also included here.
 
-</div>
+{{% /alert %}}

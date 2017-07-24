@@ -14,11 +14,11 @@ All of the Mendix documentation is stored in GitHub. With a GitHub profile, you 
 
 To work on the documentation in GitHub, you will be using Markdown. For details on this easy-to-use syntax, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 All documentation contributions may undergo changes after editing according to our internal style guide.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 **This how-to will teach you how to do the following:**
 
@@ -59,15 +59,15 @@ To edit the existing documentation (for example, a how-to or reference guide pag
 2. Make your changes (make sure the changes align with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)).
 3. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 You can add and edit the description and tags metadata in the header of the document so that the document is more searchable. It is also possible to add how many table of contents levels you want to appear in the document. For more information on the metadata, see the [How-To Template](the-how-to-template-page) and [Reference Guide Page Template](the-reference-guide-page-template-page).
 
-</div><div class="alert alert-warning">
+{{% /alert %}}{{% alert type="warning" %}}
 
 Mendix supports documentation for three major versions at any one time. This means that if you make a documentation change in one version, it is important to make that same change in the documentation for the two previous versions (if the change is applicable, of course). For example, you make a change for Mendix version 6 but these changes are also applicable to Mendix versions 5 and 4, so you should make the same change in the documentation for Mendix versions 5 and 4. You can submit all of these changes in the same pull request.
 
-</div>
+{{% /alert %}}
 
 ## 4 Writing a New How-To or Reference Guide Page
 
@@ -79,11 +79,11 @@ To submit a new how-to or reference guide page to our documentation, follow thes
 4. To merge your new document files, add your files to the GitHub repository.
 5. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 You may receive a response to your pull request asking for verification of specific issues. Don’t panic! We just want to make sure your documentation submission fits well with what we have. Do your best with the request so that we can incorporate your documentation in our repository.
 
-</div>
+{{% /alert %}}
 
 ## <a name="NamingNewFilesandImages"></a>5 Naming New Document Files, Image Files, and Attachment Sub-Folders
 

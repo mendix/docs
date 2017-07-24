@@ -86,21 +86,21 @@ The values in a column can be aggregated in several ways. The aggregate function
 | Sum | Show the sum of the values. |
 | Count | Show the count of the values. |
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Note that all objects will be taken into account, and not just the ones on the current page.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Aggregate caption
 
 The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Translatable Texts](translatable-texts).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 'Total' could be an aggregate caption for a column that shows the sum of the values.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Editable
 

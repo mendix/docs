@@ -5,11 +5,11 @@ space: "Reference Guide 5"
 ---
 
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Added in Mendix 5.18.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 Page templates fill newly created pages with content. Instead of starting with an empty page, you start with a beautiful design which you can then customize to match your needs. The base of the page templates is the "Create Page" form.
 
@@ -25,11 +25,11 @@ When creating a new page there are multiple choices to be made.
 
 For existing projects the page templates are disabled by default. Themes or sample applications may have the setting enabled by default.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 To enable the page templates, expand `Project` in the `Project Explorer` and open the `Settings`. Go to the second tab, `Model`, and set `Enable page templates` to `Yes (beta)`.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Changes in page generation
 

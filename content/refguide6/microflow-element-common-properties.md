@@ -7,11 +7,11 @@ parent: "microflows"
 
 Here we discuss properties that are shared by many elements in the microflow editor.
 
-<div class="alert alert-warning">{% markdown %}
+{{% alert type="warning" %}}
 
 Not every element in a microflow has all of these properties.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ## Common Properties
 

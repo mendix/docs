@@ -7,11 +7,11 @@ parent: "file-widgets"
 
 A file manager is used to upload and/or download files.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 ![](attachments/16713872/16843985.png)
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 It must be placed inside a data view connected to the entity System.FileDocument or a specialization thereof.
 

@@ -8,7 +8,7 @@ tags: ["build", "app", "developer portal", "web modeler"]
 
 ## 1 Introduction
 
-This is the fourth and final how-to in a series on creating an employee directory in the Web Modeler. In this how-to, you will learn how to add pages to the app.
+This is the fourth how-to in a series on creating an employee directory in the Web Modeler. In this how-to, you will learn how to add pages to the app.
 
 **This how-to will teach you how to do the following:**
 
@@ -233,17 +233,6 @@ You can now use your app to add and edit employees!
     
 ## 5 Viewing the Structure of the Employee Entity
 
-In the previous steps, you created the employee entity and its attributes from different widgets. So, you must be thinking, how do I edit them in case I want to change something? Don't worry, you can view and edit your entities in the domain model.
-
-To view the structure of **Employee** entity, follow these steps:
-
-1. Click the **Domain Models** icon in the left menu:
-
-    ![](attachments/build-an-employee-directory-app/domain-models.png)
-
-2. Check how your entity looks at this point:
-
-    ![](attachments/build-an-employee-directory-app/entity.png)
 
 This is the end of the tutorial. Please share your feedback in the [Build an Employee Directory App Survey](https://www.surveymonkey.com/r/XY258CP).
 

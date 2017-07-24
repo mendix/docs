@@ -25,7 +25,7 @@ Before starting with this how-to, make sure you have completed the following pre
 ## 3 Adding a Promote Button to the User Interface
 
 The part of the app that encodes the real-world business rules that determine how data can be created, stored, and changed is called business logic.
-Microflows allow you to express the logic of your application. A microflow can perform actions such as creating and updating objects, showing pages and making choices
+Microflows allow you to express the logic of your application. A microflow can perform actions such as creating and updating objects, showing pages and making choices.
 
 ### 3.1 Setting up the UI to trigger a microflow
 
@@ -37,11 +37,14 @@ In pages, microflows are triggered by action buttons. To set up an action button
 
     ![](attachments/build-an-employee-directory-app/employee-header.png)
 
-3. Drag the **Pageheader Controls** building block, which you can find in the header category, to the top of the page:
+3. Drag a dataview widget to the top of the page.
+    a. Set the Data source entity to employee.
+
+4. Drag the **Pageheader Controls** building block, which you can find in the header category, into the dataview content area:
 
     ![](attachments/build-an-employee-directory-app/pageheader-controls.png)
 
-4. Select the row of the layoutgrid which containing the Pageheader Controls building block:
+5. Select the row of the layoutgrid which containing the Pageheader Controls building block:
 
     ![](attachments/build-an-employee-directory-app/pageheader-controls-row.png)
 
@@ -61,9 +64,36 @@ In pages, microflows are triggered by action buttons. To set up an action button
     c. Set the **On Click Action** to **Microflow**
     d. Create a new microflow for the Microflow property and name it **Promote_Employee**.
 
-Great, you've created your first microflow. Continue to learn how to edit this microflow in the Desktop Modeler.
+    ![](attachments/build-an-employee-directory-app/pageheader-controls-finished.png)
 
-### 3.2 Open the App in the Desktop Modeler
+Great, you've created your first microflow. Continue to learn how to extend the employee entity in the domain model.
+
+### 3.2 Extending the Domain Model for Promote Employee level
+In the previous steps, you created the employee entity and its attributes from different widgets. So, you must be thinking, how do I edit them in case I want to change something? Don't worry, you can view and edit your entities in the domain model.
+
+To extend the structure of **Employee** entity, follow these steps:
+
+1. Click the **Domain Models** icon in the left menu:
+
+    ![](attachments/build-an-employee-directory-app/domain-models.png)
+
+2. Check how your entity looks at this point:
+
+    ![](attachments/build-an-employee-directory-app/entity.png)
+
+3. Select the Employee entity.
+    a. Click the **New attribute** button.
+    b. Set the name to **Level**.
+    c. Set the type to **Enumeration**.
+    d. Click the **Enumeration** input field to create a new enumeration.
+    e. Set the name to **EmployeeLevel**.
+    f. Click new item and set Caption and Name to **Junior**.
+    g. Do this again for **Medior** and **Senior**.
+    h. Select the Level attribute of the Employee entity and set the default value property to **Junior**.
+
+All set? Continue to learn how to edit the microflow you created earlier in the Desktop Modeler.
+
+### 3.2 Open and Sync the App in the Desktop Modeler
 
 The Desktop Modeler is used to add complex logic and build sophisticated integrations to your app. To open your app in the Desktop Modeler, follow these steps:
 
@@ -78,161 +108,94 @@ The Desktop Modeler is used to add complex logic and build sophisticated integra
     ![](attachments/build-an-employee-directory-app/edit-in-dm.png)
 
 4. Update the local version of your app using the **Sync with Web Modeler** button in the changes dock.
+    a. Commit the project first using the commit button in case the project requires this.
 
     ![](attachments/build-an-employee-directory-app/sync-with-wm.png)
 
-### 3.3 Switching Building Blocks
+5.  After synchronizing the project you can inspect the changes in the changes dock. Click the **Finish sync with Web Modeler** button to complete the synchronization.
 
-If one of the available building blocks is more similar to your requirement than what is provided by default in page templates, you can easily make a replacement.
+    ![](attachments/build-an-employee-directory-app/finish-sync-with-wm.png)
 
-To switch building blocks, follow these steps:
-    
-1. Select the **LIST VIEW** widget and delete it:
+At this point the local version of your app is in sync with the version in the web modeler. Continue with the next step: Edit a microflow in the Desktop Modeler.
 
-    ![](attachments/build-an-employee-directory-app/listview-delete.png)
 
-2. Open the **Toolbox** and from **Lists**, drag the **List3** building block into the container.
+### 3.3 Implement the Logic to Promote an Employee
 
-At this point the page looks pretty nice, so you're ready to connect some data elements to it!
+Microflows consist of microflow actions. To implement the promote requirement you need to determine which level the employee has and promote him or her accordingly.
 
-### 3.4 Creating and Connecting an Employee Data Structure to the Page
+To learn how to edit a microflow so so that it promotes employees, follow these steps:
 
-This page has several widgets to display records from your database. In Mendix, the structure of a database record is defined by an **Entity**.
+1. Open the **Promote Employee** microflow:
 
-To create the entity for an employee, follow these steps:
+    ![](attachments/build-an-employee-directory-app/open-microflow-dm.png)
 
-1. Select the **LIST VIEW**, which groups all the user cards together:
+2. Add the **Exclusive Split** microflow action to the flow.
+    a. Right-click the arrow.
+    b. Select **Insert > Exclusive Split**.
+    c. Double click the exclusive split action.
+    d. Set the caption to **Level**.
+    e. Click the **Expression wizard**. For variable select **Employee** and for attribute select **Level**.
+    f. Click the OK button to close the popups.
 
-    ![](attachments/build-an-employee-directory-app/listview-select.png)
+    ![](attachments/build-an-employee-directory-app/exclusive-split-level.png)
 
-2. Click the **Entity** property to create a new entity:
-    
-    ![](attachments/build-an-employee-directory-app/select-entity.png)
+3. Right click the arrow which is now red, and select **Condition value > Senior**. 
 
-3. To create a new entity in the **Select Entity** dialog box, do the following:<br>
-    a. Click **New Entity**.<br>
-    b. Enter *Employee* for the **Name**.
+4. Hover over the Exclusive split with your mouse pointer and drag a new arrow from the exclusive split to and end event by clicking one of the white circles.
+    a. Repeat this two times so that you have three new (red) arrows.
 
-4. Select the **TEXT** widget of the top user card and clear the **Content** property:
+5. Set the remaining condition values on these arrows.
 
-    ![](attachments/build-an-employee-directory-app/select-text-widget2.png)
+    ![](attachments/build-an-employee-directory-app/exclusive-split-level1.png)
 
-5. Click **Add parameter** for the **Content** property:
+6. Add an activity to the arrow with the **Junior** conditon value.
+    a. Set the type of action to **Change object**.
+    b. Set the variable to **Employee**.
+    c. Set **Commit** to **Yes**.
+    d. Set **Refresh in client** to **Yes**.
+    e. Click **New** and set **Level** for member.
+    f. Click the **Generate** button and set the constant to **Medior**.
+    g. Click OK to close the popups.
 
-    ![](attachments/build-an-employee-directory-app/add-parameter.png)
+    ![](attachments/build-an-employee-directory-app/exclusive-split-level5.png)
 
-6. Create a new attribute in the **Select your attribute** dialog box (which will be added to the Employee entity) by doing the following:<br>
-    a. Enter *Name* for the attribute **Name**.<br>
-    b. Set the attribute **Type** to **String**.
+7. Add another activity to the right of the change object activity.
+    a. Set the activity type to **Show message**.
+    b. Set the template to **{1} is promoted to Medior!**.
+    c. Add a parameter and set it to **$Employee/Name**. 
 
-7. In the subtitle **TEXT** widget, repeat steps 4-6 to add an attribute for **Email [String]**:
+    ![](attachments/build-an-employee-directory-app/show-message.png)
 
-    ![](attachments/build-an-employee-directory-app/list-view.png)
+8. Complete the microflow so that:
+    a. employees with a medior level are promoted to senior level.
+    b. employees with a senior level only receive a message that senior is the highest level.
 
-The Desktop Modeler is required for editing image widgets. You will do this later in another how-to.
+    ![](attachments/build-an-employee-directory-app/exclusive-split-level15.png)
 
-### 3.5 Adding an Input Employee Page
+9. Sync your changes back to the Web Modeler by using the **Sync with Web Modeler** button.
 
-Now that you have created an entity representing the employees, you also need to populate that entity with data. The quickest way to add data to your app is to create an input page.
+Fantastic, you've created your first business logic! Can't wait to find out if this is working as expected? Return to the Web Modeler and inspect the **Promote_Employee** microflow.
 
-To add a page for inputting employees, follow these steps:
+### 3.4 Add Employee level to the UI.
+The microflow should function correctly at this point. Let's add a visual indicator on the Employee page.
 
-1. Select the **Add** button.
-2. Select **Employee** for the **Entity** property of the button:
+1. Open the Employee page in the Web Modeler.
 
-    ![](attachments/build-an-employee-directory-app/select-entity2.png)
-    
-3. Click the **Page** property to open the **Select Page** dialog box.
-4. Click **New page** and do the following:<br>
-    a. Enter *Employee* for the **Title** of the page.<br>
-    b. Select **Forms** > **Form Vertical** for the template:
+2. Select a Dropdown widget from the widgets category in Toolbox.
 
-    ![](attachments/build-an-employee-directory-app/form-vertical.png)
-    
-### 3.6 Connecting the Input Page to the Employee Entity
+3. Drag it between the Name and Phone input boxes.
 
-The page you created consists of a set of text box widgets grouped together by a data view (a data view serves as the glue between page widgets and entities).
-
-To connect the text box widgets to the Employee entity attributes, follow these steps:
-
-1. Select the text box widget with the **Name** caption.
-
-2. Click the icon in the data source header to select the containing data view.
-
-    ![](attachments/build-an-employee-directory-app/data-source-icon.png)
-
-3. Set the **Entity** property of the related data view to **Employee**.
-
-    ![](attachments/build-an-employee-directory-app/entity-employee.png)
-
-4. Select the text box with the **Name** caption and connect it to the the **Name** attribute of the **Employee** entity.
-
-    ![](attachments/build-an-employee-directory-app/name-attribute.png)
-
-5. Do the same thing for **Email**.
-6. Add the following attributes to the entity for the remaining text box widgets:
-    * **Phone [String]**
-    * **Birthday [Date and Time]**
-    * **Bio [String]**
-
-7. Go the **Design** properties category and toggle the **Full Width** property for the **Save** and **Cancel** buttons to improve the user experience:
-
-    ![](attachments/build-an-employee-directory-app/save-full-width.png)
-
-### 3.7 Using the Google Maps widget
-
-You can easily add rich widgets to your pages to greatly benefit the user experience.
-
-To add the Google Maps widget to the page, follow these steps:
-
-1. On the **Employee** page, open the **Toolbox**, make sure **Widgets** is selected, and search for the **Google Maps** widget:
-
-    ![](attachments/build-an-employee-directory-app/googlemaps.png)
-
-3. Drag the **Google Maps** widget from the **Display** properties category onto the page below the **Bio** text box.
-4. The Google Maps widget requires an **Address attribute** or both the **Latitude attribute** and **Longitude attribute**. So, add an additional text box to the page, and connect it to a new attribute named **Address**.
-
-    ![](attachments/build-an-employee-directory-app/address.png)
-
-5. Select the Google Maps widget, open the **Data source** properties category, and do the following:<br>
-    a. Set the **Locations Entity** to **Employee**.<br>
-    b. Set the **Address Attribute** to **Address**.
-
-### 3.8 Connecting the List View On Click to a Page
-
-The last thing you have to do is finish up the employees page. To connect a list view to this page, follow these steps:
-
-1. Open the **Employees** page and then select the **LIST VIEW**:
-
-    ![](attachments/build-an-employee-directory-app/listview-select.png)
-
-2. Set the **On Click Action** to **Page** and select the **Employee** page (like you did for the **Add** button).
-
-You're done! Time to view the effects of all your changes.
+Yes! At this point you're ready to view the app.
 
 ## 4 Viewing Your App
 
 Update and view your app, just like you did in [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app).
 
-You can now use your app to add and edit employees!
-    
-## 5 Viewing the Structure of the Employee Entity
+You can now promote your employees!
 
-In the previous steps, you created the employee entity and its attributes from different widgets. So, you must be thinking, how do I edit them in case I want to change something? Don't worry, you can view and edit your entities in the domain model.
+Now you perfectly lined up to continue with another tutorial or the introduction course.
+This is the end of the tutorial. Tell us how you like this tutorial and your suggestions improve this tutorial, share your feedback in the [Build an Employee Directory App Survey](https://www.surveymonkey.com/r/XY258CP).
 
-To view the structure of **Employee** entity, follow these steps:
-
-1. Click the **Domain Models** icon in the left menu:
-
-    ![](attachments/build-an-employee-directory-app/domain-models.png)
-
-2. Check how your entity looks at this point:
-
-    ![](attachments/build-an-employee-directory-app/entity.png)
-
-This is the end of the tutorial. Please share your feedback in the [Build an Employee Directory App Survey](https://www.surveymonkey.com/r/XY258CP).
-
-Stay tuned for more!
 
 ## 6 Related Content
 

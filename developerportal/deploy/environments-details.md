@@ -216,13 +216,14 @@ On this tab of **Environment details**, you can perform the following actions:
 
 The log level types are:
 
-* None
-* Critical
-* Error
-* Warning
-* Info
-* Debug
-* Trace
+| Level | Color | Description
+| --- | --- | --- |
+| Trace | | More detailed information. These are only written to logs. |
+| Debug | | Detailed information, typically of interest only when diagnosing problems. |
+| Info  | | Confirmation that things are working as expected. |
+| Warning | Orange | Indicates that something unexpected happened or that there is some problem in the near future (for example, "disk space low"). The application is still working as expected. |
+| Error | Red | Due to a more serious problem, the application has not been able to perform some function. |
+| Critical | White (text), red (background) | A serious error has occurred, indicating that the application itself may be unable to continue running. |
 
 For more information about log levels, see [How to Set Log Levels](/howto/monitoring-troubleshooting/log-levels).
 

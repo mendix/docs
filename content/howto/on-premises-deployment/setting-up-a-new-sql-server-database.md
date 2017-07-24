@@ -51,7 +51,7 @@ RECONFIGURE;
 ```
 
 
-#### 4.1 Queries to Be Executed with the db_owner or db_ddladmin Database Role
+#### 4.1 Queries to Be Executed with the `db_owner` or `db_ddladmin` Database Role
 
 The function and assembly need to be created for timezone handling. Also for these functions, Common Language Runtime (CLR) needs to be enabled on the SQL Server instance. If your are not working on the same timezone as UTC, you need to enable CLR and this function. Without time zone support in the platform, development of your functionality will be much more difficult. This can be achieved using the following commands:
 

@@ -26,9 +26,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 The basis for the to-do app is the Mobile Quick Starter App. Follow these steps to create a new app with the Mobile Quick Starter App:
 
 1. Open the **Mendix Desktop Modeler** and log in.
-2. Click **Create App**.
-3. Go the the **Getting Started** tab.
-4. Click **Mobile Quick Starter App**.
+2. Click **New App**.
+3. Go to the **Tutorials** tab.
+4. Click **Build a Mobile ToDo app**.
 5. Click **Use this starting point >**.
 6. Enter the app details and click **Create app**.
 7. Open the **Security** settings of your project.

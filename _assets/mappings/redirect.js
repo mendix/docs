@@ -8878,72 +8878,72 @@ module.exports = {
       to: "/releasenotes/ats/"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/APM/1",
-      to: "https://docs.mendix.com/releasenotes/apm/1"
+      from: "/releasenotes/APM/1",
+      to: "/releasenotes/apm/1"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/ATS/1",
-      to: "https://docs.mendix.com/releasenotes/ats/1"
+      from: "/releasenotes/ATS/1",
+      to: "/releasenotes/ats/1"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/APM/1.10",
-      to: "https://docs.mendix.com/releasenotes/apm/1.10"
+      from: "/releasenotes/APM/1.10",
+      to: "/releasenotes/apm/1.10"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/APM/1.11",
-      to: "https://docs.mendix.com/releasenotes/apm/1.11"
+      from: "/releasenotes/APM/1.11",
+      to: "/releasenotes/apm/1.11"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/APM/1.12",
-      to: "https://docs.mendix.com/releasenotes/apm/1.12"
+      from: "/releasenotes/APM/1.12",
+      to: "/releasenotes/apm/1.12"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/ATS/1.5",
-      to: "https://docs.mendix.com/releasenotes/ats/1.5"
+      from: "/releasenotes/ATS/1.5",
+      to: "/releasenotes/ats/1.5"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/APM/1.6",
-      to: "https://docs.mendix.com/releasenotes/apm/1.6"
+      from: "/releasenotes/APM/1.6",
+      to: "/releasenotes/apm/1.6"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/ATS/1.6",
-      to: "https://docs.mendix.com/releasenotes/ats/1.6"
+      from: "/releasenotes/ATS/1.6",
+      to: "/releasenotes/ats/1.6"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/APM/1.7",
-      to: "https://docs.mendix.com/releasenotes/apm/1.7"
+      from: "/releasenotes/APM/1.7",
+      to: "/releasenotes/apm/1.7"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/APM/1.8",
-      to: "https://docs.mendix.com/releasenotes/apm/1.8"
+      from: "/releasenotes/APM/1.8",
+      to: "/releasenotes/apm/1.8"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/ATS/1.8",
-      to: "https://docs.mendix.com/releasenotes/ats/1.8"
+      from: "/releasenotes/ATS/1.8",
+      to: "/releasenotes/ats/1.8"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/APM/1.9",
-      to: "https://docs.mendix.com/releasenotes/apm/1.9"
+      from: "/releasenotes/APM/1.9",
+      to: "/releasenotes/apm/1.9"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/AQM/2",
-      to: "https://docs.mendix.com/releasenotes/aqm/2"
+      from: "/releasenotes/AQM/2",
+      to: "/releasenotes/aqm/2"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/AQM/2.0",
-      to: "https://docs.mendix.com/releasenotes/aqm/2.0"
+      from: "/releasenotes/AQM/2.0",
+      to: "/releasenotes/aqm/2.0"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/APM/",
-      to: "https://docs.mendix.com/releasenotes/apm/"
+      from: "/releasenotes/APM/",
+      to: "/releasenotes/apm/"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/AQM/",
-      to: "https://docs.mendix.com/releasenotes/aqm/"
+      from: "/releasenotes/AQM/",
+      to: "/releasenotes/aqm/"
     },
     {
-      from: "https://docs.mendix.com/releasenotes/ATS/",
-      to: "https://docs.mendix.com/releasenotes/ats/"
+      from: "/releasenotes/ATS/",
+      to: "/releasenotes/ats/"
     }
   ]
 }

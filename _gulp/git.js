@@ -29,11 +29,7 @@ const getCommits = (gitPath, file) => {
         }).on('error', err => {
           reject(err);
         }).on('end', () => {
-          if (commits.length === 0) {
-            reject(`Not getting commits for ${gutil.colors.cyan(file)}, this should not happen. Is the file empty?`);
-          } else {
-            resolve(commits);
-          }
+          resolve(commits);
         });
       } catch (e) {
         reject(`Error getting commits for ${gitPath}`);
@@ -58,7 +54,7 @@ const walkFolder = folder => {
 
 const getLastCommit = (folder, filename) => {
   return new Promise((resolve, reject) => {
-    getCommits(folder + '/.git', filename)
+    getCommits('.git', `./content/${filename}`)
       .then(commits => {
         const commit = _.chain(commits)
           .sortBy(c => c.author.timestamp)
@@ -79,7 +75,6 @@ const getLastCommit = (folder, filename) => {
           gutil.log(`${git_indicator} No history found for ${gutil.colors.cyan(filename)}, skipping`);
           resolve({})
         } else {
-          gutil.log(`${git_indicator} ${err}`);
           reject(err);
         }
       });
@@ -108,10 +103,12 @@ const getCommitsFolder = (folder, verbose) => {
               cb();
             })
             .catch(err => {
+              console.log(err);
               cb(err.message);
             })
         }, (err) => {
           if (err) {
+            console.log(err);
             reject(err);
           } else {
             resolve(commitsObj)

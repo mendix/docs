@@ -9,6 +9,7 @@ const async = require('async');
 const fs = require('fs');
 
 const readFile = Promise.promisify(require('fs').readFile);
+const writeFile = Promise.promisify(require('fs').writeFile);
 
 const ASYNCLIMIT = 50;
 let TESTED = [];
@@ -44,6 +45,18 @@ const getFiles = (dir, ext) => {
         return reject(err);
       }
       resolve(_.filter(files, file => path.extname(file) === extName));
+    });
+  });
+};
+
+const getGenerateFiles = (dir) => {
+  const extArr = ['.md', '.html'];
+  return new Promise((resolve, reject) => {
+    recursive(dir, [], (err, files) => {
+      if (err) {
+        return reject(err);
+      }
+      resolve(_.filter(files, file => path.extname(file) && extArr.indexOf(path.extname(file) !== -1)));
     });
   });
 };
@@ -119,8 +132,8 @@ const writeAssetMappings = (currentFolder) => new Promise((resolve, reject) => {
     ''
   ];
   const indexDest = path.join(currentFolder, './_site/mappings/assets.map');
-  const assetsJS = path.join(currentFolder, './_data/assetsjs.json');
-  const assetsCSS = path.join(currentFolder, './_data/assetscss.json');
+  const assetsJS = path.join(currentFolder, './data/assetsjs.json');
+  const assetsCSS = path.join(currentFolder, './data/assetscss.json');
   touchFile(indexDest);
 
   let index = [];
@@ -163,12 +176,15 @@ const writeAssetMappings = (currentFolder) => new Promise((resolve, reject) => {
 module.exports = {
   gulpErr: throwError,
   touch: touchFile,
-  isFile: isFile,
-  getFiles: getFiles,
-  readHtmlFile: readHtmlFile,
-  readHtmlFiles: readHtmlFiles,
-  readFile: readFile,
-  checkLink: checkLink,
-  checkLinks: checkLinks,
-  writeAssetMappings: writeAssetMappings
+  isFile,
+  getFiles,
+  readHtmlFile,
+  readHtmlFiles,
+  readFile,
+  writeFile,
+  getGenerateFiles,
+  checkLink,
+  checkLinks,
+  writeAssetMappings,
+  getGenerateFiles
 }

@@ -1,0 +1,7 @@
+$block: 'mx';
+
+.#{$block} {
+  @include element('element') {
+
+  }
+}

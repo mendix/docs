@@ -1,7 +1,5 @@
 # Mendix Documentation
 
-
-
 This repository contains the Mendix documentation, which is served on [https://docs.mendix.com](https://docs.mendix.com).
 
 Build status:

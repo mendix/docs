@@ -8,17 +8,15 @@ tags: ["Deploy","App","Developer Portal"]
 
 ## 1 Introduction
 
-To enter the **Environmen details** page, go to the [Developer Portal](http://home.mendix.com), select your licensed app and click **Environments**. Under **Environments** click **Details**, the view of the **Deatils** page will be depending on the Mendix Cloud version.
+To enter the **Environmen details** page, go to the [Developer Portal](http://home.mendix.com), select your licensed app and click **Environments**. Under **Environments** click **Details**. 
 
    ![](attachments/environment-details.png)   
 
-This document will explain the view of the **Environment details** page of a Mendix Cloud v3 app.
-
-## 2 General
+## 2 General tab
 
    ![](attachments/.png)   
 
-In **General**, you can find the following information about your environment:
+The view of the **General** tab depends on which Mendix Cloud version the app is hosted on. In this tab, you can find the following information about your environment:
 
 * Status
    * White - the environment is stopped or was never deployed
@@ -62,9 +60,11 @@ In Mendix Cloud v3 environments you can click **Enable/Disable Debugging** to en
 
 In Mendix Cloud v4 environments the debugger is always enabled. You can click **Show debugger information** to show settings to connect the debugger in your Mendix Desktop Modeler to your app.
 
-## 2.2 Scaling
+## 2.2 Scaling - Mendix Cloud v4
 
 ![](attachments/scale.png)
+
+If your app is hosted in Mendix Cloud v4, you will see a section named **Scaling** in the **General** tab.
 
 In **Scaling** there are two sliders that you can control:
 
@@ -108,11 +108,11 @@ In this section, you can find information about the deployment package that is c
 * Version of the deployment package
 * Name of the deployment package
 
-## 3 Model Options
+## 3 Model Options tab
 
    ![](attachments/model-options.png)
 
-On the **Model Options** tab of the **Environment details** page, you can edit the following model options:
+In the **Model Options** tab of the **Environment details** page, you can edit the following model options:
 
 ### 3.1 Scheduled Events
 
@@ -144,11 +144,11 @@ You have to restart your application before the changes will be made.
 
 For more information, see [Constants](../../refguide/constants).
 
-## 4 Network
+## 4 Network tab
 
    ![](attachments/network1.png)
 
-On the **Network** tab of the **Environment details** page, you can manage the following elements:
+In the **Network** tab of the **Environment details** page, you can manage the following elements:
 
 ### 4.1 Custom Domains
 
@@ -175,61 +175,32 @@ The embedding options are:
 * Allow on the same domain
 * Allow from specific domain
 
-### 4.3 Request Handlers
+### 4.3 Path Based Access Restrictions
 
-Configure custom request handlers for requests that will be sent to the runtime. If you enable `/ws/`, these requests will end up at the runtime. Everything not specified here (except for `/xas/` and `/file/`) will end up at the static file server which serves the web folder from disk.
+You can restrict access to your application by means of Client Certificates or IP ranges. 
+The top level path, '/', restricts access to the entire application. Settings for specific paths override the implicitely inherited profile for the top level. 
+Custom Access Restriction Profiles are managed on application level. They can be reused for all environments (acceptance, production, etc).
 
-*   Path
-*   Match type
-*   Enabled in the following:
-    *   Environment: Production, Acceptance, Test
-    *   N/A
+The **path based access restrictions** overview contains the following information:
 
-<div class="alert alert-info">{% markdown %}
+* The path
+* Current Restriction Profile
+* New Restriction Profile
 
-If you are configuring the request handlers in, for example, the acceptance environment, and the request handlers are only enabled in, for example, the production environment, select the request handler and click **Toggle** to enable it in the environment that you are configuring.
+You can **Delete** a path or you can **Add**, **Edit** a path with the following restriction types:
 
-{% endmarkdown %}</div>
+* Allow all access
+* Deny all access
+* Custom Profile for Client Certificates and/or IP ranges
+* N/A (inherit)
 
-You can perform the following actions:
+For more information, see [Converting to Path-Based Access Restrictions](/howtogeneral/mendixcloud/request-handlers-to-pbar) and [Restrict Access for Incoming Requests](/howtogeneral/mendixcloud/access-restrictions).
 
-* Toggle
-* New request handler — you must provide the path and choose the match type between `starts with` and `exact match`
-* Delete the request handler
-
-### 4.4 Access Restriction Profiles
-
-You can restrict access to your application by means of Client Certificates or IP ranges. Here you can define the profiles that can be used on the full application or specific request handlers.
-
-*   Description
-*   Used for
-
-You can take the following actions:
-
-*   New 
-    *   Demand that: 
-        *   Certificates should match
-        *   Certificate or IP should match
-        *   IP should match
-    *   Add an Description
-    *   View in which environment it is active - Production/Acceptance/Test
-    *   Add an Certificate authority 
-*   Edit
-*   Delete
-
-### 4.5 Environment Access Restrictions
-
-You can restrict access to your application by means of client certificates or IP ranges. To enable this, first create an access restriction profile before selecting it from the drop-down menu below.
-
-### 4.6 Request Handler Access Restrictions
-
-Advanced users can override access restrictions for specific request handlers. To do this, please specify an access restriction per request handler in the list.
-
-### 4.7 Outgoing Connections Certificates
+### 4.4 Outgoing Connections Certificates
 
 Add client certificates (in the PKCS12 format) or certificate authorites (in the PEM format). These will be used when your application initiates SSL/TLS connections.
 
-## 5 Log Levels
+## 5 Log Levels tab
 
    ![](attachments/loglevels-tab.png)   
 
@@ -255,7 +226,7 @@ The log level types are:
 
 For more information about log levels, see [How to Set Log Levels](/howto/monitoring-troubleshooting/log-levels).
 
-## 6 Runtime
+## 6 Runtime tab
 
    ![](attachments/runtime.png)   
 
@@ -265,9 +236,9 @@ On the **Runtime** tab of the **Environment details**, you can perform the follo
 * **Edit** the runtime setting
 * **Delete** the runtime settings
 
-For more information about runtime settings, read the [Custom Settings](/refguide/custom-settings) documentation.
+For more information about runtime settings, read the [Custom Settings](/refguide/custom-settings) and [Tricky Custom Settings in Mendix Runtime](/howtogeneral/support/mendix-customsettings-tricky) documentation.
 
-## 7 Maintenance 
+## 7 Maintenance tab 
 
    ![](attachments/maintenance.png)   
 

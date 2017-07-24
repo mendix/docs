@@ -7,17 +7,19 @@ tags: ["Operate","App","Developer Portal"]
 
 ## 1 Introduction
 
-The category **Operate** is devided into four pages described below:
+The category **Operate** is devided into these four sections:
 
-  ![](attachments/operate.png)
+![](attachments/operate.png)
+
+These sections are described below.
 
 ## 2 Metrics
 
-On this page you can monitor the performance and health of your App. 
+On this page you can monitor the performance and health of your app. 
 
 For more information, see [Metrics](/developerportal/operate/metrics).
 
-This page is divided into three tabs described below:
+This page is divided into the three tabs described in the sections below.
 
 ### 2.1 Trends
 

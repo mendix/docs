@@ -5,17 +5,17 @@ parent: "page-concepts"
 ---
 
 
-Mendix allows for microflows to be triggered in pages by a variety of methods. These methods share a set of properties that determine the conditions in which the microflow is run. Listed below are all the components that can directly trigger microflows. Also listed are the event that will cause the microflow to trigger, as well as the parameter that can be made available to the triggered microflow. 
+Mendix allows for microflows to be triggered in pages by a variety of widgets. These widgets share a set of properties that determine the conditions in which the microflow is run. Listed below are all the widgets that can directly trigger microflows. Also listed is the event that will cause the microflow to trigger, as well as the object that can be passed to the triggered microflow. 
 
-| Component | Event/property | Available parameter |
+| Widget | Event/property | Available parameter |
 | --- | --- | --- |
-| Data view action button | On click | Data view object |
+| Action button (Data view) | On click | Data view object |
 | Data view | Data source | Object of the data view containing this data view |
-| Grid action button (1) | On click | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](data-grid)) |
+| Action button (Data grid) | On click | Grid selection or clicked row (as an object or as a list, depending on the [selection mode](data-grid)) |
 | Reference set selector | On change | Data view object |
-| Attribute widget (2) | On change | Data view object |
-| Attribute widget | On enter | Data view object |
-| Attribute widget | On leave | Data view object |
+| Input widget (2) | On change | Data view object |
+| Input widget | On enter | Data view object |
+| Input widget | On leave | Data view object |
 | Image viewer | On click | Image viewer object |
 | Action button | On click | Enclosing data view object, if available |
 | Reference selector | Data source | Data view object |

@@ -2182,7 +2182,7 @@ module.exports = {
     {
       from: "/howto/getting-started/create-a-to-do-app",
       to: "/howto/tutorials/create-a-to-do-app"
-    },	
+    },
     /****************************************************
      * Mendix Cloud
      ****************************************************/
@@ -2193,7 +2193,7 @@ module.exports = {
     {
       from: "/mendixcloud/custom-domains",
       to: "/developerportal/howto/custom-domains"
-    },	  
+    },
     {
       from: "/mendixcloud/Deploying+to+the+cloud",
       to: "/developerportal/howto/deploying-to-the-cloud"
@@ -2201,7 +2201,7 @@ module.exports = {
     {
       from: "/mendixcloud/deploying-to-the-cloud",
       to: "/developerportal/howto/deploying-to-the-cloud"
-    },	  
+    },
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
       to: "/howtogeneral/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
@@ -2249,7 +2249,7 @@ module.exports = {
     {
       from: "/mendixcloud/migrating-to-v4",
       to: "/developerportal/howto/migrating-to-v4"
-    },	  
+    },
     {
       from: "/mendixcloud/Monitoring+application+health",
       to: "/developerportal/operate/monitoring-application-health"
@@ -2257,7 +2257,7 @@ module.exports = {
     {
       from: "/mendixcloud/monitoring-application-health",
       to: "/developerportal/operate/monitoring-application-health"
-    },	  
+    },
     {
       from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
       to: "/howtogeneral/mendixcloud/securing-outgoing-connections-from-your-application"
@@ -2309,7 +2309,7 @@ module.exports = {
  {
       from: "/mxsupport/technical-contact",
       to: "/developerportal/settings/technical-contact"
-    },	  
+    },
     /****************************************************
      * REFERENCE GUIDE MENDIX 4
      ****************************************************/
@@ -8859,15 +8859,15 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Application+Quality+Monitor",
-      to: "/releasenotes/AQM/"
+      to: "/releasenotes/aqm/"
     },
     {
       from: "/ReleaseNotes/Mendix+AQM+2.0+Release+Notes",
-      to: "/releasenotes/AQM/2.0"
+      to: "/releasenotes/aqm/2.0"
     },
     {
       from: "/ReleaseNotes/Application+Performance+Monitor",
-      to: "/releasenotes/APM/"
+      to: "/releasenotes/apm/"
     },
     {
       from: "/ReleaseNotes/Beta+features",
@@ -8875,7 +8875,7 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Application+Test+Suite",
-      to: "/releasenotes/ATS/"
+      to: "/releasenotes/ats/"
     }
   ]
 }

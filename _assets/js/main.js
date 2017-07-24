@@ -128,6 +128,9 @@
           getPages = data.pages.filter(function (page) { return page.c && page.c.toLowerCase() === cat.toLowerCase(); }),
           catPage = data.pages.filter(function (page) { return page.t.toLowerCase() === cat.toLowerCase(); });
 
+      if (catPage.length > 1) {
+        console.log('Problem with ' + spaceID + ', multiple category pages found for: ' + catID, catPage);
+      }
       var catUrl = catPage && catPage.length === 1 ? catPage[0].u : null;
 
       if (catUrl && catUrl.indexOf("/releasenotes/") === 0){

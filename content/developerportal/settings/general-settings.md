@@ -1,8 +1,8 @@
 ---
-title: "General"
+title: "General Settings"
 category: "Settings"
 description: "This page describes general settings of your App."
-tags: ["Settings","App","Developer Portal"]
+tags: ["Settings", "App", "Developer Portal"]
 ---
 
 ## 1 Introduction
@@ -48,7 +48,7 @@ Note that when you click **Deactivate App** only the account owner can reactivat
 
 ### 1.2 Leave App
 
-If you click **Leave App**, you will be removed from the App. If you are the last member of this app and decide to leave as well, the app will be deactivated. 
+If you click **Leave App**, you will be removed from the App. If you are the last member of this app and decide to leave as well, the app will be deactivated.
 
 {{% alert type="info" %}}
 

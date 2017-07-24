@@ -2,6 +2,7 @@
 #  space: 'Space for this folder'
 #  mendix_version: 6 #optional, used for searches
 #  priority: 1 - 9 (used for sitemap). If omitted this will not be included, which defaults to 0.5
+#  menu_categories: List with the categories used in the side menu
 apidocs-mxsdk:
   space: "API & SDK"
   priority: false

@@ -1,7 +1,6 @@
 ---
 title: "Mendix 4 How-to's"
 notoc: true
-priority: 5
 ---
 Welcome to the Mendix 4 how-to section. Here you will find short step-by-step guides to help you with some of the more challenging aspects of the Mendix Framework. Should you be looking for in-depth descriptions of the various aspects of the Mendix technology, you can find these in the [reference guide](/refguide4/).
 

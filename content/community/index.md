@@ -1,6 +1,6 @@
 ---
 title: "Community"
-priority: 7
+priority: 6
 ---
 
 ## 1 The Mendix Community Team

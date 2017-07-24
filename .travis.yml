@@ -1,4 +1,4 @@
-sudo: true
+sudo: required
 language: node_js
 addons:
   apt:
@@ -30,9 +30,7 @@ before_deploy:
 script:
   - gulp build
 cache:
-  directories:
-    vendor
-    node_modules
+  yarn: true
 branches:
   only:
   - master

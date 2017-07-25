@@ -1,6 +1,5 @@
 ---
 title: "Two-Factor Authentication"
-space: "Developer Portal"
 category: "General"
 description: "This page describes the purpose of the Two-Factor Authentication."
 tags: ["Authenticator","Developer Portal","Cloud","Permissions"]

@@ -15,7 +15,7 @@ To view the **Trends** you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
 
-Note that only the **Technical Contact** is allowed to grand the node permissions.
+Note that only the **Technical Contact** is allowed to grant the node permissions.
 
 {{% /alert %}}
 
@@ -55,17 +55,19 @@ The requests graph shows the number of requests that are sent from the client or
 
 The request types are:
 
-*   api-doc/: A general api doc overview for other doc request handlers
-*   debugger/: Mendix runtime debugger request handler
-*   /: Default request handler
-*   FileDocuments: Request handler used for serving files
-*   odata-docs/: documentation request handler for odata
-*   openid/: OPENID authentication request handler
-*   p/: Request handler for Custom page urls
-*   rest-doc/: HTTP Rest webservice request handler documentation
-*   ws-doc/: SOAP webservice request handler documentation
-*   ws: SOAP webservice call request handler
-*   xas/: Request handler used by the mendix runtime itself
+Request type | Explanation
+------------ | -------------
+api-doc/ | A general api doc overview for other doc request handlers
+debugger/ | Mendix runtime debugger request handler
+/ | Default request handler
+FileDocuments | Request handler used for serving files
+odata-docs/ | documentation request handler for odata
+openid/ | OPENID authentication request handler
+p/ | Request handler for Custom page urls
+rest-doc/ | HTTP Rest webservice request handler documentation
+ws-doc/ | SOAP webservice request handler documentation
+ws | SOAP webservice call request handler
+xas/ | Request handler used by the mendix runtime itself
 
 ### <a name="Trends-appmxruntimeconnectionbus"></a>3.2 Number of Database Queries Being Executed
 
@@ -73,11 +75,13 @@ This graph shows the number of database queries that are executed by your Mendix
 
 The types are:
 
-*   inserts: Amount of SQL INSERT INTO statements per second. This is used to add new rows of data to a table in the database.
-*   transactions: Amount of SQL transactions per second. A transaction is a unit of work that is performed against a database.
-*   update: Amount of SQL UPDATE statements per second. The SQL UPDATE Query is used to modify the existing records in a table.
-*   select: Amount of SQL SELECT statements per second. The SQL SELECT statement is used to fetch the data from a database table which returns this data in the form of a result table.
-*   delete: Amount of SQL DELETE statements per second. The SQL DELETE Query is used to delete the existing records from a table.
+Type | Explanation
+------------ | -------------
+inserts | Amount of SQL INSERT INTO statements per second. This is used to add new rows of data to a table in the database.
+transactions | Amount of SQL transactions per second. A transaction is a unit of work that is performed against a database.
+update | Amount of SQL UPDATE statements per second. The SQL UPDATE Query is used to modify the existing records in a table.
+select | Amount of SQL SELECT statements per second. The SQL SELECT statement is used to fetch the data from a database table which returns this data in the form of a result table.
+delete | Amount of SQL DELETE statements per second. The SQL DELETE Query is used to delete the existing records from a table.
 
 ### <a name="Trends-appmxruntimesessions"></a>3.3 User Accounts and Login Sessions
 
@@ -85,9 +89,11 @@ The sessions graph shows the number of logged-in named and anonymous user sessio
 
 The user types are:
 
-*   named users: Total number of user accounts
-*   concurrent named user sessions: Total number of named login sessions that is going on at that moment
-*   concurrent anonymous user sessions: Total number of anonymous login sessions that is going on at that moment
+User type | Explanation
+------------ | -------------
+named users | Total number of user accounts
+concurrent named user sessions | Total number of named login sessions that is going on at that moment
+concurrent anonymous user sessions | Total number of anonymous login sessions that is going on at that moment
 
 ### <a name="Trends-appmxruntimejvmheap"></a>3.4 JVM Object Heap
 
@@ -99,10 +105,12 @@ If the tenured generation shows up to as big as 65% of the complete heap size, t
 
 The object types are:
 
-*   tenured generation:  As objects "survive" repeated garbage collections in the survivor space they are migrated to the tenured generation. You can look at this metric as a number of long living objects in JVM.
-*   native memory: The native memory is the memory available to the operating system.
-*   eden space: The pool from which memory is initially allocated for most objects.
-*   unused: Unused JVM heap memory
+Object type | Explanation
+------------ | -------------
+tenured generation |  As objects "survive" repeated garbage collections in the survivor space they are migrated to the tenured generation. You can look at this metric as a number of long living objects in JVM.
+native memory | The native memory is the memory available to the operating system.
+eden space | The pool from which memory is initially allocated for most objects.
+unused | Unused JVM heap memory
 
 ### <a name="Trends-appmxruntimejvmprocessmemory"></a>3.5 JVM Process Memory Usage
 
@@ -112,16 +120,18 @@ More information about this graph is available in a Tech Blog post: [What's in m
 
 The types are:
 
-*   code cache: JVM also includes a code cache, containing memory that is used for compilation and storage of native code.
-*   native code: JVM allocated a certain amount of memory space for native bytecode.
-*   jar files: Jar files necessary for jvm itself to run.
-*   tenured generation: As objects "survive" repeated garbage collections in the survivor space they are migrated to the tenured generation. You can look at this metric as a number of long living objects in JVM.
-*   survivor space: The pool containing objects that have survived the garbage collection of the Eden space.
-*   eden space: The pool from which memory is initially allocated for most objects.
-*   unused java heap: Unused jvm heap memory
-*   permanent generation: The pool containing all the reflective data of the virtual machine itself, such as class and method objects. With Java VMs that use class data sharing, this generation is divided into read-only and read-write areas.
-*   other: Virtual or reserved memory space
-*   thread stacks: Stacks that are reserved for unique threads
+Type | Explanation
+------------ | -------------
+code cache | JVM also includes a code cache, containing memory that is used for compilation and storage of native code.
+native code | JVM allocated a certain amount of memory space for native bytecode.
+jar files | Jar files necessary for jvm itself to run.
+tenured generation | As objects "survive" repeated garbage collections in the survivor space they are migrated to the tenured generation. You can look at this metric as a number of long living objects in JVM.
+survivor space | The pool containing objects that have survived the garbage collection of the Eden space.
+eden space | The pool from which memory is initially allocated for most objects.
+unused java heap | Unused jvm heap memory
+permanent generation | The pool containing all the reflective data of the virtual machine itself, such as class and method objects. With Java VMs that use class data sharing, this generation is divided into read-only and read-write areas.
+other | Virtual or reserved memory space
+thread stacks | Stacks that are reserved for unique threads
 
 ### <a name="Trends-appm2eeserverthreadpool"></a>3.6 Threadpool for Handling External Requests
 
@@ -129,10 +139,12 @@ The application server thread pool graph shows the number of concurrent requests
 
 The types are:
 
-*   min threads: Minimum bound of threads to be used by Jetty threadpool
-*   max threads: Maximum bound of threads to be used by Jetty threadpool
-*   active threads: Active threads that are being used within the Jetty threadpool
-*   threadpool size: The current total size of the Jetty threadpool
+Type | Explanation
+------------ | -------------
+min threads | Minimum bound of threads to be used by Jetty threadpool
+max threads | Maximum bound of threads to be used by Jetty threadpool
+active threads | Active threads that are being used within the Jetty threadpool
+threadpool size | The current total size of the Jetty threadpool
 
 ### <a name="Trends-appmxruntimethreads"></a>3.7 Total Number of Threads in the JVM Process
 
@@ -152,11 +164,13 @@ This graph shows the number of database objects that were actually changed by da
 
 The types are:
 
-*   xact commit: Number of transactions committed per second
-*   xact rollback: Number of transactions rolledback per second
-*   tuples inserted: Number of tuples inserted per second
-*   tuples updated: Number of tuples updated per second
-*   tuples deleted: Number of tuples deleted per second
+Type | Explanation
+------------ | -------------
+xact commit | Number of transactions committed per second
+xact rollback | Number of transactions rolledback per second
+tuples inserted | Number of tuples inserted per second
+tuples updated | Number of tuples updated per second
+tuples deleted | Number of tuples deleted per second
 
 ### <a name="Trends-dbpgtableindexsizeVERSIONmain"></a>4.2 Index vs. Table Size
 
@@ -164,8 +178,10 @@ This database size graph shows the distribution between disk space used for stor
 
 The types are:
 
-*   tables: Amount of space taken by the tables in the database
-*   indexes: Amount of space taken by the indexes in the database
+Type | Explanation
+------------ | -------------
+tables | Amount of space taken by the tables in the database
+indexes | Amount of space taken by the indexes in the database
 
 ### 4.3 Application Node
 
@@ -199,9 +215,11 @@ The memory graph shows the distribution of operating system memory that is avail
 
 The types are:
 
-*   used memory: Total memory size of the DB instance minus the freeable memory.
-*   freeable memory: The amount of available random access memory.
-*   swap usage: The amount of swap space used on the DB instance.
+Type | Explanation
+------------ | -------------
+used memory | Total memory size of the DB instance minus the freeable memory.
+freeable memory | The amount of available random access memory.
+swap usage | The amount of swap space used on the DB instance.
 
 #### <a name="Trends-dbpgstatactivityVERSIONmain"></a>4.4.3 Database Connections
 
@@ -217,8 +235,10 @@ The Disk IO statistics show the number of disk read and write operations that ar
 
 The types are:
 
-*   read: Read ops on the current targeted filestorage
-*   write: Write ops on the current targeted filestorage
+Type | Explanation
+------------ | -------------
+read | Read ops on the current targeted filestorage
+write | Write ops on the current targeted filestorage
 
 ### <a name="Trends-appload"></a><a name="Trends-dbload"></a>5.2 Load
 

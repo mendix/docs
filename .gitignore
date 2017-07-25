@@ -8,6 +8,8 @@ _algolia_api_key_
 data/history.yml
 data/asset*.json
 
-static/public/*
+static/public/js/*
+static/public/styles/*
+
 static/json/*.json
 TODO.md

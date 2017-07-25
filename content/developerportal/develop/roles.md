@@ -1,6 +1,5 @@
 ---
 title: "Roles Within the Company and Apps"
-space: "Developer Portal"
 category: "General"
 description: "This page describes the roles and permissions within the Mendix Platform."
 tags: ["Company","MxID","Developer Portal","Role","Permissions"]
@@ -8,7 +7,7 @@ tags: ["Company","MxID","Developer Portal","Role","Permissions"]
 
 ## 1 Introduction
 
-In order to use Mendix, you must sign up to create an account. With this signup you create a **MxID** and this ID will be linked to a company. If the company already exists, you will join the company. If it is a new company, a new company will be created and you will automatically join it. 
+In order to use Mendix, you must sign up to create an account. With this signup you create a **MxID** and this ID will be linked to a company. If the company already exists, you will join the company. If it is a new company, a new company will be created and you will automatically join it.
 
 Within a company and the company's apps there are roles defined that are described below:
 
@@ -27,19 +26,19 @@ The company admin is a super role that is allowed to manage all settings of the 
 * Can manage apps and app roles
 * Can manage nodes
 
- ![](attachments/company-admin.png) 
+ ![](attachments/company-admin.png)
 
 For more details, see [Company Admin](/developerportal/companyadmin).
 
 ### 2.2 Regular Users
 
-The regular users can join the company and start building apps. Regular users can also view other apps made within the company. 
+The regular users can join the company and start building apps. Regular users can also view other apps made within the company.
 
   ![](attachments/myapps.png)
 
 ## 3 App Roles
 
-If you click **My Company's Apps** in the [Developer Portal](http://home.mendix.com), you can view the apps. If you select a specific app, you will see two responsible roles for the app. You can contact them with questions related to the app. When then the app is not a licensed app, it will not have a Technical Contact. 
+If you click **My Company's Apps** in the [Developer Portal](http://home.mendix.com), you can view the apps. If you select a specific app, you will see two responsible roles for the app. You can contact them with questions related to the app. When then the app is not a licensed app, it will not have a Technical Contact.
 The roles are described below:
 
   ![](attachments/company-app.png)
@@ -63,7 +62,7 @@ For more information, see [Technical Contact](/developerportal/settings/technica
 
 ## 4. Team Member Roles
 
-Within an App Team there are six predefined roles that can be provisioned to Team Members. You can also create new team roles within your company. 
+Within an App Team there are six predefined roles that can be provisioned to Team Members. You can also create new team roles within your company.
 
 The Team Member Roles have access to different permission areas:
 
@@ -72,11 +71,11 @@ The Team Member Roles have access to different permission areas:
 * who has access to node information
 * who can change the app settings
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 Note that the **Node Permissions** must be provisioned by the **Technical Contact**.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 The predefined roles can be changed in two places:
 1.	As Company Admin you can change them. Changes will have effect on every app created after the change.
@@ -84,7 +83,7 @@ The predefined roles can be changed in two places:
 
 The predefined team member roles are described below:
 
-* Application Operator - A member who does not actively develop on the application, but is responsible for operations on the application's cloud node. 
+* Application Operator - A member who does not actively develop on the application, but is responsible for operations on the application's cloud node.
 * Business Engineer - A member of the app team who contributes to the development of the application.  
 * End-user - A user of the application who should have insight into the backlog but doesn't actively participate in development. For example a stakeholder.
 * Product Owner - The product owner of the Scrum team who is responsible for managing the application's backlog.

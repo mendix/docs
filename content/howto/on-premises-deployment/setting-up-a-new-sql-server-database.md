@@ -7,19 +7,13 @@ parent: "mendix-on-windows-_-microsoft-sql-server"
 
 This how-to will teach you how to set up a new SQL Server database.
 
-## 2 Prerequisites
-
-The database needs to be `Read_Committed_Snapshot = on`.
-
-The function and assembly need to be created for timezone handling. In order to do that, Common Language Runtime (CLR) needs to be enabled on the SQL Server instance. If your are not working on the same timezone as UTC, you need to enable CLR and this function. Without time zone support in the platform, development of your functionality will be much more difficult.
-
-## 3 Set Up a New Database
+## 2 Set Up a New Database
 
 When setting up a new database for Mendix, most of the settings can be left to the default configuration. When looking at the general settings, you only need to set up the database name. Set up the database files according to the Microsoft SQL Server best practices (for details, see [Best Practices for Configuring SQL Server](https://msdn.microsoft.com/en-us/library/cc296885(v=bts.10).aspx)).
 
 ![](attachments/18448656/18580676.png)
 
-In the database options, the default properties need to be evaluated. When choosing a collation, pay attention to the type of collation you are going to use. Mendix uses UTF-8 for all data evaluation. Depending on your exact locale, you will most likely want to choose one of the `SQL_Latin1_General_` collations. The exact encoding will depend on your OS. For an *en_US* installation, this will be `CP1\`.
+In the database options, the default properties need to be evaluated. When choosing a collation, pay attention to the type of collation you are going to use. Mendix uses UTF-8 for all data evaluation. Depending on your exact locale, you will most likely want to choose one of the `SQL_Latin1_General_` collations. The exact encoding will depend on your OS. For an *en_US* installation, this will be `CP1`.
 
 The last two options identify how sorting and uniqueness is interpreted. For example, the collation option `_CS_` indicates that the collation sorting style will be case-sensitive. For more information on collations, see [Windows Collation Sorting Style](https://msdn.microsoft.com/en-us/library/ms143515.aspx).
 
@@ -31,15 +25,23 @@ After the database is created, the Mendix platform can initiate the initial setu
 
 There are two more queries that are only executed once, but these privileges are implicitly assigned to the `db_owner` role. As long as the user is `db_owner`, the function and procedure can be created without problems.
 
-### 3.1 Queries to Be Executed as sysadmin
+### 3 Configuring Read Committed Snapshot isolation level
+
+The database schema needs to be configured such that the "Read Committed Snapshot" feature is enabled. This can be achieved by executing the following command on the database:
 
 ```
-ALTER DATABASE [Scheduler2] SET READ_COMMITTED_SNAPSHOT ON;
+ALTER DATABASE [MySchema] SET READ_COMMITTED_SNAPSHOT ON;
 ```
+NOTE: you need to replace `MySchema` with the name of your schema.
 
+### 4 Configuring the necessary SQL Server extensions
+
+For correct functioning of Mendix, some SQL Server extensions need to be installed. This can be achieved via the following command.
 ```
 CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM "D:\MyFolder\Mendix\server\runtime\lib\Mendix.SqlServerExtensions.dll" WITH PERMISSION_SET = SAFE;
 ```
+
+NOTE: Of course, the file path needs to be set to the corresponding file which is part of your Mendix installation.
 
 The permission above requires CLR to be enabled on the SQL Server instance. CLR can be enabled using this query:
 
@@ -48,7 +50,10 @@ EXEC sp_configure 'clr enabled' , '1';
 RECONFIGURE;
 ```
 
-### 3.2 Queries to Be Executed with the db_owner or db_ddladmin Database Role
+
+#### 4.1 Queries to Be Executed with the `db_owner` or `db_ddladmin` Database Role
+
+The function and assembly need to be created for timezone handling. Also for these functions, Common Language Runtime (CLR) needs to be enabled on the SQL Server instance. If your are not working on the same timezone as UTC, you need to enable CLR and this function. Without time zone support in the platform, development of your functionality will be much more difficult. This can be achieved using the following commands:
 
 ```
 CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone nvarchar(50)) RETURNS datetime AS EXTERNAL NAME [Mendix.SqlServerExtensions].[Mendix.SqlServerExtensions.DateTimeLocalizer].[ConvertToLocalDateTime];
@@ -67,7 +72,7 @@ RETURN @NewSeqVal
 END;
 ```
 
-## 4 Related Content
+## 5 Related Content
 
 * [How to Activate a Mendix License on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows)
 * [How to Set Up the Database User](setting-up-the-database-user)

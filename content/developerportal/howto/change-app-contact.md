@@ -27,7 +27,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 5. Click **General** under the **Settings** category.
 6. Click **Edit settings** in the top-right corner.
 
-    ![](attachments/change-appcontact.png)
+    ![](attachments/settings/change-appcontact.png)
 
 7. Below **Contact** change the new App Contact from the drop down list.
 8. Click **Save**.    

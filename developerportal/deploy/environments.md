@@ -37,7 +37,7 @@ In the **Deployment Package Repository** section, there is an overview of the fo
 *   Version of the deployment package
 *   Creation date of the deployment package
 *   Uploaded by
-*   Expire date
+*   Expire date of the deployment package
 
 There are also four actions you can perform:
 

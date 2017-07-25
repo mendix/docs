@@ -6,6 +6,8 @@ description: "Presents all of the available release notes for the Mendix Desktop
 
 These are the release notes for the Mendix Desktop Modeler:
 
+* [7.5](7.5)
+* [7.4](7.4)
 * [7.3](7.3)
 * [7.2](7.2)
 * [7.1](7.1)

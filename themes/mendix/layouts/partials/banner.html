@@ -1,0 +1,15 @@
+{{- $spaces := .Site.Data.spaces -}}
+{{- $paths := split .File.Dir "/" }}
+{{- $main := index $paths 0 }}
+{{- $space := index $spaces $main -}}
+{{- with $space.banner -}}
+<div class="banner banner--{{ .type }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="banner_text">{{ .text | safeHTML }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{{- end -}}

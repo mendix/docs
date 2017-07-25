@@ -1,0 +1,207 @@
+$block: 'mx';
+
+.#{$block} {
+  @include element('page') {
+    position: relative;
+    padding: 60px 0 30px 0;
+
+    @include modifier('print') {
+      padding: 5em!important;
+      font-size: 12px;
+      width: 864px!important;
+      max-width: none!important;
+
+      .mx__sub-header__print-button,
+      .mx__sub-header__edit-button {
+        display: none;
+      }
+
+      .mx__page__header__title {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+      h4 {
+        font-size: 16px;
+      }
+      h5 {
+        font-size: 14px;
+      }
+    };
+
+    @include mq("sm") {
+      padding: 60px 0 30px 65px;
+    };
+
+    @include mq("md") {
+      float: left;
+      width: 80%;
+      max-width: 80%;
+    }
+
+    @include element('header') {
+      @include element('head') {
+        margin: 0;
+      }
+      @include element('title') {
+        font-size: 42px;
+        letter-spacing: -1.75px;
+        line-height: 1;
+        font-weight: 300;
+        margin: 0;
+        color: $color-mendix-blue;
+        @include modifier('frontpage') {
+          font-size: 48px;
+          margin: 0 0 10px;
+        }
+      }
+      @include element('subtitle') {
+        font-size: 18px;
+        line-height: 42px;
+        font-weight: normal;
+        margin: 0;
+      }
+      @include element('sub') {
+        display: block;
+        @include clearfix();
+        width: 100%;
+        min-height: 55px;
+        border-bottom: 1px solid $border-color;
+        margin: 0;
+      };
+      @include element('nav') {
+        display: block;
+        width: 100%;
+        height: 20px;
+        padding: 4px;
+      }
+    }
+
+    @include element('content') {
+
+      margin: 0 0 30px;
+      line-height: 24px;
+
+      > * {
+        //margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      blockquote {
+        border-left: 4px solid #e8e8e8;
+        padding-left: 20px;
+        font-size: 18px;
+        opacity: .6;
+        letter-spacing: -1px;
+        font-style: italic;
+        margin: 30px 0;
+      }
+
+      ul, ol { padding-left: 20px; }
+
+      h5 {
+        font-size: 16px;
+      }
+
+      table {
+        width: 100%;
+        max-width: 100%;
+        border: 1px solid $color-table-border;
+        table-layout: fixed;
+        font-size: 12px;
+
+        th.has-expand {
+          position: relative;
+          .expand-table {
+            cursor: pointer;
+            color: $color-mendix-blue;
+            position: absolute;
+            top: -10px;
+            left: -8px;
+            font-size: 15px;
+            display: none;
+          }
+        }
+
+        &:hover {
+          th.has-expand {
+            .expand-table {
+              display: block;
+            }
+          }
+        }
+
+        code {
+          font-size: 13px;
+        }
+
+        > thead,
+        > tbody,
+        > tfoot {
+          > tr {
+            > th,
+            > td {
+              padding: 8px;
+              line-height: 1.42857143; // This comes from Bootstrap
+              vertical-align: top;
+              border: 1px solid $color-table-border;
+              word-wrap: break-word;
+            }
+          }
+        }
+
+        > thead {
+          background-color: $color-lightgrey;
+        }
+      }
+
+      img:not(.overview-block-icon) {
+        margin: 10px 0;
+        display:block;
+        max-width:100%;
+        height:auto;
+      }
+
+      &.no-title {
+        margin-top: 30px;
+        &.not-found {
+          margin-top: 5em;
+          .not-found-suggestion {
+            margin: 3em 0;
+            .suggestions {
+              list-style: none;
+              margin: 0 0 1em;
+              padding: 0;
+              li {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include modifier('frontpage') {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+    }
+
+    @include element('frontpage-block') {
+      display: block;
+      margin: $frontpage-search-block-margins 0;
+      padding: 0 0 $frontpage-search-block-margins;
+      border-bottom: 1px solid $border-color;
+      @include element('404-title') {
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -52,7 +52,7 @@ Now that you have created a basic dashboard, you need to add a new page that can
 
 6. To create a new page in the **Select Page** dialog box, do the following:<br>
     a. Click **New page**.<br>
-    b. Change the title of the page to **Employees**.<br>
+    b. Change the title of the page to *Employees*.<br>
     c. Select **Lists** > **Lists Default** for the  template.
 
     ![](attachments/build-an-employee-directory-app/lists-default.png)
@@ -85,11 +85,11 @@ To edit the widgets, follow these steps:
 
     ![](attachments/build-an-employee-directory-app/add-button.png)
 
-6. Select the parent **Row** using the breadcrumb:
+6. Select the parent **Row** using the breadcrumb at the bottom of the editor:
 
     ![](attachments/build-an-employee-directory-app/breadcrumb-container-add-button.PNG)
 
-7. Change the **Row Layout** to *large left column & small right column*:
+7. Change the **Row Layout** for **Desktop** to *large left column & small right column*:
 
     ![](attachments/build-an-employee-directory-app/change-row-layout2.png)
 
@@ -103,7 +103,7 @@ To switch building blocks, follow these steps:
 
     ![](attachments/build-an-employee-directory-app/listview-delete.png)
 
-2. Open the **Toolbox** and from **Lists**, drag the **List3** building block into the container.
+2. Open **Toolbox** > **Building Blocks** > **Lists** and drag the **List3** building block into the container.
 
 At this point the page looks pretty nice, so you're ready to connect some data elements to it!
 

@@ -29,8 +29,8 @@ The view of the **General** tab depends on which Mendix Cloud version the app is
 * Mode - type of environment: production/acceptance/test
 * URL - the URL of the app
 * Custom Domains - the custom domains of the app
-* Java version - until Mendix Desktop Modeler 5.17 the version of java is 1.7. In Mendix Desktop Modeler 5.18 you can choose between java version 1.7 and 1.8. Starting from Mendix Desktop Modeler 6 you cannot choose the java version and it's always version 1.8.
-* Runtime version - Mendix Desktop Modeler version
+* Java version - until Mendix Version 5.17 the version of Java is 1.7. In Mendix Version 5.18 you can choose between Java version 1.7 and 1.8. Starting from Mendix Version 6 you cannot choose the Java version and it's always version 1.8.
+* Runtime version - Mendix version
 * Administrator user name
 * Database status is by default running
 * Database version - the PostgreSQL version that is supporting the database
@@ -67,10 +67,10 @@ If your app is hosted in Mendix Cloud v4, you will see a section named **Scaling
 
 In **Scaling** there are two sliders that you can control:
 
-* The **Instances** slider to increase or decrease the amount from one to four instances by sliding the slider. The instances are meant for spreading your memory out. You can spread the RAM memory among 4 instances if you have more than 1GB of RAM memory.
+* The **Instances** slider to increase or decrease the amount from one to four instances by sliding the slider. The instances are meant for improved resiliency and increased processing power. The minimum amount of RAM memory per instances is 1GB. You can spread the RAM memory among 4 instances if you have more than 1GB of RAM memory.
 * The **Memory per instance** slider to increase or decrease the memory amount per instance by sliding the slider.
 
-The **Total Allocated Memory** is a process cirkle that shows how much memory is currently used for scaling.
+The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
 
 If you have 1GB RAM of the **Total Allocated Memory**, you have 1 **instance** available to store your memory.
 To scale your memory over multiple instances you need more memory.

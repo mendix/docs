@@ -3,6 +3,7 @@
 const url = require('url');
 const path = require('path');
 const fs = require('fs');
+const shell = require('shelljs');
 const _ = require('lodash');
 const gutil = require('gulp-util');
 const cheerio = require('cheerio');
@@ -18,9 +19,11 @@ let totalValidated = 0;
 let lastParsed = 0;
 let lastValidated = 0;
 let allFiles = [];
+let allResidualFiles = [];
 
 let SOURCEPATH = null,
-    EXTERNAL = false;
+    EXTERNAL = false,
+    DELETE_UNUSED_IMAGES = false;
 
 const parseHtmlFile = file => new Promise((resolve, reject) => {
   file.basePath = file.path.replace(SOURCEPATH, '');
@@ -169,6 +172,7 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
   // Let's check all the images
   _.forEach(file.images, image => {
     let fullPath = path.join(SOURCEPATH, image);
+    _.remove(allResidualFiles, n => n === fullPath);
     if (allFiles.indexOf(fullPath) !== -1) {
       return;
     }
@@ -260,6 +264,17 @@ const checkHTMLFiles = (opts) => helpers.getFiles(SOURCEPATH)
     }
     console.log('');
 
+    if (DELETE_UNUSED_IMAGES) {
+      const unused = _.filter(allResidualFiles, f => f.indexOf('/attachments/') !== -1 && (f.indexOf('.png') !== -1 || f.indexOf('.jpg') !== -1 || f.indexOf('.jpeg') !== -1));
+
+      _.forEach(unused, file => {
+        // This is diry, should be done differently
+        const f = file.replace('/_site/', '/content/');
+        console.log(`Deleting ${gutil.colors.cyan(f)}`);
+        shell.rm('-rf', f);
+      })
+    }
+
     let indexMappingHeader = [
       '############################################################################################',
       `# Mendix indexes redirect mapping, generated from \'gulp check:html\'`,
@@ -315,6 +330,7 @@ const checkFiles = (opts) => {
     .getAllFiles(SOURCEPATH)
     .then(files => {
       allFiles = files;
+      allResidualFiles = files;
       checkHTMLFiles(opts);
     })
     .catch(err => {

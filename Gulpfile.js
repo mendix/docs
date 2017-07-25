@@ -219,9 +219,6 @@ gulp.task('dev', ``, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done 
   });
   gulp.watch(paths.styles.src, ['dev:sass']);
   gulp.watch(paths.scripts.src, ['js-watch']);
-  gulp.watch(paths.images.src, ['copy:images']);
-  // gulp.watch(paths.content.pages, ['write:menu']);
-  // gulp.watch(paths.content.all, ['build:hugo']);
   gutil.log(`\n\n*********\nOpen your browser with this address: ${gutil.colors.cyan(`localhost:${PORT}`)}\n*********\n`);
 });
 

@@ -13,7 +13,7 @@ Within a company and the company's apps there are roles defined that are describ
 
 ## 2 Company Roles
 
-Everyone with the same emaildomain will be automatically placed in the same company. For example all users that will signup with an email address with the @mendix.com emaildomain, will automatically join the company named 'Mendix'.
+Everyone with the same emaildomain will be automatically placed in the same company. For example all users that will signup with an email address with the '@bouncetravel.com' emaildomain, will automatically join the company named 'Bounce Travel'.
 
 Within the company there are two roles described below:
 

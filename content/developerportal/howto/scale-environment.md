@@ -7,7 +7,7 @@ tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-To scale an evironment of your app, you will need to have a licensed app in the Enterprise plan. All licensed apps created after April 2017 will be by default hosted in Mendix Cloud Version 4.
+Licensed apps in the Mendix Cloud can be scaled n various ways. Memory can be added to the application container. This is called vertical scaling. Mendix 7+ apps created after April 2017 and running on Mendix Cloud v4 can be scaled horizontally as well, in that case multiple runtime containers will run simultaneously. Incoming traffic for your app is randomly distributed over the running instances. Only the first instance will excecute [Scheduled events](/refguide/scheduled-events).
 
 **This how-to will teach you how to do the following:**
 
@@ -18,7 +18,7 @@ To scale an evironment of your app, you will need to have a licensed app in the 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * You have a licensed app hosted in Mendix Cloud v4
-* The runtime of the app is Mendix 7.0 or higher
+* The Mendix Version of the app is Mendix 7.0 or higher
 
 ## 3 Mendix Cloud Version
 
@@ -33,12 +33,12 @@ To see in which cloud version your app is hosted on:
 
     ![](attachments/deploy/environment-details.png)
 
-4. Next to **Mendix Cloud Version** you will see the version of the cloud that your licensed app is hosted on.
+4. Next to **Mendix Cloud Version** you will see the version of the cloud that your licensed app is hosted.
 
-The possible cloud versions are:
+The scaling options on possible cloud versions are:
 
-*   Mendix Cloud v3 - no scaling possible
-*   Mendix Cloud v4 - scaling is possible
+*   Mendix Cloud v3 - vertical scaling
+*   Mendix Cloud v4 - vertical and horizontal scaling
 
 ## 4 How to Scale Your Environment
 
@@ -50,7 +50,7 @@ If you want to scale your licensed app in Mendix Cloud v4, follow these instruct
 4. Set the amount of **instances** from 1 to 4 by dragging the scroller from the left side to the right side of the screen.
 5. Set the amount of **memory per instance** that you want to use. You are not obligated to use the whole memory at once.
 
-If you have 1GB RAM of the **Total Allocated Memory**, you have 1 **instance** available to store your memory. 
+If you have 1GB RAM of the **Total Allocated Memory**, you have 1 **instance** available to utilize your memory. 
 To scale your memory over multiple instances you need more memory.
 
    ![](attachments/deploy/scale.png) 

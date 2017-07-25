@@ -9,12 +9,12 @@ tags: ["Technical Contact","Settings","Developer Portal"]
 
 A Mendix application will always be set up and delivered with a technical contact connected to it. The assignment of the Technical Contact takes place when the order is signed. The Technical Contact is responsible for a Mendix application on a technical level. The technical contact needs a *MendixID* before Mendix can deliver the app. You get a MendixID when you create a Mendix account.
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 It is currently not possible to select more than one Technical Contact in the Mendix Cloud. See how to [Change the Technical Contact](/developerportal/howto/change-technical-contact).
 For On-Premises installations it is possible to select more than one contact. Contact [Mendix Support](https://support.mendix.com) with your request.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 This document describes the role of the technical contact within the Mendix application domain.
 

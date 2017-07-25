@@ -10,93 +10,116 @@ const Promise = require('bluebird');
 const helpers = require('./helpers');
 
 const verbose = false;
-const getSourceFile = filePath => {};
+const indicator = gutil.colors.cyan("[HTML CHECK]");
+
+let totalChecks = 0;
+let totalChecked = 0;
+let totalValidated = 0;
+let lastParsed = 0;
+let lastValidated = 0;
+let allFiles = [];
 
 let SOURCEPATH = null,
     EXTERNAL = false;
 
-const parseHtmlFiles = files => {
-  return _.map(files, file => {
-    file.basePath = file.path.replace(SOURCEPATH, '');
-    if (file.content) {
-      const $ = cheerio.load(file.content);
+const parseHtmlFile = file => new Promise((resolve, reject) => {
+  file.basePath = file.path.replace(SOURCEPATH, '');
+  if (file.content) {
+    const $ = cheerio.load(file.content);
 
-      // remove obsolete stuff
-      $('pre, code').remove();
+    // remove obsolete stuff
+    $('pre, code').remove();
 
-      $('img').each((i, el) => {
-        const src = $(el).attr('src'),
-              parsed = url.parse(src);
+    $('img').each((i, el) => {
+      const src = $(el).attr('src'),
+            parsed = url.parse(src);
 
-        if (parsed.hostname) {
-          file.external.images.push(src);
+      if (parsed.hostname) {
+        file.external.images.push(src);
+      } else {
+        if (parsed.query) {
+          file.warnings.push(`The src of the image ${gutil.colors.cyan(src)} has a query string. Is that necessary?`);
+        }
+
+        if (src.indexOf('/') === 0) {
+          file.images.push(src);
         } else {
+          file.images.push(path.join(path.dirname(file.basePath), parsed.path))
+        }
+      }
+    });
+
+    $('a').each((i, el) => {
+      const $el = $(el),
+            href = $el.attr('href'),
+            name = $el.attr('name');
+
+      if (name) {
+        file.anchors.push(name);
+      }
+
+      if (!href || href === "#") { // ignoring mailto and external links for now
+        return true;
+      } else if (href.indexOf('#') === 0) {
+        file.anchorLinks.push(href.trim().replace('#',''));
+      } else if (href.indexOf('http') === 0) {
+        file.external.links.push(href.trim());
+      } else if (href.indexOf('mailto') === 0) {
+        file.external.mailto.push(href.trim());
+      } else {
+        try {
+          const parsed = url.parse(href.trim());
+
           if (parsed.query) {
-            file.warnings.push(`The src of the image ${gutil.colors.cyan(src)} has a query string. Is that necessary?`);
+            file.warnings.push(`The link to ${gutil.colors.cyan(href)} has a query string. Is that necessary?`);
           }
 
-          if (src.indexOf('/') === 0) {
-            file.images.push(src);
+          if (href.indexOf('/') === 0) {
+            file.links.push(href);
           } else {
-            file.images.push(path.join(path.dirname(file.basePath), parsed.path))
+            file.links.push(path.join(path.dirname(file.basePath), href));
           }
+
+        } catch (e) {
+          verbose && console.log(`Error while parsing ${file.path} link: ${e}`);
         }
-      });
+      }
+    });
 
-      $('a').each((i, el) => {
-        const $el = $(el),
-              href = $el.attr('href'),
-              name = $el.attr('name');
+    $('h1,h2,h3,h4,h5', '.mx__page__content').each((i, el) => {
+      var $el = $(el),
+          id = $el.attr('id');
 
-        if (name) {
-          file.anchors.push(name);
-        }
-
-        if (!href || href === "#") { // ignoring mailto and external links for now
-          return true;
-        } else if (href.indexOf('#') === 0) {
-          file.anchorLinks.push(href.trim().replace('#',''));
-        } else if (href.indexOf('http') === 0) {
-          file.external.links.push(href.trim());
-        } else if (href.indexOf('mailto') === 0) {
-          file.external.mailto.push(href.trim());
+      if (id) {
+        if (file.anchors.indexOf(id) !== -1) {
+          file.warnings.push(`The element with ${gutil.colors.cyan('id="' + id + '"')} has a duplicate ID, this should not happen`);
         } else {
-          try {
-            const parsed = url.parse(href.trim());
-
-            if (parsed.query) {
-              file.warnings.push(`The link to ${gutil.colors.cyan(href)} has a query string. Is that necessary?`);
-            }
-
-            if (href.indexOf('/') === 0) {
-              file.links.push(href);
-            } else {
-              file.links.push(path.join(path.dirname(file.basePath), href));
-            }
-
-          } catch (e) {
-            verbose && console.log(`Error while parsing ${file.path} link: ${e}`);
-          }
+          file.anchors.push(id);
         }
-      });
+      }
+    });
+  }
+  delete(file.content);
 
-      $('h1,h2,h3,h4,h5', '.mx__page__content').each((i, el) => {
-        var $el = $(el),
-            id = $el.attr('id');
+  totalChecked += 1;
+  const perc = Math.floor(100 * (totalChecked / totalChecks));
+  if (perc % 10 === 0 && perc !== lastParsed) {
+    lastParsed = perc;
+    gutil.log(`${indicator} Pages parsed: ${perc}%`);
+  }
 
-        if (id) {
-          if (file.anchors.indexOf(id) !== -1) {
-            file.warnings.push(`The element with ${gutil.colors.cyan('id="' + id + '"')} has a duplicate ID, this should not happen`);
-          } else {
-            file.anchors.push(id);
-          }
-        }
-      });
-    }
-    delete(file.content);
-    return file;
-  })
-};
+  resolve(file);
+});
+
+const parseHtmlFiles = files => {
+  totalChecks = files.length;
+  totalChecked = 0;
+  totalValidated = 0;
+  lastParsed = 0;
+  lastValidated = 0;
+
+  return Promise.all(_.map(files, file => parseHtmlFile(file)));
+}
 
 const getLinkPaths = link => {
   //TODO: GET THIS FROM CONFIG
@@ -115,58 +138,64 @@ const getLinkPaths = link => {
   ];
 }
 
-const validateFiles = files => {
-  return new Promise((resolve, reject) => {
-    resolve(_.map(files, file => {
-      // Let's check all the links
-      _.forEach(file.links, link => {
-        const fullPath = path.join(SOURCEPATH, link),
-              fullUrl = url.parse(path.join(SOURCEPATH, link));
+const validateFiles = files => Promise.resolve(_.map(files, file => {
+  // Let's check all the links
+  _.forEach(file.links, link => {
+    const fullPath = path.join(SOURCEPATH, link),
+          fullUrl = url.parse(path.join(SOURCEPATH, link));
 
-        let linkPath = fullUrl.pathname;
-        let linkedFile = _.filter(
-          _.map(getLinkPaths(linkPath), linkPathPossible => _.find(
-            files, findFile => findFile.path === linkPathPossible)
-          ), f => !!f
-        );
+    let linkPath = fullUrl.pathname;
+    let linkedFile = _.filter(
+      _.map(getLinkPaths(linkPath), linkPathPossible => _.find(
+        files, findFile => findFile.path === linkPathPossible)
+      ), f => !!f
+    );
 
-        if (linkedFile && linkedFile.length && linkedFile.length === 1) {
-          linkedFile = _.first(linkedFile);
-          if (fullUrl.hash) {
-            const hashID = fullUrl.hash.replace('#', '');
-            if (linkedFile.anchors.indexOf(hashID) === -1) {
-              file.warnings.push(`Has link to ${gutil.colors.cyan(link)} which does resolve the page ${gutil.colors.cyan(linkedFile.basePath)}, but the anchor ${hashID} does not exist. Please fix this`);
-              verbose && console.log(`hash err ${file.path} to ${linkedFile.basePath}`, link);
-            }
-          }
-        } else if (!helpers.isFile(fullPath)) {
-          file.errors.push(`Has link to ${gutil.colors.cyan(link)} which would resolve to ${gutil.colors.cyan(linkPath)} (.html | index.html), but it does not exist`);
-          verbose && console.log(`err ${file.path}`, link);
+    if (linkedFile && linkedFile.length && linkedFile.length === 1) {
+      linkedFile = _.first(linkedFile);
+      if (fullUrl.hash) {
+        const hashID = fullUrl.hash.replace('#', '');
+        if (linkedFile.anchors.indexOf(hashID) === -1) {
+          file.warnings.push(`Has link to ${gutil.colors.cyan(link)} which does resolve the page ${gutil.colors.cyan(linkedFile.basePath)}, but the anchor ${hashID} does not exist. Please fix this`);
+          verbose && console.log(`hash err ${file.path} to ${linkedFile.basePath}`, link);
         }
-      });
+      }
+    } else if (!helpers.isFile(fullPath)) {
+      file.errors.push(`Has link to ${gutil.colors.cyan(link)} which would resolve to ${gutil.colors.cyan(linkPath)} (.html | index.html), but it does not exist`);
+      verbose && console.log(`err ${file.path}`, link);
+    }
+  });
 
-      // Let's check all the images
-      _.forEach(file.images, image => {
-        let fullPath = path.join(SOURCEPATH, image);
-        if (!helpers.isFile(fullPath)) {
-          file.errors.push(`Has image: ${gutil.colors.cyan(image)} which would resolve to ${gutil.colors.cyan(fullPath)}, but it does not exist`);
-          verbose && console.log(`err image ${file.path}`, image);
-        }
-      });
+  // Let's check all the images
+  _.forEach(file.images, image => {
+    let fullPath = path.join(SOURCEPATH, image);
+    if (allFiles.indexOf(fullPath) !== -1) {
+      return;
+    }
+    if (!helpers.isFile(fullPath)) {
+      file.errors.push(`Has image: ${gutil.colors.cyan(image)} which would resolve to ${gutil.colors.cyan(fullPath)}, but it does not exist`);
+      verbose && console.log(`err image ${file.path}`, image);
+    }
+  });
 
-      // Let's check anchorlinks
-      _.forEach(file.anchorLinks, anchorlink => {
-        if (file.anchors.indexOf(anchorlink) === -1) {
-          //console.log(file.anchors);
-          file.warnings.push(`Has anchor link: ${gutil.colors.cyan('#' + anchorlink)}, which does not exist in the page`);
-          verbose && console.log(`err anchor ${file.path}`, anchorlink);
-        }
-      });
+  // Let's check anchorlinks
+  _.forEach(file.anchorLinks, anchorlink => {
+    if (file.anchors.indexOf(anchorlink) === -1) {
+      //console.log(file.anchors);
+      file.warnings.push(`Has anchor link: ${gutil.colors.cyan('#' + anchorlink)}, which does not exist in the page`);
+      verbose && console.log(`err anchor ${file.path}`, anchorlink);
+    }
+  });
 
-      return file;
-    }));
-  })
-};
+  totalValidated += 1;
+  const perc = Math.floor(100 * (totalValidated / totalChecks));
+  if (perc % 10 === 0 && perc !== lastValidated) {
+    lastValidated = perc;
+    gutil.log(`${indicator} Pages validated: ${perc}%`);
+  }
+
+  return file;
+}));
 
 const checkAllLinks = (links, files) => {
   return helpers
@@ -201,81 +230,92 @@ const checkExternal = files => {
   return checkAllLinks(uniq, files);
 }
 
+const checkHTMLFiles = (opts) => helpers.getFiles(SOURCEPATH)
+  .then(helpers.readHtmlFiles)
+  .then(parseHtmlFiles)
+  .then(validateFiles)
+  .then(checkExternal)
+  .then(files => {
+    const errors = _.filter(files, file => file.errors.length > 0),
+          warnings = _.filter(files, file => file.warnings.length > 0);
+
+    console.log(`Finished checking ${files.length} files`);
+    console.log('\n======= Errors: ' + errors.length);
+    if (errors.length > 0) {
+      _.forEach(errors, file => {
+        console.log(`\nFile: ${gutil.colors.cyan(file.basePath)} has the following errors:\n`);
+        _.forEach(file.errors, error => {
+          console.log(gutil.colors.red('   + ') + error);
+        })
+      })
+    }
+    console.log('\n======= Warnings: ' + warnings.length);
+    if (warnings.length > 0) {
+      _.forEach(warnings, file => {
+        console.log(`\nFile: ${gutil.colors.cyan(file.basePath)} has the following warnings:\n`);
+        _.forEach(file.warnings, error => {
+          console.log(gutil.colors.yellow('   + ') + error);
+        })
+      })
+    }
+    console.log('');
+
+    let indexMappingHeader = [
+      '############################################################################################',
+      `# Mendix indexes redirect mapping, generated from \'gulp check:html\'`,
+      '############################################################################################',
+      ''
+    ];
+    let indexFiles = _.chain(files)
+      .filter(file =>
+        file.basePath.indexOf('/index.html') !== -1 &&
+        file.basePath !== '/index.html' &&
+        file.basePath !== '/search/index.html'
+      )
+      .map(file => { return {
+        to: file.basePath.replace(/index\.html/, ''),
+        from: file.basePath.replace(/\/index\.html/, '')
+      }; })
+      .sortBy(file => file.from.length)
+      .map(file => `${file.from} ${file.to};`)
+      .value();
+
+    let indexes = indexMappingHeader.concat(indexFiles).join('\n');
+    const indexDest = path.join(SOURCEPATH, '/mappings/indexes.map');
+
+    fs.writeFile(indexDest, indexes, err => {
+      if (err) {
+        gutil.log(`Error writing index mappings: ${err}`)
+        opts.callback(true);
+      } else {
+        gutil.log(`Index mappings written to ${indexDest}`);
+        if (errors.length === 0) {
+          if (files.length === 0) {
+            console.log(`It seems there are no files to check. This looks bad`);
+            opts.callback(true);
+          } else {
+            opts.callback(false);
+          }
+        } else {
+          opts.callback(true);
+        }
+      }
+    });
+  })
+  .catch(err => {
+    helpers.gulpErr('htmlproofer', err);
+    opts.callback(true);
+  });
+
 const checkFiles = (opts) => {
   SOURCEPATH = opts.dir;
   EXTERNAL = opts.external || false;
-  console.log(`Testing html in ${SOURCEPATH}`);
-  helpers.getFiles(SOURCEPATH)
-    .then(helpers.readHtmlFiles)
-    .then(parseHtmlFiles)
-    .then(validateFiles)
-    .then(checkExternal)
+  gutil.log(`${indicator} Testing html in ${SOURCEPATH}`);
+  helpers
+    .getAllFiles(SOURCEPATH)
     .then(files => {
-      const errors = _.filter(files, file => file.errors.length > 0),
-            warnings = _.filter(files, file => file.warnings.length > 0);
-
-      console.log(`Finished checking ${files.length} files`);
-      console.log('\n======= Errors: ' + errors.length);
-      if (errors.length > 0) {
-        _.forEach(errors, file => {
-          console.log(`\nFile: ${gutil.colors.cyan(file.basePath)} has the following errors:\n`);
-          _.forEach(file.errors, error => {
-            console.log(gutil.colors.red('   + ') + error);
-          })
-        })
-      }
-      console.log('\n======= Warnings: ' + warnings.length);
-      if (warnings.length > 0) {
-        _.forEach(warnings, file => {
-          console.log(`\nFile: ${gutil.colors.cyan(file.basePath)} has the following warnings:\n`);
-          _.forEach(file.warnings, error => {
-            console.log(gutil.colors.yellow('   + ') + error);
-          })
-        })
-      }
-      console.log('')
-
-      let indexMappingHeader = [
-        '############################################################################################',
-        `# Mendix indexes redirect mapping, generated from \'gulp check:html\'`,
-        '############################################################################################',
-        ''
-      ];
-      let indexFiles = _.chain(files)
-        .filter(file =>
-          file.basePath.indexOf('/index.html') !== -1 &&
-          file.basePath !== '/index.html' &&
-          file.basePath !== '/search/index.html'
-        )
-        .map(file => { return {
-          to: file.basePath.replace(/index\.html/, ''),
-          from: file.basePath.replace(/\/index\.html/, '')
-        }; })
-        .sortBy(file => file.from.length)
-        .map(file => `${file.from} ${file.to};`)
-        .value();
-
-      let indexes = indexMappingHeader.concat(indexFiles).join('\n');
-      const indexDest = path.join(SOURCEPATH, '/mappings/indexes.map');
-
-      fs.writeFile(indexDest, indexes, err => {
-        if (err) {
-          gutil.log(`Error writing index mappings: ${err}`)
-          opts.callback(true);
-        } else {
-          gutil.log(`Index mappings written to ${indexDest}`);
-          if (errors.length === 0) {
-            if (files.length === 0) {
-              console.log(`It seems there are no files to check. This looks bad`);
-              opts.callback(true);
-            } else {
-              opts.callback(false);
-            }
-          } else {
-            opts.callback(true);
-          }
-        }
-      });
+      allFiles = files;
+      checkHTMLFiles(opts);
     })
     .catch(err => {
       helpers.gulpErr('htmlproofer', err);

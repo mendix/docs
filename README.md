@@ -43,3 +43,9 @@ This will take a while. It will install all dependencies you need. You can also 
 Running the server is done by executing the following command: `npm run server`
 
 It takes a few seconds (Windows can take longer) to build the site and setup the server. If it's done, open a browser and go to [http://localhost:4000](http://localhost:4000)
+
+### Gulp tasks
+
+Make sure you have Gulp installed first: `npm install gulp -g`. By running `gulp help` you can access the different tasks that are used when building the website.
+
+**Please note that the task `check:html` is currently broken in Windows**

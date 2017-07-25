@@ -1,0 +1,14 @@
+$block: 'mx';
+
+.#{$block} {
+  @include element('sidebar') {
+    border-top: $border-color 1px solid;
+    background: $color-background-grey;
+    @include mq("sm") {
+      border-top-width: 0;
+    }
+    @include mq("sm", max) {
+      background: $color-white;
+    }
+  };
+}

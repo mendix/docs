@@ -272,5 +272,6 @@ const indexFiles = (opts) => {
 };
 
 module.exports = {
-  run: indexFiles
+  run: indexFiles,
+  readSourceFiles
 };

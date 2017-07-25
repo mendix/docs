@@ -1,0 +1,12 @@
+{{- $algolia := index .Site.Params "algolia" }}
+{{- $appId := index $algolia "application_id" -}}
+{{- $indexName := index $algolia "index_name" -}}
+{{- $key := index $algolia "read_only_api_key" -}}
+  <script>
+    window.ALGOLIA_CONFIG = {
+      'appId': '{{ $appId }}',
+      'indexName': '{{ $indexName }}',
+      'apiKey': '{{ $key }}',
+      'urlSync': true
+    }
+  </script>

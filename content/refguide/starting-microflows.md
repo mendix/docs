@@ -31,7 +31,7 @@ This is the microflow that will be executed. Its parameters should match the ava
 
 You can create a new microflow by clicking 'Select...' and then 'New'. Modeler will generate a microflow with parameters matching all available arguments. If a parameter is not used it can simply be deleted.
 
-{{% alert %}}
+{{% /alert %}}
 
 ## 3 Microflow arguments
 
@@ -49,7 +49,7 @@ This property indicates whether the connected microflow is executed synchronousl
 
 Set the duration only to asynchronous if you experience problems. Sometimes if a request takes too long to handle, the request will be sent again by an (impatient) proxy server.
 
-{{% alert %}}
+{{% /alert %}}
 
 | Value | Description |
 | --- | --- |

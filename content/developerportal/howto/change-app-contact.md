@@ -1,6 +1,5 @@
 ---
 title: "Change App Contact"
-space: "Developer Portal"
 category: "How-To's"
 description: "Describes how to change an App Contact in the Developer Portal."
 tags: ["App Contact","Developer Portal"]

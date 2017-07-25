@@ -178,7 +178,7 @@ To connect the text box widgets to the Employee entity attributes, follow these 
 
     ![](attachments/build-an-employee-directory-app/entity-employee.png)
 
-4. Select the text box with the **Name** caption and connect it to the the **Name** attribute of the **Employee** entity.
+4. Select the text box with the **Name** caption and connect it to the **Name** attribute of the **Employee** entity.
 
     ![](attachments/build-an-employee-directory-app/name-attribute.png)
 

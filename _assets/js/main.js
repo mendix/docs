@@ -126,7 +126,7 @@
           catID = normalizeId(spaceID) + '-category-' + id;
           $cat = $('<div class="category" id="' + catID + '" />'),
           getPages = data.pages.filter(function (page) { return page.c && page.c.toLowerCase() === cat.toLowerCase(); }),
-          catPage = data.pages.filter(function (page) { return page.t.toLowerCase() === cat.toLowerCase(); });
+          catPage = data.pages.filter(function (page) { return page.t.toLowerCase() === cat.toLowerCase() && typeof page.p === 'undefined'; });
 
       if (catPage.length > 1) {
         console.log('Problem with ' + spaceID + ', multiple category pages found for: ' + catID, catPage);

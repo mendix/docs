@@ -80,7 +80,7 @@ const parseHtmlFiles = files => {
         }
       });
 
-      $('h1,h2,h3,h4,h5', '.post-content').each((i, el) => {
+      $('h1,h2,h3,h4,h5', '.mx__page__content').each((i, el) => {
         var $el = $(el),
             id = $el.attr('id');
 

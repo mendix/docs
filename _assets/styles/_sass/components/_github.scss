@@ -1,0 +1,39 @@
+.github {
+  &_file_info {
+    color: #949494;
+    @include border-radius(3px);
+    font-size: 12px;
+    border: 1px solid #c9e6f2;
+    display: none;
+    &_header {
+      background: #f2f9fc;
+      padding: 0.4em;
+    }
+    &_contributors {
+      border-top: 1px solid #c9e6f2;
+      padding: 0.4em;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      margin-left: 4px;
+      @include border-radius(3px);
+    }
+  }
+  &-edit-button {
+    float: right;
+    background-color: $white-smoke;
+    border-color: $white-smoke;
+    color: $link-color;
+    font-weight: 100;
+    @include border-radius(2em);
+    @include clearfix();
+    font-size: 12px;
+    i {
+      top: 0.1em;
+    }
+    span {
+      padding-left: 0.5em;
+    }
+  }
+}

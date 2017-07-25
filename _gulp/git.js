@@ -54,7 +54,7 @@ const walkFolder = folder => {
 
 const getLastCommit = (folder, filename) => {
   return new Promise((resolve, reject) => {
-    getCommits(folder + '/.git', filename)
+    getCommits('.git', `./content/${filename}`)
       .then(commits => {
         const commit = _.chain(commits)
           .sortBy(c => c.author.timestamp)
@@ -103,10 +103,12 @@ const getCommitsFolder = (folder, verbose) => {
               cb();
             })
             .catch(err => {
+              console.log(err);
               cb(err.message);
             })
         }, (err) => {
           if (err) {
+            console.log(err);
             reject(err);
           } else {
             resolve(commitsObj)

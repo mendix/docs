@@ -39,7 +39,7 @@ You can re-activate Two-Factor Authentication by triggering any action that requ
 
 Team members with **App Team - Deploy Permissions** are authorized to have **node permissions**. The Technical Contact can grant those members different permissions that can differ per environment. 
 
-For example, you might want to limit external developers to only access the acceptance environment.... (instead of unexperienced)
+For example, you might want to limit external developers to only access the acceptance environment.
 
 
 For more information, see [Security - Node Permissions](/developerportal/settings/node-permissions).

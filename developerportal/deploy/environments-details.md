@@ -14,7 +14,7 @@ To enter the **Environmen details** page, go to the [Developer Portal](http://ho
 
 ## 2 General tab
 
-   ![](attachments/.png)   
+   ![](attachments/environments-tab.png)   
 
 The view of the **General** tab depends on which Mendix Cloud version the app is hosted on. In this tab, you can find the following information about your environment:
 

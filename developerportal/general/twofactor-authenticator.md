@@ -13,7 +13,7 @@ This document describes the goal and the fuctionality of the Two-Factor Authenti
 
 ## 2 The Puropose
 
-Two-factor authentication (2FA) validates your password and is required for Mendix Cloud node activities done in a **production environment**. 2FA ensures that you are authenticated when performing sensitive activities, such as deploying packages and monitoring the production environment.
+Two-factor authentication (2FA) validates a second authentication mechanism next to your password. It is required for Mendix Cloud node activities done on a **production environment**. 2FA ensures that you are authenticated when performing sensitive activities, such as deploying packages and handling production data.
 
     ![](attachments/production.png)
 
@@ -34,13 +34,13 @@ After entering the authentication code, your browser session is authorized for t
 See [How to Set up your Two-Factor Authentication with Google](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator).
 
 If you chage your device or your phone number, you must contact [Mendix Support](https;//support.mendix.com) to disable the Authenticator on your **Mendix Account**.
-By triggering any action that requires two-factor authentication on your production environment after it's been disabled, you can set it up again.
+You can re-activate Two-Factor Authentication by triggering any action that requires two-factor authentication on your production environment. 
 
 ## 5 Technical Contact
 
-Team members with **App Team - Deploy Permissions** are authorized to have **node permissions**. The Technical Contact can grand those members different permissions that can differ per environment. 
+Team members with **App Team - Deploy Permissions** are authorized to have **node permissions**. The Technical Contact can grant those members different permissions that can differ per environment. 
 
-For example, unexperienced team members are only allowed on the **acceptance environment** and will not be able to perform operations on the **production environment**.
+For example, you might want to limit external developers to only access the acceptance environment.... (instead of unexperienced)
 
 
 For more information, see [Security - Node Permissions](/developerportal/settings/node-permissions).

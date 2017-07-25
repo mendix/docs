@@ -1,0 +1,3 @@
+<span class="mx__reading-time__time">{{- .ReadingTime -}}</span>
+<span class="mx__reading-time__time">minute{{ if not (eq .ReadingTime 1) }}s{{ end }} to read</span>
+{{ "<!-- " | safeHTML }} Words: {{ .WordCount }} {{ "-->" | safeHTML }}

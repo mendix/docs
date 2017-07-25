@@ -108,24 +108,24 @@ After clicking [Details](/developerportal/deploy/environments-details) of the se
 
 This section shows the following activity types:
 
-* Backup Created - a backup has been manually created
-* Backup Expired
-* Backup Restore Started - a backup restore has been manually started
-* Backup Restored - the backup restore has been restored
-* Clean
-* Custom Domain
-* Database Backup Downloaded
-* Deployment
-* Error
-* Files Backup Downloaded
-* Maintenance
-* MDA Uploaded
-* Started Manually
-* Stopped Manually
-* Technical Contact Changed
-* Toggled Legacy Complex Webserver Config
-* Toggled Request Handler
-* Transportation
+Activity type | Explanation
+------------ | -------------
+Backup Created | a backup has been manually created
+Backup Expired | a backup has been expired after its expiration period
+Backup Restore Started | a backup restore has been manually started
+Backup Restored | the backup restore has been restored
+Clean | the environment has been cleaned
+Custom Domain | changes were made to the custom domain
+Database Backup Downloaded | the database backup has been downloaded
+Migration | the app has been migrated from one node to another node within the same Mendix Cloud version
+Error | error has occured while uploading a '.mda' file
+Files Backup Downloaded | backup files have been downloaded ?
+Maintenance | the admin password has been changed
+MDA Uploaded | a '.mda' file has been uploaded
+Started Manually | the application has been started manually
+Stopped Manually | the application has been stopped manually
+Technical Contact Changed | the Technical Contact has been changed
+Transportation | a new deployment package has been transported to an enviornment
 
 ## 3 Custom Domain
 

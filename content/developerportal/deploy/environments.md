@@ -117,11 +117,11 @@ Backup Restored | the backup restore has been restored
 Clean | the environment has been cleaned
 Custom Domain | changes were made to the custom domain
 Database Backup Downloaded | the database backup has been downloaded
-Migration | the app has been migrated from one node to another node within the same Mendix Cloud version
-Error | error has occured while uploading a '.mda' file
-Files Backup Downloaded | backup files have been downloaded ?
+Migration | the app has been migrated from one node to another node
+Error | error has occured while uploading an '.mda' file
+Files Backup Downloaded | backup files have been downloaded
 Maintenance | the admin password has been changed
-MDA Uploaded | a '.mda' file has been uploaded
+MDA Uploaded | an '.mda' file has been uploaded
 Started Manually | the application has been started manually
 Stopped Manually | the application has been stopped manually
 Technical Contact Changed | the Technical Contact has been changed

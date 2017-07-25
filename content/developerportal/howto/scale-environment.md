@@ -7,7 +7,7 @@ tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-To scale an evironment of your app, you will need to have a licensed app. All apps that are becoming licensed after April 2017, will be by default hosted in Mendix Cloud Version 4.
+To scale an evironment of your app, you will need to have a licensed app in the Enterprise plan. All licensed apps created after April 2017 will be by default hosted in Mendix Cloud Version 4.
 
 **This how-to will teach you how to do the following:**
 
@@ -53,7 +53,7 @@ If you want to scale your licensed app in Mendix Cloud v4, follow these instruct
 If you have 1GB RAM of the **Total Allocated Memory**, you have 1 **instance** available to store your memory. 
 To scale your memory over multiple instances you need more memory.
 
-    ![](attachments/deploy/scale.png) 
+   ![](attachments/deploy/scale.png) 
 
 ### 4.1 Scaling Example 1
 
@@ -67,7 +67,7 @@ You don't need to use the whole memory at once. You can just use part of it and 
 
 For example, you can use one **instance** and store 4GB of RAM in there. The other 12GB of RAM will be unused.
 
-    ![](attachments/deploy/scaling.png)
+   ![](attachments/deploy/scaling.png)
 
 
 ## 5 Related Content

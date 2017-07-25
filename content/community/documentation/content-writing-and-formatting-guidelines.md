@@ -87,9 +87,9 @@ Some tips to consider when formatting Markdown are listed below.
 To format note styles, implement the following:
 
 ```html
-{{% alert type="info" %}}{% raw %}
+{{%/* alert type="info" */%}}
 Your note
-{% endraw %}{{% /alert %}}
+{{%/* /alert */%}}
 ```
 
 {{% alert type="info" %}}
@@ -99,22 +99,14 @@ Your note
 and
 
 ```html
-{{% alert type="warning" %}}{% raw %}
+{{%/* alert type="warning" */%}}
 Your note
-{% endraw %}{{% /alert %}}
+{{%/* /alert */%}}
 ```
 
 {{% alert type="warning" %}}
 Your note
 {{% /alert %}}
-
-### 4.4.2 Class
-
-If you need to add a class to a link, add extra attributes using `{ }`.
-
-We use this for our links that are **Download** buttons: `[Download](#){: .btn.btn-primary}`
-
-This will result in: [Download](#){: .btn.btn-primary}
 
 # 5 Guidelines for Writing and Formatting the How-To's
 

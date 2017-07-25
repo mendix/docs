@@ -8,7 +8,7 @@ let reload_timer;
 let TIMEOUT = 500;
 
 const spawnHugo = (watch, cb, bsync) => {
-  const jekyll_indicator = gutil.colors.cyan("[HUGO]");
+  const indicator = gutil.colors.cyan("[HUGO]");
   const doneStr = 'total in';
   const syncStr = 'Syncing';
   const child = spawn('hugo', [
@@ -23,7 +23,7 @@ const spawnHugo = (watch, cb, bsync) => {
   child.stdout.on('data', data => {
       _.each(data.split('\n'), line => {
         if (line) {
-          gutil.log(jekyll_indicator, line);
+          gutil.log(indicator, line);
           if ((line.indexOf(doneStr) !== -1 || line.indexOf(syncStr) !== -1) && watch) {
             if (bsync) {
               if (reload_timer) {
@@ -47,7 +47,7 @@ const spawnHugo = (watch, cb, bsync) => {
   child.stderr.on('data', data => {
       _.each(data.split('\n'), line => {
         if (line) {
-          gutil.log(jekyll_indicator, gutil.colors.red(line));
+          gutil.log(indicator, gutil.colors.red(line));
           if (line.indexOf('ERROR') !== -1) {
             if (cb) {
               cb(1);
@@ -60,7 +60,7 @@ const spawnHugo = (watch, cb, bsync) => {
   });
 
   child.on('close', function(code) {
-      gutil.log(jekyll_indicator, "Closed with exit code", code);
+      gutil.log(indicator, "Closed with exit code", code);
       if (cb && _.isFunction(cb)) {
         cb(code);
       }

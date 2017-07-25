@@ -37,6 +37,15 @@ const touchFile = filePath => {
   }
 }
 
+const getAllFiles = (dir) => new Promise((resolve, reject) => {
+  recursive(dir, [], (err, files) => {
+    if (err) {
+      return reject(err);
+    }
+    resolve(files);
+  });
+});
+
 const getFiles = (dir, ext) => {
   const extName = ext || '.html';
   return new Promise((resolve, reject) => {
@@ -61,31 +70,27 @@ const getGenerateFiles = (dir) => {
   });
 };
 
-const readHtmlFile = filePath => {
-  return new Promise((resolve, reject) => {
-    readFile(filePath, "utf8").then(content => {
-      resolve({
-        path: filePath,
-        content: content,
+const readHtmlFile = filePath => new Promise((resolve, reject) => {
+  readFile(filePath, "utf8").then(content => {
+    resolve({
+      path: filePath,
+      content: content,
+      links: [],
+      images:[],
+      anchors: [],
+      anchorLinks: [],
+      external: {
         links: [],
-        images:[],
-        anchors: [],
-        anchorLinks: [],
-        external: {
-          links: [],
-          images: [],
-          mailto: []
-        },
-        errors: [],
-        warnings: []
-      });
-    }).catch(reject);
-  });
-};
+        images: [],
+        mailto: []
+      },
+      errors: [],
+      warnings: []
+    });
+  }).catch(reject);
+});
 
-const readHtmlFiles = paths => {
-  return Promise.all(_.map(paths, file => readHtmlFile(file)));
-};
+const readHtmlFiles = paths => Promise.all(_.map(paths, file => readHtmlFile(file)));
 
 const checkLink = (url, cb) => {
   request({
@@ -178,6 +183,7 @@ module.exports = {
   touch: touchFile,
   isFile,
   getFiles,
+  getAllFiles,
   readHtmlFile,
   readHtmlFiles,
   readFile,

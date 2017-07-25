@@ -9,7 +9,6 @@ const server      = require('./_gulp/server');
 const hugo        = require('./_gulp/hugo');
 const helpers     = require('./_gulp/helpers');
 const mappings    = require('./_gulp/mappings');
-const git         = require('./_gulp/git');
 const htmlproofer = require('./_gulp/htmlproofer');
 const algolia     = require('./_gulp/algolia');
 const menu_check  = require('./_gulp/menu_check');
@@ -39,16 +38,9 @@ const paths = {
     src: '_assets/styles/**/*.scss',
     dest: 'static/public/styles'
   },
-  images: {
-    src: '_assets/images/**/*',
-    dest: 'static/public/images'
-  },
   scripts: {
     src: '_assets/js/**/*.js',
     dest: 'static/public/js'
-  },
-  menu: {
-    src: 'static/json'
   },
   content: {
     pages: [
@@ -105,30 +97,6 @@ gulp.task('write:mappings', `Write mappings from _assets/mappings/redirect.json 
     });
 });
 
-gulp.task('write:githistory', `Write git_history to data`, done => {
-  if (process.env['BUILD'] === 'production') {
-    git.getCommits(CONTENTFOLDER, true)
-      .then(commits => {
-        yaml('data/history.yml', commits, err => {
-          if (err) {
-            throwErr('write:githistory', `Error writing githistory: ${err}`);
-            return process.exit(2);
-          }
-          gutil.log(gutil.colors.cyan('[GIT-HISTORY]') + ` Git history written to ${gutil.colors.cyan(path.join(CURRENTFOLDER, '/data/history.yml'))}`)
-          done();
-        });
-      })
-      .catch(err => {
-        helpers.gulpErr('write:githistory', `Error with reading git history:`, err);
-        return process.exit(2);
-      })
-  } else {
-    gutil.log(gutil.colors.cyan("[GIT-HISTORY]") + ' skipping history on tests, use environment variable: BUILD_ENV=production');
-    helpers.touch(path.join(CURRENTFOLDER, '/data/history.yml'));
-    done();
-  }
-});
-
 gulp.task('write:assetmappings', `Write asset mappings to ${DIST_FOLDER}/mappings/assets.map`, done => {
   helpers
     .writeAssetMappings(CURRENTFOLDER)
@@ -164,13 +132,6 @@ const writeMenu = (exitOnError) => {
 }
 
 gulp.task('write:menu', `Write menu jsons (development)`, writeMenu(false));
-
-// COPY
-gulp.task('copy:images', `Copy images from _assets folder`, () => {
-  return gulp
-    .src(paths.images.src)
-    .pipe(gulp.dest(paths.images.dest));
-});
 
 //WATCH
 gulp.task('js-watch', `Internal task, don't use`, ['build:js'], function (done) {
@@ -216,7 +177,7 @@ gulp.task('build:hugo', `Build`, [], done => {
 gulp.task('build:menu', `Build menu jsons (production)`, writeMenu(true));
 
 gulp.task('build', `BUILD. Used for production`, done => {
-  runSequence('clean', 'write:mappings', ['build:menu', 'build:sass', 'copy:images', 'build:js'], 'write:assetmappings', 'build:hugo', 'check', (err) => {
+  runSequence('clean', 'write:mappings', ['build:menu', 'build:sass', 'build:js'], 'write:assetmappings', 'build:hugo', 'check', (err) => {
       //if any error happened in the previous tasks, exit with a code > 0
       if (err) {
         var exitCode = 2;
@@ -247,7 +208,7 @@ gulp.task('dev:sass', `Sass build (dev task, sourcemaps included)`, ['clean:css'
     .pipe(gulp.dest(DATAFOLDER));
 });
 
-gulp.task('dev', ``, ['dev:sass', 'copy:images', 'build:js', 'write:menu', 'build:hugo'], done => {
+gulp.task('dev', ``, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done => {
   server.spawn(CURRENTFOLDER);
   hugo.spawn(true, false, browserSync);
   browserSync.init({
@@ -258,9 +219,6 @@ gulp.task('dev', ``, ['dev:sass', 'copy:images', 'build:js', 'write:menu', 'buil
   });
   gulp.watch(paths.styles.src, ['dev:sass']);
   gulp.watch(paths.scripts.src, ['js-watch']);
-  gulp.watch(paths.images.src, ['copy:images']);
-  // gulp.watch(paths.content.pages, ['write:menu']);
-  // gulp.watch(paths.content.all, ['build:hugo']);
   gutil.log(`\n\n*********\nOpen your browser with this address: ${gutil.colors.cyan(`localhost:${PORT}`)}\n*********\n`);
 });
 

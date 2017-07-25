@@ -14,9 +14,15 @@ This document describes known issues starting with Mendix version 7.0.2. For kno
 
 For details on this release, see [7.5 release notes](7.5).
 
+### 7.5.1<a name="KI751"></a>
+
+* For Atlas-based apps, it is not possible to use the **Generate page** functionality for buttons in the **Tablet** and **Phone** profiles. The **Create Page** dialog box shows no selectable page templates for these profiles.
+  * **Workaround:** select **File** > **New Document** > **Page** and set this newly created page in the **Page** property of the button.
+
 ### 7.5.0<a name="KI750"></a>
 
 * The Mendix Web Modeler is not enabled when you create an Atlas UI-based app in the Mendix Desktop Modeler. Here is a workaround: Atlas UI-based apps created in the [Mendix Portal](https://home.mendix.com) do have the Mendix Web Modeler enabled.
+  * Fixed in [7.5.1](7.5#RN751)
 
 ## 7.4
 
@@ -60,7 +66,7 @@ For details on this release, see [7.1 release notes](7.1).
 * The offline functionality for mobile apps is broken.
     * Fixed in [7.1.1](7.1#RN711).
 
-## 7.0 
+## 7.0
 
 For details on this release, see [7.0 release notes](7.0).
 

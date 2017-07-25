@@ -19,6 +19,7 @@ To scale an evironment of your app, you will need to have a licensed app. All ap
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * You have a licensed app hosted in Mendix Cloud v4
+* The runtime of the app is Mendix 7.0 or higher
 
 ## 3 Mendix Cloud Version
 

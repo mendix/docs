@@ -7,7 +7,7 @@ tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-Licensed apps in the Mendix Cloud can be scaled n various ways. Memory can be added to the application container. This is called vertical scaling. Mendix 7+ apps created after April 2017 and running on Mendix Cloud v4 can be scaled horizontally as well, in that case multiple runtime containers will run simultaneously. Incoming traffic for your app is randomly distributed over the running instances. Only the first instance will excecute [Scheduled events](/refguide/scheduled-events).
+Licensed apps in the Mendix Cloud can be scaled in various ways. Memory can be added to the application container. This is called vertical scaling. Mendix 7+ apps running on Mendix Cloud v4 can be scaled horizontally as well, in that case multiple runtime containers will run simultaneously. Incoming traffic for your app is randomly distributed over the running instances. Only the first instance will excecute [Scheduled events](/refguide/scheduled-events).
 
 **This how-to will teach you how to do the following:**
 

@@ -1,6 +1,5 @@
 ---
 title: "Add Extra Company Admins"
-space: "Developer Portal"
 category: "How-To's"
 description: "Describes how to add a company admin in the Developer Portal."
 tags: ["Company Admin","Developer Portal"]

@@ -1,8 +1,8 @@
 ---
 title: "Receive Environment Status Alerts"
 category: "How-to's"
-description: "This page describes the role of a technical contact."
-tags: ["Technical Contact","Settings","Developer Portal"]
+description: "This page describes how to receive environment status alerts."
+tags: ["Technical Contact","Settings","Alerts","Developer Portal"]
 ---
 
 ## 1 Introduction

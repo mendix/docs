@@ -204,8 +204,8 @@ GET /api/ 1 /apps/calc/environments/ HTTP/ 1.1
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 ### <a rel="nofollow"></a>Output
@@ -313,8 +313,8 @@ POST /api/ 1 /apps/calc/environments/Acceptance/start HTTP/ 1.1
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 {
      "AutoSyncDb" :  true
@@ -365,8 +365,8 @@ GET /api/ 1 /apps/calc/environments/Acceptance/start/02df2e50-0e79-11e4- 9191 -0
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 ### <a rel="nofollow"></a>Output
@@ -421,8 +421,8 @@ POST /api/ 1 /apps/calc/environments/Acceptance/stop HTTP/ 1.1
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 ### <a rel="nofollow"></a>Output
@@ -461,8 +461,8 @@ GET /api/ 1 /apps/calc/environments/Acceptance/ package HTTP/ 1.1
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 ### <a rel="nofollow"></a>Output
@@ -529,13 +529,13 @@ POST /api/ 1 /apps/calc/packages/upload HTTP/ 1.1
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 Curl example:
 ```bash
-curl -v -F "file=@/tmp/some.mda" -X POST -H "Mendix-Username: richard.ford51 @example .com" -H "Mendix-ApiKey: 26587896 -1cef- 4483 -accf-ad304e2673d6" "https://deploy.mendix.com/api/1/apps/calc/packages/upload" -F 'Name=some.mda'
+curl -v -F "file=@/tmp/some.mda" -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/1/apps/calc/packages/upload" -F 'Name=some.mda'
 ```
 
 ### <a name="DeployAPI-Ouput" rel="nofollow"></a>Ouput
@@ -575,8 +575,8 @@ POST /api/ 1 /apps/calc/environments/acceptance/transport HTTP/ 1.1
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 {
      'PackageId' :  'b3d14e53-2654-4534-b374-9179a69ef3cf'
@@ -623,8 +623,8 @@ POST /api/ 1 /apps/calc/environments/acceptance/clean HTTP/ 1.1
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 ### <a rel="nofollow"></a>Output
@@ -664,8 +664,8 @@ GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 ### <a rel="nofollow"></a>Output
@@ -728,8 +728,8 @@ GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 {
      "Constants" : [{

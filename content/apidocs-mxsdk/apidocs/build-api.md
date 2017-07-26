@@ -37,8 +37,8 @@ GET /api/ 1 /apps/calc/packages/ HTTP/ 1.1
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 ### <a name="BuildAPI-Output" rel="nofollow"></a>Output
@@ -111,8 +111,8 @@ GET /api/ 1 /apps/calc/packages/b3d14e53- 2654 - 4534 -b374-9179a69ef3cf HTTP/ 1
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 ### <a rel="nofollow"></a>Output
@@ -173,8 +173,8 @@ DELETE /api/ 1 /apps/calc/packages/b3d14e53- 2654 - 4534 -b374-9179a69ef3cf HTTP
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 <a rel="nofollow"></a>Error codes
@@ -206,8 +206,8 @@ GET /api/ 1 /apps/calc/packages/b3d14e53- 2654 - 4534 -b374-9179a69ef3cf/downloa
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
 ### <a name="BuildAPI-Ouput" rel="nofollow"></a>Ouput
@@ -251,8 +251,8 @@ POST /api/ 1 /apps/calc/packages/ HTTP/ 1.1
 Host: deploy.mendix.com
 
 Accept: */*
-Mendix-Username: richard.ford51 @example .com
-Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 {
      "Revision" :  63 ,

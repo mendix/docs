@@ -519,17 +519,23 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload (https://depl
 ##### <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Subdomain name of an app.
-*   _Raw body_: Deployment package as a file.
+*   _Name_ (String): Name of the deployment package as query parameter
+*   _file_ (File): Deployment package as multipart/form-data
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 POST /api/ 1 /apps/calc/packages/upload HTTP/ 1.1
 Host: deploy.mendix.com
 
 Accept: */*
 Mendix-Username: richard.ford51 @example .com
 Mendix-ApiKey:  26587896 -1cef- 4483 -accf-ad304e2673d6
+```
+
+Curl example:
+```bash
+curl -v -F "file=@/tmp/some.mda" -X POST -H "Mendix-Username: richard.ford51 @example .com" -H "Mendix-ApiKey: 26587896 -1cef- 4483 -accf-ad304e2673d6" "https://deploy.mendix.com/api/1/apps/calc/packages/upload" -F 'Name=some.mda'
 ```
 
 ### <a name="DeployAPI-Ouput" rel="nofollow"></a>Ouput

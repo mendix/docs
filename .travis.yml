@@ -43,7 +43,6 @@ branches:
   only:
   - master
   - development
-  - travis_improvements
 deploy:
 - provider: script
   script:
@@ -53,6 +52,5 @@ deploy:
     branch:
       - master
       - development
-      - travis_improvements
 after_deploy:
   - ./_scripts/algolia.sh

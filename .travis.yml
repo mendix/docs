@@ -24,7 +24,6 @@ before_install:
   - export PATH=$HOME:$PATH
   - export HUGO_PACKAGE=hugo_${HUGO_VERSION}_Linux-64bit
   - travis_retry curl -L https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/$HUGO_PACKAGE.tar.gz | tar xz
-  - mkdir $HOME/bin
   - chmod +x ./hugo
   - mv ./hugo $HOME/bin/hugo
   #- ./_scripts/install_hugo.sh
@@ -36,6 +35,8 @@ before_deploy:
   - export PATH=$HOME:$PATH
   - travis_retry curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&version=$CF_CLI_VERSION"
   - tar xzvf $HOME/cf.tgz -C $HOME
+  - chmod +x $HOME/cf
+  - mv $HOME/cf $HOME/bin/cf
   - ./_scripts/before_deploy.sh
 script:
   - gulp build

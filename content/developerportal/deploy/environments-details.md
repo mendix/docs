@@ -2,7 +2,7 @@
 title: "Environment Details"
 category: "Deploy"
 description: "Describes the environmental details of your app."
-tags: ["Deploy","App","Developer Portal"]
+tags: ["Deploy","App","Environment","Developer Portal"]
 ---
 
 ## 1 Introduction

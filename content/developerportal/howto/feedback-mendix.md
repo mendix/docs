@@ -40,7 +40,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Providing Feedback on Mendix
 
-1. Click the **Feedback** button on the right side of the screen.
+1. In the [Developer Portal](http://home.mendix.com) click the **Feedback** button on the right side of the screen.
 2. Fill in the feedback you want to send to Mendix. A description of the feedback and a screenshot of the screen are optional but recommended.
 3. Click **Send Feedback**:
 

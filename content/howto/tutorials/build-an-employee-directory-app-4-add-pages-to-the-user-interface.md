@@ -16,7 +16,7 @@ This is the fourth and final how-to in a series on creating an employee director
 * Connect pages to a domain model 
 * Use the Google Maps Widget
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/EM4m40NJFFY?rel=0" frameborder="0" allowfullscreen></iframe>
+{{% youtube EM4m40NJFFY %}}
 
 ## 2 Prerequisites
 

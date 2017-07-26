@@ -15,6 +15,8 @@ This how-to takes you through the basics of development in the Mendix Web Modele
 * Start editing an app in the Web Modeler
 * Explore the different parts of the Web Modeler
 
+<iframe width="853" height="480" src="https://www.youtube.com/embed/kF00Gh12z2Y?rel=0" frameborder="0" allowfullscreen></iframe>
+
 ## 2 Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisite:

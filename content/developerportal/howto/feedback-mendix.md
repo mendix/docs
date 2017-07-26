@@ -10,7 +10,12 @@ tags: ["Feedback","Widget","Developer Portal","Mendix"]
 Within Mendix, there are two use cases for the Feedback widget:
 
 * To provide feedback on your own app
-* To provide feedback on Mendix apps
+
+![](attachments/collaborate/feedback-app.png)
+
+* To provide feedback on the Mendix Platform
+
+![](attachments/collaborate/feedback-portal.png)
 
 The purpose of the feedback on Mendix is to provide low priority issues, questions, and ideas on how to improve the Mendix platform.
 
@@ -20,7 +25,7 @@ The **Feedback** button is not a support option. If there are any platform probl
 
 {{% /alert %}}
 
-You can provide feedback on Mendix on the following pages:
+You can provide feedback on the Mendix Platform on the following pages:
 
 * [Mendix documentation](http://docs.mendix.com)
 * [Developer Portal](http://home.mendix.com)
@@ -29,7 +34,7 @@ You can provide feedback on Mendix on the following pages:
 
 **This how-to will teach you how to do the following:**
 
-* Add a feedback story to Mendix
+* Add a feedback story to the Mendix Platform page
 * View a list of your own provided feedback
 
 ## 2 Prerequisites

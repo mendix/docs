@@ -15,7 +15,7 @@ Now that you've gotten started with your app and have worked with some of the de
 * View the app in a browser
 * View the app on a device
 
-<iframe width="853" height="480" src="https://www.youtube.com/embed/vEU9kSDfnxw?rel=0" frameborder="0" allowfullscreen></iframe>
+{{% youtube vEU9kSDfnxw %}}
 
 ## 2 Prerequisites
 

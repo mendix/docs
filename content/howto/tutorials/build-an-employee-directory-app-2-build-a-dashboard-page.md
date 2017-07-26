@@ -18,6 +18,8 @@ This is the second how-to in a series of four on how to create an employee direc
 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/AVI-jRt7y4M?rel=0" frameborder="0" allowfullscreen></iframe>
 
+{{% youtube AVI-jRt7y4M %}}
+
 ## 2 Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisite:

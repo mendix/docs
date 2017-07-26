@@ -37,9 +37,11 @@ before_deploy:
   - tar xzvf $HOME/cf.tgz -C $HOME
   - chmod +x $HOME/cf
   - mv $HOME/cf $HOME/bin/cf
+  - cp ./_scripts/autopilot-linux $HOME/
+  - chmod a+x $HOME/autopilot-linux
   - ./_scripts/before_deploy.sh
 script:
-  - gulp build
+  - gulp help
 cache:
   yarn: true
 branches:

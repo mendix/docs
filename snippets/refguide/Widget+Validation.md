@@ -1,6 +1,6 @@
 <div class="alert alert-info">{% markdown %}
 
-The **Validation type** and **Validation message** properties were introduced in 7.5.0. They supersede the **Required** and **Required message** properties.
+The **Validation type** and **Validation message** properties were introduced in 7.6.0. They supersede the **Required** and **Required message** properties.
 
 {% endmarkdown %}</div>
 

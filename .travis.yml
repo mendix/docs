@@ -1,10 +1,6 @@
 sudo: false
 dist: trusty
 language: node_js
-addons:
-  apt:
-    packages:
-      - python-pygments
 env:
   global:
     - GET_ENV_VAR=./_scripts/get_env.sh
@@ -26,7 +22,6 @@ before_install:
   - travis_retry curl -L https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/$HUGO_PACKAGE.tar.gz | tar xz
   - chmod +x ./hugo
   - mv ./hugo $HOME/bin/hugo
-  #- ./_scripts/install_hugo.sh
 install:
   - rm -rf _site
   - yarn global add gulp
@@ -41,7 +36,7 @@ before_deploy:
   - chmod a+x $HOME/autopilot-linux
   - ./_scripts/before_deploy.sh
 script:
-  - gulp help
+  - gulp build
 cache:
   yarn: true
 branches:

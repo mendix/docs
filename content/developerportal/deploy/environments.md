@@ -7,7 +7,7 @@ tags: ["Deploy","App","Developer Portal"]
 
 ## 1 Introduction
 
-In the **Environments** section of the **Deploy** category, there is an overview of two pages:
+In the **Environments** section of the **Deploy** category, there is an overview of three tabs:
 
 * **Deploy**
     * Deployment Package Repository
@@ -16,37 +16,43 @@ In the **Environments** section of the **Deploy** category, there is an overview
 * **Custom Domain**
     * Certificates
     * Linked Custom Domains
+* **Access Restriction Profiles**
+    * IP Address Filtering
+    * TLS Client Certificate Verification
+    
+   ![](attachments/environment-tab.png)       
 
-## 2 Deployment Package Repository
+## 2 Deploy
 
-In the **Deployment Package Repository**, there is an overview of the following:
+In the **Deploy** tab, you can find the information below about your environment.
 
-*   Deployment Package
-*   Version
-*   Creation date
+### 2.1 Deployment Package Repository
+
+![](attachments/deployment-package.png)
+
+In the **Deployment Package Repository** section, there is an overview of the following:
+
+*   Deployment package
+*   Version of the deployment package
+*   Creation date of the deployment package
 *   Uploaded by
-*   Expire date
+*   Expire date of the deployment package
 
-There are also four actions you can perform:
+There are also four actions you can perform, which are described below.
 
-*   Create a package from Team Server
-*   Upload a deployment package
-*   View the details of the deployment package
-*   Deploy a deployment package
+#### 2.1.1 Creating a Package from Team Server
 
-### 2.1 Create a Package from Team Server
-
-In this section, you can select a branch containing the revision you would like to build.
+In this section, you can click **Create a Package from Team Server** and select a branch containing the revision you would like to build.
 
 Only branches where the latest revision is Mendix 5 and higher will be displayed here. If you need to build other revisions, please do so manually from the Mendix Modeler.
 
-### 2.2 Uploading
+#### 2.1.2 Uploading
 
 When you click **Upload**, you can upload an *.mda* file from your local device.
 
-### 2.3 Viewing the Details of the Deployment Package
+#### 2.1.3 Viewing the Details of the Deployment Package
 
-Next to the already mentioned deployment package info, the following items exist:
+Next to the deployment package info, if you click **Details**, the following items will be displayed:
 
 * Size of the package
 * Description of the package
@@ -58,13 +64,15 @@ There are also two action you can perform:
 * Download the package
 * Delete the package
 
-### 2.4 Deploying a Deployment Package
+#### 2.1.4 Deploying a Deployment Package
 
 If you click **Deploy**, the package from the team server will be transported to the environment that you select to upload.
 
-## 3 Environments
+### 2.2 Environments
 
-Here you have the an overview of all the available environments with the following details:
+![](attachments/deploy-environments.png)
+
+In this section, you have the an overview of all the available environments with the following details:
 
 * Name of the deployment package
 * The version of the deployment package
@@ -94,41 +102,46 @@ After clicking [Details](/developerportal/deploy/environments-details) of the se
 * Runtime
 * Maintenance
 
-## 4 Activities
+### 2.3 Activity
+
+![](attachments/activity.png)
 
 This section shows the following activity types:
 
-* Backup Created
-* Backup Expired
-* Backup Restore Started
-* Backup Restored
-* Clean
-* Custom Domain
-* Database Backup Downloaded
-* Deployment
-* Error
-* Files Backup Downloaded
-* Maintenance
-* MDA Uploaded
-* Started Manually
-* Stopped Manually
-* Technical Contact Changed
-* Toggled Legacy Complex Webserver Config
-* Toggled Request Handler
-* Transportation
+Activity Type | Explanation
+------------ | -------------
+Backup Created | A backup has been manually created.
+Backup Expired | A backup has been expired after its expiration period.
+Backup Restore Started | A backup restore has been manually started.
+Backup Restored | The backup restore has been restored.
+Clean | The environment has been cleaned.
+Custom Domain | Changes were made to the custom domain.
+Database Backup Downloaded | The database backup has been downloaded.
+Migration | The app has been migrated from one node to another node.
+Error | An error has occured while uploading an *.mda* file.
+Files Backup Downloaded | Backup files have been downloaded.
+Maintenance | The admin password has been changed.
+MDA Uploaded | An *.mda* file has been uploaded.
+Started Manually | The application has been started manually.
+Stopped Manually | The application has been stopped manually.
+Technical Contact Changed | The Technical Contact has been changed.
+Transportation | A new deployment package has been transported to an enviornment.
 
-## 5 Custom Domain
+## 3 Custom Domain
 
-On this page, you can manage your custom domain certificates.
+In this tab you can manage your custom domain certificates on an application level.
 
-When your Mendix App needs to be accessible via your own URL (for example, `https://myapp.mycompany.com/`), you have to provide a custom domain certificate (an SSL/TLS certificate) so that we can keep serving your Mendix app via a secure connection.
+When your Mendix app needs to be accessible via your own URL (for example, `https://myapp.mycompany.com/`), you have to provide a custom domain certificate (an SSL/TLS certificate) so that we can keep serving your Mendix app via a secure connection.
 
 There is also a section with an overview of linked custom domains.
 
 For more information, see [How to Configure Custom Domains](/developerportal/howto/custom-domains).
 
-## 6 Related Content 
+## 4 Access Restriction Profiles
+
+In this tab you can manage custom access restriction profiles. These profiles can combine IP range filters and client certificate verification. Access restriction profiles can be applied to path-based access restrictions in specific environments of the application.
+
+## 5 Related Content 
 
 *  [Deploy](/developerportal/deploy)
 *  [Environment Details](/developerportal/deploy/environments-details)
-*  [How to Configure Custom Domains](/developerportal/howto/custom-domains)

@@ -35,7 +35,7 @@ Create a new app in [Developer Portal](https://home.mendix.com) to create a new 
 
 {{% /alert %}}
 
-Learn how to [Create and Deploy Your First App](/howto7/getting-started/create-and-deploy-your-first-app).
+Learn how to [Create and Deploy Your First App](/howto/modeling-basics/create-and-deploy-your-first-app).
 
 ### 3.2 Link the new Free App to the v4 Node
 
@@ -69,7 +69,7 @@ Your app is now running in Mendix Cloud v4. If you don't need the Mendix Cloud v
 # 4 Related content
 
 *   [Certificates](/refguide/certificates)
-*   [Create and Deploy Your First App](/howto/getting-started/create-and-deploy-your-first-app)
+*   [Create and Deploy Your First App](/howto/modeling-basics/create-and-deploy-your-first-app)
 *   [How to Configure Custom Domains](custom-domains)
 *   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
 *   [How to Download a Backup](how-to-download-a-backup)

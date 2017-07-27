@@ -28,7 +28,7 @@ There are 2 ways to start receiving alerts.
 1. The Technical Contact can grant you the **Receive Alerts** permission in **Node Permissions**.
 2. You can click on the checkbox of **Email Alerts** on the **Alerts** page.
 
-## 2.1 Node Permissions  
+### 2.1 Node Permissions  
 
 The Technical Contact can grant you the **Receive Alerts** permission by following these steps:
 

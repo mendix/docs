@@ -77,11 +77,11 @@ The types are:
 
 Type | Explanation
 ------------ | -------------
-inserts | Amount of SQL 'INSERT INTO' statements per second. This is used to add new rows of data to a table in the database.
+inserts | Amount of SQL `INSERT INTO` statements per second. This is used to add new rows of data to a table in the database.
 transactions | Amount of SQL transactions per second. A transaction is a unit of work that is performed against a database.
-update | Amount of SQL 'UPDATE' statements per second. The SQL 'UPDATE' Query is used to modify the existing records in a table.
-select | Amount of SQL 'SELECT' statements per second. The SQL 'SELECT' statement is used to fetch the data from a database table which returns this data in the form of a result table.
-delete | Amount of SQL 'DELETE' statements per second. The SQL 'DELETE' Query is used to delete the existing records from a table.
+update | Amount of SQL `UPDATE` statements per second. The SQL `UPDATE` Query is used to modify the existing records in a table.
+select | Amount of SQL `SELECT` statements per second. The SQL `SELECT` statement is used to fetch the data from a database table which returns this data in the form of a result table.
+delete | Amount of SQL `DELETE` statements per second. The SQL `DELETE` Query is used to delete the existing records from a table.
 
 ### <a name="Trends-appmxruntimesessions"></a>3.3 User Accounts and Login Sessions
 

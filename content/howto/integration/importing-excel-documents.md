@@ -15,7 +15,7 @@ Before you continue, make sure that you know how to create:
 
 *   **Domain models** ([Creating a basic data layer](../data-models/create-a-basic-data-layer)).
 *   **Overview and detail pages** ([Creating your first two overview and detail pages](../guis/create-your-first-two-overview-and-detail-pages)).
-*   **Menu items **([Setting Up the Navigation Structure](../guis/setting-up-the-navigation-structure)).
+*   **Menu items** ([Setting Up the Navigation Structure](../guis/setting-up-the-navigation-structure)).
 *   **Microflows** ([Create your first Microflow: Hello World!](../logic-business-rules/create-your-first-microflow-hello-world)
 *   **Add Appstore** **content (** [Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler)).
 *   **Secure applications** ([Creating a secure app](../security/create-a-secure-app)).

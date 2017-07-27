@@ -25,9 +25,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 1. Go to the [Developer Portal](http://home.mendix.com).
 2. Click **Apps** in the top navigation panel.
-3. Click **My Apps**, and in the drop-down list, click **Nodes**.
+3.  Click **My Apps**, and in the drop-down list, click **Nodes**.
 
- ![](attachments/general/myapps.png)
+    ![](attachments/general/myapps.png)
 
 4. Select the node for which you want to change the Technical Contact.
 5. Click **Security** under the **Settings** category.

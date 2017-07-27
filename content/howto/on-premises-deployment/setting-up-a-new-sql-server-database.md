@@ -32,11 +32,11 @@ The database schema needs to be configured so that the **Read Committed Snapshot
 ```
 ALTER DATABASE [MySchema] SET READ_COMMITTED_SNAPSHOT ON;
 ```
-{% alert type=”info” %}
+<div class="alert alert-info">{% markdown %}
 
 You need to replace `MySchema` with the name of your schema.
 
-{% /alert %}
+{% endmarkdown %}</div>
 
 ## 4 Configuring the necessary SQL Server extensions
 
@@ -46,11 +46,11 @@ For the correct functioning of Mendix, some SQL Server extensions need to be ins
 CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM "D:\MyFolder\Mendix\server\runtime\lib\Mendix.SqlServerExtensions.dll" WITH PERMISSION_SET = SAFE;
 ```
 
-{% alert type=”info” %}
+<div class="alert alert-info">{% markdown %}
 
 Of course, the file path needs to be set to the corresponding file which is part of your Mendix installation.
 
-{% /alert %}
+{% endmarkdown %}</div>
 
 The permission above requires CLR to be enabled on the SQL Server instance. CLR can be enabled using this query:
 

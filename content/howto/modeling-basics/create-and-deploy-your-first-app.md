@@ -1,6 +1,6 @@
 ---
 title: "Create and Deploy Your First App"
-category: "Getting Started"
+category: "Modeling Basics"
 description: "Presents how to build your first app in Mendix and deploy it to the cloud."
 tags: []
 ---

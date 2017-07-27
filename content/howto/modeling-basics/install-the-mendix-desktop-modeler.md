@@ -1,6 +1,6 @@
 ---
 title: "Install the Mendix Desktop Modeler"
-category: "Getting Started"
+category: "Modeling Basics"
 description: "Follow this how-to to learn how to install the Mendix Desktop Modeler."
 toc-level: "2"
 ---
@@ -67,6 +67,6 @@ This concludes the how-to about installing the Mendix Desktop Modeler.
 
 ## 5 Related Content
 
-* [Desktop Modeler Overview](https://docs.mendix.com/refguide/desktop-modeler)
-* [Modeler](https://docs.mendix.com/refguide/modeler)
-* [Mendix Platform](https://docs.mendix.com/refguide/app-platform)
+* [Modeler](/refguide/modeler)
+* [Desktop Modeler Overview](/refguide/desktop-modeler)
+* [Mendix Platform](/refguide/app-platform)

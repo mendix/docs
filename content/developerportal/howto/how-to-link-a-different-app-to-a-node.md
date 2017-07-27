@@ -18,7 +18,7 @@ This how-to describes how to link a **different app** to your **licensed cloud n
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
-*   The app has the **Team Server** enabled. Read [this](/howto7/getting-started/create-and-deploy-your-first-app) how-to to learn how to create a collaboration app.
+*   The app has the **Team Server** enabled. Read [this](/howto/modeling-basics/create-and-deploy-your-first-app) to learn how to create a collaboration app.
 
 In case you have created an app in the **Mendix Modeler**, you can upload it to the **Team Server** (see [Upload To Team Server Dialog](/refguide7/upload-to-team-server-dialog)) and a repository will be created automatically.
 
@@ -48,7 +48,6 @@ App B → Node 2
 
 ## 6 Related Content
 
-*   [Create and Deploy Your First App](/howto6/create-and-deploy-your-first-app)
 *   [How to Configure Custom Domains](custom-domains)
 *   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
 *   [How To Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)

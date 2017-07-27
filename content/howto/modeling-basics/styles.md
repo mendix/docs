@@ -1,6 +1,6 @@
 ---
 title: "Implement Styles"
-category: "Getting Started"
+category: "Modeling Basics"
 description: "Presents details on using class names for text colors, buttons, and other style elements."
 tags: ["style", "class name", "user interface"]
 ---

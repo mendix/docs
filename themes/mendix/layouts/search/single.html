@@ -1,6 +1,6 @@
 {{ partial "header" . }}
   {{ partial "mx-general/header-old" . }}
-  <div class="mx__content">
+  <div class="mx__content mx__content--search">
     <div class="topbar topbar--search">
       <div class="container">
         <div class="row">
@@ -14,16 +14,19 @@
     <div class="container">
       <div class="row search">
         <div class="col-md-9 search-main">
-            <header class="search-header"></header>
-            <section class="">
-                <div id="hits"></div>
+            <header class="search-header side-border-right"></header>
+            <div id="current-refined-values" class="search_current-refinements side-border-right"></div>
+            <section>
+                <div id="hits" class="side-border-right"></div>
                 <div id="pagination" class="text-center"></div>
             </section>
         </div>
         <div class="col-md-3 search-sidebar">
           <a href="/" title="Back to home" class="search__backlink">Back to home</a>
           <div class="search_filters">
+            <div id="clear-all" class="search_filters_reset"></div>
             <div id="space" class="search_filters_block"></div>
+            <div id="tags" class="search_filters_block"></div>
           </div>
         </div>
       </div>

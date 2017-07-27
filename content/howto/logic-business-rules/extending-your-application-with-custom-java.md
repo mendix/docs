@@ -16,7 +16,7 @@ Most application logic can be developed using microflows. Microflows are very po
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read [How to Create and Deploy Your First App](../getting-started/create-and-deploy-your-first-app)
+* Read [How to Create and Deploy Your First App](../modeling-basics/create-and-deploy-your-first-app)
 * You need Eclipse: download it [here](https://eclipse.org/)
 
 {{% alert type="info" %}}

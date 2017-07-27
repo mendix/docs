@@ -553,7 +553,7 @@ curl -v -F "file=@/tmp/some.mda" -X POST -H "Mendix-Username: richard.ford51@exa
 
 ### <a rel="nofollow"></a>Description
 
-Transports a specific deployment package to a specific environment. This action requires the environment to be in the "NotRunning" status. 
+Transports a specific deployment package to a specific environment. This action requires the environment to be in the "NotRunning" status. This call is not available for Sandboxes, in which case the Build API can be used to trigger a deployment.
 
 ```bash
 HTTP Method: POST

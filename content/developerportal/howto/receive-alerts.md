@@ -49,7 +49,10 @@ You can manage the alerts by yourself, follow these steps:
 2. Click **Apps** in the top navigation panel.
 3. Click **My Apps** and select **Nodes**.
 4. Open the node by clicking **Details**.
-5. Click **Alerts**. 
+5. Click **Alerts** in the left navigation panel. 
+
+    ![](attachments/operate/operate.png)
+
 6. Select the checkbox of **Email Alerts**.  It is possible to set this option separately for each environment. The changes will be automatically saved.
 
     ![](attachments/operate/email-alerts.png)

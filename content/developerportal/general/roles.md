@@ -52,6 +52,8 @@ To view the Company Contact follow these steps:
 
  ![](attachments/company-contact.png)
 
+For more information, see [Change Company Contact](/developerportal/howto/change-company-contact)
+
 ### 2.3 Regular Users
 
 Regular Users are all company members. Regular users can join the company,start building apps and view other apps made within the company. Under **My Company's Apps** in the [Developer Portal](http://home.mendix.com) the Regular Users can view the apps made within the company by clicking.

@@ -48,6 +48,9 @@ You can manage the alerts by yourself, follow these steps:
 1. Go to the [Developer Portal](http://home.mendix.com).
 2. Click **Apps** in the top navigation panel.
 3. Click **My Apps** and select **Nodes**.
+
+    ![](attachments/general/myapps.png)
+
 4. Open the node by clicking **Details**.
 5. Click **Alerts** in the left navigation panel. 
 

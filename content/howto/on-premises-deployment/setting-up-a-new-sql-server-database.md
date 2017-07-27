@@ -25,7 +25,7 @@ After the database is created, the Mendix platform can initiate the initial setu
 
 There are two more queries that are only executed once, but these privileges are implicitly assigned to the `db_owner` role. As long as the user is `db_owner`, the function and procedure can be created without problems.
 
-### 3 Configuring the Read Committed Snapshot Isolation Level
+## 3 Configuring the Read Committed Snapshot Isolation Level
 
 The database schema needs to be configured so that the **Read Committed Snapshot** feature is enabled. This can be achieved by executing the following command on the database:
 
@@ -38,7 +38,7 @@ You need to replace `MySchema` with the name of your schema.
 
 {% /alert %}
 
-### 4 Configuring the necessary SQL Server extensions
+## 4 Configuring the necessary SQL Server extensions
 
 For the correct functioning of Mendix, some SQL Server extensions need to be installed. This can be achieved via the following command:
 
@@ -59,7 +59,7 @@ EXEC sp_configure 'clr enabled' , '1';
 RECONFIGURE;
 ```
 
-#### 4.1 Queries to Be Executed with the `db_owner` or `db_ddladmin` Database Role
+### 4.1 Queries to Be Executed with the `db_owner` or `db_ddladmin` Database Role
 
 The function and assembly need to be created for timezone handling. Also for these functions, Common Language Runtime (CLR) needs to be enabled on the SQL Server instance. If your are not working on the same timezone as UTC, you need to enable CLR and this function. Without time zone support in the platform, development of your functionality will be much more difficult. This can be achieved using the following commands:
 

@@ -50,7 +50,7 @@ To view the Company Contact follow these steps:
  
 5. Below **Contact** you will see the Company Contact
 
-
+ ![](attachments/company-contact.png)
 
 ### 2.3 Regular Users
 
@@ -70,7 +70,7 @@ As a Regular User you can view apps made within the company by clicking **My Com
 
  If you are a Team Member of an app, you can view the App Roles in **General** under the **Settings** category.
 
-
+ ![](attachments/app-roles.png)
 
 {{% alert type="info" %}}
 If the app is not a licensed app, it will not have a Technical Contact
@@ -122,11 +122,11 @@ The predefined roles can be changed in two places:
 
 *	As a Company Admin you can change them, and changes will have effect on every app created after the change
 
-
+ ![](attachments/admin-roles.png)
 
 *	As a Scrum Master you can change them for the specific app of which you are the Scrum Master
 
-
+ ![](attachments/app-team.png)
 
 The predefined App Team roles are described below:
 

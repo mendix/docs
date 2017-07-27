@@ -24,13 +24,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 1. Go to the [Developer Portal](http://home.mendix.com).
 2. Click **Apps** in the top navigation panel and select the app for which you want to change the App Contact.
-5. Click **General** under the **Settings** category.
-6.  Click **Edit settings** in the top-right corner.
+3. Click **General** under the **Settings** category.
+4.  Click **Edit settings** in the top-right corner.
 
     ![](attachments/settings/change-appcontact.png)
 
-7. Below **Contact**, change the new App Contact from the drop-down list.
-8. Click **Save**.    
+5. Below **Contact**, change the new App Contact from the drop-down list.
+6. Click **Save**.    
 
 ## 4 Related Content
 

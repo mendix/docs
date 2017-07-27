@@ -68,3 +68,4 @@ Nice. Now you're ready to continue with the last how-to of this tutorial: [How t
 * [How to Build an Employee Directory App Step 1: Create the App](build-an-employee-directory-app-1-create-the-app)
 * [How to Build an Employee Directory App Step 2: Build a Dashboard Page](build-an-employee-directory-app-2-build-a-dashboard-page)
 * [How to Build an Employee Directory App Step 4: Add Pages to the User Interface](build-an-employee-directory-app-4-add-pages-to-the-user-interface)
+* [How to Build an Employee Directory App Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-5-add-employee-promotion-logic)

@@ -22,14 +22,14 @@ Before starting this how-to, make sure you have completed the prerequisites desc
 * You need an **Application Operator**, **Business Engineer**, or **Scrum Master** role
 * In the case that a Company Admin has defined a new App Team role, that role must have the App Team **Edit** permission for **Monitor**    
     
-## 2 Receive Alerts
+## 3 Receive Alerts
 
 There are two ways to start receiving alerts:
 
 * The Technical Contact can grant you the **Receive Alerts** permission in **Node Permissions**
 * You can click the check box of **Email Alerts** on the **Alerts** page
 
-### 2.1 Node Permissions  
+### 3.1 Node Permissions  
 
 The Technical Contact can grant you the **Receive Alerts** permission by following these steps:
 
@@ -48,7 +48,7 @@ The Technical Contact can grant you the **Receive Alerts** permission by followi
 
     ![](attachments/settings/receive-alerts.png)
 
-### 2.2 Alerts Page
+### 3.2 Alerts Page
 
 You can manage the alerts by yourself, follow these steps:
 
@@ -64,7 +64,7 @@ You can manage the alerts by yourself, follow these steps:
 
     ![](attachments/operate/email-alerts.png)
 
-## 3 Related Content
+## 4 Related Content
 
 * [Alerts](/developerportal/operate/monitoring-application-health)
 * [Operate](/developerportal/operate)

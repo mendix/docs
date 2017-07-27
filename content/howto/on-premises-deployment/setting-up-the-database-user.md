@@ -2,7 +2,8 @@
 title: "Setting up the database user"
 parent: "setting-up-a-sql-server-user"
 ---
-## 1\. General
+
+## 1 General
 
 Determine your login name. If the user you want to use is a local SQL server user select the option SQL Server Authentication. When you want to use an AD account for the database access you can select Windows Authentication. If you choose to use an AD account, the application should also run with this account and you’ll need to configure your database connection to use integrated authentication.
 
@@ -12,7 +13,7 @@ Select the application database as the default database.
 
 ![](attachments/18448655/18580674.png)
 
-## 2\. Server Roles
+## 2 Server Roles
 
 The user does not require any special server roles. SQL server requires every user to be part of the public role, so it is sufficient to keep the ‘public’ server role as the only role for the user.
 
@@ -20,7 +21,7 @@ You can find more information about the authorization level of the server roles 
 
 ![](attachments/18448655/18580673.png)
 
-## 3\. User Mapping
+## 3 User Mapping
 
 With the User Mapping properties you can grant the user access to the different database. We suggest you use one account per Mendix application. So this means that the user you are creating should only have access to one single application database. 
 
@@ -30,20 +31,20 @@ The Mendix Platform keeps the database consistent. This means that the platform 
 
 The recommended database role is `db_owner`. If you choose not to assign the `db_owner` role to the user the following roles should be assigned. The roles `db_datareader` and `db_datawriter` are the minimum permission the user should get so he can read and write in the contents of all the tables. During the database upgrade it is required to alter tables and stored functions. During that action it is usually sufficient to have the `db_ddladmin` role, but when the stored functions needs to be added `db_owner` role is required (see also the [SQL Server troubleshooter](troubleshooting-sql-server)).
 
-## 4\. Status
+## 4 Status
 
 Allow the user to connect to the database. If the user is Denied the privilege to connect to the engine you won’t be able to connect with your application. The credentials used for your application should have the privilege to access the database through a normal login. Otherwise SQL Server considers your account disabled. 
 
 ![](attachments/18448655/18580671.png)
 
-## 5\. Related content
+## 5 Related content
 
-*   [Restoring a SQL Server database](restoring-a-sql-server-database)
+*   [Restoring an SQL Server Database](restoring-a-sql-server-database)
 *   [Troubleshooting SQL Server](troubleshooting-sql-server)
 *   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
-*   [Setting up a new SQL Server database](setting-up-a-new-sql-server-database)
-*   [Setting up a SQL Server user](setting-up-a-sql-server-user)
-*   [Security checklist for your on-premises installation](security-checklist-for-your-on-premises-installation)
+*   [Setting Up a New SQL Server Database](setting-up-a-new-sql-server-database)
+*   [Setting Up a SQL Server User](setting-up-a-sql-server-user)
+*   [Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
 *   [Mendix on Windows - Microsoft SQL Server](mendix-on-windows-_-microsoft-sql-server)
 *   [Deploying Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
 *   [Installing Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)

@@ -1,5 +1,5 @@
 ---
-title: "Setting up a SQL Server user"
+title: "Setting Up an SQL Server User"
 parent: "mendix-on-windows-_-microsoft-sql-server"
 ---
 

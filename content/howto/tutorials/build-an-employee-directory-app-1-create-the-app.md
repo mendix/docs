@@ -86,3 +86,4 @@ Great! Now you can move on to the second how-to for creating an employee directo
 * [How to Build an Employee Directory App Step 2: Build a Dashboard Page](build-an-employee-directory-app-2-build-a-dashboard-page)
 * [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app)
 * [How to Build an Employee Directory App Step 4: Add Pages to the User Interface](build-an-employee-directory-app-4-add-pages-to-the-user-interface)
+* [How to Build an Employee Directory App Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-5-add-employee-promotion-logic)

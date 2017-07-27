@@ -1,5 +1,5 @@
 ---
-title: "Build an Employee Directory App Step 5: Promoting an Employee"
+title: "Build an Employee Directory App Step 5: Add Employee Promotion Logic"
 space: "Mendix 7 How-To's"
 parent: "build-an-employee-directory-app"
 description: "Presents details on add pages to your app's UI in the Web Modeler."

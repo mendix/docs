@@ -239,4 +239,4 @@ Continue on to the last part of this tutorial: [How to Build an Employee Directo
 * [How to Build an Employee Directory App Step 2: Build a Dashboard Page](build-an-employee-directory-app-2-build-a-dashboard-page)
 * [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app)
 * [How to Build an Employee Directory App Step 5: Promote an Employee](build-an-employee-directory-app-5-promote-an-employee)
-* [How to Build an Employee Directory App Step 5: Promote an Employee](build-an-employee-directory-app-5-promote-an-employee)
+* [How to Build an Employee Directory App Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-5-add-employee-promotion-logic)

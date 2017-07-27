@@ -54,8 +54,9 @@ In order to set up import templates for importing data, your application model m
 4.  Click on the menu item for the **MxObjects_Overview** in your navigation.
 5.  Select the module that contains the objects you want to use in your client, by clicking on the box to the left of it. In this case  **MyFirstModule** .
 6.  Click on the arrows next to **Synchronize all entities and microflows of checked modules on the left.**
-    **![](attachments/18448735/18581937.png)
-    **
+    
+    ![](attachments/18448735/18581937.png)
+
 7.  Now the two objects and the parse microflow from the module **MyFirstModule** can be seen and used in the client.
 
 ## 4\. Create Import Templates

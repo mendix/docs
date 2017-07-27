@@ -1,6 +1,5 @@
 ---
 title: "Change Company Contact"
-space: "Developer Portal"
 category: "How-To's"
 description: "Describes how to change the company contact in the Developer Portal."
 tags: ["Company Contact","Company Admin","Developer Portal"]

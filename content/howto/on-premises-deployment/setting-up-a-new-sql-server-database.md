@@ -19,7 +19,7 @@ The last two options identify how sorting and uniqueness is interpreted. For exa
 
 As a recovery model, Mendix only requires the **Simple** mode. The functionality offered in the **Full** recovery model option is not used by Mendix; usage of this recovery model will not hurt Mendix, but it could increase the data usage of all the transactions and might slow down any rollbacks in case of an error.
 
-![](attachments/18448656/18580675.png) 
+![](attachments/18448656/18580675.png)
 
 After the database is created, the Mendix platform can initiate the initial setup and prepare all the tables and functions for usage by the platform. When starting the platform for the first time, there are two queries that require elevated privileges from a `sysadmin` role. The `sysadmin` role can be temporarily assigned to the user, or these queries can be executed by the administrator as well.
 
@@ -32,7 +32,7 @@ The database schema needs to be configured so that the **Read Committed Snapshot
 ```
 ALTER DATABASE [MySchema] SET READ_COMMITTED_SNAPSHOT ON;
 ```
-{{% alert type=”info” %}}
+{{% alert type="info" %}}
 You need to replace `MySchema` with the name of your schema.
 {{% /alert %}}
 
@@ -44,7 +44,7 @@ For the correct functioning of Mendix, some SQL Server extensions need to be ins
 CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM "D:\MyFolder\Mendix\server\runtime\lib\Mendix.SqlServerExtensions.dll" WITH PERMISSION_SET = SAFE;
 ```
 
-{{% alert type=”info” %}}
+{{% alert type="info" %}}
 Of course, the file path needs to be set to the corresponding file which is part of your Mendix installation.
 {{% /alert %}}
 

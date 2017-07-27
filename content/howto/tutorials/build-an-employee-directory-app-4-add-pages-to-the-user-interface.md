@@ -14,7 +14,7 @@ This is the fourth how-to in a series on creating an employee directory in the W
 
 * Create an overview page
 * Create a detail page
-* Connect pages to a domain model 
+* Connect pages to a domain model
 * Use the Google Maps Widget
 
 ## 2 Prerequisites
@@ -29,10 +29,10 @@ Pages define the user interface of your Mendix app. Each page consists of widget
 
 ### 3.1 Adding an Employee Overview Page
 
-Now that you have created a basic dashboard, you need to add a new page that can be opened from a dashboard item that reflects its purpose. To achieve this, follow these steps: 
+Now that you have created a basic dashboard, you need to add a new page that can be opened from a dashboard item that reflects its purpose. To achieve this, follow these steps:
 
 1. Select the top-left **BUTTON** image:
-    
+
     ![](attachments/build-an-employee-directory-app/select-card-item-button.png)
 
 2. Click the **Icon** property and change it to **User**:
@@ -99,7 +99,7 @@ To edit the widgets, follow these steps:
 If one of the available building blocks is more similar to your requirement than what is provided by default in page templates, you can easily make a replacement.
 
 To switch building blocks, follow these steps:
-    
+
 1. Select the **LIST VIEW** widget and delete it:
 
     ![](attachments/build-an-employee-directory-app/listview-delete.png)
@@ -119,7 +119,7 @@ To create the entity for an employee, follow these steps:
     ![](attachments/build-an-employee-directory-app/listview-select.png)
 
 2. You want to create a new entity, so click the **Entity** property:
-    
+
     ![](attachments/build-an-employee-directory-app/select-entity.png)
 
 3. To create a new entity in the **Select Entity** dialog box, do the following:<br>
@@ -155,14 +155,14 @@ To add a page for inputting employees, follow these steps:
 2. Select **Employee** for the **Entity** property of the button:
 
     ![](attachments/build-an-employee-directory-app/select-entity2.png)
-    
+
 3. Click the **Page** property to open the **Select Page** dialog box.
 4. Click **New page** and do the following:<br>
     a. Enter *Employee* for the **Title** of the page.<br>
     b. Select **Forms** > **Form Vertical** for the template:
 
     ![](attachments/build-an-employee-directory-app/form-vertical.png)
-    
+
 ### 3.6 Connecting the Input Page to the Employee Entity
 
 The page you created consists of a set of text box widgets grouped together by a data view (a data view serves as the glue between page widgets and entities).
@@ -231,12 +231,12 @@ Update and view your app, just like you did in [How to Build an Employee Directo
 
 You can now use your app to add and edit employees!
 
-Continue on to the last part of this tutorial: [How to Build an Employee Directory App Step 5: Promote an Employee](build-an-employee-directory-app-5-promote-an-employee).
-    
+Continue on to the last part of this tutorial: [How to Build an Employee Directory App Step 5: Promote an Employee](build-an-employee-directory-app-5-add-employee-promotion-logic).
+
 ## 5 Related Content
 
 * [How to Build an Employee Directory App Step 1: Create the App](build-an-employee-directory-app-1-create-the-app)
 * [How to Build an Employee Directory App Step 2: Build a Dashboard Page](build-an-employee-directory-app-2-build-a-dashboard-page)
 * [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app)
-* [How to Build an Employee Directory App Step 5: Promote an Employee](build-an-employee-directory-app-5-promote-an-employee)
+* [How to Build an Employee Directory App Step 5: Promote an Employee](build-an-employee-directory-app-5-add-employee-promotion-logic)
 * [How to Build an Employee Directory App Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-5-add-employee-promotion-logic)

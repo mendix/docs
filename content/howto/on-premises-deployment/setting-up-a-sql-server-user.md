@@ -2,12 +2,13 @@
 title: "Setting up a SQL Server user"
 parent: "mendix-on-windows-_-microsoft-sql-server"
 ---
-## 1. Description
+
+## 1 Description
 
 This article describes how to configure the users of a SQL server to create a secure environment for a Mendix based application.
 To create a secure environment it is important to make a clear distinction between an user with an administrator role and a regular user of the application.
 
-## 2. Instructions
+## 2 Instructions
 
 *   **Create an administrator:** Create a user with the administrator role, for example 'MendixAdmin'.
 *   **Set the server roles for the administrator:** Depending on the tasks this user has to execute the administrator role should be connected to the following database roles:
@@ -29,7 +30,7 @@ To create a secure environment it is important to make a clear distinction betwe
 
 On this page you can find a step by step instruction on how to: [Set up the database user](setting-up-the-database-user)
 
-## 3 Related content
+## 3 Related Content
 
 *   [Activating a Mendix License on Microsoft Windows](activate-a-mendix-license-on-microsoft-windows)
 *   [Setting Up the Database User](setting-up-the-database-user)

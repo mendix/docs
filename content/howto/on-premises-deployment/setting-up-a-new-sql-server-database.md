@@ -25,23 +25,32 @@ After the database is created, the Mendix platform can initiate the initial setu
 
 There are two more queries that are only executed once, but these privileges are implicitly assigned to the `db_owner` role. As long as the user is `db_owner`, the function and procedure can be created without problems.
 
-### 3 Configuring Read Committed Snapshot isolation level
+### 3 Configuring the Read Committed Snapshot Isolation Level
 
-The database schema needs to be configured such that the "Read Committed Snapshot" feature is enabled. This can be achieved by executing the following command on the database:
+The database schema needs to be configured so that the **Read Committed Snapshot** feature is enabled. This can be achieved by executing the following command on the database:
 
 ```
 ALTER DATABASE [MySchema] SET READ_COMMITTED_SNAPSHOT ON;
 ```
-NOTE: you need to replace `MySchema` with the name of your schema.
+{% alert type=”info” %}
+
+You need to replace `MySchema` with the name of your schema.
+
+{% /alert %}
 
 ### 4 Configuring the necessary SQL Server extensions
 
-For correct functioning of Mendix, some SQL Server extensions need to be installed. This can be achieved via the following command.
+For the correct functioning of Mendix, some SQL Server extensions need to be installed. This can be achieved via the following command:
+
 ```
 CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM "D:\MyFolder\Mendix\server\runtime\lib\Mendix.SqlServerExtensions.dll" WITH PERMISSION_SET = SAFE;
 ```
 
-NOTE: Of course, the file path needs to be set to the corresponding file which is part of your Mendix installation.
+{% alert type=”info” %}
+
+Of course, the file path needs to be set to the corresponding file which is part of your Mendix installation.
+
+{% /alert %}
 
 The permission above requires CLR to be enabled on the SQL Server instance. CLR can be enabled using this query:
 
@@ -49,7 +58,6 @@ The permission above requires CLR to be enabled on the SQL Server instance. CLR 
 EXEC sp_configure 'clr enabled' , '1';
 RECONFIGURE;
 ```
-
 
 #### 4.1 Queries to Be Executed with the `db_owner` or `db_ddladmin` Database Role
 

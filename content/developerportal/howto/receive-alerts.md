@@ -35,8 +35,14 @@ The Technical Contact can grant you the **Receive Alerts** permission by followi
 1. Go to the [Developer Portal](http://home.mendix.com).
 2. Click **Apps** in the top navigation panel.
 3. Click **My Apps** and select **Nodes**.
+
+ ![](attachments/general/myapps.png)
+
 4. Open the node by clicking **Details**.
 5. Click **Security** under the **Settings** category.
+
+ ![](attachments/settings/settings.png)
+
 6. Select the checkbox below **Receive Alerts**. It is possible to set this permission separately for each environment. The changes will be automatically saved.
 
     ![](attachments/settings/receive-alerts.png)
@@ -48,11 +54,8 @@ You can manage the alerts by yourself, follow these steps:
 1. Go to the [Developer Portal](http://home.mendix.com).
 2. Click **Apps** in the top navigation panel.
 3. Click **My Apps** and select **Nodes**.
-
-    ![](attachments/general/myapps.png)
-
 4. Open the node by clicking **Details**.
-5. Click **Alerts** in the left navigation panel. 
+5. Click **Alerts** under the **Operate** category. 
 
     ![](attachments/operate/operate.png)
 

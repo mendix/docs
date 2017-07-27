@@ -7356,10 +7356,6 @@ module.exports = {
       "to": "/refguide/generate-document"
     },
     {
-      "from": "/refguide7/Getting+the+Mendix+Developer+App",
-      "to": "/refguide/getting-the-mendix-developer-app"
-    },
-    {
       "from": "/refguide7/Grid+action+button",
       "to": "/refguide/grid-action-button"
     },

@@ -3,12 +3,12 @@ title: "Build API"
 category: "API Documentation"
 ---
 
-
 # <a name="BuildAPI-Introduction" rel="nofollow"></a>Introduction
 
 The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the Teamserver API as input for these API calls.
 
 The image below provides a domain model representation of the concepts discussed below and how these are related:
+
 ![](attachments/131077/425988.png)
 
 # <a name="BuildAPI-APIcalls" rel="nofollow"></a>API calls
@@ -17,7 +17,7 @@ The image below provides a domain model representation of the concepts discussed
 
 ### <a name="BuildAPI-Description" rel="nofollow"></a>Description
 
-Retrieves all deployment packages that are available for a specific app which the authenticated user has access to as a regular user. These packages can be found if you click Details on an app in the "Nodes overview" screen in the Mendix Platform.
+Retrieves all deployment packages that are available for a specific app that the authenticated user has access to as a regular user. These packages can be found if you click **Details** on an app in the **Nodes** screen in the Mendix platform.
 
 ```java
  HTTP Method: GET
@@ -86,11 +86,11 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-## <a name="BuildAPI-Retrievepackage" rel="nofollow"></a>Retrieve package
+## <a name="BuildAPI-Retrievepackage" rel="nofollow"></a>Retrieve Package
 
 ### <a rel="nofollow"></a>Description
 
-Retrieves a specific deployment package that is available for a specific app which the authenticated user has access to as a regular user. This package can be found if you click Details on an app in the "Nodes overview" screen in the Mendix Platform.
+Retrieves a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix platform.
 
 ```java
 HTTP Method: GET
@@ -154,7 +154,7 @@ An object with the following key-value pairs:
 
 ## <a name="BuildAPI-Deletepackage" rel="nofollow"></a>Delete package
 
-Deletes a specific deployment package that is available for a specific app which the authenticated user has access to as a regular user. This package can be found if you click Details on an app in the "Nodes overview" screen in the Mendix Platform.
+Deletes a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
 ```java
  HTTP Method: DELETE
@@ -187,7 +187,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ## <a name="BuildAPI-Downloadpackage" rel="nofollow"></a>Download package
 
-Downloads a specific deployment package that is available for a specific app which the authenticated user has access to as a regular user. This package can be found if you click Details on an app in the "Nodes overview" screen in the Mendix Platform.
+Downloads a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
 ```java
  HTTP Method: GET
@@ -222,7 +222,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ## <a name="BuildAPI-Startbuildingdeploymentpackage" rel="nofollow"></a>Start building deployment package
 
-Start the process to build a deployment package, based on the team server project of a specific app which the authenticated user has access to as a regular user. This package can be found if you click Details on an app in the "Nodes overview" screen in the Mendix Platform.
+Start the process to build a deployment package, based on the team server project of a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
 ```java
 HTTP Method: POST

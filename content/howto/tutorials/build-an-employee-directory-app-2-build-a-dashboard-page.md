@@ -109,3 +109,4 @@ Well done! Continue with [How to Build an Employee Directory App Step 3: Publish
 * [How to Build an Employee Directory App Step 1: Create the App](build-an-employee-directory-app-1-create-the-app)
 * [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app)
 * [How to Build an Employee Directory App Step 4: Add Pages to the User Interface](build-an-employee-directory-app-4-add-pages-to-the-user-interface)
+* [How to Build an Employee Directory App Step 5: Promote an Employee](build-an-employee-directory-app-5-promote-an-employee)

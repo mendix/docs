@@ -1,5 +1,6 @@
 ---
 title: "Build an Employee Directory App Step 4: Add Pages to the User Interface"
+space: "Mendix 7 How-To's"
 parent: "build-an-employee-directory-app"
 description: "Presents details on add pages to your app's UI in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
@@ -7,7 +8,7 @@ tags: ["build", "app", "developer portal", "web modeler"]
 
 ## 1 Introduction
 
-This is the fourth and final how-to in a series on creating an employee directory in the Web Modeler. In this how-to, you will learn how to add pages to the app.
+This is the fourth how-to in a series on creating an employee directory in the Web Modeler. In this how-to, you will learn how to add pages to the app.
 
 **This how-to will teach you how to do the following:**
 
@@ -15,8 +16,6 @@ This is the fourth and final how-to in a series on creating an employee director
 * Create a detail page
 * Connect pages to a domain model 
 * Use the Google Maps Widget
-
-{{% youtube EM4m40NJFFY %}}
 
 ## 2 Prerequisites
 
@@ -54,7 +53,7 @@ Now that you have created a basic dashboard, you need to add a new page that can
 
 6. To create a new page in the **Select Page** dialog box, do the following:<br>
     a. Click **New page**.<br>
-    b. Change the title of the page to *Employees*.<br>
+    b. Change the title of the page to **Employees**.<br>
     c. Select **Lists** > **Lists Default** for the  template.
 
     ![](attachments/build-an-employee-directory-app/lists-default.png)
@@ -87,11 +86,11 @@ To edit the widgets, follow these steps:
 
     ![](attachments/build-an-employee-directory-app/add-button.png)
 
-6. Select the parent **Row** using the breadcrumb at the bottom of the editor:
+6. Select the parent **Row** using the breadcrumb:
 
     ![](attachments/build-an-employee-directory-app/breadcrumb-container-add-button.PNG)
 
-7. Change the **Row Layout** for **Desktop** to *large left column & small right column*:
+7. Change the **Row Layout** to *large left column & small right column* for all profiles:
 
     ![](attachments/build-an-employee-directory-app/change-row-layout2.png)
 
@@ -105,7 +104,7 @@ To switch building blocks, follow these steps:
 
     ![](attachments/build-an-employee-directory-app/listview-delete.png)
 
-2. Open **Toolbox** > **Building Blocks** > **Lists** and drag the **List3** building block into the container.
+2. Open the **Toolbox** and from **Lists**, drag the **List3** building block into the container.
 
 At this point the page looks pretty nice, so you're ready to connect some data elements to it!
 
@@ -180,7 +179,7 @@ To connect the text box widgets to the Employee entity attributes, follow these 
 
     ![](attachments/build-an-employee-directory-app/entity-employee.png)
 
-4. Select the text box with the **Name** caption and connect it to the **Name** attribute of the **Employee** entity.
+4. Select the text box with the **Name** caption and connect it to the the **Name** attribute of the **Employee** entity.
 
     ![](attachments/build-an-employee-directory-app/name-attribute.png)
 
@@ -231,27 +230,13 @@ You're done! Time to view the effects of all your changes.
 Update and view your app, just like you did in [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app).
 
 You can now use your app to add and edit employees!
+
+Continue on to the last part of this tutorial: [How to Build an Employee Directory App Step 5: Promote an Employee](build-an-employee-directory-app-5-promote-an-employee).
     
-## 5 Viewing the Structure of the Employee Entity
-
-In the previous steps, you created the employee entity and its attributes from different widgets. So, you must be thinking, how do I edit them in case I want to change something? Don't worry, you can view and edit your entities in the domain model.
-
-To view the structure of **Employee** entity, follow these steps:
-
-1. Click the **Domain Models** icon in the left menu:
-
-    ![](attachments/build-an-employee-directory-app/domain-models.png)
-
-2. Check how your entity looks at this point:
-
-    ![](attachments/build-an-employee-directory-app/entity.png)
-
-This is the end of the tutorial. Please share your feedback in the [Build an Employee Directory App Survey](https://www.surveymonkey.com/r/XY258CP).
-
-Stay tuned for more!
-
-## 6 Related Content
+## 5 Related Content
 
 * [How to Build an Employee Directory App Step 1: Create the App](build-an-employee-directory-app-1-create-the-app)
 * [How to Build an Employee Directory App Step 2: Build a Dashboard Page](build-an-employee-directory-app-2-build-a-dashboard-page)
 * [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app)
+* [How to Build an Employee Directory App Step 5: Promote an Employee](build-an-employee-directory-app-5-promote-an-employee)
+* [How to Build an Employee Directory App Step 5: Promote an Employee](build-an-employee-directory-app-5-promote-an-employee)

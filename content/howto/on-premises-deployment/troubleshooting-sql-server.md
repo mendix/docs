@@ -1,5 +1,5 @@
 ---
-title: "Troubleshooting SQL Server"
+title: "Troubleshooting the SQL Server"
 parent: "mendix-on-windows-_-microsoft-sql-server"
 ---
 
@@ -9,8 +9,7 @@ ALTER DATABASE [YourDatabase] SET READ_COMMITTED_SNAPSHOT ON;
 CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM [a dll file] WITH PERMISSION_SET = SAFE;
 ```
 
-In order to set "Read Committed Snapshot" or to create an Assembly the user will need to have the `db_ddladmin` role. For each new Mendix database the "Read Committed Snapshot" configuration must be enabled. The Assembly query is only executed once per database server instance, and used by all Mendix applications.
-
+In order to set **Read Committed Snapshot** or to create an assembly, the user will need to have the `db_ddladmin` role. For each new Mendix database, the Read Committed Snapshot configuration must be enabled. The assembly query is only executed once per database server instance, and is used by all Mendix applications.
 
 ```
 Error while executing query
@@ -35,14 +34,14 @@ Message: Login failed for user 'YourDatabaseUser'. Reason: The account is disabl
 
 Validate the ‘Status’ of the User. One of the login properties of the user is probably configured to be Deny or Disabled. Both permissions should be configured as Grant/Enabled.
 
-## Related content
+## Related Content
 
-*   [Setting up the database user](setting-up-the-database-user)
-*   [Restoring a SQL Server database](restoring-a-sql-server-database)
+*   [Setting Up the Database User](setting-up-the-database-user)
+*   [Restoring a SQL Server Database](restoring-a-sql-server-database)
 *   [Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
-*   [Setting up a new SQL Server database](setting-up-a-new-sql-server-database)
-*   [Setting up a SQL Server user](setting-up-a-sql-server-user)
-*   [Security checklist for your on-premises installation](security-checklist-for-your-on-premises-installation)
+*   [Setting Up a New SQL Server Database](setting-up-a-new-sql-server-database)
+*   [Setting Up a SQL Server User](setting-up-a-sql-server-user)
+*   [Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
 *   [Mendix on Windows - Microsoft SQL Server](mendix-on-windows-_-microsoft-sql-server)
 *   [Deploying Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
 *   [Installing Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)

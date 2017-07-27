@@ -51,7 +51,7 @@ The deactivated user will become inactive and will imidiately dissapear from the
 
 You can only deactivate a user. It is not possible to delete a user completely.
 
-    ![](attachments/filter.png)
+   ![](attachments/filter.png)
 
 ### 3.2 Activating Users
 

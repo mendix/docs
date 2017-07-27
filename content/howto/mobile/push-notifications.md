@@ -1,7 +1,6 @@
 ---
 title: "Push Notifications"
 category: "Mobile"
-tags: ["wdf","3rfr3"]
 ---
 
 ## 1 Introduction to Push Notifications

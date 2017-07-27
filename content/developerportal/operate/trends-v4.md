@@ -53,7 +53,7 @@ The requests graph shows the number of requests that are sent from the client or
 
 "xas" lists general queries for data in datagrids, sending changes to the server and triggering the execution of microflows. "ws" shows the number of web service calls that were done. "FileDocuments" shows the number of file uploads and downloads. The "/" should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process.
 
-The request types are:
+Commonly used types are:
 
 Request type | Explanation
 ------------ | -------------
@@ -66,7 +66,7 @@ openid/ | OPENID authentication request handler
 p/ | Request handler for Custom page urls
 rest-doc/ | HTTP Rest webservice request handler documentation
 ws-doc/ | SOAP webservice request handler documentation
-ws | SOAP webservice call request handler
+ws/ | SOAP webservice call request handler
 xas/ | Request handler used by the mendix runtime itself
 
 ### <a name="Trends-appmxruntimeconnectionbus"></a>3.2 Number of Database Queries Being Executed
@@ -77,11 +77,11 @@ The types are:
 
 Type | Explanation
 ------------ | -------------
-inserts | Amount of SQL INSERT INTO statements per second. This is used to add new rows of data to a table in the database.
+inserts | Amount of SQL 'INSERT INTO' statements per second. This is used to add new rows of data to a table in the database.
 transactions | Amount of SQL transactions per second. A transaction is a unit of work that is performed against a database.
-update | Amount of SQL UPDATE statements per second. The SQL UPDATE Query is used to modify the existing records in a table.
-select | Amount of SQL SELECT statements per second. The SQL SELECT statement is used to fetch the data from a database table which returns this data in the form of a result table.
-delete | Amount of SQL DELETE statements per second. The SQL DELETE Query is used to delete the existing records from a table.
+update | Amount of SQL 'UPDATE' statements per second. The SQL 'UPDATE' Query is used to modify the existing records in a table.
+select | Amount of SQL 'SELECT' statements per second. The SQL 'SELECT' statement is used to fetch the data from a database table which returns this data in the form of a result table.
+delete | Amount of SQL 'DELETE' statements per second. The SQL 'DELETE' Query is used to delete the existing records from a table.
 
 ### <a name="Trends-appmxruntimesessions"></a>3.3 User Accounts and Login Sessions
 

@@ -26,12 +26,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 1. Go to the [Developer Portal](http://home.mendix.com).
 2. Click on your avatar in the top-right corner of the screen.
 
-    ![](attachments/company-admin.png)
+    ![](attachments/companyadmin/company-admin.png)
 
 3. Click **Company Admin**.
 4. Click **Edit contact person**.
 
-    ![](attachments/change-companycontact.png)
+    ![](attachments/companyadmin/change-companycontact.png)
 
 5. Select the user that will be the new company contact and click **Select**. The change will be automatically saved.    
 

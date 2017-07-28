@@ -1,7 +1,6 @@
 ---
 title: "Deactivate and Activate Users"
-space: "Developer Portal"
-category: "General"
+category: "How-To's"
 description: "This document describes how to deactivate and activate company users in the Developer Portal."
 tags: ["Profile","Company Admin","Developer Portal","Account","Deactivate"]
 ---
@@ -45,7 +44,7 @@ To deactivate a user, follow these steps:
 
 2.  In the pop-up window that appears, click **Deactivate member(s)**:
 
-    ![](attachments/deactivate-user.png)
+    ![](attachments/companyadmin/deactivate-user.png)
 
 The deactivated user will become inactive and will imidiately dissapear from the list. If you click **Filter** and select **Inactive**, you will see the deactivated users.
 

@@ -9,6 +9,8 @@ tags: ["Company","Admin","MxID","Developer Portal","Role","Permissions"]
 
 In order to use Mendix, you must sign up to create an account. With this signup you create a **MxID** and this ID will be linked to a company. If the company already exists, you will join the company. If it is a new company, a new company will be created and you will automatically join it.
 
+To make changes to the roles, see [Add a Company Admin and Change the App Roles](/developerportal/general/change-roles).
+
 Within a company and the company's apps there are roles defined that are described below.
 
 ## 2 Company Roles
@@ -30,7 +32,7 @@ The permissions of a Company Admin are the following:
 
  ![](attachments/company-admin.png)
 
-For more details, see [Company Admin](/developerportal/companyadmin) and [Add Extra Company Admins](/developerportal/howto/add-company-admin).
+For more details, see [Company Admin](/developerportal/companyadmin).
 
 ### 2.2 Company Contact
 
@@ -51,8 +53,6 @@ To view the Company Contact follow these steps:
 5. Below **Contact** you will see the Company Contact
 
  ![](attachments/company-contact.png)
-
-For more information, see [Change the Company Contact](/developerportal/howto/change-company-contact)
 
 ### 2.3 Regular Users
 
@@ -86,8 +86,6 @@ The App Contact is visible to Regular Users and is the go-to person for question
 
 If the App Contact changes, it is recommended to provide the new App Contact the App Team SCRUM Master role. The App Contact will be the contact person for Regular Users and will be able to perform app operations on behalf of all SCRUM Masters.
 
-For more information, see [Change the App Contact](/developerportal/howto/change-app-contact).
-
 ### 3.2 Technical Contact
 
 The Technical Contact manages the technical deployment settings of the app. The Technical Contact can be responsible for different deployment platforms: Mendix Cloud node, on-premises, other plaforms such as MxBlue, Azure etc. 
@@ -101,7 +99,7 @@ Only the Technical Contact is allowed to do the following:
 * Manage licenses (renewals/activation/upgrades)
 * Configure the alert settings
 
-For more information, see [Technical Contact](/developerportal/settings/technical-contact) and [Change the Technical Contact](/developerportal/howto/change-technical-contact).
+For more information, see [Technical Contact](/developerportal/settings/technical-contact).
 
 ## 4 Team Member Roles
 

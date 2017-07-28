@@ -14,7 +14,7 @@ There are two ways to develop the documentation: you can run it locally (which i
 
 ### Local Development
 
-The Mendix documentation is built to top of Hugo and Node.JS. When you want to develop the documentation locally, you need to have both installed.
+The Mendix documentation is built on top of Hugo and Node.JS. When you want to develop the documentation locally, you need to have both installed.
 
 #### Prerequisites
 

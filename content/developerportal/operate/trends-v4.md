@@ -118,45 +118,45 @@ Object Type | Explanation
 
 ### <a name="Trends-appmxruntimejvmprocessmemory"></a>3.5 JVM Process Memory Usage
 
-This second graph about JVM memory is similar to the previous graph, JVM Object Heap. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process. This graph is currently primarily present to provide more insight in situations in which the part of the real used memory outside the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
+This second graph about JVM memory is similar to the previous graph, JVM Object Heap. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process. This graph is currently present to provide more insight in situations in which the part of the real used memory outside the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
 
-More information about this graph is available in a Tech Blog post: [What's in my JVM memory?](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/)
+For more information about this graph, see this Tech Blog post: [What's in My JVM Memory?](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/).
 
-The types are:
+The types are the following:
 
 Type | Explanation
 ------------ | -------------
-code cache | JVM also includes a code cache, containing memory that is used for compilation and storage of native code.
-native code | JVM allocated a certain amount of memory space for native bytecode.
-jar files | Jar files necessary for jvm itself to run.
-tenured generation | As objects "survive" repeated garbage collections in the survivor space they are migrated to the tenured generation. You can look at this metric as a number of long living objects in JVM.
-survivor space | The pool containing objects that have survived the garbage collection of the Eden space.
-eden space | The pool from which memory is initially allocated for most objects.
-unused java heap | Unused jvm heap memory
-permanent generation | The pool containing all the reflective data of the virtual machine itself, such as class and method objects. With Java VMs that use class data sharing, this generation is divided into read-only and read-write areas.
-other | Virtual or reserved memory space
-thread stacks | Stacks that are reserved for unique threads
+`code cache` | JVM also includes a code cache, containing memory that is used for compilation and storage of native code.
+`native code` | JVM allocates a certain amount of memory space for native bytecode.
+`jar files` | JAR files necessary for JVM itself to run.
+`tenured generation` | As objects "survive" repeated garbage collections in the survivor space, they are migrated to the tenured generation. You can look at this metric as a number of long living objects in JVM.
+`survivor space` | The pool containing objects that have survived the garbage collection of the Eden space.
+`eden space` | The pool from which memory is initially allocated for most objects.
+`unused java heap` | Unused JVM heap memory.
+`permanent generation` | The pool containing all the reflective data of the virtual machine itself, such as class and method objects. With Java VMs that use class data sharing, this generation is divided into read-only and read-write areas.
+`other` | Virtual or reserved memory space.
+`thread stacks` | Stacks that are reserved for unique threads.
 
 ### <a name="Trends-appm2eeserverthreadpool"></a>3.6 Threadpool for Handling External Requests
 
-The application server thread pool graph shows the number of concurrent requests that are being handled by the Mendix Runtime, but only when they're initiated by a remote API, like the way the normal web-based client communicates, or by calling web services. Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
+The application server thread pool graph shows the number of concurrent requests that are being handled by the Mendix Runtime, but only when they're initiated by a remote API (like the way the normal web-based client communicates) or by calling web services. Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
 
-The types are:
+The types are the following:
 
 Type | Explanation
 ------------ | -------------
-min threads | Minimum bound of threads to be used by Jetty threadpool
-max threads | Maximum bound of threads to be used by Jetty threadpool
-active threads | Active threads that are being used within the Jetty threadpool
-threadpool size | The current total size of the Jetty threadpool
+`min threads` | Minimum bound of threads to be used by the Jetty threadpool.
+`max threads` | Maximum bound of threads to be used by the Jetty threadpool.
+`active threads` | Active threads that are being used within the Jetty threadpool.
+`threadpool size` | The current total size of the Jetty threadpool.
 
 ### <a name="Trends-appmxruntimethreads"></a>3.7 Total Number of Threads in the JVM Process
 
-This graph shows the total number of threads that exist inside the running JVM process. Besides the threadpool that is used for external HTTP requests, as shown above, this includes the threadpool used for database connections, internal processes inside the Mendix Runtime, and optional extra threads created by the application itself, for example, using a threadpool in a custom module or custom Java code.
+This graph shows the total number of threads that exist inside the running JVM process. Besides the threadpool that is used for external HTTP requests (as shown above), this includes the threadpool used for database connections, internal processes inside the Mendix Runtime, and optional extra threads created by the application itself (for example, using a threadpool in a custom module or custom Java code).
 
 ### <a name="Trends-appmxruntimecache"></a>3.8 Object Cache
 
-Mendix 4.0 introduced Non-Persistent Entities which live in the JVM memory and are garbage collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph you can monitor the number of Mendix Objects that live in memory.
+Mendix 4.0 introduced non-persistent entities that live in the JVM memory and are garbage-collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph, you can monitor the number of Mendix objects that live in memory.
 
 ## 4 Database Statistics
 
@@ -166,52 +166,59 @@ In this section you will find the statistics about the database that the applica
 
 This graph shows the number of database objects that were actually changed by database queries from the application. A single database operation that affects more than one object, will show up as single database query as measured from the application side, but will show the number of object actually changed here, as measured from inside the database.
 
-The types are:
+The types are the following:
 
 Type | Explanation
 ------------ | -------------
-xact commit | Number of transactions committed per second
-xact rollback | Number of transactions rolledback per second
-tuples inserted | Number of tuples inserted per second
-tuples updated | Number of tuples updated per second
-tuples deleted | Number of tuples deleted per second
+`xact commit` | Number of transactions committed per second.
+`xact rollback` | Number of transactions rolled back per second.
+`tuples inserted` | Number of tuples inserted per second.
+`tuples updated` | Number of tuples updated per second.
+`tuples deleted` | Number of tuples deleted per second.
 
 ### <a name="Trends-dbpgtableindexsizeVERSIONmain"></a>4.2 Index vs. Table Size
 
-This database size graph shows the distribution between disk space used for storing indexes and actual data. Remember, indexes actually occupy memory space and disk storage, as they're just parts of your data copied and stored, sorted in another way! Besides your data, indexes also have to be read into system memory to be able to use them.
+This database size graph shows the distribution between disk space used for storing indexes and actual data. Remember, indexes actually occupy memory space and disk storage, as they're just parts of your data copied, stored, and sorted in another way! Besides your data, indexes also have to be read into the system memory to be able to use them.
 
-The types are:
+The types are the following:
 
 Type | Explanation
 ------------ | -------------
-tables | Amount of space taken by the tables in the database
-indexes | Amount of space taken by the indexes in the database
+`tables` | Amount of space taken by the tables in the database.
+`indexes` | Amount of space taken by the indexes in the database.
 
 ### 4.3 Application Node
 
-Application Node is the isolated & secure machine that your application runs on, this sections shows the crucial information about this machine.
+The application node is the isolated and secure machine on which your application runs.
+
+This section presents crucial information about this machine.
 
 #### <a name="Trends-appcpu"></a>4.3.1 CPU
 
 The CPU graph shows the amount of CPU utilization in percentage, broken down into different types of CPU usage.
 
-The most important value in here is 'user', which shows the amount of CPU time used for handling requests at Mendix Runtime and executing microflows and scheduled events. CPU usage of the database is shown in a separate graph below.
+The most important value in here is `user`, which shows the amount of CPU time used for handling requests at Mendix Runtime as well as executing microflows and scheduled events. CPU usage of the database is shown in a separate graph below.
 
 #### <a name="Trends-appmemory"></a>4.3.2 Memory
 
-The memory graph shows the distribution of operating system memory that is available for this server. The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category 'apps'.
+The memory graph shows the distribution of operating system memory that is available for this server. The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category `apps`.
 
 ### 4.4 Database Node
 
-The database node is the isolated & secure machine that your application runs on, this section shows the crucial information about this machine.
+The database node is the isolated and secure machine on which your application runs.
+
+This section presents crucial information about this machine.
 
 #### <a name="Trends-dbcpu"></a>4.4.1 CPU
 
 The CPU graph shows the amount of CPU utilization in percentage, broken down into different types of CPU usage.
 
-The most important values in here are: 'user', which shows the amount of CPU time used for running database queries, and 'iowait', showing the amount of time a CPU core is idle and waiting for disk operations to finish (for example, waiting for information that has to be read from disk, or waiting for a synchronous write operation to finish).
+The most important values here are the following:
 
-Clearly visible amounts of iowait, in combination with a high number of disk read operations (Disk IOPS), and having all free system memory filled as disk cache (Memory graph), are a sign of a lack of available server memory for use as disk cache. This situation will slow down database operations tremendously, because getting data from disk over and over again takes considerably more time than having it present in memory.
+* `user` – shows the amount of CPU time used for running database queries
+* `iowait` – shows the amount of time a CPU core is idle and waiting for disk operations to finish (for example, waiting for information that has to be read from disk, or waiting for a synchronous write operation to finish)
+
+Clearly visible amounts of `iowait` in combination with a high number of disk read operations (Disk IOPS) and all free system memory filled as disk cache (Memory graph) is a sign of a lack of available server memory for use as disk cache. This situation will slow down database operations tremendously, because getting data from the disk over and over again takes considerably more time than having it present in the memory.
 
 #### <a name="Trends-dbmemory"></a>4.4.2 Memory
 

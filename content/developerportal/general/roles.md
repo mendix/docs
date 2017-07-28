@@ -9,7 +9,7 @@ tags: ["Company","Admin","MxID","Developer Portal","Role","Permissions"]
 
 In order to use Mendix, you must sign up to create an account. With this signup you create a **MxID** and this ID will be linked to a company. If the company already exists, you will join the company. If it is a new company, a new company will be created and you will automatically join it.
 
-To make changes to the roles, see [Add a Company Admin and Change the App Roles](/developerportal/general/change-roles).
+
 
 Within a company and the company's apps there are roles defined that are described below.
 

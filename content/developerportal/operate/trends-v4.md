@@ -57,7 +57,7 @@ Note the following:
 * **FileDocuments** shows the number of file uploads and downloads
 * The **/** should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process
 
-Commonly used types are:
+These are the commonly used types:
 
 Request Type | Explanation
 ------------ | -------------
@@ -77,7 +77,7 @@ Request Type | Explanation
 
 This graph shows the number of database queries that are executed by your Mendix application, broken down in queries that actually modify data (insert, update, delete), queries that fetch data (select), and the number of transactions (like microflows from which these queries originate).
 
-The types are the following:
+These are the types:
 
 Type | Explanation
 ------------ | -------------
@@ -91,7 +91,7 @@ Type | Explanation
 
 The sessions graph shows the number of logged-in named and anonymous user sessions for your application, next to the total number of existing login accounts in the application.
 
-The user types are the following:
+These are the user types:
 
 User Type | Explanation
 ------------ | -------------
@@ -107,7 +107,7 @@ In order to be able to interpret the values in this graph, one of the most impor
 
 If the tenured generation shows up to as much as 65% of the complete heap size, this might as well change to 0% when a garbage collection is triggered as soon as the percentage reaches two thirds of the total heap size. However, it could also stay at this amount if all data in this memory part is still referenced by running actions in the application. This behavior means that the JVM Object Heap graphs is one of the most difficult graphs on which to base conclusions.
 
-The object types are the following:
+These are the types:
 
 Object Type | Explanation
 ------------ | -------------
@@ -122,7 +122,7 @@ This second graph about JVM memory is similar to the previous graph, JVM Object 
 
 For more information about this graph, see this Tech Blog post: [What's in My JVM Memory?](https://tech.mendix.com/linux/2015/01/14/whats-in-my-jvm-memory/).
 
-The types are the following:
+These are the types:
 
 Type | Explanation
 ------------ | -------------
@@ -141,7 +141,7 @@ Type | Explanation
 
 The application server thread pool graph shows the number of concurrent requests that are being handled by the Mendix Runtime, but only when they're initiated by a remote API (like the way the normal web-based client communicates) or by calling web services. Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
 
-The types are the following:
+These are the types:
 
 Type | Explanation
 ------------ | -------------
@@ -166,7 +166,7 @@ In this section you will find the statistics about the database that the applica
 
 This graph shows the number of database objects that were actually changed by database queries from the application. A single database operation that affects more than one object, will show up as single database query as measured from the application side, but will show the number of object actually changed here, as measured from inside the database.
 
-The types are the following:
+These are the types:
 
 Type | Explanation
 ------------ | -------------
@@ -180,7 +180,7 @@ Type | Explanation
 
 This database size graph shows the distribution between disk space used for storing indexes and actual data. Remember, indexes actually occupy memory space and disk storage, as they're just parts of your data copied, stored, and sorted in another way! Besides your data, indexes also have to be read into the system memory to be able to use them.
 
-The types are the following:
+These are the types:
 
 Type | Explanation
 ------------ | -------------
@@ -224,7 +224,7 @@ Clearly visible amounts of **iowait** in combination with a high number of disk 
 
 The memory graph shows the distribution of operating system memory that is available for this server. The most important part of this graph is the **cache** section. This type of memory usage contains parts of the database storage that have been read from disk earlier. It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server, at the cache part. A lack of disk cache on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application.
 
-The types are the following:
+These are the types:
 
 Type | Explanation
 ------------ | -------------
@@ -244,7 +244,7 @@ Shared statistics for both of the machines.
 
 The disk IO statistics show the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 
-The types are the following:
+These are the types:
 
 Type | Explanation
 ------------ | -------------

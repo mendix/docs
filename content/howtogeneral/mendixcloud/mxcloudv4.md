@@ -52,21 +52,21 @@ No. In the previous generation we used the Java Security Manager to enforce stan
 
 There some functionalities missing in v4. Mendix will implement these features in the near future:
 
-* Client Certificate validation is not available
-* Detailed information on Alerts is missing
+* Client certificate validation is not available
+* Detailed information on alerts is missing
 * File storage usage is not visible
-* Health Check Microflow is not implemented
+* Health check microflow is not implemented
 * There are no application CPU alerts
-* There is no SMTP server running on localhost
+* There is no SMTP server running on local host
 * It is not possible to change the Java Heap size for the application
 * Archived logs can only be downloaded, not seen in browser
 * Implement error pages (green monsters)
-* Restore Backup does not ask in which environment the archive should be restored
-* The database status is not visible on the Node Details screen
+* Restore backup does not ask in which environment the archive should be restored
+* The database status is not visible on the node details screen
 
 ##  8 Known Issues in Mendix Cloud v4
 
 * Apps on v4 get a false recovery email after initializing
-* Upload Backup Screen: styling does not conform to Mendix UX standards
+* Upload Backup screen: styling does not conform to Mendix UX standards
 * Upload archive will run out of space on large archives than 4 GB
 * The Amazon Relational Database Service maintenance window is not aligned with the CP maintenance window for an application

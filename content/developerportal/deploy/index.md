@@ -26,7 +26,7 @@ For more details, see [Environments](environments).
 
 If you click **Details** of a specific environments, you will be able to manage your environment in several tabs of the **Environment details** page.
 
-   ![](attachments/environmentdetails.jpg)
+   ![](attachments/environment-details.png)
    
 For more details, see [Environment details](environments-details).       
 

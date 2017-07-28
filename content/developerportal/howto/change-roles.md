@@ -7,27 +7,28 @@ tags: ["Company Admin","Company Contact","App Contact","Technical Contact","Node
 
 ## 1 Introduction
 
-Within the company it is important to keep the roles of the Mendix users up to date. Some roles have important priveleges that cannot be used for unintended purposes. 
-When the roles and the contact information is up to date, it may lead to better internal communication and the operational processes. 
+Within the company, it is important to keep the roles of Mendix users up to date. Some roles have important priveleges that cannot be used for unintended purposes.
+
+When the roles and the contact information are up-to-date, this can lead to better internal communication and the operational processes. 
 
 **This how-to will teach you how to do the following:**
 
-* Add a company admin
+* Add a Company Admin
 * Change the Company Contact
-* Change the app contact
+* Change the App Contact
 * Change the Technical Contact
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the prerequisites described below:
 
-* You need a Mendix Account (MxID)
-* You need to have an app
-* To add extra Company Admins you need to be a Company Admin
-* To change the App Contact you need to have a SCUM Master role or the App Team 'settings' permission 
-* To change the Technical Contact you need to be a Technical Contact 
+* Have a Mendix account (MxID)
+* Have an app
+* To add extra Company Admins, you need to be a Company Admin
+* To change the App Contact, you need to have a Scrum Master role or the App Team **settings** permission 
+* To change the Technical Contact, you need to be a Technical Contact 
 
-## 3 Add a Company Admin
+## 3 Adding a Company Admin
 
 A company can have multiple company admins to manage the company's settings, users, apps, and nodes. 
 
@@ -54,9 +55,10 @@ You can add extra Company Admins by following these steps:
 
 6. Click **Add**.
 
-## 4 Change the Company Contact
+## 4 Changing the Company Contact
 
 A company can have multiple Company Admins to manage the company's settings, users, apps, and nodes.
+
 Because there can be multiple Company Admins, one person of the company must be the contact person regarding the company operations.
 
 You can change the Company Contact by following these steps:
@@ -73,7 +75,7 @@ You can change the Company Contact by following these steps:
 
 5. Select the user that will be the new Company Contact and click **Select**. The change will be automatically saved. 
 
-## 5 Change the App Contact
+## 5 Changing the App Contact
 
 An app intended for other company users always has a contact person to address questions regarding the app.
 
@@ -89,7 +91,7 @@ You can change the App Contact by following these steps:
 5. Below **Contact**, change the new App Contact from the drop-down list.
 6. Click **Save**.    
 
-## 3 Change the Technical Contact
+## 6 Change the Technical Contact
 
 A node can have only one Technical Contact to manage the node's environments, deployment repositories, backups, alerts, etc. 
 
@@ -108,7 +110,7 @@ You can change the Technical Contact by following these steps:
 
     ![](attachments/settings/change-technicalcontact.png)      
 
-## 3 Related Content
+## 7 Related Content
 
 * [Company Admin](/developerportal/companyadmin)
 * [Company](/developerportal/companyadmin/company)

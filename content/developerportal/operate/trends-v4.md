@@ -7,23 +7,23 @@ tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-To monitor the application health and performance you can view the trends.
+To monitor the application health and performance, you can view the trends.
 
-## 2 Monitor Trends Access
+## 2 Access to Monitoring Trends
 
-To view the **Trends** you must have permission to **Access the Monitoring**.
+To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
 
-Note that only the **Technical Contact** is allowed to grant the node permissions.
+Only the Technical Contact is allowed to grant the node permissions.
 
 {{% /alert %}}
 
-Assign this permission by following these steps:
+To assign this permission, follow these steps:
 
-1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation.
+1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps** and select **Nodes**.
-3. Select the node from which you want to monitor.
+3. Select the node that you want to monitor.
 4. Click **Security** under the **Settings** category on the left.
 5. Go to the **Node Permissions** tab.
 6. Check **Access the Monitoring** next to the name of the person who is granted this permission.
@@ -36,81 +36,85 @@ You can find the trends by following these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps** and select **Nodes**.
-3. Select the node from which you want to monitor.
+3. Select the node that you want to monitor.
 4. Click **Metrics** under the **Operate** category.
-5. Select the environment you want to monitor under the tab **Trends**.
+5. Select the environment you want to monitor under the **Trends** tab.
 
     ![](attachments/environment.jpg)
 
 ## 3 Application Statistics
 
-In this section you will find the explanation for metrics that represent the current status and statistics of a running mendix application.
-Starting with the requests that the application processes from the services/clients its integrated with. On to the actions it does on its own database, Java Virtual Machine related statistics, and the Jetty web server it uses.
+This section explains the metrics that represent the current status and statistics of a running Mendix application. This includes requests that the application processes from the services/clients with which it's integrated as well as actions it performs on its own database, Java Virtual Machine-related statistics, and the Jetty Web server it uses.
 
 ## <a name="Trends-appmxruntimerequests"></a>3.1 Number of Handled External Requests
 
 The requests graph shows the number of requests that are sent from the client or systems that integrate with your application using web services. The number of requests per second is split up by request handlers.
 
-"xas" lists general queries for data in datagrids, sending changes to the server and triggering the execution of microflows. "ws" shows the number of web service calls that were done. "FileDocuments" shows the number of file uploads and downloads. The "/" should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process.
+Note the following:
+
+* `xas` lists general queries for data in data grids, sending changes to the server, and triggering the execution of microflows
+* `ws` shows the number of web service calls that were done
+* `FileDocuments` shows the number of file uploads and downloads
+* The `/` should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process
 
 Commonly used types are:
 
-Request type | Explanation
+Request Type | Explanation
 ------------ | -------------
-api-doc/ | A general api doc overview for other doc request handlers
-debugger/ | Mendix runtime debugger request handler
-/ | Default request handler
-FileDocuments | Request handler used for serving files
-odata-docs/ | documentation request handler for odata
-openid/ | OPENID authentication request handler
-p/ | Request handler for Custom page urls
-rest-doc/ | HTTP Rest webservice request handler documentation
-ws-doc/ | SOAP webservice request handler documentation
-ws/ | SOAP webservice call request handler
-xas/ | Request handler used by the mendix runtime itself
+`api-doc/` | A general API doc overview for other doc request handlers.
+`debugger/` | Mendix Runtime debugger request handler.
+`/` | Default request handler.
+`FileDocuments` | Request handler used for serving files.
+`odata-docs/` | Documentation request handler for OData.
+`openid/` | OPENID authentication request handler.
+`p/` | Request handler for custom page URLs.
+`rest-doc/` | HTTP REST web service request handler documentation.
+`ws-doc/` | SOAP webservice request handler documentation.
+`ws/` | SOAP webservice call request handler.
+`xas/` | Request handler used by the Mendix Runtime itself.
 
 ### <a name="Trends-appmxruntimeconnectionbus"></a>3.2 Number of Database Queries Being Executed
 
 This graph shows the number of database queries that are executed by your Mendix application, broken down in queries that actually modify data (insert, update, delete), queries that fetch data (select), and the number of transactions (like microflows from which these queries originate).
 
-The types are:
+The types are the following:
 
 Type | Explanation
 ------------ | -------------
-inserts | Amount of SQL `INSERT INTO` statements per second. This is used to add new rows of data to a table in the database.
-transactions | Amount of SQL transactions per second. A transaction is a unit of work that is performed against a database.
-update | Amount of SQL `UPDATE` statements per second. The SQL `UPDATE` Query is used to modify the existing records in a table.
-select | Amount of SQL `SELECT` statements per second. The SQL `SELECT` statement is used to fetch the data from a database table which returns this data in the form of a result table.
-delete | Amount of SQL `DELETE` statements per second. The SQL `DELETE` Query is used to delete the existing records from a table.
+`inserts` | Amount of SQL `INSERT INTO` statements per second. This is used to add new rows of data to a table in the database.
+`transactions` | Amount of SQL transactions per second. A transaction is a unit of work that is performed against a database.
+`update` | Amount of SQL `UPDATE` statements per second. The SQL `UPDATE` query is used to modify the existing records in a table.
+`select` | Amount of SQL `SELECT` statements per second. The SQL `SELECT` statement is used to fetch the data from a database table that returns this data in the form of a result table.
+`delete` | Amount of SQL `DELETE` statements per second. The SQL `DELETE` query is used to delete the existing records from a table.
 
 ### <a name="Trends-appmxruntimesessions"></a>3.3 User Accounts and Login Sessions
 
 The sessions graph shows the number of logged-in named and anonymous user sessions for your application, next to the total number of existing login accounts in the application.
 
-The user types are:
+The user types are the following:
 
-User type | Explanation
+User Type | Explanation
 ------------ | -------------
-named users | Total number of user accounts
-concurrent named user sessions | Total number of named login sessions that is going on at that moment
-concurrent anonymous user sessions | Total number of anonymous login sessions that is going on at that moment
+`named users` | Total number of user accounts.
+`concurrent named user sessions` | Total number of named login sessions that are occurring at that moment.
+`concurrent anonymous user sessions` | Total number of anonymous login sessions that are occurring at that moment.
 
 ### <a name="Trends-appmxruntimejvmheap"></a>3.4 JVM Object Heap
 
-The JVM Object Heap graphs shows the internal distribution of allocated memory inside the application process for objects that are in use by microflows, scheduled events, and all other data that flows around inside the Mendix runtime process.
+The JVM Object Heap graph shows the internal distribution of allocated memory inside the application process for objects that are in use by microflows, scheduled events, and all other data that flows around inside the Mendix Runtime process.
 
-One of the most important things to know in order to be able to interpret the values in this graph, is the fact that the JVM does not immediately clean up objects that are no longer in use. This graph will show unused memory as still in use until the so-called garbage collector, which analyzes the memory to free up space, is run. So, this graph does not show how much of the JVM memory that is in use before a garbage collection will have to stay allocated after the garbage collection cycle, because the garbage collection process will only find out about that when it's actually running.
+In order to be able to interpret the values in this graph, one of the most important things to know is the fact that the JVM does not immediately clean up objects that are no longer in use. This graph will show unused memory as still in use until the so-called garbage collector (which analyzes the memory to free up space) is run. So, this graph does not show how much of the JVM memory that is in use before a garbage collection will have to stay allocated after the garbage collection cycle, because the garbage collection process will only find out about that when it's actually running.
 
-If the tenured generation shows up to as big as 65% of the complete heap size, this might as well change to 0% when a garbage collection is triggered as soon as the percentage reaches two thirds of the total heap size, but it could also stay at this amount if all data in this memory part is still referenced by running actions in the application. This behavior causes the JVM heap memory graphs to be one of the most difficult to base conclusions on.
+If the tenured generation shows up to as much as 65% of the complete heap size, this might as well change to 0% when a garbage collection is triggered as soon as the percentage reaches two thirds of the total heap size. However, it could also stay at this amount if all data in this memory part is still referenced by running actions in the application. This behavior means that the JVM Object Heap graphs is one of the most difficult graphs on which to base conclusions.
 
-The object types are:
+The object types are the following:
 
-Object type | Explanation
+Object Type | Explanation
 ------------ | -------------
-tenured generation |  As objects "survive" repeated garbage collections in the survivor space they are migrated to the tenured generation. You can look at this metric as a number of long living objects in JVM.
-native memory | The native memory is the memory available to the operating system.
-eden space | The pool from which memory is initially allocated for most objects.
-unused | Unused JVM heap memory
+`tenured generation` |  As objects "survive" repeated garbage collections in the survivor space, they are migrated to the tenured generation. You can look at this metric as a number of long-living objects in JVM.
+`native memory` | The native memory is the memory available to the operating system.
+`eden space` | The pool from which memory is initially allocated for most objects.
+`unused` | Unused JVM heap memory.
 
 ### <a name="Trends-appmxruntimejvmprocessmemory"></a>3.5 JVM Process Memory Usage
 

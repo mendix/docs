@@ -26,7 +26,7 @@ To assign this permission, follow these steps:
 3. Select the node that you want to monitor.
 4. Click **Security** under the **Settings** category on the left.
 5. Go to the **Node Permissions** tab.
-6. Check **Access the Monitoring** next to the name of the person who is granted this permission.
+6. Check **Access to Monitoring** next to the name of the person who is granted this permission.
 
     ![](attachments/nodepermission.jpg)
 
@@ -52,26 +52,26 @@ The requests graph shows the number of requests that are sent from the client or
 
 Note the following:
 
-* `xas` lists general queries for data in data grids, sending changes to the server, and triggering the execution of microflows
-* `ws` shows the number of web service calls that were done
-* `FileDocuments` shows the number of file uploads and downloads
-* The `/` should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process
+* **xas** lists general queries for data in data grids, sending changes to the server, and triggering the execution of microflows
+* **ws** shows the number of web service calls that were done
+* **FileDocuments** shows the number of file uploads and downloads
+* The **/** should not list any requests, because static content is directly served to the user by the front-facing web server, which is placed between the user and this application process
 
 Commonly used types are:
 
 Request Type | Explanation
 ------------ | -------------
-`api-doc/` | A general API doc overview for other doc request handlers.
-`debugger/` | Mendix Runtime debugger request handler.
-`/` | Default request handler.
-`FileDocuments` | Request handler used for serving files.
-`odata-docs/` | Documentation request handler for OData.
-`openid/` | OPENID authentication request handler.
-`p/` | Request handler for custom page URLs.
-`rest-doc/` | HTTP REST web service request handler documentation.
-`ws-doc/` | SOAP webservice request handler documentation.
-`ws/` | SOAP webservice call request handler.
-`xas/` | Request handler used by the Mendix Runtime itself.
+**api-doc/** | A general API doc overview for other doc request handlers.
+**debugger/** | Mendix Runtime debugger request handler.
+**/** | Default request handler.
+**FileDocuments** | Request handler used for serving files.
+**odata-docs/** | Documentation request handler for OData.
+**openid/** | OPENID authentication request handler.
+**p/** | Request handler for custom page URLs.
+**rest-doc/** | HTTP REST web service request handler documentation.
+**ws-doc/** | SOAP webservice request handler documentation.
+**ws/** | SOAP webservice call request handler.
+**xas/** | Request handler used by the Mendix Runtime itself.
 
 ### <a name="Trends-appmxruntimeconnectionbus"></a>3.2 Number of Database Queries Being Executed
 
@@ -81,11 +81,11 @@ The types are the following:
 
 Type | Explanation
 ------------ | -------------
-`inserts` | Amount of SQL `INSERT INTO` statements per second. This is used to add new rows of data to a table in the database.
-`transactions` | Amount of SQL transactions per second. A transaction is a unit of work that is performed against a database.
-`update` | Amount of SQL `UPDATE` statements per second. The SQL `UPDATE` query is used to modify the existing records in a table.
-`select` | Amount of SQL `SELECT` statements per second. The SQL `SELECT` statement is used to fetch the data from a database table that returns this data in the form of a result table.
-`delete` | Amount of SQL `DELETE` statements per second. The SQL `DELETE` query is used to delete the existing records from a table.
+**inserts** | Amount of SQL `INSERT INTO` statements per second. This is used to add new rows of data to a table in the database.
+**transactions** | Amount of SQL transactions per second. A transaction is a unit of work that is performed against a database.
+**update** | Amount of SQL `UPDATE` statements per second. The SQL `UPDATE` query is used to modify the existing records in a table.
+**select** | Amount of SQL `SELECT` statements per second. The SQL `SELECT` statement is used to fetch the data from a database table that returns this data in the form of a result table.
+**delete** | Amount of SQL `DELETE` statements per second. The SQL `DELETE` query is used to delete the existing records from a table.
 
 ### <a name="Trends-appmxruntimesessions"></a>3.3 User Accounts and Login Sessions
 
@@ -95,9 +95,9 @@ The user types are the following:
 
 User Type | Explanation
 ------------ | -------------
-`named users` | Total number of user accounts.
-`concurrent named user sessions` | Total number of named login sessions that are occurring at that moment.
-`concurrent anonymous user sessions` | Total number of anonymous login sessions that are occurring at that moment.
+**named users** | Total number of user accounts.
+**concurrent named user sessions** | Total number of named login sessions that are occurring at that moment.
+**concurrent anonymous user sessions** | Total number of anonymous login sessions that are occurring at that moment.
 
 ### <a name="Trends-appmxruntimejvmheap"></a>3.4 JVM Object Heap
 
@@ -111,10 +111,10 @@ The object types are the following:
 
 Object Type | Explanation
 ------------ | -------------
-`tenured generation` |  As objects "survive" repeated garbage collections in the survivor space, they are migrated to the tenured generation. You can look at this metric as a number of long-living objects in JVM.
-`native memory` | The native memory is the memory available to the operating system.
-`eden space` | The pool from which memory is initially allocated for most objects.
-`unused` | Unused JVM heap memory.
+**tenured generation** |  As objects "survive" repeated garbage collections in the survivor space, they are migrated to the tenured generation. You can look at this metric as a number of long-living objects in JVM.
+**native memory** | The native memory is the memory available to the operating system.
+**eden space** | The pool from which memory is initially allocated for most objects.
+**unused** | Unused JVM heap memory.
 
 ### <a name="Trends-appmxruntimejvmprocessmemory"></a>3.5 JVM Process Memory Usage
 
@@ -126,16 +126,16 @@ The types are the following:
 
 Type | Explanation
 ------------ | -------------
-`code cache` | JVM also includes a code cache, containing memory that is used for compilation and storage of native code.
-`native code` | JVM allocates a certain amount of memory space for native bytecode.
-`jar files` | JAR files necessary for JVM itself to run.
-`tenured generation` | As objects "survive" repeated garbage collections in the survivor space, they are migrated to the tenured generation. You can look at this metric as a number of long living objects in JVM.
-`survivor space` | The pool containing objects that have survived the garbage collection of the Eden space.
-`eden space` | The pool from which memory is initially allocated for most objects.
-`unused java heap` | Unused JVM heap memory.
-`permanent generation` | The pool containing all the reflective data of the virtual machine itself, such as class and method objects. With Java VMs that use class data sharing, this generation is divided into read-only and read-write areas.
-`other` | Virtual or reserved memory space.
-`thread stacks` | Stacks that are reserved for unique threads.
+**code cache** | JVM also includes a code cache, containing memory that is used for compilation and storage of native code.
+**native code** | JVM allocates a certain amount of memory space for native bytecode.
+**jar files** | JAR files necessary for JVM itself to run.
+**tenured generation** | As objects "survive" repeated garbage collections in the survivor space, they are migrated to the tenured generation. You can look at this metric as a number of long living objects in JVM.
+**survivor space** | The pool containing objects that have survived the garbage collection of the Eden space.
+**eden space** | The pool from which memory is initially allocated for most objects.
+**unused java heap** | Unused JVM heap memory.
+**permanent generation** | The pool containing all the reflective data of the virtual machine itself, such as class and method objects. With Java VMs that use class data sharing, this generation is divided into read-only and read-write areas.
+**other** | Virtual or reserved memory space.
+**thread stacks** | Stacks that are reserved for unique threads.
 
 ### <a name="Trends-appm2eeserverthreadpool"></a>3.6 Threadpool for Handling External Requests
 
@@ -145,10 +145,10 @@ The types are the following:
 
 Type | Explanation
 ------------ | -------------
-`min threads` | Minimum bound of threads to be used by the Jetty threadpool.
-`max threads` | Maximum bound of threads to be used by the Jetty threadpool.
-`active threads` | Active threads that are being used within the Jetty threadpool.
-`threadpool size` | The current total size of the Jetty threadpool.
+**min threads** | Minimum bound of threads to be used by the Jetty threadpool.
+**max threads** | Maximum bound of threads to be used by the Jetty threadpool.
+**active threads** | Active threads that are being used within the Jetty threadpool.
+**threadpool size** | The current total size of the Jetty threadpool.
 
 ### <a name="Trends-appmxruntimethreads"></a>3.7 Total Number of Threads in the JVM Process
 
@@ -170,11 +170,11 @@ The types are the following:
 
 Type | Explanation
 ------------ | -------------
-`xact commit` | Number of transactions committed per second.
-`xact rollback` | Number of transactions rolled back per second.
-`tuples inserted` | Number of tuples inserted per second.
-`tuples updated` | Number of tuples updated per second.
-`tuples deleted` | Number of tuples deleted per second.
+**xact commit** | Number of transactions committed per second.
+**xact rollback** | Number of transactions rolled back per second.
+**tuples inserted** | Number of tuples inserted per second.
+**tuples updated** | Number of tuples updated per second.
+**tuples deleted** | Number of tuples deleted per second.
 
 ### <a name="Trends-dbpgtableindexsizeVERSIONmain"></a>4.2 Index vs. Table Size
 
@@ -184,8 +184,8 @@ The types are the following:
 
 Type | Explanation
 ------------ | -------------
-`tables` | Amount of space taken by the tables in the database.
-`indexes` | Amount of space taken by the indexes in the database.
+**tables** | Amount of space taken by the tables in the database.
+**indexes** | Amount of space taken by the indexes in the database.
 
 ### 4.3 Application Node
 
@@ -197,11 +197,11 @@ This section presents crucial information about this machine.
 
 The CPU graph shows the amount of CPU utilization in percentage, broken down into different types of CPU usage.
 
-The most important value in here is `user`, which shows the amount of CPU time used for handling requests at Mendix Runtime as well as executing microflows and scheduled events. CPU usage of the database is shown in a separate graph below.
+The most important value in here is **user**, which shows the amount of CPU time used for handling requests at Mendix Runtime as well as executing microflows and scheduled events. CPU usage of the database is shown in a separate graph below.
 
 #### <a name="Trends-appmemory"></a>4.3.2 Memory
 
-The memory graph shows the distribution of operating system memory that is available for this server. The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category `apps`.
+The memory graph shows the distribution of operating system memory that is available for this server. The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category **apps**.
 
 ### 4.4 Database Node
 
@@ -215,22 +215,22 @@ The CPU graph shows the amount of CPU utilization in percentage, broken down int
 
 The most important values here are the following:
 
-* `user` – shows the amount of CPU time used for running database queries
-* `iowait` – shows the amount of time a CPU core is idle and waiting for disk operations to finish (for example, waiting for information that has to be read from disk, or waiting for a synchronous write operation to finish)
+* **user** – shows the amount of CPU time used for running database queries
+* **iowait** – shows the amount of time a CPU core is idle and waiting for disk operations to finish (for example, waiting for information that has to be read from disk, or waiting for a synchronous write operation to finish)
 
-Clearly visible amounts of `iowait` in combination with a high number of disk read operations (Disk IOPS) and all free system memory filled as disk cache (Memory graph) is a sign of a lack of available server memory for use as disk cache. This situation will slow down database operations tremendously, because getting data from the disk over and over again takes considerably more time than having it present in the memory.
+Clearly visible amounts of **iowait** in combination with a high number of disk read operations (Disk IOPS) and all free system memory filled as disk cache (Memory graph) is a sign of a lack of available server memory for use as disk cache. This situation will slow down database operations tremendously, because getting data from the disk over and over again takes considerably more time than having it present in the memory.
 
 #### <a name="Trends-dbmemory"></a>4.4.2 Memory
 
-The memory graph shows the distribution of operating system memory that is available for this server. The most important part of this graph is the `cache` section. This type of memory usage contains parts of the database storage that have been read from disk earlier. It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server, at the cache part. A lack of disk cache on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application.
+The memory graph shows the distribution of operating system memory that is available for this server. The most important part of this graph is the **cache** section. This type of memory usage contains parts of the database storage that have been read from disk earlier. It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server, at the cache part. A lack of disk cache on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application.
 
 The types are the following:
 
 Type | Explanation
 ------------ | -------------
-`used memory` | Total memory size of the database instance minus the freeable memory.
-`freeable memory` | The amount of available random access memory.
-`swap usage` | The amount of swap space used on the database instance.
+**used memory** | Total memory size of the database instance minus the freeable memory.
+**freeable memory** | The amount of available random access memory.
+**swap usage** | The amount of swap space used on the database instance.
 
 #### <a name="Trends-dbpgstatactivityVERSIONmain"></a>4.4.3 Database Connections
 
@@ -269,7 +269,7 @@ This graph displays the amount of data that is stored on disk in absolute amount
 
 ### <a name="Trends-appdiskstatsutilization"></a><a name="Trends-dbdiskstatsutilization"></a>5.6 Disk Utilization
 
-Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU `iowait`, `disk iops`, and `number of running requests`. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible CPU `iowait`, filled up memory disk cache, and reports of long-running database queries in the application log could point to a shortage of system memory for the disk cache that leads to repeated random reads from disk storage.
+Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU **iowait**, **disk iops**, and **number of running requests**. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible CPU **iowait**, filled up memory disk cache, and reports of long-running database queries in the application log could point to a shortage of system memory for the disk cache that leads to repeated random reads from disk storage.
 
 ## 6 Related Content
 

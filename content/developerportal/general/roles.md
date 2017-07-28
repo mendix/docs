@@ -72,42 +72,42 @@ As a Regular User you can view apps made within the company by clicking **My Com
 
  ![](attachments/company-app.png)
 
- If you are a Team Member of an app, you can view the App Roles in **General** under the **Settings** category.
+ If you are a Team Member of an app, you can view the app roles in **General** under the **Settings** category.
 
  ![](attachments/app-roles.png)
 
 {{% alert type="info" %}}
-If the app is not a licensed app, it will not have a Technical Contact
+If the app is not a licensed app, it will not have a Technical Contact.
 {{% /alert %}}
 
-The App Roles are described below:
+The app roles are described below.
 
 ### 3.1 App Contact
 
-The App Contact is visible to Regular Users and is the go-to person for questions related to the app. If you build your own app, you will automatically become the App Contact and you will have a **SCRUM Master** role within the **App Team** roles.
+The App Contact is visible to Regular Users and is the go-to person for questions related to the app. If you build your own app, you will automatically become the App Contact and you will have a **Scrum Master** role within the **App Team** roles.
 
-If the App Contact changes, it is recommended to provide the new App Contact the App Team SCRUM Master role. The App Contact will be the contact person for Regular Users and will be able to perform app operations on behalf of all SCRUM Masters.
+If the App Contact changes, it is recommended to provide the new App Contact with the App Team Scrum Master role. The App Contact will be the contact person for Regular Users and will be able to perform app operations on behalf of all Scrum Masters.
 
 ### 3.2 Technical Contact
 
 The Technical Contact manages the technical deployment settings of the app. The Technical Contact can be responsible for different deployment platforms: Mendix Cloud node, on-premises, other plaforms such as MxBlue, Azure etc. 
 
-With an App hosted in the Mendix Cloud, the Technical Contact is the first contact for App Team members regarding the **Node Permissions** and node operations. 
+With an app hosted in the Mendix Cloud, the Technical Contact is the first contact for App Team members regarding the **Node Permissions** and node operations.
 
 Only the Technical Contact is allowed to do the following:
 
-* Manage the users with node permissions
-* Make adjustments to the environments (resize/new environments etc.)
+* Manage users with node permissions
+* Make adjustments to environments (resize/new environments etc.)
 * Manage licenses (renewals/activation/upgrades)
-* Configure the alert settings
+* Configure alert settings
 
 For more information, see [Technical Contact](/developerportal/settings/technical-contact).
 
 ## 4 Team Member Roles
 
-Within an App Team, there are six predefined roles that can be provisioned to App Team Members. Company Admins can also create new team roles within the company.
+Within an App Team, there are six predefined roles that can be provisioned to App Team members. Company Admins can also create new team roles within the company.
 
-The App Team Roles have access to different permission areas based on the following:
+The App Team roles have access to different permission areas based on the following:
 
 * Who can edit the backlog and current sprint
 * Who can edit the app model
@@ -122,22 +122,22 @@ Note that the **Node Permissions** must be provisioned by the **Technical Contac
 
 The predefined roles can be changed in two places:
 
-*	As a Company Admin you can change them, and changes will have effect on every app created after the change
+*	As a Company Admin, you can change them, and the changes will effect every app created after the change
 
  ![](attachments/admin-roles.png)
 
-*	As a Scrum Master you can change them for the specific app of which you are the Scrum Master
+*	As a Scrum Master, you can change them for the specific app of which you are the Scrum Master
 
  ![](attachments/app-team.png)
 
-The predefined App Team roles are described below:
+These are the predefined App Team roles:
 
 Role | Explanation
 ------------ | -------------
-Application Operator | a member who does not actively develop the app, but is responsible for operations on the app's cloud node
-Business Engineer | a member of the app team who contributes to the development of the app
-End-user | a user of the app who should have insight into the backlog but doesn't actively participate in development (for example a stakeholder)
-Product Owner | the product owner of the Scrum team who is responsible for managing the app's backlog
-Scrum Master | the Scrum master of the agile app team; in addition to contributing to development, the Scrum Master manages all the settings within the app; if you create a new app, you will automatically become the Scrum Master
+Application Operator | A member who does not actively develop the app, but is responsible for operations on the app's cloud node.
+Business Engineer | A member of the App Team who contributes to the development of the app.
+End-user | A user of the app who should have insight into the backlog but doesn't actively participate in development (for example, a stakeholder).
+Product Owner | The product owner of the Scrum team who is responsible for managing the app's backlog.
+Scrum Master | The Scrum Master of the agile App Team. In addition to contributing to development, the Scrum Master manages all the settings within the app. If you create a new app, you will automatically become the Scrum Master.
 
-For more information, see [Settings](/developerportal/settings) and [Security - Node Permissions](/developerportal/settings/node-permissions).
+For more information, see [Settings](/developerportal/settings) and [Security – Node Permissions](/developerportal/settings/node-permissions).

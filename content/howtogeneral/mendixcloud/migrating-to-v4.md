@@ -1,6 +1,6 @@
 ---
 title: "Migrate to Mendix Cloud v4"
-category: "How-To's"
+category: "Mendix Cloud"
 description: "This page describes how to migrate your App from a Mendix Cloud v3 node to a Mendix Cloud v4 node."
 tags: ["App","Migrate","Developer Portal","v3","v4","Node"]
 ---
@@ -19,7 +19,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 *   You have an available v4 Cloud Node. To request a licensed v4 Cloud Node, contact your Customer Success Manager (CSM)
 *   You are the Technical Contact of both v3 and v4 Cloud Nodes
-*   Downloaded a Deployment Package and the data of your v3 Node. See, [How to Download a Backup](how-to-download-a-backup)
+*   Downloaded a Deployment Package and the data of your v3 Node. See, [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)
 
 ## 3 The migration
 
@@ -41,14 +41,14 @@ Learn how to [Create and Deploy Your First App](/howto/modeling-basics/create-an
 
 After creating a Free App, it has to be linked to a node.
 
-Learn how to [Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node) how-to.
+Learn how to [Link Your Free App to a Licensed Cloud Node](/developerportal/howto/how-to-link-app-to-node) how-to.
 
 ### 3.3 Upload the Deployment Package to the v4 Node
 
 The next step is to transfer the data of the app on Mendix Cloud v3 to the App on Mendix Cloud v4.
 
-Learn [How to Download a Backup](how-to-download-a-backup) of your app on Mendix Cloud v3.
-Learn [How to Restore a Backup](how-to-restore-a-backup).
+Learn [How to Download a Backup](/developerportal/howto/how-to-download-a-backup) of your app on Mendix Cloud v3.
+Learn [How to Restore a Backup](/developerportal/howto/how-to-restore-a-backup).
 
 ### 3.4 Deploy the Deployment Package to an Environment
 
@@ -60,7 +60,7 @@ Before starting your App in Mendix Cloud v4, make sure it has the same configura
 
 {{% /alert %}}
 
-Learn how to [Deploy to the Mendix Cloud](deploying-to-the-cloud).
+Learn how to [Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud).
 
 ### 3.5 Submit a Request to Support to Offboard the V3 Node
 
@@ -70,10 +70,10 @@ Your app is now running in Mendix Cloud v4. If you don't need the Mendix Cloud v
 
 *   [Certificates](/refguide/certificates)
 *   [Create and Deploy Your First App](/howto/modeling-basics/create-and-deploy-your-first-app)
-*   [How to Configure Custom Domains](custom-domains)
-*   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
-*   [How to Download a Backup](how-to-download-a-backup)
-*   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
-*   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
-*   [How to Restore a Backup](how-to-restore-a-backup)
-*   [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
+*   [How to Configure Custom Domains](/developerportal/howto/custom-domains)
+*   [How to Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud)
+*   [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)
+*   [How to Link a Different App to a Cloud Node](/developerportal/howto/how-to-link-a-different-app-to-a-node)
+*   [How to Link Your Free App to a Licensed Cloud Node](/developerportal/howto/how-to-link-app-to-node)
+*   [How to Restore a Backup](/developerportal/howto/how-to-restore-a-backup)
+*   [How to Unlink Your Free App from a Sandbox Environment](/developerportal/howto/how-to-unlink-sandbox)

@@ -7,26 +7,26 @@ tags: ["Company","Admin","MxID","Developer Portal","Role","Permissions"]
 
 ## 1 Introduction
 
-In order to use Mendix, you must sign up to create an account. With this signup you create a **MxID** and this ID will be linked to a company. If the company already exists, you will join the company. If it is a new company, a new company will be created and you will automatically join it.
+In order to use Mendix, you must sign up to create an account. With this signup you create a MxID, and this ID will be linked to a company. If the company already exists, you will join the company. If it is a new company, a new company will be created and you will automatically join it.
 
 To make changes to the roles, see [Add a Company Admin and Change the App Roles](/developerportal/howto/change-roles).
 
-Within a company and the company's apps there are roles defined that are described below.
+The roles defined within a company and the company's apps are described below.
 
 ## 2 Company Roles
 
-Everyone with the same email domain will be automatically placed in the same company. For example all users that will signup with an email address with the `@bouncetravel.com` emaildomain, will automatically join the company named **Bounce Travel**.
+Everyone with the same email domain will be automatically placed in the same company. For example, all the users that sign up with an email address with the `@bouncetravel.com` emaildomain will automatically join the company named *Bounce Travel*.
 
 Within the company there are three roles, which are described below.
 
 ### 2.1 Company Admin
 
-The Company Admin is a Regular User with additional privilegs. A Company Admin role is a super role that is allowed to manage all settings of the company including the settings of apps, nodes and users. A company can have multiple Company Admins, but Regular Users cannot see who has the the Company Admin role.
+The Company Admin is a Regular User with additional privileges. A Company Admin role is a super role that is allowed to manage all the settings of the company, including the settings of apps, nodes, and users. A company can have multiple Company Admins, but Regular Users cannot see who has the Company Admin role.
 
-The permissions of a Company Admin are the following:
+These are the permissions of a Company Admin:
 
 * Can manage company (profile, admins, groups and settings)
-* Can manage users, invitations and security group memberships
+* Can manage users, invitations, and security group memberships
 * Can manage apps and app roles
 * Can manage nodes
 
@@ -36,31 +36,33 @@ For more details, see [Company Admin](/developerportal/companyadmin).
 
 ### 2.2 Company Contact
 
-Because a company can have multiple Company Admins and Regular Users cannot see who has the the Company Admin role, it is recommended to make one of the Company Admins the Company Contact. The Company Contact is visible to Regular Users and with the Company Admin role, the Company Contact will be able to perform company operations on behalf of all Company Admins.
+Because a company can have multiple Company Admins and Regular Users cannot see who has the the Company Admin role, making one of the Company Admins the Company Contact is recommended. The Company Contact is visible to Regular Users and with the Company Admin role, the Company Contact will be able to perform company operations on behalf of all Company Admins.
 
-To view the Company Contact follow these steps:
+To view the Company Contact, follow these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com).
-2. In the right top corner click on your avatar.
+2.  In the top-right corner, click your avatar:
 
- ![](attachments/showprofile.jpg)
+    ![](attachments/showprofile.jpg)
 
 3. Click **Show Profile**.
-4. Below your name, click your on the name of your company.
+4.  Below your name, click your the name of your company:
 
- ![](attachments/my-profile.jpg)
+    ![](attachments/my-profile.jpg)
  
-5. Below **Contact** you will see the Company Contact
+5.  Below **Contact**, you will see the Company Contact:
 
- ![](attachments/company-contact.png)
+    ![](attachments/company-contact.png)
 
 ### 2.3 Regular Users
 
-Regular Users are all company members. Regular users can join the company,start building apps and view other apps made within the company. Under **My Company's Apps** in the [Developer Portal](http://home.mendix.com) the Regular Users can view the apps made within the company by clicking.
+Regular Users are all company members. Regular Users can join the company, start building apps, and view other apps made within the company. 
+
+Under **My Company's Apps** in the [Developer Portal](http://home.mendix.com), the Regular Users can view the apps made within the company by clicking.
 
 ![](attachments/myapps.png)
 
-The Regular Users cannot join the apps by themselves. If they want to join an app that they are not a member of, they have to ask any Team Member (with an 'invite' permission) of the app to send an invitation. Because it is not visible who the Team Members are, it is recommended to contact the the App Contact to send the invitation. Therefore it is important that the App Contact has the correct permissions to manage the app, for example the SCRUM Master role.
+The Regular Users cannot join the apps by themselves. If they want to join an app that they are not a member of, they have to ask any Team Member (with an *invite* permission) of the app to send an invitation. Because the Team Members are not visible , contact the the App Contact to send the invitation is recommended. Therefore, it is important that the App Contact has the correct permissions to manage the app (for example, the Scrum Master role).
 
  ![](attachments/company-app.png)
 

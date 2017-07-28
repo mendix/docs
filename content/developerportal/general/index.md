@@ -24,7 +24,7 @@ In **Apps** you can find your nodes, sandboxes and company's apps.
 
 If you select an app can collaborate, develop, deploy and operate the app with your App Team.
 
-  ![](attachments/developerportal-apps.png)
+  ![](attachments/apps.png)
   
 ### 1.3 People
 

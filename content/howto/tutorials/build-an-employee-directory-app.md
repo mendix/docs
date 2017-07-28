@@ -3,6 +3,7 @@ title: "Build an Employee Directory App in the Web Modeler"
 category: "Tutorials"
 description: "This series of Mendix How-To's will guide you in creating an employee directory app in the Mendix Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
+frontpage_featured: true
 ---
 
 The following how-to's will guide you through the process of creating an employee directory application in the Mendix Web Modeler:

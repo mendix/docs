@@ -1,6 +1,7 @@
 ---
 title: "API Documentation"
 description: "The Mendix platform API documentation is divided into sections such as Runtime, Client, Feedback, and Deploy."
+frontpage_featured: true
 ---
 
 The API documentation is divided into the sections described below.

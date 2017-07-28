@@ -1,5 +1,5 @@
 ---
-title: "Change Technical Contact"
+title: "Change the Technical Contact"
 space: "Developer Portal"
 category: "How-To's"
 description: "Describes how to change the Technical Contact in the Developer Portal."

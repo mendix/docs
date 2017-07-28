@@ -19,7 +19,7 @@ Within the company there are three roles, which are described below.
 
 ### 2.1 Company Admin
 
-The Company Admin is a super role that is allowed to manage all settings of the company including the settings of apps, nodes and users. A company can have multiple Company Admins, the Company Admins are invisible for Regular Users of the company.
+The Company Admin is a Regular User with additional privilegs. A Company Admin role is a super role that is allowed to manage all settings of the company including the settings of apps, nodes and users. A company can have multiple Company Admins, but Regular Users cannot see who has the the Company Admin role.
 
 The permissions of a Company Admin are the following:
 
@@ -34,7 +34,7 @@ For more details, see [Company Admin](/developerportal/companyadmin) and [Add Ex
 
 ### 2.2 Company Contact
 
-Because a company can have multiple Company Admins and they are invisible to Regular Users, it is recommended to make one of the Company Admins the Company Contact. The Company Contact is visible to Regular Users and with the Company Admin role, the Company Contact will be able to perform company operations on behalf of all Company Admins.
+Because a company can have multiple Company Admins and Regular Users cannot see who has the the Company Admin role, it is recommended to make one of the Company Admins the Company Contact. The Company Contact is visible to Regular Users and with the Company Admin role, the Company Contact will be able to perform company operations on behalf of all Company Admins.
 
 To view the Company Contact follow these steps:
 
@@ -52,7 +52,7 @@ To view the Company Contact follow these steps:
 
  ![](attachments/company-contact.png)
 
-For more information, see [Change Company Contact](/developerportal/howto/change-company-contact)
+For more information, see [Change the Company Contact](/developerportal/howto/change-company-contact)
 
 ### 2.3 Regular Users
 
@@ -60,7 +60,7 @@ Regular Users are all company members. Regular users can join the company,start 
 
 ![](attachments/myapps.png)
 
-The Regular Users cannot join the apps by themselves. If they want to join an app that they are not a member of, they have to ask the App Contact to send them an invitation.
+The Regular Users cannot join the apps by themselves. If they want to join an app that they are not a member of, they have to ask any Team Member (with an 'invite' permission) of the app to send an invitation. Because it is not visible who the Team Members are, it is recommended to contact the the App Contact to send the invitation. Therefore it is important that the App Contact has the correct permissions to manage the team members and the app.
 
  ![](attachments/company-app.png)
 
@@ -86,11 +86,11 @@ The App Contact is visible to Regular Users and is the go-to person for question
 
 If the App Contact changes, it is recommended to provide the new App Contact the App Team SCRUM Master role. The App Contact will be the contact person for Regular Users and will be able to perform app operations on behalf of all SCRUM Masters.
 
-For more information, see [Change App Contact](/developerportal/howto/change-app-contact).
+For more information, see [Change the App Contact](/developerportal/howto/change-app-contact).
 
 ### 3.2 Technical Contact
 
-The Technical Contact manages the settings of the technical deployment aspect of the app. The Technical Contact can be responsible for different deployment platforms: Mendix Cloud node, on-premises, other plaforms such as MxBlue, Azure etc. 
+The Technical Contact manages the technical deployment settings of the app. The Technical Contact can be responsible for different deployment platforms: Mendix Cloud node, on-premises, other plaforms such as MxBlue, Azure etc. 
 
 With an App hosted in the Mendix Cloud, the Technical Contact is the first contact for App Team members regarding the **Node Permissions** and node operations. 
 
@@ -101,7 +101,7 @@ Only the Technical Contact is allowed to do the following:
 * Manage licenses (renewals/activation/upgrades)
 * Configure the alert settings
 
-For more information, see [Technical Contact](/developerportal/settings/technical-contact) and [Change Technical Contact](/developerportal/howto/change-technical-contact).
+For more information, see [Technical Contact](/developerportal/settings/technical-contact) and [Change the Technical Contact](/developerportal/howto/change-technical-contact).
 
 ## 4 Team Member Roles
 
@@ -134,10 +134,10 @@ The predefined App Team roles are described below:
 
 Role | Explanation
 ------------ | -------------
-Application Operator | a member who does not actively develop on the application, but is responsible for operations on the application's cloud node
-Business Engineer | a member of the app team who contributes to the development of the application
-End-user | a user of the application who should have insight into the backlog but doesn't actively participate in development (for example a stakeholder)
-Product Owner | the product owner of the Scrum team who is responsible for managing the application's backlog
+Application Operator | a member who does not actively develop the app, but is responsible for operations on the app's cloud node
+Business Engineer | a member of the app team who contributes to the development of the app
+End-user | a user of the app who should have insight into the backlog but doesn't actively participate in development (for example a stakeholder)
+Product Owner | the product owner of the Scrum team who is responsible for managing the app's backlog
 Scrum Master | the Scrum master of the agile app team; in addition to contributing to development, the Scrum Master manages all the settings within the app; if you create a new app, you will automatically become the Scrum Master
 
 For more information, see [Settings](/developerportal/settings) and [Security - Node Permissions](/developerportal/settings/node-permissions).

@@ -222,15 +222,15 @@ Clearly visible amounts of `iowait` in combination with a high number of disk re
 
 #### <a name="Trends-dbmemory"></a>4.4.2 Memory
 
-The memory graph shows the distribution of operating system memory that is available for this server. The most important part of this graph is the 'cache' section. This type of memory usage contains parts of the database storage that have been read from disk earlier. It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server, at the cache part. A lack of disk cache on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application.
+The memory graph shows the distribution of operating system memory that is available for this server. The most important part of this graph is the `cache` section. This type of memory usage contains parts of the database storage that have been read from disk earlier. It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server, at the cache part. A lack of disk cache on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application.
 
-The types are:
+The types are the following:
 
 Type | Explanation
 ------------ | -------------
-used memory | Total memory size of the DB instance minus the freeable memory.
-freeable memory | The amount of available random access memory.
-swap usage | The amount of swap space used on the DB instance.
+`used memory` | Total memory size of the database instance minus the freeable memory.
+`freeable memory` | The amount of available random access memory.
+`swap usage` | The amount of swap space used on the database instance.
 
 #### <a name="Trends-dbpgstatactivityVERSIONmain"></a>4.4.3 Database Connections
 
@@ -242,14 +242,14 @@ Shared statistics for both of the machines.
 
 ### <a name="Trends-appdiskstatsiops"></a>5.1 Disk IOPS
 
-The Disk IO statistics show the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
+The disk IO statistics show the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 
-The types are:
+The types are the following:
 
 Type | Explanation
 ------------ | -------------
-read | Read ops on the current targeted filestorage
-write | Write ops on the current targeted filestorage
+**read** | Read ops on the current targeted file storage.
+**write** | Write ops on the current targeted file storage.
 
 ### <a name="Trends-appload"></a><a name="Trends-dbload"></a>5.2 Load
 
@@ -261,17 +261,17 @@ The disk latency graph shows the average waiting times for disk operations to co
 
 ### <a name="Trends-appdiskstatsthroughput"></a><a name="Trends-dbdiskstatsthroughput"></a>5.4 Disk Throughput
 
-Disk throughput shows the amount of data that is being read from and written to disk. If there's more than one disk partition in the system, the /srv partition generally contains project files and uploaded files of the application, while /var generally holds the database storage.
+Disk throughput shows the amount of data that is being read from and written to disk. If there's more than one disk partition in the system, the `/srv` partition generally contains the project files and uploaded files of the application, while `/var` generally holds the database storage.
 
 ### <a name="Trends-appdfabs"></a><a name="Trends-dbdfabs"><a name="Trends-dbdf"><a name="Trends-appdf"></a>5.5 Disk Usage
 
-This graph displays the amount of data that is stored on disk in absolute amounts. If there's more than one disk partition in the system, the /srv partition generally holds project files and uploaded files of the application, while /var generally holds the database storage.
+This graph displays the amount of data that is stored on disk in absolute amounts. If there's more than one disk partition in the system, the `/srv` partition generally holds project files and uploaded files of the application, while `/var` generally holds the database storage.
 
 ### <a name="Trends-appdiskstatsutilization"></a><a name="Trends-dbdiskstatsutilization"></a>5.6 Disk Utilization
 
-Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
+Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU `iowait`, `disk iops`, and `number of running requests`. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible CPU `iowait`, filled up memory disk cache, and reports of long-running database queries in the application log could point to a shortage of system memory for the disk cache that leads to repeated random reads from disk storage.
 
-## 6 Related content
+## 6 Related Content
 
 *   [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
 *   [How to Deploy Your Licensed App to the Cloud](../howto/deploying-to-the-cloud)

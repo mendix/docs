@@ -2,6 +2,7 @@
 title: "Known Issues"
 toc-level: 1
 category: "Desktop Modeler"
+frontpage_featured: true
 ---
 
 {{% alert type="info" %}}

@@ -60,7 +60,7 @@ Regular Users are all company members. Regular users can join the company,start 
 
 ![](attachments/myapps.png)
 
-The Regular Users cannot join the apps by themselves. If they want to join an app that they are not a member of, they have to ask any Team Member (with an 'invite' permission) of the app to send an invitation. Because it is not visible who the Team Members are, it is recommended to contact the the App Contact to send the invitation. Therefore it is important that the App Contact has the correct permissions to manage the team members and the app.
+The Regular Users cannot join the apps by themselves. If they want to join an app that they are not a member of, they have to ask any Team Member (with an 'invite' permission) of the app to send an invitation. Because it is not visible who the Team Members are, it is recommended to contact the the App Contact to send the invitation. Therefore it is important that the App Contact has the correct permissions to manage the app, for example the SCRUM Master role.
 
  ![](attachments/company-app.png)
 

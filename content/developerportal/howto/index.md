@@ -33,10 +33,6 @@ This category contains documents about the use of specific tasks in the [Develop
 
 *   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
 
-**Migration**
-
-*   [How to Migrate to Mendix Cloud v4](migrating-to-v4)
-
 **Sandbox**
 
 *   [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

@@ -2,6 +2,7 @@
 title: "XPath"
 category: "Modeler"
 description: "Describes how the XPath query langauge is used in Mendix by presenting functions and examples."
+frontpage_featured: true
 ---
 
 Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations.

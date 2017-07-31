@@ -17,6 +17,8 @@ The different files serve different purposes:
 
 If you do not create these files the default “green monsters” will be used instead for each scenario.
 
+   ![](attachments/customerror-page/monsters.png)
+
 **This how-to will teach you how to do the following:**
 
 * Create a custom error page

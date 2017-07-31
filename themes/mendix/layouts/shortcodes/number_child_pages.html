@@ -1,24 +1,37 @@
 <div class="index__block"><ul>
 {{- $currentPage := .Page.Permalink }}
+{{- $thisPage := .Page }}
 {{- $path := .Page.Dir }}
 {{- $slices := split $path "/" }}
-{{- $style := .Get "style" -}}
-{{- if eq $style "flat" }}
-  {{- $.Scratch.Set "pages" (where .Page.Site.Pages ".File.Dir" "eq" $path) }}
-{{- else }}
-  {{- range $i, $p := .Page.Site.Pages }}
-    {{- if and (eq (index (split $p.Dir "/") 0) (index $slices 0)) (eq $p.File.BaseFileName "index") }}
-      {{ $.Scratch.SetInMap "pagemap" (printf "%s" $i) . }}
-    {{- end }}
-  {{- end}}
-  {{- $.Scratch.Set "pages" ($.Scratch.GetSortedMapValues "pagemap") }}
-{{- end }}
-{{- range sort ($.Scratch.Get "pages") "Title" "asc" }}
-  {{- if eq .Permalink $currentPage }}
-  {{- else if isset .Params "category" }}
-  {{- else if isset .Params "parent" }}
+{{- $sort := .Get "sort" -}}
+{{- if eq $sort nil -}}
+  {{- $sort := "asc" -}}
+{{- end -}}
+{{- $pages := (where .Page.Site.Pages ".File.Dir" "eq" $path) }}
+{{- $pages := (where $pages ".Params.parent" "eq" .Page.Params.title) }}
+{{- range $pages }}
+  {{- $str := "" }}
+  {{- $del := split .Title "." }}
+  {{- $p1 := int (index $del 0) }}
+  {{- $p2 := int (index $del 1) }}
+  {{- $num := (add (mul 100 $p1) $p2) }}
+  {{- if eq $sort "desc" }}
+    {{- $neg := sub 1000000 $num }}
+    {{- $str := (printf "%v" $neg) }}
+    {{- $.Scratch.SetInMap "pages" $str . -}}
   {{- else }}
-    {{ $page := . }}
+    {{- $str := (printf "%v" $num) }}
+    {{- $.Scratch.SetInMap "pages" $str . -}}
+  {{- end }}
+{{- end }}
+
+{{- $sortedPages := ($.Scratch.GetSortedMapValues "pages") }}
+
+{{- range $sortedPages }}
+  {{- if eq .Permalink $currentPage }}
+  {{- else }}
+    {{- $page := . }}
+    {{- $page.Scratch.Get "num" }}
     <li class="index__block__section">
       {{- $pageURL := replace $page.URL "index.html" "" -}}
       {{- $pageURL := replace $pageURL ".html" "" }}
@@ -32,7 +45,7 @@
         {{- if eq $subpage.Dir $path }}
           {{- $subPageURL := replace $subpage.URL "index.html" "" -}}
           {{- $subPageURL := replace $subPageURL ".html" "" }}
-          <li><a href="{{ $subPageURL }}" title="{{$subpage.Title}}" />{{- $subpage.Title }}</a></li>
+          <li><a href="{{ $subPageURL }}" title="$subpage.Title" />{{- $subpage.Title }}</a></li>
         {{- end }}
         {{- if eq (add $index 1) $len }}
           </ul>

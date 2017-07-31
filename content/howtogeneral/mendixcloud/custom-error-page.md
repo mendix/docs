@@ -31,16 +31,19 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 3 Create Custom Error Pages
 
 1. Open the local folder of your app.
-
-  ![](attachments/general/environment.png)
-
 2. Go to **theme**.
 
-  ![](attachments/general/environment.png)
+  ![](attachments/customerror-page/theme.png)
 
 3. Create a new folder named *error_pages*.
 
-4. In the folder **error_pages** create a new `.txt` file and name it *offline.html*. Optionally, you can create also *404.html* and *403.html* pages. 
+  ![](attachments/customerror-page/error-pages.png)
+
+4. In the folder **error_pages** create a new `.txt` file and name it *offline.html*. 
+
+  ![](attachments/customerror-page/offline.png)
+
+Optionally, you can create also *404.html* and *403.html* pages. 
 In these `.html` files, you can only refer to external resources or resources under the absolute path `/error_page/`. 
 5. Commit the changes in the Desktop Modeler.
 

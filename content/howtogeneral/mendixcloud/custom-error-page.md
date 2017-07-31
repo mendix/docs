@@ -28,6 +28,11 @@ If you do not create these files the default “green monsters” will be used i
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * You have a local repository of the app.
+* Your app is hosted in Mendix Cloud v3
+
+{{% alert type="warning" %}}
+Custom Error pages are currently not working on Mendix Cloud v4 apps.
+{{% /alert %}}
 
 
 ## 3 Create Custom Error Pages

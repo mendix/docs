@@ -6,55 +6,66 @@ title: "How-To's"
 
 This category contains documents about the use of specific tasks in the [Developer Portal](http://home.mendix.com).
 
-## 2 Collaborate
+## 2 General
+
+* [Add a Company Admin and Change the App Roles](/developerportal/howto/change-roles)
+* [Manage Developer Portal Deep Links](/developerportal/howto/manage-deeplinks)
+
+
+## 3 Collaborate
 
 **Feedback** 
 
-*   [How to Use the Feedback Widget](gathering-user-feedback)
-*   [How to Provide Feedback on Mendix](feedback-mendix)
+* [Use the Feedback Widget](gathering-user-feedback)
+* [Provide Feedback on Mendix](feedback-mendix)
 
 **Stories**
 
-*   [How to Manage Sprints and Stories](managing-your-application-requirements-with-mendix)
+* [Manage Sprints and Stories](managing-your-application-requirements-with-mendix)
 
-## 3 Deploy
+
+## 4 Deploy
 
 **Configuration**
 
-*   [How to Configure Custom Domains](custom-domains)
-*   [How to Configure Maintenance Windows](maintenance-windows)
+* [Configure Custom Domains](custom-domains)
+* [Configure Maintenance Windows](maintenance-windows)
 
 **Connecting to a Cloud Node**
 
-*   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
-*   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
+* [Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
+* [Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 
 **Deployment**
 
-*   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
+* [Deploy to the Mendix Cloud](deploying-to-the-cloud)
 
 **Migration**
 
-*   [How to Migrate to Mendix Cloud v4](migrating-to-v4)
+* [Migrate to Mendix Cloud v4](migrating-to-v4)
 
 **Sandbox**
 
-*   [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
+* [Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
 
 **Upgrade**
 
-*   [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
+* [Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
 
 
-## 4 Operate
+## 5 Operate
+
+**Alerts**
+
+* [Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
 
 **Backups**
 
-*   [How to Create a Backup](how-to-create-backup)
-*   [How to Download a Backup](how-to-download-a-backup)
-*   [How to Restore a Backup](how-to-restore-a-backup)
+* [Create a Backup](how-to-create-backup)
+* [Download a Backup](how-to-download-a-backup)
+* [Restore a Backup](how-to-restore-a-backup)
 
 **Troubleshoot**
 
-*   [Troubleshooting your application in the Mendix Cloud: Cache](troubleshooting-mxcloud-cache)
-*   [Troubleshooting your application in the Mendix Cloud: Running now](troubleshooting-mxcloud-runningnow)
+* [Troubleshoot Your Application in the Mendix Cloud: Cache](troubleshooting-mxcloud-cache)
+* [Troubleshoot Your Application in the Mendix Cloud: Running Now](troubleshooting-mxcloud-runningnow)

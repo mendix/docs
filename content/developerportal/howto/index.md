@@ -67,5 +67,5 @@ This category contains documents about the use of specific tasks in the [Develop
 
 **Troubleshoot**
 
-* [Troubleshooting your application in the Mendix Cloud: Cache](troubleshooting-mxcloud-cache)
-* [Troubleshooting your application in the Mendix Cloud: Running now](troubleshooting-mxcloud-runningnow)
+* [Troubleshoot Your Application in the Mendix Cloud: Cache](troubleshooting-mxcloud-cache)
+* [Troubleshoot Your Application in the Mendix Cloud: Running Now](troubleshooting-mxcloud-runningnow)

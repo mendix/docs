@@ -11,6 +11,12 @@ title: "Platform Portal"
 * Technical Contacts can access the **Node Permissions** page, even when they don't have app admin rights. (Tickets 51315, 53088, 54081)
 * The Stories API and Feedback API return sprints, stories, and feedback items in the same order as shown in the Platform Portal.
 
+### August 1st, 2017
+
+#### Improvements
+
+* Java will be upgraded including the most recent security updates. The Java keystore is also updated. It contains trusted Root Certificates for secure outgoing connections from your Mendix App. For example, with the updated Java keystore you are now able to connect to endpoints that use a certificate that is signed by [Let's Encrypt](https://letsencrypt.org/). Root Certificates that are considered unsecure by Oracle and Mozilla have been removed. Your App will automatically start using a newer Java version and keystore when you restart your App.
+
 ### July 18th, 2017
 
 #### Improvements

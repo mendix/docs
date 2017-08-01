@@ -61,9 +61,10 @@ The `/error_page/` path is the only one that will be available when the applicat
 
 ### 3.1 Example offline page
 
-An example offline.html/404.html/403.html page would look like this:
+An example `offline.html/404.html/403.html` page would look like this:
 
-`<!doctype html>
+```javascript
+<!doctype html>
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="/error_page/style.css">
@@ -72,7 +73,8 @@ An example offline.html/404.html/403.html page would look like this:
   <body>
     This application is currently offline.
   </body>
-</html>`
+</html>
+```
 
 This example refers to style.css and script.js which you should also create and place in the error_page directory if you want to have special styling and/or JavaScript.
 

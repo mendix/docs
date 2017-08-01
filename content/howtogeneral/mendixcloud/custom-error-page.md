@@ -28,12 +28,7 @@ If you do not create these files the default “green monsters” will be used i
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * You have a local repository of the app.
-* Your app is hosted in Mendix Cloud v3
-
-{{% alert type="warning" %}}
-Custom Error pages are currently not working on Mendix Cloud v4 apps.
-{{% /alert %}}
-
+* Your app is hosted in the Mendix Cloud
 
 ## 3 Create Custom Error Pages
 
@@ -76,6 +71,4 @@ An example `offline.html/404.html/403.html` page would look like this:
 </html>
 ```
 
-This example refers to style.css and script.js which you should also create and place in the error_page directory if you want to have special styling and/or JavaScript.
-
-If you’re interested in the technical implementation, read this post on the [Mendix R&D blog](https://tech.mendix.com/linux/2014/12/26/custom-monsters/).
+This example refers to style.css and script.js which you should also create and place in the 'error_page' directory if you want to have special styling and/or JavaScript.

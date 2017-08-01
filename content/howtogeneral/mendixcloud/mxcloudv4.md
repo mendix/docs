@@ -25,15 +25,16 @@ The primary hosting locations are as follows:
 
 *   Mendix Cloud EU: AWS Frankfurt
 *   Mendix Cloud US: AWS North Virginia
+*   Mendix Cloud Asia Pacific: AWS Tokyo
 
-The data will always be stored in the same political region: 
+Data will always be stored in the same political region for the following regions:
 
 *   Data in the EU, including backups, will stay within the EU
 *   Data in the US, including backups, will stay within the US
 
 ## 4 What Are the Limitations?
 
-Initially, we won't have a **mail server**. You can use a third-party email provider instead. 
+There is no included **mail server** in Mendix Cloud v4. You can use a third-party email provider instead. 
 
 A VPN (which is already deprecated in favor of client certificates) will not be possible in the Mendix Cloud v4. 
 
@@ -50,23 +51,20 @@ No. In the previous generation we used the Java Security Manager to enforce stan
 
 ## 7 Missing in Mendix Cloud v4
 
-There some functionalities missing in v4. Mendix will implement these features in the near future:
+There are some functionalities missing in v4. Mendix will implement these in the near future:
 
-* Client certificate validation is not available
-* Detailed information on alerts is missing
-* File storage usage is not visible
-* Health check microflow is not implemented
-* There are no application CPU alerts
-* There is no SMTP server running on local host
-* It is not possible to change the Java Heap size for the application
-* Archived logs can only be downloaded, not seen in browser
-* Implement error pages (green monsters)
-* Restore backup does not ask in which environment the archive should be restored
+* Using Client Certificates for Access Restriction Profiles is not available. For outgoing connections, Client Certificates are available
+* There is no detailed description for alerts in the alerts overview
+* File storage usage only shows the number of files, not the amount of used storage
+* The custom Health Check microflow is not used by the alerting system
+* Application CPU alerts are not sent
+* Archived logs can only be downloaded, not viewed in browser
+* Cross-environment backups restore is not available. You can download and upload data instead
 * The database status is not visible on the node details screen
 
 ##  8 Known Issues in Mendix Cloud v4
 
-* Apps on v4 get a false recovery email after initializing
+* New apps on v4 get a recovery email after initializing
 * Upload Backup screen: styling does not conform to Mendix UX standards
-* Upload archive will run out of space on large archives than 4 GB
-* The Amazon Relational Database Service maintenance window is not aligned with the CP maintenance window for an application
+* Upload archive only supports archives of maximum 4 GB
+* The Amazon RDS maintenance window is not aligned with the CP maintenance window for an application

@@ -1,93 +1,82 @@
 ---
 title: "Debugging a Mobile App with Mendix"
-# category: "Mobile"
-# description: "How to setup a mobile app to run from your local machine and debug using Mendix's tools"
-# tags: ["Mobile", "debug", "android", "ios"]
+category: "Mobile"
+description: "How to set up a mobile app to run from your local machine and debug using Mendix's tools"
+tags: ["Mobile", "debug", "android", "ios"]
 ---
 
-# Debug a Mobile App With Mendix
+## 1 Introduction
 
-## Introduction
-
-Mendix has great tools for debugging web applications including the offline and online debugger, but a lot of people don’t know that these tools can also be used to debug and test mobile applications.
+Mendix has great tools for debugging web applications, including the offline and online debugger, but a lot of people don’t know that these tools can also be used to debug and test mobile applications.
 
 **This how-to will teach you how to do the following:**
 
 * Build and run a Mendix mobile app that connects to your local development machine
-* Debug the mobile app using Mendix debugging tools, Chrome DevTools and The Safari Web Inspector
+* Debug the mobile app using Mendix debugging tools, Chrome DevTools and the Safari Web Inspector
 
 ## Prerequisites
 
-Ensure that you have a network utilities tool on your mobiledevice (I use [PingTools](https://play.google.com/store/apps/details?id=ua.com.streamsoft.pingtools) on Android, and [NetworkPing Lite](https://itunes.apple.com/us/app/network-ping-lite/id289967115?mt=8) on iOS) in order to ensure connectivity between your device andyour computer. 
+Before starting this how-to, make sure you have completed the following prerequisites:
 
-Ensure that you have an Adobe ID that you can use to sign into Phonegap Build ([https://build.phonegap.com/apps](https://build.phonegap.com/apps)).
+* Ensure that you have a network utilities tool on your mobiledevice (I use [PingTools](https://play.google.com/store/apps/details?id=ua.com.streamsoft.pingtools) on Android, and [NetworkPing Lite](https://itunes.apple.com/us/app/network-ping-lite/id289967115?mt=8) on iOS) in order to ensure connectivity between your device andyour computer
+* Ensure that you have an Adobe ID that you can use to sign in to Phonegap Build ([https://build.phonegap.com/apps](https://build.phonegap.com/apps))
 
-## Contents
+## Mendix and Phonegap <a name="MendixAndPhonegap"></a>
 
-[Mendix & Phonegap](#MendixAndPhoneGap)
+Before we begin, it’s important to understand how Mendix Hybrid Mobile apps work, and the relationship between the Mendix application and the Phonegap service. [Adobe PhoneGap](https://phonegap.com/) provides a way for users to create mobile applications using web technologies, like Mendix. PhoneGap (PG) essentially creates a wrapper for a Mendix application that is recognized and treated like a native application by mobile platforms. All your application’s logic, appearance, and functionality are controlled by Mendix. PG then, in a way, *translates* these aspects of your application into a language that can be understood by Android and iOS. That being said, there are some facets of your application’s configuration that need to be configured in the PG application and not in Mendix. We’ll return to this a little later.
 
-​    [Android + macOS](#AndroidMac)
+The basic function of the PG app is to ensure that all the necessary libraries (called PhoneGap Plugins) are loaded and available to the application, and then initialize the Mendix application from a target URL. As soon as the Mendix app has been initialized, the app’s Mendix logic then takes over. There are a couple of benefits that we, as Mendix developers, gain from the fact that the PG app initializes based on a URL: One, changes that we make to the application logic do not require a full rebuild of both the Mendix app and the PG app (just the Mendix one); and two, that we can instruct the PG app to initialize based on an IP address (rather than the production URL) and debug a mobile application running locally on our laptop, in order to further increase the speed of our iterations.
 
-​    [iOS + macOS](#iosAndMac)
-
-​    [Android + Windows](#AndroidAndWindows)
-
-## Mendix & Phonegap <a name="MendixAndPhonegap"></a>
-
-Before we begin, it’s important to understand how Mendix Hybrid Mobile apps work, and the relationship between the Mendix application and the Phonegap service. [Adobe PhoneGap](https://phonegap.com/) provides a way for users to create mobile applications using web technologies, like Mendix. PhoneGap (PG) essentially creates a wrapper for a Mendix application that is recognized and treated like a native application by mobile
-platforms. All your application’s logic, appearance, and functionality are controlled by Mendix. PG then, in a way, *translates* these aspects of your application into a language that can be understood by Android and iOS. That being said, there are some facets of your application’s configuration that need to be configured in the PG application and not in Mendix. We’ll return to this a little later. 
-
-The basic function of the PG app is to ensure that all the necessary libraries (called PhoneGap Plugins) are loaded and available to the application, and then initialize the Mendix application from a target URL. As
-soon as the Mendix app has been initialized, the app’s Mendix logic then takes over. There are a couple of benefits that we, as Mendix developers, gain from the fact that the PG app initializes based on a URL: One, changes that we make to the application logic do not require a full rebuild of both the Mendix app and the PG app (just the Mendix one); and two, that we can instruct the PG app to initialize based on an IP address (rather than the production URL) and debug a mobile application running locally on our laptop, in order to further increase the speed of our iterations.
-
-## Android + macOS <a name="AndroidMac"></a>
+## Android and macOS <a name="AndroidMac"></a>
 
 This is perhaps the easiest combination of mobile target platform and development environment to get to work. 
 
-##### macOS configuration
+### macOS Configuration
 
-Since the Mendix Modeler only runs on Mendix, we need to make sure that your virtual (windows) machine can be accessed by the outsideworld. In order to do that, the network setting much be shared between thevirtual machine and your mac, and the appropriate ports forwarded. This guidewill explain how to configure your development environment with Parallels.
+Since the Mendix Modeler only runs on Mendix, we need to make sure that your virtual (windows) machine can be accessed by the outsideworld. To do that, the network setting much be shared between the virtual machine and your Mac, and the appropriate ports forwarded. Follow these steps to configure your development environment with Parallels:
 
-1.    Open the Parallels **Configure** dialog and find the **Hardware** tab.
+1. Open the Parallels **Configure** dialog.
 
-      | ![mac-1](./attachments/debug-a-mobile-app/mac-1.png) | ![mac-1b](./attachments/debug-a-mobile-app/mac-1b.png) |
-      | ---------------------------------------- | ---------------------------------------- |
-      |                                          |                                          |
+      ![mac-1](./attachments/debug-a-mobile-app/mac-1.png)
+      
+2. Go to the **Hardware** tab.
 
-      ​
+      ![mac-1b](./attachments/debug-a-mobile-app/mac-1b.png)
 
-2. If necessary, click the lock to make changes, and ensure that the **Source** for **Network 1** is set to **Shared Network**.
-      ![mac-2](./attachments/debug-a-mobile-app/mac-2-1163132.png)
+3. Make sure that the **Source** for **Network 1** is set to **Shared Network**. Click the lock to make changes.
 
+4. Open the Parallels **Preferences** dialog.
+      
+      ![mac-3](./attachments/debug-a-mobile-app/mac-3-1163108.png)
 
-3.    Next, open the Parallels **Preferences** dialog and find the **Network** tab. Make sure that the **Connect Mac to this network** option is checked.
+5. Go to the **Network** tab.
+6. Make sure that the **Connect Mac to this network** option is checked.
 
-      | ![mac-3](./attachments/debug-a-mobile-app/mac-3-1163108.png) | ![mac-3b](./attachments/debug-a-mobile-app/mac-3b-1163119.png) |
-      | ---------------------------------------- | ---------------------------------------- |
-      |                                          |                                          |
+      ![mac-3b](./attachments/debug-a-mobile-app/mac-3b-1163119.png) |
 
-
-4.    From this menu, hit the **+** button at the bottom of the page to add some new Port Forwarding Rules:
+7. Click **+** button at the bottom of the page to add a new Port Forwarding Rule with the following settings:
+      * Protocol: *TCP*
+      * Source Port: *8080*
+      * Forward to: *Win10*
+      * Destination Port: *8080*
+      
       ![mac-4](./attachments/debug-a-mobile-app/mac-4-1163092.png)
-      1.    Forward ports **8080 **and **8090** to your windows machine.
+      
+8. Add another rule, this time forwarding port *8090*.
 
+9. Start the Mendix app locally, and verify that your mobile device can ping your development machine.
 
-5.    Start the mendixapp locally, and verify that your mobile device can ping your developmentmachine.
+10. Find the local IP of your development machine on your network by going to **settings > network**.
 
-
-6.    Find the local IP of your development machine on your network. Go to **settings > network**
       ![mac-6](./attachments/debug-a-mobile-app/mac-6-1163082.png)
 
+11. Verify that your device can ping this address:
 
-7.    Verify that your device can ping this address
       ![win-2](./attachments/debug-a-mobile-app/win-2.png)
-      ​
 
+##### Phonegap Configuration
 
-##### Phonegap configuration
-
-We can use PG Build to build
-the native application and tell it to intialize based on this new URL, rather than the default.
+You can use PG Build to build the native application and tell it to intialize based on this new URL, rather than the default.
 
 1. Go to Sprintr and navigate to the **Mobile App** page
 

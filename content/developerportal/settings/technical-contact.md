@@ -11,7 +11,7 @@ A Mendix application will always be set up and delivered with a technical contac
 
 {{% alert type="info" %}}
 
-It is currently not possible to select more than one Technical Contact in the Mendix Cloud. See how to [Change the Technical Contact](/developerportal/howto/change-technical-contact).
+It is currently not possible to select more than one Technical Contact in the Mendix Cloud. See how to [Change the Technical Contact](/developerportal/howto/change-roles).
 For On-Premises installations it is possible to select more than one contact. Contact [Mendix Support](https://support.mendix.com) with your request.
 
 {{% /alert %}}

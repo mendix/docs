@@ -31,7 +31,7 @@ The data will always be stored in the same political region:
 *   Data in the EU, including backups, will stay within the EU
 *   Data in the US, including backups, will stay within the US
 
-## 4 What Are the Limitations?**
+## 4 What Are the Limitations?
 
 Initially, we won't have a **mail server**. You can use a third-party email provider instead. 
 

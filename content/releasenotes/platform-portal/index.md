@@ -5,10 +5,11 @@ title: "Platform Portal"
 ## 2017
 
 ### August 2nd, 2017
-* Company Admins can invite users to all apps within their company. (Ticket 51296)
-* Company Admins can export a list of all Company members from the Members page. (Ticket 52683)
-* Technical Contacts can access the Node Permissions page, even when they don't have app admin rights. (Tickets 51315, 53088, 54081)
-* The Stories API and Feedback API return sprints, stories and feedback items in the same order as shown in the Portal.
+
+* Company Admins can invite users to all the apps within their company. (Ticket 51296)
+* Company Admins can export a list of all company members from the **Members** page. (Ticket 52683)
+* Technical Contacts can access the **Node Permissions** page, even when they don't have app admin rights. (Tickets 51315, 53088, 54081)
+* The Stories API and Feedback API return sprints, stories, and feedback items in the same order as shown in the Platform Portal.
 
 ### July 18th, 2017
 

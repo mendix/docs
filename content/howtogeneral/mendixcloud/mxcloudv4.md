@@ -48,6 +48,7 @@ No. In the previous generation we used the Java Security Manager to enforce stan
 
 * The order of the download archive buttons differs between v3 and v4
 * Upload buttons in v3/v4 are called Upload Data/Upload Archive
+* In Cloud v4, the debugger is always active, and the button shows the credentials to connect the Modeler to it
 
 ## 7 Missing in Mendix Cloud v4
 

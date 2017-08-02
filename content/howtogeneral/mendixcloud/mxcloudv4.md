@@ -69,3 +69,4 @@ There are some functionalities missing in v4. Mendix will implement these in the
 * Upload Backup screen: styling does not conform to Mendix UX standards
 * Upload archive only supports archives of maximum 4 GB
 * The Amazon RDS maintenance window is not aligned with the CP maintenance window for an application
+* To use the debugger, you need to scale down to one instance

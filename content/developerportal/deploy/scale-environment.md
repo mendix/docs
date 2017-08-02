@@ -27,7 +27,7 @@ To see the cloud version on which your app is hosted, follow these steps:
 1. Go to the [Developer Portal](http://home.mendix.com) and select your licensed app.
 2.  Click **Environments**:
 
-    ![](attachments/deploy/deploy.png)
+    ![](attachments/deploy/deploy-scale.png)
 
 3.  Click **Details** for a selected environment:
 

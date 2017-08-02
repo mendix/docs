@@ -15,7 +15,7 @@ The different files serve different purposes:
 * `404.html` will be served whenever a path does not exists.
 * `403.html` will be served when access to a resource is denied, because of the used IP filter or Client Certificate restriction.
 
-If you do not create these files the default “green monsters” will be used instead for each scenario.
+If you do not create these files the default "green monsters" will be used instead for each scenario.
 
    ![](attachments/customerror-page/monsters.png)
 
@@ -58,7 +58,7 @@ The `/error_page/` path is the only one that will be available when the applicat
 
 An example `offline.html/404.html/403.html` page would look like this:
 
-```javascript
+```html
 <!doctype html>
 <html>
   <head>

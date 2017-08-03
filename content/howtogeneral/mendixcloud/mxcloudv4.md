@@ -32,19 +32,17 @@ Data will always be stored in the same political region for the following region
 *   Data in the EU, including backups, will stay within the EU
 *   Data in the US, including backups, will stay within the US
 
-## 4 What Are the Limitations?
-
-There is no included mail server in Mendix Cloud v4. You can use a third-party email provider instead. 
-
-A VPN (which is already deprecated in favor of client certificates) will not be possible in the Mendix Cloud v4. 
-
-For more details, see [Certificates](/refguide/certificates) in the Mendix Reference Guide.
-
-## 5 Is the Java Security Manager Still in Place?
+## 4 Is the Java Security Manager Still in Place?
 
 No. In the previous generation we used the Java Security Manager to enforce standardization and to act as an additional security layer. In Cloud Foundry, short-lived containers already ensure standardization, and apps are completely isolated from the management network. Therefore, the Java Security Manager will not be enabled on the new environment.
 
-## 6  Differences Between Mendix Cloud v3 and Mendix Cloud v4	
+## 5 What Are the Limitations?
+
+There is no included mail server in Mendix Cloud v4. You can use a third-party email provider instead. For more information, see [Sending Email](/howtogeneral/mendixcloud/sending-email).
+
+A VPN (which is already deprecated in favor of client certificates) will not be possible in the Mendix Cloud v4. For alternatives, see [Securing Outgoing Connections from your Application](/howtogeneral/mendixcloud/securing-outgoing-connections-from-your-application).
+
+## 6 Differences Between Mendix Cloud v3 and Mendix Cloud v4	
 
 * The order of the download archive buttons differs between v3 and v4
 * Upload buttons in v3/v4 are called **Upload Data**/**Upload Archive**
@@ -63,10 +61,14 @@ There are some functionalities missing in v4. Mendix will implement these in the
 * Cross-environment backup restoring is not available; you can download and upload data instead
 * The database status is not visible on the node details screen
 
-##  8 Known Issues in Mendix Cloud v4
+## 8 Known Issues in Mendix Cloud v4
 
 * New apps on v4 get a recovery email after initializing
 * The styling of the **Upload Backup** screen does not conform to Mendix UX standards
 * Upload archive only supports archives of maximum 4 GB
 * The Amazon RDS maintenance window is not aligned with the CP maintenance window for an application
 * To use the debugger, you need to scale down to one instance
+
+## 9 Related Content
+
+* [Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)

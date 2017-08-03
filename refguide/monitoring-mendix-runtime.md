@@ -2,17 +2,20 @@
 title: "Monitoring Mendix Runtime"
 space: "Mendix 7 Reference Guide"
 category: "Runtime"
-description: "This page describes the supported Mendix Runtime monitoring actions."
+description: "Describes the supported Mendix Runtime monitoring actions."
 tags: ["runtime, json"]
 ---
-The Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration (defaults to 8090). 
-> You can change the admin port from the modeler if you navigate to *Project* -> *Settings* -> *Configurations* -> *Your configuration* -> *Server* -> **Admin port**.
-The request needs to be of type **POST** with *No Authorization* and the following headers
+
+The Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration (defaults to 8090).
+
+You can change the admin port from the Desktop Modeler by navigating to **Project** > **Settings** > **Configurations** > *your configuration* > **Server** > **Admin port**.
+
+The request needs to be of the **POST** type with **No Authorization** and the following headers:
 
 * Content-Type: **application/json**
-* X-M2EE-Authentication: *yourM2EEPassword_Base64Encoded*
+* X-M2EE-Authentication: **yourM2EEPassword_Base64Encoded**
 
-> The M2EE password is **NOT** the super administrator password, but a separate password. If you have the application deployed on premise you can set this password in the *settings.yaml* file, which is located in the *Apps/YourProject* folder (thanks to Jonathan for this info https://forum.mendixcloud.com/link/questions/5585). If you are running the application from the modeler the M2EE password is set automatically by Mendix and you can retrieve it from the enviornment variables of your application process (see this post for more details - http://www.mxblog.eu/#/post/2533274790398005).
+The M2EE password is NOT the super administrator password, but a separate password. If you have the application deployed on premises, you can set this password in the **settings.yaml** file, which is located in the **Apps/YourProject** folder. If you are running the application from the Desktop Modeler, the M2EE password is set automatically by Mendix, and you can retrieve it from the enviornment variables of your application process.
 
 Read the next sections to find out which monitoring actions are supported.
 

@@ -4,7 +4,7 @@ title: "Settings"
 
 ## 1 Introduction
 
-The **Settings** category focusses on managing your app. Here you can see the basic app information and edit it. You can also manage the app team and node permissions and create API keys.
+The **Settings** category focuses on managing your app. Here you can see the basic app information and edit it. You can also manage the app team and node permissions and create API keys.
 
 Follow these steps to find the **Settings** category:
 
@@ -17,12 +17,12 @@ Follow these steps to find the **Settings** category:
 
 ## 2 General
 
-The **General** tab displays an overview of the app's information: the name of the app, the description of the app, the AppID, the App Contact and the Technical Contact (if the app has a node)
+The **General** tab displays an overview of the app's information: the name and description of the app, the AppID, the App Contact, and the Technical Contact (if the app has a node).
 
-There are two actions you can take:
+There are two actions here you can perform:
 
-1. **Edit settings** to edit the app settings. You can only see this button when you have the **App Settings** permission. For more information see, [Roles Within the Company and Apps](/developerportal/general/roles).
-2. **Leave app** to leave the app. For more information see, [Three Ways to Leave Your App](/developerportal/general/leave-app).
+* Click **Edit settings** to edit the app settings (you can only see this button when you have the **App Settings** permission; for more details, see [Roles Within the Company and Apps](/developerportal/general/roles))
+* Click **Leave app** to leave the app (for details, see [Three Ways to Leave Your App](/developerportal/general/leave-app))
 
 For more information, see [General](/developerportal/settings/general-settings).
 
@@ -33,13 +33,17 @@ In **Security** there are two tabs with app and node permissions described below
 ### 3.1 App Team
 
 {{% alert type="info" %}}
-
-Note that to view **App Team** you must have the **App Settings** permission or a default **SCRUM Master** role.
-
+Note that to view the **App Team**, you must have the **App Settings** permission or a default **Scrum Master** role.
 {{% /alert %}}
 
-The **App Team** tab lets you view and delete the team members that are currently working on the app. Each member has a **Role**.
-You can change the role of each team member into: Application Operator, Business Engineer, End-User, Performance Engineer, Product Owner, SCRUM Master
+The **App Team** tab lets you view and delete the team members that are currently working on the app. Each member has a **Role**. You can change the role of each team member to the following:
+
+* Application Operator
+* Business Engineer
+* End-User
+* Performance Engineer
+* Product Owner
+* Scrum Master
 
 There are two actions you can take:
 
@@ -50,11 +54,17 @@ There are two actions you can take:
 
 {{% alert type="info" %}}
 
-Note **Node Permissions** are only available for Licensed Apps.
+**Node Permissions** are only available for Licensed Apps.
 
 {{% /alert %}}
 
-The **Node Permissions** tab lets you view the team members that have the **App Team** permission to **View Deploy and Monitor** the node. A **Technical Contact** can grant those team members the following permissions: Transport rights, Access to backup, Receive Alerts, API rights, Access to monitoring.
+The **Node Permissions** tab lets you view the team members that have the **App Team** permission to **View Deploy and Monitor** the node. A **Technical Contact** can grant those team members the following permissions:
+
+* Transport rights
+* Access to backup
+* Receive Alerts
+* API rights
+* Access to monitoring
 
 For more information, see [Security-Node](/developerportal/settings/node-permissions).
 

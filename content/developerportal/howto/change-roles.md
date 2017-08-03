@@ -114,7 +114,7 @@ You can change the Technical Contact by following these steps:
 
 * [Company Admin](/developerportal/companyadmin)
 * [Company](/developerportal/companyadmin/company)
-* [Deactivate and Activate Users](/developerportal/general/deactivate-users)
+* [Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [Security – Node Permissions](/developerportal/settings/node-permissions)
 * [Settings](/developerportal/settings)
 * [Technical Contact](/developerportal/settings/technical-contact)

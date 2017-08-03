@@ -75,4 +75,4 @@ For example, you can use one instance and store 4GB of RAM in there. The other 1
 * [Deploy](/developerportal/deploy)
 * [Environments](/developerportal/deploy/environments)
 * [Mendix Cloud v4 - FAQ](/howtogeneral/mendixcloud/mxcloudv4)
-* [Migrate to Mendix Cloud v4](/developerportal/howto/migrating-to-v4)
+* [Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)

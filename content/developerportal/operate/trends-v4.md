@@ -275,5 +275,5 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 
 *   [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
 *   [How to Deploy Your Licensed App to the Cloud](../howto/deploying-to-the-cloud)
-*   [How to Migrate to Mendix Cloud v4](../howto/migrating-to-v4)
+*   [How to Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)
 *   [Alerts](monitoring-application-health)

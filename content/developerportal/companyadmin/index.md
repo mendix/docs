@@ -70,7 +70,7 @@ A company admin can change the **Company settings** by following these steps:
 2. Click your avatar in the top-right of the screen.
 3. Click **Company Admin**.
 
-![](attachments/companyadmin.jpg)
+![](attachments/company-admin.png)
 
 ## 4 Documents in This Category
 

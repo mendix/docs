@@ -2244,11 +2244,11 @@ module.exports = {
     },
     {
       from: "/mendixcloud/migrating+to+v4",
-      to: "/developerportal/howto/migrating-to-v4"
+      to: "/howtogeneral/mendixcloud/migrating-to-v4"
     },
     {
-      from: "/mendixcloud/migrating-to-v4",
-      to: "/developerportal/howto/migrating-to-v4"
+      from: "/developerportal/howto/migrating-to-v4",
+      to: "/howtogeneral/mendixcloud/migrating-to-v4"
     },
     {
       from: "/mendixcloud/Monitoring+application+health",

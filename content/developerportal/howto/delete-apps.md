@@ -1,46 +1,47 @@
 ---
 title: "Delete, Deactivate and Activate Apps"
 category: "General"
-description: "This document describes how to deactivate and activate users in the Developer Portal."
+description: "Describes how to deactivate and activate users in the Developer Portal."
 tags: ["App","Company Admin","Developer Portal","SCRUM Master","Deactivate"]
 ---
 
 ## 1 Introduction
 
-In an App Team only the SCRUM Master (or a custom role with the **App Settings** permission) is allowed to deactivate the app, even there are still team members in the app. 
-The Company Admin is allowed to activate and deactivate all company's apps, with or without team members in the app.
+In an App Team, only the SCRUM Master (or a custom role with the **App Settings** permission) is allowed to deactivate the app (even when there are still App Team members for the app).
+
+In addition, the Company Admin is allowed to activate and deactivate all the company's apps (with or without App Team members for the app).
 
 **This how-to will teach you how to do the following:**
 
-* Deactivate apps (Company Admin and SCUM Master)
+* Deactivate apps (Company Admin and SCRUM Master)
 * Activate apps (Company Admin)
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* To deactivate/activate the company's apps you must have the **Company Admin** role in your Mendix company
-* To deactivate your app you must have the **SCRUM Master** role in your app 
+* To deactivate/activate the company's apps, you must have the **Company Admin** role in your Mendix company
+* To deactivate your app, you must have the **SCRUM Master** role in your app 
 
-For more information, see [Roles Within the Company and Apps](/developerportal/general/roles)
+For more information, see [Roles Within the Company and Apps](/developerportal/general/roles).
 
 To manage the users in your company, follow these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com).
-2. Click your avatar in the top-right corner of the screen:
+2.  Click your avatar in the top-right corner of the screen:
 
     ![](attachments/companyadmin/company-admin.png)
 
 3. Click **Company Admin**.
-4. Click **Apps** in the left navigation panel.
+4.  Click **Apps** in the left navigation panel.
 
-  ![](attachments/companyadmin/apps.png)
+    ![](attachments/companyadmin/apps.png)
 
 ### 3.1 Deactivating Apps
 
-Only Free Apps can be deactivated. The deactivated apps will still exist within the company and will invisible to regular users. To deactivate an app, follow these steps:
+Only Free Apps can be deactivated. The deactivated apps will still exist within the company and will be invisible to regular users. To deactivate an app, follow these steps:
 
-1. In the **Company Admin settings** click **Apps** in the left menu. 
+1. In the **Company Admin** settings, click **Apps** in the left menu. 
 2. Select the check boxes of the apps that you want to delete.
 3. Click **Activate / Deactivate App**.
 4. In the pop-up window that appears, click **Deactivate apps**:
@@ -48,14 +49,14 @@ Only Free Apps can be deactivated. The deactivated apps will still exist within 
   ![](attachments/companyadmin/deactivate-app.png)    
 
 {{% alert type="info" %}}
-Licensed apps with a node can only be offboarded by Mendix Support. To offboard an app, you must [submit a request](https://support.mendix.com/hc/en-us/requests/new).
+Licensed apps with a node can only be offboarded by Mendix Support. To offboard an app, you must [submit a support request](https://support.mendix.com/hc/en-us/requests/new).
 {{% /alert %}}
     
-
 ### 3.2 Deleting Apps
 
-Only Free Apps can be deleted. App deletion cannot be undone and means ALL DATA WILL BE LOST, including all files on the TeamServer and all data in the FreeApp node (if applicable).
-Follow these steps to delete an app:
+Only Free Apps can be deleted. App deletion cannot be undone and means that ALL DATA WILL BE LOST, including all the files on the Team Server and all the data in the Free App node (if applicable).
+
+ these steps to delete an app:
 
 1. In the **Company Admin settings** click **Apps** in the left navigation menu. 
 2. Select the check boxes of the apps that you want to delete.
@@ -91,18 +92,19 @@ Follow these steps to view the **App Settings**:
 Only Free Apps can be deactivated. The deactivated apps will still exist within the company and will invisible to regular users. The **Company Admin** can activate the inactive app.
 To deactivate an app, follow these steps:
 
-1. In the App Settings, click **Deactivate App**.
+1. In the app settings, click **Deactivate App**.
 2. In the **Confirmation** popup message click **Deactivate**.
 
   ![](attachments/settings/settings-delete.png)
 
 ### 4.2 Delete App
 
-Only Free Apps can be deleted. App deletion cannot be undone and means ALL DATA WILL BE LOST, including all files on the TeamServer and all data in the FreeApp node (if applicable).
-Follow these steps to delete an app:
+Only Free Apps can be deleted. App deletion cannot be undone and means that ALL DATA WILL BE LOST, including all files on the Team Server and all data in the Free App node (if applicable).
 
-1. In the App Settings, click **Delete app**.
-2. In the **Confirmation** popup message click **Yes, delete the app**.
+To delete an app, follow these steps:
+
+1. In the app settings, click **Delete app**.
+2. In the **Confirmation** pop-up message, click **Yes, delete the app**.
 
 ## 5 Related Content
 

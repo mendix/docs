@@ -44,9 +44,9 @@ Only Free Apps can be deactivated. The deactivated apps will still exist within 
 1. In the **Company Admin** settings, click **Apps** in the left menu. 
 2. Select the check boxes of the apps that you want to delete.
 3. Click **Activate / Deactivate App**.
-4. In the pop-up window that appears, click **Deactivate apps**:
+4.  In the pop-up window that appears, click **Deactivate apps**:
 
-  ![](attachments/companyadmin/deactivate-app.png)    
+    ![](attachments/companyadmin/deactivate-app.png)    
 
 {{% alert type="info" %}}
 Licensed apps with a node can only be offboarded by Mendix Support. To offboard an app, you must [submit a support request](https://support.mendix.com/hc/en-us/requests/new).
@@ -56,46 +56,47 @@ Licensed apps with a node can only be offboarded by Mendix Support. To offboard 
 
 Only Free Apps can be deleted. App deletion cannot be undone and means that ALL DATA WILL BE LOST, including all the files on the Team Server and all the data in the Free App node (if applicable).
 
- these steps to delete an app:
+To delete an app, follow these steps:
 
-1. In the **Company Admin settings** click **Apps** in the left navigation menu. 
+1. In the **Company Admin** settings, click **Apps** in the left navigation menu. 
 2. Select the check boxes of the apps that you want to delete.
 3. Click **Delete**.
 
 ### 3.2 Activating Apps
 
-Follow these steps to activate an inactive app:    
+To activate an inactive app, follow these steps:    
 
-1.  In the **Company Admin settings** click **Apps** in the left navigation menu.
-2.  Selecy the app with the **inactive** status.
-3.  Select the inactive app and click **Activate / Deactivate App**.
+1.  In the **Company Admin** settings, click **Apps** in the left navigation menu.
+2.  Select the app with the **inactive** status.
+3.  Click **Activate / Deactivate App**.
 4.  In the pop-up window that appears, click **Activate apps**.         
 
     ![](attachments/companyadmin/activate-app.png)
 
 ## 4 App Team Settings
 
-If an app with still team members in it needs to be deleted or deactivated, it can be deleted or deactivated by a team member with a SCRUM Master role or another custom role with the App Team **App Settings permission**. 
+If an app that still has App Team members eeds to be deleted or deactivated, this can be accomplished by a team member with a SCRUM Master role or another custom role with the App Team **App Settings permission**.
 
-Follow these steps to view the **App Settings**:
+To view the **App Settings**, follow these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com).
 2. Click **Apps** in the top navigation panel.
 3. Select the app that needs to be deleted or deactivated.
 4. In the left menu click **General** under the **Settings** category.
-5. Click **Edit Settings**.
+5.  Click **Edit Settings**.
 
-  ![](attachments/settings/change-appcontact.png)
+    ![](attachments/settings/change-appcontact.png)
 
 ### 4.1 Deactivate App
 
-Only Free Apps can be deactivated. The deactivated apps will still exist within the company and will invisible to regular users. The **Company Admin** can activate the inactive app.
+Only Free Apps can be deactivated. The deactivated apps will still exist within the company and will invisible to regular users. The **Company Admin** can activate an inactive app.
+
 To deactivate an app, follow these steps:
 
 1. In the app settings, click **Deactivate App**.
-2. In the **Confirmation** popup message click **Deactivate**.
+2.  In the **Confirmation** pop-up message, click **Deactivate**.
 
-  ![](attachments/settings/settings-delete.png)
+    ![](attachments/settings/settings-delete.png)
 
 ### 4.2 Delete App
 

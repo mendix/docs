@@ -34,13 +34,13 @@ Data will always be stored in the same political region for the following region
 
 ## 4 Is the Java Security Manager Still in Place?
 
-No. In the previous generation we used the Java Security Manager to enforce standardization and to act as an additional security layer. In Cloud Foundry, short-lived containers already ensure standardization, and apps are completely isolated from the management network. Therefore, the Java Security Manager will not be enabled on the new environment.
+No. In the previous generation, we used the Java Security Manager to enforce standardization and to act as an additional security layer. In Cloud Foundry, short-lived containers already ensure standardization, and apps are completely isolated from the management network. Therefore, the Java Security Manager will not be enabled on the new environment.
 
 ## 5 What Are the Limitations?
 
-There is no included mail server in Mendix Cloud v4. You can use a third-party email provider instead. For more information, see [Sending Email](/howtogeneral/mendixcloud/sending-email).
+There is no mail server included in Mendix Cloud v4. You can use a third-party email provider instead. For more information, see [Sending Email](/howtogeneral/mendixcloud/sending-email).
 
-A VPN (which is already deprecated in favor of client certificates) will not be possible in the Mendix Cloud v4. For alternatives, see [Securing Outgoing Connections from your Application](/howtogeneral/mendixcloud/securing-outgoing-connections-from-your-application).
+A VPN (which is already deprecated in favor of client certificates) will not be possible in the Mendix Cloud v4. For alternatives, see [Securing Outgoing Connections from Your Application](/howtogeneral/mendixcloud/securing-outgoing-connections-from-your-application).
 
 ## 6 Differences Between Mendix Cloud v3 and Mendix Cloud v4	
 
@@ -71,4 +71,4 @@ There are some functionalities missing in v4. Mendix will implement these in the
 
 ## 9 Related Content
 
-* [Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)
+* [How to Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)

@@ -7,45 +7,42 @@ tags: ["Technical Contact","Settings","Developer Portal"]
 
 ## 1 Introduction
 
-This document describes the role of the *Technical Contact* within the Mendix platform.
+This document describes the role of the Technical Contact within the Mendix platform.
 
-The Technical Contact is responsible for license renewal and is the first point of contact for our support department. A Mendix application will always be set up and delivered with a technical contact assigned to it. The Technical Contact needs an *MxID* before Mendix can activate a license for an application.
+The Technical Contact is responsible for license renewal and is the first point of contact for the Mendix Support department. A Mendix application will always be set up and delivered with a technical contact assigned to it. The Technical Contact needs an *MxID* before Mendix can activate a license for an application.
 
 {{% alert type="info" %}}
-
-It is currently not possible to select more than one Technical Contact in the Mendix Cloud. See how to [Change the Technical Contact](/developerportal/howto/change-roles).
-For On-Premises installations it is possible to select more than one contact. Contact [Mendix Support](https://support.mendix.com) with your request.
-
+It is currently not possible to select more than one Technical Contact in the Mendix Cloud (for more information, see [How to Change the Technical Contact](/developerportal/howto/change-roles). For on-premises installations, it is possible to select more than one contact. Contact [Mendix Support](https://support.mendix.com) with your request.
 {{% /alert %}}
 
 ## 2 Technical Contact Responsibilities
 
-The responsibilities depend on the type of hosting for your app: On-Premises or Mendix Cloud.
+The responsibilities depend on the type of hosting for your app: on-premises or in the Mendix Cloud.
 
-### 2.1 On-Premises (The Mendix App Runs on the customer's own infrastructure)
+### 2.1 On-Premises
 
-Managing licenses (renewals/activation/upgrades):
+This means that the Mendix app is running on the customer's own infrastructure.
 
-* Mendix will send license renewal notifications to the technical contact via email
-* If the technical contact would like to expand the license (e.g. more users), they need to contact their Account Executive
+These are some details about managing licenses (renewals, activation, and upgrades):
 
-You can submit requests in the [Support Portal](https://support.mendix.com) for questions, changes and incidents.
+* Mendix will send license renewal notifications to the Technical Contact via email
+* If the Technical Contact would like to expand the license (for example, for more users), they need to contact their Account Executive
+
+You can submit requests in the [Mendix Support Portal](https://support.mendix.com) for questions, changes, and incidents.
 
 ### 2.2 Mendix Cloud
 
-You are the first point of contact for the app:
+For apps in the Mendix Cloud, the Technical Contact is the first point of contact for the app:
 
-* You will receive notifications for upcoming maintenance operations on the application
-* You will be able to receive alerts from the Mendix application when problems arise (CPU Load is high/running out of disk space)
-* You can configure the alert settings in the Monitoring tab of the cloud node
+* The Technical Contact will receive notifications for upcoming maintenance operations on the application
+* The Technical Contact will be able to receive alerts from the Mendix application when problems arise (for example, CPU load is high, running out of disk space)
+* The Technical Contact can configure the alert settings in the **Monitoring** tab of the cloud node
 
+The Technical Contact can perform all the regular operations on the Mendix Cloud node in the [Developer Portal](http://home.mendix.com). Additionally, you can manage the access rights of your team members so that they can deploy, stop, start, etc. For more information, see [Security - Node Permissions](/developerportal/settings/node-permissions).
 
-You can perform all the regular operations on the Mendix cloud node in the [Developer Portal](http://home.mendix.com). Additionally you can manage the access rights of your team members, so they can deploy, stop, start, etc.. For more information, see [Security - Node Permissions](/developerportal/settings/node-permissions).
-
-
-Licenses (renewals/activation/upgrades):
+These are some details about managing licenses (renewals, activation, and upgrades):
 
 * Mendix is responsible for Mendix Cloud app renewals
 * Contact your Customer Success Manager (CSM) if you want to expand the license
 
-You can submit requests in the [Support Portal](https://support.mendix.com) for questions, changes and incidents.
+You can submit requests in the [Support Portal](https://support.mendix.com) for questions, changes, and incidents.

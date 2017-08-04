@@ -7,7 +7,9 @@ tags: ["Technical Contact","Settings","Developer Portal"]
 
 ## 1 Introduction
 
-A Mendix application will always be set up and delivered with a technical contact connected to it. The assignment of the Technical Contact takes place when the order is signed. The Technical Contact is responsible for a Mendix application on a technical level. The technical contact needs a *MendixID* before Mendix can deliver the app. You get a MendixID when you create a Mendix account.
+This document describes the role of the *Technical Contact* within the Mendix platform.
+
+The Technical Contact is responsible for license renewal and is the first point of contact for our support department. A Mendix application will always be set up and delivered with a technical contact assigned to it. The Technical Contact needs an *MxID* before Mendix can activate a license for an application.
 
 {{% alert type="info" %}}
 
@@ -16,13 +18,11 @@ For On-Premises installations it is possible to select more than one contact. Co
 
 {{% /alert %}}
 
-This document describes the role of the technical contact within the Mendix application domain.
-
 ## 2 Technical Contact Responsibilities
 
 The responsibilities depend on the type of hosting for your app: On-Premises or Mendix Cloud.
 
-### 2.1 On-Premises (The Mendix App Runs on the Customer's Own Infrastructure)
+### 2.1 On-Premises (The Mendix App Runs on the customer's own infrastructure)
 
 Managing licenses (renewals/activation/upgrades):
 
@@ -35,20 +35,12 @@ You can submit requests in the [Support Portal](https://support.mendix.com) for 
 
 You are the first point of contact for the app:
 
-*   You will receive notifications for maintenance from Mendix Support
-*   You will be able to receive alerts from the Mendix application when problems arise (CPU Load is high/running out of disk space)
-*   You can configure the alert settings in the Monitoring tab of the cloud node.
-*   If problems arise (for example, when the app is down)
+* You will receive notifications for upcoming maintenance operations on the application
+* You will be able to receive alerts from the Mendix application when problems arise (CPU Load is high/running out of disk space)
+* You can configure the alert settings in the Monitoring tab of the cloud node
 
 
-You can manage the Mendix application in the [Developer Portal](http://home.mendix.com):
-
-* Deploy the model
-* stop/start the app
-* monitor the app
-* connect an app to the node
-* check log files
-* manage the access rights of team members - the Technical Contact can also provide access rights to project members so they can also perform the above tasks. For more information, see [Security - Node Permissions](/developerportal/settings/node-permissions).
+You can perform all the regular operations on the Mendix cloud node in the [Developer Portal](http://home.mendix.com). Additionally you can manage the access rights of your team members, so they can deploy, stop, start, etc.. For more information, see [Security - Node Permissions](/developerportal/settings/node-permissions).
 
 
 Licenses (renewals/activation/upgrades):

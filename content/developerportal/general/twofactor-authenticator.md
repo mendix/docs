@@ -15,7 +15,7 @@ This document describes the purpose and the fuctionality of two-factor authentic
 
 Two-factor authentication (2FA) validates a second authentication mechanism next to your password. It is required for Mendix Cloud node activities done on a production environment. 2FA ensures that you are authenticated when performing sensitive activities, such as deploying packages and handling production data.
 
-![](attachments/production.png)
+![](attachments/general/production.png)
 
 For more information, see [Google Authentication](https://www.google.com/landing/2step/#tab=how-it-protects).
 
@@ -23,11 +23,11 @@ For more information, see [Google Authentication](https://www.google.com/landing
 
 Before performing an operation on the production envrionment, you will be required to provide the authentication code.
 
-![](attachments/google.png)
+![](attachments/general/google.png)
 
 After entering the authentication code, your browser session is authorized for the next eight hours.
 
-![](attachments/information.png)
+![](attachments/general/information.png)
 
 ## 4 Setting Up and Disabling
 

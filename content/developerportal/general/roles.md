@@ -30,7 +30,7 @@ These are the permissions of a Company Admin:
 * Can manage apps and app roles
 * Can manage nodes
 
- ![](attachments/company-admin.png)
+ ![](attachments/companyadmin/company-admin.png)
 
 For more details, see [Company Admin](/developerportal/companyadmin).
 
@@ -43,16 +43,16 @@ To view the Company Contact, follow these steps:
 1. Go to the [Developer Portal](http://home.mendix.com).
 2.  In the top-right corner, click your avatar:
 
-    ![](attachments/showprofile.jpg)
+    ![](attachments/general/showprofile.jpg)
 
 3. Click **Show Profile**.
 4.  Below your name, click your the name of your company:
 
-    ![](attachments/my-profile.jpg)
+    ![](attachments/profile/my-profile.jpg)
  
 5.  Below **Contact**, you will see the Company Contact:
 
-    ![](attachments/company-contact.png)
+    ![](attachments/general/company-contact.png)
 
 ### 2.3 Regular Users
 
@@ -60,21 +60,21 @@ Regular Users are all company members. Regular Users can join the company, start
 
 Under **My Company's Apps** in the [Developer Portal](http://home.mendix.com), the Regular Users can view the apps made within the company by clicking.
 
-![](attachments/myapps.png)
+![](attachments/general/myapps.png)
 
 The Regular Users cannot join the apps by themselves. If they want to join an app that they are not a member of, they have to ask any Team Member (with an *invite* permission) of the app to send an invitation. Because the Team Members are not visible , contact the the App Contact to send the invitation is recommended. Therefore, it is important that the App Contact has the correct permissions to manage the app (for example, the Scrum Master role).
 
- ![](attachments/company-app.png)
+ ![](attachments/general/company-app.png)
 
 ## 3 App Roles
 
 As a Regular User you can view apps made within the company by clicking **My Company's Apps** in the [Developer Portal](http://home.mendix.com). If you select a specific app, you will see two responsible roles for the app. You can contact them with questions related to the app.
 
- ![](attachments/company-app.png)
+ ![](attachments/general/company-app.png)
 
  If you are a Team Member of an app, you can view the app roles in **General** under the **Settings** category.
 
- ![](attachments/app-roles.png)
+ ![](attachments/settings/app-roles.png)
 
 {{% alert type="info" %}}
 If the app is not a licensed app, it will not have a Technical Contact.
@@ -124,11 +124,11 @@ The predefined roles can be changed in two places:
 
 *	As a Company Admin, you can change them, and the changes will effect every app created after the change
 
- ![](attachments/admin-roles.png)
+ ![](attachments/companyadmin/admin-roles.png)
 
 *	As a Scrum Master, you can change them for the specific app of which you are the Scrum Master
 
- ![](attachments/app-team.png)
+ ![](attachments/settings/app-team.png)
 
 These are the predefined App Team roles:
 

@@ -34,7 +34,7 @@ URL: https://deploy.mendix.com/api/1/apps/
 
 ##### <a name="DeployAPI-Example" rel="nofollow"></a>Example
 
-```java
+```bash
 GET /api/1/apps/ HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -53,7 +53,7 @@ List of objects with the following key-value pairs:
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 [{
     "Name": "Calculation App",
     "Url": "https://calc.mendixcloud.com",
@@ -88,7 +88,7 @@ An object with the following key-value pair:
 
 ##### <a name="DeployAPI-Example" rel="nofollow"></a>Example
 
-```java
+```bash
 POST /api/1/apps/ HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -118,7 +118,7 @@ Response object with the following fields:
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 {
     "Name": "Calculation App",
     "Url": "https://calc.mendixcloud.com",
@@ -171,7 +171,7 @@ Object with the following key-value pairs:
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 {
     "AppId": "calc",
     "ProjectId": "543857rfds-dfsfsd12c5e24-3224d32eg",
@@ -199,7 +199,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 GET /api/ 1 /apps/calc/environments/ HTTP/ 1.1
 Host: deploy.mendix.com
 
@@ -220,16 +220,16 @@ List of objects with the following key-value pairs:
 
 ```bash
 [
-	{
-     "Status" :  "Stopped" ,
-     "Mode" :  "Acceptance",
-     "Url" :  "https://calc-accp.mendixcloud.com
-	},
-	{
-     "Status" :  "Stopped" ,
-     "Mode" :  "Production",
-     "Url" :  "https://calc.mendixcloud.com"
-	}
+    {
+        "Status" :  "Stopped" ,
+        "Mode" :  "Acceptance",
+        "Url" :  "https://calc-accp.mendixcloud.com
+    },
+    {
+        "Status" :  "Stopped" ,
+        "Mode" :  "Production",
+        "Url" :  "https://calc.mendixcloud.com"
+    }
 ]
 ```
 
@@ -282,7 +282,7 @@ An object with the following key-value pairs:
 ```bash
 {
      "Status" :  "Stopped" ,
-     "Mode" :  "Acceptance"
+     "Mode" :  "Acceptance",
      "Url" :  "https://calc-accp.mendixcloud.com"
 }
 ```
@@ -295,7 +295,7 @@ Starts a specific environment that is connected to a specific app which the auth
 
 ```bash
 HTTP Method: POST
-URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start (https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start)]
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start
 ```
 
 ### Request
@@ -308,7 +308,7 @@ An object with the following key-value pair:
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 POST /api/ 1 /apps/calc/environments/Acceptance/start HTTP/ 1.1
 Host: deploy.mendix.com
 
@@ -339,7 +339,7 @@ An object with the following key-value pairs:
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 {
      "JobId" :  "02df2e50-0e79-11e4-9191-0800200c9a66" ,
 }
@@ -360,7 +360,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start/<Job
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 GET /api/ 1 /apps/calc/environments/Acceptance/start/02df2e50-0e79-11e4- 9191 -0800200c9a66 HTTP/ 1.1
 Host: deploy.mendix.com
 
@@ -395,7 +395,7 @@ An object with the following key-value pair:
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 {
      "Status" :  "Starting" ,
 }
@@ -416,7 +416,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/stop
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 POST /api/ 1 /apps/calc/environments/Acceptance/stop HTTP/ 1.1
 Host: deploy.mendix.com
 
@@ -571,7 +571,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/transport
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 POST /api/ 1 /apps/calc/environments/acceptance/transport HTTP/ 1.1
 Host: deploy.mendix.com
 
@@ -607,7 +607,7 @@ Removes all data from a specific environment including files and database record
 
 ```bash
 HTTP Method: POST
-URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/clean
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/clean
 ```
 
 ### <a rel="nofollow"></a>Request
@@ -619,7 +619,7 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/clean
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 POST /api/ 1 /apps/calc/environments/acceptance/clean HTTP/ 1.1
 Host: deploy.mendix.com
 
@@ -634,11 +634,11 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ```bash
 [
-	{
-    "Status": "Stopped",
-    "Mode": "Acceptance",
-    "Url" : "https://calc-accp.mendixcloud.com"
-	}
+    {
+        "Status": "Stopped",
+        "Mode": "Acceptance",
+        "Url" : "https://calc-accp.mendixcloud.com"
+    }
 ]
 ```
 
@@ -660,7 +660,7 @@ Gets current values of custom settings, constants and scheduled events used by t
 
 ```bash
 HTTP Method: GET
-URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
 ```
 
 ### <a rel="nofollow"></a>Request
@@ -693,7 +693,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 {
      "Constants" : [{
          "Name" :  "MyFirstModule.BooleanConstant" ,
@@ -723,7 +723,7 @@ Changes value of existing environment settings like custom settings, constants a
 
 ```bash
 HTTP Method: POST
-URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
 ```
 
 ### <a rel="nofollow"></a>Request
@@ -736,7 +736,7 @@ URL: [https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
 Host: deploy.mendix.com
 
@@ -781,7 +781,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 {
      "Constants" : [{
          "Name" :  "MyFirstModule.BooleanConstant" ,
@@ -824,7 +824,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 GET /api/1/apps/calc/environments/acceptance/snapshots HTTP/ 1.1
 Host: deploy.mendix.com
 
@@ -848,7 +848,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 [
     {
         "SnapshotID": "c879c6b1-3aa5-4e10-aaab-cb145841862f",
@@ -890,7 +890,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 GET /api/1/apps/calc/environments/acceptance/snapshots/201703221355 HTTP/ 1.1
 Host: deploy.mendix.com
 
@@ -913,7 +913,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ##### <a rel="nofollow"></a>Example
 
-```java
+```bash
 {
   "FilesOnly": "https://cloud.home.mendix.com/backups/d4bf9d5d-cf3e-4561-9f7f-31b1c580a3d5",
   "DatabaseOnly": "https://cloud.home.mendix.com/backups/5524ec0b-fdf1-460b-87c2-75bb06ec98ff",

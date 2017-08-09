@@ -3,7 +3,7 @@ title: "Mendix Cloud v4 - FAQ"
 category: "Mendix Cloud"
 ---
 
-## 1 What Will Change for Me?
+## 1 What does the v4 roll out look like and what is the status of v3?
 
 New apps will be launched on Mendix Cloud v4 by default. Customers that need to stay on v3 because they use a VPN can still get new apps on v3 for the foreseeable future. Mendix Cloud v3 will be supported for several more years, no End-of-Support or End-of-Life dates have been set yet. Customers that want to move their app(s) from v3 to v4 can request a migration via a support ticket.
 
@@ -14,8 +14,6 @@ Your app needs to be on **Mendix 6.0 or higher**.
 We also recommend that your apps are built as [12-factor apps](https://12factor.net/). 
 
 The main change will be for apps that use long-running scheduled events. Our recommendation is to split these up into smaller chunks and use a queueing system like the Amazon SQS connector to spread the work out over multiple instances. 
-
-Initially, the new platform is only for new applications. We will be starting a migration program in 2017.
 
 ## 3 Where Will My Data Be Hosted?
 
@@ -30,9 +28,10 @@ Data will always be stored in the same political region for the following region
 *   Data in the EU, including backups, will stay within the EU
 *   Data in the US, including backups, will stay within the US
 
-## 4 Is the Java Security Manager Still in Place?
+## 4 Do you expose the underlying Cloud Foundry API?
 
-No. In the previous generation, we used the Java Security Manager to enforce standardization and to act as an additional security layer. In Cloud Foundry, short-lived containers already ensure standardization, and apps are completely isolated from the management network. Therefore, the Java Security Manager will not be enabled on the new environment.
+No, we do not. The Cloud Foundry API does not map 1-on-1 to our deployment options, our authorization model or our cloud resource usage. However, deployment on the Mendix Cloud can be automated using the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) instead.
+
 
 ## 5 What Are the Limitations?
 
@@ -45,6 +44,7 @@ A VPN (which is already deprecated in favor of client certificates) will not be 
 * The order of the download archive buttons differs between v3 and v4
 * Upload buttons in v3/v4 are called **Upload Data**/**Upload Archive**
 * In Cloud v4, the debugger is always active, and the button shows the credentials to connect the Desktop Modeler to it
+* The Java security manager is no longer in place. The Java Security Manager is used in v3 to enforce standardization and to act as an additional security layer. In Cloud Foundry, short-lived containers already ensure standardization, and apps are completely isolated from the management network. Therefore, the Java Security Manager will not be enabled on the new environment.
 
 ## 7 Missing in Mendix Cloud v4
 

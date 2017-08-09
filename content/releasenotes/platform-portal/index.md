@@ -4,6 +4,10 @@ title: "Platform Portal"
 
 ## 2017
 
+### August 11th, 2017
+
+* We fixed an issue where Desktop Modeler users couldn't submit feedback items any more.
+
 ### August 2nd, 2017
 
 * Company Admins can invite users to all the apps within their company. (Ticket 51296)

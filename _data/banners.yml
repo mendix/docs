@@ -1,3 +1,0 @@
-exportfromconfluence5:
-  type: 'warning'
-  text: 'This space has recently been migrated from our old system. It might contain errors, we are working on fixing them. <a target="_blank" href="https://github.com/mendix/docs/issues/new">Report issue</a>'

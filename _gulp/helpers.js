@@ -6,18 +6,21 @@ const Promise = require('bluebird');
 const _ = require('lodash');
 const request = require('request');
 const async = require('async');
+const fs = require('fs');
 
 const readFile = Promise.promisify(require('fs').readFile);
+const writeFile = Promise.promisify(require('fs').writeFile);
 
 const ASYNCLIMIT = 50;
 let TESTED = [];
 let TOTAL = 0;
 
 const throwError = (plugin, error) => {
-  throw new gutil.PluginError({
+  const e = new gutil.PluginError({
     plugin: plugin,
     message: error
   }, { showStack: true });
+  gutil.log(e.message);
 }
 
 const isFile = filePath => {
@@ -34,6 +37,15 @@ const touchFile = filePath => {
   }
 }
 
+const getAllFiles = (dir) => new Promise((resolve, reject) => {
+  recursive(dir, [], (err, files) => {
+    if (err) {
+      return reject(err);
+    }
+    resolve(files);
+  });
+});
+
 const getFiles = (dir, ext) => {
   const extName = ext || '.html';
   return new Promise((resolve, reject) => {
@@ -46,31 +58,39 @@ const getFiles = (dir, ext) => {
   });
 };
 
-const readHtmlFile = filePath => {
+const getGenerateFiles = (dir) => {
+  const extArr = ['.md', '.html'];
   return new Promise((resolve, reject) => {
-    readFile(filePath, "utf8").then(content => {
-      resolve({
-        path: filePath,
-        content: content,
-        links: [],
-        images:[],
-        anchors: [],
-        anchorLinks: [],
-        external: {
-          links: [],
-          images: [],
-          mailto: []
-        },
-        errors: [],
-        warnings: []
-      });
-    }).catch(reject);
+    recursive(dir, [], (err, files) => {
+      if (err) {
+        return reject(err);
+      }
+      resolve(_.filter(files, file => path.extname(file) && extArr.indexOf(path.extname(file) !== -1)));
+    });
   });
 };
 
-const readHtmlFiles = paths => {
-  return Promise.all(_.map(paths, file => readHtmlFile(file)));
-};
+const readHtmlFile = filePath => new Promise((resolve, reject) => {
+  readFile(filePath, "utf8").then(content => {
+    resolve({
+      path: filePath,
+      content: content,
+      links: [],
+      images:[],
+      anchors: [],
+      anchorLinks: [],
+      external: {
+        links: [],
+        images: [],
+        mailto: []
+      },
+      errors: [],
+      warnings: []
+    });
+  }).catch(reject);
+});
+
+const readHtmlFiles = paths => Promise.all(_.map(paths, file => readHtmlFile(file)));
 
 const checkLink = (url, cb) => {
   request({
@@ -109,15 +129,68 @@ const checkLinks = urls => new Promise((resolve, reject) => {
   })
 });
 
+const writeAssetMappings = (currentFolder) => new Promise((resolve, reject) => {
+  const indexMappingHeader = [
+    '############################################################################################',
+    `# Mendix assets redirect mapping`,
+    '############################################################################################',
+    ''
+  ];
+  const indexDest = path.join(currentFolder, './_site/mappings/assets.map');
+  const assetsJS = path.join(currentFolder, './data/assetsjs.json');
+  const assetsCSS = path.join(currentFolder, './data/assetscss.json');
+  touchFile(indexDest);
+
+  let index = [];
+  if (isFile(assetsJS)) {
+    _.mapKeys(require(assetsJS), (v,k) => {
+      index.push({
+        from: `~*\\/public\\/js\\/${k.replace('.', '\\\.')}`,
+        to: `/public/js/${v}`
+      });
+    });
+  }
+  if (isFile(assetsCSS)) {
+    _.mapKeys(require(assetsCSS), (v,k) => {
+      index.push({
+        from: `~*\\/public\\/styles\\/${k.replace('.', '\\\.')}`,
+        to: `/public/styles/${v}`
+      });
+    });
+  }
+
+  const indexMapping = _.chain(index)
+    .sortBy(file => file.from.length)
+    .map(file => `${file.from} ${file.to};`)
+    .value();
+
+  let indexes = indexMappingHeader.concat(indexMapping).join('\n');
+
+  fs.writeFile(indexDest, indexes, err => {
+    if (err) {
+      gutil.log(`Error writing asset mappings: ${err}`)
+      reject();
+    } else {
+      gutil.log(`Asset mappings written to ${indexDest}`);
+      resolve();
+    }
+  });
+});
+
 
 module.exports = {
   gulpErr: throwError,
   touch: touchFile,
-  isFile: isFile,
-  getFiles: getFiles,
-  readHtmlFile: readHtmlFile,
-  readHtmlFiles: readHtmlFiles,
-  readFile: readFile,
-  checkLink: checkLink,
-  checkLinks: checkLinks
+  isFile,
+  getFiles,
+  getAllFiles,
+  readHtmlFile,
+  readHtmlFiles,
+  readFile,
+  writeFile,
+  getGenerateFiles,
+  checkLink,
+  checkLinks,
+  writeAssetMappings,
+  getGenerateFiles
 }

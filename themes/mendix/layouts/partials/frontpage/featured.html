@@ -1,0 +1,13 @@
+{{- $featuredPages := where .Site.Pages ".Params.frontpage_featured" true -}}
+{{- with $featuredPages -}}
+  <h2 class="frontpage__featured__title">Featured</h2>
+  <ul class="frontpage__featured__list">
+    {{- range . -}}
+      <li class="frontpage__featured__list__item">
+        {{- $newUrl := replace .URL "index.html" "" -}}
+        {{- $newUrl := replace $newUrl ".html" "" -}}
+        <a class="frontpage__featured__link" href="{{ $newUrl }}">{{ .Title }}</a>
+      </li>
+    {{- end -}}
+  </ul>
+{{- end -}}

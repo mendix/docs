@@ -22,7 +22,7 @@ let index = [];
 const getSourceFiles = files => {
   spacesObj = YAML.load(SPACES);
   return new Promise((resolve, reject) => {
-    files = _.filter(_.map(files, file => {
+    const raw = _.map(files, file => {
       file.basePath = file.path.replace(TARGETFOLDER, '');
       const parsed = path.parse(file.basePath),
             base = path.join(SOURCEFOLDER, parsed.dir, parsed.name),
@@ -41,8 +41,9 @@ const getSourceFiles = files => {
       }
 
       return file;
-    }), file => !!file.sourcePath);
-    //console.log(files);
+    });
+    files = _.filter(raw, file => !!file.sourcePath);
+
     resolve(files);
   })
 }
@@ -157,12 +158,12 @@ const weight = (item, index) => {
 
 const parseHtmlFile = file => {
   return new Promise((resolve, reject) => {
-    if (file.content && file.meta && file.meta.space) {
+    if (file.content && file.meta.title) {
       const $ = cheerio.load(file.content);
 
-      $('article').find('p').each((i, el) => {
+      $('article').find('p,li').each((i, el) => {
         var $el = $(el);
-        if (!!$el.text().length) {
+        if (!!$el.text().length && file.space.space) {
           let item = _.merge(
             _.omit(_.clone(file.meta), '__content'), {
             space: file.space.space,
@@ -237,21 +238,27 @@ const indexFiles = (opts) => {
           ],
           'highlightPreTag': '<span class="algolia__result-highlight">',
           'highlightPostTag': '</span>'
-        }, (err, content) => {
-          if (err) {
-            throw err;
+        }, (setIndexErr, setIndexContent) => {
+          if (setIndexErr) {
+            gutil.log(`${pluginID} error creating index settings for: ${opts.algolia_index}`);
+            throw setIndexErr;
           } else {
             console.log(`${pluginID} Settings set for ${opts.algolia_index}, clearing objects`);
-            algoliaIndex.clearIndex((err, contents) => {
-              if (err) {
-                throw err;
+            //console.log(setIndexContent);
+            algoliaIndex.clearIndex((clearIndexErr, clearIndexContent) => {
+              if (clearIndexErr) {
+                gutil.log(`${pluginID} error clearing objects!`);
+                throw clearIndexErr;
               } else {
-                console.log(`${pluginID} ${opts.algolia_index}, cleared, adding objects`);
+                gutil.log(`${pluginID} ${opts.algolia_index}, cleared, adding objects`);
+                //gutil.log(`${pluginID} ${clearIndexContent}`);
                 algoliaIndex.addObjects(index, (uploadErr, uploadContents) => {
-                  if (err) {
-                    throw err;
+                  if (uploadErr) {
+                    gutil.log(`${pluginID} error adding objects!`);
+                    throw uploadErr;
                   } else {
-                    console.log(`${pluginID} Objects added to ${opts.algolia_index}`);
+                    gutil.log(`${pluginID} Objects added to ${opts.algolia_index}`);
+                    //console.log(uploadContents);
                     opts.cb();
                   }
                 });
@@ -271,5 +278,6 @@ const indexFiles = (opts) => {
 };
 
 module.exports = {
-  run: indexFiles
+  run: indexFiles,
+  readSourceFiles
 };

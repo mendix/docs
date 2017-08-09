@@ -39,7 +39,7 @@ No, we do not. The Cloud Foundry API does not map 1-on-1 to our deployment optio
 
 ## 6 How do I access the underlying AWS resources? How can you deploy in my AWS account?
 
-Mendix Cloud v4 runs in Mendix' own AWS account, and you can not interact with the AWS APIs directly via our credentials. We do not offer VPC peering or VPC connections.
+Mendix Cloud v4 runs in Mendix' own AWS account, and you can not interact with the AWS APIs directly via our credentials. We do not offer VPC peering or VPC connections. All access to Mendix hosted AWS resources (such as EC2, RDS and S3) is via our APIs, such as the [database](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) and [filedocument](https://apidocs.mendix.com/7/runtime/com/mendix/core/Core.html#storeFileDocumentContent-com.mendix.systemwideinterfaces.core.IContext-com.mendix.systemwideinterfaces.core.IMendixObject-java.io.InputStream-) APIs in the Runtime, and the cloud resources via the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
 
 You can however launch services on your own AWS account in the same region to minimize latency, and you can access those services from connectors in your app. The [AWS IoT connector](https://appstore.home.mendix.com/link/app/2868/Mendix/AWS-IoT-Connector) from our AppStore is a good example.
 

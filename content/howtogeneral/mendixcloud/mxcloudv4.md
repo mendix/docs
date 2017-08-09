@@ -5,9 +5,7 @@ category: "Mendix Cloud"
 
 ## 1 What Will Change for Me?
 
-Nothing right now. We are working with early customers to upgrade. 
-
-New apps will be launched on Mendix Cloud v4 by default starting from Q1 2017. However, customers that need to stay on v3 because they use a VPN can still get new apps on v3 for the foreseeable future.
+New apps will be launched on Mendix Cloud v4 by default. Customers that need to stay on v3 because they use a VPN can still get new apps on v3 for the foreseeable future. Mendix Cloud V3 will be supported for several more years, no End-of-Support or End-of-Life dates have been set yet. Customers that want to move their app(s) from v3 to v4 can request a migration via a support ticket.
 
 ## 2 Can I Upgrade All My Apps?
 
@@ -15,7 +13,7 @@ Your app needs to be on **Mendix 6.0 or higher**.
 
 We also recommend that your apps are built as [12-factor apps](https://12factor.net/). 
 
-The main change will be for apps that use long-running scheduled events. Our recommendation is to split these up into smaller chunks and use the Amazon SQS connector to spread the work out over multiple instances. 
+The main change will be for apps that use long-running scheduled events. Our recommendation is to split these up into smaller chunks and use a queueing system like the Amazon SQS connector to spread the work out over multiple instances. 
 
 Initially, the new platform is only for new applications. We will be starting a migration program in 2017.
 

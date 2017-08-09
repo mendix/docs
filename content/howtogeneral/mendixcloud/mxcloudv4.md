@@ -5,7 +5,7 @@ category: "Mendix Cloud"
 
 ## 1 What Will Change for Me?
 
-New apps will be launched on Mendix Cloud v4 by default. Customers that need to stay on v3 because they use a VPN can still get new apps on v3 for the foreseeable future. Mendix Cloud V3 will be supported for several more years, no End-of-Support or End-of-Life dates have been set yet. Customers that want to move their app(s) from v3 to v4 can request a migration via a support ticket.
+New apps will be launched on Mendix Cloud v4 by default. Customers that need to stay on v3 because they use a VPN can still get new apps on v3 for the foreseeable future. Mendix Cloud v3 will be supported for several more years, no End-of-Support or End-of-Life dates have been set yet. Customers that want to move their app(s) from v3 to v4 can request a migration via a support ticket.
 
 ## 2 Can I Upgrade All My Apps?
 

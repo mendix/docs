@@ -33,20 +33,32 @@ Data will always be stored in the same political region for the following region
 No, we do not. The Cloud Foundry API does not map 1-on-1 to our deployment options, our authorization model or our cloud resource usage. However, deployment on the Mendix Cloud can be automated using the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) instead.
 
 
-## 5 What Are the Limitations?
+## 5 How do I access the underlying AWS resources? How can you deploy in my AWS account?
+
+Mendix Cloud v4 runs in Mendix' own AWS account, and you can not interact with the AWS APIs directly via our credentials. We do not offer VPC peering or VPC connections.
+
+You can however launch services on your own AWS account in the same region to minimize latency, and you can access those services from connectors in your app. The [AWS IoT connector](https://appstore.home.mendix.com/link/app/2868/Mendix/AWS-IoT-Connector) from our AppStore is a good example.
+
+## 6 There is no deployment in my desired AWS region, when will you launch there?
+
+We add regions based on customer demand. There is a substantial base cost as we launch a complete Cloud Foundry cluster, backup services, monitoring, etc. If you would like a different region, contact your customer success manager to see what we can offer.
+
+If you want to run a Mendix app in a different AWS region, you can consider using our [AMIs from the AWS Marketplace](https://aws.amazon.com/marketplace/search/results?x=0&y=0&searchTerms=mendix&page=1&ref_=nav_search_box). You can also use our [Docker deployment](https://github.com/mendix/docker-mendix-buildpack) to run your app anywhere. These deployments run in your own AWS account, and are not part of the Mendix Cloud.
+
+## 7 What Are the Limitations?
 
 There is no mail server included in Mendix Cloud v4. You can use a third-party email provider instead. For more information, see [Sending Email](/howtogeneral/mendixcloud/sending-email).
 
 A VPN (which is already deprecated in favor of client certificates) will not be possible in the Mendix Cloud v4. For alternatives, see [Securing Outgoing Connections from Your Application](/howtogeneral/mendixcloud/securing-outgoing-connections-from-your-application).
 
-## 6 Differences Between Mendix Cloud v3 and Mendix Cloud v4	
+## 8 Differences Between Mendix Cloud v3 and Mendix Cloud v4
 
 * The order of the download archive buttons differs between v3 and v4
 * Upload buttons in v3/v4 are called **Upload Data**/**Upload Archive**
 * In Cloud v4, the debugger is always active, and the button shows the credentials to connect the Desktop Modeler to it
 * The Java security manager is no longer in place. The Java Security Manager is used in v3 to enforce standardization and to act as an additional security layer. In Cloud Foundry, short-lived containers already ensure standardization, and apps are completely isolated from the management network. Therefore, the Java Security Manager will not be enabled on the new environment.
 
-## 7 Missing in Mendix Cloud v4
+## 9 Missing in Mendix Cloud v4
 
 There are some functionalities missing in v4. Mendix will implement these in the near future:
 
@@ -59,7 +71,7 @@ There are some functionalities missing in v4. Mendix will implement these in the
 * Cross-environment backup restoring is not available; you can download and upload data instead
 * The database status is not visible on the node details screen
 
-## 8 Known Issues in Mendix Cloud v4
+## 10 Known Issues in Mendix Cloud v4
 
 * New apps on v4 get a recovery email after initializing
 * The styling of the **Upload Backup** screen does not conform to Mendix UX standards
@@ -68,6 +80,6 @@ There are some functionalities missing in v4. Mendix will implement these in the
 * To use the debugger, you need to scale down to one instance
 * In Mendix Cloud v4, your application runs in various Availability Zones (AZs). This can cause performance differences for Microflows that have lots of small database queries/updates, because these actions are latency sensitive. You can notice this when scaling horizontally to more than one instance, but your app might also move to a different AZ after a restart. Your database is only active in one AZ at a time (but can fail over to a different one).
 
-## 9 Related Content
+## 11 Related Content
 
 * [How to Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)

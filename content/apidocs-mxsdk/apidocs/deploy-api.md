@@ -23,7 +23,7 @@ Only _Retrieve apps_, _Create Sandbox_ and _Retrieve app_ API calls are supporte
 
 ### <a name="DeployAPI-Description" rel="nofollow"></a>Description
 
-Retrieves all apps which the authenticated user has access to as a regular user. These apps can be found via the "Nodes overview" screen in the Mendix Platform.
+Retrieves all apps which the authenticated user has access to as a regular user. These apps can be found via the "Nodes overview" screen in the Mendix platform.
 
 ```bash
 HTTP Method: GET
@@ -48,7 +48,7 @@ List of objects with the following key-value pairs:
 
 *   _AppId_ (String): Sub-domain name of the app.
 *   _Name_ (String): Name of the app.
-*   _ProjectId_ (String): Sprintr Project identifier.
+*   _ProjectId_ (String): Developer Portal Project identifier.
 *   _Url_ (String): Production or sandbox URL to access your app.
 
 ##### <a rel="nofollow"></a>Example
@@ -84,7 +84,7 @@ URL: https://deploy.mendix.com/api/1/apps/
 
 An object with the following key-value pair:
 
-*   _ProjectId_ (String) : The sprintr project identifier that should be linked to the new sandbox application. This value can be found under Settings > General, and it is represented as App ID.
+*   _ProjectId_ (String) : The Developer Portal project identifier that should be linked to the new sandbox application. This value can be found under Settings > General, and it is represented as App ID.
 
 ##### <a name="DeployAPI-Example" rel="nofollow"></a>Example
 
@@ -106,7 +106,7 @@ Response object with the following fields:
 
 *   _AppId_ (String): Sub-domain name of the app.
 *   _Name_ (String): Name of the app.
-*   _ProjectId_ (String): Sprintr Project identifier.
+*   _ProjectId_ (String): Developer Portal Project identifier.
 *   _Url_ (String): Production or sandbox URL to access your app.
 
 ##### <a name="DeployAPI-Errorcodes" rel="nofollow"></a>Error Codes
@@ -131,7 +131,7 @@ Response object with the following fields:
 
 ### <a rel="nofollow"></a>Description
 
-Retrieves a specific app which the authenticated user has access to as a regular user. These app can be found via the "Nodes overview" screen in the Mendix Platform.
+Retrieves a specific app which the authenticated user has access to as a regular user. These app can be found via the "Nodes overview" screen in the Mendix platform.
 
 ```bash
 HTTP Method: GET
@@ -184,7 +184,7 @@ Object with the following key-value pairs:
 
 ### <a rel="nofollow"></a>Description
 
-Retrieves all environments that are connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
+Retrieves all environments that are connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix platform.
 
 ```bash
 HTTP Method: GET
@@ -237,7 +237,7 @@ List of objects with the following key-value pairs:
 
 ### <a rel="nofollow"></a>Description
 
-Retrieves a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
+Retrieves a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix platform.
 
 ```bash
 HTTP Method: GET
@@ -291,7 +291,7 @@ An object with the following key-value pairs:
 
 ### <a rel="nofollow"></a>Description
 
-Starts a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
+Starts a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix platform.
 
 ```bash
 HTTP Method: POST
@@ -405,7 +405,7 @@ An object with the following key-value pair:
 
 ### <a rel="nofollow"></a>Description
 
-Stops a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
+Stops a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix platform.
 
 ```bash
 HTTP Method: POST
@@ -440,7 +440,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### <a rel="nofollow"></a>Description
 
-Retrieves the deployed package of a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
+Retrieves the deployed package of a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix platform.
 
 ```bash
 HTTP Method: GET

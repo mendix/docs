@@ -6,7 +6,13 @@ title: "Platform Portal"
 
 ### August 11th, 2017
 
+#### Fixes
+
 * We fixed an issue where Desktop Modeler users couldn't submit feedback items any more.
+
+#### Known issues
+
+* Users of Internet Explorer or Microsoft Edge may encounter an unexpected error page after signing up for Mendix. We will release a fix for this as soon as possible.
 
 ### August 2nd, 2017
 

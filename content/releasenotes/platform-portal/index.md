@@ -4,6 +4,12 @@ title: "Platform Portal"
 
 ## 2017
 
+### August 11th, 2017
+
+#### Fixes
+
+* The team member names in the **Node Security** screen were empty and only visible after a refresh
+
 ### August 2nd, 2017
 
 * Company Admins can invite users to all the apps within their company. (Ticket 51296)

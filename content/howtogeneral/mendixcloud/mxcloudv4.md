@@ -81,7 +81,7 @@ There are some features missing in v4. Mendix will implement these in the near f
 * Upload archive only supports archives of a maximum of 4 GB
 * The Amazon RDS maintenance window is not aligned with the CP maintenance window for an application
 * To use the debugger, you need to scale down to one instance
-* In Mendix Cloud v4, your application runs in various Availability Zones (AZs). This can cause performance differences for microflows that have lots of small database queries/updates, because these actions are latency sensitive. You can notice this when scaling horizontally to more than one instance, but your app might also move to a different AZ after a restart. Your database is only active in one AZ at a time (but can fail-over to a different one).
+* In Mendix Cloud v4, instances of your application are spread out over multiple Availability Zones (AZs), while your database is only active in one AZ at a time (but it can fail over to another AZ). The result is that your instance and the database are not always in the same AZ. This can cause performance differences that are especially noticable in microflows that have lots of small database queries/updates, as such actions are latency sensitive. You can notice varying response times when 1: scaling to more than one runtime instance and 2: your app is restarted, as it can then end up in a different AZ. Our recommendation is to optimize the application logic to use fewer but larger queries.
 
 ## 12 Related Content
 

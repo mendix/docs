@@ -9,6 +9,7 @@ title: "Platform Portal"
 #### Fixes
 
 * We fixed the issue where Desktop Modeler users couldn't submit feedback items.
+* We fixed the issue where team member names in the **Node Security** screen were empty and only visible after a refresh.
 
 #### Known issues
 

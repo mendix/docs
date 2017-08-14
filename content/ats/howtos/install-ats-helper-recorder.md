@@ -7,7 +7,7 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-ATS provides two different tools to help build test scripts: ATS helper and ATS recorder. The ATS helper identifies the mx-name of widgets on the AUT. The recorder is a function/plugin within ATS which records your manual test steps in the AUT and automatically selects the correct action for each step.
+ATS provides two different tools to help build test scripts: ATS helper and ATS recorder. The ATS helper identifies the mx-name of widgets on the application under test (AUT). The recorder is a function/plugin within ATS that records your manual test steps in the AUT and automatically selects the correct action for each step.
 
 **This how-to will teach you  how to do the following:**
 
@@ -16,17 +16,19 @@ ATS provides two different tools to help build test scripts: ATS helper and ATS 
 
 ## 2 Prerequisites
 Before starting this how-to, make sure you have the following prerequisites in place:
-* ATS
-* Mendix App {{% alert type="info" %}}
 
-**Note:** Both the ATS Helper and the ATS Recorder only work on a Mendix App.
+*  ATS
+*  Mendix app
 
-{{% /alert %}}
-* Google Chrome Browser {{% alert type="info" %}}
+  {{% alert type="info" %}}
+  Both the ATS Helper and the ATS Recorder only work on a Mendix app.
+  {{% /alert %}}
 
-**Note:** Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/). 
+*  Google Chrome Browser
 
-{{% /alert %}}
+  {{% alert type="info" %}}
+  Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/). 
+  {{% /alert %}}
 
 ## 3 Install the ATS Helper
 The following steps describe how to install the ATS Helper.

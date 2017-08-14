@@ -43,7 +43,7 @@ To create your app, follow these steps:
 
     ![](attachments/18448672/18580902.png)
 
-## 4 Downloading the Modeler and Editing Your App
+## 4 Downloading the Desktop Modeler and Editing Your App
 
 To edit your app, follow these steps:
 

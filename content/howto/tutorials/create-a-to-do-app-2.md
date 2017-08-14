@@ -39,7 +39,7 @@ When users open the to-do app they will land on the homepage of the app. Follow 
 Let's create the user interface for the home page so that it shows a list of available to-do's. Follow these steps to set up the user interface and connect it to the new entity in the domain model:
 
 1. Open **Home_Phone_Default page** you've just created in the ToDo module.
-2. Change the page title to **My to-do's** in the **Properties** pane on the right side of the Modeler.
+2. Change the page title to **My to-do's** in the **Properties** pane on the right side of the Desktop Modeler.
 3. Remove the **Layout grid** from the page.
 4. Right-click the area you just cleared and select **Add widget > List view** to add a List view to the page that will take the place of the layout grid.
 5. Right-click the **List view** and select **Select data soure**.

@@ -55,7 +55,7 @@ You get an alert every time the temperature exceeds the threshold, which is unne
 
 To improve the alert mechanism, follow these steps:
 
-1. In the Modeler, open the **Domain Model** and then open the **Shipment** entity.
+1. In the Desktop Modeler, open the **Domain Model** and then open the **Shipment** entity.
 2. Click **New** to add a new attribute. Name this attribute **IsAlertedForTemperature** and set **Type** to **Boolean**.
 3. Open the **IVK_OnMessage_HandleData_CreateTemperatureAlert** microflow and insert an **Exclusive split** before the **NewAlert** entity.
 4. Set the **Expression** to `$Shipment/IsAlertedForTemperature`. This means that if an alert has already been created, an extra alert won't be created.

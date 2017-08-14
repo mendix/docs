@@ -20,10 +20,10 @@ In order to set up an environment to run Mendix applications, you will need to i
 
 ![](attachments/18448665/18580733.png)
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, make sure you have the following prerequisites:
 
-* Microsoft Windows 2008 SP2 or newer
-* .NET 4.5 or newer
+* Microsoft Windows 2008 SP2 or higher
+* .NET 4.5 or higher
 * IIS 7 or higher with the following service roles enabled:
     * IIS Management console
     * Static content

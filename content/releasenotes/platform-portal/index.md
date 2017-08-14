@@ -8,7 +8,7 @@ title: "Platform Portal"
 
 #### Fixes
 
-* We fixed an issue where Desktop Modeler users couldn't submit feedback items any more.
+* We fixed the issue where Desktop Modeler users couldn't submit feedback items.
 
 #### Known issues
 

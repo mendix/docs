@@ -8,7 +8,7 @@ Specifies whether the profile is enabled. If a profile is enabled, it can be use
 
 <div class="alert alert-info">{% markdown %}
 
-The Desktop profile is always enabled.
+The desktop profile is always enabled.
 
 {% endmarkdown %}</div>
 
@@ -26,7 +26,7 @@ Specify the application title. This title is shown in the title bar of the brows
 
 The default home page indicates which [page](page) or [microflow](microflow) is opened after a user has signs in. If role-based home pages (see below) are specified for one of the [user roles](user-roles) of the user, then that home page will be used instead.
 
-### Role-based Home Pages
+### Role-Based Home Pages
 
 By using role-based home pages you can show different home pages for different users. If a user logs in, the first role-based home page of which the user role matches a user role of the user is displayed. If no match is found, the default home page is used.
 

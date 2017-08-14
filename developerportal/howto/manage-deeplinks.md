@@ -1,5 +1,5 @@
 ---
-title: "How to Manage Developer Portal Deep Links"
+title: "Manage Developer Portal Deep Links"
 space: "Developer Portal"
 category: "How-To's"
 description: "This document describes how to use shortcuts and deep links in the Developer Portal."

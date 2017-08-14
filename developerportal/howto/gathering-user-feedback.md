@@ -1,8 +1,8 @@
 ---
-title: "How to Use the Feedback Widget"
+title: "Use the Mendix Feedback Widget"
 space: "Developer Portal"
 category: "How-To's"
-description: "This page describes how to use the feedback widget."
+description: "Describes how to use the Feedback Widget."
 tags: ["Feedback","Widget","Developer Portal"]
 ---
 
@@ -12,28 +12,27 @@ With Mendix, you can make use of the fully integrated feedback cycle functionali
 
 **This how-to will teach you how to do the following:**
 
-* Configure the widget
+* Configure the Mendix Feedback Widget
 * Gather, receive, and process feedback
-* Add a feedback story to the App backlog
+* Add a feedback story to the app backlog
 * View a list of your own provided feedback
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Create an App containing a working application model
+* Create an app containing a working application model
 
 ## 3 Adding the Mendix Feedback Widget to Your App
 
-The Feedback Widget is automatically included in any new App that you create. 
-To ensure you have the lastest version of the Feedback Widget included in your App, follow these steps:
+The Mendix Feedback Widget is automatically included in any new app that you create. To ensure you have the lastest version of the Feedback widget included in your app, follow these steps:
 
 1. Download the latest version of the [Mendix Feedback Widget](https://appstore.home.mendix.com/link/app/199/Mendix/Mendix-Feedback-Widget) from the Mendix App Store.
-2. When the latest Mendix Feedback Widget is included in your App, you need to ensure that the widget is added to the homepage of your application. Open the homepage from your App navigation:
+2. When the latest Mendix Feedback Widget is included in your app, you need to ensure that the widget is added to the homepage of the application. Open the homepage from your app **Navigation**:
 
     ![](attachments/collaborate/18580455.png)
 
-3. If the Feedback Widget has not been added to the page, add the widget to the page or layout by selecting the Feedback Widget under **Add-on** and dropping the widget into any position in the document:
+3. If the Feedback Widget has not been added to the page, add it to the page or layout by selecting the **Feedback Widget** under **Add-on** and dropping it into any position in the document:
 
     ![](attachments/collaborate/18580453.png)
 
@@ -42,56 +41,41 @@ To ensure you have the lastest version of the Feedback Widget included in your A
 To configure the widget, follow these steps:
 
 1. Open the **Properties** of the widget by double-clicking the widget placed on the page. 
-2. Select the **User** entity that is used in your application to store the name and email address of the user. 
+2. Select the **User** entity that is used in your application to store the name and email address of the user . Note that this object must be a specialization of the **User** entitiy within the **System** module (for example, **Account** in the **Administration** module).
+3. Select the **Username attribute** that stores the name of the user and the **Email address attribute**. This will be used to automatically fill in the name and email address of the user who is logged in when submitting feedback in the app.
+4. Decide whether you want to allow users to upload a file and screenshot to the feedback item (via **Allow file upload** and **Allow screenshot upload**, respectively). 
 
-<div class="alert alert-info">{% markdown %}
-
-Note that this object must be a specialization of the User entitiy within the System module (for example, Account in the Administration module).
-
-{% endmarkdown %}</div>
-
-3. Select the **Username attribute** that stores the name of the user and the email address attribute. This will be used to automatically fill the name and the email address of the user that is logged in when submitting feedback within the application.
-4. Decide whether you want to **allow users to upload a file** to the feedback item and whether you want to **allow to include a screenshot** of the page. 
-
-![](attachments/collaborate/18580452.png)
+    ![](attachments/collaborate/18580452.png)
 
 5. Open the **Configuration** tab of the Feedback Widget properties.
-6. Ensure that the **feedback server** is set to `https://sprintr.home.mendix.com/`.
-7. Ensure that the **project identifier** is filled in correctly. The project identifier is your **App ID** and is automatically filled in for the Feedback Widget. 
+6. Ensure that the **Feedback server** is set to `https://sprintr.home.mendix.com/`.
+7. Ensure that the **Project identifier** is filled in correctly. The project identifier is your **App ID**, and it is automatically filled in for the Feedback Widget. If necessary, you can find the identifier (App ID) of your app in the [Developer Portal](http://home.mendix.com) by opening your app and clicking **General** under the **Settings** category.
 
-<div class="alert alert-info">{% markdown %}
+    ![](attachments/collaborate/generalsettings.jpg)
 
-If necessary, you can find the identifier (App ID) of your App in the [Developer Portal](http://home.mendix.com). Go to the **Developer Portal**, open your App and click **General** under the **Settings** category.
-
-{% endmarkdown %}</div>
-
-![](attachments/collaborate/generalsettings.jpg)
-
-8. If you have configured multiple home pages for different user roles, you need to add the Mendix Feedback Widget to each home page for the user role from which you want to gather feedback. This can easily be done by copying the configured widget to the other relevant layouts and/or pages.
+8. If you have configured multiple home pages for different user roles, you need to add the Mendix Feedback Widget to each home page for the user role from which you want to gather feedback. This can easily be done by copying the configured widget to the other relevant layouts and pages.
 
 ## 5 Gathering and Receiving Feedback
 
-When a version of the application is deployed that contains a Mendix Feedback Widget configured and added to all home pages, you can start gathering feedback. 
+When a version of an app is deployed containing a Mendix Feedback Widget that has been configured and added to all home pages, you can start gathering feedback. 
 
-When a user is logged into the application, the feedback button will appear on the right side of the screen.
-
-Clicking the feedback button will open the **Provide feedback** dialog box that allows the user to enter feedback:
+When a user is logged into the app, the **Feedback** button will appear on the right side of the screen. Clicking this button will open the **Provide feedback** dialog box that allows the user to enter feedback:
 
 ![](attachments/collaborate/18580450.png)
 
 ## 6 Processing Feedback in the Developer Portal
 
-Once you have received feedback, you and your team can process the feedback within the [Developer Portal](http://home.mendix.com).
+Once you have received feedback, you and your team can process the feedback within the Developer Portal.
 
 To process the feedback, follow these steps:
 
-1. Open the App in the [Developer Portal](http://home.mendix.com).
+1. Open the app in the [Developer Portal](http://home.mendix.com).
 2. Click **Feedback** under the **Collaborate** category:
 
     ![](attachments/collaborate/feedbacklist.jpg)
 
-3. Click **Details** for a feedback item to open its details.
-4. Process the item by commenting on it (for example, asking for clarification), or by choosing one of the actions displayed in the menu on the right:
+3. Click **Details** on a feedback item to open its details.
+4. Process the item by, for example, asking for clarification in the **Leave a comment** box, or by choosing one of the **Actions** displayed in the menu on the right:
 
     ![](attachments/collaborate/feedbackdetails.jpg)
 
@@ -99,13 +83,13 @@ To process the feedback, follow these steps:
 
     Action | Description
     | --- | --- |
-    **Accept feedback** | Means this feedback is valid and that you wnat to add a story to your backlog on the basis of this item.
-    **Mark as 'Under review'** | Notifies the user who submitted the feedback and your team that the item is under review.
-    **Mark as 'Handled'** | Changes the status of the item from open to handled so that the item will not pollute your open items list.
-    **Close feedback** | Closes the feedback (for example, when the item is already solved, a duplicate has already been accepted, etc.).
-    **Convert to Idea** | Changes the feedback type to an idea.
-    **Convert to Question** | Changes the feedback type to a question.
-    **Move to project** | Moves the item to another project that you have access to.
+    **Accept feedback** | Means this feedback is valid and that you want to add a story to your backlog on the basis of this item.
+    **Mark 'Under review'** | Notifies the user who submitted the feedback and your team that the item is under review.
+    **Mark as handled** | Changes the status of the item from open to handled so that the item will not pollute your open items list.
+    **Close feedback** | Closes the feedback (for example, when the item is already solved or a duplicate has already been accepted).
+    **Convert to idea** | Changes the feedback type to an idea.
+    **Convert to question** | Changes the feedback type to a question.
+    **Move to app** | Moves the item to another app to which you have access.
     **Delete feedback** | Deletes the feedback.
 
 ### 6.1 Adding a Feedback Story to Your Backlog
@@ -130,10 +114,8 @@ Once a feedback item is connected to a user story, the user who submitted the st
 
 You can view your own submitted feedback items in the feedback list in your profile settings. Follow these steps to find the list of the provided feedback items:
 
-1. Click on your profile in the right top corner in the [Developer Portal](http://home.mendix.com).
+1. Click your profile in the right top corner in the [Developer Portal](http://home.mendix.com).
 2. Click **Show Profile**.
 3. Go to the **Feedback** tab.
 
-    ![](attachments/collaborate/feedbackoverview.jpg)
-
-## 9 Related Content
+![](attachments/collaborate/feedbackoverview.jpg)

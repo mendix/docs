@@ -4,6 +4,19 @@ title: "Platform Portal"
 
 ## 2017
 
+### August 14th, 2017
+
+#### Fixes
+
+* We fixed the issue where users with Microsoft browsers would get an error page after signup instead of automatically continuing to the Developer Portal.
+
+### August 11th, 2017
+
+#### Fixes
+
+* We fixed the issue where Desktop Modeler users couldn't submit feedback items.
+* We fixed the issue where team member names in the **Node Security** screen were empty and only visible after a refresh.
+
 ### August 2nd, 2017
 
 * Company Admins can invite users to all the apps within their company. (Ticket 51296)

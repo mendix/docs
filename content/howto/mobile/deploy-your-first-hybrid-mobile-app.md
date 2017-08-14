@@ -36,7 +36,7 @@ To open a hybrid example app, follow these steps:
 
     ![](attachments/18448692/18581199.png)
 
-3. Click **Run in Sandbox** to deploy this application to the Mendix cloud:
+3. Click **Run** to deploy this application to the Mendix Cloud:
 
     ![](attachments/18448692/18581186.png) 
 

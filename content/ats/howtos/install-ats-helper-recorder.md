@@ -7,7 +7,7 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-ATS provides two different tools to help build test scripts: ATS helper and ATS recorder. The ATS helper identifies the mx-name of widgets on the application under test (AUT). The recorder is a function/plugin within ATS that records your manual test steps in the AUT and automatically selects the correct action for each step.
+ATS provides two different tools to help build test scripts: the ATS Helper and ATS Recorder. The ATS Helper identifies the mx-name of widgets on the application under test (AUT). The recorder is a function/plugin within ATS that records your manual test steps in the AUT and automatically selects the correct action for each step.
 
 **This how-to will teach you  how to do the following:**
 
@@ -30,32 +30,45 @@ Before starting this how-to, make sure you have the following prerequisites in p
   Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/). 
   {{% /alert %}}
 
-## 3 Install the ATS Helper
-The following steps describe how to install the ATS Helper.
+## 3 Installing the ATS Helper
 
-1.	Open ATS and click the ![](/howtos/attachments/install-ats-helper-recorder/information-icon.png) in the top right corner of the screen. This opens the ATS Information dialog.
-![](/howtos/attachments/install-ats-helper-recorder/ats-information-screen.png)
+To install the ATS Helper, follow these steps:
 
-2.	Drag and drop the ATS Helper in your bookmark bar to link it to your bookmark bar.
-![](/howtos/attachments/install-ats-helper-recorder/drag-drop-ats-helper.png)
+1.  Open ATS and click the information icon in the top-right corner of the screen:
 
-Now you have installed the ATS Helper. To use the ATS Helper, select it from your bookmark, press ctrl and hover over a widget. The ATS Helper shows the information of that widget.
+    ![](/howtos/attachments/install-ats-helper-recorder/information-icon.png)
+
+    This opens the **ATS Information** dialog box:
+   
+    ![](/howtos/attachments/install-ats-helper-recorder/ats-information-screen.png)
+
+2.	Drag the ATS Helper to your bookmark bar to link it there:
+
+    ![](/howtos/attachments/install-ats-helper-recorder/drag-drop-ats-helper.png)
+
+To use the ATS Helper, select the bookmark, press <kbd>Ctrl</kbd>, and hover over a widget. The ATS Helper will show the information of that widget.
+
 ![](/howtos/attachments/install-ats-helper-recorder/ats-helper-widget.png)
 
 {{% alert type="info" %}}
-
-**Note:** The ATS Helper only works on stand alone widgets.
-
+The ATS Helper only works on standalone widgets.
 {{% /alert %}}
 
-## 4 Install the ATS Recorder
-The following steps explain how to install the ATS Recorder.
+## 4 Installing the ATS Recorder
 
-1.	Open ATS and click the ![](/howtos/attachments/install-ats-helper-recorder/information-icon.png) in the top right corner of the screen. This opens the ATS Information dialog.
-![](/howtos/attachments/install-ats-helper-recorder/ats-information-screen.png)
+To install the ATS Recorder, follow these steps:
 
-2.	Click the ATS Recorder link to go to the Chrome web store. Add the ATS Recorder extension to Chrome. 
-![](/howtos/attachments/install-ats-helper-recorder/add-ats-recorder.png)
+1.	Open ATS and click the information icon in the top-right corner of the screen:
 
-You can now use the ATS Recorder. See [How to create a test case using the recorder] for more information.
+    ![](/howtos/attachments/install-ats-helper-recorder/information-icon.png)
+    
+    This opens the **ATS Information** dialog box:
+    
+    ![](/howtos/attachments/install-ats-helper-recorder/ats-information-screen.png)
 
+2.	Click the **ATS Recorder (Chrome Web Store)** link to go to the Chrome Web Store.
+3.  Click **ADD TO CHROME** to add the ATS Recorder extension:
+
+    ![](/howtos/attachments/install-ats-helper-recorder/add-ats-recorder.png)
+
+You can now use the ATS Recorder. For more information, see [How to Create a Test case Using the Recorder].

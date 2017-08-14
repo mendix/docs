@@ -20,10 +20,10 @@ In order to set up an environment to run Mendix applications, you will need to i
 
 ![](attachments/18448665/18580733.png)
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, make sure you have the following prerequisites:
 
-* Microsoft Windows 2003 or higher
-* .NET 3.5 SP1 or higher
+* Microsoft Windows 2008 SP2 or higher
+* .NET 4.5 or higher
 * IIS 7 or higher with the following service roles enabled:
     * IIS Management console
     * Static content
@@ -33,10 +33,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     * This depends on your Mendix Server Distribution (for example, Mendix Server Distribution 4 requires Java 6, Mendix Server Distribution 5 requires Java 7)
 * Mendix deployment archive (MDA) of your Mendix project
 * Mendix server distribution corresponding with your Modeler (see the [Mendix App Store](https://appstore.home.mendix.com/link/modelers))
-* Database with sufficient security rights:
-    * Postgres 8.4 or higher
-    * Oracle Database 11g Release 2 or higher
-    * Microsoft SQL Server 2005 or higher
+* Database with sufficient security rights. Suitable database servers are IBM DB2, MariaDB, Microsoft SQL Server, MySQL, Oracle Database and PostgreSQL. See https://docs.mendix.com/refguide/system-requirements for more information.
 * A local or domain user with the “log on as a service” local security policy set
 
 ## 3 Installation of the Mendix Service Console

@@ -1,0 +1,6 @@
+{{- if isset .Params "file" -}}
+  {{- $filename := .Get "file" -}}
+  {{- $filePath := (printf "snippets/%s" $filename) -}}
+  {{ readFile $filePath | markdownify | chomp }}
+{{- else -}}
+{{- end -}}

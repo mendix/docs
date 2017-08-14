@@ -1,9 +1,0 @@
-exportfromconfluence5:
-  type: 'warning'
-  text: 'This space has recently been migrated from our old system. It might contain errors, we are working on fixing them. <a target="_blank" href="https://github.com/mendix/docs/issues/new">Report issue</a>'
-mendix4refguide:
-  type: 'warning'
-  text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>'
-mendix4howto:
-  type: 'warning'
-  text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the How-To&#39;s <a href="/howto/">here</a>.'

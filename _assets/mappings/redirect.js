@@ -1758,11 +1758,11 @@ module.exports = {
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",
-      to: "/howto6/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
     },
     {
       from: "/howto6/deploying+a+mendix+app+to+ibm+bluemix",
-      to: "/howto6/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+Pivotal",
@@ -2168,6 +2168,21 @@ module.exports = {
       from: "/howto6/Working+With+Object+Events",
       to: "/howto6/working-with-object-events"
     },
+	/****************************************************
+     * HOWTO MENDIX 7
+     ****************************************************/
+	{
+      from: "/howto/getting-started/build-an-iot-app",
+      to: "/howto/tutorials/build-an-iot-app"
+    },
+    {
+      from: "/howto/getting-started/build-a-simple-hrm-app",
+      to: "/howto/tutorials/build-a-simple-hrm-app"
+    },
+    {
+      from: "/howto/getting-started/create-a-to-do-app",
+      to: "/howto/tutorials/create-a-to-do-app"
+    },
     /****************************************************
      * Mendix Cloud
      ****************************************************/
@@ -2178,7 +2193,7 @@ module.exports = {
     {
       from: "/mendixcloud/custom-domains",
       to: "/developerportal/howto/custom-domains"
-    },	  
+    },
     {
       from: "/mendixcloud/Deploying+to+the+cloud",
       to: "/developerportal/howto/deploying-to-the-cloud"
@@ -2186,7 +2201,7 @@ module.exports = {
     {
       from: "/mendixcloud/deploying-to-the-cloud",
       to: "/developerportal/howto/deploying-to-the-cloud"
-    },	  
+    },
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
       to: "/howtogeneral/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
@@ -2229,12 +2244,12 @@ module.exports = {
     },
     {
       from: "/mendixcloud/migrating+to+v4",
-      to: "/developerportal/howto/migrating-to-v4"
+      to: "/howtogeneral/mendixcloud/migrating-to-v4"
     },
     {
-      from: "/mendixcloud/migrating-to-v4",
-      to: "/developerportal/howto/migrating-to-v4"
-    },	  
+      from: "/developerportal/howto/migrating-to-v4",
+      to: "/howtogeneral/mendixcloud/migrating-to-v4"
+    },
     {
       from: "/mendixcloud/Monitoring+application+health",
       to: "/developerportal/operate/monitoring-application-health"
@@ -2242,7 +2257,7 @@ module.exports = {
     {
       from: "/mendixcloud/monitoring-application-health",
       to: "/developerportal/operate/monitoring-application-health"
-    },	  
+    },
     {
       from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
       to: "/howtogeneral/mendixcloud/securing-outgoing-connections-from-your-application"
@@ -2294,7 +2309,7 @@ module.exports = {
  {
       from: "/mxsupport/technical-contact",
       to: "/developerportal/settings/technical-contact"
-    },	  
+    },
     /****************************************************
      * REFERENCE GUIDE MENDIX 4
      ****************************************************/
@@ -7340,9 +7355,9 @@ module.exports = {
       "from": "/refguide7/Generate+Document",
       "to": "/refguide/generate-document"
     },
-    {
-      "from": "/refguide7/Getting+the+Mendix+Developer+App",
-      "to": "/refguide/getting-the-mendix-developer-app"
+	{
+	  "from": "/refguide7/Getting+the+Mendix+Developer+App",
+      "to": "/refguide/getting-the-mendix-app"
     },
     {
       "from": "/refguide7/Grid+action+button",
@@ -8844,15 +8859,15 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Application+Quality+Monitor",
-      to: "/releasenotes/AQM/"
+      to: "/releasenotes/aqm/"
     },
     {
       from: "/ReleaseNotes/Mendix+AQM+2.0+Release+Notes",
-      to: "/releasenotes/AQM/2.0"
+      to: "/releasenotes/aqm/2.0"
     },
     {
       from: "/ReleaseNotes/Application+Performance+Monitor",
-      to: "/releasenotes/APM/"
+      to: "/releasenotes/apm/"
     },
     {
       from: "/ReleaseNotes/Beta+features",
@@ -8860,7 +8875,75 @@ module.exports = {
     },
     {
       from: "/ReleaseNotes/Application+Test+Suite",
-      to: "/releasenotes/ATS/"
+      to: "/releasenotes/ats/"
+    },
+    {
+      from: "/releasenotes/APM/1",
+      to: "/releasenotes/apm/1"
+    },
+    {
+      from: "/releasenotes/ATS/1",
+      to: "/releasenotes/ats/1"
+    },
+    {
+      from: "/releasenotes/APM/1.10",
+      to: "/releasenotes/apm/1.10"
+    },
+    {
+      from: "/releasenotes/APM/1.11",
+      to: "/releasenotes/apm/1.11"
+    },
+    {
+      from: "/releasenotes/APM/1.12",
+      to: "/releasenotes/apm/1.12"
+    },
+    {
+      from: "/releasenotes/ATS/1.5",
+      to: "/releasenotes/ats/1.5"
+    },
+    {
+      from: "/releasenotes/APM/1.6",
+      to: "/releasenotes/apm/1.6"
+    },
+    {
+      from: "/releasenotes/ATS/1.6",
+      to: "/releasenotes/ats/1.6"
+    },
+    {
+      from: "/releasenotes/APM/1.7",
+      to: "/releasenotes/apm/1.7"
+    },
+    {
+      from: "/releasenotes/APM/1.8",
+      to: "/releasenotes/apm/1.8"
+    },
+    {
+      from: "/releasenotes/ATS/1.8",
+      to: "/releasenotes/ats/1.8"
+    },
+    {
+      from: "/releasenotes/APM/1.9",
+      to: "/releasenotes/apm/1.9"
+    },
+    {
+      from: "/releasenotes/AQM/2",
+      to: "/releasenotes/aqm/2"
+    },
+    {
+      from: "/releasenotes/AQM/2.0",
+      to: "/releasenotes/aqm/2.0"
+    },
+    {
+      from: "/releasenotes/APM/",
+      to: "/releasenotes/apm/"
+    },
+    {
+      from: "/releasenotes/AQM/",
+      to: "/releasenotes/aqm/"
+    },
+    {
+      from: "/releasenotes/ATS/",
+      to: "/releasenotes/ats/"
     }
   ]
 }

@@ -6,7 +6,7 @@ const shell = require('shelljs');
 const spawnServer = (folder) => {
   const targetFolder = path.resolve(folder, '_site');
   const server = Server.create({
-    path: '_site',
+    path: targetFolder,
     port: 8888,
     fallback: (req, res) => {
       const parsed = url.parse(req.url),

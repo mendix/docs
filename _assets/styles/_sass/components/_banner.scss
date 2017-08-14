@@ -1,0 +1,30 @@
+.banner {
+  border-bottom: $border-color 1px solid;
+  background: $color-lightgrey;
+  z-index: 50;
+  position: relative;
+  &_text {
+    padding: 0.5em 0;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  &--success {
+    color: #3c763d;
+    background-color: #dff0d8;
+  }
+  &--info {
+    color: #31708f;
+    background-color: #d9edf7;
+  }
+  &--warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+  }
+  &--danger {
+    color: #a94442;
+    background-color: #f2dede;
+  }
+}

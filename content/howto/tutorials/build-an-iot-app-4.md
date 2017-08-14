@@ -98,9 +98,9 @@ When you observe the **Cargo Types** page in the app, you can see that it is not
 
 To improve the look and feel of this page, follow these steps:
 
-1. Open the **CargoType_Overview** page in the Modeler.
+1. Open the **CargoType_Overview** page in the Desktop Modeler.
 2. Right-click the row with the **New** button, select **Insert row above**, then select the default **full** row option.
-3. Click **View** in the top Modeler menu bar and select **Toolbox**.
+3. Click **View** in the top Desktop Modeler menu bar and select **Toolbox**.
 4. Drag the **Page title** widget from the **Toolbox** to the new row.
 5. Select the whole page by clicking the grayed-out area, go to the **Properties** pane, and change the **Title** to **Cargo types**.<br>
 

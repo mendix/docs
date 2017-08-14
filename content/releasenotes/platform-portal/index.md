@@ -3,11 +3,12 @@ title: "Platform Portal"
 ---
 
 ## 2017
+
 ### August 14th, 2017
 
 #### Fixes
 
-* We fixed an issue where users with Microsoft browsers would get an error page after signup instead of automatically continuing to the Dev Portal.
+* We fixed the issue where users with Microsoft browsers would get an error page after signup instead of automatically continuing to the Developer Portal.
 
 ### August 11th, 2017
 

@@ -4,6 +4,16 @@ title: "Platform Portal"
 
 ## 2017
 
+### August 11th, 2017
+
+#### Fixes
+
+* We fixed the issue where Desktop Modeler users couldn't submit feedback items.
+
+#### Known issues
+
+* Users of Internet Explorer or Microsoft Edge may encounter an unexpected error page after signing up for Mendix. We will release a fix for this as soon as possible.
+
 ### August 2nd, 2017
 
 * Company Admins can invite users to all the apps within their company. (Ticket 51296)

@@ -69,6 +69,7 @@ To add a sprint, follow these steps:
     The default duration of a sprint in Mendix is two weeks, wihhc starts the moment you create the sprint. Check **customize** to select a different start date.
 
     {{% /alert %}}
+
 9. Click **Save**, and the new sprint will be added to your stories overview:
 
     ![](attachments/collaborate/18580513.png)
@@ -88,11 +89,12 @@ To add story points, follow these steps:
     * Enter *Create an expenses overview page for company employees* for the **Description**
 
     ![](attachments/collaborate/18580493.png)
+
 3.  Click **Post story**.
 
     {{% alert type="info" %}}
 
-    You can also add Bug story points this way by selecting **Bug** from the **Story type** drop-down menu. The icon in the top left will change to (![](attachments/18580492.png)).
+    You can also add Bug story points this way by selecting **Bug** from the **Story type** drop-down menu. The icon in the top left will change to ![](attachments/18580492.png).
 
     {{% /alert %}}
 
@@ -192,7 +194,7 @@ There are two ways to move the story:
 
 With Mendix, it’s always possible to export data from your application and from the database.
 
-To expot sprints and stories, follow these steps:
+To export sprints and stories, follow these steps:
 
 1. Go to **Capture** in your project, then to **Stories** > **Import/Export**:
 

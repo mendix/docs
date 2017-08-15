@@ -46,7 +46,7 @@ The development of a new product, feature, or release usually has multiple sprin
 
 To add a sprint, follow these steps:
 
-1. Click **Capture** in the top menu:
+1.  Click **Capture** in the top menu:
 
     ![](attachments/collaborate/18580518.png)
 
@@ -54,9 +54,9 @@ To add a sprint, follow these steps:
 
     ![](attachments/collaborate/18580517.png)
 
-2. There is one default sprint called **Get started**, which is automatically created when you create a new project. You need a clean project, so select the **Get started** sprint, click the delete button, and then click **OK** to delete the sprint.
-3. Click **New sprint** in the **Stories** tab.
-4. Under **Plan something**, do the following:
+2.  There is one default sprint called **Get started**, which is automatically created when you create a new project. You need a clean project, so select the **Get started** sprint, click the delete button, and then click **OK** to delete the sprint.
+3.  Click **New sprint** in the **Stories** tab.
+4.  Under **Plan something**, do the following:
     * Select **Sprint** (when you are working towards a release of your product, you can add the release planning)
     * Enter **Sprint 1** for the sprint **Name**
     * Leave the **This sprint comes after** field empty (if there are existing sprints, you can place the new sprint before or after a selected sprint)
@@ -66,11 +66,11 @@ To add a sprint, follow these steps:
 
     {{% alert type="info" %}}
 
-    The default duration of a sprint in Mendix is two weeks, wihhc starts the moment you create the sprint. Check **customize** to select a different start date.
+The default duration of a sprint in Mendix is two weeks, wihhc starts the moment you create the sprint. Check **customize** to select a different start date.
 
     {{% /alert %}}
 
-9. Click **Save**, and the new sprint will be added to your stories overview:
+5.  Click **Save**, and the new sprint will be added to your stories overview:
 
     ![](attachments/collaborate/18580513.png)
 
@@ -80,8 +80,8 @@ Every sprint contains a number of story points that describe a specific function
 
 To add story points, follow these steps:
 
-1. Select **Sprint 1** and click **New story**.
-2. For the new story, do the following:
+1.  Select **Sprint 1** and click **New story**.
+2.  For the new story, do the following:
     * Enter *As a user I want to be able to view my company expenses* for the user description
     * Select **Feature** for the **Story type**
     * Select **5 points** for the **Story points**
@@ -94,7 +94,8 @@ To add story points, follow these steps:
 
     {{% alert type="info" %}}
 
-    You can also add Bug story points this way by selecting **Bug** from the **Story type** drop-down menu. The icon in the top left will change to ![](attachments/18580492.png).
+You can also add Bug story points this way by selecting **Bug** from the **Story type** drop-down menu.
+The icon in the top left will change to ![](attachments/collaborate/18580492.png)
 
     {{% /alert %}}
 
@@ -124,21 +125,21 @@ Besides being able to manage your sprints in the **Project Dashboard**, you can 
 
 To manage stories in the Modeler, follow these steps:
 
-1. Go to the overview page of your project and click **Edit in Modeler**:
+1.  Go to the overview page of your project and click **Edit in Modeler**:
 
     ![](attachments/collaborate/18580491.png)
 
-2. Select a Modeler version when asked, and then log in to the Modeler.
-3. You will now see your sprints in the **Stories** tab at the bottom:
+2.  Select a Modeler version when asked, and then log in to the Modeler.
+3.  You will now see your sprints in the **Stories** tab at the bottom:
 
     ![](attachments/collaborate/18580490.png)
 
-4. Click the **To-do** status for the first item to change the status to **Running**:
+4.  Click the **To-do** status for the first item to change the status to **Running**:
 
     ![](attachments/collaborate/18580504.png)
 
-5. Go back to the **Capture** page of the project dashboard in your browser.
-6. Expand the first sprint and check the status of the first entry:
+5.  Go back to the **Capture** page of the project dashboard in your browser.
+6.  Expand the first sprint and check the status of the first entry:
 
     ![](attachments/collaborate/18580489.png)
 
@@ -146,7 +147,7 @@ To manage stories in the Modeler, follow these steps:
 
     {{% alert type="info" %}}
 
-    If you change a status or update story points in the Modeler or in the browser, they will automatically be synchronized and available everywhere.
+If you change a status or update story points in the Modeler or in the browser, they will automatically be synchronized and available everywhere.
 
     {{% /alert %}}
 

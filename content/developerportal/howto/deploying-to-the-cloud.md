@@ -40,7 +40,7 @@ There are two methods for deploying your app to the Mendix Cloud. The first opti
 2. Open the licensed app.
 3. Click **Project** in the top menu bar and select **Deploy to licensed cloud node**:
 
-    [](attachments/deploy/18581233.png)
+    ![](attachments/deploy/18581233.png)
 
 4. Click **Deploy**:
 
@@ -74,7 +74,7 @@ The previous steps explained how to deploy a deployment package to the Mendix Cl
 3. In the **Deployment Package Repository**, choose the preferred deployment package and click **Deploy**.
 4. Select the preferred environment, and then click **Continue**.
 5. Click **Transport**. If asked to do so, clean the environment.
-6. Configure the constants (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings. 
+6. Configure the constants (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
 7. Click **Continue**.
 8. Click **Start application**. If asked, click **Synchronize database**.
 

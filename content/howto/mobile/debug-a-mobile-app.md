@@ -20,6 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Ensure that you have a network utilities tool on your mobiledevice (I use [PingTools](https://play.google.com/store/apps/details?id=ua.com.streamsoft.pingtools) on Android, and [NetworkPing Lite](https://itunes.apple.com/us/app/network-ping-lite/id289967115?mt=8) on iOS) in order to ensure connectivity between your device andyour computer
 * Ensure that you have an Adobe ID that you can use to sign in to PhoneGap Build ([https://build.phonegap.com/apps](https://build.phonegap.com/apps))
+* You need a paid Apple Developer Membership - see [Apple Membership](https://developer.apple.com/support/membership/) for more details
 
 ## 3 Mendix and PhoneGap <a name="MendixAndPhonegap"></a>
 
@@ -146,66 +147,89 @@ You can now take advantage of all the debugging tools you know and love with Men
 In order to build (and debug) a Mendix iOS app, you need to ensure that you have the right setup in your Apple Developer Account. You'll need a Developer Provisioning Profile that includes your device ID and a Signing Certificate. If you already have an iOS Development provisioning profile, you can continue with [5.2 PhoneGap Configuration](#PhonegapConfiguration). Follow these steps to set up an iOS provisioning profile:
 
 1. Go to [developer.apple.com](https://developer.apple.com/) and log in to your account.
-2. Navigate to **Development** under **Certificates** in the left navigation, and click the `+` button to create a new certificate.
-3. Select **iOS Development** and click **Continue**.
+2. Click **Certificates, IDs & Profiles** in the left-hand navigation.
+3. Click the `+` button to create a new certificate.
+4. Select **iOS Development** and click **Continue**.
 
-   ![apple-5](./attachments/debug-a-mobile-app/apple-5.png)
+      ![apple-5](./attachments/debug-a-mobile-app/apple-5.png)
    
-4. Follow the instructions to create a Certificate Signing Request (CSR) and click **Continue**
+4. Follow the instructions to create a Certificate Signing Request (CSR) and click **Continue**.
    
-   ![apple-6](./attachments/debug-a-mobile-app/apple-6.png)
+      ![apple-6](./attachments/debug-a-mobile-app/apple-6.png)
    
-5. Upload your new CSR and click **Continue**
+5. Upload your new CSR and click **Continue**.
 
-   ![apple-7](./attachments/debug-a-mobile-app/apple-7.png)
+      ![apple-7](./attachments/debug-a-mobile-app/apple-7.png)
    
-6. Download your new Certificate and click **Done**
+6. Download your new certificate and click **Done**.
 
-   ![apple-8](./attachments/debug-a-mobile-app/apple-8.png)
+      ![apple-8](./attachments/debug-a-mobile-app/apple-8.png)
    
-7. On your Mac, open Keychain Access and choose **Import Items…** from the File menu
+7. On your Mac, open **Keychain Access** and select **Import Items…** from the **File** menu.
 
-   ![apple-9](./attachments/debug-a-mobile-app/apple-9.png)
+      ![apple-9](./attachments/debug-a-mobile-app/apple-9.png)
    
-8. Select your new Certificate
+8. Select your new certificate.
 
- ![apple-10](./attachments/debug-a-mobile-app/apple-10.png)
+      ![apple-10](./attachments/debug-a-mobile-app/apple-10.png)
  
-9. Right-click on the certificate in the list of certificates and select **Export**
+9. Right-click on the certificate in the list of certificates and select **Export**.
 
-    ![apple-11](./attachments/debug-a-mobile-app/apple-11.png)
+      ![apple-11](./attachments/debug-a-mobile-app/apple-11.png)
     
-10. Save this as a **.p12** file, and remember this for later. (We'll need this to build our Phonegap application)
+10. Save this as a **.p12** file, and remember this for later. You'll need this to build your Phonegap application.
 
-    ![apple-12](./attachments/debug-a-mobile-app/apple-12.png)
+      ![apple-12](./attachments/debug-a-mobile-app/apple-12.png)
     
-12. Return to your Apple Developer Dashboard
-14. Navigate to **App IDs** under **Identifiers** on the left navigation and then click the `+` button to create a new App ID
-15. Enter an App ID Description and and Explicit App ID and select the necessary Apple services your app will need, then click **Continue**.
-    ![apple-15](./attachments/debug-a-mobile-app/apple-15.png)
-16. Click **Register**, then **Done**.
-17. Connect your iOS device and open iTunes
-18. Navigate to your device overview in iTunes, and click where it lists the serial number to reveal the UDID
-    ![apple-18](./attachments/debug-a-mobile-app/apple-18.png)
-19. When you see the UDID, right-click on it and choose Copy
-    ![apple-19](./attachments/debug-a-mobile-app/apple-19.png)
-20. Return to your Apple Developer Dashboard and navigate to **All**, under **Devices** on the left navigation, and click `+` to add a new device
-21. Enter a name for the device and the UDID
-    ![apple-21](./attachments/debug-a-mobile-app/apple-21.png)
-22. Navigate to **All**, under **Provisioning Profiles** on the left navigation, and click the `+` button to create a new provisioning profile
-23. Choose **iOS App Development** for type, and click **Continue**
-    ![apple-23](./attachments/debug-a-mobile-app/apple-23.png)
-24. Select your new App ID from the dropdown and click **Continue**
-    ![apple-24](./attachments/debug-a-mobile-app/apple-24.png)
-25. Select your new Certificate and click **Continue**
-    ![apple-25](./attachments/debug-a-mobile-app/apple-25.png)
-26. Select the devices you want to test your app and click **Continue**
-    ![apple-26](./attachments/debug-a-mobile-app/apple-26.png)
-27. Give you new provisioning profile a name and click Continue
-    ![apple-27](./attachments/debug-a-mobile-app/apple-27.png)
-28. Download your provisioning profile (we'll need this for Phonegap)
+11. Return to the **Certificates, Identifiers & Profiles** page.
+12. Navigate to the **App IDs** page, located under **Identifiers**.
+13. Click the `+` button to create a new **App ID**.
+14. Enter an **App ID Description** and **Explicit App ID** and select the necessary Apple services your app will need, then click **Continue**.
 
-### 5.1 Phonegap Configuration <a name="PhonegapConfiguration"></a>
+      ![apple-15](./attachments/debug-a-mobile-app/apple-15.png)
+    
+15. Click **Register**, then **Done**.
+16. Connect your iOS device and open **iTunes**.
+17. Navigate to your device overview in iTunes, and click where it lists the serial number to reveal the UDID.
+
+      ![apple-18](./attachments/debug-a-mobile-app/apple-18.png)
+    
+18. When you see the UDID, right-click it and select **Copy**.
+
+      ![apple-19](./attachments/debug-a-mobile-app/apple-19.png)
+    
+19. Return to the **Certificates, Identifiers & Profiles** page and navigate to the **All** page under **Devices**.
+20. Click the `+` button to add a new device.
+21. Enter a name for the device and paste the UDID.
+
+      ![apple-21](./attachments/debug-a-mobile-app/apple-21.png)
+    
+22. Navigate to **All** under **Provisioning Profiles**.
+23. Click the `+` button to create a new Provisioning Profile.
+24. Select **iOS App Development** and click **Continue**.
+
+      ![apple-23](./attachments/debug-a-mobile-app/apple-23.png)
+    
+24. Select your new **App ID** from the dropdown and click **Continue**.
+
+      ![apple-24](./attachments/debug-a-mobile-app/apple-24.png)
+      
+25. Select your new Certificate and click **Continue**.
+
+      ![apple-25](./attachments/debug-a-mobile-app/apple-25.png)
+    
+26. Select the devices you want to test your app and click **Continue**.
+
+      ![apple-26](./attachments/debug-a-mobile-app/apple-26.png)
+    
+27. Give you new Provisioning Profile a name and click **Continue**.
+
+      ![apple-27](./attachments/debug-a-mobile-app/apple-27.png)
+    
+28. Download your Provisioning Profile (you'll need this for Phonegap).
+
+
+### 5.2 Phonegap Configuration <a name="PhonegapConfiguration"></a>
 
 We can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default.
 

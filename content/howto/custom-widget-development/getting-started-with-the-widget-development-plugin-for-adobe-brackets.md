@@ -17,7 +17,7 @@ This How-To will teach you how to use the Widget Development Plugin for Adobe Br
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Download Adobe Brackets [here](https://github.com/adobe/brackets/releases/tag/release-1.1)
+* Download Adobe Brackets [here](https://github.com/adobe/brackets/releases/tag/release-1.1) or [here](http://brackets.io/)
 
 ## 3 Getting Started with Adobe Brackets and the Widget Development Plugin
 

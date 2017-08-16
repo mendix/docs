@@ -8,7 +8,7 @@ title: "Platform Portal"
 
 #### Improvements
 
-* We enabled Path Based Access Restrictions for all Mendix Cloud v3 apps. This allows users to configure access restrictions to their environments in an easier way. For more information, see [Access Restrictions](/howtogeneral/mendixcloud/access-restrictions). Mendix Cloud v4 already had this functionality enabled.
+* We enabled path-based access restrictions for all Mendix Cloud v3 apps. This allows users to more easily configure access restrictions on their environments. For more information, see [Access Restrictions](/howtogeneral/mendixcloud/access-restrictions). Mendix Cloud v4 already has this functionality enabled.
 
 ### August 14th, 2017
 

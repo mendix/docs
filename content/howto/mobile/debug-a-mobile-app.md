@@ -231,7 +231,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
 ### 5.2 Phonegap Configuration <a name="PhonegapConfiguration"></a>
 
-We can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default.
+You can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default. Follow these steps to change the PhoneGap Build
 
 1. Go to Sprintr and navigate to the **Mobile App** page
 

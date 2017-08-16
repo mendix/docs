@@ -14,24 +14,24 @@ Mendix has great tools for debugging web applications, including the offline and
 * Build and run a Mendix mobile app that connects to your local development machine
 * Debug the mobile app using Mendix debugging tools, Chrome DevTools and the Safari Web Inspector
 
-## Prerequisites
+## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Ensure that you have a network utilities tool on your mobiledevice (I use [PingTools](https://play.google.com/store/apps/details?id=ua.com.streamsoft.pingtools) on Android, and [NetworkPing Lite](https://itunes.apple.com/us/app/network-ping-lite/id289967115?mt=8) on iOS) in order to ensure connectivity between your device andyour computer
-* Ensure that you have an Adobe ID that you can use to sign in to Phonegap Build ([https://build.phonegap.com/apps](https://build.phonegap.com/apps))
+* Ensure that you have an Adobe ID that you can use to sign in to PhoneGap Build ([https://build.phonegap.com/apps](https://build.phonegap.com/apps))
 
-## Mendix and Phonegap <a name="MendixAndPhonegap"></a>
+## 3 Mendix and PhoneGap <a name="MendixAndPhonegap"></a>
 
-Before we begin, it’s important to understand how Mendix Hybrid Mobile apps work, and the relationship between the Mendix application and the Phonegap service. [Adobe PhoneGap](https://phonegap.com/) provides a way for users to create mobile applications using web technologies, like Mendix. PhoneGap (PG) essentially creates a wrapper for a Mendix application that is recognized and treated like a native application by mobile platforms. All your application’s logic, appearance, and functionality are controlled by Mendix. PG then, in a way, *translates* these aspects of your application into a language that can be understood by Android and iOS. That being said, there are some facets of your application’s configuration that need to be configured in the PG application and not in Mendix. We’ll return to this a little later.
+Before we begin, it’s important to understand how Mendix Hybrid Mobile apps work, and the relationship between the Mendix application and the PhoneGap service. [Adobe PhoneGap](https://phonegap.com/) provides a way for users to create mobile applications using web technologies, like Mendix. PhoneGap (PG) essentially creates a wrapper for a Mendix application that is recognized and treated like a native application by mobile platforms. All your application’s logic, appearance, and functionality are controlled by Mendix. PhoneGap then, in a way, *translates* these aspects of your application into a language that can be understood by Android and iOS. That being said, there are some facets of your application’s configuration that need to be configured in the PhoneGap application and not in Mendix. We’ll return to this a little later.
 
-The basic function of the PG app is to ensure that all the necessary libraries (called PhoneGap Plugins) are loaded and available to the application, and then initialize the Mendix application from a target URL. As soon as the Mendix app has been initialized, the app’s Mendix logic then takes over. There are a couple of benefits that we, as Mendix developers, gain from the fact that the PG app initializes based on a URL: One, changes that we make to the application logic do not require a full rebuild of both the Mendix app and the PG app (just the Mendix one); and two, that we can instruct the PG app to initialize based on an IP address (rather than the production URL) and debug a mobile application running locally on our laptop, in order to further increase the speed of our iterations.
+The basic function of the PhoneGap app is to ensure that all the necessary libraries (called PhoneGap Plugins) are loaded and available to the application, and then initialize the Mendix application from a target URL. As soon as the Mendix app has been initialized, the app’s Mendix logic then takes over. There are a couple of benefits that we, as Mendix developers, gain from the fact that the PhoneGap app initializes based on a URL: One, changes that we make to the application logic do not require a full rebuild of both the Mendix app and the PhoneGap app (just the Mendix one); and two, that we can instruct the PhoneGap app to initialize based on an IP address (rather than the production URL) and debug a mobile application running locally on our laptop, in order to further increase the speed of our iterations.
 
-## Android and macOS <a name="AndroidMac"></a>
+## 4 Android and macOS <a name="AndroidMac"></a>
 
 This is perhaps the easiest combination of mobile target platform and development environment to get to work. 
 
-### macOS Configuration
+### 4.1 macOS Configuration
 
 Since the Mendix Modeler only runs on Mendix, we need to make sure that your virtual (windows) machine can be accessed by the outsideworld. To do that, the network setting much be shared between the virtual machine and your Mac, and the appropriate ports forwarded. Follow these steps to configure your development environment with Parallels:
 
@@ -74,22 +74,27 @@ Since the Mendix Modeler only runs on Mendix, we need to make sure that your vir
 
       ![win-2](./attachments/debug-a-mobile-app/win-2.png)
 
-##### Phonegap Configuration
+### 4.2 PhoneGap Configuration
 
-You can use PG Build to build the native application and tell it to intialize based on this new URL, rather than the default.
+You can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default. Follow these steps to download a package, update it, and upload it to PhoneGap Build: 
 
-1. Go to Sprintr and navigate to the **Mobile App** page
+1. Go to home.mendix.com and open your app.
+2. Go to the **Mobile App** page.
+2. Configure this page as you normally would and then click **Publish for Mobile App Stores**.
+      
+      ![phonegap-1](./attachments/debug-a-mobile-app/phonegap-1.png)
 
-2. Configure this page as you normally would and then choose **Publish for Mobile App Stores**.
-   ![phonegap-1](./attachments/debug-a-mobile-app/phonegap-1.png)
+3. Select **Do it Yourself** and then click **Download Customizable Package**.
+      
+      ![phonegap-3](./attachments/debug-a-mobile-app/phonegap-3.png)
 
-3. Select **Do it Yourself** and then choose **Download Customizable Package**
-   ![phonegap-3](./attachments/debug-a-mobile-app/phonegap-3.png)
+4. Extract the downloaded package and then navigate to the `/dist/` folder.
+      
+      ![phonegap-4](./attachments/debug-a-mobile-app/phonegap-4.png)
 
-4. Unzip the downloaded package and then navigate to the `/dist/phonegap.zip` file![phonegap-4](./attachments/debug-a-mobile-app/phonegap-4.png)
-
-5. Extract the contents of this file and find `www/settings.json`
-   ![phonegap-5](./attachments/debug-a-mobile-app/phonegap-5.png)
+5. Extract the contents of the **phonegap.zip** file and open the `www/settings.json` file.
+      
+      ![phonegap-5](./attachments/debug-a-mobile-app/phonegap-5.png)
 
 6. Change the `url` property to the IP address of your local machine, with the port 8080.
 
@@ -103,95 +108,78 @@ You can use PG Build to build the native application and tell it to intialize ba
    }
    ```
 
-7. Save your changes and rezip the `phonegap/` directory in `/dist/`.
-   ![phonegap-7](./attachments/debug-a-mobile-app/phonegap-7.png)
+7. Save your changes and zip the unzipped phonegap.zip files you just extracted.
+   
+      ![phonegap-7](./attachments/debug-a-mobile-app/phonegap-7.png)
 
-8. Upload the new zip file to a new app on Phonegap Build
-   ![phonegap-8](./attachments/debug-a-mobile-app/phonegap-8.png)
+8. Upload the new zip file to a new app on PhoneGap Build.
+   
+      ![phonegap-8](./attachments/debug-a-mobile-app/phonegap-8.png)
 
-9. When your app finished building in the cloud, download the app and run it to connect to your Mendix app running on your local machine!
+9. When your app has finished building in the cloud, download it and run it to connect to your Mendix app running on your local machine.
 
-##### Android Configuration
+### 4.3 Android Configuration
 
-1. [EnableDeveloper Options on your device](https://developer.android.com/studio/debug/dev-options.html).
+1. Enabel the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio/debug/dev-options.html#enable) for more information.
 2. Connect your device to your development machine and when the popup appears on your mobile device to allow USB debugging, choose **Allow**.
-   ![android-2](./attachments/debug-a-mobile-app/android-2.png)
-3. Open Chrome Developer Tools and click the ellipsis and navigate to the **Remote Devices** panel
+      
+      ![android-2](./attachments/debug-a-mobile-app/android-2.png)
+  
+3. Open the **Chrome** browser.
+4. Open the **Chrome Developer Tools (F12)**.
+5. Click the options icon (vertical ellipsis) and select **More tools** > **Remote devices**.
+
    ![android-3](./attachments/debug-a-mobile-app/android-3.png)
-4. Go to the Remote Devices panel and select your device from the list
+   
+4. Select your device from the list.
+
    ![android-4](./attachments/debug-a-mobile-app/android-4.png)
-5. Inspect the tab from your mobile device to preview the view from your device on-screen and to gain access to the chrome web inspector and the rest of the developer tools!
-6. You can now take advantage of all the debugging tools you know and love with Mendix, including offline breakpoints, quick updates/refreshes, and the chrome developer tools.
+   
+5. Inspect the tab from your mobile device to preview the view from your device on-screen and to gain access to the Chrome web inspector and the rest of the Developer Tools.
 
-## iOS + macOS <a name="iosAndMac"></a>
+You can now take advantage of all the debugging tools you know and love with Mendix, including offline breakpoints, quick updates/refreshes, and the Chrome Developer Tools.
 
-##### macOS configuration
+## 5 iOS and macOS <a name="iosAndMac"></a>
 
-Since the Mendix Modeler only runs on Mendix, we need to make sure that your virtual (windows) machine can be accessed by the outsideworld. In order to do that, the network setting much be shared between thevirtual machine and your mac, and the appropriate ports forwarded. This guidewill explain how to configure your development environment with Parallels.
+### 5.1 Apple Developer Configuration
 
-1. Open the Parallels **Configure** dialog and find the **Hardware** tab.
+In order to build (and debug) a Mendix iOS app, you need to ensure that you have the right setup in your Apple Developer Account. You'll need a Developer Provisioning Profile that includes your device ID and a Signing Certificate. If you already have an iOS Development provisioning profile, you can continue with [5.2 PhoneGap Configuration](#PhonegapConfiguration). Follow these steps to set up an iOS provisioning profile:
 
-   | ![mac-1](./attachments/debug-a-mobile-app/mac-1.png) | ![mac-1b](./attachments/debug-a-mobile-app/mac-1b.png) |
-   | ---------------------------------------- | ---------------------------------------- |
-   |                                          |                                          |
+1. Go to [developer.apple.com](https://developer.apple.com/) and log in to your account.
+2. Navigate to **Development** under **Certificates** in the left navigation, and click the `+` button to create a new certificate.
+3. Select **iOS Development** and click **Continue**.
 
-   ​
-
-2. If necessary, click the lock to make changes, and ensure that the **Source** for **Network 1** is set to **Shared Network**.
-   ![mac-2](./attachments/debug-a-mobile-app/mac-2-1163132.png)
-
-
-1. Next, open the Parallels **Preferences** dialog and find the **Network** tab. Make sure that the **Connect Mac to this network** option is checked.
-
-   | ![mac-3](./attachments/debug-a-mobile-app/mac-3-1163108.png) | ![mac-3b](./attachments/debug-a-mobile-app/mac-3b-1163119.png) |
-   | ---------------------------------------- | ---------------------------------------- |
-   |                                          |                                          |
-
-
-1. From this menu, hit the **+** button at the bottom of the page to add some new Port Forwarding Rules:
-   ![mac-4](./attachments/debug-a-mobile-app/mac-4-1163092.png)
-   1. Forward ports **8080 **and **8090** to your windows machine.
-
-
-1. Start the mendixapp locally, and verify that your mobile device can ping your developmentmachine.
-
-
-1. Find the local IP of your development machine on your network. Go to **settings > network**
-   ![mac-6](./attachments/debug-a-mobile-app/mac-6-1163082.png)
-
-
-1. Verify that your device can ping this address
-   ![win-2](./attachments/debug-a-mobile-app/win-2.png)
-
-
-
-
-##### (Bonus) Apple Developer configuration
-
-In order to build (and debug) a Mendix iOS app, you need to ensure that you have the right setup in your Apple Developer Account. You'll need a Developer Provisioning Profile that includes your device ID, and a Signing Certificate.
-
-1. Go to [developer.apple.com](https://developer.apple.com/) and login to your account
-2. Ensure that you have an **iOS Development** provisioning profile.
-   ![apple-2](./attachments/debug-a-mobile-app/apple-2.png)
-3. If you do, continue to [Phonegap Configuration](#PhonegapConfiguration)
-4. If not, navigate to **Development** under **Certificates** on the left navigation, and click the `+` button to create a new certificate.
-5. Choose **iOS Development** and click **Continue**.
    ![apple-5](./attachments/debug-a-mobile-app/apple-5.png)
-6. Follow the instructions to create a Certificate Signing Request (CSR) and click **Continue**
+   
+4. Follow the instructions to create a Certificate Signing Request (CSR) and click **Continue**
+   
    ![apple-6](./attachments/debug-a-mobile-app/apple-6.png)
-7. Upload your new CSR and click **Continue**
+   
+5. Upload your new CSR and click **Continue**
+
    ![apple-7](./attachments/debug-a-mobile-app/apple-7.png)
-8. Download your new Certificate and click **Done**
+   
+6. Download your new Certificate and click **Done**
+
    ![apple-8](./attachments/debug-a-mobile-app/apple-8.png)
-9. On your Mac, open Keychain Access and choose **Import Items…** from the File menu
+   
+7. On your Mac, open Keychain Access and choose **Import Items…** from the File menu
+
    ![apple-9](./attachments/debug-a-mobile-app/apple-9.png)
-10. Select your new Certificate
+   
+8. Select your new Certificate
+
  ![apple-10](./attachments/debug-a-mobile-app/apple-10.png)
-11. Right-click on the certificate in the list of certificates and select **Export**
+ 
+9. Right-click on the certificate in the list of certificates and select **Export**
+
     ![apple-11](./attachments/debug-a-mobile-app/apple-11.png)
-12. Save this as a **.p12** file, and remember this for later. (We'll need this to build our Phonegap application)
+    
+10. Save this as a **.p12** file, and remember this for later. (We'll need this to build our Phonegap application)
+
     ![apple-12](./attachments/debug-a-mobile-app/apple-12.png)
-13. Return to your Apple Developer Dashboard
+    
+12. Return to your Apple Developer Dashboard
 14. Navigate to **App IDs** under **Identifiers** on the left navigation and then click the `+` button to create a new App ID
 15. Enter an App ID Description and and Explicit App ID and select the necessary Apple services your app will need, then click **Continue**.
     ![apple-15](./attachments/debug-a-mobile-app/apple-15.png)
@@ -217,10 +205,9 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
     ![apple-27](./attachments/debug-a-mobile-app/apple-27.png)
 28. Download your provisioning profile (we'll need this for Phonegap)
 
-##### Phonegap configuration <a name="PhonegapConfiguration"></a>
+### 5.1 Phonegap Configuration <a name="PhonegapConfiguration"></a>
 
-We can use PG Build to build
-the native application and tell it to intialize based on this new URL, rather than the default.
+We can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default.
 
 1. Go to Sprintr and navigate to the **Mobile App** page
 

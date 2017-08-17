@@ -81,7 +81,7 @@ For details on this release, see [7.0 release notes](7.0).
 * Pages showing objects that contain accessible hashed string attributes with empty values are broken. You cannot call a microflow or open a different page. Please note that this is not easy to model, so you might not encounter this issue.
 * Hybrid apps will not start if they contain a reporting widget.
 * Offline hybrid apps are not supported yet.
-  * All fixed in [7.1.0](7.1#RN710)
+  * All fixed in [7.1.0](7.1#RN710).
 
 #### Other known issues
 

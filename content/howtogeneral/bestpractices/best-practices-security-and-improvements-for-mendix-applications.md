@@ -37,21 +37,23 @@ Common cases are:
     *	Using prepared statements, which will cause the database-specific connector to take care of escaping the value
     *	Sanity checking your user input, for example, use a regular expression to check if your user input only contains alphanumeric characters, spaces and dashes
 
-## Close Unnecessary Request Handlers
+## Apply Access Restrictions to Unnecessary Request Handlers
 
-A Mendix application offers various endpoints which could be used to obtain information about offered services. Request handlers can be configured within the Developer Portal. They can be found at the environment details of your cloud node. An example of this overview:
+A Mendix application offers various endpoints which could be used to obtain information about offered services. The paths used by these endpoints end in `-doc`. By default, access to these endpoints is disabled when deploying to a cloud node.
 
-![Mendix Cloud Request Handlers Overview](attachments/request-handlers.png)
+Access restrictions can be configured within the Developer Portal. They can be found at the environment details of your cloud node. An example of this overview showing the default settings after deploying to a new environment:
 
-An example is the *ws-doc* or *rest-doc* endpoints which enumerate all published web and REST services of the application. An attacker could use this information to discover possible areas to exploit.
+![Mendix Cloud Access Restrictions Overview](attachments/default-access-restrictions.png)
+
+Examples are the `ws-doc` or `rest-doc` endpoints which enumerate all published web and REST services of the application. An attacker could use this information to discover possible areas to exploit.
 
 As a Mendix developer, you can take the following preventative measures:
-* Disable the endpoints within the Mendix Cloud Portal
-* Apply IP filtering or certificate authentication
+* Disable unused endpoints within the Mendix Cloud Portal completely by applying a 'Deny all access' preset on them
+* Apply IP filtering or client certificate authentication to restrict access
 
 Keep the following in mind:
-* There might be other, application-specific, request handlers which could also be disabled
-* The URLs of test and acceptance environments can easily be guessed. In order to take effective measures, they should be applied to these environments also
+* If there are other, application-specific, request handlers which should have an access restriction applied, then use the New button to add them as additional paths
+* The URLs of test and acceptance environments can easily be guessed. In order to take effective measures, the restrictions should be applied to these environments also
 
 ## Apply Authentication on Services
 

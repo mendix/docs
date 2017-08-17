@@ -183,7 +183,7 @@ The embedding options are:
 
 You can restrict access to your application by means of Client Certificates or IP ranges.
 
-The top level path (`'`) restricts access to the entire application. Settings for specific paths override the implicitly inherited profile for the top level.
+The top level path (`/`) restricts access to the entire application. Settings for specific paths override the implicitly inherited profile for the top level.
 
 Custom access restriction profiles are managed at the application level. They can be reused for all environments (acceptance, production, etc).
 
@@ -200,7 +200,7 @@ You can **Delete** a path or you can **Add** and **Edit** a path with the follow
 * Custom Profile for Client Certificates and/or IP ranges
 * N/A (inherit)
 
-For more information, see [Converting to Path-Based Access Restrictions](/howtogeneral/mendixcloud/request-handlers-to-pbar) and [How to Restrict Access for Incoming Requests](/howtogeneral/mendixcloud/access-restrictions).
+For more information, see [How to Restrict Access for Incoming Requests](/howtogeneral/mendixcloud/access-restrictions).
 
 ### 4.4 Outgoing Connections Certificates
 

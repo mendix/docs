@@ -89,7 +89,7 @@ For details on this release, see [7.0 release notes](7.0).
 #### Other known issues
 
 * In certain situations, OnChange microflows may not reflect changes done in the UI. Instead, an older version of the object will be used.
-  * Fixed in [7.3.0](7.3#RN730_1).
+  * Fixed in [7.3.0](7.3).
 * Some users working on Windows 7 and 8.1 might experience issues during installation of the .NET Framework bundled with the Modeler installer. Installing .NET Framework from the [official Microsoft website](https://www.microsoft.com/en-us/download/details.aspx?id=53345) resolves these issues.
 * Upgrading an anonymous user to a signed-in user does not transfer the state yet.
 * In calculated attribute microflows, objects associated with `$currentUser` or `$currentSession` cannot be retrieved in the calculated microflow if the association has not been committed to the database.

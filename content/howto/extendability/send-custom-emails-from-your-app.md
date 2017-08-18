@@ -20,7 +20,7 @@ None.
 
 ## 3 Download the Required Modules from the Mendix App Store
 
-In this part of the how-to, you will learn how to download the necessary modules from the Mendix App Store. This is a very quick process, as the modules will be imported into your project in just a few clicks. The modules that are required for this process are called MxModelReflection, Encyption, and Email Module with Templates.
+In this part of the how-to, you will learn how to download the necessary modules from the Mendix App Store. This is a very quick process, as the modules will be imported into your project in just a few clicks. The modules that are required for this process are called MxModelReflection, Encryption, and Email Module with Templates.
 
 {{% alert type="info" %}}
 

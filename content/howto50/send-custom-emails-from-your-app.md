@@ -7,7 +7,7 @@ Each application can leverage Mendix App Store content to create and send custom
 
 ## 1\. Download the Required Modules from the Mendix App Store
 
-Within this part of the how to you will learn how to download the necessary modules from the Mendix App Store. This is a very quick process, in that in just a few clicks the modules will be imported into your project. The modules that are required for this process are the **MxModelReflection, Encyption,** and **Email Module with Templates** modules.
+Within this part of the how to you will learn how to download the necessary modules from the Mendix App Store. This is a very quick process, in that in just a few clicks the modules will be imported into your project. The modules that are required for this process are the **MxModelReflection, Encryption,** and **Email Module with Templates** modules.
 
 {{% alert type="info" %}}
 

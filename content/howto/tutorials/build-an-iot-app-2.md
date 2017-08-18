@@ -37,7 +37,7 @@ To configure the sensor data subscription, follow these steps:
     * Return to the microflow to see what is happening there. In the farthest left activity, the **Topic** object is retrieved over its association to the **Shipment** object. It is a best practice to check that the association is not empty. If that is **true**, the microflow retrieves the **IoTPlatformConfiguration** object that is associated to the topic. The microflow must then check if there is an **IoTPlatformConfiguration** object available. If that is **true**, the data from those objects is used in the subscribe action (via the **AWS IoT Connector**, which is available in the [Mendix App Store](https://appstore.home.mendix.com/link/app/2868/Mendix/AWS-IoT-Connector)). In the subscribe activity, a microflow action is configured for the subscription to the topic on AWS. So, everytime new data is published on that topic, AWS will send a message to the app with that data and trigger this microflow.
 6. Double-click the **Data - Subscribe to MQTT topic** activity and for the **On message microflow**, click **Show** to display the microflow from the details of the connector action.
 
-    [](attachments/build-an-iot-app/subscribe-to-mqtt-topic.png)
+    ![](attachments/build-an-iot-app/subscribe-to-mqtt-topic.png)
 
 7. In the **IVK_OnMessage_LogResponse** microflow, there are two parameters: **Topic** (string) and **Payload** (string). You must log both parameters in the **Console** to verify that you are receiving the data (if the Console is not open, select **View** > **Console**).
 8. Save the changes, click **Run Locally**, then click **View App**.

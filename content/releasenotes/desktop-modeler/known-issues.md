@@ -78,15 +78,18 @@ For details on this release, see [7.0 release notes](7.0).
 #### Stateless runtime known issues
 
 * The `RuntimeStatistics` page in the administration module is broken, as the `System.Statistics` entity is not created anymore. This was used for an earlier version of horizontal scalability and has become obsolete. In a future version, the `System.Statistics` entity will be removed from the `System` module, and the `Administration.RuntimeStatistics` page and the `Administration.ViewStatistics` microflow will be removed automatically from the `Administration` module.
-* Upgrading an anonymous user to a signed-in user does not transfer the session state yet.
+  * Fixed in [7.1.0](7.1#RN710).
 * Pages showing objects that contain accessible hashed string attributes with empty values are broken. You cannot call a microflow or open a different page. Please note that this is not easy to model, so you might not encounter this issue.
+  * Fixed in [7.1.0](7.1#RN710).
 * Hybrid apps will not start if they contain a reporting widget.
+  * Fixed in [7.1.0](7.1#RN710).
 * Offline hybrid apps are not supported yet.
+  * Fixed in [7.1.0](7.1#RN710).
 
 #### Other known issues
 
 * In certain situations, OnChange microflows may not reflect changes done in the UI. Instead, an older version of the object will be used.
- * Fixed in [7.3.0](7.3#RN730_1).
+  * Fixed in [7.3.0](7.3).
 * Some users working on Windows 7 and 8.1 might experience issues during installation of the .NET Framework bundled with the Modeler installer. Installing .NET Framework from the [official Microsoft website](https://www.microsoft.com/en-us/download/details.aspx?id=53345) resolves these issues.
 * Upgrading an anonymous user to a signed-in user does not transfer the state yet.
 * In calculated attribute microflows, objects associated with `$currentUser` or `$currentSession` cannot be retrieved in the calculated microflow if the association has not been committed to the database.

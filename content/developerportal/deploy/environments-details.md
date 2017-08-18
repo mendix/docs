@@ -23,7 +23,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
    * Orange – the environment has warnings
    * Red – the environment is not working correctly
 
-   ![](attachments/environment-status.png)   
+        ![](attachments/environment-status.png)   
 
 * **Running since** date – the date on which the app was started
 * **Mode** – the type of environment (Production, Acceptance, Test)

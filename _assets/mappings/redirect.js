@@ -1462,10 +1462,6 @@ module.exports = {
       to: "/howto50/selenium-support"
     },
     {
-      from: "/howto50/Send+Custom+Emails+From+Your+App",
-      to: "/howto50/send-custom-emails-from-your-app"
-    },
-    {
       from: "/howto50/Setting+up+a+new+SQL+Server+database",
       to: "/howto50/setting-up-a-new-sql-server-database"
     },
@@ -2015,10 +2011,6 @@ module.exports = {
     {
       from: "/howto6/Selenium+Support",
       to: "/howto6/selenium-support"
-    },
-    {
-      from: "/howto6/Send+Custom+Emails+From+Your+App",
-      to: "/howto6/send-custom-emails-from-your-app"
     },
     {
       from: "/howto6/Set+Up+Anonymous+User+Security",

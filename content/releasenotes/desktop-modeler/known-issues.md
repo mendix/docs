@@ -78,10 +78,13 @@ For details on this release, see [7.0 release notes](7.0).
 #### Stateless runtime known issues
 
 * The `RuntimeStatistics` page in the administration module is broken, as the `System.Statistics` entity is not created anymore. This was used for an earlier version of horizontal scalability and has become obsolete. In a future version, the `System.Statistics` entity will be removed from the `System` module, and the `Administration.RuntimeStatistics` page and the `Administration.ViewStatistics` microflow will be removed automatically from the `Administration` module.
+  * Fixed in [7.1.0](7.1#RN710).
 * Pages showing objects that contain accessible hashed string attributes with empty values are broken. You cannot call a microflow or open a different page. Please note that this is not easy to model, so you might not encounter this issue.
+  * Fixed in [7.1.0](7.1#RN710).
 * Hybrid apps will not start if they contain a reporting widget.
+  * Fixed in [7.1.0](7.1#RN710).
 * Offline hybrid apps are not supported yet.
-  * All fixed in [7.1.0](7.1#RN710).
+  * Fixed in [7.1.0](7.1#RN710).
 
 #### Other known issues
 

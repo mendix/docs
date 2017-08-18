@@ -17,7 +17,7 @@ To enter the **Environment details** page, go to the [Mendix Portal](http://home
 
 The view of the **General** tab depends on the Mendix Cloud version on which the app is hosted. In this tab, you can find the following information about your environment:
 
-* **Status**
+*  **Status**
    * White – the environment is stopped or was never deployed
    * Green – the environment is working correctly
    * Orange – the environment has warnings

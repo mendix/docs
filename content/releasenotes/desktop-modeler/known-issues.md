@@ -52,7 +52,7 @@ For details on this release, see [7.2 release notes](7.2).
 ### 7.2.0<a name="KI720"></a>
 
 * Changes for reference set members that are read-only for the user are not correctly serialized from the server to the client (browser). This can lead to an `IllegalArgumentException` with this message: “Global identifier should be a number.” (Ticket 52317)
-    * Fixed in [7.3.0](7.3#RN730).
+    * Fixed in [7.3.0](7.3).
 
 ## 7.1
 

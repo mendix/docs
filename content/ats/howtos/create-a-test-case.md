@@ -7,11 +7,12 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-This how-to explains how to create a test case, add test steps manually and add test steps using the ATS Recorder. A test case consists of test steps that contain actions. Each action performs a task, like clicking a button.
+This how-to explains how to create a test case, add test steps manually, and add test steps using the ATS Recorder. A test case consists of test steps that contain actions. Each action (like clicking a button) performs a task.
 
-This how-to uses the company expenses app as an example. You create a test case that submits a new expense in the company expenses app. You create the same test case twice once manually and once with the ATS Recorder. 
+This how-to uses the Mendix Company Expenses app as an example, and you will create a test case that submits a new expense in this app. You create the same test case twice, once manually, and once with the ATS Recorder. 
 
 **This how-to will teach you how to do the following:**
+
 * Create a new test case
 * Add test steps to your test case manually
 * Add test steps using the ATS Recorder
@@ -20,87 +21,87 @@ This how-to uses the company expenses app as an example. You create a test case 
 
 Before starting with this how-to, make sure you have the following prerequisites in place:
 
-*  Completed [How to Get Started](getting-started)
-*  Completed [How to Install the ATS Helper and ATS Recorder](install-ats-helper-recorder)
+*  Complete [How to Get Started](getting-started)
+*  Complete [How to Install the ATS Helper and ATS Recorder](install-ats-helper-recorder)
 
 ## 3 Create a Test Case
 
-The following steps describe how to create a test case.
+To create a test case, follow these steps:
 
-1.  Open your project in ATS and go to the **Repository**.
-  
-2.  Click **Add Test** inside the **Tests** tab.  
-![](attachments/create-a-test-case/repository-add-test-case.png)
-  
-  You can also click **Add Item** inside the **All Objects** tab.  
-![](attachments/create-a-test-case/repository-add-item-case.png)
-  
-  Clicking either button opens the **Create new** pop-up dialog:    
-![](attachments/create-a-test-case/repository-create-new-case.png)
-  
-3.  Select **Test Case** in the drop-down menu.
+1. Open your project in ATS and go to the **Repository**.
+2.  Click **Add Test** inside the **Tests** tab:
 
-4.  Enter a name in the **Name** field. For example, TC - 001.01 - Create new Expense (Manually)
-    It is advisable to use a predefined naming structure.
+    ![](attachments/create-a-test-case/repository-add-test-case.png)
+  
+    You can also click **Add Item** inside the **All Objects** tab:
     
-5.  Enter a description in the **Description** field. For example, This test case creates a new expense in the company expenses app.
-    It is advisable to give each test case a description of what it does.
-    
-6.  Click **Create**.
+    ![](attachments/create-a-test-case/repository-add-item-case.png)
+  
+    Clicking either button opens the **Create new** dialog box:
 
-![](attachments/create-a-test-case/repository-create-new-test-case.png)
+    ![](attachments/create-a-test-case/repository-create-new-case.png)
+  
+3. Select **Test Case** in the drop-down menu.
+4. Enter a name in the **Name** field (for example, *TC - 001.01 - Create new Expense (Manually)*). Using a predefined naming structure is advised.    
+5. Enter a description in the **Description** field (for example, *This test case creates a new expense in the company expenses app*). Giving each test case a description of what it does is advised.
+6.  Click **Create**:
 
-The **Test Case** page opens after you click **Create**. ATS displays the **Name** and **Description**  in the upper left corner of the **Test Case** page.
+    ![](attachments/create-a-test-case/repository-create-new-test-case.png)
 
-![](attachments/create-a-test-case/test-case-page.png)
+    This will open the **Test Case** page. ATS displays the **Name** and **Description**  in the upper-left corner of this page.
+
+    ![](attachments/create-a-test-case/test-case-page.png)
 
 ## 4 Add Test Steps manually
 
-The following steps describe how to add test steps manually to your test case. You will add the steps necessary for creating a new expense in the company expenses app.
+The following steps describe how to add test steps manually to your test case. You will add the steps necessary for creating a new expense in the Company Expenses app.
 
-1.  Click **Add** on the **Test Case** page.
-![](attachments/create-a-test-case/test-case-page-add.png)
+1.  Click **Add** on the **Test Case** page:
 
-2.  The **Test Step Setup** pop-up dialog opens.
+    ![](attachments/create-a-test-case/test-case-page-add.png)
 
-    The first step is opening the company expenses app. You do this by entering a URL in the browser. ATS does the same by using the _[Open Application](/refguide-ats-1/open-application)_ action.
-
-3.  Enter a description of the test step in the **Describe Test Step** text box. For example: Open the company expenses app.
-
-4.  Search for the _Open Application_ action in the **Search Action** text box.
+    This will open the **Test Step Setup** dialog box.
+2. The first step is opening the Company Expenses app, which you do this by entering a URL in the browser. ATS does the same by using the [open application](/refguide-ats-1/open-application) action.
+3. Enter a description of the test step in the **Describe Test Step** text box (for example, *Open the company expenses app*).
+4.  Search for the **Open Application** action in the **Search Action** text box.
 
     {{% alert type="info" %}}
-    Use terms like _Find_, _Click_, _Set_, _Assert_ and _Get_ to find the right action. 
+    Enter terms like *Find*, *Click*, *Set*, *Assert*, and *Get* to find the right action.
     {{% /alert %}}
 
-5.  Select the _Open Application_ action from the **Select an Action** datagrid. Choose the one for Mendix applications.
+5. Select the **Open Application** action from the **Select an Action** data grid. Choose the one for Mendix applications.
+6.  Click **Save**:
 
-6.  Click **Save**.
-![](attachments/create-a-test-case/add-open-application.png)
+    ![](attachments/create-a-test-case/add-open-application.png)
 
-  Now ATS adds the action to your test step.
-7.  Double-click the input parameter **Application URL**.
-![](attachments/create-a-test-case/open-application-input-parameter.png)
+    Now ATS adds the action to your test step.
+7.  Double-click the **Application URL** input parameter:
+
+    ![](attachments/create-a-test-case/open-application-input-parameter.png)
   
-8.  The **Edit Input Value** dialog box opens.
-9.  Select **Global Constant**.
-10.  Select **Application URL**.
-11.  Click **Save**. 
- ![](attachments/create-a-test-case/open-app-input-value.png)
+    This will open the **Edit Input Value** dialog box.
+9. Select **Global Constant**.
+10. Select **Application URL**.
+11. Click **Save**:
 
-  ATS now uses the application URL you select in the **Run Configuration** application.
-  
-12.  After opening the application you must log in. ATS has a standard login action for logging in to a Mendix application that you must use, the _[Login](/refguide-ats-1/login)_ action. The login page of the company expenses app looks like this:
-![](attachments/create-a-test-case/comp-app-login-page.png)
+    ![](attachments/create-a-test-case/open-app-input-value.png)
 
-13. Inside your test case click **Add** again and add the _Login_ action.
-![](attachments/create-a-test-case/add-login.png)
+    ATS now uses the application URL you selected in the **Run Configuration** application.
+    
+12.  After opening the application, you must log in. ATS has a standard login action for logging in to a Mendix application that you must use, which is the [login](/refguide-ats-1/login) action. The login page of the company expenses app looks like this:
 
-14.  Double-click the input parameter **Username** and add the username. 
-15.  Double-click the input parameter **Password** and add the password.
-![](attachments/create-a-test-case/login-input-parameters.png)
+    ![](attachments/create-a-test-case/comp-app-login-page.png)
 
-16.  After logging in to the company expenses app the home page shows. To create a new expense you must click the **New Expense** button in the company expenses app. This means ATS must click the button. To get the information you need, open the ATS Helper and hover over the **New Expense** button while holding <kbd>Ctrl</kbd>. 
+13. Inside your test case, click **Add** again and add the **Login** action:
+
+    ![](attachments/create-a-test-case/add-login.png)
+
+14.  Double-click the **Username** input parameter and add the username. 
+15.  Double-click the **Password** input parameter and add the password:
+
+    ![](attachments/create-a-test-case/login-input-parameters.png)
+
+16.  After you log in to the company Expenses app, you will see the home page. To create a new expense, you must click the **New Expense** button in the app. This means that ATS must click the button. To get the information you need, open the ATS Helper and hover over the **New Expense** button while holding <kbd>Ctrl</kbd>. 
 ![](attachments/create-a-test-case/helper-new-expense-button.png)
 
 17.  ATS has an action that clicks a widget, the _[Click Widget](/refguide-ats-1/click-widget)_ action. Inside your test case click **Add** again and add the _Click Widget_ action.

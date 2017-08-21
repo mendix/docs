@@ -2182,7 +2182,7 @@ module.exports = {
 	{
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
       to: "/howto/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
-    }
+    },
     /****************************************************
      * Mendix Cloud
      ****************************************************/

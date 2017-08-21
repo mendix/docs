@@ -2175,6 +2175,14 @@ module.exports = {
       from: "/howto/getting-started/create-a-to-do-app",
       to: "/howto/tutorials/create-a-to-do-app"
     },
+	{
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+    },
+	{
+      from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+    }
     /****************************************************
      * Mendix Cloud
      ****************************************************/

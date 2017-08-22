@@ -7,7 +7,7 @@ tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-To monitor the application health and performance, you can view the trends.
+To track the usage growth of your app and to debug performance problems, the Mendix Cloud v4 includes detailed graphs on both infrastructure and application level. These graphs show various performance trends of all your apps in the paid editions of the Mendix Cloud. In case you experience issues with your app, always check the **Alerts** and **Trends** in the **Developer Portal** under **Operate**. Read [View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region) to see the cloud hosting information of your app.
 
 ## 2 Access to Monitoring Trends
 
@@ -273,7 +273,8 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 
 ## 6 Related Content
 
-*   [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
-*   [How to Deploy Your Licensed App to the Cloud](../howto/deploying-to-the-cloud)
-*   [How to Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)
-*   [Alerts](monitoring-application-health)
+* [Alerts](monitoring-application-health)
+* [Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
+* [Mendix Cloud V4 - FAQ](/howtogeneral/mendixcloud/mxcloudv4)
+* [Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)
+* [Receive Environment Status Alerts](/developerportal/howto/receive-alerts)

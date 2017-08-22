@@ -70,4 +70,4 @@ You can manage the alerts by yourself, follow these steps:
 * [Operate](/developerportal/operate)
 * [Security - Node Permissions](/developerportal/settings/node-permissions)
 * [Settings](/developerportal/settings)  
-* [Technical Contact](/developerportal/settings/technical-contact)
+* [Technical Contact](/developerportal/general/technical-contact)

@@ -18,7 +18,8 @@ You can manage your Mendix Cloud v3 and Mendix Cloud v4 environments via the [De
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a node (for details, see [How to Upgrade Your Free App to a Licensed App](/developerportal/howto/how-to-upgrade-free-app))
+* Your app has a node. For details, see [How to Upgrade Your Free App to a Licensed App](/developerportal/howto/how-to-upgrade-free-app).
+* You have the permission to see the environment details. For more information, see [Security-Node Permissions](/developerportal/settings/node-permissions).
 
 ## 3 Mendix Cloud Region and Version
 
@@ -44,5 +45,9 @@ To view the Mendix Cloud region and version in which your app is hosted, follow 
 ## 4 Related Content
 
 * [Environment Details](/developerportal/deploy/environments-details)
+* [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Mendix Cloud](/howtogeneral/mendixcloud/)
 * [Mendix Cloud v4 - FAQ](/howtogeneral/mendixcloud/mxcloudv4)
+* [Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)
+* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Technical Contact](/developerportal/general/technical-contact)

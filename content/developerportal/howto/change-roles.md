@@ -1,5 +1,5 @@
 ---
-title: "Add a Company Admin and Change the App Roles"
+title: "Manage Company Roles and App Roles"
 category: "How-to's"
 description: "This page describes how to add extra Company Admins and change the App Roles."
 tags: ["Company Admin","Company Contact","App Contact","Technical Contact","Node Permissions","App Team","Role","Developer Portal"]
@@ -113,8 +113,9 @@ You can change the Technical Contact by following these steps:
 ## 7 Related Content
 
 * [Company Admin](/developerportal/companyadmin)
-* [Company](/developerportal/companyadmin/company)
 * [Deactivate and Activate Users](/developerportal/howto/deactivate-users)
+* [Deactivate Your Mendix Account](/developerportal/general/how-to-activate-or-deactivate-your-mendix-account)
+* [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
 * [Security – Node Permissions](/developerportal/settings/node-permissions)
-* [Settings](/developerportal/settings)
-* [Technical Contact](/developerportal/settings/technical-contact)
+* [Technical Contact](/developerportal/general/technical-contact)
+* [Roles Within the Company and Apps](/developerportal/general/roles)

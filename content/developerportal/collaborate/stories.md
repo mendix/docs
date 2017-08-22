@@ -11,6 +11,8 @@ In **Stories**, you are able to manage sprints, stories, and labels.
 
 ![](attachments/stories.jpg)
 
+For more information, see [Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix).
+
 ## 2 Actions
 
 Above the stories, you can find the following action buttons:
@@ -85,8 +87,6 @@ It is possible to filter on the following:
 
 ## 4 Related Content
 
-* [App Buzz](/developerportal/collaborate/appbuzz)
-* [Collaborate](/developerportal/collaborate)
-* [Develop](/developerportal/develop)
 * [Feedback](/developerportal/collaborate/feedback)
-* [Team](/developerportal/collaborate/team)
+* [Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
+

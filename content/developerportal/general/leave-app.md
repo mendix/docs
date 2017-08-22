@@ -57,5 +57,9 @@ To leave and delete the app, click **Continue and delete app**.
 
 * [Apps](/developerportal/companyadmin/apps)
 * [Company Admin](/developerportal/companyadmin)
+* [Deactivate Your Mendix Account](how-to-activate-or-deactivate-your-mendix-account)
+* [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
 * [General](/developerportal/settings/general-settings)
+* [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [Roles Within the Company and Apps](roles)
 * [Settings](/developerportal/settings)

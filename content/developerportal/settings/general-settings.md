@@ -15,9 +15,11 @@ In **General** there is an overview about the App:
 *   App Contact
 *   Technical Contact
 
+    ![](attachments/general.png)
+
 {{% alert type="info" %}}
 
-Note that only the Technical Contact can grand other members with the Technical Contact role in **Node Permission** in **Security**.
+Note that only the Technical Contact can grant other members with the Technical Contact role in [Security - Node Permissions](developerportal/settings/node-permissions) in **Security**.
 
 {{% /alert %}}
 
@@ -42,13 +44,13 @@ There are two actions you can take:
 
 {{% alert type="warning" %}}
 
-Note that when you click **Deactivate App** only the account owner can reactivate an app in his account management screen. When you click **Delete App** the app deletion cannot be undone and means ALL DATA WILL BE LOST, including all files on the TeamServer and all data in the FreeApp node (if applicable).
+Note that when you click **Deactivate App** only the account owner can reactivate an app in his account management screen. When you click **Delete App** the app deletion cannot be undone and means ALL DATA WILL BE LOST, including all files on the TeamServer and all data in the FreeApp node (if applicable). For more information, see [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps).
 
 {{% /alert %}}
 
 ### 1.2 Leave App
 
-If you click **Leave App**, you will be removed from the App. If you are the last member of this app and decide to leave as well, the app will be deactivated.
+If you click **Leave App**, you will be removed from the App. If you are the last member of this app and decide to leave as well, the app will be deactivated. For more information, see [Three Ways to Leave Your App](/developerportal/general/leave-app).
 
 {{% alert type="info" %}}
 
@@ -57,3 +59,7 @@ Note that you cannot leave the App if you are the **Technical Contact** of the A
 {{% /alert %}}
 
 ## 2 Related Content
+
+* [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Technical Contact](/developerportal/general/technical-contact)

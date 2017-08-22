@@ -104,4 +104,7 @@ This action cannot be undone.
 ## 3 Related Content
 
 * [Feedback](/developerportal/collaborate/feedback)
+* [Mendix Profile](/developerportal/general/mendixprofile)
 * [Provide Feedback on Mendix](/developerportal/howto/feedback-mendix)
+* [Stories](/developerportal/collaborate/stories)
+* [Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)

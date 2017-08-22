@@ -68,4 +68,6 @@ Follow these steps to activate an inactive user:
 
 ## 4 Related Content
 
-* [How to Activate or Deactivate Your Mendix Account](/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account)
+* [Deactivate Your Mendix Account](/developerportal/general/how-to-activate-or-deactivate-your-mendix-account)
+* [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [Roles Within the Company and Apps](/developerportal/general/roles)

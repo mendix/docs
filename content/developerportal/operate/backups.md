@@ -72,18 +72,17 @@ These are the options:
 
 When you click **Details**, you can view the following details:
 
-* **Status** – the status of the backup
-  * Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed**
-* **Created by** – the name of the person who created the backup
-  * Automated system backups are named **Nightly**
-* **Date** – the creation date of the backup
-* **Expires on** – the date on which the backup will be removed from the system
-* **Model version** – the version of the deployment package used during backup creation
-* **Comment** – a specific comment added to the backup
+Backup Details | |
+:---|:---|
+**Status** | the status of the backup. Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed**
+**Created by** | the name of the person who created the backup. Automated system backups are named **Nightly**
+**Date** | the creation date of the backup
+**Expires on** | the date on which the backup will be removed from the system
+**Model version** | the version of the deployment package used during backup creation
+**Comment** | a specific comment added to the backup
 
 ## 5 Related Content
 
-* [Alerts](/developerportal/operate/monitoring-application-health)
-* [Logs](/developerportal/operate/logs)
-* [Metrics](/developerportal/operate/metrics)
-* [Operate](/developerportal/operate)
+* [Create a Backup](developerportal/howto/how-to-create-backup)
+* [Download a Backup](/developerportal/howto/how-to-download-a-backup)
+* [Restore a Backup](/developerportal/howto/how-to-restore-a-backup)

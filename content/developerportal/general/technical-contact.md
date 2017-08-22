@@ -7,7 +7,7 @@ tags: ["Technical Contact","Settings","Developer Portal"]
 
 ## 1 Introduction
 
-This document describes the role of the Technical Contact within the Mendix platform.
+This document describes the role of the Technical Contact within the Mendix Cloud.
 
 The Technical Contact is responsible for license renewal and is the first point of contact for the Mendix Support department. A Mendix application will always be set up and delivered with a technical contact assigned to it. The Technical Contact needs an *MxID* before Mendix can activate a license for an application.
 
@@ -46,3 +46,13 @@ These are some details about managing licenses (renewals, activation, and upgrad
 * Contact your Customer Success Manager (CSM) if you want to expand the license
 
 You can submit requests in the [Support Portal](https://support.mendix.com) for questions, changes, and incidents.
+
+## 3 Related Content
+
+* [Company Admin](/developerportal/companyadmin)
+* [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
+* [Deactivate Your Mendix Account](how-to-activate-or-deactivate-your-mendix-account)
+* [Deploy](/developerportal/deploy)
+* [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Settings](/developerportal/settings)

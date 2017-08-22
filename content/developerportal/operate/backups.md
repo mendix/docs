@@ -83,6 +83,6 @@ Backup Details | |
 
 ## 5 Related Content
 
-* [Create a Backup](developerportal/howto/how-to-create-backup)
+* [Create a Backup](/developerportal/howto/how-to-create-backup)
 * [Download a Backup](/developerportal/howto/how-to-download-a-backup)
 * [Restore a Backup](/developerportal/howto/how-to-restore-a-backup)

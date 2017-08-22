@@ -19,7 +19,7 @@ In **General** there is an overview about the App:
 
 {{% alert type="info" %}}
 
-Note that only the Technical Contact can grant other members with the Technical Contact role in [Security - Node Permissions](developerportal/settings/node-permissions) in **Security**.
+Note that only the Technical Contact can grant other members with the Technical Contact role in [Security - Node Permissions](/developerportal/settings/node-permissions) in **Security**.
 
 {{% /alert %}}
 

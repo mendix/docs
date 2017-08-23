@@ -8,7 +8,7 @@ tags: ["build", "app", "developer portal", "web modeler"]
 
 ## 1 Introduction
 
-This is the fourth how-to in a series on creating an employee directory in the Web Modeler. In this how-to, you will learn how to add pages to the app.
+This is the fourth how-to in this series on creating an employee directory in the Web Modeler. In this how-to, you will learn how to add pages to the app.
 
 **This how-to will teach you how to do the following:**
 

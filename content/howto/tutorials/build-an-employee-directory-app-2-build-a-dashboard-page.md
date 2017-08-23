@@ -7,7 +7,7 @@ tags: ["build", "app", "developer portal", "web modeler"]
 
 ## 1 Introduction
 
-This is the second how-to in a series of four on how to create an employee directory app in the Web Modeler. In this how-to, you will learn how to build pages to manage the employees in your app.
+This is the second how-to in this series on how to create an employee directory app in the Web Modeler. In this how-to, you will learn how to build pages to manage the employees in your app.
 
 **This how-to will teach you how to do the following:**
 

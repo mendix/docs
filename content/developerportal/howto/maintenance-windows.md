@@ -33,9 +33,25 @@ Your "Preferred Maintenance Windows" is a weekly time range where system mainten
 
 1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps** and select **Nodes**.
+
+    ![](attachments/general/myapps.png)
+
+3. Select the node that you want to configure by clicking **Details**.
+4. Click **Environments** under the **Deploy** category.
+
+    ![](attachments/deploy/deploy-scale.png)    
+
 3. Select the node of the environment that you want to configure.
-4. Click **Environment Details** under the **Deploy** category.
+
+    ![](attachments/deploy/maintenance1.png)
+
+4. Click **Details** of the environment you want to configure.
+
+    ![](attachments/deploy/maintenance2.png)
+
 5. Go to the **Maintenance** tab.
+
+    ![](attachments/deploy/maintenance.png)
 
 {{% alert type="warning" %}}
 
@@ -47,11 +63,9 @@ Here you can configure your preferred maintenance window. Transport rights for t
 
 {{% alert type="info" %}}
 
-When a maintenance operation is planned, it will show up under **Planned Maintenance**. By default it will be planned in your preferred maintenance window. You can override the maintenance window of a specific maintenance operation by clicking **Override**.
+When a maintenance operation is planned, it will show up under **Planned Maintenance**. By default it will be planned in your preferred maintenance window. You can override the maintenance window of a specific maintenance operation by clicking **Reschedule**.
 
 {{% /alert %}}
-
-     ![](attachments/deploy/maintenance.png)
 
 ## 4 Maintenance Timetable
 

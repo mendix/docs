@@ -111,6 +111,5 @@ To delete an app, follow these steps:
 
 * [Company Admin](/developerportal/companyadmin)
 * [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
-* [Mendix Support](/howtogeneral/support)
 * [Roles Within the Company and Apps](/developerportal/general/roles)
 * [Settings](/developerportal/settings)

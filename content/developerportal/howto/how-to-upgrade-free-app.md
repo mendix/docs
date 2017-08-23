@@ -22,8 +22,11 @@ Before starting with this how-to, please make sure you have completed the follow
 
 *   You have a Free App (Mendix version 5.18 and up)
 *   An available Licensed Cloud Node. To request a licensed cloud node, contact your Customer Success Manager (CSM)
+*   You are the [Technical Contact](/developerportal/general/technical-contact) of the sandbox and the node
 
 ## 3 Upgrade Steps for a Sandbox Environment
+
+If your app has a sandbox environment linked to it, you should follow these steps:
 
 ### 3.1 Download a Backup
 
@@ -63,18 +66,16 @@ The documentation on how to restore a backup can be found [here](how-to-restore-
 
 ## 4 Upgrade Steps for a Free App Without a Sandbox Environment
 
-##$ 4.1 Link Your Free App to Licensed Cloud Node
-
 If you do not have a Sandbox linked to your Free App, you only have to follow instructions to link your Free App to a Licensed Cloud Node.
 
-The documentation on how to link your Free App to a Licensed Cloud Node can be found [here](how-to-link-app-to-node).
+Learn how to [Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node).
 
 ## 5 Related Content
 
-*   [How To Configure Custom Domains](custom-domains)
-*   [How To Deploy to the Mendix Cloud](deploying-to-the-cloud)
-*   [How To Download A Backup](how-to-download-a-backup)
-*   [How To Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
-*   [How To Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
-*   [How To Restore A Backup](how-to-restore-a-backup)
-*   [How To Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
+* [Configure Custom Domains](custom-domains)
+* [Deploy to the Mendix Cloud](deploying-to-the-cloud)
+* [Download A Backup](how-to-download-a-backup)
+* [Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
+* [Restore A Backup](how-to-restore-a-backup)
+* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

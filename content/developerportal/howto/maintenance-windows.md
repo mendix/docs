@@ -74,8 +74,8 @@ When a maintenance operation is planned, it will show up under **Planned Mainten
 ## 5 Related Content
 
 * [Alerts](/developerportal/operate/monitoring-application-health)
-* [Application Trends in Mendix Cloud v3](trends)
-* [Application Trends in Mendix Cloud v4](trends-v4)
+* [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
+* [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Mendix Cloud](/howtogeneral/mendixcloud/)
 * [Mendix Cloud v4 - FAQ](/howtogeneral/mendixcloud/mxcloudv4)

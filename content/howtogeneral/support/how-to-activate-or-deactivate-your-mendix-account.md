@@ -8,7 +8,7 @@ category: "General"
 
 ## 1 Introduction
 
-This document will explain how to create and deactivate your Mendix account (MxID). It contains a checklist of things to keep in mind of what to do with your Mendix account when you **leave a company or move to another company**.
+This document will explain how to deactivate your Mendix account (MxID) and create a new MxID. It contains a checklist of things to keep in mind of what to do with your Mendix account when you **leave a company or move to another company**.
 
 Your MxID can have several [roles](/developerportal/general/roles) within the Mendix Platform.
 

@@ -72,7 +72,7 @@ For example, you can use one instance and store 4GB of RAM in there. The other 1
 
 ## 5 Related Content
 
-* [Application Trends in Mendix Cloud v4](trends-v4)
+* [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [Deploy](/developerportal/deploy)
 * [Environment Details](/developerportal/deploy/environments-details)
 * [Manage Company Roles and App Roles](/developerportal/howto/change-roles)

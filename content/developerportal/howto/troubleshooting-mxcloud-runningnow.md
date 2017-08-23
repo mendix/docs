@@ -33,8 +33,8 @@ You can use the information displayed in the **Running now** tab for various pur
 ## 3 Related Content
 
 * [Alerts](/developerportal/operate/monitoring-application-health)
-* [Application Trends in Mendix Cloud v3](trends)
-* [Application Trends in Mendix Cloud v4](trends-v4)
+* [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
+* [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [Metrics](/developerportal/operate/metrics)
 * [Security - Node Permissions](/developerportal/settings/node-permissions)
 * [Troubleshooting your application in the Mendix Cloud: Cache](troubleshooting-mxcloud-cache)

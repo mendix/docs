@@ -8,7 +8,7 @@ title: "Platform Portal"
 
 #### Improvements
 
-* Due to various optimizations, the deployment speed for apps in Mendix Cloud v4 EU is about twice as fast. Latency for FileDocument read and write actions has also improved for all Mendix Cloud v4 regions.
+* Due to various optimizations, the deployment speed for apps in Mendix Cloud v4 EU is now about twice as fast. The latency for FileDocument read/write actions has also improved for all Mendix Cloud v4 regions.
 
 ### August 15th, 2017
 

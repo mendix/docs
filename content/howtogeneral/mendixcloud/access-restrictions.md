@@ -21,13 +21,6 @@ Presets are available to simply allow or deny all access.
 
 In addition, custom profiles can be assembled using IP range filters and a client certificate authority.
 
-{{% alert type="info" %}}
-
-* This feature is available from July 11, 2017 for **Mendix Cloud v4** environments
-* **Mendix Cloud v3** environments will be converted from the current request handlers-based configuration on August 15, 2017 (for more information, see [How to Convert to Path-Based Access Restrictions](request-handlers-to-pbar))
-
-{{% /alert %}}
-
 ## 3 Configuring an Access Restriction Profile
 
 These are the most important things you should know about configuring an access restriction profile:

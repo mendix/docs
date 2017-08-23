@@ -21,7 +21,7 @@ This is the fourth how-to in a series on creating an employee directory in the W
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Use the third how-to in this series: [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app)
+* Complete the third how-to in this series: [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app)
 
 ## 3 Adding Pages to the User Interface
 

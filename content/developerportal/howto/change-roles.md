@@ -114,7 +114,6 @@ You can change the Technical Contact by following these steps:
 
 * [Company Admin](/developerportal/companyadmin)
 * [Deactivate and Activate Users](/developerportal/howto/deactivate-users)
-* [Deactivate Your Mendix Account](/developerportal/general/how-to-activate-or-deactivate-your-mendix-account)
 * [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
 * [Security – Node Permissions](/developerportal/settings/node-permissions)
 * [Technical Contact](/developerportal/general/technical-contact)

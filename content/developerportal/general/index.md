@@ -46,7 +46,6 @@ In **Community**, you can find documentation, forums, trainings, support, and mu
 
 ## 2 Documents in This Category
 
-* [Deactivate Your Mendix Account](how-to-activate-or-deactivate-your-mendix-account)
 * [Mendix Profile](mendixprofile)
 * [Roles Within the Company and Apps](roles)
 * [Technical Contact](technical-contact)

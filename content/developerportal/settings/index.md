@@ -79,7 +79,7 @@ For more information, see [API Keys](/developerportal/settings/api-key).
 * [Change Password Expiration](/developerportal/howto/password-expiration)
 * [Company Admin](/developerportal/companyadmin)
 * [Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
-* [Deactivate Your Mendix Account](/developerportal/general/how-to-activate-or-deactivate-your-mendix-account)
+* [Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
 * [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Mendix Profile](/developerportal/general/mendixprofile)

@@ -36,7 +36,7 @@ In **Team** if you click on the green **Invite Member** button in the top right 
 ## 3 Related Content
 
 * [Company Admin](/developerportal/companyadmin)
-* [Deactivate Your Mendix Account](/developerportal/general/how-to-activate-or-deactivate-your-mendix-account)
+* [Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Roles Within the Company and Apps](/developerportal/general/roles)
 * [Settings](/developerportal/settings)

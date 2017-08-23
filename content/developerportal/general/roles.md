@@ -146,7 +146,6 @@ For more information, see [Settings](/developerportal/settings) and [Security â€
 
 * [Company Admin](/developerportal/companyadmin)
 * [Deactivate and Activate Users](/developerportal/howto/deactivate-users)
-* [Deactivate Your Mendix Account](how-to-activate-or-deactivate-your-mendix-account)
 * [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
 * [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Mendix Profile](mendixprofile)

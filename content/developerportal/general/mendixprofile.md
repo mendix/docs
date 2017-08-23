@@ -134,7 +134,7 @@ These are the password requirements:
 ## 3 Related Content
 
 * [Company Admin](/developerportal/companyadmin)
-* [Deactivate Your Mendix Account](how-to-activate-or-deactivate-your-mendix-account)
+* [Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [Feedback](/developerportal/collaborate/feedback)
 * [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk)

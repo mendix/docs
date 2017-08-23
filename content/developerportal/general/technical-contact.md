@@ -1,6 +1,6 @@
 ---
 title: "Technical Contact"
-category: "Settings"
+category: "General"
 description: "This page describes the role of a technical contact."
 tags: ["Technical Contact","Settings","Developer Portal"]
 ---

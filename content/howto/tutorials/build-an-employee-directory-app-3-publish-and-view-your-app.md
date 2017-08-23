@@ -21,7 +21,7 @@ Now that you've gotten started with your app and have worked with some of the de
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Use the second how-to in this series: [How to Build an Employee Directory App Step 2: Build a Dashboard Page](build-an-employee-directory-app-2-build-a-dashboard-page)
+* Complete the second how-to in this series: [How to Build an Employee Directory App Step 2: Build a Dashboard Page](build-an-employee-directory-app-2-build-a-dashboard-page)
 
 ## 3 Updating and Viewing Your App
 

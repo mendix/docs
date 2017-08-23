@@ -8,7 +8,7 @@ tags: ["build", "app", "developer portal", "web modeler"]
 
 ## 1 Introduction
 
-This is the fifth and final how-to in a series on creating an employee directory in the Web Modeler. In this how-to, you will learn how to add a microflow to the app and edit it in the Desktop Modeler.
+This is the fifth and final how-to in this series on creating an employee directory in the Web Modeler. In this how-to, you will learn how to add a microflow to the app and edit it in the Desktop Modeler.
 
 **This how-to will teach you how to do the following:**
 
@@ -20,7 +20,7 @@ This is the fifth and final how-to in a series on creating an employee directory
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Use the fourth how-to in this series: [How to Build an Employee Directory App Step 4: Add Pages to the User Interface](build-an-employee-directory-app-3-publish-and-view-your-app)
+* Complete the fourth how-to in this series: [How to Build an Employee Directory App Step 4: Add Pages to the User Interface](build-an-employee-directory-app-3-publish-and-view-your-app)
 
 ## 3 Adding a Promote Button to the User Interface
 

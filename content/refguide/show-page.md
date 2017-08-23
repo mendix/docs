@@ -44,6 +44,12 @@ This feature allows you to re-use the same page for the New and Edit buttons of 
 
 Location defines how the page is shown.
 
+{{% alert type="info" %}}
+Please note that this option should no longer appear in apps that were created in Mendix 5.18 or newer. From version 5.18 onwards, the way a page is shown is determined by the layout you select from the NavigationLayouts module and the Layout type property it has been set to.
+{{% /alert %}}
+
+If you have a project that was upgraded from a version below 5.18 and have not upgraded your layouts, they will be marked as "Legacy". In such cases the options below remain relevant.
+
 | Option | Description |
 | --- | --- |
 | In content | The page replaces the existing top-level page. |

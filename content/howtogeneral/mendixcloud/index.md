@@ -27,8 +27,6 @@ A Free App can be upgraded to a licensed app with a node in the Mendix Cloud. A 
 
 A node has a minimum of two environments: production and acceptance. A test environment is the third optional environment. You can deploy your licensed app (that is linked to a node) to its environments.
 
-![](attachments/index/MendixCloud.jpg)
-
 ## Documents in This Category
 
 *   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)

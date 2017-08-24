@@ -43,7 +43,7 @@ To create your app, follow these steps:
 
     ![](attachments/18448672/18580902.png)
 
-## 4 Downloading the Modeler and Editing Your App
+## 4 Downloading the Desktop Modeler and Editing Your App
 
 To edit your app, follow these steps:
 
@@ -80,6 +80,6 @@ Great work. Now you can move on to the second how-to for creating a simple HRM a
 * [Build a Simple HRM App Step 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
 * [Build a Simple HRM App Step 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
 * [Build a Simple HRM App Step 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
-* [Create and Deploy Your First App](../getting-started/create-and-deploy-your-first-app)
+* [Create and Deploy Your First App](../modeling-basics/create-and-deploy-your-first-app)
 * [Testing Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)
 * [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)

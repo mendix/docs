@@ -1462,10 +1462,6 @@ module.exports = {
       to: "/howto50/selenium-support"
     },
     {
-      from: "/howto50/Send+Custom+Emails+From+Your+App",
-      to: "/howto50/send-custom-emails-from-your-app"
-    },
-    {
       from: "/howto50/Setting+up+a+new+SQL+Server+database",
       to: "/howto50/setting-up-a-new-sql-server-database"
     },
@@ -2017,10 +2013,6 @@ module.exports = {
       to: "/howto6/selenium-support"
     },
     {
-      from: "/howto6/Send+Custom+Emails+From+Your+App",
-      to: "/howto6/send-custom-emails-from-your-app"
-    },
-    {
       from: "/howto6/Set+Up+Anonymous+User+Security",
       to: "/howto6/set-up-anonymous-user-security"
     },
@@ -2183,6 +2175,14 @@ module.exports = {
       from: "/howto/getting-started/create-a-to-do-app",
       to: "/howto/tutorials/create-a-to-do-app"
     },
+	{
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+    },
+	{
+      from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+    },
     /****************************************************
      * Mendix Cloud
      ****************************************************/
@@ -2244,11 +2244,11 @@ module.exports = {
     },
     {
       from: "/mendixcloud/migrating+to+v4",
-      to: "/developerportal/howto/migrating-to-v4"
+      to: "/howtogeneral/mendixcloud/migrating-to-v4"
     },
     {
-      from: "/mendixcloud/migrating-to-v4",
-      to: "/developerportal/howto/migrating-to-v4"
+      from: "/developerportal/howto/migrating-to-v4",
+      to: "/howtogeneral/mendixcloud/migrating-to-v4"
     },
     {
       from: "/mendixcloud/Monitoring+application+health",
@@ -7355,9 +7355,9 @@ module.exports = {
       "from": "/refguide7/Generate+Document",
       "to": "/refguide/generate-document"
     },
-    {
-      "from": "/refguide7/Getting+the+Mendix+Developer+App",
-      "to": "/refguide/getting-the-mendix-developer-app"
+	{
+	  "from": "/refguide7/Getting+the+Mendix+Developer+App",
+      "to": "/refguide/getting-the-mendix-app"
     },
     {
       "from": "/refguide7/Grid+action+button",

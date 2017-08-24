@@ -15,6 +15,8 @@ This how-to takes you through the basics of development in the Mendix Web Modele
 * Start editing an app in the Web Modeler
 * Explore the different parts of the Web Modeler
 
+{{% youtube kF00Gh12z2Y %}}
+
 ## 2 Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
@@ -84,3 +86,4 @@ Great! Now you can move on to the second how-to for creating an employee directo
 * [How to Build an Employee Directory App Step 2: Build a Dashboard Page](build-an-employee-directory-app-2-build-a-dashboard-page)
 * [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app)
 * [How to Build an Employee Directory App Step 4: Add Pages to the User Interface](build-an-employee-directory-app-4-add-pages-to-the-user-interface)
+* [How to Build an Employee Directory App Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-5-add-employee-promotion-logic)

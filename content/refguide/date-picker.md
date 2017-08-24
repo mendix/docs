@@ -1,5 +1,5 @@
 ---
-title: "Date picker"
+title: "Date Picker"
 parent: "input-widgets"
 ---
 
@@ -18,11 +18,14 @@ This date picker allows the end-user to set the birth date of the customer.
 
 ### Date Format
 
-The date format determines whether the date picker displays the date, time, date and time, or a custom variation of the linked attribute. This does not affect how data is stored; in all cases both a date and a time will be recorded. It merely affects how the data is displayed. How the date and/or time are formatted depend on the localization of the user viewing the data.
+The date format determines whether the date picker displays the date, time, date and time, or a custom variation of the linked attribute. This does not affect how data is stored; in all cases both a date and a time will be recorded. It merely affects how the data is displayed. How the date and/or time are formatted depends on the localization of the user viewing the data.
 
-Possible values: 'Date', 'Time', 'Date and time' and 'Custom'.
+These are the possible values:
 
-_Default value:_ Date
+* **Date** (this is the default)
+* **Time**
+* **Date and time**
+* **Custom** (see below for more details)
 
 ### Custom Date Format
 
@@ -54,13 +57,15 @@ If you choose 'Custom' as the date format (see above) this property determines h
 
 {{% alert type="info" %}}
 
-| Format | Example output |
+These are some examples:
+
+| Format | Example Output |
 | --- | --- |
 | `EEEE d MMMM yyy G, h:mm a ss's` | Tuesday 29 March 2011 AD, 1:37 PM 48s |
 | `h:mm a` | 1:37 PM |
 | `yyy D KK:mm` | 2011 88 01:26 |
 | `EEEE MMMM d yyy` | Tuesday March 29 2011 |
-| `EEE, MMM d, ''yy` | Wed, Jul 4, '01 |
+| `EEE, MMM dd, ''yy` | Wed, Jul 04, '01 |
 
 {{% /alert %}}
 
@@ -112,5 +117,5 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 ## Related Content
 
-*   [Data view](data-view)
+*   [Data View](data-view)
 *   [Attributes](attributes)

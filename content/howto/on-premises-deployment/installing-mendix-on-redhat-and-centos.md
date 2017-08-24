@@ -13,5 +13,5 @@ The documentation describing the installation and basic configuration of the Men
 * [How to Build a Simple HRM App 3: Show Related Data in the GUI](../tutorials/build-a-simple-hrm-app-3-show-related-data-in-the-gui)
 * [How to Build a Simple HRM App 4: Enrich the GUI with Filter Options](../tutorials/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
 * [How to Build a simple HRM App 5: Smarten Up Your App with Business Logic](../tutorials/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
-* [How to Create and Deploy Your First App](../getting-started/create-and-deploy-your-first-app)
+* [How to Create and Deploy Your First App](../modeling-basics/create-and-deploy-your-first-app)
 * [How to Test Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)

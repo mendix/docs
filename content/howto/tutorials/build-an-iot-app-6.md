@@ -26,7 +26,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 To add a new shipment, follow these steps:
 
-1. In the Modeler, open the **Homepage**.
+1. In the Desktop Modeler, open the **Homepage**.
 2. Right-click the first row of the **Layout grid** and select **Insert row above**. Select the default **full** row option.
 3. In this new row, right-click and add a **Create button**.
 4. In the **Select entity** dialog box, select the **Shipment** entity.
@@ -45,7 +45,7 @@ To add a new shipment, follow these steps:
 
 To improve the input form, follow these steps:
 
-1. In the Modeler, open the **Shipment_New** form and select **Topic**.
+1. In the Desktop Modeler, open the **Shipment_New** form and select **Topic**.
 2. In the **Properties** pane, select **Selectable objects** > **Source** > **Microflow**.
 3. Click **Microflow** and then click **New** to create a new microflow. Name the new microflow **GetAvailableTopics**, and then open this new microflow.
 4. Add a **Retrieve** activity to the microflow. Select **From database** as sthe ource and set the **Entity** to **Topic**.

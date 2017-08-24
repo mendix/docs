@@ -43,9 +43,7 @@ This feature allows you to re-use the same page for the New and Edit buttons of 
 ### Location
 
 {{% alert type="info" %}}
-
 If the [layout](layout) of the target page has a [layout type](layout#layout-type) configured, the Location property will be removed. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
-
 {{% /alert %}}
 
 Location defines how the page is shown.

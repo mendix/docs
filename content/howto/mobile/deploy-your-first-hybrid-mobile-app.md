@@ -36,7 +36,7 @@ To open a hybrid example app, follow these steps:
 
     ![](attachments/18448692/18581199.png)
 
-3. Click **Run in Sandbox** to deploy this application to the Mendix cloud:
+3. Click **Run** to deploy this application to the Mendix Cloud:
 
     ![](attachments/18448692/18581186.png) 
 
@@ -72,5 +72,5 @@ If you want to install this application as a native app on your device, you can 
 * [How to Build a Simple HRM App 3: Show Related Data in the GUI](../tutorials/build-a-simple-hrm-app-3-show-related-data-in-the-gui)
 * [How to Build a Simple HRM App 4: Enrich the GUI with Filter Options](../tutorials/build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
 * [How to Build a Simple HRM App 5: Smarten Up Your App with Business Logic](../tutorials/build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
-* [How to Create and Deploy Your First App](../getting-started/create-and-deploy-your-first-app)
+* [How to Create and Deploy Your First App](../modeling-basics/create-and-deploy-your-first-app)
 * [How to Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)

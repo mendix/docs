@@ -25,7 +25,7 @@ Start by running the application so that you can experience how the app looks. Y
 
 To deploy and view the app, follow these steps:
 
-1. In the Modeler, click **Run Locally** and confirm to create a new database. Click **View App** to see the app in your browser.
+1. In the Desktop Modeler, click **Run Locally** and confirm to create a new database. Click **View App** to see the app in your browser.
 
     ![](attachments/build-an-iot-app/deploy-and-view-blurred.png)
 

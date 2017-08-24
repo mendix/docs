@@ -116,7 +116,6 @@ With just a few steps, it is now possible to make your Mendix application smart 
 
 ## 6 Related Content
 * [How to Explore the Connectors and Adapters](explore-the-connectors-and-adapters)
-* [How to Send Custom Emails From Your App](send-custom-emails-from-your-app)
 * [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
 * [How to Install and Configure the SMTP Module](install-and-configure-the-smtp-module)
 * [How to Visualize Data Using the ChartsJS Module](visualize-data-using-the-chartsjs-module)

@@ -2,6 +2,7 @@
 title: "Use App Store Content in the Modeler"
 category: "App Store"
 description: "Covers the basics of how to access the App Store from the Modeler and provides examples of how to add a widget and module to your app."
+frontpage_featured: true
 ---
 
 ## 1 Introduction

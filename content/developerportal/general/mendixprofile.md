@@ -9,7 +9,7 @@ tags: ["Profile","MxID","Developer Portal","Account"]
 
 To view your own profile in the **Developer Portal**, simply click your avatar in the top-right corner of the navigation panel, then select **Show Profile**.
 
-![](attachments/showprofile.jpg)
+![](attachments/general/showprofile.jpg)
 
 Here you can manage the following tabs:
 
@@ -21,7 +21,7 @@ Here you can manage the following tabs:
 * **API Keys**
 * **Pending Invites**
 
-![](attachments/my-profile.jpg)
+![](attachments/profile/my-profile.jpg)
 
 ### 1.1 Profile
 
@@ -54,15 +54,15 @@ In this tab, you can view your provided feedback on the following:
 * Your company's apps of which you are *not* a team member
 * External apps (for example on Mendix).
 
-![](attachments/provided-feedback.jpg)
+![](attachments/profile/provided-feedback.jpg)
 
 If you click **Details** for the feedback on an app of which you are a member, you can manage it:
 
-![](attachments/feedback-details-internal.jpg)
+![](attachments/collaborate/feedback-details-internal.jpg)
 
 If you click **Details** for the feedback on an app of which you are *not* a member, you cannot manage it:
 
-![](attachments/feedback-details-external.jpg)
+![](attachments/profile/feedback-details-external.jpg)
 
 ### 1.5 Team Server
 

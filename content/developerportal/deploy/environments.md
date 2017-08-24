@@ -102,6 +102,8 @@ After clicking [Details](/developerportal/deploy/environments-details) of the se
 * Runtime
 * Maintenance
 
+![](attachments/environment-details.png)    
+
 ### 2.3 Activity
 
 ![](attachments/activity.png)

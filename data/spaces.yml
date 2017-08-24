@@ -90,8 +90,8 @@ howto:
   priority: 6
   mendix_version: 7
   menu_categories:
-    - "Getting Started"
     - "Tutorials"
+    - "Modeling Basics"
     - "Data Models"
     - "GUIs"
     - "Logic & Business Rules"

@@ -49,6 +49,7 @@ See [Data View (document template)](data-view).
 {{% alert type="info" %}}
 
 [![](attachments/819203/918139.png)](data-view)
+
 A data view showing orderline information.
 
 {{% /alert %}}
@@ -62,6 +63,7 @@ See [Template Grid (document template)](template-grid).
 {{% alert type="info" %}}
 
 [![](attachments/819203/918137.png)](template-grid)
+
 A template grid showing products with name and description.
 
 {{% /alert %}}
@@ -80,6 +82,7 @@ See [Table (document template)](table).
 {{% alert type="info" %}}
 
 [![](attachments/819203/918134.png)](table)
+
 A table with four rows and three columns. Last row containing a data view with another table.
 
 {{% /alert %}}
@@ -93,6 +96,7 @@ See [Page Break (document template)](page-break-document-template).
 {{% alert type="info" %}}
 
 [![](attachments/819203/918135.png)](page-break-document-template)
+
 A page break
 
 {{% /alert %}}
@@ -116,6 +120,7 @@ See [Dynamic label (document template)](dynamic-label-document-template).
 {{% alert type="info" %}}
 
 [![](attachments/819203/918131.png)](dynamic-label-document-template)
+
 A dynamic label linking to a customer name.
 
 {{% /alert %}}
@@ -129,6 +134,7 @@ See [Dynamic Image (document template)](dynamic-image-document-template).
 {{% alert type="info" %}}
 
 [![](attachments/819203/918132.png)](dynamic-image-document-template)
+
 A dynamic image inside a table cell, showing the preset default image.
 
 {{% /alert %}}
@@ -146,6 +152,7 @@ See [Static Label (document template)](static-label-document-template).
 {{% alert type="info" %}}
 
 [![](attachments/819203/918130.png)](static-label-document-template)
+
 A label with text 'Customer name'.
 
 {{% /alert %}}
@@ -165,6 +172,7 @@ See [Static Image (document template)](static-image-document-template).
 {{% alert type="info" %}}
 
 [![](attachments/819203/918133.png)](static-image-document-template)
+
 A static image inside a table cell.
 
 {{% /alert %}}

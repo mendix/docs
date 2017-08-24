@@ -151,7 +151,7 @@ To configure a custom domain on your application environment, follow these steps
 1. Click **Environments** under the **Deploy** category.
 2. Click **Details** for the environment you want to configure:
 
-    ![](attachments/deploy/environmentdetails.jpg)
+    ![](attachments/deploy/environment-details.png)
 
 3. Go to the **Network** tab:
 

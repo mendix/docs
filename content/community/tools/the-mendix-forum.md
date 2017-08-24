@@ -24,6 +24,7 @@ The **Questions** section presents a selection of questions from the question fo
 Each question listed here has a descriptive title (**1**). Clicking a question title opens a specific details page under the **Questions** tab (for more information, see [3.1 Question and Answer Details Page](#QuestionDescriptionPage)).
 
 Each question specifies the following elements:
+
 * The number of **Votes** (**2**) for the question, which signifies how popular and useful the question is
     * For details on upvoting and downvoting questions, see [3.1.1 Question Details](#QuestionDetails)
 * The number of **Answers** (**3**) to the question

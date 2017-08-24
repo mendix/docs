@@ -19,6 +19,11 @@ The **Environments** page is divided into the following tabs:
 * **Custom Domain** tab
     * Certificates
     * Linked Custom Domains
+* **Access Restriction Profiles**
+    * IP range filters
+    * Client certificate verification
+    
+   ![](attachments/environment-tab.png)    
     
 For more details, see [Environments](environments).    
     
@@ -26,7 +31,7 @@ For more details, see [Environments](environments).
 
 If you click **Details** of a specific environments, you will be able to manage your environment in several tabs of the **Environment details** page.
 
-   ![](attachments/environmentdetails.jpg)
+   ![](attachments/environment-details.png)
    
 For more details, see [Environment details](environments-details).       
 

@@ -3,6 +3,7 @@ title: "Date picker"
 parent: "input-widgets"
 ---
 
+## Introduction
 
 A date picker is an [input widget](input-widgets) that can be used to display and edit date/time attributes. It takes into account the language setting to display a localized calendar.
 

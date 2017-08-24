@@ -3,7 +3,7 @@ title: "Date Picker"
 parent: "input-widgets"
 ---
 
-## 1 Introduction
+## Introduction
 
 A date picker is an [input widget](input-widgets) that can be used to display and edit date/time attributes. It takes into account the language setting to display a localized calendar.
 
@@ -14,9 +14,9 @@ This date picker allows the end-user to set the birth date of the customer.
 
 {{% /alert %}}
 
-## 2 General Properties
+## General Properties
 
-### 2.1 Date Format
+### Date Format
 
 The date format determines whether the date picker displays the date, time, date and time, or a custom variation of the linked attribute. This does not affect how data is stored; in all cases both a date and a time will be recorded. It merely affects how the data is displayed. How the date and/or time are formatted depend on the localization of the user viewing the data.
 
@@ -26,7 +26,7 @@ These are the possible values:
 * **Date and time**
 * **Custom** (see below for more deteails)
 
-### 2.2 Custom Date Format
+### Custom Date Format
 
 If you choose **Custom** as the date format, this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
@@ -68,7 +68,7 @@ These are some examples:
 
 {{% /alert %}}
 
-### 2.3 Placeholder Text
+### Placeholder Text
 
 The placeholder text is shown if the date attribute is empty. It can be used to give the end user a hint as to the expected format. Note: placeholder texts will not work if a native date picker is available (e.g. iOS and Android versions 4.0 and higher).
 
@@ -76,13 +76,13 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/Required+message+Property.md" %}}
 
-## 3 Data Source Properties
+## Data Source Properties
 
 {{% snippet file="refguide/Attribute+Path+Property.md" %}}
 
 {{% snippet file="refguide/Label+Property.md" %}}
 
-## 4 Editability Properties
+## Editability Properties
 
 {{% snippet file="refguide/Editable+Property.md" %}}
 
@@ -90,13 +90,13 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/Condition+Property.md" %}}
 
-## 5 Visibility Properties
+## Visibility Properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}
 
 {{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
-## 6 Events Properties
+## Events Properties
 
 {{% snippet file="refguide/On+Change+Event.md" %}}
 
@@ -104,7 +104,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/On+Leave+Event.md" %}}
 
-## 7 Common Properties
+## Common Properties
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
@@ -114,7 +114,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## 8 Related Content
+## Related Content
 
 *   [Data View](data-view)
 *   [Attributes](attributes)

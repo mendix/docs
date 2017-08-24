@@ -55,7 +55,7 @@ In this chapter you will install and run the Company Expenses App
     ![](attachments/18448631/18580296.png)
     
 7.  Click **Run Locally** (F5).
-8.  Click **View** (F9).
+8.  Click **View App** (F9).
 
 ## 4 Create Your First Automated Test
 

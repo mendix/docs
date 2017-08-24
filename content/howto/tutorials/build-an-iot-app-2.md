@@ -40,7 +40,7 @@ To configure the sensor data subscription, follow these steps:
     ![](attachments/build-an-iot-app/subscribe-to-mqtt-topic.png)
 
 7. In the **IVK_OnMessage_LogResponse** microflow, there are two parameters: **Topic** (string) and **Payload** (string). You must log both parameters in the **Console** to verify that you are receiving the data (if the Console is not open, select **View** > **Console**).
-8. Save the changes, click **Run Locally**, then click **View App**.
+8. Save the changes, click **Run Locally**, then click **View**.
 9. Refresh the app in the browser, then click **Subscribe** and notice that you get a confirmation message. At this point you won't see anything happening in the app as you configured the app to log the messages it receives from AWS.
 10. Return to the Desktop Modeler and observe the **Console**. Double-click the log message **Sensor data received**, which will open the **View Log Line Details** pop-up window, where you can see the **Topic** and **Payload** (JSON) in the **Message** section. Receiving this kind of log message means you have just connected to AWS and are receiving real-world data!
 

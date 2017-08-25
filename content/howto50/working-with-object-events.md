@@ -11,9 +11,9 @@ None.
 
 ## 2\. Create
 
-Everywhere were an object is initialized all events are always executed. The default new button, a create activity in a microflow, webservices, they will always follow the steps described in the image below.  
+Everywhere where an object is initialized all events are always executed. The default new button, a create activity in a microflow, webservices, they will always follow the steps described in the image below.  
 
-_Events:_ All before and after events are executed. If any of the before create events returns false an exception can be thrown. If an exception occurs during an event all changes are being reverted with the default error handling behavior. _
+_Events:_ All before and after events are executed. If any of the afore create events return false an exception can be thrown. If an exception occurs during an event all changes are being reverted with the default error handling behavior. _
 Database:_ There is no database communication happening during this event, not unless it is specified in a before or after create event. 
 _Result:_  A new object is available after these triggers. The object will have the state 'Instantiated'. This is influences the behavior in the other object actions.
 
@@ -23,7 +23,7 @@ _Result:_  A new object is available after these triggers. The object will have
 
 When an object is being committed through a default save button, a commit activity, or webservices, it will always trigger the commit events. The platform will also evaluate all associated objects. To guarantee data consistency the platform will also auto-commit associated objects.
 
-An autocommit is an automatic commit from the platform. That is done to keep the domain model in sync. If your application ends up having autocommitted objects than you have a modeling error. Since an association is also a member of an object, the association will be stored in the database as well.
+An autocommit is an automatic commit from the platform. Which is done to keep the domain model in sync. If your application ends up having autocommitted objects then you have a modeling error. Since an association is also a member of an object, the association will be stored in the database as well.
 That means if you create an OrderLine inside an Order, with OrderLine being the parent of the association. When you commit the OrderLine, the Order will be auto-committed.
 
 If you end up with auto-commited objects, it is always because of a modeling error. At some point in time, an association was set to a new object and the associated object was committed. Thus committing all its associations as well to keep all data consistent.
@@ -38,7 +38,7 @@ _Result:_  An object with the State: 'Instantiated' will be inserted into the d
 
 Pressing a cancel button or triggering a Rollback activity will initiate the Rollback events. These actions are not triggered in case of a rollback because of an error.
 
-_Events: _All before and after events are executed. If any of the before rollback events returns false an exception can be thrown. If an exception occurs during an event all applied changes are being reverted with the default error handling behavior. Changes made prior to the rollback will be kept. 
+_Events: _All before and after events are executed. If any of the before rollback events returns false an exception can be thrown. If an exception occurs during an event, all applied changes are being reverted with the default error handling behavior. Changes made prior to the rollback will be kept. 
 _Database:_ There is no database communication happening during this event, not unless it is specified in a before or after create event. 
 _Result:_  An object with the State: 'Instantiated' will be removed, an object with any other State will be reverted back to the values it had during the last commit.
 

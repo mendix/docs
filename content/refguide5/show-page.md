@@ -46,6 +46,10 @@ This feature allows you to re-use the same page for the New and Edit buttons of 
 If the [layout](layout) of the target page has a [layout type](layout#layout-type) configured, the Location property will be removed. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
 {{% /alert %}}
 
+{{% alert type="info" %}}
+For Mendix version 5.18 and higher, this option is shown only when the target page has a layout type of Legacy. Starting with version 5.18, the way a page is shown is determined by the layout you select from the **NavigationLayouts** module and the layout type to which it has been set.
+{{% /alert %}}
+
 Location defines how the page is shown.
 
 <table><thead><tr><th class="confluenceTh">Option</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">In content</td><td class="confluenceTd">The page replaces the existing top-level page.</td></tr><tr><td class="confluenceTd">Pop-up</td><td class="confluenceTd">The page is opened in a new dialog on top of the existing page(s).</td></tr><tr><td class="confluenceTd">Blocking pop-up</td><td class="confluenceTd">The page is opened in a new dialog on top of the existing page(s) and a hover, that makes it impossible to navigate to another page, is put on top of the underlying page(s).</td></tr></tbody></table>

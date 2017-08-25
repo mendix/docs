@@ -12,7 +12,13 @@ This document describes known issues starting with Mendix version 7.0.2. For kno
 {{% /alert %}}
 
 ## 7.6
-Switching demo users does not work properly, logout happens but the sign-in is broken. As a workaround, you can manually sign in using the generated password which you can copy from the Modeler.
+
+For details on this release, see [7.6 release notes](7.6).
+
+### 7.6.0<a name="KI760"></a>
+
+* Switching demo users does not work properly. Logout happens, but the sign-in is broken.
+  * Workaround: you can manually sign in using the generated password that you can copy from the Desktop Modeler.
 
 ## 7.5
 

@@ -63,12 +63,7 @@ The following steps describe how to add test steps manually to your test case. Y
     This will open the **Test Step Setup** dialog box.
 2. The first step is opening the Company Expenses app, which you do this by entering a URL in the browser. ATS does the same by using the [open application](../refguide-ats-1/open-application) action.
 3. Enter a description of the test step in the **Describe Test Step** text box (for example, *Open the company expenses app*).
-4.  Search for the **Open Application** action in the **Search Action** text box.
-
-    {{% alert type="info" %}}
-    Enter terms like *Find*, *Click*, *Set*, *Assert*, and *Get* to find the right action.
-    {{% /alert %}}
-
+4.  Search for the **Open Application** action in the **Search Action** text box. Enter terms like *Find*, *Click*, *Set*, *Assert*, and *Get* to find the right action.
 5. Select the **Open Application** action from the **Select an Action** data grid. Choose the one for Mendix applications.
 6.  Click **Save**:
 
@@ -178,25 +173,25 @@ The following steps describe how to add test steps manually to your test case. Y
     * ATS clicks the **Logout** button
     * ATS uses the [Logout](../refguide-ats-1/logout) action 
     
-   The **Logout** action is a hard logout, meaning that no matter where ATS is inside your application, it always logs out. Inside your test case, click **Add** and add the **Logout** action.
+    The **Logout** action is a hard logout, meaning that no matter where ATS is inside your application, it always logs out. Inside your test case, click **Add** and add the **Logout** action.
    
     ![](attachments/create-a-test-case/add-logout-new-expense.png)
 
-  You have added all the test steps for your test case:
+    You have added all the test steps for your test case:
   
     ![](attachments/create-a-test-case/all-test-steps-new-expense.png)
   
 34. The last thing to do is to clarify to ATS what you are testing. This is done by setting the **Call Type** of your test steps to one of the following:
 
-  * **Setup** for all the steps that you must perform to get to the test situation
-  * **Regular** for all the steps that are part of your test situation
-  * **Teardown** for all steps that are necessary to clean up
+    * **Setup** for all the steps that you must perform to get to the test situation
+    * **Regular** for all the steps that are part of your test situation
+    * **Teardown** for all steps that are necessary to clean up
   
-  Test step 1 and test step 2 must have the **Call Type:** **Setup**. Test step 3-9 must have the **Call Type:** **Regular**. Test step 10 must have the **Call Type:** **Teardown**.
+    Test step 1 and test step 2 must have the **Call Type:** **Setup**. Test step 3-9 must have the **Call Type:** **Regular**. Test step 10 must have the **Call Type:** **Teardown**.
   
-  ![](attachments/create-a-test-case/call-type-new-expense.png)
-  
-  You have now manually created your test case.
+    ![](attachments/create-a-test-case/call-type-new-expense.png)
+
+    You have now manually created your test case.
 
 ## 5 Adding Test Steps Using the ATS Recorder
 
@@ -242,9 +237,7 @@ To add test steps using the ATS Recorder, follow these steps:
 
     ![](attachments/create-a-test-case/new-expense-dialog-action.png)
 
-    {{% alert type="info" %}}
-    You can also add actions manually between recording sessions. 
-    {{% /alert %}}
+    Note that you can also add actions manually between recording sessions. 
 
 14.  Double-click the **Dialog Title** input parameter and add the title of the dialog box:
 
@@ -253,11 +246,11 @@ To add test steps using the ATS Recorder, follow these steps:
 15.  For the logout, you can choose to keep the recorded click on the **Sign Out** button or replace it with the **Logout** action.
 16.  The last thing to do is to clarify to ATS what you are testing. This is done by setting the **Call Type** of your test steps to one of the following:
   
-  * **Setup** for all the steps that you must perform to get to the test situation
-  * **Regular** for all the steps that are part of your test situation
-  * **Teardown** for all steps that are necessary to clean up
+    * **Setup** for all the steps that you must perform to get to the test situation
+    * **Regular** for all the steps that are part of your test situation
+    * **Teardown** for all steps that are necessary to clean up
   
-  Test step 1 and test step 2 must have the **Call Type:** **Setup**. Test step 3-9 must have the **Call Type:** **Regular**. Test step 10 must have the **Call Type:** **Teardown**.
+    Test step 1 and test step 2 must have the **Call Type:** **Setup**. Test step 3-9 must have the **Call Type:** **Regular**. Test step 10 must have the **Call Type:** **Teardown**.
   
     ![](attachments/create-a-test-case/call-type-new-expense-recorder.png)
 

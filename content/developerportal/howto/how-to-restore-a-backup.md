@@ -18,7 +18,7 @@ This how-to describes how to restore a backup to a Free App or licensed cloud no
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Free App or licensed cloud node available
-* Have a downloaded backup from a Free App or a licensed cloud node. See how to [Download a Backup](/developerportal/howto/how-to-download-a-backup)
+* Have a downloaded backup from a Free App or a licensed cloud node. See [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)
 * Have the correct [Security - Node Permissions](/developerportal/settings/node-permissions)
 
 ## 3 Restoring a Backup
@@ -87,7 +87,7 @@ The backup file is immediately uploaded to the database.
 
 ## 4 Related Content
 
-* [Connect an App to a Licensed Cloud Node](how-to-link-app-to-node)
-* [Create a Backup](how-to-create-backup)
-* [Download a Backup](how-to-download-a-backup)
-* [Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
+* [How to Connect an App to a Licensed Cloud Node](how-to-link-app-to-node)
+* [How to Create a Backup](how-to-create-backup)
+* [How to Download a Backup](how-to-download-a-backup)
+* [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)

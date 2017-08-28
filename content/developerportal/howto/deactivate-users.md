@@ -11,7 +11,7 @@ For security reasons, deactivating the Mendix profile of an employee that is lea
 If the employee returns to your company, the Mendix profile can be activated again. 
 
 {{% alert type="info" %}}
-If a Mendix user moves to another company or comes from another company that is also using Mendix, the user can **merge his/her old Mendix account(s)** into the new Mendix account. This action combines all hard-earned points, certifications, and achievements in the users efforts to climb the leaderboards.
+If a Mendix user moves to another company or comes from another company that is also using Mendix, the user can **merge their old Mendix account(s)** into the new Mendix account. This action combines all the hard-earned points, certifications, and achievements in the user's efforts to climb the leaderboards.
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**
@@ -24,11 +24,11 @@ If a Mendix user moves to another company or comes from another company that is 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have the **Company Admin** role in your Mendix company (for more information, see [Company Admin](/developerportal/companyadmin))
-* Before deactivating a user, make sure this user has:
-    * Has not the **Company Contact** role
-    * Has no **App Contact** roles
-    * Has no **Technical Contact** roles
-    * Is not the only one **SCRUM Master** in App Teams
+* Before deactivating a user, make sure the following points are true for the user:
+    * Does not have a **Company Contact** role
+    * Does not have an **App Contact** role
+    * Does not have a **Technical Contact** role
+    * Is not the only **SCRUM Master** in any App Teams
     * Is not involved in unsolved support tickets at [Mendix Support](https://support.mendix.com)
 
 For more information, see [Manage Company Roles and App Roles](/developerportal/howto/change-roles) and [Roles Within the Company and Apps](/developerportal/general/roles).
@@ -80,8 +80,8 @@ Follow these steps to activate an inactive user:
 ## 4 Related Content
 
 * [Company Admin](/developerportal/companyadmin)
-* [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Mendix Support](/howtogeneral/support)
 * [Roles Within the Company and Apps](/developerportal/general/roles)
-* [Set Up Your Profile](/community/tools/how-to-set-up-your-profile)
+* [How to Set Up Your Community Profile](/community/tools/how-to-set-up-your-profile)
 * [Technical Contact](/developerportal/general/technical-contact)

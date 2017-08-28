@@ -193,7 +193,7 @@ An intermediate certificate chain chain could look like this from top to bottom:
 ## 9 Related Content
 
 * [Certificates](/refguide/certificates)
-* [Deploy to the Mendix Cloud](deploying-to-the-cloud)
 * [Environments](/developerportal/deploy/environments)
+* [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
 * [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
 * [Roles Within the Company and Apps](/developerportal/general/roles).

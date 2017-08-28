@@ -9,7 +9,7 @@ tags: ["App","Node","Developer Portal","Deploy"]
 
 This how-to describes the process of linking your Free App to a licensed cloud node.
 
-**This how-to will teach you do the following:**
+**This how-to will teach you how to do the following:**
 
 *   Connect an Free App to a licensed cloud node
 
@@ -20,8 +20,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 *   Free app - with an enabled Team Server (Mendix 5.18 and up)
 *   Have a licensed cloud node available. To request a licensed cloud node, contact your Customer Success Manager (CSM)
 *   You are the [Technical Contact](/developerportal/general/technical-contact) of the node
-*   Make sure that the Sandbox is unlinked. See [Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
-*   Your Two-Factor Google Authenticator is enabled. See [Set Up Google Two-Factor Authentication](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)
+*   Make sure that the Sandbox is unlinked. See [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
+*   Your Two-Factor Google Authenticator is enabled. See [How to Set Up Google Two-Factor Authentication](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)
 
 ## 3 Connect Your Free App to a Licensed Cloud Node
 There are two methods to connect your project to a licensed cloud node:
@@ -60,10 +60,10 @@ The app is now connected to the licensed cloud node.
 
 ## 4 Related Content
 
-*   [Configure Custom Domains](custom-domains)
-*   [Deploy to the Mendix Cloud](deploying-to-the-cloud)
-*   [Download a Backup](how-to-download-a-backup)
-*   [Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
-*   [Restore A Backup](how-to-restore-a-backup)
-*   [Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
-*   [Set Up Google Two Factor Authentication](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)
+*   [How to Configure Custom Domains](custom-domains)
+*   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
+*   [How to Download a Backup](how-to-download-a-backup)
+*   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
+*   [How to Restore a Backup](how-to-restore-a-backup)
+*   [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
+*   [How to Set Up Google Two Factor Authentication](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)

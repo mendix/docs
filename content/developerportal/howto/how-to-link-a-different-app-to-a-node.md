@@ -28,7 +28,7 @@ Read [this](how-to-unlink-sandbox) how-to to learn  **unlink your Sandbox** from
 
 ## 3 Linking a App to a Licensed Cloud Node
 
-*   Read [ Deploy to the Mendix Cloud](deploying-to-the-cloud) to learn * link an app to a cloud node*.
+*   Read [How to Deploy to the Mendix Cloud](deploying-to-the-cloud) to learn * link an app to a cloud node*.
 
 ## 4 Linking a Different App to the Node
 
@@ -54,8 +54,8 @@ For example, to be able to link **App A** to **Node 2**, follow these steps:
 
 ## 6 Related Content
 
-*   [Configure Custom Domains](custom-domains)
-*   [Deploy to the Mendix Cloud](deploying-to-the-cloud)
-*   [Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
-*   [Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
+*   [How to Configure Custom Domains](custom-domains)
+*   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
+*   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
+*   [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
 *   [Upload To Team Server Dialog](/refguide7/upload-to-team-server-dialog)

@@ -76,14 +76,14 @@ For more information, see [API Keys](/developerportal/settings/api-key).
 
 ## 5 Related Content
 
-* [Change Password Expiration](/developerportal/howto/password-expiration)
 * [Company Admin](/developerportal/companyadmin)
-* [Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
-* [Deactivate and Activate Users](/developerportal/howto/deactivate-users)
-* [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
-* [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Change Password Expiration](/developerportal/howto/password-expiration)
+* [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
+* [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
+* [How to Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
 * [Mendix Profile](/developerportal/general/mendixprofile)
-* [Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
 * [Roles Within the Company and Apps](/developerportal/general/roles)
 * [Three Ways to Leave Your App](/developerportal/general/leave-app)
 * [Technical Contact](/developerportal/general/technical-contact)

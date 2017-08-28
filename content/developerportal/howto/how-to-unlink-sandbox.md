@@ -49,11 +49,11 @@ The Free App has now been unlinked from the Sandbox environment.
 
 ## 5 Related Content
 
-*   [Configure Custom Domains](custom-domains)
-*   [Deploy to the Mendix Cloud](deploying-to-the-cloud)
-*   [Download a Backup](how-to-download-a-backup)
-*   [Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
-*   [Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node) 
-*   [Restore a Backup](how-to-restore-a-backup)
-*   [Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
-*   [Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)
+*   [How to Configure Custom Domains](custom-domains)
+*   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
+*   [How to Download a Backup](how-to-download-a-backup)
+*   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
+*   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node) 
+*   [How to Restore a Backup](how-to-restore-a-backup)
+*   [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
+*   [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)

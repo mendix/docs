@@ -44,7 +44,7 @@ There are two actions you can take:
 
 {{% alert type="warning" %}}
 
-Note that when you click **Deactivate App** only the account owner can reactivate an app in his account management screen. When you click **Delete App** the app deletion cannot be undone and means ALL DATA WILL BE LOST, including all files on the TeamServer and all data in the FreeApp node (if applicable). For more information, see [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps).
+Note that when you click **Deactivate App** only the account owner can reactivate an app in his account management screen. When you click **Delete App** the app deletion cannot be undone and means ALL DATA WILL BE LOST, including all files on the TeamServer and all data in the FreeApp node (if applicable). For more information, see [How to Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps).
 
 {{% /alert %}}
 
@@ -60,6 +60,6 @@ Note that you cannot leave the App if you are the **Technical Contact** of the A
 
 ## 2 Related Content
 
-* [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Roles Within the Company and Apps](/developerportal/general/roles)
 * [Technical Contact](/developerportal/general/technical-contact)

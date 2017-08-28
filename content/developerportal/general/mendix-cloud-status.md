@@ -7,22 +7,20 @@ tags: ["Status","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-The [Developer Portal](http://home.mendix.com), all **Free Apps** and licensed cloud apps are hosted in the **Mendix Cloud**. 
-On [https://status.mendix.com/](https://status.mendix.com/) you can check the status of the **Mendix Cloud Status** the following operations in real time:
+The [Developer Portal](http://home.mendix.com), all **Free Apps**, and licensed cloud apps are hosted in the **Mendix Cloud**. On [https://status.mendix.com/](https://status.mendix.com/), you can check the **Mendix Cloud Status** and the following operations in real time:
 
 * Mendix API
 * Cloud Services
-* the Mendix Cloud (EU, US and Free Apps)
+* Mendix Cloud (EU, US, and Free Apps)
 
-Whenever there emerges a problem in the Mendix Cloud, Mendix will register the incident and all its updates here. 
-Mendix will announce **planned maintenance** here as well. 
+Whenever there emerges a problem in the Mendix Cloud, Mendix will register the incident and all of the updates here. Mendix will announce **Planned maintenance** here as well. 
 
-It is recommended to subscribe for updates from this site. You will be informed about all new incidents and planned maintenance.
+Subscribomg for updates from this site is recommended. You will be informed about all the new incidents and the planned maintenance.
 
 ## 2 Related Content
 
-* [Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
+* [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
 * [Mendix Support](/howtogeneral/support)
 * [Operate](/developerportal/operate)
-* [Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region)
+* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
+* [How to View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region)

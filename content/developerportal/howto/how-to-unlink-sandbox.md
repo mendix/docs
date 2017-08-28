@@ -10,7 +10,7 @@ tags: ["App","Sandbox","Developer Portal","Unlink","Delete"]
 This how-to describes the process of unlinking your Sandbox from your Free App. 
 A Sandbox will be only linked to you Free App when you you click **Enable Team Server** in the **Mendix Modeler**. 
 
-**After completing this how-to you will know:**
+**This how-to will teach you how to do the following:**
 
 *   How to unlink (delete) your Sandbox
 

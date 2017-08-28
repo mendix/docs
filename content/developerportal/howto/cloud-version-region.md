@@ -50,6 +50,6 @@ To view the Mendix Cloud region and version in which your app is hosted, follow 
 * [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Mendix Cloud](/howtogeneral/mendixcloud/)
 * [Mendix Cloud v4 - FAQ](/howtogeneral/mendixcloud/mxcloudv4)
-* [Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)
+* [How to Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)
 * [Roles Within the Company and Apps](/developerportal/general/roles)
 * [Technical Contact](/developerportal/general/technical-contact)

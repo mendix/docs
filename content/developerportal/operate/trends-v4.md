@@ -274,7 +274,7 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 ## 6 Related Content
 
 * [Alerts](monitoring-application-health)
-* [Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
+* [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
+* [How to Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)
+* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
 * [Mendix Cloud V4 - FAQ](/howtogeneral/mendixcloud/mxcloudv4)
-* [Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)
-* [Receive Environment Status Alerts](/developerportal/howto/receive-alerts)

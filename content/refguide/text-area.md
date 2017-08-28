@@ -16,21 +16,21 @@ This text area allows the end-user to set the description of the product.
 
 A text area must be placed in a data view or template grid and connected to an attribute of type String. The connected attribute is shown in blue and between brackets inside the text area.
 
-## General properties
+## General Properties
 
-### Grow automatically
+### Grow Automatically
 
 This property defines whether the text area grows automatically depending on the amount of text in it.
 
 _Default value:_ No
 
-### Number of lines
+### Number of Lines
 
 The number of lines determine how many lines the text area shows at the same time. If the text in the text area contains more lines you will have to use a scrollbar to see it all. This property is only shown if Grow automatically is set to No.
 
 _Default value:_ 5
 
-### Counter message
+### Counter Message
 
 This is the text displayed when typing in the text area. This text has 2 placeholders. The first placeholder shows the number of characters already typed and the second placeholder shows the maximum number of characters.
 
@@ -40,11 +40,11 @@ You've used {1} characters of the {2} characters that are allowed.
 
 {{% /alert %}}
 
-### Text too long message
+### Text Too Long Message
 
 This is the text displayed when the number of typed characters is higher than the maximum allowed number of characters.
 
-### Maximum length
+### Maximum Length
 
 This property indicates the maximum number of characters that can be typed in this text box.
 
@@ -56,21 +56,21 @@ This property indicates the maximum number of characters that can be typed in th
 
 _Default value: Attribute length_
 
-### Placeholder text
+### Placeholder Text
 
 The placeholder text is shown when no text has been entered yet. It can be used to give a hint to the user what kind of text should be entered.
 
-{{% snippet file="refguide/Required+Property.md" %}}
+## Validation Properties
 
-{{% snippet file="refguide/Required+message+Property.md" %}}
+{{% snippet file="refguide/Widget+Validation.md" %}}
 
-## Data source properties
+## Data Source Properties
 
 {{% snippet file="refguide/Attribute+Path+Property.md" %}}
 
 {{% snippet file="refguide/Label+Property.md" %}}
 
-## Editability properties
+## Editability Properties
 
 {{% snippet file="refguide/Editable+Property.md" %}}
 
@@ -78,13 +78,13 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide/Condition+Property.md" %}}
 
-## Visibility properties
+## Visibility Properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}
 
 {{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
-## Events properties
+## Events Properties
 
 {{% snippet file="refguide/On+Change+Event.md" %}}
 
@@ -92,7 +92,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide/On+Leave+Event.md" %}}
 
-## Common properties
+## Common Properties
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
@@ -102,7 +102,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Related articles
+## Related Content
 
 *   [Data view](data-view)
 *   [Attributes](attributes)

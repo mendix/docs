@@ -175,7 +175,7 @@ To edit the Java action in Eclipse, follow these steps:
 
     ![](attachments/8784287/8946349.png)
 
-2.  As soon as the deployment process is completed, click **View App** to open the application in your browser:
+2.  As soon as the deployment process is completed, click **View** to open the application in your browser:
 
     ![](attachments/8784287/8946352.png)
 

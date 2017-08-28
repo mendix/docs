@@ -125,7 +125,7 @@ To view a page in your app, you need to add a menu item so you can navigate to t
 ## 4 Viewing Your App
 
 1. Click **Run** and then click **Save and continue**.
-2. Click **View App**. On the left side of your app, the **Departments** menu item is shown:
+2. Click **View**. On the left side of your app, the **Departments** menu item is shown:
 
     ![](attachments/18448673/18580914.png)
     

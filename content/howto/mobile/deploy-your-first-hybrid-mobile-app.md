@@ -18,7 +18,7 @@ Mendix supports mobile web development, and it is also possible to create and pu
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Version 5.10 or higher of the Mendix Modeler (available from the [App Store](https://appstore.home.mendix.com/link/modelers)
-* The Mendix Developer App, which makes it easy to see a hybrid application in action without the need to get it approved in the App Store (for details and download links, see [Getting the Mendix Developer App](/refguide7/getting-the-mendix-developer-app) in the Mendix Reference Guide)
+* The Mendix Developer App, which makes it easy to see a hybrid application in action without the need to get it approved in the App Store (for details and download links, see [Getting the Mendix App](/refguide7/getting-the-mendix-app) in the Mendix Reference Guide)
 
 ## 3 Opening a Hybrid Example App
 

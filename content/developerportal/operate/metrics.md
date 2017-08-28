@@ -24,7 +24,7 @@ There are two types of **Trends** depending on which **Mendix Cloud version** th
 *   [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 
 You can find the Mendix Cloud version of your App in the **environment details**. 
-For more information, see [View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region).
+For more information, see [How to View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region).
 
 ## 3 Running now
 
@@ -61,6 +61,6 @@ Mendix 4 and up have an object cache for non-persistent objects. Here you can se
 
 ## 5 Related Content
 
-* [Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
+* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
 * [Database Maintenance: Size Reduction](/howtogeneral/support/database-maintenance-size-reduction)
 * [Environment details](/developerportal/deploy/environments-details)

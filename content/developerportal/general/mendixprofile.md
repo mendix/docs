@@ -134,10 +134,10 @@ These are the password requirements:
 ## 3 Related Content
 
 * [Company Admin](/developerportal/companyadmin)
-* [Deactivate and Activate Users](/developerportal/howto/deactivate-users)
+* [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
 * [Feedback](/developerportal/collaborate/feedback)
-* [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Mendix Platform SDK](/apidocs-mxsdk/mxsdk)
-* [Provide Feedback on Mendix](/developerportal/howto/feedback-mendix)
+* [How to Provide Feedback on Mendix](/developerportal/howto/feedback-mendix)
 * [Roles Within the Company and Apps](/developerportal/general/roles)
-* [Use the Mendix Feedback Widget](/developerportal/howto/gathering-user-feedback)
+* [How to Use the Mendix Feedback Widget](/developerportal/howto/gathering-user-feedback)

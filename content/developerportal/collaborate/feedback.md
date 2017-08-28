@@ -20,7 +20,7 @@ Stage | Description
 | --- | --- |
 **Open** | The feedback is awaiting for response from the App Team.
 **Handled** | The App Team has looked into the feedback and has respond for further information.
-**Accepted** | The App Team has accepted the feedback and added this feedback as story to the sprint.
+**Accepted** | The App Team has accepted the feedback and added this feedback as a story to the sprint.
 **Closed** | The App Team has closed the feedback.
 
 The feedback types are:
@@ -105,6 +105,6 @@ This action cannot be undone.
 
 * [Feedback](/developerportal/collaborate/feedback)
 * [Mendix Profile](/developerportal/general/mendixprofile)
-* [Provide Feedback on Mendix](/developerportal/howto/feedback-mendix)
+* [How to Provide Feedback on Mendix](/developerportal/howto/feedback-mendix)
 * [Stories](/developerportal/collaborate/stories)
-* [Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
+* [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)

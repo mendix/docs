@@ -31,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     * Is not the only **SCRUM Master** in any App Teams
     * Is not involved in unsolved support tickets at [Mendix Support](https://support.mendix.com)
 
-For more information, see [Manage Company Roles and App Roles](/developerportal/howto/change-roles) and [Roles Within the Company and Apps](/developerportal/general/roles).
+For more information, see [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles) and [Roles Within the Company and Apps](/developerportal/general/roles).
 
 ## 3 Company Admin User Settings
 
@@ -81,7 +81,7 @@ Follow these steps to activate an inactive user:
 
 * [Company Admin](/developerportal/companyadmin)
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Set Up Your Community Profile](/community/tools/how-to-set-up-your-profile)
 * [Mendix Support](/howtogeneral/support)
 * [Roles Within the Company and Apps](/developerportal/general/roles)
-* [How to Set Up Your Community Profile](/community/tools/how-to-set-up-your-profile)
 * [Technical Contact](/developerportal/general/technical-contact)

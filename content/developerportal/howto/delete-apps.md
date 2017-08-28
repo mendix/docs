@@ -110,6 +110,6 @@ To delete an app, follow these steps:
 ## 5 Related Content
 
 * [Company Admin](/developerportal/companyadmin)
-* [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Roles Within the Company and Apps](/developerportal/general/roles)
 * [Settings](/developerportal/settings)

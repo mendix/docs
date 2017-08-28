@@ -15,21 +15,21 @@ This text box allows the end-user to set the name of the customer.
 
 A text box must be placed in a data view or template grid and connected to an attribute of type String. The connected attribute is shown in blue and between brackets inside the text box.
 
-## General properties
+## General Properties
 
-### Decimal precision (only for numeric attributes)
+### Decimal Precision (Only for Numeric Attributes)
 
 The precision of a value describes the number of digits that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
 
 _Default value:_ 2
 
-### Group digits (only for numeric attributes)
+### Group Digits (Only for Numeric Attributes)
 
 For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property indicates whether the end user will see these groups.
 
 _Default value:_ False
 
-### Show as password (only for attributes of type String or HashString)
+### Show as Password (Only for Attributes of the String or HashString Type)
 
 | Value | Description |
 | --- | --- |
@@ -38,11 +38,11 @@ _Default value:_ False
 
 _Default value:_ False
 
-### Input mask (only in web forms)
+### Input Mask (Only in Web Forms)
 
 The input mask limits what the user can enter in the text box. A '9' means any digit, 'Z' means any letter, 'U' an upper-case letter, 'L' a lower-case letter and '*' a letter or a digit. Other characters will be taken literally. For example, the input mask 99-LLL-9999 matches 24-apr-2008.
 
-### Maximum length
+### Maximum Length
 
 This property indicates the maximum number of characters that can be typed in this text box.
 
@@ -54,7 +54,7 @@ This property indicates the maximum number of characters that can be typed in th
 
 _Default value: Attribute length_
 
-### Placeholder text
+### Placeholder Text
 
 The placeholder text is shown when no text has been entered yet. It can be used to give a hint to the user what kind of text should be entered.
 
@@ -62,13 +62,13 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide6/Required+message+Property.md" %}}
 
-## Data source properties
+## Data Source Properties
 
 {{% snippet file="refguide6/Attribute+Path+Property.md" %}}
 
 {{% snippet file="refguide6/Label+Property.md" %}}
 
-## Editability properties
+## Editability Properties
 
 {{% snippet file="refguide6/Editable+Property.md" %}}
 
@@ -76,11 +76,11 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide6/Condition+Property.md" %}}
 
-## Visibility properties
+## Visibility Properties
 
 {{% snippet file="refguide6/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
-## Events properties
+## Events Properties
 
 {{% snippet file="refguide6/On+Change+Event.md" %}}
 
@@ -88,7 +88,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide6/On+Leave+Event.md" %}}
 
-## Common properties
+## Common Properties
 
 {{% snippet file="refguide6/Name+Property.md" %}}
 
@@ -98,7 +98,7 @@ The placeholder text is shown when no text has been entered yet. It can be used 
 
 {{% snippet file="refguide6/Tab+index+Property.md" %}}
 
-## Related articles
+## Related Content
 
 *   [Data view](data-view)
 *   [Attributes](attributes)

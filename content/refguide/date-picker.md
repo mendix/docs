@@ -18,41 +18,42 @@ This date picker allows the end-user to set the birth date of the customer.
 
 ### Date Format
 
-The date format determines whether the date picker displays the date, time, date and time, or a custom variation of the linked attribute. This does not affect how data is stored; in all cases both a date and a time will be recorded. It merely affects how the data is displayed. How the date and/or time are formatted depend on the localization of the user viewing the data.
+The date format determines whether the date picker displays the date, time, date and time, or a custom variation of the linked attribute. This does not affect how data is stored; in all cases both a date and a time will be recorded. It merely affects how the data is displayed. How the date and/or time are formatted depends on the localization of the user viewing the data.
 
 These are the possible values:
+
 * **Date** (this is the default)
 * **Time**
 * **Date and time**
-* **Custom** (see below for more deteails)
+* **Custom** (see below for more details)
 
 ### Custom Date Format
 
-If you choose **Custom** as the date format, this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
+If you choose 'Custom' as the date format (see above) this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
-| Symbol | Number of Symbols | Example | Example Result | Description |
-| --- | --- | --- | --- | --- |
-| G | 1 | G | AD | Era |
-| y | 1–n | y | 2010 | Year |
-| M | 1–2 | MM | 09 | Month (number) |
-| M | 3 | MMM | Sept | Month (abbreviation) |
-| M | 4 | MMMM | September | Month (full) |
-| w | 1–2 | w | 12 | Week of year |
-| d | 1–2 | dd | 08 | Day (of month) |
-| D | 1–3 | DD | 083 | Day (of year) |
-| a | 1 | a |AM | AM or PM |
-| h | 1–2 | h | 11 | Hour (1-12) |
-| H | 1–2 | HH | 09 | Hour (0-23) |
-| k | 1–2 | k | 11 | Hour (1-24) |
-| K | 1–2 | KK | 05 | Hour (0-11) |
-| m | 1–2 | m | 59 | Minute |
-| s | 1–2 | ss | 06 | Second |
-| S | 1–3 | S | 153 | Milliseconds  |
-| E | 1–3 | E | Thu | Day of week (abbreviation) |
-| E | 4 | EEEE | Thursday | Day of week (full) |
-| z | 1–3 | z | PST | Time zone (initialism) |
-| z | 4 | zzzz | Pacific Standard Time | Time zone (full) |
-| Z | 4 | ZZZZ | GMT-04:0 0 | Time zone offset |
+| Symbol | No. | Example | Description |
+| --- | --- | --- | --- |
+| G | 1 | AD | Era |
+| y | 1..n | 2010 | Year |
+| M | 1..2 | 09 | Month |
+| M | 3 | Sept |
+| M | 4 | September |
+| w | 1..2 | 27 | Week of year |
+| d | 1..2 | 12 | Day of month |
+| D | 1..3 | 93 | Day of year |
+| a | 1 | AM | AM or PM |
+| h | 1..2 | 11 | Hour (1-12) |
+| H | 1..2 | 13 | Hour (0-23) |
+| k | 1..2 | 10 | Hour (1-24) |
+| K | 1..2 | 0 | Hour (0-11) |
+| m | 1..2 | 59 | Minute, use one or two for zero padding |
+| s | 1..2 | 12 | Second, use one or two for zero padding |
+| S | 1..3 | 153 | Milliseconds |
+| E | 1..3 | Thu | Day of week |
+| E | 4 | Thursday | Day of week |
+| z | 1..3 | PST | Time zone |
+| z | 4 | Pacific Standard Time | Time zone |
+| Z | 4 | GMT-04:0 0 | Time zone offset |
 
 {{% alert type="info" %}}
 
@@ -72,9 +73,9 @@ These are some examples:
 
 The placeholder text is shown if the date attribute is empty. It can be used to give the end user a hint as to the expected format. Note: placeholder texts will not work if a native date picker is available (e.g. iOS and Android versions 4.0 and higher).
 
-{{% snippet file="refguide/Required+Property.md" %}}
+## Validation Properties
 
-{{% snippet file="refguide/Required+message+Property.md" %}}
+{{% snippet file="refguide/Widget+Validation.md" %}}
 
 ## Data Source Properties
 

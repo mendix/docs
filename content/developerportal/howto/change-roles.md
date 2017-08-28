@@ -113,8 +113,8 @@ You can change the Technical Contact by following these steps:
 ## 7 Related Content
 
 * [Company Admin](/developerportal/companyadmin)
-* [Deactivate and Activate Users](/developerportal/howto/deactivate-users)
-* [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
+* [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
+* [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
 * [Security – Node Permissions](/developerportal/settings/node-permissions)
 * [Technical Contact](/developerportal/general/technical-contact)
 * [Roles Within the Company and Apps](/developerportal/general/roles)

@@ -23,7 +23,7 @@ A company admin can perform the following actions on the **Users** tab:
 * Activate/deactivate users
 * View active/inactive users
 
-For more information, see [Deactivate and Activate Users](/developerportal/howto/deactivate-users).
+For more information, see [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users).
 
 ## 3 Security Groups
 

@@ -9,7 +9,7 @@ tags: ["Company","Admin","MxID","Developer Portal","Role","Permissions"]
 
 In order to use Mendix, you must sign up to create an account. With this signup you create a MxID, and this ID will be linked to a company. If the company already exists, you will join the company. If it is a new company, a new company will be created and you will automatically join it.
 
-To make changes to the roles, see [Manage Company Roles and App Roles](/developerportal/howto/change-roles).
+To make changes to the roles, see [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles).
 
 The roles defined within a company and the company's apps are described below.
 
@@ -145,9 +145,9 @@ For more information, see [Settings](/developerportal/settings) and [Security â€
 ## 5 Related Content
 
 * [Company Admin](/developerportal/companyadmin)
-* [Deactivate and Activate Users](/developerportal/howto/deactivate-users)
-* [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
-* [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
+* [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Mendix Profile](mendixprofile)
 * [Settings](/developerportal/settings)
 * [Technical Contact](technical-contact)

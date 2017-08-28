@@ -48,11 +48,11 @@ To add a sprint, follow these steps:
 
 1.  Click **Stories** in the left menu:
 
-    ![](attachments/collaborate/collaborate.png)
+   ![](attachments/collaborate/collaborate.png)
 
     Under the **Collaborate** category you can add sprints, stories, planning, and documents that can be used in your app. The **Stories** page shows the existing stories and sprints.
 
-    ![](attachments/collaborate/stories.png)
+   ![](attachments/collaborate/stories.png)
 
 2.  There is one default sprint called **Get started**, which is automatically created when you create a new project. You need a clean sprint, so delete the **Get started** sprint by clicking on the bin.
 
@@ -65,13 +65,13 @@ To add a sprint, follow these steps:
     * Leave the **This sprint comes after** field empty (if there are existing sprints, you can place the new sprint before or after a selected sprint)
     * Set the **Duration** to **2** (weeks)
 
-    ![](attachments/collaborate/18580514.png)
+   ![](attachments/collaborate/18580514.png)
 
-    {{% alert type="info" %}}
+   {{% alert type="info" %}}
 
 The default duration of a sprint in Mendix is two weeks, which starts the moment you create the sprint. Check **customize** to select a different start date.
 
-    {{% /alert %}}
+   {{% /alert %}}
 
 5.  Click **Save**, and the new sprint will be added to your stories overview.
 
@@ -98,11 +98,11 @@ To add story points, follow these steps:
 You can also add Bug story points this way by selecting **Bug** from the **Story type** drop-down menu.
 The icon in the top left will change to ![](attachments/collaborate/18580492.png)
 
-    {{% /alert %}}
+   {{% /alert %}}
 
     The new story point is now added to Sprint 1:
 
-    ![](attachments/collaborate/18580509.png)
+   ![](attachments/collaborate/18580509.png)
 
 ### 4.2 Adding Tasks to a Story
 
@@ -150,7 +150,7 @@ To manage stories in the Modeler, follow these steps:
 
 If you change a status or update story points in the Modeler or in the browser, they will automatically be synchronized and available everywhere.
 
-    {{% /alert %}}
+   {{% /alert %}}
 
 ## 6 Moving Stories
 
@@ -168,7 +168,7 @@ There are two ways to move the story:
 
 Select the story you want to move, click **Details**.
 
-    ![](attachments/collaborate/story-actions.png)
+   ![](attachments/collaborate/story-actions.png)
 
  and below **Move to** from the right menu, select **Sprint 2**:
 
@@ -178,7 +178,7 @@ Select the story you want to move, click **Details**.
 
 Click and drag the story into another sprint or to the **Backlog**:
 
-    ![](attachments/collaborate/18580498.png)
+   ![](attachments/collaborate/18580498.png)
 
 ## 7 Importing Stories with Excel
 
@@ -225,10 +225,10 @@ To export sprints and stories, follow these steps:
 ## 9 Related Content
 
 * [App Platform](/refguide7/app-platform)
-* [Contribute to a GitHub Repository](/howto7/collaboration-project-management/contribute-to-a-github-repository)
-* [Share the Development Database](/howto7/collaboration-project-management/sharing-the-development-database)
-* [Start Your Own Repository](/howto7/collaboration-project-management/starting-your-own-repository)
+* [How to Contribute to a GitHub Repository](/howto7/collaboration-project-management/contribute-to-a-github-repository)
+* [How to Share the Development Database](/howto7/collaboration-project-management/sharing-the-development-database)
+* [How to Start Your Own Repository](/howto7/collaboration-project-management/starting-your-own-repository)
+* [How to Use the Excel Exporter](/howto7/integration/using-the-excel-exporter)
+* [How to Use the Feedback Widget](gathering-user-feedback)
 * [Team Server](/refguide7/team-server)
 * [Use Team Server - Version Control](/howto7/collaboration-project-management/using-team-server-_-version-control)
-* [Use the Excel Exporter](/howto7/integration/using-the-excel-exporter)
-* [Use the Feedback Widget](gathering-user-feedback)

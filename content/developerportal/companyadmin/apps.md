@@ -22,7 +22,7 @@ A company admin perform the following actions on the **Apps** tab:
 * Delete apps
 * View the node details
 
-For more information, see [Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps).
+For more information, see [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps).
 
 ## 3 Roles
 

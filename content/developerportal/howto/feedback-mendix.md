@@ -65,4 +65,4 @@ You can view your own submitted feedback items in the feedback list in your prof
 
 * [Feedback](/developerportal/collaborate/feedback)
 * [Mendix Profile](/developerportal/general/mendixprofile)
-* [Use the Feedback Widget](gathering-user-feedback)
+* [How to Use the Feedback Widget](gathering-user-feedback)

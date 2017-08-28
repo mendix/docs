@@ -75,7 +75,7 @@ For example, you can use one instance and store 4GB of RAM in there. The other 1
 * [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [Deploy](/developerportal/deploy)
 * [Environment Details](/developerportal/deploy/environments-details)
-* [Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
 * [Mendix Cloud](/howtogeneral/mendixcloud/)
 * [Mendix Cloud v4 - FAQ](/howtogeneral/mendixcloud/mxcloudv4)
 * [Roles Within the Company and Apps](/developerportal/general/roles)

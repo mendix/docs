@@ -7,12 +7,12 @@ tags: ["App","Node","Developer Portal","Deploy"]
 
 ## 1 Introduction
 
-This how-to describes link a **different app** to your **licensed cloud node** so that you can deploy a different app.
+This how-to describes linking a **different app** to your **licensed cloud node** so that you can deploy a different app.
 
-**After completing this how-to you will know:**
+**This how-to will teach you how to do the following:**
 
-*    link a different app to your node which already has a linked an app
-*    exchange apps between two nodes
+*  Link a different app to your node which already has a linked an app
+*  Exchange apps between two nodes
 
 ## 2 Prerequisites
 

@@ -50,7 +50,7 @@ To add a sprint, follow these steps:
 
    ![](attachments/collaborate/collaborate.png)
 
-    Under the **Collaborate** category you can add sprints, stories, planning, and documents that can be used in your app. The **Stories** page shows the existing stories and sprints.
+Under the **Collaborate** category you can add sprints, stories, planning, and documents that can be used in your app. The **Stories** page shows the existing stories and sprints.
 
    ![](attachments/collaborate/stories.png)
 
@@ -100,7 +100,7 @@ The icon in the top left will change to ![](attachments/collaborate/18580492.png
 
    {{% /alert %}}
 
-    The new story point is now added to Sprint 1:
+The new story point is now added to Sprint 1:
 
    ![](attachments/collaborate/18580509.png)
 

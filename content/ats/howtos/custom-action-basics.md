@@ -19,7 +19,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 *  General knowledge of ATS.
 *  Completed [How to Get Started](getting-started)
 *  Completed [How to Create a Test Case](create-a-test-case)
-*  Read [The Guidelines for Creating a Custom Action](/bestpractices/guidelines-custom-action)
+*  Read [The Guidelines for Creating a Custom Action](../bestpractices/guidelines-custom-action)
 
 ## 3 Create a Custom Action
 
@@ -78,7 +78,6 @@ You now created a custom action from the repository.
 8.  Select the newly created action and click **Open**.
     
     ![](attachments/custom-action-basics/test-case-open-new-action.png)
-
 
 Both ways open the **Edit Action** page. The page works the same as the **Test Case** page, you can add test steps by clicking **Add** or **Record**.
 
@@ -159,11 +158,11 @@ You created an input parameter. You can add as many input parameters as you need
 
 6.  The **Output Parameter** requires additional steps. Go to the **Test Steps** tab and click **Add**.
 
-7.  Add the _[Find/Assert Widget](/refguide-ats-1/findassert-widget)_ action and the _[Set Return Value](/refguide-ats-1/set-return-value)_ action.
+7.  Add the [Find/Assert Widget](../refguide-ats-1/findassert-widget) action and the [Set Return Value](../refguide-ats-1/set-return-value) action.
     
     ![](attachments/custom-action-basics/output-parameter-actions.png)
 
-8.  For ATS to return the outcome of a test step as **Output Parameter** it needs to know what it must return. ATS returns the **Value** connected to the _Set Return Value_ action. Now connect the outcome of test step 1 to the _Set Return Value_ action.
+8.  For ATS to return the outcome of a test step as **Output Parameter** it needs to know what it must return. ATS returns the **Value** connected to the **Set Return Value** action. Now connect the outcome of test step 1 to the _Set Return Value_ action.
     
     ![](attachments/custom-action-basics/set-return-value-parameter.png)
 
@@ -194,6 +193,4 @@ The following steps describe how to connect the input parameter.
     ![](attachments/custom-action-basics/action-input-parameter-edit.png)
 
 You now connected your input parameter.
-
-
  

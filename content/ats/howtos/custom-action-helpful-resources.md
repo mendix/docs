@@ -37,5 +37,5 @@ Keep in mind that Google Chrome is the browser used in these documents.
 | [jQuery Injector](https://chrome.google.com/webstore/detail/jquery-injector/ekkjohcjbjcjjifokpingdbdlfekjcgi) | This is a third-party extension for the Chrome brower. It enables you to inject jQuery into the page. Some pages don’t have jQuery or something goes wrong while loading.  |
 
 {{% alert type="info" %}}
-To get the ATS Helper and the ATS Recorder click on the information icon in ATS.
+To get the ATS Helper and the ATS Recorder, click the information icon in ATS.
 {{% /alert %}}

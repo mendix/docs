@@ -30,6 +30,8 @@ A node has a minimum of two environments: **production** and **acceptance**. A *
 ## Documents in This Category
 
 *   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
+*   [How to deploy a Mendix app on Amazon Web Services](how-to-deploy-a-mendix-app-on-amazon-web-services)
+*   [How to deploy a Mendix app on Azure](how-to-deploy-a-mendix-app-on-azure)
 *   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)
 *   [Java in the Cloud](java-in-the-cloud)
 *   [Restricting access for incoming requests](access-restrictions)

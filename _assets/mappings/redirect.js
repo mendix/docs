@@ -2204,11 +2204,11 @@ module.exports = {
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Amazon+Web+Services",
-      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
+      to: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-amazon-web-services"
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
-      to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
+      to: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure"
     },
     {
       from: "/mendixcloud/how-to-link-app-to-node",

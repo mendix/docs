@@ -13,7 +13,7 @@ A custom action is an action created by the user. The how-to's for creating cust
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read [Guidelines for Creating a Custom Action](/bestpractices/guidelines-custom-action)
+* Read [Guidelines for Creating a Custom Action](../bestpractices/guidelines-custom-action)
 
 ## 3 Combined Actions
 
@@ -38,15 +38,15 @@ There are two ways of making a combined action:
 
 The steps in a Mendix app:
 
-![](/howtos/attachments/custom-action-general/general-definition/combined-action-app-steps.png)
+![](attachments/custom-action-general/general-definition/combined-action-app-steps.png)
 
 The steps in ATS:
 
-![](/howtos/attachments/custom-action-general/general-definition/combined-action-ats-steps.png)
+![](attachments/custom-action-general/general-definition/combined-action-ats-steps.png)
 
 The combined action:
 
-![](/howtos/attachments/custom-action-general/general-definition/combined-action-ats-newexpense-action.png)
+![](attachments/custom-action-general/general-definition/combined-action-ats-newexpense-action.png)
 
 ### 2.2 Summary
 
@@ -70,15 +70,15 @@ Follow the guidelines bekiw for building a custom action to create an unsupporte
 
 The widget in a Mendix app:
 
-![](/howtos/attachments/custom-action-general/general-definition/unsupported-widget-action-app-widget.png)
+![](attachments/custom-action-general/general-definition/unsupported-widget-action-app-widget.png)
 
 The steps in ATS:
 
-![](/howtos/attachments/custom-action-general/general-definition/unsupported-widget-action-ats-steps.png)
+![](attachments/custom-action-general/general-definition/unsupported-widget-action-ats-steps.png)
 
 The unsupported widget action:
 
-![](/howtos/attachments/custom-action-general/general-definition/unsupported-widget-action-ats-switch-action.png)
+![](attachments/custom-action-general/general-definition/unsupported-widget-action-ats-switch-action.png)
 
 
 ### 3.3 Summary
@@ -94,21 +94,21 @@ The unsupported widget action:
 
 Sometimes an app has a lot of widgets with the same *mx-name*, but ATS always finds the first result. To overcome this, you need to create a search context action. All Mendix actions have an input parameter called **Search Context**. The search context action finds an element that a Mendix/core action can use.
 
-The focus is on finding an element that you can use to find the widget. The [find/assert widget](/refguide-ats-1/findassert-widget) action is a great example for a search context action.
+The focus is on finding an element that you can use to find the widget. The [find/assert widget](../refguide-ats-1/findassert-widget) action is a great example for a search context action.
 
 ### 4.2 Example
 
 An element in a Mendix app:
 
-![](/howtos/attachments/custom-action-general/general-definition/searchcontext-action-listview-app.png)
+![](attachments/custom-action-general/general-definition/searchcontext-action-listview-app.png)
 
 The steps in ATS:
 
-![](/howtos/attachments/custom-action-general/general-definition/searchcontext-action-listview-ats-steps.png)
+![](attachments/custom-action-general/general-definition/searchcontext-action-listview-ats-steps.png)
 
 The search context action:
 
-![](/howtos/attachments/custom-action-general/general-definition/searchcontext-action-listview-ats-searchcontext-action.png)
+![](attachments/custom-action-general/general-definition/searchcontext-action-listview-ats-searchcontext-action.png)
 
 ### 4.3 Summary
 
@@ -131,11 +131,11 @@ Function actions distinguish themselves from other actions by their purpose. If 
 
 The steps in ATS:
 
-![](/howtos/attachments/custom-action-general/general-definition/function-action-ats-teststeps.png)
+![](attachments/custom-action-general/general-definition/function-action-ats-teststeps.png)
 
 The function action:
 
-![](/howtos/attachments/custom-action-general/general-definition/function-action-ats-function-action.png)
+![](attachments/custom-action-general/general-definition/function-action-ats-function-action.png)
 
 ### 5.3 Summary
 

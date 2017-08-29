@@ -9,4 +9,3 @@ All the necessary information for the create-custom-action how-to's is found her
 * [Prerequisites for How-To's](custom-action-prerequisites)
 * [Structure for How-To's](custom-action-howto-structure)
 * [Helpful Resources](custom-action-helpful-resources)
-* [Custom Action App](custom-action-app)

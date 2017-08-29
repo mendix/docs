@@ -43,6 +43,6 @@ Mendix is compatible with all known versions of Cloud Foundry as long as there a
 The how-to's below describe deploying Mendix apps to specific Cloud Foundry-powered platforms: 
 
 * [How to Deploy a Mendix App to Pivotal](deploy-a-mendix-app-to-pivotal)
-* [How to Deploy a Mendix App to IBM Bluemix](/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix)
+* [How to Deploy a Mendix App to IBM Bluemix](/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix)
 
 These how-to's focus on graphical interfaces. For command line instructions, see the [GitHub page of our BuildPack](https://github.com/mendix/cf-mendix-buildpack).

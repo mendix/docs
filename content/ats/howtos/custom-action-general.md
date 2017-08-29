@@ -3,11 +3,10 @@ title: "General"
 parent: "create-custom-actions"
 ---
 
-All necessary information regarding the 'Create custom actions' how-to's is found here:
+All the necessary information for the create-custom-action how-to's is found here:
 
 * [Definitions](custom-action-definitions)
-* [How-to Prerequisites](custom-action-prerequisites)
-* [How-to Structure](custom-action-howto-structure)
+* [Prerequisites for the How-To's](custom-action-prerequisites)
+* [Structure for the How-To's](custom-action-howto-structure)
 * [Helpful Resources](custom-action-helpful-resources)
-* [The Custom Action App](custom-action-app)
-
+* [Custom Action App](custom-action-app)

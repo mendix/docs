@@ -1,6 +1,6 @@
 ---
 title: "Set Up Mendix SQL Maintenance Plans"
-category: "On-Premises"
+category: "On-Premises Deployment"
 ---
 
 ## 1 Introduction

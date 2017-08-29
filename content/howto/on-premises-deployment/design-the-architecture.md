@@ -1,6 +1,6 @@
 ---
 title: "Design the Architecture"
-category: "On-Premises"
+category: "On-Premises Deployment"
 ---
 
 ## 1 Introduction

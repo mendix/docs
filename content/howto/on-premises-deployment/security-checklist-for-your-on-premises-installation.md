@@ -1,6 +1,6 @@
 ---
 title: "Implement Security for Your On-Premises Installation"
-category: "On-Premises"
+category: "On-Premises Deployment"
 tags: []
 ---
 
@@ -19,6 +19,7 @@ This how-to serves as a checklist for implementing security for your on-premises
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
+* Browse the [On-Premises Deployment How-To's](https://docs.mendix.com/howto6/on-premises-deployment)
 * Use a Mendix version containing the latest security patches
     * If your app runs in the Mendix Cloud and uses Mendix version 3.3.3, 4.3.0, or higher, it will automatically comply with this checklist once it is deployed
 

@@ -1,5 +1,5 @@
 ---
-title: "How-To Structure"
+title: "Structure for How-To's"
 parent: "custom-action-general"
 description: "Explains the general structure of the how-to's for creating custom actions."
 tags: ["ATS", "testing"]

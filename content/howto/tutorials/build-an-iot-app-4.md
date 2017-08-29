@@ -87,7 +87,7 @@ To add the cargo type pages, follow these steps:
 26. Drag the **DataAdministrationMenu** snippet (from the **Step 4** folder) into the right-side of the page to make it consistent with the other pages.
 27. Click the **New** button on the page and in the **Properties** pane, change the **Button style** to **Success** so that it is in line with the styling on the other pages.
 28. Click the **Description** input field in the right-side column and in the **Properties** pane, change **Show label** to **No**.
-29. Save the changes, click **Run Locally**, then click **View App**.
+29. Save the changes, click **Run Locally**, then click **View**.
 30. Refresh the browser and navigate to the **Cargo Types** page.
 31. No items are found, but now you are able to click **New** and edit a cargo type.
 32. Add the **Description** of *Bananas*, set the **Temperature threshold** to *10.00*, and set **Has temperature threshold** to **Yes**. You will now see the **Bananas** cargo type you just created in the list.
@@ -107,7 +107,7 @@ To improve the look and feel of this page, follow these steps:
     ![](attachments/build-an-iot-app/select-page.png)
 
 6. Right-click the avatar in the left-side column and select **Select image**. Enter *cargo* for the filter and select **cargotypes_black**.
-7. Save the changes, click **Run Locally**, then click **View App**.
+7. Save the changes, click **Run Locally**, then click **View**.
 8. Observe the changes in the app.
 
 Looks better, right?
@@ -123,7 +123,7 @@ To add a new input to the page, follow these steps:
 1. Select the **Shipment_NewEdit** page (from the **Step 4.3** folder).
 2. Select the area below the **Cargo value** input.
 3. In the **Connector** pane, double-click **Shipment_CargoType** and select **CargoType** > **Description**.
-4. Save the changes, click **Run Locally**, then click **View App**.
+4. Save the changes, click **Run Locally**, then click **View**.
 5. In the app, choose the **Shipments** page from the right-side menu.
 6. Click **Edit** for the **TK124097987** shipment.
 7. In the new **Cargo type** field in the **Shipment** editor, select **Bananas** from the drop-down menu, then click **Save**.

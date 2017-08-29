@@ -39,15 +39,3 @@ By default the title of the page is determined by the page title property of the
 This feature allows you to re-use the same page for the New and Edit buttons of a data grid. By simply setting the titles to, for example, 'New customer' and 'Edit customer', you can save yourself the trouble of duplicating the rest of the page.
 
 {{% /alert %}}
-
-### Location
-
-Location defines how the page is shown.
-
-| Option | Description |
-| --- | --- |
-| In content | The page replaces the existing top-level page. |
-| Pop-up | The page is opened in a new dialog on top of the existing page(s). |
-| Blocking pop-up | The page is opened in a new dialog on top of the existing page(s) and a hover, that makes it impossible to navigate to another page, is put on top of the underlying page(s). |
-
-_Default value:_ Pop-up

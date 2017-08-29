@@ -64,7 +64,7 @@ To deploy your app to the Mendix Cloud so that others can view and test it, foll
 
     ![](attachments/18448672/18580884.png)
 
-2. Click **View App** to open the app in your browser:
+2. Click **View** to open the app in your browser:
 
     ![](attachments/18448672/18580885.png)
 

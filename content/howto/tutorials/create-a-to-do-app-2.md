@@ -67,12 +67,9 @@ Users also need to be able to add new to-do's to the list, that's why you're goi
 
 7. Run the app locally. Click **Save and continue** if you did not save your page(s) yet.
 8. Click **Yes** to create a default database if this is asked.
-9. Open the **View App** dropdown and select **View Hybrid Mobile App**.
-10. Select the **Profile** profile and click the iPhone form factor for **Preview in browser**.
+9. Open the **View** drop-down menu and select **Hybrid Phone Mobile App**.
 
-    ![](attachments/create-a-to-do-app/todo-05.jpg)
-
-This is an easy way to see your app. There is also a way to simulate the touch behavior of a user on a mobile device. This is explained later on in this how-to.
+This is an easy way to see your app. There is also a way to simulate the touch behavior of a user on a mobile device. This is explained later in step 4 of this how-to.
 
 ![](attachments/create-a-to-do-app/todo-06.jpg)
 

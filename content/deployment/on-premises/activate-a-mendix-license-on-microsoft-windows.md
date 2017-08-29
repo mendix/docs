@@ -1,6 +1,6 @@
 ---
 title: "Activate a Mendix License on Microsoft Windows"
-category: "On-Premises Deployment"
+category: "On-Premises"
 tags: ["license", "Windows", "on-premises", "Mendix Service Console"]
 ---
 

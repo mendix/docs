@@ -26,7 +26,7 @@ Before starting with this how-to, please make sure you have completed the follow
 
 ## 3 Upgrade Steps for a Sandbox Environment
 
-If your app has a sandbox environment linked to it, you should follow these steps:
+If your app has a sandbox environment linked to it, you should follow the steps below.
 
 ### 3.1 Download a Backup
 

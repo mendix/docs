@@ -71,4 +71,4 @@ To install the ATS Recorder, follow these steps:
 
     ![](attachments/install-ats-helper-recorder/add-ats-recorder.png)
 
-You can now use the ATS Recorder. For more information, see [How to Create a Test case Using the Recorder].
+You can now use the ATS Recorder.

@@ -33,12 +33,16 @@ A company admin can perform the following actions on the **Company Admins** tab:
 
 * Add/edit/remove a company admin
 
+For more information, see [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles).
+
 ## 4 Company Settings
 
 A company admin can perform the following actions on the **Company Settings** tab:
 
 * Change the password expiration settings
 * View the company email domains
+
+For more information, see [How to Change the Password Expiration](/developerportal/howto/password-expiration).
 
 ## 5 Launchpad Settings
 

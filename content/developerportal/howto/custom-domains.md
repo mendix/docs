@@ -31,6 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     * What an SSL/TLS private key is and what it is used for
     * What a certificate request is and what it is used for
 * Have a basic knowledge of certificate authorities (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, Comodo)
+* Have the correct permissions. For more information, see [Security-Node Permissions](/developerportal/settings/node-permissions).
 
 ### 2.2 Domain Registrar/DNS Provider<a name="DNS"></a>
 
@@ -191,6 +192,8 @@ An intermediate certificate chain chain could look like this from top to bottom:
 
 ## 9 Related Content
 
-* [Deploy](/developerportal/deploy)
+* [Certificates](/refguide/certificates)
+* [Environments](/developerportal/deploy/environments)
 * [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
 * [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
+* [Roles Within the Company and Apps](/developerportal/general/roles).

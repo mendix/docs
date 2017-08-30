@@ -39,7 +39,6 @@ The Mendix Business server executes the model you create in the Modeler. The ser
 
 * [Java Programming](java-programming)
 * [Runtime](runtime)
-* [Deployment](deployment)
 
 **Client**
 

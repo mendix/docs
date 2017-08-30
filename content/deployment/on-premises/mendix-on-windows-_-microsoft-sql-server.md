@@ -1,6 +1,6 @@
 ---
 title: "Mendix on Windows – Microsoft SQL Server"
-category: "On-Premises Deployment"
+category: "On-Premises"
 tags: []
 ---
 

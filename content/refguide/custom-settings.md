@@ -188,12 +188,3 @@ The following settings influence the behavior of the Mendix web client.
 | PhoneUserAgentRegEx | Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a phone. The regular expression is matched against the User-Agent header sent by the client's web browser. | Android. *Mobile (iPhone, iPod, BlackBerry) |
 | TabletUserAgentRegEx | Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a tablet. The regular expression is matched against the User-Agent header sent by the client's web browser. | Android, iPad |
 | com.mendix.webui.HybridAppLoginTimeOut | Determines how many minutes your token will remain valid before re-authenticating using your full credentials. This setting defaults to -1, which is equal to no timeout. | -1 |
-
-## Default login behaviour
-
-A user is blocked after 3 consecutive bad logon attempts, regardless of the time between the login attempts. The failed login count is reset after a successful login attempt or when a blocked user is unblocked. Users are unblocked each time the cluster manager runs, at this time the failed login count is also reset to 0. By default the cluster manager runs every 5 minutes. This interval can be changed using the [custom setting](https://docs.mendix.com/refguide/custom-settings#custom-settings) `ClusterManagerActionInterval`. 
-
-Important note here is that the cluster manager is doing more than unblocking users, for example it also removes expired sessions, so changing this interval has a broader impact. 
-Another aspect is that if a user is blocked just 1 second before the cluster manager starts to unblock all blocked users, the lock is removed after 1 second.
-
-Login behaviour can be customised by implementing a custom Java action and registering it to be used instead of the default Login action. Clustermananger behavior currently cannot be changed at the moment.

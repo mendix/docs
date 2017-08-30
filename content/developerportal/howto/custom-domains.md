@@ -31,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     * What an SSL/TLS private key is and what it is used for
     * What a certificate request is and what it is used for
 * Have a basic knowledge of certificate authorities (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, Comodo)
-* Have the correct permissions. For more information, see [Security-Node Permissions](/developerportal/settings/node-permissions).
+* Have the correct permissions (for more information, see [Security-Node Permissions](/developerportal/settings/node-permissions))
 
 ### 2.2 Domain Registrar/DNS Provider<a name="DNS"></a>
 

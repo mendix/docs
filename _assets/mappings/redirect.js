@@ -2304,11 +2304,27 @@ module.exports = {
     },
     {
       from: "/mxsupport/Technical+Contact+Definition",
-      to: "/developerportal/settings/technical-contact"
+      to: "/developerportal/general/technical-contact"
     },
  {
       from: "/mxsupport/technical-contact",
-      to: "/developerportal/settings/technical-contact"
+      to: "/developerportal/general/technical-contact"
+    },
+    {
+      from: "/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account",
+      to: "/developerportal/howto/deactivate-users"
+    },
+    /****************************************************
+     * DEVELOPER PORTAL
+     ****************************************************/
+
+    {
+      from: "/developerportal/settings/technical-contact",
+      to: "/developerportal/general/technical-contact"
+    },
+    {
+      from: "/developerportal/operate/mendix-cloud-status",
+      to: "/developerportal/general/mendix-cloud-status"
     },
     /****************************************************
      * REFERENCE GUIDE MENDIX 4

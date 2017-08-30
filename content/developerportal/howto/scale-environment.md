@@ -1,6 +1,6 @@
 ---
 title: "Scaling Your Environment in Mendix Cloud v4"
-category: "Deploy"
+category: "How-To's"
 description: "Describes how to scale your environments in Mendix Cloud v4."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 ---
@@ -44,7 +44,7 @@ The scaling options on possible cloud versions are the following:
 
 If you want to scale your licensed app in Mendix Cloud v4, follow these steps:
 
-1. Go to the [Mendix Portal](http://home.mendix.com) and select your licensed app.
+1. Go to the [Developer Portal](http://home.mendix.com) and select your licensed app.
 2. Click **Environments**.
 3. Click **Details** for a selected environment.
 4. Set the amount of **Instances** from 1 to 4 by dragging the scroller from the left side to the right side of the screen.
@@ -72,7 +72,12 @@ For example, you can use one instance and store 4GB of RAM in there. The other 1
 
 ## 5 Related Content
 
+* [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [Deploy](/developerportal/deploy)
-* [Environments](/developerportal/deploy/environments)
+* [Environment Details](/developerportal/deploy/environments-details)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [Mendix Cloud](/howtogeneral/mendixcloud/)
 * [Mendix Cloud v4 - FAQ](/howtogeneral/mendixcloud/mxcloudv4)
-* [Migrate to Mendix Cloud v4](/howtogeneral/mendixcloud/migrating-to-v4)
+* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Security - Node Permissions](/developerportal/settings/node-permissions) 
+* [Technical Contact](/developerportal/general/technical-contact)

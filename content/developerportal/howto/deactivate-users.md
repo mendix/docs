@@ -7,9 +7,12 @@ tags: ["Profile","Company Admin","Developer Portal","Account","Deactivate"]
 
 ## 1 Introduction
 
-For security reasons, deactivating the Mendix profile of an employee leaving your company is recommended.
-
+For security reasons, deactivating the Mendix profile of an employee that is leaving your company is recommended.
 If the employee returns to your company, the Mendix profile can be activated again. 
+
+{{% alert type="info" %}}
+If a Mendix user moves to another company or comes from another company that is also using Mendix, the user can **merge their old Mendix account(s)** into the new Mendix account. This action combines all the hard-earned points, certifications, and achievements in the user's efforts to climb the leaderboards.
+{{% /alert %}}
 
 **This how-to will teach you how to do the following:**
 
@@ -21,8 +24,16 @@ If the employee returns to your company, the Mendix profile can be activated aga
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have the **Company Admin** role in your Mendix company (for more information, see [Company Admin](/developerportal/companyadmin))
+* Before deactivating a user, make sure the following points are true for the user:
+    * Does not have a **Company Contact** role
+    * Does not have an **App Contact** role
+    * Does not have a **Technical Contact** role
+    * Is not the only **SCRUM Master** in any App Teams
+    * Is not involved in unsolved support tickets at [Mendix Support](https://support.mendix.com)
 
-## 3 Company Admin Settings
+For more information, see [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles) and [Roles Within the Company and Apps](/developerportal/general/roles).
+
+## 3 Company Admin User Settings
 
 To manage the users in your company, follow these steps:
 
@@ -64,8 +75,13 @@ Follow these steps to activate an inactive user:
 3.  Select the inactive user and click **Activate / Deactivate user**.
 4.  In the pop-up window that appears, click **Activate accounts**.         
 
-    ![](attachments/companyadmin/activate-user.png)
+    ![](attachments/companyadmin/activate-user.png) 
 
 ## 4 Related Content
 
-* [How to Activate or Deactivate Your Mendix Account](/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account)
+* [Company Admin](/developerportal/companyadmin)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Set Up Your Community Profile](/community/tools/how-to-set-up-your-profile)
+* [Mendix Support](/howtogeneral/support)
+* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Technical Contact](/developerportal/general/technical-contact)

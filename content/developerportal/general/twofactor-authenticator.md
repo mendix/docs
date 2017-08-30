@@ -44,5 +44,7 @@ Team members with **App Team – Deploy Permissions** are authorized to have nod
 For more information, see [Security – Node Permissions](/developerportal/settings/node-permissions).
 
 ## 6 Related Content
- 
-*   [Settings](/developerportal/settings)
+
+* [Deploy](/developerportal/deploy)
+* [Settings](/developerportal/settings)
+* [Technical Contact](/developerportal/general/technical-contact)

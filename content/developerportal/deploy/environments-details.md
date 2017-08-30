@@ -38,7 +38,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 * The **Database Status** is **Running** by default
 * **Database Version** – the PostgreSQL version that is supporting the database
 * **Region** - the region where the app is hosted
-* **Mendix Cloud Version** – Mendix Cloud v3/Mendix Cloud v4
+* **Mendix Cloud Version** – Mendix Cloud v3/Mendix Cloud v4 (for more information, see [Mendix Cloud V4 - FAQ](/howtogeneral/mendixcloud/mxcloudv4))
 
 ### 2.1 Actions
 
@@ -166,7 +166,7 @@ You can perform the following actions:
 * **Edit**
 * **Delete**
 
-For more information, see [Certificates](/refguide/certificates) and [How to Configure Custom Domains](/developerportal/howto/custom-domains).
+For more information, see [Certificates](/refguide/certificates) and how to [How to Configure Custom Domains](/developerportal/howto/custom-domains).
 
 ### 4.2 Prevent Embedding Your App in an IFrame
 
@@ -254,7 +254,7 @@ There are two types of maintenance:
 * Regular weekly maintenance (which does not affect your app), during which you can change the preferred maintenance window
 * Planned maintenance (which will affect your app in some ways), during which you will automatically receive an email about this and you can override the maintenance window
 
-For more information about maintenance, see [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows).
+For more information about maintenance, see how to [Configure Maintenance Windows](/developerportal/howto/maintenance-windows).
 
 ### 7.1 Preferred Maintenance Window
 
@@ -265,3 +265,9 @@ You can view and change the preferred maintenance.
 When a maintenance operation is planned, it will show up under **Planned Maintenance**. By default, this will be planned in your preferred maintenance window. You can override the maintenance window of a specific maintenance operation by clicking **Override**.
 
 You will automatically receive **email notifications** about planned maintenance.
+
+## 8 Related Content
+
+* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
+* [How to Restrict Access for Incoming Requests](/howtogeneral/mendixcloud/access-restrictions)
+

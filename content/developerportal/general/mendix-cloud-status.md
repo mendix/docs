@@ -23,4 +23,4 @@ Subscribomg for updates from this site is recommended. You will be informed abou
 * [Mendix Support](/howtogeneral/support)
 * [Operate](/developerportal/operate)
 * [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [How to View the Mendix Cloud Version and Region](/developerportal/general/cloud-version-region)
+* [How to View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region)

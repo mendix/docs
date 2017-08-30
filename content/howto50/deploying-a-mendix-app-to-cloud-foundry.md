@@ -3,7 +3,7 @@ title: "Deploying a Mendix App to Cloud Foundry"
 category: "Cloud Foundry"
 ---
 
-[![](attachments/18448647/19398951.png)](/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix)
+[![](attachments/18448647/19398951.png)](/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix)
 [![](attachments/18448647/19398954.png)](deploying-a-mendix-app-to-pivotal)
 
 Cloud Foundry is an Open Source Platform-as-a-Service that can run all kinds of web applications. Its technical highlights are:
@@ -38,4 +38,4 @@ This guide focuses on graphical interfaces, command line instructions can be fou
 
 ## Select a Cloud Foundry guide
 
-[![](attachments/18448647/18580546.png)](deploying-a-mendix-app-to-pivotal)  [![](attachments/18448647/19398955.png)](/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix)
+[![](attachments/18448647/18580546.png)](deploying-a-mendix-app-to-pivotal)  [![](attachments/18448647/19398955.png)](/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix)

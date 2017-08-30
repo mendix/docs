@@ -1750,15 +1750,15 @@ module.exports = {
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
     },
     {
       from: "/howto6/deploying+a+mendix+app+to+ibm+bluemix",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+Pivotal",
-      to: "/howto6/deploy-a-mendix-app-to-pivotal"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal"
     },
     {
       from: "/howto6/Deploy+Mendix+on+Microsoft+Windows",
@@ -2173,11 +2173,11 @@ module.exports = {
     },
 	{
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
 	{
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
     /****************************************************
      * Mendix Cloud

@@ -1,6 +1,6 @@
 ---
 title: "How to deploy a Mendix app on Amazon Web Services"
-category: "Mendix Cloud"
+category: "Amazon Web Services"
 ---
 
 Mendix is now available in the Amazon marketplace as an App that can run on a virtual server in the cloud. This means you can run your own Mendix server for an hour, day, week, or even a year, and gives you full control over the environment. This how-to will guide you through a couple of simple steps to get your Mendix app up and running.
@@ -93,7 +93,7 @@ To upload the deployment package to the instance you need SFTP access. Keep your
     For the hostname you'll have to go back to AWS.
 4.  Open the AWS EC2 Console: [http://console.aws.amazon.com/ec2/](http://console.aws.amazon.com/ec2/).
 5.  Go to **Instances**.
-    ![](attachments/18448700/18581248.png) 
+    ![](attachments/18448700/18581248.png)
 6.  Select the instance you launched in the previous section.
 7.  From the pane below, copy the **Public DNS address**:
     ![](attachments/18448700/18581247.png)
@@ -115,7 +115,7 @@ To upload the deployment package to the instance you need SFTP access. Keep your
 18.  Click **Save** to save this configuration. Give it a recognizable name:
     ![](attachments/18448700/18581267.png)
 19.  Select the site in the left pane and click **Login**.
-    ![](attachments/18448700/18581240.png) 
+    ![](attachments/18448700/18581240.png)
 20.  Click **Yes** to add the server and host key to a cache.
 21.  On the remote server browse to **/srv/app/data/model-upload/**.
 22.  On your computer browse to the **releases** folder of the app you want to deploy.
@@ -128,7 +128,7 @@ To upload the deployment package to the instance you need SFTP access. Keep your
 Now that the deployment package is in place you can deploy it on the instance. You'll use PuTTY to connect to the instance with SSH.
 
 1.  Open **PuTTY**.
-2.  In the **Host Name** field type **admin@**. 
+2.  In the **Host Name** field type **admin@**.
 3.  Add the **Public DNS address** behind the admin@ part. This is the same address you used for WinSCP.
     ![](attachments/18448700/18581265.png)
 4.  Enter a name in the **Saved Sessions** field and click **Save**.
@@ -137,7 +137,7 @@ Now that the deployment package is in place you can deploy it on the instance. Y
 6.  Click **Browse** and select your saved private key.
     ![](attachments/18448700/18581243.png)
 7.  Click **Open** and click **Yes** when you receive the security message.
-    You now have SSH access to the AWS instance. 
+    You now have SSH access to the AWS instance.
 8.  In the console type **m2ee**. This will allow you to configure a Mendix app.
 9.  Execute the following command:
 
@@ -165,7 +165,7 @@ Now that the deployment package is in place you can deploy it on the instance. Y
     m2ee(admin): create_admin_user
     ```
 
-15. Enter a new password for the user. It needs to be at least 8 characters. The app can now be accessed through the browser. 
+15. Enter a new password for the user. It needs to be at least 8 characters. The app can now be accessed through the browser.
 
 ## 5\. Accessing the App
 
@@ -176,7 +176,7 @@ The Mendix instance on AWS is now fully configured and ready for use. Let's try 
 
 **Congratulations! You have deployed a Mendix app on Amazon Web Services.**
 
-![](attachments/18448700/18581241.png) 
+![](attachments/18448700/18581241.png)
 
 ## 6\. Read more
 

@@ -1,6 +1,6 @@
 ---
 title: "How to deploy a Mendix app on Azure"
-category: "Mendix Cloud"
+category: "Azure"
 ---
 # How to deploy a Mendix app on Azure
 
@@ -51,7 +51,7 @@ The first thing to do when you want to run a Mendix instance on Azure is adding 
 
 9.  **Create** a **Username** that is not MxAdmin.
 
-10.  Select or Create a **Resource Group** for the VM. 
+10.  Select or Create a **Resource Group** for the VM.
 
 11.  Select **OK.**
 
@@ -60,7 +60,7 @@ The first thing to do when you want to run a Mendix instance on Azure is adding 
 
 13.  Click **Select**.
 
-14.  You can use the default settings. 
+14.  You can use the default settings.
 
 15.  Click **Ok**.
 
@@ -99,7 +99,7 @@ To upload the deployment package to the instance you need SFTP access.
 
 1.  Open **WinSCP**.
 2.  Select **New Site** on the left:
-    ![](attachments/19202584/19398859.png) 
+    ![](attachments/19202584/19398859.png)
 3.  Select **SFTP** as File protocol.
 
     For the hostname/IP you'll have to go back to Azure.
@@ -110,14 +110,14 @@ To upload the deployment package to the instance you need SFTP access.
 
 6.  Select the instance you launched in the previous section.
 7.  From the pane below, copy the **Public IP address**:
-    ![](attachments/19202584/19398861.png) 
+    ![](attachments/19202584/19398861.png)
 
 8.  Go back to WinSCP and paste the Public IP address on the **Host name** field.
 9.  Fill in the created username and password.
-10.  Click **Login**. 
+10.  Click **Login**.
 11.  Click **Yes** to add the server and host key to a cache.
 12.  On your computer, browse to the **releases** folder of the app you want to deploy.
-    ![](attachments/19202584/19398862.png) 
+    ![](attachments/19202584/19398862.png)
 13.  **Upload the deployment package** to the user’s home folder on the server.
 
 ## 4\. Running the image for the first time
@@ -125,10 +125,10 @@ To upload the deployment package to the instance you need SFTP access.
 To be sure the image is fully up to date with the latest patches, follow the below steps.
 
 1.  Open **PuTTY**.
-2.  In the **Host Name** field type **the public IP of the instance**. 
+2.  In the **Host Name** field type **the public IP of the instance**.
 3.  Click **Open** and click **Yes** when you receive the security message.
 
-    You now have SSH access to the Azure instance. 
+    You now have SSH access to the Azure instance.
 4.  Execute below commands:
 
     ```java
@@ -147,10 +147,10 @@ To be sure the image is fully up to date with the latest patches, follow the bel
 Now that the deployment package is in place you can deploy it on the instance. You'll use PuTTY to connect to the instance with SSH.
 
 1.  Open **PuTTY**.
-2.  In the **Host Name** field type **the public IP of the instance**. 
+2.  In the **Host Name** field type **the public IP of the instance**.
 3.  Click **Open** and click **Yes** when you receive the security message.
 
-    You now have SSH access to the Azure instance. 
+    You now have SSH access to the Azure instance.
 4.  Before you start, switch to the MxAdmin user with the following command:
 
     ```java
@@ -199,7 +199,7 @@ Now that the deployment package is in place you can deploy it on the instance. Y
 
 14. Enter a new password for the user. It needs to be at least 8 characters.
 
-**The app can now be accessed through the browser.** 
+**The app can now be accessed through the browser.**
 
 ## 6\. Accessing the App
 
@@ -207,7 +207,7 @@ The Mendix instance on Azure is now fully configured and ready for use. Let's tr
 
 1.  Open a browser and enter the **Public DNS/IP address** in the address bar.
 
-    The browser will load the page over HTTP by default. The app is also accessible over HTTPS. Simply add https:// before the Public DNS. Alternatively, you can also use the Public IP. 
+    The browser will load the page over HTTP by default. The app is also accessible over HTTPS. Simply add https:// before the Public DNS. Alternatively, you can also use the Public IP.
 
 2.  Login with **MxAdmin** and your admin **password**.
 

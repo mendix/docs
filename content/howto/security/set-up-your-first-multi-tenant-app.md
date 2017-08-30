@@ -89,7 +89,7 @@ Next to adjusting your project security and implementing the AppStore module the
 
 ### 4.1 Security
 
-A way to start with protecting the data of an app you know that you can set your access rules on entity level. In a multi-tenant app, it is required to add an Xpath constraint to your access rule that constraints your data to your tenant. In this way, you prevent tenants from seeing information of other tenants. You can see an example of this in figure 5.
+The way to start protecting the data of your app is to set access rules on the entities in your domain model. In a multi-tenant app, it is required to add an Xpath constraint to your access rule. This constraints your data to your tenant. In this way, you prevent tenants from seeing information of other tenants. You can see this in an example in figure 5.
 
 ![Figure 4: Tenant related entity – Task](attachments/set-up-your-first-multi-tenant-app/03_TenantEntities.png)
 
@@ -101,4 +101,4 @@ _Figure 5: Access rule for Tenant related entity_
 
 ### 4.2 Performance
 
-When you are building an app, you can create complex domain model structures. When entities are referenced over numerous entities to your Tenant entity you can imagine that your Xpath will become quite large. This will result in large SQL queries which will cost performance.
+When you are building an app, you can find yourself in creating complex domain model structures. When an entity is referenced via numerous entities to your Tenant entity you can imagine that your Xpath will become quite large. This will result in large SQL queries which will cost performance. A solution for this can be to add an additional reference directly between your entity and the Tenant entity. This way you can limit your Xpath to this path and it will boost your performance.

@@ -1,13 +1,13 @@
 ---
 title: "General Settings"
 category: "Settings"
-description: "This page describes general settings of your App."
+description: "This page describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
 ---
 
 ## 1 Introduction
 
-In **General** there is an overview about the App:
+In **General** there is an overview about the app:
 
 *   App name
 *   Description
@@ -25,8 +25,8 @@ Note that only the Technical Contact can grant other members with the Technical 
 
 There are two actions you can take:
 
-*   Edit the App by clicking **Edit settings**
-*   Leave the App by clicking **Leave app**
+*   Edit the app by clicking **Edit settings**
+*   Leave the app by clicking **Leave app**
 
 ### 1.1 Edit Settings
 
@@ -54,7 +54,7 @@ If you click **Leave App**, you will be removed from the App. If you are the las
 
 {{% alert type="info" %}}
 
-Note that you cannot leave the App if you are the **Technical Contact** of the App.
+Note that you cannot leave the App if you are the **Technical Contact** of the app.
 
 {{% /alert %}}
 

@@ -23,5 +23,5 @@ If a user is blocked just 1 second before the cluster manager starts to unblock 
 
 Login behavior can be customized by implementing a custom Java action and registering it to be used instead of the default login action.
 
-Cluster mananger behavior currently cannot be changed.
+Cluster manager behavior currently cannot be changed.
 

@@ -3242,10 +3242,6 @@ module.exports = {
       to: "/refguide4/style"
     },
     {
-      from: "/refguide4/Summary",
-      to: "/howto40/sap-integration"
-    },
-    {
       from: "/refguide4/System+Requirements",
       to: "/refguide4/system-requirements"
     },
@@ -4832,10 +4828,6 @@ module.exports = {
     {
       from: "/refguide5/Style",
       to: "/refguide5/style"
-    },
-    {
-      from: "/refguide5/Summary",
-      to: "/refguide5/summary"
     },
     {
       from: "/refguide5/System+Requirements",
@@ -6486,10 +6478,6 @@ module.exports = {
       to: "/refguide6/style"
     },
     {
-      from: "/refguide6/Summary",
-      to: "/refguide6/summary"
-    },
-    {
       from: "/refguide6/Sync+button",
       to: "/refguide6/sync-button"
     },
@@ -8047,10 +8035,6 @@ module.exports = {
     {
       "from": "/refguide7/Style",
       "to": "/refguide/style"
-    },
-    {
-      "from": "/refguide7/Summary",
-      "to": "/refguide/summary"
     },
     {
       "from": "/refguide7/System+Requirements",

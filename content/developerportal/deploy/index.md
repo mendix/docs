@@ -54,5 +54,5 @@ For more details, see [App Services](app-services).
 * [How to Configure Custom Domains](/developerportal/howto/custom-domains)
 * [How to Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud)
 * [Mendix Cloud Status](/developerportal/general/mendix-cloud-status)
-* [Mendix Cloud V4 - FAQ](/howtogeneral/mendixcloud/mxcloudv4)
-* [How to View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region)
+* [Mendix Cloud V4 - FAQ](/deployment/mendixcloud/mxcloudv4)
+* [How to View the Mendix Cloud Version and Region](/developerportal/general/cloud-version-region)

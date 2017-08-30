@@ -77,15 +77,15 @@ An administrator can view all synchronized user roles and set the grantable role
 
 ### 3.3 Tenant management
 
-The next step is to manage the tenants. This is offered to the administrator role and is straightforward functionality.
+The next step is to manage the tenants. This is a function that is offered to the administrator role and consists out of the standard CRUD access.
 
 ### 3.4 Tenant user management
 
-Now that we have user roles and tenants, we can create users for the tenants. This feature is available for administrators and tenant administrators. This way the administrator can create at least one user for each tenant and this user can create then more users for their own tenant. Default we use the email address as a username. This is done to overcome the usage of the same username for different tenants.
+Now that we have user roles and tenants, we can create users for the tenants. This feature is available for administrators and tenant administrators. This way the administrator can create at least one user for each tenant and this user can create then more users for their own tenant. Default we use the email address as a username. This is done to overcome a duplicate username error due to the situation where different tenants would like to use the same username.
 
 ## 4 Other challenges
 
-Next to adjusting your project security and implementing the AppStore module there are several other challenges.
+Next to adjusting your project security and implementing the AppStore module there are several other challenges you might come across.
 
 ### 4.1 Security
 

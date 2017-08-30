@@ -11,6 +11,8 @@ In **Stories**, you are able to manage sprints, stories, and labels.
 
 ![](attachments/stories.jpg)
 
+For more information, see [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix).
+
 ## 2 Actions
 
 Above the stories, you can find the following action buttons:
@@ -18,14 +20,14 @@ Above the stories, you can find the following action buttons:
 * **New story** – add a new story
 * **New sprint** – add a new sprint
 * **Move to** – move the selected story to a different sprint
-* **Label** – use existing labels or create a new one for the selected story
+* **Label** – use existing labels or create a new label for the selected story
 * **More**
    * **Delete selection** – delete the selected story
-   * **Complete current sprint** – all stories have to be **Done** before completing the current sprint 
+   * **Complete current sprint** – complete the current sprint; all stories have to be **Done** before completing the current sprint 
    * **Import / Export** – import/export to Excel
    * **Manage labels** – rename, merge, or delete a label
    * **Manage story template** – create and edit default tasks that you can add as a task to every new story
-   * **History** – show the details of a story and revert changes
+   * **History** – show the details of a story and/or revert changes
 
 ### 2.1 New Story
 
@@ -85,8 +87,5 @@ It is possible to filter on the following:
 
 ## 4 Related Content
 
-* [App Buzz](/developerportal/collaborate/appbuzz)
-* [Collaborate](/developerportal/collaborate)
-* [Develop](/developerportal/develop)
 * [Feedback](/developerportal/collaborate/feedback)
-* [Team](/developerportal/collaborate/team)
+* [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)

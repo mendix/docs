@@ -15,7 +15,7 @@ To view the **Trends** you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
 
-Note that only the [Technical Contact](../settings/technical-contact) is allowed to grand the node permissions.
+Note that only the [Technical Contact](../general/technical-contact) is allowed to grand the node permissions.
 
 {{% /alert %}}
 

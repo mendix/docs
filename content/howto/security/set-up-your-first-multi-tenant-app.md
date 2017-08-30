@@ -8,9 +8,9 @@ title: "Set up your first multi-tenant app"
 
 ## 1 Introduction
 
-Are you thinking about making your app multi-tenant and not sure how to start or unsure what considerations you might come across? Read this how-to and get started with your first multi-tenant app!
+Are you thinking about making your app multi-tenant and not sure how to start or unsure what challenges you might come across? Read this how-to and get started with your first multi-tenant app!
 
-It might not seem that complex to build a multi-tenant app but there are several things you want to know to ensure that you are building a secure and performing app for your customer.
+It might not seem that complex to build a multi-tenant app but there are several best practices you want to know to ensure that you are building a secure and performing app for your customer.
 
 After reading this reference guide you will know how to setup your multi-tenant app, what considerations there are while developing the app and you know that there is a module in the Mendix AppStore that allows you to manage your tenants and their users. Let’s start with having a look at the project security!
 
@@ -83,11 +83,11 @@ The next step is to manage the tenants. This is offered to the administrator rol
 
 Now that we have user roles and tenants, we can create users for the tenants. This feature is available for administrators and tenant administrators. This way the administrator can create at least one user for each tenant and this user can create then more users for their own tenant. Default we use the email address as a username. This is done to overcome the usage of the same username for different tenants.
 
-## 4 Other considerations
+## 4 Other challenges
 
-Next to adjusting your project security and implementing the AppStore module there are a number of other considerations.
+Next to adjusting your project security and implementing the AppStore module there are several other challenges.
 
-### 4.1 Access rules
+### 4.1 Security
 
 A way to start with protecting the data of an app you know that you can set your access rules on entity level. In a multi-tenant app, it is required to add an Xpath constraint to your access rule that constraints your data to your tenant. In this way, you prevent tenants from seeing information of other tenants. You can see an example of this in figure 5.
 

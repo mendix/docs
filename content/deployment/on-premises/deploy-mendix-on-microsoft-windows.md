@@ -1,6 +1,6 @@
 ---
 title: "Deploy Mendix on Microsoft Windows"
-category: "On-Premises Deployment"
+category: "On-Premises"
 tags: []
 ---
 
@@ -274,6 +274,6 @@ To make sure the correct application root URL is used within your web services, 
 
 ## 7 Related Content
 
-* [How to Build a Simple HRM App](../tutorials/build-a-simple-hrm-app)
-* [How to Create and Deploy Your First App](../modeling-basics/create-and-deploy-your-first-app)
-* [How to Test Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)
+* [How to Build a Simple HRM App](/howto/tutorials/build-a-simple-hrm-app)
+* [How to Create and Deploy Your First App](/howto/modeling-basics/create-and-deploy-your-first-app)
+* [How to Test Microflows Using the UnitTesting Module](/howto/testing/testing-microflows-using-the-unittesting-module)

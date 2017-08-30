@@ -4,7 +4,7 @@ title: "Settings"
 
 ## 1 Introduction
 
-The **Settings** category focuses on managing your app. Here you can see the basic app information and edit it. You can also manage the app team and node permissions and create API keys.
+The **Settings** category focuses on managing your app settings. Here you can see the basic app information and edit it. You can also manage the app team and node permissions and create API keys.
 
 Follow these steps to find the **Settings** category:
 
@@ -76,9 +76,14 @@ For more information, see [API Keys](/developerportal/settings/api-key).
 
 ## 5 Related Content
 
-*  [API Keys](/developerportal/settings/api-key) settings
-*  [General](/developerportal/settings/general-settings) settings
-*  [Roles Within the Company and Apps](/developerportal/general/roles)
-*  [Security-Node](/developerportal/settings/node-permissions) settings
-*  [Three Ways to Leave Your App](/developerportal/general/leave-app)
-*  [Technical Contact](/developerportal/settings/technical-contact)
+* [Company Admin](/developerportal/companyadmin)
+* [How to Change Password Expiration](/developerportal/howto/password-expiration)
+* [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
+* [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
+* [How to Delete, Deactivate and Activate Apps](/developerportal/howto/delete-apps)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
+* [Mendix Profile](/developerportal/general/mendixprofile)
+* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Three Ways to Leave Your App](/developerportal/general/leave-app)
+* [Technical Contact](/developerportal/general/technical-contact)

@@ -25,7 +25,7 @@ The runtime logs activity at different levels. You can read more about logging a
 ## Main Documents in This Category
 
 * [Clustered Mendix Runtime](clustered-mendix-runtime)
-* [Custom Settings](custom-settings)
+* [Customization](custom-settings)
 * [Data Storage](data-storage)
 * [DateTime Handling FAQ](datetime-handling-faq)
 * [Logging](logging)

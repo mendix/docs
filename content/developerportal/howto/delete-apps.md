@@ -1,6 +1,6 @@
 ---
 title: "Delete, Deactivate and Activate Apps"
-category: "General"
+category: "How-to's"
 description: "Describes how to deactivate and activate users in the Developer Portal."
 tags: ["App","Company Admin","Developer Portal","SCRUM Master","Deactivate"]
 ---
@@ -110,4 +110,6 @@ To delete an app, follow these steps:
 ## 5 Related Content
 
 * [Company Admin](/developerportal/companyadmin)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [Roles Within the Company and Apps](/developerportal/general/roles)
 * [Settings](/developerportal/settings)

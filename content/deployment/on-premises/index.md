@@ -2,6 +2,8 @@
 title: "On-Premises"
 ---
 
+## 1 Introduction
+
 Learn how to deploy your app on your own hardware.
 
 ## Documents in This Category
@@ -20,6 +22,6 @@ Learn how to deploy your app on your own hardware.
     * [How to Set Up Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
     * [How to Restore a SQL Server Database](restoring-a-sql-server-database)
     * [How to Set Up a SQL Server User](setting-up-a-sql-server-user)
-        * [How to Set Up the Database User](setting-up-the-database-user)
+    * [How to Set Up the Database User](setting-up-the-database-user)
     * [How to Troubleshoot an SQL Server](troubleshooting-sql-server)
 * [How to Set Up Monitoring with New Relic](setting-up-monitoring-with-new-relic)

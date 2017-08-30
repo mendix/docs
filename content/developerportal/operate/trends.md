@@ -15,7 +15,7 @@ To view the **Trends** you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
 
-Note that only the [Technical Contact](../settings/technical-contact) is allowed to grand the node permissions.
+Note that only the [Technical Contact](../general/technical-contact) is allowed to grand the node permissions.
 
 {{% /alert %}}
 
@@ -163,7 +163,7 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 ## 6 Related content
 
 *   [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
-*   [How to deploy a Mendix app on Azure](/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure)
+*   [How to deploy a Mendix app on Azure](/deployment/azure/how-to-deploy-a-mendix-app-on-azure)
 *   [How to Deploy to the Mendix Cloud](../howto/deploying-to-the-cloud)
 *   [Sending Email](/deployment/mendixcloud/sending-email)
 *   [Alerts](monitoring-application-health)

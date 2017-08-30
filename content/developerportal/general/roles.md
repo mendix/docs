@@ -9,7 +9,7 @@ tags: ["Company","Admin","MxID","Developer Portal","Role","Permissions"]
 
 In order to use Mendix, you must sign up to create an account. With this signup you create a MxID, and this ID will be linked to a company. If the company already exists, you will join the company. If it is a new company, a new company will be created and you will automatically join it.
 
-To make changes to the roles, see [Add a Company Admin and Change the App Roles](/developerportal/howto/change-roles).
+To make changes to the roles, see [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles).
 
 The roles defined within a company and the company's apps are described below.
 
@@ -101,7 +101,7 @@ Only the Technical Contact is allowed to do the following:
 * Manage licenses (renewals/activation/upgrades)
 * Configure alert settings
 
-For more information, see [Technical Contact](/developerportal/settings/technical-contact).
+For more information, see [Technical Contact](/developerportal/general/technical-contact).
 
 ## 4 Team Member Roles
 
@@ -141,3 +141,13 @@ Product Owner | The product owner of the Scrum team who is responsible for manag
 Scrum Master | The Scrum Master of the agile App Team. In addition to contributing to development, the Scrum Master manages all the settings within the app. If you create a new app, you will automatically become the Scrum Master.
 
 For more information, see [Settings](/developerportal/settings) and [Security – Node Permissions](/developerportal/settings/node-permissions).
+
+## 5 Related Content
+
+* [Company Admin](/developerportal/companyadmin)
+* [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
+* [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [Mendix Profile](mendixprofile)
+* [Settings](/developerportal/settings)
+* [Technical Contact](technical-contact)

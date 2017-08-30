@@ -1750,15 +1750,15 @@ module.exports = {
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
     },
     {
       from: "/howto6/deploying+a+mendix+app+to+ibm+bluemix",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+Pivotal",
-      to: "/howto6/deploy-a-mendix-app-to-pivotal"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal"
     },
     {
       from: "/howto6/Deploy+Mendix+on+Microsoft+Windows",
@@ -2173,11 +2173,11 @@ module.exports = {
     },
 	{
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
 	{
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
     /****************************************************
      * Mendix Cloud
@@ -2204,11 +2204,11 @@ module.exports = {
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Amazon+Web+Services",
-      to: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-amazon-web-services"
+      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
-      to: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure"
+      to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
     },
     {
       from: "/mendixcloud/how-to-link-app-to-node",
@@ -2300,11 +2300,27 @@ module.exports = {
     },
     {
       from: "/mxsupport/Technical+Contact+Definition",
-      to: "/developerportal/settings/technical-contact"
+      to: "/developerportal/general/technical-contact"
     },
  {
       from: "/mxsupport/technical-contact",
-      to: "/developerportal/settings/technical-contact"
+      to: "/developerportal/general/technical-contact"
+    },
+    {
+      from: "/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account",
+      to: "/developerportal/howto/deactivate-users"
+    },
+    /****************************************************
+     * DEVELOPER PORTAL
+     ****************************************************/
+
+    {
+      from: "/developerportal/settings/technical-contact",
+      to: "/developerportal/general/technical-contact"
+    },
+    {
+      from: "/developerportal/operate/mendix-cloud-status",
+      to: "/developerportal/general/mendix-cloud-status"
     },
     /****************************************************
      * REFERENCE GUIDE MENDIX 4
@@ -3240,10 +3256,6 @@ module.exports = {
     {
       from: "/refguide4/Style",
       to: "/refguide4/style"
-    },
-    {
-      from: "/refguide4/Summary",
-      to: "/howto40/sap-integration"
     },
     {
       from: "/refguide4/System+Requirements",
@@ -4832,10 +4844,6 @@ module.exports = {
     {
       from: "/refguide5/Style",
       to: "/refguide5/style"
-    },
-    {
-      from: "/refguide5/Summary",
-      to: "/refguide5/summary"
     },
     {
       from: "/refguide5/System+Requirements",
@@ -6486,10 +6494,6 @@ module.exports = {
       to: "/refguide6/style"
     },
     {
-      from: "/refguide6/Summary",
-      to: "/refguide6/summary"
-    },
-    {
       from: "/refguide6/Sync+button",
       to: "/refguide6/sync-button"
     },
@@ -8047,10 +8051,6 @@ module.exports = {
     {
       "from": "/refguide7/Style",
       "to": "/refguide/style"
-    },
-    {
-      "from": "/refguide7/Summary",
-      "to": "/refguide/summary"
     },
     {
       "from": "/refguide7/System+Requirements",

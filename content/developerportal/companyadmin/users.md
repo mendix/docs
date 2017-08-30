@@ -23,6 +23,8 @@ A company admin can perform the following actions on the **Users** tab:
 * Activate/deactivate users
 * View active/inactive users
 
+For more information, see [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users).
+
 ## 3 Security Groups
 
 This tab lists the security groups that are defined for your company. Users who are assigned to security groups will automatically be granted access to specified AppCloud apps. Company admins can set up security groups and specific app permissions for security groups.

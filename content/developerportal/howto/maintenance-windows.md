@@ -15,7 +15,7 @@ In the Mendix Cloud you can define a Maintenance Window for all your application
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
-*   Have a Mendix Cloud application where you have transport, monitor, or backup access. For more information, see [Security - Node Permissions](/developerportal/settings/node-permissions)
+*   Have a Mendix Cloud application where you have transport, monitor, or backup access (for more information, see [Security - Node Permissions](/developerportal/settings/node-permissions))
 
 ## 2 Maintenance Operations
 
@@ -37,19 +37,19 @@ Your "Preferred Maintenance Windows" is a weekly time range where system mainten
     ![](attachments/general/myapps.png)
 
 3. Select the node that you want to configure by clicking **Details**.
-4. Click **Environments** under the **Deploy** category.
+4. Click **Environments** under the **Deploy** category:
 
     ![](attachments/deploy/deploy-scale.png)    
 
-3. Select the node of the environment that you want to configure.
+3. Select the node of the environment that you want to configure:
 
     ![](attachments/deploy/maintenance1.png)
 
-4. Click **Details** of the environment you want to configure.
+4. Click **Details** for the environment you want to configure:
 
     ![](attachments/deploy/maintenance2.png)
 
-5. Go to the **Maintenance** tab.
+5. Go to the **Maintenance** tab:
 
     ![](attachments/deploy/maintenance.png)
 

@@ -21,11 +21,11 @@ In our free tier, your app will go to sleep after a couple of minutes of inactiv
 
 ## Node
 
-A Free App can be upgraded to a licensed app with a node in the Mendix Cloud. A node has several environments and is hosted on Mendix Cloud V3 or Mendix Cloud V4. 
+A Free App can be upgraded to a licensed app with a node in the Mendix Cloud. A node has several environments and is hosted on **Mendix Cloud V3** or **Mendix Cloud V4**. 
 
 ## Environment
 
-A node has a minimum of two environments: production and acceptance. A test environment is the third optional environment. You can deploy your licensed app (that is linked to a node) to its environments.
+A node has a minimum of two environments: **production** and **acceptance**. A **test** environment is the third optional environment. You can deploy your licensed app (that is linked to a node) to its environments.
 
 ## Documents in This Category
 

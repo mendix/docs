@@ -163,9 +163,9 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 ## 6 Related content
 
 *   [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
-*   [How to deploy a Mendix app on Azure](/howtogeneral/mendixcloud/how-to-deploy-a-mendix-app-on-azure)
+*   [How to deploy a Mendix app on Azure](/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure)
 *   [How to Deploy to the Mendix Cloud](../howto/deploying-to-the-cloud)
-*   [Sending Email](/howtogeneral/mendixcloud/sending-email)
+*   [Sending Email](/deployment/mendixcloud/sending-email)
 *   [Alerts](monitoring-application-health)
-*   [Different user logins when integrated with Mendix SSO](/howtogeneral/mendixcloud/different-user-logins-when-integrated-with-mendix-sso)
-*   [Integrate your app with Mendix SSO](/howtogeneral/mendixcloud/integrate-your-app-with-mendix-sso)
+*   [Different user logins when integrated with Mendix SSO](/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso)
+*   [Integrate your app with Mendix SSO](/deployment/mendixcloud/integrate-your-app-with-mendix-sso)

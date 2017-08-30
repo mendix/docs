@@ -68,7 +68,7 @@ Your app is now running in Mendix Cloud v4. If you don't need the Mendix Cloud v
 
 # 4 Related content
 
-*   [Certificates](/refguide/certificates)
+*   [Certificates](/deployment/mendixcloud/certificates)
 *   [Create and Deploy Your First App](/howto/modeling-basics/create-and-deploy-your-first-app)
 *   [How to Configure Custom Domains](/developerportal/howto/custom-domains)
 *   [How to Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud)

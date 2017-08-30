@@ -24,9 +24,7 @@ An XML file always starts with the XML version and encoding declaration. These a
 | offlineCapable | This boolean determines whether your widget can be used on pages that are accessible through the offline profile. If this attribute is not set, or set to "false", the widget cannot be used offline. If set to "true", the widget can be used offline. Keep in mind that there are a number of restrictions when working offline. Calling a microflows or fetching data using XPath are examples of features that are not supported offline. For a comprehensive list of restrictions see [offline restrictions](offline). |
 | xmlns | The XML namespace used by the widget. The value of this attribute is the same for every widget. `<widget id="HelloWorld.widget.helloworld" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">` |
 
-#### 3.1.1 <a name="Widgets-XMLreferenceguide-id" rel="nofollow"></a>
-
-### 3.2 Child elements
+### 3.2 Child elements<a name="Widgets-XMLreferenceguide-id" rel="nofollow"></a>
 
 Inside the widget element are 4 child elements.
 
@@ -48,9 +46,7 @@ Inside the widget element are 4 child elements.
 </widget>
 ```
 
-#### 3.2.1 <a name="Widgets-XMLreferenceguide-Name" rel="nofollow"></a>
-
-## 4 Property element
+## 4 Property element<a name="Widgets-XMLreferenceguide-Name" rel="nofollow"></a>
 
 Any properties you define in your widget XML file can be set using the Mendix Modeler and they will be passed to your JavaScript file, so you can use them in your widget.
 
@@ -87,13 +83,12 @@ The different property types and their respective required attributes are discus
 
 ## <a name="Widgets-XMLreferenceguide-" rel="nofollow"></a>5 Property types
 
-{{% alert type="info" %}}
-
 Every property requires the  **key** and **type** attribute.
+
 Any property can have the  **isDefault**  or  **required**  attribute.
 
-Note that the **required** attribute defaults to "true".
-
+{{% alert type="info" %}}
+The **required** attribute defaults to "true".
 {{% /alert %}}
 
 ### 5.1 Attribute
@@ -228,7 +223,7 @@ The integer property lets you to pass an integer to the widget.  This property r
 </property>
 ```
 
-### c Microflow
+### 5.2.7 Microflow
 
 The Microflow property allows a user to select a microflow in the Mendix Modeler. There are 3 options:
 

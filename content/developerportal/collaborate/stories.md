@@ -23,7 +23,7 @@ Above the stories, you can find the following action buttons:
 * **Label** – use existing labels or create a new label for the selected story
 * **More**
    * **Delete selection** – delete the selected story
-   * **Complete current sprint** – complete the current sprint. All stories have to be **Done** before completing the current sprint 
+   * **Complete current sprint** – complete the current sprint; all stories have to be **Done** before completing the current sprint 
    * **Import / Export** – import/export to Excel
    * **Manage labels** – rename, merge, or delete a label
    * **Manage story template** – create and edit default tasks that you can add as a task to every new story

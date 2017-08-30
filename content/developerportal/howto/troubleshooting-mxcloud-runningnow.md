@@ -9,7 +9,7 @@ tags: ["App","Troubleshoot","Developer Portal","Running now","Mendix Cloud"]
 
 The **Running now** tab can be found on the **Metrics** page of your Cloud node. It can be used to monitor all actions that are currently running in your environment.
 
-## 2 About the "Running now" Tab in the Mendix Cloud
+## 2 The Running Now Tab in the Mendix Cloud
 
 It looks like this:
 

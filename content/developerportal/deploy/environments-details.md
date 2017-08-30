@@ -38,7 +38,7 @@ The view of the **General** tab depends on the Mendix Cloud version on which the
 * The **Database Status** is **Running** by default
 * **Database Version** – the PostgreSQL version that is supporting the database
 * **Region** - the region where the app is hosted
-* **Mendix Cloud Version** – Mendix Cloud v3/Mendix Cloud v4 (for more information, see [Mendix Cloud V4 - FAQ](/howtogeneral/mendixcloud/mxcloudv4))
+* **Mendix Cloud Version** – Mendix Cloud v3/Mendix Cloud v4 (for more information, see [Mendix Cloud V4 - FAQ](/deployment/mendixcloud/mxcloudv4))
 
 ### 2.1 Actions
 
@@ -53,7 +53,7 @@ On the right side of the screen, you can find the following action buttons:
 
 ![](attachments/actions-v3.png)
 
-In Mendix Cloud v3 environments, you can click **Enable/Disable Debugging** to enable or disable the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely)
+In Mendix Cloud v3 environments, you can click **Enable/Disable Debugging** to enable or disable the debugger option. For more information about enabling the debugger, see [How to Debug Microflows Remotely](/howto/monitoring-troubleshooting/debug-microflows-remotely)
 
 #### 2.1.2 Debugger in Mendix Cloud v4
 
@@ -166,7 +166,7 @@ You can perform the following actions:
 * **Edit**
 * **Delete**
 
-For more information, see [Certificates](/refguide/certificates) and how to [How to Configure Custom Domains](/developerportal/howto/custom-domains).
+For more information, see [Certificates](/deployment/mendixcloud/certificates) and how to [How to Configure Custom Domains](/developerportal/howto/custom-domains).
 
 ### 4.2 Prevent Embedding Your App in an IFrame
 
@@ -200,7 +200,7 @@ You can **Delete** a path or you can **Add** and **Edit** a path with the follow
 * Custom Profile for Client Certificates and/or IP ranges
 * N/A (inherit)
 
-For more information, see [How to Restrict Access for Incoming Requests](/howtogeneral/mendixcloud/access-restrictions).
+For more information, see [How to Restrict Access for Incoming Requests](/deployment/mendixcloud/access-restrictions).
 
 ### 4.4 Outgoing Connections Certificates
 
@@ -269,5 +269,5 @@ You will automatically receive **email notifications** about planned maintenance
 ## 8 Related Content
 
 * [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
-* [How to Restrict Access for Incoming Requests](/howtogeneral/mendixcloud/access-restrictions)
+* [How to Restrict Access for Incoming Requests](/deployment/mendixcloud/access-restrictions)
 

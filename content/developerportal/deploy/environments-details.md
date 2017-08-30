@@ -270,4 +270,3 @@ You will automatically receive **email notifications** about planned maintenance
 
 * [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
 * [How to Restrict Access for Incoming Requests](/deployment/mendixcloud/access-restrictions)
-

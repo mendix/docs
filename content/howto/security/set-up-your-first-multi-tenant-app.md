@@ -18,7 +18,7 @@ After reading this reference guide you will know how to setup your multi-tenant 
 
 In your multi-tenant app, you want to make a difference between user roles that transcend the multi-tenant part of the app (e.g. functional administrator & technical administrator) and those who don’t. This is due to the way how the Mendix platform combines the settings of the user management in your project security (See figure 2) and access rules on entities that are a specialization of the System.User entity.
 
-![Figure 1: Typical start situation of the project security for multi-tenant apps](attachments/00_TypicalProjectSecurity.png)
+![Figure 1: Typical start situation of the project security for multi-tenant apps](attachments/set-up-your-first-multi-tenant-app/00_TypicalProjectSecurity.png)
 
 _Figure 1: Typical start situation of the project security for multi-tenant apps_
 
@@ -28,7 +28,7 @@ The user roles that will be allocated to users that act as a tenant user shouldn
 Use the Administration module functions to manage users that transcend the tenant level and use the MultiTenantAdministration module from the Mendix AppStore to manage all users with tenant related user roles.
 {{% /alert %}}
 
-![Figure 2: Desired way of setting your user management for tenant related user roles](attachments/01_ConfigurationOfTenantAdmin.png)
+![Figure 2: Desired way of setting your user management for tenant related user roles](attachments/set-up-your-first-multi-tenant-app/01_ConfigurationOfTenantAdmin.png)
 
 _Figure 2: Desired way of setting your user management for tenant related user roles_
 
@@ -55,7 +55,7 @@ The ProjectUserRole entity is used for duplication of the System.Userrole instan
 The association ProjectUserRole_UserRole is 1-* due to the deprecation notice in Mendix 7.5.0 that says: ‘Cross-module association to the System module must have the Owner property set to Default’.
 {{% /alert %}}
 
-![Figure 3: Domain model of the multi-tenant administration module](attachments/02_MultiTenantAdministrationDomainModel.png)
+![Figure 3: Domain model of the multi-tenant administration module](attachments/set-up-your-first-multi-tenant-app/02_MultiTenantAdministrationDomainModel.png)
 
 _Figure 3: Domain model of the multi-tenant administration module_
 
@@ -91,11 +91,11 @@ Next to adjusting your project security and implementing the AppStore module the
 
 A way to start with protecting the data of an app you know that you can set your access rules on entity level. In a multi-tenant app, it is required to add an Xpath constraint to your access rule that constraints your data to your tenant. In this way, you prevent tenants from seeing information of other tenants. You can see an example of this in figure 5.
 
-![Figure 4: Tenant related entity – Task](attachments/03_TenantEntities.png)
+![Figure 4: Tenant related entity – Task](attachments/set-up-your-first-multi-tenant-app/03_TenantEntities.png)
 
 _Figure 4: Tenant related entity – Task_
 
-![Figure 5: Access rule for Tenant related entity](attachments/04_AccessRule.png)
+![Figure 5: Access rule for Tenant related entity](attachments/set-up-your-first-multi-tenant-app/04_AccessRule.png)
 
 _Figure 5: Access rule for Tenant related entity_
 

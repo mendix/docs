@@ -25,15 +25,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 To create a new App, follow these steps:
 
 1. Go to the [Developer Portal](https://home.mendix.com/) and log in (create an account [here](https://developers.mendix.com/start-for-free/) if you don't have one yet).
-2. Click **Create New App** in the top-left of the screen:
+2.  Click **Create New App** in the top-left of the screen:
 
     ![](attachments/general/create-app.png)
 
-3. Select a theme or sample app by clicking **View Details**.
+3.  Select a theme or sample app by clicking **View Details**.
 
     ![](attachments/general/view-details.png)
 
-4. Click **Use this app**:
+4.  Click **Use this app**:
 
     ![](attachments/general/use-app.png)
 
@@ -110,11 +110,11 @@ Stories are translated into tasks that need to be completed to finish the story.
 
 To add a task to the story, follow these steps:
 
-1. Select the story you created and click **Add task**:
+1.  Select the story you created and click **Add task**:
 
     ![](attachments/collaborate/story-actions.png)
 
-2. Enter *Add a list view of an employee's expenses*, and then click **Post task**:
+2.  Enter *Add a list view of an employee's expenses*, and then click **Post task**:
 
     ![](attachments/collaborate/18580506.png)
 
@@ -187,16 +187,16 @@ Besides entering your stories manually, you can import them easily with an Excel
 To import stories, follow these steps:
 
 1. Download this [example Excel](attachments/collaborate/18580488.xls).
-2. On the **Stories** page click **More** and click **Import/Export**.
+2.  On the **Stories** page click **More** and click **Import/Export**.
 
     ![](attachments/collaborate/more-button.png)
 
-3. Select **Update stories from Excel**:
+3.  Select **Update stories from Excel**:
 
     ![](attachments/collaborate/18580502.png)
 
 4. Click **Browse** to select the example Excel file that contains your user stories.
-5. Click **Import**, and then scroll to the bottom of the page and click **Next**:
+5.  Click **Import**, and then scroll to the bottom of the page and click **Next**:
 
     ![](attachments/collaborate/18580501.png)
 
@@ -204,14 +204,13 @@ To import stories, follow these steps:
 
     ![](attachments/collaborate/18580500.png)
 
-
 ## 8 Exporting Stories
 
 With Mendix, it’s always possible to export data from your application and from the database.
 
 To export sprints and stories, follow these steps:
 
-1. On the **Stories** page click **More** and click **Import/Export**.
+1.  On the **Stories** page click **More** and click **Import/Export**.
 
     ![](attachments/collaborate/more-button.png)
 

@@ -1,6 +1,6 @@
 ---
 title: "Scaling Your Environment in Mendix Cloud v4"
-category: "Deploy"
+category: "How-To's"
 description: "Describes how to scale your environments in Mendix Cloud v4."
 tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 ---
@@ -80,5 +80,5 @@ For example, you can use one instance and store 4GB of RAM in there. The other 1
 * [Mendix Cloud v4 - FAQ](/deployment/mendixcloud/mxcloudv4)
 * [How to Migrate to Mendix Cloud v4](/deployment/mendixcloud/migrating-to-v4)
 * [Roles within the Company and Apps](/developerportal/general/roles)
-* [Security - Node Permissions](/developerportal/settings-node-permissions)
+* [Security - Node Permissions](/developerportal/settings/node-permissions)
 * [Technical Contact](/developerportal/general/technical-contact)

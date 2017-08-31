@@ -162,10 +162,11 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 
 ## 6 Related content
 
-*   [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
-*   [How to deploy a Mendix app on Azure](/deployment/azure/how-to-deploy-a-mendix-app-on-azure)
-*   [How to Deploy to the Mendix Cloud](../howto/deploying-to-the-cloud)
-*   [Sending Email](/deployment/mendixcloud/sending-email)
-*   [Alerts](monitoring-application-health)
-*   [Different user logins when integrated with Mendix SSO](/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso)
-*   [Integrate your app with Mendix SSO](/deployment/mendixcloud/integrate-your-app-with-mendix-sso)
+* [Alerts](monitoring-application-health)
+* [Database Maintenance: Size Reduction](/howtogeneral/support/database-maintenance-size-reduction)
+* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
+* [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
+* [How to Migrate to Mendix Cloud v4](/deployment/mendixcloud/migrating-to-v4)
+* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
+* [How to View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region)
+* [Mendix Cloud v4 - FAQ](/deployment/mendixcloud/mxcloudv4)

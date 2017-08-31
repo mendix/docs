@@ -1,6 +1,6 @@
 ---
 title: "Manage Company Roles and App Roles"
-category: "How-to's"
+category: "How-To's"
 description: "This page describes how to add extra Company Admins and change the App Roles."
 tags: ["Company Admin","Company Contact","App Contact","Technical Contact","Node Permissions","App Team","Role","Developer Portal"]
 ---

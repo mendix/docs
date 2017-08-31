@@ -1095,7 +1095,7 @@ module.exports = {
     },
     {
       from: "/howto50/Architecture+Options",
-      to: "/deployment/on-premises/architecture-options"
+      to: "/deployment/on-premises/design-the-architecture"
     },
     {
       from: "/howto50/Build+a+simple+HRM+app+1+Create+manage+and+deploy+the+app",
@@ -1243,7 +1243,7 @@ module.exports = {
     },
     {
       from: "/howto50/Deploying+Mendix+on+Microsoft+Windows",
-      to: "/deployment/on-premises/deploying-mendix-on-microsoft-windows"
+      to: "/deployment/on-premises/deploy-mendix-on-microsoft-windows"
     },
     {
       from: "/howto50/Drag+Microflows+and+Pages+into+a+Microflow",
@@ -1415,7 +1415,7 @@ module.exports = {
     },
     {
       from: "/howto50/On+premises+Deployment",
-      to: "/deployment/on-premises/on-premises-deployment"
+      to: "/deployment/on-premises"
     },
     {
       from: "/howto50/Optimizing+Microflow+Aggregates",
@@ -1778,7 +1778,7 @@ module.exports = {
     },
     {
       from: "/howto6/Design+the+Architecture",
-      to: "/howto6/design-the-architecture"
+      to: "/deployment/on-premises/design-the-architecture"
     },
     {
       from: "/howto6/Architecture+Options",
@@ -1962,11 +1962,11 @@ module.exports = {
     },
     {
       from: "/howto6/On-premises+Deployment",
-      to: "/deployment/on-premises/on-premises-deployment"
+      to: "/deployment/on-premises"
     },
     {
       from: "/howto6/On+premises+Deployment",
-      to: "/deployment/on-premises/on-premises-deployment"
+      to: "/deployment/on-premises"
     },
     {
       from: "/howto6/Optimizing+Microflow+Aggregates",

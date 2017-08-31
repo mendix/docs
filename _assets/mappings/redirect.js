@@ -1386,10 +1386,6 @@ module.exports = {
       to: "/developerportal/howto/managing-your-application-requirements-with-mendix"
     },
     {
-      from: "/howto50/Mendix+Hosting+Enviroment+project+structure+and+commands",
-      to: "/howto50/mendix-hosting-enviroment-project-structure-and-commands"
-    },
-    {
       from: "/howto50/Mendix+on+Windows+-+Microsoft+SQL+Server",
       to: "/deployment/on-premises/mendix-on-windows-microsoft-sql-server"
     },
@@ -1412,10 +1408,6 @@ module.exports = {
     {
       from: "/howto50/Monitoring+Mendix+using+JMX",
       to: "/howto50/monitoring-mendix-using-jmx"
-    },
-    {
-      from: "/howto50/On+premises+Deployment",
-      to: "/deployment/on-premises"
     },
     {
       from: "/howto50/Optimizing+Microflow+Aggregates",
@@ -1959,14 +1951,6 @@ module.exports = {
     {
       from: "/howto6/monitoring+application+health",
       to: "/developerportal/operate/monitoring-application-health"
-    },
-    {
-      from: "/howto6/On-premises+Deployment",
-      to: "/deployment/on-premises"
-    },
-    {
-      from: "/howto6/On+premises+Deployment",
-      to: "/deployment/on-premises"
     },
     {
       from: "/howto6/Optimizing+Microflow+Aggregates",

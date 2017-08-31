@@ -4,6 +4,14 @@ title: "Platform Portal"
 
 ## 2017
 
+### August 30th, 2017
+
+#### Improvements
+
+* The user interface of the instance/memory slider for Cloud v4 has been improved considerably. Scaling will also appear in the activity log of the application.
+* For Mendix Cloud v4, we do no longer show the size of the archived log. The size we displayed previously was wrong.
+* The expiry date for Mendix Cloud backups is now visible in the backup list.
+
 ### August 22nd, 2017
 
 #### Improvements
@@ -14,7 +22,7 @@ title: "Platform Portal"
 
 #### Improvements
 
-* We enabled path-based access restrictions for all Mendix Cloud v3 apps. This allows users to more easily configure access restrictions on their environments. For more information, see [Access Restrictions](/howtogeneral/mendixcloud/access-restrictions). Mendix Cloud v4 already has this functionality enabled.
+* We enabled path-based access restrictions for all Mendix Cloud v3 apps. This allows users to more easily configure access restrictions on their environments. For more information, see [Access Restrictions](/deployment/mendixcloud/access-restrictions). Mendix Cloud v4 already has this functionality enabled.
 
 ### August 14th, 2017
 

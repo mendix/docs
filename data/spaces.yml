@@ -116,7 +116,6 @@ refguide4:
     - "Modeler"
     - "Runtime"
     - "Client"
-    - "Deployment"
     - "Java Programming"
     - "Release Notes"
     - "System Requirements"
@@ -135,7 +134,6 @@ refguide5:
     - "Modeler"
     - "Runtime"
     - "Java Programming"
-    - "Deployment"
     - "Mobile"
     - "Proactive Maintenance"
 refguide6:
@@ -149,7 +147,6 @@ refguide6:
     - "Modeler"
     - "Runtime"
     - "Java Programming"
-    - "Deployment"
     - "Mobile"
     - "Proactive Maintenance"
 refguide:
@@ -162,7 +159,6 @@ refguide:
     - "Modeler"
     - "Runtime"
     - "Java Programming"
-    - "Deployment"
     - "Mobile"
 howtogeneral:
   space: "General How-To's"
@@ -196,3 +192,12 @@ developerportal:
     - "Operate"
     - "Settings"
     - "How-To's"
+deployment:
+  space: "Deployment"
+  priority: false
+  menu_categories:
+    - "Amazon Web Services"
+    - "Azure"
+    - "Cloud Foundry"
+    - "Mendix Cloud"
+    - "On-Premises"

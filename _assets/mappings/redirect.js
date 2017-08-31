@@ -655,10 +655,6 @@ module.exports = {
       to: "/howto40/debugging-4.2-and-before"
     },
     {
-      from: "/howto40/Deployment",
-      to: "/howto40/deployment"
-    },
-    {
       from: "/howto40/Determine+contents+of+a+nested+data+view+by+microflow",
       to: "/howto40/determine-contents-of-a-nested-data-view-by-microflow"
     },
@@ -1754,15 +1750,15 @@ module.exports = {
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
     },
     {
       from: "/howto6/deploying+a+mendix+app+to+ibm+bluemix",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+Pivotal",
-      to: "/howto6/deploy-a-mendix-app-to-pivotal"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal"
     },
     {
       from: "/howto6/Deploy+Mendix+on+Microsoft+Windows",
@@ -2177,11 +2173,11 @@ module.exports = {
     },
 	{
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
 	{
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
     /****************************************************
      * Mendix Cloud
@@ -2204,15 +2200,15 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
-      to: "/howtogeneral/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
+      to: "/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Amazon+Web+Services",
-      to: "/howtogeneral/mendixcloud/how-to-deploy-a-mendix-app-on-amazon-web-services"
+      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
-      to: "/howtogeneral/mendixcloud/how-to-deploy-a-mendix-app-on-azure"
+      to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
     },
     {
       from: "/mendixcloud/how-to-link-app-to-node",
@@ -2220,19 +2216,19 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Mendix+Cloud",
-      to: "/howtogeneral/mendixcloud/"
+      to: "/deployment/mendixcloud/"
     },
     {
       from: "/mendixcloud/Mendix+Cloud+Home",
-      to: "/howtogeneral/mendixcloud/"
+      to: "/deployment/mendixcloud/"
     },
     {
       from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
-      to: "/howtogeneral/mendixcloud/integrate-your-app-with-mendix-sso"
+      to: "/deployment/mendixcloud/integrate-your-app-with-mendix-sso"
     },
     {
       from: "/mendixcloud/Java+in+the+Cloud",
-      to: "/howtogeneral/mendixcloud/java-in-the-cloud"
+      to: "/deployment/mendixcloud/java-in-the-cloud"
     },
     {
       from: "/mendixcloud/Maintenance+Windows",
@@ -2244,11 +2240,11 @@ module.exports = {
     },
     {
       from: "/mendixcloud/migrating+to+v4",
-      to: "/howtogeneral/mendixcloud/migrating-to-v4"
+      to: "/deployment/mendixcloud/migrating-to-v4"
     },
     {
       from: "/developerportal/howto/migrating-to-v4",
-      to: "/howtogeneral/mendixcloud/migrating-to-v4"
+      to: "/deployment/mendixcloud/migrating-to-v4"
     },
     {
       from: "/mendixcloud/Monitoring+application+health",
@@ -2260,15 +2256,15 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
-      to: "/howtogeneral/mendixcloud/securing-outgoing-connections-from-your-application"
+      to: "/deployment/mendixcloud/securing-outgoing-connections-from-your-application"
     },
     {
       from: "/mendixcloud/Security+constraints+in+the+Mendix+Cloud",
-      to: "/howtogeneral/mendixcloud/security-constraints-in-the-mendix-cloud"
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
     },
     {
       from: "/mendixcloud/Sending+Email",
-      to: "/howtogeneral/mendixcloud/sending-email"
+      to: "/deployment/mendixcloud/sending-email"
     },
     {
       from: "/mendixcloud/Trends",
@@ -2304,11 +2300,27 @@ module.exports = {
     },
     {
       from: "/mxsupport/Technical+Contact+Definition",
-      to: "/developerportal/settings/technical-contact"
+      to: "/developerportal/general/technical-contact"
     },
  {
       from: "/mxsupport/technical-contact",
-      to: "/developerportal/settings/technical-contact"
+      to: "/developerportal/general/technical-contact"
+    },
+    {
+      from: "/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account",
+      to: "/developerportal/howto/deactivate-users"
+    },
+    /****************************************************
+     * DEVELOPER PORTAL
+     ****************************************************/
+
+    {
+      from: "/developerportal/settings/technical-contact",
+      to: "/developerportal/general/technical-contact"
+    },
+    {
+      from: "/developerportal/operate/mendix-cloud-status",
+      to: "/developerportal/general/mendix-cloud-status"
     },
     /****************************************************
      * REFERENCE GUIDE MENDIX 4
@@ -2400,10 +2412,6 @@ module.exports = {
     {
       from: "/refguide4/Cast+Object",
       to: "/refguide4/cast-object"
-    },
-    {
-      from: "/refguide4/Certificates",
-      to: "/refguide4/certificates"
     },
     {
       from: "/refguide4/Change+List",
@@ -2572,10 +2580,6 @@ module.exports = {
     {
       from: "/refguide4/Deploy+To+The+Cloud+Dialog",
       to: "/refguide4/deploy-to-the-cloud-dialog"
-    },
-    {
-      from: "/refguide4/Deployment",
-      to: "/refguide4/deployment"
     },
     {
       from: "/refguide4/Deselect+All+Button",
@@ -3254,10 +3258,6 @@ module.exports = {
       to: "/refguide4/style"
     },
     {
-      from: "/refguide4/Summary",
-      to: "/howto40/sap-integration"
-    },
-    {
       from: "/refguide4/System+Requirements",
       to: "/refguide4/system-requirements"
     },
@@ -3324,10 +3324,6 @@ module.exports = {
     {
       from: "/refguide4/Trim+to+date",
       to: "/refguide4/trim-to-date"
-    },
-    {
-      from: "/refguide4/Two+Factor+Authentication",
-      to: "/refguide4/two-factor-authentication"
     },
     {
       from: "/refguide4/Unary+expressions",
@@ -3672,10 +3668,7 @@ module.exports = {
       from: "/refguide5/Cell+Document+Template",
       to: "/refguide5/cell-document-template"
     },
-    {
-      from: "/refguide5/Certificates",
-      to: "/refguide5/certificates"
-    },
+
     {
       from: "/refguide5/Change+List",
       to: "/refguide5/change-list"
@@ -3915,10 +3908,6 @@ module.exports = {
     {
       from: "/refguide5/Deploy+To+The+Cloud+Dialog",
       to: "/refguide5/deploy-to-the-cloud-dialog"
-    },
-    {
-      from: "/refguide5/Deployment",
-      to: "/refguide5/deployment"
     },
     {
       from: "/refguide5/Deselect+all+button",
@@ -4327,10 +4316,6 @@ module.exports = {
     {
       from: "/refguide5/Microflows",
       to: "/refguide5/microflows"
-    },
-    {
-      from: "/refguide5/Microsoft+SQL+Server+maintenance",
-      to: "/refguide5/microsoft-sql-server-maintenance"
     },
     {
       from: "/refguide5/Mobile",
@@ -4861,10 +4846,6 @@ module.exports = {
       to: "/refguide5/style"
     },
     {
-      from: "/refguide5/Summary",
-      to: "/refguide5/summary"
-    },
-    {
       from: "/refguide5/System+Requirements",
       to: "/refguide5/system-requirements"
     },
@@ -4959,10 +4940,6 @@ module.exports = {
     {
       from: "/refguide5/Troubleshooting",
       to: "/refguide5/troubleshooting"
-    },
-    {
-      from: "/refguide5/Two+Factor+Authentication",
-      to: "/refguide5/two-factor-authentication"
     },
     {
       from: "/refguide5/Unary+expressions",
@@ -5300,10 +5277,6 @@ module.exports = {
       to: "/refguide6/cell-document-template"
     },
     {
-      from: "/refguide6/Certificates",
-      to: "/refguide6/certificates"
-    },
-    {
       from: "/refguide6/Change+List",
       to: "/refguide6/change-list"
     },
@@ -5562,10 +5535,6 @@ module.exports = {
     {
       from: "/refguide6/Deploy+To+The+Cloud+Dialog",
       to: "/refguide6/deploy-to-the-cloud-dialog"
-    },
-    {
-      from: "/refguide6/Deployment",
-      to: "/refguide6/deployment"
     },
     {
       from: "/refguide6/Deselect+all+button",
@@ -5989,10 +5958,6 @@ module.exports = {
       to: "/refguide6/microflows"
     },
     {
-      from: "/refguide6/Microsoft+SQL+Server+maintenance",
-      to: "/refguide6/microsoft-sql-server-maintenance"
-    },
-    {
       from: "/refguide6/Mobile",
       to: "/refguide6/mobile"
     },
@@ -6035,10 +6000,6 @@ module.exports = {
     {
       from: "/refguide6/Moving+from+5+to+6",
       to: "/refguide6/moving-from-5-to-6"
-    },
-    {
-      from: "/refguide6/MxBuild",
-      to: "/refguide6/mxbuild"
     },
     {
       from: "/refguide6/MySQL",
@@ -6533,10 +6494,6 @@ module.exports = {
       to: "/refguide6/style"
     },
     {
-      from: "/refguide6/Summary",
-      to: "/refguide6/summary"
-    },
-    {
       from: "/refguide6/Sync+button",
       to: "/refguide6/sync-button"
     },
@@ -6635,10 +6592,6 @@ module.exports = {
     {
       from: "/refguide6/Troubleshooting",
       to: "/refguide6/troubleshooting"
-    },
-    {
-      from: "/refguide6/Two+Factor+Authentication",
-      to: "/refguide6/two-factor-authentication"
     },
     {
       from: "/refguide6/Unary+expressions",
@@ -6968,10 +6921,6 @@ module.exports = {
       "to": "/refguide/cell-document-template"
     },
     {
-      "from": "/refguide7/Certificates",
-      "to": "/refguide/certificates"
-    },
-    {
       "from": "/refguide7/Change+List",
       "to": "/refguide/change-list"
     },
@@ -7198,10 +7147,6 @@ module.exports = {
     {
       "from": "/refguide7/Deploy+To+The+Cloud+Dialog",
       "to": "/refguide/deploy-to-the-cloud-dialog"
-    },
-    {
-      "from": "/refguide7/Deployment",
-      "to": "/refguide/deployment"
     },
     {
       "from": "/refguide7/Deselect+all+button",
@@ -7600,10 +7545,6 @@ module.exports = {
       "to": "/refguide/microflows"
     },
     {
-      "from": "/refguide7/Microsoft+SQL+Server+maintenance",
-      "to": "/refguide/microsoft-sql-server-maintenance"
-    },
-    {
       "from": "/refguide7/Mobile",
       "to": "/refguide/mobile"
     },
@@ -7642,10 +7583,6 @@ module.exports = {
     {
       "from": "/refguide7/Moving+from+6+to+7",
       "to": "/refguide/moving-from-6-to-7"
-    },
-    {
-      "from": "/refguide7/MxBuild",
-      "to": "/refguide/mxbuild"
     },
     {
       "from": "/refguide7/MySQL",
@@ -8116,10 +8053,6 @@ module.exports = {
       "to": "/refguide/style"
     },
     {
-      "from": "/refguide7/Summary",
-      "to": "/refguide/summary"
-    },
-    {
       "from": "/refguide7/System+Requirements",
       "to": "/refguide/system-requirements"
     },
@@ -8214,10 +8147,6 @@ module.exports = {
     {
       "from": "/refguide7/Troubleshooting",
       "to": "/refguide/troubleshooting"
-    },
-    {
-      "from": "/refguide7/Two+Factor+Authentication",
-      "to": "/refguide/two-factor-authentication"
     },
     {
       "from": "/refguide7/Unary+expressions",

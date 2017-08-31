@@ -7,9 +7,9 @@ tags: ["Node","Permission","Developer Portal"]
 
 ## 1 Introduction
 
-Fine grained access management for your Mendix Cloud environments is handled in the **Node Security** tab under **Security**. Each team member can subscribe or unsubscribe to the alerts, and the **Technical Contact** can manage various permissions of each team member per environment.
+Fine grained access management for your Mendix Cloud environments is handled in the **Node Security** tab of the [Settings](/developerportal/settings) page under **Security**. Each team member can subscribe or unsubscribe to the alerts, and the [Technical Contact](/developerportal/general/technical-contact) can manage various permissions of each team member per environment.
 
-Learn more about [Settings](/developerportal/settings)
+Learn more about [Roles Within the Company and Apps](/developerportal/general/roles).
 
 {{% alert type="info" %}}
 
@@ -25,6 +25,9 @@ In this section you will learn about configuring the user roles and permissions 
 1.  Go to the [Developer Portal](http://home.mendix.com).
 2.  Click **Apps** in the top navigation panel.
 3.  Click **My Apps** and select **Nodes**.
+
+    ![](attachments/myapps.png)
+
 4.  Select the node.
 5.  Click **Security** in the left navigation panel.
 6.  Go to the **Node Permissions** tab.
@@ -88,9 +91,13 @@ The node permissions can be:
 
 With transport rights you can deploy new versions of the application to the node. You can create new deployment packages, stop and start the environment, and change configuration settings such as constants and scheduled events.
 
+For more information about deployment, see [How to Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud).
+
 ### 5.2 Access to Backups
 
 This permission grants access to the backups of the environment. You can view, [create](/developerportal/howto/how-to-create-backup), [download](/developerportal/howto/how-to-download-a-backup), and [restore a backup](/developerportal/howto/how-to-restore-a-backup).
+
+For more information, see [Backups](/developerportal/operate/backups).
 
 ### 5.3 Receive Alerts
 
@@ -104,13 +111,13 @@ With the API rights you can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-a
 
 With this permission you can view the application metrics, logs, and alerts under the **Operate** category in the [Developer Portal](http://home.mendix.com). This allows you to successfully operate your Mendix Cloud environments.
 
-For more information, see [Alerts](/developerportal/operate/monitoring-application-health)
+For more information, see [Metrics](/developerportal/operate/metrics).
 
 ## 6 Related Content
 
-*   [Alerts](/developerportal/operate/monitoring-application-health)
-*   [Backups](/developerportal/operate/backups)
-*   [Metrics](/developerportal/operate/metrics)
-*   [Logs](/developerportal/operate/logs)
-*   [Settings](/developerportal/settings)
-*   [Technical Contact](/developerportal/settings/technical-contact)
+* [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
+* [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
+* [Metrics](/developerportal/operate/metrics)
+* [Logs](/developerportal/operate/logs)

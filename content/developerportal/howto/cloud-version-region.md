@@ -1,6 +1,6 @@
 ---
 title: "View the Mendix Cloud Version and Region"
-category: "How-to's"
+category: "How-To's"
 description: "This page describes how view in which Mendix Cloud Version and Region your app is hosted."
 tags: ["Mendix Cloud Version","Mendix Cloud Region","Developer Portal"]
 ---
@@ -43,6 +43,12 @@ To view the Mendix Cloud region and version in which your app is hosted, follow 
 
 ## 4 Related Content
 
+* [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
+* [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
 * [Environment Details](/developerportal/deploy/environments-details)
-* [Mendix Cloud](/howtogeneral/mendixcloud/)
-* [Mendix Cloud v4 - FAQ](/howtogeneral/mendixcloud/mxcloudv4)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Migrate to Mendix Cloud v4](/deployment/mendixcloud/migrating-to-v4)
+* [Mendix Cloud](/deployment/mendixcloud/)
+* [Mendix Cloud v4 - FAQ](/deployment/mendixcloud/mxcloudv4)
+* [Roles within the Company and Apps](/developerportal/general/roles)
+* [Technical Contact](/developerportal/general/technical-contact)

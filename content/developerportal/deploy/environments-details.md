@@ -166,7 +166,7 @@ You can perform the following actions:
 * **Edit**
 * **Delete**
 
-For more information, see [Certificates](/refguide/certificates) and [How to Configure Custom Domains](/developerportal/howto/custom-domains).
+For more information, see [Certificates](/deployment/mendixcloud/certificates) and [How to Configure Custom Domains](/developerportal/howto/custom-domains).
 
 ### 4.2 Prevent Embedding Your App in an IFrame
 
@@ -200,7 +200,7 @@ You can **Delete** a path or you can **Add** and **Edit** a path with the follow
 * Custom Profile for Client Certificates and/or IP ranges
 * N/A (inherit)
 
-For more information, see [How to Restrict Access for Incoming Requests](/howtogeneral/mendixcloud/access-restrictions).
+For more information, see [How to Restrict Access for Incoming Requests](/deployment/mendixcloud/access-restrictions).
 
 ### 4.4 Outgoing Connections Certificates
 

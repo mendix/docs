@@ -1,6 +1,6 @@
 ---
 title: "Certificates"
-category: "Mendix Cloud"
+category: "Deployment"
 ---
 
 ## 1 Introduction

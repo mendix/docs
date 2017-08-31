@@ -14,9 +14,7 @@ When you click **Model** in the **Develop** category of the Developer Portal, yo
 
 ## 2 Desktop Modeler
 
-Use the powerful Mendix Desktop Modeler to rapidly build enterprise-ready business apps. In the Modeler, you can visually model your app UI, logic for your business rules, the domain model, and integrations with REST and other complex back-end services.
-
-When you click **Edit in Desktop Modeler**, the app will be opened in the Desktop Modeler.
+Use our powerful Desktop Modeler to rapidly build enterprise-ready business apps. Visually model your app’s domain model, UI, business logic, and integrations with 3rd party services & back-end systems. When you click **Edit in Desktop Modeler**, the app will be opened in the Desktop Modeler.
 
 ### 2.1 Help Me Get Started
 
@@ -36,6 +34,4 @@ At the bottom of the page, the **What's next** category presents the following o
 
 ## 3 Web Modeler
 
-You can quickly get started building your next smart app with the Web Modeler from the convenience of your web browser. Bootstrap your app with visual UI, business rules, and domain model editors. Integrate with back-end services through ready-made connectors.
-
-You will soon be able to click **Edit in Web Modeler** to open the app in the Web Modeler.
+Design beautiful apps with the Web Modeler. Leverage the integrated Atlas UI in the WYSIWYG page editor. Visually add your app’s domain model and business logic, from the convenience of your browser. Click Edit in Web Modeler to open the app in the Web Modeler (Atlas based apps only). 

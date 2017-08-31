@@ -4,7 +4,7 @@ category: "General"
 description: "Presents the system requirements for using the Mendix platform."
 ---
 
-## Modeler
+## Desktop Modeler
 
 The Mendix Modeler supports Windows 7, 8, and 10. It supports both 32-bit and 64-bit variations, but 64-bit is recommended.
 
@@ -30,6 +30,10 @@ The Team Server is implemented using Subversion and the Modeler uses the HTTPS p
 * The HTTPS port (TCP 443) needs to be open.
 * The HTTP port (TCP 80) needs to be open.
 * WebDAV - verbs within the HTTP protocol - needs to be enabled on the proxy server (if any).
+
+## WebModeler
+
+The Mendix Web Modeler is optimized for use with Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Firefox, Safari and Edge. Note: Any browser you use needs to have JavaScript turned on.
 
 ## Server
 

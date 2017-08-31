@@ -9,8 +9,8 @@ title: "Platform Portal"
 #### Improvements
 
 * The user interface of the instance/memory slider for Cloud v4 has been improved considerably. Scaling will also appear in the activity log of the application.
-* For Mendix Cloud v4, we do not show the size of the archived log anymore, the size we displayed previously was wrong
-* The expiry date for Mendix Cloud backups is now visible in the backup list
+* For Mendix Cloud v4, we do no longer show the size of the archived log. The size we displayed previously was wrong.
+* The expiry date for Mendix Cloud backups is now visible in the backup list.
 
 ### August 22nd, 2017
 

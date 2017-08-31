@@ -1602,7 +1602,7 @@ module.exports = {
     },
     {
       from: "/howto6/Activate+a+Mendix+License+on+Microsoft+Windows",
-      to: "/howto6/activate-a-mendix-license-on-microsoft-windows"
+      to: "/deployment/on-premises/activate-a-mendix-license-on-microsoft-windows"
     },
     {
       from: "/howto6/APIs",
@@ -1762,7 +1762,7 @@ module.exports = {
     },
     {
       from: "/howto6/Deploy+Mendix+on+Microsoft+Windows",
-      to: "/howto6/deploy-mendix-on-microsoft-windows"
+      to: "/deployment/on-premises/deploy-mendix-on-microsoft-windows"
     },
     {
       from: "/howto6/Deploy+your+first+Hybrid+Mobile+App",
@@ -1782,7 +1782,7 @@ module.exports = {
     },
     {
       from: "/howto6/Architecture+Options",
-      to: "/howto6/design-the-architecture"
+      to: "/deployment/on-premises/design-the-architecture"
     },
     {
       from: "/howto6/Detect+and+Resolve+Performance+Issues",
@@ -1862,7 +1862,7 @@ module.exports = {
     },
     {
       from: "/howto6/High+Availability",
-      to: "/howto6/high-availability"
+      to: "/deployment/on-premises/high-availability"
     },
     {
       from: "/howto6/How+To+Enable+WKWebView+for+Hybrid+App+for+iOS",
@@ -1894,11 +1894,11 @@ module.exports = {
     },
     {
       from: "/howto6/Installing+Mendix+on+Debian+GNU+Linux",
-      to: "/howto6/installing-mendix-on-debian-gnu-linux"
+      to: "/deployment/on-premises/installing-mendix-on-debian-gnu-linux"
     },
     {
       from: "/howto6/Installing+Mendix+on+RedHat+and+CentOS",
-      to: "/howto6/installing-mendix-on-redhat-and-centos"
+      to: "/deployment/on-premises/installing-mendix-on-redhat-and-centos"
     },
     {
       from: "/howto6/Integrating+a+Legacy+System+into+a+Mendix+App",
@@ -1938,11 +1938,11 @@ module.exports = {
     },
     {
       from: "/howto6/Mendix+on+Windows+-+Microsoft+SQL+Server",
-      to: "/howto6/mendix-on-windows-microsoft-sql-server"
+      to: "/deployment/on-premises/mendix-on-windows-microsoft-sql-server"
     },
     {
       from: "/howto6/Mendix+SQL+Maintenance+Plans",
-      to: "/howto6/mendix-sql-maintenance-plans"
+      to: "/deployment/on-premises/mendix-sql-maintenance-plans"
     },
     {
       from: "/howto6/Mobile",
@@ -1986,7 +1986,7 @@ module.exports = {
     },
     {
       from: "/howto6/Restoring+a+SQL+Server+database",
-      to: "/howto6/restoring-a-sql-server-database"
+      to: "/deployment/on-premises/restoring-a-sql-server-database"
     },
     {
       from: "/howto6/Scaffold+a+widget+with+the+Yeoman+Widget+generator",
@@ -2002,7 +2002,7 @@ module.exports = {
     },
     {
       from: "/howto6/Security+checklist+for+your+on+premises+installation",
-      to: "/howto6/security-checklist-for-your-on-premises-installation"
+      to: "/deployment/on-premises/security-checklist-for-your-on-premises-installation"
     },
     {
       from: "/howto6/Selenium+Support",
@@ -2018,11 +2018,11 @@ module.exports = {
     },
     {
       from: "/howto6/Setting+up+a+new+SQL+Server+database",
-      to: "/howto6/setting-up-a-new-sql-server-database"
+      to: "/deployment/on-premises/setting-up-a-new-sql-server-database"
     },
     {
       from: "/howto6/Setting+up+a+SQL+Server+user",
-      to: "/howto6/setting-up-a-sql-server-user"
+      to: "/deployment/on-premises/setting-up-a-sql-server-user"
     },
     {
       from: "/howto6/Setting+up+Apple+Push+Notification+Server",
@@ -2038,11 +2038,11 @@ module.exports = {
     },
     {
       from: "/howto6/Setting+up+monitoring+with+New+Relic",
-      to: "/howto6/setting-up-monitoring-with-new-relic"
+      to: "/deployment/on-premises/setting-up-monitoring-with-new-relic"
     },
     {
       from: "/howto6/Setting+up+the+database+user",
-      to: "/howto6/setting-up-the-database-user"
+      to: "/deployment/on-premises/setting-up-the-database-user"
     },
     {
       from: "/howto6/Setting+Up+the+Navigation+Structure",
@@ -2126,7 +2126,7 @@ module.exports = {
     },
     {
       from: "/howto6/Updating+a+Mendix+Application",
-      to: "/howto6/updating-a-mendix-application"
+      to: "/deployment/on-premises/updating-a-mendix-application"
     },
     {
       from: "/howto6/Use+Connectors+and+Adapters",

@@ -1770,7 +1770,7 @@ module.exports = {
     },
     {
       from: "/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/howto6/deploying-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/deploying-a-mendix-app-to-cloud-foundry"
     },
     {
       from: "/howto6/deploying+to+the+cloud",

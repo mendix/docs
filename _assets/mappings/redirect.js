@@ -1235,7 +1235,7 @@ module.exports = {
     },
     {
       from: "/howto50/Deploying+a+Mendix+App+to+Pivotal",
-      to: "/deployment/cloud-foundry/deploying-a-mendix-app-to-pivotal"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal"
     },
     {
       from: "/howto50/Deploying+Mendix+on+Microsoft+Windows",
@@ -1766,7 +1766,7 @@ module.exports = {
     },
     {
       from: "/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/deployment/cloud-foundry/deploying-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
     {
       from: "/howto6/deploying+to+the+cloud",

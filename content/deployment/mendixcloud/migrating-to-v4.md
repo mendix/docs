@@ -66,7 +66,7 @@ Learn how to [Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-th
 
 Your app is now running in Mendix Cloud v4. If you don't need the Mendix Cloud v3 node, submit a request with [Mendix Support](https://support.mendix.com) to offboard the v3 node.
 
-# 4 Related content
+## 4 Related content
 
 *   [Certificates](/deployment/mendixcloud/certificates)
 *   [Create and Deploy Your First App](/howto/modeling-basics/create-and-deploy-your-first-app)

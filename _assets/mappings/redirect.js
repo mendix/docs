@@ -1095,7 +1095,7 @@ module.exports = {
     },
     {
       from: "/howto50/Architecture+Options",
-      to: "/howto50/architecture-options"
+      to: "/deployment/on-premises/architecture-options"
     },
     {
       from: "/howto50/Build+a+simple+HRM+app+1+Create+manage+and+deploy+the+app",
@@ -1243,7 +1243,7 @@ module.exports = {
     },
     {
       from: "/howto50/Deploying+Mendix+on+Microsoft+Windows",
-      to: "/howto50/deploying-mendix-on-microsoft-windows"
+      to: "/deployment/on-premises/deploying-mendix-on-microsoft-windows"
     },
     {
       from: "/howto50/Drag+Microflows+and+Pages+into+a+Microflow",
@@ -1327,7 +1327,7 @@ module.exports = {
     },
     {
       from: "/howto50/High+Availability",
-      to: "/howto50/high-availability"
+      to: "/deployment/on-premises/high-availability"
     },
     {
       from: "/howto50/How+to+build+a+simple+HRM+app",
@@ -1347,11 +1347,11 @@ module.exports = {
     },
     {
       from: "/howto50/Installing+Mendix+on+Debian+GNU+Linux",
-      to: "/howto50/installing-mendix-on-debian-gnu-linux"
+      to: "/deployment/on-premises/installing-mendix-on-debian-gnu-linux"
     },
     {
       from: "/howto50/Installing+Mendix+on+RedHat+and+CentOS",
-      to: "/howto50/installing-mendix-on-redhat-and-centos"
+      to: "/deployment/on-premises/installing-mendix-on-redhat-and-centos"
     },
     {
       from: "/howto50/Integrating+a+Legacy+System+into+a+Mendix+App",
@@ -1391,11 +1391,11 @@ module.exports = {
     },
     {
       from: "/howto50/Mendix+on+Windows+-+Microsoft+SQL+Server",
-      to: "/howto50/mendix-on-windows-microsoft-sql-server"
+      to: "/deployment/on-premises/mendix-on-windows-microsoft-sql-server"
     },
     {
       from: "/howto50/Mendix+SQL+Maintenance+Plans",
-      to: "/howto50/mendix-sql-maintenance-plans"
+      to: "/deployment/on-premises/mendix-sql-maintenance-plans"
     },
     {
       from: "/howto50/Mobile",
@@ -1415,7 +1415,7 @@ module.exports = {
     },
     {
       from: "/howto50/On+premises+Deployment",
-      to: "/howto50/on-premises-deployment"
+      to: "/deployment/on-premises/on-premises-deployment"
     },
     {
       from: "/howto50/Optimizing+Microflow+Aggregates",
@@ -1439,7 +1439,7 @@ module.exports = {
     },
     {
       from: "/howto50/Restoring+a+SQL+Server+database",
-      to: "/howto50/restoring-a-sql-server-database"
+      to: "/deployment/on-premises/restoring-a-sql-server-database"
     },
     {
       from: "/howto50/Scout+and+Windows+10+Workaround",
@@ -1451,7 +1451,7 @@ module.exports = {
     },
     {
       from: "/howto50/Security+checklist+for+your+on+premises+installation",
-      to: "/howto50/security-checklist-for-your-on-premises-installation"
+      to: "/deployment/on-premises/security-checklist-for-your-on-premises-installation"
     },
     {
       from: "/howto50/Selenium+Support",
@@ -1459,11 +1459,11 @@ module.exports = {
     },
     {
       from: "/howto50/Setting+up+a+new+SQL+Server+database",
-      to: "/howto50/setting-up-a-new-sql-server-database"
+      to: "/deployment/on-premises/setting-up-a-new-sql-server-database"
     },
     {
       from: "/howto50/Setting+up+a+SQL+Server+user",
-      to: "/howto50/setting-up-a-sql-server-user"
+      to: "/deployment/on-premises/setting-up-a-sql-server-user"
     },
     {
       from: "/howto50/Setting+up+data+validation",
@@ -1471,11 +1471,11 @@ module.exports = {
     },
     {
       from: "/howto50/Setting+up+monitoring+with+New+Relic",
-      to: "/howto50/setting-up-monitoring-with-new-relic"
+      to: "/deployment/on-premises/setting-up-monitoring-with-new-relic"
     },
     {
       from: "/howto50/Setting+up+the+database+user",
-      to: "/howto50/setting-up-the-database-user"
+      to: "/deployment/on-premises/setting-up-the-database-user"
     },
     {
       from: "/howto50/Setting+Up+the+Navigation+Structure",
@@ -1555,15 +1555,15 @@ module.exports = {
     },
     {
       from: "/howto50/Troubleshooting",
-      to: "/howto50/troubleshooting"
+      to: "/deployment/on-premises/troubleshooting"
     },
     {
       from: "/howto50/Troubleshooting+SQL+Server",
-      to: "/howto50/troubleshooting-sql-server"
+      to: "/deployment/on-premises/troubleshooting-sql-server"
     },
     {
       from: "/howto50/Updating+a+Mendix+Application",
-      to: "/howto50/updating-a-mendix-application"
+      to: "/deployment/on-premises/updating-a-mendix-application"
     },
     {
       from: "/howto50/Using+Team+Server+-+Version+Control",
@@ -1962,11 +1962,11 @@ module.exports = {
     },
     {
       from: "/howto6/On-premises+Deployment",
-      to: "/howto6/on-premises-deployment"
+      to: "/deployment/on-premises/on-premises-deployment"
     },
     {
       from: "/howto6/On+premises+Deployment",
-      to: "/howto6/on-premises-deployment"
+      to: "/deployment/on-premises/on-premises-deployment"
     },
     {
       from: "/howto6/Optimizing+Microflow+Aggregates",
@@ -2118,11 +2118,11 @@ module.exports = {
     },
     {
       from: "/howto6/Troubleshooting",
-      to: "/howto6/troubleshooting"
+      to: "/deployment/on-premises/troubleshooting"
     },
     {
       from: "/howto6/Troubleshooting+SQL+Server",
-      to: "/howto6/troubleshooting-sql-server"
+      to: "/deployment/on-premises/troubleshooting-sql-server"
     },
     {
       from: "/howto6/Updating+a+Mendix+Application",

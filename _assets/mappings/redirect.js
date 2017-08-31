@@ -1126,10 +1126,6 @@ module.exports = {
       to: "/howto50/clearing-warning-messages-in-mendix"
     },
     {
-      from: "/howto50/Cloud+Foundry",
-      to: "/howto50/cloud-foundry"
-    },
-    {
       from: "/howto50/Collaboration+and+Project+Management",
       to: "/howto50/collaboration-and-project-management"
     },
@@ -1235,11 +1231,11 @@ module.exports = {
     },
     {
       from: "/howto50/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/howto50/deploying-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
     {
       from: "/howto50/Deploying+a+Mendix+App+to+Pivotal",
-      to: "/howto50/deploying-a-mendix-app-to-pivotal"
+      to: "/deployment/cloud-foundry/deploying-a-mendix-app-to-pivotal"
     },
     {
       from: "/howto50/Deploying+Mendix+on+Microsoft+Windows",

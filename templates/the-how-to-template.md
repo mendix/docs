@@ -32,6 +32,8 @@ In this section...
 1. {Step 1}
 2. {Step 2}
 
+![](attachments/{sub-folder with same name as doc file}/{image filename}.png)
+
 ### 3.1 {Title of Sub-Section}
 
 ## 4 Related Content

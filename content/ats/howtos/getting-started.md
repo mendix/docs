@@ -175,10 +175,10 @@ To use the recorder function, follow these steps:
 
 3.  Click **Save** to save your actions for this event.
 
-      | Field | Description |
-      | --- | --- |
-      | **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS recorder selects the actions for you. |
-      | **Action mapping** | This shows all the available actions for this event. Click  **Select** if you want to choose a different action. |
+      Field | Description
+      --- | ---
+      **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS recorder selects the actions for you.
+      **Action mapping** | This shows all the available actions for this event. Click  **Select** if you want to choose a different action.
 
       ![](attachments/getting-started/recorded-test-steps.png)
 

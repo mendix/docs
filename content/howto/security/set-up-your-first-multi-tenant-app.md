@@ -1,24 +1,26 @@
 ---
 title: "Set up your first multi-tenant app"
-# category: "Security"
-# parent: ""
-# description: "Introduction to multi-tenant app development."
-# tags: "Multitenancy", "Multi-tenant", "Security", "Users"
+category: "Security"
+description: "Introduction to multi-tenant app development."
+tags: "Multitenancy", "Multi-tenant", "Security", "Users"
 ---
 
 ## 1 Introduction
 
-Are you thinking about making your app multi-tenant and not sure how to start or unsure what challenges you might come across? Read this how-to and get started with your first multi-tenant app!
+Are you thinking about making your app multi-tenant but are not sure about how to start or what challenges you might come across? Read this how-to and get started with your first multi-tenant app!
 
-It might not seem that complex to build a multi-tenant app but there are several best practices you want to know to ensure that you are building a secure and performing app for your customer.
+It might not seem that complex to build a multi-tenant app, but there are several best practices that will ensure you are building a secure and well-performing app for your customer.
 
-After reading this reference guide you will know how to setup your multi-tenant app, what considerations there are while developing the app and you know that there is a module in the Mendix AppStore that allows you to manage your tenants and their users. Let’s start with having a look at the project security!
+**This how-to will teach you how to do the following:**
 
-## 2 Project security
+* Set up your multi-tenant app
+* Use a module from the Mendix App Store to manage your tenants and their users
+
+## 2 Project Security
 
 In your multi-tenant app, you want to make a difference between user roles that transcend the multi-tenant part of the app (e.g. functional administrator & technical administrator) and those who don’t. This is due to the way how the Mendix platform combines the settings of the user management in your project security (See figure 2) and access rules on entities that are a specialization of the System.User entity.
 
-![Figure 1: Typical start situation of the project security for multi-tenant apps](attachments/set-up-your-first-multi-tenant-app/00_TypicalProjectSecurity.png)
+![](attachments/set-up-your-first-multi-tenant-app/00_TypicalProjectSecurity.png)
 
 _Figure 1: Typical start situation of the project security for multi-tenant apps_
 
@@ -28,7 +30,7 @@ The user roles that will be allocated to users that act as a tenant user shouldn
 Use the Administration module functions to manage users that transcend the tenant level and use the MultiTenantAdministration module from the Mendix AppStore to manage all users with tenant related user roles.
 {{% /alert %}}
 
-![Figure 2: Desired way of setting your user management for tenant related user roles](attachments/set-up-your-first-multi-tenant-app/01_ConfigurationOfTenantAdmin.png)
+![](attachments/set-up-your-first-multi-tenant-app/01_ConfigurationOfTenantAdmin.png)
 
 _Figure 2: Desired way of setting your user management for tenant related user roles_
 
@@ -55,7 +57,7 @@ The ProjectUserRole entity is used for duplication of the System.Userrole instan
 The association ProjectUserRole_UserRole is 1-* due to the deprecation notice in Mendix 7.5.0 that says: ‘Cross-module association to the System module must have the Owner property set to Default’.
 {{% /alert %}}
 
-![Figure 3: Domain model of the multi-tenant administration module](attachments/set-up-your-first-multi-tenant-app/02_MultiTenantAdministrationDomainModel.png)
+![](attachments/set-up-your-first-multi-tenant-app/02_MultiTenantAdministrationDomainModel.png)
 
 _Figure 3: Domain model of the multi-tenant administration module_
 
@@ -91,11 +93,11 @@ Next to adjusting your project security and implementing the AppStore module the
 
 The way to start protecting the data of your app is to set access rules on the entities in your domain model. In a multi-tenant app, it is required to add an Xpath constraint to your access rule. This constraints your data to your tenant. In this way, you prevent tenants from seeing information of other tenants. You can see this in an example in figure 5.
 
-![Figure 4: Tenant related entity – Task](attachments/set-up-your-first-multi-tenant-app/03_TenantEntities.png)
+![](attachments/set-up-your-first-multi-tenant-app/03_TenantEntities.png)
 
 _Figure 4: Tenant related entity – Task_
 
-![Figure 5: Access rule for Tenant related entity](attachments/set-up-your-first-multi-tenant-app/04_AccessRule.png)
+![](attachments/set-up-your-first-multi-tenant-app/04_AccessRule.png)
 
 _Figure 5: Access rule for Tenant related entity_
 

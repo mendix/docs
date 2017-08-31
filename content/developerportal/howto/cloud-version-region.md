@@ -1,6 +1,6 @@
 ---
 title: "View the Mendix Cloud Version and Region"
-category: "How-to's"
+category: "How-To's"
 description: "This page describes how view in which Mendix Cloud Version and Region your app is hosted."
 tags: ["Mendix Cloud Version","Mendix Cloud Region","Developer Portal"]
 ---

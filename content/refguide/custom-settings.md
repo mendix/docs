@@ -152,7 +152,7 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.storage.azure.AccountKey | Account key to authenticate with the azure blob storage service |   |
 | com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created in case it does not exist yet. |   |
 | com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
-|com.mendix.storage.azure.UseHttps| Since Mendix 7.7.0. Enable or disable secure connections using HTTPS. Can be `true` or `false`. | `true` |
+|com.mendix.storage.azure.UseHttps| Introduced in version 7.7. <br/>Enable or disable secure connections using HTTPS. Can be `true` or `false`. | `true` |
 
 {{% alert type="warning" %}}
 

@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot Your Application in the Mendix Cloud: Cache"
-category: "How-To's"
+parent: "troubleshoot-mendixcloud"
 description: "This page describes how to troubleshoot the cache in your node."
 tags: ["App","Troubleshoot","Developer Portal","Cache","Mendix Cloud"]
 ---

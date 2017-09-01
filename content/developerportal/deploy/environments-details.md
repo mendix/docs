@@ -1,6 +1,6 @@
 ---
 title: "Environment Details"
-category: "Deploy"
+parent: "environments"
 description: "Describes the environmental details of your app."
 tags: ["Deploy","App","Environment","Developer Portal"]
 ---

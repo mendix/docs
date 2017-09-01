@@ -1,6 +1,6 @@
 ---
 title: "Trends in Mendix Cloud v4"
-category: "Operate"
+parent: "metrics"
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
 tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 ---

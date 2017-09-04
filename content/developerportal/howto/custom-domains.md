@@ -39,7 +39,7 @@ Before configuring your custom domain in the Mendix Cloud, you will need to conf
 
 ![](attachments/deploy/21168230.png)
 
-Please create a CNAME record and point it to `[YOUR-CUSTOM-DOMAIN].cname.mendix.net.`. For example, when your custom domain is `myapp.mycompany.com`, create a CNAME record to `myapp.mycompany.com.cname.mendix.net.` so that Mendix can point your custom dsomain to your Mendix app.
+Please create a CNAME record and point it to `[YOUR-CUSTOM-DOMAIN].cname.mendix.net.`. For example, when your custom domain is `myapp.mycompany.com`, create a CNAME record to `myapp.mycompany.com.cname.mendix.net.` so that Mendix can point your custom domain to your Mendix app.
 
 {{% alert type="info" %}}
 

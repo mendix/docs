@@ -7,68 +7,59 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-This how-to explains step by step how to create an Unsupported Widget action for the Mendix switch widget. In a standard situation, the first step is checking if ATS supports the widget. 
+This how-to explains how to create an unsupported widget action for the Mendix switch widget. In a standard situation, the first step is to check if ATS supports the widget.
 
-In this how-to you assume that you must build your own action. 
+The how-to assumes that you must build your own action. 
 
-This how-to applies to all widgets like a button if ATS needs to click the widget you can follow this how-to until step 5. Keep in mind that it might need some adjustments!
-
-Step 6 and step 7 apply ‘logic’ to an action that has the ‘checkbox’ type if a widget has the ‘checkbox’ type you can follow these steps to apply ‘logic’.
-
+The how-to applies to all widgets (like a button). If ATS needs to click the widget, you can follow this how-to until section **5 Last Check**. Keep in mind that it might need some adjustments! 
+ 
+Sections **6 Adding Logic to Make Your Action "Smarter"** and **7 Final Check** apply "logic" to an action that is of the check box type. If a widget is of the check box type, you can follow these steps to apply logic. 
+ 
 **This how-to will teach you how to do the following:**
+
 * Approach a widget that ATS must click.
 * Create the custom action to click the widget.
 * Add logic to your custom action.
 
 ## 2 Prerequisites
 
-Before starting with this how-to, make sure you have the following prerequisites in place:
-
+Before starting this how-to, make sure you have completed the following prerequisites:
+ 
 *  [Custom Action General Section](custom-action-general)
 
-## 3 Define User Approach
+## 3 Defining the User Approach
+ 
+First you must define the user approach about how you interact with the widget. Since you are creating an unsupported widget action, only how you interact with it is important, not how you find the widget.
+ 
+1. Trigger the Mendix Switch by clicking it. This changes its state from checked to unchecked:
 
-First you define the user approach, how do you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget isn’t important, only how you interact with it.
+ *  Switch unchecked:
+ 
+   ![](attachments/create-unsupported-widget/cab-02-switch/switch-widget-unchecked.png)
 
-1. You trigger the Mendix switch by clicking it. This changes its state from checked to unchecked:
+ *  Switch checked:
+ 
+   ![](attachments/create-unsupported-widget/cab-02-switch/switch-widget-checked.png)
 
-_Switch unchecked_
+2. You must determine where you must click it. After looking at the widget, you find out that you must click the actual switch to activate it.
 
-![](attachments/create-unsupported-widget/cab-02-switch/switch-widget-unchecked.png)
+## 4 Creating the Action Structure
+ 
+In the previous section, you wrote down the user approach for the Mendix Switch widget. Now you must create this approach in ATS with actions. Create a new action for the next steps.
+ 
+1. Look for the element in the debugger ATS needs to click. ATS always clicks in the middle of an element, keep this in mind while looking for the element to click. You must start by checking the parent element, which is always the element with the `mx-name-` when building an unsupported widget action. If the widget does not have `mx-name-`, look for the highest `div` element that is still referencing the widget.
 
-_Switch checked_
+  The parent element of the switch widget has the `mx-name-switch1` in the debugger:
 
-![](attachments/create-unsupported-widget/cab-02-switch/switch-widget-checked.png)
+  ![](attachments/create-unsupported-widget/cab-02-switch/highlighted-switch-mxname-debugger.png)
 
-2. Next, you must determine where you must click it. 
-After looking at the widget you find out that you must click the actual switch to activate it.
+  The debugger creates the border around the selected element in the app: 
 
-## 4 Create Action Structure
+  ![](attachments/create-unsupported-widget/cab-02-switch/highlighted-switch-mxname.png)
 
-In the previous step, you wrote down the user approach for the Mendix Switch widget. Now you create this approach in ATS with actions. Create a new action for the next steps.
+  When selecting which element to find, also remember that ATS clicks in the middle of an element. In this case, ATS does not click the actual switch. This means you must use the [Find Widget Child Node](../refguide-ats-1/find-widget-child-node) action. This action is a combination of the [Find/Assert Widget](../refguide-ats-1/findassert-widget) and [Find Element by Sizzle](../refguide-ats-1/find-element-by-sizzle) actions, combining the best of both. It’s an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible.
 
-<<<<<<< HEAD
-1. Next, you look for the element in the debugger ATS needs to click. ATS always clicks in the middle of an element, keep this in mind while looking for the element to click. 
-You start by checking the parent element which is always the element with the `mx-name-` when building an unsupported widget action. If the widget does not have a `mx-name-`, look for the highest div element that is still referencing to the widget. 
-=======
-Next, you must look for the element in the debugger that ATS needs to click. ATS always clicks in the middle of an element; keep this in mind while looking for the element to click.
->>>>>>> origin/ats_add-unsupported-widget-section
-
-The parent element of the switch widget has the `mx-name-switch1` in the debugger:
-
-![](attachments/create-unsupported-widget/cab-02-switch/highlighted-switch-mxname-debugger.png)
-
-The debugger creates the border around the selected element in the app: 
-
-![](attachments/create-unsupported-widget/cab-02-switch/highlighted-switch-mxname.png)
-
-<<<<<<< HEAD
-When selecting which element to find keep in mind that ATS clicks in the middle of an element. In this case, ATS does not click on the actual switch. This means you must use the _[Find Widget Child Node](../refguide-ats-1/find-widget-child-node)_ action. This action is a combination of the _[Find/Assert Widget](../refguide-ats-1/findassert-widget)_ and _[Find Element by Sizzle](../refguide-ats-1/find-element-by-sizzle)_ actions, combining the best of both. It’s an official Mendix action. It has all the internal processes and it uses a CSS/jQuery selector to find the child making it flexible.
-=======
-When selecting which element to find, also remember that ATS clicks in the middle of an element. In this case, ATS does not click the actual switch. This means you must use the [Find Widget Child Node](../refguide-ats-1/find-widget-child-node) action. This action is a combination of the [Find/Assert Widget](../refguide-ats-1/findassert-widget) and [Find Element by Sizzle](../refguide-ats-1/find-element-by-sizzle) actions, combining the best of both. It’s an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible.
->>>>>>> origin/ats_add-unsupported-widget-section
-
-2. Now you check the different child nodes to find the one you need. While doing this keep [the guidelines for creating a custom action](../bestpractices/guidelines-custom-action) in mind! It must be generic, pick an element or element class that’s always present because you “hard-code” it into your action. Also, make sure the element is visible for the end-user so that ATS can click on it.
+2. Check the different child nodes to find the one you need. While doing this keep [the guidelines for creating a custom action](../bestpractices/guidelines-custom-action) in mind! It must be generic, pick an element or element class that’s always present because you “hard-code” it into your action. Also, make sure the element is visible for the end-user so that ATS can click on it.
 
 After looking through the child nodes you find a child element that covers the switch and also looks generic.
  

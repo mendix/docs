@@ -145,7 +145,7 @@ To ask your own question on the forum, follow these steps:
 
 3. Click **Ask your question**.
 
-#### 2.3.1 Accepting an Answer on a Question You Have Asked
+#### 2.3.2 Accepting an Answer on a Question You Have Asked
 
 Once a question you have asked receives several answers (for more details, see [2.3 Asking a Question](#AskingYourQuestion) and [2.2.3 Answering a Question](#Answers)), you can accept an answer by clicking this button:
 

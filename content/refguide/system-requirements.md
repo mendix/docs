@@ -31,26 +31,26 @@ The Team Server is implemented using Subversion and the Modeler uses the HTTPS p
 * The HTTP port (TCP 80) needs to be open.
 * WebDAV - verbs within the HTTP protocol - needs to be enabled on the proxy server (if any).
 
-## WebModeler
+## Web Modeler
 
-The Mendix Web Modeler is optimized for use with Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Firefox, Safari and Edge. Note: Any browser you use needs to have JavaScript turned on.
+The Mendix Web Modeler is optimized for use with Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Firefox, Safari and Edge. Note: the browser you use needs to have JavaScript turned on.
 
 ## Server
 
-### Operating system
+### Operating System
 
 * Microsoft Windows Server 2008 SP2 or newer
 * Debian 8 (Jessie) or newer
 * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
 * CentOS 6, CentOS 7
 
-### Web server
+### Web Server
 
 * Microsoft Internet Information Services 7 or newer
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 
-### Database server
+### Database Server
 
 * [IBM DB2](db2) 11.1
 * [MariaDB](mysql) 5.5, 10.0, 10.1
@@ -71,7 +71,7 @@ There is an issue since Java 7, causing timeouts when using Web Services with a 
 
 For more information about this issue, have a look at [http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) or [https://forums.oracle.com/forums/thread.jspa?messageID=9985748](https://forums.oracle.com/forums/thread.jspa?messageID=9985748)
 
-### Application server
+### Application Server
 
 Jetty is built into the Mendix Runtime, an application server is not required.
 

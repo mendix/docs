@@ -21,20 +21,20 @@ Here is an example of a question on the overview page:
 
 ![](attachments/the-mendix-forum/questions_example.png)
 
-Each question has a descriptive title (**1**). Clicking the question title opens the specific question and answers details page under the **Question** tab (for more information, see [2.2 Question and Answer Details Page](#QuestionDescriptionPage)).
+Each question has a descriptive title (**1**). Clicking the question title opens the specific question and answers details page under the **Question** tab (for more information, see [2.2 Question Details and Answers Page](#QuestionDescriptionPage)).
 
 Each question specifies the following elements:
 
 * The beginning of the question description (**2**)
-    * This is taken from the [question and answer details page](#QuestionDescriptionPage)
+    * This is taken from the [question details and answers page](#QuestionDescriptionPage)
 * The number of favorites (**3**), answers (**4**), and views (**5**) the question has received
 * The category (**6**)
     * For example, **Microflows**
-    * This is set when asking a question (for details, see [2.3 Asking a Question](#AskingaQuestion))
+    * This is set when asking a question (for details, see [2.3.1 Asking Your Question](#AskingYourQuestion))
     * When you click a category, the overview page will list questions with that same tag
 * The tags applied to question (**7**)
     * For example, **test**, **datagrid**, and **conditional-visibility**
-    * These are set when asking a question (for details, see [2.3 Asking a Question](#AskingaQuestion))
+    * These are set when asking a question (for details, see [2.3.1 Asking Your Question](#AskingYourQuestion))
     * When you click a tag, the overview page will list questions with that same tag
 * The name, avatar, and level of the Mendix community member who asked the question (**8**)
 * The Mendix community members(s) who answered the question (**9**)
@@ -66,15 +66,15 @@ Notice the following search details:
 
 To filter the questions that appear on the overview page, select from the following criteria on the right side of the screen:
 
-* **My favorites** – the questions you have marked as favorites (for details on how to favorite a question, see [2.2 Question and Answer Details Page](#QuestionDescriptionPage))
-* **My own questions** – the questions you have asked (for more information, see [2.3 Asking a Question](#AskingaQuestion))
+* **My favorites** – the questions you have marked as favorites (for details on how to favorite a question, see [2.2 Question Details and Answers Page](#QuestionDescriptionPage))
+* **My own questions** – the questions you have asked (for more information, see [2.3.1 Asking Your Question](#AskingYourQuestion))
 * **Status** – the status of a question according to whether it remains **Unanswered**, has been **Answered**, or has been **Accepted answered** (meaning, it has been answered and the answer has been accepted)
-* **Categories** – the category set when the question was asked (for more information, see [2.3 Asking a Question](#AskingaQuestion))
-* **Tags** – the tags set when the question was asked (for more information, see [2.3 Asking a Question](#AskingaQuestion))
+* **Categories** – the category set when the question was asked (for more information, see [2.3.1 Asking Your Question](#AskingYourQuestion))
+* **Tags** – the tags set when the question was asked (for more information, see [2.3.1 Asking Your Question](#AskingYourQuestion))
 
     ![](attachments/the-mendix-forum/questions_filters.png)
 
-### 2.2 Question and Answer Details Page<a name="QuestionDescriptionPage"></a>
+### 2.2 Question Details and Answers Page<a name="QuestionDescriptionPage"></a>
 
 #### 2.2.1 Question Details
 
@@ -90,7 +90,7 @@ On this page, you can read the full descriptive text of the question and do the 
     * The date and time of the **Last activity** on the question (meaning, when it was last updated)
     * The **Category** of the question
     * The **Tags** applied to the question (when you click a tag, the overview page will list questions with that same tag)
-    * The **Modeler version** set when the question was asked (for more information, see [2.3 Asking a Question](#AskingaQuestion)
+    * The **Modeler version** set when the question was asked (for more information, see [2.3.1 Asking Your Question](#AskingYourQuestion))
 * Click the up or down arrow buttons to upvote or downvote the question based on its usefulness (**2**)
 * Click the heart to favorite the question (**3**)
 * Click **Add comment** to write and submit a comment on the question (**4**)
@@ -107,6 +107,8 @@ Below the question details are the answer(s) to the question. Click the up or do
 
 ![](attachments/the-mendix-forum/questions_answer.png)
 
+#### 2.2.3 Answering a Question
+
 Below the answer(s), you can contribute to the forum by writing your own answer in the editor and then clicking **Submit answer**:
 
 ![](attachments/the-mendix-forum/questions_answer_editor.png)
@@ -119,7 +121,9 @@ You can easily upload your images in the forum by dragging them directly into th
 
 {{% /alert %}}
 
-### 2.3 Asking a Question<a name="AskingaQuestion"></a>
+### 2.3 Asking a Question
+
+#### 2.3.1 Asking Your Question<a name="AskingYourQuestion"></a>
 
 It's never been easier to ask a question on the Mendix Forum. But before you submit a new question, be sure to search the forum for similar questions that have already been asked. There may be someone else who has already posted the same question!
 
@@ -141,9 +145,9 @@ To ask your own question on the forum, follow these steps:
 
 3. Click **Ask your question**.
 
-#### 2.3.1 Accepting an Answer
+#### 2.3.1 Accepting an Answer on a Question You Have Asked
 
-Once a question you have asked receives several answers (for more details on answering questions, see [2.2.2 Answers](#Answers)), you can accept an answer by clicking this button:
+Once a question you have asked receives several answers (for more details, see [2.3 Asking a Question](#AskingYourQuestion) and [2.2.3 Answering a Question](#Answers)), you can accept an answer by clicking this button:
 
 ![](attachments/the-mendix-forum/questions_accept_answer_button.png)
 
@@ -159,14 +163,14 @@ Here is an example of an idea on the overview page:
 
 ![](attachments/the-mendix-forum/ideas_example.png)
 
-All the submitted ideas are publicly visible, and each idea has a descriptive title (**1**). Clicking the idea title opens the specific idea details page under the **Ideas** tab (for more information, see [3.2 Idea Details Page](#IdeaDescriptionPage)).
+All the submitted ideas are publicly visible, and each idea has a descriptive title (**1**). Clicking the idea title opens the specific idea details page under the **Ideas** tab (for more information, see [3.2 Idea Details Page](#IdeaDetails)).
 
 Each idea specifies the following elements:
 
 * The beginning of the idea description (**2**)
-    * This is taken from the [idea and comment details page](#IdeaDescriptionPage)
+    * This is taken from the [idea details page](#IdeaDetails)
 * The number of **Votes** (**3**), **Comments** (**4**), and **Views** (**5**) for the idea
-* The status of the idea (**6**) (for descriptions of the various statuses, see [3.2.1 Idea Details](#IdeasDetails))
+* The status of the idea (**6**) (for descriptions of the various statuses, see [3.2 Idea Details Page](#IdeaDetails))
 * The category (**7**)
     * This is set when submitting an idea (for details, see [4.2 Submitting an Idea](#SubmittingAnIdea))
 * Tags (**8**) (for example, **datagrid**, **listen-target**, **conditional-visibility**)
@@ -189,15 +193,13 @@ In addition to sorting, you can search the entire forum for both questions and i
 
 To filter the ideas that appear on the overview page, select from the following criteria on the right side of the screen:
 
-* **My favorites** – the ideas you have marked as favorites (for details on how to favorite an idea, see [3.2 Idea Details Page](#IdeaDescriptionPage))
+* **My favorites** – the ideas you have marked as favorites (for details on how to favorite an idea, see [3.2 Idea Details Page](#IdeaDetails))
 * **My own ideas** – the ideas you have submitted (for more information, see [3.3 Submitting an Idea](#SubmittingAnIdea))
-* **Status** – the status of the ideas (for descriptions of the various statuses, see [3.2.1 Idea Details](#IdeasDetails))
+* **Status** – the status of the ideas (for descriptions of the various statuses, see [3.2 Idea Details Page](#IdeaDetails))
 * **Categories** – the category set when the idea  was submitted (for more information, see [3.3 Submitting an Idea](#SubmittingAnIdea))
 * **Tags** – the tags set when the idea was submitted (for more information, see [3.3 Submitting an Idea](#SubmittingAnIdea))
 
-### 3.2 Idea Details Page<a name="IdeaDescriptionPage"></a>
-
-#### 3.2.1 Idea Details<a name="IdeasDetails"></a>
+### 3.2 Idea Details Page<a name="IdeaDetails"></a>
 
 Clicking the title of an idea will bring you to the details page for that idea:
 

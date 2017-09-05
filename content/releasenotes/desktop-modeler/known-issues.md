@@ -17,9 +17,9 @@ For details on this release, see [7.6 release notes](7.6).
 
 ### 7.6.0<a name="KI760"></a>
 
-* When retrieving an entity with a virtual attribute without using a schema id, references are not returned. This impacts the following scenarios:
-  * A Template Grid containing an entity with a virtual attribute won't show any data over an association (e.g. nested Data Views).
-  * Custom widgets requesting Mendix objects with a virtual attribute through XPath, will have no access to their associations.
+* When retrieving an entity with a virtual attribute without using a schema ID, references are not returned. This impacts the following scenarios:
+  * A template grid containing an entity with a virtual attribute will not show any data over an association (for example, nested data views).
+  * Custom widgets requesting Mendix objects with a virtual attribute through XPath will have no access to their associations.
 
 
 ## 7.5
@@ -34,7 +34,7 @@ For details on this release, see [7.5 release notes](7.5).
 ### 7.5.0<a name="KI750"></a>
 
 * The Mendix Web Modeler is not enabled when you create an Atlas UI-based app in the Mendix Desktop Modeler.
-  * Fixed in [7.5.1](7.5#RN751)
+  * Fixed in [7.5.1](7.5#RN751).
 * For Atlas-based apps, it is not possible to use the **Generate page** functionality for buttons. The **Create Page** dialog box shows no selectable page templates for these profiles.
   * Workaround: select **File** > **New Document** > **Page** and set this newly created page in the **Page** property of the button.
 

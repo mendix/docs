@@ -2,7 +2,7 @@
 title: "Creating Your Own Documents"
 parent: "document-templates"
 description: "This documentation will give you insight into creating documents with Mendix."
-tags: "Document", "Generate", "Word", "PDF"
+tags: ["Document", "Generate", "Word", "PDF"]
 ---
 
 ## 1 Introduction

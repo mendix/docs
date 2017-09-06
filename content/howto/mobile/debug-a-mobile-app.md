@@ -121,7 +121,7 @@ You can use PhoneGap Build to build the native application and tell it to intial
 
 ### 4.3 Android Configuration
 
-1. Enabel the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio/debug/dev-options.html#enable) for more information.
+1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio/debug/dev-options.html#enable) for more information.
 2. Connect your device to your development machine and when the popup appears on your mobile device to allow USB debugging, choose **Allow**.
       
       ![android-2](./attachments/debug-a-mobile-app/android-2.png)
@@ -233,20 +233,25 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
 You can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default. Follow these steps to change the PhoneGap Build
 
-1. Go to Sprintr and navigate to the **Mobile App** page
+1. Go to **home.mendix.com** and open your app.
+2. Navigate to the **Mobile App** page, listed under Deploy.
+3. Configure this page as you normally would and click **Publish for Mobile App Stores**.
 
-2. Configure this page as you normally would and then choose **Publish for Mobile App Stores**.
    ![phonegap-1](./attachments/debug-a-mobile-app/phonegap-1.png)
 
-3. Select **Do it Yourself** and then choose **Download Customizable Package**
+4. Select **Do it Yourself** and click **Download Customizable Package**.
+
    ![phonegap-3](./attachments/debug-a-mobile-app/phonegap-3.png)
 
-4. Unzip the downloaded package and then navigate to the `/dist/phonegap.zip` file![phonegap-4](./attachments/debug-a-mobile-app/phonegap-4.png)
+5. Unzip the downloaded package and navigate to the `/dist/phonegap.zip` file.
 
-5. Extract the contents of this file and find `www/settings.json`
+      ![phonegap-4](./attachments/debug-a-mobile-app/phonegap-4.png)
+
+6. Extract the contents of this file and find `www/settings.json`.
+
    ![phonegap-5](./attachments/debug-a-mobile-app/phonegap-5.png)
 
-6. Change the `url` property to the IP address of your local machine, with the port 8080.
+7. Change the `url` property to the IP address of your local machine, with the port 8080.
 
    ```javascript
    {
@@ -258,78 +263,105 @@ You can use PhoneGap Build to build the native application and tell it to intial
    }
    ```
 
-7. Save your changes and rezip the `phonegap/` directory in `/dist/`.
+8. Save your changes and rezip the `phonegap/` directory in `/dist/`.
+
    ![phonegap-7](./attachments/debug-a-mobile-app/phonegap-7.png)
 
-8. Upload the new zip file to a new app on Phonegap Build
+9. Upload the new zip file to a new app on Phonegap Build.
+
    ![phonegap-8](./attachments/debug-a-mobile-app/phonegap-8.png)
 
-9. Navigate to **Edit Account** from the account menu
+10. Navigate to **Edit Account** from the account menu.
+
    ![phonegap-9](./attachments/debug-a-mobile-app/phonegap-9.png)
 
-10. On the **Signing Keys** tab, click **Add a Key** under **iOS**
+11. On the **Signing Keys** tab, click **Add a Key** under **iOS**.
+
  ![phonegap-10](./attachments/debug-a-mobile-app/phonegap-10.png)
 
-11. Choose your .p12 certificate (from Step 12 in the Apple Developer Configuration) section and your enw provisioning profile
+12. Choose your .p12 certificate (from Step 12 in the Apple Developer Configuration) section and your enw provisioning profile.
+
     ![phonegap-11](./attachments/debug-a-mobile-app/phonegap-11.png)
 
-12. Click the lock to temporarily unlock your key
+13. Click the lock to temporarily unlock your key.
+
     ![phonegap-12](./attachments/debug-a-mobile-app/phonegap-12.png)
 
-13. Return to the app online and choose your new key from the dropdown. This will trigger a new build of your app
+14. Return to the app online and choose your new key from the dropdown. This will trigger a new build of your app.
+
     ![phonegap-13](./attachments/debug-a-mobile-app/phonegap-13.png)
 
-14. When your app finishes building in the cloud, scan the QR code to download the app and run it on your iOS device
+15. When your app finishes building in the cloud, scan the QR code to download the app and run it on your iOS device.
 
-##### iOS configuration
+### 5.3 iOS Configuration
 
-1. Go to **Settings > Safari** on your iOS device
+1. Go to **Settings > Safari** on your iOS device.
+
    ![ios-1](./attachments/debug-a-mobile-app/ios-1.png)
-2. Choose **Advanced**
+   
+2. Select **Advanced**.
+
    ![ios-2](./attachments/debug-a-mobile-app/ios-2.png)
+   
 3. Ensure that **Web Inspector** is turned on
+
    ![ios-3](./attachments/debug-a-mobile-app/ios-3.png)
+   
 4. Ensure that your iPhone can ping your development machine (if you haven't already)
+
    ![ios-4](./attachments/debug-a-mobile-app/ios-4.png)
-5. Return to the running Mendix app on your iOS device
-6. Open Safari on your Mac
-7. If you don't have the **Develop** option on your menu bar, open **Safari > Preferences**
+   
+5. Return to the running Mendix app on your iOS device.
+6. Open Safari on your Mac.
+7. If you don't have the **Develop** option on your menu bar, open **Safari > Preferences**.
+
    ![ios-6](./attachments/debug-a-mobile-app/ios-6.png)
-8. On the **Advanced** tab, ensure that **Show Develop Menu in menu bar** checkbox is checked
+   
+8. On the **Advanced** tab, ensure that **Show Develop Menu in menu bar** is checked.
+
    ![ios-7](./attachments/debug-a-mobile-app/ios-7.png)
-9. From the Develop menu, select your device and running application
+   
+9. From the Develop menu, select your device and running application.
+
    ![ios-8](./attachments/debug-a-mobile-app/ios-8.png)
-10. This will bring up the Safari Web Inspector for your device! 
+   
+10. This will bring up the **Safari Web Inspector** for your device! 
 
-## Android + Windows <a name="AndroidAndWindows"></a>
+## 6 Android + Windows <a name="AndroidAndWindows"></a>
 
-##### Windows configuration
+### 6.1 Windows Configuration
+Follow these steps to test your computer's connection to your device:
 
-1. Open the command prompt and type `ipconfig /all` and find the IPv4 address of your wireless adapter
+1. Open the command prompt and type `ipconfig /all` and find the IPv4 address of your wireless adapter.
+
    ![win-1](./attachments/debug-a-mobile-app/win-1.png)
-2. Verify that your device can ping this address
+   
+2. Verify that your device can ping this address.
+
    ![win-2](./attachments/debug-a-mobile-app/win-2-1162756.png)
 
-##### Phonegap configuration
+### 6.2 PhoneGap Configuration
+You can use PhoneGap Build to build the native application and tell it to intialize based on this new URL, rather than the default. Follow these steps to create a new configuration:
 
-We can use PG Build to build
-the native application and tell it to intialize based on this new URL, rather than the default.
+1. Go to **home.mendix.com** and open your app.
+2. Navigate to the **Mobile App** page under Deploy.
+3. Configure this page as you normally would and then choose **Publish for Mobile App Stores**.
 
-1. Go to Sprintr and navigate to the **Mobile App** page
+      ![phonegap-1](./attachments/debug-a-mobile-app/phonegap-1.png)
+      
+4. Select **Do it Yourself** and then click **Download Customizable Package**.
 
-2. Configure this page as you normally would and then choose **Publish for Mobile App Stores**.
-   ![phonegap-1](./attachments/debug-a-mobile-app/phonegap-1.png)
-
-3. Select **Do it Yourself** and then choose **Download Customizable Package**
    ![phonegap-3](./attachments/debug-a-mobile-app/phonegap-3.png)
 
-4. Unzip the downloaded package and then navigate to the `/dist/phonegap.zip` file
+5. Unzip the downloaded package and navigate to the `/dist/phonegap.zip` file.
+
    ![phonegap-4](./attachments/debug-a-mobile-app/phonegap-4-1162839.png)
 
-5. Extract the contents of this file and find `www/settings.json`
+6. Extract the contents of this file and find `www/settings.json`.
+
    ![phonegap-5](./attachments/debug-a-mobile-app/phonegap-5-1162847.png)
 
-6. Change the `url` property to the IP address of your local machine, with the port 8080.
+7. Change the `url` property to the IP address of your local machine, with the port 8080.
 
    ```javascript
    {
@@ -341,26 +373,36 @@ the native application and tell it to intialize based on this new URL, rather th
    }
    ```
 
-7. Save your changes and rezip the `phonegap/` directory in `/dist/`.
+8. Save your changes and rezip the `phonegap/` directory in `/dist/`.
+
    ![phonegap-7](./attachments/debug-a-mobile-app/phonegap-7-1162855.png)
 
-8. Upload the new zip file to a new app on Phonegap Build
+9. Upload the new zip file to a new app on Phonegap Build.
+
    ![phonegap-8](./attachments/debug-a-mobile-app/phonegap-8.png)
 
-9. When your app finished building in the cloud, download the app and run it to connect to your Mendix app running on your local machine!
+10. When your app finished building in the cloud, download the app and run it to connect to your Mendix app running on your local machine!
 
 ##### Android Configuration
 
-1. [EnableDeveloper Options on your device](https://developer.android.com/studio/debug/dev-options.html).
+1. Enable the developer options on your Android device. See [Configure On-Device Developer Options](https://developer.android.com/studio/debug/dev-options.html#enable) for more information.
 2. Connect your device to your development machine and when the popup appears on your mobile device to allow USB debugging, choose **Allow**.
-   ![android-2](./attachments/debug-a-mobile-app/android-2.png)
-3. Open Chrome Developer Tools and click the ellipsis and navigate to the **Remote Devices** panel
+      
+      ![android-2](./attachments/debug-a-mobile-app/android-2.png)
+  
+3. Open the **Chrome** browser.
+4. Open the **Chrome Developer Tools (F12)**.
+5. Click the options icon (vertical ellipsis) and select **More tools** > **Remote devices**.
+
    ![android-3](./attachments/debug-a-mobile-app/android-3.png)
-4. Go to the Remote Devices panel and select your device from the list
+   
+4. Select your device from the list.
+
    ![android-4](./attachments/debug-a-mobile-app/android-4.png)
-5. Inspect the tab from your mobile device to preview the view from your device on-screen and to gain access to the chrome web inspector and the rest of the developer tools!
-6. You can now take advantage of all the debugging tools you know and love with Mendix, including offline breakpoints, quick updates/refreshes, and the chrome developer tools.
+   
+5. Inspect the tab from your mobile device to preview the view from your device on-screen and to gain access to the Chrome web inspector and the rest of the Developer Tools.
 
-For more help with Android remote debugging, check out [this link](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
+You can now take advantage of all the debugging tools you know and love with Mendix, including offline breakpoints, quick updates/refreshes, and the Chrome Developer Tools.
 
-##Related Content
+For more help with Android remote debugging, check out [Get Started with Remote Debugging Android Devices](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
+

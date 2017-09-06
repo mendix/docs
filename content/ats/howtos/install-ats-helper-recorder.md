@@ -54,7 +54,7 @@ To use the ATS Helper, select the bookmark, press <kbd>Ctrl</kbd>, and hover ove
 The ATS Helper only works on standalone widgets.
 {{% /alert %}}
 
-For more information on how to use the ATS Helper see [How to Create a Test Case](create-a-test-case)
+See [How to Create a Test Case](create-a-test-case) for more information on how to use the ATS Helper.
 
 ## 4 Installing the ATS Recorder
 
@@ -73,4 +73,4 @@ To install the ATS Recorder, follow these steps:
 
     ![](attachments/install-ats-helper-recorder/add-ats-recorder.png)
 
-For more information on how to use the ATS Recorder see [How to Create a Test Case](create-a-test-case). 
+See [How to Create a Test Case](create-a-test-case) for more information on how to use the ATS Helper.

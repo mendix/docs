@@ -1,5 +1,5 @@
 ---
-title: "Set up your first multi-tenant app"
+title: "Set Up Your First Multi-Tenant App"
 category: "Security"
 description: "Introduction to multi-tenant app development."
 tags: "Multitenancy", "Multi-tenant", "Security", "Users"

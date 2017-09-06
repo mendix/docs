@@ -152,14 +152,13 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.storage.azure.AccountKey | Account key to authenticate with the azure blob storage service |   |
 | com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created in case it does not exist yet. |   |
 | com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
-|com.mendix.storage.azure.UseHttps| Introduced in version 7.7. <br/>Enable or disable secure connections using HTTPS. Can be `true` or `false`. | `true` |
+|com.mendix.storage.azure.UseHttps| Introduced in version 7.7. For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
 
 {{% alert type="warning" %}}
 
-In Mendix 7.7.0 we changed Azure blob storage's default connection protocol from HTTP to HTTPS to encourage secure connections by default as this a highly recommended best practice, see also (https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). For existing customer switching to this Mendix version should be transparent, unless you use custom domain names, see [Require secure transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer). In this case one should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
+In Mendix 7.7.0, we changed Azure blob storage's default connection protocol from HTTP to HTTPS to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). For existing customers switching to this Mendix version, this should be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
 
 {{% /alert %}}
-
 
 ## IBM Bluemix Object Storage Settings
 

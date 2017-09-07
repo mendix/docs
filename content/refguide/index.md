@@ -9,3 +9,5 @@ You can browse the different sections of the reference guide for the Mendix plat
 Before installing Mendix 7, please read [System Requirements](system-requirements). If you have been using version 6 of the Mendix platform, we recommend reading [Moving from 6 to 7](moving-from-6-to-7).
 
 If you're looking for step-by-step guides to the various aspects of the Mendix platform, browse the [Mendix 7 How-To's](/howto).
+
+{{% space_block %}}

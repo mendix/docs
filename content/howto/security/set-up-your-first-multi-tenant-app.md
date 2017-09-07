@@ -26,7 +26,7 @@ This is a typical start situation of project security for a multi-tenant app:
 
 The user roles allocated to users that act as a tenant user should not have a configured user management. This is to prevent any user with that user role from seeing users from other tenants. A tenant admin or another tenant-related type of user role must be configured as shown here, which is the desired way of setting user management for tenant-related user roles:
 
-![](attachments/set-up-your-first-multi-tenant-app/01_ConfigurationOfTenantAdmin.png)<a name="Figure2"></a>
+<a name="Figure2"></a>![](attachments/set-up-your-first-multi-tenant-app/01_ConfigurationOfTenantAdmin.png)
 
 {{% alert type="info" %}}
 Use the **Administration** module functions to manage users that transcend the tenant level, and use the [Multi tenant administration](https://appstore.home.mendix.com/link/app/80498/) module from the Mendix App Store to manage all users with tenant-related user roles.

@@ -10,3 +10,5 @@ See the [System Requirements](system-requirements) page before installing Mendix
 All Reference Guide content can be found under the topics listed on the left side of this page. We also made a selection for you for each topic below.
 
 Please go to our [Mendix 5 How-to's](/howto50) section if you're looking for more step-by-step instructions of the various aspects of the Mendix technology.
+
+{{% space_block %}}

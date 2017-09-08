@@ -20,7 +20,7 @@ This is the fourth how-to in this series on creating an employee directory in th
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Complete the third how-to in this series: [How to Build an Employee Directory App (Beginner) Step 3: Publish and View Your App](build-an-employee-directory-app-beginner-beginner-3-publish-and-view-your-app)
+* Complete the third how-to in this series: [How to Build an Employee Directory App (Beginner) Step 3: Publish and View Your App](build-an-employee-directory-app-beginner-3-publish-and-view-your-app)
 
 ## 3 Adding Pages to the User Interface
 
@@ -226,15 +226,15 @@ You're done! Time to view the effects of all your changes.
 
 ## 4 Viewing Your App
 
-Update and view your app, just like you did in [How to Build an Employee Directory App (Beginner) Step 3: Publish and View Your App](build-an-employee-directory-app-beginner-beginner-3-publish-and-view-your-app).
+Update and view your app, just like you did in [How to Build an Employee Directory App (Beginner) Step 3: Publish and View Your App](build-an-employee-directory-app-beginner-3-publish-and-view-your-app).
 
 You can now use your app to add and edit employees!
 
-Continue on to the last part of this tutorial: [How to Build an Employee Directory App (Beginner) Step 5: Promote an Employee](build-an-employee-directory-app-beginner-beginner-5-add-employee-promotion-logic).
+Continue on to the last part of this tutorial: [How to Build an Employee Directory App (Beginner) Step 5: Promote an Employee](build-an-employee-directory-app-beginner-5-add-employee-promotion-logic).
 
 ## 5 Related Content
 
-* [How to Build an Employee Directory App (Beginner) Step 1: Create the App](build-an-employee-directory-app-beginner-beginner-1-create-the-app)
-* [How to Build an Employee Directory App (Beginner) Step 2: Build a Dashboard Page](build-an-employee-directory-app-beginner-beginner-2-build-a-dashboard-page)
-* [How to Build an Employee Directory App (Beginner) Step 3: Publish and View Your App](build-an-employee-directory-app-beginner-beginner-3-publish-and-view-your-app)
-* [How to Build an Employee Directory App (Beginner) Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-beginner-beginner-5-add-employee-promotion-logic)
+* [How to Build an Employee Directory App (Beginner) Step 1: Create the App](build-an-employee-directory-app-beginner-1-create-the-app)
+* [How to Build an Employee Directory App (Beginner) Step 2: Build a Dashboard Page](build-an-employee-directory-app-beginner-2-build-a-dashboard-page)
+* [How to Build an Employee Directory App (Beginner) Step 3: Publish and View Your App](build-an-employee-directory-app-beginner-3-publish-and-view-your-app)
+* [How to Build an Employee Directory App (Beginner) Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-beginner-5-add-employee-promotion-logic)

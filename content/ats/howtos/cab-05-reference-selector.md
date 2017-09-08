@@ -42,11 +42,11 @@ To define the user approach, follow these steps:
 
     Most widgets that give options—like the reference selector and the drop-down—have a `select` element that displays the options.
 
-## 4 Create Action Structure
+## 4 Creating the Action Structure
 
 In the previous step, you wrote down the user approach for the Reference Selector widget. Now you create this approach in ATS with actions.
 
-1. You start by checking the parent element which is always the element with the mx-name when creating an unsupported widget action. If the widget does not have a `mx-name`, look for the highest `div` element that is still referencing to the widget.
+1. Start by checking the parent element, which is always the element with the `mx-name` when creating an unsupported widget action. If the widget does not have a `mx-name`, look for the highest `div` element that is still referencing to the widget.
 The parent element of the reference selector looks like this in the debugger:
 
 ![](attachments/create-unsupported-widget/cab-05-reference-selector/ref-selector-parentelement.png)

@@ -6,7 +6,7 @@ tags: ["build", "app", "developer portal", "web modeler"]
 frontpage_featured: true
 ---
 
-The following advanced how-to's will guide you through the advanced process of creating an employee directory application in the Mendix Web Modeler and Desktop Modeler:
+The following advanced how-to's will guide you through the process of creating an employee directory application in the Mendix Web Modeler and Desktop Modeler:
 
 * [How to Build an Employee Directory App (Advanced) Step 1: Create the App](build-an-employee-directory-app-advanced-1-create-the-app)
 * [How to Build an Employee Directory App (Advanced) Step 2: Build a Dashboard Page](build-an-employee-directory-app-advanced-2-build-a-dashboard-page)

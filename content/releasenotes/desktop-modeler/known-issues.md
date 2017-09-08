@@ -20,6 +20,7 @@ For details on this release, see [7.6 release notes](7.6).
 * When retrieving an entity with a virtual attribute without using a schema ID, references are not returned. This impacts the following scenarios:
   * A template grid containing an entity with a virtual attribute will not show any data over an association (for example, nested data views).
   * Custom widgets requesting Mendix objects with a virtual attribute through XPath will have no access to their associations.
+    * Fixed in [7.6.1](7.6#RN761).
 
 
 ## 7.5

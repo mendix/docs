@@ -7,37 +7,40 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-This how-to explains step by step how to create an Unsupported Widget action for the Reference Selector widget. In a standard situation, the first step is checking if ATS supports the widget. 
+This how-to explains step-by-step how to create an Unsupported Widget action for the reference selector widget. In a standard situation, the first step is to check if ATS supports the widget. 
 
-In this how-to you assume that you must build your own action.
+The how-to assumes you must build your own action.
 
 This how-to applies to all widgets like a reference selector, if the widget has a dropdown you can follow this how-to. Keep in mind that it might need some adjustments!
 
 **This how-to will teach you how to do the following:**
-* Approach a drop-down widget that ATS must set.
-* Create the custom action to set the drop-down widget.
+
+* Approach a drop-down widget that ATS must set
+* Create the custom action to set the drop-down widget
 
 ## 2 Prerequisites
 
-Before starting with this how-to, make sure you have the following prerequisites in place:
+Before starting this how-to, make sure you have completed the following prerequisites:
+ 
+* [Custom Action General Section](custom-action-general)
 
-*  [Custom Action General Section](custom-action-general)
+## 3 Defining the User Approach
 
-## 3 Define User Approach
+First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget is not important. What is important is how you interact with it.
 
-First you define the user approach, how do you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget isn’t important, only how you interact with it.
+To define the user approach, follow these steps:
 
-1. You interact with the widget by clicking it to see the options and then click on the option you want. A user only clicks the widget to see the options it has.
+1.  You interact with the widget by clicking it to see the options and then selecting the option you want. A user only clicks the widget to see the options it has.
 
-_Reference Selector opened_
+    This is the reference selector opened:
 
-![](attachments/create-unsupported-widget/cab-05-reference-selector/ref-selector-unopenend.png)
+    ![](attachments/create-unsupported-widget/cab-05-reference-selector/ref-selector-unopenend.png)
 
-_Reference Selector unopened_
+    This is the reference selector unopened:
 
-![](attachments/create-unsupported-widget/cab-05-reference-selector/ref-selector-openend.png)
+    ![](attachments/create-unsupported-widget/cab-05-reference-selector/ref-selector-openend.png)
 
-Most widgets that give options, like the reference selector and the dropdown, have a `select` element which displays the options.
+    Most widgets that give options—like the reference selector and the drop-down—have a `select` element that displays the options.
 
 ## 4 Create Action Structure
 

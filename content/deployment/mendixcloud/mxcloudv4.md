@@ -64,7 +64,7 @@ These are the differences between Mendix Cloud v3 and Mendix Cloud v4:
 * The Java security manager is no longer in place
     * The Java security manager is used in v3 to enforce standardization and to act as an additional security layer
     * In Cloud Foundry, short-lived containers already ensure standardization, and apps are completely isolated from the management network; therefore, the Java security manager will not be enabled on the new environment
-* The amount of permitted database connections is no longer static, but tied to the RAM of the database environment. The limit is roughly 100 per GB of database RAM. You can use the Mendix Runtime settings **ConnectionPoolingMaxActive** and **ConnectionPoolingMaxIdle** to tweak the amount of database connections that the Mendix Runtime will set up. The defaults are perfectly fine for most situations. Keep in mind that the setting is applied per runtime instance, so the configured amount is multiplied by the number of instances.
+* The number of permitted database connections is no longer static, but tied to the RAM of the database environment. The limit is roughly 100 connections per GB of database RAM. You can use the Mendix Runtime settings **ConnectionPoolingMaxActive** and **ConnectionPoolingMaxIdle** to tweak the number of database connections that the Mendix Runtime will set up. The defaults are perfectly fine for most situations. Keep in mind that the setting is applied per runtime instance, so the configured number is multiplied by the number of instances.
 
 ## 10 Missing in Mendix Cloud v4
 

@@ -49,11 +49,15 @@ Both autonumbers and calculated attributes require server intervention, and are 
 
 Attribute paths which follow references are not allowed in grid columns. In addition, reference set selectors cannot be used.
 
-### 4.8 Excel/CSV Export
+### 4.8 System Members
+
+System members (`createdDate`, `changedDate`, `owner`, `changedBy`) are not supported.
+
+### 4.9 Excel/CSV Export
 
 Spreadsheets are generated through direct database interaction, which is not available offline.
 
-### 4.9 Platforms
+### 4.10 Platforms
 
 Offline-enabled apps are only supported on the iOS and Android platforms.
 

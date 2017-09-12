@@ -28,19 +28,17 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget is not important. What is important is how you interact with it.
 
-To define the user approach, follow these steps:
+You interact with the widget by clicking the text box and entering the text. The clicking part is something a user does to focus the text box so they can enter text. After that, you press <kbd>Enter</kbd> or click somewhere to unfocus the text box.
 
-1.  You interact with the widget by clicking the text box and entering the text. The clicking part is something a user does to focus the text box so they can enter text. After that, you press <kbd>Enter</kbd> or click somewhere to unfocus the text box.
+This is the text box focused:
 
-    This is the text box focused:
+![](attachments/create-unsupported-widget/cab-03-textbox/text-box-focused.png)
 
-    ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-focused.png)
+This is the text box unfocused:
 
-    This is the text box unfocused:
+![](attachments/create-unsupported-widget/cab-03-textbox/text-box-unfocused.png)
 
-    ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-unfocused.png)
-
-    Now you know that you must focus, enter text, and unfocus the widget. You perform these tasks on the `input` element that is available inside all input widgets. The `input` element with the type `text` makes it possible to type inside a widget.
+Now you know that you must focus, enter text, and unfocus the widget. You perform these tasks on the `input` element that is available inside all input widgets. The `input` element with the type `text` makes it possible to type inside a widget.
 
 ## 4 Creating the Action Structure
 

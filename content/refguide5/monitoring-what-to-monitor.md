@@ -18,7 +18,7 @@ This document is based upon the following assumptions:
     *   [Monitoring - Mendix Runtime](monitoring-mendix-runtime "monitoring _ mendix runtime")
     *   [Logging](logging "logging")
 *   SQL Server maintenance plans have been set up according to:
-    *   [Mendix SQL Maintenance Plans](/howto50/mendix-sql-maintenance-plans "mendix sql maintenance plans")
+    *   [Mendix SQL Maintenance Plans](/deployment/on-premises/mendix-sql-maintenance-plans "mendix sql maintenance plans")
 
 ## <a rel="nofollow"></a>**Monitoring Categories**
 

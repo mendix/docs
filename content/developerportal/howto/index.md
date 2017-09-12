@@ -36,6 +36,7 @@ This category contains documents about the use of specific tasks in the [Develop
 
 * [Configure Custom Domains](custom-domains)
 * [Configure Maintenance Windows](maintenance-windows)
+* [Scale Your Environment in Mendix Cloud v4](scale-environment)
 
 ### 4.2 Connecting to a Cloud Node
 
@@ -69,11 +70,6 @@ This category contains documents about the use of specific tasks in the [Develop
 * [Create a Backup](how-to-create-backup)
 * [Download a Backup](how-to-download-a-backup)
 * [Restore a Backup](how-to-restore-a-backup)
-
-### 5.3 Troubleshoot
-
-* [Troubleshoot Your Application in the Mendix Cloud: Cache](troubleshooting-mxcloud-cache)
-* [Troubleshoot Your Application in the Mendix Cloud: Running Now](troubleshooting-mxcloud-runningnow)
 
 ## 6 Related Content
 

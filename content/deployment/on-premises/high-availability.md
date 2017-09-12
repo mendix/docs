@@ -66,7 +66,7 @@ These are some important details:
 
 * [How to Configure a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
 * [How to Update a Mendix Application](updating-a-mendix-application)
-* [How to Set Up Mendix on Windows – Microsoft SQL Server](mendix-on-windows-_-microsoft-sql-server)
+* [How to Set Up Mendix on Windows – Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
 * [How to Set Up a New SQL Server Database](setting-up-a-new-sql-server-database)
 * [How to Use Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
 * [How to Restore an SQL Server Database](restoring-a-sql-server-database)

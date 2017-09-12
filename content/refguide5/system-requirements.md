@@ -48,7 +48,7 @@ The Team Server is implemented using Subversion and the Modeler uses the HTTPS p
 
 ### Database server
 
-*   [Microsoft SQL Server 2005 or newer](/howto50/mendix-on-windows-microsoft-sql-server)
+*   [Microsoft SQL Server 2005 or newer](/deployment/on-premises/mendix-on-windows-microsoft-sql-server)
 *   [MySQL 5.5](mysql) / [MariaDB 5.5](mysql)
 *   [Oracle Database 11_g_ Release 2 or newer](oracle)
 *   PostgreSQL 8.4 or newer

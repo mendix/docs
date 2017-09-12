@@ -26,6 +26,8 @@ Before starting with this how-to, make sure you have the following prerequisites
 * An application under test (AUT)
 * Selenium hub (for more information on the Selenium options, see [ATS Deployment](../general/deployment))
 
+{{% youtube zJOpO0AymAg %}}
+
 ## 3 Creating a New Project<a name="CreatingNewProject"></a>
 
 When you log in to ATS as a user, you see the **My Projects** page. A project is a folder in which all the data related to a specific application will be saved and managed. Every user can create a new project, and, as its owner, manage other users' access to it. If there are no projects on your account yet, you are prompted to create a new project.

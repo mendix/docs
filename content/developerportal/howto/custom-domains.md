@@ -65,9 +65,9 @@ To manage custom domains, follow these steps:
 
 ## 4 Generating a Certificate Request for your Custom Domain<a name="Generating"></a>
 
-When you do not have an SSL/TLS certificate or an SSL/TLS private key for your custom domain yet, you have to order one at a certificate authority (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, or Comodo). In order to get a signed SSL/TLS certificate from a certificate authority, you need to provide a certificate request. A certificate request can be created in the Mendix Cloud.
+When you do not have an SSL/TLS certificate you have to order one at a certificate authority (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, or Comodo). In order to get a signed SSL/TLS certificate from a certificate authority, you need to provide a certificate signing request (CSR). A private A SSL/TLS key and a CSR tied to that key can be created in the Mendix Cloud for you.
 
-To create a certificate request, follow these steps:
+To create a certificate signing request and an RSA key, follow these steps:
 
 1.  Click **New** and then click **Create a Certificate Request**:
 
@@ -83,7 +83,7 @@ To create a certificate request, follow these steps:
 
 {{% alert type="info" %}}
 
-The SSL/TLS private key will be stored in our secure keystore. It will not be available for downloadin order to keep it secure.
+The SSL/TLS private key will be stored in our secure keystore. It will not be available for download in order to keep it secure.
 
 {{% /alert %}}
 

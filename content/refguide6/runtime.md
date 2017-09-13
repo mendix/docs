@@ -7,7 +7,7 @@ The Mendix Runtime executes the model created in the Modeler. It serves pages to
 
 ## Licensing
 
-You need a license to run an application in production mode. Without a license the Mendix Runtime stops operating after a couple of hours. A license can be obtained through your account manager at Mendix. Afterwards, you can activate your license by following the [activate your Mendix license](/howto6/activate-a-mendix-license-on-microsoft-windows) manual.
+You need a license to run an application in production mode. Without a license the Mendix Runtime stops operating after a couple of hours. A license can be obtained through your account manager at Mendix. Afterwards, you can activate your license by following the [activate your Mendix license](/deployment/on-premises/activate-a-mendix-license-on-microsoft-windows) manual.
 
 ## API
 

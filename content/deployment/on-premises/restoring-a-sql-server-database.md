@@ -1,6 +1,6 @@
 ---
 title: "Restoring a SQL Server database"
-parent: "mendix-on-windows-_-microsoft-sql-server"
+parent: "mendix-on-windows-microsoft-sql-server"
 ---
 ## 1 Introduction
 
@@ -76,7 +76,7 @@ To restore the database, follow these steps:
 * [How to Set Up a New SQL Server Database](setting-up-a-new-sql-server-database)
 * [How to Set Up Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
 * [How to Set Up a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
-* [How to Use Mendix on Windows - Microsoft SQL Server](mendix-on-windows-_-microsoft-sql-server)
+* [How to Use Mendix on Windows - Microsoft SQL Server](mendix-on-windows-microsoft-sql-server)
 * [How to Deploy Mendix on Microsoft Windows](deploy-mendix-on-microsoft-windows)
 * [How to Install Mendix on Debian GNU Linux](installing-mendix-on-debian-gnu-linux)
 * [How to Install Mendix on RedHat and CentOS](installing-mendix-on-redhat-and-centos)

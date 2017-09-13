@@ -37,6 +37,6 @@ These pages provide detailed information on using the Mendix App Store:
 * [How to Share App Store Content](app-store/share-app-store-content)
 * [App Store Content Support](app-store/app-store-content-support)
 
-## 4 More Information
+## 5 More Information
 
 Questions about the team or what we do can be sent to *community@mendix.com*.

@@ -53,7 +53,7 @@ For more information, see [How to Configure High Availability](high-availability
 
 * [How to Use a Security Checklist for Your On-Premises Installation](security-checklist-for-your-on-premises-installation)
 * [How to Update a Mendix Application](updating-a-mendix-application)
-* [How to Set Up a Microsoft SQL Server for Mendix on Windows](mendix-on-windows-_-microsoft-sql-server)
+* [How to Set Up a Microsoft SQL Server for Mendix on Windows](mendix-on-windows-microsoft-sql-server)
 * [How to Set Up a New SQL Server Database](setting-up-a-new-sql-server-database)
 * [How to Configure Mendix SQL Maintenance Plans](mendix-sql-maintenance-plans)
 * [How to Restore a SQL Server Database](restoring-a-sql-server-database)

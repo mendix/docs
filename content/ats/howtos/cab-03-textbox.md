@@ -20,9 +20,9 @@ The how-to applies to all widgets like a text box, which means that, if ATS need
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, make sure you have completed the following prerequisite:
  
-*  [Custom Action General Section](custom-action-general)
+* Read [Custom Action General Section](custom-action-general)
 
 ## 3 Defining the User Approach
 

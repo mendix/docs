@@ -11,7 +11,7 @@ This how-to explains how to create an unsupported widget action for the Mendix s
 
 The how-to assumes that you must build your own action. 
 
-The how-to applies to all widgets (like a button). If ATS needs to click the widget, you can follow this how-to until section [5 Last Check](#LastCheck). Keep in mind that it might need some adjustments! 
+The how-to applies to all widgets like the button widget. If ATS needs to click the widget, you can follow this how-to until section [5 Last Check](#LastCheck). Keep in mind that it might need some adjustments! 
  
 Sections [6 Adding Logic to Make Your Action "Smarter"](#AddingLogic) and [7 Final Check](#FinalCheck) apply "logic" to an action that is of the check box type. If a widget is of the check box type, you can follow these steps to apply logic. 
  
@@ -49,9 +49,7 @@ To define the user approach, follow these steps:
  
 In the previous section, you wrote down the user approach for the Mendix Switch widget. Now you must create this approach in ATS with actions. Create a new action for the next steps.
  
-1.  Look for the element in the debugger ATS needs to click. ATS always clicks in the middle of an element, keep this in mind while looking for the element to click. You must start by checking the parent element, which is always the element with the `mx-name-` when building an unsupported widget action. If the widget does not have `mx-name-`, look for the highest `div` element that is still referencing the widget.
-
-  The parent element of the switch widget has the `mx-name-switch1` in the debugger:
+1.  Look for the element in the debugger ATS needs to click. ATS always clicks in the middle of an element, keep this in mind while looking for the element to click. You must start by checking the parent element, which is always the element with `mx-name-` when building an unsupported widget action. If the widget does not have `mx-name-`, look for the highest `div` element that is still referencing the widget. The parent element of the switch widget has `mx-name-switch1` in the debugger:
 
   ![](attachments/create-unsupported-widget/cab-02-switch/highlighted-switch-mxname-debugger.png)
 
@@ -82,8 +80,7 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 
   ![](attachments/create-unsupported-widget/cab-02-switch/switch-element-console.png)
 
-  It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner.
-  When you enter a selector in ATS, don’t use `$( ‘….’ )` or `jQuery( ‘…..’ )`.
+  It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner. When you enter a selector in ATS, don’t use `$( ‘….’ )` or `jQuery( ‘…..’ )`.
 
 5.  Enter the child node in the Find Widget Child Node action:
 
@@ -121,7 +118,7 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
   
 ## 5 Last Check<a name="LastCheck"></a>
 
-Now check the following items:
+Now check for the following:
 
 * Use of the ATS naming convention for parameters
 * A clear description of test steps, input parameters, output parameters, and action returns
@@ -195,7 +192,7 @@ Now check the following items:
 
 After checking these items, you can run the test case that uses this action.
 
-Congratulations! You’ve added logic to your custom action.
+Congratulations! You have added logic to your custom action.
 
 ![](attachments/create-unsupported-widget/cab-02-switch/switch-finished-withlogic.png)
 

@@ -7,62 +7,62 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-This how-to explains step by step how to create an Unsupported Widget action for the AutoComplete widget. In a standard situation, the first step is checking if ATS supports the widget. 
+This how-to explains how to create an Unsupported Widget action for the AutoComplete widget. In a standard situation, the first step is checking if ATS supports the widget. 
 
-In this how-to you assume that you must build your own action. 
+The how-to assumes that you must build your own action. 
 
-This how-to applies to all widgets like an AutoComplete widget, if the widget has a dropdown/menu that pops up elsewhere you can follow this how-to. Keep in mind that it might need some adjustments!
+The how-to applies to all widgets like the AutoComplete widget. If the widget has a drop-down menu that pops up elsewhere, you can follow this how-to. Keep in mind that it might need some adjustments according to the widget!
 
 **This how-to will teach you how to do the following:**
-* Approach an AutoComplete option that ATS must click.
-* Create the custom action to click the AutoComplete option.
+
+* Approach an AutoComplete option that ATS must click
+* Create the custom action to click the AutoComplete option
 
 ## 2 Prerequisites
 
-Before starting with this how-to, make sure you have the following prerequisites in place:
+Before starting this how-to, make sure you have completed the following prerequisite:
 
-*  [Custom Action General Section](custom-action-general)
+* Read [Custom Action General Section](custom-action-general)
 
-## 3 Define User Approach
+## 3 Defining User Approach
 
-First you define the user approach, how do you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget isn’t important, only how you interact with it.
+First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget isn’t important. What is important is how you interact with it.
 
-1. You interact with the widget by clicking it. This opens the search field where you enter the text. Then you click the option that is the same as your text. 
+You interact with the widget by clicking it. This opens the search field where you enter the text. Then, you click the option that is the same as your text. 
 
-_AutoComplete widget_
+This is the AutoComplete widget:
 
 ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-standard.png)
 
-_AutoComplete widget clicked_
+This is the AutoComplete widget clicked:
 
 ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-clicked.png)
 
-_AutoComplete widget with search_
+This is the AutoComplete widget with search:
 
 ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-withsearch.png)
 
-_AutoComplete widget filled in_
+This is the AutoComplete widget filled in:
 
 ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-filledin.png)
 
-## 4 Action Structure
+## 4 Creating the Action Structure
 
-In the previous step, you wrote down the user approach for the Reference Selector widget. Now you create this approach in ATS with actions.
+In the previous step, you wrote down the user approach for the reference selector widget. Now you will create this approach in ATS with actions.
 
-1. You start by checking the parent element which is always the element with the `mx-name` when creating an unsupported widget action. If the widget does not have a `mx-name`, look for the highest `div` element that is still referencing to the widget.
-The parent element of the AutoComplete widget looks like this in the debugger:
+To create the action structure, follow these steps:
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-parentelement-debugger.png)
+1.  Check the parent element, which is always the element with `mx-name` when creating an unsupported widget action. If the widget does not have `mx-name`, look for the highest `div` element that is still referencing to the widget. The parent element of the AutoComplete widget looks like this in the debugger:
 
-The debugger creates the border around the selected element in the app:
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-parentelement-debugger.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-parentelement-outlined.png)
+    The debugger creates the border around the selected element in the app:
 
-2. In a standard situation, you use the  _[Find Widget Child Node](../refguide-ats-1/find-widget-child-node)_ action while creating an unsupported widget action. 
-In this case, you see that the drop down is not a child element of the Auto Complete widget. 
-To find it, use the inspector in the top left corner of the debugger: 
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-parentelement-outlined.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/debugger-inspector.png)
+2.  In a standard situation, you use the [Find Widget Child Node](../refguide-ats-1/find-widget-child-node) action while creating an unsupported widget action. In this case, you see that the drop-down menu is not a child element of the AutoComplete widget. To find it, use the inspector in the top-left corner of the debugger: 
+
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/debugger-inspector.png)
 
 3. Click the search field in ATS while using the inspector, to see it in the debugger.
 

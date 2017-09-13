@@ -7,11 +7,11 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-This how-to explains step-by-step how to create an Unsupported Widget action for the reference selector widget. In a standard situation, the first step is to check if ATS supports the widget. 
+This how-to explains how to create an Unsupported Widget action for the reference selector widget. In a standard situation, the first step is to check if ATS supports the widget. 
 
 The how-to assumes you must build your own action.
 
-This how-to applies to all widgets like a reference selector, if the widget has a dropdown you can follow this how-to. Keep in mind that it might need some adjustments!
+This how-to applies to all widgets like the reference selector widget, if the widget has a dropdown you can follow this how-to. Keep in mind that it might need some adjustments!
 
 **This how-to will teach you how to do the following:**
 
@@ -46,7 +46,7 @@ In the previous step, you wrote down the user approach for the reference selecto
 
 To create the action structure, follow these steps:
 
-1.  Check the parent element, which is always the element with the `mx-name` when creating an unsupported widget action. If the widget does not have a `mx-name`, look for the highest `div` element that is still referencing to the widget. The parent element of the reference selector looks like this in the debugger:
+1.  Check the parent element, which is always the element with `mx-name` when creating an unsupported widget action. If the widget does not have `mx-name`, look for the highest `div` element that is still referencing to the widget. The parent element of the reference selector looks like this in the debugger:
 
   ![](attachments/create-unsupported-widget/cab-05-reference-selector/ref-selector-parentelement.png)
 
@@ -64,9 +64,7 @@ To create the action structure, follow these steps:
 
   ![](attachments/create-unsupported-widget/cab-05-reference-selector/ref-selector-childelement-select-selector.png)
 
-  It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner.
-  
-  When you enter a selector in ATS, you don’t use `$( ‘….’ )` or `jQuery( ‘…..’ )`.
+  It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner. When you enter a selector in ATS, don’t use `$( ‘….’ )` or `jQuery( ‘…..’ )`.
 
 4.  Add the Find Widget Child Node action to your action. Enter the child node selector `select`, then enter the test step description and output description:
 
@@ -92,7 +90,7 @@ Next, you need to add the action input parameters:
 Keep the [guidelines for creating a custom action](../bestpractices/guidelines-custom-action) in mind while creating action parameters. 
 {{% /alert %}}
 
-To create the action parameters, follow these steps:
+To add the action parameters, follow these steps:
 
 1.  Configure the **Widget Name** input parameter like this:
 
@@ -106,7 +104,7 @@ To create the action parameters, follow these steps:
 
   ![](attachments/create-unsupported-widget/cab-05-reference-selector/ref-selector-searchcontext-inputparameter.png)
 
-  For this custom action, you don’t need an output parameter.
+  For this custom action, you do not need an output parameter.
 
 4.  Connect the input parameters to the right actions. Start with the **Widget Name** and **Search Context** input parameters for the Find Widget Child Node action:
 
@@ -120,7 +118,7 @@ There is no need to add logic to this custom action, since it is only selecting 
 
 ## 6 Final Check
 
-Now check the following items:
+Now check for the following:
 
 * Use of the ATS naming convention for parameters
 * A clear description of test steps, input parameters, output parameters, and action returns
@@ -129,6 +127,6 @@ Now check the following items:
 
 After checking these items, you can run the test case that uses this action.
 
-Congratulations! You've created your own custom action for the Mendix Reference Selector widget.
+Congratulations! You have created your own custom action for the Mendix Reference Selector widget.
 
 ![](attachments/create-unsupported-widget/cab-05-reference-selector/ref-selector-finishedaction.png)

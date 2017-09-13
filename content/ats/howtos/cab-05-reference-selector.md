@@ -28,8 +28,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget is not important. What is important is how you interact with it.
 
-To define the user approach, follow these steps:
-
 You interact with the widget by clicking it to see the options and then selecting the option you want. A user only clicks the widget to see the options it has.
 
 This is the reference selector opened:

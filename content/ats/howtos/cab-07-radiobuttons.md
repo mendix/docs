@@ -7,11 +7,11 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-This how-to explains step by step how to create an Unsupported Widget action for the Radio Buttons widget. In a standard situation, the first step is checking if ATS supports the widget. 
+This how-to explains how to create an Unsupported Widget action for the Radio Buttons widget. In a standard situation, the first step is checking if ATS supports the widget. 
 
 The how-to assumes that you must build your own action.
 
-The how-to applies to all widgets like a radio button, which means that, if you must click a child element based on text, you can follow this how-to. Keep in mind that it might need some adjustments according to the widget!
+The how-to applies to all widgets like the radio button widget, which means that, if you must click a child element based on text, you can follow this how-to. Keep in mind that it might need some adjustments according to the widget!
 
 **This how-to will teach you how to do the following:**
 

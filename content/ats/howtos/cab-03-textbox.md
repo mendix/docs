@@ -7,11 +7,11 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-This how-to explains step-by-step how to create an Unsupported Widget action for the Mendix text box widget widget. In a standard situation, the first step is checking if ATS supports the widget. 
+This how-to explains how to create an Unsupported Widget action for the Mendix text box widget widget. In a standard situation, the first step is checking if ATS supports the widget. 
 
 The how-to assumes that you must build your own action.
 
-The how-to applies to all widgets like a text box, which means that, if ATS needs to enter text in a widget, you can follow this how-to. Keep in mind that it might need some adjustments according to the widget!
+The how-to applies to all widgets like the text box widget, which means that, if ATS needs to enter text in a widget, you can follow this how-to. Keep in mind that it might need some adjustments according to the widget!
 
 **This how-to will teach you how to do the following:**
 
@@ -46,9 +46,7 @@ In the previous step, you wrote down the user approach for the text box widget. 
 
 To create the action structure, follow these steps:
 
-1.  Start by checking the parent element, which is always the element with the `mx-name` when creating an unsupported widget action. If the widget does not have a `mx-name`, look for the highest `div` element that is still referencing the widget.
-
-    The parent element of the text box looks like this in the debugger:
+1.  Start by checking the parent element, which is always the element with `mx-name` when creating an unsupported widget action. If the widget does not have `mx-name`, look for the highest `div` element that is still referencing the widget. The parent element of the text box looks like this in the debugger:
 
     ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-parentelement-debugger.png)
 
@@ -66,15 +64,13 @@ To create the action structure, follow these steps:
 
 3.  Use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger: `$( ‘.mx-name-textBox2 input’ )`.
 
-    You use DOTS here because in jQuery the dot stands for a class name selector.
+    You use "dots" here, because in jQuery, the dot stands for a class name selector.
 
     When you enter this in the console, it looks like this:
 
     ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-childelement-selector.png)
 
-    It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner.
-    
-    When you enter a selector in ATS you don’t use the `$( ‘….’ )` or `jQuery( ‘…..’ )`.
+    It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner. When you enter a selector in ATS, don’t use `$( ‘….’ )` or `jQuery( ‘…..’ )`.
 
 4.  Add the Find Widget Child Node action to your action. Enter the `input` child node selector, then enter the test step description and output description:
 
@@ -98,7 +94,7 @@ To create the action structure, follow these steps:
 
 ## 5 Action Parameters
 
-Next, you add the action input parameters:
+Next, you need to add the action input parameters:
 
 * Widget Name
 * Value
@@ -108,23 +104,23 @@ Next, you add the action input parameters:
 Keep the [guidelines for creating a custom action](../bestpractices/guidelines-custom-action) in mind while creating action parameters. 
 {{% /alert %}}
 
-To add the action parameters, follow these models:
+To add the action parameters, follow these steps:
 
-1.  The **Widget Name** input parameter:
+1.  Configure the **Widget Name** input parameter like this:
 
     ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-widgetname-parameter.png)
 
-2.  The **Value** input parameter:
+2.  Configure the **Value** input parameter like this:
 
     ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-value-parameter.png)
 
-3.  The **Search Context** input parameter:
+3.  Configure the **Search Context** input parameter like this:
 
     ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-searchcontext-parameter.png)
 
-    For this custom action, you don’t need an output parameter.
+    For this custom action, you do not need an output parameter.
 
-4.  Next, connect the input parameters to the correct actions. Start with the **Widget Name** and **Search Context** parameters for the Find Widget Child Node action:
+4.  Connect the input parameters to the correct actions. Start with the **Widget Name** and **Search Context** parameters for the Find Widget Child Node action:
 
     ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-actioninputparameters-findwidgetchildnode.png)
 
@@ -136,7 +132,7 @@ There is no need to add logic to this custom action. It only involves entering t
 
 ## 6 Final Check
 
-Now check the following items:
+Now check for the following:
 
 *  Use of the ATS naming convention for parameters
 *  A clear description of test steps, input parameters, output parameters, and action returns
@@ -145,6 +141,6 @@ Now check the following items:
 
 After checking these items, you can run the test case that uses this action.
 
-Congratulations! You've created your own custom action for the Mendix text box widget.
+Congratulations! You have created your own custom action for the Mendix text box widget.
 
 ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-finishedaction.png)

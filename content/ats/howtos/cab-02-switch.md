@@ -30,6 +30,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## 3 Defining the User Approach
  
 First you must define the user approach about how you interact with the widget. Since you are creating an unsupported widget action, only how you interact with it is important, not how you find the widget.
+
+To define the user approach, follow these steps:
  
 1. Trigger the Mendix Switch by clicking it. This changes its state from checked to unchecked:
 

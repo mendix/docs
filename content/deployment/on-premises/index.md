@@ -2,9 +2,7 @@
 title: "On-Premises"
 ---
 
-## 1 Introduction
-
-Learn how to deploy your app on your own hardware.
+Learn how to deploy your app on your own hardware by following the how-to's below.
 
 ## Documents in This Category
 

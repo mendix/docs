@@ -3,7 +3,7 @@ title: "Run a Mendix Docker Image"
 category: "Docker"
 #parent: ""
 description: "Describes running a Mendix Docker image."
-tags: ["Docker", "Cloud", "container", "CI/CD";]
+tags: ["Docker", "Cloud", "container", "CI/CD"]
 ---
 
 ## 1 Introduction

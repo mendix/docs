@@ -11,7 +11,7 @@ This how-to explains how to create an unsupported widget action for the Mendix s
 
 The how-to assumes that you must build your own action. 
 
-The how-to applies to all widgets like the button widget. If ATS needs to click the widget, you can follow this how-to until section [5 Last Check](#LastCheck). Keep in mind that it might need some adjustments! 
+The how-to applies to all widgets like the button widget. If ATS needs to click the widget, you can follow this how-to until section [5 Last Check](#LastCheck). Keep in mind that it might need some adjustments according to the widget!
  
 Sections [6 Adding Logic to Make Your Action "Smarter"](#AddingLogic) and [7 Final Check](#FinalCheck) apply "logic" to an action that is of the check box type. If a widget is of the check box type, you can follow these steps to apply logic. 
  

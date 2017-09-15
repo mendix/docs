@@ -143,7 +143,7 @@ You have an action that clicks the Switch widget to alter its state, and now you
 
   `$( ‘.mx-name-switch1 input’ )`:
   
-  ![](attachments/create-unsupported-widget/cab-02-switch/mendix-switch-input-type- debugger.png)
+  ![](attachments/create-unsupported-widget/cab-02-switch/mendix-switch-input-type-debugger.png)
 
   {{% alert type="info" %}}
   It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner.  

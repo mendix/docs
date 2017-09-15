@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Defining the User Approach
  
-First you must define the user approach about how you interact with the widget. Since you are creating an unsupported widget action, only how you interact with it is important, not how you find the widget.
+First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget is not important. What is important is how you interact with it.
 
 To define the user approach, follow these steps:
  

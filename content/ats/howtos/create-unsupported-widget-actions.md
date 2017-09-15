@@ -3,7 +3,7 @@ title: "Create Unsupported Widget Actions"
 parent: "create-custom-actions"
 ---
 
-In this category, you can find all the how-to's for creating an Unsupported Widget action:
+In this sub-category, you can find all the how-to's for creating an Unsupported Widget action:
 
 * [CAB.02 - Switch](cab-02-switch)
 * [CAB.03 - TextBox](cab-03-textbox)

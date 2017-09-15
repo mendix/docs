@@ -24,11 +24,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Read [Custom Action General Section](custom-action-general)
 
-## 3 Defining User Approach
+## 3 Defining the User Approach
 
-First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget isn’t important. What is important is how you interact with it.
+First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget is not important. What is important is how you interact with it.
 
-You interact with the widget by clicking it. This opens the search field where you enter the text. Then, you click the option that is the same as your text. 
+You interact with the widget by clicking it, which opens the search field where you enter the text. Then, you click the option that is the same as your text.
 
 This is the AutoComplete widget:
 
@@ -60,124 +60,113 @@ To create the action structure, follow these steps:
 
     ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-parentelement-outlined.png)
 
-2.  In a standard situation, you use the [Find Widget Child Node](../refguide-ats-1/find-widget-child-node) action while creating an unsupported widget action. In this case, you see that the drop-down menu is not a child element of the AutoComplete widget. To find it, use the inspector in the top-left corner of the debugger: 
+2.  In a standard situation, you use the [Find Widget Child Node](../refguide-ats-1/find-widget-child-node) action while creating an unsupported widget action. In this case, you see that the drop-down menu is not a child element of the AutoComplete widget. To find it, click the inspector icon in the top-left corner of the debugger: 
 
     ![](attachments/create-unsupported-widget/cab-10-autocomplete/debugger-inspector.png)
 
-3. Click the search field in ATS while using the inspector, to see it in the debugger.
+3.  Click the search field in ATS while using the inspector to see it in the debugger.
 
-_Hovering above input element_
+    This is hovering above the input element:
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/debugger-inspector-hovering-input.png)
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/debugger-inspector-hovering-input.png)
 
-_Input element in the debugger_
+    This is an input element in the debugger:
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/debugger-inspector-inspected-input.png)
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/debugger-inspector-inspected-input.png)
 
-4. In the input element, you see that the autocomplete option is set to off. The widget can also autocomplete the entered text. You must cover this scenario later.
+4.  In the input element, you see that the `autocomplete` option is set to off. The widget can also autocomplete the entered text. You will cover this scenario later.
+5.  Use the [Find/Assert Widget](../refguide-ats-1/findassert-widget) action to find the AutoComplete widget. Then, add the Find/Assert Widget action to your custom action, and give it a proper test step description and output description:
 
-5. You use the [_Find/Assert Widget_](../refguide-ats-1/findassert-widget) action to find the AutoComplete widget. Now, add the _Find/Assert Widget_ action to your custom action, give a proper test step description and output description:
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-findassertwidget-action.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-findassertwidget-action.png)
+    You will create and connect the input parameters later.
 
-You create and connect the input parameters later.
+6.  Click the AutoComplete widget to open the drop-down menu. Add the [Click/Doubleclick](../refguide-ats-1/clickdoubleclick) action, describe the test step, and connect the output of test step 1:
 
-6. Next, you must click the AutoComplete widget to open the dropdown menu. Add the [_Click/Doubleclick_](../refguide-ats-1/clickdoubleclick) action, describe the test step and connect the output of test step 1:
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-clickdoubleclick-action.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-clickdoubleclick-action.png)
+7.  Check if the parent element of the drop-down menu has an `mx-name`. If you check the debugger, you can see that there is no `mx-name`:
 
-7. Now you check if the parent element of the dropdown has a `mx-name`. If you check the debugger you see that there is no `mx-name`:
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-dropdowncontainer-parentelement-debugger.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-dropdowncontainer-parentelement-debugger.png)
+    If the parent element doesn’t have an `mx-name`, then use the [Find Element by Sizzle](../refguide-ats-1/find-element-by-sizzle) action. This action uses jQuery to find an element on the page. You use the same selectors as in the Find Widget Child Node action. 
 
-If the parent element doesn’t have a `mx-name` then you use the [_Find Element by Sizzle_](../refguide-ats-1/find-element-by-sizzle) action. This action uses jQuery to find an element on the page. You use the same selectors as in the _Find Widget Child Node_ action. 
+8.  You must be sure that ATS picks the right `input` element. Use a generic class name to find the parent. Next, find the child that contains the input element and return the input element:
 
-8. You must be sure that ATS picks the right `input` element. Use a generic class name to find the parent. Next, find the child that contains the input element and return the input element:
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/selector-autocompletewidget-dropdown.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/selector-autocompletewidget-dropdown.png)
+    Before you create the action, you must know if ATS finds the input element within the drop-down container. You will use the debugger to simulate what ATS does.
 
-Before you create the action you must know if ATS finds the input element within the dropdown container. You use the debugger to simulate what ATS does.
+9.  You use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger: `$( ‘.select2-container .select2-search input’ )`:
 
-9. You use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger: `$( ‘.select2-container .select2-search input’ )`:
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/selector-autocompletewidget-dropdown-console.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/selector-autocompletewidget-dropdown-console.png)
+    It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner. When you enter a selector in ATS, don’t use `$( ‘….’ )` or `jQuery( ‘…..’ )`.
 
-It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner.
-When you enter a selector in ATS you don’t use the `$( ‘….’ )` or `jQuery( ‘…..’ )`.
+10. Add the Find Element by Sizzle action. You also must use a filter selector to make sure ATS returns a visible element. The Find Element by Sizzle action is a Core action. Enter the selector, enter the filter selector `:visible`, provide a test step description, and describe the output:
 
-10. Next, you add the _Find Element by Sizzle_ action. You also must use a filter selector. To make sure ATS returns a visible element. The _Find Element by Sizzle_ action is a Core action. Enter the selector, the filter selector `:visible`, give a test step description and describe the output:
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-findelementbysizzle-action.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-findelementbysizzle-action.png)
+    A filter selector is a jQuery selector that you use to filter the results.
 
-A filter selector is a jQuery selector that you use to filter the results.
+11. You must focus the `input` element, so use the Focus and Clear Element Value action. Add the action, provide the `input` element from test step 3 as the input, and provide a proper test step description:
 
-11. You must focus the `input` element. Use the _Focus and Clear Element Value_ action. Add the action, provide the `input` element from test step 3 as input and give a proper test step description:
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-focusandclearelement-action.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-focusandclearelement-action.png)
+12. Add the [Send Keys](../refguide-ats-1/send-keys) action to enter the value in the `input` element. Add the action, connect the `input` element from test step 3 as an input, and provide a proper description:
 
-12. Next, you add the [_Send Keys_](../refguide-ats-1/send-keys) action to enter the value in the `input` element. Add the action, connect the `input` element from test step 3 as input and give a proper description:
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-sendkeys-action.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-sendkeys-action.png)
+13. Add a [Mendix Wait](../refguide-ats-1/mendix-wait) action to give the app time to perform activities:
 
-13. Now add a [_Mendix Wait_](../refguide-ats-1/mendix-wait) action to give the app time to perform activities:
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-mendixwait-action.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-mendixwait-action.png)
+14. After entering the text in the search field, an option appears that ATS must click. You need to find an element containing a specific text. The drop-down container does not have an `mx-name`. Use the Find Element by Sizzle action again. First, you create the selector. Enter **ATS Option 11** in the AutoComplete widget and open the debugger. You will take the class name of the main results element and the class name of the element displaying the text. Also, use a `:contains` selector to find the element displaying the text: 
 
-14. After entering the text in the search field an option appears that ATS must click. You need to find an element containing a specific text. The dropdown container does not have a `mx-name`. Use the _Find Element by Sizzle_ action again. First, you create the selector. Enter ATS Option 11 in the Autocomplete widget and open the debugger. We take the class name of the main results element and the class name of the element displaying the text. Also, use a `:contains` selector for the finding the element displaying the text: 
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-resultelement-debugger.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-resultelement-debugger.png)
+15. Use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger: `$( ‘.select2-results .autoCompleteResult:contains(“ATS Option 11”)’ )`:
 
-15. You use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger: 
-`$( ‘.select2-results .autoCompleteResult:contains(“ATS Option 11”)’ )`:
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-resultelement-debugger-console.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-resultelement-debugger-console.png)
+    It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner. When you enter a selector in ATS, don’t use `$( ‘….’ )` or `jQuery( ‘…..’ )`.
 
-It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner.
-When you enter a selector in ATS you don’t use the `$( ‘….’ )` or `jQuery( ‘…..’ )`.
+    The action user must enter the text they want ATS to click. You need a variable selector to achieve this. You create a variable selector by using the [Concatenate String](../refguide-ats-1/concatenate-string) action. This action combines the different input strings into one string. The Concatenate String action does not add spaces. You need to add spaces yourself.
 
-The action user must enter the text he wants ATS to click. You need a variable selector to achieve this. You create a variable selector by using the [_Concatenate String_](../refguide-ats-1/concatenate-string) action. The _Concatenate String_ action combines the different input strings into one string. The _Concatenate String_ action does not add spaces. You need to add spaces yourself.
+16. Add the Concatenate String action. Leave the **String 2** input parameter empty! You will connect an action input parameter here later. 
+17. Enter the selector `.select2-results .autoCompleteResult:containsExactCase(“”)`, provide a proper test step description, and describe the output:
 
-16. Next, you add the _Concatenate String_ action. 
-Leave the **String 2** input parameter empty! You connect an action input parameter here later. 
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-concatenatestring-action.png)
 
-17. Enter the selector: `.select2-results .autoCompleteResult:containsExactCase(“”)`, give a proper test step description and describe the output:
+    The `:containsExactCase` selector is a pseudo-selector available in ATS. It is not an official jQuery selector and not available in standard jQuery. The difference is that the ExactCase selector is case sensitive.
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-concatenatestring-action.png)
+18. Add the Find Element by Sizzle action. You also must use a filter selector to make sure ATS returns a visible element. The Find Element by Sizzle action is a Core action. Connect the selector from step 7, enter the filter selector `:visible`, give a test step description, and describe the output:
 
-The `:containsExactCase` selector is a pseudo selector available in ATS. It is not an official jQuery selector and not available in standard jQuery. The difference is that the ExactCase selector is case sensitive.
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-findelementbysizzle-action-result.png)
 
-18. Next, you add the _Find Element by Sizzle_ action. You also must use a filter selector to make sure ATS returns a visible element. The _Find Element by Sizzle_ action is a Core action. Connect the selector from step 7, enter the filter selector `:visible`, give a test step description and describe the output:
+    To make your action generic, it must also work in the situation when AutoComplete is on. In this case it is a necessity, because the widget is not supported if the action does not cover all situations. 
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-findelementbysizzle-action-result.png)
+    Use the following logic: *If the drop-down is present, then you click the option, and if the drop-down is not present, the find and click are not executed*.
 
-To make your action generic, it must also work in the situation that autocomplete is on. In this case, it is a necessity because the widget is not supported if the action does not cover all situations. 
+19. Click the precondition box in test step 8 and add the Find Element by Sizzle action. Use the results element to verify if the drop-down menu is open. It is one of the class names you used earlier: `.select2-result`. Next, enter the `:visible` selector in the filter selector parameter. And last, set the timeout to 2000 milliseconds. The default timeout is 10 seconds. Setting the timeout to 2 seconds makes the precondition action faster if it fails. You should only alter the timeout if it is a precondition. Also, keep in mind that 2 seconds is the minimum advised. The precondition will look like this:
 
-Use the following ‘logic’:
-_If the dropdown is present then you click the option, if the dropdown is not present the find and click are not executed._
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-findelementbysizzle-action-result-precondition.png)
 
-19. Now click the precondition box in test step 8 and add the _Find Element by Sizzle_ action. Use the results element to verify if the dropdown is open. It is one of the class names you used earlier: `.select2-result`. Next, enter the `:visible` selector in the filter selector parameter. And last, set the timeout to 2000 milliseconds. 
-The default timeout is 10 seconds. Setting the timeout to 2 seconds makes the precondition action faster if it fails. Only alter the timeout if it is a precondition, also keep in mind that 2 seconds is the minimum advised. The precondition will look like this:
+20. Next, add the Click/Doubleclick action to click the option found in test step 8. Enter the output from step 8 as an input and provide a proper description:
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-findelementbysizzle-action-result-precondition.png)
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-clickdoubleclick-action-option.png)
 
-20. Next, add the _Click/Doubleclick_ action to click on the option found in test step 8. Enter the output from step 8 as input and give a proper description:
+21. There is only one issue left, and it is that if test step 8 fails, test step 9 also fails. Therefore, you must add a precondition to the Click/Doubleclick action. Use the following logic: *If test step 8 fails or is not executed, then don’t execute test step 9*.
+22. Click the precondition box at test step 9 and add the Assert not null action. Then, connect the output of test step 8. This way, ATS only executes test step 9 if test step 8 was successful. It looks like this:
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-clickdoubleclick-action-option.png)
-
-21. There is only one issue left, if test step 8 fails, test step 9 also fails. You must add a precondition to the _Click/Doubleclick_ action.
-
-Use the following ‘logic’:
-_If test step 8 fails or is not executed then don’t execute test step 9._
-
-22. Click the precondition box at test step 9 and add the _Assert not null_ action, connect the output of test step 8. This way ATS only executes test step 9 if test step 8 was successful. It looks like this:
-
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-clickdoubleclick-action-option-precondition.png)
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-clickdoubleclick-action-option-precondition.png)
 
 The action structure is now complete.
 
 ## 5 Action Parameters
 
-Next, you add the action input parameters.
+Next, you need to add these action input parameters:
+
 * Widget Name
 * Value
 * Search Context
@@ -186,49 +175,47 @@ Next, you add the action input parameters.
 Keep the [guidelines for creating a custom action](../bestpractices/guidelines-custom-action) in mind while creating action parameters. 
 {{% /alert %}}
 
-1. The Widget Name input parameter:
+To add the action parameters, follow these steps:
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocomplete-widgetname-inputparameter.png)
+1.  Configure the **Widget Name** input parameter like this:
 
-2. The Value input parameter:
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocomplete-widgetname-inputparameter.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocomplete-value-inputparameter.png)
+2.  Configure the **Value** input parameter like this:
 
-3. The Search Context input parameter:
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocomplete-value-inputparameter.png)
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocomplete-searchcontext-inputparameter.png)
+3.  Configure the **Search Context** input parameter like this:
 
-For this custom action, you don’t need an output parameter.
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocomplete-searchcontext-inputparameter.png)
 
-Next, you connect the input parameters to the correct actions. 
+    For this custom action, you don’t need an output parameter.
 
-4. Start with the Widget Name and Search Context input parameters for the _Find/Assert Widget_ action:
+4. You need to connect the input parameters to the correct actions. Start with the **Widget Name** and **Search Context** input parameters for the Find/Assert Widget action:
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-findassertwidget-action-inputparameters.png)
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-findassertwidget-action-inputparameters.png)
 
-5. You connect the Value input parameter at test step 5. The _Send Keys_ action enters the text into the search field:
+5. Connect the **Value** input parameter at test step 5. The Send Keys action enters the text into the search field:
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-sendkeys-action-inputparameters.png)
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-sendkeys-action-inputparameters.png)
 
-6. Last connect the Value input parameter at test step 7, to use in the selector for finding the option. You connect the Value input parameter to the _Concatenate String_ action:
+6. You need to connect the **Value** input parameter at test step 7 to use in the selector for finding the option. Connect the **Value** input parameter to the Concatenate String action:
 
-![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-concatenatestring-action-inputparameters.png)
+    ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-concatenatestring-action-inputparameters.png)
 
-There is no need to add extra ‘Logic’ to this action. Its only selecting an option in the widget.
+There is no need to add extra logic to this action. Its only involves selecting an option in the widget.
 
 ## 6 Final Check
 
-Now check the following items:
+Now check for the following:
 
-*  Use of the ATS naming convention for parameters.
-*  A clear description of test steps, input parameters, output parameters and action returns.
-*  Interpunction usage in pieces of code (If used).
-*  Use of datatypes on the different parameters to avoid errors.
+*  Use of the ATS naming convention for parameters
+*  A clear description of test steps, input parameters, output parameters, and action returns
+*  Interpunction usage in pieces of code (if used)
+*  Use of data types on the different parameters to avoid errors
 
 After checking these items, you can run the test case that uses this action.
 
-**Congratulations you created your own custom action!**
-
-Now you created your own custom action for the AutoComplete widget.
+Congratulations! You have created your own custom action for the AutoComplete widget.
 
 ![](attachments/create-unsupported-widget/cab-10-autocomplete/autocompletewidget-finishedaction.png)

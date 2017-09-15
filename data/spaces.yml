@@ -199,5 +199,6 @@ deployment:
     - "Amazon Web Services"
     - "Azure"
     - "Cloud Foundry"
+    - "Docker"
     - "Mendix Cloud"
     - "On-Premises"

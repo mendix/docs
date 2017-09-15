@@ -120,10 +120,10 @@ There is no need to add logic to this custom action. Its only returning an item/
 
 Now check for the following:
 
-    Use of the ATS naming convention for parameters
-    A clear description of test steps, input parameters, output parameters, and action returns
-    Interpunction usage in pieces of code (if used)
-    Use of data types on the different parameters to avoid errors
+* Use of the ATS naming convention for parameters
+* A clear description of test steps, input parameters, output parameters, and action returns
+* Interpunction usage in pieces of code (if used)
+* Use of data types on the different parameters to avoid errors
 
 After checking these items, you can run the test case that uses this action.
 

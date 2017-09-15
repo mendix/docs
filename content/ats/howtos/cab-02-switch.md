@@ -35,13 +35,13 @@ To define the user approach, follow these steps:
  
 1.  Trigger the Mendix Switch by clicking it. This changes its state from checked to unchecked:
 
-  * Switch unchecked:
+    * Switch unchecked:
  
-  ![](attachments/create-unsupported-widget/cab-02-switch/switch-widget-unchecked.png)
+    ![](attachments/create-unsupported-widget/cab-02-switch/switch-widget-unchecked.png)
 
-  * Switch checked:
+    * Switch checked:
  
-  ![](attachments/create-unsupported-widget/cab-02-switch/switch-widget-checked.png)
+    ![](attachments/create-unsupported-widget/cab-02-switch/switch-widget-checked.png)
 
 2. You must determine where you must click it. After looking at the widget, you find out that you must click the actual switch to activate it.
 
@@ -145,9 +145,7 @@ You have an action that clicks the Switch widget to alter its state, and now you
   
     ![](attachments/create-unsupported-widget/cab-02-switch/mendix-switch-input-type-debugger.png)
 
-    {{% alert type="info" %}}
     It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner.  
-    {{% /alert %}}
 
     When you use an element's DOM name, the selector looks like this: `input` or `div`.
 
@@ -165,9 +163,7 @@ You have an action that clicks the Switch widget to alter its state, and now you
 
     ![](attachments/create-unsupported-widget/cab-02-switch/wanted-state-input-parameter-mendix-switch.png)
 
-    {{% alert type="info" %}}
     Watch the data type! It must be a Boolean here, because the Is Selected action also returns a Boolean; otherwise, you couldn’t compare them.
-    {{% /alert %}}
 
 6.  Give a clear description so that the action user knows what information is required.
 

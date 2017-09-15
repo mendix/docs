@@ -62,11 +62,7 @@ To create the action structure, follow these steps:
 
     Before you start creating the action, you must know if ATS can find the `input` element within the text box widget. You use the debugger to simulate what ATS does. Since the Find Widget Child Node action uses the `mx-name` to find the parent, you must also use the `mx-name` in your code.
 
-3.  Use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger: `$( ‘.mx-name-textBox2 input’ )`.
-
-    You use "dots" here, because in jQuery, the dot stands for a class name selector.
-
-    When you enter this in the console, it looks like this:
+3.  Use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger: `$( ‘.mx-name-textBox2 input’ )`. You use "dots" here, because in jQuery, the dot stands for a class name selector. When you enter this in the console, it looks like this:
 
     ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-childelement-selector.png)
 
@@ -94,7 +90,7 @@ To create the action structure, follow these steps:
 
 ## 5 Action Parameters
 
-Next, you need to add the action input parameters:
+Next, you need to add these action input parameters:
 
 * Widget Name
 * Value

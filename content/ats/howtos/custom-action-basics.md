@@ -1,5 +1,5 @@
 ---
-title: "Creating Custom Action Basics"
+title: "Create Custom Action Basics"
 parent: "create-custom-actions"
 ---
 

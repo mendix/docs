@@ -73,7 +73,7 @@ The TC.01 and TC.02 example is used to explain the options.
 
 You create two separate test cases. Example, one test case that creates a new expense and one test case that deletes a new expense.
 
-First, create the test case that creates a new expense, "TC.01 - Create New Expense". Now combine these steps and use that action as a _setup_ step in the "TC.02 - Delete Expense" test case. For more information, see [Create Combined Actions](../howtos/create-combined-actions).
+First, create the test case that creates a new expense, "TC.01 - Create New Expense". Now combine these steps and use that action as a _setup_ step in the "TC.02 - Delete Expense" test case. 
 
 _TC.01 - Create New Expense as setup_
 

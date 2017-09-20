@@ -4,16 +4,16 @@ title: "Platform Portal"
 
 ## 2017
 
-### September 20th, 2107
+### September 20th, 2017
 
 #### Improvements
 
-* It's now possible to accept invitations and confirm signups on mobile devices.
+* It is now possible to accept invitations and confirm signups on mobile devices.
 * The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296) 
 
 #### Fixes
 
-* Deleting a document will no longer delete the corresponding discussion thread. Instead, in the discussion thread a note will be added that the previously uploaded document was deleted. Conversely, it's no longer possible to delete a discussion thread which has comments with uploaded documents. (Ticket 46480)
+* Deleting a document will no longer delete the corresponding discussion thread. Instead, a note that the previously uploaded document was deleted will be added to the discussion thread. Conversely, it is no longer possible to delete a discussion thread that has comments with uploaded documents. (Ticket 46480)
 * Updated the Excel import functionality with various fixes and security improvements.
 
 

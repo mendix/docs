@@ -1,8 +1,7 @@
 ---
 title: "Mendix Mobile"
-toc-level: 1
 description: "Mendix Mobile release notes."
-frontpage_featured: true
+toc-level: 1
 ---
 
 ## 4.4.0

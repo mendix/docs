@@ -1,6 +1,6 @@
 ---
 title: "Mendix Mobile Known Issues"
-category: "Hybrid App"
+category: "Mendix Mobile"
 toc-level: 1
 ---
 

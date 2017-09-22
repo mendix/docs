@@ -13,7 +13,7 @@ For details on this release, see [Hybrid App Base](hybrid-app-base).
 * Description of known issue.
   * Fixed in [1.4.0](hybrid-app-base).
 
-## Hybrid App Template
+## Hybrid App Template<a name="HAT">
 
 For details on this release, see [Hybrid App Template](hybrid-app-template).
 

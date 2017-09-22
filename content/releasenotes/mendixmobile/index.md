@@ -1,17 +1,24 @@
 ---
-title: "Hybrid App"
+title: "Mendix Mobile"
 toc-level: 1
-description: "Hybrid App release notes."
+description: "Mendix Mobile release notes."
 frontpage_featured: true
 ---
 
-These are the release notes for the Hybrid App:
+## 4.4.0
 
-* [Hybrid App Base](hybrid-app-base)
-* [Hybrid App Template](hybrid-app-template)
+**Release date: September 99th, 2017**
 
-{{% alert type="info" %}}
 
-The known issues for each release are described in [Hybrid App Known Issues](hybrid-app-known-issues).
+### Topic
 
-{{% /alert %}}
+* Change, improvement, deprecation, breaking change, etc.
+
+
+### Fixes
+
+* We fixed the issue where .... (Ticket 99999)
+
+## Known issues
+
+The known issues for each release are described in [Mendix Mobile Known Issues](mendix-mobile-known-issues).

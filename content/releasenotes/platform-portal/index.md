@@ -4,22 +4,12 @@ title: "Platform Portal"
 
 ## 2017
 
-### September 25th, 2107
-
-#### Improvements
-
-* We changed the link at the bottom of our notification mails to point to a page where you can unsubscribe from these emails.
-
-#### Fixes
-
-* We fixed the link to the *Deploy on-premises* docs in the Cloud Settings page.
-
 ### September 20th, 2017
 
 #### Improvements
 
 * It is now possible to accept invitations and confirm signups on mobile devices.
-* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296)
+* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296) 
 
 #### Fixes
 

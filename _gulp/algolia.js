@@ -238,21 +238,27 @@ const indexFiles = (opts) => {
           ],
           'highlightPreTag': '<span class="algolia__result-highlight">',
           'highlightPostTag': '</span>'
-        }, (err, content) => {
-          if (err) {
-            throw err;
+        }, (setIndexErr, setIndexContent) => {
+          if (setIndexErr) {
+            gutil.log(`${pluginID} error creating index settings for: ${opts.algolia_index}`);
+            throw setIndexErr;
           } else {
             console.log(`${pluginID} Settings set for ${opts.algolia_index}, clearing objects`);
-            algoliaIndex.clearIndex((err, contents) => {
-              if (err) {
-                throw err;
+            //console.log(setIndexContent);
+            algoliaIndex.clearIndex((clearIndexErr, clearIndexContent) => {
+              if (clearIndexErr) {
+                gutil.log(`${pluginID} error clearing objects!`);
+                throw clearIndexErr;
               } else {
-                console.log(`${pluginID} ${opts.algolia_index}, cleared, adding objects`);
+                gutil.log(`${pluginID} ${opts.algolia_index}, cleared, adding objects`);
+                //gutil.log(`${pluginID} ${clearIndexContent}`);
                 algoliaIndex.addObjects(index, (uploadErr, uploadContents) => {
-                  if (err) {
-                    throw err;
+                  if (uploadErr) {
+                    gutil.log(`${pluginID} error adding objects!`);
+                    throw uploadErr;
                   } else {
-                    console.log(`${pluginID} Objects added to ${opts.algolia_index}`);
+                    gutil.log(`${pluginID} Objects added to ${opts.algolia_index}`);
+                    //console.log(uploadContents);
                     opts.cb();
                   }
                 });
@@ -272,5 +278,6 @@ const indexFiles = (opts) => {
 };
 
 module.exports = {
-  run: indexFiles
+  run: indexFiles,
+  readSourceFiles
 };

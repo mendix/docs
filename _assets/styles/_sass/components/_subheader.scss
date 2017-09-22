@@ -1,0 +1,32 @@
+$block: 'mx';
+
+.#{$block} {
+  @include element('sub-header') {
+    @include clearfix();
+    font-size: 12px;
+    & > * {
+      margin-left: 20px;
+      line-height: 32px;
+      height: 32px;
+      display: block;
+      float: left;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    @include element('edit-button') {
+      float: right;
+      i {
+        margin-right: 3px;
+      }
+    }
+
+    @include element('print-button') {
+      display: none;
+      i {
+        margin-right: 3px;
+      }
+    }
+  }
+}

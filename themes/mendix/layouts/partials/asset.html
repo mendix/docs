@@ -1,0 +1,27 @@
+{{- $assetsjs := .page.Site.Data.assetsjs -}}
+{{- $assetscss := .page.Site.Data.assetscss -}}
+{{- $env := getenv "HUGO_ENV" -}}
+{{- if isset . "filename" -}}
+  {{- if isset . "type" -}}
+    {{- if eq .type "js" -}}
+      {{- $debug := replace .filename ".js" "-debug.js" -}}
+      {{- $file := index $assetsjs .filename -}}
+      {{- if eq $env "production" -}}
+<script src="/public/js/{{- $file -}}" type="text/javascript"></script>
+      {{- else if eq $env "test" -}}
+<script src="/public/js/{{- $debug -}}" type="text/javascript"></script>
+      {{- else }}
+<script src="/public/js/{{- .filename -}}" type="text/javascript"></script>
+      {{- end}}
+    {{- else if eq .type "css" -}}
+      {{- $file := index $assetscss .filename -}}
+      {{- if eq $env "production" -}}
+<link rel="stylesheet" href="/public/styles/{{- $file -}}">
+      {{- else if eq $env "test" -}}
+<link rel="stylesheet" href="/public/styles/{{- .filename -}}">
+      {{- else -}}
+<link rel="stylesheet" href="/public/styles/{{- .filename -}}">
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

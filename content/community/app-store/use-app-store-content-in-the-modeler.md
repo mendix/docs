@@ -59,7 +59,7 @@ In this section of the how-to, you will learn how to add the Radiobutton List wi
 To add the Radiobutton List widget from the App Store via the Modeler, follow these steps:
 
 1. Download the **RadioButton List** widget by following the steps in [3 Downloading Content from the App Store via the Modeler](#DownloadingContentfromtheAppStoreviatheModeler).
-2. A widget downloaded from the App Store will be placed in the **widgets** folder in your project structure. You can find the widget and start using it in the following ways:
+2.  A widget downloaded from the App Store will be placed in the **widgets** folder in your project structure. You can find the widget and start using it in the following ways:
 
     * In the **Add-On** menu, select it from the list of all the widgets you have downloaded:
 
@@ -75,7 +75,7 @@ To add the Radiobutton List widget from the App Store via the Modeler, follow th
 
     {{% /alert %}}
 
-3. Select the **Attribute Radiobutton List** widget, which will be placed within your page:
+3.  Select the **Attribute Radiobutton List** widget, which will be placed within your page:
 
     ![](attachments/use-app-store-content-in-the-modeler/18580438.png)
 
@@ -115,7 +115,7 @@ To add the Google Maps module from the App Store via the Modeler, follow these s
 
 1. Download the **Google Maps Module** by following the steps in [3 Downloading Content from the App Store via the Modeler](#DownloadingContentfromtheAppStoreviatheModeler).
 
-2. On the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project:
+2.  On the **Import Module** dialog box, **Add as a new module** is the default option when the module is being downloaded for the first time, which means that new entities will be created in your project:
 
     ![](attachments/use-app-store-content-in-the-modeler/18580431.png)
 
@@ -176,8 +176,8 @@ To delete a theme, remove the *.zip* file from your project's **theme** folder.
 * [Common Widget Properties](/refguide6/common-widget-properties)
 * [How to Create a Basic "Hello World" Custom Widget](/howto6/create-a-basic-hello-world-custom-widget)
 * [How to Install the SMTP Email Module](/howto6/install-and-configure-the-smtp-module)
-* [How to Plan Mendix SQL Maintenance](/howto6/mendix-sql-maintenance-plans)
-* [How to Restore an SQL Server Database](/howto6/restoring-a-sql-server-database)
-* [How to Set Up a New SQL Server Database](/howto6/setting-up-a-new-sql-server-database)
+* [How to Plan Mendix SQL Maintenance](/deployment/on-premises/mendix-sql-maintenance-plans)
+* [How to Restore an SQL Server Database](/deployment/on-premises/restoring-a-sql-server-database)
+* [How to Set Up a New SQL Server Database](/deployment/on-premises/setting-up-a-new-sql-server-database)
 * [Feedback Widget: Bridging the Gap Between Developers and Business Users](http://www.mendix.com/blog/feedback-widget-bridging-the-gap-between-users/)
 * [My Top 5 Mendix Widgets for Speeding Application Development](http://www.mendix.com/blog/top-5-mendix-widgets-speeding-application-development/)

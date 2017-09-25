@@ -34,7 +34,7 @@ For details on the widget life cycle, reference this documentation:
 
  * [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
  * [dijit.\_WidgetBase](https://dojotoolkit.org/reference-guide/1.10/dijit/_WidgetBase.html)
- * [Tutorial: Widget Lifecycle](https://apidocs.mendix.com/6/client/tutorial-widget-lifecycle.html)
+ * [Tutorial: Widget Life Cycle](https://apidocs.mendix.com/6/client/tutorial-widget-lifecycle.html)
 
 ### 3.3 Widget Scaffolding
 

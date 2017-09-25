@@ -26,6 +26,8 @@ Before starting with this how-to, make sure you have the following prerequisites
 * An application under test (AUT)
 * Selenium hub (for more information on the Selenium options, see [ATS Deployment](../general/deployment))
 
+{{% youtube zJOpO0AymAg %}}
+
 ## 3 Creating a New Project<a name="CreatingNewProject"></a>
 
 When you log in to ATS as a user, you see the **My Projects** page. A project is a folder in which all the data related to a specific application will be saved and managed. Every user can create a new project, and, as its owner, manage other users' access to it. If there are no projects on your account yet, you are prompted to create a new project.
@@ -38,20 +40,20 @@ To create a new project, follow these steps:
 
       ![](attachments/getting-started/create-new-project.png)
 
-2. Enter the following information about your project:
+2.  Enter the following information about your project:
 
-   Field | Description
-   --- | ---
-   **Project type** | Select **Project**.
-   **Name** | Enter a name for your project. You can enter any name, but using the actual name of your application here is advised.
-   **Mendix Project/App ID** | Enter the Mendix project/app ID of the app you want to test, NOT the project ID of ATS! This will give ATS access to your Sprintr and user stories. A project can be created without a Mendix project/app ID, but than you have no access to the Sprintr and user stories.
-   **Mendix API Key** | This is the API key you created in your Sprintr project for ATS.
-   **Project Users** | Enter the people that need access to this project. This project will then appear in their **My Projects** menu. You can always edit this later. There are two different roles for a project user: a **Tester** can only test, create tests, and monitor results; a **Project Administrator** has the same rights as the tester but has also editing rights to the configuration settings of a project.
-   **Action Libraries** | Make sure that the action libraries **Core** and **Mendix** are included. Please note that without libraries, it is not possible to select actions for the test script. For more information on action libraries, see [Standard Actions Reference](../refguide-ats-1/standard-actions-reference).
+      Field | Description
+      --- | ---
+      **Project type** | Select **Project**.
+      **Name** | Enter a name for your project. You can enter any name, but using the actual name of your application here is advised.
+      **Mendix Project/App ID** | Enter the Mendix project/app ID of the app you want to test, NOT the project ID of ATS! This will give ATS access to your Sprintr and user stories. A project can be created without a Mendix project/app ID, but than you have no access to the Sprintr and user stories.
+      **Mendix API Key** | This is the API key you created in your Sprintr project for ATS.
+      **Project Users** | Enter the people that need access to this project. This project will then appear in their **My Projects** menu. You can always edit this later. There are two different roles for a project user: a **Tester** can only test, create tests, and monitor results; a **Project Administrator** has the same rights as the tester but has also editing rights to the configuration settings of a project.
+      **Action Libraries** | Make sure that the action libraries **Core** and **Mendix** are included. Please note that without libraries, it is not possible to select actions for the test script. For more information on action libraries, see [Standard Actions Reference](../refguide-ats-1/standard-actions-reference).
 
-3. Click **Save & Open** at the bottom of the page to open the **Project Dashboard**.
+3.  Click **Save & Open** at the bottom of the page to open the **Project Dashboard**.
 
-![](attachments/getting-started/project-dashboard-empty.png)
+      ![](attachments/getting-started/project-dashboard-empty.png)
 
 ## 4 Configuring Your Project
 
@@ -79,15 +81,15 @@ To add a new Selenium hub, follow these steps:
 
       ![](attachments/getting-started/selenium-hub-dialog.png)
 
-2. Set the following parameters:
+2.  Set the following parameters:
 
-   Field | Description
-   --- | ---
-   **Name** | The name of the Selenium hub.  If you have your own selenium access URL you can give it your name.
-   **URL** | The URL of your selenium server. This depends on what type of Selenium hub you are using. Please note that BrowserStack has a different type of URL than a local Selenium server. Most Selenium hosts use a combination of username and an access key.
-   **Parallel Sessions** | The number of test cases ATS that can run parallel on the Selenium hub.
-   **Proxy URL** | The URL of an optional proxy server. Please note that this is no longer needed.
-   **Custom Capabilities** | Can be used to set the Selenium desired capabilities.
+      Field | Description
+      --- | ---
+      **Name** | The name of the Selenium hub.  If you have your own selenium access URL you can give it your name.
+      **URL** | The URL of your selenium server. This depends on what type of Selenium hub you are using. Please note that BrowserStack has a different type of URL than a local Selenium server. Most Selenium hosts use a combination of username and an access key.
+      **Parallel Sessions** | The number of test cases ATS that can run parallel on the Selenium hub.
+      **Proxy URL** | The URL of an optional proxy server. Please note that this is no longer needed.
+      **Custom Capabilities** | Can be used to set the Selenium desired capabilities.
 
 3. Click **Save** to save the settings.
 
@@ -101,15 +103,15 @@ To add a new application, follow these steps:
 
       ![](attachments/getting-started/application-dialog.png)
 
-2. Set the following parameters:
+2.  Set the following parameters:
 
-   Field | Description
-   --- | ---
-   **Name** | The name of the application. Using the name of the application is advised.
-   **URL** | The URL of the actual Mendix application to test.
-   **Details** | A short dscription of the application you are testing.
-   **Mendix Version** | The Mendix version of the application. This is for information purposes only.
-   **Use Proxy** | Leave to default if not needed.
+      Field | Description
+      --- | ---
+      **Name** | The name of the application. Using the name of the application is advised.
+      **URL** | The URL of the actual Mendix application to test.
+      **Details** | A short dscription of the application you are testing.
+      **Mendix Version** | The Mendix version of the application. This is for information purposes only.
+      **Use Proxy** | Leave to default if not needed.
 
 3. Click **Save** to save the settings.
 
@@ -142,10 +144,10 @@ To create a test case, follow these steps:
 4. Click **Create**.
 5. When the **Test Case** page opens, you are now in the actual test case. In the top left corner of the page, you can see the name and description of your test case. The **Test Case** page also displays the following buttons:
 
-   * **Run** – brings you to the **Run Configuration** screen
-   * **Quickrun** – immediately executes a test case with the last set of run configurations (use this option to check your test case while building)
-   * **Export** – exports the test case as a XML file (this file can be uploaded into another ATS environment)
-   * **PDF** – extracts a PDF report of your test case
+      * **Run** – brings you to the **Run Configuration** screen
+      * **Quickrun** – immediately executes a test case with the last set of run configurations (use this option to check your test case while building)
+      * **Export** – exports the test case as a XML file (this file can be uploaded into another ATS environment)
+      * **PDF** – extracts a PDF report of your test case
 
 ![](attachments/getting-started/test-case-page.png)
 
@@ -173,14 +175,14 @@ To use the recorder function, follow these steps:
 
       ![](attachments/getting-started/recording-session-cp.png)
 
-3. Click **Save** to save your actions for this event.
+3.  Click **Save** to save your actions for this event.
 
-| Field | Description |
-| --- | --- |
-| **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS recorder selects the actions for you. |
-| **Action mapping** | This shows all the available actions for this event. Click  **Select** if you want to choose a different action. |
+      Field | Description
+      --- | ---
+      **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS recorder selects the actions for you.
+      **Action mapping** | This shows all the available actions for this event. Click  **Select** if you want to choose a different action.
 
-![](attachments/getting-started/recorded-test-steps.png)
+      ![](attachments/getting-started/recorded-test-steps.png)
 
 All the test steps are numbered for easy identification. The up and down arrows can be used to change the sequence of the test steps. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Extract Action](../refguide-ats-1/custom-actions).
 

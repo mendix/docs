@@ -4,6 +4,37 @@ title: "Platform Portal"
 
 ## 2017
 
+### September 25th, 2107
+
+#### Improvements
+
+* We changed the link at the bottom of our notification mails to point to a page where you can unsubscribe from these emails.
+
+#### Fixes
+
+* We fixed the link to the *Deploy on-premises* docs in the Cloud Settings page.
+
+### September 20th, 2017
+
+#### Improvements
+
+* It is now possible to accept invitations and confirm signups on mobile devices.
+* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296) 
+
+#### Fixes
+
+* Deleting a document will no longer delete the corresponding discussion thread. Instead, a note that the previously uploaded document was deleted will be added to the discussion thread. Conversely, it is no longer possible to delete a discussion thread that has comments with uploaded documents. (Ticket 46480)
+* Updated the Excel import functionality with various fixes and security improvements.
+
+
+### August 30th, 2017
+
+#### Improvements
+
+* The user interface of the instance/memory slider for Cloud v4 has been improved considerably. Scaling will also appear in the activity log of the application.
+* For Mendix Cloud v4, we do no longer show the size of the archived log. The size we displayed previously was wrong.
+* The expiry date for Mendix Cloud backups is now visible in the backup list.
+
 ### August 22nd, 2017
 
 #### Improvements

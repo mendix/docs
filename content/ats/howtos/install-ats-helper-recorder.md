@@ -12,7 +12,7 @@ ATS provides two different tools to help build test scripts: the ATS Helper and 
 **This how-to will teach you  how to do the following:**
 
 * Install the ATS Helper
-* Install the ATS Recorder
+* Install the [ATS Recorder](../refguide-ats-1/recorder)
 
 ## 2 Prerequisites
 Before starting this how-to, make sure you have the following prerequisites in place:
@@ -29,6 +29,8 @@ Before starting this how-to, make sure you have the following prerequisites in p
   {{% alert type="info" %}}
   Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/). 
   {{% /alert %}}
+
+{{% youtube C7GuDU9nePQ %}}
 
 ## 3 Installing the ATS Helper
 
@@ -54,6 +56,8 @@ To use the ATS Helper, select the bookmark, press <kbd>Ctrl</kbd>, and hover ove
 The ATS Helper only works on standalone widgets.
 {{% /alert %}}
 
+See [How to Create a Test Case](create-a-test-case) for more information on how to use the ATS Helper.
+
 ## 4 Installing the ATS Recorder
 
 To install the ATS Recorder, follow these steps:
@@ -71,4 +75,4 @@ To install the ATS Recorder, follow these steps:
 
     ![](attachments/install-ats-helper-recorder/add-ats-recorder.png)
 
-You can now use the ATS Recorder.
+See [How to Create a Test Case](create-a-test-case) for more information on how to use the ATS Helper.

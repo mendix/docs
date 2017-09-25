@@ -45,7 +45,7 @@ Learn how to [Link Your Free App to a Licensed Cloud Node](/developerportal/howt
 
 ### 3.3 Download the Deployment Package from the v3 Node
 
-The Free App needs the data of your v3 App. To do this, download the Deployment Package form your v3 Node.
+The Free App needs the data of your v3 App. To do this, download the Deployment Package for your v3 Node.
 
 Learn [How to Download a Backup](/developerportal/howto/how-to-download-a-backup) of your app on Mendix Cloud v3.
 

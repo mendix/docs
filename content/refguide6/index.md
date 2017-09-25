@@ -10,4 +10,4 @@ Before installing Mendix 6, please read [System Requirements](system-requirement
 
 If you're looking for step-by-step guides to the various aspects of the Mendix platform, browse the [Mendix 6 How-To's](/howto6).
 
-{{% space_block %}}
+{{% space_block style="flat" %}}

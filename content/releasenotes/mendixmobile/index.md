@@ -4,7 +4,7 @@ description: "Mendix Mobile release notes."
 toc-level: 1
 ---
 
-{{% alert type="info" %}}w
+{{% alert type="info" %}}
 The known issues are described in [Mendix Mobile Known Issues](mendix-mobile-known-issues).
 {{% /alert %}}
 

@@ -6,9 +6,8 @@ toc-level: 1
 
 ## Mendix Mobile
 
-For details on this release, see [Mendix Mobile](index).
+For details on each release, see [Mendix Mobile](index).
 
-### 4.4.0
+### Known issues
 
-* Description of known issue.
-  * Fixed in [4.5.0](index).
+* On iOS 11, loading one of the sample apps or loading an app using the QR scanner will crash the application.

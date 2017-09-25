@@ -4,20 +4,18 @@ category: "Hybrid App"
 toc-level: 1
 ---
 
-## Hybrid App Base<a name="HAB">
+## Hybrid App Base
 
-For details on this release, see [Hybrid App Base](hybrid-app-base).
+For details on each release, see [Hybrid App Base](index).
 
-### 1.3.0<a name="HAB130">
+### 1.3.0
 
-* Description of known issue.
-  * Fixed in [1.4.0](hybrid-app-base).
+* There are currently no known issues.
 
-## Hybrid App Template<a name="HAT">
+## Hybrid App Template
 
-For details on this release, see [Hybrid App Template](hybrid-app-template).
+For details on each release, see [Hybrid App Template](index).
 
-### 1.2.0<a name="HAT120">
+### 1.2.0
 
-* Description of known issue.
-  * Fixed in [1.3.0](hybrid-app-template).
+* There are currently no known issues.

@@ -11,13 +11,20 @@ The known issues are described in [Hybrid App Known Issues](hybrid-app-known-iss
 These are the release notes for the Hybrid App.
 
 The numbers behind each release refer to the Hybrid App Base and the Hybrid App Template package, respectively.
+
 If you're building the app using the regular PhoneGap Build approach from within the Mendix Portal, you don't need to worry about these numbers; downloading and building a new package will set you up with the latest version.
-If you're using the advanced flow, you can get the latest version by running `npm install` from your hybrid app project directory.
+
+If you're using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from github, or download a new copy from the Cloud Portal.
+
+## September 25th (1.3.0 / 1.3.0)
+
+* Based on feedback from the community, we decided to iterate on the command set that's at your disposal while building your Mendix hybrid mobile app. Please refer to the [README](https://github.com/mendix/hybrid-app-template/blob/master/README.md) for instructions how to use the updated commands.
+
 
 ## September 20th (1.3.0 / 1.2.0)
 
-* Add support for iOS 11 (ticket #56209)
-* Change keyboard type on PIN login page to 'tel' (ticket #54380)
+* Added support for iOS 11 (ticket #56209)
+* Changed keyboard type on PIN login page to 'tel' (ticket #54380)
 
 
 ## August 28th (1.2.0 / 1.2.0)
@@ -27,7 +34,7 @@ If you're using the advanced flow, you can get the latest version by running `np
 
 ## August 25th (1.1.2 / 1.1.1)
 
-* Fix 'malformed JSON' issue
+* Fixed 'malformed JSON' issue
 * Remove dependency on BlueBird library
 * Update to Webpack 3
 
@@ -35,7 +42,7 @@ If you're using the advanced flow, you can get the latest version by running `np
 ## August 1st (1.1.0 / 1.1.0)
 
 * Automatically log in if credentials are provided
-* Replace SQLite library with our own fork
+* Replaced SQLite library with our own fork
 
 
 ## June 13th (1.0.7 / 1.0.3)

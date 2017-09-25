@@ -4,6 +4,16 @@ title: "Platform Portal"
 
 ## 2017
 
+### September 25th, 2107
+
+#### Improvements
+
+* We changed the link at the bottom of our notification mails to point to a page where you can unsubscribe from these emails.
+
+#### Fixes
+
+* We fixed the link to the *Deploy on-premises* docs in the Cloud Settings page.
+
 ### September 20th, 2017
 
 #### Improvements

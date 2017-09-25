@@ -176,6 +176,8 @@ releasenotes:
     - "Platform Portal"
     - "Model SDK"
     - "Platform SDK"
+    - "Hybrid App"
+    - "Mendix Mobile"
     - "APM"
     - "ATS"
     - "AQM"

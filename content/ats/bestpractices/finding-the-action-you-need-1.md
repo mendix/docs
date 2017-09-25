@@ -176,7 +176,7 @@ If the generic action does not work check if there is a specific one.
 
     ![](attachments/finding-the-action-you-need-1/set-inputreferenceselector-value-action-search-1.png)
 
-## 3.3 Summary
+### 3.3 Summary
 
 When you want to set an input widget always use the _Set Value_ action if possible. 
 
@@ -226,7 +226,7 @@ ATS also has a few specific actions for getting a value from an widget. To find 
 
     ![](attachments/finding-the-action-you-need-1/get-dialog-message-text-action-search-1.png)
 
-## 4.3 Summary
+### 4.3 Summary
 
 When you want to get a value from a widget always use the _Get Value_ action if possible. 
 
@@ -321,6 +321,9 @@ ATS also has a few specific actions for generating values to use in your test ca
     The solution is to use the following search term, "Current Date". ATS checks all the actions and returns those that match these words. You see there is an action called [_Get Current DateTime String_](../refguide-ats-1/get-current-datetime-string). The _Get Current DateTime String_ action retrieves the current date and allows you to set the date format.
 
     ![](attachments/finding-the-action-you-need-1/get-current-datetime-string-action-search-1.png)
+### 6.3 Summary
+
+For generating values or information you should follow the first two sections of this chapter. There is no generic solution regarding this. Only a constant provider like the _Concatenate String_ action.
 
 ## 7 Summary
 

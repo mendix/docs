@@ -2,7 +2,6 @@
 title: "Hybrid App"
 toc-level: 1
 description: "Hybrid App release notes."
-frontpage_featured: true
 ---
 
 {{% alert type="info" %}}

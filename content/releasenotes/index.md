@@ -3,6 +3,7 @@ title: "Release Notes"
 notoc: true
 description: "The release notes for the Mendix platform are divided into various product categories and versions."
 ---
-<p>The release notes for the Mendix platform are divided into the categories and versions below.</p>
+
+The release notes for the Mendix platform are divided into the categories and versions below.
 
 {{% space_block %}}

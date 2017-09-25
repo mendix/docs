@@ -43,14 +43,19 @@ After creating a Free App, it has to be linked to a node.
 
 Learn how to [Link Your Free App to a Licensed Cloud Node](/developerportal/howto/how-to-link-app-to-node) how-to.
 
-### 3.3 Upload the Deployment Package to the v4 Node
+### 3.3 Download the Deployment Package from the v3 Node
 
-The next step is to transfer the data of the app on Mendix Cloud v3 to the App on Mendix Cloud v4.
+The Free App needs the data of your v3 App. To do this, download the Deployment Package form your v3 Node.
 
 Learn [How to Download a Backup](/developerportal/howto/how-to-download-a-backup) of your app on Mendix Cloud v3.
+
+### 3.4 Upload the Deployment Package to the v4 Node
+
+The next step is to transfer the data to the app hosted in Mendix Cloud v4. You simply upload the downloaded Deployment Package to the v4 app. This procedure is also called 'Restoring a Backup'. 
+
 Learn [How to Restore a Backup](/developerportal/howto/how-to-restore-a-backup).
 
-### 3.4 Deploy the Deployment Package to an Environment
+### 3.5 Deploy the Deployment Package to an Environment
 
 Now that the app on Mendix Cloud v4 contains your data, you only have to deploy the deployment package to an evironment and start your app.
 
@@ -62,7 +67,7 @@ Before starting your App in Mendix Cloud v4, make sure it has the same configura
 
 Learn how to [Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud).
 
-### 3.5 Submit a Request to Support to Offboard the V3 Node
+### 3.6 Submit a Request to Support to Offboard the V3 Node
 
 Your app is now running in Mendix Cloud v4. If you don't need the Mendix Cloud v3 node, submit a request with [Mendix Support](https://support.mendix.com) to offboard the v3 node.
 

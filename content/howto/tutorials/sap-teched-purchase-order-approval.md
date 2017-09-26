@@ -49,7 +49,7 @@ To start this tutorial, go to the [Mendix Developer Portal](https://sprintr.home
     * If you see the **Version Selection** pop-up window, select version **7.5.1**
 
 ## 4 Configure the TechEd Settings
-You are following this tutorial from TechEd, which means you are using a proxy. Follow these steps to configure the deployment and proxy settings:
+You are following this tutorial from TechEd, which means you are using a special JDK directory. Follow these steps to configure the JDK directory settings:
 
 1. In the Desktop Modeler, go to **Edit > Preferences**.
 2. Set the **JDK directory** to *D:\SAP\JavaVM\NTAMD64\sapjvm_8.1.030\sapjvm_8*.

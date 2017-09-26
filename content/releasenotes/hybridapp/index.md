@@ -18,7 +18,7 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ## September 25th (1.3.0 / 1.3.0)
 
-* Based on feedback from the community, we decided to iterate on the command set that's at your disposal while building your Mendix hybrid mobile app. Please refer to the [README](https://github.com/mendix/hybrid-app-template/blob/master/README.md) for instructions how to use the updated commands.
+* Based on feedback from the community, we decided to iterate on the command set that's at your disposal while building your Mendix hybrid mobile app. Please refer to the [README](https://github.com/mendix/hybrid-app-template/blob/master/README.md) for instructions on how to use the updated commands.
 
 
 ## September 20th (1.3.0 / 1.2.0)

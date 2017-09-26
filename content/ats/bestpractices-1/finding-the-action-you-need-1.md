@@ -32,12 +32,13 @@ When you want to find a widget the main choice is always the [_Find/Assert Widge
 
 The **Widget Name** is found using the ATS helper, the value is the **Widget Name**:
 
-![](attachments/finding-the-action-you-need-1/mx-name-ats-helper-cp-1.png)
+![](../bestpractices-1/attachments/finding-the-action-you-need-1/mx-name-ats-helper-cp-1.png)
 
 The _Find/Assert Widget_ action works on every widget that has a `mx-name`. 
 
 _The Find/Assert Widget Action_
-![](attachments/finding-the-action-you-need-1/findassert-widget-action-search-1.png)  
+
+![](../bestpractices-1/attachments/finding-the-action-you-need-1/findassert-widget-action-search-1.png)  
 
 If the generic action does not work check if there is a specific one.
 
@@ -49,19 +50,19 @@ When you are looking for a specific widget or content of that widget, use the wi
 
    The solution is to use the following search term, "Find Datagrid". ATS checks all the actions and returns those that match these words. You see there is an action that called [_Find/Assert DataGrid Row_](../refguide-ats-1/findassert-datagrid-row). The _Find/Assert DataGrid Row_ action enables you to search for a datagrid row containing a specific value in a specific column. This action also works on listviews and templategrids.
 
-   ![](attachments/finding-the-action-you-need-1/find-datagrid-example-1.png)
+   ![](../bestpractices-1/attachments/finding-the-action-you-need-1/find-datagrid-example-1.png)
 
 2. Example, you want to find the checkbox in a simple checkbox set selector widget. You cannot use the _Find/Assert Widget_ action because the checkbox does not have its own `mx-name`. It is part of the simple checkbox set selector widget.
 
    The solution is to use the following search term, "Find Simple Checkbox Set Selector". ATS checks all the actions and returns those that match these words. You see there is an action called [_Find Simple Checkbox Set Selector_](../refguide-ats-1/find-simple-checkbox-set-selector). The  _Find Simple Checkbox Set Selector_ action finds the checkbox based on the **Widget Name** of the entire widget and the value displayed by the checkbox.
 
-   ![](attachments/finding-the-action-you-need-1/find-simple-checkbox-set-selector-example-1.png)
+   ![](../bestpractices-1/attachments/finding-the-action-you-need-1/find-simple-checkbox-set-selector-example-1.png)
 
 3. Example, you want to find a dialog box based on the title or text inside. You cannot use the _Find/Assert Widget_ action because the dialog box does not have a `mx-name`.
 
    The solution is to use the following search term, "Find Dialog". ATS checks all the actions and returns those that match these words. You see there is an action called [_Find/Assert Dialog-](../refguide-ats-1/findassert-dialog). The _Find/Assert Dialog_  action can find a dialog based on title, text or only a dialog. 
 
-   ![](attachments/finding-the-action-you-need-1/find-dialog-example-1.png)
+   ![](../bestpractices-1/attachments/finding-the-action-you-need-1/find-dialog-example-1.png)
 
 ### 1.3 Summary
 
@@ -81,13 +82,13 @@ In case you cannot find a widget due to no unique name or because it is not supp
 
 The **Widget Name** is found using the ATS helper, the value is the **Widget Name**:
 
-![](attachments/finding-the-action-you-need-1/mx-name-ats-helper-cp-1.png)
+![](../bestpractices-1/attachments/finding-the-action-you-need-1/mx-name-ats-helper-cp-1.png)
 
 The _Click Widget_ action works on every widget that has a `mx-name`. 
 
 _The Click Widget Action_
 
-![](attachments/finding-the-action-you-need-1/click-widget-action-search-1.png)
+![](../bestpractices-1/attachments/finding-the-action-you-need-1/click-widget-action-search-1.png)
 
 If the generic action does not work check if there is a specific one.
 
@@ -99,26 +100,26 @@ ATS also has a few specific click actions. To find these use the search term, "C
 
    The solution is to use one of the following search terms, "Click load more" or "Click listview". ATS checks all the actions and returns those that match these words. You see there is an action called [_Click Widget Button_](../refguide-ats-1/click-widget-button). The _Click Widget Button_ action uses the `mx-name` of the widget and the button type to click the right button. In this case, select the "load more" type.
 
-    ![](attachments/finding-the-action-you-need-1/click-widget-button-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/click-widget-button-action-search-1.png)
 
 2. Example, you want to click a specific datagrid row inside a datagrid. You can use the _Click Widget_ action in combination with the column name, but if there are multiple datagrids ATS cannot distinguish them.
 
     The solution is to use the following search term, "Click DataGrid".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Click DataGrid Row_](../refguide-ats-1/click-datagrid-row). The _Click DataGrid Row_  action enables you to click a datagrid row containing a specific value in a specific column. This action also works on listviews and templategrids.
 
-    ![](attachments/finding-the-action-you-need-1/click-datagrid-row-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/click-datagrid-row-action-search-1.png)
 
 3. Example, you want to click a menu item in a menu bar widget.
 You cannot use the _Click Widget_ action because the menu item does not have its own `mx-name`. It is part of the menu bar widget.
 
     The solution is to use the following search term, "Click menu".  ATS checks all the actions and returns those that match these words.  You see there is an action called [_Click Menu Item_](../refguide-ats-1/click-menu-item). The _Click Menu Item_ action clicks on a menu item inside a menubar widget using the caption.
 
-    ![](attachments/finding-the-action-you-need-1/click-menu-item-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/click-menu-item-action-search-1.png)
 
 4. Example, you want to click an element you found in a previous step. You cannot use the _Click Widget_ action because it does not accept an element as input.
 
     The solution is to use the following search term, "Click/Doubleclick". ATS checks all the actions and returns those that match these words.  You see there is an action called [_Click/Doubleclick_](../refguide-ats-1/clickdoubleclick). The _Click/Doubleclick_ action is the action to use when you want to click an element found in a previous step.
 
-    ![](attachments/finding-the-action-you-need-1/clickdoubleclick-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/clickdoubleclick-action-search-1.png)
 
 ### 2.3 Summary
 
@@ -138,13 +139,13 @@ When you want to set an input widget the main choice is always the [_Set Value_]
 
 The **Widget Name** is found using the ATS helper, the value is the **Widget Name**:
 
-![](attachments/finding-the-action-you-need-1/mx-name-ats-helper-cp-1.png)
+![](../bestpractices-1/attachments/finding-the-action-you-need-1/mx-name-ats-helper-cp-1.png)
 
 The _Set Value_ action works on almost every widget that is an input widget.
  
 _The Set Value Action_
 
-![](attachments/finding-the-action-you-need-1/set-value-action-search-1.png)
+![](../bestpractices-1/attachments/finding-the-action-you-need-1/set-value-action-search-1.png)
 
 If the generic action does not work check if there is a specific one.
 
@@ -156,25 +157,25 @@ If the generic action does not work check if there is a specific one.
 
     The solution is to use the following search term, "Set Checkbox". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set Checkbox Value_](../refguide-ats-1/set-checkbox-value). The _Set Checkbox Value_ action uses the `mx-name` of the widget and the boolean value you set to check or uncheck the checkbox.
 
-    ![](attachments/finding-the-action-you-need-1/set-checkbox-value-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/set-checkbox-value-action-search-1.png)
 
 2. Example, you want to set the BooleanSlider widget to certain value. You cannot use the _Set Value_ action because it does not work. 
 
     The solution is to use the following search term, "Set BooleanSlider". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set BooleanSlider Value_](../refguide-ats-1/set-booleanslider-value). The _Set BooleanSlider Value_ action uses the `mx-name` of the widget and the value you want to set the slider to.
 
-    ![](attachments/finding-the-action-you-need-1/set-booleanslider-value-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/set-booleanslider-value-action-search-1.png)
 
 3. Example, you want to set the radiobutton inside a GridSelector widget. You cannot use the _Set Value_ because the radiobutton does not have its own `mx-name`. It is part of the GridSelector widget.
 
     The solution is to use the following search term, "Set Grid Selector". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set Grid Selector Value_](../refguide-ats-1/set-grid-selector-radiobutton-checked). The _Set Grid Selector Value_ action uses the `mx-name` of the widget, column caption and row caption to locate the radiobutton.
 
-    ![](attachments/finding-the-action-you-need-1/set-grid-selector-radiobutton-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/set-grid-selector-radiobutton-action-search-1.png)
 
 4. Example, you want to set an input reference selector widget. You cannot use the _Set Value_ action because it does not work. 
 
     The solution is to use the following search term, "Set InputReferenceSelector". ATS checks all the actions and returns those that match these words. You see there is an action called [_Set InputReferenceSelector Value_](../refguide-ats-1/set-inputreferenceselector-value). The _Set InputReferenceSelector Value_ action uses the `mx-name` and the value you set to set the InputReferenceSelector widget.
 
-    ![](attachments/finding-the-action-you-need-1/set-inputreferenceselector-value-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/set-inputreferenceselector-value-action-search-1.png)
 
 ### 3.3 Summary
 
@@ -194,13 +195,13 @@ When you want to get a value from a widget the main choice is always the [_Get V
 
 The **Widget Name** is found using the ATS helper, the value is the **Widget Name**:
 
-![](attachments/finding-the-action-you-need-1/mx-name-ats-helper-cp-1.png)
+![](../bestpractices-1/attachments/finding-the-action-you-need-1/mx-name-ats-helper-cp-1.png)
 
 The _Get Value_ action works on almost every widget that is an input widget.
  
 _The Get Value Action_
 
-![](attachments/finding-the-action-you-need-1/get-value-action-search-1.png)
+![](../bestpractices-1/attachments/finding-the-action-you-need-1/get-value-action-search-1.png)
 
 If the generic action does not work check if there is a specific one.
 
@@ -212,19 +213,19 @@ ATS also has a few specific actions for getting a value from an widget. To find 
 
     The solution is to use the following search term, "Get InputReferenceSelector". ATS checks all the actions and returns those that match these words. You see there is an action called [_ Get InputReferenceSelector_](../refguide-ats-1/get-inputreferenceselector-value). The _Get InputReferenceSelector_ action returns the value the InputReferenceSelector widget is set to using the `mx-name`. 
 
-    ![](attachments/finding-the-action-you-need-1/get-inputreferenceselector-value-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/get-inputreferenceselector-value-action-search-1.png)
 
 2. Example, you want to get the value displayed in the CKEditor widget. You cannot use the _Get Value_ action because it does not work.  
 
     The solution is to use the following search term, "Get CKEditor". ATS checks all the actions and returns those that match these words. You see there is an action called [_Get CKEditor Value_](../refguide-ats-1/get-ckeditor-value). The  _Get CKEditor Value_ action uses the `mx-name` to return the value displayed in the CKEditor widget.
 
-    ![](attachments/finding-the-action-you-need-1/get-ckeditor-value-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/get-ckeditor-value-action-search-1.png)
 
 3. Example, you want to get the message displayed in the dialog box widget. You cannot use the _Get Value_ action because there is no `mx-name.
 
     The solution is to use the following search term "Get Dialog".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Get Dialog Message Text_](../refguide-ats-1/get-dialog-message-text). The  _Get Dialog Message Text_ action uses the dialog as a WebElement to retrieve the message text. You use the _Find/Assert Dialog_ action to get the dialog as a WebEelement.
 
-    ![](attachments/finding-the-action-you-need-1/get-dialog-message-text-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/get-dialog-message-text-action-search-1.png)
 
 ### 4.3 Summary
 
@@ -244,13 +245,13 @@ When you want to assert a value inside a widget the main choice is always the [_
 
 The **Widget Name** is found using the ATS helper, the value is the **Widget Name**:
 
-![](attachments/finding-the-action-you-need-1/mx-name-ats-helper-cp-1.png)
+![](../bestpractices-1/attachments/finding-the-action-you-need-1/mx-name-ats-helper-cp-1.png)
 
 The _Assert Value_ action works on almost every widget that is an input widget.
  
 _The Assert Value Action_
 
-![](attachments/finding-the-action-you-need-1/assert-value-action-search-1.png)
+![](../bestpractices-1/attachments/finding-the-action-you-need-1/assert-value-action-search-1.png)
 
 If the generic action does not work check if there is a specific one.
 
@@ -262,13 +263,13 @@ ATS also has a few specific actions for asserting values in a widget or inside A
 
     The solution is to use the following search term, "Assert Validation". ATS checks all the actions and returns those that match these words. You see there is an action called [_Assert Validation Message_](../refguide-ats-1/assert-validation-message). The _Assert Validation Message_ action uses the `mx-name` of a widget to assert the validation message that appears in the widget.
 
-    ![](attachments/finding-the-action-you-need-1/assert-validation-message-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/assert-validation-message-action-search-1.png)
 
 2. Example, you want to assert that the right page has opened. You cannot use the _Assert Value_ because there is no `mx-name` that you can use.
 
     The solution is to use the following search term, "Assert Page".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Assert Current Page_](../refguide-ats-1/assert-current-page). The _Assert Current Page_ action uses the page title to assert that the right page has opened.
 
-    ![](attachments/finding-the-action-you-need-1/assert-current-page-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/assert-current-page-action-search-1.png)
 
 These examples showed actions meant to assert something in your Mendix app. ATS also has actions that assert internal outcomes/values. 
 
@@ -276,7 +277,7 @@ These examples showed actions meant to assert something in your Mendix app. ATS 
 
     The solution is to use the following search term, "Assert not equal". ATS checks all the actions and returns those that match these words. You see there is an action called [_Assert Not equals_](../refguide-ats-1/assert-not-equals). The _Assert Not equals_ action compares two provided values and checks if they are equal or not.
 
-    ![](attachments/finding-the-action-you-need-1/assert-not-equals-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/assert-not-equals-action-search-1.png)
 
 ### 5.3 Summary
 
@@ -298,7 +299,7 @@ It is also used for creating variable selectors.
 
 _The Concatenate String action_
 
-![](attachments/finding-the-action-you-need-1/concatenate-string-action-search-1.png)
+![](../bestpractices-1/attachments/finding-the-action-you-need-1/concatenate-string-action-search-1.png)
 
 ### 6.2 Specific Action
 
@@ -308,19 +309,19 @@ ATS also has a few specific actions for generating values to use in your test ca
 
     The solution is to use the following search term, "Random".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Random String_](../refguide-ats-1/random-string). The _Random String_ action generates a random value and allows you to set a prefix and/or postfix.
 
-    ![](attachments/finding-the-action-you-need-1/random-string-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/random-string-action-search-1.png)
 
 2. Example, you want to have a unique number value in your test case. That also makes your test case reusable.
 
     The solution is to use the following search term, "Random".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Random Number_](../refguide-ats-1/random-number). The _Random Number_ action generates a random number and allows you to set a minimum and maximum.
 
-    ![](attachments/finding-the-action-you-need-1/random-number-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/random-number-action-search-1.png)
 
 3. Example, you want to use today's date in your test case. This makes your test case reusable, but you don't want to enter it every time you execute the test case.
 
     The solution is to use the following search term, "Current Date". ATS checks all the actions and returns those that match these words. You see there is an action called [_Get Current DateTime String_](../refguide-ats-1/get-current-datetime-string). The _Get Current DateTime String_ action retrieves the current date and allows you to set the date format.
 
-    ![](attachments/finding-the-action-you-need-1/get-current-datetime-string-action-search-1.png)
+    ![](../bestpractices-1/attachments/finding-the-action-you-need-1/get-current-datetime-string-action-search-1.png)
 ### 6.3 Summary
 
 For generating values or information you should follow the first two sections of this chapter. There is no generic solution regarding this. Only a constant provider like the _Concatenate String_ action.

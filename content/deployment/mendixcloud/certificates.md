@@ -1,6 +1,6 @@
 ---
 title: "Certificates"
-category: "Deployment"
+category: "Mendix Cloud"
 ---
 
 ## 1 Introduction
@@ -25,7 +25,7 @@ You can upload a PKCS12 file by following these steps:
     ![](attachments/4194597/certificate.png)
 
 6. Upload a PKCS12 (pfx) container. Within this container there has to be an X.509 certificate, a private key, and (optionally) a certificate chain.
-7. After uploading a client certificate, you will be requested to fill in a password to unlock the certificate container. 
+7. After uploading a client certificate, you will be requested to fill in a password to unlock the certificate container.
 
 {{% alert type="info" %}}
 Certificates require an app restart before they become active.

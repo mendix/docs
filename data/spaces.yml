@@ -91,6 +91,7 @@ howto:
   mendix_version: 7
   menu_categories:
     - "Tutorials"
+    - "SAP"
     - "Modeling Basics"
     - "Data Models"
     - "GUIs"
@@ -159,6 +160,7 @@ refguide:
     - "Modeler"
     - "Runtime"
     - "Java Programming"
+    - "SAP"
     - "Mobile"
 howtogeneral:
   space: "General How-To's"
@@ -204,3 +206,4 @@ deployment:
     - "Docker"
     - "Mendix Cloud"
     - "On-Premises"
+    - "SAP Cloud Platform"

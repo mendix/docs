@@ -442,9 +442,13 @@ The only thing missing in the page right now is the button to create a bundle. F
 
 36. Select **Run > Run** to deploy the app to the SAP Cloud.
 37. Click **View** when the app has started successfully.
-38. Log in with your ES4 credentials to view the application in your browser:
+38. On the login screen, click **Sign in with your XSUAA account**:
 
-    ![](attachments/sap-teched-manage-products/login-es4-credentials.png)
+    ![](attachments/sap-teched-manage-products/xsuaa-login.png)
+
+39. Enter your SAP ID username and password and click **Log On**:
+
+    ![](attachments/sap-teched-manage-products/xsuaa-login-2.png)
 
 
 Great work! You have finished the tutorial.

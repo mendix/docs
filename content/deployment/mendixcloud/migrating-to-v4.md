@@ -23,6 +23,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 *  You are the [Technical Contact](/developerportal/general/technical-contact) of both v3 and v4 Cloud Nodes
 * You have created a new temporary Free App without a Sandbox. 
 
+## 3 The Migration Process
+
+Follow these four steps to migrate your app from a v3 node to a v4 node in the Mendix Cloud:
+
 ### Step 1: Link the new Free App to the v4 Node
 
 First, link the new temporary app to the cloud v4 node.

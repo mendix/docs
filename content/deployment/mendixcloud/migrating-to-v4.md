@@ -13,6 +13,8 @@ This how-to describes everything about the migration from v3 to v4.
 
 *   Migrate your licensed App from Mendix Cloud v3 to v4
 
+  ![](attachments/v4/migratev4.png)
+
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:

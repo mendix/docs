@@ -1,6 +1,6 @@
 ---
 title: "Build a Logistics IoT App"
-category: "Tutorials"
+parent: "other-tutorials"
 description: "Introduces the series that will describe how to expand the Mendix Logistics IoT app."
 tags: ["iot", "logistics", "supply chain", "cargo", "shipment", "logistics", "sensor"]
 ---
@@ -15,7 +15,7 @@ The Mendix Logistics IoT app obtains and measures data from various sensors in i
 
 ## 2 Prerequisites
 
-Before starting these how-to's, create a new instance of the **Logistics IoT** app on the [Mendix platform](https://sprintr.home.mendix.com/link/startnewproject) (via the **Getting Started** tab). After the app has been created, you can open it in the Modeler (download the Modeler [here](https://appstore.mendix.com/link/modelers) and install it in case you haven't done so already).
+Before starting these how-to's, create a new instance of the **Logistics IoT** app on the [Mendix platform](https://sprintr.home.mendix.com/link/startnewproject) (via the **Getting Started** tab). After the app has been created, you can open it in the Desktop Modeler (download the Desktop Modeler [here](https://appstore.mendix.com/link/modelers) and install it in case you haven't done so already).
 
 Please note the following:
 

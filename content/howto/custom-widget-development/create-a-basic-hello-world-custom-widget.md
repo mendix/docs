@@ -46,7 +46,7 @@ The following files are required to create a widget:
 * A *widget.js* file that is the JavaScript core of your widget
 * A *widget.html* file that is the HTML template of your widget
 
-### 3.2 The Development Lifecycle of a Custom Widget
+### 3.2 The Development Life Cycle of a Custom Widget
 
 ![](attachments/18448564/18579867.png) 
 
@@ -57,7 +57,7 @@ The following files are required to create a widget:
 5. In the Modeler, press F5 to start the app locally or rerun the app.
 6. In Chrome or Firefox, you can debug the JavaScript code created for your widget.
 
-### 3.3 The Runtime Lifecycle of a Custom Widget
+### 3.3 The Runtime Life Cycle of a Custom Widget
 
 ![](attachments/18448564/18579860.png)
 
@@ -66,7 +66,7 @@ The following files are required to create a widget:
 * The widget is responsible for handling data and (re)creating the UI for which it's responsible
 * The widget also needs to handle interactivity from the web browser and end-user
 * Updates on entities where the widget is attached can trigger a re-rendering of the part of the UI
-* Never try to connect widgets to each other through HTML –  use entities and microflows for that instead, as the normal runtime lifecycle of a widget will handle the interface, management of events, and rendering 
+* Never try to connect widgets to each other through HTML –  use entities and microflows for that instead, as the normal runtime life cycle of a widget will handle the interface, management of events, and rendering 
 * If Mendix has sent data and with an update there is no data, the widget should ALWAYS return to its original state without data
 
 #### 3.3.1 First Initialization of a Widget

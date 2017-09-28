@@ -154,5 +154,4 @@ You can now add Google Analytics-tracking to your Mendix application! This widge
 
 # 20 Related Content
 
-* [How to Send Custom E-mails From Your App](send-custom-emails-from-your-app)
 * [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)

@@ -22,13 +22,16 @@ Before you can start with this how-to, please make sure you have completed the f
 ## 2\. Create a new App in the Mendix Business Modeler
 
 In this chapter we will create a new app and select a theme from the New App selector.
+
 1.  Open the **Mendix Modeler**.
 2.  Create a **New App** from the **My Apps** screen in the Mendix Business Modeler.
 
-     ![](attachments/18448712/18581487.png)
+    ![](attachments/18448712/18581487.png)
+
 3.  Select a theme for your app.
 
     ![](attachments/18448712/18581488.png)
+
 4.  You can now deploy your app or just head over to section 3 to configure Koala.
 
 ## 3\. Configure Koala
@@ -51,7 +54,7 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 3.  Open up the file <u>**custom-variables.scss**</u> .
 
      ![](attachments/18448712/18581503.png)
-    Let's take a look at **Step 2** in the **custom-variables.scss** file. As the comments suggest we can adjust the background-color for the sidebar. 
+    Let's take a look at **Step 2** in the **custom-variables.scss** file. As the comments suggest we can adjust the background-color for the sidebar.
 4.  Change the color from white (#FFF) to red (#FF0000) and save the file.
 
     ![](attachments/18448712/18581504.png)

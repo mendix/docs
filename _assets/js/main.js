@@ -540,6 +540,13 @@
         window.Intercom('shutdown');
       } else {
         window.Intercom('boot', window.intercomSettings);
+        setTimeout(function () {
+          var loc = window.location.toString();
+          window.Intercom('update', {
+            'url': loc,
+            'update': 1
+          });
+        }.bind(this), 2000);
       }
     }
 

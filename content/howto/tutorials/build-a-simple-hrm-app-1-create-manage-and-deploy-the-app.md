@@ -43,7 +43,7 @@ To create your app, follow these steps:
 
     ![](attachments/18448672/18580902.png)
 
-## 4 Downloading the Modeler and Editing Your App
+## 4 Downloading the Desktop Modeler and Editing Your App
 
 To edit your app, follow these steps:
 
@@ -64,7 +64,7 @@ To deploy your app to the Mendix Cloud so that others can view and test it, foll
 
     ![](attachments/18448672/18580884.png)
 
-2. Click **View App** to open the app in your browser:
+2. Click **View** to open the app in your browser:
 
     ![](attachments/18448672/18580885.png)
 

@@ -53,6 +53,8 @@ The following deep links can be used:
 
 ## 4 Related Content
 
-*   [Collaborate](/developerportal/collaborate)
-*   [General](/developerportal/settings/general-settings)
-*   [Settings](/developerportal/settings)
+* [Collaborate](/developerportal/collaborate)
+* [Developer Portal](/developerportal/general)
+* [Mendix Cloud Status](/developerportal/general/mendix-cloud-status)
+* [Operate](/developerportal/operate)
+* [Settings](/developerportal/settings)

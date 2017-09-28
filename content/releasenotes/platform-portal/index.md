@@ -4,16 +4,75 @@ title: "Platform Portal"
 
 ## 2017
 
+### September 28, 2017
+
+#### Improvements
+
+* Deployments with almost no downtime: It is now possible to deploy a different version without stopping a running application. Once the deployment is done, you can restart the application with a single click. This is available for Mendix Cloud v3 and v4.
+* Improved the robustness of the Deploy API: Occasional failures that occured while starting/stopping an environment via the Deploy API no longer occur.
+* Improved the stability for transporting deployment packages for Asia-Pacific users for Mendix Cloud v4.
+* Environment health indicators for your environments are now much more accurate.
+
+#### Fixes
+
+* We fixed a problem where Team Server branches that were committed without the Mendix Modeler were hidden in the Cloud Portal.
+* We fixed a problem where changing an access restriction profile could display a wrong error about having more than 1 certificate in use.
+
+### September 25th, 2107
+
+#### Improvements
+
+* We changed the link at the bottom of our notification mails to point to a page where you can unsubscribe from these emails.
+
+#### Fixes
+
+* We fixed the link to the *Deploy on-premises* docs in the Cloud Settings page.
+
+### September 20th, 2017
+
+#### Improvements
+
+* It is now possible to accept invitations and confirm signups on mobile devices.
+* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296) 
+
+#### Fixes
+
+* Deleting a document will no longer delete the corresponding discussion thread. Instead, a note that the previously uploaded document was deleted will be added to the discussion thread. Conversely, it is no longer possible to delete a discussion thread that has comments with uploaded documents. (Ticket 46480)
+* Updated the Excel import functionality with various fixes and security improvements.
+
+
+### August 30th, 2017
+
+#### Improvements
+
+* The user interface of the instance/memory slider for Cloud v4 has been improved considerably. Scaling will also appear in the activity log of the application.
+* For Mendix Cloud v4, we do no longer show the size of the archived log. The size we displayed previously was wrong.
+* The expiry date for Mendix Cloud backups is now visible in the backup list.
+
+### August 22nd, 2017
+
+#### Improvements
+
+* Due to various optimizations, the deployment speed for apps in Mendix Cloud v4 EU is now about twice as fast. The latency for FileDocument read/write actions has also improved for all Mendix Cloud v4 regions.
+
+### August 15th, 2017
+
+#### Improvements
+
+* We enabled path-based access restrictions for all Mendix Cloud v3 apps. This allows users to more easily configure access restrictions on their environments. For more information, see [Access Restrictions](/deployment/mendixcloud/access-restrictions). Mendix Cloud v4 already has this functionality enabled.
+
+### August 14th, 2017
+
+#### Fixes
+
+* We fixed the issue where users with Microsoft browsers would get an error page after signup instead of automatically continuing to the Developer Portal.
+
 ### August 11th, 2017
 
 #### Fixes
 
 * We fixed the issue where Desktop Modeler users couldn't submit feedback items.
 * We fixed the issue where team member names in the **Node Security** screen were empty and only visible after a refresh.
-
-#### Known issues
-
-* Users of Internet Explorer or Microsoft Edge may encounter an unexpected error page after signing up for Mendix. We will release a fix for this as soon as possible.
 
 ### August 2nd, 2017
 
@@ -38,7 +97,7 @@ title: "Platform Portal"
 
 #### Improvements
 
-* For all apps running on the Mendix Cloud, the following HTTP headers are now available: `SSL-Version` (possible values: `TLSv1`, `TLSv1.1`, `TLSv1.2`) and `SSL-Cipher` (for example, `ECDHE-RSA-AES256-GCM-SHA384`). These can be used to block login attempts (for example, `TLSv1.0` connections).
+* For all apps running on the Mendix Cloud, the following HTTP request headers are now available: `SSL-Protocol` (possible values: `TLSv1`, `TLSv1.1`, `TLSv1.2`) and `SSL-Cipher` (for example, `ECDHE-RSA-AES256-GCM-SHA384`). These can be used to block login attempts (for example, `TLSv1` connections). *(Please note that these release notes previously stated the header name was `SSL-Version`, but it should have been `SSL-Protocol`.)*
 * Modern browsers are aggressively caching static HTML resources, which can lead to user problems after deploying new versions of applications. Clearing the cache can solve this, but that is a bad user experience. So, for all apps running on Mendix Cloud v3, we have added an explicit `no-cache` header to the resources `/` and `/index.html`, `/login.html`, and `/index[0-9].html`. For Mendix Cloud v4, an `expires` with a negative value was already used, so no changes are required there. We believe this change eliminates most of the browser caching issues we have seen so far.
 * You can now restrict access to your Mendix Cloud v4 applications based on IP ranges. This is available for all Mendix Cloud v4 regions and can be configured from the **Network** tab of your cloud environment.
 

@@ -3,8 +3,6 @@ title: "Guidelines for Creating a Custom Action"
 category: "Best Practices"
 ---
 
-## 1 Guidelines for Building a Custom Action
-
 For a details on custom actions, please see [Custom Actions](../refguide-ats-1/custom-actions) in the ATS Reference Guide 1.
  
 These are the definitions of Mendix actions and Core actions:
@@ -18,7 +16,7 @@ These are guidelines, not rules. It is possible that you will encounter situatio
 
 {{% /alert %}}
 
-### 1.1 Using Mendix Actions
+## 1 Using Mendix Actions
 
 Always try to use a Mendix action first. This table explains why you should use a Mendix action:
 

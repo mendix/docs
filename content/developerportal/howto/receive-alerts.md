@@ -67,7 +67,11 @@ You can manage the alerts by yourself, follow these steps:
 ## 4 Related Content
 
 * [Alerts](/developerportal/operate/monitoring-application-health)
-* [Operate](/developerportal/operate)
-* [Security - Node Permissions](/developerportal/settings/node-permissions)
-* [Settings](/developerportal/settings)  
-* [Technical Contact](/developerportal/settings/technical-contact)
+* [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
+* [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [Mendix Cloud](/deployment/mendixcloud)
+* [Mendix Cloud v4 - FAQ](/deployment/mendixcloud/mxcloudv4)
+* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Security - Node Permissions](/developerportal/settings/node-permissions) 
+* [Technical Contact](/developerportal/general/technical-contact)

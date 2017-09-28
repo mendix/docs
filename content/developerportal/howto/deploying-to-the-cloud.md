@@ -40,7 +40,7 @@ There are two methods for deploying your app to the Mendix Cloud. The first opti
 2. Open the licensed app.
 3. Click **Project** in the top menu bar and select **Deploy to licensed cloud node**:
 
-    [](attachments/deploy/18581233.png)
+    ![](attachments/deploy/18581233.png)
 
 4. Click **Deploy**:
 
@@ -74,7 +74,7 @@ The previous steps explained how to deploy a deployment package to the Mendix Cl
 3. In the **Deployment Package Repository**, choose the preferred deployment package and click **Deploy**.
 4. Select the preferred environment, and then click **Continue**.
 5. Click **Transport**. If asked to do so, clean the environment.
-6. Configure the constants (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings. 
+6. Configure the constants (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done in a later stage in the settings.
 7. Click **Continue**.
 8. Click **Start application**. If asked, click **Synchronize database**.
 
@@ -101,5 +101,7 @@ If you want to choose whether you want to run your app locally or in the Sandbox
 * [How to Configure Custom Domains](custom-domains)
 * [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
 * [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
+* [How to Add a Company Admin and Change the App Roles](/developerportal/howto/change-roles)
+* [Roles Within the Company and Apps](/developerportal/general/roles)
 * [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)
 * [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)

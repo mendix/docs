@@ -1,8 +1,9 @@
 ---
-title: "Date picker"
+title: "Date Picker"
 parent: "input-widgets"
 ---
 
+## Introduction
 
 A date picker is an [input widget](input-widgets) that can be used to display and edit date/time attributes. It takes into account the language setting to display a localized calendar.
 
@@ -13,17 +14,20 @@ This date picker allows the end-user to set the birth date of the customer.
 
 {{% /alert %}}
 
-## General properties
+## General Properties
 
-### Date format
+### Date Format
 
-The date format determines whether the date picker displays the date, time, date and time, or a custom variation of the linked attribute. This does not affect how data is stored; in all cases both a date and a time will be recorded. It merely affects how the data is displayed. How the date and/or time are formatted depend on the localization of the user viewing the data.
+The date format determines whether the date picker displays the date, time, date and time, or a custom variation of the linked attribute. This does not affect how data is stored; in all cases both a date and a time will be recorded. It merely affects how the data is displayed. How the date and/or time are formatted depends on the localization of the user viewing the data.
 
-Possible values: 'Date', 'Time', 'Date and time' and 'Custom'.
+These are the possible values:
 
-_Default value:_ Date
+* **Date** (this is the default)
+* **Time**
+* **Date and time**
+* **Custom** (see below for more details)
 
-### Custom date format
+### Custom Date Format
 
 If you choose 'Custom' as the date format (see above) this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
@@ -53,13 +57,15 @@ If you choose 'Custom' as the date format (see above) this property determines h
 
 {{% alert type="info" %}}
 
-| Format | Example output |
+These are some examples:
+
+| Format | Example Output |
 | --- | --- |
 | `EEEE d MMMM yyy G, h:mm a ss's` | Tuesday 29 March 2011 AD, 1:37 PM 48s |
 | `h:mm a` | 1:37 PM |
 | `yyy D KK:mm` | 2011 88 01:26 |
 | `EEEE MMMM d yyy` | Tuesday March 29 2011 |
-| `EEE, MMM d, ''yy` | Wed, Jul 4, '01 |
+| `EEE, MMM dd, ''yy` | Wed, Jul 04, '01 |
 
 {{% /alert %}}
 
@@ -67,17 +73,17 @@ If you choose 'Custom' as the date format (see above) this property determines h
 
 The placeholder text is shown if the date attribute is empty. It can be used to give the end user a hint as to the expected format. Note: placeholder texts will not work if a native date picker is available (e.g. iOS and Android versions 4.0 and higher).
 
-{{% snippet file="refguide/Required+Property.md" %}}
+## Validation Properties
 
-{{% snippet file="refguide/Required+message+Property.md" %}}
+{{% snippet file="refguide/Widget+Validation.md" %}}
 
-## Data source properties
+## Data Source Properties
 
 {{% snippet file="refguide/Attribute+Path+Property.md" %}}
 
 {{% snippet file="refguide/Label+Property.md" %}}
 
-## Editability properties
+## Editability Properties
 
 {{% snippet file="refguide/Editable+Property.md" %}}
 
@@ -85,13 +91,13 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/Condition+Property.md" %}}
 
-## Visibility properties
+## Visibility Properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}
 
 {{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
-## Events properties
+## Events Properties
 
 {{% snippet file="refguide/On+Change+Event.md" %}}
 
@@ -99,7 +105,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/On+Leave+Event.md" %}}
 
-## Common properties
+## Common Properties
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
@@ -109,7 +115,7 @@ The placeholder text is shown if the date attribute is empty. It can be used to 
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Related articles
+## Related Content
 
-*   [Data view](data-view)
+*   [Data View](data-view)
 *   [Attributes](attributes)

@@ -25,7 +25,7 @@ Start by running the application so that you can experience how the app looks. Y
 
 To deploy and view the app, follow these steps:
 
-1. In the Modeler, click **Run Locally** and confirm to create a new database. Click **View App** to see the app in your browser.
+1. In the Desktop Modeler, click **Run Locally** and confirm to create a new database. Click **View** to see the app in your browser.
 
     ![](attachments/build-an-iot-app/deploy-and-view-blurred.png)
 
@@ -49,7 +49,7 @@ To connect an app page, follow these steps:
 3. The button with the **>** icon (which you can find in the list view) is not connected to a page, so right-click the button and select **Edit action** > **Show a page**.
 4. In the **Select page** dialog box, select the **Shipment_Detail** page (which has already been prepared for you).
 5. Click **Show** to display the **Shipment_Detail** page and then **OK** to inspect the page to which the **>** button is directing.
-6. Save the changes, click **Run Locally** to deploy the app, then click **View App** to view the app in your browser.
+6. Save the changes, click **Run Locally** to deploy the app, then click **View** to view the app in your browser.
 7. Make sure you are switched back to the **Tutorial_Workspace** user (use the user toggle on the right side of the screen for this).
 8. Inspect how this **Shipment_Detail** page looks in the browser by clicking the **>** button of the available shipment.
 

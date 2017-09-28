@@ -11,6 +11,21 @@ This document describes known issues starting with Mendix version 7.0.2. For kno
 
 {{% /alert %}}
 
+## 7.6
+
+For details on this release, see [7.6 release notes](7.6).
+
+### 7.6.0<a name="KI760"></a>
+
+* When retrieving an entity with a virtual attribute without using a schema ID, references are not returned. This impacts the following scenarios:
+  * A template grid containing an entity with a virtual attribute will not show any data over an association (for example, nested data views).
+  * Custom widgets requesting Mendix objects with a virtual attribute through XPath will have no access to their associations.
+* Offline pages containing custom widgets might fail to render in the following scenario:
+  * User logs in (not as anonymous user) into an offline app, uses the app and logs out
+  * Mendix app is redeployed with a change that removes all instances of a custom widget used in the offline app
+  * User starts app again, selects "No" when asked to update the app, logs in, and navigates to the page that contains the custom widget
+  * Widget is not rendered
+
 ## 7.5
 
 For details on this release, see [7.5 release notes](7.5).
@@ -23,7 +38,7 @@ For details on this release, see [7.5 release notes](7.5).
 ### 7.5.0<a name="KI750"></a>
 
 * The Mendix Web Modeler is not enabled when you create an Atlas UI-based app in the Mendix Desktop Modeler.
-  * Fixed in [7.5.1](7.5#RN751)
+  * Fixed in [7.5.1](7.5#RN751).
 * For Atlas-based apps, it is not possible to use the **Generate page** functionality for buttons. The **Create Page** dialog box shows no selectable page templates for these profiles.
   * Workaround: select **File** > **New Document** > **Page** and set this newly created page in the **Page** property of the button.
 
@@ -78,15 +93,18 @@ For details on this release, see [7.0 release notes](7.0).
 #### Stateless runtime known issues
 
 * The `RuntimeStatistics` page in the administration module is broken, as the `System.Statistics` entity is not created anymore. This was used for an earlier version of horizontal scalability and has become obsolete. In a future version, the `System.Statistics` entity will be removed from the `System` module, and the `Administration.RuntimeStatistics` page and the `Administration.ViewStatistics` microflow will be removed automatically from the `Administration` module.
-* Upgrading an anonymous user to a signed-in user does not transfer the session state yet.
+  * Fixed in [7.1.0](7.1#RN710).
 * Pages showing objects that contain accessible hashed string attributes with empty values are broken. You cannot call a microflow or open a different page. Please note that this is not easy to model, so you might not encounter this issue.
+  * Fixed in [7.1.0](7.1#RN710).
 * Hybrid apps will not start if they contain a reporting widget.
+  * Fixed in [7.1.0](7.1#RN710).
 * Offline hybrid apps are not supported yet.
+  * Fixed in [7.1.0](7.1#RN710).
 
 #### Other known issues
 
 * In certain situations, OnChange microflows may not reflect changes done in the UI. Instead, an older version of the object will be used.
- * Fixed in [7.3.0](7.3#RN730_1).
+  * Fixed in [7.3.0](7.3).
 * Some users working on Windows 7 and 8.1 might experience issues during installation of the .NET Framework bundled with the Modeler installer. Installing .NET Framework from the [official Microsoft website](https://www.microsoft.com/en-us/download/details.aspx?id=53345) resolves these issues.
 * Upgrading an anonymous user to a signed-in user does not transfer the state yet.
 * In calculated attribute microflows, objects associated with `$currentUser` or `$currentSession` cannot be retrieved in the calculated microflow if the association has not been committed to the database.

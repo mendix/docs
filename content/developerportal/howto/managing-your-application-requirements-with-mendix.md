@@ -24,20 +24,20 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To create a new App, follow these steps:
 
-1. Go to [Mendix app platform](https://home.mendix.com/) and log in (create an account [here](https://developers.mendix.com/start-for-free/) if you don't have one yet).
-2. Click **Create New App** in the top-left of the screen:
+1. Go to the [Developer Portal](https://home.mendix.com/) and log in (create an account [here](https://developers.mendix.com/start-for-free/) if you don't have one yet).
+2.  Click **Create New App** in the top-left of the screen:
 
-    ![](attachments/collaborate/18580496.png)
+    ![](attachments/general/create-app.png)
 
-3. Select a theme or sample app. The "Blue Wave" how-to is used for this how-to:
+3.  Select a theme or sample app by clicking **View Details**.
 
-    ![](attachments/collaborate/18580495.png)
+    ![](attachments/general/view-details.png)
 
-4. Click **Use This Theme**:
+4.  Click **Use this app**:
 
-    ![](attachments/collaborate/18580494.png)
+    ![](attachments/general/use-app.png)
 
-5. Name the project *Company Expenses Demo*.
+5. Name the app *Company Expenses Demo*.
 6. Click **Create App**. You will then be taken to the project dashboard.
 
 ## 4 Adding Sprints
@@ -46,32 +46,34 @@ The development of a new product, feature, or release usually has multiple sprin
 
 To add a sprint, follow these steps:
 
-1. Click **Capture** in the top menu:
+1.  Click **Stories** in the left menu:
 
-    ![](attachments/collaborate/18580518.png)
+   ![](attachments/collaborate/collaborate.png)
 
-    On the capture page you can add sprints, stories, planning, and documents that can be used in your project. The **Stories** tab shows the existing stories and sprints.
+Under the **Collaborate** category you can add sprints, stories, planning, and documents that can be used in your app. The **Stories** page shows the existing stories and sprints.
 
-    ![](attachments/collaborate/18580517.png)
+   ![](attachments/collaborate/stories.png)
 
-2. There is one default sprint called **Get started**, which is automatically created when you create a new project. You need a clean project, so select the **Get started** sprint, click the delete button, and then click **OK** to delete the sprint.
-3. Click **New sprint** in the **Stories** tab.
-4. Under **Plan something**, do the following:
+2.  There is one default sprint called **Get started**, which is automatically created when you create a new project. You need a clean sprint, so delete the **Get started** sprint by clicking on the bin.
+
+    ![](attachments/collaborate/bin.png)
+
+3.  Click **New sprint**.
+4.  Under **Plan something**, do the following:
     * Select **Sprint** (when you are working towards a release of your product, you can add the release planning)
-    * Enter **Sprint 1** for the sprint **Name**
+    * Below **Name** enter **Sprint 1**
     * Leave the **This sprint comes after** field empty (if there are existing sprints, you can place the new sprint before or after a selected sprint)
     * Set the **Duration** to **2** (weeks)
 
-    ![](attachments/collaborate/18580514.png)
+   ![](attachments/collaborate/18580514.png)
 
-    {{% alert type="info" %}}
+   {{% alert type="info" %}}
 
-    The default duration of a sprint in Mendix is two weeks, wihhc starts the moment you create the sprint. Check **customize** to select a different start date.
+The default duration of a sprint in Mendix is two weeks, which starts the moment you create the sprint. Check **customize** to select a different start date.
 
-    {{% /alert %}}
-9. Click **Save**, and the new sprint will be added to your stories overview:
+   {{% /alert %}}
 
-    ![](attachments/collaborate/18580513.png)
+5.  Click **Save**, and the new sprint will be added to your stories overview.
 
 ### 4.1 Adding Story Points
 
@@ -79,8 +81,8 @@ Every sprint contains a number of story points that describe a specific function
 
 To add story points, follow these steps:
 
-1. Select **Sprint 1** and click **New story**.
-2. For the new story, do the following:
+1.  Select **Sprint 1** and click **New story**.
+2.  For the new story, do the following:
     * Enter *As a user I want to be able to view my company expenses* for the user description
     * Select **Feature** for the **Story type**
     * Select **5 points** for the **Story points**
@@ -88,17 +90,19 @@ To add story points, follow these steps:
     * Enter *Create an expenses overview page for company employees* for the **Description**
 
     ![](attachments/collaborate/18580493.png)
+
 3.  Click **Post story**.
 
     {{% alert type="info" %}}
 
-    You can also add Bug story points this way by selecting **Bug** from the **Story type** drop-down menu. The icon in the top left will change to (![](attachments/18580492.png)).
+You can also add Bug story points this way by selecting **Bug** from the **Story type** drop-down menu.
+The icon in the top left will change to ![](attachments/collaborate/18580492.png)
 
-    {{% /alert %}}
+   {{% /alert %}}
 
-    The new story point is now added to Sprint 1:
+The new story point is now added to Sprint 1:
 
-    ![](attachments/collaborate/18580509.png)
+   ![](attachments/collaborate/18580509.png)
 
 ### 4.2 Adding Tasks to a Story
 
@@ -106,11 +110,11 @@ Stories are translated into tasks that need to be completed to finish the story.
 
 To add a task to the story, follow these steps:
 
-1. Select the story you created and click **Add task**:
+1.  Select the story you created and click **Add task**:
 
-    ![](attachments/collaborate/18580507.png)
+    ![](attachments/collaborate/story-actions.png)
 
-2. Enter *Add a list view of an employee's expenses*, and then click **Post task**:
+2.  Enter *Add a list view of an employee's expenses*, and then click **Post task**:
 
     ![](attachments/collaborate/18580506.png)
 
@@ -118,25 +122,25 @@ To add a task to the story, follow these steps:
 
 ## 5 Managing Stories in the Mendix Modeler
 
-Besides being able to manage your sprints in the **Project Dashboard**, you can also view them in the Mendix Modeler.
+Besides being able to manage your sprints in the **Developer Portal**, you can also view them in the Mendix Modeler.
 
 To manage stories in the Modeler, follow these steps:
 
-1. Go to the overview page of your project and click **Edit in Modeler**:
+1.  Go to the overview page of your project and click **Edit in Modeler**:
 
-    ![](attachments/collaborate/18580491.png)
+    ![](attachments/general/edit-app.png)
 
-2. Select a Modeler version when asked, and then log in to the Modeler.
-3. You will now see your sprints in the **Stories** tab at the bottom:
+2.  Select a Modeler version when asked, and then log in to the Modeler.
+3.  You will now see your sprints in the **Stories** tab at the bottom:
 
     ![](attachments/collaborate/18580490.png)
 
-4. Click the **To-do** status for the first item to change the status to **Running**:
+4.  Click the **To-do** status for the first item to change the status to **Running**:
 
     ![](attachments/collaborate/18580504.png)
 
-5. Go back to the **Capture** page of the project dashboard in your browser.
-6. Expand the first sprint and check the status of the first entry:
+5.  Go back to the **Stories** page in the [Developer Portal](http://home.mendix.com).
+6.  Expand the first sprint and check the status of the first entry:
 
     ![](attachments/collaborate/18580489.png)
 
@@ -144,31 +148,11 @@ To manage stories in the Modeler, follow these steps:
 
     {{% alert type="info" %}}
 
-    If you change a status or update story points in the Modeler or in the browser, they will automatically be synchronized and available everywhere.
+If you change a status or update story points in the Modeler or in the browser, they will automatically be synchronized and available everywhere.
 
-    {{% /alert %}}
+   {{% /alert %}}
 
-## 6 Importing Stories with Excel
-
-Besides entering your stories manually, you can import them easily with an Excel upload.
-
-To import stories, follow these steps:
-
-1. Download this [example Excel](attachments/collaborate/18580488.xls).
-2. Click **Import/Export** on the **Stories** page and select **Update stories from Excel**:
-
-    ![](attachments/collaborate/18580502.png)
-
-3. Click **Browse** to select the example Excel file that contains your user stories.
-4. Click **Import**, and then scroll to the bottom of the page and click **Next**:
-
-    ![](attachments/collaborate/18580501.png)
-
-    The **Stories** tab will now list your imported content:
-
-    ![](attachments/collaborate/18580500.png)
-
-## 7 Moving Stories
+## 6 Moving Stories
 
 This section will describe a scenario in which the story in Sprint 3 needs to be moved to Sprint 2, as the customer requires the app to be delivered sooner.
 
@@ -180,23 +164,55 @@ Moving a story will move any tasks and sub-tasks as well.
 
 There are two ways to move the story:
 
-* Select the story you want to move, select **Move to** from the menu, and then select **Sprint 2**:
+### 6.1 Method 1
 
-    ![](attachments/collaborate/18580499.png)
+Select the story you want to move, click **Details**.
 
-* Click and drag the story into another sprint or to the **Backlog**:
+   ![](attachments/collaborate/story-actions.png)
 
-    ![](attachments/collaborate/18580498.png)
+ and below **Move to** from the right menu, select **Sprint 2**:
+
+    ![](attachments/collaborate/move-sprint.png)
+
+### 6.2 Method 2
+
+Click and drag the story into another sprint or to the **Backlog**:
+
+   ![](attachments/collaborate/18580498.png)
+
+## 7 Importing Stories with Excel
+
+Besides entering your stories manually, you can import them easily with an Excel upload.
+
+To import stories, follow these steps:
+
+1. Download this [example Excel](attachments/collaborate/18580488.xls).
+2.  On the **Stories** page click **More** and click **Import/Export**.
+
+    ![](attachments/collaborate/more-button.png)
+
+3.  Select **Update stories from Excel**:
+
+    ![](attachments/collaborate/18580502.png)
+
+4. Click **Browse** to select the example Excel file that contains your user stories.
+5.  Click **Import**, and then scroll to the bottom of the page and click **Next**:
+
+    ![](attachments/collaborate/18580501.png)
+
+    The **Stories** tab will now list your imported content:
+
+    ![](attachments/collaborate/18580500.png)
 
 ## 8 Exporting Stories
 
 With Mendix, it’s always possible to export data from your application and from the database.
 
-To expot sprints and stories, follow these steps:
+To export sprints and stories, follow these steps:
 
-1. Go to **Capture** in your project, then to **Stories** > **Import/Export**:
+1.  On the **Stories** page click **More** and click **Import/Export**.
 
-    ![](attachments/collaborate/18580497.png)
+    ![](attachments/collaborate/more-button.png)
 
     There are three options to choose from, depending on which data you want to export.
 
@@ -207,11 +223,11 @@ To expot sprints and stories, follow these steps:
 
 ## 9 Related Content
 
-* [How to Contribute to a GitHub Repository](/howto7/collaboration-project-management/contribute-to-a-github-repository)
-* [How to Start Your Own Repository](/howto7/collaboration-project-management/starting-your-own-repository)
-* [How to Use Team Server - Version Control](/howto7/collaboration-project-management/using-team-server-_-version-control)
-* [How to Use the Feedback Widget](gathering-user-feedback)
-* [How to Share the Development Database](/howto7/collaboration-project-management/sharing-the-development-database)
-* [How to Use the Excel Exporter](/howto7/integration/using-the-excel-exporter)
 * [App Platform](/refguide7/app-platform)
+* [How to Contribute to a GitHub Repository](/howto7/collaboration-project-management/contribute-to-a-github-repository)
+* [How to Share the Development Database](/howto7/collaboration-project-management/sharing-the-development-database)
+* [How to Start Your Own Repository](/howto7/collaboration-project-management/starting-your-own-repository)
+* [How to Use the Excel Exporter](/howto7/integration/using-the-excel-exporter)
+* [How to Use the Feedback Widget](gathering-user-feedback)
 * [Team Server](/refguide7/team-server)
+* [Use Team Server - Version Control](/howto7/collaboration-project-management/using-team-server-_-version-control)

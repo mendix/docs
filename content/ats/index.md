@@ -2,7 +2,9 @@
 title: "ATS"
 ---
 
-This space contains all the documentation for ATS. These are the main ATS documents:
+This space contains all the documentation for ATS.
+
+These are the main ATS documents:
 
 * [Introduction to ATS](general/introduction)
 * [Compatibility](general/compatibility)

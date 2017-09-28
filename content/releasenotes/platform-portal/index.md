@@ -4,6 +4,20 @@ title: "Platform Portal"
 
 ## 2017
 
+### September 28, 2017
+
+#### Improvements
+
+* Deployments with almost no downtime: It's now possible to deploy a different version without stopping a running application. Once deployment is done, one click would restart the application with the new version.
+* Improved robustness of REST API: Occasional failures that occured while starting / stopping an environment via REST API are eliminated.
+* Improved stability for transporting deployment packages for Asia Pacific users.
+* Environment health indicators for your environments are now much more accurate.
+
+#### Fixes
+
+* The teamserver branches which were committed without the Mendix Modeler are no longer hidden in the Cloud Portal, which was causing inconvenience for some of our users.
+* Changing an access restriction profile could display a wrong error about having more than 1 certificate in use, now it's fixed.
+
 ### August 2nd, 2017
 
 * Company Admins can invite users to all the apps within their company. (Ticket 51296)

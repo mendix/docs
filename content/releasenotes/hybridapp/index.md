@@ -23,7 +23,7 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ## September 20th (1.3.0 / 1.2.0)
 
-* Added support for iOS 11 (ticket #56209)
+* Added support for iOS 11 (ticket #56209). For existing Hybrid apps you can also update the plugin cordova-plugin-wkwebview-engine-nextgen in the config.xml to version to 1.1.0 and publish again.
 * Changed keyboard type on PIN login page to 'tel' (ticket #54380)
 
 

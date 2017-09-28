@@ -3,6 +3,10 @@ title: "Platform Portal"
 ---
 
 ## 2017
+### September 29th, 2107
+
+#### Fixes
+* We fixed the issue where a user who signed up to our Platform would get an error page in Internet Explorer and Edge.
 
 ### September 28, 2017
 

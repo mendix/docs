@@ -8,9 +8,9 @@ title: "Platform Portal"
 
 #### Improvements
 
-* Deployments with almost no downtime: It's now possible to deploy a different version without stopping a running application. Once deployment is done, one click would restart the application with the new version.
-* Improved robustness of REST API: Occasional failures that occured while starting / stopping an environment via REST API are eliminated.
-* Improved stability for transporting deployment packages for Asia Pacific users.
+* Deployments with almost no downtime: It is now possible to deploy a different version without stopping a running application. Once deployment is done, one click would restart the application with the new version. This is available for Mendix Cloud v3 and v4.
+* Improved robustness of the Deploy API: Occasional failures that occured while starting / stopping an environment via the Deploy API are eliminated.
+* Improved stability for transporting deployment packages for Asia Pacific users for Mendix Cloud v4.
 * Environment health indicators for your environments are now much more accurate.
 
 #### Fixes

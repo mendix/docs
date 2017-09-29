@@ -6,7 +6,7 @@ title: "Platform Portal"
 ### September 29th, 2107
 
 #### Fixes
-* We fixed the issue where a user who signed up to our Platform would get an error page in Internet Explorer and Edge.
+* We fixed an issue where a user who signed up to Mendix would get an error page in Internet Explorer and Microsoft Edge.
 
 ### September 28, 2017
 

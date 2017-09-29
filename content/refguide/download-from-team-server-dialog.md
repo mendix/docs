@@ -1,17 +1,31 @@
 ---
-title: "Download From Team Server Dialog"
+title: "Download From Version Control Server Dialog"
 parent: "dialogs"
 ---
-Use this dialog to download a project from the Team Server. Note that you can use the [Open Project Dialog](open-project-dialog) for this, too. You only need to use this form in the specialized case that you want a second download of the same project (and development line).
+Use this dialog to download an app from an SVN version control server. Note that you can use the [Open App Dialog](open-project-dialog) for this, too. You only need to use this form in the specialized case that you want a second download of an app (and development line) you already have on disk.
 
-## Team Server project
+## Location
 
-Select the Team Server project you wish to download from the list.
+Use this setting to select the location where your app is stored. This can be either the Team Server or an SVN server other than the Team Server.
 
-## Development line
+{{% alert type="warning" %}}
 
-Choose the development line that you want to download.
+This option is only available when support for other SVN servers is enabled in the Preferences dialog.
+
+{{% /alert %}}
+
+### Mendix Team Server
+
+From the list select the Team Server app you wish to open, then choose the development line that you want to download.
+
+For more information about the Mendix Team Server, see [Team Server](team-server).
+
+For more information about development lines, see [Version Control Concepts](version-control-concepts).
+
+### Other SVN server
+
+In the 'SVN repository address' field, enter the address of the app you want to open and press the 'Connect' button to load the development lines from the repository. Then choose the development line that you want to download.
 
 ## Disk location
 
-Choose the directory where you want to download the Team Server project to. The suggested name includes the name of the development line ('main' or the name of the branch line).
+Choose the directory where you want to download the app to. The suggested name includes the name of the development line ('main' or the name of the branch line).

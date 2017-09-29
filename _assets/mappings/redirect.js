@@ -2394,6 +2394,10 @@ module.exports = {
       to: "/refguide4/cast-object"
     },
     {
+      from: "/refguide4/certificates",
+      to: "/deployment/mendixcloud/certificates"
+    },
+    {
       from: "/refguide4/Change+List",
       to: "/refguide4/change-list"
     },
@@ -3179,7 +3183,11 @@ module.exports = {
     },
     {
       from: "/refguide4/Security+constraints+in+the+Mendix+Cloud",
-      to: "/refguide4/security-constraints-in-the-mendix-cloud"
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
+    },
+    {
+      from: "/refguide4/security-constraints-in-the-mendix-cloud",
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
     },
     {
       from: "/refguide4/Select+All+Button",
@@ -3648,7 +3656,10 @@ module.exports = {
       from: "/refguide5/Cell+Document+Template",
       to: "/refguide5/cell-document-template"
     },
-
+    {
+      from: "/refguide5/certificates",
+      to: "/deployment/mendixcloud/certificates"
+    },
     {
       from: "/refguide5/Change+List",
       to: "/refguide5/change-list"
@@ -4723,7 +4734,11 @@ module.exports = {
     },
     {
       from: "/refguide5/Security+constraints+in+the+Mendix+Cloud",
-      to: "/refguide5/security-constraints-in-the-mendix-cloud"
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
+    },
+    {
+      from: "/refguide5/security-constraints-in-the-mendix-cloud",
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
     },
     {
       from: "/refguide5/Select+all+button",
@@ -5255,6 +5270,10 @@ module.exports = {
     {
       from: "/refguide6/Cell+Document+Template",
       to: "/refguide6/cell-document-template"
+    },
+    {
+      from: "/refguide6/certificates",
+      to: "/deployment/mendixcloud/certificates"
     },
     {
       from: "/refguide6/Change+List",
@@ -6620,6 +6639,10 @@ module.exports = {
     {
       from: "/refguide6/Version+Control+Scenarios",
       to: "/refguide6/version-control-scenarios"
+    },
+    {
+      from: "/refguide6/version-downgrade-prevention",
+      to: "/deployment/mendixcloud/version-downgrade-prevention"
     },
     {
       from: "/refguide6/Vertical+Split+Pane",

@@ -2,7 +2,7 @@
 title: "Download From Version Control Server Dialog"
 parent: "dialogs"
 ---
-Use this dialog to download an app from an SVN version control server. Note that you can use the [Open App Dialog](open-project-dialog) for this, too. You only need to use this form in the specialized case that you want a second download of an app (and development line) you already have on disk.
+Use this dialog to download an app from an SVN version control server. Note that you can use the [Open App Dialog](open-app-dialog) for this, too. You only need to use this form in the specialized case that you want a second download of an app (and development line) you already have on disk.
 
 ## Location
 

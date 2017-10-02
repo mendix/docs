@@ -1,5 +1,5 @@
 ---
-title: "Best Practices 1.8"
+title: "Best Practices ATS 1"
 ---
 
 This is the main document in this category:

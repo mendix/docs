@@ -13,7 +13,7 @@ A custom action is an action created by the user. The how-to's for creating cust
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read [Guidelines for Creating a Custom Action](../bestpractices/guidelines-custom-action)
+* Read [Guidelines for Creating a Custom Action](../bestpractices-1/guidelines-custom-action)
 
 ## 3 Combined Actions
 

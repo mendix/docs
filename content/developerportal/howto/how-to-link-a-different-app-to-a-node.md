@@ -21,7 +21,7 @@ Before you can start with this how-to, please make sure you have completed the f
 *   The app has the **Team Server** enabled. Read [this](/howto/modeling-basics/create-and-deploy-your-first-app) to learn create a collaboration app
 *   You are the [Technical Contact](/developerportal/general/technical-contact) of the node
 
-In case you have created an app in the **Mendix Modeler**, you can upload it to the **Team Server** (see [Upload To Team Server Dialog](/refguide7/upload-to-team-server-dialog)) and a repository will be created automatically.
+In case you have created an app in the **Mendix Modeler**, you can upload it to the **Team Server** (see [Upload To Version Control Dialog](/refguide/upload-to-version-control-dialog)) and a repository will be created automatically.
 
 *   Make sure no **Sandbox** is linked to your app. (Every **Team Server** app is linked to a **Sandbox** automatically).
 Read [this](how-to-unlink-sandbox) how-to to learn  **unlink your Sandbox** from your app. 
@@ -58,4 +58,4 @@ For example, to be able to link **App A** to **Node 2**, follow these steps:
 *   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
 *   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node)
 *   [How to Unlink Your Free App from a Sandbox Environment](how-to-unlink-sandbox)
-*   [Upload To Team Server Dialog](/refguide7/upload-to-team-server-dialog)
+*   [Upload To Version Control Dialog](/refguide/upload-to-version-control-dialog)

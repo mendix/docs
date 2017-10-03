@@ -24,8 +24,8 @@ For more information about development lines, see [Version Control Concepts](ver
 
 ### Other SVN server
 
-In the 'SVN repository address' field, enter the address of the app you want to open and press the 'Connect' button to load the development lines from the repository. Then choose the development line that you want to download.
+In the *SVN repository address* field, enter the address of the app you want to open and click *Connect* to load the development lines from the repository. Then choose the development line that you want to download.
 
 ## Disk location
 
-Choose the directory where you want to download the app to. The suggested name includes the name of the development line ('main' or the name of the branch line).
+Choose the directory where you want to download the app to. The suggested name includes the name of the development line (*main* or the name of the branch line).

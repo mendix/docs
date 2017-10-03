@@ -2136,10 +2136,10 @@ module.exports = {
       from: "/howto6/Working+With+Object+Events",
       to: "/howto6/working-with-object-events"
     },
-	/****************************************************
+    /****************************************************
      * HOWTO MENDIX 7
      ****************************************************/
-	{
+    {
       from: "/howto/getting-started/build-an-iot-app",
       to: "/howto/tutorials/build-an-iot-app"
     },
@@ -2151,11 +2151,11 @@ module.exports = {
       from: "/howto/getting-started/create-a-to-do-app",
       to: "/howto/tutorials/create-a-to-do-app"
     },
-	{
+    {
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
       to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
-	{
+    {
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
       to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
@@ -2282,7 +2282,7 @@ module.exports = {
       from: "/mxsupport/Technical+Contact+Definition",
       to: "/developerportal/general/technical-contact"
     },
- {
+    {
       from: "/mxsupport/technical-contact",
       to: "/developerportal/general/technical-contact"
     },
@@ -7189,7 +7189,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Download+From+Team+Server+Dialog",
-      "to": "/refguide/download-from-team-server-dialog"
+      "to": "/refguide/download-from-version-control-dialog"
     },
     {
       "from": "/refguide7/Drop-down",
@@ -7303,8 +7303,8 @@ module.exports = {
       "from": "/refguide7/Generate+Document",
       "to": "/refguide/generate-document"
     },
-	{
-	  "from": "/refguide7/Getting+the+Mendix+Developer+App",
+    {
+      "from": "/refguide7/Getting+the+Mendix+Developer+App",
       "to": "/refguide/getting-the-mendix-app"
     },
     {
@@ -7443,10 +7443,10 @@ module.exports = {
       "from": "/refguide7/Line+Break+Document+Template",
       "to": "/refguide/line-break-document-template"
     },
-	{
+    {
       "from": "/refguide7/Link+button",
       "to": "/refguide/action-button"
-	},
+    },
     {
       "from": "/refguide7/List+Activities",
       "to": "/refguide/list-activities"
@@ -7641,7 +7641,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Open+Project+Dialog",
-      "to": "/refguide/open-project-dialog"
+      "to": "/refguide/open-app-dialog"
     },
     {
       "from": "/refguide7/Opening+Pages",
@@ -8007,10 +8007,10 @@ module.exports = {
       "from": "/refguide7/Sign+In+Dialog",
       "to": "/refguide/sign-in-dialog"
     },
-	{
-	  "from": "/refguide7/Sign+out+button",
-	  "to": "/refguide/action-button"
-	},
+    {
+      "from": "/refguide7/Sign+out+button",
+      "to": "/refguide/action-button"
+    },
     {
       "from": "/refguide7/Simple+Menu+Bar",
       "to": "/refguide/simple-menu-bar"
@@ -8157,7 +8157,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Upload+To+Team+Server+Dialog",
-      "to": "/refguide/upload-to-team-server-dialog"
+      "to": "/refguide/upload-to-version-control-dialog"
     },
     {
       "from": "/refguide7/User+Roles",
@@ -8346,6 +8346,21 @@ module.exports = {
     {
       "from": "/refguide7/XPath+year+from+dateTime",
       "to": "/refguide/xpath-year-from-datetime"
+    },
+    /****************************************************
+     * REFERENCE GUIDE RENAMES
+     ****************************************************/
+    {
+      "from": "/refguide/download-from-team-server-dialog",
+      "to": "/refguide/download-from-version-control-dialog"
+    },
+    {
+      "from": "/refguide/open-project-dialog",
+      "to": "/refguide/open-app-dialog"
+    },
+    {
+      "from": "/refguide/upload-to-team-server-dialog",
+      "to": "/refguide/upload-to-version-control-dialog"
     },
     /****************************************************
      * TIPS & TRICKS

@@ -5,6 +5,12 @@ description: "Learn the basics of Mendix development and how to extend the SAP T
 tags: ["SAP"]
 ---
 
+{{% alert type="info" %}}
+
+This tutorial will only work at an SAP TechEd 2017 event.
+
+{{% /alert %}}
+
 ## 1 Introduction
 
 This tutorial takes you through the basics of development in the Mendix Desktop Modeler and teaches you how to extend the SAP TechEd 2017 Manage Products App. You will add the logic of bundled products to the app, create and view the bundles of products, and extend the business logic and UI.
@@ -31,7 +37,7 @@ To start this tutorial, go to the [Mendix Developer Portal](https://sprintr.home
 2.  Go to the **SAP** tab and select **SAP TechEd 2017 Manage Products**.
 3.  Click **Use this app**.
 4.  Enter *SAP Manage Products App* for the name of the new app, and click **Create App**.
-5.  Sign in to the SAP Cloud Platform:
+5.  Sign in to the SAP Cloud Platform (and pay special attention to the **Region** you need to select):
 
     ![](attachments/sap-teched-manage-products/sap-login.png)
 
@@ -65,7 +71,7 @@ If this setting is already configured in your Modeler, you can leave it as it is
 
 To extend the domain model with bundle data for this app, follow these steps:
 
-1. Edit and set constants **MyFirstModule.Username** , **MyFirstModule.Password** in your app with the credentials shared by the TechEd Team and click OK to close the dialogs :
+1. Make sure the **MyFirstModule.Username** and **MyFirstModule.Password** constants in your app are set with the credentials shared by the TechEd Team, and then click **OK** to close the dialog boxes:
 
     ![](attachments/sap-teched-manage-products/edit-constant-username.png)
 
@@ -92,26 +98,26 @@ To extend the domain model with bundle data for this app, follow these steps:
     ![](attachments/sap-teched-manage-products/domain-model.png)
 
 7. Right-click the domain model editor window and select **Add entity**.
-8.  Double-click the entity to open its **Properties** dialog window:<br>
+8.  Double-click the entity to open its **Properties** dialog box:<br>
     a. Enter *Bundle* for the **Name**.<br>
     b. For **Generalization**, click **Select** and select **System** > **Image**.<br>
 
     ![](attachments/sap-teched-manage-products/entity-image.png)
 
     c. On the **Attributes** tab, click **New** and name the new attribute *Description*.<br>
-    d. Click **OK** to close the dialog windows.
+    d. Click **OK** to close the dialog boxes.
 9. In the domain model editor, draw an arrow from the **Bundle** entity to the **Product** entity to make an association.
-10.  Double-click the association arrow and in the **Properties** dialog window, do the following:<br>
+10. Double-click the association arrow and in the **Properties** dialog box, do the following:<br>
     a. Select **Multiple** for **Multiplicity**, which means that multiple Product objects will be associated with multiple Bundle objects (for more information on associations, see [Associations](/refguide/associations)).<br>
     b. Select **'Bundle' and 'Product' objects refer to each other** for **Navigability**.<br>
-
+    
     ![](attachments/sap-teched-manage-products/navigability.png)
-
-    c. Click **OK** to close the dialog window.
-11. Double-click the **Count** entity to open its **Properties** dialog window and on the **Attributes** tab, click **New** and do the following:<br>
+    
+    c. Click **OK** to close the dialog box.<br>
+11. Double-click the **Count** entity to open its **Properties** dialog box and on the **Attributes** tab, click **New** and do the following:<br>
     a. Enter *NumberOfBundles* for the **Name** of the new attribute.<br>
     b. Select **Integer** for **Type**.<br>
-    c. Click **OK** to close the dialog windows.
+    c. Click **OK** to close the dialog boxes.
 
 ## 6 Extending the Homepage
 
@@ -130,10 +136,10 @@ To extend the app homepage with a **Bundles** button, follow these steps:
     ![](attachments/sap-teched-manage-products/dropzone_navigation.png)
 
 4. Select this new container and in the **Properties** pane (if necessary, open this by selecting **View** > **Properties** from the top menu bar), change the **Class** from **shell-pageheader-left** to **shell-pageheader-right**.
-5.  Double-click the button in this new container to open its editor dialog window and for **Caption**, click **Edit** and do the following:<br>
+5.  Double-click the button in this new container to open its editor dialog box and for **Caption**, click **Edit** and do the following:<br>
     a. Change the **Caption** of the button to **Bundles({1})** (later you will attach the **Bundle Overview** page to this page to see how many bundles are in the app).<br>
-    b. Click **Edit** for **Parameters** and in the **Select Attribute** dialog window, select **NumberOfBundles**.<br>
-6. Click **OK** to close the dialog windows.
+    b. Click **Edit** for **Parameters** and in the **Select Attribute** dialog box, select **NumberOfBundles**.<br>
+6. Click **OK** to close the dialog boxes.
 
 ## 7 Extending the List View
 
@@ -147,7 +153,7 @@ To create the overview of the bundles and change the content of the page by exte
 
     ![](attachments/sap-teched-manage-products/product-from-database.png)
 
-6.  In the **Select Data Source** dialog window, do the following:<br>
+6.  In the **Select Data Source** dialog box, do the following:<br>
     a. Click **Select** for **Entity (path)**, select **Bundle**, then click **Select**:<br>
 
     ![](attachments/sap-teched-manage-products/select-data-source.png)
@@ -183,7 +189,7 @@ Now you are going to extend the data view by following these steps:
     ![](attachments/sap-teched-manage-products/data-view.png)
 
     b. Insert an **Image Viewer** widget, as you did above in [step 8 of Extending the List View](#ImageViewer).<br>
-    c. Click **Select** for **Entity (path)**, select **Bundle**, then click **Select**.<br>
+    c. Click **Select** for **Entity (path)**, select **Bundle** (under **MyFirstModule**), then click **Select**.<br>
     d. Do not automatically fill the contents.<br>
 3. In the second column of the layout grid, change the **Name** attribute to the **Description** attribute and set the **Show label** property to *No*.
 4. Delete the **CurrencyCode** and **Price** attributes in the third column, and leave that column empty.
@@ -216,14 +222,14 @@ To extend the bundle overview page with some more necessary functionality, follo
     b. Enter *Price* for the **Name**.<br>
     c. Set **Decimal** for the **Type**.<br>
     d. Set **Calculated** for the **Value**.<br>
-    e. Click **Select** for the **Microflow** and in the **Select Microflow** dialog window, click **New**.<br>
+    e. Click **Select** for the **Microflow** and in the **Select Microflow** dialog box, click **New**.<br>
     f. Enter *CALC_BundlePrice* for the **Name** of the new microflow.<br>
-    g. Click **OK** and back in the **Edit Attribute** dialog window, click **Show** next to **Microflow** to open to the new microflow.<br>
+    g. Click **OK** and back in the **Edit Attribute** dialog box, click **Show** next to **Microflow** to open to the new microflow.<br>
     h. Go to the **Properties** pane and set **Security** > **Allowed roles** to **User**.<br>
 
     ![](attachments/sap-teched-manage-products/add-attribute.png)
 
-    g. Click **OK** to close the dialog windows.
+    g. Click **OK** to close the dialog boxes.
 3.  In the **CALC_BundlePrice** microflow editor, you need to insert a new activity in the microflow. You can do this in two ways:
     *   Right-click the microflow arrow between the start and end activities and select **Insert** > **Activity**
 
@@ -233,16 +239,16 @@ To extend the bundle overview page with some more necessary functionality, follo
 
         ![](attachments/sap-teched-manage-products/editor-toolbar.png)
 
-4. Double-click the new activity and in the **Select Type of Action** dialog window, set its type to **Retrieve** in order to retrieve all the products of the bundle (over an association).
-5.  In the **Retrieve Objects** dialog window, do the following:<br>
+4. Double-click the new activity and in the **Select Type of Action** dialog box, set its type to **Retrieve** in order to retrieve all the products of the bundle (over an association).
+5.  In the **Retrieve Objects** dialog box, do the following:<br>
     a. Click **Select** for **Association**.<br>
     b. Select **Bundle** > **Bundle_Product**.<br>
     c. Click **OK**.<br>
-6.  Insert another **Activity** in the microflow, set its type to **Aggregate list**, and in the **Aggregate List** dialog window, do the following:<br>
+6.  Insert another **Activity** in the microflow, set its type to **Aggregate list**, and in the **Aggregate List** dialog box, do the following:<br>
     a. Select **ProductList** for the **Variable**.<br>
     b. Select **Price** for the **Attribute**.<br>
     c. Click **OK**.<br>
-7.  Double-click the red microflow end event and in the **End Event** dialog window enter `$SumPrice` as the **Return value** of the microflow (make sure you type this value, as copying and pasting it will lead to an error!), then click **OK**:
+7.  Double-click the red microflow end event and in the **End Event** dialog box enter `$SumPrice` as the **Return value** of the microflow (make sure you type this value, as copying and pasting it will lead to an error!), then click **OK**:
 
     ![](attachments/sap-teched-manage-products/bundleprice-microflow.png)
 
@@ -252,7 +258,7 @@ To extend the bundle overview page with some more necessary functionality, follo
 
 9. In the **Properties** pane (open this from the **View** menu item if necessary) for the **Price** attribute, set **Label** > **Show label** to **No** in order to hide the label.
 10. Right-click the layout grid column with the **Price** attribute and select **Add column right**.
-11. Highlight then double-click each layout grid column to open the **Edit Layout Grid Column** dialog window and reset the column widths to the following (going from left to right): **1**, **7**, **2**, **2**.
+11. Highlight then double-click each layout grid column to open the **Edit Layout Grid Column** dialog box and reset the column widths to the following (going from left to right): **1**, **7**, **2**, **2**.
 
     ![](attachments/sap-teched-manage-products/edit-column.png)
 
@@ -261,10 +267,10 @@ To extend the bundle overview page with some more necessary functionality, follo
     a. Enter *Remove Bundle* for the **Caption**.<br>
     b. Set the **Button style** to **Primary**.<br>
     c. Set **On click** to **Call a microflow**.<br>
-14. In the **Select Microflow** dialog window, do the following:<br>
+14. In the **Select Microflow** dialog box, do the following:<br>
     a. Click **New** to create a new microflow that will be called by this button.<br>
     b. Enter *ACT_DeleteBundle* for the **Name** of the microflow.<br>
-    c. Click **OK** to close the dialog window.<br>
+    c. Click **OK** to close the dialog box.<br>
 15. Back in the button editor, click **Show** next to **Microflow** to open the new microflow, then click **OK**.
 16. In the **ACT_DeleteBundle** microflow editor, go to the **Properties** pane and set **Security** > **Allowed roles** to **User**:
 
@@ -296,25 +302,25 @@ To extend the bundle overview page with some more necessary functionality, follo
     b. Select the **remove** icon for **Icon**.<br>
     c. Select **Link** for **Render mode**.<br>
     d. Select **Call a microflow** for **On click**.<br>
-29. In the **Select Microflow** dialog window, do the following:<br>
+29. In the **Select Microflow** dialog box, do the following:<br>
     a. Click **New** to create a new microflow that will be called by this button.<br>
     b. Enter *ACT_RemoveProductFromBundle* for the **Name** of the microflow.<br>
-    c. Click **OK** to close the dialog window.<br>
-30. Back in the button editor, click **Show** next to **Microflow** to open the microflow you just created, then click **OK** to close the dialog window.
+    c. Click **OK** to close the dialog box.<br>
+30. Back in the button editor, click **Show** next to **Microflow** to open the microflow you just created, then click **OK** to close the dialog box.
 31. In the **ACT_RemoveProductFromBundle** microflow editor, set **Allowed roles** to **User**.
 32. Add an **Activity** to the microflow of the **Change object** type and do the following:<br>
     a. For the **Variable**, set **Bundle**.<br>
     b. For **Commit**, set **Yes**.<br>
     c. For **Refresh in client**, set **Yes**.<br>
     b. Click **New** to add a new change item.<br>
-33. In the **Edit Change Item** dialog window, do the following:<br>
+33. In the **Edit Change Item** dialog box, do the following:<br>
     a. Select **MyFirstModule.Bundle_Product** for the **Member**.<br>
     b. Set **Remove** for **Type**.<br>
     c. Enter `$Product` for the **Value**.<br>
 
     ![](attachments/sap-teched-manage-products/edit-change-item.png)
 
-    d. Click **OK** to close the dialog windows.
+    d. Click **OK** to close the dialog boxes.
 
     The **ACT_RemoveProductFromBundle** microflow should now look like this:
 
@@ -351,8 +357,8 @@ The only thing missing in the page right now is the button to create a bundle. F
     ![](attachments/sap-teched-manage-products/create-page.png)
 
     e. Click **OK** to close the **Create Page** wizard.
-8. Back in the **Show Page** dialog window, click **Show** to go to the page you just created, then **OK**.
-9. Go to the **Properties** pane and set **Security** > **Allowed roles** to **User**.
+8. Back in the **Show Page** dialog box, click **Show** to go to the page you just created, then **OK**.
+9. Go to the **Properties** pane and set **Navigation** > **Visible for** to **User**.
 10. On the **Bundle_New** page, delete the **Image Viewer** as well as the **Name** and **Size** attributes.
 11. Right-click the drop zone below **Upload image**:
 
@@ -384,7 +390,7 @@ The only thing missing in the page right now is the button to create a bundle. F
     a. Right-click the **Add** button and select **Select page**.<br>
     b. Select the page you just created (**SelectProductsForBundle**).<br>
 19. Return to the new **SelectProductsForBundle** page, right-click and select **Add widget** > **Data grid**.
-20. Double-click this new data grid and in the **Edit Data Grid** dialog window, do the following:<br>
+20. Double-click this new data grid and in the **Edit Data Grid** dialog box, do the following:<br>
     a. Open the **Data source** tab.<br>
     b. For **Entity (path)**, select **Product**.<br>
     c. Click **OK** and on the pop-up window that asks you if you want to automatically fill the contents of the list view, click **No**.<br>
@@ -419,13 +425,13 @@ The only thing missing in the page right now is the button to create a bundle. F
     b. For **Member**, select **NumberOfBundles**.<br>
     c. For **Value**, click **Generate**.<br>
     d. Click **Variable** and then select **CountBundles**.<br>
-    e. Click **OK** to close all of the dialog windows.
+    e. Click **OK** to close all of the dialog boxes.
 
     The **DS_CountProducts** microflow counts the number of bundles and products based on how many of them are retrieved from the database. The microflow should now look like this:
 
     ![](attachments/sap-teched-manage-products/ds_countproducts-microflow.png)
 
-32. Run the app locally and view it to see your changes. When you click the plus sign in the bottom-left corner of the app, you will now see a nice  dialog window that you just built for creating bundles:
+32. Run the app locally and view it to see your changes. When you click the plus sign in the bottom-left corner of the app, you will now see a nice  dialog box that you just built for creating bundles:
 
     ![](attachments/sap-teched-manage-products/view-app-3.png)
 

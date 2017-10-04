@@ -30,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 To start this tutorial, go to the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html) and follow these steps:
 
 1.  Click **Create App** in the upper-right corner of the screen.
-2.  Go to the **SAP** tab and select **SAP Purchase Order Approval App**.
+2.  Go to the **SAP** tab and select **SAP Purchase Order Approval Tutorial**.
 3.  Click **Use this app**.
 4.  Enter *SAP Purchase Order Approval App* for the name of the new app, and click **Create App**.
 5.  Sign in to SAP Cloud Platform:

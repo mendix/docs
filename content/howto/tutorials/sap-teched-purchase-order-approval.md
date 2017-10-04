@@ -5,6 +5,12 @@ description: "Learn the basics of Mendix development and how to extend the SAP P
 tags: ["SAP", "purchase order", "ES4"]
 ---
 
+{{% alert type="info" %}}
+
+This tutorial will only work at an SAP TechEd 2017 event.
+
+{{% /alert %}}
+
 ## 1 Introduction
 
 This tutorial takes you through the basics of development in the Mendix Desktop Modeler and teaches you how to build an approval step in the SAP Purchase Order Approval App. The approval is invoked from the Mendix app and will trigger a request to the SAP Gateway Demo System (ES4).

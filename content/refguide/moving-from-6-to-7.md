@@ -293,23 +293,26 @@ This is needed to avoid potential namespace conflicts between the Mendix version
 Java libraries in Mendix 7 shipped with the installation package are not available for projects anymore. While this results in better dependency management for each project, it can also cause errors at runtime after migration (for example, `NoClassDefFoundError`). Therefore, it is important to make sure the `userlib` directory of the migrated project includes all the required libraries. It is also worth noting that in Mendix 7, only one version of each library can exist at runtime. This means that if there are multiple versions of one library, the latest version is used and the rest are ignored.
 
 ### 6.4 Removed Data Storage Functionality
-#### Removed Methods
+
+#### 6.4.1 Removed Methods
 
 | Package Name | Method Name | Alternative |
 | --- | --- | --- |
 | `com.mendix.systemwideinterfaces.connectionbus.data.IDataRow`| `getPrimaryKeyValue()` | `getValue(context, 0)` |   
 
-##### Example Usages
+##### 6.4.1.1 Example Usages
 
- **IDataRow.getPrimaryKeyValue()**
+`IDataRow.getPrimaryKeyValue()`
 
-Let us retrieve a MendixObject using the getPrimaryKeyValue() method in Mendix 6.x      
+Let us retrieve a MendixObject using the getPrimaryKeyValue() method in Mendix 6.x:
+
 `List<? extends IDataRow> dataRows = retrieveOQLDataTable.getRows();`<br>
 `IDataRow dataRow = dataRows.get(0);`<br>
 `IMendixIdentifier mendixIdentifier = dataRow.getPrimaryKeyValue();`<br>
 `IMendixObject mendixObj = Core.retrieveId(context, mendixIdentifier);`<br>
 
-A similar approach to get a MendixObject in Mendix 7.x would be as follows:   
+A similar approach to get a MendixObject in Mendix 7.x would be as follows:
+
  `List<? extends IDataRow> dataRows = retrieveOQLDataTable.getRows();`<br>
 `IDataRow dataRow = dataRows.get(0);`<br>
 `IMendixIdentifier mendixIdentifier = dataRow.getValue(context, 0);`<br>

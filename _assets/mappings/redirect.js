@@ -2136,10 +2136,10 @@ module.exports = {
       from: "/howto6/Working+With+Object+Events",
       to: "/howto6/working-with-object-events"
     },
-	/****************************************************
+    /****************************************************
      * HOWTO MENDIX 7
      ****************************************************/
-	{
+    {
       from: "/howto/getting-started/build-an-iot-app",
       to: "/howto/tutorials/build-an-iot-app"
     },
@@ -2151,11 +2151,11 @@ module.exports = {
       from: "/howto/getting-started/create-a-to-do-app",
       to: "/howto/tutorials/create-a-to-do-app"
     },
-	{
+    {
       from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
       to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
-	{
+    {
       from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
       to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
@@ -2282,7 +2282,7 @@ module.exports = {
       from: "/mxsupport/Technical+Contact+Definition",
       to: "/developerportal/general/technical-contact"
     },
- {
+    {
       from: "/mxsupport/technical-contact",
       to: "/developerportal/general/technical-contact"
     },
@@ -2392,6 +2392,10 @@ module.exports = {
     {
       from: "/refguide4/Cast+Object",
       to: "/refguide4/cast-object"
+    },
+    {
+      from: "/refguide4/certificates",
+      to: "/deployment/mendixcloud/certificates"
     },
     {
       from: "/refguide4/Change+List",
@@ -3179,7 +3183,11 @@ module.exports = {
     },
     {
       from: "/refguide4/Security+constraints+in+the+Mendix+Cloud",
-      to: "/refguide4/security-constraints-in-the-mendix-cloud"
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
+    },
+    {
+      from: "/refguide4/security-constraints-in-the-mendix-cloud",
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
     },
     {
       from: "/refguide4/Select+All+Button",
@@ -3648,7 +3656,10 @@ module.exports = {
       from: "/refguide5/Cell+Document+Template",
       to: "/refguide5/cell-document-template"
     },
-
+    {
+      from: "/refguide5/certificates",
+      to: "/deployment/mendixcloud/certificates"
+    },
     {
       from: "/refguide5/Change+List",
       to: "/refguide5/change-list"
@@ -4723,7 +4734,11 @@ module.exports = {
     },
     {
       from: "/refguide5/Security+constraints+in+the+Mendix+Cloud",
-      to: "/refguide5/security-constraints-in-the-mendix-cloud"
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
+    },
+    {
+      from: "/refguide5/security-constraints-in-the-mendix-cloud",
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
     },
     {
       from: "/refguide5/Select+all+button",
@@ -5255,6 +5270,10 @@ module.exports = {
     {
       from: "/refguide6/Cell+Document+Template",
       to: "/refguide6/cell-document-template"
+    },
+    {
+      from: "/refguide6/certificates",
+      to: "/deployment/mendixcloud/certificates"
     },
     {
       from: "/refguide6/Change+List",
@@ -6622,6 +6641,10 @@ module.exports = {
       to: "/refguide6/version-control-scenarios"
     },
     {
+      from: "/refguide6/version-downgrade-prevention",
+      to: "/deployment/mendixcloud/version-downgrade-prevention"
+    },
+    {
       from: "/refguide6/Vertical+Split+Pane",
       to: "/refguide6/vertical-split-pane"
     },
@@ -7166,7 +7189,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Download+From+Team+Server+Dialog",
-      "to": "/refguide/download-from-team-server-dialog"
+      "to": "/refguide/download-from-version-control-dialog"
     },
     {
       "from": "/refguide7/Drop-down",
@@ -7280,8 +7303,8 @@ module.exports = {
       "from": "/refguide7/Generate+Document",
       "to": "/refguide/generate-document"
     },
-	{
-	  "from": "/refguide7/Getting+the+Mendix+Developer+App",
+    {
+      "from": "/refguide7/Getting+the+Mendix+Developer+App",
       "to": "/refguide/getting-the-mendix-app"
     },
     {
@@ -7420,10 +7443,10 @@ module.exports = {
       "from": "/refguide7/Line+Break+Document+Template",
       "to": "/refguide/line-break-document-template"
     },
-	{
+    {
       "from": "/refguide7/Link+button",
       "to": "/refguide/action-button"
-	},
+    },
     {
       "from": "/refguide7/List+Activities",
       "to": "/refguide/list-activities"
@@ -7618,7 +7641,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Open+Project+Dialog",
-      "to": "/refguide/open-project-dialog"
+      "to": "/refguide/open-app-dialog"
     },
     {
       "from": "/refguide7/Opening+Pages",
@@ -7984,10 +8007,10 @@ module.exports = {
       "from": "/refguide7/Sign+In+Dialog",
       "to": "/refguide/sign-in-dialog"
     },
-	{
-	  "from": "/refguide7/Sign+out+button",
-	  "to": "/refguide/action-button"
-	},
+    {
+      "from": "/refguide7/Sign+out+button",
+      "to": "/refguide/action-button"
+    },
     {
       "from": "/refguide7/Simple+Menu+Bar",
       "to": "/refguide/simple-menu-bar"
@@ -8134,7 +8157,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Upload+To+Team+Server+Dialog",
-      "to": "/refguide/upload-to-team-server-dialog"
+      "to": "/refguide/upload-to-version-control-dialog"
     },
     {
       "from": "/refguide7/User+Roles",
@@ -8323,6 +8346,21 @@ module.exports = {
     {
       "from": "/refguide7/XPath+year+from+dateTime",
       "to": "/refguide/xpath-year-from-datetime"
+    },
+    /****************************************************
+     * REFERENCE GUIDE RENAMES
+     ****************************************************/
+    {
+      "from": "/refguide/download-from-team-server-dialog",
+      "to": "/refguide/download-from-version-control-dialog"
+    },
+    {
+      "from": "/refguide/open-project-dialog",
+      "to": "/refguide/open-app-dialog"
+    },
+    {
+      "from": "/refguide/upload-to-team-server-dialog",
+      "to": "/refguide/upload-to-version-control-dialog"
     },
     /****************************************************
      * TIPS & TRICKS

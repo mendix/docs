@@ -3,6 +3,34 @@ title: "Platform Portal"
 ---
 
 ## 2017
+### September 29th, 2017
+
+#### Fixes
+* We fixed an issue where a user who signed up to Mendix would get an error page in Internet Explorer and Microsoft Edge.
+
+### September 28, 2017
+
+#### Improvements
+
+* Deployments with almost no downtime: It is now possible to deploy a different version without stopping a running application. Once the deployment is done, you can restart the application with a single click. This is available for Mendix Cloud v3 and v4.
+* Improved the robustness of the Deploy API: Occasional failures that occured while starting/stopping an environment via the Deploy API no longer occur.
+* Improved the stability for transporting deployment packages for Asia-Pacific users for Mendix Cloud v4.
+* Environment health indicators for your environments are now much more accurate.
+
+#### Fixes
+
+* We fixed a problem where Team Server branches that were committed without the Mendix Modeler were hidden in the Cloud Portal.
+* We fixed a problem where changing an access restriction profile could display a wrong error about having more than 1 certificate in use.
+
+### September 25th, 2107
+
+#### Improvements
+
+* We changed the link at the bottom of our notification mails to point to a page where you can unsubscribe from these emails.
+
+#### Fixes
+
+* We fixed the link to the *Deploy on-premises* docs in the Cloud Settings page.
 
 ### September 20th, 2017
 

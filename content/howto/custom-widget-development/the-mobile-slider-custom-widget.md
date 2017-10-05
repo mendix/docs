@@ -134,7 +134,6 @@ I encourage you to download all the source files from the GitHub repository and 
 
 *   [Creating a chainable Custom Widget](create-a-chainable-custom-widget)
 *   [Getting started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-*   [Creating a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
 *   [The Mobile Slider Custom Widget](the-mobile-slider-custom-widget)
 
 Some interesting websites, books, and articles you might want to read next to dive into the source code of the AppStoreWidgetBoilerplate and the MobileSlider custom widget code base:

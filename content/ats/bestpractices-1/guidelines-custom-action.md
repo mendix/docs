@@ -1,6 +1,6 @@
 ---
 title: "Guidelines for Creating a Custom Action"
-category: "Best Practices ATS 1"
+category: "Best Practices"
 ---
 
 For a details on custom actions, please see [Custom Actions](../refguide-ats-1/custom-actions) in the ATS Reference Guide 1.

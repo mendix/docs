@@ -295,7 +295,7 @@ Java libraries in Mendix 7 shipped with the installation package are not availab
 ### 6.4 Removed Data Storage Functionality
 #### Removed Methods
 
-Package Name | Method Name | Alternative |
+| Package Name | Method Name | Alternative |
 | --- | --- | --- |
 | `com.mendix.systemwideinterfaces.connectionbus.data.IDataRow`| `getPrimaryKeyValue()` | `getValue(context, 0)` |   
 

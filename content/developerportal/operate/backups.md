@@ -68,6 +68,10 @@ These are the options:
 * **Database Only**
 * **Files Only**
 
+{{% alert type="info" %}}
+As the download files are generated 'on the fly', it is not possible to estimate the file size before dowloading.
+{{% /alert %}}
+
 ## 4 Backup Details
 
 When you click **Details**, you can view the following details:

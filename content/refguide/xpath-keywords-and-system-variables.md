@@ -55,16 +55,30 @@ The following tokens can be used to obtain a date and time value:
 | Token | Description |
 | --- | --- |
 | `[%CurrentDateTime%]` | Current date and time |
-| `[%BeginOfCurrentDay%]` | Date and time at the beginning of the current day |
-| `[%EndOfCurrentDay%]` | Date and time at the end of the current day |
-| `[%BeginOfCurrentHour%]` | Date and time at the beginning of the current hour |
-| `[%EndOfCurrentHour%]` | Date and time at the end of the current hour |
 | `[%BeginOfCurrentMinute%]` | Date and time at the beginning of the current minute |
+| `[%BeginOfCurrentMinuteUTC%]` | Date and time at the beginning of the current minute in UTC|
 | `[%EndOfCurrentMinute%]` | Date and time at the end of the current minute |
-| `[%BeginOfCurrentMonth%]` | Date and time at the beginning of the current month |
-| `[%EndOfCurrentMonth%]` | Date and time at the end of the current month |
+| `[%EndOfCurrentMinuteUTC%]` | Date and time at the end of the current minute in UTC|
+| `[%BeginOfCurrentHour%]` | Date and time at the beginning of the current hour |
+| `[%BeginOfCurrentHourUTC%]` | Date and time at the beginning of the current hour in UTC |
+| `[%EndOfCurrentHour%]` | Date and time at the end of the current hour |
+| `[%EndOfCurrentHourUTC%]` | Date and time at the end of the current hour in UTC|
+| `[%BeginOfCurrentDay%]` | Date and time at the beginning of the current day |
+| `[%BeginOfCurrentDayUTC%]` | Date and time at the beginning of the current day in UTC |
+| `[%EndOfCurrentDay%]` | Date and time at the end of the current day |
+| `[%EndOfCurrentDayUTC%]` | Date and time at the end of the current day in UTC|
 | `[%BeginOfCurrentWeek%]` | Date and time at the beginning of the current week |
+| `[%BeginOfCurrentWeekUTC%]` | Date and time at the beginning of the current week in UTC|
 | `[%EndOfCurrentWeek%]` | Date and time at the end of the current week |
+| `[%EndOfCurrentWeekUTC%]` | Date and time at the end of the current week in UTC|
+| `[%BeginOfCurrentMonth%]` | Date and time at the beginning of the current month |
+| `[%BeginOfCurrentMonthUTC%]` | Date and time at the beginning of the current month in UTC|
+| `[%EndOfCurrentMonth%]` | Date and time at the end of the current month |
+| `[%EndOfCurrentMonthUTC%]` | Date and time at the end of the current month in UTC|
+| `[%BeginOfCurrentYear%]` | Date and time at the beginning of the current year |
+| `[%BeginOfCurrentYearUTC%]` | Date and time at the beginning of the current year in UTC|
+| `[%EndOfCurrentYear%]` | Date and time at the end of the current year |
+| `[%EndOfCurrentYearUTC%]` | Date and time at the end of the current year in UTC |
 
 The following tokens can be used to add or subtract a period of time from a date and time token value:
 

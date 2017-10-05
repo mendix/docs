@@ -110,7 +110,37 @@ You can change the Technical Contact by following these steps:
 
     ![](attachments/settings/change-technicalcontact.png)      
 
-## 7 Related Content
+## 7 Change/Add Roles
+
+It is possible to change or add new **App Team** roles for a specific app or on a company level for all apps.
+
+The different settings are described below.
+
+### 7.1 App Team Role Settings on an App Level
+
+You can change the current **App Team** roles or add new ones. Find the role settings of an app by following these steps:
+
+1. Go to the [Developer Portal](http://home.mendix.com).
+2. Click **Apps** in the top navigation panel.
+4. Select the app you want to manage.
+5. Click **Security** under the **Settings** category.
+6. Click **Role Settings**.
+
+### 7.2 App Team Role Settings on a Company Level
+
+As a **Company Admin**, you can edit and add new **App Team** roles on a company level. The roles will be available for all the apps within the company.
+
+You can find the **App Team** role settings by following these steps:
+
+1. Go to the [Developer Portal](http://home.mendix.com).
+2.  Click your avatar in the top-right corner of the screen:
+
+    ![](attachments/companyadmin/company-admin.png)
+
+3. Click **Company Admin**.
+4. Select the **Roles** tab.
+
+## 8 Related Content
 
 * [Company Admin](/developerportal/companyadmin)
 * [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)

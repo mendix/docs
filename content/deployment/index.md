@@ -7,7 +7,7 @@ A Mendix application can be deployed in different ways. You can deploy to your l
 
 ## Locally
 
-You can click **Run** in the toolbar (or use F5) to run your app locally. Use the **Open browser** button to directly jump to your app running at a local host. If you plan to deploy to the Mendix Cloud later on and your project contains Java actions, you should enable the **Emulate Cloud Security** setting. For more information, see [Java in the Cloud](/deployment/mendixcloud/java-in-the-cloud).
+You can click **Run Locally** in the toolbar to run your app locally. Use the **Open browser** button to directly jump to your app running at localhost. If you plan to deploy to the Mendix Cloud later on and your project contains Java actions, you should enable the **Emulate Cloud Security** setting. For more information, see [Java in the Cloud](/deployment/mendixcloud/java-in-the-cloud).
 
 ## Mendix Cloud
 

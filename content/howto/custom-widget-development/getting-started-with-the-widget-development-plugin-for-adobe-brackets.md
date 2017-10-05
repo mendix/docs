@@ -142,7 +142,6 @@ This how-to has enabled you to start working and building a custom widget for th
 ### 8.1 Internal Resources
 
 * [How to Create a Chainable Custom Widget](create-a-chainable-custom-widget)
-* [How to Create a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
 * [How to Use the Mobile Slider Custom Widget](the-mobile-slider-custom-widget)
 
 ### 8.2 External Resources

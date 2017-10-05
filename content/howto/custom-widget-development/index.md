@@ -44,21 +44,17 @@ For a quick tutorial on using the widget generator, see [How to Scaffold a Widge
 
 This information is also covered in [Expert Series: Kickstart Your Widget Development](https://www.youtube.com/watch?v=MZ0Ihu2QGYY).
 
-### 3.4 Understanding Each Step in a Simple Mendix Widget
-
-This tutorial presents the steps a Mendix widget will go through in its life cycle and how a widget is structured: [How to Create a Basic Hello World Widget](create-a-basic-hello-world-custom-widget).
-
-### 3.5 Interacting with Mendix Runtime
+### 3.4 Interacting with Mendix Runtime
 
 Widgets have the ability to get data from the Runtime, manipulate objects, show validations, and set references. This is done through the Client API. For the latest version of the this API, see [Client API](https://apidocs.mendix.com/7/client).
 
-### 3.6 Configuring the Widget in Mendix
+### 3.5 Configuring the Widget in Mendix
 
 Mendix has a specific way of configuring your widget through the use of an XML file. For more information and an example, see [WidgetName](https://github.com/mendix/AppStoreWidgetBoilerplate/blob/master/src/WidgetName/WidgetName.xml) in the AppStoreWidgetBoilerplate repository.
 
 For the full reference on writing a widget XML, see the [XML Reference Guide](/refguide7/xml-reference-guide).
 
-### 3.7 Boilerplate
+### 3.6 Boilerplate
 
 The Yeoman widget generator ships two versions of a boilerplate created by Mendix. The source code for this boilerplate is available in the [AppStoreWidgetBoilerplate repository](https://github.com/mendix/AppStoreWidgetBoilerplate).
 

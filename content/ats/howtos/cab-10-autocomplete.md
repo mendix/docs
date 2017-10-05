@@ -172,7 +172,7 @@ Next, you need to add these action input parameters:
 * Search Context
 
 {{% alert type="info" %}}
-Keep the [guidelines for creating a custom action](../bestpractices/guidelines-custom-action-1) in mind while creating action parameters. 
+Keep the [guidelines for creating a custom action](../bestpractices-1/guidelines-custom-action) in mind while creating action parameters. 
 {{% /alert %}}
 
 To add the action parameters, follow these steps:

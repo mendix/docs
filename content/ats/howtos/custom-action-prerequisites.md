@@ -17,7 +17,7 @@ During the [Mendix Introduction Course](https://developers.mendix.com/training/)
 
 ## 3 Guidelines for Building a Custom Action
 
-[Guidelines for Building a Custom Action](../bestpractices-1/guidelines-custom-action) is a best practice document that describes the guidelines  you must follow when building custom actions. These guidelines deliver the best results.
+[Guidelines for Building a Custom Action](../bestpractices/guidelines-custom-action-1) is a best practice document that describes the guidelines  you must follow when building custom actions. These guidelines deliver the best results.
 
 ## 4 Google Chrome and Chrome DevTools Basics
 

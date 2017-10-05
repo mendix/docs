@@ -39,12 +39,9 @@ You can re-activate 2FA by triggering any action that requires 2FA on your produ
 
 ## 5 Change the Authentication Method
 
-After you have set up your authentication method, you cannot change the authentication method yourself.
-Only [Mendix Support](https://support.mendix.com) is able to disable the current authentication method. 
-After the authentication method has been disabled, it can be set up to a different authentication method.
+After you have set up your authentication method, you cannot change the authentication method yourself. Only [Mendix Support](https://support.mendix.com) is able to disable the current authentication method. After the authentication method has been disabled, it can be set to a different method.
 
-For example, if you want to change your authentication method from **SMS Authentication** to **Google Authentication**. 
-Please submit a support request with a **Reset Authenticator** request.
+For example, if you want to change your authentication method from **SMS Authentication** to **Google Authentication**, submit a [Mendix support request](https://support.mendix.com/hc/en-us/requests/new) citing **Reset Authenticator**.
 
 ## 6 Technical Contact
 

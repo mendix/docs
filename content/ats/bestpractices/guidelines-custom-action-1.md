@@ -89,7 +89,7 @@ This is the Mendix Wait action:
 
 ![](version-1/attachments/guidelines-custom-action/mendix-wait-action.png)
 
-For more information, please see [*Mendix wait*](../refguide-ats-1/mendix-wait).
+For more information, please see [Mendix wait](../refguide-ats-1/mendix-wait).
 
 {{% alert type="info" %}}
 

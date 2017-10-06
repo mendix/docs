@@ -81,7 +81,6 @@ There are some features missing in v4. Mendix will implement the following featu
 
 ## 11 Known Issues in Mendix Cloud v4
 
-* New apps on v4 get a recovery email after initializing
 * The styling of the **Upload Backup** screen does not conform to Mendix UX standards
 * Upload archive only supports archives of a maximum of 4 GB
 * The Amazon RDS maintenance window is not aligned with the CP maintenance window for an application

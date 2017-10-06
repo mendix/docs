@@ -1,5 +1,5 @@
 ---
-title: "Known Issues"
+title: "Desktop Modeler Known Issues"
 toc-level: 1
 category: "Desktop Modeler"
 frontpage_featured: true

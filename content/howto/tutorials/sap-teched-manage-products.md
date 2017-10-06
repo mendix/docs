@@ -405,56 +405,28 @@ The only thing missing in the page right now is the button to create a bundle. F
     ![](attachments/sap-teched-manage-products/name-search.png)
 
 25. Select the whole data grid and in the **Properties**, change **General** > **Selection Mode** to **Simple multi-selection**.
-26. Press <kbd>Ctrl</kbd>+<kbd>G</kbd> to search for and open the **DS_CountProducts** microflow.
-27. In the **DS_CountProducts** microflow editor, you will need to add some new activities, which means you need to add some space to the microflow. To do this, select the end event and drag it to the right in the editor:
-
-    ![](attachments/sap-teched-manage-products/drag-arrow.png)
-
-28. Move the **NewCount** activity down towards the end event to create more space for the new activities you are going to add.
-29. Insert an **Activity** of the **Retrieve** type after the **CountProducts** activity and do the following:<br>
-    a. Set the **Source** to **From database**.<br>
-    b. Click **Select** for **Entity** and select **Bundle**.<br>
-    c. Click **OK**.<br>
-30. After the new **Retrieve** activity, insert an **Activity** of the **Aggregate list** type and do the following:<br>
-    a. For **Input** > **Variable**, select **BundleList**.<br>
-    b. For **Function**, select **Count**.<br>
-    c. For **Output** > **Variable**, enter *CountBundles*.<br>
-    d. Click **OK**.<br>
-31. Open the **NewCount** activity and do the following:<br>
-    a. Click **New** to add a member.<br>
-    b. For **Member**, select **NumberOfBundles**.<br>
-    c. For **Value**, click **Generate**.<br>
-    d. Click **Variable** and then select **CountBundles**.<br>
-    e. Click **OK** to close all of the dialog boxes.
-
-    The **DS_CountProducts** microflow counts the number of bundles and products based on how many of them are retrieved from the database. The microflow should now look like this:
-
-    ![](attachments/sap-teched-manage-products/ds_countproducts-microflow.png)
-
-32. Run the app locally and view it to see your changes. When you click the plus sign in the bottom-left corner of the app, you will now see a nice  dialog box that you just built for creating bundles:
+26. Run the app locally and view it to see your changes. When you click the plus sign in the bottom-left corner of the app, you will now see a nice  dialog box that you just built for creating bundles:
 
     ![](attachments/sap-teched-manage-products/view-app-3.png)
 
     Let's now run the app in the SAP Cloud!
 
-33. Go back to the Modeler.
-34. Go to **ProductsIntegration > Constants** in the Project Explorer and open the **Hostname** constant.
+27. Return to the Desktop Modeler, go to **ProductsIntegration > Constants** in the Project Explorer, and open the **Hostname** constant:
 
     ![](attachments/sap-teched-manage-products/hostname.png)
 
-35. Change *https* to *http* in the Default value field and click **OK** to save the constant.
+28. Change *https* to *http* in the **Default value** field and click **OK** to save the constant:
 
     ![](attachments/sap-teched-manage-products/http.png)
 
-36. Select **Run > Run** to deploy the app to the SAP Cloud.
-37. Click **View** when the app has started successfully.
-38. On the login screen, click **Sign in with your XSUAA account**:
+29. Select **Run > Run** to deploy the app to the SAP Cloud.
+30. Click **View** when the app has started successfully.
+31. On the login screen, click **Sign in with your XSUAA account**:
 
     ![](attachments/sap-teched-manage-products/xsuaa-login.png)
 
-39. Enter your SAP ID username and password and click **Log On**:
+32. Enter your SAP ID username and password, then click **Log On**:
 
     ![](attachments/sap-teched-manage-products/xsuaa-login-2.png)
-
 
 Great work! You have finished the tutorial.

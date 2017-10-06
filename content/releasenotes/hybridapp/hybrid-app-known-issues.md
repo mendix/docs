@@ -6,7 +6,7 @@ toc-level: 1
 
 ## Hybrid App Base
 
-For details on each release, see [Hybrid App Base](index).
+For details on each release, see [Hybrid App](index).
 
 ### 1.3.0
 
@@ -14,7 +14,7 @@ For details on each release, see [Hybrid App Base](index).
 
 ## Hybrid App Template
 
-For details on each release, see [Hybrid App Template](index).
+For details on each release, see [Hybrid App](index).
 
 ### 1.2.0
 

@@ -59,7 +59,7 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 
     When selecting which element to find, also remember that ATS clicks in the middle of an element. In this case, ATS does not click the actual switch. This means you must use the [Find Widget Child Node](../refguide-ats-1/find-widget-child-node) action. This action is a combination of the [Find/Assert Widget](../refguide-ats-1/findassert-widget) and [Find Element by Sizzle](../refguide-ats-1/find-element-by-sizzle) actions, combining the best of both. It’s an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible.
 
-2.  Check the different child nodes to find the one you need. While doing this, keep the [guidelines for creating a custom action](../bestpractices-1/guidelines-custom-action) in mind! It must be generic, so pick an element or element class that’s always present, because you "hard-code" it into your action. Also, make sure the element is visible for the end-user so that ATS can click it.
+2.  Check the different child nodes to find the one you need. While doing this, keep the [guidelines for creating a custom action](../bestpractices/guidelines-custom-action-1) in mind! It must be generic, so pick an element or element class that’s always present, because you "hard-code" it into your action. Also, make sure the element is visible for the end-user so that ATS can click it.
 
     After looking through the child nodes, you will find a child element that covers the switch and also looks generic. This is the element in the debugger, and the rectangle shows which class name we are going to use:
 

@@ -26,10 +26,10 @@ We will start by providing the Modeler as an example of what the REST service re
 
 2. Copy the whole JSON snippet.
 3.  Now you need to add a new JSON structure to your app. A [JSON structure](../../refguide/json-structures) contains sample JSON that you can use in the app. To do this, follow these steps in the Desktop Modeler:<br>
-    a. Right-click the module in the **Project Explorer**.
-    b. Select **Add** > **Consumed services** > **JSON structure**.
-    c. Paste the JSON snippet.
-4. Click **Refresh**. This analyzes the structure of the JSON snippet so we can use later.
+    a. Right-click the module in the **Project Explorer**.<br>
+    b. Select **Add** > **Consumed services** > **JSON structure**.<br>
+    c. Paste the JSON snippet.<br>
+4.  Click **Refresh**. This analyzes the structure of the JSON snippet so we can use later.
 
     ![](attachments/consume-a-rest-service/json-structure.png)
 

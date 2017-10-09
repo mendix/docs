@@ -141,7 +141,7 @@ You have now created an input parameter. You can add as many input parameters as
     ![](attachments/custom-action-basics/new-action-output-parameter-complete.png)
 
 6.  The **Output Parameter** requires additional steps. Go to the **Test Steps** tab and click **Add**.
-7.  Add the [Find/Assert Widget](/ATS/refguide-ats-1/findassert-widget) action and the [Set Return Value](/ATS/refguide-ats-1/set-return-value) action.
+7.  Add the [Find/Assert Widget](/ats/refguide-ats-1/findassert-widget) action and the [Set Return Value](/ats/refguide-ats-1/set-return-value) action.
     
     ![](attachments/custom-action-basics/output-parameter-actions.png)
 

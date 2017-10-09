@@ -32,11 +32,11 @@ To define the user approach, select an option by clicking the radio button that 
 
 Ths is no radio button selected:
 
-![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-nooptionselected.png)
+![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-nooptionselected.png)
 
 This is a radio button selected:
 
-![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-optionselected.png)
+![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-optionselected.png)
 
 The radio button is an input element with the type radio.
 
@@ -48,25 +48,25 @@ To create the action structure, follow these steps:
 
 1.  Check the parent element, which is always the element with `mx-name` when creating an unsupported widget action. If the widget does not have `mx-name`, look for the highest `div` element that is still referencing the widget. The parent element of the radio button looks like this in the debugger:
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-parentelement-debugger.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-parentelement-debugger.png)
 
     The debugger creates the border around the selected element in the app:
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-parentelement-outlined.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-parentelement-outlined.png)
 
 2.  Inside the parent element, you can see different child elements. One of these child elements has the class name `radio`, and inside each radio element, you will find a `label` element that contains the `input` element (radio button):
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-childelement-label-input.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-childelement-label-input.png)
 
 3.  The `label` element displays the text, and the `input` element is the radio button. You can see this if you select either of them in the debugger.
 
     This is the label element:
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-childelement-label-outlined.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-childelement-label-outlined.png)
 
     This is the input element:
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-childelement-input-outlined.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-childelement-input-outlined.png)
 
     When you create a custom action for an unsupported widget action, you must use the [Find Widget Child Node](../refguide-ats-1/find-widget-child-node) action. This action is a combination of the [Find/Assert Widget](../refguide-ats-1/findassert-widget) and [Find Element by Sizzle](../refguide-ats-1/find-element-by-sizzle) actions, combining the best of both. It’s an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible.
 4.  Each radio button is inside a `div` element with the class name `.radio`. Inside this element, there is a `label` element that contains a text value. Finally, there is an `input` element inside the `label` element. The selector looks like this: `.radio label:contains() input`. Using the entire path makes your selector more accurate, in case there are other radio buttons widgets being used. You use this selector in the Find Widget Child Node action to find the right input element inside a label element within the radio button widget.
@@ -75,7 +75,7 @@ To create the action structure, follow these steps:
 
 5.  Use jQuery to find out if ATS can find the element. Enter the following code in the console of the debugger: `$( ‘.mx-name-radioButtons1 .radio label:contains(“ATS Option 5”) input’ )`.
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-childelement-input-selector-console.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-childelement-input-selector-console.png)
 
     It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner. When you enter a selector in ATS, don’t use `$( ‘….’ )` or `jQuery( ‘…..’ )`.
 
@@ -84,15 +84,15 @@ To create the action structure, follow these steps:
 6. Add the Concatenate String action. Leave the **String 2** input parameter empty! You connect an action input parameter here later.
 7.  Enter this selector: `.radio label:contains("") input`, give a proper test step description, and describe the output:
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-concatenatestring-action.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-concatenatestring-action.png)
 
 8.  Add the Find Widget Child Node action to your action. Connect the output string from step 1 to the child node selector input parameter. Then, enter the test step description and output description:
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-findwidgetchildnode-action.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-findwidgetchildnode-action.png)
 
 9.  ATS must click the found radio button. You need to add the [Click/Doubleclick](../refguide-ats-1/clickdoubleclick) action. Connect the radio button from step 2 and give a description of the test step:
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-clickdoubleclick-action.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-clickdoubleclick-action.png)
 
 ## 5 Action Parameters
 
@@ -110,25 +110,25 @@ To add the action parameters, follow these steps:
 
 1.  Configure the **Widget Name** input parameter like this:
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-widgetname-inputparameter.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-widgetname-inputparameter.png)
 
 2.  Configure the **Value** input parameter like this:
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-value-inputparameter.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-value-inputparameter.png)
 
 3.  Configure the **Search Context** parameter like this:
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-searchcontext-inputparameter.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-searchcontext-inputparameter.png)
 
     For this custom action, you do not need an output parameter.
 
 4.  Connect the input parameters to the correct actions. Start with the **Value** input parameter. You connect this input parameter to the Concatenate String action:
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-concatenatestring-action-parameters.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-concatenatestring-action-parameters.png)
 
 5.  The last input parameters you connect are the **Widget Name** and **Search Context** input parameters for the Find Widget Child Node action:
 
-    ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-findwidgetchildnode-action-parameters.png)
+    ![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-findwidgetchildnode-action-parameters.png)
 
 There is no need to add logic to this custom action. It only involves clicking a radio button.
 
@@ -145,4 +145,4 @@ After checking these items, you can run the test case that uses this action.
 
 Congratulations! You have created your own custom action for the Mendix radio button widget.
 
-![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-finishedaction.png)
+![](version-1/attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-finishedaction.png)

@@ -1,6 +1,6 @@
 ---
 title: "Create Custom Actions"
-Parent: "ht-version-1"
+parent: "ht-version-1"
 ---
 
 These are the documents for creating a custom action:

@@ -1,6 +1,6 @@
 ---
 title: "Create a Test Suite"
-Parent: "ht-version-1"
+parent: "ht-version-1"
 description: "Describes how to create a test suite and add test cases and test suites to your test suite."
 tags: ["ATS", "testing"]
 ---

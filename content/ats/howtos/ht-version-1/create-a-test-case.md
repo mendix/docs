@@ -1,6 +1,6 @@
 ---
 title: "Create a Test Case"
-Parent: "ht-version-1"
+parent: "ht-version-1"
 description: "Describes how to create a test case and add test steps."
 tags: ["ATS", "testing"]
 ---

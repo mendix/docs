@@ -68,7 +68,7 @@ To create the action structure, follow these steps:
 
     ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-childelement-input-outlined.png)
 
-    When you create a custom action for an unsupported widget action, you must use the [Find Widget Child Node](/ats/refguide-ats-1/find-widget-child-node) action. This action is a combination of the [Find/Assert Widget](/ats/refguide-ats-1/findassert-widget) and [Find Element by Sizzle](/ats/refguide-ats-1/find-element-by-sizzle) actions, combining the best of both. It’s an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible.
+    When you create a custom action for an unsupported widget action, you must use the [Find Widget Child Node](/ats/refguide/refguide-ats-1/find-widget-child-node) action. This action is a combination of the [Find/Assert Widget](/ats/refguide/refguide-ats-1/findassert-widget) and [Find Element by Sizzle](/ats/refguide/refguide-ats-1/find-element-by-sizzle) actions, combining the best of both. It’s an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible.
 4.  Each radio button is inside a `div` element with the class name `.radio`. Inside this element, there is a `label` element that contains a text value. Finally, there is an `input` element inside the `label` element. The selector looks like this: `.radio label:contains() input`. Using the entire path makes your selector more accurate, in case there are other radio buttons widgets being used. You use this selector in the Find Widget Child Node action to find the right input element inside a label element within the radio button widget.
 
     However, before you start creating the action, you must know if ATS can find the input element within the radio buttons widget. Use the debugger to simulate what ATS does. Since the Find Widget Child Node action uses `mx-name` to find the parent, you also must use the `mx-name` in your code.
@@ -79,7 +79,7 @@ To create the action structure, follow these steps:
 
     It can happen that the debugger does not return an element. Check if jQuery is available and if you constructed the code in the correct manner. When you enter a selector in ATS, don’t use `$( ‘….’ )` or `jQuery( ‘…..’ )`.
 
-    The action user must enter the text they want ATS to click. You need a variable selector to achieve this. You create a variable selector by using the [Concatenate String](/ats/refguide-ats-1/concatenate-string) action. This action combines the different input strings into one string. The Concatenate String action does not add spaces. You need to add spaces yourself.
+    The action user must enter the text they want ATS to click. You need a variable selector to achieve this. You create a variable selector by using the [Concatenate String](/ats/refguide/refguide-ats-1/concatenate-string) action. This action combines the different input strings into one string. The Concatenate String action does not add spaces. You need to add spaces yourself.
 
 6. Add the Concatenate String action. Leave the **String 2** input parameter empty! You connect an action input parameter here later.
 7.  Enter this selector: `.radio label:contains("") input`, give a proper test step description, and describe the output:
@@ -90,7 +90,7 @@ To create the action structure, follow these steps:
 
     ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-findwidgetchildnode-action.png)
 
-9.  ATS must click the found radio button. You need to add the [Click/Doubleclick](/ats/refguide-ats-1/clickdoubleclick) action. Connect the radio button from step 2 and give a description of the test step:
+9.  ATS must click the found radio button. You need to add the [Click/Doubleclick](/ats/refguide/refguide-ats-1/clickdoubleclick) action. Connect the radio button from step 2 and give a description of the test step:
 
     ![](attachments/create-unsupported-widget/cab-07-radiobuttons/radiobuttons-clickdoubleclick-action.png)
 

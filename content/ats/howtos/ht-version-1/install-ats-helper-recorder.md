@@ -12,7 +12,7 @@ ATS provides two different tools to help build test scripts: the ATS Helper and 
 **This how-to will teach you  how to do the following:**
 
 * Install the ATS Helper
-* Install the [ATS Recorder](/refguide-ats-1/recorder)
+* Install the [ATS Recorder](/ATS/refguide-ats-1/recorder)
 
 ## 2 Prerequisites
 Before starting this how-to, make sure you have the following prerequisites in place:

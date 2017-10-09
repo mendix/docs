@@ -38,15 +38,15 @@ There are two ways of making a combined action:
 
 The steps in a Mendix app:
 
-![](version-1/attachments/custom-action-general/general-definition/combined-action-app-steps.png)
+![](attachments/custom-action-general/general-definition/combined-action-app-steps.png)
 
 The steps in ATS:
 
-![](version-1/attachments/custom-action-general/general-definition/combined-action-ats-steps.png)
+![](attachments/custom-action-general/general-definition/combined-action-ats-steps.png)
 
 The combined action:
 
-![](version-1/attachments/custom-action-general/general-definition/combined-action-ats-newexpense-action.png)
+![](attachments/custom-action-general/general-definition/combined-action-ats-newexpense-action.png)
 
 ### 2.2 Summary
 
@@ -70,15 +70,15 @@ Follow the guidelines bekiw for building a custom action to create an unsupporte
 
 The widget in a Mendix app:
 
-![](version-1/attachments/custom-action-general/general-definition/unsupported-widget-action-app-widget.png)
+![](attachments/custom-action-general/general-definition/unsupported-widget-action-app-widget.png)
 
 The steps in ATS:
 
-![](version-1/attachments/custom-action-general/general-definition/unsupported-widget-action-ats-steps.png)
+![](attachments/custom-action-general/general-definition/unsupported-widget-action-ats-steps.png)
 
 The unsupported widget action:
 
-![](version-1/attachments/custom-action-general/general-definition/unsupported-widget-action-ats-switch-action.png)
+![](attachments/custom-action-general/general-definition/unsupported-widget-action-ats-switch-action.png)
 
 
 ### 3.3 Summary
@@ -100,15 +100,15 @@ The focus is on finding an element that you can use to find the widget. The [fin
 
 An element in a Mendix app:
 
-![](version-1/attachments/custom-action-general/general-definition/searchcontext-action-listview-app.png)
+![](attachments/custom-action-general/general-definition/searchcontext-action-listview-app.png)
 
 The steps in ATS:
 
-![](version-1/attachments/custom-action-general/general-definition/searchcontext-action-listview-ats-steps.png)
+![](attachments/custom-action-general/general-definition/searchcontext-action-listview-ats-steps.png)
 
 The search context action:
 
-![](version-1/attachments/custom-action-general/general-definition/searchcontext-action-listview-ats-searchcontext-action.png)
+![](attachments/custom-action-general/general-definition/searchcontext-action-listview-ats-searchcontext-action.png)
 
 ### 4.3 Summary
 
@@ -131,11 +131,11 @@ Function actions distinguish themselves from other actions by their purpose. If 
 
 The steps in ATS:
 
-![](version-1/attachments/custom-action-general/general-definition/function-action-ats-teststeps.png)
+![](attachments/custom-action-general/general-definition/function-action-ats-teststeps.png)
 
 The function action:
 
-![](version-1/attachments/custom-action-general/general-definition/function-action-ats-function-action.png)
+![](attachments/custom-action-general/general-definition/function-action-ats-function-action.png)
 
 ### 5.3 Summary
 

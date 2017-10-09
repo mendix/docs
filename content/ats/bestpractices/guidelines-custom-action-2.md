@@ -73,7 +73,7 @@ Try to find the generic aspect of the child node. In most cases, the `mx-name-` 
 
 This is the `mx-name` in the debugger:
 
-![](/version-2/attachments/guidelines-custom-action-2/mx-name-in-debugger.png)
+![](version-2/attachments/guidelines-custom-action-2/mx-name-in-debugger.png)
 
 {{% alert type="info" %}}
 

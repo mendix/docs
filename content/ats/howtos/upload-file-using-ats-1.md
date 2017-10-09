@@ -25,7 +25,7 @@ Quick summary:
 
 **This how-to will teach you how to do the following:**
 
-* Understand why it is difficult to upload files in your app using automated testing.
+* Understand why it is difficult to upload files in your app using automated testing
 * Uploading a file using ATS
 * The approach for each Selenium setup
 
@@ -36,7 +36,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 * Complete [How to Create a Test Case](create-a-test-case)
 * Know your Selenium setup (a provider like Browsertack, local server, etc.)
 
-## 3 Uploading a file
+## 3 Uploading a File
 
 ### 3.1 Introduction
 

@@ -24,7 +24,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 * ATS account
 * Your ATS instance
 * An application under test (AUT)
-* Selenium hub (for more information on the Selenium options, see [ATS Deployment](../general/deployment))
+* Selenium hub (for more information on the Selenium options, see [ATS Deployment](/ats/general/deployment))
 
 {{% youtube zJOpO0AymAg %}}
 
@@ -273,6 +273,6 @@ When you click **Run**, the **Monitoring / Results** page will open.
 
 Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](/ats/refguide-ats-1/monitoring).
 
-You have now finished the getting started guide for ATS. Please check the [how-to's](../howtos/index) and [best practices](/ats/bestpractices/bp-version-1/index) for more information.
+You have now finished the getting started guide for ATS. Please check the [how-to's](ht-version-1) and [best practices](/ats/bestpractices/bp-version-1/bp-version-1) for more information.
 
 Good luck testing your Mendix app with ATS!

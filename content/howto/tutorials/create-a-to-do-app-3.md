@@ -82,7 +82,7 @@ This is all you need to do to refresh your list of to-do's. If you want, you can
 Follow these steps to add swiping functionality to the items in the list view:
 
 1. Open the **Home_Phone_Default** page.
-2. Add the **List view swipe** widget below the **ToDo list view**, inside the **ToDo data view**.
+2. Add the **List view swipe** widget below the **ToDo list view**.
 3. Open the **Properties** of the widget and configure the following settings on the **General** tab:
   * Enter **ToDo** for the **Target list view**
   * Select the **ToDo** entity for the **List view entity**

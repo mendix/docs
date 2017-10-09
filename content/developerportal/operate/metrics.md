@@ -32,12 +32,12 @@ Running requests are all requests that are currently in progress for this enviro
 
 At this section you can view the following information about the running requests:
 
-Running Requests
+| Running Requests | Description
 ---|---
-User | the user that has started running the request
-Action | the name of the request
-Type | microflow or Java action
-Duration | for how long the request is running
+| User | The user that has started running the request. |
+| Action | The name of the request. |
+| Type | Microflow or Java action. |
+| Duration | For how long the request is running. |
 
 You can click the following buttons to execute actions:
 

@@ -20,7 +20,7 @@ ats:
   priority: false
   menu_categories:
     - "General"
-    - "Reference Guide 1"
+    - "Reference Guide"
     - "How-To's"
     - "Best Practices"
 community:

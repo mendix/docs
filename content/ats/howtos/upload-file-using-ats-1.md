@@ -5,7 +5,7 @@ description: "Describes how to upload a file in your app using ATS and the restr
 tags: ["ATS", "testing"]
 ---
 
-## 1 Introduction
+## 1 Introduction<a name="#1Introduction"></a>
 
 This how-to explains how to upload a file in your app using ATS. You have some test situations in which you must upload a file to finish that test situation. During manual testing, you upload this file from your local computer into your app. ATS works similar, the only difference is that the local computer is your Selenium hub.
 

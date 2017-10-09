@@ -1,6 +1,6 @@
 ---
 title: "Install the ATS Helper and the ATS Recorder"
-category: "How-To's"
+Parent: "version-1"
 description: "Describes how to install the ATS helper and the ATS Recorder tool."
 tags: ["ATS", "testing"]
 ---
@@ -38,19 +38,19 @@ To install the ATS Helper, follow these steps:
 
 1.  Open ATS and click the information icon in the top-right corner of the screen:
 
-    ![](attachments/install-ats-helper-recorder/information-icon.png)
+    ![](version-1/attachments/install-ats-helper-recorder/information-icon.png)
 
     This opens the **ATS Information** dialog box:
    
-    ![](attachments/install-ats-helper-recorder/ats-information-screen.png)
+    ![](version-1/attachments/install-ats-helper-recorder/ats-information-screen.png)
 
 2.	Drag the ATS Helper to your bookmark bar to link it there:
 
-    ![](attachments/install-ats-helper-recorder/drag-drop-ats-helper.png)
+    ![](version-1/attachments/install-ats-helper-recorder/drag-drop-ats-helper.png)
 
 To use the ATS Helper, select the bookmark, press <kbd>Ctrl</kbd>, and hover over a widget. The ATS Helper will show the information of that widget.
 
-![](attachments/install-ats-helper-recorder/ats-helper-widget.png)
+![](version-1/attachments/install-ats-helper-recorder/ats-helper-widget.png)
 
 {{% alert type="info" %}}
 The ATS Helper only works on standalone widgets.
@@ -64,15 +64,15 @@ To install the ATS Recorder, follow these steps:
 
 1.	Open ATS and click the information icon in the top-right corner of the screen:
 
-    ![](attachments/install-ats-helper-recorder/information-icon.png)
+    ![](version-1/attachments/install-ats-helper-recorder/information-icon.png)
     
     This opens the **ATS Information** dialog box:
     
-    ![](attachments/install-ats-helper-recorder/ats-information-screen.png)
+    ![](version-1/attachments/install-ats-helper-recorder/ats-information-screen.png)
 
 2.	Click the **ATS Recorder (Chrome Web Store)** link to go to the Chrome Web Store.
 3.  Click **ADD TO CHROME** to add the ATS Recorder extension:
 
-    ![](attachments/install-ats-helper-recorder/add-ats-recorder.png)
+    ![](version-1/attachments/install-ats-helper-recorder/add-ats-recorder.png)
 
 See [How to Create a Test Case](create-a-test-case) for more information on how to use the ATS Helper.

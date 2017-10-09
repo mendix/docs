@@ -34,18 +34,18 @@ The following sections describe how to create a custom action. There are two opt
 1. Open your project in ATS and go to the **Repository**.
 2.  Click **Add Item** in the **All Objects** tab:
     
-    ![](attachments/custom-action-basics/repository-add-item.png)
+    ![](version-1/attachments/custom-action-basics/repository-add-item.png)
 
     This opens the **Create new** dialog box:
     
-    ![](attachments/custom-action-basics/create-new-action-dialog.png)
+    ![](version-1/attachments/custom-action-basics/create-new-action-dialog.png)
 
 3. Select **Action** in the drop-down menu.
 4. Enter a name in the **Name** field (for example, *Set Drop-Down*). It is advisable to use a name that describes what the action does.
 5. Enter a description in the **Description** field (for example, *This action sets the drop-down menu to a specific value*). It is advisable to give each action a detailed description of what it does.
 6.  Click **Create**:
     
-    ![](attachments/custom-action-basics/create-new-action-dialog-complete.png)
+    ![](version-1/attachments/custom-action-basics/create-new-action-dialog-complete.png)
 
 You have now created a custom action from the repository.
 
@@ -58,22 +58,22 @@ To use the **Extract Action** button, follow these steps:
 3.  Select the test steps you want to combine in a custom action by holding <kbd>Ctrl</kbd> while clicking the test steps.
 4.  Click **Extract Action**:
     
-    ![](attachments/custom-action-basics/test-case-extract-action.png)
+    ![](version-1/attachments/custom-action-basics/test-case-extract-action.png)
 
     This will open the **Action - Set Details** open.
 5.  Enter a name in the **Name** field (for example, *Set Drop-Down*).
 6.  Enter a description in the **Description** field (for example, *This action sets the drop-down menu to a specific value*).
 7.  Click **Close**:
     
-    ![](attachments/custom-action-basics/test-case-action-set-details.png)
+    ![](version-1/attachments/custom-action-basics/test-case-action-set-details.png)
 
 8.  Select the newly created action and click **Open**:
     
-    ![](attachments/custom-action-basics/test-case-open-new-action.png)
+    ![](version-1/attachments/custom-action-basics/test-case-open-new-action.png)
 
 Both ways open the **Edit Action** page. The page works the same as the **Test Case** page. You can add test steps by clicking **Add** or **Record**.
 
-![](attachments/custom-action-basics/edit-action-page-add-record.png)
+![](version-1/attachments/custom-action-basics/edit-action-page-add-record.png)
 
 You now know how to create a custom action.
 
@@ -84,7 +84,7 @@ To add parameters to your custom action, follow these steps:
 1.  Go to the **Edit Action** page of your action.
 2.  Click the **Settings** tab:
     
-    ![](attachments/custom-action-basics/edit-action-page-settings.png)
+    ![](version-1/attachments/custom-action-basics/edit-action-page-settings.png)
 
 3. Follow the steps in the sections below for adding input and output parameters.
 
@@ -94,7 +94,7 @@ To add input parameters, follow these steps:
 
 1.  Click **New**:
     
-    ![](attachments/custom-action-basics/edit-action-page-settings-new.png)
+    ![](version-1/attachments/custom-action-basics/edit-action-page-settings-new.png)
 
     This will open the **Edit Input Parameter** dialog box.
 
@@ -116,7 +116,7 @@ To add input parameters, follow these steps:
 7.  Leave the **Type** field set to **Default**.
 8.  Click **Save**:
     
-    ![](attachments/custom-action-basics/new-action-edit-input-parameter.png)
+    ![](version-1/attachments/custom-action-basics/new-action-edit-input-parameter.png)
 
 You have now created an input parameter. You can add as many input parameters as you need, but remember to keep the action simple.
 
@@ -124,7 +124,7 @@ You have now created an input parameter. You can add as many input parameters as
 
 1.  Click **Set**:
     
-    ![](attachments/custom-action-basics/edit-action-page-settings-set.png)
+    ![](version-1/attachments/custom-action-basics/edit-action-page-settings-set.png)
 
     This opens the different **Output Parameter** fields.
 
@@ -138,16 +138,16 @@ You have now created an input parameter. You can add as many input parameters as
 4.  Select a data type from the **Datatype** drop-down menu (for example, *Web Element*).
 5.  Select a **Required/Optional** option. Only use **Optional** if the action still works whebn nothing is returned.
     
-    ![](attachments/custom-action-basics/new-action-output-parameter-complete.png)
+    ![](version-1/attachments/custom-action-basics/new-action-output-parameter-complete.png)
 
 6.  The **Output Parameter** requires additional steps. Go to the **Test Steps** tab and click **Add**.
 7.  Add the [Find/Assert Widget](../refguide-ats-1/findassert-widget) action and the [Set Return Value](../refguide-ats-1/set-return-value) action.
     
-    ![](attachments/custom-action-basics/output-parameter-actions.png)
+    ![](version-1/attachments/custom-action-basics/output-parameter-actions.png)
 
 8.  For ATS to return the outcome of a test step as an **Output Parameter**, it needs to know what it must return. ATS returns the **Value** connected to the **Set Return Value** action. Now connect the outcome of test step 1 to the **Set Return Value** action.
     
-    ![](attachments/custom-action-basics/set-return-value-parameter.png)
+    ![](version-1/attachments/custom-action-basics/set-return-value-parameter.png)
 
     ATS now returns the outcome of test step 1.
   
@@ -164,12 +164,12 @@ To connect the input parameter, follow these steps:
 1.  Select the test step to which you want to connect an input parameter.
 2.  Open the **Edit Input Value** dialog box:
     
-    ![](attachments/custom-action-basics/edit-value-input-dialog.png)
+    ![](version-1/attachments/custom-action-basics/edit-value-input-dialog.png)
 
 3.  Click **Action Input Parameter** and select the input parameter you want to connect.
 4.  Click **Save**
     
-    ![](attachments/custom-action-basics/action-input-parameter-edit.png)
+    ![](version-1/attachments/custom-action-basics/action-input-parameter-edit.png)
 
 You have now connected your input parameter.
  

@@ -1,11 +1,11 @@
 ---
 title: "Upload a file in your app using ATS"
-category: "How-To's"
+Parent: "version-1"
 description: "Describes how to upload a file in your app using ATS and the restrictions it has."
 tags: ["ATS", "testing"]
 ---
 
-## 1 Introduction
+## 1 Introduction<a name="#1Introduction"></a>
 
 This how-to explains how to upload a file in your app using ATS. You have some test situations in which you must upload a file to finish that test situation. During manual testing, you upload this file from your local computer into your app. ATS works similar, the only difference is that the local computer is your Selenium hub.
 
@@ -15,12 +15,12 @@ Quick summary:
 
 | Selenium Setup | Uploading your own file | Uploading a file | Uploading possible? |
 | :-------------- | :---------------------- | :--------------- | :------------------ |
-| Local Selenium Server (Docker) | ![](attachments/upload-file-using-ats-1/grey.png) Limited<sup>1</sup> | ![](attachments/upload-file-using-ats-1/green.png) Yes | ![](attachments/upload-file-using-ats-1/green.png) Yes |
-| BrowserStack (SaaS) | ![](attachments/upload-file-using-ats-1/red.png) No | ![](attachments/upload-file-using-ats-1/green.png) Yes | ![](attachments/upload-file-using-ats-1/green.png) Yes |
-| SauceLabs (SaaS) | ![](attachments/upload-file-using-ats-1/red.png) No | ![](attachments/upload-file-using-ats-1/red.png) No | ![](attachments/upload-file-using-ats-1/red.png) No |
-| Selenium SaaS Agent | ![](attachments/upload-file-using-ats-1/grey.png) Limited<sup>2</sup> | ![](attachments/upload-file-using-ats-1/green.png) Yes | ![](attachments/upload-file-using-ats-1/red.png) No |
+| Local Selenium Server (Docker) | ![](version-1/attachments/upload-file-using-ats-1/grey.png) Limited<sup>1</sup> | ![](version-1/attachments/upload-file-using-ats-1/green.png) Yes | ![](version-1/attachments/upload-file-using-ats-1/green.png) Yes |
+| BrowserStack (SaaS) | ![](version-1/attachments/upload-file-using-ats-1/red.png) No | ![](version-1/attachments/upload-file-using-ats-1/green.png) Yes | ![](version-1/attachments/upload-file-using-ats-1/green.png) Yes |
+| SauceLabs (SaaS) | ![](version-1/attachments/upload-file-using-ats-1/red.png) No | ![](version-1/attachments/upload-file-using-ats-1/red.png) No | ![](version-1/attachments/upload-file-using-ats-1/red.png) No |
+| Selenium SaaS Agent | ![](version-1/attachments/upload-file-using-ats-1/grey.png) Limited<sup>2</sup> | ![](version-1/attachments/upload-file-using-ats-1/green.png) Yes | ![](version-1/attachments/upload-file-using-ats-1/red.png) No |
 
-<sup>1</sup> This only possible when you prepare your own files on that server.<br>
+<sup>1</sup> This only possible when you prepare your own files on that server. <br>
 <sup>2</sup> This depends on where the agent is installed.
 
 **This how-to will teach you how to do the following:**
@@ -40,29 +40,29 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 ### 3.1 Introduction
 
-To upload a file in your app, ATS must have access to that file. Selenium simulates a user on a local computer. When ATS gives the command to upload a file, it provides a file path to the file you want to upload. Since there are three different Selenium setups there are also three different situations.
+To upload a file in your app, ATS must have access to that file. Selenium simulates a user on a local computer. When ATS gives the command to upload a file, it provides a file path to the file you want to upload. Since there are three different Selenium setups, there are also three different situations.
 
-1. You use Selenium on a local server. This means Selenium has no access to your local files. But you can add these files to the server or create a set of generic test files for that server.
+The first situation is that you use Selenium on a local server. This means Selenium has no access to your local files. But you can add these files to the server or create a set of generic test files for that server.
 
-2. You use Selenium SaaS. This means Selenium has no access to your local files unless you use an agent. When you use the agent, situation 1 applies. If you do not use an agent the Selenium SaaS creates a VM session for each test case you run. This means there are no constant values like on your local Selenium server. Some Selenium SaaS providers upload a generic set of test files into each VM session that you can use in your test case. The quick summary in the [Introduction](#1Introduction) chapter provides information on which Selenium SaaS provides these files.
+The second situation is that you use Selenium SaaS. This means selenium has no access to your local files unless you use an agent. When you use the agent, situation 1 applies. If you do not use an agent the selenium SaaS creates a VM session for each test case you run. This means there are no constant values like on your local selenium server. Some Selenium SaaS providers upload a generic set of test files into each VM session that you can use in your test case. In the quick summary in the [Introduction](#1Introduction) chapter you see which selenium SaaS provides these files.
 
-3. You use a Selenium SaaS agent. ATS executes the test on the machine on which you installed the agent. In most cases this is a server inside your network. ATS can find all the files on this machine.
+The third situation is that you use a Selenium SaaS agent. ATS executes the test on the machine on which you installed the agent. In most cases this is a server inside your network. ATS can find all the files on this machine.
 
 ### 3.2 Uploading a File Using ATS
 
-ATS has a standard action for uploading files into your Mendix app. The  [Set File Manager](../refguide-ats-1/set-file-manager) action uploads a file from the local computer into the app using a file path. As explained earlier, the file must be on the local machine for this to work.
+ATS has a standard action for uploading files into your Mendix app. The  [Set File Manager](../refguide-ats-1/set-file-manager) action uploads a file from the local computer into the app using a file path. As explained earlier the file must be on the local machine for this to work.
 
 _The Set File Manager action_
 
-![](attachments/upload-file-using-ats-1/set-file-manager-action.png)
+![](version-1/attachments/upload-file-using-ats-1/set-file-manager-action.png)
 
 A possible filepath is:
 
-``C:\users\ats\documents\receipt-1.png``
+C:\users\ats\documents\receipt-1.png
 
 _File Uploader widget in the app_
 
-![](attachments/upload-file-using-ats-1/file-uploader-widget-app.png)
+![](version-1/attachments/upload-file-using-ats-1/file-uploader-widget-app.png)
 
 ### 3.3 Advice
 
@@ -75,16 +75,16 @@ Each Selenium setup has different possibilities. We advise that if you want to t
 | Selenium SaaS Agent | Install the agent on a server with your Mendix app. Also put the generic test files there. |
 
 ## 4 Uploading a File Using a Local Selenium Server (Docker)
-
+ 
 When testing using a local Selenium server, ATS executes the test on that server. The _Set File Manager_ action only has access to the files on that server. You can create a generic set of test files or just add files to the server and use them in your tests.
 
 ## 5 Uploading a File in BrowserStack (SaaS)
-
-When testing using the BrowserStack, ATS executes the test against a new VM session every time. So every run gets a new VM session and afterwards BrowserStack deletes the entire session. With this setup it is not possible to upload your own files. BrowserStack does provide a large set of test files that they upload in each VM session. You can use the _Set File Manager_ action to achieve this.
+ 
+When testing using the BrowserStack, ATS executes the test against a new VM session every time. So every run gets a new VM session and afterwards BrowserStack deletes the entire session. With this setup it is not possible to upload your own files. BrowserStack does provide a large set of test files that they upload in each VM session. You can use the Set File Manager action to achieve this.
 
 Those files are always present so you don't have to change the filepath every time.
 
-You can find the BrowserStack test files [here](https://raw.githubusercontent.com/mendix/docs/content/howtos/Selenium-files/browserstack-test-files.md).
+You can find the BrowserStack test files [here](https://raw.githubusercontent.com/mendix/docs/content/howtos/version-1/selenium-files/browserstack-test-files.md).
 
 {{% alert type="info" %}}
 

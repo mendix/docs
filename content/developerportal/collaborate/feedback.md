@@ -35,8 +35,8 @@ Type | Description
 
 You can click the following buttons:
 
- Action | Description
-    | --- | --- |
+Action | Description
+| --- | --- |
 * **Add feedback** | This will add new feedback on your app.
 * **Export to Excel** | This will export feedback items into an *.xls* file (you can filter on date, label, status, and type).
 
@@ -72,22 +72,22 @@ When you click **Post a comment**, you can add files within a comment.
 
 You can manage the feedback item with the following actions:
 
- Action | Description
- | --- | --- |
- **Accept feedback** | Means this feedback is valid and that you want to add a story to your backlog on the basis of this item.
- **Mark 'Under review'** | Notifies the user who submitted the feedback and your team that the item is under review.
- **Mark as handled** | Changes the status of the item from open to handled so that the item will not pollute your open items list.
- **Close feedback** | Closes the feedback (for example, when the item is already solved or a duplicate has already been accepted).
+Action | Description
+| --- | --- |
+**Accept feedback** | Means this feedback is valid and that you want to add a story to your backlog on the basis of this item.
+**Mark 'Under review'** | Notifies the user who submitted the feedback and your team that the item is under review.
+**Mark as handled** | Changes the status of the item from open to handled so that the item will not pollute your open items list.
+**Close feedback** | Closes the feedback (for example, when the item is already solved or a duplicate has already been accepted).
 
 ### 2.2 Convert
 
 If the feedback type is not correct, you can convert it afterwards by selecting one of these options:
 
- Convert type | Description
- | --- | --- |
- **Convert to idea** | Changes the feedback type to an idea.
- **Convert to question** | Changes the feedback type to a question.
- **Convert to issue** | Changes the feedback type to an issue.
+Convert type | Description
+| --- | --- |
+**Convert to idea** | Changes the feedback type to an idea.
+**Convert to question** | Changes the feedback type to a question.
+**Convert to issue** | Changes the feedback type to an issue.
 
 ### 2.3 Move to App
 

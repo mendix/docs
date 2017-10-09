@@ -71,7 +71,7 @@ The **PhoneGap Build: Signing Key Required** page asks you to go to the PhoneGap
 3. Configure the app to be built by going to your PhoneGap Build account details. Click the avatar icon at the top-right of the page, and then click **Edit account**.
 4. Click the **Signing Keys** tab, and under **iOS**, click **add a key ...**.
 5. A pop-up window will be shown where you must upload a certificate file and a provisioning profile file. You can get those files from Apple. The certificate is the *.p12* file, and the provisioning profile is the *.mobileprovision* file. For more information, see [Managing App Signing Keys](/refguide7/managing-app-signing-keys) in the Mendix Reference Guide.
-6. Give the key a title that you can easily recognize, and upload the files.<br>
+6.  Give the key a title that you can easily recognize, and upload the files.<br>
 
     {{% alert type="warning" %}}
 

@@ -86,4 +86,4 @@ Administrators manage users and manage projects, see ReferenceGuide_Administrati
 
 Users work in projects, they create and run test cases
 
-On the project level there are the roles of Project Administrator and Test Designer. The difference between the two is, that the Project Administrator can change the project settings and configure Selenium hbs and test applications. See [Configuration](../refguide-ats-1/configuration) for more info.
+On the project level there are the roles of Project Administrator and Test Designer. The difference between the two is, that the Project Administrator can change the project settings and configure Selenium hbs and test applications. See [Configuration](../refguide/rg-version-1/configuration) for more info.

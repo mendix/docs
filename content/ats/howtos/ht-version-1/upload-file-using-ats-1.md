@@ -5,7 +5,7 @@ description: "Describes how to upload a file in your app using ATS and the restr
 tags: ["ATS", "testing"]
 ---
 
-## 1 Introduction<a name="#1Introduction"></a>
+## 1 Introduction<a name="introduction"></a>
 
 This how-to explains how to upload a file in your app using ATS. You have some test situations in which you must upload a file to finish that test situation. During manual testing, you upload this file from your local computer into your app. ATS works similar, the only difference is that the local computer is your Selenium hub.
 
@@ -44,7 +44,7 @@ To upload a file in your app, ATS must have access to that file. Selenium simula
 
 The first situation is that you use Selenium on a local server. This means Selenium has no access to your local files. But you can add these files to the server or create a set of generic test files for that server.
 
-The second situation is that you use Selenium SaaS. This means selenium has no access to your local files unless you use an agent. When you use the agent, situation 1 applies. If you do not use an agent the selenium SaaS creates a VM session for each test case you run. This means there are no constant values like on your local selenium server. Some Selenium SaaS providers upload a generic set of test files into each VM session that you can use in your test case. In the quick summary in the [Introduction](#1Introduction) chapter you see which selenium SaaS provides these files.
+The second situation is that you use Selenium SaaS. This means selenium has no access to your local files unless you use an agent. When you use the agent, situation 1 applies. If you do not use an agent the selenium SaaS creates a VM session for each test case you run. This means there are no constant values like on your local selenium server. Some Selenium SaaS providers upload a generic set of test files into each VM session that you can use in your test case. In the quick summary in [1 Introduction](#introduction) chapter you see which selenium SaaS provides these files.
 
 The third situation is that you use a Selenium SaaS agent. ATS executes the test on the machine on which you installed the agent. In most cases this is a server inside your network. ATS can find all the files on this machine.
 

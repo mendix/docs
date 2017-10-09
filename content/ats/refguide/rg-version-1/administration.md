@@ -1,6 +1,6 @@
 ---
 title: "Administration"
-parent: "refguide-ats-1"
+parent: "rg-version-1"
 ---
 
 As an administrator in the ATS, you have access to additional functionality:

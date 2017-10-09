@@ -94,7 +94,7 @@ The unsupported widget action:
 
 Sometimes an app has a lot of widgets with the same *mx-name*, but ATS always finds the first result. To overcome this, you need to create a search context action. All Mendix actions have an input parameter called **Search Context**. The search context action finds an element that a Mendix/core action can use.
 
-The focus is on finding an element that you can use to find the widget. The [find/assert widget](/ats/refguide/refguide-ats-1/findassert-widget) action is a great example for a search context action.
+The focus is on finding an element that you can use to find the widget. The [find/assert widget](/ats/refguide/rg-version-1/findassert-widget) action is a great example for a search context action.
 
 ### 4.2 Example
 

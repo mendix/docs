@@ -1,6 +1,6 @@
 ---
 title: "Test Development"
-parent: "refguide-ats-1"
+parent: "rg-version-1"
 ---
 
 These are the test development documents:

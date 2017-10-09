@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-parent: "refguide-ats-1"
+parent: "rg-version-1"
 ---
 
 On the configuration page under the **Project** tab you can see the current project settings. You can change the settings and add users or libraries to your project by clicking the **Edit Project Settings** button.

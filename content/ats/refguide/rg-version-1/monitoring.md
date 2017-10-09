@@ -1,6 +1,6 @@
 ---
 title: "Monitoring"
-parent: "refguide-ats-1"
+parent: "rg-version-1"
 ---
 
 ## Test Results

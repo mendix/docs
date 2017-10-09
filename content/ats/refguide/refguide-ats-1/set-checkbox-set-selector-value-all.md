@@ -2,6 +2,7 @@
 title: "Set Checkbox Set Selector Value"
 parent: "checkbox-set-selector"
 ---
+
 ## Description
 Clear/check the "select all" check box.
 

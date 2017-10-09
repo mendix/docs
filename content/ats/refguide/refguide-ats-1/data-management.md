@@ -1,6 +1,6 @@
 ---
 title: "Data Management"
-category: "Reference Guide 1"
+parent: "refguide-ats-1"
 ---
 
 ## Repository

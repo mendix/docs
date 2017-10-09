@@ -2,6 +2,7 @@
 title: "Object Types in the ATS"
 parent: "test-development"
 ---
+
 In ATS, a test can consist of test cases, test suites and actions. There are also folders in the _Repository_ to order objects.
 
 ### Test Case

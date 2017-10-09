@@ -2,6 +2,7 @@
 title: "Toggle Checkbox Set Selector Value"
 parent: "checkbox-set-selector"
 ---
+
 ## Description
 Finds check box by given entity attribute and inverts the value.
 

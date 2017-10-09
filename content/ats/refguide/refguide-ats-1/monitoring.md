@@ -1,7 +1,8 @@
 ---
 title: "Monitoring"
-category: "Reference Guide 1"
+parent: "refguide-ats-1"
 ---
+
 ## Test Results
 
 The link Monitoring/Results shows you pending and most recent tests to review the results of test case or test suite runs. You can switch between both views via tabs.

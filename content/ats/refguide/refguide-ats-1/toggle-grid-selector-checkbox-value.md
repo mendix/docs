@@ -2,6 +2,7 @@
 title: "Toggle Grid Selector Checkbox Value"
 parent: "grid-selector"
 ---
+
 ## Description
 Inverses the check box found by the given column and row caption.
 

@@ -1,5 +1,5 @@
 ---
-title: "How-To's"
+title: "Reference Guide"
 ---
 
 These are the main documents in this category:

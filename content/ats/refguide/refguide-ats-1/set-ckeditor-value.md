@@ -2,6 +2,7 @@
 title: "Set CKEditor Value"
 parent: "ckeditor"
 ---
+
 ## Description
 Sets the given value as current value for the CKEditor value. The value can be formatted via HTML code.
 

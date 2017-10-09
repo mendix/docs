@@ -2,6 +2,7 @@
 title: "Set Checkbox Set Selector Value"
 parent: "grid-selector"
 ---
+
 ## Description
 Finds the check box by column and row caption. Sets its value to the given checked parameter.
 

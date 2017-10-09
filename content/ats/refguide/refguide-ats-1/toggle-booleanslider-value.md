@@ -2,6 +2,7 @@
 title: "Toggle BooleanSlider Value"
 parent: "booleanslider"
 ---
+
 ## Description
 Clicks the BooleanSlider widget to toggle its value. This will invert the current value of the BooleanSlider.
 

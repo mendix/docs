@@ -2,6 +2,7 @@
 title: "Toggle Checkbox Set Selector Value"
 parent: "checkbox-set-selector"
 ---
+
 ## Description
 Finds the check box via the column caption and cell value. Inverts the value.
 

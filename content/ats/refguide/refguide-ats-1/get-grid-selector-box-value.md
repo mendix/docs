@@ -2,6 +2,7 @@
 title: "Get Grid Selector Box Value"
 parent: "grid-selector"
 ---
+
 ## Description
 Returns the current check box and radio button value.
 

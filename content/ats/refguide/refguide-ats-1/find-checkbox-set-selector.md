@@ -2,6 +2,7 @@
 title: "Find Checkbox Set Selector (All)"
 parent: "checkbox-set-selector"
 ---
+
 ## Description
 Finds a check box by given cell value and column caption. Returns the first match.
 

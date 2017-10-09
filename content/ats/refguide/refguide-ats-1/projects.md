@@ -1,7 +1,8 @@
 ---
 title: "Projects"
-category: "Reference Guide 1"
+parent: "refguide-ats-1"
 ---
+
 Creating new test cases – especially with recording – is a simple activity, so you can quickly end up with a lot. Especially when you test multiple applications or even have different teams, you don't want all data in one place. Eventually, you want to separate, structure and protect the data.
 
 As of version 1.5 ATS supports projects and libraries as a layer on top of all data. All data – may it be test cases, test suites or actions – is enclosed in a project. This provides clear separation between data of different applications. Every user can create a new project and as its owner manage other user’s access to it.

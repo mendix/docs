@@ -2,6 +2,7 @@
 title: "Standard Action Overview"
 parent: "test-development"
 ---
+
 The following tables list all standard actions for Mendix. There's one table per folder/category.
 
 ### DataGrid, TemplateGrid, ListView

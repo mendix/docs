@@ -2,6 +2,7 @@
 title: "Get InputReferenceSelector Value"
 parent: "input-reference-selector"
 ---
+
 ## Description
 Returns the current value of the InputReferenceSelector.
 

@@ -2,6 +2,7 @@
 title: "Toggle Simple Checkbox Set Selector Value"
 parent: "simple-checkbox-set-selector"
 ---
+
 ## Description
 Inverts the value of the check box found by the given value connected to the check box.
 

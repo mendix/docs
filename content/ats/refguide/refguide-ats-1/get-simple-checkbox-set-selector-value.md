@@ -2,6 +2,7 @@
 title: "Get Simple Checkbox Set Selector Value"
 parent: "simple-checkbox-set-selector"
 ---
+
 ## Description
 Returns the current value of the found check box.
 

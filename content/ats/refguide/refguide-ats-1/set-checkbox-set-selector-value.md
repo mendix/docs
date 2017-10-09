@@ -2,6 +2,7 @@
 title: "Set Checkbox Set Selector Value"
 parent: "checkbox-set-selector"
 ---
+
 ## Description
 Finds check box by column caption and cell value. Sets its value to checked.
 

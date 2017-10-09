@@ -2,6 +2,7 @@
 title: "Set BooleanSlider Value"
 parent: "booleanslider"
 ---
+
 ## Description
 Sets the given text as active value for the BooleanSlider appstore widget.
 

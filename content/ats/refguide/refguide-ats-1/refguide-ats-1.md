@@ -1,5 +1,6 @@
 ---
-title: "Reference Guide 1"
+title: "ATS Version 1 Reference Guide"
+category: "Reference Guide"
 ---
 
 These are the main documents in this category:

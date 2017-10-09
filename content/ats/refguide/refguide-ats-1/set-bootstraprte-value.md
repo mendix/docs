@@ -2,6 +2,7 @@
 title: "Set BootstrapRTE Value"
 parent: "bootstraprte"
 ---
+
 ## Description
 Sets the given value as current value for the BootstrapRTE value. Strings can be formatted via HTML code.
 

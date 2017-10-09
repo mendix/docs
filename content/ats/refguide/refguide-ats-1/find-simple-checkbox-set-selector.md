@@ -2,6 +2,7 @@
 title: "Find Simple Checkbox Set Selector"
 parent: "simple-checkbox-set-selector"
 ---
+
 ## Description
 Finds the check box by the given value.
 

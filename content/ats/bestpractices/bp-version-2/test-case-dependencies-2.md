@@ -1,6 +1,6 @@
 ---
 title: "Test Case Dependencies"
-parent: "version-2"
+parent: "bp-version-2"
 ---
 
 This document explains the best way of handling test case dependencies within ATS. It also describes what a test case dependency is.
@@ -16,11 +16,11 @@ You have a test case that creates a new expense in the company expenses app. It 
 
 _The fields in the app_
 
-![](version-2/attachments/test-case-dependencies-2/amount-and-description-field.png)
+![](attachments/test-case-dependencies-2/amount-and-description-field.png)
 
 _TC.01 - Create New Expense_
 
-![](version-2/attachments/test-case-dependencies-2/random-number-and-random-string.png)
+![](attachments/test-case-dependencies-2/random-number-and-random-string.png)
 
 The test case creates a new expense with values that you don't know upfront. ATS does not allow sharing values between test cases, in other words, it does not allow any dependencies between test cases. 
 
@@ -28,7 +28,7 @@ You have another test case that deletes an expense using the description of that
 
 _TC.02 - Delete Expense_
 
-![](version-2/attachments/test-case-dependencies-2/delete-expense-by-datagrid-row.png)
+![](attachments/test-case-dependencies-2/delete-expense-by-datagrid-row.png)
 
 As you see "TC.02 - Delete Expense" cannot delete the expense from "TC.01 - Create New Expense" because the description is a randomly generated value.
 
@@ -77,7 +77,7 @@ First, create the test case that creates a new expense, "TC.01 - Create New Expe
 
 _TC.01 - Create New Expense as setup_
 
-![](version-2/attachments/test-case-dependencies-2/delete-expense-create-new-expense-setup-step.png)
+![](attachments/test-case-dependencies-2/delete-expense-create-new-expense-setup-step.png)
 
 Conclusion:
 
@@ -106,7 +106,7 @@ Example, you have a scenario to create a new expense and you have a scenario to 
 
 _The two scenarios_
 
-![](version-2/attachments/test-case-dependencies-2/multiple-scenarios-create-new-expense-and-delete-expense.png)
+![](attachments/test-case-dependencies-2/multiple-scenarios-create-new-expense-and-delete-expense.png)
 
 Against the good test case criteria:
 
@@ -125,19 +125,19 @@ Create two separate test cases and combine them in a test suite. Make sure there
 
 _TC.01 - Create New Expense_
 
-![](version-2/attachments/test-case-dependencies-2/tc.01-create-new-expense.png)
+![](attachments/test-case-dependencies-2/tc.01-create-new-expense.png)
 
 _TC.02 - Delete Expense_
 
-![](version-2/attachments/test-case-dependencies-2/tc.02-delete-expense.png)
+![](attachments/test-case-dependencies-2/tc.02-delete-expense.png)
 
 _TS.01 - Create New Expense and Delete Expense_
 
-![](version-2/attachments/test-case-dependencies-2/ts.01-create-new-expense-and-Delete-expense.png)
+![](attachments/test-case-dependencies-2/ts.01-create-new-expense-and-Delete-expense.png)
 
 Because TC.02 depends on the result of TC.01, ATS must execute TC.01 first. To ensure ATS does so, set the execution type to **Sequential**. 
 
-![](version-2/attachments/test-case-dependencies-2/ts.01-create-new-expense-and-Delete-expense-type-sequential.png)
+![](attachments/test-case-dependencies-2/ts.01-create-new-expense-and-Delete-expense-type-sequential.png)
 
 ATS now executes the contents of the test suite based on the order they are in.
 

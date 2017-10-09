@@ -49,7 +49,7 @@ To create a new project, follow these steps:
       **Mendix Project/App ID** | Enter the Mendix project/app ID of the app you want to test, NOT the project ID of ATS! This will give ATS access to your Sprintr and user stories. A project can be created without a Mendix project/app ID, but than you have no access to the Sprintr and user stories.
       **Mendix API Key** | This is the API key you created in your Sprintr project for ATS.
       **Project Users** | Enter the people that need access to this project. This project will then appear in their **My Projects** menu. You can always edit this later. There are two different roles for a project user: a **Tester** can only test, create tests, and monitor results; a **Project Administrator** has the same rights as the tester but has also editing rights to the configuration settings of a project.
-      **Action Libraries** | Make sure that the action libraries **Core** and **Mendix** are included. Please note that without libraries, it is not possible to select actions for the test script. For more information on action libraries, see [Standard Actions Reference](../refguide-ats-1/standard-actions-reference).
+      **Action Libraries** | Make sure that the action libraries **Core** and **Mendix** are included. Please note that without libraries, it is not possible to select actions for the test script. For more information on action libraries, see [Standard Actions Reference](/refguide-ats-1/standard-actions-reference).
 
 3.  Click **Save & Open** at the bottom of the page to open the **Project Dashboard**.
 
@@ -184,7 +184,7 @@ To use the recorder function, follow these steps:
 
       ![](attachments/getting-started/recorded-test-steps.png)
 
-All the test steps are numbered for easy identification. The up and down arrows can be used to change the sequence of the test steps. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Extract Action](../refguide-ats-1/custom-actions).
+All the test steps are numbered for easy identification. The up and down arrows can be used to change the sequence of the test steps. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Extract Action](/refguide-ats-1/custom-actions).
 
 #### 5.2.2 Test Data Tab
 
@@ -263,7 +263,7 @@ Here, you can select your AUT and Selenium hub for ATS to use.
 | **Selenium Hub** | Select the Selenium Hub you want to use to execute the test case. |
 | **Browser** | Select the browser that the Selenium Hub uses to execute the test case. Please note that these are the supported browsers. | 
 
-Now click **Run** again in the upper-right corner to execute the test case against the provided parameters. For more information on the run configuration, see [Run Configuration](../refguide-ats-1/test-run).
+Now click **Run** again in the upper-right corner to execute the test case against the provided parameters. For more information on the run configuration, see [Run Configuration](/refguide-ats-1/test-run).
 
 ## 7 Result
 
@@ -271,7 +271,7 @@ When you click **Run**, the **Monitoring / Results** page will open.
 
 ![](attachments/getting-started/monitoring-results-pending.png)
 
-Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](../refguide-ats-1/monitoring).
+Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](/refguide-ats-1/monitoring).
 
 You have now finished the getting started guide for ATS. Please check the [how-to's](../howtos/index) and [best practices](../bestpractices/index) for more information.
 

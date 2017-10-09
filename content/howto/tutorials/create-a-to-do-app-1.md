@@ -20,20 +20,21 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Download [Mendix Desktop Modeler 7.3 or later](https://appstore.home.mendix.com/link/modeler/)
 
-## 3 Creating and Preparing a New Project
+## 3 Creating and Preparing a New App Project
 
-The basis for the to-do app is the Mobile Quick Starter App. Follow these steps to create a new app with the Mobile Quick Starter App:
+To create and prepare your new app tutorial project, follow these steps:
 
-1. Open the Mendix Desktop Modeler and log in.
-2. Click **New App**.
-3. Go to the **Tutorials** tab.
-4. Click **Build a Mobile ToDo app**.
-5. Click **Use this starting point >**.
-6. Enter the app details and click **Create app**.
-7. Open the **Security** settings of your project.
-8. Switch the **Securiy level** to **Off** and click **OK**.
+1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in if you are not already logged in.
 
-![](attachments/create-a-to-do-app/todo-01.jpg)
+    {{% alert type="info" %}}The Mendix Developer Portal is the central starting point for using, sharing, and building apps.{{% /alert %}}
+2. Go to the [Build a Mobile ToDo app](https://appstore.home.mendix.com/link/app/70763/) in the Mendix App Store and click **Download**.
+3. Open the app project with the Mendix **VersionSelector**. Note that this tutorial was created with Desktop Modeler 7.3.0.
+4. Choose a directory for extracting the app project package.
+5. If the **Version Not Found** dialog box opens, select the Desktop Modeler version with which you want to open the app project (it is best to use the latest version you have installed), and click **Open with selected Modeler version**. When the Desktop Modeler opens, select **Convert in-place** for the app project to open in your selected Modeler version.
+6. Open **Project** > **Security** to update the security settings of your app project.
+7.  Switch the **Security level** to **Off** and click **OK**.
+
+    ![](attachments/create-a-to-do-app/todo-01.jpg)
 
 {{% alert type="warning" %}}
 
@@ -50,7 +51,9 @@ Follow these steps to create a new module where you can add the to-do implementa
 2. Click **Add module** and give it the name **ToDo**.
 
 ## 5 Creating the Domain Model
+
 The domain model is a data model that describes the information in your application domain in an abstract way.
+
 The domain model for the to-do app will be pretty simple. It'll contain one entity with three attributes. Follow these steps to create the entity and attributes:
 
 1. Open the **Domain Model** in the **ToDo** module.

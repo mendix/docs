@@ -273,6 +273,6 @@ When you click **Run**, the **Monitoring / Results** page will open.
 
 Once your test case is executed, the result is shown here. For more information on results, see [Monitoring](../refguide-ats-1/monitoring).
 
-Now you finished the getting started guide for ATS. Please check our [how-to's](../howtos/index) and [best practice](../bestpractices/index) for more information.
+You have now finished the getting started guide for ATS. Please check the [how-to's](../howtos/index) and [best practices](../bestpractices/index) for more information.
 
-Good luck testing your Mendix App with ATS!
+Good luck testing your Mendix app with ATS!

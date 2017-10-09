@@ -1,6 +1,6 @@
 ---
 title: "Guidelines for Creating a Custom Action"
-parent: "version-1"
+parent: "bp-version-1"
 ---
 
 For a details on custom actions, please see [Custom Actions](../refguide-ats-1/custom-actions) in the ATS Reference Guide 1.

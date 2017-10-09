@@ -1,6 +1,6 @@
 ---
 title: "Finding the Action you Need"
-parent: "version-1"
+parent: "bp-version-1"
 ---
 
 This document explains the best way for finding the action you need in ATS. This is done by using six main categories for what you are trying to achieve. Each category explains the generic solution and the widget specific solutions using examples.

@@ -38,7 +38,7 @@ For more information, see [W3Cschools](https://www.w3schools.com/html/default.as
 
 ## 6 ATS Selectors
 
-The how-to's use jQuery selectors to find elements in the browser. Next to the standard jQuery selectors, ATS also uses pseudo-selectors. You can find these pseudo-selectors in the [ATS Selector](/ats/refguide-ats-1/selectors) documentation.
+The how-to's use jQuery selectors to find elements in the browser. Next to the standard jQuery selectors, ATS also uses pseudo-selectors. You can find these pseudo-selectors in the [ATS Selector](/ats/ats/refguide-ats-1/selectors) documentation.
 
 For more information on selectors, see [Helpful Resources](custom-action-helpful-resources).
 

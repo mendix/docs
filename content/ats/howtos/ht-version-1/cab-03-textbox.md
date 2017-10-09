@@ -58,7 +58,7 @@ To create the action structure, follow these steps:
 
     ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-childelement-input-debugger.png)
 
-    When you create a custom action for an unsupported widget action, you must use the [Find Widget Child Node](/refguide-ats-1/find-widget-child-node) action. This action is a combination of the [Find/Assert Widget](/refguide-ats-1/findassert-widget) and [Find Element by Sizzle](/refguide-ats-1/find-element-by-sizzle) actions, combining the best of both. It is an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible. The selector for finding the input element is an input. You use this selector in the Find Widget Child Node action to find an input element inside the text box widget.
+    When you create a custom action for an unsupported widget action, you must use the [Find Widget Child Node](/ats/refguide-ats-1/find-widget-child-node) action. This action is a combination of the [Find/Assert Widget](/ats/refguide-ats-1/findassert-widget) and [Find Element by Sizzle](/ats/refguide-ats-1/find-element-by-sizzle) actions, combining the best of both. It is an official Mendix action, it has all the internal processes, and it uses a CSS/jQuery selector to find the child, which makes it flexible. The selector for finding the input element is an input. You use this selector in the Find Widget Child Node action to find an input element inside the text box widget.
 
     Before you start creating the action, you must know if ATS can find the `input` element within the text box widget. You use the debugger to simulate what ATS does. Since the Find Widget Child Node action uses the `mx-name` to find the parent, you must also use the `mx-name` in your code.
 
@@ -76,7 +76,7 @@ To create the action structure, follow these steps:
 
     ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-focusclearelementvalue-add.png)
 
-6.  After focusing the `input` element, enter the text. When entering text in an `input` element, use the [Send Keys](/refguide-ats-1/send-keys) action. Add the action, connect the input element from step 1, and give it a proper description:
+6.  After focusing the `input` element, enter the text. When entering text in an `input` element, use the [Send Keys](/ats/refguide-ats-1/send-keys) action. Add the action, connect the input element from step 1, and give it a proper description:
 
     ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-sendkeys-add.png)
 
@@ -84,7 +84,7 @@ To create the action structure, follow these steps:
 
     ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-unfocuswebelement-add.png)
 
-8.  The last action you add is [Mendix Wait](/refguide-ats-1/mendix-wait). You trigger a possible event in the widget by entering text, so you need to ensure that ATS waits for all the background processes to finish:
+8.  The last action you add is [Mendix Wait](/ats/refguide-ats-1/mendix-wait). You trigger a possible event in the widget by entering text, so you need to ensure that ATS waits for all the background processes to finish:
 
     ![](attachments/create-unsupported-widget/cab-03-textbox/text-box-mendix-wait.png)
 

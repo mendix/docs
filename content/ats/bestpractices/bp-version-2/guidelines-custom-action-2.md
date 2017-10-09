@@ -1,14 +1,14 @@
 ---
 title: "Guidelines for Creating a Custom Action"
-parent: "version-2"
+parent: "bp-version-2"
 ---
 
-For a details on custom actions, please see [Custom Actions](../refguide-ats-1/custom-actions) in the ATS Reference Guide 1.
+For a details on custom actions, please see [Custom Actions](/refguide/rg-version-1/custom-actions) in the ATS Reference Guide 1.
  
 These are the definitions of Mendix actions and Core actions:
 
-* Mendix actions are a combination [Mendix actions](../refguide-ats-1/mendix-actions) and [Mendix App Store widget actions](../refguide-ats-1/mendix-appstore-widgets-actions)
-* Core actions are a combination of [ATS Core actions](../refguide-ats-1/ats-core-actions) and [Selenium actions](../refguide-ats-1/selenium-actions)
+* Mendix actions are a combination [Mendix actions](/refguide/rg-version-1/mendix-actions) and [Mendix App Store widget actions](/refguide/rg-version-1/mendix-appstore-widgets-actions)
+* Core actions are a combination of [ATS Core actions](/refguide/rg-version-1/ats-core-actions) and [Selenium actions](/refguide/rg-version-1/selenium-actions)
 
 {{% alert type="info" %}}
 
@@ -26,15 +26,15 @@ Always try to use a Mendix action first. This table explains why you should use 
 | Visibility checks | A Mendix action only searches for elements that are _visible_. |
 | Browser support | A Mendix action always works in the supported browser. |
 | Mendix support | A Mendix action always works on the latest version of Mendix. |
-| Waiting for background processes | A Mendix action waits untill the Mendix app is finished rendering. This aspect is also covered by the [Mendix Wait](../refguide-ats-1/mendix-wait) action.<br> |
+| Waiting for background processes | A Mendix action waits untill the Mendix app is finished rendering. This aspect is also covered by the [Mendix Wait](/refguide/rg-version-1/mendix-wait) action.<br> |
 
 However, there are reasons not to use the Mendix actions. For example, sometimes a custom action can get too complex using a Mendix action, because of the input parameters that are required. For example, when using a Mendix action, you have six input parameters:
 
-![](version-2/attachments/guidelines-custom-action-2/mendix-action-input-parameters.png)
+![](attachments/guidelines-custom-action-2/mendix-action-input-parameters.png)
 
 But when you use a Core action, you have four input parameters: 
 
-![](version-2/attachments/guidelines-custom-action-2/core-action-input-parameters.png)
+![](attachments/guidelines-custom-action-2/core-action-input-parameters.png)
 
 The difference is because of the required **Widget Name** input parameter in a Mendix action. When you use a Core action, this is not always required. So if you don't need the widget name, a Core action is a better solution. This is a valid reason to use the Core actions; otherwise, the custom action is not user-friendly.
 
@@ -44,7 +44,7 @@ Only use items that are visually present on the page, like the text inside a cer
 
 This is a visual component:
 
-![](version-2/attachments/guidelines-custom-action-2/visual-component-widget.png)
+![](attachments/guidelines-custom-action-2/visual-component-widget.png)
 
 {{% alert type="info" %}}
 
@@ -59,7 +59,7 @@ When building a custom action, always think about what the user does. In additio
 Some examples of questions you should ask yourself are:
 
 * How do I find the widget using visual components?
-* How do I trigger an event? (Clicking, entering text, etc.)
+* How do I trigger an event? (click, enter text, etc.)
 
 Another example is with a check box. Do not set it using the JavaScript check function, but click it, because that's what a user would do. If you want to set the check box based on its current state, use the precondition and the click action. By doing this, you invest time in a more complex solution to save time later.
 
@@ -73,7 +73,7 @@ Try to find the generic aspect of the child node. In most cases, the `mx-name-` 
 
 This is the `mx-name` in the debugger:
 
-![](version-2/attachments/guidelines-custom-action-2/mx-name-in-debugger.png)
+![](attachments/guidelines-custom-action-2/mx-name-in-debugger.png)
 
 {{% alert type="info" %}}
 
@@ -87,9 +87,9 @@ When using core actions to trigger an event, always use a Mendix Wait action aft
 
 This is the Mendix Wait action:
 
-![](version-2/attachments/guidelines-custom-action-2/mendix-wait-action.png)
+![](attachments/guidelines-custom-action-2/mendix-wait-action.png)
 
-For more information, please see [Mendix wait](../refguide-ats-1/mendix-wait).
+For more information, please see [Mendix wait](/refguide/rg-version-1/mendix-wait).
 
 {{% alert type="info" %}}
 
@@ -99,7 +99,7 @@ This guideline does not apply to the Search Context action, since it does not tr
 
 ## 6 Action Parameters
 
-When defining action parameters, always use the ATS [naming conventions](../refguide-ats-1/best-practices).
+When defining action parameters, always use the ATS [naming conventions](/refguide/rg-version-1/best-practices).
 
 In addition, include the optional input parameters in the action parameters for an unsupported widget action.
 
@@ -119,9 +119,9 @@ These are some of the most used action parameters:
 
 These are the three most used action parameters:
 
-![](version-2/attachments/guidelines-custom-action-2/standard-input-parameters.png)
+![](attachments/guidelines-custom-action-2/standard-input-parameters.png)
 
-![](version-2/attachments/guidelines-custom-action-2/standard-input-parameters-2.png)
+![](attachments/guidelines-custom-action-2/standard-input-parameters-2.png)
 
 Last but not least, give a description to the action parameters especially, when it requires specific information. You can also give a generic example of what the user should enter, making it more user-friendly.
 
@@ -139,7 +139,7 @@ In addition, describe the output of each test step to make it easier to understa
 
 This is an example:
 
-![](version-2/attachments/guidelines-custom-action-2/describe-teststeps-define-output.png)
+![](attachments/guidelines-custom-action-2/describe-teststeps-define-output.png)
 
 ## 8 Data Type Awareness
 
@@ -161,13 +161,13 @@ These are the different data types in ATS:
 | Float | **The Float type is deprecated and should not be used.** | N/A |
 | Currency | **The Currency type is deprecated and should not be used** | N/A |
 
-![](version-2/attachments/guidelines-custom-action-2/datatype-web-element.png)
+![](attachments/guidelines-custom-action-2/datatype-web-element.png)
 
 The JavaScript actions have three different versions, based on the data types:
 
-* [Execute Javascript Integer](../refguide-ats-1/execute-javascript-integer)
-* [Execute Javascript String](../refguide-ats-1/execute-javascript-string)
-* [Execute Javascript WebElement](../refguide-ats-1/execute-javascript-webelement)
+* [Execute Javascript Integer](/refguide/rg-version-1/execute-javascript-integer)
+* [Execute Javascript String](/refguide/rg-version-1/execute-javascript-string)
+* [Execute Javascript WebElement](/refguide/rg-version-1/execute-javascript-webelement)
 
 They all produce outputs based on their data type. This means that you cannot return a string inside the Execute Javascript web element action.
 

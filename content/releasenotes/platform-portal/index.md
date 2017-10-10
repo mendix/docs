@@ -19,7 +19,7 @@ title: "Platform Portal"
 
 #### Improvements
 
-* Deployments with almost no downtime: It is now possible to deploy a different version without stopping a running application. Once the deployment is done, you can restart the application with a single click. This is available for Mendix Cloud v4. For Mendix Cloud v3 the same will be also possible soon.
+* Deployments with almost no downtime: It is now possible to deploy a different version without stopping a running application. Once the deployment is done, you can restart the application with a single click. This is now available for Mendix Cloud v4. For Mendix Cloud v3, this will be available soon.
 * Improved the robustness of the Deploy API: Occasional failures that occured while starting/stopping an environment via the Deploy API no longer occur.
 * Improved the stability for transporting deployment packages for Asia-Pacific users for Mendix Cloud v4.
 * Environment health indicators for your environments are now much more accurate.

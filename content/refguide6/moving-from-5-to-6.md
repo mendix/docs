@@ -39,9 +39,13 @@ Fix errors and warnings as far as possible. Take special note of the 'Deprecatio
 
 Fix deprecations in your Java actions by importing your project in Eclipse and solving all the deprecations in the "Problems" tab. For details of the removed and deprecated APIs, see the section "Removed features" of the [Mendix 6.0.0 release notes](/releasenotes/desktop-modeler/6.0).
 
+### Double check project changes
+
+Verify that during migration steps listed above, no modules are replaced by removing and importing the module again. This operation by design insructs Mendix Modeler to delete whole module and create it again and leads to empty entities and assicoations after migration has been finished. 
+
 ### Converting!
 
-Now you are ready to convert. Simply open your project in the new Mendix Modeler. There are no explicit actions required after opening your Mendix 5 project in Mendix 6.
+Now you are ready to convert. Simply open your project in the new Mendix Modeler. There are no explicit actions required after opening your Mendix 5 project in Mendix 6. When you deloy your app from Mendix Modeler, double check all the domain model changes in the synchronization dialog in order to avoid unexpected modifications. 
 
 ## Java 8 required
 

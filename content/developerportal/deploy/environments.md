@@ -113,7 +113,6 @@ This section shows the following activity types:
 Activity Type | Explanation
 ------------ | -------------
 Backup Created | A backup has been manually created.
-Backup Expired | A backup has been expired after its expiration period.
 Backup Restore Started | A backup restore has been manually started.
 Backup Restored | The backup restore has been restored.
 Clean | The environment has been cleaned.

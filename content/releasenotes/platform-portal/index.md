@@ -8,7 +8,7 @@ title: "Platform Portal"
 
 #### Improvements
 
-* We removed the Backup Expiry entries from the activity logs for all applications in the Mendix Cloud, as we found they cluttered the overview and did not provide any useful information to users.
+* We removed the backup expiry entries from the activity logs for all applications in the Mendix Cloud, as we found they cluttered the overview and did not provide any useful information to users.
 
 ### September 29th, 2017
 

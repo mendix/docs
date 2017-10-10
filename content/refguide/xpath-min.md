@@ -3,9 +3,13 @@ title: "XPath min"
 parent: "xpath-query-functions"
 ---
 
-
 The min()-function returns the minimum value of its argument.
-This function requires an XPath query as argument. The query must specify an attribute that has a numeric type.
+
+The function requires an XPath query as argument.
+
+The function must specify a column in the query to aggregate.
+
+The query must specify an attribute that has a numeric type.
 
 {{% alert type="info" %}}
 

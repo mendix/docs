@@ -113,7 +113,6 @@ This section shows the following activity types:
 Activity Type | Explanation
 ------------ | -------------
 Backup Created | A backup has been manually created.
-Backup Expired | A backup has been expired after its expiration period.
 Backup Restore Started | A backup restore has been manually started.
 Backup Restored | The backup restore has been restored.
 Clean | The environment has been cleaned.
@@ -127,7 +126,7 @@ MDA Uploaded | An *.mda* file has been uploaded.
 Started Manually | The application has been started manually.
 Stopped Manually | The application has been stopped manually.
 Technical Contact Changed | The Technical Contact has been changed.
-Transportation | A new deployment package has been transported to an enviornment.
+Transportation | A new deployment package has been transported to an environment.
 
 ## 3 Custom Domain
 

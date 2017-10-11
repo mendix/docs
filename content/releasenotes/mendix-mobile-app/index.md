@@ -8,7 +8,7 @@ toc-level: 1
 The known issues are described in [Mendix Mobile App Known Issues](mendix-mobile-known-issues).
 {{% /alert %}}
 
-## 4.4.1 (iOS only)<a name="RN441">
+## 4.4.1 (iOS only)<a name="RN441"></a>
 
 **Release date: October 2nd, 2017**
 

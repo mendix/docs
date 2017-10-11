@@ -1,6 +1,6 @@
 ---
 title: "Mendix Mobile App"
-description: "These are the release notes for the Mendix mobile app.
+description: "These are the release notes for the Mendix mobile app."
 toc-level: 1
 ---
 

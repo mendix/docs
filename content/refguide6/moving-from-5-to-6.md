@@ -3,69 +3,70 @@ title: "Moving from 5 to 6"
 category: "General"
 ---
 
+## 1 Introduction
 
-Please read the [Release Notes](/releasenotes/) to see what new major improvements we added in Mendix 6.
+Please read the [Release Notes](/releasenotes/) about the major improvements we added in Mendix 6.
 
-This documentation aims to help you to update your project from Mendix 5 to Mendix 6\. It contains the following topics:
+This documentation aims to help you to update your project from Mendix 5 to Mendix 6. It contains the following topics:
 
-*   [Converting your project](moving-from-5-to-6): preparing for conversion and actually converting your project to Mendix 6.
-*   [Java 8 required](moving-from-5-to-6): from Mendix 6 on Java 8 is required to run your applications.
-*   [Deprecated features](moving-from-5-to-6): see which platform features have been deprecated in Mendix 6.
-*   [Removed deprecated functionality](moving-from-5-to-6): see which features which were deprecated in Mendix 4 have been removed in Mendix 6.
+* [Converting your project](moving-from-5-to-6) – preparing for conversion and actually converting your project to Mendix 6
+* [Java 8 required](moving-from-5-to-6) – starting with Mendix 6, Java 8 is required to run your applications
+* [Deprecated features](moving-from-5-to-6) – see which platform features have been deprecated in Mendix 6
+* [Removed deprecated functionality](moving-from-5-to-6) – see the features deprecated in Mendix 4 that have been removed in Mendix 6
 
-## Converting your project
+## 2 Converting Your Project
 
-Before converting your project we advise you to look at the following points.
+Before converting your project, please read the sections below.
 
-### Backup Project
+### 2.1 Backing Up Your Project
 
-If you are not using the team server, make a backup of your project. Check that the backup was successful by opening the project.
+If you are not using the Team Server, make a backup of your project. Check that the backup was successful by opening the project.
 
-{{% alert type="success" %}}
+{{% alert type="warning" %}}
 
-Really make a backup!
+Really, make a backup!
 
 {{% /alert %}}
 
-### Convert to version 5.18.0 or newer
+### 2.2 Converting to Version 5.18.0 or Higher
 
-Conversion to Mendix 6 will only work for projects created with version 5.18.0 or newer. However, we advise to convert to the latest 5.x version before converting to Mendix 6\. At the time of writing this is 5.21.0.
+Conversion to Mendix 6 will only work for projects created with version 5.18.0 or higher. However, converting to the latest 5.x version before converting to Mendix 6 is recommended (at the time of writing, this is 5.21.8).
 
-### Fix errors and warnings
+### 2.3 Fixing Errors and Warnings
 
-Fix errors and warnings as far as possible. Take special note of the 'Deprecations' in the Errors dock. Most features that are deprecated in Mendix 5 will be completely gone in Mendix 6, and will result in an error in your project.
+As much as possible, you should fix errors and warnings. Take special note of the "Deprecations" in the **Errors** pane. Most features that are deprecated in Mendix 5 will be completely gone in Mendix 6, and those will result in errors in your project.
 
-### Fix deprecations in Java actions
+### 2.4 Fixing Deprecations in Java Actions
 
-Fix deprecations in your Java actions by importing your project in Eclipse and solving all the deprecations in the "Problems" tab. For details of the removed and deprecated APIs, see the section "Removed features" of the [Mendix 6.0.0 release notes](/releasenotes/desktop-modeler/6.0).
+Fix deprecations in your Java actions by importing your project into Eclipse and solving all the deprecations in the **Problems** tab. For details on the removed and deprecated APIs, see "Removed Features" section of the [Mendix 6.0.0 release notes](/releasenotes/desktop-modeler/6.0).
 
-### Double check project changes
+### 2.5 Double Checking the Project Changes
 
-Verify that during migration steps listed above, no modules are replaced by removing and importing the module again. This operation by design insructs Mendix Modeler to delete whole module and create it again and leads to empty entities and assicoations after migration has been finished. 
+Verify that during the migration steps listed above, no modules are replaced by removing and importing the module again. By design, this operation instructs the Desktop Modeler to delete a whole module and create it again, which leads to empty entities and associations after the migration is finished. 
 
-### Converting!
+### 2.6 Converting!
 
-Now you are ready to convert. Simply open your project in the new Mendix Modeler. There are no explicit actions required after opening your Mendix 5 project in Mendix 6. When you deloy your app from Mendix Modeler, double check all the domain model changes in the synchronization dialog in order to avoid unexpected modifications. 
+Now you are ready to convert by simply opening your project in the new Desktop Modeler. There are no explicit actions required after opening your Mendix 5 project in Mendix 6. When you deloy your app from the Desktop Modeler, double check all the domain model changes in the synchronization dialog box in order to avoid unexpected modifications.
 
-## Java 8 required
+## 3 Java 8 Required
 
-From Mendix 6 on, it is required to use Java 8 instead of Java 7 to run your applications.
+From Mendix 6 on, using Java 8 instead of Java 7 is required to run your applications.
 
-## Deprecated features
+## 4 Deprecated Features
 
-The following features have been deprecated in Mendix 6\. Using these features is discouraged, since they will be removed in a future release of Mendix.
+The features listed below have been deprecated in Mendix 6. Using these features is discouraged, since they will be removed in a future release of Mendix.
 
-*   The data types Float and Currency have been deprecated in favor of the high-precision Decimal type. This includes all microflow expression functions that operate on those types, i.e. 'currenciesEqual', 'floatsEqual', 'toFloat', 'formatFloat' and 'parseFloat'.
-*   The specification of project-level access rules for the File and Image system entities has been deprecated. Instead create a specialized entity for each use case and configure access rules for those entities.
-*   With the introduction of cluster support for Mendix Runtime, Java API to store objects into the session have been deprecated. This includes ISession.retain(), ISession.release() and ISession.getData() methods. The alternative solution is to store objects by associating them to System.Session entity. See [custom session data](isession-api-usage) for more information and an example.
+* The float and currency data types have been deprecated in favor of the high-precision decimal type. This includes all microflow expression functions that operate on those types (for example, `currenciesEqual`, `floatsEqual`, `toFloat`, `formatFloat`, and `parseFloat`).
+* The specification of project-level access rules for the file and image system entities has been deprecated. Instead, you should create a specialized entity for each use case and configure access rules for those entities.
+* With the introduction of cluster support for Mendix Runtime, the Java API for storing objects in the session has been deprecated. This includes the `ISession.retain()`, `ISession.release()`, and `ISession.getData()` methods. The alternative solution is to store objects by associating them to the `System.Session` entity. For more information and an example, see [Custom Session Data](isession-api-usage).
 
-## Removed deprecated functionality
+## 5 Removed Deprecated Functionality
 
-Features deprecated in Mendix 4 have been removed in Mendix 6\. These steps will help you upgrade your existing project and the custom widgets you might have written.
+Features deprecated in Mendix 4 have been removed in Mendix 6. The sections below will help you to upgrade your existing project and the custom widgets you might have written.
 
-### Client
+### 5.1 Client
 
-Below is a list of namespaces which were renamed. This is only relevant if you wrote custom widgets.
+Below is a list of namespaces that were renamed. This is only relevant if you wrote custom widgets.
 
 | Removed | Replacement |
 | --- | --- |
@@ -75,7 +76,7 @@ Below is a list of namespaces which were renamed. This is only relevant if you w
 | mendix.widget | mxui/widget |
 | mobile.dom | mxui/dom |
 
-Besides namespaces quite a few methods are removed. Look at the [client documentation](https://apidocs.mendix.com/6/client/) on how to use the new APIs.
+Quite a few methods are removed. For details on how to use the new APIs, see the [Client Documentation](https://apidocs.mendix.com/6/client/).
 
 | Removed | Replacement |
 | --- | --- |

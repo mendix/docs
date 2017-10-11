@@ -4,9 +4,9 @@ category: "Mendix Mobile App"
 toc-level: 1
 ---
 
-## Mendix Mobile App
-
+{{% alert type="info" %}}
 For details on each release, see [Mendix Mobile App Release Notes](index).
+{{% /alert %}}
 
 ## Known Issues
 

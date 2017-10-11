@@ -1,11 +1,11 @@
 ---
-title: "Mendix Mobile"
-description: "Mendix Mobile release notes."
+title: "Mendix Mobile App"
+description: "These are the release notes for the Mendix mobile app.
 toc-level: 1
 ---
 
 {{% alert type="info" %}}
-The known issues are described in [Mendix Mobile Known Issues](mendix-mobile-known-issues).
+The known issues are described in [Mendix Mobile App Known Issues](mendix-mobile-known-issues).
 {{% /alert %}}
 
 ## 4.4.1 (iOS only)
@@ -14,7 +14,7 @@ The known issues are described in [Mendix Mobile Known Issues](mendix-mobile-kno
 
 ### Bug fixes
 
-* We fixed support for iOS 11: loading a Mendix hybrid app (for example, by using the QR scanner or from the apps page) caused the app to crash. This issue has been resolved.
+* We fixed support for iOS 11: loading a Mendix hybrid app (for example, by using the QR scanner or from the Apps page) caused the Mendix mobile app to crash. This issue has been resolved.
 
 ## 4.4.0
 
@@ -23,7 +23,7 @@ The known issues are described in [Mendix Mobile Known Issues](mendix-mobile-kno
 ### New functionality
 
 * You'll now see a few introductory slides when you use the app for the first time.
-* The apps screen now contains an overview of recently opened hybrid apps.
+* The Apps screen now contains an overview of recently opened hybrid apps.
 
 ### Improvements
 

@@ -18,6 +18,12 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ## 2017
 
+### October 11th, 2017 (1.4.0 / 1.3.0)
+
+* This release improves support for the PIN login feature.
+  * We improved support for switching users in combination with the PIN login feature.
+  * We fixed an issue with the remaining session data.
+
 ### September 25th, 2017 (1.3.0 / 1.3.0)
 
 * Based on feedback from the community, we decided to iterate on the command set that's at your disposal while building your Mendix hybrid mobile app. Please refer to the [README](https://github.com/mendix/hybrid-app-template/blob/master/README.md) for instructions on how to use the updated commands.

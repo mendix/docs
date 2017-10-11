@@ -20,9 +20,9 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ### October 11th, 2017 (1.4.0 / 1.3.0)
 
-* This release improves support for the PIN login feature
-  * Improved support for switching users in combination with the PIN login feature
-  * Fix an issue with remaining session data
+* This release improves support for the PIN login feature.
+  * We improved support for switching users in combination with the PIN login feature.
+  * We fixed an issue with the remaining session data.
 
 ### September 25th, 2017 (1.3.0 / 1.3.0)
 

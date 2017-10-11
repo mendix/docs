@@ -14,7 +14,7 @@ The known issues are described in [Mendix Mobile Known Issues](mendix-mobile-kno
 
 ### Bug fixes
 
-* Support for iOS 11: Loading Mendix hybrid apps (e.g. using the QR scanner or from the apps page) could cause the app to crash. This issue has been resolved.
+* We fixed support for iOS 11: loading a Mendix hybrid app (for example, by using the QR scanner or from the apps page) caused the app to crash. This issue has been resolved.
 
 ## 4.4.0
 

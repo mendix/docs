@@ -3,7 +3,7 @@ title: "Getting the Mendix Mobile App"
 parent: "developing-hybrid-mobile-apps"
 ---
 
-The Mendix mobile app is a free app that allows you to collaborate with your app project team and test the apps you develop with Mendix on your device.
+The **Mendix** mobile app is a free app that allows you to collaborate with your app project team and test the apps you develop with Mendix on your device.
 
 You can get the Mendix mobile app on your mobile device by downloading it from your device's app store. You will need to do this once for every device you're developing on.
 

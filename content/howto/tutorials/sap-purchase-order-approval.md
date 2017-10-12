@@ -125,7 +125,7 @@ To add an **Approve** button to the home page, follow these steps:
 
 3. Right-click in the snippet area and select **Add widget** > **Button** > **Call microflow button**. Microflows consist of microflow actions, which trigger basic operations such as creating, changing, and deleting objects as well as aggregating object lists and showing messages.
 
-4. In the **Select Microflow** dialog window, click **New** to create a new microflow and enter *ACT_OpenApprovalDialog* for the **Name**. For details on Mendix naming convention best practices, see [Mendix Development Best Practices](https://docs.mendix.com/howtogeneral/bestpractices/dev-best-practices).
+4. In the **Select Microflow** dialog window, click **New** to create a new microflow and enter *ACT_OpenApproveDialog* for the **Name**. For details on Mendix naming convention best practices, see [Mendix Development Best Practices](https://docs.mendix.com/howtogeneral/bestpractices/dev-best-practices).
 5. Select the button you just created and change the **Caption** to *Approve*.
 6. In the Properties pane on the right, change the **Button Style** to *Success*.<br>
 
@@ -142,7 +142,7 @@ Nice work. Continue below for creating business logic in the microflow so the ap
 
 Follow these steps to create some simple logic to open the approval dialog pop-up.
 
-1. Search (using <kbd>Ctrl</kbd> + <kbd>G</kbd>) for **ACT_OpenApprovalDialog**, select it, and click **Go to**. This is the microflow you added in chapter 6.
+1. Search (using <kbd>Ctrl</kbd> + <kbd>G</kbd>) for **ACT_OpenApproveDialog**, select it, and click **Go to**. This is the microflow you added in chapter 6.
 2. Right-click the line between the green en red dots in the microflow editor and select **Insert > Activity**.
 3. Double-click the new activity, select **Create object** and click **Select**.
 4. In the Create Object dialog, click **Select** and select the **ApproveOptionalText** entity.
@@ -177,7 +177,7 @@ Nice work. You have added business logic to the microflow that will ensure that 
 
 To create a basic approval dialog page, follow these steps:
 
-1. In the **ACT_OpenApprovalDialog** microflow, right-click the **Show page** activity and select **Go to page**.
+1. In the **ACT_OpenApproveDialog** microflow, right-click the **Show page** activity and select **Go to page**.
 2. In the **Properties** for the **ApprovalDialog** page, change the **Title** to *Approve the purchase order?*.
 4. Double-click the **Text** area and:<br>
   a. Set **Placeholder text** to *Add a comment*.<br>

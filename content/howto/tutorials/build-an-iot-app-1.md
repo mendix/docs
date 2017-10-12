@@ -17,7 +17,7 @@ In this how-to, you will first deploy, view, and inspect some details of the Men
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Create a new instance of the **Build a Logistics IoT app** on the [Mendix platform](https://sprintr.home.mendix.com/link/startnewproject) and open it in the Desktop Modeler
+* Create a new instance of the **Build a Logistics IoT app** from the [Mendix App Store](https://sprintr.home.mendix.com/link/startnewproject) and open it in the Desktop Modeler
 
 ## 3 Deploying and Viewing the Logistics IoT App
 

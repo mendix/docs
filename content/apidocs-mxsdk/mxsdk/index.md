@@ -47,7 +47,7 @@ Browse the compiled documentation about the Mendix Metamodel, as well as externa
 
 ## Need Help?
 
-Check whether your question is answered in the [frequently asked questions](faq) section. Otherwise, ask your question in the [Beta Program project](https://sprintr.home.mendix.com/link/project/5d2b2ddb-5cdb-479f-b8de-0bf1e883356a) on the platform or in our [Gitter](https://gitter.im/mendix/mendixplatformsdk) chat room. Check out the technical specifications of the Mendix Platform SDK and Model API.
+Check whether your question is answered in [Frequently Asked Questions](faq). Otherwise, ask your question in the [Mendix Forum](https://forum.mendixcloud.com/index4.html) or in our [Gitter](https://gitter.im/mendix/mendixplatformsdk) chat room. Check out the technical specifications of the Mendix Platform SDK and Model API as well.
 
 If you need help with JavaScript/TypeScript, you can go to our [JavaScript & TypeScript resources](javascript-typescript-resources) page.
 

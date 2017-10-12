@@ -89,6 +89,31 @@ To select the level on which a log node will log messages, follow these steps:
 
 ![](attachments/18448575/18580029.png)
 
+| Log Node | Description
+| --- | --- |
+| ActionManager |
+| AppCloudServices | 
+| Caching |
+| Configuration |
+| ConnectionBus |
+| ConnectionBus_Mapping |
+| ConnectionBus_Queries |
+| ConnectionBus_Retrieve |
+| ConnectionBus_Synchronize |
+| ConnectionBus_Update |
+| ConnectionBus_Validation |
+| Connector |
+| Core | 
+| DeepLink |
+| DocumentExplorer |
+| I18NProcessor |
+| Jetty |
+| Logging | 
+| M2MEE |
+| MicroflowDebugging |
+| Microflow Engine |
+| ModelStore | 
+
 ### 4.3 Configuring Custom Log Levels
 
 To set the level of custom log messages that you have created via a microflow, follow these steps:

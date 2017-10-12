@@ -37,7 +37,7 @@ However, because we provide full read-write access, you can also break the model
 
 When changing these components, make sure to use the [reverse engineering tool](generating-code-from-the-model) to increase your chances of successfully building a script that creates valid models.
 
-## 1.6 What the heck are these "promises" anyway?
+### 1.6 What the heck are these "promises" anyway?
 
 Glad you asked. We put together a page on [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript). We're happy to tell you all about it!
 

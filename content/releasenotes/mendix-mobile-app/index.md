@@ -5,6 +5,13 @@ toc-level: 1
 ---
 
 {{% alert type="info" %}}
+To download the **Mendix** mobile app, select one of the download links below:
+
+* [Download for iOS](https://itunes.apple.com/app/mendix/id458058946?mt=8)
+* [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile)
+{{% /alert %}}
+
+{{% alert type="info" %}}
 The known issues are described in [Mendix Mobile App Known Issues](mendix-mobile-known-issues).
 {{% /alert %}}
 

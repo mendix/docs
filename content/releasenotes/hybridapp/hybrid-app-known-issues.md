@@ -4,18 +4,16 @@ category: "Hybrid App"
 toc-level: 1
 ---
 
-## Hybrid App Base
+## Hybrid App and Hybrid App Template
 
-For details on each release, see [Hybrid App](index).
+{{% alert type="info" %}}
+For details on each release, see [Hybrid App Release Notes](index).
+{{% /alert %}}
 
-### 1.3.0
+### Hybrid App Known Issues
 
 * There are currently no known issues.
 
-## Hybrid App Template
-
-For details on each release, see [Hybrid App](index).
-
-### 1.2.0
+### Hybrid App Template Known Issues
 
 * There are currently no known issues.

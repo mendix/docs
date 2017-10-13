@@ -10,38 +10,42 @@ So you’ve decided to check out your new Mendix Community Profile page, but you
 **This how-to will teach you how to do the following:**
 
 * Set up your Community Profile
-* Merge your accounts
 * Make your profile public
+* Merge your accounts
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Start a Mendix account (register [here](https://www.mendix.com/try-now/))
+* Open a Mendix account (register [here](https://www.mendix.com/try-now/))
 
-## 3 My Public Profile<a name="publicprofile"></a>
+## 3 Editing Your Public Profile<a name="publicprofile"></a>
 
 The first thing you need to do is edit your [Community Profile](https://developer.mendixcloud.com/link/profile) page. To get there, hover over your picture in the right side of the navigation bar and select **MY COMMUNITY PROFILE**.
 
-Your profile will open on the **My Public Profile** tab, which is the main page of your profile with your summary, industry experience, skills, projects, and other details.
+Your profile will open on the **My Public Profile** tab, which is the main page of your profile with your Mendix badges, Mendix points, personal **Summary**, **Industry Experience**, **Skills**, **Project Roles**, **Office Location**, **Activity**, **Projects**, and other details.
 
 ![](attachments/how-to-set-up-your-profile/community-profile.png)
 
 [**Update screenshot**]
 
-When you access your profile page through the **MY COMMUNITY PROFILE** link, it is automatically in edit mode so that you can easily update your profile. To make any edits on your profile, click this icon:
+Your points are located in the upper-left corner of your public profile. The table and chart present the division of your points between various Mendix products and activities. For details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq). And check out the **Leaderboards** tab to see the top Mendix community contributors!
+
+When you access your profile page through the **MY COMMUNITY PROFILE** link, your profile will automatically be in edit mode so that you can easily make updates. 
+
+To edit a field on your profile, click this icon:
 
 ![](attachments/how-to-set-up-your-profile/icon.png)
 
 {{% alert type="info" %}}
 
-If you access your profile via the **Developers** or **Leaderboards** tabs after clicking **Community** > [OUR COMMUNITY](https://developer.mendixcloud.com/link/community) in the navigation bar, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
+If you access your profile by clicking **Community** > [OUR COMMUNITY](https://developer.mendixcloud.com/link/community) in the navigation bar and then finding your profile on the **Developers** or **Leaderboards** tabs, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
 
 ![](attachments/how-to-set-up-your-profile/edit.png)
 
 {{% /alert %}}
 
-You can edit the following header details:
+In the header of your profile, you can edit the following details:
 
 * **Name**
 * **Function**
@@ -59,30 +63,26 @@ In the body of your public profile, you can edit the following elements:
 * **Summary**
 * **Industry Experience**
 * **Skills**
-* **Reviews**
+* **Activity** – the activities for which you have gained Mendix points (for details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq))
 *  **Projects** – for details on adding a project, see [4 Adding a Project](#project)
-
-[**Verify: what are reviews?**]
-
-At each stage of editing your Community Profile and saving your changes, click **View Public Profile** to see how your profile looks:
-
-![](attachments/how-to-set-up-your-profile/make-public.png)
 
 To make your profile public, the following requirements must be met:
 
-* You added an avatar
-* You entered a **Function**
-* You entered a **Location**
-* You entered a **Summary**
-* You added at least 1 skill
-* You added at least 1 industry experience item
-* Confirm if you are looking for a job or project
+* Added an avatar
+* Entered a **Function**
+* Entered a **Location**
+* Confirmed if you are looking for a **job**, a **project**, both, or neither
+* Entered a **Summary**
+* Added at least 1 **Skill**
+* Added at least 1 **Industry Experience** item
 
-[**Verify**]
+[**Verify - all still necessary?**]
+
+Once you have have met those requirements, click **View Public Profile** in the header to see how your public profile looks:
+
+![](attachments/how-to-set-up-your-profile/make-public.png)
 
 ## 4 Adding a Project<a name="project"></a>
-
-[**Edit from Partner Profile**]
 
 To add a project to your Community Profile, click this icon next to **Projects**
 
@@ -94,93 +94,33 @@ This will open the project editor. There are tips in the editor for what you sho
 
 [**Update screenshot if styling changed for buttons/headings**]
 
-All of the fields in the project editor must be filled out before submitting the project. Click **Save** to save and submit your project:
+All of the fields in the project editor must be filled out before submitting the project. 
+
+Click **Save** to save and publish your project:
 
 [**Button to be named Save or Submit? Verify buttons**]
 
 ![](attachments/how-to-set-up-your-profile/save.png)
 
-{{% alert type="warning" %}}
-All projects are reviewed by Mendix Techncial Writers upon submission. After their approval, the project will be shown in the **Published** project section.
-{{% /alert %}}
+## 5 Merging Your Accounts
 
-Published projects are listed in the **Published** projects section, where the following buttons are available for each published project:
-
-![](attachments/how-to-set-up-your-partner-profile/published.png)
-
-* Arrow buttons – moves the project up or down in the list of projects on your Partner Profile's **Projects** tab
-* **View** – opens the published project so you can view it
-* **Edit** – opens the project editor so you can make more edits
-* **Delete** – deletes the project
-
-If you do not want to publish a project right away, click **Save as draft** in the project editor. The project draft will be available in the **Unpublished** projects section for you to finish later where the following buttons are available for each project draft:
-
-![](attachments/how-to-set-up-your-partner-profile/unpublished.png)
-
-* **Edit** – opens the project editor so you can make more edits on the draft
-* **Add Comment** — opens a dialog box where you can add a comment on the project draft; comments can be viewed in the **Unpublished** projects section
-
-    ![](attachments/how-to-set-up-your-partner-profile/project-comment.png)
-
-* **Delete** – deletes the project draft
-
-
-
-
-
-
-
-
-## 6 My Badges
-
-You can view your earned badges on this tab, but you cannot actually change anything here:
-
-![](attachments/how-to-set-up-your-profile/badges.png)
-
-For details on how to earn badges, see [Become True Mendix Blue](https://developer.mendixcloud.com/link/faq).
-
-## 7 Making Your Profile Public<a name="MakingYourProfilePublic"></a>
-
-When you’re done setting up your Community Profile, click the big blue **Make my profile public** button:
-
-![](attachments/how-to-set-up-your-profile/make-public.png)
-
-Make sure you meet all the requirements before making your profile public:
-
-* You added an avatar
-* You entered a **Function**
-* You entered a **Location**
-* You entered a **Summary**
-* You added at least 1 skill
-* You added at least 1 industry experience item
-* Confirm if you are looking for a job or project
-
-## 8 Public Activity
-
-After you make your profile public, a new tab will be available on your public profile called **Public Activity**:
-
-![](attachments/how-to-set-up-your-profile/public_activity.png)
-
-This tab lists the activities for which you have gained Mendix points. For details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq).
-
-## 9 Merging Your Accounts
-
-Since the release of the Community Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your hard-earned points, certifications, and achievements in your efforts to climb the leaderboards.
+With use of the Community Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your hard-earned points, certifications, and achievements in your efforts to climb the leaderboards.
 
 There are five quick and easy steps to merge your accounts:
 
 1. Go to your [Community Profile](https://developer.mendixcloud.com/link/ownprofile/).
-2. Click **Make my profile public** to make your Community Profile public (for more information, see [6 Making Your Profile Public](#MakingYourProfilePublic)).
-3. Click **Account Settings** on the right side of the screen.
-4. Under **Merge your accounts**, enter the email address of the account you want to merge with your current account.
-5. Click the send button to send a merge request.
+2. Click **Account Settings** on the right side of the screen.
+3. Under **Merge your accounts**, enter the email address of the account you want to merge with your current account.
+4. Click the send button to send a merge request.
 
-We’ll take things from there, and the email address of the merged account will be shown in the list when the accounts have been merged:
+We’ll take things from there. The email address of the merged account will be shown in this list when the accounts have been merged:
 
-![](attachments/how-to-set-up-your-profile/MergeAccountsRequestApproved.png)
+![](attachments/how-to-set-up-your-profile/merge.png)
 
 {{% alert type="info" %}}
 
 With this action we only combine the accounts. We don’t deactivate the old account(s). This should be done by that company’s administrator.
 
 {{% /alert %}}
+
+[**Verify whole section**]

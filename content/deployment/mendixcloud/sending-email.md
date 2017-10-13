@@ -8,11 +8,11 @@ You may want to send email from your apps running in the Mendix Cloud via, for i
 |  	| Mendix Cloud v3   	|  Mendix Cloud v4 	|  Free Plan (sandbox) | 
 |---	|---	|---	|---	|	
 |  **Amazon Simple Email Service** 	|   &#x2713; 	|   &#x2713; 	|    &#x2713;	|   
-|   **Gmail**	|    &#x2713;	|    &#x2713;	|    &#x2713;	|   
-|   **MailGun**	|    &#x2713;	|    &#x2713;	|    &#x2713;	|   
-|   **SendGrid**|    &#x2713;	|    &#x2713;	|    &#x2713;	|   
-|   **Other SMTP compatible services**	|    &#x2713;	|   &#x2713; 	|    &#x2713;	|   
-| **Mendix Mail Servers** |    &#x2713;	|   &#x2717;	|   &#x2717;	|  
+|   **Gmail**	 |    &#x2713;	|    &#x2713;	|    &#x2713;	|
+|   **MailGun**	 |    &#x2713;	|    &#x2713;	|    &#x2713;	|
+|   **SendGrid** |    &#x2713;	|    &#x2713;	|    &#x2713;	|
+|   **Other SMTP compatible services**	|    &#x2713;	|   &#x2713; 	|    &#x2713;	|
+| **Mendix Mail Servers** |    &#x2713;	|   &#x2717;	|   &#x2717;	|
 
 In Mendix Cloud v3 we include a local mail server for convenience and backwards compatibility. For new applications, or applications that send large amounts of e-mail we recommend using an external e-mail service.
 
@@ -36,7 +36,7 @@ Frequently used providers (A-Z) are:
 *   [Mandrill](https://www.mandrill.com/) [[settings](http://help.mandrill.com/categories/20090941-SMTP-Integration)]
 *   [SendGrid](https://sendgrid.com/) [[settings](https://support.sendgrid.com/hc/en-us/articles/200328026-Recommended-SMTP-settings)]
 
-Please note that sending email from Mendix Cloud v4 can not happen over port 25, as this port is blocked in our infrastructure. Your SMTP provider needs to expose a secure port like 587, which is a best practice that most modern providers offer out of the box.
+Please note that sending email from Mendix Cloud v4 can not happen over port 25 This port open, however is heavily rate limited by the infrasture provider so you will experience issues. This configuration cannot be changed. Your SMTP provider needs to expose a secure port like 587, which is a best practice that most modern providers offer out of the box.
 
 Many users of our free tier use the settings of their own GMail account for convenience. There are many more email providers, most of which have SMTP compatibility.
 

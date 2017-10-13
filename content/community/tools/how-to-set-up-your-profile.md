@@ -11,43 +11,86 @@ So you’ve decided to check out your new Mendix Community Profile page, but you
 
 * Set up your Community Profile
 * Merge your accounts
-* Make your account public
+* Make your profile public
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have an account with Mendix (register [here](https://www.mendix.com/try-now/))
+* Start a Mendix account (register [here](https://www.mendix.com/try-now/))
 
-## 3 My Community Profile<a name="MyCommunityProfile"></a>
+## 3 My Public Profile<a name="publicprofile"></a>
 
-The first thing you want to check out is your [Community Profile](https://developer.mendixcloud.com/link/profile) page. To get there, mouse over your picture in the navigation bar and click **My Community Profile**. This overview page shows the main page of your profile, including your summary, skills, industry experience, and badges.
+The first thing you need to do is edit your [Community Profile](https://developer.mendixcloud.com/link/profile) page. To get there, hover over your picture in the right side of the navigation bar and select **MY COMMUNITY PROFILE**.
+
+Your profile will open on the **My Public Profile** tab, which is the main page of your profile with your summary, industry experience, skills, projects, and other details.
 
 ![](attachments/how-to-set-up-your-profile/community-profile.png)
 
-When you access your profile page through the My Community Profile link, it is automatically in edit mode so that you can easily update your profile. To add a summary, new skills, industry experience, and links to your social media profiles, click this icon:
+[**Update screenshot**]
+
+When you access your profile page through the **MY COMMUNITY PROFILE** link, it is automatically in edit mode so that you can easily update your profile. To make any edits on your profile, click this icon:
 
 ![](attachments/how-to-set-up-your-profile/icon.png)
 
 {{% alert type="info" %}}
 
-In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information on gaining Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq) and [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation#GainingMendixPoints).
-
-{{% /alert %}}
-
-If you access your profile through the **Developers** or **Leaderboards** tabs of the [Our Community](https://developer.mendixcloud.com/link/community) page, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
+If you access your profile via the **Developers** or **Leaderboards** tabs after clicking **Community** > [OUR COMMUNITY](https://developer.mendixcloud.com/link/community) in the navigation bar, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
 
 ![](attachments/how-to-set-up-your-profile/edit.png)
 
-## 4 Work
+{{% /alert %}}
 
-You can add your Mendix project experience on this page by clicking **Add Project** and filling out the form (with the project name, a description, your role, other developers involved, skills involved, the customer, the industry, the period, and your visibility settings).
+You can edit the following header details:
 
-You can add a screenshot here that will be shown on the **Work** tab and that will be visible to other developers when they visit your Community Profile:
+* **Name**
+* **Function**
+* **Location**
+* **Country**
+* Whether you are looking for a **job**, a **project**, both, or neither
+*   Your social media links (GitHub, Twitter, LinkedIn, and Skype)
 
-![](attachments/how-to-set-up-your-profile/work-tab.png)
+    {{% alert type="info" %}}
+    In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information on gaining Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq) and [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation#GainingMendixPoints).
+    {{% /alert %}}
 
-## 5 My Badges
+In the body of your public profile, you can edit the following elements:
+
+* **Summary**
+* **Industry Experience**
+* **Skills**
+* **Reviews**
+*  **Projects** — to add a new project, click this icon:
+
+    ![](attachments/how-to-set-up-your-profile/add-project.png)
+
+    For details on adding a project, see [4 Adding a Project](#project)
+
+[**Verify: what are reviews?**]
+
+At each stage of editing your Community Profile and saving your changes, click **View Public Profile** to see how your profile looks:
+
+![](attachments/how-to-set-up-your-profile/make-public.png)
+
+To make your profile public, the following requirements must be met:
+
+* You added an avatar
+* You entered a **Function**
+* You entered a **Location**
+* You entered a **Summary**
+* You added at least 1 skill
+* You added at least 1 industry experience item
+* Confirm if you are looking for a job or project
+
+[**Verify**]
+
+## 4 Adding a Project<a name="project"></a>
+
+[**Copy from Partner Profile**]
+
+To add a new project, you 
+
+## 6 My Badges
 
 You can view your earned badges on this tab, but you cannot actually change anything here:
 
@@ -55,7 +98,7 @@ You can view your earned badges on this tab, but you cannot actually change anyt
 
 For details on how to earn badges, see [Become True Mendix Blue](https://developer.mendixcloud.com/link/faq).
 
-## 6 Making Your Profile Public<a name="MakingYourProfilePublic"></a>
+## 7 Making Your Profile Public<a name="MakingYourProfilePublic"></a>
 
 When you’re done setting up your Community Profile, click the big blue **Make my profile public** button:
 
@@ -71,7 +114,7 @@ Make sure you meet all the requirements before making your profile public:
 * You added at least 1 industry experience item
 * Confirm if you are looking for a job or project
 
-## 7 Public Activity
+## 8 Public Activity
 
 After you make your profile public, a new tab will be available on your public profile called **Public Activity**:
 
@@ -79,7 +122,7 @@ After you make your profile public, a new tab will be available on your public p
 
 This tab lists the activities for which you have gained Mendix points. For details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq).
 
-## 8 Merging Your Accounts
+## 9 Merging Your Accounts
 
 Since the release of the Community Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your hard-earned points, certifications, and achievements in your efforts to climb the leaderboards.
 

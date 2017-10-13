@@ -60,11 +60,7 @@ In the body of your public profile, you can edit the following elements:
 * **Industry Experience**
 * **Skills**
 * **Reviews**
-*  **Projects** — to add a new project, click this icon:
-
-    ![](attachments/how-to-set-up-your-profile/add-project.png)
-
-    For details on adding a project, see [4 Adding a Project](#project)
+*  **Projects** – for details on adding a project, see [4 Adding a Project](#project)
 
 [**Verify: what are reviews?**]
 
@@ -86,9 +82,50 @@ To make your profile public, the following requirements must be met:
 
 ## 4 Adding a Project<a name="project"></a>
 
-[**Copy from Partner Profile**]
+[**Edit from Partner Profile**]
 
-To add a new project, you 
+To add a project to your Community Profile, click this icon next to **Projects**
+
+    ![](attachments/how-to-set-up-your-profile/add-project.png)
+
+This will open the project editor. There are tips in the editor for what you should enter in each field:
+
+![](attachments/how-to-set-up-your-partner-profile/project-editor.png)
+
+All of the fields in the project editor must be filled out before submitting the project. Click **Submit** to save and submit your project:
+
+![](attachments/how-to-set-up-your-partner-profile/project-buttons.png)
+
+{{% alert type="warning" %}}
+All projecs are reviewed by Mendix Techncial Writers upon submission. After their approval, the project will be shown in the **Published** project section.
+{{% /alert %}}
+
+Published projects are listed in the **Published** projects section, where the following buttons are available for each published project:
+
+![](attachments/how-to-set-up-your-partner-profile/published.png)
+
+* Arrow buttons – moves the project up or down in the list of projects on your Partner Profile's **Projects** tab
+* **View** – opens the published project so you can view it
+* **Edit** – opens the project editor so you can make more edits
+* **Delete** – deletes the project
+
+If you do not want to publish a project right away, click **Save as draft** in the project editor. The project draft will be available in the **Unpublished** projects section for you to finish later where the following buttons are available for each project draft:
+
+![](attachments/how-to-set-up-your-partner-profile/unpublished.png)
+
+* **Edit** – opens the project editor so you can make more edits on the draft
+* **Add Comment** — opens a dialog box where you can add a comment on the project draft; comments can be viewed in the **Unpublished** projects section
+
+    ![](attachments/how-to-set-up-your-partner-profile/project-comment.png)
+
+* **Delete** – deletes the project draft
+
+
+
+
+
+
+
 
 ## 6 My Badges
 

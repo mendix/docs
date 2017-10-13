@@ -86,18 +86,22 @@ To make your profile public, the following requirements must be met:
 
 To add a project to your Community Profile, click this icon next to **Projects**
 
-    ![](attachments/how-to-set-up-your-profile/add-project.png)
+![](attachments/how-to-set-up-your-profile/add-project.png)
 
 This will open the project editor. There are tips in the editor for what you should enter in each field:
 
-![](attachments/how-to-set-up-your-partner-profile/project-editor.png)
+![](attachments/how-to-set-up-your-profile/project-editor.png)
 
-All of the fields in the project editor must be filled out before submitting the project. Click **Submit** to save and submit your project:
+[**Update screenshot if styling changed for buttons/headings**]
 
-![](attachments/how-to-set-up-your-partner-profile/project-buttons.png)
+All of the fields in the project editor must be filled out before submitting the project. Click **Save** to save and submit your project:
+
+[**Button to be named Save or Submit? Verify buttons**]
+
+![](attachments/how-to-set-up-your-profile/save.png)
 
 {{% alert type="warning" %}}
-All projecs are reviewed by Mendix Techncial Writers upon submission. After their approval, the project will be shown in the **Published** project section.
+All projects are reviewed by Mendix Techncial Writers upon submission. After their approval, the project will be shown in the **Published** project section.
 {{% /alert %}}
 
 Published projects are listed in the **Published** projects section, where the following buttons are available for each published project:

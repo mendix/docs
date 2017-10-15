@@ -11,10 +11,8 @@ This how-to describes the initial steps for automatically testing your applicati
 
 **This how-to will teach you how to do the following:**
 
-* Create a new project
-* Configure your project
+* Configure your App
 * Create a test case
-* Build a test script
 * Create a test suite
 
 ## 2 Prerequisites
@@ -26,50 +24,18 @@ Before starting with this how-to, make sure you have the following prerequisites
 * An application under test (AUT)
 * Selenium hub (for more information on the Selenium options, see [ATS Deployment](/ats/general/deployment))
 
-{{% youtube zJOpO0AymAg %}}
+## 3 Configuring Your App
 
-## 3 Creating a New Project<a name="CreatingNewProject"></a>
+When you log in to ATS, you see the **My Apps** page. An app is a folder in which all the data related to a specific application is saved and managed. You must click your app to gain access to the **test settings**.
 
-When you log in to ATS as a user, you see the **My Projects** page. A project is a folder in which all the data related to a specific application will be saved and managed. Every user can create a new project, and, as its owner, manage other users' access to it. If there are no projects on your account yet, you are prompted to create a new project.
+![](attachments/getting-started-2/my-apps-page.png)
 
-![](attachments/getting-started-2/my-projects.png)
-
-To create a new project, follow these steps:
-
-1. Click **Add project/Create new project**, which opens the *Create new project/library* page:
-
-      ![](attachments/getting-started-2/create-new-project.png)
-
-2.  Enter the following information about your project:
-
-      Field | Description
-      --- | ---
-      **Project type** | Select **Project**.
-      **Name** | Enter a name for your project. You can enter any name, but using the actual name of your application here is advised.
-      **Mendix Project/App ID** | Enter the Mendix project/app ID of the app you want to test, NOT the project ID of ATS! This will give ATS access to your Sprintr and user stories. A project can be created without a Mendix project/app ID, but than you have no access to the Sprintr and user stories.
-      **Mendix API Key** | This is the API key you created in your Sprintr project for ATS.
-      **Project Users** | Enter the people that need access to this project. This project will then appear in their **My Projects** menu. You can always edit this later. There are two different roles for a project user: a **Tester** can only test, create tests, and monitor results; a **Project Administrator** has the same rights as the tester but has also editing rights to the configuration settings of a project.
-      **Action Libraries** | Make sure that the action libraries **Core** and **Mendix** are included. Please note that without libraries, it is not possible to select actions for the test script. For more information on action libraries, see [Standard Actions Reference](/ats/refguide/rg-version-1/standard-actions-reference).
-
-3.  Click **Save & Open** at the bottom of the page to open the **Project Dashboard**.
-
-      ![](attachments/getting-started-2/project-dashboard-empty.png)
-
-## 4 Configuring Your Project
-
+To start configuring your project, click **Configuration** in the navigation bar on the left to open the **Configuration** page. This page contains the **Project**, **Selenium**, and **Applications** tabs.
 {{% alert type="info" %}}
 
 Only the Project Administrator role has the rights to edit the settings in **Configuration**. For a project user, only the Tester can see these settings and not edit them.
 
 {{% /alert %}}
-
-To start configuring your project, click **Configuration** in the navigation bar on the left to open the **Configuration** page. This page contains the **Project**, **Selenium**, and **Applications** tabs.
-
-![](attachments/getting-started-2/configuration-getting-started-2.png)
-
-### 4.1 Project Tab
-
-On the **Project** tab, you can see the current project settings. You can change the settings and add users or libraries to your project by clicking **Edit Project Settings**. For information on project settings, see [3 Creating a New Project](#CreatingNewProject).
 
 ### 4.2 Selenium Tab
 

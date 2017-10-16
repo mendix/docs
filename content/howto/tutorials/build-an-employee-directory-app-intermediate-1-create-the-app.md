@@ -61,7 +61,7 @@ On the left side of the Web Modeler is the main menu. Via the icons in this menu
 
 * **Pages** (for the UI)
 * **Navigation Document** (for the menu)
-* **Domain Models** (for the date structure)
+* **Domain Models** (for the data structure)
 * **Microflows** (for the business logic)
 * **App Settings**
 * **Theme Customizer**
@@ -71,7 +71,7 @@ You can click on the Mendix logo to go back to the **Developer Portal**.
 
 ![](attachments/build-an-employee-directory-app-intermediate/main-menu.png)
 
-The main window of the Web Modeler is you’ll be developing the app by editing pages, microflows, and domain models.
+The main window of the Web Modeler is where you’ll be developing the app by editing pages, microflows, and domain models.
 
 ![](attachments/build-an-employee-directory-app-intermediate/main-window.png)
 

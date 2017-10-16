@@ -176,7 +176,7 @@ To add activities to the microflow, follow these steps:
 
     ![](attachments/18448670/18580802.png) 
     
-11. Repeat steps 1–10 for the **Senior** path. Make sure that you set the level value to **Senior**. The microflow should then look like this:
+11. Repeat steps 1–10 for the **Medior** path. Make sure that you set the level value to **Senior**. The microflow should then look like this:
     
     ![](attachments/18448670/18580801.png)
     

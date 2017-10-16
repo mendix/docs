@@ -39,29 +39,29 @@ To get to a functionality, you have to walk through four different pages. This i
 
 ## 2 Why You Must Not Use Test Case Dependencies
 
-This chapter explains why you must not use dependencies between test cases by defining the impact on your tests. The criteria for a good test case is used. The first example of the first chapter is used, in which there are the two test cases "TC.01 - Create New Expense" and "TC.02 - Delete Expense" but "TC.02" can only be executed after "TC.01."
+This chapter explains why you must not use dependencies between test cases by defining the impact on your tests. The criteria for a good test case is used. The first example of the first chapter is used, in which there are the TC.01 - Create New Expense and TC.02 - Delete Expense test cases, but TC.02 can only be executed after TC.01.
 
-| Aspect       | Consequence of having dependencies |
+| Aspect       | Consequence of Having Dependencies |
 | :----------- | :--------------------------------- |
-| Availability | * If TC.01 is broken or in maintenance, TC.02 is not available. <br> * You also have to run TC.01 first. |
+| Availability | * If TC.01 is broken or in maintenance, TC.02 is not available.<br> * You also have to run TC.01 first. |
 | Speed        | * TC.02 can only run after TC.01 has finished.<br> * TC.01 and TC.02 cannot run parallel. |
 | Reliability  | * If TC.01 is unreliable, then TC.02 is also unreliable. <br> * If you change TC.01, this may affect TC.02. |
 | Precision, <br> Understandability, <br> Analyzability, <br> Lack of ambiguity | * If TC.02 fails, you must test TC.01 and TC.02 for bugs.<br> * If TC.02 fails, the problem may be in TC.01 or TC.02. |
 
-As you see, this does not line up with testing standards, therefore you must not use it. For this same reasons, ATS does not allow data sharing between test cases. In the next section, different options are explained.
+As you see, this does not line up with testing standards; therefore, you must not use it. For this same reason, ATS does not allow data sharing between test cases. In the next section, different options are explained.
 
-## 3 Handle Test Case Dependencies
+## 3 Handling Test Case Dependencies
 
-### 3.1 Course of action
+### 3.1 Course of Action
 
-In the previous chapter, the reasons for not using test case dependencies are explained. You must only accept a dependency if you have a very good reason. When it comes to test case dependencies, follow these steps.
+The previous section explains the reasons for not using test case dependencies. You must only accept a dependency if you have a very good reason. When it comes to test case dependencies, follow these steps.
 
-1. Try to avoid them
-2. Try to get rid of them
-3. Minimize them
-4. Manage them
+1. Try to avoid them.
+2. Try to get rid of them.
+3. Minimize them.
+4. Manage them.
 
-### 3.2 How to deal with Test Case Dependencies.
+### 3.2 How to Deal with Test Case Dependencies
 
 Assuming you want to test a function that depends on a previous execution, like in the TC.01 and TC.02 example, you have three options. The first two options also cover data dependency.
 
@@ -71,7 +71,7 @@ The TC.01 and TC.02 example is used to explain the options.
 2. Option 2 only applies if you have a very long setup routine and the scenarios to test are simple.
 3. You must only use option 3 if 1 and 2 are not possible.
 
-#### 3.2.1 Option 1 - Separate test cases without direct dependency
+#### 3.2.1 Option 1 - Separate Test Cases without Direct Dependency
 
 You create two separate test cases. Example, one test case that creates a new expense and one test case that deletes a new expense.
 
@@ -100,7 +100,7 @@ Against the good test case criteria:
 
 Option 1 is the best option.
 
-#### 3.2.2 Option 2 - Multiple scenarios in one test case
+#### 3.2.2 Option 2 - Multiple Scenarios in One Test Case
 
 This option only applies if you have a very long setup routine and the scenarios are very short. 
 
@@ -119,7 +119,7 @@ Against the good test case criteria:
 | Reliability  | * The more scenarios you put into a single test case less reliable your outcomes will be because there can be side-effects between the scenarios. |
 | Precision, <br> Understandability, <br> Analyzability, <br> Lack of ambiguity | * If the test case fails you always need to check the test log to find out which scenario the cause of this failure is. |
 
-#### 3.2.3 Option 3 - separate test cases with dependency
+#### 3.2.3 Option 3 - Separate Test Cases with Dependency
 
 Option 3 is the last option and you must only use this option if option 1 and option 2 don't work. It doesn't work for data sharing between test cases. 
 
@@ -144,4 +144,3 @@ Because TC.02 depends on the result of TC.01, ATS must execute TC.01 first. To e
 ATS now executes the contents of the test suite based on the order they are in.
 
 The consequences of option 3 are the same as in chapter 2.
-

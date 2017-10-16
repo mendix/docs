@@ -80,9 +80,9 @@ Once you have have met those requirements, click **View Public Profile** in the 
 
 ## 4 Adding a Project<a name="project"></a>
 
-{{% alert type="info" %}}
+{{% alert type="warning" %}}
 All projects published before October 16, 2017 will be in the **Unpublished** status in the edit mode. To improve the quality of the projects and the design of the Community Profile, we have new required fields. Please fill in the empty required fields to publish your project again.
-{{% /warning %}}
+{{% /alert %}}
 
 To add a project to your Community Profile, click this icon next to **Projects**
 
@@ -110,9 +110,9 @@ The project draft will be available in the **Unpublished** projects section for 
 
 ![](attachments/how-to-set-up-your-profile/unpublished.png)
 
-{{% alert type="info" %}}
+{{% alert type="warning" %}}
 Project drafts with empty required fields also appear in the **Unpublished** projects section.
-{{% /warning %}}
+{{% /alert %}}
 
 ## 5 Merging Your Accounts
 

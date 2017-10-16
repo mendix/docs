@@ -3,6 +3,7 @@ title: "Demo Users"
 parent: "project-security"
 ---
 
+## 1 Introduction
 
 In this section of the [project security](project-security) settings, you can define demo users that may be used during the development phase of your application for testing purposes, or to show the application to other people.
 
@@ -20,7 +21,7 @@ After they are created automatically, demo users do not differ in any way from o
 
 {{% /alert %}}
 
-### Enable demo users
+## 2 Enabling Demo Users
 
 Here you can configure whether the specified demo users are created and accessible in the user switcher.
 
@@ -29,20 +30,20 @@ Here you can configure whether the specified demo users are created and accessib
 | Yes | Demo users are enabled. A user switcher is shown in the right margin of your application. |
 | No | Demo users are disabled. The user switcher is not shown in the application. |
 
-## Demo User Properties
+## 3 Demo User Properties
 
-### Username
+### 3.1 Username
 
 The name of the demo user. This name must be unique, and cannot be the same as the name of the [administrator user](administrator).
 
-### Password
+### 3.2 Password
 
 The password of the demo user is created automatically when the demo user is created. It cannot be changed, but it's possible to put a copy of this password on the system clipboard. This makes it possible, for example, to share the credentials of a demo user with someone else.
 
-### Entity
+### 3.3 Entity
 
 The entity of the demo user. This must be the System.User entity, or a specialization thereof.
 
-### User roles
+### 3.4 User Roles
 
 Here you can select the user roles of the demo user. Each demo user must have one or more roles.

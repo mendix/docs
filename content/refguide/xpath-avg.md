@@ -3,9 +3,13 @@ title: "XPath avg"
 parent: "xpath-query-functions"
 ---
 
-
 The avg()-function returns the average of its argument.
-This function requires an XPath query as argument. The query must specify an attribute that has a numeric type.
+
+The function requires an XPath query as argument.
+
+The function must specify a column in the query to aggregate.
+
+The query must specify an attribute that has a numeric type.
 
 {{% alert type="info" %}}
 

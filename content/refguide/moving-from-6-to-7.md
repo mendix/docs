@@ -45,13 +45,17 @@ For details on the removed and deprecated APIs, see the **Breaking changes** sec
 
 ## 3 Converting!
 
-Now you are ready to convert, so simply open your project in the new Mendix Modeler. There are no explicit actions required after opening your Mendix 6 project in Mendix 7.
+Now you are ready to convert, so simply open your project in the new Desktop Modeler. There are no explicit actions required after opening your Mendix 6 project in Mendix 7. When you deloy your app from the Modeler, double check all the domain model changes in the synchronization dialog box in order to avoid unexpected modifications. 
 
 ### 3.1 Upgrading App Store Modules
 
 After the conversion, verify if there is a newer version available of your App Store modules. Some modules need to be upgraded to make them Mendix 7-compatible. Reading the version release notes to see whether specific actions are required is recommended.
 
 In Mendix 7, the App Store modules used in your projects are grouped together in the Modeler. They can be found in **Project Explorer** under **Project** > **App store modules**.
+
+### 3.2 Double Checking Project Changes
+
+Verify that during the migration steps listed above, no modules are replaced by removing and importing the module again. By design, this operation instructs the Desktop Modeler to delete a whole module and create it again, which leads to empty entities and associations after the migration is finished. 
 
 ## 4 Breaking Changes
 

@@ -107,7 +107,7 @@ To add an **Approve** button to the home page, follow these steps:
     ![](attachments/sap-teched-purchase-order-approval/07-button-toolbar-snippet.png)
 
 3. Right-click in the snippet area and select **Add widget** > **Button** > **Call microflow button**. Microflows consist of microflow actions, which trigger basic operations such as creating, changing, and deleting objects as well as aggregating object lists and showing messages.
-4. In the **Select Microflow** dialog box, select the **ACT_OpenApprovalDialog** microflow in the *PurchaseOrdersModel* module. When the user clicks this button, this microflow will therefore be triggered.
+4. In the **Select Microflow** dialog box, select the **ACT_OpenApproveDialog** microflow in the *PurchaseOrdersModel* module. When the user clicks this button, this microflow will therefore be triggered.
 5.  Select the button you just created and in the **Properties** pane on the right (you can open it from the **View** menu if it is not already opened), do the following:<br>
     a.  Change the **Caption** to *Approve*.<br>
     b.  Change the **Button Style** to *Success*.<br>
@@ -125,7 +125,7 @@ Nice work. Continue below by creating the data structure to capture additional a
 
 To create a basic approval dialog page, follow these steps:
 
-1. In the **ACT_OpenApprovalDialog** microflow in the *PurchaseOrdersModel* module, right-click the **Show page** activity you created in the previous section and select **Go to page**.
+1. In the **ACT_OpenApproveDialog** microflow in the *PurchaseOrdersModel* module, right-click the **Show page** activity you created in the previous section and select **Go to page**.
 2. In the **Properties** for the **Approve_Popup** page, change the **Title** to *Approve the purchase order?*.
 3. Double-click the **OK** button to open its properties, change the **Caption** to *Approve*, then click **OK** to close the dialog box.
 4. Run the app locally and view it in your browser.

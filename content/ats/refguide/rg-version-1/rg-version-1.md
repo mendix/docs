@@ -1,5 +1,5 @@
 ---
-title: "ATS Version 1 Reference Guide"
+title: "ATS 1 Reference Guide"
 category: "Reference Guide"
 ---
 

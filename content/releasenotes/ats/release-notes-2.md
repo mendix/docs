@@ -91,11 +91,11 @@ Since the number of possible options is very high, we have made a pre-selection 
 
 Do you practice DevOps on your team? Then you will want to put in place continuous delivery or even continuous deployment. To do so, you need to automate as much as possible, including testing. You need to not only automate the tests, but also the whole process, from triggering the test run to checking the results. With ATS, this is now possible.
 
-We've extended ATS with a new simple API. Via this API, you can run your automated tests from any external tool. A good option for such a tool is Jenkins. We've documented how to set up Jenkins with ATS in a [How-To](ats/howtos/).
+We've extended ATS with a new simple API. Via this API, you can run your automated tests from any external tool. A good option for such a tool is Jenkins. We've documented how to set up Jenkins with ATS in a [How-To](/ats/howtos/).
 
 ### More Changes and Fixes
 
-* There's a completely new [ATS Reference Guide](ats/refguide/) for version 2.0.
+* There's a completely new [ATS Reference Guide](/ats/refguide/) for version 2.0.
 * We've introduced a new setting per app to schedule the cleanup of your execution logs. The default retention time for your logs is 90 days. The last log of a test case is always kept.
 * We've improved the overall performance by optimizing security rules.
 * Drop-down menus are now configured as part of the parameter where they are used. They are no longer considered independent, and are only an option for parameters.

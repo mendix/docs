@@ -3,50 +3,52 @@ title: "Test Case Dependencies"
 parent: "bp-version-2"
 ---
 
-This document explains the best way of handling test case dependencies within ATS. It also describes what a test case dependency is.
+This document describes what a test case dependency is  and explains the best way of handling test case dependencies within ATS.
 
-## 1 What is a Test Case Dependency?
+## 1 What Is a Test Case Dependency?
 
-A test case dependency exists in a situation where the behavior or outcome of one test cases depends on the preceding execution or result of another test case.
+A test case dependency exists in a situation where the behavior or outcome of one test case depends on the preceding execution or result of another test case.
 
-Two examples to explain the definition. 
+Here are two examples to explain the definition. 
 
-1. Example,
-You have a test case that creates a new expense in the company expenses app. It creates the new expense using a random number in the amount field and a random string for the description field. 
+### 1.1 Example 1
 
-_The fields in the app_
+You have a test case that creates a new expense in the company expenses app. It creates the new expense using a random number in the **Amount** field and a random string for the **Description** field. 
+
+These are the fields in the app:
 
 ![](attachments/test-case-dependencies-2/amount-and-description-field.png)
 
-_TC.01 - Create New Expense_
+This is the **TC.01 - Create New Expense** screen:
 
 ![](attachments/test-case-dependencies-2/random-number-and-random-string.png)
 
-The test case creates a new expense with values that you don't know upfront. ATS does not allow sharing values between test cases, in other words, it does not allow any dependencies between test cases. 
+The test case creates a new expense with values that you don't know upfront. ATS does not allow for the sharing of values between test cases, meaning, it does not allow for any dependencies between test cases. 
 
 You have another test case that deletes an expense using the description of that expense. 
 
-_TC.02 - Delete Expense_
+This is the **TC.02 - Delete Expense** screen:
 
 ![](attachments/test-case-dependencies-2/delete-expense-by-datagrid-row.png)
 
-As you see "TC.02 - Delete Expense" cannot delete the expense from "TC.01 - Create New Expense" because the description is a randomly generated value.
+As you see, TC.02 - Delete Expense cannot delete the expense from TC.01 - Create New Expense, because the description is a randomly generated value.
 
-2. Example, 
-To get to a functionality you have to walk through four different pages. This is also a test case dependency, caused by the GUI. 
+### 1.2 Example 2
 
-## 2 Why you must not use Test Case Dependencies
+To get to a functionality, you have to walk through four different pages. This is also a test case dependency, caused by the GUI. 
 
-This chapter explains why you must not use dependencies between test cases by defining the impact on your tests. The criteria for a good test case is used. The first example of the first chapter is used, two test cases "TC.01 - Create New Expense" and "TC.02 - Delete Expense". "TC.02" can only be executed after "TC.01".
+## 2 Why You Must Not Use Test Case Dependencies
+
+This chapter explains why you must not use dependencies between test cases by defining the impact on your tests. The criteria for a good test case is used. The first example of the first chapter is used, in which there are the two test cases "TC.01 - Create New Expense" and "TC.02 - Delete Expense" but "TC.02" can only be executed after "TC.01."
 
 | Aspect       | Consequence of having dependencies |
 | :----------- | :--------------------------------- |
 | Availability | * If TC.01 is broken or in maintenance, TC.02 is not available. <br> * You also have to run TC.01 first. |
 | Speed        | * TC.02 can only run after TC.01 has finished.<br> * TC.01 and TC.02 cannot run parallel. |
-| Reliability  | * If TC.01 is unreliable, then TC.02 is also unreliable. <br> * If you change TC.01 this may affect TC.02. |
-| Precision, <br> Understandability, <br> Analyzability, <br> Lack of ambiguity | * If TC.02 fails, you must TC.01 and TC.02 for bugs.<br> * If TC.02 fails, the problem may be in TC.01 or TC.02. |
+| Reliability  | * If TC.01 is unreliable, then TC.02 is also unreliable. <br> * If you change TC.01, this may affect TC.02. |
+| Precision, <br> Understandability, <br> Analyzability, <br> Lack of ambiguity | * If TC.02 fails, you must test TC.01 and TC.02 for bugs.<br> * If TC.02 fails, the problem may be in TC.01 or TC.02. |
 
-As you see it does not line up with testing standards therefor you must not use it. For the same reasons ATS does not allow data sharing between test cases. In the next chapter different options are explained.
+As you see, this does not line up with testing standards, therefore you must not use it. For this same reasons, ATS does not allow data sharing between test cases. In the next section, different options are explained.
 
 ## 3 Handle Test Case Dependencies
 

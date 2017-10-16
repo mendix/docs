@@ -63,9 +63,9 @@ In the body of your public profile, you can edit the following elements:
 * **Summary**
 * **Industry Experience**
 * **Skills**
-* **Activity** – the activities for which you have gained Mendix points (for details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq))
-*  **Projects** – for details on adding a project, see [4 Adding a Project](#project)
+* **Reviews** – URLs of the reviews of Mendix you have written at [Gartner Peer Insights](https://www.gartner.com/reviews/market/mobile-application-development-platforms/vendor/mendix) and [TrustRaduius](https://www.trustradius.com/products/mendix/reviews)
 
+* **Projects** – for details on adding a project, see [4 Adding a Project](#project)
 
 To make your profile public, the following requirements must be met:
 

@@ -45,18 +45,18 @@ If you access your profile by clicking **Community** > [OUR COMMUNITY](https://d
 
 In the header of your profile, you can edit the following details:
 
-*  **Name**
-*  **Function**
-*  **Location**
-*  **Country**
-*  Whether you are looking for a **job**, a **project**, both, or neither
+*   **Name**
+*   **Function**
+*   **Location**
+*   **Country**
+*   Whether you are looking for a **job**, a **project**, both, or neither
 *   Your social media links (GitHub, Twitter, LinkedIn, and Skype)
 
-    {{% alert type="info" %}}
+        {{% alert type="info" %}}
 
-    In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information on gaining Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq) and [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation#GainingMendixPoints).
+        In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information on gaining Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq) and [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation#GainingMendixPoints).
     
-    {{% /alert %}}
+        {{% /alert %}}
 
 In the body of your public profile, you can edit the following elements:
 

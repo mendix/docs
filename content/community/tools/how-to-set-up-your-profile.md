@@ -58,13 +58,13 @@ In order to receive Mendix points for your contributions to Mendix GitHub reposi
     
 {{% /alert %}}
 
-In the body of your public profile, you can edit the following elements:
+In the body of your profile, you can edit the following elements:
 
 * **Summary**
 * **Industry Experience**
 * **Skills**
 * **Reviews** – URLs of the reviews of Mendix you have written at [Gartner Peer Insights](https://www.gartner.com/reviews/market/mobile-application-development-platforms/vendor/mendix) and [TrustRaduius](https://www.trustradius.com/products/mendix/reviews)
-
+    * Links to these reviews will not appear on your public profile, but these two reviews are required to make your profile 100% complete
 * **Projects** – for details on adding a project, see [4 Adding a Project](#project)
 
 To make your profile public, the following requirements must be met:

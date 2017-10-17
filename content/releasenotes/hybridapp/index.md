@@ -20,18 +20,18 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ### October 17th, 2017 (1.4.3 / 1.3.1)
 
-* Support for custom navigation profiles was removed. This affects Mendix apps running on version 7.2 or 7.3. For these apps, it is recommended to upgrade to a newer Mendix version.
+* Support for custom navigation profiles was removed. This affects Mendix apps running on version 7.2 or 7.3. For these apps, upgrading to a newer Mendix version is recommended.
 
 ### October 13th, 2017 (1.4.2 / 1.3.1)
 
-* We added extra Phonegap commands (plugin & prepare).
-* We added a devDependency to fix failing build in some cases.
-* We fixed an issue where some cleanup steps would be skipped when the removal of cookies and/or pin/login tokens failed.
+* We added extra Phonegap commands (`plugin` and `prepare`).
+* We added a `devDependency` to fix the failing build in some cases.
+* We fixed the issue where some cleanup steps were skipped when the removal of cookies and/or PIN/login tokens failed.
 
 ### October 12th, 2017 (1.4.1 / 1.3.0)
 
-* We fixed a wrong application of Promise.all, which broke the PIN flow.
-* We fixed the appbase command, used internally to build the Phonegap Build zip file.
+* We fixed the wrong application of `Promise.all`, which broke the PIN flow.
+* We fixed the `appbase` command, used internally to build the Phonegap Build *zip* file.
 
 ### October 11th, 2017 (1.4.0 / 1.3.0)
 

@@ -4,9 +4,9 @@ category: "Modeler"
 ---
 
 
-A Mendix project consists of modules: a System module, a UX module, and one or more user-defined modules. Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. Other than requiring a single UX module, the Modeler does not enforce any kind of module structure. It is up to you to choose logical modules for your application.
+A Mendix project consists of modules: a System module, a UX resources module, and one or more user-defined modules. Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. Other than requiring a single UX resources module, the Modeler does not enforce any kind of module structure. It is up to you to choose logical modules for your application.
 
-The UX module contains all the necessary elements to easily create pre-styled and consistent pages. New projects will automatically be outfitted with the proper UX module. If required, this module can be replaced or updated from the app store. To avoid styling conflicts, each project can only contain a single UX module. Aside from important styling information, the UX module will also contain the projects [building blocks](building-block) and [page templates](page-templates).
+The UX resources module contains all the necessary elements to easily create pre-styled and consistent pages. New projects will automatically be outfitted with the proper UX resources module. If required, this module can be replaced or updated from the app store. To avoid styling conflicts, each project can only contain a single UX resources module. Aside from important styling information, the UX resources module will also contain the projects [building blocks](building-block) and [page templates](page-templates).
 
 A module always contains exactly one [domain model](domain-model). The domain model is a data model that describes the information in your application domain in an abstract way.
 

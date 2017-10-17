@@ -76,7 +76,7 @@ Follow these steps to edit the most important fields on your Partner Profile:
 
     ![](attachments/how-to-set-up-your-partner-profile/video.png)
 
-    Selecting **Project** will link a project that you have have added on the **Projects** tab of the Partner Profile (for more details, see [6 Adding Projects](#projects).<br>
+    Selecting **Project** will link a project that you have have added on the **Projects** tab of the Partner Profile (for more details, see [6 Adding Projects](#projects)).<br>
 
 3.  Add your company's focus **Industries**. These will be used in the filter options on the **Meet our partners** page so that Mendix customers can search for partners in a specific industry.
 

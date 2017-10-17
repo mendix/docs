@@ -41,13 +41,13 @@ The ATS CI/CD API is based on the SOAP webservice protocol. Currently there are 
 
 ### 3.1 Run Job
 
-#### URL
+#### 3.1.1 URL
 
 ```
 https://ats100.mendixcloud.com/ws/RunJob
 ```
 
-#### Request
+#### 3.1.2 Request
 
 You must include the following information in the request:
 
@@ -59,7 +59,7 @@ You must include the following information in the request:
 | AppID | The ID of your Mendix app. |
 | JobTemplateID | The unique ID of the CI/CD Template. |
 
-##### Example
+##### 3.1.2.1 Example
 
 ```
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:men="http://www.mendix.com/">
@@ -81,7 +81,7 @@ You must include the following information in the request:
 </soapenv:Envelope>
 ```
 
-#### Response
+#### 3.1.3 Response
 
 The following table shows the data contained in the response of the Run Job service:
 
@@ -91,7 +91,7 @@ The following table shows the data contained in the response of the Run Job serv
 | ErrorMessage | Contains the error message if the test failed to start. Empty if the test started succesfully. |
 | JobID | The unique ID of the job. This ID is used to retrieve the result of the test with the **Get Job Status** service. |
 
-##### Example
+##### 3.1.3.1 Example
 
 ```
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:men="http://www.mendix.com/">
@@ -109,13 +109,13 @@ The following table shows the data contained in the response of the Run Job serv
 
 ### 3.2 Get Job Status
 
-#### URL
+#### 3.2.1 URL
 
 ```
 https://ats100-test.mendixcloud.com/ws/GetJobStatus
 ```
 
-#### Request
+#### 3.2.2 Request
 
 You must include the following information in the request:
 
@@ -127,7 +127,7 @@ You must include the following information in the request:
 | JobID | The unique ID of the job returned by the Run Job service. |
 | AppID | The ID of your Mendix app. |
 
-##### Example
+##### 3.2.2.1 Example
 
 ```
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:men="http://www.mendix.com/">
@@ -149,7 +149,7 @@ You must include the following information in the request:
 </soapenv:Envelope>
 ```
 
-#### Response
+#### 3.2.3 Response
 
 The following table shows the data contained in the response of the **Get Job Status** service:
 
@@ -159,7 +159,7 @@ The following table shows the data contained in the response of the **Get Job St
 | ExecutionResult| Contains the error message if the test failed to start. Empty if the test started succesfully. |
 | JobID | The unique ID of the job. This ID is used to retrieve the result of the test with the Get Job Status service. |
 
-#### Example
+##### 3.2.3.1 Example
 
 ```
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:men="http://www.mendix.com/">

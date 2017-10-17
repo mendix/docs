@@ -38,11 +38,13 @@ Frequently used providers (A-Z) are:
 *   [Mandrill](https://www.mandrill.com/) [[settings](http://help.mandrill.com/categories/20090941-SMTP-Integration)]
 *   [SendGrid](https://sendgrid.com/) [[settings](https://support.sendgrid.com/hc/en-us/articles/200328026-Recommended-SMTP-settings)]
 
-Please note that sending email from Mendix Cloud v4 can not happen over port 25 This port open, however is heavily rate limited by the infrasture provider so you will experience issues. This configuration cannot be changed. Your SMTP provider needs to expose a secure port like 587, which is a best practice that most modern providers offer out of the box.
+Please note that sending email from Mendix Cloud v4 cannot happen over port 25. This port is open, but it is heavily rate-limited by the infrasture provider, so you will experience issues. This configuration cannot be changed. Your SMTP provider needs to expose a secure port like 587, which is a best practice that most modern providers offer out of the box.
 
 Many users of our free tier use the settings of their own GMail account for convenience. There are many more email providers, most of which have SMTP compatibility.
 
 ## 3 Mendix Mail Servers
+
+### 3.1 Mendix Mail Server Details
 
 The Mendix mail servers are only available in Mendix Cloud v3. If you are using Mendix Cloud v3 and are sending more than 1000 messages per day we recommend you use an external mail service as described above. The settings for the Mendix mail servers are as follows:
 
@@ -51,11 +53,11 @@ The Mendix mail servers are only available in Mendix Cloud v3. If you are using 
 
 No authentication information is needed. You can use this same SMTP server from the [Email Module](https://appstore.home.mendix.com/link/app/259/Mendix/E-mail-module-with-templates) from the AppStore or custom Java actions.
 
-### 3.1 Using Sender Policy Framework (SPF) While Sending Outgoing Mail from Mendix
+### 3.2 Using Sender Policy Framework (SPF) While Sending Outgoing Mail from Mendix
 
 When using Mendix mail servers and a sender address in a domain that has a restrictive SPF policy configured, you may encounter email delivery issues when the outgoing email servers from Mendix are not listed in the SPF record of that domain name.
 
-*   The needed information about Mendix mail servers that deliver outgoing mail traffic to the internet can be included in the SPF settings for the domain of the sender address by including "include:<a rel="nofollow">_spf.mendix.com</a>" into the policy rule. By using this technique, your SPF configuration will always automatically be kept up to date.
+*   The needed information about Mendix mail servers that deliver outgoing mail traffic to the internet can be included in the SPF settings for the domain of the sender address by including `include:<a rel="nofollow">_spf.mendix.com</a>` into the policy rule. By using this technique, your SPF configuration will always automatically be kept up to date.
 *   Do **not** directly use hard coded low level infrastructure details like IP addresses of mail servers. These addresses are subject to change whenever Mendix is doing upgrades and maintenance.
 
 ### 4 Sender and Recipient Address Requirements

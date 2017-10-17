@@ -37,7 +37,7 @@ As you see, TC.02 - Delete Expense cannot delete the expense from TC.01 - Create
 
 To get to a functionality, you have to walk through four different pages. This is also a test case dependency, caused by the GUI. 
 
-## 2 Why You Must Not Use Test Case Dependencies
+## 2 Why You Must Not Use Test Case Dependencies<a name="why"></a>
 
 This chapter explains why you must not use dependencies between test cases by defining the impact on your tests. The criteria for a good test case is used. The first example of the first chapter is used, in which there are the TC.01 - Create New Expense and TC.02 - Delete Expense test cases, but TC.02 can only be executed after TC.01.
 
@@ -54,86 +54,84 @@ As you see, this does not line up with testing standards; therefore, you must no
 
 ### 3.1 Course of Action
 
-The previous section explains the reasons for not using test case dependencies. You must only accept a dependency if you have a very good reason. When it comes to test case dependencies, follow these steps.
+The previous section explains the reasons for not using test case dependencies. You must only accept a dependency if you have a very good reason. When it comes to test case dependencies, follow these steps:
 
-1. Try to avoid them.
-2. Try to get rid of them.
+1. Avoid them.
+2. Get rid of them.
 3. Minimize them.
 4. Manage them.
 
-### 3.2 How to Deal with Test Case Dependencies
+### 3.2 Dealing with Test Case Dependencies
 
-Assuming you want to test a function that depends on a previous execution, like in the TC.01 and TC.02 example, you have three options. The first two options also cover data dependency.
-
-The TC.01 and TC.02 example is used to explain the options.
+Assuming you want to test a function that depends on a previous execution (like in the TC.01 and TC.02 example), you have three options. The first two options also cover data dependency. The TC.01 and TC.02 example is used to explain the options:
 
 1. Option 1 is the preferred choice.
 2. Option 2 only applies if you have a very long setup routine and the scenarios to test are simple.
-3. You must only use option 3 if 1 and 2 are not possible.
+3. Only use option 3 if 1 and 2 are not possible.
 
-#### 3.2.1 Option 1 - Separate Test Cases without Direct Dependency
+The options are described below.
 
-You create two separate test cases. Example, one test case that creates a new expense and one test case that deletes a new expense.
+#### 3.2.1 Option 1 – Separate Test Cases Without Direct Dependency
 
-First, create the test case that creates a new expense, "TC.01 - Create New Expense". Now combine these steps and use that action as a _setup_ step in the "TC.02 - Delete Expense" test case. 
+Create two separate test cases (for example, one test case that creates a new expense, and another test case that deletes a new expense).
 
-_TC.01 - Create New Expense as setup_
+First, create the test case that creates the new expense: TC.01 - Create New Expense. Now combine these steps and use that action as a setup step in the TC.02 - Delete Expense test case. 
+
+This is TC.01 - Create New Expense as a setup step:
 
 ![](attachments/test-case-dependencies-2/delete-expense-create-new-expense-setup-step.png)
 
-Conclusion:
+This table presents the conclusions:
 
 | Positive       | Negative |
 | :------------ | :--------------------------------- |
-| No dependence between the test cases, they can run in any order and parallel. | Functional Dependency, if you cannot create an expense you cannot delete it. |
-| Use of Combined Actions for better maintainability. | Execution time of TC.02 is raised, it has to perform extra steps. |
+| No dependence between the test cases, they can run in any order and parallel. | Functional dependency, if you cannot create an expense you cannot delete it. |
+| Use of combined actions for better maintainability. | Execution time of TC.02 is raised, it has to perform extra steps. |
 | When the functionality of TC.01 is broken, the result of TC.02 is not Executed. |
 
-Against the good test case criteria:
+This table presents aspects against the good test case criteria:
 
 | Aspect       | Result                             |
 | :----------- | :--------------------------------- |
 | Availability | * If TC.01 is broken or in maintenance, TC.02 is still available. <br> * You don't have to run TC.01 first. |
 | Speed        | * TC.02 can run at the same time as TC.01 and also parallel. |
-| Reliability  | * If TC.01 is unreliable, it has no effect on TC.02. <br> * If you change TC.01 this does not effect TC.02. |
+| Reliability  | * If TC.01 is unreliable, it has no effect on TC.02. <br> * If you change TC.01, this does not affect TC.02. |
 | Precision, <br> Understandability, <br> Analyzability, <br> Lack of ambiguity | * If TC.02 fails, you don't have to check TC.01.<br> * If TC.02 fails, the problem can only be in TC.02. |
 
 Option 1 is the best option.
 
-#### 3.2.2 Option 2 - Multiple Scenarios in One Test Case
+#### 3.2.2 Option 2 – Multiple Scenarios in One Test Case
 
-This option only applies if you have a very long setup routine and the scenarios are very short. 
+This option only applies if you have a very long setup routine and the scenarios are very short. For example, you have a scenario for creating a new expense, and you have a scenario for deleting an expense. You can combine these scenarios into one test case.
 
-Example, you have a scenario to create a new expense and you have a scenario to delete an expense. You can combine these scenarios into one test case.
-
-_The two scenarios_
+These are the two scenarios:
 
 ![](attachments/test-case-dependencies-2/multiple-scenarios-create-new-expense-and-delete-expense.png)
 
-Against the good test case criteria:
+This table presents aspects against the good test case criteria:
 
 | Aspect       | Result                             |
 | :----------- | :--------------------------------- |
-| Availability | * There is no dependency to other test cases. But if one of the scenarios within the test case fails, the other scenarios won't be executed. |
-| Speed        | * No parallelization possible because there’s only one test case. But you save the time of having the same setup procedure in multiple test cases. |
-| Reliability  | * The more scenarios you put into a single test case less reliable your outcomes will be because there can be side-effects between the scenarios. |
-| Precision, <br> Understandability, <br> Analyzability, <br> Lack of ambiguity | * If the test case fails you always need to check the test log to find out which scenario the cause of this failure is. |
+| Availability | * There is no dependency to other test cases. But if one of the scenarios within the test case fails, the other scenarios will not be executed. |
+| Speed        | * No parallelization is possible, because there is only one test case. But, you save the time of having the same setup procedure in multiple test cases. |
+| Reliability  | * The more scenarios you put into a single test case, the less reliable your outcomes will be, because there can be side-effects between the scenarios. |
+| Precision, <br> Understandability, <br> Analyzability, <br> Lack of ambiguity | * If the test case fails, you always need to check the test log to find out the scenario in which the cause of this failure is located. |
 
-#### 3.2.3 Option 3 - Separate Test Cases with Dependency
+#### 3.2.3 Option 3 – Separate Test Cases with Dependency
 
-Option 3 is the last option and you must only use this option if option 1 and option 2 don't work. It doesn't work for data sharing between test cases. 
+This is the last option, and you must only use this option if option 1 and option 2 do not work. This option does not work for data sharing between test cases. 
 
 Create two separate test cases and combine them in a test suite. Make sure there is no data dependency.
 
-_TC.01 - Create New Expense_
+This is TC.01 - Create New Expense:
 
 ![](attachments/test-case-dependencies-2/tc.01-create-new-expense.png)
 
-_TC.02 - Delete Expense_
+This is TC.02 - Delete Expense:
 
 ![](attachments/test-case-dependencies-2/tc.02-delete-expense.png)
 
-_TS.01 - Create New Expense and Delete Expense_
+This is TS.01 - Create New Expense and Delete Expense:
 
 ![](attachments/test-case-dependencies-2/ts.01-create-new-expense-and-Delete-expense.png)
 
@@ -141,6 +139,6 @@ Because TC.02 depends on the result of TC.01, ATS must execute TC.01 first. To e
 
 ![](attachments/test-case-dependencies-2/ts.01-create-new-expense-and-Delete-expense-type-sequential.png)
 
-ATS now executes the contents of the test suite based on the order they are in.
+ATS will then execute the contents of the test suite based on the order they are in.
 
-The consequences of option 3 are the same as in chapter 2.
+The consequences of option 3 are the same as as those described in [2 Why You Must Not Use Test Case Dependencies](#why).

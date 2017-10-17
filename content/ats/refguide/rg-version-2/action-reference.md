@@ -2,18 +2,18 @@
 title: "Action Reference"
 parent: "rg-version-2"
 ---
-## Action Reference
 
-The tables below list all standard actions for Mendix. There is one table per category.
-For more detailled information you can read following sections. 
+## 1 Introduction
 
-- [Mendix Actions](mendix-actions)
-- [Dialog](dialog)
-- [Mendix Appstore Widgets Actions](mendix-appstore-widgets-actions)
-- [ATS Core Actions](ats-core-actions)
-- [Selenium Actions](selenium-actions)
+The tables below list all the standard actions for Mendix. There is one table per category. For more detailed information, see the following ATS Reference Guide pages: 
 
-### DataGrid, TemplateGrid, ListView
+* [Mendix Actions](mendix-actions)
+* [Dialog](dialog)
+* [Mendix App Store Widget Actions](mendix-appstore-widgets-actions)
+* [ATS Core Actions](ats-core-actions)
+* [Selenium Actions](selenium-actions)
+
+## 2 DataGrid, TemplateGrid, ListView
 
 | Action                           | Supported Widgets                | Description                              |
 | -------------------------------- | -------------------------------- | ---------------------------------------- |
@@ -30,7 +30,7 @@ For more detailled information you can read following sections.
 | Set Row Cell Value               | DataGrid                         | Sets the Cell Value in a DataGrid row    |
 | Sort DataGrid                    | DataGrid                         | Sorts the DataGrid by the given Column           |
 
-### Dialog
+## 3 Dialog
 
 | Action                  | Supported Widgets                        | Description                              |
 | ----------------------- | ---------------------------------------- | ---------------------------------------- |
@@ -42,19 +42,19 @@ For more detailled information you can read following sections.
 
 {{% alert type="info" %}}
 
-A _Window_ is rendered when a page is opened as a popup.
+A Window is rendered when a page is opened as a pop-up window.
 
-A _ConfirmationDialog_ is shown when a delete or microflow action requires a confirmation. Show message actions in microflows result in _DialogMessage_ widgets.
+A ConfirmationDialog is shown when a delete or microflow action requires a confirmation. Showing message actions in microflows results in DialogMessage widgets.
 
 {{% /alert %}}
 
-### FileManager
+## 4 FileManager
 
 | Action           | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
 | Set File Manager | FileManager       | Sets a file manager to the given file path to upload a file |
 
-### Generic
+## 5 Generic
 
 | Action                    | Supported Widgets           | Description                              |
 | ------------------------- | --------------------------- | ---------------------------------------- |
@@ -70,7 +70,7 @@ A _ConfirmationDialog_ is shown when a delete or microflow action requires a con
 | Logout                    | N/A                         | Triggers logout/logoff from an application via the client API
 | Open Application          | N/A                         | Opens a Mendix application at [Website URL] in a browser with Mendix specific settings |
 
-### GroupBox
+## 6 GroupBox
 
 | Action                | Supported Widgets | Description                              |
 | --------------------- | ----------------- | ---------------------------------------- |
@@ -78,7 +78,7 @@ A _ConfirmationDialog_ is shown when a delete or microflow action requires a con
 | GroupBox is Collapsed | GroupBox          | Gets the GroupBox Collapsed state: true if collapsed, otherwise false |
 | Open GroupBox         | GroupBox          | opens a groupbox                          |
 
-### Input
+## 7 Input
 
 | Action                | Supported Widgets                        | Description                              |
 | --------------------- | ---------------------------------------- | ---------------------------------------- |
@@ -93,7 +93,7 @@ A _ConfirmationDialog_ is shown when a delete or microflow action requires a con
 | Set Value (by index)  | DropDown, ReferenceSelector, SearchInput DropDown | Sets the value of a dropdown by index, e.g. EnumSelect or ReferenceSelector |
 | Toggle Checkbox Value | CheckBox                                 | Clicks a Checkbox to toggle its value  |
 
-### Navigation, Menu
+## 8 Navigation, Menu
 
 | Action                | Supported Widgets                      | Description                              |
 | --------------------- | -------------------------------------- | ---------------------------------------- |
@@ -101,7 +101,7 @@ A _ConfirmationDialog_ is shown when a delete or microflow action requires a con
 | Find/Assert Menu Item | NavigationTree, MenuBar, SimpleMenuBar |                                          Finds/Asserts a visible Menu Item in a Navigation Tree, Menu Bar and Simple Menu Bar
 
 
-### System
+## 9 System
 
 | Action                 | Supported Widgets | Description                              |
 | ---------------------- | ----------------- | ---------------------------------------- |
@@ -110,7 +110,7 @@ A _ConfirmationDialog_ is shown when a delete or microflow action requires a con
 | Get Current Page Title | N/A                  | Returns the Current Page/Form Title     |
 | Mendix wait            | N/A                  | Injects Mendix Scripts and Waits           |
 
-### Tab
+## 10 Tab
 
 | Action                    | Supported Widgets | Description                              |
 | ------------------------- | ----------------- | ---------------------------------------- |

@@ -5,78 +5,88 @@ parent: "rg-version-2"
 
 ## 1 Introduction to the Repository
 
-The Repository is the heart of ATS, it allows to create and manage folders, test suites, test cases, Drop-Downs, and actions. You can also create test data for data-driven testing. For more information on how to use data-driven testing in ATS, see [Test Data](test-data). You can access the repository by clicking Test Cases in the navigation menu.
+The repository is the heart of ATS, as it allows you to create and manage folders, test suites, test cases, drop-down menus, and actions. You can also create test data for data-driven testing. For more information on how to use data-driven testing in ATS, see [Test Data](test-data).
 
-![Repository](attachments/repository/repository.png)
+You can access the repository by clicking **Test Cases** in the navigation menu.
 
-You search for a specific item by using the search bar in the repository. ATS searches for the desired item in the current folder and all subfolders. So if you start searching ATS only searches inside your current folder and its subfolders.
+![](attachments/repository/repository.png)
 
-The breadcrumbs in the repository allow quick navigation between folders. Click the name of the folder to go back to that parent folder.
+You search for a specific item by using the search bar in the repository. ATS searches for the desired item in the current folder and all sub-folders. So, if you start searching ATS, only searches inside your current folder and its sub-folders.
 
-With the type icons on the left side of the item name, you can identify at a glance the type of an item. The following table describes all type icons, used in the repository:
+The breadcrumbs in the repository allow for quick navigation between folders. Click the name of the folder to go back to that parent folder.
 
-| Icon | Meaning |
-| --- | --- |
-| ![Folder](attachments/repository/folder-icon.png) | Folder |
-| ![Test case](attachments/repository/test-case-icon.png)| Test case |
-| ![Test suite](attachments/repository/test-suite-icon.png)| Test suite |
-| ![Action](attachments/repository/action-icon.png)| Action |
+With the type icons on the left side of the item name, you can identify at a glance the type of an item. The following list describes all the type icons used in the repository:
 
-If you want to cut, copy or delete an item in the repository, you can do so by marking it with the checkbox. After that, the actions become available.
+*  This is a folder:
 
-![Repository](attachments/repository/repository-actions.png)
+    ![](attachments/repository/folder-icon.png)
 
-## Actions
+*  This is a test case:
 
-In the repository you use the **Actions** drop-down to perform the following actions:
+    ![](attachments/repository/test-case-icon.png)
 
-- Create a **New Folder**.
-- Create a **New Test Case**. For more information on creating a test case, see [Test Case](test-case).
-- Create a **New Test Suite**. For more information on creating a test suite, see [Test Suite](test-suite).
-- Create a **New Action**. For more information on creating an action, see [Action](action).
-- Create a **New Drop-Down**. For more information on creating a Drop-Down, see [Drop-Down](drop-down).
-- **Import** items into the repository.
+*  This is test suite:
 
-ATS stores all created items into the repository.
+    ![](attachments/repository/test-suite-icon.png)
 
-## Import/Export
+*  This is a action:
 
-ATS allows to export to and import data from an XML file. It is possible to move data between different apps or to save test definitions on your hard drive.
+    ![](attachments/repository/action-icon.png)
+
+If you want to cut, copy, or delete an item in the repository, you can do so by marking it with the check-box. After that, the actions become available.
+
+![](attachments/repository/repository-actions.png)
+
+## 2 Actions
+
+In the repository, you use the **Actions** drop-down menu to perform the following actions:
+
+* Create a **New Folder**
+* Create a **New Test Case** (for details on creating a test case, see [Test Case](test-case))
+* Create a **New Test Suite** (for detailson creating a test suite, see [Test Suite](test-suite))
+* Create a **New Action** (for details on creating an action, see [Action](action))
+* Create a **New Drop-Down** (for details on creating a drop-down menu, see [Drop-Down](drop-down))
+* **Import** items into the repository
+
+ATS stores all created items in the repository.
+
+## 3 Importing and Exporting
+
+ATS allows you to export to and import data from an XML file. It is possible to move data between different apps or to save test definitions on your hard drive.
 
 You can export the following data:
 
-- Folders
-- Test cases/test suites
-- Actions
-- Parameters set in actions/test cases
+* folders
+* test cases/test suites
+* actions
+* parameters set in actions/test cases
 
-### Import
+### 3.1 Importing
 
-There are two ways of using the import: _create data_ and _update data_.
+There are two ways of using the import:
 
-_Create data_ means that you import new data for the first time into your target project.
+* By creating data, which means that you import new data for the first time into your target project
+* By updating data, which means that you overwrite existing data (this includes actions, test cases, test suites, or folders)
 
-_Update data_ means that you overwrite existing data. This includes actions, test cases, test suites or folders.
+When importing, ATS solves all the conflicts by overwriting existing data with the imported ones.
 
-When importing, ATS solves all conflicts by overwriting existing data with the imported ones.
+To import data in ATS, do the following:
 
-To import data in ATS do the following:
+* Click **Actions** and **Import**  to open the data import form
+* On the data import form, click **Import from file** to open the import data dialog box
 
-- Click **Actions** and **Import**  to open the data import form.
-- On the data import form, click **Import from file** to open the import data dialog box.
+### 3.2 Exporting
 
-### Export
+There are different scenarios for exporting data from ATS:
 
-There are different scenarios on how to export data from ATS:
+* Exporting a single action
+* Exporting several actions
+* Exporting test cases
+* Exporting test suites
+* Exporting folders containing the following:
+  * Actions
+  * Actions and test cases
+  * Actions, test cases, and test suites
+  * Folders, actions, test cases, and test suites
 
-- Exporting a single action
-- Exporting several actions
-- Exporting test cases
-- Exporting test suites
-- Exporting folders containing:
-  - Actions
-  - Actions and test cases
-  - Actions, test cases, and test suites
-  - Folders, actions, test cases and test suites
-
-To export the data, you have to mark the items in the **Repository** and then click **Export** in the top menu. You can also export the item right away from the edit view, by clicking **Export** in the top right.
+To export the data, you have to mark the items in the **Repository** and then click **Export** in the top menu. You can also export the item right away from the edit view by clicking **Export** in the top-right of the screen.

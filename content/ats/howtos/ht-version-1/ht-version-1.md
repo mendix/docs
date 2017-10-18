@@ -1,5 +1,5 @@
 ---
-title: "ATS Version 1 How-To's"
+title: "ATS 1 How-To's"
 category: "How-To's"
 ---
 

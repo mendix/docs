@@ -3,7 +3,7 @@ title: "Results"
 parent: "rg-version-2"
 ---
 
-## 1 Introduction to Results
+## 1 Introduction
 
 Under **Results**, you find all the running and executed tests from your app. The tests are sorted based on the finishing date.
 

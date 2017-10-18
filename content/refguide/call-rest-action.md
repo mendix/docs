@@ -54,7 +54,7 @@ This option allows you to send binary data (the contents of a FileDocument, for 
 
 ### Custom Request Template
 
-This option allows you to generate the request using a string template. The template defines the structure of the request in plain text. Parameters can be used by writing a number between braces (for example, `{1}`). For each parameter in the template, you can specify its value using a [Microflow Expression](microflow-expressions) resulting in a string value. To escape the opening brace (`{`), a double opening brace should be used (`\{\{`).
+This option allows you to generate the request using a string template. The template defines the structure of the request in plain text. Parameters can be used by writing a number between braces (for example, `{1}`). For each parameter in the template, you can specify its value using a [Microflow Expression](microflow-expressions) resulting in a string value. To escape the opening brace (`{`), a double opening brace should be used (`{{`).
 
 ## Response
 

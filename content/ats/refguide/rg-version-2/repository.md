@@ -3,7 +3,7 @@ title: "Repository"
 parent: "rg-version-2"
 ---
 
-## Repository
+## 1 Introduction to the Repository
 
 The Repository is the heart of ATS, it allows to create and manage folders, test suites, test cases, Drop-Downs, and actions. You can also create test data for data-driven testing. For more information on how to use data-driven testing in ATS, see [Test Data](test-data). You can access the repository by clicking Test Cases in the navigation menu.
 

@@ -3,7 +3,7 @@ title: "Selectors"
 parent: "rg-version-2"
 ---
 
-## 1 Introduction to Selectors
+## 1 Introduction
 
 For the [Find Widget Child Node](find-widget-child-node) action or as part of a script for the [Execute JavaScript Integer](execute-javascript-integer), [Execute JavaScript String](execute-javascript-string), and [Execute JavaScript WebElement](execute-javascript-webelement) actions, you must use selectors to get a node or WebElement.
 

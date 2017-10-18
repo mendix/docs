@@ -3,11 +3,13 @@ title: Supported Widgets
 category: Reference Guide 2.0
 ---
 
-## Supported Widgets
-The following table shows an overview of all supported widgets in ATS. 
+## 1 Introduction
 
-### Standard Widgets
-We support all widgets, which are included in the Mendix Modeler.
+The following table shows an overview of all the supported widgets in ATS. 
+
+## 2 Standard Widgets
+
+We support all the widgets that are included in the Mendix Modeler:
 
 | Name | Supported in Execution | Supported in Recording |
 | ---- | :--------------------: | :--------------------: |
@@ -31,8 +33,9 @@ We support all widgets, which are included in the Mendix Modeler.
 | TextBox | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | Window | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 
-### Appstore Widgets
-Besides the default widgets, we support the most common used widgets from the appstore.
+## 3 App Store Widgets
+
+Besides the default widgets, ATS supports the most commonly used widgets from the Mendix App Store:
 
 | Name | Supported in Execution | Supported in Recording |
 | ---- | :--------------------: | :--------------------: |

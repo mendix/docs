@@ -168,14 +168,13 @@ You can do further editing to the testimonials with the following buttons:
 
 ![](attachments/how-to-set-up-your-partner-profile/testimonials.png)
 
-*   **Edit** – opens the testimonial editor, where you can edit details of the testimonial
-
-    {{% alert type="warning" %}}
-    Providing accurate testimonials is an important part of participating in the Mendix community, as is respecting the testimonials that have been given. So, while you are able to edit the details of a testimonial about your company, please respect the original intent of the writer of a testimonial that has already been approved by your company's Profile Editor.
-    {{% /alert %}}
-
+* **Edit** – opens the testimonial editor, where you can edit details of the testimonial
 * **Delete** – deletes the testimonial
 * **Show on profile** – displays the testimonial on your company's Partner Profile
+
+{{% alert type="warning" %}}
+Providing accurate testimonials is an important part of participating in the Mendix community, as is respecting the testimonials that have been given. So, while you are able to edit the details of a testimonial about your company, please respect the original intent of the writer of a testimonial that has already been approved by your company's Profile Editor.
+{{% /alert %}}
 
 ## 9 Changing the Profile Editor<a name="editors"></a>
 

@@ -33,3 +33,7 @@ JavaScript object notation (JSON) is a lightweight representation of data.
 ```
 
 Above, the object `person` is described with the corresponding values for the attributes `name`, `age`, and the referred object `address`.
+
+## EXAMPLE(S)
+
+[![How to consume REST natively with Mendix](https://img.youtube.com/vi/waOlvSqdaP4/0.jpg)](https://www.youtube.com/watch?v=waOlvSqdaP4)

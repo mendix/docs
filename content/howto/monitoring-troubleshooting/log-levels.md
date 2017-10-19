@@ -109,7 +109,7 @@ To select the level on which a log node will log messages, follow these steps:
 | I18NProcessor |
 | Jetty |
 | Logging | 
-| M2MEE |
+| M2EE |
 | MicroflowDebugging |
 | Microflow Engine |
 | ModelStore | 

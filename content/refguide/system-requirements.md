@@ -17,7 +17,7 @@ The following frameworks are automatically installed (if necessary):
 
 {{% alert type="warning" %}}
 
-You can choose which JDK is used for building and running locally through the 'Edit > Preferences' menu item.
+You can choose which JDK is used for building and running locally through the **Edit** > **Preferences** menu item.
 
 {{% /alert %}}
 

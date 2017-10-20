@@ -14,4 +14,4 @@ To download the PhoneGap package, publish your app for mobile app stores through
 
 ### Customizing the PhoneGap package
 
-You can customize the PhoneGap package to your wishes. If you plan on uploading the package to PhoneGap Build manually, we recommend you follow [the documentation specific for PhoneGap Build](http://docs.build.phonegap.com/). Once you have customized your app according to your needs, you can upload it to PhoneGap Build to create mobile hybrid app packages.
+You can customize the PhoneGap package to your wishes. If you plan on uploading the package to PhoneGap Build manually, we recommend you follow [the documentation specific for PhoneGap Build](http://docs.phonegap.com/phonegap-build/). Once you have customized your app according to your needs, you can upload it to PhoneGap Build to create mobile hybrid app packages.

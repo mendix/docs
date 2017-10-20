@@ -7,21 +7,21 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-This how-to explains how to create a negative test case in ATS. It uses the company expenses app as an example.
+This how-to explains how to create a negative test case in ATS. It uses the [Company Expenses](https://appstore.home.mendix.com/link/app/240/) app as an example.
 
-ATS is a functional testing tool that asserts/finds/sets widgets in a Mendix app. Sometimes you don't want to know if a widget is present, but if a widget is not present.
+ATS is a functional testing tool that asserts, finds, and sets widgets in a Mendix app. For this scenario, you do not want to know that a widget is present, but that a widget is not present.
 
-The ‘Click Menu Item’ action clicks a menu item based on the caption. In most situations, you test to make sure it is present, but sometimes you must test to check it is not present. 
+The Click Menu Item action clicks a menu item based on the caption. In most situations, you test to make sure it is present, but sometimes you must test to check it is not present.
 
-For example, when an employee logs in to the company expenses app the admin menu must not be visible. When an administrator logs in the admin menu must be visible. 
+For example, when an employee logs in to the Company Expenses app, the admin menu must not be visible. When an administrator logs in, the admin menu must be visible. 
 
 To test this, you log in as an employee and assert that you do not see the admin menu. You can automate negative tests in ATS.
 
-_Navigation Menu employee_
+This is the navigation menu for an employee:
 
 ![](attachments/create-a-negative-test-case-2/navigation-menu-employee-company-expenses-app.png)
 
-_Navigation Menu administrator_ 
+This is the navigation menu for an administrator:
 
 ![](attachments/create-a-negative-test-case-2/navigation-menu-administrator-company-expenses-app.png)
 
@@ -31,19 +31,19 @@ _Navigation Menu administrator_
 
 ## 2 Prerequisites
 
-Before starting with this how-to, make sure you have the following prerequisites in place:
+Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Complete [How to Create a Test Case](create-a-test-case-2)
 
-## 3 Create a Negative Test Case
+## 3 Creating a Negative Test Case
 
-The test case used in this how-to is already created. It asserts that the navigation menu displays the correct items. Now we add a step to check if it does not display the **Admin Menu** item.
+The test case used in this how-to is already created. It asserts that the navigation menu displays the correct items. Next, you add a step to check that it does not display the **Admin Menu** item.
 
-_The navigation menu_
+This is the navigation menu:
 
 ![](attachments/create-a-negative-test-case-2/navigation-menu-employee-company-expenses-app.png)
 
-_The test case_
+This is the test case:
 
 ![](attachments/create-a-negative-test-case-2/negative-test-case.png)
 

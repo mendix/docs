@@ -4,6 +4,19 @@ title: "Platform Portal"
 
 ## 2017
 
+### October 20th, 2017
+
+#### Improvements
+
+* Deploying a different version without stopping a running application is also available on Mendix Cloud v3. Once the deployment is done, you can restart the application with a single click.
+* Improved error handling: Much more user friendly feedback messages provided in case of an error.
+* The user experience of backup uploads have been improved for Mendix Cloud v4. It is also possible to manually delete the old backups on Mendix Cloud v4.
+* Series of minor user experience improvements for Metrics on Mendix Cloud v4.
+
+#### Fixes
+
+* When creating a deployment package from teamserver, users will now be able to see the revisions that were committed without the Mendix Modeler.
+
 ### October 10th, 2017
 
 #### Improvements

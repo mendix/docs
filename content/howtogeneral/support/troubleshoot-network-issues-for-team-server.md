@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 *   Mendix Modeler installed - download the Mendix Modeler [here](https://appstore.mendix.com/)
 *   Download or upload a Team Server project in the Mendix Modeler
 
-## 3 Identify Blocking Network Issues
+## 3 Identifying Blocking Network Issues
 
 When you download or upload a Team Server project the Mendix Modeler is unable to connect to Team Server and displays an error dialog window without an error message.
 
@@ -31,11 +31,11 @@ When you download or upload a Team Server project the Mendix Modeler is unable t
 
   > Mendix is aware that the error stated above does not provide any relevant information. We are currently working to solve this.
 
-### 3.1 Download A Team Server Project
+### 3.1 Downloading a Team Server Project
 
 Being unable to download the Team Server project would indicate that the security configuration of your company network is blocking access to `http://home.mendix.com` and `http://teamserver.sprintr.com/`. If this solution does not work, please submit a request with Mendix Support at [support.mendix.com](https://support.mendix.com/).
 
-## 4 How to Enable Firewall Access to Team Server
+## 4 Enabling Firewall Access to Team Server
 
 Team Server is implemented using Subversion and the Mendix Modeler uses the HTTPS (TCP) protocol to communicate with that server. To access Team Server from within the Modeler the network at your location needs the following settings:
 
@@ -51,11 +51,11 @@ The Mendix Modeler connects with the domains stated below over HTTPS on port 443
 
 ![](attachments/required-network-access-for-connecting-to-the-mendix-platform/networkaccessmendixplatform.jpg)
 
-*   [home.mendix.com](http://mendix.com/): enables you to log in to and use the Mendix Modeler.
-*   [cloud.mendix.com](http://cloud.mendix.com/) and [cloud.home.mendix.com]((http://cloud.home.mendix.com/): enables you to deploy your app to the Mendix Cloud.
-*   [teamserver.sprintr.com](http://teamserver.sprintr.com/): enables you to access Team Server and download/upload/commit Team Server projects in the Mendix Modeler.
+*   [home.mendix.com](http://mendix.com/) – enables logging in to and use the Mendix Modeler
+*   [cloud.mendix.com](http://cloud.mendix.com/) and [cloud.home.mendix.com](http://cloud.home.mendix.com/) – enables deploying your app to the Mendix Cloud
+*   [teamserver.sprintr.com](http://teamserver.sprintr.com/) – enables accessing Team Server and downloading, uploading, and committing Team Server projects in the Mendix Modeler
 
-## Related Content
+## 5 Related Content
 
 *   [Open Project Dialog](/refguide6/open-project-dialog)
 *   [Download From Team Server Dialog](/refguide6/download-from-team-server-dialog)

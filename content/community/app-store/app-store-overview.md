@@ -35,7 +35,7 @@ The App Store sidebar menu lists all the pages that you can browse for content.
 
 For details on add-ons, see [Add-On Details Page](#AddonDetailsPage).
 
-You can also access [My App Store](), the [Modeler]() page, the [Solutions]() page, and the [Partners]() page.
+You can also access [My App Store](https://appstore.home.mendix.com/link/myappstore/), the [Modeler](https://appstore.home.mendix.com/link/modelers/) page, the **Solutions** page, and the **Partners** page.
 
 ## 3 Add-On Details Page<a name="AddonDetailsPage"></a>
 
@@ -54,12 +54,12 @@ The top of the information page for each add-on presents the following item deta
 * The following buttons (depending on the type of item and what the developer added to share):
     * **Preview** – click this to preview more information or a demo about the content
         * This is only available if the developer has included a demo URL when sharing the content (for details on sharing content, see [How to Share App Store Content](share-app-store-content))
-    * **Open in Modeler** – click this to open the content directly in the Modeler
+    * **Open in Modeler** – click this to open the content directly in the Desktop Modeler
         * This is only available for **Theme starting points** (available on the Getting Started tab)
     * **Download** – click this to download the content
-        * This is only available for content that has a file attached (meaning, all shared Modeler content, but not promotions; for details on sharing Modeler content, see [How to Share App Store Content](share-app-store-content))
-        * For details on how to import downloaded App Store content into the Modeler, see [How to Import and Export Objects](/howto6/importing-and-exporting-objects)
-        * Please note that the best practice is to download content from the App Store that is accessible in the Modeler, because it then downloads directly into the Modeler (for details, see [How to Use App Store Content in the Modeler](use-app-store-content-in-the-modeler))
+        * This is only available for content that has a file attached (meaning, all shared  Desktop Modeler content, but not promotions; for details on sharing  Desktop Modeler content, see [How to Share App Store Content](share-app-store-content))
+        * For details on how to import downloaded App Store content into the Desktop Modeler, see [How to Import and Export Objects](/howto6/importing-and-exporting-objects)
+        * Please note that the best practice is to download content from the App Store that is accessible in the  Desktop Modeler, because it then downloads directly into the  Desktop Modeler (for details, see [How to Use App Store Content in the  Desktop Modeler](use-app-store-content-in-the-modeler))
 
 ### 3.2 Add-On Details Tabs
 
@@ -94,7 +94,7 @@ The details page for each add-on and app presents the following item information
 In the **Additional Info** section, you can see the following information (depending the type of content):
 
 * The **Latest version** number of the item
-* The Modeler version that the item **Requires** to work
+* The  Desktop Modeler version that the item **Requires** to work
 * When the item was **Published**
 * The type of **License** for the item
 * The type of support Mendix offers for the item
@@ -167,13 +167,13 @@ The **MY COMPANY** section of the sidebar menu contains the following options:
 
 ### 4.2 Modeler
 
-On the **Modeler** page, you can download any version of the Modeler you need by clicking  **Download** for the latest release or the donwload icon for a specific older release:
+On the **Modeler** page, you can download any version of the  Desktop Modeler you need by clicking  **Download** for the latest release or the donwload icon for a specific older release:
 
 ![](attachments/app-store-overview/modeler.png)
 
-Clicking the **Release notes** icon will open the [Modeler release notes](/releasenotes/desktop-modeler/) for that particular version.
+Clicking the **Release notes** icon will open the [ Desktop Modeler release notes](/releasenotes/desktop-modeler/) for that particular version.
 
-Clicking the **Related downloads** option will open a page with information relating to that Modeler version.
+Clicking the **Related downloads** option will open a page with information relating to that  Desktop Modeler version.
 
 ### 4.3 Solutions
 
@@ -211,4 +211,4 @@ On the **More info** tab, you can view documents that provide more information o
 
 * [App Store Content Support](app-store-content-support)
 * [How to Share App Store Content](share-app-store-content)
-* [How to Use App Store Content in the Modeler](use-app-store-content-in-the-modeler)
+* [How to Use App Store Content in the  Desktop Modeler](use-app-store-content-in-the-modeler)

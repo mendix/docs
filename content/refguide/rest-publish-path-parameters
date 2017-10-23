@@ -14,4 +14,4 @@ Finally, path parameters should be enclosed in '/'s so they are a separate segme
 When generating a new microflow from the [Published REST Operation](published-rest-operation) editor window the resulting microflow will have string parameters for each of the path parameters specified in the operation path.
 If you want the path parameters to be of another primitive data type (boolean, date and time, decimal, enumeration, or integer) you can change the type in the microflow.
 
-For date and time we accept input formatted according to ISO-XXX (https://www.w3schools.com/xml/schema_dtypes_date.asp).
+For date and time we accept input formatted according to ISO-8601 (https://www.w3schools.com/xml/schema_dtypes_date.asp).

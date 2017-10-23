@@ -45,7 +45,7 @@ The microflow should not have any other *Object* or *List of Object* parameters.
 
 Any remaining microflow parameters will be treated as optional query parameters.
 
-Handle [errors](microflows.md#error-handlers) in your microflow by [inspecting errors](microflows.md#inspecting-errors).
+If the microflow throws an unhandled exception, then we generate an http response with 500 Internal server error.
 
 ### Allowed roles
 

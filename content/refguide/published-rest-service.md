@@ -21,7 +21,7 @@ The allowed roles define which [module role](module-role) a user must have to be
 
 ### Public documentation
 
-The public documentation is used in service's OpenApi (Swagger) documentation page. You can use [GitHub Flavored Markdown](gfm-syntax) for rich text.
+The public documentation is used in the service's OpenApi (Swagger) documentation page. You can use [GitHub Flavored Markdown](gfm-syntax) for rich text.
 
 ### Export swagger.json
 

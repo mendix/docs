@@ -36,14 +36,14 @@ The example location gives an example of a URL on which the operation can be rea
 Specify the microflow that implements the operation. It should be a microflow that:
 
 * Returns a *System.HttpResponse* object that is not _empty_
-* Takes all _path parameters_ specified in the _operation path_ as parameters
+* Takes all [path parameters](published-rest-path-parameters) specified in the _operation path_ as parameters
 * Allows all roles that the service allows
 
 The microflow may have a *System.HttpRequest* parameter, which you can use to inspect the incoming request.
 
 The microflow should not have any other *Object* or *List of Object* parameters.
 
-Any remaining microflow parameters will be treated as optional query parameters.
+Any remaining microflow parameters will be treated as optional [query parameters](published-rest-query-parameters).
 
 If the microflow throws an unhandled exception, then we generate an http response with 500 Internal server error.
 

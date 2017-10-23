@@ -45,6 +45,8 @@ The microflow should not have any other *Object* or *List of Object* parameters.
 
 Any remaining microflow parameters will be treated as optional query parameters.
 
+Handle [errors](microflows.md#error-handlers) in your microflow
+
 ### Allowed roles
 
 The allowed roles define which [module role](module-role) a user must have to be able to access the service.

@@ -34,3 +34,7 @@ A REST service exposes a number of [resources](published-rest-resource). On a re
 ## Operations
 
 When you select a resource, you see the [operations](published-rest-operation) that are defined for that resource.
+
+## Related Topics
+
+* See [Published REST routing](published-rest-routing) for more information on which operation gets executed for a given request URL

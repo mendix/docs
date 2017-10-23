@@ -25,6 +25,8 @@ The _operation path_ specifies the remainder of the location of the operation. Y
 
 You can use [path parameters](published-rest-path-parameters) to capture part of the location as a microflow parameter. Specify path parameters in the operation path between `{` and `}`. The microflow should have a parameter with the same name. Whatever is in the URL at the place of the path parameter will be passed to the microflow.
 
+The method and operation path determine [which operation gets executed for a given request URL](published-rest-routing).
+
 ### Example location
 
 The example location gives an example of a URL on which the operation can be reached. It shows path parameter and query parameter values as placeholders between `{` and `}`.

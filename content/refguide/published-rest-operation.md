@@ -17,7 +17,7 @@ The method specifies what type of operation is performed by the microflow.
 * PATCH: The operations updates (part of) the entry at the specified location
 * DELETE: This operation deletes the entry or entries at the specified location
 
-### Operation path
+### <a name="operation-path"></a>Operation path
 
 The location where the operation can be reached starts with the location of the resource.
 
@@ -55,10 +55,10 @@ The allowed roles define which [module role](module-role) a user must have to be
 
 The public documentation is used in the service's OpenApi (Swagger) documentation page.
 
-### Summary
+### <a name="sumary"></a>Summary
 
 Use the summary to provide a short description of what the operation does.
 
-### Description
+### <a name="description"></a>Description
 
 Use the description to provide a complete overview of what the operation does. You can use [GitHub Flavored Markdown](gfm-syntax) for rich text.

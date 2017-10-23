@@ -7,7 +7,7 @@ Use a _Published REST Service_ to expose your entities and microflows to other a
 
 ## General
 
-### Service name
+### <a name="service-name"></a>Service name
 
 The service name uniquely identifies the service in the app. It's part of the location of the service, so it can't contain spaces or special characters.
 
@@ -21,11 +21,11 @@ If you want to try out your service, start the app and browse to this URL. You w
 
 The allowed roles define which [module role](module-role) a user must have to be able to access the service.
 
-### Public documentation
+### <a name="public-documentation"></a>Public documentation
 
 The public documentation is used in the service's [OpenAPI (Swagger) documentation page](open-api). You can use [GitHub Flavored Markdown](gfm-syntax) for rich text.
 
-### Export swagger.json
+### <a name="export-swagger-json"></a>Export swagger.json
 
 Click the _Export swagger.json_ button to save the service's [OpenAPI (Swagger) documentation](open-api) somewhere on your machine. This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
 

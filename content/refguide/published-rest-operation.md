@@ -45,7 +45,7 @@ The microflow should not have any other *Object* or *List of Object* parameters.
 
 Any remaining microflow parameters will be treated as optional query parameters.
 
-Handle [errors](microflows.md#error-handlers) in your microflow
+Handle [errors](microflows.md#error-handlers) in your microflow by [inspecting errors](microflows.md#inspecting-errors).
 
 ### Allowed roles
 

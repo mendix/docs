@@ -23,7 +23,7 @@ The location where the operation can be reached starts with the location of the 
 
 The _operation path_ specifies the remainder of the location of the operation. You can leave it empty to use the location of the resource.
 
-You can use path parameters to capture part of the location as a microflow parameter. Specify path parameters in the operation path between `{` and `}`. The microflow should have a parameter with the same name. Whatever is in the URL at the place of the path parameter will be passed to the microflow.
+You can use [path parameters](published-rest-path-parameters) to capture part of the location as a microflow parameter. Specify path parameters in the operation path between `{` and `}`. The microflow should have a parameter with the same name. Whatever is in the URL at the place of the path parameter will be passed to the microflow.
 
 ### Example location
 
@@ -49,7 +49,7 @@ The allowed roles define which [module role](module-role) a user must have to be
 
 ## Public documentation
 
-The public documentation is used in service's OpenApi (Swagger) documentation page.
+The public documentation is used in the service's OpenApi (Swagger) documentation page.
 
 ### Summary
 

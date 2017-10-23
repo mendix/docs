@@ -15,17 +15,21 @@ The service name uniquely identifies the service in the app. It's part of the lo
 
 The example location shows the URL on which the service can be reached.
 
+If you want to try out your service, start the app and browse to this URL. You will be redirected to the page that shows the [interactive documentation](published-rest-interactive-documentation) of the service.
+
 ### Allowed roles
 
 The allowed roles define which [module role](module-role) a user must have to be able to access the service.
 
 ### Public documentation
 
-The public documentation is used in the service's OpenApi (Swagger) documentation page. You can use [GitHub Flavored Markdown](gfm-syntax) for rich text.
+The public documentation is used in the service's [OpenAPI (Swagger) documentation page](open-api). You can use [GitHub Flavored Markdown](gfm-syntax) for rich text.
 
 ### Export swagger.json
 
-Click the _Export swagger.json_ button to save the service's OpenApi (Swagger) documentation page somewhere on your machine.
+Click the _Export swagger.json_ button to save the service's [OpenAPI (Swagger) documentation](open-api) somewhere on your machine. This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
+
+When the app is running, this file is available under `/rest-doc/servicename/swagger.json`.
 
 ## Resources
 

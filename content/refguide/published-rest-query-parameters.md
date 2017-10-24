@@ -13,5 +13,5 @@ This is shown in the example location in the [Published REST Operation](publishe
 
 Query paramaters can be be of all the prmitive types supported in Mendix (string, boolean, date and time, decimal, enumeration, integer or double).
 For date and time we accept input formatted according to ISO-8601 (https://www.w3schools.com/xml/schema_dtypes_date.asp).
-When calling an opteration and an optional query paramater is not specified it will have the value _empty_ in the microflow, with the expection of
+When calling an operation and an optional query paramater is not specified it will have the value _empty_ in the microflow, with the expection of
 paramaters with the type boolean which will have the default value _false_.

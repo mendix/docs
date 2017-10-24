@@ -45,13 +45,15 @@
   <meta property="og:description" content="{{ $site.Params.site_description }}" />
   <!-- <meta itemprop="description" content="{{ $site.Params.site_description }}" /> -->{{ end }}{{ end }}
   {{ with $page.GitInfo }}
-  {{ printf "<meta property=\"og:updated_time\" content=\"%s\"/>" (dateFormat "2006-02-01T15:04:05-0700" .AuthorDate) | safeHTML }}{{ end}}
+  {{ printf "<meta property=\"og:updated_time\" content=\"%s\"/>" (dateFormat "2006-02-01T15:04:05-07:00" .AuthorDate) | safeHTML }}{{ end}}
   {{ with $page.Params.tags }}
   <meta name="keywords" content="{{ delimit $page.Params.tags ", " }}">{{ else }}{{ "<!-- no tags set -->" | safeHTML }}
   {{ end }}
 
   <link rel="canonical" href="{{ $permaLink }}">
   <meta property="og:url" content="{{ $permaLink }}" />
+
+  <link rel="alternate" type="application/atom+xml" title="Updates" href="https://docs.mendix.com/feed.xml" />
 
   <meta property="og:site_name" content="Mendix Documentation" />
   <meta property="og:locale" content="en_US" />

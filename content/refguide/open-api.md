@@ -11,7 +11,7 @@ Many of the popular API tools support OpenAPI 2.0, including [SoapUI](https://ww
 
 If you want to know all the details, what follows is a technical description of which parts of the `swagger.json` file are generated.
 
-### Main schema object
+### Schema
 
 The main schema object documents the service
 
@@ -21,16 +21,16 @@ The main schema object documents the service
 | info.title | The [name of the service](published-rest-service#service-name) |
 | info.description | The [public documentation of the service](published-rest-service#public-documentation) |
 | info.version | 1.0.0 |
-| host | The server on which the app is running |
+| host | The host on which the app is running |
 | basePath | /rest/servicename |
 | schemes | The schemes of the server on which the app is running (http and/or https) |
 | responses | Contains the unautorized response when security is enabled |
 | securityDefinitions | Contains basic authentication when security is enabled |
-| securityRequirement | Contains basic authentication when security is enabled |
+| security | Contains basic authentication when security is enabled |
 | tags | Each resource generates a tag with the [name](published-rest-resource#name) and description ([public documentation](published-rest-resource#public-documentation)) of the resource |
-| paths | Each group of operations generates a Path object. See [below](#tags) for more information. |
+| paths | Each group of operations generates a Path object. See below for more information. |
 
-### <a name="tags"></a>Tags
+### Paths
 
 The service's operations are grouped by [operation path](published-rest-operation#operation-path). Each of these groups generates a PathItem with the operation path as the name. The PathItem has an Operation property for each operation in the group.
 

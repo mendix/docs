@@ -33,7 +33,7 @@ When the app is running, this file is available under `/rest-doc/servicename/swa
 
 ## Resources
 
-A REST service exposes a number of [resources](published-rest-resource). On a resource you can define GET, PUT, POST, PATH and DELETE operations.
+A REST service exposes a number of [resources](published-rest-resource). On a resource you can define GET, PUT, POST, PATCH and DELETE operations.
 
 ## Operations
 

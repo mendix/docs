@@ -39,7 +39,7 @@ Specify the microflow that implements the operation. It should be a microflow th
 * Takes all [path parameters](published-rest-path-parameters) specified in the _operation path_ as parameters
 * Allows all roles that the service allows
 * The microflow may have a *System.HttpRequest* parameter, which you can use to inspect the incoming request.
-* The microflow should not have any other *Object* or *List of Object* parameters.
+* The microflow should not have any other *Object* or *List* parameters.
 
 Any remaining microflow parameters will be treated as optional [query parameters](published-rest-query-parameters).
 

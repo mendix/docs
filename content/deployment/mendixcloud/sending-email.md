@@ -7,9 +7,9 @@ category: "Mendix Cloud"
 
 You may want to send email from your apps running in the Mendix Cloud via, for instance, the [Email Module](https://appstore.home.mendix.com/link/app/259/Mendix/E-mail-module-with-templates). After you have installed this you will need to configure an SMTP server in your application. There are several options:
 
-| Service | Mendix Cloud v3 | Mendix Cloud v4 | Free Plan (Sandbox) | 
-|---|---|---|---|	
-| **Amazon Simple Email Service** | &#x2713; | &#x2713;	| &#x2713; |   
+| Service | Mendix Cloud v3 | Mendix Cloud v4 | Free Plan (Sandbox) |
+| --- | --- | --- | --- |
+| **Amazon Simple Email Service** | &#x2713; | &#x2713;	| &#x2713; |
 | **Gmail** | &#x2713; | &#x2713; | &#x2713; |
 | **MailGun** | &#x2713; | &#x2713;	| &#x2713; |
 | **SendGrid** | &#x2713; | &#x2713; | &#x2713;	|

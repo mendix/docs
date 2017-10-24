@@ -11,7 +11,7 @@ Secondly, it should take all the [path parameters](published-rest-path-parameter
 
 All other parameters that are specified for the microflow with a primitive data type are automatically considered optional query parameters. 
 
-Query parameters are added to the end of the path following a question mark in the format `?name1=value1&name2=value2`.
+Query parameters are added to the end of the path following a question mark in the format `?name=John&age=42`.
 
 This is shown in the example location in the [operation editor window](published-rest-operation).
 

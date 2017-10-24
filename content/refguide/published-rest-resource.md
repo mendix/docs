@@ -13,4 +13,4 @@ The resource name uniquely identifies the resource in the [service](published-re
 
 ## <a name="public-documentation"></a>Public documentation
 
-The public documentation is used in the service's OpenApi (Swagger) documentation page. You can use [GitHub Flavored Markdown](gfm-syntax) for rich text.
+The public documentation is used in the service's [OpenApi (Swagger) documentation page](published-rest-interactive-documentation). You can use [GitHub Flavored Markdown](gfm-syntax) for rich text.

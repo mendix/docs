@@ -65,7 +65,7 @@ This option allows you to generate the request using a string template. The temp
 These are the options in the drop-down menu for handling the response:
 
 * **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [Import Mapping](import-mappings)
-* **Store in an HTTP response** – any successful HTTP response can be stored directly in an `HttpResponse` object, and the [$latestHttpResponse](call-rest-action#latesthttpresponse-variable) variable is also updated
+* **Store in an HTTP response** – any successful HTTP response can be stored directly in an [HttpResponse](http-request-and-response-entities#http-response) object, and the [$latestHttpResponse](call-rest-action#latesthttpresponse-variable) variable is also updated
 * **Store in a file document variable** – if the response is a binary content (for example, a PDF), it can be stored in an entity – this entity should inherit from `System.FileDocument`
 * **Store in a string** – if the response is a string (for example, CSV), it can be stored directly in a string variable
 * **Do not store in a variable** - use this option when the call does not return anything useful.
@@ -80,11 +80,11 @@ The **Name** field defines the name for the variable that will hold the result o
 
 This section is applicable when the HTTP response status code is not successful (for example, a redirection [3xx] or an error [4xx and 5xx]).
 
-When the **Store message body in $latestHttpResponse variable** option is selected, `$latestHttpResponse/content` will be set with the response body. It might contain some useful information provided by the server (for example, why the authentication is rejected).
+When the **Store message body in $latestHttpResponse variable** option is selected, `$latestHttpResponse/Content` will be set with the response body. It might contain some useful information provided by the server (for example, why the authentication is rejected).
 
 ### $latestHttpResponse Variable
 
-The `$latestHttpResponse` variable is of the `HttpResponse` type. It is available after a Call REST activity.
+The `$latestHttpResponse` variable is of the [HttpResponse](http-request-and-response-entities#http-response) type. It is available after a Call REST activity.
 
 However, its `Content` attribute will be left empty in most cases in order to minimize memory usage.
 
@@ -93,18 +93,3 @@ This attribute is filled when one of the following scenarios occur:
 * The **Store message body in $latestHttpResponse variable** option in the **Error handling** section is checked and the call failed
 
 This variable can be accessed from any microflow action in the scope.
-
-### HttpResponse Entity
-
-The `HttpResponse` entity has the following attributes:
-
-|  Attribute  |  Type  |  Description  |
-|  ---  |  ---  |  ---  |
-|  `HttpVersion`  |  String  |  The protocol version, for example, `HTTP/1.1`.  |
-|  `StatusCode`  |  Integer  |  The HTTP status code that the service returned.  |
-|  `ReasonPhrase`  |  String  |  A description of the `StatusCode`.  |
-|  `Content`  |  String  |  The body of the response. |
-
-You can also retrieve `HttpHeader` via its association. This entity stores the header information in the form of a key value pair.
-
-For more information on HTTP status codes, see the [W3C Specification of Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).

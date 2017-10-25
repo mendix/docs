@@ -5,7 +5,7 @@ parent: "Published REST operation"
 
 The specification of a [Published REST Operation](published-rest-operation) includes a microflow which implements the operation. This microflow takes a number of parameters. 
 
-It may take parameter of type `System.HttpRequest`. 
+It may take parameter of type [HttpRequest](http-request-and-response-entities#http-request). 
 
 Secondly, it should take all the [path parameters](published-rest-path-parameters) specified in the operation path of the operation.
 

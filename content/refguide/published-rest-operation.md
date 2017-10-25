@@ -33,13 +33,13 @@ The _example location_ gives an example of a URL on which the operation can be r
 
 ### Microflow
 
-Specify the microflow that implements the operation. It should be a microflow that:
+Specify the microflow that implements the operation. Here are the characteristics of a valid microflow for REST operation:
 
-* Returns a [HttpResponse](http-request-and-response-entities#http-response) object that is not _empty_
-* Takes all [path parameters](published-rest-path-parameters) specified in the _operation path_ as parameters
-* Allows all roles that the service allows
-* The microflow may have a [HttpRequest](http-request-and-response-entities#http-request) parameter, which you can use to inspect the incoming request.
-* The microflow should not have any other *Object* or *List* parameters.
+* It returns an [HttpResponse](http-request-and-response-entities#http-response) object that is not _empty_
+* It takes all [path parameters](published-rest-path-parameters) specified in the _operation path_ as parameters
+* It allows all roles that the service allows
+* It may have a [HttpRequest](http-request-and-response-entities#http-request) parameter, which you can use to inspect the incoming request.
+* It should not have any other *Object* or *List* parameters.
 
 Any remaining microflow parameters will be treated as optional [query parameters](published-rest-query-parameters).
 

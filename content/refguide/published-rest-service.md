@@ -15,7 +15,9 @@ The service name uniquely identifies the service in the app. It's part of the lo
 
 The example location shows the URL on which the service can be reached.
 
-If you want to try out your service, start the app and browse to this URL. You will be redirected to the page that shows the [interactive documentation](published-rest-services#interactive-documentation) of the service.
+For example : 
+
+![](attachments/published-rest-service/example-location-url.png)
 
 ### Allowed roles
 

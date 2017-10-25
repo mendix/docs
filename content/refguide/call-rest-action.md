@@ -46,7 +46,23 @@ The sections below describe the options in the drop-down menu for generating the
 
 ### Export Mapping for the Entire Request
 
-This option allows you to use a single [Export Mapping](export-mappings) for the body of the request. You can choose the export mapping to use for the request part and, if applicable, the object that you want to use as parameter for the mapping.
+This option allows you to use a single [Export Mapping](export-mappings) for the body of the request. 
+
+#### Mapping
+
+Select the mapping that you want to apply
+
+#### Parameter type
+
+If the [Export Mapping](export-mappings) requires input, this field shows the type of the input.
+
+#### Parameter
+
+If the [Export Mapping](export-mappings) requires input, you can select a variable of the correct type.
+
+#### Content type
+
+If the [Export Mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose which type of output you want.
 
 ### Binary for the Entire Request
 
@@ -64,7 +80,7 @@ This option allows you to generate the request using a string template. The temp
 
 These are the options in the drop-down menu for handling the response:
 
-* **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [Import Mapping](import-mappings)
+* **Apply import mapping** – if the response is JSON or XML, it can be transformed directly into objects using an [Import Mapping](import-mappings). The fields that you can choose here are described in the [Import Mapping Action](import-mapping-action).
 * **Store in an HTTP response** – any successful HTTP response can be stored directly in an `HttpResponse` object, and the [$latestHttpResponse](call-rest-action#latesthttpresponse-variable) variable is also updated
 * **Store in a file document variable** – if the response is a binary content (for example, a PDF), it can be stored in an entity – this entity should inherit from `System.FileDocument`
 * **Store in a string** – if the response is a string (for example, CSV), it can be stored directly in a string variable

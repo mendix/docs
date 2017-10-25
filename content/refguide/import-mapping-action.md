@@ -22,6 +22,14 @@ It the variable is a file document, it should be an object of entity 'System.Fil
 
 The [Import Mapping](import-mappings) defines how to transform the XML or JSON string (or file document) to objects.
 
+### Input content type
+
+If the import mapping is based on a message definition, it can import both XML and JSON. Select whether the input variable contains XML or JSON.
+
+### The input contains
+
+If the import mapping is based on a message definition, it can import both single objects and lists. Select whether the input variable contains a single object or a list of objects.
+
 ### Parameter
 
 If the selected mapping requires a parameter, you can choose it here.

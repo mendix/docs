@@ -3,7 +3,6 @@ title: "Export Mapping Action"
 parent: "microflow-activities"
 ---
 
-
 ![](attachments/19202807/19399019.png)
 
 With the Export Mapping action you can export the data stored in [domain model](domain-model) entities into an XML or JSON document, or into a string variable.
@@ -26,17 +25,25 @@ Export mappings support flat JSON. You can select a JSON structure document in a
  
 {{% /alert %}}
 
-### Argument
+### Parameter type
 
-If the [Export Mapping](export-mappings) requires an object as input, you can select a variable of the correct type.
+If the [Export Mapping](export-mappings) requires input, this field shows the type of the input.
+
+### Parameter
+
+If the [Export Mapping](export-mappings) requires input, you can select a variable of the correct type.
+
+### Content type
+
+If the [Export Mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose which type of output you want.
+
+## Validation properties
 
 {{% alert type="info" %}}
 
 Validation properties are only applicable if an Export Mapping is selected that maps to XML.
 
 {{% /alert %}}
-
-## Validation properties
 
 ### Validate against schema
 

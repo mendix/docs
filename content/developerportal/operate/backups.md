@@ -69,7 +69,7 @@ These are the options:
 * **Files Only**
 
 {{% alert type="info" %}}
-As the download files are generated 'on the fly', it is not possible to estimate the file size before dowloading. Your browser will not show a progress bar.
+As the download files are generated "on the fly" (meaning, while in progress), it is not possible to estimate the file size before downloading. Your browser will not show a progress bar.
 {{% /alert %}}
 
 ## 4 Backup Details

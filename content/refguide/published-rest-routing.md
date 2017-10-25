@@ -1,6 +1,6 @@
 ---
 title: "Published REST routing"
-parent: "Published REST service"
+parent: "published-rest-services"
 ---
 
 When a REST HTTP request arrives at the server, the server needs to determine which [operation](published-rest-operation) to execute. This flowchart shows how that works.

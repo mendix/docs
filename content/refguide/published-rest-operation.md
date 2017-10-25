@@ -1,6 +1,6 @@
 ---
 title: "Published REST operation"
-parent: "Published REST service"
+parent: "published-rest-services"
 ---
 
 A _Published REST Operation_ is part of a [Published REST Resource](published-rest-resource), and defines an endpoint that a client can call to get, put, post, patch or delete items from the resource.
@@ -51,7 +51,7 @@ The _allowed roles_ define which [module role](module-role) a user must have to 
 
 ## Public documentation
 
-The _public documentation_ is used in the service's [OpenApi (Swagger) documentation page](published-rest-interactive-documentation).
+The _public documentation_ is used in the service's [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation).
 
 ### <a name="sumary"></a>Summary
 

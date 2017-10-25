@@ -1,6 +1,6 @@
 ---
 title: "Published REST Query Parameters"
-parent: "Published REST operation"
+parent: "published-rest-operation"
 ---
 
 The specification of a [Published REST Operation](published-rest-operation) includes a microflow which implements the operation. This microflow takes a number of parameters. 

@@ -1,6 +1,6 @@
 ---
 title: "Published REST Path Parameters"
-parent: "Published REST operation"
+parent: "published-rest-operation"
 ---
 
 The operation path in the [Published REST Operation](published-rest-operation) specifies the last part of the location (URL) of the operation. 

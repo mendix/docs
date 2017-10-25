@@ -1,6 +1,6 @@
 ---
 title: "Open API 2.0 documentation"
-parent: "Published REST service"
+parent: "published-rest-services"
 ---
 
 Every [Published REST service](published-rest-service) is automatically documented. The system generates a `swagger.json` file that conforms to the [OpenAPI 2.0 specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) (formerly known as the Swagger Specification). This file can be [saved from the modeler](published-rest-service#export-swagger-json) or downloaded from `/rest-doc/servicename/swagger.json`.

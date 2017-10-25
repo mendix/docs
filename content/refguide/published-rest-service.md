@@ -1,6 +1,6 @@
 ---
 title: "Published REST service"
-parent: "integration"
+parent: "published-rest-services"
 ---
 
 Use a _Published REST Service_ to expose your entities and microflows to other apps using the REST standard.
@@ -15,7 +15,7 @@ The service name uniquely identifies the service in the app. It's part of the lo
 
 The example location shows the URL on which the service can be reached.
 
-If you want to try out your service, start the app and browse to this URL. You will be redirected to the page that shows the [interactive documentation](published-rest-interactive-documentation) of the service.
+If you want to try out your service, start the app and browse to this URL. You will be redirected to the page that shows the [interactive documentation](published-rest-services#interactive-documentation) of the service.
 
 ### Allowed roles
 

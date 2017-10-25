@@ -38,6 +38,7 @@
     "pump": "^1.0.2",
     "recursive-readdir": "^2.2.1",
     "request": "^2.81.0",
+    "rss": "^1.2.2",
     "run-sequence": "^2.1.0",
     "shelljs": "^0.7.8",
     "spa-server": "^1.0.0",

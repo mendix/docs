@@ -23,6 +23,7 @@ This is the second how-to in this series on how to create an employee directory 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
 * Complete the first how-to in this series: [Build an Employee Directory App Step 1: Create the App](build-an-employee-directory-app-beginner-1-create-the-app)
+* Open the home page. 
 
 ## 3 Building Up a Dashboard Page
 

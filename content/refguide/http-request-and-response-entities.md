@@ -30,6 +30,9 @@ The *HttpResponse* entity has the following attributes:
 |  *ReasonPhrase*  |  String  |  OK | A textual representation of the *StatusCode*.  |
 |  *Content*  |  String  | empty | The body of the response. |
 
+For more information on HTTP status codes, see the [W3C Specification of Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
+
 You can retrieve or create response headers via the *HttpHeaders* association.
 
-For more information on HTTP status codes, see the [W3C Specification of Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
+An important *HttpResponse* header is _Content-Type_, which indicates how the content should be interpreted. For more information on this header, see [the W3C specification of Content-Type](https://www.w3.org/Protocols/rfc1341/4_Content-Type.html).
+

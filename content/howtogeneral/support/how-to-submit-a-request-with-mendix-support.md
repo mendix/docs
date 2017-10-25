@@ -2,7 +2,7 @@
 title: "Submit a Request with Mendix Support"
 category: "Mendix Support"
 #description: "Describes submitting a request with Mendix Support."
-#tags: []
+#tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
 ---
 
 ## 1 Introduction
@@ -37,6 +37,20 @@ To submit a request with Mendix Support, follow these steps:
 
     ![](attachments/how-to-submit-a-ticket---quick-reference-for-endusers/204371709-pic2.png)
 
+    You can select from the following issues:<br>
+    * **Incident**<br>
+    * **Request for Information**<br>
+    * **Standard change: New App**<br>
+    * **Standard change: Add App Resources/File Storage**<br>
+    * **Standard change: Change Mendix URL**<br>
+    * **Standard change: (Re)new license**<br>
+    * **Standard change: Assign Company Admin**<br>
+    * **Standard change: Request ATS license**<br>
+    * **Standard change: Reset Google authenticator**<br>
+    * **Key Change request (on-premises)**<br>
+    * **Standard change**<br>
+    * **Non-Standard change**<br>
+    
 3.  Fill in the fields for the issue type you selected.
 
 There are certain fields that are obligatory. The most important field is the **Affected App**. You can choose any app to which you have access. You access level is determined by your project role in the Developer Portal. There is always a default company account that you can use to submit general tickets. 

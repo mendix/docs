@@ -15,7 +15,9 @@ Query parameters are added to the end of the path following a question mark in t
 
 This is shown in the example location in the [operation editor window](published-rest-operation).
 
-Query paramaters can be be of all the prmitive types supported in Mendix (string, boolean, date and time, decimal, enumeration, integer or double).
+Query parameters can be be of all the prmitive types supported in Mendix (string, boolean, date and time, decimal, enumeration, integer or double).
+
+Query parameters are case sensitive.
 
 Date and time parameters should be entered in [ISO-8601](https://www.w3schools.com/xml/schema_dtypes_date.asp) format, for instance `2018-12-31T09:00:00`.
 

@@ -66,10 +66,10 @@ List of objects with the following key-value pairs:
      "LatestRevisionMendixVersion" :  "5.6.0" ,
      "DisplayName" :  "Main line"
 },{
-     "Name" :  "statisticalfunctions" ,
+     "Name" :  "statistical functions" ,
      "LatestRevisionNumber" :  13 ,
      "LatestRevisionMendixVersion" :  "5.6.0" ,
-     "DisplayName" :  "statisticalfunctions"
+     "DisplayName" :  "statistical functions"
 }]
 ```
 
@@ -87,12 +87,12 @@ Retrieves a specific branch that belongs to the team server project of a specifi
 ##### Parameters
 
 *   _AppId_ (String) : Subdomain name of an app.
-*   _Name_ (String) : Name of the branch to get or 'trunk' to get the main line.
+*   _Name_ (String) : Name of the branch to get or 'trunk' to get the main line. The name of the branch should be [URL Encoded](https://www.w3schools.com/tags/ref_urlencode.asp).
 
 ##### Example
 
 ```java
-GET /api/1/apps/calc/branches/trunk HTTP/1.1
+GET /api/1/apps/calc/branches/statistical%20functions HTTP/1.1
 Host: deploy.mendix.com
 
 Accept: */*
@@ -121,10 +121,10 @@ An object with the following key-value pairs:
 
 ```java
 {
-    "Name": "trunk",
-    "LatestRevisionNumber": 9,
+    "Name": "statistical functions",
+    "LatestRevisionNumber": 13,
     "LatestRevisionMendixVersion": "5.6.0",
-    "DisplayName": "Main line"
+    "DisplayName": "statistical functions"
 }
 ```
 

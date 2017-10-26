@@ -40,8 +40,8 @@ For details on this release, see [7.5 release notes](7.5).
 * The Mendix Web Modeler is not enabled when you create an Atlas UI-based app in the Mendix Desktop Modeler.
   * Fixed in [7.5.1](7.5#RN751).
 * For Atlas-based apps, it is not possible to use the **Generate page** functionality for buttons. The **Create Page** dialog box shows no selectable page templates for these profiles.
-  * Workaround: select **File** > **New Document** > **Page** and set this newly created page in the **Page** property of the button.
-
+  * Fixed in [7.5.1](7.5#RN751-1).
+  
 ## 7.4
 
 For details on this release, see [7.4 release notes](7.4).

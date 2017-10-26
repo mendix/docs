@@ -12,7 +12,6 @@ The image below provides a domain model representation of the concepts discussed
 
 The Cloud Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication "authentication").
 
-
 # <a name="TeamServerAPI-APIcalls" rel="nofollow"></a>API calls
 
 ## <a name="TeamServerAPI-Retrievebranches" rel="nofollow"></a>Retrieve branches
@@ -87,7 +86,7 @@ Retrieves a specific branch that belongs to the team server project of a specifi
 ##### Parameters
 
 *   _AppId_ (String) : Subdomain name of an app.
-*   _Name_ (String) : Name of the branch to get or 'trunk' to get the main line. The name of the branch should be [URL Encoded](https://www.w3schools.com/tags/ref_urlencode.asp).
+*   _Name_ (String) : Name of the branch to get or 'trunk' to get the main line. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).
 
 ##### Example
 

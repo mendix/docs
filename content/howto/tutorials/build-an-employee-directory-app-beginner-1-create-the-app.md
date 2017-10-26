@@ -67,7 +67,7 @@ On the left side of the Web Modeler is the main menu. Via the icons in this menu
 * **Theme Customizer**
 * **Feedback**
 
-You can click on the Mendix logo to go back to the **Developer Portal**.
+You can click the Mendix logo to go back to the **Developer Portal**.
 
 ![](attachments/build-an-employee-directory-app-beginner/main-menu.png)
 

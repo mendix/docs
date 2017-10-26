@@ -68,6 +68,10 @@ These are the options:
 * **Database Only**
 * **Files Only**
 
+{{% alert type="info" %}}
+As the download files are generated "on the fly" (meaning, while in progress), it is not possible to estimate the file size before downloading. Your browser will not show a progress bar.
+{{% /alert %}}
+
 ## 4 Backup Details
 
 When you click **Details**, you can view the following details:

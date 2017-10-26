@@ -7,7 +7,7 @@ parent: "integration"
 
 `HttpRequest` is a system entity that represents a request to a server. `HttpResponse` represents the response from the server. Use these entities when [publishing](published-rest-services) or [consuming](consumed-rest-services) REST services.
 
-### <a name="http-request"></a>HttpRequest
+## 1 HttpRequest<a name="http-request"></a>
 
 The `HttpRequest` entity has the following attributes:
 
@@ -19,7 +19,7 @@ The `HttpRequest` entity has the following attributes:
 
 You can retrieve the request headers via the `HttpHeaders` association.
 
-### <a name="http-response"></a>HttpResponse
+## 2 HttpResponse<a name="http-response"></a>
 
 The `HttpResponse` entity has the following attributes:
 

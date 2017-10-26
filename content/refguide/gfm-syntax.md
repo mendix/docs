@@ -1,8 +1,8 @@
 ---
-title: "GitHub Flavored Markdown"
+title: "GitHub-Flavored Markdown"
 parent: "published-rest-services"
 ---
 
-At several places in published REST services, it is indicated that you can use [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown) for rich text.
+Several places in published REST services indicate that you can use [GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown) for rich text.
 
-See the GitHub guide [Mastering Markdown](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown) for more information.
+For more information, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown).

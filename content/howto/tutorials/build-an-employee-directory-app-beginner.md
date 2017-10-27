@@ -1,5 +1,5 @@
 ---
-title: "Build an Employee Directory App in the Web Modeler (Beginner)"
+title: "Build an Employee Directory App (Beginner)"
 parent: "onboarding-tutorials"
 description: "This series of Mendix How-To's will guide you in creating an employee directory app in the Mendix Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]

@@ -34,16 +34,16 @@ The main schema object documents the service.
 
 ## 3 Paths
 
-The service's operations are grouped by [operation path](published-rest-operation#operation-path). Each of these groups generates a PathItem with the operation path as the name. The PathItem has an Operation property for each operation in the group.
+The service's operations are grouped by [operation path](published-rest-operation#operation-path). Each of these groups generates a `PathItem` with the operation path as the name. The `PathItem` has an `Operation` property for each operation in the group.
 
 ## 4 Operations
 
-Each operation generates an Operation object
+Each operation generates an `Operation` object:
 
 | Property | Generated value |
 | --- | --- |
-| tags | The [name](published-rest-resource#name) of the resource |
-| summary | The [public documentation summary](published-rest-operation#summary) of the operation |
-| description | The [public documentation description](published-rest-operation#description) of the operation |
-| parameters | The path and query parameters, and for methods POST, PUT and PATCH also a body parameter |
-| responses | The OK response, and if security is enabled also the unauthorized response |
+| `tags` | The [name](published-rest-resource#name) of the resource. |
+| `summary` | The [public documentation summary](published-rest-operation#summary) of the operation. |
+| `description` | The [public documentation description](published-rest-operation#description) of the operation. |
+| `parameters` | The path and query parameters. For the POST, PUT, and PATCH methods, this is also a body parameter. |
+| `responses` | The OK response. If security is enabled, this is also the unauthorized response. |

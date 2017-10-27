@@ -1,6 +1,6 @@
 ---
-title: "Build an Employee Directory App (Beginner) Step 1: Create the App"
-parent: "build-an-employee-directory-app-beginner"
+title: "Build an Employee Directory App (Easy) Step 1: Create the App"
+parent: "build-an-employee-directory-app-easy"
 description: "Presents details on how to create and deploy an employee directory app in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
 ---
@@ -30,14 +30,14 @@ To create your app, follow these steps:
 1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in if you are not already logged in. The Mendix Developer Portal is the central starting point for using, sharing, and building apps.
 2. Click **Create App** in the top right of the screen:
 
-    ![](attachments/build-an-employee-directory-app-beginner/create-app.png) 
+    ![](attachments/build-an-employee-directory-app-easy/create-app.png) 
 
 3. On the **Tutorials** tab, select **Build an Employee Directory App**.
 
 4. Click **Use this app**, enter a name for your application, and click **Create App**.
 5. Your app is now created! When it is ready, you will land on the **Buzz** page for the app, where you can see and share ideas as well as collaborate with your team. In the **Team** section on the right, you can see your team and invite colleagues to join the app project.
 
-    ![](attachments/build-an-employee-directory-app-beginner/app-buzz.png)
+    ![](attachments/build-an-employee-directory-app-easy/app-buzz.png)
 
 ## 4 Editing Your App
 
@@ -45,7 +45,7 @@ Once your app is created, you can start editing it.
 
 In the app's **Buzz** page in the Developer Portal, click **Edit App** to open your app in the Web Modeler.<br>
 
-![](attachments/build-an-employee-directory-app-beginner/edit-app.png)
+![](attachments/build-an-employee-directory-app-easy/edit-app.png)
 
 {{% alert type="info" %}}
 
@@ -69,21 +69,21 @@ On the left side of the Web Modeler is the main menu. Via the icons in this menu
 
 You can click the Mendix logo to go back to the **Developer Portal**.
 
-![](attachments/build-an-employee-directory-app-beginner/main-menu.png)
+![](attachments/build-an-employee-directory-app-easy/main-menu.png)
 
 The main window of the Web Modeler is you’ll be developing the app by editing pages, microflows, and domain models.
 
-![](attachments/build-an-employee-directory-app-beginner/main-window.png)
+![](attachments/build-an-employee-directory-app-easy/main-window.png)
 
 On the right side of the Web Modeler you can find the toolbox and properties of elements you select in the editing area. The toolbox contains widgets, building blocks, or microflow activities that you can add to your app.
 
-![](attachments/build-an-employee-directory-app-beginner/toolbox.png)
+![](attachments/build-an-employee-directory-app-easy/toolbox.png)
 
-Great! Now you can move on to the second how-to for creating an employee directory app in the Web Modeler: [How to Build an Employee Directory App (Beginner) Step 2: Build a Dashboard Page](build-an-employee-directory-app-beginner-2-build-a-dashboard-page).
+Great! Now you can move on to the second how-to for creating an employee directory app in the Web Modeler: [How to Build an Employee Directory App (Easy) Step 2: Build a Dashboard Page](build-an-employee-directory-app-easy-2-build-a-dashboard-page).
 
 ## 6 Related Content
 
-* [How to Build an Employee Directory App (Beginner) Step 2: Build a Dashboard Page](build-an-employee-directory-app-beginner-2-build-a-dashboard-page)
-* [How to Build an Employee Directory App (Beginner) Step 3: Publish and View Your App](build-an-employee-directory-app-beginner-3-publish-and-view-your-app)
-* [How to Build an Employee Directory App (Beginner) Step 4: Add Pages to the User Interface](build-an-employee-directory-app-beginner-4-add-pages-to-the-user-interface)
-* [How to Build an Employee Directory App (Beginner) Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-beginner-5-add-employee-promotion-logic)
+* [How to Build an Employee Directory App (Easy) Step 2: Build a Dashboard Page](build-an-employee-directory-app-easy-2-build-a-dashboard-page)
+* [How to Build an Employee Directory App (Easy) Step 3: Publish and View Your App](build-an-employee-directory-app-easy-3-publish-and-view-your-app)
+* [How to Build an Employee Directory App (Easy) Step 4: Add Pages to the User Interface](build-an-employee-directory-app-easy-4-add-pages-to-the-user-interface)
+* [How to Build an Employee Directory App (Easy) Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-easy-5-add-employee-promotion-logic)

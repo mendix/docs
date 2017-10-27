@@ -72,13 +72,14 @@ This module has many moving pieces that allow the configurations to be as simple
 
 1.  Open the **Domain Model** and add an **Entity** to serve as a "Master Export" entity that is of specialization **FileDocument.**
 2.  Create an association between the newly created entity and the entity(ies) that you will want to serve as a base for the Excel Export.
+
     ![](attachments/18448732/18581908.png)
 
 ### 4.2 Basic Setup of the Template
 
 1.  Open the **Excel Exporter Overview** via the Navigation item configured to XLSReport.Excel_Document_Overview.
 2.  Click the **New** to create a new template.
-3.   Configure the **Filename** (without extension) to be the default file name when the template is used.
+3.  Configure the **Filename** (without extension) to be the default file name when the template is used.
 
     {{% alert type="info" %}}
 

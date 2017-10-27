@@ -60,7 +60,7 @@ The features listed below have been deprecated in Mendix 6. Using these features
 * The specification of project-level access rules for the file and image system entities has been deprecated. Instead, you should create a specialized entity for each use case and configure access rules for those entities.
 * With the introduction of cluster support for Mendix Runtime, the Java API for storing objects in the session has been deprecated. This includes the `ISession.retain()`, `ISession.release()`, and `ISession.getData()` methods. The alternative solution is to store objects by associating them to the `System.Session` entity. For more information and an example, see [Custom Session Data](isession-api-usage).
 
-## 5 Removed Deprecated Functionality
+## <a name="removed"></a>5 Removed Deprecated Functionality
 
 Features deprecated in Mendix 4 have been removed in Mendix 6. The sections below will help you to upgrade your existing project and the custom widgets you might have written.
 

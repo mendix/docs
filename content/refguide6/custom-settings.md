@@ -151,7 +151,7 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created in case it does not exist yet. |   |
 | com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
 
-## 8 IBM Bluemix Object Storage Settings
+## <a name="ibm"></a>8 IBM Bluemix Object Storage Settings
 
 {{% alert type="info" %}}
 

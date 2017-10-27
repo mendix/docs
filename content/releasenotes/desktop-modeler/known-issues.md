@@ -15,7 +15,7 @@ This document describes known issues starting with Mendix version 7.0.2. For kno
 
 For details on this release, see [7.6 release notes](7.6).
 
-### 7.6.0
+### <a name="KI760"></a>7.6.0
 
 * When retrieving an entity with a virtual attribute without using a schema ID, references are not returned. This impacts the following scenarios: a template grid containing an entity with a virtual attribute will not show any data over an association (for example, nested data views); and custom widgets requesting Mendix objects with a virtual attribute through XPath will have no access to their associations. (Ticket 56016)
   * Fixed in [7.7.1](7.7#RN771).
@@ -25,12 +25,12 @@ For details on this release, see [7.6 release notes](7.6).
 
 For details on this release, see [7.5 release notes](7.5).
 
-### 7.5.1<a name="KI751"></a>
+### <a name="KI751"></a>7.5.1
 
 * For Atlas-based apps, it is not possible to use the **Generate page** functionality for buttons in the **Tablet** and **Phone** profiles. The **Create Page** dialog box shows no selectable page templates for these profiles.
   * Workaround: select **File** > **New Document** > **Page** and set this newly created page in the **Page** property of the button.
 
-### 7.5.0<a name="KI750"></a>
+### <a name="KI750"></a>7.5.0
 
 * The Mendix Web Modeler is not enabled when you create an Atlas UI-based app in the Mendix Desktop Modeler.
   * Fixed in [7.5.1](7.5#RN751).
@@ -41,7 +41,7 @@ For details on this release, see [7.5 release notes](7.5).
 
 For details on this release, see [7.4 release notes](7.4).
 
-### 7.4.0<a name="KI740"></a>
+### <a name="KI740"></a>7.4.0
 
 * Downloading FileDocuments (as in, images) on Mendix Cloud V4 is broken. The FileDocument download functionality in combination with AWS S3 storage has an issue that prevents files from being found; therefore, images are not being shown. (Ticket 54304)
   * Fixed in [7.5.0](7.5#RN750).
@@ -50,7 +50,7 @@ For details on this release, see [7.4 release notes](7.4).
 
 For details on this release, see [7.3 release notes](7.3).
 
-### 7.3.0<a name="KI730"></a>
+### <a name="KI730"></a>7.3.0
 
 * When you have a conditionally visible container that contains a conditionally visible widget, the widget is not always initialized properly.
    * Fixed in [7.4.0](7.4#RN740).
@@ -59,7 +59,7 @@ For details on this release, see [7.3 release notes](7.3).
 
 For details on this release, see [7.2 release notes](7.2).
 
-### 7.2.0<a name="KI720"></a>
+### <a name="KI720"></a>7.2.0
 
 * Changes for reference set members that are read-only for the user are not correctly serialized from the server to the client (browser). This can lead to an `IllegalArgumentException` with this message: “Global identifier should be a number.” (Ticket 52317)
     * Fixed in [7.3.0](7.3#RN730).
@@ -68,7 +68,7 @@ For details on this release, see [7.2 release notes](7.2).
 
 For details on this release, see [7.1 release notes](7.1).
 
-### 7.1.0<a name="KI710"></a>
+### <a name="KI710"></a>7.1.0
 
 * Currently you can configure expression-based conditional visibilitity/editability on any element. But this will be ignored on elements outside of a data container: on data views, list views, and template grids. Note that you still cannot configure attribute-based conditions on such elements.
     * Fixed in [7.2.0](7.2#RN720).
@@ -79,7 +79,7 @@ For details on this release, see [7.1 release notes](7.1).
 
 For details on this release, see [7.0 release notes](7.0).
 
-### 7.0.2<a name="KI702"></a>
+### <a name="KI702"></a>7.0.2
 
 #### Stateless runtime known issues
 

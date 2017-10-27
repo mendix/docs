@@ -1,6 +1,6 @@
 ---
-title: "Build an Employee Directory App (Beginner) Step 4: Add Pages to the User Interface"
-parent: "build-an-employee-directory-app-beginner"
+title: "Build an Employee Directory App (Easy) Step 4: Add Pages to the User Interface"
+parent: "build-an-employee-directory-app-easy"
 description: "Presents details on add pages to your app's UI in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
 ---
@@ -20,7 +20,7 @@ This is the fourth how-to in this series on creating an employee directory in th
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Complete the third how-to in this series: [How to Build an Employee Directory App (Beginner) Step 3: Publish and View Your App](build-an-employee-directory-app-beginner-3-publish-and-view-your-app)
+* Complete the third how-to in this series: [How to Build an Employee Directory App (Easy) Step 3: Publish and View Your App](build-an-employee-directory-app-easy-3-publish-and-view-your-app)
 
 ## 3 Adding Pages to the User Interface
 
@@ -32,30 +32,30 @@ Now that you have created a basic dashboard, you need to add a new page that can
 
 1. Select the top-left **BUTTON** image:
 
-    ![](attachments/build-an-employee-directory-app-beginner/select-card-item-button.png)
+    ![](attachments/build-an-employee-directory-app-easy/select-card-item-button.png)
 
 2. Click the **Icon** property and change it to **User**:
 
-    ![](attachments/build-an-employee-directory-app-beginner/change-icon-signal.png)
+    ![](attachments/build-an-employee-directory-app-easy/change-icon-signal.png)
 
 3. Select the top-left **Open Page** button and enter *Employees* for the **Caption** property:
 
-    ![](attachments/build-an-employee-directory-app-beginner/change-open-page-caption.png)
+    ![](attachments/build-an-employee-directory-app-easy/change-open-page-caption.png)
 
 4. Select the image you just changed to a user image and set the **On Click Action** property to **Page**:
 
-    ![](attachments/build-an-employee-directory-app-beginner/change-onclick-action.png)
+    ![](attachments/build-an-employee-directory-app-easy/change-onclick-action.png)
 
 5. Change the page property by clicking **Select page**:
 
-    ![](attachments/build-an-employee-directory-app-beginner/select-page.png)
+    ![](attachments/build-an-employee-directory-app-easy/select-page.png)
 
 6. To create a new page in the **Select Page** dialog box, do the following:<br>
     a. Click **New page**.<br>
     b. Change the title of the page to **Employees**.<br>
     c. Select **Lists** > **Lists Default** for the  template.
 
-    ![](attachments/build-an-employee-directory-app-beginner/lists-default.png)
+    ![](attachments/build-an-employee-directory-app-easy/lists-default.png)
 
     Well done — you've created your first page! Let's finish up some things before you start working on the new Employees page.
 7. Select the **Home** page by clicking the **Pages** icon in the left menu bar.
@@ -73,25 +73,25 @@ To edit the widgets, follow these steps:
 
 1. Open the **Employees** page by using the recent documents option:
 
-    ![](attachments/build-an-employee-directory-app-beginner/recent-documents.png)
+    ![](attachments/build-an-employee-directory-app-easy/recent-documents.png)
 
 2. Select the **TEXT** widget with **Title**:
 
-    ![](attachments/build-an-employee-directory-app-beginner/text-widget.png)
+    ![](attachments/build-an-employee-directory-app-easy/text-widget.png)
 
 3. Change the **Content** property to **Employees**.
 4. Delete the **Text** widget with the subtitle.
 5. Select the **CONTAINER** where the **Add** button is located:
 
-    ![](attachments/build-an-employee-directory-app-beginner/add-button.png)
+    ![](attachments/build-an-employee-directory-app-easy/add-button.png)
 
 6. Select the parent **Row** using the breadcrumb:
 
-    ![](attachments/build-an-employee-directory-app-beginner/breadcrumb-container-add-button.PNG)
+    ![](attachments/build-an-employee-directory-app-easy/breadcrumb-container-add-button.PNG)
 
 7. Change the **Row Layout** to *large left column & small right column* for all profiles:
 
-    ![](attachments/build-an-employee-directory-app-beginner/change-row-layout2.png)
+    ![](attachments/build-an-employee-directory-app-easy/change-row-layout2.png)
 
 ### 3.3 Switching Building Blocks
 
@@ -101,7 +101,7 @@ To switch building blocks, follow these steps:
 
 1. Select the **LIST VIEW** widget and delete it:
 
-    ![](attachments/build-an-employee-directory-app-beginner/listview-delete.png)
+    ![](attachments/build-an-employee-directory-app-easy/listview-delete.png)
 
 2. Open the **Toolbox** and from **Lists**, drag the **List3** building block into the container.
 
@@ -115,11 +115,11 @@ To create the entity for an employee, follow these steps:
 
 1. Select the **LIST VIEW**, which groups all the user cards together:
 
-    ![](attachments/build-an-employee-directory-app-beginner/listview-select.png)
+    ![](attachments/build-an-employee-directory-app-easy/listview-select.png)
 
 2. You want to create a new entity, so click the **Entity** property:
 
-    ![](attachments/build-an-employee-directory-app-beginner/select-entity.png)
+    ![](attachments/build-an-employee-directory-app-easy/select-entity.png)
 
 3. To create a new entity in the **Select Entity** dialog box, do the following:<br>
     a. Click **New Entity**.<br>
@@ -127,11 +127,11 @@ To create the entity for an employee, follow these steps:
 
 4. Select the **TEXT** widget of the top user card and clear the **Content** property:
 
-    ![](attachments/build-an-employee-directory-app-beginner/select-text-widget2.png)
+    ![](attachments/build-an-employee-directory-app-easy/select-text-widget2.png)
 
 5. Click **Add parameter** for the **Content** property:
 
-    ![](attachments/build-an-employee-directory-app-beginner/add-parameter.png)
+    ![](attachments/build-an-employee-directory-app-easy/add-parameter.png)
 
 6. Create a new attribute in the **Select your attribute** dialog box (which will be added to the Employee entity) by doing the following:<br>
     a. Enter *Name* for the attribute **Name**.<br>
@@ -139,7 +139,7 @@ To create the entity for an employee, follow these steps:
 
 7. In the subtitle **TEXT** widget, repeat steps 4-6 to add an attribute for **Email [String]**:
 
-    ![](attachments/build-an-employee-directory-app-beginner/list-view.png)
+    ![](attachments/build-an-employee-directory-app-easy/list-view.png)
 
 ### 3.5 Adding an Input Employee Page
 
@@ -149,18 +149,18 @@ To add a page for inputting employees, follow these steps:
 
 1. Select the **Add** button on the **Employees** page:
 
-    ![](attachments/build-an-employee-directory-app-beginner/employees-add.png)
+    ![](attachments/build-an-employee-directory-app-easy/employees-add.png)
 
 2. Select **Employee** for the **Entity** property of the button:
 
-    ![](attachments/build-an-employee-directory-app-beginner/select-entity2.png)
+    ![](attachments/build-an-employee-directory-app-easy/select-entity2.png)
 
 3. Click the **Page** property to open the **Select Page** dialog box.
 4. Click **New page** and do the following:<br>
     a. Enter *Employee* for the **Title** of the page.<br>
     b. Select **Forms** > **Form Vertical** for the template:
 
-    ![](attachments/build-an-employee-directory-app-beginner/form-vertical.png)
+    ![](attachments/build-an-employee-directory-app-easy/form-vertical.png)
 
 ### 3.6 Connecting the Input Page to the Employee Entity
 
@@ -172,15 +172,15 @@ To connect the text box widgets to the Employee entity attributes, follow these 
 
 2. Click the icon in the data source header to select the containing data view.
 
-    ![](attachments/build-an-employee-directory-app-beginner/data-source-icon.png)
+    ![](attachments/build-an-employee-directory-app-easy/data-source-icon.png)
 
 3. Set the **Entity** property of the related data view to **Employee**.
 
-    ![](attachments/build-an-employee-directory-app-beginner/entity-employee.png)
+    ![](attachments/build-an-employee-directory-app-easy/entity-employee.png)
 
 4. Select the text box with the **Name** caption and connect it to the the **Name** attribute of the **Employee** entity.
 
-    ![](attachments/build-an-employee-directory-app-beginner/name-attribute.png)
+    ![](attachments/build-an-employee-directory-app-easy/name-attribute.png)
 
 5. Do the same thing for **Email**.
 6. Add the following attributes to the entity for the remaining text box widgets:
@@ -190,7 +190,7 @@ To connect the text box widgets to the Employee entity attributes, follow these 
 
 7. Go the **Design** properties category and toggle the **Full Width** property for the **Save** and **Cancel** buttons to improve the user experience:
 
-    ![](attachments/build-an-employee-directory-app-beginner/save-full-width.png)
+    ![](attachments/build-an-employee-directory-app-easy/save-full-width.png)
 
 ### 3.7 Using the Google Maps widget
 
@@ -200,13 +200,13 @@ To add the Google Maps widget to the page, follow these steps:
 
 1. On the **Employee** page, open the **Toolbox**, make sure **Widgets** is selected, and search for the **Google Maps** widget:
 
-    ![](attachments/build-an-employee-directory-app-beginner/googlemaps.png)
+    ![](attachments/build-an-employee-directory-app-easy/googlemaps.png)
 
 3. Drag the **Google Maps** widget from the **Display** properties category onto the page below the **Bio** text box.
 4. The Google Maps widget requires an **Address attribute** or both the **Latitude attribute** and **Longitude attribute**. So, search for "Text" in the **Toolbox** and drag the additional **Text Box** widget above the map.
 5. Connect the new text box to a new attribute named **Address**:
 
-    ![](attachments/build-an-employee-directory-app-beginner/address.png)
+    ![](attachments/build-an-employee-directory-app-easy/address.png)
 
 6. Select the Google Maps widget, open the **Data source** properties category, and do the following:<br>
     a. Set the **Locations Entity** to **Employee**.<br>
@@ -218,7 +218,7 @@ The last thing you have to do is finish up the employees page. To connect a list
 
 1. Open the **Employees** page and then select the **LIST VIEW**:
 
-    ![](attachments/build-an-employee-directory-app-beginner/listview-select.png)
+    ![](attachments/build-an-employee-directory-app-easy/listview-select.png)
 
 2. Set the **On Click Action** to **Page** and select the **Employee** page (like you did for the **Add** button).
 
@@ -226,15 +226,15 @@ You're done! Time to view the effects of all your changes.
 
 ## 4 Viewing Your App
 
-Update and view your app, just like you did in [How to Build an Employee Directory App (Beginner) Step 3: Publish and View Your App](build-an-employee-directory-app-beginner-3-publish-and-view-your-app).
+Update and view your app, just like you did in [How to Build an Employee Directory App (Easy) Step 3: Publish and View Your App](build-an-employee-directory-app-easy-3-publish-and-view-your-app).
 
 You can now use your app to add and edit employees!
 
-Continue on to the last part of this tutorial: [How to Build an Employee Directory App (Beginner) Step 5: Promote an Employee](build-an-employee-directory-app-beginner-5-add-employee-promotion-logic).
+Continue on to the last part of this tutorial: [How to Build an Employee Directory App (Easy) Step 5: Promote an Employee](build-an-employee-directory-app-easy-5-add-employee-promotion-logic).
 
 ## 5 Related Content
 
-* [How to Build an Employee Directory App (Beginner) Step 1: Create the App](build-an-employee-directory-app-beginner-1-create-the-app)
-* [How to Build an Employee Directory App (Beginner) Step 2: Build a Dashboard Page](build-an-employee-directory-app-beginner-2-build-a-dashboard-page)
-* [How to Build an Employee Directory App (Beginner) Step 3: Publish and View Your App](build-an-employee-directory-app-beginner-3-publish-and-view-your-app)
-* [How to Build an Employee Directory App (Beginner) Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-beginner-5-add-employee-promotion-logic)
+* [How to Build an Employee Directory App (Easy) Step 1: Create the App](build-an-employee-directory-app-easy-1-create-the-app)
+* [How to Build an Employee Directory App (Easy) Step 2: Build a Dashboard Page](build-an-employee-directory-app-easy-2-build-a-dashboard-page)
+* [How to Build an Employee Directory App (Easy) Step 3: Publish and View Your App](build-an-employee-directory-app-easy-3-publish-and-view-your-app)
+* [How to Build an Employee Directory App (Easy) Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-easy-5-add-employee-promotion-logic)

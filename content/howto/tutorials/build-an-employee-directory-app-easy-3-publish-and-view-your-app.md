@@ -1,6 +1,6 @@
 ---
-title: "Build an Employee Directory App (Beginner) Step 3: Publish and View Your App"
-parent: "build-an-employee-directory-app-beginner"
+title: "Build an Employee Directory App (Easy) Step 3: Publish and View Your App"
+parent: "build-an-employee-directory-app-easy"
 description: "Presents details on how to publish your app from the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
 ---
@@ -21,7 +21,7 @@ Now that you've gotten started with your app and have worked with some of the de
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Complete the second how-to in this series: [How to Build an Employee Directory App (Beginner) Step 2: Build a Dashboard Page](build-an-employee-directory-app-beginner-2-build-a-dashboard-page)
+* Complete the second how-to in this series: [How to Build an Employee Directory App (Easy) Step 2: Build a Dashboard Page](build-an-employee-directory-app-easy-2-build-a-dashboard-page)
 
 ## 3 Updating and Viewing Your App
 
@@ -31,7 +31,7 @@ To view the latest changes in the published version of your app, you need to upd
 
 1. Click **Publish** on the top-right of the Web Modeler:
 
-    ![](attachments/build-an-employee-directory-app-beginner/publish.png)
+    ![](attachments/build-an-employee-directory-app-easy/publish.png)
 
 2. Click **Update** to push the latest changes to the published app.
 
@@ -45,11 +45,11 @@ To view your app in a browser, follow these steps:
 
 1. Click **View app** to view it in the phone preview mode in a new browser window:
 
-     ![](attachments/build-an-employee-directory-app-beginner/phone-preview.png)
+     ![](attachments/build-an-employee-directory-app-easy/phone-preview.png)
 
 2. Return to the Web Modeler and select the drop-down arrow on the **View app** button to select the **Tablet preview** or **Desktop preview** mode, which will open that preview in a new browser window:
 
-     ![](attachments/build-an-employee-directory-app-beginner/view-app.png)
+     ![](attachments/build-an-employee-directory-app-easy/view-app.png)
 
 ### 4.2 Viewing your App on a Mobile Device
 
@@ -57,15 +57,15 @@ To view your app on a mobile device, follow these steps:
 
 1. Click **View on mobile device**:
 
-     ![](attachments/build-an-employee-directory-app-beginner/view-app-mobile.png)
+     ![](attachments/build-an-employee-directory-app-easy/view-app-mobile.png)
 
 2. Scan the QR-code with your mobile device using the [Mendix Mobile app](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile&hl=en). Follow the directions to download the Mendix Mobile app in case you don't have it installed.
 
-Nice. Now you're ready to continue with the last how-to of this tutorial: [How to Build an Employee Directory App (Beginner) Step 4: Add Pages to the User Interface](build-an-employee-directory-app-beginner-4-add-pages-to-the-user-interface).
+Nice. Now you're ready to continue with the last how-to of this tutorial: [How to Build an Employee Directory App (Easy) Step 4: Add Pages to the User Interface](build-an-employee-directory-app-easy-4-add-pages-to-the-user-interface).
 
 ## 5 Related Content
 
-* [How to Build an Employee Directory App (Beginner) Step 1: Create the App](build-an-employee-directory-app-beginner-1-create-the-app)
-* [How to Build an Employee Directory App (Beginner) Step 2: Build a Dashboard Page](build-an-employee-directory-app-beginner-2-build-a-dashboard-page)
-* [How to Build an Employee Directory App (Beginner) Step 4: Add Pages to the User Interface](build-an-employee-directory-app-beginner-4-add-pages-to-the-user-interface)
-* [How to Build an Employee Directory App (Beginner) Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-beginner-5-add-employee-promotion-logic)
+* [How to Build an Employee Directory App (Easy) Step 1: Create the App](build-an-employee-directory-app-easy-1-create-the-app)
+* [How to Build an Employee Directory App (Easy) Step 2: Build a Dashboard Page](build-an-employee-directory-app-easy-2-build-a-dashboard-page)
+* [How to Build an Employee Directory App (Easy) Step 4: Add Pages to the User Interface](build-an-employee-directory-app-easy-4-add-pages-to-the-user-interface)
+* [How to Build an Employee Directory App (Easy) Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-easy-5-add-employee-promotion-logic)

@@ -3,25 +3,26 @@ title: "Published REST Services"
 parent: "integration"
 ---
 
-Add a [Published REST Service](published-rest-service) to expose your entities and microflows to other apps using the REST standard.
+## 1 Introduction
 
-### Published REST Service
+Add a [published REST service](published-rest-service) to expose your entities and microflows to other apps using the REST standard.
 
-See [Published REST Service documentation](published-rest-service) for an overview of the available options when you add a Published REST servcie.
+## 2 Published REST Service
 
-### <a name="authorization"></a>Authorization
+For an overview of the available options when you add a published  service, see [Published REST Service](published-rest-service).
 
-Published REST services are secured with Basic authentication. This is automatically applied when you [set the security level](project-security) of your app to _Prototype / demo_  or _Production_. When you [allow anonlymous users](project-security#anonymous-users) to your app, all published REST services become available without authenthication.
+## <a name="authorization"></a>3 Authorization
 
-See [Published REST routing](published-rest-routing) for more details.
+Published REST services are secured with basic authentication. This is automatically applied when you [set the security level](project-security) of your app to **Prototype / demo**  or **Production**. When you [allow anonlymous users](project-security#anonymous-users) to your app, all published REST services become available without authenthication.
 
-### <a name="interactive-documentation"></a>Documentation
+For more details, see [Published REST Routing](published-rest-routing).
 
-Every [Published REST service](published-rest-service) is automatically documented. This documentation is available in the app under `http://yourapp.com/rest-doc/`. Each service has an interactive documentation page using [Swagger UI](https://swagger.io/swagger-ui/). You can interact with the service to see how it behaves.
+## <a name="interactive-documentation"></a>4 Documentation
 
-The documentation of the services is available in [Open API 2.0](open-api) format, which is readable by many systems and tools.
+Every [published REST service](published-rest-service) is automatically documented. This documentation is available in the app under `http://yourapp.com/rest-doc/`. Each service has an interactive documentation page using [Swagger UI](https://swagger.io/swagger-ui/). You can interact with the service to see how it behaves.
 
-### Logging
+The documentation of the services is available in the [Open API 2.0](open-api) format, which is readable by many systems and tools.
 
-To log detailed information about interaction with your Published REST Service, [set the log level](logging) of log node _REST Publish_ to _Trace_.
+## 5 Logging
 
+To log detailed information about interaction with your published REST service, [set the log level](logging) of the **REST Publish** log node to **Trace**.

@@ -3,14 +3,16 @@ title: "Published REST resource"
 parent: "published-rest-services"
 ---
 
-A _Published REST Resource_ is part of a [Published REST Service](published-rest-service) and represents a collection of items on which one or more [operations](published-rest-operation) can be defined.
+## Introduction
+
+A_published REST resource is part of a [published REST service](published-rest-service) and represents a collection of items on which one or more [operations](published-rest-operation) can be defined.
 
 ## General
 
-### <a name="name"></a>Resource name
+### <a name="name"></a>Resource Name
 
-The resource name uniquely identifies the resource in the [service](published-rest-service). It's part of the location of the operations, so it can't contain spaces or special characters.
+The resource name uniquely identifies the resource in the [service](published-rest-service). It is part of the location of the operations, so it cannot contain spaces or special characters.
 
-## <a name="public-documentation"></a>Public documentation
+## <a name="public-documentation"></a>Public Documentation
 
-The public documentation is used in the service's [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation). You can use [GitHub Flavored Markdown](gfm-syntax) for rich text.
+The public documentation is used in the service's [OpenAPI (Swagger) documentation page](published-rest-services#interactive-documentation). You can use [GitHub-flavored markdown](gfm-syntax) for rich text.

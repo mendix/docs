@@ -3,11 +3,13 @@ title: "Published REST Operation"
 parent: "published-rest-services"
 ---
 
+## 1 Introduction
+
 A published REST operation is part of a [published REST resource](published-rest-resource) and defines an endpoint that a client can call to get, put, post, patch, or delete items from the resource.
 
-## 1 General
+## 2 General
 
-### 1.2 Method
+### 2.1 Method
 
 The method specifies what type of operation is performed by the microflow:
 
@@ -17,7 +19,7 @@ The method specifies what type of operation is performed by the microflow:
 * `PATCH` – the operations updates (part of) the entry at the specified location
 * `DELETE` – the operation deletes the entry or entries at the specified location
 
-### <a name="operation-path"></a>1.3 Operation Path
+### <a name="operation-path"></a>2.2 Operation Path
 
 The location where the operation can be reached starts with the location of the resource.
 
@@ -27,11 +29,11 @@ You can use [path parameters](published-rest-path-parameters) to capture part of
 
 The method and operation path determine [which operation gets executed for a given request URL](published-rest-routing).
 
-### <a name="example-location"></a>1.4 Example Location
+### <a name="example-location"></a>2.3 Example Location
 
 The example location gives an example of a URL on which the operation can be reached. It shows path parameters and query parameter values as placeholders between `{` and `}`.
 
-### 1.5 Microflow
+### 2.4 Microflow
 
 Specify the microflow that implements the operation. These are the characteristics of a valid microflow for a REST operation:
 
@@ -45,18 +47,18 @@ Any remaining microflow parameters will be treated as optional [query parameters
 
 If the microflow throws an unhandled exception, the response is **500: Internal server error**.
 
-### 1.6 Allowed Roles
+### 2.5 Allowed Roles
 
 The allowed roles define which [module role](module-role) a user must have to be able to access the service.
 
-## 2 Public Documentation
+## 3 Public Documentation
 
 The public documentation is used in the service's [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation).
 
-### <a name="sumary"></a>2.1 Summary
+### <a name="sumary"></a>3.1 Summary
 
 The summary provides a short description of what the operation does.
 
-### <a name="description"></a>2.2 Description
+### <a name="description"></a>3.2 Description
 
 The description provides a complete overview of what the operation does. You can use [GitHub-flavored markdown](gfm-syntax) for rich text.

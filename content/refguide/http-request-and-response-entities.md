@@ -3,11 +3,13 @@ title: "HttpRequest and HttpResponse System Entities"
 parent: "integration"
 ---
 
+## 1 Introduction
+
 ![](attachments/http-request-and-response-entities/http-request-and-response-domain-model.png)
 
 `HttpRequest` is a system entity that represents a request to a server. `HttpResponse` represents the response from the server. Use these entities when [publishing](published-rest-services) or [consuming](consumed-rest-services) REST services.
 
-## 1 HttpRequest<a name="http-request"></a>
+## 2 HttpRequest<a name="http-request"></a>
 
 The `HttpRequest` entity has the following attributes:
 
@@ -19,7 +21,7 @@ The `HttpRequest` entity has the following attributes:
 
 You can retrieve the request headers via the `HttpHeaders` association.
 
-## 2 HttpResponse<a name="http-response"></a>
+## 3 HttpResponse<a name="http-response"></a>
 
 The `HttpResponse` entity has the following attributes:
 

@@ -3,7 +3,7 @@ title: "Message definitions"
 parent: "integration"
 ---
 
-_Message definitions_ define the messages that are sent from and to your app. Defining your messages allows you to create import and export mappings for them.
+_Message definitions_ define the structure of the messages that are sent from and to your app. This allows you to create import and export mappings for them.
 
 ## General
 

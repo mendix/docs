@@ -3,21 +3,23 @@ title: "Export Mapping Action"
 parent: "microflow-activities"
 ---
 
+## 1 Introduction
+
 ![](attachments/19202807/19399019.png)
 
-With the Export Mapping action you can export the data stored in [domain model](domain-model) entities into an XML or JSON document, or into a string variable.
+With the export mapping action, you can export the data stored in [domain model](domain-model) entities into an XML document, JSON document, or string variable.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+For details on the properties that all activities share (for example, caption), see [Microflow Element Common Properties](microflow-element-common-properties). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
-## Action Properties
+## 2 Action Properties
 
-### Export mapping
+### 2.1 Export Mapping
 
-The [Export Mapping](export-mappings) defines in which way the data in the [domain model](domain-model) corresponds with the XML schema or JSON structure.
+The [export mapping](export-mappings) action defines in which way the data in the [domain model](domain-model) corresponds with the XML schema or JSON structure.
 
 {{% alert type="info" %}}
  
@@ -25,41 +27,41 @@ Export mappings support flat JSON. You can select a JSON structure document in a
  
 {{% /alert %}}
 
-### Parameter type
+### 2.2 Parameter Type
 
-If the [Export Mapping](export-mappings) requires input, this field shows the type of the input.
+If the [export mapping](export-mappings) requires an input, this field shows the type of the input.
 
-### Parameter
+### 2.3 Parameter
 
-If the [Export Mapping](export-mappings) requires input, you can select a variable of the correct type.
+If the [export mapping](export-mappings) requires an input, you can select a variable of the correct type.
 
-### Content type
+### 2.4 Content Type
 
-If the [Export Mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose which type of output you want.
+If the [export mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose which type of output you want.
 
-## Validation properties
+## 3 Validation Properties
 
 {{% alert type="info" %}}
 
-Validation properties are only applicable if an Export Mapping is selected that maps to XML.
+Validation properties are only applicable if an export mapping is selected that maps to XML.
 
 {{% /alert %}}
 
-### Validate against schema
+### 3.1 Validate Against Schema
 
-Whether the export action should validate the outgoing XML against the schema (XSD).
+This determines whether the export action should validate the outgoing XML against the schema (XSD).
 
-Setting this setting to yes can greatly decrease performance!
+Setting this to yes can greatly decrease performance!
 
-_Default value:_ No
+*Default value:* No
 
-### Optional and Nillable
+### 3.2 Optional and Nillable
 
-Elements in a schema can be optional (minOccurs=0) and/or nillable. When an empty value for an element is encountered, the server will check the schema to decide whether to exclude the element (optional) or send the element with a nil attribute (nillable). In case an empty value is encountered but the element is not optional or nillable, the server will throw an exception which the developer needs to handle themselves in the microflow. This will occur regardless of the XML validation settings. It is recommended to make sure the data that is being exported is valid according to the schema.
+Elements in a schema can be optional (`minOccurs=0`) and/or nillable. When an empty value for an element is encountered, the server will check the schema to decide whether to exclude the element (optional) or send the element with a nil attribute (nillable). In case an empty value is encountered but the element is not optional or nillable, the server will throw an exception, which you need to handle yourself in the microflow. This will occur regardless of the XML validation settings. It is recommended to make sure the data that is being exported is valid according to the schema.
 
-## Output Properties
+## 4 Output Properties
 
-There are two methods of storing the result of an Export Mapping action:
+There are two methods of storing the result of an export mapping action:
 
-*   Inside a 'System.FileDocument'.
-*   Inside a string variable.
+* Inside a 'System.FileDocument'
+* Inside a string variable

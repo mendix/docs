@@ -3,30 +3,39 @@ title: "Import Mapping Action"
 parent: "microflow-activities"
 ---
 
+## 1 Introduction
 
-With the Import Mapping Action you can import the data stored in a XML or JSON document into [domain model](domain-model) entities.
+With the import mapping action, you can import the data stored in an XML or JSON document into [domain model](domain-model) entities.
 
 ![](attachments/19202813/19399018.png)
 
-## Input Properties
+## 2 Input Properties
 
-### File document
+### 2.1 File Document
 
 The input variable can either be a string variable or a file document variable. The contents should have an XSD or JSON representation.
 
-It the variable is a file document, it should be an object of entity 'System.FileDocument' or a specialization thereof.
+It the variable is a file document, it should be an object of the `System.FileDocument` entity or a specialization thereof.
 
-## Action Properties
+## 3 Action Properties
 
-### Import mapping
+### 3.1 Import Mapping
 
-The [Import Mapping](import-mappings) defines how to transform the XML or JSON string (or file document) to objects.
+The [import mapping](import-mappings) defines how to transform the XML or JSON string (or file document) to objects.
 
-### Parameter
+### 3.2 Input Content Type
+
+If the import mapping is based on a message definition, it can import both XML and JSON. Select whether the input variable contains XML or JSON.
+
+### 3.3 The Input Contains
+
+If the import mapping is based on a message definition, it can import both single objects and lists. Select whether the input variable contains a single object or a list of objects.
+
+### 3.4 Parameter
 
 If the selected mapping requires a parameter, you can choose it here.
 
-### Range (if the mapping returns a list)
+### 3.5 Range (If the Mapping Returns a List)
 
 The range determines how many objects are mapped and returned.
 
@@ -38,30 +47,30 @@ The range determines how many objects are mapped and returned.
 
 {{% alert type="info" %}}
 
-Validation properties are only applicable if an Import Mapping is selected that maps from XML.
+Validation properties are only applicable if an import mapping is selected that maps from XML.
 
 {{% /alert %}}
 
-## Validation properties
+## 4 Validation Properties
 
-### Validate against schema
+### 4.1 Validate Against Schema
 
-Whether the import action should validate the incoming XML against the schema (XSD).
+Determines whether the import action should validate the incoming XML against the schema (XSD).
 
-Setting this setting to yes can greatly decrease performance!
+Setting this to yes can greatly decrease performance!
 
-_Default value:_ No
+*Default value:* No
 
-## Output Properties
+## 5 Output Properties
 
-### Store in variable
+### 5.1 Store in Variable
 
 Choose whether to store the result of the import in a variable.
 
-### Type
+### 5.2 Type
 
 The type of the output variable.
 
-### Name
+### 5.3 Name
 
 The name for the variable that will hold the result of the import.

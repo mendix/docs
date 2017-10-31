@@ -3,24 +3,26 @@ title: "Message definition"
 parent: "message-definitions"
 ---
 
-_Message definitions_ define the messages that are sent from and to your app. Defining your messages allows you to create import and export mappings for them.
+## 1 Introduction
 
-A message definition can be used for both JSON and XML, and can be used for both a single objects and a list of objects.
+Message definitions define the messages that are sent from and to your app. Defining your messages allows you to create import and export mappings for them.
 
-## General
+A message definition can be used for both JSON and XML, and can be used for both single objects and a list of objects.
 
-### Source Entity
+## 2 General
 
-Select an entity to base the message definition on. Using this message definition, you will be able to export and import this entity type, and lists of this entity type.
+### 2.1 Source Entity
 
-### Structure
+Select an entity on which to base the message definition. Using this message definition, you will be able to export and import this entity type and lists of this entity type.
 
-The structure tree shows the attributes of the entity. Check all attributes that are part of the message.
+### 2.2 Structure
 
-The _External name_ is the name of the XML node or the JSON property for that attribute. You may leave it empty; the default value is the name in the first column.
+The structure tree shows the attributes of the entity. Check all the attributes that are part of the message.
 
-The _Plural name_ only applies to XML, and only applies to the root entity. When dealing with a list, this XML node name will be used as the root. You may leave it empty; the default value is the entity name + 's'.
+The **External name** is the name of the XML node or the JSON property for that attribute. You may leave it empty; the default value is the name in the first column.
 
-## Documentation
+The **Plural name** only applies to XML, and only applies to the root entity. When dealing with a list, this XML node name will be used as the root. You may leave it empty; the default value is the entity name + `s`.
 
-Use the _documentation_ to describe what the message definition is used for.
+## 3 Documentation
+
+Use the **Documentation** to describe what the message definition is used for.

@@ -2,7 +2,7 @@
 title: "UX"
 ---
 
-Looking to create a user-friendly graphical user interface (GUI) for your app? You will find all the information you need here, from how to create pages to how to set up the navigation structure.
+Looking to create great user experience and a user-friendly graphical user interface (GUI) for your app? You will find all the information you need here, from how to create pages to how to set up the navigation structure.
 
 ## Documents in This Category
 

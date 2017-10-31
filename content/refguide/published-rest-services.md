@@ -3,6 +3,12 @@ title: "Published REST Services"
 parent: "integration"
 ---
 
+{{% alert type="info" %}}
+
+The 'Published REST Service' was introduced in version 7.8.0. This feature is still in private beta, and is subject to change before the final release.
+
+{{% /alert %}}
+
 ## 1 Introduction
 
 Add a [published REST service](published-rest-service) to expose your entities and microflows to other apps using the REST standard.

@@ -159,7 +159,7 @@ const validateFiles = files => Promise.resolve(_.map(files, file => {
     const fullPath = normalizeSafe(path.join(SOURCEPATH, link)),
           fullUrl = url.parse(path.join(SOURCEPATH, link));
 
-    let linkPath = fullUrl.protocol.toUpperCase() + fullUrl.pathname; // TODO: Check how we can fix this in Windows??
+    let linkPath = (fullUrl.protocol !== null ? fullUrl.protocol : "").toUpperCase() + fullUrl.pathname; // TODO: Check how we can fix this in Windows??
     let linkedFile = _.filter(
       _.map(getLinkPaths(linkPath), linkPathPossible => _.find(
         files, findFile => findFile.path === linkPathPossible)

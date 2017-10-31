@@ -6,6 +6,7 @@ const minify      = require('gulp-minify');
 const hash        = require('gulp-hash');
 
 const server      = require('./_gulp/server');
+const jsonServer  = require('./_gulp/json');
 const hugo        = require('./_gulp/hugo');
 const helpers     = require('./_gulp/helpers');
 const mappings    = require('./_gulp/mappings');
@@ -210,6 +211,7 @@ gulp.task('dev:sass', `Sass build (dev task, sourcemaps included)`, ['clean:css'
 
 gulp.task('dev', ``, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done => {
   server.spawn(CURRENTFOLDER);
+  jsonServer.spawn(CURRENTFOLDER);
   hugo.spawn(true, false, browserSync);
   browserSync.init({
     port: PORT,

@@ -1,0 +1,191 @@
+const restify = require('restify');
+const path = require('path');
+const Promise = require('bluebird');
+const YAML = require('yamljs');
+const yamlFront = require('yaml-front-matter');
+const _ = require('lodash');
+const cheerio = require('cheerio');
+const gutil = require('gulp-util');
+
+const { getFiles, readFile, isFile } = require('./helpers');
+
+const pluginID = gutil.colors.cyan("[JSON SERVER]");
+
+const CONTENTFOLDER = 'content';
+const SNIPPETSFOLDER = 'snippets';
+const GENERATEDFOLDER = '_site';
+
+let server;
+let mainFolder;
+let SPACES;
+
+const contentHandler = (req, res, next) => {
+    const contentPath = req.params[0];
+    gutil.log(`${pluginID} Handling content: ${contentPath}`);
+
+    const sourcePath = path.resolve(mainFolder, CONTENTFOLDER, contentPath);
+    const generatePath = path.resolve(mainFolder, GENERATEDFOLDER, contentPath);
+
+    const sourceFile = ['.md', '/index.md']
+        .map(suffix => {
+            const absPath = sourcePath + suffix;
+            return isFile(absPath) ? absPath : null
+        })
+        .filter(f => f !== null);
+
+    const targetFile = ['.html', '/index.html']
+        .map(suffix => {
+            const absPath = generatePath + suffix;
+            return isFile(absPath) ? absPath : null
+        })
+        .filter(f => f !== null);
+
+    if (sourceFile.length !== 1) {
+        gutil.log(`${pluginID} Handling content: ${contentPath}, source not found`);
+        res.send(404, 'source file not found');
+        return next();
+    }
+
+    if (targetFile.length !== 1) {
+        gutil.log(`${pluginID} Handling content: ${contentPath}, target not found`);
+        res.send(404, 'target file not found');
+        return next();
+    }
+
+    const source = sourceFile[0];
+    const target = targetFile[0];
+
+    Promise.join(
+        readFile(source).
+            then(content => {
+                const obj = {
+                    pathMarkdown: source.replace(path.resolve(mainFolder, CONTENTFOLDER), ''),
+                    markdown: content.toString(),
+                    snippets: []
+                };
+
+                const parsed = path.parse(obj.pathMarkdown);
+                const dirName = parsed.dir.split('/')[1];
+
+                let meta = null;
+                try {
+                    meta = yamlFront.loadFront(content);
+                } catch (e) {
+                    console.log('Error loading front matter for ' + source, e);
+                    meta = null;
+                }
+
+                obj.space = SPACES[dirName].space;
+
+                if (meta !== null) {
+                    _.merge(obj, _.omit(meta, ['__content', 'space']));
+                    obj.markdown = meta['__content'];
+                }
+
+                if (obj.parent) {
+                    obj.parent = path.join(parsed.dir, obj.parent);
+                }
+
+                const snippetRegEx = /{{% snippet file="([a-zA-Z0-9\/\+]+\.md)" %}}/gi;
+                const matches = obj.markdown.match(snippetRegEx);
+
+                if (matches && matches.length > 0) {
+                    obj.snippets = matches.map(m => '/' + m.replace(snippetRegEx, '$1'));
+                }
+
+                return obj
+            }),
+        readFile(target).
+            then(content => {
+                const obj = {
+                    pathHtml: target.replace(path.resolve(mainFolder, GENERATEDFOLDER), '')
+                };
+
+                const $ = cheerio.load(content);
+                const cheerioContent = $('.mx__page__content');
+
+                if (cheerioContent) {
+                    obj.html = cheerioContent.html();
+                }
+
+                return obj;
+            }),
+        (sourceObj, targetObj) => {
+            _.merge(sourceObj, targetObj, { path: '/' + contentPath });
+
+            res.send(200, sourceObj);
+        }
+    )
+
+    return next();
+};
+
+const pagesHandler = (req, res, next) => {
+    gutil.log(`${pluginID} Handling pages`);
+    const contentFolder = path.resolve(mainFolder, CONTENTFOLDER);
+
+    getFiles(contentFolder, '.md')
+        .then(filesPaths =>
+            filesPaths
+                .map(filePath =>
+                    filePath
+                        .replace(contentFolder, '')
+                        .replace('/index.md', '/')
+                        .replace('.md', '')
+        ))
+        .then(files => {
+            res.send(200, files.filter(p => p !== '/' && p !== '/search/'));
+        })
+        .catch(e => {
+            res.send(501, e);
+        });
+
+    return next();
+};
+
+const snippetsHandler = (req, res, next) => {
+    gutil.log(`${pluginID} Handling snippets`);
+    const snippetsFolder = path.resolve(mainFolder, SNIPPETSFOLDER);
+
+    getFiles(snippetsFolder, '.md')
+        .then(filePaths => Promise.all(filePaths.map(filePath => readFile(filePath).then(contents => {
+            return {
+                path: filePath.replace(snippetsFolder, ''),
+                content: contents.toString()
+            };
+        }))))
+        .then(files => {
+            res.send(200, files);
+        })
+        .catch(e => {
+            res.send(501, e);
+        })
+
+    return next();
+};
+
+const spacesHandler = (req, res, next) => {
+    gutil.log(`${pluginID} Handling spaces`);
+    res.send(200, SPACES);
+    return next();
+};
+
+const spawn = (folder) => {
+    mainFolder = path.resolve(folder);
+    SPACES = YAML.load(path.resolve(mainFolder, 'data/spaces.yml'));
+
+    server = restify.createServer();
+
+    server.get(/^\/content\/(.*)/, contentHandler);
+    server.get(/^\/pages/, pagesHandler);
+    server.get(/^\/snippets/, snippetsHandler);
+    server.get(/^\/spaces/, spacesHandler)
+
+    server.listen(8080, () => {
+        gutil.log(`${pluginID} Server listening on ${server.url}`);
+    });
+}
+
+module.exports = {
+    spawn
+};

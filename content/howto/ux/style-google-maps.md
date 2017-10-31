@@ -1,6 +1,6 @@
 ---
 title: "Style Google Maps"
-category: "GUIs"
+category: "UX"
 tags: []
 ---
 Google Maps is a very powerful addition to your applications. You can use it to display locations, areas, routes, etc. By default every map overview looks the same, like on the default Google Maps website. There is now a new option available on the Google Maps widget to style the map overview to make it match your application design. Follow the steps described below to sauce up the map overviews in your applications with a minimum amount of effort!

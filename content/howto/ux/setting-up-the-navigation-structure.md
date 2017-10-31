@@ -1,6 +1,6 @@
 ---
 title: "Setting Up the Navigation Structure"
-category: "GUIs"
+category: "UX"
 tags: []
 ---
 Once you've created some pages you want to give users the ability to access them. The easiest way to do this is by using a navigation menu. The navigation editor of the Business Modeler allows you define navigation menus for desktop, tablet and phone interfaces. It also allows you to define which page is shown as a default home page depending on the user role.

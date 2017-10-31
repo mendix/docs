@@ -1,6 +1,6 @@
 ---
 title: "Use Layouts and Snippets"
-category: "GUIs"
+category: "UX"
 tags: []
 ---
 

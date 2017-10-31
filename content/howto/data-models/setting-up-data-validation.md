@@ -22,7 +22,7 @@ This section will explain how you can add validation rules to the domain model o
 
 ## 2\. Required Validation on Inputs, Reference Selectors and Drop-downs
 
-The page builder of the Business Modeler allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](../guis/create-your-first-two-overview-and-detail-pages) how-to.
+The page builder of the Business Modeler allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](../ux/create-your-first-two-overview-and-detail-pages) how-to.
 
 1.  Open a **detail page** and double click an input to open its properties.
 2.  Set the **Required** property to **Yes** and enter a message. This message is shown below the input if a user clicks the save button without filling in a value.
@@ -52,7 +52,7 @@ As long as this Microflow returns a boolean value, you are free to add any logic
 
 ## 4\. Advanced Validation with a Custom 'Save' Button
 
-Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [this](../guis/create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look similar to this:
+Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [this](../ux/create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look similar to this:
 
 ![](attachments/18448742/18582143.png)
 
@@ -94,7 +94,7 @@ Validating user input can also be achieved by overriding the default save button
 * [Setting up data validation](setting-up-data-validation)
 * [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-* [How to Configure the Scout and Windows 10 Workaround](../guis/scout-and-windows-10-workaround)
+* [How to Configure the Scout and Windows 10 Workaround](../ux/scout-and-windows-10-workaround)
 * [How to Generate a Personal SSH2 Key Pair](../security/generating-a-personal-ssh2-key-pair)
 * [Creating a chainable Custom Widget](../custom-widget-development/create-a-chainable-custom-widget)
 

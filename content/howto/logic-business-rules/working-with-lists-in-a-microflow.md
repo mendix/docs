@@ -14,8 +14,8 @@ To see the results of this how-to it is necessary that you setup a test project 
 Before you continue, make sure that you know how to create:
 
 *   **Domain models**, if you need more info, take a look at this [how-to](../data-models/create-a-basic-data-layer).
-*   **Overview and detail pages**, if you need more info, take a look at this [how-to](../guis/create-your-first-two-overview-and-detail-pages).
-*   **Menu items**, if you need more info, take a look at this [how-to](../guis/setting-up-the-navigation-structure).
+*   **Overview and detail pages**, if you need more info, take a look at this [how-to](../ux/create-your-first-two-overview-and-detail-pages).
+*   **Menu items**, if you need more info, take a look at this [how-to](../ux/setting-up-the-navigation-structure).
 
 1.  Create the following domain model:
     ![](attachments/18448705/18581378.png)

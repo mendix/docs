@@ -1,5 +1,5 @@
 ---
-title: "Message definition"
+title: "Message Definition"
 parent: "message-definitions"
 ---
 

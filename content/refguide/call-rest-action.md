@@ -5,7 +5,7 @@ parent: "microflow-activities"
 
 ## 1 Introduction
 
-The Call REST service action can be used to call a REST endpoint. You can specify the location and how the response of the REST call should be handled.
+The call REST service action can be used to call a REST endpoint. You can specify the location and how the response of the REST call should be handled.
 
 ## 2 General
 
@@ -42,7 +42,7 @@ These headers are added to the HTTP request header. Each custom header is a pair
 
 ![](attachments/19203256/19399114.png)
 
-The sections below describe the options in the drop-down menu for generating the request. Requests can only be generated for HTTP methods POST, PUT and PATCH.
+The sections below describe the options in the drop-down menu for generating the request. Requests can only be generated for HTTP methods POST, PUT, and PATCH.
 
 ### 4.1 Export Mapping for the Entire Request
 
@@ -52,7 +52,7 @@ This option allows you to use a single [export mapping](export-mappings) for the
 
 Select the mapping that you want to apply.
 
-#### 4.1.2 Parameter type
+#### 4.1.2 Parameter Type
 
 If the [export mapping](export-mappings) requires an input, this field shows the type of the input.
 
@@ -60,7 +60,7 @@ If the [export mapping](export-mappings) requires an input, this field shows the
 
 If the [export mapping](export-mappings) requires an input, you can select a variable of the correct type.
 
-#### 4.1.4 Content type
+#### 4.1.4 Content Type
 
 If the [export mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose the type of output you want.
 

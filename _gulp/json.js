@@ -186,7 +186,7 @@ const spawn = (folder) => {
     server.get(/^\/snippets/, snippetsHandler);
     server.get(/^\/spaces/, spacesHandler)
 
-    server.listen(8080, () => {
+    server.listen(7000, () => {
         gutil.log(`${pluginID} Server listening on ${server.url}`);
     });
 }

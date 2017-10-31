@@ -143,21 +143,23 @@ const getLinkPaths = link => {
     link = link.replace(/\/refguide7\//g, '/refguide/');
   }
 
-  return [
+  const paths = [
     link,
     `${link}.html`,
     `${link}index.html`,
     `${link}/index.html`
   ];
+  return paths;
 }
 
 const validateFiles = files => Promise.resolve(_.map(files, file => {
+
   // Let's check all the links
   _.forEach(file.links, link => {
     const fullPath = normalizeSafe(path.join(SOURCEPATH, link)),
-          fullUrl = url.parse(fullPath);
+          fullUrl = url.parse(path.join(SOURCEPATH, link));
 
-    let linkPath = fullUrl.pathname;
+    let linkPath = fullUrl.protocol.toUpperCase() + fullUrl.pathname; // TODO: Check how we can fix this in Windows??
     let linkedFile = _.filter(
       _.map(getLinkPaths(linkPath), linkPathPossible => _.find(
         files, findFile => findFile.path === linkPathPossible)

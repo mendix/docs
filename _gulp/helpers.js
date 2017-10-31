@@ -43,7 +43,8 @@ const getAllFiles = (dir) => new Promise((resolve, reject) => {
     if (err) {
       return reject(err);
     }
-    resolve(files);
+    const normalized = files.map(f => normalizeSafe(f));
+    resolve(normalized);
   });
 });
 
@@ -54,7 +55,8 @@ const getFiles = (dir, ext) => {
       if (err) {
         return reject(err);
       }
-      resolve(_.filter(files, file => path.extname(file) === extName));
+      const normalized = files.map(f => normalizeSafe(f));
+      resolve(_.filter(normalized, file => path.extname(file) === extName));
     });
   });
 };

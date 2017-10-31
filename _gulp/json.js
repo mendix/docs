@@ -6,6 +6,7 @@ const yamlFront = require('yaml-front-matter');
 const _ = require('lodash');
 const cheerio = require('cheerio');
 const gutil = require('gulp-util');
+const { normalizeSafe } = require('upath');
 
 const { getFiles, readFile, isFile } = require('./helpers');
 
@@ -59,7 +60,7 @@ const contentHandler = (req, res, next) => {
         readFile(source).
             then(content => {
                 const obj = {
-                    pathMarkdown: source.replace(path.resolve(mainFolder, CONTENTFOLDER), ''),
+                    pathMarkdown: normalizeSafe(source.replace(path.resolve(mainFolder, CONTENTFOLDER), '')),
                     markdown: content.toString(),
                     snippets: []
                 };
@@ -75,7 +76,7 @@ const contentHandler = (req, res, next) => {
                     meta = null;
                 }
 
-                obj.space = SPACES[dirName].space;
+                obj.space = SPACES[dirName] ? SPACES[dirName].space : null;
 
                 if (meta !== null) {
                     _.merge(obj, _.omit(meta, ['__content', 'space']));
@@ -83,7 +84,7 @@ const contentHandler = (req, res, next) => {
                 }
 
                 if (obj.parent) {
-                    obj.parent = path.join(parsed.dir, obj.parent);
+                    obj.parent = normalizeSafe(path.join(parsed.dir, obj.parent));
                 }
 
                 const snippetRegEx = /{{% snippet file="([a-zA-Z0-9\/\+]+\.md)" %}}/gi;
@@ -98,7 +99,7 @@ const contentHandler = (req, res, next) => {
         readFile(target).
             then(content => {
                 const obj = {
-                    pathHtml: target.replace(path.resolve(mainFolder, GENERATEDFOLDER), '')
+                    pathHtml: normalizeSafe(target.replace(path.resolve(mainFolder, GENERATEDFOLDER), ''))
                 };
 
                 const $ = cheerio.load(content);
@@ -111,7 +112,7 @@ const contentHandler = (req, res, next) => {
                 return obj;
             }),
         (sourceObj, targetObj) => {
-            _.merge(sourceObj, targetObj, { path: '/' + contentPath });
+            _.merge(sourceObj, targetObj, { path: normalizeSafe('/' + contentPath) });
 
             res.send(200, sourceObj);
         }
@@ -128,13 +129,17 @@ const pagesHandler = (req, res, next) => {
         .then(filesPaths =>
             filesPaths
                 .map(filePath =>
-                    filePath
+                    normalizeSafe(filePath
                         .replace(contentFolder, '')
                         .replace('/index.md', '/')
-                        .replace('.md', '')
+                        .replace('/index', '/')
+                        .replace('.md', ''))
         ))
         .then(files => {
-            res.send(200, files.filter(p => p !== '/' && p !== '/search/'));
+            res.send(200, files.filter(p => 
+                p !== '/' && p !== '/search/' &&
+                p !== '/index' && p !== '/search/index'
+            ));
         })
         .catch(e => {
             res.send(501, e);
@@ -150,7 +155,7 @@ const snippetsHandler = (req, res, next) => {
     getFiles(snippetsFolder, '.md')
         .then(filePaths => Promise.all(filePaths.map(filePath => readFile(filePath).then(contents => {
             return {
-                path: filePath.replace(snippetsFolder, ''),
+                path: normalizeSafe(filePath.replace(snippetsFolder, '')),
                 content: contents.toString()
             };
         }))))
@@ -189,3 +194,5 @@ const spawn = (folder) => {
 module.exports = {
     spawn
 };
+
+spawn('..');

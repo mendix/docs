@@ -11,6 +11,8 @@ const Promise = require('bluebird');
 const helpers = require('./helpers');
 const moment = require('moment');
 const RSS = require('rss');
+const { normalizeSafe } = require('upath');
+const os = require('os');
 
 const verbose = false;
 const indicator = gutil.colors.cyan("[HTML CHECK]");
@@ -152,8 +154,8 @@ const getLinkPaths = link => {
 const validateFiles = files => Promise.resolve(_.map(files, file => {
   // Let's check all the links
   _.forEach(file.links, link => {
-    const fullPath = path.join(SOURCEPATH, link),
-          fullUrl = url.parse(path.join(SOURCEPATH, link));
+    const fullPath = normalizeSafe(path.join(SOURCEPATH, link)),
+          fullUrl = url.parse(fullPath);
 
     let linkPath = fullUrl.pathname;
     let linkedFile = _.filter(
@@ -233,7 +235,7 @@ const checkAllLinks = (links, files) => {
 
 const writeUpdateFeed = files => new Promise((resolve, reject) => {
   const updateFiles = _.chain(files)
-    .filter(file => file.time !== null)
+    .filter(file => file.time !== null && !!file.seoTitle)
     .map(file => {
       const picked = _.pick(file, ['basePath', 'time', 'seoTitle']);
 
@@ -266,7 +268,7 @@ const writeUpdateFeed = files => new Promise((resolve, reject) => {
     feed.item({
       title: update.seoTitle,
       description: '',
-      url: `https://docs.mendix.com${update.basePath}`,
+      url: normalizeSafe(`https://docs.mendix.com${update.basePath}`),
       date: update.dateObj
     })
   });
@@ -384,7 +386,7 @@ const checkHTMLFiles = (opts) => helpers.getFiles(SOURCEPATH)
   });
 
 const checkFiles = (opts) => {
-  SOURCEPATH = opts.dir;
+  SOURCEPATH = normalizeSafe(opts.dir);
   EXTERNAL = opts.external || false;
   gutil.log(`${indicator} Testing html in ${SOURCEPATH}`);
   helpers

@@ -22,6 +22,8 @@ const del         = require('del');
 const runSequence = require('run-sequence');
 const yaml        = require('write-yaml');
 
+const { normalizeSafe } = require('upath');
+
 const CURRENTFOLDER   = __dirname;
 const BUILDDATE       = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
 const PORT            = 4000;
@@ -29,7 +31,7 @@ const DIST_FOLDER     = '_site';            // DO NOT CHANGE THIS, IS USED BY TR
 const ALGOLIA_APP_ID  = 'OHBX5T982M';
 const ALGOLIA_INDEX   = 'docs';
 const DATAFOLDER      = 'data';
-const CONTENTFOLDER   = path.join(CURRENTFOLDER, 'content');
+const CONTENTFOLDER   = normalizeSafe(path.join(CURRENTFOLDER, 'content'));
 
 /* DONT EDIT BELOW */
 gutil.log(`Gulp started at ${gutil.colors.cyan(BUILDDATE)}`);

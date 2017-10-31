@@ -7,6 +7,7 @@ const shell = require('shelljs');
 const _ = require('lodash');
 const yamlFront = require('yaml-front-matter');
 const YAML = require('yamljs');
+const { normalizeSafe } = require('upath');
 
 const {getGenerateFiles, gulpErr, isFile, readFile, writeFile} = require('./helpers');
 
@@ -31,11 +32,11 @@ const getSourceFilesPromise = (opts) => {
         };
         file.basePath = file.path.replace(opts.src, '');
         const parsed = path.parse(file.basePath),
-              base = path.join(opts.src, parsed.dir, parsed.name),
+              base = normalizeSafe(path.join(opts.src, parsed.dir, parsed.name)),
               dirName = parsed.dir.split('/')[1];
 
         if (!!dirName && SPACES[dirName]) {
-          file.url = path.join(parsed.dir, parsed.name === 'index' ? '/' : parsed.name);
+          file.url = normalizeSafe(path.join(parsed.dir, parsed.name === 'index' ? '/' : parsed.name));
           if (file.url.split('/').length === 3 && parsed.name === 'index') {
             file.main = true;
           }
@@ -112,8 +113,8 @@ const checkSpaces = (spaceArray) =>
         gutil.log(`${menu_indicator} File ${cyan(file.basePath)} has category ${cyan(file.category)} which has no file associated to it or is not used in ${cyan('spaces.yml')}`);
         return false;
       }
-      if (file.parent && !_.find(files, f => f.url === path.join(file.dir, file.parent))) {
-        gutil.log(`${menu_indicator} File ${cyan(file.basePath)} has parent ${cyan(file.parent)} which would resolve to ${cyan(path.join(file.dir, file.parent))}, but this does not exist`);
+      if (file.parent && !_.find(files, f => f.url === normalizeSafe(path.join(file.dir, file.parent)))) {
+        gutil.log(`${menu_indicator} File ${cyan(file.basePath)} has parent ${cyan(file.parent)} which would resolve to ${cyan(normalizeSafe(path.join(file.dir, file.parent)))}, but this does not exist`);
         return false;
       }
       return true

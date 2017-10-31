@@ -194,5 +194,3 @@ const spawn = (folder) => {
 module.exports = {
     spawn
 };
-
-spawn('..');

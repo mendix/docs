@@ -5,16 +5,17 @@ category: "API Documentation"
 
 # Introduction
 
-The Deploy API allows you to manage application environments in the Mendix Cloud. You can retrieve the status, start and stop applications, but also deploy and configure new model versions to application environments. You will also need the Build API to create and manage deployment packages.
+The Deploy API allows you to manage application environments in the Mendix Cloud. You can retrieve the status and start and stop applications, and you can also deploy and configure new model versions to application environments. You will also need the Build API to create and manage deployment packages.
 
-The image below provides a domain model representation of the concepts discussed below and how these are related:
+This image provides a domain model representation of the concepts discussed below and how these are related:
+
 ![](attachments/131078/425987.png)
 
 # <a name="DeployAPI-Authentication" rel="nofollow"></a>Authentication
 
-The Deploy API requires authentication via API keys that are bound to your Mendix account; for more information please refer to the [authentication](authentication "authentication") documentation.
+The Deploy API requires authentication via API keys that are bound to your Mendix account (for more information, see [Authentication](authentication).
 
-As APIs are designed for automated systems, the Deploy API does not require Two-Factor-Authentication which is normally required to make changes to Production environments. This is a potential security risk. Therefore, the Technical Contact of an Application needs to explicitly allow API Access for team members that want to use the Deploy API. This can be configured from the Node Security screen under Project Settings. By default, API access is already enabled for the Test and Acceptance environments for all team members. To perform an action via the Deploy API, such as transporting a new deployment package, both the Transport and API Access permissions need to be enabled.
+As APIs are designed for automated systems, the Deploy API does not require two-factor authentication, which is normally required to make changes to production environments. This is a potential security risk. Therefore, the Technical Contact of an application needs to explicitly allow API access for team members that want to use the Deploy API. This can be configured from the **Node Security** screen under **Project Settings**. By default, API access is already enabled for test and acceptance environments for all team members. To perform an action via the Deploy API, such as transporting a new deployment package, both the **Transport** and **API Access** permissions need to be enabled.
 
 # <a name="DeployAPI-APIcalls" rel="nofollow"></a>API Calls
 

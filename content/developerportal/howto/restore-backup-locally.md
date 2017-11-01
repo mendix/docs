@@ -94,6 +94,6 @@ Before running the App, perform the following steps:
 
 You can find the root directory in behind the Mendix Desktop Modeler version:
 
-    ![](attachments/modeler/root-directory.png)
+   ![](attachments/modeler/root-directory.png)
 
 2. Copy-paste the data-snapshot .zip file in the root directory of your new app.

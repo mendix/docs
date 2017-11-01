@@ -25,9 +25,21 @@ The [import mapping](import-mappings) defines how to transform the XML or JSON s
 
 ### 3.2 Input Content Type
 
+{{% alert type="info" %}}
+
+Introduced in version 7.8.0. This feature is still in private beta, and is subject to change before the final release.
+
+{{% /alert %}}
+
 If the import mapping is based on a message definition, it can import both XML and JSON. Select whether the input variable contains XML or JSON.
 
 ### 3.3 The Input Contains
+
+{{% alert type="info" %}}
+
+Introduced in version 7.8.0. This feature is still in private beta, and is subject to change before the final release.
+
+{{% /alert %}}
 
 If the import mapping is based on a message definition, it can import both single objects and lists. Select whether the input variable contains a single object or a list of objects.
 

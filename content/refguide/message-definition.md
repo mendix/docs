@@ -3,6 +3,12 @@ title: "Message Definition"
 parent: "message-definitions"
 ---
 
+{{% alert type="info" %}}
+
+The 'Message Definitions' was introduced in version 7.8.0. This feature is still in private beta, and is subject to change before the final release.
+
+{{% /alert %}}
+
 ## 1 Introduction
 
 Message definitions define the messages that are sent from and to your app. Defining your messages allows you to create import and export mappings for them.

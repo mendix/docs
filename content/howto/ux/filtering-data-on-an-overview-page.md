@@ -1,6 +1,6 @@
 ---
 title: "Filtering Data on an Overview Page"
-category: "GUIs"
+category: "UX"
 tags: []
 ---
 

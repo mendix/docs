@@ -1,6 +1,6 @@
 ---
 title: "Create a Custom Theme with the Mendix UI Framework"
-category: "GUIs"
+category: "UX"
 tags: []
 ---
 

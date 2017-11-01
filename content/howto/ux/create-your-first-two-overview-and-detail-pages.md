@@ -1,6 +1,6 @@
 ---
 title: "Create Your First Two Overview and Detail Pages"
-category: "GUIs"
+category: "UX"
 tags: []
 ---
 

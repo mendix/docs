@@ -48,31 +48,31 @@ This is the test case:
 ![](attachments/create-a-negative-test-case-2/negative-test-case.png)
 
 1. Open your app in ATS and go to the **Test Cases** menu item.
-2. Click the **Repository** tab.
+2.  Click the **Repository** tab:
 
-![](attachments/create-a-negative-test-case-2/go-to-repository.png)
+  ![](attachments/create-a-negative-test-case-2/go-to-repository.png)
 
 3. Select the test case to add the negative test step.
-4. Add the _Assert False_ action where you want to place the negative test step.
+4. Add the Assert False action where you want to place the negative test step:
 
 ![](attachments/create-a-negative-test-case-2/add-the-assert-false.png)
 
-5. Set the **Assert Value** parameter of the _Assert False_ action to **True**.
+5. Set the **Assert Value** parameter of the Assert False action to **True**:
 
 ![](attachments/create-a-negative-test-case-2/assert-value-parameter.png)
 
-6. Next, you add the action needed to search for the menu item as **Precondition**. Check the precondition box and add the [_Find/Assert Menu Item_](/ats/refguide/rg-version-1/findassert-menu-item) action.
+6.  Add the action needed to search for the menu item as a **Precondition**. Check the precondition box and add the [Find/Assert Menu Item](/ats/refguide/rg-version-1/findassert-menu-item) action:
 
-![](attachments/create-a-negative-test-case-2/add-findassert-menu-item-as-precondition.png)
+  ![](attachments/create-a-negative-test-case-2/add-findassert-menu-item-as-precondition.png)
 
-7. Now enter the information needed to find the **Admin Menu** as an administrator to verify it is not visible as an employee. Also, enter a proper description.
+7.  Enter the information needed to find the **Admin Menu** as an administrator to verify it is not visible as an employee. Also, enter a proper description.
 
-![](attachments/create-a-negative-test-case-2/negative-test-step-finished.png)
+  ![](attachments/create-a-negative-test-case-2/negative-test-step-finished.png)
 
-Inner workings;
+These are the inner-workings:
 
-If ATS can find the **Admin Menu** the precondition passes and the Assert False fails. This ensures the entire test step fails. 
-If ATS cannot find the **Admin Menu** the precondition fails and the _Assert False_ is not executed. This ensures that the test case results is "passed". 
+* If ATS can find the **Admin Menu** the precondition passes and the Assert False fails. This ensures the entire test step fails. 
+* If ATS cannot find the **Admin Menu** the precondition fails and the _Assert False_ is not executed. This ensures that the test case results is "passed". 
 
 Resulting in a test case fail if the menu item is found and a test case pass if it is not found. 
 

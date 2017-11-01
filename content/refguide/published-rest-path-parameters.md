@@ -3,6 +3,12 @@ title: "Published REST Path Parameters"
 parent: "published-rest-operation"
 ---
 
+{{% alert type="info" %}}
+
+The 'Published REST Service' was introduced in version 7.8.0. This feature is still in private beta, and is subject to change before the final release.
+
+{{% /alert %}}
+
 The operation path in the [published REST operation](published-rest-operation) specifies the last part of the location (URL) of the operation. 
 
 You can use one or more path parameters to capture part of the location as a microflow parameter. Specify path parameters in the operation path between `{` and `}`. 

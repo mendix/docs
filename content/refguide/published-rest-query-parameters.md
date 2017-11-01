@@ -3,6 +3,12 @@ title: "Published REST Query Parameters"
 parent: "published-rest-operation"
 ---
 
+{{% alert type="info" %}}
+
+The 'Published REST Service' was introduced in version 7.8.0. This feature is still in private beta, and is subject to change before the final release.
+
+{{% /alert %}}
+
 The specification of a [published REST operation](published-rest-operation) includes a microflow that implements the operation. This microflow takes a number of parameters:
 
 * It may take a parameter of the [HttpRequest](http-request-and-response-entities#http-request) type

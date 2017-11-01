@@ -3,6 +3,12 @@ title: "Published REST Operation"
 parent: "published-rest-services"
 ---
 
+{{% alert type="info" %}}
+
+The 'Published REST Service' was introduced in version 7.8.0. This feature is still in private beta, and is subject to change before the final release.
+
+{{% /alert %}}
+
 ## 1 Introduction
 
 A published REST operation is part of a [published REST resource](published-rest-resource) and defines an endpoint that a client can call to get, put, post, patch, or delete items from the resource.

@@ -3,6 +3,12 @@ title: "Published REST resource"
 parent: "published-rest-services"
 ---
 
+{{% alert type="info" %}}
+
+The 'Published REST Service' was introduced in version 7.8.0. This feature is still in private beta, and is subject to change before the final release.
+
+{{% /alert %}}
+
 ## 1 Introduction
 
 A_published REST resource is part of a [published REST service](published-rest-service) and represents a collection of items on which one or more [operations](published-rest-operation) can be defined.

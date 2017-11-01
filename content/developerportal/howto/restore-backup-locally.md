@@ -59,11 +59,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     ![](attachments/modeler/add-configuration.png)
 
-| Type | PostreSQL |
-| URL | localhost: 5432 |
-| Database name | Provide database name |
-| User name | Provide user name from PgAdmin |
-| Password | Provide same password as in PgAdmin |
+Type | PostreSQL
+URL | localhost: 5432
+Database name | Provide database name
+User name | Provide user name from PgAdmin
+Password | Provide same password as in PgAdmin
 
 4. Click **OK**.
 5. Run the app by clicking **Run Locally**.

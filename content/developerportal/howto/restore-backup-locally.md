@@ -11,6 +11,8 @@ There are 2 different databases:
 1. External database (like Postgres).
 2. Build-in-database.
 
+You can use this how-to if you want to restore the database of your app in an external database or if you want to restore a database from another app to a new app.
+
 **This how-to will teach you how to do the following:**
 
 * Create a new database
@@ -57,24 +59,24 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 3. Under the tab **Configurations** click **New**.
 
-    ![](attachments/modeler/add-configuration.png)
+   ![](attachments/modeler/add-configuration.png)
 
+4. Fill in the database information. 
+
+Configuration | Information
+---- | ---
 Type | PostreSQL
 URL | localhost: 5432
 Database name | Provide database name
 User name | Provide user name from PgAdmin
 Password | Provide same password as in PgAdmin
 
-4. Click **OK**.
-5. Run the app by clicking **Run Locally**.
+5. Click **OK**.
+6. Run the app by clicking **Run Locally**.
 
 ## 4 Separate Build-in-database (data-snapshot)
 
 If you want to import the build-in-database of another app to a new app, you can use the data-snapshot possibility.
-
-Before starting this how-to, make sure you have completed the following prerequisites:
-
-* Create a data-snaphot from the database of another app.
 
 ### 4.1 Create data-snapshot
 
@@ -88,7 +90,7 @@ Create a data-snapshot from a different mendix app database by doing the followi
 
 ### 4.2 Transport data-snapshot root directory
 
-Before running the App, perform the following steps:
+After creating a data-snaphot, perform the following steps:
 
 1. Go to the local root directory of your app containing the newly created data-snaphot **.zip** file.
 
@@ -96,4 +98,5 @@ You can find the root directory in behind the Mendix Desktop Modeler version:
 
    ![](attachments/modeler/root-directory.png)
 
-2. Copy-paste the data-snapshot .zip file in the root directory of your new app.
+2. Copy-paste the data-snapshot **.zip** file in the root directory of your new app.
+3. Return to the Mendix **Desktop Modeler** and run the app locally, by clicking **Run Locally**.

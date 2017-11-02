@@ -71,8 +71,8 @@ This is the test case:
 
 These are the inner-workings:
 
-* If ATS can find the **Admin Menu** the precondition passes and the Assert False fails. This ensures the entire test step fails. 
-* If ATS cannot find the **Admin Menu** the precondition fails and the _Assert False_ is not executed. This ensures that the test case results is "passed". 
+* If ATS can find the **Admin Menu**, the precondition passes and the Assert False action fails, which ensures that the entire test step fails
+* If ATS cannot find the **Admin Menu**, the precondition fails and the Assert False action is not executed, which ensures that the test case result is "passed"
 
 Resulting in a test case fail if the menu item is found and a test case pass if it is not found. 
 

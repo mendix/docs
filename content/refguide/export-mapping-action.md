@@ -19,7 +19,7 @@ For details on the properties that all activities share (for example, caption), 
 
 ### 2.1 Export Mapping
 
-The [export mapping](export-mappings) action defines in which way the data in the [domain model](domain-model) corresponds with the XML schema or JSON structure.
+The [Export Mapping](export-mappings) action defines in which way the data in the [domain model](domain-model) corresponds with the XML schema or JSON structure.
 
 {{% alert type="info" %}}
  

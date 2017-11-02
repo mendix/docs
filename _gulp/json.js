@@ -1,5 +1,6 @@
 const restify = require('restify');
 const path = require('path');
+const url = require('url');
 const Promise = require('bluebird');
 const YAML = require('yamljs');
 const yamlFront = require('yaml-front-matter');
@@ -24,8 +25,8 @@ const contentHandler = (req, res, next) => {
     const contentPath = req.params[0];
     gutil.log(`${pluginID} Handling content: ${contentPath}`);
 
-    const sourcePath = path.resolve(mainFolder, CONTENTFOLDER, contentPath);
-    const generatePath = path.resolve(mainFolder, GENERATEDFOLDER, contentPath);
+    const sourcePath = normalizeSafe(path.resolve(mainFolder, CONTENTFOLDER, contentPath));
+    const generatePath = normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER, contentPath));
 
     const sourceFile = ['.md', '/index.md']
         .map(suffix => {
@@ -99,15 +100,65 @@ const contentHandler = (req, res, next) => {
         readFile(target).
             then(content => {
                 const obj = {
-                    pathHtml: normalizeSafe(target.replace(path.resolve(mainFolder, GENERATEDFOLDER), ''))
+                    pathHtml: normalizeSafe(target.replace(path.resolve(mainFolder, GENERATEDFOLDER), '')),
                 };
+                const images = [];
+                const links = [];
 
                 const $ = cheerio.load(content);
                 const cheerioContent = $('.mx__page__content');
 
                 if (cheerioContent) {
                     obj.html = cheerioContent.html();
+
+                    $('img', cheerioContent).each((i, el) => {
+                        const src = $(el).attr('src');
+                        const parsed = url.parse(src);
+
+                        if (!parsed.hostname) {
+                            // We're only handling local files
+
+                            if (src.indexOf('/') === 0) {
+                                images.push(src);
+                            } else {
+                                const t = target.replace(normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER)), '');
+                                const u = path.parse(t);
+                                const s = normalizeSafe(path.join(u.dir, src))
+                                images.push(s);
+                            }
+                        }
+                    });
+
+                    $('a', cheerioContent).each((i, el) => {
+                        const $el = $(el);
+                        const href = $el.attr('href');
+
+                        if (
+                            !!href &&
+                            href !== "" &&
+                            href.indexOf('#') !== 0 &&
+                            href.indexOf('http') !== 0 &&
+                            href.indexOf('mailto') !== 0
+                        ) {
+                            try {
+                                if (href.indexOf('/') === 0) {
+                                    links.push(href);
+                                } else {
+                                    const t = target.replace(normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER)), '');
+                                    const u = path.parse(t);
+                                    const s = normalizeSafe(path.join(u.dir, href));
+                                    links.push(s);
+                                }
+                            } catch (e) {
+                                console.log('Error parsing link: ', href, e);
+                            }
+                        }
+                    });
+
                 }
+
+                obj.images = _.uniq(images);
+                obj.links = _.uniq(links);
 
                 return obj;
             }),
@@ -136,7 +187,7 @@ const pagesHandler = (req, res, next) => {
                         .replace('.md', ''))
         ))
         .then(files => {
-            res.send(200, files.filter(p => 
+            res.send(200, files.filter(p =>
                 p !== '/' && p !== '/search/' &&
                 p !== '/index' && p !== '/search/index'
             ));

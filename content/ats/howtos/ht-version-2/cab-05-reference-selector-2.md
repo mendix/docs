@@ -22,7 +22,7 @@ This how-to applies to all widgets like the reference selector widget, if the wi
 
 Before starting this how-to, make sure you have completed the following prerequisite:
  
-* Read [Custom Action General Section](custom-action-general-2)
+* Read [General](custom-action-general-2)
 
 ## 3 Defining the User Approach
 

@@ -5,7 +5,7 @@ parent: "microflow-activities"
 
 ## 1 Introduction
 
-With the import mapping action, you can import the data stored in an XML or JSON document into [domain model](domain-model) entities.
+With the Import Mapping action, you can import the data stored in an XML or JSON document into [domain model](domain-model) entities.
 
 ![](attachments/19202813/19399018.png)
 

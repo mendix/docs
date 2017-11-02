@@ -47,7 +47,7 @@ Both autonumbers and calculated attributes require server intervention, and are 
 
 ### 4.7 Default Attribute Values
 
-Default attribute values for entities in the **Domain Model** don't have any effect for objects created offline. Boolean attributes will always default to `false`, numeric attributes to `0` and other attributes to `empty`.
+Default attribute values for entities in the domain model don't have any effect for objects created offline. Boolean attributes will always default to `false`, numeric attributes to `0`, and other attributes to `empty`.
 
 ### 4.8 Associations
 

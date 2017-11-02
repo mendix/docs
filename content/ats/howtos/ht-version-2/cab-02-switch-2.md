@@ -25,7 +25,7 @@ Sections [6 Adding Logic to Make Your Action "Smarter"](#AddingLogic) and [7 Fin
 
 Before starting this how-to, make sure you have completed the following prerequisite:
  
-* Read **Custom Action General Section**
+* Read [General](custom-action-general-2)
 
 ## 3 Defining the User Approach
  

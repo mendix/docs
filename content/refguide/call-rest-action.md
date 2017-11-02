@@ -5,7 +5,7 @@ parent: "microflow-activities"
 
 ## 1 Introduction
 
-The call REST service action can be used to call a REST endpoint. You can specify the location and how the response of the REST call should be handled.
+The Call REST Service action can be used to call a REST endpoint. You can specify the location and how the response of the REST call should be handled.
 
 ## 2 General
 

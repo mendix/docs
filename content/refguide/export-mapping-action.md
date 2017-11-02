@@ -7,7 +7,7 @@ parent: "microflow-activities"
 
 ![](attachments/19202807/19399019.png)
 
-With the export mapping action, you can export the data stored in [domain model](domain-model) entities into an XML document, JSON document, or string variable.
+With the Export Mapping action, you can export the data stored in [domain model](domain-model) entities into an XML document, JSON document, or string variable.
 
 {{% alert type="info" %}}
 
@@ -67,7 +67,7 @@ Elements in a schema can be optional (`minOccurs=0`) and/or nillable. When an em
 
 ## 4 Output Properties
 
-There are two methods of storing the result of an export mapping action:
+There are two methods of storing the result of an Export Mapping action:
 
 * Inside a 'System.FileDocument'
 * Inside a string variable

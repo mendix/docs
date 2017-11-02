@@ -33,7 +33,7 @@ This is the navigation menu for an administrator:
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Complete [How to Create a Test Case](create-a-test-case-2)
+* Read [How to Create a Test Case](create-a-test-case-2)
 
 ## 3 Creating a Negative Test Case
 

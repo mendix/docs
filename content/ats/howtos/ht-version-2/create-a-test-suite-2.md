@@ -20,8 +20,8 @@ This how-to uses the Company Expenses app as an example. You will create a test 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Complete [How to Get Started](getting-started-2)
-* Complete [How to Create a Test Case](create-a-test-case-2)
+* Read [How to Get Started](getting-started-2)
+* Read [How to Create a Test Case](create-a-test-case-2)
 
 ## 3 Create a Test Suite
 

@@ -21,8 +21,8 @@ This how-to uses the Mendix Company Expenses app as an example, and you will cre
 
 Before starting with this how-to, make sure you have the following prerequisites in place:
 
-*  Complete [How to Get Started](getting-started-2)
-*  Complete [How to Install the ATS Helper and ATS Recorder](install-ats-helper-recorder-2)
+*  Read [How to Get Started](getting-started-2)
+*  Read [How to Install the ATS Helper and ATS Recorder](install-ats-helper-recorder-2)
 
 ## 3 Creating a Test Case<a name="3"></a>
 

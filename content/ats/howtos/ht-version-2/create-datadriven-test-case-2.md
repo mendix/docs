@@ -31,7 +31,7 @@ An example test case is used to illustrate how to connect the data set to a test
 
 Before starting with this how-to, make sure you have the following prerequisites in place:
 
-* [How to Create a Test Case](create-a-test-case-2)
+* Read [How to Create a Test Case](create-a-test-case-2)
 
 ## 3 Create a Master Data Set within ATS
 

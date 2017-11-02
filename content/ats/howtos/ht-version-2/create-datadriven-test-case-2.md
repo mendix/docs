@@ -7,21 +7,22 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-This how-to explains data driven testing, a functionality of ATS. With data driven testing, you can run the same test case with different data sheets, without manually entering the new information in the case. ATS Executes a test case for each record in the master data set.
+This how-to explains data-driven testing, a functionality of ATS. With data-driven testing, you can run the same test case with different data sheets without manually entering the new information in the case. ATS executes a test case for each record in the master data set.
 
 **This how-to will teach you  how to do the following**
--	Create a master data set with different datasheets in ATS
--   Create an excel file to upload in ATS
--	Create a master data set using excel file
--	Use the master data set in a test case
--   Understand the result log of a data-driven test case
 
-This how-to uses the company expenses app as an example. In this how-to you create data for the following fields in the company expenses app.
+* Create a master data set with different datasheets in ATS
+* Create an Excel file to upload in ATS
+* Create a master data set using an Excel file
+* Use the master data set in a test case
+* Understand the result log of a data-driven test case
 
-1. Amount
-2. Date
-3. Type
-4. Description
+This how-to uses the Company Expenses app as an example. In the how-to, you will create data for the following fields in the Company Expenses app:
+
+* Amount
+* Date
+* Type
+* Description
 
 ![](attachments/create-datadriven-test-case/dataset-fields-company-expenses-app.png)
 
@@ -33,42 +34,43 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 * Read [How to Create a Test Case](create-a-test-case-2)
 
-## 3 Create a Master Data Set within ATS
+## 3 Creating a Master Data Set within ATS
 
 The following steps explain how to create a master data set within ATS. If you want to create a master data set from an Excel file, please see chapter four.
 
 1. Open your app in ATS and go to the **Test Cases** menu item.
 2. Click the **Test Data** tab.
-3. Click **New Data Set**
+3.  Click **New Data Set**
 
-![](attachments/create-datadriven-test-case/test-cases-data-sets-new-data-set.png)
+   ![](attachments/create-datadriven-test-case/test-cases-data-sets-new-data-set.png)
 
-When you click the **New Data Set**, the **New Data Set** dialog box opens.
+   When you click the **New Data Set**, the **New Data Set** dialog box opens.
 
-![](attachments/create-datadriven-test-case/new-data-set-dialog.png)
+   ![](attachments/create-datadriven-test-case/new-data-set-dialog.png)
 
-4. Enter a name for your data set in the **Name** field. Remember that you must find the data set later so giving it a unique and corresponding name is advisable.
+4. Enter a name for your data set in the **Name** field. Remember that you must find the data set later, so give it a unique and corresponding name.
 5. Enter a description for your data set in the **Description** field. Providing a clear description of what data is found inside is advisable.
-6. Click **Save**
+6.  Click **Save**.
 
-![](attachments/create-datadriven-test-case/new-data-set-dialog-new-expense.png)
+   ![](attachments/create-datadriven-test-case/new-data-set-dialog-new-expense.png)
 
-### 3.1 Create data set fields
+### 3.1 Creating Data Set Fields
 
 The following steps explain how to add data set fields to your master data set.
 
 1. Click the name of the data set.
-2. Click **New Field**.
+2.  Click **New Field**.
 
-![](attachments/create-datadriven-test-case/add-new-field-data-set.png)
+    ![](attachments/create-datadriven-test-case/add-new-field-data-set.png)
 
-3. When you click **New Field**, the **New Field** dialog box opens. Enter **Amount** in the name field, this field represents the expense amount in the company expenses app. By using the exact label from the Mendix app, it becomes easier to connect the fields from your data set to the right action.
-4. The amount in the company expenses app can only be a number. Select **Number** as the datatype.
-5. Click **Save**
+3. When you click **New Field**, the **New Field** dialog box opens. Enter **Amount** in the name field. This field represents the expense amount in the Company Expenses app. By using the exact label from the Mendix app, it becomes easier to connect the fields from your data set to the right action.
+4. The amount in the Company Expenses app can only be a number. Select **Number** as the datatype.
+5.  Click **Save**
 
-![](attachments/create-datadriven-test-case/new-data-set-field-amount.png)
+   ![](attachments/create-datadriven-test-case/new-data-set-field-amount.png)
 
-Repeat step 1 to 5 for the fields in the company expenses app.
+Repeat steps 1 to 5 for these fields in the Company Expenses app:
+
 * Date
 * Type
 * Description
@@ -79,7 +81,7 @@ The result will look comparable to the image below:
 
  Next, you create a record for the data set fields.
 
-### 3.2 Create Records
+### 3.2 Creating Records
 
 The following steps explain how to create a record for your data set fields.
 

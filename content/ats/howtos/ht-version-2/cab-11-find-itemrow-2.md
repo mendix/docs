@@ -20,7 +20,7 @@ This how-to applies to all situations in which you must find an item/row using a
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-*  Complete [Custom Action General Section](custom-action-general-2)
+*  Read [General](custom-action-general-2)
 
 ## 3 Defining the User Approach
 

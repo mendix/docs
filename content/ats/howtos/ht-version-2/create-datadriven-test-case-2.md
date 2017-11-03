@@ -83,22 +83,23 @@ The result will look comparable to the image below:
 
 ### 3.2 Creating Records
 
-The following steps explain how to create a record for your data set fields.
+To create a record for your data set fields, follow these steps:
 
 1. Click the **Records** tab.
-2. Click **New Record**.
+2.  Click **New Record**:
 
-![](attachments/create-datadriven-test-case/click-new-record.png)
+    ![](attachments/create-datadriven-test-case/click-new-record.png)
 
-The **New Record** dialog box opens.
+    The **New Record** dialog box opens:
 
-![](attachments/create-datadriven-test-case/new-record-dialog.png)
+    ![](attachments/create-datadriven-test-case/new-record-dialog.png)
 
-3. Enter the desired values for each field and click **Save**.
+3.  Enter the desired values for each field and click **Save**:
 
-![](attachments/create-datadriven-test-case/entered-new-record.png)
+    ![](attachments/create-datadriven-test-case/entered-new-record.png)
 
-Repeat step 2 and step 3 as many times as you want. In our example, we create a record for each expense type.
+Repeat step 2 and step 3 as many times as you want. In our example, we create a record for each expense type:
+
 * Accommodation
 * Meal
 * Other
@@ -109,158 +110,156 @@ The records look like this:
 
 ![](attachments/create-datadriven-test-case/all-records-new-expense.png)
 
-You can also update your records from excel. This is explained in chapter five.
+You can also update your records from Excel.  For details on how to do this, see [5 Creating a Master Data Set with Excel](#create).
 
-## 4 Create the Excel File
+## 4 Creating the Excel File<a name="excel"></a>
 
-The following steps explain how to create the right excel file and how it should look. You need this file in chapter five.
+The following steps explain how to create the right Excel file and how it should look. You will need this file in [5 Creating a Master Data Set with Excel](#create).
 
-1. Open Excel and create a new file.
+1.  Open Excel and create a new file. ATS implements the values in the first row as data set fields and all the rows beyond the first row as records. This is an example:
 
-ATS implements the values in the first row as data set fields and all the rows beyond the firs row as records. See the example below.
+    ![](attachments/create-datadriven-test-case/excel-sheet-example-ats.png)
 
-![](attachments/create-datadriven-test-case/excel-sheet-example-ats.png)
+2.  Create the data set fields you need:
 
-2. First you create the data set fields you need. 
     * Amount
     * Date
     * Type
     * Description
 
-![](attachments/create-datadriven-test-case/excel-sheet-data-set-fields.png)
+   ![](attachments/create-datadriven-test-case/excel-sheet-data-set-fields.png)
 
-3. Now that you created the data set fields, you must add records. Create a record for each expense type available, five in total.
+3.  Now you must add records. Create a record for each expense type available, five in total:
+
     * Accommodation
     * Meal
     * Other
     * Supplies
     * Transport
 
-![](attachments/create-datadriven-test-case/excel-sheet-add-records-new-expense.png)
+    ![](attachments/create-datadriven-test-case/excel-sheet-add-records-new-expense.png)
 
-4. Now save the excel file so that you can use it in the next chapter.
+4. Save the Excel file so that you can use it in the next section.
 
-## 5 Create a Master Data Set with Excel
+## 5 Creating a Master Data Set with Excel<a name="create"></a>
 
-The following steps explain how to create and update a master data set from an excel file. You use the file you created in chapter four.
+The following steps explain how to create and update a master data set from an Excel file. You will use the file you created in [4 Creating the Excel File](#excel).
 
 1. Open your app in ATS and go to the **Test Cases** menu item.
 2. Click the **Test Data** tab.
-3. Click **New Data Set**
+3.  Click **New Data Set**
 
-![](attachments/create-datadriven-test-case/test-cases-data-sets-new-data-set.png)
+    ![](attachments/create-datadriven-test-case/test-cases-data-sets-new-data-set.png)
 
-When you click the **New Data Set**, the **New Data Set** dialog box opens.
+    When you click the **New Data Set**, the **New Data Set** dialog box opens.
 
-![](attachments/create-datadriven-test-case/new-data-set-dialog.png)
+    ![](attachments/create-datadriven-test-case/new-data-set-dialog.png)
 
-4. Enter a name for your data set in the **Name** field. Remember that you must find the data set later so giving it a unique and corresponding name is advisable.
+4.  Enter a name for your data set in the **Name** field. Remember that you must find the data set later, so giving it a unique and corresponding name is advisable.
 5. Enter a description for your data set in the **Description** field. Providing a clear description of what data is found inside is advisable.
 6. Check the **Create/Update fields from file** box.
-7. Select the excel file you created in chapter four.
-8. Click **Save**.
+7. Select the Excel file you created in [4 Creating the Excel File](#excel).
+8.  Click **Save**.
 
-![](attachments/create-datadriven-test-case/new-data-set-dialog-new-expense-excel.png)
+    ![](attachments/create-datadriven-test-case/new-data-set-dialog-new-expense-excel.png)
 
-Now you created a new master data set using an excel file.
+Now you have a new master data set using an Excel file.
 
-## 6 Update the master data set using an excel file.
+## 6 Updating the Master Data Set Using an Excel File
 
-The following steps explain how to update a master data set using an excel file.
+To update a master data set using an Excel file, follow these steps:
 
 1. Click the name of the data set.
 2. Click the **Records** tab.
-3. Click **Export to Excel**.
+3.  Click **Export to Excel**:
 
-![](attachments/create-datadriven-test-case/export-data-set-excel.png)
+    ![](attachments/create-datadriven-test-case/export-data-set-excel.png)
 
-You now download an excel file containing the data set. 
+    You now download an Excel file containing the data set.
 
 4. Save the file to your local computer so that you can make changes.
-5. Change the description of all records to "ATS excel description 1" etc.
+5.  Change the description of all records to "ATS excel description 1" etc.
 
-![](attachments/create-datadriven-test-case/excel-sheet-update-records.png)
+    ![](attachments/create-datadriven-test-case/excel-sheet-update-records.png)
 
-6.  Click **Import from Excel** inside the **Records** tab.
+6.  Click **Import from Excel** inside the **Records** tab:
 
-![](attachments/create-datadriven-test-case/import-from-excel-new-records.png)
+    ![](attachments/create-datadriven-test-case/import-from-excel-new-records.png)
 
-The **Import records** dialog box opens.
+    This will open the **Import records** dialog box.
 
-7. Select the file you altered in step 4 and step 5. 
-8. Click **Import**.
+7. Select the file you altered in steps 4–5. 
+8.  Click **Import**.
 
-![](attachments/create-datadriven-test-case/import-new-records-excel.png)
+    ![](attachments/create-datadriven-test-case/import-new-records-excel.png)
 
-ATS now updated the changed records.
+ATS updates the changed records:
 
 ![](attachments/create-datadriven-test-case/updated-records-new-expense-data-set.png)
 
-You now updated the master data set using an excel file.
+Great! You have updated the master data set using an Excel file.
 
-## 7 Connect the Master Data Set to your Test Case
+## 7 Connecting the Master Data Set to Your Test Case
 
-The following steps explain how to connect the master data set to your test case. An example test case is used in this chapter. See [How to Create a Test Case](create-a-test-case-2) for more information.
+The following steps explain how to connect the master data set to your test case. An example test case is used in this chapter. For more information, see [How to Create a Test Case](create-a-test-case-2).
 
 1. Open your test case and click the **Test Data** tab.
-2. Click the arrow icon.
+2.  Click the arrow icon:
 
-![](attachments/create-datadriven-test-case/test-data-tab-test-case-details-page.png)
+    ![](attachments/create-datadriven-test-case/test-data-tab-test-case-details-page.png)
 
-The **Select Data Set** dialog box opens.
+    The **Select Data Set** dialog box opens.
 
 3. Search for the master data set.
 4. Select the data set.
-5. Click **Save**.
+5.  Click **Save**.
 
-![](attachments/create-datadriven-test-case/select-data-set-dialog-new-expense.png)
+    ![](attachments/create-datadriven-test-case/select-data-set-dialog-new-expense.png)
 
-Now you connected the master data set to your test case.
+    Connect the master data set to your test case.
 
-![](attachments/create-datadriven-test-case/connected-master-data-set-new-expense.png)
+    ![](attachments/create-datadriven-test-case/connected-master-data-set-new-expense.png)
 
-Next, you connect the data set fields to the right test steps.
+6. Now you need to connect the data set fields to the right test steps, so click the **Test Steps** tab.
+7. Select the test step to which you want to connect a data set field.
+8.  Search for and select the first data set field:
 
-6. Click the **Test Steps** tab.
-7. Select the test step you want to connect a data set field too.
-8. Search and select the first data set field.
-
-![](attachments/create-datadriven-test-case/first-data-set-field-connected-amount.png)
+    ![](attachments/create-datadriven-test-case/first-data-set-field-connected-amount.png)
 
 Repeat this process for all the data set fields you want to connect.
-
-You now connected the data set fields to the test steps in your test case.
 
 ## 8 Data-Driven Results
 
 The following steps explain how to read and understand the results of a data-driven test case. An example is used in which the data-driven test case is already executed.
 
 1. Open your app and click the **Test Runs** menu item.
-2. Click the result of the data-driven test case.
+2.  Click the result of the data-driven test case.
 
-![](attachments/create-datadriven-test-case/test-runs-data-driven-test-case.png)
+    ![](attachments/create-datadriven-test-case/test-runs-data-driven-test-case.png)
 
-This opens the **Result Log** page. Where ATS displays the result of each executed record.
+    This opens the **Result Log** page, where ATS displays the result of each executed record.
 
-3. Click one of the results.
+3.  Click one of the results:
 
-![](attachments/create-datadriven-test-case/data-driven-test-case-result-log.png)
+    ![](attachments/create-datadriven-test-case/data-driven-test-case-result-log.png)
 
-4. To see the record used by this execution, click the **Data Records** tab.
+4.  To see the record used by this execution, click the **Data Records** tab:
 
-This displays all the values in the record.
+    This displays all the values in the record:
 
-![](attachments/create-datadriven-test-case/data-driven-test-case-data-records.png)
+    ![](attachments/create-datadriven-test-case/data-driven-test-case-data-records.png)
 
-You can use the breadcrumbs to return to the overview **Result Log**.
+    You can use the breadcrumbs to return to the overview **Result Log**:
 
-![](attachments/create-datadriven-test-case/result-log-breadcrumb.png)
+    ![](attachments/create-datadriven-test-case/result-log-breadcrumb.png)
+    
+## 9 Conclusion
 
 You now know how to do the following:
 
-* Create a master data set within ATS.
-* Create an Excel file to upload in ATS.
-* Create a master data set using an excel file.
-* Update a master data set using an excel file.
-* Connect the master data set to your test case.
-* Analyse the result of a data-driven test case.
+* Create a master data set within ATS
+* Create an Excel file to upload in ATS
+* Create a master data set using an Excel file
+* Update a master data set using an Excel file
+* Connect the master data set to your test case
+* Analyze the result of a data-driven test case

@@ -109,6 +109,8 @@ You can add as many input parameters as you need, but remember to keep the actio
 
 ### 4.2 Adding an Output Parameter
 
+To add an output parameter, follow these steps:
+
 1.  Click **Set**:
     
     ![](attachments/custom-action-basics-2/action-details-page-settings-set.png)

@@ -79,7 +79,7 @@ To edit the domain model for these purposes, follow these steps:
     * **Longitude** (decimal)
     * **Latitude** (decimal)
     * **Zipcode** (string)
-3.  Double-click the **Post_code** attribute in the **Root** entity and change its **Name** to **Zipcode** (string with a maximum length of 2).
+3.  Double-click the **Post_code** attribute in the **Root** entity and change its **Name** to **Zipcode** (string with a maximum length of 5).
 
     ![](attachments/build-an-employee-directory-app-advanced/edit-the-domain-model.png)
 

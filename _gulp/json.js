@@ -222,7 +222,13 @@ const snippetsHandler = (req, res, next) => {
 
 const spacesHandler = (req, res, next) => {
     gutil.log(`${pluginID} Handling spaces`);
-    res.send(200, SPACES);
+    const spaceArr = [];
+    Object.keys(SPACES).forEach((spaceID) => {
+        const obj = SPACES[spaceID];
+        obj.id = spaceID;
+        spaceArr.push(obj);
+    })
+    res.send(200, spaceArr);
     return next();
 };
 

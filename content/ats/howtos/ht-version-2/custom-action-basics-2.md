@@ -144,5 +144,3 @@ To connect the input parameter, follow these steps:
 3.  Select the input parameter you want to connect.
     
     ![](attachments/custom-action-basics-2/action-connect-input-parameter.png)
-
-You have now connected your input parameter. 

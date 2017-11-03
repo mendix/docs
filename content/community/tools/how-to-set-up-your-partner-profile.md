@@ -54,15 +54,15 @@ You must complete the **Address** and **Email Address** fields before you can ma
 
 ![](attachments/how-to-set-up-your-partner-profile/address.png)
 
-### 4.2 Capability Tracks<a name="capability"></a>
+### 4.2 Capability Levels<a name="capability"></a>
 
-The header also displays whether the company is **Authorized**, **Expert**, or **Professional**. These capability tracks are defined as follows:
+The header also displays whether the company is **Authorized**, **Expert**, or **Professional**. These capability levels are defined as follows:
 
 * **Authorized** — this type of partner has qualified and certified resources to support customers with Mendix initiatives 
 * **Professional** — this type of partner can successfully deliver complex mission-critical Mendix applications and solutions for businesses
 * **Expert** — this type of partner can support an enterprise in its successful positioning and adoption of the Mendix platform with all elements of the Mendix "4 P's" (portfolio, people, process, and platform; for details, see [How to Implement Bimodal IT: Focus on the 4 P’s](https://www.mendix.com/blog/how-to-implement-bimodal-it-focus-on-the-4-ps/))
 
-These capability tracks are defined through an assessment of your company's developer certification levels, delivery expertise, and delivery references. For more information, please contact your Mendix Customer Success Manager.
+A capability level is determined through an assessment of your company's developer certification levels, delivery expertise, and delivery references. For more information, please contact your Mendix Customer Success Manager.
 
 ## 5 Editing the Overview<a name="editing"></a>
 

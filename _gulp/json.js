@@ -28,6 +28,9 @@ const contentHandler = (req, res, next) => {
     const sourcePath = normalizeSafe(path.resolve(mainFolder, CONTENTFOLDER, contentPath));
     const generatePath = normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER, contentPath));
 
+    const sourceRoot = normalizeSafe(path.resolve(mainFolder, CONTENTFOLDER));
+    const generateRoot = normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER));
+
     const sourceFile = ['.md', '/index.md']
         .map(suffix => {
             const absPath = sourcePath + suffix;
@@ -61,7 +64,7 @@ const contentHandler = (req, res, next) => {
         readFile(source).
             then(content => {
                 const obj = {
-                    pathMarkdown: normalizeSafe(source.replace(path.resolve(mainFolder, CONTENTFOLDER), '')),
+                    pathMarkdown: normalizeSafe(source.replace(sourceRoot, '')),
                     markdown: content.toString(),
                     snippets: []
                 };
@@ -100,7 +103,7 @@ const contentHandler = (req, res, next) => {
         readFile(target).
             then(content => {
                 const obj = {
-                    pathHtml: normalizeSafe(target.replace(path.resolve(mainFolder, GENERATEDFOLDER), '')),
+                    pathHtml: normalizeSafe(target.replace(generateRoot, '')),
                 };
                 const images = [];
                 const links = [];
@@ -121,7 +124,7 @@ const contentHandler = (req, res, next) => {
                             if (src.indexOf('/') === 0) {
                                 images.push(src);
                             } else {
-                                const t = target.replace(normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER)), '');
+                                const t = target.replace(generateRoot, '');
                                 const u = path.parse(t);
                                 const s = normalizeSafe(path.join(u.dir, src))
                                 images.push(s);
@@ -144,7 +147,7 @@ const contentHandler = (req, res, next) => {
                                 if (href.indexOf('/') === 0) {
                                     links.push(href);
                                 } else {
-                                    const t = target.replace(normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER)), '');
+                                    const t = target.replace(generateRoot, '');
                                     const u = path.parse(t);
                                     const s = normalizeSafe(path.join(u.dir, href));
                                     links.push(s);

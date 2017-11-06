@@ -14,11 +14,11 @@ To smarten up your app with business logic you can use microflows. To verify tha
 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
-*   Download the Mendix Business Modeler.
+*   Download the Mendix Desktop Modeler.
 
 | Software | Version used in this how-to |
 | --- | --- |
-| Mendix Business Modeler | 5.18.0 |
+| Mendix Desktop Modeler | 5.18.0 |
 | UnitTesting module | 4.2 |
 | Community Commons Function Library module | 5.4 |
 

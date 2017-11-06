@@ -18,7 +18,7 @@ In this exercise you will add a microflow button to a grid or a reference set se
 
 ### 2.1 Adding a Button to a Datagrid
 
-1.  Open you project in the **Mendix Business Modeler**.
+1.  Open you project in the **Mendix Desktop Modeler**.
 2.  Open page with a **Datagrid**.
 3.  Select the **menu bar** of the Datagrid.
 4.  Right click the menu bar.

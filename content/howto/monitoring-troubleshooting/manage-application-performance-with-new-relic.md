@@ -62,7 +62,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
  ]
 ```
 
-### 3.2.3 Mendix Business Modeler (Development Mode Only)
+### 3.2.3 Mendix Desktop Modeler (Development Mode Only)
 
 1. Open your Mendix application, and click on **Settings** in the **Project Explorer**:
 

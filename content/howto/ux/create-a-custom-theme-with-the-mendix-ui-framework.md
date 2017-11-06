@@ -19,11 +19,11 @@ This how-to presents creating a custom theme with the Mendix UI Framework. The A
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Download the latest [Mendix Business Modeler](https://appstore.mendix.com/) (5.18.0 or later)
+* Download the latest [Mendix Desktop Modeler](https://appstore.mendix.com/) (5.18.0 or later)
 * Download [Scout](http://mhs.github.io/scout-app/) (or use a different compiler, such as [Sass](http://sass-lang.com/install))
 * Download your preferred text editor (such as [Sublime Text](http://www.sublimetext.com/))
 
-## 3 Creating a New App in the Mendix Business Modeler
+## 3 Creating a New App in the Mendix Desktop Modeler
 
 To create a new app and select a theme from the **New App** selector, follow these steps:
 

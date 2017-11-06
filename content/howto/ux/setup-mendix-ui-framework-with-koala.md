@@ -19,12 +19,12 @@ Before you can start with this how-to, please make sure you have completed the f
 *   Download [Koala](http://koala-app.com/) ([or use a different compiler](http://sass-lang.com/install))
 *   Download text editor [Sublime Text](http://www.sublimetext.com/)
 
-## 2\. Create a new App in the Mendix Business Modeler
+## 2\. Create a new App in the Mendix Desktop Modeler
 
 In this chapter we will create a new app and select a theme from the New App selector.
 
 1.  Open the **Mendix Modeler**.
-2.  Create a **New App** from the **My Apps** screen in the Mendix Business Modeler.
+2.  Create a **New App** from the **My Apps** screen in the Mendix Desktop Modeler.
 
     ![](attachments/18448712/18581487.png)
 

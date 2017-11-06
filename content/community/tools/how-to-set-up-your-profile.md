@@ -37,7 +37,7 @@ To edit a field on your profile, click this icon:
 
 {{% alert type="info" %}}
 
-If you access your profile by clicking **Community** > [OUR COMMUNITY](https://developer.mendixcloud.com/link/community) in the navigation bar and then finding your profile on the **Developers** or **Leaderboards** tabs, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
+If you access your profile by clicking **Community** > [OUR COMMUNITY](https://developer.mendixcloud.com/link/community) in the navigation bar and then find your profile on the **Developers** or **Leaderboards** tabs, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
 
 ![](attachments/how-to-set-up-your-profile/edit.png)
 
@@ -67,19 +67,23 @@ In the body of your profile, you can edit the following elements:
     * Links to these reviews will not appear on your public profile, but these two reviews are required to make your profile 100% complete
 * **Projects** – for details on adding a project, see [4 Adding a Project](#project)
 
-To make your profile public, the following requirements must be met:
+Be sure to complete the following items, because these are necessary to make your Community Profile public:
 
-* Added an avatar
-* Entered a **Function**
-* Entered a **Location**
-* Confirmed if you are looking for a **job**, a **project**, both, or neither
-* Entered a **Summary**
-* Added at least 1 **Skill**
-* Added at least 1 **Industry Experience** item
+* Add an avatar
+* Enter a **Function**
+* Enter a **Location**
+* Confirm if you are looking for a **job**, a **project**, both, or neither
+* Enter a **Summary**
+* Add at least 1 **Skill**
+* Add at least 1 **Industry Experience** item
 
 Once you have have met those requirements, click **View Public Profile** in the header to see how your public profile looks:
 
 ![](attachments/how-to-set-up-your-profile/make-public.png)
+
+If you have not been able to complete all of these steps, the **Profile Completeness** bar and **Profile Completion Tips** will remind you of what needs to be done to make your Community Profile complete:
+
+![](attachments/how-to-set-up-your-profile/profile-completeness.png)
 
 ## 4 Adding a Project<a name="project"></a>
 

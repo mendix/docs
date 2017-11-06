@@ -15,7 +15,7 @@ This how-to is about using the Mobile Slider widget in your Mendix hybrid mobile
 
 Before you start building your Mendix hybrid mobile project with the Mobile Slider custom widget make sure you have the following programs installed:
 
-*   [Mendix Business Modeler](https://appstore.home.mendix.com/link/modelers)
+*   [Mendix Modeler](https://appstore.home.mendix.com/link/modelers)
 *   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a how-to about this software here](getting-started-with-the-widget-development-plugin-for-adobe-brackets).
 
 ## 2 Downloading the Test Project

@@ -48,7 +48,7 @@ In the previous section you have set up a basic data structure and created some 
     ![](attachments/18448686/18581092.png)
     You should see the empty Microflow again:
     ![](attachments/8784287/8946316.png)
-8.  Open the **Toolbox**. It should be on the bottom right of the Business Modeler.
+8.  Open the **Toolbox**. It should be on the bottom right of the Desktop Modeler.
     ![](attachments/8784287/8946802.png)
 9.  Drag a **Retrieve** action from the toolbox to the line between the green start and red end event. This inserts a retrieve action activity.
     ![](attachments/18448686/18581091.png)

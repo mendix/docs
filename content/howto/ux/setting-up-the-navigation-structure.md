@@ -3,7 +3,7 @@ title: "Setting Up the Navigation Structure"
 category: "UX"
 tags: []
 ---
-Once you've created some pages you want to give users the ability to access them. The easiest way to do this is by using a navigation menu. The navigation editor of the Business Modeler allows you define navigation menus for desktop, tablet and phone interfaces. It also allows you to define which page is shown as a default home page depending on the user role.
+Once you've created some pages you want to give users the ability to access them. The easiest way to do this is by using a navigation menu. The navigation editor of the Desktop Modeler allows you define navigation menus for desktop, tablet and phone interfaces. It also allows you to define which page is shown as a default home page depending on the user role.
 
 ## 1\. Preparation
 
@@ -91,7 +91,7 @@ Now that you've created a menu structure it's time to start using it on pages.
 6.  Select **Desktop**, **Tablet**, or **Phone** as menu, depending on the device interface you're working on.
 7.  Click **OK** to save the properties. The menu widget is now showing the navigation items created in the navigation editor.
 
-    To prevent repeating the previous steps for every page in your project, the Business Modeler supports something called layouts. With layouts you can define a base structure for pages in your project. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages.
+    To prevent repeating the previous steps for every page in your project, the Desktop Modeler supports something called layouts. With layouts you can define a base structure for pages in your project. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages.
 
 ## 6\. Related content
 

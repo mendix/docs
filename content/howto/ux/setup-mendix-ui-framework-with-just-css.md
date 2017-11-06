@@ -14,15 +14,15 @@ In this how-to we will go through how to setup the [Mendix UI Framework](https:/
 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
-*   Download the latest [Mendix Business Modeler](https://appstore.mendix.com)
+*   Download the latest [Mendix Desktop Modeler](https://appstore.mendix.com)
 *   Download a text editor [Sublime Text](http://www.sublimetext.com/)
 
-## 2\. Create a new App in the Mendix Business Modeler
+## 2\. Create a new App in the Mendix Desktop Modeler
 
 In this chapter we will create a new app and select a theme from the New App selector.
 
-1.  Open the **Mendix Business Modeler**.
-2.  Create a **New App** from the **My Apps** screen in the Mendix Business Modeler.
+1.  Open the **Mendix Desktop Modeler**.
+2.  Create a **New App** from the **My Apps** screen in the Mendix Desktop Modeler.
 
      ![](attachments/18448709/18581431.png)
 3.  Select a theme for your app.

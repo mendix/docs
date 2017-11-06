@@ -371,7 +371,7 @@ title: "Platform Portal"
 * Guidance balloons guide new users through a few main features of the Mendix platform.
 * The project dashboard has been extended with Team and Development information.
     * The Team Box shows all team members within a project, and allows you to easily invite new team members.
-    * The Development Box shows information about the latest main line commit, and provides a shortcut to quickly open the app in the Mendix Business Modeler.
+    * The Development Box shows information about the latest main line commit, and provides a shortcut to quickly open the app in the Mendix Modeler.
 
 #### Improvements
 * Several UI improvements, including a new navigation sidebar and a revised Projects page.
@@ -419,9 +419,9 @@ title: "Platform Portal"
 * It's now possible to search for a document based on its labels.
 
 ##### Develop
-* Restructured the Develop tab. Each commit now offers an App Store link to the Business Modeler version with which it was committed. Added a button to open the latest Main line revision in the modeler.
+* Restructured the Develop tab. Each commit now offers an App Store link to the Modeler version with which it was committed. Added a button to open the latest Main line revision in the modeler.
 * The Mendix version used is now tracked for each revision individually, rather than per branch. (Feedback 120751)
-* App Store links to the Business Modeler from the Develop tab now open in a new browser tab.
+* App Store links to the Modeler from the Develop tab now open in a new browser tab.
 * The details screen of a revision in the Develop tab will now show the exact time of the commit to the Team Server. (Feedback 120300)
 
 ##### Feedback

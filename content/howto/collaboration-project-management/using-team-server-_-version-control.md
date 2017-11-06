@@ -41,7 +41,7 @@ Let us say you download revision 35 from the repository. This is your original. 
 
 ### 2.5 Download from Team Server
 
-Before you can start working on a Team Server project you have to download it to your computer. Within the Mendix Business Modeler you’ll select the App Project, a development line and a disk location where to store the working copy locally. In the Modeler you can download a Team Server project by simply opening the project.
+Before you can start working on a Team Server project you have to download it to your computer. Within the Mendix Modeler you’ll select the App Project, a development line and a disk location where to store the working copy locally. In the Modeler you can download a Team Server project by simply opening the project.
 
 ### 2.6 Upload to Team Server
 

@@ -71,6 +71,17 @@ const contentHandler = (req, res, next) => {
 
                 const parsed = path.parse(obj.pathMarkdown);
                 const dirName = parsed.dir.split('/')[1];
+                const spaceObj = SPACES[dirName];
+                let menu;
+
+                if (spaceObj) {
+                    try {
+                        menu = require(path.resolve(mainFolder, 'static/json', dirName + '.json'));
+                    } catch (e) {
+                        console.log(`Error getting menu file for ${dirName}: `, e);
+                        menu = null;
+                    }
+                }
 
                 let meta = null;
                 try {
@@ -80,7 +91,7 @@ const contentHandler = (req, res, next) => {
                     meta = null;
                 }
 
-                obj.space = SPACES[dirName] ? SPACES[dirName].space : null;
+                obj.space = spaceObj ? spaceObj.space : null;
 
                 if (meta !== null) {
                     _.merge(obj, _.omit(meta, ['__content', 'space']));
@@ -89,6 +100,23 @@ const contentHandler = (req, res, next) => {
 
                 if (obj.parent) {
                     obj.parent = normalizeSafe(path.join(parsed.dir, obj.parent));
+                } else if (spaceObj) {
+                    if (obj.category && menu !== null && menu.pages) {
+                        const parent = _.find(menu.pages, p => p.t === obj.category);
+                        if (parent && parent.u) {
+                            obj.parent = parent.u;
+                            delete obj.category;
+                        } else {
+                            console.log(`Can't find a parent for page: ${obj.pathMarkdown}`);
+                            delete obj.category;
+                        }
+                    } else if (!obj.category && !obj.parent && menu !== null && menu.pages && menu.categories) {
+                        if (menu.categories.indexOf(obj.title) !== -1) {
+                            obj.parent = `/${dirName}/`;
+                        } else {
+                            console.log(`Can't find a parent/category for page: ${obj.pathMarkdown}`);
+                        }
+                    }
                 }
 
                 const snippetRegEx = /{{% snippet file="([a-zA-Z0-9\/\+]+\.md)" %}}/gi;

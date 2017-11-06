@@ -226,6 +226,10 @@ gulp.task('dev', ``, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done 
   gutil.log(`\n\n*********\nOpen your browser with this address: ${gutil.colors.cyan(`localhost:${PORT}`)}\n*********\n`);
 });
 
+gulp.task('json', `Run JSON export server`, ['dev:sass', 'build:js', 'write:menu', 'build:hugo'], done => {
+  jsonServer.spawn(CURRENTFOLDER);
+})
+
 // SERVE
 gulp.task('serve', `Serve`, done => {
   runSequence('clean', 'dev');

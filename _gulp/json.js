@@ -213,12 +213,18 @@ const pagesHandler = (req, res, next) => {
             filesPaths
                 .map(f => normalizeSafe(f))
                 .map(filePath => {
-                    return (filePath
+                    const parsed = path.parse(filePath);
+                    const isIndex = parsed.name === 'index';
+
+                    const normalized = filePath
                         .replace(normalizedFolder, '')
-                        .replace('/index.md', '/')
-                        .replace('/index', '/')
-                        .replace('.md', '')
-                    )
+                        .replace('.md', '');
+
+                    return isIndex ?
+                        normalized
+                            .replace('/index.md', '/')
+                            .replace('/index', '/')
+                        : normalized;
                 })
                 .map(p => normalizeSafe(p)))
         .then(files => {

@@ -11,7 +11,7 @@ A custom action is an action created by the user. The how-to's for creating cust
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Read [Guidelines for Creating a Custom Action](../bestpractices-2/guidelines-custom-action)
 
@@ -36,15 +36,15 @@ There are two ways of making a combined action:
 
 ### 2.2 Example
 
-The steps in a Mendix app:
+These are the steps in a Mendix app:
 
 ![](attachments/custom-action-general-2/general-definition-2/combined-action-app-steps.png)
 
-The steps in ATS:
+These are the steps in ATS:
 
 ![](attachments/custom-action-general-2/general-definition-2/combined-action-ats-steps.png)
 
-The combined action:
+This is the combined action:
 
 ![](attachments/custom-action-general-2/general-definition-2/combined-action-ats-newexpense-action.png)
 
@@ -52,9 +52,9 @@ The combined action:
 
 * A combined action consists of test steps from an actual test case
 * The focus is on ease-of-use
-* There is always a Setup or Teardown call type in a test case
-* Covers multiple widgets
-* Reusable
+* There is always a setup or teardown call type in a test case
+* It covers multiple widgets
+* It is reusable
  
 ## 3 Unsupported Widget Action
 
@@ -68,15 +68,15 @@ Follow the guidelines for building a custom action to create an unsupported widg
 
 ### 3.2 Example
 
-The widget in a Mendix app:
+This is the widget in a Mendix app:
 
 ![](attachments/custom-action-general-2/general-definition-2/unsupported-widget-action-app-widget.png)
 
-The steps in ATS:
+These are the steps in ATS:
 
 ![](attachments/custom-action-general-2/general-definition-2/unsupported-widget-action-ats-steps.png)
 
-The unsupported widget action:
+This is the unsupported widget action:
 
 ![](attachments/custom-action-general-2/general-definition-2/unsupported-widget-action-ats-switch-action.png)
 
@@ -85,28 +85,28 @@ The unsupported widget action:
 
 * A widget action consists of at least two actions
 * The focus is on interacting with the widget
-* Built generically
-* Covers a single widget
+* It is built generically
+* it covers a single widget
 
 ## 4 Search Context Action
 
 ### 4.1 Description
 
-Sometimes an app has a lot of widgets with the same *mx-name*, but ATS always finds the first result. To overcome this, you need to create a search context action. All Mendix actions have an input parameter called **Search Context**. The search context action finds an element that a Mendix/core action can use.
+Sometimes an app has a lot of widgets with the same `mx-name`, but ATS always finds the first result. To overcome this, you need to create a search context action. All Mendix actions have an input parameter called **Search Context**. The search context action finds an element that a Mendix/core action can use.
 
-The focus is on finding an element that you can use to find the widget. The [find/assert widget](/ats/refguide/rg-version-1/findassert-widget) action is a great example for a search context action.
+The focus is on finding an element that you can use to find the widget. The [Find/Assert Widget](/ats/refguide/rg-version-1/findassert-widget) action is a great example for a search context action.
 
 ### 4.2 Example
 
-An element in a Mendix app:
+This is an element in a Mendix app:
 
 ![](attachments/custom-action-general-2/general-definition-2/searchcontext-action-listview-app.png)
 
-The steps in ATS:
+These are the steps in ATS:
 
 ![](attachments/custom-action-general-2/general-definition-2/searchcontext-action-listview-ats-steps.png)
 
-The search context action:
+This is the search context action:
 
 ![](attachments/custom-action-general-2/general-definition-2/searchcontext-action-listview-ats-searchcontext-action.png)
 
@@ -129,15 +129,15 @@ Function actions distinguish themselves from other actions by their purpose. If 
 
 ### 5.2 Example
 
-The steps in ATS:
+These are the steps in ATS:
 
 ![](attachments/custom-action-general-2/general-definition-2/function-action-ats-teststeps.png)
 
-The function action:
+This the function action:
 
 ![](attachments/custom-action-general-2/general-definition-2/function-action-ats-function-action.png)
 
 ### 5.3 Summary
 
-* If a custom action is not a combined action, search context action, or unsupported widget action, then it is function action
+* If a custom action is not a combined action, search context action, or unsupported widget action, then it is a function action
 * A function action has either an assert action or a JavaScript action

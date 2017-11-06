@@ -206,17 +206,21 @@ const contentHandler = (req, res, next) => {
 const pagesHandler = (req, res, next) => {
     gutil.log(`${pluginID} Handling pages`);
     const contentFolder = path.resolve(mainFolder, CONTENTFOLDER);
+    const normalizedFolder = normalizeSafe(contentFolder);
 
     getFiles(contentFolder, '.md')
         .then(filesPaths =>
             filesPaths
-                .map(filePath =>
-                    normalizeSafe(filePath
-                        .replace(contentFolder, '')
+                .map(f => normalizeSafe(f))
+                .map(filePath => {
+                    return (filePath
+                        .replace(normalizedFolder, '')
                         .replace('/index.md', '/')
                         .replace('/index', '/')
-                        .replace('.md', ''))
-        ))
+                        .replace('.md', '')
+                    )
+                })
+                .map(p => normalizeSafe(p)))
         .then(files => {
             res.send(200, files.filter(p =>
                 p !== '/' && p !== '/search/' &&

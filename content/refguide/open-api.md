@@ -3,6 +3,12 @@ title: "Open API 2.0 Documentation"
 parent: "published-rest-services"
 ---
 
+{{% alert type="info" %}}
+
+The **Published REST Service** feature was introduced in version 7.8.0. This feature is still in private beta, and it is subject to change before final release.
+
+{{% /alert %}}
+
 ## 1 Introduction 
 
 Every [published REST service](published-rest-service) is automatically documented. The system generates a *swagger.json* file that conforms to the [OpenAPI 2.0 specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) (formerly known as the "swagger specification"). This file can be [saved from the modeler](published-rest-service#export-swagger-json) or downloaded from `/rest-doc/servicename/swagger.json`.

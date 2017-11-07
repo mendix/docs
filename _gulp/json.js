@@ -28,6 +28,9 @@ const contentHandler = (req, res, next) => {
     const sourcePath = normalizeSafe(path.resolve(mainFolder, CONTENTFOLDER, contentPath));
     const generatePath = normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER, contentPath));
 
+    const sourceRoot = normalizeSafe(path.resolve(mainFolder, CONTENTFOLDER));
+    const generateRoot = normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER));
+
     const sourceFile = ['.md', '/index.md']
         .map(suffix => {
             const absPath = sourcePath + suffix;
@@ -61,13 +64,24 @@ const contentHandler = (req, res, next) => {
         readFile(source).
             then(content => {
                 const obj = {
-                    pathMarkdown: normalizeSafe(source.replace(path.resolve(mainFolder, CONTENTFOLDER), '')),
+                    pathMarkdown: normalizeSafe(source.replace(sourceRoot, '')),
                     markdown: content.toString(),
                     snippets: []
                 };
 
                 const parsed = path.parse(obj.pathMarkdown);
                 const dirName = parsed.dir.split('/')[1];
+                const spaceObj = SPACES[dirName];
+                let menu;
+
+                if (spaceObj) {
+                    try {
+                        menu = require(path.resolve(mainFolder, 'static/json', dirName + '.json'));
+                    } catch (e) {
+                        console.log(`Error getting menu file for ${dirName}: `, e);
+                        menu = null;
+                    }
+                }
 
                 let meta = null;
                 try {
@@ -77,7 +91,7 @@ const contentHandler = (req, res, next) => {
                     meta = null;
                 }
 
-                obj.space = SPACES[dirName] ? SPACES[dirName].space : null;
+                obj.space = spaceObj ? spaceObj.space : null;
 
                 if (meta !== null) {
                     _.merge(obj, _.omit(meta, ['__content', 'space']));
@@ -86,6 +100,23 @@ const contentHandler = (req, res, next) => {
 
                 if (obj.parent) {
                     obj.parent = normalizeSafe(path.join(parsed.dir, obj.parent));
+                } else if (spaceObj) {
+                    if (obj.category && menu !== null && menu.pages) {
+                        const parent = _.find(menu.pages, p => p.t === obj.category);
+                        if (parent && parent.u) {
+                            obj.parent = parent.u;
+                            delete obj.category;
+                        } else {
+                            console.log(`Can't find a parent for page: ${obj.pathMarkdown}`);
+                            delete obj.category;
+                        }
+                    } else if (!obj.category && !obj.parent && menu !== null && menu.pages && menu.categories) {
+                        if (menu.categories.indexOf(obj.title) !== -1) {
+                            obj.parent = `/${dirName}/`;
+                        } else {
+                            console.log(`Can't find a parent/category for page: ${obj.pathMarkdown}`);
+                        }
+                    }
                 }
 
                 const snippetRegEx = /{{% snippet file="([a-zA-Z0-9\/\+]+\.md)" %}}/gi;
@@ -100,7 +131,7 @@ const contentHandler = (req, res, next) => {
         readFile(target).
             then(content => {
                 const obj = {
-                    pathHtml: normalizeSafe(target.replace(path.resolve(mainFolder, GENERATEDFOLDER), '')),
+                    pathHtml: normalizeSafe(target.replace(generateRoot, '')),
                 };
                 const images = [];
                 const links = [];
@@ -121,7 +152,7 @@ const contentHandler = (req, res, next) => {
                             if (src.indexOf('/') === 0) {
                                 images.push(src);
                             } else {
-                                const t = target.replace(normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER)), '');
+                                const t = target.replace(generateRoot, '');
                                 const u = path.parse(t);
                                 const s = normalizeSafe(path.join(u.dir, src))
                                 images.push(s);
@@ -144,7 +175,7 @@ const contentHandler = (req, res, next) => {
                                 if (href.indexOf('/') === 0) {
                                     links.push(href);
                                 } else {
-                                    const t = target.replace(normalizeSafe(path.resolve(mainFolder, GENERATEDFOLDER)), '');
+                                    const t = target.replace(generateRoot, '');
                                     const u = path.parse(t);
                                     const s = normalizeSafe(path.join(u.dir, href));
                                     links.push(s);
@@ -175,17 +206,27 @@ const contentHandler = (req, res, next) => {
 const pagesHandler = (req, res, next) => {
     gutil.log(`${pluginID} Handling pages`);
     const contentFolder = path.resolve(mainFolder, CONTENTFOLDER);
+    const normalizedFolder = normalizeSafe(contentFolder);
 
     getFiles(contentFolder, '.md')
         .then(filesPaths =>
             filesPaths
-                .map(filePath =>
-                    normalizeSafe(filePath
-                        .replace(contentFolder, '')
-                        .replace('/index.md', '/')
-                        .replace('/index', '/')
-                        .replace('.md', ''))
-        ))
+                .map(f => normalizeSafe(f))
+                .map(filePath => {
+                    const parsed = path.parse(filePath);
+                    const isIndex = parsed.name === 'index';
+
+                    const normalized = filePath
+                        .replace(normalizedFolder, '')
+                        .replace('.md', '');
+
+                    return isIndex ?
+                        normalized
+                            .replace('/index.md', '/')
+                            .replace('/index', '/')
+                        : normalized;
+                })
+                .map(p => normalizeSafe(p)))
         .then(files => {
             res.send(200, files.filter(p =>
                 p !== '/' && p !== '/search/' &&
@@ -202,11 +243,13 @@ const pagesHandler = (req, res, next) => {
 const snippetsHandler = (req, res, next) => {
     gutil.log(`${pluginID} Handling snippets`);
     const snippetsFolder = path.resolve(mainFolder, SNIPPETSFOLDER);
+    const normalized = normalizeSafe(snippetsFolder);
 
     getFiles(snippetsFolder, '.md')
         .then(filePaths => Promise.all(filePaths.map(filePath => readFile(filePath).then(contents => {
+            const newPath = normalizeSafe(filePath).replace(normalized, '');
             return {
-                path: normalizeSafe(filePath.replace(snippetsFolder, '')),
+                path: newPath,
                 content: contents.toString()
             };
         }))))
@@ -222,7 +265,13 @@ const snippetsHandler = (req, res, next) => {
 
 const spacesHandler = (req, res, next) => {
     gutil.log(`${pluginID} Handling spaces`);
-    res.send(200, SPACES);
+    const spaceArr = [];
+    Object.keys(SPACES).forEach((spaceID) => {
+        const obj = SPACES[spaceID];
+        obj.id = spaceID;
+        spaceArr.push(obj);
+    })
+    res.send(200, spaceArr);
     return next();
 };
 

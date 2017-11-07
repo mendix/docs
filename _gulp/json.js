@@ -243,11 +243,13 @@ const pagesHandler = (req, res, next) => {
 const snippetsHandler = (req, res, next) => {
     gutil.log(`${pluginID} Handling snippets`);
     const snippetsFolder = path.resolve(mainFolder, SNIPPETSFOLDER);
+    const normalized = normalizeSafe(snippetsFolder);
 
     getFiles(snippetsFolder, '.md')
         .then(filePaths => Promise.all(filePaths.map(filePath => readFile(filePath).then(contents => {
+            const newPath = normalizeSafe(filePath).replace(normalized, '');
             return {
-                path: normalizeSafe(filePath.replace(snippetsFolder, '')),
+                path: newPath,
                 content: contents.toString()
             };
         }))))

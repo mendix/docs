@@ -20,7 +20,7 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ### October 27th, 2017 (1.5.0 / 1.3.1)
 
-* In some cases, it was possible to avoid the PIN login prompt. This release mitigates those cases. For hybrid apps that have PIN login enabled, it is highly recommmended to upgrade to this release.
+* In some cases, it was possible to avoid the PIN login prompt. This release mitigates those cases. For hybrid apps that have PIN login enabled, upgrading to this release is highly recommended.
 
 ### October 17th, 2017 (1.4.3 / 1.3.1)
 

@@ -20,27 +20,28 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Download [Mendix Desktop Modeler 7.3 or later](https://appstore.home.mendix.com/link/modeler/)
 
-## 3 Creating and Preparing a New App Project
+## 3 Creating Your App
 
 To create and prepare your new app tutorial project, follow these steps:
 
-1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in if you are not already logged in.
+1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in.
+2. Click **Create App** in the top right of the screen:
 
-    {{% alert type="info" %}}The Mendix Developer Portal is the central starting point for using, sharing, and building apps.{{% /alert %}}
-2. Go to the [Build a Mobile ToDo app](https://appstore.home.mendix.com/link/app/70763/) in the Mendix App Store and click **Download**.
-3. Open the app project with the Mendix **VersionSelector**. Note that this tutorial was created with Desktop Modeler 7.3.0.
-4. Choose a directory for extracting the app project package.
-5. If the **Version Not Found** dialog box opens, select the Desktop Modeler version with which you want to open the app project (it is best to use the latest version you have installed), and click **Open with selected Modeler version**. When the Desktop Modeler opens, select **Convert in-place** for the app project to open in your selected Modeler version.
-6. Open **Project** > **Security** to update the security settings of your app project.
+    ![](attachments/create-a-to-do-app/create-app.png) 
+
+3. On the **Tutorials** tab, select **Build a Mobile ToDo app**.
+4. Click **Use this app**, enter a name for your application, and click **Create App**.
+5. On the **Buzz** page for the app, click **Edit App**, which will open your app in the Desktop Modeler.
+6. When your app is loaded into the Desktop Modeler, open **Project** > **Security** to update the security settings of your app project.
 7.  Switch the **Security level** to **Off** and click **OK**.
 
     ![](attachments/create-a-to-do-app/todo-01.jpg)
 
-{{% alert type="warning" %}}
+    {{% alert type="warning" %}}
 
-Switching the security level to *Off* is done for fast development. Make sure you change it back to *Production* and configure the security of your app when you are going to use the app in a production environment.
+    Switching the security level to **Off** is done for fast development. Make sure you change it back to **Production** and configure the security of your app when you are going to use the app in a production environment.
 
-{{% /alert %}}
+    {{% /alert %}}
 
 ## 4 Creating a New Module
 

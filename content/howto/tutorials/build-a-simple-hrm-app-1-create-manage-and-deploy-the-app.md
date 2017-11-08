@@ -17,26 +17,27 @@ This how-to takes you through the basics of development in Mendix and teaches yo
 
 ## 2 Prerequisites
 
-Before starting with this how-to, make sure you have completed the following prerequisite:
+Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Create a [Mendix account](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup)
+* Download the latest Desktop Modeler from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers/) and install it (note that this tutorial was created with Mendix Desktop Modeler 7.2.0)
 
 ## 3 Creating Your App
 
 To create your app, follow these steps:
 
-1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in if you are not already logged in.
+1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in.
+2. Click **Create App** in the top right of the screen:
 
-    {{% alert type="info" %}}The Mendix Developer Portal is the central starting point for using, sharing, and building apps.{{% /alert %}}
-2. Make sure you have downloaded the latest Desktop Modeler from the [Mendix App Store](https://appstore.home.mendix.com/link/modelers/) and installed it. Note that this tutorial was created with Mendix Desktop Modeler 7.2.0.
-3. Go to the [Build an HR Management app](https://appstore.home.mendix.com/link/app/61166/) in the Mendix App Store and click **Download**.
-4. Open the app project with the Mendix **VersionSelector**. Note that this tutorial was created with Desktop Modeler 7.2.0.
-5. Choose a directory for extracting the app project package.
-6. If the **Version Not Found** dialog box opens, select the Desktop Modeler version with which you want to open the app project (it is best to use the latest version you have installed), and click **Open with selected Modeler version**. When the Desktop Modeler opens, select **Convert in-place** for the app project to open in your selected Modeler version.
+    ![](attachments/build-a-simple-hrm-app/create-app.png) 
+
+3. On the **Tutorials** tab, select **Build an HR Management app**.
+4. Click **Use this app**, enter a name for your application, and click **Create App**.
+5. On the **Buzz** page for the app, click **Edit App**, which will open your app in the Desktop Modeler.
 
 When your app is loaded into the Desktop Modeler, you will find the **Project Explorer** pane on the left side. This pane lists all of the developer content of your app. You can add pages, logic, and other content here.
 
-![](attachments/18448672/18580892.png)
+![](attachments/build-a-simple-hrm-app/18580892.png)
 
 ## 4 Deploying Your App
 
@@ -44,15 +45,15 @@ To deploy your app to the Mendix Cloud so that others can view and test it, foll
 
 1. Click **Run** to deploy your app to a Free App deployment environment:
 
-    ![](attachments/18448672/18580884.png)
+    ![](attachments/build-a-simple-hrm-app/18580884.png)
 
 2. Click **View** to open the app in your browser:
 
-    ![](attachments/18448672/18580885.png)
+    ![](attachments/build-a-simple-hrm-app/18580885.png)
 
 Excellent! Check out the app you just deployed.
 
-![](attachments/18448672/18580886.png)
+![](attachments/build-a-simple-hrm-app/18580886.png)
 
 Great work. Now you can move on to the second how-to for creating a simple HRM app: [Build a Simple HRM Step App 2: Perform the First Steps in Building a Rich GUI](build-a-simple-hrm-app-2-first-steps-in-building-a-rich-gui).
 

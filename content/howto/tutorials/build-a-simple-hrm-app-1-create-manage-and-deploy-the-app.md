@@ -31,7 +31,7 @@ To create your app, follow these steps:
 
     ![](attachments/build-a-simple-hrm-app/create-app.png) 
 
-3. On the **Tutorials** tab, select **Build an HR Management app**.
+3. On the **Tutorial Apps** tab, select **Build an HR Management app**.
 4. Click **Use this app**, enter a name for your application, and click **Create App**.
 5. On the **Buzz** page for the app, click **Edit App**, which will open your app in the Desktop Modeler.
 

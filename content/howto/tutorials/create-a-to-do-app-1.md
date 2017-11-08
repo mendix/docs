@@ -29,7 +29,7 @@ To create and prepare your new app tutorial project, follow these steps:
 
     ![](attachments/create-a-to-do-app/create-app.png) 
 
-3. On the **Tutorials** tab, select **Build a Mobile ToDo app**.
+3. On the **Tutorial Apps** tab, select **Build a Mobile ToDo app**.
 4. Click **Use this app**, enter a name for your application, and click **Create App**.
 5. On the **Buzz** page for the app, click **Edit App**, which will open your app in the Desktop Modeler.
 6. When your app is loaded into the Desktop Modeler, open **Project** > **Security** to update the security settings of your app project.
@@ -60,12 +60,12 @@ The domain model for the to-do app will be pretty simple. It'll contain one enti
 1. Open the **Domain Model** in the **ToDo** module.
 2. Add a new **Entity** to the Domain Model.
 2. Rename the entity to **ToDo**.
-3. Add the following three attributes:
-  * *Description* (String)
-  * *DueDate* (Date and time)
-  * *Completed* (Boolean with default value *False*)
+3.  Add the following three attributes:
+    * *Description* (String)
+    * *DueDate* (Date and time)
+    * *Completed* (Boolean with default value *False*)
 
-  ![](attachments/create-a-to-do-app/todo-02.jpg)
+    ![](attachments/create-a-to-do-app/todo-02.jpg)
 
 For the next step in this series, move on to [How to Build a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2).
 

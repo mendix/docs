@@ -57,7 +57,7 @@ No authentication information is needed. You can use this same SMTP server from 
 
 When using Mendix mail servers and a sender address in a domain that has a restrictive SPF policy configured, you may encounter email delivery issues when the outgoing email servers from Mendix are not listed in the SPF record of that domain name.
 
-*   The needed information about Mendix mail servers that deliver outgoing mail traffic to the internet can be included in the SPF settings for the domain of the sender address by including `include:<a rel="nofollow">_spf.mendix.com</a>` into the policy rule. By using this technique, your SPF configuration will always automatically be kept up to date.
+*   The needed information about Mendix mail servers that deliver outgoing mail traffic to the internet can be included in the SPF settings for the domain of the sender address by including `include:_spf.mendix.com` into the policy rule. By using this technique, your SPF configuration will always automatically be kept up to date.
 *   Do **not** directly use hard coded low level infrastructure details like IP addresses of mail servers. These addresses are subject to change whenever Mendix is doing upgrades and maintenance.
 
 ### 4 Sender and Recipient Address Requirements

@@ -35,8 +35,8 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ### October 11th, 2017 (1.4.0 / 1.3.0)
 
-* This release improves support for the PIN login feature.
-  * We updated the Phonegap CLI version to `7.0.1`.
+* This release improves support for the PIN login feature:
+  * We updated the Phonegap CLI version to 7.0.1.
   * We improved support for switching users in combination with the PIN login feature.
   * We fixed an issue with the remaining session data.
 

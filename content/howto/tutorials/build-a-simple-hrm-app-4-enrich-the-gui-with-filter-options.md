@@ -29,25 +29,25 @@ To create an enumeration, follow these steps:
 
 1. Right-click the **MyFirstModule** module and select **Add** > **Enumeration**:
 
-    ![](attachments/18448669/18580795.png)
+    ![](attachments/build-a-simple-hrm-app/18580795.png)
 
     To learn more about enumerations, see [Enumerations](/refguide7/enumerations) in the Mendix Reference Guide.
     
 2. Enter *Level* in the **Name** field of the **Add Enumeration** dialog box, and then click **OK**:
 
-    ![](attachments/18448669/18580794.png) 
+    ![](attachments/build-a-simple-hrm-app/18580794.png) 
     
 3. On the **Enumeration** dialog box, click **New** to add a new enumeration value:
 
-    ![](attachments/18448669/18580788.png)
+    ![](attachments/build-a-simple-hrm-app/18580788.png)
     
 4. In the **Caption** field of the **Add Enumeration Value** dialog box, enter *Junior*, and then click **OK**:
 
-    ![](attachments/18448669/18580792.png) 
+    ![](attachments/build-a-simple-hrm-app/18580792.png) 
     
 5. Repeat steps 3–4 for the *Medior* and *Senior* enumeration values, and then click **OK**:
 
-    ![](attachments/18448669/18580791.png)
+    ![](attachments/build-a-simple-hrm-app/18580791.png)
 
 ### 3.2 Adding a New Attribute of the Enumeration Type
 
@@ -58,11 +58,11 @@ To add a new attribute of the enumeration type, follow these steps:
 3. Enter *Level* in the **Name** field.
 4. Select **Enumeration** in the **Type** drop-down menu:
 
-    ![](attachments/18448669/18580787.png) 
+    ![](attachments/build-a-simple-hrm-app/18580787.png) 
     
 5. In the **Select Enumeration** dialog box, select the **Level** enumeration of the **MyFirstModule** module, and then click **Select**:
 
-    ![](attachments/18448669/18580786.png)
+    ![](attachments/build-a-simple-hrm-app/18580786.png)
     
 6. Click **OK**.
 
@@ -77,7 +77,7 @@ To add a new attribute to the overview page, follow these steps:
 5. Right-click the **Master Detail** data grid.
 6. Click **Reset column widths**:
 
-    ![](attachments/18448669/18580785.png)
+    ![](attachments/build-a-simple-hrm-app/18580785.png)
 
 ### 3.4 Adding a Search field
 
@@ -85,12 +85,12 @@ To add a search field, follow these steps:
 
 1. Right-click the search bar and select **Add search field** > **Drop-down**:
 
-    ![](attachments/18448669/18580784.png) 
+    ![](attachments/build-a-simple-hrm-app/18580784.png) 
     
 2. Change the caption of the new search field to *Level*.
 3. Drag the **Level** attribute of the **Employee** entity from the connector to the new search field:
 
-    ![](attachments/18448669/18580783.png) 
+    ![](attachments/build-a-simple-hrm-app/18580783.png) 
 
 ### 3.5 Adding a Drop-Down Input Field
 
@@ -98,20 +98,20 @@ To add a drop-down input field, follow these steps:
 
 1. Click **Input** and select **Drop down**:
 
-    ![](attachments/18448669/18580782.png) 
+    ![](attachments/build-a-simple-hrm-app/18580782.png) 
     
 2. Add the drop-down menu beneath the *Department** field in the **User details** container:
 
-    ![](attachments/18448669/18580781.png) 
+    ![](attachments/build-a-simple-hrm-app/18580781.png) 
     
 3. Drag the **Level** attribute of the **Employee** entity from the **Connector** to the new drop-down menu:
 
-    ![](attachments/18448669/18580780.png)
+    ![](attachments/build-a-simple-hrm-app/18580780.png)
     
 4. Open the **Employee_NewEdit** page of the MyFirstModule module.
 5. Repeat steps 1–4 on this page:
 
-    ![](attachments/18448669/18580779.png) 
+    ![](attachments/build-a-simple-hrm-app/18580779.png) 
 
 ## 4 Viewing Your App
 
@@ -135,18 +135,18 @@ To view your app, follow these steps:
 
 10. Click **SEARCH** to open the search bar:
 
-    ![](attachments/18448669/18580778.png) 
+    ![](attachments/build-a-simple-hrm-app/18580778.png) 
     
 11. Select the **Medior** level:
 
-    ![](attachments/18448669/18580777.png)
+    ![](attachments/build-a-simple-hrm-app/18580777.png)
     
 15. Click **SEARCH**:
-    ![](attachments/18448669/18580776.png)
+    ![](attachments/build-a-simple-hrm-app/18580776.png)
     
     Only the employees with the Medior level will be shown:
     
-    ![](attachments/18448669/18580775.png)
+    ![](attachments/build-a-simple-hrm-app/18580775.png)
 
 To use the final how-to for creating a simple HRM application, see [Build a Simple HRM App 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic).
 

@@ -1,6 +1,6 @@
 ---
 title: "Build a Logistics IoT App"
-parent: "other-tutorials"
+parent: "mendix-tutorials"
 description: "Introduces the series that will describe how to expand the Mendix Logistics IoT app."
 tags: ["iot", "logistics", "supply chain", "cargo", "shipment", "logistics", "sensor"]
 ---

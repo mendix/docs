@@ -1,13 +1,13 @@
 ---
-title: "Onboarding Tutorials"
+title: "Introduction Tour"
 category: "Tutorials"
-description: "These onboarding tutorials will guide you in creating your first Mendix apps."
+description: "The introduction tour apps will guide you in creating your first Mendix app."
 tags: ["build", "app", "developer portal", "web modeler"]
 frontpage_featured: true
 ---
 
-The following onboarding tutorials are available here:
+The following tutorial is available here:
 
-| [![](attachments/onboarding-tutorials/build-an-employee-directory-app-beginner.png)](build-an-employee-directory-app-easy) | [How to Build an Employee Directory App (Easy)](build-an-employee-directory-app-easy)|
+| [![](attachments/introduction-tour/build-an-employee-directory-app-beginner.png)](build-an-employee-directory-app-easy) | [Build an Employee Directory App](build-an-employee-directory-app-easy)|
 |------|:-----|
-| [![](attachments/onboarding-tutorials/build-an-employee-directory-app-advanced.png)](build-an-employee-directory-app-advanced) | **[How to Build an Employee Directory App (Advanced)](build-an-employee-directory-app-advanced)**|
+

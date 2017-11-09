@@ -13,7 +13,7 @@ In this how-to, you will first deploy, view, and inspect some details of the Men
 
 * Connect app pages
 
-## 2 Prerequisites
+## 2 Prerequisite
 
 Before starting with this how-to, create a new instance of the **Build a Logistics IoT app**, which you can find by clicking **Create App** in the Developer Portal and then going to the **Tutorial Apps** tab.
 

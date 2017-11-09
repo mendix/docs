@@ -37,11 +37,7 @@ To create and prepare your new app tutorial project, follow these steps:
 
     ![](attachments/create-a-to-do-app/todo-01.jpg)
 
-    {{% alert type="warning" %}}
-
-    Switching the security level to **Off** is done for fast development. Make sure you change it back to **Production** and configure the security of your app when you are going to use the app in a production environment.
-
-    {{% /alert %}}
+    Switching the security level to **Off** is done for fast development. Make sure you change it back to **Production** and configure the security of your app when you are going to use the app in a production environment!
 
 ## 4 Creating a New Module
 

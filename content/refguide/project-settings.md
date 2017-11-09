@@ -20,9 +20,9 @@ These settings influence the behavior of the Runtime when running your applicati
 
 ### Theme
 
-Here you can select the theme to use for your application. '(Default)' means that the contents of the 'theme' directory in your project directory will be copied to the 'web' directory in the deployment directory. If the 'theme' directory contains theme packages (.zip files), you can select one of those here and then that theme will be used.
+The look and feel of a Mendix application are governed by the [UI resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. Which module is designated as the UI resources package is governed by the 'UI resources package' setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting the desired module can also be set manually.
 
-You can also import a theme package (.zip) into your project directory using the 'Import' button.
+Older projects may still use a theme ZIP file as a basis for their theme. In this situation, the 'Theme ZIP file' setting can be used to switch between any ZIP files found in the 'theme' folder. Note that this practice is deprecated and will be removed in a future version. Transitioning from a ZIP file to a UI resources package is straigtforward. First, replace the contents of the theme folder with the contents of the desired ZIP file. Then, use the 'UI resources package' setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other projects without worrying about conversion errors. Lastly, set the 'Theme ZIP file' setting to 'None'.
 
 ### Static Resources from Disk
 

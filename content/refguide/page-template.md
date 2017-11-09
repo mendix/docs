@@ -5,6 +5,8 @@ parent: "pages"
 
 Page templates are the starting point for creating new pages. Every time a new page is created, a page template is selected as a baseline that can then be edited to match the pages specific needs. By mapping out the common design patterns of a project, a great deal of the initial work involved in creating new pages can be mitigated. 
 
+Generally, page templates are stored in the projects [UI resources package](ui-resources-package). This keeps them in sync with the project theme, as well as providing a handy place to consolidate all design-related data. 
+
 To create a page template, right-click on a page in either the project explorer or the page editor and select 'Add as page template'. The page will be added a new page template, which will automatically make it available in the create new page dialog. 
 
 As the purpose of page templates is to facilitate design rather than functionality, page templates should be devoid of references to other documents. This is to prevent users from facing confusing errors when creating a new page. It also mitigates the chance of errors when importing page templates from a different project. 

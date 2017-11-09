@@ -15,9 +15,12 @@ In this how-to, you will first deploy, view, and inspect some details of the Men
 
 ## 2 Prerequisites
 
-Before starting with this how-to, make sure you have completed the following prerequisite:
+Before starting with this how-to, create a new instance of the **Build a Logistics IoT app**, which you can find by clicking **Create App** in the Developer Portal and then going to the **Tutorial Apps** tab.
 
-* Create a new instance of the **Build a Logistics IoT app**, which you can find by clicking **Create App** in the Developer Portal and then going to the **Tutorial Apps** tab
+Please note the following:
+
+* **Tutorial_Workspace** is the module in which you will be making the changes
+* **Tutorial_Completed** has the full final version of the app model to use as an example
 
 ## 3 Deploying and Viewing the Logistics IoT App
 

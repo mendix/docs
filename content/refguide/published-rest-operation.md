@@ -61,7 +61,7 @@ The allowed roles define which [module role](module-role) a user must have to be
 
 The public documentation is used in the service's [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation).
 
-### <a name="sumary"></a>3.1 Summary
+### <a name="summary"></a>3.1 Summary
 
 The summary provides a short description of what the operation does.
 

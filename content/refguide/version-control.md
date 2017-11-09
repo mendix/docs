@@ -4,7 +4,7 @@ category: "Team Server"
 ---
 
 
-Version 3.0 of the Mendix Business Modeler contains a major new feature called Version Control. This feature falls under the umbrella of Application Life Cycle Management. It takes the two aspects of collaboration and revision management to a whole new level and is significantly more powerful than what comes before it. The new version control feature entails a new way of working and these pages are meant to guide you on your way.
+Version 3.0 of the Mendix Desktop Modeler contains a major new feature called Version Control. This feature falls under the umbrella of Application Life Cycle Management. It takes the two aspects of collaboration and revision management to a whole new level and is significantly more powerful than what comes before it. The new version control feature entails a new way of working and these pages are meant to guide you on your way.
 
 Before we look at this new feature, let us first look at how these aspects are dealt with in version 2.x of our technology so that you get a feel for the context and for the problems the new feature solves.
 

@@ -3,7 +3,7 @@ title: "Sharing the Development Database"
 category: "Collaboration & Project Management"
 tags: []
 ---
-All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with the Mendix Business Modeler. This how-to will teach you how to open and manage the data stored inside the built-in database.
+All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with the Mendix Modeler. This how-to will teach you how to open and manage the data stored inside the built-in database.
 
 ## 1\. Prerequisites
 
@@ -20,7 +20,7 @@ The built-in database is a flatfile database called HSQLDB (HyperSQL DataBase). 
 
 HSQLDB has been constantly developed over 12 years and is used as a database and persistence engine. It is known for its small size, ability to execute completely or partly in memory, its flexibility and speed.
 
-Therefore this type of database is excellent to use while developing and running applications in the Mendix Business Modeler on a local machine. Thanks to this built in functionality, the developer doesn't have to run a local database engine and management tools.
+Therefore this type of database is excellent to use while developing and running applications in the Mendix Modeler on a local machine. Thanks to this built in functionality, the developer doesn't have to run a local database engine and management tools.
 
 ## 3\. Select the preferred database
 

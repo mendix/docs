@@ -27,7 +27,7 @@ You’ll see an progress bar appear after clicking the ‘OK’ button once the 
 
 ## 2\. Update The Mendix Runtime version
 
-1.  After updating the Mendix application version it could happen that the Service Console shows the message ‘needed, but missing’. This would mean that the required server distribution is not installed on the server. You can download the server distribution from [home.mendix.com](http://home.mendix.com/), the server distribution can be found under the related downloads from the specific Mendix Business Modeler. The server distribution is a .tar.gz file
+1.  After updating the Mendix application version it could happen that the Service Console shows the message ‘needed, but missing’. This would mean that the required server distribution is not installed on the server. You can download the server distribution from [home.mendix.com](http://home.mendix.com/), the server distribution can be found under the related downloads from the specific Mendix Modeler. The server distribution is a .tar.gz file
     ![Step 4, a missing Runtime version](attachments/18448659/18580697.png)
 2.  Press the button ‘Add Server’ and select the required server distribution (.tar.gz). The Service Console will extract the server distribution to the same folder as the other server distributions.
 

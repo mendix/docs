@@ -445,7 +445,7 @@ Returns the current Mendix Runtime status. Possible status values are: "created"
 }
 ```
 
-In the Mendix Business Modeler a [Health Microflow](project-settings) can be configured. This microflow can report on the functional status of the application. Does the general functionality of the application work? Are the necessary remote services available?
+In the Mendix Desktop Modeler a [Health Microflow](project-settings) can be configured. This microflow can report on the functional status of the application. Does the general functionality of the application work? Are the necessary remote services available?
 
 If such a Health Microflow has been configured, this request will report on the current health status. The "health" value, can be either "healthy", "sick", or "unknown" (when no health microflow was configured). In case of the value "sick", the "diagnosis" value will give the reason the application is not healthy. This reason is the return value of the Health Microflow.
 

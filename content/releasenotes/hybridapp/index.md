@@ -18,6 +18,10 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ## 2017
 
+### October 27th, 2017 (1.5.0 / 1.3.1)
+
+* In some cases, it was possible to avoid the PIN login prompt. This release mitigates those cases. For hybrid apps that have PIN login enabled, upgrading to this release is highly recommended.
+
 ### October 17th, 2017 (1.4.3 / 1.3.1)
 
 * Support for custom navigation profiles was removed. This affects Mendix apps running on version 7.2 or 7.3. For these apps, upgrading to a newer Mendix version is recommended.
@@ -35,7 +39,8 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ### October 11th, 2017 (1.4.0 / 1.3.0)
 
-* This release improves support for the PIN login feature.
+* This release improves support for the PIN login feature:
+  * We updated the Phonegap CLI version to 7.0.1.
   * We improved support for switching users in combination with the PIN login feature.
   * We fixed an issue with the remaining session data.
 

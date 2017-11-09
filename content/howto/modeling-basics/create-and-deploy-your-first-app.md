@@ -77,7 +77,7 @@ To create overview and detail pages, follow these steps:
     
     ![](attachments/18448667/19399068.png)
     
-    For more information on creating a page, see [How to Create Your Overviw and Detail Pages](../guis/create-your-first-two-overview-and-detail-pages).
+    For more information on creating a page, see [How to Create Your Overviw and Detail Pages](../ux/create-your-first-two-overview-and-detail-pages).
 2.  Create an overview and detail page to manage objects of the **Order** entity. Your overview page should look like this:
     
     ![](attachments/18448667/19399069.png) 
@@ -90,7 +90,7 @@ To create overview and detail pages, follow these steps:
 
 To create menu items, follow these steps:
 
-1. Create a menu item to access the customer overview page. For more information on creating menu items, see [How to Set Up the Navigation Structure](../guis/setting-up-the-navigation-structure).
+1. Create a menu item to access the customer overview page. For more information on creating menu items, see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure).
 2. Create a menu item to access the order overview page.
 
 ## 7 Deploying an App to the Cloud

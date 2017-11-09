@@ -22,7 +22,7 @@ This section describes how to add a new form and then build it with the availabl
 
 ![](attachments/2621494/2752740.png)
 
- **Select the data view, then connect it to the 'Order' entity by dragging the 'Order' entity from the Toolbox to the yellow header of the data view. You will get a prompt asking if you want the Mendix Business Modeler to fill the data view with labels and fields automatically, based on the attributes of the entity. Choose 'Yes'.**
+ **Select the data view, then connect it to the 'Order' entity by dragging the 'Order' entity from the Toolbox to the yellow header of the data view. You will get a prompt asking if you want the Mendix Desktop Modeler to fill the data view with labels and fields automatically, based on the attributes of the entity. Choose 'Yes'.**
 
 ![](attachments/2621494/2752763.png)
 

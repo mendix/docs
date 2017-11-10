@@ -19,4 +19,4 @@ In the list of message definitions, you can add, edit, or delete a [message defi
 
 ## 3 Documentation
 
-Use the **Documentation to describe what the message definitions are used for.
+Use the documentation to describe what the message definitions are used for.

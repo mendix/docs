@@ -51,10 +51,10 @@ To specify an import or export mapping, the user needs to do a number of things:
     It is possible to include a parameter entity in mapping documents. Mapping documents with a parameter entity need to be invoked (in a [Call Web Service Action](call-web-service-action) or [Export with Mapping](export-mapping-action) action) by passing a parameter of the configured type. Mapping documents without a parameter entity can be invoked without passing a parameter. For import mappings, a parameter entity can be included by dragging one onto the placeholder in the created structure using the Connector tool. Export mappings always need to have a parameter entity (the object that is being exported) and the mapped root element is used for this. In both cases, the parameter entity is depicted as a yellow arrow parameter symbol.
 
 4.  Map the child elements of the schema. Entities can be obtained in four ways:
-        * From a mapping parameter
-        * By associations
-        * From a custom microflow
-        * By entity specializations in the case of choice or inheritance XML elements
+*   From a mapping parameter
+*   By associations
+*   From a custom microflow
+*   By entity specializations in the case of choice or inheritance XML elements
 
 5.  Finally the user needs to configure how entity attributes should be transformed into the XML or JSON structure. This is explained in more detail in the sections and .
 

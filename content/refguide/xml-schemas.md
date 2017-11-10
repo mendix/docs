@@ -8,7 +8,7 @@ An XML schema is defined in an XML Schema Definition (XSD) file and can be impor
 
 ![Figure 1](attachments/16713706/18582294.png)
 
-**Figure 1. **
+**Figure 1: An example of an XML schema**
 
 ## General
 

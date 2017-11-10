@@ -8,9 +8,9 @@ In some projects, it is necessary to evaluate large datasets in a microflow (for
 
 When a database retrieve activity is only used in list aggregate activities, the platform can automatically merge these two activities into a single action. This executes a single aggregate query on the database. So, if you retrieve all 100k log lines from a database and only do a count on the list, you don’t receive a heap space, because the microflow would never place all 100k records in the memory. However, if you reuse the same list variable for multiple list aggregates, this no longer applies.
 
-The platform only creates a optimized SQL query as long as the list is not used in the microflow afterwards. If you use the list later on (for example to iterate over), the query will not be optimized.
+The platform only creates an optimized SQL query as long as the list is not used in the microflow afterwards. If you use the list later (for example, to iterate over), the query will not be optimized.
 
-If you do want to use the list, but also want the optimized query, do two seperate retrieves. This will do the optimized query, and you can use the second retrieve in your microflow.
+If you do want to use the list but you also want the optimized query, do two seperate retrieves. This will do the optimized query, and you can use the second retrieve in your microflow.
 
 ![](attachments/18448676/18580944.png)
 

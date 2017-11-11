@@ -32,3 +32,14 @@ This query returns a list with three objects. These objects have the ID's 123423
 Id-queries cannot be started by the characters '//'! Id-queries always start directly with id(....
 
 {{% /alert %}}
+
+
+This function is often used to constraint retrieving objects to the objects of the current user only:
+
+[id = $currentUser]
+
+It will only return results when you are querying System.Account or specializations of that entity. Entities with a 1-1 relation to account will give no results.
+
+If you want to get all objects (querying any entity) that were created by the current user, you should use:
+
+[System.owner='[%CurrentUser%]']

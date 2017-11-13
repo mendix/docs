@@ -38,9 +38,9 @@ To log in to the Partner Profile, edit it, and make it public, follow these step
     
     For details about editing, start with [5 Editing the Overview](#editing).<br>
     
-5.  After you have finished editing, you can set the profile to public so that the Mendix community and customers can view it. To do this, simply click **View Public Profile**:
+5.  After you have finished editing, you can make the profile public so that the Mendix community and customers can view it. To do this, simply click **Close Edit Mode**:
 
-    ![](attachments/how-to-set-up-your-partner-profile/make-public.png)
+    ![](attachments/how-to-set-up-your-partner-profile/close-edit.png)
 
 ## 4 Editing the Partner Profile Header
 

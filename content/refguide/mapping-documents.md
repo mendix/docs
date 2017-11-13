@@ -82,8 +82,6 @@ Mapping documents rely heavily on two windows. If they are not visible in the Mo
 
 ## 8 Properties
 
-### 8.1 Common Properties
-
 | Property | Description |
 | --- | --- |
 | Name | The name of the mapping. |
@@ -97,9 +95,3 @@ Mapping documents rely heavily on two windows. If they are not visible in the Mo
 | XML Schema | The name of the XML Schema that this mapping is for. |
 | Start at | Determines which part of the XML structure this mapping defines. |
 | Send empty values | Only applicable for export mappings. If a mapping element is optional and nillable, you need to select whether or not to send the empty values. The default is do not send the empty values. |
-
-## 8.2 Read More
-
-**Content by label**
-
-There is no content with the specified labels

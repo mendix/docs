@@ -1,5 +1,5 @@
 ---
-title: "Custom Settings"
+title: "Customization"
 category: "Runtime"
 description: "Describes custom server, log file, database, Amazon S3 storage service, Microsoft Azure, IBM Bluemix object storage, and web client settings in Mendix."
 ---
@@ -34,8 +34,8 @@ The value can be true or false. | false |
 | CACertificates | Comma separated list of paths to Authority Certificates. |   |
 | ClientCertificates | Comma separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` |  |
 | ClientCertificatePasswords | Comma separated list of passwords for Client Certificates (should match the "ClientCertificates" order). Example: `pwd1, pwd2, pwd3, pwd4` |   |
-| WebServiceClientCertificates | Deprecated since version 7.2. Defines which web service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as [`"imported web service name": "path to certificate"`] without brackets. Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces. |  |
-| ClientCertificateUsages | Introduced in version 7.2. Defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as [`"identifier": "path to certificate"`] without brackets. For web services, use the imported web service name as the identifier. For REST services, use the host name of the remote server as the identifier. Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: ![](attachments/Custom+Settings/code_snippet.png) |  |
+| WebServiceClientCertificates | Deprecated since version 7.2.<br/>Defines which web service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as [`"imported web service name": "path to certificate"`] without brackets. Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces. |  |
+| ClientCertificateUsages | Introduced in version 7.2.<br/>Only use this when<br/>1. You have multiple client certificates, and<br/>2. You want to configure specific certificates for specific servers<br/> This setting defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: ![](attachments/Custom+Settings/code_snippet.png) |  |
 | SessionTimeout | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
 | ClusterManagerActionInterval | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the SessionTimeout. | 300000 |
 | com.mendix.core.StorageService | Defines which storage service module will be used. The storage service module takes care of storing the actual files asssociated with 'System.FileDocument' objects, such as uploaded files. Possible values are 'com.mendix.storage.localfilesystem' and 'com.mendix.storage.s3'. From Mendix 6.6 onwards 'com.mendix.storage.azure' is also available. | com.mendix.storage.localfilesystem |
@@ -111,7 +111,7 @@ The following settings influence the behavior of the Amazon S3 Storage Service m
 | com.mendix.storage.s3.BucketName | Name of the bucket where the files are stored on S3. |   |
 | com.mendix.storage.s3.ResourceNameSuffix | Suffix for the keys under which objects are stored. This can be used when buckets are divided in different segments for different users with different credentials (e.g. store objects as "[key].customer1" for customer1 and as "[key].customer2" for customer2) |   |
 | com.mendix.storage.s3.PerformDeleteFromStorage | Defines whether a delete of a Mendix File Document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it's also used as a backup service. | true |
-| com.mendix.storage.s3.EndPoint | Overrides the default AWS endpoint. Use this setting when the storage service is on a non-AWS location. Both the endpoint (e.g. 's3.example.com') or the full URL, including the protocol, are supported (e.g. '<a rel="nofollow">https://s3.example.com').</a> Note that when setting a custom endpoint path style access will be enabled. [Click here for more information.](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)) |   |
+| com.mendix.storage.s3.EndPoint | Overrides the default AWS endpoint. Use this setting when the storage service is on a non-AWS location. Both the endpoint (e.g. 's3.example.com') or the full URL, including the protocol, are supported (e.g. `https://s3.example.com`). Note that when setting a custom endpoint path style access will be enabled. For more information, see [Class S3ClientOptions](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)). |   |
 | com.mendix.storage.s3.UseV2Auth | Let the authentication policy use 'Signature Version 2' instead of the default 'Signature Version 4'. Set this setting to 'true' when the endpoint does not support 'Signature Version 4'. | false |
 | com.mendix.storage.s3.EncryptionKeys | List of keys which can be used to encrypt and decrypt data at rest in S3\. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: ![](attachments/Custom+Settings/code_snippet_2.png) |   |
 
@@ -152,6 +152,13 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.storage.azure.AccountKey | Account key to authenticate with the azure blob storage service |   |
 | com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created in case it does not exist yet. |   |
 | com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
+|com.mendix.storage.azure.UseHttps| Introduced in version 7.7. For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
+
+{{% alert type="warning" %}}
+
+In Mendix 7.7.0, we changed Azure blob storage's default connection protocol from HTTP to HTTPS to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). For existing customers switching to this Mendix version, this should be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
+
+{{% /alert %}}
 
 ## IBM Bluemix Object Storage Settings
 

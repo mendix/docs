@@ -39,6 +39,8 @@ script:
   - gulp build
 cache:
   yarn: true
+  #directories:
+  #  - node_modules
 branches:
   only:
   - master

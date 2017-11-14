@@ -19,6 +19,11 @@ The **Environments** page is divided into the following tabs:
 * **Custom Domain** tab
     * Certificates
     * Linked Custom Domains
+* **Access Restriction Profiles**
+    * IP range filters
+    * Client certificate verification
+    
+   ![](attachments/environment-tab.png)    
     
 For more details, see [Environments](environments).    
     
@@ -26,7 +31,7 @@ For more details, see [Environments](environments).
 
 If you click **Details** of a specific environments, you will be able to manage your environment in several tabs of the **Environment details** page.
 
-   ![](attachments/environmentdetails.jpg)
+   ![](attachments/environment-details.png)
    
 For more details, see [Environment details](environments-details).       
 
@@ -43,3 +48,11 @@ For more details, see [Mobile App](mobileapp).
 The **App Services** page lets you publish your app service, application, or widget to the Mendix App Store.
 
 For more details, see [App Services](app-services).  
+
+## 5 Related Content
+
+* [How to Configure Custom Domains](/developerportal/howto/custom-domains)
+* [How to Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud)
+* [Mendix Cloud Status](/developerportal/general/mendix-cloud-status)
+* [Mendix Cloud V4 - FAQ](/deployment/mendixcloud/mxcloudv4)
+* [How to View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region)

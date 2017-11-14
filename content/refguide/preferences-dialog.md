@@ -60,6 +60,11 @@ The pattern from which the arguments are derived that are passed to the file com
 
 `{1}` this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
+### Version control
+
+#### Enable support for SVN servers other than the Mendix Team Server.
+Select this option when you want to work on an app that's not stored in the Team Server, but in another SVN server you have access to. This will allow you to specify the location of the app in the SVN server when, for example, opening or downloading an app, when managing branch lines, and when importing a project package.
+
 ### Proxy server
 
 Sometimes the computer that's running the Modeler cannot access the internet directly, but has to connect to a proxy server that requires authentication. If this is the case, then these settings can be used to specify the user name and password to connect to the proxy server.

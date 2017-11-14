@@ -45,15 +45,23 @@ From Mendix 7.4.0 on, objects can also be edited after synchronization.
 
 Both autonumbers and calculated attributes require server intervention, and are therefore disallowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
 
-### 4.7 Associations
+### 4.7 Default Attribute Values
+
+Default attribute values for entities in the domain model don't have any effect for objects created offline. Boolean attributes will always default to `false`, numeric attributes to `0`, and other attributes to `empty`.
+
+### 4.8 Associations
 
 Attribute paths which follow references are not allowed in grid columns. In addition, reference set selectors cannot be used.
 
-### 4.8 Excel/CSV Export
+### 4.9 System Members
+
+System members (`createdDate`, `changedDate`, `owner`, `changedBy`) are not supported.
+
+### 4.10 Excel/CSV Export
 
 Spreadsheets are generated through direct database interaction, which is not available offline.
 
-### 4.9 Platforms
+### 4.11 Platforms
 
 Offline-enabled apps are only supported on the iOS and Android platforms.
 

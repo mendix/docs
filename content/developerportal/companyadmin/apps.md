@@ -22,9 +22,13 @@ A company admin perform the following actions on the **Apps** tab:
 * Delete apps
 * View the node details
 
+For more information, see [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps).
+
 ## 3 Roles
 
 A company admin can edit user roles and add new user roles on the **Roles** tab.
+
+For more information, see [Roles Within the Company and Apps](/developerportal/general/roles).
 
 ## 4 Related Content
 

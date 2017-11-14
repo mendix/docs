@@ -18,7 +18,7 @@ If you want to leave, delete, or deactivate your app, follow these steps:
 3. Click **General** under the **Settings** category.
 4. Click **Leave app**.
 
-    ![](attachments/leave-app.png)    
+    ![](attachments/settings/leave-app.png)    
 
 ### 2.1 Leaving the App with Team Members
 
@@ -28,7 +28,7 @@ After leaving, the app will still exist in the company and it will be available 
 
 If you want to return to the app team, other team members can add you again by inviting you to the app.
 
-   ![](attachments/confirmation-leave.png) 
+   ![](attachments/settings/confirmation-leave.png) 
 
 ### 2.2 Leaving the App Without Team Members
 
@@ -38,7 +38,7 @@ Because the app will still exist within the company, only the **Company Admin** 
 
 To leave and deactivate the app, click **Continue**
 
-   ![](attachments/delete-app.png)
+   ![](attachments/settings/delete-app.png)
 
 To activate the app as a Company Admin, follow these steps:
 
@@ -51,11 +51,15 @@ You can leave and delete an app when you are the only member in the app. This is
 
 To leave and delete the app, click **Continue and delete app**.
 
-   ![](attachments/delete-app.png) 
+   ![](attachments/settings/delete-app.png) 
 
 ## 3 Related Content
 
 * [Apps](/developerportal/companyadmin/apps)
 * [Company Admin](/developerportal/companyadmin)
+* [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
+* [How to Delete, Deactivate, and Activate Apps](/developerportal/howto/delete-apps)
 * [General](/developerportal/settings/general-settings)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [Roles Within the Company and Apps](roles)
 * [Settings](/developerportal/settings)

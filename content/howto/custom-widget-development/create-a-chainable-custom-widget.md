@@ -19,7 +19,6 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Install the [Mendix Modeler](https://appstore.home.mendix.com/link/modelers/)
 * Install Adobe Brackets and the Widget Development Plugin for Adobe Brackets (for details, see [How to Get Started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-* Read [How to Create a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
 
 ## 3 What Are You Going to Build?
 
@@ -215,5 +214,4 @@ A Mendix custom widget can only pass one type of entity as an input parameter in
 ## 9 Related Content
 
 * [How to Get Started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-* [How to Create a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
 * [How to Use the Mobile Slider Custom Widget](the-mobile-slider-custom-widget)

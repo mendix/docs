@@ -14,7 +14,7 @@ These radio buttons are used to indicate whether the user wants to receive the n
 
 {{% /alert %}}
 
-## General properties
+## General Properties
 
 ### Orientation
 
@@ -22,17 +22,17 @@ This property defines whether the radio buttons are rendered horizontally or ver
 
 _Default value:_ Horizontal
 
-{{% snippet file="refguide/Required+Property.md" %}}
+## Validation Properties
 
-{{% snippet file="refguide/Required+message+Property.md" %}}
+{{% snippet file="refguide/Widget+Validation.md" %}}
 
-## Data source properties
+## Data Source Properties
 
 {{% snippet file="refguide/Attribute+Path+Property.md" %}}
 
 {{% snippet file="refguide/Label+Property.md" %}}
 
-## Editability properties
+## Editability Properties
 
 {{% snippet file="refguide/Editable+Property.md" %}}
 
@@ -40,17 +40,17 @@ _Default value:_ Horizontal
 
 {{% snippet file="refguide/Condition+Property.md" %}}
 
-## Visibility properties
+## Visibility Properties
 
 {{% snippet file="refguide/Visibility+Property.md" %}}
 
 {{% snippet file="refguide/Visibility+Property+With+Module+Roles+Simple.md" %}}
 
-## Events properties
+## Events Properties
 
 {{% snippet file="refguide/On+Change+Event.md" %}}
 
-## Common properties
+## Common Properties
 
 {{% snippet file="refguide/Name+Property.md" %}}
 
@@ -60,7 +60,7 @@ _Default value:_ Horizontal
 
 {{% snippet file="refguide/Tab+index+Property.md" %}}
 
-## Related articles
+## Related Content
 
 *   [Data view](data-view)
 *   [Attributes](attributes)

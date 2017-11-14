@@ -3,7 +3,6 @@ title: "Show Page"
 parent: "client-activities"
 ---
 
-
 With the 'Show page' action you can show a page to the end user.
 
 {{% alert type="info" %}}
@@ -41,6 +40,10 @@ This feature allows you to re-use the same page for the New and Edit buttons of 
 {{% /alert %}}
 
 ### Location
+
+{{% alert type="info" %}}
+This option is shown only when the target page has a layout type of **Legacy**.
+{{% /alert %}}
 
 Location defines how the page is shown.
 

@@ -49,7 +49,7 @@ In this chapter you will set up the unit testing module and run the example test
 13.  Click **OK**.
     ![](attachments/18448633/18580362.png)
 14.  Run the project locally.
-15.  Go to _http://localhost:8080/index.html_.
+15.  Go to **http://localhost:8080/index.html**.
 16.  Click on **UnitTestOverview** in the navigation.
     ![](attachments/18448633/18580341.png)
     At the left side 2 buttons are shown. When you click on the Run all button, all unit tests will be executed. When you click on the Reset button, the status of all tests will change to not executed (question mark icon). Beneath the buttons all modules which contains unit tests are shown. In this case UnitTesting is the only module which contains unit tests. When you click on UnitTesting, all unit tests of this module are shown.
@@ -81,60 +81,60 @@ In this chapter you will learn how to create a microflow test. To create a new m
 
 ### 3.2 Create a unit test
 
-1. Add a **new folder** to MyFirstModule and name it _UnitTests_.
-2. Add a **new microflow** to the folder UnitTests and name it _Test_PromoteEmployeeToJunior_. The microflow Promote has one input parameter, Employee. So first you need to create the object Employee.
-3. Add a new activity of action type _Create object_.
-4. Select entity Employee.
-5. Set Commit to _Yes_.
-6. Set Name to _John_.
-   ![](attachments/18448633/18580353.png)
-7. Click OK. Now you need to call the microflow Promote with the just created object Employee.
-8. Add a new activity of action type _Microflow call_.
-9. Select microflow _MyFirstModule.Promote_.
-    ![](attachments/18448633/18580352.png)
-10. Click OK. The next step is to check if the employee is promoted to the right level.
-11. Add a new activity of action type _Microflow call_.
-12. Select microflow _UnitTesting.AssertTrue1_.
-13. Set the argument of parameter **ValueToAssert** to _$NewEmployee/Level = MyFirstModule.Level.Junior_.
-    ![](attachments/18448633/18580344.png)
-14. Click OK. For failed tests, the last step information can be very useful. You can provide this information in your microflow by calling the ReportStep submicroflow.
-15. Add a new activity of action type Microflow call between _Create Employee_ and _Promote_.
-16. Select microflow _UnitTesting.ReportStep_.
-17. Set the argument of parameter **Message** to _'Employee created'_.
-18. Click OK.
-19. Add a new activity of action type Microflow call between _Promote_ and _Promoted to Junior?_.
-20. Select microflow _UnitTesting.ReportStep_.
-21. Set the argument of parameter **Message** to _'Employee promoted'_.
-22. Click OK.
-23. Double-click on the **End event**.
-24. Select **Boolean** as return type.
-25. Enter **true** as return value.
-26. Click OK.
-27. The microflow should look like the model below:
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/93a3546c-df5e-4b7d-9dc8-447a9f24432f/unittest-promote-employee-to-junior?embed=true"></iframe>
+1.    Add a **new folder** to MyFirstModule and name it _UnitTests_.
+2.    Add a **new microflow** to the folder UnitTests and name it _Test_PromoteEmployeeToJunior_. The microflow Promote has one input parameter, Employee. So first you need to create the object Employee.
+3.    Add a new activity of action type _Create object_.
+4.    Select entity Employee.
+5.    Set Commit to _Yes_.
+6.    Set Name to _John_.
+      ![](attachments/18448633/18580353.png)
+7.    Click OK. Now you need to call the microflow Promote with the just created object Employee.
+8.    Add a new activity of action type _Microflow call_.
+9.    Select microflow _MyFirstModule.Promote_.
+      ![](attachments/18448633/18580352.png)
+10.   Click OK. The next step is to check if the employee is promoted to the right level.
+11.   Add a new activity of action type _Microflow call_.
+12.   Select microflow _UnitTesting.AssertTrue1_.
+13.   Set the argument of parameter **ValueToAssert** to _$NewEmployee/Level = MyFirstModule.Level.Junior_.
+      ![](attachments/18448633/18580344.png)
+14.   Click OK. For failed tests, the last step information can be very useful. You can provide this information in your microflow by calling the ReportStep submicroflow.
+15.   Add a new activity of action type Microflow call between _Create Employee_ and _Promote_.
+16.   Select microflow _UnitTesting.ReportStep_.
+17.   Set the argument of parameter **Message** to _'Employee created'_.
+18.   Click OK.
+19.   Add a new activity of action type Microflow call between _Promote_ and _Promoted to Junior?_.
+20.   Select microflow _UnitTesting.ReportStep_.
+21.   Set the argument of parameter **Message** to _'Employee promoted'_.
+22.   Click OK.
+23.   Double-click on the **End event**.
+24.   Select **Boolean** as return type.
+25.   Enter **true** as return value.
+26.   Click OK.
+27.   The microflow should look like the model below:
+      <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/93a3546c-df5e-4b7d-9dc8-447a9f24432f/unittest-promote-employee-to-junior?embed=true"></iframe>
 
-28. Create three more test microflows as shown below:
+28.   Create three more test microflows as shown below:
 
-    **Test_PromoteEmployeeToMedior**
+      **Test_PromoteEmployeeToMedior**
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/a609f474-dd8c-4315-84fb-1056256ca3fc/unittest-promote-employee-to-medior?embed=true"></iframe>
+      <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/a609f474-dd8c-4315-84fb-1056256ca3fc/unittest-promote-employee-to-medior?embed=true"></iframe>
 
-    **Test_PromoteEmployeeToSenior**
+      **Test_PromoteEmployeeToSenior**
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/f247e678-1738-416a-8e6a-77dfdb2cf392/unittest-promote-employee-to-senior?embed=true"></iframe>
+      <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/f247e678-1738-416a-8e6a-77dfdb2cf392/unittest-promote-employee-to-senior?embed=true"></iframe>
 
-    **Test_PromoteEmployeeWhenAlreadySenior**
+      **Test_PromoteEmployeeWhenAlreadySenior**
 
-    <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/44d6c6be-d35c-403d-ad2f-d89398956a07/unittest-promote-employee-when-already-senior?embed=true"></iframe>
-29. Run the project locally.
-30. Go to _http://localhost:8080/index.html_.
-31. Click on **UnitTestOverview** in the navigation. **MyFirstModule** will be shown in the list with modules that contain one or more testcases.
-    ![](attachments/18448633/18580348.png)
-32. Click on **MyFirstModule**. All testcases of module MyFirstModule will be shown.
-    ![](attachments/18448633/18580347.png)
-33. Check the checkbox **Rollback microflow tests after execution**.
-34. Click on **Run all**. All test cases should pass.
-    ![](attachments/18448633/18580346.png)
+      <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/44d6c6be-d35c-403d-ad2f-d89398956a07/unittest-promote-employee-when-already-senior?embed=true"></iframe>
+29.   Run the project locally.
+30.   Go to **http://localhost:8080/index.html**.
+31.   Click on **UnitTestOverview** in the navigation. **MyFirstModule** will be shown in the list with modules that contain one or more testcases.
+      ![](attachments/18448633/18580348.png)
+32.   Click on **MyFirstModule**. All testcases of module MyFirstModule will be shown.
+      ![](attachments/18448633/18580347.png)
+33.   Check the checkbox **Rollback microflow tests after execution**.
+34.   Click on **Run all**. All test cases should pass.
+      ![](attachments/18448633/18580346.png)
 
 Congratulations! You created your first unit tests using the UnitTesting module.
 

@@ -39,7 +39,7 @@ When users open the to-do app they will land on the homepage of the app. Follow 
 Let's create the user interface for the home page so that it shows a list of available to-do's. Follow these steps to set up the user interface and connect it to the new entity in the domain model:
 
 1. Open **Home_Phone_Default page** you've just created in the ToDo module.
-2. Change the page title to **My to-do's** in the **Properties** pane on the right side of the Modeler.
+2. Change the page title to **My to-do's** in the **Properties** pane on the right side of the Desktop Modeler.
 3. Remove the **Layout grid** from the page.
 4. Right-click the area you just cleared and select **Add widget > List view** to add a List view to the page that will take the place of the layout grid.
 5. Right-click the **List view** and select **Select data soure**.
@@ -67,12 +67,9 @@ Users also need to be able to add new to-do's to the list, that's why you're goi
 
 7. Run the app locally. Click **Save and continue** if you did not save your page(s) yet.
 8. Click **Yes** to create a default database if this is asked.
-9. Open the **View App** dropdown and select **View Hybrid Mobile App**.
-10. Select the **Profile** profile and click the iPhone form factor for **Preview in browser**.
+9. Open the **View** drop-down menu and select **Hybrid Phone Mobile App**.
 
-    ![](attachments/create-a-to-do-app/todo-05.jpg)
-
-This is an easy way to see your app. There is also a way to simulate the touch behavior of a user on a mobile device. This is explained later on in this how-to.
+This is an easy way to see your app. There is also a way to simulate the touch behavior of a user on a mobile device. This is explained later in step 4 of this how-to.
 
 ![](attachments/create-a-to-do-app/todo-06.jpg)
 

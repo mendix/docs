@@ -45,13 +45,17 @@ For details on the removed and deprecated APIs, see the **Breaking changes** sec
 
 ## 3 Converting!
 
-Now you are ready to convert, so simply open your project in the new Mendix Modeler. There are no explicit actions required after opening your Mendix 6 project in Mendix 7.
+Now you are ready to convert, so simply open your project in the new Desktop Modeler. There are no explicit actions required after opening your Mendix 6 project in Mendix 7. When you deloy your app from the Modeler, double check all the domain model changes in the synchronization dialog box in order to avoid unexpected modifications. 
 
 ### 3.1 Upgrading App Store Modules
 
 After the conversion, verify if there is a newer version available of your App Store modules. Some modules need to be upgraded to make them Mendix 7-compatible. Reading the version release notes to see whether specific actions are required is recommended.
 
 In Mendix 7, the App Store modules used in your projects are grouped together in the Modeler. They can be found in **Project Explorer** under **Project** > **App store modules**.
+
+### 3.2 Double Checking Project Changes
+
+Verify that during the migration steps listed above, no modules are replaced by removing and importing the module again. By design, this operation instructs the Desktop Modeler to delete a whole module and create it again, which leads to empty entities and associations after the migration is finished. 
 
 ## 4 Breaking Changes
 
@@ -99,7 +103,7 @@ The `System.Statistics` entity has been removed from the **System** module, as t
 
 The semantics have changed for `MxObject.get` and `mx.parser.parseValue`. They now return a value of an appropriate type (for example, `Big` for numbers, numbers for dates) instead of always returning a string. For more details, see [Class: mendix/lib/MxObject](https://apidocs.mendix.com/7/client/mendix_lib_MxObject.html#get).
 
-Support for `dojo.require` has been dropped. It never worked in hybrid apps, and we have now made it official. Write your custom widgets in the AMD style, as described in [How to Create a Basic Hello World Custom Widget](/howto7/custom-widget-development/create-a-basic-hello-world-custom-widget) and the [App Store Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate).
+Support for `dojo.require` has been dropped. It never worked in hybrid apps, and we have now made it official. Write your custom widgets in the AMD style, as described in [App Store Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate).
 
 Dojo APIs exposed through the global `dojo` object are no longer supported, as they were never supposed to work in AMD widgets. Some of these APIs (for example, `dojo.html`) have already been removed, but others will be removed in the future without notice. Use these at your own risk, or better yet, don't use them at all!
 
@@ -291,3 +295,29 @@ This is needed to avoid potential namespace conflicts between the Mendix version
 #### 6.3.7 Runtime Issues When Migrating a Project to Mendix 7
 
 Java libraries in Mendix 7 shipped with the installation package are not available for projects anymore. While this results in better dependency management for each project, it can also cause errors at runtime after migration (for example, `NoClassDefFoundError`). Therefore, it is important to make sure the `userlib` directory of the migrated project includes all the required libraries. It is also worth noting that in Mendix 7, only one version of each library can exist at runtime. This means that if there are multiple versions of one library, the latest version is used and the rest are ignored.
+
+### 6.4 Removed Data Storage Functionality
+
+#### 6.4.1 Removed Methods
+
+| Package Name | Method Name | Alternative |
+| --- | --- | --- |
+| `com.mendix.systemwideinterfaces.connectionbus.data.IDataRow`| `getPrimaryKeyValue()` | `getValue(context, 0)` |   
+
+##### 6.4.1.1 Example Usages
+
+`IDataRow.getPrimaryKeyValue()`
+
+Let us retrieve a MendixObject using the getPrimaryKeyValue() method in Mendix 6.x:
+
+`List<? extends IDataRow> dataRows = retrieveOQLDataTable.getRows();`<br>
+`IDataRow dataRow = dataRows.get(0);`<br>
+`IMendixIdentifier mendixIdentifier = dataRow.getPrimaryKeyValue();`<br>
+`IMendixObject mendixObj = Core.retrieveId(context, mendixIdentifier);`<br>
+
+A similar approach to get a MendixObject in Mendix 7.x would be as follows:
+
+ `List<? extends IDataRow> dataRows = retrieveOQLDataTable.getRows();`<br>
+`IDataRow dataRow = dataRows.get(0);`<br>
+`IMendixIdentifier mendixIdentifier = dataRow.getValue(context, 0);`<br>
+`IMendixObject mendixObj = Core.retrieveId(context, mendixIdentifier);`<br>

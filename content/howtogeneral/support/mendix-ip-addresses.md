@@ -42,4 +42,4 @@ Usually you configure your firewall with rules for Incoming traffic to your netw
 
 ## 4 Related Content
 
-* [Mendix Cloud Status](/developerportal/operate/mendix-cloud-status)
+* [Mendix Cloud Status](/developerportal/general/mendix-cloud-status)

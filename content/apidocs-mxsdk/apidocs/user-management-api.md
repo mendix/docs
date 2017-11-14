@@ -12,7 +12,7 @@ The User Management API allows your company's user management systems to integra
 
 # Authentication
 
-The User Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication).
+The User Management API requires its users with the required permissions to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication).
 
 # Error Handling
 

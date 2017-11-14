@@ -18,25 +18,25 @@ To invite team members to an app as well as to view and manage an app, follow th
 On the **Team** page, you will see an overview with the following information about the team members:
 
 * Name
-* Role
+* Role - App Team role (see [Roles Within the Company and Apps](/developerportal/general/roles) for more information)
 
 ### 2.1 Managing the Team
 
-When you click **Manage Team**, you will be forwarded to the **Security** page of the **Settings** category. On that page, you can change the **Role** of the team members and edit the **Role settings**. 
+When you click **Manage Team**, you will be forwarded to the **Security** page of the **Settings** category. 
+Only a **SCRUM Master** or a custom role with **App Settings** can see the blue **Manage Team** button in the top-right corner of the screen. On the **Settings** page, you can change the **Role** of each team members and edit the **Role settings**. 
 
 ### 2.2 Inviting Members
 
-#### 2.2.1 App Invitation Guide
+To invite members, go to **Team**, click the **Invite Member** in the top-right corner of the screen, and follow these steps:
 
-On this page, you can enter the email addresses of all the co-workers you want to invite to your app. It is possible to paste a list of email addresses as well. 
-
-The parts of the app that can be accessed by the invitees will be based on the role you select for each invitee.
-
-#### 2.2.2 Who Will Join My Company?
-
-In this section, invitees with the listed email domains will be automatically added to your company. All others will only be granted access to this specific app.
+1. Enter the email addresses.
+2. Add a personal message.
+3. Confirm the invitation(s).
 
 ## 3 Related Content
 
-* [Collaborate](/developerportal/collaborate)
+* [Company Admin](/developerportal/companyadmin)
+* [How to Deactivate and Activate Users](/developerportal/howto/deactivate-users)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [Roles Within the Company and Apps](/developerportal/general/roles)
 * [Settings](/developerportal/settings)

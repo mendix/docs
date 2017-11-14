@@ -41,11 +41,10 @@ There is no need to refresh in the client due to the "Move out, hide" behavior o
 The app is now finished, so you are going to view it on a simulated mobile device. To emulate the touch behavior of a user on a mobile device (which is mentioned in [How to Build a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2#5)), follow these steps: 
 
 1. Save all changes and run the app locally.
-2. Open the **View** drop-down menu and select **View Hybrid Mobile App**.
-3. Choose the **Profile** navigation profile.
-4. Click the laptop icon under **Preview in browser**.
-5. Press **F12** to open the browser's Developer Tools.
-6. Select the device you want to simlate, and your mouse will act like a finger on the screen.
+2. Open the **View** drop-down menu and select **Responsive Browser (F9)**.
+3. Change the URL to `http://localhost:8080/index.html?profile=HybridPhone` to simulate a phone profile. This will result in a simulation that is easier to preview.
+4. Press **F12** to open the browser's Developer Tools.
+5. Select the device you want to simlate, and your mouse will act like a finger on the screen.
 
     ![](attachments/create-a-to-do-app/todo-12.png)
 

@@ -14,9 +14,11 @@ All of the Mendix documentation is stored in GitHub. With a GitHub profile, you 
 To work on the documentation in GitHub, you will be using Markdown. For details on this easy-to-use syntax, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
 {{% alert type="info" %}}
-
 All documentation contributions may undergo changes after editing according to our internal style guide.
+{{% /alert %}}
 
+{{% alert type="info" %}}
+Quick guide to making a documentation change: fork the [**mendix/docs**](https://github.com/mendix/docs repository) and create a pull request with our **development** branch as the base.
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**
@@ -31,7 +33,7 @@ All documentation contributions may undergo changes after editing according to o
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Have a GitHub account (sign up [here](https://github.com/join))
-* Fork the [**mendix/docs** repository](https://github.com/mendix/docs) on GitHub (for details on how to do this, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/))
+* Fork the [**mendix/docs**](https://github.com/mendix/docs) repository on GitHub (for details on how to do this, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/))
 
 ### 2.2 Tools
 
@@ -105,7 +107,7 @@ Make sure the image files comply with these naming conventions:
 
 As you add knowledge to the documentation that will help your fellow Mendix developers, for each contribution, you will gain Mendix points!
 
-Before you can receive Mendix points for your documentation contributions, you must authorize the connection of your GitHub profile to your Mendix Community Profile. For more information, see [How to Set Up Your Community Profile](../tools/how-to-set-up-your-profile#MyCommunityProfile).
+Before you can receive Mendix points for your documentation contributions, you must authorize the connection of your GitHub profile to your Mendix Community Profile. For more information, see [How to Set Up Your Community Profile](../tools/how-to-set-up-your-profile#github).
 
 The amount of points you gain depends on the size of the documentation contribution you make. This is calculated per pull request and is based on the number of lines changed:
 

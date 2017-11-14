@@ -7,22 +7,19 @@ tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health"]
 
 ## 1 Introduction
 
-When your application has reached production status, it's important to keep track of its status and health. This how-to will teach you how to inspect your application's health in the Mendix platform. You will learn how to access the application status page, what the information on this page means, and how to look at the alerts for your app.
+When your application has reached production status, it's important to keep track of its status and health. When you click **Alerts** in the **Operate** category of the **Developer Portal**, you can inspect your application's health in the Mendix Cloud. 
 
-When you click **Alerts** in the **Operate** category of the **Developer Portal**, you will see:
+Mendix analyzes the application and platform status periodically. All status alerts are logged in the **History** of the **Alerts**. 
+If you [Receive Environment Status Alerts](/developerportal/howto/receive-alerts), you will receive a status alert only once. Mendix will not send you multiple alerts of the same status.
 
-*   The Application status
-*   The Platform status
+This document will explain how to access the application status page, what the information on this page means, and how to look at the alerts for your app.
 
 ## 2 Application Status
 
-The Mendix platform automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
+The Mendix Cloud automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
 
 1.  Go to the [Developer Portal](https://home.mendix.com).
-2.  Go to the App you want to monitor.
-
-    ![](attachments/18580002.png)
-
+2.  Open the app that you want to monitor.
 3.  Click **Alerts** under the **Operate** category. This will display the status of your app node in various categories.
 
     ![](attachments/18580000.png)
@@ -37,7 +34,9 @@ The Mendix platform automatically monitors the health and status of apps that ar
 
   ![](attachments/18579999.png)
 
-This will tell you important information that you either need in order to resolve the issue, or that needs to be included when submitting a support request with Mendix Support. Any status that could cause your app to stop functioning will result in an alert (which will be sent).
+This status information will tell you important information that you either need in order to resolve the issue, or that needs to be included when submitting a support request with [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the **Log** page under the **Operate** category.
+
+Any status that could cause your app to stop functioning will result in an alert. For example, the monitoring information from the image showes that one of the status indicators was *Critical*. When this happens to one of your nodes, all users that are subscribed to alerts will receive an email alert.
 
 ## 3 Alerting Categories and Thresholds
 
@@ -117,29 +116,28 @@ Description | The application URL is reachable. This check tries to visit the UR
 Example message | Did not find correct headers for url 'https://example.mendixcloud.com/'
 Warning Threshold | The application URL is not reachable.
 Critical Threshold | Not used.
-First actions to take | If this alert triggers, and visiting the application url results in slow loading or unresponsiveness, visit https://status.mendix.com/ to see if there is an outage. This condition might point to an internal networking connectivity problem.
+First actions to take | If this alert triggers, and visiting the application url results in slow loading or unresponsiveness, visit [https://status.mendix.com/](https://status.mendix.com/) to see if there is an outage. This condition might point to an internal networking connectivity problem.
 
 ## 4 Alerts History
 
-The monitoring information from the previous chapter showed that one of the status indicators was *Critical*. When this happens to one of your nodes, all users that are subscribed to alerts will receive an email alert. Alerts are also stored in the app monitoring part of the Mendix platform. To access the alerts for your app, follow these steps:
+To access the history of the alerts from your app, follow these steps:
 
 1.  Click the tab **History** on the **Alerts** page.
 
-    ![](attachments/18579998.png)
-
 2. You will see an overview of all alerts that have been sent for this application.
 
-    ![](attachments/18579997.png)
+    ![](attachments/alerts-history.png)
 
     The overview shows alert types and details including date and time. The alert types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications will also be shown here.
 
     The Acceptance and Production buttons at the top let you switch between viewing the status for your production and acceptance node. Note that accessing production information may require additional authentication and is subject to your project's security settings.
 
-3. Click **Alert details** or **View**. This will open the alert details, which contains additional information. More information might be available in your application's log file.
+3. Click **Details**. This will open the alert details, which contains additional information. More information might be available in your application's log file.
 
-    ![](attachments/18579995.png)
+## 5 Related Content
 
-## 5 Related content
-
-*   [Mendix Cloud Status](mendix-cloud-status)
-*   [Application Trends in Mendix Cloud v3](trends)
+* [Application Trends in Mendix Cloud v3](trends)
+* [Application Trends in Mendix Cloud v4](trends-v4)
+* [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
+* [Mendix Cloud Status](/developerportal/general/mendix-cloud-status)
+* [How to Submit Support Requests](/howtogeneral/support/how-to-submit-support-requests)

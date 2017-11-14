@@ -20,7 +20,7 @@ ats:
   priority: false
   menu_categories:
     - "General"
-    - "Reference Guide 1"
+    - "Reference Guide"
     - "How-To's"
     - "Best Practices"
 community:
@@ -63,8 +63,6 @@ howto50:
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Project Management"
-    - "Cloud Foundry"
-    - "On-Premises Deployment"
 howto6:
   space: "Mendix 6 How-To's"
   priority: 5
@@ -83,17 +81,16 @@ howto6:
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Project Management"
-    - "Cloud Foundry"
-    - "On-Premises Deployment"
 howto:
   space: "Mendix 7 How-To's"
   priority: 6
   mendix_version: 7
   menu_categories:
     - "Tutorials"
+    - "SAP"
     - "Modeling Basics"
     - "Data Models"
-    - "GUIs"
+    - "UX"
     - "Logic & Business Rules"
     - "Mobile"
     - "Security"
@@ -103,8 +100,6 @@ howto:
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Project Management"
-    - "Cloud Foundry"
-    - "On-Premises Deployment"
 refguide4:
   space: "Mendix 4 Reference Guide"
   priority: false
@@ -116,11 +111,11 @@ refguide4:
     - "Modeler"
     - "Runtime"
     - "Client"
-    - "Deployment"
     - "Java Programming"
     - "Release Notes"
     - "System Requirements"
     - "Moving from 3 to 4"
+    - "Deployment"
   banner:
     type: 'warning'
     text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>'
@@ -135,7 +130,6 @@ refguide5:
     - "Modeler"
     - "Runtime"
     - "Java Programming"
-    - "Deployment"
     - "Mobile"
     - "Proactive Maintenance"
 refguide6:
@@ -149,7 +143,6 @@ refguide6:
     - "Modeler"
     - "Runtime"
     - "Java Programming"
-    - "Deployment"
     - "Mobile"
     - "Proactive Maintenance"
 refguide:
@@ -162,13 +155,12 @@ refguide:
     - "Modeler"
     - "Runtime"
     - "Java Programming"
-    - "Deployment"
+    - "SAP"
     - "Mobile"
 howtogeneral:
   space: "General How-To's"
   priority: 6
   menu_categories:
-    - "Mendix Cloud"
     - "Tips & Tricks"
     - "Best Practices"
     - "Mendix Support"
@@ -180,6 +172,8 @@ releasenotes:
     - "Platform Portal"
     - "Model SDK"
     - "Platform SDK"
+    - "Hybrid App"
+    - "Mendix Mobile App"
     - "APM"
     - "ATS"
     - "AQM"
@@ -196,3 +190,14 @@ developerportal:
     - "Operate"
     - "Settings"
     - "How-To's"
+deployment:
+  space: "Deployment"
+  priority: false
+  menu_categories:
+    - "Amazon Web Services"
+    - "Azure"
+    - "Cloud Foundry"
+    - "Docker"
+    - "Mendix Cloud"
+    - "On-Premises"
+    - "SAP Cloud Platform"

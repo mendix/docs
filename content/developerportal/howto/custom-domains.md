@@ -31,6 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     * What an SSL/TLS private key is and what it is used for
     * What a certificate request is and what it is used for
 * Have a basic knowledge of certificate authorities (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, Comodo)
+* Have the correct permissions (for more information, see [Security-Node Permissions](/developerportal/settings/node-permissions))
 
 ### 2.2 Domain Registrar/DNS Provider<a name="DNS"></a>
 
@@ -38,7 +39,7 @@ Before configuring your custom domain in the Mendix Cloud, you will need to conf
 
 ![](attachments/deploy/21168230.png)
 
-Please create a CNAME record and point it to `[YOUR-CUSTOM-DOMAIN].cname.mendix.net.`. For example, when your custom domain is `myapp.mycompany.com`, create a CNAME record to `myapp.mycompany.com.cname.mendix.net.` so that Mendix can point your custom dsomain to your Mendix app.
+Please create a CNAME record and point it to `[YOUR-CUSTOM-DOMAIN].cname.mendix.net.`. For example, when your custom domain is `myapp.mycompany.com`, create a CNAME record to `myapp.mycompany.com.cname.mendix.net.` so that Mendix can point your custom domain to your Mendix app.
 
 {{% alert type="info" %}}
 
@@ -64,9 +65,9 @@ To manage custom domains, follow these steps:
 
 ## 4 Generating a Certificate Request for your Custom Domain<a name="Generating"></a>
 
-When you do not have an SSL/TLS certificate or an SSL/TLS private key for your custom domain yet, you have to order one at a certificate authority (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, or Comodo). In order to get a signed SSL/TLS certificate from a certificate authority, you need to provide a certificate request. A certificate request can be created in the Mendix Cloud.
+When you do not have an SSL/TLS certificate you have to order one at a certificate authority (like GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, or Comodo). In order to get a signed SSL/TLS certificate from a certificate authority, you need to provide a certificate signing request (CSR). A private A SSL/TLS key and a CSR tied to that key can be created in the Mendix Cloud for you.
 
-To create a certificate request, follow these steps:
+To create a certificate signing request and an RSA key, follow these steps:
 
 1.  Click **New** and then click **Create a Certificate Request**:
 
@@ -82,7 +83,7 @@ To create a certificate request, follow these steps:
 
 {{% alert type="info" %}}
 
-The SSL/TLS private key will be stored in our secure keystore. It will not be available for downloadin order to keep it secure.
+The SSL/TLS private key will be stored in our secure keystore. It will not be available for download in order to keep it secure.
 
 {{% /alert %}}
 
@@ -151,7 +152,7 @@ To configure a custom domain on your application environment, follow these steps
 1. Click **Environments** under the **Deploy** category.
 2. Click **Details** for the environment you want to configure:
 
-    ![](attachments/deploy/environmentdetails.jpg)
+    ![](attachments/deploy/environment-details.png)
 
 3. Go to the **Network** tab:
 
@@ -191,6 +192,8 @@ An intermediate certificate chain chain could look like this from top to bottom:
 
 ## 9 Related Content
 
-* [Deploy](/developerportal/deploy)
+* [Certificates](/deployment/mendixcloud/certificates)
+* [Environments](/developerportal/deploy/environments)
 * [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
 * [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
+* [Roles Within the Company and Apps](/developerportal/general/roles).

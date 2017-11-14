@@ -20,8 +20,8 @@ You will start with the configuration of user and module roles for access to pag
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Know how to create a domain model (for more information, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Know how to create overview and detail pages (for more information, see [How to Create Your First Two Overview and Details Pages](../guis/create-your-first-two-overview-and-detail-pages))
-* Know how to create menu items (for more information, see [How to Set Up the Navigation Structure](../guis/setting-up-the-navigation-structure))
+* Know how to create overview and detail pages (for more information, see [How to Create Your First Two Overview and Details Pages](../ux/create-your-first-two-overview-and-detail-pages))
+* Know how to create menu items (for more information, see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure))
 
 ## 3 Preparing the Data Structure, GUI, and Example Data
 
@@ -170,11 +170,9 @@ To create access roles for the Administrator module role, follow these steps:
 
 3. Click **OK**.
 
-    {{% alert type="warning" %}}
-
-    A separate access rule will be created for all entities when the module role is set to Administrator. It is possible to adjust each rule individually later.
-
-    {{% /alert %}}
+{{% alert type="warning" %}}
+A separate access rule will be created for all entities when the module role is set to Administrator. It is possible to adjust each rule individually later.
+{{% /alert %}}
 
 ### 5.3 Creating Access Rules for the User Module Role
 

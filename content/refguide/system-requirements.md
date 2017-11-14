@@ -4,7 +4,7 @@ category: "General"
 description: "Presents the system requirements for using the Mendix platform."
 ---
 
-## Modeler
+## Desktop Modeler
 
 The Mendix Modeler supports Windows 7, 8, and 10. It supports both 32-bit and 64-bit variations, but 64-bit is recommended.
 
@@ -17,7 +17,7 @@ The following frameworks are automatically installed (if necessary):
 
 {{% alert type="warning" %}}
 
-You can choose which JDK is used for building and running locally through the 'Edit > Preferences' menu item.
+You can choose which JDK is used for building and running locally through the **Edit** > **Preferences** menu item.
 
 {{% /alert %}}
 
@@ -31,27 +31,31 @@ The Team Server is implemented using Subversion and the Modeler uses the HTTPS p
 * The HTTP port (TCP 80) needs to be open.
 * WebDAV - verbs within the HTTP protocol - needs to be enabled on the proxy server (if any).
 
+## Web Modeler
+
+The Mendix Web Modeler is optimized for use with Chrome. While Chrome is the officially supported browser, you can also use the Web Modeler with other popular browsers like Firefox, Safari and Edge. Note: the browser you use needs to have JavaScript turned on.
+
 ## Server
 
-### Operating system
+### Operating System
 
 * Microsoft Windows Server 2008 SP2 or newer
 * Debian 8 (Jessie) or newer
 * Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
 * CentOS 6, CentOS 7
 
-### Web server
+### Web Server
 
 * Microsoft Internet Information Services 7 or newer
 * Nginx (tested with versions included in Debian Jessie and Debian Jessie Backports)
 * Apache
 
-### Database server
+### Database Server
 
 * [IBM DB2](db2) 11.1
-* [MariaDB](mysql) 5.5, 10.0
-* [Microsoft SQL Server](/howto7/on-premises-deployment/mendix-on-windows-_-microsoft-sql-server) 2008, 2008 R2, 2012, 2014, 2016
-* [MySQL](mysql) 5.5, 5.6
+* [MariaDB](mysql) 5.5, 10.0, 10.1
+* [Microsoft SQL Server](/deployment/on-premises/mendix-on-windows-microsoft-sql-server) 2008, 2008 R2, 2012, 2014, 2016
+* [MySQL](mysql) 5.5, 5.6, 5.7
 * [Oracle Database](oracle) 11g Release 2, 12c Release 1
 * PostgreSQL 9.2, 9.3, 9.4, 9.5, 9.6
 
@@ -63,11 +67,11 @@ You can download JREs here:
 
 [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
-There is an issue since Java 7, causing timeouts when using Web Services with a certain amount of data. You can circumvent this issue by adding the VM params "`-Djava.net.preferIPv4Stack=true`". The Mendix Business Modeler will do this for you but if you are running Mendix on premise on a Windows server you will need to do this yourself.
+There is an issue since Java 7, causing timeouts when using Web Services with a certain amount of data. You can circumvent this issue by adding the VM params "`-Djava.net.preferIPv4Stack=true`". The Mendix Desktop Modeler will do this for you but if you are running Mendix on premise on a Windows server you will need to do this yourself.
 
 For more information about this issue, have a look at [http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) or [https://forums.oracle.com/forums/thread.jspa?messageID=9985748](https://forums.oracle.com/forums/thread.jspa?messageID=9985748)
 
-### Application server
+### Application Server
 
 Jetty is built into the Mendix Runtime, an application server is not required.
 
@@ -77,7 +81,7 @@ Jetty is built into the Mendix Runtime, an application server is not required.
 * Google Chrome
 * Apple Safari
 * Microsoft Edge
-* Microsoft Internet Explorer 10 - 11
+* Microsoft Internet Explorer 11
 
 ## Mobile Browsers
 

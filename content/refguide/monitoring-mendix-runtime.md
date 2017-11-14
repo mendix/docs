@@ -1,15 +1,26 @@
 ---
 title: "Monitoring Mendix Runtime"
 category: "Runtime"
-description: "This page describes the supported Mendix Runtime monitoring actions."
+description: "Describes the supported Mendix Runtime monitoring actions."
 tags: ["runtime, json"]
 ---
-The Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration.
-The JSON request should be accompanied by a base64 encoded monitoring password (the password should also be specified in the application configuration) and put in the request header "X-M2EE-Authentication". The content type of the request should be "application/json".
+
+## 1 Introduction
+
+The Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration (defaults to 8090).
+
+You can change the admin port from the Desktop Modeler by navigating to **Project** > **Settings** > **Configurations** > *your configuration* > **Server** > **Admin port**.
+
+The request needs to be of the **POST** type with **No Authorization** and the following headers:
+
+* Content-Type: **application/json**
+* X-M2EE-Authentication: **yourM2EEPassword_Base64Encoded**
+
+The M2EE password is NOT the super administrator password, but a separate password. If you have the application deployed on premises, you can set this password in the **settings.yaml** file, which is located in the **Apps/YourProject** folder. If you are running the application from the Desktop Modeler, the M2EE password is set automatically by Mendix, and you can retrieve it from the enviornment variables of your application process.
 
 Read the next sections to find out which monitoring actions are supported.
 
-## Current Executions
+## 2 Current Executions
 
 **Request**
 
@@ -87,7 +98,7 @@ This request returns the current executions of actions known by the Mendix Runti
 *   the "user" is the name of the user associated with the session executing the action. In case of a non-user session the name "System" is displayed.
 *   the "action_stack" shows the stack of actions for this execution. For each action in this stack detailed information is displayed, e.g. for a microflow the current activity and the name of the microflow are shown.
 
-## Runtime Statistics
+## 3 Runtime Statistics
 
 **Request**
 
@@ -233,7 +244,7 @@ In case you do want to develop a strategy on interpreting these pools anyway bas
 
 {{% /alert %}}
 
-## State Statistics
+## 4 State Statistics
 
 **Request**
 
@@ -268,7 +279,7 @@ In case you do want to develop a strategy on interpreting these pools anyway bas
 
 This monitoring action gives more detailed information about objects which are currently in the state of the Mendix Runtime. In "totals" the total number of objects per sessions are shown, in "user_totals" the number of objects per entity for a particular sessions are shown. This information can be an aid in figuring out which objects cause a lot of memory usage.
 
-## Server Statistics
+## 5 Server Statistics
 
 **Request**
 
@@ -307,7 +318,7 @@ The server statistics monitor action gives information about the embedded Jetty 
 
 The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](http://download.eclipse.org/jetty/stable-9/apidocs/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
 
-## Logged-In Users
+## 6 Logged-In Users
 
 **Request**
 
@@ -330,7 +341,7 @@ The "threadpool" section gives information about the threadpool of the handler w
 
 Shows which users are currently logged in. If a user has multiple sessions, this user will be list once for every session.
 
-## Thread Stack Traces
+## 7 Thread Stack Traces
 
 **Request**
 
@@ -391,7 +402,7 @@ Shows which users are currently logged in. If a user has multiple sessions, this
 
 Returns all the current thread stack traces by name. This is useful to low level analyze what is happening in the application. Use the "get_current_runtime_executions" request to retrieve information on a higher level (microflows and other actions).
 
-## Runtime Status
+## 8 Runtime Status
 
 **Request**
 
@@ -413,7 +424,7 @@ Returns all the current thread stack traces by name. This is useful to low level
 
 Returns the current Mendix Runtime status. Possible status values are: "created", "starting", "broken", "running", "stopping" and "stopped". This information can be used to track in what state the Mendix Runtime is when the command to start or stop was given or to check whether the runtime is still running.
 
-## Check Health
+## 9 Check Health
 
 **Request**
 
@@ -434,7 +445,7 @@ Returns the current Mendix Runtime status. Possible status values are: "created"
 }
 ```
 
-In the Mendix Business Modeler a [Health Microflow](project-settings) can be configured. This microflow can report on the functional status of the application. Does the general functionality of the application work? Are the necessary remote services available?
+In the Mendix Desktop Modeler a [Health Microflow](project-settings) can be configured. This microflow can report on the functional status of the application. Does the general functionality of the application work? Are the necessary remote services available?
 
 If such a Health Microflow has been configured, this request will report on the current health status. The "health" value, can be either "healthy", "sick", or "unknown" (when no health microflow was configured). In case of the value "sick", the "diagnosis" value will give the reason the application is not healthy. This reason is the return value of the Health Microflow.
 
@@ -444,7 +455,7 @@ This request can only be executed when the Mendix Runtime status is "running" (s
 
 {{% /alert %}}
 
-## About Runtime
+## 10 About Runtime
 
 **Request**
 

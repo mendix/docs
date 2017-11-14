@@ -1,6 +1,5 @@
 ---
-title: "Build an Employee Directory App Step 5: Add Employee Promotion Logic"
-space: "Mendix 7 How-To's"
+title: "Build an Employee Directory App  Step 5: Add Employee Promotion Logic"
 parent: "build-an-employee-directory-app"
 description: "Presents details on add pages to your app's UI in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
@@ -8,7 +7,7 @@ tags: ["build", "app", "developer portal", "web modeler"]
 
 ## 1 Introduction
 
-This is the fifth and final how-to in a series on creating an employee directory in the Web Modeler. In this how-to, you will learn how to add a microflow to the app and edit it in the Desktop Modeler.
+This is the fifth and final how-to in this series on creating an employee directory in the Web Modeler. In this how-to, you will learn how to add a microflow to the app and edit it in the Desktop Modeler.
 
 **This how-to will teach you how to do the following:**
 
@@ -20,7 +19,7 @@ This is the fifth and final how-to in a series on creating an employee directory
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Use the fourth how-to in this series: [How to Build an Employee Directory App Step 4: Add Pages to the User Interface](build-an-employee-directory-app-3-publish-and-view-your-app)
+* Complete the fourth how-to in this series: [How to Build an Employee Directory App Step 4: Add Pages to the User Interface](build-an-employee-directory-app-3-publish-and-view-your-app)
 
 ## 3 Adding a Promote Button to the User Interface
 
@@ -191,7 +190,7 @@ You can now promote your employees!
 
 This is the end of the tutorial. Please tell us how you liked it as well as any suggestions for improval by sharing feedback in the [Build an Employee Directory App Survey](https://www.surveymonkey.com/r/XY258CP).
 
-You are also perfectly lined up to continue with [another Mendix tutorial](index) or the [Mendix Online Introduction Course](https://learn.mendix.com/), so check those out!
+You are also perfectly lined up to continue with [another Mendix tutorial](index) or the [Become a Rapid Developer Learning Path](https://learn.mendix.com/), so check those out!
 
 ## 5 Related Content
 

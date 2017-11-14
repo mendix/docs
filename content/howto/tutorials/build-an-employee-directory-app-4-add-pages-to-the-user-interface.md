@@ -1,6 +1,5 @@
 ---
 title: "Build an Employee Directory App Step 4: Add Pages to the User Interface"
-space: "Mendix 7 How-To's"
 parent: "build-an-employee-directory-app"
 description: "Presents details on add pages to your app's UI in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
@@ -8,7 +7,7 @@ tags: ["build", "app", "developer portal", "web modeler"]
 
 ## 1 Introduction
 
-This is the fourth how-to in a series on creating an employee directory in the Web Modeler. In this how-to, you will learn how to add pages to the app.
+This is the fourth how-to in this series on creating an employee directory in the Web Modeler. In this how-to, you will learn how to add pages to the app.
 
 **This how-to will teach you how to do the following:**
 
@@ -21,7 +20,7 @@ This is the fourth how-to in a series on creating an employee directory in the W
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Use the third how-to in this series: [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app)
+* Complete the third how-to in this series: [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app)
 
 ## 3 Adding Pages to the User Interface
 
@@ -238,5 +237,4 @@ Continue on to the last part of this tutorial: [How to Build an Employee Directo
 * [How to Build an Employee Directory App Step 1: Create the App](build-an-employee-directory-app-1-create-the-app)
 * [How to Build an Employee Directory App Step 2: Build a Dashboard Page](build-an-employee-directory-app-2-build-a-dashboard-page)
 * [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app)
-* [How to Build an Employee Directory App Step 5: Promote an Employee](build-an-employee-directory-app-5-add-employee-promotion-logic)
 * [How to Build an Employee Directory App Step 5: Add Employee Promotion Logic](build-an-employee-directory-app-5-add-employee-promotion-logic)

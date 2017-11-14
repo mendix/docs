@@ -27,12 +27,12 @@ Before starting with this how-to, make sure you have completed the following pre
 
 To create your app, follow these steps:
 
-1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in if you are not already logged in. The Mendix Developer Portal is the central starting point for using, sharing, and building apps.
+1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in. The Mendix Developer Portal is the central starting point for using, sharing, and building apps.
 2. Click **Create App** in the top right of the screen:
 
     ![](attachments/build-an-employee-directory-app/create-app.png) 
 
-3. On the **Tutorials** tab, select **Build an Employee Directory App**.
+3. On the **Introduction Tour** tab, select **Build an Employee Directory App**.
 
 4. Click **Use this app**, enter a name for your application, and click **Create App**.
 5. Your app is now created! When it is ready, you will land on the **Buzz** page for the app, where you can see and share ideas as well as collaborate with your team. In the **Team** section on the right, you can see your team and invite colleagues to join the app project.
@@ -53,35 +53,9 @@ Clicking **Edit App** will open your app for editing in the Web Modeler by defau
 
 {{% /alert %}}
 
-## 5 Welcome to the Web Modeler
+You're now in the Web Modeler. Welcome! Check out the guidance to learn some tips on modeling, and then move on to the next step for creating this app: [How to Build an Employee Directory App Step 2: Build a Dashboard Page](build-an-employee-directory-app-2-build-a-dashboard-page).
 
-Are you ready to develop your app using the Web Modeler? Let's go briefly through the interface, and we will go into detail later in this tutorial.
-
-On the left side of the Web Modeler is the main menu. Via the icons in this menu, you can navigate to the following locations:
-
-* **Pages** (for the UI)
-* **Navigation Document** (for the menu)
-* **Domain Models** (for the date structure)
-* **Microflows** (for the business logic)
-* **App Settings**
-* **Theme Customizer**
-* **Feedback**
-
-You can click on the Mendix logo to go back to the **Developer Portal**.
-
-![](attachments/build-an-employee-directory-app/main-menu.png)
-
-The main window of the Web Modeler is you’ll be developing the app by editing pages, microflows, and domain models.
-
-![](attachments/build-an-employee-directory-app/main-window.png)
-
-On the right side of the Web Modeler you can find the toolbox and properties of elements you select in the editing area. The toolbox contains widgets, building blocks, or microflow activities that you can add to your app.
-
-![](attachments/build-an-employee-directory-app/toolbox.png)
-
-Great! Now you can move on to the second how-to for creating an employee directory app in the Web Modeler: [How to Build an Employee Directory App Step 2: Build a Dashboard Page](build-an-employee-directory-app-2-build-a-dashboard-page).
-
-## 6 Related Content
+## 5 Related Content
 
 * [How to Build an Employee Directory App Step 2: Build a Dashboard Page](build-an-employee-directory-app-2-build-a-dashboard-page)
 * [How to Build an Employee Directory App Step 3: Publish and View Your App](build-an-employee-directory-app-3-publish-and-view-your-app)

@@ -35,7 +35,7 @@ To configure the handling of the sensor data, follow these steps:
     c. Click **New** to add a new change item. Set the **Member** to **LatestSensorUpdate**.<br>
     d. Click **Generate** to set the **Expression value** to **Token** with **CurrentDateTime**.<br>
 5. Click **OK**. This new microflow action will allow you to see the last date a message from AWS was received on the **Shipment_Detail** page.
-6. Save the changes, click **Run Locally**, then click **View App**.
+6. Save the changes, click **Run Locally**, then click **View**.
 7. In the app, click **Subscribe** and observe the temperature chart updating as data is being pushed to the app!
 
 The sensor data handling has been configured, so go to [How to Build a Logistics IoT App Step 4: Add Another Data Dimension](build-an-iot-app-4) to learn how you can expand the app even more.

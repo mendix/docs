@@ -1,6 +1,6 @@
 ---
 title: "Environment Details"
-category: "Deploy"
+parent: "environments"
 description: "Describes the environmental details of your app."
 tags: ["Deploy","App","Environment","Developer Portal"]
 ---
@@ -17,13 +17,13 @@ To enter the **Environment details** page, go to the [Mendix Portal](http://home
 
 The view of the **General** tab depends on the Mendix Cloud version on which the app is hosted. In this tab, you can find the following information about your environment:
 
-* **Status**
+*  **Status**
    * White – the environment is stopped or was never deployed
    * Green – the environment is working correctly
    * Orange – the environment has warnings
    * Red – the environment is not working correctly
 
-   ![](attachments/environment-status.png)   
+        ![](attachments/environment-status.png)   
 
 * **Running since** date – the date on which the app was started
 * **Mode** – the type of environment (Production, Acceptance, Test)
@@ -166,7 +166,7 @@ You can perform the following actions:
 * **Edit**
 * **Delete**
 
-For more information, see [Certificates](/refguide/certificates) and [How to Configure Custom Domains](/developerportal/howto/custom-domains).
+For more information, see [Certificates](/deployment/mendixcloud/certificates) and [How to Configure Custom Domains](/developerportal/howto/custom-domains).
 
 ### 4.2 Prevent Embedding Your App in an IFrame
 
@@ -183,7 +183,7 @@ The embedding options are:
 
 You can restrict access to your application by means of Client Certificates or IP ranges.
 
-The top level path (`'`) restricts access to the entire application. Settings for specific paths override the implicitly inherited profile for the top level.
+The top level path (`/`) restricts access to the entire application. Settings for specific paths override the implicitly inherited profile for the top level.
 
 Custom access restriction profiles are managed at the application level. They can be reused for all environments (acceptance, production, etc).
 
@@ -200,7 +200,7 @@ You can **Delete** a path or you can **Add** and **Edit** a path with the follow
 * Custom Profile for Client Certificates and/or IP ranges
 * N/A (inherit)
 
-For more information, see [Converting to Path-Based Access Restrictions](/howtogeneral/mendixcloud/request-handlers-to-pbar) and [How to Restrict Access for Incoming Requests](/howtogeneral/mendixcloud/access-restrictions).
+For more information, see [How to Restrict Access for Incoming Requests](/deployment/mendixcloud/access-restrictions).
 
 ### 4.4 Outgoing Connections Certificates
 

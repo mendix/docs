@@ -43,9 +43,11 @@ This feature allows you to re-use the same page for the New and Edit buttons of 
 ### Location
 
 {{% alert type="info" %}}
-
 If the [layout](layout) of the target page has a [layout type](layout#layout-type) configured, the Location property will be removed. Instead, the layout type will determine how the page is opened. This eliminates the risk of accidentally modeling a pop-up form with a huge menu bar.
+{{% /alert %}}
 
+{{% alert type="info" %}}
+For Mendix version 5.18 and higher, this option is shown only when the target page has a layout type of Legacy. Starting with version 5.18, the way a page is shown is determined by the layout you select from the **NavigationLayouts** module and the layout type to which it has been set.
 {{% /alert %}}
 
 Location defines how the page is shown.

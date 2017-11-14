@@ -3,11 +3,12 @@ title: "Working With Object Events"
 category: "Data Models"
 tags: []
 ---
+
 When working with the Platform, objects are being created, removed, or reverted back to the original. Based on the state of the object and the 'Object Events' that are specified in the domain model, different actions are taken by the platform to guarantee data consistency. 
 
-## 1\. Create
+## 1 Create
 
-Everywhere were an object is initialized all events are always executed. The default new button, a create activity in a microflow, webservices, they will always follow the steps described in the image below.  
+Wherever an object is initialized, all the events are always executed. The default New button, a create activity in a microflow, webservices, they will always follow the steps described in the image below.  
 
 * Events: all before and after events are executed, and if any of the before create events returns false an exception can be thrown
     * If an exception occurs during an event all changes are being reverted with the default error handling behavior.
@@ -18,11 +19,12 @@ Everywhere were an object is initialized all events are always executed. The def
 
 ![](attachments/18448744/18582173.png)
 
-## 2\. Commit
+## 2 Commit
 
 When an object is being committed through a default save button, a commit activity, or webservices, it will always trigger the commit events. The platform will also evaluate all associated objects. To guarantee data consistency the platform will also auto-commit associated objects.
 
-An autocommit is an automatic commit from the platform. That is done to keep the domain model in sync. If your application ends up having autocommitted objects than you have a modeling error. Since an association is also a member of an object, the association will be stored in the database as well.
+An autocommit is an automatic commit from the platform. This is done to keep the domain model in sync. If your application ends up having autocommitted objects than you have a modeling error. Since an association is also a member of an object, the association will be stored in the database as well.
+
 That means if you create an OrderLine inside an Order, with OrderLine being the parent of the association. When you commit the OrderLine, the Order will be auto-committed.
 
 If you end up with auto-commited objects, it is always because of a modeling error. At some point in time, an association was set to a new object and the associated object was committed. Thus committing all its associations as well to keep all data consistent.
@@ -36,7 +38,7 @@ If you end up with auto-commited objects, it is always because of a modeling err
 
 ![](attachments/18448744/18582172.png)
 
-## 3\. Rollback
+## 3 Rollback
 
 Pressing a cancel button or triggering a Rollback activity will initiate the Rollback events. These actions are not triggered in case of a rollback because of an error.
 
@@ -48,7 +50,7 @@ Pressing a cancel button or triggering a Rollback activity will initiate the Rol
 
 ![](attachments/18448744/18582170.png)
 
-## 4\. Delete
+## 4 Delete
 
 Pressing a delete button or triggering a Delete activity will initiate the Delete events. Also when an object is removed through the configured delete behavior it will execute all before and after events.
 
@@ -62,7 +64,7 @@ Pressing a delete button or triggering a Delete activity will initiate the Delet
 
 ![](attachments/18448744/18582171.png)
 
-## 5\. Related content
+## 5 Related Content
 
 *   [Working with images and files](working-with-images-and-files)
 *   [Creating a basic data layer](create-a-basic-data-layer)

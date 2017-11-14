@@ -3,7 +3,7 @@ title: "Custom Settings"
 category: "Runtime"
 ---
 
-## Custom Settings
+## 1 Custom Settings
 
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by the Modeler.
 
@@ -15,7 +15,7 @@ Only use this functionality if you know exactly what you are doing. Wrong values
 
 Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`. For a more detailed list of settings and example values please consult the [fully-documented m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-## General settings
+## 2 General Settings
 
 The following custom settings can be configured:
 
@@ -40,7 +40,7 @@ The following custom settings can be configured:
 | com.mendix.core.localfilesystem.cleaning.isEnabled | **Warning: This is an experimental feature that will be replaced in the near future. This feature should not be used in production.** Enables the scheduled task to clean orphan files from the local file system. Orphan files are files in the uploaded file directory (see UploadedFilesPath setting above) which do not have a corresponding database entry. Because there is no deterministic approach to distinguish between application files and other files, it's important to avoid placing non application files in the uploaded file directory, otherwise they may be deleted as well. This setting can only be used in Mendix 6.5 and later releases. | false |
 | com.mendix.core.localfilesystem.cleaning.time | Defines the hour of the day to trigger the scheduled task to clean orphan files from the local file system. Accepted values are in the range of 1 to 24\. The default value is 24 which triggers the task at midnight. In order to avoid running many of such tasks on different instances at the same time, the exact start time can be delayed up to 30 minutes. Because this can be a memory intensive operation, it's important to configure this value such that the task runs at the low pick of the application. This setting can only be used in Mendix 6.5 and later releases. | 24 |
 
-## Log file settings
+## 3 Log File Settings
 
 The settings below influence the behavior of the log files. These settings can only be used on-premises. In the cloud these won't result in a difference in behavior.
 
@@ -50,9 +50,9 @@ The settings below influence the behavior of the log files. These settings can o
 | MaxLogFileSize | The maximum size per log file. When the log file has been reached this maximum size, the log file will be backed up and a new empty log file will be used. | 2097152 (2 MB) |
 | MaxLogFileCount | The maximum count of log files preserved (actual file plus back-up files). When the maximum count has been reached, the oldest backup file will be removed. | 10 |
 
-## Database settings
+## 4 Database Settings
 
-### Common settings
+### 4.1 Common Settings
 
 | Name | Description | Default value |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ The settings below influence the behavior of the log files. These settings can o
 | ReadCommittedSnapshot | Defines whether the READ_COMMITTED_SNAPSHOT option of Microsoft SQL Server must be enabled or not. See for more information: [Using Snapshot Isolation](http://msdn.microsoft.com/en-us/library/tcbchxcb(VS.80).aspx).
 The value can be true or false. | true |
 
-### Connection pooling
+### 4.2 Connection Pooling
 
 The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can for example define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](http://commons.apache.org/pool/) .
 
@@ -78,7 +78,7 @@ The settings below are used to define the database connection pooling behavior. 
 | ConnectionPoolingSoftMinEvictableIdleTimeMillis | Sets the minimum amount of time an object may sit idle in the pool before it is eligible for eviction by the idle object evictor (if any), with the extra condition that at least "minIdle" amount of object remain in the pool. When non-positive, no objects will be evicted from the pool due to idle time alone. | 300 000 (5 minutes) |
 | ConnectionPoolingNumTestsPerEvictionRun | Sets the max number of objects to examine during each run of the idle object evictor thread (if any). When a negative value is supplied, ceil(getNumIdle())/abs(getNumTestsPerEvictionRun()) tests will be run. I.e., when the value is -n, roughly one nth of the idle objects will be tested per run. | -3 |
 
-### Migration settings
+### 4.3 Migration Settings
 
 The settings below are used to define the source database from which all data should be copied to the main database. You have to specify the settings below only at once. The main database should exist and should be empty. During the app start-up, the data will be copied if the settings below are specified. Remove the settings afterwards, because they are not necessary anymore.
 
@@ -98,7 +98,7 @@ Possible values: HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER |   |
 | SourceDatabaseUserName | The user name for the connection to the source database. |   |
 | SourceOracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS as source. |   |
 
-## Amazon S3 storage service settings
+## 5 Amazon S3 Storage Service Settings
 
 The following settings influence the behavior of the Amazon S3 Storage Service module. Using these settings manually in the Mendix Cloud is strongly discouraged as the files stored in external systems will not be included in backups creation/restoration.
 
@@ -109,11 +109,11 @@ The following settings influence the behavior of the Amazon S3 Storage Service m
 | com.mendix.storage.s3.BucketName | Name of the bucket where the files are stored on S3. |   |
 | com.mendix.storage.s3.ResourceNameSuffix | Suffix for the keys under which objects are stored. This can be used when buckets are divided in different segments for different users with different credentials (e.g. store objects as "[key].customer1" for customer1 and as "[key].customer2" for customer2) |   |
 | com.mendix.storage.s3.PerformDeleteFromStorage | Defines whether a delete of a Mendix File Document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it's also used as a backup service. | true |
-| com.mendix.storage.s3.EndPoint | Overrides the default AWS endpoint. Use this setting when the storage service is on a non-AWS location. Both the endpoint (e.g. 's3.example.com') or the full URL, including the protocol, are supported (e.g. '<a rel="nofollow">https://s3.example.com').</a> Note that when setting a custom endpoint path style access will be enabled. [Click here for more information.](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)) |   |
+| com.mendix.storage.s3.EndPoint | Overrides the default AWS endpoint. Use this setting when the storage service is on a non-AWS location. Both the endpoint (e.g. `s3.example.com`) or the full URL, including the protocol, are supported (e.g. `https://s3.example.com`). Note that when setting a custom endpoint path style access will be enabled. [Click here for more information.](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)) |   |
 | com.mendix.storage.s3.UseV2Auth | Let the authentication policy use 'Signature Version 2' instead of the default 'Signature Version 4'. Set this setting to 'true' when the endpoint does not support 'Signature Version 4'. | false |
 | com.mendix.storage.s3.EncryptionKeys | List of keys which can be used to encrypt and decrypt data at rest in S3\. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: ![](attachments/Custom+Settings/code_snippet_2.png) |   |
 
-## Microsoft Azure SQL
+## 6 Microsoft Azure SQL
 
 {{% alert type="info" %}}
 
@@ -133,7 +133,7 @@ First you need to create an Azure SQL database (for information on how to do thi
 | DatabaseUserName | your-username |   |
 | DatabasePassword | your-password |   |
 
-## Microsoft Azure Blob Storage Settings
+## 7 Microsoft Azure Blob Storage Settings
 
 {{% alert type="info" %}}
 
@@ -151,7 +151,7 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created in case it does not exist yet. |   |
 | com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
 
-## IBM Bluemix Object Storage Settings
+## <a name="ibm"></a>8 IBM Bluemix Object Storage Settings
 
 {{% alert type="info" %}}
 
@@ -176,7 +176,7 @@ Note that unlike other storage services, IBM Bluemix does not provide server-sid
 | com.mendix.storage.swift.credentials.Password | Password |   |
 | com.mendix.storage.swift.credentials.Region | Region |   |
 
-## Web client settings
+## 9 Web Client Settings
 
 The following settings influence the behavior of the Mendix web client.
 
@@ -187,7 +187,7 @@ The following settings influence the behavior of the Mendix web client.
 | TabletUserAgentRegEx | Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a tablet. The regular expression is matched against the User-Agent header sent by the client's web browser. | Android, iPad |
 | com.mendix.webui.HybridAppLoginTimeOut | Determines how many minutes your token will remain valid before re-authenticating using your full credentials. This setting defaults to -1, which is equal to no timeout. | -1 |
 
-## Parallelism settings
+## 10 Parallelism Settings
 
 {{% alert type="warning" %}}
 

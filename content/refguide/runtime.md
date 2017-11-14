@@ -6,7 +6,7 @@ The Mendix Runtime executes the model created in the Modeler. It serves pages to
 
 ## Licensing
 
-You need a license to run an application in production mode. Without a license the Mendix Runtime stops operating after a couple of hours. A license can be obtained through your account manager at Mendix. Afterwards, you can activate your license by following the instructions in [How to Activate Your Mendix License on Microsoft Windows](/howto7/on-premises-deployment/activate-a-mendix-license-on-microsoft-windows).
+You need a license to run an application in production mode. Without a license the Mendix Runtime stops operating after a couple of hours. A license can be obtained through your account manager at Mendix. Afterwards, you can activate your license by following the instructions in [How to Activate Your Mendix License on Microsoft Windows](/deployment/on-premises/activate-a-mendix-license-on-microsoft-windows).
 
 ## API
 
@@ -25,7 +25,7 @@ The runtime logs activity at different levels. You can read more about logging a
 ## Main Documents in This Category
 
 * [Clustered Mendix Runtime](clustered-mendix-runtime)
-* [Custom Settings](custom-settings)
+* [Customization](custom-settings)
 * [Data Storage](data-storage)
 * [DateTime Handling FAQ](datetime-handling-faq)
 * [Logging](logging)

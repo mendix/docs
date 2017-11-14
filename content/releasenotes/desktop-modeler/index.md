@@ -7,6 +7,9 @@ frontpage_featured: true
 
 These are the release notes for the Mendix Desktop Modeler:
 
+* [7.8](7.8)
+* [7.7](7.7)
+* [7.6](7.6)
 * [7.5](7.5)
 * [7.4](7.4)
 * [7.3](7.3)
@@ -58,7 +61,7 @@ These are the release notes for the Mendix Desktop Modeler:
 
 {{% alert type="info" %}}
 
-The known issues for each release are described in [Known Issues](known-issues).
+The known issues for each release are described in [Desktop Modeler Known Issues](known-issues).
 
 {{% /alert %}}
 

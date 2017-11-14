@@ -131,4 +131,4 @@ To generate the app store packages, go to [Build.PhoneGap.com](https://build.pho
 * [Offline](https://docs.mendix.com/refguide/offline)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Adobe PhoneGap Build](https://build.phonegap.com/)
-* [Apache Cordova Phonegap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/).
+* [Apache Cordova Phonegap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

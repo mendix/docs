@@ -1,6 +1,6 @@
 ---
 title: "Trends in Mendix Cloud v3"
-category: "Operate"
+parent: "metrics"
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v3."
 tags: ["Trends","v3","Mendix Cloud","Developer Portal"]
 ---
@@ -15,7 +15,7 @@ To view the **Trends** you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
 
-Note that only the [Technical Contact](../settings/technical-contact) is allowed to grand the node permissions.
+Note that only the [Technical Contact](../general/technical-contact) is allowed to grand the node permissions.
 
 {{% /alert %}}
 
@@ -162,10 +162,11 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 
 ## 6 Related content
 
-*   [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
-*   [How to deploy a Mendix app on Azure](/howtogeneral/mendixcloud/how-to-deploy-a-mendix-app-on-azure)
-*   [How to Deploy to the Mendix Cloud](../howto/deploying-to-the-cloud)
-*   [Sending Email](/howtogeneral/mendixcloud/sending-email)
-*   [Alerts](monitoring-application-health)
-*   [Different user logins when integrated with Mendix SSO](/howtogeneral/mendixcloud/different-user-logins-when-integrated-with-mendix-sso)
-*   [Integrate your app with Mendix SSO](/howtogeneral/mendixcloud/integrate-your-app-with-mendix-sso)
+* [Alerts](monitoring-application-health)
+* [Database Maintenance: Size Reduction](/howtogeneral/support/database-maintenance-size-reduction)
+* [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
+* [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
+* [How to Migrate to Mendix Cloud v4](/deployment/mendixcloud/migrating-to-v4)
+* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
+* [How to View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region)
+* [Mendix Cloud v4 - FAQ](/deployment/mendixcloud/mxcloudv4)

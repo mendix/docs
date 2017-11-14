@@ -60,3 +60,9 @@ You can view your own submitted feedback items in the feedback list in your prof
 3. Go to the **Feedback** tab:
 
     ![](attachments/collaborate/feedbackoverview.jpg)
+
+## 5 Related Content
+
+* [Feedback](/developerportal/collaborate/feedback)
+* [Mendix Profile](/developerportal/general/mendixprofile)
+* [How to Use the Feedback Widget](gathering-user-feedback)

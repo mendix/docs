@@ -4,6 +4,7 @@ category: "Runtime"
 description: "This page describes the impact and its behavior of running Mendix Runtime as a Cluster. Using the Cluster functionality you can setup your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture."
 tags: ["runtime", "cluster", "load balancer", "failover", "pivotal"]
 ---
+
 This page describes the impact and its behavior of running Mendix Runtime as a Cluster. Using the Cluster functionality you can setup your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture.
 
 Mendix 7 contains a completely new build approach for clustering. The main feature enabling this is the stateless runtime architecture. This means that the dirty state (the non-persistable entity instances and not yet persisted changes) are not stored on the server but on the client. This enables much easier scaling of the Mendix Runtime as each cluster node can handle any request from the client. The stateless runtime architecture also allows for better dirty state maintainability and better insight in session state.
@@ -24,13 +25,14 @@ This means that a Mendix Cluster requires a Load Balancer to distribute the load
 
 The above depicted infrastructure is supported in an easy way in Pivotal Web Services. Pivotal Web Services allows easy scaling by increasing the number of running nodes for your app and provides a built-in load balancer for accessing the nodes.
 
-Deploying your application into Pivotal Web Services is described on this page: [Deploying a Mendix App to Pivotal](/howto7/cloud-foundry/deploy-a-mendix-app-to-pivotal).
+Deploying your application into Pivotal Web Services is described on this page: [Deploying a Mendix App to Pivotal](/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal).
 
 Scaling out can be done using the Pivotal App Manager. Using the Pivotal App Manager is documented in the [Pivotal Webservices Documentation](http://docs.run.pivotal.io/console/dev-console.html).
 
 ## Cluster Leader, Cluster Slaves
 
 Mendix Runtime has the concept of a Cluster Leader. This is a single node within a Mendix Runtime Cluster that performs cluster management activities. Those activities are:
+
 * `Session Expiration handling` - removing sessions after they have expired (not been used for a configured timespan)
 * `Cluster node expiration handling` - removing cluster nodes after they have expired (not giving a heartbeat for a configured timespan)
 * `Background job expiration handling` - removing data about background jobs after the information has expired (older than a specific timespan)

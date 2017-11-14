@@ -14,6 +14,8 @@ title: "Enter the title of the document"
 
 {Describe the UI elements (for example, pages, widgets). Describe all the properties and features for each UI element.}
 
+![](attachments/{sub-folder with same name as doc file}/{image filename}.png)
+
 ### 2.1 {Title of Section}
 
 {Use sub-headings for more detail.}

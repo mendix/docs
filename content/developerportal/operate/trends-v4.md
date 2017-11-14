@@ -1,6 +1,6 @@
 ---
 title: "Trends in Mendix Cloud v4"
-category: "Operate"
+parent: "metrics"
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
 tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 ---
@@ -30,7 +30,7 @@ To assign this permission, follow these steps:
 
     ![](attachments/nodepermission.jpg)
 
-## 2 Viewing the Trends
+## 3 Viewing the Trends
 
 You can find the trends by following these steps:
 
@@ -42,11 +42,11 @@ You can find the trends by following these steps:
 
     ![](attachments/environment.jpg)
 
-## 3 Application Statistics
+## 4 Application Statistics
 
 This section explains the metrics that represent the current status and statistics of a running Mendix application. This includes requests that the application processes from the services/clients with which it's integrated as well as actions it performs on its own database, Java Virtual Machine-related statistics, and the Jetty Web server it uses.
 
-## <a name="Trends-appmxruntimerequests"></a>3.1 Number of Handled External Requests
+### <a name="Trends-appmxruntimerequests"></a>4.1 Number of Handled External Requests
 
 The requests graph shows the number of requests that are sent from the client or systems that integrate with your application using web services. The number of requests per second is split up by request handlers.
 
@@ -73,7 +73,7 @@ Request Type | Explanation
 **ws/** | SOAP webservice call request handler.
 **xas/** | Request handler used by the Mendix Runtime itself.
 
-### <a name="Trends-appmxruntimeconnectionbus"></a>3.2 Number of Database Queries Being Executed
+### <a name="Trends-appmxruntimeconnectionbus"></a>4.2 Number of Database Queries Being Executed
 
 This graph shows the number of database queries that are executed by your Mendix application, broken down in queries that actually modify data (insert, update, delete), queries that fetch data (select), and the number of transactions (like microflows from which these queries originate).
 
@@ -87,7 +87,7 @@ Type | Explanation
 **select** | Amount of SQL `SELECT` statements per second. The SQL `SELECT` statement is used to fetch the data from a database table that returns this data in the form of a result table.
 **delete** | Amount of SQL `DELETE` statements per second. The SQL `DELETE` query is used to delete the existing records from a table.
 
-### <a name="Trends-appmxruntimesessions"></a>3.3 User Accounts and Login Sessions
+### <a name="Trends-appmxruntimesessions"></a>4.3 User Accounts and Login Sessions
 
 The sessions graph shows the number of logged-in named and anonymous user sessions for your application, next to the total number of existing login accounts in the application.
 
@@ -99,7 +99,7 @@ User Type | Explanation
 **concurrent named user sessions** | Total number of named login sessions that are occurring at that moment.
 **concurrent anonymous user sessions** | Total number of anonymous login sessions that are occurring at that moment.
 
-### <a name="Trends-appmxruntimejvmheap"></a>3.4 JVM Object Heap
+### <a name="Trends-appmxruntimejvmheap"></a>4.4 JVM Object Heap
 
 The JVM Object Heap graph shows the internal distribution of allocated memory inside the application process for objects that are in use by microflows, scheduled events, and all other data that flows around inside the Mendix Runtime process.
 
@@ -116,7 +116,7 @@ Object Type | Explanation
 **eden space** | The pool from which memory is initially allocated for most objects.
 **unused** | Unused JVM heap memory.
 
-### <a name="Trends-appmxruntimejvmprocessmemory"></a>3.5 JVM Process Memory Usage
+### <a name="Trends-appmxruntimejvmprocessmemory"></a>4.5 JVM Process Memory Usage
 
 This second graph about JVM memory is similar to the previous graph, JVM Object Heap. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process. This graph is currently present to provide more insight in situations in which the part of the real used memory outside the JVM Object Heap is growing too much, causing problems with memory shortage in the operating system.
 
@@ -137,7 +137,7 @@ Type | Explanation
 **other** | Virtual or reserved memory space.
 **thread stacks** | Stacks that are reserved for unique threads.
 
-### <a name="Trends-appm2eeserverthreadpool"></a>3.6 Threadpool for Handling External Requests
+### <a name="Trends-appm2eeserverthreadpool"></a>4.6 Threadpool for Handling External Requests
 
 The application server thread pool graph shows the number of concurrent requests that are being handled by the Mendix Runtime, but only when they're initiated by a remote API (like the way the normal web-based client communicates) or by calling web services. Because creating a new thread that can concurrently process a request is an expensive operation, there's a pool of threads being held that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
 
@@ -150,19 +150,19 @@ Type | Explanation
 **active threads** | Active threads that are being used within the Jetty threadpool.
 **threadpool size** | The current total size of the Jetty threadpool.
 
-### <a name="Trends-appmxruntimethreads"></a>3.7 Total Number of Threads in the JVM Process
+### <a name="Trends-appmxruntimethreads"></a>4.7 Total Number of Threads in the JVM Process
 
 This graph shows the total number of threads that exist inside the running JVM process. Besides the threadpool that is used for external HTTP requests (as shown above), this includes the threadpool used for database connections, internal processes inside the Mendix Runtime, and optional extra threads created by the application itself (for example, using a threadpool in a custom module or custom Java code).
 
-### <a name="Trends-appmxruntimecache"></a>3.8 Object Cache
+### <a name="Trends-appmxruntimecache"></a>4.8 Object Cache
 
 Mendix 4.0 introduced non-persistent entities that live in the JVM memory and are garbage-collected regularly. If you have a memory leak, the number of objects in memory will grow over time. This might be a problem. In this graph, you can monitor the number of Mendix objects that live in memory.
 
-## 4 Database Statistics
+## 5 Database Statistics
 
 In this section you will find the statistics about the database that the application uses.
 
-### <a name="Trends-dbpgstatdatabaseVERSIONmain"></a>4.1 Mutations
+### <a name="Trends-dbpgstatdatabaseVERSIONmain"></a>5.1 Mutations
 
 This graph shows the number of database objects that were actually changed by database queries from the application. A single database operation that affects more than one object, will show up as single database query as measured from the application side, but will show the number of object actually changed here, as measured from inside the database.
 
@@ -176,7 +176,7 @@ Type | Explanation
 **tuples updated** | Number of tuples updated per second.
 **tuples deleted** | Number of tuples deleted per second.
 
-### <a name="Trends-dbpgtableindexsizeVERSIONmain"></a>4.2 Index vs. Table Size
+### <a name="Trends-dbpgtableindexsizeVERSIONmain"></a>5.2 Index vs. Table Size
 
 This database size graph shows the distribution between disk space used for storing indexes and actual data. Remember, indexes actually occupy memory space and disk storage, as they're just parts of your data copied, stored, and sorted in another way! Besides your data, indexes also have to be read into the system memory to be able to use them.
 
@@ -187,29 +187,29 @@ Type | Explanation
 **tables** | Amount of space taken by the tables in the database.
 **indexes** | Amount of space taken by the indexes in the database.
 
-### 4.3 Application Node
+### 5.3 Application Node
 
 The application node is the isolated and secure machine on which your application runs.
 
 This section presents crucial information about this machine.
 
-#### <a name="Trends-appcpu"></a>4.3.1 CPU
+#### <a name="Trends-appcpu"></a>5.3.1 CPU
 
 The CPU graph shows the amount of CPU utilization in percentage, broken down into different types of CPU usage.
 
 The most important value in here is **user**, which shows the amount of CPU time used for handling requests at Mendix Runtime as well as executing microflows and scheduled events. CPU usage of the database is shown in a separate graph below.
 
-#### <a name="Trends-appmemory"></a>4.3.2 Memory
+#### <a name="Trends-appmemory"></a>5.3.2 Memory
 
 The memory graph shows the distribution of operating system memory that is available for this server. The most important part of the graph is the application process, which is visible as an amount of memory that is continuously in use, labelled in the category **apps**.
 
-### 4.4 Database Node
+### 5.4 Database Node
 
 The database node is the isolated and secure machine on which your application runs.
 
 This section presents crucial information about this machine.
 
-#### <a name="Trends-dbcpu"></a>4.4.1 CPU
+#### <a name="Trends-dbcpu"></a>5.4.1 CPU
 
 The CPU graph shows the amount of CPU utilization in percentage, broken down into different types of CPU usage.
 
@@ -220,7 +220,7 @@ The most important values here are the following:
 
 Clearly visible amounts of **iowait** in combination with a high number of disk read operations (Disk IOPS) and all free system memory filled as disk cache (Memory graph) is a sign of a lack of available server memory for use as disk cache. This situation will slow down database operations tremendously, because getting data from the disk over and over again takes considerably more time than having it present in the memory.
 
-#### <a name="Trends-dbmemory"></a>4.4.2 Memory
+#### <a name="Trends-dbmemory"></a>5.4.2 Memory
 
 The memory graph shows the distribution of operating system memory that is available for this server. The most important part of this graph is the **cache** section. This type of memory usage contains parts of the database storage that have been read from disk earlier. It is crucial to the performance of an application that parts of the database data and indexes that are referenced a lot are always immediately available in the working memory of the server, at the cache part. A lack of disk cache on a busy application will result in continuous re-reads of data from disk, which takes several orders of magnitude more time, slowing down the entire application.
 
@@ -232,15 +232,15 @@ Type | Explanation
 **freeable memory** | The amount of available random access memory.
 **swap usage** | The amount of swap space used on the database instance.
 
-#### <a name="Trends-dbpgstatactivityVERSIONmain"></a>4.4.3 Database Connections
+#### <a name="Trends-dbpgstatactivityVERSIONmain"></a>5.4.3 Database Connections
 
 The database connections graph shows the number of connections to the PostgreSQL server. This should go up and down with the usage of the application. The number of connections is limited to 50.
 
-## <a name="Trends-dbdiskstatsiops"></a>5 Both Application and Database Node
+## <a name="Trends-dbdiskstatsiops"></a>6 Both Application and Database Node
 
 Shared statistics for both of the machines.
 
-### <a name="Trends-appdiskstatsiops"></a>5.1 Disk IOPS
+### <a name="Trends-appdiskstatsiops"></a>6.1 Disk IOPS
 
 The disk IO statistics show the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 
@@ -251,19 +251,19 @@ Type | Explanation
 **read** | Read ops on the current targeted file storage.
 **write** | Write ops on the current targeted file storage.
 
-### <a name="Trends-appload"></a><a name="Trends-dbload"></a>5.2 Load
+### <a name="Trends-appload"></a><a name="Trends-dbload"></a>6.2 Load
 
 This value is commonly used as a general indication for overall server load that can be monitored and alerted upon. The load value is a composite value, calculated from a range of other measurements, as shown in the other graphs on this page. When actually investigating high server load, this graph alone is not sufficient.
 
-### <a name="Trends-appdiskstatslatency"></a><a name="Trends-dbdiskstatslatency"></a>5.3 Disk Latency
+### <a name="Trends-appdiskstatslatency"></a><a name="Trends-dbdiskstatslatency"></a>6.3 Disk Latency
 
 The disk latency graph shows the average waiting times for disk operations to complete. Interpreting the values in this graph should be done in combination with the other disk stats graphs, and while having insight in the type of requests that done. Sequential or random reads and writes can create a different burden for disk storage.
 
-### <a name="Trends-appdiskstatsthroughput"></a><a name="Trends-dbdiskstatsthroughput"></a>5.4 Disk Throughput
+### <a name="Trends-appdiskstatsthroughput"></a><a name="Trends-dbdiskstatsthroughput"></a>6.4 Disk Throughput
 
 Disk throughput shows the amount of data that is being read from and written to disk. If there's more than one disk partition in the system, the `/srv` partition generally contains the project files and uploaded files of the application, while `/var` generally holds the database storage.
 
-### <a name="Trends-appdfabs"></a><a name="Trends-dbdfabs"><a name="Trends-dbdf"><a name="Trends-appdf"></a>5.5 Disk Usage
+### <a name="Trends-appdfabs"></a><a name="Trends-dbdfabs"></a><a name="Trends-dbdf"><a name="Trends-appdf"></a>6.5 Disk Usage
 
 This graph displays the amount of data that is stored on disk in absolute amounts. If there's more than one disk partition in the system, the `/srv` partition generally holds project files and uploaded files of the application, while `/var` generally holds the database storage.
 
@@ -273,7 +273,10 @@ Disk utilization shows the percentage of time that the disk storage is busy proc
 
 ## 6 Related Content
 
-*   [How to Calculate the Total Amount of Diskspace of a Cloud App Environment](/howtogeneral/support/how-to-calculate-diskspace-of-a-cloud-app-environment)
-*   [How to Deploy Your Licensed App to the Cloud](../howto/deploying-to-the-cloud)
-*   [How to Migrate to Mendix Cloud v4](../howto/migrating-to-v4)
-*   [Alerts](monitoring-application-health)
+* [Alerts](monitoring-application-health)
+* [How to Configure Maintenance Windows](/developerportal/howto/maintenance-windows)
+* [How to Migrate to Mendix Cloud v4](/deployment/mendixcloud/migrating-to-v4)
+* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
+* [How to View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region)
+* [Mendix Cloud v4 - FAQ](/deployment/mendixcloud/mxcloudv4)
+

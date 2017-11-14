@@ -11,17 +11,14 @@ This how-to is about using the Mobile Slider widget in your Mendix hybrid mobile
 *   How the mobile slider custom widget works.
 *   How to configure your Mendix project to use the mobile slider widget.
 
-## 1. Preparation
+## 1 Preparation
 
 Before you start building your Mendix hybrid mobile project with the Mobile Slider custom widget make sure you have the following programs installed:
 
-*   [Mendix Business Modeler](https://appstore.home.mendix.com/link/modelers)
+*   [Mendix Modeler](https://appstore.home.mendix.com/link/modelers)
 *   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a how-to about this software here](getting-started-with-the-widget-development-plugin-for-adobe-brackets).
-*   Also please read the "Hello World" how-to on creating a new widget based on the "AppStoreWidgetBoilerplate". [You can find a how-to about setting up a "Hello World" custom widget here](create-a-basic-hello-world-custom-widget).
 
-
-
-## 2\. Downloading the test project
+## 2 Downloading the Test Project
 
 We have prepared a Mendix hybrid mobile project on GitHub for you with all the settings and widgets you need. 
 
@@ -30,9 +27,7 @@ We have prepared a Mendix hybrid mobile project on GitHub for you with all the s
 3.  You can find the test project in the **"test"** directory fully configured and ready to use.
 4.  The app is available on [http://localhost:8109/](http://localhost:8109/) once you start running it in Mendix.
 
-
-
-## 3\. What does the mobile slider do?
+## 3 What Does the Mobile Slider Do?
 
 The mobile slider lets you define slides on a page that people can view when they swipe left or right to go to back and forth through the page(s). Take a look at the following screenshots to see the effect:
 
@@ -44,9 +39,7 @@ Notice that the background also moves to the left. This is possible with the ext
 
 The source code for all these widgets is freely available on the GitHub repository for you to use and to examine. 
 
-
-
-## 4\. What can you find inside the project?
+## 4 What Can You Find Inside the Project?
 
 We have created a MobileSlider module inside the MobileSlider project that has all the pages for "Phone", "Tablet" and "Desktop" configured. All the users are defined including their security settings.
 
@@ -58,9 +51,7 @@ On this layout you will find the **GreenSock** and **MobileSliderBackground** wi
 These widgets are required on the layout for the MobileSlider widget to function. So also include them in your own project.
 Inside the MobileSlider module you will also find the images used to create the interface. We have also used the Yeti theme from the Mendix AppStore as a base for your project, and altered it a bit. The CSS changes can be found in the theme folder in the file "theme\ui\theme-yeti\css\mendix-custom.css".
 
-
-
-## 5\. Adding Sliders to a Page
+## 5 Adding Sliders to a Page
 
 The MobileSlider widget needs at least one page that has containers with the CSS classname "mx-slide".
 This allows the widget to cut the page up into viewports that display the content of the container.
@@ -75,9 +66,7 @@ Each container has a classname "mx-slide":
 
 Notice that all logic in Mendix still works! So a listening dataview on a datagrids still works. It is advised though to use the listview instead in mobile designs. This is better from a UX perspective. Also don't use the standard "Cancel" button in your detail view. This will close the page and destroy the slide in your MobileSlider.
 
-
-
-## 6\. Configuring the MobileSlider widget
+## 6 Configuring the MobileSlider Widget
 
 The MobileSlider custom widget needs to be placed inside a dataview that creates or gets an entity.
 This entity is passed to the page you select that has slides. 
@@ -99,9 +88,7 @@ You can also use one page as your main slide.
 
 ![](attachments/18448563/18579829.png)
 
-
-
-## 7\. Interesting feature
+## 7 Interesting Feature
 
 As promised in my previous how-to [Creating a Chainable Widget](create-a-chainable-custom-widget) I would create a custom widget that is able to communicate to another custom widget with custom events. 
 
@@ -139,22 +126,15 @@ $('#mx-slider-background-layer').on('mx.slide.set.background', lang.hitch(this, 
 }));
 ```
 
-
-
-## 8\. Conclusion
+## 8 Conclusion
 
 I encourage you to download all the source files from the GitHub repository and dive right into the goodies that these widgets provide. It will show you how powerful the Mendix platform can be, extended with new UX features.
 
-
-
-## 9\. Related content
+## 9 Related Content
 
 *   [Creating a chainable Custom Widget](create-a-chainable-custom-widget)
 *   [Getting started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-*   [Creating a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
 *   [The Mobile Slider Custom Widget](the-mobile-slider-custom-widget)
-
-
 
 Some interesting websites, books, and articles you might want to read next to dive into the source code of the AppStoreWidgetBoilerplate and the MobileSlider custom widget code base:
 

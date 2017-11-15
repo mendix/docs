@@ -9,7 +9,7 @@ The hybrid mobile app publishing process is based on Adobe PhoneGap. Manually us
 
 This how-to leads you step-by-step through the process of packaging your Mendix App as a hybrid mobile app that you can then deploy on your iOS developer device or publish in the Apple App Store.
 
-## 1\. Preparation
+## 1. Preparation
 
 You require the following before you can build hybrid mobile packages of your apps:
 
@@ -20,7 +20,7 @@ You require the following before you can build hybrid mobile packages of your ap
 *   An iOS deployment certificate for which your test device is activated. You need both a ".p12" certificate file and a ".mobileprovision" profile file.  [Find out how to obtain app signing keys](/refguide5/managing-app-signing-keys).
 *   Apple iTunes installed on your computer, so that you can deploy the produced iOS package on your test device.
 
-## 2\. Starting the packaging process
+## 2. Starting the packaging process
 
 Before starting, make sure you have a Mendix App with mobile support enabled running in the Mendix Cloud, either in a Community Edition Sandbox or in a licensed cloud node. If you do not have one ready yet, set up the Company Expenses app from the Mendix App Store in a Sandbox to try out its mobile features.
 
@@ -67,7 +67,7 @@ First, open the "Publish for Mobile App Stores" page in the Mendix Developer Por
 
 After you have been redirected back to the Mendix Developer Portal, the packaging process will continue, and you will have to set up the proper signing keys for your app.
 
-## 3\. Setting up App Signing Keys
+## 3. Setting up App Signing Keys
 
 You will see the "PhoneGap Build: Signing Key Required" page. It asks you to go to PhoneGap Build and set up the signing keys.
 
@@ -89,7 +89,7 @@ You will see the "PhoneGap Build: Signing Key Required" page. It asks you to go 
 
 Now your PhoneGap Build account is ready and you can continue the packaging process.
 
-## 4\. Completing the packaging process
+## 4. Completing the packaging process
 
 Complete the packaging process in the Mendix Developer Portal:
 
@@ -99,7 +99,7 @@ Complete the packaging process in the Mendix Developer Portal:
     You are presented with a page showing the build status of your apps titled "Building Mobile App Store Packages". It will show a status of "Building..." while PhoneGap Build is processing your app. Once ready, it will show a status of "Done" and a button is available to start the download of your iOS package.
 3.  When the build process is done click the "Download iOS package" button and save the package (.ipa file) to your computer.
 
-## 5\. Installing the iOS app to your test device
+## 5. Installing the iOS app to your test device
 
 You can now deploy your app to your test device. An easy way to do this is with Apple iTunes:
 
@@ -119,13 +119,13 @@ You can now deploy your app to your test device. An easy way to do this is with 
 Click "Apply" at the bottom to execute the actual installation.
 The app should now be visible on your device. Open it and log in to your app with a regular user account (set one up in the Mendix App in your desktop browser if you have not done so yet).
 
-## 5\. Examples
+## 5. Examples
 
 ** How to build a Phonegap app in the cloud **
 
 {{% youtube 7ic625u2YJE %}}
 
-## 6\. Related content
+## 6. Related content
 
 *   [Mobile](mobile)
 *   [Deploy your first Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)

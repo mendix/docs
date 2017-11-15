@@ -25,9 +25,9 @@ Select an entity on which to base the message definition. Using this message def
 
 The structure tree shows the attributes of the entity. Check all the attributes that are part of the message.
 
-The **External name** is the name of the XML node or the JSON property for that attribute. You may leave it empty; the default value is the name in the first column.
+The **External name** is the name of the XML node or the JSON property. You may leave it empty to use the default value. When the occurrence is 0..1, the default value is the name in the first column. When the occurrence is 0..*, the default value is the name in the first column plus the letter 's'. 
 
-The **Plural name** only applies to XML, and only applies to the root entity. When dealing with a list, this XML node name will be used as the root. You may leave it empty; the default value is the entity name + `s`.
+The **External item name** only applies to XML, and only when the occurrence is 0..*. This is the name of the XML node of the items in the list. You may leave it empty; the default value is name in the first column.
 
 ## 3 Documentation
 

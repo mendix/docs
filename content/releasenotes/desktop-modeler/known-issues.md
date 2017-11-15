@@ -19,7 +19,6 @@ For details on this release, see [7.6 release notes](7.6).
 
 * When retrieving an entity with a virtual attribute without using a schema ID, references are not returned. This impacts the following scenarios: a template grid containing an entity with a virtual attribute will not show any data over an association (for example, nested data views); and custom widgets requesting Mendix objects with a virtual attribute through XPath will have no access to their associations. (Ticket 56016)
   * Fixed in [7.7.1](7.7#RN771).
-* Offline pages containing custom widgets might fail to render in the following scenarios: the user logs in (not as anonymous user) into an offline app, uses the app and logs out; the Mendix app is redeployed with a change that removes all instances of a custom widget used in the offline app; the user starts app again, selects "No" when asked to update the app, logs in, and navigates to the page that contains the custom widget; and the widget is not rendered.
 * When a text widget has a placeholder for an enumeration attribute, the name of the enumeration is displayed instead of the caption. (Ticket 58848)
 
 ## 7.5
@@ -98,7 +97,4 @@ For details on this release, see [7.0 release notes](7.0).
 * In certain situations, OnChange microflows may not reflect changes done in the UI. Instead, an older version of the object will be used.
   * Fixed in [7.3.0](7.3).
 * Some users working on Windows 7 and 8.1 might experience issues during installation of the .NET Framework bundled with the Modeler installer. Installing .NET Framework from the [official Microsoft website](https://www.microsoft.com/en-us/download/details.aspx?id=53345) resolves these issues.
-* Upgrading an anonymous user to a signed-in user does not transfer the state yet.
-* In calculated attribute microflows, objects associated with `$currentUser` or `$currentSession` cannot be retrieved in the calculated microflow if the association has not been committed to the database.
-* When triggering multiple microflows from the client concurrently that commit the same new object, you might get a “duplicate key violation” exception. This is due to a race condition. Triggering the microflow again should not raise an exception again. You can avoid this issue by configuring a blocking progress bar for the button or by using the **Disabled during action** property.
 * Disallowing concurrent execution of microflows in a multi-node cluster environment does not work. The feature still works on a single node.

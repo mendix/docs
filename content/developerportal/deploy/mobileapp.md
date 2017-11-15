@@ -124,7 +124,13 @@ For detailed instructions, see the [hybrid-app-template GitHub repository](https
 
 To generate the app store packages, go to [Build.PhoneGap.com](https://build.phonegap.com/).
 
-## 5 Related Content
+## 5 Examples
+
+** How to build a Phonegap app in the cloud **
+
+{{% youtube 7ic625u2YJE %}}
+
+## 6 Related Content
 
 * [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)   
 * [Deploy](/developerportal/deploy)

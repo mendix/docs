@@ -114,7 +114,13 @@ To install the iOS app on your test device, follow these steps:
 
 The app should now be visible on your device. Open it and log in to the app with a regular user account (set one up in the Mendix app in your desktop browser if you have not done so yet).
 
-## 7 Related Content
+## 7 Examples
+
+** How to build a Phonegap app in the cloud **
+
+{{% youtube 7ic625u2YJE %}}
+
+## 8 Related Content
 
 * [Mobile How-To's](../mobile/)
 * [How to Deploy your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)

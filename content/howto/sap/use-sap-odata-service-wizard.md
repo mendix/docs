@@ -42,7 +42,7 @@ With the file available visit the <a href="http://swissbeaver.mendixcloud.com" t
 4. Press the Generate .mpk button.
 A progress bar will be shown during parsing and generation of the module.
 
-5. Once the generation is done the Download button appears. See that the file name of your module is extracted from the metadata file itself.
+5. Once the generation is done the Download button appears. Notice that the file name of your module is extracted from the metadata file itself.
 ![download](attachments/use-sap-odata-service-wizard/download_metadata.png)
 
 
@@ -58,9 +58,4 @@ You now have your service HCM\_PEOPLE\_PROFILE\_SRV module available in your pro
 
 For more information, see [Import Project Package](/refguide/import-project-package-dialog).
 
-
-## 4 Additional information
-
-
-* [SAP Service Modules](/refguide/sap/sap-service-modules)
-* [SAP OData Connector](/refguide/sap/sap-odata-connector)
+Now you are ready to use the imported Service Module together with the SAP OData Connector which is explained in [Use the SAP OData Connector](/howto/sap/use-sap-odata-connector).

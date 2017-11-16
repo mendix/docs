@@ -28,7 +28,7 @@ For details on this release, see [7.5 release notes](7.5).
 ### <a name="KI751"></a>7.5.1
 
 * For Atlas-based apps, it is not possible to use the **Generate page** functionality for buttons in the **Tablet** and **Phone** profiles. The **Create Page** dialog box shows no selectable page templates for these profiles.
-  * Fixed in [7.7.1](7.7)
+  * Fixed in [7.7.1](7.7).
 
 ### <a name="KI750"></a>7.5.0
 

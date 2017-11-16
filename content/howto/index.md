@@ -1,5 +1,5 @@
 ---
-title: "Mendix 7 How-To's"
+title: "Mendix 7 How-to's"
 notoc: true
 description: "Step-by-step guides on various Mendix topics that will teach you how to build and customize apps."
 ---

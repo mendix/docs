@@ -8,9 +8,9 @@ title: "Platform Portal"
 
 #### Improvements
 
-* When creating a Deployment Package from TeamServer, the dialog now shows branches in case-insensitive order, which makes more sense to our users.
-* Mendix Cloud v4 Alert Status showed `UNKNOWN` sometimes due to an error. This was fixed and the correct status is shown.
-* In the Deploy/Operate/Backups tabs, you can *finally* use the `Enter` key to submit your Two-Factor-Authentication code. Happy typing!
+* When creating a deployment package from Team Server, the dialog box now shows branches in case-insensitive order, which makes more sense for users.
+* Mendix Cloud v4 alert status showed `UNKNOWN` sometimes due to an error. This was fixed and the correct status is now shown.
+* In the **Deploy, **Operate**, and **Backups** pages, you can *finally* use the <kbd>Enter</kbd> key to submit your two-factor authentication code. Happy typing!
 
 ### October 20th, 2017
 

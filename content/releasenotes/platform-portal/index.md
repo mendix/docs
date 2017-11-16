@@ -11,7 +11,7 @@ title: "Platform Portal"
 * Mendix Cloud v4 Backups can now be restored to other environments in the same Cloud Node. This is useful when preparing production migrations or for reproducing errors.
 * When creating a deployment package from Team Server, the dialog box now shows branches in case-insensitive order, which makes more sense for users.
 * Mendix Cloud v4 alert status showed `UNKNOWN` sometimes due to an error. This was fixed and the correct status is now shown.
-* In the **Deploy, **Operate**, and **Backups** pages, you can *finally* use the <kbd>Enter</kbd> key to submit your two-factor authentication code. Happy typing!
+* In the **Deploy**, **Operate**, and **Backups** pages, you can *finally* use the <kbd>Enter</kbd> key to submit your two-factor authentication code. Happy typing!
 
 ### October 20th, 2017
 

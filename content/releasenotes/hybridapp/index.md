@@ -18,6 +18,26 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ## 2017
 
+### November 16th, 2017 (1.6.0 / 1.3.1)
+
+* Android icons and splash screens are now properly configured. For projects using the "do it yourself" workflow, apply the following change in `src/config.xml.mustache`:
+
+change
+
+```xml
+<{{{tag}}} src="{{{filename}}}" qualifier="{{{qualifier}}}"/>
+```
+
+to
+
+```xml
+<{{{tag}}} src="{{{filename}}}" density="{{{qualifier}}}"/>
+```
+
+* We removed the superfluous error message in case of a failed PIN login.
+* We fixed the issue where static files would synchronize on every startup, when **static resources from disk** was enabled in the Mendix project.
+* In earlier versions, mobile apps with offline mode enabled would show a dialog box when a new version of the Mendix app was available. We changed this behavior to always update on startup. This prevents inconsistencies that can occur when the user decides to update the mobile app at a later moment.
+
 ### October 27th, 2017 (1.5.0 / 1.3.1)
 
 * In some cases, it was possible to avoid the PIN login prompt. This release mitigates those cases. For hybrid apps that have PIN login enabled, upgrading to this release is highly recommended.

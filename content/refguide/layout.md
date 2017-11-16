@@ -18,6 +18,14 @@ When opening a new page in the browser, content found in layouts is not reloaded
 
 Mendix will intelligently detect if pages share a layout, no user input is required. This also applies for nested layouts. If two pages have different layouts but those layouts share a common master layout, the sub-layout will reload but the master layout will remain static. 
 
+## Placeholder management
+
+A layout contains one or more placeholders. One of these placeholders must be named 'Main', and can be differentiated from the others by a darker shade of blue. Unlike most other widgets, the name of a placeholder carries a special significance. When a user switches a page from one layout to another, the placeholder names will be used to map the contents of the page to the new layout. For every placeholder that has contents in the current layout, the modeler will search for a placeholder with the same name in the new one. As the Main placeholder is mandatory, the user can always be assured that at least some of the page contents will be salvaged. Any content found in placeholders not present in the new layout will be moved above the canvas, where it can easily be redistributed over the new placeholders.
+
+The placeholder naming scheme also has an impact on [page templates](page-template). When creating a new page, the template will map its contents based on the names of the placeholders in its preview layout. Consequently, a template might describe contents for a placeholder that is not available in the selected layout. To prevent this, a compatible layout is automatically pre-selected when clicking a page template in the create new page dialog. If an incompatible layout is then selected manually, all content for missing placeholders will be discarded. 
+
+As a consequence of this behavior, user experience can be improved significantly if all of a project's layouts adhere to the same or a similar naming scheme. This will ensure layouts can be alternated freely without having to consider the effect on the contents of each individual placeholder. 
+
 ## Common Properties
 
 {{% snippet file="refguide/Document+Name+Property.md" %}}

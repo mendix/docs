@@ -75,6 +75,6 @@ _Default value:_ Creating new pages
 
 ### Preview layout
 
-Although page templates and layouts can be mixed and matched, this setting will determine which layout will be used to display the template in the editor. It also has a minor effect on the page creation process: if the template describes contents for layout [placeholders](placeholder) that are not present in the previously selected layout, the first compatible layout will be pre-selected in the create new page dialog. 
+Although page templates and layouts can be mixed and matched, this setting will determine which layout will be used to display the template in the editor. It also has a minor effect on the page creation process: if the template describes contents for layout [placeholders](placeholder) that are not present in the previously selected layout, the first compatible layout will be pre-selected in the create new page dialog. A full description of the interaction between a page template and its preview layout can be found in the [layout](layout) reference page. 
 
 The options available for this setting are regulated by the Layout type setting. If you are having trouble finding the layout you are looking for, check if the layout type of the template and the desired layout match. 

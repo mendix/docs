@@ -30,11 +30,11 @@ For more information, see [How to Use App Store Content in the Modeler](/communi
 
 Generating a service module starts by getting an OData metadata xml file. This file can be download from the OData service URL directly using the `$metadata` suffix or retrieved from the SAP Gateway. Your SAP Gateway adminstrator can provide the file for you.
 
-With the file available visit the <a href="http://swissbeaver.mendixcloud.com" target="_blank">SAP OData Service Wizard</a>.      For this documentation we use the publicly available HCM People Profile service for which <a href="https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata" target="_blank">this</a> is the metadata file.
+With the file available visit the <a href="https://sapodatawizard.mendixcloud.com" target="_blank">SAP OData Service Wizard</a>.      For this documentation we use the publicly available HCM People Profile service for which <a href="https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata" target="_blank">this</a> is the metadata file.
 
 1. Save the file to your hard drive.
 
-2. Open the <a href="http://swissbeaver.mendixcloud.com" target="_blank">SAP OData Service Wizard</a>.
+2. Open the <a href="https://sapodatawizard.mendixcloud.com" target="_blank">SAP OData Service Wizard</a>.
 
 3. Upload the OData Schema XML file.
 ![upload](attachments/use-sap-odata-service-wizard/upload_metadata.png)
@@ -48,7 +48,7 @@ A progress bar will be shown during parsing and generation of the module.
 
 ## 4 Use in a Mendix App
 
-Now you have a Mendix module ready to import into your project. Create a new project or open an existin and then choose Import Project Package from the File menu and select the MPK file.
+Now you have a Mendix module ready to import into your project. Open the project which you created as prerequisite and then choose Import Project Package from the File menu and select the MPK file.
 
 ![import](attachments/use-sap-odata-service-wizard/import_into_model.png)
 

@@ -76,7 +76,6 @@ There are some features missing in v4. Mendix will implement the following featu
 * The custom health check microflow is not used by the alerting system
 * Application CPU alerts are not sent
 * Archived logs can only be downloaded, not viewed in the browser
-* Cross-environment backup restoring is not available; you can download and upload data instead
 * The database status is not visible on the node details screen
 
 ## 11 Known Issues in Mendix Cloud v4

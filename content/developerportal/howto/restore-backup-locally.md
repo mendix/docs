@@ -19,6 +19,10 @@ You can use this how-to if you want to restore the database of your app in an ex
 * Create a data-snapshot
 * Configure the project settings of the app
 
+## 2 Download backup from the Developer Portal
+
+In order to restore a backup locally, you must first [download the backup](/howto/how-to-download-a-backup) from the [Developer Portal](http://home.mendix.com).
+
 ## 3 External database
 
 This guideline has been made with Postgres Installer version Version 9.6.5

@@ -27,7 +27,7 @@ After setting up all the prerequisites, you can start writing a first script tha
         .then(workingCopy => loadDomainModel(workingCopy))
         .then(workingCopy => {
             const dm = pickDomainModel(workingCopy);
-            const domainModel = dm.asLoaded();
+            const domainModel = dm.load();
             let entity = domainmodels.Entity.createIn(domainModel);
             entity.name = `NewEntity_${Date.now() }`;
             entity.location = { x: 100, y: 100 };
@@ -83,7 +83,7 @@ If you create an online working copy from an existing app on the Team Server, be
     .then(workingCopy => loadDomainModel(workingCopy))
     .then(workingCopy => {
         const dm = pickDomainModel(workingCopy);
-        const domainModel = dm.asLoaded();
+        const domainModel = dm.load();
         let entity = domainmodels.Entity.createIn(domainModel);
         entity.name = `NewEntity_${Date.now() }`;
         entity.location = { x: 100, y: 100 };
@@ -91,7 +91,7 @@ If you create an online working copy from an existing app on the Team Server, be
     })
 ```
 
-Now that you have an online working copy, you can start manipulating the model. In this example, first you grab the default module named "MyFirstModule" (see the functions `loadDomainModel()` and `pickDomainModel()` on lines 32-40). Once you have loaded the domain model in memory with the function `dm.asLoaded()`, you create a new Entity in the domain model and give it a name and coordinates.
+Now that you have an online working copy, you can start manipulating the model. In this example, first you grab the default module named "MyFirstModule" (see the functions `loadDomainModel()` and `pickDomainModel()` on lines 32-40). Once you have loaded the domain model in memory with the function `dm.load()`, you create a new Entity in the domain model and give it a name and coordinates.
 
 **lines 22-29**
 ```js

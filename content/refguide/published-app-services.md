@@ -3,22 +3,22 @@ title: "Published App Services"
 parent: "integration"
 ---
 
+## 1 Introduction
 
-An App Service can be created by selecting 'Published App Service' in the 'Add' context menu of a module.
+An app service can be created via **File** > **New Document**.
 
-Names of Published App Service documents must be unique, also with regard to Published Web Services.
+Names of published app service documents must be unique (also with regard to published web service).
 
 ![](attachments/16713717/16843911.png)
 
-### Create version
+## 2 Create Version
 
-The button 'Create version' instantiates a new app service version.
-For more information, see [Published App Service](published-app-service).
+The **Create version** button instantiates a new app service version. For more information, see [Published App Service](published-app-service).
 
-### Edit
+## 3 Edit
 
-Opens the selected app service version dialog. Only **Draft** versions are editable. The settings of **Consumable** versions can only be viewed.
+This button opens the selected app service version dialog box. Only **Draft** versions are editable. The settings of **Consumable** versions can only be viewed.
 
-### Delete
+## 4 Delete
 
-Deletes the selected app service version.
+This button deletes the selected app service version.

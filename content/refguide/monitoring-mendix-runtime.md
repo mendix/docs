@@ -93,10 +93,10 @@ Read the next sections to find out which monitoring actions are supported.
 
 This request returns the current executions of actions known by the Mendix Runtime. Actions can amongst others be microflows, Java actions, web service calls and scheduled events. For each execution the following is reported:
 
-*   the "duration" of the execution in milliseconds.
-*   the "type" of execution. Possible types are "CLIENT", "CLIENT_ASYNC", "CLIENT_ASYNC_MONITORED", "CUSTOM", "WEB_SERVICE", "SCHEDULED_EVENT" and "UNKNOWN". "CLIENT_ASYNC" is the asynchronous microflow call triggered from the web client, "CLIENT_ASYNC_MONITORED" is the actual execution of the asynchronous microflow in the Mendix Runtime, which happens in a different thread.
-*   the "user" is the name of the user associated with the session executing the action. In case of a non-user session the name "System" is displayed.
-*   the "action_stack" shows the stack of actions for this execution. For each action in this stack detailed information is displayed, e.g. for a microflow the current activity and the name of the microflow are shown.
+*   The "duration" of the execution in milliseconds.
+*   The "type" of execution. Possible types are "CLIENT", "CLIENT_ASYNC", "CLIENT_ASYNC_MONITORED", "CUSTOM", "WEB_SERVICE", "SCHEDULED_EVENT" and "UNKNOWN". "CLIENT_ASYNC" is the asynchronous microflow call triggered from the web client, "CLIENT_ASYNC_MONITORED" is the actual execution of the asynchronous microflow in the Mendix Runtime, which happens in a different thread.
+*   The "user" is the name of the user associated with the session executing the action. In case of a non-user session the name "System" is displayed.
+*   The "action_stack" shows the stack of actions for this execution. For each action in this stack detailed information is displayed, e.g. for a microflow the current activity and the name of the microflow are shown.
 
 ## 3 Runtime Statistics
 
@@ -313,7 +313,7 @@ This monitoring action gives more detailed information about objects which are c
 }
 ```
 
-The server statistics monitor action gives information about the embedded Jetty web server. The "jetty" section lists the number of current open connections and the maximum number of open connections. In addition, the maximum idle time of connection before it's being closed is listed, for when Jetty is under normal circumstances. Note: since Mendix 7.9 information about the maximum idle time of connections before it's being closed for when Jetty is low on resources ("max_idle_time_s_low_resources") is removed as part of the Jetty upgrade because it is no longer provided by Jetty.
+The server statistics monitor action gives information about the embedded Jetty web server. The "jetty" section lists the number of current open connections and the maximum number of open connections. In addition, the maximum idle time of connection before it's being closed is listed, for when Jetty is under normal circumstances. Please note that in Mendix 7.9 and above, information about the maximum idle time of connections before it's being closed for when Jetty is low on resources ("max_idle_time_s_low_resources") is removed as part of the Jetty upgrade, because it is no longer provided by Jetty.
 
 The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](http://download.eclipse.org/jetty/stable-9/apidocs/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
 

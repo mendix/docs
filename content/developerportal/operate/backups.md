@@ -41,11 +41,11 @@ The start time of the backup creation depends on the region and the Mendix Cloud
 
 The **Backups** page under the **Operate** category presents options for managing your backups. These are described below.
 
-### 3.1 Creating a Backup
+### 3.1 Create a Backup
 
 This will automatically generate a backup from your application data.
 
-### 3.2 Uploading Data
+### 3.2 Upload Data
 
 You must stop the application before executing this process. This functionality is used to transfer data from your local or on-premises application to the cloud environment. This will not add a backup to the backup list but directly update the application with the newly uploaded data. Your environment will be cleared completely. The deployment package, uploaded files, and database will be removed. If you are uploading data to the production environment, any published app services will be unpublished.
 
@@ -54,13 +54,13 @@ You can upload two types of data:
 * **Database**
 * **Uploaded files** (*zip* or *tar.gz*)
 
-### 3.3 Restoring a Backup
+### 3.3 Restore a Backup
 
-You can choose the environment to which you want to restore the backup.
+You can choose the **destination** where you want the environment to restore the backup to. This allows you for example to restore a production environment backup to an acceptance environment.
 
 If you restore a backup that was originally deployed on an older Modeler version, you will get a warning. You can still restore the backup, but you have to deploy the older model later on. 
 
-### 3.4 Downloading a Backup
+### 3.4 Download a Backup
 
 These are the options:
 
@@ -84,6 +84,8 @@ Backup Details | Description |
 **Expires on** | The date on which the backup will be removed from the system
 **Model version** | The version of the deployment package used during backup creation
 **Comment** | A specific comment added to the backup
+
+At the bottom you can find a **Delete** button to delete this particular backup.
 
 ## 5 Related Content
 

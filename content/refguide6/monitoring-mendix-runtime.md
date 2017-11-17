@@ -283,7 +283,6 @@ This monitoring action gives more detailed information about objects which are c
     "jetty":{
       "current_connections":0,
       "max_connections":0,
-      "max_idle_time_s_low_resources":0,
       "max_idle_time_s":200
     },
     "threadpool": {
@@ -301,7 +300,7 @@ This monitoring action gives more detailed information about objects which are c
 }
 ```
 
-The server statistics monitor action gives information about the embedded Jetty web server. The "jetty" section lists the number of current open connections and the maximum number of open connections. In addition, the maximum idle time of connection before it's being closed is listed, for both when Jetty is under normal circumstances and when low on resources.
+The server statistics monitor action gives information about the embedded Jetty web server. The "jetty" section lists the number of current open connections and the maximum number of open connections. In addition, the maximum idle time of connection before it's being closed is listed, for both when Jetty is under normal circumstances and when low on resources. Please note that in Mendix 6.10.11 and above, information about the maximum idle time of connections before it's being closed for when Jetty is low on resources ("max_idle_time_s_low_resources") is removed as part of the Jetty upgrade, because it is no longer provided by Jetty
 
 The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](http://download.eclipse.org/jetty/9.3.12.v20160915/apidocs/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
 

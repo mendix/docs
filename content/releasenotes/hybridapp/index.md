@@ -4,10 +4,6 @@ toc-level: 1
 description: "Hybrid App release notes."
 ---
 
-{{% alert type="info" %}}
-The known issues are described in [Hybrid App Known Issues](hybrid-app-known-issues).
-{{% /alert %}}
-
 These are the release notes for the Hybrid App.
 
 The version numbers for each release refer to the Hybrid App Base and the Hybrid App Template package, respectively.
@@ -15,6 +11,10 @@ The version numbers for each release refer to the Hybrid App Base and the Hybrid
 If you're building the app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
 
 If you're using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Cloud Portal.
+
+{{% alert type="info" %}}
+Any known issues for a release are described in that version's release notes below.
+{{% /alert %}}
 
 ## 2017
 

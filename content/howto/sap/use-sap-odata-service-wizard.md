@@ -39,7 +39,7 @@ To generate the service module, follow these steps:
     ![](attachments/use-sap-odata-service-wizard/upload_metadata.png)
 
 4. Press **Generate .mpk**. A progress bar will be shown during the parsing and generation of the module.
-5.  Once the generation is done, the **Download** button appears. Notice that the file name of your module is extracted from the metadata file itself.
+5.  Once the generation is done, the **Download File** button appears. Notice that the file name of your module is extracted from the metadata file itself.
 
     ![](attachments/use-sap-odata-service-wizard/download_metadata.png)
 

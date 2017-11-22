@@ -7,25 +7,27 @@ tags: ["Backup","Restore","Local","Developer Portal"]
 
 ## 1 Introduction
 
-There are 2 different databases:
+Restoring a backup has two use scenario's. The first scenario is when you want to test your cloud database locally, you can download a backup and link it to your app. The second scenario is if you want to use the database from another app. You can import a cloud database into a different app. 
+
+This how-to will explain how to use the two local databases:
 1. External database (like Postgres).
 2. Build-in-database.
 
-You can use this how-to if you want to restore the database of your app in an external database or if you want to restore a database from another app to a new app.
-
 **This how-to will teach you how to do the following:**
 
+* Download a backup from your cloud environment
 * Create a new database
 * Create a data-snapshot
 * Configure the project settings of the app
+* Import a different Mendix app database
 
 ## 2 Download backup from the Developer Portal
 
 In order to restore a backup locally, you must first [download the backup](how-to-download-a-backup) from the [Developer Portal](http://home.mendix.com).
 
-## 3 External database
+## 3 Scenario 1: External database
 
-This guideline has been made with Postgres Installer version Version 9.6.5
+NOTE: This guideline has been made with Postgres Installer version Version 9.6.5
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -78,7 +80,7 @@ Password | Provide same password as in PgAdmin
 5. Click **OK**.
 6. Run the app by clicking **Run Locally**.
 
-## 4 Separate Build-in-database (data-snapshot)
+## 4 Scenario 2: Separate Build-in-database (data-snapshot)
 
 If you want to import the build-in-database of another app to a new app, you can use the data-snapshot possibility.
 
@@ -104,3 +106,7 @@ You can find the root directory in behind the Mendix Desktop Modeler version:
 
 2. Copy-paste the data-snapshot **.zip** file in the root directory of your new app.
 3. Return to the Mendix **Desktop Modeler** and run the app locally, by clicking **Run Locally**.
+
+## 5 Related Content
+
+* [Backups](/operate/backups)

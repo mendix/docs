@@ -3,6 +3,11 @@ title: "Page template"
 parent: "pages"
 ---
 
+{{% alert type="info" %}}
+
+The option to edit and manage custom page templates was added in Mendix 7.9.0.
+
+{{% /alert %}}
 
 Page templates are the starting point for creating new pages. Every time a new page is created, a page template is selected as a baseline that can then be edited to match the pages specific needs. By mapping out the common design patterns of a project, a great deal of the initial work involved in creating new pages can be mitigated. 
 

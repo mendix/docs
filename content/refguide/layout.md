@@ -20,6 +20,12 @@ Mendix will intelligently detect if pages share a layout, no user input is requi
 
 ## Placeholder management
 
+{{% alert type="info" %}}
+
+The method for mapping placeholders described in this section was introduced in Mendix 7.9.0. Older versions make use of the placeholder properties described under 'Page Generation Properties' below. 
+
+{{% /alert %}}
+
 A layout contains one or more placeholders. One of these placeholders must be named 'Main', and can be differentiated from the others by a darker shade of blue. Unlike most other widgets, the name of a placeholder carries a special significance. When a user switches a page from one layout to another, the placeholder names will be used to map the contents of the page to the new layout. For every placeholder that has contents in the current layout, the modeler will search for a placeholder with the same name in the new one. As the Main placeholder is mandatory, the user can always be assured that at least some of the page contents will be salvaged. Any content found in placeholders not present in the new layout will be moved above the canvas, where it can easily be redistributed over the new placeholders.
 
 The placeholder naming scheme also has an impact on [page templates](page-template). When creating a new page, the template will map its contents based on the names of the placeholders in its preview layout. Consequently, a template might describe contents for a placeholder that is not available in the selected layout. To prevent this, a compatible layout is automatically pre-selected when clicking a page template in the create new page dialog. If an incompatible layout is then selected manually, all content for missing placeholders will be discarded. 
@@ -61,6 +67,12 @@ Every layout has a layout type, which determines the purpose of the layout and h
 | Pop-up | Use this layout for pages that should appear as non-modal pop-ups. |
 
 ## Page Generation Properties
+
+{{% alert type="warning" %}}
+
+This section, along with the placeholder properties described below, was removed in Mendix 7.9.0 in favor of name-based placeholder mapping. For a full explanation, see 'Placeholder management' above. 
+
+{{% /alert %}}
 
 ### Main placeholder
 

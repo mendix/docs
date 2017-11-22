@@ -18,12 +18,6 @@ See [Configuration](configuration) for the settings in a configuration.
 
 These settings influence the behavior of the Runtime when running your application.
 
-### Theme
-
-The look and feel of a Mendix application are governed by the [UI resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. Which module is designated as the UI resources package is governed by the 'UI resources package' setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting the desired module can also be set manually.
-
-Older projects may still use a theme ZIP file as a basis for their theme. In this situation, the 'Theme ZIP file' setting can be used to switch between any ZIP files found in the 'theme' folder. Note that this practice is deprecated and will be removed in a future version. Transitioning from a ZIP file to a UI resources package is straigtforward. First, replace the contents of the theme folder with the contents of the desired ZIP file. Then, use the 'UI resources package' setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other projects without worrying about reference errors. Lastly, set the 'Theme ZIP file' setting to 'None'.
-
 ### Static Resources from Disk
 
 If this option is enabled the static resources by your mobile application are downloaded as soon as you open your application rather than bit by bit as you navigate through the app. This can drastically cut down on your network requests as the files can be retrieved from disk rather than from the server.
@@ -218,3 +212,25 @@ When client and server are RFC-5746 compatible at a future point in time, this J
 For background information see [this](http://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html) article.
 
 {{% /alert %}}
+
+## Theme
+
+### UI resources package
+
+{{% alert type="info" %}}
+
+The option to designate a custom UI resources package was added in Mendix 7.9.0.  
+
+{{% /alert %}}
+
+The look and feel of a Mendix application are governed by the [UI resources package](ui-resources-package). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. Which module is designated as the UI resources package is governed by the 'UI resources package' setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting the desired module can also be set manually.
+
+### Theme ZIP file
+
+{{% alert type="warning" %}}
+
+[Deprecated] The use of a ZIP file to configure a project's theme is deprecated. As of 7.9.0, a [UI resources package](ui-resources-package) is the preferred method of sharing themes. 
+
+{{% /alert %}}
+
+Older projects may still use a theme ZIP file as a basis for their theme. In this situation, the 'Theme ZIP file' setting can be used to switch between any ZIP files found in the 'theme' folder. Note that this practice is deprecated and will be removed in a future version. Transitioning from a ZIP file to a UI resources package is straigtforward. First, replace the contents of the theme folder with the contents of the desired ZIP file. Then, use the 'UI resources package' setting described above to select a module. Ideally, this module should only contain UI documents, such as page templates and building blocks. This will allow you to export and import the module to other projects without worrying about reference errors. Lastly, set the 'Theme ZIP file' setting to 'None'.

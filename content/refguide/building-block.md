@@ -3,6 +3,11 @@ title: "Building block"
 parent: "pages"
 ---
 
+{{% alert type="info" %}}
+
+The option to edit and manage custom building blocks was added in Mendix 7.9.0.
+
+{{% /alert %}}
 
 Building blocks are components that can be re-used to streamline the page creation process. By pre-configuring and styling building blocks, users can easily click together interfaces without having to worry about the details of styling guidelines or user experience. 
 

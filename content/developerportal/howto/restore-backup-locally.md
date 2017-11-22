@@ -109,4 +109,4 @@ You can find the root directory in behind the Mendix Desktop Modeler version:
 
 ## 5 Related Content
 
-* [Backups](/operate/backups)
+* [Backups](/developerportal/operate/backups)

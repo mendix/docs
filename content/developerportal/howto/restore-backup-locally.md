@@ -21,7 +21,7 @@ You can use this how-to if you want to restore the database of your app in an ex
 
 ## 2 Download backup from the Developer Portal
 
-In order to restore a backup locally, you must first [download the backup](/howto/how-to-download-a-backup) from the [Developer Portal](http://home.mendix.com).
+In order to restore a backup locally, you must first [download the backup](how-to-download-a-backup) from the [Developer Portal](http://home.mendix.com).
 
 ## 3 External database
 

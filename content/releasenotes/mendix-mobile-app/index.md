@@ -11,6 +11,19 @@ To download the **Mendix** mobile app, select one of the download links below:
 * [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile)
 {{% /alert %}}
 
+## 4.5.0
+
+**Release date: October 24th, 2017**
+
+### New functionality
+* Automatically open mxapps.io and mendixcloud.com URLs with the app
+* Share your Mendix app via email, whatsapp, etc.
+* Post new message directly to an app Buzz
+* Start creating your Mendix account from the app
+
+### Deprecations / removals
+* We removed support for custom profiles (which were deprecated with Mx7.4)
+
 ## 4.4.1 (iOS only)<a name="RN441"></a>
 
 **Release date: October 2nd, 2017**

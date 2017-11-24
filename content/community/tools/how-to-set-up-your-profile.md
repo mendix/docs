@@ -67,7 +67,7 @@ In the body of your profile, you can edit the following elements:
     * Links to these reviews will not appear on your public profile, but these two reviews are required to make your profile 100% complete
 * **Projects** – for details on adding a project, see [4 Adding a Project](#project)
 
-Be sure to complete the following items, because these are necessary to make your Community Profile public:
+Be sure to complete the following items, which are necessary to make your Community Profile public:
 
 * Add an avatar
 * Enter a **Function**
@@ -77,7 +77,7 @@ Be sure to complete the following items, because these are necessary to make you
 * Add at least 1 **Skill**
 * Add at least 1 **Industry Experience** item
 
-Once you have have met those requirements, click **View Public Profile** in the header to see how your public profile looks:
+Once you have completed those items, click **View Public Profile** in the header to see how your public profile looks:
 
 ![](attachments/how-to-set-up-your-profile/make-public.png)
 

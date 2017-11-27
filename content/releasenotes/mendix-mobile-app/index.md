@@ -11,23 +11,42 @@ To download the **Mendix** mobile app, select one of the download links below:
 * [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile)
 {{% /alert %}}
 
-{{% alert type="info" %}}
-The known issues are described in [Mendix Mobile App Known Issues](mendix-mobile-known-issues).
-{{% /alert %}}
+## 4.5.0
+
+**Release date: October 24th, 2017**
+
+### New Functionality
+
+* You can now automatically open `mxapps.io` and `mendixcloud.com` URLs with the app.
+* You can share your Mendix app via email, WhatsApp, etc.
+* You can post new message directly to an app Buzz.
+* You can start creating your Mendix account from the app.
+
+### Deprecations and Removals
+
+* We removed support for custom profiles (which were deprecated with Mendix [7.4](../desktop-modeler/7.4)).
+
+### Known Issue
+
+* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Developer Portal) should not pose any problems.
 
 ## 4.4.1 (iOS only)<a name="RN441"></a>
 
 **Release date: October 2nd, 2017**
 
-### Bug fixes
+### Bug Fixes
 
 * We fixed support for iOS 11: loading a Mendix hybrid app (for example, by using the QR scanner or from the **Apps** page) caused the Mendix mobile app to crash. This issue has been resolved.
+
+### Known Issue
+
+* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Developer Portal) should not pose any problems.
 
 ## 4.4.0
 
 **Release date: July 21st, 2017**
 
-### New functionality
+### New Functionality
 
 * You'll now see a few introductory slides when you use the app for the first time.
 * The **Apps** page now contains an overview of recently opened hybrid apps.
@@ -37,15 +56,20 @@ The known issues are described in [Mendix Mobile App Known Issues](mendix-mobile
 * The sidebar closes automatically when you press one of the menu items.
 * We've increased the touch area of back buttons so that they're easier to press.
 
-### Bug fixes
+### Bug Fixes
 
 * Web URLs in hybrid apps now work as expected.
+
+### Known Issue
+
+* On iOS 11, loading one of the sample apps or loading an app using the QR scanner will crash the application. 
+    * Fixed in [4.4.1](#RN441).
 
 ## 4.3.0
 
 **Release date: July 10th, 2017**
 
-### New functionality
+### New Functionality
 
 We have added two new features to accelerate your app delivery projects:
 
@@ -58,7 +82,7 @@ We have added two new features to accelerate your app delivery projects:
 
 With this release, we greatly improved the user experience of the Mendix mobile app.
 
-### New functionality
+### New Functionality
 
 * The **Buzz** can be read without an internet connection.
 * We greatly improved the overall performance of app and the app startup time.

@@ -61,7 +61,7 @@ These are the release notes for the Mendix Desktop Modeler:
 
 {{% alert type="info" %}}
 
-The known issues for each release are described in [Desktop Modeler Known Issues](known-issues).
+The release notes include all patches and known issues.
 
 {{% /alert %}}
 

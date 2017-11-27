@@ -37,8 +37,8 @@ $block: 'mx';
       position: relative;
       z-index: 20;
       @include mq("md", min) {
-        padding-left: 0;
-        padding-right: 0;
+        // padding-left: 0;
+        // padding-right: 0;
       }
     }
     .topbar {
@@ -46,8 +46,8 @@ $block: 'mx';
       z-index: 50;
       & > .container {
         @include mq("md", min) {
-          padding-left: 0;
-          padding-right: 0;
+          // padding-left: 0;
+          // padding-right: 0;
         }
       }
     }

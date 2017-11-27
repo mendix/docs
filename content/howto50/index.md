@@ -1,5 +1,5 @@
 ---
-title: "Mendix 5 How-To's"
+title: "Mendix 5 How-to's"
 notoc: true
 ---
 

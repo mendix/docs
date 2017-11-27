@@ -4,10 +4,6 @@ toc-level: 1
 description: "Hybrid App release notes."
 ---
 
-{{% alert type="info" %}}
-The known issues are described in [Hybrid App Known Issues](hybrid-app-known-issues).
-{{% /alert %}}
-
 These are the release notes for the Hybrid App.
 
 The version numbers for each release refer to the Hybrid App Base and the Hybrid App Template package, respectively.
@@ -16,7 +12,31 @@ If you're building the app using the regular PhoneGap Build approach from within
 
 If you're using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Cloud Portal.
 
+{{% alert type="info" %}}
+Any known issues for a release are described in that version's release notes below.
+{{% /alert %}}
+
 ## 2017
+
+### November 16th, 2017 (1.6.0 / 1.3.1)
+
+*  Android icons and splash screens are now properly configured. For projects using the "do it yourself" workflow, apply the following change in `src/config.xml.mustache`:
+
+  * Change:
+
+    ```xml
+    <{{{tag}}} src="{{{filename}}}" qualifier="{{{qualifier}}}"/>
+    ```
+    <br />
+    to:<br />
+
+    ```xml
+    <{{{tag}}} src="{{{filename}}}" density="{{{qualifier}}}"/>
+    ```
+
+* We removed the superfluous error message in case of a failed PIN login.
+* We fixed the issue where static files would synchronize on every startup, when **static resources from disk** was enabled in the Mendix project.
+* In earlier versions, mobile apps with offline mode enabled would show a dialog box when a new version of the Mendix app was available. We changed this behavior to always update on startup. This prevents inconsistencies that can occur when the user decides to update the mobile app at a later moment.
 
 ### October 27th, 2017 (1.5.0 / 1.3.1)
 

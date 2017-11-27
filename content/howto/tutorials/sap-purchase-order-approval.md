@@ -49,6 +49,7 @@ To start this tutorial, go to the [Mendix Developer Portal](https://sprintr.home
     * If you see the **Version Selection** pop-up window, select version **7.5.1**
 
 ## 4 Configure the TechEd Settings
+
 You are following this tutorial from TechEd, which means you are using a proxy. Follow these steps to configure the deployment and proxy settings:
 
 1. In the Desktop Modeler, go to **Edit > Preferences**.
@@ -81,7 +82,7 @@ To run the app for the first time, follow these steps:
 
 4. Enter your ES4 credentials and click **Login**:
 
-    ![](attachments/sap-teched-purchase-order-approval/06-enter-credentials.png)
+    ![](attachments/sap-purchase-order-approval/06-enter-credentials.png)
 
 5.  You will now see the Purchase Order Approval App in the browser:
 

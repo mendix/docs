@@ -29,11 +29,7 @@ Your profile will open on the **My Public Profile** tab, which is the main page 
 
 Your points are located in the upper-left corner of your public profile. The table and chart present the division of your points between various Mendix products and activities. For details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq). And check out the **Leaderboards** tab to see the top Mendix community contributors!
 
-When you access your profile page through the **MY COMMUNITY PROFILE** link, your profile will automatically be in edit mode so that you can easily make updates. 
-
-To edit a field on your profile, click this icon:
-
-![](attachments/how-to-set-up-your-profile/icon.png)
+When you access your profile page through the **MY COMMUNITY PROFILE** link, your profile will automatically be in edit mode so that you can easily make updates.
 
 {{% alert type="info" %}}
 
@@ -42,6 +38,10 @@ If you access your profile by clicking **Community** > [OUR COMMUNITY](https://d
 ![](attachments/how-to-set-up-your-profile/edit.png)
 
 {{% /alert %}}
+
+To edit a field on your profile, click this icon:
+
+![](attachments/how-to-set-up-your-profile/icon.png)
 
 In the header of your profile, you can edit the following details:
 
@@ -67,7 +67,7 @@ In the body of your profile, you can edit the following elements:
     * Links to these reviews will not appear on your public profile, but these two reviews are required to make your profile 100% complete
 * **Projects** – for details on adding a project, see [4 Adding a Project](#project)
 
-Be sure to complete the following items, because these are necessary to make your Community Profile public:
+Be sure to complete the following items, which are necessary to make your Community Profile public:
 
 * Add an avatar
 * Enter a **Function**
@@ -77,7 +77,7 @@ Be sure to complete the following items, because these are necessary to make you
 * Add at least 1 **Skill**
 * Add at least 1 **Industry Experience** item
 
-Once you have have met those requirements, click **View Public Profile** in the header to see how your public profile looks:
+Once you have completed those items, click **View Public Profile** in the header to see how your public profile looks:
 
 ![](attachments/how-to-set-up-your-profile/make-public.png)
 

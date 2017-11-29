@@ -7,7 +7,7 @@ tags: ["Backup","Restore","Local","Developer Portal"]
 
 ## 1 Introduction
 
-Restoring a backup locally can be useful if you want to test your cloud database without interrupting the cloud resources. In this way you can reproduce your apps behavior containing production data in a local environment. By using your Mendix Modeler and a Postgres database, you can debug your app using backups of your cloud production/acceptance/test data. 
+Restoring a backup locally can be useful if you want to test your cloud environment's data without interrupting your live cloud environments. In this way you can reproduce your apps behavior containing data from your cloud environment locally. By using your Mendix Modeler and a Postgres database, you can debug your app using backups of your cloud production/acceptance/test data.
 
 **This how-to will teach you how to do the following:**
 
@@ -17,8 +17,9 @@ Restoring a backup locally can be useful if you want to test your cloud database
 
 **Before starting this how-to, make sure you have completed the following prerequisites:**
 
-* [Download the backup](how-to-download-a-backup) that you want to restore locally from the [Developer Portal](http://home.mendix.com)
+* [Download a **Full Snapshot** backup](how-to-download-a-backup) that you want to restore locally from the [Developer Portal](http://home.mendix.com)
 * Download the [Postgres Installer](https://www.postgresql.org/download/windows/)
+* When restoring a database hosted in the Mendix Cloud v4, download [7zip](http://www.7-zip.org/) to convert the backup file from **.gz** to **.backup**. 
 
 NOTE: This guideline has been made with Postgres Installer version Version 9.6.5.
 
@@ -73,6 +74,10 @@ Password | Provide same password as in PgAdmin
 5. Click **OK**.
 6. Run the app by clicking **Run Locally**.
 
-## 4 Related Content
+## 4 Restore files
+
+
+
+## 5 Related Content
 
 * [Backups](/developerportal/operate/backups)

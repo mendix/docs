@@ -58,6 +58,9 @@ Note that you cannot leave the App if you are the **Technical Contact** of the a
 
 {{% /alert %}}
 
+### 1.3. Web Modeler (Beta)
+If your app is supported by the Web Modeler during the beta program, you can enable it by clicking Enable Web Modeler. To get the full Web Modeler experience, you will need to [upgrade your existing theme to Atlas UI](https://atlas.mendix.com/index3.html#/upgradetheme/7881299347898769).
+
 ## 2 Related Content
 
 * [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)

@@ -7,33 +7,24 @@ tags: ["Backup","Restore","Local","Developer Portal"]
 
 ## 1 Introduction
 
-Restoring a backup has two use scenario's. The first scenario is when you want to test your cloud database locally, you can download a backup and link it to your app. The second scenario is if you want to use the database from another app. You can import a cloud database into a different app. 
-
-This how-to will explain how to use the two local databases:
-1. External database (like Postgres).
-2. Build-in-database.
+Restoring a backup locally can be useful if you want to test your cloud database without interrupting the cloud resources. In this way you can reproduce your apps behavior containing production data in a local environment. By using your Mendix Modeler and a Postgres database, you can debug your app using backups of your cloud production/acceptance/test data. 
 
 **This how-to will teach you how to do the following:**
 
 * Download a backup from your cloud environment
 * Create a new database
-* Create a data-snapshot
 * Configure the project settings of the app
-* Import a different Mendix app database
 
-## 2 Download backup from the Developer Portal
+**Before starting this how-to, make sure you have completed the following prerequisites:**
 
-In order to restore a backup locally, you must first [download the backup](how-to-download-a-backup) from the [Developer Portal](http://home.mendix.com).
+* [Download the backup](how-to-download-a-backup) that you want to restore locally from the [Developer Portal](http://home.mendix.com)
+* Download the [Postgres Installer](https://www.postgresql.org/download/windows/)
 
-## 3 Scenario 1: External database
+NOTE: This guideline has been made with Postgres Installer version Version 9.6.5.
 
-NOTE: This guideline has been made with Postgres Installer version Version 9.6.5
+## 2 Postgres
 
-Before starting this how-to, make sure you have completed the following prerequisites:
-
-* Download the [Postgres Installer](https://www.postgresql.org/download/windows/) Version 9.6.5
-
-### 3.1 Postgres
+Once the Postgres Installer is installed and you have downloaded a backup file, it's time to create a local database in Postgres. The backup database will be restored into a local Postgres database.
 
 1. Start PgAdmin.
 2. Double click **PostgreSQL 9.6**.
@@ -56,7 +47,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 10. Click **Restore**.
 11.	Wait until you see that the backup is **Successfully completed.** in the right corner of the screen.  
 
-### 3.2 Modeler
+## 3 Modeler
+
+After the backup has been restored in a local Postgres database, the database has to be linked to the Mendix Modeler. This means that the Mendix Modeler will be using another database than the database that was originally created. 
 
 1. Open Mendix **Desktop Modeler**. 
 2. Click below **Project** on **Settings**.
@@ -80,33 +73,6 @@ Password | Provide same password as in PgAdmin
 5. Click **OK**.
 6. Run the app by clicking **Run Locally**.
 
-## 4 Scenario 2: Separate Build-in-database (data-snapshot)
-
-If you want to import the build-in-database of another app to a new app, you can use the data-snapshot possibility.
-
-### 4.1 Create data-snapshot
-
-Create a data-snapshot from a different mendix app database by doing the following:
-
-1. Open the Mendix app in the **Desktop Modeler**.
-2. Click **Team** in the top navigation panel.
-3. Click **Add snapshot of data**.
-
-    ![](attachments/modeler/add-snapshot.png)
-
-### 4.2 Transport data-snapshot root directory
-
-After creating a data-snaphot, perform the following steps:
-
-1. Go to the local root directory of your app containing the newly created data-snaphot **.zip** file.
-
-You can find the root directory in behind the Mendix Desktop Modeler version:
-
-   ![](attachments/modeler/root-directory.png)
-
-2. Copy-paste the data-snapshot **.zip** file in the root directory of your new app.
-3. Return to the Mendix **Desktop Modeler** and run the app locally, by clicking **Run Locally**.
-
-## 5 Related Content
+## 4 Related Content
 
 * [Backups](/developerportal/operate/backups)

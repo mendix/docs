@@ -17,9 +17,9 @@ Restoring a backup locally can be useful if you want to test your cloud environm
 
 **Before starting this how-to, make sure you have completed the following prerequisites:**
 
-* [Download a **Full Snapshot** backup](how-to-download-a-backup) that you want to restore locally from the [Developer Portal](http://home.mendix.com)
+* [Download a backup](how-to-download-a-backup) that you want to restore locally from the [Developer Portal](http://home.mendix.com)
 * Download the [Postgres Installer](https://www.postgresql.org/download/windows/)
-* When restoring a database hosted in the Mendix Cloud v4, download [7zip](http://www.7-zip.org/) to convert the backup file from **.gz** to **.backup**. 
+* When restoring a database hosted in Mendix Cloud v4, download [7zip](http://www.7-zip.org/) to convert the backup file from **.gz** to **.backup**. 
 
 NOTE: This guideline has been made with Postgres Installer version Version 9.6.5.
 
@@ -76,7 +76,14 @@ Password | Provide same password as in PgAdmin
 
 ## 4 Restore files
 
+If you also want to restore the **FileDocuments** of your backup you need to download a **Full snapshot**. You need to move the **FileDocuments** to the **deployment directory** of your app. You can find the deployment directory behind the Mendix Desktop Modeler version:
 
+ ![](attachments/modeler/root-directory.png)
+
+After navigating to the deployment directory, follow these steps:
+
+1. Open the **<backup>.tar.gz** file using a program like **7-zip**.
+2. Copy the files in the **Files** folder from the unpacked backup file to the **Deployment\Data\Files** folder.
 
 ## 5 Related Content
 

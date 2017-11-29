@@ -25,6 +25,8 @@ Create familiarity and consistency throughout your apps landscape, regardless of
 #### Flexibility
 Design apps that look good and scale in all situations without losing an intuitive and consistent experience.
 
+![Image of Mendix Atlas UI](attachments/atlas_ui_preview.png)
+
 ## 2 Design Elements
 
 Our UI library is fully integrated into the Mendix Web Modeler. After choosing a navigation layout in the modeler, you can find page templates, building blocks, and widgets directly in your toolbox. These UI elements form the foundation of your app.

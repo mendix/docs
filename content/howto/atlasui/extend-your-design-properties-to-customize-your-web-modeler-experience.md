@@ -1,6 +1,6 @@
 ---
 title: "Extend your design properties to customize your Web Modeler experience"
-parent: "howto"
+category: "Atlas UI"
 ---
 
 New in Mendix Atlas UI is the customizable file ```settings.json.``` This file can be found in the ```theme folder``` of your Mendix project. This file allows you to:

@@ -1,6 +1,6 @@
 ---
 title: "Sharing Company Atlas UI Resources"
-parent: "howto"
+category: "Atlas UI"
 ---
 
 Creating company UI Resources is a great way to let Mendix developers quickly create new beautiful applications with out-of-the-box company branded themes, page templates, and building blocks. This is also a great way to align multiple apps with the same UI Resources, keeping the company brand and look & feel consistent. In this how-to, we explain how to share and maintain the UI Resources module.

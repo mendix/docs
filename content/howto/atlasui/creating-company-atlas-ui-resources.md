@@ -1,6 +1,6 @@
 ---
 title: "Creating Company Atlas UI Resources"
-parent: "howto"
+category: "Atlas UI"
 ---
 
 Creating Atlas UI Resources for your company is a great way to keep your company apps in sync with your company brand. It’s easier to scale and manage apps throughout your app landscape when all the resources are neatly organised in a single module. In this how-to we will go through all the steps in creating your own UI Resources.

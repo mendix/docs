@@ -1,5 +1,6 @@
 ---
 title: "Page Templates"
+category: "Atlas UI"
 ---
 
 ## 1 Page Templates

@@ -1,5 +1,6 @@
 ---
 title: "Best Practices"
+category: "Atlas UI"
 ---
 
 ## 1 Best Practices

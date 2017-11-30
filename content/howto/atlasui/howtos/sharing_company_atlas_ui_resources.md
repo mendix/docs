@@ -1,5 +1,6 @@
 ---
 title: "Sharing Company Atlas UI Resources"
+category: "Atlas UI"
 ---
 
 ## Sharing Company Atlas UI Resources

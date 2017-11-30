@@ -1,5 +1,6 @@
 ---
 title: "Widgets"
+category: "Atlas UI"
 ---
 
 ## 1 Widgets

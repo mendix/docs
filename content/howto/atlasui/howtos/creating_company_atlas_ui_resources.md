@@ -1,5 +1,6 @@
 ---
 title: "Creating Company Atlas UI Resources"
+category: "Atlas UI"
 ---
 
 ## Creating Company Atlas UI Resources

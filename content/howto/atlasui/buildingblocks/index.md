@@ -1,5 +1,6 @@
 ---
 title: "Building Blocks"
+category: "Atlas UI"
 ---
 
 ## 1 Building Blocks

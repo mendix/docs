@@ -1,5 +1,6 @@
 ---
 title: "Starting with Mendix and Atlas UI"
+category: "Atlas UI"
 ---
 
 ## Starting with Mendix and Atlas UI

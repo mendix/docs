@@ -1,5 +1,6 @@
 ---
 title: "General"
+category: "Atlas UI"
 ---
 
 ## 1 General

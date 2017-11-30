@@ -1,5 +1,6 @@
 ---
 title: "Migrate existing projects to Atlas UI"
+category: "Atlas UI"
 ---
 
 ## Migrate Existing Projects to Atlas UI

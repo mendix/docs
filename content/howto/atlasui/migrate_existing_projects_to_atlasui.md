@@ -1,6 +1,6 @@
 ---
 title: "Migrate existing projects to Atlas UI"
-category: "Atlas UI"
+parent: "howto"
 ---
 
 ## Migrate Existing Projects to Atlas UI
@@ -26,19 +26,19 @@ First delete the “UI_Resources” module. After this, import the Atlas UI modu
 
 When the Atlas UI Resources module is downloaded from the Mendix App Store, it can be found in App Store Modules.
 
-![Image of Mendix Atlas UI](attachments/migrate_dm_appstore.png)
+![Image of Mendix Atlas UI](attachments/howto/migrate_dm_appstore.png)
 
 After the import is complete, it could be that there are some errors in the error pane for navigation profiles or layouts that do not exist. Be sure to resolve all errors.
 
 Once the Atlas UI Resources module is imported, all the new resources will be available in the Mendix Desktop Modeler and Mendix Web Modeler. When creating a new page, a new set of page templates for all devices will be available. In the toolbox, a new pane will be added called “building blocks”. You can drag and drop building blocks from this pane onto your pages.
 
-![Image of Mendix Atlas UI](attachments/migrate_dm_bb_toolbox.png)
+![Image of Mendix Atlas UI](attachments/howto/migrate_dm_bb_toolbox.png)
 
 #### Replacing Existing Navigation Layouts
 The Atlas UI Resources module also comes with new Navigation Layouts. These are required in order to use the new page templates. If your existing navigation layouts are in a separate module, you will have to replace all layouts for your pages with the new Atlas UI layouts in order to make use of the new page templates. It is possible to keep using your old Navigation Layouts, however you will not be able to access the full capabilities of Atlas UI if you choose to do so.
 
 
-![Image of Mendix Atlas UI](attachments/migrate_dm_navlayouts.png)
+![Image of Mendix Atlas UI](attachments/howto/migrate_dm_navlayouts.png)
 
 #### (Optional) Enable the Mendix Web Modeler
 When the previous steps are complete, all the new Atlas UI features will be available in your app while it is running in the Mendix Desktop Modeler. Before your app can run in the Mendix Web Modeler, it is necessary to enable the Mendix Web Modeler feature. This can be done through the Mendix App Platform in your Mendix App settings.
@@ -46,4 +46,4 @@ When the previous steps are complete, all the new Atlas UI features will be avai
 #### (Optional) Reuse Parts of Your Old Theme
 A lot of Mendix projects have a custom theme. If this is the case for your project, your old theme can be found in the project explorer folder "theme_old". The Atlas UI Framework is similar to the Mendix UI Framework. It’s possible to reuse parts of your custom variables file.
 
-![Image of Mendix Atlas UI](attachments/migrate_old_theme.png)
+![Image of Mendix Atlas UI](attachments/howto/migrate_old_theme.png)

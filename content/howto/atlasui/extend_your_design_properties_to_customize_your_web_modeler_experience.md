@@ -1,6 +1,6 @@
 ---
 title: "Extend your design properties to customize your Web Modeler experience"
-category: "Atlas UI"
+parent: "howto"
 ---
 
 ## Extend Your Design Properties to Customize your Web Modeler Experience
@@ -28,8 +28,8 @@ The example below shows the design property of a “Button”. The detailed Sass
 * description: Brief explanation of the design property
 * options: Array of options that show the name and CSS class that is specified in the Sass files for Atlas UI
 
-![Image of Mendix Atlas UI](attachments/extend_settings.png)
+![Image of Mendix Atlas UI](attachments/howto/extend_settings.png)
 
 These design properties are used in the Web Modeler to give the user more power when they use widgets.
 
-![Image of Mendix Atlas UI](attachments/extend_settings_in_wm.png)
+![Image of Mendix Atlas UI](attachments/howto/extend_settings_in_wm.png)

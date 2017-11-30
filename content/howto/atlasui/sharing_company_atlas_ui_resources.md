@@ -1,6 +1,6 @@
 ---
 title: "Sharing Company Atlas UI Resources"
-category: "Atlas UI"
+parent: "howto"
 ---
 
 ## Sharing Company Atlas UI Resources
@@ -10,7 +10,7 @@ Creating company UI Resources is a great way to let Mendix developers quickly cr
 
 When your custom resources are ready to be shared with multiple developers or apps, the module can be exported from the project explorer. You are free to change the name of module as long as it has been exported as a UI resource package. Right-click on the UI Resources module and save the module.
 
-![Export Your Atlas UI Resources](attachments/sharing_export_uiresources.png)
+![Export Your Atlas UI Resources](attachments/howto/sharing_export_uiresources.png)
 
 The module can now be imported in other apps or be uploaded to the Mendix App Store. There is an option to make the resource module available for private use only so everybody in the company can benefit from and extend this module. In the next step, the process of sharing UI Resources will be made clear.
 
@@ -25,7 +25,7 @@ There are two important options to keep in mind when uploading a UI Resources mo
 * Category
   Choose the category “UI Resources” to make the module available as a UI Resources module
 
-![Add Content in the App Store](attachments/sharing_appstore_addcontent.png)
+![Add Content in the App Store](attachments/howto/sharing_appstore_addcontent.png)
 
 When the upload of your UI Resources to the Mendix App Store is completed, it may need to be reviewed by the Mendix App Store. When the UI Resources are published to the Private App Store, the UI Resources do not have to be reviewed and will be directly available in the company after publishing. Publishing to the Public App Store will need approval by Mendix.
 
@@ -41,11 +41,11 @@ A UI Resources module is a great way to keep all UI resources centralized in you
 
 Let’s start with creating a new Mendix application in the Mendix Platform or directly in the Mendix Desktop Modeler. Select the “Blank App” for this how-to. Open the newly created Mendix app in the Mendix Desktop Modeler.
 
-![Create New App Flow](attachments/sharing_createnewapp.png)
+![Create New App Flow](attachments/howto/sharing_createnewapp.png)
 
 If we look at the App Store Modules inside the Mendix Project level, we notice the default Atlas UI module. Delete the Atlas UI Resources module by right clicking on the module.
 
-![Delete Atlas UI Resources](attachments/sharing_delete_module.png)!
+![Delete Atlas UI Resources](attachments/howto/sharing_delete_module.png)!
 
 Now it’s time to import your company UI Resources. If you have not created UI resources before, it’s possible to do this by following the previous step in this how-to.
 
@@ -66,7 +66,7 @@ There are four important options to keep in mind when uploading the company Star
 3. Sub category: Starter Apps
 4. Impressions
 
-![Add Starter App to App Store](attachments/sharing_appstore_addcontent_starterapp.png)
+![Add Starter App to App Store](attachments/howto/sharing_appstore_addcontent_starterapp.png)
 
 There are three important options to keep in mind when uploading the UI Resources module.
 
@@ -79,17 +79,17 @@ There are three important options to keep in mind when uploading the UI Resource
 * Impressions
   Impressions contain the images that are being shown when creating a new app in the Mendix App Platform. See the example below.
 
-![Create New App Detail Information](attachments/sharing_createnewapp_detail.png)
+![Create New App Detail Information](attachments/howto/sharing_createnewapp_detail.png)
 
 __Using the UI Resources Module from the Mendix App Store__
 The UI Resources module can be easily downloaded through the Mendix App Store in the Mendix Desktop Modeler. By downloading the UI Resources module in existing Mendix apps, Mendix developers can benefit from all the new UI Resources.
 
 Open the Mendix App Store in the Mendix Desktop Modeler. On the left side, the categories for the App Store content are available. Click on the UI Resources link to open the UI Resources or use the search function.
 
-![Mendix Modeler App Store](attachments/sharing_appstore_modeler.png)
+![Mendix Modeler App Store](attachments/howto/sharing_appstore_modeler.png)
 
 An overview of the UI Resources will appear in the middle of the Mendix App Store. The private label indicates that the UI Resources are only available for your company. Select the UI Resources that have been created by your company.
 
-![Mendix Modeler App Store Detail Information](attachments/sharing_appstoredetail_modeler.png)
+![Mendix Modeler App Store Detail Information](attachments/howto/sharing_appstoredetail_modeler.png)
 
 When opening the details page, it’s possible to Download the UI Resources inside the project. When downloading the UI Resources module, it will appear under App Store modules. The module can always be updated by downloading a new version from the Mendix App Store when new resources are added.

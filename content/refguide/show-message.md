@@ -20,9 +20,9 @@ Type defines the color scheme and icon of the message.
 
 | Option | Description |
 | --- | --- |
-| Information | Message is shown with a blue frame ([]) and an information icon. |
-| Warning | Message is shown with a yellow frame ([]) and a warning icon. |
-| Error | Message is shown with a red frame ([]) and an error icon. |
+| Information | Message is shown with a blue frame and an information icon. |
+| Warning | Message is shown with a yellow frame and a warning icon. |
+| Error | Message is shown with a red frame and an error icon. |
 
 _Default value:_ Information
 

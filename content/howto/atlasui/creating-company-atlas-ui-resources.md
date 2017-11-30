@@ -3,7 +3,6 @@ title: "Creating Company Atlas UI Resources"
 parent: "howto"
 ---
 
-## Creating Company Atlas UI Resources
 Creating Atlas UI Resources for your company is a great way to keep your company apps in sync with your company brand. It’s easier to scale and manage apps throughout your app landscape when all the resources are neatly organised in a single module. In this how-to we will go through all the steps in creating your own UI Resources.
 
 #### Creating Page Templates
@@ -85,6 +84,6 @@ Using an underscore (See the example for "Layouts") ensures the folder doesn’t
 #### Export Company Atlas UI Resources
 When the resources are ready to be shared with multiple developers or apps, the module can be exported from the project explorer. You are free to change the name of module as long as the module has been exported as a UI resource package.
 
-[Export Atlas UI Resources](attachments/howto/export_ui_module.png)
+![Export Atlas UI Resources](attachments/howto/export_ui_module.png)
 
 The module can now be imported in other apps or be uploaded to the Mendix App Store. There is an option to make the resource module available for private use only so everybody in the company can benefit from and extend this module.

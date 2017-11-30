@@ -2,9 +2,7 @@
 title: "General"
 parent: "howto"
 ---
-
 ## 1 General
-
 ### 1.1 Introduction
 
 Mendix Atlas UI is the design framework that makes building elegant user experiences a rapid process. It was built upon three design principles – simplicity, harmony, and flexibility. Simplicity helps you focus on what is important. We’ve simplified the design process with readymade page templates, building blocks, and widgets that can be arranged and customized to suit your app. Our design elements are harmonious, bringing a unified aesthetic to your app landscape. Atlas is built to be fully responsive, ensuring quality across scale without losing functionality. Visit the [Atlas UI site](https://atlas.mendix.com/) for detailed previews and descriptions of all Atlas UI elements.

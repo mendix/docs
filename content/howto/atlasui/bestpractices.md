@@ -3,16 +3,14 @@ title: "Best Practices"
 category: "Atlas UI"
 ---
 
-## 1 Best Practices
+## 1.1 Preparing a Mendix Project with Atlas UI
 
-#1.1 Preparing a Mendix Project with Atlas UI
-
-###Sprinting with Atlas UI
+### Sprinting with Atlas UI
 
 Atlas UI lets you optimize the User Experience of your applications while accelerating your development workflow. For the best results, it’s important to embed Atlas UI in your development process. To make things easy, we’ve mapped out how to tackle your ﬁrst project with Atlas UI, from the preparation phase, all the way to that ﬁnal sprint.
 
 
-###Save Time by Preparing
+### Save Time by Preparing
 
 The Project Preparation stage is the time to explore Atlas UI and save yourself time down the road. In following the preparation steps, the impact of Atlas UI on your workflow is minimal, yet you still get the User Experience quality peak.
 
@@ -32,7 +30,7 @@ Sometimes, page templates by themselves aren’t enough to realize that beautifu
 
 Now that you’ve selected a collection of both page templates and building blocks, it’s time to consolidate them into a useful list for the rest of your team.
 
-###Your First Sprint
+### Your First Sprint
 
 The ﬁrst sprint is a great opportunity to ‘get your hands dirty’ with Atlas UI, saving a lot of time and eﬀort further down the road.
 
@@ -55,11 +53,11 @@ As both the web modeler and Atlas UI are in Beta, not everything from the pages 
 
 *Be transparent:* hang a list of your page templates and building blocks on the wall of your war-room, or include it in your project. Adding screenshots to your user stories is a great way to do this.
 
-###Progressing Through Sprints
+### Progressing Through Sprints
 
 In an agile setting, everything you do is subject to change. This is true with Atlas UI as well. To help you on your way we’ve listed the most common occurrences and added an approach on how to deal with them.
 
-####The functionality of that new page you’re creating is too complex for your chosen set of page templates.
+#### The functionality of that new page you’re creating is too complex for your chosen set of page templates.
 
 Search for an better suited template and if present, add it to the app.
 *if not*
@@ -67,13 +65,13 @@ Pick a page template that is almost what you need, and enrich it with building b
 *or*
 Build a page from scratch using building blocks. Make sure to keep the structure of that page easily accessible for other new pages with the same template.
 
-####One of your chosen page templates needs to be changed to another.
+#### One of your chosen page templates needs to be changed to another.
 
 Keep your existing pages and alter them to look and behave like the new pages would.
 *or*
 Create a new page and copy and paste the needed component from your existing pages.
 
-####A new functionality “block” is needed that is not present in your chosen set of building blocks.
+#### A new functionality “block” is needed that is not present in your chosen set of building blocks.
 
 Search for a new suitable building block and if present, add it to the app.
 *if not*
@@ -81,7 +79,7 @@ Pick a building block that is “halfway” to what you need and alter it with w
 *or*
 Create your own building block from scratch.
 
-####One of the used building blocks needs to be changed to another building block.
+#### One of the used building blocks needs to be changed to another building block.
 
 Add the new building block to the page.
 *and either*
@@ -91,11 +89,11 @@ Manually alter the new building block.
 *after which*
 The original building block can be removed.
 
-####Adding the cherry on top: Customizing the branding of your application.
+#### Adding the cherry on top: Customizing the branding of your application.
 
 Open up the theme creator section in the web modeler. Adjust some of the main settings such as logo, brand colors and typography.
 
-#1.2 Using the Atlas UI App While You Work
+## 1.2 Using the Atlas UI App While You Work
 The Atlas UI mobile app enables you to browse through all the page templates, building blocks and widgets on your mobile phone. Explore Atlas UI solutions wherever you are. You can even use it while modeling so you don’t have to keep navigating back to your browser.
 
 Download the Mendix App for [iOS](https://itunes.apple.com/us/app/mendix/id458058946?mt=8) or [Android](https://atlas.mendix.com/).

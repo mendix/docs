@@ -3,8 +3,6 @@ title: "Starting with Mendix and Atlas UI"
 parent: "howto"
 ---
 
-## Starting with Mendix and Atlas UI
-
 The Mendix Web Modeler is a powerful collaborative tool that lets you build your application in the cloud, together with your team. When you log into the Web Modeler for the first time, you get the option to choose a starter app that is fully Atlas-enabled.
 
 *Don’t have a Mendix Account? Try it free! Find out about the [benefits of using Mendix](https://www.mendix.com) and [sign up for your account](https://www.mendix.com/try) today.*

@@ -3,7 +3,6 @@ title: "Migrate existing projects to Atlas UI"
 parent: "howto"
 ---
 
-## Migrate Existing Projects to Atlas UI
 This how-to describes how to upgrade existing Mendix projects to Atlas UI.
 
 #### Prepare Your App for Atlas UI

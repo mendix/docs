@@ -27,7 +27,7 @@ To sync the Web Modeler with the Desktop Modeler, follow these steps:
 
     ![](attachments/desktop-howto/main-menu.png)
 
-2. In the popup, click **Continue to the Desktop Modeler** to launch the Desktop Modeler. Optionally, click the **Download here** link to download and install the latest Desktop Modeler and retry afterwards.
+2. In the pop-up, click **Continue to the Desktop Modeler** to launch the Desktop Modeler. Optionally, click the **Download here** link to download and install the latest Desktop Modeler and retry afterwards.
 
     ![](attachments/desktop-howto/wm-sync-dialog.png)
 

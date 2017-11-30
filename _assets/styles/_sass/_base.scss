@@ -5,76 +5,38 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
 }
 
 html, body { height: 100%; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font-base;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 500;
-  background-color: #fdfdfd;
+  background-color: $color-background-grey;
+  @include mq("sm", max) {
+    background-color: $color-white;
+  }
   color: $base-text-color;
 }
 
 a {
-  color: $link-color;
+  color: $color-mendix-blue;
   text-decoration: none;
-
-  &:hover   { color: #000; text-decoration: underline; }
+  transition: all 0.2s ease;
+  &:hover, &:focus {
+    color: #ea9629;
+    text-decoration: none;
+  }
 }
 
 .post-content {
 
-  &.no-title {
-    margin-top: 30px;
-    &.not-found {
-      margin-top: 5em;
-      .not-found-suggestion {
-        margin: 3em 0;
-        .suggestions {
-          list-style: none;
-          margin: 0 0 1em;
-          padding: 0;
-          li {
-            text-align: center;
-          }
-        }
-      }
-    }
-  }
 
-  table {
-    width: 100%;
-    max-width: 100%;
-    border: 1px solid #ddd;
-
-    > thead,
-    > tbody,
-    > tfoot {
-      > tr {
-        > th,
-        > td {
-          padding: 8px;
-          line-height: 1.42857143; // This comes from Bootstrap
-          vertical-align: top;
-          border: 1px solid #ddd;
-        }
-      }
-    }
-
-    > thead {
-      background-color: $color-lightgrey;
-    }
-  }
-
-  img:not(.overview-block-icon) {
-    margin: 10px 0;
-    display:block;
-    max-width:100%;
-    height:auto;
-  }
 }
 
 /* Utility */
@@ -87,94 +49,6 @@ a {
   padding: 0 30px;
   margin: 0 auto;
   zoom: 1;
-}
-
-
-/* Layout Styles */
-/* ----------------------------------------------------------*/
-
-.github-icon-svg,
-.twitter-icon-svg {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  position: relative;
-  top: 3px;
-}
-
-
-/* Page Content styles */
-/* ----------------------------------------------------------*/
-
-.page-content {
-  padding: 30px 0;
-  background-color: #fff;
-}
-
-
-/* Home styles */
-/* ----------------------------------------------------------*/
-
-.home h1 { margin-bottom: 25px; }
-
-.posts { list-style-type: none; }
-
-.posts li { margin-bottom: 30px; }
-
-.posts .post-link {
-  font-size: 24px;
-  letter-spacing: -1px;
-  line-height: 1;
-}
-
-.posts .post-date {
-  display: block;
-  font-size: 15px;
-  color: #818181;
-}
-
-
-/* Post styles */
-/* ----------------------------------------------------------*/
-
-.post-header { margin: 10px 0 0; }
-
-.post-header h1 {
-  font-size: 42px;
-  letter-spacing: -1.75px;
-  line-height: 1;
-  font-weight: 300;
-}
-
-.post-header .meta {
-  font-size: 15px;
-  color: #818181;
-  margin-top: 5px;
-}
-
-.post-content {
-  margin: 0 0 30px;
-
-  > * {
-    //margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-  blockquote {
-    border-left: 4px solid #e8e8e8;
-    padding-left: 20px;
-    font-size: 18px;
-    opacity: .6;
-    letter-spacing: -1px;
-    font-style: italic;
-    margin: 30px 0;
-  }
-
-  ul, ol { padding-left: 20px; }
-
-  h5 {
-    font-size: 16px;
-  }
 }
 
 .post {
@@ -190,12 +64,53 @@ a {
 
 @media screen and (max-width: 600px) {
 
-  .post-header h1 { font-size: 36px; }
-  .post-content h2 { font-size: 28px; }
-  .post-content h3 { font-size: 22px; }
-  .post-content h4 { font-size: 18px; }
-  .post-content blockquote { padding-left: 10px; }
-  .post-content ul,
-  .post-content ol { padding-left: 10px; }
+  .mx__page__header__title { font-size: 36px; }
+  .mx__page__content h2 { font-size: 28px; }
+  .mx__page__content h3 { font-size: 22px; }
+  .mx__page__content h4 { font-size: 18px; }
+  .mx__page__content blockquote { padding-left: 10px; }
+  .mx__page__content ul,
+  .mx__page__content ol { padding-left: 10px; }
 
+}
+
+code {
+  color: $color-code-font;
+  background: $color-code-background;
+  border: 1px solid $color-code-border;
+  font-family: $font-code;
+  font-size: 15px;
+}
+
+@include mq('md') {
+  .modal-xl {
+    width: 1200px;
+  }
+};
+
+.modal-xl {
+  table {
+    table-layout: fixed;
+    font-size: 12px;
+    .expand-table {
+      display: none;
+    }
+    img {
+      max-width: 100%;
+    }
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          padding: 8px;
+          line-height: 1.42857143; // This comes from Bootstrap
+          vertical-align: top;
+          border: 1px solid $color-table-border;
+          word-wrap: break-word;
+        }
+      }
+    }
+  }
 }

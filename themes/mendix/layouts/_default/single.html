@@ -1,0 +1,27 @@
+{{ partial "header" . }}
+  {{ partial "mx-general/header-new" . }}
+  <div class="mx__content">
+    {{ partial "background" . }}
+    {{ partial "topbar" . }}
+    {{ partial "banner" . }}
+    <div class="container">
+      <div class="row mx__main-content">
+        <!-- CONTENT -->
+        <div class="col-md-9 col-xs-12 col-md-push-3 mx__main">
+          <div class="mx__page" data-file-id="{{ .File.BaseFileName }}">
+            {{ partial "pageheader" . }}
+            <article class="mx__page__content">
+              {{ .Content }}
+            </article>
+          </div>
+          {{ partial "tableofcontents" . }}
+        </div>
+        <!-- SIDEBAR -->
+        {{ partial "sidebar" . }}
+      </div>
+    </div>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+{{ partial "footer" . }}

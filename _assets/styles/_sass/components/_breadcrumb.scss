@@ -1,0 +1,45 @@
+$block: 'mx';
+
+.#{$block} {
+  @include element('breadcrumb') {
+    font-size: 21px;
+    color: $color-darker-grey;
+    margin-bottom: 0;
+    width: 100%;
+    max-height: $size-topbar-height - 1;
+    line-height: $size-topbar-height - 1;
+    overflow: hidden;
+    display: block;
+
+    @include mq("sm", max) {
+      line-height: 4em;
+    }
+
+    > li {
+      float: left;
+      // max-width: 190px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+
+      &:hover {
+        max-width: none;
+      }
+
+      &+li:before {
+        content: "/";
+        color: $color-darker-grey;
+        margin: 0 5px;
+      }
+    }
+
+    a, a:visited {
+      color: $color-darker-grey;
+      font-weight: 200;
+      &:focus, &:hover {
+        color: $color-blue;
+        text-decoration: none;
+      }
+    }
+  }
+}

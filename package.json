@@ -1,53 +1,54 @@
 {
   "name": "mxdocumentation",
   "version": "1.0.0",
-  "description": "Mendix Documentation",
-  "private": true,
-  "keywords": [
-    "mendix",
-    "documentation"
-  ],
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-prod": "HUGO_ENV=production ./node_modules/.bin/gulp build",
+    "build-test": "HUGO_ENV=test ./node_modules/.bin/gulp build",
+    "build-windows-prod": "SET HUGO_ENV production; .\\node_modules\\.bin\\gulp build",
+    "build-windows-test": "SET HUGO_ENV test; .\\node_modules\\.bin\\gulp build",
+    "serve": "./node_modules/.bin/gulp serve",
+    "serve-test": "HUGO_ENV=test ./node_modules/.bin/gulp serve",
+    "serve-production": "HUGO_ENV=production ./node_modules/.bin/gulp serve",
+    "help": "./node_modules/.bin/gulp help"
+  },
   "author": {
     "name": "Mendix B.V.",
     "email": "community@mendix.com",
     "url": "https://docs.mendix.com/community/"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mendix/docs.git"
-  },
   "license": "CC BY 4.0.",
-  "bugs": {
-    "url": "https://github.com/mendix/docs/issues",
-    "email": "community@mendix.com"
-  },
-  "dependencies": {},
   "devDependencies": {
-    "algoliasearch": "^3.19.2",
-    "async": "^2.1.4",
-    "bluebird": "^3.4.6",
-    "browser-sync": "^2.18.2",
-    "cheerio": "^0.22.0",
-    "del": "^2.2.2",
-    "git-blame": "^1.1.0",
+    "algoliasearch": "^3.24.3",
+    "async": "^2.5.0",
+    "bluebird": "^3.5.0",
+    "browser-sync": "^2.18.13",
+    "cheerio": "^1.0.0-rc.2",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-hash": "^3.1.0",
+    "gulp-hash": "^4.1.1",
     "gulp-help": "^1.6.1",
-    "gulp-minify": "0.0.14",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.9.1",
-    "gulp-util": "^3.0.7",
-    "lodash": "^4.17.2",
-    "moment": "^2.17.0",
-    "pump": "^1.0.1",
-    "recursive-readdir": "^2.1.0",
-    "request": "^2.79.0",
-    "run-sequence": "^1.2.2",
-    "shelljs": "^0.7.5",
+    "gulp-minify": "^1.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-util": "^3.0.8",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "pump": "^1.0.2",
+    "recursive-readdir": "^2.2.1",
+    "request": "^2.81.0",
+    "restify": "^6.2.3",
+    "rss": "^1.2.2",
+    "run-sequence": "^2.1.0",
+    "shelljs": "^0.7.8",
     "spa-server": "^1.0.0",
-    "write-yaml": "^0.2.2",
+    "@types/algoliasearch": "^3.24.2",
+    "@types/gulp-util": "^3.0.34",
+    "@types/lodash": "^4.14.83",
+    "upath": "^1.0.0",
+    "write-yaml": "^1.0.0",
     "yaml-front-matter": "^3.4.0",
-    "yamljs": "^0.2.8"
-  },
-  "scripts": {}
+    "yamljs": "^0.3.0"
+  }
 }

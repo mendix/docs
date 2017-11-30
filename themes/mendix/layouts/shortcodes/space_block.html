@@ -1,0 +1,44 @@
+<div class="index__block"><ul>
+{{- $currentPage := .Page.Permalink }}
+{{- $path := .Page.Dir }}
+{{- $slices := split $path "/" }}
+{{- $style := .Get "style" -}}
+{{- if eq $style "flat" }}
+  {{- $.Scratch.Set "pages" (where .Page.Site.Pages ".File.Dir" "eq" $path) }}
+{{- else }}
+  {{- range $i, $p := .Page.Site.Pages }}
+    {{- if and (eq (index (split $p.Dir "/") 0) (index $slices 0)) (eq $p.File.BaseFileName "index") }}
+      {{ $.Scratch.SetInMap "pagemap" (printf "%s" $i) . }}
+    {{- end }}
+  {{- end}}
+  {{- $.Scratch.Set "pages" ($.Scratch.GetSortedMapValues "pagemap") }}
+{{- end }}
+{{- range sort ($.Scratch.Get "pages") "Title" "asc" }}
+  {{- if eq .Permalink $currentPage }}
+  {{- else if isset .Params "category" }}
+  {{- else if isset .Params "parent" }}
+  {{- else }}
+    {{ $page := . }}
+    <li class="index__block__section">
+      {{- $pageURL := replace $page.URL "index.html" "" -}}
+      {{- $pageURL := replace $pageURL ".html" "" }}
+      <a href="{{ $pageURL }}" title="{{$page.Title}}" />{{- $page.Title }}</a>
+      {{- $list := (where $page.Site.Pages ".Params.category" "eq" $page.Title) }}
+      {{- $len := (len $list )}}
+      {{- range $index, $subpage := $list }}
+        {{- if eq $index 0 }}
+          <ul>
+        {{- end }}
+        {{- if eq $subpage.Dir $path }}
+          {{- $subPageURL := replace $subpage.URL "index.html" "" -}}
+          {{- $subPageURL := replace $subPageURL ".html" "" }}
+          <li><a href="{{ $subPageURL }}" title="{{$subpage.Title}}" />{{- $subpage.Title }}</a></li>
+        {{- end }}
+        {{- if eq (add $index 1) $len }}
+          </ul>
+        {{ end }}
+      {{- end }}
+    </li>
+  {{- end }}
+{{- end }}
+</ul></div>

@@ -3,6 +3,7 @@ const gulpErr = helpers.gulpErr;
 const touch = helpers.touch;
 const fs = require('fs');
 const gutil = require('gulp-util');
+const path = require('path');
 const shell = require('shelljs');
 const Promise = require('bluebird');
 const _ = require('lodash');
@@ -79,7 +80,7 @@ const mappings = (opts) => new Promise((resolve, reject) => {
             const to = r.to.trim(),
                   from = r.from.trim(),
                   lastChar = to.substr(-1),
-                  mdFile = '.' + to + (lastChar === '/' ? 'index.md' : '.md'),
+                  mdFile = path.join((opts.contentFolder ? opts.contentFolder : '.'), '.' + to + (lastChar === '/' ? 'index.md' : '.md')),
                   htmlFile = gutil.replaceExtension(mdFile, '.html'),
                   hash = new Buffer(`${from}-${to}`).toString('base64'),
                   caseSensitive = to.toLowerCase() === from.toLowerCase() || to.toLowerCase().indexOf(from.toLowerCase()) !== -1;

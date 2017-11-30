@@ -1,0 +1,40 @@
+baseURL: "https://docs.mendix.com/"
+languageCode: "en-us"
+title: "Mendix Documentation"
+
+params:
+  repository: "https://github.com/mendix/docs"
+  repository_branch: "development"
+  algolia:
+    application_id:    'OHBX5T982M'
+    index_name:        'docs'
+    read_only_api_key: 'd23e5ac47b71a0f51afa5fedc695b718'
+  intercom:
+    test_id: 'nw1x91z3'
+    live_id: 'xbpgtd40'
+  description: "Mendix documentation"
+  site_description: "You can browse all the documentation for the Mendix platform here."
+  theme: "mendix"
+
+canonifyurls: false
+relativeURLs: false
+uglyURLs: true
+enableGitInfo: true
+enableRobotsTXT: true
+
+# Advanced
+# noChmod: true
+# noTimes: true
+# stepAnalysis: true
+
+publishDir: "_site"
+theme: "mendix"
+metaDataFormat: "yaml"
+
+# Allows you to disable all page types and will render nothing related to 'kind';
+# values = "page", "home", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"
+disableKinds:
+  - RSS
+  - taxonomy
+  - taxonomyTerm
+  - section

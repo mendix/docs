@@ -1,0 +1,14 @@
+$block: 'mx';
+
+.#{$block} {
+  @include element('main') {
+    background: $color-white;
+    @media (min-width: 992px) {
+      &:not(.borderless) {
+        //left: (100% / 6);
+        border-left: $border-color 1px solid;
+      }
+      max-width: 877px;
+    }
+  }
+}

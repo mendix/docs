@@ -1,0 +1,86 @@
+{{- $page := . -}}
+{{- $site := .Site -}}
+{{- $spaces := .Site.Data.spaces -}}
+{{- $paths := split .File.Dir "/" }}
+{{- $main := index $paths 0 }}
+{{- $space := index $spaces $main -}}
+
+{{- $.Scratch.Set "title" $page.Title -}}
+{{- $.Scratch.Set "description" $site.Params.description -}}
+
+{{- with $page.Title -}}
+  {{- with $space -}}
+    {{- if eq .space $page.Title }}
+      {{- $.Scratch.Set "title" (printf "%v | %v" $page.Title $site.Title) }}
+    {{- else }}
+      {{- $.Scratch.Set "title" (printf "%v - %v | %v" $page.Title (.space | htmlUnescape) $site.Title) }}
+    {{- end }}
+  {{- else -}}
+    {{- $.Scratch.Set "title" (printf "%v | %v" $page.Title $site.Title) }}
+  {{- end -}}
+{{- else -}}
+  {{- with $space -}}
+    {{- $.Scratch.Set "title" (printf "%v | %v" (.space | htmlUnescape) $site.Title) }}
+  {{- else -}}
+    {{- $.Scratch.Set "title" $site.Title }}
+  {{- end -}}
+{{- end -}}
+{{- if eq $page.URL "/" -}}
+  {{- $.Scratch.Set "title" $site.Title }}
+{{- end -}}
+
+{{- $permaLink := replace $page.Permalink "index.html" "" -}}
+{{- $permaLink := replace $permaLink ".html" "" -}}
+
+  {{ "<!-- SEO -->" | safeHTML }}
+
+  {{ printf "<title>%s</title>" ($.Scratch.Get "title") | safeHTML }}
+  {{ printf "<meta property=\"og:title\" content=\"%s\" />" ($.Scratch.Get "title") | safeHTML }}{{ with $page.Title }}
+  {{ printf "<!-- <meta itemprop=\"name\" content=\"%s\" /> -->" . | safeHTML }}{{ end }}
+  {{ with $page.Params.description }}
+  <meta name="description" content="{{ $page.Params.description }}">
+  <meta property="og:description" content="{{ $page.Params.description }}" />
+  <!-- <meta itemprop="description" content="{{ $page.Params.description }}" />  -->{{ else }}{{if eq $page.URL "/"}}
+  <meta name="description" content="{{ $site.Params.site_description }}" />
+  <meta property="og:description" content="{{ $site.Params.site_description }}" />
+  <!-- <meta itemprop="description" content="{{ $site.Params.site_description }}" /> -->{{ end }}{{ end }}
+  {{ with $page.GitInfo }}
+  {{ printf "<meta property=\"og:updated_time\" content=\"%s\"/>" (dateFormat "2006-02-01T15:04:05-07:00" .AuthorDate) | safeHTML }}{{ end}}
+  {{ with $page.Params.tags }}
+  <meta name="keywords" content="{{ delimit $page.Params.tags ", " }}">{{ else }}{{ "<!-- no tags set -->" | safeHTML }}
+  {{ end }}
+
+  <link rel="canonical" href="{{ $permaLink }}">
+  <meta property="og:url" content="{{ $permaLink }}" />
+
+  <link rel="alternate" type="application/atom+xml" title="Updates" href="https://docs.mendix.com/feed.xml" />
+
+  <meta property="og:site_name" content="Mendix Documentation" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:site" content="@MendixDeveloper" />
+
+  <script type="application/ld+json">
+    {{ if eq $page.URL "/" }}{
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      {{ printf "\"headline\": \"%s\"" ($.Scratch.Get "title") | safeHTML }},
+      "url": "{{ $permaLink }}"{{ with $page.GitInfo }},
+      {{ printf "\"dateModified\": \"%s\"" (dateFormat "2006-02-01T15:04:05-0700" .AuthorDate) | safeHTML }}{{ end}},
+      "description": "{{ $site.Params.site_description }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ $permaLink }}search/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }{{ else }}{
+      "@context": "http://schema.org",
+      "@type": "WebPage",
+      {{ printf "\"headline\": \"%s\"" ($.Scratch.Get "title") | safeHTML }}
+      "url": "{{ $permaLink }}"{{ with $page.GitInfo }},
+      {{ printf "\"dateModified\": \"%s\"" (dateFormat "2006-02-01T15:04:05-0700" .AuthorDate) | safeHTML }}{{ end}}{{ with $page.Params.description }},
+      "description": "{{ $page.Params.description  | safeJS }}"{{ end }}
+    }{{ end }}
+  </script>
+
+  {{ "<!-- /SEO -->" | safeHTML }}

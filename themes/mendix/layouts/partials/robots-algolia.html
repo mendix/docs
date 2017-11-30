@@ -1,0 +1,43 @@
+{{- $sitemap := index .Page.Params "sitemap" -}}
+{{- $noindex := index .Page.Params "noindex" -}}
+{{- $intercom := index .Site.Params "intercom" -}}
+{{- $liveId := index $intercom "live_id" -}}
+{{- $testId := index $intercom "test_id" -}}
+{{- $env := getenv "HUGO_ENV" -}}
+{{- if eq $env "production" -}}
+  <!-- BUILD: PRODUCTION -->
+  {{- if not (eq $sitemap false) -}}
+    {{- if not (eq $noindex true) -}}
+  <meta name="ROBOTS" content="INDEX, FOLLOW">
+    {{- else -}}
+  <meta name="ROBOTS" content="NOINDEX, FOLLOW">
+    {{- end -}}
+  {{- else -}}
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  {{- end -}}
+  <script type="text/javascript">
+    window.__IntercomAppId = "{{ $liveId }}"
+    window.intercomSettings = {
+      app_id: window.__IntercomAppId
+    };
+  </script>
+{{- partial "asset" (dict "page" . "type" "js" "filename" "intercom.js") -}}
+{{- else if eq $env "test" -}}
+<!-- BUILD: TEST -->
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <script type="text/javascript">
+    window.__IntercomAppId = "{{ $testId }}"
+    window.intercomSettings = {
+      app_id: window.__IntercomAppId
+    };
+  </script>
+{{- partial "asset" (dict "page" . "type" "js" "filename" "intercom.js") -}}
+{{- else -}}
+<!-- BUILD: UNKNOWN -->
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+{{- end -}}
+<script type="text/javascript">
+  window._SEARCH_SETTINGS = {
+    initialIndex: 'docs'
+  }
+</script>

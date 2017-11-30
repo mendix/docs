@@ -3,12 +3,15 @@ node_modules
 *DS_Store*
 .jekyll-metadata
 
-Gemfile.lock
-.sass-cache/
-.ruby-version
-
 _algolia_api_key_
 
-_config_test*
-_data/history.yml
-_data/asset*.json
+data/history.yml
+data/asset*.json
+
+static/public/js/*
+static/public/styles/*
+
+static/json/*.json
+TODO.md
+
+test.js

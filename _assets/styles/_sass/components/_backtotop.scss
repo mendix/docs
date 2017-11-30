@@ -1,0 +1,35 @@
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 9999;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 30px;
+    background: #0595db;
+    color: #FFF;
+    cursor: pointer;
+    border: 0;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+    font-size: 25px;
+
+    i {
+      top: 5px;
+    }
+
+    &:hover {
+        background: #e9ebec;
+        color: $base-text-color;
+    }
+
+    &.show {
+        opacity: 1;
+    }
+
+    &.with-intercom {
+      right:100px;
+    }
+}

@@ -1,0 +1,36 @@
+{{ partial "header" . }}
+  {{ partial "mx-general/header-new" . }}
+  <div class="mx__content mx__content--search">
+    <div class="topbar topbar--search">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="overview-title text-center">What can we help you with?</h1>
+            {{ partial "search-input" . }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row search">
+        <div class="col-md-9 search-main">
+            <header class="search-header side-border-right"></header>
+            <div id="current-refined-values" class="search_current-refinements side-border-right"></div>
+            <section>
+                <div id="hits" class="side-border-right"></div>
+                <div id="pagination" class="text-center"></div>
+            </section>
+        </div>
+        <div class="col-md-3 search-sidebar">
+          <a href="/" title="Back to home" class="search__backlink">Back to home</a>
+          <div class="search_filters">
+            <div id="clear-all" class="search_filters_reset"></div>
+            <div id="space" class="search_filters_block"></div>
+            <div id="tags" class="search_filters_block"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ readFile "themes/mendix/layouts/partials/search/templates.html" | markdownify | chomp }}
+{{ partial "search/footer" . }}

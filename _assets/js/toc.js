@@ -8,7 +8,7 @@
             minimumHeaders: 2,
             headers: 'h1, h2, h3, h4, h5, h6',
             maxLevel: null,
-            listType: 'ol', // values: [ol|ul]
+            listType: 'ul', // values: [ol|ul]
             showEffect: 'show', // values: [show|slideDown|fadeIn|none]
             showSpeed: 'slow', // set to 0 to deactivate effect
             classes: {
@@ -38,6 +38,7 @@
             return this.id;
         }),
             output = $(this);
+
         if (!headers.length || headers.length < settings.minimumHeaders || !output.length) {
             $(this).hide();
             return;

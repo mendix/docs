@@ -1,0 +1,20 @@
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <span class="pull-left footer_text">Want to contribute to our documentation? <a href="/community/documentation/contribute-to-the-mendix-documentation" title="Want to contribute to our documentation?">Start here!</a></span>
+        <span class="pull-right footer_text">Copyright &copy; {{ dateFormat "2006" now }} Mendix. Documentation licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</span>
+      </div>
+    </div>
+  </div>
+</div>
+{{ partial "mx-general/footer-new" . }}
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js" integrity="sha256-vIL0pZJsOKSz76KKVCyLxzkOT00vXs+Qz4fYRVMoDhw=" crossorigin="anonymous"></script> -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js" type="text/javascript"></script>
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js" type="text/javascript"></script> -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js" type="text/javascript"></script>
+{{ partial "asset" (dict "page" . "type" "js" "filename" "prism.js") }}
+{{ partial "asset" (dict "page" . "type" "js" "filename" "toc.js") }}
+{{ partial "asset" (dict "page" . "type" "js" "filename" "main.js") }}
+{{ partial "asset" (dict "page" . "type" "js" "filename" "searchpage.js") }}

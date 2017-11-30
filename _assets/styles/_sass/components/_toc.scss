@@ -1,0 +1,107 @@
+$block: 'mx';
+
+.#{$block} {
+  @include element('toc') {
+    float: left;
+    padding: 0 10px 0 20px;
+
+    @include mq('md', min) {
+      width: 20%;
+    };
+
+    @include mq('md', max) {
+      display: none;
+    };
+
+    $title-padding: 10px;
+    @include element('title') {
+      position: relative;
+      font-weight: 100;
+      margin-bottom: $title-padding - 4;
+      padding: 0 0 $title-padding;
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid $border-color;
+      &:hover {
+        cursor: pointer;
+        &:after {
+          font-family: 'Glyphicons Halflings';
+          color: $color-mendix-blue;
+          content: "\e113";
+          position: absolute;
+          top: 2px;
+          right: 0;
+        }
+      }
+    };
+
+    #toc {
+      // position: fixed;
+      display: none;
+      @include mq('md', min) {
+        max-width: 250px;
+      };
+
+      .nav {
+        & > li {
+          & > a {
+            color: #999;
+            border-left: 2px solid transparent;
+            padding: 4px 20px;
+            font-size: 13px;
+            font-weight: 400;
+          }
+        }
+        .nav {
+          margin-left: 5px;
+          & > li {
+            & > a {
+              padding-top: 1px;
+              padding-bottom: 1px;
+              padding-left: 30px;
+              font-size: 12px;
+            }
+          }
+        }
+
+        & > .active > a,
+        & > li > a:hover,
+        & > li > a:focus {
+            color: $color-mendix-blue;
+            text-decoration: none;
+            background-color: transparent;
+            border-left-color: $color-mendix-blue;
+        }
+
+        & > .active > a,
+        & > .active:hover > a,
+        & > .active:focus > a {
+            font-weight: 700;
+        }
+
+        .nav > .active > a,
+        .nav > .active:hover > a,
+        .nav > .active:focus > a {
+            font-weight: 500;
+        }
+
+        ul.nav {
+          display: none;
+        }
+
+        & > .active > ul.nav {
+          display: block;
+        }
+      }
+
+      & > ul.nav > li/*,
+      & > ul.nav > li > ul.nav*/ {
+        display: block;
+      }
+
+      & > ul.nav {
+        //margin-top: 50px;
+      }
+    }
+  }
+}

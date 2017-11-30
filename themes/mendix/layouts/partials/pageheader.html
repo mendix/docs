@@ -1,0 +1,14 @@
+<div class="row mx__page__header">
+  <div class="col-md-12 col-xs-12">
+    <header class="mx__page__header__head">
+      <h1 class="mx__page__header__title">{{ .Page.Title }}</h1>
+    </header>
+    <div class="mx__page__header__sub mx__sub-header">
+      <time class="mx__sub-header__link__time" datetime="{{ .GitInfo.AuthorDate }}">{{ dateFormat "Jan 2, 2006" .GitInfo.AuthorDate }}</time>
+      <span class="mx__sub-header__reading-time">{{ partial "reading-time" . }}</span>
+      {{ partial "printbutton.html" . }}
+      {{ partial "editbutton.html" . }}
+    </div>
+    <div class="mx__page__header__nav"></div>
+  </div>
+</div>

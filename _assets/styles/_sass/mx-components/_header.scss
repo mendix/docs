@@ -1,0 +1,13 @@
+$block: 'mx';
+
+.#{$block} {
+  @include e('header') {
+    border-top: 5px solid $color-topbar-blue;
+    display: block;
+    height: 89px;
+    background: $color-white;
+    position: relative;
+    z-index: 25;
+    @include box-shadow(0 1px 2px 0 rgba(0,0,0,0.5), false);
+  };
+}

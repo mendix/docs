@@ -1,0 +1,3 @@
+{{- $repo := index .Site.Params "repository" -}}
+{{- $branch := index .Site.Params "repository_branch" -}}
+<a class="mx__sub-header__edit-button" href="{{- $repo -}}/blob/{{- $branch -}}/content/{{- .File.Path -}}" title="Edit on Github" target="_blank"><i class="glyphicon glyphicon-pencil"></i>Edit</a>

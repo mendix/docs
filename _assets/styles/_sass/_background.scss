@@ -1,0 +1,66 @@
+$block: 'mx';
+
+.#{$block} {
+  @include element('background') {
+    z-index:10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    @include mq("sm", max) {
+      display: none;
+    }
+    @include element('left') {
+      display: block;
+      width: 50%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: $color-background-grey;
+      position: absolute;
+    }
+    @include element('right') {
+      display: block;
+      width: 50%;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: $color-white;
+      position: absolute;
+    }
+  }
+
+  @include element('content') {
+    position: relative;
+    & > .container {
+      position: relative;
+      z-index: 20;
+      @include mq("md", min) {
+        // padding-left: 0;
+        // padding-right: 0;
+      }
+    }
+    .topbar {
+      position: relative;
+      z-index: 50;
+      & > .container {
+        @include mq("md", min) {
+          // padding-left: 0;
+          // padding-right: 0;
+        }
+      }
+    }
+  };
+
+  @include mq("sm") {
+    @include element('main-content') {
+      display: table;
+      & > .mx__main, & > .mx__sidebar {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+      }
+    }
+  }
+}

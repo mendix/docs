@@ -6,12 +6,16 @@ const shell = require('shelljs');
 const spawnServer = (folder) => {
   const targetFolder = path.resolve(folder, '_site');
   const server = Server.create({
-    path: '_site',
+    path: targetFolder,
     port: 8888,
+    middleware: [function (req, res, next) {
+      console.log(req.url);
+      next();
+    }],
     fallback: (req, res) => {
       const parsed = url.parse(req.url),
-            target = parsed.pathname + '.html',
-            alternateTarget = parsed.pathname + '/index.html';
+        target = parsed.pathname + '.html',
+        alternateTarget = parsed.pathname + '/index.html';
 
       if (shell.test('-f', path.join(targetFolder, target))) {
         return target + (parsed.query ? `?${parsed.query}` : '');

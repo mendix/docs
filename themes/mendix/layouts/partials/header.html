@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+{{- $baseUrl := .Site.BaseURL }}
+{{- .Page.Scratch.Add "baseUrl" .Site.BaseURL }}
+<html lang="en">
+  {{ partial "base/head" . }}
+  <body{{ with .Site.Params.theme }} class="{{ . }}"{{ end }}>

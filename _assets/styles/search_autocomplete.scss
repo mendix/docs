@@ -1,3 +1,4 @@
+@import "_sass/core/variables";
 /* Search */
 .algolia-autocomplete {
   width: 100%;
@@ -10,8 +11,9 @@
   .aa-dropdown-menu {
     width: 100%;
     background-color: #fff;
-    border: 1px solid #999;
+    border: 1px solid $border-color;
     border-top: none;
+    margin-top: -1em;
     .aa-suggestion {
       cursor: pointer;
       padding: 10px 10px 5px;

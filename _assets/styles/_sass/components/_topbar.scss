@@ -1,0 +1,14 @@
+.topbar {
+  $size-topbar-search: 50px;
+  $topbar-search-padding: ($size-topbar-height - $size-topbar-search) / 2;
+  $top-search-logo: $size-topbar-search / 2;
+
+  border-bottom: $border-color 1px solid;
+  background: $color-background-grey;
+  height: $size-topbar-height;
+  line-height: $size-topbar-height;
+
+  @include mq("sm", max) {
+    height: auto;
+  }
+}

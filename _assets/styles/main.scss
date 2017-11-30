@@ -1,8 +1,29 @@
-@import "_sass/variables";
+@import "_sass/core/variables";
+@import "_sass/core/helpers";
+
+@import "_sass/background";
+
 @import "_sass/base";
 @import "_sass/general";
-@import "_sass/headerfooter";
-@import "_sass/menu";
-@import "_sass/overview";
-@import "_sass/searchpage";
-@import "_sass/prism";
+
+@import "_sass/components/alerts";
+@import "_sass/components/sidebarmenu";
+@import "_sass/components/topbar";
+@import "_sass/components/search";
+@import "_sass/components/footer";
+@import "_sass/components/banner";
+@import "_sass/components/breadcrumb";
+@import "_sass/components/subheader";
+@import "_sass/components/github";
+@import "_sass/components/backtotop";
+@import "_sass/components/toc";
+
+@import "_sass/sidebar";
+@import "_sass/content";
+
+@import "_sass/pages/overview";
+@import "_sass/pages/search";
+@import "_sass/pages/page";
+@import "_sass/pages/frontpage";
+
+@import "_sass/vendor/prism-codehighlighting";

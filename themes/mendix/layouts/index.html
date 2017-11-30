@@ -1,0 +1,35 @@
+{{ partial "header" . }}
+  {{ partial "mx-general/header-new" . }}
+  <div class="mx__content">
+    {{ partial "background" . }}
+    {{ partial "topbar-without-search" . }}
+    <div class="container">
+      <div class="row mx__main-content">
+        <!-- CONTENT -->
+        <div class="col-md-9 col-xs-12 col-md-push-3 mx__main">
+          <div class="mx__page mx__page--frontpage">
+            <div class="row mx__page__header">
+              <div class="col-md-12 col-xs-12">
+                <header class="mx__page__header__head">
+                  <h1 class="mx__page__header__title mx__page__header__title--frontpage">How can we help you?</h1>
+                  <h2 class="mx__page__header__subtitle">Find, collaborate, and contribute to build better apps.</h2>
+                </header>
+                <article class="mx__page__content mx__page__content--frontpage">
+                  <div class="mx__page__frontpage-block">
+                    {{ partial "search-input" . }}
+                  </div>
+                  <div class="mx__page__frontpage-featured">
+                    {{ partial "frontpage/featured" . }}
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SIDEBAR -->
+        {{ partial "sidebar" . }}
+      </div>
+    </div>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" type="text/javascript"></script>
+{{ partial "footer" . }}

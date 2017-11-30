@@ -1,0 +1,203 @@
+#folder:
+#  space: 'Space for this folder'
+#  mendix_version: 6 #optional, used for searches
+#  priority: 1 - 9 (used for sitemap). If omitted this will not be included, which defaults to 0.5
+#  menu_categories: List with the categories used in the side menu
+apidocs-mxsdk:
+  space: "API & SDK"
+  priority: false
+  menu_categories:
+    - "API Documentation"
+    - "Mendix Platform SDK"
+addons:
+  space: "Other Add-ons"
+  priority: false
+  menu_categories:
+    - "APM"
+    - "AQM"
+ats:
+  space: "ATS Add-on"
+  priority: false
+  menu_categories:
+    - "General"
+    - "Reference Guide"
+    - "How-To's"
+    - "Best Practices"
+community:
+  space: "Community"
+  priority: false
+  menu_categories:
+    - "Tools"
+    - "Documentation"
+    - "App Store"
+howto40:
+  space: "Mendix 4 How-to's"
+  priority: false
+  mendix_version: 4
+  noindex: true
+  menu_categories:
+    - "General"
+    - "Modeler"
+    - "Java Programming"
+    - "Deployment"
+    - "Custom Widgets"
+    - "Debugging"
+  banner:
+    type: 'warning'
+    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the How-To&#39;s <a href="/howto/">here</a>.'
+howto50:
+  space: "Mendix 5 How-to's"
+  priority: false
+  mendix_version: 5
+  noindex: true
+  menu_categories:
+    - "Getting Started"
+    - "Data Models"
+    - "GUIs"
+    - "Logic & Business Rules"
+    - "Mobile"
+    - "Security"
+    - "Integration"
+    - "Extendability"
+    - "Custom Widget Development"
+    - "Testing"
+    - "Monitoring & Troubleshooting"
+    - "Collaboration & Project Management"
+howto6:
+  space: "Mendix 6 How-to's"
+  priority: 5
+  mendix_version: 6
+  noindex: true
+  menu_categories:
+    - "Getting Started"
+    - "Data Models"
+    - "GUIs"
+    - "Logic & Business Rules"
+    - "Mobile"
+    - "Security"
+    - "Integration"
+    - "Extendability"
+    - "Custom Widget Development"
+    - "Testing"
+    - "Monitoring & Troubleshooting"
+    - "Collaboration & Project Management"
+howto:
+  space: "Mendix 7 How-to's"
+  priority: 6
+  mendix_version: 7
+  menu_categories:
+    - "Tutorials"
+    - "SAP"
+    - "Modeling Basics"
+    - "Data Models"
+    - "UX"
+    - "Logic & Business Rules"
+    - "Mobile"
+    - "Security"
+    - "Integration"
+    - "Extendability"
+    - "Custom Widget Development"
+    - "Testing"
+    - "Monitoring & Troubleshooting"
+    - "Collaboration & Project Management"
+refguide4:
+  space: "Mendix 4 Reference Guide"
+  priority: false
+  mendix_version: 4
+  noindex: true
+  menu_categories:
+    - "App Platform"
+    - "Team Server"
+    - "Modeler"
+    - "Runtime"
+    - "Client"
+    - "Java Programming"
+    - "Release Notes"
+    - "System Requirements"
+    - "Moving from 3 to 4"
+    - "Deployment"
+  banner:
+    type: 'warning'
+    text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>'
+refguide5:
+  space: "Mendix 5 Reference Guide"
+  priority: false
+  mendix_version: 5
+  noindex: true
+  menu_categories:
+    - "General"
+    - "Team Server"
+    - "Modeler"
+    - "Runtime"
+    - "Java Programming"
+    - "Mobile"
+    - "Proactive Maintenance"
+refguide6:
+  space: "Mendix 6 Reference Guide"
+  priority: 6
+  mendix_version: 6
+  noindex: true
+  menu_categories:
+    - "General"
+    - "Team Server"
+    - "Modeler"
+    - "Runtime"
+    - "Java Programming"
+    - "Mobile"
+    - "Proactive Maintenance"
+refguide:
+  space: "Mendix 7 Reference Guide"
+  priority: 7
+  mendix_version: 7
+  menu_categories:
+    - "General"
+    - "Team Server"
+    - "Modeler"
+    - "Runtime"
+    - "Java Programming"
+    - "SAP"
+    - "Mobile"
+howtogeneral:
+  space: "General How-to's"
+  priority: 6
+  menu_categories:
+    - "Tips & Tricks"
+    - "Best Practices"
+    - "Mendix Support"
+releasenotes:
+  space: "Release Notes"
+  priority: false
+  menu_categories:
+    - "Desktop Modeler"
+    - "Platform Portal"
+    - "Model SDK"
+    - "Platform SDK"
+    - "Hybrid App"
+    - "Mendix Mobile App"
+    - "APM"
+    - "ATS"
+    - "AQM"
+    - "Beta Features"
+developerportal:
+  space: "Developer Portal"
+  priority: false
+  menu_categories:
+    - "General"
+    - "Company Admin"
+    - "Collaborate"
+    - "Develop"
+    - "Deploy"
+    - "Operate"
+    - "Settings"
+    - "How-To's"
+deployment:
+  space: "Deployment"
+  priority: false
+  menu_categories:
+    - "Amazon Web Services"
+    - "Azure"
+    - "Cloud Foundry"
+    - "Docker"
+    - "Mendix Cloud"
+    - "On-Premises"
+    - "SAP Cloud Platform"

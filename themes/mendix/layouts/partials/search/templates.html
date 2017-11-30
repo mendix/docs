@@ -1,0 +1,45 @@
+<!--
+{{/*
+-->
+<!-- TEMPLATES -->
+
+<script type="text/html" id="stats-template">
+  <div class="stats">
+    {{#nonEmptyQuery}}Found {{{nbHits}}} results for search: &quot;{{query}}&quot;{{/nonEmptyQuery}}
+    {{#emptyQuery}}There are {{{nbHits}}} results{{/emptyQuery}}
+    <div class="stats_time">{{{processingTimeMS}}} ms</div>
+  </div>
+</script>
+
+<script type="text/html" id="hit-template">
+  <div class="search_hit hit media">
+    <div class="media-body">
+      <h4 class="media-heading"><a href="{{{url}}}">{{{_highlightResult.title.value}}}</a></h4>
+      <p class="text">{{{_highlightResult.text.value}}}</p>
+      <span class="space">{{{space}}}</span>
+    </div>
+  </div>
+</script>
+
+<script type="text/html" id="refinement-template">
+  <label class="{{cssClasses.label}}">
+    <input type="checkbox"
+           class="{{cssClasses.checkbox}}"
+           value="{{value}}"
+           {{#isRefined}}checked{{/isRefined}} />
+        {{{highlighted}}}
+  </label>
+</script>
+
+<script type="text/html" id="current-refinement-template">
+  {{#label}}{{label}}{{^operator}}:{{/operator}}{{/label}}{{#operator}}{{{displayOperator}}}{{/operator}}{{#exclude}}-{{/exclude}}<i class="glyphicon glyphicon-remove"></i>{{name}}
+</script>
+
+<script type="text/html" id="no-results-template">
+  <div class="algolia_notfound_results">No results found for search: &quot;{{query}}&quot;, <a href="/search/">try again</a></div>
+</script>
+
+<!-- /TEMPLATES -->
+<!--
+*/}}
+-->

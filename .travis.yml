@@ -1,39 +1,46 @@
-sudo: true
-language: ruby
-rvm:
-- 2.3.1
+sudo: false
+dist: trusty
+language: node_js
 env:
   global:
     - GET_ENV_VAR=./_scripts/get_env.sh
     - GOPATH="${HOME}/.go_workspace"
-    - TRAVIS_NODE_VERSION="6.9.1"
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-    - JEKYLL_ENV=$($GET_ENV_VAR)
+    - TRAVIS_NODE_VERSION="8.1.3"
+    - HUGO_ENV=$($GET_ENV_VAR)
     - CF_APP=docs
     - CF_API=https://api.run.pivotal.io
     - CF_USERNAME=jelte.lagendijk@mendix.com
     - CF_ORGANIZATION=mendix-rnd.com
     - CF_SPACE=docs
+    - CF_CLI_VERSION=6.22.2
+    - HUGO_VERSION=0.25.1
     - secure: "NdoI6WzRsU/OsGpyIjjzgrnc23IJWzSAkEhJQWEjkMim6g2NrhrSipcKVjpsGkOyJFlmhMcVcejTxuvCMkIxOPSZziDHvHyqVU752ZGPTd7dYUIET2k7W6xytA2Aos66R3DasUPParFdmvvUdFny5GFjIILB8s6P5n3d1BnUG+nWhNOf3s++eY2UITq+jZl8JjEq8hMUq4UKLaFcwKUoFYBdNe9CV5sHmRK54BOOP65UJCm10H8pS6ywA/7ZVoHJwaIUF1XVdypxfdMpciqIN4jq6VB7AYEN6a2Qep6fa1wYeitCJkLaWkSzArGSQWUNw39JQcODijE2y1H/QBq7DNwqHcQtwtIme+HDtVsPHLzv47GQ/NV+AjV20EmXIxWp2ZgrUdndUC0sP3rhnRSAE0L2YSUwzYUG1xIKry4bxafkpjQ2DcZ0JC/2bpMy3JTThot/Ek8eDX+1cKbkaTghMYqT5bpSlL0OqE1/F2dr/ZGVUjhqdlMWf992pmDAq7IUl3nERLAY1RZByb6yDUy8llxpv3NWGeAxoXZFdfJNdN08qSJb6d2j2U+Y1NMbXhDjcs6YT1Jbn/33ZEwzS6NmKvQc+oEwjgKLbZKNoUmo822X8lBhvvr+bpHItycUqQUZ+nx344wsp3ISkSedZjeE1Lia98ZY1ryXC+UpoI9lQQE="
     - secure: "kYSZufIWTrCfGHk6QX3r7hdOpusvxnBncCRSs1E6yh8Bept9NX/zhUGwSR1k1aMhzeLzxZRWGMnwUK1y0v1gJrry0dicLZkcqnkNRPR8l8YFHhpAloQQDfToAq83RMQwgZUFgQNP+y7d82mzui14aY6Na9gUl0U8KU3hXGM4RaUWOLf5Ovil4FvKsdPzPHuHmnkHOrAeDvf9nZgp9HqsePFjs3vr8LVZCL/QucjXp+4AVMDs83gOVayJEfg8lBbT2R+9gDEmZOzKJaJosFZ30DL7PM1EsKK7SJap+FQGlow5l7Q2Vf2RYAuTLpxKh5pr38rtYayRmQI9oNRzTROaialR4JqvEa42PojpBM7MUQChjpvyEsDi2FoxzLTc+DVSD2NhoH/kh/gilKX8HyfRLHIpIVqA2n7NnWhSZgMqbgdWntbMNrjEtLWA3GgWPDZ+wNYTL552d3ZAuXciJJEEQcr2nbnAjF4j5fwZ+WLl0TfFle750Jje/mqQcY5KkT7OPvFm0lbFqFhBzdKJzIS2kv3wtm19+uX376a/kwbZ9/S7uuKiarblC3IMzDmMZxV47q5sG/JImWU7KBl2gqXl8PTMNESpJ7uxwNbsSY6MZgxrRBO+CCjWPcNkBjGFlOFNiJEuJeEtmsJCGEJKX02J/BV4PV5lxbi4NxDiq5t8K3Q="
+before_install:
+  - export PATH=$HOME:$PATH
+  - export HUGO_PACKAGE=hugo_${HUGO_VERSION}_Linux-64bit
+  - travis_retry curl -L https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/$HUGO_PACKAGE.tar.gz | tar xz
+  - chmod +x ./hugo
+  - mv ./hugo $HOME/bin/hugo
 install:
-  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm
-    && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm
-    install $TRAVIS_NODE_VERSION
-  - bundle install --path vendor/bundle
-  - npm install -g gulp
-  - npm install
+  - rm -rf _site
+  - yarn global add gulp
+  - yarn install
 before_deploy:
-  #- wget 'https://cli.run.pivotal.io/stable?release=debian64&version=6.22.2&source=github-rel' -qO temp.deb && sudo dpkg -i temp.deb
-  #- rm temp.deb
-  - sudo dpkg -i ./_scripts/cf_install.deb
+  - export PATH=$HOME:$PATH
+  - travis_retry curl -L -o $HOME/cf.tgz "https://cli.run.pivotal.io/stable?release=linux64-binary&version=$CF_CLI_VERSION"
+  - tar xzvf $HOME/cf.tgz -C $HOME
+  - chmod +x $HOME/cf
+  - mv $HOME/cf $HOME/bin/cf
+  - cp ./_scripts/autopilot-linux $HOME/
+  - chmod a+x $HOME/autopilot-linux
   - ./_scripts/before_deploy.sh
 script:
   - gulp build
 cache:
-  directories:
-    vendor
-    node_modules
+  yarn: true
+  #directories:
+  #  - node_modules
 branches:
   only:
   - master

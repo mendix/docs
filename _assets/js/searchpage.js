@@ -1,5 +1,5 @@
 /* global instantsearch */
-((function($) {
+((function() {
     function getTemplate(templateName) {
       return document.getElementById(templateName + '-template').innerHTML;
     }
@@ -12,7 +12,7 @@
     var DEBOUNCE = null;
     search.addWidget(
       instantsearch.widgets.searchBox({
-        container: '#mendix_search',
+        container: '#mendix-search-field',
         autofocus: true,
         wrapInput: false,
         queryHook: function (query, search) {
@@ -52,11 +52,45 @@
         container: '#space',
         attributeName: 'space',
         operator: 'or',
+        sortBy: ['isRefined', 'count:desc', 'name:asc'],
+        showMore: true,
+        limit: 6,
+        templates: {
+          header: '<h5 class="search_filters_block_title">Main categories</h5>',
+          item: getTemplate('refinement')
+        }
+      })
+    );
+
+    /*
+      FILTER (SPACES)
+    */
+    search.addWidget(
+      instantsearch.widgets.refinementList({
+        container: '#tags',
+        attributeName: 'tags',
+        operator: 'or',
         //sortBy: ['isRefined', 'count:desc', 'name:asc'],
         sortBy: ['count:desc', 'name:asc'],
-        limit: 50,
+        showMore: true,
+        limit: 10,
         templates: {
-          header: '<h5 class="search_filters_block_title">Main categories</h5>'
+          header: '<h5 class="search_filters_block_title">Tags</h5>',
+          item: getTemplate('refinement')
+        }
+      })
+    );
+
+    /*
+      CURRENT
+    */
+    search.addWidget(
+      instantsearch.widgets.currentRefinedValues({
+        container: '#current-refined-values',
+        clearAll: 'after',
+        templates: {
+          item: getTemplate('current-refinement'),
+          clearAll: '<i class="glyphicon glyphicon-remove"></i> clear all'
         }
       })
     );
@@ -105,4 +139,4 @@
 
 
     search.start();
-})(jQuery));
+})());

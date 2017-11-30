@@ -101,7 +101,7 @@ This guideline does not apply to the Search Context action, since it does not tr
 
 ## 7 Action Parameters
 
-When defining action parameters, always use the ATS [naming conventions](/refguide/rg-version-1/best-practices).
+When defining action parameter names, always use the ATS [naming conventions](/refguide/rg-version-1/best-practices).
 
 In addition, include the optional input parameters in the action parameters for an unsupported widget action.
 

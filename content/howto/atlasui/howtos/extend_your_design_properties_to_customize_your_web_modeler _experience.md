@@ -1,6 +1,5 @@
 ---
 title: "Extend your design properties to customize your Web Modeler experience"
-space: "Atlas UI"
 ---
 
 ## Extend Your Design Properties to Customize your Web Modeler Experience

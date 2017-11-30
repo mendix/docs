@@ -1,6 +1,5 @@
 ---
 title: "Creating custom preview images for your Building Blocks and Page Templates"
-space: "Atlas UI"
 ---
 
 ## Creating Custom Preview Images for Your Building Blocks and Page Templates

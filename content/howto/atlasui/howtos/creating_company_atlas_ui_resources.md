@@ -1,6 +1,5 @@
 ---
 title: "Creating Company Atlas UI Resources"
-space: "Atlas UI"
 ---
 
 ## Creating Company Atlas UI Resources

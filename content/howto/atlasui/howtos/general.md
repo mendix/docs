@@ -1,6 +1,5 @@
 ---
 title: "General"
-space: "Atlas UI"
 ---
 
 ## 1 General
@@ -24,6 +23,8 @@ Create familiarity and consistency throughout your apps landscape, regardless of
 
 #### Flexibility
 Design apps that look good and scale in all situations without losing an intuitive and consistent experience.
+
+![Image of Mendix Atlas UI](attachments/atlas_ui_preview.png)
 
 ## 2 Design Elements
 

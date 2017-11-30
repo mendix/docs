@@ -1,6 +1,5 @@
 ---
 title: "Sharing Company Atlas UI Resources"
-space: "Atlas UI"
 ---
 
 ## Sharing Company Atlas UI Resources
@@ -84,7 +83,7 @@ There are three important options to keep in mind when uploading the UI Resource
 __Using the UI Resources Module from the Mendix App Store__
 The UI Resources module can be easily downloaded through the Mendix App Store in the Mendix Desktop Modeler. By downloading the UI Resources module in existing Mendix apps, Mendix developers can benefit from all the new UI Resources.
 
-Open the Mendix App Store in the Mendix Desktop Modeler. On the left side, the categories for the App Store content are available. Click on the UI Resources link to open the UI Resources or use the search function.    
+Open the Mendix App Store in the Mendix Desktop Modeler. On the left side, the categories for the App Store content are available. Click on the UI Resources link to open the UI Resources or use the search function.
 
 ![Mendix Modeler App Store](attachments/sharing_appstore_modeler.png)
 

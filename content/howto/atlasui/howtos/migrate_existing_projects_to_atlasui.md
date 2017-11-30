@@ -1,6 +1,5 @@
 ---
 title: "Migrate existing projects to Atlas UI"
-space: "Atlas UI"
 ---
 
 ## Migrate Existing Projects to Atlas UI

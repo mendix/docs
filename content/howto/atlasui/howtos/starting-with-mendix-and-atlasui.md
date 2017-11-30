@@ -1,6 +1,5 @@
 ---
 title: "Starting with Mendix and Atlas UI"
-space: "Atlas UI"
 ---
 
 ## Starting with Mendix and Atlas UI

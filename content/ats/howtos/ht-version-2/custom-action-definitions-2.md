@@ -26,8 +26,8 @@ The primary purpose of a combined action is to make it easier to create test cas
 These are some suggestions to make your combined action generic:
 
 * Input parameters – decide if the user must enter a certain value or if it is hard-coded
-* Output parameter – use the output parameter in combination with the random value
 * Random values – if you use a random value to create something, you must return the random value in order to reuse the value to find the item
+* Output parameter – use the output parameter in combination with the random value
 
 There are two ways of making a combined action:
 

@@ -68,7 +68,7 @@ To add a new environment, follow these steps:
 
 ![](attachments/getting-started-2/add-environment.png)
 
-### 3.2 Selenium Tab
+### 3.2 Selenium hubs
 
 At **Selenium hubs**, you see a list of the Selenium hubs configured for this app. Users can run tests on the listed hubs. You can create, edit, and delete Selenium hubs by clicking the buttons in the top bar.
 

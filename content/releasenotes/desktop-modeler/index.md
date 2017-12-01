@@ -7,6 +7,7 @@ frontpage_featured: true
 
 These are the release notes for the Mendix Desktop Modeler:
 
+* [7.9](7.9)
 * [7.8](7.8)
 * [7.7](7.7)
 * [7.6](7.6)

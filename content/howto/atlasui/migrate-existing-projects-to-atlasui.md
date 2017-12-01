@@ -21,7 +21,7 @@ To get the full experience of Atlas UI, it’s necessary to import the Atlas UI 
 
 First delete the “UI_Resources” module. After this, import the Atlas UI module from the Mendix App Store.
 
-[Mendix App Store](https://appstore.home.mendix.com/link/app/73033/Mendix/Atlas-UI-Navigation-Layouts) - Atlas UI Resource Module
+[Mendix App Store](https://appstore.home.mendix.com/link/app/104730/Mendix/Atlas-UI-Resources) - Atlas UI Resource Module
 
 When the Atlas UI Resources module is downloaded from the Mendix App Store, it can be found in App Store Modules.
 

@@ -4,7 +4,7 @@ category: "Modeler"
 ---
 
 
-A Mendix project consists of modules: a System module and one or more user-defined modules. Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. The Modeler does not enforce any kind of module structure; it is up to you to choose logical modules for your application.
+A Mendix project consists of modules: a System module, a [UI resources package](ui-resources-package), and one or more user-defined modules. Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. The Modeler does not enforce any kind of module structure; it is up to you to choose logical modules for your application.
 
 A module always contains exactly one [domain model](domain-model). The domain model is a data model that describes the information in your application domain in an abstract way.
 

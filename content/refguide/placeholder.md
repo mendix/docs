@@ -10,4 +10,6 @@ A placeholder can be used in a [layout](layout) to define a 'gap' that can be fi
 
 ### Name
 
-The name of the placeholder. This name is shown in the corresponding gap for a placeholder when editing a page based on the layout that contains that placeholder.
+The name of a placeholder is displayed in the center of each placeholder in the layout editor. Similarly, it will also appear in each placeholder gap of a page based on the layout, as long as the placeholder remains empty. 
+
+The placeholder name is also used to map page contents from one layout to the other when switching layouts or creating a new page. This behavior is described in detail in the [layout](layout) reference page. 

@@ -11,6 +11,14 @@ To download the **Mendix** mobile app, select one of the download links below:
 * [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile)
 {{% /alert %}}
 
+## 4.6.0
+
+**Release date: November 30th, 2017**
+
+### New Functionality
+
+* Add support for the new iPhone X (form factor, notch).
+
 ## 4.5.0
 
 **Release date: October 24th, 2017**

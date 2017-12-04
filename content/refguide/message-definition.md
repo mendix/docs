@@ -5,7 +5,7 @@ parent: "message-definitions"
 
 {{% alert type="info" %}}
 
-'Message Definitions' were introduced in version 7.8.0. This feature is still in private beta, and is subject to change before the final release.
+The Message Definitions feature was introduced in version 7.8.0. This feature is still in private beta, and it is subject to change before the final release.
 
 {{% /alert %}}
 
@@ -13,7 +13,7 @@ parent: "message-definitions"
 
 Message definitions define the messages that are sent from and to your app. Defining your messages allows you to create import and export mappings for them.
 
-A message definition can be used for both JSON and XML, and can be used for both single objects and lists of objects.
+A message definition can be used for both JSON and XML, and it can be used for both single objects and lists of objects.
 
 ## 2 General
 
@@ -27,7 +27,7 @@ The structure tree shows the attributes and some of the associations of the enti
 
 The **External name** is the name of the XML node or the JSON property. By default, it's the name of the attribute (for attributes) or entity (for associations). For the root entity, it's the external item name plus the letter `s`.
 
-The **External item name** is only relevant for XML, and only for the root entity. It is used for the XML node that represents a single item. By default it's the entity name.
+The **External item name** is only relevant for XML, and only for the root entity. It is used for the XML node that represents a single item. By default, it's the entity name.
 
 ## 3 Documentation
 

@@ -3,13 +3,19 @@ title: "Create Company Atlas UI Resources"
 category: "Atlas UI"
 ---
 
-Creating Atlas UI Resources for your company is a great way to keep your company apps in sync with your company brand. It’s easier to scale and manage apps throughout your app landscape when all the resources are neatly organised in a single module. In this how-to we will go through all the steps in creating your own UI Resources.
+## 1 Introduction
 
-#### Creating Page Templates
-Atlas UI Resources includes a large variety of page templates to use. When creating an app, however, a lot of pages you create will be custom-made and developers may want to reuse these page templates within the app or in other apps without having to start from scratch. This is now possible in the Mendix Desktop Modeler. In the example below, we’ll go through the steps of creating a new page template and talk about how the page template behaves in a local project and in the UI Resources module.
+Creating Atlas UI resources for your company is a great way to keep your company apps in sync with your company brand. It’s easier to scale and manage apps throughout your app landscape when all the resources are neatly organized in a single module. In this how-to, we will go through all the steps of creating your own UI Resources.
 
-__Create Page Template__
-Go to the project explorer of your app and right-click on a page you would like to use as a page template. In this example we use a dashboard page.
+## 2 Creating Page Templates
+
+The Atlas UI resources include a large variety of page templates to use. When creating an app, a lot of pages you create will be custom-made, and developers may want to reuse these page templates within the app or in other apps without having to start from scratch. This is now possible in the Mendix Desktop Modeler.
+
+In the example below, we’ll go through the steps of creating a new page template and talk about how the page template behaves in a local project and in the **UI Resources** module.
+
+### 3.1 Example Scenario
+
+In the Desktop Modeler, go to the **Project Explorer** of your app and right-click the page you want to use as the page template. In this example, we are using a dashboard page.
 
 ![](attachments/howto/creating_page_templates.png)
 

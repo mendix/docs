@@ -17,7 +17,11 @@ To download the **Mendix** mobile app, select one of the download links below:
 
 ### New Functionality
 
-* Add support for the new iPhone X (form factor, notch).
+* We added support for the new iPhone X (form factor, notch).
+
+### Known Issue
+
+* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Developer Portal) should not pose any problems.
 
 ## 4.5.0
 

@@ -27,7 +27,7 @@ The structure tree shows the attributes of the entity. Check all the attributes 
 
 The **External name** is the name of the XML node or the JSON property. You may leave it empty to use the default value. When the occurrence is `0..1`, the default value is the name in the first column. When the occurrence is `0..*`, the default value is the name in the first column plus the letter `s`. 
 
-The **External item name** only applies to XML, and only when the occurrence is `0..*`. This is the name of the XML node of the items in the list. You may leave it empty; the default value is name in the first column.
+The **External single item name** only applies to XML, and only when the occurrence is `0..*`. This is the name of the XML node of the items in the list. You may leave it empty; the default value is name in the first column.
 
 ## 3 Documentation
 

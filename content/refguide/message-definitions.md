@@ -5,7 +5,7 @@ parent: "integration"
 
 {{% alert type="info" %}}
 
-The 'Message Definitions' was introduced in version 7.8.0. This feature is still in private beta, and is subject to change before the final release.
+The 'Message Definitions' was introduced in version 7.8.0.
 
 {{% /alert %}}
 

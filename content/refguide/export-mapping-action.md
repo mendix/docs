@@ -39,7 +39,7 @@ If the [export mapping](export-mappings) requires an input, you can select a var
 
 {{% alert type="info" %}}
 
-Introduced in version 7.8.0. This feature is still in private beta, and is subject to change before the final release.
+Introduced in version 7.8.0.
 
 {{% /alert %}}
 

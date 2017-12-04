@@ -19,7 +19,7 @@ For an overview of the available options when you add a published  service, see 
 
 ## <a name="authorization"></a>3 Authorization
 
-Published REST services are secured with basic authentication. This is automatically applied when you [set the security level](project-security) of your app to **Prototype / demo**  or **Production**. When you [allow anonymous users](project-security#anonymous-users) to your app, all published REST services become available without authenthication.
+Published REST services are secured with basic authentication. This is automatically applied when you [set the security level](project-security) of your app to **Prototype / demo**  or **Production**. When you [allow anonymous users](project-security#anonymous-users) to your app, all published REST services become available without authentication.
 
 For more details, see [Published REST Routing](published-rest-routing).
 

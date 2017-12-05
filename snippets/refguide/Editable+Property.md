@@ -8,4 +8,4 @@ The editable property indicates whether the end user will be able to change the 
 | Never | The value is never editable. |
 | Conditional | The value is editable if the specified condition holds. (see below) |
 
-* Default value: Default
+*Default value*: Default

@@ -69,7 +69,6 @@ You can now style your app with custom branding, colors, and typography!
 
 ## 7 Related Content
 
-* [How to Get Started with Atlas UI](get-started-with-mendix-and-atlasui)
 * [How to Create Custom Preview Images for Building Blocks and Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
 * [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)

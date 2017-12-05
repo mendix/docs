@@ -20,7 +20,7 @@ Any known issues for a release are described in that version's release notes bel
 
 ### December 2nd, 2017 (1.7.0 / 1.3.2)
 
-* We updated some of the Cordova plugins to support the new iPhone X screen size/ratio/notch. Please follow the instructions in IPHONEX.md to configure your hybrid app to look good on an iPhone X.
+* We updated some of the Cordova plugins to support the new iPhone X screen size/ratio/notch. Please follow the instructions in [iPhone X Support](https://github.com/mendix/hybrid-app-template/blob/master/IPHONEX.md) to configure your hybrid app to look good on an iPhone X.
 * We improved how Android splash screens are configured. The old configuration could lead to memory-related crashes during startup.
 
 ### November 16th, 2017 (1.6.0 / 1.3.1)

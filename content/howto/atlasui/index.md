@@ -61,7 +61,7 @@ You can further customize widgets by changing their design properties. Colors, t
 
 ## 3 Documents in This Category
 
-* [How to Get Started with Atlas UI](get-started-with-mendix-and-atlasui)
+* [How to Get Started with Atlas UI](get-started-with-atlasui)
 * [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)
 * [How to Create Custom Preview Images for Building Blocks and Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)

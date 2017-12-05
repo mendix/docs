@@ -45,7 +45,7 @@ These design properties are used in the Web Modeler to give you more power when 
 
 ## 4 Related Content
 
-* [How to Get Started with Atlas UI](get-started-with-mendix-and-atlasui)
+* [How to Get Started with Atlas UI](get-started-with-atlasui)
 * [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)
 * [How to Create Custom Preview Images for Building Blocks and Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)

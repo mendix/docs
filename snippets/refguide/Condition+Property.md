@@ -10,11 +10,11 @@ When selected, this enables the widget while a particular attribute has a certai
 
 ##### Based on Expression
 
-{{% alert type="info" %}}
+<div class="alert alert-info">
 
 Added in Mendix 7.1.
 
-{{% /alert %}}
+</div>
 
 When selected, this enables the widget while a provided [expression](microflow-expressions) evaluates to true. The object of the containg data view is available inside an expression as a `$currentObject` variable.
 

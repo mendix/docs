@@ -60,7 +60,7 @@ Note that you cannot leave the app if you are the **Technical Contact** of the a
 
 ## 4 Web Modeler (Beta)
 
-If your app is supported by the Web Modeler during the beta program, you can enable it by clicking **Enable Web Modeler**. For details on getting the full Web Modeler experience, see [How to Migrate Existing Projects to Atlas UI](/atlasui/migrate-existing-projects-to-atlasui).
+If your app is supported by the Web Modeler during the beta program, you can enable it by clicking **Enable Web Modeler**. For details on getting the full Web Modeler experience, see [How to Migrate Existing Projects to Atlas UI](/howto/atlasui/migrate-existing-projects-to-atlasui).
 
 ## 5 Related Content
 

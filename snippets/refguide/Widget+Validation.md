@@ -1,6 +1,6 @@
 <div class="alert alert-info">
 
-The **Validation type** and **Validation message** properties were introduced in 7.6.0. They supersede the **Required** and **Required message** properties.
+The <strong>Validation type</strong> and <strong>Validation message</strong> properties were introduced in 7.6.0. They supersede the <strong>Required</strong> and <strong>Required message</strong> properties.
 
 </div>
 

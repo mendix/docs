@@ -7,8 +7,8 @@ Many input widgets, like text boxes and drop-down widgets, can be connected to:
 
 In the first case we say the widget is connected to an attribute and in the second case to an attribute path.
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 An input widget connected to an attribute <strong>path</strong> must be read-only. The Modeler will check this for you.
 
-</div>
+{{% /alert %}}

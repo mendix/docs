@@ -1,6 +1,7 @@
 ---
 title: "Migrate Existing Projects to Atlas UI"
 category: "Atlas UI"
+tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
 This how-to describes how to upgrade existing Mendix projects to Atlas UI.

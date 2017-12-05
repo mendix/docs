@@ -6,11 +6,11 @@
 
 Specifies whether the profile is enabled. If a profile is enabled, it can be used to determine the home page when a user logs into the application. If it is disabled, users accessing the application with a matching profile will be redirected to the closest equivalent enabled profile.
 
-<div class="alert alert-info">
+{{% alert type="info" %}}
 
 The desktop profile is always enabled.
 
-</div>
+{{% /alert %}}
 
 **Enable Offline Support (Only Hybrid Tablet and Hybrid Phone)**
 
@@ -44,8 +44,8 @@ Each device type contains a default menu. You can use these menus in [menu widge
 
 See [Menu](menu).
 
-<div class="alert alert-warning">
+{{% alert type="warning" %}}
 
 If [security](project-security) is enabled, the menu will only show items that the user has access to.
 
-</div>
+{{% /alert %}}

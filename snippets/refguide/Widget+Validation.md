@@ -1,8 +1,8 @@
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 The **Validation type** and **Validation message** properties were introduced in 7.6.0. They supersede the **Required** and **Required message** properties.
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Validation Type
 
@@ -25,11 +25,11 @@ When a validation is set and it fails for this widget, a message will be shown w
 
 This property determines the message that is shown to the user if widget validation is enabled and has failed. This is a translable text (for more information, see [Translatable Texts](translatable-texts)).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 For example, if an address field is required, the validation message for the text box of the address could be something like, "The address is required."
 
-{% endmarkdown %}</div>
+{{% /alert %}}
 
 ### Required
 
@@ -41,8 +41,8 @@ This property indicates whether this widget must be filled in by the end user or
 
 This property determines the message that is shown to the user if the widget is empty and the **Required** property is set to *true*. This is a translable text (for more inforamtion, see [Translatable Texts](translatable-texts)).
 
-<div class="alert alert-info">{% markdown %}
+{{% alert type="info" %}}
 
 For example, if an address field is required, the required message for the text box of the address could be something like, "The address is required."
 
-{% endmarkdown %}</div>
+{{% /alert %}}

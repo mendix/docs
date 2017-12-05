@@ -106,13 +106,9 @@ To add content to the App Store, follow these steps:
 
         ![](attachments/share-app-store-content/add_content_8.png)
 
-        {{% alert type="info" %}}
-
-        You can request other license types to be added as "License" options by pressing the "Feedback" button on the right side of the App Store screen.
-
-        {{% /alert %}}
-
-9. After entering the information for your content, you can click one of these buttons in the middle of the screen:
+        You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
+        
+10. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 
     ![](attachments/share-app-store-content/add_content_7.png)
 

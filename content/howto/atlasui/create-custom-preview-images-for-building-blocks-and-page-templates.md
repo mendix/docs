@@ -90,7 +90,7 @@ You can also create your page template preview image in a different image editor
 
 ## 4 Related Content
 
-* [How to Get Started with Atlas UI](start-with-mendix-and-atlasui)
+* [How to Get Started with Atlas UI](get-started-with-mendix-and-atlasui)
 * [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)
 * [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
 * [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)

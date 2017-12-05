@@ -96,3 +96,11 @@ To use the UI Resources module from teh Mendix App Store, follow these steps:
     ![](attachments/howto/sharing_appstoredetail_modeler.png)
 
 3. To download the UI resources inside your project, click **Download**. After downloading your company's UI Resources module, it will appear under **App Store modules**. The module can always be updated by downloading a new version from the Mendix App Store when new resources are added.
+
+## 5 Related Content
+
+* [How to Get Started with Atlas UI](get-started-with-mendix-and-atlasui)
+* [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)
+* [How to Create Custom Preview Images for Building Blocks and Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
+* [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
+* [How to Migrate Existing Projects to Atlas UI](migrate-existing-projects-to-atlasui)

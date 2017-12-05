@@ -59,7 +59,7 @@ A lot of Mendix projects have a custom theme. If this is the case for your proje
 
 ## 7 Related Content
 
-* [How to Get Started with Atlas UI](start-with-mendix-and-atlasui)
+* [How to Get Started with Atlas UI](get-started-with-mendix-and-atlasui)
 * [How to Create Company Atlas UI Resources](create-company-atlas-ui-resources)
 * [How to Create Custom Preview Images for Building Blocks and Page Templates](create-custom-preview-images-for-building-blocks-and-page-templates)
 * [How to Extend Design Properties to Customize the Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)

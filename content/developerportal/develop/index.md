@@ -14,7 +14,7 @@ This category is divided into the three pages presented below.
 
 In the **Developer Portal**, you can open or edit the app anytime by clicking **View App** or **Edit App**.
 
-![](attachments/view-edit-app.jpg)
+![](attachments/view-edit-app.png)
 
 The **Model** page is a separate page where you can open the model of your app. You can either open your model in the Desktop Modeler or in the Web Modeler.
 

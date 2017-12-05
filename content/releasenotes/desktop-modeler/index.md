@@ -5,12 +5,14 @@ description: "Presents all of the available release notes for the Mendix Desktop
 frontpage_featured: true
 ---
 
-These are the Mendix Desktop Modeler version release notes:
+These are the Mendix Desktop Modeler major version release notes:
 
 * [7](7)
 * [6](6)
 * [5](5)
 * [4](4)
+* [3](3)
+* [2](2)
 
 {{% alert type="info" %}}
 

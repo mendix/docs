@@ -1,5 +1,5 @@
 ---
-title: "Migrate existing projects to Atlas UI"
+title: "Migrate Existing Projects to Atlas UI"
 category: "Atlas UI"
 ---
 

@@ -18,7 +18,7 @@ All documentation contributions may undergo changes after editing according to o
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Quick guide to making a documentation change: fork the [**mendix/docs**](https://github.com/mendix/docs repository) and create a pull request with our **development** branch as the base.
+Quick guide to making a documentation change: fork the [**mendix/docs**](https://github.com/mendix/docs) repository and create a pull request with our **development** branch as the base.
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**

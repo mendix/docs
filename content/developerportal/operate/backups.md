@@ -56,7 +56,7 @@ You can upload two types of data:
 
 ### 3.3 Restoring a Backup
 
-You can choose the environment to which you want to restore the backup.
+You can choose the **destination** to which you want the environment to restore the backup. This allows you to, for example, restore a production environment backup to an acceptance environment.
 
 If you restore a backup that was originally deployed on an older Modeler version, you will get a warning. You can still restore the backup, but you have to deploy the older model later on. 
 
@@ -84,6 +84,8 @@ Backup Details | Description |
 **Expires on** | The date on which the backup will be removed from the system
 **Model version** | The version of the deployment package used during backup creation
 **Comment** | A specific comment added to the backup
+
+At the bottom of the screen, you can click **Delete** to delete this particular backup.
 
 ## 5 Related Content
 

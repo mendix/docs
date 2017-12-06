@@ -4,6 +4,18 @@ title: "Platform Portal"
 
 ## 2017
 
+### December 6th, 2017
+
+#### Fixes
+
+* We adressed an issue that prevents free apps to be embedded in an iframe.
+
+### November 27th, 2017
+
+#### Improvements
+
+* Free app users now have the option to select between Web Modeler and Desktop Modeler as they want to edit their application models.
+
 ### November 15th, 2017
 
 #### Improvements
@@ -66,7 +78,7 @@ title: "Platform Portal"
 #### Improvements
 
 * It is now possible to accept invitations and confirm signups on mobile devices.
-* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296) 
+* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296)
 
 #### Fixes
 

@@ -4,6 +4,18 @@ title: "Platform Portal"
 
 ## 2017
 
+### December 6th, 2017
+
+#### Fixes
+
+* We adressed the issue that prevents Free Apps from being embedded in an iframe.
+
+### November 27th, 2017
+
+#### Improvements
+
+* Free App users now have the option to select between Web Modeler and Desktop Modeler for editing their application models.
+
 ### November 15th, 2017
 
 #### Improvements
@@ -35,6 +47,7 @@ title: "Platform Portal"
 ### September 29th, 2017
 
 #### Fixes
+
 * We fixed an issue where a user who signed up to Mendix would get an error page in Internet Explorer and Microsoft Edge.
 
 ### September 28th, 2017
@@ -66,7 +79,7 @@ title: "Platform Portal"
 #### Improvements
 
 * It is now possible to accept invitations and confirm signups on mobile devices.
-* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296) 
+* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296)
 
 #### Fixes
 

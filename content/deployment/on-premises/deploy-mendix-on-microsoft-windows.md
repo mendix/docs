@@ -215,8 +215,8 @@ If you need to add additional request handlers, use this example:
 
 Replace **requesthandler** with your own request handler needed for the application.
 
+### 5.6 Adding the `Cache control: no-cache` Header
 
-### 5.6 Add "Cache control: no-cache" header
 In the application directory under **Project/Web**, you will find the `web.config` file that contains the Microsoft IIS configuration for the application. Here you should add the following code:
 
 ```xml
@@ -229,7 +229,7 @@ In the application directory under **Project/Web**, you will find the `web.confi
 </configuration>
 ```
 
-Afterwards the contents of this file must be similar to the following example:
+Afterwards, the contents of this file must be similar to the following example:
 
 **web.config**
 

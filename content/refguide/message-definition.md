@@ -5,7 +5,7 @@ parent: "message-definitions"
 
 {{% alert type="info" %}}
 
-The 'Message Definitions' was introduced in version 7.8.0.
+The 'Message Definitions' was introduced in version 7.10.0.
 
 {{% /alert %}}
 

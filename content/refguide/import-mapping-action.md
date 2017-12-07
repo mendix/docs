@@ -37,7 +37,7 @@ If the import mapping is based on a message definition, it can import both XML a
 
 {{% alert type="info" %}}
 
-Introduced in version 7.8.0.
+Introduced in version 7.10.0.
 
 {{% /alert %}}
 

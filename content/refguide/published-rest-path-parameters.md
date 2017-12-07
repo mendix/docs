@@ -5,7 +5,7 @@ parent: "published-rest-operation"
 
 {{% alert type="info" %}}
 
-The 'Published REST Service' feature was introduced in version 7.10.0.
+The **Published REST Service' feature was introduced in version 7.10.0.
 
 {{% /alert %}}
 

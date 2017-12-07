@@ -27,7 +27,7 @@ The [import mapping](import-mappings) defines how to transform the XML or JSON s
 
 {{% alert type="info" %}}
 
-This was introduced in version 7.8.0.
+This was introduced in version 7.10.0.
 
 {{% /alert %}}
 
@@ -37,7 +37,7 @@ If the import mapping is based on a message definition, it can import both XML a
 
 {{% alert type="info" %}}
 
-Whis was introduced in version 7.10.0.
+This was introduced in version 7.10.0.
 
 {{% /alert %}}
 

@@ -22,7 +22,7 @@ This tutorial takes you through the basics of development in the Mendix Desktop 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Create a free [Mendix Account](https://www.mendix.com/sign-up/SAP)
-* Open and log in to the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) (this tutorial was written for Desktop Modeler version **7.5.1**)
+* Download, open, and log in to the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
 * Request the authentication credentials required to connect with the SAP Gateway Demo System (ES4) by registering [here](https://register.sapdevcenter.com/SUPSignForms/)
 
 ## 3 Starting with the SAP Purchase Order Approval App
@@ -30,14 +30,14 @@ Before starting this how-to, make sure you have completed the following prerequi
 To start this tutorial, go to the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html) and follow these steps:
 
 1.  Click **Create App** in the upper-right corner of the screen.
-2.  Go to the **SAP** tab and select **SAP Purchase Order Approval Tutorial**.
+2.  Go to the **SAP Apps** tab and select **SAP Purchase Order Approval Tutorial**.
 3.  Click **Use this app**.
 4.  Enter *SAP Purchase Order Approval App* for the name of the new app, and click **Create App**.
-5.  Sign in to SAP Cloud Platform:
+5.  Select the **Region** and sign in to SAP Cloud Platform:
 
     ![](attachments/sap-purchase-order-approval/01-sap-login.png)
 
-6.  Select the **Region**, **Domain**, **Organization**, and **Space** that you want to use:
+6.  Select the **Domain**, **Organization**, and **Space** that you want to use:
 
     ![](attachments/sap-purchase-order-approval/02-create-development.png)
 
@@ -46,27 +46,11 @@ To start this tutorial, go to the [Mendix Developer Portal](https://sprintr.home
     ![](attachments/sap-purchase-order-approval/03-confirm-dev-created.png)
 
 8. Click **Edit App** to edit the app in the Mendix Desktop Modeler.
-    * If you see the **Version Selection** pop-up window, select version **7.5.1**
 
-## 4 Configure the TechEd Settings
-
-You are following this tutorial from TechEd, which means you are using a proxy. Follow these steps to configure the deployment and proxy settings:
-
-1. In the Desktop Modeler, go to **Edit > Preferences**.
-2. Set the **JDK directory** to *D:\SAP\JavaVM\NTAMD64\sapjvm_8.1.030\sapjvm_8*.
-3. Click **OK** to save the properties.
-
-    ![](attachments/sap-teched-manage-products/04-jdk-settings.png)
-
-{{% alert type="info" %}}
-
-If this setting is already configured in your Modeler, you can leave it as it is.
-
-{{% /alert %}}
 
 ## 5 Running the App for the First Time
 
-Now that you've created the credentials, you can run the app and have it connect with the SAP Gateway Demo System (ES4) system.
+Now that you've created the credentials, you can run the app and have it connect with the SAP Gateway Demo System (ES4).
 
 To run the app for the first time, follow these steps:
 

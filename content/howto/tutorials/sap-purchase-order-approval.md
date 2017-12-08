@@ -22,7 +22,7 @@ This tutorial takes you through the basics of development in the Mendix Desktop 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Create a free [Mendix Account](https://www.mendix.com/sign-up/SAP)
-* Open and log in to the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
+* Download, open, and log in to the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
 * Request the authentication credentials required to connect with the SAP Gateway Demo System (ES4) by registering [here](https://register.sapdevcenter.com/SUPSignForms/)
 
 ## 3 Starting with the SAP Purchase Order Approval App

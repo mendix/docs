@@ -5,7 +5,7 @@ parent: "published-rest-services"
 
 {{% alert type="info" %}}
 
-This was introduced in version 7.10.0.
+This feature was introduced in version 7.10.0.
 
 {{% /alert %}}
 

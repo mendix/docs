@@ -1,12 +1,11 @@
 ---
-title: "SAP Tutorials"
+title: "SAP Tutorial"
 category: "Tutorials"
-description: "These tutorials will guide you in extending SAP apps with Mendix."
+description: "This tutorial will guide you in extending an SAP app with Mendix."
 tags: ["SAP", "app"]
 frontpage_featured: true
 ---
 
-The following tutorials are available here:
+The following tutorial is available here:
 
-* [SAP TechEd 2017 Manage Products](sap-teched-manage-products)
 * [SAP Purchase Order Approval](sap-purchase-order-approval)

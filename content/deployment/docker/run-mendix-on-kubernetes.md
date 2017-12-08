@@ -1,5 +1,5 @@
 ---
-title: "Run a Mendix on Kubernetes"
+title: "Run Mendix on Kubernetes"
 category: "Docker"
 tags: ["kubernetes", "cloud", "deployment"]
 ---
@@ -39,7 +39,7 @@ The how-to is based on working with a Unix-like system. The commands for Windows
 
 This section explains the components needed for Mendix app deployment. This architecture overview shows all the components in the deployment:
 
-![](attachments/mendix-k8s-howto/kubernetes.png)
+![](attachments/run-mendix-on-kubernetes/kubernetes.png)
 
 The deployment of your Mendix app needs the following Kubernetes components:
 

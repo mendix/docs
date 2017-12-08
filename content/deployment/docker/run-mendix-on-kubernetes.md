@@ -1,7 +1,6 @@
 ---
 title: "Run a Mendix on Kubernetes"
 category: "Docker"
-#parent: ""
 tags: ["kubernetes", "cloud", "deployment"]
 ---
 
@@ -9,7 +8,7 @@ tags: ["kubernetes", "cloud", "deployment"]
 
 This how-to describes what is needed to deploy your Mendix app to [Kubernetes](https://kubernetes.io/) following Mendix best practices. Kubernetes extends Mendix's support for Docker by providing a platform to automate deployments and scale apps with high availability.
 
-This how-to uses [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), which is a way to run Kubernetes locally. Many of the operations you perform on minikube are the same as those on a hosted environment, and it provides a low-level entry to Kubernetes. For more information, see [Turn-key Cloud Solutions](https://kubernetes.io/docs/setup/pick-right-solution/).
+This how-to uses [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), which is a way to run Kubernetes locally. Many of the operations you perform on Minikube are the same as those on a hosted environment, and it provides a low-level entry to Kubernetes. For more information, see [Turn-key Cloud Solutions](https://kubernetes.io/docs/setup/pick-right-solution/).
 
 For more details on Kubernetes, see [Kubernetes Documentation](https://kubernetes.io/docs/home/).
 
@@ -17,7 +16,7 @@ All the configuration files used in this how-to are also available on GitHub.
 
 **This how-to will teach you how to do the following:**
 
-* Deploy and run a Mendix app on Kubernetes using minikube
+* Deploy and run a Mendix app on Kubernetes using Minikube
 * Separate the database deployment from your app
 * Attach persistence storage to the app container
 
@@ -31,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     * The kubectl CLI is the default tool to access and manage your Kubernetes cluster
     * Install kubectl based on the instructions provided in [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl)
 * Install Minikube
-    * With Minikube a local cluster can be created that is convenient for exploring Kubernetes; if you have an account for one of the cloud providers and you choose to use that, this step can be skipped
+    * With Minikube, a local cluster can be created that is convenient for exploring Kubernetes (if you have an account for one of the cloud providers and you choose to use that, this step can be skipped)
     * Install Minikube based on the instructions provided in [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
 
 The how-to is based on working with a Unix-like system. The commands for Windows may be slightly different.
@@ -43,6 +42,7 @@ This section explains the components needed for Mendix app deployment. This arch
 ![](attachments/mendix-k8s-howto/kubernetes.png)
 
 The deployment of your Mendix app needs the following Kubernetes components:
+
 * [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
 * [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 * [Services](https://kubernetes.io/docs/concepts/services-networking/service/)
@@ -63,8 +63,11 @@ To access your Mendix applications inside a pod from outside of the Kubernetes, 
 
 The first step is deploying our database. For Minikube, an external folder to persist the data outside of the database pod is used.
 
-> For simplicity and compatibility with ```minikube```, we mount a folder from
-the ```minikube node```. This approach is not recommended for production.
+{{% alert type="info" %}}
+
+For simplicity and compatibility with ```minikube```, we mount a folder from the ```minikube node```. This approach is not recommended for production.
+
+{{% /alert %}}
 
 Here is the definition of the `postgres-deployment.yaml` database component:
 
@@ -120,29 +123,26 @@ spec:
     service: postgres
 ```
 
-To create all the mentioned components:
+To create all the mentioned components, use the following:
 
 ```
 kubectl create -f postgres-deployment.yaml
 kubectl create -f postgres-service.yaml
-
 ```
 
-
 The database is now created. To verify the installation, check out the logs:
-
 
 ```
 # kubectl logs $(kubectl get pods -lservice=postgres -o name)
 ```
-Expected output:
+
+This is the expected output:
 
 ```
-
 2017-09-14 08:34:37.538 UTC [1] LOG:  database system is ready to accept connections
 ```
 
-Windows users need to execute the inline command first to get the pod name and the  logs:
+Windows users need to execute this inline command first to get the pod name and the logs:
 
 ```
 # kubectl get pods -lservice=postgres -o name
@@ -153,7 +153,7 @@ pods/posgres-whSsHA
 
 ### 4.2 Deploying the Application
 
-With the database running, we can deploy our application. We'll be using a sample Docker container with a Mendix app published in [hub.docker.com](https://hub.docker.com/r/mendix/sample-app-kubernetes/). To create a new Docker container for your Mendix app, please check out the description on the [docker-mendix-buildpack](https://github.com/mendix/docker-mendix-buildpack).
+With the database running, we can deploy our application. We'll be using a sample Docker container with a Mendix app published in [hub.docker.com](https://hub.docker.com/r/mendix/sample-app-kubernetes/). To create a new Docker container for your Mendix app, see the description on the [docker-mendix-buildpack](https://github.com/mendix/docker-mendix-buildpack).
 
 Before deploying the app, we'll create some secrets so that sensitive information for the application doesn't need to be in our *yaml* file. The secret file has to be applied only once to the cluster, and the values will be kept there. For information on all of the options, see [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
@@ -171,6 +171,7 @@ data:
   license-key: YOUR_LICENSE_KEY
   license-id: YOUR_LICENSE_ID
 ```
+
 To create the secret in Kubernetes we execute the following command:
 
 ```
@@ -247,7 +248,7 @@ kubectl create -f mendix-app.yaml
 
 The Mendix 7 Runtime is stateless, meaning that a client can talk to any server instance. However, scheduled events and database migrations should be handled by only one instance. For this, we use a container index count. The pod with index 0 will always trigger the schedule events and deal with database updates in case of an upgrade version.
 
-To get a container index on Kubernetes, a StatefulSet can be used, which will append the instance index to the container's hostname. A deployment doesn't do this.
+To get a container index on Kubernetes, a StatefulSet can be used, which will append the instance index to the container's hostname. A deployment does not do this.
 
 It should be noted that using a StatefulSet versus a deployment involves some difference in behavior. For example, a pod won't move to a different node when it crashes, and when the node is not reachable, the pod is not recreated on another system.
 
@@ -290,7 +291,7 @@ minikube service mendix-app-service --url
 Congratulations! You have deployed your first Mendix app in Kubernetes.
 
 ## 5 Related Content
+
 * [How to Build a Docker Image from a Mendix App Project](build-docker-image-from-mendix-project)
 * [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack)
-* [Mendix Azure ACS Kubernetes Reference Implementation
-](https://github.com/mendix/azure-kubernetes-cicd-reference-impl)
+* [Mendix Azure ACS Kubernetes Reference Implementation](https://github.com/mendix/azure-kubernetes-cicd-reference-impl)

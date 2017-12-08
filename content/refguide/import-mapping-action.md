@@ -27,7 +27,7 @@ The [import mapping](import-mappings) defines how to transform the XML or JSON s
 
 {{% alert type="info" %}}
 
-This was introduced in version 7.10.0.
+This feature was introduced in version 7.10.0.
 
 {{% /alert %}}
 

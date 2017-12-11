@@ -1,4 +1,4 @@
-#### Style
+### Style
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class.
 

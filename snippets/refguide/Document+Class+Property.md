@@ -1,4 +1,4 @@
-#### Class
+### Class
 
 The class property allows you to specify a cascading style sheet (CSS) class that applies to the entire document and its contents. This class will be applied in the browser and can affect how a page is rendered. The class should be a class from the project's theme.
 

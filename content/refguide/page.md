@@ -3,15 +3,17 @@ title: "Page"
 parent: "pages"
 ---
 
+## 1 Introduction
+
 {{% alert type="warning" %}}
 
-This document describes the properties of a page. If you want to see what pages are for and what kind of widgets can be placed on them, please read the [Pages](pages) overview documentation.
+This document describes the properties of a page. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](pages).
 
 {{% /alert %}}
 
-Pages define the end user interface of a Mendix application. Every page is based on a [layout](layout). A page fills the 'gaps' defined by a layout with widgets such as the [data view](data-view) and the [data grid](data-grid).
+Pages define the end-user interface of a Mendix application. Every page is based on a [layout](layout). A page fills the "gaps" defined by a layout with widgets such as the [data view](data-view) and [data grid](data-grid).
 
-## Common Properties
+## 2 Common Properties
 
 {{% snippet file="refguide/Document+Name+Property.md" %}}
 
@@ -21,15 +23,15 @@ Pages define the end user interface of a Mendix application. Every page is based
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
-## Designer Properties
+## 3 Designer Properties
 
 {{% snippet file="refguide/Canvas+Width+Property.md" %}}
 
 {{% snippet file="refguide/Canvas+Height+Property.md" %}}
 
-## General Properties
+## 4 General Properties
 
-### Title
+### 4.1 Title
 
 The title of the page that is shown using the [page title widget](page-title). If the page is shown in a pop-up window, the title appears in the title bar of the pop-up. The title can be overridden from places where forms are opened to make it possible to reuse a page for different purposes. For example, a [Grid Create Button](grid-new-button) and an [Edit button](edit-button) can refer to the same page but override the title to "New" and "Edit" respectively.
 

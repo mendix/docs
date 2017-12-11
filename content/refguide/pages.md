@@ -16,13 +16,21 @@ Type | Description
 
 We discern the following categories of widgets:
 
-*   [Menu Widgets](menu-widgets) allow the user to navigate through the application. Examples: menu bar widget, navigation tree.
-*   [Data Widgets](data-widgets) are central to building forms in Mendix. Through these widgets you can view and/or edit the data in the application. Examples: data view, data grid.
-*   [Layout Widgets](layout-widgets) are widgets that form the backbone of the interface and are typically used on layouts. Examples: layout container, title.
-*   [Common Widgets](common-widgets) are widgets commonly found on any page, layout or snippet. Examples: label, image.
-*   [Container Widgets](container-widgets) are widgets that can contain other widgets again. Examples: table, group box.
-*   [Input Widgets](input-widgets) make it possible to show and edit the values of attributes and associations. Examples: text box, date picker.
-*   [File Widgets](file-widgets) allow you to work with files, including images stored in files.
-*   [Button Widgets](button-widgets) are buttons that trigger actions. Examples: save button, microflow button.
-*   [Report Widgets](report-widgets) aggregate data and show it in the form of a table or a chart. Examples: basic report, report chart.
-*   Add-on widgets can be downloaded from the [Mendix Appstore](https://appstore.mendix.com/) or created by yourself using JavaScript.
+* [Menu widgets](menu-widgets) allow the user to navigate through the application
+    * Examples: menu bar widget, navigation tree
+* [Data widgets](data-widgets) are central to building forms in Mendix; with these widgets, you can view and edit the data in the application
+    * Examples: data view, data grid
+* [Layout widgets](layout-widgets) form the backbone of the interface and are typically used on layouts
+    * Examples: layout container, title
+* [Common widgets](common-widgets) are commonly found on any page, layout, and snippet
+    * Examples: label, image
+* [Container widgets](container-widgets) can contain other widgets again
+    * Examples: table, group box
+* [Input widgets](input-widgets) make it possible to show and edit the values of attributes and associations
+    * Examples: text box, date picker
+* [File widgets](file-widgets) allow you to work with files, including images stored in files
+* [Button widgets](button-widgets) are buttons that trigger actions
+    * Examples: save button, microflow button
+* [Report widgets](report-widgets) aggregate data and show it in the form of a table or a chart
+    * Examples: basic report, report chart
+* Add-on widgets can be downloaded from the [Mendix App Store](https://appstore.mendix.com/) or created by yourself using JavaScript

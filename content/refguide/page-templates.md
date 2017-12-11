@@ -5,33 +5,18 @@ parent: "pages"
 
 ## 1 Introduction
 
-Page templates fill newly created pages with content. Instead of starting with an empty page, you start with a beautiful design that you can then customize to match your needs.
+Page templates are the starting point for creating new pages. Every time a new page is created, a page template is selected as a baseline that can then be edited to match the pages specific needs. 
 
-The base of the page templates is the **Create Page** form in the Desktop Modeler. When creating a new page, there are multiple choices to be made in this form:
+When creating a new page, the user is presented with an overview of all the compatible page templates in the project. Prior to Mendix 7.9.0, this was a static selection designed to match most generic scenarios. Mendix 7.9.0 introduced page templates as a document type, allowing users to edit existing page templates and even create entirely new ones. 
 
-* Layout type – at the top of the form, you select the type of layout the page will use: **Responsive**, **Tablet specific**, or **Phone specific**
-* **Page name**
-* **Navigation layout** – the layout on which the page will be based; these are filtered based on the selected layout type, and the module name is displayed between parentheses
-* Category – on the left side of the form, the page template categories are displayed (for example, **Dashboards**, **Lists**, and **Grids**)
-* Page template – the page templates are filtered by category and show a preview of what they will look like in a web browser
-
-Generated pages will contain a [layout grid](layout-grid), and input widgets will have their built-in labels enabled.
-
-## 2 Images
-
-Page templates may contain (placeholder) images. These images are copied to an image collection named **PageTemplateImages** in the module where the newly created page resides. If the image collection with that name does not exist, it will be created.
-
-The image collection is a regular image collection. You can change the images and remove them. However, if an image is used, you will get an error in the Modeler.
-
-## 3 Editing Custom Page Templates (Mendix Version 7.9.0+)
+## 2 Custom Page Templates (Mendix Version 7.9.0+)
 
 {{% alert type="info" %}}
 
 The option to edit and manage custom page templates was added in Mendix 7.9.0.
 
 {{% /alert %}}
-
-Page templates are the starting point for creating new pages. Every time a new page is created, a page template is selected as a baseline that can then be edited to match the pages specific needs. By mapping out the common design patterns of a project, a great deal of the initial work involved in creating new pages can be mitigated. 
+By mapping out the common design patterns of a project, a great deal of the initial work involved in creating new pages can be mitigated. 
 
 Generally, page templates are stored in the project's [UI Resources package](ui-resources-package). This keeps them in sync with the project theme, as well as providing a handy place to consolidate all design-related data. 
 
@@ -41,7 +26,7 @@ To create a page template, right-click on a page in either the **Project Explore
 
 As the purpose of page templates is to facilitate design rather than functionality, page templates should be devoid of references to other documents. This is to prevent users from facing confusing errors when creating a new page. It also mitigates the chance of errors when importing page templates from a different project. 
 
-## 4 Common Properties
+### 2.1 Common Properties
 
 {{% snippet file="refguide/Document+Name+Property.md" %}}
 
@@ -51,27 +36,27 @@ As the purpose of page templates is to facilitate design rather than functionali
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
-## 5 Designer Properties
+### 2.2 Designer Properties
 
 {{% snippet file="refguide/Canvas+Width+Property.md" %}}
 
 {{% snippet file="refguide/Canvas+Height+Property.md" %}}
 
-## 6 General Properties
+### 2.3 General Properties
 
-### 6.1 Display Name
+#### 2.3.1 Display Name
 
 The display name determines by what name the page template will appear in the **Create Page** form.
 
 [//]: # ("Create New Page" is the name of the form in the Web Modeler. "Create Page" is the name of the form in the Desktop Modeler. Which one is applicable here?)
 
-### 6.2 Image
+#### 2.3.2 Image
 
 The image selected will appear in the Web Modeler **Create New Page** form. Selecting a representative image will allow users to easily distinguish between page templates. If left blank, the Web Modeler will display an empty white field. Any image selected will be scaled down to 200x200 pixels.
 
 [//]: # ("Create New Page" is the name of the form in the Web Modeler. "Create Page" is the name of the form in the Desktop Modeler. Which one is applicable here?)
 
-### 6.3 Shown When
+#### 2.3.3 Shown When
 
 Depending on the context in which a page is created, the user is presented with a different set of page templates to choose from. This setting determines which set the page template belongs to.
 
@@ -85,13 +70,13 @@ This setting may also place extra restrictions on the template. Page templates i
 
 *Default value:* Creating new pages
 
-### 6.4 Layout Type
+#### 2.3.4 Layout Type
 
 [Layouts](layout) are all assigned a type in their properties. This type determines in which profiles the layout can be used. To ensure that a user can always map a page template to a compatible layout during page creation, a page template must be assigned one of these same layout types. In practice, this setting will affect in which profile tab of the **Create Page** form the page template is displayed. Additionally, it will automatically restrict the default layout setting to layouts of the same type.
 
 [//]: # ("Create New Page" is the name of the form in the Web Modeler. "Create Page" is the name of the form in the Desktop Modeler. Which one is applicable here?)
 
-### 6.5 Preview Layout
+#### 2.3.5 Preview Layout
 
 Although page templates and layouts can be mixed and matched, this setting will determine which layout will be used to display the template in the editor. It also has a minor effect on the page creation process: if the template describes contents for layout [placeholders](placeholder) that are not present in the previously selected layout, the first compatible layout will be pre-selected in the **Create New Page** form. For a full description of the interaction between a page template and its preview layout, see [Layout](layout).
 

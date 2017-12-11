@@ -4,6 +4,6 @@ The class property allows you to specify a cascading style sheet (CSS) class tha
 
 <div class="alert alert-warning">
 
-Note that the styling is applied in the following order: 1) Default styling defined by the theme the project uses. 2) The 'Class' property of the widget. 3) The 'Style' property of the widget.
+Styling is applied in the following order: 1) The default styling defined by the theme the project uses, 2) The `Class` property of the widget, 3) The `Style` property of the widget.
 
 </div>

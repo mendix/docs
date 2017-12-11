@@ -29,7 +29,7 @@ The method for mapping placeholders described in this section was introduced in 
 
 A layout contains one or more placeholders. One of these placeholders must be named **Main**, and it can be differentiated from the others by a darker shade of blue. Unlike most other widgets, the name of a placeholder carries a special significance. When a user switches a page from one layout to another, the placeholder names will be used to map the content of the page to the new layout. For every placeholder that has content in the current layout, the Modeler will search for a placeholder with the same name in the new one. As the Main placeholder is mandatory, the user can always be assured that at least some of the page content will be salvaged. Any content found in placeholders not present in the new layout will be moved above the canvas, where it can easily be redistributed over the new placeholders.
 
-The placeholder naming scheme also has an impact on [page templates](page-template). When creating a new page, the template will map its content based on the names of the placeholders in its preview layout. Consequently, a template might describe the content for a placeholder that is not available in the selected layout. To prevent this, a compatible layout is automatically pre-selected when clicking a page template in the create new page dialog. If an incompatible layout is then selected manually, all the content for the missing placeholders will be discarded. 
+The placeholder naming scheme also has an impact on [page templates](page-templates). When creating a new page, the template will map its content based on the names of the placeholders in its preview layout. Consequently, a template might describe the content for a placeholder that is not available in the selected layout. To prevent this, a compatible layout is automatically pre-selected when clicking a page template in the create new page dialog. If an incompatible layout is then selected manually, all the content for the missing placeholders will be discarded. 
 
 As a consequence of this behavior, user experience can be improved significantly if all of a project's layouts adhere to the same or a similar naming scheme. This will ensure layouts can be alternated freely without having to consider the effect on the content of each individual placeholder. 
 
@@ -55,7 +55,7 @@ As a consequence of this behavior, user experience can be improved significantly
 
 This property specifies the master layout on which the layout is based. If no master layout is specified, the layout contains a single widget (for example, a [scroll container](scroll-container)) that defines the structure of pages based on this layout. If a master layout is specified, this layout fills the gaps defined by the master layout. You can introduce new gaps in this layout by using [placeholders](placeholder).
 
-### 5.1 Layout Type
+### 5.1 Layout Type<a name="layout-type"></a>
 
 Every layout has a layout type, which determines the purpose of the layout and how a page using the layout is opened.
 

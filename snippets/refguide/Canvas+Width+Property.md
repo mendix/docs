@@ -1,5 +1,5 @@
-### Canvas width
+#### Canvas Width
 
 The canvas width property defines the width in pixels of the page in the page editor. It is purely used for editing purposes; this property has no effect on the actual application.
 
-_Default value:_ 800
+*Default value:* 800

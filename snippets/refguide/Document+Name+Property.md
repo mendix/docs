@@ -1,3 +1,3 @@
-### Name
+#### Name
 
-The name of the document. You can change the name via the project explorer.
+The name of the document. You can change the name via the Project Explorer.

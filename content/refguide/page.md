@@ -3,7 +3,6 @@ title: "Page"
 parent: "pages"
 ---
 
-
 {{% alert type="warning" %}}
 
 This document describes the properties of a page. If you want to see what pages are for and what kind of widgets can be placed on them, please read the [Pages](pages) overview documentation.

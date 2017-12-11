@@ -9,7 +9,7 @@ The option to designate a custom UI resources package was added in Mendix 7.9.0.
 
 {{% /alert %}}
 
-The UI resources package is a specific [module](modules), marked by a green icon in the project explorer, that determines the projects look and feel. It does this in two distinct ways. First, the package supplies the project with all the page documents required to create well-designed, consistent pages, such as [page templates](page-template) and [building blocks](building-block). Second, the package contains theme information, which allows users to easily switch out themes that complement the accompanying page documents. 
+The UI resources package is a specific [module](modules), marked by a green icon in the project explorer, that determines the projects look and feel. It does this in two distinct ways. First, the package supplies the project with all the page documents required to create well-designed, consistent pages, such as [page templates](page-templates) and [building blocks](building-block). Second, the package contains theme information, which allows users to easily switch out themes that complement the accompanying page documents. 
 
 Which module is set as the UI resources package is governed by the 'UI resources package' setting in the 'Theme' tab of the [project settings](project-settings). This setting will automatically be updated if a new UI resources package is imported. 
 

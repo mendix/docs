@@ -20,9 +20,9 @@ By mapping out the common design patterns of a project, a great deal of the init
 
 Generally, page templates are stored in the project's [UI Resources package](ui-resources-package). This keeps them in sync with the project theme, as well as providing a handy place to consolidate all design-related data. 
 
-To create a page template, right-click on a page in either the **Project Explorer** or an empty section of the canvas and select **Create page template**. The page will be added as a new page template, which will automatically make it available in the **Create New Page** form.
+To create a page template, right-click on a page in either the **Project Explorer** or an empty section of the canvas and select **Create page template**. The page will be added as a new page template, which will automatically make it available in the **Create New Page** wizard.
 
-[//]: # ("Create New Page" is the name of the form in the Web Modeler. "Create Page" is the name of the form in the Desktop Modeler. Which one is applicable here?)
+[//]: # ("Create New Page" is the name of the wizard in the Web Modeler. "Create Page" is the name of the wizard in the Desktop Modeler. Which one is applicable here?)
 
 As the purpose of page templates is to facilitate design rather than functionality, page templates should be devoid of references to other documents. This is to prevent users from facing confusing errors when creating a new page. It also mitigates the chance of errors when importing page templates from a different project. 
 
@@ -46,15 +46,15 @@ As the purpose of page templates is to facilitate design rather than functionali
 
 #### 2.3.1 Display Name
 
-The display name determines by what name the page template will appear in the **Create Page** form.
+The display name determines by what name the page template will appear in the **Create Page** wizard.
 
-[//]: # ("Create New Page" is the name of the form in the Web Modeler. "Create Page" is the name of the form in the Desktop Modeler. Which one is applicable here?)
+[//]: # ("Create New Page" is the name of the wizard in the Web Modeler. "Create Page" is the name of the wizard in the Desktop Modeler. Which one is applicable here?)
 
 #### 2.3.2 Image
 
-The image selected will appear in the Web Modeler **Create New Page** form. Selecting a representative image will allow users to easily distinguish between page templates. If left blank, the Web Modeler will display an empty white field. Any image selected will be scaled down to 200x200 pixels.
+The image selected will appear in the Web Modeler **Create New Page** wizard. Selecting a representative image will allow users to easily distinguish between page templates. If left blank, the Web Modeler will display an empty white field. Any image selected will be scaled down to 200x200 pixels.
 
-[//]: # ("Create New Page" is the name of the form in the Web Modeler. "Create Page" is the name of the form in the Desktop Modeler. Which one is applicable here?)
+[//]: # ("Create New Page" is the name of the wizard in the Web Modeler. "Create Page" is the name of the wizard in the Desktop Modeler. Which one is applicable here?)
 
 #### 2.3.3 Shown When
 
@@ -72,14 +72,14 @@ This setting may also place extra restrictions on the template. Page templates i
 
 #### 2.3.4 Layout Type
 
-[Layouts](layout) are all assigned a type in their properties. This type determines in which profiles the layout can be used. To ensure that a user can always map a page template to a compatible layout during page creation, a page template must be assigned one of these same layout types. In practice, this setting will affect in which profile tab of the **Create Page** form the page template is displayed. Additionally, it will automatically restrict the default layout setting to layouts of the same type.
+[Layouts](layout) are all assigned a type in their properties. This type determines in which profiles the layout can be used. To ensure that a user can always map a page template to a compatible layout during page creation, a page template must be assigned one of these same layout types. In practice, this setting will affect in which profile tab of the **Create Page** wizard the page template is displayed. Additionally, it will automatically restrict the default layout setting to layouts of the same type.
 
-[//]: # ("Create New Page" is the name of the form in the Web Modeler. "Create Page" is the name of the form in the Desktop Modeler. Which one is applicable here?)
+[//]: # ("Create New Page" is the name of the wizard in the Web Modeler. "Create Page" is the name of the wizard in the Desktop Modeler. Which one is applicable here?)
 
 #### 2.3.5 Preview Layout
 
-Although page templates and layouts can be mixed and matched, this setting will determine which layout will be used to display the template in the editor. It also has a minor effect on the page creation process: if the template describes contents for layout [placeholders](placeholder) that are not present in the previously selected layout, the first compatible layout will be pre-selected in the **Create New Page** form. For a full description of the interaction between a page template and its preview layout, see [Layout](layout).
+Although page templates and layouts can be mixed and matched, this setting will determine which layout will be used to display the template in the editor. It also has a minor effect on the page creation process: if the template describes contents for layout [placeholders](placeholder) that are not present in the previously selected layout, the first compatible layout will be pre-selected in the **Create New Page** wizard. For a full description of the interaction between a page template and its preview layout, see [Layout](layout).
 
-[//]: # ("Create New Page" is the name of the form in the Web Modeler. "Create Page" is the name of the form in the Desktop Modeler. Which one is applicable here?)
+[//]: # ("Create New Page" is the name of the wizard in the Web Modeler. "Create Page" is the name of the wizard in the Desktop Modeler. Which one is applicable here?)
 
 The options available for this setting are regulated by the layout type setting. If you are having trouble finding the layout you are looking for, check if the layout type of the template and the desired layout match.

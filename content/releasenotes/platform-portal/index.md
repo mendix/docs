@@ -9,7 +9,7 @@ title: "Platform Portal"
 #### Fixes
 
 * The JVM Process Memory graph in Cloud v4 now also show the native memory of the application.
-* The Application Node Operating System Memory graph for Cloud v4 now shows as two lines, total and used. The previous version displayed total added to used in a stacked area graph, which was very confusing.
+* The Application Node Operating System Memory graph for Cloud v4 now shows as two lines: total and used. The previous version displayed the total added to the used in a stacked area graph, which was very confusing.
 
 ### December 6th, 2017
 

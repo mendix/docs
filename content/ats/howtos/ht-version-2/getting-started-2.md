@@ -95,6 +95,8 @@ To add a new Selenium hub, follow these steps:
 
 ![](attachments/getting-started-2/browserstack-selenium-hub-wizard.png)
 
+For further documentation on how-to install the ATS helper and the Recorder see [How-to configure a Selenium hub](/howtos/ht-version-2/configure-a-selenium-hub-2).
+
 ## 4 Test Cases
 
 The **Test Cases** menu is where you access the repositoy, test data and user stories.
@@ -134,9 +136,15 @@ To create a test case, follow these steps:
 
 ### 4.2 Adding Test Steps
 
-Now that you have created a test case, the next step is to configure your test case and start adding test steps. ATS provides two different tools to help add test steps: ATS helper (Add) and ATS recorder (Record). In this how-to, we only describe how to use the ATS recorder.
+Now that you have created a test case, the next step is to configure your test case and start adding test steps. ATS provides two different tools to help add test steps: ATS helper (Add) and ATS recorder (Record). We advice you to add steps in the following order:
+* Record your manual test steps using the ATS Recorder
+* Adding test steps using the ATS Helper, see [Finding the action you need](/bestpractices/bp-version-2/finding-the-action-you-need-2).
+* Create a custom action, see [Create custom action](/howtos/ht-version-2/create-custom-actions-2.md).
+* Use an **Execute Javascript** action
 
-Before you start adding test steps, add the following tools:
+If you are not able to record your manual test steps you can try to add this step using the recorder etc. 
+
+Before you start adding test steps, add the ATS Helper and ATS Recorder tools:
 
 1. Click the **I-icon** in the top right corner of the screen, which opens, the **ATS Information** dialog box.
 2. Drag and drop the **ATS helper** link to your bookmark bar.
@@ -144,6 +152,8 @@ Before you start adding test steps, add the following tools:
 4. Install the ATS recorder extension in your Chrome browser.
 
 ![](attachments/getting-started-2/information-dialog.png)
+
+For further documentation on how-to install the ATS helper and the Recorder see [How-to install the ATS Helper and Recorder](/howtos/ht-version-2/install-ats-helper-recorder-2).
 
 #### 4.2.1 Record – Using the Recorder Function
 
@@ -165,9 +175,11 @@ To use the recorder function, follow these steps:
 | **Recorded event** | All the registered clicks/entering text will show up here in the sequence where they were done. Select an event to open the **Action mapping** menu of that particular event. The ATS recorder selects the actions for you. |
 | **Action mapping** | This shows all the available actions for this event. Click **Select** if you want to choose a different action.|
 
-All the test steps are numbered for easy identification. The up and down arrows can be used to change the sequence of the test steps. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Extract Action](/ats/refguide/rg-version-1/custom-actions).
+All the test steps are numbered for easy identification. To change the sequence of the test steps click the left of the test step while dragging the test step up or down. You can **delete**, **copy** or **paste** a selected test step. With the **Extract action**, you can combine actions of multiple steps into one step. Select the steps you want to combine and click **Extract action**. For more information on extracting an action, see [Extract Action](/ats/refguide/rg-version-1/custom-actions).
 
 ![](attachments/getting-started-2/recorded-test-case.png)
+
+For further documentation on how-to create a test case see [How-to create a test case](/howtos/ht-version-2/create-a-test-case-2).
 
 #### 5.2.2 Test Data Tab
 
@@ -181,6 +193,8 @@ If you do not use the data set, make sure to disconnect it. ATS will remember wh
 
 {{% /alert %}}
 
+For further documentation on how-to create a datadriven test case see [How-to create a datadriven test case](/howtos/ht-version-2/create-datadriven-test-case-2).
+
 #### 5.2.3 Show Usages Tab
 
 This tab shows you the actions used in this test case and the test suites that are using this test case. Use this screen to verify that if you make a change to a custom action, it does not affect another test case or test suite.
@@ -192,6 +206,8 @@ This tab shows you the actions used in this test case and the test suites that a
 This tab displays the user stories that are connected to your test case, the test cases within that story, and the success rate of the user story.
 
 ![](attachments/getting-started-2/stories-tab.png)
+
+For further documentation on how-to link stories to test cases see [How-to link Test Cases/Test Suites to User Stories](/howtos/ht-version-2/connect-stories-to-testcases-2).
 
 ### 5.3 Creating a Test Suite
 
@@ -223,6 +239,8 @@ You add a test case to your test suite by clicking the **Search** button or by u
 
 ![](attachments/getting-started-2/add-test-case.png)
 
+For further documentation on how-to create a test suite see [How-to create a test suite](/howtos/ht-version-2/create-a-test-suite-2.md).
+
 #### 5.3.2 Show Usages Tab
 
 This tab shows you all the **Test Cases used by this Test Suite**, all the **Test Suites used by this Test Suite**, and the **Test Suites using this Test Suite**. Use this screen to make sure that if you make a change, it does not affect other test cases or test suites.
@@ -234,6 +252,8 @@ This tab shows you all the **Test Cases used by this Test Suite**, all the **Tes
 This tab displays the user stories that are connected to your test suite, the test cases within that story, and the success rate of the user story. You can **Open**, **Unlink**, or **Link** a user story to your test suite.
 
 ![](attachments/getting-started-2/stories-tab-test-suite.png)
+
+For further documentation on how-to link stories to test suites see [How-to link Test Cases/Test Suites to User Stories](/howtos/ht-version-2/connect-stories-to-testcases-2).
 
 ## 6 Run Configuration
 
@@ -266,6 +286,6 @@ When you click **Run**, the **Test Runs** page will open.
 
 Once your test case/suite is executed, the result is shown here.
 
-You have now finished the getting started guide for ATS.
+You have now finished the getting started guide for ATS. We advice to read next [How-to install the ATS Helper and Recorder](/howtos/ht-version-2/install-ats-helper-recorder-2).
 
 Good luck testing your Mendix app with ATS!

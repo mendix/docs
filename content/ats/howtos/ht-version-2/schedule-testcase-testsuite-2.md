@@ -1,5 +1,5 @@
 ---
-title: "Create a Test Suite"
+title: "Schedule a test suite/test case"
 parent: "ht-version-2"
 description: "Describes how to create a test suite and add test cases and test suites to your test suite."
 tags: ["ATS", "testing"]

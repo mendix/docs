@@ -33,8 +33,8 @@ These tutorials will teach you how to build various apps:
   </tbody>
   </tbody>
     <tbody>
-    <td><a href="sap-tutorials">SAP Tutorials</a><br> 
-    These tutorials will teach you how to extend the SAP Purchase Order Approval and SAP Manage Products apps using Mendix.</td>
+    <td><a href="sap-tutorials">SAP Tutorial</a><br> 
+    This tutorial will teach you how to extend the SAP Purchase Order Approval Tutorial app using Mendix.</td>
     <td><img src="attachments/overview/sap-tutorials.png"></td>
   </tbody>
 </table>

@@ -56,15 +56,11 @@ The benefits of being an MVP include the following:
 
 * Advanced insight into the Mendix product roadmap and strategy
 * Moderator rights to our App Store, documentation, and Mendix Forum
-* Free access to all Mendix Academy and workshop materials
 * Access to a special MVP discussion group
 * Having fun through sharing knowledge with other MVPs and Mendix
-* Receiving the MVP award
 * Recognition with public visibility: your profile is featured on our MVP program page, and you are highlighted during certain Mendix events
 * Invitations to speak at Mendix events and meetups
-* A special MVP signature badge to add to your emails, social media profiles, etc.
-* A special blog ribbon to be displayed on your blogs in the Community Blog section
-* Special Mendix MVP swag, like t-shirts
+* Special Mendix MVP t-shirt
 
 ## 5 Legalities
 

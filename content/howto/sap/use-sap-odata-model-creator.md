@@ -28,12 +28,12 @@ For details on using Mendix App Store connectors, see [How to Use App Store Cont
 
 Generating a service module starts by getting an OData metadata XML file. This file can be download from the OData service URL directly using the `$metadata` suffix or retrieved from the SAP Gateway. Your SAP Gateway adminstrator can provide the file for you.
 
-With the file available visit the [SAP OData Model Creator](https://sapodatawizard.mendixcloud.com). For this documentation, we use the publicly available HCM People Profile service, for which [this](https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata) is the metadata file.
+With the file available visit the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/). For this documentation, we use the publicly available HCM People Profile service, for which [this](https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata) is the metadata file.
 
 To generate the service module, follow these steps:
 
 1. Save the file to your hard drive.
-2. Open the [SAP OData Model Creator](https://sapodatawizard.mendixcloud.com).
+2. Open the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/).
 3.  Upload the OData Schema XML file:
 
     ![](attachments/use-sap-odata-model-creator/upload_metadata.png)

@@ -48,7 +48,7 @@ To start this tutorial, go to the [Mendix Developer Portal](https://sprintr.home
 8. Click **Edit App** to edit the app in the Mendix Desktop Modeler.
 
 
-## 5 Running the App for the First Time
+## 4 Running the App for the First Time
 
 Now that you've created the credentials, you can run the app and have it connect with the SAP Gateway Demo System (ES4).
 
@@ -74,7 +74,7 @@ To run the app for the first time, follow these steps:
 
 In the following steps, you will implement the purchase order approval functionality.
 
-## 6 Creating an Approval Object Container
+## 5 Creating an Approval Object Container
 
 In Mendix, the data structure of an application is captured in entities that you can find in the domain model.
 
@@ -97,7 +97,7 @@ To create the data structure for an approval input object, follow these steps:
 
 Now that you've defined the data structure, you can move on to creating the button and business logic for opening a custom approval dialog window.
 
-## 7 Adding an Approve Button
+## 6 Adding an Approve Button
 
 Buttons in Mendix open pages or invoke microflows. Microflows in Mendix are used to define business logic.
 
@@ -123,7 +123,7 @@ To add an **Approve** button to the home page, follow these steps:
 
 Nice work. Continue below for creating business logic in the microflow so the approve button will actually trigger an action.
 
-## 8 Creating Logic for the Approve Button
+## 7 Creating Logic for the Approve Button
 
 Follow these steps to create some simple logic to open the approval dialog pop-up.
 
@@ -158,7 +158,7 @@ Follow these steps to create some simple logic to open the approval dialog pop-u
 
 Nice work. You have added business logic to the microflow that will ensure that a fresh object is shown in the dialog pop-up. In the next section you will change the popup.
 
-## 9 Change the Approval Dialog Pop-Up
+## 8 Change the Approval Dialog Pop-Up
 
 To create a basic approval dialog page, follow these steps:
 
@@ -183,7 +183,7 @@ To create a basic approval dialog page, follow these steps:
 
 Nice work, although you see nothing happens when you click the **Approve** button. This makes sense because there is no business logic added in the microflow *ACT_ApprovePurchaseOrder*. This is what you are going to do in the next section.
 
-## 10 Creating Business Logic to Approve a Purchase Order
+## 9 Creating Business Logic to Approve a Purchase Order
 
 Follow these steps to create more complex logic to approve a purchase order and push it to SAP Cloud:
 

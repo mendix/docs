@@ -220,7 +220,7 @@ On this page, you can read the full descriptive text of the idea and do the foll
     * The **Tags** applied to the idea (clicking a tag will list ideas with that same tag under the **Ideas** tab)
 * Click **Vote** to upvote the idea (**2**)
     * By upvoting ideas, you can show the Mendix Community and the Product Managers what you would like to see added to the Mendix platform
-    * The upvotes will be used as input for the Product Managers and the Mendix Community MVPs to decide which features will be nominated for implementation.
+    * The upvotes will be used as input for the Product Managers and the Mendix Community MVPs to decide which features will be nominated for implementation
 * Click the star to favorite the idea (**3**)
 * Submit a comment on the idea (**4**)
 

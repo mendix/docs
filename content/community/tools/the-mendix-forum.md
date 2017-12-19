@@ -5,7 +5,7 @@ category: "Tools"
 
 ## 1 Introduction
 
-The [Mendix Forum](https://forum.mendixcloud.com/index3.html) is where the Mendix Community comes together to help each other out with questions and answers and to propose ideas for improving the Mendix platform.
+The [Mendix Forum](https://forum.mendixcloud.com/index3.html) is where the Mendix Community comes together to help each other out with questions and answers and to propose ideas for improving the Mendix Platform.
 
 The forum is closely integrated with the Community Profile so that Mendix community members can see all the interesting and useful information about who is participating in the forum. If someone clicks your name anywhere on the forum, your Community Profile will open, so make sure you set your profile to public so everyone can see your details and progress!
 
@@ -157,7 +157,7 @@ You should accept the answer that properly and accurately responds to your quest
 
 ### 3.1 Ideas Overview
 
-On the **Ideas** tab, you can see an overview of the ideas and feature requests for improving the Mendix platform that have been submitted by Mendix community members.
+On the **Ideas** tab, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members.
 
 Here is an example of an idea on the overview page:
 
@@ -219,7 +219,7 @@ On this page, you can read the full descriptive text of the idea and do the foll
     * The **Category** of the idea
     * The **Tags** applied to the idea (clicking a tag will list ideas with that same tag under the **Ideas** tab)
 * Click **Vote** to upvote the idea (**2**)
-    * By upvoting ideas, you can show the Mendix Community and the Product Managers what you would like to see added to the Mendix platform
+    * By upvoting ideas, you can show the Mendix Community and the Product Managers what you would like to see added to the Mendix Platform
     * The upvotes will be used as input for the Product Managers and the Mendix Community MVPs to decide which features will be nominated for implementation
 * Click the star to favorite the idea (**3**)
 * Submit a comment on the idea (**4**)
@@ -232,7 +232,7 @@ The URL for each idea is unique.
 
 ### 3.3 Submitting an Idea<a name="SubmittingAnIdea"></a>
 
-If you have a great idea that you would like to see implemented on the Mendix platform, we want to hear it! But please make sure you search the idea forum for similar ideas before submitting a new idea. There may be someone else who has already posted the same idea!
+If you have a great idea that you would like to see implemented on the Mendix Platform, we want to hear it! But please make sure you search the idea forum for similar ideas before submitting a new idea. There may be someone else who has already posted the same idea!
 
 To submit your own idea to the idea forum, follow these steps:
 

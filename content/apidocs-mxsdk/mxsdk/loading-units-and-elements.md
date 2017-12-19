@@ -38,7 +38,7 @@ entity1Interface.load((entity1 : domainmodels.Entity) => {
 ```
 {{% alert type="success" %}}
 
- You can also load units or elements using the convenience method `loadAsPromise`, which is available in the Mendix platform SDK as a way to load and get `promise` as an output instead of having to use a callback function.
+ You can also load units or elements using the convenience method `loadAsPromise`, which is available in the Mendix Platform SDK as a way to load and get `promise` as an output instead of having to use a callback function.
 
 {{% /alert %}}
 

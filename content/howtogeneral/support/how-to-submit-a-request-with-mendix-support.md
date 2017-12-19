@@ -21,7 +21,7 @@ This home page enables accessing various Mendix sites that provide important inf
 * [Mendix release notes](/releasenotes/)
 * [Mendix Forum](https://forum.mendix.com)
 * [Mendix App Store](https://appstore.mendix.com)
-* [Mendix platform status](https://status.mendix.com)
+* [Mendix Platform status](https://status.mendix.com)
 * [Mendix Cloud Portal](https://cloud.mendix.com)
 
 The search box lets you search through the Mendix Documentation for relevant information.

@@ -60,7 +60,7 @@ The header also displays whether the company is **Authorized**, **Expert**, or *
 
 * **Authorized** — this type of partner has qualified and certified resources to support customers with Mendix initiatives 
 * **Professional** — this type of partner can successfully deliver complex mission-critical Mendix applications and solutions for businesses
-* **Expert** — this type of partner can support an enterprise in its successful positioning and adoption of the Mendix platform with all elements of the Mendix "4 P's" (portfolio, people, process, and platform; for details, see [How to Implement Bimodal IT: Focus on the 4 P’s](https://www.mendix.com/blog/how-to-implement-bimodal-it-focus-on-the-4-ps/))
+* **Expert** — this type of partner can support an enterprise in its successful positioning and adoption of the Mendix Platform with all elements of the Mendix "4 P's" (portfolio, people, process, and platform; for details, see [How to Implement Bimodal IT: Focus on the 4 P’s](https://www.mendix.com/blog/how-to-implement-bimodal-it-focus-on-the-4-ps/))
 
 A capability level is determined through an assessment of your company's delivery expertise, project references, and Mendix Developer Certification levels. For more information, please contact your Mendix Customer Success Manager.
 
@@ -156,7 +156,7 @@ To add developers to the Partner Profile, follow these steps:
 
 {{% alert type="info" %}}
 
-Make sure you offboard the developers who no longer work at your company through the company administration in the Mendix platform. These former employees will still be visible in the overview. It is important that you deactivate these developers in the Developers Portal so that they don’t have access to projects.
+Make sure you offboard the developers who no longer work at your company through the company administration in the Mendix Platform. These former employees will still be visible in the overview. It is important that you deactivate these developers in the Developers Portal so that they don’t have access to projects.
 
 {{% /alert %}}
 

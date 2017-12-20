@@ -8,7 +8,7 @@ This page will explain the life cycle of both persistable and non-persistable ob
 
 *   A Transient Object (also known as a non-persistable object) is an object that is considered temporary and only exists in memory
 *   Changed Persistable Objects that are not committed only exist in memory and behave similar to Transient Objects
-*   The Mendix platform will remove objects automatically when they are no longer ‘used’ (the definition of ‘used’ will be explained later)
+*   The Mendix Platform will remove objects automatically when they are no longer ‘used’ (the definition of ‘used’ will be explained later)
 
 
 ## New Behavior in Mendix 7

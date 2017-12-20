@@ -31,7 +31,7 @@ You’ll see an progress bar appear after clicking the ‘OK’ button once the 
     ![Step 4, a missing Runtime version](attachments/18448659/18580697.png)
 2.  Press the button ‘Add Server’ and select the required server distribution (.tar.gz). The Service Console will extract the server distribution to the same folder as the other server distributions.
 
-    After the server distribution is updated you’ll be able to start the Service using the new project and Mendix platform version. 
+    After the server distribution is updated you’ll be able to start the Service using the new project and Mendix Platform version. 
     ![Step 5, Choose the correct server distribution (.tar.gz)](attachments/18448659/18580696.png)
 
 ### 2.1 Location of the Mendix server distributions

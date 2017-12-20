@@ -18,7 +18,7 @@ It might not seem that complex to build a multi-tenant app, but there are severa
 
 ## 2 Project Security
 
-In a multi-tenant app, you want to differentiate between user roles that transcend the multi-tenant part of the app (for example, Functional Administrator and Technical Administrator) and those that do not. This is due to the way the Mendix platform combines the settings of the user management in the **Project Security** (as shown in [this image](#Figure2)) and access rules on entities that are a specialization of the **System.User** entity.
+In a multi-tenant app, you want to differentiate between user roles that transcend the multi-tenant part of the app (for example, Functional Administrator and Technical Administrator) and those that do not. This is due to the way the Mendix Platform combines the settings of the user management in the **Project Security** (as shown in [this image](#Figure2)) and access rules on entities that are a specialization of the **System.User** entity.
 
 This is a typical start situation of project security for a multi-tenant app:
 

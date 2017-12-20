@@ -3,7 +3,7 @@ title: "Deploy your first Hybrid Mobile App"
 category: "Mobile"
 ---
 
-Mendix already supported mobile web development, but with the 5.10 release of the platform it's possible to create and publish hybrid mobile apps. A hybrid app gives you the best of both worlds: it's a web application that can be deployed using the Mendix platform, but it runs inside a container that can be installed as a native app on your device. This container handles native capabilities like the camera and GPS and it can even be published in the Apple App Store, Google Play and Windows Phone Store.The big advantage is that you only need to go through the approval process once and every future update is just a new deployment of your app in the Mendix Cloud.
+Mendix already supported mobile web development, but with the 5.10 release of the platform it's possible to create and publish hybrid mobile apps. A hybrid app gives you the best of both worlds: it's a web application that can be deployed using the Mendix Platform, but it runs inside a container that can be installed as a native app on your device. This container handles native capabilities like the camera and GPS and it can even be published in the Apple App Store, Google Play and Windows Phone Store.The big advantage is that you only need to go through the approval process once and every future update is just a new deployment of your app in the Mendix Cloud.
 
 ## <a name="Integratewithwebservices-Consumewebservice" rel="nofollow"></a>1\. Preparations
 

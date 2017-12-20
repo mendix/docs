@@ -5,7 +5,7 @@ category: 'Collaboration & Project Management'
 
 ## 1. Team server
 
-In the Mendix platform every app has a central repository on the Team Server that contains both the model and the resources for that app. Each person working on the project of the app has a local copy of both model and resources. There are explicit actions to commit local changes to the repository and to retrieve changes by others from the repository (update). Only project members with the appropriate permissions have access to the app's Team Server repository. We build on top of Subversion that supports this style of working.
+In the Mendix Platform every app has a central repository on the Team Server that contains both the model and the resources for that app. Each person working on the project of the app has a local copy of both model and resources. There are explicit actions to commit local changes to the repository and to retrieve changes by others from the repository (update). Only project members with the appropriate permissions have access to the app's Team Server repository. We build on top of Subversion that supports this style of working.
 
 We chose Subversion because of its popularity, maturity and solid Windows support. Building on top of Subversion means that we inherit its reliable protocols for sending and receiving changes. Subversion has a lot of operations that allow us to support advanced features like branching and merging. The Modeler simplifies Subversion commands by providing a layer over them. All common operations can be executed right from the Modeler.
 

@@ -60,7 +60,7 @@ This module enables the Kerberos-based single sign-on feature in your applicatio
 
 [![](attachments/18448690/ldap.png)](https://appstore.home.mendix.com/link/app/1218/Mendix/LDAP-Provisioning-Agent)
 
-The LDAP provisioning agent is used to synchronize the users available in your directory server to the Mendix platform using the LDAP protocol.
+The LDAP provisioning agent is used to synchronize the users available in your directory server to the Mendix Platform using the LDAP protocol.
 
 [Click to download in the Mendix App Store.](https://appstore.home.mendix.com/link/app/1218/Mendix/LDAP-Provisioning-Agent)
 

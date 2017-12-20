@@ -115,24 +115,24 @@ To use the hybrid app package, follow these steps:
 1.  Open your app in the Developer Portal and under **DEPLOY** in the left sidebar menu, click **Mobile App**.
 2.  Click **Publish for Mobile App Stores**:
 
-    ![](attachments/implement-sso/download-hybrid-app-package-step1.png)<br>
+    ![](attachments/implement-sso/download-hybrid-app-package-step1.png)
     
 3.  Select **Do it yourself** and then click **Download Customizable Package**:
 
-    ![](attachments/implement-sso/download-hybrid-app-package-step2.png)<br>
+    ![](attachments/implement-sso/download-hybrid-app-package-step2.png)
 
     This package you just downloaded is a customizable hybrid app package for your specific Mendix app. You can make changes to it, build a new PhoneGap Build package, and then upload it to PhoneGap Build to create the binaries (for example, APK for Android and IPA for iOS). To better understand the structure of what you just downloaded, see the **Folder Structure** section in the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#folder-structure).
 
 4.  Unzip the hybrid app package.
-5. Edit the *Entry.js* file (under `src\www\scripts`). The file should look like this:
+5.  Edit the *Entry.js* file (under `src\www\scripts`). The file should look like this:
 
     ![](attachments/implement-sso/entry.js.png)
 
-6. Add the JavaScript code provided in [5.1 The JavaScript](#javascript) under `MxApp.onConfigReady(function(config) {`. Your *Entry.js* file should now look like this:
+6.  Add the JavaScript code provided in [5.1 The JavaScript](#javascript) under `MxApp.onConfigReady(function(config) {`. Your *Entry.js* file should now look like this:
        
     ![](attachments/implement-sso/entry.js-with-fix.png)
 
-7. Create the PhoneGap Build package by following the instructions in the **Through uploading to PhoneGap Build** section of the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build). Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br>
+7.  Create the PhoneGap Build package by following the instructions in the **Through uploading to PhoneGap Build** section of the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#through-uploading-to-phonegap-build). Be sure to read the **Prerequisites** and **Build on PhoneGap** sections of this documentation as well. This is an overview of the steps:<br>
     a. Install [node.js](https://nodejs.org/en/download/). <br>
     b. In the hybrid app root folder, execute **npm install**. <br>
     c. In the hybrid app root folder execute **npm run package**.<br>
@@ -141,7 +141,7 @@ To use the hybrid app package, follow these steps:
 
     ![](attachments/implement-sso/build.phonegap.com.png)
 
-9. Set the **Enable mobile authentication token** flag to **true** in the **Provisioning** tab when configuring an identity provider in the Mendix SAML module. This will make sure the SAML module provides the correct login token to the JavaScript part.
+9.  Set the **Enable mobile authentication token** flag to **true** in the **Provisioning** tab when configuring an identity provider in the Mendix SAML module. This will make sure the SAML module provides the correct login token to the JavaScript part.
 
     ![](attachments/implement-sso/saml-module.png)
 

@@ -36,11 +36,11 @@ When authenticating against an identity provider (IdP), the following steps are 
 6. The SAML token is sent to the Mendix Server by redirecting the client user agent back to the Mendix app.
 7. After authentication, Mendix redirects the client to the page requested initially.
 8. The client now requests the page requested initially.
-9. Now that a security context exists, Mendix responds with the requested resource (page).
+9. Now that a security context exists, Mendix responds with the requested resource (page).<a name="diagram"></a>
 
 ![](attachments/implement-sso/saml-2.0-from-wikipedia.png)
 
-<a name="diagram"></a>Diagram source: [SAML 2.0 Web Browser SSO Profile](https://en.wikipedia.org/wiki/SAML_2.0#SP_POST_Request;_IdP_POST_Response)
+Diagram source: [SAML 2.0 Web Browser SSO Profile](https://en.wikipedia.org/wiki/SAML_2.0#SP_POST_Request;_IdP_POST_Response)
 
 ## 4 The Problems<a name="problems"></a>
 

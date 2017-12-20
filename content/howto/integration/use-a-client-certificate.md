@@ -6,7 +6,15 @@ tags: ["integration", "web service"]
 
 ## 1 Introduction
 
-Some services require you to authenticate using a client certificate. This how-to describes how to configure your app to do this.
+Some services require you to authenticate using a client certificate. A certificate can be public or protected with password.
+### A public certificate:
+- can get downloaded using the any browser, 
+- saved as a .cer-file or a .P7B-file,
+- uploaded in the Project->Settings tab Certificates.
+And your project is ready for use.
+
+### A password protected certificate:
+If the certificate is password protected then downloading the certificate from the brower will get you a different filetype: .pfx. This how-to describes how to configure your app to use certificates of pfx-filetype.
 
 Let's assume that you already have an app that calls a service. For details on how to configure this, have a look at [How to Consume a REST Service](consume-a-rest-service) or [How to Consume a Simple Web Service](consume-a-simple-web-service).
 

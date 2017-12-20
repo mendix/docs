@@ -1,5 +1,5 @@
 ---
-title: "Debugging a Mobile App with Mendix"
+title: "Debug a Mobile App with Mendix"
 category: "Mobile"
 description: "How to set up a mobile app to run from your local machine and debug using Mendix's tools"
 tags: ["Mobile", "debug", "android", "ios"]

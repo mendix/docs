@@ -1,7 +1,7 @@
 ---
 title: "System Requirements"
 category: "General"
-description: "Presents the system requirements for using the Mendix platform."
+description: "Presents the system requirements for using the Mendix Platform."
 ---
 
 ## Desktop Modeler

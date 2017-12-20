@@ -35,7 +35,7 @@ API Version 1
 | EnvironmentUUID | String | Yes | UUID of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Cloud Portal will fill in automatically. |
 | EnvironmentPassword | String | Yes | Password of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Cloud Portal will fill in automatically. |
 | InviteeEmailAddress | String | Yes | Email address of the to be invited user |
-| InviterEmailAddress | String | Yes | Email address of the user inviting the new user. Based on this address, the Mendix platform will include the name of this user in the invitation email sent to the invitee. Note: The email address of the inviting user must correspond with a user who has access to the application. |
+| InviterEmailAddress | String | Yes | Email address of the user inviting the new user. Based on this address, the Mendix Platform will include the name of this user in the invitation email sent to the invitee. Note: The email address of the inviting user must correspond with a user who has access to the application. |
 | RoleUUID | String | Yes | UUID of the user role which the invitee should receive on accepting the invitation. This should be the ModelGUID attribute of the corresponding System.UserRole object. |
 
 ### Return type

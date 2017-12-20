@@ -22,7 +22,7 @@ Always try to use a Mendix action first. This table explains why you should use 
 
 | Reason | Description |
 | :--- | :--- |
-| Automatic context | A Mendix action will automatically adjust to the Mendix platform, ensuring that it will work correctly. | 
+| Automatic context | A Mendix action will automatically adjust to the Mendix Platform, ensuring that it will work correctly. | 
 | Visibility checks | A Mendix action only searches for elements that are _visible_. |
 | Browser support | A Mendix action always works in the supported browser. |
 | Mendix support | A Mendix action always works on the latest version of Mendix. |

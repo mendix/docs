@@ -4,6 +4,25 @@ title: "Platform Portal"
 
 ## 2017
 
+### December 13th, 2017
+
+#### Fixes
+
+* The JVM Process Memory graph in Cloud v4 now also show the native memory of the application.
+* The Application Node Operating System Memory graph for Cloud v4 now shows as two lines: total and used. The previous version displayed the total added to the used in a stacked area graph, which was very confusing.
+
+### December 6th, 2017
+
+#### Fixes
+
+* We adressed the issue that prevents Free Apps from being embedded in an iframe.
+
+### November 27th, 2017
+
+#### Improvements
+
+* Free App users now have the option to select between Web Modeler and Desktop Modeler for editing their application models.
+
 ### November 15th, 2017
 
 #### Improvements
@@ -35,6 +54,7 @@ title: "Platform Portal"
 ### September 29th, 2017
 
 #### Fixes
+
 * We fixed an issue where a user who signed up to Mendix would get an error page in Internet Explorer and Microsoft Edge.
 
 ### September 28th, 2017
@@ -66,7 +86,7 @@ title: "Platform Portal"
 #### Improvements
 
 * It is now possible to accept invitations and confirm signups on mobile devices.
-* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296) 
+* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296)
 
 #### Fixes
 
@@ -377,7 +397,7 @@ title: "Platform Portal"
 
 #### New features
 * The blue toolbar now contains a button for quickly creating new apps, and a shortcut that leads to the Mendix Developer Portal ([https://developers.mendix.com/](https://developers.mendix.com/)).
-* Guidance balloons guide new users through a few main features of the Mendix platform.
+* Guidance balloons guide new users through a few main features of the Mendix Platform.
 * The project dashboard has been extended with Team and Development information.
     * The Team Box shows all team members within a project, and allows you to easily invite new team members.
     * The Development Box shows information about the latest main line commit, and provides a shortcut to quickly open the app in the Mendix Modeler.
@@ -442,7 +462,7 @@ title: "Platform Portal"
 * App and Project invites will now expire after 14 days. (Feedback 90894)
 * App and Project invites can now be retracted by the inviter. You can find this functionality in the Pending Invites tab of your Profile. (Feedback 90894)
 * You will now see a progress bar while your App and project invites are being sent. (Feedback 79146)
-* It is now possible to initiate an invite to the Mendix platform using the Share button on the blue Mendix toolbar.
+* It is now possible to initiate an invite to the Mendix Platform using the Share button on the blue Mendix toolbar.
 
 #### Fixes
 

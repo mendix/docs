@@ -11,6 +11,18 @@ To download the **Mendix** mobile app, select one of the download links below:
 * [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile)
 {{% /alert %}}
 
+## 4.6.0
+
+**Release date: November 30th, 2017**
+
+### New Functionality
+
+* We added support for the new iPhone X (form factor, notch).
+
+### Known Issue
+
+* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Developer Portal) should not pose any problems.
+
 ## 4.5.0
 
 **Release date: October 24th, 2017**
@@ -74,7 +86,7 @@ To download the **Mendix** mobile app, select one of the download links below:
 We have added two new features to accelerate your app delivery projects:
 
 * Easily test your hybrid mobile Mendix apps on your phone by scanning the QR code shown in the Mendix Modeler from the convenience of the Mendix mobile app.
-* Review the capabilities of Atlas UI and the Mendix platform through the showcases accessible through the Mendix mobile app. The above features are available without logging in. However, you still need to log in if you want to use **Buzz**.
+* Review the capabilities of Atlas UI and the Mendix Platform through the showcases accessible through the Mendix mobile app. The above features are available without logging in. However, you still need to log in if you want to use **Buzz**.
 
 ## 4.1.0
 

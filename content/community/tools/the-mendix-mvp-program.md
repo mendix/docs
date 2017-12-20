@@ -29,11 +29,11 @@ There are four basic labels we use to describe our MVP recognition requirements:
 
 * Active – this developer is highly active, accessible, and well-known in the Community
     * The developer also contributes to the forum every week (if not every day), frequently adds new App Store content, organizes Meetups, and/or writes blogs on Mendix topics
-* Expert – this developer knows a lot about the Mendix platform itself and is a real Expert Developer
+* Expert – this developer knows a lot about the Mendix Platform itself and is a real Expert Developer
     * The developer answers more question then they ask and has proven expertise as well as successful complex implementations
 * Evangelist – this developer is a Mendix advocate, shows a passion for developing Mendix solutions, and is able to think at an abstract level about developments within the software industry
 * Leader – this developer really represents the spirit of the Community and can be an extra bridge between Mendix and the Community developers
-    * The developer is a creditable and independent thinker, not only in regards to the Mendix platform
+    * The developer is a creditable and independent thinker, not only in regards to the Mendix Platform
     * The developer shares their exceptional passion, real-world knowledge, and technical expertise with the Community as well as with Mendix itself
 
 There are several things we look for when selecting the MVPs. To be nominated, the developer should do the following:
@@ -56,15 +56,11 @@ The benefits of being an MVP include the following:
 
 * Advanced insight into the Mendix product roadmap and strategy
 * Moderator rights to our App Store, documentation, and Mendix Forum
-* Free access to all Mendix Academy and workshop materials
 * Access to a special MVP discussion group
 * Having fun through sharing knowledge with other MVPs and Mendix
-* Receiving the MVP award
 * Recognition with public visibility: your profile is featured on our MVP program page, and you are highlighted during certain Mendix events
 * Invitations to speak at Mendix events and meetups
-* A special MVP signature badge to add to your emails, social media profiles, etc.
-* A special blog ribbon to be displayed on your blogs in the Community Blog section
-* Special Mendix MVP swag, like t-shirts
+* Special Mendix MVP t-shirt
 
 ## 5 Legalities
 

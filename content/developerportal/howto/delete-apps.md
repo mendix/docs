@@ -1,5 +1,5 @@
 ---
-title: "Delete, Deactivate and Activate Apps"
+title: "Delete, Deactivate, and Activate Apps"
 category: "How-to's"
 description: "Describes how to deactivate and activate users in the Developer Portal."
 tags: ["App","Company Admin","Developer Portal","SCRUM Master","Deactivate"]

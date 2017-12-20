@@ -25,7 +25,7 @@ Before you start building your own widget make sure you have the following progr
 
 ## 2\. How does it all work?!
 
-We have created a set of illustrations that explain what a custom widget is and how it behaves in the Mendix platform.
+We have created a set of illustrations that explain what a custom widget is and how it behaves in the Mendix Platform.
 
 ### 2.1 What is a Mendix custom widget?
 
@@ -90,7 +90,7 @@ Do this as generic as possible for re- using the widget in another place in your
 
 {{% alert type="info" %}}
 
-A property will contain the end result of something that is configured/provided by Mendix. You must always create a starting situation where you gather what you need before you continue with logic inside your widget and/or inside the Mendix platform.
+A property will contain the end result of something that is configured/provided by Mendix. You must always create a starting situation where you gather what you need before you continue with logic inside your widget and/or inside the Mendix Platform.
 
 {{% /alert %}}
 
@@ -723,7 +723,7 @@ The final step is to add your widget to your Mendix Project. The widget should n
 
 ## 6\. Conclusion
 
-This How-to has enabled you to create a "Hello World!" Custom Widget for the Mendix platform. Using Adobe Brackets as your main integrated development environment. The code examples inside the AppStoreWidgetBoilerplate will provide you the building blocks you need to interact with both the user interface and Mendix. 
+This How-to has enabled you to create a "Hello World!" Custom Widget for the Mendix Platform. Using Adobe Brackets as your main integrated development environment. The code examples inside the AppStoreWidgetBoilerplate will provide you the building blocks you need to interact with both the user interface and Mendix. 
 
 ## 7\. Related content
 

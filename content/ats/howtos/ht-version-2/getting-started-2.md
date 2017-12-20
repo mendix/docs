@@ -142,7 +142,7 @@ Now that you have created a test case, the next step is to configure your test c
 * Create a custom action, see [Create custom action](/howtos/ht-version-2/create-custom-actions-2.md).
 * Use an **Execute Javascript** action
 
-If you are not able to record your manual test steps you can try to add this step using the recorder etc. 
+If you are not able to record your manual test steps you can try to add this step using the ATS Helper etc. 
 
 Before you start adding test steps, add the ATS Helper and ATS Recorder tools:
 

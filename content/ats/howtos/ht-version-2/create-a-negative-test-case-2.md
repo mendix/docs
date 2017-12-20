@@ -82,4 +82,8 @@ _The finished test case_
 
 ![](attachments/create-a-negative-test-case-2/the-finished-test-case.png)
 
-You now know how to create a negative test case.
+ {{% alert type="info" %}}
+You can also add the **Assert true** action with the **Assert value** set to false, instead of the **Assert false** action, to create a negative test case.
+  {{% /alert %}}
+
+  You now know how to create a negative test case. We advice to read next [How to schedule Test Cases/Test Suites](schedule-testcase-testsuite-2).

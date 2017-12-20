@@ -260,3 +260,13 @@ To add test steps using the ATS Recorder, follow these steps:
 
 You have now created your test case using the ATS Recorder. 
 
+We advice you to add test steps of your AUT in the following order:
+* Record your manual test steps using the ATS Recorder
+* Adding test steps using the ATS Helper, see [Finding the action you need](/bestpractices/bp-version-2/finding-the-action-you-need-2).
+* Create a custom action, see [Create custom action](/howtos/ht-version-2/create-custom-actions-2.md).
+* Use an **Execute Javascript** action
+
+If you are not able to record your manual test steps you can try to add this step using the ATS Helper etc.
+
+ We advice to read next [How to Create a Test Suite](create-a-test-suite-2).
+

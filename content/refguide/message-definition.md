@@ -13,7 +13,7 @@ This feature was introduced in version 7.10.0.
 
 Message definitions define the messages that are sent from and to your app. Defining your messages allows you to create import and export mappings for them.
 
-A message definition can be used for both JSON and XML as well as for both single objects and a list of objects.
+A message definition can be used for both JSON and XML, and it can be used for both single objects and lists of objects.
 
 ## 2 General
 
@@ -23,11 +23,11 @@ Select an entity on which to base the message definition. Using this message def
 
 ### 2.2 Structure
 
-The structure tree shows the attributes of the entity. Check all the attributes that should be part of the message.
+The structure tree shows the attributes and some of the associations of the entity. Check all the attributes and associations that are part of the message.
 
-The **External name** is the name of the XML node or the JSON property. You may leave it empty to use the default value. When the occurrence is `0..1`, the default value is the name in the first column. When the occurrence is `0..*`, the default value is the name in the first column plus the letter `s`. 
+The **External name** is the name of the XML node or the JSON property. By default, it's the name of the attribute (for attributes) or entity (for associations). When the occurrence is `0..*`, it's the external item name plus the letter `s`.
 
-The **External single item name** only applies to XML, and only when the occurrence is `0..*`. This is the name of the XML node of the items in the list. You may leave it empty; the default value is name in the first column.
+The **External item name** is only relevant for XML, and only when the occurrence is `0..*`. It is used for the XML node that represents a single item. By default, it's the entity name.
 
 ## 3 Documentation
 

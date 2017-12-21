@@ -16,7 +16,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have a [PhoneGap Build account](https://build.phonegap.com/)
 * Be familiar with how the [SAML](https://appstore.home.mendix.com/link/app/1174/) module works
 * Read [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
-* Read [Building a Mobile App with Mendix – Part 1](https://www.mendix.com/blog/building-mobile-app-mendix/)
+* Read [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)
 
 ## 3 Context
 
@@ -31,12 +31,11 @@ When authenticating against an identity provider (IdP), the following steps are 
 1. The client (user agent) requests a page/resource from Mendix.
 2. Mendix redirects the authentication request to the IdP by redirecting the client user agent there.
 3. The IdP contacts the client and presents a login page.
-4. The client authenticates against the IdP.
-5. The IdP generates a SAML token and sends it back to the client, where it will be stored as a cookie.
-6. The SAML token is sent to the Mendix Server by redirecting the client user agent back to the Mendix app.
-7. After authentication, Mendix redirects the client to the page requested initially.
-8. The client now requests the page requested initially.
-9. Now that a security context exists, Mendix responds with the requested resource (page).<a name="diagram"></a>
+4. The client authenticates against the IdP, then the IdP generates a SAML token and sends it back to the client, where it will be stored as a cookie.
+5. The SAML token is sent to the Mendix Server by redirecting the client user agent back to the Mendix app.
+6. After authentication, Mendix redirects the client to the page requested initially.
+7. The client now requests the page requested initially.
+8. Now that a security context exists, Mendix responds with the requested resource (page).<a name="diagram"></a>
 
 ![](attachments/implement-sso/saml-2.0-from-wikipedia.png)
 

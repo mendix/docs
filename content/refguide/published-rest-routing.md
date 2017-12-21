@@ -5,7 +5,7 @@ parent: "published-rest-services"
 
 {{% alert type="info" %}}
 
-The Published REST Service was introduced in Mendix 7.8.0. This feature is still in private beta, and is subject to change before the final release.
+The **published REST service** feature was introduced in Mendix 7.10.0.
 
 {{% /alert %}}
 

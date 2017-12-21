@@ -11,4 +11,4 @@ The starts-with() function tests whether a String attribute starts with a specif
 
 This query returns all customers from which the name starts with the string 'Jans'. Customers with the name 'Jansen' or 'Jans' will be returned, because both names start with 'Jans'.
 
-Search by special characters, like `%`, `_` and `\` is not supported in Mendix 5. Please upgrade to Mendix 7.11 or higher if you want to search by special characters.
+Search by special characters, like `%`, `_` and `\`, is not supported in Mendix 5. Please upgrade to Mendix 7.11 or higher if you want to search by special characters.

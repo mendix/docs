@@ -1,11 +1,11 @@
 ---
-title: "Published REST service"
+title: "Published REST Service"
 parent: "published-rest-services"
 ---
 
 {{% alert type="info" %}}
 
-The **Published REST Service** feature was introduced in version 7.8.0. This feature is still in private beta, and it is subject to change before final release.
+The **published REST service** feature was introduced in version 7.10.0.
 
 {{% /alert %}}
 

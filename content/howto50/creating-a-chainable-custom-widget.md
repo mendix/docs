@@ -171,7 +171,7 @@ The following three Microflows will delete the images for each entity "Car" / "C
 
 And that's it for the logic of the application.
 
-There is a unwritten rule in creating custom widgets for the Mendix platform, that you need to let (most of) the logic be done with the tools you have in Mendix. There is no other decent way of knowing what other widgets are doing in your application than to listen to changes on entities. Do not try to find this out by hacking the HTML output of the Mendix platform. This is bad practice. If you do want to know state of a widget that does not involve entity handling in your Mendix application, you can always create custom event handlers that widgets can listen to. But then you should make a widget have a "sender" and a "listener" mode. We will show an example of this in another how-to.
+There is a unwritten rule in creating custom widgets for the Mendix Platform, that you need to let (most of) the logic be done with the tools you have in Mendix. There is no other decent way of knowing what other widgets are doing in your application than to listen to changes on entities. Do not try to find this out by hacking the HTML output of the Mendix Platform. This is bad practice. If you do want to know state of a widget that does not involve entity handling in your Mendix application, you can always create custom event handlers that widgets can listen to. But then you should make a widget have a "sender" and a "listener" mode. We will show an example of this in another how-to.
 
 ## 7\. General limitations of custom widgets
 
@@ -195,7 +195,7 @@ A Mendix **custom** widget can also **only pass one type of entity** as an input
 
 ## 8\. Conclusion
 
-This How-to has enabled you to create a chainable Custom Widget for the Mendix platform. Using Adobe Brackets as your main integrated development environment. The "AppStoreWidgetBoilerplate" as your starting point for custom widget development. And a fully configured Mendix test application.
+This How-to has enabled you to create a chainable Custom Widget for the Mendix Platform. Using Adobe Brackets as your main integrated development environment. The "AppStoreWidgetBoilerplate" as your starting point for custom widget development. And a fully configured Mendix test application.
 
 ## 9\. Related content
 

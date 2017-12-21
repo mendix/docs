@@ -39,7 +39,7 @@ The **Feedback** pages show an overview of the feedback provided about the app. 
 
 {{% alert type="info" %}}
 
-The **Feedback** button in the **Developer Portal** is used to provide feedback on the Mendix platform. It is intended for low priority issues, questions, and ideas on how to improve the Mendix platform.
+The **Feedback** button in the **Developer Portal** is used to provide feedback on the Mendix Platform. It is intended for low priority issues, questions, and ideas on how to improve the Mendix Platform.
 
 {{% /alert %}}
 

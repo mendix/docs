@@ -5,7 +5,7 @@ parent: "message-definitions"
 
 {{% alert type="info" %}}
 
-The Message Definitions feature was introduced in version 7.8.0. This feature is still in private beta, and it is subject to change before the final release.
+This feature was introduced in version 7.10.0.
 
 {{% /alert %}}
 

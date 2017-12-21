@@ -6,7 +6,7 @@ category: "API Documentation"
 
 ## Introduction
 
-The Profile API is an [App Service](/refguide6/consumed-app-services) that allows your AppCloud applications to retrieve profile information of their users from the Mendix platform.
+The Profile API is an [App Service](/refguide6/consumed-app-services) that allows your AppCloud applications to retrieve profile information of their users from the Mendix Platform.
 
 {{% alert type="info" %}}
 
@@ -62,9 +62,9 @@ This call will return a UserProfile object representing the user's profile infor
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| OpenId | String | OpenID of the user, which uniquely identifies this user within the Mendix platform |
+| OpenId | String | OpenID of the user, which uniquely identifies this user within the Mendix Platform |
 | DisplayName | String | Name of the user |
-| EmailAddress | String | Email address at which the user chose to receive communications from the Mendix platform. |
+| EmailAddress | String | Email address at which the user chose to receive communications from the Mendix Platform. |
 | AvatarUrl | String | Location of the user's avatar. |
 | AvatarThumbnailUrl | String | Location of a smaller (48x48) version of the user's avatar |
 | JobTitle | String | Job title of the user |

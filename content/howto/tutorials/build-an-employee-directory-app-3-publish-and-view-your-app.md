@@ -61,7 +61,7 @@ To view your app on a mobile device, follow these steps:
 
 2. Scan the QR-code with your mobile device using the [Mendix Mobile app](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile&hl=en). Follow the directions to download the Mendix Mobile app in case you don't have it installed.
 
-Nice. Now you're ready to continue with the last how-to of this tutorial: [How to Build an Employee Directory App Step 4: Add Pages to the User Interface](build-an-employee-directory-app-4-add-pages-to-the-user-interface).
+Nice. Now you're ready to continue with the next how-to of this tutorial: [How to Build an Employee Directory App Step 4: Add Pages to the User Interface](build-an-employee-directory-app-4-add-pages-to-the-user-interface).
 
 ## 5 Related Content
 

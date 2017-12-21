@@ -128,7 +128,7 @@ $('#mx-slider-background-layer').on('mx.slide.set.background', lang.hitch(this, 
 
 ## 8 Conclusion
 
-I encourage you to download all the source files from the GitHub repository and dive right into the goodies that these widgets provide. It will show you how powerful the Mendix platform can be, extended with new UX features.
+I encourage you to download all the source files from the GitHub repository and dive right into the goodies that these widgets provide. It will show you how powerful the Mendix Platform can be, extended with new UX features.
 
 ## 9 Related Content
 

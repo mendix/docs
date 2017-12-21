@@ -57,7 +57,7 @@ Now that you have created a basic dashboard, you need to add a new page that can
 
     ![](attachments/build-an-employee-directory-app/lists-default.png)
 
-    Well done — you've created your first page! Let's finish up some things before you start working on the new Employees page.
+    Click **Create** and you've created your first page! Let's finish up some things before you start working on the new Employees page.
 7. Select the **Home** page by clicking the **Pages** icon in the left menu bar.
 8. Select the **Button** with the **Employees** caption.
 9. Change the **On Click Action** property of the button by setting it to **Page**.
@@ -123,7 +123,8 @@ To create the entity for an employee, follow these steps:
 
 3. To create a new entity in the **Select Entity** dialog box, do the following:<br>
     a. Click **New Entity**.<br>
-    b. Enter *Employee* for the **Name**.
+    b. Enter *Employee* for the **Name**.<br>
+    c. Click **Create**.
 
 4. Select the **TEXT** widget of the top user card and clear the **Content** property:
 
@@ -135,7 +136,8 @@ To create the entity for an employee, follow these steps:
 
 6. Create a new attribute in the **Select your attribute** dialog box (which will be added to the Employee entity) by doing the following:<br>
     a. Enter *Name* for the attribute **Name**.<br>
-    b. Set the attribute **Type** to **String**.
+    b. Set the attribute **Type** to **String**.<br>
+    c. Click **Create**.
 
 7. In the subtitle **TEXT** widget, repeat steps 4-6 to add an attribute for **Email [String]**:
 

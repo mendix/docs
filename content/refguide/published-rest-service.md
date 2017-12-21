@@ -5,7 +5,7 @@ parent: "published-rest-services"
 
 {{% alert type="info" %}}
 
-The **Published REST Service** feature was introduced in version 7.8.0. This feature is still in private beta, and it is subject to change before final release.
+The published REST service feature was introduced in version 7.10.0.
 
 {{% /alert %}}
 
@@ -27,7 +27,7 @@ The example location shows the URL on which the service can be reached. This is 
 
 ### <a name="public-documentation"></a>2.3 Public Documentation
 
-The public documentation is used in the service's [OpenAPI (Swagger) documentation page](open-api). You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
+The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documentation](open-api). You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
 
 ### <a name="export-swagger-json"></a>2.4 Export swagger.json
 
@@ -41,7 +41,7 @@ When the app is running, this file is available under `/rest-doc/servicename/swa
 
 {{% alert type="info" %}}
 
-The **Authentication** feature was introduced in version 7.11.0. In earlier versions it was always _Username and password_.
+The **Authentication** feature was introduced in version 7.11.0. In earlier versions, it was always **Username and password**.
 
 {{% /alert %}}
 
@@ -49,7 +49,7 @@ Select whether clients need to authenticate with a username and a password (usin
 
 ### 3.2 Allowed Roles
 
-The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when _Authentication_ is set to _Username and password_.
+The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Authentication** is set to **Username and password**.
 
 ## 4 Resources
 

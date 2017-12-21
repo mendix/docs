@@ -12,3 +12,5 @@ The contains() function tests whether a String attribute contains a specific str
 ```
 
 This query returns all customers from which the name contains the string 'an'. Customers with the name 'Jansen' or 'Jans' will be returned, because 'an' is part of the names 'Jansen' and 'Jans'.
+
+Search by special characters, like `%`, `_` and `\` is not supported in Mendix 5. Please upgrade to Mendix 7.11 or higher if you want to search by special characters.

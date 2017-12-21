@@ -139,10 +139,12 @@ To use the hybrid app package, follow these steps:
 8.  Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
 
     ![](attachments/implement-sso/build.phonegap.com.png)
+    
+### 5.3 The SAML Module 
 
-9.  Check the **Enable mobile authentication token** box in the **Provisioning** tab when configuring an identity provider in the Mendix SAML module. This will make sure the SAML module provides the correct login token to the JavaScript part.
+The last thing to do is to check the **Enable mobile authentication token** box in the **Provisioning** tab when configuring an identity provider in the Mendix SAML module. This will make sure the SAML module provides the correct login token to the JavaScript part.
 
-    ![](attachments/implement-sso/saml-module.png)
+![](attachments/implement-sso/saml-module.png)
 
 ## 6 Related Content
 

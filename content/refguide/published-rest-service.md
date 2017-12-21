@@ -21,7 +21,7 @@ The service name uniquely identifies the service in the app. It's part of the lo
 
 ### 2.2 Example Location
 
-The example location shows the URL on which the service can be reached. This is an example : 
+The example location shows the URL on which the service can be reached. This is an example: 
 
 ![](attachments/published-rest-service/example-location-url.png)
 

@@ -4,7 +4,7 @@ category: "Data Models"
 tags: []
 ---
 
-When working with the Mendix platform, objects are created, removed, or reverted back to the original. Based on the state of the object and the object events that are specified in the domain model, different actions are taken by the platform to guarantee data consistency. 
+When working with the Mendix Platform, objects are created, removed, or reverted back to the original. Based on the state of the object and the object events that are specified in the domain model, different actions are taken by the platform to guarantee data consistency. 
 
 ## 1 Create
 

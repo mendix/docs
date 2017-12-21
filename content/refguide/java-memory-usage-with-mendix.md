@@ -28,7 +28,7 @@ This image on the right shows shows in detail how data moves through the memory.
 
 All information regarding the stack is stored in memory. All runtime information is stored in the Heap, all program or JVM specific information is stored in the Non Heap.
 
-All classes from the Mendix platform, the custom java code, and user libraries are stored in the Non Heap. (Since Mendix 5 this will also hold the information from the deployment archive.  
+All classes from the Mendix Platform, the custom java code, and user libraries are stored in the Non Heap. (Since Mendix 5 this will also hold the information from the deployment archive.  
 
 ![](attachments/16714070/16844066.png)
 

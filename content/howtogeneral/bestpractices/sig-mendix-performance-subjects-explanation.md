@@ -339,7 +339,7 @@ Response from the Mendix Runtime to the Mendix client:
 
 # Mendix Runtime internals
 
-As can be seen in the description of the CRUD scenario, the Mendix platform ensures efficiency while running the application in a number of ways:
+As can be seen in the description of the CRUD scenario, the Mendix Platform ensures efficiency while running the application in a number of ways:
 
 *   Only data required for user actions is involved in communication and processing.
 *   An efficient transport protocol is used when communicating between different processes: terse JSON format between Mendix Client and Mendix Runtime, native SQL protocol for RDBMS communication.
@@ -358,7 +358,7 @@ Data is transported between Mendix Client and database as required. The followin
 
 ## State
 
-To facilitate (horizontal) scalability, the Mendix platform minimizes the state kept in the Mendix Runtime memory. The overall strategy is to only have _dirty objects_ in memory, other objects are cleaned up at the end of a request. Objects are considered dirty if they have been changed, but the changes have not yet been persisted to the RDBMS. The state is maintained per session.
+To facilitate (horizontal) scalability, the Mendix Platform minimizes the state kept in the Mendix Runtime memory. The overall strategy is to only have _dirty objects_ in memory, other objects are cleaned up at the end of a request. Objects are considered dirty if they have been changed, but the changes have not yet been persisted to the RDBMS. The state is maintained per session.
 
 ![](attachments/19202918/19399036.png)
 

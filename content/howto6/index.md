@@ -6,6 +6,6 @@ description: "Step-by-step guides on various Mendix topics that will teach you h
 
 Browse the how-to's below to find step-by-step guides that will teach you how to build and customize apps with Mendix.
 
-You can also browse the [Mendix Reference Guide](/refguide6/index) and [Release Notes](/releasenotes/index) if you're looking for more in-depth descriptions of the various aspects of the Mendix platform.
+You can also browse the [Mendix Reference Guide](/refguide6/index) and [Release Notes](/releasenotes/index) if you're looking for more in-depth descriptions of the various aspects of the Mendix Platform.
 
 {{% space_block %}}

@@ -24,7 +24,7 @@ In general, the Mendix Push Notifications solution consists of two parts: the `P
 
 ## Prerequisites
 
-* Mendix platform account (You can sign up [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup))
+* Mendix Platform account (You can sign up [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup))
 * Mendix Modeler version 6.8.1 or newer (You can download it [here](https://appstore.home.mendix.com/link/modeler))
 * Mobile device (To get started, we recommend an Android device connected to your development machine by data cable)
 * [PhoneGap Build](https://build.phonegap.com/) account

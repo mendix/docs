@@ -5,7 +5,7 @@ parent: "integration"
 
 {{% alert type="info" %}}
 
-The **Published REST Service** feature was introduced in version 7.8.0. This feature is still in private beta, and it is subject to change before final release.
+The **published REST service** feature was introduced in version 7.10.0.
 
 {{% /alert %}}
 
@@ -19,11 +19,12 @@ For an overview of the available options when you add a published  service, see 
 
 ## <a name="authorization"></a>3 Authentication
 
-Published REST services are secured with basic authentication. This is automatically applied when you [set the security level](project-security) of your app to **Prototype / demo**  or **Production**. 
+Published REST services are secured with basic authentication. This is automatically applied when you set the [security level](project-security) of your app to **Prototype / demo**  or **Production**. 
 
 If you don't want basic authentication, there are two options:
-1. You can choose to have [no authentication](published-rest-service#authentication) for specific published REST services.
-2. When you [allow anonymous users](project-security#anonymous-users) to your app, all published REST services become available without authentication.
+
+* You can choose to have [no authentication](published-rest-service#authentication) for specific published REST services, or
+* When you [allow anonymous users](project-security#anonymous-users) to your app, all published REST services become available without authentication
 
 For more details, see [Published REST Routing](published-rest-routing).
 

@@ -170,6 +170,7 @@ releasenotes:
   priority: false
   menu_categories:
     - "Desktop Modeler"
+    - "Web Modeler"
     - "Platform Portal"
     - "Model SDK"
     - "Platform SDK"

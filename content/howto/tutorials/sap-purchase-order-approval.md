@@ -2,20 +2,20 @@
 title: "SAP Purchase Order Approval"
 parent: "sap-tutorials"
 description: "Learn the basics of Mendix development and how to extend the SAP Purchase Order Approval app."
-tags: ["SAP", "purchase order", "ES4"]
+tags: ["SAP", "purchase order", "ES5"]
 ---
 
 ## 1 Introduction
 
-This tutorial takes you through the basics of development in the Mendix Desktop Modeler and teaches you how to build an approval step in the SAP Purchase Order Approval App. The approval is invoked from the Mendix app and will trigger a request to the SAP Gateway Demo System (ES4).
+This tutorial takes you through the basics of development in the Mendix Desktop Modeler and teaches you how to build an approval step in the SAP Purchase Order Approval App. The approval is invoked from the Mendix app and will trigger a request to the SAP Gateway Demo System (ES5).
 
 **This how-to will teach you how to do the following:**
 
-* Add the SAP Gateway Demo System (ES4) credentials to the app
+* Add the SAP Gateway Demo System (ES5) credentials to the app
 * Change the UI by modifying and adding pages
 * Add business logic by selecting microflows
 * Define the data structures using entities in the domain model
-* Send requests to the SAP Gateway Demo System (ES4)
+* Send requests to the SAP Gateway Demo System (ES5)
 
 ## 2 Prerequisites
 
@@ -23,7 +23,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Create a free [Mendix Account](https://www.mendix.com/sign-up/SAP)
 * Download, open, and log in to the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
-* Request the authentication credentials required to connect with the SAP Gateway Demo System (ES4) by registering [here](https://register.sapdevcenter.com/SUPSignForms/)
+* Request the authentication credentials required to connect with the SAP Gateway Demo System (ES5) by registering [here](https://register.sapdevcenter.com/SUPSignForms/)
+
 
 ## 3 Starting with the SAP Purchase Order Approval App
 
@@ -47,10 +48,9 @@ To start this tutorial, go to the [Mendix Developer Portal](https://sprintr.home
 
 8. Click **Edit App** to edit the app in the Mendix Desktop Modeler.
 
-
 ## 4 Running the App for the First Time
 
-Now that you've created the credentials, you can run the app and have it connect with the SAP Gateway Demo System (ES4).
+Now that you've created the credentials, you can run the app and have it connect with the SAP Gateway Demo System (ES5).
 
 To run the app for the first time, follow these steps:
 
@@ -64,7 +64,7 @@ To run the app for the first time, follow these steps:
 
     ![](attachments/sap-purchase-order-approval/05-view-button.png)
 
-4. Enter your ES4 credentials and click **Login**:
+4. Enter your ES5 credentials and click **Login**:
 
     ![](attachments/sap-purchase-order-approval/06-enter-credentials.png)
 

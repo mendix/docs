@@ -135,6 +135,12 @@ With the reference selector you are editing an association of type reference set
 
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+
+Using non-persistent entities (NPEs) in a reference set selector is not supported yet. For that reason, selecting an NPE in the entity selector for the reference set selector is not possible.
+
+{{% /alert %}}
+
 ## Events Properties
 
 {{% snippet file="refguide/On+Change+Event.md" %}}

@@ -1,5 +1,5 @@
 ---
-title: "How to Start Your First App Step 5: Add Employee Promotion Logic"
+title: "Start Your First App Step 5: Add Employee Promotion Logic"
 parent: "start-your-first-app"
 description: "Presents details on add pages to your app's UI in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]

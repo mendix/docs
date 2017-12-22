@@ -18,6 +18,6 @@ This query returns all customers from which the name contains the string 'an'. C
 
 {{% alert type="warning" %}}
 
-Search with special characters (like `%`, `_` and `\`) is not supported in Mendix 5. Please upgrade to Mendix 7.11 or higher if you want to search with special characters.
+Search with special characters (like `%`, `_` and `\`) is not supported in Mendix 6. Please upgrade to Mendix 7.11 or higher if you want to search with special characters.
 
 {{% /alert %}}

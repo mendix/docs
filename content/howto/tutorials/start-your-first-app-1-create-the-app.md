@@ -1,5 +1,5 @@
 ---
-title: "Start Your First App 1: Create the App"
+title: "Start Your First App Step 1: Create the App"
 parent: "start-your-first-app"
 description: "Presents details on how to create and deploy an employee directory app in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
@@ -53,11 +53,11 @@ Clicking **Edit App** will open your app for editing in the Web Modeler by defau
 
 {{% /alert %}}
 
-You're now in the Web Modeler. Welcome! Check out the guidance to learn some tips on modeling, and then move on to the next step for creating this app: [How to Start Your First App 2: Build a Dashboard Page](start-your-first-app-2-build-a-dashboard-page).
+You're now in the Web Modeler. Welcome! Check out the guidance to learn some tips on modeling, and then move on to the next step for creating this app: [How to Start Your First App Step 2: Build a Dashboard Page](start-your-first-app-2-build-a-dashboard-page).
 
 ## 5 Related Content
 
-* [How to Start Your First App 2: Build a Dashboard Page](start-your-first-app-2-build-a-dashboard-page)
-* [How to Start Your First App 3: Publish and View Your App](start-your-first-app-3-publish-and-view-your-app)
-* [How to Start Your First App 4: Add Pages to the User Interface](start-your-first-app-4-add-pages-to-the-user-interface)
-* [How to Start Your First App 5: Add Employee Promotion Logic](start-your-first-app-5-add-employee-promotion-logic)
+* [How to Start Your First App Step 2: Build a Dashboard Page](start-your-first-app-2-build-a-dashboard-page)
+* [How to Start Your First App Step 3: Publish and View Your App](start-your-first-app-3-publish-and-view-your-app)
+* [How to Start Your First App Step 4: Add Pages to the User Interface](start-your-first-app-4-add-pages-to-the-user-interface)
+* [How to Start Your First App Step 5: Add Employee Promotion Logic](start-your-first-app-5-add-employee-promotion-logic)

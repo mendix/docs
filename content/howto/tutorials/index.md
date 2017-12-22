@@ -11,8 +11,8 @@ These tutorials will teach you how to build various apps:
     <th>header 2</th>
   </thead>
   <tbody>
-    <td><a href="build-an-employee-directory-app">Build an Employee Directory App</a><br> 
-    In this introductory tutorial, you will learn the basics of app development in the Mendix Web Modeler by building an employee directory app.</td>
+    <td><a href="start-your-first-app">Start Your First App</a><br> 
+    In this introductory tutorial, you will learn the basics of app development in the Mendix Web Modeler and start your first app.</td>
     <td><img src="attachments/overview/Employee_directory.png"></td>
   </tbody>
   </tbody>

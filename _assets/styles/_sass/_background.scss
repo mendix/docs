@@ -36,10 +36,20 @@ $block: 'mx';
     & > .container {
       position: relative;
       z-index: 20;
+      @include mq("md", min) {
+        // padding-left: 0;
+        // padding-right: 0;
+      }
     }
     .topbar {
       position: relative;
       z-index: 50;
+      & > .container {
+        @include mq("md", min) {
+          // padding-left: 0;
+          // padding-right: 0;
+        }
+      }
     }
   };
 

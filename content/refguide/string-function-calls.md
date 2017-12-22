@@ -309,7 +309,7 @@ Whether the original string ends with the substring.
 * Type: Boolean
 
 ```java
-startsWith('thisismystring', 'ring')
+endsWith('thisismystring', 'ring')
 ```
 
 returns:

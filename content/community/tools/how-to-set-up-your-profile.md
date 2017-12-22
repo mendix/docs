@@ -29,19 +29,19 @@ Your profile will open on the **My Public Profile** tab, which is the main page 
 
 Your points are located in the upper-left corner of your public profile. The table and chart present the division of your points between various Mendix products and activities. For details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq). And check out the **Leaderboards** tab to see the top Mendix community contributors!
 
-When you access your profile page through the **MY COMMUNITY PROFILE** link, your profile will automatically be in edit mode so that you can easily make updates. 
-
-To edit a field on your profile, click this icon:
-
-![](attachments/how-to-set-up-your-profile/icon.png)
+When you access your profile page through the **MY COMMUNITY PROFILE** link, your profile will automatically be in edit mode so that you can easily make updates.
 
 {{% alert type="info" %}}
 
-If you access your profile by clicking **Community** > [OUR COMMUNITY](https://developer.mendixcloud.com/link/community) in the navigation bar and then finding your profile on the **Developers** or **Leaderboards** tabs, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
+If you access your profile by clicking **Community** > [OUR COMMUNITY](https://developer.mendixcloud.com/link/community) in the navigation bar and then find your profile on the **Developers** or **Leaderboards** tabs, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
 
 ![](attachments/how-to-set-up-your-profile/edit.png)
 
 {{% /alert %}}
+
+To edit a field on your profile, click this icon:
+
+![](attachments/how-to-set-up-your-profile/icon.png)
 
 In the header of your profile, you can edit the following details:
 
@@ -54,7 +54,7 @@ In the header of your profile, you can edit the following details:
 
 {{% alert type="info" %}}
 
-In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information on gaining Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq) and [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation#GainingMendixPoints).
+<a name="github"></a>In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information on gaining Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq) and [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation#GainingMendixPoints).
     
 {{% /alert %}}
 
@@ -67,19 +67,23 @@ In the body of your profile, you can edit the following elements:
     * Links to these reviews will not appear on your public profile, but these two reviews are required to make your profile 100% complete
 * **Projects** – for details on adding a project, see [4 Adding a Project](#project)
 
-To make your profile public, the following requirements must be met:
+Be sure to complete the following items, which are necessary to make your Community Profile public:
 
-* Added an avatar
-* Entered a **Function**
-* Entered a **Location**
-* Confirmed if you are looking for a **job**, a **project**, both, or neither
-* Entered a **Summary**
-* Added at least 1 **Skill**
-* Added at least 1 **Industry Experience** item
+* Add an avatar
+* Enter a **Function**
+* Enter a **Location**
+* Confirm if you are looking for a **job**, a **project**, both, or neither
+* Enter a **Summary**
+* Add at least 1 **Skill**
+* Add at least 1 **Industry Experience** item
 
-Once you have have met those requirements, click **View Public Profile** in the header to see how your public profile looks:
+Once you have completed those items, click **View Public Profile** in the header to see how your public profile looks:
 
 ![](attachments/how-to-set-up-your-profile/make-public.png)
+
+If you have not been able to complete all of these steps, the **Profile Completeness** bar and **Profile Completion Tips** will remind you of what needs to be done to make your Community Profile complete:
+
+![](attachments/how-to-set-up-your-profile/profile-completeness.png)
 
 ## 4 Adding a Project<a name="project"></a>
 
@@ -124,7 +128,7 @@ With use of the Community Profile, you can merge your old Mendix account(s) into
 There are five quick and easy steps to merge your accounts:
 
 1. Go to your [Community Profile](https://developer.mendixcloud.com/link/ownprofile/).
-2. Click **Account Settings** on the right side of the screen.
+2. Click **Merge Account** on the right side of the screen.
 3. Under **Merge your accounts**, enter the email address of the account you want to merge with your current account.
 4. Click the send button to send a merge request.
 

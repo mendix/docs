@@ -67,7 +67,7 @@ The following XPath functions are available:
 [Constraint functions](xpath-constraint-functions):
 
 *   [contains](xpath-contains)
-*   [start-with](xpath-starts-with)
+*   [starts-with](xpath-starts-with)
 *   [ends-with](xpath-ends-with)
 *   [not](xpath-not)
 *   [true](xpath-true)

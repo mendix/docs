@@ -5,7 +5,7 @@ tags: []
 ---
 ## 1. Team server
 
-In the Mendix platform there is a central repository that contains both the model and the resources. Each person working on the project, has a local copy of both model and resources. There are explicit actions to commit local changes to the repository and to retrieve changes by others from the repository (update). We build on top of Subversion that supports this style of working.
+In the Mendix Platform there is a central repository that contains both the model and the resources. Each person working on the project, has a local copy of both model and resources. There are explicit actions to commit local changes to the repository and to retrieve changes by others from the repository (update). We build on top of Subversion that supports this style of working.
 
 We chose Subversion because of its popularity, maturity and solid Windows support. Building on top of Subversion means that we inherit its reliable protocols for sending and receiving changes. Subversion has a lot of operations that allow us to support advanced features like branching and merging. The Modeler simplifies Subversion commands by providing a layer over them. All common operations can be executed right from the Modeler.
 
@@ -41,7 +41,7 @@ Let us say you download revision 35 from the repository. This is your original. 
 
 ### 2.5 Download from Team Server
 
-Before you can start working on a Team Server project you have to download it to your computer. Within the Mendix Business Modeler you’ll select the App Project, a development line and a disk location where to store the working copy locally. In the Modeler you can download a Team Server project by simply opening the project.
+Before you can start working on a Team Server project you have to download it to your computer. Within the Mendix Modeler you’ll select the App Project, a development line and a disk location where to store the working copy locally. In the Modeler you can download a Team Server project by simply opening the project.
 
 ### 2.6 Upload to Team Server
 

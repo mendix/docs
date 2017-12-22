@@ -4,7 +4,7 @@ title: "Beta Features"
 
 ## 1 Beta Features Overview
 
-Some Mendix platform releases contain beta features. We release these beta features to collect feedback on their implementation so that we can improve them. We value any feedback on these beta features, as it enables us to provide you with the best possible product.
+Some Mendix Platform releases contain beta features. We release these beta features to collect feedback on their implementation so that we can improve them. We value any feedback on these beta features, as it enables us to provide you with the best possible product.
 
 The availability of beta features will be documented in the release notes for every specific release. Other documentation will be available through the Mendix documentation website. Please consult the release notes and the documentation on how to enable and use these beta features.
 

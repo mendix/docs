@@ -417,7 +417,7 @@
             },
             bottom: function () {
               var height = $('.footer').outerHeight(true);
-              height += $('#footerWrapper').outerHeight(true);
+              height += $('.mx-developer__footer').outerHeight(true);
               return this.bottom = height + 50;
             }
           }

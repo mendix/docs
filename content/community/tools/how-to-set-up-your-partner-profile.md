@@ -38,9 +38,9 @@ To log in to the Partner Profile, edit it, and make it public, follow these step
     
     For details about editing, start with [5 Editing the Overview](#editing).<br>
     
-5.  After you have finished editing, you can set the profile to public so that the Mendix community and customers can view it. To do this, simply click **View Public Profile**:
+5.  After you have finished editing, you can make the profile public so that the Mendix community and customers can view it. To do this, simply click **Close Edit Mode**:
 
-    ![](attachments/how-to-set-up-your-partner-profile/make-public.png)
+    ![](attachments/how-to-set-up-your-partner-profile/close-edit.png)
 
 ## 4 Editing the Partner Profile Header
 
@@ -54,15 +54,15 @@ You must complete the **Address** and **Email Address** fields before you can ma
 
 ![](attachments/how-to-set-up-your-partner-profile/address.png)
 
-### 4.2 Capability Tracks<a name="capability"></a>
+### 4.2 Capability Levels<a name="capability"></a>
 
-The header also displays whether the company is **Authorized**, **Expert**, or **Professional**. These capability tracks are defined as follows:
+The header also displays whether the company is **Authorized**, **Expert**, or **Professional**. These capability levels are defined as follows:
 
 * **Authorized** — this type of partner has qualified and certified resources to support customers with Mendix initiatives 
 * **Professional** — this type of partner can successfully deliver complex mission-critical Mendix applications and solutions for businesses
-* **Expert** — this type of partner can support an enterprise in its successful positioning and adoption of the Mendix platform with all elements of the Mendix "4 P's" (portfolio, people, process, and platform; for details, see [How to Implement Bimodal IT: Focus on the 4 P’s](https://www.mendix.com/blog/how-to-implement-bimodal-it-focus-on-the-4-ps/))
+* **Expert** — this type of partner can support an enterprise in its successful positioning and adoption of the Mendix Platform with all elements of the Mendix "4 P's" (portfolio, people, process, and platform; for details, see [How to Implement Bimodal IT: Focus on the 4 P’s](https://www.mendix.com/blog/how-to-implement-bimodal-it-focus-on-the-4-ps/))
 
-These capability tracks are defined through an assessment of your company's developer certification levels, delivery expertise, and delivery references. For more information, please contact your Mendix Customer Success Manager.
+A capability level is determined through an assessment of your company's delivery expertise, project references, and Mendix Developer Certification levels. For more information, please contact your Mendix Customer Success Manager.
 
 ## 5 Editing the Overview<a name="editing"></a>
 
@@ -156,7 +156,7 @@ To add developers to the Partner Profile, follow these steps:
 
 {{% alert type="info" %}}
 
-Make sure you offboard the developers who no longer work at your company through the company administration in the Mendix platform. These former employees will still be visible in the overview. It is important that you deactivate these developers in the Developers Portal so that they don’t have access to projects.
+Make sure you offboard the developers who no longer work at your company through the company administration in the Mendix Platform. These former employees will still be visible in the overview. It is important that you deactivate these developers in the Developers Portal so that they don’t have access to projects.
 
 {{% /alert %}}
 

@@ -120,7 +120,13 @@ You can now deploy your app to your test device. An easy way to do this is with 
 Click "Apply" at the bottom to execute the actual installation.
 The app should now be visible on your device. Open it and log in to your app with a regular user account (set one up in the Mendix App in your desktop browser if you have not done so yet).
 
-## 5\. Related content
+## 5\. Examples
+
+** How to build a Phonegap app in the cloud **
+
+{{% youtube 7ic625u2YJE %}}
+
+## 6\. Related content
 
 *   [Mobile](mobile)
 *   [Deploy your first Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)

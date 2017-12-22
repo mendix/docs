@@ -5,15 +5,17 @@ category: "API Documentation"
 
 # Introduction
 
-The Deploy API allows you to manage application environments in our public cloud. You can retrieve the status, start and stop applications, but also deploy and transport new model versions to application environments. To do the latter you will also need the Build API to create and manage deployment packages.
+The Deploy API allows you to manage application environments in the Mendix Cloud. You can retrieve the status and start and stop applications, and you can also deploy and configure new model versions to application environments. You will also need the Build API to create and manage deployment packages.
 
-The image below provides a domain model representation of the concepts discussed below and how these are related:
-![](attachments/131078/425987.png)
+This image provides a domain model representation of the concepts discussed below and how these are related:
+
+![](attachments/deploy-api/api-model.png)
 
 # <a name="DeployAPI-Authentication" rel="nofollow"></a>Authentication
 
-The Cloud Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](authentication "authentication").
-In the web interface of our portal we provide 2-factor authentication for all operations that involve production environments. For our APIs we obviously cannot provide you with 2-factor authentication in the same way. For the APIs we created Multi-Factor Authentication so you can control which users can access which environments via the Node Security screen under Project Settings you can configure which environments are accessible via the API to which users. By default test and acceptance are accessible to users that also have access to these environments via the portal. Access to the production environment needs to be configured by the technical contact of the application for specific users.
+The Deploy API requires authentication via API keys that are bound to your Mendix account (for more information, see [Authentication](authentication).
+
+As APIs are designed for automated systems, the Deploy API does not require two-factor authentication, which is normally required to make changes to production environments. This is a potential security risk. Therefore, the Technical Contact of an application needs to explicitly allow API access for team members that want to use the Deploy API. This can be configured from the **Node Security** screen under **Project Settings**. By default, API access is already enabled for test and acceptance environments for all team members. To perform an action via the Deploy API, such as transporting a new deployment package, both the **Transport** and **API Access** permissions need to be enabled.
 
 # <a name="DeployAPI-APIcalls" rel="nofollow"></a>API Calls
 
@@ -23,7 +25,7 @@ Only _Retrieve apps_, _Create Sandbox_ and _Retrieve app_ API calls are supporte
 
 ### <a name="DeployAPI-Description" rel="nofollow"></a>Description
 
-Retrieves all apps which the authenticated user has access to as a regular user. These apps can be found via the "Nodes overview" screen in the Mendix platform.
+Retrieves all apps which the authenticated user has access to as a regular user. These apps can be found via the "Nodes overview" screen in the Mendix Platform.
 
 ```bash
 HTTP Method: GET
@@ -131,7 +133,7 @@ Response object with the following fields:
 
 ### <a rel="nofollow"></a>Description
 
-Retrieves a specific app which the authenticated user has access to as a regular user. These app can be found via the "Nodes overview" screen in the Mendix platform.
+Retrieves a specific app which the authenticated user has access to as a regular user. These app can be found via the "Nodes overview" screen in the Mendix Platform.
 
 ```bash
 HTTP Method: GET
@@ -184,7 +186,7 @@ Object with the following key-value pairs:
 
 ### <a rel="nofollow"></a>Description
 
-Retrieves all environments that are connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix platform.
+Retrieves all environments that are connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
 
 ```bash
 HTTP Method: GET
@@ -237,7 +239,7 @@ List of objects with the following key-value pairs:
 
 ### <a rel="nofollow"></a>Description
 
-Retrieves a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix platform.
+Retrieves a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
 
 ```bash
 HTTP Method: GET
@@ -291,7 +293,7 @@ An object with the following key-value pairs:
 
 ### <a rel="nofollow"></a>Description
 
-Starts a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix platform.
+Starts a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
 
 ```bash
 HTTP Method: POST
@@ -405,7 +407,7 @@ An object with the following key-value pair:
 
 ### <a rel="nofollow"></a>Description
 
-Stops a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix platform.
+Stops a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
 
 ```bash
 HTTP Method: POST
@@ -440,7 +442,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### <a rel="nofollow"></a>Description
 
-Retrieves the deployed package of a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix platform.
+Retrieves the deployed package of a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
 
 ```bash
 HTTP Method: GET
@@ -592,6 +594,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
 | 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 400 | INVALID_RUNTIME_VERSION | This Runtime version is not supported on this environment. (For Mendix Cloud v4, using a Mendix version of 6 or newer is required.) |
 | 403 | NO_ACCESS | You do not have access |
 | 403 | TRANSPORT_NOT_ALLOWED | No access to transport to environment 'mode'. |
 | 403 | APP_IS_RUNNING | The 'mode' environment of 'app id' must be stoppped to do transport. |

@@ -116,7 +116,7 @@ Description | The application URL is reachable. This check tries to visit the UR
 Example message | Did not find correct headers for url 'https://example.mendixcloud.com/'
 Warning Threshold | The application URL is not reachable.
 Critical Threshold | Not used.
-First actions to take | If this alert triggers, and visiting the application url results in slow loading or unresponsiveness, visit https://status.mendix.com/ to see if there is an outage. This condition might point to an internal networking connectivity problem.
+First actions to take | If this alert triggers, and visiting the application url results in slow loading or unresponsiveness, visit [https://status.mendix.com/](https://status.mendix.com/) to see if there is an outage. This condition might point to an internal networking connectivity problem.
 
 ## 4 Alerts History
 
@@ -134,8 +134,7 @@ To access the history of the alerts from your app, follow these steps:
 
 3. Click **Details**. This will open the alert details, which contains additional information. More information might be available in your application's log file.
 
-
-## 5 Related content
+## 5 Related Content
 
 * [Application Trends in Mendix Cloud v3](trends)
 * [Application Trends in Mendix Cloud v4](trends-v4)

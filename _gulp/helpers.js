@@ -7,6 +7,7 @@ const _ = require('lodash');
 const request = require('request');
 const async = require('async');
 const fs = require('fs');
+const { normalizeSafe } = require('upath');
 
 const readFile = Promise.promisify(require('fs').readFile);
 const writeFile = Promise.promisify(require('fs').writeFile);
@@ -42,7 +43,8 @@ const getAllFiles = (dir) => new Promise((resolve, reject) => {
     if (err) {
       return reject(err);
     }
-    resolve(files);
+    const normalized = files.map(f => normalizeSafe(f));
+    resolve(normalized);
   });
 });
 
@@ -53,7 +55,8 @@ const getFiles = (dir, ext) => {
       if (err) {
         return reject(err);
       }
-      resolve(_.filter(files, file => path.extname(file) === extName));
+      const normalized = files.map(f => normalizeSafe(f));
+      resolve(_.filter(normalized, file => path.extname(file) === extName));
     });
   });
 };
@@ -65,7 +68,14 @@ const getGenerateFiles = (dir) => {
       if (err) {
         return reject(err);
       }
-      resolve(_.filter(files, file => path.extname(file) && extArr.indexOf(path.extname(file) !== -1)));
+      const normalized = files.map(f => normalizeSafe(f));
+      resolve(
+        _.filter(normalized,
+           file => path.extname(file) && 
+           extArr.indexOf(path.extname(file) !== -1
+          )
+        )
+      );
     });
   });
 };

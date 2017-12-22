@@ -3,6 +3,8 @@ title: "Desktop Modeler Overview"
 parent: "desktop-modeler"
 ---
 
+## 1 Introduction
+
 The Mendix Desktop Modeler is the place where you create, view and edit your Mendix application. This is called a [project](project) in the Modeler. A project consists of many documents that are grouped in [modules](modules) and folders. There are some project-level settings but the core of the functionality will be inside modules. Examples of documents are the [project settings](project-settings), [domain model](domain-model), [pages](pages) and [microflows](microflows). The Modeler can have one project open at the same time. You can, however, open two Modeler instances when necessary.
 
 This documentation describes the graphical user interface of the Modeler. The rest of the documentation follows the structure of the project explorer.
@@ -13,9 +15,9 @@ Use F1 in the Modeler to quickly jump to the right page in the documentation.
 
 {{% /alert %}}
 
-## Dockable Windows
+## 2 Dockable Windows
 
-The Modeler sports quite a number of dockable windows or docks. You can close some to just show the ones you are interested in at the moment. You can always reopen them by using the View menu. Here is a table with all available dockable windows.
+The Modeler supports quite a number of dockable windows or docks. You can close some to just show the ones you are interested in at the moment. You can always reopen them by using the View menu. Here is a table with all available dockable windows.
 
 | Dockable window | Description |
 | --- | --- |
@@ -34,11 +36,11 @@ The Modeler sports quite a number of dockable windows or docks. You can close so
 | Toolbox | Shows the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (text box, data view etc.) by dragging them from the toolbox to your form. |
 | Variables | You can view the current values of variables here when debugging your application. |
 
-## Document Tabs
+## 3 Document Tabs
 
 Documents that you are viewing and/or editing at the moment are shown in tabs. You can have any number of tabs open just like in a modern web browser. They can be closed, reordered, and shown side by side. Each document has its own save state (are there unsaved changes?) and undo history/future. Undo and redo are unlimited.
 
-## Menus
+## 4 Menus
 
 Using items in the menu bar of the Modeler you can create new projects, deploy and run them, search for texts and more.
 
@@ -136,7 +138,7 @@ Using items in the menu bar of the Modeler you can create new projects, deploy a
 | Ask a Question | Opens the community forum in the default web browser. |   |
 | About Mendix Modeler | Show information about the current version of the Mendix Modeler. |   |
 
-## General Shortcut Keys
+## 5 General Shortcut Keys
 
 In the main window, Ctrl+Tab can be used to navigate between all open documents. Other shortcut keys that can be used in the main window can be found next to their relevant menu item in the Menus section above.
 
@@ -157,7 +159,7 @@ In most edit grids such as the list of attributes in the entity properties dialo
 | Enter | Edit the currently selected item. |
 | Delete | Delete the currently selected item(s). |
 
-## Domain Model Editor Shortcut Keys
+## 6 Domain Model Editor Shortcut Keys
 
 The following shortcut keys are available in the domain model editor:
 
@@ -167,7 +169,7 @@ The following shortcut keys are available in the domain model editor:
 | Ctrl+A | Select all entities. |
 | Esc | Clear selection. |
 
-## Form Editor Shortcut Keys
+## 7 Form Editor Shortcut Keys
 
 The following shortcut keys are available in the form editor:
 
@@ -178,7 +180,7 @@ The following shortcut keys are available in the form editor:
 | Enter | Edit the properties of the currently selected object in a pop-up dialog. |
 | F2 | Edit the caption of a label, button etc. inline in the form. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
-## Microflow Editor Shortcut Keys
+## 8 Microflow Editor Shortcut Keys
 
 The following shortcut keys are available in the microflow editor:
 

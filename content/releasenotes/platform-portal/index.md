@@ -4,6 +4,47 @@ title: "Platform Portal"
 
 ## 2017
 
+### December 13th, 2017
+
+#### Fixes
+
+* The JVM Process Memory graph in Cloud v4 now also show the native memory of the application.
+* The Application Node Operating System Memory graph for Cloud v4 now shows as two lines: total and used. The previous version displayed the total added to the used in a stacked area graph, which was very confusing.
+
+### December 6th, 2017
+
+#### Fixes
+
+* We adressed the issue that prevents Free Apps from being embedded in an iframe.
+
+### November 27th, 2017
+
+#### Improvements
+
+* Free App users now have the option to select between Web Modeler and Desktop Modeler for editing their application models.
+
+### November 15th, 2017
+
+#### Improvements
+
+* Mendix Cloud v4 backups can now be restored to other environments in the same Mendix Cloud node. This is useful when preparing production migrations or for reproducing errors.
+* When creating a deployment package from Team Server, the dialog box now shows branches in case-insensitive order, which makes more sense for users.
+* Mendix Cloud v4 alert status showed `UNKNOWN` sometimes due to an error. This was fixed and the correct status is now shown.
+* In the **Deploy**, **Operate**, and **Backups** pages, you can *finally* use the <kbd>Enter</kbd> key to submit your two-factor authentication code. Happy typing!
+
+### October 20th, 2017
+
+#### Improvements
+
+* Deploying a different version without stopping a running application is also now available on Mendix Cloud v3. Once the deployment is done, you can restart the application with a single click.
+* We improved the error handling. Much more user-friendly feedback messages are provided in case of an error.
+* The user experience of backup uploads has been improved for Mendix Cloud v4. It is also possible to manually delete the old backups on Mendix Cloud v4.
+* We made a series of minor user experience improvements for metrics on Mendix Cloud v4.
+
+#### Fixes
+
+* When creating a deployment package from Team Server, users will now be able to see the revisions that were committed without the Mendix Modeler.
+
 ### October 10th, 2017
 
 #### Improvements
@@ -13,6 +54,7 @@ title: "Platform Portal"
 ### September 29th, 2017
 
 #### Fixes
+
 * We fixed an issue where a user who signed up to Mendix would get an error page in Internet Explorer and Microsoft Edge.
 
 ### September 28th, 2017
@@ -44,7 +86,7 @@ title: "Platform Portal"
 #### Improvements
 
 * It is now possible to accept invitations and confirm signups on mobile devices.
-* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296) 
+* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296)
 
 #### Fixes
 
@@ -355,10 +397,10 @@ title: "Platform Portal"
 
 #### New features
 * The blue toolbar now contains a button for quickly creating new apps, and a shortcut that leads to the Mendix Developer Portal ([https://developers.mendix.com/](https://developers.mendix.com/)).
-* Guidance balloons guide new users through a few main features of the Mendix platform.
+* Guidance balloons guide new users through a few main features of the Mendix Platform.
 * The project dashboard has been extended with Team and Development information.
     * The Team Box shows all team members within a project, and allows you to easily invite new team members.
-    * The Development Box shows information about the latest main line commit, and provides a shortcut to quickly open the app in the Mendix Business Modeler.
+    * The Development Box shows information about the latest main line commit, and provides a shortcut to quickly open the app in the Mendix Modeler.
 
 #### Improvements
 * Several UI improvements, including a new navigation sidebar and a revised Projects page.
@@ -406,9 +448,9 @@ title: "Platform Portal"
 * It's now possible to search for a document based on its labels.
 
 ##### Develop
-* Restructured the Develop tab. Each commit now offers an App Store link to the Business Modeler version with which it was committed. Added a button to open the latest Main line revision in the modeler.
+* Restructured the Develop tab. Each commit now offers an App Store link to the Modeler version with which it was committed. Added a button to open the latest Main line revision in the modeler.
 * The Mendix version used is now tracked for each revision individually, rather than per branch. (Feedback 120751)
-* App Store links to the Business Modeler from the Develop tab now open in a new browser tab.
+* App Store links to the Modeler from the Develop tab now open in a new browser tab.
 * The details screen of a revision in the Develop tab will now show the exact time of the commit to the Team Server. (Feedback 120300)
 
 ##### Feedback
@@ -420,7 +462,7 @@ title: "Platform Portal"
 * App and Project invites will now expire after 14 days. (Feedback 90894)
 * App and Project invites can now be retracted by the inviter. You can find this functionality in the Pending Invites tab of your Profile. (Feedback 90894)
 * You will now see a progress bar while your App and project invites are being sent. (Feedback 79146)
-* It is now possible to initiate an invite to the Mendix platform using the Share button on the blue Mendix toolbar.
+* It is now possible to initiate an invite to the Mendix Platform using the Share button on the blue Mendix toolbar.
 
 #### Fixes
 

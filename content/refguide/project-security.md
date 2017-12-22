@@ -162,7 +162,7 @@ The entity of the demo user. This must be the System.User entity, or a specializ
 
 Here you can select the user roles of the demo user. Each demo user must have one or more roles.
 
-## Anonymous Users
+## <a name="anonymous-users"></a>Anonymous Users
 
 **Allow anonymous users**
 

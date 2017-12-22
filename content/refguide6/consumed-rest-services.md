@@ -38,3 +38,9 @@ Above the object 'person' is described with the corresponding values for the att
 
 ## Limitations
 It is not possible to specify a timeout value.
+
+## Examples
+
+**How to consume REST natively with Mendix**
+ 
+ {{% youtube waOlvSqdaP4 %}}

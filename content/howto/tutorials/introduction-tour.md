@@ -8,4 +8,4 @@ frontpage_featured: true
 
 The following introductory tutorial is available here:
 
-* [Build an Employee Directory App](build-an-employee-directory-app)
+* [How to Start Your First App](start-your-first-app)

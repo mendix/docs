@@ -21,7 +21,7 @@ For more information the Mendix Forum, see [The Mendix Forum](the-mendix-forum).
 
 ## 3 Documentation
 
-The [Mendix Documentation](https://docs.mendix.com/) covers all aspects of the Mendix product. The reference guide documents the app platform and provides in-depth information on the Modeler and Team Server, for example. The how-to's present detailed instructions for building and customizing apps with Mendix. The API documentation contains several different sections, such as the business server API, the client API, and the Team Server API.
+> The [Mendix Documentation](https://docs.mendix.com/) covers all aspects of the Mendix product. The reference guide documents the app platform and provides in-depth information on the Modeler and Team Server, for example. The how-to's present detailed instructions for building and customizing apps with Mendix. The API documentation contains several different sections, such as the business server API, the client API, and the Team Server API.
 
 The **Documentation** section of the Developers site presents the latest documents to be published on the documentation site:
 

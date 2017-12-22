@@ -19,7 +19,7 @@ The following operators can be used in OQL expressions:
 | `<=` | Less than or equal to | `Price <= 9.80` returns true if price is 9.80, false if price is 9.90. |
 | `>` | Greater than | `Price > 9.80` returns true if price is 9.90, false if price is 9.80. |
 | `>=` | Greater than or equal to | `Price >= 9.80` returns true if price is 9.80, false if price is 9.70. |
-| `LIKE` | Matches the pattern after the operator. The wildcard character '%' can be used to define any string of zero or more characters. Search by special characters, like `%`, `_` and `\`, is not supported in Mendix 6. Please upgrade to Mendix 7.11 or higher if you want to search by special characters.| `City LIKE '%dun'` returns all city's which names ends with 'dun', like 'dun' and 'Losdun'. |
+| `LIKE` | Matches the pattern after the operator. The wildcard character '%' can be used to define any string of zero or more characters. Search with special characters (like `%`, `_`, and `\`) is not supported in Mendix 6. Please upgrade to Mendix 7.11 or higher if you want to search with special characters.| `City LIKE '%dun'` returns all the cities with names that end with 'dun', like 'dun' and 'Losdun'. |
 | `IN` | Matches any value in a subquery or a list of expression values. | `City IN (SELECT Name FROM City WHERE Country = 'Gelre')` `City IN ('Losdun', 'Die Haghe', 'Haagambacht')` |
 | `EXISTS` | Test for the existance of any rows when executing the subquery. | `EXISTS (SELECT ID FROM City WHERE City = 'Losdun')` Returns true if object exists |
 | `NOT` | Reverses the value of the expression following this keyword. | `NOT City = 'Rotterdam'` returns all objects not in Rotterdam. |

@@ -1,5 +1,5 @@
 ---
-title: "SAP Purchase Order Approval"
+title: "SAP Purchase Order Approval Tutorial"
 parent: "sap-tutorials"
 description: "Learn the basics of Mendix development and how to extend the SAP Purchase Order Approval app."
 tags: ["SAP", "purchase order", "ES5"]

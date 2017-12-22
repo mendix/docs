@@ -1,5 +1,5 @@
 ---
-title: "Start Your First App 3: Publish and View Your App"
+title: "Start Your First App Step 3: Publish and View Your App"
 parent: "start-your-first-app"
 description: "Presents details on how to publish your app from the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
@@ -21,7 +21,7 @@ Now that you've gotten started with your app and have worked with some of the de
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Complete the second how-to in this series: [How to Start Your First App 2: Build a Dashboard Page](start-your-first-app-2-build-a-dashboard-page)
+* Complete the second how-to in this series: [How to Start Your First App Step 2: Build a Dashboard Page](start-your-first-app-2-build-a-dashboard-page)
 
 ## 3 Updating and Viewing Your App
 
@@ -61,11 +61,11 @@ To view your app on a mobile device, follow these steps:
 
 2. Scan the QR-code with your mobile device using the [Mendix Mobile app](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile&hl=en). Follow the directions to download the Mendix Mobile app in case you don't have it installed.
 
-Nice. Now you're ready to continue with the next how-to of this tutorial: [How to Start Your First App 4: Add Pages to the User Interface](start-your-first-app-4-add-pages-to-the-user-interface).
+Nice. Now you're ready to continue with the next how-to of this tutorial: [How to Start Your First App Step 4: Add Pages to the User Interface](start-your-first-app-4-add-pages-to-the-user-interface).
 
 ## 5 Related Content
 
-* [How to Start Your First App 1: Create the App](start-your-first-app-1-create-the-app)
-* [How to Start Your First App 2: Build a Dashboard Page](start-your-first-app-2-build-a-dashboard-page)
-* [How to Build an Employee Directory App  Step 4: Add Pages to the User Interface](start-your-first-app-4-add-pages-to-the-user-interface)
-* [How to Build an Employee Directory App  Step 5: Add Employee Promotion Logic](start-your-first-app-5-add-employee-promotion-logic)
+* [How to Start Your First App Step 1: Create the App](start-your-first-app-1-create-the-app)
+* [How to Start Your First App Step 2: Build a Dashboard Page](start-your-first-app-2-build-a-dashboard-page)
+* [How to Start Your First App Step 4: Add Pages to the User Interface](start-your-first-app-4-add-pages-to-the-user-interface)
+* [How to Start Your First App Step 5: Add Employee Promotion Logic](start-your-first-app-5-add-employee-promotion-logic)

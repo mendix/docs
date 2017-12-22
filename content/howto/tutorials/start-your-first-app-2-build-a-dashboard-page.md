@@ -1,5 +1,5 @@
 ---
-title: "Start Your First App 2: Build a Dashboard Page"
+title: "Start Your First App Step 2: Build a Dashboard Page"
 parent: "start-your-first-app"
 description: "Presents details on the first steps in building a dashboard in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
@@ -22,7 +22,7 @@ This is the second how-to in this series on how to create an employee directory 
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Complete the first how-to in this series: [Start Your First App 1: Create the App](start-your-first-app-1-create-the-app)
+* Complete the first how-to in this series: [Start Your First App Step 1: Create the App](start-your-first-app-1-create-the-app)
 
 ## 3 Building Up a Dashboard Page
 
@@ -101,11 +101,11 @@ To make a small change to the look and feel of your app, follow these steps:
  
     Clicking **Reset Style** in **Theme Customizer** will undo the changes.
      
-Well done! Continue with [How to Start Your First App 3: Publish and View Your App](start-your-first-app-3-publish-and-view-your-app).
+Well done! Continue with [How to Start Your First App Step 3: Publish and View Your App](start-your-first-app-3-publish-and-view-your-app).
 
 ## 4 Related Content
 
-* [How to Start Your First App 1: Create the App](start-your-first-app-1-create-the-app)
-* [How to Start Your First App 3: Publish and View Your App](start-your-first-app-3-publish-and-view-your-app)
-* [How to Start Your First App 4: Add Pages to the User Interface](start-your-first-app-4-add-pages-to-the-user-interface)
-* [How to Start Your First App 5: Add Employee Promotion Logic](start-your-first-app-5-add-employee-promotion-logic)
+* [How to Start Your First App Step 1: Create the App](start-your-first-app-1-create-the-app)
+* [How to Start Your First App Step 3: Publish and View Your App](start-your-first-app-3-publish-and-view-your-app)
+* [How to Start Your First App Step 4: Add Pages to the User Interface](start-your-first-app-4-add-pages-to-the-user-interface)
+* [How to Start Your First App Step 5: Add Employee Promotion Logic](start-your-first-app-5-add-employee-promotion-logic)

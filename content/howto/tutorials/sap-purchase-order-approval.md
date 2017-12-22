@@ -1,5 +1,5 @@
 ---
-title: "SAP Purchase Order Approval"
+title: "SAP Purchase Order Approval Tutorial"
 parent: "sap-tutorials"
 description: "Learn the basics of Mendix development and how to extend the SAP Purchase Order Approval app."
 tags: ["SAP", "purchase order", "ES5"]
@@ -24,7 +24,6 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Create a free [Mendix Account](https://www.mendix.com/sign-up/SAP)
 * Download, open, and log in to the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
 * Request the authentication credentials required to connect with the SAP Gateway Demo System (ES5) by registering [here](https://register.sapdevcenter.com/SUPSignForms/)
-
 
 ## 3 Starting with the SAP Purchase Order Approval App
 

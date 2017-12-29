@@ -28,14 +28,14 @@ Before you can start with this how-to, please make sure you have completed the f
 
 The Excel sheet you received practically contains every country in the world. In every country some data is stored. The data has to be imported into your application.
 
-You can find the Excel sheet here:[ _http://1drv.ms/1Rlh7rR_](http://1drv.ms/1Rlh7rR)
+You can find the Excel sheet here:[http://1drv.ms/1Rlh7rR](http://1drv.ms/1Rlh7rR)
 
 We are going to make an XSD schema from the headers in the Excel sheet, so we can import this later into our model.
 
 1.  Select the header row with all the country names.
 2.  Copy and paste them in a new sheet using the transpose function.
      ![](attachments/19202606/19398887.png)![](attachments/19202606/19398888.png)
-    Your headers should be listed vertically and your sheet should look like this:[ _http://1drv.ms/1Rlhd2E_](http://1drv.ms/1Rlhd2E)
+    Your headers should be listed vertically and your sheet should look like this:[http://1drv.ms/1Rlhd2E](http://1drv.ms/1Rlhd2E)
     We are now ready to add some tags around the column.
 3.  Add one column to the left.
 4.  Place the following string in cell A1:
@@ -55,8 +55,7 @@ We are going to make an XSD schema from the headers in the Excel sheet, so we ca
 
 7.  And like you did with the previous one, drag it down to the last country. The Excel sheet should look something like this now:
 
-    ![](attachments/19202606/19398890.png)[_
-    http://1drv.ms/1RlhmmP_](http://1drv.ms/1RlhmmP)
+    ![](attachments/19202606/19398890.png)[http://1drv.ms/1RlhmmP](http://1drv.ms/1RlhmmP)
 
     Now we have to get the three different columns into one column. This is needed because later on we want to copy the whole column into an XSD file.
 8.  Select cell D1 and type the following into the formula box:
@@ -65,7 +64,7 @@ We are going to make an XSD schema from the headers in the Excel sheet, so we ca
     =(A1&B1&C1)
     ```
 
-9.  Drag the cells down like you’ve done with column A1 and C1\. Now your column D should have all the columns A,B and C combined into one. Your sheet should look like this:[ _http://1drv.ms/1SFD7j1_](http://1drv.ms/1SFD7j1)
+9.  Drag the cells down like you’ve done with column A1 and C1\. Now your column D should have all the columns A,B and C combined into one. Your sheet should look like this:[http://1drv.ms/1SFD7j1](http://1drv.ms/1SFD7j1)
 
 ## 3\. Preparing your XSD file
 
@@ -96,7 +95,7 @@ This is where your favourite text editor comes in. I prefer to use Brackets.
     ```
 
     Your file should look like this:
-    [_http://1drv.ms/1RlhrXy_](http://1drv.ms/1RlhrXy)
+    [http://1drv.ms/1RlhrXy](http://1drv.ms/1RlhrXy)
 
 5.  Don’t forget to save it!
 

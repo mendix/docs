@@ -19,7 +19,7 @@ This how-to describes the requirements and limitations of using a Mendix app in 
 
 ![](attachments/18448663/18580722.png)
 
-It is possible to use the Mendix platform in a load-balancing environment. However, it is important to know that the Mendix platform is not cluster-capable or -aware. The documentation doesn’t state exactly how the Mendix platform should be configured in a load high availability architecture. Since Mendix doesn’t have many requirements for how it should be installed, there are many options for running Mendix behind a load balancer.
+It is possible to use the Mendix Platform in a load-balancing environment. However, it is important to know that the Mendix Platform is not cluster-capable or -aware. The documentation doesn’t state exactly how the Mendix Platform should be configured in a load high availability architecture. Since Mendix doesn’t have many requirements for how it should be installed, there are many options for running Mendix behind a load balancer.
 
 This document explains the requirements for installing Mendix on a server behind a load balancer. The basic requirements for Mendix running behind a load balancer are having sticky sessions, a shared database, and non-persistent high-availability sessions.
 

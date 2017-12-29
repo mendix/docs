@@ -2,7 +2,7 @@
 title: "App Settings Dialog"
 parent: "dialogs"
 ---
-When creating a new app, the App Settings dialog lets you specify an app name, whether or not to enable the online services provided by the Mendix platform, the default language, and the location on disk where the project files for your app are stored. These settings are optional. Clicking Create app will create your app with the default settings.
+When creating a new app, the App Settings dialog lets you specify an app name, whether or not to enable the online services provided by the Mendix Platform, the default language, and the location on disk where the project files for your app are stored. These settings are optional. Clicking Create app will create your app with the default settings.
 
 ## Name
 
@@ -10,7 +10,7 @@ The name of your new app. This name is used as the name of the project directory
 
 ## Enable Online Services
 
-The Mendix platform offers online services such as version control, cloud deployment and collaboration. When enabled, this will create a project in the Developer Portal and a corresponding version control repository.
+The Mendix Platform offers online services such as version control, cloud deployment and collaboration. When enabled, this will create a project in the Developer Portal and a corresponding version control repository.
 
 If you choose No, you will create an app that is only stored on your local disk. At a later point you can still decide to upload this local app to a version control server and enjoy the benefits of version control.
 

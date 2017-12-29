@@ -1,11 +1,11 @@
 ---
-title: "Published REST service"
+title: "Published REST Service"
 parent: "published-rest-services"
 ---
 
 {{% alert type="info" %}}
 
-The **Published REST Service** feature was introduced in version 7.8.0. This feature is still in private beta, and it is subject to change before final release.
+The **published REST service** feature was introduced in version 7.10.0.
 
 {{% /alert %}}
 
@@ -21,7 +21,7 @@ The service name uniquely identifies the service in the app. It's part of the lo
 
 ### 2.2 Example Location
 
-The example location shows the URL on which the service can be reached. This is an example : 
+The example location shows the URL on which the service can be reached. This is an example: 
 
 ![](attachments/published-rest-service/example-location-url.png)
 

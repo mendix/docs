@@ -55,8 +55,6 @@ If you choose 'Custom' as the date format (see above) this property determines h
 | z | 4 | Pacific Standard Time | Time zone |
 | Z | 4 | GMT-04:0 0 | Time zone offset |
 
-{{% alert type="info" %}}
-
 These are some examples:
 
 | Format | Example Output |
@@ -66,8 +64,6 @@ These are some examples:
 | `yyy D KK:mm` | 2011 88 01:26 |
 | `EEEE MMMM d yyy` | Tuesday March 29 2011 |
 | `EEE, MMM dd, ''yy` | Wed, Jul 04, '01 |
-
-{{% /alert %}}
 
 ### Placeholder Text
 

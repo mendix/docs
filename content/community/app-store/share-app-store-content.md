@@ -61,12 +61,12 @@ To add content to the App Store, follow these steps:
 
 4. In the **Publish to** drop-down menu, select the location where you want to publish your content:<a name="4"></a>
 
-    * **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix Comminity
-    * **Private App Store (visible for your company)** – your content will be available only to the developers in your company
+    * **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
+    * **Private App Store (visible for your company)** – your content will be available only to the developers in your company (this content will not be reviewed by Mendix)
 5. In the bottom half of the **Share your content** screen, do the following:
 
     * Enter a **Name** for your content
-    * Select a category for your content from the **Category** drop-down menu: Connectors, Layouts, Modules, Samples, Solutions, Themes, Theme Starting Points, or Widgets
+    * Select a category for your content from the **Category** drop-down menu
     * If you have published a demo using your content, enter the **Demo URL**
     * Click **Upload Image** to upload an image for your app
 
@@ -106,13 +106,9 @@ To add content to the App Store, follow these steps:
 
         ![](attachments/share-app-store-content/add_content_8.png)
 
-        {{% alert type="info" %}}
-
-        You can request other license types to be added as "License" options by pressing the "Feedback" button on the right side of the App Store screen.
-
-        {{% /alert %}}
-
-9. After entering the information for your content, you can click one of these buttons in the middle of the screen:
+        You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
+        
+10. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 
     ![](attachments/share-app-store-content/add_content_7.png)
 

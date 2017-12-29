@@ -17,13 +17,13 @@ UML also allows us to specify the types of associations, such as an [Aggregation
 
 ### Performance
 
-In order to understand the impact and behavior of the application, you need to understand the basic concepts of [Transactions](http://en.wikipedia.org/wiki/Database_transaction) and [(Database) Isolation Levels](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed). The Mendix platform uses Transactions, which means that every microflow, commit, and delete will happen in a (database) transaction. The transaction is initialized as soon as the microflow executes its first write to the database. Retrieve activities will never start a transaction.
+In order to understand the impact and behavior of the application, you need to understand the basic concepts of [Transactions](http://en.wikipedia.org/wiki/Database_transaction) and [(Database) Isolation Levels](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed). The Mendix Platform uses Transactions, which means that every microflow, commit, and delete will happen in a (database) transaction. The transaction is initialized as soon as the microflow executes its first write to the database. Retrieve activities will never start a transaction.
 
-The Mendix platform uses the transaction level [Read Committed](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed), which means, as the name suggests, that only committed objects are visible outside the transaction. Any other microflows trying to access an object that is being changed at the same time, will have to wait until the transaction has completed. This is important to know, since this has significant impact on your choice between inheritance or associated objects.
+The Mendix Platform uses the transaction level [Read Committed](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed), which means, as the name suggests, that only committed objects are visible outside the transaction. Any other microflows trying to access an object that is being changed at the same time, will have to wait until the transaction has completed. This is important to know, since this has significant impact on your choice between inheritance or associated objects.
 
 ### Creating and Changing Objects
 
-When changing an object, the Mendix platform will write those changes to the database as soon as you execute the commit activity. The update or insert query will be performed based on the values you've changed. This behavior varies per database, but most likely this will lock the record and prevent other users from reading it until the transaction has been completed (either finished or rolled back).
+When changing an object, the Mendix Platform will write those changes to the database as soon as you execute the commit activity. The update or insert query will be performed based on the values you've changed. This behavior varies per database, but most likely this will lock the record and prevent other users from reading it until the transaction has been completed (either finished or rolled back).
 
 #### Inheritance
 

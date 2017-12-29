@@ -43,9 +43,9 @@ The Get List operation gets an existing entity collection from the SAP service. 
 
 For example, this connector can get a list of tasks in the **My Tasks** app using the **Field Sales Representative** service.
 
-### 2.4 Get Entity
+### 2.4 Get Entry
 
-The Get Entity operation gets an existing single entity from the SAP service. The entity is defined by the domain model described below.
+The Get Entry operation gets an existing single entity from the SAP service. The entity is defined by the domain model described below.
 
 For example, this connector can get a single task in the **My Tasks** app using the **Field Sales Representative** service.
 

@@ -9,7 +9,7 @@ tags: ["Feedback","Developer Portal"]
 
 Within Mendix, there are two use-cases for the Feedback widget:
 
-* To provide feedback on the Mendix platform
+* To provide feedback on the Mendix Platform
 * To provide feedback on your own app
 
 In the **Developer Portal**, you can view and manage the feedback that is provided on your app by clicking **Feedback** in the **Collaborate** category.
@@ -41,7 +41,7 @@ Action | Description
 * **Export to Excel** | This will export feedback items into an *.xls* file (you can filter on date, label, status, and type).
 
 {{% alert type="info" %}}
-The feedback button on the right side of the screen in the Developer Portal is the feedback button for the Mendix platform. It will send the feedback to Mendix. To provide feedback on your app, click **Add feedback**.
+The feedback button on the right side of the screen in the Developer Portal is the feedback button for the Mendix Platform. It will send the feedback to Mendix. To provide feedback on your app, click **Add feedback**.
 {{% /alert %}}
 
 ### 1.2 Filters

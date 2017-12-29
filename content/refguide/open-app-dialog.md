@@ -18,11 +18,11 @@ For more information about development lines, see [Version Control Concepts](ver
 
 ### Other SVN server
 
-In the 'SVN repository address' field, enter the address of the app you want to open and press the 'Connect' button to load the development lines from the repository. Then choose the development line in which you want to start developing.
+In the `SVN repository address` field, enter the address of the app you want to open and press the `Connect` button to load the development lines from the repository. Then choose the development line in which you want to start developing.
 
 {{% alert type="warning" %}}
 
-The 'Other SVN server' option is only available when support for other SVN servers is enabled in the Preferences dialog.
+The `Other SVN server` option is only available when support for other SVN servers is enabled in the Preferences dialog.
 
 {{% /alert %}}
 
@@ -32,10 +32,10 @@ For opening an app you already have on disk, simply point to the project file.
 
 ## Disk location
 
-If you already have the selected development line of the app on disk, you will see the message "You have this App on disk." and the directory on disk where this app is located will be shown. If you do not have it yet, you can now choose the directory where you want to download the app to. If version control is enabled, the suggested name includes the name of the development line ('main' or the name of the branch line).
+If you already have the selected development line of the app on disk, you will see the message "You have this App on disk." and the directory on disk where this app is located will be shown. If you do not have it yet, you can now choose the directory where you want to download the app to. If version control is enabled, the suggested name includes the name of the development line (`main` or the name of the branch line).
 
 {{% alert type="warning" %}}
 
-The Modeler remembers all app that you open. In this way it can point you to existing downloads of version controlled apps. If you move an app directory, the Modeler will not know about that directory anymore and offer to download a fresh copy. If you want to continue using the existing download, you will have to open it via the 'Locally on disk' option.
+The Modeler remembers all app that you open. In this way it can point you to existing downloads of version controlled apps. If you move an app directory, the Modeler will not know about that directory anymore and offer to download a fresh copy. If you want to continue using the existing download, you will have to open it via the `Locally on disk` option.
 
 {{% /alert %}}

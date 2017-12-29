@@ -21,7 +21,7 @@ SELECT [ DISTINCT ]
 **DISTINCT**
 Specifies that double rows must not be shown in the result.
 
-*** (asterisk)**
+***(asterisk)**
 Specifies that all attributes from all entities in the FROM clause should be returned.
 
 **entity_name.***, **from_alias.***

@@ -11,7 +11,7 @@ These are the documents in this section:
 * [How to Create a Test Case](create-a-test-case-2)
 * [How to Create a Test Suite](create-a-test-suite-2)
 * [How to create a Data-Driven Test Case](create-datadriven-test-case-2)
-* [How to create a Negative Test Case](create-a-negative-test-case-2.md)
+* [How to create a Negative Test Case](create-a-negative-test-case-2)
 * [How to schedule Test Cases/Test Suites](schedule-testcase-testsuite-2)
 * [How to mask your password](mask-your-password-2)
 * [Upload a file in your app using ATS](upload-file-using-ats-2)
@@ -24,6 +24,7 @@ These are the documents in this section:
         * [Structure for How-To's](custom-action-howto-structure-2)
         * [Helpful Resources](custom-action-helpful-resources-2)
     * [Custom Action Basics](custom-action-basics-2)
+    * [Guidelines for creating a Custom Action](guidelines-custom-action-2)
     * [Create Unsupported Widget Actions](create-unsupported-widget-actions-2)
         
         * [CAB.02 - Switch](cab-02-switch-2)
@@ -34,4 +35,4 @@ These are the documents in this section:
     * [Create Search Context Actions](create-search-context-actions-2)
         * [CAB.11 - Find Item/Row by Unique Text Value](cab-11-find-itemrow-2)
 * [How to connect stories to test cases](connect-stories-to-testcases-2)
-* [Use ATS in combination with CI/CD](ats-and-ci-cd-2.md)
+* [Use ATS in combination with CI/CD](ats-and-ci-cd-2)

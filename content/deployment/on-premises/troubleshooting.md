@@ -25,7 +25,7 @@ A common issue is related to critical files not being found.If you get these typ
 
 When you have confirmed that the Mendix installation is working, you should start with a step by step validation of the IIS configuration.
 
-#### **Try to find the details of the problem. **
+#### **Try to find the details of the problem.**
 
 Open the application and inspect the request with your browser's developers tools. If the application isn't working you will see requests that are not successfully executed.
 

@@ -176,5 +176,5 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ### July 12th, 2017
 
-* Hello world! The Mendix Web Modeler is now available in public beta. Start building beautiful apps at speed and collaborate with non-technical domain experts using the wysiwyg page editor and visual modeling capabilities.
+* Hello world! The Mendix Web Modeler is now available in public beta. Start building beautiful apps at speed and collaborate with non-technical domain experts using the Modeler's WYSIWYG page editor and visual modeling capabilities.
 * We welcome users to provide feedback on issues or share suggestions for improvements.

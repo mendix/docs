@@ -30,7 +30,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 * We introduced a help menu and improved the dialog box for syncing with the Desktop Modeler.
 * We added support for [Desktop Modeler 7.9.0](../desktop-modeler/7.9). The minimum (and only) supported version is now [Desktop Modeler 7.9.0](../desktop-modeler/7.9).
-* You are now able to configure **Close Page** and **Show Home Page** activities in the microflow editor
+* You are now able to configure **Close Page** and **Show Home Page** activities in the microflow editor.
 * Your SCSS is no longer compiled to CSS when opening the Web Modeler, so you won't have styling changes when you sync with the Desktop Modeler without having changed any styling in the Web Modeler.
 
 ### November 20th, 2017

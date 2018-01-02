@@ -8,6 +8,7 @@ parent: "transient-objects-garbage-collecting"
 
 The Java memory is divided in different Memory Usage blocks. Each of these blocks are a snapshot of the actual memory usage of that segment. Each of the memory usage blocks can be broken down into four different values
 
+| Memory block | Description |
 | --- | --- |
 | **_init_** | Represents the initial amount of memory (in bytes) that the Java virtual machine requests from the operating system for memory management of this segment during startup. The Java virtual machine may request additional memory from the operating system and may also release memory to the system over time. |
 | **_used_** | represents the amount of memory that is actively used (in bytes). |

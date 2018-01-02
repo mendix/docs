@@ -13,14 +13,14 @@ title: "Platform Portal"
 
 #### Improvements
 
-* We are introducing restart button for Mendix Cloud environments; This is useful for preparing configuration changes and activating them with only one click.
+* We are introducing a **Restart** button for Mendix Cloud environments. This is useful for preparing configuration changes and activating them with only one click.
 
 #### Fixes
 
 * It's now possible to scale Mendix 6 applications on Cloud V4. Previously, this was only possible with environments that run Mendix 7 apps. With Mendix 6 apps, you can only scale the allocated memory, but not the amount of instances.
-* Big backups are welcome on V4 environments, we fixed the issue that prevents users to upload backup packages larger than 5GBs.
-* We fixed an issue where some Mendix Cloud V3 users were not able to set specified Java version for environments.
-* Hovering over Mendix Cloud environments' status icon will now give more information about environment health.
+* Big backups are now welcomed on V4 environments, as we fixed the issue that prevented users from uploading backup packages larger than 5 GBs.
+* We fixed the issue where some Mendix Cloud V3 users were not able to set a specified Java version for environments.
+* Hovering over a Mendix Cloud environment status icon will now give more information about the environment's health.
 
 ### December 13th, 2017
 

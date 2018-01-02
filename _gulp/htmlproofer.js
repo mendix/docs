@@ -270,7 +270,7 @@ const writeUpdateFeed = files => new Promise((resolve, reject) => {
     feed.item({
       title: update.seoTitle,
       description: '',
-      url: normalizeSafe(`https://docs.mendix.com${update.basePath}`),
+      url: 'https://' + normalizeSafe(`docs.mendix.com${update.basePath}`),
       date: update.dateObj
     })
   });

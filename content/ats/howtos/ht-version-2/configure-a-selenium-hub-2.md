@@ -281,3 +281,7 @@ Setting a custom capability in your custom selenium is possible but must be conf
 You now configured your Custom Selenium Hub. You can create as many variations as you like.
 
 ![](attachments/configure-a-selenium-hub-2/finished-custom-selenium-hub.png)
+
+## 9 Next up
+
+You now learned how to configure the different selenium hubs. The next how-to is [How to Create a Test Case](create-a-test-case-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.

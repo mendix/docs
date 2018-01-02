@@ -265,5 +265,6 @@ We advise you to use the recorder as much as possible to add test steps. But, th
 * Adding test steps using the ATS Helper, see [Finding the action you need](/bestpractices/bp-version-2/finding-the-action-you-need-2).
 * Create a custom action, see [Create custom action](/howtos/ht-version-2/create-custom-actions-2.md).
 
- We advice to read next [How to Create a Test Suite](create-a-test-suite-2).
+## 6 Next up
 
+You now learned how to create a test case. The next how-to is [How to Create a Test Suite](create-a-test-suite-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.

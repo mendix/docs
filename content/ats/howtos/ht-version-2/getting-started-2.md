@@ -286,3 +286,7 @@ Once your test case/suite is executed, the result is shown here.
 You have now finished the getting started guide for ATS. We advice to read next [How-to install the ATS Helper and Recorder](/howtos/ht-version-2/install-ats-helper-recorder-2).
 
 Good luck testing your Mendix app with ATS!
+
+## 8 Next up
+
+You now learned a few basics of working with ATS. The next how-to is [How to Install the ATS Helper and ATS Recorder](install-ats-helper-recorder-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.

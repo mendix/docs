@@ -172,3 +172,7 @@ Clicking **Add selected** links the story to the test case:
 You can go to the **Edit story** page by clicking **Open story**. You can unlink a story by clicking **Unlink selected story**.
 
 You can now link test cases to stories and link stories to test cases.
+
+## 7 Next up
+
+You now learned how to link user stories to your test cases. The next how-to is [Use ATS in combination with CI/CD](ats-and-ci-cd-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.

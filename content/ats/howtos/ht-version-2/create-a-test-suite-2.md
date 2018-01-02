@@ -69,3 +69,7 @@ Repeat this process for the Recorder test case to complete your test suite.
 {{% alert type="info" %}}
 You can add as many test cases and test suites as you want. 
 {{% /alert %}}
+
+## 5 Next up
+
+You now learned how to create a test suite. The next how-to is [How to create a Data-Driven Test Case](create-datadriven-test-case-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.

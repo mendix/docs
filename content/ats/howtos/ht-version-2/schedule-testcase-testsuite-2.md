@@ -116,3 +116,6 @@ Clicking **Save** adds the test suite to the list of scheduled items. Click the 
 Now you can schedule your own test cases and test suites. You can add as many scheduled tests as you want. However, as executing tests takes time, there is a limit to the number of tests you can schedule.
 {{% /alert %}}
 
+## 4 Next up
+
+You now learned how to schedule test cases and test suites. The next how-to is [How to mask your password](mask-your-password-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.

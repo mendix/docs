@@ -14,7 +14,9 @@ These are the documents in this section:
 * [How to create a Negative Test Case](create-a-negative-test-case-2)
 * [How to schedule Test Cases/Test Suites](schedule-testcase-testsuite-2)
 * [How to mask your password](mask-your-password-2)
-* [Upload a file in your app using ATS](upload-file-using-ats-2)
+* [How to upload a file in your app using ATS](upload-file-using-ats-2)
+* [How to assert datagrid rows](assert-datagrid-rows-2)
+* [How to increase recorder and helper coverage](increase-recorder-helper-coverage-2)
 * [How to Create Custom Actions](create-custom-actions-2)
     
     * [General](custom-action-general-2)
@@ -35,4 +37,4 @@ These are the documents in this section:
     * [Create Search Context Actions](create-search-context-actions-2)
         * [CAB.11 - Find Item/Row by Unique Text Value](cab-11-find-itemrow-2)
 * [How to connect stories to test cases](connect-stories-to-testcases-2)
-* [Use ATS in combination with CI/CD](ats-and-ci-cd-2)
+* [How to use ATS in combination with CI/CD](ats-and-ci-cd-2)

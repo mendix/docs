@@ -94,4 +94,8 @@ After clicking **Save** five asterisks represent your password in the test step:
 
 ![](attachments/mask-your-password-2/masked-password-test-step.png)
 
-You can now mask you password using ATS. 
+You can now mask you password using ATS.
+
+## 4 Next up
+
+You now learned how to mask your password in a login action. The next how-to is [Upload a file in your app using ATS](upload-file-using-ats-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.

@@ -95,3 +95,7 @@ These files are possibly outdated and not maintained by Mendix. For the latest v
 ## 6 Uploading a File with a Selenium SaaS Agent
 
 When you use a Selenium SaaS provider you can also use their agent. Each provider gives access to an agent that allows you to test on a local machine. In the _Set File Manager_ action, you can provide the filepath. This filepath depends on where you activated the local machine. Either a local server or a local computer.
+
+## 7 Next up
+
+You now learned how to upload a file and if it is possible with your selenium set up. The next how-to is [How to assert datagrid rows](assert-datagrid-rows-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.

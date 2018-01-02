@@ -1,8 +1,9 @@
 ---
-title: "Dialogs"
+title: "Dialog Boxes"
 category: "Modeler"
 ---
-The following pages describe the various dialogs present in the Modeler:
+
+The following pages describe the various dialog boxes present in the Modeler:
 
 General
 

@@ -19,6 +19,7 @@ A Mendix application requires the following services on SAP Cloud Platform:
 * Route
 
 In addition to these required services, the following services are optional:
+
 * XSUAA Service
 * Connectivity Service
 * ObjectStore (S3)
@@ -37,7 +38,7 @@ To run Mendix within a commercial SAP Cloud Platform Cloud Foundry account the q
 
 * ObjectStore (s3)
 * Route
-* PostgreSQL v9.4-xsmall*
+* PostgreSQL v9.4-xsmall
 * XSUAA Service
 * Connectivity Service
 

@@ -1,8 +1,26 @@
 ---
 title: "Platform Portal"
 ---
-
 ## 2017
+
+### December 29th, 2017
+
+#### Fixes
+
+* In Mendix Cloud v4, the **archived log** function returned logs from a broader time range than what the user had selected (for example, the logs for one day returned log data from two days). This was fixed.
+
+### December 22nd, 2017
+
+#### Improvements
+
+* We are introducing a **Restart** button for Mendix Cloud environments. This is useful for preparing configuration changes and activating them with only one click.
+
+#### Fixes
+
+* It's now possible to scale Mendix 6 applications on Cloud V4. Previously, this was only possible with environments that run Mendix 7 apps. With Mendix 6 apps, you can only scale the allocated memory, but not the amount of instances.
+* Big backups are now welcomed on V4 environments, as we fixed the issue that prevented users from uploading backup packages larger than 5 GBs.
+* We fixed the issue where some Mendix Cloud V3 users were not able to set a specified Java version for environments.
+* Hovering over a Mendix Cloud environment status icon will now give more information about the environment's health.
 
 ### December 13th, 2017
 

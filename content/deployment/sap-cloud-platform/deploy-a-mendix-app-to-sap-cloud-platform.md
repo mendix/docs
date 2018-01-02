@@ -65,6 +65,7 @@ Perform the following steps to deploy your app on Cloud Foundry using the Deskto
 * Deploy your app
 
 #### 3.2.1 Set Up Cloud Foundry within the Desktop Modeler
+
 Follow these steps to set up Cloud Foundry in the Desktop Modeler:
 
 1. Go to **Menu > Run > Edit Cloud Foundry Settings**.

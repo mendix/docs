@@ -18,6 +18,11 @@ Any known issues for a release are described in that version's release notes bel
 
 ## 2017
 
+### December 22nd, 2017 (1.7.0 / 1.3.3)
+
+* We renamed the command `prepare` to `prepare:all` because it conflicted with the NPM command with the same name.
+* We updated the README with a table of contents and a list of known issues.
+
 ### December 2nd, 2017 (1.7.0 / 1.3.2)
 
 * We updated some of the Cordova plugins to support the new iPhone X screen size/ratio/notch. Please follow the instructions in [iPhone X Support](https://github.com/mendix/hybrid-app-template/blob/master/IPHONEX.md) to configure your hybrid app to look good on an iPhone X.

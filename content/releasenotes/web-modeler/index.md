@@ -89,7 +89,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 #### Improvements
 
-* We introduced guidance for first-time users. A guided product introduction tour is now shown when you select the **Start Your First App** from the **Introduction Tour** category when creating an app in the [Mendix Developer Portal](https://sprintr.home.mendix.com/).
+* We introduced guidance for first-time users. A guided product introduction tour is now shown when you select **Start Your First App** from the **Introduction Tour** category when creating an app in the [Mendix Developer Portal](https://sprintr.home.mendix.com/).
 * You can now clear the selected icon for buttons and dynamic image widgets in the page editor.
 * You can now configure the data source of the **Dynamic Image** viewer. Also, the **On Click Action** of both the **Dynamic image** and static **Image** viewers can be configured in the page editor.
 * You can now upload new images for image widgets in the page editor.

@@ -16,7 +16,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 * You can now use the radio buttons widget in the page editor.
 * For an **Exclusive Split**, you can now configure split cases using the **Add case** button in the **Properties** pane of the microflow editor.
-* We added a progress bar to the steps in the user guidance.
+* We added a progress bar to the steps in the guided product introduction tour that is available when you select **Start Your First App** when creating an app in the [Mendix Developer Portal](https://sprintr.home.mendix.com/).
 * We added support for the forthcoming release of Mendix 7.10.
 
 #### Fixes
@@ -30,7 +30,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 * We introduced a help menu and improved the dialog box for syncing with the Desktop Modeler.
 * We added support for [Desktop Modeler 7.9.0](../desktop-modeler/7.9). The minimum (and only) supported version is now [Desktop Modeler 7.9.0](../desktop-modeler/7.9).
-* You are now able to configure **Close Page** and **Show Home Page** activities in the Microflow Editor
+* You are now able to configure **Close Page** and **Show Home Page** activities in the microflow editor.
 * Your SCSS is no longer compiled to CSS when opening the Web Modeler, so you won't have styling changes when you sync with the Desktop Modeler without having changed any styling in the Web Modeler.
 
 ### November 20th, 2017
@@ -68,8 +68,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 #### Improvements
 
-* We improved the text of the guided product tour.
-* We introduced guidance to help you perform your first changes. This user guidance is now triggered when you choose the **Build an Employee Directory App** from the **Introduction Tour** category when creating an app in the [Mendix Developer Portal](https://sprintr.home.mendix.com/).
+* We improved the text of the guided product introduction tour.
 
 #### Fixes
 
@@ -90,7 +89,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 #### Improvements
 
-* We introduced user guidance for first-time users. A guided product tour is now shown when you choose the **Build an Employee Directory App** from the **Introduction Tour** category when creating an app in the [Mendix Developer Portal](https://sprintr.home.mendix.com/).
+* We introduced guidance for first-time users. A guided product introduction tour is now shown when you select the **Start Your First App** from the **Introduction Tour** category when creating an app in the [Mendix Developer Portal](https://sprintr.home.mendix.com/).
 * You can now clear the selected icon for buttons and dynamic image widgets in the page editor.
 * You can now configure the data source of the **Dynamic Image** viewer. Also, the **On Click Action** of both the **Dynamic image** and static **Image** viewers can be configured in the page editor.
 * You can now upload new images for image widgets in the page editor.
@@ -173,3 +172,8 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 * The initial deployment of an app is no longer represented as if the user started it in the deploy pop-up window.
 * We fixed the bug that removed the current value of the text widget after adding a parameter in the page editor **Toolbox**.
+
+### July 12th, 2017
+
+* Hello world! The Mendix Web Modeler is now available in public beta. Start building beautiful apps at speed and collaborate with non-technical domain experts using the Modeler's WYSIWYG page editor and visual modeling capabilities.
+* We welcome users to provide feedback on issues or share suggestions for improvements.

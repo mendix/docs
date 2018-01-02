@@ -17,7 +17,7 @@ category: "General"
 ### Firefox
 
 | ATS version | Supported Firefox Versions |
-| --- | --- | --- |
+| --- | --- |
 | 1.5 - 1.8 | 44, 45, 38 ESR, 45 ESR |
 
 ### Chrome

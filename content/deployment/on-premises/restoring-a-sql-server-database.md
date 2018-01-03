@@ -1,5 +1,5 @@
 ---
-title: "Restoring a SQL Server database"
+title: "Restoring an SQL Server Database"
 parent: "mendix-on-windows-microsoft-sql-server"
 ---
 ## 1 Introduction

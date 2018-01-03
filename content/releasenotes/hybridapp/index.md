@@ -20,7 +20,7 @@ Any known issues for a release are described in that version's release notes bel
 
 ### December 22nd, 2017 (1.7.0 / 1.3.3)
 
-* We renamed the command `prepare` to `prepare:all` because it conflicted with the NPM command with the same name.
+* We renamed the command `prepare` to `prepare:all`, because it conflicted with the NPM command of the same name.
 * We updated the README with a table of contents and a list of known issues.
 
 ### December 2nd, 2017 (1.7.0 / 1.3.2)

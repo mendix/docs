@@ -14,45 +14,42 @@ After setting up all the prerequisites, you can start writing a first script tha
 2.  Copy the following code to the  `script.ts` file:
 
     ```js
-    import {MendixSdkClient, Project, OnlineWorkingCopy} from 'mendixplatformsdk';
-    import {IModel, domainmodels} from 'mendixmodelsdk';
-    import when = require('when');
+    import { MendixSdkClient, OnlineWorkingCopy } from 'mendixplatformsdk';
+    import { domainmodels } from 'mendixmodelsdk';
 
     const username = 'richard.ford51@example.com';
     const apikey = '364fbe6d-c34d-4568-bb7c-1baa5ecdf9d1';
     const client = new MendixSdkClient(username, apikey);
 
-    client.platform().createNewApp(`NewApp-${Date.now() }`)
-        .then(project => project.createWorkingCopy())
-        .then(workingCopy => loadDomainModel(workingCopy))
-        .then(workingCopy => {
-            const dm = pickDomainModel(workingCopy);
-            const domainModel = dm.load();
-            let entity = domainmodels.Entity.createIn(domainModel);
-            entity.name = `NewEntity_${Date.now() }`;
-            entity.location = { x: 100, y: 100 };
-            return workingCopy;
-        })
-        .then(workingCopy => workingCopy.commit())
-        .done(
-            revision => console.log(`Successfully committed revision: ${revision.num() }. Done.`),
-            error => {
-                console.log('Something went wrong:');
-                console.dir(error);
-            });
+    async function main() {
+        const workingCopy = await createWorkingCopy();
+        const domainModel = await loadDomainModel(workingCopy);
 
-    function loadDomainModel(workingCopy: OnlineWorkingCopy): when.Promise<OnlineWorkingCopy> {
-        const dm = pickDomainModel(workingCopy);
-        return when.promise<OnlineWorkingCopy>((resolve, reject) => {
-            dm.load(dm => resolve(workingCopy));
-        });
+        const entity = domainmodels.Entity.createIn(domainModel);
+        entity.name = `NewEntity_${Date.now()}`;
+        entity.location = { x: 100, y: 100 };
+
+        try {
+            const revision = await workingCopy.commit();
+            console.log(`Successfully committed revision: ${revision.num()}. Done.`)
+        } catch (error) {
+            console.error('Something went wrong:', error);
+        }
     }
 
-    function pickDomainModel(workingCopy: OnlineWorkingCopy): domainmodels.IDomainModel {
-        return workingCopy.model().allDomainModels()
-            .filter(dm => dm.qualifiedName === 'MyFirstModule')[0];
+    async function createWorkingCopy(): Promise<OnlineWorkingCopy> {
+        const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
+
+        return project.createWorkingCopy();
     }
 
+    function loadDomainModel(workingCopy: OnlineWorkingCopy): Promise<domainmodels.DomainModel> {
+        const dm = workingCopy.model().allDomainModels().filter(dm => dm.containerAsModule.name === 'MyFirstModule')[0];
+
+        return new Promise((resolve, reject) => dm.load(dm => resolve(dm)));
+    }
+
+    main();
     ```
 
 3.  Replace the `username` and `apikey `variables (lines 7 and 8) with the email address of your Mendix account. From your "[Show Profile](https://sprintr.home.mendix.com/link/myprofile)" Page, you can [generate an API Key](../apidocs/authentication).
@@ -61,54 +58,46 @@ After setting up all the prerequisites, you can start writing a first script tha
 
 Here are some explanations about the script starting from line 9:
 
-**line 9**
+**line 6**
 ```js
 const client = new MendixSdkClient(username, apikey);
 ```
 
 This line is where the MendixSdkClient object is instantiated.
 
-**lines 11-12**
+**lines 9-10**
 ```js
-client.platform().createNewApp(`NewApp-${Date.now() }`)
-    .then(project => project.createWorkingCopy())
+    const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
+    const workingCopy = await project.createWorkingCopy();
 ```
 
-The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix Platform which will also create a commit in the Team Server repository. The result of this call will be accessible via the Mendix Modeler but in order to be able to manipulate it using the SDK you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
+The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix Platform which will also create a commit in the Team Server repository. By using `await` you're waiting for the asynchoronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via the Mendix Modeler but in order to be able to manipulate it using the SDK you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
 
 If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Desktop Modeler version. Earlier versions might not be supported!
 
-**lines 13-21**
+**lines 12-15**
 ```js
-    .then(workingCopy => loadDomainModel(workingCopy))
-    .then(workingCopy => {
-        const dm = pickDomainModel(workingCopy);
-        const domainModel = dm.load();
-        let entity = domainmodels.Entity.createIn(domainModel);
-        entity.name = `NewEntity_${Date.now() }`;
-        entity.location = { x: 100, y: 100 };
-        return workingCopy;
-    })
+    const domainModel = await loadDomainModel(workingCopy);
+    const entity = domainmodels.Entity.createIn(domainModel);
+    entity.name = `NewEntity_${Date.now()}`;
+    entity.location = { x: 100, y: 100 };
 ```
 
-Now that you have an online working copy, you can start manipulating the model. In this example, first you grab the default module named "MyFirstModule" (see the functions `loadDomainModel()` and `pickDomainModel()` on lines 32-40). Once you have loaded the domain model in memory with the function `dm.load()`, you create a new Entity in the domain model and give it a name and coordinates.
+Now that you have an online working copy, you can start manipulating the model. In this example, first you grab the default module named "MyFirstModule" (see the function `loadDomainModel()` on lines 25-29). Once you have loaded the domain model in memory with the function `dm.load()`, you create a new Entity in the domain model and give it a name and coordinates.
 
 **lines 22-29**
 ```js
-    .then(workingCopy => workingCopy.commit())
-    .done(
-        revision => console.log(`Successfully committed revision: ${revision.num() }. Done.`),
-        error => {
-            console.log('Something went wrong:');
-            console.dir(error);
-        });
+    try {
+        const revision = await workingCopy.commit();
+        console.log(`Successfully committed revision: ${revision.num()}. Done.`)
+    } catch (error) {
+        console.error('Something went wrong:', error);
+    }
 ```
 
 Once you are done with the model changes, you can commit the changes back to the Team Server by calling `workingCopy.commit()`. Finally, in the done block you print a success message if things went OK, or handle the error otherwise. 
 
-You may have noticed that the script above uses `then()` and `done()` methods instead of callback functions. These can be called on the Promises that the Platform SDK returns to enable you to handle the result of asynchronous calls.
-
-Read more about [consuming promises](http://know.cujojs.com/tutorials/promises/consuming-promises) with [when.js](https://github.com/cujojs/when).
+Read more about [async / await](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-7.html) and [consuming promises](http://know.cujojs.com/tutorials/promises/consuming-promises).
 
 ## Compiling and Running the Script
 

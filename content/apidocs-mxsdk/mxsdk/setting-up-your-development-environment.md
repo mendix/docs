@@ -30,7 +30,7 @@ $ tsc --init
 
     ```text
     $ node --version
-    v6.0.0
+    v8.9.1
     ```
 ` 
     For Debian-based Linux distributions such as Ubuntu, please refer to [this article](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
@@ -41,14 +41,14 @@ $ tsc --init
 4.  Install TypeScript 2.*.* with [`npm`](https://www.npmjs.com/) , Node.js' package manager:
 
     ```text
-    $ npm install -g typescript@2.2.2
+    $ npm install -g typescript
     ```
 
 5.  Use the following command to check the TypeScript compiler version on your PATH:
 
     ```text
     $ tsc --version
-    Version 2.2.2
+    Version 2.6.2 (should be the latest 2.* version)
     ```
 
     If the version number is much lower, it could be that you also have an outdated TypeScript SDK on your system, left over from a previous installation. You can either uninstall the old TypeScript SDK, or bypass it by removing the old TypeScript SDK from your system's PATH environment variable.
@@ -77,8 +77,8 @@ $ tsc --init
     ```text
     "dependencies": {
       "@types/when": "^2.4.28",
-      "mendixmodelsdk": "~3.2.0",
-      "mendixplatformsdk": "~3.0.0",
+      "mendixmodelsdk": "~4.6.0",
+      "mendixplatformsdk": "~4.0.0",
       "when": "^2.4.28"
     }
     ```
@@ -98,9 +98,8 @@ $ tsc --init
     {
     	"compilerOptions" : {
     		"module" : "commonjs",
-    		"target" : "es5",
-            "noImplicitAny": false,
-            "sourceMap": false
+    		"target" : "es6",
+            "strict": true
     	},
     	"files" : [
     		"script.ts"

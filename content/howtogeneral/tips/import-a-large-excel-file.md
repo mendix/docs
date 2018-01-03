@@ -19,7 +19,7 @@ We will use XML-to-domain mapping to create a new import entity from an Excel sh
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Have an app project with the MxObject reflection and [Excel Importer](https://appstore.home.mendix.com/link/app/72/) installed and configured from the Mendix App Store
+* Have an app project with the [MxModel Reflection](https://appstore.home.mendix.com/link/app/69/) and [Excel Importer](https://appstore.home.mendix.com/link/app/72/) modules installed and configured from the Mendix App Store
 
 ## 2 Modifying your Excel Sheet
 

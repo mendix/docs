@@ -20,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have a general knowledge of ATS
 * Complete [How to Get Started](getting-started)
 * Complete [How to Create a Test Case](create-a-test-case)
-* Read [Guidelines for Creating a Custom Action](/ats/howtos/ht-version-1/guidelines-custom-action-1)
+* Read [Guidelines for Creating a Custom Action](guidelines-custom-action-1)
 
 ## 3 Creating a Custom Action
 

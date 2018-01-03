@@ -12,10 +12,6 @@ If you're building the app using the regular PhoneGap Build approach from within
 
 If you're using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Cloud Portal.
 
-{{% alert type="info" %}}
-Any known issues for a release are described in that version's release notes below.
-{{% /alert %}}
-
 ## 2017
 
 ### December 22nd, 2017 (1.7.0 / 1.3.3)

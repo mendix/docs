@@ -1,5 +1,5 @@
 ---
-title: "Import a large Excel file"
+title: "Import a Large Excel File"
 category: "Tips & Tricks"
 ---
 

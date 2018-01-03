@@ -11,7 +11,7 @@ To help you to find out how you can write code to alter your model, the SDK ship
 To generate the code for a fully-loaded unit you can use the following code:
 
 ```java
-import {utils} from "mendixmodelsdk";
+import { utils } from "mendixmodelsdk";
 
 console.log(utils.serializeToJs(someFullyLoadedModelUnit));
 ```
@@ -25,32 +25,32 @@ Let's say you want to generate a set of entities in a domain model that looks li
 First you need to create the two entities in the domain model and commit that to Team Server. Next, you need to write a script like this:
 
 ```java
-/// <reference path='typings/tsd.d.ts' />
-import {ModelSdkClient, IModel, IModelUnit, domainmodels, utils} from "mendixmodelsdk";
-import {MendixSdkClient, Project, OnlineWorkingCopy, loadAsPromise} from "mendixplatformsdk";
-import when = require("when");
-const username = `{YOUR_USERNAME}`;
-const apikey = `{YOUR_API_KEY}`;
+import { ModelSdkClient, IModel, IModelUnit, domainmodels, utils } from "mendixmodelsdk";
+import { MendixSdkClient, Project, OnlineWorkingCopy, loadAsPromise } from "mendixplatformsdk";
+
+const username = "{YOUR_USERNAME}";
+const apikey = "{YOUR_API_KEY}";
 const client = new MendixSdkClient(username, apikey);
 // Please change your project Id and name to something you prefer.
-let projectName = `{YOUR_PROJECT_NAME}`;
-let projectId = `{YOUR_PROJECT_ID}`;
-let moduleName = `MyFirstModule`;
+let projectName = "{YOUR_PROJECT_NAME}";
+let projectId = "{YOUR_PROJECT_ID}";
+let moduleName = "MyFirstModule";
 let project = new Project(client, projectId, projectName);
-project.createWorkingCopy()
-    .then((workingCopy) => {
-        const dm = workingCopy.model().allDomainModels()
-            .filter(dm => dm.qualifiedName === moduleName)[0];
-        return loadAsPromise(dm).then((loadedDomainModel) => {
-            console.log(utils.serializeToJs(loadedDomainModel)); //print out the generated JavaScript
-            return workingCopy;
-        });
-    })
-    .done(() => {
-        console.log(`success!`);
-    }, (error) => {
+
+async function serializeToJs() {
+    const workingCopy = await project.createWorkingCopy();
+    const domainModelInterface = workingCopy.model().allDomainModels().filter(dm => dm.containerAsModule.name === moduleName)[0];
+
+    try {
+        const domainModel = await loadAsPromise(domainModelInterface);
+        console.log(utils.serializeToJs(domainModel)); //print out the generated JavaScript
+        console.log("success!")
+    } catch (error) {
         console.log(`error: ${error}`);
-    });
+    }
+}
+
+serializeToJs();
 ```
 
 When you execute the script, you will get the following output of your console. You can also pipe the output to a file if the model is more complex:
@@ -122,7 +122,7 @@ function generate(domainModel1, model) {
 The original code expects a unit as the first argument. The unit is supposed to be the container for the domain model. However, you don't want to create a new domain model, you are going to re-use an existing domain model instead. Therefore, you need to remove this line:
 
 ```java
-var domainModel1 = domainmodels.DomainModel.createIn(unit);
+const domainModel1 = domainmodels.DomainModel.createIn(unit);
 ```
 
 Remove the last bracket on the last line so your JavaScript code will look like this:
@@ -157,38 +157,34 @@ Remove the last bracket on the last line so your JavaScript code will look like 
 For the next step, you will create a script that make use of the function. The script is written in TypeScript, so it will be able to run a JavaScript code just fine. This script will create a blank project and modify the domain model in the 'MyFirstModule' module.
 
 ```java
-/// <reference path='./typings/tsd.d.ts' />
+import { MendixSdkClient, Project, OnlineWorkingCopy, loadAsPromise } from 'mendixplatformsdk';
+import { IModel, domainmodels, utils, projects } from 'mendixmodelsdk';
 
-import {MendixSdkClient, Project, OnlineWorkingCopy, loadAsPromise} from 'mendixplatformsdk';
-import {IModel, domainmodels, utils, projects} from 'mendixmodelsdk';
-import when = require('when');
 const username = `{YOUR_USERNAME}`;
 const apikey = `{YOUR_API_KEY}`;
 const client = new MendixSdkClient(username, apikey);
 
-client.platform().createNewApp(`GeneratedApp3-${Date.now() }`)
-    .then(project => project.createWorkingCopy())
-    .then(workingCopy => {
-        const dm = workingCopy.model().allDomainModels()
-            .filter(dm => dm.qualifiedName === `MyFirstModule`)[0];
-        return loadAsPromise(dm).then((loadedDomainModel) => {
-            generate(loadedDomainModel, workingCopy.model()); //call the generated JavaScript here
-            return workingCopy;
-        });
-    })
-    .then(workingCopy => workingCopy.commit())
-    .done(
-    revision => console.log(`Successfully committed revision: ${revision.num() }. Done.`),
-    error => {
-        console.log(`error: ${error}`);
-    });
+async function main() {
+    const app = await client.platform().createNewApp(`GeneratedApp3-${Date.now()}`)
+    const workingCopy = await app.createWorkingCopy();
+
+    const domainModelInterface = workingCopy.model().allDomainModels().filter(dm => dm.containerAsModule.name === "MyFirstModule")[0];
+    const loadedDomainModel = loadAsPromise(domainModelInterface);
+    generate(loadedDomainModel, workingCopy.model()); //call the generated JavaScript here
+
+    try {
+        const revision = await workingCopy.commit();
+        console.log(`Successfully committed revision: ${revision.num()}. Done.`)
+    } catch (error) {
+        console.error('Something went wrong:', error);
+    }
+}
+
+main();
 
 //The generated code
 function generate(domainModel1, model) {
-.
-.
-.
-.
+}
 ```
 
 Execute the script. You should have a new project with the generated entities.

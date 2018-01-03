@@ -91,7 +91,7 @@ Next, you need to add the action input and output parameters:
         * Item/Row
 
 {{% alert type="info" %}}
-Keep the [guidelines for creating a custom action](/ats/howtos/ht-version-1/guidelines-custom-action-1) in mind while creating action parameters. 
+Keep the [guidelines for creating a custom action](guidelines-custom-action-1) in mind while creating action parameters. 
 {{% /alert %}}
 
 1.  Configure the **Widget Name** input parameter like this:

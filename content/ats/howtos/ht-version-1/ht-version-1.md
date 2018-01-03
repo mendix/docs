@@ -18,7 +18,7 @@ These are the documents in this section:
         * [Structure for How-To's](custom-action-howto-structure)
         * [Helpful Resources](custom-action-helpful-resources)
     * [Custom Action Basics](custom-action-basics)
-    * [Guidelines for creating Custom Action](guidelines-custom-action-1)
+    * [Guidelines for Creating a Custom Action](guidelines-custom-action-1)
     * [Create Unsupported Widget Actions](create-unsupported-widget-actions)
         
         * [CAB.02 - Switch](cab-02-switch)

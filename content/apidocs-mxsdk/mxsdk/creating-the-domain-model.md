@@ -53,10 +53,7 @@ customer.location = { x: 100, y: 100 };
 With these ingredients, you can create the two entities. Replace the snippet that creates a single entity in the script that you created in the [previous tutorial steps](creating-your-first-script) with the following snippet to create the two new entities:
 
 ```js
-workingCopy => {
-	const dm = pickDomainModel(workingCopy);
-	const domainModel = dm.asLoaded();
-
+	const domainModel = await loadDomainModel(workingCopy); 
 	const customer = domainmodels.Entity.createIn(domainModel);
 	customer.name = `Customer`;
 	customer.location = { x: 100, y: 100 };
@@ -64,8 +61,6 @@ workingCopy => {
 	const invoice = domainmodels.Entity.createIn(domainModel);
 	invoice.name = `Invoice`;
 	invoice.location = { x: 400, y: 100 };
-
-	return workingCopy;
 }
 ```
 

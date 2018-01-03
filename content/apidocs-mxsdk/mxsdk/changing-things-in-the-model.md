@@ -6,7 +6,7 @@ All units and elements can be freely altered after loading as long as you adhere
 
 To create new units, you need to pass the parent structural unit to the constructor.
 
-To create new elements use the parameterless constructors. Please note that after creating an element you have to assign it to some property before it becomes actually part of your model. For example, a new `Attribute` element should be pushed onto the `attributes` array of an Entity.
+To create new elements use the `createIn` methods. Please note that after creating an element you have to assign it to some property before it becomes actually part of your model. For example, a new `Attribute` element should be pushed onto the `attributes` array of an Entity.
 
 An element is always in a specific state: new, attached, detached, or deleted. The state determines what changes can be applied to the element. For a full description of these states and their characteristics, see [Element States](element-states).
 
@@ -20,15 +20,15 @@ The following example function creates a new entity with an attribute given a do
 import {domainmodels} from "mendixmodelsdk";
 
 function createEntitiy(domainModel : domainmodels.DomainModel, entityName : string, attributeName : string) {
-	var newEntity = new domainmodels.Entity();
+    const newEntity = domainmodels.Entity.createIn(domainModel);
 	newEntity.name = entityName;
 	domainModel.entities.push(newEntity);
 
 	// location on the canvas in the Mendix Modeler:
 	newEntity.location = { 'x': 100, 'y': 100 };
 
-	// new attribute (which is by default a string attribute):
-	let newAttribute = new domainmodels.Attribute();
+    // new attribute (which is by default a string attribute):
+    const newAttribute = domainmodels.Attribute.createIn(newEntity);
 	newAttribute.name = attributeName;
 	newEntity.attributes.push(newAttribute);
 }

@@ -22,9 +22,10 @@ After setting up all the prerequisites, you can start writing a first script tha
     const client = new MendixSdkClient(username, apikey);
 
     async function main() {
-        const workingCopy = await createWorkingCopy();
-        const domainModel = await loadDomainModel(workingCopy);
+        const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
+        const workingCopy = await project.createWorkingCopy();
 
+        const domainModel = await loadDomainModel(workingCopy);
         const entity = domainmodels.Entity.createIn(domainModel);
         entity.name = `NewEntity_${Date.now()}`;
         entity.location = { x: 100, y: 100 };
@@ -35,12 +36,6 @@ After setting up all the prerequisites, you can start writing a first script tha
         } catch (error) {
             console.error('Something went wrong:', error);
         }
-    }
-
-    async function createWorkingCopy(): Promise<OnlineWorkingCopy> {
-        const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
-
-        return project.createWorkingCopy();
     }
 
     function loadDomainModel(workingCopy: OnlineWorkingCopy): Promise<domainmodels.DomainModel> {

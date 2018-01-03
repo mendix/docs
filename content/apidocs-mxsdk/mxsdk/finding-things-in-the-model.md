@@ -9,11 +9,11 @@ The `model` object we got back from `workingCopy.model()` can be used to find an
 The `root` object refers to the `root` project node in the Project Explorer in the Mendix Modeler, and from here on you can walk through the project tree and into specific documents. The following line for examples finds the name of the first attribute of the `Customer` entity in the first module of your project.
 
 ```js
-var attrName = model.root
-	.modules[0]
-	.domainModel
-	.entities.filter(entity => entity.name === "Customer")[0]
-	.attributes[0].name;
+const model = workingCopy.model();
+const domainModel = model.root.modules[0].domainModel;
+const customerEntity = domainModel.entities.filter(entity => entity.name === "Customer")[0]
+
+const attributeName = customerEntity.attributes[0].name;
 ```
 
 ## The model.allXXX() functions
@@ -21,9 +21,10 @@ var attrName = model.root
 These functions return the complete collection of a specific type of units. Some unit types are abstract, for example `allMicroflowBases` returns all microflows and all rules. So the snippet above could also be expressed as:
 
 ```js
-var attrName = model.allDomainModels()[0]
-	.entities.filter(entity => entity.name === "Customer")[0]
-	.attributes[0].name;
+const domainModel = model.allDomainModels()[0];
+const customerEntity = domainModel.entities.filter(entity => entity.name === "Customer")[0]
+
+const attributeName = customerEntity.attributes[0].name;
 ```
 
 ## The model.findXXXByQualifiedName() functions
@@ -31,9 +32,8 @@ var attrName = model.allDomainModels()[0]
 For all referable concepts in a model (both units, such as a page, as well as elements, such as an entity) a `find` function is exposed through the `model` object. Given a _fully-qualified name_ (for example `"Customers.Customer.Name"`) it finds the element with that name, or it returns `null` if it doesn't exist.
 
 ```js
-var attrName = model
-	.findEntityByQualifiedName("Customers.Customer")
-	.attributes[0].name;
+const customerEntity = model.findEntityByQualifiedName("Customers.Customer");
+const attributeName = customerEntity.attributes[0].name;
 ```
 
 Continue the learning path with [Loading units and elements](loading-units-and-elements).

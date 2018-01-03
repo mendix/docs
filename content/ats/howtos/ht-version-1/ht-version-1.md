@@ -1,6 +1,6 @@
 ---
-title: "ATS 1 How-To's"
-category: "How-To's"
+title: "ATS 1 How-to's"
+category: "How-to's"
 ---
 
 These are the main documents in this section:

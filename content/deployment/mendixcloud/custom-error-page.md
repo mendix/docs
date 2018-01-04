@@ -30,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have a local repository of the app
 * Have your app hosted in the Mendix Cloud
 
-## 3 Create Custom Error Page
+## 3 Create a Custom Error Page
 
 1. Open the local folder of your app.
 2.  Go to **theme**.

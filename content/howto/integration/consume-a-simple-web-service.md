@@ -34,7 +34,7 @@ To import a WSDL, follow these steps:
 
     ![](attachments/18448738/18582085.png)
 
-5. Enter `http://www.w3schools.com/webservices/tempconvert.asmx?WSDL` as the URL, and then click **Import**. This will bring up the **Select Ports** pop-up window asking you to select a web service port:
+5. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the URL, and then click **Import**. This will bring up the **Select Ports** pop-up window asking you to select a web service port:
 
     ![](attachments/18448738/18582065.png)
 

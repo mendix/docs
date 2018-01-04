@@ -21,7 +21,7 @@ Support for HttpRequest was added in version 7.11.0. Earlier versions needed a s
 
 {{% /alert %}}
 
-## 3 Import mapping
+## 3 Import Mapping
 
 ### 3.1 Mapping
 

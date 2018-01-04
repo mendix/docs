@@ -5,7 +5,7 @@ description: "Learn the basics of Mendix development and how to extend the SAP P
 tags: ["SAP", "purchase order", "ES5"]
 ---
 
-## 1 
+## 1 Introduction
 
 This tutorial takes you through the basics of development in the Mendix Desktop Modeler and teaches you how to build an approval step in the SAP Purchase Order Approval App. The approval is invoked from the Mendix app and will trigger a request to the SAP Gateway Demo System (ES5).
 
@@ -25,7 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Download, open, and log in to the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
 * Request the authentication credentials required to connect with the SAP Gateway Demo System (ES5) by registering [here](https://register.sapdevcenter.com/SUPSignForms/)
 
-## 3 Starting with the SAP Purchase Order Approval App
+## 3 Starting with the Purchase Order Approval App
 
 To start this tutorial, go to the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html) and follow these steps:
 

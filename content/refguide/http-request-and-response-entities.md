@@ -14,7 +14,7 @@ parent: "integration"
 The `HttpRequest` entity has the following attributes:
 
 |  Attribute  |  Type  |  Default Value | Description  |
-|  ---  |  ---  |  ---  |
+|  ---  |  ---  |  ---  |  ---  |
 |  `HttpVersion` (Inherited from `HttpMessage`) |  String  | HTTP/1.1 | The protocol version. You can almost always ignore this value. |
 |  `Uri`  | String  | empty | The full URI for the incoming request, including query parameters. |
 |  `Content` (inherited from `HttpMessage`) |  String  | empty | The body of the request. |
@@ -26,7 +26,7 @@ You can retrieve the request headers via the `HttpHeaders` association.
 The `HttpResponse` entity has the following attributes:
 
 |  Attribute  |  Type  |  Default Value | Description  |
-|  ---  |  ---  |  ---  |
+|  ---  |  ---  |  ---  |  ---  |
 |  `HttpVersion` (inherited from `HttpMessage`)  |  String  | HTTP/1.1 | The protocol version. You can almost always ignore this value. |
 |  `StatusCode`  |  Integer  | 200 | The HTTP status code returned by the server.  |
 |  `ReasonPhrase`  |  String  |  OK | A textual representation of the `StatusCode`.  |

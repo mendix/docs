@@ -36,4 +36,4 @@ Select this option if you don't need to upload the new app to a version control 
 
 ## Disk location
 
-Use this field to choose the directory where the project files of the app will be stored. If version control is enabled, the suggested name includes ends with '-main' to indicate this will be the main development line of the app.
+Use this field to choose the directory where the project files of the app will be stored. If version control is enabled, the suggested name includes ends with `-main` to indicate this will be the main development line of the app.

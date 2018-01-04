@@ -3,7 +3,8 @@ title: "Troubleshooting"
 category: "On-Premises"
 tags: []
 ---
-## 1. IIS Troubleshooting
+
+## 1 IIS Troubleshooting
 
 When setting up IIS as a webserver in front of Mendix it could happen that you run into issues with your installation.
 The first step you will need to take is to decide what is causing your problem, an incorrect Mendix installation or IIS.
@@ -25,7 +26,7 @@ A common issue is related to critical files not being found.If you get these typ
 
 When you have confirmed that the Mendix installation is working, you should start with a step by step validation of the IIS configuration.
 
-#### **Try to find the details of the problem. **
+**Try to find the details of the problem.**
 
 Open the application and inspect the request with your browser's developers tools. If the application isn't working you will see requests that are not successfully executed.
 
@@ -39,36 +40,41 @@ If just the login process seems to be failing you need to validate the response 
 
 After you have identified the exact cause of your problem it is best to search on the exact error message you are receiving. There are numerous reasons why IIS might give that error, existing IIS blog and documentation pages give a much better understanding on how to solve your specific issue. 
 
-## 2\. Mendix Service Console
+## 2 Mendix Service Console
 
-### Error while updating an app (1)
+### 2.1 Error While Updating an App (1)
+
 Sometimes, shortly after the update process began, a popup tells you that the directory was not empty. Normally, before the app is updated, a backup is created and the current app files are removed. Sometimes, not all files can be removed, due to a lock by a Windows Explorer window or another process. Please install Mendix Service Console 4.1 or later to reduce the chance this error occurs.
 However, it does not matter that some files are not removed. All needed files are overwritten by the new app version. From version 4.1 and up, the update process will go further after showing this error.
 
-### Error while updating an app (2)
+### 2.2 Error While Updating an App (2)
+
 On some Windows server installations, the app update process shows an error just before the end of the process
 
 ![](attachments/18448664/18580725.png)
 Please upgrade the Mendix Service Console to version 4.1 or later.
 
-### Unable to start server
+### 2.3 Unable to Start Server
+
 Sometimes, each time you start a specific app, the following error occurs:
 
 ![](attachments/18448664/18580724.png)
 
 This occurs even if you have never activated a license. Normally, when the license is not valid, the app starts in trial mode. This popup should never be shown, unless there is a deeper cause. Maybe the database is corrupt, for instance you have migrated a database from a Mendix 4 app to a Mendix 3 app. Try starting the app on a new database.
 
-### Security errors while starting service
+### 2.4 Security Errors While Starting Service
+
 When the system gives such errors while starting the service, make sure the configured service user has sufficient rights to the folders of the Mendix application. Sometimes you have to fill in the domain name with the user name, thus DOMAIN_NAME\user_name instead of user_name.
 
-### Type-initialization
+### 2.5 Type Initialization
+
 Sometimes the Event Viewer shows a message like this:
 
-EventType clr20r3, P1 mendixservice.exe, P2 1.0.3810.25652, P3 4c0cf0d8, P4 mendixservice, P5 1.0.3810.25652, P6 4c0cf0d8, P7 2, P8 6, P9 system.typeinitialization, P10 NIL.
+`EventType clr20r3, P1 mendixservice.exe, P2 1.0.3810.25652, P3 4c0cf0d8, P4 mendixservice, P5 1.0.3810.25652, P6 4c0cf0d8, P7 2, P8 6, P9 system.typeinitialization, P10 NIL.`
 
 Make sure that the user account for the service has enough rights to the folders containing the Mendix Service executables and the subfolders x86 and x64.
 
-## 3\. Related content
+## 3 Related Content
 
 *   [Finding the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [Clearing Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages)

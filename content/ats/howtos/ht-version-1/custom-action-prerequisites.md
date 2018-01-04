@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites for How-To's"
+title: "Prerequisites for How-to's"
 parent: "custom-action-general"
 description: "Names and explains the different prerequisites for all the how-to's in this category."
 tags: ["ATS", "testing"]

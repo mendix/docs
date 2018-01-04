@@ -13,11 +13,11 @@ With the Import Mapping action, you can import the data stored in an XML or JSON
 
 ### 2.1 Variable
 
-The input variable can either be a string, a file document or an [HttpRequest](http-request-and-response-entities#http-request). The content of the file document or HttpRequest should be XML or JSON.
+The input variable can either be a string, a file document, or an [HttpRequest](http-request-and-response-entities#http-request). The content of the file document or HttpRequest should be XML or JSON.
 
 {{% alert type="info" %}}
 
-Support for HttpRequest was added in version 7.11.0. In earlier versions needed a string variable that contains the HttpRequest content.
+Support for HttpRequest was added in version 7.11.0. Earlier versions needed a string variable that contained the HttpRequest content.
 
 {{% /alert %}}
 
@@ -25,9 +25,9 @@ Support for HttpRequest was added in version 7.11.0. In earlier versions needed 
 
 ### 3.1 Mapping
 
-The [import mapping](import-mappings) defines how to transform the XML or JSON to objects.
+The [import mapping](import-mappings) defines how to transform the XML or JSON into objects.
 
-### 3.2 Input content type
+### 3.2 Input Content Type
 
 {{% alert type="info" %}}
 
@@ -37,7 +37,7 @@ This feature was introduced in version 7.10.0.
 
 If the import mapping is based on a [message definition](message-definition), it can import both XML and JSON. Select whether the input variable contains XML or JSON.
 
-### 3.3 The input contains
+### 3.3 The Input Contains
 
 {{% alert type="info" %}}
 
@@ -51,7 +51,7 @@ If the import mapping is based on a [message definition](message-definition), it
 
 If the selected mapping requires a parameter, you can choose it here.
 
-### 3.5 Range (if the mapping returns a list)
+### 3.5 Range (If the Mapping Returns a List)
 
 The range determines how many objects are mapped and returned.
 
@@ -65,13 +65,13 @@ The range determines how many objects are mapped and returned.
 
 {{% alert type="info" %}}
 
-Validation properties are only applicable if an import mapping is selected that maps from XML based on an [XML Schema](xml-schemas) or a [consumed web service](consumed-web-service).
+Validation properties are only applicable if an import mapping is selected that maps from XML based on an [XML schema](xml-schemas) or a [consumed web service](consumed-web-service).
 
 {{% /alert %}}
 
 ### 4.1 Validate Against Schema
 
-Determines whether the import action should validate the incoming XML against the [XML Schema](xml-schemas).
+Determines whether the import action should validate the incoming XML against the [XML schema](xml-schemas).
 
 Setting this to _yes_ can greatly decrease performance!
 
@@ -79,7 +79,7 @@ Setting this to _yes_ can greatly decrease performance!
 
 ## 5 Output
 
-### 5.1 Store in variable
+### 5.1 Store in Variable
 
 Choose whether to store the result of the import in a variable.
 

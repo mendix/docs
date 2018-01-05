@@ -36,7 +36,7 @@ Due to its nature, Internet Explorer is very cumbersome to automate compared to 
 
 Nonetheless, we are continuing our efforts to bring support for Internet Explorer 11 into ATS if possible.
 
-At the same time, we are planning to support Internet Explorer's successor, Edge. As soon as it's built-in automation support is feature-complete, we will add support to ATS. For details, check the [Microsoft Edge Platform Status](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/).
+At the same time, we are planning to support Internet Explorer's successor, Edge. As soon as its built-in automation support is feature-complete, we will add support to ATS. For details, check the [Microsoft Edge Platform Status](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/).
 
 ### Other Browsers
 

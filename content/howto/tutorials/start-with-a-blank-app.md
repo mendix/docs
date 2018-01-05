@@ -6,7 +6,7 @@ tags: ["build", "app", "developer portal", "web modeler"]
 frontpage_featured: true
 ---
 
-The following how-to's will guide you through the process of creating an employee directory application in the Mendix Web Modeler:
+The following how-to's will guide you through the process of starting with a blank app and building an employee directory app in the Mendix Web Modeler:
 
 * [How to Start with a Blank App Step 1: Create the App](start-with-a-blank-app-1-create-the-app)
 * [How to Start with a Blank App Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page)

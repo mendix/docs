@@ -15,3 +15,7 @@ These are the documents in this section:
     * [How to Create Search Context Actions](create-search-context-actions)
     * [General](custom-action-general)
 * [How to Upload a File in Your App Using ATS](upload-file-using-ats-1)
+
+{{% alert type="info" %}}
+Following the how-to's in the order above is recommended.
+{{% /alert %}}

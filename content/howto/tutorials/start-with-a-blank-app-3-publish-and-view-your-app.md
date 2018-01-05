@@ -1,6 +1,6 @@
 ---
 title: "Start with a Blank App Step 3: Publish and View Your App"
-parent: "starter-apps"
+parent: "start-with-a-blank-app"
 description: "Presents details on how to publish your app from the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
 ---

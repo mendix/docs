@@ -1,6 +1,6 @@
 ---
 title: "Start with a Blank App Step 5: Add Employee Promotion Logic"
-parent: "starter-apps"
+parent: "start-with-a-blank-app"
 description: "Presents details on add pages to your app's UI in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
 ---

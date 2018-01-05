@@ -1,6 +1,6 @@
 ---
 title: "Start with a Blank App Step 2: Build a Dashboard Page"
-parent: "starter-apps"
+parent: "start-with-a-blank-app"
 description: "Presents details on the first steps in building a dashboard in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
 ---

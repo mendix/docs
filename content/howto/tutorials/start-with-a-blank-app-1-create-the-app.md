@@ -1,6 +1,6 @@
 ---
 title: "Start with a Blank App Step 1: Create the App"
-parent: "starter-apps"
+parent: "start-with-a-blank-app"
 description: "Presents details on how to get started with creating an app in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
 ---

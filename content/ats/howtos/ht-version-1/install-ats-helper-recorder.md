@@ -79,4 +79,6 @@ See [How to Create a Test Case](create-a-test-case) for more information on how 
 
 ## 5 Next up
 
-You now learned how to install the ATS tools. The next how-to is [How to Create a Test Case](create-a-test-case). You find an overview of all the how-tos and the structure on the [ATS 1 How-To's](ht-version-1) page. We advise you to follow the predefined structure.
+You have now learned how to install the ATS tools, so the next how-to is [How to Create a Test Case](create-a-test-case).
+
+For an overview of all the how-tos and the structure, see [ATS 1 How-to's](ht-version-1). We advise following the how-to's in the order listed there.

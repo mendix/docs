@@ -1,7 +1,7 @@
 ---
-title: "Start Your First App Step 1: Create the App"
-parent: "start-your-first-app"
-description: "Presents details on how to create and deploy an employee directory app in the Web Modeler."
+title: "Start with a Blank App Step 1: Create the App"
+parent: "starter-apps"
+description: "Presents details on how to get started with creating an app in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
 ---
 
@@ -30,14 +30,13 @@ To create your app, follow these steps:
 1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in. The Mendix Developer Portal is the central starting point for using, sharing, and building apps.
 2. Click **Create App** in the top right of the screen:
 
-    ![](attachments/start-your-first-app/create-app.png) 
+    ![](attachments/start-with-a-blank-app/create-app.png) 
 
-3. On the **Introduction Tour** tab, select **Start Your First App**.
-
+3. On the **Starter Apps** tab, select **Blank App**.
 4. Click **Use this app**, enter a name for your application, and click **Create App**.
 5. Your app is now created! When it is ready, you will land on the **Buzz** page for the app, where you can see and share ideas as well as collaborate with your team. In the **Team** section on the right, you can see your team and invite colleagues to join the app project.
 
-    ![](attachments/start-your-first-app/app-buzz.png)
+    ![](attachments/start-with-a-blank-app/app-buzz.png)
 
 ## 4 Editing Your App
 
@@ -45,7 +44,7 @@ Once your app is created, you can start editing it.
 
 In the app's **Buzz** page in the Developer Portal, click **Edit App** to open your app in the Web Modeler.<br>
 
-![](attachments/start-your-first-app/edit-app.png)
+![](attachments/start-with-a-blank-app/edit-app.png)
 
 {{% alert type="info" %}}
 
@@ -53,11 +52,11 @@ Clicking **Edit App** will open your app for editing in the Web Modeler by defau
 
 {{% /alert %}}
 
-You're now in the Web Modeler. Welcome! Check out the guidance to learn some tips on modeling, and then move on to the next step for creating this app: [How to Start Your First App Step 2: Build a Dashboard Page](start-your-first-app-2-build-a-dashboard-page).
+You're now in the Web Modeler. Welcome! You can move on to the next step for creating this app: [How to Start with a Blank App Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page).
 
 ## 5 Related Content
 
-* [How to Start Your First App Step 2: Build a Dashboard Page](start-your-first-app-2-build-a-dashboard-page)
-* [How to Start Your First App Step 3: Publish and View Your App](start-your-first-app-3-publish-and-view-your-app)
-* [How to Start Your First App Step 4: Add Pages to the User Interface](start-your-first-app-4-add-pages-to-the-user-interface)
-* [How to Start Your First App Step 5: Add Employee Promotion Logic](start-your-first-app-5-add-employee-promotion-logic)
+* [How to Start with a Blank App Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page)
+* [How to Start with a Blank App Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app)
+* [How to Start with a Blank App Step 4: Add Pages to the User Interface](start-with-a-blank-app-4-add-pages-to-the-user-interface)
+* [How to Start with a Blank App Step 5: Add Employee Promotion Logic](start-with-a-blank-app-5-add-employee-promotion-logic)

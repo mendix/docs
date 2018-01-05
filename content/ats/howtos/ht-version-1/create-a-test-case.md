@@ -256,6 +256,8 @@ To add test steps using the ATS Recorder, follow these steps:
 
 You have now created your test case using the ATS Recorder. 
 
-## 6 Next up
+## 6 Next Up
 
-You now learned how to create a test case. The next how-to is [How to Create a Test Suite](create-a-test-suite). You find an overview of all the how-tos and the structure on the [ATS 1 How-To's](ht-version-1) page. We advise you to follow the predefined structure.
+You have now learned how to create a test case, so the next how-to is [How to Create a Test Suite](create-a-test-suite).
+
+For an overview of all the how-tos and the structure, see [ATS 1 How-to's](ht-version-1). We advise following the how-to's in the order listed there.

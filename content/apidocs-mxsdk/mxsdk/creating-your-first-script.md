@@ -92,7 +92,7 @@ Now that you have an online working copy, you can start manipulating the model. 
 
 Once you're done with the model changes, you can commit the changes back to the Team Server by calling `workingCopy.commit()`. Finally, in the done block you print a success message if things went OK, or handle the error otherwise. 
 
-Read more about [async/await](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-7.html) and [using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises).
+Read more about [async/await](https://basarat.gitbooks.io/typescript/docs/async-await.html) and [using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises).
 
 ## Compiling and Running the Script
 

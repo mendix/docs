@@ -8,14 +8,14 @@ The example below shows a function `closeConnection` which you can invoke when w
 
 ```ts
 async function closeConnection(workingCopy: OnlineWorkingCopy) {
-    await new Promise((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
         workingCopy.model().closeConnection(
             () => {
                 console.log(`Closed connection to Model API successfully.`);
                 resolve();
             },
-            (reason) => {
-                console.error(`Failed to closed connection to Model API. Reason: ${reason}`);
+            (err) => {
+                console.error(`Failed to closed connection to Model API. Error: ${err}`);
                 reject();
             }
         );

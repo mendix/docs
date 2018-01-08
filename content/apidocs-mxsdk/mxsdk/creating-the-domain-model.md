@@ -109,7 +109,7 @@ invoices.childConnection = { "x": 100, "y": 30 };
 invoices.parentConnection = { "x": 0, "y": 30 };
 ```
 
-By combining the above two snippets, it is possible to add a fully functioning 1-to-many association between `Invoice` and  `Customer` to the domain model. Add the following snippet to your script, right below the lines that create the entities, and just before the `return workingCopy;` statement:
+By combining the above two snippets, it is possible to add a fully functioning 1-to-many association between `Invoice` and  `Customer` to the domain model. Add the following snippet to your script, right below the lines that create the entities, and just before the `return workingCopy` statement:
 
 ```ts
 const invoices = domainmodels.Association.createIn(domainModel);
@@ -175,7 +175,6 @@ const customer = domainmodels.Entity.createIn(domainModel);
 customer.name = `Customer`;
 customer.location = { x: 100, y: 100 };
 customer.generalization = generalization;
-
 ```
 
 ### Resources

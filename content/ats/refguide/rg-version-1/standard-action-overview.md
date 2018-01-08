@@ -89,11 +89,7 @@ A _ConfirmationDialog_ is shown when a delete or microflow action requires a con
 | Action | Supported Widgets | Description |
 | --- | --- | --- |
 | Click Menu Item | NavigationTree, MenuBar, SimpleMenuBar | Click on a Menu Item in a Navigation Tree, Menu Bar and Simple Menu Bar |
-| Find/Assert Menu Item | NavigationTree, MenuBar, SimpleMenuBar |
-
-Find/Assert a visible Menu Item in a Navigation Tree, Menu Bar and Simple Menu Bar
-
- |
+| Find/Assert Menu Item | NavigationTree, MenuBar, SimpleMenuBar | Find/Assert a visible Menu Item in a Navigation Tree, Menu Bar and Simple Menu Bar |
 
 ### **System**
 

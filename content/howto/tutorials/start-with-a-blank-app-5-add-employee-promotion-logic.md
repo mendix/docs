@@ -188,7 +188,7 @@ Update and view your app, just like you did in [How to Start with a Blank App St
 
 You can now promote your employees!
 
-This is the end of the tutorial. Please tell us how you liked it as well as any suggestions for improval by sharing feedback in the [Start with a Blank App Survey](https://www.surveymonkey.com/r/XY258CP).
+This is the end of the tutorial. Please tell us how you liked it as well as any suggestions for improval by sharing feedback in the [How to Start with a Blank App Survey](https://www.surveymonkey.com/r/XY258CP).
 
 You are also perfectly lined up to continue with [another Mendix tutorial](index) or the [Become a Rapid Developer Learning Path](https://learn.mendix.com/), so check those out!
 

@@ -6,7 +6,7 @@ All units and elements can be freely altered after loading as long as you adhere
 
 To create new units, you need to pass the parent structural unit to the constructor.
 
-To create new elements use the `create` methods, this will create an element detached from the model. If you want to create an element and attach it to the model directly you can use `createIn`. Please note that after creating an element you have to assign it to some property before it becomes actually part of your model. For example, a new `Attribute` element should be pushed onto the `attributes` array of an Entity.
+To create new elements use the `create` methods, this will create an element detached from the model. Please note that after creating an element you have to assign it to some property before it becomes actually part of your model. For example, a new `Attribute` element should be pushed onto the `attributes` array of an Entity. If you want to create an element and attach it to the model directly you can use `createIn`. 
 
 An element is always in a specific state: new, attached, detached, or deleted. The state determines what changes can be applied to the element. For a full description of these states and their characteristics, see [Element States](element-states).
 

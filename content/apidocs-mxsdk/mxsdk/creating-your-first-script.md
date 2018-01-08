@@ -13,7 +13,7 @@ After setting up all the prerequisites, you can start writing a first script tha
     The following script creates a new app, adds a new entity to the domain model, and commits the changes to the Team Server.
 2.  Copy the following code to the  `script.ts` file:
 
-    ```js
+    ```ts
     import { MendixSdkClient, OnlineWorkingCopy } from 'mendixplatformsdk';
     import { domainmodels } from 'mendixmodelsdk';
 
@@ -41,7 +41,7 @@ After setting up all the prerequisites, you can start writing a first script tha
     function loadDomainModel(workingCopy: OnlineWorkingCopy): Promise<domainmodels.DomainModel> {
         const dm = workingCopy.model().allDomainModels().filter(dm => dm.containerAsModule.name === 'MyFirstModule')[0];
 
-        return new Promise((resolve, reject) => dm.load(dm => resolve(dm)));
+        return new Promise((resolve, reject) => dm.load(resolve));
     }
 
     main();
@@ -54,16 +54,16 @@ After setting up all the prerequisites, you can start writing a first script tha
 Here are some explanations about the script starting from line 9:
 
 **line 6**
-```js
+```ts
 const client = new MendixSdkClient(username, apikey);
 ```
 
 This line is where the MendixSdkClient object is instantiated.
 
 **lines 9-10**
-```js
-    const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
-    const workingCopy = await project.createWorkingCopy();
+```ts
+const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
+const workingCopy = await project.createWorkingCopy();
 ```
 
 The `createNewApp()` call is where you actually kick off the process that will create a new project in the Mendix Platform which will also create a commit in the Team Server repository. By using `await` you're waiting for the asynchoronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via the Mendix Modeler but in order to be able to manipulate it using the SDK you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will exactly do that.
@@ -71,17 +71,17 @@ The `createNewApp()` call is where you actually kick off the process that will c
 If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Desktop Modeler version. Earlier versions might not be supported!
 
 **lines 12-15**
-```js
-    const domainModel = await loadDomainModel(workingCopy);
-    const entity = domainmodels.Entity.createIn(domainModel);
-    entity.name = `NewEntity_${Date.now()}`;
-    entity.location = { x: 100, y: 100 };
+```ts
+const domainModel = await loadDomainModel(workingCopy);
+const entity = domainmodels.Entity.createIn(domainModel);
+entity.name = `NewEntity_${Date.now()}`;
+entity.location = { x: 100, y: 100 };
 ```
 
 Now that you have an online working copy, you can start manipulating the model. In this example, first you grab the default module named "MyFirstModule" (see the function `loadDomainModel()` on lines 25-29). Once you have loaded the domain model in memory with the function `dm.load()`, you create a new Entity in the domain model and give it a name and coordinates.
 
 **lines 22-29**
-```js
+```ts
     try {
         const revision = await workingCopy.commit();
         console.log(`Successfully committed revision: ${revision.num()}. Done.`)
@@ -90,9 +90,9 @@ Now that you have an online working copy, you can start manipulating the model. 
     }
 ```
 
-Once you are done with the model changes, you can commit the changes back to the Team Server by calling `workingCopy.commit()`. Finally, in the done block you print a success message if things went OK, or handle the error otherwise. 
+Once you're done with the model changes, you can commit the changes back to the Team Server by calling `workingCopy.commit()`. Finally, in the done block you print a success message if things went OK, or handle the error otherwise. 
 
-Read more about [async / await](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-7.html) and [consuming promises](http://know.cujojs.com/tutorials/promises/consuming-promises).
+Read more about [async/await](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-7.html) and [using promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises).
 
 ## Compiling and Running the Script
 

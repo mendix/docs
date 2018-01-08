@@ -39,29 +39,28 @@ So how do you set these properties with the SDK? The Model SDK API docs provide 
 
 To create a new `Customer` entity, you create a single entity instance in a domain model and then set its name.
 
-```js
+```ts
 const customer = domainmodels.Entity.createIn(domainModel);
 customer.name = `Customer`;
 ```
 
 An `Entity` also has a [`location`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#location)  property, which defines where the entity is shown in the domain model editor in the Desktop Modeler. This property needs to be set for each entity, so that the entities do not overlap each other in the domain model editor. To do this, set the property with a JSON object with `x` and `y` properties for coordinates:
 
-```js
+```ts
 customer.location = { x: 100, y: 100 };
 ```
 
 With these ingredients, you can create the two entities. Replace the snippet that creates a single entity in the script that you created in the [previous tutorial steps](creating-your-first-script) with the following snippet to create the two new entities:
 
-```js
-	const domainModel = await loadDomainModel(workingCopy); 
-	const customer = domainmodels.Entity.createIn(domainModel);
-	customer.name = `Customer`;
-	customer.location = { x: 100, y: 100 };
+```ts
+const domainModel = await loadDomainModel(workingCopy); 
+const customer = domainmodels.Entity.createIn(domainModel);
+customer.name = `Customer`;
+customer.location = { x: 100, y: 100 };
 
-	const invoice = domainmodels.Entity.createIn(domainModel);
-	invoice.name = `Invoice`;
-	invoice.location = { x: 400, y: 100 };
-}
+const invoice = domainmodels.Entity.createIn(domainModel);
+invoice.name = `Invoice`;
+invoice.location = { x: 400, y: 100 };
 ```
 
 ### Resources
@@ -96,7 +95,7 @@ To create a standard reference (one-to-many) association, you instantiate one As
 
 The following code snippet creates an association between the `Customer` and `Invoice` associations:
 
-```js
+```ts
 const invoices = domainmodels.Association.createIn(domainModel);
 invoices.name = `Invoices`;
 invoices.child = customer;
@@ -105,14 +104,14 @@ invoices.parent = invoice;
 
 Similar to entities, the on-screen location of associations between entities can be determined by setting the value of `childConnection` and `parentConnection` properties, which are the relative position of the child and parent entities. These properties can be left empty which will default to `{x:0, y:0}` (top left most of an entity).
 
-```js
+```ts
 invoices.childConnection = { "x": 100, "y": 30 };
 invoices.parentConnection = { "x": 0, "y": 30 };
 ```
 
 By combining the above two snippets, it is possible to add a fully functioning 1-to-many association between `Invoice` and  `Customer` to the domain model. Add the following snippet to your script, right below the lines that create the entities, and just before the `return workingCopy;` statement:
 
-```js
+```ts
 const invoices = domainmodels.Association.createIn(domainModel);
 invoices.name = `Invoices`;
 invoices.child = customer;
@@ -147,26 +146,26 @@ In the Model SDK, the [`Entity.generalization`](https://apidocs.mendix.com/model
 
 So, to set up entity `Customer` as a specialization of entity `Administration.Account`, you first need to look up the `Account` entity which [can be done in several ways](finding-things-in-the-model). The following snippet looks up the `Account` entity in the `Administration` domain model, using the `findEntityByQualifiedName` function:
 
-```js
+```ts
 const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration.Account`);
 ```
 
 The `domainmodels.Generalization` instance that will be used to configure the `Account` instance can now be created. The `generalization` property is set to the `System.User` entity instance that was looked up:
 
-```js
+```ts
 const generalization = domainmodels.Generalization.createIn(customer);
 generalization.generalization = systemUser;
 ```
 
 New entities by default have a `NoGeneralization` set, so the `generalization` property for the `Customer` entity needs to be updated:
 
-```js
+```ts
 customer.generalization = generalization;
 ```
 
 Together, the creation of the `Customer` entity will look like the following code snippet. Replace the creation of the `customer` entity instance in the script with the following snippet:
 
-```js
+```ts
 const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration.Account`);
 
 const generalization = domainmodels.Generalization.createIn(customer);

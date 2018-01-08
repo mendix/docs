@@ -12,7 +12,7 @@ Since a unit might already have been loaded before, you are also allowed to use 
 
 The following (slightly) contrived example demonstrates the behavior of `load`. The type information is made explicit in this example for demonstration purposes, but you can just omit this code since the TypeScript compiler will infer it. Note that this example is contrived: a normal flow would be to call `load` on the `domainModel` and work with the fully-loaded domain model inside its callback.
 
-```js
+```ts
 import {domainmodels} from "mendixmodelsdk";
 
 const model = workingCopy.model();

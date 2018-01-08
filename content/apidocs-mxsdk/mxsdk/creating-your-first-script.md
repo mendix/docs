@@ -82,12 +82,12 @@ Now that you have an online working copy, you can start manipulating the model. 
 
 **lines 22-29**
 ```ts
-    try {
-        const revision = await workingCopy.commit();
-        console.log(`Successfully committed revision: ${revision.num()}. Done.`)
-    } catch (error) {
-        console.error('Something went wrong:', error);
-    }
+try {
+    const revision = await workingCopy.commit();
+    console.log(`Successfully committed revision: ${revision.num()}. Done.`)
+} catch (error) {
+    console.error('Something went wrong:', error);
+}
 ```
 
 Once you're done with the model changes, you can commit the changes back to the Team Server by calling `workingCopy.commit()`. Finally, in the done block you print a success message if things went OK, or handle the error otherwise. 

@@ -2,9 +2,9 @@
 title: "ATS"
 ---
 
-ATS is an add-on for the mendix platform and it is a functional testing tool specifically designed for the Mendix apps. This space contains all the documentation for ATS. 
+The Mendix Application Test Suite (ATS) is a suite of tools for embedding (automated) testing in your application life cycle. These tools are built by Mansystems in Mendix on top of Selenium. It provides a powerful solution for automation of not only your functional and regression tests, but also non-functional tests like availability, security and performance testing. Furthermore, with functions like a test case recorder and data-driven testing, it provides you with everything you need to make testing your Mendix apps quick, easy and versatile. A small investment in setting up ATS, which is very easy to learn, will save a lot of (re)testing time in the long run. This will help the team and its stakeholders to have the right insights in the quality off your app, at any time, at the press of a button.
 
-Please select a category in this space to specify your search for documentation: 
+All available documents to help you use ATS are present in this space. Please select a category to specify your search: 
 
 * [General](general/index.md)
 * [Reference Guide ATS 1](refguide/rg-version-1/rg-version-1.md)

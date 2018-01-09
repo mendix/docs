@@ -30,7 +30,7 @@ $ tsc --init
 
     ```text
     $ node --version
-    v6.0.0
+    v8.9.1
     ```
 ` 
     For Debian-based Linux distributions such as Ubuntu, please refer to [this article](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
@@ -40,15 +40,15 @@ $ tsc --init
 3.  Install [Visual Studio Code](https://code.visualstudio.com/) - not to be confused with Visual Studio - a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+); check the version you are using through Help > About when you have Code opened.
 4.  Install TypeScript 2.*.* with [`npm`](https://www.npmjs.com/) , Node.js' package manager:
 
-    ```text
-    $ npm install -g typescript@2.2.2
+    ```bash
+    $ npm install -g typescript
     ```
 
 5.  Use the following command to check the TypeScript compiler version on your PATH:
 
     ```text
     $ tsc --version
-    Version 2.2.2
+    Version 2.6.2 (should be the latest 2.* version)
     ```
 
     If the version number is much lower, it could be that you also have an outdated TypeScript SDK on your system, left over from a previous installation. You can either uninstall the old TypeScript SDK, or bypass it by removing the old TypeScript SDK from your system's PATH environment variable.
@@ -57,7 +57,7 @@ $ tsc --init
 
 1.  First, create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a  [`package.json`](https://docs.npmjs.com/files/package.json)with default contents. Through this file you control your `npm` package. 
 
-    ```java
+    ```bash
     $ mkdir my-app-generator
     $ cd my-app-generator
     $ npm init --yes
@@ -67,18 +67,18 @@ $ tsc --init
 
 2.  Start **Visual Studio Code** and open the directory you just created. You can open a new instance of Code from the command line with the directory you want to open as first argument. For example, if your current working directory in your terminal is the directory in which all your project files live, use the following command to open Code:
 
-    ```java
+    ```bash
     $ code .
     ```
 
 3.  Add `mendixmodelsdk,` `mendixplatformsdk,` and `when.js` as dependencies. 
     Dependencies are stored in the `node_modules` directory (which will be automatically created by `npm` if necessary). Open the `package.json` you just created. Add a [`dependencies` block](https://docs.npmjs.com/files/package.json#dependencies) that looks like this:
 
-    ```text
+    ```json
     "dependencies": {
       "@types/when": "^2.4.28",
-      "mendixmodelsdk": "~3.2.0",
-      "mendixplatformsdk": "~3.0.0",
+      "mendixmodelsdk": "~4.6.0",
+      "mendixplatformsdk": "~4.0.0",
       "when": "^2.4.28"
     }
     ```
@@ -87,7 +87,7 @@ $ tsc --init
 
 4.  Save your changes and then execute the following to install the dependencies:
 
-    ```java
+    ```bash
     $ npm install
     ```
     If you are using version control, make sure to ignore the `node_modules directory`, otherwise you end up committing dependencies.
@@ -98,9 +98,8 @@ $ tsc --init
     {
     	"compilerOptions" : {
     		"module" : "commonjs",
-    		"target" : "es5",
-            "noImplicitAny": false,
-            "sourceMap": false
+    		"target" : "es6",
+            "strict": true
     	},
     	"files" : [
     		"script.ts"

@@ -2,11 +2,12 @@
 title: "Generating Code from the Model"
 parent: "your-learning-path-for-the-mendix-sdk"
 ---
-## Introduction
+
+## 1 Introduction
 
 To help you to find out how you can write code to alter your model, the SDK ships with a nice reverse engineering tool. Given a [fully loaded model unit](loading-units-and-elements), you can generate the JavaScript code that would create that very same unit using code. This way, you can build a template model in the Mendix Modeler, then generate the code you would need to write to achieve the same.
 
-## For the impatient
+## 2 For the Impatient
 
 To generate the code for a fully-loaded unit you can use the following code:
 
@@ -16,7 +17,7 @@ import { utils } from "mendixmodelsdk";
 console.log(utils.serializeToJs(someFullyLoadedModelUnit));
 ```
 
-## Example
+## 3 Example
 
 Let's say you want to generate a set of entities in a domain model that looks like this:
 

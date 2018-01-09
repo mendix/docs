@@ -1,6 +1,6 @@
 ---
 title: "Generating Code from the Model"
-parent: "your-learning-path-for-the-mendix-sdk"
+parent: "tutorial-for-the-mendix-sdk"
 ---
 
 ## 1 Introduction
@@ -195,5 +195,3 @@ Execute the script. You should have a new project with the generated entities.
 Instead of creating a new project, you can also reuse an existing project or even an existing online working copy.
 
 {{% /alert %}}
-
-Go back to [your learning path for the Mendix SDK](your-learning-path-for-the-mendix-sdk).

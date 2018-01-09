@@ -24,4 +24,4 @@ async function closeConnection(workingCopy: OnlineWorkingCopy) {
 }
 ```
 
-Continue on to the next important document: [Finding Things in the Model](finding-things-in-the-model).
+Continue with [Finding Things in the Model](finding-things-in-the-model).

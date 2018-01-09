@@ -1,14 +1,15 @@
 ---
 title: "Setting Up Your Development Environment"
-parent: "your-learning-path-for-the-mendix-sdk"
+parent: "tutorial-for-the-mendix-sdk"
 ---
-This tutorial will lead you through the process of setting up everything you need to start working with the Mendix Platform SDK. This includes setting up development tools and creating a first SDK script that automatically bootstraps a new Mendix app.
 
-## Quick Installation
+## 1 Introduction
+
+This document will lead you through the process of setting up everything you need to start working with the Mendix Platform SDK. This includes setting up development tools and creating a first SDK script that automatically bootstraps a new Mendix app.
+
+## 2 Quick Installation
 
 If you know what you are doing, the quick installation instructions below are for you. Otherwise, please skip this paragraph and continue with [Setting up your development tools](setting-up-your-development-environment).
-
-**Quick installation instructions**
 
 For the quick installation, we assume that you have `node` already installed. 
 Set up a new `node` project and install the dependencies using the following steps:
@@ -22,7 +23,9 @@ $ npm install mendixmodelsdk mendixplatformsdk when @types/when --save
 $ tsc --init
 ```
 
-## Setting Up Your Development Tools
+## 3 Setting Up Your Development Tools
+
+To set up your development tools, follow these steps:
 
 1.  Install the latest LTS version of [Node.js](https://nodejs.org/). If you need to download it, you can find it on [this page](https://nodejs.org/en/download/releases/).
 
@@ -32,7 +35,7 @@ $ tsc --init
     $ node --version
     v8.9.1
     ```
-` 
+
     For Debian-based Linux distributions such as Ubuntu, please refer to [this article](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
 
     In the rest of the tutorial, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
@@ -53,7 +56,9 @@ $ tsc --init
 
     If the version number is much lower, it could be that you also have an outdated TypeScript SDK on your system, left over from a previous installation. You can either uninstall the old TypeScript SDK, or bypass it by removing the old TypeScript SDK from your system's PATH environment variable.
 
-## Setting Up a Working Directory for Your Script
+## 4 Setting Up a Working Directory for Your Script
+
+To set up a working directory for your script, follow these steps:
 
 1.  First, create a new directory and initialize it for use with the Node.js package manager `npm`. Using `--yes` skips several unimportant questions. This creates a  [`package.json`](https://docs.npmjs.com/files/package.json)with default contents. Through this file you control your `npm` package. 
 
@@ -111,6 +116,6 @@ $ tsc --init
 
     Create new files in your project directory with Visual Studio Code by hovering with the mouse cursor over the name of the working directory in the left side pane. A "new file" icon appears. Click it to create a new file. For more information on basic editing with Visual Studio Code, check the [manual](https://code.visualstudio.com/Docs/editor/codebasics).
 
-## Next Step
+## 5 Next Step
 
-Continue with [Getting started - Creating Your First Script](creating-your-first-script)
+Continue with [Creating Your First Script](creating-your-first-script).

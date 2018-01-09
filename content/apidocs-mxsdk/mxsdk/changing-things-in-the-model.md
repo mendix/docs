@@ -35,4 +35,4 @@ function createEntitiy(domainModel : domainmodels.DomainModel, entityName : stri
 }
 ```
 
-Continue on to the next important document: [Closing the Server Connection](closing-the-server-connection).
+Continue with [Closing the Server Connection](closing-the-server-connection).

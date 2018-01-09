@@ -1,10 +1,11 @@
 ---
 title: "Creating Your First Script"
-parent: "your-learning-path-for-the-mendix-sdk"
+parent: "tutorial-for-the-mendix-sdk"
 ---
 
 ## 1 Introduction
-This documentation will guide you through the process of setting up everything you need to start working with the Mendix Platform SDK. In [the previous part](setting-up-your-development-environment) you set up all the development tools. Let's create an SDK script that automatically bootstraps a new Mendix app.
+
+This documentation will guide you through the process of setting up everything you need to start working with the Mendix Platform SDK. In [Setting Up Your Development Environment](setting-up-your-development-environment), you set up all the development tools. Let's create an SDK script that automatically bootstraps a new Mendix app.
 
 ## 2 Writing a First Script
 
@@ -143,4 +144,4 @@ Note that the steps for project creation (line 3) and committing to the Team Ser
 
 ## 5 Next Step
 
-Continue with [Creating the Domain Model](creating-the-domain-model).
+Continue the tutorial with [Creating the Domain Model](creating-the-domain-model).

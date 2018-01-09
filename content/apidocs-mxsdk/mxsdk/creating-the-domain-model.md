@@ -1,6 +1,6 @@
 ---
 title: "Creating the Domain Model"
-parent: "your-learning-path-for-the-mendix-sdk"
+parent: "tutorial-for-the-mendix-sdk"
 description: "Explains how to create a domain model with inheritance and what the relation is between the metamodel and the SDK."
 ---
 
@@ -194,5 +194,3 @@ Model SDK API docs
 ## 5 Conclusion
 
 This completes the script. Compile and execute it as described in the previous section. Open the app in the Desktop Modeler to inspect the results!
-
-As a next step you can either continue with the [second part](your-learning-path-for-the-mendix-sdk) of the learning path or return to the [Mendix SDK homepage]() to find references to other resources.

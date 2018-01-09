@@ -2,6 +2,7 @@
 title: "Loading Units and Elements"
 parent: "manipulating-existing-models"
 ---
+
 After finding your unit or element you have to obtain it in its fully-loaded form to be able to change it, or to analyze the information which is not available in just the interface. Changing an element in interface form will result in an exception being thrown.
 
 Each element (whether in interface or full form) has an `isLoaded` property and `load` and `asLoaded` functions. The [`isLoaded`](https://apidocs.mendix.com/modelsdk/latest/interfaces/istructure.html#isloaded) property indicates whether this element is fully loaded already. In practice you should never need to test its value, but simply make sure that you always `load` a unit/element first.
@@ -44,4 +45,4 @@ entity1Interface.load((entity1) => {
 
 {{% /alert %}}
 
-Continue your learning path with [Generating code from the model](generating-code-from-the-model).
+Continue with [Generating Code from the Model](generating-code-from-the-model).

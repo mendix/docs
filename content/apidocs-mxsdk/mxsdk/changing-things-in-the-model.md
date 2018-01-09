@@ -35,4 +35,4 @@ function createEntitiy(domainModel : domainmodels.DomainModel, entityName : stri
 }
 ```
 
-Continue the learning path with [Closing the server connection](closing-the-server-connection).
+Continue on to the next important document: [Closing the Server Connection](closing-the-server-connection).

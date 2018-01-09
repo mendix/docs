@@ -114,8 +114,7 @@ Now that we have added our widget to the page, we need to feed it some data.  To
 
 12.  The final SUB_CreateSeries microflow should look as shown
     ![](attachments/19202962/19399007.png)
-13.  The final MF_RetrieveValuesForChart should look as follows.  Note that SUB_CreateSeries is called once for each series of the chart.
-14.  In the microflow X, create a second DataSet object with Label 'Series 2' and Color #0000FF
+13.  In the microflow RetrieveValuesForChart, create a second DataSet object with Label 'Series 2' and Color #0000FF. Note that SUB_CreateSeries is called once for each series of the chart.
     ![](attachments/19202962/19399012.png)
 
 2.6 Create some data

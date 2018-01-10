@@ -19,7 +19,7 @@ As APIs are designed for automated systems, the Deploy API does not require two-
 
 # <a name="DeployAPI-APIcalls" rel="nofollow"></a>API Calls
 
-Only _Retrieve apps_, _Create Sandbox_ and _Retrieve app_ API calls are supported for sandbox applications.
+Only _Retrieve apps_, _Create Sandbox_ and _Retrieve app_ API calls are supported for sandbox applications. Please note that most api calls with the exception of _Upload Package_ requires the _Content-Type_ header to be set to _application/json_.
 
 ## <a name="DeployAPI-Retrieveapps" rel="nofollow"></a>Retrieve Apps
 
@@ -39,7 +39,7 @@ URL: https://deploy.mendix.com/api/1/apps/
 ```bash
 GET /api/1/apps/ HTTP/1.1
 Host: deploy.mendix.com
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
@@ -93,7 +93,7 @@ An object with the following key-value pair:
 ```bash
 POST /api/1/apps/ HTTP/1.1
 Host: deploy.mendix.com
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 
@@ -151,7 +151,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>
 ```bash
 GET /api/1/apps/calc/ HTTP/1.1
 Host: deploy.mendix.com
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
@@ -205,7 +205,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/
 GET /api/ 1 /apps/calc/environments/ HTTP/ 1.1
 Host: deploy.mendix.com
 
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
@@ -258,7 +258,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>
 ```bash
 GET /api/1/apps/calc/environments/Acceptance HTTP/1.1
 Host: deploy.mendix.com
-Accept: /
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
@@ -314,7 +314,7 @@ An object with the following key-value pair:
 POST /api/ 1 /apps/calc/environments/Acceptance/start HTTP/ 1.1
 Host: deploy.mendix.com
 
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
@@ -366,7 +366,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start/<Job
 GET /api/ 1 /apps/calc/environments/Acceptance/start/02df2e50-0e79-11e4- 9191 -0800200c9a66 HTTP/ 1.1
 Host: deploy.mendix.com
 
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
@@ -422,7 +422,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/stop
 POST /api/ 1 /apps/calc/environments/Acceptance/stop HTTP/ 1.1
 Host: deploy.mendix.com
 
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
@@ -462,7 +462,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/package
 GET /api/ 1 /apps/calc/environments/Acceptance/ package HTTP/ 1.1
 Host: deploy.mendix.com
 
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
@@ -531,7 +531,6 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload
 POST /api/ 1 /apps/calc/packages/upload HTTP/ 1.1
 Host: deploy.mendix.com
 
-Accept: */*
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
@@ -577,7 +576,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/transport
 POST /api/ 1 /apps/calc/environments/acceptance/transport HTTP/ 1.1
 Host: deploy.mendix.com
 
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
@@ -626,7 +625,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/clean
 POST /api/ 1 /apps/calc/environments/acceptance/clean HTTP/ 1.1
 Host: deploy.mendix.com
 
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
@@ -679,7 +678,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
 GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
 Host: deploy.mendix.com
 
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
@@ -743,7 +742,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
 GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
 Host: deploy.mendix.com
 
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
@@ -831,7 +830,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 GET /api/1/apps/calc/environments/acceptance/snapshots HTTP/ 1.1
 Host: deploy.mendix.com
 
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
@@ -897,7 +896,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/
 GET /api/1/apps/calc/environments/acceptance/snapshots/201703221355 HTTP/ 1.1
 Host: deploy.mendix.com
 
-Accept: */*
+Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```

@@ -1,5 +1,5 @@
 ---
-title: "Visualize Data using the ChartsJS Module"
+title: "Visualize Data Using the ChartsJS Module"
 category: "Extendability"
 ---
 

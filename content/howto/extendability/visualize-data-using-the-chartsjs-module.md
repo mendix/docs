@@ -138,19 +138,19 @@ Now that we have added our widget to the page, we need to feed it some data.  To
     
 10.  ‘Add’ the NewDatapoint to the association Dataset_Datapoint and to ‘Add’ the NewDataset to the Chart_Dataset association.  If ‘Set’ is used, only the last series or point will be associated.
 
-    ![](attachments/19202962/19399011.png)
+        ![](attachments/19202962/19399011.png)
 
 11.  Due to the way the ChartJS module expects the data structure, after each point is created we must then associate it with the NewDataset object that we passed into the flow.  This newDataset must then be associated with the Chart object.  These two actions happen after the Datapoint creation.
 
-    ![](attachments/19202962/19399010.png)
+        ![](attachments/19202962/19399010.png)
 
 12.  The final SUB_CreateSeries microflow should look as shown:
 
-    ![](attachments/19202962/19399007.png)
+        ![](attachments/19202962/19399007.png)
     
 13.  In the microflow RetrieveValuesForChart, create a second DataSet object with Label 'Series 2' and Color #0000FF. Note that SUB_CreateSeries is called once for each series of the chart.
 
-    ![](attachments/19202962/19399012.png)
+        ![](attachments/19202962/19399012.png)
 
 ### 3.7 Creating Some Data
 

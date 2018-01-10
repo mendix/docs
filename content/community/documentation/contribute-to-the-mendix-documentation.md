@@ -33,7 +33,7 @@ Quick guide to making a documentation change: fork the [**mendix/docs**](https:/
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Have a GitHub account (sign up [here](https://github.com/join))
-* Fork the [**mendix/docs**](https://github.com/mendix/docs) repository on GitHub (for details on how to do this, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/))
+* Fork the [mendix/docs](https://github.com/mendix/docs) repository on GitHub (for details on how to do this, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/))
 
 ### 2.2 Tools
 

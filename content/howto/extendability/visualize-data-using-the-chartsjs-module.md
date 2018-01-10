@@ -1,38 +1,40 @@
 ---
 title: "Visualize Data using the ChartsJS Module"
 category: "Extendability"
-tags: []
 ---
+
+## 1 Introduction
+
 It is said that a picture is worth a thousand words, and this is especially true when it comes to digesting data in your Mendix applications.  Smart use of charts to help aid in business decisions can save time, improve user experience, and reduce mistakes.  The ChartsJS widget is a powerful package, and the Mendix widget utilizes these classes to add rich charts to your app.
 
-**After completing this how-to you will know:**
+**This how-to will teach you how to do the following:**
 
-*   Add the ChartsJS widget package to a project
-*   Structure and retrieve data to interact with ChartsJS graphs
-*   Configure chart display options
-*   Create  and view a multi-series line chart
+* Add the ChartsJS widget package to a project
+* Structure and retrieve data to interact with ChartsJS graphs
+* Configure chart display options
+* Create  and view a multi-series line chart
 
-## 1. Preparation
+## 2 Prerequisites
 
-Before you can start with this how-to, please make sure you have completed the following prerequisites.
+Before starting this how-to, make sure you have completed the following prerequisites:
 
 *   Know how to download app store modules
 *   Know how to configure a domain model
 *   Know how to create microflows and pages
 *   Know how to create non-persistant entities
 
-## 2\. Implementing ChartsJS in an existing project
+## 3 Implementing ChartsJS in an Existing Project
 
-In this chapter you will learn how to install the ChartsJS widget
+In this section, you will learn how to install the ChartsJS widget.
 
-2.1 Find and download the ChartsJS widget from the app store.
+### 3.1 Finding and Downloading the ChartsJS Widget from the App Store
 
 1.  Using the in-modeler app store browser, find the ChartsJS widget
 
     ![Download the Module from the App Store](attachments/19202962/19398991.png)
 2.  Hit the download button to import the collection of widgets into your project.
 
-### 2.2 Set up the Domain Model
+### 3.2 Setting Up the Domain Model
 
 In order to leverage the ChartJS classes in Mendix in a predictable way, the widget expects a specific data model structure.  This is defined by entities and attributes in the domain model.  To get the widget to work properly, the data structure must match the widget expectations exactly.   We also need to create a data entry entity to house our data for the purpose of this exercise.
 
@@ -53,7 +55,7 @@ To see a working domain model already configured in an application, you can go t
 5.  Create a non-persistant ChartWrapper entity with no attributes
     ![](attachments/19202962/19398997.png)
 
-### 2.3 Create the data entry mechanism
+### 3.3 Creating the Data Entry Mechanism
 
 To make this sample project actually generate charts, the first thing to do is rig up a simple data entry page.  Mendix applications receive their data in all sorts of ways, and every application will be slightly different.  The goal of this tutorial is to configure the chart, not capture the data, so the data capture will be simple and generic.  Use this example can be extended to accommodate whatever data structure you might use in your project.
 
@@ -62,7 +64,7 @@ To make this sample project actually generate charts, the first thing to do is r
 3.  Use the Generate page feature to automatically create the data entry page for a data point.
     ![](attachments/19202962/19398995.png)
 
-2.3 Add a ChartsJS widget to a new page
+### 3.4 Adding a ChartsJS Widget to a New Page
 
 1.  Create a page called ShowChart and add it to the user navigation
 2.  Add a data view to this page that contains a ChartWrapper entity
@@ -75,7 +77,7 @@ To make this sample project actually generate charts, the first thing to do is r
 6.  The final page should look as shown below
     ![](attachments/19202962/19399000.png)
 
-2.4 Configure the ChartsJS widget
+### 3.5 Configuring the ChartsJS Widget
 
 The ChartJS widgets are configured through the familiar modeler widget dialogue box.  We must configure the ChartJS module to reference our Charting domain model.
 
@@ -89,7 +91,7 @@ The ChartJS widgets are configured through the familiar modeler widget dialogue 
 4.  Configure the Data Point tab entity, X value, Y value, and X sorting as shown below
     ![](attachments/19202962/19399004.png)
 
-2.5 Creating the Data Source Microflow
+### 3.6 Creating the Data Source Microflow
 
 Now that we have added our widget to the page, we need to feed it some data.  To do this, we will need to write the Data Source Microflow for our widget.  This microflow contains the logic to retrieve, count, and manipulate the data we want to display in our chart.  
 
@@ -117,7 +119,7 @@ Now that we have added our widget to the page, we need to feed it some data.  To
 13.  In the microflow RetrieveValuesForChart, create a second DataSet object with Label 'Series 2' and Color #0000FF. Note that SUB_CreateSeries is called once for each series of the chart.
     ![](attachments/19202962/19399012.png)
 
-2.6 Create some data
+### 3.7 Creating Some Data
 
 Now that the chart is configured, all we have left to do is create some sample data using the page we have created.  We will then be able to visualize our chart!
 

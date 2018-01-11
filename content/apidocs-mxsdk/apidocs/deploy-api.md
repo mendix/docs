@@ -146,7 +146,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>
 
 *   _AppId_ (String): Sub-domain name of an app.
 
-##### 3.3.2.2<a rel="nofollow"></a>Example
+##### 3.3.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/1/apps/calc/ HTTP/1.1
@@ -614,12 +614,12 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/clean
 
 ### 3.11.2 <a rel="nofollow"></a>Request
 
-##### 3.11.2.1 <a rel="nofollow"></a>Parameters
+#### 3.11.2.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Sub-domain name of an app.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
-##### 3.11.2.2 <a rel="nofollow"></a>Example
+#### 3.11.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 POST /api/ 1 /apps/calc/environments/acceptance/clean HTTP/ 1.1
@@ -632,7 +632,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.11.3 <a rel="nofollow"></a>Output
 
-##### 3.11.3.1 <a rel="nofollow"></a>Example
+#### 3.11.3.1 <a rel="nofollow"></a>Example
 
 ```bash
 [
@@ -644,7 +644,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ]
 ```
 
-##### 3.11.3.2 <a rel="nofollow"></a>Error Codes
+#### 3.11.3.2 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -667,12 +667,12 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
 
 ### 3.12.2 <a rel="nofollow"></a>Request
 
-##### 3.12.2.1 <a rel="nofollow"></a>Parameters
+#### 3.12.2.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Sub-domain name of an app.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
-##### 3.12.2.2 <a rel="nofollow"></a>Example
+#### 3.12.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
@@ -685,7 +685,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.12.3 <a rel="nofollow"></a>Output
 
-##### 3.12.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.12.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -693,7 +693,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
-##### 3.12.3.2 <a rel="nofollow"></a>Example
+#### 3.12.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -730,13 +730,13 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
 
 ### 3.13.2 <a rel="nofollow"></a>Request
 
-##### 3.13.2.1 <a rel="nofollow"></a>Parameters
+#### 3.13.2.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Subdomain name of an app.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 *   _Body_: JSON collection retrieved with GET method at the same URI
 
-##### 3.13.2.2 <a rel="nofollow"></a>Example
+#### 3.13.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
@@ -769,7 +769,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.13.3 <a rel="nofollow"></a>Output
 
-##### 3.13.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.13.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -781,7 +781,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 500 | INVALID_SCHEDULED_EVENT_PARAMETER | Scheduled Event parameter should be Enabled or Disabled. |
 
-##### 3.13.3.2 <a rel="nofollow"></a>Example
+#### 3.13.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -819,12 +819,12 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 
 ### 3.14.2 <a rel="nofollow"></a>Request
 
-##### 3.14.2.1 <a rel="nofollow"></a>Parameters
+#### 3.14.2.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Sub-domain name of an app.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
-##### 3.14.2.2 <a rel="nofollow"></a>Example
+#### 3.14.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/1/apps/calc/environments/acceptance/snapshots HTTP/ 1.1
@@ -838,7 +838,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.14.3 <a rel="nofollow"></a>Output
 
-##### 3.14.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.14.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -848,7 +848,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 500 | SNAPSHOT_LISTING_FAILED | An error occurred while listing the backups. Please contact support. |
 
-##### 3.14.3.2 <a rel="nofollow"></a>Example
+#### 3.14.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 [
@@ -884,13 +884,13 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/
 
 ### 3.15.2 <a rel="nofollow"></a>Request
 
-##### 3.15.2.1 <a rel="nofollow"></a>Parameters
+#### 3.15.2.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Subdomain name of an app.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 *   _SnapshotId_ (String): Identifier of the backup
 
-##### 3.15.2.2 <a rel="nofollow"></a>Example
+#### 3.15.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/1/apps/calc/environments/acceptance/snapshots/201703221355 HTTP/ 1.1
@@ -903,7 +903,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.15.3 <a rel="nofollow"></a>Output
 
-##### 3.15.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.15.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -913,7 +913,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 404 | SNAPSHOT_NOT_FOUND | Snapshot not found. |
 
-##### 3.15.3.2 <a rel="nofollow"></a>Example
+#### 3.15.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {

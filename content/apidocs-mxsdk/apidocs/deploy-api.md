@@ -519,13 +519,13 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload
 
 ### 3.10.2 Request
 
-#### -----3.10.5.1 <a rel="nofollow"></a>Parameters
+#### 3.10.2.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Subdomain name of an app.
 *   _Name_ (String): Name of the deployment package as query parameter
 *   _file_ (File): Deployment package as multipart/form-data
 
-#### 3.10.5.2 <a rel="nofollow"></a>Example
+#### 3.10.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 POST /api/ 1 /apps/calc/packages/upload HTTP/ 1.1
@@ -540,9 +540,9 @@ Curl example:
 curl -v -F "file=@/tmp/some.mda" -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/1/apps/calc/packages/upload" -F 'Name=some.mda'
 ```
 
-### 3.10.6 <a name="DeployAPI-Ouput" rel="nofollow"></a>Ouput
+### 3.10.3 <a name="DeployAPI-Ouput" rel="nofollow"></a>Ouput
 
-#### 3.10.6.1 <a rel="nofollow"></a>Error Codes
+#### 3.10.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |

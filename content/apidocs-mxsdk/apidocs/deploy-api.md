@@ -34,7 +34,7 @@ URL: https://deploy.mendix.com/api/1/apps/
 
 ### 3.1.2 <a name="DeployAPI-Request" rel="nofollow"></a>Request
 
-##### 3.1.2.1 <a name="DeployAPI-Example" rel="nofollow"></a>Example
+#### 3.1.2.1 <a name="DeployAPI-Example" rel="nofollow"></a>Example
 
 ```bash
 GET /api/1/apps/ HTTP/1.1
@@ -53,7 +53,7 @@ List of objects with the following key-value pairs:
 *   _ProjectId_ (String): Developer Portal Project identifier.
 *   _Url_ (String): Production or sandbox URL to access your app.
 
-##### 3.1.3.1 <a rel="nofollow"></a>Example
+#### 3.1.3.1 <a rel="nofollow"></a>Example
 
 ```bash
 [{
@@ -82,13 +82,13 @@ URL: https://deploy.mendix.com/api/1/apps/
 
 ### 3.2.2 <a name="DeployAPI-Request" rel="nofollow"></a>Request
 
-##### 3.2.2.1 <a name="DeployAPI-Parameters" rel="nofollow"></a>Parameters
+#### 3.2.2.1 <a name="DeployAPI-Parameters" rel="nofollow"></a>Parameters
 
 An object with the following key-value pair:
 
 *   _ProjectId_ (String) : The Developer Portal project identifier that should be linked to the new sandbox application. This value can be found under Settings > General, and it is represented as App ID.
 
-##### 3.2.2.2 <a name="DeployAPI-Example" rel="nofollow"></a>Example
+#### 3.2.2.2 <a name="DeployAPI-Example" rel="nofollow"></a>Example
 
 ```bash
 POST /api/1/apps/ HTTP/1.1
@@ -111,14 +111,14 @@ Response object with the following fields:
 *   _ProjectId_ (String): Developer Portal Project identifier.
 *   _Url_ (String): Production or sandbox URL to access your app.
 
-##### 3.2.3.1 <a name="DeployAPI-Errorcodes" rel="nofollow"></a>Error Codes
+#### 3.2.3.1 <a name="DeployAPI-Errorcodes" rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PROJECTID | Invalid ProjectId |
 | 400 | APPLICATION_ALREADY_EXISTS | Application already exists |
 
-##### 3.2.3.2 <a rel="nofollow"></a>Example
+#### 3.2.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -142,11 +142,11 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>
 
 ### 3.3.2 <a rel="nofollow"></a>Request
 
-##### 3.3.2.1 <a name="DeployAPI-Parameter" rel="nofollow"></a>Parameter
+#### 3.3.2.1 <a name="DeployAPI-Parameter" rel="nofollow"></a>Parameter
 
 *   _AppId_ (String): Sub-domain name of an app.
 
-##### 3.3.2.2 <a rel="nofollow"></a>Example
+#### 3.3.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/1/apps/calc/ HTTP/1.1
@@ -164,14 +164,14 @@ Object with the following key-value pairs:
 *   _Name_ (String): Name of the app.
 *   _Url_ (String): Production or sandbox URL to access your app.
 
-##### 3.3.3.1 <a name="DeployAPI-Errorcodes" rel="nofollow"></a>Error codes
+#### 3.3.3.1 <a name="DeployAPI-Errorcodes" rel="nofollow"></a>Error codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_APPID | Invalid AppId |
 | 404 | APP_NOT_FOUND | App not found |
 
-##### 3.3.3.2 <a rel="nofollow"></a>Example
+#### 3.3.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -195,11 +195,11 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/
 
 ### 3.4.2 <a rel="nofollow"></a>Request
 
-##### 3.4.2.1 <a rel="nofollow"></a>Parameter
+#### 3.4.2.1 <a rel="nofollow"></a>Parameter
 
 *   _AppId_ (String): Subdomain name of an app.
 
-##### 3.4.2.2 <a rel="nofollow"></a>Example
+#### 3.4.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/ 1 /apps/calc/environments/ HTTP/ 1.1
@@ -218,7 +218,7 @@ List of objects with the following key-value pairs:
 *   _Url_ (String): URL to access your application.
 *   Mode (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
-##### 3.4.3.1 <a rel="nofollow"></a>Example
+#### 3.4.3.1 <a rel="nofollow"></a>Example
 
 ```bash
 [
@@ -248,12 +248,12 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>
 
 ### 3.5.2 <a rel="nofollow"></a>Request
 
-##### 3.5.2.1 <a name="DeployAPI-Parameters" rel="nofollow"></a>Parameters
+#### 3.5.2.1 <a name="DeployAPI-Parameters" rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Subdomain name of an app.
 *   _Mode_ (String): The mode of the environment of the app. An environment with this mode should exist.
 
-##### 3.5.2.2 <a rel="nofollow"></a>Example
+#### 3.5.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/1/apps/calc/environments/Acceptance HTTP/1.1
@@ -271,7 +271,7 @@ An object with the following key-value pairs:
 *   _Url_ (String): URL to access your application.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
-##### 3.5.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.5.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -279,7 +279,7 @@ An object with the following key-value pairs:
 | 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
-##### 3.5.3.2 <a rel="nofollow"></a>Example
+#### 3.5.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -302,13 +302,13 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start
 
 ### 3.6.2 Request
 
-##### 3.6.2.1 <a name="DeployAPI-Payload" rel="nofollow"></a>Payload
+#### 3.6.2.1 <a name="DeployAPI-Payload" rel="nofollow"></a>Payload
 
 An object with the following key-value pair:
 
 *   _AutoSyncDb_ (Boolean) : Define whether the database should be synchronized automatically with the model during the start phase of the app. This is only applicable if your Mendix Cloud version is older than v4.
 
-##### 3.6.2.2 <a rel="nofollow"></a>Example
+#### 3.6.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 POST /api/ 1 /apps/calc/environments/Acceptance/start HTTP/ 1.1
@@ -329,7 +329,7 @@ An object with the following key-value pairs:
 
 *   _JobId_ (String): The identifier which can be used to track the progress of the start action
 
-##### 3.6.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.6.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -339,7 +339,7 @@ An object with the following key-value pairs:
 | 500 | APP_ALREADY_HAS_A_STARTING_JOB | Cannot start app. There is already a starting job id found. |
 | 500 | ALREADY_STARTED | Cannot start app. App is already running. |
 
-##### 3.6.3.2 <a rel="nofollow"></a>Example
+#### 3.6.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -360,7 +360,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/start/<Job
 
 ### 3.7.2 Request
 
-##### 3.7.2.1 <a rel="nofollow"></a>Example
+#### 3.7.2.1 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/ 1 /apps/calc/environments/Acceptance/start/02df2e50-0e79-11e4- 9191 -0800200c9a66 HTTP/ 1.1
@@ -377,7 +377,7 @@ An object with the following key-value pair:
 
 *   _Status_ (String): Possible values are Starting and Started
 
-##### 3.7.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.7.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -395,7 +395,7 @@ An object with the following key-value pair:
 | 500 | STARTUP_ACTION_FAILED | Cannot start app. Startup action failed. |
 | 500 | START_FAILED | Cannot start app: result (detail status) |
 
-##### 3.7.3.2 <a rel="nofollow"></a>Example
+#### 3.7.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -416,7 +416,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/stop
 
 ### 3.8.2 Request
 
-##### 3.8.2.1 <a rel="nofollow"></a>Example
+#### 3.8.2.1 <a rel="nofollow"></a>Example
 
 ```bash
 POST /api/ 1 /apps/calc/environments/Acceptance/stop HTTP/ 1.1
@@ -429,7 +429,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.8.3 <a rel="nofollow"></a>Output
 
-##### 3.8.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.8.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -451,12 +451,12 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/package
 
 ### 3.9.2 Request
 
-##### 3.9.2.1 <a rel="nofollow"></a>Parameters
+#### 3.9.2.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Sub-domain name of an app.
 *   _Mode_ (String): The mode of the environment of the app. An environment with this mode should exist.
 
-##### 3.9.2.2 <a rel="nofollow"></a>Example
+#### 3.9.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/ 1 /apps/calc/environments/Acceptance/ package HTTP/ 1.1
@@ -482,7 +482,7 @@ An object with the following key-value pairs:
     Possible values: Succeeded, Queued, Building, Uploading and Failed.
 *   _Size_ (Long): Size of the package in bytes.
 
-##### 3.9.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.9.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -490,7 +490,7 @@ An object with the following key-value pairs:
 | 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
 | 404 | PACKAGE_NOT_FOUND | No package found for this environment |
 
-##### 3.9.3.2 <a rel="nofollow"></a>Example
+#### 3.9.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -519,13 +519,13 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload
 
 ### 3.9.5 Request
 
-##### 3.9.5.1 <a rel="nofollow"></a>Parameters
+#### 3.9.5.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Subdomain name of an app.
 *   _Name_ (String): Name of the deployment package as query parameter
 *   _file_ (File): Deployment package as multipart/form-data
 
-##### 3.9.5.2 <a rel="nofollow"></a>Example
+#### 3.9.5.2 <a rel="nofollow"></a>Example
 
 ```bash
 POST /api/ 1 /apps/calc/packages/upload HTTP/ 1.1
@@ -542,7 +542,7 @@ curl -v -F "file=@/tmp/some.mda" -X POST -H "Mendix-Username: richard.ford51@exa
 
 ### 3.9.6 <a name="DeployAPI-Ouput" rel="nofollow"></a>Ouput
 
-##### 3.9.6.1 <a rel="nofollow"></a>Error Codes
+#### 3.9.6.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -564,13 +564,13 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/transport
 
 ### 3.10.2 <a rel="nofollow"></a>Request
 
-##### 3.10.2.1 <a rel="nofollow"></a>Parameters
+#### 3.10.2.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Sub-domain name of an app.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 *   _PackageId_ (String): ID of the deployment package
 
-##### 3.10.2.2 <a rel="nofollow"></a>Example
+#### 3.10.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 POST /api/ 1 /apps/calc/environments/acceptance/transport HTTP/ 1.1
@@ -587,7 +587,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.10.3 <a rel="nofollow"></a>Output
 
-##### 3.10.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.10.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |

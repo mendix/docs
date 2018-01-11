@@ -11,7 +11,7 @@ This image provides a domain model representation of the concepts discussed belo
 
 ![](attachments/deploy-api/api-model.png)
 
-# <a name="DeployAPI-Authentication" rel="nofollow"></a>2 Authentication
+# 2 <a name="DeployAPI-Authentication" rel="nofollow"></a> Authentication
 
 The Deploy API requires authentication via API keys that are bound to your Mendix account (for more information, see [Authentication](authentication).
 
@@ -32,9 +32,9 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/
 ```
 
-### 3.1.2<a name="DeployAPI-Request" rel="nofollow"></a>Request
+### 3.1.2 <a name="DeployAPI-Request" rel="nofollow"></a>Request
 
-##### 3.1.2.1<a name="DeployAPI-Example" rel="nofollow"></a>Example
+##### 3.1.2.1 <a name="DeployAPI-Example" rel="nofollow"></a>Example
 
 ```bash
 GET /api/1/apps/ HTTP/1.1
@@ -44,7 +44,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### 3.1.3<a rel="nofollow"></a>Output
+### 3.1.3 <a rel="nofollow"></a>Output
 
 List of objects with the following key-value pairs:
 
@@ -53,7 +53,7 @@ List of objects with the following key-value pairs:
 *   _ProjectId_ (String): Developer Portal Project identifier.
 *   _Url_ (String): Production or sandbox URL to access your app.
 
-##### 3.1.3.1<a rel="nofollow"></a>Example
+##### 3.1.3.1 <a rel="nofollow"></a>Example
 
 ```bash
 [{
@@ -69,9 +69,9 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-## 3.2<a name="DeployAPI-CreateSandbox" rel="nofollow"></a>Create Sandbox
+## 3.2 <a name="DeployAPI-CreateSandbox" rel="nofollow"></a>Create Sandbox
 
-### 3.2.1<a name="DeployAPI-Description" rel="nofollow"></a>Description
+### 3.2.1 <a name="DeployAPI-Description" rel="nofollow"></a>Description
 
 Creates a sandbox application for a requested project id.
 
@@ -80,15 +80,15 @@ HTTP Method: POST
 URL: https://deploy.mendix.com/api/1/apps/
 ```
 
-### 3.2.2<a name="DeployAPI-Request" rel="nofollow"></a>Request
+### 3.2.2 <a name="DeployAPI-Request" rel="nofollow"></a>Request
 
-##### 3.2.2.1<a name="DeployAPI-Parameters" rel="nofollow"></a>Parameters
+##### 3.2.2.1 <a name="DeployAPI-Parameters" rel="nofollow"></a>Parameters
 
 An object with the following key-value pair:
 
 *   _ProjectId_ (String) : The Developer Portal project identifier that should be linked to the new sandbox application. This value can be found under Settings > General, and it is represented as App ID.
 
-##### 3.2.2.2<a name="DeployAPI-Example" rel="nofollow"></a>Example
+##### 3.2.2.2 <a name="DeployAPI-Example" rel="nofollow"></a>Example
 
 ```bash
 POST /api/1/apps/ HTTP/1.1
@@ -102,7 +102,7 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.2.3<a rel="nofollow"></a>Output
+### 3.2.3 <a rel="nofollow"></a>Output
 
 Response object with the following fields:
 
@@ -111,14 +111,14 @@ Response object with the following fields:
 *   _ProjectId_ (String): Developer Portal Project identifier.
 *   _Url_ (String): Production or sandbox URL to access your app.
 
-##### 3.2.3.1<a name="DeployAPI-Errorcodes" rel="nofollow"></a>Error Codes
+##### 3.2.3.1 <a name="DeployAPI-Errorcodes" rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PROJECTID | Invalid ProjectId |
 | 400 | APPLICATION_ALREADY_EXISTS | Application already exists |
 
-##### 3.2.3.2<a rel="nofollow"></a>Example
+##### 3.2.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -129,9 +129,9 @@ Response object with the following fields:
 }
 ```
 
-## 3.3<a name="DeployAPI-Retrieveapp" rel="nofollow"></a>Retrieve App
+## 3.3 <a name="DeployAPI-Retrieveapp" rel="nofollow"></a>Retrieve App
 
-### 3.3.1<a rel="nofollow"></a>Description
+### 3.3.1 <a rel="nofollow"></a>Description
 
 Retrieves a specific app which the authenticated user has access to as a regular user. These app can be found via the "Nodes overview" screen in the Mendix Platform.
 
@@ -140,9 +140,9 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>
 ```
 
-### 3.3.2<a rel="nofollow"></a>Request
+### 3.3.2 <a rel="nofollow"></a>Request
 
-##### 3.3.2.1<a name="DeployAPI-Parameter" rel="nofollow"></a>Parameter
+##### 3.3.2.1 <a name="DeployAPI-Parameter" rel="nofollow"></a>Parameter
 
 *   _AppId_ (String): Sub-domain name of an app.
 
@@ -156,7 +156,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### 3.3.3<a name="DeployAPI-Output" rel="nofollow"></a>Output
+### 3.3.3 <a name="DeployAPI-Output" rel="nofollow"></a>Output
 
 Object with the following key-value pairs:
 
@@ -164,14 +164,14 @@ Object with the following key-value pairs:
 *   _Name_ (String): Name of the app.
 *   _Url_ (String): Production or sandbox URL to access your app.
 
-##### 3.3.3.1<a name="DeployAPI-Errorcodes" rel="nofollow"></a>Error codes
+##### 3.3.3.1 <a name="DeployAPI-Errorcodes" rel="nofollow"></a>Error codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_APPID | Invalid AppId |
 | 404 | APP_NOT_FOUND | App not found |
 
-##### 3.3.3.2<a rel="nofollow"></a>Example
+##### 3.3.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -182,9 +182,9 @@ Object with the following key-value pairs:
 }
 ```
 
-## 3.4<a name="DeployAPI-Retrieveenvironments" rel="nofollow"></a>Retrieve Environments
+## 3.4 <a name="DeployAPI-Retrieveenvironments" rel="nofollow"></a>Retrieve Environments
 
-### 3.4.1<a rel="nofollow"></a>Description
+### 3.4.1 <a rel="nofollow"></a>Description
 
 Retrieves all environments that are connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
 
@@ -193,13 +193,13 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/
 ```
 
-### 3.4.2<a rel="nofollow"></a>Request
+### 3.4.2 <a rel="nofollow"></a>Request
 
-##### 3.4.2.1<a rel="nofollow"></a>Parameter
+##### 3.4.2.1 <a rel="nofollow"></a>Parameter
 
 *   _AppId_ (String): Subdomain name of an app.
 
-##### 3.4.2.2<a rel="nofollow"></a>Example
+##### 3.4.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/ 1 /apps/calc/environments/ HTTP/ 1.1
@@ -210,7 +210,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### 3.4.3<a rel="nofollow"></a>Output
+### 3.4.3 <a rel="nofollow"></a>Output
 
 List of objects with the following key-value pairs:
 
@@ -218,7 +218,7 @@ List of objects with the following key-value pairs:
 *   _Url_ (String): URL to access your application.
 *   Mode (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
-##### 3.4.3.1<a rel="nofollow"></a>Example
+##### 3.4.3.1 <a rel="nofollow"></a>Example
 
 ```bash
 [
@@ -235,9 +235,9 @@ List of objects with the following key-value pairs:
 ]
 ```
 
-## 3.5<a name="DeployAPI-Retrieveenvironment" rel="nofollow"></a>Retrieve Environment
+## 3.5 <a name="DeployAPI-Retrieveenvironment" rel="nofollow"></a>Retrieve Environment
 
-### 3.5.1<a rel="nofollow"></a>Description
+### 3.5.1 <a rel="nofollow"></a>Description
 
 Retrieves a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
 
@@ -246,14 +246,14 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>
 ```
 
-### 3.5.2<a rel="nofollow"></a>Request
+### 3.5.2 <a rel="nofollow"></a>Request
 
-##### 3.5.2.1<a name="DeployAPI-Parameters" rel="nofollow"></a>Parameters
+##### 3.5.2.1 <a name="DeployAPI-Parameters" rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Subdomain name of an app.
 *   _Mode_ (String): The mode of the environment of the app. An environment with this mode should exist.
 
-##### 3.5.2.2<a rel="nofollow"></a>Example
+##### 3.5.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/1/apps/calc/environments/Acceptance HTTP/1.1
@@ -271,7 +271,7 @@ An object with the following key-value pairs:
 *   _Url_ (String): URL to access your application.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
-##### 3.5.3.1<a rel="nofollow"></a>Error Codes
+##### 3.5.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -279,7 +279,7 @@ An object with the following key-value pairs:
 | 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
-##### 3.5.3.2<a rel="nofollow"></a>Example
+##### 3.5.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -289,9 +289,9 @@ An object with the following key-value pairs:
 }
 ```
 
-## 3.6<a name="DeployAPI-Startenvironment" rel="nofollow"></a>Start Environment
+## 3.6 <a name="DeployAPI-Startenvironment" rel="nofollow"></a>Start Environment
 
-### 3.6.1<a rel="nofollow"></a>Description
+### 3.6.1 <a rel="nofollow"></a>Description
 
 Starts a specific environment that is connected to a specific app which the authenticated user has access to as a regular user. These environments can be found via the "Nodes overview" screen in the Mendix Platform.
 
@@ -308,7 +308,7 @@ An object with the following key-value pair:
 
 *   _AutoSyncDb_ (Boolean) : Define whether the database should be synchronized automatically with the model during the start phase of the app. This is only applicable if your Mendix Cloud version is older than v4.
 
-##### 3.6.2.2<a rel="nofollow"></a>Example
+##### 3.6.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 POST /api/ 1 /apps/calc/environments/Acceptance/start HTTP/ 1.1
@@ -323,13 +323,13 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.6.3<a rel="nofollow"></a>Output
+### 3.6.3 <a rel="nofollow"></a>Output
 
 An object with the following key-value pairs:
 
 *   _JobId_ (String): The identifier which can be used to track the progress of the start action
 
-##### 3.6.3.1<a rel="nofollow"></a>Error Codes
+##### 3.6.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -339,7 +339,7 @@ An object with the following key-value pairs:
 | 500 | APP_ALREADY_HAS_A_STARTING_JOB | Cannot start app. There is already a starting job id found. |
 | 500 | ALREADY_STARTED | Cannot start app. App is already running. |
 
-##### 3.6.3.2<a rel="nofollow"></a>Example
+##### 3.6.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -347,9 +347,9 @@ An object with the following key-value pairs:
 }
 ```
 
-## 3.7<a name="DeployAPI-Getstartenvironmentstatus" rel="nofollow"></a>Get Start Environment Status
+## 3.7 <a name="DeployAPI-Getstartenvironmentstatus" rel="nofollow"></a>Get Start Environment Status
 
-### 3.7.1<a rel="nofollow"></a>Description
+### 3.7.1 <a rel="nofollow"></a>Description
 
 Retrieve the status of the start environment action.
 

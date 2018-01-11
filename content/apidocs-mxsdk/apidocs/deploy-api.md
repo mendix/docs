@@ -506,9 +506,9 @@ An object with the following key-value pairs:
 }
 ```
 
-## 3.9.4 <a name="DeployAPI-Uploadpackage" rel="nofollow"></a>Upload Package
+## 3.10 <a name="DeployAPI-Uploadpackage" rel="nofollow"></a>Upload Package
 
-### 3.9.4.1 <a rel="nofollow"></a>Description
+### 3.10.1 <a rel="nofollow"></a>Description
 
 Uploads a deployment package from the local system to a specific app. This package can then be transported to a specific environment for deployment.
 
@@ -517,15 +517,15 @@ HTTP Method: POST
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/upload
 ```
 
-### 3.9.5 Request
+### 3.10.2 Request
 
-#### 3.9.5.1 <a rel="nofollow"></a>Parameters
+#### -----3.10.5.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Subdomain name of an app.
 *   _Name_ (String): Name of the deployment package as query parameter
 *   _file_ (File): Deployment package as multipart/form-data
 
-#### 3.9.5.2 <a rel="nofollow"></a>Example
+#### 3.10.5.2 <a rel="nofollow"></a>Example
 
 ```bash
 POST /api/ 1 /apps/calc/packages/upload HTTP/ 1.1
@@ -540,9 +540,9 @@ Curl example:
 curl -v -F "file=@/tmp/some.mda" -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/1/apps/calc/packages/upload" -F 'Name=some.mda'
 ```
 
-### 3.9.6 <a name="DeployAPI-Ouput" rel="nofollow"></a>Ouput
+### 3.10.6 <a name="DeployAPI-Ouput" rel="nofollow"></a>Ouput
 
-#### 3.9.6.1 <a rel="nofollow"></a>Error Codes
+#### 3.10.6.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -551,9 +551,9 @@ curl -v -F "file=@/tmp/some.mda" -X POST -H "Mendix-Username: richard.ford51@exa
 | 500 | UPLOAD_COPY_FAILED | Failed to store the deployment package. |
 | 500 | INVALID_PACKAGE | Failed to process the deployment package. |
 
-## 3.10 <a name="DeployAPI-Transportadeploymentpackagetoanenvironment" rel="nofollow"></a>Transporting a Deployment Package to an Environment
+## 3.11 <a name="DeployAPI-Transportadeploymentpackagetoanenvironment" rel="nofollow"></a>Transporting a Deployment Package to an Environment
 
-### 3.10.1 <a rel="nofollow"></a>Description
+### 3.11.1 <a rel="nofollow"></a>Description
 
 Transports a specific deployment package to a specific environment. This action requires the environment to be in the "NotRunning" status. This call is not available for Sandboxes, in which case the Build API can be used to trigger a deployment.
 
@@ -562,15 +562,15 @@ HTTP Method: POST
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/transport
 ```
 
-### 3.10.2 <a rel="nofollow"></a>Request
+### 3.11.2 <a rel="nofollow"></a>Request
 
-#### 3.10.2.1 <a rel="nofollow"></a>Parameters
+#### 3.11.2.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Sub-domain name of an app.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 *   _PackageId_ (String): ID of the deployment package
 
-#### 3.10.2.2 <a rel="nofollow"></a>Example
+#### 3.11.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 POST /api/ 1 /apps/calc/environments/acceptance/transport HTTP/ 1.1
@@ -585,9 +585,9 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.10.3 <a rel="nofollow"></a>Output
+### 3.11.3 <a rel="nofollow"></a>Output
 
-#### 3.10.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.11.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -601,68 +601,15 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | PACKAGE_NOT_FOUND | Package not found. |
 | 500 | PACKAGE_PARSE_FAILED | Failed to parse deployment package file. |
 
-## 3.11 <a name="DeployAPI-Cleanenvironment" rel="nofollow"></a>Clean environment
+## 3.12 <a name="DeployAPI-Cleanenvironment" rel="nofollow"></a>Clean environment
 
-### 3.11.1 <a rel="nofollow"></a>Description
+### 3.12.1 <a rel="nofollow"></a>Description
 
 Removes all data from a specific environment including files and database records. This action requires the environment to be in "NotRunning" status.
 
 ```bash
 HTTP Method: POST
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/clean
-```
-
-### 3.11.2 <a rel="nofollow"></a>Request
-
-#### 3.11.2.1 <a rel="nofollow"></a>Parameters
-
-*   _AppId_ (String): Sub-domain name of an app.
-*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
-
-#### 3.11.2.2 <a rel="nofollow"></a>Example
-
-```bash
-POST /api/ 1 /apps/calc/environments/acceptance/clean HTTP/ 1.1
-Host: deploy.mendix.com
-
-Content-Type: application/json
-Mendix-Username: richard.ford51@example.com
-Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
-```
-
-### 3.11.3 <a rel="nofollow"></a>Output
-
-#### 3.11.3.1 <a rel="nofollow"></a>Example
-
-```bash
-[
-    {
-        "Status": "Stopped",
-        "Mode": "Acceptance",
-        "Url" : "https://calc-accp.mendixcloud.com"
-    }
-]
-```
-
-#### 3.11.3.2 <a rel="nofollow"></a>Error Codes
-
-| HTTP Status | Error code | Description |
-| --- | --- | --- |
-| 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
-| 403 | ENVIRONMENT_NOT_STOPPED | Environment needs to be stopped. |
-| 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
-| 500 | ENVIRONMENT_CLEAN_FAILED | Unable to clean the environment. Please contact support. |
-
-## 3.12 <a name="DeployAPI-Retrieveenvironmentsettings" rel="nofollow"></a>Retrieve Environment Settings
-
-### 3.12.1 <a rel="nofollow"></a>Description
-
-Gets current values of custom settings, constants and scheduled events used by the target environment.
-
-```bash
-HTTP Method: GET
-URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
 ```
 
 ### 3.12.2 <a rel="nofollow"></a>Request
@@ -675,7 +622,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
 #### 3.12.2.2 <a rel="nofollow"></a>Example
 
 ```bash
-GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
+POST /api/ 1 /apps/calc/environments/acceptance/clean HTTP/ 1.1
 Host: deploy.mendix.com
 
 Content-Type: application/json
@@ -685,7 +632,60 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.12.3 <a rel="nofollow"></a>Output
 
-#### 3.12.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.12.3.1 <a rel="nofollow"></a>Example
+
+```bash
+[
+    {
+        "Status": "Stopped",
+        "Mode": "Acceptance",
+        "Url" : "https://calc-accp.mendixcloud.com"
+    }
+]
+```
+
+#### 3.12.3.2 <a rel="nofollow"></a>Error Codes
+
+| HTTP Status | Error code | Description |
+| --- | --- | --- |
+| 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and Mode parameters. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 403 | ENVIRONMENT_NOT_STOPPED | Environment needs to be stopped. |
+| 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
+| 500 | ENVIRONMENT_CLEAN_FAILED | Unable to clean the environment. Please contact support. |
+
+## 3.13 <a name="DeployAPI-Retrieveenvironmentsettings" rel="nofollow"></a>Retrieve Environment Settings
+
+### 3.13.1 <a rel="nofollow"></a>Description
+
+Gets current values of custom settings, constants and scheduled events used by the target environment.
+
+```bash
+HTTP Method: GET
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings
+```
+
+### 3.13.2 <a rel="nofollow"></a>Request
+
+#### 3.13.2.1 <a rel="nofollow"></a>Parameters
+
+*   _AppId_ (String): Sub-domain name of an app.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+
+#### 3.13.2.2 <a rel="nofollow"></a>Example
+
+```bash
+GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
+Host: deploy.mendix.com
+
+Content-Type: application/json
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+```
+
+### 3.13.3 <a rel="nofollow"></a>Output
+
+#### 3.13.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -693,7 +693,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
-#### 3.12.3.2 <a rel="nofollow"></a>Example
+#### 3.13.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -717,9 +717,9 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-## 3.13 <a name="DeployAPI-Setenvironmentsettings" rel="nofollow"></a>Set Environment Settings
+## 3.14 <a name="DeployAPI-Setenvironmentsettings" rel="nofollow"></a>Set Environment Settings
 
-### 3.13.1 <a rel="nofollow"></a>Description
+### 3.14.1 <a rel="nofollow"></a>Description
 
 Changes value of existing environment settings like custom settings, constants and scheduled events. These changes are applied after restarting the environment.
 
@@ -728,15 +728,15 @@ HTTP Method: POST
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/settings/
 ```
 
-### 3.13.2 <a rel="nofollow"></a>Request
+### 3.14.2 <a rel="nofollow"></a>Request
 
-#### 3.13.2.1 <a rel="nofollow"></a>Parameters
+#### 3.14.2.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Subdomain name of an app.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 *   _Body_: JSON collection retrieved with GET method at the same URI
 
-#### 3.13.2.2 <a rel="nofollow"></a>Example
+#### 3.14.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/ 1 /apps/calc/environments/acceptance/settings/ HTTP/ 1.1
@@ -767,9 +767,9 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### 3.13.3 <a rel="nofollow"></a>Output
+### 3.14.3 <a rel="nofollow"></a>Output
 
-#### 3.13.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.14.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -781,7 +781,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 500 | INVALID_SCHEDULED_EVENT_PARAMETER | Scheduled Event parameter should be Enabled or Disabled. |
 
-#### 3.13.3.2 <a rel="nofollow"></a>Example
+#### 3.14.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {
@@ -805,9 +805,9 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-## 3.14 <a name="DeployAPI-ListBackups" rel="nofollow"></a>List Environment Backups
+## 3.15 <a name="DeployAPI-ListBackups" rel="nofollow"></a>List Environment Backups
 
-### 3.14.1 <a rel="nofollow"></a>Description
+### 3.15.1 <a rel="nofollow"></a>Description
 
 Lists the backups of an environment.
 
@@ -817,14 +817,14 @@ curl -H "Mendix-Username: $username" -H "Mendix-ApiKey: $apikey" $baseurl/apps/r
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 ```
 
-### 3.14.2 <a rel="nofollow"></a>Request
+### 3.15.2 <a rel="nofollow"></a>Request
 
-#### 3.14.2.1 <a rel="nofollow"></a>Parameters
+#### 3.15.2.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Sub-domain name of an app.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
-#### 3.14.2.2 <a rel="nofollow"></a>Example
+#### 3.15.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/1/apps/calc/environments/acceptance/snapshots HTTP/ 1.1
@@ -836,9 +836,9 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ```
 
-### 3.14.3 <a rel="nofollow"></a>Output
+### 3.15.3 <a rel="nofollow"></a>Output
 
-#### 3.14.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.15.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -848,7 +848,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 500 | SNAPSHOT_LISTING_FAILED | An error occurred while listing the backups. Please contact support. |
 
-#### 3.14.3.2 <a rel="nofollow"></a>Example
+#### 3.15.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 [
@@ -871,9 +871,9 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ]
 ```
 
-## 3.15 <a name="DeployAPI-DownloadBackup" rel="nofollow"></a>Download a Backup for an Environment
+## 3.16 <a name="DeployAPI-DownloadBackup" rel="nofollow"></a>Download a Backup for an Environment
 
-### 3.15.1 <a rel="nofollow"></a>Description
+### 3.16.1 <a rel="nofollow"></a>Description
 
 Download the backup for an environment. The response contains direct links to the external backup system, you can use these links to download three types of backups.
 
@@ -882,15 +882,15 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/<SnapshotId>
 ```
 
-### 3.15.2 <a rel="nofollow"></a>Request
+### 3.16.2 <a rel="nofollow"></a>Request
 
-#### 3.15.2.1 <a rel="nofollow"></a>Parameters
+#### 3.16.2.1 <a rel="nofollow"></a>Parameters
 
 *   _AppId_ (String): Subdomain name of an app.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 *   _SnapshotId_ (String): Identifier of the backup
 
-#### 3.15.2.2 <a rel="nofollow"></a>Example
+#### 3.16.2.2 <a rel="nofollow"></a>Example
 
 ```bash
 GET /api/1/apps/calc/environments/acceptance/snapshots/201703221355 HTTP/ 1.1
@@ -901,9 +901,9 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### 3.15.3 <a rel="nofollow"></a>Output
+### 3.16.3 <a rel="nofollow"></a>Output
 
-#### 3.15.3.1 <a rel="nofollow"></a>Error Codes
+#### 3.16.3.1 <a rel="nofollow"></a>Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -913,7 +913,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 | 404 | SNAPSHOT_NOT_FOUND | Snapshot not found. |
 
-#### 3.15.3.2 <a rel="nofollow"></a>Example
+#### 3.16.3.2 <a rel="nofollow"></a>Example
 
 ```bash
 {

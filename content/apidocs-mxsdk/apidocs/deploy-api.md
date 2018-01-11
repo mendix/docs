@@ -19,7 +19,7 @@ As APIs are designed for automated systems, the Deploy API does not require two-
 
 # 3 <a name="DeployAPI-APIcalls" rel="nofollow"></a> API Calls
 
-Only _Retrieve apps_, _Create Sandbox_ and _Retrieve app_ API calls are supported for sandbox applications. Please note that most api calls with the exception of _Upload Package_ requires the _Content-Type_ header to be set to _application/json_.
+Only _Retrieve apps_, _Create Sandbox_ and _Retrieve app_ API calls are supported for sandbox applications. Please note that most API calls—with the exception of _Upload Package_—require that the _Content-Type_ header be set to _application/json_.
 
 ## 3.1 <a name="DeployAPI-Retrieveapps" rel="nofollow"></a>Retrieve Apps
 

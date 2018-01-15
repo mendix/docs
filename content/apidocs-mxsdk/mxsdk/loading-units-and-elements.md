@@ -2,6 +2,7 @@
 title: "Loading Units and Elements"
 parent: "manipulating-existing-models"
 ---
+
 After finding your unit or element you have to obtain it in its fully-loaded form to be able to change it, or to analyze the information which is not available in just the interface. Changing an element in interface form will result in an exception being thrown.
 
 Each element (whether in interface or full form) has an `isLoaded` property and `load` and `asLoaded` functions. The [`isLoaded`](https://apidocs.mendix.com/modelsdk/latest/interfaces/istructure.html#isloaded) property indicates whether this element is fully loaded already. In practice you should never need to test its value, but simply make sure that you always `load` a unit/element first.
@@ -12,28 +13,30 @@ Since a unit might already have been loaded before, you are also allowed to use 
 
 The following (slightly) contrived example demonstrates the behavior of `load`. The type information is made explicit in this example for demonstration purposes, but you can just omit this code since the TypeScript compiler will infer it. Note that this example is contrived: a normal flow would be to call `load` on the `domainModel` and work with the fully-loaded domain model inside its callback.
 
-```js
+```ts
 import {domainmodels} from "mendixmodelsdk";
 
+const model = workingCopy.model();
+
 // at first, only interfaces are available:
-var domainModel : domainmodels.IDomainModel = model.allDomainModels()[0];
-var entity1Interface : domainModels = domainModel.entities[0];
+const domainModel = model.allDomainModels()[0];
+const entity1Interface = domainModel.entities[0];
 
 console.log(entity1Interface.isLoaded); // ==> false
 
-entity1Interface.load((entity1 : domainmodels.Entity) => {
-	// entity1 is now the fully-loaded, upcast version of entityInterface1
-	console.log(entity1.isLoaded); // ==> true
-	console.log(entity1Interface === entity1); // ==> true
+entity1Interface.load((entity1) => {
+    // entity1 is now the fully-loaded entitiy of type domainmodels.Entity
+    console.log(entity1.isLoaded); // ==> true
+    console.log(entity1Interface === entity1); // ==> true
 
-	// loading the entity actually loaded the complete domain model unit:
-	console.log(domainModel.isLoaded); // prints true
-	// ... so we can upcast safely:
-	var fullDomainModel : domainmodels.DomainModel = domainModel.asLoaded();
+    // loading the entity actually loaded the complete domain model unit:
+    console.log(domainModel.isLoaded); // prints true
+    // ... so we can cast it as a fully loaded domainModel:
+    const fullDomainModel = domainModel.asLoaded();
 
-	// In fully-loaded units, all sub elements also have the fully-loaded types,
-	// while in interfaces all sub objects are interfaces as well.
-	var entity2 : domainmodels.Entity = fullDomainModel.entities[1];
+    // In fully-loaded units, all sub elements also have the fully-loaded types,
+    // while in interfaces all sub objects are interfaces as well.
+    const entity2: domainmodels.Entity = fullDomainModel.entities[1];
 });
 ```
 {{% alert type="success" %}}
@@ -42,4 +45,4 @@ entity1Interface.load((entity1 : domainmodels.Entity) => {
 
 {{% /alert %}}
 
-Continue your learning path with [Generating code from the model](generating-code-from-the-model).
+Continue with [Generating Code from the Model](generating-code-from-the-model).

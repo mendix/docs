@@ -1,6 +1,6 @@
 ---
 title: "Tutorials"
-description: "These tutorials will teach you to build an HRM app, mobile to-do app, and an IoT app."
+description: "These tutorials will teach you how to start with your first app and then build an HRM app, mobile to-do app, and IoT app."
 ---
 
 These tutorials will teach you how to build various apps:
@@ -11,8 +11,8 @@ These tutorials will teach you how to build various apps:
     <th>header 2</th>
   </thead>
   <tbody>
-    <td><a href="start-your-first-app">Start Your First App</a><br> 
-    In this introductory tutorial, you will learn the basics of app development in the Mendix Web Modeler and start your first app.</td>
+    <td><a href="start-with-a-blank-app">Start with a Blank App</a><br> 
+    In this introductory tutorial, you will learn the basics of app development in the Mendix Web Modeler by starting with a blank app.</td>
     <td><img src="attachments/overview/Employee_directory.png"></td>
   </tbody>
   </tbody>

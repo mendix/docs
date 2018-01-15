@@ -63,4 +63,4 @@ If you do not have anything to commit, you can also click **Cancel sync/Unlock W
 
 ## 4 Related Content
 
-* [How to Start Your First App](/howto/tutorials/start-your-first-app)
+* [How to Start with a Blank App](/howto/tutorials/start-with-a-blank-app)

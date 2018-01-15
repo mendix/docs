@@ -108,8 +108,7 @@ This is the final step of the conversion process. Press 'Next' to continue to th
 
 ## Java 7 required
 
-From Mendix 5 on, it is required to use Java 7 instead of Java 6\. There is a known bug in the JVM (see [http://bugs.sun.com/view_bug.do?bug_id=4670071](http://bugs.sun.com/view_bug.do?bug_id=4670071) and [http://download.java.net/jdk7/archive/b124/docs/technotes/guides/lang/cl-mt.html](http://download.java.net/jdk7/archive/b124/docs/technotes/guides/lang/cl-mt.html) for more background info),
-which has not been solved before Java 7\. This bug can cause Mendix 5 apps to encounter problems during startup in Java 6 (Mendix 4 apps are not affected by this bug).
+From Mendix 5 on, it is required to use Java 7 instead of Java 6\. There is a known bug in the JVM (see [http://bugs.sun.com/view_bug.do?bug_id=4670071](http://bugs.sun.com/view_bug.do?bug_id=4670071) for more background info), which has not been solved before Java 7\. This bug can cause Mendix 5 apps to encounter problems during startup in Java 6 (Mendix 4 apps are not affected by this bug).
 
 ## Using com.sun packages in custom Java actions
 

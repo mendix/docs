@@ -23,7 +23,7 @@ The service name uniquely identifies the service in the app. By default, it's pa
 
 {{% alert type="info" %}}
 
-The Custom Path feature was introduced in Mendix version 7.11.0.
+The Custom Path feature was introduced in Mendix version 7.12.0.
 
 {{% /alert %}}
 

@@ -164,7 +164,7 @@ module.exports = {
     },
     {
       from: "/MXSDK/Your+learning+path+for+the+Mendix+SDK",
-      to: "/apidocs-mxsdk/mxsdk/your-learning-path-for-the-mendix-sdk"
+      to: "/apidocs-mxsdk/mxsdk/tutorial-for-the-mendix-sdk"
     },
     /****************************************************
      * APPSTORE

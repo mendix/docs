@@ -100,7 +100,7 @@ For some entities you want to use entity events that are always triggered when a
 
 #### 3.4.2 Calculated Attributes
 
-For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow that has the calculation purpose you can use *CAL\_* as a prefix.
+For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow that has the calculation purpose you can use `CAL\_` as a prefix.
 
 #### 3.4.3 Project Settings
 

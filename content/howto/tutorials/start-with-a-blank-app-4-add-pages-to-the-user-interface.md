@@ -1,6 +1,6 @@
 ---
-title: "Start Your First App Step 4: Add Pages to the User Interface"
-parent: "start-your-first-app"
+title: "Start with a Blank App Step 4: Add Pages to the User Interface"
+parent: "start-with-a-blank-app"
 description: "Presents details on add pages to your app's UI in the Web Modeler."
 tags: ["build", "app", "developer portal", "web modeler"]
 ---
@@ -20,7 +20,7 @@ This is the fourth how-to in this series on creating an employee directory in th
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Complete the third how-to in this series: [How to Start Your First App Step 3: Publish and View Your App](start-your-first-app-3-publish-and-view-your-app)
+* Complete the third how-to in this series: [How to Start with a Blank App Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app)
 
 ## 3 Adding Pages to the User Interface
 
@@ -32,30 +32,30 @@ Now that you have created a basic dashboard, you need to add a new page that can
 
 1. Select the top-left **BUTTON** image:
 
-    ![](attachments/start-your-first-app/select-card-item-button.png)
+    ![](attachments/start-with-a-blank-app/select-card-item-button.png)
 
 2. Click the **Icon** property and change it to **User**:
 
-    ![](attachments/start-your-first-app/change-icon-signal.png)
+    ![](attachments/start-with-a-blank-app/change-icon-signal.png)
 
 3. Select the top-left **Open Page** button and enter *Employees* for the **Caption** property:
 
-    ![](attachments/start-your-first-app/change-open-page-caption.png)
+    ![](attachments/start-with-a-blank-app/change-open-page-caption.png)
 
 4. Select the image you just changed to a user image and set the **On Click Action** property to **Page**:
 
-    ![](attachments/start-your-first-app/change-onclick-action.png)
+    ![](attachments/start-with-a-blank-app/change-onclick-action.png)
 
 5. Change the page property by clicking **Select page**:
 
-    ![](attachments/start-your-first-app/select-page.png)
+    ![](attachments/start-with-a-blank-app/select-page.png)
 
 6. To create a new page in the **Select Page** dialog box, do the following:<br>
     a. Click **New page**.<br>
     b. Change the title of the page to **Employees**.<br>
     c. Select **Lists** > **Lists Default** for the  template.
 
-    ![](attachments/start-your-first-app/lists-default.png)
+    ![](attachments/start-with-a-blank-app/lists-default.png)
 
     Click **Create** and you've created your first page! Let's finish up some things before you start working on the new Employees page.
 7. Select the **Home** page by clicking the **Pages** icon in the left menu bar.
@@ -73,25 +73,25 @@ To edit the widgets, follow these steps:
 
 1. Open the **Employees** page by using the recent documents option:
 
-    ![](attachments/start-your-first-app/recent-documents.png)
+    ![](attachments/start-with-a-blank-app/recent-documents.png)
 
 2. Select the **TEXT** widget with **Title**:
 
-    ![](attachments/start-your-first-app/text-widget.png)
+    ![](attachments/start-with-a-blank-app/text-widget.png)
 
 3. Change the **Content** property to **Employees**.
 4. Delete the **Text** widget with the subtitle.
 5. Select the **CONTAINER** where the **Add** button is located:
 
-    ![](attachments/start-your-first-app/add-button.png)
+    ![](attachments/start-with-a-blank-app/add-button.png)
 
 6. Select the parent **Row** using the breadcrumb:
 
-    ![](attachments/start-your-first-app/breadcrumb-container-add-button.PNG)
+    ![](attachments/start-with-a-blank-app/breadcrumb-container-add-button.PNG)
 
 7. Change the **Row Layout** to *large left column & small right column* for all profiles:
 
-    ![](attachments/start-your-first-app/change-row-layout2.png)
+    ![](attachments/start-with-a-blank-app/change-row-layout2.png)
 
 ### 3.3 Switching Building Blocks
 
@@ -101,7 +101,7 @@ To switch building blocks, follow these steps:
 
 1. Select the **LIST VIEW** widget and delete it:
 
-    ![](attachments/start-your-first-app/listview-delete.png)
+    ![](attachments/start-with-a-blank-app/listview-delete.png)
 
 2. Open the **Toolbox** and from **Lists**, drag the **List3** building block into the container.
 
@@ -115,11 +115,11 @@ To create the entity for an employee, follow these steps:
 
 1. Select the **LIST VIEW**, which groups all the user cards together:
 
-    ![](attachments/start-your-first-app/listview-select.png)
+    ![](attachments/start-with-a-blank-app/listview-select.png)
 
 2. You want to create a new entity, so click the **Entity** property:
 
-    ![](attachments/start-your-first-app/select-entity.png)
+    ![](attachments/start-with-a-blank-app/select-entity.png)
 
 3. To create a new entity in the **Select Entity** dialog box, do the following:<br>
     a. Click **New Entity**.<br>
@@ -128,11 +128,11 @@ To create the entity for an employee, follow these steps:
 
 4. Select the **TEXT** widget of the top user card and clear the **Content** property:
 
-    ![](attachments/start-your-first-app/select-text-widget2.png)
+    ![](attachments/start-with-a-blank-app/select-text-widget2.png)
 
 5. Click **Add parameter** for the **Content** property:
 
-    ![](attachments/start-your-first-app/add-parameter.png)
+    ![](attachments/start-with-a-blank-app/add-parameter.png)
 
 6. Create a new attribute in the **Select your attribute** dialog box (which will be added to the Employee entity) by doing the following:<br>
     a. Enter *Name* for the attribute **Name**.<br>
@@ -141,7 +141,7 @@ To create the entity for an employee, follow these steps:
 
 7. In the subtitle **TEXT** widget, repeat steps 4-6 to add an attribute for **Email [String]**:
 
-    ![](attachments/start-your-first-app/list-view.png)
+    ![](attachments/start-with-a-blank-app/list-view.png)
 
 ### 3.5 Adding an Input Employee Page
 
@@ -151,18 +151,18 @@ To add a page for inputting employees, follow these steps:
 
 1. Select the **Add** button on the **Employees** page:
 
-    ![](attachments/start-your-first-app/employees-add.png)
+    ![](attachments/start-with-a-blank-app/employees-add.png)
 
 2. Select **Employee** for the **Entity** property of the button:
 
-    ![](attachments/start-your-first-app/select-entity2.png)
+    ![](attachments/start-with-a-blank-app/select-entity2.png)
 
 3. Click the **Page** property to open the **Select Page** dialog box.
 4. Click **New page** and do the following:<br>
     a. Enter *Employee* for the **Title** of the page.<br>
     b. Select **Forms** > **Form Vertical** for the template:
 
-    ![](attachments/start-your-first-app/form-vertical.png)
+    ![](attachments/start-with-a-blank-app/form-vertical.png)
 
 ### 3.6 Connecting the Input Page to the Employee Entity
 
@@ -174,15 +174,15 @@ To connect the text box widgets to the Employee entity attributes, follow these 
 
 2. Click the icon in the data source header to select the containing data view.
 
-    ![](attachments/start-your-first-app/data-source-icon.png)
+    ![](attachments/start-with-a-blank-app/data-source-icon.png)
 
 3. Set the **Entity** property of the related data view to **Employee**.
 
-    ![](attachments/start-your-first-app/entity-employee.png)
+    ![](attachments/start-with-a-blank-app/entity-employee.png)
 
 4. Select the text box with the **Name** caption and connect it to the the **Name** attribute of the **Employee** entity.
 
-    ![](attachments/start-your-first-app/name-attribute.png)
+    ![](attachments/start-with-a-blank-app/name-attribute.png)
 
 5. Do the same thing for **Email**.
 6. Add the following attributes to the entity for the remaining text box widgets:
@@ -192,7 +192,7 @@ To connect the text box widgets to the Employee entity attributes, follow these 
 
 7. Go the **Design** properties category and toggle the **Full Width** property for the **Save** and **Cancel** buttons to improve the user experience:
 
-    ![](attachments/start-your-first-app/save-full-width.png)
+    ![](attachments/start-with-a-blank-app/save-full-width.png)
 
 ### 3.7 Using the Google Maps widget
 
@@ -202,13 +202,13 @@ To add the Google Maps widget to the page, follow these steps:
 
 1. On the **Employee** page, open the **Toolbox**, make sure **Widgets** is selected, and search for the **Google Maps** widget:
 
-    ![](attachments/start-your-first-app/googlemaps.png)
+    ![](attachments/start-with-a-blank-app/googlemaps.png)
 
 3. Drag the **Google Maps** widget from the **Display** properties category onto the page below the **Bio** text box.
 4. The Google Maps widget requires an **Address attribute** or both the **Latitude attribute** and **Longitude attribute**. So, search for "Text" in the **Toolbox** and drag the additional **Text Box** widget above the map.
 5. Connect the new text box to a new attribute named **Address**:
 
-    ![](attachments/start-your-first-app/address.png)
+    ![](attachments/start-with-a-blank-app/address.png)
 
 6. Select the Google Maps widget, open the **Data source** properties category, and do the following:<br>
     a. Set the **Locations Entity** to **Employee**.<br>
@@ -220,7 +220,7 @@ The last thing you have to do is finish up the employees page. To connect a list
 
 1. Open the **Employees** page and then select the **LIST VIEW**:
 
-    ![](attachments/start-your-first-app/listview-select.png)
+    ![](attachments/start-with-a-blank-app/listview-select.png)
 
 2. Set the **On Click Action** to **Page** and select the **Employee** page (like you did for the **Add** button).
 
@@ -228,15 +228,15 @@ You're done! Time to view the effects of all your changes.
 
 ## 4 Viewing Your App
 
-Update and view your app, just like you did in [How to Start Your First App Step 3: Publish and View Your App](start-your-first-app-3-publish-and-view-your-app).
+Update and view your app, just like you did in [How to Start with a Blank App Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app).
 
 You can now use your app to add and edit employees!
 
-Continue on to the last part of this tutorial: [How to Start Your First App Step 5: Promote an Employee](start-your-first-app-5-add-employee-promotion-logic).
+Continue on to the last part of this tutorial: [How to Start with a Blank App Step 5: Promote an Employee](start-with-a-blank-app-5-add-employee-promotion-logic).
 
 ## 5 Related Content
 
-* [How to Start Your First App Step 1: Create the App](start-your-first-app-1-create-the-app)
-* [How to Start Your First App Step 2: Build a Dashboard Page](start-your-first-app-2-build-a-dashboard-page)
-* [How to Start Your First App Step 3: Publish and View Your App](start-your-first-app-3-publish-and-view-your-app)
-* [How to Start Your First App Step 5: Add Employee Promotion Logic](start-your-first-app-5-add-employee-promotion-logic)
+* [How to Start with a Blank App Step 1: Create the App](start-with-a-blank-app-1-create-the-app)
+* [How to Start with a Blank App Step 2: Build a Dashboard Page](start-with-a-blank-app-2-build-a-dashboard-page)
+* [How to Start with a Blank App Step 3: Publish and View Your App](start-with-a-blank-app-3-publish-and-view-your-app)
+* [How to Start with a Blank App Step 5: Add Employee Promotion Logic](start-with-a-blank-app-5-add-employee-promotion-logic)

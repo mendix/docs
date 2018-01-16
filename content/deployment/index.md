@@ -11,7 +11,9 @@ You can click **Run Locally** in the toolbar to run your app locally. Use the **
 
 ## Mendix Cloud
 
-From within the Modeler, you can view the cloud nodes you have available in the Mendix Cloud. You can upload a deployment package (MDA) to the Developer Portal, and from there, you can transfer it and start running it. For more information, see [Security Constraints](/deployment/mendixcloud/security-constraints-in-the-mendix-cloud).
+The Mendix Cloud is the default deploy option when you get started with the Mendix Platform. An integrated solution, the Mendix Cloud includes backups, monitoring, High Availability and more.
+
+From within the Modeler, you can view the cloud nodes you have available in the Mendix Cloud. You can create a deployment package (MDA) in the Developer Portal, and from there, you can transport it and start running your application. For more information, see [Mendix Cloud](/deployment/mendixcloud/).
 
 ## Cloud Foundry
 

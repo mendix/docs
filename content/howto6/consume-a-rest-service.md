@@ -30,7 +30,7 @@ To use this service, you need to create an account at [https://www.rijksmuseum.n
 Make sure you have completed these prerequisite steps:
 
 1. Open the Mendix Modeler, and then click **App Store** in the upper-right part of the toolbar to open the App Store.
-2. In the App Store, search for the **Rest Services** module, and download a version of this module that will work with a version 6.x.x of the Desktop Modeler.
+2. In the App Store, search for the **Rest Services** module, and download a version of this module that will work with a version 6.x.x of the Desktop Modeler:
     ![](attachments/18448729/18581739.png)
 3. Search for and download the latest **Community Commons Function Library** module from the App Store:
     ![](attachments/18448729/18581738.png)

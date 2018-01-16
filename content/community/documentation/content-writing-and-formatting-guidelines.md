@@ -9,7 +9,7 @@ This document presents guidelines for creating a common voice, style, and struct
 
 ## 2 Types of Documentation
 
-### 2.1 The How-To's
+### 2.1 The How-to's
 
 The how-to's are contextual and version-specific guides on Mendix topics that take you through the necessary steps to achieve a goal, whether it's adding a Google Maps widget to your UI, importing Excel files, or consuming a web service. The how-to's use relevant information on Mendix components to create realistic scenarios with specific contexts, and they should deliver functionalities.
 
@@ -108,11 +108,11 @@ Your note
 Your note
 {{% /alert %}}
 
-## 5 Guidelines for Writing and Formatting the How-To's
+## 5 Guidelines for Writing and Formatting the How-to's
 
 This section presents detailed guidlines for writing a how-to. Read this section while referencing the [How-to Template](the-how-to-template-page).
 
-### 5.1 How-To Sections
+### 5.1 How-to Sections
 
 #### 5.1.1 Title
 
@@ -185,7 +185,7 @@ Place images in a folder with the same name as the document that uses the images
 
 For example, if you are adding an image to the Content Writing and Formatting Guidelines document, located at */community/documentation/*, you would place the images in the */community/documentation/attachments/content-writing-and-formatting-guidelines/* folder. That way, you can group images for the same document nicely together.
 
-### 5.2 How-To Content
+### 5.2 How-to Content
 
 #### 5.2.1 Documenting Microflows
 

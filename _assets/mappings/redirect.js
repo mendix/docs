@@ -2239,10 +2239,6 @@ module.exports = {
       to: "/deployment/mendixcloud/securing-outgoing-connections-from-your-application"
     },
     {
-      from: "/mendixcloud/Security+constraints+in+the+Mendix+Cloud",
-      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
-    },
-    {
       from: "/mendixcloud/Sending+Email",
       to: "/deployment/mendixcloud/sending-email"
     },
@@ -3180,14 +3176,6 @@ module.exports = {
     {
       from: "/refguide4/Security",
       to: "/refguide4/security"
-    },
-    {
-      from: "/refguide4/Security+constraints+in+the+Mendix+Cloud",
-      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
-    },
-    {
-      from: "/refguide4/security-constraints-in-the-mendix-cloud",
-      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
     },
     {
       from: "/refguide4/Select+All+Button",
@@ -4731,14 +4719,6 @@ module.exports = {
     {
       from: "/refguide5/Security",
       to: "/refguide5/security"
-    },
-    {
-      from: "/refguide5/Security+constraints+in+the+Mendix+Cloud",
-      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
-    },
-    {
-      from: "/refguide5/security-constraints-in-the-mendix-cloud",
-      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
     },
     {
       from: "/refguide5/Select+all+button",

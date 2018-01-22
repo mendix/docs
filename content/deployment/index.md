@@ -33,6 +33,6 @@ To learn how to deploy your Mendix application on-premises, see [How to Deploy M
 
 For details on deploying to the SAP Cloud Platform, see [How to Deploy a Mendix App on SAP Cloud Platform](/deployment/sap-cloud-platform/deploy-a-mendix-app-to-sap-cloud-platform).
 
-## 8 Documents
+## 8 Document Categories
 
 {{% space_block %}}

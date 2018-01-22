@@ -17,7 +17,9 @@ Use a published REST service to expose your entities and microflows to other app
 
 ### <a name="service-name"></a>2.1 Service Name
 
-The service name uniquely identifies the service in the app. By default, it's part of the location of the service. If the service name contains any spaces or special characters, they will be replaced with the `_` character in the service location.
+Service name uniquely identifies the service in the app. It is also displayed in [OpenAPI (Swagger) documentation page](open-api).
+
+When service is initially created, service name is used in the creation of the default location for the service. If the service name contains any spaces or special characters, they will be replaced with the `_` character in the service location. 
 
 ### 2.2 Version
 
@@ -41,7 +43,7 @@ By default, version is set to "1.0.0".
 
 Location shows URL on which a service can be reached.
 
-By default, location is build up by appending service name and "v1" to the "rest/" prefix. Service name will be stripped off of any invalid URL characters; like spaces and special characters.
+By default, location is built up by appending service name and "v1" to the "rest/" prefix. Service name will be stripped off of any invalid URL characters; like spaces and special characters.
 
 Example:
 ```
@@ -50,9 +52,9 @@ http//localhost:8080/rest/my_service_name/v1
 
 You can change the the default location to almost any valid URL.
 
-#### 2.3.1 Location reserved prefixes
+#### 2.3.1 Reserved prefixes
 
-Following URL prefixes are reserved and are not allowed in custom paths:
+Following URL prefixes are reserved and are not allowed to be used in location:
 
 * `ws/`
 * `ws-doc/`

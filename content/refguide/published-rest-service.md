@@ -19,19 +19,40 @@ Use a published REST service to expose your entities and microflows to other app
 
 The service name uniquely identifies the service in the app. By default, it's part of the location of the service. If the service name contains any spaces or special characters, they will be replaced with the `_` character in the service location.
 
-### 2.2 Custom Path
+### 2.2 Version
 
 {{% alert type="info" %}}
 
-The Custom Path feature was introduced in Mendix version 7.12.0.
+The **Version** feature was introduced in version 7.12.0.
 
 {{% /alert %}}
 
-When **Custom path** is selected, you can chose almost any valid URI segment as you service path. Spaces and special characters—with exception of the forward slash (`/`)—are not allowed in a custom path.
+Version is used to display version information in [OpenAPI (Swagger) documentation page](open-api). You can set any string in the version field, but it is recomended to follow [semantic versioning](https://semver.org/) scheme.
 
-#### 2.2.1 Reserved Prefixes
+By default, version is set to "1.0.0".
 
-The following URI prefixes are reserved and are not allowed in custom paths:
+### 2.3 Location
+
+{{% alert type="info" %}}
+
+**Location** is editable since version 7.12.0.
+
+{{% /alert %}}
+
+Location shows URL on which a service can be reached.
+
+By default, location is build up by appending service name and "v1" to the "rest/" prefix. Service name will be stripped off of any invalid URL characters; like spaces and special characters.
+
+Example:
+```
+http//localhost:8080/rest/my_service_name/v1
+```
+
+You can change the the default location to almost any valid URL.
+
+#### 2.3.1 Location reserved prefixes
+
+Following URL prefixes are reserved and are not allowed in custom paths:
 
 * `ws/`
 * `ws-doc/`
@@ -42,12 +63,6 @@ The following URI prefixes are reserved and are not allowed in custom paths:
 * `xas/`
 * `p/`
 * `reload/`
-
-### 2.3 Example Location
-
-The example location shows the URL on which the service can be reached. This is an example: 
-
-![](attachments/published-rest-service/example-location-url.png)
 
 ### 2.4 Allowed Roles
 
@@ -87,6 +102,10 @@ A REST service exposes a number of [resources](published-rest-resource). On a re
 
 When you select a resource, you see the [operations](published-rest-operation) that are defined for that resource.
 
-## 6 Related Content
+Resources and Operations are appended to [Location](#Location) to form a URL on which they can be accessed.
+
+![](attachments/published-rest-service/example-location-url.png)
+
+## 5 Related Content
 
 For more information on which operation gets executed for a given request URL, see [Published REST Routing](published-rest-routing).

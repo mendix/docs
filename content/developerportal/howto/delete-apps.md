@@ -7,25 +7,27 @@ tags: ["App","Company Admin","Developer Portal","SCRUM Master","Deactivate"]
 
 ## 1 Introduction
 
-In an App Team, only the SCRUM Master (or a custom role with the **App Settings** permission) is allowed to deactivate the app (even when there are still App Team members for the app).
+In an App Team, a SCRUM Master (or a custom role with the **App Settings** permission) is allowed to deactivate an app (even when there are still App Team members for the app).
 
 In addition, the Company Admin is allowed to activate and deactivate all the company's apps (with or without App Team members for the app).
 
 **This how-to will teach you how to do the following:**
 
-* Deactivate apps (Company Admin and SCRUM Master)
-* Activate apps (Company Admin)
+* Deactivate apps (as a Company Admin or SCRUM Master)
+* Activate apps (as a Company Admin)
 
 ## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* To deactivate/activate the company's apps, you must have the **Company Admin** role in your Mendix company
+* To deactivate/activate your company's apps, you must have the **Company Admin** role in your Mendix company
 * To deactivate your app, you must have the **SCRUM Master** role in your app 
 
 For more information, see [Roles Within the Company and Apps](/developerportal/general/roles).
 
-To manage the users in your company, follow these steps:
+## 3 Managing Apps as the Company Admin
+
+To manage the apps in your company as a Company Admin, follow these steps:
 
 1. Go to the [Developer Portal](http://home.mendix.com).
 2.  Click your avatar in the top-right corner of the screen:
@@ -62,7 +64,7 @@ To delete an app, follow these steps:
 2. Select the check boxes of the apps that you want to delete.
 3. Click **Delete**.
 
-### 3.2 Activating an App
+### 3.3 Activating an App
 
 To activate an inactive app, follow these steps:    
 
@@ -73,9 +75,9 @@ To activate an inactive app, follow these steps:
 
     ![](attachments/companyadmin/activate-app.png)
 
-## 4 App Team Settings
+## 4 Managing Apps as the SCRUM Master via App Team Settings
 
-If an app that still has App Team members eeds to be deleted or deactivated, this can be accomplished by a team member with a SCRUM Master role or another custom role with the App Team **App Settings permission**.
+If an app that still has App Team members needs to be deleted or deactivated, this can be accomplished by a team member with the SCRUM Master role or another custom role with the App Team **App Settings permission**.
 
 To view the **App Settings**, follow these steps:
 
@@ -89,7 +91,7 @@ To view the **App Settings**, follow these steps:
 
 ### 4.1 Deactivating an App
 
-Only Free Apps can be deactivated. The deactivated apps will still exist within the company and will invisible to regular users. The **Company Admin** can activate an inactive app.
+Only Free Apps can be deactivated. The deactivated apps will still exist within the company and will be invisible to regular users. The **Company Admin** can activate an inactive app.
 
 To deactivate an app, follow these steps:
 

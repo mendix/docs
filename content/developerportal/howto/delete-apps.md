@@ -37,7 +37,7 @@ To manage the users in your company, follow these steps:
 
     ![](attachments/companyadmin/apps.png)
 
-### 3.1 Deactivating Apps
+### 3.1 Deactivating an App
 
 Only Free Apps can be deactivated. The deactivated apps will still exist within the company and will be invisible to regular users. To deactivate an app, follow these steps:
 
@@ -52,7 +52,7 @@ Only Free Apps can be deactivated. The deactivated apps will still exist within 
 Licensed apps with a node can only be offboarded by Mendix Support. To offboard an app, you must [submit a support request](https://support.mendix.com/hc/en-us/requests/new).
 {{% /alert %}}
     
-### 3.2 Deleting Apps
+### 3.2 Deleting an App
 
 Only Free Apps can be deleted. App deletion cannot be undone and means that ALL DATA WILL BE LOST, including all the files on the Team Server and all the data in the Free App node (if applicable).
 
@@ -62,7 +62,7 @@ To delete an app, follow these steps:
 2. Select the check boxes of the apps that you want to delete.
 3. Click **Delete**.
 
-### 3.2 Activating Apps
+### 3.2 Activating an App
 
 To activate an inactive app, follow these steps:    
 
@@ -87,7 +87,7 @@ To view the **App Settings**, follow these steps:
 
     ![](attachments/settings/change-appcontact.png)
 
-### 4.1 Deactivate App
+### 4.1 Deactivating an App
 
 Only Free Apps can be deactivated. The deactivated apps will still exist within the company and will invisible to regular users. The **Company Admin** can activate an inactive app.
 
@@ -98,7 +98,7 @@ To deactivate an app, follow these steps:
 
     ![](attachments/settings/settings-delete.png)
 
-### 4.2 Delete App
+### 4.2 Deleting an App
 
 Only Free Apps can be deleted. App deletion cannot be undone and means that ALL DATA WILL BE LOST, including all files on the Team Server and all data in the Free App node (if applicable).
 

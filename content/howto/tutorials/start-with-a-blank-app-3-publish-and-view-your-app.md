@@ -17,6 +17,10 @@ Now that you've gotten started with your app and have worked with some of the de
 
 {{% youtube vEU9kSDfnxw %}}
 
+{{% alert type="warning" %}}
+Some of the naming in the video will differ from the text below.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisite:

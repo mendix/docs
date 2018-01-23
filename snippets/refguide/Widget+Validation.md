@@ -9,6 +9,7 @@ The <strong>Validation type</strong> and <strong>Validation message</strong> pro
 This property indicates whether this widget value should be validated and, if so, how. The possible options are no validation, a predefined validation, or a custom validation.
 
 The possible values of a predefined validation are the following:
+
 * Required – all data types
 * E-mail – string
 * Positive number – decimal, float, integer, long

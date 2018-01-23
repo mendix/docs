@@ -69,7 +69,7 @@ The summary provides a short description of what the operation does.
 
 The description provides a complete overview of what the operation does. You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
 
-### 4 Parameters
+## 4 Parameters
 
 {{% alert type="info" %}}
 
@@ -77,8 +77,8 @@ This feature was introduced in version 7.12.0.
 
 {{% /alert %}}
 
-Parameters table shows Name, Data type and type of the parameter.
-Operation parameters can be either query parameters or path parameters. Type of a parameter is detemined by where in the URL it is placed. If parameter is part of the operations location it will be of type "Path". If it is a part of operations query string it will be of type "Query". 
-Parameters data type is determined by the microflow of the operation. New parameters that are not yet part of the microflow will have "(Not set)" as their data type.
+The **Parameters** table shows the name, data type, and type of the parameter.
 
+Operation parameters can be either query parameters or path parameters. The type of a parameter is detemined by where in the URL it is placed. If the parameter is part of the operations location, it will be of the path type. If it is a part of the operation's query string, it will be of the query type.
 
+The parameter data type is determined by the microflow of the operation. New parameters that are not yet part of the microflow will have "(Not set)" as their data type.

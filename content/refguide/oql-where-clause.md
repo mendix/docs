@@ -29,7 +29,7 @@ This query retrieves all customers whose name is equal to 'Jansen'.
 ```
 SELECT FirstName FROM Sales.Customer
 INNER JOIN Sales.Customer/Sales.Customer_Address/Sales.Address
-WHERE Sales.Address/LastName = 'Rotterdam'
+WHERE Sales.Address/City = 'Rotterdam'
 ```
 
 This query retrieves all customers who live in 'Rotterdam'.

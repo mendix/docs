@@ -2243,6 +2243,14 @@ module.exports = {
       to: "/deployment/mendixcloud/sending-email"
     },
     {
+      from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-amazon-web-services",
+      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
+    },
+    {
+      from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
+      to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
+    },
+    {
       from: "/mendixcloud/Trends",
       to: "/developerportal/operate/trends"
     },

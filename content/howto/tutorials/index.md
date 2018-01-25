@@ -3,7 +3,7 @@ title: "Tutorials"
 description: "These tutorials will teach you how to start with your first app and then build an HRM app, mobile to-do app, and IoT app."
 ---
 
-These tutorials will teach you how to build various apps:
+These tutorials will teach you how to build various apps using different features of the Desktop and Web Modelers:
 
 <table>
   <thead style='display:none;'>

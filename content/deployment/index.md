@@ -23,7 +23,7 @@ From within the Modeler, you can deploy directly to Cloud Foundry-based platform
 
 ## 5 Azure
 
-Deploying to a Azure is possible from the [Azure Marketplace](https://azure.microsoft.com/en-us/marketplace/partners/mendix/mendix-pro/). For details on how to deploy, see [How to Deploy a Mendix App on Azure](/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure).
+Deploying to a Azure is possible from the [Azure Marketplace](https://azure.microsoft.com/en-us/marketplace/partners/mendix/mendix-pro/). For details on how to deploy, see [How to Deploy a Mendix App on Azure](/deployment/azure/how-to-deploy-a-mendix-app-on-azure).
 
 ## 6 On-Premises
 

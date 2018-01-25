@@ -1,5 +1,5 @@
 ---
-title: "Creating a Secure App"
+title: "Create a Secure App"
 category: "Security"
 tags: []
 ---

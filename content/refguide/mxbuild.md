@@ -1,6 +1,6 @@
 ---
 title: "MxBuild"
-category: "Mendix Cloud"
+category: "General"
 ---
 
 MxBuild is a command-line tool that can be used to deploy and build a Mendix Deployment Package from a Mendix Project.

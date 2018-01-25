@@ -4,7 +4,7 @@ parent: "microflow-expressions"
 ---
 
 
-Adding a time unit to a date. In all examples, the first input can be either a new dateTime (depicted in all examples), a variable of type DateTime or an attribute of a domain entity of type DateTime.
+Adding a time unit to a date. In all examples, the first input can be either a new dateTime (depicted in all examples), a variable of type DateTime, or an attribute of a domain entity of type DateTime.
 
 ## addMilliseconds
 

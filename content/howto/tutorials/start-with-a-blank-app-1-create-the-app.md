@@ -17,7 +17,7 @@ This how-to takes you through the basics of development in the Mendix Web Modele
 
 ## 2 Prerequisites
 
-Before starting with this how-to, make sure you have completed the following prerequisite:
+To start this tutorial, make sure you have completed the following prerequisite:
 
 * Create a [Mendix account](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup)
 

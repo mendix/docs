@@ -108,7 +108,7 @@ title: "Platform Portal"
 * We fixed a problem where Team Server branches that were committed without the Mendix Modeler were hidden in the Cloud Portal.
 * We fixed a problem where changing an access restriction profile could display a wrong error about having more than 1 certificate in use.
 
-### September 25th, 2107
+### September 25th, 2017
 
 #### Improvements
 

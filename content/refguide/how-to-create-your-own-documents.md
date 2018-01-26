@@ -20,7 +20,7 @@ Before we start, we recommend you first read the following two Mendix Reference 
 
 Before you start producing a document with Mendix, it is advisable to make a draft version of the document you want to produce. You can sketch something on a piece of paper or ask your customer to provide you with an example. Either way, it is good to have in mind what you want to achieve.
 
-Using your desired document, you can choose a strategy for producing it. Mendix offers numerous options for producing documents using the out-of-the-box document template functionality, but you may find that the Mendix features are not sufficient to generate your document. Don’t worry. For alternative ways of producing documents with Mendix, see section 5: [Alternative Ways of Creating Documents](#Alternative).
+Using your desired document, you can choose a strategy for producing it. Mendix offers numerous options for producing documents using the out-of-the-box document template functionality, but you may find that the Mendix features are not sufficient to generate your document. Don’t worry. For alternative ways of producing documents with Mendix, see [5 Alternative Ways of Creating Documents](#Alternative).
 
 For our example, we’ve concluded that the Mendix functionality does suffice. So, let’s have a look at how this works with an example.
 
@@ -68,7 +68,7 @@ Here is the input parameter:
 
 ![](attachments/how-to-create-your-own-documents/04_InputParameterInclude.png)
 
-In the next step, you will create a new OrderDocument. This object will store the actual document. Set the reference to the **Order** variable and the *name* of the document:
+In the next step, you will create a new OrderDocument. This object will store the actual document. Set the reference to the **Order** variable and the name of the document:
 
 ![](attachments/how-to-create-your-own-documents/05_CreateOrderDocument.png)
 
@@ -76,7 +76,7 @@ Now you need to have a **Language** object. In our case, the **Customer** holds 
 
 ![](attachments/how-to-create-your-own-documents/06_GetLanguage.png)
 
-The next step is to use the *generate document* activity. Within this activity, you can use the available variables and select the document template to create the document. However, the document template does not exist yet, so you need to create it and place it in your folder:
+The next step is to use the **Generate document** activity. Within this activity, you can use the available variables and select the document template to create the document. However, the document template does not exist yet, so you need to create it and place it in your folder:
 
 ![](attachments/how-to-create-your-own-documents/07_DocumentTemplateAdded.png)
 
@@ -88,13 +88,13 @@ This is the document template configuration:
 Based on the changes you make to the selected template, the arguments will change.
 {{% /alert %}}
 
-The *generate document* activity has been added:
+The **Generate document** activity has been added:
 
 ![](attachments/how-to-create-your-own-documents/09_DocumentTemplateMicroflow.png)
 
 After you have configured the general settings of the document template, you do not need a seperate commit for **NewOrderDocument**. This entity is automatically committed via the document template activity.
 
-Now that you have set up the generate document configuration, you can configure the template itself.
+Now that you have set up the **Generate document** configuration, you can configure the template itself.
 
 {{% alert type="info" %}}
 Make sure to set the correct entity access for entities and their attributes used in the document template. Read access is a must for those attributes that are shown in the template. Here is a **Customer** entity that is configured to **Read, Write** for the **User** module role:
@@ -109,7 +109,7 @@ In this example, the following document template is available:
 
 ![](attachments/how-to-create-your-own-documents/11_DocumentTemplate.png)
 
-In this document template, you start with a data view containing the order details. From this order, you can get the customer information and, from the OrderLine(s), the information about the purchased products.
+In this document template, you start with a data view containing the order details. From this order, you can get the customer information and, from the order lines, the information about the purchased products.
 
 The data view makes use of tables, table cells, labels, pictures, line breaks, and a template grid to compose the document.
 
@@ -119,7 +119,7 @@ Now that you have created the document template, you can see that there is an er
 
 To resolve this error, open the **Generate document** activity of the microflow. When the activity is opened, the parameter mapping will be updated and the variable allocated to the mapping parameter.
 
-Now, your *Generate document* configuration should look like this:
+Now, your **Generate document** configuration should look like this:
 
 ![](attachments/how-to-create-your-own-documents/13_DocumentTemplate.png)
 

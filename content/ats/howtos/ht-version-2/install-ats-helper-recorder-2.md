@@ -66,11 +66,12 @@ To install the ATS Recorder, follow these steps:
 
     ![](attachments/install-ats-helper-recorder-2/information-icon.png)
     
-    This opens the **ATS Information** dialog box:
-    
-    ![](attachments/install-ats-helper-recorder-2/ats-information-screen.png)
+    This opens the **ATS Information** dialog box.    
 
 2.	Click the **ATS Recorder (Chrome Web Store)** link to go to the Chrome Web Store.
+
+![](attachments/install-ats-helper-recorder-2/ats-information-screen-recorder.png)
+
 3.  Click **ADD TO CHROME** to add the ATS Recorder extension:
 
     ![](attachments/install-ats-helper-recorder-2/add-ats-recorder.png)

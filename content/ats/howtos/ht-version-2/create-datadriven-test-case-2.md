@@ -147,7 +147,7 @@ The following steps explain how to create and update a master data set from an E
 
 1. Open your app in ATS and go to the **Test Cases** menu item.
 2. Click the **Test Data** tab.
-3.  Click **New Data Set**
+3.  Click **New Data Set**.
 
     ![](attachments/create-datadriven-test-case-2/test-cases-data-sets-new-data-set.png)
 

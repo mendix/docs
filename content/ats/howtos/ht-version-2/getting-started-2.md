@@ -136,7 +136,7 @@ To create a test case, follow these steps:
 
 ### 4.2 Adding Test Steps
 
-Now that you have created a test case, the next step is to configure your test case and start adding test steps. ATS provides two different tools to help add test steps: ATS helper (Add) and ATS recorder (Record). We advise you to use the recorder as much as possible to add test steps. But, the ATS Recorder might not be able to record certain manual test steps. So, we advise to add steps in the following order:
+Now that you have created a test case, the next step is to configure your test case and start adding test steps. ATS provides two different tools to help add test steps: ATS helper (Setup step manually) and ATS recorder (Record step). We advise you to use the recorder as much as possible to add test steps. But, the ATS Recorder might not be able to record certain manual test steps. So, we advise to add steps in the following order:
 * Record your manual test steps using the ATS Recorder
 * Adding test steps using the ATS Helper, see [Finding the action you need](/bestpractices/bp-version-2/finding-the-action-you-need-2).
 * Create a custom action, see [Create custom action](/howtos/ht-version-2/create-custom-actions-2.md).
@@ -158,7 +158,7 @@ With the ATS Recorder plugin installed, you can start a recording session at any
 
 To use the recorder function, follow these steps:
 
-1. Click **Record** while inside a test case in ATS, which opens the **Recording Session** page. On this page you can manage your recording session.
+1. Click **Record step** while inside a test case in ATS, which opens the **Recording Session** page. On this page you can manage your recording session.
 
 ![](attachments/getting-started-2/click-record.png)
 
@@ -232,7 +232,7 @@ To create a test suite, follow these steps:
 
 Here you can see all the steps that are in your test suite. Each step is either a test suite or a test step.
 
-You add a test case to your test suite by clicking the **Search** button or by using the **Add step** drop-down. When you click **Search**, you can also click **Create a new Test Case** if you want to add a complete new test case to your test suite.
+You add a test case to your test suite by clicking the **Select and add test case/suite** button.
 
 ![](attachments/getting-started-2/add-test-case.png)
 

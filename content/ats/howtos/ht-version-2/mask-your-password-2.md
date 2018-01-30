@@ -41,7 +41,7 @@ Clicking **New Action** opens the **Create new** dialog box:
 
 This opens the **Action Details** page. ATS displays the **Name** and **Description** on this page.
 
-![](attachments/mask-your-password-2/action_details_page.png)
+![](attachments/mask-your-password-2/action_details-page.png)
 
 7. Add the **Open application** action.
 8. Enter a description of the test step. Also set the **Application URL** input parameter to **Environment URL** below **Global constant values**.
@@ -79,18 +79,18 @@ To check that your password is masked follow these steps:
 
 ![](attachments/mask-your-password-2/custom-action-added.png)
 
-3. Click the **Edit icon** next to the **Password** input parameter. 
+3. Click the **drop-down** next to the **Password** input parameter. 
 
-Clicking the **Edit icon** opens the **Edit Input Value** dialog:
+Clicking the **drop-down** opens the input field:
 
 ![](attachments/mask-your-password-2/password-edit-input-value.png)
 
-4. Enter the password in the **Password** field. Due to the parameter settings, bullets represent the password you enter.
-5. Click **Save**.
+4. Enter the password in the **Password** field.
+5. Select the **Constant value**.
 
 ![](attachments/mask-your-password-2/masked-password-c.png)
 
-After clicking **Save** five asterisks represent your password in the test step:
+After selecting the constant value, five asterisks represent your password in the test step:
 
 ![](attachments/mask-your-password-2/masked-password-test-step.png)
 

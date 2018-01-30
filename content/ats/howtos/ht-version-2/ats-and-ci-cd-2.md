@@ -122,6 +122,10 @@ Keep the unique ID at hand for later on.
 
 You now created a CI/CD template which you can execute using a CI/CD pipeline.
 
+### 4.3 CI/CD webservice user
+
+The CI/CD in ATS is using a webservice with authentication. Please use the standard username which is ATSAPIUser and the standard password which is ATSAPIUser.
+
 ## 5 Configure ATS in your pipeline (Example)
 
 Using the CI/CD API key and the unique ID of the CI/CD template you can execute a test case from your CI/CD pipeline. In this chapter, you find an example for Jenkins.
@@ -131,7 +135,6 @@ Using the CI/CD API key and the unique ID of the CI/CD template you can execute 
 * Have some Jenkins experience
 * Know how to configure CI/CD in ATS:
   * Configure a CI/CD Template in ATS
-  * Configure a Webservice user in ATS
   * Create the CI/CD API key in ATS
   * Find your AppID in Mendix Sprintr
 
@@ -150,8 +153,8 @@ This is only an example for Jenkins on Linux in shell scripting and can be writt
 #set -x
 
 # Set your CI/CD variables
-USERNAME=<put username>
-PASSWORD=<put password>
+USERNAME=ATSAPIUser
+PASSWORD=ATSAPIUser
 APPAPITOKEN=<put AppAPIToken>
 APPID=<put AppID>
 JOBTEMPLATEID=<put JobTemplateID>

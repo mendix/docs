@@ -60,7 +60,7 @@ To use the **Extract Action** button, follow these steps:
     
     ![](attachments/custom-action-basics-2/test-case-extract-action.png)
 
-    This will open **Action - Set Details**.
+    This opens the **Action - Set Details** dialog box.
 5. Enter a name in the **Name** field (for example, *Set Drop-Down*).
 6. Enter a description in the **Description** field (for example, *This action sets the drop-down menu to a specific value*).
 7.  Click **Close**:
@@ -71,7 +71,7 @@ To use the **Extract Action** button, follow these steps:
     
     ![](attachments/custom-action-basics-2/test-case-open-new-action.png)
 
-Both ways open the **Action Details** page. This page works the same as the **Test Case Details** page. You can add test steps by searching for an action in the test step or by clicking **Record**.
+Both ways open the **Action Details** page. This page works the same as the **Test Case Details** page. You add test steps by clicking **Setup step manually** or by clicking **Record step**.
 
 ![](attachments/custom-action-basics-2/action-details-page-add-record.png)
 

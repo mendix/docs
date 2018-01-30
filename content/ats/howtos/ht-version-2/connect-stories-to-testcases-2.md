@@ -82,7 +82,7 @@ The following steps describe how to link a test case to a user story:
 
 ![](attachments/connect-stories-to-testcases-2/add-test-to-story.png)
 
-Clicking **Add test** opens the **Add Test Case/Suite to Story** Dialog:
+Clicking **Add test** opens the **Select item** Dialog box:
 
 ![](attachments/connect-stories-to-testcases-2/add-test-case-to-story-dialog.png)
 
@@ -90,17 +90,20 @@ In the **Add Test Case/Suite to Story** Dialog you can select to create a new te
 
 ### 5.1 Connecting a New Test Case to a User Story
 
-1. In the **Add Test Case/Suite to Story** Dialog click the **Create new test** tab.
+1. In the **Select item** Dialog box click **Create new test case**.
+
+    ![](attachments/connect-stories-to-testcases-2/create-new-test-case.png)
+
 2. Set the type to **Test Case**.
-2. Enter a name in the **Name** field. Use the predefined naming structure.
-3. Enter a description in the **Description** field. 
-4. Use the **Template** referenceSelector in case you have a test case that you want to use as a template. ATS copies all the test steps of the template to the new test case.
-    * To add a template click the arrow icon. This opens the **Select template** Dialog.
-    * In the Dialog search and select the test case you want to add as template and click **Save**.
+3. Enter a name in the **Name** field. Use the predefined naming structure.
+4. Enter a description in the **Description** field. 
+5. Use the **Template** referenceSelector in case you have a test case that you want to use as a template. ATS copies all the test steps of the template to the new test case.
+    * To add a template click the arrow icon. This opens the **Select item** Dialog box.
+    * In the Dialog search and select the test case you want to add as template and click **Select**.
 
     ![](attachments/connect-stories-to-testcases-2/select-template.png)
     
-5. Click **Create & Open** to create and open your test case. This is useful if you want to edit your test case. Click **Create** to create the test case, but not open it:
+6. Click **Create & Open** to create and open your test case. This is useful if you want to edit your test case. Click **Create** to create the test case, but not open it:
 
 ![](attachments/connect-stories-to-testcases-2/new-test-case-e.png)
 
@@ -121,9 +124,8 @@ On the **Edit Story** page you can do the following:
 
 ### 5.2 Linking an existing Test Case to a User Story
 
-1. In the **Add Test Case/Suite to Story** Dialog click the **Create new test** tab.
-2. Search and select the test case you want to link to the Story.
-3. Click **Add selected**:
+1. In the **Select Item** Dialog search and select the test case you want to link to the Story.
+2. Click **Select**:
 
 ![](attachments/connect-stories-to-testcases-2/add-existing-test-case-e.png)
 

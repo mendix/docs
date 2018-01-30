@@ -108,7 +108,7 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 
     ![](attachments/create-unsupported-widget-2/cab-02-switch-2/mendix-switch-findwidgetchild-description-output.png)
 
-9.  Click the Mendix switch to change its state. Add the [*Click/Doubleclick*](/ats/refguide/rg-version-1/clickdoubleclick) action, because this action is a Mendix action:
+9. You click the Mendix switch to change its state. So, add the [*Click/Doubleclick*](/ats/refguide/rg-version-1/clickdoubleclick) action, because this action is a Mendix action:
 
     ![](attachments/create-unsupported-widget-2/cab-02-switch-2/mendix-switch-click-doubleclick-add.png)
 

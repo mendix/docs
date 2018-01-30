@@ -21,8 +21,8 @@ AppDynamics is a flexible application performance management tool that provides 
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Create an AppDynamics account by signing up here: [https://portal.appdynamics.com/account/signup/community/](https://portal.appdynamics.com/account/signup/community/)
-* AppDynamics provides two different options for hosting their environment, the SaaS or on-premises solution. If you want to install on-premises AppDynamics, see this article: [https://docs.appdynamics.com/display/PRO14S/Get+Started+with+AppDynamics+On-Premise](https://docs.appdynamics.com/display/PRO14S/Get+Started+with+AppDynamics+On-Premise)
+* Create an AppDynamics account by signing up [here](https://portal.appdynamics.com/account/signup/community/)
+* AppDynamics provides two different options for hosting their environment: the SaaS or on-premises solution; if you want to install AppDynamics on-premises, see [Get Started with AppDynamics On-Premise](https://docs.appdynamics.com/display/PRO14S/Get+Started+with+AppDynamics+On-Premise)
 
 ## 3 Setting Up
 
@@ -37,7 +37,7 @@ To set up AppDynamics, follow these steps:
     ![](attachments/19202618/home.png)
 2. Select **Java**.
 3. This will open up the configuration screen for your AppDynamics application. 
-4. At step 4, download the Agent Installer and extract it to any directory, but remember the path as this will be used later for integrating the Java Agent with your Mendix application:
+4. Download the Agent Installer and extract it to any directory (but remember the path, as this will be used later for integrating the Java Agent with your Mendix application):
 
    ![](attachments/19202618/download-installer.png)
     
@@ -70,17 +70,19 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 
      ![](attachments/19202618/19398903.png)
 
-3. In the **Extra JVM parameters** field on the **Server** tab, add `-javaagent:<path-to-javaagent>javaagent.jar` and `-Dappagent.install.dir=<path-to-javaagent>` __without__ the `javaagent.jar`:
+3. In the **Extra JVM parameters** field on the **Server** tab, add `-javaagent:<path-to-javaagent>javaagent.jar` and `-Dappagent.install.dir=<path-to-javaagent>` WITHOUT the `javaagent.jar`:
+
     ![](attachments/19202618/edit-configuration-appagent-jar.png)
 
     ![](attachments/19202618/edit-configuration-d-appagent.png)
 
-4. As the last step of setting up your Mendix application you will need to set a few extra configuration values in the `AppServerAgent/ver4.x/conf/controller-info.xml` file (where `x` is the version of AppDynamics you downloaded):
-    * `application-name` (for instance MyMendixApp, this will be the name that will be used within AppDynamics).
-    * `tier-name` (for instance tier-1).
-    * `node-name` (for instance node-1).
+4. As the last step of setting up your Mendix application, set the following extra configuration values in the `AppServerAgent/ver4.x/conf/controller-info.xml` file (where `x` is the version of AppDynamics you downloaded):
 
-5. Run your Mendix Application to generate data for AppDynamics. Sometimes AppDynamics does not automatically find your application in the configuration screen, make sure to check the applications tab whether the application shows up there.
+    * `application-name` (for instance *MyMendixApp*; this will be the name that will be used within AppDynamics)
+    * `tier-name` (for *instance tier-1*)
+    * `node-name` (for *instance node-1*)
+
+5. Run your Mendix application to generate data for AppDynamics. Sometimes AppDynamics does not automatically find your application in the configuration screen, so make sure to check the **Applications** tab for whether the application shows up there.
 
 ## 4 Configuring Business Transactions
 
@@ -104,15 +106,15 @@ To configure these business transactions, follow these steps:
 
 To monitor your actions as business transactions, follow these steps:
 
-1. From the **Add Rule** page, select the Custom Match Rule, **Java** as the Agent Type and **POJO** as the entry point type:
+1. From the **Add Rule** page, select **Java** for the **Agent Type** of the custom match rule and **POJO** as the **Entry Point Type**:
 
     ![](attachments/19202618/add-rule-java-pojo.png)
 
-2. Fill in the **Summary** tab with **POJO** as Entry Point Type, the Name field as **ExecutionAction**, Enabled checkbox selected and the Scope field to **Default Scope**.
+2. Fill in the **Summary** tab with **POJO** as the **Entry Point Type**, then enter *ExecutionAction* for the **Name**, click the **Enabled** check box, and set **Scope** to **Default Scope**:
 
     ![](attachments/19202618/add-rule-summary-execution-action.png)
 
-3. Fill in the **Rule Configuration** tab with the information presented in this screenshot (the yellow highlighted field should be *com.mendix.core.actionmanagement.CoreAction*):
+3. Fill in the **Rule Configuration** tab with the information presented in this screenshot (the yellow highlighted field should be **com.mendix.core.actionmanagement.CoreAction**):
 
     ![](attachments/19202618/add-rule-configuration-execution-action.png)
 
@@ -124,15 +126,15 @@ To monitor your actions as business transactions, follow these steps:
 
 To set up monitoring on the request handlers, follow these steps:
 
-1. From the **Add Rule** page, select the Custom Match Rule, **Java** as the Agent Type and **POJO** as the entry point type:
+1. From the **Add Rule** page, select **Java** for the **Agent Type** of the custom match rule and **POJO** as the **Entry Point Type**:
 
     ![](attachments/19202618/add-rule-java-pojo.png)
 
-2. Fill in the **Summary** tab with **POJO** as Entry Point Type, the Name field as **RequestHandler**, Enabled checkbox selected and the Scope field to **Default Scope**.
+2. Fill in the **Summary** tab with **POJO** as **Entry Point Type**, then enter *RequestHandler* for the **Name**, click the **Enabled** check box, and set **Scope** to **Default Scope**:
 
     ![](attachments/19202618/add-rule-request-handler.png)
 
-3. Fill in the **Rule Configuration** tab with the information presented in this screenshot (the yellow highlighted field should be *com.mendix.externalinterface.connector.RequestHandler*):
+3. Fill in the **Rule Configuration** tab with the information presented in this screenshot (the yellow highlighted field should be **com.mendix.externalinterface.connector.RequestHandler**):
 
     ![](attachments/19202618/add-rule-configuration-request-handler.png)
 
@@ -142,7 +144,8 @@ To set up monitoring on the request handlers, follow these steps:
 
 ## 5 Web Services
 
-AppDynamics can automatically detect web service calls. This feature is enabled by default and can be found in the service endpoints menu item:
+AppDynamics can automatically detect web service calls. This feature is enabled by default and can be found in the **Service Endpoints** menu item:
+
 ![](attachments/19202618/service-endpoints.png)
 
 ## 6 Database

@@ -28,9 +28,9 @@ Follow these steps to quickly start developing your new app:
 
 The **What's next** category at the bottom of the page presents the following options:
 
-* **Show me the basics** includes a link to the [Getting Started learning path](https://gettingstarted.mendixcloud.com/link/path/2)
-* **I've got a question** includes links to the Mendix [Forum](https://gettingstarted.mendixcloud.com/index3.html) and the [Documentation](https://docs.mendix.com/)
-* **I'm ready to get serious** includes a link to the [Become a Rapid Developer learning path](https://gettingstarted.mendixcloud.com/link/path/10)
+* **Show me the basics** includes a link to the Getting Started training course](https://gettingstarted.mendixcloud.com/link/courses/gettingstarted)
+* **I've got a question** includes links to the Forum](https://gettingstarted.mendixcloud.com/index3.html) and the [Documentation](https://docs.mendix.com/)
+* **I'm ready to get serious** includes a link to the online [Introduction Course](https://gettingstarted.mendixcloud.com/link/courses/introductioncourse)
 
 ## 3 Web Modeler
 

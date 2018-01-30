@@ -1,86 +1,79 @@
 ---
-title: "Import a Large Excel File"
+title: "Import a large Excel file"
 category: "Tips & Tricks"
 ---
+Every now and then it happens that a client asks you to import some data. It doesn’t look like a lot of effort at first glance so you add it as a task and plan to pick it up at the end of the day.
 
-Every now and then a client asks you to import some data. It doesn’t look like a lot of effort at first glance, so you add it as a task and plan to pick it up at the end of the day.
+Looking at the sheet you realize that there are more than hundred columns which need to be imported into the application. This means manual labour. A lot of it. As every column represents an attribute, creating 100+ new attributes in an import entity will take ages.
 
-Looking at the sheet later, you realize that there are more than hundred columns that need to be imported into the application. This means manual labour, a lot of it. As every column represents an attribute, creating 100+ new attributes in an import entity would take ages if you did it manually.
+…If you do it manually.
 
-The trick is to use XML-to-domain mapping.
+Here’s the trick:
 
-We will use XML-to-domain mapping to create a new import entity from an Excel sheet quickly in a semi-automated way.
+It’s the XML to domain mapping.
 
-**This how-to will teach you how to do the following:**
+We will use the XML to domain mapping to create a new import entity from an Excel sheet quickly, and semi-automated. Just follow the next steps to get the hang of it!
 
-* Quickly import a large Excel file with a lot of columns
+**After completing this how-to you will know:**
 
-## 1 Prerequisites
+*   How to quickly import a large Excel file with many columns
 
-Before starting this how-to, make sure you have completed the following prerequisite:
+## 1. Preparation
 
-* Have an app project with the [MxModel Reflection](https://appstore.home.mendix.com/link/app/69/) and [Excel Importer](https://appstore.home.mendix.com/link/app/72/) modules installed and configured from the Mendix App Store
+Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
-## 2 Modifying your Excel Sheet
+*   Have an app with the MxObject reflection and Excel Importer installed and configured from the App Store.
 
-The Excel sheet you received in this scenario contains almost every country in the world, and for every country, some data is stored. This data has to be imported into your application.
+## 2\. Modifying your Excel sheet
 
-You can find the Excel sheet here: [Countries](attachments/Excel/Countries.xlsx).
+The Excel sheet you received practically contains every country in the world. In every country some data is stored. The data has to be imported into your application.
 
-You are going to make an XSD schema from the headers in the Excel sheet so that you can import this later into the model.
+You can find the Excel sheet here:[ _http://1drv.ms/1Rlh7rR_](http://1drv.ms/1Rlh7rR)
 
-To modify your Excel sheet, follow these steps:
+We are going to make an XSD schema from the headers in the Excel sheet, so we can import this later into our model.
 
 1.  Select the header row with all the country names.
-2.  Copy and paste them in a new sheet using the transpose function:
-
-    ![](attachments/19202606/19398887.png)
-     
-    ![](attachments/19202606/19398888.png)
-    
-    Your headers should be listed vertically and your sheet should look like this: [Countries Transposed](attachments/Excel/CountriesTransposed.xlsx).
-
+2.  Copy and paste them in a new sheet using the transpose function.
+     ![](attachments/19202606/19398887.png)![](attachments/19202606/19398888.png)
+    Your headers should be listed vertically and your sheet should look like this:[ _http://1drv.ms/1Rlhd2E_](http://1drv.ms/1Rlhd2E)
     We are now ready to add some tags around the column.
-
 3.  Add one column to the left.
-4.  Place the following string in cell **A1**:
+4.  Place the following string in cell A1:
 
     ```text
     <xs:element type="xs:string" name="
     ```
 
-5.  Drag it down all the way to the last country.
-
+5.  Now drag it down all the way to the last country.
     ![](attachments/19202606/19398889.png)
 
-6.  In cell **C1**, enter the following string:
+6.  In cell C1 enter the following string:
 
     ```text
     "/>
     ```
 
-7.  Like you did with the previous string, drag it down to the last country. The Excel sheet should now look like this: [Countries with Tags](attachments/Excel/CountriesWithTags.xlsx).
+7.  And like you did with the previous one, drag it down to the last country. The Excel sheet should look something like this now:
 
-    ![](attachments/19202606/19398890.png)
-    
+    ![](attachments/19202606/19398890.png)[_
+    http://1drv.ms/1RlhmmP_](http://1drv.ms/1RlhmmP)
 
-    Now you have to get the three different columns into one column. This is necessary because later on, you want to copy the whole column into an XSD file.
-
-8.  Select cell **D1** and type in the following into the formula box:
+    Now we have to get the three different columns into one column. This is needed because later on we want to copy the whole column into an XSD file.
+8.  Select cell D1 and type the following into the formula box:
 
     ```text
     =(A1&B1&C1)
     ```
 
-9.  Drag the cells down like you’ve done with column **A1** and **C1**. Now your column **D** should have the columns **A**, **B**, and **C** combined into one, and your sheet should look like this: [Countries with Tags and Column D](attachments/Excel/CountriesWithTagsAndColumnD.xlsx).
+9.  Drag the cells down like you’ve done with column A1 and C1\. Now your column D should have all the columns A,B and C combined into one. Your sheet should look like this:[ _http://1drv.ms/1SFD7j1_](http://1drv.ms/1SFD7j1)
 
-## 3 Preparing Your XSD File
+## 3\. Preparing your XSD file
 
-We have used some of the basic functionalities of Excel to help us out creating the first part of our XSD structure. For a proper XSD file, we still need to have a header and a footer. This is where your favourite text editor comes in (for example, Brackets).
+We have used some of the basic functionalities of Excel to help us out creating the first part of our XSD structure. For a proper XSD file we still need to have an header and a footer.
 
-To prepare your XSD file, follow these steps:
+This is where your favourite text editor comes in. I prefer to use Brackets.
 
-1.  Open a new file and call it *CountriesImport.xsd*.
+1.  Open a new file and call it “CountriesImport.xsd”.
 2.  Place this text as the header of your XSD file:
 
     ```text
@@ -91,8 +84,9 @@ To prepare your XSD file, follow these steps:
     <xs:sequence>
     ```
 
-3.  Go back to your sheet, copy the content from column **D**, and paste it underneath the header.
-4.  Now it’s time to place the footer, which will complete the XSD file. Place this text as for footer:
+3.  Go back to your sheet, copy the content from column D and paste it underneath the header.
+    Now it’s time to place the footer which will complete the XSD file. 
+4.  Place this text as the footer of your XSD file:
 
     ```text
     </xs:sequence>
@@ -101,39 +95,34 @@ To prepare your XSD file, follow these steps:
     </xs:schema>
     ```
 
-    Your file should look like this: [Country Import](attachments/Excel/CountryImport.xsd).
+    Your file should look like this:
+    [_http://1drv.ms/1RlhrXy_](http://1drv.ms/1RlhrXy)
 
 5.  Don’t forget to save it!
 
-## 4 Importing into Your Application Project
+## 4\. Import into your application
 
-The XSD file is ready to be imported into the Desktop Modeler. To import it, follow these steps:
+The xsd is ready to be imported into the modeller.
 
-1.  Open your app project and create a new XSD schema:
+1.  Open your app and create a new XSD schema.
 
-    ![](attachments/19202606/19398893.png)
-    
-    ![](attachments/19202606/19398894.png)
+     ![](attachments/19202606/19398893.png)![](attachments/19202606/19398894.png)
+2.  With the new XSD schema created, it’s time to create the XML to Domain mapping which will perform the trick for you and make your life a bit easier.
 
-2.  With the new XSD schema created, it’s time to create the XML-to-domain mapping that will perform the trick for you and make your life a bit easier.
+     ![](attachments/19202606/19398895.png)![](attachments/19202606/19398896.png)
+3.  Make sure to check all the attributes!
 
-    ![](attachments/19202606/19398895.png)
-    
-    ![](attachments/19202606/19398896.png)
-
-3.  Be sure to check all the attributes! After clicking **OK**, you should see a mapping entity with all your countries.
-4.  You will now generate a real entity from it that you can use as an import table for your Excel sheet. Click **Map automatically**:
+    After you pressed OK, you should see a mapping entity with all your countries in there. Let’s generate a real entity from it, which you can use as an import table for your Excel sheet.
+4.  Simply press “Map automatically…”
 
     ![](attachments/19202606/19398897.png)
 
-    There’s your entity!
+    …and there’s your entity!
 
-    ![](attachments/19202606/19398898.png)
-
-5.  Go to your domain model, set the entity’s **Persistable** property to **Yes**, and the job is done!
+     ![](attachments/19202606/19398898.png)
+5.  Go to your domain model, set the entity’s property to persistable and the job is done!
 
     ![](attachments/19202606/19398899.png)
+6.  To keep your application clean, you could delete the XSD schema and XML to Domain files from your project.
 
-6.  To keep your application clean, you can delete the XSD schema and XML-to-domain files from your project.
-
-Happy modeling!
+Happy modelling!

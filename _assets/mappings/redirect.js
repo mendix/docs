@@ -164,7 +164,7 @@ module.exports = {
     },
     {
       from: "/MXSDK/Your+learning+path+for+the+Mendix+SDK",
-      to: "/apidocs-mxsdk/mxsdk/tutorial-for-the-mendix-sdk"
+      to: "/apidocs-mxsdk/mxsdk/your-learning-path-for-the-mendix-sdk"
     },
     /****************************************************
      * APPSTORE
@@ -2239,16 +2239,12 @@ module.exports = {
       to: "/deployment/mendixcloud/securing-outgoing-connections-from-your-application"
     },
     {
+      from: "/mendixcloud/Security+constraints+in+the+Mendix+Cloud",
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
+    },
+    {
       from: "/mendixcloud/Sending+Email",
       to: "/deployment/mendixcloud/sending-email"
-    },
-    {
-      from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-amazon-web-services",
-      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
-    },
-    {
-      from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
-      to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
     },
     {
       from: "/mendixcloud/Trends",
@@ -3184,6 +3180,14 @@ module.exports = {
     {
       from: "/refguide4/Security",
       to: "/refguide4/security"
+    },
+    {
+      from: "/refguide4/Security+constraints+in+the+Mendix+Cloud",
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
+    },
+    {
+      from: "/refguide4/security-constraints-in-the-mendix-cloud",
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
     },
     {
       from: "/refguide4/Select+All+Button",
@@ -4727,6 +4731,14 @@ module.exports = {
     {
       from: "/refguide5/Security",
       to: "/refguide5/security"
+    },
+    {
+      from: "/refguide5/Security+constraints+in+the+Mendix+Cloud",
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
+    },
+    {
+      from: "/refguide5/security-constraints-in-the-mendix-cloud",
+      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
     },
     {
       from: "/refguide5/Select+all+button",

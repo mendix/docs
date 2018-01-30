@@ -76,9 +76,3 @@ To install the ATS Recorder, follow these steps:
     ![](attachments/install-ats-helper-recorder/add-ats-recorder.png)
 
 See [How to Create a Test Case](create-a-test-case) for more information on how to use the ATS Helper.
-
-## 5 Next up
-
-You have now learned how to install the ATS tools, so the next how-to is [How to Create a Test Case](create-a-test-case).
-
-For an overview of all the how-tos and the structure, see [ATS 1 How-to's](ht-version-1). We advise following the how-to's in the order listed there.

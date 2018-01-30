@@ -75,6 +75,7 @@ There are some features missing in v4. Mendix will implement the following featu
 
 * Using client certificates for access restriction profiles is not available; for outgoing connections, client certificates are available
 * File storage usage only shows the number of files, not the amount of used storage
+* The custom health check microflow is not used by the alerting system
 * Application CPU alerts are not sent
 * Archived logs can only be downloaded, not viewed in the browser
 * The database status is not visible on the node details screen

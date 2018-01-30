@@ -29,15 +29,13 @@ If you only want to _display_ information, you can also use the text box. This h
 
 The reference selector allows the end user to select objects by using either a drop-down or a pop-up page. If you choose to select using a page, the drop-down functionality will be replaced with a button to the right of the widget that will open a selection pop-up.
 
-<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Page</td><td class="confluenceTd">Select the reference using a pop-up page.</td></tr><tr><td class="confluenceTd">Drop-down</td><td class="confluenceTd">Select the reference using a drop-down.</td></tr></tbody></table>
-
-{{% alert type="success" %}}
+<table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Page</td><td class="confluenceTd">Select the reference using a pop-up page.</td></tr><tr><td class="confluenceTd">Drop-down</td><td class="confluenceTd">Select the reference using a drop-down.</td></tr></tbody></table>{{% alert type="success" %}}
 
 The advantage of a selecting using a drop-down is that it is very efficient; no page needs to be opened. The advantage of selecting using a page is that the end user can search the objects. If there are a lot of objects (say, more than 20) to select from, selecting using a page is advisable.
 
 {{% /alert %}}
 
-*Default value:* Drop-down
+_Default value:_ Drop-down
 
 ### Select page
 
@@ -55,25 +53,25 @@ You can generate a new page to show by right-clicking the widget and selecting '
 
 The precision of a value describes the number of digits that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
 
-*Default value:* 2
+_Default value:_ 2
 
 ### Group digits (only for numeric attributes)
 
 For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property determines whether or not such a delimiter is used. Which delimiter is used depends on the language of the end user.
 
-*Default value:* No
+_Default value:_ No
 
 ### Date format (only for attributes of type date and time)
 
 The date format determines whether the reference selector displays the date, time, date and time, or a custom variation of the linked attribute. How the date and/or time are formatted depend on the localization of the user viewing the data.
 
-*Default value:* Date
+_Default value:_ Date
 
 ### Required
 
 This property indicates whether this widget must be filled in by the end user or not. If set to true, this widget can not be left empty and a message will be shown if the end user presses the 'Save' button.
 
-*Default value:* False
+_Default value:_ False
 
 ### Required message
 
@@ -135,14 +133,12 @@ A reference selector can be constrained by one or more paths. This is typically 
 {{% alert type="info" %}}
 
 ![](attachments/819203/917938.png)
-
-*Domain model*
+_Domain model_
 
 In the domain model the order line has associations of type reference to both category and product. In this form, these can be edited with two reference selectors. The third association, from product to category, describes the relation between those two entities. Such a 'triangle' shaped part of the domain model is what makes constraining possible.
 
 ![](attachments/4522272/4751451.jpg)
-
-*Form*
+_Form_
 
 The page has two reference selectors, one for category and one for product. The one for product is constrained by the path through the domain model that forms the triangle.
 
@@ -158,7 +154,7 @@ The property 'Apply context' indicates whether the context mechanism will be use
 
 This property has no effect if a microflow is used to fill the reference selector.
 
-*Default value:* False
+_Default value:_ False
 
 ### Remove from context
 
@@ -172,7 +168,7 @@ This property has no effect if a microflow is used to fill the reference selecto
 
 The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If no sort order is specified, the reference selector sorts on the displayed attribute.
 
-*Default value:* No sort order
+_Default value:_ No sort order
 
 ## Data source properties
 
@@ -204,7 +200,7 @@ A label can be used to described the purpose of the widget to the user. The labe
 
 This property determines whether the label is rendered and the widget is wrapped in a form group.
 
-*Default value:* No
+_Default value:_ No
 
 ### Label caption
 
@@ -218,7 +214,7 @@ The editable property indicates whether the end user will be able to change the 
 
 <table><thead><tr><th class="confluenceTh">Value</th><th class="confluenceTh">Description</th></tr></thead><tbody><tr><td class="confluenceTd">Default</td><td class="confluenceTd">The value is editable if security allows it (i.e. if the user that is signed in has write rights to the selected attribute).<br class="atl-forced-newline"></td></tr><tr><td class="confluenceTd">Never<br class="atl-forced-newline"></td><td class="confluenceTd">The value is never editable.<br class="atl-forced-newline"></td></tr><tr><td class="confluenceTd">Conditional<br class="atl-forced-newline"></td><td class="confluenceTd">The value is editable if security allows it and the specified condition holds. (see below)<br class="atl-forced-newline"></td></tr></tbody></table>
 
-*Default value:* Default
+_Default value:_ Default
 
 ### Condition
 
@@ -295,7 +291,7 @@ This will result in a blue background
 
 The tab index influences the order in which the end user navigates through the page using the tab key. By default tab indices are zero and the tab order is determined automatically by the client system. A value of minus one (-1) means that the widget will be skipped when tabbing through the page.
 
-*Default value:* 0
+_Default value:_ 0
 
 ## Related articles
 

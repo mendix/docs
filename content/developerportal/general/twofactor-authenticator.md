@@ -11,7 +11,7 @@ In the **Deploy** and **Operate** categories of the [Developer Portal](http://ho
 
 This document describes the purpose and the fuctionality of two-factor authentication.
 
-## 2 The Purpose
+## 2 The Puropose
 
 Two-factor authentication (2FA) validates a second authentication mechanism next to your password. It is required for Mendix Cloud node activities done on a production environment. 2FA ensures that you are authenticated when performing sensitive activities, such as deploying packages and handling production data.
 

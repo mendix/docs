@@ -50,32 +50,27 @@ Access restrictions can be configured within the Developer Portal. They can be f
 Examples are the `ws-doc` or `rest-doc` endpoints that enumerate all the published web and REST services of the application. An attacker could use this information to discover possible areas to exploit.
 
 As a Mendix developer, you can take the following preventative measures:
-
 * Disable unused endpoints within the Mendix Cloud Portal completely by applying a "deny all access" preset on them
 * Apply IP filtering or client certificate authentication to restrict access
 
 Keep the following in mind:
-
 * If there are other application-specific request handlers that should have an access restriction applied, then click **New** to add them as additional paths
 * The URLs of test and acceptance environments can easily be guessed; in order to take effective measures, the restrictions should be applied to these environments also
 
 ## 5 Apply Authentication on Services
 
 When publishing a web or REST service, you should consider whether this service should be consumable by everybody (anonymous) or by a limited set of users or systems. Whenever a limited set of users should be allowed, a Mendix (web service) user should be created for each consumer of this service. The option of creating (fine grained instead of generic) users enables an application to:
-
 * Identify which user caused a change in your application (traceability)
 * Constrain access on user (role) level
 * Log usage of your service
 
 Mendix offers the following options to provide authentication for your services:
-
 * Username and password validation, specified within the Mendix Modeler, see [Published Web Services](/refguide/published-web-services)
 * Client certificates and IP ranges, which are specified in the Mendix Cloud. This can be found at the network tab of your node’s environment details as *Access Restriction Profiles*
 
 ## 6 Use the Encryption Module When Storing Sensitive Information
 
 Your application might require sensitive information which should be extra encrypted. Examples are:
-
 * Connection information for consumed services (like credentials, service locations or keys)
 * Personal information (like bank account numbers or social security numbers)
 
@@ -86,13 +81,11 @@ This data is defined within the domain model and stored within the database of y
 When developing an application, authentication is one of the basic considerations. Even though Mendix comes with a basic authentication mechanism, your application’s security is improved when authentication is delegated to an enterprise grade identity provider like ADFS.
 
 Mendix offers a range of modules that enable your application to be connected with these services, including:
-
 * [SAML](https://appstore.home.mendix.com/link/app/1174/Mendix/SAML)
 * [LDAP](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)
 * [Kerberos](https://appstore.home.mendix.com/link/app/25/Mendix/Kerberos-Single-Sign-On)
 
 Your application can gain several benefits from using an identity provider, like:
-
 * User management is centralized (for example within Active Directory) which simplifies the on- and off boarding of new employees or changed roles
 * The Mendix application doesn’t contain (hashed) passwords
 * Identity providers can add extra layers of security like two-factor authentication.
@@ -117,7 +110,6 @@ The user name of the administrator can be changed at the project security settin
 Most applications consume (web) services that could be located within an organization itself or at an external third party. When such a service is consumed by an application, your request crosses multiple networks and devices before it reaches its endpoint (the service). A potential attacker in between would be able to read and manipulate the conversation between the application and the service.
 
 By using an SSL connection and adding the public key of the endpoint within your application, you will ensure that:
-
 * The conversation between you and the service hasn’t been tampered with
 * The conversation isn’t readable if it was ever intercepted
 * The identity of your endpoint is confirmed
@@ -137,7 +129,6 @@ By sending a header to the user’s browser, it can block the use of the Mendix 
 As an application grows in functionality, it also increases the chance of containing logic that could be exploitable for an attacker. Also, over time, vulnerabilities within logic can be discovered. Keeping your project hygiene at a high level will reduce the chances of a vulnerable application.
 
 To keep this at a good level, perform the following steps:
-
 * Remove unused modules, widgets and Java libraries
 * Remove microflows that aren’t used. These appear as warnings in the Mendix Modeler
 * Avoid using components with known vulnerabilities (like Java or JavaScript libraries)
@@ -147,7 +138,6 @@ A good source of known vulnerabilities is the [Common Vulnerabilities and Exposu
 ## 13 User Roles and Access
 
 Which users and roles are defined within an application is different per app and project. However, there are some key guidelines to keep in mind when validating the user security:
-
 * Anonymous access should be disabled if it has no function within the application. Some applications have anonymous access enabled, solely to serve a custom login form. This can be replaced by modifying the default *login.html* within your theme (and also improves the user experience by improved loading time)
 * Roles managing other user roles should be as strict as possible (*User management* within the project’s security)
 * The role of the project’s administrator user (default *MxAdmin*) should only be able to create the actual administrative accounts (or configure SSO)

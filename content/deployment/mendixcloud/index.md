@@ -1,14 +1,11 @@
 ---
 title: "Mendix Cloud"
 ---
-
-## 1 Introduction
-
 The Mendix Cloud is the public cloud service and the default deployment option for Mendix applications.
 
 Learn how to deploy your app, either in a Sandbox or to the Cloud. And go check out our AppCloudServices.
 
-## 2 Free App
+## Free App
 
 If you are new to the Mendix community and would like to deploy and share your own app, you can use the free tier of our public cloud offering. The free app environment (also called sandbox) is set up to allow any Mendix engineer to create and share their applications with their users. It is not the same as a cloud environment and it does not support complex or large applications.
 
@@ -22,20 +19,21 @@ In our free tier, your app will go to sleep after a couple of minutes of inactiv
 
 ![](attachments/index/appresumed.jpg)
 
-## 3 Node
+## Node
 
 A Free App can be upgraded to a licensed app with a node in the Mendix Cloud. A node has several environments and is hosted on **Mendix Cloud V3** or **Mendix Cloud V4**. 
 
-## 4 Environment
+## Environment
 
 A node has a minimum of two environments: **production** and **acceptance**. A **test** environment is the third optional environment. You can deploy your licensed app (that is linked to a node) to its environments.
 
-## 5 Documents in This Category
+## Documents in This Category
 
-* [Different User Logins when Integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
-* [How to Integrate Your App with Mendix SSO](integrate-your-app-with-mendix-sso)
-* [Java in the Cloud](java-in-the-cloud)
-* [How to Restrict Access for Incoming Requests](access-restrictions)
-* [Securing Outgoing Connections from Your Application](securing-outgoing-connections-from-your-application)
-* [Sending Email](sending-email)
-* [Mendix Cloud v4 - FAQ](mxcloudv4)
+*   [Different user logins when integrated with Mendix SSO](different-user-logins-when-integrated-with-mendix-sso)
+*   [Integrate your app with Mendix SSO](integrate-your-app-with-mendix-sso)
+*   [Java in the Cloud](java-in-the-cloud)
+*   [Restricting access for incoming requests](access-restrictions)
+*   [Securing Outgoing Connections from your Application](securing-outgoing-connections-from-your-application)
+*   [Security constraints in the Mendix Cloud](security-constraints-in-the-mendix-cloud)
+*   [Sending Email](sending-email)
+*   [Mendix Cloud v4 - FAQ](mxcloudv4)

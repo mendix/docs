@@ -1,5 +1,5 @@
 ---
-title: "Structure for How-to's"
+title: "Structure for How-To's"
 parent: "custom-action-general"
 description: "Explains the general structure of the how-to's for creating custom actions."
 tags: ["ATS", "testing"]
@@ -9,13 +9,13 @@ tags: ["ATS", "testing"]
 
 This document explains the general structure of the how-to's for creating custom actions.
 
-## 2 How-to Introduction
+## 2 How-To Introduction
 
 In the introduction of each how-to, you find a description of what the how-to will explain and in which situation it applies. It also states that you must create a new action. You use this action during the how-to. You must perform all the steps inside this action during the how-to unless stated otherwise.
 
-The introduction also tells you what type of action the how-to explains. The how-to's are written based on the [guidelines for building a custom action](guidelines-custom-action-1).
+The introduction also tells you what type of action the how-to explains. The how-to's are written based on the [guidelines for building a custom action](/ats/bestpractices/bp-version-1/guidelines-custom-action-1).
 
-## 3 How-to Prerequisites
+## 3 How-To Prerequisites
 
 All of the how-to's have the prerequisite that you must read and if necessary complete the [General](custom-action-general) section.
 

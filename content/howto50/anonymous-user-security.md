@@ -45,7 +45,7 @@ If you need to give an anonymous user access to change an object ALWAYS apply in
 
 Limiting the navigation or page display is not the same thing as security. All data can be accessed by talking directly to the Platform API, anything that is visible according to the security model is accessible by sending the correct messages to the server. Limiting data in the UI does not mean that it isn’t possible to access. Only instance access rules guarantee what you can and cannot do. 
 
-For example to download a file, it is possible to get the URL `https://myMendixApp.com/file? fileID=2804771`. All that is necessary is to try random numbers until a file is found that is accessible. Unless you specify instance or object access, in that case the platform would always validate the request against your privileges before presenting the information.
+For example to download a file, it is possible to got the url: https://myMendixApp.com/file? fileID=2804771 All that is necessary is to try random numbers until a file is found that is accessible. Unless you specify instance or object access, in that case the platform would always validate the request against your privileges before presenting the information.
 
 ## Related content
 

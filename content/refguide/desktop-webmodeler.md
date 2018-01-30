@@ -63,4 +63,4 @@ If you do not have anything to commit, you can also click **Cancel sync/Unlock W
 
 ## 4 Related Content
 
-* [How to Start with a Blank App](/howto/tutorials/start-with-a-blank-app)
+* [How to Build an Employee Directory App](/howto/tutorials/build-an-employee-directory-app)

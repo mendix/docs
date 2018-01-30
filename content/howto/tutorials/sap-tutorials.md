@@ -8,4 +8,4 @@ frontpage_featured: true
 
 The following tutorial is available here:
 
-* [SAP Purchase Order Approval Tutorial](sap-purchase-order-approval)
+* [SAP Purchase Order Approval](sap-purchase-order-approval)

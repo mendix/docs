@@ -26,5 +26,5 @@ Search Context | WebElement | no | Limit the search to the given WebElement
 ## Return Value
 
 Name | Datatype | Description
---- | --- | ---
+--- | --- | --- | ---
 Is Collapsed | Boolean | Collapsed state of the GroupBox. True if it is collapsed, false if not.

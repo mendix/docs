@@ -1,5 +1,5 @@
 ---
-title: "Example Implementation"
+title: "Example implementation"
 parent: "deploy-api"
 ---
 

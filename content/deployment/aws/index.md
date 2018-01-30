@@ -2,6 +2,5 @@
 title: "Amazon Web Services"
 ---
 
-## Documents in This Category
+## 1 Introduction
 
-* [How to deploy a Mendix app on Amazon Web Services](how-to-deploy-a-mendix-app-on-amazon-web-services)

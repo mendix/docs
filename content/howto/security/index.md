@@ -9,4 +9,3 @@ This category presents details on how to secure your data and make sure that the
 * [How to Create a Secure App](create-a-secure-app)
 * [How to Generate a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)
 * [How to Set Up Anonymous User Security](set-up-anonymous-user-security)
-* [How to Set Up Your First Multi-Tenant App](set-up-your-first-multi-tenant-app)

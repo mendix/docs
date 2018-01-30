@@ -37,8 +37,8 @@ You can click the following buttons:
 
 Action | Description
 | --- | --- |
-**Add feedback** | This will add new feedback on your app.
-**Export to Excel** | This will export feedback items into an *.xls* file (you can filter on date, label, status, and type).
+* **Add feedback** | This will add new feedback on your app.
+* **Export to Excel** | This will export feedback items into an *.xls* file (you can filter on date, label, status, and type).
 
 {{% alert type="info" %}}
 The feedback button on the right side of the screen in the Developer Portal is the feedback button for the Mendix Platform. It will send the feedback to Mendix. To provide feedback on your app, click **Add feedback**.

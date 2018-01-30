@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites for How-to's"
+title: "Prerequisites for How-To's"
 parent: "custom-action-general"
 description: "Names and explains the different prerequisites for all the how-to's in this category."
 tags: ["ATS", "testing"]
@@ -13,11 +13,11 @@ This document describes the prerequisites for the create-custom-action how-to's.
 
 General knowledge of the Mendix Platform is a must when creating custom actions. The HTML of a Mendix app is a direct representation of your app as you see it in the Modeler. 
 
-In the [Become a Rapid Developer Learning Path](https://gettingstarted.mendixcloud.com/link/path/10), you learn all the fundamentals of the Mendix Platform, including how the different widgets work and how to adjust them. This is a great advantage when looking at a widget through the HTML.
+During the [Mendix Introduction Course](https://developers.mendix.com/training/), you learn all the fundamentals of the Mendix Platform, including how the different widgets work and how to adjust them. This is a great advantage when looking at a widget through the HTML.
 
 ## 3 Guidelines for Building a Custom Action
 
-[Guidelines for Building a Custom Action](guidelines-custom-action-1) is a best practice document that describes the guidelines  you must follow when building custom actions. These guidelines deliver the best results.
+[Guidelines for Building a Custom Action](/ats/bestpractices/bp-version-1/guidelines-custom-action-1) is a best practice document that describes the guidelines  you must follow when building custom actions. These guidelines deliver the best results.
 
 ## 4 Google Chrome and Chrome DevTools Basics
 

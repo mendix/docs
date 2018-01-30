@@ -55,9 +55,9 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 {{% alert type="info" %}}
 
 The custom date format
-`EEE, MMM d, yy`
+`EEE, MMM d, ''yy`
 results in the following text
-`Wed, Jul 4, 01`
+`Wed, Jul 4, '01`
 
 {{% /alert %}}
 

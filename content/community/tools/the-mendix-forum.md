@@ -40,7 +40,7 @@ Each question specifies the following elements:
 * The Mendix community members(s) who answered the question (**9**)
 * When the question was created (**10**)
 
-Hovering over the developer name brings up the developer profile card:
+Hovering your mouse cursor over the developer name brings up the developer profile card:
 
 ![](attachments/the-mendix-forum/questions_profile_card.png)
 

@@ -47,9 +47,11 @@ Filter can be combined with 'and' and 'or', 'not' and (), so for example _?$filt
 
 | Combination | Example |
 | --- | --- |
-| and | _?$filter=Name eq 'John' and Age gt 65_ |
-| or | _?$filter=Age gt 65 or Age lt 11_ |
-| not | _?$filter=not(Name eq 'John')_ |
+| and | _?$filter=Name eq 'John' and Age gt 65
+_ |
+| or | _?$filter=Age gt 65 or Age lt 11
+_ |
+| not | _?$filter=_not(Name eq 'John') |
 | () | _?$filter=Name eq 'John' and (Age gt 65 or Age lt 11)_ |
 
 ### Sorting
@@ -76,10 +78,10 @@ Skipping a number of objects in the result can be done using the $skip query opt
 
 ### Null literals
 
-Operators can compare against 'null' literals. For example: _?$filter=Name eq null_
+Operators can compare against 'null' literals. For example: _?$filter=Name eq null _
 
 In this example, Name is a string attribute which can have a 'null' value in the database. Note that 'null' means 'no value', as opposed to "" (which is an empty string).
 
-When you filter against associations, null literals can be quite useful. For example: _?$filter=Association_A_B ne null_
+When you filter against associations, null literals can be quite useful. For example: _?$filter=Association_A_B ne null _
 
 In this example, you query for objects A that actually have an association set to B objects.

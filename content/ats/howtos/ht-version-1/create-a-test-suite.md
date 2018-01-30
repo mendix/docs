@@ -91,9 +91,3 @@ To create a new test case, click **Create a new Test Case**, and complete [How t
 {{% alert type="info" %}}
 You can add as many test cases and test suites as you want. 
 {{% /alert %}}
-
-## 6 Next up
-
-You have now learned how to create a test suite, so the next how-to is [How to Create Custom Actions](create-custom-actions), which will cover creating your own actions. You can also proceed with [How to Upload a File in Your App Using ATS](upload-file-using-ats-1).
-
-For an overview of all the how-tos and the structure, see [ATS 1 How-to's](ht-version-1). We advise following the how-to's in the order listed there.

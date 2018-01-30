@@ -13,7 +13,7 @@ A dialog box opens where you give your test case a name and an optional descript
 
 ## 2 Test Case Details
 
-![](attachments/test/test-case-details.png)
+![](attachments/test/testcase-details.png)
 
 In the top-left corner of the **Test Case Details** page, you will find the name and the description of the test case. You can click these fields and make changes to them. ATS saves these changes automatically.
 
@@ -37,19 +37,19 @@ In the top right corner of the screen, you will find the **Export** and **Run** 
 
 Test steps describe the actions that the test case performs. You can add new test steps by searching an action in the **Add step** box. For a more detailed search, use the **Test Step Setup** dialog box by clicking this button:
 
-![](attachments/test/action-search-dialog.png)
+![](attachments/test/search-button.png)
 
 A dialog box will open where you can search for a specific action or you explore all the available actions inside ATS and your current project:
 
-![](attachments/test/TestStepActionSearch.png).
+![](attachments/test/select-function-action.png).
 
-After you have found the desired action, add it to your test case as a test step by selecting it and clicking **Add**.
+After you have found the desired action, add it to your test case as a test step by selecting it and clicking **Select**.
 
-Another way of adding test steps to a test case is to use the recorder by clicking **Record**. For more information, see [Recorder](recorder).
+Another way of adding test steps to a test case is to use the recorder by clicking **Record step**. For more information, see [Recorder](recorder).
 
 The details of a test step open by clicking the test step. For more information, see [Test Step](test-step).
 
-To add a new step above or below an existing test step, click **Add above** or **Add below**. These buttons appear if you hover over an existing test step.
+To add a new step above or below an existing test step, click **Add above** or **Add below**, or click on the red record icon, to add a new step by using the recorder. These buttons appear if you hover over an existing test step.
 
 ### 3.1 Copying, Pasting, Deleting, and  Extracting an Action
 

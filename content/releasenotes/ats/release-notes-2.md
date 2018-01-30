@@ -105,6 +105,7 @@ We've extended ATS with a new simple API. Via this API, you can run your automat
 * We centralized the settings page per app.
 * We implemented application-wide type icons with tooltips.
 * We added description text on many pages.
+* We dropped the support for selenium standalone server.
 
 ### Terminology
 

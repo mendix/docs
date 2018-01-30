@@ -1,6 +1,25 @@
 ---
 title: "Platform Portal"
 ---
+
+## 2018
+
+### January 25th, 2018
+
+#### Fixes
+
+* Happy new year! We addressed the issue where backup downloads were logged as restored backups in the activity log.
+* If you had a **Backups** section of your apps open in multiple tabs, you saw multiple activity log entries for each action taken. That's fixed now.
+* The restart and stop/start activities are now distinctly defined in the **Activity** section.
+* Branches of an application are sorted alphabetically, but **Main Line** is now always on top.
+* The target cloud of a Free App is now shown correctly in the **Environments** section.
+* The broken styling of the **View Current Log** button for a Free App has been fixed.
+
+#### Improvements
+
+* The **Alerts** section in Mendix Cloud V4 apps will now include health check details, just like for Mendix Cloud V3 apps.
+* It is now possible for you to change the technical contact of your applications by yourself.
+
 ## 2017
 
 ### December 29th, 2017
@@ -89,7 +108,7 @@ title: "Platform Portal"
 * We fixed a problem where Team Server branches that were committed without the Mendix Modeler were hidden in the Cloud Portal.
 * We fixed a problem where changing an access restriction profile could display a wrong error about having more than 1 certificate in use.
 
-### September 25th, 2107
+### September 25th, 2017
 
 #### Improvements
 

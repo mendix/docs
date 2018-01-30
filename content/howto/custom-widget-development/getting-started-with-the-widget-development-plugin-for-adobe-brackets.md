@@ -150,5 +150,5 @@ These are some interesting books and articles you can read to dive into the sour
 
 * Custom Mendix widgets are based on DOJO widgets – for more information, see this blog post: 
 [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
-* To communicate with Mendix, you need to use the Mendix JavaScript Client API – for more information, see the [Mendix Client API Documentation](https://apidocs.mendix.com/6/client/)
+* To communicate with Mendix, you need to use the Mendix JavaScript Client API – for more information, see the [Mendix Client API Documentation](https://apidocs.mendix.com/7/client/)
 * This is a nice book that helps you understand what JavaScript is all about: [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)

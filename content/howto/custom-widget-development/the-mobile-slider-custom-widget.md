@@ -90,7 +90,7 @@ You can also use one page as your main slide.
 
 ## 7 Interesting Feature
 
-As promised in my previous how-to [Creating a Chainable Widget](create-a-chainable-custom-widget) I would create a custom widget that is able to communicate to another custom widget with custom events. 
+As promised in [How to Create a Chainable Widget](create-a-chainable-custom-widget), I would create a custom widget that is able to communicate to another custom widget with custom events. 
 
 {{% alert type="warning" %}}
 
@@ -150,12 +150,12 @@ Mendix Custom Widgets are based upon DOJO widgets. You will find the following B
 [http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html
  ](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
 
-### 9.3 The Mendix Client API 6.0
+### 9.3 The Mendix Client API
 
 To communicate with Mendix you need to use the Mendix JavaScript Client API. Read all about it at the following online documentation:
 
-[https://apidocs.mendix.com/6/client/
- ](https://apidocs.mendix.com/6/client/)
+[https://apidocs.mendix.com/7/client/
+ ](https://apidocs.mendix.com/7/client/)
 
 ### 9.4 Learning JavaScript Design Patterns
 

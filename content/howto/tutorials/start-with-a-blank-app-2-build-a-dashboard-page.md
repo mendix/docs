@@ -18,6 +18,10 @@ This is the second how-to in this series on how to create an employee directory 
 
 {{% youtube AVI-jRt7y4M %}}
 
+{{% alert type="warning" %}}
+Some of the naming in the video will differ from the text below.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisite:

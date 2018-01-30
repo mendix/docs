@@ -49,7 +49,8 @@ To manage the users in your company, follow these steps:
 
 To deactivate a user, follow these steps:
 
-1.  On the **Users** page of the **Company Admin** settings, select the check boxes of the the users that you want to activate or deactivate, and click **Activate / Deactivate user**.
+1.  On the **Users** page of the **Company Admin** settings, select the check boxes of the the users that you want to deactivate.
+2.  Click **Activate / Deactivate user**:
 
     ![](attachments/companyadmin/deactivate.png)
 

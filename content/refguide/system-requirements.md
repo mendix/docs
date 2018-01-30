@@ -1,7 +1,7 @@
 ---
 title: "System Requirements"
 category: "General"
-description: "Presents the system requirements for using the Mendix platform."
+description: "Presents the system requirements for using the Mendix Platform."
 ---
 
 ## Desktop Modeler
@@ -17,7 +17,7 @@ The following frameworks are automatically installed (if necessary):
 
 {{% alert type="warning" %}}
 
-You can choose which JDK is used for building and running locally through the 'Edit > Preferences' menu item.
+You can choose which JDK is used for building and running locally through the **Edit** > **Preferences** menu item.
 
 {{% /alert %}}
 
@@ -67,7 +67,7 @@ You can download JREs here:
 
 [http://www.oracle.com/technetwork/java/javase/downloads/index.html](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
-There is an issue since Java 7, causing timeouts when using Web Services with a certain amount of data. You can circumvent this issue by adding the VM params "`-Djava.net.preferIPv4Stack=true`". The Mendix Business Modeler will do this for you but if you are running Mendix on premise on a Windows server you will need to do this yourself.
+There is an issue since Java 7, causing timeouts when using Web Services with a certain amount of data. You can circumvent this issue by adding the VM params "`-Djava.net.preferIPv4Stack=true`". The Mendix Desktop Modeler will do this for you but if you are running Mendix on premise on a Windows server you will need to do this yourself.
 
 For more information about this issue, have a look at [http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html](http://blog.bielu.com/2011/11/hotspot-64bit-server-hangs-on-socket.html) or [https://forums.oracle.com/forums/thread.jspa?messageID=9985748](https://forums.oracle.com/forums/thread.jspa?messageID=9985748)
 

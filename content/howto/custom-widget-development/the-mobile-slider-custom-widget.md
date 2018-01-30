@@ -15,7 +15,7 @@ This how-to is about using the Mobile Slider widget in your Mendix hybrid mobile
 
 Before you start building your Mendix hybrid mobile project with the Mobile Slider custom widget make sure you have the following programs installed:
 
-*   [Mendix Business Modeler](https://appstore.home.mendix.com/link/modelers)
+*   [Mendix Modeler](https://appstore.home.mendix.com/link/modelers)
 *   Adobe Brackets and the Widget Development Plugin for Adobe Brackets. [You can find a how-to about this software here](getting-started-with-the-widget-development-plugin-for-adobe-brackets).
 
 ## 2 Downloading the Test Project
@@ -90,7 +90,7 @@ You can also use one page as your main slide.
 
 ## 7 Interesting Feature
 
-As promised in my previous how-to [Creating a Chainable Widget](create-a-chainable-custom-widget) I would create a custom widget that is able to communicate to another custom widget with custom events. 
+As promised in [How to Create a Chainable Widget](create-a-chainable-custom-widget), I would create a custom widget that is able to communicate to another custom widget with custom events. 
 
 {{% alert type="warning" %}}
 
@@ -128,7 +128,7 @@ $('#mx-slider-background-layer').on('mx.slide.set.background', lang.hitch(this, 
 
 ## 8 Conclusion
 
-I encourage you to download all the source files from the GitHub repository and dive right into the goodies that these widgets provide. It will show you how powerful the Mendix platform can be, extended with new UX features.
+I encourage you to download all the source files from the GitHub repository and dive right into the goodies that these widgets provide. It will show you how powerful the Mendix Platform can be, extended with new UX features.
 
 ## 9 Related Content
 
@@ -150,12 +150,12 @@ Mendix Custom Widgets are based upon DOJO widgets. You will find the following B
 [http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html
  ](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
 
-### 9.3 The Mendix Client API 6.0
+### 9.3 The Mendix Client API
 
 To communicate with Mendix you need to use the Mendix JavaScript Client API. Read all about it at the following online documentation:
 
-[https://apidocs.mendix.com/6/client/
- ](https://apidocs.mendix.com/6/client/)
+[https://apidocs.mendix.com/7/client/
+ ](https://apidocs.mendix.com/7/client/)
 
 ### 9.4 Learning JavaScript Design Patterns
 

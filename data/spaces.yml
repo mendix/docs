@@ -10,18 +10,18 @@ apidocs-mxsdk:
     - "API Documentation"
     - "Mendix Platform SDK"
 addons:
-  space: "Other Add-Ons"
+  space: "Other Add-ons"
   priority: false
   menu_categories:
     - "APM"
     - "AQM"
 ats:
-  space: "ATS Add-On"
+  space: "ATS Add-on"
   priority: false
   menu_categories:
     - "General"
     - "Reference Guide"
-    - "How-To's"
+    - "How-to's"
     - "Best Practices"
 community:
   space: "Community"
@@ -31,7 +31,7 @@ community:
     - "Documentation"
     - "App Store"
 howto40:
-  space: "Mendix 4 How-To's"
+  space: "Mendix 4 How-to's"
   priority: false
   mendix_version: 4
   noindex: true
@@ -46,7 +46,7 @@ howto40:
     type: 'warning'
     text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the How-To&#39;s <a href="/howto/">here</a>.'
 howto50:
-  space: "Mendix 5 How-To's"
+  space: "Mendix 5 How-to's"
   priority: false
   mendix_version: 5
   noindex: true
@@ -64,7 +64,7 @@ howto50:
     - "Monitoring & Troubleshooting"
     - "Collaboration & Project Management"
 howto6:
-  space: "Mendix 6 How-To's"
+  space: "Mendix 6 How-to's"
   priority: 5
   mendix_version: 6
   noindex: true
@@ -82,15 +82,16 @@ howto6:
     - "Monitoring & Troubleshooting"
     - "Collaboration & Project Management"
 howto:
-  space: "Mendix 7 How-To's"
+  space: "Mendix 7 How-to's"
   priority: 6
   mendix_version: 7
   menu_categories:
     - "Tutorials"
     - "SAP"
+    - "Atlas UI"
     - "Modeling Basics"
     - "Data Models"
-    - "GUIs"
+    - "UX"
     - "Logic & Business Rules"
     - "Mobile"
     - "Security"
@@ -158,7 +159,7 @@ refguide:
     - "SAP"
     - "Mobile"
 howtogeneral:
-  space: "General How-To's"
+  space: "General How-to's"
   priority: 6
   menu_categories:
     - "Tips & Tricks"
@@ -169,11 +170,12 @@ releasenotes:
   priority: false
   menu_categories:
     - "Desktop Modeler"
+    - "Web Modeler"
     - "Platform Portal"
     - "Model SDK"
     - "Platform SDK"
     - "Hybrid App"
-    - "Mendix Mobile"
+    - "Mendix Mobile App"
     - "APM"
     - "ATS"
     - "AQM"

@@ -50,7 +50,8 @@ Assuming $object1 is an domain entity and that it has a member called 'member1',
 | $object1 has a value | false | true |
 | $object1 has no value | N/A | true |
 
-## Checking Whether an Object Is New
+## Checking Whether an Object Is New<a name="new"></a>
+
 
 ### Input
 
@@ -68,7 +69,7 @@ Type: Boolean.
 isNew($object1)
 ```
 
-## Checking Whether an Object Is Synced
+## Checking Whether an Object Is Synced<a name="synced"></a>
 
 {{% alert type="info" %}}
 

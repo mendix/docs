@@ -26,7 +26,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 ## 3 Custom Widget Overview
 
-This section explains what a custom widget is and how it behaves in the Mendix platform.
+This section explains what a custom widget is and how it behaves in the Mendix Platform.
 
 ### 3.1 What Is a Custom Mendix Widget?
 
@@ -88,7 +88,7 @@ The following files are required to create a widget:
 
 {{% alert type="info" %}}
 
-A property will contain the end-result of something that is configured/provided by Mendix. You must always create a starting situation where you gather what you need before continuing with the logic inside your widget and/or inside the Mendix platform.
+A property will contain the end-result of something that is configured/provided by Mendix. You must always create a starting situation where you gather what you need before continuing with the logic inside your widget and/or inside the Mendix Platform.
 
 {{% /alert %}}
 

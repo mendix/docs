@@ -8,7 +8,7 @@ parent: "project-security"
 
 The user name of the administrator user that can be used to sign into the application.
 
-_Default value_: MxAdmin
+*Default value*: MxAdmin
 
 ### Password
 

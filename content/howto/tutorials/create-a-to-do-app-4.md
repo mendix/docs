@@ -42,7 +42,7 @@ The app is now finished, so you are going to view it on a simulated mobile devic
 
 1. Save all changes and run the app locally.
 2. Open the **View** drop-down menu and select **Responsive Browser (F9)**.
-3. Change the URL to **http://localhost:8080/index.html?profile=HybridPhone** to simulate a phone profile. This will result in a simulation that is easier to preview.
+3. Change the URL to `http://localhost:8080/index.html?profile=HybridPhone` to simulate a phone profile. This will result in a simulation that is easier to preview.
 4. Press **F12** to open the browser's Developer Tools.
 5. Select the device you want to simlate, and your mouse will act like a finger on the screen.
 

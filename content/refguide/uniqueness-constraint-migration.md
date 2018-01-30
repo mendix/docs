@@ -62,7 +62,7 @@ From Mendix 7.3, we enforce that existing association data in the database also 
 
 ![](attachments/datastorage/modeler-startup-error-assoc.PNG)
 
-We enforce this new stricter association on existing data in order to avoid easily overlooked mistakes that result in returning only a single address per person (where in fact they still have multiple addresses in the database). The Mendix platform consistently returned the same address each run, but other addresses would be dormant entries in the database.
+We enforce this new stricter association on existing data in order to avoid easily overlooked mistakes that result in returning only a single address per person (where in fact they still have multiple addresses in the database). The Mendix Platform consistently returned the same address each run, but other addresses would be dormant entries in the database.
 
 ## Help with Migration
 

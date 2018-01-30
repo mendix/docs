@@ -26,7 +26,7 @@ IBM DB2 does not support read-isolated data retrieval operations that are non-bl
 
 ## Selecting exposed attributes and associations
 
-When an entity to publish has been selected, press the **Select... **button to open a dialog that allows you to select individual attributes to expose.
+When an entity to publish has been selected, press the **Select...** button to open a dialog that allows you to select individual attributes to expose.
 
 The _System_._ID_ attribute is used as a key in OData services and is therefore not allowed to be unchecked.
 

@@ -1,5 +1,5 @@
 ---
-title: "Finding the Action you Need"
+title: "Finding the Action You Need"
 parent: "bp-version-1"
 ---
 

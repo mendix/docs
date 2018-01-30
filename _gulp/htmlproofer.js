@@ -9,6 +9,10 @@ const gutil = require('gulp-util');
 const cheerio = require('cheerio');
 const Promise = require('bluebird');
 const helpers = require('./helpers');
+const moment = require('moment');
+const RSS = require('rss');
+const { normalizeSafe } = require('upath');
+const os = require('os');
 
 const verbose = false;
 const indicator = gutil.colors.cyan("[HTML CHECK]");
@@ -101,6 +105,12 @@ const parseHtmlFile = file => new Promise((resolve, reject) => {
         }
       }
     });
+
+    const updateTime = $('meta[property="og:updated_time"]').attr('content');
+    file.time = updateTime ? updateTime : null;
+
+    const ogTitle = $('meta[property="og:title"]').attr('content');
+    file.seoTitle = ogTitle ? ogTitle : null;
   }
   delete(file.content);
 
@@ -133,21 +143,23 @@ const getLinkPaths = link => {
     link = link.replace(/\/refguide7\//g, '/refguide/');
   }
 
-  return [
+  const paths = [
     link,
     `${link}.html`,
     `${link}index.html`,
     `${link}/index.html`
   ];
+  return paths;
 }
 
 const validateFiles = files => Promise.resolve(_.map(files, file => {
+
   // Let's check all the links
   _.forEach(file.links, link => {
-    const fullPath = path.join(SOURCEPATH, link),
+    const fullPath = normalizeSafe(path.join(SOURCEPATH, link)),
           fullUrl = url.parse(path.join(SOURCEPATH, link));
 
-    let linkPath = fullUrl.pathname;
+    let linkPath = (fullUrl.protocol !== null ? fullUrl.protocol : "").toUpperCase() + fullUrl.pathname; // TODO: Check how we can fix this in Windows??
     let linkedFile = _.filter(
       _.map(getLinkPaths(linkPath), linkPathPossible => _.find(
         files, findFile => findFile.path === linkPathPossible)
@@ -223,6 +235,58 @@ const checkAllLinks = (links, files) => {
     })
 }
 
+const writeUpdateFeed = files => new Promise((resolve, reject) => {
+  const updateFiles = _.chain(files)
+    .filter(file => file.time !== null && !!file.seoTitle)
+    .map(file => {
+      const picked = _.pick(file, ['basePath', 'time', 'seoTitle']);
+
+      picked.basePath = picked.basePath.replace('index.html', '').replace('.html','');
+      picked.seoTitle = picked.seoTitle.replace(' | Mendix Documentation', '');
+
+      const m = moment(picked.time, 'YYYY-DD-MMTHH:mm:ssZZ');
+      if (m._isValid) {
+        picked.timeStamp = m.unix();
+        picked.dateObj = m.toDate();
+      } else {
+        //console.log('err');
+      }
+      return picked;
+    })
+    .sortBy(file => file.timeStamp)
+    .reverse()
+    .take(20)
+    .value();
+
+  const feed = new RSS({
+    title: 'Mendix Documentation',
+    description: 'Mendix Documentation Updates',
+    generator: 'Mendix Documentation generator',
+    feed_url: 'https://docs.mendix.com/feed.xml',
+    site_url: 'https://docs.mendix.com/'
+  });
+
+  _.forEach(updateFiles, update => {
+    feed.item({
+      title: update.seoTitle,
+      description: '',
+      url: 'https://' + normalizeSafe(`docs.mendix.com${update.basePath}`),
+      date: update.dateObj
+    })
+  });
+
+  const feedDest = path.join(SOURCEPATH, '/feed.xml');
+
+  fs.writeFile(feedDest, feed.xml({ indent: true }), err => {
+    if (err) {
+      gutil.log(`Error writing /feed.xml: ${err}`)
+    } else {
+      gutil.log(`Update feed written to ${feedDest}`);
+    }
+    resolve(files);
+  });
+})
+
 const checkExternal = files => {
   const externalChecked = 0,
         total = _.flatten(_.map(files, file => file.external && file.external.links ? file.external.links : [])),
@@ -239,6 +303,7 @@ const checkHTMLFiles = (opts) => helpers.getFiles(SOURCEPATH)
   .then(parseHtmlFiles)
   .then(validateFiles)
   .then(checkExternal)
+  .then(writeUpdateFeed)
   .then(files => {
     const errors = _.filter(files, file => file.errors.length > 0),
           warnings = _.filter(files, file => file.warnings.length > 0);
@@ -323,7 +388,7 @@ const checkHTMLFiles = (opts) => helpers.getFiles(SOURCEPATH)
   });
 
 const checkFiles = (opts) => {
-  SOURCEPATH = opts.dir;
+  SOURCEPATH = normalizeSafe(opts.dir);
   EXTERNAL = opts.external || false;
   gutil.log(`${indicator} Testing html in ${SOURCEPATH}`);
   helpers

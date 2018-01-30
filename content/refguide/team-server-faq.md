@@ -16,11 +16,11 @@ Storage space is unlimited for projects connected to a commercial license. 1 GB 
 
 ### How do I access the Team Server?
 
-The Team Server is delivered as a plugin to sprintr. Start using the Team Server in your sprintr project by activating the plugin or by creating a new Team Server project in the Mendix Business Modeler.
+The Team Server is delivered as a plugin to sprintr. Start using the Team Server in your sprintr project by activating the plugin or by creating a new Team Server project in the Mendix Desktop Modeler.
 
 ### What access controls come standard with the Team Server?
 
-The Team Server gives you all the controls you need to manage who has access. Just toggle access on and off for each sprintr project member. Once activated, they can use their MxID to access the Team Server from within the Mendix Business Modeler.
+The Team Server gives you all the controls you need to manage who has access. Just toggle access on and off for each sprintr project member. Once activated, they can use their MxID to access the Team Server from within the Mendix Desktop Modeler.
 
 ### How secure is the Team Server?
 
@@ -38,7 +38,7 @@ The team server runs in the trusted Mendix cloud environment and on a trusted in
 
 ### How do I merge changes from one development line to another?
 
-The modeler automates most of this process; you can simply merge development lines by selecting model revisions on the team server. The Mendix Business Modeler will do the merging and will keep track of consistency. [Read more](version-control)
+The modeler automates most of this process; you can simply merge development lines by selecting model revisions on the team server. The Mendix Desktop Modeler will do the merging and will keep track of consistency. [Read more](version-control)
 
 ### How do I resolve a conflict when two changes cannot be combined?
 
@@ -46,4 +46,4 @@ Resolving a conflict can be done in by using the 'Use mine' and 'Use theirs' but
 
 ### How can I access the history of my project?
 
-The history of the project is a list of all revisions that have been committed in reverse chronological order. The history form quickly shows you revision number, date, time, author and message of each revision; it can be accessed from within the Mendix Business Modeler as well as sprintr. [Read more](version-control-scenarios)
+The history of the project is a list of all revisions that have been committed in reverse chronological order. The history form quickly shows you revision number, date, time, author and message of each revision; it can be accessed from within the Mendix Desktop Modeler as well as sprintr. [Read more](version-control-scenarios)

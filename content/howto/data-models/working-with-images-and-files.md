@@ -38,14 +38,14 @@ Before you start with this how-to please follow these prerequisites:
     **![](attachments/18448741/18582127.png)
 5.  Click **OK** in the entities property form. Your entity now inherits all properties from the System.FileDocument entity you selected and should look like this:
     ![](attachments/18448741/18582126.png)
-6.  Create an overview and detail page to manage objects of the entity that you just created. If you don't know how to create those pages, take a look at [this](../guis/create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look like this:
+6.  Create an overview and detail page to manage objects of the entity that you just created. If you don't know how to create those pages, take a look at [this](../ux/create-your-first-two-overview-and-detail-pages) how-to. Your detail page should look like this:
     ![](attachments/18448741/18582125.png)
 7.  Open the detail page and double click the FileManager to open its properties. On this form you can select the maximum file size and allowed file extensions.
     ![](attachments/18448741/18582122.png)
 
 ## 4\. Navigation and Security
 
-1.  Create a navigation item for your overview page to start using it. If you don't know how to setup the navigation structure, take a look at [this](../guis/setting-up-the-navigation-structure) how-to.
+1.  Create a navigation item for your overview page to start using it. If you don't know how to setup the navigation structure, take a look at [this](../ux/setting-up-the-navigation-structure) how-to.
 2.  If you turned on security for this application you need to configure page access on both the overview and detail pages. If you don't know how to configure page access, take a look at [this](../security/create-a-secure-app) how-to.
 
 ## 5\. Related content
@@ -57,7 +57,7 @@ Before you start with this how-to please follow these prerequisites:
 *   [Setting up data validation](setting-up-data-validation)
 *   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-*   [Scout and Windows 10 Workaround](../guis/scout-and-windows-10-workaround)
+*   [Scout and Windows 10 Workaround](../ux/scout-and-windows-10-workaround)
 *   [Generating a personal SSH2 key pair](../security/generating-a-personal-ssh2-key-pair)
 *   [Creating a chainable Custom Widget](../custom-widget-development/create-a-chainable-custom-widget)
 

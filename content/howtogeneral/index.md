@@ -1,5 +1,5 @@
 ---
-title: "General How-To's"
+title: "General How-to's"
 notoc: true
 ---
 

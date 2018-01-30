@@ -26,18 +26,18 @@ There are two types of **Trends** depending on which **Mendix Cloud version** th
 You can find the Mendix Cloud version of your App in the **environment details**. 
 For more information, see [How to View the Mendix Cloud Version and Region](/developerportal/howto/cloud-version-region).
 
-## 3 Running now
+## 3 Running Now
 
 Running requests are all requests that are currently in progress for this environment. Please note that interrupting a request will actually stop it, and the end user may receive an error.
 
 At this section you can view the following information about the running requests:
 
-Running Requests | | 
-:---|:---|
-User | the user that has started running the request
-Action | the name of the request
-Type | microflow or java action
-Duration | for how long the request is running
+| Running Requests | Description
+---|---
+| User | The user that has started running the request. |
+| Action | The name of the request. |
+| Type | Microflow or Java action. |
+| Duration | For how long the request is running. |
 
 You can click the following buttons to execute actions:
 

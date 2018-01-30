@@ -27,10 +27,13 @@ The primary hosting locations are as follows:
 *   Mendix Cloud US: AWS North Virginia
 *   Mendix Cloud Asia Pacific: AWS Tokyo
 
+Backups will always be stored in at least one external data center, separate from the primary hosting location.
+
 Data will always be stored in the same political region for the following regions:
 
 *   Data in the EU, including backups, will stay within the EU
 *   Data in the US, including backups, will stay within the US
+
 
 ## 5 Does Mendix Expose the Underlying Cloud Foundry API?
 
@@ -71,17 +74,13 @@ These are the differences between Mendix Cloud v3 and Mendix Cloud v4:
 There are some features missing in v4. Mendix will implement the following features in the near future:
 
 * Using client certificates for access restriction profiles is not available; for outgoing connections, client certificates are available
-* There is no detailed description for alerts in the **Alerts** overview
 * File storage usage only shows the number of files, not the amount of used storage
-* The custom health check microflow is not used by the alerting system
 * Application CPU alerts are not sent
 * Archived logs can only be downloaded, not viewed in the browser
-* Cross-environment backup restoring is not available; you can download and upload data instead
 * The database status is not visible on the node details screen
 
 ## 11 Known Issues in Mendix Cloud v4
 
-* The styling of the **Upload Backup** screen does not conform to Mendix UX standards
 * Upload archive only supports archives of a maximum of 4 GB
 * The Amazon RDS maintenance window is not aligned with the CP maintenance window for an application
 * To use the debugger, you need to scale down to one instance

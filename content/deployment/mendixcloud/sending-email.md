@@ -7,14 +7,14 @@ category: "Mendix Cloud"
 
 You may want to send email from your apps running in the Mendix Cloud via, for instance, the [Email Module](https://appstore.home.mendix.com/link/app/259/Mendix/E-mail-module-with-templates). After you have installed this you will need to configure an SMTP server in your application. There are several options:
 
-|  	| Mendix Cloud v3   	|  Mendix Cloud v4 	|  Free Plan (sandbox) | 
-|---	|---	|---	|---	|	
-|  **Amazon Simple Email Service** 	|   &#x2713; 	|   &#x2713; 	|    &#x2713;	|   
-|   **Gmail**	 |    &#x2713;	|    &#x2713;	|    &#x2713;	|
-|   **MailGun**	 |    &#x2713;	|    &#x2713;	|    &#x2713;	|
-|   **SendGrid** |    &#x2713;	|    &#x2713;	|    &#x2713;	|
-|   **Other SMTP compatible services**	|    &#x2713;	|   &#x2713; 	|    &#x2713;	|
-| **Mendix Mail Servers** |    &#x2713;	|   &#x2717;	|   &#x2717;	|
+| Service | Mendix Cloud v3 | Mendix Cloud v4 | Free Plan (Sandbox) |
+| --- | --- | --- | --- |
+| **Amazon Simple Email Service** | &#x2713; | &#x2713;	| &#x2713; |
+| **Gmail** | &#x2713; | &#x2713; | &#x2713; |
+| **MailGun** | &#x2713; | &#x2713;	| &#x2713; |
+| **SendGrid** | &#x2713; | &#x2713; | &#x2713;	|
+| **Other SMTP-compatible services** | &#x2713;	| &#x2713; | &#x2713; |
+| **Mendix Mail Servers** | &#x2713; | &#x2717; | &#x2717; |
 
 In Mendix Cloud v3 we include a local mail server for convenience and backwards compatibility. For new applications, or applications that send large amounts of e-mail we recommend using an external e-mail service.
 
@@ -57,7 +57,7 @@ No authentication information is needed. You can use this same SMTP server from 
 
 When using Mendix mail servers and a sender address in a domain that has a restrictive SPF policy configured, you may encounter email delivery issues when the outgoing email servers from Mendix are not listed in the SPF record of that domain name.
 
-*   The needed information about Mendix mail servers that deliver outgoing mail traffic to the internet can be included in the SPF settings for the domain of the sender address by including `include:<a rel="nofollow">_spf.mendix.com</a>` into the policy rule. By using this technique, your SPF configuration will always automatically be kept up to date.
+*   The needed information about Mendix mail servers that deliver outgoing mail traffic to the internet can be included in the SPF settings for the domain of the sender address by including `include:_spf.mendix.com` into the policy rule. By using this technique, your SPF configuration will always automatically be kept up to date.
 *   Do **not** directly use hard coded low level infrastructure details like IP addresses of mail servers. These addresses are subject to change whenever Mendix is doing upgrades and maintenance.
 
 ### 4 Sender and Recipient Address Requirements

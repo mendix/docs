@@ -4,7 +4,7 @@ parent: "xml-schemas"
 ---
 
 
-Mendix derives the input/output formats for XML import/export and for calling SOAP/XML web services by interpreting XML Schema Definition (XSD) files. When you import an XML schema (.xsd file) or web service definition (.wsdl file) using the Mendix Business Modeler, you might get a dialog that contains warning messages about unsupported constructs. This is because currently Mendix does not support the entire XSD standard. The mapping in Mendix is based on entities and attributes, and some XSD constructs do not lend themselves easily for this format. The following table shows which XSD constructs are supported in Mendix.
+Mendix derives the input/output formats for XML import/export and for calling SOAP/XML web services by interpreting XML Schema Definition (XSD) files. When you import an XML schema (.xsd file) or web service definition (.wsdl file) using the Mendix Desktop Modeler, you might get a dialog that contains warning messages about unsupported constructs. This is because currently Mendix does not support the entire XSD standard. The mapping in Mendix is based on entities and attributes, and some XSD constructs do not lend themselves easily for this format. The following table shows which XSD constructs are supported in Mendix.
 
 | XSD Construct | Is Supported |
 | --- | --- |

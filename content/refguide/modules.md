@@ -3,8 +3,9 @@ title: "Modules"
 category: "Modeler"
 ---
 
+## 1 Introduction
 
-A Mendix project consists of modules: a System module and one or more user-defined modules. Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. The Modeler does not enforce any kind of module structure; it is up to you to choose logical modules for your application.
+A Mendix project consists of modules: a **System** module, a [UI Resources package](ui-resources-package), and one or more user-defined modules. Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. The Modeler does not enforce any kind of module structure; it is up to you to choose logical modules for your application.
 
 A module always contains exactly one [domain model](domain-model). The domain model is a data model that describes the information in your application domain in an abstract way.
 
@@ -12,7 +13,7 @@ Within a module you can define [module security](module-security) via module rol
 
 Furthermore, a module can contain many different types of documents. Each type of document is described in its own domain-specific language (DSL). For example, user-interface forms are described by using a visual language with elements like text boxes, tables and grids. Below you see tables grouped by category of all the different kinds of documents you can create within a module.
 
-## Common
+## 2 Common
 
 | Document type | Typical elements | Description |
 | --- | --- | --- |
@@ -21,7 +22,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 | [Enumerations](enumerations) |   | An enumeration is a set of predefined values, for example: in a webshop, an enumeration called MemberType could have the values Gold and Silver. |
 | [Consumed App Services](consumed-app-services) |   | App services are the preferred way of connecting Mendix applications to each other. An app service can be imported and its content can be used. |
 
-## Page Resources
+## 3 Page Resources
 
 | Document type | Description |
 | --- | --- |
@@ -30,7 +31,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 | [Menus](menu) | A menu document defines a navigation menu that can be used by a  [menu widget](menu-widgets). |
 | [Snippets](snippet) | Snippets define reusable interface parts. They can be used on  [pages](page) and  [layouts](layout) . |
 
-## Resources
+## 4 Resources
 
 | Document type | Description |
 | --- | --- |
@@ -42,7 +43,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 | [Rules](rules) | A rule defines a set of criteria, with a certain input the rule will result in a boolean or enumeration depending on the criteria met. It can be called from an exclusive split to determine the direction the microflow should go once the exclusive split is reached. |
 | [Scheduled Events](scheduled-events) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 A.M. |
 
-## Consumed Services
+## 5 Consumed Services
 
 | Document type | Description |
 | --- | --- |
@@ -51,7 +52,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 |  | An XML-to-domain mapping defines a translation from XML objects to domain model objects. |
 | [XML Schemas](xml-schemas) | An XML schema is defined in an XML Schema Definition (XSD) file and can be imported in your model. It describes what a certain XML document should look like. |
 
-## Published Services
+## 6 Published Services
 
 | Document type | Description |
 | --- | --- |

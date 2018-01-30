@@ -26,5 +26,5 @@ Search Context | WebElement | no |Limit the search to the given WebElement
 ## Return Value
 
 Name | Datatype | Description
---- | --- | --- | ---
+--- | --- | ---
 Validation Message | String | The text of the validation message.

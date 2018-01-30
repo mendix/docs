@@ -4,13 +4,13 @@ category: "Team Server"
 ---
 
 
-Version 3.0 of the Mendix Business Modeler contains a major new feature called Version Control. This feature falls under the umbrella of Application Life Cycle Management. It takes the two aspects of collaboration and revision management to a whole new level and is significantly more powerful than what comes before it. The new version control feature entails a new way of working and these pages are meant to guide you on your way.
+Version 3.0 of the Mendix Desktop Modeler contains a major new feature called Version Control. This feature falls under the umbrella of Application Life Cycle Management. It takes the two aspects of collaboration and revision management to a whole new level and is significantly more powerful than what comes before it. The new version control feature entails a new way of working and these pages are meant to guide you on your way.
 
 Before we look at this new feature, let us first look at how these aspects are dealt with in version 2.x of our technology so that you get a feel for the context and for the problems the new feature solves.
 
 ## In version 2.x
 
-In version 2.5 of the Mendix platform collaboration was handled through working on a centralized database. Everyone on the team connects to a PostgreSQL or SqlServer database and works directly on this one copy of the project. There is a locking mechanism to prevent two people from updating the same document at the same time.
+In version 2.5 of the Mendix Platform collaboration was handled through working on a centralized database. Everyone on the team connects to a PostgreSQL or SqlServer database and works directly on this one copy of the project. There is a locking mechanism to prevent two people from updating the same document at the same time.
 
 An attractive feature is that there is just one copy of the model and that brings with it a certain simplicity. The problem with this approach, however, is that there is just one copy of the model. Every time someone saves a document those changes are stored in the central database. The changes may not form a consistent whole yet because you still have to update some other documents before your new feature is done. If another person of the team opens or refreshes the project at this time he or she will get those changes and all the errors that come with it. There is currently no way to bundle a consistent set of changes that relate to a new feature and 'save' them to the central repository at once. This is especially problematic if you are working on a feature that takes a lot of time to implement.
 

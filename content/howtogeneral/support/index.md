@@ -10,7 +10,7 @@ Mendix Support is here to answer any questions and solve any issues that you mig
 
 ### Service Level Agreements
 
-We are availalbe for all users of the Mendix platform, and we are bound by service-level agreements (SLA) to our licensed customers. Licensed customers can select their type of SLA level: **Platform** or **Platinum**. The SLA level determines the specific agreement on the following points:
+We are availalbe for all users of the Mendix Platform, and we are bound by service-level agreements (SLA) to our licensed customers. Licensed customers can select their type of SLA level: **Platform** or **Platinum**. The SLA level determines the specific agreement on the following points:
 
 * Support availability 
 * Platform availability 
@@ -38,11 +38,11 @@ You can access the Mendix Support team through the [Support Portal](https://supp
 
 ## What We Expect from You
 
-Mendix supports the Mendix platform, and we expect you to support the applications that you have built on the platform. The following points are not supported through the standard SLA:
+Mendix supports the Mendix Platform, and we expect you to support the applications that you have built on the platform. The following points are not supported through the standard SLA:
 
 * Developing code on your behalf
 * Debugging or troubleshooting your applications
-* Analyzing and troubleshooting the performance of your applications or your infrastructure, except when we suspect an underlying issue exists in the Mendix platform
+* Analyzing and troubleshooting the performance of your applications or your infrastructure, except when we suspect an underlying issue exists in the Mendix Platform
 * Troubleshooting Mendix Community-developed components from the Mendix App Store
 
 During the start phase and through part of the scale phase of your digital transformation journey, it might be best to let the development team (DevOps) handle the support of the applications. As the number of applications grows, it is best to let an expert service desk handle the support of your applications. You can involve your existing service desk team or outsource support to one of our support partners, which you can find listed on the [Mendix Partners](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview) page.
@@ -63,11 +63,11 @@ We expect your support team to be trained and certified on the Mendix Modeler, t
 
 ## Reach Out to Mendix Support
 
-If you suspect an issue in the Mendix platform exists after your analysis (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide pointers on how to solve the issues yourself or redirect you to Expert Services for further assistance. If we suspect a platform issue, we will involve second and third line support for confirmation, and we will fix it if it is a platform issue. If the issue is commercial (for example, because your app requires a larger app container or more file storage), we might refer you to your Customer Success Manager directly. 
+If you suspect an issue in the Mendix Platform exists after your analysis (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide pointers on how to solve the issues yourself or redirect you to Expert Services for further assistance. If we suspect a platform issue, we will involve second and third line support for confirmation, and we will fix it if it is a platform issue. If the issue is commercial (for example, because your app requires a larger app container or more file storage), we might refer you to your Customer Success Manager directly. 
 
 ## Platform Status
 
-If there is an issue in the Mendix platform that affects multiple customers or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com) and send updates on the progress through email if you have subscribed to this service. Having your service desk team subscribe to updates from this page is recommended.
+If there is an issue in the Mendix Platform that affects multiple customers or if there is planned maintenance, we will communicate this through our [status page](https://status.mendix.com) and send updates on the progress through email if you have subscribed to this service. Having your service desk team subscribe to updates from this page is recommended.
 
 ## Product Support Period
 

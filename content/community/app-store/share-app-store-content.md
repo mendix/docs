@@ -9,7 +9,7 @@ The App Store is driven by contributions from members of the Mendix Community wh
 
 **This how-to will teach you how to do the following:**
 
-* Add new Modeler content and promotions to share in the App Store
+* Add new Desktop Modeler content and promotions to share in the App Store
 * Update existing App Store content
 
 ## 2 Prerequisites
@@ -26,13 +26,13 @@ To add content to the App Store, follow these steps:
 
     ![](attachments/share-app-store-content/add_content_button.png)
 
-2. The **Share your content** page will open, where you can select what you want to add:
+2. The **Share your content** page will open, where you need to select the purpose of your contribution:
 
-    * **Modeler content** — components that can be dowloaded using the Modeler
+    * **Share** — components that can be dowloaded using the Desktop Modeler
         * If you select this option, continue to [step #3](#3) below
-    * **Promotion** — a way to advertise a component or solution while not making it downloadable
+    * **Promote** — a way to advertise a component or solution while not making it downloadable
         * If you select this option, continue to [step #4](#4) below
-3. When adding Modeler content, select your **content source**:<a name="3"></a>
+3. When adding Desktop Modeler content, select your **content source**:<a name="3"></a>
     * If you select **Select from GitHub**, follow these steps:
 
         a. Select the type of GitHub profile (**Organisation** or **User**) where the content is stored.
@@ -61,12 +61,12 @@ To add content to the App Store, follow these steps:
 
 4. In the **Publish to** drop-down menu, select the location where you want to publish your content:<a name="4"></a>
 
-    * **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix Comminity
-    * **Private App Store (visible for your company)** – your content will be available only to the developers in your company
+    * **Public App Store (visible for anyone)** – your content will be available to every developer in the Mendix community (this content will have to be reviewed and approved by Mendix before it is available)
+    * **Private App Store (visible for your company)** – your content will be available only to the developers in your company (this content will not be reviewed by Mendix)
 5. In the bottom half of the **Share your content** screen, do the following:
 
     * Enter a **Name** for your content
-    * Select a category for your content from the **Category** drop-down menu: Connectors, Layouts, Modules, Samples, Solutions, Themes, Theme Starting Points, or Widgets
+    * Select a category for your content from the **Category** drop-down menu
     * If you have published a demo using your content, enter the **Demo URL**
     * Click **Upload Image** to upload an image for your app
 
@@ -86,7 +86,7 @@ To add content to the App Store, follow these steps:
         * The **Typical usage scenario** for the content
         * The **Features and limitations** for the content
     * These sections are optional:
-        * Any **Depdencies** (for example, the required Mendix Modeler version, modules, images, and styles)
+        * Any **Depdencies** (for example, the required Desktop Modeler version, modules, images, and styles)
         * The **Installation** steps and details
         * The **Configuration** steps and details
         * Any **Known bugs**
@@ -106,13 +106,9 @@ To add content to the App Store, follow these steps:
 
         ![](attachments/share-app-store-content/add_content_8.png)
 
-        {{% alert type="info" %}}
-
-        You can request other license types to be added as "License" options by pressing the "Feedback" button on the right side of the App Store screen.
-
-        {{% /alert %}}
-
-9. After entering the information for your content, you can click one of these buttons in the middle of the screen:
+        You can request other license types to be added as **License** options by clicking the **Feedback** button on the right side of the App Store screen.
+        
+10. After entering the information for your content, you can click one of these buttons in the middle of the screen:
 
     ![](attachments/share-app-store-content/add_content_7.png)
 
@@ -195,4 +191,4 @@ To develop modules and submit them to the App Store, follow these guidelines:
 
 * [App Store Content Support](app-store-content-support)
 * [App Store Overview](app-store-overview)
-* [How to Use App Store Content in the Modeler](use-app-store-content-in-the-modeler)
+* [How to Use App Store Content in the Desktop Modeler](use-app-store-content-in-the-modeler)

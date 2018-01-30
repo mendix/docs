@@ -14,33 +14,24 @@ In this how-to, you will create and prepare a new project, module, and domain mo
 
 * Create a project that will speed up and simplify your mobile app development
 
-## 2 Prerequisites
+## 2 Prerequisite
 
-Before starting this how-to, make sure you have completed the following prerequisite:
+To start this tutorial, create a new instance of the **Build a Mobile ToDo app** by downloading the app from the [Mendix App Store](https://appstore.home.mendix.com/link/app/70763/). After selecting the location where you will download the app project, the Desktop Modeler Version Selector will be opened. You need to select the Desktop Modeler version here in which you will open the app project.
 
-* Download [Mendix Desktop Modeler 7.3 or later](https://appstore.home.mendix.com/link/modeler/)
+{{% alert type="warning" %}}
+This tutorial was written for use on [Desktop Modeler 7.4.0](https://appstore.home.mendix.com/link/modeler/7.4.0). You should use that version for best results.
+{{% /alert %}}
 
-## 3 Creating and Preparing a New App Project
+## 3 First Changes
 
-To create and prepare your new app tutorial project, follow these steps:
+When your app is loaded into the Desktop Modeler, follow these first steps:
 
-1. Go to the [Mendix Developer Portal](http://home.mendix.com) and log in if you are not already logged in.
-
-    {{% alert type="info" %}}The Mendix Developer Portal is the central starting point for using, sharing, and building apps.{{% /alert %}}
-2. Go to the [Build a Mobile ToDo app](https://appstore.home.mendix.com/link/app/70763/) in the Mendix App Store and click **Download**.
-3. Open the app project with the Mendix **VersionSelector**. Note that this tutorial was created with Desktop Modeler 7.3.0.
-4. Choose a directory for extracting the app project package.
-5. If the **Version Not Found** dialog box opens, select the Desktop Modeler version with which you want to open the app project (it is best to use the latest version you have installed), and click **Open with selected Modeler version**. When the Desktop Modeler opens, select **Convert in-place** for the app project to open in your selected Modeler version.
-6. Open **Project** > **Security** to update the security settings of your app project.
-7.  Switch the **Security level** to **Off** and click **OK**.
+1. Open **Project** > **Security** to update the security settings of your app project.
+2.  Switch the **Security level** to **Off** and click **OK**.
 
     ![](attachments/create-a-to-do-app/todo-01.jpg)
 
-{{% alert type="warning" %}}
-
-Switching the security level to *Off* is done for fast development. Make sure you change it back to *Production* and configure the security of your app when you are going to use the app in a production environment.
-
-{{% /alert %}}
+Switching the security level to **Off** is done for fast development. Make sure you change it back to **Production** and configure the security of your app when you are going to use the app in a production environment!
 
 ## 4 Creating a New Module
 
@@ -59,12 +50,12 @@ The domain model for the to-do app will be pretty simple. It'll contain one enti
 1. Open the **Domain Model** in the **ToDo** module.
 2. Add a new **Entity** to the Domain Model.
 2. Rename the entity to **ToDo**.
-3. Add the following three attributes:
-  * *Description* (String)
-  * *DueDate* (Date and time)
-  * *Completed* (Boolean with default value *False*)
+3.  Add the following three attributes:
+    * *Description* (String)
+    * *DueDate* (Date and time)
+    * *Completed* (Boolean with default value *False*)
 
-  ![](attachments/create-a-to-do-app/todo-02.jpg)
+    ![](attachments/create-a-to-do-app/todo-02.jpg)
 
 For the next step in this series, move on to [How to Build a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2).
 

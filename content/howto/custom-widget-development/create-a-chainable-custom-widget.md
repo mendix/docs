@@ -185,7 +185,7 @@ The following three microflows will delete the images for each Car, Coachwork, a
 
 ### 7.5 Important Guideline for Creating Custom Widgets
 
-An important guideline for creating custom widgets for the Mendix platform is that you need to let all or most of the logic be done with the tools you have in Mendix. There is no better way of knowing what other widgets are doing in your app than to listen to changes on entities. Do not try to find this out by hacking the HTML output of the Mendix platform, because this is bad practice. If you want to know the state of a widget that does not involve entity handling in your Mendix app, you can always create custom event handlers that widgets can listen to. However, you should then make a widget have a "sender" and a "listener" mode.
+An important guideline for creating custom widgets for the Mendix Platform is that you need to let all or most of the logic be done with the tools you have in Mendix. There is no better way of knowing what other widgets are doing in your app than to listen to changes on entities. Do not try to find this out by hacking the HTML output of the Mendix Platform, because this is bad practice. If you want to know the state of a widget that does not involve entity handling in your Mendix app, you can always create custom event handlers that widgets can listen to. However, you should then make a widget have a "sender" and a "listener" mode.
 
 ## 8 Limitations of Custom Widgets
 

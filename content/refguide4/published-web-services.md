@@ -42,7 +42,7 @@ Sometimes, authentication for your web service is not necessary if you do not in
 
 ##### User name and password
 
-This is the default authentication option. The Mendix platform expects a security header with username and password when a web service is called. Specifically, the SOAP envelope header should contain an element called "authentication", which contains a username and password:
+This is the default authentication option. The Mendix Platform expects a security header with username and password when a web service is called. Specifically, the SOAP envelope header should contain an element called "authentication", which contains a username and password:
 
 ```xml
 <soap:Header>

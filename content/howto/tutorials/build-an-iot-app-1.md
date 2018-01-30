@@ -13,15 +13,22 @@ In this how-to, you will first deploy, view, and inspect some details of the Men
 
 * Connect app pages
 
-## 2 Prerequisites
+## 2 Prerequisite
 
-Before starting with this how-to, make sure you have completed the following prerequisite:
+To start this tutorial, create a new instance of the **Build a Logistics IoT app** by downloading the app from the [Mendix App Store](https://appstore.home.mendix.com/link/app/53934/). After selecting the location where you will download the app project, the Desktop Modeler Version Selector will be opened. You need to select the Desktop Modeler version here in which you will open the app project.
 
-* Create a new instance of the **Build a Logistics IoT app** from the [Mendix App Store](https://sprintr.home.mendix.com/link/startnewproject) and open it in the Desktop Modeler
+{{% alert type="warning" %}}
+This tutorial was written for use on [Desktop Modeler 7.2.0](https://appstore.home.mendix.com/link/modeler/7.2.0). You should use that version for best results.
+{{% /alert %}}
+
+Please note the following:
+
+* **Tutorial_Workspace** is the module in which you will be making the changes
+* **Tutorial_Completed** has the full final version of the app model to use as an example
 
 ## 3 Deploying and Viewing the Logistics IoT App
 
-Start by running the application so that you can experience how the app looks. You will see how you can switch between your workspace and the completed example app.
+Start by opening your app in the Desktop Modeler and running the app so that you can see how it looks. You will see how you can switch between your workspace and the completed example app.
 
 To deploy and view the app, follow these steps:
 

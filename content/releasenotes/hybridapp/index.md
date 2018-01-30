@@ -4,10 +4,6 @@ toc-level: 1
 description: "Hybrid App release notes."
 ---
 
-{{% alert type="info" %}}
-The known issues are described in [Hybrid App Known Issues](hybrid-app-known-issues).
-{{% /alert %}}
-
 These are the release notes for the Hybrid App.
 
 The version numbers for each release refer to the Hybrid App Base and the Hybrid App Template package, respectively.
@@ -16,7 +12,50 @@ If you're building the app using the regular PhoneGap Build approach from within
 
 If you're using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Cloud Portal.
 
+## 2018
+
+### January 17th, 2018 (1.7.2 / 1.3.4)
+
+* We added a cachebust to the `synchronizePackage` call so that a fresh copy of the static files is downloaded only when needed.
+* We upgraded the Phonegap CLI version used to 7.1.0.
+* We upgraded the **cordova-build-architecture** plugin to the latest version, which fixes the issue with setting up a local platform for the PhoneGap project.
+* We added **npm** as a dev dependency to make local builds more robust.
+
 ## 2017
+
+### December 22nd, 2017 (1.7.0 / 1.3.3)
+
+* We renamed the command `prepare` to `prepare:all`, because it conflicted with the **npm** command of the same name.
+* We updated the README with a table of contents and a list of known issues.
+
+### December 2nd, 2017 (1.7.0 / 1.3.2)
+
+* We updated some of the Cordova plugins to support the new iPhone X screen size/ratio/notch. Please follow the instructions in [iPhone X Support](https://github.com/mendix/hybrid-app-template/blob/master/IPHONEX.md) to configure your hybrid app to look good on an iPhone X.
+* We improved how Android splash screens are configured. The old configuration could lead to memory-related crashes during startup.
+
+### November 16th, 2017 (1.6.0 / 1.3.1)
+
+*  Android icons and splash screens are now properly configured. For projects using the "do it yourself" workflow, apply the following change in `src/config.xml.mustache`:
+
+  * Change:
+
+    ```xml
+    <{{{tag}}} src="{{{filename}}}" qualifier="{{{qualifier}}}"/>
+    ```
+    <br />
+    to:<br />
+
+    ```xml
+    <{{{tag}}} src="{{{filename}}}" density="{{{qualifier}}}"/>
+    ```
+
+* We removed the superfluous error message in case of a failed PIN login.
+* We fixed the issue where static files would synchronize on every startup, when **static resources from disk** was enabled in the Mendix project.
+* In earlier versions, mobile apps with offline mode enabled would show a dialog box when a new version of the Mendix app was available. We changed this behavior to always update on startup. This prevents inconsistencies that can occur when the user decides to update the mobile app at a later moment.
+
+### October 27th, 2017 (1.5.0 / 1.3.1)
+
+* In some cases, it was possible to avoid the PIN login prompt. This release mitigates those cases. For hybrid apps that have PIN login enabled, upgrading to this release is highly recommended.
 
 ### October 17th, 2017 (1.4.3 / 1.3.1)
 
@@ -35,7 +74,8 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ### October 11th, 2017 (1.4.0 / 1.3.0)
 
-* This release improves support for the PIN login feature.
+* This release improves support for the PIN login feature:
+  * We updated the Phonegap CLI version to 7.0.1.
   * We improved support for switching users in combination with the PIN login feature.
   * We fixed an issue with the remaining session data.
 

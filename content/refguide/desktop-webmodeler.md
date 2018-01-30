@@ -23,15 +23,15 @@ To sync the Web Modeler with the Desktop Modeler, you must be using [Mendix Desk
 
 To sync the Web Modeler with the Desktop Modeler, follow these steps:
 
-1. Navigate to the Developer Portal by clicking the Mendix icon and then the arrow in the upper-left of the Web Modeler:
+1. Open the information menu in the Web Modeler and click **Edit in Desktop Modeler**:
 
-    ![](attachments/desktop-howto/developer-portal.png)
+    ![](attachments/desktop-howto/main-menu.png)
 
-2. Click the drop-down arrow on **Edit App** to select **Edit in Desktop Modeler**:
+2. In the pop-up, click **Continue to the Desktop Modeler** to launch the Desktop Modeler. Optionally, click the **Download here** link to download and install the latest Desktop Modeler and retry afterwards.
 
-    ![](attachments/desktop-howto/edit-app.png)
+    ![](attachments/desktop-howto/wm-sync-dialog.png)
 
-3. In the top menu, click **Team**, and then click **Sync with Web Modeler**.  Note that if you have uncommited changes in the Desktop Modeler, click **Commit** before syncing with the Web Modeler.
+3. When the Desktop Modeler has started, in the top menu, click **Team**, and then click **Sync with Web Modeler**.  Note that if you have uncommited changes in the Desktop Modeler, click **Commit** before syncing with the Web Modeler.
 
     ![](attachments/desktop-howto/sync-webmodeler.png)
 
@@ -63,4 +63,4 @@ If you do not have anything to commit, you can also click **Cancel sync/Unlock W
 
 ## 4 Related Content
 
-* [How to Build an Employee Directory App (Beginner)](/howto/tutorials/build-an-employee-directory-app-beginner)
+* [How to Start with a Blank App](/howto/tutorials/start-with-a-blank-app)

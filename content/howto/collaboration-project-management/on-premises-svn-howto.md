@@ -6,7 +6,7 @@ tags: ["on-premises"]
 
 ## 1 Introduction
 
-When developing Mendix applications, changes to these applications are stored in a version control system. This system is called Team Server and is part of the Mendix platform. This means that the application's files are stored in the Mendix online environment.
+When developing Mendix applications, changes to these applications are stored in a version control system. This system is called Team Server and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment.
 
 While this is the recommended way of working for almost all Mendix developers, you may prefer to store your application's files in a system that is controlled by your own organization.
 

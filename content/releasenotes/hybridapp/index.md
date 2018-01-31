@@ -18,7 +18,7 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 {{% alert type="info" %}}
 
-For this update, we recommend that you download a fresh hybrid app package through the **DEPLOY** > **Mobile App** page in the Mendix Cloud Portal.
+For this update, we recommend that you download a fresh hybrid app package from the Mendix Cloud Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**).
 
 {{% /alert %}}
 

@@ -18,7 +18,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * When you create a page from an entity context that contains an Atlas UI data view, you will now see a new check box in the **Create new page** wizard: **Pre-fill page contents based on the <name> entity**. When you check this box, page content will pre-fill automatically. This speeds up initial app development by automagically adding and wiring the appropriate widgets for the entity specified.
  * When using exclusive splits in the microflow editor, we now auto-configure the last split condition of an exclusive split. This will save you time and keep you from unintentionally omitting that condition.
 * You can now easily jump to the microflow that serves as the data source for your data widget by clicking the arrow icon that is located right next to the **Data Source** property.
-* We added support for [Desktop Modeler 7.11.0](../desktop-modeler/7.11). The minimum (and only) supported version is now [Desktop Modeler 7.11.0](../desktop-modeler/7.11).
+* We added support for [Desktop Modeler 7.11.0](../desktop-modeler/7.11). The minimum (and only) supported version is now Desktop Modeler 7.11.0.
 
 ## 2017
 

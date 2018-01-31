@@ -53,7 +53,7 @@ Editing test cases is one of the main tasks in ATS. We've listened to your feedb
 
 #### Results and Logs
 
-Browsing jobs results and logs is another common task. Again, we're making use of the same list view as in the repository in order to be consistent and provide similar functions. Also, all the jobs are now updated in real-time down to the test case level. Run a big test suite and drill down into a job to see the live status and results of all the contained items.
+Browsing job results and logs is another common task. Again, we're making use of the same list view as in the repository in order to be consistent and provide similar functions. Also, all the jobs are now updated in real-time down to the test case level. Run a big test suite and drill down into a job to see the live status and results of all the contained items.
 
 ### Faster Test Execution
 
@@ -91,55 +91,56 @@ Since the number of possible options is very high, we have made a pre-selection 
 
 Do you practice DevOps on your team? Then you will want to put in place continuous delivery or even continuous deployment. To do so, you need to automate as much as possible, including testing. You need to not only automate the tests, but also the whole process, from triggering the test run to checking the results. With ATS, this is now possible.
 
-We've extended ATS with a new simple API. Via this API, you can run your automated tests from any external tool. A good option for such a tool is Jenkins. We've documented how to set up Jenkins with ATS in a [How-To](/ats/howtos/).
+We've extended ATS with a new simple API. Via this API, you can run your automated tests from any external tool. A good option for such a tool is Jenkins. We've documented how to set up Jenkins with ATS in a [How-to](/ats/howtos/).
 
 ### More Changes and Fixes
 
 * There's a completely new [ATS Reference Guide](/ats/refguide/) for version 2.0.
 * We've introduced a new setting per app to schedule the cleanup of your execution logs. The default retention time for your logs is 90 days. The last log of a test case is always kept.
 * We've improved the overall performance by optimizing security rules.
-* Drop-down menus are now configured as part of the parameter where they are used. They are no longer considered independent, and are only an option for parameters.
+* Drop-down menus are now configured as part of the parameter where they are used. They are no longer considered independent, and they are only an option for parameters.
 * The cancelling of jobs was sometimes not reliable. We fixed this.
 * We improved the log output so that it is more readable.
 * We added an autocomplete function to search for actions, test cases, or values.
 * We centralized the settings page per app.
 * We implemented application-wide type icons with tooltips.
 * We added description text on many pages.
-* We dropped the support for selenium standalone server.
+* We dropped the support for a Selenium Standalone Server.
 
 ### Terminology
 
 The following terminology has changed:
 
-* Package --&gt; Folder
-* Project --&gt; app
-* Datatypes
-  * Integer --&gt; Number
-  * String --&gt; Text
-  * Enumeration --&gt; Drop-Down
-  * Web Element --&gt; Page Element
-  * Undefined --&gt; Any
-  * Boolean --&gt; Boolean
-* Job is a new term for test run
-* There are new statuses and results in the test runner:
-  * Statuses: Queued, Running, Done
-  * Results: Passed, Failed, Cancelled, Skipped
+* "package" --&gt; "folder"
+* "project" --&gt; "app"
+* data types:
+  * "integer" --&gt; "number"
+  * "string" --&gt; "text"
+  * "enumeration" --&gt; "drop-down"
+  * "web element" --&gt; "page element"
+  * "undefined" --&gt; "any"
+* "test run" --&gt; "job"
+
+There are new statuses and results in the test runner:
+
+* Statuses: queued, running, done
+* Results: passed, failed, cancelled, skipped
 
 ### Removals
 
 Some of changes described above made existing functionality obsolete:
 
-* The whole setup and administration of tenants, apps, permissions, accounts, and roles has become obsolete and is no longer available.
-* The option to set the concurrency limit for a selenium endpoint has been removed. The limit is now determined by the test runner.
-* The log depth settings has been removed. We now log your test cases down to every step and custom actions down to the core actions.
+* The whole setup and administration of tenants, apps, permissions, accounts, and roles has become obsolete and is no longer available
+* The option to set the concurrency limit for a Selenium endpoint has been removed; the limit is now determined by the test runner
+* The log depth settings has been removed; we now log your test cases down to every step and custom actions down to the core actions
 
 The following features have been removed as a result of design decisions:
 
-* Data types: DateTime, Float, and Currency (which is deprecated now and will be removed soon)
+* Data types: DateTime, float, and currency (which is deprecated now and will be removed soon)
 * Folder visibility
 * Custom error message
 * Proxy settings
-* Enabling screenshot (both on job and test step configuration)
+* Enabling screenshots (both on job and test step configuration)
 * Quick run
 
 ### Minor Fixes

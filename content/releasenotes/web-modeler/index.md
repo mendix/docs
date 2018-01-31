@@ -4,9 +4,21 @@ title: "Web Modeler"
 
 {{% alert type="info" %}}
 
-These release notes are for the [beta](../beta-features/index) version of the Web Modeler.
+These release notes are for the [beta](../beta-features/index) version of the Web Modeler, Mendix's web-based development environment for business developers. We welcome users to provide feedback on issues or share suggestions for improvements.
 
 {{% /alert %}}
+
+## 2018
+
+### January 29th, 2018 16:10:52 GMT
+
+#### Improvements
+
+* In the page editor, you can now configure the page size of list views by changing the value of the **Page Size** property. The WYSIWYG editor will instantly render the number of rows you entered.
+* When you create a page from an entity context that contains an Atlas UI data view, you will now see a new check box in the **Create new page** wizard: **Pre-fill page contents based on the `<name>` entity**. When you check this box, page content will pre-fill automatically. This speeds up initial app development by automagically adding and wiring the appropriate widgets for the entity specified.
+ * When using exclusive splits in the microflow editor, we now auto-configure the last split condition of an exclusive split. This will save you time and keep you from unintentionally omitting that condition.
+* You can now easily jump to the microflow that serves as the data source for your data widget by clicking the arrow icon that is located right next to the **Data Source** property.
+* We added support for [Desktop Modeler 7.11.0](../desktop-modeler/7.11). The minimum (and only) supported version is now Desktop Modeler 7.11.0.
 
 ## 2017
 

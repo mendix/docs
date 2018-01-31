@@ -14,6 +14,23 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ## 2018
 
+### January 31st, 2018 (1.7.4 / 1.4.0)
+
+_For this update, we recommend that you download a fresh hybrid app package through the Mobile App flow in the Mendix Portal_
+
+* We fixed an issue where NPM updates would fail consistently. The issue was related to the recently added local Phonegap dependency. This local dependency is now removed. Phonegap should be installed globally, and it should match the cli version configured in the config.xml (e.g. npm install -g phonegap@7.1.0). During NPM install/update, there will be feedback in the console regarding the current and required versions.
+* We removed package-lock.json files from both mendix-hybrid-app-base as well as mendix-hybrid-app-template. This makes it easier to stay up to date with the latest mendix-hybrid-app-base package.
+* Example files for the config.xml.mustache and the index.html.mustache files are now created during NPM install/update.
+* We removed obsolete dependencies related to Webpack.
+
+### January 30th, 2018 (1.7.3 / 1.3.5)
+
+* We removed the Cordova console plugin. This plugin was obsolete, and caused issues while building iOS packages.
+
+### January 23rd, 2018 (1.7.2 / 1.3.5)
+
+* We updated the package-lock.json file, to fix an issue where an old version of mendix-hybrid-app-base was being used.
+
 ### January 17th, 2018 (1.7.2 / 1.3.4)
 
 * We added a cachebust to the `synchronizePackage` call so that a fresh copy of the static files is downloaded only when needed.

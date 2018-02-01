@@ -22,4 +22,4 @@ function closeConnection(workingCopy: OnlineWorkingCopy): when.Promise<OnlineWor
 }
 ```
 
-Continue the learning path with [Finding things in the model](finding-things-in-the-model).
+Continue with [Finding things in the model](finding-things-in-the-model).

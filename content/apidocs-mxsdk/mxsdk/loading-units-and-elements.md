@@ -42,4 +42,4 @@ entity1Interface.load((entity1 : domainmodels.Entity) => {
 
 {{% /alert %}}
 
-Continue your learning path with [Generating code from the model](generating-code-from-the-model).
+Continue with [Generating Code from the Model](generating-code-from-the-model).

@@ -78,7 +78,7 @@ When you want to find a widget, always use the Find/Assert Widget action if poss
 
 If you want to find something more specific inside a widget or the widget does not have an `mx-name`, use "Find" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and the Mendix Modeler. You can also find the name using the ATS helper.
 
-If you cannot find a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](/howtos/ht-version-1/create-custom-actions) for more information.
+If you cannot find a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](../../howtos/ht-version-1/create-custom-actions) for more information.
  
  ## 3 Clicking a Widget
 
@@ -142,7 +142,7 @@ When you want to click a widget, always use the Click Widget action if possible.
 
 If you want to click something more specific inside a widget or the widget does not have an `mx-name`, use "Click" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and the Mendix modeler. You can also find the name using the ATS helper.
 
-If you cannot click a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](/howtos/ht-version-1/create-custom-actions) for more information.
+If you cannot click a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](../../howtos/ht-version-1/create-custom-actions) for more information.
 
 ## 4 Setting an Input Widget
 
@@ -206,7 +206,7 @@ When you want to set an input widget, always use the Set Value action if possibl
 
 If you want to set a special input widget or the widget does not have an `mx-name`, use "Click" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and the Mendix modeler. You can also find the name using the ATS helper.
 
-If you cannot set an input widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](/howtos/ht-version-1/create-custom-actions) for more information.
+If you cannot set an input widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](../../howtos/ht-version-1/create-custom-actions) for more information.
 
 ## 5 Retrieving a Value from a Widget
 
@@ -261,7 +261,7 @@ When you want to get a value from a widget, always use the Get Value action if p
 
 If you want to get the value from a specific widget or the widget does not have an `mx-name`, use "Get" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and the Mendix modeler. You can also find the name using the ATS helper.
 
-If you cannot get the value from a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](/howtos/ht-version-1/create-custom-actions) for more information.
+If you cannot get the value from a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](../../howtos/ht-version-1/create-custom-actions) for more information.
 
 ## 6 Asserting Values/Information
 
@@ -319,7 +319,7 @@ When you want to assert a value from a widget always use the _Assert Value_ acti
 
 If you want to assert a value from a specific widget or the widget does not have a `mx-name`. Then use "Assert" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/), the Mendix modeler. You can also find the name using the ATS helper.
 
- In case you cannot assert the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](/howtos/ht-version-1/create-custom-actions).
+ In case you cannot assert the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](../../howtos/ht-version-1/create-custom-actions).
 
 ## 7 Generating Values/Information<a name="GeneratingValuesInformation"></a>
 
@@ -396,4 +396,4 @@ It all comes down to following these steps to achieve the right result
      Generating values/information    | See [6 Generating Values/Information](#GeneratingValuesInformation) for more information |
 
     If you are certain that ATS does not support your task, go to step 4 below.
-4. If ATS does not support your task with a standard solution, you must create your own solution. For more information, see [How to Create Custom Actions](/howtos/ht-version-1/create-custom-actions).
+4. If ATS does not support your task with a standard solution, you must create your own solution. For more information, see [How to Create Custom Actions](../../howtos/ht-version-1/create-custom-actions).

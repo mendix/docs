@@ -106,7 +106,7 @@ ATS also has a few specific click actions. To find these, use the search term "C
 
 In this example, you want to click the **Load more** button inside a list view widget. You cannot use the Click Widget action, because the button does not have its own `mx-name`. It is part of the list view widget.
 
-The solution in this situation is to use one of the following search terms: "Click load more" or "Click listview". ATS checks all the actions and returns those that match these words. There is an action called [Click Widget Button](/refguide/rg-version-1/click-widget-button), which uses the `mx-name` of the widget and the button type to click the right button. In this case, select the "load more" type.
+The solution in this situation is to use one of the following search terms: "Click Widget Button" because you want to click a button that is part of a widget. ATS checks all the actions and returns those that match these words. There is an action called [Click Widget Button](/refguide/rg-version-1/click-widget-button), which uses the `mx-name` of the widget and the button type to click the right button. In this case, select the "load more" type.
 
 ![](attachments/finding-the-action-you-need-2/click-widget-button-action-search.png)
 
@@ -172,7 +172,7 @@ In this example, you want to set the value of a check box widget, but you want t
 
 The solution in this situation is to use the following search term: "Set Checkbox". ATS checks all the actions and returns those that match these words. There is an action called [Set Checkbox Value](/refguide/rg-version-1/set-checkbox-value), which uses the `mx-name` of the widget and the boolean value you set to check or clear the check box.
 
-![](version-2/attachments/finding-the-action-you-need-2/set-checkbox-value-action-search.png)
+![](attachments/finding-the-action-you-need-2/set-checkbox-value-action-search.png)
 
 #### 3.2.2 Example 2
 
@@ -180,7 +180,7 @@ In this example, you want to set the BooleanSlider widget to certain value. You 
 
 The solution in this situation is to use the following search term: "Set BooleanSlider". ATS checks all the actions and returns those that match these words. There is an action called [Set BooleanSlider Value](/refguide/rg-version-1/set-booleanslider-value), which uses the `mx-name` of the widget and the value to which you want to set the slider.
 
-![](version-2/attachments/finding-the-action-you-need-2/set-booleanslider-value-action-search.png)
+![](attachments/finding-the-action-you-need-2/set-booleanslider-value-action-search.png)
 
 #### 3.2.3 Example 3
 
@@ -188,7 +188,7 @@ In this example, you want to set a radio button inside a GridSelector widget. Yo
 
 The solution in this situation is to use the following search term: "Set Grid Selector". ATS checks all the actions and returns those that match these words. There is an action called [Set Grid Selector Value](/refguide/rg-version-1/set-grid-selector-radiobutton-checked), which uses the `mx-name` of the widget, column caption, and row caption to locate the radio button.
 
-![](version-2/attachments/finding-the-action-you-need-2/set-grid-selector-radiobutton-action-search.png)
+![](attachments/finding-the-action-you-need-2/set-grid-selector-radiobutton-action-search.png)
 
 #### 3.2.4 Example 4
 

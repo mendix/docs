@@ -3,6 +3,8 @@ title: "Finding the Action you Need"
 parent: "bp-version-2"
 ---
 
+## 1 Introduction
+
 This document explains the best way to find the action you need in ATS. This is done by using six main categories for what you are trying to achieve. Each category explains the generic solution and the widget specific solutions using examples. These are the categories:
 
 * Finding a widget
@@ -14,7 +16,7 @@ This document explains the best way to find the action you need in ATS. This is 
  
 Select the category that covers your situation. If you are not sure, use the widget name to search for an action inside ATS and take a look at what pops up.
 
-For a quick summary and action plan, go straight to [7 Summary](#summary).
+For a quick summary and action plan, go straight to section [8 Summary](#summary).
 
 {{% alert type="info" %}}
 
@@ -22,11 +24,11 @@ When the ATS recorder does not record any steps, you can use this best practice 
 
 {{% /alert %}}
 
-## 1 Finding a Widget
+## 2 Finding a Widget
  
 In ATS there are many actions for finding a widget, from generically finding a widget to finding a specific data grid row. The first part of this section explains the generic action for finding a widget, and the second part explains the actions that conduct a more specific search. The last part of the section provides a summary of the first two parts. The magic word while searching for an action that can find something is "Find."
 
-### 1.1 Generic Action
+### 2.1 Generic Action
 
 When you want to find a widget, the main choice is always the [Find/Assert Widget](/refguide/rg-version-1/findassert-widget) action. It finds the widget you need using the `mx-name` of the widget. 
 
@@ -42,11 +44,11 @@ This is the **Find/Assert Widget** action:
 
 If the generic action does not work, check if there is a specific one.
 
-### 1.2 Specific Action
+### 2.2 Specific Action
 
 When you are looking for a specific widget or content of that widget, use the widget name in the search.
 
-#### 1.2.1 Example 1
+#### 2.2.1 Example 1
 
 In this example, you want to find a row inside a data grid widget. You can use the Find/Assert Widget action in combination with the column name, but that doesn't work if there are multiple data grids.
 
@@ -54,7 +56,7 @@ The solution in this situation is to use the following search term: "Find Datagr
 
 ![](attachments/finding-the-action-you-need-2/find-datagrid-example.png)
 
-#### 1.2.2 Example 2
+#### 2.2.2 Example 2
 
 In this example, you want to find the check box in a simple check box set selector widget. You cannot use the Find/Assert Widget action here, because the check box does not have its own `mx-name`. It is part of the simple check box set selector widget.
 
@@ -62,7 +64,7 @@ The solution in this situation is to use the following search term: "Find Simple
 
 ![](attachments/finding-the-action-you-need-2/find-simple-checkbox-set-selector-example.png)
 
-#### 1.2.3 Example 3
+#### 2.2.3 Example 3
 
 In this example, you want to find a dialog box based on the title or text inside. You cannot use the Find/Assert Widget action, because the dialog box does not have a `mx-name`.
 
@@ -70,19 +72,19 @@ The solution in this situation is to use the following search term: "Find Dialog
 
 ![](attachments/finding-the-action-you-need-2/find-dialog-example.png)
 
-### 1.3 Summary
+### 2.3 Summary
 
 When you want to find a widget, always use the Find/Assert Widget action if possible. 
 
-If you want to find something more specific inside a widget or the widget does not have an `mx-name`, use "Find" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and the Mendix modeler. You can also find the name using the ATS helper.
+If you want to find something more specific inside a widget or the widget does not have an `mx-name`, use "Find" in combination with the widget name as displayed in the [Mendix App Store](https://appstore.home.mendix.com/) and the Mendix Modeler. You can also find the name using the ATS helper.
 
 If you cannot find a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](/howtos/ht-version-1/create-custom-actions) for more information.
  
- ## 2 Clicking a Widget
+ ## 3 Clicking a Widget
 
 In ATS, there are many actions for clicking a widget, from generically clicking a widget to clicking a specific data grid row. The first part of this section explains the generic action for clicking a widget, and the second part explains the actions that conduct a more specific click. The last part of the section provides a summary of the first two parts. The magic word while searching for an action that can click something is "Click."
 
- ### 2.1 Generic Action
+ ### 3.1 Generic Action
 
 When you want to click a widget, the main choice is always the [Click Widget](/refguide/rg-version-1/click-widget) action. It clicks the widget you need using the `mx-name` of the widget.
 
@@ -98,11 +100,11 @@ This is the **Click Widget** action:
 
 If the generic action does not work, check if there is a specific one.
 
-### 2.2 Specific Action
+### 3.2 Specific Action
 
 ATS also has a few specific click actions. To find these, use the search term "Click" in combination with the widget name. 
 
-#### 2.2.1 Example 1
+#### 3.2.1 Example 1
 
 In this example, you want to click the **Load more** button inside a list view widget. You cannot use the Click Widget action, because the button does not have its own `mx-name`. It is part of the list view widget.
 
@@ -110,7 +112,7 @@ The solution in this situation is to use one of the following search terms: "Cli
 
 ![](attachments/finding-the-action-you-need-2/click-widget-button-action-search.png)
 
-#### 2.2.2 Example 2
+#### 3.2.2 Example 2
 
 In this example, you want to click a specific data grid row inside a data grid. You can use the Click Widget action in combination with the column name, but if there are multiple data grids, ATS cannot distinguish them.
 
@@ -118,7 +120,7 @@ The solution in this situation is to use the following search term: "Click DataG
 
 ![](attachments/finding-the-action-you-need-2/click-datagrid-row-action-search.png)
 
-#### 2.2.3 Example 3
+#### 3.2.3 Example 3
 
 In this example, you want to click a menu item in a menu bar widget. You cannot use the Click Widget action, because the menu item does not have its own `mx-name`. It is part of the menu bar widget.
 
@@ -126,7 +128,7 @@ The solution in this situation is to use the following search term: "Click menu"
 
 ![](attachments/finding-the-action-you-need-2/click-menu-item-action-search.png)
 
-#### 2.2.4 Example 4
+#### 3.2.4 Example 4
 
 In this example, you want to click an element you found in a previous step. You cannot use the Click Widget action, because it does not accept an element as input.
 
@@ -134,7 +136,7 @@ The solution in this situation is to use the following search term: "Click/Doubl
 
 ![](attachments/finding-the-action-you-need-2/clickdoubleclick-action-search.png)
 
-### 2.3 Summary
+### 3.3 Summary
 
 When you want to click a widget, always use the Click Widget action if possible. 
 
@@ -142,11 +144,11 @@ If you want to click something more specific inside a widget or the widget does 
 
 If you cannot click a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](/howtos/ht-version-1/create-custom-actions) for more information.
 
-## 3 Setting an Input Widget
+## 4 Setting an Input Widget
 
 In ATS, there are several actions for setting an input widget, from a simple action that covers most situations to check boxes inside tables. The first part of this section explains the generic action for setting an input widget, and the second part explains the actions that set a more specific input widget. The last part of the section provides a summary of the first two parts. The magic word while searching for an action that can handle an input widget is "Set."
 
-### 3.1 Generic Action
+### 4.1 Generic Action
 
 When you want to set an input widget, the main choice is always the [Set Value](/refguide/rg-version-1/set-value) action. It sets the input widget using the `mx-name` of the widget and the value to set. 
 
@@ -162,11 +164,11 @@ This is the **Set Value** action:
 
 If the generic action does not work, check if there is a specific one.
 
-### 3.2 Specific Action
+### 4.2 Specific Action
 
 ATS also has a few specific actions for setting an input widget. To find these, use the search term "Set" in combination with the widget name.
 
-#### 3.2.1 Example 1
+#### 4.2.1 Example 1
 
 In this example, you want to set the value of a check box widget, but you want to set it to a specific state. You cannot use the Set Value action because it does not work.
 
@@ -174,7 +176,7 @@ The solution in this situation is to use the following search term: "Set Checkbo
 
 ![](attachments/finding-the-action-you-need-2/set-checkbox-value-action-search.png)
 
-#### 3.2.2 Example 2
+#### 4.2.2 Example 2
 
 In this example, you want to set the BooleanSlider widget to certain value. You cannot use the Set Value action because it does not work. 
 
@@ -182,7 +184,7 @@ The solution in this situation is to use the following search term: "Set Boolean
 
 ![](attachments/finding-the-action-you-need-2/set-booleanslider-value-action-search.png)
 
-#### 3.2.3 Example 3
+#### 4.2.3 Example 3
 
 In this example, you want to set a radio button inside a GridSelector widget. You cannot use the Set Value, because the radio button does not have its own `mx-name`. It is part of the GridSelector widget.
 
@@ -190,7 +192,7 @@ The solution in this situation is to use the following search term: "Set Grid Se
 
 ![](attachments/finding-the-action-you-need-2/set-grid-selector-radiobutton-action-search.png)
 
-#### 3.2.4 Example 4
+#### 4.2.4 Example 4
 
 In this example, you want to set an input reference selector widget. You cannot use the Set Value action because it does not work. 
 
@@ -198,7 +200,7 @@ The solution in this situation is to use the following search term: "Set InputRe
 
 ![](attachments/finding-the-action-you-need-2/set-inputreferenceselector-value-action-search.png)
 
-### 3.3 Summary
+### 4.3 Summary
 
 When you want to set an input widget, always use the Set Value action if possible. 
 
@@ -206,11 +208,11 @@ If you want to set a special input widget or the widget does not have an `mx-nam
 
 If you cannot set an input widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](/howtos/ht-version-1/create-custom-actions) for more information.
 
-## 4 Retrieving a Value from a Widget
+## 5 Retrieving a Value from a Widget
 
 In ATS, there are several actions for getting a value from a widget. The first part of this section explains the generic action for getting a value from a widget, and the second part explains the actions that get a specific value from a widget. The last part of the section provides a summary of the first two parts. The magic word while searching for an action that can get a value is "Get."
 
-### 4.1 Generic Action
+### 5.1 Generic Action
 
 When you want to get a value from a widget, the main choice is always the [Get Value](/refguide/rg-version-1/get-value) action. It retrieves the value of a widget using the `mx-name` of the widget.
 
@@ -226,11 +228,11 @@ This is the Get Value action:
 
 If the generic action does not work, check if there is a specific one.
 
-### 4.2 Specific Action
+### 5.2 Specific Action
 
 ATS has a few specific actions for getting a value from an widget. To find these, use the search term "Get" in combination with the widget name.
 
-#### 4.2.1 Example 1
+#### 5.2.1 Example 1
 
 In this example, you want to get the value of an InputReferenceSelector widget. You cannot use the Get Value action, because it does not work. 
 
@@ -238,14 +240,14 @@ The solution in this situation is to use the following search term: "Get InputRe
 
 ![](attachments/finding-the-action-you-need-2/get-inputreferenceselector-value-action-search.png)
 
-#### 4.2.2 Example 2
+#### 5.2.2 Example 2
 
 In this example, you want to get the value displayed in the CKEditor widget. You cannot use the Get Value action because it does not work.  
 
 The solution in this situation is to use the following search term: "Get CKEditor". ATS checks all the actions and returns those that match these words. There is an action called [Get CKEditor Value](/refguide/rg-version-1/get-ckeditor-value), which uses the `mx-name` to return the value displayed in the CKEditor widget.
 ![](attachments/finding-the-action-you-need-2/get-ckeditor-value-action-search.png)
 
-#### 4.2.3 Example 3
+#### 5.2.3 Example 3
 
 In this example, you want to get the message displayed in the dialog box widget. You cannot use the Get Value action because there is no `mx-name`.
 
@@ -253,7 +255,7 @@ The solution in this situation is to use the following search term: "Get Dialog"
 
 ![](attachments/finding-the-action-you-need-2/get-dialog-message-text-action-search.png)
 
-### 4.3 Summary
+### 5.3 Summary
 
 When you want to get a value from a widget, always use the Get Value action if possible. 
 
@@ -261,11 +263,11 @@ If you want to get the value from a specific widget or the widget does not have 
 
 If you cannot get the value from a widget because it has no unique name or because it is not supported, see [How to Create Custom Actions](/howtos/ht-version-1/create-custom-actions) for more information.
 
-## 5 Asserting Values/Information
+## 6 Asserting Values/Information
 
 In ATS, there are several actions for asserting values. The first part of this section explains the generic action for asserting a value inside your app, and the second part explains the actions that assert specific values inside your app or inside ATS. The last part of the section provides a summary of the first two parts. The magic word while searching for an action that can assert a value is "Assert."
 
-### 5.1 Generic Action
+### 6.1 Generic Action
 
 When you want to assert a value inside a widget, the main choice is always the [Assert Value](/refguide/rg-version-1/assert-value) action. It asserts the value of a widget using the `mx-name` of the widget.
 
@@ -281,11 +283,11 @@ This is the Assert Value action:
 
 If the generic action does not work, check if there is a specific one.
 
-### 5.2 Specific Action
+### 6.2 Specific Action
 
 ATS has a few specific actions for asserting values in a widget or inside ATS. To find these, use the search term "Assert" in combination with the name of the widget or in combination with what you want to assert.
 
-#### 5.2.1 Example 1
+#### 6.2.1 Example 1
 
 In this example, you want to assert that a specific validation message appears. You cannot use the Assert Value action, because that would assert the value inside the widget and not the validation message.
 
@@ -293,7 +295,7 @@ The solution in this situation is to use the following search term: "Assert Vali
 
 ![](attachments/finding-the-action-you-need-2/assert-validation-message-action-search.png)
     
-#### 5.2.2 Example 2
+#### 6.2.2 Example 2
 
 In this example, you want to assert that the right page has opened. You cannot use the Assert Value, because there is no `mx-name` that you can use.
 
@@ -301,7 +303,7 @@ The solution in this situation is to use the following search term: "Assert Page
 
 ![](attachments/finding-the-action-you-need-2/assert-current-page-action-search.png)
 
-#### 5.2.3 Example 3
+#### 6.2.3 Example 3
 
 The above examples show actions meant to assert something in your Mendix app. ATS also has actions that assert internal outcomes/values. 
 
@@ -311,7 +313,7 @@ The solution in this situation is to use the following search term: "Assert not 
 
 ![](attachments/finding-the-action-you-need-2/assert-not-equals-action-search.png)
 
-### 5.3 Summary
+### 6.3 Summary
 
 When you want to assert a value from a widget always use the _Assert Value_ action if possible.
 
@@ -319,11 +321,11 @@ If you want to assert a value from a specific widget or the widget does not have
 
  In case you cannot assert the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](/howtos/ht-version-1/create-custom-actions).
 
-## 6 Generating Values/Information<a name="GeneratingValuesInformation"></a>
+## 7 Generating Values/Information<a name="GeneratingValuesInformation"></a>
 
 In ATS, there are several actions for generating random or present time values. The first part of this section explains a generic action that makes a reusable string, and the second part explains the actions that perform more specific tasks. The last part of the section provides a summary of the first two parts. In this case, there is no magic word to find the actions you need.
 
-### 6.1 Generic Action
+### 7.1 Generic Action
 
 In some test cases, you want to enter the same value a few times. Instead of entering the same value every time, you can use the [Concatenate String](/refguide/rg-version-1/concatenate-string) action, which combines the text you enter and returns it so that you can reuse that value in different actions.
 
@@ -333,11 +335,11 @@ This is the Concatenate String action:
 
 ![](attachments/finding-the-action-you-need-2/concatenate-string-action-search.png)
 
-### 6.2 Specific Action
+### 7.2 Specific Action
 
 ATS also has a few specific actions for generating values to use in your test case. The search terms used to find these are "Random" and "Current."
 
-#### 6.2.1 Example 1
+#### 7.2.1 Example 1
 
 In this example, you want to have a unique value in your test case. That also makes your test case reusable. 
 
@@ -345,7 +347,7 @@ The solution in this situation is to use the following search term: "Random".  A
 
 ![](attachments/finding-the-action-you-need-2/random-string-action-search.png)
 
-#### 6.2.2 Example 2
+#### 7.2.2 Example 2
 
 In this example, you want to have a unique number value in your test case. That also makes your test case reusable.
 
@@ -353,7 +355,7 @@ The solution in this situation is to use the following search term: "Random". AT
 
 ![](attachments/finding-the-action-you-need-2/random-number-action-search.png)
 
-#### 6.2.3 Example 3
+#### 7.2.3 Example 3
 
 In this example, you want to use today's date in your test case. This makes your test case reusable, but you don't want to enter it every time you execute the test case.
 
@@ -361,11 +363,11 @@ The solution in this situation is to use the following search term: "Current Dat
 
 ![](attachments/finding-the-action-you-need-2/get-current-datetime-string-action-search.png)
 
-### 6.3 Summary
+### 7.3 Summary
 
 For generating values or information, you should follow the first two parts of this section. There is no generic solution regarding this, only a constant provider like the Concatenate String action.
 
-## 7 Summary<a name="summary"></a>
+## 8 Summary<a name="summary"></a>
 
 It all comes down to following these steps to achieve the right result
 

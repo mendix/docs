@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Complete [How to Create a Test Case](create-a-test-case-2)
 * Complete Mendix Rapid App Developer course
 
-## 3 CI/CD basics
+## 3 CI/CD Basics
 
 In this chapter the three components of CI/CD are described. There are two possible combinations:
 * Continuous Integration and Continuous Delivery
@@ -58,7 +58,7 @@ A Mendix developer commits a change into his team server branch. The branch is t
 
 ATS can do the testing of your Mendix app in the CI/CD pipeline. In ATS 2.0 a CI/CD API is added, so that customers can access their test cases or test suites from outside ATS. This way you can use a CI/CD tool to execute your test cases and test suites in ATS and retrieve the results. To access those specific test cases and test suites you must generate a CI/CD API key. This chapter explains how to generate a CI/CD API key for accessing ATS and how to generate a CI/CD template for a test case or test suite. The CI/CD template is a pre-configured test case or test suite with a set run configuration which can be fired from a CI/CD pipeline.
 
-### 4.1 CI/CD access API
+### 4.1 CI/CD Access API
 
 To generate a CI/CD API key follow these steps:
 
@@ -122,11 +122,11 @@ Keep the unique ID at hand for later on.
 
 You now created a CI/CD template which you can execute using a CI/CD pipeline.
 
-### 4.3 CI/CD webservice user
+### 4.3 CI/CD Web Service User
 
 The CI/CD in ATS is using a webservice with authentication. Please use the standard username which is ATSAPIUser and the standard password which is ATSAPIUser.
 
-## 5 Configure ATS in your pipeline (Example)
+## 5 Configure ATS in Your Pipeline (Example)
 
 Using the CI/CD API key and the unique ID of the CI/CD template you can execute a test case from your CI/CD pipeline. In this chapter, you find an example for Jenkins.
 
@@ -138,7 +138,7 @@ Using the CI/CD API key and the unique ID of the CI/CD template you can execute 
   * Create the CI/CD API key in ATS
   * Find your AppID in Mendix Sprintr
 
-## 5.2 Adding an extra Step in Jenkins
+## 5.2 Adding an Extra Step in Jenkins
 
 This is only an example for Jenkins on Linux in shell scripting and can be written in another scripting language of your choice like for example Powershell (for Windows) or Groovy.
 

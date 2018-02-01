@@ -34,7 +34,7 @@ There are two ways of making a combined action:
 * Click the **Extract** button inside a test case
 * Create a new action and copy the test steps inside that action
 
-### 2.2 Example
+### 3.2 Example
 
 These are the steps in a Mendix app:
 
@@ -48,7 +48,7 @@ This is the combined action:
 
 ![](attachments/custom-action-general-2/general-definition-2/combined-action-ats-newexpense-action.png)
 
-### 2.2 Summary
+### 3.2 Summary
 
 * A combined action consists of test steps from an actual test case
 * The focus is on ease-of-use
@@ -56,9 +56,9 @@ This is the combined action:
 * It covers multiple widgets
 * It is reusable
  
-## 3 Unsupported Widget Action
+## 4 Unsupported Widget Action
 
-### 3.1 Description
+### 4.1 Description
 
 When you encounter a widget that you cannot interact with using the standard actions, you can create an unsupported widget action.
 
@@ -66,7 +66,7 @@ An unsupported widget action uses core actions to interact with a widget. It is 
 
 Follow the guidelines for building a custom action to create an unsupported widget action.
 
-### 3.2 Example
+### 4.2 Example
 
 This is the widget in a Mendix app:
 
@@ -80,23 +80,22 @@ This is the unsupported widget action:
 
 ![](attachments/custom-action-general-2/general-definition-2/unsupported-widget-action-ats-switch-action.png)
 
-
-### 3.3 Summary
+### 4.3 Summary
 
 * A widget action consists of at least two actions
 * The focus is on interacting with the widget
 * It is built generically
 * it covers a single widget
 
-## 4 Search Context Action
+## 5 Search Context Action
 
-### 4.1 Description
+### 5.1 Description
 
 Sometimes an app has a lot of widgets with the same `mx-name`, but ATS always finds the first result. To overcome this, you need to create a search context action. All Mendix actions have an input parameter called **Search Context**. The search context action finds an element that a Mendix/core action can use.
 
 The focus is on finding an element that you can use to find the widget. The [Find/Assert Widget](/ats/refguide/rg-version-1/findassert-widget) action is a great example for a search context action.
 
-### 4.2 Example
+### 5.2 Example
 
 This is an element in a Mendix app:
 
@@ -110,15 +109,15 @@ This is the search context action:
 
 ![](attachments/custom-action-general-2/general-definition-2/searchcontext-action-listview-ats-searchcontext-action.png)
 
-### 4.3 Summary
+### 5.3 Summary
 
 * The search context action provides an element for a search context
 * The focus is on finding a certain element on a page
 * It covers a single widget at a time
 
-## 5 Function Action
+## 6 Function Action
 
-### 5.1 Description
+### 6.1 Description
 
 The last type of custom action is the function action. Most function actions perform the following:
 
@@ -127,7 +126,7 @@ The last type of custom action is the function action. Most function actions per
 
 Function actions distinguish themselves from other actions by their purpose. If a custom action is not a combined action, unsupported widget action, or search context action, then it's a function action. Function actions use JavaScript or perform asserts; they rarely use Mendix actions.
 
-### 5.2 Example
+### 6.2 Example
 
 These are the steps in ATS:
 
@@ -137,7 +136,7 @@ This the function action:
 
 ![](attachments/custom-action-general-2/general-definition-2/function-action-ats-function-action.png)
 
-### 5.3 Summary
+### 6.3 Summary
 
 * If a custom action is not a combined action, search context action, or unsupported widget action, then it is a function action
 * A function action has either an assert action or a JavaScript action

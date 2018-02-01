@@ -1,7 +1,8 @@
 ---
 title: "Manipulating Existing Models"
-parent: "your-learning-path-for-the-mendix-sdk"
+parent: "tutorial-for-the-mendix-sdk"
 ---
+
 Please choose one of the following subjects:
 
 *   [Changing things in the model](changing-things-in-the-model)

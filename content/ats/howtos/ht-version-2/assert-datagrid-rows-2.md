@@ -1,5 +1,5 @@
 ---
-title: "Assert Data Grid Rows"
+title: "Assert datagrid rows"
 parent: "ht-version-2"
 description: "Describes how to assert data grid rows with the **Find/Assert DataGrid Row** action."
 tags: ["ATS", "testing"]
@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Read [How to Create a Test Case](create-a-test-case-2)
 
-## 3 Asserting Data Grid Columns
+## 3 Asserting datagrid columns
 
 This how to uses the datagrid of the Company Epxenses app as an example:
 
@@ -33,7 +33,7 @@ After adding a new expense in the company expenses app, a new row with that expe
 
 The first three input parameters are in bold, the other five are not in bold. Bold indicated that ATS needs those input parameters to run the action successfully. These are thus required input parameters, the others are optional.
 
-### 3.1 Adding Required Input Parameters 
+### 3.1 Adding required input parameters 
 
 #### **Widget name**:
 
@@ -57,7 +57,7 @@ Filling the data in the **Find/Assert DataGrid Row** action, results in the foll
 
 ![](attachments/assert-datagrid-rows-2/datagrid-action-partly-filled.png)
 
-### 3.2 Adding Optional Input Parameters
+### 3.2 Adding optional input parameters
 
 As there could be more rows with the same description, ATS can assert the wrong item. To make sure ATS asserts the correct row you can add two more column names and column values:
 
@@ -85,6 +85,6 @@ When asserting for the absence of that row after deleting it, you can add the sa
 
 ![](attachments/assert-datagrid-rows-2/assert-in-precondition.png)
 
-## 4 Next Up
+## 4 Next up
 
 You now learned how to assert datagrid rows with ATS. The next how-to is [How to increase recorder and helper coverage](increase-recorder-helper-coverage-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.

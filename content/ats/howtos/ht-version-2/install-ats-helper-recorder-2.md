@@ -80,4 +80,4 @@ See [How to Create a Test Case](create-a-test-case-2) for more information on ho
 
 ## 5 Next up
 
-You now learned how to install the ATS tools. The next how-to is [How to configure a Selenium Hub](configure-a-selenium-hub-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.
+You now learned how to install the ATS tools. The next how-to is [How to configure a Selenium Hub](configure-a-selenium-hub-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.

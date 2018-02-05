@@ -9,7 +9,7 @@ tags: ["ATS", "testing"]
 
 Asserting a row of a data grid is very useful in automated testing, as you should check an added, edited or deleted row in your test case. 
 
-In ATS you can assert rows in a data grid With the [Find/Assert DataGrid Row](../../refguide/rg-version-1/findassert-datagrid-row.md) action. As the action has many input parameters this how to explains how-to use the action. 
+In ATS you can assert rows in a data grid With the [Find/Assert DataGrid Row](../../refguide/rg-version-1/findassert-datagrid-row) action. As the action has many input parameters this how to explains how-to use the action. 
 
 **This how-to will teach you how to do the following**
 

@@ -13,7 +13,7 @@ This document describes the prerequisites for the create-custom-action how-to's.
 
 General knowledge of the Mendix platform is a must when creating custom actions. The HTML of a Mendix app is a direct representation of your app as you see it in the Modeler. 
 
-During the [Mendix Introduction Course](https://developers.mendix.com/training/), you learn all the fundamentals of the Mendix platform, including how the different widgets work and how to adjust them. This is a great advantage when looking at a widget through the HTML.
+During the [Become a Rapid Developer](https://gettingstarted.mendixcloud.com/link/path/10) training, you learn all the fundamentals of the Mendix platform, including how the different widgets work and how to adjust them. This is a great advantage when looking at a widget through the HTML.
 
 ## 3 Guidelines for Building a Custom Action
 

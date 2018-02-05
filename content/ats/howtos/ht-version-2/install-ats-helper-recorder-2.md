@@ -78,6 +78,6 @@ To install the ATS Recorder, follow these steps:
 
 See [How to Create a Test Case](create-a-test-case-2) for more information on how to use the ATS Helper.
 
-## 5 Next up
+## 5 Next Up
 
-You now learned how to install the ATS tools. The next how-to is [How to configure a Selenium Hub](configure-a-selenium-hub-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.
+You now learned how to install the ATS tools. The next how-to is [How to Configure a Selenium Hub](configure-a-selenium-hub-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.

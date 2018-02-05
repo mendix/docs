@@ -232,7 +232,7 @@ To add test steps using the ATS Recorder, follow these steps:
 
 13.  You must manually add the **New Expense** dialog box (you cannot record this). You must add the action between test step 3 and test step 4. A user visually confirms that the dialog box appears. ATS has an action that finds and asserts a dialog box, which is the [Find/Assert Dialog](/ats/refguide/rg-version-1/findassert-dialog) action. Inside your test case, hover over step 3 and click **Add Below**:
 
-![](attachments/create-a-test-case-2/add-test-step.png)
+![](attachments/create-a-test-case-2/Add-test-step.png)
 
 14. Add the **Find/Assert Dialog** action.
 

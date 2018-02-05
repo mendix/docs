@@ -1,5 +1,5 @@
 ---
-title: "Use ATS in combination with CI/CD"
+title: "Use ATS in Combination with CI/CD"
 parent: "ht-version-2"
 description: "Describes how you can use ATS 2.0 in your CI/CD pipeline."
 tags: ["ATS", "testing", "CI/CD"]

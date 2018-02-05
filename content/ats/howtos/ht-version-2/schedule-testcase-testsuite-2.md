@@ -1,11 +1,11 @@
 ---
-title: "Schedule a test suite/test case"
+title: "Schedule a Test Suite/Test Case"
 parent: "ht-version-2"
 description: "Describes how to create a test suite and add test cases and test suites to your test suite."
 tags: ["ATS", "testing"]
 ---
 
-## 1. Introduction
+## 1 Introduction
 
 Scheduling allows you to plan the execution of test cases and test suites at defined dates and times. 
 Scheduling tests can be useful for:
@@ -14,8 +14,9 @@ Scheduling tests can be useful for:
 -	Constant reassurance that some feature works 
 
 **This how-to will teach you  how to do the following**
-- Schedule test cases
-- Schedule test suites
+
+* Schedule test cases
+* Schedule test suites
 
 ## 2 Prerequisites
 
@@ -26,11 +27,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 ## Schedule Test Cases
 
 The following steps explain how to schedule test cases:
-1.	Open your project in ATS and go to the **Schedules** tab in **Test Run**.
-2.	Click **Schedule test case** to schedule a test case:
-![](attachments/schedule-testcase-testsuite-2/Schedules-tab-TC.png)
 
-Clicking **Schedule test case** opens the **Select Test Case** dialog box:
+1.	Open your project in ATS and go to the **Schedules** tab in **Test Run**.
+2.  Click **Schedule test case** to schedule a test case:
+
+    ![](attachments/schedule-testcase-testsuite-2/Schedules-tab-TC.png)
+
+   Clicking **Schedule test case** opens the **Select Test Case** dialog box:
 
 ![](attachments/schedule-testcase-testsuite-2/select-testcase-dialog.png)
 

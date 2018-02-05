@@ -122,7 +122,7 @@ On the **Edit Story** page you can do the following:
 
 ![](attachments/connect-stories-to-testcases-2/edit-story-page-options-e.png)
 
-### 5.2 Linking an existing Test Case to a User Story
+### 5.2 Linking an Existing Test Case to a User Story
 
 1. In the **Select Item** Dialog search and select the test case you want to link to the Story.
 2. Click **Select**:
@@ -175,6 +175,6 @@ You can go to the **Edit story** page by clicking **Open story**. You can unlink
 
 You can now link test cases to stories and link stories to test cases.
 
-## 7 Next up
+## 7 Next Up
 
-You now learned how to link user stories to your test cases. The next how-to is [Use ATS in combination with CI/CD](ats-and-ci-cd-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.
+You now learned how to link user stories to your test cases. The next how-to is [Use ATS in Combination with CI/CD](ats-and-ci-cd-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.

@@ -17,7 +17,7 @@ During the [Become a Rapid Developer](https://gettingstarted.mendixcloud.com/lin
 
 ## 3 Guidelines for Building a Custom Action
 
-[Guidelines for Building a Custom Action](../bestpractices-2/guidelines-custom-action-2) is a best practice document that describes the guidelines  you must follow when building custom actions. These guidelines deliver the best results.
+[Guidelines for Building a Custom Action](../../bestpractices-2/guidelines-custom-action-2) is a best practice document that describes the guidelines  you must follow when building custom actions. These guidelines deliver the best results.
 
 ## 4 Google Chrome and Chrome DevTools Basics
 

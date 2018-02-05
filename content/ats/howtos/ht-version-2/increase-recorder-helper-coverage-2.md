@@ -17,7 +17,7 @@ ATS provides two different tools to help build test scripts: the ATS Helper and 
 ## 2 Prerequisites
 Before starting this how-to, make sure you have the following prerequisites in place:
 
-*  Read and Installed the ATS Helper and Recorder, see [How to Install the ATS Helper and ATS Recorder](install-ats-helper-recorder-2.md)
+*  Read and Installed the ATS Helper and Recorder, see [How to Install the ATS Helper and ATS Recorder](install-ats-helper-recorder-2)
 *  Completed the Rapid Application Developer course
 
 ## 3 Increasing ATS Recorder Coverage of Your AUT

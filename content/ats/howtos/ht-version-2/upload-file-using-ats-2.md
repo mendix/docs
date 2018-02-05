@@ -50,7 +50,7 @@ The third situation is that you use a Selenium SaaS agent. ATS executes the test
 
 ### 3.2 Uploading a File Using ATS
 
-ATS has a standard action for uploading files into your Mendix app. The [Set File Manager](/refguide/rg-version-1/set-file-manager) action uploads a file from the local computer into the app using a file path. As explained earlier the file must be on the local machine for this to work.
+ATS has a standard action for uploading files into your Mendix app. The [Set File Manager](../../refguide/rg-version-1/set-file-manager) action uploads a file from the local computer into the app using a file path. As explained earlier the file must be on the local machine for this to work.
 
 _The Set File Manager action_
 

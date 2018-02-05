@@ -1,5 +1,5 @@
 ---
-title: "How-To's"
+title: "How-to's"
 ---
 
 These are the main documents in this category:

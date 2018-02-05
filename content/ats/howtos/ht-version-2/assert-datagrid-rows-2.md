@@ -87,4 +87,4 @@ When asserting for the absence of that row after deleting it, you can add the sa
 
 ## 4 Next Up
 
-You now learned how to assert datagrid rows with ATS. The next how-to is [How to increase recorder and helper coverage](increase-recorder-helper-coverage-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.
+You now learned how to assert datagrid rows with ATS. The next how-to is [How to Increase Recorder and Helper Coverage](increase-recorder-helper-coverage-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.

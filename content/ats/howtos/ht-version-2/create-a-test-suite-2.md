@@ -30,7 +30,7 @@ To create a test suite, follow these steps:
 1.  Open your project in ATS and go to **Test Cases**.
 2.  Click the **Action** drop-down menu and select **New Test Suite**.
     
-    ![](attachments/create-a-test-suite-2/repository-add-test-suite.png)
+    ![](attachments/create-a-test-suite-2/Repository-add-test-suite.png)
 
     Clicking the **New Test Suite** button opens the **Create new** dialog box:
     

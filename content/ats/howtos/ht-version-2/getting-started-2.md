@@ -95,7 +95,7 @@ To add a new Selenium hub, follow these steps:
 
 ![](attachments/getting-started-2/browserstack-selenium-hub-wizard.png)
 
-For further documentation on how-to install the ATS helper and the Recorder see [How-to configure a Selenium hub](/howtos/ht-version-2/configure-a-selenium-hub-2).
+For further documentation on how-to install the ATS helper and the Recorder see [How-to configure a Selenium hub](configure-a-selenium-hub-2).
 
 ## 4 Test Cases
 
@@ -138,8 +138,8 @@ To create a test case, follow these steps:
 
 Now that you have created a test case, the next step is to configure your test case and start adding test steps. ATS provides two different tools to help add test steps: ATS helper (Setup step manually) and ATS recorder (Record step). We advise you to use the recorder as much as possible to add test steps. But, the ATS Recorder might not be able to record certain manual test steps. So, we advise to add steps in the following order:
 * Record your manual test steps using the ATS Recorder
-* Adding test steps using the ATS Helper, see [Finding the action you need](/bestpractices/bp-version-2/finding-the-action-you-need-2).
-* Create a custom action, see [Create custom action](/howtos/ht-version-2/create-custom-actions-2.md).
+* Adding test steps using the ATS Helper, see [Finding the action you need](../../bestpractices/bp-version-2/finding-the-action-you-need-2).
+* Create a custom action, see [Create custom action](create-custom-actions-2).
 
 Before you start adding test steps, add the ATS Helper and ATS Recorder tools:
 
@@ -150,7 +150,7 @@ Before you start adding test steps, add the ATS Helper and ATS Recorder tools:
 
 ![](attachments/getting-started-2/information-dialog.png)
 
-For further documentation on how-to install the ATS helper and the Recorder see [How-to install the ATS Helper and Recorder](/howtos/ht-version-2/install-ats-helper-recorder-2).
+For further documentation on how-to install the ATS helper and the Recorder see [How-to install the ATS Helper and Recorder](install-ats-helper-recorder-2).
 
 #### 4.2.1 Record – Using the Recorder Function
 
@@ -176,7 +176,7 @@ All the test steps are numbered for easy identification. To change the sequence 
 
 ![](attachments/getting-started-2/recorded-test-case.png)
 
-For further documentation on how-to create a test case see [How-to create a test case](/howtos/ht-version-2/create-a-test-case-2).
+For further documentation on how-to create a test case see [How-to create a test case](create-a-test-case-2).
 
 #### 5.2.2 Test Data Tab
 
@@ -190,7 +190,7 @@ If you do not use the data set, make sure to disconnect it. ATS will remember wh
 
 {{% /alert %}}
 
-For further documentation on how-to create a datadriven test case see [How-to create a datadriven test case](/howtos/ht-version-2/create-datadriven-test-case-2).
+For further documentation on how-to create a datadriven test case see [How-to create a datadriven test case](create-datadriven-test-case-2).
 
 #### 5.2.3 Show Usages Tab
 
@@ -204,7 +204,7 @@ This tab displays the user stories that are connected to your test case, the tes
 
 ![](attachments/getting-started-2/stories-tab.png)
 
-For further documentation on how-to link stories to test cases see [How-to link Test Cases/Test Suites to User Stories](/howtos/ht-version-2/connect-stories-to-testcases-2).
+For further documentation on how-to link stories to test cases see [How-to link Test Cases/Test Suites to User Stories](connect-stories-to-testcases-2).
 
 ### 5.3 Creating a Test Suite
 
@@ -236,7 +236,7 @@ You add a test case to your test suite by clicking the **Select and add test cas
 
 ![](attachments/getting-started-2/add-test-case.png)
 
-For further documentation on how-to create a test suite see [How-to create a test suite](/howtos/ht-version-2/create-a-test-suite-2.md).
+For further documentation on how-to create a test suite see [How-to create a test suite](create-a-test-suite-2).
 
 #### 5.3.2 Show Usages Tab
 
@@ -250,7 +250,7 @@ This tab displays the user stories that are connected to your test suite, the te
 
 ![](attachments/getting-started-2/stories-tab-test-suite.png)
 
-For further documentation on how-to link stories to test suites see [How-to link Test Cases/Test Suites to User Stories](/howtos/ht-version-2/connect-stories-to-testcases-2).
+For further documentation on how-to link stories to test suites see [How-to link Test Cases/Test Suites to User Stories](connect-stories-to-testcases-2).
 
 ## 6 Run Configuration
 
@@ -283,7 +283,7 @@ When you click **Run**, the **Test Runs** page will open.
 
 Once your test case/suite is executed, the result is shown here.
 
-You have now finished the getting started guide for ATS. We advice to read next [How-to install the ATS Helper and Recorder](/howtos/ht-version-2/install-ats-helper-recorder-2).
+You have now finished the getting started guide for ATS. We advice to read next [How-to Install the ATS Helper and Recorder](install-ats-helper-recorder-2).
 
 Good luck testing your Mendix app with ATS!
 

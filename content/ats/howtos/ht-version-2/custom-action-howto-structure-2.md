@@ -9,13 +9,13 @@ tags: ["ATS", "testing"]
 
 This document explains the general structure of the how-to's for creating custom actions.
 
-## 2 How-To Introduction
+## 2 How-to Introduction
 
 In the introduction of each how-to, you find a description of what the how-to explains and in which situation it applies. It also states that you must create a new action. You use this action during the how-to. You must perform all the steps inside this action during the how-to unless stated otherwise.
 
 The introduction also tells you what type of action the how-to explains. The how-to's are written based on the [guidelines for building a custom action](../bestpractices-2/guidelines-custom-action-2).
 
-## 3 How-To Prerequisites
+## 3 How-to Prerequisites
 
 All of the how-to's have the prerequisite that you must read and if necessary complete the [General](custom-action-general-2) section.
 

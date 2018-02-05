@@ -1,5 +1,5 @@
 ---
-title: "Upload a file in your app using ATS"
+title: "Upload a File in Your App Using ATS"
 parent: "ht-version-1"
 description: "Describes how to upload a file in your app using ATS and the restrictions it has."
 tags: ["ATS", "testing"]
@@ -84,7 +84,7 @@ When testing using the BrowserStack, ATS executes the test against a new VM sess
 
 Those files are always present so you don't have to change the filepath every time.
 
-You can find the BrowserStack test files [here](https://raw.githubusercontent.com/mendix/docs/content/howtos/ht-version-1/selenium-files/browserstack-test-files.md).
+You can find the BrowserStack test files [here](https://raw.githubusercontent.com/mendix/docs/development/templates/ats-browserstack-test-files.md).
 
 {{% alert type="info" %}}
 

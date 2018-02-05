@@ -5,7 +5,7 @@ category: "Best Practices"
 
 {{% alert type="warning" %}}
 
-This document is created by and for the Mendix Community. It collects performance best practices in the form of do's and don'ts.
+This document is created by and for the Mendix community. It collects performance best practices in the form of do's and don'ts.
 
 {{% /alert %}}
 

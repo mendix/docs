@@ -18,7 +18,7 @@ All documentation contributions may undergo changes after editing according to o
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Quick guide to making a documentation change: fork the [**mendix/docs**](https://github.com/mendix/docs) repository and create a pull request with our **development** branch as the base.
+Quick guide to making a documentation change: fork the [mendix/docs](https://github.com/mendix/docs) repository and create a pull request with our **development** branch as the base.
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**
@@ -33,14 +33,14 @@ Quick guide to making a documentation change: fork the [**mendix/docs**](https:/
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Have a GitHub account (sign up [here](https://github.com/join))
-* Fork the [**mendix/docs**](https://github.com/mendix/docs) repository on GitHub (for details on how to do this, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/))
+* Fork the [mendix/docs](https://github.com/mendix/docs) repository on GitHub (for details on how to do this, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/))
 
 ### 2.2 Tools
 
 We recommend the use of the following tools for contributing to the Mendix documentation:
 
 * For writing and editing documentation – [Visual Studio Code](https://code.visualstudio.com) (with which you can preview your Markdown styling)
-* For committing your documentation – [SourceTree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
+* For committing your documentation – [Sourcetree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
 
 ### 2.3 Contributor License Agreement
 
@@ -62,7 +62,7 @@ To edit the existing documentation (for example, a how-to or reference guide pag
 
 {{% alert type="info" %}}
 
-You can add and edit the description and tags metadata in the header of the document so that the document is more searchable. It is also possible to add how many table of contents levels you want to appear in the document. For more information on the metadata, see the [How-To Template](the-how-to-template-page) and [Reference Guide Page Template](the-reference-guide-page-template-page).
+You can add and edit the description and tags metadata in the header of the document so that the document is more searchable. It is also possible to add how many table of contents levels you want to appear in the document. For more information on the metadata, see the [How-to Template](the-how-to-template-page) and [Reference Guide Page Template](the-reference-guide-page-template-page).
 
 {{% /alert %}}{{% alert type="warning" %}}
 
@@ -70,11 +70,11 @@ Mendix supports documentation for three major versions at any one time. This mea
 
 {{% /alert %}}
 
-## 4 Writing a New How-To or Reference Guide Page
+## 4 Writing a New How-to or Reference Guide Page
 
 To submit a new how-to or reference guide page to our documentation, follow these steps:
 
-1. Save a copy of the [How-To Template](the-how-to-template-page) or [Reference Guide Page Template](the-reference-guide-page-template-page) locally in order to use it.
+1. Save a copy of the [How-to Template](the-how-to-template-page) or [Reference Guide Page Template](the-reference-guide-page-template-page) locally in order to use it.
 2. Follow the guidelines in the template for writing your document, and make sure the text aligns with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines).
 3. Take screenshots for the new document and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [5 Naming New Files and Images](#NamingNewFilesandImages).
 4. To merge your new document files, add your files to the GitHub repository.
@@ -119,5 +119,5 @@ The points are awarded when the pull request is merged. For more details on Mend
 ## 7 Related Content
 
 * [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)
-* [How-To Template](the-how-to-template-page)
+* [How-to Template](the-how-to-template-page)
 * [Reference Guide Page Template](the-reference-guide-page-template-page)

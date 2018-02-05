@@ -9,7 +9,7 @@ The Build API allows you to manage deployment packages and create new deployment
 
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 
-![](attachments/131077/425988.png)
+![](attachments/deploy-api/api-model.png)
 
 # <a name="BuildAPI-APIcalls" rel="nofollow"></a>API calls
 

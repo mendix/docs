@@ -34,7 +34,7 @@ To import a WSDL, follow these steps:
 
     ![](attachments/18448738/18582085.png)
 
-5. Enter `http://www.w3schools.com/webservices/tempconvert.asmx?WSDL` as the URL, and then click **Import**. This will bring up the **Select Ports** pop-up window asking you to select a web service port:
+5. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the URL, and then click **Import**. This will bring up the **Select Ports** pop-up window asking you to select a web service port:
 
     ![](attachments/18448738/18582065.png)
 
@@ -80,20 +80,17 @@ To create logic to call the web service, follow these steps:
     ![](attachments/18448738/18582079.png)
 
 10. Drag a **Call web service** activity from the toolbox to the line between the start and end event. This inserts a new activity.
-11. Double-click the new activity to open the **Call Web Service** properties editor:
-
-    ![](attachments/18448738/18582077.png)
-
-12. In the **Web service call section** of the editor, click **Select...** to open the **Select Web Service Operation** pop-up window:
+11. In the **Call Web Service** properties editor, select the **CelsiusToFahrenheit** operation of your consumed web service:
 
     ![](attachments/18448738/18582076.png)
 
-13. Select **CelsiusToFahrenheit** and then click **Select**.
-14. Double-click the **Celsius (optional)** input parameter:
+12. In the **Location** section for this operation , click the **Override location** box. You are doing this in order to use the secure location of the web service.
+13. Click **Edit** to override the location and change `http` to `https` for the URL in the **Location** dialog box.
+14. In the **Request Body** tab of the **Call Web Service** properties editor, double-click the **Celsius (optional)** input parameter:
 
     ![](attachments/18448738/18582075.png)
 
-15. Enter *toString($TemperatureInCelsius)* for the expression. The web service operation expects a string value, which is why you need to use the *toString* function. Then click **OK**.
+15. Enter `toString($TemperatureInCelsius)` for the expression. The web service operation expects a string value, which is why you need to use the `toString` function. Then click **OK**.
 16. Select **Yes** for the **Store in variable** option, and name the variable *TemperatureInFahrenheit*:
 
     ![](attachments/18448738/18582074.png)

@@ -25,7 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Download, open, and log in to the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
 * Request the authentication credentials required to connect with the SAP Gateway Demo System (ES5) by registering [here](https://register.sapdevcenter.com/SUPSignForms/)
 
-## 3 Starting with the SAP Purchase Order Approval App
+## 3 Starting with the SAP Purchase Order Approval Tutorial
 
 To start this tutorial, go to the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html) and follow these steps:
 

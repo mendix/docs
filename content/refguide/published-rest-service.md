@@ -25,28 +25,40 @@ The example location shows the URL on which the service can be reached. This is 
 
 ![](attachments/published-rest-service/example-location-url.png)
 
-### 2.3 Allowed Roles
+### <a name="public-documentation"></a>2.3 Public Documentation
 
-The allowed roles define which [module role](module-role) a user must have to be able to access the service.
+The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documentation](open-api). You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
 
-### <a name="public-documentation"></a>2.4 Public Documentation
-
-The public documentation is used in the service's [OpenAPI (Swagger) documentation page](open-api). You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
-
-### <a name="export-swagger-json"></a>2.5 Export swagger.json
+### <a name="export-swagger-json"></a>2.4 Export swagger.json
 
 Click **Export swagger.json** to save the service's [OpenAPI (Swagger) documentation](open-api) somewhere on your machine. This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
 
 When the app is running, this file is available under `/rest-doc/servicename/swagger.json`.
 
-## 3 Resources
+## 3 Security
+
+### <a name="authentication"></a>3.1 Authentication
+
+{{% alert type="info" %}}
+
+The **Authentication** feature was introduced in version 7.11.0. In earlier versions, it was always **Username and password**.
+
+{{% /alert %}}
+
+Select whether clients need to authenticate with a username and a password (using basic authentication) or not.
+
+### 3.2 Allowed Roles
+
+The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Authentication** is set to **Username and password**.
+
+## 4 Resources
 
 A REST service exposes a number of [resources](published-rest-resource). On a resource you can define GET, PUT, POST, PATCH, and DELETE operations.
 
-## 4 Operations
+## 5 Operations
 
 When you select a resource, you see the [operations](published-rest-operation) that are defined for that resource.
 
-## 5 Related Content
+## 6 Related Content
 
 For more information on which operation gets executed for a given request URL, see [Published REST routing](published-rest-routing).

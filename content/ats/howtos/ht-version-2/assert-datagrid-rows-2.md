@@ -35,19 +35,19 @@ The first three input parameters are in bold, the other five are not in bold. Bo
 
 ### 3.1 Adding Required Input Parameters 
 
-#### **Widget name**:
+#### Widget name
 
 In **Widget Name** you have to add the mx-name of the datagrid:
 
 ![](attachments/assert-datagrid-rows-2/widget-name-grid.png)
 
-#### **Column 1 Name**:
+#### Column 1 Name
 
 In **Column 1 Name** you have to add the mx-name of the column you want to assert. In this example that is the description column:
 
 ![](attachments/assert-datagrid-rows-2/column-mx-name.png)
 
-#### **Column 1 Value**:
+#### Column 1 Value
 
 In **Column 1 Value** you have to add the value of the column you want to assert:
 
@@ -63,13 +63,13 @@ As there could be more rows with the same description, ATS can assert the wrong 
 
 ![](attachments/assert-datagrid-rows-2/add-optional-parameters.png)
 
-#### **Column 2**
+#### Column 2
 
 In **Column 2 Name** you have to add the mx-name of the column. In **Column 2 Value** you have to add the value of the column you want to assert:
 
 ![](attachments/assert-datagrid-rows-2/column-value-2.png)
 
-#### **Column 3**
+#### Column 3
 
 In **Column 3 Name** you have to add the mx-name of the column. In **Column 3 Value** you have to add the value of the column you want to assert:
 

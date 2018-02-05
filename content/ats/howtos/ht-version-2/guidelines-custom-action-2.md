@@ -5,12 +5,12 @@ parent: "bp-version-2"
 
 ## 1 Introduction
 
-For details on custom actions, please see [Custom Actions](/refguide/rg-version-1/custom-actions) in the ATS 1 Reference Guide.
+For details on custom actions, please see [Custom Actions](../../refguide/rg-version-1/custom-actions) in the ATS 1 Reference Guide.
  
 These are the definitions of Mendix actions and core actions:
 
-* Mendix actions include [Mendix actions](/refguide/rg-version-1/mendix-actions) and [Mendix App Store widget actions](/refguide/rg-version-1/mendix-appstore-widgets-actions)
-* Core actions include [ATS Core actions](/refguide/rg-version-1/ats-core-actions) and [Selenium actions](/refguide/rg-version-1/selenium-actions)
+* Mendix actions include [Mendix actions](../../refguide/rg-version-1/mendix-actions) and [Mendix App Store widget actions](../../refguide/rg-version-1/mendix-appstore-widgets-actions)
+* Core actions include [ATS Core actions](../../refguide/rg-version-1/ats-core-actions) and [Selenium actions](../../refguide/rg-version-1/selenium-actions)
 
 {{% alert type="info" %}}
 
@@ -28,7 +28,7 @@ Always try to use a Mendix action first. This table explains why you should use 
 | Visibility checks | A Mendix action only searches for elements that are *visible*. |
 | Browser support | A Mendix action always works in the supported browser. |
 | Mendix support | A Mendix action always works on the latest version of Mendix. |
-| Waiting for background processes | A Mendix action waits untill the Mendix app is finished rendering. This aspect is also covered by the [Mendix Wait](/refguide/rg-version-1/mendix-wait) action.<br> |
+| Waiting for background processes | A Mendix action waits untill the Mendix app is finished rendering. This aspect is also covered by the [Mendix Wait](../../refguide/rg-version-1/mendix-wait) action.<br> |
 
 However, there are reasons to not use Mendix actions. For example, sometimes a custom action can get too complex using a Mendix action, because of the input parameters that are required. For another example, when using a Mendix action, you have six input parameters:
 
@@ -91,7 +91,7 @@ This is the Mendix Wait action:
 
 ![](attachments/guidelines-custom-action-2/mendix-wait-action.png)
 
-For more information, please see [Mendix Wait](/refguide/rg-version-1/mendix-wait).
+For more information, please see [Mendix Wait](../../refguide/rg-version-1/mendix-wait).
 
 {{% alert type="info" %}}
 
@@ -101,7 +101,7 @@ This guideline does not apply to the Search Context action, since it does not tr
 
 ## 7 Action Parameters
 
-When defining action parameter names, always use the ATS [naming conventions](/refguide/rg-version-1/best-practices).
+When defining action parameter names, always use the ATS [naming conventions](../../refguide/rg-version-1/best-practices).
 
 In addition, include the optional input parameters in the action parameters for an unsupported widget action.
 
@@ -167,9 +167,9 @@ These are the different data types in ATS:
 
 The JavaScript actions have three different versions, based on the data types:
 
-* [Execute Javascript Integer](/refguide/rg-version-1/execute-javascript-integer)
-* [Execute Javascript String](/refguide/rg-version-1/execute-javascript-string)
-* [Execute Javascript WebElement](/refguide/rg-version-1/execute-javascript-webelement)
+* [Execute Javascript Integer](../../refguide/rg-version-1/execute-javascript-integer)
+* [Execute Javascript String](../../refguide/rg-version-1/execute-javascript-string)
+* [Execute Javascript WebElement](../../refguide/rg-version-1/execute-javascript-webelement)
 
 They all produce outputs based on their data type. This means that you cannot return a string inside the Execute Javascript web element action.
 

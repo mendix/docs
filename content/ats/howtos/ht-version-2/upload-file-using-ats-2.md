@@ -1,5 +1,5 @@
 ---
-title: "Upload a file in your app using ATS"
+title: "Upload a File in Your App Using ATS"
 parent: "ht-version-1"
 description: "Describes how to upload a file in your app using ATS and the restrictions it has."
 tags: ["ATS", "testing"]
@@ -96,6 +96,6 @@ These files are possibly outdated and not maintained by Mendix. For the latest v
 
 When you use a Selenium SaaS provider you can also use their agent. Each provider gives access to an agent that allows you to test on a local machine. In the _Set File Manager_ action, you can provide the filepath. This filepath depends on where you activated the local machine. Either a local server or a local computer.
 
-## 7 Next up
+## 7 Next Up
 
-You now learned how to upload a file and if it is possible with your selenium set up. The next how-to is [How to assert datagrid rows](assert-datagrid-rows-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](ht-version-2) page. We advise you to follow the predefined structure.
+You now learned how to upload a file and if it is possible with your selenium set up. The next how-to is [How to Assert Data Grid Rows](assert-datagrid-rows-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.

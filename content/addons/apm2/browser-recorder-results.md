@@ -1,16 +1,17 @@
 ---
-title: "Browser recorder results"
+title: "Browser Recorder Results"
 space: "Other Add-Ons"
 parent: "recorder"
 ---
 
-# Browser recorder results #
+## Browser Recorder Results
 
 A Browser Session contains the recording of one browser instance of one user.
 The tab *Actions* displays a list of all the recorded actions, which  can be drilled down to display any detailed information of the action, and any possible subsequent actions. The tab *Browser Information* provides some information regarding the browser and version, and installed plugins.
 ![](attachments/Performance_browser_recording.png)
 
-## General ##
+## General
+
 A Browser recording records a few types of actions:
 
 - Browser Javascript Console messages
@@ -28,13 +29,15 @@ The Actions tab will display only direct subsequent actions within this action. 
 
 For all types, except Client - Server communication, the detailed view has a tab *Details*, which will show a list of detailed information.
 
-## Browser Javascript Console messages ##
+## Browser Javascript Console Messages
+
 Recording the browsers Javascript Console messages can be enabled from the environment settings. The exception to this are errors thrown by Javascript. These are recorded as Console error messages at all times.
 
 ![](attachments/Performance_browser_recording_ConsoleMessage.png)
 Console messages in Javascript may contain variables, which are stringified if possible. 
 
-## Client - Server communication ##
+## Client-Server Communication
+
 In case of a Client – Server communication action, all detail information is divided over three tabs instead of one, due to the amount of details. These tabs are labeled *Request*, *Response*, and *Connection*. 
 On the tab *Request* it displays the request details. This is the request from the client (browser) to the (Mendix) server. The details vary depending on the request, for example  in case of retrieving data by XPath, the details will list the XPath, whether or not sorting is applied and using which attribute(s), possible offset and limit, and more.
 ![](attachments/Performance_browser_recording_ActionsRequest.png)
@@ -47,10 +50,12 @@ The *Connection* tab displays the header information, and the timings of the req
 (Request Timing information is not yet available for Mendix 7.6 or higher.)
 ![](attachments/Performance_browser_recording_ActionsConnection.png)
 
-## Page changes ##
+## Page Changes
+
 Page changes, like Console messages, are not recorded by default. Recording can be enabled from the environment settings. It records which element within the browser has changed, was added, or deleted.
 
-## User actions ##
+## User Actions
+
 A recorded User action has two details:
 
 - *Event Target*: Location at which the user action took place. 

@@ -1,6 +1,5 @@
 ---
 title: "Performance statistics"
-space: "Other Add-Ons"
 parent: "user-manual"
 ---
 

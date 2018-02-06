@@ -3,12 +3,14 @@ title: "Runtime recorder results"
 parent: "recorder"
 ---
 
-# Runtime recorder
-When opening an Runtime recording from the [recorded sessions overview](recorder) the details of this runtime recording will be shown. The results are sorted by duration. All recorded actions are clickable and will show detailed information. By drilling down the exact location of where the time is spent can be pinpointed.
+When you open a runtime recording from the [recorded sessions overview](recorder), the details of this runtime recording will be shown. The results are sorted by duration. All the recorded actions are clickable and will show detailed information. By drilling down to an exact location, you can pinpoint where the time is spent.
+
 ![](attachments/Performance_runtime_recording.png)
 
-The Tree view will give an overview in duration of the microflows or actions. 
+The tree view provides an overview of the durations of microflows and actions.
+
 ![](attachments/Performance_runtime_recording_ActionsTree.png)
 
-The Actions tab will display actions within the action.
+The **Actions** tab will display actions within the action.
+
 ![](attachments/Performance_runtime_recording_ActionsActions.png)

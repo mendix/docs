@@ -1,6 +1,5 @@
 ---
 title: "User Manual"
-space: "Other Add-Ons"
 category: "APM"
 ---
 ![](attachments/APM_Powered_logo.png)

@@ -1,6 +1,5 @@
 ---
 title: "APM 2 Installation Manual"
-space: "Other Add-Ons"
 category: "APM"
 ---
 

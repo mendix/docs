@@ -1,5 +1,5 @@
 ---
-title: "Published REST routing"
+title: "Published REST Routing"
 parent: "published-rest-services"
 ---
 

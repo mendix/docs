@@ -1,6 +1,5 @@
 ---
 title: "Apps"
-space: "Other Add-Ons"
 category: "APM"
 ---
 

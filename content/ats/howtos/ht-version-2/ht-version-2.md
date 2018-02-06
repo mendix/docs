@@ -1,6 +1,6 @@
 ---
 title: "ATS 2 How-to's"
-category: "How-To's"
+category: "How-to's"
 ---
 
 These are the main documents in this section:

@@ -1,5 +1,5 @@
 ---
-title: "Performance statistics"
+title: "Performance Statistics"
 parent: "user-manual"
 ---
 

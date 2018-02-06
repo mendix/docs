@@ -1,6 +1,5 @@
 ---
 title: "Runtime recorder results"
-space: "Other Add-Ons"
 parent: "recorder"
 ---
 

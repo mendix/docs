@@ -1,6 +1,5 @@
 ---
 title: "Browser Recorder Results"
-space: "Other Add-Ons"
 parent: "recorder"
 ---
 

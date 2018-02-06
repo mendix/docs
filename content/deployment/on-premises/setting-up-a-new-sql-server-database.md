@@ -9,7 +9,7 @@ This how-to will teach you how to set up a new SQL Server database.
 
 ## 2 Set Up a New Database
 
-When setting up a new database for Mendix, most of the settings can be left to the default configuration. When looking at the general settings, you only need to set up the database name. Set up the database files according to the Microsoft SQL Server best practices (for details, see [Best Practices for Configuring SQL Server](https://msdn.microsoft.com/en-us/library/cc296885(v=bts.10).aspx)).
+When setting up a new database for Mendix, most of the settings can be left to the default configuration. When looking at the general settings, you only need to set up the database name. Set up the database files according to the Microsoft SQL Server best practices (for details, see [SQL Server Installation Best Practices](https://www.mssqltips.com/sqlservertip/4891/sql-server-installation-best-practices/)).
 
 ![](attachments/18448656/18580676.png)
 

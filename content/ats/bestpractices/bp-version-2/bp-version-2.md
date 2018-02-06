@@ -1,5 +1,5 @@
 ---
-title: "ATS Version 2 Best Practices"
+title: "ATS 2 Best Practices"
 category: "Best Practices"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Settings"
-space: "Other Add-Ons"
 parent: "user-manual"
 ---
 

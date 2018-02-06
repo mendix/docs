@@ -1,6 +1,5 @@
 ---
 title: "Logs"
-space: "Other Add-Ons"
 parent: "user-manual"
 ---
 

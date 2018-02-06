@@ -1,5 +1,5 @@
 ---
-title: "User Manual"
+title: "APM 2 User Manual"
 space: "Other Add-Ons"
 category: "APM"
 ---

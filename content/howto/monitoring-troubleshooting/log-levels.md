@@ -89,6 +89,44 @@ To select the level on which a log node will log messages, follow these steps:
 
 ![](attachments/18448575/18580029.png)
 
+| Log Node | Description
+| --- | --- |
+| ActionManager | |
+| Configuration | |
+| ConnectionBus | General logging related to database startup, synchronization and connections management for Mendix |
+| ConnectionBus_Mapping | Information relating to the translations of XPath Queries and OQL text queries to OQL Queries |
+| ConnectionBus_Queries | Deprecated: This is a legacy node |
+| ConnectionBus_Retrieve | All information related to the retrieval of data, such as: Incoming requests from the application, the executed statement. Also logs issues encountered during the processing of the received data |
+| ConnectionBus_Security | Information regarding access rights needed to access the database |
+| ConnectionBus_Synchronize | Deprecated: This is a legacy node |
+| ConnectionBus_Update | All information related to the update of data in the database. Incoming storage requests, the executed statements and issues encountered during storage |
+| ConnectionBus_Validation | Information related modification of the existing database, and database migration |
+| Connector | |
+| Core | |
+| DataStorage_QueryHandling | |
+| DataStorage_QueryPlan | Query execution plan information for installations (currently only supported for PostgreSQL databases)|
+| DocumentExplorer |
+| FileDocumentSizesPopulateJob | |
+| I18NProcessor | |
+| JSON | 
+| Jetty | |
+| LocalFileSystemStore | |
+| Logging | |
+| MicroflowDebugging | |
+| MicroflowEngine | |
+| ModelStore | |
+| Module | |
+| ObjectManagement | |
+| QueryParser | |
+| REST Publish | |
+| RequestStatistics | |
+| Services | |
+| StorageAzure | |
+| StorageS3 | |
+| StorageSwift | |
+| WebServices | |
+| WebUI | |
+
 ### 4.3 Configuring Custom Log Levels
 
 To set the level of custom log messages that you have created via a microflow, follow these steps:

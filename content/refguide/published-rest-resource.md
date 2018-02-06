@@ -1,5 +1,5 @@
 ---
-title: "Published REST resource"
+title: "Published REST Resource"
 parent: "published-rest-services"
 ---
 

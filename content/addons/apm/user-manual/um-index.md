@@ -1,5 +1,6 @@
 ---
 title: "Use Cases"
+category: "APM"
 ---
 
 These are the main documents in this category:

@@ -1,5 +1,6 @@
 ---
 title: "Installation Guide"
+category: "APM"
 ---
 
 These are the main documents in this category:

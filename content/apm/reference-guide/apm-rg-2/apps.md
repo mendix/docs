@@ -1,6 +1,6 @@
 ---
 title: "Apps"
-parent: "user-manual"
+parent: "reference-guide-2"
 ---
 
 ## 1 Apps Overview

@@ -1,6 +1,6 @@
 ---
 title: "Download and License"
-parent: "user-manual-1"
+parent: "reference-guide-1"
 ---
 
 ## Download

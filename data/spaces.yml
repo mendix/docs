@@ -13,8 +13,14 @@ addons:
   space: "Other Add-ons"
   priority: false
   menu_categories:
-    - "APM"
     - "AQM"
+apm:
+  space: "Other Add-ons"
+  priority: false
+  menu_categories:
+    - "Installation Guide"
+    - "Reference Guide"
+    - "Use Cases"
 ats:
   space: "ATS Add-on"
   priority: false

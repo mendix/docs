@@ -1,6 +1,6 @@
 ---
 title: "JVM Browser"
-parent: "user-manual-1"
+parent: "reference-guide-1"
 ---
 A JVM Browser shows information similar to JConsole or JVisualVM tools provided with the Java JDK. Using the **Refresh** button refreshes an individual item.
 

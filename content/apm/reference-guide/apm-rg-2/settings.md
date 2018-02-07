@@ -1,6 +1,6 @@
 ---
 title: "Settings"
-parent: "user-manual"
+parent: "reference-guide-2"
 ---
 
 The settings displayed in this screenshot are available for an environment:

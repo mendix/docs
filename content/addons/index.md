@@ -2,7 +2,6 @@
 title: "Add-ons"
 ---
 
-This space has all the documentation for the following add-ons:
+This space has documentation for the following add-on:
 
-* [APM](apm/)
 * [AQM](aqm/)

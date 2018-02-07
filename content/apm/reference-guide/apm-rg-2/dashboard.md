@@ -1,6 +1,6 @@
 ---
 title: "Dashboard"
-parent: "user-manual"
+parent: "reference-guide-2"
 ---
 
 The dashboard of an environment shows real-time information regarding the following

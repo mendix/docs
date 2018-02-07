@@ -1,13 +1,13 @@
 ---
-title: "APM 2 User Manual"
-parent: "um"
+title: "APM 2 Reference Guide"
+parent: "apm-rg"
 ---
 
 ## 1 Introduction
 
 The Application Performance Monitor (APM) is a solution that helps you to analyze performance issues and runtime behavior.
 
-This is the user manual for Mansystems APM 2 for Mendix. The user manual has the following chapters:
+This is the reference guide for Mansystems APM 2 for Mendix. It has the following chapters:
 
 * [Apps](apps)
 * [Environments](environments)

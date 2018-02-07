@@ -1,6 +1,6 @@
 ---
 title: "Trap Tool"
-parent: "user-manual-1"
+parent: "reference-guide-1"
 ---
 This chapter gives an overview of the trap tool, which can be used to collect the latest series of messages before an error, a warning, or a critical message occurs and to store those messages in the database when they do occur. No more asking the customer to turn on logging, waiting for things to happen, turning on even more logging, generating huge files, and spending a lot of time catching the event. Simply use the trap tool.
 

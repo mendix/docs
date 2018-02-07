@@ -1,6 +1,6 @@
 ---
 title: "Logs"
-parent: "user-manual"
+parent: "reference-guide-2"
 ---
 
 ## 1 Logs Overview

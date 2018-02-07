@@ -1,6 +1,6 @@
 ---
 title: "Performance recorder"
-parent: "user-manual"
+parent: "reference-guide-2"
 ---
 
 ## 1 Introduction

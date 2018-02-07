@@ -1,6 +1,6 @@
 ---
 title: "Load Test Recorder"
-parent: "user-manual-1"
+parent: "reference-guide-1"
 ---
 The load test recorder is a recorder for sessions to be used in a separate tool. It is only seen with 
 special permissions. Mansystems has a load test tool that can be used in projects by our consultants. 

@@ -1,6 +1,6 @@
 ---
 title: "Statistics Tool"
-parent: "user-manual-1"
+parent: "reference-guide-1"
 ---
 This chapter gives an overview of the statistics tool, which measures the durations of microflows and browser-client requests and gathers statistics like number of executions as well as the, minimum, maximum and average durations. The statistics tool is used as the first step in gaining insight into what a system is doing when it doesn’t perform  optimally. The tool is also used to determine potential performance issues by looking at the trends.
 

@@ -1,6 +1,6 @@
 ---
 title: "Environments"
-parent: "user-manual"
+parent: "reference-guide-2"
 ---
 
 ## 1 Environments Overview

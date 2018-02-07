@@ -1,8 +1,10 @@
 ---
 title: "APM"
 ---
+
 These are the release notes for Mendix Application Performance Monitor (APM):
 
+* [2.0](2.0)
 * [1.12](1.12)
 * [1.11](1.11)
 * [1.10](1.10)

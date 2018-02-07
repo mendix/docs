@@ -1,5 +1,5 @@
 ---
-title: "SAP Purchase Order Approval Tutorial"
+title: "Extend the SAP Purchase Order Approval Tutorial App"
 parent: "sap-tutorials"
 description: "Learn the basics of Mendix development and how to extend the SAP Purchase Order Approval app."
 tags: ["SAP", "purchase order", "ES5"]
@@ -7,7 +7,7 @@ tags: ["SAP", "purchase order", "ES5"]
 
 ## 1 Introduction
 
-This tutorial takes you through the basics of development in the Mendix Desktop Modeler and teaches you how to build an approval step in the SAP Purchase Order Approval App. The approval is invoked from the Mendix app and will trigger a request to the SAP Gateway Demo System (ES5).
+This tutorial takes you through the basics of development in the Mendix Desktop Modeler and teaches you how to build an approval step in the SAP Purchase Order Approval Tutorial app. The approval is invoked from the Mendix app and will trigger a request to the SAP Gateway Demo System (ES5).
 
 **This how-to will teach you how to do the following:**
 

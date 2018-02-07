@@ -1,6 +1,6 @@
 ---
 title: "APM 2 Use Cases"
-parent: "uc"
+category: "Use Cases"
 ---
 
 ## 1 Introduction

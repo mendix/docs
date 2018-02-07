@@ -1,6 +1,6 @@
 ---
 title: "APM 2 Reference Guide"
-parent: "apm-rg"
+category: "Reference Guide"
 ---
 
 ## 1 Introduction

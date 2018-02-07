@@ -1,11 +1,11 @@
 ---
-title: "APM 2 Installation Manual"
+title: "APM 2 Installation Guide"
 category: "Installation Guide"
 ---
 
 ## 1 Introduction
 
-This is the installation manual for Mansystems APM 2.
+This is the installation guide for Mansystems APM 2.
 
 Note the following:
 

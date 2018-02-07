@@ -1,5 +1,5 @@
 ---
-title: "Performance recorder"
+title: "Performance Recorder"
 parent: "reference-guide-2"
 ---
 

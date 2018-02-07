@@ -1,6 +1,6 @@
 ---
-title: "Use Cases"
-category: "APM"
+title: "APM 2 Use Cases"
+parent: "uc-index"
 ---
 
 ## 1 Introduction

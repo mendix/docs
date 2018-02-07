@@ -1,13 +1,28 @@
 ---
-title: "Introduction to APM"
-category: "APM"
+title: "APM 2 User Manual"
+parent: "um-index"
 ---
 
 ## 1 Introduction
 
-The Application Performance Monitor (APM) is a solution that helps you to analyze performance issues and runtime behaviour.
+The Application Performance Monitor (APM) is a solution that helps you to analyze performance issues and runtime behavior.
 
-This introduction provides a short explanation of APM along with its features and possible uses.
+This is the user manual for Mansystems APM 2 for Mendix. The user manual has the following chapters:
+
+* [Introduction](introduction)
+* [Use Cases](use-cases)
+* [Installation](installation)
+* [Apps](apps)
+* [Environments](environments)
+* [Dashboard](dashboard)
+* [Logs](logs)
+* [Performance Statistics](statistics)
+* [Performance Recorder](recorder)
+* [Settings](settings)
+
+![](attachments/APM_Powered_logo.png)
+
+The sections below provide a short explanation of APM along with its features and possible uses.
 
 ## 2 Definition of APM
 

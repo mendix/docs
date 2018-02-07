@@ -1,6 +1,6 @@
 ---
 title: "Environments"
-category: "APM"
+parent: "user-manual"
 ---
 
 ## 1 Environments Overview

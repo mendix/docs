@@ -1,6 +1,6 @@
 ---
 title: "Apps"
-category: "APM"
+parent: "user-manual"
 ---
 
 ## 1 Apps Overview

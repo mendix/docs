@@ -1,6 +1,6 @@
 ---
 title: "APM 2 Installation Manual"
-category: "APM"
+parent: "ig-index"
 ---
 
 ## 1 Introduction

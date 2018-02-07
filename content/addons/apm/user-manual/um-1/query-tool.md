@@ -1,6 +1,6 @@
 ---
 title: "Query Tool"
-parent: "user-manual"
+parent: "user-manual-1"
 ---
 To collect database or application information the Query Tool has been introduced.
 

@@ -1,6 +1,6 @@
 ---
 title: "In test and acceptance"
-parent: "use-cases"
+parent: "use-cases-1"
 ---
 During the test and acceptance phase other users than the developer are testing and using the application. Now it is especially important to collect information for further analysis if they find an issue.
 

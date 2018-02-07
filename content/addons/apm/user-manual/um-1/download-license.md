@@ -1,6 +1,6 @@
 ---
 title: "Download and License"
-parent: "user-manual"
+parent: "user-manual-1"
 ---
 
 ## Download

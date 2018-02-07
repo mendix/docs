@@ -1,6 +1,6 @@
 ---
 title: "Triggers"
-parent: "user-manual"
+parent: "user-manual-1"
 ---
 
 Triggers can be configured in the measurements tool, the trap tool and the statistics tool. Triggers are meant to fired on events based on a pattern and/or a threshold. This allows you to monitor memory and save statistics or perform a trap when memory usage reaches, for example, 80%. 

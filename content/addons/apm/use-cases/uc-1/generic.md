@@ -1,6 +1,6 @@
 ---
 title: "Generic"
-parent: "use-cases"
+parent: "use-cases-1"
 ---
 The trap tool is always on in development, test, acceptance and production and is used to have all logging immediately available when an error occurs.
 

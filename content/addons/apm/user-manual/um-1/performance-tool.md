@@ -1,6 +1,6 @@
 ---
 title: "Performance Tool"
-parent: "user-manual"
+parent: "user-manual-1"
 ---
 Use the Performance Tool to measure individual microflows and break them up into actions, loop iterations and sub-microflows. Optionally it is possible to run the Mendix profiler and link SQL statements to actions.
 

@@ -1,6 +1,6 @@
 ---
 title: "Log Tool"
-parent: "user-manual"
+parent: "user-manual-1"
 ---
 This chapter gives an overview of the log tool. The log tool is used to collect Mendix Runtime log messages and store them in the database. This gives access to log information without the requirement of looking into log files. Additionally, the log information can be browsed, searched, and sorted for analysis.
 

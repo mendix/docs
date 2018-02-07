@@ -1,6 +1,6 @@
 ---
 title: "Installation Steps"
-parent: "installation"
+parent: "installation-1"
 ---
 This chapter describes the installation of the APM tool. For details on upgrading to a new version, see [Upgrade Steps](upgrade-steps).
 

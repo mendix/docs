@@ -1,6 +1,6 @@
 ---
 title: "Measurements Tool"
-parent: "user-manual"
+parent: "user-manual-1"
 ---
 The measurements tool is meant to measure system resources and to trigger actions on thresholds. This allows you to monitor memory and save statistics or perform a trap when memory usage reaches, for example, 80%. 
 

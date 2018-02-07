@@ -1,6 +1,6 @@
 ---
 title: "Uninstall Steps"
-parent: "installation"
+parent: "installation-1"
 ---
 This chapter describes the uninstallation of the APM tool. The optional in this chapter means you need to verify if this option was chosen during the install before undoing it.
 

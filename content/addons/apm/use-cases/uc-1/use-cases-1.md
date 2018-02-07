@@ -1,6 +1,6 @@
 ---
 title: "APM 1 Use Cases"
-parent: "uc-index"
+parent: "uc"
 ---
 
 The APM tools have been used extensively by Mansystems’ developers and support engineers in developing and supporting ExpertDesk and other Mendix applications. The tools were originally developed to overcome the difficulties of analyzing performance issues in Mendix without the proper information and have grown to an application monitoring and analysis suite.

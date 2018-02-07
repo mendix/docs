@@ -1,6 +1,6 @@
 ---
 title: "APM 2 Use Cases"
-parent: "uc-index"
+parent: "uc"
 ---
 
 ## 1 Introduction

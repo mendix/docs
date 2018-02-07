@@ -1,6 +1,6 @@
 ---
 title: "APM 2 User Manual"
-parent: "um-index"
+parent: "um"
 ---
 
 ## 1 Introduction

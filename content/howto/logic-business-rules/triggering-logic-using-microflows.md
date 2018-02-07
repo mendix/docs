@@ -1,5 +1,5 @@
 ---
-title: "Triggering Logic using Microflows"
+title: "Triggering Logic Using Microflows"
 category: "Logic & Business Rules"
 tags: []
 ---

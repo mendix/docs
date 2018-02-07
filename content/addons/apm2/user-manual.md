@@ -1,12 +1,13 @@
 ---
-title: "User Manual"
+title: "APM 2 User Manual"
 category: "APM"
 ---
+
 ![](attachments/APM_Powered_logo.png)
 
-#Mansystems APM2.0 User Manual#
+This is the user manual for Mansystems APM 2 for Mendix.
 
-Table of contents
+The user manual has the following chapters:
 
 * [Introduction](introduction)
 * [Use Cases](use-cases)
@@ -15,6 +16,6 @@ Table of contents
 * [Environments](environments)
 * [Dashboard](dashboard)
 * [Logs](logs)
-* [Performance statistics](statistics)
-* [Performance recorder](recorder)
+* [Performance Statistics](statistics)
+* [Performance Recorder](recorder)
 * [Settings](settings)

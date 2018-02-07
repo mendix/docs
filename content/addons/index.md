@@ -1,5 +1,5 @@
 ---
-title: "Add-ons"
+title: "Other Add-ons"
 ---
 
 This space has documentation for the following add-on:

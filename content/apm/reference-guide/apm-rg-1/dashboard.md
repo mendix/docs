@@ -1,6 +1,7 @@
 ---
 title: "Dashboard"
-parent: "reference-guide-1"---
+parent: "reference-guide-1"
+---
 The Application Performance Monitor (APM) dashboard is the home screen of APM:
 
  ![](attachments/Dashboard/Dashboard.png)

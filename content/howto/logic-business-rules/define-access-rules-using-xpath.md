@@ -14,11 +14,7 @@ In this how-to, you will prepare a data structure (including security), a GUI, a
 
 * Define access rules for an entity using XPath
 
-## 2 Prerequisites
-
-None.
-
-## 3 Preparing the Data Structure, GUI, and Example Data
+## 2 Preparing the Data Structure, GUI, and Example Data
 
 The access rules used in this how-to contain customer and order data. To define the access rules, you first need to set up the data structure, user roles, and GUI to maintain customer and order data. For details on how to create a data structure and GUI, see [How to Create and Deploy Your First App](../modeling-basics/create-and-deploy-your-first-app).
 
@@ -52,7 +48,7 @@ To prepare the data structure, GUI, and example data, follow these steps:
 
     ![](attachments/18448681/18581002.png)
 
-## 4 Defining the Access Rules on the Order Entity Using XPAth
+## 3 Defining the Access Rules on the Order Entity Using XPAth
 
 In the previous section, you set up a basic data structure and created some sample data. In this section, you you will define the access rules on the Order entity so that orders can only be viewed by a financial administrator if the payment status of the order is set to "Complete." You will do this by adding an XPath constraint to the Order entity for the FinancialAdministrator module role.
 
@@ -68,7 +64,7 @@ To define the access rules on the Order entity using XPath, follow these steps:
 5. When you log in with the **Financial Administrator** account, you will see that only completed orders are shown in the orders overview:
     ![](attachments/18448681/18580994.png)
 
-## 5 Related Content
+## 4 Related Content
 
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)
 * [How to Create a Custom Save Button](create-a-custom-save-button)

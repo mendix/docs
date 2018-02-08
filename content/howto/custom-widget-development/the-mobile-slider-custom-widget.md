@@ -1,5 +1,5 @@
 ---
-title: "The Mobile Slider Custom Widget"
+title: "Use the Mobile Slider Custom Widget"
 category: "Custom Widget Development"
 tags: []
 ---

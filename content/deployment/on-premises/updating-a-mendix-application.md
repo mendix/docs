@@ -1,5 +1,5 @@
 ---
-title: "Updating a Mendix Application"
+title: "Update a Mendix Application"
 category: "On-Premises"
 tags: []
 ---

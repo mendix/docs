@@ -29,7 +29,8 @@ You can also see your Mendix **Activity**, which is a list of the most important
 
 ![](attachments/how-to-set-up-your-profile/my-dashboard.png)
 
-### <a name="invite"></a>3.1 Inviting Friends and Colleagues to Mendix
+<a name="invite"></a>
+### 3.1 Inviting Friends and Colleagues to Mendix
 
 On your dashboard, you can invite friends and colleagues to join Mendix. After you click **Invite Friends**, a pop-up window titled **Get your free t-shirt** appears where you can invite someone by entering their email address and clicking **Send invite**. There is also a personal referral link provided, which you can share on your personal website, blog, and social media channels to get more referrals. You will earn some Mendix swag with five successful invites.
 
@@ -39,7 +40,7 @@ After you have invited someone to Mendix, click **Invite Friends / View Status**
 1. If you invited them via email, they will first have the **Invited** status.
 2. When they click sign up for Mendix and recieve a confirmation email, they will have the **Confirmation e-mail sent** status.
 3. When they complete the signup process and their account is active, their status will change to **Completed sign-up**.
-4. When they complete the guided product tour in the Mendix Web Modeler, their status will change to **Successful**. 
+4. When they complete the guided product tour in the Mendix Web Modeler, their status will change to **Successful**.
 
 ![](attachments/how-to-set-up-your-profile/referral-statuses.png)
 
@@ -73,7 +74,7 @@ In the header of your profile, you can edit the following details:
 {{% alert type="info" %}}
 
 <a name="github"></a>In order to receive Mendix points for your contributions to Mendix GitHub repositories (for example, [mendix / docs](https://github.com/mendix/docs)), you are required to authorize the connection to your GitHub profile. For more information on gaining Mendix points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq) and [How to Contribute to the Mendix Documentation](../documentation/contribute-to-the-mendix-documentation#GainingMendixPoints).
-    
+
 {{% /alert %}}
 
 In the body of your profile, you can edit the following elements:
@@ -117,7 +118,7 @@ This will open the project editor. There are tips in the editor for what you sho
 
 ![](attachments/how-to-set-up-your-profile/project-editor.png)
 
-All of the fields in the project editor must be filled out before submitting the project. 
+All of the fields in the project editor must be filled out before submitting the project.
 
 Click **Submit** to save and publish your project:
 

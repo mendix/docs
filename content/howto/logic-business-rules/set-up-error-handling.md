@@ -12,29 +12,25 @@ When working with microflows, it is important to realize that there are always t
 
 * Set up the various error handling components
 
-## 2 Prerequisites
+## 2 Transactions
 
-None.
-
-## 3 Transactions
-
-### 3.1 Transactions Keep Your Data Consistent
+### 2.1 Transactions Keep Your Data Consistent
 
 Everything that happens in the platform happens in a transaction. What is more, unless otherwise specified, everything is executed, or nothing is executed. Accordingly, if you don't specify any error handling and the microflow you are trying to execute gives you an error, nothing will be executed. That means that all the objects you created or changed will be reverted, you will not get the text feedback, and the platform will not show the new page. Either every single step in the microflow is successfully executed, or nothing is executed. That is the only way to keep processes and data consistent. 
 
-### 3.2 Transactions Keep the Changes Isolated
+### 2.2 Transactions Keep the Changes Isolated
 
 While updating or creating your objects, you do not want users to see temporary information or empty records because a microflow hasn't finished executing yet. 
 
 To ensure that every user or process can only see persisted data, all the data changed in a transaction is only available within that specific transaction. None of the changes made inside that microflow will be available outside the microflow, not even to the user that initiated the microflow. The information will only be available to the whole application once the microflow has successfully completed all the actions.
 
-### 3.3 Transactions Prevent Two processes from Using the Same Object at the Same Time
+### 2.3 Transactions Prevent Two processes from Using the Same Object at the Same Time
 
 When an object is updated, the platform will place a lock on that object for the duration of the transaction. That means that while the transaction is running, no other transactions are allowed to read or write in that same object. As soon as the transaction has finished, the lock will be released automatically and any waiting processes will continue normally.
  
 Please note that this isn't the same as preventing two users from editing the same object. It is still possible for two users to open the same object and change it 1 milliseconds after each other. The latest change will still be applied.
 
-## 4 Error Handling Components
+## 3 Error Handling Components
 
 | Type | Image | Description |
 | --- | --- | --- |

@@ -1,5 +1,5 @@
 ---
-title: "How-To's"
+title: "How-to's"
 ---
 
 ## 1 Introduction

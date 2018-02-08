@@ -1,5 +1,5 @@
 ---
-title: "Setting Up the Navigation Structure"
+title: "Set Up the Navigation Structure"
 category: "UX"
 tags: []
 ---

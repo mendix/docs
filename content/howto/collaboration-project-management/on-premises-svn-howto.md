@@ -1,5 +1,5 @@
 ---
-title: "Work with an on-premises version control server"
+title: "Work with an On-Premises Version Control Server"
 category: "Collaboration & Project Management"
 tags: ["on-premises"]
 ---

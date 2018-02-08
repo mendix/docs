@@ -1,5 +1,5 @@
 ---
-title: "Synchronizing user accounts using the LDAP module"
+title: "Synchronize User Accounts Using the LDAP Module"
 category: "Integration"
 tags: []
 ---

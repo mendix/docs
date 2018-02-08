@@ -1,5 +1,5 @@
 ---
-title: "How to Set Up the Google Firebase Cloud Messaging Server"
+title: "Set Up the Google Firebase Cloud Messaging Server"
 parent: "push-notifications"
 ---
 

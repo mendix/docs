@@ -1,7 +1,8 @@
 ---
-title: "Setup Mendix UI Framework with just CSS"
+title: "Set Up the Mendix UI Framework with Just CSS"
 parent: "setup-mendix-ui-framework"
 ---
+
 In this how-to we will go through how to setup the [Mendix UI Framework](https://ux.mendix.com/) and do our first styling changes by just using CSS.
 
 **After completing this how-to you will know:**
@@ -60,8 +61,7 @@ In this chapter we will create a new app and select a theme from the New App sel
 *   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
-*   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
-*   [Setup Mendix UI Framework](setup-mendix-ui-framework)
+*   [Set Up Mendix UI Framework](setup-mendix-ui-framework)
 *   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
 *   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 *   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)

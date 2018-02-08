@@ -56,7 +56,7 @@ To see the results of this how-to, you must set up a test project with test data
 11.  Add the following order data to your app:
     ![](attachments/18448705/18581373.png)
 
-## 4 Setting the Scurity Level to Prototype/Demo
+## 4 Setting the Security Level to Prototype/Demo
 
 In this part of the how-to, you will learn how to configure the security at the prototype/demo level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the Mendix cloud, production security is mandatory.
 

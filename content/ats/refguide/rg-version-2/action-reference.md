@@ -13,28 +13,28 @@ The tables below list all the standard actions for Mendix. There is one table pe
 * [ATS Core Actions](/ats/refguide/rg-version-1/ats-core-actions)
 * [Selenium Actions](/ats/refguide/rg-version-1/selenium-actions)
 
-## 2 Widget - Set
+## 2 Widget – Set
 
 | Action           | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
-| Set BooleanSlider Value          | BooleanSlider                    | Checks if the given value is available for the BooleanSlider and sets the value |
+| Set BooleanSlider Value          | BooleanSlider                    | Checks if the given value is available for the BooleanSlider and sets the value. |
 | Set BootstrapRTE Value           | BootstrapRTE                     | Sets the given value as current value for the BootstrapRTE value. Strings can be formatted via html-code |
-| Set Checkbox Set Selector Value  | Checkbox Set Selector            | Un-/Check 'select all' checkbox |
-| Set Checkbox Set Selector Value (all) | Checkbox Set Selector       | Un-/Check 'select all' checkbox |
-| Set Checkbox Value               | Checkbox                         | Sets the value of a Checkbox |
-| Set CKEditor Value               | CKEditor                         | Sets the CKEditor content value |
-| Set File Manager                 | FileManager                      | Set a file manager to the given file path to upload a file |
-| Set Grid Selector Checkbox Value | Grid Selector                    | Un-/Check checkbox |
-| Set Grid Selector Radiobutton checked  | Grid Selector              | Select the radiobutton for the given column and row caption |
-| Set InputReferenceSelector Value | InputReferenceSelector           | Set the InputReferenceSelector to the given value |
-| Set ListView Search              | ListView                         | Sets the ListView Search Text |
-| Set Row Cell Value               | DataGrid                         | Set the Cell Value in a DataGrid row |
-| Set Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Un-/Checks the checkbox found by given entity attribute value |
-| Set Value | TextBox, TextArea, DatePicker, DropDown, RadioButton, ReferenceSelector, SearchInput Text, SearchInput DropDown, OnChange Inputbox | Set the text value of a Textbox, Textarea, Dateinput, Reference Selector, Enum Selector |
-| Set Value (by index) | DropDown, ReferenceSelector, SearchInput DropDown | Set the value of a dropdown by index, e.g. EnumSelect or ReferenceSelector |
+| Set Checkbox Set Selector Value  | Checkbox Set Selector            | Checks/clears the **Select all** check box. |
+| Set Checkbox Set Selector Value (all) | Checkbox Set Selector       | Checks/clears the **Select all** check box. |
+| Set Checkbox Value               | Checkbox                         | Sets the value of a check box. |
+| Set CKEditor Value               | CKEditor                         | Sets the CKEditor content value. |
+| Set File Manager                 | FileManager                      | Sets the file manager to the given file path to upload a file. |
+| Set Grid Selector Checkbox Value | Grid Selector                    | Checks/clears the check box. |
+| Set Grid Selector Radiobutton checked  | Grid Selector              | Selects the radio button for the given column and row caption. |
+| Set InputReferenceSelector Value | InputReferenceSelector           | Sets the inut reference selector to the given value. |
+| Set ListView Search              | ListView                         | Sets the list view search text. |
+| Set Row Cell Value               | DataGrid                         | Set the cell value in a data grid row. |
+| Set Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Checks/clears the check box found by a given entity attribute value. |
+| Set Value | TextBox, TextArea, DatePicker, DropDown, RadioButton, ReferenceSelector, SearchInput Text, SearchInput DropDown, OnChange Inputbox | Sets the text value of a text box, text area, date input, reference selector, or enum selector. |
+| Set Value (by index) | DropDown, ReferenceSelector, SearchInput DropDown | Sets the value of a drop-down menu by index (for example, EnumSelect or ReferenceSelector). |
 
 
-## 3 Widget - Get
+## 3 Widget – Get
 
 | Action           | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -54,28 +54,28 @@ The tables below list all the standard actions for Mendix. There is one table pe
 | Get Total Item/Row Count | DataGrid, TemplateGrid, ListView | Get the total grid count from the paging status |
 | Get Validation Message | All widgets | Returns the validation message of a widget |
 | Get Value | TextBox, TextArea, DatePicker, DropDown, RadioButton, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label, OnChange Inputbox |
-| Get Visible Item/Row Count | DataGrid, TemplateGrid, ListView | Returns number of currently visible Items/Rows in a TemplateGrid, DataGrid or ListView |
-| Groupbox is Collapsed | GroupBox | Get GroupBox Collapsed state: true if collapsed, otherwise false |
+| Get Visible Item/Row Count | DataGrid, TemplateGrid, ListView | Returns the number of currently visible items/rows in a template grid, data grid, or list view. |
+| Groupbox is Collapsed | GroupBox | Get GroupBox Collapsed state: true if collapsed, otherwise false. |
 
 
-## 4 Widget - Assert
+## 4 Widget – Assert
 
 | Action           | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
-| Assert Active Tab Caption | TabContainer | Assert a certain value for the caption of the active tab page |
-| Assert BooleanSlider Value | BooleanSlider | Asserts that the BooleanSlider is set to the given value |
-| Assert BootstrapRTE Value | BootstrapRTE | Asserts that the BootstrapRTE value is equal to the given value |
-| Assert Checkbox Set Selector Value | Checkbox Set Selector | Finds the checkbox by entity attribute and asserts that the checkbox is set to the given value |
-| Assert Checkbox Value | CheckBox | Assert the value of a Checkbox |
-| Assert CKEditor Value | CKEditor | Compares the CKEditor value with the given Value |
-| Assert Grid Selector Value | Grid Selector | Asserts the value of checkbox/radiobutton |
-| Assert InputReferenceSelector Value | InputReferenceSelector | Asserts that the InputReferenceSelector has the given value |
-| Assert Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Asserts that the checkbox found by given entity attribute value is checked/unchecked |
-| Assert Validation Message | All widgets | Asserts a validation message with a certain text |
-| Assert Value | TextBox, TextArea, DatePicker, DropDown, RadioButton, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label, OnChange Inputbox | Assert the text value from a Textbox, Textarea, Dateinput, RadioButton, Dropdown |
-| Dropdown has Option | DropDown, ReferenceSelector, SearchInput DropDown | Returns true if value is available in dropdown |
+| Assert Active Tab Caption | TabContainer | Asserts a certain value for the caption of the active tab page. |
+| Assert BooleanSlider Value | BooleanSlider | Asserts that the BooleanSlider is set to the given value. |
+| Assert BootstrapRTE Value | BootstrapRTE | Asserts that the BootstrapRTE value is equal to the given value. |
+| Assert Checkbox Set Selector Value | Checkbox Set Selector | Finds the check-box-by-entity attribute and asserts that the check box is set to the given value. |
+| Assert Checkbox Value | CheckBox | Asserts the value of a check box. |
+| Assert CKEditor Value | CKEditor | Compares the CKEditor value with the given value. |
+| Assert Grid Selector Value | Grid Selector | Asserts the value of check box/radio button. |
+| Assert InputReferenceSelector Value | InputReferenceSelector | Asserts that the input reference selector has the given value. |
+| Assert Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Asserts that the check box found by the given entity attribute value is checked/unchecked. |
+| Assert Validation Message | All widgets | Asserts a validation message with a certain text. |
+| Assert Value | TextBox, TextArea, DatePicker, DropDown, RadioButton, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label, OnChange Inputbox | Assert the text value from a text box, text area, date input, radio button, drop-down menu. |
+| Dropdown has Option | DropDown, ReferenceSelector, SearchInput DropDown | Returns true if the value is available in a drop-down menu. |
 
-## 5 Widget - Find
+## 5 Widget – Find
 
 | Action           | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -91,7 +91,7 @@ The tables below list all the standard actions for Mendix. There is one table pe
 | Find Simple Checkbox Set Selector | Simple Checkbox Set Selector | Finds the checkbox by given value |
 | Find Widget Child Node | All widgets | Find a Node within a Mendix Widget. Also matches the widget node itself. The action is limited to search in only within widgets that are visible |
 
-## 6 Widget - Other
+## 6 Widget – Other
 
 | Action           | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -172,7 +172,6 @@ The tables below list all the standard actions for Mendix. There is one table pe
 | Set Browser Dimensions | N/A | |
 | Wait for Condition JS | N/A | Wait until the given expression returns true |
 
-
 ## 9 Mouse & Keyboard
 
 | Action           | Supported Widgets | Description                              |
@@ -188,7 +187,6 @@ The tables below list all the standard actions for Mendix. There is one table pe
 | Scroll to top | N/A                  | |
 | Send Enter | N/A                  | Simulates pressing Enter in [Element] |
 | Send Keys | N/A                  | Simulates typing [Text] into the [Element] |
-
 
 ## 10 Logic
 
@@ -235,7 +233,6 @@ The tables below list all the standard actions for Mendix. There is one table pe
 | Set Implicit Wait | N/A | |
 | Set Return Value | N/A | |
 | Sleep | N/A | Wait 'Sleep time' milliseconds |
-
 
 ## 11 Generators
 

@@ -22,7 +22,7 @@ Fields can have following data types: text or number.
 | Field  | A column of a table for specific data (for example, *username*. |
 | Record | A row in a data table containing a text or number value. |
 
-![](attachments/test/test-data.png)
+![](attachments/test/test-data.PNG)
 
 ## 2 Using Test Data in Test Cases
 

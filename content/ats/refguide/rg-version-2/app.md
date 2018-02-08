@@ -107,7 +107,7 @@ The Mendix API Key is used to synchronize stories between the Developer Portal a
 
 You must set this key, otherwise you cannot use your user stories in ATS. Be aware that after you have set the Mendix API key, you won't be able to see it again. You can only set a new API key.
 
-For information on where to find the API keys of your Mendix app, see [Authentication](../apidocs/authentication).
+For information on where to find the API keys of your Mendix app, see [Authentication](https://docs.mendix.com/apidocs-mxsdk/apidocs/authentication.html).
 
 ### 3.5 CI/CD API Key
 

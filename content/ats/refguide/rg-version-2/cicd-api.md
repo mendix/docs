@@ -5,7 +5,7 @@ parent: "rg-version-2"
 
 ## 1 CI/CD API
 
-With the CI/CD API you easily integrate ATS into your automated deployment workflow. You run a test according to predefined templates or you could retrieve the status of already finished tests. To use the CI/CD API you need a special webservice user, which ATS uses for authentication. For more information on how to integrate ATS into your CI/CD workflow read the [How-To ATS CI/CD](../howtos-2/use-CI-CD-api).
+With the CI/CD API you easily integrate ATS into your automated deployment workflow. You run a test according to predefined templates or you could retrieve the status of already finished tests. To use the CI/CD API you need a special webservice user, which ATS uses for authentication. For more information on how to integrate ATS into your CI/CD workflow read the [How-To ATS CI/CD](/ats/howtos/ht-version-2/ats-and-ci-cd-2).
 
 ## 2 CI/CD Templates
 
@@ -53,8 +53,8 @@ You must include the following information in the request:
 
 | Name | Description |
 | --- | --- |
-| username | The username of the web service user. |
-| password | The password of the web service user. |
+| username | ATSAPIUser |
+| password | ATSAPIUser |
 | AppAPIToken | The key for the CI/CD API. Generated on the **Test Settings** page. |
 | AppID | The ID of your Mendix app. |
 | JobTemplateID | The unique ID of the CI/CD Template. |
@@ -65,8 +65,8 @@ You must include the following information in the request:
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:men="http://www.mendix.com/">
   <soap:Header>
     <tns:authentication>
-      <username>exampleUser</username>
-      <password>examplePassword</password>
+      <username>ATSAPIUser</username>
+      <password>ATSAPIUser</password>
     </tns:authentication>
   </soap:Header>
   <soap:Body>

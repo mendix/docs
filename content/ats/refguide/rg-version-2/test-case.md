@@ -5,7 +5,7 @@ parent: "rg-version-2"
 
 ## 1 Introduction
 
-A test case is a set of [test steps](test-steps) that exercise a particular program path or verify compliance with a specific need. The point of running the test is to check if your app is fully functional. For example, whether a user can perform a certain task in your app or not.
+A test case is a set of [test steps](test-step) that exercise a particular program path or verify compliance with a specific need. The point of running the test is to check if your app is fully functional. For example, whether a user can perform a certain task in your app or not.
 
 In ATS, you create a new test case by clicking **New Test Case** in the **Actions** drop-down menu in the repository.
 

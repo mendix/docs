@@ -7,11 +7,11 @@ parent: "rg-version-2"
 
 The tables below list all the standard actions for Mendix. There is one table per category. For more detailed information, see the following ATS Reference Guide pages: 
 
-* [Mendix Actions](mendix-actions)
-* [Dialog](dialog)
-* [Mendix App Store Widget Actions](mendix-appstore-widgets-actions)
-* [ATS Core Actions](ats-core-actions)
-* [Selenium Actions](selenium-actions)
+* [Mendix Actions](/ats/refguide/rg-version-1/mendix-actions)
+* [Dialog](/ats/refguide/rg-version-1/dialog)
+* [Mendix App Store Widget Actions](/ats/refguide/rg-version-1/mendix-appstore-widgets-actions)
+* [ATS Core Actions](/ats/refguide/rg-version-1/ats-core-actions)
+* [Selenium Actions](/ats/refguide/rg-version-1/selenium-actions)
 
 ## 2 Widget - Set
 

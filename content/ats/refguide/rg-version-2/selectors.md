@@ -5,7 +5,7 @@ parent: "rg-version-2"
 
 ## 1 Introduction
 
-For the [Find Widget Child Node](find-widget-child-node) action or as part of a script for the [Execute JavaScript Integer](execute-javascript-integer), [Execute JavaScript String](execute-javascript-string), and [Execute JavaScript WebElement](execute-javascript-webelement) actions, you must use selectors to get a node or WebElement.
+For the [Find Widget Child Node](/ats/refguide/rg-version-1/find-widget-child-node) action or as part of a script for the [Execute JavaScript Integer](/ats/refguide/rg-version-1/execute-javascript-integer), [Execute JavaScript String](/ats/refguide/rg-version-1/execute-javascript-string), and [Execute JavaScript WebElement](/ats/refguide/rg-version-1/execute-javascript-webelement) actions, you must use selectors to get a node or WebElement.
 
 ATS supports both JQuery and CSS3 selectors. ATS also has its own selectors. The following summary will give you a short overview of the most used selectors in ATS. 
 
@@ -43,9 +43,9 @@ For more information, see [W3C CSS3 Selectors Reference](http://www.w3.org/TR/cs
 
 JQuery uses CSS3 selectors and extends the collection of selectors with its own ones. You can use all these selectors in your ATS actions.
 
-If you use JQuery selectors in the [Find Widget Child Node](find-widget-child-node) action, you must NOT use the `jQuery(...)` or `$(...)` function. Only use simple selectors, without quotations.
+If you use JQuery selectors in the [Find Widget Child Node](/ats/refguide/rg-version-1/find-widget-child-node) action, you must NOT use the `jQuery(...)` or `$(...)` function. Only use simple selectors, without quotations.
 
-In the [Execute JavaScript](execute-javascript-integer) action, you must use the `jQuery(...)` or `$(...)` function to select a WebElement or node.
+In the [Execute JavaScript](/ats/refguide/rg-version-1/execute-javascript-integer) action, you must use the `jQuery(...)` or `$(...)` function to select a WebElement or node.
 
 The following table shows a few selectors from the JQuery set that you can use in ATS:
 

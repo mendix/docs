@@ -43,13 +43,13 @@ The example location gives an example of a URL on which the operation can be rea
 
 Specify the microflow that implements the operation. These are the characteristics of a valid microflow for a REST operation:
 
-* It returns an [HttpResponse](http-request-and-response-entities#http-response) object that is not *empty* or any primitive value except binary (such as String, Decimal, Enumeration, etc.)
+* It returns an [HttpResponse](http-request-and-response-entities#http-response) object that is not **empty** or does not have any primitive value except binary (such as String, Decimal, Enumeration, etc.)
 * It may have an [HttpRequest](http-request-and-response-entities#http-request) parameter, which you can use to inspect the incoming request
-* It may have an [HttpResponse](http-request-and-response-entities#http-request) parameter, which you can use to modify response
-* It can have [HttpResponse](http-request-and-response-entities#http-request) either as a return type or as a parameter. Not both.
-* It takes all [path parameters](published-rest-path-parameters) specified in the operation path as parameters
-* It should not have any other *Object* or *List* parameters
-* If microflow returns *empty* or if it has a return type of *Nothing* you can set the response content through [HttpResponse](http-request-and-response-entities#http-request) parameter. In any other case, returned value is used for response content
+* It may have an [HttpResponse](http-request-and-response-entities#http-request) parameter, which you can use to modify the response
+* It can have [HttpResponse](http-request-and-response-entities#http-request) either as a return type or as a parameter (but not as both)
+* It takes all the [path parameters](published-rest-path-parameters) specified in the operation path as parameters
+* It should not have any other **Object** or **List** parameters
+* If a microflow returns **empty** or if it has a return type of **Nothing**, you can set the response content through the [HttpResponse](http-request-and-response-entities#http-request) parameter; in any other case, the returned value is used for the response content
 * It allows all roles that the service allows
 
 Any remaining microflow parameters will be treated as optional [query parameters](published-rest-query-parameters).

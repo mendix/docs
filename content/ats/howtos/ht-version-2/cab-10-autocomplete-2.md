@@ -1,6 +1,6 @@
 ---
 title: "CAB.10 - AutoComplete"
-parent: "create-unsupported-widget-action-2"
+parent: "create-unsupported-widget-actions-2"
 description: "This how-to explains step by step how to create an Unsupported Widget action for the AutoComplete widget."
 tags: ["ATS", "testing"]
 ---

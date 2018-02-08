@@ -61,4 +61,4 @@ When you select a resource, you see the [operations](published-rest-operation) t
 
 ## 6 Related Content
 
-For more information on which operation gets executed for a given request URL, see [Published REST routing](published-rest-routing).
+For more information on which operation gets executed for a given request URL, see [Published REST Routing](published-rest-routing).

@@ -1,5 +1,5 @@
 ---
-title: "Export XML documents"
+title: "Export XML Documents"
 category: "Integration"
 tags: []
 ---

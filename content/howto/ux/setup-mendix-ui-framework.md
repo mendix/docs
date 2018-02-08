@@ -1,5 +1,5 @@
 ---
-title: "Setup Mendix UI Framework"
+title: "Set Up the Mendix UI Framework"
 category: "UX"
 tags: []
 ---

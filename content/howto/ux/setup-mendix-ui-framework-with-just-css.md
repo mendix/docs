@@ -1,5 +1,5 @@
 ---
-title: "Set Up Mendix UI Framework with just CSS"
+title: "Set Up the Mendix UI Framework with Just CSS"
 parent: "setup-mendix-ui-framework"
 ---
 

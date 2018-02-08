@@ -17,11 +17,7 @@ When you look at these examples, often an IContext will be used. This is the con
 * Execute microflows and commit objects
 * Copy FileDocuments
 
-## 2 Prerequisites
-
-None.
-
-## 3 Executing Microflows and Committing Objects
+## 2 Executing Microflows and Committing Objects
 
 There are cases in which you'd like to execute a microflow in a Java Action. This case will explain how to do this, including how to pass parameters and obtain the return value. Additionally, the result will be saved in an object and the object will be committed.
 
@@ -53,7 +49,7 @@ testObject.setTestString(context, formattedString);
 Core.commit(context, testObject.getMendixObject());
 ```
 
-## 4 Copying FileDocuments
+## 3 Copying FileDocuments
 
 A FileDocument is a system module entity that holds the content of a file (for example, a text file or Excel sheet). For this case, we assume we have an entity called `GenericObject` that has a relation with an `Attachment` entity. The `Attachment` entity inherits from `FileDocument`. One `GenericObject` can have multiple `Attachments`. We'd like to copy the `Attachments` from one `GenericObject` to another so that they can be independently modified later.
 
@@ -109,7 +105,7 @@ for (IMendixObject iMendixObject: getAttachments(sourceObject, context))
 
 After this, all `Attachments` belonging to one `GenericObject` have been copied to another.
 
-## 5 Related Content
+## 4 Related Content
 
 * [How to Create a Custom Save Button](create-a-custom-save-button)
 * [How to Create Your First Microflow: Hello World!](create-your-first-microflow-hello-world)

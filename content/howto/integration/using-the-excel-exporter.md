@@ -1,5 +1,5 @@
 ---
-title: "Using the Excel Exporter"
+title: "Use the Excel Exporter"
 category: "Integration"
 tags: []
 ---

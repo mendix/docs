@@ -35,7 +35,7 @@ Under the **Settings** tab, set the **Input Parameters** and **Output Parameters
 
 #### 2.2.1 Input Parameters
 
-An input parameter is a value that you use inside your action. The input parameter is shown as an [action parameter](test-step#action-parameter) of a test step. An action can have multiple optional or required input parameters, but only one output parameter.
+An input parameter is a value that you use inside your action. The input parameter is shown as an [action parameter](test-step#4action-parameter) of a test step. An action can have multiple optional or required input parameters, but only one output parameter.
 
 The following table describes the buttons under **Input Parameters**:
 

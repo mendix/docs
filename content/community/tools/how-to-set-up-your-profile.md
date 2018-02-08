@@ -31,7 +31,7 @@ You can also see your Mendix **Activity**, which is a list of the most important
 
 ### <a name="invite"></a>3.1 Inviting Friends and Colleagues to Mendix
 
-On your dashboard, you can invite friends and colleagues to join Mendix. After you click **Invite Friends**, a pop-up window titled **Get your free t-shirt** appears where you can invite someone by entering their email address and clicking **Send invite**. There is also a personal referral link provided, which you can share on your personal website, blog, and social media profiles to get more referrals. You will earn some Mendix swag with five successful invites.
+On your dashboard, you can invite friends and colleagues to join Mendix. After you click **Invite Friends**, a pop-up window titled **Get your free t-shirt** appears where you can invite someone by entering their email address and clicking **Send invite**. There is also a personal referral link provided, which you can share on your personal website, blog, and social media channels to get more referrals. You will earn some Mendix swag with five successful invites.
 
 ![](attachments/how-to-set-up-your-profile/referral-url.png)
 

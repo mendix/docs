@@ -156,7 +156,7 @@ To enable persistent file storage, you need to configure the S3 object store (wh
 
 1. Open the Modeler
 2. Open the app you want to deploy to Cloud Foundry.
-3. Click the arrow for the **Run** options and select **Run on Cloud Foundry**:
+3. Click the arrow for the **Run** options and select **Run on Pivotal**:
 
     ![](attachments/18448647/18580549.png) 
 

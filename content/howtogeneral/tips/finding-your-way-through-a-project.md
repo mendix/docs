@@ -1,5 +1,5 @@
 ---
-title: "Finding your way through a project"
+title: "Find Your Way Through a Project"
 category: "Tips & Tricks"
 ---
 

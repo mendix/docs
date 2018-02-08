@@ -1,5 +1,5 @@
 ---
-title: "Using Team Server - Version Control"
+title: "Use Team Server for Version Control"
 category: "Collaboration & Project Management"
 tags: []
 ---

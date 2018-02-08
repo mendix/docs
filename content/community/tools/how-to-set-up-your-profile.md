@@ -19,27 +19,45 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Open a Mendix account (register [here](https://www.mendix.com/try-now/))
 
-## 3 Editing Your Public Profile<a name="publicprofile"></a>
+## 3 My Dashboard
 
-The first thing you need to do is edit your [Community Profile](https://developer.mendixcloud.com/link/profile) page. To get there, hover over your picture in the right side of the navigation bar and select **MY COMMUNITY PROFILE**.
+To access your [Community Profile](https://developer.mendixcloud.com/link/profile), hover over your picture on the right side of the navigation bar and select **My Profile** from the context menu.
 
-Your profile will open on the **My Public Profile** tab, which is the main page of your profile with your Mendix badges, Mendix points, personal **Summary**, **Industry Experience**, **Skills**, **Project Roles**, **Activity**, **Projects**, and other details.
+Your profile will open to the **My Dashboard** tab, where you can see your points chart. The chart and its legend present the division of your points between various Mendix products and activities. For details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq). When analyzing your points, be sure to also check out the **Leaderboards** tab to see the top Mendix community contributors!
+
+You can also see your Mendix **Activity**, which is a list of the most important public events for which you have gained Mendix points.
+
+![](attachments/how-to-set-up-your-profile/my-dashboard.png)
+
+### <a name="invite"></a>3.1 Inviting Friends and Colleagues to Mendix
+
+On your dashboard, you can invite friends and colleagues to join Mendix. After you click **Invite Friends**, a pop-up window titled **Get your free t-shirt** appears where you can invite someone by entering their email address and clicking **Send invite**. There is also a personal referral link provided, which you can share on your personal website, blog, and social media channels to get more referrals. You will earn some Mendix swag with five successful invites.
+
+![](attachments/how-to-set-up-your-profile/referral-url.png)
+
+After you have invited someone to Mendix, click **Invite Friends / View Status** to see their name and status listed at the bottom of the pop-up window:
+1. If you invited them via email, they will first have the **Invited** status.
+2. When they click sign up for Mendix and recieve a confirmation email, they will have the **Confirmation e-mail sent** status.
+3. When they complete the signup process and their account is active, their status will change to **Completed sign-up**.
+4. When they complete the guided product tour in the Mendix Web Modeler, their status will change to **Successful**. 
+
+![](attachments/how-to-set-up-your-profile/referral-statuses.png)
+
+Once five of your referrals reach the **Successful** status, you will see the **Claim your t-shirt** link on your dashboard. Click this to fill in some details and receive your awesome Mendix t-shirt. Yay!
+
+![](attachments/how-to-set-up-your-profile/claim-tshirt.png)
+
+## <a name="publicprofile"></a>4 Editing Your Public Profile
+
+To start editing your Community Profile, click the **My Public Profile** tab. This is the main public page of your profile with your Mendix badges, Mendix points, personal **Summary**, **Industry Experience**, **Skills**, **Project Roles**, **Activity**, **Projects**, and more.
 
 ![](attachments/how-to-set-up-your-profile/community-profile.png)
 
-Your points are located in the upper-left corner of your public profile. The table and chart present the division of your points between various Mendix products and activities. For details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq). And check out the **Leaderboards** tab to see the top Mendix community contributors!
-
-When you access your profile page through the **MY COMMUNITY PROFILE** link, your profile will automatically be in edit mode so that you can easily make updates.
-
-{{% alert type="info" %}}
-
-If you access your profile by clicking **Community** > [OUR COMMUNITY](https://developer.mendixcloud.com/link/community) in the navigation bar and then find your profile on the **Developers** or **Leaderboards** tabs, your public profile will be displayed. Click **Edit Profile** to go into edit mode:
+Click **Edit Profile** to go into edit mode:
 
 ![](attachments/how-to-set-up-your-profile/edit.png)
 
-{{% /alert %}}
-
-To edit a field on your profile, click this icon:
+To edit a specific field on your profile, click this icon:
 
 ![](attachments/how-to-set-up-your-profile/icon.png)
 
@@ -65,7 +83,7 @@ In the body of your profile, you can edit the following elements:
 * **Skills**
 * **Reviews** – URLs of the reviews of Mendix you have written at [Gartner Peer Insights](https://www.gartner.com/reviews/market/mobile-application-development-platforms/vendor/mendix) and [TrustRaduius](https://www.trustradius.com/products/mendix/reviews)
     * Links to these reviews will not appear on your public profile, but these two reviews are required to make your profile 100% complete
-* **Projects** – for details on adding a project, see [4 Adding a Project](#project)
+* **Projects** – for details on adding a project, see section [5 Adding a Project](#project)
 
 Be sure to complete the following items, which are necessary to make your Community Profile public:
 
@@ -85,7 +103,7 @@ If you have not been able to complete all of these steps, the **Profile Complete
 
 ![](attachments/how-to-set-up-your-profile/profile-completeness.png)
 
-## 4 Adding a Project<a name="project"></a>
+## 5 Adding a Project<a name="project"></a>
 
 {{% alert type="warning" %}}
 All projects published before October 16, 2017 will be in the **Unpublished** status in the edit mode. To improve the quality of the projects and the design of the Community Profile, we have new required fields. Please fill in the empty required fields to publish your project again.
@@ -121,7 +139,7 @@ The project draft will be available in the **Unpublished** projects section for 
 Project drafts with empty required fields also appear in the **Unpublished** projects section.
 {{% /alert %}}
 
-## 5 Merging Your Accounts
+## 6 Merging Your Accounts
 
 With use of the Community Profile, you can merge your old Mendix account(s) into your current Mendix account. This action combines all your hard-earned points, certifications, and achievements in your efforts to climb the leaderboards.
 

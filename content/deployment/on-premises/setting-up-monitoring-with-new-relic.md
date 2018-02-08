@@ -1,5 +1,5 @@
 ---
-title: "Setting up monitoring with New Relic"
+title: "Set Up Monitoring with New Relic"
 category: "On-Premises"
 tags: []
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Setting Up the Database User"
+title: "Set Up the Database User"
 parent: "setting-up-a-sql-server-user"
 ---
 

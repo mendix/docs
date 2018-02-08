@@ -1,5 +1,5 @@
 ---
-title: "Showing a Project in the Directory in Explorer"
+title: "Show a Project in the Directory in Explorer"
 category: "Tips & Tricks"
 ---
 

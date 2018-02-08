@@ -1,5 +1,5 @@
 ---
-title: "SIG - Mendix Performance Subjects"
+title: "SIG–Mendix Performance Subjects"
 category: "Best Practices"
 ---
 

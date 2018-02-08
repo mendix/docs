@@ -197,7 +197,7 @@ developerportal:
     - "Deploy"
     - "Operate"
     - "Settings"
-    - "How-To's"
+    - "How-to's"
 deployment:
   space: "Deployment"
   priority: false

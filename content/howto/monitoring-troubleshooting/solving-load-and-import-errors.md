@@ -1,5 +1,5 @@
 ---
-title: "Solving Load and Import Errors"
+title: "Solve Load and Import Errors"
 category: "Monitoring & Troubleshooting"
 tags: []
 ---

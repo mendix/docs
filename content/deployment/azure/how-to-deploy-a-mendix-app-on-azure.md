@@ -1,5 +1,5 @@
 ---
-title: "How to deploy a Mendix app on Azure"
+title: "Deploy a Mendix App on Azure"
 category: "Azure"
 ---
 # How to deploy a Mendix app on Azure

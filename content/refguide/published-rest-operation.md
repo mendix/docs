@@ -43,7 +43,7 @@ The example location gives an example of a URL on which the operation can be rea
 
 Specify the microflow that implements the operation. These are the characteristics of a valid microflow for a REST operation:
 
-* It returns an [HttpResponse](http-request-and-response-entities#http-response) object that is not **empty** or does not have any primitive value except binary (such as String, Decimal, Enumeration, etc.)
+* It returns an [HttpResponse](http-request-and-response-entities#http-response) object that is not **empty** or any primitive value except binary (such as String, Decimal, Enumeration, etc.).
 * It may have an [HttpRequest](http-request-and-response-entities#http-request) parameter, which you can use to inspect the incoming request
 * It may have an [HttpResponse](http-request-and-response-entities#http-request) parameter, which you can use to modify the response
 * It can have [HttpResponse](http-request-and-response-entities#http-request) either as a return type or as a parameter (but not as both)

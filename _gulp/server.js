@@ -9,7 +9,7 @@ const spawnServer = (folder) => {
     path: targetFolder,
     port: 8888,
     middleware: [function (req, res, next) {
-      console.log(req.url);
+      // console.log(req.url);
       next();
     }],
     fallback: (req, res) => {

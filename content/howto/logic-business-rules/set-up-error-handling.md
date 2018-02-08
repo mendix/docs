@@ -40,11 +40,11 @@ Please note that this isn't the same as preventing two users from editing the sa
 | **End Event** | ![](attachments/18448677/18580962.png) | This is the end of the microflow transaction and all actions are executed at the end of the main microflow.|
 | **Error End Event** | ![](attachments/18448677/18580963.png) | This re-throws the error to all parent microflows after executing the custom activities. The error handling on the activities calling this microflow determine how the transaction is processed further.
 
-### 4.1 Transactions
+### 3.1 Transactions
 
 There are many different combinations of error handling and transactions that we can configure, and below you'll find several. This should present some of the possibilities and help you understand how the different configurations behave.
 
-### 4.2 Default Error Handling
+### 3.2 Default Error Handling
 
 With default error handling, there is always a transaction running. But since there is no custom error handling specified, the platform will create one transaction for all the actions executed in the microflow. All subflows will be executed in the same transaction. The changed order and customer information is only available inside the transaction until the microflow transaction has completed.
 
@@ -52,7 +52,7 @@ With default error handling, there is always a transaction running. But since th
 
 ![](attachments/18448677/18580951.png)
 
-### 4.3 Error Handling – Custom with Rollback
+### 3.3 Error Handling – Custom with Rollback
 
 Any submicroflow initiated with error handling set to **Custom with Rollback** will NOT initiate a new transaction. The original transaction will be re-used in the subflow. If an error occurs, the transaction will be completely reverted and a new transaction will be initiated so the custom error flow can continue using that new transaction.
 
@@ -64,7 +64,7 @@ Any submicroflow initiated with error handling set to **Custom with Rollback** w
 
 Because you are switching transactions, merging back to the original process is not recommended, as this will result in inconsistent data. If you use error handling with rollback in a subflow, you should make sure that all parent microflows are configured to use error handling continuously. It is preferable that you re-throw the exception after running your custom actions.
 
-### 4.4 Error Handling – Custom without Rollback
+### 3.4 Error Handling – Custom without Rollback
 
 A submicroflow with error handling set to **Custom without Rollback** will always create a sub-transaction. All actions within the parent microflow will be persisted, and what happens inside the sub-microflow is determined by the sub-microflow. If no custom error handling is specified in the submicroflow, only the changes in the submicroflow can be reverted in case of an error. 
 
@@ -74,13 +74,13 @@ A submicroflow with error handling set to **Custom without Rollback** will alway
 
 ![](attachments/18448677/4.4.png)
 
-## 5 Combinations of Different Types of Error Handling
+## 4 Combinations of Different Types of Error Handling
 
 Most of the time you will be using a single activity with custom error handling. However, if you are developing more complicated processes where you are sending data outside of the application, it is important to realize what happens when an error occurs later in the process. For example, you don't want to send out notifications about a status change if an error occurs and therefore reverts the change.
 
 Especially when interacting with other systems, you need to think about how you want to process the errors. The best solution depends on what you want to do: continue, skip/revert the record you are working on, or keep the changes you have made so far but stop the process. All of these options can be done as long as you know what you want to achieve. The instructions below will show you a couple of examples of how you can use different combinations of the error handling options. 
 
-### 5.1 Rollback in the Parent Flow, Rollback in the Subflow
+### 4.1 Rollback in the Parent Flow, Rollback in the Subflow
 
 | Color | Description |
 | --- | --- |
@@ -89,7 +89,7 @@ Especially when interacting with other systems, you need to think about how you 
 
 ![](attachments/18448677/18580948.png)
 
-### 5.2 Rollback in the Parent Flow, Continuing in the Subflow
+### 4.2 Rollback in the Parent Flow, Continuing in the Subflow
 
 | Color | Description |
 | --- | --- |
@@ -99,7 +99,7 @@ Especially when interacting with other systems, you need to think about how you 
 
  ![](attachments/18448677/18580945.png)
 
-### 5.3 Continuing in the Parent Flow, Rollback in the Subflow
+### 4.3 Continuing in the Parent Flow, Rollback in the Subflow
 
 | Color | Description |
 | --- | --- |
@@ -109,7 +109,7 @@ Especially when interacting with other systems, you need to think about how you 
 
  ![](attachments/18448677/18580947.png)
 
-### 5.4 Continuing in the Parent Flow, Continuing in the Subflow
+### 4.4 Continuing in the Parent Flow, Continuing in the Subflow
 
 | Color | Description |
 | --- | --- |
@@ -119,7 +119,7 @@ Especially when interacting with other systems, you need to think about how you 
 
 ![](attachments/18448677/18580946.png)
 
-## 6 Best Practices
+## 5 Best Practices
 
 Consider the following best practices for error handling:
 
@@ -128,7 +128,7 @@ Consider the following best practices for error handling:
 * Always add custom error handling on integration or e-mail activities
 * Don’t over-do it – you can specify a lot of complicated error handling combinations, but this makes it more difficult (and slower) for the platform to evaluate the microflow, and it also makes it more difficult to predict the exact behavior in case of an exception
 
-## 7 Related Content
+## 6 Related Content
 
 * [How to Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [How to Trigger Logic Using Microflows](triggering-logic-using-microflows)

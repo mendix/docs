@@ -1,5 +1,5 @@
 ---
-title: "The Developers Site"
+title: "The Community Site"
 category: "Tools"
 ---
 

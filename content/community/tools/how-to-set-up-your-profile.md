@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 My Dashboard
 
-To access your [Community Profile](https://developer.mendixcloud.com/link/profile), hover over your picture on the right side of the navigation bar and select **My Profile** from the context menu.
+To access your [Community Profile](https://developer.mendixcloud.com/link/profile), hover over your picture on the right side of the navigation bar and select **My Dashboard** from the context menu.
 
 Your profile will open to the **My Dashboard** tab, where you can see your points chart. The chart and its legend present the division of your points between various Mendix products and activities. For details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq). When analyzing your points, be sure to also check out the **Leaderboards** tab to see the top Mendix community contributors!
 

@@ -13,14 +13,15 @@ These release notes are for the [beta](../beta-features/index) version of the We
 ### February 7th, 2018 16:28:00 GMT
 
 #### Improvements
-*	In all dialog windows, you can now use the <kbd>Ctrl</kbd> + <kbd>Enter</kbd> keyboard shortcut to confirm your choices and close the window. For simple dialog windows containing only 1 field, even pressing only the <kbd>Enter</kbd> key works to confirm and close the window.
-*	In the domain model editor, it is now possible to swap the direction of an association by using the **Swap Direction** button or icon. If you are unsure which direction an association between two entities should have, you can now simply create it either way. Then, if the **Multiplicity** property does not contain the option you need, you can simply switch the association direction to configure it correctly. This will save you time when setting up your domain model.
-*	We introduced a feature to the domain model editor that arranges the position of entities automatically. When your view is becoming cluttered with entity objects and association lines, simply click the **Auto arrange entities** icon. We’ll then use an algorithm to determine the best possible placement of items on your screen. Still not happy with the result? Click it again to see if we can come up with anything better.
-*	In both the microflow editor and the domain model editor, the canvas will now follow the cursor if it is moved outside the visible area. This makes it easy to work with more extensive microflows and domain models.
+
+*	In all dialog boxes, you can now use the <kbd>Ctrl</kbd> + <kbd>Enter</kbd> shortcut to confirm your choices and close the dialog box. For simple dialog boxes containing only one field, pressing only <kbd>Enter</kbd> works to confirm and close the dialog box.
+*	In the domain model editor, it is now possible to swap the direction of an association by using the **Swap Direction** button or icon. If you are unsure which direction an association between two entities should have, you can now create it either way. Then, if the **Multiplicity** property does not contain the option you need, you can switch the association direction to configure it correctly. This will save you time when setting up your domain model.
+*	We introduced a feature to the domain model editor that arranges the position of entities automatically. When your view is becoming cluttered with entity objects and association lines, click the **Auto arrange entities** icon in the upper-left corner of the editor. We’ll then use an algorithm to determine the best possible placement of items on your screen. Still not happy with the result? Click the icon again to see if we can come up with something better.
+*	In both the microflow editor and domain model editor, the canvas will now follow the cursor if it is moved outside the visible area. This makes it easy to work with more extensive microflows and domain models.
 
 #### Fixes
-*	In the page editor, the **Create New Attribute** button will now always function properly, even when used from the **Add parameter** dialog that is used (e.g.) for the **Caption** property of a widget.
 
+*	In the page editor, the **Create** button on the **Create New Attribute** dialog box now functions properly, even when used after clicking **Add parameter** (which is used, for example, for the **Caption** property of a widget).
 
 ### January 29th, 2018 16:10:52 GMT
 

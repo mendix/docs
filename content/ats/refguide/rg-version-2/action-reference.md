@@ -204,39 +204,40 @@ The tables below list all the standard actions for Mendix. There is one table pe
 | Assert Equals | N/A | Asserts that the two values are equal. |
 | Assert equalTo | N/A | Asserts that the subject is equal to matcher parameter (for example, `100` is equal to `100` or `house` is equal to `house`). |
 | Assert equalToIgnoringCase | N/A | Asserts that the subject is equal to the matcher parameter while ignoring the case (for example, `house` is equal to `House`). |
-| Assert equalToIgnoringWhiteSpace | N/A | Asserts that the subject is equal to the matcher parameter while ignoring whitespaces (for example, `testcase` is equal to ` testcase `). |
+| Assert equalToIgnoringWhiteSpace | N/A | Asserts that the subject is equal to the matcher parameter while ignoring whitespaces (for example, `testcase` is equal to `' testcase '`). |
 | Assert false | N/A | Asserts the Bolean value to be false. |
-| Assert greaterThan | N/A | Asserts that Subject is greater than Matcher Parameter (e.g. 1000 is greater than 100). |
-| Assert greaterThanOrEqualTo | N/A | Asserts that Subject is either greater than or equal to Matcher Parameter (e.g. 1000 is greater than 100 or 1000 is equal to 1000). |
-| Assert lessThan | N/A | Asserts that Subject is less than Matcher Parameter (e.g. 100 is less than 1000). |
-| Assert lessThanOrEqualTo | N/A | Asserts that Subject is either less than or equal to Matcher Parameter (e.g. 100 is less than 1000, 1000 is equal to 1000). |
+| Assert greaterThan | N/A | Asserts that the subject is greater than the matcher parameter (for example, `1000` is greater than `100`). |
+| Assert greaterThanOrEqualTo | N/A | Asserts that the subject is either greater than or equal to the matcher parameter (for example, `1000` is greater than `100`, `1000` is equal to `1000`). 
+| Assert lessThan | N/A | Asserts that the subject is less than the matcher parameter (for example, `100` is less than `1000`). |
+| Assert lessThanOrEqualTo | N/A | Asserts that the sbject is either less than or equal to the matcher parameter (for example, `100` is less than `1000`, `1000` is equal to `1000`). |
 | Assert not equals | N/A | Asserts that two values are not equal. |
 | Assert not false | N/A | |
-| Assert not true | N/A | Either false or [null]. |
-| Assert null | N/A | Fails if object is not null. |
-| Assert null (internal) | N/A | The internal Assert null functions that allows a boolean parameter to invert the result. |
-| Assert Property Value | N/A | Get Property/Attribute from web Element and assert that it equals the given value. |
-| Assert startsWith | N/A | Asserts that Subject starts with string that is equal to Matcher Parameter (e.g. testcase starts with test) |
+| Assert not true | N/A | Either false or null. |
+| Assert null | N/A | Fails if the object is not null. |
+| Assert null (internal) | N/A | Allows a Boolean parameter to invert the result. |
+| Assert Property Value | N/A | Gets the property/attribute from the web element and asserts that it equals the given value. |
+| Assert startsWith | N/A | Asserts that the subject starts with a string that is equal to the matcher parameter (for example, `testcase` starts with `test`). |
 | Assert true | N/A | |
-| Assert XML equivalent | N/A | Assert that two XMLs are equivalent. |
+| Assert XML equivalent | N/A | Asserts that two XMLs are equivalent. |
 | Concatenate String | String | Concatenate strings. |
-| If Null Then 0 (Integer) | N/A  | Checks the input value and set it to 0, if it is null. |
+| If Null Then 0 (Integer) | N/A  | Checks the input value and sets it to 0 if it is null. |
 | Is not Null | N/A | Returns true if object is not null, false otherwise. |
-| Push ATS Scripts | N/A | Push generic ats scripts to the client (jQuery, helpers functions). |
-| RegExp Match | String | Return the n'th match of the given Regular Expression in the Search String (Uses JS string.match). |
-| Return First Valid Boolean | Boolean | Returns the first boolean from the parameter list which is not null. |
-| Return First Valid Integer | Integer | Returns the first integer from the parameter list which is not null. |
-| Return First Valid String | String | Returns the first string from the parameter list which is not null. |
-| Return First Valid WebElement | WebElement | Returns the first webelement from the parameter list which is not null. |
+| Push ATS Scripts | N/A | Pushes generic ATS scripts to the client (jQuery, helpers functions). |
+| RegExp Match | String | Return the n'th match of the given regular expression in the search string (uses JS `string.match`). |
+| Return First Valid Boolean | Boolean | Returns the first Boolean from the parameter list that is not null. |
+| Return First Valid Integer | Integer | Returns the first integer from the parameter list that is not null. |
+| Return First Valid String | String | Returns the first string from the parameter list that is not null. |
+| Return First Valid WebElement | WebElement | Returns the first web element from the parameter list that is not null. |
 | Set Implicit Wait | N/A | |
 | Set Return Value | N/A | |
-| Sleep | N/A | Wait 'Sleep time' milliseconds. |
+| Sleep | N/A | The waits "sleep time" in milliseconds. |
 
 ## 11 Generators
 
 | Action           | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
 | Generate GUID | N/A | Generates and returns a GUI. |
-| Get Current DateTime String | N/A | Returns the current date and time in supplied format (java date format) e.g. 'yyyy-MM-dd HH:mm:ss'. |
-| Random Number | N/A | Creates a random Integer using: 'Math.floor(Math.random() * (max - min)) + min', You need to define the min(included) and max (excluded). |
-| Random String | N/A | Creates a random alphanumeric String using: 'Math.random().toString(36).slice(2,8)' - Optionally allows to add a Prefix or Postfix. |
+| Get Current DateTime String | N/A | Returns the current date and time in the supplied format (Java date format) (for example, `yyyy-MM-dd HH:mm:ss`. |
+| Random Number | N/A | Creates a random integer using `Math.floor(Math.random() * (max - min)) + min`. You need to define the min (included) and max (excluded). |
+| Random String | N/A | Creates a random alphanumeric string using `Math.random().toString(36).slice(2,8)`. Optionally, it allows you to add a prefix or postfix. |
+

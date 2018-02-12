@@ -1,59 +1,61 @@
 ---
 title: "Mendix Platform SDK"
 ---
-## Your Learning Path for the Mendix SDK
 
-Before the Mendix SDK can make your life easier, there's some learning to do. Follow the step-by-step guides listed below to learn everything you need about using the SDK. After finishing the learning path, you'll not only know how to use the SDK, but also how all the parts fit together. [See the full program >>](your-learning-path-for-the-mendix-sdk)
+## 1 Learning About the Mendix Platform SDK
 
-### Learning Path
+Before the Mendix SDK can make your life easier, there's some learning to do. Follow the step-by-step guides listed below to learn everything you need about using the SDK. After finishing the tutorial, you'll not only know how to use the SDK, but also how all the parts fit together.
 
-*   [Setting up your development environment](setting-up-your-development-environment)
-*   [Creating your first script](creating-your-first-script)
-*   [Creating the domain model](creating-the-domain-model)
-*   [Manipulating existing models](manipulating-existing-models)
-    *   [Changing things in the model](changing-things-in-the-model)
-    *   [Closing the server connection](closing-the-server-connection)
-    *   [Finding things in the model](finding-things-in-the-model)
-    *   [Loading units and elements](loading-units-and-elements)
-*   [Generating code from the model](generating-code-from-the-model)
+These documents comprise the tutorial:
 
-## Reference Documentation
+* [Setting Up Your Development Environment](setting-up-your-development-environment)
+* [Creating Your First Script](creating-your-first-script)
+* [Creating the Domain Model](creating-the-domain-model)
+* [Manipulating Existing Models](manipulating-existing-models)
+    * [Changing Things in the Model](changing-things-in-the-model)
+    * [Closing the Server Connection](closing-the-server-connection)
+    * [Finding Things in the Model](finding-things-in-the-model)
+    * [Loading Units and Elements](loading-units-and-elements)
+* [Generating Code from the Model](generating-code-from-the-model)
 
-Browse the compiled documentation about the Mendix Metamodel, as well as external resources you can use as a reference for programming with the Mendix SDK.
+## 2 Reference Documentation
 
-### [Understanding the Metamodel](understanding-the-metamodel)
+Browse the compiled documentation about the Mendix metamodel as well as external resources that you can use as a reference for programming with the Mendix SDK.
 
-*   [Domain Model (Meta Model)](domain-model-metamodel)
-*   [Microflows (metamodel)](microflows-metamodel)
-*   [Pages (metamodel)](pages-metamodel)
-*   [Projects (metamodel)](projects-metamodel)
+### 2.1 Understanding the Metamodel
 
-### Mendix Model SDK
+* [Understanding the Metamodel](understanding-the-metamodel)  
+* [Domain Model (Metamodel)](domain-model-metamodel)
+* [Microflows (Metamodel)](microflows-metamodel)
+* [Pages (Metamodel)](pages-metamodel)
+* [Projects (Metamodel)](projects-metamodel)
 
-*   Manipulating existing models
-    *   [Finding things](finding-things-in-the-model)
-    *   [Loading things](loading-units-and-elements)
-    *   [Changing things](changing-things-in-the-model)
-    *   [Closing the server connection](closing-the-server-connection)
-*   [Generating code from the model](generating-code-from-the-model)
-*   [Working with when.js and promises in TypeScript](working-with-when.js-and-promises-in-typescript)
-*   [Model SDK API docs](https://apidocs.mendix.com/modelsdk/latest/index.html)
+### 2.2 Mendix Model SDK
 
-### Other Resources
+* Manipulating existing models:
+    * [Finding Things in the Model](finding-things-in-the-model)
+    * [Loading Things in the Model](loading-units-and-elements)
+    * [Changing Things in the Model](changing-things-in-the-model)
+    * [Closing the Server Connection](closing-the-server-connection)
+* [Generating Code from the Model](generating-code-from-the-model)
+*   [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript)
+*   [Model SDK API Docs](https://apidocs.mendix.com/modelsdk/latest/index.html)
 
-*   [JavaScript & TypeScript resources](javascript-typescript-resources)
-*   [Mendix Platform SDK API docs](https://apidocs.mendix.com/platformsdk/latest/)
-*   [FAQ](faq)
+### 2.3 Other Resources
 
-## Need Help?
+* [JavaScript & TypeScript Resources](javascript-typescript-resources)
+* [Mendix Platform SDK API Docs](https://apidocs.mendix.com/platformsdk/latest/)
+* [FAQ](faq)
 
-Check whether your question is answered in the [frequently asked questions](faq) section. Otherwise, ask your question in the [Beta Program project](https://sprintr.home.mendix.com/link/project/5d2b2ddb-5cdb-479f-b8de-0bf1e883356a) on the platform or in our [Gitter](https://gitter.im/mendix/mendixplatformsdk) chat room. Check out the technical specifications of the Mendix Platform SDK and Model API.
+## 3 Need Help?
 
-If you need help with JavaScript/TypeScript, you can go to our [JavaScript & TypeScript resources](javascript-typescript-resources) page.
+Check whether your question is answered in the [Frequently Asked Questions](faq). Otherwise, ask your question in the [Mendix Forum](https://forum.mendixcloud.com/index4.html) or in our [Gitter](https://gitter.im/mendix/mendixplatformsdk) chat room. Check out the technical specifications of the Mendix Platform SDK and Model API as well.
 
-## Main Documents in This Category
+If you need help with JavaScript/TypeScript, see [JavaScript & TypeScript Resources](javascript-typescript-resources).
 
-* [Your Learning Path for the Mendix SDK](your-learning-path-for-the-mendix-sdk)
+## 4 Main Documents in This Category
+
+* [Tutorial for the Mendix SDK](tutorial-for-the-mendix-sdk)
 * [Reference Documentation](reference-documentation)
 * [FAQ](faq)
 * [Use Case Examples](use-case-examples)

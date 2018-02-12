@@ -124,11 +124,17 @@ For detailed instructions, see the [hybrid-app-template GitHub repository](https
 
 To generate the app store packages, go to [Build.PhoneGap.com](https://build.phonegap.com/).
 
-## 5 Related Content
+## 5 Examples
+
+** How to build a Phonegap app in the cloud **
+
+{{% youtube 7ic625u2YJE %}}
+
+## 6 Related Content
 
 * [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)   
 * [Deploy](/developerportal/deploy)
 * [Offline](https://docs.mendix.com/refguide/offline)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Adobe PhoneGap Build](https://build.phonegap.com/)
-* [Apache Cordova Phonegap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/).
+* [Apache Cordova Phonegap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

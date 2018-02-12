@@ -2,21 +2,20 @@
 title: "XML"
 category: "Modeler"
 ---
-# Widgets - XML reference guide
 
 This is the reference guide for the widget XML.
 
-## Requirements
+## 1 Requirements
 
 This reference guide assumes you have a basic understanding of XML and the Mendix Modeler. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/). To learn more about the Mendix Modeler, watch the [Getting Started](https://gettingstarted.mendixcloud.com/index.html) videos.
 
-## Start of the widget XML
+## 2 Start of the Widget XML
 
 An XML file always starts with the XML version and encoding declaration. These are standard and should be present in every XML file. The Mendix Modeler uses the widget XML file to create the property input fields, which show up when you add your widget to a form. Our widget declaration XML starts at the **<widget>** element. This is the root element that will contain all our settings for this widget.
 
-## <a name="Widgets-XMLreferenceguide-Widgetattributes" rel="nofollow"></a>Widget element
+## 3 Widget Element<a name="Widgets-XMLreferenceguide-Widgetattributes" rel="nofollow"></a>
 
-### Attributes
+### 3.1 Attributes
 
 | Attribute | Description |
 | --- | --- |
@@ -25,9 +24,7 @@ An XML file always starts with the XML version and encoding declaration. These a
 | offlineCapable | This boolean determines whether your widget can be used on pages that are accessible through the offline profile. If this attribute is not set, or set to "false", the widget cannot be used offline. If set to "true", the widget can be used offline. Keep in mind that there are a number of restrictions when working offline. Calling a microflows or fetching data using XPath are examples of features that are not supported offline. For a comprehensive list of restrictions see [offline restrictions](offline). |
 | xmlns | The XML namespace used by the widget. The value of this attribute is the same for every widget. `<widget id="HelloWorld.widget.helloworld" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">` |
 
-#### <a name="Widgets-XMLreferenceguide-id" rel="nofollow"></a>
-
-### Child elements
+### 3.2 Child elements<a name="Widgets-XMLreferenceguide-id" rel="nofollow"></a>
 
 Inside the widget element are 4 child elements.
 
@@ -49,13 +46,11 @@ Inside the widget element are 4 child elements.
 </widget>
 ```
 
-#### <a name="Widgets-XMLreferenceguide-Name" rel="nofollow"></a>
-
-## Property element
+## 4 Property element<a name="Widgets-XMLreferenceguide-Name" rel="nofollow"></a>
 
 Any properties you define in your widget XML file can be set using the Mendix Modeler and they will be passed to your JavaScript file, so you can use them in your widget.
 
-### Child elements
+### 4.1 Child elements
 
 Every property element contains at least the following 3 child elements.
 
@@ -65,7 +60,7 @@ Every property element contains at least the following 3 child elements.
 | Category | This element defines in what category this property will be shown in the Properties list in the Mendix Modeler. Common categories are “Behavior”, “Appearance” and “Data source”. |
 | Description | This element is used to add a useful description of the property, so the end user knows what it’s for. |
 
-### Attributes
+### 4.2 Attributes
 
 All property elements define at least 2 attributes: **key** and **type**. The value of **key** is the name of the property in your widget, so use a descriptive name. The value of **type** refers to the type of the property, for example “string” or “integer”. Based on the type of the property, you may have to define additional attributes and/or child elements.
 
@@ -74,7 +69,7 @@ Other possible attributes are:
 | Attribute | Description |
 | --- | --- |
 | isList | Only used for the Object property type. |
-| entityProperty | Assigns a entity to a property. This should point to the **key** attribute of the **entity **to which it is related. |
+| entityProperty | Assigns a entity to a property. This should point to the **key** attribute of the **entity** to which it is related.  This could also be relative (like `"../entityName"`) when the attribute is inside a object list: `<property key="key" type="object" isList="true">`|
 | allowNonPersistableEntities | Allows the selection of a non-persistable entity. (By default this is false.)
 | defaultValue | The default value that a property starts with when it is created. |
 | required | Specifies if the property is a required field or not. Defaults to "True" if not present. |
@@ -86,18 +81,17 @@ Other possible attributes are:
 
 The different property types and their respective required attributes are discussed below.
 
-## <a name="Widgets-XMLreferenceguide-" rel="nofollow"></a>Property types
-
-{{% alert type="info" %}}
+## <a name="Widgets-XMLreferenceguide-" rel="nofollow"></a>5 Property types
 
 Every property requires the  **key** and **type** attribute.
+
 Any property can have the  **isDefault**  or  **required**  attribute.
 
-Note that the **required** attribute defaults to "true".
-
+{{% alert type="info" %}}
+The **required** attribute defaults to "true".
 {{% /alert %}}
 
-### Attribute
+### 5.1 Attribute
 
 A property of type Attribute is always related to an entity: it uses the entityContext if it is set on true, otherwise an entityProperty is required. It enables the user in the Mendix Modeler to select one of the attributes of the related entity (optionally over an association).
 
@@ -115,26 +109,17 @@ A property of type Attribute is always related to an entity: it uses the entityC
 An attribute property has an extra required child element: a list of attributeTypes that define what type of attributes are accepted. This could be any of the following:
 
 *   AutoNumber
-
 *   Binary
-
 *   Boolean
-
 *   DateTime
-
 *   Decimal (Modeler > v5.13)
-
 *   Enum
-
 *   HashString
-
 *   Integer
-
 *   Long
-
 *   String
 
-### Boolean
+### 5.2 Boolean
 
 A property of type Boolean requires the attribute defaultValue.
 
@@ -150,9 +135,7 @@ What it looks like in the Mendix Modeler:
 
 ![](attachments/16714046/16844049.png)
 
-
-
-### Entity
+### 5.2.1 Entity
 
 A property of the type Entity allows the user to configure a non-persistable entity in the Mendix Modeler. This entity can then be used in your JavaScript to retrieve all the necessary information.
 
@@ -164,7 +147,7 @@ A property of the type Entity allows the user to configure a non-persistable ent
 </property>
 ```
 
-### EntityConstraint
+### 5.2.2 EntityConstraint
 
 The EntityConstraint lets you put a constraint on either the entity you specify with entityProperty or, if needsEntityContext is set to true and no entityProperty is defined, to the entity passed as context.
 
@@ -176,9 +159,7 @@ The EntityConstraint lets you put a constraint on either the entity you specify 
 </property>
 ```
 
-
-
-### Enumeration
+### 5.2.3 Enumeration
 
 The enumeration property has an extra required child element: a list of enumerationValues. An enumerationValue contains a **key** attribute and a **caption** within their tag.
 
@@ -203,7 +184,7 @@ What it looks like in the Mendix Modeler:
 
 ![](attachments/16714046/16844042.jpg)
 
-### Form
+### 5.2.4 Form
 
 The form property lets you pass a form to the widget. If needsEntityContext is set to "true", it automatically receives the object context.
 
@@ -215,15 +196,10 @@ The form property lets you pass a form to the widget. If needsEntityContext is s
 </property>
 ```
 {{% alert type="info" %}}
-
-**Forms containing a dataview**
-Remember that calling a form  with a dataview, if needsEntityContext is set to "false" in your widget, still requires an object to work.
-
+For forms containing a data view, remember that calling a form  with a dataview, if needsEntityContext is set to "false" in your widget, still requires an object to work.
 {{% /alert %}}
 
-
-
-### Image
+### 5.2.5 Image
 
 The image property lets the user select an image from the Mendix Modeler's images to pass it to the widget.
 
@@ -235,9 +211,7 @@ The image property lets the user select an image from the Mendix Modeler's image
 </property>
 ```
 
-### Integer
-
-#### <a name="Widgets-XMLreferenceguide-Integer" rel="nofollow"></a>
+### 5.2.6 Integer<a name="Widgets-XMLreferenceguide-Integer" rel="nofollow"></a>
 
 The integer property lets you to pass an integer to the widget.  This property requires the attribute defaultValue.
 
@@ -249,9 +223,7 @@ The integer property lets you to pass an integer to the widget.  This property r
 </property>
 ```
 
-
-
-### Microflow
+### 5.2.7 Microflow
 
 The Microflow property allows a user to select a microflow in the Mendix Modeler. There are 3 options:
 
@@ -273,20 +245,14 @@ The Microflow property has an extra required child element: returnType. Use this
 Possible return types:
 
 *   Void
-
 *   Boolean
-
 *   Integer
-
 *   Float
-
 *   DateTime
-
 *   String
-
 *   Object
 
-### Object
+### 5.2.8 Object
 
 The object property is an array of packaged sub-properties. It packages multiple other properties into an object, of which multiple can be passed to the widget. It always requires the isList attribute, which needs to be set to "true".
 
@@ -315,7 +281,7 @@ What it looks like in the Mendix Modeler:
 
 ![](attachments/16714046/16844048.png)
 
-### String
+### 5.2.9 String
 
 The string property lets you to pass a string to the widget.
 
@@ -327,9 +293,7 @@ The string property lets you to pass a string to the widget.
 </property>
 ```
 
-
-
-### TranslatableString
+### 5.2.10 TranslatableString
 
 The translatableString property is similar to a normal string property, except you can add translated versions of the default value for different languages. To achieve this, the translatableString property has an extra required child element: a list of translations. The Mendix Modeler language will match the assigned <translation> value.
 
@@ -353,9 +317,8 @@ What it looks like in the Mendix Modeler:
 Remember to use the correct language notation according to the [Java supported locales](http://java.sun.com/javase/6/docs/technotes/guides/intl/locale.doc.html).
 {{% /alert %}}
 
-# Related content
+## 6 Related content
 
 *   [Creating a chainable Custom Widget](/howto7/custom-widget-development/create-a-chainable-custom-widget)
 *   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto7/custom-widget-development/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-*   [Creating a Basic Hello World Custom Widget](/howto7/custom-widget-development/create-a-basic-hello-world-custom-widget)
 *   [The Mobile Slider Custom Widget](/howto7/custom-widget-development/the-mobile-slider-custom-widget)

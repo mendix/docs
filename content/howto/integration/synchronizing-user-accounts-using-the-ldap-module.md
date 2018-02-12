@@ -1,5 +1,5 @@
 ---
-title: "Synchronizing user accounts using the LDAP module"
+title: "Synchronize User Accounts Using the LDAP Module"
 category: "Integration"
 tags: []
 ---
@@ -9,7 +9,7 @@ Your client might already have a centralized identity management solution in pla
 
 ## 1\. Preparation
 
-1.  Open the Mendix Business Modeler.
+1.  Open the Mendix Desktop Modeler.
 2.  Import the following App Store modules into your application model:
 
 *   [LDAP Synchronization Module](https://appstore.home.mendix.com/link/app/24/Mendix/LDAP-Synchronization-module)

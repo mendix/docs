@@ -30,7 +30,7 @@ The core widgets are central to building document templates in Mendix. They can 
 
 The data grid shows a list of objects in a grid. For example, a data grid can show all the orders a customer has placed.
 
-See [Data Grid (document template)](data-grid).
+See [Data Grid (document template)](data-grid-document-template).
 
 {{% alert type="info" %}}
 
@@ -44,7 +44,7 @@ A data grid showing a list of orders with a description and the referenced custo
 
 The data view is used for showing the contents of exactly one object. If, for example, you want to show details of a single customer you would use a data view to do this. The data view typically contains a table with static labels and dynamic data widgets like a dynamic label. In more complex templates, a data view can contain data grids and other data views for related objects.
 
-See [Data View (document template)](data-view).
+See [Data View (document template)](data-view-document-template).
 
 {{% alert type="info" %}}
 
@@ -57,7 +57,7 @@ A data view showing orderline information.
 
 The template grid shows a list of objects in a tile view. For example, a template grid can show a list of products. The template grid has a lot in common with the data grid. The main difference is that the objects are shown in templates (somewhat like a small data view) instead of rows.
 
-See [Template Grid (document template)](template-grid).
+See [Template Grid (document template)](template-grid-document-template).
 
 {{% alert type="info" %}}
 
@@ -75,7 +75,7 @@ Layout widgets give structure to a form. They do not show data but provide a lay
 Tables can be used to change the layout of the form. They contain a number of rows and columns and the intersection of the two is called a cell. Each cell can contain widgets. Cells can be merged horizontally and vertically before they are filled to allow for asymmetric layouts.
 Tables can be used both inside and outside data view or templategrid widgets.
 
-See [Table (document template)](table).
+See [Table (document template)](table-document-template).
 
 {{% alert type="info" %}}
 

@@ -15,19 +15,19 @@ When creating an anonymous user role, always make sure you give it as little acc
 * Set access to a transient object
 * Give anonymous users read and write access
 
-## Transient Objects
+## 2 Transient Objects
 
 When you set access to a transient object, the security rules you specify should be whatever you functionally need. Transient objects only live in the session cache from the user that created the object; therefore, an anonymous user is never able to access any information that wasn't created specifically for or by them. However, it is a completely different situation for a persistent object.
 
-## Write Access
+## 3 Write Access
 
 If you give an anonymous user write access on any field in the application, you must specify instance access as well. An anonymous user is hardly ever allowed to change every single record of a certain object type. The anonymous user is usually only allowed to change the record they just created; therefore, you will want to specify this access rule: `[System.Owner='[%CurrentUser%]']` That way, the anonymous user can only change the records they just created during their session. 
 
-## Read Access
+## 4 Read Access
 
 If an anonymous user needs to have access to certain master data tables or needs the name of a user in an overview, the anonymous user needs read access on that entity. However, you should always limit this access. If the user doesn't need to have access to all fields, do not give it to them. If you see an anonymous user with full read access, always confirm that they cannot work with less access.
 
-### Security Review
+## 5 Security Review
 
 When going over an application and reviewing an anonymous user, there are three things that most often trigger a red flag (indicating the application is not secure):
 * An anonymous user role that reuses the module roles from the regular application user
@@ -40,7 +40,7 @@ Whenever you see any of these situations, you should carefully consider if these
 
 Any user can talk directly to the API by downloading a tool that can post messages to a URL and trying to send JSON queries to the platform. This simulates communication between the browser and the server, because the server doesn't care who sends the messages as long as they match what is allowed within the session.
 
-### Best Practice 
+## 6 Best Practice 
 
 If you have anonymous access, you need to limit the access to as few entities as possible and never give full read access to all attributes if it is just for selecting items. For example, if an anonymous user is allowed to see a project name, then only give read access to the project name and not the full entity.
 
@@ -48,9 +48,9 @@ If you need to give an anonymous user access to change an object ALWAYS apply in
 
 Limiting the navigation or page display is not the same thing as security. All data can be accessed by talking directly to the platform API, and anything that is visible according to the security model is accessible by sending the correct messages to the server. Limiting data in the UI does not mean that it cannot be accessed. Only instance access rules guarantee what you can and cannot do.
 
-For example, to download a file, it is possible to get the UR (for example, https://myMendixApp.com/file? fileID=2804771). All that is necessary is to try random numbers until a file is found that is accessible. Unless you specify instance or object access, in that case, the platform would always validate the request against your privileges before presenting the information.
+For example, to download a file, it is possible to get the UR (for example, `https://myMendixApp.com/file?fileID=2804771`). All that is necessary is to try random numbers until a file is found that is accessible. Unless you specify instance or object access, in that case, the platform would always validate the request against your privileges before presenting the information.
 
-## Related content
+## 7 Related Content
 
 * [Generating a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)
 * [Creating a Secure App](create-a-secure-app)

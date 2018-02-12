@@ -38,13 +38,13 @@ To create an entity, follow these steps:
 
 The entity will look like this:
 
-![](attachments/18448673/18580929.png)
+![](attachments/build-a-simple-hrm-app/18580929.png)
 
 ### 3.2 Creating an Association
 
 To create an association, click the border of the **Employee** entity and drag a line to the **Department** entity:
 
-![](attachments/18448673/18580928.png)
+![](attachments/build-a-simple-hrm-app/18580928.png)
 
 This creates an association between the two entities so that they can use each other's data. To learn more about associations, see [Associations](/refguide7/associations) in the Mendix Reference Guide.
 
@@ -57,7 +57,7 @@ To create pages for the department entity, follow these steps:
     a. In the **Page name** field, enter *Department_Overview*.<br>
     b. Click **Grids** and select **Datagrid basic**.<br>
     c. In the **Navigation layout** drop-down menu, select **Sidebar_Left**, and then click **OK**.<br>
-    ![](attachments/18448673/18580927.png)
+    ![](attachments/build-a-simple-hrm-app/18580927.png)
 3. Right-click the data grid and select the **Department** entity available in **MyFirstModule**.
 4. Select the **Auto-Fill** option and click **OK**.
 5. Select and right-click the **New** button and select **Generate page**.
@@ -73,29 +73,29 @@ To add department attrbitues to the Employee Overview page, follow these steps:
 1. Open the **Employee_Overview** page of the **Responsive** module.
 2. Right-click the **City** column and select **Add column right**:
 
-    ![](attachments/18448673/18580924.png)
+    ![](attachments/build-a-simple-hrm-app/18580924.png)
     
 3. Change the caption of the column to *Department*.
 4. Expand the **Employee_Department** association in the **Connector**, and then expand the **Department** entity.
 5. Drag the **Name** attribute of the **Department** entity from the **Connector** to the **Department** column on the data grid:
 
-    ![](attachments/18448673/18580923.png)
+    ![](attachments/build-a-simple-hrm-app/18580923.png)
     
 6. Right-click the **Master Detail** data grid and select **Reset column widths**:
 
-    ![](attachments/18448673/18580922.png)
+    ![](attachments/build-a-simple-hrm-app/18580922.png)
     
 7. Click **Input** and select **Reference selector**:
 
-    ![](attachments/18448673/18580921.png)
+    ![](attachments/build-a-simple-hrm-app/18580921.png)
     
 8. Add the reference selector below the **Email** field in the **User details** container:
 
-    ![](attachments/18448673/18580918.png)
+    ![](attachments/build-a-simple-hrm-app/18580918.png)
     
 9. Drag the **Name** attribute of the **Department** entity from the connector to the new reference selector:
 
-    ![](attachments/18448673/18580919.png)<br>
+    ![](attachments/build-a-simple-hrm-app/18580919.png)<br>
 
     The reference selector will now enable selecting a department while editing an employee.
     
@@ -103,11 +103,11 @@ To add department attrbitues to the Employee Overview page, follow these steps:
 11. Click **Input** and then click **Reference selector**.
 12. Add the reference selector beneath the **Date of Birth** field:
 
-    ![](attachments/18448673/18580917.png)
+    ![](attachments/build-a-simple-hrm-app/18580917.png)
     
 13. Drag the **Name** attribute of the **Department** entity from the **Connector** to the new reference selector:
 
-    ![](attachments/18448673/18580916.png)
+    ![](attachments/build-a-simple-hrm-app/18580916.png)
 
 The reference selector now allows you to select a department while creating an employee.
 
@@ -120,31 +120,31 @@ To view a page in your app, you need to add a menu item so you can navigate to t
 3. In the **Caption** field, enter *Departments*.
 4. Select the **Department_Overview** page of the **MyFirstModule** module, click **Select**, and then click **OK**.
 
-    ![](attachments/18448673/18580915.png)  
+    ![](attachments/build-a-simple-hrm-app/18580915.png)  
 
 ## 4 Viewing Your App
 
 1. Click **Run** and then click **Save and continue**.
-2. Click **View App**. On the left side of your app, the **Departments** menu item is shown:
+2. Click **View**. On the left side of your app, the **Departments** menu item is shown:
 
-    ![](attachments/18448673/18580914.png)
+    ![](attachments/build-a-simple-hrm-app/18580914.png)
     
 3. Click **Departments**, and then click **NEW** to add a new department:
 
-    ![](attachments/18448673/18580913.png)
+    ![](attachments/build-a-simple-hrm-app/18580913.png)
     
 4. In the **Name** field of the **Edit Department** dialog box, enter *Marketing*, then click **SAVE**:
 
-    ![](attachments/18448673/18580912.png)
+    ![](attachments/build-a-simple-hrm-app/18580912.png)
     
 5. Repeat steps 3–4 for the *Sales* department:
 
-    ![](attachments/18448673/18580911.png)
+    ![](attachments/build-a-simple-hrm-app/18580911.png)
     
 6. Click **Employees** in the navigation list, and then click **NEW** to add a new employee.
 7. In the **Department** drop-down menu (where the created departments are shown), select **Marketing**:
 
-    ![](attachments/18448673/18580910.png)
+    ![](attachments/build-a-simple-hrm-app/18580910.png)
     
 8. Enter the following data in the other fields:
 
@@ -154,7 +154,7 @@ To view a page in your app, you need to add a menu item so you can navigate to t
     
 9. Click **SAVE**:
 
-    ![](attachments/18448673/18580909.png)
+    ![](attachments/build-a-simple-hrm-app/18580909.png)
     
 You can now see the selected department in the Employee Overview page.
 

@@ -126,6 +126,5 @@ Build Mendix apps on top of your [Salesforce.com](http://Salesforce.com) environ
 
 # 20 Related Content
 
-*   [Send Custom Emails From Your App](send-custom-emails-from-your-app)
 *   [Explore our connectors and adapters](explore-the-connectors-and-adapters)
 *   [Access a Samba share from the MxCloud](access-a-samba-share-from-the-mxcloud)

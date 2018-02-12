@@ -56,7 +56,7 @@ You can upload two types of data:
 
 ### 3.3 Restoring a Backup
 
-You can choose the environment to which you want to restore the backup.
+You can choose the **destination** to which you want the environment to restore the backup. This allows you to, for example, restore a production environment backup to an acceptance environment.
 
 If you restore a backup that was originally deployed on an older Modeler version, you will get a warning. You can still restore the backup, but you have to deploy the older model later on. 
 
@@ -68,22 +68,27 @@ These are the options:
 * **Database Only**
 * **Files Only**
 
+{{% alert type="info" %}}
+As the download files are generated "on the fly" (meaning, while in progress), it is not possible to estimate the file size before downloading. Your browser will not show a progress bar.
+{{% /alert %}}
+
 ## 4 Backup Details
 
 When you click **Details**, you can view the following details:
 
-* **Status** – the status of the backup
-  * Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed**
-* **Created by** – the name of the person who created the backup
-  * Automated system backups are named **Nightly**
-* **Date** – the creation date of the backup
-* **Expires on** – the date on which the backup will be removed from the system
-* **Model version** – the version of the deployment package used during backup creation
-* **Comment** – a specific comment added to the backup
+Backup Details | Description |
+:---|:---|
+**Status** | The status of the backup. Backups can have the status of **Queued**, **Running**, **Failed**, and **Completed**
+**Created by** | The name of the person who created the backup. Automated system backups are named **Nightly**
+**Date** | The creation date of the backup
+**Expires on** | The date on which the backup will be removed from the system
+**Model version** | The version of the deployment package used during backup creation
+**Comment** | A specific comment added to the backup
+
+At the bottom of the screen, you can click **Delete** to delete this particular backup.
 
 ## 5 Related Content
 
-* [Alerts](/developerportal/operate/monitoring-application-health)
-* [Logs](/developerportal/operate/logs)
-* [Metrics](/developerportal/operate/metrics)
-* [Operate](/developerportal/operate)
+* [How to Create a Backup](/developerportal/howto/how-to-create-backup)
+* [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)
+* [How to Restore a Backup](/developerportal/howto/how-to-restore-a-backup)

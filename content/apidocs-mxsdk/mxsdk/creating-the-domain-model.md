@@ -1,17 +1,17 @@
 ---
 title: "Creating the Domain Model"
-parent: "your-learning-path-for-the-mendix-sdk"
+parent: "tutorial-for-the-mendix-sdk"
 description: "Explains how to create a domain model with inheritance and what the relation is between the metamodel and the SDK."
 ---
 
-In this tutorial you will learn:
-
-*   how to create a domain model with inheritance
-*   how to explain the relation between the Meta Model and the SDK
-
-## Introduction
+## 1 Introduction
 
 You now have your first script up and running, which creates a new app with a single entity. This tutorial guides you through the process of creating a more extensive domain model. At the end of this tutorial you will have a domain model with two entities: `Customer` and `Invoice`. These entities should be associated with a one-to-many association. The `Customer` entity should become a specialization of the `Administration.Account` entity (and indirectly `System.User`), so that customers can log into the app.
+
+In this document, you will learn how to do the following:
+
+* Create a domain model with inheritance
+* Explain the relation between the metamodel and the SDK
 
 After completing this tutorial, you will be able to generate apps with the following domain model:
 
@@ -29,7 +29,7 @@ The Desktop Modeler reference guide gives an overview of what can be configured 
 
 This tutorial will guide you through the collection of the necessary information from these sources to create the domain model. At the same time, it will explain the general concepts and structure of the SDK documentation. This will enable you to find the information that you need to manipulate other parts of the app model as well.
 
-## Creating entities
+## 2 Creating Entities
 
 First, you start with creation of the two entities, `Customer` and `Invoice`. Entities have some basic properties, such as their `name` and `documentation`. You can see these in the Desktop Modeler in the Properties pane when you have selected an entity. These properties are documented in the Desktop Modeler reference guide under the [Entities](/refguide6/entities) topic.
 
@@ -39,37 +39,31 @@ So how do you set these properties with the SDK? The Model SDK API docs provide 
 
 To create a new `Customer` entity, you create a single entity instance in a domain model and then set its name.
 
-```js
+```ts
 const customer = domainmodels.Entity.createIn(domainModel);
 customer.name = `Customer`;
 ```
 
 An `Entity` also has a [`location`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#location)  property, which defines where the entity is shown in the domain model editor in the Desktop Modeler. This property needs to be set for each entity, so that the entities do not overlap each other in the domain model editor. To do this, set the property with a JSON object with `x` and `y` properties for coordinates:
 
-```js
+```ts
 customer.location = { x: 100, y: 100 };
 ```
 
 With these ingredients, you can create the two entities. Replace the snippet that creates a single entity in the script that you created in the [previous tutorial steps](creating-your-first-script) with the following snippet to create the two new entities:
 
-```js
-workingCopy => {
-	const dm = pickDomainModel(workingCopy);
-	const domainModel = dm.asLoaded();
+```ts
+const domainModel = await loadDomainModel(workingCopy); 
+const customer = domainmodels.Entity.createIn(domainModel);
+customer.name = `Customer`;
+customer.location = { x: 100, y: 100 };
 
-	const customer = domainmodels.Entity.createIn(domainModel);
-	customer.name = `Customer`;
-	customer.location = { x: 100, y: 100 };
-
-	const invoice = domainmodels.Entity.createIn(domainModel);
-	invoice.name = `Invoice`;
-	invoice.location = { x: 400, y: 100 };
-
-	return workingCopy;
-}
+const invoice = domainmodels.Entity.createIn(domainModel);
+invoice.name = `Invoice`;
+invoice.location = { x: 400, y: 100 };
 ```
 
-### Resources
+### 2.1 Resources
 
 Desktop Modeler reference guide
 
@@ -89,7 +83,7 @@ Model SDK API docs
 
 *   [Entity.location](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#location)
 
-## Creating an association
+## 3 Creating an Association
 
 The next step is to create an association between the `Customer` and `Invoice` entities to define their relationship: a `Customer` can have zero or more `Invoices`.
 
@@ -101,7 +95,7 @@ To create a standard reference (one-to-many) association, you instantiate one As
 
 The following code snippet creates an association between the `Customer` and `Invoice` associations:
 
-```js
+```ts
 const invoices = domainmodels.Association.createIn(domainModel);
 invoices.name = `Invoices`;
 invoices.child = customer;
@@ -110,14 +104,14 @@ invoices.parent = invoice;
 
 Similar to entities, the on-screen location of associations between entities can be determined by setting the value of `childConnection` and `parentConnection` properties, which are the relative position of the child and parent entities. These properties can be left empty which will default to `{x:0, y:0}` (top left most of an entity).
 
-```js
+```ts
 invoices.childConnection = { "x": 100, "y": 30 };
 invoices.parentConnection = { "x": 0, "y": 30 };
 ```
 
-By combining the above two snippets, it is possible to add a fully functioning 1-to-many association between `Invoice` and  `Customer` to the domain model. Add the following snippet to your script, right below the lines that create the entities, and just before the `return workingCopy;` statement:
+By combining the above two snippets, it is possible to add a fully functioning 1-to-many association between `Invoice` and  `Customer` to the domain model. Add the following snippet to your script, right below the lines that create the entities, and just before the `return workingCopy` statement:
 
-```js
+```ts
 const invoices = domainmodels.Association.createIn(domainModel);
 invoices.name = `Invoices`;
 invoices.child = customer;
@@ -127,7 +121,7 @@ invoices.childConnection = { "x": 100, "y": 30 };
 invoices.parentConnection = { "x": 0, "y": 30 };
 ```
 
-### Resources
+### 3.1 Resources
 
 Desktop Modeler reference guide
 
@@ -142,7 +136,7 @@ Model SDK API docs
 *   [Association.parent](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html#parent)
 *   [Association.child](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.association.html#child)
 
-## Configuring a generalization
+## 4 Configuring a Generalization
 
 Finally, you want to configure the `Customer` entity to be a specialization of `Administration.Account`, so that customers can log into the app. The Desktop Modeler reference guide describes inheritance on the [Entities](/refguide6/entities) page. Entities that are a specialization of another entity inherit all its properties and behavior.
 
@@ -152,26 +146,26 @@ In the Model SDK, the [`Entity.generalization`](https://apidocs.mendix.com/model
 
 So, to set up entity `Customer` as a specialization of entity `Administration.Account`, you first need to look up the `Account` entity which [can be done in several ways](finding-things-in-the-model). The following snippet looks up the `Account` entity in the `Administration` domain model, using the `findEntityByQualifiedName` function:
 
-```js
+```ts
 const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration.Account`);
 ```
 
 The `domainmodels.Generalization` instance that will be used to configure the `Account` instance can now be created. The `generalization` property is set to the `System.User` entity instance that was looked up:
 
-```js
+```ts
 const generalization = domainmodels.Generalization.createIn(customer);
 generalization.generalization = systemUser;
 ```
 
 New entities by default have a `NoGeneralization` set, so the `generalization` property for the `Customer` entity needs to be updated:
 
-```js
+```ts
 customer.generalization = generalization;
 ```
 
 Together, the creation of the `Customer` entity will look like the following code snippet. Replace the creation of the `customer` entity instance in the script with the following snippet:
 
-```js
+```ts
 const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration.Account`);
 
 const generalization = domainmodels.Generalization.createIn(customer);
@@ -181,10 +175,9 @@ const customer = domainmodels.Entity.createIn(domainModel);
 customer.name = `Customer`;
 customer.location = { x: 100, y: 100 };
 customer.generalization = generalization;
-
 ```
 
-### Resources
+### 4.1 Resources
 
 Desktop Modeler reference guide
 
@@ -198,8 +191,6 @@ Model SDK API docs
 *   Property  [`generalization`](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization)
 *   [NoGeneralization](https://apidocs.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html)
 
-## Conclusion
+## 5 Conclusion
 
 This completes the script. Compile and execute it as described in the previous section. Open the app in the Desktop Modeler to inspect the results!
-
-As a next step you can either continue with the [second part](your-learning-path-for-the-mendix-sdk) of the learning path or return to the [Mendix SDK homepage]() to find references to other resources.

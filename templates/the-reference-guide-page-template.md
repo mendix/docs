@@ -1,9 +1,9 @@
 ---
 title: "Enter the title of the document"
-#parent: "Enter the parent document filename of this document if necessary (for example, "push-notifications")"
 #category: "Enter the category under which the document should be published if necessary (for parent pages only; a category example is "Modeler")"
+#parent: "Enter the parent document filename of this document if necessary (for example, "push-notifications")"
 #description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
-#tags: "[Add a maximum of 5-7 tags/keywords; keep them focused on the most important topics of the document; each tag should have quotation marks and be separated by a comma, for example: "Samba", "MxCloud", "cloud", "share"; the tags should be enclosed with brackets and quotation marks]"
+#tags: [Add a maximum of 5-7 tags/keywords; keep them focused on the most important topics of the document; each tag should have quotation marks and be separated by a comma, for example: "Samba", "MxCloud", "cloud", "share"; the tags should be enclosed with brackets and quotation marks]
 ---
 
 ## 1 Introduction
@@ -13,6 +13,8 @@ title: "Enter the title of the document"
 ## 2 {Title of the User Interface Element Being Described}
 
 {Describe the UI elements (for example, pages, widgets). Describe all the properties and features for each UI element.}
+
+![](attachments/{sub-folder with same name as doc file}/{image filename}.png)
 
 ### 2.1 {Title of Section}
 

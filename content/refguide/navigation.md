@@ -75,6 +75,4 @@ To configure the regular expressions used to match phone or tablet users, see [C
 
 It is also possible to force the client to use a specific profile by adding a `profile` query string parameter to the URL when visiting a Mendix application. The possible values are the names of the profiles, which are Responsive, Tablet, Phone, HybridTablet, and HybridPhone. For example:
 
-```html
-https://myapp.mendixcloud.com/index.html?profile=Responsive
-```
+`https://myapp.mendixcloud.com/index.html?profile=Responsive`

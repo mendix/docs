@@ -45,7 +45,7 @@ If the temperature threshold has been exceeded, an alert needs to be created. To
 15. Add one more attribute. Set the **Member** to **Tutorial_Workspace.Alert_Shipment**. Set the **Value** as `$Shipment`.
 16. You still need to handle the outgoing sequence flows from the exlusive splits, so insert a **Merge** after the **NewAlert** entity.
 17. Drag the **false** flow from each exclusive split to the merge.
-18. Save the changes, click **Run Locally**, then click **View App**.
+18. Save the changes, click **Run Locally**, then click **View**.
 19. On the shipment overview page of the app, select **Container Bananas**, then click **Subscribe**. The data will now come into the indicators.
 20. In order to generate alerts, you need to make sure that the temperature threshold (which you can configure on the **CargoType** edit page) is lower than the temperature data being pushed to the app. The temperature threshold was set to 23 degrees in this example, so when the temperature goes above 23, you will get an alert. Click the alerts icon in the upper-right side of the screen. This will open the **Current alerts** panel, where you will see the newest alert.
 
@@ -55,7 +55,7 @@ You get an alert every time the temperature exceeds the threshold, which is unne
 
 To improve the alert mechanism, follow these steps:
 
-1. In the Modeler, open the **Domain Model** and then open the **Shipment** entity.
+1. In the Desktop Modeler, open the **Domain Model** and then open the **Shipment** entity.
 2. Click **New** to add a new attribute. Name this attribute **IsAlertedForTemperature** and set **Type** to **Boolean**.
 3. Open the **IVK_OnMessage_HandleData_CreateTemperatureAlert** microflow and insert an **Exclusive split** before the **NewAlert** entity.
 4. Set the **Expression** to `$Shipment/IsAlertedForTemperature`. This means that if an alert has already been created, an extra alert won't be created.
@@ -63,7 +63,7 @@ To improve the alert mechanism, follow these steps:
 6. Add a **Change object** activity between the **NewAlert** object and the merge, and set the input variable to **Shipment**.
 7. Click **New** to add a new change item, which will be **IsAlertedForTemperature**. Set the **Value** to `true`.
 8. To change the message, open the **NewAlert** object and click the **Message** attribute. Change the message to `'Temperature is too high: ' + $SensorData/AmbientTemp`. Click **OK**.
-9. Save the changes, click **Run Locally**, and click **View App**.
+9. Save the changes, click **Run Locally**, and click **View**.
 10. On the shipment overview page of the app, select **Container Bananas**, then click **Subscribe**.
 11. Open the **Current alerts** panel by clicking the exclamation mark icon in the top right of the page. You will see a message like this: **Temperature is too high: 15**.
 

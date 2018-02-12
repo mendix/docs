@@ -19,7 +19,6 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Install the [Mendix Modeler](https://appstore.home.mendix.com/link/modelers/)
 * Install Adobe Brackets and the Widget Development Plugin for Adobe Brackets (for details, see [How to Get Started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-* Read [How to Create a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
 
 ## 3 What Are You Going to Build?
 
@@ -186,7 +185,7 @@ The following three microflows will delete the images for each Car, Coachwork, a
 
 ### 7.5 Important Guideline for Creating Custom Widgets
 
-An important guideline for creating custom widgets for the Mendix platform is that you need to let all or most of the logic be done with the tools you have in Mendix. There is no better way of knowing what other widgets are doing in your app than to listen to changes on entities. Do not try to find this out by hacking the HTML output of the Mendix platform, because this is bad practice. If you want to know the state of a widget that does not involve entity handling in your Mendix app, you can always create custom event handlers that widgets can listen to. However, you should then make a widget have a "sender" and a "listener" mode.
+An important guideline for creating custom widgets for the Mendix Platform is that you need to let all or most of the logic be done with the tools you have in Mendix. There is no better way of knowing what other widgets are doing in your app than to listen to changes on entities. Do not try to find this out by hacking the HTML output of the Mendix Platform, because this is bad practice. If you want to know the state of a widget that does not involve entity handling in your Mendix app, you can always create custom event handlers that widgets can listen to. However, you should then make a widget have a "sender" and a "listener" mode.
 
 ## 8 Limitations of Custom Widgets
 
@@ -215,5 +214,4 @@ A Mendix custom widget can only pass one type of entity as an input parameter in
 ## 9 Related Content
 
 * [How to Get Started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-* [How to Create a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
 * [How to Use the Mobile Slider Custom Widget](the-mobile-slider-custom-widget)

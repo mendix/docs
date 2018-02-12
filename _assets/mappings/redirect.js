@@ -164,7 +164,7 @@ module.exports = {
     },
     {
       from: "/MXSDK/Your+learning+path+for+the+Mendix+SDK",
-      to: "/apidocs-mxsdk/mxsdk/your-learning-path-for-the-mendix-sdk"
+      to: "/apidocs-mxsdk/mxsdk/tutorial-for-the-mendix-sdk"
     },
     /****************************************************
      * APPSTORE
@@ -655,10 +655,6 @@ module.exports = {
       to: "/howto40/debugging-4.2-and-before"
     },
     {
-      from: "/howto40/Deployment",
-      to: "/howto40/deployment"
-    },
-    {
       from: "/howto40/Determine+contents+of+a+nested+data+view+by+microflow",
       to: "/howto40/determine-contents-of-a-nested-data-view-by-microflow"
     },
@@ -1099,7 +1095,7 @@ module.exports = {
     },
     {
       from: "/howto50/Architecture+Options",
-      to: "/howto50/architecture-options"
+      to: "/deployment/on-premises/design-the-architecture"
     },
     {
       from: "/howto50/Build+a+simple+HRM+app+1+Create+manage+and+deploy+the+app",
@@ -1128,10 +1124,6 @@ module.exports = {
     {
       from: "/howto50/Clearing+Warning+Messages+in+Mendix",
       to: "/howto50/clearing-warning-messages-in-mendix"
-    },
-    {
-      from: "/howto50/Cloud+Foundry",
-      to: "/howto50/cloud-foundry"
     },
     {
       from: "/howto50/Collaboration+and+Project+Management",
@@ -1239,15 +1231,15 @@ module.exports = {
     },
     {
       from: "/howto50/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/howto50/deploying-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
     {
       from: "/howto50/Deploying+a+Mendix+App+to+Pivotal",
-      to: "/howto50/deploying-a-mendix-app-to-pivotal"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal"
     },
     {
       from: "/howto50/Deploying+Mendix+on+Microsoft+Windows",
-      to: "/howto50/deploying-mendix-on-microsoft-windows"
+      to: "/deployment/on-premises/deploy-mendix-on-microsoft-windows"
     },
     {
       from: "/howto50/Drag+Microflows+and+Pages+into+a+Microflow",
@@ -1331,7 +1323,7 @@ module.exports = {
     },
     {
       from: "/howto50/High+Availability",
-      to: "/howto50/high-availability"
+      to: "/deployment/on-premises/high-availability"
     },
     {
       from: "/howto50/How+to+build+a+simple+HRM+app",
@@ -1351,11 +1343,11 @@ module.exports = {
     },
     {
       from: "/howto50/Installing+Mendix+on+Debian+GNU+Linux",
-      to: "/howto50/installing-mendix-on-debian-gnu-linux"
+      to: "/deployment/on-premises/installing-mendix-on-debian-gnu-linux"
     },
     {
       from: "/howto50/Installing+Mendix+on+RedHat+and+CentOS",
-      to: "/howto50/installing-mendix-on-redhat-and-centos"
+      to: "/deployment/on-premises/installing-mendix-on-redhat-and-centos"
     },
     {
       from: "/howto50/Integrating+a+Legacy+System+into+a+Mendix+App",
@@ -1390,16 +1382,12 @@ module.exports = {
       to: "/developerportal/howto/managing-your-application-requirements-with-mendix"
     },
     {
-      from: "/howto50/Mendix+Hosting+Enviroment+project+structure+and+commands",
-      to: "/howto50/mendix-hosting-enviroment-project-structure-and-commands"
-    },
-    {
       from: "/howto50/Mendix+on+Windows+-+Microsoft+SQL+Server",
-      to: "/howto50/mendix-on-windows-microsoft-sql-server"
+      to: "/deployment/on-premises/mendix-on-windows-microsoft-sql-server"
     },
     {
       from: "/howto50/Mendix+SQL+Maintenance+Plans",
-      to: "/howto50/mendix-sql-maintenance-plans"
+      to: "/deployment/on-premises/mendix-sql-maintenance-plans"
     },
     {
       from: "/howto50/Mobile",
@@ -1416,10 +1404,6 @@ module.exports = {
     {
       from: "/howto50/Monitoring+Mendix+using+JMX",
       to: "/howto50/monitoring-mendix-using-jmx"
-    },
-    {
-      from: "/howto50/On+premises+Deployment",
-      to: "/howto50/on-premises-deployment"
     },
     {
       from: "/howto50/Optimizing+Microflow+Aggregates",
@@ -1443,7 +1427,7 @@ module.exports = {
     },
     {
       from: "/howto50/Restoring+a+SQL+Server+database",
-      to: "/howto50/restoring-a-sql-server-database"
+      to: "/deployment/on-premises/restoring-a-sql-server-database"
     },
     {
       from: "/howto50/Scout+and+Windows+10+Workaround",
@@ -1455,23 +1439,19 @@ module.exports = {
     },
     {
       from: "/howto50/Security+checklist+for+your+on+premises+installation",
-      to: "/howto50/security-checklist-for-your-on-premises-installation"
+      to: "/deployment/on-premises/security-checklist-for-your-on-premises-installation"
     },
     {
       from: "/howto50/Selenium+Support",
       to: "/howto50/selenium-support"
     },
     {
-      from: "/howto50/Send+Custom+Emails+From+Your+App",
-      to: "/howto50/send-custom-emails-from-your-app"
-    },
-    {
       from: "/howto50/Setting+up+a+new+SQL+Server+database",
-      to: "/howto50/setting-up-a-new-sql-server-database"
+      to: "/deployment/on-premises/setting-up-a-new-sql-server-database"
     },
     {
       from: "/howto50/Setting+up+a+SQL+Server+user",
-      to: "/howto50/setting-up-a-sql-server-user"
+      to: "/deployment/on-premises/setting-up-a-sql-server-user"
     },
     {
       from: "/howto50/Setting+up+data+validation",
@@ -1479,11 +1459,11 @@ module.exports = {
     },
     {
       from: "/howto50/Setting+up+monitoring+with+New+Relic",
-      to: "/howto50/setting-up-monitoring-with-new-relic"
+      to: "/deployment/on-premises/setting-up-monitoring-with-new-relic"
     },
     {
       from: "/howto50/Setting+up+the+database+user",
-      to: "/howto50/setting-up-the-database-user"
+      to: "/deployment/on-premises/setting-up-the-database-user"
     },
     {
       from: "/howto50/Setting+Up+the+Navigation+Structure",
@@ -1563,15 +1543,15 @@ module.exports = {
     },
     {
       from: "/howto50/Troubleshooting",
-      to: "/howto50/troubleshooting"
+      to: "/deployment/on-premises/troubleshooting"
     },
     {
       from: "/howto50/Troubleshooting+SQL+Server",
-      to: "/howto50/troubleshooting-sql-server"
+      to: "/deployment/on-premises/troubleshooting-sql-server"
     },
     {
       from: "/howto50/Updating+a+Mendix+Application",
-      to: "/howto50/updating-a-mendix-application"
+      to: "/deployment/on-premises/updating-a-mendix-application"
     },
     {
       from: "/howto50/Using+Team+Server+-+Version+Control",
@@ -1610,7 +1590,7 @@ module.exports = {
     },
     {
       from: "/howto6/Activate+a+Mendix+License+on+Microsoft+Windows",
-      to: "/howto6/activate-a-mendix-license-on-microsoft-windows"
+      to: "/deployment/on-premises/activate-a-mendix-license-on-microsoft-windows"
     },
     {
       from: "/howto6/APIs",
@@ -1758,19 +1738,19 @@ module.exports = {
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+IBM+Bluemix",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
     },
     {
       from: "/howto6/deploying+a+mendix+app+to+ibm+bluemix",
-      to: "/howto/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-ibm-bluemix"
     },
     {
       from: "/howto6/Deploy+a+Mendix+App+to+Pivotal",
-      to: "/howto6/deploy-a-mendix-app-to-pivotal"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-pivotal"
     },
     {
       from: "/howto6/Deploy+Mendix+on+Microsoft+Windows",
-      to: "/howto6/deploy-mendix-on-microsoft-windows"
+      to: "/deployment/on-premises/deploy-mendix-on-microsoft-windows"
     },
     {
       from: "/howto6/Deploy+your+first+Hybrid+Mobile+App",
@@ -1778,7 +1758,7 @@ module.exports = {
     },
     {
       from: "/howto6/Deploying+a+Mendix+App+to+Cloud+Foundry",
-      to: "/howto6/deploying-a-mendix-app-to-cloud-foundry"
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
     {
       from: "/howto6/deploying+to+the+cloud",
@@ -1786,11 +1766,11 @@ module.exports = {
     },
     {
       from: "/howto6/Design+the+Architecture",
-      to: "/howto6/design-the-architecture"
+      to: "/deployment/on-premises/design-the-architecture"
     },
     {
       from: "/howto6/Architecture+Options",
-      to: "/howto6/design-the-architecture"
+      to: "/deployment/on-premises/design-the-architecture"
     },
     {
       from: "/howto6/Detect+and+Resolve+Performance+Issues",
@@ -1870,7 +1850,7 @@ module.exports = {
     },
     {
       from: "/howto6/High+Availability",
-      to: "/howto6/high-availability"
+      to: "/deployment/on-premises/high-availability"
     },
     {
       from: "/howto6/How+To+Enable+WKWebView+for+Hybrid+App+for+iOS",
@@ -1902,11 +1882,11 @@ module.exports = {
     },
     {
       from: "/howto6/Installing+Mendix+on+Debian+GNU+Linux",
-      to: "/howto6/installing-mendix-on-debian-gnu-linux"
+      to: "/deployment/on-premises/installing-mendix-on-debian-gnu-linux"
     },
     {
       from: "/howto6/Installing+Mendix+on+RedHat+and+CentOS",
-      to: "/howto6/installing-mendix-on-redhat-and-centos"
+      to: "/deployment/on-premises/installing-mendix-on-redhat-and-centos"
     },
     {
       from: "/howto6/Integrating+a+Legacy+System+into+a+Mendix+App",
@@ -1946,11 +1926,11 @@ module.exports = {
     },
     {
       from: "/howto6/Mendix+on+Windows+-+Microsoft+SQL+Server",
-      to: "/howto6/mendix-on-windows-microsoft-sql-server"
+      to: "/deployment/on-premises/mendix-on-windows-microsoft-sql-server"
     },
     {
       from: "/howto6/Mendix+SQL+Maintenance+Plans",
-      to: "/howto6/mendix-sql-maintenance-plans"
+      to: "/deployment/on-premises/mendix-sql-maintenance-plans"
     },
     {
       from: "/howto6/Mobile",
@@ -1967,14 +1947,6 @@ module.exports = {
     {
       from: "/howto6/monitoring+application+health",
       to: "/developerportal/operate/monitoring-application-health"
-    },
-    {
-      from: "/howto6/On-premises+Deployment",
-      to: "/howto6/on-premises-deployment"
-    },
-    {
-      from: "/howto6/On+premises+Deployment",
-      to: "/howto6/on-premises-deployment"
     },
     {
       from: "/howto6/Optimizing+Microflow+Aggregates",
@@ -1994,7 +1966,7 @@ module.exports = {
     },
     {
       from: "/howto6/Restoring+a+SQL+Server+database",
-      to: "/howto6/restoring-a-sql-server-database"
+      to: "/deployment/on-premises/restoring-a-sql-server-database"
     },
     {
       from: "/howto6/Scaffold+a+widget+with+the+Yeoman+Widget+generator",
@@ -2010,15 +1982,11 @@ module.exports = {
     },
     {
       from: "/howto6/Security+checklist+for+your+on+premises+installation",
-      to: "/howto6/security-checklist-for-your-on-premises-installation"
+      to: "/deployment/on-premises/security-checklist-for-your-on-premises-installation"
     },
     {
       from: "/howto6/Selenium+Support",
       to: "/howto6/selenium-support"
-    },
-    {
-      from: "/howto6/Send+Custom+Emails+From+Your+App",
-      to: "/howto6/send-custom-emails-from-your-app"
     },
     {
       from: "/howto6/Set+Up+Anonymous+User+Security",
@@ -2030,11 +1998,11 @@ module.exports = {
     },
     {
       from: "/howto6/Setting+up+a+new+SQL+Server+database",
-      to: "/howto6/setting-up-a-new-sql-server-database"
+      to: "/deployment/on-premises/setting-up-a-new-sql-server-database"
     },
     {
       from: "/howto6/Setting+up+a+SQL+Server+user",
-      to: "/howto6/setting-up-a-sql-server-user"
+      to: "/deployment/on-premises/setting-up-a-sql-server-user"
     },
     {
       from: "/howto6/Setting+up+Apple+Push+Notification+Server",
@@ -2050,11 +2018,11 @@ module.exports = {
     },
     {
       from: "/howto6/Setting+up+monitoring+with+New+Relic",
-      to: "/howto6/setting-up-monitoring-with-new-relic"
+      to: "/deployment/on-premises/setting-up-monitoring-with-new-relic"
     },
     {
       from: "/howto6/Setting+up+the+database+user",
-      to: "/howto6/setting-up-the-database-user"
+      to: "/deployment/on-premises/setting-up-the-database-user"
     },
     {
       from: "/howto6/Setting+Up+the+Navigation+Structure",
@@ -2130,15 +2098,15 @@ module.exports = {
     },
     {
       from: "/howto6/Troubleshooting",
-      to: "/howto6/troubleshooting"
+      to: "/deployment/on-premises/troubleshooting"
     },
     {
       from: "/howto6/Troubleshooting+SQL+Server",
-      to: "/howto6/troubleshooting-sql-server"
+      to: "/deployment/on-premises/troubleshooting-sql-server"
     },
     {
       from: "/howto6/Updating+a+Mendix+Application",
-      to: "/howto6/updating-a-mendix-application"
+      to: "/deployment/on-premises/updating-a-mendix-application"
     },
     {
       from: "/howto6/Use+Connectors+and+Adapters",
@@ -2168,10 +2136,10 @@ module.exports = {
       from: "/howto6/Working+With+Object+Events",
       to: "/howto6/working-with-object-events"
     },
-	/****************************************************
+    /****************************************************
      * HOWTO MENDIX 7
      ****************************************************/
-	{
+    {
       from: "/howto/getting-started/build-an-iot-app",
       to: "/howto/tutorials/build-an-iot-app"
     },
@@ -2182,6 +2150,14 @@ module.exports = {
     {
       from: "/howto/getting-started/create-a-to-do-app",
       to: "/howto/tutorials/create-a-to-do-app"
+    },
+    {
+      from: "/howto/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
+    },
+    {
+      from: "/howto7/deploying-a-mendix-app-to-cloud-foundry",
+      to: "/deployment/cloud-foundry/deploy-a-mendix-app-to-cloud-foundry"
     },
     /****************************************************
      * Mendix Cloud
@@ -2204,15 +2180,15 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Different+user+logins+when+integrated+with+Mendix+SSO",
-      to: "/howtogeneral/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
+      to: "/deployment/mendixcloud/different-user-logins-when-integrated-with-mendix-sso"
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Amazon+Web+Services",
-      to: "/howtogeneral/mendixcloud/how-to-deploy-a-mendix-app-on-amazon-web-services"
+      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
     },
     {
       from: "/mendixcloud/How+to+deploy+a+Mendix+app+on+Azure",
-      to: "/howtogeneral/mendixcloud/how-to-deploy-a-mendix-app-on-azure"
+      to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
     },
     {
       from: "/mendixcloud/how-to-link-app-to-node",
@@ -2220,19 +2196,19 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Mendix+Cloud",
-      to: "/howtogeneral/mendixcloud/"
+      to: "/deployment/mendixcloud/"
     },
     {
       from: "/mendixcloud/Mendix+Cloud+Home",
-      to: "/howtogeneral/mendixcloud/"
+      to: "/deployment/mendixcloud/"
     },
     {
       from: "/mendixcloud/Integrate+your+app+with+Mendix+SSO",
-      to: "/howtogeneral/mendixcloud/integrate-your-app-with-mendix-sso"
+      to: "/deployment/mendixcloud/integrate-your-app-with-mendix-sso"
     },
     {
       from: "/mendixcloud/Java+in+the+Cloud",
-      to: "/howtogeneral/mendixcloud/java-in-the-cloud"
+      to: "/deployment/mendixcloud/java-in-the-cloud"
     },
     {
       from: "/mendixcloud/Maintenance+Windows",
@@ -2244,11 +2220,11 @@ module.exports = {
     },
     {
       from: "/mendixcloud/migrating+to+v4",
-      to: "/developerportal/howto/migrating-to-v4"
+      to: "/deployment/mendixcloud/migrating-to-v4"
     },
     {
-      from: "/mendixcloud/migrating-to-v4",
-      to: "/developerportal/howto/migrating-to-v4"
+      from: "/developerportal/howto/migrating-to-v4",
+      to: "/deployment/mendixcloud/migrating-to-v4"
     },
     {
       from: "/mendixcloud/Monitoring+application+health",
@@ -2260,15 +2236,19 @@ module.exports = {
     },
     {
       from: "/mendixcloud/Securing+Outgoing+Connections+from+your+Application",
-      to: "/howtogeneral/mendixcloud/securing-outgoing-connections-from-your-application"
-    },
-    {
-      from: "/mendixcloud/Security+constraints+in+the+Mendix+Cloud",
-      to: "/howtogeneral/mendixcloud/security-constraints-in-the-mendix-cloud"
+      to: "/deployment/mendixcloud/securing-outgoing-connections-from-your-application"
     },
     {
       from: "/mendixcloud/Sending+Email",
-      to: "/howtogeneral/mendixcloud/sending-email"
+      to: "/deployment/mendixcloud/sending-email"
+    },
+    {
+      from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-amazon-web-services",
+      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
+    },
+    {
+      from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
+      to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
     },
     {
       from: "/mendixcloud/Trends",
@@ -2304,11 +2284,27 @@ module.exports = {
     },
     {
       from: "/mxsupport/Technical+Contact+Definition",
-      to: "/developerportal/settings/technical-contact"
+      to: "/developerportal/general/technical-contact"
     },
- {
+    {
       from: "/mxsupport/technical-contact",
-      to: "/developerportal/settings/technical-contact"
+      to: "/developerportal/general/technical-contact"
+    },
+    {
+      from: "/howtogeneral/support/how-to-activate-or-deactivate-your-mendix-account",
+      to: "/developerportal/howto/deactivate-users"
+    },
+    /****************************************************
+     * DEVELOPER PORTAL
+     ****************************************************/
+
+    {
+      from: "/developerportal/settings/technical-contact",
+      to: "/developerportal/general/technical-contact"
+    },
+    {
+      from: "/developerportal/operate/mendix-cloud-status",
+      to: "/developerportal/general/mendix-cloud-status"
     },
     /****************************************************
      * REFERENCE GUIDE MENDIX 4
@@ -2402,8 +2398,8 @@ module.exports = {
       to: "/refguide4/cast-object"
     },
     {
-      from: "/refguide4/Certificates",
-      to: "/refguide4/certificates"
+      from: "/refguide4/certificates",
+      to: "/deployment/mendixcloud/certificates"
     },
     {
       from: "/refguide4/Change+List",
@@ -2572,10 +2568,6 @@ module.exports = {
     {
       from: "/refguide4/Deploy+To+The+Cloud+Dialog",
       to: "/refguide4/deploy-to-the-cloud-dialog"
-    },
-    {
-      from: "/refguide4/Deployment",
-      to: "/refguide4/deployment"
     },
     {
       from: "/refguide4/Deselect+All+Button",
@@ -3194,10 +3186,6 @@ module.exports = {
       to: "/refguide4/security"
     },
     {
-      from: "/refguide4/Security+constraints+in+the+Mendix+Cloud",
-      to: "/refguide4/security-constraints-in-the-mendix-cloud"
-    },
-    {
       from: "/refguide4/Select+All+Button",
       to: "/refguide4/select-all-button"
     },
@@ -3252,10 +3240,6 @@ module.exports = {
     {
       from: "/refguide4/Style",
       to: "/refguide4/style"
-    },
-    {
-      from: "/refguide4/Summary",
-      to: "/howto40/sap-integration"
     },
     {
       from: "/refguide4/System+Requirements",
@@ -3324,10 +3308,6 @@ module.exports = {
     {
       from: "/refguide4/Trim+to+date",
       to: "/refguide4/trim-to-date"
-    },
-    {
-      from: "/refguide4/Two+Factor+Authentication",
-      to: "/refguide4/two-factor-authentication"
     },
     {
       from: "/refguide4/Unary+expressions",
@@ -3673,8 +3653,8 @@ module.exports = {
       to: "/refguide5/cell-document-template"
     },
     {
-      from: "/refguide5/Certificates",
-      to: "/refguide5/certificates"
+      from: "/refguide5/certificates",
+      to: "/deployment/mendixcloud/certificates"
     },
     {
       from: "/refguide5/Change+List",
@@ -3915,10 +3895,6 @@ module.exports = {
     {
       from: "/refguide5/Deploy+To+The+Cloud+Dialog",
       to: "/refguide5/deploy-to-the-cloud-dialog"
-    },
-    {
-      from: "/refguide5/Deployment",
-      to: "/refguide5/deployment"
     },
     {
       from: "/refguide5/Deselect+all+button",
@@ -4327,10 +4303,6 @@ module.exports = {
     {
       from: "/refguide5/Microflows",
       to: "/refguide5/microflows"
-    },
-    {
-      from: "/refguide5/Microsoft+SQL+Server+maintenance",
-      to: "/refguide5/microsoft-sql-server-maintenance"
     },
     {
       from: "/refguide5/Mobile",
@@ -4757,10 +4729,6 @@ module.exports = {
       to: "/refguide5/security"
     },
     {
-      from: "/refguide5/Security+constraints+in+the+Mendix+Cloud",
-      to: "/refguide5/security-constraints-in-the-mendix-cloud"
-    },
-    {
       from: "/refguide5/Select+all+button",
       to: "/refguide5/select-all-button"
     },
@@ -4861,10 +4829,6 @@ module.exports = {
       to: "/refguide5/style"
     },
     {
-      from: "/refguide5/Summary",
-      to: "/refguide5/summary"
-    },
-    {
       from: "/refguide5/System+Requirements",
       to: "/refguide5/system-requirements"
     },
@@ -4959,10 +4923,6 @@ module.exports = {
     {
       from: "/refguide5/Troubleshooting",
       to: "/refguide5/troubleshooting"
-    },
-    {
-      from: "/refguide5/Two+Factor+Authentication",
-      to: "/refguide5/two-factor-authentication"
     },
     {
       from: "/refguide5/Unary+expressions",
@@ -5300,8 +5260,8 @@ module.exports = {
       to: "/refguide6/cell-document-template"
     },
     {
-      from: "/refguide6/Certificates",
-      to: "/refguide6/certificates"
+      from: "/refguide6/certificates",
+      to: "/deployment/mendixcloud/certificates"
     },
     {
       from: "/refguide6/Change+List",
@@ -5562,10 +5522,6 @@ module.exports = {
     {
       from: "/refguide6/Deploy+To+The+Cloud+Dialog",
       to: "/refguide6/deploy-to-the-cloud-dialog"
-    },
-    {
-      from: "/refguide6/Deployment",
-      to: "/refguide6/deployment"
     },
     {
       from: "/refguide6/Deselect+all+button",
@@ -5989,10 +5945,6 @@ module.exports = {
       to: "/refguide6/microflows"
     },
     {
-      from: "/refguide6/Microsoft+SQL+Server+maintenance",
-      to: "/refguide6/microsoft-sql-server-maintenance"
-    },
-    {
       from: "/refguide6/Mobile",
       to: "/refguide6/mobile"
     },
@@ -6035,10 +5987,6 @@ module.exports = {
     {
       from: "/refguide6/Moving+from+5+to+6",
       to: "/refguide6/moving-from-5-to-6"
-    },
-    {
-      from: "/refguide6/MxBuild",
-      to: "/refguide6/mxbuild"
     },
     {
       from: "/refguide6/MySQL",
@@ -6533,10 +6481,6 @@ module.exports = {
       to: "/refguide6/style"
     },
     {
-      from: "/refguide6/Summary",
-      to: "/refguide6/summary"
-    },
-    {
       from: "/refguide6/Sync+button",
       to: "/refguide6/sync-button"
     },
@@ -6637,10 +6581,6 @@ module.exports = {
       to: "/refguide6/troubleshooting"
     },
     {
-      from: "/refguide6/Two+Factor+Authentication",
-      to: "/refguide6/two-factor-authentication"
-    },
-    {
       from: "/refguide6/Unary+expressions",
       to: "/refguide6/unary-expressions"
     },
@@ -6687,6 +6627,10 @@ module.exports = {
     {
       from: "/refguide6/Version+Control+Scenarios",
       to: "/refguide6/version-control-scenarios"
+    },
+    {
+      from: "/refguide6/version-downgrade-prevention",
+      to: "/deployment/mendixcloud/version-downgrade-prevention"
     },
     {
       from: "/refguide6/Vertical+Split+Pane",
@@ -6968,10 +6912,6 @@ module.exports = {
       "to": "/refguide/cell-document-template"
     },
     {
-      "from": "/refguide7/Certificates",
-      "to": "/refguide/certificates"
-    },
-    {
       "from": "/refguide7/Change+List",
       "to": "/refguide/change-list"
     },
@@ -7200,10 +7140,6 @@ module.exports = {
       "to": "/refguide/deploy-to-the-cloud-dialog"
     },
     {
-      "from": "/refguide7/Deployment",
-      "to": "/refguide/deployment"
-    },
-    {
       "from": "/refguide7/Deselect+all+button",
       "to": "/refguide/deselect-all-button"
     },
@@ -7241,7 +7177,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Download+From+Team+Server+Dialog",
-      "to": "/refguide/download-from-team-server-dialog"
+      "to": "/refguide/download-from-version-control-dialog"
     },
     {
       "from": "/refguide7/Drop-down",
@@ -7355,8 +7291,8 @@ module.exports = {
       "from": "/refguide7/Generate+Document",
       "to": "/refguide/generate-document"
     },
-	{
-	  "from": "/refguide7/Getting+the+Mendix+Developer+App",
+    {
+      "from": "/refguide7/Getting+the+Mendix+Developer+App",
       "to": "/refguide/getting-the-mendix-app"
     },
     {
@@ -7495,10 +7431,10 @@ module.exports = {
       "from": "/refguide7/Line+Break+Document+Template",
       "to": "/refguide/line-break-document-template"
     },
-	{
+    {
       "from": "/refguide7/Link+button",
       "to": "/refguide/action-button"
-	},
+    },
     {
       "from": "/refguide7/List+Activities",
       "to": "/refguide/list-activities"
@@ -7600,10 +7536,6 @@ module.exports = {
       "to": "/refguide/microflows"
     },
     {
-      "from": "/refguide7/Microsoft+SQL+Server+maintenance",
-      "to": "/refguide/microsoft-sql-server-maintenance"
-    },
-    {
       "from": "/refguide7/Mobile",
       "to": "/refguide/mobile"
     },
@@ -7642,10 +7574,6 @@ module.exports = {
     {
       "from": "/refguide7/Moving+from+6+to+7",
       "to": "/refguide/moving-from-6-to-7"
-    },
-    {
-      "from": "/refguide7/MxBuild",
-      "to": "/refguide/mxbuild"
     },
     {
       "from": "/refguide7/MySQL",
@@ -7701,7 +7629,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Open+Project+Dialog",
-      "to": "/refguide/open-project-dialog"
+      "to": "/refguide/open-app-dialog"
     },
     {
       "from": "/refguide7/Opening+Pages",
@@ -8067,10 +7995,10 @@ module.exports = {
       "from": "/refguide7/Sign+In+Dialog",
       "to": "/refguide/sign-in-dialog"
     },
-	{
-	  "from": "/refguide7/Sign+out+button",
-	  "to": "/refguide/action-button"
-	},
+    {
+      "from": "/refguide7/Sign+out+button",
+      "to": "/refguide/action-button"
+    },
     {
       "from": "/refguide7/Simple+Menu+Bar",
       "to": "/refguide/simple-menu-bar"
@@ -8114,10 +8042,6 @@ module.exports = {
     {
       "from": "/refguide7/Style",
       "to": "/refguide/style"
-    },
-    {
-      "from": "/refguide7/Summary",
-      "to": "/refguide/summary"
     },
     {
       "from": "/refguide7/System+Requirements",
@@ -8216,16 +8140,12 @@ module.exports = {
       "to": "/refguide/troubleshooting"
     },
     {
-      "from": "/refguide7/Two+Factor+Authentication",
-      "to": "/refguide/two-factor-authentication"
-    },
-    {
       "from": "/refguide7/Unary+expressions",
       "to": "/refguide/unary-expressions"
     },
     {
       "from": "/refguide7/Upload+To+Team+Server+Dialog",
-      "to": "/refguide/upload-to-team-server-dialog"
+      "to": "/refguide/upload-to-version-control-dialog"
     },
     {
       "from": "/refguide7/User+Roles",
@@ -8414,6 +8334,21 @@ module.exports = {
     {
       "from": "/refguide7/XPath+year+from+dateTime",
       "to": "/refguide/xpath-year-from-datetime"
+    },
+    /****************************************************
+     * REFERENCE GUIDE RENAMES
+     ****************************************************/
+    {
+      "from": "/refguide/download-from-team-server-dialog",
+      "to": "/refguide/download-from-version-control-dialog"
+    },
+    {
+      "from": "/refguide/open-project-dialog",
+      "to": "/refguide/open-app-dialog"
+    },
+    {
+      "from": "/refguide/upload-to-team-server-dialog",
+      "to": "/refguide/upload-to-version-control-dialog"
     },
     /****************************************************
      * TIPS & TRICKS

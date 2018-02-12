@@ -10,18 +10,24 @@ apidocs-mxsdk:
     - "API Documentation"
     - "Mendix Platform SDK"
 addons:
-  space: "Other Add-Ons"
+  space: "Other Add-ons"
   priority: false
   menu_categories:
-    - "APM"
     - "AQM"
+apm:
+  space: "APM"
+  priority: false
+  menu_categories:
+    - "Installation Guide"
+    - "Reference Guide"
+    - "Use Cases"
 ats:
-  space: "ATS Add-On"
+  space: "ATS"
   priority: false
   menu_categories:
     - "General"
-    - "Reference Guide 1"
-    - "How-To's"
+    - "Reference Guide"
+    - "How-to's"
     - "Best Practices"
 community:
   space: "Community"
@@ -31,7 +37,7 @@ community:
     - "Documentation"
     - "App Store"
 howto40:
-  space: "Mendix 4 How-To's"
+  space: "Mendix 4 How-to's"
   priority: false
   mendix_version: 4
   noindex: true
@@ -46,7 +52,7 @@ howto40:
     type: 'warning'
     text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the How-To&#39;s <a href="/howto/">here</a>.'
 howto50:
-  space: "Mendix 5 How-To's"
+  space: "Mendix 5 How-to's"
   priority: false
   mendix_version: 5
   noindex: true
@@ -63,10 +69,8 @@ howto50:
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Project Management"
-    - "Cloud Foundry"
-    - "On-Premises Deployment"
 howto6:
-  space: "Mendix 6 How-To's"
+  space: "Mendix 6 How-to's"
   priority: 5
   mendix_version: 6
   noindex: true
@@ -83,17 +87,17 @@ howto6:
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Project Management"
-    - "Cloud Foundry"
-    - "On-Premises Deployment"
 howto:
-  space: "Mendix 7 How-To's"
+  space: "Mendix 7 How-to's"
   priority: 6
   mendix_version: 7
   menu_categories:
     - "Tutorials"
+    - "SAP"
+    - "Atlas UI"
     - "Modeling Basics"
     - "Data Models"
-    - "GUIs"
+    - "UX"
     - "Logic & Business Rules"
     - "Mobile"
     - "Security"
@@ -103,8 +107,6 @@ howto:
     - "Testing"
     - "Monitoring & Troubleshooting"
     - "Collaboration & Project Management"
-    - "Cloud Foundry"
-    - "On-Premises Deployment"
 refguide4:
   space: "Mendix 4 Reference Guide"
   priority: false
@@ -116,11 +118,11 @@ refguide4:
     - "Modeler"
     - "Runtime"
     - "Client"
-    - "Deployment"
     - "Java Programming"
     - "Release Notes"
     - "System Requirements"
     - "Moving from 3 to 4"
+    - "Deployment"
   banner:
     type: 'warning'
     text: 'You are browsing the documentation of an unsupported version of Mendix. Please find the latest version of the Reference Guide <a href="/refguide/">here</a>'
@@ -135,7 +137,6 @@ refguide5:
     - "Modeler"
     - "Runtime"
     - "Java Programming"
-    - "Deployment"
     - "Mobile"
     - "Proactive Maintenance"
 refguide6:
@@ -149,7 +150,6 @@ refguide6:
     - "Modeler"
     - "Runtime"
     - "Java Programming"
-    - "Deployment"
     - "Mobile"
     - "Proactive Maintenance"
 refguide:
@@ -162,13 +162,12 @@ refguide:
     - "Modeler"
     - "Runtime"
     - "Java Programming"
-    - "Deployment"
+    - "SAP"
     - "Mobile"
 howtogeneral:
-  space: "General How-To's"
+  space: "General How-to's"
   priority: 6
   menu_categories:
-    - "Mendix Cloud"
     - "Tips & Tricks"
     - "Best Practices"
     - "Mendix Support"
@@ -177,9 +176,12 @@ releasenotes:
   priority: false
   menu_categories:
     - "Desktop Modeler"
+    - "Web Modeler"
     - "Platform Portal"
     - "Model SDK"
     - "Platform SDK"
+    - "Hybrid App"
+    - "Mendix Mobile App"
     - "APM"
     - "ATS"
     - "AQM"
@@ -195,4 +197,15 @@ developerportal:
     - "Deploy"
     - "Operate"
     - "Settings"
-    - "How-To's"
+    - "How-to's"
+deployment:
+  space: "Deployment"
+  priority: false
+  menu_categories:
+    - "Amazon Web Services"
+    - "Azure"
+    - "Cloud Foundry"
+    - "Docker"
+    - "Mendix Cloud"
+    - "On-Premises"
+    - "SAP Cloud Platform"

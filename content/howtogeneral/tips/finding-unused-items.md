@@ -1,5 +1,5 @@
 ---
-title: "Finding Unused Items"
+title: "Find Unused Items"
 category: "Tips & Tricks"
 ---
 # Finding Unused Items

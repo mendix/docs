@@ -22,8 +22,8 @@ If you specify the ORDER BY clause, NULL values by default are ordered as more t
 
 The following overview summarizes the NULLs default sort ordering provided by different database types.
 
-| NULL Ordering Behavior/ Database Types  | MARIADB/MYSQL | SQLSERVER | HSQLDB | DB2 | ORACLE | POSTGRESQL
-|------------------------|---|---|---|---|---|---|---|
+| NULL Ordering Behavior/ Database Types  | MARIADB/MYSQL | SQLSERVER | HSQLDB | DB2 | ORACLE | POSTGRESQL |
+|------------------------|---|---|---|---|---|---|
 | **ASC NULLS FIRST** | ✔ | ✔ |  ✔  |    |  |   |
 | **ASC NULLS LAST**|  |   |   |  ✔ |  ✔ |  ✔|
 | **DESC NULLS FIRST**|   |   | ✔ |  ✔| ✔  | ✔|

@@ -1,5 +1,5 @@
 ---
-title: "Using the Excel Exporter"
+title: "Use the Excel Exporter"
 category: "Integration"
 tags: []
 ---
@@ -71,13 +71,14 @@ This module has many moving pieces that allow the configurations to be as simple
 ### 4.1 Creating an Input Object Entity
 
 1.  Open the **Domain Model** and add an **Entity** to serve as a "Master Export" entity that is of specialization **FileDocument.**
-2.  Create a **reference set association** between the newly created entity and the entity(ies) that you will want to serve as a base for the Excel Export.
+2.  Create an association between the newly created entity and the entity(ies) that you will want to serve as a base for the Excel Export.
+
     ![](attachments/18448732/18581908.png)
 
 ### 4.2 Basic Setup of the Template
 
 1.  Open the **Excel Exporter Overview** via the Navigation item configured to XLSReport.Excel_Document_Overview.
-2.  Click the **New **button to create a new template.
+2.  Click the **New** to create a new template.
 3.  Configure the **Filename** (without extension) to be the default file name when the template is used.
 
     {{% alert type="info" %}}
@@ -85,17 +86,17 @@ This module has many moving pieces that allow the configurations to be as simple
     The file name can always be changed when the template is used within a microflow.
 
     {{% /alert %}}
-4.  Configure the **Input Object **to be the file document entity that is associated to your entity to be exported.
-5.  Provide a **Description **for identifying and documenting what this exact template is used for.
-6.  Specify the **Date time export format **for how the dates and times should appear in the Excel file once exported.
+4.  Configure the **Input Object** to be the file document entity that is associated to your entity to be exported.
+5.  Provide a **Description** for identifying and documenting what this exact template is used for.
+6.  Specify the **Date time export format** for how the dates and times should appear in the Excel file once exported.
 
 ### 4.3 Creating the Sheet Layout
 
-1.  Under the **Worksheets **section, select **New** to create a new sheet template.
+1.  Under the **Worksheets** section, select **New** to create a new sheet template.
     ![](attachments/18448732/18581907.png)
-2.  Specify the **Name **that will be given to the sheet when the file is exported.
-3.  Configure the **Row Object **that you want to export and set the reference to the template input object (if input object is used).
-4.  Configure the **Start retrieved data at row **to set the ordinal number in which the data should be exported.
+2.  Specify the **Name** that will be given to the sheet when the file is exported.
+3.  Configure the **Row Object** that you want to export and set the reference to the template input object (if input object is used).
+4.  Configure the **Start retrieved data at row** to set the ordinal number in which the data should be exported.
 
     {{% alert type="info" %}}
 
@@ -103,8 +104,8 @@ This module has many moving pieces that allow the configurations to be as simple
 
     {{% /alert %}}
 5.  Select if the export should export distinct only or allow duplicate data
-6.  Specify the **Column and Row Settings **for height and width, or leave as default
-7.  Specify if the extract will **Use Static Data **or not.
+6.  Specify the **Column and Row Settings** for height and width, or leave as default
+7.  Specify if the extract will **Use Static Data** or not.
 
     {{% alert type="info" %}}
 
@@ -126,10 +127,10 @@ This module has many moving pieces that allow the configurations to be as simple
 1.  Open the **Column Data tab** and select **New** to create a new export column
     ![](attachments/18448732/18581906.png)
     ![](attachments/18448732/18581905.png)
-2.  The **Column number **will be set automatically, but can be overwritten to the desired ordinal number.
-3.  Define a **Name **for the column and specify if that **Name **should be the **Column Header **as well when exported.
-4.  Specify the **Retrieve type **to identify if this column will be an attribute or a reference.
-5.  Specify the **Select attribute **to identify the exact attribute on the row entity in which this column corresponds to.
+2.  The **Column number** will be set automatically, but can be overwritten to the desired ordinal number.
+3.  Define a **Name** for the column and specify if that **Name** should be the **Column Header** as well when exported.
+4.  Specify the **Retrieve type** to identify if this column will be an attribute or a reference.
+5.  Specify the **Select attribute** to identify the exact attribute on the row entity in which this column corresponds to.
 6.  Specify if the column should result in an aggregate.
 
     {{% alert type="info" %}}
@@ -143,9 +144,9 @@ This module has many moving pieces that allow the configurations to be as simple
 1.  Open the **Static Data tab** and select **New** to create a new export column.
     ![](attachments/18448732/18581904.png)
     ![](attachments/18448732/18581903.png)
-2.  Specify the **Row** and **Column **that the static value should be placed.
+2.  Specify the **Row** and **Column** that the static value should be placed.
 3.  Enter a name for the cell in the **Name** field.
-4.  Specify the **Type **by denoting if the cell is **Static Text, Object Data, or Aggregate Function.**
+4.  Specify the **Type** by denoting if the cell is **Static Text, Object Data, or Aggregate Function.**
 5.  Specify the **Style** that should be applied to the cell.
 6.  Specify the **Text** if the field **Type **is listed as **Static Text.**
 

@@ -3,73 +3,73 @@ title: "Work with Object Events"
 category: "Data Models"
 tags: []
 ---
-When working with the Platform, objects are being created, removed, or reverted back to the original. Based on the state of the object and the 'Object Events' that are specified in the domain model, different actions are taken by the platform to guarantee data consistency. 
 
-## 1\. Create
+When working with the Mendix Platform, objects are created, removed, or reverted back to the original. Based on the state of the object and the object events that are specified in the domain model, different actions are taken by the platform to guarantee data consistency. 
 
-Everywhere where an object is initialized, all the events are always executed. The default **Create** button, a create activity in a microflow, and web services will always follow the steps described in the image below.
+## 1 Create
 
-* Events: all before and after events are executed, and if any of the before create events returns false an exception can be thrown
-    * If an exception occurs during an event all changes are being reverted with the default error handling behavior.
-* Database: there is no database communication happening during this event, not unless it is specified in a before or after create event
-* Result :a new object is available after these triggers
-    * The object will have the state 'Instantiated'
-    * This is influences the behavior in the other object actions.
+Wherever an object is initialized, all the events are always executed. The default **Create** button, a create activity in a microflow, and web services will always follow the steps described in the image below.
+
+* Events: all before and after events are executed, and if any before-create event returns false, an exception can be thrown
+    * If an exception occurs during an event, all the changes are reverted with the default error handling behavior
+* Database: there is no database communication happening during this event unless it is specified in a before- or after-create event
+* Result: a new object is available after these triggers
+    * The object will have the **Instantiated** state
+    * This influences the behavior in the other object actions
 
 ![](attachments/18448744/18582173.png)
 
-## 2\. Commit
+## 2 Commit
 
-When an object is being committed through a default save button, a commit activity, or webservices, it will always trigger the commit events. The platform will also evaluate all associated objects. To guarantee data consistency the platform will also auto-commit associated objects.
+When an object is committed through a default Save button, a commit activity, or web services, it will always trigger the commit events. The platform will also evaluate all associated objects. To guarantee data consistency, the platform will also autocommit associated objects.
 
-An autocommit is an automatic commit from the platform. That is done to keep the domain model in sync. If your application ends up having autocommitted objects than you have a modeling error. Since an association is also a member of an object, the association will be stored in the database as well.
-That means if you create an OrderLine inside an Order, with OrderLine being the parent of the association. When you commit the OrderLine, the Order will be auto-committed.
+An autocommit is an automatic commit from the platform, which is done to keep the domain model in sync. If your application ends up having autocommitted objects, then you will have a modeling error. Since an association is also a member of an object, the association will be stored in the database as well. This means that if you create an order line inside an order and the order line is the parent of the association, when you commit the order line, the order will be autocommitted.
 
-If you end up with auto-commited objects, it is always because of a modeling error. At some point in time, an association was set to a new object and the associated object was committed. Thus committing all its associations as well to keep all data consistent.
+If you end up with autocommited objects, it is always because of a modeling error. At some point in time, an association was set to a new object, the associated object was committed, and all of its associations were committed as well to keep all the data consistent.
 
-* Events: all before and after events are executed, and if any of the before rollback events returns false an exception can be thrown
-    * If an exception occurs during an event all applied changes are being reverted with the default error handling behavior
+* Events: all before and after events are executed, and if any before-rollback event returns false, an exception can be thrown
+    * If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
     * Changes made prior to the commit will be kept
 * Database: there is an insert or update query executed
-    * Depending on the object state, the platform will do an insert for objects with the state 'Instantiated', and an update for all other states
-* Result :an object with the State: 'Instantiated' will be inserted into the database, an object with any other State will be updated
+    * Depending on the object state, the platform will do an insert for objects with the state **Instantiated** and an update for all other states
+* Result: an object with the state Instantiated will be inserted into the database, and an object with any other state will be updated
 
 ![](attachments/18448744/18582172.png)
 
-## 3\. Rollback
+## 3 Rollback
 
-Pressing a cancel button or triggering a Rollback activity will initiate the Rollback events. These actions are not triggered in case of a rollback because of an error.
+Pressing a Cancel button or triggering a rollback activity will initiate the rollback events. These actions are not triggered in the case of a rollback because of an error.
 
-* Events: all before and after events are executed, and if any of the before rollback events returns false an exception can be thrown
-    * If an exception occurs during an event all applied changes are being reverted with the default error handling behavior
+* Events: all before and after events are executed, and if any before-rollback event returns false, an exception can be thrown
+    * If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
     * Changes made prior to the rollback will be kept
-* Database: there is no database communication happening during this event, not unless it is specified in a before or after create event
-* Result: an object with the State: 'Instantiated' will be removed, an object with any other State will be reverted back to the values it had during the last commit
+* Database: there is no database communication happening during this event unless it is specified in a before- or after-create event
+* Result: an object with the state **Instantiated** will be removed, and an object with any other state will be reverted back to the values it had during the last commit
 
 ![](attachments/18448744/18582170.png)
 
-## 4\. Delete
+## 4 Delete
 
-Pressing a delete button or triggering a Delete activity will initiate the Delete events. Also when an object is removed through the configured delete behavior it will execute all before and after events.
+Clicking a Delete button or triggering a delete activity will initiate the delete events. In addition, when an object is removed through the configured delete behavior, it will execute all before and after events.
 
-* Events: all before and after events are executed, and if any of the before delete events returns false an exception can be thrown
-    * If an exception occurs during an event all applied changes are being reverted with the default error handling behavior
+* Events: all before and after events are executed, and if any before-delete event returns false, an exception can be thrown
+    * If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior
     * Changes made prior to the rollback will be kept 
-* Database: if an object has state 'Instantiated' there will be no database communication required
-    * For any other status a delete query is executed in the database
+* Database: if an object has the state **Instantiated**, there will be no database communication required
+    * For any other status, a delete query is executed in the database
 * Result: the object will be removed from memory and if applicable from the database
     * All delete behavior for the associations is validated, and any associated objects are removed as well
 
 ![](attachments/18448744/18582171.png)
 
-## 5\. Related content
+## 5 Related Content
 
-*   [Working with images and files](working-with-images-and-files)
-*   [Creating a basic data layer](create-a-basic-data-layer)
-*   [Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
-*   [Setting up data validation](setting-up-data-validation)
-*   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
-*   [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-*   [Scout and Windows 10 Workaround](../guis/scout-and-windows-10-workaround)
-*   [Generating a personal SSH2 key pair](../security/generating-a-personal-ssh2-key-pair)
-*   [Creating a chainable Custom Widget](../custom-widget-development/create-a-chainable-custom-widget)
+* [How to Work with Images and Files](working-with-images-and-files)
+* [How to Create a Basic Data Layer](create-a-basic-data-layer)
+* [How to Denormalize Data to Improve Performance](denormalize-data-to-improve-performance)
+* [How to Set Up Data Validation](setting-up-data-validation)
+* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
+* [How to Perform Scout and Windows 10 Workaround](../ux/scout-and-windows-10-workaround)
+* [How to Generate a Personal SSH2 Key Pair](../security/generating-a-personal-ssh2-key-pair)
+* [How to Create a Chainable Custom Widget](../custom-widget-development/create-a-chainable-custom-widget)

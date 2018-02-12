@@ -32,7 +32,7 @@ The result has the following format:
       "named_user_sessions":0,
       "anonymous_sessions":1
     },
-    "connectionbus":   
+    "connectionbus":
     {
       "update":7,
       "transaction":0,
@@ -40,7 +40,7 @@ The result has the following format:
       "delete":5,
       "insert":5
     },
-    "memory":   
+    "memory":
     {
       "max_heap":1879048192,
       "used_nonheap":31943776,

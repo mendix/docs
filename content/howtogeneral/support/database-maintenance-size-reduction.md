@@ -5,7 +5,9 @@ category: "Mendix Support"
 #description: ""
 #tags: []
 ---
-## Introduction
+
+## 1 Introduction
+
 The average database of a Mendix application in the Mendix cloud looks something like this:
 
 ![](attachments/database-maintenance-size-reduction/Untitled.png)
@@ -19,7 +21,9 @@ There might be instances where physically reclaiming the lost space is important
 
 Let’s explore both options.
 
-## Option 1: The VACUUM FULL Command**
+## 2 Options
+
+### 2.1 Option 1: The VACUUM FULL Command
 
 This is a simple command that can be issued through an SQL query. Instead of doing something like:
 
@@ -53,14 +57,14 @@ _Okay, so then I could backup the database in the Mendix Cloud, restore it local
 
 While this is correct, there is no real reason to do this because of option 2.
 
-## Option 2: Creating And Restoring A Backup Of The Database
+### 2.2 Option 2: Creating And Restoring A Backup Of The Database
 
 You can create and restore a backup in the Mendix Cloud Portal on the Deploy -> Backup page. So why is there no real reason to issue a ``VACUUM FULL`` command when you backup and subsequently restore the database? Because a database restore does a full physical rewrite of the database and only includes all “living” records. An advantage of a backup and restore compared to a ``VACUUM FULL`` is that, since it does a full rewrite of the entire database, it can also optimize the whole database at once (for example, optimize the physical clusters to ensure maximum performance).
 
-## PARADOX
+## 3 Paradox
 
 Both options require roughly the same amount of free disk space as the table (in case of a ``VACUUM FULL myTable;`` command) or the whole database holds to complete the operation itself. This means that if you want to restore a three gigabyte database, you need 6 gigabytes of disk space. So if you decide at 90% disk usage that it becomes very important to physically reclaim the lost space, you might not be able to complete the operation (``VACUUM FULL`` or restore and backup) due to a lack of disk space. Hence the paradox.
 
-## CONCLUSION
+## 4 Conclusion
 
 The only reason to use either the ``VACUUM FULL`` or restore and backup option is to physically reclaim lost space of a table (records of the same entity) that was once very large but has drastically been reduced in size (deleted records) **and which you do no longer expect to grow back to (nearly) its previous size in the future**. As in that case, and in that case only, leaving the deleted records in place to be reused makes no sense anymore.

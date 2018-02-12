@@ -9,7 +9,7 @@ The Build API allows you to manage deployment packages and create new deployment
 
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 
-![](attachments/131077/425988.png)
+![](attachments/deploy-api/api-model.png)
 
 # <a name="BuildAPI-APIcalls" rel="nofollow"></a>API calls
 
@@ -17,7 +17,7 @@ The image below provides a domain model representation of the concepts discussed
 
 ### <a name="BuildAPI-Description" rel="nofollow"></a>Description
 
-Retrieves all deployment packages that are available for a specific app that the authenticated user has access to as a regular user. These packages can be found if you click **Details** on an app in the **Nodes** screen in the Mendix platform.
+Retrieves all deployment packages that are available for a specific app that the authenticated user has access to as a regular user. These packages can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
 ```java
  HTTP Method: GET
@@ -90,7 +90,7 @@ List of objects with the following key-value pairs:
 
 ### <a rel="nofollow"></a>Description
 
-Retrieves a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix platform.
+Retrieves a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
 ```java
 HTTP Method: GET
@@ -210,7 +210,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### <a name="BuildAPI-Ouput" rel="nofollow"></a>Ouput
+### <a name="BuildAPI-Ouput" rel="nofollow"></a>Output
 
 <a rel="nofollow"></a>Error codes
 

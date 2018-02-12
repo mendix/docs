@@ -2,6 +2,7 @@
 title: "Best Practices"
 ---
 
-This is the main document in this category:
+These are the main documents in this category:
 
-* [Guidelines for Creating a Custom Action](guidelines-custom-action)
+* [ATS 1 Best Practices](bp-version-1/bp-version-1)
+* [ATS 2 Best Practices](bp-version-2/bp-version-2)

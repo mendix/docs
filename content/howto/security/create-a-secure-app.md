@@ -1,5 +1,5 @@
 ---
-title: "Creating a Secure App"
+title: "Create a Secure App"
 category: "Security"
 tags: []
 ---
@@ -20,8 +20,8 @@ You will start with the configuration of user and module roles for access to pag
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Know how to create a domain model (for more information, see [How to Create a Basic Data Layer](../data-models/create-a-basic-data-layer))
-* Know how to create overview and detail pages (for more information, see [How to Create Your First Two Overview and Details Pages](../guis/create-your-first-two-overview-and-detail-pages))
-* Know how to create menu items (for more information, see [How to Set Up the Navigation Structure](../guis/setting-up-the-navigation-structure))
+* Know how to create overview and detail pages (for more information, see [How to Create Your First Two Overview and Details Pages](../ux/create-your-first-two-overview-and-detail-pages))
+* Know how to create menu items (for more information, see [How to Set Up the Navigation Structure](../ux/setting-up-the-navigation-structure))
 
 ## 3 Preparing the Data Structure, GUI, and Example Data
 
@@ -56,7 +56,7 @@ To see the results of this how-to, you must set up a test project with test data
 11.  Add the following order data to your app:
     ![](attachments/18448705/18581373.png)
 
-## 4 Setting the Scurity Level to Prototype/Demo
+## 4 Setting the Security Level to Prototype/Demo
 
 In this part of the how-to, you will learn how to configure the security at the prototype/demo level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the Mendix cloud, production security is mandatory.
 
@@ -170,11 +170,9 @@ To create access roles for the Administrator module role, follow these steps:
 
 3. Click **OK**.
 
-    {{% alert type="warning" %}}
-
-    A separate access rule will be created for all entities when the module role is set to Administrator. It is possible to adjust each rule individually later.
-
-    {{% /alert %}}
+{{% alert type="warning" %}}
+A separate access rule will be created for all entities when the module role is set to Administrator. It is possible to adjust each rule individually later.
+{{% /alert %}}
 
 ### 5.3 Creating Access Rules for the User Module Role
 

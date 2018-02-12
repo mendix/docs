@@ -6,7 +6,7 @@ tags: []
 
 ## 1 Introduction
 
-This How-To will teach you how to use the Widget Development Plugin for Adobe Brackets. The Widget Development Plugin allows a Mendix developer to quickly create a custom widget project. Adobe Brackets is a code editor for HTML, JavaScript, and CSS. The Widget Development Plugin will turn Brackets into an integrated developement environment (IDE) for creating custom widgets for the Mendix platform.
+This How-To will teach you how to use the Widget Development Plugin for Adobe Brackets. The Widget Development Plugin allows a Mendix developer to quickly create a custom widget project. Adobe Brackets is a code editor for HTML, JavaScript, and CSS. The Widget Development Plugin will turn Brackets into an integrated development environment (IDE) for creating custom widgets for the Mendix Platform.
 
 **This how-to will teach you how to do the following:**
 
@@ -17,7 +17,7 @@ This How-To will teach you how to use the Widget Development Plugin for Adobe Br
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Download Adobe Brackets [here](https://github.com/adobe/brackets/releases/tag/release-1.1)
+* Download Adobe Brackets [here](https://github.com/adobe/brackets/releases/tag/release-1.1) or [here](http://brackets.io/)
 
 ## 3 Getting Started with Adobe Brackets and the Widget Development Plugin
 
@@ -135,14 +135,13 @@ To package the widget source into an *.mpk* file, follow these steps:
 
 ## 7 Conclusion
 
-This how-to has enabled you to start working and building a custom widget for the Mendix platform using Adobe Brackets as your main integrated development environment. The code examples in the `AppStoreWidgetBoilerplate` will provide you a quick overview of what you need to interact with both the user interface and Mendix.
+This how-to has enabled you to start working and building a custom widget for the Mendix Platform using Adobe Brackets as your main integrated development environment. The code examples in the `AppStoreWidgetBoilerplate` will provide you a quick overview of what you need to interact with both the user interface and Mendix.
 
 ## 8 Related Content
 
 ### 8.1 Internal Resources
 
 * [How to Create a Chainable Custom Widget](create-a-chainable-custom-widget)
-* [How to Create a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
 * [How to Use the Mobile Slider Custom Widget](the-mobile-slider-custom-widget)
 
 ### 8.2 External Resources
@@ -151,5 +150,5 @@ These are some interesting books and articles you can read to dive into the sour
 
 * Custom Mendix widgets are based on DOJO widgets – for more information, see this blog post: 
 [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
-* To communicate with Mendix, you need to use the Mendix JavaScript Client API – for more information, see the [Mendix Client API Documentation](https://apidocs.mendix.com/6/client/)
+* To communicate with Mendix, you need to use the Mendix JavaScript Client API – for more information, see the [Mendix Client API Documentation](https://apidocs.mendix.com/7/client/)
 * This is a nice book that helps you understand what JavaScript is all about: [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)

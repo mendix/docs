@@ -6,7 +6,7 @@ category: "Proactive Maintenance"
 
 ## **Introduction**
 
-Application and system monitoring forms an integral part of on-premise hosting of the Mendix platform. When done correctly, it will provide a system administrator with a wealth of information about the current state and health of your Mendix installation. This document will detail the metrics that need to be collected in order to gain sufficient insight in your technical Mendix environment, as well as defining critical values for these metrics.
+Application and system monitoring forms an integral part of on-premise hosting of the Mendix Platform. When done correctly, it will provide a system administrator with a wealth of information about the current state and health of your Mendix installation. This document will detail the metrics that need to be collected in order to gain sufficient insight in your technical Mendix environment, as well as defining critical values for these metrics.
 
 ## <a rel="nofollow"></a>**Prerequisites**
 
@@ -18,7 +18,7 @@ This document is based upon the following assumptions:
     *   [Monitoring - Mendix Runtime](monitoring-mendix-runtime "monitoring _ mendix runtime")
     *   [Logging](logging "logging")
 *   SQL Server maintenance plans have been set up according to:
-    *   [Mendix SQL Maintenance Plans](/howto50/mendix-sql-maintenance-plans "mendix sql maintenance plans")
+    *   [Mendix SQL Maintenance Plans](/deployment/on-premises/mendix-sql-maintenance-plans "mendix sql maintenance plans")
 
 ## <a rel="nofollow"></a>**Monitoring Categories**
 
@@ -56,6 +56,6 @@ Fault monitoring implies the broadest range of monitoring metrics, as it consist
 
 ## <a rel="nofollow"></a>**Metrics - Security Monitoring**
 
-Security monitoring comprises the detection of, and response to, all security related incidents within the Mendix platform - consisting of Server hard- and software, back-end systems and network connectivity components, like routers, switches, firewalls, etc. As security monitoring comprises such a broad technical field, it is out of scope of this document to list all valid metrics. However, as data security is of vital importance to most, if not all, organizations, it needs to be mentioned here. Ample documentation on the subject of security monitoring exists on the internet today.
+Security monitoring comprises the detection of, and response to, all security related incidents within the Mendix Platform - consisting of Server hard- and software, back-end systems and network connectivity components, like routers, switches, firewalls, etc. As security monitoring comprises such a broad technical field, it is out of scope of this document to list all valid metrics. However, as data security is of vital importance to most, if not all, organizations, it needs to be mentioned here. Ample documentation on the subject of security monitoring exists on the internet today.
 
 Mendix recommends involving a third party supplier to audit your Mendix environment for any security related issues.

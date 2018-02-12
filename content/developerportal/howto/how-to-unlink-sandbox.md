@@ -10,7 +10,7 @@ tags: ["App","Sandbox","Developer Portal","Unlink","Delete"]
 This how-to describes the process of unlinking your Sandbox from your Free App. 
 A Sandbox will be only linked to you Free App when you you click **Enable Team Server** in the **Mendix Modeler**. 
 
-**After completing this how-to you will know:**
+**This how-to will teach you how to do the following:**
 
 *   How to unlink (delete) your Sandbox
 
@@ -21,6 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 *   You have a Free App (Mendix version 5.18 and up)
 *   Your Free App is linked to a Sandbox. This happens automatically when you deploy your Free App from your **Mendix Modeler**
 *   Your Two-Factor Google Authenticator is enabled
+*   You are the [Technical Contact](/developerportal/general/technical-contact) of the sandbox
 
 ## 3 Download a Backup
 
@@ -42,7 +43,7 @@ When you have a Free App running in the Sandbox you will need to unlink the Free
 4.  Go to **Environments** in the left navigation panel.
 5.  Click **Unlink your app**. Beware that all your data will be lost!
 6.  Click **Yes, delete all data and unlink this project** to confirm.
-7.  Validate with your **Google Authenticator**.
+7.  Validate with your [Two-Factor Authentication](/developerportal/general/twofactor-authenticator).
 
 The Free App has now been unlinked from the Sandbox environment.
 
@@ -50,9 +51,9 @@ The Free App has now been unlinked from the Sandbox environment.
 
 *   [How to Configure Custom Domains](custom-domains)
 *   [How to Deploy to the Mendix Cloud](deploying-to-the-cloud)
-*   [How To Download a Backup](how-to-download-a-backup)
+*   [How to Download a Backup](how-to-download-a-backup)
 *   [How to Link a Different App to a Cloud Node](how-to-link-a-different-app-to-a-node)
-*   [How To Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node) 
-*   [How To Restore a Backup](how-to-restore-a-backup)
+*   [How to Link Your Free App to a Licensed Cloud Node](how-to-link-app-to-node) 
+*   [How to Restore a Backup](how-to-restore-a-backup)
 *   [How to Upgrade Your Free App to a Licensed App](how-to-upgrade-free-app)
 *   [How to Set Up Two-Factor Authentication With Google Authenticator](/howtogeneral/support/how-to-set-up-two-factor-authentication-with-google-authenticator)

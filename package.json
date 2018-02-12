@@ -8,9 +8,9 @@
     "build-test": "HUGO_ENV=test ./node_modules/.bin/gulp build",
     "build-windows-prod": "SET HUGO_ENV production; .\\node_modules\\.bin\\gulp build",
     "build-windows-test": "SET HUGO_ENV test; .\\node_modules\\.bin\\gulp build",
-    "server": "./node_modules/.bin/gulp serve",
-    "server-test": "HUGO_ENV=test ./node_modules/.bin/gulp serve",
-    "server-production": "HUGO_ENV=production ./node_modules/.bin/gulp serve",
+    "serve": "./node_modules/.bin/gulp serve",
+    "serve-test": "HUGO_ENV=test ./node_modules/.bin/gulp serve",
+    "serve-production": "HUGO_ENV=production ./node_modules/.bin/gulp serve",
     "help": "./node_modules/.bin/gulp help"
   },
   "author": {
@@ -38,9 +38,15 @@
     "pump": "^1.0.2",
     "recursive-readdir": "^2.2.1",
     "request": "^2.81.0",
+    "restify": "^6.2.3",
+    "rss": "^1.2.2",
     "run-sequence": "^2.1.0",
     "shelljs": "^0.7.8",
     "spa-server": "^1.0.0",
+    "@types/algoliasearch": "^3.24.2",
+    "@types/gulp-util": "^3.0.34",
+    "@types/lodash": "^4.14.83",
+    "upath": "^1.0.0",
     "write-yaml": "^1.0.0",
     "yaml-front-matter": "^3.4.0",
     "yamljs": "^0.3.0"

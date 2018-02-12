@@ -17,7 +17,7 @@ Within Mendix, there are two use cases for the Feedback widget:
 
     ![](attachments/collaborate/feedback-portal.png)
 
-The purpose of the feedback on Mendix is to provide low priority issues, questions, and ideas on how to improve the Mendix platform.
+The purpose of the feedback on Mendix is to provide low priority issues, questions, and ideas on how to improve the Mendix Platform.
 
 {{% alert type="warning" %}}
 
@@ -25,7 +25,7 @@ The **Feedback** button is not a support option. If there are any platform probl
 
 {{% /alert %}}
 
-You can provide feedback on the Mendix platform on the following pages:
+You can provide feedback on the Mendix Platform on the following pages:
 
 * [Mendix documentation](http://docs.mendix.com)
 * [Developer Portal](http://home.mendix.com)
@@ -60,3 +60,9 @@ You can view your own submitted feedback items in the feedback list in your prof
 3. Go to the **Feedback** tab:
 
     ![](attachments/collaborate/feedbackoverview.jpg)
+
+## 5 Related Content
+
+* [Feedback](/developerportal/collaborate/feedback)
+* [Mendix Profile](/developerportal/general/mendixprofile)
+* [How to Use the Feedback Widget](gathering-user-feedback)

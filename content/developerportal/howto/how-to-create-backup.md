@@ -7,7 +7,7 @@ tags: ["Backup","Mendix Cloud","Developer Portal"]
 
 ## 1 Introduction
 
-This how-to describes how to create backup of a licensed cloud node. This option is not available for Free Apps.
+This how-to describes creating a backup of a licensed cloud node. This option is not available for Free Apps.
 
 **This how-to will teach you how to do the following:**
 
@@ -18,7 +18,8 @@ This how-to describes how to create backup of a licensed cloud node. This option
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-*   You have licensed cloud node
+*   You have a licensed cloud node
+*   You have the correct [Security - Node Permissions](/developerportal/settings/node-permissions)
 
 
 ## 3 Create a Backup

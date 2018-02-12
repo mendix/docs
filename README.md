@@ -10,11 +10,11 @@ Want to contribute? Take a look at [How to Contribute to the Mendix Documentatio
 
 ## Development
 
-There are two ways to develop the documentation. You can run it locally (which is faster) or using Docker. With Docker, you will not have to install Hugo and Node, but you need Docker and Docker Compose.
+There are two ways to develop the documentation: you can run it locally (which is faster) or use Docker. With Docker, you will not have to install Hugo and Node, but you need Docker and Docker Compose.
 
 ### Local Development
 
-The Mendix documentation is built to top of Hugo and Node.JS. When you want to develop the documentation locally, you need to have both installed.
+The Mendix documentation is built on top of Hugo and Node.JS. When you want to develop the documentation locally, you need to have both installed.
 
 #### Prerequisites
 
@@ -44,7 +44,7 @@ Node.js is a JavaScript runtime. You can install it by downloading the installer
 
 #### Running the Server
 
-Running the server is done by executing the following command: `npm run server`.
+Running the server is done by executing the following command: `npm run serve`.
 
 It takes a few seconds (Windows can take longer) to build the site and setup the server.
 

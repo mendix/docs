@@ -18,7 +18,6 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Download and install the [Mendix Modeler](https://appstore.home.mendix.com/link/modelers/)
 * Read [How to Get Start with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-* Read [How to Create a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
 
 ## 3 Adding a Preview Image to Your Custom Widget Package
 
@@ -34,7 +33,6 @@ Please note that older versions of the Modeler ignore this image and render a gr
 
 ## 4 Related Content
 
-* [How to Create a Basic Hello World Custom Widget](create-a-basic-hello-world-custom-widget)
 * [How to Create a Chainable Custom Widget](create-a-chainable-custom-widget)
 * [How to Get Started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
 * [How to Use the Mobile Slider Custom Widget](the-mobile-slider-custom-widget)

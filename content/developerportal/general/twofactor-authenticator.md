@@ -11,11 +11,11 @@ In the **Deploy** and **Operate** categories of the [Developer Portal](http://ho
 
 This document describes the purpose and the fuctionality of two-factor authentication.
 
-## 2 The Puropose
+## 2 The Purpose
 
 Two-factor authentication (2FA) validates a second authentication mechanism next to your password. It is required for Mendix Cloud node activities done on a production environment. 2FA ensures that you are authenticated when performing sensitive activities, such as deploying packages and handling production data.
 
-![](attachments/production.png)
+![](attachments/general/production.png)
 
 For more information, see [Google Authentication](https://www.google.com/landing/2step/#tab=how-it-protects).
 
@@ -23,11 +23,11 @@ For more information, see [Google Authentication](https://www.google.com/landing
 
 Before performing an operation on the production envrionment, you will be required to provide the authentication code.
 
-![](attachments/google.png)
+![](attachments/general/google.png)
 
 After entering the authentication code, your browser session is authorized for the next eight hours.
 
-![](attachments/information.png)
+![](attachments/general/information.png)
 
 ## 4 Setting Up and Disabling
 
@@ -37,12 +37,20 @@ If you change your device or phone number, you must contact [Mendix Support](htt
 
 You can re-activate 2FA by triggering any action that requires 2FA on your production environment.
 
-## 5 Technical Contact
+## 5 Change the Authentication Method
+
+After you have set up your authentication method, you cannot change the authentication method yourself. Only [Mendix Support](https://support.mendix.com) is able to disable the current authentication method. After the authentication method has been disabled, it can be set to a different method.
+
+For example, if you want to change your authentication method from **SMS Authentication** to **Google Authentication**, submit a [Mendix support request](https://support.mendix.com/hc/en-us/requests/new) citing **Reset Authenticator**.
+
+## 6 Technical Contact
 
 Team members with **App Team – Deploy Permissions** are authorized to have node permissions. The Technical Contact can grant those members different permissions that can differ per environment. For example, you might want to limit the access of external developers to only the acceptance environment.
 
 For more information, see [Security – Node Permissions](/developerportal/settings/node-permissions).
 
-## 6 Related Content
- 
-*   [Settings](/developerportal/settings)
+## 7 Related Content
+
+* [Deploy](/developerportal/deploy)
+* [Settings](/developerportal/settings)
+* [Technical Contact](/developerportal/general/technical-contact)

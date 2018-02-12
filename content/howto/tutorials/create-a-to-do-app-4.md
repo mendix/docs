@@ -31,20 +31,20 @@ The **List view swipe** widget has been configured, but the two microflows you c
 3. Open the **ACT_ToDo_MarkAsCompleted** microlfow.
 4. Add an **Activity** that changes the **Completed** attributed of the **ToDo** object to *true* and set **Commit** to *Yes*.
     <iframe width='100%' height='350px' frameborder='0' src='https://modelshare.mendix.com/models/adbe2dd5-2e27-41ab-8f67-3a728917f01b/act_todo_markascompleted?embed=true' allowfullscreen></iframe> 
-    {{% alert type="info" %}}
-    There is no need to refresh in the client due to the "Move out, hide" behavior of the List view swipe widget.
-    {{% /alert %}}
+
+{{% alert type="info" %}}
+There is no need to refresh in the client due to the "Move out, hide" behavior of the List View Swipe widget.
+{{% /alert %}}
 
 ## 4 Running the App and Simulating Touch Behavior of Mobile Device
 
 The app is now finished, so you are going to view it on a simulated mobile device. To emulate the touch behavior of a user on a mobile device (which is mentioned in [How to Build a Mobile To-Do App Step 2: Create the Pages](create-a-to-do-app-2#5)), follow these steps: 
 
 1. Save all changes and run the app locally.
-2. Open the **View App** dropdown and select **View Hybrid Mobile App**.
-3. Choose the **Profile** navigation profile.
-4. Click on the laptop icon under **Preview in browser**.
-5. Press **F12** to open the browser's Developer Tools.
-6. Select the device you want to simlate, and your mouse will act like a finger on the screen.
+2. Open the **View** drop-down menu and select **Responsive Browser (F9)**.
+3. Change the URL to `http://localhost:8080/index.html?profile=HybridPhone` to simulate a phone profile. This will result in a simulation that is easier to preview.
+4. Press **F12** to open the browser's Developer Tools.
+5. Select the device you want to simlate, and your mouse will act like a finger on the screen.
 
     ![](attachments/create-a-to-do-app/todo-12.png)
 

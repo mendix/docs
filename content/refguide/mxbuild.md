@@ -1,6 +1,6 @@
 ---
 title: "MxBuild"
-category: "Deployment"
+category: "General"
 ---
 
 MxBuild is a command-line tool that can be used to deploy and build a Mendix Deployment Package from a Mendix Project.
@@ -17,7 +17,7 @@ The following additional options can be specified when running in Build mode:
 
 | Option | Description |
 | --- | --- |
-| `--target=[package|deploy]` | Use this to choose between creating a deployment package (.mda file) or only performing a deployment of the project. When this option is omitted, a deployment package is created. |
+| <code>––target=[package&#124;deploy]</code> | Use this to choose between creating a deployment package (.mda file) or only performing a deployment of the project. When this option is omitted, a deployment package is created. |
 | `--loose-version-check` | Without this option MxBuild only accepts Mendix projects that have the exact same version as the MxBuild version itself. Adding this option makes it possible to create deployment packages from projects that are created with an older Mendix version. The project will then be upgraded to the MxBuild version before the deployment package is created. Note that the changes to the project as a result of this upgrade will not be stored, so your project will not be changed permanently. |
 | `--write-errors=FILENAME` | When this option is specified, all errors, warnings and deprecations encountered during deployment of the project are written to the specified file in JSON format. This file is only written when the project contains errors. If the file already exists, it will be overwritten without warning. See the section 'Project errors' for a description of the format of this file. |
 

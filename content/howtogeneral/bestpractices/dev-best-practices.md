@@ -100,7 +100,7 @@ For some entities you want to use entity events that are always triggered when a
 
 #### 3.4.2 Calculated Attributes
 
-For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow that has the calculation purpose you can use *CAL\_* as a prefix.
+For attributes, you can choose to store the value in the database or to calculate the value based on a microflow. For the microflow that has the calculation purpose you can use `CAL\_` as a prefix.
 
 #### 3.4.3 Project Settings
 
@@ -190,13 +190,13 @@ Pages that are used as a tooltip page should have the postfix *\_Tooltip*.
 
 ### 4.1 Domain Models
 
-#### 4.1.1 Attributes
+#### 4.1.1 Attributes<a name="411-attributes"></a>
 
 Attributes that do not reflect business-related data, but are only necessary for technical reasons, must start with an underscore (\_). A strong indicator for determining whether an attribute is business-related is to judge whether you would also capture it in case the process under consideration was a paper-only process. If so, it is likely that the attribute will deliver business value.
 
 Using calculated (virtual) attributes is discouraged. These introduce a performance risk since they need to be calculated every time the object is used, regardless of whether the attribute itself is used.
 
-#### 4.1.2 Inheritance
+#### 4.1.2 Inheritance<a name="412-inheritance"></a>
 
 When using inheritance (specialization/generalization), it is recommended to use a maximum of two levels for performance reasons.
 
@@ -210,7 +210,7 @@ Event handlers on domain entities must be used with a lot of caution. They can q
 
 ### 4.2 Microflows
 
-#### 4.2.1 Size
+#### 4.2.1 Size<a name="421-size"></a>
 
 The size of a microflow should not exceed twenty-five elements. An element is any block that the Modeler allows in a microflow (loops, action activities, splits, etc.). In some cases exceeding this limit is acceptable; this can occur, for instance, for validation or data copying flows.
 
@@ -218,7 +218,7 @@ Split microflows up into logical, functional elements. If a microflow has more t
 
 Certain cases (such as validation checks) may require this rule to be ignored to produce an understandable result.
 
-#### 4.2.2 Documentation and Annotations
+#### 4.2.2 Documentation and Annotations<a name="422-documentation-and-annotations"></a>
 
 All complex microflows (more than ten activities or more than two splits) must have an annotation describing the purpose of the microflow and expected parameters and return values. This annotation must be placed at the start, so it is visible when the microflow is opened. This will assist other developers in quickly understanding the general purpose of a microflow, without having to read through it entirely.
 

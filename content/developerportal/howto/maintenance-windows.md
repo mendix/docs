@@ -15,7 +15,7 @@ In the Mendix Cloud you can define a Maintenance Window for all your application
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
-*   Have a Mendix Cloud application where you have transport, monitor, or backup access
+*   Have a Mendix Cloud application where you have transport, monitor, or backup access (for more information, see [Security - Node Permissions](/developerportal/settings/node-permissions))
 
 ## 2 Maintenance Operations
 
@@ -33,9 +33,25 @@ Your "Preferred Maintenance Windows" is a weekly time range where system mainten
 
 1. Go to the [Developer Portal](http://home.mendix.com) and click **Apps** in the top navigation panel.
 2. Click **My Apps** and select **Nodes**.
-3. Select the node of the environment that you want to configure
-4. Click **Environment Details** under the **Deploy** category
-5. Go to the **Maintenance** tab
+
+    ![](attachments/general/myapps.png)
+
+3. Select the node that you want to configure by clicking **Details**.
+4. Click **Environments** under the **Deploy** category:
+
+    ![](attachments/deploy/deploy-scale.png)    
+
+3. Select the node of the environment that you want to configure:
+
+    ![](attachments/deploy/maintenance1.png)
+
+4. Click **Details** for the environment you want to configure:
+
+    ![](attachments/deploy/maintenance2.png)
+
+5. Go to the **Maintenance** tab:
+
+    ![](attachments/deploy/maintenance.png)
 
 {{% alert type="warning" %}}
 
@@ -47,11 +63,9 @@ Here you can configure your preferred maintenance window. Transport rights for t
 
 {{% alert type="info" %}}
 
-When a maintenance operation is planned, it will show up under "Planned Maintenance". By default it will be planned in your preferred maintenance window. You can override the maintenance window of a specific maintenance operation by clicking **Override**.
+When a maintenance operation is planned, it will show up under **Planned Maintenance**. By default it will be planned in your preferred maintenance window. You can override the maintenance window of a specific maintenance operation by clicking **Reschedule**.
 
 {{% /alert %}}
-
-# ![](attachments/deploy/19399087.png)
 
 ## 4 Maintenance Timetable
 
@@ -70,3 +84,16 @@ When a maintenance operation is planned, it will show up under "Planned Maintena
 | 08:00 - 11:00 | 00:00 - 03:00 | 03:00 - 06:00 | 08:00 - 11:00 | 09:00 - 12:00 |
 | 12:00 - 15:00 | 04:00 - 07:00 | 07:00 - 10:00 | 12:00 - 15:00 | 13:00 - 16:00 |
 | 19:00 - 22:00 | 11:00 - 14:00 | 14:00 - 17:00 | 19:00 - 22:00 | 20:00 - 23:00 |
+
+## 5 Related Content
+
+* [Alerts](/developerportal/operate/monitoring-application-health)
+* [Application Trends in Mendix Cloud v3](/developerportal/operate/trends)
+* [Application Trends in Mendix Cloud v4](/developerportal/operate/trends-v4)
+* [How to Manage Company Roles and App Roles](/developerportal/howto/change-roles)
+* [How to Receive Environment Status Alerts](/developerportal/howto/receive-alerts)
+* [Mendix Cloud](/deployment/mendixcloud)
+* [Mendix Cloud v4 - FAQ](/deployment/mendixcloud/mxcloudv4)
+* [Roles Within the Company and Apps](/developerportal/general/roles)
+* [Security - Node Permissions](/developerportal/settings/node-permissions) 
+* [Technical Contact](/developerportal/general/technical-contact)

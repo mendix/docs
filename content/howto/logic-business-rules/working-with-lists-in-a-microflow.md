@@ -1,5 +1,5 @@
 ---
-title: "Working With Lists in a Microflow"
+title: "Work with Lists in a Microflow"
 category: "Logic & Business Rules"
 description: "Teaches you how to work with a list of objects in a microflow as well retrieve a filtered list of objects from the database."
 tags: []
@@ -14,8 +14,8 @@ To see the results of this how-to it is necessary that you setup a test project 
 Before you continue, make sure that you know how to create:
 
 *   **Domain models**, if you need more info, take a look at this [how-to](../data-models/create-a-basic-data-layer).
-*   **Overview and detail pages**, if you need more info, take a look at this [how-to](../guis/create-your-first-two-overview-and-detail-pages).
-*   **Menu items**, if you need more info, take a look at this [how-to](../guis/setting-up-the-navigation-structure).
+*   **Overview and detail pages**, if you need more info, take a look at this [how-to](../ux/create-your-first-two-overview-and-detail-pages).
+*   **Menu items**, if you need more info, take a look at this [how-to](../ux/setting-up-the-navigation-structure).
 
 1.  Create the following domain model:
     ![](attachments/18448705/18581378.png)
@@ -48,7 +48,7 @@ In the previous section you have set up a basic data structure and created some 
     ![](attachments/18448686/18581092.png)
     You should see the empty Microflow again:
     ![](attachments/8784287/8946316.png)
-8.  Open the **Toolbox**. It should be on the bottom right of the Business Modeler.
+8.  Open the **Toolbox**. It should be on the bottom right of the Desktop Modeler.
     ![](attachments/8784287/8946802.png)
 9.  Drag a **Retrieve** action from the toolbox to the line between the green start and red end event. This inserts a retrieve action activity.
     ![](attachments/18448686/18581091.png)

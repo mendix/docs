@@ -1,10 +1,10 @@
 ---
-title: "Custom Settings"
+title: "Customization"
 category: "Runtime"
 description: "Describes custom server, log file, database, Amazon S3 storage service, Microsoft Azure, IBM Bluemix object storage, and web client settings in Mendix."
 ---
 
-## Custom Settings
+## 1 Custom Settings
 
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by the Modeler.
 
@@ -16,7 +16,7 @@ Only use this functionality if you know exactly what you are doing. Wrong values
 
 Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`. For a more detailed list of settings and example values please consult the [fully-documented m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-## General Settings
+## 2 General Settings
 
 The following custom settings can be configured:
 
@@ -34,14 +34,14 @@ The value can be true or false. | false |
 | CACertificates | Comma separated list of paths to Authority Certificates. |   |
 | ClientCertificates | Comma separated list of paths to Client Certificates. Example: `D:\App\Mx1.pfx, D:\App\Mx2.pfx, D:\App\Mx3.pfx, D:\App\Mx4.pfx` |  |
 | ClientCertificatePasswords | Comma separated list of passwords for Client Certificates (should match the "ClientCertificates" order). Example: `pwd1, pwd2, pwd3, pwd4` |   |
-| WebServiceClientCertificates | Deprecated since version 7.2. Defines which web service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as [`"imported web service name": "path to certificate"`] without brackets. Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces. |  |
-| ClientCertificateUsages | Introduced in version 7.2. Defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as [`"identifier": "path to certificate"`] without brackets. For web services, use the imported web service name as the identifier. For REST services, use the host name of the remote server as the identifier. Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: ![](attachments/Custom+Settings/code_snippet.png) |  |
+| WebServiceClientCertificates | Deprecated since version 7.2.<br/>Defines which web service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as [`"imported web service name": "path to certificate"`] without brackets. Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces. |  |
+| ClientCertificateUsages | Introduced in version 7.2.<br/>Only use this when<br/>1. You have multiple client certificates, and<br/>2. You want to configure specific certificates for specific servers<br/> This setting defines which service must use which client certificate. The value of this setting must be a comma-separated list of key/value items. A key/value item must be specified as `"identifier": "path to certificate"`.<br/>For web services, use the imported web service name as the identifier.<br/>For REST services, use the host name of the remote server as the identifier.<br/>Please note that any backslash in the path must be doubled. The whole value must be enclosed by braces (`{ }`). For example: ![](attachments/Custom+Settings/code_snippet.png) |  |
 | SessionTimeout | Defines after how much time session becomes invalid (in milliseconds). After that timeout a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 |
 | ClusterManagerActionInterval | The interval (in milliseconds) used for performing all cluster manager actions. These actions include, unblocking users, and removing invalid sessions. If nothing is specified the interval is half the SessionTimeout. | 300000 |
 | com.mendix.core.StorageService | Defines which storage service module will be used. The storage service module takes care of storing the actual files asssociated with 'System.FileDocument' objects, such as uploaded files. Possible values are 'com.mendix.storage.localfilesystem' and 'com.mendix.storage.s3'. From Mendix 6.6 onwards 'com.mendix.storage.azure' is also available. | com.mendix.storage.localfilesystem |
 | com.mendix.core.SessionIdCookieName | Defines the name of the cookie value which represents the session id. Can be useful to change when running in a container which assumes a certain name for the session cookie (e.g. Pivotal assumes 'JSESSIONID' as session cookie name). | XASSESSIONID |
 
-## Log File Settings
+## 3 Log File Settings
 
 The settings below influence the behavior of the log files. These settings can only be used on-premises. In the cloud these won't result in a difference in behavior.
 
@@ -51,9 +51,9 @@ The settings below influence the behavior of the log files. These settings can o
 | MaxLogFileSize | The maximum size per log file. When the log file has been reached this maximum size, the log file will be backed up and a new empty log file will be used. | 2097152 (2 MB) |
 | MaxLogFileCount | The maximum count of log files preserved (actual file plus back-up files). When the maximum count has been reached, the oldest backup file will be removed. | 10 |
 
-## Database Settings
+## 4 Database Settings
 
-### Common Settings
+### 4.1 Common Settings
 
 | Name | Description | Default value |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ The settings below influence the behavior of the log files. These settings can o
 The value can be true or false. | true |
 | DataStorage.EnableDiagnostics | This setting can be used to generate a uniqueness constraint violation report. | false |
 
-### Connection Pooling
+### 4.2 Connection Pooling
 
 The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can for example define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](http://commons.apache.org/pool/) .
 
@@ -80,7 +80,7 @@ The settings below are used to define the database connection pooling behavior. 
 | ConnectionPoolingSoftMinEvictableIdleTimeMillis | Sets the minimum amount of time an object may sit idle in the pool before it is eligible for eviction by the idle object evictor (if any), with the extra condition that at least "minIdle" amount of object remain in the pool. When non-positive, no objects will be evicted from the pool due to idle time alone. | 300 000 (5 minutes) |
 | ConnectionPoolingNumTestsPerEvictionRun | Sets the max number of objects to examine during each run of the idle object evictor thread (if any). When a negative value is supplied, ceil(getNumIdle())/abs(getNumTestsPerEvictionRun()) tests will be run. I.e., when the value is -n, roughly one nth of the idle objects will be tested per run. | -3 |
 
-### Migration Settings
+### 4.3 Migration Settings
 
 The settings below are used to define the source database from which all data should be copied to the main database. You have to specify the settings below only at once. The main database should exist and should be empty. During the app start-up, the data will be copied if the settings below are specified. Remove the settings afterwards, because they are not necessary anymore.
 
@@ -100,7 +100,7 @@ Possible values: HSQLDB, MYSQL, ORACLE, POSTGRESQL, SQLSERVER |   |
 | SourceDatabaseUserName | The user name for the connection to the source database. |   |
 | SourceOracleServiceName | Defines the SERVICE_NAME when you have a connection with an Oracle DBMS as source. |   |
 
-## Amazon S3 Storage Service Settings
+## 5 Amazon S3 Storage Service Settings
 
 The following settings influence the behavior of the Amazon S3 Storage Service module. Using these settings manually in the Mendix Cloud is strongly discouraged as the files stored in external systems will not be included in backups creation/restoration.
 
@@ -111,11 +111,11 @@ The following settings influence the behavior of the Amazon S3 Storage Service m
 | com.mendix.storage.s3.BucketName | Name of the bucket where the files are stored on S3. |   |
 | com.mendix.storage.s3.ResourceNameSuffix | Suffix for the keys under which objects are stored. This can be used when buckets are divided in different segments for different users with different credentials (e.g. store objects as "[key].customer1" for customer1 and as "[key].customer2" for customer2) |   |
 | com.mendix.storage.s3.PerformDeleteFromStorage | Defines whether a delete of a Mendix File Document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it's also used as a backup service. | true |
-| com.mendix.storage.s3.EndPoint | Overrides the default AWS endpoint. Use this setting when the storage service is on a non-AWS location. Both the endpoint (e.g. 's3.example.com') or the full URL, including the protocol, are supported (e.g. '<a rel="nofollow">https://s3.example.com').</a> Note that when setting a custom endpoint path style access will be enabled. [Click here for more information.](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)) |   |
+| com.mendix.storage.s3.EndPoint | Overrides the default AWS endpoint. Use this setting when the storage service is on a non-AWS location. Both the endpoint (e.g. 's3.example.com') or the full URL, including the protocol, are supported (e.g. `https://s3.example.com`). Note that when setting a custom endpoint path style access will be enabled. For more information, see [Class S3ClientOptions](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)). |   |
 | com.mendix.storage.s3.UseV2Auth | Let the authentication policy use 'Signature Version 2' instead of the default 'Signature Version 4'. Set this setting to 'true' when the endpoint does not support 'Signature Version 4'. | false |
 | com.mendix.storage.s3.EncryptionKeys | List of keys which can be used to encrypt and decrypt data at rest in S3\. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: ![](attachments/Custom+Settings/code_snippet_2.png) |   |
 
-## Microsoft Azure SQL
+## 6 Microsoft Azure SQL
 
 {{% alert type="info" %}}
 
@@ -135,7 +135,7 @@ First you need to create an Azure SQL database (for information on how to do thi
 | DatabaseUserName | your-username |   |
 | DatabasePassword | your-password |   |
 
-## Microsoft Azure Blob Storage Settings
+## 7 Microsoft Azure Blob Storage Settings
 
 {{% alert type="info" %}}
 
@@ -152,8 +152,15 @@ These settings can be used to store files using the Microsoft Azure blob storage
 | com.mendix.storage.azure.AccountKey | Account key to authenticate with the azure blob storage service |   |
 | com.mendix.storage.azure.Container | Name of the container containing the blob. The container is created in case it does not exist yet. |   |
 | com.mendix.storage.azure.ParallelismFactor | Maximum number of parallel multi-part file uploads / downloads. We advise not to change this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
+|com.mendix.storage.azure.UseHttps| Introduced in version 7.7. For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
 
-## IBM Bluemix Object Storage Settings
+{{% alert type="warning" %}}
+
+In Mendix 7.7.0, we changed Azure blob storage's default connection protocol from HTTP to HTTPS to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). For existing customers switching to this Mendix version, this should be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
+
+{{% /alert %}}
+
+## 8 IBM Bluemix Object Storage Settings
 
 {{% alert type="info" %}}
 
@@ -178,13 +185,15 @@ Note that unlike other storage services, IBM Bluemix does not provide server-sid
 | com.mendix.storage.swift.credentials.Password | Password |   |
 | com.mendix.storage.swift.credentials.Region | Region |   |
 
-## Web Client Settings
+## 9 Web Client Settings
 
 The following settings influence the behavior of the Mendix web client.
 
 | Name | Description | Default value |
 | --- | --- | --- |
 | EnableKeepAlive | Defines whether the web client sends a keep alive request every SessionTimeout/2 milliseconds, to prevent a session timeout. Each click in the browser also acts as KeepAlive. Disabling this property will result in a user being logged out automatically after 10 minutes of inactivity, even if the browser remains open. | true |
-| PhoneUserAgentRegEx | Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a phone. The regular expression is matched against the User-Agent header sent by the client's web browser. | Android. *Mobile (iPhone, iPod, BlackBerry) |
+| PhoneUserAgentRegEx | Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a phone. The regular expression is matched against the User-Agent header sent by the client's web browser. | Android, Mobile (iPhone, iPod, BlackBerry) |
 | TabletUserAgentRegEx | Defines the regular expression that is used to determine whether a user is visiting a Mendix application from a tablet. The regular expression is matched against the User-Agent header sent by the client's web browser. | Android, iPad |
 | com.mendix.webui.HybridAppLoginTimeOut | Determines how many minutes your token will remain valid before re-authenticating using your full credentials. This setting defaults to -1, which is equal to no timeout. | -1 |
+| com.mendix.webui.FeedbackSizeWarningThreshold | Introduced in version 7.0. A warning is logged when the feedback size exceeds the threshold. Feedback is sent from server to client to instruct (for example, to refresh objects or to open a page). They are serialized as "instructions" in the server response. If there are too many instructions, this can have performance implications, as they all have to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 5000 |
+| com.mendix.webui.StateSizeWarningThreshold | Introduced in version 7.0. A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |

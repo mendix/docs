@@ -3,31 +3,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://developer-static.mendix.com" crossorigin>
+  <link rel="preconnect" href="https://developer.mendixcloud.com" crossorigin>
+  <link rel="preconnect" href="https://search-static.mendix.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://sprintr.home.mendix.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://js.intercomcdn.com" crossorigin>
+
   {{ if .Page.URL }}
   {{ partial "base/seo" . }}
   {{ end }}
   {{ .Hugo.Generator }}
 
-  <link rel="icon" type="image/x-icon" href="https://www.mendix.com/favicon.ico">
-  <link rel="shortcut icon" href="https://www.mendix.com/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://www.mendix.com/tileicon.png">
+  <link rel="apple-touch-icon-precomposed" href="https://www.mendix.com/touch-icon.png">
+  <link rel="icon" href="https://www.mendix.com/favicon.png">
+  <link rel="manifest" href="/manifest.json">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,300,600,700" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-  <link href="https://developers.mendix.com/wp-content/themes/mendix/assets/css/fonts.css" rel="stylesheet" type="text/css" />
-  <link href="https://developers.mendix.com/wp-content/themes/mendix/assets/css/external-header-footer.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,300,600|Inconsolata" rel="stylesheet" type="text/css" />
+
+  <link href="https://developer-static.mendix.com/mx-header.css" rel="stylesheet">
+  <link href="https://search-static.mendix.com/search.css" rel="stylesheet">
 
   <!--[if lte IE 9]>
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
   <![endif]-->
-  <script src="https://use.typekit.net/ytc8qtv.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
 
   {{ partial "asset" (dict "page" . "type" "css" "filename" "main.css") }}
-  {{ partial "asset" (dict "page" . "type" "css" "filename" "search_autocomplete.css") }}
 
   <meta name="google-site-verification" content="aMsqgUmbPjh3W_nNVxtQEkUEdMcxM-EULoGHGBDGpYo" />
   <link rel="search" type="application/opensearchdescription+xml" href="/search/opensearch.xml" title="Mendix Documentation"/>

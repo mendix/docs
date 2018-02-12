@@ -5,7 +5,7 @@ priority: 6
 
 ## 1 The Mendix Community Team
 
-The Mendix Community Team is responsible for the Mendix [App Store](http://appstore.home.mendix.com), [developers website](http://developers.mendix.com), [documentation](https://docs.mendix.com/), [webinars](https://developers.mendix.com/training/webinars/), and [much](https://www.meetup.com/Mendix-Netherlands), [much more](https://forum.mendixcloud.com/).
+The Mendix Community Team is responsible for the Mendix [App Store](http://appstore.home.mendix.com), [community website](http://developers.mendix.com), [documentation](https://docs.mendix.com/), [webinars](https://developers.mendix.com/training/webinars/), and [much](https://www.meetup.com/Mendix-Netherlands), [much more](https://forum.mendixcloud.com/).
 
 The team's goal is to activate and engage the community of Mendix developers in order to provide them with the necessary tools, knowledge, and assistance for building better apps. The team is continuously evolving while working on new ways to make the life of developers easier by providing them with better content and opportunities on a daily basis.
 
@@ -37,6 +37,6 @@ These pages provide detailed information on using the Mendix App Store:
 * [How to Share App Store Content](app-store/share-app-store-content)
 * [App Store Content Support](app-store/app-store-content-support)
 
-## 4 More Information
+## 5 More Information
 
 Questions about the team or what we do can be sent to *community@mendix.com*.

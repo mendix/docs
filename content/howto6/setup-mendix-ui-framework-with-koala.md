@@ -26,10 +26,12 @@ In this chapter we will create a new app and select a theme from the New App sel
 1.  Open the **Mendix Modeler**.
 2.  Create a **New App** from the **My Apps** screen in the Mendix Modeler.
 
-     ![](attachments/18448712/18581487.png)
+    ![](attachments/18448712/18581487.png)
+
 3.  Select a theme for your app.
 
     ![](attachments/18448712/18581488.png)
+
 4.  You can now deploy your app or just head over to section 3 to configure Koala.
 
 ## 3\. Configure Koala
@@ -39,6 +41,7 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 1.  Open your **App Project Folder** in Koala by clicking on the plus button in the left sidebar at the top (or drag your folder in Koala).
 
     ![](attachments/18448712/18581486.png)
+
 2.  Select the **project directory** from your newly created App. Koala automatically detects the Sass and CSS files and you are ready. Koala automatically compiles the files you want to adjust.
 
     ![](attachments/18448712/18581485.png)
@@ -48,11 +51,12 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 1.  Open the **Project Directory** from your App in your desired text editor.
 
     ![](attachments/18448712/18581502.png)
+
 2.  The **theme** folder is where you can find the theme that was selected when creating a New App. The folder theme\styles\sass\custom will be used to make our own changes. Let's change the background for our sidebar!
 3.  Open up the file **custom-variables.scss**.
 
      ![](attachments/18448712/18581503.png)
-    Let's take a look at **Step 2** in the **custom-variables.scss** file. As the comments suggest we can adjust the background-color for the sidebar. 
+    Let's take a look at **Step 2** in the **custom-variables.scss** file. As the comments suggest we can adjust the background-color for the sidebar.
 4.  Change the color from white (#FFF) to red (#FF0000) and save the file.
 
     ![](attachments/18448712/18581504.png)

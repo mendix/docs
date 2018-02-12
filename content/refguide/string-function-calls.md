@@ -241,6 +241,10 @@ is equivalent to the following expression:
 find('mystring', 'otherstring') != -1
 ```
 
+{{% alert type="warning" %}}
+This function is case-senstive.
+{{% /alert %}}
+
 ### Input Parameters
 
 * Original string, the string that you want to search in
@@ -309,7 +313,7 @@ Whether the original string ends with the substring.
 * Type: Boolean
 
 ```java
-startsWith('thisismystring', 'ring')
+endsWith('thisismystring', 'ring')
 ```
 
 returns:

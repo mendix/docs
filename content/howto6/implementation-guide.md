@@ -63,7 +63,7 @@ invisible to the user.
 
 The PushNotifications module contains a microflow named `AfterStartup_PushNotifications` which will start the connectors for FCM and APNs for you. Call this microflow from your AfterStartup microflow.
 
-If your project uses Mendix SSO, most likely the `AppCloudServices.StartAppCloudServices` microflow is set to execute after startup. Please refer to the [reference guide](/howtogeneral/mendixcloud/integrate-your-app-with-mendix-sso) for details. We suggest to change your startup microflow to a new microflow, from where you call both after startup microflows.
+If your project uses Mendix SSO, most likely the `AppCloudServices.StartAppCloudServices` microflow is set to execute after startup. Please refer to the [reference guide](/deployment/mendixcloud/integrate-your-app-with-mendix-sso) for details. We suggest to change your startup microflow to a new microflow, from where you call both after startup microflows.
 <iframe width="100%" height="491px" frameborder="0" src="https://modelshare.mendix.com/models/02c590e5-f8bf-4f0e-90d6-3719390ee863/onstartupacsandpushnotifications?embed=true" allowfullscreen=""></iframe>
 
 ### 3.5 Step 5 – Set up the Administration Pages

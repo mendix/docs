@@ -8,7 +8,7 @@ This section describes how to manage scheduled events under Linux.
 
 ## Instructions
 
-To manage the scheduled events we have to edit the `m2ee.yaml` configuration file. See [Mendix Hosting Enviroment project structure and commands](mendix-hosting-enviroment-project-structure-and-commands) about finding this file and opening it in an editor.
+To manage the scheduled events we have to edit the `m2ee.yaml` configuration file. 
 
 At the end of the configuration file, you'll see the following content:
 

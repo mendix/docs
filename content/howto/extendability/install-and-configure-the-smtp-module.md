@@ -29,18 +29,18 @@ In this section, you will install the SMTP email module and integrate it into an
 
 ### 3.1 Installing the Module into Your Application
 
-1. Download the SMTP email module from the Mendix App Store:
+1.  Download the SMTP email module from the Mendix App Store:
 
     ![](attachments/19202956/19398974.png)
 
-2. Download and set up the [Encryption Module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption), which will allow for protected passwords. 
+2.  Download and set up the [Encryption Module](https://appstore.home.mendix.com/link/app/1011/Mendix/Encryption), which will allow for protected passwords. 
 
     {{% alert type="warning" %}}
 
     As with all app store modules, it is important that you do NOT modify any contents within the module itself. If you do, you run the risk of having your changes overwritten upon the next update.
 
     {{% /alert %}}
-3. Create a new module called **EmailCustomizations** to house the project-specific pages and flows:
+3.  Create a new module called **EmailCustomizations** to house the project-specific pages and flows:
 
     ![](attachments/19202956/19398975.png)
 
@@ -54,11 +54,11 @@ In this section, you will install the SMTP email module and integrate it into an
 
 ### 3.3 Configuring the SMTP Settings
 
-1. Launch your application and head to the SMTP settings page that have just been exposed. On the **Settings** tab, enter the SMTP credentials of the existing relay:
+1.  Launch your application and head to the SMTP settings page that have just been exposed. On the **Settings** tab, enter the SMTP credentials of the existing relay:
 
     ![](attachments/19202956/19398977.png)
 
-2. Click **Save** to commit the settings to the database.
+2.  Click **Save** to commit the settings to the database.
 
     {{% alert type="warning" %}}
 
@@ -82,19 +82,19 @@ Making an email is as simple as generating an **Email** object, populating the v
 
 To send an email in a microflow, follow these steps:
 
-1. Create a page called **MakeANewEmail** using a basic vertical form:
+1.  Create a page called **MakeANewEmail** using a basic vertical form:
 
     ![](attachments/19202956/19398980.png)
 
-2. On this page, allow users to edit the following values: **To**, **CC**, **BCC**, **Subject**, and **Plain Body**:
+2.  On this page, allow users to edit the following values: **To**, **CC**, **BCC**, **Subject**, and **Plain Body**:
 
     ![](attachments/19202956/19398981.png)
 
-3. Create a microflow called **IVK_CreateNewEmail** that generates a new email object and passes it to the page from step 2 above. Add this microflow to your navigation:
+3.  Create a microflow called **IVK_CreateNewEmail** that generates a new email object and passes it to the page from step 2 above. Add this microflow to your navigation:
 
     ![](attachments/19202956/19398982.png)
 
-4. On the **MakeANewEmail** page, delete the **Save** button and add an action that calls a microflow. Call this microflow **IVK_UserManualEmailSend**:
+4.  On the **MakeANewEmail** page, delete the **Save** button and add an action that calls a microflow. Call this microflow **IVK_UserManualEmailSend**:
 
     ![](attachments/19202956/19398983.png)
 
@@ -103,11 +103,11 @@ To send an email in a microflow, follow these steps:
     Don’t forget to put a progress bar on the call for your action button. In the time it takes to send the email, you want users to know that the app is still working.
 
     {{% /alert %}}
-5. In the microflow **IVK_UserManualEmailSend**, call the **IVK_SendEmail** sub microflow in the SMTP module, and then close the page:
+5.  In the microflow **IVK_UserManualEmailSend**, call the **IVK_SendEmail** sub microflow in the SMTP module, and then close the page:
 
     ![](attachments/19202956/19398984.png)
 
-6. Because users are only editing the plain text of the email on the previous page, you need to change the email so that the **UseOnlyPlainText** Boolean is set to true. In the **IVK_UserManualEmailSend** microflow, edit the change action to set the Boolean to true:
+6.  Because users are only editing the plain text of the email on the previous page, you need to change the email so that the **UseOnlyPlainText** Boolean is set to true. In the **IVK_UserManualEmailSend** microflow, edit the change action to set the Boolean to true:
 
     ![](attachments/19202956/19398985.png)
 
@@ -127,15 +127,15 @@ To set up the email queue, follow these steps:
 
 To add this to our sample application, do the following:
 
-1. Add a new action to the **MakeANewEmail** page. Have it call the **IVK_QueueEmail** microflow:
+1.  Add a new action to the **MakeANewEmail** page. Have it call the **IVK_QueueEmail** microflow:
 
     ![](attachments/19202956/19398987.png)
 
-2. Have this microflow change the email object so that the status is QUEUED and the queued Boolean is set to true:
+2.  Have this microflow change the email object so that the status is QUEUED and the queued Boolean is set to true:
 
     ![](attachments/19202956/19398988.png)
 
-3. The module already contains a scheduled event called **SE_SendQueuedEmails**, which retrieves the emails in the queue and sends them out. All that is left to do is to turn this scheduled event on, and your email queue is set to go!
+3.  The module already contains a scheduled event called **SE_SendQueuedEmails**, which retrieves the emails in the queue and sends them out. All that is left to do is to turn this scheduled event on, and your email queue is set to go!
 
     ![](attachments/19202956/19398989.png)
 
@@ -156,7 +156,6 @@ The SMTP email module contains a number of other powerful tools. Some of the enh
 ## 7 Related Content
 
 * [How to Explore the Connectors and Adapters](explore-the-connectors-and-adapters)
-* [How to Send Custom Emails From Your App](send-custom-emails-from-your-app)
 * [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
 * [How to Install and Configure the SMTP Module](install-and-configure-the-smtp-module)
 * [How to Visualize Data Using the ChartsJS Module](visualize-data-using-the-chartsjs-module)

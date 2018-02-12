@@ -5,7 +5,7 @@ category: "Data Models"
 
 This how-to explains how you can improve performance by de-normalizing data in Mendix. Before you can start with this how-to you need to create a basic data structure so that you have data to work with.
 
-## 1. Prepratation
+## 1. Preparation
 
 *   Create a basic data layer. You can use this how-to: [Creating a basic data layer](creating-a-basic-data-layer)
 

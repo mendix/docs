@@ -14,28 +14,24 @@ When you click **Model** in the **Develop** category of the Developer Portal, yo
 
 ## 2 Desktop Modeler
 
-Use the powerful Mendix Desktop Modeler to rapidly build enterprise-ready business apps. In the Modeler, you can visually model your app UI, logic for your business rules, the domain model, and integrations with REST and other complex back-end services.
-
-When you click **Edit in Desktop Modeler**, the app will be opened in the Desktop Modeler.
+Use our powerful Desktop Modeler to rapidly build powerful enterprise apps. Visually model your app’s domain model, UI, logic, and integrations with 3rd party services and back-end systems. Click **Edit in Desktop Modeler** to open your app in the Desktop Modeler.
 
 ### 2.1 Help Me Get Started
 
-If you need help getting started with the Desktop Modeler, click **Help me get started**. 
+Click **Help me get started** if you need help getting started with the Desktop Modeler. 
 
-To quickly start building your new app, follow these steps:
+Follow these steps to quickly start developing your new app:
 
 1. Download the Mendix Desktop Modeler by clicking **Download**.
-2. Install the Desktop Modeler on your system. It will start automatically after installation.
-3. Edit your new app by choosing it from the list of recent apps in the Desktop Modeler.
+2. Install the Desktop Modeler on your computer. It will start automatically after the installation is completed.
+3. Edit your new app by selecting it from the list of recent apps in the Desktop Modeler.
 
-At the bottom of the page, the **What's next** category presents the following options:
+The **What's next** category at the bottom of the page presents the following options:
 
-* **Show me the basics** includes a link to the [Mendix Getting Started training course](https://gettingstarted.mendixcloud.com/link/courses/gettingstarted)
-* **I've got a question** includes links to the [Mendix Forum](https://gettingstarted.mendixcloud.com/index3.html) and the [Mendix documentation](https://docs.mendix.com/)
-* **I'm ready to get serious** includes a link to the [Mendix Introduction Course](https://gettingstarted.mendixcloud.com/link/courses/introductioncourse)
+* **Show me the basics** includes a link to the [Getting Started learning path](https://gettingstarted.mendixcloud.com/link/path/2)
+* **I've got a question** includes links to the Mendix [Forum](https://gettingstarted.mendixcloud.com/index3.html) and the [Documentation](https://docs.mendix.com/)
+* **I'm ready to get serious** includes a link to the [Become a Rapid Developer learning path](https://gettingstarted.mendixcloud.com/link/path/10)
 
 ## 3 Web Modeler
 
-You can quickly get started building your next smart app with the Web Modeler from the convenience of your web browser. Bootstrap your app with visual UI, business rules, and domain model editors. Integrate with back-end services through ready-made connectors.
-
-You will soon be able to click **Edit in Web Modeler** to open the app in the Web Modeler.
+Design beautiful apps with the Web Modeler. Leverage the integrated Atlas UI in the WYSIWYG page editor. Visually add your app’s domain model and business logic, from the convenience of your browser. Click **Edit in Web Modeler** to open the app in the Web Modeler (Atlas UI based apps only).

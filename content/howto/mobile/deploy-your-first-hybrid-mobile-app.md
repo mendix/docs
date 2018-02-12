@@ -6,7 +6,7 @@ tags: []
 
 ## 1 Introduction
 
-Mendix supports mobile web development, and it is also possible to create and publish hybrid mobile apps. A hybrid app gives you the best of both worlds: it's a web application that can be deployed using the Mendix platform, but it runs inside a container that can be installed as a native app on your device. This container handles native capabilities like the camera and GPS, and it can even be published in the Apple App Store and Google Play. The big advantage of a hybrid mobile app is that you only need to go through the approval process once and every future update is just a new deployment of your app in the Mendix cloud.
+Mendix supports mobile web development, and it is also possible to create and publish hybrid mobile apps. A hybrid app gives you the best of both worlds: it's a web application that can be deployed using the Mendix Platform, but it runs inside a container that can be installed as a native app on your device. This container handles native capabilities like the camera and GPS, and it can even be published in the Apple App Store and Google Play. The big advantage of a hybrid mobile app is that you only need to go through the approval process once and every future update is just a new deployment of your app in the Mendix cloud.
 
 **This how-to will teach you how to do the following:**
 
@@ -17,8 +17,8 @@ Mendix supports mobile web development, and it is also possible to create and pu
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Version 5.10 or higher of the Mendix Modeler (available from the [App Store](https://appstore.home.mendix.com/link/modelers)
-* The Mendix Developer App, which makes it easy to see a hybrid application in action without the need to get it approved in the App Store (for details and download links, see [Getting the Mendix Developer App](/refguide7/getting-the-mendix-developer-app) in the Mendix Reference Guide)
+* Install the Mendix Modeler (available from the [App Store](https://appstore.home.mendix.com/link/modelers))
+* Install the Mendix mobile app on you device, which makes it easy to see a hybrid application in action without the need to get it approved in the Mendix App Store (for details and download links, see [Getting the Mendix App](/refguide7/getting-the-mendix-app) in the Mendix Reference Guide)
 
 ## 3 Opening a Hybrid Example App
 
@@ -32,11 +32,11 @@ To open a hybrid example app, follow these steps:
 
     ![](attachments/18448692/18581200.png)
 
-    The modeler will open the example application and create a new project for you:
+    The Modeler will open the example application and create a new project for you:
 
     ![](attachments/18448692/18581199.png)
 
-3. Click **Run in Sandbox** to deploy this application to the Mendix cloud:
+3. Click **Run** to deploy this application to the Mendix Cloud:
 
     ![](attachments/18448692/18581186.png) 
 
@@ -49,11 +49,11 @@ To open a hybrid example app, follow these steps:
 
     ![](attachments/18448692/18581184.png)
 
-5. Open the **Mendix Developer App** on your device and select **Scan QR Code**:
+5. Open the Mendix mobile app on your device and select **Scan QR Code**:
 
     ![](attachments/18448692/18581190.png)
 
-6. Scan the QR code on the screen with the Mendix Developer App:
+6. Scan the QR code on the screen with the Mendix mobile app:
 
     ![](attachments/18448692/18581189.png)
 

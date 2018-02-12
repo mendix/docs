@@ -1,11 +1,8 @@
 ---
-title: "How-To's"
+title: "How-to's"
 ---
 
-This is the main document in this category:
+These are the main documents in this category:
 
-* [Get Started](getting-started)
-* [Create a Custom Action](create-custom-action)
-
-
-
+* [ATS 1 How-to's](ht-version-1/ht-version-1)
+* [ATS 2 How-to's](ht-version-2/ht-version-2)

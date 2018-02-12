@@ -9,13 +9,13 @@ Actions perform tasks (for example, entering text in a text box widget). They wo
 
 Unlike a test case, an action cannot run on its own.
 
-In ATS, you create a new action by going to **Test Cases** in the navigation menu, then clicking **New Action** in the **Actions** drop-down menu in the **Repository** tab. A dialog box then opens where you give your action a name and an optional description. After you have created the new action, click its name and the **Action Details** page will open.
+In ATS, you create a new action by going to **Test Cases** in the navigation menu and then clicking **New Action** in the **Actions** drop-down menu in the **Repository** tab. A dialog box then opens where you give your action a name and an optional description. After you have created the new action, click its name and the **Action Details** page open.
 
-Another way to create a new action is to extract an action out of test steps from a test case. For more information on how to extract an action, see the "Extract Action, Copy, Paste, Delete" section of [Test Case reference](test-case).
+Another way to create a new action is to extract an action out of test steps from a test case. For more information on how to extract an action, see the "Extract Action, Copy, Paste, Delete" section of [Test Case Reference](test-case).
 
 ## 2 Action Details
 
-In the upper-left corner of the **Action Details** page, you can find the name and the description of the action. To change them, click them and edit the text. ATS saves the changes automatically.
+In the upper-left corner of the **Action Details** page, you can find the name and the description of the action. To change these, click them and edit the text. ATS saves the changes automatically.
 
 In the upper-right corner of the page, you can find the **Export** drop-down menu, where you can export the action definition. This creates an XML file, which you can then import into another ATS project.
 
@@ -25,7 +25,7 @@ In the upper-right corner of the page, you can find the **Export** drop-down men
 
 Another way of adding test steps to a test case is to use the recorder by clicking **Record**. For more information, see [Recorder](recorder).
 
-The test step details open by clicking the test step description. For more information, see [Test Step](test-step).
+Click the test step description to open the test step details. For more information, see [Test Step](test-step).
 
 ### 2.2 Settings
 
@@ -35,13 +35,13 @@ Under the **Settings** tab, set the **Input Parameters** and **Output Parameters
 
 #### 2.2.1 Input Parameters
 
-An input parameter is a value that you use inside your action. The input parameter is shown as an [action parameter](test-step#4action-parameter) of a test step. An action can have multiple optional or required input parameters, but only one output parameter.
+An input parameter is a value that you use inside your action. The input parameter is shown as an [action parameter](test-step#4action-parameter) of a test step. An action can have multiple optional or required input parameters, but it can only have one output parameter.
 
 The following table describes the buttons under **Input Parameters**:
 
 | Button Label | Description |
 | --- | --- |
-| New | Creates a new input parameter. It opens a dialog box, where you give the input parameter a name and an optional description, and then set the input parameter properties. |
+| New | Creates a new input parameter. This opens a dialog box where you give the input parameter a name and an optional description and then set the input parameter properties. |
 | Edit | Opens the editor for a selected input parameter. |
 | Delete | Deletes the selected input parameter. |
 | Up | Swaps the order of the selected input parameter with the input parameter above. |
@@ -49,7 +49,7 @@ The following table describes the buttons under **Input Parameters**:
 
 To create a new input parameter, click the **New** button below **Input Parameters**. This opens a dialog box where you give the input parameter a name and an optional description.
 
-Under **Properties**, you find the extra settings for the input parameter:
+Under **Properties**, you see the extra settings for the input parameter:
 
 | Property Name | Description |
 | --- | --- |
@@ -69,7 +69,7 @@ To set an output parameter, click **Set** under **Output Parameter**. The follow
 | Description | An optional description for the output parameter. |
 | Datatype | The data type of the output parameter. |
 
-To pass the outcome of your action to the output parameter, you must use the Set Return Value action in your test case. ATS uses the input value of the Set Return Value action as the output parameter of the current action.
+To pass the outcome of your action to the output parameter, you must use the **Set Return Value** action in your test case. ATS uses the input value of the Set Return Value action as the output parameter of the current action.
 
 If you want to remove the output parameter from your action, click **Remove**.
 

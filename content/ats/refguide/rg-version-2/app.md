@@ -19,24 +19,24 @@ To generate a report of the status of your tests, click **Download Report**. The
 
 ### 1.2 Recent Tests
 
-Under **Recent Tests**, you can find detailed information about the status of all your test cases and test suites. You can see the passed time since the latest run, its result, and the success rate (for test suites). The success rate is calculated using the results of all the containing test cases. For data-driven tests, the data set is displayed in the **test data** column.
+Under **Recent Tests**, you can find detailed information about the status of all your test cases and test suites. You can see the duration since the latest run, its result, and the success rate (for test suites). The success rate is calculated using the results of all the containing test cases. For data-driven tests, the data set is displayed in the **test data** column.
 
 The results of your tests are displayed as icons. The following table explaines the meanings of those icons:
 
 | Icon | Meaning |
 | ---- | ------- |
-|![](attachments/project/passed-icon.png)| Passed: the test was executed successfully. |
-|![](attachments/project/failed-icon.png)| Failed: the test has failed. |
-|![](attachments/project/canceled-icon.png)| Canceled: the test was canceled by a user before finishing. |
-|![](attachments/project/skipped-icon.png)| Skipped: the execution of this test was skipped or it hasen't been run yet. |
+|![](attachments/project/passed-icon.png)| Passed – the test was executed successfully. |
+|![](attachments/project/failed-icon.png)| Failed – the test has failed. |
+|![](attachments/project/canceled-icon.png)| Canceled – the test was canceled by a user before finishing. |
+|![](attachments/project/skipped-icon.png)| Skipped – the execution of this test was skipped or it hasen't been run yet. |
 
-There are the following three icons for test cases, test suites and data-driven test cases:
+The following three icons exist for test cases, test suites, and data-driven test cases:
 
 | Icon                                     | Meaning    |
 | ---------------------------------------- | ---------- |
-|![](attachments/project/test-case-icon.png) | Test Case  |
-|![](attachments/project/test-suite-icon.png) | Test Suite |
-|![](attachments/project/ddt-icon.png)| Data-driven Test Case|
+|![](attachments/project/test-case-icon.png) | Test case  |
+|![](attachments/project/test-suite-icon.png) | Test suite |
+|![](attachments/project/ddt-icon.png)| Data-driven Test case|
 
 To open the latest execution log, click **Show Log**. When you click the **name of a test case/test suite**, the edit page opens. 
 
@@ -95,7 +95,9 @@ In the **Edit Selenium Hub** dialog box, set the following parameters:
 
 ATS automatically retrieves the parallel test session limit from the Selenium hub. This limit is updated every 15 minutes. If ATS is not able to get the limit from the Selenium hub, it is set to one single test execution at a time.  
 
-<sup>1</sup> Starting with ATS verson 2.0, ATS capabilites override custom capabilities.
+{{% alert type="info" %}}
+Starting with ATS verson 2.0, ATS capabilites override custom capabilities.
+{{% /alert %}}
 
 ### 3.3 Execution Log Cleanup
 

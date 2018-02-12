@@ -19,7 +19,7 @@ To generate a report of the status of your tests, click **Download Report**. The
 
 ### 1.2 Recent Tests
 
-Under **Recent Tests**, you find detailed information about the status of all your test cases and test suites. You see the passed time since the latest run, its result, and the success rate (for test suites). The success rate is calculated using the results of all the containing test cases. For data-driven tests, the data set is displayed in the **test data** column.
+Under **Recent Tests**, you can find detailed information about the status of all your test cases and test suites. You can see the passed time since the latest run, its result, and the success rate (for test suites). The success rate is calculated using the results of all the containing test cases. For data-driven tests, the data set is displayed in the **test data** column.
 
 The results of your tests are displayed as icons. The following table explaines the meanings of those icons:
 

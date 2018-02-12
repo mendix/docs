@@ -81,7 +81,7 @@ Reading objects and deleting (unchanged) objects from the Mendix Database is sti
 
 Only the 'Dirty State' for requests which originate from the Mendix Client (both synchronous and asynchronous calls) can be retained between requests. For all other requests, such as scheduled events, web services, or background executions, the state only lives for the current request. After that, the 'Dirty State' either has to be persisted and/or reconstructed for a new request. The reason for only allowing Mendix Client requests to retain their 'Dirty State' is that this is currently the only channel that works with actual user input. User input requires more interaction with and flexibility of data between requests. By only allowing these requests to retain their 'Dirty State', the load on the Mendix Runtime and the external source is minimized and performance optimized.
 
-At the end of a user session (which is terminated either by an explicit user logout or by closing the browser), all 'Dirty State' for that session is discarded.
+At the end of a user session all 'Dirty State' for that session is discarded. A user session is ended by either reloading the browsers window (pressing 'F5'), an explicit user logout or by closing the browser.
 
 The more objects that are part of the 'Dirty State', the more data has to be transferred in the requests and responses between the Mendix Runtime and the client. As such, it has an impact on performance. In cluster environments it is advised to minimize the amount of 'Dirty State' to minimize the impact of the synchronization on performance.
 

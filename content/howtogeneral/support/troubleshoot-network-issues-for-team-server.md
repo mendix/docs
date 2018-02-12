@@ -1,5 +1,5 @@
 ---
-title: "Troubleshoot Network Issue for Connecting to Team Server"
+title: "Troubleshoot Network Issues for Connecting to Team Server"
 category: "Mendix Support"
 #parent: ""
 #description: ""
@@ -29,7 +29,7 @@ When you download or upload a Team Server project the Mendix Modeler is unable t
 
 ![](attachments/required-network-access-for-connecting-to-the-mendix-platform/afb1.png)
 
-  > Mendix is aware that the error stated above does not provide any relevant information. We are currently working to solve this.
+Mendix is aware that the error stated above does not provide any relevant information. We are currently working to solve this.
 
 ### 3.1 Downloading a Team Server Project
 

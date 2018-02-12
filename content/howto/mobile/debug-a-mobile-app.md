@@ -81,6 +81,7 @@ Since the Mendix Modeler only runs on Mendix, we need to make sure that your vir
 
 7.    Verify that your device can ping this address
       ![win-2](./attachments/debug-a-mobile-app/win-2.png)
+
       ​
 
 
@@ -197,7 +198,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 9. On your Mac, open Keychain Access and choose **Import Items…** from the File menu
    ![apple-9](./attachments/debug-a-mobile-app/apple-9.png)
 10. Select your new Certificate
- ![apple-10](./attachments/debug-a-mobile-app/apple-10.png)
+  ![apple-10](./attachments/debug-a-mobile-app/apple-10.png)
 11. Right-click on the certificate in the list of certificates and select **Export**
     ![apple-11](./attachments/debug-a-mobile-app/apple-11.png)
 12. Save this as a **.p12** file, and remember this for later. (We'll need this to build our Phonegap application)
@@ -268,7 +269,7 @@ the native application and tell it to intialize based on this new URL, rather th
    ![phonegap-9](./attachments/debug-a-mobile-app/phonegap-9.png)
 
 10. On the **Signing Keys** tab, click **Add a Key** under **iOS**
- ![phonegap-10](./attachments/debug-a-mobile-app/phonegap-10.png)
+  ![phonegap-10](./attachments/debug-a-mobile-app/phonegap-10.png)
 
 11. Choose your .p12 certificate (from Step 12 in the Apple Developer Configuration) section and your enw provisioning profile
     ![phonegap-11](./attachments/debug-a-mobile-app/phonegap-11.png)

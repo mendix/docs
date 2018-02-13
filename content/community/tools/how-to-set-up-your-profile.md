@@ -49,8 +49,25 @@ Once five of your referrals reach the **Successful** status, you will see the **
 
 ### 3.2 Writing Reviews of Mendix
 
+Once you start using Mendix regularly and are familiar with all the capabilities of the platform, you can write software reviews on [Gartner](https://www.gartner.com/reviews/market/mobile-application-development-platforms/vendor/mendix/product/mendix-platfor), [TrustRadius](https://www.trustradius.com/products/mendix/reviews), and [G2 Crowd](https://www.g2crowd.com/products/mendix/reviews). This is another way for you to gain Mendix swag! [**VERIFY**]
 
+{{% alert type="warning" %}}
+There is no opportunity for Mendix partners to leave reviews on Gartner due to their policy.
+{{% /alert %}}
 
+To write a review and gain your swag, follow these steps:
+1. Write the review on the website.
+2. Copy the link and submit it in this field. [**VERIFY, SCREENSHOT**]
+3. The submitted link will be verified with Mendix Support (who will make sure the review is original). Please note that you cannot submit a link of a review that has already been created and submitted.
+4. Your review will either be accpeted or declined.
+    * If your review is accpeted, click **Claim your socks** and fill in your details to receive your swag. [**VERIFY, SCREENSHOT**]
+    * If your review is declined, you can write a new one and submit it.
+
+After you have written reviews, click **ADD** to see the status of each review at the bottom of the pop-up window:
+    * **Pending** – this status means Mendix Support is verifying the review
+    * **Successful** – this status means that the review has been verified and is published
+
+[**ADD SCREENSHOT**]
 
 ## <a name="publicprofile"></a>4 Editing Your Public Profile
 

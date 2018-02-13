@@ -47,27 +47,37 @@ Once five of your referrals reach the **Successful** status, you will see the **
 
 ![](attachments/how-to-set-up-your-profile/claim-tshirt.png)
 
-### 3.2 Writing Reviews of Mendix
+### <a name="review"></a>3.2 Writing Reviews of Mendix
 
-Once you start using Mendix regularly and are familiar with all the capabilities of the platform, you can write software reviews on [Gartner](https://www.gartner.com/reviews/market/mobile-application-development-platforms/vendor/mendix/product/mendix-platfor), [TrustRadius](https://www.trustradius.com/products/mendix/reviews), and [G2 Crowd](https://www.g2crowd.com/products/mendix/reviews). This is another way for you to gain Mendix swag! [**VERIFY**]
+Once you start using Mendix regularly and are familiar with all the capabilities of the platform, you can write software reviews on [Gartner Peer Insights](https://www.gartner.com/reviews/market/mobile-application-development-platforms/vendor/mendix/product/mendix-platfor), [TrustRadius](https://www.trustradius.com/products/mendix/reviews), and [G2 Crowd](https://www.g2crowd.com/products/mendix/reviews). This is another way for you to earn more Mendix swag!
 
 {{% alert type="warning" %}}
-There is no opportunity for Mendix partners to leave reviews on Gartner due to their policy.
+There is no opportunity for Mendix partners to leave reviews on Gartner Peer Insights due to their policy.
 {{% /alert %}}
 
-To write a review and gain your swag, follow these steps:
-1. Write the review on the website.
-2. Copy the link and submit it in this field. [**VERIFY, SCREENSHOT**]
-3. The submitted link will be verified with Mendix Support (who will make sure the review is original). Please note that you cannot submit a link of a review that has already been created and submitted.
-4. Your review will either be accpeted or declined.
-    * If your review is accpeted, click **Claim your socks** and fill in your details to receive your swag. [**VERIFY, SCREENSHOT**]
-    * If your review is declined, you can write a new one and submit it.
+To write a review and earn a fashionable pair of Mendix socks, follow these steps:
+1. Click **Write Review** under **Get your free socks**.
+2.  On the pop-up window, click the desired link to one of the software review websites next to **Write your review here**.
 
-After you have written reviews, click **ADD** to see the status of each review at the bottom of the pop-up window:
-    * **Pending** – this status means Mendix Support is verifying the review
-    * **Successful** – this status means that the review has been verified and is published
+    ![](attachments/how-to-set-up-your-profile/review-popup.png)
 
-[**ADD SCREENSHOT**]
+3. Write and save your review on the website.
+4. Copy the URL to your review, paste it in the field on the pop-up window, and click **Submit Review**. Please note that you cannot submit a link to a review that has already been created and submitted.
+
+The submitted review is then verified by Mendix Support. You can check the status of your review by clicking **Write Review** and looking at bottom of the pop-up window:
+    
+* **Pending** – Mendix Support is still verifying the review
+*  **Successful** – the review has been verified and is published, so you can claim your socks!
+
+    ![](attachments/how-to-set-up-your-profile/review-popup-status.png)
+
+Once your review has been verified as successful, you will see the **Claim your socks** link on your dashboard. Click this to fill in some details and receive your nice warm pair of Mendix socks!
+
+![](attachments/how-to-set-up-your-profile/review-socks.png)
+
+{{% alert type="info" %}}
+If your review has been declined, you can write a new one and submit it.
+{{% /alert %}}
 
 ## <a name="publicprofile"></a>4 Editing Your Public Profile
 
@@ -103,8 +113,9 @@ In the body of your profile, you can edit the following elements:
 * **Summary**
 * **Industry Experience**
 * **Skills**
-* **Reviews** – URLs of the reviews of Mendix you have written at [Gartner Peer Insights](https://www.gartner.com/reviews/market/mobile-application-development-platforms/vendor/mendix) and [TrustRaduius](https://www.trustradius.com/products/mendix/reviews)
-    * Links to these reviews will not appear on your public profile, but these two reviews are required to make your profile 100% complete
+* **Reviews** – URLs of the reviews of Mendix you have written
+    * Links to these reviews will not appear on your public profile, but writing one review is required to make your profile 100% complete
+    * For details on writing reviews of Mendix, see section [3.2 Writing Reviews of Mendix](#review)
 * **Projects** – for details on adding a project, see section [5 Adding a Project](#project)
 
 Be sure to complete the following items, which are necessary to make your Community Profile public:

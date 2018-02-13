@@ -47,6 +47,11 @@ Once five of your referrals reach the **Successful** status, you will see the **
 
 ![](attachments/how-to-set-up-your-profile/claim-tshirt.png)
 
+### 3.2 Writing Reviews of Mendix
+
+
+
+
 ## <a name="publicprofile"></a>4 Editing Your Public Profile
 
 To start editing your Community Profile, click the **My Public Profile** tab. This is the main public page of your profile with your Mendix badges, Mendix points, personal **Summary**, **Industry Experience**, **Skills**, **Project Roles**, **Activity**, **Projects**, and more.

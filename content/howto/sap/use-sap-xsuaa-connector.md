@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ### 2.1 Getting the SAP XSUAA Connector Module
 
-To be able to use the SAP XSUAA Connector, after creating your project, navigate to the Mendix App Store to download the [SAP XSUAA Connector](https://appstore.home.mendix.com/link/app/74526/Mendix/SAP-XSUAA-Connector) module.
+To be able to use the SAP XSUAA Connector, after creating your project, navigate to the Mendix App Store to download the [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/) module.
 You will then find this module in your app project's App Store modules.
 
 For more information, see [How to Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler).
@@ -31,6 +31,13 @@ For more information, see [How to Use App Store Content in the Modeler](/communi
 ## 3 Using the Connector
 
 In this section, you will learn how to implement the data connector in your Mendix app.
+
+{{% alert type="warning" %}}
+SAP Authentication will not work if the Project Security is off.
+
+Set the security level for the project to at least Prototype/demo to use SAP Authentication. For more information see [Project Security](/refguide/project-security).
+For instructions on setting security levels, see [How To Create a Secure App](../security/create-a-secure-app)
+{{% /alert %}}
 
 ### 3.1 Adding the OnStartup Microflow to the Application Settings
 
@@ -64,7 +71,13 @@ The XSUAA login button will look like this:
 
 ### 3.3 Redirecting Your Application to XSUAA Without Showing the Login Page (Alternative Method)
 
-An alternative to adding the SSO login button to the landing page of your app is to redirect your app to XSUAA automatically without showing the login page. To accomplish this, follow these steps:
+An alternative to adding the SSO login button to the landing page of your app is to redirect your app to XSUAA automatically without showing the login page.
+
+{{% alert type="info" %}}
+Note that this will only work if you are running your app on the SAP Cloud.
+{{% /alert %}}
+
+To accomplish this, follow these steps:
 
 1. Open the project directory of your project and then open the **theme** folder.
 2. Change the contents of **login.html** into the following:

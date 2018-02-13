@@ -19,14 +19,14 @@ In the top-left corner of the **Test Case Details** page, you will find the name
 
 In the top right corner of the screen, you will find the **Export** and **Run** drop-down menus:
 
-### 2.2.1 Export
+### 2.2 Export
 
 | Name                   | Description                              |
 | ---------------------- | ---------------------------------------- |
 | Export Test Definition | Creates an XML representation of your test case. You can import this into another app. |
 | Export Documentation | Creates a PDF document that contains all the test steps of your test case and their parameters. |
 
-### 2.2.2 Run
+### 2.2 Run
 
 | Name                   | Description                              |
 | ---------------------- | ---------------------------------------- |

@@ -43,7 +43,7 @@ Regular test steps are the flesh and bone of your test case. They cover the main
 
 Teardown test steps are automatically moved to the end of a test. They must be used to undo the changes your test case made in the application. Failing Teardown test steps do not affect the result of a test case.
 
-## 4 Action Parameter
+## 4 Action Parameter<a name="4action-parameter"></a>
 
 Action parameters are the input parameters of the selected test step action. ATS marks the required input parameter with an asterisk and writes them in bold.
 

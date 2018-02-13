@@ -1,5 +1,5 @@
 ---
-title: "Data Driven Testing"
+title: "Data-Driven Testing"
 parent: "rg-version-2"
 ---
 
@@ -67,5 +67,3 @@ For this type of error, fields are shown that are not in the selected master dat
 ### 5.2 Incompatible Data Types
 
 For this error type, parameters are shown that need a different data type than the data type of the field.
-
-

@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ### 2.1 Getting the SAP XSUAA Connector Module
 
-To be able to use the SAP XSUAA Connector, after creating your project, navigate to the Mendix App Store to download the [SAP Cloud platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/) module.
+To be able to use the SAP XSUAA Connector, after creating your project, navigate to the Mendix App Store to download the [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/) module.
 You will then find this module in your app project's App Store modules.
 
 For more information, see [How to Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler).

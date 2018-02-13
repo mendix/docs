@@ -36,7 +36,7 @@ In this section, you will learn how to implement the data connector in your Mend
 SAP Authentication will not work if the Project Security is off.
 
 Set the security level for the project to at least Prototype/demo to use SAP Authentication. For more information see [Project Security](/refguide/project-security).
-For instructions on setting security levels, see [How To Create a Secure App](howto/security/create-a-secure-app)
+For instructions on setting security levels, see [How To Create a Secure App](../security/create-a-secure-app)
 {{% /alert %}}
 
 ### 3.1 Adding the OnStartup Microflow to the Application Settings

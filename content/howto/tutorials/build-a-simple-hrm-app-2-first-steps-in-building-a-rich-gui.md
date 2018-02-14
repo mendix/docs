@@ -77,13 +77,13 @@ To add a page, follow these steps:
 
     ![](attachments/build-a-simple-hrm-app/18580873.png)
 
-2. On the **Create Page** screen, do the following:<br>
+2. In the **Create Page** wizard, do the following:<br>
     a. In the **Page name** field, enter *Employee_Overview*.<br>
-    b. In the **Navigation layout** drop-down menu select **Sidebar_Left**, and then click **OK**. <br>
-    c. Click **Master Detail** and then select the **Master detail big** option.<br>
+    b. Click **Master Detail** and select the **Master Detail Vertical** option.<br>
+
     ![](attachments/build-a-simple-hrm-app/18580871.png)
 
-3. Click the data grid below the **Master Detail** label, and then drag the **Employee** entity from the **Connector** pane to the data grid:
+3. Click the data grid below the **Title** label, and then drag the **Employee** entity from the **Connector** pane to the data grid:
 
     ![](attachments/build-a-simple-hrm-app/18580870.png)
 

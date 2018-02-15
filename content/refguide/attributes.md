@@ -13,7 +13,7 @@ The domain model editor uses the following symbols for visualization of attribut
 | ![](attachments/819203/917593.png) | This attribute has one or more validation rules. |
 | ![](attachments/819203/917592.png) | This attribute has a microflow that calculates the value of the attribute. |
 
-## Common Properties
+## Common
 
 ### Name
 
@@ -66,7 +66,7 @@ A customer can be active or inactive, which is stored in an attribute named 'Act
 
 ![](attachments/819203/917578.png)
 
-### Localize (only attributes of type 'Date and time')
+### Localize (Only for the Date and Time Attribute Type)
 
 This property indicates whether the date and time should be localized. By default localization is enabled. If you are _not_ interested in the time component of a date (e.g. a birthday), you should set this property to 'No'. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the U.S.A.
 
@@ -74,17 +74,17 @@ In technical terms, this property indicates whether the client assumes that the 
 
 _Default value_: Yes
 
-### Enumeration (only attributes of type 'Enumeration')
+### Enumeration (Only for the Enumeration Attribute Type)
 
 The enumeration property indicates which enumeration defines the possible values for this attribute.
 
-### Length (only attributes of type 'String')
+### Length (Only for the String Attribute Type)
 
 This property specifies whether the length of a String is limited to a maximum or unlimited. In the case of a limited length, the 'Max length' property specifies the maximum (see below).
 
 _Default value:_ Limited
 
-### Max length (only attributes of type 'String')
+### Max Length (Only for the String Attribute Type)
 
 The 'Max length' property specifies the number of characters that can be stored in the attribute.
 
@@ -92,11 +92,30 @@ _Default value:_ 200
 
 ## Value
 
-### Default value
+### Value
 
-The default value property defines the value of this attribute when an object is created. The default value should be compatible with the type of the attribute.
+The **Value** determines whether the value of the attribute is **Calculated** by a microflow or **Stored** in the database.
 
-| Type of the attribute | Default value of the default value property | Additional comments |
+Take note of the following things when using **Calculated** attributes:
+
+* Each time an object with a calculated attribute is retrieved, the attribute is calculated. Depending on the complexity of the microflow and the number of objects you retrieve this can have impact on performance.
+* Attributes that are calculated by a microflow are not stored in the database.
+* It is not possible to sort on an attribute for which this property is used, because sorting is done by the database engine.
+* Uncommitted associated objects cannot be retrieved in calculated attributes.
+
+### Microflow (If Value Is Calculated with Microflow)
+
+If the value is a computation, the **Microflow** property defines which microflow defines this computation to calculate the value of the attribute when the object is retrieved. The microflow should have a parameter of the type of the entity of the attribute and it should return a value with the same type as the attribute.
+
+In a webshop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
+
+![](attachments/819203/917570.png)
+
+### Default Value (If Value Is Stored)
+
+The **Default value** property defines the value of this attribute when an object is created. The default value should be compatible with the type of the attribute.
+
+| Type of Attribute | Default Value Property | Additional Comments |
 | --- | --- | --- |
 | AutoNumber | 1 | Starting value of the increment. If there are already rows in the table, the AutoNumber values will be based on the right 32 bits of the id column value. This can cause gaps in the AutoNumber ranges with jumps of 100, because id values are reserved by the Runtime in blocks of 100. |
 | Binary | N/A |   |
@@ -111,31 +130,6 @@ The default value property defines the value of this attribute when an object is
 | Long | 0 |   |
 | String | (empty) |   |
 
-### Source
+## Effects of Data Type Changes on Existing Attributes
 
-The source determines whether the value of the attribute is stored in the database or calculated by a microflow.
-
-{{% alert type="warning" %}}
-
-Take note of the following things when using calculated attributes:
-
-*   Each time an object with a calculated attribute is retrieved, the attribute is calculated. Depending on the complexity of the microflow and the number of objects you retrieve this can have impact on performance.
-
-*   Attributes that are calculated by a microflow are not stored in the database.
-
-*   It is not possible to sort on an attribute for which this property is used, because sorting is done by the database engine.
-
-*   Uncommitted associated objects cannot be retrieved in calculated attributes.
-
-{{% /alert %}}
-
-### Microflow (only if source is microflow)
-
-If the source is a computation, the microflow property defines which microflow defines this computation to calculate the value of the attribute when the object is retrieved. The microflow should have a parameter of the type of the entity of the attribute and it should return a value with the same type as the attribute.
-
-In a webshop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
-
-![](attachments/819203/917570.png)
-
-## Effects of data type changes on existing attributes
-See [Attributes Type Migration](attributes-type-migration)
+For more information, see [Attributes Type Migration](attributes-type-migration).

@@ -1,5 +1,5 @@
 ---
-title: "Finding Object Activities"
+title: "Find Object Activities"
 category: "Tips & Tricks"
 ---
 

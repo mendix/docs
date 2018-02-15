@@ -1,5 +1,5 @@
 ---
-title: "How to deploy a Mendix app on Amazon Web Services"
+title: "Deploy a Mendix App on Amazon Web Services"
 category: "Amazon Web Services"
 ---
 

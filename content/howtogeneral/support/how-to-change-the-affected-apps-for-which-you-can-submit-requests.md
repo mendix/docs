@@ -1,5 +1,5 @@
 ---
-title: "How to Change the Affected Apps for Which You Can Submit Requests"
+title: "Change the Affected Apps for Which You Can Submit Requests"
 category: "Mendix Support"
 #parent: ""
 #description: ""

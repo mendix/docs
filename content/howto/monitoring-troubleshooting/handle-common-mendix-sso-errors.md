@@ -12,11 +12,7 @@ Below you will find solutions for some of the most common problems you may encou
 
 * Monitor and troubleshoot common Mendix SSO errors
 
-## 2 Prerequisites
-
-None.
-
-## 3 "404 Not Found" Errors When Navigating to `/openid/login`
+## 2 "404 Not Found" Errors When Navigating to `/openid/login`
 
 A frequent cause of "404 not found" errors when navigating to `/openid/login` is that the OpenID request handler is not enabled. It should be enabled on startup.
 

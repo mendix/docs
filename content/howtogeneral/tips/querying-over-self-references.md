@@ -1,5 +1,5 @@
 ---
-title: "Querying over self-references"
+title: "Query Over Self-References"
 category: "Tips & Tricks"
 ---
 When using more generic domain models, you often turn to using inheritance or self references to allow for simple yet efficiently designed models. This makes building your microflows and application logic much easier, but it can become challenging to query the correct objects; especially when your are using a self-reference. In this example, a self-reference to Group is used. This will allow you to build a group structure with an unlimited amount of sub-groups.

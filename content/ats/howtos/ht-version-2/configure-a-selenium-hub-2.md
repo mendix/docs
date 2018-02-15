@@ -37,12 +37,7 @@ The **Selenium hubs** section contains all the configured selenium hubs for this
 
 ![](attachments/configure-a-selenium-hub-2/new-selenium-hub.png)
 
-The **Select Provider** dialog box opens. Here you select one of the four configurable selenium hub options. Each of the options is explained in the following chapters:
-
-* [5 Configure Browserstack](#5)
-* [6 Configure SauceLabs](#6)
-* [7 Configure Testingbot](#7)
-* [8 Configure Custom Selenium Hub](#8)
+The **Select Provider** dialog box opens. Here you select one of the four configurable selenium hub options. Each of the options is explained in the sections below.
 
 ![](attachments/configure-a-selenium-hub-2/select-provider-dialog.png)
 

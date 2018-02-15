@@ -6,7 +6,7 @@ tags: []
 
 ## 1 Introduction
 
-To ensure your applications run smoothly, they need to be actively monitored so that the information is available in order to do the following:
+To ensure your applications run smoothly, they need to be actively monitored so that the information is available to do the following:
 
 * Avoid performance problems
 * Diagnose performance problems when they occur
@@ -32,9 +32,10 @@ In this section, we will walk through all the steps to configure AppDynamics so 
 
 To set up AppDynamics, follow these steps:
 
-1. Navigate to your AppDynamics controller, where you should see the following screen:
+1.  Navigate to your AppDynamics controller, where you should see the following screen:
 
     ![](attachments/19202618/home.png)
+    
 2. Select **Java**.
 3. This will open up the configuration screen for your AppDynamics application. 
 4. Download the Agent Installer and extract it to any directory (but remember the path, as this will be used later for integrating the Java Agent with your Mendix application):

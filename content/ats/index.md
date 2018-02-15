@@ -10,10 +10,10 @@ A small investment in setting up ATS, which is very easy to learn, will save you
 
 All of the available documents to help you use ATS are located in this space. Please select a category to specify your search: 
 
-* [General](general/index)
-* [ATS 1 Reference Guide](refguide/rg-version-1/rg-version-1)
-* [ATS 2 Reference Guide](refguide/rg-version-2/rg-version-2)
-* [ATS 1 How-to's](howtos/ht-version-1/ht-version-1)
-* [ATS 2 How-to's](howtos/ht-version-2/ht-version-2)
-* [ATS 1 Best Practices](bestpractices/bp-version-1/bp-version-1)
-* [ATS 2 Best Practices](bestpractices/bp-version-2/bp-version-2)
+* [General](general)
+* [ATS 1 Reference Guide](refguide/rg-version-1)
+* [ATS 2 Reference Guide](refguide/rg-version-2)
+* [ATS 1 How-to's](howtos/ht-version-1)
+* [ATS 2 How-to's](howtos/ht-version-2)
+* [ATS 1 Best Practices](bestpractices/bp-version-1)
+* [ATS 2 Best Practices](bestpractices/bp-version-2)

@@ -4,6 +4,16 @@ title: "Platform Portal"
 
 ## 2018
 
+### February 15th, 2018
+
+#### Improvements
+
+* We introduced a beautiful new design for the notification emails you receive when someone replies to your **Buzz** posts.
+
+#### Fixes
+
+* We addressed the issue that prevented the **Daily Digest** email from being sent.
+
 ### January 25th, 2018
 
 #### Fixes

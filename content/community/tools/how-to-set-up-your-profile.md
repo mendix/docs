@@ -61,8 +61,6 @@ To write a user review and earn a fashionable pair of Mendix socks, follow these
 1. Click **Write Review** under **Get your free socks**.
 2.  On the pop-up window, click the desired link to one of the software review websites next to **Write your review here**.
 
-    [**UPDATE SCREENSHOT OF REVIEWS CARD: NEW SOCKS PHOTO, NEW TEXT: "Submit a Mendix user review and we will send you not 1 but 2 awesome Mendix socks!"**]
-
     ![](attachments/how-to-set-up-your-profile/review-popup.png)
 
 3. Write and save your review on the website.

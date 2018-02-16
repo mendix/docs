@@ -47,6 +47,8 @@ After you have invited someone to Mendix, click **Invite Friends / View Status**
 
 Once five of your referrals reach the **Successful** status, you will see the **Claim your t-shirt** link on your dashboard. Click this to fill in some details and receive your awesome Mendix t-shirt. Yay!
 
+[**UPDATE SCREENSHOT OF REFERRALS CARD: NEW TEXT: "Invite more friends to Mendix and gain more Mendix points and badges!"**]
+
 ![](attachments/how-to-set-up-your-profile/claim-tshirt.png)
 
 ### <a name="review"></a>3.2 Writing User Reviews of Mendix

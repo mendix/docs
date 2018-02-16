@@ -50,7 +50,7 @@ To create entities and their attributes, follow these steps:
 
     ![](attachments/18448745/18582185.png)
 
-9. Repeat the steps above again to create a second entity that looks like this:
+8. Repeat the steps above again to create a second entity that looks like this:
 
     ![](attachments/18448745/18582184.png)
 
@@ -60,31 +60,19 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 To add enumerations, follow these steps:
 
-1. Right-click the module and select **Add** > **Enumeration**:
-
-    ![](attachments/18448745/18582182.png)
-
-2. Enter *OrderStatus* for the **Name** and click **OK**:
-
-    ![](attachments/18448745/18582202.png)
-
+1. Right-click the module and select **Add** > **Enumeration**.
+2. Enter *OrderStatus* for the **Name** and click **OK**.
 3. Click **New** to add a new enumeration value:
 
     ![](attachments/18448745/18582181.png)
 
-4. Enter _Open_ for the **Caption** and click **OK**:
-
-    ![](attachments/18448745/18582180.png)
-
+4. Enter *Open* for the **Caption** and click **OK**.
 5. Repeat the steps above for the **Processing** and **Complete** values. You should then have the following configured values:
 
     ![](attachments/18448745/18582179.png)
 
     Click **OK** to save the enumeration. Now we will create an enumeration value-based attribute in the **Order** entity.
-6. Right-click the **Order** entity and select **Add** > **Attribute**:
-
-    ![](attachments/18448745/18582178.png)
-
+6. Right-click the **Order** entity and select **Add** > **Attribute**.
 7. Enter *OrderStatus* for **Name** and select *Enumeration* for **Type**.
 8. Select the *OrderStatus* enumeration and click **Select**:
 

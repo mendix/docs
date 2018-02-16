@@ -243,13 +243,15 @@ Now that you are logged in, you will want to navigate to the **Expenses** tab. T
 1.  Open the Desktop Modeler, and in the **Project Explorer**, open the **Desktop_AdminMenu** page:
     
     ![](attachments/18448634/18580390.png)
+
 2.  Select the **Expenses** tab:
     
     ![](attachments/18448634/18580389.png)
 
-    The name of the **Expenses** tab is `tabPage4`. Every element will automatically get the CSS class `mx-name-[Name]`, so the expenses tab will get the CSS class `mx-name-tabPage4` when the app is running.
+    The name of the **Expenses** tab is **tabPage4**. Every element will automatically get the CSS class `mx-name-[Name]`, so the expenses tab will get the CSS class `mx-name-tabPage4` when the app is running.
 
     ![](attachments/18448634/18580388.png)
+    
 3. Go back to **Eclipse**.
 4.  Add a new test method called `openExpensesTab`. Use the following code:
 

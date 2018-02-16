@@ -152,7 +152,7 @@ To export projects, follow these steps:
 
 To export modules, follow these steps:
 
-1. Right-click a module in the **Project Explorer**, and select **Export module package...**:
+1. Right-click a module in the **Project Explorer**, and select **Export module package**:
 
     ![](attachments/18448739/18582095.png)
 
@@ -180,11 +180,11 @@ Widgets are already available in the **widgets** folder in your project director
 
 Mendix module object packages are stored as Mendix package (*.mpk*) files. An object package can contain a page, microflow, image collection, event, document template, constant, web service, layout, menu, and more.
 
-1. Right-click the document you want to export and select **Export document package...**:
+1. Right-click the document you want to export and select **Export document to file**:
 
     ![](attachments/18448739/18582092.png)
 
-    The **Save** dialog box will open.
+    The **Export Page to File** dialog box will open.
 2. Enter the **Name** for your package and click **Save**.
 
 ## 4 Related Content

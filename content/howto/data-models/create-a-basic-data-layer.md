@@ -73,11 +73,8 @@ To add enumerations, follow these steps:
 
     Click **OK** to save the enumeration. Now we will create an enumeration value-based attribute in the **Order** entity.
 6. Right-click the **Order** entity and select **Add** > **Attribute**.
-7. Enter *OrderStatus* for **Name** and select *Enumeration* for **Type**.
-8. Select the *OrderStatus* enumeration and click **Select**:
-
-    ![](attachments/18448745/18582177.png)
-
+7. Enter *OrderStatus* for **Name** and select **Enumeration** for **Type**.
+8. Select the **OrderStatus** enumeration and click **Select**.
 9. Select **Open** for **Default value**:
 
     ![](attachments/18448745/18582197.png)

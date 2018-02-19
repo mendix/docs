@@ -27,12 +27,17 @@ Before starting with this how-to, make sure you have completed the following pre
 
 To create a new app and select a theme from the **New App** selector, follow these steps:
 
-1. Open the Mendix Modeler.
-2. On the **My Apps** screen, click **New App**:
+1. Open the Mendix Desktop Modeler.
+2.  On the **My Apps** screen (accessible by clicking the drop-down menu arrow next to your name in the upper-right corner of the Modeler), click **New App**:
+
     ![](attachments/18448706/18581412.png)
+
 3. Select the Mendix theme for your app:
-    ![](attachments/18448711/18581484.jpg)
+
+    ![](attachments/18448711/18581484.png)
+
 4.  You can now deploy your app (press the F5 key):
+
     ![](attachments/18448711/18581480.jpg) 
 
 ## 4 Configuring Scout
@@ -43,23 +48,36 @@ To be able to make changes to the theme, Mendix suggests using [Sass](http://sas
 
 To configure Scout, follow these steps:
 
-1. Open your app's project folder in Scout by clicking the plus ("+") button in the bottom-left corner of the screen:
+1.  Open your app's project folder in Scout by clicking the plus ("+") button in the bottom-left corner of the screen:
+    
     ![](attachments/18448706/18581409.png)
-2. Select the project directory from your newly created app:
+
+2.  Select the project directory from your newly created app:
+
     ![](attachments/18448706/18581408.png)
-3. Choose the **Input Folder** and **Output Folder** by clicking **Choose**:
+
+3.  Choose the **Input Folder** and **Output Folder** by clicking **Choose**:
+
     ![](attachments/18448706/18581407.png)
-4. Select the **styles/sass** folder for your **Input** folder. The input path should be: *C:\Mendix Projects\Mendix-App\theme\styles\sass*:
-     ![](attachments/18448706/18581399.png)
-5. Select the **styles/css** folder for your **Output** folder. The input path should be: *C:\Mendix Projects\Mendix-App\theme\styles\css*:
-     ![](attachments/18448706/18581398.png)
-6. After selecting the input and output folders, press the play button in the left sidebar next to your project folder name. Scout is now set to compile the changes, so we can create a custom theme.
+
+4.  Select the **styles/sass** folder for your **Input** folder. The input path should be: *C:\Mendix Projects\Mendix-App\theme\styles\sass*:
+
+    ![](attachments/18448706/18581399.png)
+
+5.  Select the **styles/css** folder for your **Output** folder. The input path should be: *C:\Mendix Projects\Mendix-App\theme\styles\css*:
+
+    ![](attachments/18448706/18581398.png)
+
+6.  After selecting the input and output folders, press the play button in the left sidebar next to your project folder name. Scout is now set to compile the changes, so we can create a custom theme.
+
     ![](attachments/18448706/18581405.png) 
 
 ## 5 Configuring Your Text Editor
 
-1. Open the project directory from your app in your desired text editor:
+1.  Open the project directory from your app in your desired text editor:
+
     ![](attachments/18448706/18581397.png)
+
 2. The **theme** folder is where you can find the theme that was selected when creating a new app. The  **theme\styles\custom** folder will be used to make our changes.
 3. Open the **_custom-variables.scss** file, which contains the default variables we can use to easily change the basic colors of the app (think of variables as a way to store information that you want to reuse throughout your stylesheet):
     * **Step 1** contains the default colors such as primary, success, and danger, which are used for buttons, labels, links, text, and other elements
@@ -67,6 +85,7 @@ To configure Scout, follow these steps:
     * **Step 3** contains the default layout spacing
     
     Below these three steps, there are topics such as **Typography**, **Forms**, **Buttons**, **Grids**, **Tabs**, **Mobile**, and other sections.
+
      ![](attachments/18448706/18581396.png) 
 
 ## 6 Creating a Custom Theme

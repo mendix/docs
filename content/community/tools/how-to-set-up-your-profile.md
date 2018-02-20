@@ -36,6 +36,7 @@ On your dashboard, you can invite friends and colleagues to join Mendix. After y
 ![](attachments/how-to-set-up-your-profile/referral-url.png)
 
 After you have invited someone to Mendix, click **Invite Friends / View Status** to see their name and status listed at the bottom of the pop-up window:
+
 1. If you invited them via email, they will first have the **Invited** status.
 2. When they click sign up for Mendix and recieve a confirmation email, they will have the **Confirmation e-mail sent** status.
 3. When they complete the signup process and their account is active, their status will change to **Completed sign-up**.
@@ -56,6 +57,7 @@ There is no opportunity for Mendix partners to leave reviews on Gartner Peer Ins
 {{% /alert %}}
 
 To write a user review and earn a fashionable pair of Mendix socks, follow these steps:
+
 1. Click **Write Review** under **Get your free socks** on your dashboard.
 2.  On the pop-up window, click the link to the software review website next to **Write your review here**:
 

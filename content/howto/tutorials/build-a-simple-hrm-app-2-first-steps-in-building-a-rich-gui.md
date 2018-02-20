@@ -77,13 +77,13 @@ To add a page, follow these steps:
 
     ![](attachments/build-a-simple-hrm-app/18580873.png)
 
-2. In the **Create Page** wizard, do the following:<br>
+2. On the **Create Page** screen, do the following:<br>
     a. In the **Page name** field, enter *Employee_Overview*.<br>
-    b. Click **Master Detail** and select the **Master Detail Vertical** option.<br>
-
+    b. In the **Navigation layout** drop-down menu select **Sidebar_Left**, and then click **OK**. <br>
+    c. Click **Master Detail** and then select the **Master detail big** option.<br>
     ![](attachments/build-a-simple-hrm-app/18580871.png)
 
-3. Click the data grid below the **Title** label, and then drag the **Employee** entity from the **Connector** pane to the data grid:
+3. Click the data grid below the **Master Detail** label, and then drag the **Employee** entity from the **Connector** pane to the data grid:
 
     ![](attachments/build-a-simple-hrm-app/18580870.png)
 
@@ -221,5 +221,4 @@ For the next step in creating a simple HRM application, see [Build a Simple HRM 
 * [Build a Simple HRM App Step 3: Show Related Data in the GUI](build-a-simple-hrm-app-3-show-related-data-in-the-gui)
 * [Build a Simple HRM App Step 4: Enrich the GUI with Filter Options](build-a-simple-hrm-app-4-enrich-the-gui-with-filter-options)
 * [Build a Simple HRM App Step 5: Smarten Up Your App with Business Logic](build-a-simple-hrm-app-5-smarten-up-your-app-with-business-logic)
-* [Create and Deploy Your First App](../modeling-basics/create-and-deploy-your-first-app)
 * [Testing Microflows Using the UnitTesting Module](../testing/testing-microflows-using-the-unittesting-module)

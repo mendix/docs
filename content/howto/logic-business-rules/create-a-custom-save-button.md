@@ -23,49 +23,58 @@ Before starting with this how-to, make sure you have completed the following pre
 
 To replace the default Save button with a custom one, follow these steps:
 
-1. Open the **Customer** detail page, which should look like this:
+1.  Open the **Customer** detail page, which should look like this:
+
     ![](attachments/18448679/18580990.png)
 
 2. Right-click the **Save** button and remove it by selecting **Delete**.
-3. Right click the **Cancel** button and select **Add button left** > **Microflow**:
-    ![](attachments/18448679/18580988.png)
+3. Right-click the drop zone under the **Cancel**, select **Add widget**, and then select **Call microflow button**.
+4.  In the **Select Microflow** dialog box, click **New** to create a new microflow called **Customer_Save**.
 
-4. Double-click the new **Microflow** button to open its properties:
+    ![](attachments/18448679/customer-save.png)
+
+5. After the button is created, double-click it to open its properties editor.
+6. Change the **Caption** to *Save*.
+7.  Change the **Icon** to an image of your choice.
+
     ![](attachments/18448679/18580987.png)
 
-5. Change the **Caption** to *Save*.
-6. Change the image to an image of your choice.
-7. In the **Events** section, click **Select...** to add a new microflow with the name *Customer_Save*.
 8. Click **OK** to save the new microflow button.
 
 ## 4 Re-creating the Default Save Behavior
 
-1. Right-click the new **Microflow** button and select **Go to microflow** to open the new microflow:
-    ![](attachments/18448679/18580985.png)
-
-    The Microflow should look like this:
+1.  Right-click the new **Microflow** button and select **Go to microflow** to open the new microflow. The Microflow should look like this:
+    
     ![](attachments/18448679/18580984.png)
+
 2. Open the **Toolbox** from the bottom-right corner of the Modeler:
+
     ![](attachments/8784287/8946802.png)
-    You can also open it from the **View** menu:
-    ![](attachments/2949137/3080419.png)
+
 3. Drag a **Commit object(s)** action from the **Toolbox** to the line between the green start and red end events, which will insert a commit action activity.
-4. Double-click the new activity to open its properties:
+4.  Double-click the new activity to open its properties:
+
     ![](attachments/18448679/18580983.png)
-5. In the **Input** section, select **Customer** for **Variable** and click **OK**. The microflow should now look like this:
+
+5.  In the **Input** section, select **Customer** for **Variable** and click **OK**. The microflow should now look like this:
+    
     ![](attachments/18448679/18580982.png)
-6. Drag a **Close page** action from the **Toolbox** to the line between the green start and red end events, which will insert a close page action activity. You have now re-created the default save behavior, and the m should look like this:
+
+6.  Drag a **Close page** action from the **Toolbox** to the line between the green start and red end events, which will insert a close page action activity. You have now re-created the default save behavior, and the m should look like this:
+
     ![](attachments/18448679/18580981.png)
 
 ## 5 Extending the Microflow with Your Own Functionality
 
 1. Drag a **Show message** action from the **Toolbox** to the line between the start and end events, which will insert a show message action activity.
-2. Double-click the new activity to open its properties:
+2.  Double-click the new activity to open its properties:
+
     ![](attachments/18448679/18580980.png)
 
 3. Select the **Type** of message.
 4. Enter a message as a **Template** value.
-5. Click **OK** to save the properties. The microflow should now look like this:
+5.  Click **OK** to save the properties. The microflow should now look like this:
+
     ![](attachments/18448679/18580979.png)
 
 ## 6 Related Content

@@ -27,8 +27,6 @@ Your profile will open to the **My Dashboard** tab, where you can see your point
 
 You can also see your Mendix **Activity**, which is a list of the most important public events for which you have gained Mendix points.
 
-[**UPDATE SCREENSHOT OF REVIEWS CARD: NEW SOCKS PHOTO, NEW TEXT: "Submit a Mendix user review and we will send you not 1 but 2 awesome Mendix socks!"**]
-
 ![](attachments/how-to-set-up-your-profile/my-dashboard.png)
 
 ### <a name="invite"></a>3.1 Inviting Friends and Colleagues to Mendix
@@ -47,8 +45,6 @@ After you have invited someone to Mendix, click **Invite Friends / View Status**
 
 Once five of your referrals reach the **Successful** status, you will see the **Claim your t-shirt** link on your dashboard. Click this to fill in some details and receive your awesome Mendix t-shirt. Yay!
 
-[**UPDATE SCREENSHOT OF REFERRALS CARD: NEW TEXT: "Invite more friends to Mendix and gain more Mendix points and badges!"**]
-
 ![](attachments/how-to-set-up-your-profile/claim-tshirt.png)
 
 ### <a name="review"></a>3.2 Writing User Reviews of Mendix
@@ -60,24 +56,22 @@ There is no opportunity for Mendix partners to leave reviews on Gartner Peer Ins
 {{% /alert %}}
 
 To write a user review and earn a fashionable pair of Mendix socks, follow these steps:
-1. Click **Write Review** under **Get your free socks**.
-2.  On the pop-up window, click the desired link to one of the software review websites next to **Write your review here**.
+1. Click **Write Review** under **Get your free socks** on your dashboard.
+2.  On the pop-up window, click the link to the software review website next to **Write your review here**:
 
     ![](attachments/how-to-set-up-your-profile/review-popup.png)
 
-3. Write and save your review on the website.
+3. Write and save your user review on the website.
 4. Copy the URL to your review, paste it in the field on the pop-up window, and click **Submit Review**. Please note that you cannot submit a link to a review that has already been written and submitted.
 
-The submitted review is then verified by Mendix. You can check the status of your review by clicking **Write Review** and looking at bottom of the pop-up window:
+The submitted review is then verified by Mendix. You can check the status of your review by clicking **Write Review** and looking at the bottom of the pop-up window:
     
 * **Pending** – Mendix is still verifying the review
-*  **Successful** – the review has been verified and is published, so you can claim your socks!
+*  **Successful** – the review has been verified and is published, so you can claim your swag!
 
     ![](attachments/how-to-set-up-your-profile/review-popup-status.png)
 
 Once your review has been verified as successful, you will see the **Claim your socks** link on your dashboard. Click this to fill in some details and receive your nice warm pair of Mendix socks!
-
-[**UPDATE SCREENSHOT OF REVIEWS CARD: NEW SOCKS PHOTO, NEW TEXT: "Submit another Mendix user review and gain some Mendix points!"**]
 
 ![](attachments/how-to-set-up-your-profile/review-socks.png)
 
@@ -86,7 +80,7 @@ If your review has been declined, you can write a new one and submit it.
 {{% /alert %}}
 
 {{% alert type="info" %}}
-You can only earn a pair of socks for your first Mendix user review, but subsequent reviews will still earn you Mendix points!
+You can only earn a pair of socks for your first Mendix user review. Subsequent reviews will still earn you Mendix points.
 {{% /alert %}}
 
 ## <a name="publicprofile"></a>4 Editing Your Public Profile

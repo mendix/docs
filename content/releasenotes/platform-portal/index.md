@@ -4,6 +4,12 @@ title: "Platform Portal"
 
 ## 2018
 
+### February 19th, 2018
+
+#### Improvements
+
+* In Mendix Cloud v4, we have enabled logging slow database queries. This is the custom runtime setting `LogMinDurationQuery`, and it is useful for finding performance bottlenecks in your application. The value is set to a default of 10,000 ms, which was also the value on Mendix Cloud v3. You can customize this setting by using the **Runtime** tab on your environment details screen under **Environments**. To start using this feature on a Mendix Cloud environment, transport your deployment package and restart your app.
+
 ### February 15th, 2018
 
 #### Improvements

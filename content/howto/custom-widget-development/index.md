@@ -12,6 +12,7 @@ Custom widget development can be difficult at the beginning. The resources below
 
 In order to create widgets, you need a good understanding of how JavaScript works. These texts can help you get started:
 
+ * [JavaScript: The Good Parts](http://www.easycomputing.com/download/0e9fa6d09a001991e41aeae63152b12882e27116)
  * [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
  * [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
 
@@ -27,7 +28,6 @@ The sections below describe the Mendix resources that can help you understand ho
 
 Custom widgets are Dojo widgets. In order to understand how widgets are structured and what their life cycle is, you need to know how Dojo widgets are built. You can consult this quick introduction:
 
- * [JavaScript: The Good Parts](http://www.easycomputing.com/download/0e9fa6d09a001991e41aeae63152b12882e27116)
  * [Dojo Documentation Tutorials](http://dojotoolkit.org/documentation/#tutorials)
 
 For details on the widget life cycle, reference this documentation:

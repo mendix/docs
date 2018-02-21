@@ -80,10 +80,10 @@ To extend the structure of the **Employee** entity, follow these steps:
     b. Set the **Name** to *Level*.<br>
     c. Set the **Type** to **Enumeration**.<br>
     d. Click **Select enumeration** to create a new enumeration.<br>
-    e. Set the **Name** to **EmployeeLevel**.<br>
-    f. Click **New Item** and set the **Caption** and **Name** to *Junior*.<br>
+    e. Enter *EmployeeLevel* for the **Name**.<br>
+    f. Click **New** and enter *Junior* for the **Caption** and **Name**.<br>
     g. Repeat the step above to create the **Medior** and **Senior** items.<br>
-    h. Click **Create** to close the dialog boxes and create the new attribute.
+    h. Click **OK** to close the dialog boxes and create the new attribute.
 
     ![](attachments/start-with-a-blank-app/enumeration.png)
 
@@ -150,8 +150,8 @@ To edit a microflow so that it promotes employees, follow these steps:
 
     ![](attachments/start-with-a-blank-app/exclusive-split-level5.png)
 
-8. Insert an **Activity** of the **Show message** type to the right of the change object activity and do the following:<br>
-    a. Set the **Template** to `{1} is promoted to Medior!`.<br>
+8. Insert an **Activity** of the **Show message** type above the change object activity and do the following:<br>
+    a. Enter *{1} is promoted to Medior!* for the **Template**.<br>
     b. Click **New** to add a parameter and set it to `$Employee/Name`. 
 
     ![](attachments/start-with-a-blank-app/show-message.png)

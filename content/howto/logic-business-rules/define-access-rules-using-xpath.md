@@ -31,12 +31,13 @@ To prepare the data structure, GUI, and example data, follow these steps:
 
     ![](attachments/18448681/18581008.png)
     
-5. Add the *FinancialAdministrator* user role and module role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](../security/create-a-secure-app):
+5. Enter *FinancialAdministrator* for the **Name** of the new user role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](../security/create-a-secure-app):
 
     ![](attachments/18448681/18581005.png)
-6. Give both module roles access to all your created pages, and create separate read and write access rights to all your created entities (for more information on how to set the entity access, see [How to Create a Secure App](../security/create-a-secure-app):
+6. Give both module roles access to all your created pages, and create separate read and write access rights to all your created entities (for more information on how to set the entity access, see [How to Create a Secure App](../security/create-a-secure-app)):
 
     ![](attachments/18448681/18580997.png)
+
     ![](attachments/18448681/18581003.png)
 
 7. Add the following customer data to your app:
@@ -55,14 +56,21 @@ In the previous section, you set up a basic data structure and created some samp
 
 To define the access rules on the Order entity using XPath, follow these steps:
 
-1. Open the **Access rules** tab for the **Order** entity:
+1.  Open the **Access rules** tab for the **Order** entity:
+
     ![](attachments/18448681/18580996.png)
-2. Open the **FinancialAdministrator** module role and go to the **XPath constraint** tab:
+
+2.  Double-click the **FinancialAdministrator** module role to open its properties and go to the **XPath constraint** tab:
+
     ![](attachments/18448681/18581000.png)
-3. To constrain the access of the financial administrator to only "Complete" orders, add the following **XPath**:
+    
+3.  To constrain the access of the financial administrator to only "Complete" orders, add the following **XPath**:
+
     ![](attachments/18448681/18580995.png)
+
 4. Click **OK** and re-deploy your application.
-5. When you log in with the **Financial Administrator** account, you will see that only completed orders are shown in the orders overview:
+5.  When you log in with the **Financial Administrator** account, you will see that only completed orders are shown in the orders overview:
+
     ![](attachments/18448681/18580994.png)
 
 ## 4 Related Content

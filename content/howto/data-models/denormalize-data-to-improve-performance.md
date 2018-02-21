@@ -114,8 +114,8 @@ Now the application is ready to store redundant data, but you still need to keep
 15. Insert an aggregate list activity, double-click it to open its properties on the **Aggregate List** dialog box, and do the following:
     * Select **OrderList** as the **Input Variable**
     * Select **Sum** as the **Function**
-    * Select **TotalPrice** as the **Attribute**
-    * Enter *SumTotalPrice* as the **Output Variable** name
+    * Select **Totalprice** as the **Attribute**
+    * Enter *SumTotalprice* as the **Output Variable** name
 
     ![](attachments/18448743/18582153.png)
 
@@ -130,7 +130,7 @@ Now the application is ready to store redundant data, but you still need to keep
     * Click **New** to create a new change item
 18. In the **Edit Change Item** dialog box, do the following:
     * Select **TotalOrderAmount** as the **Member**
-    * Fill in **$SumTotalPrice** as the **Value**
+    * Enter *$SumTotalprice* as the **Value**
     * Click **OK** to save the change item
 
     ![](attachments/18448743/18582151.png)

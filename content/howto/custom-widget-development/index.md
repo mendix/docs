@@ -27,11 +27,11 @@ The sections below describe the Mendix resources that can help you understand ho
 
 Custom widgets are Dojo widgets. In order to understand how widgets are structured and what their life cycle is, you need to know how Dojo widgets are built. You can consult this quick introduction:
 
+ * [JavaScript: The Good Parts](http://www.easycomputing.com/download/0e9fa6d09a001991e41aeae63152b12882e27116)
  * [Dojo Documentation Tutorials](http://dojotoolkit.org/documentation/#tutorials)
 
 For details on the widget life cycle, reference this documentation:
 
- * [JavaScript: The Good Parts](http://www.easycomputing.com/download/0e9fa6d09a001991e41aeae63152b12882e27116)
  * [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
  * [dijit.\_WidgetBase](https://dojotoolkit.org/reference-guide/1.10/dijit/_WidgetBase.html)
  * [Tutorial: Widget Life Cycle](https://apidocs.mendix.com/6/client/tutorial-widget-lifecycle.html)

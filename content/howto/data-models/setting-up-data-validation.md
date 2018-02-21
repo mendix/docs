@@ -71,37 +71,37 @@ Validating user input can also be achieved by overriding the default save button
 
     ![](attachments/18448742/18582141.png)
 
-6.  Create a **Commit** activity to store the object in the database.
-7.  Create a **Close Page** activity to close the detail page.
+4.  Create a **Commit** activity to store the object in the database.
+5.  Create a **Close Page** activity to close the detail page.
 
     You have now created a Microflow that mimics the default 'Save' button behavior. It should look like this:
     
     ![](attachments/18448742/18582140.png)
 
     You can now extend the Microflow to validate user input.
-8.  After the start event insert an **Exclusive split**.
-9.  Double click the split to open the **properties editor** and type in an expression that returns true or false. For example: _$Customer/Name != 'John'_.
+6.  After the start event insert an **Exclusive split**.
+7.  Double click the split to open the **properties editor** and type in an expression that returns true or false. For example: _$Customer/Name != 'John'_.
 
     As you can see you can use the **Customer** input parameter in the expression to validate its values.
-10. Save the properties by clicking **OK.**
-11. Right click the line between the split and commit activity and select **true** as condition value. In this case if the customer's name not is 'John', the object is stored in the database and the page is closed.
+8. Save the properties by clicking **OK.**
+9. Right click the line between the split and commit activity and select **true** as condition value. In this case if the customer's name not is 'John', the object is stored in the database and the page is closed.
 
     ![](attachments/18448742/18582139.png)
 
-12. Add an **End event** to the Exclusive Split.
-13. Draw an additional line from the split to the new end event.
-14. Right click the line between the split and end event and select **false** as condition value.
-15. Insert a **Validation feedback** activity between the split and end event. Your Microflow should look similar to this:
-
-    ![](attachments/18448742/18582138.png)
-
-16. Double click the new activity to open the **properties editor**.
+10. Add an **End event** to the Exclusive Split.
+11. Draw an additional line from the split to the new end event.
+12. Right click the line between the split and end event and select **false** as condition value.
+13. Insert a **Validation feedback** activity between the split and end event. In the activity's properties editor, enter these details:
 
     ![](attachments/18448742/18582137.png)
 
-17. Select the **input parameter** as variable.
-18. Select for example **Name** as member.
-19. Enter an error message in the **Template** field. You can use indexes to dynamically insert parameters in the template.
+    Your microflow should now look similar to this:
+
+    ![](attachments/18448742/18582138.png)
+
+14. Select the **input parameter** as variable.
+15. Select for example **Name** as member.
+16. Enter an error message in the **Template** field. You can use indexes to dynamically insert parameters in the template.
 
 ## 5. Related content
 

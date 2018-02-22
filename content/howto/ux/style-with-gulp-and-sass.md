@@ -72,5 +72,5 @@ If you encounter issues using this setup, please read the [Troubleshooting](http
 ## 8 Related Content
 
 * [mendix / ux-theming](https://github.com/mendix/ux-theming)
-* [Create a Custom Theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
-* [Extend Design Properties to Customize Your Web Modeler Experience](extend-design-properties-to-customize-the-web-modeler-experience)
+* [How to Create a Custom Theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
+* [How to Extend Design Properties to Customize Your Web Modeler Experience](/atlasui/extend-design-properties-to-customize-the-web-modeler-experience)

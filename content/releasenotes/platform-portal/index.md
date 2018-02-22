@@ -8,14 +8,14 @@ title: "Platform Portal"
 
 #### Improvements
 
-* We implemented the most requested feedback item: The platform will remember your selected environment while switching between screens.
-* It is now possible to see the database details such as DB Plan Space, Plan Cores, Plan Memory of a Mendix Cloud V4 application.
-* Scaling Mendix 7 Apps is now simplified and faster.
+* We implemented a popular feedback item – the platform will now remember your selected environment while switching between screens.
+* It is now possible to see the database details such as **DB Plan Space**, **Plan Cores**, and **Plan Memory** of a Mendix Cloud V4 application.
+* Scaling Mendix 7 apps is now simplified and faster.
 
 #### Fixes
 
-* Backup creation was reported as backup restore action in activity feed, which is now fixed.
-* We addressed and fixed an issue that adds a backup activity item each time the backups page is viewed.
+* Backup creation was reported as a backup restore action in the activity feed, which is now fixed.
+* We addressed and fixed the issue where a backup activity item was added each time the backups page was viewed.
 * The environment details list was loading slowly for some of our users, which is now fixed.
 
 ### February 19th, 2018

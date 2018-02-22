@@ -16,7 +16,7 @@ title: "Platform Portal"
 
 * Backup creation was reported as backup restore action in activity feed, which is now fixed.
 * We addressed and fixed an issue that adds a backup activity item each time the backups page is viewed.
-* The environment details list was slow for some of our users, which is now fixed.
+* The environment details list was loading slowly for some of our users, which is now fixed.
 
 ### February 19th, 2018
 

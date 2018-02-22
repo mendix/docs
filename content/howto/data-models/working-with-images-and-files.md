@@ -23,6 +23,7 @@ Before you start with this how-to please follow these prerequisites:
     ![](attachments/18448741/18582123.png)
 
 5.  Click **OK** in the entities property form. Your entity now inherits all properties from the 'System.Image' entity you selected and should look like this:
+
     ![](attachments/18448741/18582136.png)
     
 6.  Create an overview and detail page to manage objects of the entity that you just created. Your detail page should look like this:

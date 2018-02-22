@@ -22,8 +22,12 @@ In this exercise you will add a microflow button to a grid or a reference set se
 2.  Open page with a **Datagrid**.
 3.  Select the **menu bar** of the Datagrid.
 4.  Right click the menu bar.
-5.  Select **Add button > Microlfow**.
+5.  Select **Add button** > **Action**:
+
     ![](attachments/18448675/18580943.png)
+
+
+
 6.  The **Microflow** button will be visible on the menu bar of the Datagrid.
 
 ### 2.2 Configuring the Microflow Properties
@@ -31,7 +35,9 @@ In this exercise you will add a microflow button to a grid or a reference set se
 At the moment there is only a button with no Microflow behind it yet. In this exercise you will configure the button settings. 
 
 1. Double click the **Microflow** button to open its properties.
+
     ![](attachments/18448675/18580941.png)
+
 2. In the window that opens you can set the following parameters:
 
 | Property | Description |

@@ -106,16 +106,17 @@ To create a page template preview image in Photoshop, follow these steps:
 To create a page template preview image in Illustrator, follow these steps:
 
 1. Download the [Atlas UI image templates resources pack](https://atlas.mendix.com/index3.html#/resources/7881299347899269).
-2. Open the Illustrator file named **PT_previewimage.ai**. This file contains three artboards. The first two artboards show examples of how page template preview images look in the Web Modeler. The second artboard is where you place your image.
+2. Open the Illustrator file named **PT_previewimage.ai**. This file contains three artboards. The first two artboards show examples of how page template preview images look in the Web Modeler. The third artboard is where you place your image.
 3. Hide the layer called **Template**, then insert your preview image into the **Page template preview** folder.
 4. When you are happy with your image, select your artboard
-5. Select **file > Export for screens** select the PT@2x artboard and make sure the preferences are set to the following
-    * **Size**: 1x
+5. Select **File** > **Export for screens**, then select the **PT@2x** artboard.
+6.  Make sure the preferences are set to the following
+    * **Scale**: 1x
     * **Format**: PNG
 
     ![](attachments/howto/create_custom_image_bb_illustrator.png)
 
-6. Export your image.
+7. Export your image.
 
 ### 3.4 Creating a Page Template Preview Image in Another Image Editor
 

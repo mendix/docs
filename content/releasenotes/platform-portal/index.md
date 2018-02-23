@@ -4,6 +4,12 @@ title: "Platform Portal"
 
 ## 2018
 
+### February 23rd, 2018
+
+#### Improvements
+
+* In Mendix Cloud v4, the native memory usage of applications was very high. This led to crashes and automatic restarts, especially on containers with 1GB of memory. We activated an advanced memory limiting setting for glibc (`MALLOC_ARENA_MAX`), which will prevent this behavior. The fix will automatically be applied to all apps that are transported and restarted as of today.
+
 ### February 22nd, 2018
 
 #### Improvements

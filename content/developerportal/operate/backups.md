@@ -21,21 +21,7 @@ The following backups are retained:
 * Last three months: every Sunday
 * Last year: every first Sunday of the month
 
-The start time of the backup creation depends on the region and the Mendix Cloud version:
-
-| Europe |  UTC (UTC) | CET (CET) |
-| --- | --- | --- |
-| Cloud v3 | 22:00 | 00:00 |
-| Cloud v4 | 19:00 | 21:00 |
-
-| US East |  UTC (UTC) | EST (EST) |
-| --- | --- | --- |
-| Cloud v3 | 05:00 | 01:00 |
-| Cloud v4 | 01:00 | 21:00 |
-
-| Asia Pacific |  UTC (UTC) | JST (JST) |
-| --- | --- | --- |
-| Cloud v4 | 16:00 | 01:00 |
+The start time of nightly backups is between 21:00 and 05:00 in the local time of the region.
 
 ## 3 Backups<a name="Backups"></a>
 

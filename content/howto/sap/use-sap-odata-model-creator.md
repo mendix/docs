@@ -45,9 +45,9 @@ To generate the service module, follow these steps:
 
 ## 4 Using the Module in a Mendix App
 
-Now you have a Mendix module ready to import into your project. Open the project which you created as a prerequisite, select **File** > **Import Project Package**, and select the MPK file.
+Now you have a Mendix module ready to import into your project. Open the project which you created as a prerequisite. Right-click your project in the **Project Explorer** and select **Import Module Package**.
 
-![](attachments/use-sap-odata-model-creator/import_into_model.png)
+![](attachments/use-sap-odata-model-creator/import_module_package.png)
 
 You now have your service **HCM\_PEOPLE\_PROFILE\_SRV** module available in your project ready to use in combination with the SAP OData Connector.
 

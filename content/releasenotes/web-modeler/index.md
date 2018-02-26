@@ -4,9 +4,34 @@ title: "Web Modeler"
 
 {{% alert type="info" %}}
 
-These release notes are for the [beta](../beta-features/index) version of the Web Modeler.
+These release notes are for the [beta](../beta-features/index) version of the Web Modeler, Mendix's web-based development environment for business developers. We welcome users to provide feedback on issues or share suggestions for improvements.
 
 {{% /alert %}}
+
+## 2018
+
+### February 7th, 2018 16:28:00 GMT
+
+#### Improvements
+
+*	In all dialog boxes, you can now use the <kbd>Ctrl</kbd> + <kbd>Enter</kbd> shortcut to confirm your choices and close the dialog box. For simple dialog boxes containing only one field, pressing only <kbd>Enter</kbd> works to confirm and close the dialog box.
+*	In the domain model editor, it is now possible to swap the direction of an association by using the **Swap Direction** button or icon. If you are unsure which direction an association between two entities should have, you can now create it either way. Then, if the **Multiplicity** property does not contain the option you need, you can switch the association direction to configure it correctly. This will save you time when setting up your domain model.
+*	We introduced a feature to the domain model editor that arranges the position of entities automatically. When your view is becoming cluttered with entity objects and association lines, click the **Auto arrange entities** icon in the upper-left corner of the editor. We’ll then use an algorithm to determine the best possible placement of items on your screen. Still not happy with the result? Click the icon again to see if we can come up with something better.
+*	In both the microflow editor and domain model editor, the canvas will now follow the cursor if it is moved outside the visible area. This makes it easy to work with more extensive microflows and domain models.
+
+#### Fixes
+
+*	In the page editor, the **Create** button on the **Create New Attribute** dialog box now functions properly, even when used after clicking **Add parameter** (which is used, for example, for the **Caption** property of a widget).
+
+### January 29th, 2018 16:10:52 GMT
+
+#### Improvements
+
+* In the page editor, you can now configure the page size of list views by changing the value of the **Page Size** property. The WYSIWYG editor will instantly render the number of rows you entered.
+* When you create a page from an entity context that contains an Atlas UI data view, you will now see a new check box in the **Create new page** wizard: **Pre-fill page contents based on the `<name>` entity**. When you check this box, page content will pre-fill automatically. This speeds up initial app development by automagically adding and wiring the appropriate widgets for the entity specified.
+* When using exclusive splits in the microflow editor, we now auto-configure the last split condition of an exclusive split. This will save you time and keep you from unintentionally omitting that condition.
+* You can now easily jump to the microflow that serves as the data source for your data widget by clicking the arrow icon that is located right next to the **Data Source** property.
+* We added support for [Desktop Modeler 7.11.0](../desktop-modeler/7.11). The minimum (and only) supported version is now Desktop Modeler 7.11.0.
 
 ## 2017
 

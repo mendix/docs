@@ -1,7 +1,10 @@
 ---
-title: "How to incorporate Mendix application with Amazon Machine Learning"
+title: "How to Incorporate a Mendix Application with Amazon Machine Learning"
 category: "Extendability"
 ---
+
+## 1 Introduction
+
 We live in a world of digital innovations, where many applications help us to make better decisions in our daily life. Since Mendix World 2016 you have great opportunity to move your innovated business into new frontiers. Mendix applications are now not only capable of storing data, but also of making accurate predictions using the data based on the currently best known machine learning algorithms. With the brand new AwsMLConnector module, it becomes feasible to incorporate a Mendix application with the Amazon ML service, which opens up new opportunities to make a Mendix application smart like never before. You can always refer to the [Amazon ML tutorial](https://aws.amazon.com/machine-learning/) for more information about regression models and machine learning in general.
 
 This how-to explains how to integrate your Mendix application with AmazonML to make a prediction using a pre-trained regression model and the MakeRealTimeRegressionPrediction action.
@@ -11,7 +14,7 @@ This how-to explains how to integrate your Mendix application with AmazonML to m
 *   How to configure your Mendix application to be ready for making predictions
 *   How to make a prediction with the MakeRealTimeRegressionPrediction action
 
-## 1\. Prerequisites
+## 2 Prerequisites
 
 Before using the MakeRealTimeRegressionPrediction action, an appropriate regression model should be trained on the Amazon ML service. The model should be available on an enabled endpoint and configured with the proper access rules:
 
@@ -24,11 +27,11 @@ Before using the MakeRealTimeRegressionPrediction action, an appropriate regress
 
 Having all the necessary preconditions fulfilled, the MakeRealTimeRegressionPrediction action can then be used to make predictions. But before that, you need to first install the AwsMLConnector module and configure a Mendix project.
 
-## 2\. Installation
+## 3 Installation
 
 To make the MakeRealTimeRegressionPrediction action available in a Mendix project, the AwsMLConnector module should already have been successfully imported.
 
-## 3\. Configuration
+## 4 Configuration
 
 In order to make use of the MakeRealTimeRegressionPrediction action, you should already have configured a Mendix project with the three constants listed below:
 
@@ -38,9 +41,9 @@ In order to make use of the MakeRealTimeRegressionPrediction action, you should 
 
 ![](attachments/19203531/19399127.png)
 
-## 4\. Using the MakeRealTimeRegressionPrediction action in a microflow
+## 5 Using the MakeRealTimeRegressionPrediction Action in a Microflow
 
-### 4.1 Schema of the regression model
+### 5.1 Schema of the Regression Model
 
 Having the regression model trained and the Mendix project configured, we are now ready to use the **MakeRealTimeRegressionPrediction** action for making predictions. Let's assume that for this particular example there is a regression model with the following schema (please refer to [this ](http://docs.aws.amazon.com/machine-learning/latest/dg/creating-a-data-schema-for-amazon-ml.html)tutorial for additional information about the Amazon ML schema format): 
 
@@ -79,7 +82,7 @@ Having the regression model trained and the Mendix project configured, we are no
 
 From the schema listed above, we know that the model predicts a **rul** feature (see **targetAttributeName**'s value) based on the given vector of **[id, cycle, s2, s3, s4] **features. Suppose that we need to predict the value of the **rul** feature from the features' values of the given vector **[3, 126, 642.88, 1589.75, 1418.89]**. Taking into account that the **MakeRealTimeRegressionPrediction** action accepts two arguments, **mlModelId** and **List of AwsMLConnector.RecordEntry** objects, the only thing that we still need to do is to convert the given vector into **List of AwsMLConnector.RecordEntry** objects.
 
-### 4.2 Creating a microflow
+### 5.2 Creating a Microflow
 
 First of all, we need to create a microflow and add an instance of **AwsMLConnector.RecordEntry** that represents a feature, with key **id** and value **3,** which is later inserted into a **List of AwsMLConnector.RecordEntry**:
 

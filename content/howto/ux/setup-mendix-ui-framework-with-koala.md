@@ -1,5 +1,5 @@
 ---
-title: "Setup Mendix UI Framework with Koala"
+title: "Set Up the Mendix UI Framework with Koala"
 category: "UX"
 tags: []
 ---

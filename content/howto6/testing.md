@@ -5,7 +5,7 @@ Testing is a vital component when creating a Mendix application. On this page yo
 
 ## How-To's
 
-*   [Application Performance Monitor](/addons/apm/)
+*   [Application Performance Monitor](/apm/)
 *   [Application Test Suite](/ats/)
 *   [Application Quality Monitor](/addons/aqm/)
 *   [Testing microflows using the UnitTesting module](testing-microflows-using-the-unittesting-module)

@@ -13,10 +13,16 @@ addons:
   space: "Other Add-ons"
   priority: false
   menu_categories:
-    - "APM"
     - "AQM"
+apm:
+  space: "APM"
+  priority: false
+  menu_categories:
+    - "Installation Guide"
+    - "Reference Guide"
+    - "Use Cases"
 ats:
-  space: "ATS Add-on"
+  space: "ATS"
   priority: false
   menu_categories:
     - "General"
@@ -191,7 +197,7 @@ developerportal:
     - "Deploy"
     - "Operate"
     - "Settings"
-    - "How-To's"
+    - "How-to's"
 deployment:
   space: "Deployment"
   priority: false

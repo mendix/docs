@@ -1,5 +1,5 @@
 ---
-title: "How to Export a Mendix Project Package"
+title: "Export a Mendix Project Package"
 category: "Mendix Support"
 #parent: ""
 #description: ""

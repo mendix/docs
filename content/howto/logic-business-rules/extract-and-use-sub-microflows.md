@@ -1,5 +1,5 @@
 ---
-title: "Extract and use sub microflows"
+title: "Extract and Use Sub-Microflows"
 category: "Logic & Business Rules"
 tags: []
 ---

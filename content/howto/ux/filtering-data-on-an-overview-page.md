@@ -1,5 +1,5 @@
 ---
-title: "Filtering Data on an Overview Page"
+title: "Filter Data on an Overview Page"
 category: "UX"
 tags: []
 ---

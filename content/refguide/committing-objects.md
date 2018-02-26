@@ -24,6 +24,12 @@ The object or list of objects that you want to commit.
 
 Indicates whether or not to execute the commit event handlers of the objects.
 
+{{% alert type="warning" %}}
+
+Nanoflows do not have this property. Committing while running in an online app sends a commit request to the runtime and always runs the events. If Commit Object(s) action is used in an offline app, changes are committed to the offline database and event handlers will run when offline app synchronises.
+
+{{% /alert %}}
+
 ### Refresh in client
 
 This property specifies whether pages that use the entity of the object(s) being committed are refreshed.
@@ -38,5 +44,11 @@ _Default value_: No
 {{% alert type="warning" %}}
 
 When committing a large number of objects, we recommend that you do not enable 'Refresh in client' because it can slow things down.
+
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+
+Nanoflows do not have this property. All changes made in a nanoflow refresh the client by default.
 
 {{% /alert %}}

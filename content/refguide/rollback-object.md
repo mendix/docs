@@ -32,3 +32,9 @@ This property specifies whether forms that use the entity of the object being ro
 | No | Objects of same entity are not refreshed in the user's browser. |
 
 _Default value_: No
+
+{{% alert type="warning" %}}
+
+Nanoflows do not have this property. Rollback Object in a nanoflow refreshes the client by default.
+
+{{% /alert %}}

@@ -29,6 +29,12 @@ This property specifies whether pages that use the entity of the object being cr
 
 _Default value_: No
 
+{{% alert type="warning" %}}
+
+Nanoflows do not have this property. All changes made in a nanoflow refresh the client by default.
+
+{{% /alert %}}
+
 ### Initialize members
 
 You can initialize members of the newly created object. Values for members are specified with a [microflow expression](microflow-expressions) and should be of the same type as the member.

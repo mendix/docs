@@ -53,6 +53,10 @@ However, if the microflow is triggered from a data grid button that just perform
 
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the runtime and runs the events. If Change Object action is used in an offline app, changes are committed to the offline database.
+{{% /alert %}}
+
 _Default value:_ No
 
 ### Refresh in client
@@ -63,6 +67,10 @@ Refresh in client defines whether pages that use the entity of the object being 
 | --- | --- |
 | Yes | Objects of same entity are refreshed in the user's browser |
 | No | Objects of same entity are not refreshed in the user's browser |
+
+{{% alert type="warning" %}}
+Nanoflows do not have the `Refresh in client` option. All changes made in a nanoflow refresh the client by default.
+{{% /alert %}}
 
 _Default value_: No
 

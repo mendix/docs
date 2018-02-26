@@ -54,7 +54,7 @@ However, if the microflow is triggered from a data grid button that just perform
 {{% /alert %}}
 
 {{% alert type="warning" %}}
-Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the runtime and runs the events. If Change Object action is used in an offline app, changes are committed to the offline database.
+Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the runtime and runs the events. If a Change Object action is used in an offline app, changes are committed to the offline database.
 {{% /alert %}}
 
 _Default value:_ No

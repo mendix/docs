@@ -68,32 +68,28 @@ The XML schema describes what the contents of an XML document should be. We need
 
     ![](attachments/18448731/18581849.png)
 
-3. Click **OK**, and the **Select schema elements for export mapping** dialog box will automatically open. Now do the following:
-    * For **Schema source**, select **XML schema**
-    * For the schema, select the previously added **CustomersXSD**
-5. In the **Schema elements** section of the **Select XSD Elements** dialog box, you will  now see a tree with elements. Click the **Expand all** and **Check all** buttons – this automatically selects the **Customer** element and its child elements. Your screen should now look like this:
+3. Click **OK**, and the **Select schema elements for export mapping** dialog box will automatically open. Now do the following:<br />
+    a. For **Schema source**, select **XML schema**.<br />
+    b. For the schema, select the previously added **CustomersXSD**.<br />
+    c. In the **Schema elements** section of the dialog box, click the **Expand all** and **Check all** buttons. This automatically selects the **Customer** element and its child elements. Your screen should now look like this:
 
     ![](attachments/18448731/18581811.png)
 
-6. Click **OK**. You should now see the first part of the import mappings:
+4. Click **OK**. You should now see the first part of the import mappings:
 
     ![](attachments/18448731/18581810.png)
 
-7. Open the **Connector** pane, which should be in the bottom-right corner of the Modeler:
+5. Open the **Connector** pane, which should be in the bottom-right corner of the Modeler:
 
     ![](attachments/18448731/18581817.png)
 
-    You can also open the **Connector** from the **View** menu:
-
-    ![](attachments/18448731/18581869.png)
-
-8. Drag the **XMLDocument** entity from the **Connector** to the placeholder:
+6. Drag the **XMLDocument** entity from the **Connector** to the placeholder:
 
     ![](attachments/18448731/18581809.png)
 
     The mapping editor for this element will pop up, you can close that by clicking **OK**.
 
-9. Drag the **Customer** entity from the **Connector** to the placeholder:
+7. Drag the **Customer** entity from the **Connector** to the placeholder:
 
     ![](attachments/18448731/18581808.png)
 
@@ -101,13 +97,14 @@ The XML schema describes what the contents of an XML document should be. We need
 
     ![](attachments/18448731/18581806.png)
 
-10. In the mapping editor, verify that **Association to parent** is set to **XMLDocument_Customer** (this should happen automatically).
-11. For **Find method** in the **To obtain an object** section, select **Retrieving associated objects**.
-12. Select attributes for all five **Attribute to value element mapping** instances (or click **Map attributes by name** to accomplish this). You should have the following mapping:
+8. In the mapping editor, verify the following:<br />
+    a. **Method** is set to **By association**<br />
+    b. **Association to parent** is set to **XMLDocument_Customer**<br />
+9. Select attributes for all five **Attribute to value element mapping** instances (or click **Map attributes by name** to accomplish this). You should have the following mapping:
 
     ![](attachments/18448731/18581807.png)
 
-13. Click **OK** to save the mapping.
+10. Click **OK** to save the mapping.
 
 ## 5 Creating the Export Logic
 
@@ -115,60 +112,56 @@ This section explains how you can create logic to export the customers stored in
 
 To create the export logic, follow these steps:
 
-1. Open the **Customer** overview page. It should look this when using a default layout:
-
-    ![](attachments/18448731/18581805.png)
-
-2. Right-click the toolbar of the data grid widget and select **Add button** > **Action** to add a new Action button:
+1. Open the **Customer** overview page, right-click the toolbar of the data grid widget, and select **Add button** > **Action** to add a new Action button:
 
     ![](attachments/18448731/18581804.png)
 
-3. Double-click the new button to open the properties editor and do the following:
+2. Double-click the new button to open the properties editor and do the following:
     * For **Caption**, enter *Export as XML*
     * For **On click**, select **Call a microflow**
-    * In the **Microflow** section, click **Select...** and create a new microflow named *Customers_Export*
+    * In the **Select Microflow** dialog box, click **New** to create a new microflow and enter *Customers_Export* for its **Name**
 
     ![](attachments/18448731/18581803.png)
 
-4. Click **OK** to save the button properties.
-5. Right-click the new action button and click **Go to microflow** in the context menu. You should see an empty microflow with one input parameter:
+3. Click **OK** to save the button properties.
+4. Right-click the new action button and click **Go to microflow** in the context menu. You should see an empty microflow with one input parameter:
 
     ![](attachments/18448731/18581802.png)
 
-6. Select the input parameter and delete it.
-7. Open the **Toolbox**, which should be on the bottom-right of the Modeler (you can also open it from the **View** menu).
-8. Drag a **Retrieve** activity from the **Toolbox** to the line between the start event and end event.
-9. Double-click the activity to open the **Retrieve Objects** properties editor and do the following:
+5. Select the input parameter and delete it.
+6. Open the **Toolbox**, which should be on the bottom-right of the Modeler (you can also open it from the **View** menu).
+7. Drag a **Retrieve** activity from the **Toolbox** to the line between the start event and end event.
+8. Double-click the activity to open the **Retrieve Objects** properties editor and do the following:
     * For **Source**, select **From database**
     * For **Entity**, click **Select...** and select the customer entity
 
     ![](attachments/18448731/18581830.png)
 
-10. Click **OK**. The microflow should now look like this:
+9. Click **OK**. The microflow should now look like this:
 
     ![](attachments/18448731/18581827.png)
 
-11. Drag a **Create object** activity from the **Toolbox** to the line between the start event and end event.
-12. Double-click the activity to open the **Create Object** editor and do the following:
+10. Drag a **Create object** activity from the **Toolbox** to the line between the start event and end event.
+11. Double-click the activity to open the **Create Object** editor and do the following:
     * For **Entity**, select **XMLDocument**
     * Click **New** to add a change item
 
     ![](attachments/18448731/18581801.png)
 
-13. In the **Edit Change Item** editor, do the following:
+12. In the **Edit Change Item** editor, do the following:
     * For the **Member** for the change item, select the **XMLDocument_Customer** reference:
     * For the **Value**, enter *$CustomerList*
 
     ![](attachments/18448731/18581825.png)
 
-14. Click **OK** to save the change item.
-15. Create a change item to set the **Name** attribute to: *'customers.xml'* (including the single quotation marks [']).
-16. Click **OK** to save the action properties. The microflow should look like this:
+13. Click **OK** to save the change item.
+14. Create a change item to set the **Name** attribute to: *'customers.xml'* (including the single quotation marks [']).
+15. Click **OK** to save the action properties. The microflow should look like this:
 
     ![](attachments/18448731/18581823.png)
 
-17. Drag an **Export XML** activity from the **Toolbox** to the line between the start event and end event. This inserts a new export XML activity.
-18. Double-click the new activity to open the properties editor and do the following:
+16. Drag an **Export XML** activity from the **Toolbox** to the line between the start event and end event. This inserts a new export XML activity.
+17. Double-click the new activity to open the properties editor and do the following:
     * For **Mapping**, select the previously created **ExportCustomersMapping** XML-to-domain mapping
     * For **Parameter type**, verify that the entity **XMLDocument** is automatically selected
     * For the **Parameter**, select the created **NewXMLDocument**
@@ -176,21 +169,21 @@ To create the export logic, follow these steps:
 
     ![](attachments/18448731/18581822.png)
 
-19. Click **OK** to save the properties. The microflow should look like this:
+18. Click **OK** to save the properties. The microflow should look like this:
 
     ![](attachments/18448731/18581821.png)
 
-20. Drag a **Download file** activity from the **Toolbox** to the line between the start event and end event.
-21. Double-click the actvity to open the **Download File** editor and select **NewXMLDocument** as the **File document**:
+19. Drag a **Download file** activity from the **Toolbox** to the line between the start event and end event.
+20. Double-click the actvity to open the **Download File** editor and select **NewXMLDocument** as the **File document**:
 
     ![](attachments/18448731/18581818.png)
 
-22. Click **OK**. The microflow should now look like this:
+21. Click **OK**. The microflow should now look like this:
 
     ![](attachments/18448731/18581819.png)
 
-23. Deploy the application and open the customer overview page.
-24. Click the **Export as XML** button and download the generated XML document.
+22. Deploy the application and open the customer overview page.
+23. Click the **Export as XML** button and download the generated XML document.
 
 ## 6 Related Content
 

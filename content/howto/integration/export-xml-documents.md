@@ -42,52 +42,44 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Whether you plan to import documents or export documents, working with XML means that your application must contain an XML schema (also called XSD). An XSD describes the possible contents of an XML file. Based on this XSD, your application knows how to read or write an XML file. If you don't have an XSD file, there are a couple of online XSD generators that accept an XML document as input. For this how-to, you can use [Customers.xsd](attachments/18448731/18581813.xsd).
 
-1. Right-click a module in the project explorer and select **Document** from the **Add** menu (you can also use the **Ctrl+N** shortcut):
+1.  Right-click your module in the **Project Explorer** and select **Add** > **Mappings** > **XML schema**:
 
     ![](attachments/18448727/18581698.png)
 
-2. Select **XML schema** for the **Document type** and click **OK**:
-    ![](attachments/18448727/18581697.png)
-
-3. Enter *CustomersXSD* for the **Name** and click **OK**:
+2.  Enter *CustomersXSD* for the **Name** and click **OK**:
 
     ![](attachments/18448727/18581696.png)
 
-4. In the **XML Schema** editor, click **Select...** and select the XSD file that you downloaded earlier:
+3.  In the **XML Schema** editor, click **Select** for **XML Schema** and select the XSD file that you downloaded earlier:
 
     ![](attachments/18448731/18581812.png)
 
-5. Click **OK** to save the XML Schema. We'll be using this schema in the following steps.
+4. Click **OK** to save the XML Schema. We'll be using this schema in the following steps.
 
 ## 4 Creating Domain-to-XML mapping
 
 The XML schema describes what the contents of an XML document should be. We need to create domain-to-XML mapping to define how the data in our application is transformed into a XML document.
 
-1. Right-click a module in the **Project Explorer** and select**Add* > **Document**:
+1.  Right-click your module in the **Project Explorer** and select **Add** > **Mappings** > **Export mapping**:
 
     ![](attachments/18448731/18581853.png)
 
-2. Select **Domain-to-XML mapping** for the **Document type** and click **OK**:
-
-    ![](attachments/18448731/18581850.png)
-
-3.  Enter *ExportCustomersMapping* for the **Name**:
+2.  Enter *ExportCustomersMapping* for the **Name**:
 
     ![](attachments/18448731/18581849.png)
 
-4. Click **OK**, and the **Select XSD Elements** dialog box will automatically open.
-5. In the **Select XSD Elements** dialog box, do the following:
+3. Click **OK**, and the **Select schema elements for export mapping** dialog box will automatically open. Now do the following:
     * For **Schema source**, select **XML schema**
     * For the schema, select the previously added **CustomersXSD**
-6. In the **Schema elements** section of the **Select XSD Elements** dialog box, you will  now see a tree with elements. Click the **Expand all** and **Check all** buttons – this automatically selects the **Customer** element and its child elements. Your screen should now look like this:
+5. In the **Schema elements** section of the **Select XSD Elements** dialog box, you will  now see a tree with elements. Click the **Expand all** and **Check all** buttons – this automatically selects the **Customer** element and its child elements. Your screen should now look like this:
 
     ![](attachments/18448731/18581811.png)
 
-7. Click **OK**. You should now see the first part of the import mappings:
+6. Click **OK**. You should now see the first part of the import mappings:
 
     ![](attachments/18448731/18581810.png)
 
-8. Open the **Connector** pane, which should be in the bottom-right corner of the Modeler:
+7. Open the **Connector** pane, which should be in the bottom-right corner of the Modeler:
 
     ![](attachments/18448731/18581817.png)
 
@@ -95,13 +87,13 @@ The XML schema describes what the contents of an XML document should be. We need
 
     ![](attachments/18448731/18581869.png)
 
-9. Drag the **XMLDocument** entity from the **Connector** to the placeholder:
+8. Drag the **XMLDocument** entity from the **Connector** to the placeholder:
 
     ![](attachments/18448731/18581809.png)
 
     The mapping editor for this element will pop up, you can close that by clicking **OK**.
 
-10. Drag the **Customer** entity from the **Connector** to the placeholder:
+9. Drag the **Customer** entity from the **Connector** to the placeholder:
 
     ![](attachments/18448731/18581808.png)
 
@@ -109,13 +101,13 @@ The XML schema describes what the contents of an XML document should be. We need
 
     ![](attachments/18448731/18581806.png)
 
-11. In the mapping editor, verify that **Association to parent** is set to **XMLDocument_Customer** (this should happen automatically).
-12. For **Find method** in the **To obtain an object** section, select **Retrieving associated objects**.
-13. Select attributes for all five **Attribute to value element mapping** instances (or click **Map attributes by name** to accomplish this). You should have the following mapping:
+10. In the mapping editor, verify that **Association to parent** is set to **XMLDocument_Customer** (this should happen automatically).
+11. For **Find method** in the **To obtain an object** section, select **Retrieving associated objects**.
+12. Select attributes for all five **Attribute to value element mapping** instances (or click **Map attributes by name** to accomplish this). You should have the following mapping:
 
     ![](attachments/18448731/18581807.png)
 
-14. Click **OK** to save the mapping.
+13. Click **OK** to save the mapping.
 
 ## 5 Creating the Export Logic
 

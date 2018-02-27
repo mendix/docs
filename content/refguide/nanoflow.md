@@ -3,44 +3,44 @@ title: "Nanoflow"
 category: "Modeler"
 ---
 
-{{% alert type="warning" %}}
+## 1 Introduction
 
-This document describes the properties of a nanoflow. If you want to see what nanoflows are for and what kind of elements they contain, you can check the [nanoflows overview documentation](nanoflows)
+This page describes the properties of nanoflows. For details on using nanoflows and nanoflow elements, see [Nanoflows Overview](nanoflows).
 
 {{% /alert %}}
 
-## Common Properties
+## 2 Common Properties
 
-### Name
+### 2.1 Name
 
-The internal name of the nanoflow.
+This is the internal name of the nanoflow.
 
-## Output Properties
+## 3 Output Properties
 
-### Return type
+### 3.1 Return Type
 
-The return type defines what information the nanoflow returns. The caller of the nanoflow will get a result of this type. See [Data Types](data-types) for the possible return types.
+The return type defines what information the nanoflow returns. The caller of the nanoflow will get a result of this type. For possible return types, see [Data Types](data-types).
 
 {{% alert type="info" %}}
 
-A nanoflow could return whether or not the committing of an object should continue. In this case, a Boolean would be the return type of the nanoflow.
+A nanoflow can return whether or not the committing of an object should continue. In this case, a Boolean would be the return type of the nanoflow.
 
 {{% /alert %}}
 
-## Security Properties
+## 4 Security Properties
 
-### Allowed roles
+### 4.1 Allowed Roles
 
-Allowed roles defines to which [module role](module-role) the user must have to be able to execute the nanoflow.
+These are the [module roles](module-role) the user must have to be able to execute the nanoflow.
 
-See also [Module Security](module-security).
+For more information, see [Module Security](module-security).
 
-## Usage Properties
+## 5 Usage Properties
 
-### Mark as used
+### 5.1 Mark as Used
 
-You can search for unused items (Ctrl+Shift+F, Search for = Unused items) in the Modeler. nanoflows that are only called from Java code will be listed as unused because the Modeler cannot look inside Java source code.
+You can search for unused items (using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>) in the Modeler. Nanoflows that are only called from Java code will be listed as unused, because the Modeler cannot look inside Java source code.
 
-By setting the propery 'Mark as used' to 'Yes' you specify that the document is used implicitly and the Modeler will no longer list it when searching for unused items.
+By setting the **Mark as used** property to **Yes**, you can specify that the document is used implicitly, and the Modeler will no longer list it when searching for unused items.
 
 _Default value:_ No

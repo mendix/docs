@@ -493,7 +493,7 @@ This is the name that you give the result of your Activity. This can be used lat
 * [Domain Model](/refguide/domain-model)
 * [Entities](/refguide/entities)
 * [How to Use App Store Content in the Modeler](https://docs.mendix.com/community/app-store/use-app-store-content-in-the-modeler)
-* [How to Use the SAP OData Connector](../howto/sap/use-sap-odata-connector)
+* [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector)
 * [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)
 * [OData metadata XML for CRM Task](https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata)
 * [SAP Cloud Connector](sap-cloud-connector)

@@ -88,11 +88,11 @@ To import a web service directly, follow these steps:
 
 You can also describe the design purpose of the web service on the **Documentation** tab.
 
-# 4 Configuring the Web Service Call
+## 4 Configuring the Web Service Call
 
 To configure the web service call, follow these steps:
 
-1. If you have not used the web service wizard or have not used the option within this wizard to automatically create a microflow, you have to create a microflow that will call the imported web service:
+1. If you do not use the web service wizard, you have to create a microflow that will call the imported web service:
 
     ![](attachments/18448730/18581778.png)
 

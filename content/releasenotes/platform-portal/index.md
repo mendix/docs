@@ -8,8 +8,8 @@ title: "Platform Portal"
 
 #### Fixes
 
-* We have fixed an issue which prevented SAP Cloud users from viewing Mobile App section properly.
-* When uploading a backup in Mendix Cloud v3, double clicking on **Restore** button was causing UI to break, which is now fixed.
+* We fixed the issue that prevented SAP Cloud users from viewing the **Mobile App** section properly.
+* When uploading a backup in Mendix Cloud v3, double-clicking the **Restore** button was causing UI to break. This is now fixed.
 
 ### February 23rd, 2018
 

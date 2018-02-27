@@ -28,7 +28,7 @@ Template defines the text of the validation message. The template can contain pa
 
 {{% alert type="warning" %}}
 
-Nanoflows do not support text templates in Validation Feedback, only a static message text can be provided.
+Nanoflows do not support text templates in validation feedback. Only a static message text can be provided.
 
 {{% /alert %}}
 

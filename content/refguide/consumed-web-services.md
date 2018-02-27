@@ -16,7 +16,7 @@ Mendix supports the interaction between servers using SOAP. This can either be M
 
 ### Consumed web services
 
-Using third party web services is easy in Mendix. There is a Microflow activity available which calls a web service on another system and imports the XML in the Mendix database. See [Consumed Web Services](consumed-web-services).
+Using third party web services is easy in Mendix. There is a Microflow activity available which calls a web service on another system and imports the XML in the Mendix database.
 
 ### Published web services
 

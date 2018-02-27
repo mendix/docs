@@ -29,7 +29,7 @@ The SAP OData Connector module gives you access to additional actions which you 
 
 ![](attachments/sap-odata-connector/actions-sapodataconnector.png)
 
-The use of each of these actions is described in [section 3. Actions](#Actions).
+The use of each of these actions is described in section [3. Actions](#Actions).
 
 ### 2.2 Action Parameters
 
@@ -37,7 +37,7 @@ Each of these actions will ask for a number of parameters which will be categori
 
 ![](attachments/sap-odata-connector/actionparameters-sapodataconnector.png)
 
-These parameters are described in [section 4. Connector Action Parameters](#ConnectorActionParameters).
+These parameters are described in section [4. Connector Action Parameters](#ConnectorActionParameters).
 
 ### 2.3 Domain Models
 
@@ -50,12 +50,14 @@ For more information on domain models, see [Domain Model](/refguide/domain-model
 Most of the actions of the SAP OData Connector make use of a domain model representing the SAP services data model. These models contain non-persistable Mendix entities which represent SAP Entity Types. There are three types of entity used for this: OdataObject, ComplexType, and FunctionParameters. The entities contain attributes which correspond to the SAP properties plus additional attributes which support the SAP OData Connector.
 
 There are two ways to create a domain model to support your app:
+
 1. Download pre-built service modules from the Mendix App Store. These are available for frequently used SAP services and can be found in the App Store under Connectors > SAP. For more details, see [SAP Service Modules](sap-service-modules).
 2. Create a data model by inspecting the service metadata. The response from the service can be used in the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/) to generate a domain model which can be imported into your app. Instructions for doing this are in [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
 
-The examples used in this guide are based on the **SAP My Tasks for Field Sales Representative (CRM)** data model. This can be:
-1. downloaded from the App Store [here](https://appstore.home.mendix.com/link/app/89942/). If you download it within the desktop modeler, it will be saved in Project Explorer under project 'project name' > App Store modules > CRM_TASK.
-2. created using the OData metadata XML for Customer Relationship Management Tasks, which can be found at [https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata](https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata). Save this file and then, using the instructions in [How to Use SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator), import it into your app.
+The examples used in this guide are based on the **SAP My Tasks for Field Sales Representative (CRM)** data model. This can obtained in the following ways:
+
+* You can download it from the App Store [here](https://appstore.home.mendix.com/link/app/89942/). If you download it within the desktop modeler, it will be saved in Project Explorer under project 'project name' > App Store modules > CRM_TASK.
+* You can create it using the OData metadata XML for Customer Relationship Management Tasks, which can be found at [https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata](https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata). Save this file and then, using the instructions in [How to Use SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator), import it into your app.
 
 Part of the data model for this sample data is:
 
@@ -63,10 +65,9 @@ Part of the data model for this sample data is:
 
 This domain model generally works in the same way as a Mendix domain model, with entities, attributes, and associations. However, there are two additions to support the SAP OData Connector:
 
-1. Every object is based on an entity which is a specialization of the ComplexType, FunctionParameters, or OdataObject entity. The OdataObject entity adds a
-* meta_objectURI string which is the URI of the object and can be used in entity manipulation actions, and a
-* meta_etag string which identifies a state of the object. This is used by the SAP service when you try to change the data on the SAP service to check if it has been changed since it was retrieved by your app.
-2. Many objects have attributes which end in ...Deferred. These contain URIs which will return a list of objects of an entity type which is associated with the current object. For example: in the domain model above, the Task entity contains an attribute AttachmentsDeferred. This will contain a URI which can be used to return a list of TaskAttachments associated with the current Task object via the Attachments_Task_TaskAttachment association.
+* Every object is based on an entity which is a specialization of the ComplexType, FunctionParameters, or OdataObject entity. The OdataObject entity adds a **meta_objectURI** string, which is the URI of the object and can be used in entity manipulation actions, and a
+**meta_etag** string that identifies a state of the object. This is used by the SAP service when you try to change the data on the SAP service to check if it has been changed since it was retrieved by your app.
+* Many objects have attributes which end in ...Deferred. These contain URIs which will return a list of objects of an entity type which is associated with the current object. For example: in the domain model above, the Task entity contains an attribute AttachmentsDeferred. This will contain a URI which can be used to return a list of TaskAttachments associated with the current Task object via the Attachments_Task_TaskAttachment association.
 
 #### 2.3.2 SAP OData Connector Domain Model
 
@@ -78,34 +79,34 @@ Here is the domain model of the SAP OData Connector:
 
 Each entity (see [Entities](/refguide/entities) in the Mendix Reference Guide) contains one or more attributes (see [Attributes](/refguide/attributes) in the Mendix Reference Guide):
 
-* **ODataObject** - represents the generic OData object. All entities which can be manipulated directly in the SAP service domain model are specializations of this
-  * **meta objectURI** - the address given by the SAP service to the OData object 
-  * **meta_etag** - the entity tag (ETag) for the object. Entity tags are used for optimistic concurrency control to check that an object has not been changed by an SAP service initiated by another user
-* **ResultInfo** - holds information about the result of a query
-  * **totalCount** - when a query is executed with $inlinecount=allpages the result returns the total record count for the given criteria. If a ResultInfo entity object is specified, this value will be stored in the totalCount attribute and can be used for paging
-* **ComplexType** - represents the generic SAP service domain model entities which are of type Complex
-* **FunctionParameters** - represents a wrapper for the parameter entities that need to be passed to OData functions
-  * **postParameterInline** - a boolean which indicates whether the parameters should be posted inline or passed as the body of the POST request
-* **RequestParams** - passes conditions to the SAP OData Connector actions which change the behavior of the action. Pass _empty_ if you want to use the default behavior
-  * **expectedHttpResult** - the expected HTTP result code. An HTTP result code which is not expected will cause an exception. If a different code (between 200 and 400) is passed in this attribute, the action will treat this code as success. Setting the expected HTTP response is useful in cases where OData services return codes that differ from the expected ones, e.g. 204 "No Content" when no data is available instead of 200 "OK" with an empty result
-  * **connectTimeout** - time out in seconds before creating a connection times out (default 60 seconds)
-  * **readTimeOut** - time out in seconds before reading from the connection times out (default 120 seconds)
-  * **Proxy** - used internally
-  * **manualProxy** - used internally
-* **Header** - add a custom HTTP header that provides more information in the HTTP request
-  * **Name** - the name of the header
-  * **Value** - the value of the header
-* **CloudConnector Info** - internal use only
-* **Cookie** - internal use only
-* **CSRFToken** - internal use only
+* **ODataObject** – represents the generic OData object. All entities which can be manipulated directly in the SAP service domain model are specializations of this
+  * **meta objectURI** – the address given by the SAP service to the OData object 
+  * **meta_etag** – the entity tag (ETag) for the object. Entity tags are used for optimistic concurrency control to check that an object has not been changed by an SAP service initiated by another user
+* **ResultInfo** – holds information about the result of a query
+  * **totalCount** – when a query is executed with $inlinecount=allpages the result returns the total record count for the given criteria. If a ResultInfo entity object is specified, this value will be stored in the totalCount attribute and can be used for paging
+* **ComplexType** – represents the generic SAP service domain model entities which are of type Complex
+* **FunctionParameters** – represents a wrapper for the parameter entities that need to be passed to OData functions
+  * **postParameterInline** – a boolean which indicates whether the parameters should be posted inline or passed as the body of the POST request
+* **RequestParams** – passes conditions to the SAP OData Connector actions which change the behavior of the action. Pass _empty_ if you want to use the default behavior
+  * **expectedHttpResult** – the expected HTTP result code. An HTTP result code which is not expected will cause an exception. If a different code (between 200 and 400) is passed in this attribute, the action will treat this code as success. Setting the expected HTTP response is useful in cases where OData services return codes that differ from the expected ones, e.g. 204 "No Content" when no data is available instead of 200 "OK" with an empty result
+  * **connectTimeout** – time out in seconds before creating a connection times out (default 60 seconds)
+  * **readTimeOut** – time out in seconds before reading from the connection times out (default 120 seconds)
+  * **Proxy** – used internally
+  * **manualProxy** – used internally
+* **Header** – add a custom HTTP header that provides more information in the HTTP request
+  * **Name** – the name of the header
+  * **Value** – the value of the header
+* **CloudConnector Info** – internal use only
+* **Cookie** – internal use only
+* **CSRFToken** – internal use only
 
 ## 3 Actions<a name="Actions"></a>
 
-This section describes all the actions of the SAP OData Connector. They are categorized as being either for [Entity and Attribute Manipulation](#EntityManipulation) or [Helper Actions](#HelperActions).
+This section describes all the actions of the SAP OData Connector. They are categorized as being either for [entity and attribute manipulation](#EntityManipulation) or [helper actions](#HelperActions).
 
 Some inputs are necessary for the connector to work and these are marked **(required)**. Other inputs are not required, but in some cases this must be made explicit by setting them to _empty_.
 
-A more detailed description of the parameters is in section [4 Connector Action Parameters](#ConnectorActionParameters).
+A more detailed description of the parameters is in section [4. Connector Action Parameters](#ConnectorActionParameters).
 
 ### 3.1 Entity and Attribute Manipulation<a name="EntityManipulation"></a>
 

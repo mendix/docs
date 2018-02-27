@@ -18,8 +18,9 @@ The Mendix push notifications functionality makes it easy for developers to incl
 
 To use push notifications, make sure you have the following:
 
-* A Mendix app platform account (sign up [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup))
-* Mendix Modeler version 6.8.1 or higher (download the Modeler in the [App Store](https://appstore.home.mendix.com/link/modeler))
+* Mendix Desktop Modeler version 7.1–7.3
+    * Please note that 7.3 is the last version verified to work with [Push Notifications Connector](https://appstore.home.mendix.com/link/app/3003/)
+    * Download the Modeler in the [App Store](https://appstore.home.mendix.com/link/modeler)
 * A mobile device (to get started, we recommend an Android device connected to your development machine via a data cable)
 * An [Adobe PhoneGap Build](https://build.phonegap.com/) account
 

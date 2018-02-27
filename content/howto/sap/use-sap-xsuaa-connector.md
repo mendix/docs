@@ -80,7 +80,7 @@ Note that this will only work if you are running your app on the SAP Cloud.
 To accomplish this, follow these steps:
 
 1. Open the project directory of your project and then open the **theme** folder.
-2. Change the contents of **login.html** into the following:
+2. Change the contents of **login.html** to the following:
 
 	```html
 	<!doctype html>
@@ -95,4 +95,8 @@ To accomplish this, follow these steps:
 
 ## 4 Related Content
 
+* [How To Create a Secure App](../security/create-a-secure-app)
+* [How To Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler)
+* [Project Security](/refguide/project-security)
+* [SAP Cloud Platform XSUAA Connector](https://appstore.home.mendix.com/link/app/78091/)
 * [SAP XSUAA Connector](/refguide/sap/sap-xsuaa-connector)

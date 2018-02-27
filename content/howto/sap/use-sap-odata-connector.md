@@ -43,7 +43,7 @@ In this section, you will learn how to implement the data connector in your Mend
 In this example, you are retrieving a list of customers that is available in the SAP Service module named **SAP Check Price and Availability Connector**.
 
 {{% alert type="info" %}}
-This is NOT the very similar SAP Service Module, **SAP Check Price and Availability for Field Sales Representative**
+This is NOT the very similar SAP Service Module, **SAP Check Price and Availability for Field Sales Representative**.
 {{% /alert %}}
 
 To create the microflow for this retrieve, follow these steps:

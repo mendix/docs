@@ -9,7 +9,7 @@ This page describes some common scenarios of working in the Modeler with version
 
 To start a new project with version control you simply choose 'New Project' in the Modeler and make sure that the Team Server option is enabled. Creating such a project creates a Team Server repository and a sprintr™ project. Also a working copy is created and opened so that you can immediately start working.
 
-![](attachments/524299/688159.png)
+![](attachments/modeler-core/2018-03-02_11-11-18.png)
 
 ## Joining A Project
 
@@ -21,7 +21,7 @@ If you already have a sprintr™ project that was created by hand, you can enabl
 
 {{% /alert %}}
 
-![](attachments/524299/688149.png)
+![](attachments/modeler-core/2018-03-02_11-13-59.png)
 
 ## Day-to-day Development
 
@@ -72,11 +72,11 @@ You can resolve a project conflict by choosing 'Use mine' or by deleting the inv
 
 While developing you can deploy and run your project on your local machine by using the menu item 'Project > Run'. If you want to put your project into a test, acceptance or production environment, you will have to upload it to the cloud. If you are using the Mendix Cloud Portal you can choose 'Deploy to the Cloud Portal' from the project menu.
 
-![](attachments/524299/688176.png)
+![](attachments/modeler-core/2018-02-21_17-05-05.png)
 
 If you are using a different hosting environment, you create a deployment archive using the menu item 'Project > Create Deployment Archive'.
 
-![](attachments/524299/688152.png)
+![](attachments/modeler-core/2018-02-28_13-44-04.png)
 
 You can choose a development line and revision to create an archive from. The Modeler will create a fresh checkout of that revision so that creating this deployment archive can always be reproduced by you or by other people. In other words, the Modeler does not rely on your local files for creating a versioned deployment archive.
 
@@ -104,11 +104,11 @@ After applying a fix to a maintenance branch line we advise you to quickly merge
 
 Another reason for creating a branch is if you want to develop a big new feature without interfering with other development. This gives you the freedom to commit a half implemented feature possibly even with errors while other people can still commit and update on the main line. Otherwise, you would have to constantly make sure that your project is error free and does not break other parts of the system. Instead of creating a branch from a tag (as described above) you then create a branch from a revision of the main line.
 
-![](attachments/524299/688147.png)
+![](attachments/modeler-core/2018-02-28_13-50-39.png)
 
 You then work on the branch for a while until the big feature is done. At that point you can merge the whole branch back to the main line to integrate the feature there. You do this by opening the main line and then choosing 'Team > Merge changes here'. Choose 'Merge feature branch' and then select the branch and click 'Merge'. After resolving any conflicts and errors you can commit the new feature to the main line.
 
-![](attachments/524299/688153.png)
+![](attachments/modeler-core/2018-02-28_14-05-23.png)
 
 The branch can be deleted after merging it back. This is something that cannot be done from the Modeler (yet).
 

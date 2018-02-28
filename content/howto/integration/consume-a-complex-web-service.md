@@ -38,20 +38,24 @@ To import a web service using the wizard, follow these steps:
 
     ![](attachments/18448730/18581786.png)
 
-4. For **WSDL source** in the **Web service Description** section of the **New Web Service Operation** dialog box, select the WSDL to be used for this imported web service. You can either use a **URL** or load a **File** from your computer.
+4.  For **WSDL source** in the **Web service Description** section of the **New Web Service Operation** dialog box, select the WSDL to be used for this imported web service. You can either use a URL (for example, http://www.webservicex.net/medicareSupplier.asmx?WSDL) or load a File from your computer.
 
     ![](attachments/18448730/18581785.png)
 
-5. Click **Next** to fetch the services and operations in the WSDL.
-6. On the **New Web Service Operation** dialog box, you can now review the services and operations available to the imported web service. Select a web service operation and click **Next**.
+5.  Click **Next** to fetch the services and operations in the WSDL.
+
+    ![](attachments/18448730/port.png)
+
+6. This will bring up the **Select Ports** pop-up window asking you to select a web service port. Click **OK** to select the default. The Modeler now imports the operations.
+7. On the **New Web Service Operation** dialog box, you can now review the services and operations available to the imported web service. Select a web service operation and click **Next**.
 
     ![](attachments/18448730/18581784.png)
 
-7. On the **Select Elements** dialog box, you can optionally select the elements to map as return values of the web service, and then click **Next**.
+8. On the **Select Elements** dialog box, you can optionally select the elements to map as return values of the web service, and then click **Next**.
 
     ![](attachments/18448730/18581783.png)
 
-8. The final step in this wizard provides you with the option to create a microflow in which the imported web service is called and the option to add icons to the generated entities: 
+9. The final step in this wizard provides you with the options to add icons to the generated entities and to create a microflow in which the imported web service is called: 
 
     ![](attachments/18448730/18581782.png)
 
@@ -85,14 +89,13 @@ To import a web service directly, follow these steps:
 
     ![](attachments/18448730/18581779.png)
 
-
 You can also describe the design purpose of the web service on the **Documentation** tab.
 
 ## 4 Configuring the Web Service Call
 
 To configure the web service call, follow these steps:
 
-1. If you do not use the web service wizard, you have to create a microflow that will call the imported web service:
+1. If you did not use the web service wizard and/or did not use the option within the wizard to automatically create a microflow, you have to create a microflow that will call the imported web service:
 
     ![](attachments/18448730/18581778.png)
 
@@ -103,48 +106,34 @@ To configure the web service call, follow these steps:
     {{% /alert %}}
 
 2. If you are creating your own microflow, add the Call Web Service activity to the microflow. For details on how to add activities to microflows, see [Activities](/refguide7/activities) in the Mendix Reference Guide.
-3. Click **Select...** in the **Web service operation** section of the **Call Web Service** dialog box:
-
-    ![](attachments/18448730/18581796.png)
-
-    This will bring up the **Select Web Service Operation** pop-up window, where you can choose the operation for this web service call:
+3. Double-click the activity to open the **Call Web Service** wizard and in the **Operation** section, click **Select...** for **Operation**.
+4. This opens the **Select Web Service Operation** dialog box, where you can choose the operation for this web service call:
 
     ![](attachments/18448730/18581777.png)
 
-4. On the **SOAP Body** tab in the **Request** section of the **Call Web Service** dialog box (see above) you can configure the SOAP body, which contains the parameters needed to execute the web service request. The **Simple**, **Advanced**, and **Custom** option buttons enable choosing the type of SOAP body to use. Click **Edit value** to change the domain-to-XML mapping or the variables from the microflow used as input arguments.
+5. On the **SOAP Request Body** tab of the **Call Web Service** wizard, you can configure the SOAP body, which contains the parameters needed to execute the web service request. The **Simple**, **Export Mapping**, and **Custom** options enable choosing the type of SOAP body to use. Click **Edit value** to change the domain-to-XML mapping or the variables from the microflow used as input arguments.
     * Use the **Simple** option if the imported web service requires only primitive arguments:
 
         ![](attachments/18448730/18581791.png)
-
-    * Use the **Advanced** option if the web service call needs a list of objects or if the domain model entities need to be mapped to XML elements:
-
-        ![](attachments/18448730/18581795.png)
-
+    
+    * Use the **Export mappings for each request parameter** or **Export mapping for the entire request** options if the domain model entities need to be mapped to XML elements
     * Use the **Custom** option for the definition of a custom XML body with parameters:
 
         ![](attachments/18448730/18581792.png)
 
-5. On the **SOAP Header** tab in the **Request** section of the **Call Web Service** dialog box, you can enter authentication information using the **Edit value** button if the imported web service requires authentication:
+6. On the **HTTP Headers** tab in the **Call Web Service** wizard, you can enter authentication information using the **Edit** button if the Mendix Runtime should use this before calling the web service:
 
     ![](attachments/18448730/18581793.png)
 
-    There are three input options:
-    * Use the **Simple** option if only static values or variables from the microflow need to be passed to the imported web service
-    * Use the **Advanced** option if domain-to-XML mapping is needed for authentication
-    * Use the **Custom** option to define a custom XML header and to specify parameters
-6. On the **HTTP Authentication** tab in the **Request** section of the **Call Web Service** dialog box, enter the HTTP authentication information if the Mendix Business Server should use this before calling the web service:
-
-    ![](attachments/18448730/18581794.png)
-
-7. In the **Output** section of the **Call Web Service** dialog box, you can configure the handling of the return from the web service call:
-    * If the return is a complex XML structure, you can select the **Map to entities** option and use an XML-to-domain mapping to map the XML elements to the domain model entities:
+7. On the **SOAP Response** tab of the **Call Web Service** wizard, you can configure the handling of the return from the web service call:
+    * If the return is a complex XML structure, you can select the **Mapping** and use an XML-to-domain mapping to map the XML elements to the domain model entities:
 
         ![](attachments/18448730/18581790.png)
 
     * If the return is a primitive, you can store it in a variable that you can name in the **Store in variable** field:
 
         ![](attachments/18448730/18581789.png)
-
+        
     * If you want to ignore the return, select the **Ignore** option
 8.  Your imported web service is now ready to be used in your application.
 

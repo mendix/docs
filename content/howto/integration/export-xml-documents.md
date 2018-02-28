@@ -155,12 +155,15 @@ To create the export logic, follow these steps:
     ![](attachments/18448731/18581825.png)
 
 13. Click **OK** to save the change item.
-14. Create a change item to set the **Name** attribute to: *'customers.xml'* (including the single quotation marks [']).
+14. Create a change item to set the **Name** attribute to: *'customers.xml'* (including the single quotation marks [']). The **Create Object** dialog box should now look like this:
+
+    ![](attachments/18448731/create-object.png)
+
 15. Click **OK** to save the action properties. The microflow should look like this:
 
     ![](attachments/18448731/18581823.png)
 
-16. Drag an **Export XML** activity from the **Toolbox** to the line between the start event and end event. This inserts a new export XML activity.
+16. Drag an **Export with mapping** activity from the **Toolbox** to the line between the start event and end event. This inserts a new export XML activity.
 17. Double-click the new activity to open the properties editor and do the following:
     * For **Mapping**, select the previously created **ExportCustomersMapping** XML-to-domain mapping
     * For **Parameter type**, verify that the entity **XMLDocument** is automatically selected
@@ -174,7 +177,7 @@ To create the export logic, follow these steps:
     ![](attachments/18448731/18581821.png)
 
 19. Drag a **Download file** activity from the **Toolbox** to the line between the start event and end event.
-20. Double-click the actvity to open the **Download File** editor and select **NewXMLDocument** as the **File document**:
+20. Double-click the actvity to open the **Download File** dialog box and select **NewXMLDocument** as the **File document**:
 
     ![](attachments/18448731/18581818.png)
 

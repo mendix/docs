@@ -247,30 +247,30 @@ For more information about runtime settings, read the [Custom Settings](/refguid
 
 The Mendix Cloud uses runtime settings to configure the included systems for logs, backups, and database. Therefore, the following settings are not configurable by users:
 
-* com.mendix.core.localfilesystem.cleaning.isEnabled
-* com.mendix.core.localfilesystem.cleaning.time
-* CACertificates
-* ClientCertificatePasswords
-* ClientCertificates
-* DatabaseHost
-* DatabaseJdbcUrl
-* DatabaseName
-* DatabasePassword
-* DatabaseType
-* DatabaseUserName
-* DatabaseUseSsl
-* DTAPMode
-* EnableSessionFingerprinting
-* JavaKeyStorePassword
-* LogFileName
-* MaxLogFileCount
-* MaxLogFileSize
-* MicroflowConstants
-* MyScheduledEvents
-* OracleServiceName
-* ScheduledEventExecution
-* TempPath
-* WebServiceClientCertificates
+* `com.mendix.core.localfilesystem.cleaning.isEnabled`
+* `com.mendix.core.localfilesystem.cleaning.time`
+* `CACertificates`
+* `ClientCertificatePasswords`
+* `ClientCertificates`
+* `DatabaseHost`
+* `DatabaseJdbcUrl`
+* `DatabaseName`
+* `DatabasePassword`
+* `DatabaseType`
+* `DatabaseUserName`
+* `DatabaseUseSsl`
+* `DTAPMode`
+* `EnableSessionFingerprinting`
+* `JavaKeyStorePassword`
+* `LogFileName`
+* `MaxLogFileCount`
+* `MaxLogFileSize`
+* `MicroflowConstants`
+* `MyScheduledEvents`
+* `OracleServiceName`
+* `ScheduledEventExecution`
+* `TempPath`
+* `WebServiceClientCertificates`
 
 ## 7 Maintenance Tab
 

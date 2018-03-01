@@ -72,11 +72,11 @@ Some apps require a guaranteed single execution of a certain activity at a given
 
 ## 9 Dirty State in a Cluster
 
-When a user signs in to a Mendix application and starts going through a certain application flow, some data can be temporary retained, while not persisting it yet in the database. The data is retained in the Mendix Client memory and communicated on behalf of the user to a Mendix Runtime node.
+When a user signs in to a Mendix application and starts going through a certain application flow, the system can temporararily retain some data while not persisting it yet in the database. The data is retained in the Mendix Client memory and communicated on behalf of the user to a Mendix Runtime node.
 
 For example, imagine you are booking a vacation through a Mendix app that consists of a flight, hotel, and rental car. In the first step you would select and configure the flight, in the second one your hotel, in the third your rental car, and in the final step you confirm the booking and payment. Each of these steps could be in a different screen, but when you go from step one to step two you would still like to remember your booked flight. This is called the 'dirty state'. The data is not finalized yet, but should be retained between different requests. As reliably scaling out and supporting failover scenarios is necessary, the state can not be stored in the memory of one Mendix Runtime node between requests. Therefore, the state is returned to the caller (the Mendix Client) and added to subsequent requests, so that every node can work with that state for those requests.
 
-The following picture describes its behavior:
+The following image describes its behavior:
 
 ![](attachments/16714073/16844072.png)
 
@@ -84,11 +84,11 @@ Reading objects and deleting (unchanged) objects from the Mendix Database is sti
 
 Only the 'Dirty State' for requests which originate from the Mendix Client (both synchronous and asynchronous calls) can be retained between requests. For all other requests, such as scheduled events, web services, or background executions, the state only lives for the current request. After that, the 'Dirty State' either has to be persisted or will be discarded. The reason for only allowing Mendix Client requests to retain their 'Dirty State' is that this is currently the only channel that works with actual user input. User input requires more interaction with and flexibility of data between requests. By only allowing these requests to retain their 'Dirty State', the load on the Mendix Runtime and the external source is minimized and performance optimized.
 
-Note that whenever the Mendix Client is restarted, all state is discarded, as it's only kept in the Mendix Client memory. The Mendix Client is restarted when reloading the browser tab (e.g. when pressing <kbd>F5</kbd>), restarting a mobile hybrid app, or explicitly logging out.
+Note that whenever the Mendix Client is restarted, all the state is discarded, as it's only kept in the Mendix Client memory. The Mendix Client is restarted when reloading the browser tab (for example, when pressing <kbd>F5</kbd>), restarting a mobile hybrid app, or explicitly logging out.
 
 The more objects that are part of the 'Dirty State', the more data has to be transferred in the requests and responses between the Mendix Runtime and the Mendix Client. As such, it has an impact on performance. In cluster environments it is advised to minimize the amount of 'Dirty State' to minimize the impact of the synchronization on performance.
 
-The Mendix Client attempts to optimize the amount of state sent to the Mendix Runtime by only sending the data which can potentially be read while processing the request. For example, if you call a microflow which gets the `Booking` as a parameter and retrieves the `Flight` over association, then the Client will pass only the `Booking` and the associated `Flight`s from the Dirty State along with the request, but not the `Hotel`s. Note that this behavior is best effort, if the microflow is too complex to analyze (e.g. when a Java action is called with a State object as a parameter) the entire Dirty State will be sent along. This optimization can be disabled by the [`Optimize network calls` Project Setting](project-settings#3-2-optimize-network-calls).
+The Mendix Client attempts to optimize the amount of state sent to the Mendix Runtime by only sending data that can potentially be read while processing the request. For example, if you call a microflow tghat gets `Booking` as a parameter and retrieves `Flight` over association, then the client will pass only `Booking` and the associated `Flight`s from the dirty state along with the request, but not the `Hotel`s. Note that this behavior is the best effort; if the microflow is too complex to analyze (for example, when a Java action is called with a state object as a parameter), the entire dirty state will be sent along. This optimization can be disabled by the [`Optimize network calls` Project Setting](project-settings#3-2-optimize-network-calls).
 
 {{% alert type="warning" %}}
 

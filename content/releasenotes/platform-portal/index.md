@@ -4,6 +4,13 @@ title: "Platform Portal"
 
 ## 2018
 
+### March 1st, 2018
+
+#### Fixes
+
+* Switching between environments in metrics menu of Mendix Cloud v3 apps is fixed now.
+* We fixed a syncronization problem that prevents Mendix Cloud v3 users to see their latest nightly backups.
+
 ### February 27th, 2018
 
 #### Fixes

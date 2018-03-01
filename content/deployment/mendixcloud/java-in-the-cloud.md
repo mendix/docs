@@ -19,7 +19,7 @@ To ensure application safety the following permissions are disabled for Java act
 *   Thread modification.
 *   Socket access (disabled by default, exceptions can be requested).
 
-A complete list with detailed access information can be found [here](http://download.oracle.com/javase/6/docs/technotes/guides/security/permissions.html#PermsAndMethods "Restriction details").
+A complete list with detailed access information can be found [here](https://docs.oracle.com/javase/8/docs/technotes/guides/security/permissions.html#PermsAndMethods).
 
 Exceptions on these restrictions are:
 

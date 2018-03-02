@@ -11,8 +11,8 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
-| Set BooleanSlider Value          | BooleanSlider                    | * Deprecated in favor of **Set Value**<br /> * Checks if the given value is available for the BooleanSlider and sets the value. |
-| Set BootstrapRTE Value           | BootstrapRTE                     | * Deprecated in favor of **Set Value**<br /> * Sets the given value as current value for the BootstrapRTE value. Strings can be formatted via html-code. |
+| Set BooleanSlider Value          | BooleanSlider                    | *Deprecated in favor of **Set Value**<br /> *Checks if the given value is available for the BooleanSlider and sets the value. |
+| Set BootstrapRTE Value           | BootstrapRTE                     | * Deprecated in favor of **Set Value**<br /> * Sets the given value as current value for the BootstrapRTE value. Strings can be formatted via html-code.<br /> |
 | Set Checkbox Set Selector Value  | Checkbox Set Selector            | Checks/clears the **Select all** check box. |
 | Set Checkbox Set Selector Value (all) | Checkbox Set Selector       | Checks/clears the **Select all** check box. |
 | Set Checkbox Value               | Checkbox                         | Sets the value of a check box. |

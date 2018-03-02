@@ -122,7 +122,7 @@ For example, you can add `Key` and `Value` members to a `Data` entity associated
 
 The `Value` values can easily be obtained by performing a find on the `Key` values of a list of `Data` instances.
 
-![](attachments\modeler-core\2018-03-01_17-56-37.png)
+![](attachments/modeler-core/2018-03-01_17-56-37.png)
 
 {{% alert type="warning" %}}
 

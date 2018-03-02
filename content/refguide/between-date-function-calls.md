@@ -106,7 +106,7 @@ results in
 
 ### Output
 
-Returns the difference between the two dates, as a positive Decimal, measured in days. Time is taken into consideration, so comparing date-x 0:00 with date-x 06:00 will result in 0.25000000.
+Returns the difference between the two dates as a positive Decimal measured in days. Time is taken into consideration, so comparing `date-x 0:00` with `date-x 06:00` will result in `0.25000000`.
 
 For example:
 

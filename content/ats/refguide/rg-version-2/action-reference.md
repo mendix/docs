@@ -7,7 +7,7 @@ parent: "rg-version-2"
 
 The tables below list all the built-in functions of ATS. There is one table per category. 
 
-## 2 Widget - Set
+## 2 Widget – Set
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -26,8 +26,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Set Value | * Standard widgets: TextBox, TextArea, DropDown, RadioButton, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown <br /> * App Store widgets: OnChange Inputbox, BooleanSlider, Bootstrap Wysiwyg Editor (Bootstrap RTE), CK Editor For Mendix, Input Reference Selector, Radiobutton List | Sets the value of all supported widgets. |
 | Set Value (by index) | Drop Down, Reference Selector, Search Input Drop Down | Sets the value of all supported drop-down widgets by index. |
 
-
-## 3 Widget - Get
+## 3 Widget – Get
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -51,9 +50,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Get Visible Item/Row Count | DataGrid, TemplateGrid, ListView | Returns the number of currently visible items/rows in a template grid, data grid, or list view. |
 | Groupbox is Collapsed | GroupBox | Gets the group box collapsed state: true if collapsed, otherwise false. |
 
-
-
-## 4 Widget - Assert
+## 4 Widget – Assert
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -153,7 +150,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Select Option by Index | |
 | Select Option by Text | |
 | Select Option by Value | |
-| Set Browser Dimensions | * Deprecated in favor of **Set Size**. |
+| Set Browser Dimensions | Deprecated in favor of **Set Size**. |
 | Set Page Load Timeout | |
 | Set Size | Sets the size of a browser window. |
 | Switch to Default Frame | |
@@ -163,7 +160,6 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Unfocus WebElement | |
 | Wait for Condition | |
 | Wait for Condition JS | Waits until the given expression returns true. |
-
 
 ## 9 Mouse & Keyboard
 
@@ -182,7 +178,6 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Hover | WebElement | Hovers a web element. |
 | Send Enter | N/A                  | Simulates pressing <kbd>Enter</kbd> in the element. |
 | Send Keys | N/A                  | Simulates typing <kbd>Text</kbd> into the element. |
-
 
 ## 10 Logic
 

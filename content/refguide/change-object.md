@@ -3,7 +3,7 @@ title: "Change Object"
 parent: "object-activities"
 ---
 
-A change object can be used to change the members of an object. This can be done with or without committing, with or without events.
+A change object can be used to change the members of an object. This can be done with or without committing and with or without events.
 
 {{% alert type="info" %}}
 

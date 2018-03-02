@@ -8,8 +8,8 @@ title: "Platform Portal"
 
 #### Fixes
 
-* Switching between environments in metrics menu of Mendix Cloud v3 apps is fixed now.
-* We fixed a syncronization problem that prevents Mendix Cloud v3 users to see their latest nightly backups.
+* Switching between environments in the **Metrics** menu of Mendix Cloud v3 apps is now fixed.
+* We fixed the syncronization problem that prevented Mendix Cloud v3 users from seeing their latest nightly backups.
 
 ### February 27th, 2018
 

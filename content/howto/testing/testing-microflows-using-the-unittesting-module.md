@@ -12,16 +12,17 @@ To smarten up your app with business logic you can use microflows. To verify tha
 
 ## 1 Preparation
 
-Before you can start with this how-to, make sure you have completed the following prerequisites.
+Before you can start with this how-to, make sure you have completed the following prerequisites:
 
-*   Download the Mendix Desktop Modeler.
+* Download the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
+* Review the software used in this how-to:
 
-| Software | Version used in this how-to |
-| --- | --- |
-| Mendix Desktop Modeler | 5.18.0 |
-| UnitTesting module | 4.2 |
-| Community Commons Function Library module | 5.4 |
-| ObjectHandling module | 1.0 |
+    | Software | Version used in this how-to |
+    | --- | --- |
+    | Mendix Desktop Modeler | 5.18.0 |
+    | UnitTesting module | 4.2 |
+    | Community Commons Function Library module | 5.4 |
+    | ObjectHandling module | 1.0 |
 
 {{% alert type="warning" %}}
 All images, names and steps in this how-to are based on these versions. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.

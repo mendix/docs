@@ -17,7 +17,7 @@ Before you can start with this how-to, make sure you have completed the followin
 * Download the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
 * Review the software used in this how-to:
 
-    | Software | Version used in this how-to |
+    | Software | Version Used in This How-to |
     | --- | --- |
     | Mendix Desktop Modeler | 5.18.0 |
     | UnitTesting module | 4.2 |

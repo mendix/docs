@@ -70,7 +70,7 @@ Here is the input parameter:
 
 In the next step, you will create a new OrderDocument. This object will store the actual document. Set the reference to the **Order** variable and the name of the document:
 
-![](attachments\modeler-core\2018-02-28_16-52-43.png)
+![](attachments/modeler-core/2018-02-28_16-52-43.png)
 
 Now you need to have a **Language** object. In our case, the **Customer** holds  the preferred communication language. In our microflow example, you first retrieve the **Customer** via the **Order**, and then retrieve the **Language** from that **Customer**:
 
@@ -128,7 +128,7 @@ The document template is now configured, and the microflow is ready to be used. 
 * retrieve the created document, and
 * download the file:
 
-![](attachments\modeler-core/2018-03-01_14-21-38.png)
+![](attachments/modeler-core/2018-03-01_14-21-38.png)
 
 This is the resulting document:
 

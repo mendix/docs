@@ -51,8 +51,9 @@ Default attribute values for entities in the domain model don't have any effect 
 
 ### 4.8 Associations
 
-Attribute paths which follow references are not allowed in grid columns. In addition, reference set selectors cannot be used.
-Also, usage of reference set associations (accessing through custom widgets etc) are not supported.
+Attribute paths which follow references are not allowed in grid columns. In addition, reference set selectors cannot be used. 
+
+In addition, usage of reference set associations (accessing through custom widgets etc) is not supported.
 
 ### 4.9 Inheritance
 

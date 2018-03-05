@@ -9,7 +9,7 @@ The data view is a central component in Mendix applications. It is the starting 
 
 {{% alert type="info" %}}
 
-![](attachments/16713914/16844032.png)
+![](attachments/pages/data-view.png)
 
 A more advanced data view with a tab control and a data grid inside.
 

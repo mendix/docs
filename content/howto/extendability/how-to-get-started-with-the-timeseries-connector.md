@@ -41,6 +41,7 @@ Follow these steps to get access to the TimeSeries connector and receive an API 
 After importing the module, there are a couple of settings you need to configure. Some of the settings are preconfigured.
 
 ### 4.1 Set the Constants
+
 There are three constants that you can configure. Follow these steps to configure them:
 
 1. Expand your project and go to **App Store modules > TimeSeriesConnector > Settings**.
@@ -57,6 +58,7 @@ There are three constants that you can configure. Follow these steps to configur
     {{% /alert %}}
 
 ### 4.2 Available Enumerations
+
 These are the available enumarations in the TimeSeriesConnector module:
 
 * Enum_AggregationInterval: INTERVAL or REGISTER. These are determined by the TimeSeries platform and are the supported interval types for aggregation calls
@@ -83,6 +85,7 @@ The domain model looks like this:
 ![](attachments/how-to-get-started-with-the-timeseries-connector/Domainmodel.png)
 
 ### 5.1 Create an Asset
+
 You start the implementation by creating an asset object in a page, or directly in a microflow.
 
 1. Provide an **Asset name**, otherwise the connector will return an error. You are free to choose the name.
@@ -98,6 +101,7 @@ After having set the **Asset name**, we trigger some validation, call the **Crea
 You can find this microflow in the *TimerSeriesConnector* module under **1. Assets > CreateAsset > IVK_CreateAsset**.
 
 ### 5.2 Create a Channel
+
 The next step is creating a *Channel*. This *Channel* should belong to an *Asset*. Follow these steps to create a *Channel*:
 
 1. Provide an **Asset ID** to make sure your channel belongs to an asset.
@@ -121,6 +125,7 @@ After having set the necessary attributes and associations, we trigger some vali
 You can find this microflow in the *TimerSeriesConnector* module under **2. Channels > AddChannel > IVK_AddChannel**.
 
 ### 5.3 Store Measurement(s)
+
 Now that you have created an asset with a channel, you can start storing measurements. Follow these steps to store your measurements:
 
 1. Make sure your measurement belongs to a channel (and thus, an asset).
@@ -145,6 +150,7 @@ After having set the necessary attributes and associations, we trigger some vali
 You can find this microflow in the *TimerSeriesConnector* module under **3. Measuremenets > StoreMeasurements > IVK_StoreMeasurement**.
 
 ### 5.4 Aggregate Your Data
+
 Once your channel has sufficient data, the TimeSeries Connector will really start to shine. Instead of having enormous amounts of data in your database, which takes a long time to aggregate for reporting, you can now simply ask the TimeSeries platform for an aggregation of your data. Follow these steps to set up your data aggregation:
 
 1. Create an **AggregateSearchResult** object to use as the **Type parameter**. If you create a new entity, make sure it has all the necessary attributes as defined in this example:

@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 My Dashboard
 
-To access your [Community Profile](https://developer.mendixcloud.com/link/profile), hover over your picture on the right side of the navigation bar and select **My Profile** from the context menu.
+To access your [Community Profile](https://developer.mendixcloud.com/link/profile), hover over your picture on the right side of the navigation bar and select **My Dashboard** from the context menu.
 
 Your profile will open to the **My Dashboard** tab, where you can see your points chart. The chart and its legend present the division of your points between various Mendix products and activities. For details on gaining points, see the [Points System FAQ](https://developer.mendixcloud.com/link/faq). When analyzing your points, be sure to also check out the **Leaderboards** tab to see the top Mendix community contributors!
 
@@ -37,6 +37,7 @@ On your dashboard, you can invite friends and colleagues to join Mendix. After y
 ![](attachments/how-to-set-up-your-profile/referral-url.png)
 
 After you have invited someone to Mendix, click **Invite Friends / View Status** to see their name and status listed at the bottom of the pop-up window:
+
 1. If you invited them via email, they will first have the **Invited** status.
 2. When they click sign up for Mendix and recieve a confirmation email, they will have the **Confirmation e-mail sent** status.
 3. When they complete the signup process and their account is active, their status will change to **Completed sign-up**.
@@ -47,6 +48,43 @@ After you have invited someone to Mendix, click **Invite Friends / View Status**
 Once five of your referrals reach the **Successful** status, you will see the **Claim your t-shirt** link on your dashboard. Click this to fill in some details and receive your awesome Mendix t-shirt. Yay!
 
 ![](attachments/how-to-set-up-your-profile/claim-tshirt.png)
+
+### <a name="review"></a>3.2 Writing User Reviews of Mendix
+
+Once you start using Mendix regularly and are familiar with all the capabilities of the platform, you can write user reviews on [Gartner Peer Insights](https://www.gartner.com/reviews/market/mobile-application-development-platforms/vendor/mendix/product/mendix-platfor), [TrustRadius](https://www.trustradius.com/products/mendix/reviews), and [G2 Crowd](https://www.g2crowd.com/products/mendix/reviews). This is another way for you to earn Mendix swag!
+
+{{% alert type="warning" %}}
+There is no opportunity for Mendix partners to leave reviews on Gartner Peer Insights due to their policy.
+{{% /alert %}}
+
+To write a user review and earn a fashionable pair of Mendix socks, follow these steps:
+
+1. Click **Write Review** under **Get your free socks** on your dashboard.
+2.  On the pop-up window, click the link to the software review website next to **Write your review here**:
+
+    ![](attachments/how-to-set-up-your-profile/review-popup.png)
+
+3. Write and save your user review on the website.
+4. Copy the URL to your review, paste it in the field on the pop-up window, and click **Submit Review**. Please note that you cannot submit a link to a review that has already been written and submitted.
+
+The submitted review is then verified by Mendix. You can check the status of your review by clicking **Write Review** and looking at the bottom of the pop-up window:
+    
+* **Pending** – Mendix is still verifying the review
+*  **Successful** – the review has been verified and is published, so you can claim your swag!
+
+    ![](attachments/how-to-set-up-your-profile/review-popup-status.png)
+
+Once your review has been verified as successful, you will see the **Claim your socks** link on your dashboard. Click this to fill in some details and receive your nice warm pair of Mendix socks!
+
+![](attachments/how-to-set-up-your-profile/review-socks.png)
+
+{{% alert type="info" %}}
+If your review has been declined, you can write a new one and submit it.
+{{% /alert %}}
+
+{{% alert type="info" %}}
+You can only earn a pair of socks for your first Mendix user review. Subsequent reviews will still earn you Mendix points.
+{{% /alert %}}
 
 ## <a name="publicprofile"></a>4 Editing Your Public Profile
 
@@ -82,8 +120,9 @@ In the body of your profile, you can edit the following elements:
 * **Summary**
 * **Industry Experience**
 * **Skills**
-* **Reviews** – URLs of the reviews of Mendix you have written at [Gartner Peer Insights](https://www.gartner.com/reviews/market/mobile-application-development-platforms/vendor/mendix) and [TrustRaduius](https://www.trustradius.com/products/mendix/reviews)
-    * Links to these reviews will not appear on your public profile, but these two reviews are required to make your profile 100% complete
+* **Reviews** – URLs of the reviews of Mendix you have written
+    * Links to these reviews will not appear on your public profile, but writing one review is required to make your profile 100% complete
+    * For details on writing reviews of Mendix, see section [3.2 Writing Reviews of Mendix](#review)
 * **Projects** – for details on adding a project, see section [5 Adding a Project](#project)
 
 Be sure to complete the following items, which are necessary to make your Community Profile public:

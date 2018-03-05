@@ -5,7 +5,7 @@ category: "Extendability"
 
 ## 1 Introduction
 
-We live in a world of digital innovations where many applications help us to make better decisions in our daily lives. Mendix applications are capable of storing data in addition to making accurate predictions using this data based on the best machine learning algorithms that are currently known. With the AwsMLConnector module, it is feasible to incorporate a Mendix application into the Amazon ML service, which opens up new opportunities to make your Mendix application smart.
+We live in a world of digital innovations where many applications help us to make better decisions in our daily lives. Mendix applications are capable of storing data in addition to making accurate predictions using this data based on the best machine learning algorithms that are currently known. With the Aws Machine Learning Connector module, it is feasible to incorporate a Mendix application into the Amazon ML service, which opens up new opportunities to make your Mendix application smart.
 
 For more information about regression models and machine learning in general, refer to the [Amazon ML tutorial](https://aws.amazon.com/machine-learning/).
 

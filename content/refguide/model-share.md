@@ -12,7 +12,7 @@ Mendix Model Share is supported in Mendix 5.14 and higher.
 
 # Creating a Model Share
 
-![](attachments/16713690/16843858.png)
+![](attachments/modeler-core/2018-02-21_12-38-31.png)
 
 A Model Share can be quickly created from within the Mendix Desktop Modeler. Open the document (currently, only microflows are supported) you want to share and press the 'Share' button. Optionally provide a title and description for the new Model Share - these are used as meta data. After filling out the details, confirm your input by clicking the 'Share' button and a new Model Share will be created. Model Shares will be bound to your personal Mendix Account.
 
@@ -30,7 +30,7 @@ After finishing the upload, the Mendix Desktop Modeler will show the URL of your
 
 The Mendix Desktop Modeler will recognize automatically if a Model Share URL is on the clipboard. So if you know the URL of a model share, just copy it to your clipboard and use the paste button in the Mendix Desktop Modeler to import the Model Share. The Mendix Desktop Modeler will automatically solve naming conflicts. The Model Share URL can be copied easily from the Model Share page or a Model Share embedded view using the 'Copy' button.
 
-![](attachments/16713690/16843857.png)
+![](attachments/modeler-core/2018-02-21_13-11-18.png)
 
 # Embedding a Model Share in (for example) a blog post
 

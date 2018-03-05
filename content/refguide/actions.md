@@ -14,7 +14,7 @@ An action page has the following tabs:
 
 ![](attachments/16713720/16843926.png)
 
-### Caption
+### Name
 
 This is the name of the action the consumer will see in their toolbox.
 
@@ -56,7 +56,7 @@ Defines the name of the parameter in the app service action call. This is initia
 
 A button is available for complex types (e.g. an entity from your domain model), to define whether to include or exclude the attribute in an entity, as well as to define whether an attribute can be empty as input.
 
-### Return Type
+## Return Type
 
 Defines what kind of object will be returned by the action. This can be a simple type (like an integer or string), or a complex type (i.e. an entity from your entity model)
 
@@ -68,6 +68,6 @@ Defines whether the return value can be **empty**.
 
 ![](attachments/16713720/16843921.png)
 
-The Return Type tab of an app service action called 'ServeReturnObject'. An **empty** ReturnObject is disallowed here.
+The Return Type tab of an app service action. An **empty** ReturnObject is disallowed here.
 
 {{% /alert %}}

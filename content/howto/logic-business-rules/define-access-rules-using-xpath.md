@@ -16,7 +16,7 @@ In this how-to, you will prepare a data structure (including security), a GUI, a
 
 ## 2 Preparing the Data Structure, GUI, and Example Data
 
-The access rules used in this how-to contain customer and order data. To define the access rules, you first need to set up the data structure, user roles, and GUI to maintain customer and order data. For details on how to create a data structure and GUI, see [How to Create and Deploy Your First App](../modeling-basics/create-and-deploy-your-first-app).
+The access rules used in this how-to contain customer and order data. To define the access rules, you first need to set up the data structure, user roles, and GUI to maintain customer and order data.
 
 To prepare the data structure, GUI, and example data, follow these steps:
 

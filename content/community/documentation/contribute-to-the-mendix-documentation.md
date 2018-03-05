@@ -9,7 +9,7 @@ The documentation is open to the Mendix community, which means you can make chan
 
 We believe community-generated documentation can cover new areas of content and deal with the specific questions that only you know need to be answered. The documentation will address the needs of the community, and the community will play a key role in maintaining, improving, and expanding it.
 
-All of the Mendix documentation is stored in GitHub. With a GitHub profile, you can edit all of the existing documentation. You can also write a new how-to on an awesome topic of your choice and submit it to our documentation.
+All of the Mendix documentation is stored in GitHub. With a GitHub account, you can edit all of the existing documentation. You can also write a new how-to on an awesome topic of your choice and submit it to our documentation.
 
 To work on the documentation in GitHub, you will be using Markdown. For details on this easy-to-use syntax, see the [GitHub Guide to Mastering Markdown](https://guides.github.com/features/mastering-markdown/).
 
@@ -18,7 +18,7 @@ All documentation contributions may undergo changes after editing according to o
 {{% /alert %}}
 
 {{% alert type="info" %}}
-Quick guide to making a documentation change: fork the [mendix/docs](https://github.com/mendix/docs) repository and create a pull request with our **development** branch as the base.
+Quick guide to making a documentation change: fork the [mendix / docs](https://github.com/mendix/docs) repository and create a pull request with our **development** branch as the base.
 {{% /alert %}}
 
 **This how-to will teach you how to do the following:**
@@ -33,7 +33,6 @@ Quick guide to making a documentation change: fork the [mendix/docs](https://git
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Have a GitHub account (sign up [here](https://github.com/join))
-* Fork the [mendix/docs](https://github.com/mendix/docs) repository on GitHub (for details on how to do this, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/))
 
 ### 2.2 Tools
 
@@ -57,7 +56,7 @@ This only needs to be done once.
 To edit the existing documentation (for example, a how-to or reference guide page), follow these steps:
 
 1. Click **Edit on GitHub** in the upper-right corner of the specific Mendix documentation page that you want to work on.
-2. Make your changes (make sure the changes align with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)).
+2. Make your changes in GitHub (make sure the changes align with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)).
 3. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
 
 {{% alert type="info" %}}
@@ -77,7 +76,9 @@ To submit a new how-to or reference guide page to our documentation, follow thes
 1. Save a copy of the [How-to Template](the-how-to-template-page) or [Reference Guide Page Template](the-reference-guide-page-template-page) locally in order to use it.
 2. Follow the guidelines in the template for writing your document, and make sure the text aligns with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines).
 3. Take screenshots for the new document and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [5 Naming New Files and Images](#NamingNewFilesandImages).
-4. To merge your new document files, add your files to the GitHub repository.
+4. To merge your new documention, commit it to the GitHub repository:
+    *  You can commit new Markdown files via Sourcetree or via the **Create new file** button in the GitHub repo (where you can copy-paste your text)
+    * You can only commit new image files via Sourcetree
 5. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
 
 {{% alert type="info" %}}
@@ -92,7 +93,7 @@ When contributing to the documentation, make sure the document files comply with
 
 * Markdown file names should have the same name as the title of the page (for example, if the page is titled "Set Up Your Project," the filename should be `setup-your-project.md`)
 * Document file names should always be lower-case with a hyphen (`-`) between each word
- * Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
+* Do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 
 Make sure the image files comply with these naming conventions:
 

@@ -6,7 +6,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 ## 1 Introduction
 
-Atlas UI and the Web Modeler bring a lot of features to the process of building an app. But what if you already have a Mendix app that looks great and run smoothly? No problem! To get an existing Mendix app to work with Atlas UI and the Web Modeler, there are a couple of steps to follow. This how-to describes how to upgrade existing Mendix projects to Atlas UI.
+Atlas UI and the Web Modeler bring a lot of features to the process of building an app. But what if you already have a Mendix app that looks great and runs smoothly? No problem! To get an existing Mendix app to work with Atlas UI and the Web Modeler, there are a couple of steps to follow. This how-to describes how to upgrade existing Mendix projects to Atlas UI.
 
 **This how-to will teach you how to do the following:**
 
@@ -25,7 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To get the full experience of Atlas UI, it’s necessary to import the Atlas UI Resources module. Starting with Mendix 7.9.0, every app includes a module called **UI_Resources** that can be found under **Project** > **App Store modules** in the Desktop Modeler. This module contains all the layouts, page templates, and building blocks. The **UI Framework** folder in this module contains the old Mendix UI Framework content, which we will be upgrading to Atlas UI.
 
-To replace the UI Framework, follow these stepsL
+To replace the UI Framework, follow these steps:
 
 1. Delete the **UI_Resources** module.
 2. Download and import the [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/Mendix/Atlas-UI-Resources) module from the Mendix App Store.

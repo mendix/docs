@@ -4,6 +4,56 @@ title: "Platform Portal"
 
 ## 2018
 
+### March 1st, 2018
+
+#### Fixes
+
+* Switching between environments in the **Metrics** menu of Mendix Cloud v3 apps is now fixed.
+* We fixed the syncronization problem that prevented Mendix Cloud v3 users from seeing their latest nightly backups.
+
+### February 27th, 2018
+
+#### Fixes
+
+* We fixed the issue that prevented SAP Cloud users from viewing the **Mobile App** section properly.
+* When uploading a backup in Mendix Cloud v3, double-clicking the **Restore** button was causing the UI to break. This is now fixed.
+
+### February 23rd, 2018
+
+#### Improvements
+
+* In Mendix Cloud v4, the native memory usage of applications was very high. This led to crashes and automatic restarts, especially on containers with 1GB of memory. We activated an advanced memory limiting setting for glibc (`MALLOC_ARENA_MAX`), which will prevent this behavior. The fix will automatically be applied to all apps that are transported and restarted as of today.
+
+### February 22nd, 2018
+
+#### Improvements
+
+* We implemented a popular feedback item – the platform will now remember your selected environment while switching between screens.
+* It is now possible to see the database details such as **DB Plan Space**, **Plan Cores**, and **Plan Memory** of a Mendix Cloud V4 application.
+* Scaling Mendix 7 apps is now simplified and faster.
+
+#### Fixes
+
+* Backup creation was reported as a backup restore action in the activity feed, which is now fixed.
+* We addressed and fixed the issue where a backup activity item was added each time the backups page was viewed.
+* The environment details list was loading slowly for some of our users, which is now fixed.
+
+### February 19th, 2018
+
+#### Improvements
+
+* In Mendix Cloud v4, we have enabled logging slow database queries. This is the custom runtime setting `LogMinDurationQuery`, and it is useful for finding performance bottlenecks in your application. The value is set to a default of 10,000 ms, which was also the value on Mendix Cloud v3. You can customize this setting by using the **Runtime** tab on your environment details screen under **Environments**. To start using this feature on a Mendix Cloud environment, transport your deployment package and restart your app.
+
+### February 15th, 2018
+
+#### Improvements
+
+* We introduced a beautiful new design for the notification emails you receive when someone replies to your **Buzz** posts.
+
+#### Fixes
+
+* We addressed the issue that prevented the **Daily Digest** email from being sent.
+
 ### January 25th, 2018
 
 #### Fixes

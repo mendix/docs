@@ -96,7 +96,6 @@ For more information, see [How to Link a Different App to a Cloud Node](/develop
 ## 4 Related Content
 
 *   [Certificates](/deployment/mendixcloud/certificates)
-*   [How to Create and Deploy Your First App](/howto/modeling-basics/create-and-deploy-your-first-app)
 *   [How to Configure Custom Domains](/developerportal/howto/custom-domains)
 *   [How to Deploy to the Mendix Cloud](/developerportal/howto/deploying-to-the-cloud)
 *   [How to Download a Backup](/developerportal/howto/how-to-download-a-backup)

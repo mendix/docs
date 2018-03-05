@@ -19,7 +19,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
   * Java actions and connectors are now fully rendered in microflows.
   * The return type of Java action is now available for use in microflows.
   
- #### Improvements
+#### Improvements
  
   * We've added tooltips to various controls to make things easier on new users.
   * The header of the page editor Toolbox is sticky now, so it does not scroll along with the Toolbox contents. 

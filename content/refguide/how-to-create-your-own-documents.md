@@ -34,7 +34,7 @@ In this application, customers can purchase products. They will do so by creatin
 
 The domain model for this application looks like this:
 
-![](attachments/how-to-create-your-own-documents/00_DomainModel.png)
+![](attachments/modeler-core/2018-02-28_16-37-25.png)
 
 The **Customer** holds the address information and the preferred communication language. The **Order** owns the date and sum of all the order lines. The **OrderLine** entity has the customer-specific price for a **Product**. Because you want to generate a document, the **OrderDocument** entity has been added. This entity inherits from the **System.FileDocument** entity.
 
@@ -48,15 +48,15 @@ Now the domain model has been set up, you are ready to create the microflow for 
 
 Create a new folder to organize all the order document creation related sources:
 
-![](attachments/how-to-create-your-own-documents/01_Folder.png)
+![](attachments/modeler-core/2018-02-28_17-02-05.png)
 
 Now you need a microflow to handle the creation of the document:
 
-![](attachments/how-to-create-your-own-documents/02_CreateMicroflow.png)
+![](attachments/modeler-core/2018-02-28_17-04-03.png)
 
 The microflow consists of just the default start and endpoint at present:
 
-![](attachments/how-to-create-your-own-documents/03_EmptyMicroflow.png)
+![](attachments/modeler-core/2018-02-28_16-30-18.png)
 
 After creating the microflow, decide what information you would like to use in the document. Let’s start with an order as input. Later on, you can retrieve additional data via the order instance.
 
@@ -66,23 +66,23 @@ When you create microflows, it is a best practice to limit the number of input p
 
 Here is the input parameter:
 
-![](attachments/how-to-create-your-own-documents/04_InputParameterInclude.png)
+![](attachments/modeler-core/2018-02-28_16-32-33.png)
 
 In the next step, you will create a new OrderDocument. This object will store the actual document. Set the reference to the **Order** variable and the name of the document:
 
-![](attachments/how-to-create-your-own-documents/05_CreateOrderDocument.png)
+![](attachments/modeler-core/2018-02-28_16-52-43.png)
 
 Now you need to have a **Language** object. In our case, the **Customer** holds  the preferred communication language. In our microflow example, you first retrieve the **Customer** via the **Order**, and then retrieve the **Language** from that **Customer**:
 
-![](attachments/how-to-create-your-own-documents/06_GetLanguage.png)
+![](attachments/modeler-core/2018-02-28_16-58-54.png)
 
 The next step is to use the **Generate document** activity. Within this activity, you can use the available variables and select the document template to create the document. However, the document template does not exist yet, so you need to create it and place it in your folder:
 
-![](attachments/how-to-create-your-own-documents/07_DocumentTemplateAdded.png)
+![](attachments/modeler-core/2018-02-28_17-06-53.png)
 
 This is the document template configuration:
 
-![](attachments/how-to-create-your-own-documents/08_DocumentTemplateSettings.png)
+![](attachments/modeler-core/2018-03-01_13-03-55.png)
 
 {{% alert type="info" %}}
 Based on the changes you make to the selected template, the arguments will change.
@@ -90,7 +90,7 @@ Based on the changes you make to the selected template, the arguments will chang
 
 The **Generate document** activity has been added:
 
-![](attachments/how-to-create-your-own-documents/09_DocumentTemplateMicroflow.png)
+![](attachments/modeler-core/2018-03-01_13-06-33.png)
 
 After you have configured the general settings of the document template, you do not need a seperate commit for **NewOrderDocument**. This entity is automatically committed via the document template activity.
 
@@ -99,7 +99,7 @@ Now that you have set up the **Generate document** configuration, you can config
 {{% alert type="info" %}}
 Make sure to set the correct entity access for entities and their attributes used in the document template. Read access is a must for those attributes that are shown in the template. Here is a **Customer** entity that is configured to **Read, Write** for the **User** module role:
 
-![](attachments/how-to-create-your-own-documents/10_AccessRules.png)
+![](attachments/modeler-core/2018-03-01_13-12-28.png)
 
 {{% /alert %}}
 
@@ -107,7 +107,7 @@ Make sure to set the correct entity access for entities and their attributes use
 
 In this example, the following document template is available:
 
-![](attachments/how-to-create-your-own-documents/11_DocumentTemplate.png)
+![](attachments/modeler-core/2018-03-01_14-05-07.png)
 
 In this document template, you start with a data view containing the order details. From this order, you can get the customer information and, from the order lines, the information about the purchased products.
 
@@ -115,20 +115,20 @@ The data view makes use of tables, table cells, labels, pictures, line breaks, a
 
 Now that you have created the document template, you can see that there is an error in the error dock:
 
-![](attachments/how-to-create-your-own-documents/12_ErrorDock.png)
+![](attachments/modeler-core/2018-03-01_14-08-48.png)
 
 To resolve this error, open the **Generate document** activity of the microflow. When the activity is opened, the parameter mapping will be updated and the variable allocated to the mapping parameter.
 
 Now, your **Generate document** configuration should look like this:
 
-![](attachments/how-to-create-your-own-documents/13_DocumentTemplate.png)
+![](attachments/modeler-core/2018-03-01_14-12-03.png)
 
 The document template is now configured, and the microflow is ready to be used. If we call this microflow as a sub-microflow, you can add a download activity in the main microflow. This microflow could 
 * call the sub-microflow to create the document
 * retrieve the created document, and
 * download the file:
 
-![](attachments/how-to-create-your-own-documents/14_MainMicroflow.png)
+![](attachments/modeler-core/2018-03-01_14-21-38.png)
 
 This is the resulting document:
 

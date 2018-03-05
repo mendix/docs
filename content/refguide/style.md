@@ -22,7 +22,7 @@ Widgets/Components for which the font tab page is visible:
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918095.png)
+![](attachments/modeler-core/2018-03-01_14-27-27.png)
 The font tab page in the style editor.
 
 {{% /alert %}}
@@ -41,7 +41,7 @@ Widgets/Components for which the cell styling tab page is visible:
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918102.png)
+![](attachments/modeler-core/2018-03-01_14-29-13.png)
 The cell styling tab page in the style editor.
 
 {{% /alert %}}
@@ -52,7 +52,7 @@ The custom styles tab page is always visible for widgets/components that allow s
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918104.png)
+![](attachments/modeler-core/2018-03-01_14-33-46.png)
 The custom styles tab page in the style editor.
 
 {{% /alert %}}

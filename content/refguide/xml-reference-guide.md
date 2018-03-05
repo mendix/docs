@@ -252,7 +252,37 @@ Possible return types:
 *   String
 *   Object
 
-### 5.2.8 Object
+### 5.2.8 Nanoflow
+
+The Nanoflow property allows a user to select a nanoflow in the Mendix Modeler. There are 3 options:
+
+1.  If needsEntityContext is set to "true", the selected nanoflow is required to have the context entity as an input parameter (as this will automatically be passed into it).
+2.  If needsEntityContext is set to false and no entityProperty attribute is specified, the nanoflow will have no input parameters.
+3.  If the entityProperty attribute is specified, the selected nanoflow is required to have this entity as an input parameter.
+
+```xml
+<property key="validationNanoflow" type="nanoflow" required="false" needsEntityContext="true">
+ <caption>Validation Nanoflow</caption>
+ <category>Behavior</category>
+ <description>Return value: whether the given object is validated successfully</description>
+ <returnType type="Boolean" />
+</property>
+```
+
+The Nanoflow property has an extra required child element: returnType. Use this to set what type of variable you expect as a return value. The Modeler will then enforce this on the nanoflow that is assigned.
+
+Possible return types:
+
+*   Void
+*   Boolean
+*   Integer
+*   Float
+*   DateTime
+*   String
+*   Object
+
+
+### 5.2.9 Object
 
 The object property is an array of packaged sub-properties. It packages multiple other properties into an object, of which multiple can be passed to the widget. It always requires the isList attribute, which needs to be set to "true".
 
@@ -281,7 +311,7 @@ What it looks like in the Mendix Modeler:
 
 ![](attachments/16714046/16844048.png)
 
-### 5.2.9 String
+### 5.2.10 String
 
 The string property lets you to pass a string to the widget.
 
@@ -293,7 +323,7 @@ The string property lets you to pass a string to the widget.
 </property>
 ```
 
-### 5.2.10 TranslatableString
+### 5.2.11 TranslatableString
 
 The translatableString property is similar to a normal string property, except you can add translated versions of the default value for different languages. To achieve this, the translatableString property has an extra required child element: a list of translations. The Mendix Modeler language will match the assigned <translation> value.
 

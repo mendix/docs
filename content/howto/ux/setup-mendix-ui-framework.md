@@ -25,8 +25,6 @@ In this chapter we will create a new app and select a theme from the New App sel
 
 1.  Open the **Mendix Desktop Modeler**.
 2.  Create a **New App** from the **My Apps** screen in the Mendix Desktop Modeler.
-
-     ![](attachments/18448706/18581412.png)
 3.  Select a theme for your app.
 
     ![](attachments/18448706/18581411.png)

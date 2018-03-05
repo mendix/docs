@@ -26,32 +26,25 @@ You can use any text editor to create custom Java actions, but we highly recomme
 
 ## 3 Adding Java Actions in the Modeler
 
-1. Right-click the **MyFirstModule** module and select **Add** > **Resources** > **Java action**:
-
-    ![](attachments/18448685/18581053.png)
-
-2. Name the new Java action *ReverseCustomerName* and click **OK**:
+1. Right-click the **MyFirstModule** module and select **Add** > **Resources** > **Java action**.
+2. Enter *ReverseCustomerName* for the **Name** of the new Java action and click **OK**:
 
     ![](attachments/18448685/18581052.png)
 
-3. Click **Add** to add a parameter:
+3.  In the **Java Action** wizard, click **Add** to add a parameter and do the following:</br>
 
-    ![](attachments/18448685/18581050.png)
-
-4. On the **Parameter** window, do the following:
-
-    * Name the parameter *inputCustomer*
-    * Select **Object** as type
-    * Click **Select...** and select **MyFirstModule.Customer** as the object type
-    Click **OK**
+    1. Enter *inputCustomer* for the **Name** of the new parameter</br>
+    2. Select **Object** as type.</br>
+    3. Click **Select...** for **Entity** and select **MyFirstModule.Customer** as the object type.</br>
+    4. Click **OK**.</br>
 
     ![](attachments/18448685/18581049.png)
 
-5. Change the return type of the Java action to **String** and click **OK** to save the Java action:
+4. Back on the **Java Action** wizard, change the return type of the Java action to **String** and click **OK** to save the Java action:
 
     ![](attachments/18448685/18581046.png)
 
-6. Select **Project** > **Deploy for Eclipse** in the Modeler:
+5. Select **Project** > **Deploy for Eclipse** in the Modeler:
 
     ![](attachments/18448685/18581045.png)
 
@@ -102,60 +95,55 @@ To edit the Java action in Eclipse, follow these steps:
 ## 5 Calling the Java Action from a Microflow
 
 1. Open the Modeler and locate the **Customer_Overview** page.
-2. Add a new **Microflow** button to the control bar of the data grid and change the caption to *Reverse Name*:
+2. Right-click and add a new **Action** button to the control bar of the data grid and change the caption to *Reverse Name*:
 
     ![](attachments/18448685/18581038.png)
 
-3. Right-click the new **Microflow** button and select **Select microflow...**:
+3. Double-click the new **Action** button and in the **Edit Action Button** dialog box, set **On click** to **Call a microflow**:
 
     ![](attachments/18448685/18581037.png)
-
-4. Name the new microflow *Customer_ReverseName* and click **OK**:
+4. In the **Select Microflow** dialog box, click **New** to create a new microflow.
+5. Enter *Customer_ReverseName* for the **Name** of the new microflow and click **OK**:
 
     ![](attachments/18448685/18581036.png)
 
-5. Open the new microflow, which should look like this:
+6. Back on the **Edit Action Button** dialog box, click **Show** next to **Microflow** to open the new microflow, which should look like this:
 
     ![](attachments/18448685/18581035.png)
 
-6. Drag the **ReverseCustomerName** Java action from the **Project Explorer** onto the line between the green start event and red end event. This generates a Java action activity:
+7. Drag the **ReverseCustomerName** Java action from the **Project Explorer** onto the line between the green start event and red end event. This generates a Java action activity:
 
     ![](attachments/18448685/18581034.png)
 
-7. Double-click the generated activity to open the **Call Java Action** properties editor, and then double-click the first argument to open the expression editor:
+8. Double-click the generated activity to open the **Call Java Action** properties editor, and then click **Edit** for the first input to open the argument editor:
 
     ![](attachments/18448685/18581033.png)
 
-8. Press and hold the **Ctrl** key and press the spacebar to open the code completion editor.
-9. Select **$Customer (MyFirstModule.Customer)**:
+9. Press and hold the <kbd>Ctrl</kbd> key and then press the spacebar to open the code completion editor.
+10. Select **$Customer (MyFirstModule.Customer)**:
 
     ![](attachments/18448685/18581032.png)
 
-10. Click **OK** to save the expression.
-11. In the **Call Java Action** window, change the output **Variable** to *ReversedName*:
+11. Click **OK** to save the expression.
+12. In the **Call Java Action** window, change the output **Variable** to *ReversedName*:
 
     ![](attachments/18448685/18581031.png)
 
-12. Click **OK** to save the properties. The microflow should now look like this:
+13. Click **OK** to save the properties. The microflow should now look like this:
 
     ![](attachments/18448685/18581023.png)
 
-13. Open the **Toolbox** from the bottom-right corner of the Modeler:
+14. Open the **Toolbox** from the bottom-right corner of the Modeler:
 
     ![](attachments/2949137/3080422.png)
 
-    You can also open the **Toolbox** from the **View** menu:
-
-    ![](attachments/2949137/3080419.png)
-
-14. Drag a show message activity from the **Toolbox** to the line between the green start and red end event.
-15. Double-click the activity to open the **Show Message** properties editor.
-16. Enter *Reversed name: {1}* for **Template**:
+15. Drag a **Show message** activity from the **Toolbox** to the line between the green start and red end event.
+16. Double-click the activity to open the **Show Message** properties editor.
+17. Enter *Reversed name: {1}* for **Template**:
 
     ![](attachments/18448685/18581030.png)
 
-17. Click the **New** button to add a new parameter to open the expression editor.
-18. Press and hold the **Ctrl** button and press the spacebar to open the code completion editor.
+18. Click the **New** button to add a new parameter to open the expression editor.
 19. Select **$ReversedName (String)**, which is the output variable of the Java action:
 
     ![](attachments/18448685/18581028.png)

@@ -25,21 +25,22 @@ To create a menu item, follow these steps:
 
 2.  Click **Select...** in the **Target** section of the **New Menu Item** dialog box to open the **Select Navigation Target** pop-up window:
 
+3.  For **On click**, select **Call a microflow**:
+
     ![](attachments/18448678/18580977.png)
 
-3.  Select a module and click **New**:
+4.  In the **Select Microflow** dialog box, select a microflow and then click **New**:
 
-    ![](attachments/18448678/18580976.png)
+    ![](attachments/18448678/microflow.png)
 
-4. Click **Create a microflow** to connect a new microflow to this menu item.
-5. Name the new microflow *HelloWorld*.
+5. Enter *HelloWorld* for the **Name** of the new microflow.
 6. Save the new menu item by clicking **OK**.
 
 ## 3 Editing the New Microflow
 
 To edit the new microflow, follow these steps:
 
-1.  Open the new microflow by right-clicking the navigation item created in [2 Creating a Menu Item](#CreatingaMenuItem) and select **Go to target** from the context menu:
+1.  Open the new microflow by right-clicking the new menu item created in [2 Creating a Menu Item](#CreatingaMenuItem) and selecting **Go to target** from the context menu:
 
     ![](attachments/18448678/18580975.png)
 
@@ -50,10 +51,6 @@ To edit the new microflow, follow these steps:
 2.  Open the **Toolbox** in the bottom-right corner of the Modeler:
     
     ![](attachments/18448678/18580967.png)
-
-    You can also open the **Toolbox** from the **View** menu:
-
-    ![](attachments/2949137/3080419.png)
 
 3.  Drag a **Show message** action from the **Toolbox** to the line between the green start even and red end event, which will insert a show message action activity:
 

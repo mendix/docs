@@ -80,10 +80,10 @@ To extend the structure of the **Employee** entity, follow these steps:
     b. Set the **Name** to *Level*.<br>
     c. Set the **Type** to **Enumeration**.<br>
     d. Click **Select enumeration** to create a new enumeration.<br>
-    e. Set the **Name** to **EmployeeLevel**.<br>
-    f. Click **New Item** and set the **Caption** and **Name** to *Junior*.<br>
+    e. Enter *EmployeeLevel* for the **Name**.<br>
+    f. Click **New** and enter *Junior* for the **Caption** and **Name**.<br>
     g. Repeat the step above to create the **Medior** and **Senior** items.<br>
-    h. Click **Create** to close the dialog boxes and create the new attribute.
+    h. Click **OK** to close the dialog boxes and create the new attribute.
 
     ![](attachments/start-with-a-blank-app/enumeration.png)
 
@@ -91,7 +91,7 @@ To extend the structure of the **Employee** entity, follow these steps:
 
 All set? Continue below to learn how to edit the microflow you created earlier in the Desktop Modeler.
 
-### 3.2 Opening and Syncing the App in the Desktop Modeler
+### 3.3 Opening and Syncing the App in the Desktop Modeler
 
 The Desktop Modeler is used to add complex logic and build sophisticated integrations to your app.
 
@@ -117,16 +117,13 @@ To open your app in the Desktop Modeler, follow these steps:
 
 At this point, the local version of your app is in sync with the version in the Web Modeler. Continue with the next step to edit a microflow in the Desktop Modeler.
 
-### 3.3 Implementing the Logic to Promote an Employee
+### 3.4 Implementing the Logic to Promote an Employee
 
 Microflows consist of microflow actions. To implement the promote requirement, you need to determine the level of the employee and promote them accordingly.
 
 To edit a microflow so that it promotes employees, follow these steps:
 
-1.  Open the **Promote_Employee** microflow:
-
-    ![](attachments/start-with-a-blank-app/open-microflow-dm.png)
-
+1.  Open the **Promote_Employee** microflow from the **Project Explorer**.
 2.  Right-click the microflow arrow, select **Insert** > **Exclusive Split**, and do the following:<br>
     a. Double-click the exclusive split to open its properties.<br>
     b. Set the caption to **Level**.<br>
@@ -153,8 +150,8 @@ To edit a microflow so that it promotes employees, follow these steps:
 
     ![](attachments/start-with-a-blank-app/exclusive-split-level5.png)
 
-8. Insert an **Activity** of the **Show message** type to the right of the change object activity and do the following:<br>
-    a. Set the **Template** to `{1} is promoted to Medior!`.<br>
+8. Insert an **Activity** of the **Show message** type above the change object activity and do the following:<br>
+    a. Enter *{1} is promoted to Medior!* for the **Template**.<br>
     b. Click **New** to add a parameter and set it to `$Employee/Name`. 
 
     ![](attachments/start-with-a-blank-app/show-message.png)
@@ -170,7 +167,7 @@ To edit a microflow so that it promotes employees, follow these steps:
 
 Fantastic, you've created your first business logic! Can't wait to find out if this is working as expected? Return to the Web Modeler to extend the UI and view your app.
 
-### 3.4 Adding the Employee Level to the UI
+### 3.5 Adding the Employee Level to the UI
 
 The microflow should function correctly at this point, so let's add the employee level to the UI.
 

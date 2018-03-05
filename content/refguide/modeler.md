@@ -20,6 +20,7 @@ This section of the Mendix Reference Guide describes the various features of the
 * [Microflows](microflows)
 * [Modeler Products](modeler-products)
 * [Modules](modules)
+* [Nanoflows](nanoflows)
 * [Pages](pages)
 * [Projects](project)
 * [Regular Expressions](regular-expressions)

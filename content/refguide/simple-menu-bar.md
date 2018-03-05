@@ -8,11 +8,11 @@ The simple menu bar widget shows a configured menu in the form of a horizontal o
 
 {{% alert type="info" %}}
 
-![](attachments/16713889/16844019.png)
+![](attachments/pages/simple-menu-bar-horizontal.png)
 
 {{% /alert %}}{{% alert type="info" %}}
 
-![](attachments/16713889/16844018.png)
+![](attachments/pages/simple-menu-bar-vertical.png)
 
 {{% /alert %}}
 

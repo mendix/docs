@@ -30,7 +30,7 @@ For more information, see [How to Use App Store Content in the Modeler](/communi
 
 ### 2.2 Getting an SAP Service Module
 
-For getting started quickly, you can also download one of the available SAP Service modules. These modules contain a pre-built domain model for a specific service of SAP.
+To get started quickly, you can download one of the available SAP Service modules. These modules contain a pre-built domain model for a specific service of SAP.
 
 For more information, see [SAP Service Modules](/refguide/sap/sap-service-modules).
 
@@ -40,7 +40,11 @@ In this section, you will learn how to implement the data connector in your Mend
 
 ### 3.1 Creating a Microflow<a name="microflow"></a>
 
-In this example, you are retrieving a list of customers that is available in the SAP Service module named **SAP Check Price and Availability**.
+In this example, you are retrieving a list of customers that is available in the SAP Service module named **SAP Check Price and Availability Connector**.
+
+{{% alert type="info" %}}
+This is NOT the very similar SAP Service Module, **SAP Check Price and Availability for Field Sales Representative**.
+{{% /alert %}}
 
 To create the microflow for this retrieve, follow these steps:
 
@@ -64,8 +68,8 @@ The final result of your microflow should look like this:
 
 To create a page to show the objects in a list, follow these steps:
 
-1. Create an empty page using the **Grid default** page template.
-2.  Select the microflow you created in [3.1 Creating a Microflow](#microflow) as the data source for the grid. Your page should look like this:
+1. Create a blank page and insert a **Data grid** widget.
+2. Select the microflow you created in section [3.1 Creating a Microflow](#microflow) as the data source for the grid. Your page should look like this:
 
     ![](attachments/use-sap-odata-connector/show-get-list-result.png)
 

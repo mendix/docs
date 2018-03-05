@@ -114,15 +114,15 @@ To make sure the dirty state does not become too big when the above scenarios ap
 
 The `$currentSession` variable is available in microflows so that a reference to the current session can easily be obtained. When an object needs to be stored, its association can be set to `$currentSession`, and when the object needs to be retrieved again `$currentSession` can be used as a starting point from which the desired object can be retrieved by association. The associated object can be designed so that it meets the desired needs. This same pattern applies to entities associated with `System.User`. In that case you can use the `$currentUser` variable.
 
-![](attachments/16714073/16844073.png)
+![](attachments/modeler-core/2018-03-01_17-49-15.png)
 
 For example, you can add `Key` and `Value` members to a `Data` entity associated with `System.Session` (and have constants for key values).
 
-[![](attachments/16714073/16844071.png)](attachments/16714073/16844070.png)
+![](attachments/modeler-core/2018-03-01_17-42-38.png)
 
 The `Value` values can easily be obtained by performing a find on the `Key` values of a list of `Data` instances.
 
-![](attachments/16714073/16844070.png)
+![](attachments/modeler-core/2018-03-01_17-56-37.png)
 
 {{% alert type="warning" %}}
 

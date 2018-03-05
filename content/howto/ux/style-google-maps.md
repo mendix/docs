@@ -3,7 +3,10 @@ title: "Style Google Maps"
 category: "UX"
 tags: []
 ---
-Google Maps is a very powerful addition to your applications. You can use it to display locations, areas, routes, etc. By default every map overview looks the same, like on the default Google Maps website. There is now a new option available on the Google Maps widget to style the map overview to make it match your application design. Follow the steps described below to sauce up the map overviews in your applications with a minimum amount of effort!
+
+## 1. Introduction
+
+Google Maps is a very powerful addition to your applications. You can use it to display locations, areas, routes, etc. By default every map overview looks the same, like on the default Google Maps website. There is now a new option available on the Google Maps widget to style the map overview to make it match your application design. Follow the steps below to sauce-up the map overviews in your applications with a minimal amount of effort!
 
 **After completing this how-to you will know:**
 
@@ -11,15 +14,19 @@ Google Maps is a very powerful addition to your applications. You can use it to 
 *   Find and implement the right style matching your application
 *   Upload new styles to support the community
 
-## 1. Preparation
+## 2. Preparation
 
-Before you can start with this how-to, please make sure you have completed the following prerequisites.
+Before you start this how-to, please make sure you have completed the following prerequisites.
 
-*   Have the latest version of the Google Maps widget in your application: [Google Maps Widget](attachments/19202780/19398965.png)
+*   Have the latest version of the Google Maps widget in your application: [Google Maps Widget](https://appstore.home.mendix.com/link/app/39/)
 
-## 2\. Adding the style
+{{% alert type="warning" %}}
+These instructions are for the Google Maps widget which you can download from the App Store. The Google Maps widget within the Atlas UI template has different options.
+{{% /alert %}}
 
-### 2.1 Widget properties
+## 3. Adding the style
+
+### 3.1 Widget properties
 
 In this chapter I will explain how you can add styling to the Google Maps widget.
 
@@ -38,9 +45,9 @@ In this chapter I will explain how you can add styling to the Google Maps widget
 3.  The example style will give you this result:
     ![](attachments/19202780/19398958.png)
 
-### 2.2 Finding the right style
+### 3.2 Finding the right style
 
-Choosing an existing style sheet from a large library that fits your application will save you a lot of time. Here is a website where a community is formed who uploads new styles on a regular basis: [https://snazzymaps.com/](https://snazzymaps.com/)
+Choosing an existing style sheet from a large library that fits your application will save you a lot of time. Here is a community website where new styles are uploaded on a regular basis: [https://snazzymaps.com/](https://snazzymaps.com/).
 
 1.  On the website click on **Explore:**
     ![](attachments/19202780/19398959.png)
@@ -49,7 +56,7 @@ Choosing an existing style sheet from a large library that fits your application
 3.  On the lefthand pane you will see the style array:
     ![](attachments/19202780/19398961.png)
 4.  Now simply press **Copy.** The style is copied to your clipboard.
-5.  Open the **Customisation** tab of the Google Maps widget and paste the style array you just copied from snazzy maps:
+5.  Open the **Customisation** tab of the Google Maps widget and paste the style array you just copied from snazzymaps:
 
     ![](attachments/19202780/19398962.png)
 
@@ -62,18 +69,18 @@ Choosing an existing style sheet from a large library that fits your application
 6.  And there it is:
     ![](attachments/19202780/19398963.png)
 
-### 2.3 Upload your own style array
+### 3.3 Upload your own style array
 
 Supporting communities is cool. Therefore I will also show you how to upload your own custom style array to the website.
 
-1.  Go-to Snazzy maps and click on **Create.**
+1.  Go-to Snazzymaps and click on **Create.**
     **![](attachments/19202780/19398964.png)** 
 2.  Now you will see the same sort of handy quick style method that Mendix provides at [https://ux.mendix.com/theme-creator.html](https://ux.mendix.com/theme-creator.html).
     ![](attachments/19202780/19398965.png) 
 
     Happy modelling!
 
-## 3\. Related content
+## 4.. Related content
 
 *   [Create a custom theme with the Mendix UI Framework](create-a-custom-theme-with-the-mendix-ui-framework)
 *   [Layouts and Snippets](layouts-and-snippets)

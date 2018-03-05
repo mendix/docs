@@ -44,13 +44,13 @@ The status of your project is a summary of all the changes in your working copy 
 
 The project explorer shows an icon in front of items (documents, folders and modules) that are changed in some way. There is only room for one icon and if a document is both modified and moved it is shown as modified.
 
-![](attachments/524294/688162.png)
+![](attachments/modeler-core/2018-02-21_13-27-21.png)
 
 In the screenshot you can see that the document Account_NewEdit has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. Note that the folders and modules containing changes are depicted with a small yellow circle. This helps you to quickly see where in the project the changes are.
 
 The Changes Dock shows a line for each change to an item. If a document is both modified and moved there are two lines for that document. The dock also shows items that were deleted, something the project explorer cannot do.
 
-![](attachments/524294/688168.png)
+![](attachments/modeler-core/2018-02-21_13-41-50.png)
 
 ## Commit
 
@@ -61,7 +61,7 @@ A textual message. You can enter this message in the Modeler when committing and
 
 A list of sprintr™ stories that relate to the commit. Our advice is to keep commits small and this means that a commit probably relates to one story. The Modeler only shows stories that are currently 'Running' and will not change the state of the sprintr™ story. Setting the status to 'Done' is the responsibility of the team and depends on your definition of done.
 
-![](attachments/524294/688169.png)
+![](attachments/modeler-core/2018-02-21_13-50-03.png)
 
 The Modeler also attaches some information automatically:
 
@@ -88,15 +88,15 @@ A conflict arises when two changes cannot be combined. There are two places wher
 
 The documents that are conflicted are marked as such in the project explorer and the changes dock. In the case of a document conflict you can zoom in to the exact spot where the conflicting change is. In the case of a project conflict the document will be highlighted in the project explorer tree.
 
-![](attachments/524294/688166.png)
+![](attachments/modeler-core/2018-02-21_14-03-34.png)
 
-Resolving a conflict can be done in by using the 'Use mine' and 'Use theirs' button in the version control dock. In the case of a project conflict only the 'Use mine' button is enabled and it resolves the conflict and keeps the situation as it is now in your working copy. For document conflicts both buttons are enabled and with them you can choose between your version and 'their' version.
+Resolving a conflict can be done in by using the 'Use mine' and 'Use theirs' button in 'Tasks' dropdown of the version control dock. In the case of a project conflict only the 'Use mine' button is enabled and it resolves the conflict and keeps the situation as it is now in your working copy. For document conflicts both buttons are enabled and with them you can choose between your version and 'their' version.
 
 ## History
 
 The history of the project is a list of all revisions that have been committed in reverse chronological order (newest is at top of list). The history form quickly shows you revision number, date, time, author and message of each revision. By selecting a revision you can view additional details such as related sprintr™ stories, changed documents, Modeler version and changes on disk. Icons summarize the kinds of changes that happened in the project; whether there are model changes, disk changes and whether the project was upgraded to a new Modeler version can quickly be checked by looking at the icons.
 
-![](attachments/524294/688167.png)
+![](attachments/modeler-core/2018-02-21_14-06-46.png)
 
 ## Development lines
 
@@ -108,7 +108,7 @@ It is often convenient to have more than one development line. For example, one 
 
 Development lines other than the main line are called branch lines. Our advice would be to develop new features in the main line and to have branch lines for fixing bugs in versions that have been deployed. This is the scenario the Modeler makes easy but other scenarios for more complex projects are supported as well.
 
-![](attachments/524294/688160.png)
+![](attachments/modeler-core/2018-02-21_14-16-20.png)
 
 ![](attachments/524294/688157.png)
 
@@ -122,7 +122,7 @@ Merging is always done while you have a working copy open. The merge will result
 
 In the picture below revision 5 from the branch line is merged into a working copy of the main line that was at revision 6\. Those merged changes are then committed to form revision 7.
 
-![](attachments/524294/688161.png)
+![](attachments/modeler-core/2018-02-21_14-19-47.png)
 
 ![](attachments/524294/688155.png)
 
@@ -132,4 +132,4 @@ The example shows that you can merge a single revision. It is also possible to m
 
 A tag points to a specific revision in a specific development line. When creating a (versioned) deployment archive a tag is created automatically. If at some point in time you want to add a feature or fix a problem in the deployed project, you simply check what tag was used for creating the archive and create a branch from that tag. This way you can always go back to the version that you deployed.
 
-![](attachments/524294/688158.png)
+![](attachments/modeler-core/2018-02-21_14-25-40.png)

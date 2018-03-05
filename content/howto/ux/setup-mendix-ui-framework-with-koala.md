@@ -21,14 +21,14 @@ Before you can start with this how-to, please make sure you have completed the f
 
 ## 2\. Create a new App in the Mendix Desktop Modeler
 
-In this chapter we will create a new app and select a theme from the New App selector.
+In this chapter we will create a new app and select a starter app from the New App selector.
 
 1.  Open the **Mendix Modeler**.
 2.  Create a **New App** from the **My Apps** screen in the Mendix Desktop Modeler.
 
     ![](attachments/18448712/18581487.png)
 
-3.  Select a theme for your app.
+3.  Select a starter app on which to base your app.
 
     ![](attachments/18448712/18581488.png)
 
@@ -50,7 +50,7 @@ The Mendix UI Framework uses **Sass**, which relies on Ruby. However, you can in
 1.  Open the **Project Directory** from your App in your desired text editor.
 
     ![](attachments/18448712/18581502.png)
-2.  The **theme** folder is where you can find the theme that was selected when creating a New App. The folder theme\styles\sass\custom will be used to make our own changes. Let's change the background for our sidebar!
+2.  The **theme** folder is where you can find the theme that was selected when creating the New App. The folder theme\styles\sass\custom will be used to make our own changes. Let's change the background for our sidebar!
 3.  Open up the file <u>**custom-variables.scss**</u> .
 
      ![](attachments/18448712/18581503.png)

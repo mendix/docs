@@ -26,6 +26,13 @@ Member defines for which attribute or association the message will be shown. In 
 
 Template defines the text of the validation message. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera.
 
+{{% alert type="warning" %}}
+
+Nanoflows do not support text templates in validation feedback. Only a static message text can be provided.
+
+{{% /alert %}}
+
+
 ### Parameters
 
 For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [microflow expressions](microflow-expressions) resulting in a string.

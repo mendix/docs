@@ -211,7 +211,7 @@ Follow these steps to create more complex logic to approve a purchase order and 
 12. Click **OK** to close the dialog window.
 13. Right-click the red arrow and set the **Conditional value** to **true**.
 14. Add a **Show message** activity to the true flow.
-15. Change the template in the Show Message dialog window to *Purchase Order approved.*.
+15. Change the template in the Show Message dialog window to *Purchase Order approved!*.
 16. Click **OK** to close the dialog window.
 17. Add a **Microflow call** activity after the message.
 18. Select the *SUB_RefreshPageData* microflow as the microflow action.

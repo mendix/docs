@@ -61,6 +61,12 @@ When you know you have only one object or you only want to use the first object 
 
 [XPath](xpath) constraint defines the condition the objects need to suffice to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
 
+{{% alert type="warning" %}}
+
+Nanoflows do not support this property.
+
+{{% /alert %}}
+
 ### Sorting
 
 Sorting defines the order of the list. The list can be sorted in ascending and descending order on the values of an attribute. If there are objects that have the same attribute value the list is sorted based on the second attribute (if any) and so on.

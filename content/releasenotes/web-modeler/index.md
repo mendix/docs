@@ -30,7 +30,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
   * We've improved the new page creation flow, reducing the number of steps in the flow.
   * We improved checking the prerequisites, which prevents breaking the guided product introduction tour in the publishing step. 
   
-  #### Fixes
+#### Fixes
   
   * Only filtering of non-form page templates is now allowed while creating edit pages.
   * The Web Modeler now handles conversion and custom widgets requests better. 

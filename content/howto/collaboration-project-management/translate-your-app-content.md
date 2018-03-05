@@ -19,10 +19,13 @@ Delivering your Mendix app in multiple languages is an important capability for 
 
 The project language is the main language of the app when it is run. There must be a default project language, and **English, United States** is the project language set automatically by default. You can add as many languages as you like by following these steps:
 
-1. In the **Project Explorer**, open the project **Settings** and go to the **Languages** tab.
-![](attachments/Translating+Your+App+Content/01_project_settings.png)
-2. Click **Add**, select the desired language, and click **OK**.
-![](attachments/Translating+Your+App+Content/02_dutch.png)
+1.  In the **Project Explorer**, open the project **Settings** and go to the **Languages** tab.
+
+    ![](attachments/Translating+Your+App+Content/01_project_settings.png)
+
+2.  Click **Add**, select the desired language, and click **OK**.
+
+    ![](attachments/Translating+Your+App+Content/02_dutch.png)
 
 If you want to set a different language as the default, you can do that in the **Default language** drop-down menu on the **Languages** tab.
 
@@ -32,7 +35,7 @@ Any project language can be used as a development language in the Modeler (for d
 
 The development language is the language used to define translatable texts as you develop your app in the Modeler. For example, if you select **Dutch, Netherlands** as the development language, any labels that you type during the development of your app in the Modeler will be added to your project's Dutch dictionary. The Dutch translation of your app will be seen by users of your app who set Dutch as their preferred language in their profile (if they do not specify a preferred language, the project default language will be used).
 
-You can change the language setting if desired in the Modeler toolbar:
+You can change the language setting if desired in the Modeler by going to: **Language > Current Language**.
 
 ![](attachments/Translating+Your+App+Content/04_switch_development_language.png)
 
@@ -44,7 +47,7 @@ When your app is deployed with labels that don’t yet have a translation, these
 
 ### <a name="toconfigurelanguageoperations"></a>3.1 Configuring Language Operations
 
-To update the language settings in the Modeler, go to **Tools > Language Operations**.
+To update the language settings in the Modeler, go to **Language > Language Operations**.
 
 ![](attachments/Translating+Your+App+Content/language_operations.png)
 
@@ -73,10 +76,12 @@ There may be some text in your app that occurs in more than one place, so before
 
 To search for phrases that look similar and replace them as a batch, follow these steps:
 
-1. Go to **Tools > Batch Replace**.
+1. Go to **Language > Batch Replace**.
 2. In the **Source text contains** field of the **Batch replace** dialog window, enter the word you want to search for.
-3. The results will appear in the table with the column headers **Text** and **Replace with** (as in the example image below, in which "Schedule" is being searched).
-![](attachments/Translating+Your+App+Content/08_batch_replace_2.png)
+3.  The results will appear in the table with the column headers **Text** and **Replace with** (as in the example image below, in which "Schedule" is being searched).
+
+    ![](attachments/Translating+Your+App+Content/08_batch_replace_2.png)
+
 4. Enter the new replacement text under **Replace with**, and then click **Replace**.
 
 ### 4.2 Translating Labels
@@ -94,11 +99,13 @@ You can also filter to specific modules and use the search to find specific labe
 
 To enable batch translation, follow these steps:
 
-1. Go to **Tools > Batch Translate**.
+1. Go to **Language > Batch Translate**.
 2. Select the **Source language** and **Destination language**.
 3. In the **Source text contains** field of the **Batch translate** dialog box, enter the word you want to search for.
-4. The results will appear in the table with the column headers **Source** and **Translation** (as in the example image below, in which "Trainees" is being searched).
-![](attachments/Translating+Your+App+Content/11_filter_module.png)
+4.  The results will appear in the table with the column headers **Source** and **Translation** (as in the example image below, in which "Password" is being searched).
+
+    ![](attachments/Translating+Your+App+Content/11_filter_module.png)
+
 5. Enter the translated text for the various results under **Translation**, and then click **Translate**.
 
 #### 4.3.1 Text Occurrence and Context

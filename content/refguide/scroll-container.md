@@ -9,7 +9,7 @@ Scroll containers may be placed on navigation layouts as well as on pages.
 
 {{% alert type="info" %}}
 
-![](attachments/pages/scroll-container.png)
+![](attachments/pages/scroll-container.PNG)
 The scroll container splits the layout in three parts: a header containing a logo, a content part with a placeholder and a footer.
 
 {{% /alert %}}

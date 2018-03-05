@@ -41,7 +41,7 @@ For this how-to, we will use the publicly available Google Books API (for detail
 
     {{% alert type="warning" %}}
 
-    Every REST service will have a different specific JSON structure. For details on how to build JSON data structures in Mendix, see [JSON Structures](refguide6/json-structures).
+    Every REST service will have a different specific JSON structure. For details on how to build JSON data structures in Mendix, see [JSON Structures](refguide/json-structures).
 
     {{% /alert %}}
 3. Create a non-persistable search entity called **BookSearch** that allows the user to enter an author and title. This should be linked to a second object:

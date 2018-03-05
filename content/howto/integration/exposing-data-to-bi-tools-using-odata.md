@@ -39,9 +39,11 @@ A published OData service can be used by third-party applications to read data f
 
     ![](attachments/18448736/18582029.png)
 
-3. Enter the name **Expenses** and click **OK**.
+3.  Enter the name **Expenses** and click **OK**.
+
     ![](attachments/18448736/18582027.png)
-4. Go to the Resources tab and click **Add published resource**:
+
+4.  Go to the Resources tab and click **Add published resource**:
 
     ![](attachments/18448736/18581979.png)
 

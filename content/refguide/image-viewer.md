@@ -8,7 +8,7 @@ An image viewer can be used to display an image or its thumbnail.
 
 {{% alert type="info" %}}
 
-![](attachments/819203/918195.png)
+![](attachments/pages/image-viewer.png)
 This image viewer shows the product image.
 
 {{% /alert %}}

@@ -8,7 +8,7 @@ A file manager is used to upload and/or download files.
 
 {{% alert type="info" %}}
 
-![](attachments/16713872/16843985.png)
+![](attachments/pages/file-manager.png)
 
 {{% /alert %}}
 

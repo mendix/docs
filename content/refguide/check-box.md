@@ -8,9 +8,9 @@ A check box is an [input widget](input-widgets) that can be used to display and 
 
 {{% alert type="info" %}}
 
-![](attachments/16713879/16843996.png)
+![](attachments/pages/check-box.png)
 
-This checkbox might be used to indicate whether or not a user is a customer.
+This check box allows you to change whether someone is subscribed to the newsletter.
 
 {{% /alert %}}
 

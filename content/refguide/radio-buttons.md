@@ -8,7 +8,7 @@ The radio buttons widget is an [input widget](input-widgets) that can be used to
 
 {{% alert type="info" %}}
 
-![](attachments/16713885/16844015.png)
+![](attachments/pages/radio-buttons.png)
 
 These radio buttons are used to indicate whether the user wants to receive the newsletter (boolean, rendered horizontally) and to select his/her favorite color (enumeration, rendered vertically).
 

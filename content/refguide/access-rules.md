@@ -51,7 +51,7 @@ The set of objects to which the member access rights apply can be limited by usi
 
 A customer is allowed to view her discount, but is not allowed to edit it. The access rights for the discount attribute are 'Read'.
 
-![](attachments/819203/917534.png)
+![](attachments/domain-model-editor/917534.png)
 
 {{% /alert %}}
 
@@ -63,7 +63,7 @@ The [XPath constraint](xpath-constraints) can be used to constrain the set of ob
 
 Entity 'Customer' is a specialization of entity 'User'. Entity 'Order' is associated to entity 'Customer'.
 
-![](attachments/819203/917537.png)
+![](attachments/domain-model-editor/917537.png)
 
 A logged in customer is allowed to view her own orders, but she is not allowed to view orders of other customers. This is accomplished by using the following XPath constraint in the access rule of entity 'Order':
 

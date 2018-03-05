@@ -25,13 +25,13 @@ If possible, re-using logic is an important procedure while developing apps. The
 
 ## 4 Dragging a Page into a Microflow
 
-Dragging an existing form from the Project Explorer reduces the amount of mouse clicks and mouse pointer hovering. This animation shows how to drag a form into a microflow:
+Dragging an existing form from the Project Explorer reduces the amount of mouse clicks and mouse pointer hovering:
 
 ![](attachments/18448680/18580992.gif)
 
 ## 5 Dragging a Microflow into a Microflow
 
-Instead of creating a new submicroflow action, it is easier to drag an existing microflow into the current one. The microflow that was dragged will automatically be identified as a submicroflow.
+Instead of creating a new submicroflow action, it can be easier to drag an existing microflow into the current one.
 
 ![](attachments/18448680/18580991.gif)
 

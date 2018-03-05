@@ -31,7 +31,7 @@ The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documen
 
 ### <a name="export-swagger-json"></a>2.4 Export swagger.json
 
-Click **Export swagger.json** to save the service's [OpenAPI (Swagger) documentation](open-api) somewhere on your machine. This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
+To save a service's [OpenAPI (Swagger) documentation](open-api) somewhere on your machine, simply right-click the service in the **Project Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Modeler version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
 
 When the app is running, this file is available under `/rest-doc/servicename/swagger.json`.
 

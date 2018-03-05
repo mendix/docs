@@ -48,11 +48,7 @@ To create a published web service, follow these steps:
     ![](attachments/18448728/18581728.png)
 
 3. You should now see the **Published Web Service** properties window. Take note of the following tab details:
-    * On the **General** tab, you can change the **Name** if necessary:
-
-        ![](attachments/18448728/18581714.png)
-
-    * On the **Operations** tab, you can see the available operations of the web service (currently the list is empty, so we'll add an operation [6 Publishing a Microflow](#6)):
+    * On the **Operations** tab, you can see the available operations of the web service (currently the list is empty, so we'll add an operation in section [6 Publishing a Microflow](#6)):
 
         ![](attachments/18448728/18581713.png)
 
@@ -81,7 +77,7 @@ To create the functionality to expose, follow these steps:
 
 To publish a microflow, follow these steps:
 
-1. Right-click somewhere in the background of the microflow and select **Publish as Web service operation...**:
+1. Right-click somewhere in the background of the microflow and select **Publish as Web service operation**:
 
     ![](attachments/18448728/18581708.png)
 

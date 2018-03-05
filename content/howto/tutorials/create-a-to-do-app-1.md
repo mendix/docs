@@ -38,7 +38,7 @@ Switching the security level to **Off** is done for fast development. Make sure 
 The development of your app stays comprehensible when its functionality is split into separate modules.
 Follow these steps to create a new module where you can add the to-do implementation of your app:
 
-1. Right-click your **ProjectName** in the Project Explorer.
+1. Right-click your **Project** in the Project Explorer.
 2. Click **Add module** and give it the name **ToDo**.
 
 ## 5 Creating the Domain Model

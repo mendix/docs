@@ -69,8 +69,11 @@ Following URL prefixes are reserved and are not allowed to be used in location:
 * `p/`
 * `reload/`
 
+When your application is running, you can click the location to open the [interactive documentation page](published-rest-services#interactive-documentation).
+
 <a name="public-documentation"></a>
-### 2.4 Public Documentation
+
+### 2.3 Public Documentation
 
 The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documentation](open-api). You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
 
@@ -83,7 +86,9 @@ When the app is running, this file is available under `/rest-doc/servicename/swa
 
 ## 3 Security
 
-### <a name="authentication"></a>3.1 Requires authentication
+<a name="authentication"></a>
+
+### 3.1 Requires authentication
 
 {{% alert type="info" %}}
 

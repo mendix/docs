@@ -1,5 +1,5 @@
 ---
-title: "Microflow Overview"
+title: "Microflows"
 parent: "application-logic"
 description: "Presents an overview of all the elements that can be used in a microflow."
 ---

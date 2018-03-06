@@ -5,7 +5,7 @@ parent: "microflows"
 
 ## 1 Introduction
 
-This document describes the properties of a microflow. If you want to see what microflows are for and what kind of elements they contain, you can check [Microflow Overview](microflows).
+This document describes the properties of a microflow. If you want to see what microflows are for and what kind of elements they contain, you can check [Microflows](microflows).
 
 ## 2 Common Properties
 

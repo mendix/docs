@@ -1,5 +1,5 @@
 ---
-title: "Nanoflows Overview"
+title: "Nanoflows"
 parent: "application-logic"
 description: "Presents an overview of all the elements that can be used in a nanoflow."
 ---

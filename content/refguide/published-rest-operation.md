@@ -41,17 +41,28 @@ The example location gives an example of a URL on which the operation can be rea
 
 ### 2.4 Microflow
 
-Specify the microflow that implements the operation. These are the characteristics of a valid microflow for a REST operation:
+An operation has different parameters:
+ * [Path parameters](published-rest-path-parameters), which are part of the path of the url
+ * Query parameters, which are at the end of the url in the form of `?name1=value1&name2=value2`. When a microflow parameter is not in the path and is not object, then it's considered a query parameter.
+ * A body parameter (optional), which are in the body of the request to the operation. *GET*, *HEAD* and *DELETE* operations do not have a body parameter
 
-* It returns an [HttpResponse](http-request-and-response-entities#http-response) object that is not *empty*
-* It takes all [path parameters](published-rest-path-parameters) specified in the operation path as parameters
-* It allows all roles that the service allows
-* It may have an [HttpRequest](http-request-and-response-entities#http-request) parameter, which you can use to inspect the incoming request
-* It should not have any other *Object* or *List* parameters
+A microflow for an operation takes all these operation parameters as input.
 
-Any remaining microflow parameters will be treated as optional [query parameters](published-rest-query-parameters).
+A *body* parameter should be a file document (or inherit from a file document).
+
+Path and query parameters can't have *List* or *Object* type.
+
+An operation microflow can also take an [HttpRequest](http-request-and-response-entities#http-request) parameter. You can add this parameter if you would like to inspect the requested URL and headers.
+
+The result of the microflow is the result of the operation. You have several options here:
+
+ * Return an [HttpResponse](http-request-and-response-entities#http-response) - In the *HttpResponse*, you can set the status code, reason phrase and content (as a string). You can fill the content for instance with the result of a mapping, or with a string from an other source. You can also add headers to the response. One important header to set is *Content-Type*. Don't return an *empty* HttpResponse; that will always result in an error.
+ * Return a primitive - When your microflow returns a string, an integer, a boolean, etc. then the response to the operation will be that value. In order to still be able to set a status code, reason phrase and headers, you should add an [HttpResponse](http-request-and-response-entities#http-response) object parameter and set the attributes of that object. If you return a non-empty value from the microflow, the *Content* attribute of the *HttpResponse* object is ignored. If you return an empty value from the microflow, then the *Content* of the *HttpResponse* is taken as the result.
+ * Return a file document - When you want to return data that is a file, such as a pdf or an image, then you can have your microflow return a file document. In this case you should also have an *HttpResponse* parameter and set the *Content-Type* header.
 
 If the microflow throws an unhandled exception, the response is **500: Internal server error**.
+
+If security is enabled, then then microflow needs to have at least one role configured to be accessible.
 
 ### 2.5 Allowed Roles
 

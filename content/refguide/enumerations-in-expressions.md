@@ -1,5 +1,5 @@
 ---
-title: "Enumerations in microflow expressions"
+title: "Enumerations in Expressions"
 parent: "expressions"
 ---
 

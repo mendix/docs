@@ -144,5 +144,4 @@ An overview of the possibilities with expressions can be found below.
 ### [Enumerations in microflow expressions](enumerations-in-expressions)
 
 * [`getCaption`](enumerations-in-expressions) - Get caption of enumeration value in current language
-* [`getKey`](enumerations-in-
-) - Get technical name of enumeration value
+* [`getKey`](enumerations-in-expressions) - Get technical name of enumeration value

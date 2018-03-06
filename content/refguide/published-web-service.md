@@ -40,6 +40,42 @@ This is the value of the targetNamespace attribute in the published WSDL file fo
 
 It is important to correctly configure the target namespace before publishing your WSDL to third parties. Changing it later might break the third-party applications that call your published web services.
 
+### Generated XML
+
+{{% alert type="info" %}}
+
+The **Generated XML** feature was introduced in version 7.13.0.
+
+{{% /alert %}}
+
+Check _Include tags for associations_ if you need to include tags for associations in XML. This is usually not necessary, and support for this will be removed in a future version.
+
+To see the effect of this checkbox, consider a person with two dogs and a cat.
+
+When you don't check _Include tags for associations_, the XML looks like this:
+
+```xml
+<Person name="John">
+  <Dog name="Max" />
+  <Dog name="Rex" />
+  <Cat name="Chester" />
+</Person>
+```
+
+When you check _Include tags for associations_, the XML looks like this:
+
+```xml
+<Person name="John">
+  <Person_Dog>
+    <Dog name="Max" />
+    <Dog name="Rex" />
+  </Person_Dog>
+  <Person_Cat>
+    <Cat name="Chester" />
+  </Person_Cat> 
+</Person>
+```
+
 ### Export WSDL file & Export XML schema definition
 
 By using this button, you can save the generated WSDL file, and its XML schema definition on your local hard drive. You can do this already before running your project, unlike when you download it from `http://localhost:8080/ws-doc/` .

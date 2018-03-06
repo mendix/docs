@@ -16,7 +16,7 @@ module.exports = {
      ****************************************************/
     {
       from: "/apidocs/Home",
-      to: "/apidocs-mxsdk/apidocs/index"
+      to: "/apidocs-mxsdk/apidocs/"
     },
     {
       from: "/apidocs/Authentication",
@@ -40,7 +40,7 @@ module.exports = {
     },
     {
       from: "/apidocs/API+documentation",
-      to: "/apidocs-mxsdk/apidocs/index"
+      to: "/apidocs-mxsdk/apidocs/"
     },
     {
       from: "/apidocs/Invite+API",
@@ -116,7 +116,7 @@ module.exports = {
     },
     {
       from: "/MXSDK/Mendix+SDK+Home",
-      to: "/apidocs-mxsdk/mxsdk/index"
+      to: "/apidocs-mxsdk/mxsdk/"
     },
     {
       from: "/MXSDK/JavaScript+TypeScript+Resources",
@@ -241,11 +241,11 @@ module.exports = {
      ****************************************************/
     {
       from: "/community/Community+Documentation",
-      to: "/community/documentation/index"
+      to: "/community/documentation/"
     },
     {
       from: "/community/Community+Projects",
-      to: "/community/tools/index"
+      to: "/community/tools/"
     },
     {
       from: "/community/Content+Writing+and+Formatting+Guidelines",
@@ -1527,7 +1527,7 @@ module.exports = {
     },
     {
       from: "/howto50/Tips+Tricks",
-      to: "/howtogeneral/tips/index"
+      to: "/howtogeneral/tips/"
     },
     {
       from: "/howto50/Translatable+Validation+Messages",

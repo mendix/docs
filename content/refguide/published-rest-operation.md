@@ -41,6 +41,12 @@ The example location gives an example of a URL on which the operation can be rea
 
 ### 2.4 Microflow
 
+{{% alert type="info" %}}
+
+Support for **File Documents** in these microflows was introduced in version 7.13.0.
+
+{{% /alert %}}
+
 An operation has different parameters:
  * [Path parameters](published-rest-path-parameters), which are part of the path of the url
  * Query parameters, which are at the end of the url in the form of `?name1=value1&name2=value2`. When a microflow parameter is not in the path and is not object, then it's considered a query parameter.

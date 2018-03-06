@@ -83,21 +83,34 @@ When the app is running, this file is available under `/rest-doc/servicename/swa
 
 ## 3 Security
 
-<a name="authentication"></a>
-
-### 3.1 Authentication
+### <a name="authentication"></a>3.1 Requires authentication
 
 {{% alert type="info" %}}
 
-The **Authentication** feature was introduced in version 7.11.0. In earlier versions, it was always **Username and password**.
+The **No Authentication** feature was introduced in version 7.11.0. In earlier versions, it was always **Username and password**.
+
+The **Active Session** authentication was introduced in version 7.13.0
 
 {{% /alert %}}
 
-Select whether clients need to authenticate with a username and a password (using basic authentication) or not.
+Select whether clients need to authenticate or not.
 
-### 3.2 Allowed Roles
+### 3.2 Authentication methods
 
-The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Authentication** is set to **Username and password**.
+If authentication is required, you can select which authentication methods you would like to support
+
+* Check *Username and password* to allow clients to authenticate themselves using a username and a password in the *Authorization* header. (This is called _basic authentication_)
+* Check *Active session* to allow access from javascript inside your current application. Once a user has logged in in the browser, the javascript in your app can access the REST service using the current user's session. To prevent cross-site request forgery, the *X-Csrf-Token* header needs to be set on each request, for example:
+
+```var xmlHttp = new XMLHttpRequest();
+xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
+xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
+xmlHttp.send(null);
+```
+
+### 3.3 Allowed Roles
+
+The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
 ## 4 Resources
 

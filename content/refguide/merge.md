@@ -1,6 +1,6 @@
 ---
 title: "Merge"
-parent: "microflows"
+parent: "splits"
 ---
 
 

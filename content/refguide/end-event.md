@@ -1,6 +1,6 @@
 ---
 title: "End Event"
-parent: "microflows"
+parent: "events"
 ---
 
 

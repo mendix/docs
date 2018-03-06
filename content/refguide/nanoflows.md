@@ -1,12 +1,12 @@
 ---
 title: "Nanoflows Overview"
-category: "Modeler"
+parent: "application-logic"
 description: "Presents an overview of all the elements that can be used in a nanoflow."
 ---
 
 ## 1 Introduction
 
-This page is an overview of all the elements that can be used in a nanoflow. For the properties of the nanoflow itself, see [Nanoflow](nanoflow).
+This page is an overview of all the elements that can be used in a nanoflow. For the properties of the nanoflow itself, see [Nanoflow Properties](nanoflow).
 
 Nanoflows are similar to [microflows](microflows), as they allow you to express the logic of your application. However, they do have some specific benefits (for example, they run directly on the browser/device and can be used in an offline app). Furthermore, most of the actions run directly on the device, so there is also a speed benefit.
 

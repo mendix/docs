@@ -1,6 +1,6 @@
 ---
-title: "Nanoflow"
-category: "Modeler"
+title: "Nanoflow Properties"
+parent: "nanoflows"
 ---
 
 ## 1 Introduction

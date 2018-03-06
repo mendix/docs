@@ -100,11 +100,11 @@ Now that you've created a menu structure it's time to start using it on pages.
 
 ## 6 Related content
 
-*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
+*   [How to Perform Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
 *   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
-*   [Setup Mendix UI Framework](setup-mendix-ui-framework)
+*   [Setup Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
 *   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
 *   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 *   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)

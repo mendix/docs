@@ -140,11 +140,11 @@ In the previous section you have constrained the data grid on attributes of the 
 
 ## 9 Related Content
 
-*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
+*   [How to Perform Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
 *   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
-*   [Setup Mendix UI Framework](setup-mendix-ui-framework)
+*   [Setup Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
 *   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
 *   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)
 *   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

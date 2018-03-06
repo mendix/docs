@@ -70,6 +70,6 @@ Clicking a Delete button or triggering a delete activity will initiate the delet
 * [How to Set Up Data Validation](setting-up-data-validation)
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-* [How to Perform Scout and Windows 10 Workaround](../ux/scout-and-windows-10-workaround)
+* [How to Perform Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
 * [How to Generate a Personal SSH2 Key Pair](../security/generating-a-personal-ssh2-key-pair)
 * [How to Create a Chainable Custom Widget](../custom-widget-development/create-a-chainable-custom-widget)

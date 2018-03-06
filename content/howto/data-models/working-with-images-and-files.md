@@ -74,7 +74,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 *   [Setting up data validation](setting-up-data-validation)
 *   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-*   [Scout and Windows 10 Workaround](../ux/scout-and-windows-10-workaround)
+*   [How to Perform Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
 *   [Generating a personal SSH2 key pair](../security/generating-a-personal-ssh2-key-pair)
 *   [Creating a chainable Custom Widget](../custom-widget-development/create-a-chainable-custom-widget)
 

@@ -1,6 +1,6 @@
 ---
 title: "Microflow Element Common Properties"
-parent: "microflows"
+parent: "common-elements"
 ---
 
 

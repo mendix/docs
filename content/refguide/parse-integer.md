@@ -1,6 +1,6 @@
 ---
 title: "Parse integer"
-parent: "microflow-expressions"
+parent: "expressions"
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Microflows"
-category: "Modeler"
+parent: "application-logic"
 description: "Presents an overview of all the elements that can be used in a microflow."
 ---
 
@@ -8,7 +8,7 @@ description: "Presents an overview of all the elements that can be used in a mic
 
 {{% alert type="info" %}}
 
-This part is an overview of all the elements that can be used in a microflow. For the properties of the microflow itself, see [Microflow](microflow).
+This part is an overview of all the elements that can be used in a microflow. For the properties of the microflow itself, see [Microflow Properties](microflow).
 
 {{% /alert %}}
 

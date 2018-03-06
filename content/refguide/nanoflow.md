@@ -1,11 +1,11 @@
 ---
-title: "Nanoflow"
-category: "Modeler"
+title: "Nanoflow Properties"
+parent: "nanoflows"
 ---
 
 ## 1 Introduction
 
-This page describes the properties of nanoflows. For details on using nanoflows and nanoflow elements, see [Nanoflows Overview](nanoflows).
+This page describes the properties of nanoflows. For details on using nanoflows and nanoflow elements, see [Nanoflows](nanoflows).
 
 ## 2 Common Properties
 

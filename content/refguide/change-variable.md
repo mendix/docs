@@ -22,4 +22,4 @@ The variable of which you want to change the value.
 
 ### Value
 
-The new value for the variable. The value is entered using a [microflow expression](microflow-expressions). The type of the microflow expression should be the same as the type of the selected variable.
+The new value for the variable. The value is entered using a [microflow expression](expressions). The type of the microflow expression should be the same as the type of the selected variable.

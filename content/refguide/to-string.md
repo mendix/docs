@@ -1,6 +1,6 @@
 ---
 title: "To string"
-parent: "microflow-expressions"
+parent: "expressions"
 ---
 
 
@@ -14,7 +14,7 @@ If you need full control over the output format, consider using the data type sp
 
 ### Input Parameters
 
-A value that should be converted to a String. Supported [types](data-types): Integer/Long, Decimal, Float (deprecated), DateTime and Enumeration. In case of Enumeration, returns the key of the enumeration value, not the caption. See also [Enumerations in microflow expressions](enumerations-in-microflow-expressions).
+A value that should be converted to a String. Supported [types](data-types): Integer/Long, Decimal, Float (deprecated), DateTime and Enumeration. In case of Enumeration, returns the key of the enumeration value, not the caption. See also [Enumerations in microflow expressions](enumerations-in-expressions).
 
 ```java
 toString(1.4)

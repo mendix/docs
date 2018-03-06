@@ -1,6 +1,6 @@
 ---
 title: "Sequence Flow"
-parent: "microflows"
+parent: "common-elements"
 ---
 
 

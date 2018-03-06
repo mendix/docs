@@ -29,11 +29,11 @@ To sync the Web Modeler with the Desktop Modeler, follow these steps:
 
 2. In the pop-up, click **Continue to the Desktop Modeler** to launch the Desktop Modeler. Optionally, click the **Download here** link to download and install the latest Desktop Modeler and retry afterwards.
 
-    ![](attachments/desktop-howto/wm-sync-dialog.png)
+    ![](attachments/modeler-core/webmodeler-desktop-notification.png)
 
-3. When the Desktop Modeler has started, in the top menu, click **Team**, and then click **Sync with Web Modeler**.  Note that if you have uncommited changes in the Desktop Modeler, click **Commit** before syncing with the Web Modeler.
+3. When the Desktop Modeler has started, in the top menu, click **Project**, select **More Versioning**, and then click **Sync with Web Modeler**.  Note that if you have uncommited changes in the Desktop Modeler, click **Commit** before syncing with the Web Modeler.
 
-    ![](attachments/desktop-howto/sync-webmodeler.png)
+    ![](attachments/modeler-core/2018-03-05_15-40-09.png)
 
 4. The latest updates from the Web Modeler will now be retrieved and merged into your model. When there are no Web Modeler changes received, all changes from the Desktop Modeler will be synced to the Web Modeler. The sync process is then finished and both Modelers are ready to continue modeling.
 
@@ -47,13 +47,13 @@ If a user is working in the Web Modeler while another user is reviewing the chan
 
 You can now review the changes and any merge conflicts in the **Changes** pane in the Desktop Modeler.
 
-![](attachments/desktop-howto/changes.png)
+![](attachments/modeler-core/2018-03-05_15-46-00.png)
 
-When you are done, click **Team** and select **Finish sync with Web Modeler**.
+When you are done, click **Project**, select **More Versioning** and click **Finish sync with Web Modeler**.
 
 A **Commit** dialog box will appear for you to commit the changes you have made. Enter the changes, and then click **Ok**.
 
-![](attachments/desktop-howto/commit.png)
+![](attachments/modeler-core/2018-03-05_15-49-44.png)
 
 {{% alert type="info" %}}
 

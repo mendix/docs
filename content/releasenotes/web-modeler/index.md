@@ -10,6 +10,31 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ## 2018
 
+### March 5th, 2018 15:10:44 GMT
+
+#### New Features
+
+  * We added support for Mendix 7.12.0.
+  * Navigation list widgets are now fully rendered in the page editor.
+  * Java actions and connectors are now fully rendered in microflows.
+  * The return type of Java action is now available for use in microflows.
+  
+#### Improvements
+ 
+  * We've added tooltips to various controls to make things easier on new users.
+  * The header of the page editor Toolbox is sticky now, so it does not scroll along with the Toolbox contents. 
+  * After dragging an item from the Toolbox, the side panel stays on the Toolbox (for both the domain model editor and microflow editor) .
+  * A maintenance page is now shown when the Web Modeler going to be under maintenance. 
+  * An animation is shown while custom widgets are updated on the Settings page.
+  * The order of the items on the left sidebar has been improved.
+  * We've improved the new page creation flow, reducing the number of steps in the flow.
+  * We improved checking the prerequisites, which prevents breaking the guided product introduction tour in the publishing step. 
+  
+#### Fixes
+  
+  * Only filtering of non-form page templates is now allowed while creating edit pages.
+  * The Web Modeler now handles conversion and custom widgets requests better. 
+  
 ### February 7th, 2018 16:28:00 GMT
 
 #### Improvements

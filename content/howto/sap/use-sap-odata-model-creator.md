@@ -28,7 +28,7 @@ For details on using Mendix App Store connectors, see [How to Use App Store Cont
 
 Generating a service module starts by getting an OData metadata XML file. This file can be download from the OData service URL directly using the `$metadata` suffix or retrieved from the SAP Gateway. Your SAP Gateway adminstrator can provide the file for you.
 
-With the file available visit the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/). For this documentation, we use the publicly available HCM People Profile service, for which [this](https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata) is the metadata file.
+With the file available, visit the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/). For this documentation, we use the publicly available HCM People Profile service, for which [this](https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata) is the metadata file.
 
 To generate the service module, follow these steps:
 
@@ -45,7 +45,7 @@ To generate the service module, follow these steps:
 
 ## 4 Using the Module in a Mendix App
 
-Now you have a Mendix module ready to import into your project. Open the project which you created as a prerequisite. Right-click your project in the **Project Explorer** and select **Import Module Package**.
+Now you have a Mendix module ready to import into your project. Open the project which you created as a prerequisite. Right-click your project in the **Project Explorer** and select **Import module package...**.
 
 ![](attachments/use-sap-odata-model-creator/import_module_package.png)
 
@@ -53,6 +53,12 @@ You now have your service **HCM\_PEOPLE\_PROFILE\_SRV** module available in your
 
 ![](attachments/use-sap-odata-model-creator/project_explorer.png)
 
-For more information on creating a new app from a Mendix project package, see [Import Project Package](/refguide/import-project-package-dialog).
+Now you are ready to use the imported service module together with the SAP OData Connector. For more information, see [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector).
 
-Now you are ready to use the imported service module together with the SAP OData Connector. For more information, see [Use the SAP OData Connector](/howto/sap/use-sap-odata-connector).
+## 5 Related Content
+
+* [HCM People Profile Service sample metadata](https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata)
+* [How to Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler)
+* [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector)
+* [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector)
+* [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/)

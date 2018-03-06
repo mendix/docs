@@ -12,7 +12,7 @@ Validation rules are conditions that should be satisfied before an object is com
 
 For entity 'Customer' the name and credit need to be filled in at all times, and the expenses cannot be higher than the credit. This is visualized in the domain model editor as follows:
 
-![](attachments/819203/917546.png)
+![](attachments/domain-model-editor/917546.png)
 
 {{% /alert %}}{{% alert type="warning" %}}
 

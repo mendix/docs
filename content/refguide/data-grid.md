@@ -8,7 +8,7 @@ The data grid shows a list of objects in a grid. For example, a data grid can sh
 
 {{% alert type="info" %}}
 
-![](attachments/16713892/16844027.png)
+![](attachments/pages/data-grid.png)
 A data grid showing accounts.
 
 {{% /alert %}}
@@ -44,13 +44,6 @@ This property indicates with the buttons to page through the information in the 
 _Default value:_ True
 
 {{% snippet file="refguide/Column+Width+Properties.md" %}}
-
-{{% alert type="info" %}}
-
-![](attachments/16713892/16844028.png)
-A data grid with widths 200px and auto.
-
-{{% /alert %}}
 
 ### Number of rows
 

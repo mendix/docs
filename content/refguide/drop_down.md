@@ -7,9 +7,9 @@ A drop-down is an [input widget](input-widgets) that can be used to display and 
 
 {{% alert type="info" %}}
 
- ![](attachments/16713880/16844000.png)
+ ![](attachments/pages/drop-down.png)
  
-This drop-down widget allows the user to select the state of the customer.
+This drop-down widget allows the user to select their favorite color.
 
 {{% /alert %}}
 

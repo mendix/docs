@@ -54,7 +54,7 @@ If your app is offline-compatible, ensure that a sync button is available to the
 
 {{% alert type="warning" %}}
 
-Please do not remove the buttons with the caption "GCM Settings reference" and "Device Registration reference" from the PushNotification_Snippet. They are necessary to make the widget offline-compatible. Please note that both buttons are invisible to the user.
+Please do not remove the buttons with the caption **GCM Settings reference** and **Device Registration reference** from the PushNotification_Snippet. They are necessary to make the widget offline-compatible. Please note that both buttons are invisible to the user.
 
 {{% /alert %}}
 

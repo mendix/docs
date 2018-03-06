@@ -48,7 +48,7 @@ This is an example:
 
 A complete configuration may look like this:
 
-![Example configuration](attachments/use-a-client-certificate/example-custom-settings.png)
+![](attachments/use-a-client-certificate/example-custom-settings.png)
 
 ## 4 Running in the Cloud
 

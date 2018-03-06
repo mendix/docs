@@ -18,7 +18,7 @@ Type defines whether an expression or a rule is used to define the condition of 
 
 ### Expression
 
-If the property 'Type' is set to 'Expression' the expression field can be used to define the condition of the split. The condition can be entered as a [microflow expression](microflow-expressions). The expression should result in a boolean or an enumeration.
+If the property 'Type' is set to 'Expression' the expression field can be used to define the condition of the split. The condition can be entered as a [microflow expression](expressions). The expression should result in a boolean or an enumeration.
 
 {{% alert type="info" %}}
 
@@ -33,7 +33,7 @@ The expression entered is given below. Because you want to go a different direct
 
 ### Rule
 
-If the property 'Type' is set to 'Rule', a [rule](rules) can be selected to define the condition of the split. For each parameter of the rule an argument needs to be specified using [microflow expressions](microflow-expressions). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
+If the property 'Type' is set to 'Rule', a [rule](rules) can be selected to define the condition of the split. For each parameter of the rule an argument needs to be specified using [microflow expressions](expressions). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
 
 ## Common Properties
 

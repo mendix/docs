@@ -18,4 +18,6 @@ If you want to stop your microflow after an activity, you link the activity, usi
 
 ### Return value
 
-The return value is the value that is returned to the microflow that called the current microflow. The value can be entered as a [microflow expression](microflow-expressions).
+The return value is the value that is returned to the microflow that called the current microflow. The value can be entered as a [microflow expression](
+    
+).

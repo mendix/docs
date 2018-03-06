@@ -1,6 +1,6 @@
 ---
 title: "Mathematical function calls"
-parent: "microflow-expressions"
+parent: "expressions"
 ---
 
 

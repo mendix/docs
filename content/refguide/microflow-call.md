@@ -20,7 +20,7 @@ The microflow that is called by this activity.
 
 ### Arguments
 
-For each parameter of the microflow you have to supply an argument of the same type. The values of the arguments are expressed using [microflow expressions](microflow-expressions).
+For each parameter of the microflow you have to supply an argument of the same type. The values of the arguments are expressed using [microflow expressions](expressions).
 
 ## Output Properties
 

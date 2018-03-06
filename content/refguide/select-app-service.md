@@ -3,9 +3,6 @@ title: "Select app service"
 parent: "consumed-app-services"
 ---
 
-
-![](attachments/16713704/16843895.png)
-
 ## Source
 
 You can add an app service to your model by selecting a new App Service document in the Add menu of a module. In the dialog, you can select an app service from 3 sources:
@@ -22,4 +19,4 @@ In the rightmost corner of the 'Most recent app services overview', you can sele
 
 #### Tile
 
-Selecting a tile (for instance: 'SalesForce.com' in the above illustration) and then selecting the OK button will import the app service for you in the modeler. See [Consumed App Services](consumed-app-services) for information about the use of imported app services.
+Selecting a tile and then selecting the OK button will import the app service for you in the modeler. See [Consumed App Services](consumed-app-services) for information about the use of imported app services.

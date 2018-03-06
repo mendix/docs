@@ -8390,6 +8390,21 @@ module.exports = {
       to: "/howtogeneral/tips/translatable-validation-messages"
     },
     /****************************************************
+     * APM
+     ****************************************************/
+    {
+      from: "/apm/use-cases/uc",
+      to: "/apm/use-cases/"
+    },
+    {
+      from: "/apm/installation-guide/ig",
+      to: "/apm/installation-guide/"
+    },
+    {
+      from: "/apm/reference-guide/rg",
+      to: "/apm/reference-guide/"
+    },
+    /****************************************************
      * RELEASE NOTES
      ****************************************************/
     {

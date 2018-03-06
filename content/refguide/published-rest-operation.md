@@ -24,8 +24,8 @@ The method specifies what type of operation is performed by the microflow:
 * `POST` – the operation creates an entry in the collection at the specified location
 * `PATCH` – the operations updates (part of) the entry at the specified location
 * `DELETE` – the operation deletes the entry or entries at the specified location
-* `HEAD` – the operation retrieves information about the entry or entries at the specified location; this is identical to `GET`, except for the fact that it doesn't return a message body
-* `OPTIONS` – the operation returns information about the available communication options
+* `HEAD` - the operation retrieves information about the entry or entries at the specified location; this is identical to `GET`, except for the fact that it doesn't return a message body
+* `OPTIONS` - the operation returns information about the available communication options
 
 ### <a name="operation-path"></a>2.2 Operation Path
 
@@ -59,7 +59,7 @@ A microflow for an operation takes all these operation parameters as input.
 
 A body parameter should be a file document (or inherit from a file document).
 
-Path and query parameters can't have list or object types.
+Path and query parameters can't have *List* or *Object* type.
 
 An operation microflow can also take an [HttpRequest](http-request-and-response-entities#http-request) parameter. You can add this parameter if you would like to inspect the requested URL and headers.
 
@@ -75,23 +75,7 @@ If the microflow throws an unhandled exception, the response is **500: Internal 
 
 If security is enabled, then then microflow needs to have at least one role configured to be accessible.
 
-### 2.5 Allowed Roles
-
-The allowed roles define which [module role](module-role) a user must have to be able to access the service.
-
-## 3 Public Documentation
-
-The public documentation is used in the service's [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation).
-
-### <a name="summary"></a>3.1 Summary
-
-The summary provides a short description of what the operation does.
-
-### <a name="description"></a>3.2 Description
-
-The description provides a complete overview of what the operation does. You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
-
-## 4 Parameters
+## 2.5 Parameters
 
 {{% alert type="info" %}}
 
@@ -104,6 +88,18 @@ The **Parameters** table shows the name, data type, and type of the parameter.
 An operation parameter can be either a query parameter, a path parameter or a body parameter. Path and the query parameters are detemined by their placement in the URL. If the parameter is part of the operation's location, it is a path parameter. If it is a part of the operation's query string, it is a query parameter. A body parameter comes from the body of the request.
 
 The parameter data type is determined by the microflow of the operation. New parameters that are not yet part of the microflow will have "(Not set)" as their data type.
+
+## 4 Public Documentation
+
+The public documentation is used in the service's [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation).
+
+### <a name="summary"></a>3.1 Summary
+
+The summary provides a short description of what the operation does.
+
+### <a name="description"></a>3.2 Description
+
+The description provides a complete overview of what the operation does. You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
 
 ## 5 Example
 

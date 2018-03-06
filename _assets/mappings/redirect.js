@@ -7525,7 +7525,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Microflow+Expressions",
-      "to": "/refguide/microflow-expressions"
+      "to": "/refguide/expressions"
     },
     {
       "from": "/refguide7/Microflow+Source",

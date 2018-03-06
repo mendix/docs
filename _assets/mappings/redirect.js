@@ -7237,7 +7237,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Enumerations+in+microflow+expressions",
-      "to": "/refguide/enumerations-in-microflow-expressions"
+      "to": "/refguide/enumerations-in-expressions"
     },
     {
       "from": "/refguide7/Error+Event",

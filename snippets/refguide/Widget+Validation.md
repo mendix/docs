@@ -16,7 +16,7 @@ The possible values of a predefined validation are the following:
 * Date in the future – dateTime
 * Date in the past – dateTime
 
-Custom validations are expressions that follow the [Microflow expression](microflow-expressions) syntax. Both `$currentObject` and `$value` are in a scope that refers to the current object and the current member value, respectively.
+Custom validations are expressions that follow the [Microflow expression](expressions) syntax. Both `$currentObject` and `$value` are in a scope that refers to the current object and the current member value, respectively.
 
 When a validation is set and it fails for this widget, a message will be shown when the user selects **Save**.
 

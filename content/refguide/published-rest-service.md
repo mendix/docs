@@ -15,11 +15,13 @@ Use a published REST service to expose your entities and microflows to other app
 
 ## 2 General
 
-### <a name="service-name"></a>2.1 Service Name
+<a name="service-name"></a>
+
+### 2.1 Service Name
 
 Service name uniquely identifies the service in the app. It is also displayed in [OpenAPI (Swagger) documentation page](open-api).
 
-When service is initially created, service name is used in the creation of the default location for the service. If the service name contains any spaces or special characters, they will be replaced with the `_` character in the service location. 
+When service is initially created, service name is used in the creation of the default location for the service. If the service name contains any spaces or special characters, they will be replaced with the `_` character in the service location.
 
 ### 2.2 Version
 
@@ -33,6 +35,7 @@ Version is used to display version information in [OpenAPI (Swagger) documentati
 
 By default, version is set to "1.0.0".
 
+<a name="location"></a>
 ### 2.3 Location
 
 {{% alert type="info" %}}
@@ -66,11 +69,13 @@ Following URL prefixes are reserved and are not allowed to be used in location:
 * `p/`
 * `reload/`
 
-### <a name="public-documentation"></a>2.4 Public Documentation
+<a name="public-documentation"></a>
+### 2.4 Public Documentation
 
 The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documentation](open-api). You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
 
-### <a name="export-swagger-json"></a>2.5 Export swagger.json
+<a name="export-swagger-json"></a>
+### 2.5 Export swagger.json
 
 To save a service's [OpenAPI (Swagger) documentation](open-api) somewhere on your machine, simply right-click the service in the **Project Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Modeler version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
 
@@ -78,7 +83,9 @@ When the app is running, this file is available under `/rest-doc/servicename/swa
 
 ## 3 Security
 
-### <a name="authentication"></a>3.1 Authentication
+<a name="authentication"></a>
+
+### 3.1 Authentication
 
 {{% alert type="info" %}}
 
@@ -100,7 +107,7 @@ A REST service exposes a number of [resources](published-rest-resource). On a re
 
 When you select a resource, you see the [operations](published-rest-operation) that are defined for that resource.
 
-Resources and Operations are appended to [Location](#Location) to form a URL on which they can be accessed.
+Resources and Operations are appended to [Location](#location) to form a URL on which they can be accessed.
 
 ![](attachments/published-rest-service/example-location-url.png)
 

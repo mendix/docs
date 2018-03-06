@@ -8392,19 +8392,21 @@ module.exports = {
     /****************************************************
      * APM
      ****************************************************/
-    // Disabled, doesn't work
-    // {
-    //   from: "/apm/use-cases/uc",
-    //   to: "/apm/use-cases/"
-    // },
-    // {
-    //   from: "/apm/installation-guide/ig",
-    //   to: "/apm/installation-guide/"
-    // },
-    // {
-    //   from: "/apm/reference-guide/rg",
-    //   to: "/apm/reference-guide/"
-    // },
+    {
+      from: "~*\\\/apm\\\/use-cases\\\/uc",
+      to: "/apm/use-cases/",
+      exact: true
+    },
+    {
+      from: "~*\\\/apm\\\/installation-guide\\\/ig",
+      to: "/apm/installation-guide/",
+      exact: true
+    },
+    {
+      from: "~*\\\/apm\\\/reference-guide\\\/rg",
+      to: "/apm/reference-guide/",
+      exact: true
+    },
     /****************************************************
      * RELEASE NOTES
      ****************************************************/

@@ -66,15 +66,11 @@ Following URL prefixes are reserved and are not allowed to be used in location:
 * `p/`
 * `reload/`
 
-### 2.4 Allowed Roles
-
-The allowed roles define which [module role](module-role) a user must have to be able to access the service.
-
-### <a name="public-documentation"></a>2.5 Public Documentation
+### <a name="public-documentation"></a>2.4 Public Documentation
 
 The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documentation](open-api). You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
 
-### <a name="export-swagger-json"></a>2.6 Export swagger.json
+### <a name="export-swagger-json"></a>2.5 Export swagger.json
 
 To save a service's [OpenAPI (Swagger) documentation](open-api) somewhere on your machine, simply right-click the service in the **Project Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Modeler version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
 
@@ -108,6 +104,6 @@ Resources and Operations are appended to [Location](#Location) to form a URL on 
 
 ![](attachments/published-rest-service/example-location-url.png)
 
-## 5 Related Content
+## 6 Related Content
 
 For more information on which operation gets executed for a given request URL, see [Published REST Routing](published-rest-routing).

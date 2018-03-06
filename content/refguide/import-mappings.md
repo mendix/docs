@@ -3,14 +3,11 @@ title: "Import Mappings"
 parent: "mapping-documents"
 ---
 
-
-
-
 Please refer to [Mapping Documents](mapping-documents) for an introduction.
 
 ## Obtaining objects in Import Mappings
 
-Figure 1 depicts an example of an Import Mapping document in which two elements from an XML Schema using the "Select elements..." dialog are selected. Following this the ReceivedPartners and ReceivedClient entities were added, and mapped to the Result and Client schema elements. Each time the Import Mapping is invoked, a new ReceivedPartners object is created.
+Figure 1 depicts an example of an Import Mapping document in which two elements from an XML Schema have been selected using the "Select elements..." dialog. Following this the ReceivedPartners and ReceivedClient entities were added, and mapped to the Result and Client schema elements. Each time the Import Mapping is invoked, a new ReceivedPartners object is created.
 
 ![](attachments/16713727/16843942.png)
 

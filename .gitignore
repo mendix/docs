@@ -12,3 +12,5 @@ static/public/js/*
 static/public/styles/*
 
 static/json/*.json
+
+yarn-error.log

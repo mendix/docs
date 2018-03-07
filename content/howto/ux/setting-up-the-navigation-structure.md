@@ -98,7 +98,7 @@ Now that you've created a menu structure it's time to start using it on pages.
 
     To prevent repeating the previous steps for every page in your project, the Desktop Modeler supports something called layouts. With layouts you can define a base structure for pages in your project. In a layout you can define where the menu should be rendered and you can simply reuse that layout for the desired pages.
 
-## 6 Related content
+## 6 Related Content
 
 *   [How to Perform Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
 *   [Layouts and Snippets](layouts-and-snippets)

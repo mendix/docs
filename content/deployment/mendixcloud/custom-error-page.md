@@ -39,7 +39,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 3.  Create a new folder named *error_page*.
 
-    ![](attachments/customerror-page/error-pages.png)
+    ![](attachments/customerror-page/error-page.png)
 
 4.  In the **error_page** folder, create a new *.txt* file and name it *offline.html*. 
 
@@ -62,8 +62,8 @@ An example `offline.html/404.html/403.html` page would look like this:
 <!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="/error_pages/style.css">
-    <script src="/error_pages/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="/error_page/style.css">
+    <script src="/error_page/script.js"></script>
   </head>
   <body>
     This application is currently offline.

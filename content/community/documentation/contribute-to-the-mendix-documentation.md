@@ -1,7 +1,7 @@
 ---
 title: "Contribute to the Mendix Documentation"
 category: "Documentation"
-order: 10
+menu_order: 10
 ---
 
 ## 1 Introduction

@@ -1,7 +1,7 @@
 ---
 title: "Share App Store Content"
 category: "App Store"
-order: 30
+menu_order: 30
 ---
 
 ## 1 Introduction

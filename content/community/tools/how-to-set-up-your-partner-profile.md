@@ -1,7 +1,7 @@
 ---
 title: "Set Up Your Partner Profile"
 category: "Tools"
-order: 20
+menu_order: 20
 tags: ["authorized", "expert", "professional", "4 p's"]
 ---
 

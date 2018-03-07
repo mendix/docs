@@ -177,7 +177,7 @@ Re-deploy your app to see the shiny new logo:
 
 ## 7 Related Content
 
-* [How to Configure Scout with the Windows 10 Workaround](perform-scout-and-windows-10-workaround)
+* [How to Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
 * [How to Layouts and Snippets](layouts-and-snippets)
 * [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)
 * [How to Set Up Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)

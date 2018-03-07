@@ -1,6 +1,7 @@
 ---
 title: "APM 2 Use Cases"
 category: "Use Cases"
+menu_order: 20
 ---
 
 ## 1 Introduction
@@ -27,13 +28,13 @@ The **Trap** module saves time, because logging from an error is immediately sto
 
 The **Statistics** module snapshots are stored on shutdown of the Mendix application, so during development, useful comparative analysis can be done. Drill down on the statistics to see detailed information.
 
-The **Browser recorder** can be used to get performance information about a new build, pages changed, and widgets used. You can get information about the duration of loading widgets and grids as well as about the data retrieved. 
+The **Browser recorder** can be used to get performance information about a new build, pages changed, and widgets used. You can get information about the duration of loading widgets and grids as well as about the data retrieved.
 
 ## 4 In Test
 
 During the test and acceptance phase, other users than the developer test and use the application. It is especially important then to collect information for further analysis if they find an issue.
 
-Statistics on a production database dump may give other insights than on a small development sample. It is possible to drill down on the statistics and get detailed information about the duration of microflows and actions. 
+Statistics on a production database dump may give other insights than on a small development sample. It is possible to drill down on the statistics and get detailed information about the duration of microflows and actions.
 
 The performance tool can always be turned on with a small threshold to capture the microflows that might be interesting to tune.
 

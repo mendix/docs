@@ -1,6 +1,5 @@
 ---
 title: "Perform the Scout and Windows 10 Workaround"
-category: "UX"
 parent: "setup-mendix-ui-framework"
 tags: ["Scout", "Window 10", "Workaround"]
 ---

@@ -1,6 +1,5 @@
 ---
 title: "Set Up the Mendix UI Framework with Scout"
-category: "UX"
 parent: "setup-mendix-ui-framework"
 tags: ["UI Framework", "Styling", "Scout"]
 ---

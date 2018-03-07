@@ -150,7 +150,7 @@ Now the application is ready to store redundant data, but you still need to keep
 * [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
 * [How to Define Access Rules Using XPath](../logic-business-rules/define-access-rules-using-xpath)
-* [How to Perform Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
+* [How to Perform the Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
 * [How to Generate a Personal SSH2 Key Pair](../security/generating-a-personal-ssh2-key-pair)
 * [Attributes](/refguide7/attributes)
 * [Event Handlers](/refguide7/event-handlers)

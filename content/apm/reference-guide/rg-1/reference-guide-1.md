@@ -1,6 +1,7 @@
 ---
 title: "APM 1 Reference Guide"
 category: "Reference Guide"
+menu_order: 10
 ---
 
 ## 1 Introduction
@@ -103,4 +104,3 @@ The log tool is used to collect Mendix Runtime log messages and store them in th
 This gives remote access to log information, makes it available to consultants, and allows for easy searching and analyzing.
 
 The log rerouting makes sure that Java messages that are sent to the Java console, to the java util library or to the log4j library, are rerouted to the Mendix log. For example, javamail sends debug output to the console and with this option you can collect that information and make it visible in the Mendix log as well as in the APM Log Tool and APM Trap Tool. This helped support a lot in solving email issues and issues with web services security and certificates.
-

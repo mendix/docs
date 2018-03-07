@@ -34,6 +34,25 @@
       return Math.floor(Math.random() * max);
     }
 
+    function hasMenuOrders(arr) {
+      return arr.length > 0 && arr.filter(function (p) { return typeof p.mo !== 'undefined'; }).length > 0;
+    }
+
+    function sortOnMenuOrders(arr) {
+      if (hasMenuOrders(arr)) {
+        var fixed = arr.map(function (p) {
+          if (typeof p.mo === 'undefined') {
+            p.mo = 100000000;
+          }
+          return p;
+        });
+        return fixed.sort(function (p1, p2) {
+          return p1.mo - p2.mo;
+        });
+      }
+      return arr;
+    }
+
     function sortPages(arr, getModifier, numFunc) {
       var num = numFunc || function (n) { return n; };
       return arr.sort(function (p1, p2) {
@@ -109,6 +128,8 @@
             subpages = sortOnVersion(subpages);
           }
 
+          subpages = sortOnMenuOrders(subpages);
+
           $item.append(addExpandLink(pageId, title, page.u));
           $collapse.append(addPages(subpages, data));
           $item.append($collapse);
@@ -136,6 +157,8 @@
       if (catUrl && catUrl.indexOf("/releasenotes/") === 0){
         getPages = sortOnVersion(getPages);
       }
+
+      getPages = sortOnMenuOrders(getPages);
 
       if (getPages.length === 0 && catUrl) {
         $cat.append(addNormalLink(cat, catUrl));

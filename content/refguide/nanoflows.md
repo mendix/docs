@@ -1,6 +1,7 @@
 ---
 title: "Nanoflows"
 parent: "application-logic"
+order: 20
 description: "Presents an overview of all the elements that can be used in a nanoflow."
 ---
 

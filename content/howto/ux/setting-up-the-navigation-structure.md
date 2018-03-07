@@ -100,7 +100,7 @@ Now that you've created a menu structure it's time to start using it on pages.
 
 ## 6 Related Content
 
-*   [How to Perform Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
+*   [How to Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
 *   [Layouts and Snippets](layouts-and-snippets)
 *   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
 *   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)

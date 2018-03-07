@@ -1,7 +1,7 @@
 ---
 title: "Enter the title of the document"
-#category: "Enter the category under which the document should be published (for example, "Mobile")"
-#parent: "Enter the parent document filename of this document if necessary (for example, "design-the-architecture")"
+#category: "Enter the category under which the document should be published (for example, "Mobile"); if there is a parent, remove this category line"
+#parent: "Enter the parent document filename of this document if necessary (for example, "design-the-architecture"); if there is a category, remove this parent line"
 #description: "Set a description with a maximum of 140 characters; this should describe what the goal of the document is, and it can be different from the document introduction; this is optional, and it can be removed"
 #tags: [Add a maximum of 5-7 tags/keywords; keep them focused on the most important topics of the document; each tag should have quotation marks and be separated by a comma, for example: "Samba", "MxCloud", "cloud", "share"; the tags should be enclosed with brackets]
 ---

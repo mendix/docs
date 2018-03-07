@@ -1,6 +1,6 @@
 ---
 title: "Job Configuration"
-parent: "Test Run"
+parent: "test-run"
 ---
 
 ## 1 Introduction

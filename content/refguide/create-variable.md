@@ -20,7 +20,7 @@ Defines what kind of data can be stored in the variable. A variable can have one
 
 ### Initial value
 
-Defines the initial value of the variable. The value is entered using a [microflow expression](microflow-expressions). The result of the microflow expression should match the data type of the variable.
+Defines the initial value of the variable. The value is entered using a [microflow expression](expressionsult of the microflow expression should match the data type of the variable.
 
 ## Output Properties
 

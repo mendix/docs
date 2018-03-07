@@ -1,6 +1,6 @@
 ---
 title: "Trim to date"
-parent: "microflow-expressions"
+parent: "expressions"
 ---
 
 

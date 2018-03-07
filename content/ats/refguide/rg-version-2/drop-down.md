@@ -1,5 +1,5 @@
 ---
-title: "drop-down"
+title: "Drop-Down"
 parent: "rg-version-2"
 ---
 

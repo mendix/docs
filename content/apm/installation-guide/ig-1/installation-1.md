@@ -1,6 +1,7 @@
 ---
 title: "APM 1 Installation Guide"
 category: "Installation Guide"
+menu_order: 1
 ---
 This document describes the installation and uninstallation of the APM tool. The intended audience is Mendix advanced application developers who work with the Mendix Modeler and develop, install, and support Mendix applications.
 

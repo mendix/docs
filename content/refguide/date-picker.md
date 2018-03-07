@@ -9,7 +9,7 @@ A date picker is an [input widget](input-widgets) that can be used to display an
 
 {{% alert type="info" %}}
 
-![](attachments/16713882/16844001.png)
+![](attachments/pages/date-picker.png)
 This date picker allows the end-user to set the birth date of the customer.
 
 {{% /alert %}}

@@ -21,30 +21,37 @@ TestNG is a Java testing framework that can be used to drive Selenium. In this h
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Download and install [Eclipse](http://www.eclipse.org/downloads/)
-* Download [Selenium Client & WebDriver](http://www.seleniumhq.org/download/):
-    ![](attachments/18448634/18580399.png) 
+*  Download [Selenium Client & WebDriver](http://www.seleniumhq.org/download/):
+   ![](attachments/18448634/18580399.png) 
 * Open the [Company Expenses app](https://appstore.home.mendix.com/link/app/240/Mendix/Company-Expenses) in the Modeler and run it locally
 
 ## 3 Creating a Java Project
 
 In this chapter you will install the TestNG plug-in and create a Java project in Eclipse including the TestNG and Selenium libraries:
 
-1. Open Eclipse and select **Help** > **Eclipse Marketplace...**:
+1.  Open Eclipse and select **Help** > **Eclipse Marketplace...**:
+   
     ![](attachments/18448634/18580411.png)
 
 2. In the **Find** section of the **Eclipse Marketplace** dialog box, enter *TestNG* and click **Go**. "TestNG for Eclipse" will be shown in the search results. 
-3. Click **Install** to install the TestNG plug-in for Eclipse:
+3.  Click **Install** to install the TestNG plug-in for Eclipse:
+    
     ![](attachments/18448634/18580410.png)
 
-4. Click **Confirm** to confirm the features:
+4.  Click **Confirm** to confirm the features:
+    
     ![](attachments/18448634/18580408.png)
 
-5. Review the licenses and click **Finish**. The plug-in will be installed:
+5.  Review the licenses and click **Finish**. The plug-in will be installed:
+    
     ![](attachments/18448634/18580407.png)
 6. Restart Eclipse for changes to take effect.
-7. Click the **New** icon:
+7.  Click the **New** icon:
+    
     ![](attachments/18448634/18580406.png)
+
 8.  Select **Java Project** and click **Next**:
+
     ![](attachments/18448634/18580404.png)
 
 9. Enter *MyFirstTestNGProject* as the project name and click **Next**.
@@ -54,8 +61,11 @@ In this chapter you will install the TestNG plug-in and create a Java project in
 13. Click **Finish** to set the default TestNG library to this project.
 14. Click **Add External JARs...** and navigate to where you saved the Selenium JAR files.
 15. Add all the JAR files inside the **selenium-[version]** and **libs** folders:
+
     ![](attachments/18448634/18580403.png)
+
 16. Click **Finish** to create the Java project. **MyFirstTestNGProject** will be shown in the **Package Explorer**:
+
     ![](attachments/18448634/18580401.png)
 
 You are now done setting up your project!
@@ -65,17 +75,21 @@ You are now done setting up your project!
 To create a new TestNG file, follow these steps:
 
 1. Right-click the **src** folder and select **New** > **Other...**:
-2. Select **TestNG class** and then click **Next**:
+2.  Select **TestNG class** and then click **Next**:
+
     ![](attachments/18448634/18580398.png)
 
 3. Click **Browse...** to select a source folder, select **MyFirstTestNGProject** > **src**, and click **OK**.
-4. Enter the following information:
+4.  Enter the following information:
     * **Package name**: *myfirsttestngpackage*
     * **Class name**: *MyFirstTestNGFile*
     * **@BeforeTest**: true
     * **@AfterTest**: true
+    
     ![](attachments/18448634/18580393.png)
-5. Click **Finish**. The template for your first TestNG file will be created automatically:
+
+5.  Click **Finish**. The template for your first TestNG file will be created automatically:
+    
     ![](attachments/18448634/18580392.png)
 
     The `@Test` annotation is used to state that the method under it is a test case. In this case, the method `f` is a test case. The `@BeforeTest` annotation is used to state that the method under it will be executed before the first test case. The `@AfterTest` annotation is used to state that the method under it will be executed after the last test case.
@@ -182,16 +196,19 @@ This test method will open the URL *http://localhost:8080/index.html* in the Fir
 Now that you are on the login window, you will want to log in. To add the second test method, follow these steps:
 
 1. Open Firefox and go to _http://localhost:8080/index.html_.
-2. Click the "firebug" button in the Firefox toolbar:
+2.  Click the "firebug" button in the Firefox toolbar:
+    
     ![](attachments/18448631/18580294.png)
 
-3. Click the **FirePath** tab:
+3.  Click the **FirePath** tab:
+    
     ![](attachments/18448631/18580293.png) 
 
-4. Click the "inspect element" button:
+4.  Click the "inspect element" button:
+    
     ![](attachments/18448631/18580292.png)
 
-5. Click the **User name** input field. The ID of the this field is _usernameInput_. The CSS selector of an ID is a hashtag (`#`) + the name of the ID. For the **User name** field, this will be _#usernameInput_. The same principle is used for the other steps.
+5.  Click the **User name** input field. The ID of the this field is _usernameInput_. The CSS selector of an ID is a hashtag (`#`) + the name of the ID. For the **User name** field, this will be _#usernameInput_. The same principle is used for the other steps.
     
     The CSS selector _#usernameInput_ is unique. There is one matching node:
     ![](attachments/18448634/18580373.png)
@@ -223,14 +240,18 @@ This test method contains the following test steps:
 
 Now that you are logged in, you will want to navigate to the **Expenses** tab. To add the third test method, follow these steps:
 
-1. Open the Mendix Modeler, and then open the **Desktop_AdminMenu** page:
+1.  Open the Desktop Modeler, and in the **Project Explorer**, open the **Desktop_AdminMenu** page:
+    
     ![](attachments/18448634/18580390.png)
-2. Select the **Expenses** tab:
+
+2.  Select the **Expenses** tab:
+    
     ![](attachments/18448634/18580389.png)
 
-    The name of the **Expenses** tab is `tabPage4`. Every element will automatically get the CSS class `mx-name-[Name]`, so the expenses tab will get the CSS class `mx-name-tabPage4` when the app is running.
+    The name of the **Expenses** tab is **tabPage4**. Every element will automatically get the CSS class `mx-name-[Name]`, so the expenses tab will get the CSS class `mx-name-tabPage4` when the app is running.
 
     ![](attachments/18448634/18580388.png)
+    
 3. Go back to **Eclipse**.
 4.  Add a new test method called `openExpensesTab`. Use the following code:
 
@@ -249,7 +270,8 @@ Now that you are logged in, you will want to navigate to the **Expenses** tab. T
 Now that you are on the **Expenses** tab, you will want to create a new expense. To add the fourth test method, follow these steps:
 
 1. Open the Modeler and then open the **Desktop_AdminMenu** page.
-2. Select the **New Expense** button:
+2.  Select the **New Expense** button:
+    
     ![](attachments/18448634/18580387.png)
 
     The name of the **New Expense** button is `newButton3`, so the button will have the `mx-name-newButton3` CSS class:
@@ -327,7 +349,8 @@ After you have created an expense, you will want to sign out. To add the fifth t
 You are now ready to run the test. To run the test, follow these steps:
 
 1. Right-click the **MyFirstTestNGProject** folder.
-2. Select **Run as** > **TestNG Test**:
+2.  Select **Run as** > **TestNG Test**:
+    
     ![](attachments/18448634/18580385.png)
 
     The results of the test will be shown in the console window and in the TestNG results window:
@@ -340,15 +363,22 @@ You are now ready to run the test. To run the test, follow these steps:
 
 TestNG generates reports in the HTML format. To test the report, follow these steps:
 
-1. Right-click the **MyFirstTestNGProject** folder and select **Refresh**. A test-output folder will be created:
+1.  Right-click the **MyFirstTestNGProject** folder and select **Refresh**. A test-output folder will be created:
+    
     ![](attachments/18448634/18580382.png)
+
 2. Open the **test-output** folder.
 3. Right-click the **index.html** file.
 4. Select **Open with** > **Web Browser**. The report will look like this:
+
     ![](attachments/18448634/18580381.png)
+
 5. Click **(show)**. The test methods are shown alphabetically:
+
     ![](attachments/18448634/18580378.png)
+
 6. Click the **Chronological** view. An overview with the methods in chronological order will be shown:
+
     ![](attachments/18448634/18580380.png)
 
 ## 8 Creating a Test Suite
@@ -356,14 +386,20 @@ TestNG generates reports in the HTML format. To test the report, follow these st
 When you run your test as you did in [Run the Test](#RuntheTest), a test suite is created automatically. This test suite contains all testNG files that can be found in the project. But what if you only want to run specific tests? Than you need to create a test suite yourself.
 
 1. Right-click the **src** folder and select **New** > **Other**.
-2. Open the **XML** folder and select **XML File**:
+2.  Open the **XML** folder and select **XML File**:
+
     ![](attachments/18448634/18580377.png) 
+
 3. Click **Next**.
 4. Change the file name to _MyFirstTestSuite.xml_.
-5. Click **Finish** to create the XML file:
+5.  Click **Finish** to create the XML file:
+
     ![](attachments/18448634/18580376.png)
+
 6. Click the **Source** tab:
+
     ![](attachments/18448634/18580375.png)
+
 7.  Change the following code:
 
     ```xml
@@ -479,7 +515,8 @@ The test you created is now run on Firefox only. If you want to make sure the fu
 
     The first test (called `ChromeTest`) has the browser parameter `chrome`. This parameter will be used in the `@BeforeTest` method in MyFirstTestNGFile.
 
-6. Right-click the **MyFirstTestSuite.xml** file and select **Run as** > **TestNG Suite**:
+6.  Right-click the **MyFirstTestSuite.xml** file and select **Run as** > **TestNG Suite**:
+    
     ![](attachments/18448634/18580372.png)
 
 Well done! You created your first automated cross-browser test with TestNG!

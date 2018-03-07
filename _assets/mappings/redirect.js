@@ -16,7 +16,7 @@ module.exports = {
      ****************************************************/
     {
       from: "/apidocs/Home",
-      to: "/apidocs-mxsdk/apidocs/index"
+      to: "/apidocs-mxsdk/apidocs/"
     },
     {
       from: "/apidocs/Authentication",
@@ -40,7 +40,7 @@ module.exports = {
     },
     {
       from: "/apidocs/API+documentation",
-      to: "/apidocs-mxsdk/apidocs/index"
+      to: "/apidocs-mxsdk/apidocs/"
     },
     {
       from: "/apidocs/Invite+API",
@@ -116,7 +116,7 @@ module.exports = {
     },
     {
       from: "/MXSDK/Mendix+SDK+Home",
-      to: "/apidocs-mxsdk/mxsdk/index"
+      to: "/apidocs-mxsdk/mxsdk/"
     },
     {
       from: "/MXSDK/JavaScript+TypeScript+Resources",
@@ -241,11 +241,11 @@ module.exports = {
      ****************************************************/
     {
       from: "/community/Community+Documentation",
-      to: "/community/documentation/index"
+      to: "/community/documentation/"
     },
     {
       from: "/community/Community+Projects",
-      to: "/community/tools/index"
+      to: "/community/tools/"
     },
     {
       from: "/community/Content+Writing+and+Formatting+Guidelines",
@@ -1527,7 +1527,7 @@ module.exports = {
     },
     {
       from: "/howto50/Tips+Tricks",
-      to: "/howtogeneral/tips/index"
+      to: "/howtogeneral/tips/"
     },
     {
       from: "/howto50/Translatable+Validation+Messages",
@@ -7237,7 +7237,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Enumerations+in+microflow+expressions",
-      "to": "/refguide/enumerations-in-microflow-expressions"
+      "to": "/refguide/enumerations-in-expressions"
     },
     {
       "from": "/refguide7/Error+Event",
@@ -7525,7 +7525,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Microflow+Expressions",
-      "to": "/refguide/microflow-expressions"
+      "to": "/refguide/expressions"
     },
     {
       "from": "/refguide7/Microflow+Source",
@@ -8389,6 +8389,24 @@ module.exports = {
       from: "/tips/Translatable+Validation+Messages",
       to: "/howtogeneral/tips/translatable-validation-messages"
     },
+    /****************************************************
+     * APM
+     ****************************************************/
+    // {
+    //   from: "~*\\\/apm\\\/use-cases\\\/uc",
+    //   to: "/apm/use-cases/",
+    //   exact: true
+    // },
+    // {
+    //   from: "~*\\\/apm\\\/installation-guide\\\/ig",
+    //   to: "/apm/installation-guide/",
+    //   exact: true
+    // },
+    // {
+    //   from: "~*\\\/apm\\\/reference-guide\\\/rg",
+    //   to: "/apm/reference-guide/",
+    //   exact: true
+    // },
     /****************************************************
      * RELEASE NOTES
      ****************************************************/

@@ -65,6 +65,6 @@ This MSD file contains a default location: the Application Root URL of the defau
 
 {{% /alert %}}
 
-### Documentation
+## Documentation
 
 Documentation for the published app service. A consumer of the app service will see this as well.

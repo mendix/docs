@@ -3,8 +3,7 @@ title: "Change Object"
 parent: "object-activities"
 ---
 
-
-A Change Object can be used to change the members of an object. This can be done with or without committing, with or without events.
+A change object can be used to change the members of an object. This can be done with or without committing and with or without events.
 
 {{% alert type="info" %}}
 
@@ -19,7 +18,7 @@ The properties are configured as below.
 | Object | InputCustomer (Module.Customer) | The change activity applies to the current customer being saved |
 | Commit type | No | The object is changed before commit and the changes are still 'remembered' by the server when it is committed |
 | Refresh in client | No | Objects of the entity 'Customer' are automatically refreshed by the server when a object is committed in a form |
-| Change member action _set_ on _zipcode_ | toUpperCase($InputCustomer/zipcode) | A [microflow expression](microflow-expressions) can be used to set all characters to upper case (capitals) |
+| Change member action _set_ on _zipcode_ | toUpperCase($InputCustomer/zipcode) | A [microflow expression](expressions) can be used to set all characters to upper case (capitals) |
 
 {{% /alert %}}{{% alert type="info" %}}
 
@@ -35,7 +34,7 @@ Object defines the object variable that is changed.
 
 ## Action Properties
 
-### Commit type
+### Commit Type
 
 Commit type defines the way the object is committed.
 
@@ -53,9 +52,13 @@ However, if the microflow is triggered from a data grid button that just perform
 
 {{% /alert %}}
 
+{{% alert type="warning" %}}
+Nanoflows do not support committing changes without events. Committing while running in an online app sends a commit request to the Mendix Runtime and runs the events. If a change object action is used in an offline app, the changes are committed to the offline database.
+{{% /alert %}}
+
 _Default value:_ No
 
-### Refresh in client
+### Refresh in Client
 
 Refresh in client defines whether pages that use the entity of the object being changed are refreshed.
 
@@ -64,12 +67,18 @@ Refresh in client defines whether pages that use the entity of the object being 
 | Yes | Objects of same entity are refreshed in the user's browser |
 | No | Objects of same entity are not refreshed in the user's browser |
 
+{{% alert type="warning" %}}
+Nanoflows do not have the refresh in client option. All the changes made in a nanoflow refresh the client by default.
+{{% /alert %}}
+
 _Default value_: No
 
-### Change members
+### Change Members
 
-You can specify a list of changes that will be applied to the object. Values for members are specified with [microflow expressions](microflow-expressions) and should be of the same type as the member. For a reference set association it is also possible to add and remove instead of only set the member. With 'add' an object or a list of objects can be added to the currently associated objects. With 'remove' an object or a list of objects can be removed from the currently associated objects.
+You can specify a list of changes that will be applied to the object. Values for members are specified with [microflow expressions](expressions) and should be of the same type as the member. For a reference set association it is also possible to add and remove instead of only set the member. With 'add' an object or a list of objects can be added to the currently associated objects. With 'remove' an object or a list of objects can be removed from the currently associated objects.
 
 ### Related Topics
 
-*   [Microflow Expressions](microflow-expressions)
+*   [Microflow Expressions](
+    
+)

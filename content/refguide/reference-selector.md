@@ -7,9 +7,9 @@ The reference selector is an [input widget](input-widgets) that can be used to d
 
 {{% alert type="info" %}}
 
-![](attachments/16713884/16844011.png)
+![](attachments/pages/reference-selector.png)
 This reference selector allows you to select a product for your orderline.
-![](attachments/819203/917935.png)
+![](attachments/pages/reference-selector-domain-model.png)
 To use a reference selector you need a many-to-one association in the domain model.
 
 {{% /alert %}}

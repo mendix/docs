@@ -1,11 +1,11 @@
 ---
-title: Supported Widgets
-category: Reference Guide 2.0
+title: "Supported Widgets"
+parent: "rg-version-2"
 ---
 
 ## 1 Introduction
 
-The following table shows an overview of all the supported widgets in ATS. 
+The following table shows an overview of all the supported widgets in ATS.
 
 ## 2 Standard Widgets
 
@@ -25,7 +25,7 @@ We support all the widgets that are included in the Mendix Modeler:
 | ListView | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | MenuBar | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | NavigationTree | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
-| RadioButton | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes | 
+| RadioButton | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | ReferenceSelector | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | TabContainer | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | TemplateGrid | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
@@ -51,4 +51,3 @@ Besides the default widgets, ATS supports the most commonly used widgets from th
 | SearchInputDropDown | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | SimpleCheckboxSetSelector | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
 | SimpleMenuBar | ![](attachments/supported-widgets/green.png) Yes | ![](attachments/supported-widgets/green.png) Yes |
-

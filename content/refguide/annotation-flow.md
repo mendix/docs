@@ -1,10 +1,10 @@
 ---
-title: "Annotation flow"
-parent: "microflows"
+title: "Annotation Flow"
+parent: "common-elements"
 ---
 
 
-An annotation flow is a connection that can be used to link an annotation to a microflow objects..
+An annotation flow is a connection that can be used to link an annotation to a microflow object(s).
 
 {{% alert type="info" %}}
 

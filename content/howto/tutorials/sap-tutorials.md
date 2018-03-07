@@ -1,6 +1,7 @@
 ---
 title: "SAP Tutorial"
 category: "Tutorials"
+order: 30
 description: "This tutorial will guide you in extending an SAP app with Mendix."
 tags: ["SAP", "app"]
 frontpage_featured: true

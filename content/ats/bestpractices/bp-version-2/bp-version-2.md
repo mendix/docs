@@ -1,6 +1,7 @@
 ---
 title: "ATS 2 Best Practices"
 category: "Best Practices"
+menu_order: 20
 ---
 
 These are the main documents in this section:

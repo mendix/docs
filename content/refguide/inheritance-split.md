@@ -1,6 +1,6 @@
 ---
 title: "Inheritance Split"
-parent: "microflows"
+parent: "splits"
 ---
 
 

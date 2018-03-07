@@ -4,6 +4,20 @@ title: "Platform Portal"
 
 ## 2018
 
+### March 1st, 2018
+
+#### Fixes
+
+* Switching between environments in the **Metrics** menu of Mendix Cloud v3 apps is now fixed.
+* We fixed the syncronization problem that prevented Mendix Cloud v3 users from seeing their latest nightly backups.
+
+### February 27th, 2018
+
+#### Fixes
+
+* We fixed the issue that prevented SAP Cloud users from viewing the **Mobile App** section properly.
+* When uploading a backup in Mendix Cloud v3, double-clicking the **Restore** button was causing the UI to break. This is now fixed.
+
 ### February 23rd, 2018
 
 #### Improvements

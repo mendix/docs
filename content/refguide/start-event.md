@@ -1,6 +1,6 @@
 ---
 title: "Start Event"
-parent: "microflows"
+parent: "events"
 ---
 
 

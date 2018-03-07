@@ -1,6 +1,6 @@
 ---
 title: "Unary expressions"
-parent: "microflow-expressions"
+parent: "expressions"
 ---
 
 

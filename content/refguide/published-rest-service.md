@@ -119,7 +119,7 @@ The allowed roles define which [module role](module-role) a user must have to be
 
 ## 4 Resources
 
-A REST service exposes a number of [resources](published-rest-resource). On a resource you can define GET, PUT, POST, PATCH, and DELETE operations.
+A REST service exposes a number of [resources](published-rest-resource). On a resource you can define GET, PUT, POST, PATCH, DELETE, HEAD and OPTIONS operations.
 
 ## 5 Operations
 

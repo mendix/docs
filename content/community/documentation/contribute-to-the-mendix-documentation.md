@@ -61,7 +61,7 @@ To edit the existing documentation (for example, a how-to or reference guide pag
 
 {{% alert type="info" %}}
 
-You can add and edit the description and tags metadata in the header of the document so that the document is more searchable. It is also possible to add how many table of contents levels you want to appear in the document. For more information on the metadata, see the [How-to Template](the-how-to-template-page) and [Reference Guide Page Template](the-reference-guide-page-template-page).
+You can add and edit the description and tags metadata in the header of the document so that the document is more searchable. For more information on the metadata, see the [How-to Template](the-how-to-template-page) and [Reference Guide Page Template](the-reference-guide-page-template-page).
 
 {{% /alert %}}{{% alert type="warning" %}}
 

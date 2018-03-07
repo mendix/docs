@@ -133,7 +133,8 @@ const writeSpaces = opts => {
     'dir': 'd',
     'parent': 'p',
     'main': 'm',
-    'menu_title': 'mt'
+    'menu_title': 'mt',
+    'menu_order': 'mo'
   };
   return (spaceArray) => Promise.all(_.map(spaceArray, (space) => {
     const pageObj = {
@@ -141,7 +142,7 @@ const writeSpaces = opts => {
       content: {
         categories: space.menu_categories,
         pages: _.map(space.files, file => {
-          const f = _.pick(file, ['title', 'category', 'id', 'url', 'dir', 'parent', 'main', 'menu_title']);
+          const f = _.pick(file, ['title', 'category', 'id', 'url', 'dir', 'parent', 'main', 'menu_title', 'menu_order']);
           const newObject = {};
           _.keys(f).forEach(k => {
             if (keyMap[k]) {

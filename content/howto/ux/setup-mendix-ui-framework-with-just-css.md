@@ -1,7 +1,11 @@
 ---
 title: "Set Up the Mendix UI Framework with Just CSS"
+category: "UX"
 parent: "setup-mendix-ui-framework"
+tags: ["UI Framework", "Styling", "CSS"]
 ---
+
+## 1 Introduction
 
 In this how-to we will go through how to setup the [Mendix UI Framework](https://ux.mendix.com/) and do our first styling changes by just using CSS.
 
@@ -11,14 +15,14 @@ In this how-to we will go through how to setup the [Mendix UI Framework](https:/
 *   How to create your own theme with just CSS
 *   How to make your first styling changes
 
-## 1. Preparation
+## 2 Preparation
 
 Before you can start with this how-to, make sure you have completed the following prerequisites.
 
 *   Download the latest [Mendix Desktop Modeler](https://appstore.mendix.com)
 *   Download a text editor [Sublime Text](http://www.sublimetext.com/)
 
-## 2\. Create a new App in the Mendix Desktop Modeler
+## 3 Creating a New App in the Mendix Desktop Modeler
 
 In this chapter we will create a new app and select a theme from the New App selector.
 
@@ -33,7 +37,7 @@ In this chapter we will create a new app and select a theme from the New App sel
 
     ![](attachments/18448709/18581429.png) 
 
-## 3\. Open your project in the text editor
+## 4 Opening Your Project in the Text Editor
 
 1.  Open your **App Project Folder** in your text editor by choice.
 2.  Navigate to the folder **theme** and you will find the css files in the folder **styles\css**.
@@ -56,13 +60,13 @@ In this chapter we will create a new app and select a theme from the New App sel
     ![](attachments/18448709/18581426.png) 
 8.  Congratulations, you made your first theme change.
 
-## 4\. Related Content
+## 5 Related Content
 
-*   [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
-*   [Layouts and Snippets](layouts-and-snippets)
-*   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
-*   [Set Up Mendix UI Framework](setup-mendix-ui-framework)
-*   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
-*   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
-*   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)
-*   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+*   [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages)
+*   [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)
+*   [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+*   [How to Use Layouts and Snippets](layouts-and-snippets)
+*   [How to Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
+*   [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)
+*   [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
+*   [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)

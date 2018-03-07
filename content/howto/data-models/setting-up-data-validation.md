@@ -112,7 +112,7 @@ Validating user input can also be achieved by overriding the default save button
 * [Setting up data validation](setting-up-data-validation)
 * [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 * [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
-* [How to Perform Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
+* [How to Perform the Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
 * [How to Generate a Personal SSH2 Key Pair](../security/generating-a-personal-ssh2-key-pair)
 * [Creating a chainable Custom Widget](../custom-widget-development/create-a-chainable-custom-widget)
 

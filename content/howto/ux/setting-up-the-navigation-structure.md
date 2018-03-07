@@ -100,12 +100,11 @@ Now that you've created a menu structure it's time to start using it on pages.
 
 ## 6 Related Content
 
-*   [How to Perform the Scout and Windows 10 Workaround](perform-scout-and-windows-10-workaround)
-*   [Layouts and Snippets](layouts-and-snippets)
-*   [Filtering Data on an Overview Page](filtering-data-on-an-overview-page)
-*   [Setup Mendix UI Framework with just CSS](setup-mendix-ui-framework-with-just-css)
-*   [Setup Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
-*   [Setting Up the Navigation Structure](setting-up-the-navigation-structure)
-*   [Setup Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
-*   [Creating your first two Overview and Detail pages](create-your-first-two-overview-and-detail-pages)
-*   [Finding the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
+* [How to Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages)
+* [How to Filter Data on an Overview Page](filtering-data-on-an-overview-page)
+* [How to Set Up the Mendix UI Framework with Just CSS](setup-mendix-ui-framework-with-just-css)
+* [How to Set Up the Mendix UI Framework with Koala](setup-mendix-ui-framework-with-koala)
+* [How to Set Up the Mendix UI Framework with Scout](setup-mendix-ui-framework-with-scout)
+* [How to Set Up the Navigation Structure](setting-up-the-navigation-structure)
+* [How to Use Layouts and Snippets](layouts-and-snippets)
+* [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)

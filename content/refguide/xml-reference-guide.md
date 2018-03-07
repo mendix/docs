@@ -225,7 +225,7 @@ The integer property lets you to pass an integer to the widget.  This property r
 
 ### 5.2.7 Microflow
 
-The Microflow property allows a user to select a microflow in the Mendix Modeler. There are 3 options:
+The Microflow property allows a user to select a microflow in the Mendix Modeler. There are three options:
 
 1.  If needsEntityContext is set to "true", the selected microflow is required to have the context entity as an input parameter (as this will automatically be passed into it).
 2.  If needsEntityContext is set to false and no entityProperty attribute is specified, the microflow will have no input parameters.
@@ -254,7 +254,7 @@ Possible return types:
 
 ### 5.2.8 Nanoflow
 
-The Nanoflow property allows a user to select a nanoflow in the Mendix Modeler. There are 3 options:
+The Nanoflow property allows a user to select a nanoflow in the Mendix Modeler. There are three options:
 
 1.  If needsEntityContext is set to "true", the selected nanoflow is required to have the context entity as an input parameter (as this will automatically be passed into it).
 2.  If needsEntityContext is set to false and no entityProperty attribute is specified, the nanoflow will have no input parameters.
@@ -280,7 +280,6 @@ Possible return types:
 *   DateTime
 *   String
 *   Object
-
 
 ### 5.2.9 Object
 

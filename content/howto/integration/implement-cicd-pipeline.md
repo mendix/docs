@@ -1,7 +1,7 @@
 ---
 title: "Implement a Simple CICD Pipeline with Mendix APIs"
 category: "Integration"
-tags: [["CICD", "Continuous", "Integration", "Delivery", "Deployment", "Automation", "Testing"]
+tags: ["CICD", "Continuous", "Integration", "Delivery", "Deployment", "Automation", "Testing"]
 ---
 
 ## 1 Introduction

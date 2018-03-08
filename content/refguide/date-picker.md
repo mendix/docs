@@ -33,15 +33,15 @@ If you choose 'Custom' as the date format (see above) this property determines h
 
 | Symbol | No. | Example | Description |
 | --- | --- | --- | --- |
-| G | 1 | AD | Era |
+| G | 1 | AD | The era |
 | y | 1, 3..n | 2010 | Year |
 | y | 2 | 10 | Year |
-| Y | 1, 3..n | 2009 | Week year. Use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting. |
-| Y | 2 | 09 | Week year. Use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting. |
+| Y | 1, 3..n | 2009 | Week year, use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
+| Y | 2 | 09 | Week year, use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
 | M | 1..2 | 09 | Month |
 | M | 3 | Sept |
 | M | 4 | September |
-| w | 1..2 | 27 | Week of year. Use for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting. |
+| w | 1..2 | 27 | Week of year, use for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
 | d | 1..2 | 12 | Day of month |
 | D | 1..3 | 93 | Day of year |
 | a | 1 | AM | AM or PM |

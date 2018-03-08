@@ -154,7 +154,7 @@ Microflows that are used for data validation use the prefix *VAL\_*.
 
 #### 3.7.1 Home Pages
 
-You can define the home pages per device and role in your navigation. See the list blow for page names we recommend using:
+You can define the home pages per device and role in your navigation. See the list below for page names we recommend using:
 
 | Event Type           | Device  | Page Name                   |
 |----------------------|---------|-----------------------------|

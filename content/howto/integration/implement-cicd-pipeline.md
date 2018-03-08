@@ -63,7 +63,7 @@ After building the deployment package, you can now deploy the new package to the
 
 #### 3.3.1 Getting the Environment Status
 
-First, you need to check if the environment which you want to deploy is running. You need to know if you need to stop it before deploying the new deployment package to it. To do this, use the [Retrieve Environment API call](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api#3-5-a-name-deployapi-retrieveenvironment-rel-nofollow-a-retrieve-environment).
+First, you need to check if the environment to which you want to deploy is running. You need to know if you need to stop it before deploying the new deployment package to it. To do this, use the [Retrieve Environment API call](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api#3-5-a-name-deployapi-retrieveenvironment-rel-nofollow-a-retrieve-environment) and check the status.
 
 ![](attachments/implement-cicd-pipeline/05GetEnvironment.png)
 
@@ -110,7 +110,7 @@ When the tests are completed (check the status for when completed is `true`), yo
 
 {{% alert type="info" %}}
 
-You can also (manually) create a web service that exposes the standard unit structure from the data available in the UnitTesting module.
+You can also (manually) create a web service that exposes the standard junit structure from the data available in the UnitTesting module.
 
 {{% /alert %}}
 

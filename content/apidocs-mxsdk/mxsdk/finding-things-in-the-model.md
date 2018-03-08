@@ -1,5 +1,5 @@
 ---
-title: "Finding Things in the Model"
+title: "Find Things in the Model"
 parent: "manipulating-existing-models"
 ---
 
@@ -39,4 +39,4 @@ const customerEntity = model.findEntityByQualifiedName("Customers.Customer");
 const attributeName = customerEntity.attributes[0].name;
 ```
 
-Continue with [Loading Units and Elements](loading-units-and-elements).
+Continue with [How to Load Units and Elements](loading-units-and-elements).

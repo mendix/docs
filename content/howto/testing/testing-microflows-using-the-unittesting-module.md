@@ -1,8 +1,8 @@
 ---
 title: "Test Microflows Using the UnitTesting Module"
 category: "Testing"
-tags: []
 ---
+
 To smarten up your app with business logic you can use microflows. To verify that your microflow works as expected you can create unit tests using the UnitTesting module. The UnitTesting module provides an easy to use interface to manage and run unit tests. The module supports unit tests that are created using microflows and unit tests that are created using JUnit.
 
 **After completing this how-to you will know:**
@@ -33,43 +33,44 @@ All images, names and steps in this how-to are based on these versions. When usi
 In this chapter you will set up the unit testing module and run the example tests.
 
 1.  Create a new project.
-2.  Download the **UnitTesting module**.
-3.  Download the **Community Commons Function Library module**.
-4.  Open the **Settings** of the project.
+2.  Download the [UnitTesting module](https://appstore.home.mendix.com/link/app/390/).
+3.  Download the [Community Commons Function Library module](https://appstore.home.mendix.com/link/app/170/).
+4.  Download the [ObjectHandling module](https://appstore.home.mendix.com/link/app/37114/).
+5.  Open the **Settings** of the project.
 
     ![](attachments/18448633/18580371.png)
 
-5.  Click tab **Model**.
-6.  Click the **Select** button to select an after startup microflow.
+6.  Click tab **Model**.
+7.  Click the **Select** button to select an after startup microflow.
 
     ![](attachments/18448633/18580370.png)
 
-7.  Select the microflow **Startup** which can be found in the _USE ME folder of the UnitTesting module_.
+8.  Select the microflow **Startup** which can be found in the _USE ME folder of the UnitTesting module_.
 
     ![](attachments/18448633/18580369.png)
 
-8.  Click **OK**.
-9.  Open the **Navigation** of the project.
-10.  Click **New item** to add a new item to the menu.
-11.  Enter _UnitTestOverview_ in the **Caption** field.
-12. Select the microflow **UnitTestOverview** as target.
+9.  Click **OK**.
+10.  Open the **Navigation** of the project.
+11.  Click **New item** to add a new item to the menu.
+12.  Enter _UnitTestOverview_ in the **Caption** field.
+13. Select the microflow **UnitTestOverview** as target.
 
     ![](attachments/18448633/18580363.png)
 
-13. Click **OK**.
+14. Click **OK**.
 
     ![](attachments/18448633/18580362.png)
 
-14.  Run the project locally.
-15.  Go to `http://localhost:8080/index.html`.
-16. Click on **UnitTestOverview** in the navigation.
+15.  Run the project locally.
+16.  Go to `http://localhost:8080/index.html`.
+17. Click on **UnitTestOverview** in the navigation.
 
     ![](attachments/18448633/18580341.png)
     
     At the left side 2 buttons are shown. When you click on the Run all button, all unit tests will be executed. When you click on the Reset button, the status of all tests will change to not executed (question mark icon). Beneath the buttons all modules which contains unit tests are shown. In this case UnitTesting is the only module which contains unit tests. When you click on UnitTesting, all unit tests of this module are shown.
     If you want to save all changes made in the microflow to the database, you need to uncheck the checkbox 'Rollback microflow tests after execution'. Keep the checkbox checked if you want to rollback all changes.
     At the right side the unit tests of the selected module are shown. In this example five unit tests are shown. When you click on the Run all button, all unit tests of the selected module will be executed. When you click on the play button next to a unit test, only that unit test will be executed.
-17. Click on the play button of **UnitTesting.Test_ValidUnitTest**.
+18. Click on the play button of **UnitTesting.Test_ValidUnitTest**.
     
     ![](attachments/18448633/18580359.png)
     
@@ -81,7 +82,7 @@ In this chapter you will set up the unit testing module and run the example test
     
     ![](attachments/18448633/18580357.png)
 
-18. Double click on **UnitTesting.TestValidUnitTest**.
+19. Double click on **UnitTesting.TestValidUnitTest**.
     
     ![](attachments/18448633/18580340.png)
     

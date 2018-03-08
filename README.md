@@ -1,4 +1,4 @@
-# Mendix Documentation
+# Mendix Documentation ![badge](https://img.shields.io/badge/hugo-0.31.1-green.svg)
 
 This repository contains the Mendix documentation, which is served on [https://docs.mendix.com](https://docs.mendix.com).
 
@@ -30,7 +30,7 @@ Node.js is a JavaScript runtime. You can install it by downloading the installer
 
     `hugo version`
 
-    It should show you the version: `Hugo Static Site Generator v0.25.1 xxxx`
+    It should show you the version: `Hugo Static Site Generator v0.31.1 xxxx`. **Note: It is important to match this version number! Because of breaking changes this will not work with Hugo version >= 0.32**
 
     `node -v`
 

@@ -1,6 +1,9 @@
 ---
 title: "Set Up Your Development Environment"
+<<<<<<< HEAD
 menu_order: 10
+=======
+>>>>>>> 13dff6510d6406560e6245178756e2fb1e350b8e
 parent: "tutorial-for-the-mendix-sdk"
 ---
 
@@ -10,7 +13,7 @@ This document will lead you through the process of setting up everything you nee
 
 ## 2 Quick Installation
 
-If you know what you are doing, the quick installation instructions below are for you. Otherwise, please skip this paragraph and continue with [Setting up your development tools](setting-up-your-development-environment).
+If you know what you are doing, the quick installation instructions below are for you. Otherwise, please skip this paragraph and continue with section [3 Setting Up Your Development Tools](#setting).
 
 For the quick installation, we assume that you have `node` already installed. 
 Set up a new `node` project and install the dependencies using the following steps:
@@ -24,7 +27,7 @@ $ npm install mendixmodelsdk mendixplatformsdk when @types/when --save
 $ tsc --init
 ```
 
-## 3 Setting Up Your Development Tools
+## <a name="setting"></a>3 Setting Up Your Development Tools
 
 To set up your development tools, follow these steps:
 

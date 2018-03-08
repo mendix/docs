@@ -18,7 +18,7 @@ The properties are configured as below.
 | Object | InputCustomer (Module.Customer) | The change activity applies to the current customer being saved |
 | Commit type | No | The object is changed before commit and the changes are still 'remembered' by the server when it is committed |
 | Refresh in client | No | Objects of the entity 'Customer' are automatically refreshed by the server when a object is committed in a form |
-| Change member action _set_ on _zipcode_ | toUpperCase($InputCustomer/zipcode) | A [microflow expression](microflow-expressions) can be used to set all characters to upper case (capitals) |
+| Change member action _set_ on _zipcode_ | toUpperCase($InputCustomer/zipcode) | A [microflow expression](expressions) can be used to set all characters to upper case (capitals) |
 
 {{% /alert %}}{{% alert type="info" %}}
 
@@ -75,8 +75,10 @@ _Default value_: No
 
 ### Change Members
 
-You can specify a list of changes that will be applied to the object. Values for members are specified with [microflow expressions](microflow-expressions) and should be of the same type as the member. For a reference set association it is also possible to add and remove instead of only set the member. With 'add' an object or a list of objects can be added to the currently associated objects. With 'remove' an object or a list of objects can be removed from the currently associated objects.
+You can specify a list of changes that will be applied to the object. Values for members are specified with [microflow expressions](expressions) and should be of the same type as the member. For a reference set association it is also possible to add and remove instead of only set the member. With 'add' an object or a list of objects can be added to the currently associated objects. With 'remove' an object or a list of objects can be removed from the currently associated objects.
 
 ### Related Topics
 
-*   [Microflow Expressions](microflow-expressions)
+*   [Microflow Expressions](
+    
+)

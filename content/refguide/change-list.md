@@ -35,4 +35,4 @@ _Default value:_ Add
 
 ### Value
 
-Value defines the value that is used to change the list. The value is entered using a [microflow expression](microflow-expressions). The microflow expression should result in an object or list of the same [entity](entities) as the input list.
+Value defines the value that is used to change the list. The value is entered using a [microflow expression](expressions). The microflow expression should result in an object or list of the same [entity](entities) as the input list.

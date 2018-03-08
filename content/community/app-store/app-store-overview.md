@@ -1,6 +1,7 @@
 ---
 title: "App Store Overview"
 category: "App Store"
+menu_order: 10
 ---
 
 ## 1 Introduction

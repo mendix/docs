@@ -85,7 +85,7 @@ To add an exclusive split, follow these steps:
 
     ![](attachments/build-a-simple-hrm-app/18580826.png) 
 
-    To learn more about microflow expressions, see [Microflow Expressions](/refguide7/microflow-expressions) in the Mendix Reference Guide.
+    To learn more about microflow expressions, see [Expressions](/refguide7/expressions) in the Mendix Reference Guide.
 
 6. Select **$Employee (MyFirstModule.Employee)** from the list of suggestions. This employee object corresponds to the input object of the microflow:
 

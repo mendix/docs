@@ -32,7 +32,7 @@ Template defines the text of the message. The template can contain parameters th
 
 ### Parameters
 
-For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [microflow expressions](microflow-expressions) resulting in a string.
+For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [microflow expressions](expressions) resulting in a string.
 
 {{% alert type="success" %}}
 

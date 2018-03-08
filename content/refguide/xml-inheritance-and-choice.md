@@ -21,6 +21,7 @@ In Mendix, both inheritance and choice are mapped by entity specialization.
 In figure 1 an example of an Export Mapping with inheritance is shown. For Import Mappings, the structure is the same, only the direction of the arrows is reversed. One _Persons_ object has a one-to-many association to _Person._ The person can be either a Customer or Employee.
 
 ![](attachments/16713728/16843946.png)
+
 **Figure 1**
 
 For import mappings, mapping the incoming XML to a specific XSD type is defined by the attribute _xsi:type_. However, this attribute is optional. When the _xsi:type_ attribute is **not** present and the base type of the element is **not** abstract, that type will be used (in the example that is Person). If the base type does not have a mapping defined in the import mapping document, it will be skipped. When the base type is abstract, an error will be thrown.
@@ -38,6 +39,7 @@ When the root element is an inheritance element, you can only maps the entire bo
 Figure 2 shows an Export Mapping with a choice element. The schema specifies a choice with two alternatives: an employee id or member id. In figure 2, a base entity _Person_ is mapped to the choice element, to serve as a generalization for the choice options. 
 
 ![](attachments/16713728/16843945.png)
+
 **Figure 2**
 
 For exporting objects, **optionality** on choice elements is handled differently than for other elements because they do not explicitly occur in XML. There are two cases in which it is valid to export an empty object for a choice element: firstly, when the choice element itself is **optional** and secondly when at least one of the choice options is **optional**. In these cases no element will be created, otherwise an error is thrown. When one or more options of a choice element are **nillable** and at the choice element we export an empty object, Mendix throws an 'unsupported' error because it is impossible to determine which XML element should be sent with the _xsi:nil_ attribute.

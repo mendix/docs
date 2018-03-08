@@ -36,7 +36,7 @@ Nanoflows do not have this property. All the changes made in a nanoflow refresh 
 
 ### Initialize Members
 
-You can initialize members of the newly created object. Values for members are specified with a [microflow expression](microflow-expressions) and should be of the same type as the member.
+You can initialize members of the newly created object. Values for members are specified with a [microflow expression](expressions) and should be of the same type as the member.
 
 ## Output Properties
 

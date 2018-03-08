@@ -1,6 +1,6 @@
 ---
 title: "Error Event"
-parent: "microflows"
+parent: "events"
 ---
 
 

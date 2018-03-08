@@ -1,5 +1,5 @@
 ---
-title: "Third Party Licenses"
+title: "Third-Party Licenses"
 category: "General"
 ---
 

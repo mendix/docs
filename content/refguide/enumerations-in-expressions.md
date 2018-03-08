@@ -1,6 +1,6 @@
 ---
-title: "Enumerations in microflow expressions"
-parent: "microflow-expressions"
+title: "Enumerations in Expressions"
+parent: "expressions"
 ---
 
 

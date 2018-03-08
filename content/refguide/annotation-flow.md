@@ -1,6 +1,6 @@
 ---
-title: "Annotation flow"
-parent: "microflows"
+title: "Annotation Flow"
+parent: "common-elements"
 ---
 
 

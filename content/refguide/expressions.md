@@ -1,6 +1,6 @@
 ---
-title: "Microflow Expressions"
-parent: "microflows"
+title: "Expressions"
+parent: "common-elements"
 description: "Describes the expressions that can be used in Mendix for a variety of purposes (for example, to change a member of an object based on logic)."
 ---
 
@@ -141,7 +141,7 @@ An overview of the possibilities with expressions can be found below.
 * [`formatTime[UTC]`](parse-and-format-date-function-calls) - Convert the time part of a date value to a string
 * [`formatDate[UTC]`](parse-and-format-date-function-calls) - Convert the date part of a date value to a string
 
-### [Enumerations in microflow expressions](enumerations-in-microflow-expressions)
+### [Enumerations in microflow expressions](enumerations-in-expressions)
 
-* [`getCaption`](enumerations-in-microflow-expressions) - Get caption of enumeration value in current language
-* [`getKey`](enumerations-in-microflow-expressions) - Get technical name of enumeration value
+* [`getCaption`](enumerations-in-expressions) - Get caption of enumeration value in current language
+* [`getKey`](enumerations-in-expressions) - Get technical name of enumeration value

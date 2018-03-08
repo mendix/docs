@@ -1,6 +1,6 @@
 ---
 title: "Parsing and Formatting Decimal Function Calls"
-parent: "microflow-expressions"
+parent: "expressions"
 ---
 
 For details on all the pattern possibilities, see [Class DecimalFormat](http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html).

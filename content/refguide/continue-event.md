@@ -1,6 +1,6 @@
 ---
 title: "Continue Event"
-parent: "microflows"
+parent: "events"
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Incorporate a Mendix Application into Amazon Machine Learning"
-category: "Extendability"
+category: "Extensibility"
 ---
 
 ## 1 Introduction

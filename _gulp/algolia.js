@@ -8,6 +8,7 @@ const helpers = require('./helpers');
 const yamlFront = require('yaml-front-matter');
 const YAML = require('yamljs');
 const algoliasearch = require('algoliasearch');
+const moment = require('moment');
 
 const pluginID = gutil.colors.cyan('[ALGOLIA]');
 
@@ -18,6 +19,8 @@ let SOURCEFOLDER = null,
 let spacesObj = {};
 let indexedNum = 0;
 let index = [];
+
+const releaseNotesRegExp = /\/releasenotes\/desktop-modeler\/(\d+)?(\.\d+)?\.?(\*|\d+)$/i;
 
 const getSourceFiles = files => {
   spacesObj = YAML.load(SPACES);
@@ -38,6 +41,15 @@ const getSourceFiles = files => {
         } else if (helpers.isFile(base + '.html')) {
           file.sourcePath = base + '.html';
         }
+
+        if (file.url && file.url.match(releaseNotesRegExp)) {
+          const versionRaw = file.url.replace(releaseNotesRegExp, '$1');
+          const num = parseInt(versionRaw, 10);
+          if (!isNaN(num)) {
+            file.mendix_version = num;
+          }
+        }
+
       }
 
       return file;
@@ -161,6 +173,18 @@ const parseHtmlFile = file => {
     if (file.content && file.meta.title) {
       const $ = cheerio.load(file.content);
 
+      const updateTime = $('meta[property="og:updated_time"]').attr('content');
+      if (updateTime) {
+        const m = moment(updateTime, 'YYYY-DD-MMTHH:mm:ssZZ');
+        if (m._isValid) {
+          file.meta.time_stamp = m.unix();
+        } else {
+          file.meta.time_stamp = null;
+        }
+      } else {
+        file.meta.time_stamp = null;
+      }
+
       $('article').find('p,li').each((i, el) => {
         var $el = $(el);
         if (!!$el.text().length && file.space.space) {
@@ -179,6 +203,10 @@ const parseHtmlFile = file => {
           item.css_selector_parent = nodeCssSelector(nodeHeadingParent($, $el));
           item.weight = weight(item, i);
           item.mendix_version = file.space.mendix_version || null;
+
+          if (typeof file.mendix_version !== 'undefined') {
+            item.mendix_version = file.mendix_version;
+          }
 
           index.push(item);
 

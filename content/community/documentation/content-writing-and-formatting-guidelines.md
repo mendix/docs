@@ -1,6 +1,7 @@
 ---
 title: "Content Writing and Formatting Guidelines"
 category: "Documentation"
+menu_order: 20
 ---
 
 ## 1 Introduction

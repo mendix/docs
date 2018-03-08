@@ -1,6 +1,7 @@
 ---
 title: "Set Up Your Community Profile"
 category: "Tools"
+menu_order: 10
 ---
 
 ## 1 Introduction

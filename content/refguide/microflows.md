@@ -1,6 +1,7 @@
 ---
 title: "Microflows"
 parent: "application-logic"
+menu_order: 10
 description: "Presents an overview of all the elements that can be used in a microflow."
 ---
 

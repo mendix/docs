@@ -261,6 +261,7 @@ const indexFiles = (opts) => {
           'attributesToRetrieve': null,
           'customRanking': [
             'desc(mendix_version)',
+            'desc(time_stamp)',
             'desc(weight.tag_name)',
             'asc(weight.position)'
           ],

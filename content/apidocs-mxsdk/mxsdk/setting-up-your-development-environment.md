@@ -1,10 +1,7 @@
 ---
 title: "Set Up Your Development Environment"
-<<<<<<< HEAD
-menu_order: 10
-=======
->>>>>>> 13dff6510d6406560e6245178756e2fb1e350b8e
 parent: "tutorial-for-the-mendix-sdk"
+menu_order: 10
 ---
 
 ## 1 Introduction

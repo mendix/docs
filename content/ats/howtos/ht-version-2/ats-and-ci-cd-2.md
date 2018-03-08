@@ -128,7 +128,7 @@ The CI/CD in ATS is using a webservice with authentication. Please use the stand
 
 ## 5 Configure ATS in Your Pipeline (Example)
 
-Using the CI/CD API key and the unique ID of the CI/CD template you can execute a test case from your CI/CD pipeline. In this chapter, you find an example for Jenkins.
+Using the CI/CD API key and the unique ID of the CI/CD template you can execute a test case from your CI/CD pipeline. In this section, you find an example for Jenkins.
 
 ## 5.1 Prerequisites
 
@@ -138,12 +138,12 @@ Using the CI/CD API key and the unique ID of the CI/CD template you can execute 
   * Create the CI/CD API key in ATS
   * Find your AppID in Mendix Sprintr
 
-## 5.2 Adding an Extra Step in Jenkins on a linux server
+## 5.2 Adding an Extra Step in Jenkins on a Linux Server
 
 This is only an example for Jenkins on Linux in shell scripting and can be written in another scripting language of your choice like for example Powershell (for Windows) or Groovy.
 
-* Make sure that curl and xmllint are installed on your Linux server.
-* In your Jenkins project, add a build step of type Execute shell and use the following shell script. 
+* Make sure that curl and xmllint are installed on your Linux server
+* In your Jenkins project, add a build step of type Execute shell and use the following shell script
 
 ![](attachments/ats-and-ci-cd-2/script-cicd-jenkins.png)
 
@@ -186,13 +186,13 @@ echo EMAILTEXT="Test Run Status is ${RESULT}" >> email.txt
 ```
 The last API call results in a "Passed" or "Failed", you can email this result or for example use the outcome in a conditional step for continuing deploying on different environments or failing this build. 
 
-## 5.3 Adding an Extra Step in Jenkins on a windows server
+## 5.3 Adding an Extra Step in Jenkins on a Windows Server
 
-This is only a powershell example for Jenkins on Windows and can be written in another scripting language of your choice.
+This is only a PowerShell example for Jenkins on Windows, and it can be written in another scripting language of your choice.
 
-* Make sure that you install the powershell plugin.
-* In your Jenkins project, add a build step of type Execute powershell and use the following powershell script.
-* In the script you will find the parameters displayed here. Change the values in the script with your own values:
+* Make sure to install the [PowerShell plugin](https://wiki.jenkins.io/display/JENKINS/PowerShell+Plugin)
+* In your Jenkins project, add a build step of type `Execute powershell` and use the following PowerShell script
+* In the script, you will find the parameters displayed here – change the values in the script with your own values:
 
 | Parameter | Value |
 | --- | --- |

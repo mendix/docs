@@ -303,4 +303,4 @@ while($executionstatus -ne 'Done')
 $executionresult = $ret2.Envelope.Body.GetTestRunResponse.TestRun.ExecutionResult.'#cdata-section'
 write-host "Result of Test Run is: $executionresult"
 ```
-The last API call results in a "Passed" or "Failed", you can email this result or for example use the outcome in a conditional step for continuing deploying on different environments or failing this build.
+The last API call results in a "Passed" or "Failed". You can email this result or, for example, use the outcome in a conditional step for continuing deploying on different environments or failing this build.

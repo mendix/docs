@@ -53,7 +53,7 @@ The document type specifies the type of the generated document.
 
 ### Template
 
-Template defines which [document template](document-templates) is used to generate the file. Depending on the template being used one or more arguments need to be specified. For each top-level data grid and data view objects of the correct type need to be passed to the template. The value of the argument can be entered using microflow expressions.
+Template defines which [document template](document-templates) is used to generate the file. Depending on the template being used one or more arguments need to be specified. For each top-level data grid and data view objects of the correct type need to be passed to the template. The value of the argument can be entered using expressions.
 
 ### Override margins
 

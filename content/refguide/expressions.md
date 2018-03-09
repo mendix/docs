@@ -141,7 +141,7 @@ An overview of the possibilities with expressions can be found below.
 * [`formatTime[UTC]`](parse-and-format-date-function-calls) - Convert the time part of a date value to a string
 * [`formatDate[UTC]`](parse-and-format-date-function-calls) - Convert the date part of a date value to a string
 
-### [Enumerations in microflow expressions](enumerations-in-expressions)
+### [Enumerations in expressions](enumerations-in-expressions)
 
 * [`getCaption`](enumerations-in-expressions) - Get caption of enumeration value in current language
 * [`getKey`](enumerations-in-expressions) - Get technical name of enumeration value

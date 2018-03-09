@@ -49,7 +49,7 @@ The range determines how many objects are retrieved.
 | --- | --- |
 | All | Retrieve all objects at once. |
 | First | Retrieve only the first object. The result of the retrieve action will be a single object instead of a list. |
-| Custom | Retrieve a given number of objects (limit) starting at a given index (offset). Limit and offset are microflow expressions that should result in a number. Note: the first object has offset 0. A limit of 0 means that all objects are retrieved. |
+| Custom | Retrieve a given number of objects (limit) starting at a given index (offset). Limit and offset are expressions that should result in a number. Note: the first object has offset 0. A limit of 0 means that all objects are retrieved. |
 
 {{% alert type="warning" %}}
 

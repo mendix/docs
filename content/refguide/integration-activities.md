@@ -3,7 +3,6 @@ title: "Integration Activities"
 parent: "activities"
 ---
 
-
 ## Call REST Service
 
 See [Call Rest Action](call-rest-action).

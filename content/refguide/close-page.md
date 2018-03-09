@@ -3,7 +3,7 @@ title: "Close Page"
 parent: "client-activities"
 ---
 
-This closes the currently open page.
+Close page closes the currently open page.
 
 {{% alert type="info" %}}
 

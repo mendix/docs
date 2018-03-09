@@ -3,18 +3,19 @@ title: "Retrieve"
 parent: "object-activities"
 ---
 
+## 1 Introduction
 
 Retrieve can be used to get one or more objects, either by directly traversing an association of another object, or by retrieving objects from the database.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
-## Action Properties
+## 2 Action Properties
 
-### Retrieve type
+### 2.1 Retrieve type
 
 Retrieve type defines the way the objects are retrieved.
 
@@ -29,19 +30,19 @@ When objects and/or its associations are changed and not committed, the data is 
 
 {{% /alert %}}
 
-## Retrieve By Association Properties
+## 3 Retrieve By Association Properties
 
-### Association
+### 3.1 Association
 
 This property specifies which association will be followed. The association must be an association from an object that is already available in a variable. Associations can be followed in both directions.
 
-## Retrieve From Database Properties
+## 4 Retrieve From Database Properties
 
-### Entity
+### 4.1 Entity
 
 The entity of which to retrieve instances (objects).
 
-### Range
+### 4.2 Range
 
 The range determines how many objects are retrieved.
 
@@ -57,7 +58,7 @@ When you know you have only one object or you only want to use the first object 
 
 {{% /alert %}}
 
-### XPath constraint
+### 4.3 XPath Constraint
 
 [XPath](xpath) constraint defines the condition the objects need to suffice to be retrieved. If there is no XPath constraint, all objects of the entity are retrieved.
 
@@ -67,12 +68,12 @@ Nanoflows do not support this property.
 
 {{% /alert %}}
 
-### Sorting
+### 4.4 Sorting
 
 Sorting defines the order of the list. The list can be sorted in ascending and descending order on the values of an attribute. If there are objects that have the same attribute value the list is sorted based on the second attribute (if any) and so on.
 
-## Output Properties
+## 5 Output Properties
 
-### Variable name
+### 5.1 Variable Name
 
 Variable name defines the name of the result list or object variable. It can be used by all activities that follow this activity.

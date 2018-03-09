@@ -3,7 +3,6 @@ title: "Break Event"
 parent: "events"
 ---
 
-
 A break event is used to stop iterating over the list of objects and continue with the rest of the flow. Please note that break events can only be used inside [loops](loop).
 
 {{% alert type="info" %}}

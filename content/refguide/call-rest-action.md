@@ -3,6 +3,10 @@ title: "Call REST Service Action"
 parent: "microflow-activities"
 ---
 
+{{% alert type="info" %}}
+This activity can only be used in microflows, not in nanoflows.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Call REST Service action can be used to call a REST endpoint. You can specify the location and how the response of the REST call should be handled.

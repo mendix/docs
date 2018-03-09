@@ -3,6 +3,10 @@ title: "Cast Object"
 parent: "object-activities"
 ---
 
+{{% alert type="info" %}}
+This activity can only be used in microflows, not in nanoflows.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The Cast Object activity can be used in a microflow after an [inheritance split](inheritance-split) to change the type of object from the generalized object type to the specialized object type of the path out of the inheritance split. 

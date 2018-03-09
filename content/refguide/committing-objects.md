@@ -3,23 +3,25 @@ title: "Commit Object(s)"
 parent: "object-activities"
 ---
 
+## 1 Introduction
+
 This action can commit one or more objects. For persistable entities this means that the object will be stored in the database. Committing non-persistable entities stores the current attribute values and association values in memory, this allows a rollback to revert to those values. See also [Persistability](persistability).
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
-## Input Properties
+## 2 Input Properties
 
-### Variable
+### 2.1 Variable
 
 The object or list of objects that you want to commit.
 
-## Action Properties
+## 3 Action Properties
 
-### With Events
+### 3.1 With Events
 
 Indicates whether or not to execute the commit event handlers of the objects.
 
@@ -29,7 +31,7 @@ Nanoflows do not have this property. Committing while running in an online app s
 
 {{% /alert %}}
 
-### Refresh in Client
+### 3.2 Refresh in Client
 
 This property specifies whether pages that use the entity of the object(s) being committed are refreshed.
 

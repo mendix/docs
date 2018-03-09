@@ -32,7 +32,7 @@ The **Use HTTP authentication** check box defines whether basic authentication s
 
 The **User name** property defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [microflow Expressions](expressions). The microflow expression should result in a string.
 
-The **Password** property defines the password that will be used to authenticate over HTTP. The password needs to be entered using [microflow expressions](expressions). The microflow expression should result in a string.
+The **Password** property defines the password that will be used to authenticate over HTTP. The password needs to be entered using [expressions](expressions). The microflow expression should result in a string.
 
 ### 3.2 Custom HTTP Headers
 

@@ -30,7 +30,7 @@ When calling a web service using a call-web-service activity, the location of th
 
 ### Location
 
-If you override the location, this property defines the location where to call the web service. The location needs to be entered using [microflow expressions](expressions). The microflow expression should result in a valid URL string.
+If you override the location, this property defines the location where to call the web service. The location needs to be entered using [expressions](expressions). The microflow expression should result in a valid URL string.
 
 ### Use timeout on request
 
@@ -68,11 +68,11 @@ Use HTTP authentication defines whether the basic authentication should be used.
 
 ### User name
 
-User name defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [microflow expressions](expressions). The microflow expression should result in a string.
+User name defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [expressions](expressions). The microflow expression should result in a string.
 
 ### Password
 
-Password defines the password that will be used to authenticate over HTTP. The password needs to be entered using [microflow expressions](expressions). The microflow expression should result in a string.
+Password defines the password that will be used to authenticate over HTTP. The password needs to be entered using [expressions](expressions). The microflow expression should result in a string.
 
 ### Custom HTTP Headers
 
@@ -92,7 +92,7 @@ Using this option, a single [Export Mapping](export-mappings) can be used to gen
 
 This option for request parts can be used when all children of the XML element of the request part occur at most once and are primitive values. If that is not the case, this option is disabled and cannot be used.
 
-Using this option you need to supply an argument value for all elements of a primitive type (parameters). Argument values need to be entered using [microflow expressions](expressions) resulting in the same data type as the parameter.
+Using this option you need to supply an argument value for all elements of a primitive type (parameters). Argument values need to be entered using [expressions](expressions) resulting in the same data type as the parameter.
 
 ![](attachments/19202819/requestParamOptNil.png)
 

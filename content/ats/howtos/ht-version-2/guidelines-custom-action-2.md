@@ -1,6 +1,6 @@
 ---
 title: "Guidelines for Creating a Custom Action"
-parent: "ht-version-2"
+parent: "custom-action-general-2"
 ---
 
 ## 1 Introduction

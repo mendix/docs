@@ -13,9 +13,24 @@ Nanoflows are similar to [microflows](microflows), as they allow you to express 
 
 ## 2 When to Use Nanoflows
 
-Nanoflows are designed with offline applications in mind, so business logic can also be executed in them. Since all actions will be run to the offline local database, nanoflows in offline applications will be super fast.
+### 2.1 Offline Mobile Apps
 
-Nanoflows can be beneficial for online applications when you do not perform a lot of database-releated actions like creating, committing, and retrieving objects. Each data-related activity in a nanoflow will create a separate network request to the Mendix Runtime, therefore, they may be slower than microflows. Changing objects without committing is an exception here, as this action is configured not to commit and changes will be applied locally.
+Nanoflows are designed with offline first applications in mind, they allow to model application logic that works in offline apps. Since all database-related actions will be executed on the local offline database, nanoflows in offline apps will be super fast.
+
+### 2.2 Logic Where No Connection Is Needed
+
+Nanoflows also offer great value in online applications, e.g. for UI logic, validations, calculations and navigation.
+Keep in mind though that when you perform database-releated actions, each action will create a separate network request to the Mendix Runtime. The following actions interact with the database:
+* Create
+* Commit
+* Retrieve
+* Rollback
+
+Therefore, the best practice is to use nanoflows in online applications when they do not contain the above actions.
+Please note that Changing objects without committing is not a database-related action, as changes are applied on the device or in the browser.
+
+### 2.3 Other cases
+The previous section stated nanoflows perform best in online applications when no database-related actions are used. These are generally the best cases, but nanoflows which contain at most one database-related action can also still perform well. As they only require one network call, they perform as good as a microflow. An example of such a use case is to perform validation logic on an object and commit the object in the same nanoflow.
 
 ## 3 Differences from Microflows
 
@@ -42,7 +57,7 @@ The nanoflow editor offers keyboard support for navigating and manipulating the 
 | <kbd>End</kbd> | Cycles through the end events. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Opens the context menu for the currently selected element. |
 
-## 3 Notation and Categories
+## 5 Notation and Categories
 
 The graphical notation of nanoflows is based on the [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). BPMN is a standardized graphical notation for drawing business processes in a workflow.
 
@@ -54,7 +69,7 @@ A nanoflow is composed of elements. The following categories are used:
 * [Activities](#activities) are the actions that are executed in a nanoflow
 * [Artifacts](#artifacts) provide the nanoflow with input and allow comments to be made
 
-### 3.1 Events<a name="events"></a>
+### 5.1 Events<a name="events"></a>
 
 Events represent the start and end points of a nanoflow and special operations in a loop.
 
@@ -65,7 +80,7 @@ Events represent the start and end points of a nanoflow and special operations i
 | [![](attachments/819203/918115.png)](continue-event) | [Continue event](continue-event) | Used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a [loop](loop). |
 | [![](attachments/819203/918026.png)](break-event) | [Break Event](break-event) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Please note that break events can only be used inside a [loop](loop). |
 
-### 3.2 Flows<a name="flows"></a>
+### 5.2 Flows<a name="flows"></a>
 
 Flows form the connection between elements.
 
@@ -74,7 +89,7 @@ Flows form the connection between elements.
 | [![](attachments/819203/917883.png)](sequence-flow) | [Sequence flow](sequence-flow) | An arrow that links events, activities, splits, and merges with each other. Together they define the order of execution within a nanoflow. |
 | [![](attachments/819203/917688.png)](annotation-flow) | [Annotation flow](annotation-flow) | A connection that can be used to connect an annotation to another element. |
 
-### 3.3 Gateways<a name="gateways"></a>
+### 5.3 Gateways<a name="gateways"></a>
 
 Gateways deal with making choices and merging different paths.
 
@@ -83,11 +98,11 @@ Gateways deal with making choices and merging different paths.
 | [![](attachments/819203/917726.png)](exclusive-split) | [Exclusive split](exclusive-split) | Makes a decision based on a condition and follows one and only one of the outgoing flows. Please note that there is no parallell execution in nanoflows. |
 | [![](attachments/819203/918116.png)](merge) | [Merge](merge) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
-### 3.4 Activities<a name="activities"></a>
+### 5.4 Activities<a name="activities"></a>
 
 Activities are the actions that are executed in a nanoflow.
 
-#### 3.4.1 Object Activitities
+#### 5.4.1 Object Activitities
 
 Object activities can be used to create and manipulate objects. The [domain model](domain-model) defines the object types ([entities](entities)) that can be used.
 
@@ -99,7 +114,7 @@ Object activities can be used to create and manipulate objects. The [domain mode
 | [![](attachments/819203/917866.png)](retrieve) | [Retrieve](retrieve) | Can be used to get one (or more) associated objects of another object. The activity can also get one (or more) objects directly from the database. |
 | [![](attachments/819203/918119.png)](rollback-object) | [Rollback object](rollback-object) | Can be used to undo the changes (that have not been committed) made to the object in the part of the nanoflow preceding the activity. This also deletes objects that have been created but never committed. |
 
-#### 3.4.2 List Activitities
+#### 5.4.2 List Activitities
 
 List activities can be used to create and manipulate lists of objects.
 
@@ -108,7 +123,7 @@ List activities can be used to create and manipulate lists of objects.
 | [![](attachments/819203/918007.png)](change-list) | [Change list](change-list) | Can be used to change the content of a list variable. |
 | [![](attachments/819203/918009.png)](create-list) | [Create list](create-list) | Can be used to create a (empty) list variable. |
 
-#### 3.4.3 Variable Activities
+#### 5.4.3 Variable Activities
 
 Variable activities can be used to create or change a variable within a microflow.
 
@@ -117,7 +132,7 @@ Variable activities can be used to create or change a variable within a microflo
 | [![](attachments/819203/918011.png)](change-variable) | [Change variable](change-variable) | Can be used to change the value of a variable. |
 | [![](attachments/819203/918110.png)](create-variable) | [Create variable](create-variable) | Can be used to create a new variable. |
 
-#### 3.4.4 Client Activities
+#### 5.4.4 Client Activities
 
 Client activities can be used to have the web client of your application perform an action, such as showing a different page or downloading a file.
 
@@ -127,13 +142,13 @@ Client activities can be used to have the web client of your application perform
 | [![](attachments/819203/917544.png)](show-page) | [Show page](show-page) | Can be used to show a form to the user that calls the microflow in which this activity is used. |
 | [![](attachments/819203/918097.png)](validation-feedback) | [Validation feedback](validation-feedback) | Can be used to display red text below a widget that displays an attribute or association. |
 
-### 3.5 Loop
+### 5.5 Loop
 
 | Graphic | Name | Description |
 | --- | --- | --- |
 | [![](attachments/819203/917804.png)](loop) | [Loop](loop) | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in nanoflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows. |
 
-### 3.6 Artifacts<a name="artifacts"></a>
+### 5.6 Artifacts<a name="artifacts"></a>
 
 Artifacts provide the nanoflow with input and allow comments to be made.
 
@@ -142,22 +157,22 @@ Artifacts provide the nanoflow with input and allow comments to be made.
 | [![](attachments/819203/918019.png)](parameter) | [Parameter](parameter) | Data that serves as input for the nanoflow. Parameters are filled at the location from which the nanoflow is triggered. |
 | [![](attachments/819203/917689.png)](annotation) | [Annotation](annotation) | An element that can be used to put comments in a nanoflow. |
 
-## 4 Variable Usages
+## 6 Variable Usages
 
 The Modeler visualizes which variables are used by selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word **Usage** in white text on a green background.
 
-In the example below, the parameter **AccountPasswordData** is highlighted, because it is used in the selected activity. The save password activity has a usage label, because it uses the variable defined by the selected activity.
+In the example below, the parameter **Inspection** is highlighted, because it is used in the selected activity. The activity which creates a log entry has a usage label, because it uses the variable defined by the selected activity.
 
-![](attachments/16713739/16843950.png)
+![](attachments/16713739/16843952.png)
 
-## 5 Errors
+## 7 Errors
 
 When an error occurs in a nanoflow, all the changes that have been made to objects are not rolled back and the nanoflow is aborted. Nanoflow actions do not support error handlers.
 
-## 6 Nanoflow Debugging
+## 8 Nanoflow Debugging
 
-There is currently no debugging support for nanoflows.
+Step by step debugging is not supported yet. For now we recommend using log message actions, which are shown in the console log of the Desktop Modeler (available from 7.13.0 on).
 
-## 7 Security
+## 9 Security
 
-Nanoflows are executed in the context of the current user. Any operation for which the user is unauthorized will fail.
+Nanoflows are executed in the context of the current user. Any operation for which the user is unauthorized will fail. For instance, when objects are retrieved in a nanoflow only the ones for which the current user has read access will be returned. Committing an object only succeeds when the current user has write access for all changes.

@@ -7,6 +7,7 @@ This property specifies what action is executed when the element is clicked. The
 | Do nothing | Nothing happens. This is useful for setting up a page without defining the underlying functionality yet. |
 | Show a page | The specified page is shown. |
 | Call a microflow | The specified microflow is executed. |
+| Call a nanoflow | The specified nanoflow is executed. |
 | Open link | Triggers an action based on the link type, some of which are specific to mobile devices. |
 | Save changes | Commits all changes made on the page.  |
 | Cancel changes | Rolls back all changes made on the page. |
@@ -31,6 +32,10 @@ The [microflow](microflow) that should be executed.
 The microflow settings specify what parameters will be passed to the microflow, whether to show a progress bar or not, and more.
 
 See [Starting Microflows](starting-microflows).
+
+### Nanoflow (Only for "Call a nanoflow")
+
+The [nanoflow](nanoflow) that should be executed.
 
 ### Link Type (Only for "Open link")
 

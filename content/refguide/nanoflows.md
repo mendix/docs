@@ -15,22 +15,26 @@ Nanoflows are similar to [microflows](microflows), as they allow you to express 
 
 ### 2.1 Offline Mobile Apps
 
-Nanoflows are designed with offline first applications in mind, they allow to model application logic that works in offline apps. Since all database-related actions will be executed on the local offline database, nanoflows in offline apps will be super fast.
+Nanoflows are designed with offline-first applications in mind, as they allow you to model application logic that works in offline apps. Since all database-related actions will be executed on the local offline database, nanoflows in offline apps will be super fast.
 
 ### 2.2 Logic Where No Connection Is Needed
 
-Nanoflows also offer great value in online applications, e.g. for UI logic, validations, calculations and navigation.
-Keep in mind though that when you perform database-releated actions, each action will create a separate network request to the Mendix Runtime. The following actions interact with the database:
+Nanoflows also offer great value in online applications (for example, for UI logic, validations, calculations, and navigation). However, please keep in mind that when you perform database-releated actions, each action will create a separate network request to the Mendix Runtime. The following actions interact with the database:
+
 * Create
 * Commit
 * Retrieve
 * Rollback
 
 Therefore, the best practice is to use nanoflows in online applications when they do not contain the above actions.
-Please note that Changing objects without committing is not a database-related action, as changes are applied on the device or in the browser.
 
-### 2.3 Other cases
-The previous section stated nanoflows perform best in online applications when no database-related actions are used. These are generally the best cases, but nanoflows which contain at most one database-related action can also still perform well. As they only require one network call, they perform as good as a microflow. An example of such a use case is to perform validation logic on an object and commit the object in the same nanoflow.
+{{% alert type="info" %}}
+Changing objects without committing is not a database-related action, as changes are applied on the device or in the browser.
+{{% /alert %}}
+
+### 2.3 Other Cases
+
+The previous section stated that nanoflows perform best in online applications when no database-related actions are used, and these are generally the best cases. However, nanoflows that contain at most one database-related action can also still perform well. Because such nanoflows only require one network call, they perform as well as a microflow. An example of such a use case is performing validation logic on an object and committing the object in the same nanoflow.
 
 ## 3 Differences from Microflows
 

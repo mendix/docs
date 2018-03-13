@@ -1,10 +1,10 @@
 ### On leave
 
-The on-leave property optionally specifies an action that will be executed when leaving the widget, either by using the tab key or by clicking another widget.
+The on-leave property optionally specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
 | Action | Effect |
 | --- | --- |
-| Do nothing | Nothing happens. This is useful for setting up a page without defining the underlying functionality yet. |
+| Do nothing | Nothing happens. This is useful for setting up a page without defining the underlying functionality. |
 | Show a page | The specified page is shown. |
 | Call a microflow | The specified microflow is executed. |
 | Call a nanoflow | The specified nanoflow is executed. |
@@ -21,7 +21,7 @@ _Default value:_ Do nothing
 
 The [page](page) that should be shown.
 
-See [Opening Pages](opening-pages).
+For more information, see [Opening Pages](opening-pages).
 
 ### Microflow (Only for "Call a microflow")
 
@@ -31,7 +31,7 @@ The [microflow](microflow) that should be executed.
 
 The microflow settings specify what parameters will be passed to the microflow, whether to show a progress bar or not, and more.
 
-See [Starting Microflows](starting-microflows).
+For more information, see [Starting Microflows](starting-microflows).
 
 ### Nanoflow (Only for "Call a nanoflow")
 
@@ -54,7 +54,7 @@ _Default value:_ Web
 
 Usage of the address property depends on the chosen link type. The property is used either as a URL (Web), as an email address (Email), or as a phone number (Call/Text).
 
-The address can be set to either a literal value, or an attribute value.
+The address can be set to either a literal value or an attribute value.
 
 ### Address Value (Only for "Open link")
 

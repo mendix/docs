@@ -3,9 +3,8 @@ title: "Import XML"
 parent: "integration-activities"
 ---
 
-
 {{% alert type="warning" %}}
 
-The documentation has moved to [Import Mapping Action](import-mapping-action)
+Please see [Import Mapping Action](import-mapping-action) for details on importing XML.
 
 {{% /alert %}}

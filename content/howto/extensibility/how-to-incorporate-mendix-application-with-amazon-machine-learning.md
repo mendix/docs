@@ -33,7 +33,7 @@ With all the necessary preconditions fulfilled, the MakeRealTimeRegressionPredic
 
 ## 3 Installation
 
-To make the MakeRealTimeRegressionPrediction action available in a Mendix project, the AwsMLConnector module needs to be imported.
+To make the MakeRealTimeRegressionPrediction action available in a Mendix project, the **AWS Machine Learning Connector** module needs to be imported.
 
 ## 4 Configuration
 

@@ -82,3 +82,9 @@ The **Parameters** table shows the name, data type, and type of the parameter.
 Operation parameters can be either query parameters or path parameters. The type of a parameter is detemined by where in the URL it is placed. If the parameter is part of the operations location, it will be of the path type. If it is a part of the operation's query string, it will be of the query type.
 
 The parameter data type is determined by the microflow of the operation. New parameters that are not yet part of the microflow will have "(Not set)" as their data type.
+
+## 5 Examples
+
+**How to publish REST natively with Mendix**
+
+{{% youtube zt1XBnK2LCM %}}

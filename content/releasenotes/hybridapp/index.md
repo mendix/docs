@@ -16,20 +16,20 @@ If you're using the advanced flow, you can get the latest version of the Hybrid 
 
 ### March 13th, 2018 (2.0.1 / 2.0.0)
 
-This patch release fixes an issue with an upstream dependency (com.android.support:support-v4) which was update by Google. The issue prevents building .apk files, both locally and on Phonegap Build.
+This patch release fixes an issue with an upstream dependency (`com.android.support:support-v4`) that was updated by Google. The issue prevents building *.apk* files, both locally and on Phonegap Build.
 
 ### March 9th, 2018 (2.0.0 / 2.0.0)
 
 {{% alert type="info" %}}
 
-This is a major release because it is not fully compatible with older versions of hybrid-app-template. For this update, we recommend that you download a fresh hybrid app package from the Mendix Cloud Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**). We extended the **Mobile Apps** wizard with fields for theming options described below. In addition, you can configure splash screens/icons by uploading a single base image.
+This is a major release, because it is not fully compatible with older versions of hybrid-app-template. For this update, we recommend that you download a fresh hybrid app package from the Mendix Cloud Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**. We extended the **Mobile Apps** wizard with fields for the theming options described below. In addition, you can configure splash screens/icons by uploading a single base image.
 
 {{% /alert %}}
 
-* We added support for custom theming
+* We added support for custom theming:
   * You can configure the image on the error screen by adding/replacing `error.png`.
-  * You can configure the colors (background/foreground/text) of the error dialog, the login screen, and the pin screen by adjusting `parameters.json`.
-  * You can adjust the HTML and CSS of the loading screen can be configuring `loader.html.snippet` and `loader.css.snippet`.
+  * You can configure the colors (background/foreground/text) of the error dialog box, login screen, and pin screen by adjusting `parameters.json`.
+  * You can adjust the HTML and CSS of the loading screen by configuring `loader.html.snippet` and `loader.css.snippet`.
 * We now properly set the page title based on the `name` value in `parameters.json`.
 
 ### January 31st, 2018 (1.7.4 / 1.4.0)

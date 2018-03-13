@@ -165,7 +165,7 @@ Artifacts provide the nanoflow with input and allow comments to be made.
 
 The Modeler visualizes which variables are used by selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word **Usage** in white text on a green background.
 
-In the example below, the parameter **Inspection** is highlighted, because it is used in the selected activity. The activity which creates a log entry has a usage label, because it uses the variable defined by the selected activity.
+In the example below, the parameter **Inspection** is highlighted, because it is used in the selected activity. The activity that creates a log entry has a usage label, because it uses the variable defined by the selected activity.
 
 ![](attachments/16713739/16843952.png)
 
@@ -175,8 +175,8 @@ When an error occurs in a nanoflow, all the changes that have been made to objec
 
 ## 8 Nanoflow Debugging
 
-Step by step debugging is not supported yet. For now we recommend using log message actions, which are shown in the console log of the Desktop Modeler (available from 7.13.0 on).
+Step-by-step debugging is not supported yet. For now, we recommend using log message actions, which are shown in the console log of the Desktop Modeler (for version 7.13.0 and higher).
 
 ## 9 Security
 
-Nanoflows are executed in the context of the current user. Any operation for which the user is unauthorized will fail. For instance, when objects are retrieved in a nanoflow only the ones for which the current user has read access will be returned. Committing an object only succeeds when the current user has write access for all changes.
+Nanoflows are executed in the context of the current user. Any operation for which the user is unauthorized will fail. For instance, when objects are retrieved in a nanoflow, only the ones for which the current user has read access will be returned. Committing an object only succeeds when the current user has write access for all changes.

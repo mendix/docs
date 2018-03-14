@@ -55,7 +55,7 @@ http//localhost:8080/rest/my_service_name/v1
 
 You can change the the default location to almost any valid URL.
 
-#### 2.3.1 Reserved prefixes
+#### 2.3.1 Reserved Prefixes
 
 Following URL prefixes are reserved and are not allowed to be used in location:
 
@@ -88,7 +88,7 @@ When the app is running, this file is available under `/rest-doc/servicename/swa
 
 <a name="authentication"></a>
 
-### 3.1 Requires authentication
+### 3.1 Requires Authentication
 
 {{% alert type="info" %}}
 
@@ -100,7 +100,7 @@ The **Active Session** authentication was introduced in version 7.13.0
 
 Select whether clients need to authenticate or not.
 
-### 3.2 Authentication methods
+### 3.2 Authentication Methods
 
 If authentication is required, you can select which authentication methods you would like to support
 

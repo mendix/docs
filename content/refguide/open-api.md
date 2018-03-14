@@ -51,5 +51,5 @@ Each operation generates an `Operation` object:
 | `tags` | The [name](published-rest-resource#name) of the resource. |
 | `summary` | The [public documentation summary](published-rest-operation#summary) of the operation. |
 | `description` | The [public documentation description](published-rest-operation#description) of the operation. |
-| `parameters` | The path and query parameters. For the POST, PUT, PATCH and OPTIONS methods, there is also a body parameter. |
+| `parameters` | The path and query parameters. For the POST, PUT, PATCH, and OPTIONS methods, there is also a body parameter. |
 | `responses` | The OK response. If security is enabled, this is also the unauthorized response. |

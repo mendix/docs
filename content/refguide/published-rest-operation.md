@@ -50,23 +50,26 @@ Support for **File Documents** in these microflows was introduced in version 7.1
 {{% /alert %}}
 
 An operation has different parameters:
- * [Path parameters](published-rest-path-parameters), which are part of the path of the url
- * Query parameters, which are at the end of the url in the form of `?name1=value1&name2=value2`. When a microflow parameter is not in the path and is not object, then it's considered a query parameter.
- * A body parameter (optional), which are in the body of the request to the operation. *GET*, *HEAD* and *DELETE* operations do not have a body parameter
+
+ * [Path parameters](published-rest-path-parameters), which are part of the path of the URL
+ * Query parameters, which are at the end of the URL in the form of `?name1=value1&name2=value2` (when a microflow parameter is not in the path and is not object, then it's considered a query parameter)
+ * A body parameter (optional), which are in the body of the request to the operation (the `GET`, `HEAD`, and `DELETE` operations do not have a body parameter)
 
 A microflow for an operation takes all these operation parameters as input.
 
-A *body* parameter should be a file document (or inherit from a file document).
+A body parameter should be a file document (or inherit from a file document).
 
-Path and query parameters can't have *List* or *Object* type.
+Path and query parameters can't have list or object types.
 
 An operation microflow can also take an [HttpRequest](http-request-and-response-entities#http-request) parameter. You can add this parameter if you would like to inspect the requested URL and headers.
 
-The result of the microflow is the result of the operation. You have several options here:
+The result of the microflow is the result of the operation. You have several options here, which are described below.
 
- * Return an [HttpResponse](http-request-and-response-entities#http-response) - In the *HttpResponse*, you can set the status code, reason phrase and content (as a string). You can fill the content for instance with the result of a mapping, or with a string from an other source. You can also add headers to the response. One important header to set is *Content-Type*. Don't return an *empty* HttpResponse; that will always result in an error.
- * Return a primitive - When your microflow returns a string, an integer, a boolean, etc. then the response to the operation will be that value. In order to still be able to set a status code, reason phrase and headers, you should add an [HttpResponse](http-request-and-response-entities#http-response) object parameter and set the attributes of that object. If you return a non-empty value from the microflow, the *Content* attribute of the *HttpResponse* object is ignored. If you return an empty value from the microflow, then the *Content* of the *HttpResponse* is taken as the result.
- * Return a file document - When you want to return data that is a file, such as a pdf or an image, then you can have your microflow return a file document. In this case you should also have an *HttpResponse* parameter and set the *Content-Type* header.
+The first option is to **return an [HttpResponse](http-request-and-response-entities#http-response)**. In the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. One important header to set is *Content-Type*. Do not return an *empty* HttpResponse, because that will always result in an error.
+
+The second option is to **return a primitive**. When your microflow returns a string, integer, Boolean, etc., then the response to the operation will be that value. In order to still be able to set a status code, reason phrase, and headers, you should add an [HttpResponse](http-request-and-response-entities#http-response) object parameter and set the attributes of that object. If you return a non-empty value from the microflow, the `Content` attribute of the `HttpResponse` object is ignored. If you return an empty value from the microflow, then the `Content` of the `HttpResponse` is taken as the result.
+
+The final option is to **return a file document**. When you want to return data that is a file (such as a PDF or image), then you can have your microflow return a file document. In this case, you should also have an `HttpResponse` parameter and set the `Content-Type` header.
 
 If the microflow throws an unhandled exception, the response is **500: Internal server error**.
 

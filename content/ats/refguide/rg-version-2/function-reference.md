@@ -11,7 +11,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
-| Set BooleanSlider Value          | BooleanSlider                    |  <ul><li>Deprecated in favor of **Set Value**.</li><li>Checks if the given value is available for the BooleanSlider and sets the value.</li></ul> |
+| Set BooleanSlider Value          | BooleanSlider                    |  Deprecated in favor of **Set Value**.<br /> Checks if the given value is available for the BooleanSlider and sets the value. |
 | Set BootstrapRTE Value           | BootstrapRTE                     | <ul><li>Deprecated in favor of **Set Value**</li><li>Sets the given value as current value for the BootstrapRTE value. Strings can be formatted via html-code.</li></ul> |
 | Set Checkbox Set Selector Value  | Checkbox Set Selector            | Checks/clears the **Select all** check box. |
 | Set Checkbox Set Selector Value (all) | Checkbox Set Selector       | Checks/clears the **Select all** check box. |
@@ -144,8 +144,8 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Is Element Displayed | Returns true if the supplied element is displayed (visible). |
 | Is Selected | Checks whether the check box is selected. |
 | Maximize | Maximizes the current browser window. |
-| Open Application | <ul><li>Deprecated in favor of **Open Mendix Application**.</li><li>Opens an application at the application's URL in a browser. |
-| Open Website | Deprecated in favor of **Open Mendix Application**.</li></ul> |
+| Open Application | <ul><li>Deprecated in favor of **Open Mendix Application**.</li><li>Opens an application at the application's URL in a browser.</li></ul> |
+| Open Website | Deprecated in favor of **Open Mendix Application**. |
 | Select Option | Deprecated in favor of **Select Option by Index**, **Select Option by Text**, and **Select Option by Value**. |
 | Select Option by Index | |
 | Select Option by Text | |

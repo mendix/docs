@@ -97,12 +97,12 @@ You need an account for Adobe PhoneGap Build and for the app stores in which you
 
 There are two ways that the device can build the packages:
 
-* **Build in the cloud**
+* **Build it in the cloud**
 * **Do it yourself**
 
 For more information, see [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores).
 
-### 4.1 Build in the Cloud
+### 4.1 Building It in the Cloud
 
 After selecting the **Build in the cloud** option and choosing the correct environment, you are ready to start the PhoneGap build.
 
@@ -112,7 +112,7 @@ As soon as the build job has completed, the platform-specific packages will be r
 
 Please note that an Adobe PhoneGap Build account is required to continue. Create [an account](https://build.phonegap.com/plans) if you do not have one already.
 
-### 4.2 Do It Yourself
+### 4.2 Doing It Yourself
 
 After selecting the **Do it yourself** option and choosing the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, run on emulators, and upload to the PhoneGap Build service. 
 
@@ -124,9 +124,9 @@ For detailed instructions, see the [hybrid-app-template GitHub repository](https
 
 To generate the app store packages, go to [Build.PhoneGap.com](https://build.phonegap.com/).
 
-## 5 Examples
+## 5 Example
 
-** How to build a Phonegap app in the cloud **
+**How to build a Phonegap app in the cloud**
 
 {{% youtube 7ic625u2YJE %}}
 

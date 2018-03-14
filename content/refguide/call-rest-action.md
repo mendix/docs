@@ -46,7 +46,7 @@ These headers are added to the HTTP request header. Each custom header is a pair
 
 ![](attachments/19203256/19399114.png)
 
-The sections below describe the options in the drop-down menu for generating the request. Requests can only be generated for HTTP methods POST, PUT, PATCH and OPTIONS.
+The sections below describe the options in the drop-down menu for generating the request. Requests can only be generated for HTTP methods POST, PUT, PATCH, and OPTIONS.
 
 ### 4.1 Export Mapping for the Entire Request
 

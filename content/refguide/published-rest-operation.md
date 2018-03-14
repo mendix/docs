@@ -83,7 +83,7 @@ Operation parameters can be either query parameters or path parameters. The type
 
 The parameter data type is determined by the microflow of the operation. New parameters that are not yet part of the microflow will have "(Not set)" as their data type.
 
-## 5 Examples
+## 5 Example
 
 **How to publish REST natively with Mendix**
 

@@ -46,7 +46,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Get Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Returns the current value of the check box found by the entity attribute value. |
 | Get Total Item/Row Count | DataGrid, TemplateGrid, ListView | Gets the total grid count from the paging status. |
 | Get Validation Message | All widgets | Returns the validation message of a widget. |
-| Get Value | Standard widgets: TextBox, TextArea, DropDown, RadioButtons, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label.<br /> App Store widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList |Returns the current value of all supported widgets.|
+| Get Value | Standard widgets: TextBox, TextArea, DropDown, RadioButtons, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label.<br /> App Store widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList. | Returns the current value of all supported widgets.|
 | Get Visible Item/Row Count | DataGrid, TemplateGrid, ListView | Returns the number of currently visible items/rows in a template grid, data grid, or list view. |
 | Groupbox is Collapsed | GroupBox | Gets the group box collapsed state: true if collapsed, otherwise false. |
 

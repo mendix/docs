@@ -24,8 +24,8 @@ The method specifies what type of operation is performed by the microflow:
 * `POST` – the operation creates an entry in the collection at the specified location
 * `PATCH` – the operations updates (part of) the entry at the specified location
 * `DELETE` – the operation deletes the entry or entries at the specified location
-* `HEAD` - the operation retrieves information about the entry or entries at the specified location. This is identical to `GET`, except for the fact that it doesn't return a message body
-* `OPTIONS` - the operation returns information about the available communication options
+* `HEAD` – the operation retrieves information about the entry or entries at the specified location; this is identical to `GET`, except for the fact that it doesn't return a message body
+* `OPTIONS` – the operation returns information about the available communication options
 
 ### <a name="operation-path"></a>2.2 Operation Path
 

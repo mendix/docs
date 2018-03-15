@@ -159,4 +159,3 @@ The SMTP email module contains a number of other powerful tools. Some of the enh
 * [How to Access a Samba Share from the MxCloud](access-a-samba-share-from-the-mxcloud)
 * [How to Install and Configure the SMTP Module](install-and-configure-the-smtp-module)
 * [How to Visualize Data Using the ChartsJS Module](visualize-data-using-the-chartsjs-module)
-* [How to Incorporate Mendix Application with Amazon Machine Learning](how-to-incorporate-mendix-application-with-amazon-machine-learning)

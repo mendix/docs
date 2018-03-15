@@ -67,7 +67,7 @@ To make this sample project actually generate charts, the first thing to do is c
 
 1.  Create a page that will allow for creation of data. 
 2.  Add this page to user navigation.
-3.  Use the Generate page feature to automatically create the data entry page for a data point.
+3.  Use the **Generate page** feature to automatically create the data entry page for a data point.
 
     ![](attachments/19202962/19398995.png)
 
@@ -84,7 +84,7 @@ To make this sample project actually generate charts, the first thing to do is c
 
     ![](attachments/19202962/19398999.png)
     
-6.  On the ShowChart page, add the **ChartJS - Line Chart** via the **Add widget** menu:
+6.  On the **ShowChart** page, add the **ChartJS - Line Chart** via the **Add widget** menu:
 
     ![](attachments/19202962/19398996.png)
     
@@ -96,40 +96,43 @@ To make this sample project actually generate charts, the first thing to do is c
 
 The ChartJS widgets are configured through the familiar modeler widget dialogue box.  We must configure the ChartJS module to reference our Charting domain model.
 
-1.  Set the entity for the chart to be the created Chart entity:
+1. Set the entity for the chart to be the created **Chart** entity:
 
     ![](attachments/19202962/19399001.png)
-    
-2.  Under the widget’s Data Set tab, select the data set entity:
+
+2.  On the **Data Set** tab, select the **Dataset** entity:
 
     ![](attachments/19202962/19399002.png)
     
-3.  Under the Data Set tab, configure the sorting, label, and fill color properties as shown below:
+3.  Also on the **Data Set** tab, configure the **Label**, **Sorting**, and **Fill Color** properties as shown here:
 
     ![](attachments/19202962/19399003.png)
 
-4.  Configure the Data Point tab entity, X value, Y value, and X sorting as shown below:
+4. Configure the **Data Point** tab with the **Entity**, **X Value**, **X sorting**, and **Y value** as shown below:
 
     ![](attachments/19202962/19399004.png)
 
 ### 3.6 Creating the Data Source Microflow
 
-Now that we have added our widget to the page, we need to feed it some data.  To do this, we will need to write the Data Source Microflow for our widget.  This microflow contains the logic to retrieve, count, and manipulate the data we want to display in our chart.  
+Now that we have added our widget to the page, we need to feed it some data.  To do this, we will need to write the data source microflow for our widget.  This microflow contains the logic to retrieve, count, and manipulate the data we want to display in our chart.  
 
-1.  Create a new microflow called MF_RetrieveValuesForChart.
-2.  Set it as the data source microflow for the Line Chart widget on the Data Source tab:
+1. On the **Data Source** tab for the Line Chart widget, click **Select** for **Microflow** and create a new microflow called **MF_RetrieveValuesForChart**.
 
-    ![](attachments/19202962/19399005.png)
-    
-3.  In this Microflow, Create a new DataSet object.
-4.  Populate values for Label and Color:
+   ![](attachments/19202962/19399005.png)
+
+2. In this new microflow, create a new **DataSet** object.
+
+4.  Populate values for **Label** and **Color**:
 
     ![](attachments/19202962/19399006.png)
     
-5.  Create a sub-microflow called SUB_CreateSeries.  This microflow will retrieve all the data associated with our new dataset.
-6.  Create input parameters for SeriesType, Chart, and Dataset.
-7.  Add a loop.
-8.  We iterate through that list and create a new Datapoint, setting X, Y, and X sorting using the corresponding attributes for our Value entity:
+4. Create a new microflow in your module called **SUB_CreateSeries**.  This will be used as a sub-microflow to retrieve all the data associated with our new dataset.
+
+5. Create input parameters for **SeriesType**, **Chart**, and **Dataset**.
+
+6. Add a loop.
+
+8.  We iterate through that list and create a **NewDatapoint**, setting X, Y, and X sorting using the corresponding attributes for our **Value** entity:
 
     ![](attachments/19202962/19399009.png)
     
@@ -137,19 +140,15 @@ Now that we have added our widget to the page, we need to feed it some data.  To
 
     ![](attachments/19202962/19399008.png)
     
-10. ‘Add’ the NewDatapoint to the association Dataset_Datapoint and to ‘Add’ the NewDataset to the Chart_Dataset association.  If ‘Set’ is used, only the last series or point will be associated.
-    
-    ![](attachments/19202962/19399011.png)
+9. For the change object in the loop, set the **Type**  to **Add** for the  Datapoint member and the **Value** to `$NewDatapoint` .  Do the same for the other change object, but set the Value to `$NewDataset`.
 
-11. Due to the way the ChartJS module expects the data structure, after each point is created we must then associate it with the NewDataset object that we passed into the flow.  This newDataset must then be associated with the Chart object.  These two actions happen after the Datapoint creation.
-    
+   ![](attachments/19202962/19399011.png)
+
+11. Due to the way the ChartJS module expects the data structure, after each point is created, you must then associate it with the NewDataset object that we passed into the flow.  This NewDataset must then be associated with the Chart object.  These two actions happen after the Datapoint creation.
+  
     ![](attachments/19202962/19399010.png)
 
-12. The final SUB_CreateSeries microflow should look as shown:
-
-    ![](attachments/19202962/19399007.png)
-    
-13. In the microflow RetrieveValuesForChart, create a second DataSet object with Label 'Series 2' and Color #0000FF. Note that SUB_CreateSeries is called once for each series of the chart.
+11. In the **RetrieveValuesForChart** microflow, create a second DataSet object with **Label** `'Series 2'` and **Color** `#0000FF`. Note that **SUB_CreateSeries** is called once for each series of the chart.
 
     ![](attachments/19202962/19399012.png)
 

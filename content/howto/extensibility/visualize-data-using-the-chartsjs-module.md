@@ -116,13 +116,13 @@ The ChartJS widgets are configured through the familiar modeler widget dialogue 
 
 Now that we have added our widget to the page, we need to feed it some data.  To do this, we will need to write the data source microflow for our widget.  This microflow contains the logic to retrieve, count, and manipulate the data we want to display in our chart.  
 
-1. On the **Data Source** tab for the Line Chart widget, click **Select** for **Microflow** and create a new microflow called **MF_RetrieveValuesForChart**.
+1.  On the **Data Source** tab for the Line Chart widget, click **Select** for **Microflow** and create a new microflow called **MF_RetrieveValuesForChart**.
 
-   ![](attachments/19202962/19399005.png)
+    ![](attachments/19202962/19399005.png)
 
 2. In this new microflow, create a new **DataSet** object.
 
-4.  Populate values for **Label** and **Color**:
+3.  Populate values for **Label** and **Color**:
 
     ![](attachments/19202962/19399006.png)
     
@@ -132,19 +132,19 @@ Now that we have added our widget to the page, we need to feed it some data.  To
 
 6. Add a loop.
 
-8.  We iterate through that list and create a **NewDatapoint**, setting X, Y, and X sorting using the corresponding attributes for our **Value** entity:
+7.  We iterate through that list and create a **NewDatapoint**, setting X, Y, and X sorting using the corresponding attributes for our **Value** entity:
 
     ![](attachments/19202962/19399009.png)
     
-9.  Retrieve the dataPoints:
+8.  Retrieve the dataPoints:
 
     ![](attachments/19202962/19399008.png)
     
-9. For the change object in the loop, set the **Type**  to **Add** for the  Datapoint member and the **Value** to `$NewDatapoint` .  Do the same for the other change object, but set the Value to `$NewDataset`.
+9.  For the change object in the loop, set the **Type**  to **Add** for the  Datapoint member and the **Value** to `$NewDatapoint` .  Do the same for the other change object, but set the Value to `$NewDataset`.
 
-   ![](attachments/19202962/19399011.png)
+    ![](attachments/19202962/19399011.png)
 
-11. Due to the way the ChartJS module expects the data structure, after each point is created, you must then associate it with the NewDataset object that we passed into the flow.  This NewDataset must then be associated with the Chart object.  These two actions happen after the Datapoint creation.
+10. Due to the way the ChartJS module expects the data structure, after each point is created, you must then associate it with the NewDataset object that we passed into the flow.  This NewDataset must then be associated with the Chart object.  These two actions happen after the Datapoint creation.
   
     ![](attachments/19202962/19399010.png)
 

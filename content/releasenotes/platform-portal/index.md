@@ -4,6 +4,12 @@ title: "Platform Portal"
 
 ## 2018
 
+### March 13th, 2018
+
+#### Improvements
+
+* In the Mendix Cloud, we have renewed the SSL/TLS certificates for *.mendixcloud.com*, *.mxapps.io*, and *.mendix.com*.
+
 ### March 1st, 2018
 
 #### Fixes

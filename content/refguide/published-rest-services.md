@@ -42,4 +42,4 @@ To log detailed information about interaction with your published REST service, 
 
 **How to publish REST natively with Mendix**
 
-{{% youtube zt1XBnK2LCM %}}
+{{% youtube HzrFkv0U4n8 %}}

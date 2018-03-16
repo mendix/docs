@@ -87,4 +87,4 @@ The parameter data type is determined by the microflow of the operation. New par
 
 **How to publish REST natively with Mendix**
 
-{{% youtube zt1XBnK2LCM %}}
+{{% youtube HzrFkv0U4n8 %}}

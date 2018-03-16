@@ -4,6 +4,21 @@ title: "Platform Portal"
 
 ## 2018
 
+### March 16th, 2018
+
+#### Improvements
+
+* "Mendix App Plaform" is now "Mendix Platform"
+* We have improved database storage alerts for Mendix Cloud v4 applications; The users that subscribed to their applications' alerts will receive a warning alert when they have less than 25% disk space on their applications' database, and a critical alert when disk space is below 10%. You need to re-deploy your application to activate this alert.
+* Live Logging for Mendix Cloud v4 applications is here; View logs neatly, in real time.
+* Hybrid Mobile Improvements: Ability to generate Icon and splash screen, to add custom loader and error images, new theming section for minor color tweaks, ability to add custom HTML and CSS.
+
+#### Fixes
+
+* Users of Mendix Cloud V4 applications will now see a notification if their environment fails to clean properly.
+* Newly created Mendix Cloud v4 applications' health status used to be reflected with red cross, which is now fixed.
+* Deploy and Operate deeplinks were not available in Security menu for user groups without Monitoring access.
+
 ### March 13th, 2018
 
 #### Improvements

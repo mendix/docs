@@ -17,7 +17,7 @@ Mendix allows you to publish REST web services natively from the Desktop Modeler
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install [Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) version 7.12 or higher
+* Install [Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) version 7.11 or higher
 
 ## 3 Setting Up the Example Project
 

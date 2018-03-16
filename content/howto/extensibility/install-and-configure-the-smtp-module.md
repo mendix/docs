@@ -37,7 +37,7 @@ In this section, you will install the SMTP email module and integrate it into an
 
     {{% alert type="warning" %}}
 
-    As with all app store modules, it is important that you do NOT modify any contents within the module itself. If you do, you run the risk of having your changes overwritten upon the next update.
+    As with all App Store modules, it is important that you do NOT modify any contents within the module itself. If you do, you run the risk of having your changes overwritten upon the next update.
 
     {{% /alert %}}
 3.  Create a new module called **EmailCustomizations** to house the project-specific pages and flows:
@@ -48,27 +48,23 @@ In this section, you will install the SMTP email module and integrate it into an
 
 1. Create a new page called **EmailAdmin**.
 2. Drop in the **SMTPEmailModule.Administration** snippit to give you access to those pages.
-3. Add the EmailAdmin page to your Administration navigation.
+3. Add the **EmailAdmin** page to your app's **Navigation**:
 
     ![](attachments/19202956/19398976.png)
 
 ### 3.3 Configuring the SMTP Settings
 
-1.  Launch your application and head to the SMTP settings page that have just been exposed. On the **Settings** tab, enter the SMTP credentials of the existing relay:
+1.  Run your application and head to the SMTP settings page that has just been exposed. On the **Settings** tab, enter the SMTP credentials of the existing relay:
 
     ![](attachments/19202956/19398977.png)
 
-2.  Click **Save** to commit the settings to the database.
+2. Click **Save** to commit the settings to the database.
 
-    {{% alert type="warning" %}}
-
-    Send a test email. The module includes a Test button at the bottom of the settings page. This will allow you to enter a destination email address that should receive a test message to make sure things are working correctly.
-
-    {{% /alert %}}
+3.  Send a test email. The module includes a **Test** button at the bottom of the settings page. This will allow you to enter a destination email address that should receive a test message to make sure things are working correctly.
 
 ## 4 Sending an Email in a Microflow
 
-In this section, you will learn how to build a microflow in your application that can send an email using the credentials configured in [3 Setting Up the Module](#SettingUptheModule). The actual sending of an email in the SMTP module is accomplished through the **SMTPEmailModule.SendEmailMessage** microflow:
+In this section, you will learn how to build a microflow in your application that can send an email using the credentials configured in  section [3 Setting Up the Module](#SettingUptheModule). The actual sending of an email in the SMTP module is accomplished through the **SMTPEmailModule.SendEmailMessage** microflow (accessible via **SMTPEmailModule** > **Private** > **Email**):
 
 ![](attachments/19202956/19398978.png)
 
@@ -82,7 +78,7 @@ Making an email is as simple as generating an **Email** object, populating the v
 
 To send an email in a microflow, follow these steps:
 
-1.  Create a page called **MakeANewEmail** using a basic vertical form:
+1.  Create a page called **MakeANewEmail** using a vertical form:
 
     ![](attachments/19202956/19398980.png)
 
@@ -94,7 +90,7 @@ To send an email in a microflow, follow these steps:
 
     ![](attachments/19202956/19398982.png)
 
-4.  On the **MakeANewEmail** page, delete the **Save** button and add an action that calls a microflow. Call this microflow **IVK_UserManualEmailSend**:
+4. On the **MakeANewEmail** page, delete the **Save** button and add an action that calls a microflow. Call this microflow **IVK_UserManualEmailSend**:
 
     ![](attachments/19202956/19398983.png)
 
@@ -103,11 +99,18 @@ To send an email in a microflow, follow these steps:
     Don’t forget to put a progress bar on the call for your action button. In the time it takes to send the email, you want users to know that the app is still working.
 
     {{% /alert %}}
-5.  In the microflow **IVK_UserManualEmailSend**, call the **IVK_SendEmail** sub microflow in the SMTP module, and then close the page:
+
+5. Change the button's caption to **Send**.
+
+6. Go to the **IVK_UserManualEmailSend** microflow to edit it and add an **Email** parameter.
+
+7. Add a call to the **IVK_SendEmail** sub-microflow in the SMTP module, and then add a **Close page** activity:
 
     ![](attachments/19202956/19398984.png)
 
-6.  Because users are only editing the plain text of the email on the previous page, you need to change the email so that the **UseOnlyPlainText** Boolean is set to true. In the **IVK_UserManualEmailSend** microflow, edit the change action to set the Boolean to true:
+8. Add a Change object before the sub-microflow call. Set the **Variable** as **Email**.
+
+9. Because users are only editing the plain text of the email on the previous page, change the email so that the **UseOnlyPlainText** Boolean is set to **true**:
 
     ![](attachments/19202956/19398985.png)
 
@@ -127,11 +130,13 @@ To set up the email queue, follow these steps:
 
 To add this to our sample application, do the following:
 
-1.  Add a new action to the **MakeANewEmail** page. Have it call the **IVK_QueueEmail** microflow:
+1.  Add a new action button to the **MakeANewEmail** page that calls a new microflow called **IVK_QueueEmail**:
 
     ![](attachments/19202956/19398987.png)
 
-2.  Have this microflow change the email object so that the status is QUEUED and the queued Boolean is set to true:
+2. Change this button's caption to **Queue**.
+
+3. Configure this microflow to change the email object so that the status is QUEUED and the queued Boolean is set to true:
 
     ![](attachments/19202956/19398988.png)
 

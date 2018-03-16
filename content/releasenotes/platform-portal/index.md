@@ -8,7 +8,7 @@ title: "Platform Portal"
 
 #### Improvements
 
-* "Mendix App Plaform" is now **Mendix Platform"**.
+* "Mendix App Plaform" is now **Mendix Platform**.
 * We have improved database storage alerts for Mendix Cloud v4 applications. If you subscribed to your applications' alerts, you will receive a warning alert when you have less than 25% disk space on your applications' databases and a critical alert when disk space is below 10%. You need to re-deploy your application to activate this alert.
 * Live logging for Mendix Cloud v4 applications is here! You can now view logs neatly and in real-time.
 * Hybrid mobile improvements: you can now generate icons and splash screens, add custom loader and error images, and add custom HTML and CSS. We also added a new theming section for minor color tweaks.

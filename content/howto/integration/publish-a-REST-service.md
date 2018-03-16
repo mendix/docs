@@ -15,7 +15,6 @@ Mendix allows you to publish REST web services natively from the Desktop Modeler
 
 ## 2 Prerequisites
 
-
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install [Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) version 7.12 or higher
@@ -27,9 +26,9 @@ To create the example project you will use in the next sections for publishing y
 1. Create a new project in the Desktop Modeler.
 2. Rename the **MyFirstModule** module to **RESTExample**.
 3. Open the domain model of the RESTExample module.
-4. Create entities with an association like this:
+4.  Create entities with an association like this:
 
-![](attachments/publish-a-REST-service/domainmodel.png)
+	![](attachments/publish-a-REST-service/domainmodel.png)
 
 5. You need pages for entering order data, so create an overview page for the **Order** entity In the RESTExample module.
 6. Create a **NewEdit** page for the orders, then add a data grid to the **Order_NewEdit** page that displays the **OrderItems** over an association.

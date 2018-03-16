@@ -34,6 +34,7 @@ To create the example project you will use in the next sections for publishing y
 6. Create a **NewEdit** page for the orders, then add a data grid to the **Order_NewEdit** page that displays the **OrderItems** over an association.
 
 Your page should now look like this:
+
 ![](attachments/publish-a-REST-service/order_NewEdit_Page.png)
 
 Add the overview page to your project navigation and run the application. Create a couple of orders and order lines by filling in the appropriate fields.
@@ -99,7 +100,7 @@ To be able to use the data from your model in the REST service, you need to crea
 	
 	![](attachments/publish-a-REST-service/RetrieveOrder.png)
 
-11. <a name="eleven"></a>From the Project Explorer, right-click the RESTExample module and select Add > Mappings > Export Mapping to add a new mapping named EM_ExportOrder:
+11. <a name="eleven"></a>From the Project Explorer, right-click the RESTExample module and select **Add** > **Mappings** > **Export Mapping** to add a new mapping named **EM_ExportOrder**:
 
 	![](attachments/publish-a-REST-service/AddExportMapping.png)
 
@@ -113,7 +114,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 	![](attachments/publish-a-REST-service/ExportMappingResult.png)
 
-14. Now go back to the **PRS_GetGetOrderByID** microflow and add an **Export with Mapping** activity.
+14. Now go back to the **PRS_GetGetOrderByID** microflow and add an Export with mapping activity.
 15. In the **Mapping** field of the dialog box, select the mapping created above in [step 11](#eleven). For the **Parameter** field, select the **Order** object retrieved with the database retrieve action in the microflow. 
 16. <a name="sixteen"></a>Select **JSON** for the result, and store the output in a **String variable**. Enter *Order_JSON* for the variable's **Name**.
 

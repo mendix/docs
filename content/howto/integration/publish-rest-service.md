@@ -63,7 +63,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 	![](attachments/publish-rest-service/MD_SelectedAttributes.png)
 
-7. Click **Ok** to close the dialog box.
+7. Click **OK** to close the dialog box.
 
 8. Close the message definition, and make sure to save the definition if asked!
 
@@ -75,23 +75,26 @@ To be able to use the data from your model in the REST service, you need to crea
 
 2. Enter *PRS_OrderService*  for the **Name** of your REST service. The REST service is now opened
 
-3.  Add a new resource to your service by clicking **Add**, and *GetOrderByID for the **Resource name**:
+3.  Add a new resource to your service by clicking **Add**, and enter *GetOrderByID* for the **Resource name**:
 
 	![](attachments/publish-rest-service/AddRestResource.png)
 
 	Click **OK** to close the dialog box.
 
-4.  Add an operation to your resource by clicking **Add** in the **Operations for resource** section:
+4. Add an operation to your resource by clicking **Add** in the **Operations for resource** section.
 
-	![](attachments/publish-rest-service/AddOperation.png)
+5. In the **Operation** dialog box, enter`{OrderID}` in the **Operation path** field (make sure to include the braces). This will allow the REST service to be invoked with the OrderID in the URL shown in the **Example location** field of this same dialog box.
 
-5. Add `{OrderID}` in the **Operation path** field (make sure to include the braces). This will allow the REST service to be invoked with the OrderID in the URL shown in the **Example location** field of the dialog box.
-6.  In the same dialog box, click **Select** next to the **Microflow** field. As you do not have a microflow for this operation, click **New** in the following dialog box to create a new microflow for the RESTExample module. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow: 
+  ![](attachments/publish-rest-service/AddOperation.png)
 
-	![](attachments/publish-rest-service/AddOperationMicroflow.png)
+6. In the same dialog box, click **Select** next to the **Microflow** field. As you do not have a microflow for this operation, select the **RESTExample** module in the dialog box and then click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow: 
+
+   ![](attachments/publish-rest-service/AddOperationMicroflow.png)
 
 7. Click **Show** to start editing the newly created microflow.
+
 8. Add two parameters: **httpRequest** and **OrderID**.
+
 9.  Add an action to the microflow to convert the **OrderID** variable (string) to an integer variable. This is needed to be able to search for the OrderID (autonumber).
 
 	![](attachments/publish-rest-service/ConvertOrderID.png)
@@ -114,8 +117,10 @@ To be able to use the data from your model in the REST service, you need to crea
 
 	![](attachments/publish-rest-service/ExportMappingResult.png)
 
-14. Now go back to the **PRS_GetGetOrderByID** microflow and add an Export with mapping activity.
+14. Now go back to the **PRS_GetGetOrderByID** microflow and add an **Export with mapping** activity.
+
 15. In the **Mapping** field of the dialog box, select the mapping created above in [step 11](#eleven). For the **Parameter** field, select the **Order** object retrieved with the database retrieve action in the microflow. 
+
 16. <a name="sixteen"></a>Select **JSON** for the result, and store the output in a **String variable**. Enter *Order_JSON* for the variable's **Name**.
 
 	![](attachments/publish-rest-service/MFExportWithMapping.png)

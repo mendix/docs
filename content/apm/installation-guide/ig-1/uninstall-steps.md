@@ -19,6 +19,7 @@ Import the module APMAgent in the modeler.
 # Delete Mansystems customized widgets
 
 Mansystems customized versions of AppStore widgets
+
 * ManTooltip.mpk
 * StringFormatter.mpk
 * CssSelectorHelperBoolean.mpk

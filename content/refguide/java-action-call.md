@@ -3,6 +3,11 @@ title: "Java Action Call"
 parent: "action-call-activities"
 ---
 
+{{% alert type="info" %}}
+This activity can only be used in microflows, not in nanoflows.
+{{% /alert %}}
+
+## 1 Introduction
 
 The Java action call activity can be used to call a [Java action](java-actions). Arguments can be passed to the action and the result can be stored in a variable.
 
@@ -12,22 +17,22 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 {{% /alert %}}
 
-## Action Properties
+## 2 Action Properties
 
-### Java action
+### 2.1 Java action
 
 The Java action that is called by this activity.
 
-### Arguments
+### 2.2 Arguments
 
-For each parameter of the Java action you have to supply an argument of the same type. The values of the arguments are expressed using [microflow expressions](expressions).
+For each parameter of the Java action you have to supply an argument of the same type. The values of the arguments are expressed using [expressions](expressions).
 
-## Output Properties
+## 3 Output Properties
 
-### Return type
+### 3.1 Return Type
 
 The return type is the [data type](data-types) of the result of the Java action. The return type is defined by the Java action.
 
-### Variable name
+### 3.2 Variable Name
 
 The result of the Java action will be stored in a variable with this name.

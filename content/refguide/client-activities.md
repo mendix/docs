@@ -3,8 +3,7 @@ title: "Client Activities"
 parent: "activities"
 ---
 
-
-## Close form
+## Close Form
 
 See [Close Form](close-form).
 
@@ -16,7 +15,7 @@ See [Download File](download-file).
 
 See [Show Page](show-page).
 
-## Show Home page
+## Show Home Page
 
 See [Show home page](show-home-page).
 

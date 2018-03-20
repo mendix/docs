@@ -1,6 +1,7 @@
 ---
 title: "Rules"
-category: "Modeler"
+parent: "application-logic"
+menu_order: 25
 ---
 
 

@@ -3,6 +3,11 @@ title: "Aggregate List"
 parent: "list-activities"
 ---
 
+{{% alert type="info" %}}
+This activity can only be used in microflows, not in nanoflows.
+{{% /alert %}}
+
+## 1 Introduction
 
 Aggregate List can be used to calculate aggregated values such as the maximum, minimum, sum, average and total amount of objects over a list of objects.
 
@@ -12,15 +17,15 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 {{% /alert %}}
 
-## Input Properties
+## 2 Input Properties
 
-### Variable
+### 2.1 Variable
 
 The list variable to compute an aggregate over.
 
-## Action Properties
+## 3 Action Properties
 
-### Function
+### 3.1 Function
 
 Defines which type of aggregation is applied.
 
@@ -32,12 +37,12 @@ Defines which type of aggregation is applied.
 | Minimum | The minimum of all values of an attribute from the list of objects. |
 | Maximum | The maximum of all values of an attribute from the list of objects. |
 
-### Attribute
+### 3.2 Attribute
 
 Defines which attribute of the objects in the list is used to aggregate over. This must be a numeric attribute (Long, Integer, Float (deprecated), Currency (deprecated) or Decimal). When using the 'Count' function it is not necessary to select an attribute, as it simply counts the number of objects in the list.
 
-## Output
+## 4 Output
 
-### Variable
+### 4.1 Variable
 
 The name of the variable in which the result of the aggregation is stored. This variable will have a numeric data type that is based on the selected function.

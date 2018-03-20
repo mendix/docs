@@ -1,6 +1,6 @@
 ---
 title: "Explore the Connectors and Adapters"
-category: "Extendability"
+category: "Extensibility"
 tags: []
 ---
 

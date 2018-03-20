@@ -111,6 +111,12 @@ Resources and Operations are appended to [Location](#location) to form a URL on 
 
 ![](attachments/published-rest-service/example-location-url.png)
 
-## 6 Related Content
+## 6 Example
+
+**How to publish REST natively with Mendix**
+
+{{% youtube zt1XBnK2LCM %}}
+
+## 7 Related Content
 
 For more information on which operation gets executed for a given request URL, see [Published REST Routing](published-rest-routing).

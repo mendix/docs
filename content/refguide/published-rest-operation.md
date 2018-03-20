@@ -101,6 +101,6 @@ This feature was introduced in version 7.12.0.
 
 The **Parameters** table shows the name, data type, and type of the parameter.
 
-Operation parameters can be either query parameters, path parameters or body parameter. The path and the query parameters are detemined by their placement in the URL. If the parameter is part of the operations location, it will be of the path type. If it is a part of the operation's query string, it will be of the query type. Body parameter comes from requests body.
+An operation parameter can be either a query parameter, a path parameter or a body parameter. Path and the query parameters are detemined by their placement in the URL. If the parameter is part of the operation's location, it is a path parameter. If it is a part of the operation's query string, it is a query parameter. A body parameter comes from the body of the request.
 
 The parameter data type is determined by the microflow of the operation. New parameters that are not yet part of the microflow will have "(Not set)" as their data type.

@@ -4,6 +4,12 @@ title: "Platform Portal"
 
 ## 2018
 
+### March 20th, 2018
+
+#### Improvements
+
+* We enabled ICMP (ping) packets to our Mendix Cloud v4 load balancers. Now you can use tools like ping, traceroute and mtr to debug connectivity issues from your location to Mendix Cloud v4 applications. Note that packets will not reach the actual application but only the load balancers. You can expect latency in the low single digit milliseconds between the load balancers and the applications.
+
 ### March 16th, 2018
 
 #### Improvements

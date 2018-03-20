@@ -23,12 +23,11 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * We improved the drawing and auto-resizing of microflows when a user removes one or more activities from a microflow.
 * In the microflow editor, the **Commit** and **Refresh In Client** properties for **Create Object** and **Change Object** activities now have the default value **True**. This prevents the consequences of users accidentally not setting these properties, as witnessed in many user tests.
 * Java actions and connectors may be part of your microflows (for example, when added to your model using the Desktop Modeler). If so, they are now fully rendered in the Web Modeler's microflow editor. Also, the return type of a Java action is now available for use in microflows.
-* In the page editor, navigation list widgets are now fully rendered.
 * We added support for [Desktop Modeler 7.12.0](../desktop-modeler/7.12). The minimum (and only) supported version is now Desktop Modeler 7.12.0.
 * A maintenance page is now shown when the Web Modeler is unavailable due to maintenance activities by Mendix. 
   
 #### Fixes
-  
+
 * Only the filtering of non-form page templates is now allowed while creating edit pages.
 * The Web Modeler now handles conversion and custom widget requests better. 
   
@@ -37,9 +36,9 @@ These release notes are for the [beta](../beta-features/index) version of the We
 #### Improvements
 
 *	In all dialog boxes, you can now use the <kbd>Ctrl</kbd> + <kbd>Enter</kbd> shortcut to confirm your choices and close the dialog box. For simple dialog boxes containing only one field, pressing only <kbd>Enter</kbd> works to confirm and close the dialog box.
-*	In the domain model editor, it is now possible to swap the direction of an association by using the **Swap Direction** button or icon. If you are unsure which direction an association between two entities should have, you can now create it either way. Then, if the **Multiplicity** property does not contain the option you need, you can switch the association direction to configure it correctly. This will save you time when setting up your domain model.
-*	We introduced a feature to the domain model editor that arranges the position of entities automatically. When your view is becoming cluttered with entity objects and association lines, click the **Auto arrange entities** icon in the upper-left corner of the editor. We’ll then use an algorithm to determine the best possible placement of items on your screen. Still not happy with the result? Click the icon again to see if we can come up with something better.
-*	In both the microflow editor and domain model editor, the canvas will now follow the cursor if it is moved outside the visible area. This makes it easy to work with more extensive microflows and domain models.
+		In the domain model editor, it is now possible to swap the direction of an association by using the **Swap Direction** button or icon. If you are unsure which direction an association between two entities should have, you can now create it either way. Then, if the **Multiplicity** property does not contain the option you need, you can switch the association direction to configure it correctly. This will save you time when setting up your domain model.
+		We introduced a feature to the domain model editor that arranges the position of entities automatically. When your view is becoming cluttered with entity objects and association lines, click the **Auto arrange entities** icon in the upper-left corner of the editor. We’ll then use an algorithm to determine the best possible placement of items on your screen. Still not happy with the result? Click the icon again to see if we can come up with something better.
+		In both the microflow editor and domain model editor, the canvas will now follow the cursor if it is moved outside the visible area. This makes it easy to work with more extensive microflows and domain models.
 
 #### Fixes
 
@@ -122,7 +121,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * We fixed the **Locked by** pop-up window so that the username of the person who locked the app is shown.
 
 ### October 26th, 2017
- 
+
 #### Improvements
 
 * We added support for [Desktop Modeler 7.8.0](../desktop-modeler/7.8).

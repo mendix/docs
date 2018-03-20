@@ -3,11 +3,6 @@ title: "Download File"
 parent: "client-activities"
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
-{{% /alert %}}
-
-## 1 Introduction
 
 The download-file action can be used to enable the browser to download a specific file. The user gets a download popup or the file is shown directly in the browser.
 
@@ -17,15 +12,15 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 {{% /alert %}}
 
-## 2 Input Properties
+## Input Properties
 
-### 2.1 File document
+### File document
 
 Input file document defines the file to be downloaded. The information of the file is stored in an object of entity System.FileDocument or a specialization.
 
-## 3 Action Properties
+## Action Properties
 
-### 3.1 Show File in Browser
+### Show file in browser
 
 Show file in browser defines whether the file is downloaded to a location specified by the user or shown directly in the browser.
 

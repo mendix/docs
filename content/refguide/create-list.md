@@ -3,13 +3,12 @@ title: "Create List"
 parent: "list-activities"
 ---
 
-## 1 Introduction
 
-This activity creates a list variable containing an empty list.
+The Create List activity creates a list variable containing an empty list.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (f\or example, caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 

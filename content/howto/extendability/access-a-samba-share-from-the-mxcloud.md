@@ -1,6 +1,6 @@
 ---
 title: "Access a Samba Share"
-category: "Extensibility"
+category: "Extendability"
 tags: ["Samba", "share"]
 ---
 

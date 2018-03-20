@@ -21,7 +21,7 @@ If you are new to the SAP OData Connector, you can try it out by following our h
 
 ## 2 Using the SAP OData Connector<a name="UsingtheSAPODataConnector"></a>
 
-Once you have downloaded the SAP OData Connector from the App Store, it will be imported into your app. You will find it in the Project Explorer under project **{Project name}** > **App Store modules** > **SAPODataConnector**.
+Once you have downloaded the SAP OData Connector from the App Store, it will be imported into your app. You will find it in the Project Explorer under project 'project name' > App Store modules > SAPODataConnector.
 
 ### 2.1 Microflow Actions
 

@@ -3,19 +3,14 @@ title: "Inheritance Split"
 parent: "splits"
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
-{{% /alert %}}
-
-## 1 Introduction
 
 An inheritance split is an element that makes a choice based on the type of certain variable. For each specialization the microflow can continue in a different way. If you want to use the specialized type in the rest of the microflow you can use a [cast](cast-object) action.
 
 See [Entities](entities) to read more about specialization and generalization.
 
-## 2 Input Properties
+## Input Properties
 
-### 2.1 Variable
+### Variable
 
 The input variable is the variable of which the type is inspected to see how to continue.
 
@@ -27,8 +22,8 @@ Let us say you have an entity Student and an entity Professor which have the ent
 
 {{% /alert %}}
 
-## 3 Common Properties
+## Common Properties
 
-### 3.1 Caption
+### Caption
 
 See [Microflow Element Common Properties](microflow-element-common-properties).

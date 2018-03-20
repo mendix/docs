@@ -1,5 +1,5 @@
 ---
-title: "Change Things in the Model"
+title: "Changing Things in the Model"
 parent: "manipulating-existing-models"
 ---
 
@@ -35,4 +35,4 @@ function createEntitiy(domainModel : domainmodels.DomainModel, entityName : stri
 }
 ```
 
-Continue with [How to Close the Server Connection](closing-the-server-connection).
+Continue with [Closing the Server Connection](closing-the-server-connection).

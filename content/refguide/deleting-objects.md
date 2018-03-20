@@ -3,11 +3,6 @@ title: "Delete Object(s)"
 parent: "object-activities"
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
-{{% /alert %}}
-
-## 1 Introduction
 
 Delete Object can be used to delete one or more objects.
 
@@ -17,15 +12,15 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 {{% /alert %}}
 
-## 2 Input Properties
+## Input Properties
 
-### 2.1 Variable
+### Variabele
 
 The variable that refers to the object or list of objects that will be deleted. If you choose a list, all objects in that list will be deleted.
 
-## 3 Action Properties
+## Action Properties
 
-### 3.1 Refresh in Client
+### Refresh in client
 
 Refresh in client defines whether pages that use the entity of the object being deleted are refreshed.
 

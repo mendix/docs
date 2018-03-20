@@ -6,6 +6,6 @@ parent: "integration-activities"
 
 {{% alert type="warning" %}}
 
-Please see [Export Mapping Action](export-mapping-action) for details on exporting XML.
+The documentation has moved to [Export Mapping Action](export-mapping-action)
 
 {{% /alert %}}

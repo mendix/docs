@@ -3,11 +3,6 @@ title: "Export Mapping Action"
 parent: "microflow-activities"
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
-{{% /alert %}}
-
-
 ## 1 Introduction
 
 ![](attachments/19202807/19399019.png)

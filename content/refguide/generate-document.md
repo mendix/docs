@@ -5,12 +5,6 @@ description: "Describes generating documents from a microflow. "
 tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT"]
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
-{{% /alert %}}
-
-## 1 Introduction
-
 The generate-document microflow action can be used to create a document based on a [template](document-templates).
 
 {{% alert type="info" %}}
@@ -24,15 +18,15 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 {{% /alert %}}
 
-## 2 Input Properties
+## Input Properties
 
-### 2.1 File Document
+### File document
 
 The file document that will contain the generated document. It should be an object of entity System.FileDocument or a specialization thereof.
 
-## 3 Action Properties
+## Action Properties
 
-### 3.1 Language
+### Language
 
 The language in which the titles and labels of the document should appear.
 
@@ -44,7 +38,7 @@ The language in which the titles and labels of the document should appear.
 
 _Default value:_ Current user
 
-### 3.2 Document Type
+### Document type
 
 The document type specifies the type of the generated document.
 
@@ -57,10 +51,10 @@ The document type specifies the type of the generated document.
 | Rich-text format | Generate a document in Rich-text format. |
 | ODT | Generate a document in Open Office (ODT) format. |
 
-### 3.3 Template
+### Template
 
-Template defines which [document template](document-templates) is used to generate the file. Depending on the template being used one or more arguments need to be specified. For each top-level data grid and data view objects of the correct type need to be passed to the template. The value of the argument can be entered using expressions.
+Template defines which [document template](document-templates) is used to generate the file. Depending on the template being used one or more arguments need to be specified. For each top-level data grid and data view objects of the correct type need to be passed to the template. The value of the argument can be entered using microflow expressions.
 
-### 3.4 Override Margins
+### Override margins
 
 Here you can set custom margins for your documents that can be defined at runtime.

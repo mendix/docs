@@ -1,7 +1,6 @@
 ---
-title: "Generate Code from the Model"
+title: "Generating Code from the Model"
 parent: "tutorial-for-the-mendix-sdk"
-menu_order: 50
 ---
 
 ## 1 Introduction

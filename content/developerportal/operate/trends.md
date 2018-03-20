@@ -160,13 +160,7 @@ This graph displays the amount of data that is stored on disk in absolute amount
 
 Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU iowait, disk iops, and number of running requests. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible cpu iowait, filled up memory disk cache, and reports of long running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
 
-{{% alert type="info" %}}
-
-Disk utilization is calculated as the disk usage that is used by the user of the system. Due to operating system overhead and empty space in block size allocation, not all disk space can be fully allocated. For this reason, the total amount of usable space will be ~4% lower than the actual disk space.
-
-{{% /alert %}}
-
-## 6 Related Content
+## 6 Related content
 
 * [Alerts](monitoring-application-health)
 * [Database Maintenance: Size Reduction](/howtogeneral/support/database-maintenance-size-reduction)

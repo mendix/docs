@@ -3,11 +3,6 @@ title: "Import Mapping Action"
 parent: "microflow-activities"
 ---
 
-{{% alert type="info" %}}
-This activity can only be used in microflows, not in nanoflows.
-{{% /alert %}}
-
-
 ## 1 Introduction
 
 With the Import Mapping action, you can import the data stored in an XML or JSON document into [domain model](domain-model) entities.

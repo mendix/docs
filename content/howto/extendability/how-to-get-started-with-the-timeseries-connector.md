@@ -1,6 +1,6 @@
 ---
 title: "Get Started with the TimeSeries Connector"
-category: "Extensibility"
+category: "Extendability"
 tags: ["IoT", "Connector", "TimeSeries", "Big Data", "Analytics"]
 ---
 

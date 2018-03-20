@@ -3,23 +3,21 @@ title: "Create Object"
 parent: "object-activities"
 ---
 
-## 1 Introduction 
-
 The create-object action can be used to create an object.
 
 {{% alert type="info" %}}
 
-See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all microflow activities share (for example, caption). This page only describes the properties specific to the action.
+See [Microflow Element Common Properties](microflow-element-common-properties) for properties that all activities share (e.g. caption). This page only describes the properties specific to the action.
 
 {{% /alert %}}
 
-## 2 Action Properties
+## Action Properties
 
-### 2.1 Entity
+### Entity
 
 The entity of which you want to create an object.
 
-### 2.2 Refresh in Client
+### Refresh in Client
 
 This property specifies whether pages that use the entity of the object being created are refreshed.
 
@@ -36,12 +34,12 @@ Nanoflows do not have this property. All the changes made in a nanoflow refresh 
 
 {{% /alert %}}
 
-### 2.3 Initialize Members
+### Initialize Members
 
-You can initialize members of the newly created object. Values for members are specified with an [expression](expressions) and should be of the same type as the member.
+You can initialize members of the newly created object. Values for members are specified with a [microflow expression](expressions) and should be of the same type as the member.
 
-## 3 Output Properties
+## Output Properties
 
-### 3.1 Variable Name
+### Variable Name
 
 Variable name defines the name of the resulting object variable. It can be used by all activities that follow this activity.

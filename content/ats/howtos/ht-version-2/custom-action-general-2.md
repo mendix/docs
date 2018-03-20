@@ -10,4 +10,3 @@ All the necessary information for the Create Custom Action how-to's is found her
 * [Prerequisites for How-to's](custom-action-prerequisites-2)
 * [Structure for How-to's](custom-action-howto-structure-2)
 * [Helpful Resources](custom-action-helpful-resources-2)
-* [Guidelines for Creating a Custom Action](guidelines-custom-action-2)

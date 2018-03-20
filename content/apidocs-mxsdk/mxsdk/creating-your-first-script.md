@@ -1,5 +1,6 @@
 ---
-title: "Creating Your First Script"
+title: "Create Your First Script"
+menu_order: 20
 parent: "tutorial-for-the-mendix-sdk"
 ---
 
@@ -144,4 +145,4 @@ Note that the steps for project creation (line 3) and committing to the Team Ser
 
 ## 5 Next Step
 
-Continue the tutorial with [Creating the Domain Model](creating-the-domain-model).
+Continue with [How to Create the Domain Model](creating-the-domain-model).

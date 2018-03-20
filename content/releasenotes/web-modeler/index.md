@@ -12,28 +12,25 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ### March 5th, 2018 15:10:44 GMT
 
-#### New Features
-
-  * We added support for Mendix 7.12.0.
-  * Navigation list widgets are now fully rendered in the page editor.
-  * Java actions and connectors are now fully rendered in microflows.
-  * The return type of Java action is now available for use in microflows.
-  
 #### Improvements
- 
-  * We've added tooltips to various controls to make things easier on new users.
-  * The header of the page editor Toolbox is sticky now, so it does not scroll along with the Toolbox contents. 
-  * After dragging an item from the Toolbox, the side panel stays on the Toolbox (for both the domain model editor and microflow editor) .
-  * A maintenance page is now shown when the Web Modeler going to be under maintenance. 
-  * An animation is shown while custom widgets are updated on the Settings page.
-  * The order of the items on the left sidebar has been improved.
-  * We've improved the new page creation flow, reducing the number of steps in the flow.
-  * We improved checking the prerequisites, which prevents breaking the guided product introduction tour in the publishing step. 
+
+* We've added tooltips to various controls to make things easier for new users to comprehend.
+* The header of the page editor toolbox is "sticky" now, so it does not scroll along with the **Toolbox** contents. This makes it easier for users to browse widgets and/or building blocks. 
+* The order of the editors in the left sidebar menu has been improved to better match user expectations and improve overall modeling experience.
+* In both the domain model editor and microflow editor, after dragging an item from the toolbox, the side panel will not toggle to the **Properties** pane. Instead it will keep displaying the **Toolbox**. This improves modeling speed, as we have witnessed in various user tests.
+* An animation is now shown as custom widgets are updated on the **App Settings** page to inform the user that the widget is being updated in the background.
+* Based on user feedback, we improved the guided product introduction tour, available when you select **Start Your First App** from the **Introduction Tour** category in the [Mendix Developer Portal](https://sprintr.home.mendix.com/) when you create a new app.
+* We improved the drawing and auto-resizing of microflows when a user removes one or more activities from a microflow.
+* In the microflow editor, the **Commit** and **Refresh In Client** properties for **Create Object** and **Change Object** activities now have the default value **True**. This prevents the consequences of users accidentally not setting these properties, as witnessed in many user tests.
+* Java actions and connectors may be part of your microflows (for example, when added to your model using the Desktop Modeler). If so, they are now fully rendered in the Web Modeler's microflow editor. Also, the return type of a Java action is now available for use in microflows.
+* In the page editor, navigation list widgets are now fully rendered.
+* We added support for [Desktop Modeler 7.12.0](../desktop-modeler/7.12). The minimum (and only) supported version is now Desktop Modeler 7.12.0.
+* A maintenance page is now shown when the Web Modeler is unavailable due to maintenance activities by Mendix. 
   
 #### Fixes
   
-  * Only filtering of non-form page templates is now allowed while creating edit pages.
-  * The Web Modeler now handles conversion and custom widgets requests better. 
+* Only the filtering of non-form page templates is now allowed while creating edit pages.
+* The Web Modeler now handles conversion and custom widget requests better. 
   
 ### February 7th, 2018 16:28:00 GMT
 

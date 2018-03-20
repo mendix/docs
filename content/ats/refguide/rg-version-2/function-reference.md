@@ -46,9 +46,11 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Get Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Returns the current value of the check box found by the entity attribute value. |
 | Get Total Item/Row Count | DataGrid, TemplateGrid, ListView | Gets the total grid count from the paging status. |
 | Get Validation Message | All widgets | Returns the validation message of a widget. |
-| Get Value | Standard widgets: TextBox, TextArea, DropDown, RadioButtons, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label.<br /> App Store widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix, InputReferenceSelector, RadiobuttonList. | Returns the current value of all supported widgets.|
+| Get Value | Standard widgets: TextBox, TextArea, DropDown, RadioButtons, DatePicker, ReferenceSelector, SearchInput Text, SearchInput DropDown, Label, Input Reference Set Selector.<br /> App Store widgets: OnChange Inputbox, BooleanSlider, BootstrapWysiwygEditor (Bootstrap RTE), CKEditor For Mendix¹, InputReferenceSelector, RadiobuttonList. | Returns the current value of all supported widgets.|
 | Get Visible Item/Row Count | DataGrid, TemplateGrid, ListView | Returns the number of currently visible items/rows in a template grid, data grid, or list view. |
 | Groupbox is Collapsed | GroupBox | Gets the group box collapsed state: true if collapsed, otherwise false. |
+
+¹ The get value function for CKEditor returns the inner HTML of the widget. Because of the way the CKEditor itself is implemented it might generate different html tags depending on which browser is used,  e.g. in some versions of Firefox  a tag - `<br type="_moz">` is added. This has the implication that we can not guarantee that the returned html from "Get Value" will be the same across all browsers.
 
 ## 4 Widget – Assert
 

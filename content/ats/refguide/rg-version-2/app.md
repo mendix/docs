@@ -17,10 +17,17 @@ For the **7-Day History**, a snapshot of the current test states is taken every 
 
 ### 1.2 Report
 
-To generate a PDF report of the status of your tests, click **Download Report**. A dialog will open allowing you to select between two reporting options with regards to the items being included in the report: *All* and *Selected*. If you chose *All*, then all test suites and test cases will be included in the report. If you chose *Selected*, then you can add one or more test cases, test suites or folders that you want to be part of the report. Note that, adding a test suite or a folder will recursively add all nested test suites and test cases.
+To generate a PDF report of the status of your tests, click **Download Report**. A dialog box will open allowing you to select between two reporting options for determining the items included in the report: **All** or **Selected**. If you select **All**, then all test suites and test cases will be included in the report. If you select **Selected**, then you can add one or more test cases, test suites, or folders that you want to be part of the report. 
 
-When you are happy with your selection or have chosen *All* you can proceed with the reporting process by clicking *Generate*. This will open a second dialog where you will get a summary infographics, similar to the one that you see on the *Dashboard*. At this point you can download the report by clicking *Download*. You can cancel the process at any point by clicking the *X* button. Note that the *7-day history* infographic will only be included in the PDF report when you choose *All*.
+{{% alert type="info" %}}
+Adding a test suite or a folder will recursively add all nested test suites and test cases.
+{{% /alert %}}
 
+When you are happy with your selection (or you have just chosen **All**), you can proceed with the reporting process by clicking **Generate**. This will open a second dialog box where you will get a summary infographic, similar to the one that you see on the **Dashboard**. At this point, you can download the report by clicking **Download**. You can cancel the process at any point by clicking the **X** button.
+
+{{% alert type="info" %}}
+The **7-day history** infographic will only be included in the PDF report when you choose **All**.
+{{% /alert %}}
 
 ### 1.3 Recent Tests
 

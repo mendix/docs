@@ -1,5 +1,5 @@
 ---
-title: "AQM"
+title: "Application Quality Monitor"
 ---
 
 ## 1 Introduction

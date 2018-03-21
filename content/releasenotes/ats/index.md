@@ -1,5 +1,5 @@
 ---
-title: "ATS"
+title: "Application Test Suite"
 ---
 These are the release notes for the the Mendix Application Test Suite (ATS):
 

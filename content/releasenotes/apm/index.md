@@ -1,5 +1,5 @@
 ---
-title: "APM"
+title: "Application Performance Monitor"
 ---
 
 These are the release notes for Mendix Application Performance Monitor (APM):

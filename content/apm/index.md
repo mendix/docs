@@ -1,5 +1,5 @@
 ---
-title: "APM"
+title: "Application Performance Monitor"
 ---
 
 This space contains all the documentation for versions 1 and 2 of Application Performance Monitor (APM).

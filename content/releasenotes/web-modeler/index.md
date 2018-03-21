@@ -21,7 +21,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * An animation is now shown as custom widgets are updated on the **App Settings** page to inform the user that the widget is being updated in the background.
 * Based on user feedback, we improved the guided product introduction tour, available when you select **Start Your First App** from the **Introduction Tour** category in the [Mendix Developer Portal](https://sprintr.home.mendix.com/) when you create a new app.
 * We improved the drawing and auto-resizing of microflows when a user removes one or more activities from a microflow.
-* In the microflow editor, the **Commit** and **Refresh In Client** properties for **Create Object** and **Change Object** activities now have the default value **True**. This prevents the consequences of users accidentally not setting these properties, as witnessed in many user tests.
+* In the microflow editor, the **Refresh In Client** property for **Create Object** and **Change Object** activities now has the default value **True**. This prevents the consequences of users accidentally not setting this property, as witnessed in many user tests.
 * Java actions and connectors may be part of your microflows (for example, when added to your model using the Desktop Modeler). If so, they are now fully rendered in the Web Modeler's microflow editor. Also, the return type of a Java action is now available for use in microflows.
 * We added support for [Desktop Modeler 7.12.0](../desktop-modeler/7.12). The minimum (and only) supported version is now Desktop Modeler 7.12.0.
 * A maintenance page is now shown when the Web Modeler is unavailable due to maintenance activities by Mendix. 

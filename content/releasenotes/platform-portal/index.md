@@ -4,6 +4,12 @@ title: "Platform Portal"
 
 ## 2018
 
+### March 21st, 2018
+
+#### Improvements
+
+* Applications in Mendix Cloud v3 that were running for more than 248 days started to use 100% CPU due to an unknown bug in either the Mendix Runtime, the JVM, or a combination thereof. A very small number of applications have been impacted by this, as most applications are updated much more often, and every deployment restarts an application. However, this problem has been causing performance issues for both the affected applications and our infrastructure. As a workaround, we will automatically restart apps that have been running non-stop for 247 days between 01:00 and 07:00 local time of the cloud region. If this happens to an application, you will see a message in the application log. 
+
 ### March 20th, 2018
 
 #### Improvements
@@ -14,7 +20,7 @@ title: "Platform Portal"
 
 #### Improvements
 
-* We changed the browser title from "Mendix App Plaform" to **Mendix Platform** to be consistent with our messaging and [documentation](https://docs.mendix.com/).
+* We changed the browser title from "Mendix App Plaform" to **Mendix Platform** to be consistent with our messaging and documentation.
 * We have improved database storage alerts for Mendix Cloud v4 applications. If you subscribed to your applications' alerts, you will receive a warning alert when you have less than 25% disk space on your applications' databases and a critical alert when disk space is below 10%. You need to re-deploy your application to activate this alert.
 * Live logging for Mendix Cloud v4 applications is here! You can now view logs neatly and in real-time.
 * Hybrid mobile improvements: you can now generate icons and splash screens, add custom loader and error images, and add custom HTML and CSS. We also added a new theming section for minor color tweaks.

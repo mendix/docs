@@ -4,6 +4,27 @@ title: "Platform Portal"
 
 ## 2018
 
+### March 20th, 2018
+
+#### Improvements
+
+* We enabled ICMP (ping) packets for our Mendix Cloud v4 load balancers. Now you can use tools like ping, traceroute, and mtr to debug connectivity issues from your location to Mendix Cloud v4 applications. Note that packets will not reach the actual application but only the load balancers. You can expect latency in the low single-digit milliseconds between the load balancers and applications.
+
+### March 16th, 2018
+
+#### Improvements
+
+* We changed the browser title from "Mendix App Plaform" to **Mendix Platform** to be consistent with our messaging and [documentation](https://docs.mendix.com/).
+* We have improved database storage alerts for Mendix Cloud v4 applications. If you subscribed to your applications' alerts, you will receive a warning alert when you have less than 25% disk space on your applications' databases and a critical alert when disk space is below 10%. You need to re-deploy your application to activate this alert.
+* Live logging for Mendix Cloud v4 applications is here! You can now view logs neatly and in real-time.
+* Hybrid mobile improvements: you can now generate icons and splash screens, add custom loader and error images, and add custom HTML and CSS. We also added a new theming section for minor color tweaks.
+
+#### Fixes
+
+* Users of Mendix Cloud V4 applications will now see a notification if their environment fails to clean properly.
+* The health status of newly-created Mendix Cloud v4 applications used to be reflected with a red cross. This has been fixed.
+* The **Deploy** and **Operate** deep links were not available in the **Security** menu for user groups without monitoring access. This has been fixed.
+
 ### March 13th, 2018
 
 #### Improvements

@@ -13,7 +13,7 @@ addons:
   space: "Other Add-ons"
   priority: false
   menu_categories:
-    - "AQM"
+    - "Application Quality Monitor"
 apm:
   space: "Application Performance Monitor"
   priority: false
@@ -182,9 +182,9 @@ releasenotes:
     - "Platform SDK"
     - "Hybrid App"
     - "Mendix Mobile App"
-    - "APM"
-    - "ATS"
-    - "AQM"
+    - "Application Test Suite"
+    - "Application Platform Monitor"
+    - "Application Quality Monitor"
     - "Beta Features"
 developerportal:
   space: "Developer Portal"

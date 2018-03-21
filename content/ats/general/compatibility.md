@@ -24,7 +24,7 @@ category: "General"
 
 #### Known Limitations
 
-* When running tests on Windows XP they run with Firefox version 45. Firefox 45 is the latest version that is supported on Windows XP.
+* When running tests on Windows XP, they run with Firefox version 45. Firefox 45 is the latest version that is supported on Windows XP.
 
 ### Chrome
 
@@ -36,7 +36,7 @@ category: "General"
 
 #### Known Limitations
 
-+ When running tests on Windows XP they run with Chrome version 49. Chrome 49 is the latest version that is supported on Windows XP.
++ When running tests on Windows XP, they run with Chrome version 49. Chrome 49 is the latest version that is supported on Windows XP.
 
 ### Internet Explorer
 
@@ -44,14 +44,14 @@ category: "General"
 | ----------- | ------------------------- | ----- |
 | 2.x         | 11.x                      |       |
 
-Please be aware that we can not always guarantee the same smooth experience when testing with Internet Explorer (IE). IE is comparable slow and outdated. Also the support for automation by Microsoft and the Selenium project is much less mature, stable and efficient.
+Please be aware that we can not always guarantee the same smooth experience when testing with Internet Explorer (IE). IE is comparably slow and outdated. Also, the support for automation by Microsoft and the Selenium project is much less mature, stable, and efficient.
 
 Internet Explorer gets the same development attention as other browsers. However, there's no guarantee that all features of ATS can be made available for IE without limitations.
 
 #### Known Limitations
 
-+ IE one in a while produces typos when keys are sent to the browser. This can result in wrong values being set to input fields.
-+ Running tests on Windows XP with Internet Explorer is not possible
+* IE can produce typos when keys are sent to the browser, which can result in wrong values being set to input fields
+* Running tests on Windows XP with Internet Explorer is not possible
 
 ### Other Browsers
 

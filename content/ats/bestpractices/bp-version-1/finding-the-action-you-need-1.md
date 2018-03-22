@@ -223,7 +223,7 @@ ATS also has a few specific actions for getting a value from an widget. To find 
 
     ![](attachments/finding-the-action-you-need-1/get-ckeditor-value-action-search-1.png)
 
-3. Example, you want to get the message displayed in the dialog box widget. You cannot use the _Get Value_ action because there is no `mx-name.
+3. Example, you want to get the message displayed in the dialog box widget. You cannot use the _Get Value_ action because there is no `mx-name`.
 
     The solution is to use the following search term "Get Dialog".  ATS checks all the actions and returns those that match these words. You see there is an action called [_Get Dialog Message Text_](/ats/refguide/rg-version-1/get-dialog-message-text). The  _Get Dialog Message Text_ action uses the dialog as a WebElement to retrieve the message text. You use the _Find/Assert Dialog_ action to get the dialog as a WebEelement.
 

@@ -31,7 +31,6 @@ Operating System | Sauce Labs | TestingBot | BrowserStack
 [//]: # (We should group the tables by provider)
 [//]: # (see for example provider_platform_browser_compatiblitiy_table.md)
 
-
 ## 2 Supported Screen Resolutions
 
 ATS supports different screen resolutions for every operating system. The following lists show the currently supported resolutions for each operating system.

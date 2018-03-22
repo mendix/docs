@@ -29,7 +29,7 @@ To replace the UI Framework, follow these steps:
 
 1. Delete the **UI_Resources** module.
 2. Download and import the [Atlas UI Resources](https://appstore.home.mendix.com/link/app/104730/Mendix/Atlas-UI-Resources) module from the Mendix App Store.
-3.  When the Atlas UI Resources module is downloaded from the Mendix App Store, it will be found in **App Store modules**:
+3. When the Atlas UI Resources module is downloaded from the Mendix App Store, it will be found in **App Store modules**:
 
     ![](attachments/howto/migrate_dm_appstore.png)
 

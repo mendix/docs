@@ -7,7 +7,7 @@ tags: ["Deployment", "IBM", "IBM Cloud", "Environment"]
 
 ## 1    Introduction
 
-As a Mendix user with an IBM Cloud account you have access to many IBM resources which you want to use in a Mendix app. This How-to shows you how to create a Mendix app on the Mendix platform and then deploy it to IBM Cloud.  
+As a Mendix user with an IBM Cloud account you have access to many IBM resources which you want to use in a Mendix app. This how-to shows you how to create a Mendix app on the Mendix platform and then deploy it to IBM Cloud.  
 
 **This how-to will teach you how to do the following:**
 
@@ -15,26 +15,28 @@ As a Mendix user with an IBM Cloud account you have access to many IBM resources
 * Create a deployment package on the IBM Cloud
 * Deploy and test your app on the IBM Cloud 
 
-## 2    Prerequisites
+## 2 Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* You have an [IBM Cloud account](https://console.bluemix.net/registration/)
-* You have [downloaded the Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) — you will need 7.11.0 or later
-* You are familiar with the basic concepts of editing and deploying a Mendix app ([here](https://docs.mendix.com/howto/tutorials/) are a number of Mendix tutorials which cover these)
+* Have an [IBM Cloud account](https://console.bluemix.net/registration/)
+* Download the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) — you will need 7.11.0 or higher
+* Be familiar with the basic concepts of editing and deploying a Mendix app ([here](/howto/tutorials/) are a number of Mendix tutorials which cover these)
 
-## 3    Create the New App and Setup IBM Cloud
+## 3 Creating the New App and Setting Up IBM Cloud
 
 You have decided to create a new Mendix app using an IBM template which you will ask Mendix to deploy to your IBM Cloud.
 
-### 3.1 Create a new app
+### 3.1 Create a New App
+
+To start creating a new app, follow these steps:
 
 1. Log in to your Mendix Account.
-2. Click **Create App** to create a new app.
+2.  Click **Create App** to create a new app.
 
     ![](attachments/ibm-cloud/createapp.png)
 
-3. Click on an IBM app to choose it as the starting point for your app.
+3.  Click on an IBM app to choose it as the starting point for your app.
 
     ![](attachments/ibm-cloud/choosestartingpoint.png)
 
@@ -48,7 +50,7 @@ You have decided to create a new Mendix app using an IBM template which you will
 
 You are now on IBM Cloud and need to tell it more about your project, so that IBM Cloud can add the resources you need.
 
-1. Click **Setup Cloud**.
+1.  Click **Setup Cloud**.
 
     ![](attachments/ibm-cloud/landing.png)
 

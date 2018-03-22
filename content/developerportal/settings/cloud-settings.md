@@ -2,7 +2,7 @@
 title: "Cloud Settings"
 category: "Settings"
 description: "This page shows the cloud settings of your app."
-tags: ["Settings", "App", "Developer Portal", "Cloud", "IBM". "SAP"]
+tags: ["Settings", "App", "Developer Portal", "Cloud", "IBM", "SAP"]
 ---
 
 ## 1 Introduction

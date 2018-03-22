@@ -49,9 +49,11 @@ Operating System | Chrome     | Firefox    | Internet Explorer
 **OS X Yosemite** | &#10003; | &#10003; | N/A
 **OS X Mavericks** | &#10003; | &#10003; | N/A
 
+## 5 Notes
+
 &#x00B9; Version 45.  
-&#x00B2; Due to provider limitations this is not available. Highest possible Firefox version is 47 for which this provider does not allow Selenium v3.8.1.  
+&#x00B2; Due to provider limitations, this is not available. The highest possible Firefox version is 47, for which this provider does not allow Selenium v3.8.1.  
 &#x00B3; Version 7. This version is not supported by Mendix, but you can still run tests on it against non-Mendix apps.  
-&#x2074; Windows xp is not supported by suacelabs since end of September 2017. https://wiki.saucelabs.com/pages/viewpage.action?pageId=70074721  
+&#x2074; Windows XP is not supported by Saucelabs since the end of September 2017. Source: [https://wiki.saucelabs.com/pages/viewpage.action?pageId=70074721](https://wiki.saucelabs.com/pages/viewpage.action?pageId=70074721)
 &#x2075; Version 47.  
-&#x2076; Due to provider limitations regarding the selenium version, this is not available. 
+&#x2076; Due to provider limitations regarding the Selenium version, this is not available. 

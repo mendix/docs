@@ -33,6 +33,8 @@ To replace the UI Framework, follow these steps:
 
     ![](attachments/howto/migrate_dm_appstore.png)
 
+4. Example.
+
 After the import is complete, there may be some errors in the **Error** pane for navigation profiles or layouts that do not exist. Be sure to resolve all of these errors.
 
 Once the Atlas UI Resources module is imported, all the new resources will be available in the Desktop Modeler and Web Modeler. When creating a new page, a new set of page templates for all devices will be available. In the **Toolbox**, a new tab will be added called **Building blocks**. You can drag building blocks from this pane onto your pages.

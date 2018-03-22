@@ -72,11 +72,11 @@ If you want to find something more specific inside a widget or the widget does n
 
 In case you cannot find a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](/ats/howtos/ht-version-1/create-custom-actions).
  
- ## 2 Clicking a widget
+## 2 Clicking a widget
 
  In ATS there are many actions for clicking a widget. From clicking a widget to clicking a specific datagrid row. The first chapter explains the generic action for clicking a widget. The second chapter explains the actions that conduct a more specific click. The last chapter provides a summary of the first two chapters. The magic word while searching for an action that can click something is "Click".
 
- ### 2.1 Generic Action
+### 2.1 Generic Action
 
  When you want to click a widget the main choice is always the [_Click Widget_](/ats/refguide/rg-version-1/click-widget) action. It clicks the widget you need using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of  `mx-name`.
 

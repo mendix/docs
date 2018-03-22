@@ -3,9 +3,11 @@ title: "Compatibility Table"
 parent: "test-run"
 ---
 
-# Provider/Operating System/Browser Compatibility Table
+## 1 Introduction
 
-## Browserstack
+The following tables document provider, operating system, and browser compatability. 
+
+## 2 Browserstack
 
 Operating System | Chrome     | Firefox    | Internet Explorer
 ---------------- | :--------: | :--------: | :------------------:
@@ -19,9 +21,7 @@ Operating System | Chrome     | Firefox    | Internet Explorer
 **OS X Yosemite** | &#10003; | &#10003; | N/A
 **OS X Mavericks** | &#10003; | &#10003; | N/A
 
-
-
-## Saucelabs
+## 3 Saucelabs
 
 Operating System | Chrome     | Firefox    | Internet Explorer
 ---------------- | :--------: | :--------: | :------------------:
@@ -35,9 +35,7 @@ Operating System | Chrome     | Firefox    | Internet Explorer
 **OS X Yosemite** | &#10003; | &#10003;&#x2075; | N/A
 **OS X Mavericks** | &#10003; | &#10003; | N/A
 
-
-
-## Testingbot
+## 4 Testingbot
 
 Operating System | Chrome     | Firefox    | Internet Explorer
 ---------------- | :--------: | :--------: | :------------------:

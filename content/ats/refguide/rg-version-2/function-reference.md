@@ -50,7 +50,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Get Visible Item/Row Count | DataGrid, TemplateGrid, ListView | Returns the number of currently visible items/rows in a template grid, data grid, or list view. |
 | Groupbox is Collapsed | GroupBox | Gets the group box collapsed state: true if collapsed, otherwise false. |
 
-¹ The get value function for CKEditor returns the inner HTML of the widget. Because of the way the CKEditor itself is implemented it might generate different html tags depending on which browser is used,  e.g. in some versions of Firefox  a tag - `<br type="_moz">` is added. This has the implication that we can not guarantee that the returned html from "Get Value" will be the same across all browsers.
+¹ The Get Value function for CKEditor returns the inner HTML of the widget. Because of the way the CKEditor is implemented, it might generate different HTML tags depending on which browser is used (for example, in some versions of Firefox, the tag `<br type="_moz">` is added. This means that we cannot guarantee that the returned HTML from Get Value will be the same across all browsers.
 
 ## 4 Widget – Assert
 

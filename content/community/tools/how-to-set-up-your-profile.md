@@ -90,15 +90,15 @@ You can only earn a pair of socks for your first Mendix user review. Subsequent 
 
 ### 3.3 Featured Achievement
 
-You will also a featured achievement on your Community Profile dashboard:
+There is also a featured achievement on your profile's dashboard:
 
 [//]: # "UPDATE SCREENSHOT WITH FINALIZED EXAMPLE"
 
 ![](attachments/how-to-set-up-your-profile/featured-achievement.png)
 
-The featured achievement presents a [multi-level badge](https://developer.mendixcloud.com/link/badges) you can strive to win by working on the Mendix Platform and gaining Mendix points. The header will always feature the next badge level for you to work towards. The badges are color-coded based on their rarity, from green (least rare), to blue, to purple, and to orange (most rare).
+The featured achievement presents a [multi-level badge](https://developer.mendixcloud.com/link/badges) you can strive to win by working on the Mendix Platform and completing certain tasks. The header will always feature the next badge level for you to work towards. The badges are color-coded based on their rarity, from green (least rare), to blue, to purple, and to orange (most rare).
 
-This will help you keep track of your progress on the Mendix Platform and how many Mendix points you are gaining. Seeing how many badges you can gain and paying attention to the featured achievement are great ways to stay engaged with the Mendix community!
+The badges help you keep track of your progress on the Mendix Platform and what you are learning to do. And working towards gaining the badges in the featured achievement is a great way to stay engaged with the Mendix community!
 
 ## <a name="publicprofile"></a>4 Editing Your Public Profile
 

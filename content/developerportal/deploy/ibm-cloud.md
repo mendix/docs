@@ -60,8 +60,7 @@ You are now on IBM Cloud and need to tell it more about your project, so that IB
 
     ![](attachments/ibm-cloud/createnewproject.png)
 
-    {{% alert type="info" %}}
-    Currently you can only deploy your project in the **US South** region, so make sure that this is selected in **Select region to deploy in**.
+    {{% alert type="info" %}}Currently you can only deploy your project in the **US South** region, so make sure that this is selected in **Select region to deploy in**.
     {{% /alert %}}
 
 3. Click **Create Project**
@@ -100,7 +99,7 @@ You are now on IBM Cloud and need to tell it more about your project, so that IB
 
     Your IBM environment is now configured.
 
-### 3.2 Create package on IBM Cloud
+### 3.3 Create package on IBM Cloud
 
 1.  Click **Edit on Mendix** to return to Mendix.
 
@@ -124,8 +123,8 @@ You are now on IBM Cloud and need to tell it more about your project, so that IB
     ![](attachments/ibm-cloud/selectrevision.png)
 
     {{% alert type="info" %}}You will see a number if revisions. Note that a package cannot be created from the first revision as this contains no application template.
-
-    Please do not choose to create a package from revision number 1.
+    {{% /alert %}}
+    {{% alert type="info" %}}Please do not choose to create a package from revision number 1.
     {{% /alert %}}
 
 6. Optionally, type a **Tag description** for this build and, if required, set the version number.
@@ -148,7 +147,7 @@ You are now on IBM Cloud and need to tell it more about your project, so that IB
 
     ![](attachments/ibm-cloud/packagedetails.png)
 
-### 3.3 Deploy package on IBM Cloud
+### 3.4 Deploy package on IBM Cloud
 
 When the project is built it will appear in the list of deployment packages. While it is being built, there will be a 'spinner' showing that the package is not yet complete. Once the package is ready for deployment this will be replaced by a tick.
 
@@ -182,8 +181,7 @@ When the project is built it will appear in the list of deployment packages. Whi
 
 7.  Click **View App** to run and view your app.
 
-    {{% alert type="info" %}}
-    Under some circumstances this button is not active. You may have to refresh the page, or go to another page and return to make it active.
+    {{% alert type="info" %}}Under some circumstances this button is not active. You may have to refresh the page, or go to another page and return to make it active.
     {{% /alert %}}
 
     You can also view your app directly using the url which is given to you:

@@ -16,6 +16,7 @@ In **Cloud Settings**, you can select the cloud platform on which to deploy your
 If you select a non-Mendix cloud platform like SAP or IBM you will be redirected to a page to complete the setup. If you select Mendix Cloud no additional setup is needed.
 
 The specific steps for setting up on different cloud platforms:
+
 * [Deploy on premises](/deployment/on-premises)
 * [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform)
 * [IBM Cloud Platform](/developerportal/deploy/ibm-cloud)

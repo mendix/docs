@@ -28,9 +28,9 @@ Your profile will open to the **My Dashboard** tab, where you can see your point
 
 You can also see your Mendix **Activity**, which is a list of the most important public events for which you have gained Mendix points.
 
-[//]: # "UPDATE SCREENSHOT WITH FEATURED ACTIVITY CARD"
-
 ![](attachments/how-to-set-up-your-profile/my-dashboard.png)
+
+The other sections of your Community Profile are described below.
 
 ### 3.1 <a name="invite"></a>Inviting Friends and Colleagues to Mendix
 
@@ -92,11 +92,9 @@ You can only earn a pair of socks for your first Mendix user review. Subsequent 
 
 There is also a featured achievement on your profile's dashboard:
 
-[//]: # "UPDATE SCREENSHOT WITH FINALIZED EXAMPLE"
-
 ![](attachments/how-to-set-up-your-profile/featured-achievement.png)
 
-The featured achievement presents a [multi-level badge](https://developer.mendixcloud.com/link/badges) you can strive to win by working on the Mendix Platform and completing certain tasks. The header will always feature the next badge level for you to work towards. The badges are color-coded based on their rarity, from green (least rare), to blue, to purple, and to orange (most rare).
+The featured achievement presents a [multi-level badge](https://developer.mendixcloud.com/link/badges) you can strive to win by working on the Mendix Platform and completing certain tasks. The header will always feature the next badge level for you to work towards. The badges are color-coded based on their rarity, from green (least rare), to blue, purple, and orange (most rare).
 
 The badges help you keep track of your progress on the Mendix Platform and what you are learning to do. And working towards gaining the badges in the featured achievement is a great way to stay engaged with the Mendix community!
 

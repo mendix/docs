@@ -30,8 +30,9 @@ You can also see your Mendix **Activity**, which is a list of the most important
 
 ![](attachments/how-to-set-up-your-profile/my-dashboard.png)
 
-<a name="invite"></a>
-### 3.1 Inviting Friends and Colleagues to Mendix
+The other sections of your Community Profile are described below.
+
+### 3.1 <a name="invite"></a>Inviting Friends and Colleagues to Mendix
 
 On your dashboard, you can invite friends and colleagues to join Mendix. After you click **Invite Friends**, a pop-up window titled **Get your free t-shirt** appears where you can invite someone by entering their email address and clicking **Send invite**. There is also a personal referral link provided, which you can share on your personal website, blog, and social media channels to get more referrals. You will earn some Mendix swag with five successful invites.
 
@@ -50,7 +51,7 @@ Once five of your referrals reach the **Successful** status, you will see the **
 
 ![](attachments/how-to-set-up-your-profile/claim-tshirt.png)
 
-### <a name="review"></a>3.2 Writing User Reviews of Mendix
+### 3.2 <a name="review"></a>Writing User Reviews of Mendix
 
 Once you start using Mendix regularly and are familiar with all the capabilities of the platform, you can write user reviews on [Gartner Peer Insights](https://www.gartner.com/reviews/market/mobile-application-development-platforms/vendor/mendix/product/mendix-platfor), [TrustRadius](https://www.trustradius.com/products/mendix/reviews), and [G2 Crowd](https://www.g2crowd.com/products/mendix/reviews). This is another way for you to earn Mendix swag!
 
@@ -86,6 +87,16 @@ If your review has been declined, you can write a new one and submit it.
 {{% alert type="info" %}}
 You can only earn a pair of socks for your first Mendix user review. Subsequent reviews will still earn you Mendix points.
 {{% /alert %}}
+
+### 3.3 Featured Achievement
+
+There is also a featured achievement on your profile's dashboard:
+
+![](attachments/how-to-set-up-your-profile/featured-achievement.png)
+
+The featured achievement presents a [multi-level badge](https://developer.mendixcloud.com/link/badges) you can strive to win by working on the Mendix Platform and completing certain tasks. The header will always feature the next badge level for you to work towards. The badges are color-coded based on their rarity, from green (least rare), to blue, purple, and orange (most rare).
+
+The badges help you keep track of your progress on the Mendix Platform and what you are learning to do. And working towards gaining the badges in the featured achievement is a great way to stay engaged with the Mendix community!
 
 ## <a name="publicprofile"></a>4 Editing Your Public Profile
 

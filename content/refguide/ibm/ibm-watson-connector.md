@@ -28,6 +28,7 @@ The [IBM Watson Connector Suite](https://appstore.home.mendix.com/link/app/2860/
 To use IBM Watson services you must have an account on [IBM Cloud](https://www.ibm.com/cloud/). There are various pricing points for this, and there are free options available to allow you to try out IBM services. You can then add Watson services to projects on your IBM Cloud account: see [Getting started with Watson and IBM Cloud](https://console.bluemix.net/docs/services/watson/index.html). Once you have added a service to your account you will be given credentials which you use each time you want to access the service.
 
 To view the credentials:
+
 * Go to your existing services.
 * Select the top-left menu, and then select Watson to get to the Watson console.
 * Select Existing Services from Watson Services to view a list of your services and projects.
@@ -97,6 +98,7 @@ The ConversationContext contains the ConversationId. This is a unique identifier
 The name you wish to assign to an object of type ConversationMessageResponse which is the response received from Watson.
 
 The ConversationMessageResponse contains to following:
+
 * Input — the input which was sent to Watson. This is the same as the input string above
 * Output — the response from Watson to the input
 * ConversationId — the ConversationId. This is the same as the ConversationId passed in the Conversation context.
@@ -143,7 +145,7 @@ This is the language in which the text detected in the speech file should be tra
 
 The name you want to give to the object of type SpeechReturn which is returned by the IBM Speech to Text Analyzer.
 
-The domain model for this action allows for several interim responses. In this implementation, however, you will only get a final result (with _final set to true) because the connector cannot analyze a stream, only a complete file.
+The domain model for this action allows for several interim responses. In this implementation, however, you will only get a final result (with `_final` set to true) because the connector cannot analyze a stream, only a complete file.
 
 ![](attachments/ibm-watson-connector/speechtotext-dm.png)
 
@@ -357,6 +359,7 @@ The IBM Watson Connector Suite currently supports only one positive and one nega
 {{% /alert %}}
 
 An object of type Classifier. This is associated with the following objects.
+
 * one TrainingImagesZipFile objects via the association Classifier_positiveTrainingImagesZipFile. This is the positive example files described above.
 * one TrainingImagesZipFile objects via the association Classifier_negativeTrainingImagesZipFile. This is the negative example file described above.
 
@@ -477,11 +480,8 @@ Additionally, the IBM Watson Connector Suite does not yet have actions for all t
 
 This section presents example user scenarios that can be referenced when using these features.
 
-### 7.1 {Example User Scenario}
+[//]: # (### 7.1 {Example User Scenario})
 
-{Describe the example user scenario.}
-
--->
 ## 5 Related Content
 
 * [Getting started with Watson and IBM Cloud](https://console.bluemix.net/docs/services/watson/index.html)

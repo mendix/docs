@@ -10,6 +10,7 @@ category: "Mendix Support"
 In this how-to you will learn how to export a Mendix project package (.mpk) from the Mendix Modeler. You can export a project package for backup purposes or to share it with other Mendix developers.
 
 **This how-to will teach you how to do the following:**
+
 *   How to export a Mendix project to a Mendix Package file
 *   How to exclude data from the export
 *   How to include data in the export

@@ -19,7 +19,7 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 ## 2 Action Properties
 
-###2.1 Type
+### 2.1 Type
 
 Type defines the color scheme and icon of the message.
 

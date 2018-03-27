@@ -1,6 +1,6 @@
 ---
 title: "SAP Cloud Platform"
-category: "Deploy"
+parent: "environments"
 description: "Reference documentation on SAP Cloud deployment portal"
 tags: ["SAP", "SAP Cloud Portal", "Deployment", "Environment"]
 ---

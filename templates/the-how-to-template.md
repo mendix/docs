@@ -26,9 +26,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 * {Prerequisite 1}
 * {Prerequisite 2}
 
-## 3 {Title of Section}
+## 3 {Title of Section [Use Present Participle Verb/Gerund]}
 
-In this section...
+To {do this task}, follow these steps:
 
 1. {Step 1}
 2. {Step 2}

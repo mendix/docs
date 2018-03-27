@@ -166,7 +166,7 @@ To develop widgets and submit them to the App Store, follow these guidelines:
 * A function may not be larger than 200 lines of code
 * A function may only do one thing, and it should do it properly
 * Internal variables should start with an underscore (`_`)
-* The Dojo library and its functionalities are leading, but for external plugins you can use jQuery
+* Using the Dojo Toolkit and its functionalities is preferred, but for external plugins you can use jQuery
 * Create a test project based on the [AppStoreBoilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate)
 * Create test pages for mobile when content is mobile-supported
 

@@ -21,6 +21,12 @@ Only non-persistable objects, new objects, and changed objects are tracked. This
 
 Unchanged existing objects are not tracked in a request scope. They will get tracked only if they get changed!
 
+{{% alert type="warning" %}}
+
+Note, that the Mendix Runtime cannot return the object state to the client when the client does not have sufficient permissions to access that state. That is, if a user triggers a microflow that changes but does not commit an object that user has no read access to, the change will be discarded at the end of the request.
+
+{{% /alert %}}
+
 ### 4 Scope of Tracking
 
 The objects are tracked in a request scope. A request scope is always smaller than a session scope and can be shared among contexts. When using the API `ISession.createContext()`, a new request scope is created along with the new context. When a context get cloned, the request scope is shared with the cloned context. Changes to the request scope are visible to all the cloned contexts.

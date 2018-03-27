@@ -34,7 +34,6 @@ Data will always be stored in the same political region for the following region
 *   Data in the EU, including backups, will stay within the EU
 *   Data in the US, including backups, will stay within the US
 
-
 ## 5 Does Mendix Expose the Underlying Cloud Foundry API?
 
 No, we do not. The Cloud Foundry API does not map one-to-one to our deployment options, our authorization model, or our cloud resource usage. However, deployment on the Mendix Cloud can be automated using the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api).
@@ -74,7 +73,7 @@ These are the differences between Mendix Cloud v3 and Mendix Cloud v4:
 There are some features missing in v4. Mendix will implement the following features in the near future:
 
 * Using client certificates for access restriction profiles is not available; for outgoing connections, client certificates are available
-* File storage usage is not visible.
+* File storage usage is not visible
 * Application CPU alerts are not sent
 * Archived logs can only be downloaded, not viewed in the browser
 * The database status is not visible on the node details screen

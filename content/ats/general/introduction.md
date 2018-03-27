@@ -76,4 +76,4 @@ The SCRUM Master of your app can access the **Test Settings** from the profile m
 
 All other roles in your app have access to ATS. The only difference is that the SCRUM Master can access the **Test Settings** of your app.
 
-For more information please read the [Reference Guide](../refguide/rg-version-2/rg-version-2.md)
+For more information please read the [Reference Guide](../refguide/rg-version-2/rg-version-2)

@@ -6,7 +6,9 @@ tags: ["IoT", "Connector", "TimeSeries", "Big Data", "Analytics"]
 
 ## 1 Introduction
 
-This how-to is focussed on implementing and understanding the TimeSeries Connector and the TimeSeries Analytics platform. The TimeSeries Connector is especially useful when your application needs to handle large amounts of data. Let's look at the IoT trend we see recently, one hundred sensors that send data each minute will send 144.000 objects to your database per day, one hundred and fifty will send 216.000 objects. See how these numbers start to add up once you add a few more sensors? Now imagine having your standard relational database handle this amount of data, let alone perform analysis on it. The TimeSeries Analytics platform is designed specifically to handle these amounts of data.
+This how-to is focussed on implementing and understanding the TimeSeries Connector and the TimeSeries Analytics platform. The TimeSeries Connector is especially useful when your application needs to handle large amounts of data. 
+
+When looking at the IoT trend recently, one hundred sensors that send data each minute will send 144.000 objects to your database per day, one hundred and fifty will send 216.000 objects. See how these numbers start to add up once you add a few more sensors? Now imagine having your standard relational database handle this amount of data, let alone perform analysis on it. The TimeSeries Analytics platform is designed specifically to handle these amounts of data.
 
 **This how-to will teach you how to do the following:**
 
@@ -75,9 +77,9 @@ Let's take the concept of a house. In this scenario the house is an asset, of wh
 The module comes with a ready-to-use domain model, which we'll also use in this how-to. Of course, this isn't a necessity, and you can also use your own domain model. All referenced microflows in this how-to can also be found in the module.
 
   {{% alert type="warning" %}}
-  
+
   If you want to use your own domain model, make sure that your entities have the necessary attributes for every action that requires a Type Parameter.
-  
+
   {{% /alert %}}
 
 The domain model looks like this:

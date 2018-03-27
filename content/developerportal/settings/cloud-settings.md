@@ -7,7 +7,9 @@ tags: ["Settings", "App", "Developer Portal", "Cloud", "IBM", "SAP"]
 
 ## 1 Introduction
 
-In **Cloud Settings**, you can select the cloud platform on which to deploy your app. You can switch to different cloud platforms later. To select a different cloud platform, your project role must have edit rights on **App settings**. If you have the default roles only the **SCRUM Master** has these rights.
+In **Cloud Settings**, you can select the cloud platform on which to deploy your app. You can switch to different cloud platforms later. The selection of cloud platforms available will depend on the features of your Mendix account.
+
+To select a different cloud platform, your project role must have edit rights on **App settings**. If you have the default roles only the **SCRUM Master** has these rights.
 
 ![](attachments/cloudsettings.png)
 

@@ -91,11 +91,13 @@ To resolve the radio button error, follow these steps:
     ![](attachments/use-app-store-content-in-the-modeler/18580436.png)
 
     In this example, the **Target attribute** property in the radio button is required.
+
 2. Double-click the radio button to open all of its options in the **Edit Custom Widget** editor. Notice that the **Target attribute** is empty or set to none:
 
     ![](attachments/use-app-store-content-in-the-modeler/18580435.png)
 
 3. Double-click **Select**, which will open the **Select Attribute** dialog box.
+
 4. Select the attribute that you want to display as a radio button. Note that the radio button works on Booleans and enumeration attribute types.
 
     ![](attachments/use-app-store-content-in-the-modeler/18580434.png)

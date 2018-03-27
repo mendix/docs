@@ -1,6 +1,7 @@
 ---
 title: "Metrics"
 category: "Operate"
+menu_order: 10
 description: "This page describes the Metrics page of the Developer Portal."
 tags: ["Operate","App","Trends","Running now","Cache","Metrics","Developer Portal"]
 ---

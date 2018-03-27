@@ -20,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Create the app in the Mendix Desktop Modeler 7.5.1 or higher
 * Get the SAP OData Connector module
-* Get an SAP Data Model
+* Get an SAP data model
 
 ### 2.1 Getting the SAP OData Connector Module
 

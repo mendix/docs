@@ -5,32 +5,29 @@ category: "General"
 
 ## 1 ATS Start Page
 
-When you log in to the Application Test Suite (ATS) as a user you see the _My Projects_ page. If there are no projects on your account yet, you are prompted to create a new Project. For project creation see the ReferenceGuide_Projects page of the documentation.
+When you log in to the Application Test Suite (ATS) you see the **My apps** page. This page displays all the Mendix apps you are a member of and have an ATS license. Every member of the team in your app has access to ATS.
 
-![Start page when there is no project created yet](attachments/introduction/21168193.png)
+![The My apps page](attachments/introduction/my-apps.png)
 
-If you already have active projects you can see directly how many test cases have passed in every project. You can now view a specific project or create a new one.
-
-![My Projects overview page](attachments/introduction/21168194.png)
+Each app has a doughnut chart that displays how many test cases inside that app are passed. This allows for a quick overview of the progress of your apps.
 
 ## 2 ATS Dashboard
 
-When you open an empty project for the first time, the dashboard will look like this:
+When you open an app that does not contain any test cases the dashboard looks like this:
 
-![ATS empty project dashboard](attachments/introduction/dashboardempty.png)
+![ATS empty app dashboard](attachments/introduction/empty-app.png)
 
-If you already have some active test cases in your **ATS project**, the dashboard will give you a summarized overview of the current state of your project at a glance.
+If you already have some active test cases in your **ATS app**, the dashboard will give you a summarized overview of the current state of your app at a glance.
 
-![ATS project dashboard](attachments/introduction/dashboard.png)
+![ATS app dashboard](attachments/introduction/dashboard.png)
 
 The dashboard can be divided into four parts:
-
 * Current state chart
 * 7-Day history
 * Test case treeview
 * PDF export
 
-The **current state chart** will show you the total number of test cases in your project. Furthermore, it will present you the state of your test cases as numeral and as percentage.
+The **current state chart** will show you the total number of test cases in your app. Furthermore, it will present you the state of your test cases as numeral.
 
 ![current state chart](attachments/introduction/doughnutchart.png)
 
@@ -38,53 +35,45 @@ The **7-Day history chart** reflects the state of your test cases over the past 
 
 ![7day history chart](attachments/introduction/7dayhistory.png)
 
-The **test case treeview** shows you detailed informations for all of your test cases and test suites. You can see the passed time since the latest execution, its result and the success rate. For test suites, the success rate is calculated using the results of all containing test cases. For data driven tests, the success rate is calculated on basis of the execution results of all records from the data set, they were executed with.
+The **Recent Tests** section shows you detailed information for all of your test cases and test suites. You can see the passed time since the latest execution and its result. For test suites, the success rate is calculated using the results of all containing test cases.
 
-The data set (meaning, the data driven test was executed with) is displayed in the test data column.
+The data set (The data set used by a data driven test case) is displayed in the test data column.
 
-You can open the latest execution log of a test case by pressing **Show Log**.  
+You can open the latest execution log of a failed test case by pressing **Show Log**.
 
-![Testcase treeview](attachments/introduction/treeview.png)
+If your **test suites** contain one or more test suites/cases you can open a test suite by pressing the **arrow** in front of the test suite name. The test suite will expand and you will see all containing test suites/cases.
 
-If your **test suites** contain one or more test suites/cases you can open a test suite by pressing the *plus* in front of the test suite name. The test suite will expand and you will see all containing test suites/cases. For **data driven tests**, pressing the *plus* will show the executions for all records in the data set that they were executed with.  
+![Recent Tests](attachments/introduction/recent-tests.png)
 
-![Testcase treeview expanded](attachments/introduction/treeviewexpanded.png)
+You can export the current results of your test cases by pressing **Download Report**. The **Generate Report** dialog box appears. Here you can either generate a report of the entire app or select specific folders to include in the report.
 
-You can export the current results of your test cases by pressing **PDF**. This will generate a detailed test report for your project as pdf document.  
-
-![Dashboard export button](attachments/introduction/dashboardexportbutton.png)
+![Dashboard export button](attachments/introduction/download-report.png)
 
 ## 3 Navigation
 
-You can navigate your project using the navigation sidebar to the left of the screen.
+You can navigate inside ATS using the menu on the left side of the screen.
 
-![Navigation sidebar](attachments/introduction/navigation.png)
+![Navigation menu](attachments/introduction/navigation.png)
 
-Over the sidebar you can navigate to different pages of the ATS:
+Using the menu you can navigate to different pages inside ATS:
 
-| Navigation Item             | Explanation                                                                                          |
+| Menu Item             | Explanation                                                                                          |
 | -------------------------- | ----------------------------------------------------------------------------------------------------|
-| **Change current Project**  | At the top of the sidebar you can switch between projects which are available on your account        |
-| **My Projects**             | This button will bring you back to the startpage.                                                    |
-| **Dashboard**               | Gives an overview over the selected project                                                          |
-| **User Stories**            | Shows the user stories of the Mendix sprintr project connected to your ATS project                   |
-| **Monitoring / Results**    | Gives an overview over recent test runs and shows results                                            |
-| **Repository**              | In the _Repository_ you can create new test cases, test suites and organize your objects in folders  |
-| **Scheduler**               | On the _Scheduler_ page you can schedule test cases to run in regular intervals                      |
-| **Configuration**           | Change project settings, add Selenium hubs and add applications to test                              |
-| **Import**                  | Import new/updated actions, test cases or test suites into your project                              |
-| **My Account**              | Change your username, email and password                                                             |
+| **My Apps**             | This button will bring you back to the startpage.|
+| **Dashboard**               | Gives an overview over the selected app.|
+| **Test Cases**              | This page contains the **Repository**, the **Test Data** and the **Stories**. Here you can create new test cases, test suites and test data. You can also connect your user stories to your test cases.|
+| **Test Runs**               | This page contains the **Jobs**, **Schedules** and **CI/CD Templates**. Here you can see the results of your test cases, create new schedules and create a CI/CD template for your test case/suite. |
 
 ## 4 Different User Roles
 
-ATS has a role concept that is applied on two different levels, the application and specific projects. There are two roles of users outside of projects:
+ATS has two different user role settings:
 
-**Administrators**
+### 4.1 SCRUM Master
 
-Administrators manage users and manage projects, see ReferenceGuide_Administration for more information
+The SCRUM Master of your app can access the **Test Settings** from the profile menu. Here you can add your app environment URL for testing and add a Selenium Hub for executing your tests. This is the only difference with other roles.
 
-**Users**
+### 4.2 Others
 
-Users work in projects, they create and run test cases
+All other roles in your app have access to ATS. The only difference is that the SCRUM Master can access the **Test Settings** of your app.
 
-On the project level there are the roles of Project Administrator and Test Designer. The difference between the two is, that the Project Administrator can change the project settings and configure Selenium hbs and test applications. See [Configuration](../refguide/rg-version-1/configuration) for more info.
+For more information please read the [Reference Guide](../refguide/rg-version-2/rg-version-2.md)

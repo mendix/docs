@@ -15,7 +15,7 @@ The SAP OData Connector allows you to integrate quickly with an SAP back-end sys
 
 ![](attachments/sap-odata-connector/appstore-sapodata.png)
 
-The SAP OData Connector module can be used in combination with an SAP Service Module. For more details, see [SAP Service Modules](sap-service-modules). Alternatively, you can generate your own data model from the metadata of the SAP service. For more details see [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)
+The SAP OData Connector module can be used in combination with an SAP data model. For more details, see [SAP Data Models](sap-data-models). Alternatively, you can generate your own data model from the metadata of the SAP service. For more details see [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)
 
 If you are new to the SAP OData Connector, you can try it out by following our how-to: [How to Use the OData Connector](/howto/sap/use-sap-odata-connector). This reference assumes that you know the details of the SAP service you want to use.
 
@@ -51,7 +51,7 @@ Most of the actions of the SAP OData Connector make use of a domain model repres
 
 There are two ways to create a domain model to support your app:
 
-* Download pre-built service modules from the Mendix App Store. These are available for frequently used SAP services and can be found in the App Store under Connectors > SAP. For more details, see [SAP Service Modules](sap-service-modules).
+* Download pre-built data models from the Mendix App Store. These are available for frequently used SAP services and can be found in the App Store under Connectors > SAP. For more details, see [SAP Data Models](sap-data-models).
 * Create a data model by inspecting the service metadata. The response from the service can be used in the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/) to generate a domain model which can be imported into your app. Instructions for doing this are in [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
 
 The examples used in this guide are based on the **SAP My Tasks for Field Sales Representative (CRM)** data model. This can be obtained in the following ways:
@@ -502,5 +502,5 @@ This is the name that you give the result of your Activity. This can be used lat
 * [SAP My Tasks for Field Sales Representative (CRM) data model](https://appstore.home.mendix.com/link/app/89942/)
 * [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector)
 * [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/)
-* [SAP Service Modules](sap-service-modules)
+* [SAP Data Models](sap-data-models)
 * [OData Query Options](/refguide/odata-query-options)

@@ -20,7 +20,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Create the app in the Mendix Desktop Modeler 7.5.1 or higher
 * Get the SAP OData Connector module
-* Get an SAP Service module
+* Get an SAP Data Model
 
 ### 2.1 Getting the SAP OData Connector Module
 
@@ -28,11 +28,11 @@ To be able to use the OData Connector, after creating your project, navigate to 
 
 For more information, see [How to Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler).
 
-### 2.2 Getting an SAP Service Module
+### 2.2 Getting an SAP Data Model
 
-To get started quickly, you can download one of the available SAP Service modules. These modules contain a pre-built domain model for a specific service of SAP.
+To get started quickly, you can download one of the available SAP data models. These modules contain a pre-built domain model for a specific service of SAP.
 
-For more information, see [SAP Service Modules](/refguide/sap/sap-service-modules).
+For more information, see [SAP Data Models](/refguide/sap/sap-data-models).
 
 ## 3 Using the SAP OData Connector
 
@@ -40,10 +40,10 @@ In this section, you will learn how to implement the data connector in your Mend
 
 ### 3.1 Creating a Microflow<a name="microflow"></a>
 
-In this example, you are retrieving a list of customers that is available in the SAP Service module named **SAP Check Price and Availability Connector**.
+In this example, you are retrieving a list of customers that is available in the SAP data model named **SAP Check Price and Availability Connector**.
 
 {{% alert type="info" %}}
-This is NOT the very similar SAP Service Module, **SAP Check Price and Availability for Field Sales Representative**.
+This is NOT the very similar SAP data model, **SAP Check Price and Availability for Field Sales Representative**.
 {{% /alert %}}
 
 To create the microflow for this retrieve, follow these steps:
@@ -81,4 +81,4 @@ Congratulations! You can now run your app and see a list of the customers availa
 ## 4 Related Content
 
 * [SAP OData Connector](/refguide/sap/sap-odata-connector)
-* [SAP Service Modules](/refguide/sap/sap-service-modules)
+* [SAP Data Models](/refguide/sap/sap-data-models)

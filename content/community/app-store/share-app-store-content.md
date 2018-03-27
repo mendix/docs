@@ -40,7 +40,7 @@ To add content to the App Store, follow these steps:
 
         b. Enter the **GitHub profile name**.
 
-        c. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**. The system will crawl all of the projects fpr that GitHub profile and present the Mendix package file (*.mpk*) options to you on the **Please select a repository** pop-up window. When you find the correct *.mpk* file name, click **Select** on this window.
+        c. Select the **GitHub repo** from which the content will be uploaded by clicking **Select**. The system will crawl all of the projects for that GitHub profile and present the Mendix package file (*.mpk*) options to you on the **Please select a repository** pop-up window. When you find the correct *.mpk* file name, click **Select** on this window.
 
         d. Select the **release** by clicking **Select**. If there are various releases of the *.mpk* file available, the system will present them to you on the **Please select a release** pop-up window. When you find the correct release, click **Select** on this window.
 
@@ -87,7 +87,7 @@ To add content to the App Store, follow these steps:
         * The **Typical usage scenario** for the content
         * The **Features and limitations** for the content
     * These sections are optional:
-        * Any **Depdencies** (for example, the required Desktop Modeler version, modules, images, and styles)
+        * Any **Dependencies** (for example, the required Desktop Modeler version, modules, images, and styles)
         * The **Installation** steps and details
         * The **Configuration** steps and details
         * Any **Known bugs**

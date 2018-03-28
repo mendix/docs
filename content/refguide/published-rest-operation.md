@@ -24,6 +24,8 @@ The method specifies what type of operation is performed by the microflow:
 * `POST` – the operation creates an entry in the collection at the specified location
 * `PATCH` – the operations updates (part of) the entry at the specified location
 * `DELETE` – the operation deletes the entry or entries at the specified location
+* `HEAD` – the operation retrieves information about the entry or entries at the specified location; this is identical to `GET`, except for the fact that it doesn't return a message body
+* `OPTIONS` – the operation returns information about the available communication options
 
 ### <a name="operation-path"></a>2.2 Operation Path
 
@@ -41,20 +43,37 @@ The example location gives an example of a URL on which the operation can be rea
 
 ### 2.4 Microflow
 
-Specify the microflow that implements the operation. These are the characteristics of a valid microflow for a REST operation:
+{{% alert type="info" %}}
 
-* It returns an [HttpResponse](http-request-and-response-entities#http-response) object that is not **empty** or any primitive value except binary (such as String, Decimal, Enumeration, etc.).
-* It may have an [HttpRequest](http-request-and-response-entities#http-request) parameter, which you can use to inspect the incoming request
-* It may have an [HttpResponse](http-request-and-response-entities#http-request) parameter, which you can use to modify the response
-* It can have [HttpResponse](http-request-and-response-entities#http-request) either as a return type or as a parameter (but not as both)
-* It takes all the [path parameters](published-rest-path-parameters) specified in the operation path as parameters
-* It should not have any other **Object** or **List** parameters
-* If a microflow returns **empty** or if it has a return type of **Nothing**, you can set the response content through the [HttpResponse](http-request-and-response-entities#http-request) parameter; in any other case, the returned value is used for the response content
-* It allows all roles that the service allows
+Support for **File Documents** in these microflows was introduced in version 7.13.0.
 
-Any remaining microflow parameters will be treated as optional [query parameters](published-rest-query-parameters).
+{{% /alert %}}
+
+An operation has different parameters:
+
+ * [Path parameters](published-rest-path-parameters), which are part of the path of the URL
+ * Query parameters, which are at the end of the URL in the form of `?name1=value1&name2=value2` (when a microflow parameter is not in the path and is not object, then it's considered a query parameter)
+ * A body parameter (optional), which are in the body of the request to the operation (the `GET`, `HEAD`, and `DELETE` operations do not have a body parameter)
+
+A microflow for an operation takes all these operation parameters as input.
+
+A body parameter should be a file document (or inherit from a file document).
+
+Path and query parameters can't have list or object types.
+
+An operation microflow can also take an [HttpRequest](http-request-and-response-entities#http-request) parameter. You can add this parameter if you would like to inspect the requested URL and headers.
+
+The result of the microflow is the result of the operation. You have several options here, which are described below.
+
+The first option is to **return an [HttpResponse](http-request-and-response-entities#http-response)**. In the *HttpResponse*, you can set the status code, reason phrase, and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. One important header to set is *Content-Type*. Do not return an *empty* HttpResponse, because that will always result in an error.
+
+The second option is to **return a primitive**. When your microflow returns a string, integer, Boolean, etc., then the response to the operation will be that value. In order to still be able to set a status code, reason phrase, and headers, you should add an [HttpResponse](http-request-and-response-entities#http-response) object parameter and set the attributes of that object. If you return a non-empty value from the microflow, the `Content` attribute of the `HttpResponse` object is ignored. If you return an empty value from the microflow, then the `Content` of the `HttpResponse` is taken as the result.
+
+The final option is to **return a file document**. When you want to return data that is a file (such as a PDF or image), then you can have your microflow return a file document. In this case, you should also have an `HttpResponse` parameter and set the `Content-Type` header.
 
 If the microflow throws an unhandled exception, the response is **500: Internal server error**.
+
+If security is enabled, then then microflow needs to have at least one role configured to be accessible.
 
 ### 2.5 Allowed Roles
 
@@ -82,7 +101,7 @@ This feature was introduced in version 7.12.0.
 
 The **Parameters** table shows the name, data type, and type of the parameter.
 
-Operation parameters can be either query parameters or path parameters. The type of a parameter is detemined by where in the URL it is placed. If the parameter is part of the operations location, it will be of the path type. If it is a part of the operation's query string, it will be of the query type.
+An operation parameter can be either a query parameter, a path parameter or a body parameter. Path and the query parameters are detemined by their placement in the URL. If the parameter is part of the operation's location, it is a path parameter. If it is a part of the operation's query string, it is a query parameter. A body parameter comes from the body of the request.
 
 The parameter data type is determined by the microflow of the operation. New parameters that are not yet part of the microflow will have "(Not set)" as their data type.
 

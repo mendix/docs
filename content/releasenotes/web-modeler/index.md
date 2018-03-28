@@ -14,7 +14,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 #### Improvements
 
-* In the page editor, the following widgets are now rendered in their full glory (i.e. when added to your model using the Desktop Modeler):
+* In the page editor, the following widgets are now rendered in their full glory (meaning, when you add them to your model using the Desktop Modeler):
   * Data grids
   * Template grids
   * Reference set selectors
@@ -24,14 +24,15 @@ These release notes are for the [beta](../beta-features/index) version of the We
   * Report widgets
   * Snippets
   * Widgets specific to the login page
-* In fact, at this stage *all* Mendix widgets supported by the Desktop Modeler are now rendered in the Web Modeler. This will further streamline collaboration between users of these two modelers. It also enables users to use the Web Modeler live in meetings, e.g. in frequent iterations during the app development cycle.
-* Moreover, input widgets that are set to read-only will now render as such in the page editor. For example, if you configure a text box widget to be rendered as a control or as a text widget, it will now render the same way in the web modeler as for an end-user, regardless of editability.
-* In the microflow editor, you are now able to connect annotations with microflow activities. In this way, the valuable info that is often contained in annotations will always be in context, even when the activity is moved during the construction of the microflow. This will benefit users in understanding and maintaining microflows.
-* We added support for the upcoming release of Mendix 7.13
+* At this stage *all* the Mendix widgets supported by the Desktop Modeler are now rendered in the Web Modeler. This will further streamline collaboration between users of our two Modelers. It also enables you to use the Web Modeler live in meetings (for example, in frequent iterations during the app development cycle).
+* Input widgets set to read-only will now render as such in the Web Modeler's page editor. For example, if you configure a text box widget to be rendered as a control or as a text widget, it will now render the same way in the Web Modeler as for an end-user, regardless of editability.
+* In the microflow editor, you are now able to connect annotations with microflow activities. In this way, the valuable information often contained in annotations will always be in context, even when the activity is moved during the construction of the microflow. This will benefit users in understanding and maintaining microflows.
+* We added support for the release of Desktop Modeler version 7.13.1.
 
 #### Fixes
-* We fixed the 'Something went wrong' messages that could appear when creating new enumeration items and new microflows 
-* The Web Modeler will now start even if the App Store cannot be reached
+
+* We fixed the "Something went wrong" messages that appeared when creating new enumeration items and new microflows.
+* The Web Modeler will now start even if the App Store cannot be reached.
 
 ### March 5th, 2018 15:10:44 GMT
 

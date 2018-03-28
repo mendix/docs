@@ -5,7 +5,7 @@ description: "Describes best practices for using third-party tools when developi
 tags: ["Linux", "GNU", "Firefox", "devtools", "Selenium", "Eclipse", "SOAP", "REST", "Visual Studio Code"]
 ---
 
-To make your development life a little easier, here is a list of helpful third-party tools that will speed up your app development efforts:
+To make your development life a little easier, here is a list of helpful third-party tools that will speed up your app-development efforts:
 
 * [Linux m2ee scripts](https://github.com/mendix/m2ee-tools) – Mendix Runtime helper tools for GNU/Linux (for details on installation, see [Installing Mendix on GNU/Linux](https://github.com/mendix/m2ee-tools/blob/master/doc/README.md))
 * [Firefox DevTools](https://www.mozilla.org/en-US/firefox/developer/?utm_source=firebug&utm_medium=lp&utm_campaign=switch&utm_content=landingpage) – these developer tools replace [Firebug](https://getfirebug.com/), which is no longer being supported

@@ -11,34 +11,48 @@ category: "General"
 | 1.6 | 5.14.1 - 6.7.1 | 5.17.0, 5.21.1, 6.4.1, 6.6.0, 6.7.1 |
 | 1.7 | 5.14.1 - 6.9.0 | 5.17.0, 5.21.1, 6.4.1, 6.6.0, 6.7.1, 6.9.0 |
 | 1.8 | 5.14.1 - 7.5.0 | 5.17.0, 5.21.1, 6.4.1, 6.6.0, 6.7.1, 6.9.0, 6.10.0, 7.0.1, 7.2.0 |
-| 2.x | 5.14.1 - 7.8.0 | 5.17.0, 5.21.1, 6.4.1, 6.6.0, 6.7.1, 6.9.0, 6.10.0, 7.0.1, 7.2.0, 7.6.0, 7.8.0 |
+| 2.x | 5.14.1 - 7.12.0 | 5.17.0, 5.21.1, 6.4.1, 6.7.1, 6.9.0, 6.10.0, 7.0.1, 7.2.0, 7.6.0, 7.8.0, 7.10.0, 7.12.0 |
 
 ## Browser Support
 
 ### Firefox
 
-| ATS version | Supported Firefox Versions |
-| --- | --- |
-| 1.5 - 1.8 | 44, 45, 38 ESR, 45 ESR |
+| ATS version | Supported Browser Version | Notes |
+| --- | --- | --- |
+| 1.5 - 1.8 | 44, 45, 38 ESR, 45 ESR |  |
+| 2.x | 58 |  |
+
+#### Known Limitations
+
+* When running tests on Windows XP, they run with Firefox version 45. Firefox 45 is the latest version that is supported on Windows XP.
 
 ### Chrome
 
-| ATS version | Supported Chrome Versions | Notes |
+| ATS version | Supported Browser Version | Notes |
 | --- | --- | --- |
 | 1.5, 1.6 | 46-50 |  |
 | 1.7, 1.8 | 51-53 |   |
-|  | 54+ | Recent versions of Chrome usually work (unsupported). |
+| 2.x | 64 |  |
 
-### Internet Explorer and Edge
+#### Known Limitations
 
-The Application Test Suite (ATS) does currently not support testing in Internet Explorer 11 (the only remaining supported version of this browser).
++ When running tests on Windows XP, they run with Chrome version 49. Chrome 49 is the latest version that is supported on Windows XP.
 
-Due to its nature, Internet Explorer is very cumbersome to automate compared to other browsers. Browsers like Chrome or Firefox have vendor support for automation, while Internet Explorer's support for Selenium automation hasn't been touched since 2014 (for details, see [Microsoft WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)). Without proper vendor support, it's difficult and sometimes impossible to work around or fix certain issues.
+### Internet Explorer
 
-Nonetheless, we are continuing our efforts to bring support for Internet Explorer 11 into ATS if possible.
+| ATS version | Supported Browser Version | Notes |
+| ----------- | ------------------------- | ----- |
+| 2.x         | 11.x                      |       |
 
-At the same time, we are planning to support Internet Explorer's successor, Edge. As soon as its built-in automation support is feature-complete, we will add support to ATS. For details, check the [Microsoft Edge Platform Status](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/).
+Please be aware that we can not always guarantee the same smooth experience when testing with Internet Explorer (IE). IE is comparably slow and outdated. Also, the support for automation by Microsoft and the Selenium project is much less mature, stable, and efficient.
+
+Internet Explorer gets the same development attention as other browsers. However, there's no guarantee that all features of ATS can be made available for IE without limitations.
+
+#### Known Limitations
+
+* IE can produce typos when keys are sent to the browser, which can result in wrong values being set to input fields
+* Running tests on Windows XP with Internet Explorer is not possible
 
 ### Other Browsers
 
-No other browser is supported at the moment.
+We plan to support Edge and Safari in future releases.

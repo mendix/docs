@@ -15,9 +15,21 @@ Infographics are the first thing you see when you open your app in ATS. These ch
 
 For the **7-Day History**, a snapshot of the current test states is taken every day at 23:59 UTC.
 
-To generate a report of the status of your tests, click **Download Report**. The report is automatically downloaded as a PDF file.
+### 1.2 Report
 
-### 1.2 Recent Tests
+To generate a PDF report of the status of your tests, click **Download Report**. A dialog box will open allowing you to select between two reporting options for determining the items included in the report: **All** or **Selected**. If you select **All**, then all test suites and test cases will be included in the report. If you select **Selected**, then you can add one or more test cases, test suites, or folders that you want to be part of the report. 
+
+{{% alert type="info" %}}
+Adding a test suite or a folder will recursively add all nested test suites and test cases.
+{{% /alert %}}
+
+When you are happy with your selection (or you have just chosen **All**), you can proceed with the reporting process by clicking **Generate**. This will open a second dialog box where you will get a summary infographic, similar to the one that you see on the **Dashboard**. At this point, you can download the report by clicking **Download**. You can cancel the process at any point by clicking the **X** button.
+
+{{% alert type="info" %}}
+The **7-day history** infographic will only be included in the PDF report when you choose **All**.
+{{% /alert %}}
+
+### 1.3 Recent Tests
 
 Under **Recent Tests**, you can find detailed information about the status of all your test cases and test suites. You can see the duration since the latest run, its result, and the success rate (for test suites). The success rate is calculated using the results of all the containing test cases. For data-driven tests, the data set is displayed in the **test data** column.
 

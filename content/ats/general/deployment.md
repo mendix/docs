@@ -176,7 +176,7 @@ Selenium standalone support has been dropped with ATS 2.0. Only Selenium Grid is
 We provide basic installation instructions for the Selenium Runner based on Docker containers. For details, see [Get Started with Docker](https://docs.docker.com/engine/getstarted/), [Selenium Documentation](http://www.seleniumhq.org/docs/), and [Docker-Selenium](https://github.com/SeleniumHQ/docker-selenium).
 
 {{% alert type="info" %}}
-The current ATS version requires Selenium version 2.53.0. If ATS upgrades to a newer Selenium version, the customer is obligated to upgrade its Selenium Runner to the new version as well.
+The current ATS version requires Selenium version 3.8.1. If ATS upgrades to a newer Selenium version, the customer is obligated to upgrade its Selenium Runner to the new version as well.
 {{% /alert %}}
 
 Before you start, make sure that your server has internet access to download the container images.
@@ -188,12 +188,12 @@ Before you start, make sure that your server has internet access to download the
 
     ```yaml
     seleniumhub:
-        image: selenium/hub:2.53.0
+        image: selenium/hub:3.8.1
         ports:
         - 4444:4444
 
     firefoxnode:
-        image: selenium/node-firefox-debug:2.53.0
+        image: selenium/node-firefox-debug:3.8.1
         ports:
         - 5900
         links:
@@ -204,7 +204,7 @@ Before you start, make sure that your server has internet access to download the
         - SCREEN_DEPTH=24
 
     chromenode:
-        image: selenium/node-chrome-debug:2.53.0
+        image: selenium/node-chrome-debug:3.8.1
         ports:
         - 5900
         links:

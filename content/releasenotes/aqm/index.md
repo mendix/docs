@@ -1,5 +1,5 @@
 ---
-title: "AQM"
+title: "Application Quality Monitor"
 ---
 These are the release notes for the Mendix Application Quality Monitor (AQM):
 

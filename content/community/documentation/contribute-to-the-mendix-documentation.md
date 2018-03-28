@@ -56,7 +56,7 @@ This only needs to be done once.
 
 To edit the existing documentation (for example, a how-to or reference guide page), follow these steps:
 
-1. Click **Edit on GitHub** in the upper-right corner of the specific Mendix documentation page that you want to work on.
+1. Click **Edit** in the upper-right corner of the specific Mendix documentation page that you want to work on.
 2. Make your changes in GitHub (make sure the changes align with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines)).
 3. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
 

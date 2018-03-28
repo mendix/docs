@@ -87,7 +87,6 @@ When the app is running, this file is available under `/rest-doc/servicename/swa
 ## 3 Security
 
 <a name="authentication"></a>
-
 ### 3.1 Requires Authentication
 
 {{% alert type="info" %}}
@@ -131,6 +130,12 @@ Resources and Operations are appended to [Location](#location) to form a URL on 
 
 ![](attachments/published-rest-service/example-location-url.png)
 
-## 6 Related Content
+## 6 Example
+
+**How to publish REST natively with Mendix**
+
+{{% youtube HzrFkv0U4n8 %}}
+
+## 7 Related Content
 
 For more information on which operation gets executed for a given request URL, see [Published REST Routing](published-rest-routing).

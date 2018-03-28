@@ -127,7 +127,7 @@ Nice work. Continue below for creating business logic in the microflow so the ap
 Follow these steps to create some simple logic to open the approval dialog pop-up.
 
 1. Search (using <kbd>Ctrl</kbd> + <kbd>G</kbd>) for **ACT_OpenApproveDialog**, select it, and click **Go to**. This is the microflow you added in chapter 6.
-2. Right-click the line between the green en red dots in the microflow editor and select **Insert > Activity**.
+2. Right-click the line between the green and red dots in the microflow editor and select **Insert > Activity**.
 3. Double-click the new activity, select **Create object** and click **Select**.
 4. In the Create Object dialog, click **Select** and select the **ApproveOptionalText** entity.
 

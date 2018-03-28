@@ -13,9 +13,28 @@ Nanoflows are similar to [microflows](microflows), as they allow you to express 
 
 ## 2 When to Use Nanoflows
 
-Nanoflows are designed with offline applications in mind, so business logic can also be executed in them. Since all actions will be run to the offline local database, nanoflows in offline applications will be super fast.
+### 2.1 Offline Mobile Apps
 
-Nanoflows can be beneficial for online applications when you do not perform a lot of database-releated actions like creating, committing, and retrieving objects. Each data-related activity in a nanoflow will create a separate network request to the Mendix Runtime, therefore, they may be slower than microflows. Changing objects without committing is an exception here, as this action is configured not to commit and changes will be applied locally.
+Nanoflows are designed with offline-first applications in mind, as they allow you to model application logic that works in offline apps. Since all database-related actions will be executed on the local offline database, nanoflows in offline apps will be super fast.
+
+### 2.2 Logic Where No Connection Is Needed
+
+Nanoflows also offer great value in online applications (for example, for UI logic, validations, calculations, and navigation). However, please keep in mind that when you perform database-releated actions, each action will create a separate network request to the Mendix Runtime. The following actions interact with the database:
+
+* Create
+* Commit
+* Retrieve
+* Rollback
+
+Therefore, the best practice is to use nanoflows in online applications when they do not contain the above actions.
+
+{{% alert type="info" %}}
+Changing objects without committing is not a database-related action, as changes are applied on the device or in the browser.
+{{% /alert %}}
+
+### 2.3 Other Cases
+
+The previous section stated that nanoflows perform best in online applications when no database-related actions are used, and these are generally the best cases. However, nanoflows that contain at most one database-related action can also still perform well. Because such nanoflows only require one network call, they perform as well as a microflow. An example of such a use case is performing validation logic on an object and committing the object in the same nanoflow.
 
 ## 3 Differences from Microflows
 
@@ -146,9 +165,9 @@ Artifacts provide the nanoflow with input and allow comments to be made.
 
 The Modeler visualizes which variables are used by selected object(s). It does this by showing the used variables in white text on a blue background. Conversely, elements that use the variable(s) defined by the selected object(s) are marked with the word **Usage** in white text on a green background.
 
-In the example below, the parameter **AccountPasswordData** is highlighted, because it is used in the selected activity. The save password activity has a usage label, because it uses the variable defined by the selected activity.
+In the example below, the parameter **Inspection** is highlighted, because it is used in the selected activity. The activity that creates a log entry has a usage label, because it uses the variable defined by the selected activity.
 
-![](attachments/16713739/16843950.png)
+![](attachments/16713739/16843952.png)
 
 ## 7 Errors
 
@@ -156,8 +175,8 @@ When an error occurs in a nanoflow, all the changes that have been made to objec
 
 ## 8 Nanoflow Debugging
 
-There is currently no debugging support for nanoflows.
+Step-by-step debugging is not supported yet. For now, we recommend using log message actions, which are shown in the console log of the Desktop Modeler (for version 7.13.0 and higher).
 
 ## 9 Security
 
-Nanoflows are executed in the context of the current user. Any operation for which the user is unauthorized will fail.
+Nanoflows are executed in the context of the current user. Any operation for which the user is unauthorized will fail. For instance, when objects are retrieved in a nanoflow, only the ones for which the current user has read access will be returned. Committing an object only succeeds when the current user has write access for all changes.

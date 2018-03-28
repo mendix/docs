@@ -89,7 +89,41 @@ An operation parameter can be either a query parameter, a path parameter or a bo
 
 The parameter data type is determined by the microflow of the operation. New parameters that are not yet part of the microflow will have "(Not set)" as their data type.
 
-## 4 Public Documentation
+### 2.5.1 Import mapping
+
+{{% alert type="info" %}}
+
+This feature was introduced in version 7.14.0.
+
+{{% /alert %}}
+
+Import mapping can be selected for body parameter. All data types except **File Documents** must have import mapping selected.
+If you select an import mapping that supports both XML and JSON (for instance a mapping that is based on a message definition) then the operation will be able to handle both XML and JSON requests.
+Valid request needs to contain a **Content-Type** header. For XML content we support 'application/xml', 'text/xml' or anything that ends with '+xml'. For JSON content we support 'application/json' or any content type that ends with '+json'. If unsupported content type is used, operation will result in **400 Bad Request** response.
+
+### 2.6 Response
+
+{{% alert type="info" %}}
+
+Support for **Export mapping and models in OpenApi (Swagger)** was added in 7.14.0.
+
+{{% /alert %}}
+
+Shows information about the response of the operation. You can see the type of the microflow result as well as export mapping applied to it (if any).
+
+#### 2.6.1 Export Mapping
+
+When the microflow returns an object or a list of objects, you need to specify how this result is mapped to JSON or XML. Select an export mapping that takes the result of the microflow as input.
+
+If you select an export mapping that supports both XML and JSON (for instance a mapping that is based on a message definition), then the output depends on whether the microflow has a parameter of type System.HttpResponse and adds a Content-Type header to it: 
+
+- If the microflow sets the Content-Type header to 'application/xml', 'text/xml' or anything ending with '+xml', then the operation returns XML
+- When the microflow sets the Content-Type header to something else, then the operation returns JSON
+- When the microflow does not set the Content-Type header, then the operation returns JSON and the Content-Type is application/json
+
+Export mapping is also used to generate object schemas for operation responses in [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation) based on [JSON Schema](published-rest-services-json-schema)
+
+## 3 Public Documentation
 
 The public documentation is used in the service's [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation).
 
@@ -101,7 +135,7 @@ The summary provides a short description of what the operation does.
 
 The description provides a complete overview of what the operation does. You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
 
-## 5 Example
+## 4 Example
 
 **How to publish REST natively with Mendix**
 

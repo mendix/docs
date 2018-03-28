@@ -75,9 +75,9 @@ When the request state exceeds the configured threshold, you can look at the fol
 
 In order to find the root cause of this state size, you need to make a state overview dump using the developer tools in the client. This allows you to see the objects that are in the state and why they are not garbage collected.
 
-## 5 Server side memory management
+## 5 Server-Side Memory Management
 
-For every request to the Mendix runtime, be it from the client or via web service calls, objects are cleaned up at the end of the request. This means that if you create a lot of temporary objects in a microflow they will occupy runtime memory untill the end of the request.
+For every request to the Mendix runtime—be it from the client or via web service calls—objects are cleaned up at the end of the request. This means that if you create a lot of temporary objects in a microflow, they will occupy runtime memory until the end of the request.
 
 ## 6 Related Content
 

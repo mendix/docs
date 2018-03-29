@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Create a free [Mendix Account](https://www.mendix.com/sign-up/SAP)
 * Download, open, and log in to the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
-* Create a free [SAP Account](https://www.sap.com/developer/tutorials/hcp-create-trial-account.html)
+* Create a free [SAP account](https://www.sap.com/developer/tutorials/hcp-create-trial-account.html)
 * Request the authentication credentials required to connect with the SAP Gateway Demo System (ES5) by registering [here](https://register.sapdevcenter.com/SUPSignForms/)
 
 ## 3 Starting with the SAP Purchase Order Approval Tutorial
@@ -47,7 +47,7 @@ To start this tutorial, go to the [Mendix Developer Portal](https://sprintr.home
 
     ![](attachments/sap-purchase-order-approval/03-confirm-dev-created.png)
 
-    {{% alert type="info" %}}If you receive an error creating the environment, there may be an issue with your SAP account (for example, it may have expired or you may have exceeded your quota limit). You can manage your SAP Cloud account by going to the [SAP Cloud Platform Cockpit](https://account.hanatrial.ondemand.com/cockpit)
+    {{% alert type="info" %}}If you receive an error when creating the environment, there may be an issue with your SAP account (for example, it may have expired or you may have exceeded your quota limit). You can manage your SAP Cloud account by going to the [SAP Cloud Platform Cockpit](https://account.hanatrial.ondemand.com/cockpit).
     {{% /alert %}}
 
 8. Click **Edit App** to edit the app in the Mendix Desktop Modeler.
@@ -89,13 +89,9 @@ To create the data structure for an approval input object, follow these steps:
     ![](attachments/sap-purchase-order-approval/10-domain-model.png)
 
 2. Right-click in the central editor window and select **Add entity**.
-
 3. Double-click the entity to open its properties.
-
 4. Enter *ApprovalDialog* for the **Name** (make sure there are no spaces in the name!).
-
 5. Set the **Persistable** property to **No**.
-
 6. On the **Attributes** tab, click **New** to add a new attribute and do the following:
 
     * Enter *Note* for its **Name**
@@ -121,15 +117,12 @@ To add an **Approve** button to the home page, follow these steps:
 3. Right-click in the snippet area and select **Add widget** > **Button** > **Call microflow button**. Microflows consist of microflow actions, which trigger basic operations such as creating, changing, and deleting objects as well as aggregating object lists and showing messages.
 
 4. In the **Select Microflow** dialog window, click **New** to create a new microflow and enter *ACT_OpenApproveDialog* for the **Name**. For details on Mendix naming convention best practices, see [Mendix Development Best Practices](https://docs.mendix.com/howtogeneral/bestpractices/dev-best-practices).
-
 5. Double-click the button you just created and change the **Caption** to *Approve*.
-
 6. In the Properties pane on the right, change the **Button Style** to *Success*.
 
     ![](attachments/sap-purchase-order-approval/08-button-caption.png)
 
 6.  Click **Run Locally** and then **View** to view the app in your browser. Save your work and synchronize the database if prompted to do so.
-
 7.  The new **Approve** button will appear in the bottom-right of the page. Click it and observe that nothing happens. You will create business logic in the microflow in the following sections to make the button work.
 
     ![](attachments/sap-purchase-order-approval/09-approve-button.png)
@@ -170,7 +163,7 @@ Follow these steps to create some simple logic to open the approval dialog pop-u
 
 13. In the Create Page dialog:
 
-      * Change the **Page name** to *Approve_Popup*
+    * Change the **Page name** to *Approve_Popup*
     * Change the **Navigation layout** to *PopupLayout (NavigationLayouts)*
     * Select **Form basic vertical**
 
@@ -202,7 +195,6 @@ To create a basic approval dialog page, follow these steps:
 5. Double-click the **Save** button to open its properties and:
 
     * Change the **Caption** to *Approve*
-
     * Change the **On click** action to *Call a microflow*
 
 6. Click **New** in the Select Microflow dialog and name it *ACT_ApprovePurchaseOrder*.
@@ -243,13 +235,11 @@ Follow these steps to create the logic to approve a purchase order and push it t
 
 7. Select **Microflow call** as **Type of Action** for this activity.
 
-8. In the Call Microflow dialog window, set:
+8. In the Call Microflow dialog window, set the following:
 
-    * the microflow action to **Con_ApprovePurchaseOrder**
-
-    * the value of the **PurchaseOrderID** to ``$PurchaseOrder/POId``
-
-    * the **Edit parameter value** of Note to ``$ApproveOptionalText/Text``
+    * The microflow action to **Con_ApprovePurchaseOrder**
+    * The value of the **PurchaseOrderID** to ``$PurchaseOrder/POId``
+    * The **Edit parameter value** of Note to ``$ApproveOptionalText/Text``
 
 9. Click **OK** to close the dialog window.
 
@@ -260,7 +250,6 @@ Follow these steps to create the logic to approve a purchase order and push it t
 11. Add an **Exclusive split** after the **Close page** activity and open its properties:
 
     *   Change the **Caption** to *Success?*
-
     *   Change the **Expression** to ``if $ApprovePurchaseOrder != empty then $ApprovePurchaseOrder/Success else false``
 
 12. Click **OK** to close the dialog window.

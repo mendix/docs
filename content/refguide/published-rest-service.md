@@ -55,7 +55,7 @@ http//localhost:8080/rest/my_service_name/v1
 
 You can change the the default location to almost any valid URL.
 
-#### 2.3.1 Reserved prefixes
+#### 2.3.1 Reserved Prefixes
 
 Following URL prefixes are reserved and are not allowed to be used in location:
 
@@ -69,8 +69,11 @@ Following URL prefixes are reserved and are not allowed to be used in location:
 * `p/`
 * `reload/`
 
+When your application is running, you can click the location to open the [interactive documentation page](published-rest-services#interactive-documentation).
+
 <a name="public-documentation"></a>
-### 2.4 Public Documentation
+
+### 2.3 Public Documentation
 
 The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documentation](open-api). You can use [GitHub-flavored markdown](gfm-syntax) for rich text.
 
@@ -84,24 +87,40 @@ When the app is running, this file is available under `/rest-doc/servicename/swa
 ## 3 Security
 
 <a name="authentication"></a>
-
-### 3.1 Authentication
+### 3.1 Requires Authentication
 
 {{% alert type="info" %}}
 
-The **Authentication** feature was introduced in version 7.11.0. In earlier versions, it was always **Username and password**.
+The **No Authentication** feature was introduced in version 7.11.0. In earlier versions, it was always **Username and password**.
+
+The **Active Session** authentication was introduced in version 7.13.0
 
 {{% /alert %}}
 
-Select whether clients need to authenticate with a username and a password (using basic authentication) or not.
+Select whether clients need to authenticate or not.
 
-### 3.2 Allowed Roles
+### 3.2 Authentication Methods
 
-The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Authentication** is set to **Username and password**.
+If authentication is required, you can select which authentication methods you would like to support
+
+* Select **Username and password** to allow clients to authenticate themselves using a username and a password in the **Authorization** header (this is called "basic authentication")
+* Select **Active session** to allow access from JavaScript inside your current application
+  * Once a user has logged into the browser, the JavaScript in your app can access the REST service using the current user's session
+  * To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set on each request, for example:
+
+    ```var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", "http://mysite/rest/myservice/myresource", false);
+    xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
+    xmlHttp.send(null);
+    ```
+
+### 3.3 Allowed Roles
+
+The allowed roles define which [module role](module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
 ## 4 Resources
 
-A REST service exposes a number of [resources](published-rest-resource). On a resource you can define GET, PUT, POST, PATCH, and DELETE operations.
+A REST service exposes a number of [resources](published-rest-resource). On a resource you can define GET, PUT, POST, PATCH, DELETE, HEAD and OPTIONS operations.
 
 ## 5 Operations
 

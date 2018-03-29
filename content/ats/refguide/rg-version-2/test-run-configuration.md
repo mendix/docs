@@ -41,8 +41,8 @@ This is the Selenium hub ATS uses to execute the test case.
 
 This the browser in which ATS executes the test case. The browser version is set automatically by ATS. For supported Selenium hub providers, ATS sets the following browser versions:
 
-* Firefox: version 45
-* Chrome: version 53 (for Windows XP: version 49)
+* Firefox: version 58
+* Chrome: version 64 (for Windows XP: version 49)
 
 ## 3 Platform Settings<a name="platform"></a>
 

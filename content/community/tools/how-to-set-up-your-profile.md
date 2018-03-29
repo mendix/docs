@@ -41,7 +41,7 @@ On your dashboard, you can invite friends and colleagues to join Mendix. After y
 After you have invited someone to Mendix, click **Invite Friends / View Status** to see their name and status listed at the bottom of the pop-up window:
 
 1. If you invited them via email, they will first have the **Invited** status.
-2. When they click sign up for Mendix and recieve a confirmation email, they will have the **Confirmation e-mail sent** status.
+2. When they click **Sign up for Mendix** and receive a confirmation email, they will have the **Confirmation e-mail sent** status.
 3. When they complete the signup process and their account is active, their status will change to **Completed sign-up**.
 4. When they complete the guided product tour in the Mendix Web Modeler, their status will change to **Successful**.
 
@@ -50,6 +50,8 @@ After you have invited someone to Mendix, click **Invite Friends / View Status**
 Once five of your referrals reach the **Successful** status, you will see the **Claim your t-shirt** link on your dashboard. Click this to fill in some details and receive your awesome Mendix t-shirt. Yay!
 
 ![](attachments/how-to-set-up-your-profile/claim-tshirt.png)
+
+One more thing about referrals – when you refer someone and they sign up for Mendix, they will receive a voucher for the [Mendix Rapid Developer Certification Exam](https://gettingstarted.mendixcloud.com/link/certification/rapid) (valid for a limited period of time). So encourage your friends to try something new and get certified by Mendix!
 
 ### 3.2 <a name="review"></a>Writing User Reviews of Mendix
 

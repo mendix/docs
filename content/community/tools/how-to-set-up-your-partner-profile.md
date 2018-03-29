@@ -60,8 +60,8 @@ You must complete the **Address** and **Email Address** fields before you can ma
 The header also displays whether the company is **Authorized**, **Expert**, or **Professional**. These capability levels are defined as follows:
 
 * **Authorized** — this type of partner has qualified and certified resources to support customers with Mendix initiatives 
-* **Professional** — this type of partner can successfully deliver complex mission-critical Mendix applications and solutions for businesses
-* **Expert** — this type of partner can support an enterprise in its successful positioning and adoption of the Mendix Platform with all elements of the Mendix "4 P's" (portfolio, people, process, and platform; for details, see [How to Implement Bimodal IT: Focus on the 4 P’s](https://www.mendix.com/blog/how-to-implement-bimodal-it-focus-on-the-4-ps/))
+* **Platform** — this type of partner can support an enterprise in its successful positioning and adoption of the Mendix Platform with all elements of the Mendix "4 P's" (portfolio, people, process, and platform; for details, see [How to Implement Bimodal IT: Focus on the 4 P’s](https://www.mendix.com/blog/how-to-implement-bimodal-it-focus-on-the-4-ps/))
+* **Global** — this type of partner can help an enterprise with large scale programs spanning multiple countries or regions across the globe
 
 A capability level is determined through an assessment of your company's delivery expertise, project references, and Mendix Developer Certification levels. For more information, please contact your Mendix Customer Success Manager.
 

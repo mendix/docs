@@ -101,9 +101,13 @@ This feature was introduced in version 7.14.0.
 
 {{% /alert %}}
 
-Import mapping can be selected for body parameter. All data types except **File Documents** must have import mapping selected.
+And import mapping can be selected for a body parameter. All data types except **File Documents** must have import mapping selected.
+
 If you select an import mapping that supports both XML and JSON (for instance a mapping that is based on a message definition) then the operation will be able to handle both XML and JSON requests.
-Valid request needs to contain a **Content-Type** header. For XML content we support 'application/xml', 'text/xml' or anything that ends with '+xml'. For JSON content we support 'application/json' or any content type that ends with '+json'. If unsupported content type is used, operation will result in **400 Bad Request** response.
+
+Valid requests need to contain a **Content-Type** header. For XML content 'application/xml', 'text/xml' and anything that ends with '+xml' are supported. For JSON content 'application/json' or any content type that ends with '+json' is supported. If an unsupported content type is used, the operation will result in a **400 Bad Request** response.
+
+The import mapping is also used to generate object schemas for operation responses in [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation) based on [JSON Schema](published-rest-service-json-schema)
 
 ### 2.6 Response
 
@@ -125,7 +129,7 @@ If you select an export mapping that supports both XML and JSON (for instance a 
 - When the microflow sets the Content-Type header to something else, then the operation returns JSON
 - When the microflow does not set the Content-Type header, then the operation returns JSON and the Content-Type is application/json
 
-Export mapping is also used to generate object schemas for operation responses in [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation) based on [JSON Schema](published-rest-services-json-schema)
+The export mapping is also used to generate object schemas for operation responses in [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation) based on [JSON Schema](published-rest-service-json-schema)
 
 ## 3 Public Documentation
 

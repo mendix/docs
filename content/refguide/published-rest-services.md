@@ -32,7 +32,7 @@ For more details, see [Published REST Routing](published-rest-routing).
 
 Every [published REST service](published-rest-service) is automatically documented. This documentation is available in the app under `http://yourapp.com/rest-doc/`. Each service has an interactive documentation page using [Swagger UI](https://swagger.io/swagger-ui/). You can interact with the service to see how it behaves.
 
-The documentation of the services is available in the [Open API 2.0](open-api) format, which is readable by many systems and tools.
+The documentation of the services is available in the [Open API 2.0](open-api) format, which is readable by many systems and tools. It contains [JSON Schemas](published-rest-service-json-schema) for the messages definitions.
 
 ## 5 Logging
 

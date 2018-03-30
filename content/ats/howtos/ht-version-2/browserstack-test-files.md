@@ -3,14 +3,14 @@ title: "Browserstack Test Files"
 parent: "upload-file-using-ats-2"
 ---
 
-## Win XP
+## Windows XP
 
 ### Audio Files
 
-* C:\Documents and Settings\hello\My Documents\audio\250Hz_44100Hz_16bit_05sec.wav
-* C:\Documents and Settings\hello\My Documents\audio\BachCPE_SonataAmin_1.wma
-* C:\Documents and Settings\hello\My Documents\audio\blind_willie.mp3
-* C:\Documents and Settings\hello\My Documents\audio\first_noel.mp3
+* *C:\Documents and Settings\hello\My Documents\audio\250Hz_44100Hz_16bit_05sec.wav*
+* *C:\Documents and Settings\hello\My Documents\audio\BachCPE_SonataAmin_1.wma*
+* *C:\Documents and Settings\hello\My Documents\audio\blind_willie.mp3*
+* *C:\Documents and Settings\hello\My Documents\audio\first_noel.mp3*
 
 ### Docs
 
@@ -48,7 +48,7 @@ parent: "upload-file-using-ats-2"
 * C:\Documents and Settings\hello\My Documents\video\sample_mpeg4.mp4
 * C:\Documents and Settings\hello\My Documents\video\saper.avi
 
-## Win 7 / 8 / 8.1 / 10
+## Windows 7 / 8 / 8.1 / 10
 
 ### Audio
 

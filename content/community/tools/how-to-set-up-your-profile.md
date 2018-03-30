@@ -42,8 +42,7 @@ After you have invited someone to Mendix, click **Invite Friends / View Status**
 
 1. If you invited them via email, they will first have the **Invited** status.
 2. When they click **Sign up for Mendix** and receive a confirmation email, they will have the **Confirmation e-mail sent** status.
-3. When they complete the signup process and their account is active, their status will change to **Completed sign-up**.
-4. When they complete the guided product tour in the Mendix Web Modeler, their status will change to **Successful**.
+3. When they complete the guided product tour in the Mendix Web Modeler, their status will change to **Successful**.
 
 ![](attachments/how-to-set-up-your-profile/referral-statuses.png)
 

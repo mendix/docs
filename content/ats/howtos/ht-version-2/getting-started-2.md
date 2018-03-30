@@ -178,7 +178,7 @@ All the test steps are numbered for easy identification. To change the sequence 
 
 For further documentation on how-to create a test case see [How-to create a test case](create-a-test-case-2).
 
-#### 5.2.2 Test Data Tab
+#### 4.2.2 Test Data Tab
 
 In this tab, you can connect your data sets to a test case. Use the arrow to select the data set you need and click **Save**. A new menu will appear in which you can see the data set fields that are available to select. You can also use this menu to check if you selected the correct data set.
 
@@ -192,13 +192,13 @@ If you do not use the data set, make sure to disconnect it. ATS will remember wh
 
 For further documentation on how-to create a datadriven test case see [How-to create a datadriven test case](create-datadriven-test-case-2).
 
-#### 5.2.3 Show Usages Tab
+#### 4.2.3 Show Usages Tab
 
 This tab shows you the actions used in this test case and the test suites that are using this test case. Use this screen to verify that if you make a change to a custom action, it does not affect another test case or test suite.
 
 ![](attachments/getting-started-2/show-usages-tab.png)
 
-#### 5.2.4 Stories Tab
+#### 4.2.4 Stories Tab
 
 This tab displays the user stories that are connected to your test case, the test cases within that story, and the success rate of the user story.
 
@@ -206,7 +206,7 @@ This tab displays the user stories that are connected to your test case, the tes
 
 For further documentation on how-to link stories to test cases see [How-to link Test Cases/Test Suites to User Stories](connect-stories-to-testcases-2).
 
-### 5.3 Creating a Test Suite
+### 4.3 Creating a Test Suite
 
 To create a test suite, follow these steps:
 
@@ -228,7 +228,7 @@ To create a test suite, follow these steps:
 
 ![](attachments/getting-started-2/test-suite-details-page.png)
 
-#### 5.3.1 Test Steps Tab
+#### 4.3.1 Test Steps Tab
 
 Here you can see all the steps that are in your test suite. Each step is either a test suite or a test step.
 
@@ -238,13 +238,13 @@ You add a test case to your test suite by clicking the **Select and add test cas
 
 For further documentation on how-to create a test suite see [How-to create a test suite](create-a-test-suite-2).
 
-#### 5.3.2 Show Usages Tab
+#### 4.3.2 Show Usages Tab
 
 This tab shows you all the **Test Cases used by this Test Suite**, all the **Test Suites used by this Test Suite**, and the **Test Suites using this Test Suite**. Use this screen to make sure that if you make a change, it does not affect other test cases or test suites.
 
 ![](attachments/getting-started-2/show-usages-tab-test-suite.png)
 
-#### 5.3.3 Stories Tab
+#### 4.3.3 Stories Tab
 
 This tab displays the user stories that are connected to your test suite, the test cases within that story, and the success rate of the user story. You can **Open**, **Unlink**, or **Link** a user story to your test suite.
 
@@ -252,7 +252,7 @@ This tab displays the user stories that are connected to your test suite, the te
 
 For further documentation on how-to link stories to test suites see [How-to link Test Cases/Test Suites to User Stories](connect-stories-to-testcases-2).
 
-## 6 Run Configuration
+## 5 Run Configuration
 
 When you click **Run** in the upper-right corner of your test case/suite, the **Job Configuration** page will open.
 
@@ -275,7 +275,7 @@ When you select a supported selenium provider like Browserstack additional optio
 
 Now click **Run** again in the upper-right corner to execute the test case/suite against the provided parameters.
 
-## 7 Result
+## 6 Result
 
 When you click **Run**, the **Test Runs** page will open.
 
@@ -287,6 +287,6 @@ You have now finished the getting started guide for ATS. We advice to read next 
 
 Good luck testing your Mendix app with ATS!
 
-## 8 Next Up
+## 7 Next Up
 
 You now learned a few basics of working with ATS. The next how-to is [How to Install the ATS Helper and ATS Recorder](install-ats-helper-recorder-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.

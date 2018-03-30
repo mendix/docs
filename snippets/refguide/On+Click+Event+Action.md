@@ -1,4 +1,5 @@
-### On Click<a name="OnClick"></a>
+<a name="OnClick"></a>
+### On Click
 
 This property specifies what action is executed when the element is clicked. These are the options:
 

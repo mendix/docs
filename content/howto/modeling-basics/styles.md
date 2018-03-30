@@ -9,10 +9,10 @@ tags: ["style", "class name", "user interface"]
 
 This page contains useful class names that can be used to make your app more beautiful without writing CSS. Class names can be added to the properties of page widgets. Several classes can be added to the same widget by separating the class names with a space.
 
-Class names can be entered in two ways, which are:
+Class names can be entered in two locations:
 
-* in the properties panel of the modeler
-* in the properties pop-up window for the widget
+* The **Properties** panel of the Modeler
+* The **Properties** pop-up window for the widget
 
 **This how-to will teach you how to do the following:**
 
@@ -120,7 +120,7 @@ For phones, also add `col-xs-N` (where `N` is the size of the column) to the lay
 
 {{% /alert %}}
 
-There is more information on grid options, including suggestions and examples, on the Bootstrap website. See [Bootstrap CSS Grid Options](https://getbootstrap.com/docs/3.3/css/#grid-options).
+For more information on grid options, including suggestions and examples, see [Bootstrap CSS Grid Options](https://getbootstrap.com/docs/3.3/css/#grid-options).
 
 ## 7 List View
 

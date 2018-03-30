@@ -3,7 +3,7 @@ title: "Build API"
 category: "API Documentation"
 ---
 
-# <a name="BuildAPI-Introduction" rel="nofollow"></a>Introduction
+# Introduction
 
 The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the Teamserver API as input for these API calls.
 
@@ -11,11 +11,11 @@ The image below provides a domain model representation of the concepts discussed
 
 ![](attachments/deploy-api/api-model.png)
 
-# <a name="BuildAPI-APIcalls" rel="nofollow"></a>API calls
+# API calls
 
-## <a name="BuildAPI-Retrievepackages" rel="nofollow"></a>Retrieve packages
+## Retrieve packages
 
-### <a name="BuildAPI-Description" rel="nofollow"></a>Description
+### Description
 
 Retrieves all deployment packages that are available for a specific app that the authenticated user has access to as a regular user. These packages can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
@@ -24,13 +24,13 @@ Retrieves all deployment packages that are available for a specific app that the
  URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/ (https://deploy.mendix.com/api/1/apps/<AppId>/packages/)]
 ```
 
-### <a name="BuildAPI-Request" rel="nofollow"></a>Request
+### Request
 
-##### <a name="BuildAPI-Parameter" rel="nofollow"></a>Parameter
+##### Parameter
 
 *   _AppId_ (String) : Subdomain name of an app.
 
-##### <a name="BuildAPI-Example" rel="nofollow"></a>Example
+##### Example
 
 ```java
 GET /api/ 1 /apps/calc/packages/ HTTP/ 1.1
@@ -41,7 +41,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### <a name="BuildAPI-Output" rel="nofollow"></a>Output
+### Output
 
 List of objects with the following key-value pairs:
 
@@ -56,13 +56,13 @@ List of objects with the following key-value pairs:
     Possible values: Succeeded, Queued, Building, Uploading and Failed.
 *   _Size_ (Long) : Size of the package in bytes.
 
-##### <a rel="nofollow"></a>Error codes:
+##### Error codes:
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_APPID | Invalid AppId |
 
-##### <a rel="nofollow"></a>Example
+##### Example
 
 ```java
 [{
@@ -86,9 +86,9 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-## <a name="BuildAPI-Retrievepackage" rel="nofollow"></a>Retrieve Package
+## Retrieve Package
 
-### <a rel="nofollow"></a>Description
+### Description
 
 Retrieves a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
@@ -97,14 +97,14 @@ HTTP Method: GET
  URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId> (https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>)]
 ```
 
-### <a rel="nofollow"></a>Request
+### Request
 
-##### <a name="BuildAPI-Parameters" rel="nofollow"></a>Parameters
+##### Parameters
 
 *   _AppId_ (String) : Subdomain name of an app.
 *   _PackageId_ (String) : Id of the deployment package.
 
-##### <a rel="nofollow"></a>Example
+##### Example
 
 ```java
 GET /api/ 1 /apps/calc/packages/b3d14e53- 2654 - 4534 -b374-9179a69ef3cf HTTP/ 1.1
@@ -115,7 +115,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### <a rel="nofollow"></a>Output
+### Output
 
 An object with the following key-value pairs:
 
@@ -130,14 +130,14 @@ An object with the following key-value pairs:
     Possible values: Succeeded, Queued, Building, Uploading and Failed.
 *   _Size_ (Long) : Size of the package in bytes.
 
-##### <a name="BuildAPI-Errorcodes" rel="nofollow"></a>Error codes
+##### Error codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and PackageId parameters. |
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found |
 
-##### <a rel="nofollow"></a>Example
+##### Example
 
 ```java
 {
@@ -152,7 +152,9 @@ An object with the following key-value pairs:
 }
 ```
 
-## <a name="BuildAPI-Deletepackage" rel="nofollow"></a>Delete package
+## Delete package
+
+### Description
 
 Deletes a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
@@ -161,9 +163,9 @@ Deletes a specific deployment package that is available for a specific app that 
  URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId> (https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>)]
 ```
 
-**Request**
+### Request
 
-<a rel="nofollow"></a>Parameters
+#### Parameters
 
 *   _AppId_ (String) : Subdomain name of an app
 *   _PackageId_ (String) : Id of the deployment package
@@ -177,7 +179,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-<a rel="nofollow"></a>Error codes
+#### Error codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -185,7 +187,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 409 | PACKAGE_IN_USE | Package is still in use. |
 
-## <a name="BuildAPI-Downloadpackage" rel="nofollow"></a>Download package
+## Download package
 
 Downloads a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
@@ -196,7 +198,7 @@ Downloads a specific deployment package that is available for a specific app tha
 
 ### Request
 
-<a rel="nofollow"></a>Parameters
+Parameters
 
 *   _AppId_ (String) : Subdomain name of an app.
 *   _PackageId_ (String) : Id of the deployment package.
@@ -210,9 +212,9 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-### <a name="BuildAPI-Ouput" rel="nofollow"></a>Output
+### Output
 
-<a rel="nofollow"></a>Error codes
+Error codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -220,7 +222,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 500 | BUILD_NOT_SUCCEEDED | Build not successful finished. |
 
-## <a name="BuildAPI-Startbuildingdeploymentpackage" rel="nofollow"></a>Start building deployment package
+## Start building deployment package
 
 Start the process to build a deployment package, based on the team server project of a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform. For a Sandbox, this will also trigger a deployment of the new package.
 
@@ -229,13 +231,13 @@ HTTP Method: POST
  URL: [https://deploy.mendix.com/api/1/apps/<AppId>/packages/ (https://deploy.mendix.com/api/1/apps/<AppId>/packages/)]
 ```
 
-### <a rel="nofollow"></a>Request
+### Request
 
-##### <a rel="nofollow"></a>Parameter
+##### Parameter
 
 *   _AppId_ (String) : Subdomain name of an app.
 
-##### <a name="BuildAPI-Payload" rel="nofollow"></a>Payload
+##### Payload
 
 An object with the following key-value pairs:
 
@@ -244,7 +246,7 @@ An object with the following key-value pairs:
 *   _Version_ (String) : Package version. This will also be the name of the tag on the project team server.
 *   _Description_ (String) : Description of the package.
 
-##### <a rel="nofollow"></a>Example
+##### Example
 
 ```java
 POST /api/ 1 /apps/calc/packages/ HTTP/ 1.1
@@ -261,14 +263,14 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-### <a rel="nofollow"></a>Output
+### Output
 
 An object with the following key-value pair:
 
 *   _PackageId_ (String) : Unique identification of the package. This string can be used to get the build status
     of the package later.
 
-<a rel="nofollow"></a>Error codes
+Error codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -278,7 +280,7 @@ An object with the following key-value pair:
 | 404 | APP_NOT_FOUND | App not found. |
 | 500 | BUILD_FAILED | Build job failed. |
 
-##### <a rel="nofollow"></a>Example
+##### Example
 
 ```java
 {

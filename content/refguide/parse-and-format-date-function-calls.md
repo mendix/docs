@@ -71,6 +71,13 @@ returns:
 ```java
 'Sun, 8 Jun 2008 10:12:01 +0200'
 ```
+
+To get '1987-12-31T23:59:00' you need to concatenate two formatDateTime[UTC] functions
+```java
+formatDateTime($object/Date1,'yyyy-MM-DD') + 'T' + formatDateTime($object/Date1,'HH:mm:ss')
+``` HH:mm:ss Z')
+```
+
 ## formatTime[UTC]
 
 Converts the time part of datetime to a string in a standard format. `formatTime` uses the users calendar and `formatTimeUTC` uses the UTC calendar.

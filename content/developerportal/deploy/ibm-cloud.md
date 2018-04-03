@@ -7,13 +7,13 @@ tags: ["Deployment", "IBM", "IBM Cloud", "Environment"]
 
 ## 1    Introduction
 
-As a Mendix user with an IBM Cloud account you have access to many IBM resources which you want to use in a Mendix app. This how-to shows you how to create a Mendix app on the Mendix platform and then deploy it to IBM Cloud.  
+As a Mendix user with an IBM Cloud account you have access to many IBM resources which you want to use in a Mendix app. This how-to shows you how to create a Mendix app on the Mendix platform and then deploy it to IBM Cloud.
 
 **This how-to will teach you how to do the following:**
 
 * Select an IBM app template and ask Mendix to create the app
 * Create a deployment package on the IBM Cloud
-* Deploy and test your app on the IBM Cloud 
+* Deploy and test your app on the IBM Cloud
 
 ## 2 Prerequisites
 
@@ -80,7 +80,7 @@ You are now on IBM Cloud and need to tell it more about your project, so that IB
     If you have not linked an IBM Cloud project to Mendix before, you will be asked to confirm that IBM Cloud can have access to some of your Mendix data. Please **Authorize** this.
 
     You will now be returned to the project page.
-    
+
 6.  Click **Choose Deployment** again.
 
     Currently only Cloud Foundry is supported.
@@ -106,7 +106,7 @@ You are now on IBM Cloud and need to tell it more about your project, so that IB
 2.  Open the **Environments** page.
 
     You are now ready to create a deployment package which you will then push to IBM Cloud. It is only after the deployment package has been created and pushed to IBM Cloud that you can deploy your app.
- 
+
 3. Click on **Create package from teamserver**.
 
     ![](attachments/ibm-cloud/createpackage.png)
@@ -185,11 +185,11 @@ When the project is built it will appear in the list of deployment packages. Whi
     {{% /alert %}}
 
     You can also view your app directly using the url which is given to you:
-    
+
     ![](attachments/ibm-cloud/deployurl.png)
 
 ## 4 Related Content
 
 * [IBM Cloud account](https://console.bluemix.net/registration/)
 * [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
-* [Mendix Tutorials](https://docs.mendix.com/howto/tutorials/)
+* [Mendix Tutorials](/howto/tutorials/)

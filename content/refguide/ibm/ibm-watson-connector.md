@@ -54,7 +54,7 @@ Not all Watson services are currently supported by the IBM Watson Connector Suit
 
 These connectors are based on version 3.5.3 of the Watson SDK.
 
-If there is no connector for the service you want, you can use Mendix native REST to use the service yourself. See [How to Consume a REST Service](https://docs.mendix.com/howto/integration/consume-a-rest-service).
+If there is no connector for the service you want, you can use Mendix native REST to use the service yourself. See [How to Consume a REST Service](/howto/integration/consume-a-rest-service).
 {{% /alert %}}
 
 ## 2 Connector Actions
@@ -83,7 +83,7 @@ A string containing the password assigned to the conversation service in your IB
 
 #### 2.1.3 Input
 
-A string containing the input to the conversation. This string cannot contain carriage return, newline, or tab characters, and it must be no longer than 2048 characters. 
+A string containing the input to the conversation. This string cannot contain carriage return, newline, or tab characters, and it must be no longer than 2048 characters.
 
 #### 2.1.4 Conversation context
 
@@ -458,7 +458,7 @@ The WatsonServiceConfig entity has the following attributes:
 
 ## 4 Not yet supported
 
-The following Watson services are not yet supported by the IBM Watson Connector Suite. However, you can connect to them yourself using the native Mendix activities for consuming REST services. See [How to Consume a REST Service](https://docs.mendix.com/howto/integration/consume-a-rest-service).
+The following Watson services are not yet supported by the IBM Watson Connector Suite. However, you can connect to them yourself using the native Mendix activities for consuming REST services. See [How to Consume a REST Service](/howto/integration/consume-a-rest-service).
 
 1. Discovery
 
@@ -485,7 +485,7 @@ This section presents example user scenarios that can be referenced when using t
 ## 5 Related Content
 
 * [Getting started with Watson and IBM Cloud](https://console.bluemix.net/docs/services/watson/index.html)
-* [How to Consume a REST Service](https://docs.mendix.com/howto/integration/consume-a-rest-service)
+* [How to Consume a REST Service](/howto/integration/consume-a-rest-service)
 * [IBM Cloud](https://www.ibm.com/cloud/)
 * [IBM Watson Language Translator service](https://console.bluemix.net/docs/services/language-translator/index.html)
 * [IBM Watson Language Translator service — API Reference](https://www.ibm.com/watson/developercloud/language-translator/api/v2/)
@@ -497,7 +497,7 @@ This section presents example user scenarios that can be referenced when using t
 * [IBM Watson Natural Language Classifier](https://console.bluemix.net/docs/services/natural-language-classifier/natural-language-classifier-overview.html)
 * [IBM Watson Personality Insights service](https://console.bluemix.net/docs/services/personality-insights/index.html)
 * [IBM Watson Speech to Text service](https://console.bluemix.net/docs/services/speech-to-text/index.html)
-* [IBM Watson Speech to Text service — API Reference](https://www.ibm.com/watson/developercloud/speech-to-text/api/v1/) 
+* [IBM Watson Speech to Text service — API Reference](https://www.ibm.com/watson/developercloud/speech-to-text/api/v1/)
 * [IBM Watson Speech to Text — audio formats](https://console.bluemix.net/docs/services/speech-to-text/audio-formats.html)
 * [IBM Watson Text to Speech service](https://console.bluemix.net/docs/services/text-to-speech/index.html)
 * [IBM Watson Text to Speech service — API Reference](https://www.ibm.com/watson/developercloud/text-to-speech/api/v1/)

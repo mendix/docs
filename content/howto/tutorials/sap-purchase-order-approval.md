@@ -116,7 +116,7 @@ To add an **Approve** button to the home page, follow these steps:
 
 3. Right-click in the snippet area and select **Add widget** > **Button** > **Call microflow button**. Microflows consist of microflow actions, which trigger basic operations such as creating, changing, and deleting objects as well as aggregating object lists and showing messages.
 
-4. In the **Select Microflow** dialog window, click **New** to create a new microflow and enter *ACT_OpenApproveDialog* for the **Name**. For details on Mendix naming convention best practices, see [Mendix Development Best Practices](https://docs.mendix.com/howtogeneral/bestpractices/dev-best-practices).
+4. In the **Select Microflow** dialog window, click **New** to create a new microflow and enter *ACT_OpenApproveDialog* for the **Name**. For details on Mendix naming convention best practices, see [Mendix Development Best Practices](/howtogeneral/bestpractices/dev-best-practices).
 5. Double-click the button you just created and change the **Caption** to *Approve*.
 6. In the Properties pane on the right, change the **Button Style** to *Success*.
 

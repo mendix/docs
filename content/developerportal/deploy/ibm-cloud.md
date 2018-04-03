@@ -49,7 +49,7 @@ To start creating a new app, follow these steps:
 
 6.  Wait while Mendix creates a copy of the starter app you have chosen and takes you to IBM Cloud.
 
-### 3.2 Setting up the project on IBM Cloud
+### 3.2 Setting Up the Project on IBM Cloud
 
 You are now on IBM Cloud and need to tell it more about your project, so that IBM Cloud can add the resources you need.
 
@@ -98,7 +98,7 @@ To set up IBM Cloud, follow these steps:
 
     Your IBM environment is now configured.
 
-### 3.3 Creating a package for IBM Cloud
+### 3.3 Creating a Package for IBM Cloud
 
 Before you can deploy a package on IBM Cloud you have to create it.
 
@@ -151,7 +151,7 @@ To create a package for IBM Cloud, follow these steps:
 
     ![](attachments/ibm-cloud/packagedetails.png)
 
-### 3.4 Deploying a package on IBM Cloud
+### 3.4 Deploying a Package on IBM Cloud
 
 When the project is built it will appear in the list of deployment packages. While it is being built, there will be a 'spinner' showing that the package is not yet complete. Once the package is ready for deployment this will be replaced by a tick.
 

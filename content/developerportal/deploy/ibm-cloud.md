@@ -20,58 +20,59 @@ As a Mendix user with an IBM Cloud account you have access to many IBM resources
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have an [IBM Cloud account](https://console.bluemix.net/registration/)
-* Download the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) — you will need 7.11.0 or higher
-* Be familiar with the basic concepts of editing and deploying a Mendix app ([here](/howto/tutorials/) are a number of Mendix tutorials which cover these)
+* Download the [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/) – you will need 7.11.0 or higher
+* Be familiar with the basic concepts of editing and deploying a Mendix app. If you are new to Mendix, the [Starter App Tutorial](/howto/tutorials/starter-apps) will introduce you to these concepts
 
 ## 3 Creating the New App and Setting Up IBM Cloud
 
 You have decided to create a new Mendix app using an IBM template which you will ask Mendix to deploy to your IBM Cloud.
 
-### 3.1 Create a New App
+### 3.1 Creating a New App
+
+First you will create your Mendix app which you wish to deploy.
 
 To start creating a new app, follow these steps:
 
-1. Log in to your Mendix Account.
+1.  Log in to your Mendix Account.
+
 2.  Click **Create App** to create a new app.
 
     ![](attachments/ibm-cloud/createapp.png)
 
-3.  Click on an IBM app to choose it as the starting point for your app.
+3.  Click an IBM app to choose it as the starting point for your app.
 
     ![](attachments/ibm-cloud/choosestartingpoint.png)
 
-4. Click **Use this app**.
+4.  Click **Use this app**.
 
-5. Choose a name for your app and click **Create App**.
+5.  Choose a name for your app and click **Create App**.
 
-6. Wait while Mendix creates a copy of the starter app you have chosen and takes you to IBM Cloud.
+6.  Wait while Mendix creates a copy of the starter app you have chosen and takes you to IBM Cloud.
 
-### 3.2 Setup project on IBM Cloud
+### 3.2 Setting up the project on IBM Cloud
 
 You are now on IBM Cloud and need to tell it more about your project, so that IBM Cloud can add the resources you need.
+
+To set up IBM Cloud, follow these steps:
 
 1.  Click **Setup Cloud**.
 
     ![](attachments/ibm-cloud/landing.png)
 
-2. Log in to IBM Cloud if you are not already logged in.
-
-    The name of your project is already entered in **Enter a project name**
+2.  Log in to IBM Cloud if you are not already logged in. The name of your project is already filled in.
 
     ![](attachments/ibm-cloud/createnewproject.png)
 
     {{% alert type="info" %}}Currently you can only deploy your project in the **US South** region, so make sure that this is selected in **Select region to deploy in**.
     {{% /alert %}}
 
-3. Click **Create Project**
+3.  Click **Create Project**.
 
-    You will now need to choose the deployment method for this app. For example the database you will be using.
-
-4. Click **Choose Deployment**
+4.  Click **Choose Deployment** to choose the deployment method for this app, for example the database you will be using.
 
     ![](attachments/ibm-cloud/choosedeployment.png)
 
-5. Click **Link Account**
+5.  Click **Link Account**.
 
     ![](attachments/ibm-cloud/linkaccount.png)
 
@@ -91,15 +92,17 @@ You are now on IBM Cloud and need to tell it more about your project, so that IB
 
     ![](attachments/ibm-cloud/choosedeployment_2.png)
 
-9. Click **Create**.
-
-    Wait until the **Deployment Details** indicate that the toolchain is configured.
+9.  Click **Create** and wait until the **Deployment Details** indicate that the toolchain is configured.
 
     ![](attachments/ibm-cloud/deploymentconfigured.png)
 
     Your IBM environment is now configured.
 
-### 3.3 Create package on IBM Cloud
+### 3.3 Creating a package for IBM Cloud
+
+Before you can deploy a package on IBM Cloud you have to create it.
+
+To create a package for IBM Cloud, follow these steps:
 
 1.  Click **Edit on Mendix** to return to Mendix.
 
@@ -107,18 +110,18 @@ You are now on IBM Cloud and need to tell it more about your project, so that IB
 
     You are now ready to create a deployment package which you will then push to IBM Cloud. It is only after the deployment package has been created and pushed to IBM Cloud that you can deploy your app.
  
-3. Click on **Create package from teamserver**.
+3.  Click **Create package from teamserver**.
 
     ![](attachments/ibm-cloud/createpackage.png)
 
-4. Select the branch on which to base the build and click **Next**.
+4.  Select the branch on which to base the build and click **Next**.
 
     ![](attachments/ibm-cloud/selectbranch.png)
 
     {{% alert type="info" %}}Initially, you will only have the Main line. However, when you create deployment packages in the future, there may be other branches available.
     {{% /alert %}}
 
-5. Select the revision of this branch and click **Next**.
+5.  Select the revision of this branch and click **Next**.
 
     ![](attachments/ibm-cloud/selectrevision.png)
 
@@ -127,17 +130,17 @@ You are now on IBM Cloud and need to tell it more about your project, so that IB
     {{% alert type="info" %}}Please do not choose to create a package from revision number 1.
     {{% /alert %}}
 
-6. Optionally, type a **Tag description** for this build and, if required, set the version number.
+6.  Type a **Tag description** (optional) and set the version number for this build.
 
     ![](attachments/ibm-cloud/entertag.png)
 
-7. Click on **Build this revision**.
+7.  Click **Build this revision**.
 
-8. Click **OK** to confirm the information message.
+8.  Click **OK** to confirm the information message.
 
     ![](attachments/ibm-cloud/projectbeingbuilt.png)
 
-9. Click **Details** next to the deployment package to see details of the deployment package
+9.  Click **Details** next to the deployment package to see details of the deployment package.
 
     ![](attachments/ibm-cloud/packagedetailsbutton.png)
 
@@ -147,23 +150,28 @@ You are now on IBM Cloud and need to tell it more about your project, so that IB
 
     ![](attachments/ibm-cloud/packagedetails.png)
 
-### 3.4 Deploy package on IBM Cloud
+### 3.4 Deploying a package on IBM Cloud
 
 When the project is built it will appear in the list of deployment packages. While it is being built, there will be a 'spinner' showing that the package is not yet complete. Once the package is ready for deployment this will be replaced by a tick.
 
 ![](attachments/ibm-cloud/packagelist.png)
 
-1. Click on **Push** next to the package you want to deploy. This will push this deployment package to IBM Cloud.
+The package is still within the Mendix environment and needs to be pushed to IBM Cloud. From there it can be deployed.
 
-    A request to deploy is sent to IBM Cloud. Currently you have to do this deployment manually.
+To push and deploy the package on IBM Cloud, follow these steps:
 
-2.  Click on the **here** link or the **Open IBM Cloud** button to go to your IBM Cloud project page.
+1. Click **Push** next to the package you want to deploy. This will push this deployment package to IBM Cloud.
+
+    {{% alert type="info" %}}A request to deploy is sent to IBM Cloud. Currently you have to do this deployment manually.
+    {{% /alert %}}
+    
+2.  Click the **here** link or the **Open IBM Cloud** button to go to your IBM Cloud project page.
 
     ![](attachments/ibm-cloud/pushrequest.png)
 
     You will now be back on your IBM Cloud project page.
 
-3.  Click on **Deploy Application**
+3.  Click **Deploy Application**.
 
     ![](attachments/ibm-cloud/readytodeploy.png)
 
@@ -171,7 +179,7 @@ When the project is built it will appear in the list of deployment packages. Whi
 
     ![](attachments/ibm-cloud/deploysuccess.png)
 
-5.  Click **Edit on Mendix** to return to Mendix
+5.  Click **Edit on Mendix** to return to Mendix.
 
 6.  Click **Environments** to see the Mendix environments page.
 
@@ -192,4 +200,4 @@ When the project is built it will appear in the list of deployment packages. Whi
 
 * [IBM Cloud account](https://console.bluemix.net/registration/)
 * [Mendix Desktop Modeler](https://appstore.home.mendix.com/link/modelers/)
-* [Mendix Tutorials](https://docs.mendix.com/howto/tutorials/)
+* [Starter App Tutorial](/howto/tutorials/starter-apps)

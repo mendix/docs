@@ -155,7 +155,7 @@ In this section, you will edit some test steps by using Firebug and FirePath to 
 
 	![](attachments/18448631/18580290.png) 
 
-    The **Name** of the Amount field is **textBox6**. Every element will automatically get the CSS class `mx-name-[Name]`, so the amount field will have the CSS class `mx-name-textBox6`.
+    The **Name** property of the **Amount** field is **textBox6**. Every element will automatically get the CSS class `mx-name-[Name]`, so the amount field will have the CSS class `mx-name-textBox6`.
 
     ![](attachments/18448631/18580289.png)
 

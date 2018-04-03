@@ -78,8 +78,8 @@ To submit a new how-to or reference guide page to our documentation, follow thes
 2. Follow the guidelines in the template for writing your document, and make sure the text aligns with our [Content Writing and Formatting Guidelines](content-writing-and-formatting-guidelines).
 3. Take screenshots for the new document and add them to a new sub-folder in the **attachments** folder. For more details on working with images, see [5 Naming New Files and Images](#NamingNewFilesandImages).
 4. To merge your new documention, commit it to the GitHub repository:
-    *  You can commit new Markdown files via Sourcetree or via the **Create new file** button in the GitHub repo (where you can copy-paste your text)
-    * You can only commit new image files via Sourcetree
+    *  You can commit new Markdown files via Sourcetree or via the **Create new file** button in the GitHub repo in your browser (where you can copy-paste your text)
+    *  You can commit new image files via Sourcetree or via the **Upload files** button in the GitHub repo in your browser (where you can drag and drop your image file)
 5. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/).
 
 {{% alert type="info" %}}

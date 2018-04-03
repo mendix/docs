@@ -80,7 +80,7 @@ Here is the domain model of the SAP OData Connector:
 Each entity (see [Entities](/refguide/entities) in the Mendix Reference Guide) contains one or more attributes (see [Attributes](/refguide/attributes) in the Mendix Reference Guide):
 
 * **ODataObject** – represents the generic OData object. All entities which can be manipulated directly in the SAP service domain model are specializations of this
-  * **meta objectURI** – the address given by the SAP service to the OData object 
+  * **meta objectURI** – the address given by the SAP service to the OData object
   * **meta_etag** – the entity tag (ETag) for the object. Entity tags are used for optimistic concurrency control to check that an object has not been changed by an SAP service initiated by another user
 * **ResultInfo** – holds information about the result of a query
   * **totalCount** – when a query is executed with $inlinecount=allpages the result returns the total record count for the given criteria. If a ResultInfo entity object is specified, this value will be stored in the totalCount attribute and can be used for paging
@@ -443,7 +443,7 @@ For example, you want to retrieve all the Tasks which are associated with the 'M
 
 #### 4.1.10 Result info
 
- This is an object of type ResultInfo where the number of items in the list is returned. It is used for the Get List action. Note that for a Get List the query should include $inlinecount=allpages in order to return the total number of items in the list. 
+ This is an object of type ResultInfo where the number of items in the list is returned. It is used for the Get List action. Note that for a Get List the query should include $inlinecount=allpages in order to return the total number of items in the list.
 
 Set this to _empty_ if it is not required.
 
@@ -493,7 +493,7 @@ This is the name that you give the result of your Activity. This can be used lat
 * [Data Types](/refguide/data-types)
 * [Domain Model](/refguide/domain-model)
 * [Entities](/refguide/entities)
-* [How to Use App Store Content in the Modeler](https://docs.mendix.com/community/app-store/use-app-store-content-in-the-modeler)
+* [How to Use App Store Content in the Modeler](/community/app-store/use-app-store-content-in-the-modeler)
 * [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector)
 * [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)
 * [OData metadata XML for CRM Task](https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata)

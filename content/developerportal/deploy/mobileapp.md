@@ -36,7 +36,7 @@ In the **General settings** section, you must provide the following information:
 
 ### 2.2 Profile Settings
 
-If you are targetting Mendix 7.2.0 or above, please specify the navigation profiles to use on phones and tablets. 
+If you are targetting Mendix 7.2.0 or above, please specify the navigation profiles to use on phones and tablets.
 
 Make sure the profile identifier corresponds with the one defined in the Modeler.
 
@@ -92,7 +92,7 @@ On the right side of the screen, you can choose which operating system you want 
 
 When you are ready to build, click **Publish for Mobile App Stores**.
 
-This wizard will guide you through the process of creating app packages for the Apple App Store and Google Play Store. These packages can be built using Adobe's PhoneGap Build service. The resulting mobile apps can then access native functionality such as the geo location service and the camera. 
+This wizard will guide you through the process of creating app packages for the Apple App Store and Google Play Store. These packages can be built using Adobe's PhoneGap Build service. The resulting mobile apps can then access native functionality such as the geo location service and the camera.
 
 You need an account for Adobe PhoneGap Build and for the app stores in which you want to publish your app.
 
@@ -107,7 +107,7 @@ For more information, see [How to Publish a Mendix Hybrid Mobile App in Mobile A
 
 After selecting the **Build in the cloud** option and choosing the correct environment, you are ready to start the PhoneGap build.
 
-When you click **Start PhoneGap Build job**, Mendix will generate an Adobe PhoneGap Build package and send it to the PhoneGap Build service on your behalf. You might be required to authorize this request using an Adobe PhoneGap Build account. 
+When you click **Start PhoneGap Build job**, Mendix will generate an Adobe PhoneGap Build package and send it to the PhoneGap Build service on your behalf. You might be required to authorize this request using an Adobe PhoneGap Build account.
 
 As soon as the build job has completed, the platform-specific packages will be ready for download.
 
@@ -115,13 +115,13 @@ Please note that an Adobe PhoneGap Build account is required to continue. Create
 
 ### 4.2 Doing It Yourself
 
-After selecting the **Do it yourself** option and choosing the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, run on emulators, and upload to the PhoneGap Build service. 
+After selecting the **Do it yourself** option and choosing the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, run on emulators, and upload to the PhoneGap Build service.
 
-In the `/dist` folder, you'll find a pre-compiled Adobe PhoneGap Build package for your app. You can upload this package directly to the PhoneGap Build service to obtain platform-specific app packages. Those packages can then be published in the app stores. 
+In the `/dist` folder, you'll find a pre-compiled Adobe PhoneGap Build package for your app. You can upload this package directly to the PhoneGap Build service to obtain platform-specific app packages. Those packages can then be published in the app stores.
 
-You can freely customize the generated package to enable, for example, additional PhoneGap/Cordova plugins or add additional resources to your app. For more information, see [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages). 
+You can freely customize the generated package to enable, for example, additional PhoneGap/Cordova plugins or add additional resources to your app. For more information, see [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages).
 
-For detailed instructions, see the [hybrid-app-template GitHub repository](https://github.com/mendix/hybrid-app-template). 
+For detailed instructions, see the [hybrid-app-template GitHub repository](https://github.com/mendix/hybrid-app-template).
 
 To generate the app store packages, go to [Build.PhoneGap.com](https://build.phonegap.com/).
 
@@ -133,9 +133,9 @@ To generate the app store packages, go to [Build.PhoneGap.com](https://build.pho
 
 ## 6 Related Content
 
-* [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)   
+* [Customizing PhoneGap Build Packages](/refguide/customizing-phonegap-build-packages)
 * [Deploy](/developerportal/deploy)
-* [Offline](https://docs.mendix.com/refguide/offline)
+* [Offline](/refguide/offline)
 * [How to Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores)
 * [Adobe PhoneGap Build](https://build.phonegap.com/)
 * [Apache Cordova Phonegap Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

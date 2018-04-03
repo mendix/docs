@@ -11,6 +11,35 @@ To download the **Mendix** mobile app, select one of the download links below:
 * [Download for Android](https://play.google.com/store/apps/details?id=com.mendix.SprintrMobile)
 {{% /alert %}}
 
+## 4.7.1
+
+**Release date: March 26th, 2018**
+
+### Fixes
+
+* We fixed the issue where hybrid apps were stuck in either offline or online mode.
+
+## 4.7.0
+
+**Release date: March 23rd, 2018**
+
+### New Functionality
+
+* We added support for opening offline-capable hybrid apps. To open an offline-capable app through the QR scanner, enable the `offline` toggle in the Modeler's `View App` dialog. To open an offline-capable app by entering a URL manually, enable the `offline` toggle within the app.
+
+### Improvements
+
+* Hybrid apps now use the newly styled loading screen, login screen, and error screen.
+
+### Fixes
+
+* Deep links (for example, links to your Mendix app) opened using the Mendix mobile app are now properly sanitized.
+
+### Known Issues
+
+* The Mendix feedback widget does not always load properly on iOS.
+* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Developer Portal) should not pose any problems.
+
 ## 4.6.0
 
 **Release date: November 30th, 2017**

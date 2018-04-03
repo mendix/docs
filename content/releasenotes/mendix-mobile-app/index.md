@@ -13,19 +13,19 @@ To download the **Mendix** mobile app, select one of the download links below:
 
 ## 4.7.1
 
-**Release date: Friday March 23rd, 2018**
+**Release date: March 26th, 2018**
 
 ### Fixes
 
-* We fixed an issue where hybrid apps would sometimes be stuck in either offline or online mode.
+* We fixed the issue where hybrid apps were stuck in either offline or online mode.
 
 ## 4.7.0
 
-**Release date: Monday March 26th, 2018**
+**Release date: March 23rd, 2018**
 
 ### New Functionality
 
-* We added support for opening offline-capable hybrid apps. To open an offline-capable app through the QR scanner, enable the `offline` toggle in the modeler's `View App` dialog. To open an offline-capable app by entering a URL manually, enable the `offline` toggle within the app.
+* We added support for opening offline-capable hybrid apps. To open an offline-capable app through the QR scanner, enable the `offline` toggle in the Modeler's `View App` dialog. To open an offline-capable app by entering a URL manually, enable the `offline` toggle within the app.
 
 ### Improvements
 
@@ -33,7 +33,7 @@ To download the **Mendix** mobile app, select one of the download links below:
 
 ### Fixes
 
-* Deep links (e.g. links to your Mendix app) opened using the Mendix Mobile app are now properly sanitized.
+* Deep links (for example, links to your Mendix app) opened using the Mendix mobile app are now properly sanitized.
 
 ### Known Issues
 

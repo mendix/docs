@@ -63,7 +63,7 @@ If there is no connector for the service you want, you can use Mendix native RES
 
 This section contains a reference to each of the microflow actions which is added to your app when you install the IBM Watson Connector Suite.
 
-### 2.1 Conversation – send message
+### 2.1 Conversation – Send Message
 
 This action sends a message from your app to the [IBM Watson Conversation service](https://console.bluemix.net/docs/services/conversation/index.html). This will use a selected workspace to analyze the message and return an appropriate response.
 
@@ -91,7 +91,7 @@ This is a string containing the password assigned to the conversation service in
 
 This is a string containing the input to the conversation. This string cannot contain carriage return, newline, or tab characters, and it must be no longer than 2048 characters. 
 
-#### 2.1.4 Conversation context
+#### 2.1.4 Conversation Context
 
 This is an object of type ConversationContext which contains the context for this conversation.
 
@@ -127,11 +127,11 @@ This is a string containing the username assigned to the speech to text service 
 
 This is a string containing the password assigned to the speech to text service in your IBM Cloud project.
 
-#### 2.2.3 Audio file
+#### 2.2.3 Audio File
 
 This is an object of type, or a specialization of type, FileDocument containing the audio stream to be analyzed. The stream must be encoded in the format described in the audio format parameter.
 
-#### 2.2.4 Audio format
+#### 2.2.4 Audio Format
 
 The format of the audio file which is to be transcribed. These are listed in the enumeration AudioFormats. The following formats are supported:
 
@@ -145,7 +145,7 @@ The format of the audio file which is to be transcribed. These are listed in the
 
 For more detail see the [IBM Cloud documentation on audio formats](https://console.bluemix.net/docs/services/speech-to-text/audio-formats.html).
 
-#### 2.2.5 Audio language
+#### 2.2.5 Audio Language
 
 This is the language in which the text detected in the speech file should be transcribed. These are listed in the AudioLanguage enumeration. More information on the supported languages is available in the API reference: [Speech to Text API Reference](https://www.ibm.com/watson/developercloud/speech-to-text/api/v1/) on the IBM Cloud site.
 
@@ -253,7 +253,7 @@ This is a string containing the username assigned to the translation service in 
 
 This is a string containing the password assigned to the translation service in your IBM Cloud project.
 
-#### 2.5.3 Variable (list of Language)
+#### 2.5.3 Variable (List of Language)
 
 This is the name you wish to assign to a list of objects of type Language which is the response received from Watson.
 
@@ -330,7 +330,7 @@ This action passes an image to the [IBM Watson Visual Recognition service](https
 
 More information on the APIs for the IBM Watson Visual Recognition service is available here: [IBM Watson Visual Recognition service – API Reference](https://www.ibm.com/watson/developercloud/visual-recognition/api/v3/).
 
-#### 2.7.1 Visual request object
+#### 2.7.1 Visual Request Object
 
 This is an object of type **VisualRecognitionImage** which contains the image which is to be classified. The image must be in jpg or png format and be less that 10MB.
 
@@ -346,7 +346,7 @@ This is a list of the classifiers which Watson should use to classify the image.
 * ClassifierId – "default"
 * ClassifierOwner – "IBM" or empty
 
-#### 2.7.4 Variable (list of Classifier)
+#### 2.7.4 Variable (List of Classifier)
 
 This is the name of the list of Classifier objects returned from Watson.
 
@@ -403,7 +403,7 @@ This is a string containing the API key assigned to the Watson vision service in
 
 This is an object of type, or a specialization of, System.Image containing the image in which faces should be detected.
 
-#### 2.9.3 Variable (list of Face)
+#### 2.9.3 Variable (List of Face)
 
 This is the name you wish to assign to a list of objects of type Face. Each object contains information about a face which has been detected in the image.
 
@@ -433,7 +433,7 @@ Functionality to store the API keys and username/password combinations which are
 If the app is running on IBM Cloud, then it can use VCAP to obtain the credentials for the configured services. Support for this functionality is in the project module **WatsonServices** in the folder **USE_ME**.
 If the app is not running on IBM Cloud (for example if you are testing it locally or on a Mendix cloud), then the credentials will have to be supplied manually.
 
-### 3.1 Getting Credentials through VCAP
+### 3.1 Getting Credentials Through VCAP
 
 An example of how to check for the VCAP services and import the configured credentials is in the WatsonServices microflow **USE_ME > OnStartUpWatsonAppOnIBMCloud**. This is configured to run automatically in **Project Settings > Runtime > After startup**.
 

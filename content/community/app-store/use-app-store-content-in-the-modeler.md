@@ -141,7 +141,7 @@ Sometimes additional widgets are added when you download a module. For example, 
 
 To use the Google Maps module in the Desktop Modeler, follow these steps:
 
-1. Add **Home** and **ViewAllLocations** to your navigation:
+1. Add **Location Map Overview** and **Location Overview** to your app's **Navigation**:
 
     ![](attachments/use-app-store-content-in-the-modeler/18580429.png)
 

@@ -1,6 +1,6 @@
 ---
 title: "SAP Cloud Platform"
-category: "Deploy"
+parent: "environments"
 description: "Reference documentation on SAP Cloud deployment portal"
 tags: ["SAP", "SAP Cloud Portal", "Deployment", "Environment"]
 ---
@@ -36,43 +36,40 @@ After authorization, the Developer Portal will automatically create a Developmen
 At any time, it is possible to create a new deployment package from the project.
 
 1. Click **Create package from Team Server** and start the wizard.
-2. Select the branch you want to use from the Team Server.
+2.  Select the branch you want to use from the Team Server.
 
-  ![](attachments/sap-cloud-platform/03-sap-select-truck.png)
+    ![](attachments/sap-cloud-platform/03-sap-select-truck.png)
 
-3. Select the revision of the branch you like to build.
+3.  Select the revision of the branch you like to build.
 
-  ![](attachments/sap-cloud-platform/04-sap-select-revision.png)
+    ![](attachments/sap-cloud-platform/04-sap-select-revision.png)
 
-4. Define the tag details of the build.
+4.  Define the tag details of the build.
 
-  ![](attachments/sap-cloud-platform/05-sap-define-tag.png)
+    ![](attachments/sap-cloud-platform/05-sap-define-tag.png)
 
-5. Click **Build this revision** to build the package.
+5.  Click **Build this revision** to build the package.
 
-  ![](attachments/sap-cloud-platform/06-sap-build-revision.png)
-
+    ![](attachments/sap-cloud-platform/06-sap-build-revision.png)
 
 ## 4 Create a new Environment
 
 You need to create at least one environment for each Mendix application. This is done for you when creating an application from an SAP Starter App. When you switch between clouds this is something you need to do yourself.
 
 1. Click **Add Environment** to start the wizard.
-2. Select the **Domain**, **Organization**, and **Space** of your app.
+2.  Select the **Domain**, **Organization**, and **Space** of your app. The domain the URL will determine the application's URL. The URL of the application will be this:
 
-  The domain the URL will determine the application's URL.
+    ```
+    {appname}-{environment name}.{domain}
+    ```
+  
+    This is an example URL:
 
-  The URL of the application will be the
-  ```
-  {appname}-{environment name}.{domain}
-  ```
-  Example url:
+    ```
+    https://myapp-development.cfapps.eu10.ondemand.com
+    ```
 
-  ```
-  https://myapp-development.cfapps.eu10.ondemand.com
-  ```
-
-  ![](attachments/sap-cloud-platform/07-sap-env-1.png)
+    ![](attachments/sap-cloud-platform/07-sap-env-1.png)
 
 3. Click **Next**.
 4. Enter the name of the environment. This could be something like Test, Acceptance, Production, etc.
@@ -80,14 +77,13 @@ You need to create at least one environment for each Mendix application. This is
 6. By setting the environment to development mode, the application can be run in prototype mode or without security. This is not recommended for Acceptance and Production environments.
 7. Select the database you would like to use. Be aware that even if a specific database is part of the Marketplace it could still be unavailable because of limitations by the quota of your Space or Organization.   
 8. Select **File Store Enabled**. This is optional. If your application makes use of FileDocument or Image entities this option is required.
+9.  The **Subscription Secret** is required. This secret is sent to the account admin of your subscription. By entering the subscription secret, your application will be unlocked to run as production. Without a valid subscription, your app will restart every 1-2 hours and has a limitation of 6 named users.
 
-9. The **Subscription Secret** is required. This secret is sent to the account admin of your subscription. By entering the subscription secret, your application will be unlocked to run as production. Without a valid subscription, your app will restart every 1-2 hours and has a limitation of 6 named users.
-
-  ![](attachments/sap-cloud-platform/08-sap-env-2.png)
+    ![](attachments/sap-cloud-platform/08-sap-env-2.png)
 
 10. Click **Next** to create the environment and finish the setup.
 
-  ![](attachments/sap-cloud-platform/09-sap-env-3.png)
+    ![](attachments/sap-cloud-platform/09-sap-env-3.png)
 
 A second environment is created. It is now possible to transport applications between environments.
 
@@ -120,9 +116,7 @@ This tab contains the application constants and lets you enable or disable the s
 
 You need to restart your app after changing one of these settings.
 
-
 ![](attachments/sap-cloud-platform/12-sap-model-options.png)
-
 
 ## 5 Related Content
 

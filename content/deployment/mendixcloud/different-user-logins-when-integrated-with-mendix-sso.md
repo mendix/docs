@@ -1,5 +1,5 @@
 ---
-title: "Different user logins when integrated with Mendix SSO"
+title: "Different User Logins when Integrated with Mendix SSO"
 category: "Mendix Cloud"
 ---
 

@@ -3,6 +3,11 @@ title: "Show Message"
 parent: "client-activities"
 ---
 
+{{% alert type="info" %}}
+This activity can only be used in microflows, not in nanoflows.
+{{% /alert %}}
+
+## 1 Introduction
 
 With the show-message action you can show a blocking or non-blocking message to the user.
 
@@ -12,27 +17,27 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 {{% /alert %}}
 
-## Action Properties
+## 2 Action Properties
 
-### Type
+### 2.1 Type
 
 Type defines the color scheme and icon of the message.
 
-| Option | Description |
-| --- | --- |
-| Information | Message is shown with a blue frame ([]) and an information icon. |
-| Warning | Message is shown with a yellow frame ([]) and a warning icon. |
-| Error | Message is shown with a red frame ([]) and an error icon. |
+There are three message options:
+
+* Information
+* Warning
+* Error 
 
 _Default value:_ Information
 
-### Template
+### 2.2 Template
 
 Template defines the text of the message. The template can contain parameters that are written as a number between braces, e.g. {1}. The first parameter has number 1, the second 2 etcetera.
 
-### Parameters
+### 2.3 Parameters
 
-For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [microflow expressions](microflow-expressions) resulting in a string.
+For each parameter in the template you define a microflow expression of which the value will be inserted at the position of the parameter. Parameters need to be entered using [expressions](expressions) resulting in a string.
 
 {{% alert type="success" %}}
 
@@ -40,7 +45,7 @@ With parameters you can customize your message with data specific to the situati
 
 {{% /alert %}}
 
-### Blocking
+### 2.4 Blocking
 
 Blocking defines whether the message appears with a hover on top of the existing form(s).
 

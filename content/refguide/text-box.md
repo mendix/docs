@@ -8,7 +8,7 @@ A text box can be used to display and/or edit a textual value.
 
 {{% alert type="info" %}}
 
-![](attachments/16713878/16843994.png)
+![](attachments/pages/text-box.png)
 This text box allows the end-user to set the name of the customer.
 
 {{% /alert %}}

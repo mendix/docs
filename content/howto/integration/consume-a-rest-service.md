@@ -27,7 +27,7 @@ We will start by providing the Modeler as an example of what the REST service re
 2. Copy the whole JSON snippet.
 3.  Now you need to add a new JSON structure to your app. A [JSON structure](../../refguide/json-structures) contains sample JSON that you can use in the app. To do this, follow these steps in the Desktop Modeler:<br>
     a. Right-click the module in the **Project Explorer**.<br>
-    b. Select **Add** > **Consumed services** > **JSON structure**.<br>
+    b. Select **Add** > **Mapping** > **JSON structure**.<br>
     c. Paste the JSON snippet.<br>
 4.  Click **Refresh**. This analyzes the structure of the JSON snippet so we can use later.
 
@@ -41,15 +41,15 @@ An [import mapping](../../refguide/import-mappings) specifies how the JSON relat
 
 To create an import mapping:
 
-1. Create a new **Import Mapping**.
-2. Click the radio button for **JSON structure** and then click **Select...**.
+1. Add a new **Import Mapping**.
+2. Click the radio button for **JSON structure** and then click **Select**.
 3. Double-click **JSON_structure**.
 4. Click **Expand all** and then click **Check all**.
 
     ![](attachments/consume-a-rest-service/import-mapping.png)
 
 5. Click **OK**. You will now see the structure on the right.
-6. Click **Map automatically...**. The Modeler will inform you that it has applied some changes. That means that it has generated entities that match the JSON structure.
+6. Click **Map automatically** in the editor toolbar. The Modeler will inform you that it has applied some changes. That means that it has generated entities that match the JSON structure.
 7. Click **Close**.
 
 ## 4 Adding an Input Entity to the Domain Model
@@ -62,7 +62,7 @@ To add an input entity to the domain model, follow these steps:
 
 1. In the **Project Explorer**, double-click the **Domain Model**.
 2. Rename **Root** to **Summary**.
-3. From the **Toolbox**, drag an **Entity** onto the **Domain Model**.
+3. From the **Toolbox**, drag an **Entity** onto the domain model.
 4. Double-click the entity and enter *Input* for the **Name**.
 5. For **Persistable**, select **No**.
 6. On the **Attributes** tab, click **New** to add a string attribute and name it *Title*.
@@ -84,9 +84,9 @@ To call the REST service in a microflow, follow these steps:
 
     ![](attachments/consume-a-rest-service/location.png)
 
-5. On the **Response** tab, set **Response handling** to **Apply import mapping** (or to **Import mapping for the entire response**, depending on your version).
+5. On the **Response** tab, set **Response handling** to **Apply import mapping** (or to **Import mapping for the entire response**, depending on your Modeler version).
 6. Click **Select** and double-click **Import_mapping**.
-7. For **Name**, enter *Summary*.
+7. For **Variable**, enter *Summary*.
 
     ![](attachments/consume-a-rest-service/response.png)
 
@@ -96,7 +96,7 @@ To call the REST service in a microflow, follow these steps:
 11. For **Refresh in client**, select **Yes**. This makes sure that the summary gets shown on the screen.
 12. Click **New**.
 13. Under **Member**, select **MyFirstModule.Input_Summary (MyFirstModule.Summary)**.
-14. Under **Value**, enter *$Summary*.
+14. Under **Value**, enter `$Summary`.
 
     ![](attachments/consume-a-rest-service/set-association.png)
 
@@ -117,16 +117,16 @@ The rest of this how-to will describe turning this microflow into an app. It doe
 To create a page for this app, follow these steps:
 
 1. Open the **Homepage** and add a **Data view**.
-2. From the **Connector**, drag the **Input** entity onto to yellow **[Unknown]** bar.
+2. From the **Connector**, drag the **Input** entity onto to the **[Unknown]** bar.
 3. Select **Microflow**.
 4. For the **Name**, enter *CreateInput*. Please note that when this page loads, it needs a new **Input** object – you will fill the **CreateInput** microflow that creates this object below.
 5. Click **OK**.
-6. From **Container**, add a new **Table** with one row and two columns.
+6. From **Container widgets**, add a new **Table** with one row and two columns.
 7. Drag the **Title** field onto the left column.
 8. From the **Project Explorer**, drag **Microflow** onto the right column.
 9. On the **Properties** tab, enter *Get summary* for the caption of the button.
 10. Add a **Data view** below the table (inside the other data view).
-11. From the **Connector**, drag the **Summary** entity onto the yellow **[Unknown]** bar.
+11. From the **Connector**, drag the **Summary** entity onto the **[Unknown]** bar.
 12. Click **OK**.
 13. From this data view, delete all the fields except **Extract**.
 14. Double-click **Extract**.
@@ -148,7 +148,7 @@ To fill in the CreateInput microflow, follow these steps:
 4. Click **Select...** and double-click **Input**.
 5. Click **OK**.
 6. Double-click the red **End event**.
-7. Under **Return value**, enter *$NewInput*.
+7. Under **Return value**, enter `$NewInput`.
 8. Click **OK**
 
 Congratulations! You can now start your app and get summaries from Wikipedia.

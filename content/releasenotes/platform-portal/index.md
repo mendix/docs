@@ -2,7 +2,146 @@
 title: "Platform Portal"
 ---
 
+## 2018
+
+### March 21st, 2018
+
+#### Improvements
+
+* Applications in Mendix Cloud v3 that were running for more than 248 days started to use 100% CPU due to an unknown bug in either the Mendix Runtime, the JVM, or a combination thereof. A very small number of applications have been impacted by this, as most applications are updated much more often, and every deployment restarts an application. However, this problem has been causing performance issues for both the affected applications and our infrastructure. As a workaround, we will now automatically restart apps that have been running non-stop for 247 days between 01:00 and 07:00 local time of the cloud region. If this happens to an application, you will see a message in the application log.
+
+### March 20th, 2018
+
+#### Improvements
+
+* We enabled ICMP (ping) packets for our Mendix Cloud v4 load balancers. Now you can use tools like ping, traceroute, and mtr to debug connectivity issues from your location to Mendix Cloud v4 applications. Note that packets will not reach the actual application but only the load balancers. You can expect latency in the low single-digit milliseconds between the load balancers and applications.
+
+### March 16th, 2018
+
+#### Improvements
+
+* We changed the browser title from "Mendix App Plaform" to **Mendix Platform** to be consistent with our messaging and documentation.
+* We have improved database storage alerts for Mendix Cloud v4 applications. If you subscribed to your applications' alerts, you will receive a warning alert when you have less than 25% disk space on your applications' databases and a critical alert when disk space is below 10%. You need to re-deploy your application to activate this alert.
+* Live logging for Mendix Cloud v4 applications is here! You can now view logs neatly and in real-time.
+* Hybrid mobile improvements: you can now generate icons and splash screens, add custom loader and error images, and add custom HTML and CSS. We also added a new theming section for minor color tweaks.
+
+#### Fixes
+
+* Users of Mendix Cloud V4 applications will now see a notification if their environment fails to clean properly.
+* The health status of newly-created Mendix Cloud v4 applications used to be reflected with a red cross. This has been fixed.
+* The **Deploy** and **Operate** deep links were not available in the **Security** menu for user groups without monitoring access. This has been fixed.
+
+### March 13th, 2018
+
+#### Improvements
+
+* In the Mendix Cloud, we have renewed the SSL/TLS certificates for *.mendixcloud.com*, *.mxapps.io*, and *.mendix.com*.
+
+### March 1st, 2018
+
+#### Fixes
+
+* Switching between environments in the **Metrics** menu of Mendix Cloud v3 apps is now fixed.
+* We fixed the syncronization problem that prevented Mendix Cloud v3 users from seeing their latest nightly backups.
+
+### February 27th, 2018
+
+#### Fixes
+
+* We fixed the issue that prevented SAP Cloud users from viewing the **Mobile App** section properly.
+* When uploading a backup in Mendix Cloud v3, double-clicking the **Restore** button was causing the UI to break. This is now fixed.
+
+### February 23rd, 2018
+
+#### Improvements
+
+* In Mendix Cloud v4, the native memory usage of applications was very high. This led to crashes and automatic restarts, especially on containers with 1GB of memory. We activated an advanced memory limiting setting for glibc (`MALLOC_ARENA_MAX`), which will prevent this behavior. The fix will automatically be applied to all apps that are transported and restarted as of today.
+
+### February 22nd, 2018
+
+#### Improvements
+
+* We implemented a popular feedback item – the platform will now remember your selected environment while switching between screens.
+* It is now possible to see the database details such as **DB Plan Space**, **Plan Cores**, and **Plan Memory** of a Mendix Cloud V4 application.
+* Scaling Mendix 7 apps is now simplified and faster.
+
+#### Fixes
+
+* Backup creation was reported as a backup restore action in the activity feed, which is now fixed.
+* We addressed and fixed the issue where a backup activity item was added each time the backups page was viewed.
+* The environment details list was loading slowly for some of our users, which is now fixed.
+
+### February 19th, 2018
+
+#### Improvements
+
+* In Mendix Cloud v4, we have enabled logging slow database queries. This is the custom runtime setting `LogMinDurationQuery`, and it is useful for finding performance bottlenecks in your application. The value is set to a default of 10,000 ms, which was also the value on Mendix Cloud v3. You can customize this setting by using the **Runtime** tab on your environment details screen under **Environments**. To start using this feature on a Mendix Cloud environment, transport your deployment package and restart your app.
+
+### February 15th, 2018
+
+#### Improvements
+
+* We introduced a beautiful new design for the notification emails you receive when someone replies to your **Buzz** posts.
+
+#### Fixes
+
+* We addressed the issue that prevented the **Daily Digest** email from being sent.
+
+### January 25th, 2018
+
+#### Fixes
+
+* Happy new year! We addressed the issue where backup downloads were logged as restored backups in the activity log.
+* If you had a **Backups** section of your apps open in multiple tabs, you saw multiple activity log entries for each action taken. That's fixed now.
+* The restart and stop/start activities are now distinctly defined in the **Activity** section.
+* Branches of an application are sorted alphabetically, but **Main Line** is now always on top.
+* The target cloud of a Free App is now shown correctly in the **Environments** section.
+* The broken styling of the **View Current Log** button for a Free App has been fixed.
+
+#### Improvements
+
+* The **Alerts** section in Mendix Cloud V4 apps will now include health check details, just like for Mendix Cloud V3 apps.
+* It is now possible for you to change the technical contact of your applications by yourself.
+
 ## 2017
+
+### December 29th, 2017
+
+#### Fixes
+
+* In Mendix Cloud v4, the **archived log** function returned logs from a broader time range than what the user had selected (for example, the logs for one day returned log data from two days). This was fixed.
+
+### December 22nd, 2017
+
+#### Improvements
+
+* We are introducing a **Restart** button for Mendix Cloud environments. This is useful for preparing configuration changes and activating them with only one click.
+
+#### Fixes
+
+* It's now possible to scale Mendix 6 applications on Cloud V4. Previously, this was only possible with environments that run Mendix 7 apps. With Mendix 6 apps, you can only scale the allocated memory, but not the amount of instances.
+* Big backups are now welcomed on V4 environments, as we fixed the issue that prevented users from uploading backup packages larger than 5 GBs.
+* We fixed the issue where some Mendix Cloud V3 users were not able to set a specified Java version for environments.
+* Hovering over a Mendix Cloud environment status icon will now give more information about the environment's health.
+
+### December 13th, 2017
+
+#### Fixes
+
+* The JVM Process Memory graph in Cloud v4 now also show the native memory of the application.
+* The Application Node Operating System Memory graph for Cloud v4 now shows as two lines: total and used. The previous version displayed the total added to the used in a stacked area graph, which was very confusing.
+
+### December 6th, 2017
+
+#### Fixes
+
+* We adressed the issue that prevents Free Apps from being embedded in an iframe.
+
+### November 27th, 2017
+
+#### Improvements
+
+* Free App users now have the option to select between Web Modeler and Desktop Modeler for editing their application models.
 
 ### November 15th, 2017
 
@@ -35,6 +174,7 @@ title: "Platform Portal"
 ### September 29th, 2017
 
 #### Fixes
+
 * We fixed an issue where a user who signed up to Mendix would get an error page in Internet Explorer and Microsoft Edge.
 
 ### September 28th, 2017
@@ -51,7 +191,7 @@ title: "Platform Portal"
 * We fixed a problem where Team Server branches that were committed without the Mendix Modeler were hidden in the Cloud Portal.
 * We fixed a problem where changing an access restriction profile could display a wrong error about having more than 1 certificate in use.
 
-### September 25th, 2107
+### September 25th, 2017
 
 #### Improvements
 
@@ -66,7 +206,7 @@ title: "Platform Portal"
 #### Improvements
 
 * It is now possible to accept invitations and confirm signups on mobile devices.
-* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296) 
+* The Security page for an application (Settings > Security) will now also show the company of an app team member, making it easier to identify external user accounts. (Ticket 51296)
 
 #### Fixes
 
@@ -202,7 +342,7 @@ title: "Platform Portal"
 
 ### April 1st, 2017
 
-* We added list backups/download backup operations to the [Deploy API](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api#DeployAPI-ListBackups).
+* We added list backups/download backup operations to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api#3-15-list-environment-backups).
 * We fixed the status page link in alert emails.
 * We updated the **Security** link from the Deploy/Operate tabs. It now goes to the same page on all pages in the platform.
 * We fixed the issue where the Free Apps backups page was very slow or resulted in an error in some cases.
@@ -377,7 +517,7 @@ title: "Platform Portal"
 
 #### New features
 * The blue toolbar now contains a button for quickly creating new apps, and a shortcut that leads to the Mendix Developer Portal ([https://developers.mendix.com/](https://developers.mendix.com/)).
-* Guidance balloons guide new users through a few main features of the Mendix platform.
+* Guidance balloons guide new users through a few main features of the Mendix Platform.
 * The project dashboard has been extended with Team and Development information.
     * The Team Box shows all team members within a project, and allows you to easily invite new team members.
     * The Development Box shows information about the latest main line commit, and provides a shortcut to quickly open the app in the Mendix Modeler.
@@ -442,7 +582,7 @@ title: "Platform Portal"
 * App and Project invites will now expire after 14 days. (Feedback 90894)
 * App and Project invites can now be retracted by the inviter. You can find this functionality in the Pending Invites tab of your Profile. (Feedback 90894)
 * You will now see a progress bar while your App and project invites are being sent. (Feedback 79146)
-* It is now possible to initiate an invite to the Mendix platform using the Share button on the blue Mendix toolbar.
+* It is now possible to initiate an invite to the Mendix Platform using the Share button on the blue Mendix toolbar.
 
 #### Fixes
 

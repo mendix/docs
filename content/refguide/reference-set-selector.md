@@ -3,15 +3,14 @@ title: "Reference set selector"
 parent: "input-widgets"
 ---
 
-
 The reference set selector allows you to set an association of type reference set by selecting objects. For example, if customers can belong to several groups, a reference set selector can be used to select the groups the customer belongs to. This requires that there is an association from customer to group of type reference set in the domain model.
 
 {{% alert type="info" %}}
 
-![](attachments/819203/917936.png)
+![](attachments/pages/reference-set-selector.png)
 In this data view on customer you can select multiple groups using the reference set selector.
 
-![](attachments/819203/917934.png)
+![](attachments/pages/reference-set-selector-domain-model.png)
 In the domain model there is an association of type reference set from customer to group.
 
 {{% /alert %}}
@@ -132,6 +131,12 @@ The entity path of a reference set selector is a path following one association 
 {{% alert type="warning" %}}
 
 With the reference selector you are editing an association of type reference set (Customer_Group). Adding, and removing, objects using the selector will only add and remove references to those objects; the objects themselves are unchanged.
+
+{{% /alert %}}
+
+{{% alert type="warning" %}}
+
+Using non-persistable entities (NPEs) in a reference set selector is not supported yet. For that reason, selecting an NPE in the entity selector for the reference set selector is not possible.
 
 {{% /alert %}}
 

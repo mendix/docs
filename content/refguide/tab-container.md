@@ -8,7 +8,7 @@ Tab containers are used to show information categorized into multiple tab pages.
 
 {{% alert type="info" %}}
 
-![](attachments/16713860/18582271.png)
+![](attachments/pages/tab-container.png)
 A tab control with two tab pages (Address, Orders).
 
 {{% /alert %}}

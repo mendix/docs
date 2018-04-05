@@ -1,6 +1,6 @@
 ---
 title: "Between Date Function Calls"
-parent: "microflow-expressions"
+parent: "expressions"
 ---
 
 Functions for calculating the differences between two dates.
@@ -106,7 +106,7 @@ results in
 
 ### Output
 
-Returns the difference between the two dates, as a Decimal, measured in days.
+Returns the difference between the two dates as a positive Decimal measured in days. Time is taken into consideration, so comparing `date-x 0:00` with `date-x 06:00` will result in `0.25000000`.
 
 For example:
 

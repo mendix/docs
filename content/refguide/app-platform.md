@@ -4,7 +4,7 @@ category: "General"
 description: "Provides an introduction to the various features of the Developer Portal."
 ---
 
-The key components of the entire Mendix platform are the [Mendix Modeler](modeler) and the the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html). The Mendix Reference Guide devotes a lot of spaces to describing how the Modeler works. This page serves as an introduction to the Developer Portal.
+The key components of the entire Mendix Platform are the [Mendix Modeler](modeler) and the the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html). The Mendix Reference Guide devotes a lot of spaces to describing how the Modeler works. This page serves as an introduction to the Developer Portal.
 
 The Mendix Developer Portal takes a lightweight and social approach to enterprise project collaboration. The Developer Portal provides a unique combination of project management tools and social activity streams, offering a way to interact with colleagues, project team members, and even external people involved in projects.
 
@@ -12,7 +12,7 @@ As a collaboration platform that can be used across the enterprise, the Develope
 
 Besides operating as a powerful social platform, Mendix also provides tools for managing your projects in an agile way. The social backlog management tools enable project team members and stakeholders to collaborate and to create, refine, and prioritize user stories. Each user story has its own conversation thread, which is also published on the wall for an intuitive mix of company buzz and project activity streams. User stories can be estimated and planned in sprints. The planning overview gives team members and stakeholders the ability to monitor the progress of the current sprint using scrum boards and burn-down charts as well as to plan the sprints and releases that define the future of the project.
 
-The Developer Portal can be used separately from other Mendix products, and the [Mendix Feedback Widget](/developerportal/howto/gathering-user-feedback) can be included in any web application. As a whole, the Mendix platform offers an open, well-defined API, enabling third-party developers to create their own widgets, plugins, and any other innovative products they come up with.
+The Developer Portal can be used separately from other Mendix products, and the [Mendix Feedback Widget](/developerportal/howto/gathering-user-feedback) can be included in any web application. As a whole, the Mendix Platform offers an open, well-defined API, enabling third-party developers to create their own widgets, plugins, and any other innovative products they come up with.
 
 For detailed information on all the Mendix Developer Portal features, see the [Developer Portal](/developerportal) documentation.
 

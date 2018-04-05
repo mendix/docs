@@ -1,10 +1,11 @@
 ---
 title: "Parameter"
-parent: "microflows"
+parent: "common-elements"
 ---
 
+## 1 Introduction
 
-A parameter is data that serves as input for the microflow. Parameters are filled at the location from where the microflow is triggered.
+A parameter is data that serves as input for the flow. Parameters are filled at the location from where the flow is triggered.
 
 {{% alert type="info" %}}
 
@@ -14,14 +15,14 @@ When you have an object of the entity 'Customer' that you want to use in a micro
 
 {{% /alert %}}
 
-## Output Properties
+## 2 Output Properties
 
-### Variable name
+### 2.1 Variable Name
 
 Variable name defines the name of the variable in which the argument of the parameter is stored.
 
-### Data type
+### 2.2 Data Type
 
-The data type of a microflow parameter defines the type of the value that it expects. See [Data Types](data-types) for the possible data types.
+The data type of a flow parameter defines the type of the value that it expects. See [Data Types](data-types) for the possible data types.
 
 _Default value:_ Object

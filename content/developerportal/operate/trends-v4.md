@@ -1,6 +1,7 @@
 ---
 title: "Trends in Mendix Cloud v4"
 parent: "metrics"
+menu_order: 60
 description: "Describes how to interpret various graphs and trends in the Mendix Cloud v4."
 tags: ["Trends","v4","Mendix Cloud","Developer Portal"]
 ---
@@ -270,6 +271,12 @@ This graph displays the amount of data that is stored on disk in absolute amount
 ### <a name="Trends-appdiskstatsutilization"></a><a name="Trends-dbdiskstatsutilization"></a>5.6 Disk Utilization
 
 Disk utilization shows the percentage of time that the disk storage is busy processing requests. This graph should be interpreted in combination with other graphs, like CPU **iowait**, **disk iops**, and **number of running requests**. For example, a combination of a moderate number of IO operations, low amount of disk throughput, visible CPU **iowait**, filled up memory disk cache, and reports of long-running database queries in the application log could point to a shortage of system memory for the disk cache that leads to repeated random reads from disk storage.
+
+{{% alert type="info" %}}
+
+Disk utilization is calculated as the disk usage that is used by the user of the system. Due to operating system overhead and empty space in block size allocation, not all disk space can be fully allocated. For this reason, the total amount of usable space will be ~4% lower than the actual disk space.
+
+{{% /alert %}}
 
 ## 6 Related Content
 

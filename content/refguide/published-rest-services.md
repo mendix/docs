@@ -5,7 +5,7 @@ parent: "integration"
 
 {{% alert type="info" %}}
 
-The **Published REST Service** feature was introduced in version 7.8.0. This feature is still in private beta, and it is subject to change before final release.
+The **published REST service** feature was introduced in version 7.10.0.
 
 {{% /alert %}}
 
@@ -17,9 +17,14 @@ Add a [published REST service](published-rest-service) to expose your entities a
 
 For an overview of the available options when you add a published  service, see [Published REST Service](published-rest-service).
 
-## <a name="authorization"></a>3 Authorization
+## <a name="authorization"></a>3 Authentication
 
-Published REST services are secured with basic authentication. This is automatically applied when you [set the security level](project-security) of your app to **Prototype / demo**  or **Production**. When you [allow anonymous users](project-security#anonymous-users) to your app, all published REST services become available without authenthication.
+Published REST services are secured with basic authentication. This is automatically applied when you set the [security level](project-security) of your app to **Prototype / demo**  or **Production**. 
+
+If you don't want basic authentication, there are two options:
+
+* You can choose to have [no authentication](published-rest-service#authentication) for specific published REST services, or
+* When you [allow anonymous users](project-security#anonymous-users) to your app, all published REST services become available without authentication
 
 For more details, see [Published REST Routing](published-rest-routing).
 
@@ -32,3 +37,9 @@ The documentation of the services is available in the [Open API 2.0](open-api) f
 ## 5 Logging
 
 To log detailed information about interaction with your published REST service, [set the log level](logging) of the **REST Publish** log node to **Trace**.
+
+## 6 Example
+
+**How to publish REST natively with Mendix**
+
+{{% youtube HzrFkv0U4n8 %}}

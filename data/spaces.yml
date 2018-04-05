@@ -13,15 +13,21 @@ addons:
   space: "Other Add-ons"
   priority: false
   menu_categories:
-    - "APM"
-    - "AQM"
+    - "Application Quality Monitor"
+apm:
+  space: "Application Performance Monitor"
+  priority: false
+  menu_categories:
+    - "Installation Guide"
+    - "Reference Guide"
+    - "Use Cases"
 ats:
-  space: "ATS Add-on"
+  space: "Application Test Suite"
   priority: false
   menu_categories:
     - "General"
     - "Reference Guide"
-    - "How-To's"
+    - "How-to's"
     - "Best Practices"
 community:
   space: "Community"
@@ -88,6 +94,7 @@ howto:
   menu_categories:
     - "Tutorials"
     - "SAP"
+    - "Atlas UI"
     - "Modeling Basics"
     - "Data Models"
     - "UX"
@@ -95,7 +102,7 @@ howto:
     - "Mobile"
     - "Security"
     - "Integration"
-    - "Extendability"
+    - "Extensibility"
     - "Custom Widget Development"
     - "Testing"
     - "Monitoring & Troubleshooting"
@@ -156,6 +163,7 @@ refguide:
     - "Runtime"
     - "Java Programming"
     - "SAP"
+    - "IBM"
     - "Mobile"
 howtogeneral:
   space: "General How-to's"
@@ -169,14 +177,15 @@ releasenotes:
   priority: false
   menu_categories:
     - "Desktop Modeler"
+    - "Web Modeler"
     - "Platform Portal"
     - "Model SDK"
     - "Platform SDK"
     - "Hybrid App"
     - "Mendix Mobile App"
-    - "APM"
-    - "ATS"
-    - "AQM"
+    - "Application Test Suite"
+    - "Application Performance Monitor"
+    - "Application Quality Monitor"
     - "Beta Features"
 developerportal:
   space: "Developer Portal"
@@ -189,7 +198,7 @@ developerportal:
     - "Deploy"
     - "Operate"
     - "Settings"
-    - "How-To's"
+    - "How-to's"
 deployment:
   space: "Deployment"
   priority: false

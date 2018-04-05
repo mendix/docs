@@ -71,6 +71,7 @@ The settings below are used to define the database connection pooling behavior. 
 | `ConnectionPoolingMinIdle` | Sets the minimum number of objects allowed in the pool before the evictor thread (if active) spawns new objects. Note that no objects are created when `numActive` + `numIdle` >= `maxActive`.  This setting has no effect if the idle object evictor is disabled (meaning, if `timeBetweenEvictionRunsMillis` <= 0). | 0 |
 
 When changing the `ConnectionPoolingMaxIdle` and `ConnectionPoolingMinIdle` settings, consider the following points:
+
 * More idle connections means more memory usage
 * More idle connections means less overhead when starting a query as the connection itself does not need to be created
 * Fewer idle connections means less memory usage

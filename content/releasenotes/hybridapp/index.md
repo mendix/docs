@@ -6,21 +6,75 @@ description: "Hybrid App release notes."
 
 These are the release notes for the Hybrid App.
 
-The version numbers for each release refer to the Hybrid App Base and the Hybrid App Template package, respectively.
+The version numbers for each release refer to the [Hybrid App Base](https://github.com/mendix/hybrid-app-base) and [Hybrid App Template](https://github.com/mendix/hybrid-app-template) packages, respectively.
 
 If you're building the app using the regular PhoneGap Build approach from within the Mendix Developer Portal, you do not need to worry about these numbers. Downloading and building a new package will set you up with the latest version.
 
-If you're using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Cloud Portal.
+If you're using the advanced flow, you can get the latest version of the Hybrid App Base by running `npm update` from your hybrid app project directory. To upgrade to the latest version of the Hybrid App Template, either pull in the latest changes from GitHub, or download a new copy from the Mendix Cloud Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY**).
+
+## 2018
+
+### March 13th, 2018 (2.0.1 / 2.0.0)
+
+This patch release fixes an issue with an upstream dependency (`com.android.support:support-v4`) that was updated by Google. The issue prevents building *.apk* files, both locally and on Phonegap Build.
+
+### March 9th, 2018 (2.0.0 / 2.0.0)
 
 {{% alert type="info" %}}
-Any known issues for a release are described in that version's release notes below.
+
+This is a major release, because it is not fully compatible with older versions of hybrid-app-template. For this update, we recommend that you download a fresh hybrid app package from the Mendix Cloud Portal via [Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**. We extended the **Mobile Apps** wizard with fields for the theming options described below. In addition, you can configure splash screens/icons by uploading a single base image.
+
 {{% /alert %}}
+
+* We added support for custom theming:
+  * You can configure the image on the error screen by adding/replacing `error.png`.
+  * You can configure the colors (background/foreground/text) of the error dialog box, login screen, and pin screen by adjusting `parameters.json`.
+  * You can adjust the HTML and CSS of the loading screen by configuring `loader.html.snippet` and `loader.css.snippet`.
+* We now properly set the page title based on the `name` value in `parameters.json`.
+
+### January 31st, 2018 (1.7.4 / 1.4.0)
+
+{{% alert type="info" %}}
+
+For this update, we recommend that you download a fresh hybrid app package from the Mendix Cloud Portal ([Developer Portal](https://sprintr.home.mendix.com/index.html) > **DEPLOY** > **Mobile App**).
+
+{{% /alert %}}
+
+* We fixed the issue where NPM updates failed consistently. This issue was related to the recently added local PhoneGap dependency. This local dependency is now removed. PhoneGap should be installed globally, and it should match the CLI version configured in the *config.xml* (for example, `npm install -g phonegap@7.1.0`). During NPM install/update, there will be feedback in the console regarding the current and required versions.
+* We removed the *package-lock.json* files from both `mendix-hybrid-app-base` as well as `mendix-hybrid-app-template`. This makes it easier to stay up to date with the latest `mendix-hybrid-app-base` package.
+* Example files for the *config.xml.mustache* and the *index.html.mustache* files are now created during NPM install/update.
+* We removed the obsolete dependencies related to webpack.
+
+### January 30th, 2018 (1.7.3 / 1.3.5)
+
+* We removed the Cordova console plugin. This plugin was obsolete and caused issues while building iOS packages.
+
+### January 23rd, 2018 (1.7.2 / 1.3.5)
+
+* We updated the *package-lock.json* file to fix the issue where an old version of `mendix-hybrid-app-base` was being used.
+
+### January 17th, 2018 (1.7.2 / 1.3.4)
+
+* We added a cachebust to the `synchronizePackage` call so that a fresh copy of the static files is downloaded only when needed.
+* We upgraded the Phonegap CLI version used to 7.1.0.
+* We upgraded the **cordova-build-architecture** plugin to the latest version, which fixes the issue with setting up a local platform for the PhoneGap project.
+* We added **npm** as a dev dependency to make local builds more robust.
 
 ## 2017
 
+### December 22nd, 2017 (1.7.0 / 1.3.3)
+
+* We renamed the command `prepare` to `prepare:all`, because it conflicted with the **npm** command of the same name.
+* We updated the README with a table of contents and a list of known issues.
+
+### December 2nd, 2017 (1.7.0 / 1.3.2)
+
+* We updated some of the Cordova plugins to support the new iPhone X screen size/ratio/notch. Please follow the instructions in [iPhone X Support](https://github.com/mendix/hybrid-app-template/blob/master/IPHONEX.md) to configure your hybrid app to look good on an iPhone X.
+* We improved how Android splash screens are configured. The old configuration could lead to memory-related crashes during startup.
+
 ### November 16th, 2017 (1.6.0 / 1.3.1)
 
-*  Android icons and splash screens are now properly configured. For projects using the "do it yourself" workflow, apply the following change in `src/config.xml.mustache`:
+*  Android icons and splash screens are now properly configured. For projects using the "do it yourself" workflow, apply the following change in *src/config.xml.mustache*:
 
   * Change:
 
@@ -98,7 +152,7 @@ Any known issues for a release are described in that version's release notes bel
 
 ### June 13th, 2017 (1.0.5 / 1.0.3)
 
-* We cleaned up the *resources* folder.
+* We cleaned up the **resources** folder.
 
 ### June 13th, 2017 (1.0.4 / 1.0.3)
 

@@ -1,6 +1,7 @@
 ---
 title: "Backups"
 category: "Operate"
+menu_order: 40
 description: "This page describes the Backups page of the Developer Portal."
 tags: ["Operate","App","Developer Portal","Backup"]
 ---
@@ -21,21 +22,7 @@ The following backups are retained:
 * Last three months: every Sunday
 * Last year: every first Sunday of the month
 
-The start time of the backup creation depends on the region and the Mendix Cloud version:
-
-| Europe |  UTC (UTC) | CET (CET) |
-| --- | --- | --- |
-| Cloud v3 | 22:00 | 00:00 |
-| Cloud v4 | 19:00 | 21:00 |
-
-| US East |  UTC (UTC) | EST (EST) |
-| --- | --- | --- |
-| Cloud v3 | 05:00 | 01:00 |
-| Cloud v4 | 01:00 | 21:00 |
-
-| Asia Pacific |  UTC (UTC) | JST (JST) |
-| --- | --- | --- |
-| Cloud v4 | 16:00 | 01:00 |
+The start time of nightly backups is between 21:00 and 05:00 in the local time of the region.
 
 ## 3 Backups<a name="Backups"></a>
 
@@ -56,7 +43,7 @@ You can upload two types of data:
 
 ### 3.3 Restoring a Backup
 
-You can choose the environment to which you want to restore the backup.
+You can choose the **destination** to which you want the environment to restore the backup. This allows you to, for example, restore a production environment backup to an acceptance environment.
 
 If you restore a backup that was originally deployed on an older Modeler version, you will get a warning. You can still restore the backup, but you have to deploy the older model later on. 
 
@@ -84,6 +71,8 @@ Backup Details | Description |
 **Expires on** | The date on which the backup will be removed from the system
 **Model version** | The version of the deployment package used during backup creation
 **Comment** | A specific comment added to the backup
+
+At the bottom of the screen, you can click **Delete** to delete this particular backup.
 
 ## 5 Related Content
 

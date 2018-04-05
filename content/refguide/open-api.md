@@ -5,7 +5,7 @@ parent: "published-rest-services"
 
 {{% alert type="info" %}}
 
-The **Published REST Service** feature was introduced in version 7.8.0. This feature is still in private beta, and it is subject to change before final release.
+The **published REST service** feature was introduced in version 7.10.0.
 
 {{% /alert %}}
 
@@ -51,5 +51,5 @@ Each operation generates an `Operation` object:
 | `tags` | The [name](published-rest-resource#name) of the resource. |
 | `summary` | The [public documentation summary](published-rest-operation#summary) of the operation. |
 | `description` | The [public documentation description](published-rest-operation#description) of the operation. |
-| `parameters` | The path and query parameters. For the POST, PUT, and PATCH methods, this is also a body parameter. |
+| `parameters` | The path and query parameters. For the POST, PUT, PATCH, and OPTIONS methods, there is also a body parameter. |
 | `responses` | The OK response. If security is enabled, this is also the unauthorized response. |

@@ -15,7 +15,11 @@ In this how-to, you will first deploy, view, and inspect some details of the Men
 
 ## 2 Prerequisite
 
-Before starting with this how-to, create a new instance of the **Build a Logistics IoT app**, which you can find by clicking **Create App** in the Developer Portal and then going to the **Tutorial Apps** tab.
+To start this tutorial, create a new instance of the **Build a Logistics IoT app** by downloading the app from the [Mendix App Store](https://appstore.home.mendix.com/link/app/53934/). After selecting the location where you will download the app project, the Desktop Modeler Version Selector will be opened. You need to select the Desktop Modeler version here in which you will open the app project.
+
+{{% alert type="warning" %}}
+This tutorial was written for use on [Desktop Modeler 7.2.0](https://appstore.home.mendix.com/link/modeler/7.2.0). You should use that version for best results.
+{{% /alert %}}
 
 Please note the following:
 

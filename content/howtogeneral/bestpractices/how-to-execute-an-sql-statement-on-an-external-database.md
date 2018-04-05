@@ -3,7 +3,7 @@ title: "Execute an SQL Statement on an External Database"
 category: "Best Practices"
 ---
 
-The Mendix platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The **Database connector** module can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, enabling you to incorporate your external data directly in your Mendix application.
+The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The **Database connector** module can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, enabling you to incorporate your external data directly in your Mendix application.
 This document will focus on executing an SQL (_Structured Query Language_) _Statement_ on **relational external databases**.
 
 The **Execute statement** action (present in the Database Connector module) provides a consistent environment for Mendix projects to perform an arbitrary SQL _Statement_ on relational external databases.

@@ -1,6 +1,7 @@
 ---
 title: "Set Up Your Partner Profile"
 category: "Tools"
+menu_order: 20
 tags: ["authorized", "expert", "professional", "4 p's"]
 ---
 
@@ -59,8 +60,8 @@ You must complete the **Address** and **Email Address** fields before you can ma
 The header also displays whether the company is **Authorized**, **Expert**, or **Professional**. These capability levels are defined as follows:
 
 * **Authorized** — this type of partner has qualified and certified resources to support customers with Mendix initiatives 
-* **Professional** — this type of partner can successfully deliver complex mission-critical Mendix applications and solutions for businesses
-* **Expert** — this type of partner can support an enterprise in its successful positioning and adoption of the Mendix platform with all elements of the Mendix "4 P's" (portfolio, people, process, and platform; for details, see [How to Implement Bimodal IT: Focus on the 4 P’s](https://www.mendix.com/blog/how-to-implement-bimodal-it-focus-on-the-4-ps/))
+* **Platform** — this type of partner can support an enterprise in its successful positioning and adoption of the Mendix Platform with all elements of the Mendix "4 P's" (portfolio, people, process, and platform; for details, see [How to Implement Bimodal IT: Focus on the 4 P’s](https://www.mendix.com/blog/how-to-implement-bimodal-it-focus-on-the-4-ps/))
+* **Global** — this type of partner can help an enterprise with large scale programs spanning multiple countries or regions across the globe
 
 A capability level is determined through an assessment of your company's delivery expertise, project references, and Mendix Developer Certification levels. For more information, please contact your Mendix Customer Success Manager.
 
@@ -156,7 +157,7 @@ To add developers to the Partner Profile, follow these steps:
 
 {{% alert type="info" %}}
 
-Make sure you offboard the developers who no longer work at your company through the company administration in the Mendix platform. These former employees will still be visible in the overview. It is important that you deactivate these developers in the Developers Portal so that they don’t have access to projects.
+Make sure you offboard the developers who no longer work at your company through the company administration in the Mendix Platform. These former employees will still be visible in the overview. It is important that you deactivate these developers in the Developers Portal so that they don’t have access to projects.
 
 {{% /alert %}}
 
@@ -186,7 +187,7 @@ To make a colleague a profile editor, follow these steps:
 
 ## 10 Sorting on the Partners Overview Page
 
-The [Meet our partners page](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview) presents all the partners in the Mendix community. The sorting is based on a combination of the following KPIs:
+The [Meet Our Partners page](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview) is an overview that presents all the partners in the Mendix community. The sorting is based on a combination of the following KPIs:
 
 * Whether your company is Expert (which will get the most weight in sorting), Professional, or Authorized (for more information, see [4.2 Capability Tracks](#capability))
 * The total amount of certified developers (note that developers with multiple certifications count as one certified developer)

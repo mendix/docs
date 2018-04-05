@@ -1,10 +1,12 @@
 ---
-title: "Manipulating Existing Models"
-parent: "your-learning-path-for-the-mendix-sdk"
+title: "Manipulate Existing Models"
+parent: "tutorial-for-the-mendix-sdk"
+menu_order: 40
 ---
-Please choose one of the following subjects:
 
-*   [Changing things in the model](changing-things-in-the-model)
-*   [Closing the server connection](closing-the-server-connection)
-*   [Finding things in the model](finding-things-in-the-model)
-*   [Loading units and elements](loading-units-and-elements)
+These are the documents in this section:
+
+* [How to Change Things in the Model](changing-things-in-the-model)
+* [How to Close the Server Connection](closing-the-server-connection)
+* [How to Find Things in the Model](finding-things-in-the-model)
+* [How to Load Units and Elements](loading-units-and-elements)

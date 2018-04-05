@@ -11,7 +11,7 @@ Microflows have parameters, a return type (the return value is defined in an obj
 ![](attachments/15466739/16842814.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 The [Microflows](/refguide6/microflows) overview page | The [`microflows`](https://apidocs.mendix.com/modelsdk/latest/modules/microflows.html) package
 [Microflow](/refguide6/microflow), technical information on properties of a microflow | [Microflow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.microflow.html)
 [Rule](/refguide6/rules) | [Rule](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.rule.html)
@@ -28,7 +28,7 @@ _For example, a simple microflow could consist of a start event, a single activi
 ![](attachments/15466739/16842811.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Activities](/refguide6/activities) | [MicroflowObjectCollection](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.microflowobjectcollection.html)
 [Sequence Flow](/refguide6/sequence-flow) | [SequenceFlow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sequenceflow.html)
 
@@ -43,7 +43,7 @@ There are several types of objects that can be added to a microflow. One type is
 ![](attachments/15466739/18582249.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Activities](/refguide6/activities) | [MicroflowParameterObject](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.microflowparameterobject.html), [Activity](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.activity.html)
 [Start](/refguide6/start-event) and [End](/refguide6/end-event) events | [StartEvent](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.startevent.html), [EndEvent](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.endevent.html)
 [Loop](/refguide6/loop)s, with [Break](/refguide6/break-event) and [Continue](/refguide6/continue-event) events | [LoopedActivity](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.loopedactivity.html), [BreakEvent](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.breakevent.html), [ContinueEvent](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.continueevent.html)
@@ -64,7 +64,7 @@ Annotation flows are used to connect annotations to other microflow objects.
 ![](attachments/15466739/16842853.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Sequence Flow](/refguide6/sequence-flow) | [Flow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.flow.html)
 [Annotation flow](/refguide6/annotation-flow) | [SequenceFlow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sequenceflow.html)
 |[AnnotationFlow](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.annotationflow.html)
@@ -82,7 +82,7 @@ An exclusive split conditionally splits on either an expression or a rule. In ca
 ![](attachments/15466739/16842854.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Exclusive Split](/refguide6/exclusive-split) |[ExclusiveSplit](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.exclusivesplit.html)
 [Inheritance Split](/refguide6/inheritance-split) |[InheritanceSplit](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.inheritancesplit.html)
 [Merge](/refguide6/merge) |[ExclusiveMerge](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.exclusivemerge.html)
@@ -104,7 +104,7 @@ Object attributes can be updated with a change action, both in a create action a
 ![](attachments/15466739/18582248.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Create Object](/refguide6/create-object) |[CreateObjectAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.createobjectaction.html) and [ChangeObjectAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.changeobjectaction.html) ([ChangeMembersAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.changemembersaction.html), [MemberChange](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.memberchange.html))
 [Change Object](/refguide6/change-object) | [DeleteAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.deleteaction.html)
 [Rollback Object](/refguide6/rollback-object) |[CommitAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.commitaction.html) and [RollbackAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.rollbackaction.html)
@@ -118,7 +118,7 @@ A retrieve action is either an association-based retrieve or a database-based re
 ![](attachments/15466739/18582244.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Retrieve](/refguide6/retrieve) |[RetrieveSource](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.retrievesource.html)
 [XPath](/refguide6/xpath) constraints |[AssocationRetrieveSource](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.associationretrievesource.html)
 |[DatabaseRetrieveSource](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.databaseretrievesource.html)
@@ -134,7 +134,7 @@ Microflows can call other microflows by defining a mapping of expressions to par
 ![](attachments/15466739/16842821.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Microflow Call](/refguide6/microflow-call) |[MicroflowCallAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.microflowcallaction.html)
 |[MicroflowCall](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.microflowcall.html)
 |[MicroflowCallParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.microflowcallparametermapping.html)
@@ -148,7 +148,7 @@ Microflows can trigger behavior in the browser: showing and closing pages, showi
 ![](attachments/15466739/18582245.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Show Page](/refguide6/show-page) and [Show Home Page](/refguide6/show-home-page) |[ShowPageAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.showpageaction.html) and [ShowHomePageAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.showhomepageaction.html)
 [Close Page](/refguide6/close-form) |[CloseFormAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.closeformaction.html)
 [Show Message](/refguide6/show-message) |[ShowMessageAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.showmessageaction.html)
@@ -164,7 +164,7 @@ An app service call action points to a specific app service action (which is par
 ![](attachments/15466739/16842823.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Consumed App Services](/refguide6/consumed-app-services) |[AppServiceCallAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.appservicecallaction.html)
 |[AppServiceAction](https://apidocs.mendix.com/modelsdk/latest/classes/appservices.appserviceaction.html)
 |[AppServiceCallParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.appservicecallparametermapping.html)
@@ -181,7 +181,7 @@ A web service call to an imported web service has an HTTP configuration, and a r
 See the following diagrams for details on the HTTP configuration, request handling, and response handling.
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Call Web Service](/refguide6/call-web-service) |[WebServiceCallAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.webservicecallaction.html)
 |[HttpConfiguration](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpconfiguration.html)
 |[RequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.requesthandling.html) and [ResultHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.resulthandling.html)
@@ -195,7 +195,7 @@ An HTTP configuration has an optional custom endpoint location, authentication c
 ![](attachments/15466739/16842844.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Call Web Service](/refguide6/call-web-service) |[HttpConfiguration](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpconfiguration.html)
 |[HttpHeaderEntry](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.httpheaderentry.html)
 
@@ -213,7 +213,7 @@ A web service operation request needs to be mapped from Mendix app concepts to t
 ![](attachments/15466739/18582232.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Call Web Service](/refguide6/call-web-service) |[RequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.requesthandling.html)
 |[SimpleRequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.simplerequesthandling.html) - [WebServiceOperationSimpleParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.webserviceoperationsimpleparametermapping.html)
 |[AdvancedRequestHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.advancedrequesthandling.html) - [WebServiceOperationAdvancedParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.webserviceoperationadvancedparametermapping.html)
@@ -229,7 +229,7 @@ The result of a web service operation needs to be mapped to Mendix app concepts 
 ![](attachments/15466739/16842842.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Call Web Service](/refguide6/call-web-service) |[ResultHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.resulthandling.html)
 |[ImportMappingCall](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.importmappingcall.html)
 |[ImportMapping](https://apidocs.mendix.com/modelsdk/latest/classes/importmappings.importmapping.html)
@@ -244,7 +244,7 @@ Microflow variables can be created and changed with specific actions. A create v
 ![](attachments/15466739/16842846.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Create Variable](/refguide6/create-variable) |[CreateVariableAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.createvariableaction.html)
 [Change Variable](/refguide6/change-variable) |[ChangeVariableAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.changevariableaction.html)
 
@@ -257,7 +257,7 @@ Lists can be created, changed and deleted with specific actions. List aggregatio
 ![](attachments/15466739/18582227.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Create List](/refguide6/create-list) |[CreateListAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.createlistaction.html)
 [Change List](/refguide6/change-list) |[ChangeListAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.changelistaction.html)
 [Aggregate List](/refguide6/aggregate-list) |[DeleteAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.deleteaction.html)
@@ -273,7 +273,7 @@ Lists can be manipulated with different types of operations. Lists can be sorted
 ![](attachments/15466739/18582228.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [List Operation](/refguide6/list-operation) |[ListOperation](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.listoperation.html)
 |[Head](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.head.html) and [Tail](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.tail.html)
 |[Sort](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sort.html), [SortItemList](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sortitemlist.html) and [SortItem](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.sortitem.html)
@@ -288,7 +288,7 @@ Lists can be manipulated with several binary operations, which take two lists as
 ![](attachments/15466739/16842849.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [List Operation](/refguide6/list-operation) |[BinaryListOperation](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.binarylistoperation.html)
 |[Contains](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.contains.html)
 |[Intersect](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.intersect.html)
@@ -306,7 +306,7 @@ Java action calls point to a specific Java action and have a parameter mapping w
 ![](attachments/15466739/18582230.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Java Action Call](/refguide6/java-action-call) |[JavaAction](https://apidocs.mendix.com/modelsdk/latest/classes/javaactions.javaaction.html)
 |[JavaActionParameter](https://apidocs.mendix.com/modelsdk/latest/classes/javaactions.javaactionparameter.html)
 |[JavaActionCallAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.javaactioncallaction.html)
@@ -321,7 +321,7 @@ Logging actions target a single log node on a specific log level. The log messag
 ![](attachments/15466739/16844080.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Log Message](/refguide6/log-message) |[LogMessageAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.logmessageaction.html)
 |[LogLevel](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.loglevel.html)
 |[StringTemplate](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.stringtemplate.html)
@@ -338,6 +338,7 @@ XML export actions use a domain-to-XML mapping similar to web service request ma
 ![](attachments/15466739/18582238.svg)
 
 Model SDK API docs
+
 *   [ImportXmlAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.importxmlaction.html)
 *   [ResultHandling](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.resulthandling.html)
 *   [ExportXmlAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.exportxmlaction.html)
@@ -354,7 +355,7 @@ Documents are generated from a document template. Such a template has parameters
 ![](attachments/15466739/16844082.svg)
 
 Mendix Modeler Reference Guide | Model SDK API docs
--|
+--- | --- |
 [Generate Document](/refguide6/generate-document) |[GenerateDocumentAction](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.generatedocumentaction.html)
 |[DocumentTemplate](https://apidocs.mendix.com/modelsdk/latest/classes/documenttemplates.documenttemplate.html)
 |[DocumentTemplateParameterMapping](https://apidocs.mendix.com/modelsdk/latest/classes/microflows.documenttemplateparametermapping.html)

@@ -8,7 +8,7 @@ The navigation tree widget shows a configured menu in the form of a tree. Items 
 
 {{% alert type="info" %}}
 
-![](attachments/16713887/16844016.png)
+![](attachments/pages/navigation-tree.png)
 
 {{% /alert %}}
 

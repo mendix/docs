@@ -1,6 +1,7 @@
 ---
 title: "Alerts"
 category: "Operate"
+menu_order: 20
 description: "This page describes how to monitor the application health."
 tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health"]
 ---
@@ -113,7 +114,7 @@ First actions to take | Review trends for *Database node disk usage in %* and *D
 Web Server | |
 :---|:---|
 Description | The application URL is reachable. This check tries to visit the URL of your application, retrieving HTTP headers on the top level location /.
-Example message | Did not find correct headers for url 'https://example.mendixcloud.com/'
+Example message | Did not find correct headers for url `https://example.mendixcloud.com/`
 Warning Threshold | The application URL is not reachable.
 Critical Threshold | Not used.
 First actions to take | If this alert triggers, and visiting the application url results in slow loading or unresponsiveness, visit [https://status.mendix.com/](https://status.mendix.com/) to see if there is an outage. This condition might point to an internal networking connectivity problem.

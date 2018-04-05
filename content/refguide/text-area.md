@@ -8,7 +8,7 @@ A text area can be used to display and/or edit a long text value that can be spl
 
 {{% alert type="info" %}}
 
-![](attachments/16713877/16843992.png)
+![](attachments/pages/text-area.png)
 
 This text area allows the end-user to set the description of the product.
 

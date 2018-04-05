@@ -1,6 +1,7 @@
 ---
 title: "App Store Content Support"
 category: "App Store"
+menu_order: 40
 ---
 
 ## 1 App Store Content Support
@@ -9,7 +10,7 @@ Support for App Store content is determined by the content support category and 
 
 Support Category | Description
 --- | ---
-Mendix Platform | Mendix supports all the content in this category when you are equipped with an SLA (**platform**, **gold**, or **platinum**) with Mendix. Content in this category is proactively incorporated into R&D test cycles as part of our platform release management.
+Mendix Platform | Mendix supports all the content in this category when you are equipped with an SLA (**platform**, **gold**, or **platinum**) with Mendix. Content in this category is proactively incorporated into R&D test cycles as part of our platform release management. Please note that this category replaces the former **Extended** category, which has been deprecated.
 Community | Content is provided as-is by members of our Community and support depends on the availability and effort of the owner.
 
 ## 2 Support Category and Feedback Process

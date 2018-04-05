@@ -1,6 +1,6 @@
 ---
 title: "String Function Calls"
-parent: "microflow-expressions"
+parent: "expressions"
 description: "Describes the functions for converting and inspecting strings in Mendix."
 ---
 
@@ -240,6 +240,10 @@ is equivalent to the following expression:
 ```java
 find('mystring', 'otherstring') != -1
 ```
+
+{{% alert type="warning" %}}
+This function is case-senstive.
+{{% /alert %}}
 
 ### Input Parameters
 

@@ -3,9 +3,8 @@ title: "Call Web Service"
 parent: "integration-activities"
 ---
 
-
 {{% alert type="warning" %}}
 
-The documentation has moved to [Call Web Service Action](call-web-service-action)
+Please see [Call Web Service Action](call-web-service-action) for details on calling a web service.
 
 {{% /alert %}}

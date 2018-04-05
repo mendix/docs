@@ -30,18 +30,18 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have a local repository of the app
 * Have your app hosted in the Mendix Cloud
 
-## 3 Create Custom Error Pages
+## 3 Create a Custom Error Page
 
 1. Open the local folder of your app.
 2.  Go to **theme**.
 
     ![](attachments/customerror-page/theme.png)
 
-3.  Create a new folder named *error_pages*.
+3.  Create a new folder named *error_page*.
 
-    ![](attachments/customerror-page/error-pages.png)
+    ![](attachments/customerror-page/error-page.png)
 
-4.  In the **error_pages** folder, create a new *.txt* file and name it *offline.html*. 
+4.  In the **error_page** folder, create a new *.txt* file and name it *offline.html*. 
 
     ![](attachments/customerror-page/offline.png)
 
@@ -51,6 +51,8 @@ Before starting this how-to, make sure you have completed the following prerequi
 {{% alert type="info" %}}
 The `/error_page/` path is the only one that will be available when the application is stopped.
 {{% /alert %}}
+
+Note that it might take up to an hour to before the custom error page is visible when the app is offline.
 
 ### 3.1 Example Offline Page
 

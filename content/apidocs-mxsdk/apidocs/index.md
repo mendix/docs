@@ -1,6 +1,6 @@
 ---
 title: "API Documentation"
-description: "The Mendix platform API documentation is divided into sections such as Runtime, Client, Feedback, and Deploy."
+description: "The Mendix Platform API documentation is divided into sections such as Runtime, Client, Feedback, and Deploy."
 frontpage_featured: true
 ---
 
@@ -76,7 +76,7 @@ Retrieve information (branches, revisions) about application models stored in Te
 
 ## Profile Service API
 
-Retrieve the profile information of your applications' users from the Mendix platform, so they do not have to fill in their profile for every new app.
+Retrieve the profile information of your applications' users from the Mendix Platform, so they do not have to fill in their profile for every new app.
 
 Part of the AppCloudServices module.
 

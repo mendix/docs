@@ -1,5 +1,5 @@
 ---
-title: "Translatable Validation Messages"
+title: "Use Translatable Validation Messages"
 category: "Tips & Tricks"
 ---
 

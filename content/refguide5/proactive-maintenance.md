@@ -5,7 +5,7 @@ title: "Proactive Maintenance"
 
 ## **Description**
 
-When deciding to host the Mendix platform on-premises, several guidelines have to be kept in order to keep your Mendix installation in good health and secure. This section of the documentation website contains a step-by-step guide on how to set up your monitoring and system maintenance environment to Mendix standards by implementing a uniform set of logging options and monitoring metrics.
+When deciding to host the Mendix Platform on-premises, several guidelines have to be kept in order to keep your Mendix installation in good health and secure. This section of the documentation website contains a step-by-step guide on how to set up your monitoring and system maintenance environment to Mendix standards by implementing a uniform set of logging options and monitoring metrics.
 
 ## **Instructions**
 

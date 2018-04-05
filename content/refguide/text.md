@@ -8,7 +8,7 @@ The text widget shows text which can optionally contain parameters. Every parame
 
 {{% alert type="info" %}}
 
-![](attachments/16713820/16843960.png)
+![](attachments/pages/text.png)
 
 Text widget placed in a data view, showing a greeting message to the user.
 

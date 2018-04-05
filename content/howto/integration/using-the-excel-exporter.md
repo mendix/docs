@@ -1,5 +1,5 @@
 ---
-title: "Using the Excel Exporter"
+title: "Use the Excel Exporter"
 category: "Integration"
 tags: []
 ---
@@ -19,8 +19,8 @@ The MxModelReflection module is a commonly used module in most apps. The purpose
 
 1.  Open the **Mendix App Store** from within the modeler.
 2.  Search for the keyword **Reflection.**
-3.  Click the **Download** button and include the module as a new module.
     ![](attachments/18448688/18581166.png)
+3.  Click the **Download** button and include the module as a new module by right-clicking in the Project Explorer and selecting 'Import module package'.
 4.  Ensure the module has downloaded successfully and is now a new module in your project.
 
 ### 1.2 Download the 'Excel Exporter' Module
@@ -28,7 +28,7 @@ The MxModelReflection module is a commonly used module in most apps. The purpose
 1.  Open the **Mendix App Store** from within the modeler.
 2.  Search for the keyword **Excel.
     **![](attachments/18448732/18581910.png)
-3.  Click the **Download** button and include the module as a new module.
+3.  Click the **Download** button and include the module as a new module by right-clicking in the Project Explorer and selecting 'Import module package'.
 
 Ensure the module has downloaded successfully and is now a new module in your project.
 
@@ -43,10 +43,11 @@ Depending on the layout selected when the project was created, errors in the mod
 In this part of the how to you will learn how to add the required pages into the Project Navigation that are needed to configure both the Mx Model Reflection and the Excel Export templates that will be used within the application.
 
 1.  Open **Navigation** within the project.
-2.  Add a new item to the Navigation for **Administrator** to access **MxModelReflection.MxObjects_Overview**.
+2.  Add a new item to the Navigation to access **MxModelReflection.MxObjects_Overview**.
     ![](attachments/18448688/18581165.png)
-3.  Add a new item to the Navigation for **Administrator** to access **XLSReport.Excel_Document_Overview**.
+3.  Add a new item to the Navigation to access **XLSReport.Excel_Document_Overview**.
     ![](attachments/18448732/18581909.png)
+4.  Open **Project Security** and assign these two modules to the Administrator user role.
 
 ## 3\. Mx Model Reflection Configuration
 

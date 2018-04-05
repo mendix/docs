@@ -18,8 +18,7 @@ This how-to describes linking a **different app** to your **licensed cloud node*
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
-*   The app has the **Team Server** enabled. Read [this](/howto/modeling-basics/create-and-deploy-your-first-app) to learn create a collaboration app
-*   You are the [Technical Contact](/developerportal/general/technical-contact) of the node
+* Be the [Technical Contact](/developerportal/general/technical-contact) of the node
 
 In case you have created an app in the **Mendix Modeler**, you can upload it to the **Team Server** (see [Upload To Version Control Dialog](/refguide/upload-to-version-control-dialog)) and a repository will be created automatically.
 

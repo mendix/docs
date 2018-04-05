@@ -4,7 +4,7 @@ parent: "control-bar"
 ---
 
 
-The add button can only be used in the reference set selector. With this button the user can select objects that have to be added to the reference set selector.
+The add button can only be used in the reference set selector. With this button, the user can select objects that have to be added to the reference set selector.
 
 ## Common Properties
 

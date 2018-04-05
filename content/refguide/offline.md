@@ -51,17 +51,23 @@ Default attribute values for entities in the domain model don't have any effect 
 
 ### 4.8 Associations
 
-Attribute paths which follow references are not allowed in grid columns. In addition, reference set selectors cannot be used.
+Attribute paths which follow references are not allowed in grid columns. In addition, reference set selectors cannot be used. 
 
-### 4.9 System Members
+In addition, usage of reference set associations (accessing through custom widgets etc) is not supported.
+
+### 4.9 Inheritance
+
+It is not possible to use more than one entity from a generalization/specialization relation. If you use two or more related entities on your offline pages, synchronization will fail, because the objects of these entities will be inserted multiple times into the database with the same ID.
+
+### 4.10 System Members
 
 System members (`createdDate`, `changedDate`, `owner`, `changedBy`) are not supported.
 
-### 4.10 Excel/CSV Export
+### 4.11 Excel/CSV Export
 
 Spreadsheets are generated through direct database interaction, which is not available offline.
 
-### 4.11 Platforms
+### 4.12 Platforms
 
 Offline-enabled apps are only supported on the iOS and Android platforms.
 

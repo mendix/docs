@@ -16,7 +16,7 @@ A label shows static text, which intent is to describe the purpose of a specific
 
 {{% alert type="info" %}}
 
-![](attachments/16713817/16843959.jpg)
+![](attachments/pages/label.png)
 A label placed in a cell with render mode header.
 
 {{% /alert %}}

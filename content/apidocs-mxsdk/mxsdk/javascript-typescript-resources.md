@@ -4,7 +4,7 @@ parent: "reference-documentation"
 ---
 # So what is this TypeScript thing?
 
-As a developer who works with the Mendix platform, you may be familiar with implementing custom user actions using Java.
+As a developer who works with the Mendix Platform, you may be familiar with implementing custom user actions using Java.
 
 The Mendix Platform and Model SDKs, however, are implemented in an entirely different language, namely [TypeScript](http://www.typescriptlang.org/). TypeScript is similar to JavaScript - in fact, TypeScript sources are "transpiled" into JavaScript before they're executed. The main difference that sets TypeScript apart from JavaScript is that it adds explicit typing. This is [good news for developers with a Java background](http://blog.pikodat.com/2015/07/24/why-java-developers-might-love-typescript/), who expect that the compiler will warn them if they by accident try to treat an Integer as a String. At the same time, you can still take advantage of the rich ecosystem of JavaScript libraries that already exists.
 

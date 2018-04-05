@@ -1,8 +1,9 @@
 ---
-title: "Securing Outgoing Connections from your Application"
+title: "Secure Outgoing Connections from your Application"
 category: "Mendix Cloud"
 ---
-# Securing Outgoing Connections from your Application
+
+## Introduction
 
 While all inbound connections to apps in the Mendix Cloud are secured with TLS, your apps can also connect to other services on the Internet. In this how-to we'll see which methods are available for securing connections from your app to the outside world.
 

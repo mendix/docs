@@ -33,7 +33,7 @@ Before starting this how-to, make sure you have the following prerequisites:
     * This depends on your Mendix Server Distribution (for example, Mendix Server Distribution 4 requires Java 6, Mendix Server Distribution 5 requires Java 7)
 * Mendix deployment archive (MDA) of your Mendix project
 * Mendix server distribution corresponding with your Modeler (see the [Mendix App Store](https://appstore.home.mendix.com/link/modelers))
-* Database with sufficient security rights. Suitable database servers are IBM DB2, MariaDB, Microsoft SQL Server, MySQL, Oracle Database and PostgreSQL. See https://docs.mendix.com/refguide/system-requirements for more information.
+* Database with sufficient security rights. Suitable database servers are IBM DB2, MariaDB, Microsoft SQL Server, MySQL, Oracle Database and PostgreSQL. See [System Requirements](/refguide/system-requirements) for more information.
 * A local or domain user with the “log on as a service” local security policy set
 
 ## 3 Installation of the Mendix Service Console
@@ -215,7 +215,21 @@ If you need to add additional request handlers, use this example:
 
 Replace **requesthandler** with your own request handler needed for the application.
 
-In the application directory under **Project/Web**, you will find the `web.config` file that contains the Microsoft IIS configuration for the application. The contents of this file must be similar to the following example:
+### 5.6 Adding the `Cache control: no-cache` Header
+
+In the application directory under **Project/Web**, you will find the `web.config` file that contains the Microsoft IIS configuration for the application. Here you should add the following code:
+
+```xml
+<configuration>
+   <system.webServer>
+      <staticContent>
+         **<clientCache cacheControlMode="DisableCache" />**
+      </staticContent>
+   </system.webServer>
+</configuration>
+```
+
+Afterwards, the contents of this file must be similar to the following example:
 
 **web.config**
 
@@ -249,6 +263,7 @@ In the application directory under **Project/Web**, you will find the `web.confi
         </rewrite>
         <staticContent>
             <mimeMap fileExtension=".mxf" mimeType="text/xml" />
+            <clientCache cacheControlMode="DisableCache" />
         </staticContent>
     </system.webServer>
 </configuration>
@@ -275,5 +290,4 @@ To make sure the correct application root URL is used within your web services, 
 ## 7 Related Content
 
 * [How to Build a Simple HRM App](/howto/tutorials/build-a-simple-hrm-app)
-* [How to Create and Deploy Your First App](/howto/modeling-basics/create-and-deploy-your-first-app)
 * [How to Test Microflows Using the UnitTesting Module](/howto/testing/testing-microflows-using-the-unittesting-module)

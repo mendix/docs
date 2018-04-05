@@ -8,7 +8,7 @@ A navigation list can be used to attach an action to an entire row. Such a row i
 
 {{% alert type="info" %}}
 
-![](attachments/16713859/16843977.png)
+![](attachments/pages/navigation-list.png)
 A navigation list with three empty rows.
 
 {{% /alert %}}

@@ -16,7 +16,7 @@ module.exports = {
      ****************************************************/
     {
       from: "/apidocs/Home",
-      to: "/apidocs-mxsdk/apidocs/index"
+      to: "/apidocs-mxsdk/apidocs/"
     },
     {
       from: "/apidocs/Authentication",
@@ -40,7 +40,7 @@ module.exports = {
     },
     {
       from: "/apidocs/API+documentation",
-      to: "/apidocs-mxsdk/apidocs/index"
+      to: "/apidocs-mxsdk/apidocs/"
     },
     {
       from: "/apidocs/Invite+API",
@@ -116,7 +116,7 @@ module.exports = {
     },
     {
       from: "/MXSDK/Mendix+SDK+Home",
-      to: "/apidocs-mxsdk/mxsdk/index"
+      to: "/apidocs-mxsdk/mxsdk/"
     },
     {
       from: "/MXSDK/JavaScript+TypeScript+Resources",
@@ -164,7 +164,7 @@ module.exports = {
     },
     {
       from: "/MXSDK/Your+learning+path+for+the+Mendix+SDK",
-      to: "/apidocs-mxsdk/mxsdk/your-learning-path-for-the-mendix-sdk"
+      to: "/apidocs-mxsdk/mxsdk/tutorial-for-the-mendix-sdk"
     },
     /****************************************************
      * APPSTORE
@@ -241,11 +241,11 @@ module.exports = {
      ****************************************************/
     {
       from: "/community/Community+Documentation",
-      to: "/community/documentation/index"
+      to: "/community/documentation/"
     },
     {
       from: "/community/Community+Projects",
-      to: "/community/tools/index"
+      to: "/community/tools/"
     },
     {
       from: "/community/Content+Writing+and+Formatting+Guidelines",
@@ -1527,7 +1527,7 @@ module.exports = {
     },
     {
       from: "/howto50/Tips+Tricks",
-      to: "/howtogeneral/tips/index"
+      to: "/howtogeneral/tips/"
     },
     {
       from: "/howto50/Translatable+Validation+Messages",
@@ -2239,12 +2239,16 @@ module.exports = {
       to: "/deployment/mendixcloud/securing-outgoing-connections-from-your-application"
     },
     {
-      from: "/mendixcloud/Security+constraints+in+the+Mendix+Cloud",
-      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
-    },
-    {
       from: "/mendixcloud/Sending+Email",
       to: "/deployment/mendixcloud/sending-email"
+    },
+    {
+      from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-amazon-web-services",
+      to: "/deployment/aws/how-to-deploy-a-mendix-app-on-amazon-web-services"
+    },
+    {
+      from: "/deployment/mendixcloud/how-to-deploy-a-mendix-app-on-azure",
+      to: "/deployment/azure/how-to-deploy-a-mendix-app-on-azure"
     },
     {
       from: "/mendixcloud/Trends",
@@ -3180,14 +3184,6 @@ module.exports = {
     {
       from: "/refguide4/Security",
       to: "/refguide4/security"
-    },
-    {
-      from: "/refguide4/Security+constraints+in+the+Mendix+Cloud",
-      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
-    },
-    {
-      from: "/refguide4/security-constraints-in-the-mendix-cloud",
-      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
     },
     {
       from: "/refguide4/Select+All+Button",
@@ -4731,14 +4727,6 @@ module.exports = {
     {
       from: "/refguide5/Security",
       to: "/refguide5/security"
-    },
-    {
-      from: "/refguide5/Security+constraints+in+the+Mendix+Cloud",
-      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
-    },
-    {
-      from: "/refguide5/security-constraints-in-the-mendix-cloud",
-      to: "/deployment/mendixcloud/security-constraints-in-the-mendix-cloud"
     },
     {
       from: "/refguide5/Select+all+button",
@@ -7249,7 +7237,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Enumerations+in+microflow+expressions",
-      "to": "/refguide/enumerations-in-microflow-expressions"
+      "to": "/refguide/enumerations-in-expressions"
     },
     {
       "from": "/refguide7/Error+Event",
@@ -7537,7 +7525,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Microflow+Expressions",
-      "to": "/refguide/microflow-expressions"
+      "to": "/refguide/expressions"
     },
     {
       "from": "/refguide7/Microflow+Source",
@@ -8401,6 +8389,24 @@ module.exports = {
       from: "/tips/Translatable+Validation+Messages",
       to: "/howtogeneral/tips/translatable-validation-messages"
     },
+    /****************************************************
+     * APM
+     ****************************************************/
+    // {
+    //   from: "~*\\\/apm\\\/use-cases\\\/uc",
+    //   to: "/apm/use-cases/",
+    //   exact: true
+    // },
+    // {
+    //   from: "~*\\\/apm\\\/installation-guide\\\/ig",
+    //   to: "/apm/installation-guide/",
+    //   exact: true
+    // },
+    // {
+    //   from: "~*\\\/apm\\\/reference-guide\\\/rg",
+    //   to: "/apm/reference-guide/",
+    //   exact: true
+    // },
     /****************************************************
      * RELEASE NOTES
      ****************************************************/

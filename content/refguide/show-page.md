@@ -17,7 +17,7 @@ See [Microflow Element Common Properties](microflow-element-common-properties) f
 
 ### 2.1 Object to pass
 
-Object that will be passed to the opened page. This object will be used by [data views](data-view) with data source "caller of the page".
+Object that will be passed to the opened page. This object will be used by [data views](data-view) with a page parameter data source.
 
 ## 3 Action Properties
 

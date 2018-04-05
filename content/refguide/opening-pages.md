@@ -8,7 +8,7 @@ In many places within pages you can open other pages. For example, the [edit but
 
 Pages can be opened either in the content pane of the browser or in a new pop-up. Where the page is opened depends on the [layout type](layout) of its [layout](layout): pages based on a layout of type 'Modal pop-up' or 'Pop-up' will be open as a pop-up, other pages will be opened in content. If the target page layout is of type 'Legacy', then the page location must be configured manually (see [Location](opening-pages) section below).
 
-If the target page contains a [data view](data-view) with data source "caller of the page", then an object for this data view must be passed to the page while opening. What object to pass is configured automatically based on the arguments available for the widget opening the page (see [available arguments for microflows](starting-microflows) for details).
+If the target page contains a [data view](data-view) with a page parameter data source, then an object for this data view must be passed to the page while opening. What object to pass is configured automatically based on the arguments available for the widget opening the page (see [available arguments for microflows](starting-microflows) for details).
 
 Generally speaking, opening a page in content will trigger a full reload of the entire browser contents. However, if the new page uses the same [layout](layout) as the old one, only the page contents will refresh. The layout will retain its state. This allows for navigation without any unnecessary overhead or loss of data. 
 

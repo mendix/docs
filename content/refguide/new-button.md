@@ -37,7 +37,7 @@ See [Opening Pages](opening-pages).
 
 ### Entity (Path)
 
-Specifies which type of object will be created when the button is clicked. It is possible to create an object which has an association to an object in an enclosing data view or to the object passed as the caller of the page. The association will be set automatically when the new object is created. Only one to one or one to many associations are supported.
+Specifies which type of object will be created when the button is clicked. It is possible to create an object which has an association to an object in an enclosing data view or to the object passed as the page parameter. The association will be set automatically when the new object is created. Only one to one or one to many associations are supported.
 
 ## Visibility Properties
 

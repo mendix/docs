@@ -1,5 +1,5 @@
 ---
-itle: "Test"
+title: "Test"
 category: "Documentation"
 ---
 

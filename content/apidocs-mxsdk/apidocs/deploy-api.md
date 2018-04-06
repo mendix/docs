@@ -1013,6 +1013,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | --- | --- | --- |
 | 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
 | 400 | NOT_FOUND| Invalid snapshot id <SnapshotId>. Either the snapshot does not exist or it belongs to a different application. |
+| 400 | ERROR_NOT_ALLOWED| Please stop loft before restarting a backup. |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 

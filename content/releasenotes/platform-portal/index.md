@@ -16,7 +16,7 @@ title: "Platform Portal"
 * It is now possible to assign an empty value for application constants, which have String as the Data Type.
 * The loading popup text that is shown while retrieving branches is fixed.
 * A bug that prevented some users to view the list of running requests of their applications is now fixed.
-* A bug that prevented user from deactivating their projects is now fixed.
+* A bug that prevented users from deactivating their projects is now fixed.
 
 ### March 21st, 2018
 

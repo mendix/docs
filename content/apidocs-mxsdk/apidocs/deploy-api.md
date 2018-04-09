@@ -922,3 +922,110 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
   "DatabaseAndFiles": "https://cloud.home.mendix.com/backups/24783a6c-30c4-49b4-8cb9-13b57cfec4cc"
 }
 ```
+
+## 3.17 Create a Backup for an Environment (Mendix Cloud v4 Only)
+
+### 3.17.1 Description
+
+Create a backup for an environment. The response contains the details of the created backup. This call is only available for Mendix Cloud v4 applications.
+
+```bash
+HTTP Method: POST
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
+```
+
+### 3.17.2 Request
+
+#### 3.17.2.1 Parameters
+
+*   _AppId_ (String): Subdomain name of an app.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+
+#### 3.17.2.2 Example
+
+```bash
+POST /api/1/apps/calc/environments/acceptance/snapshots/ HTTP/ 1.1
+Host: deploy.mendix.com
+
+Content-Type: application/json
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+```
+
+### 3.17.3 Output
+
+#### 3.17.3.1 Error Codes
+
+| HTTP Status | Error code | Description |
+| --- | --- | --- |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance', and 'Production'. |
+| 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
+| 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
+
+#### 3.17.3.2 Example
+
+```bash
+{
+    "SnapshotID": "0c982ca3-621f-40e9-9c6e-96492934170a",
+    "Comment": "Manually created snapshot",
+    "State": "Completed",
+    "ExpiresOn": 1530868721000,
+    "CreatedOn": 1523006321000,
+    "ModelVersion": "1.0.11.50"
+}
+```
+
+## 3.18 Restore a Backup to an Environment (Mendix Cloud v4 Only)
+
+### 3.18.1 Description
+
+Restore a previously created backup to an environment. The environment that the data will be restored on must be stopped before using this call. The response of a successful call contains the details of the restored backup. This call is only available for Mendix Cloud v4 applications.
+
+```bash
+HTTP Method: POST
+URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/<SnapshotId>
+```
+
+### 3.18.2 Request
+
+#### 3.18.2.1 Parameters
+
+*   _AppId_ (String): Subdomain name of an app.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _ShapshotId_ (String): ID of the snapshot to be restored.
+
+#### 3.18.2.2 Example
+
+```bash
+POST /api/1/apps/calc/environments/acceptance/snapshots/0c982ca3-621f-40e9-9c6e-96492934170a HTTP/ 1.1
+Host: deploy.mendix.com
+
+Content-Type: application/json
+Mendix-Username: richard.ford51@example.com
+Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+```
+
+### 3.18.3 Output
+
+#### 3.18.3.1 Error Codes
+
+| HTTP Status | Error code | Description |
+| --- | --- | --- |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance', and 'Production'. |
+| 400 | NOT_FOUND| Invalid snapshot ID <SnapshotId>. Either the snapshot does not exist or it belongs to a different application. |
+| 400 | ERROR_NOT_ALLOWED| Please stop loft before restarting a backup. |
+| 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
+| 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
+
+#### 3.18.3.2 Example
+
+```bash
+{
+    "SnapshotID": "0c982ca3-621f-40e9-9c6e-96492934170a",
+    "Comment": "Manually created snapshot",
+    "State": "Completed",
+    "ExpiresOn": 1530868721000,
+    "CreatedOn": 1523006321000,
+    "ModelVersion": "1.0.11.50"
+}
+```

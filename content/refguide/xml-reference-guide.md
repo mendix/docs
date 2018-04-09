@@ -348,6 +348,4 @@ Remember to use the correct language notation according to the [Java supported l
 
 ## 6 Related content
 
-*   [Creating a chainable Custom Widget](/howto7/custom-widget-development/create-a-chainable-custom-widget)
 *   [Getting started with the Widget Development Plugin for Adobe Brackets](/howto7/custom-widget-development/getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-*   [The Mobile Slider Custom Widget](/howto7/custom-widget-development/the-mobile-slider-custom-widget)

@@ -33,6 +33,4 @@ Please note that older versions of the Modeler ignore this image and render a gr
 
 ## 4 Related Content
 
-* [How to Create a Chainable Custom Widget](create-a-chainable-custom-widget)
 * [How to Get Started with the Widget Development Plugin for Adobe Brackets](getting-started-with-the-widget-development-plugin-for-adobe-brackets)
-* [How to Use the Mobile Slider Custom Widget](the-mobile-slider-custom-widget)

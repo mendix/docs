@@ -17,7 +17,7 @@ Before starting this how-to, make sure you are familiar with the following:
 * CICD
 * Using REST services
 * [Mendix Unit Testing module](https://appstore.home.mendix.com/link/app/390/) (only if used in your application)
-* [Mendix Application Test Suite](https://docs.mendix.com/ats/) (only if used in your application)
+* [Mendix Application Test Suite](/ats/) (only if used in your application)
 
 ## 3 The Pipeline
 
@@ -35,7 +35,7 @@ To be able to use the Mendix APIs to access your environment, you will need to g
 
 ### 3.2 Building the Deployment Package
 
-To build the deployment package, use the [Team Server API](https://docs.mendix.com/apidocs-mxsdk/apidocs/team-server-api) and the [Build API](https://docs.mendix.com/apidocs-mxsdk/apidocs/build-api). In this scenario, a package will be built for the latest revision, but you can use whatever version you wish.
+To build the deployment package, use the [Team Server API](/apidocs-mxsdk/apidocs/team-server-api) and the [Build API](/apidocs-mxsdk/apidocs/build-api). In this scenario, a package will be built for the latest revision, but you can use whatever version you wish.
 
 #### 3.2.1 Geting the Latest Revision
 
@@ -47,13 +47,13 @@ An example of how to do this call is below. Be aware that `<AppId>` is not a GUI
 
 #### <a name="BuildPackage"></a>3.2.2 Building the Package
 
-After getting the version you want to build the package for, you need to build the package. To do this, use the [Start Building a Deployment Package API call](/apidocs-mxsdk/apidocs/build-api#a-name-buildapi-startbuildingdeploymentpackage-rel-nofollow-a-start-building-deployment-package).
+After getting the version you want to build the package for, you need to build the package. To do this, use the [Start Building a Deployment Package API call](/apidocs-mxsdk/apidocs/build-api#start-building-deployment-package).
 
 This is a POST call, so you will need to pass the relevant fields in the body (follow the link above to know what to use).
 
 ![](attachments/implement-cicd-pipeline/03StartBuildingPackage.png)
 
-Before proceeding to the next step, you need to wait for the build of the deployment package to be successful. To do this, use the [Retrieve Package API call](/apidocs-mxsdk/apidocs/build-api#a-name-buildapi-retrievepackage-rel-nofollow-a-retrieve-package). This scenario needs to use the `PackageId` (output from the previous call) and check if the status is `Succeeded` (the other possible statuses are Queued, Building, Uploading, and Failed).
+Before proceeding to the next step, you need to wait for the build of the deployment package to be successful. To do this, use the [Retrieve Package API call](/apidocs-mxsdk/apidocs/build-api#retrieve-package). This scenario needs to use the `PackageId` (output from the previous call) and check if the status is `Succeeded` (the other possible statuses are Queued, Building, Uploading, and Failed).
 
 ![](attachments/implement-cicd-pipeline/04RetrievePackageStatus.png)
 
@@ -63,17 +63,17 @@ After building the deployment package, you can now deploy the new package to the
 
 #### 3.3.1 Getting the Environment Status
 
-First, you need to check if the environment to which you want to deploy is running. You need to know if you need to stop it before deploying the new deployment package to it. To do this, use the [Retrieve Environment API call](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api#3-5-a-name-deployapi-retrieveenvironment-rel-nofollow-a-retrieve-environment) and check the status.
+First, you need to check if the environment to which you want to deploy is running. You need to know if you need to stop it before deploying the new deployment package to it. To do this, use the [Retrieve Environment API call](/apidocs-mxsdk/apidocs/deploy-api#retrieve-environment) and check the status.
 
 ![](attachments/implement-cicd-pipeline/05GetEnvironment.png)
 
 #### 3.3.2 Stopping the Environment
 
-If the environment is running, you need to stop it. To do this, use the [Stop Environment API call](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api#3-8-a-name-deployapi-stopenvironment-rel-nofollow-a-stop-environment).
+If the environment is running, you need to stop it. To do this, use the [Stop Environment API call](/apidocs-mxsdk/apidocs/deploy-api#stop-environment).
 
 #### 3.3.3 Deploying/Transporting the Package
 
-To deploy/transport a package to the environment, use the [Transporting a Deployment Package to an Environment API call](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api#3-11-a-name-deployapi-transportadeploymentpackagetoanenvironment-rel-nofollow-a-transporting-a-deployment-package-to-an-environment). 
+To deploy/transport a package to the environment, use the [Transporting a Deployment Package to an Environment API call](/apidocs-mxsdk/apidocs/deploy-api#transport-deployment-package).
 
 For this action, you need the `PackageId` from section [3.2.2 Building the Package](#BuildPackage).
 
@@ -81,17 +81,17 @@ For this action, you need the `PackageId` from section [3.2.2 Building the Packa
 
 #### 3.3.4 Starting the Environment
 
-After a successful deployment, you must start the environment. To do that, use the [Start Environment API call](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api#3-6-a-name-deployapi-startenvironment-rel-nofollow-a-start-environment).
+After a successful deployment, you must start the environment. To do that, use the [Start Environment API call](/apidocs-mxsdk/apidocs/deploy-api#start-environment).
 
 ![](attachments/implement-cicd-pipeline/07StartEnvironment.png)
 
-Before proceeding to the next steps (although you might not have any, if all you want to automate is the transport to another environment), you must make sure the environment has started. To do that, use the [Get Environment Status API call](https://docs.mendix.com/apidocs-mxsdk/apidocs/deploy-api#3-7-a-name-deployapi-getstartenvironmentstatus-rel-nofollow-a-get-start-environment-status) with the `JobId` (output of the previous call). The environment will be ready when the status is **Started**.
+Before proceeding to the next steps (although you might not have any, if all you want to automate is the transport to another environment), you must make sure the environment has started. To do that, use the [Get Environment Status API call](/apidocs-mxsdk/apidocs/deploy-api#get-start-environment-status) with the `JobId` (output of the previous call). The environment will be ready when the status is **Started**.
 
 ![](attachments/implement-cicd-pipeline/08StartEnvironmentStatusStarting.png)
 
 ### 3.4 Running Tests
 
-After deploying the package to the environment and starting it, you are ready to run tests. This is not a mandatory step in a CICD pipeline, but it is usually part of it. 
+After deploying the package to the environment and starting it, you are ready to run tests. This is not a mandatory step in a CICD pipeline, but it is usually part of it.
 
 The sections below show you how to execute unit and ATS (UI) tests remotely. There can also be other tests (for example, load tests), but these are not covered in this how-to.
 
@@ -116,7 +116,7 @@ You can also (manually) create a web service that exposes the standard junit str
 
 #### 3.4.2 Mendix Application Test Suite (ATS) Tests
 
-ATS has its own [API for CICD](https://docs.mendix.com/ats/refguide/rg-version-2/cicd-api#3-api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/ats/howtos/ht-version-2/ats-and-ci-cd-2#4-ats-and-ci-cd).
+ATS has its own [API for CICD](/ats/refguide/rg-version-2/cicd-api#3-api). To use this, follow the steps in the **ATS and CI/CD** section of [How to Use ATS in Combination with CI/CD](/ats/howtos/ht-version-2/ats-and-ci-cd-2#4-ats-and-ci-cd).
 
 ### 3.5 Next Steps
 

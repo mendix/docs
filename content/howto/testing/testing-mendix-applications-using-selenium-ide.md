@@ -42,7 +42,7 @@ All images, names, and steps in this how-to are based on these versions. When us
 Follow these steps to install and run the Company Expenses app:
 
 1. Open the Mendix Modeler.
-2. Click **App Store**:
+2. Click the App Store icon in the top toolbar:
 
     ![](attachments/18448631/18580298.png)
 
@@ -149,13 +149,13 @@ In this section, you will edit some test steps by using Firebug and FirePath to 
 
 18. Open the **Desktop_Expense_NewEdit_Admin** page in the Modeler:
 
-    ![](attachments/18448631/18580285.png)
+	![](attachments/18448631/18580285.png)
 
 19. Select the **Amount** field:
 
-    ![](attachments/18448631/18580290.png) 
+	![](attachments/18448631/18580290.png) 
 
-    The **Name** of the Amount field is **textBox6**. Every element will automatically get the CSS class `mx-name-[Name]`, so the amount field will have the CSS class `mx-name-textBox6`.
+    The **Name** property of the **Amount** field is **textBox6**. Every element will automatically get the CSS class `mx-name-[Name]`, so the amount field will have the CSS class `mx-name-textBox6`.
 
     ![](attachments/18448631/18580289.png)
 

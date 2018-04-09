@@ -124,5 +124,4 @@ The app should now be visible on your device. Open it and log in to the app with
 
 * [Mobile How-To's](../mobile/)
 * [How to Deploy your First Hybrid Mobile App](deploy-your-first-hybrid-mobile-app)
-* [How to Use the Mobile Slider Custom Widget](../custom-widget-development/the-mobile-slider-custom-widget)
 * [How to Debug a Hybrid Mobile Application](../monitoring-troubleshooting/debug-a-hybrid-mobile-application)

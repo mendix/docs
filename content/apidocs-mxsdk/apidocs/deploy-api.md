@@ -958,7 +958,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance', and 'Production'. |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |
 
@@ -979,7 +979,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.18.1 Description
 
-Restore a previously created backup to an environment. The environment that the data will be restored on must to be stopped before using this call. Response of a successful call contains the details of the restored backup. This call is only available for Mendix Cloud v4 applications.
+Restore a previously created backup to an environment. The environment that the data will be restored on must be stopped before using this call. The response of a successful call contains the details of the restored backup. This call is only available for Mendix Cloud v4 applications.
 
 ```bash
 HTTP Method: POST
@@ -992,7 +992,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots/
 
 *   _AppId_ (String): Subdomain name of an app.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
-*   _ShapshotId_ (String): Id of the snapshot to be restored.
+*   _ShapshotId_ (String): ID of the snapshot to be restored.
 
 #### 3.18.2.2 Example
 
@@ -1011,8 +1011,8 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
-| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance' and 'Production'. |
-| 400 | NOT_FOUND| Invalid snapshot id <SnapshotId>. Either the snapshot does not exist or it belongs to a different application. |
+| 400 | INVALID_ENVIRONMENT | Could not parse environment mode 'mode'. Valid options are 'Test', 'Acceptance', and 'Production'. |
+| 400 | NOT_FOUND| Invalid snapshot ID <SnapshotId>. Either the snapshot does not exist or it belongs to a different application. |
 | 400 | ERROR_NOT_ALLOWED| Please stop loft before restarting a backup. |
 | 403 | NO_ACCESS | The user does not have access to the backups of this environment. |
 | 404 | ENVIRONMENT_NOT_FOUND | Environment not found. |

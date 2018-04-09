@@ -28,7 +28,8 @@ Be aware of other application end-users. Debugging in production is not recommen
 
 {{% /alert %}}
 
-### 3.1 Enabling Debugging in the Cloud{#EnablingDebuggingintheCloud}
+<a name="EnablingDebuggingintheCloud"></a>
+### 3.1 Enabling Debugging in the Cloud
 
 1. Open your browser, go to [http://home.mendix.com](http://home.mendix.com), and log in with your Mendix ID.
 

@@ -28,15 +28,19 @@ Be aware of other application end-users. Debugging in production is not recommen
 
 {{% /alert %}}
 
-### <a name="EnablingDebuggingintheCloud"></a>3.1 Enabling Debugging in the Cloud
+<a name="EnablingDebuggingintheCloud"></a>
+### 3.1 Enabling Debugging in the Cloud
 
 1. Open your browser, go to [http://home.mendix.com](http://home.mendix.com), and log in with your Mendix ID.
-2. Click **Dev Portal** and navigate to the project that you want to debug:
+
+2. Click **Apps** and navigate to the project that you want to debug:
 
     ![](attachments/18448576/18580045.png) 
-3. Open the **Deploy** tab in your project and click **Details** for the environment:
+
+3. Click **Environments** in the left sidebar, and on the **Deploy** tab, click **Details** for the environment:
 
     ![](attachments/18448576/18580051.png)
+
 4. On the **Environment Details** screen, click **Enable Debugging**:
 
     ![](attachments/18448576/18580050.png)
@@ -44,7 +48,7 @@ Be aware of other application end-users. Debugging in production is not recommen
     This invokes the **Debugger settings** pop-up window. Usually this presents a URL (such as `http://yourapp.mendixcloud.com`) and a secure password that changes each time you enable and disable the debugger:
 
     ![](attachments/18448576/18580049.png)
-    
+
     If you want to disable the debugger, click **Disable Debugging** on the **Environment Details** screen.
 
 ### 3.2 How to Enable Cloud Debugging in Your Modeler

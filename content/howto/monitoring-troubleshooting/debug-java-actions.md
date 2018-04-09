@@ -43,8 +43,8 @@ Before starting this how-to, make sure you have completed the following prerequi
     ![](attachments/18448578/18580062.png)
 
     The application will now be started with Eclipse attached as debugger.
-    ![](attachments/18448578/18580058.png)
-2. As soon as the deployment process is ready, open the application in your browser and trigger the Java action:
+
+3. As soon as the deployment process is ready, open the application in your browser and trigger the Java action:
     * As an end-user of the application, you will see a progress bar on your application
     * As a developer, you will see the Eclipse icon flashing on the Windows task bar
 3. Open Eclipse. You should now see the "debug" perspective of Eclipse.

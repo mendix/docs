@@ -8,15 +8,15 @@ title: "Platform Portal"
 
 #### Improvements
 
-* Create and Restore Backups via REST API: As of today, Mendix Cloud v4 users will be able to create and restore backups of their environments. Detailed information can be found in [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) documentation.
-* The results of "Retrieve Environments" and "Retrieve Environment" REST API calls will now also include Model Version and Mendix Version information of the applications that the call is being made for.
+* As of today, Mendix Cloud v4 users will be able to create and restore backups of their environments via REST API. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api) documentation.
+* The results of **Retrieve Environments** and **Retrieve Environment** REST API calls will now also include the model version and Mendix version information of the applications for which the call is being made.
 
 #### Fixes
 
-* It is now possible to assign an empty value for application constants, which have String as the Data Type.
-* The loading popup text that is shown while retrieving branches is fixed.
-* A bug that prevented some users from viewing the list of running requests of their applications is now fixed.
-* A bug that prevented users from deactivating their projects is now fixed.
+* It is now possible to assign an empty value for application constants that have string as the data type.
+* The loading pop-up window text shown while retrieving branches is now fixed.
+* The bug that prevented some users from viewing the list of running requests of their applications is now fixed.
+* The bug that prevented users from deactivating their projects is now fixed.
 
 ### March 21st, 2018
 

@@ -27,7 +27,7 @@ Before you can start working on a Team Server project you have to download it to
 
 ## Upload to Team Server
 
-If you have an existing project and you want to start using version control, you have to upload the project to the Team Server. You can upload to a new project or you can select an existing project that is Team Server enabled but does not store an actual Modeler project yet. Uploading to a new project also creates a sprintr™ project.
+If you have an existing project and you want to start using version control, you have to upload the project to the Team Server. You can upload to a new project or you can select an existing project that is Team Server enabled but does not store an actual Modeler project yet. Uploading to a new project also creates a Developer Portal project.
 
 ## Status
 
@@ -59,7 +59,7 @@ Sending changes to the repository is called 'committing'. The idea is that you c
 Committing results in a new revision in the repository. You can add the following information to a commit which will be attached to the newly created revision:
 A textual message. You can enter this message in the Modeler when committing and it should be a summary of the changes you made.
 
-A list of sprintr™ stories that relate to the commit. Our advice is to keep commits small and this means that a commit probably relates to one story. The Modeler only shows stories that are currently 'Running' and will not change the state of the sprintr™ story. Setting the status to 'Done' is the responsibility of the team and depends on your definition of done.
+A list of Developer Portal stories that relate to the commit. Our advice is to keep commits small and this means that a commit probably relates to one story. The Modeler only shows stories that are currently 'Running' and will not change the state of the Developer Portal story. Setting the status to 'Done' is the responsibility of the team and depends on your definition of done.
 
 ![](attachments/modeler-core/2018-02-21_13-50-03.png)
 
@@ -94,7 +94,7 @@ Resolving a conflict can be done in by using the 'Use mine' and 'Use theirs' but
 
 ## History
 
-The history of the project is a list of all revisions that have been committed in reverse chronological order (newest is at top of list). The history form quickly shows you revision number, date, time, author and message of each revision. By selecting a revision you can view additional details such as related sprintr™ stories, changed documents, Modeler version and changes on disk. Icons summarize the kinds of changes that happened in the project; whether there are model changes, disk changes and whether the project was upgraded to a new Modeler version can quickly be checked by looking at the icons.
+The history of the project is a list of all revisions that have been committed in reverse chronological order (newest is at top of list). The history form quickly shows you revision number, date, time, author and message of each revision. By selecting a revision you can view additional details such as related Developer Portal stories, changed documents, Modeler version and changes on disk. Icons summarize the kinds of changes that happened in the project; whether there are model changes, disk changes and whether the project was upgraded to a new Modeler version can quickly be checked by looking at the icons.
 
 ![](attachments/modeler-core/2018-02-21_14-06-46.png)
 

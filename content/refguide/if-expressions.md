@@ -2,7 +2,6 @@
 title: "If expressions"
 parent: "expressions"
 ---
-### If expressions
 
 If expressions can be used to define conditional actions in expressions. The correct syntax is as follows:
 

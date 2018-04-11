@@ -43,7 +43,7 @@ You are now on the **Settings** page. Here you add environments and selenium hub
 
 {{% alert type="info" %}}
 
-Only the App admin and SCRUM master have the rights to edit the settings. You set the roles in sprintr.
+Only the App admin and SCRUM master have the rights to edit the settings. You set the roles in the Developer Portal.
 
 {{% /alert %}}
 

@@ -7,7 +7,7 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-Mendix ATS is a testing tool designed for automated testing of Mendix applications. With your automated tests, you want to test functionalities of the application. Descriptions of those functionalities are in your User Stories. As you want to test those functionalities, ATS has the ability to retrieve User Stories from the Mendix Sprintr project. In ATS you can link the retrieved User Stories to test cases and test suites. This is useful for you and your team to see what can be tested automatically and which functionalities are covered by a test case. Additionally linking user stories to test cases and test suites is useful for stakeholders. By linking them, you can show that the functionalities build in the sprint are tested.
+Mendix ATS is a testing tool designed for automated testing of Mendix applications. With your automated tests, you want to test functionalities of the application. Descriptions of those functionalities are in your User Stories. As you want to test those functionalities, ATS has the ability to retrieve User Stories from the Mendix Developer Portal project. In ATS you can link the retrieved User Stories to test cases and test suites. This is useful for you and your team to see what can be tested automatically and which functionalities are covered by a test case. Additionally linking user stories to test cases and test suites is useful for stakeholders. By linking them, you can show that the functionalities build in the sprint are tested.
 
 **This how-to will teach you how to do the following**
 
@@ -31,7 +31,7 @@ The following steps describe how you can set your Mendix API Key in ATS:
 2. Open the app where you want to add the Mendix API Key.
 3. Inside your app click the profile menu and click **Show Test Settings**.
 
-{{% alert type="info" %}} **Show Test Settings** is only present if you have SCRUM Master rights in the Mendix Sprintr project {{% /alert %}}
+{{% alert type="info" %}} **Show Test Settings** is only present if you have SCRUM Master rights in the Mendix Developer Portal project {{% /alert %}}
 
 ![](attachments/configure-a-selenium-hub-2/show-test-settings.png)
 
@@ -43,7 +43,7 @@ Clicking **Set API Key** opens the **Mendix API Key** Dialog:
 
 ![](attachments/connect-stories-to-testcases-2/mendix-api-key-dialog.png)
 
-5. To retrieve your Mendix API Key open the project in Sprintr and click **API Keys**.
+5. To retrieve your Mendix API Key open the project in the Developer Portal and click **API Keys**.
 6. Click **Create API Key**
 7. Enter an API Key name in the **API key name** field and click Generate API Key. 
 8. Copy the API Key and paste it into the **Mendix API Key** field in ATS.
@@ -51,17 +51,17 @@ Clicking **Set API Key** opens the **Mendix API Key** Dialog:
 
 ![](attachments/connect-stories-to-testcases-2/mendix-api-key-filled-e.png)
 
-You have set the Mendix API Key. ATS can now retrieve the User Stories from the Mendix Sprintr project.
+You have set the Mendix API Key. ATS can now retrieve the User Stories from the Mendix Developer Portal project.
 
 ![](attachments/connect-stories-to-testcases-2/set-mendix-api-key.png)
 
 ## 4 Retrieve User Stories in ATS
 
-The following steps explain how to retrieve user stories from the Mendix Sprintr project in ATS:
+The following steps explain how to retrieve user stories from the Mendix Developer Portal project in ATS:
 
 1. Open your project in ATS and go to **Test Cases**.
 2. Click the **Stories** tab.
-3. Click the **Refresh button** to retrieve the User Stories from Sprintr:
+3. Click the **Refresh button** to retrieve the User Stories from the Developer Portal:
 
 ![](attachments/connect-stories-to-testcases-2/go-to-stories-tab-e.png)
 

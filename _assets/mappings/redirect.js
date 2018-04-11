@@ -6933,7 +6933,7 @@ module.exports = {
     },
     {
       "from": "/refguide7/Close+Form",
-      "to": "/refguide/close-form"
+      "to": "/refguide/close-page"
     },
     {
       "from": "/refguide7/Clustered+Mendix+Runtime",

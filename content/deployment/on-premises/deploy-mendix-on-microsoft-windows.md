@@ -118,16 +118,22 @@ To create a website, follow these steps:
 7. Enter a port number in the **Port** field.
 8. Click **OK**.
 
-### 5.3 Configuring the MIME Type
+### 5.3 Configuring the MIME Types
 
-To configure the MIME type, follow these steps:
+To configure the MIME types, follow these steps:
 
 1. Open the IIS Manager and navigate to the website you want to manage.
-2. In the **Features View**, double-click **MIME Types**.
+2. In the **Features View**, double-click **MIME Types** and do the following:
 3. In the **Actions** pane, click **Add.**
-4. In the **Add MIME Type** dialog box, enter *.mxf* in the **File name extension** field.
-5. Enter *text/xml* in the **MIME type** field.
-6. Click **OK**.
+4. In the **Add MIME Type** dialog box, add this extension:
+	* **File name extension**: *.mxf*
+	* **MIME type**: *text/xml*
+6. Add another extension:
+   * **File name extension**: *.json*
+   * **MIME type**: *application/json*
+7. Click **OK**.
+
+
 
 ### 5.4 Configuring the URL Rewrite
 

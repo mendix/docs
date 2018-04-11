@@ -7,7 +7,7 @@ This page describes some common scenarios of working in the Modeler with version
 
 ## Starting A Project
 
-To start a new project with version control you simply choose 'New Project' in the Modeler and make sure that the Team Server option is enabled. Creating such a project creates a Team Server repository and a sprintr™ project. Also a working copy is created and opened so that you can immediately start working.
+To start a new project with version control you simply choose 'New Project' in the Modeler and make sure that the Team Server option is enabled. Creating such a project creates a Team Server repository and a Developer Portal project. Also a working copy is created and opened so that you can immediately start working.
 
 ![](attachments/modeler-core/2018-03-02_11-11-18.png)
 
@@ -17,7 +17,7 @@ If someone else has already created a Team Server enabled project you can join i
 
 {{% alert type="warning" %}}
 
-If you already have a sprintr™ project that was created by hand, you can enable the Team Server for that project in sprintr™ by adding the Team Server plugin.
+If you already have a Developer Portal project that was created by hand, you can enable the Team Server for that project in the Developer Portal by adding the Team Server plugin.
 
 {{% /alert %}}
 

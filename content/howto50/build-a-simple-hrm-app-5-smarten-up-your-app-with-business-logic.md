@@ -20,7 +20,7 @@ Before you can start with this how-to, make sure you have completed the followin
 
 ## 2\. Create a microflow
 
-In this chapter you will create a microflow.
+In this chapter you'll create a microflow.
 
 ### 2.1 Add an action button that calls a microflow
 

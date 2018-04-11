@@ -142,8 +142,8 @@ Client activities can be used to have the web client of your application perform
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| [![](attachments/819203/918114.png)](close-form) | [Close form](close-form) | Closes the form that is opened last by the user that calls the microflow in which this activity is used. |
-| [![](attachments/819203/917544.png)](show-page) | [Show page](show-page) | Can be used to show a form to the user that calls the microflow in which this activity is used. |
+| [![](attachments/819203/918114.png)](close-page) | [Close page](close-page) | Closes the page that is opened last by the user that calls the microflow in which this activity is used. |
+| [![](attachments/819203/917544.png)](show-page) | [Show page](show-page) | Can be used to show a page to the user that calls the microflow in which this activity is used. |
 | [![](attachments/819203/918097.png)](validation-feedback) | [Validation feedback](validation-feedback) | Can be used to display red text below a widget that displays an attribute or association. |
 
 ### 5.5 Loop

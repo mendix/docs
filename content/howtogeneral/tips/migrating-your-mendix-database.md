@@ -62,13 +62,13 @@ In order to export a PostgreSQL database, refer to either the [pg_dump](https://
 
 ### 2.2 How to upload an exported PostgreSQL database to the Mendix cloud database
 
-Use Cloud Portal to upload the migrated, exported database backup to the . This can be accessed using the Nodes page in Sprintr: select your app and environment, click Details, click on the Backup tab and use the Upload Data button to upload your Database using the file chooser to select the exported database file from your local file system.This will stop and clear your existing environment.
+Use Cloud Portal to upload the migrated, exported database backup to the . This can be accessed using the Nodes page in the Developer Portal: select your app and environment, click Details, click on the Backup tab and use the Upload Data button to upload your Database using the file chooser to select the exported database file from your local file system.This will stop and clear your existing environment.
 
 ## 3\. How to export a Mendix cloud database
 
 The same procedure can be used to export an existing Mendix cloud database, import it into an on-premise PostgreSQL source database and migrate that to an on-premise non-PostgreSQL target database.
 
-Export the Mendix cloud database via Cloud Portal. This can be accessed using the Nodes page in Sprintr: select your app and environment, click Details, click on the Backup tab, select an existing Backup from the list, and click the Download Backup button to download the database to your local file system using the Database URL shown in the dialogue. A fresh backup with recent data could also be created first using the Create Backup button.
+Export the Mendix cloud database via Cloud Portal. This can be accessed using the Nodes page in the Developer Portal: select your app and environment, click Details, click on the Backup tab, select an existing Backup from the list, and click the Download Backup button to download the database to your local file system using the Database URL shown in the dialogue. A fresh backup with recent data could also be created first using the Create Backup button.
 
 ### 3.1 How to import into on-premise PostgreSQL database
 

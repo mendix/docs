@@ -6,7 +6,7 @@ menu_order: 10
 
 ## 1 Introduction
 
-So you’ve decided to check out your new Mendix Community Profile page, but you've found it suspiciously empty. Don’t worry, we're here to help you set up your profile so you can show the world what a real Mendix developer looks like!
+So you’ve to check out your new Mendix Community Profile page, but you've found it suspiciously empty. Don’t worry, we're here to help you set up your profile so you can show the world what a real Mendix developer looks like!
 
 **This how-to will teach you how to do the following:**
 

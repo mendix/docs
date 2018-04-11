@@ -940,6 +940,8 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments/<Mode>/snapshots
 
 *   _AppId_ (String): Subdomain name of an app.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Comment_ (String): Optional comment for this snapshot.
+
 
 #### 3.17.2.2 Example
 
@@ -950,6 +952,10 @@ Host: deploy.mendix.com
 Content-Type: application/json
 Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
+
+{
+     "Comment" :  "My user comment"
+}
 ```
 
 ### 3.17.3 Output
@@ -967,7 +973,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```bash
 {
     "SnapshotID": "0c982ca3-621f-40e9-9c6e-96492934170a",
-    "Comment": "Manually created snapshot",
+    "Comment": "My user comment",
     "State": "Completed",
     "ExpiresOn": 1530868721000,
     "CreatedOn": 1523006321000,

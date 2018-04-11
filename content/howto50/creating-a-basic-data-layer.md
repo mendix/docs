@@ -11,7 +11,7 @@ This section will explain how to create entities and their attributes.
 
 1.  Open the **Domain Model**.
     ![](attachments/2949123/16842753.png)
-2.  Click **Entity** in the menu bar once.
+2.  Click **Entity** in the menu bar.
     ![](attachments/2949123/16842754.png) 
 3.  Click once in the domain model editor to create an entity.
     ![](attachments/2949123/16842755.png) 

@@ -2,7 +2,7 @@
 title: "Customization"
 category: "Runtime"
 description: "Describes custom server, log file, database, Amazon S3 storage service, Microsoft Azure, IBM Bluemix object storage, and web client settings in Mendix."
-tags: "Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "Microsoft Azure"
+tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "Microsoft Azure"]
 ---
 
 ## 1 Custom Settings

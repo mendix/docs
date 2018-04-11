@@ -2,7 +2,7 @@
 title: 'Collaboration & Project Management'
 ---
 
-Learn how to build apps in a team, share your code base and manage your projects.
+Learn how to build apps in a team, share your code base, and manage your projects.
 
 | Basic
 | ------------------------------------------------------------

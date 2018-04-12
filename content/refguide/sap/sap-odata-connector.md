@@ -106,8 +106,8 @@ Each entity (see [Entities](/refguide/entities) in the Mendix Reference Guide) c
   * **Name** – the name of the header
   * **Value** – the value of the header
 * **CloudConnector Info** – internal use only
-* **Cookie** – the cookie is maintained internally and is valid for a Mendix session or within a startup microflow or scheduled event
-* **CSRFToken** – the Cross-Site Request Forgery token is maintained internally and is used to prevent CSRF attacks; a CSFR token is maintained for a Mendix session and is also supported in a startup microflow or scheduled event
+* **Cookie** – the cookie is maintained internally and is valid for a Mendix session or in the microflow context of a startup microflow or scheduled event
+* **CSRFToken** – the Cross-Site Request Forgery (CSFR) token is maintained internally and is used to prevent CSRF attacks; a CSFR token is maintained for a Mendix session and is also supported in the microflow context of a startup microflow or scheduled event
 
 ## 3 Actions<a name="Actions"></a>
 

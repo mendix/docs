@@ -5,23 +5,21 @@ category: "Tips & Tricks"
 
 Mendix has comprehensive functionality to find changes made to several subjects in the application. This how-to will describe how to find changes made in objects based on a certain activity.
 
-## 1\. Find object activities
+## 1 Finding Object Activities
 
 The following steps will explain how to find certain activities that are used in microflows, to objects.
 
-1.  Click on 'Find Advanced' or press Ctrl+Shift+F
-    ![](attachments/18448724/18581633.png)
-2.  This window will appear:
+1.  In the top toolbar of the Desktop Modeler, click **Edit** > **Find** Advanced (or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
+2.  This dialog box will appear:
     ![](attachments/18448724/18581632.png)
-3.  At 'Search for' select 'Microflow actions' and the next window will appear:
+3.  For **Search for**, select **Microflow actions**, and this dialog box will appear:
     ![](attachments/18448724/18581631.png)
-4.  Select an entity on which the object activities have to be searched on and press find.
-    In this example the Account entity is used with the create action.
+4.  Select the entity for which you want to search for object activities, and click **Find**.
     ![](attachments/18448724/18581630.png)
-5.  See the results of usages in the microflows in the bottom pane
+5.  See the results of in the **Find Results** pane:
     ![](attachments/18448724/18581629.png)
 
-## 2\. Related content
+## 2 Related Content
 
 *   [Finding Object Activities](finding-object-activities)
 *   [Finding Unused Items](finding-unused-items)

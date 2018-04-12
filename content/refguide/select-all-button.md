@@ -32,7 +32,7 @@ The select all button allows the end-user to select all objects in a grid, or re
 
 {{% alert type="warning" %}}
 
-Due to technical limitations, a button with selection type 'Select all' cannot be combined with remove, delete or select buttons. Edit button always behaves as if selection type is "Select page" regardless actual settings of a select all button had been used to select objects.
+Due to technical limitations, a button with the selection type "Select all" cannot be combined with Remove, Delete, or Select buttons. An Edit button always behaves as if the selection type is "Select page," regardless of the actual settings of the "Select all" button that had been used to select objects.
 
 {{% /alert %}}
 

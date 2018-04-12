@@ -101,7 +101,7 @@ This feature was introduced in version 7.14.0.
 
 {{% /alert %}}
 
-An import mapping can be selected for a body parameter. Any object or list parameter except a file document must have import mapping selected. To select an import mapping you can double click the parameter or click the Edit button in a grid after you select the parameter.
+An import mapping can be selected for a body parameter. Any object or list parameter except a file document must have import mapping selected. To select an import mapping you can double click the parameter or click the Edit button in a grid after you select the parameter. When selecting the import mapping you can also chose the commit behavior of the mapping. You can chose to either commit, commit without events or not commit imported objects. Not commiting is the default for REST Operation.
 
 If you select an import mapping that supports both XML and JSON (for instance a mapping that is based on a message definition) then the operation will be able to handle both XML and JSON requests.
 

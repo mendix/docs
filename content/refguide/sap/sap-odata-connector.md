@@ -55,10 +55,10 @@ There are two ways to create a domain model to support your app:
 * Create a data model by inspecting the service metadata. The response from the service can be used in the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/) to generate a domain model which can be imported into your app. Instructions for doing this are in [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
 
 {{% alert type="info" %}}
-In addition to the Domain Model, the OData Model Creator will also create two other items:
+In addition to the domain model, the OData Model Creator will also create two other items:
 
-* a constant with the name of the service which has the value of the Service Root URL for the SAP service you are using
-* an enumeration (**EntitySetNames**) containing a list of all the entities in the entity model
+* A constant with the name of the service which has the value of the Service Root URL for the SAP service you are using
+* An enumeration (**EntitySetNames**) containing a list of all the entities in the entity model
 {{% /alert %}}
 
 ![](attachments/sap-odata-connector/serviceroot.png)
@@ -97,7 +97,7 @@ Each entity (see [Entities](/refguide/entities) in the Mendix Reference Guide) c
 * **FunctionParameters** – represents a wrapper for the parameter entities that need to be passed to OData functions
   * **postParameterInline** – a boolean which indicates whether the parameters should be posted inline or passed as the body of the POST request
 * **RequestParams** – passes conditions to the SAP OData Connector actions which change the behavior of the action; pass _empty_ if you want to use the default behavior
-  * **expectedHttpResult** – the expected HTTP result code. Normally, an HTTP result code which is not expected will cause an exception. If a different code (between 200 and 400) is passed in this attribute, the action will treat this code as success. Setting the expected HTTP response is useful in cases where OData services return codes that differ from the expected ones, e.g. 204 "No Content" when no data is available instead of 200 "OK" with an empty result
+  * **expectedHttpResult** – the expected HTTP result code; normally, an HTTP result code which is not expected will cause an exception; if a different code (between 200 and 400) is passed in this attribute, the action will treat this code as success; setting the expected HTTP response is useful in cases where OData services return codes that differ from the expected ones (for example, 204 "No Content" when no data is available instead of 200 "OK" with an empty result)
   * **connectTimeout** – limit, in seconds, before creating a connection times out (default 60 seconds)
   * **readTimeOut** – limit, in seconds, before reading from the connection times out (default 120 seconds)
   * **Proxy** – used internally
@@ -353,7 +353,7 @@ The Query edit box will help you by offering suggestions as described above.
 
 **@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the URL of the SAP service.
 
-**COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model
+**COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model.
 
 **QUERYPARAMETERS** are the parameters of the OData query which identify which objects should be returned. Please note:
 
@@ -389,9 +389,9 @@ This is an object which is based on an entity type which is a specialization of 
 
 This is the parameter used within an action when:
 
-* a specific object on the SAP service is referenced
+* A specific object on the SAP service is referenced
 
-* a service operation is used to return an object
+* A service operation is used to return an object
 
 When you are referencing an object, the format of the URL is:
 
@@ -415,7 +415,7 @@ For example, the URL of task **guid'00505697-47E6-1EE7-BED1-6C5662A87345'** in t
 @CRM_TASK.CRM_TASK + '/' + toString(CRM_TASK.EntitySetNames.Tasks) + '(guid%2700505697-47E6-1EE7-BED1-6C5662A87345%27)'
 ```
 
-This creates the URL https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/Tasks(guid'00505697-47E6-1EE7-BED1-6C5662A87345').
+This creates the URL `https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/Tasks(guid'00505697-47E6-1EE7-BED1-6C5662A87345')`.
 
 #### 4.1.5 Http method
 

@@ -33,7 +33,7 @@ The use of each of these actions is described in section [3. Actions](#Actions).
 
 ### 2.2 Action Parameters
 
-Each of these actions will ask for a number of parameters which will be categorized as **Input** or **Output** parameters. Here is an example of the parameters which are required for the **Get List** action.
+Each of these actions will ask for a number of parameters which will be categorized as either **Input** or **Output**. Here is an example of the parameters which are required for the **Get List** action.
 
 ![](attachments/sap-odata-connector/actionparameters-sapodataconnector.png)
 
@@ -53,6 +53,15 @@ There are two ways to create a domain model to support your app:
 
 * Download pre-built data models from the Mendix App Store. These are available for frequently used SAP services and can be found in the App Store under Connectors > SAP. For more details, see [SAP Data Models](sap-data-models).
 * Create a data model by inspecting the service metadata. The response from the service can be used in the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/) to generate a domain model which can be imported into your app. Instructions for doing this are in [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
+
+{{% alert type="info" %}}
+In addition to the domain model, the OData Model Creator will also create two other items:
+
+* A constant with the name of the service which has the value of the Service Root URL for the SAP service you are using
+* An enumeration (**EntitySetNames**) containing a list of all the entities in the entity model
+{{% /alert %}}
+
+![](attachments/sap-odata-connector/serviceroot.png)
 
 The examples used in this guide are based on the **SAP My Tasks for Field Sales Representative (CRM)** data model. This can be obtained in the following ways:
 
@@ -79,26 +88,26 @@ Here is the domain model of the SAP OData Connector:
 
 Each entity (see [Entities](/refguide/entities) in the Mendix Reference Guide) contains one or more attributes (see [Attributes](/refguide/attributes) in the Mendix Reference Guide):
 
-* **ODataObject** – represents the generic OData object. All entities which can be manipulated directly in the SAP service domain model are specializations of this
+* **ODataObject** – represents the generic OData object; all entities which can be manipulated directly in the SAP service domain model are specializations of this
   * **meta objectURI** – the address given by the SAP service to the OData object
-  * **meta_etag** – the entity tag (ETag) for the object. Entity tags are used for optimistic concurrency control to check that an object has not been changed by an SAP service initiated by another user
+  * **meta_etag** – the entity tag (ETag) for the object; this is used for optimistic concurrency control to check that an object has not been changed by an SAP service initiated by another user
 * **ResultInfo** – holds information about the result of a query
-  * **totalCount** – when a query is executed with $inlinecount=allpages the result returns the total record count for the given criteria. If a ResultInfo entity object is specified, this value will be stored in the totalCount attribute and can be used for paging
+  * **totalCount** – when a query is executed with $inlinecount=allpages the result returns the total record count for the given criteria; if a ResultInfo entity object is specified, this value will be stored in the totalCount attribute and can be used for paging
 * **ComplexType** – represents the generic SAP service domain model entities which are of type Complex
 * **FunctionParameters** – represents a wrapper for the parameter entities that need to be passed to OData functions
   * **postParameterInline** – a boolean which indicates whether the parameters should be posted inline or passed as the body of the POST request
-* **RequestParams** – passes conditions to the SAP OData Connector actions which change the behavior of the action. Pass _empty_ if you want to use the default behavior
-  * **expectedHttpResult** – the expected HTTP result code. An HTTP result code which is not expected will cause an exception. If a different code (between 200 and 400) is passed in this attribute, the action will treat this code as success. Setting the expected HTTP response is useful in cases where OData services return codes that differ from the expected ones, e.g. 204 "No Content" when no data is available instead of 200 "OK" with an empty result
-  * **connectTimeout** – time out in seconds before creating a connection times out (default 60 seconds)
-  * **readTimeOut** – time out in seconds before reading from the connection times out (default 120 seconds)
+* **RequestParams** – passes conditions to the SAP OData Connector actions which change the behavior of the action; pass _empty_ if you want to use the default behavior
+  * **expectedHttpResult** – the expected HTTP result code; normally, an HTTP result code which is not expected will cause an exception; if a different code (between 200 and 400) is passed in this attribute, the action will treat this code as success; setting the expected HTTP response is useful in cases where OData services return codes that differ from the expected ones (for example, 204 "No Content" when no data is available instead of 200 "OK" with an empty result)
+  * **connectTimeout** – limit, in seconds, before creating a connection times out (default 60 seconds)
+  * **readTimeOut** – limit, in seconds, before reading from the connection times out (default 120 seconds)
   * **Proxy** – used internally
   * **manualProxy** – used internally
-* **Header** – add a custom HTTP header that provides more information in the HTTP request
+* **Header** – add a custom HTTP header that provides more information in an HTTP request
   * **Name** – the name of the header
   * **Value** – the value of the header
 * **CloudConnector Info** – internal use only
-* **Cookie** – internal use only
-* **CSRFToken** – internal use only
+* **Cookie** – the cookie is maintained internally and is valid for a Mendix session or in the microflow context of a startup microflow or scheduled event
+* **CSRFToken** – the Cross-Site Request Forgery (CSFR) token is maintained internally and is used to prevent CSRF attacks; a CSFR token is maintained for a Mendix session and is also supported in the microflow context of a startup microflow or scheduled event
 
 ## 3 Actions<a name="Actions"></a>
 
@@ -132,6 +141,10 @@ For example, this connector can be used to create a task using the **SAP My Task
 ```javascript
 @CRM_TASK.CRM_TASK + '/' + toString(CRM_TASK.EntitySetNames.Tasks)
 ```
+
+**@CRM_TASK.CRM_TASK** is the constant in the SAP Service Data Model which identifies the Service Root for this SAP service.
+
+**CRM_TASK.EntitySetNames.Tasks** is the name of the Tasks collection listed in the EntitySetNames enumeration of the SAP Service Data Model.
 
 The **Odata object** is an object of entity type **Task**. This can be created, by using, for example, the **Create Object** action.
 
@@ -338,6 +351,15 @@ The format of the Query is:
 
 The Query edit box will help you by offering suggestions as described above.
 
+**@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the URL of the SAP service.
+
+**COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model.
+
+**QUERYPARAMETERS** are the parameters of the OData query which identify which objects should be returned. Please note:
+
+* The SAP service will define which attributes can be used to filter and sort the result list; the metadata for the service will contain a boolean indicating whether an attribute is **filterable** and/or **sortable**
+* The **$expand=[entity]** parameter will return associated (child) entity objects as part of a single query instead of having to retrieve them via a second query; for example, **$expand=TaskStatus** added to a query on the **Tasks** collection will return a list of Tasks and all the TaskStatus objects associated with them
+
 For example, to return a list of my tasks, sorted in descending order of CreatedAt from our **SAP My Tasks for Field Sales Representative (CRM)** (CRM_TASK) service, you could enter the following query:
 
 ```javascript
@@ -366,17 +388,34 @@ This is an object which is based on an entity type which is a specialization of 
 #### 4.1.4 Url
 
 This is the parameter used within an action when:
-* a specific object on the SAP service is referenced
-* a service operation is used to return an object
+
+* A specific object on the SAP service is referenced
+
+* A service operation is used to return an object
 
 When you are referencing an object, the format of the URL is:
 
 ```javascript
 @SERVICEROOT + '/' + toString(COLLECTIONNAME) + '/' + OBJECTINSTANCE
 ```
-You can generate this yourself, but it is often available as an attribute of an entity object. For example, using the **meta_objectURI** attribute of an object will refer to the instance of the object which is held by the SAP service.
+
+**@SERVICEROOT** is the constant in the SAP Service Data Model which identifies the Service Root for this SAP service.
+
+**COLLECTIONNAME** is the name of a collection listed in the EntitySetNames enumeration of the SAP Service Data Model.
+
+**OBJECTINSTANCE** is generally available as an attribute of an entity object.
+
+Alternatively, you can obtain the entire URL from attributes of an object. For example, the **meta_objectURI** attribute of an object is the full URL to the instance of the object which is held by the SAP service.
 
 When you are referencing a service operation, the URL is generally SERVICEROOT/[function name].
+
+For example, the URL of task **guid'00505697-47E6-1EE7-BED1-6C5662A87345'** in the **SAP My Tasks for Field Sales Representative (CRM)** service would be:
+
+```javascript
+@CRM_TASK.CRM_TASK + '/' + toString(CRM_TASK.EntitySetNames.Tasks) + '(guid%2700505697-47E6-1EE7-BED1-6C5662A87345%27)'
+```
+
+This creates the URL `https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/Tasks(guid'00505697-47E6-1EE7-BED1-6C5662A87345')`.
 
 #### 4.1.5 Http method
 
@@ -389,6 +428,7 @@ These are the parameters which are required when a service operation (function) 
 The SAP data model will contain entities, specializations of the FunctionParameters entity, which contain the attributes required for each of the functions exposed by the SAP service. These entities will be called [function name]Parameters, where [function name] is the name of the exposed SAP service listed in the FunctionNames enumeration which is part of the SAP data model.
 
 Before you pass the function parameters you will need to set the value of the **postParameterInline** attribute. Set it to:
+
 * **true** - the parameters will be sent as part of the HTTP GET or POST instruction
 * **false** - the parameters will be sent in the HTTP body after the HTTP headers
 
@@ -403,6 +443,7 @@ To use this function you will need to create an object of entity type TaskFollow
 These are parameters which are used within the SAP OData Connector action to override the default behavior of the action. This should be passed as an object of entity type RequestParams.
 
 The parameters which can be changed are:
+
 * Expected HTTP result - this is used to set the expected success code where this diverges from the specification. For example, the expected result from Create is 201 "created" but a service may have been configured to return 200 "OK"
 * Connection Timeout - how long the action should wait before assuming that the connection has timed out (default 60 seconds)
 * Read Timeout - how long the action should wait for a response to a request (default 120 seconds)
@@ -435,6 +476,7 @@ For example, Account is the parent entity of task via the Tasks_Account_Task ass
 
 {{% alert type="warning" %}}
 There is no data content validation on the Parent parameter. This means you will not get an error if you:
+
 * Link all the objects in a returned list to the wrong parent (if, for example, your query does not select on the correct parent object)
 * Pass a parent object which has no association with the entity type of the returned list of objects
 {{% /alert %}}
@@ -489,7 +531,6 @@ This is the name that you give the result of your Activity. This can be used lat
 ## 5 Related Content
 
 * [Attributes](/refguide/attributes)
-* [Data Types](/refguide/data-types)
 * [Data Types](/refguide/data-types)
 * [Domain Model](/refguide/domain-model)
 * [Entities](/refguide/entities)

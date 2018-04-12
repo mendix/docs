@@ -30,7 +30,7 @@ The most commonly used custom settings for database migration are:
 
 See [Custom Settings](/refguide6/custom-settings) for more information about the list of all available settings. These settings can be configured as follows:
 
-*   Modeler: in Project Explorer, expand Project, double-click Settings, edit a configuration, go to the right-most tab called Custom.
+*   Modeler: in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, go to the right-most tab called **Custom**:
     ![](attachments/19202917/19398970.png) 
 *   Service Console: click on an app on the left pane, click Configuration, click Advanced, see Custom Mendix settings.
     ![](attachments/19202917/19398971.png) 

@@ -27,11 +27,11 @@ The name of the project/library.
 
 **Mendix Project ID**
 
-The project ID of the Mendix sprintr project that you want to get your stories from.
+The project ID of the Mendix Developer Portal project that you want to get your stories from.
 
 **Mendix API Key**
 
-The API key that you created in your sprintr project for ATS.
+The API key that you created in your Developer Portal project for ATS.
 
 **Project Users**
 
@@ -55,6 +55,6 @@ The **Project Dashboard** is the first page you see when you open a project.
 
 There are three sections on the dashboard. The top-left section (1) shows you the number of all the test cases and their results. The lower-left section (2) shows a condensed view of the test results from the last seven days. The right section (3) shows you a detailed view of all the test cases and test suites.
 
-## Sprintr integration
+## Developer Portal integration
 
-Projects in ATS can be connected to sprintr projects by Mendix. If done so, ATS will fetch all sprints and user stories from the project. This allows you to connect your test cases to user stories.
+Projects in ATS can be connected to Developer Portal projects by Mendix. If this is done, ATS will fetch all sprints and user stories from the project. This allows you to connect your test cases to user stories.

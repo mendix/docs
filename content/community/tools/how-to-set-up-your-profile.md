@@ -50,7 +50,7 @@ Once five of your referrals reach the **Successful** status, you will see the **
 
 ![](attachments/how-to-set-up-your-profile/claim-tshirt.png)
 
-One more thing about referrals – when you refer someone and they sign up for Mendix, they will receive a voucher for the [Mendix Rapid Developer Certification Exam](https://gettingstarted.mendixcloud.com/link/certification/rapid) (valid for a limited period of time). So encourage your friends to try something new and get certified by Mendix!
+One more thing about referrals – when you refer someone and they sign up for Mendix, they will receive a voucher for the [Mendix Rapid Developer Certification Exam](https://gettingstarted.mendixcloud.com/link/certification/rapid) that is valid for six weeks. So encourage your friends to try something new and get certified by Mendix!
 
 ### 3.2 <a name="review"></a>Writing User Reviews of Mendix
 

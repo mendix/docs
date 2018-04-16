@@ -43,7 +43,7 @@ This is the navigation menu:
 
 ![](attachments/create-a-negative-test-case-2/navigation-menu-employee-company-expenses-app.png)
 
-This is the test case:
+This is the final test case:
 
 ![](attachments/create-a-negative-test-case-2/negative-test-case.png)
 
@@ -53,26 +53,26 @@ This is the test case:
   ![](attachments/create-a-negative-test-case-2/go-to-repository.png)
 
 3. Select the test case to add the negative test step.
-4. Add the Assert False action where you want to place the negative test step:
+4. Add the Assert not true action where you want to place the negative test step:
 
-![](attachments/create-a-negative-test-case-2/add-the-assert-false.png)
+![](attachments/create-a-negative-test-case-2/Assert_not_true_step_added.png)
 
-5. Set the **Assert Value** parameter of the Assert False action to **True**:
+5. Set the **Assert Value** parameter of the Assert not true action to **True**:
 
-![](attachments/create-a-negative-test-case-2/assert-value-parameter.png)
+![](attachments/create-a-negative-test-case-2/set-to-true.png)
 
 6.  Add the action needed to search for the menu item as a **Precondition**. Check the precondition box and add the [Find/Assert Menu Item](/ats/refguide/rg-version-1/findassert-menu-item) action:
 
-  ![](attachments/create-a-negative-test-case-2/add-findassert-menu-item-as-precondition.png)
+  ![](attachments/create-a-negative-test-case-2/add-findassert-menu-item-as-precondition-2.png)
 
 7.  Enter the information needed to find the **Admin Menu** as an administrator to verify it is not visible as an employee. Also, enter a proper description.
 
-  ![](attachments/create-a-negative-test-case-2/negative-test-step-finished.png)
+  ![](attachments/create-a-negative-test-case-2/negative-test-step-finished-2.png)
 
 These are the inner-workings:
 
-* If ATS can find the **Admin Menu**, the precondition passes and the Assert False action fails, which ensures that the entire test step fails
-* If ATS cannot find the **Admin Menu**, the precondition fails and the Assert False action is not executed, which ensures that the test case result is "passed"
+* If ATS can find the **Admin Menu**, the precondition passes and the Assert not true action fails, which ensures that the entire test step fails
+* If ATS cannot find the **Admin Menu**, the precondition fails and the Assert not true action is not executed, which ensures that the test case result is "passed"
 
 Resulting in a test case fail if the menu item is found and a test case pass if it is not found. 
 
@@ -83,7 +83,7 @@ _The finished test case_
 ![](attachments/create-a-negative-test-case-2/the-finished-test-case.png)
 
  {{% alert type="info" %}}
-You can also add the **Assert true** action with the **Assert value** set to false, instead of the **Assert false** action, to create a negative test case.
+You can also add the **Assert not false** action with the **Assert value** set to false, instead of the **Assert not true** action, to create a negative test case.
   {{% /alert %}}
 
 ## 4 Next Up

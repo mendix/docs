@@ -1,4 +1,4 @@
- .---
+---
 title: "Build a Docker Image from a Mendix App Project"
 category: "Docker"
 #parent: ""

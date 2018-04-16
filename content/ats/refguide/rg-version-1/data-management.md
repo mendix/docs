@@ -5,13 +5,13 @@ parent: "rg-version-1"
 
 ## Repository
 
-This workspace is the heart of ATS, since it allows to create and manage folders, test suites, test cases and actions. The folder in the ATS is equivalent to a directory in your file browser. You can create folders within other folders, and in each folder, you can store test suites, test cases and actions.
+The **Repository** is the heart of ATS, since it allows you to create and manage folders, test suites, test cases and actions. The folder in the ATS is equivalent to a directory in your file browser. You can create folders within other folders, and in each folder, you can store test suites, test cases and actions.
 
 ![Repository of the ATS](attachments/data-management/21168203.png)
 
 ## Import/Export
 
-ATS allows to export data (folders, test suites, test cases and keywords) to an XML file, and import that data into another ATS instance. This makes it possible to move data between different environments without having to handle database dumps.
+ATS allows you to export data (folders, test suites, test cases and keywords) to an XML file, and import that data into another ATS instance. This makes it possible to move data between different environments without handling database dumps.
 
 ### Data Import
 
@@ -19,18 +19,22 @@ There are two use cases when importing data: create data and update data. Create
 
 When importing data, all data conflicts will be resolved by overwriting the existing properties by the imported ones.
 
-To import data in ATS do the following:
+To import data in ATS, do the following:
 
-*   Click _Import_ in order to open the data import form.
-*   On the data import form, click the _New Import_ button to open the import data dialog.
+1. Click **Import** to open the data import form.
+2. On the data import form, click the **New Import** button to open the import data dialog.
 
 ![ATS Import Page](attachments/data-management/21168204.png)
 
-*   In the data import dialog select the .xml file containing your import and press **Upload**
+3. In the data import dialog, select the .xml file containing your import and press **Upload**.
 
 ![Data Import Dialog](attachments/data-management/21168205.png)
 
-The system will check the import for data inconsistencies and shows error details in a list if there are any. Click the import button in the bottom of the screen to complete the import.
+The system will check the import for data inconsistencies and show error details in a list if any. 
+
+4. Click the **Import** button in the bottom of the screen to complete the import.
+
+Data is imported in ATS.
 
 ### Data Export
 
@@ -46,27 +50,35 @@ There are different scenarios on how to export data from ATS:
     *   Actions, test cases and testsuites
     *   Folders, actions, test cases and test suites
 
-In order to start an export, you can either mark the export items listed in the current list view in the _Repository_ and then click _Export_ in the top menu, or you can export the item you are currently editing by clicking the _Export_ button in the top right.
+In order to start an export, you can:
+
+- Mark the export items listed in the current list view in the **Repository** and then click **Export** in the top menu.
+- Export the item you are currently editing by clicking the **Export** button in the top right.
 
 ![Exporting a test Case](attachments/data-management/21168206.png)
 
-Exporting in the repository:
+To export items from the repository, do the following:
+
+1. Open the **All Objects** tab of the **Repository**.
+2. Click the **Export items** button.
 
 ![Exporting items in the Repository](attachments/data-management/21168207.png)
+
+Data is exported from the repository.
 
 ## Test Data
 
 ### Creating Data Sets
 
-In the ATS repository under the _Test Data_ tab you can create data sets by clicking the _New Data Set_ button. You can name the data set and give a description.
+In the **Test Data** tab of the **Repository** you can create data sets by clicking the **New Data Set** button. You can name the data set and give it a description.
 
 ![](attachments/data-management/21168208.png)
 
-A data set is defined by one or more fields and records. Fields are the columns of your table, records are the lines in your table containing the field values. Fields can have the data types integer or string. After you have created a data set you can add Fields and Records to the set.
+A data set is defined by one or more fields and records. Fields are the columns of your table, records are the lines in your table containing the field values. Fields can have the data types integer or string. After you have created a data set you can add **Fields** and **Records** to the set.
 
 **Fields**
 
-A column of the table for specific data, for example username
+A column of the table for specific data, for example, username
 
 **Records**
 
@@ -74,7 +86,7 @@ Line in the data table containing an integer or string value of the data
 
 ### Importing/Exporting data sets
 
-When creating/editing a data set you can choose to _Create/Update fields from file_ option to provide a template Excel file to create or update fields and records of your data set. The first row of your sheet will be considered the header and will be used to determine the field names. All additional rows will be considered records and will be used to determine the fields data type.
+When creating/editing a data set you can select the **Create/Update fields from file** option to provide a template Excel file to create or update fields and records of your data set. The first row of your sheet will be considered the header and will be used to determine the field names. All additional rows will be considered records and will be used to determine the fields data type.
 
 {{% alert type="info" %}}
 
@@ -82,7 +94,7 @@ When updating an existing data set all existing fields and data records will be 
 
 {{% /alert %}}
 
-You can also only import data records into you data set by clicking the 'Import from Excel' button. The first row of your Excel sheet must contain the the field names of the data set into which you want to import the records.
+You can also only import data records into you data set by clicking the **Import from Excel** button. The first row of your Excel sheet must contain the field names of the data set into which you want to import the records.
 
 {{% alert type="info" %}}
 
@@ -94,4 +106,4 @@ When importing data from from Excel, ATS will try to convert data that doesn't m
 
 {{% /alert %}}
 
-You can simply export a data set by clicking the _Export to Excel_ button.
+You can simply export a data set by clicking the **Export to Excel** button.

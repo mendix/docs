@@ -114,8 +114,8 @@ Mendix 7 introduces a new stateless architecture, where the application is kept 
 We have identified some best practices for Mendix developers that go along with this new architecture:
 
 *	Minimize the number of in-use objects in your session
-*	Commit or roll back all changes to persistable objects before the end of the main microflow
-*	Link non-persistable objects that have long life spans to the current Session object
-*	Map only those parts of a web service integration that are necessary
-*	Delete any non-persistable objects as soon as they are no longer necessary
-*	Don’t use non-persistable objects in layouts
+		Commit or roll back all changes to persistable objects before the end of the main microflow
+		Link non-persistable objects that have long life spans to the current Session object
+		Map only those parts of a web service integration that are necessary
+		Delete any non-persistable objects as soon as they are no longer necessary
+		Don’t use non-persistable objects in layouts

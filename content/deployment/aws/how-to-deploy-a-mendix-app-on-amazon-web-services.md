@@ -60,11 +60,11 @@ The first thing to do when you want to run a Mendix instance on AWS is adding a 
 
 10. In the **Security Group** section make sure the instance is accessible through SSH, HTTP, and HTTPS. You can change these settings later.
 
-   ![](attachments/18448700/18581255.png)
+    ![](attachments/18448700/18581255.png)
    
-   **Key Pair**
-   Before you can launch the instance you have to create a key pair. A key pair consists of a public key that AWS stores, and a private key file that you store. Together, they allow you to connect to your instance securely. For Windows AMIs, the private key file is required to obtain the password used to log into your instance. For Linux AMIs, the private key file allows you to securely SSH into your instance.
-   The selected key pair will be added to the set of keys authorized for this instance. Learn more about [removing existing key pairs from a public AMI](https://docs.aws.amazon.com/console/ec2/launchinstance/key-pair/remove).
+    **Key Pair**
+    Before you can launch the instance you have to create a key pair. A key pair consists of a public key that AWS stores, and a private key file that you store. Together, they allow you to connect to your instance securely. For Windows AMIs, the private key file is required to obtain the password used to log into your instance. For Linux AMIs, the private key file allows you to securely SSH into your instance.
+    The selected key pair will be added to the set of keys authorized for this instance. Learn more about [removing existing key pairs from a public AMI](https://docs.aws.amazon.com/console/ec2/launchinstance/key-pair/remove).
    Let's follow the instructions to create a pair.
 
 11. Go to the **Amazon EC2 Console**: [https://console.aws.amazon.com/ec2/home?region=us-east-1#s=KeyPairs](https://console.aws.amazon.com/ec2/home?region=us-east-1#s=KeyPairs).

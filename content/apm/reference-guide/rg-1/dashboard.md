@@ -11,4 +11,3 @@ The dashboard shows recent information from the statistics tool, measurements to
 The individual tools can be selected from the menu on the left side of the page.
 
 These tools are described in separate chapters.
-

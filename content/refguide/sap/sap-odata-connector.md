@@ -11,13 +11,13 @@ This reference guide describes the actions and domain model of the SAP OData Con
 
 The SAP OData Connector is an OData connector written specifically to integrate with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors. The SAP OData Connector can be used for all SAP back-end systems that have OData enabled. For ECC, SAP Gateway will be used to expose the traditional BAPI interface as an OData service.
 
-The SAP OData Connector allows you to integrate quickly with an SAP back-end system running either in the cloud or on-premises. When running the Mendix application in SAP Cloud Platform, the SAP Cloud Connector will automatically be utilized to gain access to your on-premises SAP instance. For more information, see the [SAP Cloud Connector](sap-cloud-connector) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
+When running a Mendix application on SAP Cloud Platform, the SAP Cloud Connector will automatically be utilized to gain access to your SAP back-end system. For more information, see the [SAP Cloud Connector](sap-cloud-connector) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
 
 ![](attachments/sap-odata-connector/appstore-sapodata.png)
 
-The SAP OData Connector module can be used in combination with an SAP data model. For more details, see [SAP Data Models](sap-data-models). Alternatively, you can generate your own data model from the metadata of the SAP service. For more details see [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator)
+The SAP OData Connector can be used for example in combination with an SAP Data Model of an SAP Fiori Cloud app. For more details, see [SAP Data Models](sap-data-models). Alternatively, you can generate a data model from the metadata of your OData service, exposed from your SAP back-end system. For more details see [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
 
-If you are new to the SAP OData Connector, you can try it out by following our how-to: [How to Use the OData Connector](/howto/sap/use-sap-odata-connector). This reference assumes that you know the details of the SAP service you want to use.
+If you are new to the SAP OData Connector, you can try it out by following our how-to: [How to Use the OData Connector](/howto/sap/use-sap-odata-connector). This reference assumes that you know the details of the SAP OData service you want to use.
 
 ## 2 Using the SAP OData Connector<a name="UsingtheSAPODataConnector"></a>
 
@@ -51,7 +51,7 @@ Most of the actions of the SAP OData Connector make use of a domain model repres
 
 There are two ways to create a domain model to support your app:
 
-* Download pre-built data models from the Mendix App Store. These are available for frequently used SAP services and can be found in the App Store under Connectors > SAP. For more details, see [SAP Data Models](sap-data-models).
+* Download pre-built SAP Fiori Cloud data models from the Mendix App Store. These are available for frequently used SAP services and can be found in the App Store under Connectors > SAP. For more details, see [SAP Data Models](sap-data-models).
 * Create a data model by inspecting the service metadata. The response from the service can be used in the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/) to generate a domain model which can be imported into your app. Instructions for doing this are in [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
 
 {{% alert type="info" %}}
@@ -67,6 +67,7 @@ The examples used in this guide are based on the **SAP My Tasks for Field Sales 
 
 * You can download it from the App Store [here](https://appstore.home.mendix.com/link/app/89942/). If you download it within the Desktop Modeler, it will be saved in Project Explorer under **Project {name}** > **App Store modules** > **CRM_TASK**.
 * You can create it using the OData metadata XML for Customer Relationship Management Tasks, which can be found at [https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata](https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata). Save this file and then, using the instructions in [How to Use SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator), import it into your app.
+Afterwards make sure to inspect the created constant and its value.
 
 Part of the data model for this sample data is:
 

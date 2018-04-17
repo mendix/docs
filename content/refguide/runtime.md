@@ -10,7 +10,7 @@ You need a license to run an application in production mode. Without a license t
 
 ## API
 
-You can extend the functionality of the runtime by writing Java actions. The API available for Java programmers is available at [API docs](https://apidocs.mendix.com/6/runtime/).
+You can extend the functionality of the runtime by writing Java actions. The API available for Java programmers is available at [API docs](https://apidocs.mendix.com/7/runtime/).
 
 ## Integration API documentation
 

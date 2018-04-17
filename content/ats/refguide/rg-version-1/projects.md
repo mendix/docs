@@ -22,11 +22,11 @@ Projects and action libraries can be created by users and administrators. A user
 
 Determines whether you create a project or an action library. 
 
-```
 {{% alert type="info" %}}
+
 The type cannot be changed after creation.
+
 {{% /alert %}}
-```
 
 **Name**
 

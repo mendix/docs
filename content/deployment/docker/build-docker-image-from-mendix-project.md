@@ -37,7 +37,7 @@ To build the Docker image, follow these steps:
 5. Copy the project folder to the unzipped docker build folder. The project folder needs to be on the same level as the Docker file. The Docker build is not allowed to access files outside the context of the Docker build location.
 6.  Execute the following command:
 
-    * `docker build --build-arg BUILD_PATH=<relative-mendix-project-location> -t <image name>`
+    * `docker build --build-arg BUILD_PATH=<relative-mendix-project-location> -t <image name> .`
 
     ![](attachments/build-docker-image-from-mendix-project/build-image.png)
 

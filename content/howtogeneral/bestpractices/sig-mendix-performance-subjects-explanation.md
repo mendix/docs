@@ -307,7 +307,9 @@ Business logic is modeled using microflows in Mendix. Following is a description
 A data grid on a page is often directly linked to an entity in the domain model. An alternative approach is to use a microflow to create a list of objects to be displayed in a data grid.
 
 A microflow retrieving all objects from an entity can be modeled as follows:
-![](attachments/19202918/19399034.png) In this situation, all objects are transported to the browser in one request. A user can page through all the objects without triggering communication to the Mendix Runtime.
+![](attachments/19202918/19399034.png) 
+
+In this situation, all objects are transported to the browser in one request. A user can page through all the objects without triggering communication to the Mendix Runtime.
 
 High level sequence diagram for this scenario looks like this:
 ![](attachments/19202918/19399035.png)

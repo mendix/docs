@@ -91,9 +91,9 @@ You can only earn a pair of socks for your first Mendix user review. Subsequent 
 
 ### 3.3 Mission
 
-Your mission is comprised of activities you can complete on the Mendix Platform to gain various Mendix badges. Once you complete the mission, you get a Mission badge.
+Your missions are comprised of activities you can complete on the Mendix Platform to gain various Mendix badges. Once you complete a mission, you get a **Mission** badge.
 
-The order of activities is suggested for your mission, but you can complete these activities in any order you like. The activities you have completed and badges you have gained are pushed to the top of the Mission card, so you can see what you still have to do.
+The order of activities is suggested for your mission, but you can complete these activities in any order you like. The activities you complete and badges you gain are pushed to the top of the **Mission** card, so you can see what you still have to do.
 
 ![](attachments/how-to-set-up-your-profile/mission.png)
 

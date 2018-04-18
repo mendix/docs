@@ -28,7 +28,7 @@ Yeoman and Grunt both run on Node.JS, so you need to install this by following t
 
     ![](attachments/19202547/19398836.png)
 
-5. Check if Node.JS is properly installed by entering `node -v` and clicking **OK**. If Node.JS is properly installed, it will show you the version that is installed.
+5. Check if Node.JS is properly installed by entering `node -v` and press **enter**. If Node.JS is properly installed, it will show you the version that is installed.
 
 ### 2.2 Install Yeoman, Widget Generator, and Grunt
 
@@ -46,7 +46,7 @@ In your terminal, move to the folder where you want your widget to be created. I
 
 ![](attachments/19202547/19398838.png)
 
-Now you can run the generator by entering `yo mendix`. The system will ask you for a few things, like the name of the widget. The default values will be shown (just press enter to use the default value):
+Now you can run the generator by entering `yo mendix`. The system will ask you for a few things, like the name of the widget. The default values will be shown (just press enter to use the default value). Choose Grunt instead of Gulp. Choose 'AppStoreWidgetBoilerPlate':
 
 ![](attachments/19202547/19398839.png)
 
@@ -64,7 +64,7 @@ You can start the Modeler from Grunt with `grunt start-mendix` or `grunt start-m
 
 ![](attachments/19202547/19398841.png)
 
-This will open your test project with the Mendix version selector.
+This will open your test project with the Mendix version selector. Your test project is created in version 5.19.
 
 ### 4.2 Watch
 
@@ -108,3 +108,11 @@ If it has trouble finding the version selector, you can provide a path to the pr
 from **null** to `<path to VersionSelector.exe>` – make sure you use double backslashes when providing the path, as in this example:
 
 ![](attachments/19202547/19398845.png)
+
+### 5.3 Errors in the Test project 'Could not find the widget type "WidgetName.widget.WidgetName" in the "widgets" directory.'
+
+See this [Forum-question](https://forum.mendixcloud.com/link/questions/9428). The solution is to go to the element WidgetName and replace it by your own widget:
+- add your widget via right-click -> Add Widget -> add-on -> YourWidget
+- copy and paste properties from WidgetName to YourWidget where needed.
+- remove WidgetName
+Repeat this for all 5 of the errors.

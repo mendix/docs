@@ -67,7 +67,8 @@ The examples used in this guide are based on the **SAP My Tasks for Field Sales 
 
 * You can download it from the App Store [here](https://appstore.home.mendix.com/link/app/89942/). If you download it within the Desktop Modeler, it will be saved in Project Explorer under **Project {name}** > **App Store modules** > **CRM_TASK**.
 * You can create it using the OData metadata XML for Customer Relationship Management Tasks, which can be found at [https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata](https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK/$metadata). Save this file and then, using the instructions in [How to Use SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator), import it into your app.
-Afterwards make sure to inspect the created constant and its value.
+
+Make sure that you review the value of the constant containing the URL of the SAP service you are using after you have imported the data model into your app.
 
 Part of the data model for this sample data is:
 

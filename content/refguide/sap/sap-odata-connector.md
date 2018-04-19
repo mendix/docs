@@ -11,8 +11,7 @@ This reference guide describes the actions and domain model of the SAP OData Con
 
 The SAP OData Connector is an OData connector written specifically to integrate with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors. The SAP OData Connector can be used for all SAP back-end systems that have OData enabled, both in the cloud and on-premises. For ECC, SAP Gateway will be used to expose the traditional BAPI interface as an OData service.
 
-When running the Mendix application in SAP Cloud Platform, the SAP Cloud Connector will automatically be utilized to gain access to your on-premises SAP instance. The 
-For more information, see the [SAP Cloud Connector](sap-cloud-connector) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
+When running the Mendix application in SAP Cloud Platform, you can choose to use the SAP Cloud Platform cloud connector to gain access to your on-premises SAP instance. If you choose to use the SAP Cloud Platform cloud connector, this will invoke the SAP Connectivity Service in the SAP Cloud Platform to find a route to your private SAP OData service. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the SAP OData Connector will route requests to the public OData service. For more information, see the [SAP Cloud Connector](sap-cloud-connector) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
 
 ![](attachments/sap-odata-connector/appstore-sapodata.png)
 
@@ -52,7 +51,7 @@ For more information on domain models, see [Domain Model](/refguide/domain-model
 
 #### 2.3.1 SAP Service Domain Model
 
-Most of the actions of the SAP OData Connector make use of a domain model representing the OData services data model. These models contain non-persistable Mendix entities which represent entities in the OData service which is exposed by an SAP back-end system. The entities contain attributes which correspond to the entity properties plus additional attributes which support the SAP OData Connector.
+Most of the actions of the SAP OData Connector make use of a domain model representing the SAP service data model. These models contain non-persistable Mendix entities which represent entities in the OData service which is exposed by an SAP back-end system. The entities contain attributes which correspond to the entity properties plus additional attributes which support the SAP OData Connector.
 
 There are two ways to create a domain model to support your app:
 
@@ -87,7 +86,7 @@ This domain model generally works in the same way as a Mendix domain model, with
 
 #### 2.3.2 SAP OData Connector Domain Model<a name='ConnectorDM'></a>
 
-In addition to the OData Service Domain Model, there is a domain model which is used internally by the SAP OData Connector to control the connection between your Mendix app and the SAP back-end. The domain model consists of entities and their relationships represented by associations.
+In addition to the SAP Service Domain Model, there is a domain model which is used internally by the SAP OData Connector to control the connection between your Mendix app and the SAP back-end. The domain model consists of entities and their relationships represented by associations.
 
 Here is the domain model of the SAP OData Connector:
 
@@ -128,7 +127,7 @@ A more detailed description of the parameters is in section [4. Connector Action
 
 #### 3.1.1 Create
 
-The Create operation creates a new object in the SAP back-end system using the OData service. The object is described by an entity in the OData service domain model.
+The Create operation creates a new object in the SAP back-end system using the OData service. The object is described by an entity in the SAP service domain model.
 
 {{% alert type="info" %}}
 This Create is not the same as the Mendix **Create Object** action. The SAP OData Connector Create will commit the object to the SAP back-end system and it cannot be rolled back. If you decide later that you do not want this object you must delete it using its key.
@@ -151,7 +150,7 @@ For example, this connector can be used to create a task using the **SAP My Task
 
 **@CRM_TASK.CRM_TASK** is the constant in the SAP Service Data Model which identifies the Service Root for this OData service.
 
-**CRM_TASK.EntitySetNames.Tasks** is the name of the Tasks collection listed in the EntitySetNames enumeration of the OData Service Data Model.
+**CRM_TASK.EntitySetNames.Tasks** is the name of the Tasks collection listed in the EntitySetNames enumeration of the SAP Service Data Model.
 
 The **Odata object** is an object of entity type **Task**. This can be created, by using, for example, the **Create Object** action.
 
@@ -173,7 +172,7 @@ For example, this connector can delete a task using the **SAP My Tasks for Field
 
 The Open Data Protocol (OData) includes standard CRUD (Create, Retrieve, Update, and Delete) operations that map to the HTTP methods POST, GET, PUT/MERGE, and DELETE. These are supported in the SAP OData Connector as individual activity actions. In addition, SAP allows you to use additional custom operations (service operations) which cannot be mapped to the standard CRUD operations. These service operations are exposed through the OData service and are invoked by the HTTP methods GET or POST.
 
-The service operations which are supported by the OData service are listed in the enumeration **FunctionNames** which is imported as part of the data model of the OData service.
+The service operations which are supported by the OData service are listed in the enumeration **FunctionNames** which is imported as part of the SAP service domain model.
 
 ![](attachments/sap-odata-connector/functionnames-sapodataconnector.png)
 
@@ -182,7 +181,7 @@ The service operations which are supported by the OData service are listed in th
 * Input
   * Url (required) - the URL of the service operation. This is generally SERVICEROOT/[function name]
   * Http method (required) - GET or POST: the method used to invoke the service operation. GET is usually used to retrieve data and POST is usually used to create data
-  * Function parameters (required): Additional parameters which the service operation needs in order to retrieve, update, or create the correct data. The name of the relevant Function Parameters entity, imported into your app as part of the OData service data model, will be [function name]Parameters. The attributes of this entity will indicate the parameters which are required by the service operation
+  * Function parameters (required): Additional parameters which the service operation needs in order to retrieve, update, or create the correct data. The name of the relevant Function Parameters entity, imported into your app as part of the SAP service data model, will be [function name]Parameters. The attributes of this entity will indicate the parameters which are required by the service operation
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
   * Response type (required) - the type of entity which represents the object which is returned
   * Use SAP cloud connector - **False** if you want to use a publicly accessible service, **True** if you need to access your on-premises SAP back-end system via the SAP Cloud Connector
@@ -197,7 +196,7 @@ This performs the same action as the Execute entry action, but this is used wher
 * Input
   * Url (required) - the URL of the service operation
   * Http method (required) - GET or POST: the method used to invoke the service operation. GET is usually used to retrieve data and POST is usually used to create data
-  * Function parameters (required): Additional parameters which the service operation needs in order to retrieve or create the correct data. The name of the relevant function parameters entity, imported into your app as part of the SAP OData service data model, will be [function name]Parameters. The attributes of this entity will indicate the parameters which are required by the service operation
+  * Function parameters (required): Additional parameters which the service operation needs in order to retrieve or create the correct data. The name of the relevant function parameters entity, imported into your app as part of the SAP service domain model, will be [function name]Parameters. The attributes of this entity will indicate the parameters which are required by the service operation
   * Request Parameters - This is used to override the default behavior of the action when responding to conditions such as timeouts and HTTP responses. To keep the standard behavior, set it to _empty_
   * Response type (required) - the type of entity which represents the objects in the list which is returned
   * Use SAP cloud connector - **False** if you want to use a publicly accessible service, **True** if you need to access your on-premises SAP back-end system via the SAP Cloud Connector
@@ -229,7 +228,7 @@ This produces the GET request https://www.sapfioritrial.com/sap/opu/odata/sap/CR
 
 #### 3.1.6 Get List
 
-The Get List action gets a list of objects described by a type of entity in the domain model from the SAP OData service. This action uses filters (SQL queries) to control which objects are returned. The entity collection is described by an entity in the SAP OData service domain model which you have imported into your app.
+The Get List action gets a list of objects described by a type of entity in the domain model from the SAP OData service. This action uses filters (SQL queries) to control which objects are returned. The entity collection is described by an entity in the SAP service domain model which you have imported into your app.
 
 * Input
   * Query (required) - the query which will return a list of entity instances from the OData service. See section [4.1.1 Query](#Query) for more information
@@ -360,9 +359,9 @@ The format of the Query is:
 
 The Query edit box will help you by offering suggestions as described above.
 
-**@SERVICEROOT** is a constant which is created in the OData Service Data Model and has a value which is the root URL of the OData service, for example: https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK
+**@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK
 
-**COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the OData Service Data Model, for example: the collection Tasks will be shown as @SERVICEROOT.EntitySetNames.Tasks
+**COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model, for example: the collection Tasks will be shown as @SERVICEROOT.EntitySetNames.Tasks
 
 **QUERYPARAMETERS** are the parameters of the OData query which identify which objects should be returned. Please note:
 
@@ -408,9 +407,9 @@ When you are referencing an object, the format of the URL is:
 @SERVICEROOT + '/' + toString(COLLECTIONNAME) + '/' + OBJECTINSTANCE
 ```
 
-**@SERVICEROOT** is a constant which is created in the OData Service Data Model and has a value which is the root URL of the OData service, for example: https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK
+**@SERVICEROOT** is a constant which is created in the SAP Service Data Model and has a value which is the root URL of the OData service, for example: https://www.sapfioritrial.com/sap/opu/odata/sap/CRM_TASK
 
-**COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the OData Service Data Model, for example: the collection Tasks will be shown as @SERVICEROOT.EntitySetNames.Tasks
+**COLLECTIONNAME** can be found in the enumeration EntitySetNames which lists all the collections in the SAP Service Data Model, for example: the collection Tasks will be shown as @SERVICEROOT.EntitySetNames.Tasks
 
 **OBJECTINSTANCE** is generally available as an attribute of an entity object.
 
@@ -432,7 +431,7 @@ Before you pass the function parameters you will need to set the value of the **
 * **true** - (default) the parameters will be sent as part of the HTTP GET or POST instruction
 * **false** - the parameters will be sent in the HTTP body after the HTTP headers
 
-For example: in the CRM_TASK SAP OData service data model there is a function called TaskFollowUpTransTypes. This has an associated entity, TaskFollowUpTransTypesParameters, which is a specialization of the SAP OData Connector entity FunctionParameters. This function parameter entity indicates that you need to supply an odata_Guid and a TransactionType.
+For example: in the CRM_TASK SAP service domain model there is a function called TaskFollowUpTransTypes. This has an associated entity, TaskFollowUpTransTypesParameters, which is a specialization of the SAP OData Connector entity FunctionParameters. This function parameter entity indicates that you need to supply an odata_Guid and a TransactionType.
 
 ![](attachments/sap-odata-connector/functionsandfunctionparameters-sapodataconnector.png)
 
@@ -521,8 +520,8 @@ This is the value of an HTTP header field which is a component of the HTTP heade
 This is the type of data which will be returned from the action. There are three types of data:
 
 * boolean - indicating the success or failure of the action
-* object - an object of an entity type which is either in the SAP OData service domain model, or in the SAP OData Connector domain model
-* list - a list of objects of the same type, defined by an entity type in the SAP OData service domain model
+* object - an object of an entity type which is either in the SAP service domain model, or in the SAP OData Connector domain model
+* list - a list of objects of the same type, defined by an entity type in the SAP service domain model
 
 #### 4.2.2 Variable
 

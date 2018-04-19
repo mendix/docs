@@ -25,7 +25,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * The page editor no longer crashes when encountering a list view with a nanoflow data source (for example, if this was incorporated using the Desktop Modeler).
 * We fixed the issue where the custom widget **Text Box Search** made the Web Modeler crash if no entity was provided.
 
-### March 27th, 2018 13:35:25 GMT
+### March 27th, 2018 
 
 #### Improvements
 
@@ -49,7 +49,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * We fixed the "Something went wrong" messages that appeared when creating new enumeration items and new microflows.
 * The Web Modeler will now start even if the App Store cannot be reached.
 
-### March 5th, 2018 15:10:44 GMT
+### March 5th, 2018 
 
 #### Improvements
 
@@ -70,7 +70,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * Only the filtering of non-form page templates is now allowed while creating edit pages.
 * The Web Modeler now handles conversion and custom widget requests better. 
   
-### February 7th, 2018 16:28:00 GMT
+### February 7th, 2018 
 
 #### Improvements
 
@@ -83,7 +83,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 * In the page editor, the **Create** button on the **Create New Attribute** dialog box now functions properly, even when used after clicking **Add parameter** (which is used, for example, for the **Caption** property of a widget).
 
-### January 29th, 2018 16:10:52 GMT
+### January 29th, 2018 
 
 #### Improvements
 
@@ -95,7 +95,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ## 2017
 
-### December 18th, 2017 10:43:36 GMT
+### December 18th, 2017 
 
 #### Improvements
 
@@ -109,7 +109,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * The Web Modeler failed to load on Safari 10. We fixed several minor runtime issues for this.
 * We made a general security fix.
 
-### December 1st, 2017 09:53:20 GMT
+### December 1st, 2017 
 
 #### Improvements
 

@@ -15,15 +15,15 @@ These release notes are for the [beta](../beta-features/index) version of the We
 Over the past week we released the following new features:
 
 #### Improvements
-* We added inline editing functionality to the domain model editor and navigation editor. This makes it very easy and intuitive to change captions of entities, attributes and navigation menu items. Simply double-click the caption and start typing straight away.
-* Any user can now start a short product introduction tour at any moment, in any app. This helps you find your way easily. To start the tour, select the option **Take a Product Tour** from the information menu at the top right.
+* We added inline editing functionality to the domain model editor and the navigation editor. This makes it very easy and intuitive to change captions of entities, attributes and navigation menu items. Simply double-click the caption and start typing straight away.
+* Any user can now start a short product introduction tour at any moment, in any app. This helps you find your way easily. To start the tour, select the **Take a Product Tour** option from the information menu at the top right.
 * You can now change the caption of microflow activities in the microflow editor. This allows you to build a microflow just the way you want it to be, with captions you recognize easily.
 * The **Checks** panel can now be resized by dragging it. This is the panel in which consistency errors are shown. The resizable panel helps you to keep overview when solving consistency errors.
 * In the microflow editor, the element that causes a consistency error is now highlighted when you click the consistency error record, to help you solve the consistency error fast.
 
 #### Fixes
 * The page editor no longer crashes when encountering a list view with a nanoflow data source, e.g. which was incorporated using the Desktop Modeler.
-* We fixed an issue where the custom widget "Text Box Search" made the webmodeler crash if no entity was provided.
+* We fixed an issue where the custom widget "Text Box Search" made the Web Modeler crash if no entity was provided.
 
 ### March 27th, 2018 13:35:25 GMT
 

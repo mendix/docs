@@ -11,7 +11,8 @@ This reference guide describes the actions and domain model of the SAP OData Con
 
 The SAP OData Connector is an OData connector written specifically to integrate with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors. The SAP OData Connector can be used for all SAP back-end systems that have OData enabled, both in the cloud and on-premises. For ECC, SAP Gateway will be used to expose the traditional BAPI interface as an OData service.
 
-When running the Mendix application in SAP Cloud Platform, the SAP Cloud Connector will automatically be utilized to gain access to your on-premises SAP instance. For more information, see the [SAP Cloud Connector](sap-cloud-connector) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
+When running the Mendix application in SAP Cloud Platform, the SAP Cloud Connector will automatically be utilized to gain access to your on-premises SAP instance. The 
+For more information, see the [SAP Cloud Connector](sap-cloud-connector) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
 
 ![](attachments/sap-odata-connector/appstore-sapodata.png)
 
@@ -41,13 +42,17 @@ These parameters are described in section [4. Connector Action Parameters](#Conn
 
 ### 2.3 Domain Models
 
-This reference guide describes two sorts of domain model. You will mainly be working with the SAP Service Domain Model, a Mendix domain model which represents the data model of the SAP OData service. This is described first. There is also the SAP OData Connector Domain Model which is used by the SAP OData Connector itself.
+This reference guide describes two different domain models.
+
+1. The SAP Service Domain Model – this is a Mendix domain model which represents the data model of the SAP OData service. This is the one which holds the data you are working with and is described first.
+
+2. The SAP OData Connector Domain Model – this contains entities which are used by the SAP OData Connector itself: for example, to construct the request which needs to be sent to the OData service. A description of this domain model is included for completeness in section [2.3.2 SAP OData Connector Domain Model](#ConnectorDM)
 
 For more information on domain models, see [Domain Model](/refguide/domain-model) in the Mendix Reference Guide.
 
 #### 2.3.1 SAP Service Domain Model
 
-Most of the actions of the SAP OData Connector make use of a domain model representing the OData services data model. These models contain non-persistable Mendix entities which represent SAP Entity Types. There are three types of entity used for this: OdataObject, ComplexType, and FunctionParameters. The entities contain attributes which correspond to the SAP properties plus additional attributes which support the SAP OData Connector.
+Most of the actions of the SAP OData Connector make use of a domain model representing the OData services data model. These models contain non-persistable Mendix entities which represent entities in the OData service which is exposed by an SAP back-end system. The entities contain attributes which correspond to the entity properties plus additional attributes which support the SAP OData Connector.
 
 There are two ways to create a domain model to support your app:
 
@@ -80,7 +85,7 @@ This domain model generally works in the same way as a Mendix domain model, with
 **meta_etag** string that identifies a state of the object. This is used by the OData service when you try to change data to check if it has been changed since it was retrieved by your app.
 * Many objects have attributes which end in ...Deferred. These contain URIs which will return a list of objects of an entity type which is associated with the current object. For example: in the domain model above, the Task entity contains an attribute AttachmentsDeferred. This will contain a URI which can be used to return a list of TaskAttachments associated with the current Task object via the Attachments_Task_TaskAttachment association.
 
-#### 2.3.2 SAP OData Connector Domain Model
+#### 2.3.2 SAP OData Connector Domain Model<a name='ConnectorDM'></a>
 
 In addition to the OData Service Domain Model, there is a domain model which is used internally by the SAP OData Connector to control the connection between your Mendix app and the SAP back-end. The domain model consists of entities and their relationships represented by associations.
 
@@ -88,7 +93,7 @@ Here is the domain model of the SAP OData Connector:
 
 ![](attachments/sap-odata-connector/domainmodel-sapodataconnector.png)
 
-Each entity (see [Entities](/refguide/entities) in the Mendix Reference Guide) contains one or more attributes (see [Attributes](/refguide/attributes) in the Mendix Reference Guide):
+This domain model is part of the SAP OData Connector module and can be found in **Project ... > App Store module > SAPODataConnector**. Each entity (see [Entities](/refguide/entities) in the Mendix Reference Guide) contains one or more attributes (see [Attributes](/refguide/attributes) in the Mendix Reference Guide):
 
 * **ODataObject** – represents the generic OData object; all entities which can be manipulated directly in the SAP OData service domain model are specializations of this
   * **meta objectURI** – the address given by the OData service to the OData object

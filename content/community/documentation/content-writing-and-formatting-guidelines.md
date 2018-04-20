@@ -202,7 +202,7 @@ For example:
 
 {{% alert type="warning" %}}
 
-The documentation in this section describes a new feature that is still in beta, and is subject to change before the final release.
+The documentation in this section describes a new feature that is in beta, so it is subject to change before the final release.
 
 {{% /alert %}}
 

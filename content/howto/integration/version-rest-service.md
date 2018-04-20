@@ -94,7 +94,7 @@ Note that this is a breaking change (because it is not backwards compatible), so
 
 After you have created a new version of your service, you should mark the old version as deprecated.
 
-You do that by adding **(deprecated)** to the service name. Write a description of why it was deprecated and what the new version number is in the **Public documentation** of the service.
+You do that by adding **(deprecated)** to the service name. Write a description of why it was deprecated and what the new version number is in the **Public documentation** of the service. You should also mark all operations that changed as deprecated. In this way, clients can see which operations have changed from one version to the next.
 
 You should let clients know that the this version is deprecated (for instance, by publishing release notes).
 

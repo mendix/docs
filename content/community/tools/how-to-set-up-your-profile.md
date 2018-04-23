@@ -35,23 +35,23 @@ The other sections of your Community Profile are described below.
 
 ### 3.1 <a name="invite"></a>Inviting Friends and Colleagues to Mendix
 
-On your dashboard, you can invite friends and colleagues to join Mendix. After you click **Invite Friends**, a pop-up window titled **Get your free t-shirt** appears where you can send someone a platform invite by entering their email address and clicking **Send invite**. There is also a personal referral link provided, which you can share on your personal website, blog, and social media channels to get more referrals. You will earn some Mendix swag with five successful invites.
+On your dashboard, you can invite friends and colleagues to join Mendix. After you click **Invite Friends**, a pop-up window titled **Get your free t-shirt** appears where you can send someone a platform invite by entering their email address and clicking **Send invite**. There is also a personal invite link provided, which you can share on your personal website, blog, and social media channels to invite more people to Mendix. You will earn some Mendix swag with five successful invites!
 
 ![](attachments/how-to-set-up-your-profile/referral-url.png)
 
 After you have invited someone to Mendix, click **Invite Friends / View Status** to see their name and status listed at the bottom of the pop-up window:
 
-1. If you invited them via email, they will first have the **Invited** status.
-2. When they click **Sign up for Mendix** and receive a confirmation email, they will have the **Confirmation e-mail sent** status.
+1. If you invited them via email, they will first get the **Invited** status.
+2. When they click **Sign up for Mendix** and receive a confirmation email, they will get the **Confirmation e-mail sent** status.
 3. When they complete the guided product introduction tour in the Mendix Web Modeler, their status will change to **Successful**.
 
 ![](attachments/how-to-set-up-your-profile/referral-statuses.png)
 
-Once five of your referrals reach the **Successful** status, you will see the **Claim your t-shirt** link on your dashboard. Click this to fill in some details and receive your awesome Mendix t-shirt. Yay!
+Once five of the users you invited reach the **Successful** status, you will see the **Claim your t-shirt** link on your dashboard. Click this to fill in some details and receive your awesome Mendix t-shirt. Yay!
 
 ![](attachments/how-to-set-up-your-profile/claim-tshirt.png)
 
-One more thing about platform invites – when you refer someone and they sign up for Mendix, they will receive a voucher for the [Mendix Rapid Developer Certification Exam](https://gettingstarted.mendixcloud.com/link/certification/rapid) that is valid for six weeks. So encourage your friends to try something new and get certified by Mendix!
+One more thing about platform invites – when you invite someone and they sign up for Mendix, they will receive a voucher for the [Mendix Rapid Developer Certification Exam](https://gettingstarted.mendixcloud.com/link/certification/rapid) that is valid for six weeks. So encourage your friends to try something new and get certified by Mendix!
 
 ### 3.2 <a name="review"></a>Writing User Reviews of Mendix
 

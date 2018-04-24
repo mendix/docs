@@ -26,7 +26,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 {{% alert type="info" %}}
 
-You add users to ATS by inviting them to your Mendix Spintr project. For more information on the user roles, see [Different User Roles](ats/general/introduction#4-different-user-roles)
+You add users to ATS by inviting them to your Mendix app project. For more information on the user roles, see [Different User Roles](ats/general/introduction#4-different-user-roles).
 {{% /alert %}}
 
 ## 3 Configuring Your App

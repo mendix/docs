@@ -23,8 +23,23 @@ The **HTTP method** property defines the HTTP method to use when calling a REST 
 
 ### 2.2 Timeout
 
-Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. If the REST endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will be 
-thrown and the microflow will roll back or go into your custom error handler.
+Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. If the REST endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will be thrown and the microflow will roll back or go into your custom error handler.
+
+### 2.3 Proxy configuration
+
+{{% alert type="info" %}}
+
+This feature was introduced in version 7.15.0.
+
+{{% /alert %}}
+
+Set up proxy configuration for the request. It is possible to select one of three options:
+
+- Use project settings; use whatever settings are defined on the project level (default)
+- Override; override project level settings for this action.
+- No proxy; dont use proxy for this action, even if there is a proxy configuration on project level.
+
+When **Override** option is chosen, you can configure host, port, username and password settings for the proxy.
 
 ## 3 HTTP Headers
 
@@ -66,7 +81,7 @@ If the [export mapping](export-mappings) requires an input, you can select a var
 
 #### 4.1.4 Content Type
 
-If the [export mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose the type of output you want.
+If the [export mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose the type of output you want. **Content-Type header** is not set by default. To set it use Custom HTTP Headers tab.
 
 ### 4.2 Binary for the Entire Request
 

@@ -29,7 +29,7 @@ The **External name** is the name of the XML node or the JSON property. By defau
 
 The **External item name** is only relevant for XML, and only when the occurrence is `0..*`. It is used for the XML node that represents a single item. By default, it's the entity name.
 
-As an **Example value** you can specify a typical value for an attribute. When you use the message definition in a published REST service, this value shows up in the [interactive documentation](published-rest-services#interactive-documentation).
+As an **Example value** you can specify a typical value for an attribute. When you use the message definition in a published REST service, this value shows up in the [interactive documentation](published-rest-services#interactive-documentation). Note that you specify a date/time value in the format `year-month-day` or `year-month-day hour:minute:second`.
 
 The **Documentation** of an entity, attribute or association shows up in the [interactive documentation](published-rest-services#interactive-documentation), too.
 

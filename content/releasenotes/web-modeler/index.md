@@ -10,7 +10,22 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ## 2018
 
-### March 27th, 2018 13:35:25 GMT
+### April 18th, 2018
+
+#### Improvements
+
+* We added inline editing functionality to the domain model editor and the navigation editor. This makes it very easy and intuitive to change the captions of entities, attributes, and navigation menu items. Simply double-click the caption and start typing straight away.
+* Any user can now start a short guided product introduction tour at any moment, in any app. This helps you find your way easily. To start the tour, select the **Take a Product Tour** option from the information menu at the top-right of the Web Modeler.
+* You can now change the caption of microflow activities in the microflow editor. This allows you to build a microflow just the way you want it to be, with captions you recognize easily.
+* The **Checks** panel can now be resized by dragging it. This is the panel in which consistency errors are shown. The resizable panel helps you to keep an overview when solving consistency errors.
+* In the microflow editor, the element that causes a consistency error is now highlighted when you click the consistency error record. This helps you to solve consistency errors fast.
+
+#### Fixes
+
+* The page editor no longer crashes when encountering a list view with a nanoflow data source (for example, if this was incorporated using the Desktop Modeler).
+* We fixed the issue where the custom widget **Text Box Search** made the Web Modeler crash if no entity was provided.
+
+### March 27th, 2018 
 
 #### Improvements
 
@@ -27,14 +42,14 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * At this stage *all* the Mendix widgets supported by the Desktop Modeler are now rendered in the Web Modeler. This will further streamline collaboration between users of our two Modelers. It also enables you to use the Web Modeler live in meetings (for example, in frequent iterations during the app development cycle).
 * Input widgets set to read-only will now render as such in the Web Modeler's page editor. For example, if you configure a text box widget to be rendered as a control or as a text widget, it will now render the same way in the Web Modeler as for an end-user, regardless of editability.
 * In the microflow editor, you are now able to connect annotations with microflow activities. In this way, the valuable information often contained in annotations will always be in context, even when the activity is moved during the construction of the microflow. This will benefit users in understanding and maintaining microflows.
-* We added support for the release of Desktop Modeler version 7.13.1.
+* We added support for the release of Desktop Modeler version 7.13.1. The minimum supported version remains Desktop Modeler 7.11.0.
 
 #### Fixes
 
 * We fixed the "Something went wrong" messages that appeared when creating new enumeration items and new microflows.
 * The Web Modeler will now start even if the App Store cannot be reached.
 
-### March 5th, 2018 15:10:44 GMT
+### March 5th, 2018 
 
 #### Improvements
 
@@ -47,7 +62,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * We improved the drawing and auto-resizing of microflows when a user removes one or more activities from a microflow.
 * In the microflow editor, the **Refresh In Client** property for **Create Object** and **Change Object** activities now has the default value **True**. This prevents the consequences of users accidentally not setting this property, as witnessed in many user tests.
 * Java actions and connectors may be part of your microflows (for example, when added to your model using the Desktop Modeler). If so, they are now fully rendered in the Web Modeler's microflow editor. Also, the return type of a Java action is now available for use in microflows.
-* We added support for [Desktop Modeler 7.12.0](../desktop-modeler/7.12). The minimum (and only) supported version is now Desktop Modeler 7.12.0.
+* We added support for [Desktop Modeler 7.12.0](../desktop-modeler/7.12). The minimum supported version remains Desktop Modeler 7.11.0.
 * A maintenance page is now shown when the Web Modeler is unavailable due to maintenance activities by Mendix. 
   
 #### Fixes
@@ -55,7 +70,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * Only the filtering of non-form page templates is now allowed while creating edit pages.
 * The Web Modeler now handles conversion and custom widget requests better. 
   
-### February 7th, 2018 16:28:00 GMT
+### February 7th, 2018 
 
 #### Improvements
 
@@ -68,7 +83,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 * In the page editor, the **Create** button on the **Create New Attribute** dialog box now functions properly, even when used after clicking **Add parameter** (which is used, for example, for the **Caption** property of a widget).
 
-### January 29th, 2018 16:10:52 GMT
+### January 29th, 2018 
 
 #### Improvements
 
@@ -80,7 +95,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ## 2017
 
-### December 18th, 2017 10:43:36 GMT
+### December 18th, 2017 
 
 #### Improvements
 
@@ -94,7 +109,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 * The Web Modeler failed to load on Safari 10. We fixed several minor runtime issues for this.
 * We made a general security fix.
 
-### December 1st, 2017 09:53:20 GMT
+### December 1st, 2017 
 
 #### Improvements
 

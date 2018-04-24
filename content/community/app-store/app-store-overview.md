@@ -40,7 +40,7 @@ You can also access [My App Store](https://appstore.home.mendix.com/link/myappst
 
 ## 3 Add-On Details Page<a name="AddonDetailsPage"></a>
 
-Clicking an App Store item in a menu will bring you to the content item's details page. The details page presents the sections described below.
+Clicking an App Store item in a menu will bring you to the item's details page. The details page presents the sections described below.
 
 ### 3.1 Add-On Details Section
 

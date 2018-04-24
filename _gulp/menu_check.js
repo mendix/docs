@@ -27,7 +27,7 @@ const readJSON = files => Promise.all(files.map(file => helpers.readFile(file).t
 const checkJSON = jsonArr => Promise.all(jsonArr.map(jsonFile => parseAndCheck(jsonFile)))
 
 const parseAndCheck = menuJSON => new Promise((resolve, reject) => {
-  const categories = menuJSON.categories.map(cat => cat.toLowerCase()),
+  const categories = menuJSON.categories !== null ? menuJSON.categories.map(cat => cat.toLowerCase()) : [],
         categoriesOrig = menuJSON.categories,
         pages = menuJSON.pages;
 

@@ -12,7 +12,7 @@ To track the usage growth of your app and to debug performance problems, the Men
 
 ## 2 Monitor Trends Access  
 
-To view the **Trends** you must have permission to **Access the Monitoring**.
+To view the **Trends**, you must have permission to **Access the Monitoring**.
 
 {{% alert type="info" %}}
 

@@ -18,6 +18,7 @@ JDBC (_Java Database Connectivity_) API, a standard Java API, is used when this 
 
 Before you can start with this how-to, please make sure you have completed the following prerequisites.
 
+*   The **Database Connector** from the App Store
 *   A database **URL** address that points to your database.
 *   The **username** for logging into the database, relative to the database URL address.
 *   The **password** for logging into the database, relative to the database URL address.

@@ -33,7 +33,7 @@ For example, if you want John Doe (who works for Example Company) to have access
 
 When John Doe leaves Example Company or he should not have access to the server account anymore, Mendix simply revokes his access by telling the server that he may not log in anymore. For other users, nothing changes.
 
-One of the other main benefits of this way of working is that we never need to communicate secrets like passwords, which end up in mailboxes and notebooks everywhere.
+One of the other benefits of this way of working is that we never need to communicate secrets like passwords, which end up in mailboxes and notebooks everywhere.
 
 ## 3 Creating Your Own Keys
 

@@ -57,7 +57,7 @@ An operation has different parameters:
 
 A microflow for an operation takes all these operation parameters as input.
 
-Path and query parameters can't have thre *list* or *object* type.
+Path and query parameters can't have the *list* or *object* type.
 
 A microflow parameter that has the *list* or *object* type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. If the parameter is a file document or inherits from a file document, an import mapping is not needed.
 
@@ -101,7 +101,7 @@ This feature was introduced in version 7.14.0.
 
 {{% /alert %}}
 
-An import mapping can be selected for a body parameter. All objects and list parameters besides file documents must have import mapping selected. To select an import mapping, double-click the parameter or click **Edit** in the grid after you select the parameter. When selecting the import mapping, you can also choose the commit behavior of the mapping. You can chose to either commit, commit without events, or not commit imported objects. Not commiting is the default for REST Operation.
+An import mapping can be selected for a body parameter. All objects and list parameters besides file documents must have import mapping selected. To select an import mapping, double-click the parameter or click **Edit** in the grid after you select the parameter. When selecting the import mapping, you can also choose the commit behavior of the mapping. You can choose to either commit, commit without events, or not commit imported objects. Not commiting is the default for REST Operation.
 
 If you select an import mapping that supports both XML and JSON (for instance, a mapping that is based on a message definition), then the operation will be able to handle both XML and JSON requests.
 

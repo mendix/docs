@@ -26,7 +26,7 @@
       Menu structure
     ******************/
     function normalizeId(id) {
-      return id.replace(/[ '"\+\-&]+/g, "-").toLowerCase();
+      return id.replace(/[ '"\+\-&]+/g, "-").replace(/[\(\)]/g, '').toLowerCase();
     }
 
     function getRandom(max) {
@@ -91,22 +91,24 @@
     }
 
     function addNormalLink(title, url) {
+      var cleanUrl = url === null ? null : url.replace(/[\(\)]/g, '');
       return $([
         '<i class="link-icon link-icon-link"></i>',
-        url === null ? '' : '<a href="' + url + '" data-page-title="' + title + '" title="' + title + '">',
-        '<div class="category-title" ' + (url === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
-        url === null ? '' : '</a>'
+        cleanUrl === null ? '' : '<a href="' + cleanUrl + '" data-page-title="' + title + '" title="' + title + '">',
+        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
+        cleanUrl === null ? '' : '</a>'
       ].join(''));
     }
 
     function addExpandLink(id, title, url) {
+      var cleanUrl = url === null ? null : url.replace(/[\(\)]/g, '');
       return $([
         '<a class="expand-link" href="#' + id + '" data-toggle="collapse" aria-expanded="false" aria-controls="' + id + '">',
         '<i class="link-icon link-icon-menu"></i>',
         '</a>',
-        url === null ? '' : '<a title="' + title + '" data-page-title="' + title + '" href="' + url + '">',
-        '<div class="category-title" ' + (url === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
-        url === null ? '' : '</a>',
+        cleanUrl === null ? '' : '<a title="' + title + '" data-page-title="' + title + '" href="' + cleanUrl + '">',
+        '<div class="category-title" ' + (cleanUrl === null ? 'data-page-title="' + title + '"' : '') + '>' + title + '</div>',
+        cleanUrl === null ? '' : '</a>',
       ].join(''));
     }
 

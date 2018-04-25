@@ -8,6 +8,10 @@ tags: ["UI Framework", "Styling", "CSS"]
 
 In this how-to we will go through how to setup the [Mendix UI Framework](https://ux.mendix.com/) and do our first styling changes by just using CSS.
 
+{{% alert type="warning" %}}
+These instructions are for apps which are based on the [Mendix UI Framework](https://ux.mendix.com/). They do not apply to apps which use the [Mendix Atlas UI](https://atlas.mendix.com/).
+{{% /alert %}}
+
 **After completing this how-to you will know:**
 
 *   How to create a new App

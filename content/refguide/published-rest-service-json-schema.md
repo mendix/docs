@@ -9,15 +9,15 @@ Support for *JSON Schema* was added in version 7.14.0.
 
 {{% /alert %}}
 
-The [OpenApi (Swagger) documentation](published-rest-services#interactive-documentation) contains JSON schemas for operation results.
+## 1 Introduction
 
-The JSON schema is generated based on the rules documented here.
+When you add a published rest service, message definitions for operation results are published as JSON schemas and documented as described in the [OpenApi (Swagger) documentation](published-rest-services#interactive-documentation). The JSON schema is generated based on the rules documented here.
 
-# 1 Definitions
+## 2 Definitions
 
 The OpenApi schema contains definitions for body parameters and return types. If a configured import or export mapping is based on a message definition, there will be a definition for it.
 
-## 1.1 Definition for a message
+### 2.1 Definition of a Message
 
 ```json
 "#definition_name#": { 
@@ -30,11 +30,11 @@ The OpenApi schema contains definitions for body parameters and return types. If
 
 By default, the definition name is the name of the message definition that the mapping is based on. You can choose your own definition name by setting the _Public name_ of a mapping.
 
-## 1.2 Attribute
+### 2.2 Attribute
 
 The schema of an attribute depends on the attribute type:
 
-| Attribute type | Attribut schema      |
+| Attribute type | Attribute schema      |
 | ---            | ---                  |
 | Autonumber     | `{ "type": "integer", "format": "int64" }` |
 | Binary         | `{ "type": "string", "format": "binary" }` |
@@ -49,7 +49,7 @@ The schema of an attribute depends on the attribute type:
 | Long           | `{ "type": "integer", "format": "int64" }` |
 | String         | `{ "type": "string" }` |
 
-# 2 JSON schema for an operation request body
+## 3 JSON Schema for an Operation Request Body
 
 When the operation has a body parameter, it has a schema. This schema refers to a definition when you have selected an import mapping based on a message definition.
 
@@ -68,29 +68,29 @@ If the parameter is a list:
 }
 ```
 
-When there is no import mapping, or the mapping is not based on a message definition, the schema is 
+If there is no import mapping, or the mapping is not based on a message definition:
 
 ```json
 { "type": "file" }
 ```
 
-# 3 JSON schema for operation result
+## 4 JSON Schema for an Operation Result
 
-The result of an operation has a schema, too.
+The result of an operation has a schema, too. The format of this depends on the type of result.
 
-When there is no export mapping or the export mapping is not based on a message definition, the schema is 
+When there is no export mapping or the export mapping is not based on a message definition: 
 
 ```json
 { "type": "file" }
 ```
 
-Otherwise, when the microflow returns an object, the schema is
+When the microflow returns an object:
 
 ```json
 { "$ref": "#/definitions/#definition_name#"}
 ```
 
-And when the microflow returns a list, the schema is
+When the microflow returns a list:
 
 ```json
 { 

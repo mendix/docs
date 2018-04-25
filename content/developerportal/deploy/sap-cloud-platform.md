@@ -64,7 +64,7 @@ You will be able to choose a Domain, Organization, and Space which is configured
 
 If you do not choose a Custom database, you will still be able to choose from a range of different Postgres databases. Please ensure that the database you choose is supported by your quota plan for this region and organization.
 
-If you choose a Custom database, you will be asked for the Name and the Plan.
+If you select **Yes** for **Custom database?**, you will be asked for the Name and the Plan.
 
 After the environment has been created successfully, you will see the following page:
 
@@ -112,7 +112,7 @@ This is done from the **Environments** page of the Developer Portal:
 
 6.  Set the size of the memory that the app needs in order to run. This can also be changed later within SAP Cloud Platform.
 
-7.  Set **Development Mode** to Yes if you want the application to run with only prototype security, or completely without security. This is not recommended for acceptance or production environments.
+7.  Set **Development Mode** to Yes if you want the application to run with the Mendix security level of Prototype/demo, or Off (no security). This is not recommended for acceptance or production environments.
 
 8.  Select the database you would like to use. Be aware that even if a specific database is part of the Marketplace it could still be unavailable because of limitations imposed by the quota of your Organization.
 
@@ -122,19 +122,19 @@ This is done from the **Environments** page of the Developer Portal:
 
 9.  Select **File Store Enabled** if your application makes use of FileDocument or Image objects. Other sorts of object do not need File Store to be enabled.
 
-10.  Set a **Subscription Secret** (required). This secret is associated with your Mendix production license. By entering the subscription secret, your application will run in this environment as production. If the subscription secret is invalid, your app will still run, but will restart every 1-2 hours and have a limitation of 6 named users.
+10.  Set a **Subscription Secret** (required). This secret is associated with your Mendix production license. By entering the subscription secret, your application will run in this environment as production. If the subscription secret is invalid, your app will still run, but will restart every 1-2 hours and have a limitation of six named users.
 
 11. Click **Next** to create the environment and finish the setup.
 
     ![](attachments/sap-cloud-platform/09-sap-env-3.png)
 
-An environment is created. With more than one environment it is possible to transport your application between environments (see section [6 Transport App Between Environments](#TransportApp)).
+An environment is created; with more than one environment it is possible to transport your application between environments (see section [6 Transport App Between Environments](#TransportApp)).
 
 ![](attachments/sap-cloud-platform/10-sap-env-tap.png)
 
 ## 4 Create Package from Team Server
 
-At any time, it is possible to create a new deployment package from a committed version of the project. If you are working with Desktop Modeler you will first have to commit the project manually. The Web Modeler will commit versions automatically.
+At any time, you can create a new deployment package from a committed version of the project. If you are working with Desktop Modeler you will first have to commit the project.
 
 1. Go to the **Environments** page of the Developer Portal.
 
@@ -246,9 +246,9 @@ Click **View Recent Log** to see recent events written to the log.
 
 #### 7.1.4 Delete Environment
 
-**Delete Environment** enables you to delete the environment, along with all its resources: including the app.
+**Delete Environment** enables you to delete the environment and, optionally, all its resources: including the app.
 
-You will be asked to confirm that this environment should be removed. You will also be asked whether the resources associated with the environment should also be removed.
+You will be asked to confirm that this environment should be removed. You will also be asked to confirm that the resources associated with the environment should also be removed. Note that the default is NOT to remove the resources.
 
 ![](attachments/sap-cloud-platform/delete-environment.png)
 

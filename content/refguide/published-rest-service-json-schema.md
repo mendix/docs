@@ -11,7 +11,11 @@ Support for *JSON Schema* was added in version 7.14.0.
 
 ## 1 Introduction
 
-When you add a published rest service, message definitions for operation results are published as JSON schemas and documented as described in the [OpenApi (Swagger) documentation](published-rest-services#interactive-documentation). The JSON schema is generated based on the rules documented here.
+When you [publish a rest service](published-rest-services), an [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation) is generated for it. It includes a description of the structure of the messages that the service can receive and return. This structure is described using JSON Schema.
+
+Operations that have an import or export mapping defined on it will generate such a schema, but only for mappings that are based on [message definitions](message-definitions).
+
+The JSON schema is generated based on the rules documented here.
 
 ## 2 Definitions
 

@@ -7,11 +7,13 @@ tags: ["SAP", "SAP Cloud Platform", "on-premises", "Cloud Connector"]
 
 ## 1 Introduction
 
-This document describes how a Mendix application is deployed on the SAP Cloud Platform.
+This document describes how a Mendix application is deployed on the SAP Cloud Platform. It also describes how Cloud Foundry can be set up on SAP from within the Desktop Modeler.
+
+It is recommended that you use the SAP deployment tools in the Developer Portal and follow the instructions in the documentation for deploying to [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform) unless you have specific requirements which that method does not support.
 
 ## 2 SAP Cloud Platform Cloud Foundry
 
-To run a Mendix application on the SAP Cloud Platform, you need a subscription on the SAP Cloud Platform Cloud Foundry. This can be a trial account or a commercial account.
+To run a Mendix application on the SAP Cloud Platform, you need a subscription to the SAP Cloud Platform Cloud Foundry. This can be a trial account or a commercial account.
 
 A Mendix application requires the following services on the SAP Cloud Platform:
 
@@ -24,7 +26,7 @@ In addition to these required services, the following services are optional:
 * Connectivity Service
 * ObjectStore (S3)
 
-When using the [Mendix Developer Portal](/developerportal/deploy/sap-cloud-platform), these services will be automatically instantiated and bound to the application.
+It is recommended that you use the instructions for deploying through the [Mendix Developer Portal](/developerportal/deploy/sap-cloud-platform). If you do this, these services will be automatically instantiated and bound to the application.
 
 ### 2.1 Trial Account
 
@@ -46,7 +48,7 @@ A set of these services will be initiated for each application.
 
 ## 3 Deployment of an Application
 
-To deploy an application on SAP Cloud Platform Cloud Foundry, using the [Mendix Developer Portal](/developerportal/deploy/sap-cloud-platform) is recommended.
+To deploy an application on SAP Cloud Platform Cloud Foundry, the [Mendix Developer Portal](/developerportal/deploy/sap-cloud-platform) is recommended.
 
 ### 3.1 Command-Line Deployment
 
@@ -118,14 +120,16 @@ To bind your services to SAP Cloud Platform Cloud Foundry, follow these steps:
 
 8. Enter an **Instance Name** and click **Finish**.
 
-Your application is now set up with a minimum configuration to run your application. Setting up other services follows a similar process. For information about configuring these services, consult the links in [4 Related Content](#RC).
+Your application is now set up with the minimum configuration needed to run your application. Follow a similar process to set up other services. For information about configuring these services, consult the links in section [4 Related Content](#RC).
 
 #### 3.2.3 Deploying Your App to Cloud Foundry<a name="323"></a>
 
 To deploy your application using the Desktop Modeler-native Cloud Foundry integration, follow these steps:
 
-1. Open the Desktop Modeler.
-2. Click the drop-down menu for the **Run** option in the toolbar.
+1.  Open the Desktop Modeler.
+
+2.  Click the drop-down menu for the **Run** option in the toolbar.
+
 3.  Click **Run on Cloud Foundry**. Your app will now be deployed to Cloud Foundry.
 
     ![](attachments/how-to-deploy-a-mendix-app-to-sap-cloud-platform/10-sap-run-in-cf.png)

@@ -11,7 +11,7 @@ This reference guide describes the actions and domain model of the SAP OData Con
 
 The SAP OData Connector is an OData connector written specifically to integrate with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors. The SAP OData Connector can be used for all SAP back-end systems that have OData enabled, both in the cloud and on-premises. For ECC, SAP Gateway will be used to expose the traditional BAPI interface as an OData service.
 
-When running a Mendix application on SAP Cloud Platform, the SAP Cloud Connector will automatically be utilized to gain access to your SAP back-end system. For more information, see the [SAP Cloud Connector](sap-cloud-connector) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
+When running the Mendix application in SAP Cloud Platform, you can choose to use the SAP Cloud Platform cloud connector to gain access to your on-premises SAP instance. If you choose to use the SAP Cloud Platform cloud connector, this will invoke the SAP Connectivity Service in the SAP Cloud Platform to find a route to your private SAP OData service. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the SAP OData Connector will route requests to the public OData service. For more information, see the [SAP Cloud Connector](sap-cloud-connector) documentation and the [SAP OData Connector](https://appstore.home.mendix.com/link/app/74525/Mendix/SAP-OData-Connector) in the Mendix App Store.
 
 ![](attachments/sap-odata-connector/appstore-sapodata.png)
 
@@ -55,8 +55,8 @@ Most of the actions of the SAP OData Connector make use of a domain model repres
 
 There are two ways to create a domain model to support your app:
 
-
 * Download pre-built SAP Fiori Cloud data models from the Mendix App Store. These are available for frequently used SAP services and can be found in the App Store under Connectors > SAP. For more details, see [SAP Data Models](sap-data-models).
+
 * Create a data model by inspecting the service metadata. The response from the service can be used in the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/) to generate a domain model which can be imported into your app. Instructions for doing this are in [How to Use the SAP OData Model Creator](/howto/sap/use-sap-odata-model-creator).
 
 {{% alert type="info" %}}

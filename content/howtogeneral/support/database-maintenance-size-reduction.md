@@ -24,4 +24,4 @@ You can create and restore a backup in the Mendix Cloud Portal on the Deploy -> 
 
 ## 3 Conclusion
 
-To physically reclaim (currently unused) space that was created by deleting records from the database you can execute a backup and restore of the database in the Mendix Cloud Portal. However if you expect the database to grow back to (nearly) its previous size in the future, the benefit of this action might be limited, so keep that in mind.
+To physically reclaim (currently unused) space that was created by deleting records from the database you can execute a backup and restore of the database in the Mendix Cloud Portal. However, if you expect the database to grow back to (nearly) its previous size in the future, the benefit of this action might be limited, so keep that in mind.

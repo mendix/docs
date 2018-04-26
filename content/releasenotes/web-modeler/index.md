@@ -10,6 +10,16 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ## 2018
 
+### April 25th, 2018
+#### Improvements
+
+* You can now move activities within a microflow, while previously an activity was unmovable once positioned. This makes microflows easier and faster to manage. The improvement includes all microflow activities, exclusive and inheritance splits, merges and loops, if they have only one incoming or one outgoing connection. 
+
+#### Fixes
+
+* We fixed the issue when one of steps was skipped during the Introduction Tour.
+
+
 ### April 18th, 2018
 
 #### Improvements

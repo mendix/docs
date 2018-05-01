@@ -15,10 +15,10 @@ These release notes are for the [beta](../beta-features/index) version of the We
 #### New features
 
 This release contains Collaborative Modeling features which will benefit collaboration within extended development teams, consisting of (e.g.) business developers, professional developers, product owners, key users, UX designers and other stakeholders.
-* Using the **Buzz** panel, you can now leave comments on pages, domain models, microflows and navigation layouts. You can also respond to comments made by other team members.
+* Using the app **Buzz**, you can now leave comments on pages, domain models, microflows and navigation layouts. You can also respond to comments made by other team members.
 * At any point in time you can mention a team member which will trigger an email notification to that user containing your comment and a link to access the document you commented on in the Web Modeler.
-* All conversations are visible on the Buzz section of the Platform Portal. The conversation will contain a link to directly access the page / domain model / microflow / navigation layout that it concerns in the Web Modeler.
-* You can now create feedback items directly from the Buzz window for any topics that should be part of next sprint’s grooming by choosing **Create Feedback Item** from the top menu inside a Buzz conversation. This generates a feedback item in the Platform Portal tied directly to the app component in question, which product owners can then follow-up.
+* All conversations are visible on the **Buzz** section of the Developer Portal. The conversation will contain a link to access the page / domain model / microflow / navigation layout directly in the Web Modeler.
+* You can now create feedback items directly from the app **Buzz** for any topics that should be part of next sprint’s grooming by choosing **Create Feedback Item** from the top menu inside a Buzz conversation. This generates a feedback item in the Developer Portal tied directly to the app component in question, which product owners can then follow-up.
 * When multiple users open the app in the Web Modeler, one user is in control while others can still view the entire app model and contribute to any running Buzz conversations, so that they are fully part of the development process.
 * As a view-only user you can see the latest changes performed by others by pressing **Refresh** or take control yourself with 1 click by pressing **Take Over**.
 

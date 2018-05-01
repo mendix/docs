@@ -112,6 +112,5 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 * [Manage Your Application Requirements with Mendix](/developerportal/howto/managing-your-application-requirements-with-mendix)
 * [Define Access Rules Using XPath](define-access-rules-using-xpath)
 * [Scout and Windows 10 Workaround](scout-and-windows-10-workaround)
-* [Generate a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)
 * [Create Your First Two Overview and Detail Pages](create-your-first-two-overview-and-detail-pages)
 * [Set Up Data Validation](setting-up-data-validation)

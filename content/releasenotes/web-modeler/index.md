@@ -14,7 +14,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 #### New features
 
-This release contains Collaborative Modeling features which will benefit collaboration within extended development teams, consisting of (e.g.) business developers, professional developers, product owners, key users, UX designers and other stakeholders.
+This release contains Collaborative Modeling features which will benefit collaboration within extended development teams, consisting of, for example, business developers, professional developers, product owners, key users, UX designers, and other stakeholders.
 * Using the app **Buzz**, you can now leave comments on pages, domain models, microflows and navigation layouts. You can also respond to comments made by other team members.
 * At any point in time you can mention a team member which will trigger an email notification to that user containing your comment and a link to access the document you commented on in the Web Modeler.
 * All conversations are visible on the **Buzz** section of the Developer Portal. The conversation will contain a link to access the page / domain model / microflow / navigation layout directly in the Web Modeler.

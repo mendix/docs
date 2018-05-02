@@ -154,6 +154,17 @@ For more details on migration, see [Uniqueness Constraint Migration](uniqueness-
 
 Falling back to the **Runtime** option will remove the unique constraints from the database, and uniqueness rules will not be checked at the database level anymore. Hence, data accuracy cannnot be guaranteed at the highest level, especially in the case of high concurrency transactions.
 
+### 3.13 Use deprecated web service client
+
+{{% alert type="info" %}}
+
+This setting was added in version 7.15
+
+{{% /alert %}}
+
+We have reimplemented web service client used by [Consumed Web Services](consumed-web-services) and deprecated the previous implementation.
+All existing projects that upgrade to 7.15 will have this setting set to "Yes" and efectively keep the old behavior. Any new projects will have this setting set to "No" and will start using the new implementation.
+
 ## 4 Modeler
 
 These settings determine the behavior of the Modeler for this project. The settings apply to everyone that is working on this project.

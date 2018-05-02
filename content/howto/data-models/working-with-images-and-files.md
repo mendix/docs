@@ -75,5 +75,4 @@ Before starting this how-to, make sure you have completed the following prerequi
 *   [How to Find the Root Cause of Runtime Errors](../monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors)
 *   [How to Manage Sprints and Stories](/developerportal/howto/managing-your-application-requirements-with-mendix)
 *   [How to Perform the Scout and Windows 10 Workaround](../ux/perform-scout-and-windows-10-workaround)
-*   [How to Generate a Personal SSH2 Key Pair](../security/generating-a-personal-ssh2-key-pair)
 

@@ -7,4 +7,5 @@ description: "Presents an overview of documentation on microflows and nanoflows.
 
  * [Microflows](microflows)
  * [Nanoflows](nanoflows)
+ * [Rules](rules)
  * [Common Elements](common-elements)

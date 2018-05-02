@@ -24,6 +24,11 @@ Before starting with this how-to, make sure you have the following prerequisites
 * An application under test (AUT)
 * Selenium hub (for more information on the Selenium options, see [ATS Deployment](/ats/general/deployment))
 
+{{% alert type="info" %}}
+
+You add users to ATS by inviting them to your Mendix app project. For more information on the user roles, see [Different User Roles](../../general/introduction#roles).
+{{% /alert %}}
+
 ## 3 Configuring Your App
 
 When you log in to ATS, you see the **My Apps** page. An app is a folder in which all the data related to a specific application is saved and managed. You must click your app to gain access to the **test settings**.

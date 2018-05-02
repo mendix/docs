@@ -285,5 +285,4 @@ An XPath constraint can be used to constrain the set of objects to which the acc
 
 ## 7 Related Content
 
-* [Generate a Personal SSH2 Key Pair](generating-a-personal-ssh2-key-pair)
 * [Set Up Anonymous User Security](set-up-anonymous-user-security)

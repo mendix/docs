@@ -90,15 +90,25 @@ If your review has been declined, you can write a new one and submit it.
 You can only earn a pair of socks for your first Mendix user review. Subsequent reviews will still earn you Mendix points.
 {{% /alert %}}
 
-### 3.3 Featured Achievement
+### 3.3 Mission
+
+Your missions are comprised of activities you can complete on the Mendix Platform to gain various Mendix badges. Once you complete a mission, you get a **Mission** badge.
+
+The order of activities is suggested for your mission, but you can complete these activities in any order you like. The activities you complete and badges you gain are pushed to the top of the **Mission** card, so you can see what you still have to do.
+
+![](attachments/how-to-set-up-your-profile/mission.png)
+
+The badges are color-coded based on their rarity, from green (least rare), to blue, purple, and orange (most rare). 
+
+The badges help you keep track of your progress on the Mendix Platform. Gaining badges to complete your mission is a great way to stay engaged with the Mendix community!
+
+### 3.4 Featured Achievement
 
 There is also a featured achievement on your profile's dashboard:
 
 ![](attachments/how-to-set-up-your-profile/featured-achievement.png)
 
-The featured achievement presents a [multi-level badge](https://developer.mendixcloud.com/link/badges) you can strive to win by working on the Mendix Platform and completing certain tasks. The header will always feature the next badge level for you to work towards. The badges are color-coded based on their rarity, from green (least rare), to blue, purple, and orange (most rare).
-
-The badges help you keep track of your progress on the Mendix Platform and what you are learning to do. And working towards gaining the badges in the featured achievement is a great way to stay engaged with the Mendix community!
+The featured achievement presents a [multi-level badge](https://developer.mendixcloud.com/link/badges) you can strive to win by working on the Mendix Platform and completing certain tasks. The header will always feature the next badge level for you to work towards.
 
 ## <a name="publicprofile"></a>4 Editing Your Public Profile
 

@@ -5,63 +5,67 @@ description: "Describes the options to setup a local selenium solution."
 tags: ["ATS", "testing", "Selenium hub"]
 ---
 
-# Setting up a local Selenium Solution
+# Setting Up a Local Selenium Solution
+## 1 Introduction
 
-This How-to describes a few possible local Selenium solutions and contains links to documentation that contain a small example on how to set up each one. Before reading these documents keep the following points in mind:
+This how-to describes a few possible local Selenium solutions and contains links to the documentation with simple examples on how to set up each solution. Before reading these documents, pay attention to the following:
 
-- These solutions are all under heavy development and new versions are released on a regular base. The documentation contains examples and we recommend using the official documentation.
+- These solutions are all under heavy development, and new versions are released on a regular base. The documentation contains examples and we recommend using the official documentation.
 - ATS 2 is running in the Mendix cloud. When running a local Selenium solution, ATS should be able to communicate with the machine on port 4444. In most cases, this means your network department has to arrange something to make this work.
-- **Security warning!!!:** By default, none of the described solutions use SSL or any form of authentication. You might, for example, want to use a web server as a frontend to make SSL and authentication possible. This is not covered in the How-to's and it's the responsibility for the party that installs the Selenium solution.
+- **Security warning!!!** By default, none of the described solutions use SSL or any form of authentication. You might, for example, want to use a web server as a frontend to make SSL and authentication possible. This is not covered in the How-to's and it's the responsibility of the party that installs the Selenium solution.
 - Docker Selenium and Selenoid are two opensource projects based on Selenium that we cover in this How-to. There are many more, but we limit us to these two. 
-- Support for open source software could be limited or slower, compared to SaaS Selenium providers.
+- Support for opensource software could be limited or slower, compared to SaaS Selenium providers.
 
 {{% alert type="info" %}}
- Note: Mendix does not deliver support for local Selenium solutions. 
+Mendix does not deliver support for local Selenium solutions. 
   {{% /alert %}}
 
-## 1. Setup Local Selenium hub (SeleniumHQ) ##
+## 2 Setting Up Local Selenium Hub (SeleniumHQ) ##
 
-### Official website
+### 2.1 Official Website
 The official website of the Selenium hub (SeleniumHQ) is [https://www.seleniumhq.org/](https://www.seleniumhq.org/)
 
-### How to set up the selenium solution
+### 2.2 How to Set Up the Selenium Solution
 The following document describes an example of how to setup this selenium solution: [How to setup a Local Selenium hub](setup-local-selenium-hub-2)
 
-### Characteristics of the selenium solution
-- Live-view only on the machine where Selenium is installed
+### 2.3 Characteristics of the Selenium Solution
+Characteristics of the Selenium solution are the following:
+- Live-view possible only on the machine where Selenium is installed
 - No (out-of-the-box) video recording
 
-## 2. Setup Local Docker Selenium hub (Docker Selenium) ##
+## 3 Setting Up Local Docker Selenium Hub (Docker Selenium) ##
 
-### Official website
+### 3.1 Official Website
 The official GitHub page of the Docker Selenium hub (Docker Selenium) is [https://github.com/SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium)
 
-### How to set up the selenium solution
-The following document describes an example of how to setup this selenium solution: [How to setup a Local Docker Selenium hub](setup-local-docker-selenium-hub-2)
+### 3.2 How to Set up the Selenium Solution
+The following document describes an example of how to setup this Selenium solution: [How to setup a Local Docker Selenium hub](setup-local-docker-selenium-hub-2)
 
-### Characteristics of the selenium solution
+### 3.3 Characteristics of the Selenium Solution
+Characteristics of the Selenium solution are the following:
 - Browsers run in Linux containers
 - Live-view possible with debug images and VNC (viewer)
 - No (out-of-the-box) video recording
 
-## 3. Setup Local Selenoid hub (Aerokube) ##
+## 4 Setting Up Local Selenoid Hub (Aerokube) ##
 
-### Official website
+### 4.1 Official Website
 The official website of the Selenoid hub (Aerokude) is [http://aerokube.com/](http://aerokube.com/)
 
-### How to set up the selenium solution
-The following document describes an example of how to setup this selenium solution: [How to setup Local Selenoid hub](setup-local-selenoid-hub-2)
+### 4.2 How to Set Up the Selenium Solution
+The following document describes an example of how to setup this Selenium solution: [How to setup Local Selenoid hub](setup-local-selenoid-hub-2)
 
-### Characteristics of the selenium solution
-- Selenoid is a powerful Go implementation of original Selenium hub code. It is using Docker to launch browsers.
-- While ATS works fine with Selenoid (since it's based on the official Selenium code) and it even supports parallel testing on the Selenoid hub we can't guarantee that ATS supports it in the future.
+### 4.3 Characteristics of the Selenium Solution
+Characteristics of the Selenium solution are the following:
+- Selenoid is a powerful Go implementation of the original Selenium hub code. It is using Docker to launch browsers
+- While ATS works fine with Selenoid (since it's based on the official Selenium code) and it even supports parallel testing on the Selenoid hub we can't guarantee that ATS supports it in the future
 - Browsers run in Linux containers
 - Live-view with a separate to be installed portal. Works with debugging browser images and VNC.
 - It has an out-of-the-box video recording option
 
-## 4. Why you would prefer a SaaS-solution as Selenium solution (like Browserstack or Saucelabs) ##
+## 5 Why You Would Prefer a SaaS-solution as Selenium Solution (Like Browserstack or Saucelabs) ##
 
-The following points describe why a SaaS-solution is preferred above a local Selenium solution:
+The following reasons describe why a SaaS-solution is preferred above a local Selenium solution:
 - Active support team
 - Secures your connections
 - Out-of-the-box video recording and live-view in your personal portal

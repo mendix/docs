@@ -88,4 +88,4 @@ You can also add the **Assert not false** action with the **Assert value** set t
 
 ## 4 Next Up
 
-You now learned how to create negative test case. The next how-to is [How to Schedule Test Cases/Test Suites](schedule-testcase-testsuite-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.
+You now learned how to create negative test case. The next how-to is [How to create extracted actions](create-extracted-actions-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.

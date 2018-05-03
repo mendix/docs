@@ -85,17 +85,7 @@ See [Opening Pages](opening-pages) for more details.
 
 ## Formatting Properties
 
-### Decimal Precision (Only for Numeric Attributes)
-
-The precision of a value describes the number of digits that are used to express that value. This property indicates the number of decimal places (the number of digits following the point).
-
-_Default value:_ 2
-
-### Group Digits (Only for Numeric Attributes)
-
-For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property determines whether or not such a delimiter is used. Which delimiter is used depends on the language of the end user.
-
-_Default value:_ No
+{{% snippet file="refguide/Numeric+Formatting+Properties.md" %}}
 
 ### Date Format (Only for Attributes of Type Date and Time)
 

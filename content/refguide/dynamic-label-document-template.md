@@ -27,7 +27,7 @@ The contents MUST be valid XHTML to render without errors.
 
 _Default value:_ False
 
-### Decimal precision (only for numeric attributes)
+### Decimal precision (only for decimal attributes)
 
 The precision of a value is defined by the number of digits that is used to express that value. This property indicates the number of decimal places (the number of digits following the decimal point) that will be rendered in the widget.
 

@@ -27,7 +27,7 @@ A column connected to an attribute of type enumeration can show its contexts as 
 | Text | Show the caption text of the enumeration. |
 | Image | Show the image of the enumeration value. |
 
-### Decimal precision (only for numeric attributes)
+### Decimal precision (only for decimal attributes)
 
 The precision of a value is defined the number of digits that is used to express that value. This property indicates the number of decimal places (the number of digits following the decimal point).
 

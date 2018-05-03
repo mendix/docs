@@ -19,7 +19,7 @@ A column can show its contexts as text (default) or as image.
 | Text | Show the contents of the connected attribute as a text. |
 | Image | Show the image of the enumeration value. |
 
-### Decimal precision (only for numeric attributes)
+### Decimal precision (only for decimal attributes)
 
 The precision of a value is defined by the number of digits that is used to express that value. This property indicates the number of decimal places (the number of digits following the decimal point).
 

@@ -17,12 +17,12 @@ The **Browser Information** tab provides some information regarding the browser,
 
 A browser recording records the following types of actions:
 
-* Browser Javascript console messages
+* Browser JavaScript console messages
 * Client–server communication
 * Page changes
 * User actions
 
-For all types except console messages, the detailed view displays a page holder with the **Tree** and **Actions** tabs. The tree view gives oversight on the duration of the action and subsequent actions. Similar to the runtime recording results, it is possible to drill down in the tree by double-clicking on a node.
+For all types except console messages, the detailed view displays a page holder with the **Tree** and **Actions** tabs. The tree view gives oversight on the duration of the action and subsequent actions. Just like the runtime recording results, it is possible to drill down in the tree by double-clicking on a node.
 
 ![](attachments/Performance_browser_recording_ActionsTree.png)
 
@@ -34,7 +34,7 @@ For all types except client–server communication, the detailed view has a **De
 
 ## 3 Browser JavaScript Console Messages
 
-Recording the browser's JavaScript console messages can be enabled from the environment settings. The exception to this are errors thrown by JavaScript. These are recorded as console error messages at all times.
+Recording the browser's JavaScript console messages can be enabled from the environment settings. The exception to this are errors thrown by JavaScript. These are always recorded as console error.
 
 ![](attachments/Performance_browser_recording_ConsoleMessage.png)
 

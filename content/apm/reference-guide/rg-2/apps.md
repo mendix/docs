@@ -24,7 +24,7 @@ APM has several tour guides and videos to help navigate through APM to perform c
 ![](attachments/Documentation.png)
 
 {{% alert type="info" %}}
-By default, APM dislays the tour guides and videos upon login for new users.
+By default, APM displays the tour guides and videos upon login for new users.
 {{% /alert %}}
 
 ![](attachments/Tour.png)

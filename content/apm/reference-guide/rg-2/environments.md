@@ -19,7 +19,7 @@ When an environment is marked as red instead of green, that means the APM agent 
 
 ## 2 Adding a New Environment
 
-In order to add a new environment, click **New environment** in the **Environments** overview.
+To add a new environment, click **New environment** in the **Environments** overview.
 
 ![](attachments/new_environment.png)
 

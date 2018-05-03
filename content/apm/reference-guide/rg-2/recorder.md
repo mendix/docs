@@ -19,7 +19,7 @@ It is possible to record an individual user's browser without recording the runt
 
 ## 3 Recorded Results
 
-The results of a recording are found in the **Recorded sessions** overview. This tab displays the recordings of the runtime(s) seperate from the browser recordings. 
+The results of a recording are found in the **Recorded sessions** overview. This tab displays the recordings of the runtime(s) separate from the browser recordings. 
 
 When you click a recording of the **Browser** type, the [browser recording results](browser-recorder-results) opens. When you click a recording of the **Server** type, the [server recording results](runtime-recorder-results) opens.
 

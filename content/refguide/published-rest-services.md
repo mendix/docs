@@ -17,6 +17,8 @@ Add a [published REST service](published-rest-service) to expose your entities a
 
 For an overview of the available options when you add a published  service, see [Published REST Service](published-rest-service).
 
+To publish a microflow as a REST operation, right-click anywhere in the whitespace of the microflow and select ["Publish as REST service operation..."](publish-microflow-as-rest-operation).
+
 ## <a name="authorization"></a>3 Authentication
 
 Published REST services are secured with basic authentication. This is automatically applied when you set the [security level](project-security) of your app to **Prototype / demo**  or **Production**. 

@@ -4,6 +4,19 @@ title: "Platform Portal"
 
 ## 2018
 
+### May 5th, 2018
+
+#### Improvements
+
+* It’s now possible to add a comment as an optional parameter to the backup while generating one via REST API.
+* It’s now possible to see the Mendix Runtime version in response to "Retrieve Environment Package" API call.
+
+#### Fixes
+
+* We fixed an issue which prevented our Mendix Cloud v4 users to upload/restore relatively big backups larger than ~30GBs to their environments. It has been tested with the archives ~ 90GBs of size on Mendix Cloud v4.
+* We addressed and fixed an issue that caused Mendix Cloud v4 users in Asia Pacific time zone to get wrong timestamps when they download daily logs.
+
+
 ### April 9th, 2018
 
 #### Improvements

@@ -5,7 +5,7 @@ description: "Describes the options to setup a local selenium solution."
 tags: ["ATS", "testing", "Selenium hub"]
 ---
 
-# Setting Up a Local Selenium Solution
+# Set Up a Local Selenium Solution
 ## 1 Introduction
 
 This how-to describes a few possible local Selenium solutions and contains links to the documentation with simple examples on how to set up each solution. Before reading these documents, pay attention to the following:
@@ -25,7 +25,7 @@ Mendix does not deliver support for local Selenium solutions.
 ### 2.1 Official Website
 The official website of the Selenium hub (SeleniumHQ) is [https://www.seleniumhq.org/](https://www.seleniumhq.org/)
 
-### 2.2 How to Set Up the Selenium Solution
+### 2.2 Setting Up the Selenium Solution
 The following document describes an example of how to setup this selenium solution: [How to setup a Local Selenium hub](setup-local-selenium-hub-2)
 
 ### 2.3 Characteristics of the Selenium Solution
@@ -38,7 +38,7 @@ Characteristics of the Selenium solution are the following:
 ### 3.1 Official Website
 The official GitHub page of the Docker Selenium hub (Docker Selenium) is [https://github.com/SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium)
 
-### 3.2 How to Set up the Selenium Solution
+### 3.2 Setting up the Selenium Solution
 The following document describes an example of how to setup this Selenium solution: [How to setup a Local Docker Selenium hub](setup-local-docker-selenium-hub-2)
 
 ### 3.3 Characteristics of the Selenium Solution
@@ -52,7 +52,7 @@ Characteristics of the Selenium solution are the following:
 ### 4.1 Official Website
 The official website of the Selenoid hub (Aerokude) is [http://aerokube.com/](http://aerokube.com/)
 
-### 4.2 How to Set Up the Selenium Solution
+### 4.2 Setting Up the Selenium Solution
 The following document describes an example of how to setup this Selenium solution: [How to setup Local Selenoid hub](setup-local-selenoid-hub-2)
 
 ### 4.3 Characteristics of the Selenium Solution

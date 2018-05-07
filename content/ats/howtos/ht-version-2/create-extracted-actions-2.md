@@ -1,5 +1,5 @@
 ---
-title: "Create maintainable test cases"
+title: "Create Maintainable Test Cases"
 parent: "ht-version-2"
 description: "Describes how to create maintainable test cases in ATS."
 tags: ["ATS", "testing", "maintainability"]
@@ -18,8 +18,8 @@ You often reuse some of the same test steps in your test cases. For example, to 
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-*  Read [How to Get Started](getting-started-2)
-*  Read [How to create a test case](create-a-test-case-2)
+* Read [How to Get Started](getting-started-2)
+* Read [How to Create a Test Case](create-a-test-case-2)
 
 ## 3 Extract actions
 
@@ -29,7 +29,7 @@ You can create an extracted action for all test steps that you use in more than 
 
 The following steps describe how to extract actions. In this example, we create an extracted action for the **Open Mendix Application** and **Login** actions:
 
-1. Create a test case. Next, enter a name and a description.
+1. Create a test case and enter a name and a description.
 2. Add the **Open Mendix Application** and **Login** actions.
 3. Set the **URL** input parameter of the **Open Mendix Application** action to **Environment URL**.
 4. Enter the needed values in the **Username** and **Password** input parameters of the **Login** action. 
@@ -38,11 +38,11 @@ The following steps describe how to extract actions. In this example, we create 
 
  ![](attachments/create-extracted-actions-2/extract-actions.png)
 
- Clicking **extract action** opens the **Action - Set Details** dialog box:
+   Clicking **extract action** opens the **Action - Set Details** dialog box:
 
  ![](attachments/create-extracted-actions-2/action-set-details.png)
 
-7. Enter a name in the **Name** field. (for example, *Open application and log in as employee*). It is advised to give your test step a clear name, for example, describe what it does.
+7. Enter a name in the **Name** field. (For example, *Open application and log in as employee*). It is advised to give your test step a clear name, describing what it does.
 8. Enter a description in the **Description** field. (for example, *This action opens the application, based on the environment URL, and logs into the application as employee*). It is advised to give your test step a clear name, for example, describe what it does.
 9. Click **Close**.
 
@@ -50,32 +50,32 @@ The following steps describe how to extract actions. In this example, we create 
 
  You now created an extracted action. To view the test steps in the extracted action follow these steps:
 
- 1. In your test case click the **Drop-down** menu of the extracted action.
- 2. Click **Open**.
+1. In your test case click the **Drop-down** menu of the extracted action.
+2. Click **Open**.
 
  ![](attachments/create-extracted-actions-2/click-open.png)
 
- Clicking **Open** opens the **Action Details** page. On this page you see the test steps in the action. A test case only refers to an action, so if you change a value inside an action that change is noticed in all your test cases that use that action.
+Clicking **Open** opens the **Action Details** page. On this page you see the test steps in the action. A test case only refers to an action, so if you change a value inside an action that change is noticed in all your test cases that use that action.
 
- You can also open your extracted action from the repository, as this action is now added to the repository:
+You can also open your extracted action from the repository, as this action is now added to the repository:
 
  ![](attachments/create-extracted-actions-2/open-app-and-login-action.png)
 
- To use this custom action in other test cases follow these steps:
+To use this custom action in other test cases follow these steps:
 
- 1. Create a new test case and give it a name and description.
- 2. Click **Create step manually**.
+1. Create a new test case and give it a name and description.
+2. Click **Create step manually**.
  
  The folder with your application name contains all custom and extracted actions.
  
- 3. Select the action you want to add as test step to your test case.
- 4. Click **Select**
+3. Select the action you want to add as test step to your test case.
+4. Click **Select**
 
   ![](attachments/create-extracted-actions-2/add-extracted-action.png)
 
-  You have now added your extracted action to another test case. So, if the password changes you only have to change it within the action and not within each test case. 
+ You have now added your extracted action to another test case. So, if the password changes you only have to change it within the action and not within each test case. 
   
-  ### 3.2 Create an extracted action by creating a new action 
+### 3.2 Create an extracted action by creating a new action 
   
 The following steps describe how to create an extracted action for deleting an expense in the company expenses app:
 
@@ -99,42 +99,42 @@ Clicking **New Action** opens the **Create new** dialog box:
 
 4. Enter a name in the **Name** field. (for example, *Find and delete an expense based on the description*). Using a clear and concise naming structure is advised.    
 5. Enter a description in the **Description** field (for example, *This action deletes an expense based on the description. The description can be entered in the input parameter **Value**.*). Giving each test case a description of what it does is advised.
-6. Click **Create**
+6. Click **Create**.
 
-![](attachments/create-extracted-actions-2/click-create-of-action.png)
+   ![](attachments/create-extracted-actions-2/click-create-of-action.png)
 
-Clicking create opens the **Actions Details** Page.
+7. Click create to open the **Actions Details** Page.
 
-![](attachments/create-extracted-actions-2/action-details-page.png)
+   ![](attachments/create-extracted-actions-2/action-details-page.png)
 
-7. Record the test steps needed to delete an expense, these are the **Click DataGrid row**, **Click Widget** and **Confirm Dialog** actions. You can also add the actions manually and enter the needed input parameters yourself.
+8. Record the test steps needed to delete an expense, these are the **Click DataGrid row**, **Click Widget** and **Confirm Dialog** actions. You can also add the actions manually and enter the needed input parameters yourself.
 
-![](attachments/create-extracted-actions-2/added-steps.png)
+   ![](attachments/create-extracted-actions-2/added-steps.png)
 
-8. Click the **Settings** tab.
-9. Click **New**.
+9. Click the **Settings** tab.
+10. Click **New**.
 
-![](attachments/create-extracted-actions-2/create-new-input-parameter.png)
+   ![](attachments/create-extracted-actions-2/create-new-input-parameter.png)
 
-Clicking **New** opens the **Edit Input Parameter** dialog box:
+   Clicking **New** opens the **Edit Input Parameter** dialog box:
 
-![](attachments/create-extracted-actions-2/edit-input-parameter-dialog.png)
+   ![](attachments/create-extracted-actions-2/edit-input-parameter-dialog.png)
 
-10. Enter **Column Value** in the **Name** field. When defining action parameter names, always use the ATS [naming conventions](../../refguide/rg-version-1/best-practices).
-11. Enter a description in the **Description** field. (for example, *Enter the value of the description of the expense to be deleted.*). Giving each input parameter a description of what to enter in the input parameter is advised.
-12. Click **Save**.
+11. Enter **Column Value** in the **Name** field. When defining action parameter names, always use the ATS [naming conventions](../../refguide/rg-version-1/best-practices).
+12. Enter a description in the **Description** field. (for example, *Enter the value of the description of the expense to be deleted.*). Giving each input parameter a description of what to enter in the input parameter is advised.
+13. Click **Save**.
 
-![](attachments/create-extracted-actions-2/save-input-parameter.png)
+   ![](attachments/create-extracted-actions-2/save-input-parameter.png)
 
-Clicking **Save** adds the input parameter:
+   Clicking **Save** adds the input parameter:
 
-![](attachments/create-extracted-actions-2/added-input-parameter.png)
+   ![](attachments/create-extracted-actions-2/added-input-parameter.png)
 
-You now created a new input parameter. The next step is to link the input parameter to the correct test step. 
+   You now created a new input parameter. The next step is to link the input parameter to the correct test step. 
 
-13. Click the **Test steps** tab.
-14. Open the **Click DatGrid Row** action.
-15. Change the input parameter to **Column Value** below **Input values**.
+14. Click the **Test steps** tab.
+15. Open the **Click DatGrid Row** action.
+16. Change the input parameter to **Column Value** below **Input values**.
 
 ![](attachments/create-extracted-actions-2/change-input-parameter.png)
 
@@ -146,7 +146,4 @@ Congratulations, you created a reusable extracted action to delete a new expense
 
 ## 4 Next Up
 
-You now learned how to create extracted actions to make your test cases more maintainable. The next how-to is [How to Schedule Test Cases/Test Suites](schedule-testcase-testsuite-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.
-
-
-
+The next how-to is [How to Schedule Test Cases/Test Suites](schedule-testcase-testsuite-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.

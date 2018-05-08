@@ -4,6 +4,20 @@ title: "Platform Portal"
 
 ## 2018
 
+### May 8th
+
+#### Improvements
+- You can now assign colors to your labels on the Stories page: Mendix Blue, Firetruck Red, Goldfish Orange, and Tulip Green.
+- The Story Details page now has a new tab that shows the revisions related to the story.
+
+#### Fixes
+- On the Feedback Details page, the "Move to app" drop-down is visible again.
+- Special characters like "&" are now displayed correctly in the subject of Buzz Notification emails.
+- The green call-to-action button in Buzz notification emails will now also work in Outlook for Windows (ticket #63452).
+- If there's a lot of activity in a Buzz thread, each notification email now displays the correct thread history, instead of each email containing the same comments.
+- Fixed two documentation links.
+
+
 ### May 5th, 2018
 
 #### Improvements

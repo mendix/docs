@@ -24,11 +24,11 @@ This release contains Collaborative Modeling features which will benefit collabo
 * As a view-only user you can see the latest changes performed by others by pressing **Refresh** or take control yourself with 1 click by pressing **Take Over**.
 
 In summary, by connecting communication directly to the application model, the Mendix Web Modeler paves the way for development teams to remain engaged and in the loop throughout the development lifecycle. This allows each team member to contribute to a successful result.
-For more information on these features please read the release blog for the Mendix 7.14 release.
+For more information on these features please read the [release blog for the Mendix 7.14 release](https://www.mendix.com/blog/mendix-7-14-the-power-of-teamwork/).
 
 #### Improvements
 
-* We added support for the release of [Desktop Modeler 7.14.0](../desktop-modeler/7.14). The minimum supported version remains Desktop Modeler 7.11.0.
+* We added support for the release of [Desktop Modeler 7.14.1](../desktop-modeler/7.14). The minimum supported version remains Desktop Modeler 7.11.0.
 
 ### April 25th, 2018
 

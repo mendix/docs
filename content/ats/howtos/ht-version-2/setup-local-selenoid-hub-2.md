@@ -1,30 +1,33 @@
 ---
-title: "Setup a local Selenoid hub"
+title: "Set Up a Local Selenoid Hub"
 parent: "setup-local-selenium-index-2"
 description: "Describes how to set up a local selenoid hub."
 tags: ["ATS", "testing", "Selenium hub"]
 ---
 
-# How to Setup local Selenoid hub #
+# Set Up a Local Selenoid Hub #
+## 1 Introduction ##
 
-In this How-to, we show you an example of a simple setup of a Selenoid hub with a Chrome and Firefox node on a Linux machine with docker. This works on a Windows machine with docker as well, but the commands and configuration could be different. For the official project go to: [https://github.com/aerokube/selenoid](https://github.com/aerokube/selenoid). For the official documentation go to: [http://aerokube.com/selenoid/latest/](http://aerokube.com/selenoid/latest/).
+This how-to shows you an example of a simple setup of a Selenoid hub with a Chrome and Firefox node on a Linux machine with docker. This works on a Windows machine with docker as well, but the commands and configuration could be different. For the official project go to: [https://github.com/aerokube/selenoid](https://github.com/aerokube/selenoid). For the official documentation go to: [http://aerokube.com/selenoid/latest/](http://aerokube.com/selenoid/latest/).
 
-It is possible to run Selenoid without Docker, but that is outside of the scope of this How-to. Please check out the official documentation if you would like to achieve this.
+It is possible to run Selenoid without Docker, but that is outside of the scope of this how-to. Please check out the official documentation if you would like to achieve this.
 
 {{% alert type="info" %}}
- Note: Mendix does not deliver support for local Selenium solutions. 
+ Mendix does not deliver support for local Selenium solutions. 
   {{% /alert %}}
 
-## 1. Prerequisites ##
+## 2 Prerequisites ##
 
-- Some basic docker and docker-compose knowledge.
-- A machine with the latest versions of **docker** and **docker-compose** installed.
-- Your machine should allow connections from ATS on port 4444.
+The following components are needed to set up a local Selenoid hub:
 
-## 2. Install your hub and nodes with Docker-Compose ##
+- Some basic docker and docker-compose knowledge
+- A machine with the latest versions of **docker** and **docker-compose** installed
+- Your machine should allow connections from ATS on port 4444
+
+## 3 Installing Your Hub and Nodes with Docker-Compose ##
 
 The following steps describe how to install the hub and nodes with Docker-Compose:
-1. Create a folder or directory to place your docker-compose.yml and browser.json files.
+1. Create a folder or a directory to place your docker-compose.yml and browser.json files.
 
 In our example **/docker**
 
@@ -115,15 +118,15 @@ curl -s http://localhost:4444/status
 {"total":5,"used":0,"queued":0,"pending":0,"browsers":{"chrome":{"65.0":{}},"firefox":{"58.0":{}}}}
 ```
 
-## 3. Start Testing ##
+## 4 Starting Testing ##
 
 You can start testing by sending your test script to: [http://yourmachinenameorIP:4444/wd/hub](http://localhost:4444/wd/hub).  Make sure it is reachable from the outside!
 
-## 4. Recording a video of your Test Case ##
+## 5 Recording a Video of Your Test Case ##
 
 In case you want to record your test case as a video follow these steps:
 
-1. Add a Custom Capability to your Selenium hub configuration:
+1.  Add a Custom Capability to your Selenium hub configuration:
 
 **enableVideo** with a boolean set to **true**
 
@@ -141,9 +144,9 @@ The video shows as "session-id.mp4"
 
 After executing the test case, don't forget to download the video file or give it a different name in the next session, otherwise it is overwritten!
 
-## 4. Optional: Installing a hub with a Portal with "Live-View" ##
+## 6 Optional: Installing a Hub with a Portal with "Live-View" ##
 
-To install a hub with a Portal for "Live-View" you need a different browser.json and docker-compose.yml file. To add a "Live View" follow these steps:
+To install a hub with a Portal for "Live-View" you need a different browser.json and docker-compose.yml file. To add a "Live-View" follow these steps:
 
 1. Create a browser.json with VNC browser image:
 
@@ -235,7 +238,7 @@ docker_selenoid_1      /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->44
 
 ![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/enable_vnc.png)
 
-7. After starting your test case you can view your session in the portal:
+7.  After starting your test case you can view your session in the portal:
 
 ![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/selenoidui1.png)
 
@@ -243,4 +246,4 @@ docker_selenoid_1      /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->44
 
 ![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/selenoidui2.png)
 
-Congratulations you have finished setting up a local selenoid hub. The next how-to is  [Use ATS in Combination with CI/CD](ats-and-ci-cd-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.
+Congratulations you have finished setting up a local Selenoid hub. The next how-to is  [Use ATS in Combination with CI/CD](ats-and-ci-cd-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.

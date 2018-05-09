@@ -17,11 +17,15 @@ A message definition can be used for both JSON and XML, and it can be used for b
 
 ## 2 General
 
-### 2.1 Source Entity
+### 2.1 Name
+
+The name of the message definition.
+
+### 2.2 Entity
 
 Select an entity on which to base the message definition. Using this message definition, you will be able to export and import this entity type and lists of this entity type.
 
-### 2.2 Structure
+### 2.3 Structure
 
 The structure tree shows the attributes and some of the associations of the entity. Check all the attributes and associations that are part of the message.
 

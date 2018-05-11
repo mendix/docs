@@ -4,21 +4,19 @@ parent: "data-grid"
 ---
 ## Common Properties
 
-
-
 {{% snippet file="refguide/Class+Property.md" %}}
 
 {{% snippet file="refguide/Style+Property.md" %}}
 
 ## Data Source Properties
 
-### Attribute (path)
+### Attribute (Path)
 
 The attribute (path) property specifies the attribute's value that will be displayed in this column. It can be an attribute of the grid entity, or it can be an attribute of an associated entity, in which case we speak of an attribute path. The path can follow multiple associations of type reference, and at the end (optionally) one of type reference set. If you show a reference set in a column the values will be separated by a comma.
 
 ## Formatting Properties
 
-### Enumeration format (only for attributes of type Enumeration)
+### Enumeration Format (Only for Attributes of the Enumeration Type)
 
 A column connected to an attribute of type enumeration can show its contexts as text (default) or as image.
 
@@ -27,19 +25,19 @@ A column connected to an attribute of type enumeration can show its contexts as 
 | Text | Show the caption text of the enumeration. |
 | Image | Show the image of the enumeration value. |
 
-### Decimal precision (only for decimal attributes)
+### Decimal Precision (Only for Decimal Attributes)
 
 The precision of a value is defined the number of digits that is used to express that value. This property indicates the number of decimal places (the number of digits following the decimal point).
 
 _Default value:_ 2
 
-### Group digits (only for numeric attributes)
+### Group Digits (Only for Numeric Attributes)
 
 For ease of reading, numbers with many digits before the decimal separator may be divided into groups using a delimiter. This property defines whether the end user will see these groups, or not.
 
 _Default value:_ False
 
-### Date format (only for attributes of type DateTime)
+### Date Format (Only for Attributes of the Type DateTime)
 
 The date format determines whether the date part, the time part or both are shown. How the date and time parts are formatted depends on the localization of the user using the application.
 
@@ -92,7 +90,7 @@ The caption of a column is the text that appears as a header above the rows. Thi
 
 The editable property indicates whether the values of the column will be editable in-line, i.e. without opening a page with a data view. In-line editing allows the data grid to behave like you would expect from a spreadsheet application.
 
-### Aggregate function
+### Aggregate Function
 
 The values in a column can be aggregated in several ways. The aggregate function determines the way in which the values are aggregated. The aggregate will be shown at the bottom of the column that precedes by the aggregate caption (see below).
 
@@ -111,7 +109,7 @@ Note that all objects will be taken into account, and not just the ones on the c
 
 {{% /alert %}}
 
-### Aggregate caption
+### Aggregate Caption
 
 The aggregate caption is the text that appears in front of the computed value. This is a translatable text. See [Translatable Texts](translatable-texts).
 
@@ -121,7 +119,7 @@ The aggregate caption is the text that appears in front of the computed value. T
 
 {{% /alert %}}
 
-### Show tooltip
+### Show Tooltip
 
 This property determines whether the tooltip page is shown as the mouse is hovered over this column. The tooltip page can be configured on the [Data grid](data-grid).
 

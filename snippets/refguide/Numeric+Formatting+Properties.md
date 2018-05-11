@@ -28,7 +28,7 @@ _Default value:_ Fixed
 | 19.9999  | 20.00 (\*) | 19.9999      | 19.9999  |
 | 19.99999 | 20.00 (\*) | 20.0000 (\*) | 19.99999 |
 
-**\*** The value is rounded to the nearest decimal with the defined number of decimal places.
+\* The value is rounded to the nearest decimal with the defined number of decimal places.
 
 ### Decimal Precision
 

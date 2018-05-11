@@ -10,13 +10,28 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ## 2018
 
+### May 11th, 2018
+
+#### New features
+
+* We added a quick search to make the process of searching different elements in your application faster. Click the magnifying glass icon in the left menu bar to search through microflows, entities and pages. Simply start typing (part of) the name of the item you are looking for. The search feature will return any matches it finds, using exact matches as well as fuzzy matches based on the characters entered. 
+
+#### Improvements
+
+* When dragging new elements to a microflow, a preview of the element shows you a place where you can place this element. This hint makes the process of creating microflows easier.
+* We improved the Pages icon and colors in the left menu bar for a better modeling experience.
+
+#### Fixes
+
+* Fixed an issue where the Web Modeler crashed when a custom widget contained a nanoflow property.
+
 ### May 1st, 2018
 
 #### New features
 
 This release contains Collaborative Modeling features which will benefit collaboration within extended development teams, consisting of, for example, business developers, professional developers, product owners, key users, UX designers, and other stakeholders.
 
-* Using the app **Buzz**, you can now leave comments on pages, domain models, microflows and navigation layouts. You can also respond to comments made by other team members.
+* Using the new **Buzz** tab, you can now leave comments on pages, domain models, microflows and navigation layouts. You can also respond to comments made by other team members.
 * At any point in time you can mention a team member which will trigger an email notification to that user containing your comment and a link to access the document you commented on in the Web Modeler.
 * All conversations are visible on the **Buzz** section of the Developer Portal. The conversation will contain a link to access the page / domain model / microflow / navigation layout directly in the Web Modeler.
 * You can now create feedback items directly from the app **Buzz** for any topics that should be part of next sprint’s grooming by choosing **Create Feedback Item** from the top menu inside a Buzz conversation. This generates a feedback item in the Developer Portal tied directly to the app component in question, which product owners can then follow-up.

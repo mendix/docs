@@ -28,10 +28,9 @@ The following components are needed:
 The following steps describe how to install your hub and nodes with Docker-Compose:
 
 1. Create a folder or directory to place your docker-compose file
-2. Create a docker-compose.yml in your folder/directory
+2. Create a docker-compose.yml in your folder/directory: 
 
-docker-compose.yml:
-
+    ```
     hub: 
      image: selenium/hub:3.8.1
      environment:
@@ -60,6 +59,7 @@ docker-compose.yml:
      volumes:
        - /dev/shm:/dev/shm
      privileged: true
+     ```
 
 3. Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 

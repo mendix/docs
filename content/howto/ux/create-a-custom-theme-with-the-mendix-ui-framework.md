@@ -6,14 +6,14 @@ tags: []
 
 ## 1 Introduction
 
-This how-to presents creating a custom theme with the Mendix UI Framework. The Amazon website will be used as an example.
+This how-to presents creating a custom theme with the Mendix UI Framework.
 
 **This how-to will teach you how to do the following:**
 
 * Create a new app
 * Set up [Scout](https://github.com/scout-app/scout-app) and the [Mendix UI Framework](https://ux.mendix.com/)
 * Change the custom variables
-* Create a custom theme based on [Amazon](https://www.amazon.com/)
+* Create a custom theme
 
 ## 2 Prerequisites
 
@@ -51,7 +51,7 @@ To be able to make changes to the theme, Mendix suggests using [Sass](http://sas
 To configure Scout, follow these steps:
 
 1.  Open your app's project folder in Scout by clicking the plus ("+") button in the bottom-left corner of the screen:
-    
+  
     ![](attachments/18448706/18581409.png)
 
 2.  Select the project directory from your newly created app:
@@ -92,7 +92,7 @@ To configure Scout, follow these steps:
 
 ## 6 Creating a Custom Theme
 
-In this section, you are going to create a custom theme based on the [Amazon](https://www.amazon.com/) website.
+In this section, you are going to create a custom theme.
 
 ### 6.1 Changing the the Color-Primary to Modify the Topbar and Buttons
 
@@ -105,7 +105,7 @@ To change the topbar background-color and primary buttons, adjust the following 
 
 If you look in your *_custom-variables.scss* file, you will notice that other CSS elements use the `$color-primary` variable. All of these elements will also be changed, because when you change one variable, you are able to modify other elements in your theme, which saves a lot of time in maintaining your theme.
 
-In our app, `color-primary` has the color blue, while the Amazon primary color is dark blue. You can now adjust `$color-primary` on line 10 to the Amazon color, which is `#232f3e`.
+In our app, `color-primary` has the color blue, but you want the primary color to be dark blue. You can now adjust `$color-primary` on line 10 to `#232f3e`.
 
 ![](attachments/18448711/18581477.png) 
 
@@ -123,7 +123,7 @@ As you see, the background color for the topbar and primary buttons has been cha
 
 ### 6.2 Changing the Secondary Background Color
 
-Your custom app has a gray background, but the Amazon website has a white background. We can easily change this by editing a line in the *_custom-variables.scss* file.
+Your custom app has a gray background, but you want a white background. We can easily change this by editing a line in the *_custom-variables.scss* file.
 
 This is the background color for specific pages such as the dashboard (also used as a utility class): `$color-layout-bg-secondary: #EFF4F7;` (line 38). The `$color-layout-bg-secondary` variable is used for several page templates. For example, in the *theme\styles\sass\pagetemplates\responsive\_page-dashboard.scss*  file, `$color-layout-bg-secondary` is used as the default background color for all of the dashboard templates. With this variable, you can easily change all of your background colors to white.
 
@@ -133,7 +133,7 @@ You can now adjust `$color-layout-bg-secondary` (line 38) to the `#FFF` backgrou
 
 ### 6.3 Changing the Sidebar and Navigation Colors
 
-You can adjust your sidebar and navigation in a similar way. Your app is now very dark, so it would be wise to change the sidebar background color. You can use the gray background color that Amazon uses on their homepage.
+You can adjust your sidebar and navigation in a similar way. Your app is now very dark, so it would be wise to change the sidebar background color. You can use a gray background color.
 
 This is the sidebar: `$color-sidebar-bg: $color-inverse;` (line 45). Change this to `$color-sidebar-bg: #f9f9f9;`:
 
@@ -169,7 +169,7 @@ Use this logo to replace "Company Name" in the topbar:
 
 ![](attachments/18448711/18581471.png)
 
-In the Modeler, go to the **Sidebar_Full_Responsive** layout and replace the image. Leave the caption blank because the caption "amazon" is in the new image.
+In the Modeler, go to the **Sidebar_Full_Responsive** layout and replace the image. Leave the caption blank, because the caption "go shopping" is already in the new image.
 
 Re-deploy your app to see the shiny new logo:
 

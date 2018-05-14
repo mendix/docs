@@ -41,7 +41,13 @@ Entity Access takes the form of a large matrix showing access rules that apply t
 ## OData Access 
 
 OData Access defines for each module role whether users with this role are authorized to access OData resources for each OData service exposed within the module.
-OData access takes the shape of a large matrix showing published OData services and modules roles. For each combination you can indicate whether or not the module role has access to the published OData service. You can also edit this information in a [published OData services](published-odata-services) using the property 'Allowed roles' in the 'Settings' tab.
+OData Access takes the shape of a large matrix showing published OData services and modules roles. For each combination you can indicate whether or not the module role has access to the published OData service. You can also edit this information in a [published OData services](published-odata-services) using the property 'Allowed roles' in the 'Settings' tab.
+
+## REST Access
+
+REST Access defines for each module role whether users with this role are authorized to access REST resources for each REST service exposed within the module. 
+REST Access takes the shape of a large matrix showing published REST services and modules roles. For each REST service you can indicate whether or not the module role has access to the published REST service.
+The REST access tab is visible only when the service has the security set to require authentication. See [published REST services](published-rest-services) for more information.
 
 ## Data Set Access
 

@@ -11,11 +11,15 @@ Recording the runtime is useful for investigating a slow microflow or pinpointin
 
 ## 2 Recording a New Session
 
-A new recording session is started by clicking **Record runtime(s)**. You can provide a session name (optional) and check the boxes for the user browsers to be recorded.
+A new recording session is started by clicking **Record runtime(s)**. You can provide a session name (optional) and check the box for all user browsers to be recorded. You can also select to record the browser console.
 
 It is possible to record an individual user's browser without recording the runtime by clearing the **Record all browsers** box and then clicking **Select browsers to record**. A pop-up window will show a list of the users logged in on the current day. You can select here the users whose browsers you want to record.
 
 ![](attachments/select-browsers.png)
+
+When recording a browser the end user has to confirm the following message:
+
+![](attachments/browser_agent_recording_notice.png)
 
 ## 3 Recorded Results
 

@@ -979,7 +979,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 ### 3.18.1 Description
 
-Restore a previously created backup to an environment. The environment that the data will be restored on must be stopped before using this call. The response of a successful call contains the details of the restored backup. This call is only available for Mendix Cloud v4 applications. Please note that the Snapshot Id can be a snapshot created for a different environment, similar to the "restore into" functionality in the Developer Portal. 
+Restore a previously created backup to an environment. The environment that the data will be restored on must be stopped before using this call. The response of a successful call contains the details of the restored backup. This call is only available for Mendix Cloud v4 applications. Please note that the Snapshot ID can be a snapshot created for a different environment, similar to the "restore into" functionality in the Developer Portal. 
 
 ```bash
 HTTP Method: POST

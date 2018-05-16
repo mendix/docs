@@ -60,7 +60,12 @@ Once you have the certificate file, you need to obtain a distribution profile. T
 
 ### Uploading the key to Adobe PhoneGap Build
 
-Once you have downloaded the signing certificate (a `.cer` file), you need to change the extension to `.p12`. Then you can upload the signing certificate (now a `.p12` file) and the distribution profile (a `.mobileprovision` file) to Adobe PhoneGap Build on your [account page](https://build.phonegap.com/people/edit). Go to tab "Signing Keys" and click "add a key ..." under "iOS". Select the two files and give the key a name. Unlock the key by clicking the yellow lock icon on the right of the key and filling in the certificate passphrase. The key is now ready to be used by your build job.
+Once you have downloaded the signing certificate (a `.cer` file), you need to convert signing certificate from a .cer to a .p12. Use openssl program in 2 steps.
+1. Create from the signing certificate a PEM format:
+`    "C:\OpenSSL\bin\openssl.exe" x509 -in "C:\ios.cer" -inform DER -out "C:\ios_pem.pem" -outform PEM`
+2. Create from the PEM certificate a password secured. This action requires the PEM certificate, the private key that was created in step 3 earlier and the password thas was given on the creation of the ios.csr.
+`    "C:\OpenSSL\bin\openssl.exe" pkcs12 -export -out "C:\ios.p12" -inkey "C:\private.key" -in "C:\ios_pem.pem"`
+Then you can upload the signing certificate (now a `.p12` file) and the distribution profile (a `.mobileprovision` file) to Adobe PhoneGap Build on your [account page](https://build.phonegap.com/people/edit). Go to tab "Signing Keys" and click "add a key ..." under "iOS". Select the two files and give the key a name. Unlock the key by clicking the yellow lock icon on the right of the key and filling in the certificate passphrase. The key is now ready to be used by your build job.
 
 ## Android
 

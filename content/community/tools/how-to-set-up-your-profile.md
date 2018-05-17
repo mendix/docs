@@ -211,7 +211,7 @@ These are the quick and easy steps to follow when merging your accounts:
 
 1. Go to your [Community Profile](https://developer.mendixcloud.com/link/ownprofile/).
 2. Click **Edit Profile**.
-3. Click **Merge Account** on the right side of the screen.
+3. Click **Manage Account** on the right side of the screen.
 4. Under **Merge your accounts**, enter the email address of the account you want to merge with your current account.
 5. Click the send button to send a merge request.
 
@@ -221,6 +221,15 @@ We’ll take things from there. The email address of the merged account will be 
 
 {{% alert type="info" %}}
 
-With this action we only combine the accounts. We don’t deactivate the old account(s). This should be done by that company’s administrator.
+With this action we only combine the accounts. We do not deactivate the old account(s). This should be done by that company’s administrator.
 
 {{% /alert %}}
+
+## 7 Profile Visibility
+
+If you want to make your profile private, these are the quick and easy steps to follow:
+
+1. Go to your [Community Profile](https://developer.mendixcloud.com/link/ownprofile/).
+2. Click **Edit Profile**.
+3. Click **Manage Account** on the right side of the screen.
+4. Under **Profile visibility**, click **Make this profile private**.

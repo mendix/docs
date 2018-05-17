@@ -221,7 +221,7 @@ We’ll take things from there. The email address of the merged account will be 
 
 {{% alert type="info" %}}
 
-With this action we only combine the accounts. We don’t deactivate the old account(s). This should be done by that company’s administrator.
+With this action we only combine the accounts. We do not deactivate the old account(s). This should be done by that company’s administrator.
 
 {{% /alert %}}
 

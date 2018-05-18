@@ -5,8 +5,7 @@ description: "Describes how to set up a local selenoid hub."
 tags: ["ATS", "testing", "Selenium hub"]
 ---
 
-# Set Up a Local Selenoid Hub #
-## 1 Introduction ##
+## 1 Introduction
 
 This how-to shows you an example of a simple setup of a Selenoid hub with a Chrome and Firefox node on a Linux machine with docker. This works on a Windows machine with docker as well, but the commands and configuration could be different. For the official project go to: [https://github.com/aerokube/selenoid](https://github.com/aerokube/selenoid). For the official documentation go to: [http://aerokube.com/selenoid/latest/](http://aerokube.com/selenoid/latest/).
 
@@ -14,17 +13,17 @@ It is possible to run Selenoid without Docker, but that is outside of the scope 
 
 {{% alert type="info" %}}
  Mendix does not deliver support for local Selenium solutions. 
-  {{% /alert %}}
+{{% /alert %}}
 
-## 2 Prerequisites ##
+## 2 Prerequisites
 
 The following components are needed to set up a local Selenoid hub:
 
-- Some basic docker and docker-compose knowledge
-- A machine with the latest versions of **docker** and **docker-compose** installed
-- Your machine should allow connections from ATS on port 4444
+* Some basic docker and docker-compose knowledge
+* A machine with the latest versions of **docker** and **docker-compose** installed
+* Your machine should allow connections from ATS on port 4444
 
-## 3 Installing Your Hub and Nodes with Docker-Compose ##
+## 3 Installing Your Hub and Nodes with Docker-Compose
 
 The following steps describe how to install the hub and nodes with Docker-Compose:
 1. Create a folder or a directory to place your docker-compose.yml and browser.json files.
@@ -38,7 +37,7 @@ In our example **/docker/video**
 3. Create a browser.json in your folder/directory (/docker)
 
 ```
-{
+   {
         "firefox": {
                 "default": "58.0",
                 "versions": {
@@ -118,11 +117,11 @@ curl -s http://localhost:4444/status
 {"total":5,"used":0,"queued":0,"pending":0,"browsers":{"chrome":{"65.0":{}},"firefox":{"58.0":{}}}}
 ```
 
-## 4 Starting Testing ##
+## 4 Starting Testing
 
 You can start testing by sending your test script to: [http://yourmachinenameorIP:4444/wd/hub](http://localhost:4444/wd/hub).  Make sure it is reachable from the outside!
 
-## 5 Recording a Video of Your Test Case ##
+## 5 Recording a Video of Your Test Case
 
 In case you want to record your test case as a video follow these steps:
 
@@ -144,7 +143,7 @@ The video shows as "session-id.mp4"
 
 After executing the test case, don't forget to download the video file or give it a different name in the next session, otherwise it is overwritten!
 
-## 6 Optional: Installing a Hub with a Portal with "Live-View" ##
+## 6 Optional: Installing a Hub with a Portal with "Live-View"
 
 To install a hub with a Portal for "Live-View" you need a different browser.json and docker-compose.yml file. To add a "Live-View" follow these steps:
 

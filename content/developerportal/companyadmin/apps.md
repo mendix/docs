@@ -12,7 +12,7 @@ A company admin can manage the following items in the **Apps** section:
 * Apps
 * Roles
 
-![](attachments/appsettings.jpg)
+![](attachments/appsettings-updated.jpg)
 
 ## 2 Apps Tab
 

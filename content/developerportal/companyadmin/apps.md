@@ -27,7 +27,7 @@ For more information, see [How to Delete, Deactivate, and Activate Apps](/develo
 
 ### 2.1 Create report
 
-You can create a report on the applications owned by your company by clicking on the **Create Report** button. This will take you to a seperate page with a list of applications and their details. To export a more detailed version of this report to a CSV file, click on the **Export to Excel** button.
+You can create a report of the apps owned by your company by clicking the **Create Report** button. This will take you to a seperate page with a list of apps. To export the report to a CSV file, click the **Export to Excel** button. Note that the exported report will have more information than shown on the page.
 
 ## 3 Roles
 

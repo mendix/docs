@@ -28,12 +28,12 @@ For more information, see [How to Deactivate and Activate Users](/developerporta
 
 ### 2.1 Create Report
 
-You can create reports about users active in your company(either by being a member of the company or a member of an app owned by the company) by clicking on this button. This will open a popup with the following options:
+You can create reports about users active in your company (either by being a member of the company or a member of an app owned by the company). You will be presented with the following options:
 
 * **Export Users** - This report will return a list of users who are active in your company.  
-* **Export Permissions** - This report will return a list of permissions which users have for apps owned by your company.
+* **Export Permissions** - This report will return a list of permissions for users active in your company's apps.
 
-You can export these reports by clicking on the **Export to Excel** button. Please note that the exports will contain further details in addition to those shown on the screen.
+You can export these reports by clicking the **Export to Excel** button. Please note that the exports will contain further details in addition to those shown on the screen.
 
 ## 3 Security Groups
 

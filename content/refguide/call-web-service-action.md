@@ -75,6 +75,28 @@ _Default value:_ No
 
 ![](attachments/19202819/19399021.png)
 
+### 4. Proxy configuration
+
+{{% alert type="info" %}}
+
+This feature was introduced in version 7.15.0.
+
+{{% /alert %}}
+
+{{% alert type="info" %}}
+
+This feature is only available when you have configured web service calls to use the new (optimized) implementation in the [project's runtime settings](project-settings)
+
+{{% /alert %}}
+
+Set up proxy configuration for the request. It is possible to select one of three options:
+
+- Use project settings; use whatever settings are defined on the project level (default)
+- Override; override project level settings for this action.
+- No proxy; dont use proxy for this action, even if there is a proxy configuration on project level.
+
+When **Override** option is chosen, you can configure host, port, username and password settings for the proxy. Also, 'Use proxy' expression allows you to dynamicaly control if proxy settings are used or not. By default, this expression is set to 'true'.
+
 ## 4 HTTP Headers
 
 ### 4.1 Use HTTP Authentication

@@ -1,11 +1,10 @@
 ---
-title: "Setup a local Selenium hub"
+title: "Set Up a Local Selenium Hub"
 parent: "setup-local-selenium-index-2"
 description: "Describes how to set up a local selenium hub."
 tags: ["ATS", "testing", "Selenium hub"]
 ---
 
-# Set Up a Local Selenium Hub
 ## 1 Introduction
 
 This how-to shows you an example of a simple installation of a Selenium hub with a Google Chrome/Mozilla Firefox node on a Windows machine. For the official documentation go to: [https://www.seleniumhq.org/projects/](https://www.seleniumhq.org/projects/)
@@ -17,15 +16,16 @@ Mendix does not deliver support for local Selenium solutions.
 ## 2 Prerequisites
 
 The following components are needed:
-- Install Java on your machine [https://java.com](https://java.com)
-- Install Chrome and Firefox on your machine
-- Your machine should allow connections from ATS on port 4444
-- Since version 2.6, ATS uses the Selenium 3.8.1 API. Therefore, we recommend using this version of Selenium as well.
+* Install Java on your machine [https://java.com](https://java.com)
+* Install Chrome and Firefox on your machine
+* Your machine should allow connections from ATS on port 4444
+* From version 2.6, ATS uses the Selenium 3.8.1 API; therefore, we recommend using this version of Selenium as well
 
 ## 3 Downloading Selenium Server
  
  The following steps describe how to download the Selenium server:
-1. Create a folder on your disk, for example, C:\Selenium
+ 
+1. Create a folder on your disk (for example, *C:\Selenium*).
 2. Download [Selenium Server stand-alone version 3.8.1](http://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar) and place it in the folder
 
 ## 4 Downloading the Latest Chrome and Gecko (Firefox) Drivers
@@ -43,9 +43,9 @@ The following steps describe how to start the Selenium hub:
 1. Go to the folder and open a command box (Shift+Right click and choose Open command window here)
 2. Start your Selenium hub (version number can be different):
 
-```
-java -jar selenium-server-standalone-3.8.1.jar -role hub
-```
+   ```
+   java -jar selenium-server-standalone-3.8.1.jar -role hub
+   ```
 
 You should see logging like this:
 
@@ -79,9 +79,9 @@ The following steps describe how to start the node with three Chrome and three F
 1. Go to the folder and open a command box (Shift+Right click and choose the **Open command** window here)
 2. Start the node:
 
-```
-java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe  -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium-server-standalone-3.8.1.jar -role node -hub http://localhost:4444/grid/register -browser "browserName=firefox, maxInstances=3"  -browser "browserName=chrome, maxInstances=3"
-```
+   ```
+   java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe  -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium-    server-standalone-3.8.1.jar -role node -hub http://localhost:4444/grid/register -browser "browserName=firefox, maxInstances=3"  -browser "browserName=chrome, maxInstances=3"
+   ```
 
 The output should look something like this:
 
@@ -119,12 +119,13 @@ The output should look something like this:
 
 3.  Check in the console whether your Selenium hub node is active [http://localhost:4444/grid/console](http://localhost:4444/grid/console):
 
-![](attachments/setup-local-selenium-index-2/setup-local-selenium-hub-2/grid_nodes.png)
+   ![](attachments/setup-local-selenium-index-2/setup-local-selenium-hub-2/grid_nodes.png)
 
 
 ## 7 Starting Testing
 
-You can start testing by sending your test script to [http://yourmachinenameorIP:4444/wd/hub](http://localhost:4444/wd/hub).  
+You can start testing by sending your test script to [http://yourmachinenameorIP:4444/wd/hub](http://localhost:4444/wd/hub). 
+
 {{% alert type="warning" %}}
 Make sure it is reachable from the outside!
 {{% /alert %}}
@@ -191,31 +192,32 @@ The following steps describe how to start the selenium hub and the node with a J
 
 2. Start the hub:
 
-```
-java -jar selenium-server-standalone-3.8.1.jar -role hub -hubConfig gridHubConfig.json
-```
+   ```
+   java -jar selenium-server-standalone-3.8.1.jar -role hub -hubConfig gridHubConfig.json
+   ```
 
 3. Start the node:
-
-```
- java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium-server-standalone-3.8.1.jar -role node -nodeConfig node.json
-```
+ 
+  ```
+  java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium- server-standalone-3.8.1.jar -role node -nodeConfig node.json
+  ```
 
 ## 9 Optional: Batching File to Start Up Everything at Once
 
 The following steps describe how to create a batch file to start up everything at once:
+
 1. Create start.bat:
 
-```
-start /B java -jar C:\Selenium\selenium-server-standalone-3.8.1.jar -role hub -hubConfig C:\Selenium \gridHubConfig.json
-timeout /t 10
-start /B java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar C:\Selenium\selenium-server-standalone-3.8.1.jar -role node -nodeConfig C:\Selenium\node.json
- exit
-```
+   ```
+   start /B java -jar C:\Selenium\selenium-server-standalone-3.8.1.jar -role hub -hubConfig C:\Selenium \gridHubConfig.json
+   timeout /t 10
+   start /B java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar  C:\Selenium\selenium-server-standalone-3.8.1.jar -role node -nodeConfig C:\Selenium\node.json
+   exit
+   ```
 
 2. Start from the cmd box:
     
-```
-start.bat
-```
-Congratulations you have finished setting up a local selenium hub. The next how-to is [How to setup a Local Docker Selenium hub](setup-local-docker-selenium-hub-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.
+   ```
+   start.bat
+   ```
+Congratulations you have finished setting up a local selenium hub. The next how-to is [How to Set Up a Local Docker Selenium Hub](setup-local-docker-selenium-hub-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.

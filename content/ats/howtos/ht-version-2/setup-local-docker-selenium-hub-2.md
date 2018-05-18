@@ -93,7 +93,7 @@ You can start testing by sending your test script to: [http://yourmachinenameorI
 
 ## 5 Optional: Scaling Your Nodes
 
-Each node has one browser, so if you need more nodes of a certain browser, you can scale with docker-compose. With multiple nodes you can run tests in parallel. For example, if you want 3 chrome browsers:
+Each node has one browser, so if you need more nodes of a certain browser, you can scale with docker-compose. With multiple nodes you can run tests in parallel. For example, if you want 3 Chrome browsers:
 
 ```
 sudo docker-compose up -d --scale chrome=3

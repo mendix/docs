@@ -10,6 +10,12 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ## 2018
 
+### May 18th, 2018
+
+#### Fixes
+
+* We fixed the issue where the the guided product introduction tour sometimes crashed when opening the **Create Page** dialog window on slow connections.
+
 ### May 11th, 2018
 
 #### New Features

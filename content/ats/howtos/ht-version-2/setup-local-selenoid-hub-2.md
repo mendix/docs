@@ -31,32 +31,32 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 2. Create a folder or directory to place your video files.
 3. Create a browser.json in your folder/directory (/docker)
 
-```
-   {
-        "firefox": {
-                "default": "58.0",
-                "versions": {
-                        "58.0": {
-                                "image": "selenoid/firefox:58.0",
-                                "port": "4444",
-                                "path": "/wd/hub",
-                                "tmpfs": {"/tmp":"size=512m"}
-                        }
-                }
-        },
-        "chrome": {
-                "default": "65.0",
-                "versions": {
-                        "65.0": {
-                                "image": "selenoid/chrome:65.0",
-                                "port": "4444",
-                                "tmpfs": {"/tmp":"size=512m"},
-                                "shmSize" : 1073741824
-                        }
-                }
-        }
-}
-```
+   ```
+      {
+           "firefox": {
+                   "default": "58.0",
+                   "versions": {
+                           "58.0": {
+                                   "image": "selenoid/firefox:58.0",
+                                   "port": "4444",
+                                   "path": "/wd/hub",
+                                   "tmpfs": {"/tmp":"size=512m"}
+                           }
+                   }
+           },
+           "chrome": {
+                   "default": "65.0",
+                   "versions": {
+                           "65.0": {
+                                   "image": "selenoid/chrome:65.0",
+                                   "port": "4444",
+                                   "tmpfs": {"/tmp":"size=512m"},
+                                   "shmSize" : 1073741824
+                           }
+                   }
+           }
+   }
+   ```
 
 4. Create a docker-compose.yml in your folder/directory (/docker)
 

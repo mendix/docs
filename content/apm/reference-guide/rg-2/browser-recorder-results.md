@@ -19,7 +19,6 @@ A browser recording records the following types of actions:
 
 * Browser JavaScript console messages
 * Client–server communication
-* Page changes
 * User actions
 
 For all types except console messages, the detailed view displays a page holder with the **Tree** and **Actions** tabs. The tree view gives oversight on the duration of the action and subsequent actions. Just like the runtime recording results, it is possible to drill down in the tree by double-clicking on a node.
@@ -62,11 +61,7 @@ Request timing information is not yet available for Mendix 7.6 or higher.
 
 ![](attachments/Performance_browser_recording_ActionsConnection.png)
 
-## 5 Page Changes
-
-Like console messages, page changes are not recorded by default. Recording can be enabled from the environment settings, which records which element within the browser has changed, was added, or was deleted.
-
-## 6 User Actions
+## 5 User Actions
 
 A recorded user action has two details:
 

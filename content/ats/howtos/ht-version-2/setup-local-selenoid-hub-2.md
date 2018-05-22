@@ -207,19 +207,19 @@ To install a hub with a Portal for "Live-View" you need a different browser.json
 
 4.  Start the hub
 
-   ```
-   # sudo docker-compose up -d
+    ```
+    # sudo docker-compose up -d
 
-   Creating docker_selenoid_1 ... done
-   Creating docker_selenoid-ui_1 ... done
+    Creating docker_selenoid_1 ... done
+    Creating docker_selenoid-ui_1 ... done
 
-   sudo docker-compose ps
+    sudo docker-compose ps
 
-           Name                      Command               State           Ports         
-   --------------------------------------------------------------------------------------
-   docker_selenoid-ui_1   /selenoid-ui --selenoid-ur ...   Up      0.0.0.0:8888->8080/tcp
-   docker_selenoid_1      /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->4444/tcp 
-   ```
+            Name                      Command               State           Ports         
+    --------------------------------------------------------------------------------------
+    docker_selenoid-ui_1   /selenoid-ui --selenoid-ur ...   Up      0.0.0.0:8888->8080/tcp
+    docker_selenoid_1      /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->4444/tcp 
+    ```
 
 5. You can visit your portal on [http://yourmachinenameorIP:8080](http://localhost:8080)
 

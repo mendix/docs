@@ -4,7 +4,14 @@ title: "Platform Portal"
 
 ## 2018
 
-### May 8th
+
+### May 22nd, 2018
+
+#### Fixes
+- We fixed a bug in Mendix Cloud v4 that prevented users from using nested custom domains. Since today you can have one domain `app.example.com` and one on `microservice.app.example.com`.
+
+
+### May 8th, 2018
 
 #### Improvements
 - You can now assign colors to your labels on the Stories page: Mendix Blue, Firetruck Red, Goldfish Orange, and Tulip Green.

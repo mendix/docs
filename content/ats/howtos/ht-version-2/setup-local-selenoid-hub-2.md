@@ -141,100 +141,100 @@ To install a hub with a Portal for "Live-View" you need a different browser.json
 
 1. Create a browser.json with VNC browser image:
 
-```
-{
-        "firefox": {
-                "default": "58.0",
-                "versions": {
-                        "58.0": {
-                                "image": "selenoid/vnc:firefox_58.0",
-                                "port": "4444",
-                                "path": "/wd/hub",
-                                "tmpfs": {"/tmp":"size=512m"}
-                        }
-                }
-        },
-        "chrome": {
-                "default": "65.0",
-                "versions": {
-                        "65.0": {
-                                "image": "selenoid/vnc:chrome_65.0",
-                                "port": "4444",
-                                "tmpfs": {"/tmp":"size=512m"},
-                                "shmSize" : 1073741824
-                        }
-                }
-        }
-}
-```
+   ```
+   {
+           "firefox": {
+                   "default": "58.0",
+                   "versions": {
+                           "58.0": {
+                                   "image": "selenoid/vnc:firefox_58.0",
+                                   "port": "4444",
+                                   "path": "/wd/hub",
+                                   "tmpfs": {"/tmp":"size=512m"}
+                           }
+                   }
+           },
+           "chrome": {
+                   "default": "65.0",
+                   "versions": {
+                           "65.0": {
+                                   "image": "selenoid/vnc:chrome_65.0",
+                                   "port": "4444",
+                                   "tmpfs": {"/tmp":"size=512m"},
+                                   "shmSize" : 1073741824
+                           }
+                   }
+           }
+   }
+   ```
 
 2. Create a docker-compose.yml with added selenoid UI for the portal:
 
-```
-version: '3'
-services:
-  selenoid:
-    network_mode: bridge
-    image: aerokube/selenoid
-    volumes:
-      - "/docker:/etc/selenoid"
-      - "/var/run/docker.sock:/var/run/docker.sock"
-      - "/docker/video:/opt/selenoid/video"
-    environment:
-      - OVERRIDE_VIDEO_OUTPUT_DIR=/docker/video
-      - TZ=Europe/Amsterdam
-    command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video"]
-    ports:
-      - "4444:4444"
+   ```
+   version: '3'
+   services:
+     selenoid:
+       network_mode: bridge
+       image: aerokube/selenoid
+       volumes:
+         - "/docker:/etc/selenoid"
+         - "/var/run/docker.sock:/var/run/docker.sock"
+         - "/docker/video:/opt/selenoid/video"
+       environment:
+         - OVERRIDE_VIDEO_OUTPUT_DIR=/docker/video
+         - TZ=Europe/Amsterdam
+       command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video"]
+       ports:
+         - "4444:4444"
 
-  selenoid-ui:
-    image: "aerokube/selenoid-ui"
-    network_mode: bridge
-    links:
-      - selenoid
-    ports:
-      - "8080:8080"
-    command: ["--selenoid-uri", "http://selenoid:4444"]
-```
+     selenoid-ui:
+       image: "aerokube/selenoid-ui"
+       network_mode: bridge
+       links:
+         - selenoid
+       ports:
+         - "8080:8080"
+       command: ["--selenoid-uri", "http://selenoid:4444"]
+   ```
 
 3. Pull the images first
 
-```
-sudo docker pull selenoid/vnc:chrome_65.0
-sudo docker pull selenoid/vnc:firefox_58.0
-sudo docker pull aerokube/selenoid-ui
-```
+   ```
+   sudo docker pull selenoid/vnc:chrome_65.0
+   sudo docker pull selenoid/vnc:firefox_58.0
+   sudo docker pull aerokube/selenoid-ui
+   ```
 
 4.  Start the hub
 
-```
-# sudo docker-compose up -d
+   ```
+   # sudo docker-compose up -d
 
-Creating docker_selenoid_1 ... done
-Creating docker_selenoid-ui_1 ... done
+   Creating docker_selenoid_1 ... done
+   Creating docker_selenoid-ui_1 ... done
 
-sudo docker-compose ps
+   sudo docker-compose ps
 
-        Name                      Command               State           Ports         
---------------------------------------------------------------------------------------
-docker_selenoid-ui_1   /selenoid-ui --selenoid-ur ...   Up      0.0.0.0:8888->8080/tcp
-docker_selenoid_1      /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->4444/tcp 
-```
+           Name                      Command               State           Ports         
+   --------------------------------------------------------------------------------------
+   docker_selenoid-ui_1   /selenoid-ui --selenoid-ur ...   Up      0.0.0.0:8888->8080/tcp
+   docker_selenoid_1      /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->4444/tcp 
+   ```
 
 5. You can visit your portal on [http://yourmachinenameorIP:8080](http://localhost:8080)
 
 6. To enable "Live-View" you need to add another Custom Capability to your Selenium hub configuration:
 
-**enableVNC** with boolean set to **true**
+   **enableVNC** with boolean set to **true**
 
-![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/enable_vnc.png)
+   ![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/enable_vnc.png)
 
 7.  After starting your test case you can view your session in the portal:
 
-![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/selenoidui1.png)
+   ![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/selenoidui1.png)
 
 8. By clicking on your session, you will be able to see your live view:
 
-![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/selenoidui2.png)
+   ![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/selenoidui2.png)
 
 Congratulations you have finished setting up a local Selenoid hub. The next how-to is  [Use ATS in Combination with CI/CD](ats-and-ci-cd-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.

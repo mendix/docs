@@ -4,6 +4,15 @@ title: "Platform Portal"
 
 ## 2018
 
+### May 23rd
+
+#### Improvements
+- Company Admins can now export three reports to Excel: active users, app permissions of active users, and apps. This enables you to manage users and their permissions at scale.
+
+#### Fixes
+- The Revisions tab on the Story Details page now shows the avatar of the committer instead of the app's.
+
+
 ### May 8th
 
 #### Improvements

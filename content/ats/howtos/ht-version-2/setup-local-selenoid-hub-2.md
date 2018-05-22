@@ -122,19 +122,16 @@ In case you want to record your test case as a video follow these steps:
 
 1.  Add a Custom Capability to your Selenium hub configuration:
 
-**enableVideo** with a boolean set to **true**
+   **enableVideo** with a boolean set to **true**
 
-![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/add_capability.png)
+   ![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/add_capability.png)
 
-2. Once the test case finishes you can find your video in:  [http://yourmachinenameorIP:4444/video](http://localhost:4444/video)
-
-The video shows as "session-id.mp4"
-
+2. Once the test case finishes you can find your video in: [http://yourmachinenameorIP:4444/video](http://localhost:4444/video). The video shows as "session-id.mp4"
 4. (Optional:) You can give the video file a custom name by adding another Custom Capability:
 
-**VideoName** with a string, for example **MyTestVideo.mp4** (don't forget the .mp4!)
+   **VideoName** with a string, for example **MyTestVideo.mp4** (don't forget the .mp4!)
 
-![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/video_name.png)
+   ![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/video_name.png)
 
 After executing the test case, don't forget to download the video file or give it a different name in the next session, otherwise it is overwritten!
 

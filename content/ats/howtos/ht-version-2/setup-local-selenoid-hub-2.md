@@ -60,23 +60,23 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 
 4. Create a docker-compose.yml in your folder/directory (/docker)
 
-```
-version: '3'
-services:
-  selenoid:
-    network_mode: bridge
-    image: aerokube/selenoid
-    volumes:
-      - "/docker:/etc/selenoid"
-      - "/var/run/docker.sock:/var/run/docker.sock"
-      - "/docker/video:/opt/selenoid/video"
-    environment:
-      - OVERRIDE_VIDEO_OUTPUT_DIR=/opt/selenium/video
-      - TZ=Europe/Amsterdam
-    command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video"]
-    ports:
-      - "4444:4444"
-```
+   ```
+   version: '3'
+   services:
+     selenoid:
+       network_mode: bridge
+       image: aerokube/selenoid
+       volumes:
+         - "/docker:/etc/selenoid"
+         - "/var/run/docker.sock:/var/run/docker.sock"
+         - "/docker/video:/opt/selenoid/video"
+       environment:
+         - OVERRIDE_VIDEO_OUTPUT_DIR=/opt/selenium/video
+         - TZ=Europe/Amsterdam
+       command: ["-conf", "/etc/selenoid/browsers.json", "-video-output-dir", "/opt/selenoid/video"]
+       ports:
+         - "4444:4444"
+   ```
 
 5. Open a console and give the following commands to pull the images first:
 

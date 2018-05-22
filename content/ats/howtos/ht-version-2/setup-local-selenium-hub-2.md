@@ -68,9 +68,9 @@ You should see logging like this:
 
 3.  Check with the following link if the hub works: [http://localhost:4444/grid/console](http://localhost:4444/grid/console)
 
-![](attachments/setup-local-selenium-index-2/setup-local-selenium-hub-2/grid_hub.png)
+   ![](attachments/setup-local-selenium-index-2/setup-local-selenium-hub-2/grid_hub.png)
 
-Congratulations, your local Selenium hub is running.
+   Congratulations, your local Selenium hub is running.
 
 ## 6 Configuring and Starting Your Chrome/Firefox Node
 

@@ -199,8 +199,9 @@ The following steps describe how to start the selenium hub and the node with a J
 3. Start the node:
  
    ```
-   java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium- server-standalone-3.8.1.jar -role node -nodeConfig node.json
-  ```
+   java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium- server-standalone-3.8.1.jar -role node -nodeConfig node.json   
+   ```
+
 
 ## 9 Optional: Batching File to Start Up Everything at Once
 

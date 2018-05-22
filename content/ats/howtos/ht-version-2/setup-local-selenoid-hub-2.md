@@ -26,14 +26,9 @@ The following components are needed to set up a local Selenoid hub:
 ## 3 Installing Your Hub and Nodes with Docker-Compose
 
 The following steps describe how to install the hub and nodes with Docker-Compose:
+
 1. Create a folder or a directory to place your docker-compose.yml and browser.json files.
-
-In our example **/docker**
-
-2. Create a folder or directory to place your video files
-
-In our example **/docker/video**
-
+2. Create a folder or directory to place your video files.
 3. Create a browser.json in your folder/directory (/docker)
 
 ```
@@ -85,37 +80,37 @@ services:
 
 5. Open a console and give the following commands to pull the images first:
 
-```
-sudo docker pull selenoid/chrome:65.0
-sudo docker pull selenoid/firefox:58.0
-sudo docker pull selenoid/video-recorder
-sudo docker pull aerokube/selenoid
-```
+  ```
+  sudo docker pull selenoid/chrome:65.0
+  sudo docker pull selenoid/firefox:58.0
+  sudo docker pull selenoid/video-recorder
+  sudo docker pull aerokube/selenoid
+  ```
 
 6. Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 
-```
-sudo docker-compose up -d
-
-Starting docker_selenoid_1 ... done
-```
+  ```
+  sudo docker-compose up -d
+  
+  Starting docker_selenoid_1 ... done
+  ```
 
 7. After it started, you can check the status of the container
 
-```
-sudo docker-compose ps
-      Name                     Command               State           Ports         
------------------------------------------------------------------------------------
-docker_selenoid_1   /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->4444/tcp
-```
+  ```
+  sudo docker-compose ps
+        Name                     Command               State           Ports         
+  -----------------------------------------------------------------------------------
+  docker_selenoid_1   /usr/bin/selenoid -conf /e ...   Up      0.0.0.0:4444->4444/tcp
+  ```
 
 8. To check the status of the hub
 
-```
-curl -s http://localhost:4444/status
+  ```
+  curl -s http://localhost:4444/status
 
-{"total":5,"used":0,"queued":0,"pending":0,"browsers":{"chrome":{"65.0":{}},"firefox":{"58.0":{}}}}
-```
+  {"total":5,"used":0,"queued":0,"pending":0,"browsers":{"chrome":{"65.0":{}},"firefox":{"58.0":{}}}}
+  ```
 
 ## 4 Starting Testing
 

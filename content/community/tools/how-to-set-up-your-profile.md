@@ -2,7 +2,7 @@
 title: "Set Up Your Community Profile"
 category: "Tools"
 menu_order: 10
-tags: ["community", "profile", "platform invite", "review", "achievement"]
+tags: ["community", "profile", "invite", "review", "achievement"]
 ---
 
 ## 1 Introduction
@@ -35,7 +35,7 @@ The other sections of your Community Profile are described below.
 
 ### 3.1 <a name="invite"></a>Inviting Friends and Colleagues to Mendix
 
-On your dashboard, you can invite friends and colleagues to join Mendix. After you click **Invite Friends**, a pop-up window titled **Get your free t-shirt** appears where you can send someone a platform invite by entering their email address and clicking **Send invite**. There is also a personal invite link provided, which you can share on your personal website, blog, and social media channels to invite more people to Mendix. You will earn some Mendix swag with five successful invites!
+On your dashboard, you can invite friends and colleagues to join Mendix. After you click **Invite Friends**, a pop-up window titled **Get your free t-shirt** appears where you can send someone a Mendix invite by entering their email address and clicking **Send invite**. There is also a personal invite link provided, which you can share on your personal website, blog, and social media channels to invite more people to Mendix. You will earn some Mendix swag with five successful invites!
 
 ![](attachments/how-to-set-up-your-profile/referral-url.png)
 
@@ -51,7 +51,7 @@ Once five of the users you invited reach the **Successful** status, you will see
 
 ![](attachments/how-to-set-up-your-profile/claim-tshirt.png)
 
-One more thing about platform invites – when you invite someone and they sign up for Mendix, they will receive a voucher for the [Mendix Rapid Developer Certification Exam](https://gettingstarted.mendixcloud.com/link/certification/rapid) that is valid for six weeks. So encourage your friends to try something new and get certified by Mendix!
+One more thing about Mendix invites – when you invite someone and they sign up for Mendix, they will receive a voucher for the [Mendix Rapid Developer Certification Exam](https://gettingstarted.mendixcloud.com/link/certification/rapid) that is valid for six weeks. So encourage your friends to try something new and get certified by Mendix!
 
 ### 3.2 <a name="review"></a>Writing User Reviews of Mendix
 

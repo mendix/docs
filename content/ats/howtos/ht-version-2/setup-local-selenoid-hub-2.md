@@ -231,10 +231,10 @@ To install a hub with a Portal for "Live-View" you need a different browser.json
 
 7.  After starting your test case you can view your session in the portal:
 
-   ![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/selenoidui1.png)
+    ![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/selenoidui1.png)
 
-8. By clicking on your session, you will be able to see your live view:
+8.  By clicking on your session, you will be able to see your live view:
 
-   ![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/selenoidui2.png)
+    ![](attachments/setup-local-selenium-index-2/setup-local-selenoid-hub-2/selenoidui2.png)
 
 Congratulations you have finished setting up a local Selenoid hub. The next how-to is  [Use ATS in Combination with CI/CD](ats-and-ci-cd-2). You find an overview of all the how-tos and the structure on the [ATS 2 How-to's](ht-version-2) page. We advise you to follow the predefined structure.

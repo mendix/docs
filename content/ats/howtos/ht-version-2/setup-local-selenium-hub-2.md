@@ -119,8 +119,7 @@ The following steps describe how to start the node with three Chrome and three F
 
 3.  Check in the console whether your Selenium hub node is active [http://localhost:4444/grid/console](http://localhost:4444/grid/console):
 
-   ![](attachments/setup-local-selenium-index-2/setup-local-selenium-hub-2/grid_nodes.png)
-
+    ![](attachments/setup-local-selenium-index-2/setup-local-selenium-hub-2/grid_nodes.png)
 
 ## 7 Starting Testing
 

@@ -2,7 +2,7 @@
 title: "Cloud Settings"
 category: "Settings"
 description: "This page shows the cloud settings of your app."
-tags: ["Settings", "App", "Developer Portal", "Cloud", "IBM", "SAP"]
+tags: ["Settings", "App", "Developer Portal", "Cloud", "SAP"]
 ---
 
 ## 1 Introduction
@@ -15,13 +15,12 @@ To select a different cloud platform, your project role must have edit rights on
 
 ## 2 Switching cloud platform
 
-If you select a non-Mendix cloud platform like SAP or IBM you will be redirected to a page to complete the setup. If you select Mendix Cloud no additional setup is needed.
+If you select a non-Mendix cloud platform like SAP you will be redirected to a page to complete the setup. If you select Mendix Cloud no additional setup is needed.
 
 The specific steps for setting up on different cloud platforms:
 
 * [Deploy on premises](/deployment/on-premises)
 * [SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform)
-* [IBM Cloud Platform](/developerportal/deploy/ibm-cloud)
 
 ## 3 Related Content
 

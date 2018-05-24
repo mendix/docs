@@ -23,9 +23,9 @@ The **HTTP method** property defines the HTTP method to use when calling a REST 
 
 ### 2.2 Timeout
 
-Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. If the REST endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will be thrown and the microflow will roll back or go into your custom error handler.
+Set **Use timeout on request** to **Yes** to be able specify how long the Call REST activity should wait for the REST endpoint to respond. If the REST endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur and the microflow will roll back or go into your custom error handler.
 
-### 2.3 Proxy configuration
+### 2.3 Proxy Configuration
 
 {{% alert type="info" %}}
 
@@ -33,15 +33,15 @@ This feature was introduced in version 7.15.0.
 
 {{% /alert %}}
 
-In almost all cases, you can ignore this setting. 'Use project settings' is a good default value.
+In almost all cases, you can ignore this setting. **Use project settings** is a good default value.
 
-If you want to, you can configure whether to use a proxy for the request. The choices are:
+If desired, you can configure whether to use a proxy for the request. These are the choices:
 
-- **Use project settings**: use whatever settings are defined on the project level (default)
-- **Override**: override project level settings for this action.
-- **No proxy**: dont use proxy for this action, even if there is a proxy configured on the project level
+* **Use project settings** – use whatever settings are defined at the project level (default)
+* **Override** – override the project-level settings for this action
+* **No proxy** – do not use a proxy for this action, even if there is a proxy configured at the project level
 
-When you choose the **Override** option, you can configure dynamically whether to use a proxy, and supply the host, port, username and password settings for the proxy.
+When you select **Override**, you can configure dynamically whether to use a proxy. You then supply the host, port, username, and password settings for the proxy.
 
 ## 3 HTTP Headers
 
@@ -83,7 +83,7 @@ If the [export mapping](export-mappings) requires an input, you can select a var
 
 #### 4.1.4 Content Type
 
-If the [export mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose the type of output you want. **Content-Type header** is not set by default. To set it use Custom HTTP Headers tab.
+If the [export mapping](export-mappings) is based on a message definition, it can export both XML and JSON. Choose the type of output you want. **Content-Type header** is not set by default. To set it, use the **Custom HTTP Headers** tab.
 
 ### 4.2 Binary for the Entire Request
 

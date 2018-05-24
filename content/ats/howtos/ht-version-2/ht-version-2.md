@@ -22,4 +22,5 @@ These are the main documents in this section:
 * [How to Increase Recorder and Helper Coverage](increase-recorder-helper-coverage-2)
 * [How to Create Custom Actions](create-custom-actions-2)
 * [How to Connect Stories to Test Cases](connect-stories-to-testcases-2)
+* [How to Set Up Selenium locally](setup-local-selenium-index-2)
 * [How to Use ATS in Combination with CI/CD](ats-and-ci-cd-2)

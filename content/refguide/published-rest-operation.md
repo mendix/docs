@@ -81,7 +81,7 @@ If security is enabled, then then microflow needs to have at least one role conf
 
 ### 2.5 Deprecated
 
-If you check this box, the operation as marked as deprecated in the service's [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation). This tells clients not to use it anymore.
+If you check this box, the operation is marked as deprecated in the service's [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation). This tells clients not to use it anymore.
 
 ### 2.6 Parameters
 
@@ -97,7 +97,7 @@ An operation parameter can be either a query parameter, a path parameter, or a b
 
 The parameter data type is determined by the microflow of the operation. New parameters that are not yet part of the microflow will have *(Not set)* as their data type.
 
-### 2.6.1 Import mapping
+### 2.6.1 Import Mapping
 
 {{% alert type="info" %}}
 

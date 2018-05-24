@@ -17,6 +17,10 @@ Message definitions define the structure of the messages that are sent from and 
 
 In the list of message definitions, you can add, edit, or delete a [message definition](message-definition) or find their usages.
 
+### 2.1 Generate mapping(s)
+
+The **Generate mapping(s)** button allows you to generate an import and/or an export mapping for the selected message definition.
+
 ## 3 Documentation
 
 Use the documentation to describe what the message definitions are used for.

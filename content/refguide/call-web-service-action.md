@@ -57,13 +57,11 @@ Setting this setting to yes can greatly decrease performance!
 
 {{% alert type="warning" %}}
 
-When consuming a wsdl that uses encoding, turning on validation will lead to a consistency error because it is not WS-I compliant.
+When consuming a WSDL that uses encoding, turning on validation will lead to a consistency error, because it is not WS-I compliant.
 
 {{% /alert %}}
 
-When this setting is disabled, schema validation is not possible. This happens in two cases:
- - When you have configured the [consumed web service](consumed-web-service) to send binary data as attachments
- - When you have configured web service calls to use the new (optimized) implementation in the [project's runtime settings](project-settings)
+When this setting is disabled, schema validation is not possible. This happens in two cases: 1) When you have configured the [consumed web service](consumed-web-service) to send binary data as attachments, and 2) when you have configured web service calls to use the new (optimized) implementation in the [project's runtime settings](project-settings).
 
 {{% alert type="info" %}}
 
@@ -75,25 +73,25 @@ _Default value:_ No
 
 ![](attachments/19202819/19399021.png)
 
-### 4. Proxy configuration
+### 4 Proxy configuration
 
 {{% alert type="info" %}}
 
 This feature was introduced in version 7.15.0.
 
-This feature is only available when you have configured web service calls to use the new (optimized) implementation in the [project's runtime settings](project-settings)
+This feature is only available when you have configured web service calls to use the new (optimized) implementation in the [project's runtime settings](project-settings).
 
 {{% /alert %}}
 
-In almost all cases, you can ignore this setting. 'Use project settings' is a good default value.
+In almost all cases, you can ignore this setting. **Use project settings** is a good default value.
 
-If you want to, you can configure whether to use a proxy for the request. The choices are:
+If desired, you can configure whether to use a proxy for the request. These are the choices:
 
-- **Use project settings**: use whatever settings are defined on the project level (default)
-- **Override**: override project level settings for this action.
-- **No proxy**: dont use proxy for this action, even if there is a proxy configured on the project level
+* **Use project settings** – use whatever settings are defined at the project level (default)
+* **Override** – override the project-level settings for this action
+* **No proxy** – do not use a proxy for this action, even if there is a proxy configured at the project level
 
-When you choose the **Override** option, you can configure dynamically whether to use a proxy, and supply the host, port, username and password settings for the proxy.
+When you select **Override**, you can configure dynamically whether to use a proxy. You then supply the host, port, username, and password settings for the proxy.
 
 ## 4 HTTP Headers
 

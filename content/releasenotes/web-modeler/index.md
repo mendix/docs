@@ -14,7 +14,7 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 #### Improvements
 
-* We improved the process of creating and editing attributes with type "enumeration" in domain models. To make the process faster and more user-friendly we redesigned the **Create new enumeration** wizard in the Domain Model editor.
+* We improved the process of creating and editing attributes of the enumeration type in domain models. To make the process faster and more user-friendly we redesigned the **Create new enumeration** wizard in the Domain Model editor.
 * When editing a microflow, by rearranging the existing activities in it, a preview of the activity shows you where you can place this activity. This hint makes the process of editing microflows easier.
 
 #### Fixes

@@ -10,6 +10,17 @@ These release notes are for the [beta](../beta-features/index) version of the We
 
 ## 2018
 
+### May 25th, 2018
+
+#### Improvements
+
+* We improved the process of creating and editing attributes with type "enumeration" in domain models. To make the process faster and more user-friendly we redesigned the **Create new enumeration** wizard in the Domain Model editor.
+* When editing a microflow, by rearranging the existing activities in it, a preview of the activity shows you where you can place this activity. This hint makes the process of editing microflows easier.
+
+#### Fixes
+
+* We fixed an issue when a pop-up window would not appear in the **Buzz** tab when typing an "@" symbol to mention team members. 
+
 ### May 18th, 2018
 
 #### Fixes

@@ -264,9 +264,9 @@ Click **Change** to change the Development Mode toggle. Set it to Yes if you wan
 
 If the app is started or stopped (that is, the environment has been created successfully and the app has been deployed without errors) then options to scale the app are available.
 
-Use the **Instances** slider to change the number of instances of the app which can run. This enables you to scale the app to support large numbers of users, or to provide redundancy if one instance stops.
+Use the **Instances** slider to change the number of instances of the app which can run. This allows you to scale the app horizontally to support a large numbers of users, or to improve the app's resilience by allowing it to continue to run if there are any issues with one of the instances.
 
-Use the **Memory per instance** slider to change the amount of memory allocated to each instance of the app.
+Use the **Memory per instance** slider to change the amount of memory allocated to each instance of the app ("user's current memory").
 
 Click **Scale Now** to apply the new settings. If the application is running, it will be stopped and restarted to apply the settings. If it is stopped, the new settings will be used the next time the application is started.
 

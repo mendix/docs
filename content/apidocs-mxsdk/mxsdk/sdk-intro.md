@@ -28,7 +28,7 @@ Basically, the Platform SDK and Model SDK allow you to automate any tedious or e
 
 ### 2.2 Detailed Resources
 
-For detailed information on getting started with the Platform SDK and Model SDK, see [How to Set Up Your Development Environment](https://docs.mendix.com/apidocs-mxsdk/mxsdk/setting-up-your-development-environment).
+For detailed information on getting started with the Platform SDK and Model SDK, see [How to Set Up Your Development Environment](setting-up-your-development-environment).
 
 ## 3 Use Cases
 
@@ -36,25 +36,25 @@ For detailed information on getting started with the Platform SDK and Model SDK,
 
 Move your legacy applications into a cloud-based, modern technology.  The Platform SDK empowers you to build legacy software transformation tools that target the Mendix Platform. 
 
-For more information, see the **Importing Legacy Code** section in [Use Case Examples](use-case-examples#attachments-16714511-16844116-png-importing-legacy-code).
+For more information, see [Use Case Examples](use-case-examples#importing).
 
 ### 3.2 Analyzing Your Apps
 
 If you are looking to improve your existing app models, it can be hard  to figure out where the complexity is. Mendix models are completely open and accessible, making it possible to automate model quality analysis.
 
-For more information, see the **Analyzing Your Apps** section in [Use Case Examples](use-case-examples#attachments-16714511-16844117-png-analyzing-your-apps).
+For more information, see [Use Case Examples](use-case-examples#analyzing).
 
 ### 3.3 Exporting Your Apps
 
 The SDK allows you to export your app model and take it anywhere. So  take any page, microflow, or other model element and transform it into code, documentation, or scaffolding for a testing tool. 
 
-For more information, see the **Exporting Your Apps** section in [Use Case Examples](use-case-examples#attachments-16714511-16844114-png-exporting-your-apps).
+For more information, see [Use Case Examples](use-case-examples#exporting).
 
 ### 3.4 Modifying Your Apps
 
 Updating your existing Mendix app models can sometimes be tedious to do by hand. Write a script to execute all the boring changes automatically. Focus on the creative and fun parts of your app! 
 
-For more information, see the **Modifying Your Apps** section in [Use Case Examples](use-case-examples#attachments-16714511-16844115-png-modifying-your-apps).
+For more information, see [Use Case Examples](use-case-examples#modifying).
 
 ## 4 Openness
 

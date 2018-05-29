@@ -2,6 +2,8 @@
 title: "Introduction to the Mendix Platform SDK"
 category: "Mendix Platform SDK"
 menu_order: 10
+tags: ["SDK", "Mendix SDK", "Platform SDK", "Model SDK", "metadata"]
+
 ---
 
 ## 1 Introduction

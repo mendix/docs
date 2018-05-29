@@ -38,7 +38,7 @@ Some of the possibilities are:
 
 ## 4 Exporting Your Apps {#exporting}
 
-<attachments/16714511/16844114.png" align="left">  The SDK allows you to export your Mendix app model and then take it basically anywhere. Every model element (pages, microflows, entities, etc.) and its properties are open and accessible via the Mendix SDK. So take any (or all) of these, and generate whole new representations of your app model.
+<img src="attachments/16714511/16844114.png" align="left">  The SDK allows you to export your Mendix app model and then take it basically anywhere. Every model element (pages, microflows, entities, etc.) and its properties are open and accessible via the Mendix SDK. So take any (or all) of these, and generate whole new representations of your app model.
 
 Some of the possibilities are:
 
@@ -48,7 +48,7 @@ Some of the possibilities are:
 
 ## 5 Modifying Your Apps {#modifying}
 
-<attachments/16714511/16844115.png" align="left"> Your existing Mendix apps will likely need updates and changes. Some of these changes can be tedious to do by hand, whether it's replacing group boxes by div containers, creating a better visual layout for your microflows, or publishing your microflows as Web Service operations. With the Model SDK you can create a script that does these things for you.
+<img src="attachments/16714511/16844115.png" align="left"> Your existing Mendix apps will likely need updates and changes. Some of these changes can be tedious to do by hand, whether it's replacing group boxes by div containers, creating a better visual layout for your microflows, or publishing your microflows as Web Service operations. With the Model SDK you can create a script that does these things for you.
 
 Some of the possibilities are:
 

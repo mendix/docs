@@ -1,6 +1,7 @@
 ---
 title: "Reference Documentation"
 category: "Mendix Platform SDK"
+menu_order: 40
 ---
 
 ## 1 Introduction to the Reference Documentation

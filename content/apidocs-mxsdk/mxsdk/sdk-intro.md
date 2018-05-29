@@ -1,6 +1,7 @@
 ---
 title: "Introduction to the Mendix Platform SDK"
 category: "Mendix Platform SDK"
+menu_order: 10
 ---
 
 ## 1 Introduction

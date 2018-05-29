@@ -1,6 +1,7 @@
 ---
 title: "Use Case Examples"
 category: "Mendix Platform SDK"
+menu_order: 60
 ---
 
 ## 1 Introduction

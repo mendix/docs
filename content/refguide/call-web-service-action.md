@@ -35,7 +35,7 @@ When calling a web service using a call-web-service activity, the location of th
 
 ### 3 Location
 
-If you override the location, this property defines the location where to call the web service. The location needs to be entered using [expressions](expressions). The microflow expression should result in a valid URL string.
+If you override the location, this property defines the location where to call the web service. The location needs to be entered using an [expression](expressions). The microflow expression should result in a valid URL string.
 
 ### 3.1 Use Timeout on Request
 
@@ -57,13 +57,41 @@ Setting this setting to yes can greatly decrease performance!
 
 {{% alert type="warning" %}}
 
-When consuming wsdl that uses encoding turning on validation will lead to consistency error because it is not WS-I compliant.
+When consuming a WSDL that uses encoding, turning on validation will lead to a consistency error, because it is not WS-I compliant.
+
+{{% /alert %}}
+
+When this setting is disabled, schema validation is not possible. This happens in two cases: 1) When you have configured the [consumed web service](consumed-web-service) to send binary data as attachments, and 2) when you have configured web service calls to use the new (optimized) implementation in the [project's runtime settings](project-settings).
+
+{{% alert type="info" %}}
+
+The new (optimized) implementation feature was introduced in version 7.15.0.
 
 {{% /alert %}}
 
 _Default value:_ No
 
 ![](attachments/19202819/19399021.png)
+
+### 4 Proxy configuration
+
+{{% alert type="info" %}}
+
+This feature was introduced in version 7.15.0.
+
+This feature is only available when you have configured web service calls to use the new (optimized) implementation in the [project's runtime settings](project-settings).
+
+{{% /alert %}}
+
+In almost all cases, you can ignore this setting. **Use project settings** is a good default value.
+
+If desired, you can configure whether to use a proxy for the request. These are the choices:
+
+* **Use project settings** – use whatever settings are defined at the project level (default)
+* **Override** – override the project-level settings for this action
+* **No proxy** – do not use a proxy for this action, even if there is a proxy configured at the project level
+
+When you select **Override**, you can configure dynamically whether to use a proxy. You then supply the host, port, username, and password settings for the proxy.
 
 ## 4 HTTP Headers
 

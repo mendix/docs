@@ -53,3 +53,4 @@ Each operation generates an `Operation` object:
 | `description` | The [public documentation description](published-rest-operation#description) of the operation. |
 | `parameters` | The path and query parameters. For the POST, PUT, PATCH, and OPTIONS methods, there is also a body parameter. |
 | `responses` | The OK response. If security is enabled, this is also the unauthorized response. |
+| `deprecated` | Set to true when the operation is marked as deprecated. |

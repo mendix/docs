@@ -79,7 +79,11 @@ If the microflow throws an unhandled exception, the response is **500: Internal 
 
 If security is enabled, then then microflow needs to have at least one role configured to be accessible.
 
-## 2.5 Parameters
+### 2.5 Deprecated
+
+If you check this box, the operation is marked as deprecated in the service's [OpenApi (Swagger) documentation page](published-rest-services#interactive-documentation). This tells clients not to use it anymore.
+
+### 2.6 Parameters
 
 {{% alert type="info" %}}
 
@@ -93,7 +97,7 @@ An operation parameter can be either a query parameter, a path parameter, or a b
 
 The parameter data type is determined by the microflow of the operation. New parameters that are not yet part of the microflow will have *(Not set)* as their data type.
 
-### 2.5.1 Import mapping
+### 2.6.1 Import Mapping
 
 {{% alert type="info" %}}
 
@@ -109,7 +113,7 @@ Valid requests need to contain a *Content-Type* header. See [Table 1: Recognized
 
 The import mapping is also used to generate object schemas for operation responses in [OpenAPI (Swagger) documentation page](published-rest-services#interactive-documentation) based on [JSON Schema](published-rest-service-json-schema)
 
-### 2.6 Response
+### 2.7 Response
 
 {{% alert type="info" %}}
 
@@ -119,7 +123,11 @@ Support for **Export mapping and models in OpenAPI (Swagger)** was added in 7.14
 
 This shows information about the response of the operation. You can see the type of the microflow result as well as export mapping applied to it (if any).
 
-#### 2.6.1 Export Mapping
+#### 2.7.1 Type
+
+This shows the result type of the microflow.
+
+#### 2.7.2 Export Mapping
 
 When the microflow returns an object or a list of objects, you need to specify how this result is mapped to JSON or XML. Select an export mapping that takes the result of the microflow as input.
 

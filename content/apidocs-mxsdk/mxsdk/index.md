@@ -52,11 +52,3 @@ Browse the compiled documentation about the Mendix metamodel as well as external
 Check whether your question is answered in the [Frequently Asked Questions](faq). Otherwise, ask your question in the [Mendix Forum](https://forum.mendixcloud.com/index4.html) or in our [Gitter](https://gitter.im/mendix/mendixplatformsdk) chat room. Check out the technical specifications of the Mendix Platform SDK and Model API as well.
 
 If you need help with JavaScript/TypeScript, see [JavaScript & TypeScript Resources](javascript-typescript-resources).
-
-## 4 Main Documents in This Category
-
-* [How-to's](tutorial-for-the-mendix-sdk)
-* [Reference Documentation](reference-documentation)
-* [FAQ](faq)
-* [Use Case Examples](use-case-examples)
-* [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript)

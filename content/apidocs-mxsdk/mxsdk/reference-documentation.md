@@ -2,35 +2,31 @@
 title: "Reference Documentation"
 category: "Mendix Platform SDK"
 ---
-On this page, you will find a collection of links to documentation about the Mendix Metamodel, as well as external resources you can use as a reference for programming with the Mendix SDK.
 
-## Metamodel
+## 1 Introduction to the Reference Documentation
 
-Start learning how the metamodel works by reading Understanding the metamodel. Continue with Projects to learn how the metamodel handles projects in relation to modules and documents. Continue with learning how a domain model works with all its components (attributes, access rules, etc.). The Microflow page describes in detail how you can create and invoke microflows. 
+Below is a collection of links to documentation about the Mendix metamodel as well as external resources you can use as a reference for programming with the Mendix SDK.
 
-*   [Understanding the metamodel](understanding-the-metamodel)
-*   [Projects](projects-metamodel)
-*   [Domain model](domain-model-metamodel)
-*   [Microflows](microflows-metamodel)
-*   [Pages](pages-metamodel)
-*   Integrations
+## 2 Metamodel
 
-## Other resources
+Start learning how the metamodel works by reading [Understanding the Metamodel](understanding-the-metamodel). Continue with [Projects (Metamodel)](projects-metamodel) to learn how the metamodel handles projects in relation to modules and documents. Next, move on to learning how a [Domain Model (Metamodel)](domain-model-metamodel)  works with all its components (attributes, access rules, etc.). The [Pages (Metamodel)](pages-metamodel) page explains how pages, layouts, and page content are structured. The [Microflows (Metamodel)](microflows-metamodel) page describes in detail how you can create and invoke microflows. 
 
-*   [JavaScript & TypeScript resources](javascript-typescript-resources)
-*   [FAQ](faq)
-
-## Mendix Model SDK
+## 3 Mendix Model SDK
 
 *   Manipulating existing models
-    *   [Finding things](finding-things-in-the-model)
-    *   [Loading things](loading-units-and-elements)
-    *   [Changing things](changing-things-in-the-model)
-    *   [Closing the server connection](closing-the-server-connection)
-*   [Generating code from the model](generating-code-from-the-model)
-*   [Working with when.js and promises in TypeScript](working-with-when.js-and-promises-in-typescript)
-*   [Model SDK API docs](https://apidocs.mendix.com/modelsdk/latest/index.html)
+    *   [Finding Things](finding-things-in-the-model)
+    *   [Loading Things](loading-units-and-elements)
+    *   [Changing Things](changing-things-in-the-model)
+    *   [Closing the Server Connection](closing-the-server-connection)
+*   [Generating Code from the Model](generating-code-from-the-model)
+*   [Working with when.js and Promises in TypeScript](working-with-when.js-and-promises-in-typescript)
+*   [Model SDK API](https://apidocs.mendix.com/modelsdk/latest/index.html)
 
-## Mendix Platform SDK
+## 4 Mendix Platform SDK
 
-*   [Platform SDK API docs](https://apidocs.mendix.com/platformsdk/latest/)
+*   [Platform SDK API](https://apidocs.mendix.com/platformsdk/latest/)
+
+## 5 Other Resources
+
+*   [JavaScript & TypeScript Resources](javascript-typescript-resources)
+*   [FAQ](faq)

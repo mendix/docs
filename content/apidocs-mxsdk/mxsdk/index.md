@@ -4,7 +4,7 @@ title: "Mendix Platform SDK"
 
 ## 1 Learning About the Mendix Platform SDK
 
-Before the Mendix SDK can make your life easier, there's some learning to do. Follow the step-by-step guides listed below to learn everything you need about using the SDK. After finishing the how-to's, you'll not only know how to use the SDK, but also how all the parts fit together.
+Before the Mendix SDK can make your life easier, there are some learning to do. First, read the [Introduction to the Mendix Platform SDK](sdk-intro) and the [FAQ](faq). Then, follow the step-by-step guides listed below to learn everything you need about using the SDK. After finishing the how-to's, you'll not only know how to use the SDK, but also how all the parts fit together.
 
 These are the how-to's for the Mendix Platform SDK:
 

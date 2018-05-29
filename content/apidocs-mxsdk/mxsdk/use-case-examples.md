@@ -7,9 +7,7 @@ category: "Mendix Platform SDK"
 
 Since the Mendix SDK gives you full access to all aspects of your app model, there's an almost infinite number of things you can do with it. We can however distinguish four basic categories: analyzing, exporting, modifying and importing. To inspire you to build your own scripts and tools, you can find an example for each category below.
 
-## 2 Importing Legacy Code
-
-![](attachments/16714511/16844116.png)
+## ![](attachments/16714511/16844116.png) 2 Importing Legacy Code
 
 The longer an organization exists, the larger its installed base of legacy software is. Maintaining this legacy software is often costly and error-prone, not to mention the required expertise for outdated technologies. The Mendix SDK allows you to create legacy software transformation tools that help you convert your legacy applications to cloud-based Mendix apps.
 

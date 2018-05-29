@@ -7,13 +7,13 @@ tags: ["SAP", "OData", "integration", "SAP services"]
 
 ## 1 Introduction
 
-SAP data models reflect an OData service from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud. OData services are exposed via the SAP Gateway and are described in a `$metadata` file, which describes all the entities that are exposed for that service.
+SAP data models reflect an OData service from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud. OData services are exposed via the SAP Gateway and are described in a `$metadata` file, which describes all the entities, relationships, and functions that are exposed for that service.
 
 Handcrafting a Mendix domain model for these OData services would be a lot of work. The SAP OData Model Creator automates this process by creating a Mendix module for the selected service containing the Mendix domain model which can be imported in your project.
 
 There are three ways to do this:
 
-* [Using the API Catalog](#APICatalog)
+* [Using the API Business Hub](#APIBusHub)
 * [Providing URL to Metadata](#URL)
 * [Uploading an Odata Metadata XML File](#Uploading)
 
@@ -33,15 +33,84 @@ The SAP OData Model Creator is not currently available in the App Store within t
 
 1. Open the [SAP OData Model Creator](https://sapodatamodelcreator.mendixcloud.com/).
 
-You will be asked how you want to 
+You will be asked how you want to generate your model.
+
+![](attachments/use-sap-odata-model-creator/model-creator-wizard-1.png)
 
 There are three ways to generate your data model.
 
-### 3.1 Using the API Catalog<a name="APICatalog"></a>
+* If your SAP back-end system stores the OData API package on the SAP API Business Hub, then you can create the create the data model from there; select **API Business Hub** as the source and continue with section [3.1 Using the API Business Hub](#APIBusHub)
+* If you have access to the metadata file or metadata URL for the SAP back-end OData, then select **Manual** and continue with section [3.2 Generating the Model Manually](#Manually)
+
+### 3.1 Using the API Business Hub<a name="APIBusHub"></a>
+
+Your SAP back-end OData API is held in the API Business Hub.
+
+{{% alert type="info" %}}
+There may be several schemas in the packages of an API. Each of these will generate a module. Depending on the functionality of your app, you may have to generate several modules and import all of them into your app.
+{{% /alert %}}
+
+1. Click on **API Business Hub**
+
+    You will be presented with a list of packages containing OData API definitions. You can search this list (this includes text in the package description as well as the package name), and page through it using the paging buttons.
+
+    ![](attachments/use-sap-odata-model-creator/model-creator-wizard-2-api.png)
+
+    {{% alert type="info" %}}
+    You can return to any stage in this process by clicking on the relevant step number.
+    {{% /alert %}}
+
+2. Click on the package you want. It will be highlighted.
+
+3. Click on **Continue** to see the APIs within the package.
+
+    ![](attachments/use-sap-odata-model-creator/model-creator-wizard-3-api.png)
+
+    {{% alert type="info" %}}
+    This will be shown even if only one API exists.
+    {{% /alert %}}
+
+4. Click on the API you want. It will be highlighted.
+
+5. Click on **Continue** to see the schemas within the API.
+
+    ![](attachments/use-sap-odata-model-creator/model-creator-wizard-4-api.png)
+
+    {{% alert type="info" %}}
+    This will be shown even if only one Schema exists.
+    {{% /alert %}}
+
+6. Click on the schema you want. It will be highlighted.
+
+7. Click on **Continue** to proceed to the confirmation screen.
+
+    ![](attachments/use-sap-odata-model-creator/model-creator-wizard-5-api.png)
+
+8. Click on **Generate .mpk** to generate the data model module.
+
+    ![](attachments/use-sap-odata-model-creator/model-creator-generated-api.png)
+
+9. Click **Download File**.
+
+Your browser will offer options on what to do with the file.
+
+10. Save the file locally. It is recommended that you save it in the **resources** folder of your Mendix app so that you can find it easily.
+
+You have now created the module. Section [4 Using the Data Model Module in a Mendix App](#Using) explains how to import it into your app.
 
 ### 3.2 Generating the Model Manually<a name="Manually"></a>
 
+You may want to generate the data model by hand using the `$metadata` file directly. This may, for example, not be in the API Business Hub.
+
+For this documentation, we use the publicly available HCM People Profile service, for which [https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata](https://www.sapfioritrial.com/sap/opu/odata/sap/HCM_PEOPLE_PROFILE_SRV/$metadata) is the metadata file.
+
 #### 3.2.1 Providing URL to Metadata<a name="URL"></a>
+
+The simplest way of generating the data model from the metadata is just to provide the URL to the SAP OData Model Creator.
+
+{{% alert type="warning" %}}
+This method does not work where the destination needs authentication. For example, you cannot use it to generate 
+{{% /alert %}}
 
 #### 3.2.2 [Uploading an Odata Metadata XML File]<a name="Uploading"></a>
 
@@ -62,7 +131,7 @@ To generate the data model, follow these steps:
 
     ![](attachments/use-sap-odata-model-creator/download_metadata.png)
 
-## 4 Using the Data Model Module in a Mendix App
+## 4 Using the Data Model Module in a Mendix App<a name="Using"></a>
 
 Now you have a Mendix module ready to import into your project. Open the project which you created as a prerequisite. Right-click your project in the **Project Explorer** and select **Import module package...**.
 

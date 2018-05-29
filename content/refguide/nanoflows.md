@@ -23,7 +23,7 @@ Nanoflows are designed with offline-first applications in mind, as they allow yo
 
 ### 2.2 Logic Where No Connection Is Needed
 
-Nanoflows also offer great value in online applications (for example, for UI logic, validations, calculations, and navigation). However, please keep in mind that when you perform database-releated actions, each action will create a separate network request to the Mendix Runtime. The following actions interact with the database:
+Nanoflows also offer great value in online applications (for example, for UI logic, validations, calculations, and navigation). However, please keep in mind that when you perform database-related actions, each action will create a separate network request to the Mendix Runtime. The following actions interact with the database:
 
 * Create
 * Commit

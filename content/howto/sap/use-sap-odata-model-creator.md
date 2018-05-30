@@ -109,7 +109,7 @@ For this documentation, we use the publicly available HCM People Profile service
 The simplest way of generating the data model from the metadata is just to provide the URL to the SAP OData Model Creator.
 
 {{% alert type="warning" %}}
-This method does not work where the destination needs authentication. For example, you cannot use it to generate 
+This method does not work where the destination needs authentication. For example, you cannot use it to generate a data model for a service on the ES5 
 {{% /alert %}}
 
 #### 3.2.2 [Uploading an Odata Metadata XML File]<a name="Uploading"></a>

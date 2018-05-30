@@ -9,12 +9,12 @@ tags: ["SAP", "OData", "integration", "SAP services"]
 
 SAP data models reflect an OData service from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud. OData services are exposed via the SAP Gateway and are described in a `$metadata` file, which describes all the entities, relationships, and functions that are exposed for that service.
 
-Handcrafting a Mendix domain model for these OData services would be a lot of work. The SAP OData Model Creator automates this process by creating a Mendix module for the selected service containing the Mendix domain model which can be imported in your project.
+Handcrafting a Mendix domain model for these OData services would be a lot of work. The SAP OData Model Creator automates this process by creating a Mendix module for the selected service containing the Mendix domain model which can be imported in your project. The data model also contains additional information such as the URL of the exposed endpoint, a list of collections in the service, and a list of functions provided by the service.
 
-There are three ways to do this:
+There are three ways to create the data model:
 
 * [Using the API Business Hub](#APIBusHub)
-* [Providing URL to Metadata](#URL)
+* [Providing the URL to the Metadata](#URL)
 * [Uploading an Odata Metadata XML File](#Uploading)
 
 ## 2 Prerequisites
@@ -51,7 +51,7 @@ Your SAP back-end OData API is held in the API Business Hub.
 There may be several schemas in the packages of an API. Each of these will generate a module. Depending on the functionality of your app, you may have to generate several modules and import all of them into your app.
 {{% /alert %}}
 
-1. Click **API Business Hub**
+1. Click **API Business Hub**.
 
     You will be presented with a list of packages containing OData API definitions. You can search this list (this includes text in the package description as well as the package name), and page through it using the paging buttons.
 
@@ -78,7 +78,7 @@ There may be several schemas in the packages of an API. Each of these will gener
     ![](attachments/use-sap-odata-model-creator/model-creator-wizard-4-api.png)
 
     {{% alert type="info" %}}
-    This will be shown even if only one Schema exists.
+    This will be shown even if only one schema exists.
     {{% /alert %}}
 
 6. Click the schema you want. It will be highlighted.
@@ -107,19 +107,19 @@ For this documentation, we use the publicly available HCM People Profile service
 
 ![](attachments/use-sap-odata-model-creator/model-creator-wizard-1.png)
 
-#### 3.2.1 Providing URL to Metadata<a name="URL"></a>
+#### 3.2.1 Providing the URL to the Metadata<a name="URL"></a>
 
 The simplest way of generating the data model from the metadata is just to provide the URL to the SAP OData Model Creator.
 
 {{% alert type="warning" %}}
-This method does not work where the destination needs authentication. For example, you cannot use it to generate a data model for a service on the ES5 Netweaver Gateway Demo.
+This method does not work where the destination needs authentication. You cannot use it, for example, to generate a data model for a service on the ES5 Netweaver Gateway Demo.
 {{% /alert %}}
 
 1. Click **Manual**.
 
     ![](attachments/use-sap-odata-model-creator/upload_metadata.png)
 
-2. Enter the URL of the service metadata which you want in **ENter a URL**.
+2. Enter the URL of the service metadata which you want in **Enter a URL**.
 
 3. Click **Generate .mpk**. A progress bar will be shown during the parsing and generation of the module.
 
@@ -133,7 +133,7 @@ This method does not work where the destination needs authentication. For exampl
 
 You have now created the module. Section [4 Using the Data Model Module in a Mendix App](#Using) explains how to import it into your app.
 
-#### 3.2.2 [Uploading an Odata Metadata XML File]<a name="Uploading"></a>
+#### 3.2.2 Uploading an Odata Metadata XML File<a name="Uploading"></a>
 
 The other way of generating an SAP data model is by getting an OData metadata XML file. This file can be download from the OData service URL directly using the `$metadata` suffix. The browser will display the xml and you can use the right mouse button in most browsers to choose to download the xml file. Save the file locally. It is recommended that you save it in the **resources** folder of your Mendix app so that you can find it easily.
 
@@ -153,7 +153,7 @@ The other way of generating an SAP data model is by getting an OData metadata XM
 
 5. Click **Generate .mpk**. A progress bar will be shown during the parsing and generation of the module.
 
-6.  Once the generation is done, the **Download File** button appears. Notice that the file name of your data model module is extracted from the metadata file itself.
+6.  Once the generation is complete, the **Download File** button appears. Notice that the file name of your data model module is extracted from the metadata file itself.
 
     ![](attachments/use-sap-odata-model-creator/download_metadata.png)
 
@@ -175,11 +175,13 @@ Now you have a Mendix module ready to import into your project.
 
     ![](attachments/use-sap-odata-model-creator/import_module_package.png)
 
+3. Use the navigation dialog to find your module, which will have the suffix **.mpk**.
+
     You now have your service **HCM\_PEOPLE\_PROFILE\_SRV** module available in your project ready to use in combination with the SAP OData Connector.
 
     ![](attachments/use-sap-odata-model-creator/project_explorer.png)
 
-Now you are ready to use the imported data model together with the SAP OData Connector. For more information, see [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector).
+For more information on how to use the imported data model together with the SAP OData Connector, see [How to Use the SAP OData Connector](/howto/sap/use-sap-odata-connector).
 
 ## 5 Related Content
 
